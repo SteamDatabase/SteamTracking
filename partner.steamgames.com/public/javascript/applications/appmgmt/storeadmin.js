@@ -1067,7 +1067,7 @@
         D = n(30470),
         T = n(56520),
         N = n(43104),
-        I = n(56560),
+        I = n(53930),
         x = n(87706),
         L = n(83247);
       function R(e) {
@@ -1382,7 +1382,7 @@
             onClick: (e) => n(o),
             onDoubleClick: (e) => a(o),
           },
-          u.createElement(W, { extraAsset: t, controls: !1 }),
+          u.createElement(z, { extraAsset: t, controls: !1 }),
         );
       }
       function G(e) {
@@ -1546,7 +1546,7 @@
                 !1 !== (await C({ strExtraAssetFileName: e, mapAltText: t })),
               isMutatePending: h,
               fnGetImage: (e, t) =>
-                u.createElement(W, {
+                u.createElement(z, {
                   extraAsset: a.get(e),
                   caption: !1,
                   controls: !1,
@@ -1570,7 +1570,7 @@
               "div",
               { className: N.ExtraAssetsGrid },
               n.map((e) =>
-                u.createElement(W, {
+                u.createElement(z, {
                   key: (0, i.q3)(e),
                   extraAsset: e,
                   primaryLanguage: m,
@@ -1587,7 +1587,7 @@
           a = (0, I.L)(),
           r = (0, c.FD)(),
           o = u.useMemo(() => r.filter(i.pN), [r]),
-          l = z(o);
+          l = W(o);
         u.useEffect(() => {
           const e = (e) => ({
             baseFilename: (0, i.K7)(e),
@@ -1598,7 +1598,7 @@
         }, [a, o, t, l]);
         const s = (function (e) {
             const t = u.useMemo(() => (e ? [e] : []), [e]),
-              n = z(t);
+              n = W(t);
             return n?.length > 0 ? n[0] : void 0;
           })(t),
           { rgRealmList: d } = (0, c.aJ)();
@@ -1647,7 +1647,7 @@
           }),
         );
       }
-      function z(e) {
+      function W(e) {
         const [t, n] = u.useState(void 0),
           a = (0, s.Un)();
         return (
@@ -1664,7 +1664,7 @@
           t
         );
       }
-      function W(e) {
+      function z(e) {
         const {
             extraAsset: t,
             caption: n = !0,
@@ -1850,189 +1850,29 @@
         );
       }
     },
-    56560: (e, t, n) => {
+    53930: (e, t, n) => {
       "use strict";
-      n.d(t, { L: () => y });
-      var a = n(90626),
-        r = n(22837),
-        o = n(14947),
-        l = n(34629),
-        s = n(6419),
-        i = n(69343),
-        c = n(61859),
-        u = n(81393),
-        d = n(62490),
-        m = n(82817),
-        p = n(78511);
-      class _ extends i.Vr {
-        m_filesToUpload = o.sH.array();
-        m_fnCreateUploadImage;
-        m_onlyAssetGroup = void 0;
-        m_rgExistingAssetGroups = void 0;
-        m_rgImageSizes = void 0;
-        constructor(e) {
-          super(), (0, o.Gn)(this), (this.m_fnCreateUploadImage = e);
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = o.sH.array();
-        }
-        DeleteUploadImage(e) {
-          const t = this.m_filesToUpload.findIndex(
-            (t) => e.file == t.file && e.uploadTime == t.uploadTime,
-          );
-          t >= 0 &&
-            (this.m_filesToUpload.splice(t, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        SetExistingAssetGroups(e, t) {
-          (this.m_rgExistingAssetGroups = e), (this.m_rgImageSizes = t);
-        }
-        SetOnlyAssetGroup(e) {
-          this.m_onlyAssetGroup = e;
-        }
-        async AddImageForLanguage(e, t) {
-          if ((0, m.aL)(e.type) || (0, m.Uz)(e.type)) {
-            const n = await (0, m.zB)(e, (0, m.Uz)(e.type));
-            if (n) {
-              const a = this.m_fnCreateUploadImage(
-                () => this.GetImageOptions(),
-                this.m_onlyAssetGroup,
-                e,
-                t,
-                n,
-              );
-              return (this.m_filesToUpload = [...this.m_filesToUpload, a]), !0;
-            }
-          } else
-            console.error(
-              "CLocalizedGroupImageUploader failed to determine file type, not image, video or subtitle",
-              e,
-              e.type,
-            );
-          return !1;
-        }
-        GetImageOptions() {
-          const e = (e, t, n, a, r) => ({
-              baseFilename: e,
-              language: t,
-              bNew: n,
-              size: { width: a, height: r },
-            }),
-            t = [];
-          for (const n of this.m_filesToUpload.filter(
-            (e) => "pending" == e.status || (0, p.o)(e.status),
-          ))
-            if (this.m_onlyAssetGroup)
-              t.push(
-                e(
-                  this.m_onlyAssetGroup.baseFilename,
-                  n.language ?? 0,
-                  !0,
-                  n.width,
-                  n.height,
-                ),
-              );
-            else {
-              const a = (0, i.jj)(n.filename).baseFilename,
-                r = n.GetCurrentImageOptionKey() ?? a;
-              t.push(e(r, n.language ?? 0, !0, n.width, n.height)),
-                r != a && t.push(e(a, -1, !0, n.width, n.height));
-            }
-          let n = this.m_rgExistingAssetGroups ?? [],
-            a = this.m_rgImageSizes ?? [];
-          if (this.m_onlyAssetGroup) {
-            const e = n.findIndex(
-              (e) => e.baseFilename == this.m_onlyAssetGroup.baseFilename,
-            );
-            (0, u.wT)(
-              -1 != e,
-              "onlyAssetGroup isn't in the existing assets list",
-            ),
-              (n = [n[e]]),
-              (a = [a[e]]);
-          }
-          const r = d
-              .qQ(n, a)
-              .flatMap(([t, n]) =>
-                ((t, n) =>
-                  t.languages.map((a) =>
-                    e(t.baseFilename, a, !1, n?.width ?? 0, n?.height ?? 0),
-                  ))(t, n),
-              ),
-            o = t.concat(r).reduce((e, t) => {
-              const n = e.get(t.baseFilename) ?? [];
-              return n.push(t), e.set(t.baseFilename, n), e;
-            }, new Map()),
-            l = [];
-          for (const e of o.keys()) {
-            const t = o.get(e).filter((e) => -1 != e.language),
-              n = new Set(t.map((e) => e.language)).size,
-              a =
-                n > 1
-                  ? (0, c.Yp)(
-                      "#StoreAdmin_ExtraAssetUpload_LocalizeGroup",
-                      n,
-                      e,
-                    )
-                  : e,
-              r = new Map();
-            for (let e of t
-              .filter((e) => !e.bNew)
-              .concat(t.filter((e) => e.bNew)))
-              r.set(e.language, e);
-            const s = Array.from(r.values()).filter((e) => !e.bNew),
-              i = s.length > 0 ? s[0].size : void 0,
-              u = t.filter((e) => e.bNew).at(0)?.size,
-              d = t
-                .filter((e) => e.bNew)
-                .some(
-                  (e) => e.size.width != u.width || e.size.height != u.height,
-                ),
-              m = {
-                sKey: e,
-                fnGetLabelText: () => a,
-                width: i?.width ?? 0,
-                height: i?.height ?? 0,
-                bEnforceDimensions: !1,
-                groupName: e,
-                bMismatchedNewSizes: d,
-                rgExistingLanguages: t
-                  .filter((e) => !e.bNew)
-                  .map((e) => e.language),
-              };
-            l.push(m);
-          }
-          return (
-            l.sort((e, t) => (e.sKey < t.sKey ? -1 : e.sKey > t.sKey ? 1 : 0)),
-            l
-          );
-        }
-      }
-      (0, l.Cg)([o.sH], _.prototype, "m_filesToUpload", void 0),
-        (0, l.Cg)([o.sH], _.prototype, "m_onlyAssetGroup", void 0),
-        (0, l.Cg)([o.sH], _.prototype, "m_rgExistingAssetGroups", void 0),
-        (0, l.Cg)([o.sH], _.prototype, "m_rgImageSizes", void 0),
-        (0, l.Cg)([s.o], _.prototype, "GetUploadImages", null),
-        (0, l.Cg)([s.o], _.prototype, "ClearImages", null),
-        (0, l.Cg)([s.o], _.prototype, "DeleteUploadImage", null),
-        (0, l.Cg)([o.XI], _.prototype, "SetExistingAssetGroups", null),
-        (0, l.Cg)([o.XI], _.prototype, "SetOnlyAssetGroup", null),
-        (0, l.Cg)([s.o], _.prototype, "AddImageForLanguage", null);
-      var g = n(78327),
-        E = n(73744),
-        C = n(26408);
-      class h extends p.q {
+      n.d(t, { L: () => A });
+      var a = n(34629),
+        r = n(90626),
+        o = n(22837),
+        l = n(14947),
+        s = n(78327),
+        i = n(73744),
+        c = n(78511),
+        u = n(82817),
+        d = n(61859),
+        m = n(69343),
+        p = n(26408);
+      class _ extends c.q {
         m_bAllowVideos;
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
         m_rgCurrentImageOptionKey = void 0;
-        constructor(e, t, n, a, r, l) {
-          const s = (0, m.II)(l);
-          super(a, a.name, r, l.src, s),
-            (0, o.Gn)(this),
+        constructor(e, t, n, a, r, o) {
+          const s = (0, u.II)(o);
+          super(a, a.name, r, o.src, s),
+            (0, l.Gn)(this),
             (this.m_bAllowVideos = e),
             (this.m_bLockedToSpecificAsset = t),
             (this.m_fnGetImageOptions = n);
@@ -2040,36 +1880,36 @@
         IsValidAssetType(e, t) {
           const n = this.GetCurrentImageOption(),
             a = n?.width ?? 0,
-            o = n?.height ?? 0,
+            r = n?.height ?? 0,
             l = t && t != this.fileType,
             s = this.IsFileTypeSupported(this.fileType),
             i = this.BIsVideo() ? 1 : 0,
-            u =
-              !(a > 0 && o > 0) ||
-              (Math.abs(this.width - a) <= i && Math.abs(this.height - o) <= i),
-            d = n?.bMismatchedNewSizes;
+            c =
+              !(a > 0 && r > 0) ||
+              (Math.abs(this.width - a) <= i && Math.abs(this.height - r) <= i),
+            m = n?.bMismatchedNewSizes;
           let p = "";
           s
             ? l &&
-              (p = (0, c.we)("#ImageUpload_InvalidFormat", (0, m.EG)(t) ?? ""))
-            : (p = (0, c.we)("#ImageUpload_InvalidFormatSelected"));
+              (p = (0, d.we)("#ImageUpload_InvalidFormat", (0, u.EG)(t) ?? ""))
+            : (p = (0, d.we)("#ImageUpload_InvalidFormatSelected"));
           const _ = [],
             g = [];
           return (
-            !u && n
-              ? g.push((0, c.we)("#ImageUpload_InvalidResolution", n.groupName))
-              : d &&
+            !c && n
+              ? g.push((0, d.we)("#ImageUpload_InvalidResolution", n.groupName))
+              : m &&
                 n &&
                 g.push(
-                  (0, c.we)("#ImageUpload_MismatchedResolution", n.groupName),
+                  (0, d.we)("#ImageUpload_MismatchedResolution", n.groupName),
                 ),
             (n?.rgExistingLanguages?.length ?? 0) > 1 &&
               this.language &&
               n?.rgExistingLanguages.includes(this.language) &&
               _.push(
-                (0, c.we)(
+                (0, d.we)(
                   "#ImageUpload_ReplaceLanguage",
-                  (0, c.we)("#Language_" + (0, r.Lg)(this.language)),
+                  (0, d.we)("#Language_" + (0, o.Lg)(this.language)),
                 ),
               ),
             {
@@ -2088,7 +1928,7 @@
           return !0;
         }
         BIsVideo() {
-          return E.Ho.includes(this.fileType);
+          return i.Ho.includes(this.fileType);
         }
         BSupportsLanguages() {
           return !0;
@@ -2125,7 +1965,7 @@
             return e.find((e) => e.sKey == this.m_rgCurrentImageOptionKey);
           }
           const t = e.find(
-            (e) => e.groupName == (0, i.jj)(this.filename, -1).baseFilename,
+            (e) => e.groupName == (0, m.jj)(this.filename, -1).baseFilename,
           );
           return t || (1 == e.length ? e[0] : void 0);
         }
@@ -2133,12 +1973,12 @@
           this.m_rgCurrentImageOptionKey = e?.sKey;
         }
         GetImageOptionLabel() {
-          return a.createElement(
+          return r.createElement(
             "span",
             null,
-            (0, c.we)("#ImageUpload_ImageGroup"),
-            a.createElement(C.o, {
-              tooltip: (0, c.we)("#ImageUpload_ImageGroup_ttip"),
+            (0, d.we)("#ImageUpload_ImageGroup"),
+            r.createElement(p.o, {
+              tooltip: (0, d.we)("#ImageUpload_ImageGroup_ttip"),
             }),
           );
         }
@@ -2157,24 +1997,36 @@
           }
         }
       }
-      (0, l.Cg)([o.sH], h.prototype, "m_rgCurrentImageOptionKey", void 0),
-        (0, l.Cg)([o.EW], h.prototype, "ImageOptions", null),
-        (0, l.Cg)([o.XI], h.prototype, "SetCurrentImageOption", null);
-      var S = n(41735),
-        f = n.n(S),
-        b = n(29655),
-        k = n(3577);
-      class A extends _ {
+      (0, a.Cg)([l.sH], _.prototype, "m_rgCurrentImageOptionKey", void 0),
+        (0, a.Cg)([l.EW], _.prototype, "ImageOptions", null),
+        (0, a.Cg)([l.XI], _.prototype, "SetCurrentImageOption", null);
+      var g = n(41735),
+        E = n.n(g),
+        C = n(29655),
+        h = n(3577),
+        S = n(81393),
+        f = n(62490),
+        b = n(6419);
+      class k extends m.Vr {
+        m_nAppId;
         m_strBeginUploadUrl;
         m_strCompleteUploadUrl;
-        constructor(e, t, n) {
-          super((e, t, a, r, o) => new h(n, !!t, e, a, r, o)),
-            (0, o.Gn)(this),
-            (this.m_strBeginUploadUrl = e),
-            (this.m_strCompleteUploadUrl = t);
+        static m_mapConcurrentCompletions = new Set();
+        m_filesToUpload = l.sH.array();
+        m_bExtraAssetsV2Videos = !1;
+        m_onlyAssetGroup = void 0;
+        m_rgExistingAssetGroups = void 0;
+        m_rgImageSizes = void 0;
+        constructor(e, t, n, a) {
+          super(),
+            (0, l.Gn)(this),
+            (this.m_bExtraAssetsV2Videos = a),
+            (this.m_nAppId = e),
+            (this.m_strBeginUploadUrl = t),
+            (this.m_strCompleteUploadUrl = n);
         }
         BGetUploadsAreInSerial() {
-          return !0;
+          return !1;
         }
         GetErrorsFromErrorResponse(e) {
           let t;
@@ -2183,13 +2035,13 @@
             n
               ? (t = [
                   ...n,
-                  a.createElement("br"),
-                  a.createElement(
+                  r.createElement("br"),
+                  r.createElement(
                     "a",
                     {
                       href: "https://partner.steamgames.com/doc/store/page/assets#error",
                     },
-                    (0, c.we)(
+                    (0, d.we)(
                       "#StoreAdmin_ExtraAssetUpload_UnknownUploadFailure",
                     ),
                   ),
@@ -2201,16 +2053,58 @@
             t
           );
         }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = l.sH.array();
+        }
+        DeleteUploadImage(e) {
+          const t = this.m_filesToUpload.findIndex(
+            (t) => e.file == t.file && e.uploadTime == t.uploadTime,
+          );
+          t >= 0 &&
+            (this.m_filesToUpload.splice(t, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        SetExistingAssetGroups(e, t) {
+          (this.m_rgExistingAssetGroups = e), (this.m_rgImageSizes = t);
+        }
+        SetOnlyAssetGroup(e) {
+          this.m_onlyAssetGroup = e;
+        }
+        async AddImageForLanguage(e, t) {
+          if ((0, u.aL)(e.type) || (0, u.Uz)(e.type)) {
+            const n = await (0, u.zB)(e, (0, u.Uz)(e.type));
+            if (n) {
+              const a = new _(
+                this.m_bExtraAssetsV2Videos,
+                !!this.m_onlyAssetGroup,
+                () => this.GetImageOptions(),
+                e,
+                t,
+                n,
+              );
+              return (this.m_filesToUpload = [...this.m_filesToUpload, a]), !0;
+            }
+          } else
+            console.error(
+              "AddImageForLanguage failed to determine file type, not image, video or subtitle",
+              e,
+              e.type,
+            );
+          return !1;
+        }
         async UploadSingleImage(e, t, n, a) {
-          const o = e.GetCurrentImageOption()?.groupName ?? t;
+          const r = e.GetCurrentImageOption()?.groupName ?? t;
           let l;
           {
             const t = new FormData();
-            t.append("sessionid", g.TS.SESSIONID),
+            t.append("sessionid", s.TS.SESSIONID),
               t.append("asset_type", "extra_asset_v2"),
               t.append("file", e.file);
             try {
-              const n = await f().post(this.m_strBeginUploadUrl, t, {
+              const n = await E().post(this.m_strBeginUploadUrl, t, {
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
                 cancelToken: a,
@@ -2236,17 +2130,24 @@
               );
             }
           }
-          const s = Date.now();
-          for (; Date.now() - s < 3e5; ) {
+          const i = Date.now();
+          for (; Date.now() - i < 3e5; ) {
             const e = new FormData();
-            let t;
-            e.append("sessionid", g.TS.SESSIONID),
+            if (
+              (e.append("sessionid", s.TS.SESSIONID),
               e.append("request_id", l.toString()),
-              e.append("name", o),
+              e.append("name", r),
               e.append("asset_type", "extra_asset_v2"),
-              -1 != n && e.append("language", (0, r.Lg)(n));
+              -1 != n && e.append("language", (0, o.Lg)(n)),
+              k.m_mapConcurrentCompletions.has(this.m_nAppId))
+            ) {
+              await (0, h.yI)(Math.floor(1e3 * Math.random()) + 500);
+              continue;
+            }
+            let t;
             try {
-              const n = await f().post(this.m_strCompleteUploadUrl, e, {
+              k.m_mapConcurrentCompletions.add(this.m_nAppId);
+              const n = await E().post(this.m_strCompleteUploadUrl, e, {
                 withCredentials: !0,
                 cancelToken: a,
               });
@@ -2269,6 +2170,8 @@
                 ),
                 { bSuccess: !1, elErrorMessage: t, result: null }
               );
+            } finally {
+              k.m_mapConcurrentCompletions.delete(this.m_nAppId);
             }
             if (t.complete)
               return {
@@ -2276,20 +2179,128 @@
                 elErrorMessage: null,
                 result: t.rgExtraAssets,
               };
-            await (0, k.yI)(Math.floor(1e3 * Math.random()));
+            await (0, h.yI)(Math.floor(1e3 * Math.random()) + 500);
           }
           return {
             bSuccess: !1,
-            elErrorMessage: (0, c.we)("#StoreAdmin_ExtraAssetUpload_Timeout"),
+            elErrorMessage: (0, d.we)("#StoreAdmin_ExtraAssetUpload_Timeout"),
           };
         }
+        GetImageOptions() {
+          const e = (e, t, n, a, r) => ({
+              baseFilename: e,
+              language: t,
+              bNew: n,
+              size: { width: a, height: r },
+            }),
+            t = [];
+          for (const n of this.m_filesToUpload.filter(
+            (e) => "pending" == e.status || (0, c.o)(e.status),
+          ))
+            if (this.m_onlyAssetGroup)
+              t.push(
+                e(
+                  this.m_onlyAssetGroup.baseFilename,
+                  n.language ?? 0,
+                  !0,
+                  n.width,
+                  n.height,
+                ),
+              );
+            else {
+              const a = (0, m.jj)(n.filename).baseFilename,
+                r = n.GetCurrentImageOptionKey() ?? a;
+              t.push(e(r, n.language ?? 0, !0, n.width, n.height)),
+                r != a && t.push(e(a, -1, !0, n.width, n.height));
+            }
+          let n = this.m_rgExistingAssetGroups ?? [],
+            a = this.m_rgImageSizes ?? [];
+          if (this.m_onlyAssetGroup) {
+            const e = n.findIndex(
+              (e) => e.baseFilename == this.m_onlyAssetGroup.baseFilename,
+            );
+            (0, S.wT)(
+              -1 != e,
+              "onlyAssetGroup isn't in the existing assets list",
+            ),
+              (n = [n[e]]),
+              (a = [a[e]]);
+          }
+          const r = f
+              .qQ(n, a)
+              .flatMap(([t, n]) =>
+                ((t, n) =>
+                  t.languages.map((a) =>
+                    e(t.baseFilename, a, !1, n?.width ?? 0, n?.height ?? 0),
+                  ))(t, n),
+              ),
+            o = t.concat(r).reduce((e, t) => {
+              const n = e.get(t.baseFilename) ?? [];
+              return n.push(t), e.set(t.baseFilename, n), e;
+            }, new Map()),
+            l = [];
+          for (const e of o.keys()) {
+            const t = o.get(e).filter((e) => -1 != e.language),
+              n = new Set(t.map((e) => e.language)).size,
+              a =
+                n > 1
+                  ? (0, d.Yp)(
+                      "#StoreAdmin_ExtraAssetUpload_LocalizeGroup",
+                      n,
+                      e,
+                    )
+                  : e,
+              r = new Map();
+            for (let e of t
+              .filter((e) => !e.bNew)
+              .concat(t.filter((e) => e.bNew)))
+              r.set(e.language, e);
+            const s = Array.from(r.values()).filter((e) => !e.bNew),
+              i = s.length > 0 ? s[0].size : void 0,
+              c = t.filter((e) => e.bNew).at(0)?.size,
+              u = t
+                .filter((e) => e.bNew)
+                .some(
+                  (e) => e.size.width != c.width || e.size.height != c.height,
+                ),
+              m = {
+                sKey: e,
+                fnGetLabelText: () => a,
+                width: i?.width ?? 0,
+                height: i?.height ?? 0,
+                bEnforceDimensions: !1,
+                groupName: e,
+                bMismatchedNewSizes: u,
+                rgExistingLanguages: t
+                  .filter((e) => !e.bNew)
+                  .map((e) => e.language),
+              };
+            l.push(m);
+          }
+          return (
+            l.sort((e, t) => (e.sKey < t.sKey ? -1 : e.sKey > t.sKey ? 1 : 0)),
+            l
+          );
+        }
       }
-      function y() {
-        const { bExtraAssetsV2Videos: e } = (0, b.vh)(),
-          t = (0, b.Z3)("ajaxbeginuploadassetasync"),
-          n = (0, b.Z3)("ajaxtrytocompleteuploadasset");
-        return a.useMemo(() => new A(t, n, e), [t, n, e]);
+      function A() {
+        const { bExtraAssetsV2Videos: e } = (0, C.vh)(),
+          { id: t, type: n } = (0, C.a1)();
+        (0, S.wT)(0 == n, "ExtraAssetsUploader can only be used on apps");
+        const a = (0, C.Z3)("ajaxbeginuploadassetasync"),
+          o = (0, C.Z3)("ajaxtrytocompleteuploadasset");
+        return r.useMemo(() => new k(t, a, o, e), [t, a, o, e]);
       }
+      (0, a.Cg)([l.sH], k.prototype, "m_filesToUpload", void 0),
+        (0, a.Cg)([l.sH], k.prototype, "m_onlyAssetGroup", void 0),
+        (0, a.Cg)([l.sH], k.prototype, "m_rgExistingAssetGroups", void 0),
+        (0, a.Cg)([l.sH], k.prototype, "m_rgImageSizes", void 0),
+        (0, a.Cg)([b.o], k.prototype, "GetUploadImages", null),
+        (0, a.Cg)([b.o], k.prototype, "ClearImages", null),
+        (0, a.Cg)([b.o], k.prototype, "DeleteUploadImage", null),
+        (0, a.Cg)([l.XI], k.prototype, "SetExistingAssetGroups", null),
+        (0, a.Cg)([l.XI], k.prototype, "SetOnlyAssetGroup", null),
+        (0, a.Cg)([b.o], k.prototype, "AddImageForLanguage", null);
     },
     87706: (e, t, n) => {
       "use strict";
@@ -2310,7 +2321,7 @@
         E = n(22837),
         C = n(42027),
         h = n(16072),
-        S = n(56560);
+        S = n(53930);
       function f(e) {
         const { rgUploads: t } = e,
           n = o.useMemo(() => new Set(), []),
@@ -3553,7 +3564,7 @@
                       controls: !!o,
                       loop: !o && !!r,
                     },
-                    l,
+                    ...l,
                   ]
                 );
               },
@@ -3685,8 +3696,8 @@
             },
           },
         },
-        z = "noborder",
-        W = "equalcells",
+        W = "noborder",
+        z = "equalcells",
         $ = U.of({
           tableGroup: "block",
           cellContent: "paragraph block*",
@@ -3745,8 +3756,8 @@
         SetTableClass(e) {
           this.table.className = (0, G.A)(
             O().Table,
-            e.attrs[z] && O().NoBorder,
-            e.attrs[W] && O().EqualCells,
+            e.attrs[W] && O().NoBorder,
+            e.attrs[z] && O().EqualCells,
           );
         }
       }
@@ -3913,7 +3924,7 @@
             to: d,
           } = e,
           [m, p] = S.useState(n),
-          [_, g] = S.useState(a || "https://"),
+          [_, g] = S.useState(a),
           E = S.useRef(null),
           C = S.useRef(null),
           [h, f] = S.useState(s);
@@ -3987,6 +3998,7 @@
           S.createElement(ne.pd, {
             ref: C,
             value: _,
+            placeholder: "https://",
             onChange: (e) => g(e.currentTarget.value),
             label: (0, X.we)("#FormattingToolbar_LinkAddress"),
             mustBeURL: !0,
@@ -5152,14 +5164,15 @@
       n.d(t, {
         FD: () => m,
         L4: () => p,
-        TQ: () => S,
-        Y7: () => E,
+        TQ: () => f,
+        Y7: () => C,
         Z3: () => _,
         _M: () => u,
-        aJ: () => h,
-        cz: () => g,
-        gg: () => f,
-        vh: () => C,
+        a1: () => g,
+        aJ: () => S,
+        cz: () => E,
+        gg: () => b,
+        vh: () => h,
       });
       var a = n(2160),
         r = n(81393),
@@ -5183,7 +5196,7 @@
           d,
           { queueExtraAssetUpload: i },
           s.createElement(
-            A,
+            y,
             null,
             s.createElement(
               l.jy,
@@ -5259,27 +5272,31 @@
             }),
             [a, l, m, n, p, _, u],
           );
-        return a ? s.createElement(b.Provider, { value: g }, t) : null;
+        return a ? s.createElement(k.Provider, { value: g }, t) : null;
       }
       function m() {
-        return s.useContext(b).rgExtraAssetsData.rgExtraAssets;
+        return s.useContext(k).rgExtraAssetsData.rgExtraAssets;
       }
       function p() {
-        return s.useContext(b).rgExtraAssetsData;
+        return s.useContext(k).rgExtraAssetsData;
       }
       function _(e) {
         return s
-          .useContext(b)
+          .useContext(k)
           .strGameControllerURLFormat.replace(":method:", e);
       }
       function g() {
-        return s.useContext(b).queueExtraAssetUpload;
+        const e = s.useContext(k);
+        return { type: e.eStoreItemType, id: e.storeItemID };
       }
       function E() {
-        return s.useContext(b).onExtraAssetsUpdated;
+        return s.useContext(k).queueExtraAssetUpload;
       }
       function C() {
-        const e = s.useContext(b),
+        return s.useContext(k).onExtraAssetsUpdated;
+      }
+      function h() {
+        const e = s.useContext(k),
           t = i.iA.is_support;
         return {
           bExtraAssetsV2Videos: e.bExtraAssetsV2Videos && t,
@@ -5287,8 +5304,8 @@
           setExtraAssetsV2Videos: e.setExtraAssetsV2Videos,
         };
       }
-      function h() {
-        const e = s.useContext(b),
+      function S() {
+        const e = s.useContext(k),
           t = s.useMemo(
             () =>
               e.bAppHasSteamChinaToolsEnabled
@@ -5301,15 +5318,15 @@
           rgRealmList: t,
         };
       }
-      function S() {
-        return s.useContext(k).bUseRichEditor;
-      }
       function f() {
-        return s.useContext(k).setUseRichEditor;
+        return s.useContext(A).bUseRichEditor;
       }
-      const b = s.createContext(void 0),
-        k = s.createContext(void 0);
-      function A(e) {
+      function b() {
+        return s.useContext(A).setUseRichEditor;
+      }
+      const k = s.createContext(void 0),
+        A = s.createContext(void 0);
+      function y(e) {
         const t = "storeEditorDisableRichEditor",
           [n, a] = s.useState(() => !localStorage.getItem(t)),
           r = s.useCallback((e) => {
@@ -5319,7 +5336,7 @@
             () => ({ bUseRichEditor: n, setUseRichEditor: r }),
             [n, r],
           );
-        return s.createElement(k.Provider, { value: o }, e.children);
+        return s.createElement(A.Provider, { value: o }, e.children);
       }
     },
     51669: (e, t, n) => {
@@ -6408,7 +6425,7 @@
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(z, {
+          a.createElement(W, {
             refTextArea: o,
             value: r,
             rctToolbarControls: n,
@@ -6416,7 +6433,7 @@
           a.createElement($, { language: t, value: r, refTextArea: o }),
         );
       }
-      function z(e) {
+      function W(e) {
         const { refTextArea: t, value: n, rctToolbarControls: o } = e,
           l = a.useCallback(
             (e, a) => {
@@ -6436,7 +6453,7 @@
           F.Ez,
           null,
           a.createElement(
-            W,
+            z,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_Bold"),
@@ -6446,7 +6463,7 @@
             a.createElement(c.l4n, null),
           ),
           a.createElement(
-            W,
+            z,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_Italic"),
@@ -6456,7 +6473,7 @@
             a.createElement(c.UKJ, null),
           ),
           a.createElement(
-            W,
+            z,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_Underline"),
@@ -6467,7 +6484,7 @@
           ),
           a.createElement(F.XQ, null),
           a.createElement(
-            W,
+            z,
             {
               fnInsertText: s,
               tooltip: (0, r.we)("#FormattingToolbar_BulletedList"),
@@ -6477,7 +6494,7 @@
             a.createElement(c.JPq, null),
           ),
           a.createElement(
-            W,
+            z,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_HeadingLevel2"),
@@ -6488,7 +6505,7 @@
           ),
           a.createElement(F.XQ, null),
           a.createElement(
-            W,
+            z,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_InsertLink"),
@@ -6498,7 +6515,7 @@
             a.createElement(c.YqK, null),
           ),
           a.createElement(
-            W,
+            z,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#EventEditor_InsertImage"),
@@ -6511,7 +6528,7 @@
           o,
         );
       }
-      function W(e) {
+      function z(e) {
         const {
           fnInsertText: t,
           tooltip: n,
@@ -6696,8 +6713,8 @@
         He = n(61336),
         Ke = n(91291),
         Ve = n.n(Ke),
-        ze = n(99956),
-        We = n(49411);
+        We = n(99956),
+        ze = n(49411);
       const $e = "capsule_index_";
       function je(e) {
         const {
@@ -6822,7 +6839,7 @@
           } = e,
           [m] = (0, Ce.G6)(t.id, (0, Pe.SW)(t.type), be.Xh),
           p = (0, Ge.n9)(),
-          _ = (0, We.w)(),
+          _ = (0, ze.w)(),
           g = (0, a.useMemo)(() => m?.GetIncludedAppIDsOrSelf(), [m]);
         if (!m) return null;
         const E = (0, He.NT)(
@@ -6871,7 +6888,7 @@
                       m.GetFormattedSteamReleaseDate(),
                     ),
                   ),
-                  a.createElement(ze.n, {
+                  a.createElement(We.n, {
                     bHideTitle: !0,
                     rgTagIDs: m.GetTagIDs(),
                     instanceNum: o,
@@ -8205,8 +8222,8 @@
         );
         return e;
       }
-      var zt,
-        Wt = n(34629),
+      var Wt,
+        zt = n(34629),
         $t = n(30470),
         jt = n(6144),
         Yt = n(73745),
@@ -8333,97 +8350,97 @@
       }
       function Zt(e) {
         switch (e) {
-          case zt.k_ECurrencyCodeGBP:
+          case Wt.k_ECurrencyCodeGBP:
             return "GBP";
-          case zt.k_ECurrencyCodeEUR:
+          case Wt.k_ECurrencyCodeEUR:
             return "EUR";
-          case zt.k_ECurrencyCodeCHF:
+          case Wt.k_ECurrencyCodeCHF:
             return "CHF";
-          case zt.k_ECurrencyCodeRUB:
+          case Wt.k_ECurrencyCodeRUB:
             return "RUB";
-          case zt.k_ECurrencyCodePLN:
+          case Wt.k_ECurrencyCodePLN:
             return "PLN";
-          case zt.k_ECurrencyCodeBRL:
+          case Wt.k_ECurrencyCodeBRL:
             return "BRL";
-          case zt.k_ECurrencyCodeJPY:
+          case Wt.k_ECurrencyCodeJPY:
             return "JPY";
-          case zt.k_ECurrencyCodeNOK:
+          case Wt.k_ECurrencyCodeNOK:
             return "NOK";
-          case zt.k_ECurrencyCodeIDR:
+          case Wt.k_ECurrencyCodeIDR:
             return "IDR";
-          case zt.k_ECurrencyCodeMYR:
+          case Wt.k_ECurrencyCodeMYR:
             return "MYR";
-          case zt.k_ECurrencyCodePHP:
+          case Wt.k_ECurrencyCodePHP:
             return "PHP";
-          case zt.k_ECurrencyCodeSGD:
+          case Wt.k_ECurrencyCodeSGD:
             return "SGD";
-          case zt.k_ECurrencyCodeTHB:
+          case Wt.k_ECurrencyCodeTHB:
             return "THB";
-          case zt.k_ECurrencyCodeVND:
+          case Wt.k_ECurrencyCodeVND:
             return "VND";
-          case zt.k_ECurrencyCodeKRW:
+          case Wt.k_ECurrencyCodeKRW:
             return "KRW";
-          case zt.k_ECurrencyCodeTRY:
+          case Wt.k_ECurrencyCodeTRY:
             return "TRY";
-          case zt.k_ECurrencyCodeUAH:
+          case Wt.k_ECurrencyCodeUAH:
             return "UAH";
-          case zt.k_ECurrencyCodeMXN:
+          case Wt.k_ECurrencyCodeMXN:
             return "MXN";
-          case zt.k_ECurrencyCodeCAD:
+          case Wt.k_ECurrencyCodeCAD:
             return "CAD";
-          case zt.k_ECurrencyCodeAUD:
+          case Wt.k_ECurrencyCodeAUD:
             return "AUD";
-          case zt.k_ECurrencyCodeNZD:
+          case Wt.k_ECurrencyCodeNZD:
             return "NZD";
-          case zt.k_ECurrencyCodeCNY:
+          case Wt.k_ECurrencyCodeCNY:
             return "CNY";
-          case zt.k_ECurrencyCodeINR:
+          case Wt.k_ECurrencyCodeINR:
             return "INR";
-          case zt.k_ECurrencyCodeCLP:
+          case Wt.k_ECurrencyCodeCLP:
             return "CLP";
-          case zt.k_ECurrencyCodePEN:
+          case Wt.k_ECurrencyCodePEN:
             return "PEN";
-          case zt.k_ECurrencyCodeCOP:
+          case Wt.k_ECurrencyCodeCOP:
             return "COP";
-          case zt.k_ECurrencyCodeZAR:
+          case Wt.k_ECurrencyCodeZAR:
             return "ZAR";
-          case zt.k_ECurrencyCodeHKD:
+          case Wt.k_ECurrencyCodeHKD:
             return "HKD";
-          case zt.k_ECurrencyCodeTWD:
+          case Wt.k_ECurrencyCodeTWD:
             return "TWD";
-          case zt.k_ECurrencyCodeSAR:
+          case Wt.k_ECurrencyCodeSAR:
             return "SAR";
-          case zt.k_ECurrencyCodeAED:
+          case Wt.k_ECurrencyCodeAED:
             return "AED";
-          case zt.k_ECurrencyCodeSEK:
+          case Wt.k_ECurrencyCodeSEK:
             return "SEK";
-          case zt.k_ECurrencyCodeARS:
+          case Wt.k_ECurrencyCodeARS:
             return "ARS";
-          case zt.k_ECurrencyCodeILS:
+          case Wt.k_ECurrencyCodeILS:
             return "ILS";
-          case zt.k_ECurrencyCodeBYN:
+          case Wt.k_ECurrencyCodeBYN:
             return "BYN";
-          case zt.k_ECurrencyCodeKZT:
+          case Wt.k_ECurrencyCodeKZT:
             return "KZT";
-          case zt.k_ECurrencyCodeKWD:
+          case Wt.k_ECurrencyCodeKWD:
             return "KWD";
-          case zt.k_ECurrencyCodeQAR:
+          case Wt.k_ECurrencyCodeQAR:
             return "QAR";
-          case zt.k_ECurrencyCodeCRC:
+          case Wt.k_ECurrencyCodeCRC:
             return "CRC";
-          case zt.k_ECurrencyCodeUYU:
+          case Wt.k_ECurrencyCodeUYU:
             return "UYU";
-          case zt.k_ECurrencyCodeBGN:
+          case Wt.k_ECurrencyCodeBGN:
             return "BGN";
-          case zt.k_ECurrencyCodeHRK:
+          case Wt.k_ECurrencyCodeHRK:
             return "HRK";
-          case zt.k_ECurrencyCodeCZK:
+          case Wt.k_ECurrencyCodeCZK:
             return "CZK";
-          case zt.k_ECurrencyCodeDKK:
+          case Wt.k_ECurrencyCodeDKK:
             return "DKK";
-          case zt.k_ECurrencyCodeHUF:
+          case Wt.k_ECurrencyCodeHUF:
             return "HUF";
-          case zt.k_ECurrencyCodeRON:
+          case Wt.k_ECurrencyCodeRON:
             return "RON";
           default:
             return "USD";
@@ -8431,99 +8448,99 @@
       }
       function Jt(e) {
         switch (e) {
-          case zt.k_ECurrencyCodeUSD:
+          case Wt.k_ECurrencyCodeUSD:
             return "US Dollar";
-          case zt.k_ECurrencyCodeGBP:
+          case Wt.k_ECurrencyCodeGBP:
             return "GB Pounds";
-          case zt.k_ECurrencyCodeEUR:
+          case Wt.k_ECurrencyCodeEUR:
             return "Euros";
-          case zt.k_ECurrencyCodeCHF:
+          case Wt.k_ECurrencyCodeCHF:
             return "Swiss Francs";
-          case zt.k_ECurrencyCodeRUB:
+          case Wt.k_ECurrencyCodeRUB:
             return "Russian Rubles";
-          case zt.k_ECurrencyCodePLN:
+          case Wt.k_ECurrencyCodePLN:
             return "Polish zloty";
-          case zt.k_ECurrencyCodeBRL:
+          case Wt.k_ECurrencyCodeBRL:
             return "Brazilian Reals";
-          case zt.k_ECurrencyCodeJPY:
+          case Wt.k_ECurrencyCodeJPY:
             return "Japanese Yen";
-          case zt.k_ECurrencyCodeNOK:
+          case Wt.k_ECurrencyCodeNOK:
             return "Norwegian Krone";
-          case zt.k_ECurrencyCodeIDR:
+          case Wt.k_ECurrencyCodeIDR:
             return "Indonesian Rupiah";
-          case zt.k_ECurrencyCodeMYR:
+          case Wt.k_ECurrencyCodeMYR:
             return "Malaysian Ringgit";
-          case zt.k_ECurrencyCodePHP:
+          case Wt.k_ECurrencyCodePHP:
             return "Philippine Peso";
-          case zt.k_ECurrencyCodeSGD:
+          case Wt.k_ECurrencyCodeSGD:
             return "Singapore Dollar";
-          case zt.k_ECurrencyCodeTHB:
+          case Wt.k_ECurrencyCodeTHB:
             return "Thai Baht";
-          case zt.k_ECurrencyCodeVND:
+          case Wt.k_ECurrencyCodeVND:
             return "Vietnamese Dong";
-          case zt.k_ECurrencyCodeKRW:
+          case Wt.k_ECurrencyCodeKRW:
             return "Korean Won";
-          case zt.k_ECurrencyCodeTRY:
+          case Wt.k_ECurrencyCodeTRY:
             return "Turkish Lira";
-          case zt.k_ECurrencyCodeUAH:
+          case Wt.k_ECurrencyCodeUAH:
             return "Ukrainian Hryvnia";
-          case zt.k_ECurrencyCodeMXN:
+          case Wt.k_ECurrencyCodeMXN:
             return "Mexican Peso";
-          case zt.k_ECurrencyCodeCAD:
+          case Wt.k_ECurrencyCodeCAD:
             return "Canadian Dollar";
-          case zt.k_ECurrencyCodeAUD:
+          case Wt.k_ECurrencyCodeAUD:
             return "Australian Dollar";
-          case zt.k_ECurrencyCodeNZD:
+          case Wt.k_ECurrencyCodeNZD:
             return "New Zealand Dollar";
-          case zt.k_ECurrencyCodeCNY:
+          case Wt.k_ECurrencyCodeCNY:
             return "Chinese Yuan";
-          case zt.k_ECurrencyCodeINR:
+          case Wt.k_ECurrencyCodeINR:
             return "Indian Rupee";
-          case zt.k_ECurrencyCodeCLP:
+          case Wt.k_ECurrencyCodeCLP:
             return "Chilean Peso";
-          case zt.k_ECurrencyCodePEN:
+          case Wt.k_ECurrencyCodePEN:
             return "Peruvian Sol";
-          case zt.k_ECurrencyCodeCOP:
+          case Wt.k_ECurrencyCodeCOP:
             return "Colombian Peso";
-          case zt.k_ECurrencyCodeZAR:
+          case Wt.k_ECurrencyCodeZAR:
             return "South African Rand";
-          case zt.k_ECurrencyCodeHKD:
+          case Wt.k_ECurrencyCodeHKD:
             return "Hong Kong Dollar";
-          case zt.k_ECurrencyCodeTWD:
+          case Wt.k_ECurrencyCodeTWD:
             return "Taiwanese Dollar";
-          case zt.k_ECurrencyCodeSAR:
+          case Wt.k_ECurrencyCodeSAR:
             return "Saudi Arabian Riyal";
-          case zt.k_ECurrencyCodeAED:
+          case Wt.k_ECurrencyCodeAED:
             return "Emirati Dirham";
-          case zt.k_ECurrencyCodeSEK:
+          case Wt.k_ECurrencyCodeSEK:
             return "Swedish Krona";
-          case zt.k_ECurrencyCodeARS:
+          case Wt.k_ECurrencyCodeARS:
             return "Argentine Peso";
-          case zt.k_ECurrencyCodeILS:
+          case Wt.k_ECurrencyCodeILS:
             return "Israeli New Shequel";
-          case zt.k_ECurrencyCodeBYN:
+          case Wt.k_ECurrencyCodeBYN:
             return "Belarusian Ruble";
-          case zt.k_ECurrencyCodeKZT:
+          case Wt.k_ECurrencyCodeKZT:
             return "Kazakhstani Tenge";
-          case zt.k_ECurrencyCodeKWD:
+          case Wt.k_ECurrencyCodeKWD:
             return "Kuwaiti Dinar";
-          case zt.k_ECurrencyCodeQAR:
+          case Wt.k_ECurrencyCodeQAR:
             return "Qatari Rial";
-          case zt.k_ECurrencyCodeCRC:
+          case Wt.k_ECurrencyCodeCRC:
             return "Costa Rican Colon";
-          case zt.k_ECurrencyCodeUYU:
+          case Wt.k_ECurrencyCodeUYU:
             return "Uruguayan Peso";
-          case zt.k_ECurrencyCodeBGN:
+          case Wt.k_ECurrencyCodeBGN:
             return "Bulgarian lev";
-          case zt.k_ECurrencyCodeHRK:
+          case Wt.k_ECurrencyCodeHRK:
             return "Croatian kuna";
-          case zt.k_ECurrencyCodeCZK:
+          case Wt.k_ECurrencyCodeCZK:
             return "Czech koruna";
-          case zt.k_ECurrencyCodeDKK:
+          case Wt.k_ECurrencyCodeDKK:
             return "Danish krone";
-          case zt.k_ECurrencyCodeHUF:
+          case Wt.k_ECurrencyCodeHUF:
             return "Hungarian forint";
-          case zt.k_ECurrencyCodeRON:
+          case Wt.k_ECurrencyCodeRON:
             return "Romanian leu";
           default:
             return "";
@@ -8531,97 +8548,97 @@
       }
       function en(e, t = on.k_ERegionCodeInvalid) {
         switch (e) {
-          case zt.k_ECurrencyCodeGBP:
+          case Wt.k_ECurrencyCodeGBP:
             return "gbp";
-          case zt.k_ECurrencyCodeEUR:
+          case Wt.k_ECurrencyCodeEUR:
             return "eur";
-          case zt.k_ECurrencyCodeCHF:
+          case Wt.k_ECurrencyCodeCHF:
             return "chf";
-          case zt.k_ECurrencyCodeRUB:
+          case Wt.k_ECurrencyCodeRUB:
             return "rub";
-          case zt.k_ECurrencyCodePLN:
+          case Wt.k_ECurrencyCodePLN:
             return "pln";
-          case zt.k_ECurrencyCodeBRL:
+          case Wt.k_ECurrencyCodeBRL:
             return "brl";
-          case zt.k_ECurrencyCodeJPY:
+          case Wt.k_ECurrencyCodeJPY:
             return "jpy";
-          case zt.k_ECurrencyCodeNOK:
+          case Wt.k_ECurrencyCodeNOK:
             return "nok";
-          case zt.k_ECurrencyCodeIDR:
+          case Wt.k_ECurrencyCodeIDR:
             return "idr";
-          case zt.k_ECurrencyCodeMYR:
+          case Wt.k_ECurrencyCodeMYR:
             return "myr";
-          case zt.k_ECurrencyCodePHP:
+          case Wt.k_ECurrencyCodePHP:
             return "php";
-          case zt.k_ECurrencyCodeSGD:
+          case Wt.k_ECurrencyCodeSGD:
             return "sgd";
-          case zt.k_ECurrencyCodeTHB:
+          case Wt.k_ECurrencyCodeTHB:
             return "thb";
-          case zt.k_ECurrencyCodeVND:
+          case Wt.k_ECurrencyCodeVND:
             return "vnd";
-          case zt.k_ECurrencyCodeKRW:
+          case Wt.k_ECurrencyCodeKRW:
             return "krw";
-          case zt.k_ECurrencyCodeTRY:
+          case Wt.k_ECurrencyCodeTRY:
             return "try";
-          case zt.k_ECurrencyCodeUAH:
+          case Wt.k_ECurrencyCodeUAH:
             return "uah";
-          case zt.k_ECurrencyCodeMXN:
+          case Wt.k_ECurrencyCodeMXN:
             return "mxn";
-          case zt.k_ECurrencyCodeCAD:
+          case Wt.k_ECurrencyCodeCAD:
             return "cad";
-          case zt.k_ECurrencyCodeAUD:
+          case Wt.k_ECurrencyCodeAUD:
             return "aud";
-          case zt.k_ECurrencyCodeNZD:
+          case Wt.k_ECurrencyCodeNZD:
             return "nzd";
-          case zt.k_ECurrencyCodeCNY:
+          case Wt.k_ECurrencyCodeCNY:
             return "cny";
-          case zt.k_ECurrencyCodeINR:
+          case Wt.k_ECurrencyCodeINR:
             return "inr";
-          case zt.k_ECurrencyCodeCLP:
+          case Wt.k_ECurrencyCodeCLP:
             return "clp";
-          case zt.k_ECurrencyCodePEN:
+          case Wt.k_ECurrencyCodePEN:
             return "pen";
-          case zt.k_ECurrencyCodeCOP:
+          case Wt.k_ECurrencyCodeCOP:
             return "cop";
-          case zt.k_ECurrencyCodeZAR:
+          case Wt.k_ECurrencyCodeZAR:
             return "zar";
-          case zt.k_ECurrencyCodeHKD:
+          case Wt.k_ECurrencyCodeHKD:
             return "hkd";
-          case zt.k_ECurrencyCodeTWD:
+          case Wt.k_ECurrencyCodeTWD:
             return "twd";
-          case zt.k_ECurrencyCodeSAR:
+          case Wt.k_ECurrencyCodeSAR:
             return "sar";
-          case zt.k_ECurrencyCodeAED:
+          case Wt.k_ECurrencyCodeAED:
             return "aed";
-          case zt.k_ECurrencyCodeSEK:
+          case Wt.k_ECurrencyCodeSEK:
             return "sek";
-          case zt.k_ECurrencyCodeARS:
+          case Wt.k_ECurrencyCodeARS:
             return "ars";
-          case zt.k_ECurrencyCodeILS:
+          case Wt.k_ECurrencyCodeILS:
             return "ils";
-          case zt.k_ECurrencyCodeBYN:
+          case Wt.k_ECurrencyCodeBYN:
             return "byn";
-          case zt.k_ECurrencyCodeKZT:
+          case Wt.k_ECurrencyCodeKZT:
             return "kzt";
-          case zt.k_ECurrencyCodeKWD:
+          case Wt.k_ECurrencyCodeKWD:
             return "kwd";
-          case zt.k_ECurrencyCodeQAR:
+          case Wt.k_ECurrencyCodeQAR:
             return "qar";
-          case zt.k_ECurrencyCodeCRC:
+          case Wt.k_ECurrencyCodeCRC:
             return "crc";
-          case zt.k_ECurrencyCodeUYU:
+          case Wt.k_ECurrencyCodeUYU:
             return "uyu";
-          case zt.k_ECurrencyCodeBGN:
+          case Wt.k_ECurrencyCodeBGN:
             return "bgn";
-          case zt.k_ECurrencyCodeHRK:
+          case Wt.k_ECurrencyCodeHRK:
             return "hrk";
-          case zt.k_ECurrencyCodeCZK:
+          case Wt.k_ECurrencyCodeCZK:
             return "czk";
-          case zt.k_ECurrencyCodeDKK:
+          case Wt.k_ECurrencyCodeDKK:
             return "dkk";
-          case zt.k_ECurrencyCodeHUF:
+          case Wt.k_ECurrencyCodeHUF:
             return "huf";
-          case zt.k_ECurrencyCodeRON:
+          case Wt.k_ECurrencyCodeRON:
             return "ron";
           default:
             return t == on.k_ERegionCodeCIS
@@ -8640,108 +8657,108 @@
           (function (e) {
             switch (e) {
               case "USD":
-                return zt.k_ECurrencyCodeUSD;
+                return Wt.k_ECurrencyCodeUSD;
               case "GBP":
-                return zt.k_ECurrencyCodeGBP;
+                return Wt.k_ECurrencyCodeGBP;
               case "EUR":
-                return zt.k_ECurrencyCodeEUR;
+                return Wt.k_ECurrencyCodeEUR;
               case "CHF":
-                return zt.k_ECurrencyCodeCHF;
+                return Wt.k_ECurrencyCodeCHF;
               case "RUB":
-                return zt.k_ECurrencyCodeRUB;
+                return Wt.k_ECurrencyCodeRUB;
               case "PLN":
-                return zt.k_ECurrencyCodePLN;
+                return Wt.k_ECurrencyCodePLN;
               case "BRL":
-                return zt.k_ECurrencyCodeBRL;
+                return Wt.k_ECurrencyCodeBRL;
               case "JPY":
-                return zt.k_ECurrencyCodeJPY;
+                return Wt.k_ECurrencyCodeJPY;
               case "NOK":
-                return zt.k_ECurrencyCodeNOK;
+                return Wt.k_ECurrencyCodeNOK;
               case "IDR":
-                return zt.k_ECurrencyCodeIDR;
+                return Wt.k_ECurrencyCodeIDR;
               case "MYR":
-                return zt.k_ECurrencyCodeMYR;
+                return Wt.k_ECurrencyCodeMYR;
               case "PHP":
-                return zt.k_ECurrencyCodePHP;
+                return Wt.k_ECurrencyCodePHP;
               case "SGD":
-                return zt.k_ECurrencyCodeSGD;
+                return Wt.k_ECurrencyCodeSGD;
               case "THB":
-                return zt.k_ECurrencyCodeTHB;
+                return Wt.k_ECurrencyCodeTHB;
               case "VND":
-                return zt.k_ECurrencyCodeVND;
+                return Wt.k_ECurrencyCodeVND;
               case "KRW":
-                return zt.k_ECurrencyCodeKRW;
+                return Wt.k_ECurrencyCodeKRW;
               case "TRY":
-                return zt.k_ECurrencyCodeTRY;
+                return Wt.k_ECurrencyCodeTRY;
               case "UAH":
-                return zt.k_ECurrencyCodeUAH;
+                return Wt.k_ECurrencyCodeUAH;
               case "MXN":
-                return zt.k_ECurrencyCodeMXN;
+                return Wt.k_ECurrencyCodeMXN;
               case "CAD":
-                return zt.k_ECurrencyCodeCAD;
+                return Wt.k_ECurrencyCodeCAD;
               case "AUD":
-                return zt.k_ECurrencyCodeAUD;
+                return Wt.k_ECurrencyCodeAUD;
               case "NZD":
-                return zt.k_ECurrencyCodeNZD;
+                return Wt.k_ECurrencyCodeNZD;
               case "CNY":
-                return zt.k_ECurrencyCodeCNY;
+                return Wt.k_ECurrencyCodeCNY;
               case "INR":
-                return zt.k_ECurrencyCodeINR;
+                return Wt.k_ECurrencyCodeINR;
               case "CLP":
-                return zt.k_ECurrencyCodeCLP;
+                return Wt.k_ECurrencyCodeCLP;
               case "PEN":
-                return zt.k_ECurrencyCodePEN;
+                return Wt.k_ECurrencyCodePEN;
               case "COP":
-                return zt.k_ECurrencyCodeCOP;
+                return Wt.k_ECurrencyCodeCOP;
               case "ZAR":
-                return zt.k_ECurrencyCodeZAR;
+                return Wt.k_ECurrencyCodeZAR;
               case "HKD":
-                return zt.k_ECurrencyCodeHKD;
+                return Wt.k_ECurrencyCodeHKD;
               case "TWD":
-                return zt.k_ECurrencyCodeTWD;
+                return Wt.k_ECurrencyCodeTWD;
               case "SAR":
-                return zt.k_ECurrencyCodeSAR;
+                return Wt.k_ECurrencyCodeSAR;
               case "AED":
-                return zt.k_ECurrencyCodeAED;
+                return Wt.k_ECurrencyCodeAED;
               case "SEK":
-                return zt.k_ECurrencyCodeSEK;
+                return Wt.k_ECurrencyCodeSEK;
               case "ARS":
-                return zt.k_ECurrencyCodeARS;
+                return Wt.k_ECurrencyCodeARS;
               case "ILS":
-                return zt.k_ECurrencyCodeILS;
+                return Wt.k_ECurrencyCodeILS;
               case "BYN":
-                return zt.k_ECurrencyCodeBYN;
+                return Wt.k_ECurrencyCodeBYN;
               case "KZT":
-                return zt.k_ECurrencyCodeKZT;
+                return Wt.k_ECurrencyCodeKZT;
               case "KWD":
-                return zt.k_ECurrencyCodeKWD;
+                return Wt.k_ECurrencyCodeKWD;
               case "QAR":
-                return zt.k_ECurrencyCodeQAR;
+                return Wt.k_ECurrencyCodeQAR;
               case "CRC":
-                return zt.k_ECurrencyCodeCRC;
+                return Wt.k_ECurrencyCodeCRC;
               case "UYU":
-                return zt.k_ECurrencyCodeUYU;
+                return Wt.k_ECurrencyCodeUYU;
               case "BGN":
-                return zt.k_ECurrencyCodeBGN;
+                return Wt.k_ECurrencyCodeBGN;
               case "HRK":
-                return zt.k_ECurrencyCodeHRK;
+                return Wt.k_ECurrencyCodeHRK;
               case "CZK":
-                return zt.k_ECurrencyCodeCZK;
+                return Wt.k_ECurrencyCodeCZK;
               case "DKK":
-                return zt.k_ECurrencyCodeDKK;
+                return Wt.k_ECurrencyCodeDKK;
               case "HUF":
-                return zt.k_ECurrencyCodeHUF;
+                return Wt.k_ECurrencyCodeHUF;
               case "RON":
-                return zt.k_ECurrencyCodeRON;
+                return Wt.k_ECurrencyCodeRON;
               default:
-                return zt.k_ECurrencyCodeInvalid;
+                return Wt.k_ECurrencyCodeInvalid;
             }
           })(e.toUpperCase()),
         )} (${e})`;
       }
-      (0, Wt.Cg)([Yt.oI], Xt.prototype, "LoadMoreProposal", null),
-        (0, Wt.Cg)([Yt.oI], Xt.prototype, "RejectProposal", null),
-        (0, Wt.Cg)([Yt.oI], Xt.prototype, "AcceptProposal", null),
+      (0, zt.Cg)([Yt.oI], Xt.prototype, "LoadMoreProposal", null),
+        (0, zt.Cg)([Yt.oI], Xt.prototype, "RejectProposal", null),
+        (0, zt.Cg)([Yt.oI], Xt.prototype, "AcceptProposal", null),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -8792,55 +8809,55 @@
             (e[(e.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
             (e[(e.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
             (e[(e.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(zt || (zt = {}));
-      const nn = [zt.k_ECurrencyCodeTRY, zt.k_ECurrencyCodeARS],
+        })(Wt || (Wt = {}));
+      const nn = [Wt.k_ECurrencyCodeTRY, Wt.k_ECurrencyCodeARS],
         an = [
-          zt.k_ECurrencyCodeUSD,
-          zt.k_ECurrencyCodeGBP,
-          zt.k_ECurrencyCodeEUR,
-          zt.k_ECurrencyCodeCHF,
-          zt.k_ECurrencyCodeRUB,
-          zt.k_ECurrencyCodePLN,
-          zt.k_ECurrencyCodeBRL,
-          zt.k_ECurrencyCodeJPY,
-          zt.k_ECurrencyCodeNOK,
-          zt.k_ECurrencyCodeIDR,
-          zt.k_ECurrencyCodeMYR,
-          zt.k_ECurrencyCodePHP,
-          zt.k_ECurrencyCodeSGD,
-          zt.k_ECurrencyCodeTHB,
-          zt.k_ECurrencyCodeVND,
-          zt.k_ECurrencyCodeKRW,
-          zt.k_ECurrencyCodeUAH,
-          zt.k_ECurrencyCodeMXN,
-          zt.k_ECurrencyCodeCAD,
-          zt.k_ECurrencyCodeAUD,
-          zt.k_ECurrencyCodeNZD,
-          zt.k_ECurrencyCodeCNY,
-          zt.k_ECurrencyCodeINR,
-          zt.k_ECurrencyCodeCLP,
-          zt.k_ECurrencyCodePEN,
-          zt.k_ECurrencyCodeCOP,
-          zt.k_ECurrencyCodeZAR,
-          zt.k_ECurrencyCodeHKD,
-          zt.k_ECurrencyCodeTWD,
-          zt.k_ECurrencyCodeSAR,
-          zt.k_ECurrencyCodeAED,
-          zt.k_ECurrencyCodeILS,
-          zt.k_ECurrencyCodeKZT,
-          zt.k_ECurrencyCodeKWD,
-          zt.k_ECurrencyCodeQAR,
-          zt.k_ECurrencyCodeCRC,
-          zt.k_ECurrencyCodeUYU,
+          Wt.k_ECurrencyCodeUSD,
+          Wt.k_ECurrencyCodeGBP,
+          Wt.k_ECurrencyCodeEUR,
+          Wt.k_ECurrencyCodeCHF,
+          Wt.k_ECurrencyCodeRUB,
+          Wt.k_ECurrencyCodePLN,
+          Wt.k_ECurrencyCodeBRL,
+          Wt.k_ECurrencyCodeJPY,
+          Wt.k_ECurrencyCodeNOK,
+          Wt.k_ECurrencyCodeIDR,
+          Wt.k_ECurrencyCodeMYR,
+          Wt.k_ECurrencyCodePHP,
+          Wt.k_ECurrencyCodeSGD,
+          Wt.k_ECurrencyCodeTHB,
+          Wt.k_ECurrencyCodeVND,
+          Wt.k_ECurrencyCodeKRW,
+          Wt.k_ECurrencyCodeUAH,
+          Wt.k_ECurrencyCodeMXN,
+          Wt.k_ECurrencyCodeCAD,
+          Wt.k_ECurrencyCodeAUD,
+          Wt.k_ECurrencyCodeNZD,
+          Wt.k_ECurrencyCodeCNY,
+          Wt.k_ECurrencyCodeINR,
+          Wt.k_ECurrencyCodeCLP,
+          Wt.k_ECurrencyCodePEN,
+          Wt.k_ECurrencyCodeCOP,
+          Wt.k_ECurrencyCodeZAR,
+          Wt.k_ECurrencyCodeHKD,
+          Wt.k_ECurrencyCodeTWD,
+          Wt.k_ECurrencyCodeSAR,
+          Wt.k_ECurrencyCodeAED,
+          Wt.k_ECurrencyCodeILS,
+          Wt.k_ECurrencyCodeKZT,
+          Wt.k_ECurrencyCodeKWD,
+          Wt.k_ECurrencyCodeQAR,
+          Wt.k_ECurrencyCodeCRC,
+          Wt.k_ECurrencyCodeUYU,
         ],
         rn = new Set(an);
-      zt.k_ECurrencyCodeSEK,
-        zt.k_ECurrencyCodeBGN,
-        zt.k_ECurrencyCodeHRK,
-        zt.k_ECurrencyCodeCZK,
-        zt.k_ECurrencyCodeDKK,
-        zt.k_ECurrencyCodeHUF,
-        zt.k_ECurrencyCodeRON;
+      Wt.k_ECurrencyCodeSEK,
+        Wt.k_ECurrencyCodeBGN,
+        Wt.k_ECurrencyCodeHRK,
+        Wt.k_ECurrencyCodeCZK,
+        Wt.k_ECurrencyCodeDKK,
+        Wt.k_ECurrencyCodeHUF,
+        Wt.k_ECurrencyCodeRON;
       var on;
       !(function (e) {
         (e[(e.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
@@ -9028,8 +9045,8 @@
           a.proposed_prices.region_amounts.map((t) => {
             const a = dn(t.name),
               s =
-                n.GetRecommendPrice(e, zt.k_ECurrencyCodeUSD, a) ||
-                n.GetScaledRecommendedPrice(e, zt.k_ECurrencyCodeUSD, a);
+                n.GetRecommendPrice(e, Wt.k_ECurrencyCodeUSD, a) ||
+                n.GetScaledRecommendedPrice(e, Wt.k_ECurrencyCodeUSD, a);
             An(l, t, a, s, r, o);
           }),
           {
@@ -9090,7 +9107,7 @@
                     const o = new Array();
                     bn(t).length > 0 && o.push("currency_missing");
                     const l = t.proposed_prices.base_amounts.find(
-                        (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
+                        (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
                       )?.amount.amount,
                       s = yn(l, n, r, t);
                     (s.rgAboveThreshold.length > 0 ||
@@ -9475,13 +9492,13 @@
             packageID: t.packageid,
             mapPartnerPaidByPackage: n,
           }),
-          a.createElement(zn, {
+          a.createElement(Wn, {
             packageID: t.packageid,
             mapPartnerPaidByPackage: n,
           }),
         );
       }
-      function zn(e) {
+      function Wn(e) {
         const { packageID: t, mapPartnerPaidByPackage: n } = e,
           r = n.get(t);
         return r
@@ -9489,12 +9506,12 @@
               "div",
               null,
               r.map((e) =>
-                a.createElement(Wn, { key: "partner" + e, partnerID: e }),
+                a.createElement(zn, { key: "partner" + e, partnerID: e }),
               ),
             )
           : null;
       }
-      function Wn(e) {
+      function zn(e) {
         const { partnerID: t } = e,
           [n] = (0, En.UA)(t);
         return n
@@ -9552,7 +9569,7 @@
         const { proposal: t, oGuideline: n, mapCurrentPrices: r } = e,
           o = r.get(t.packageid),
           l = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
           )?.amount.amount;
         return a.createElement(
           "tr",
@@ -9569,7 +9586,7 @@
             });
           }),
           ln.map((e) => {
-            const r = zt.k_ECurrencyCodeUSD,
+            const r = Wt.k_ECurrencyCodeUSD,
               s =
                 n.GetRecommendPrice(l, r, e) ||
                 n.GetScaledRecommendedPrice(l, r, e);
@@ -9902,12 +9919,12 @@
       function ia(e) {
         const { proposal: t, mapCurrentPrices: n } = e,
           r = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
           )?.amount.amount,
           o = n
             .get(t.packageid)
             ?.current_costs.base_amounts.find(
-              (e) => e.currency_code == zt.k_ECurrencyCodeUSD,
+              (e) => e.currency_code == Wt.k_ECurrencyCodeUSD,
             )?.amount;
         return a.createElement(
           a.Fragment,
@@ -9996,9 +10013,9 @@
       function da(e) {
         const { proposal: t, oGuideline: n } = e,
           r = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
           )?.amount.amount,
-          o = n.GetRecommendPrice(r, zt.k_ECurrencyCodeUSD);
+          o = n.GetRecommendPrice(r, Wt.k_ECurrencyCodeUSD);
         return a.createElement(
           a.Fragment,
           null,
@@ -11098,7 +11115,7 @@
           { className: Aa.ReorderableListWithArrows },
           t.length > 0 &&
             t.map((e, t) =>
-              a.createElement(za, {
+              a.createElement(Wa, {
                 key: "reorderable-" + t,
                 index: t,
                 item: e,
@@ -11113,7 +11130,7 @@
           a.createElement("a", { onClick: () => (n(t.concat([o()])), !1) }, s),
         );
       }
-      function za(e) {
+      function Wa(e) {
         const {
           index: t,
           item: n,
@@ -11143,7 +11160,7 @@
           ),
         );
       }
-      var Wa = n(4544),
+      var za = n(4544),
         $a = n(44165),
         ja = n(1909),
         Ya = n(78395),
@@ -11202,11 +11219,11 @@
                 key: o + "_" + e,
                 type: "hidden",
                 name: `${o}[${(0, Z.Lg)(e, "english")}]`,
-                value: (0, Wa.VX)(t, e),
+                value: (0, za.VX)(t, e),
               }),
             );
           });
-        const p = (0, Wa.VX)(t, u) || "";
+        const p = (0, za.VX)(t, u) || "";
         return a.createElement(
           "div",
           { className: c },
@@ -11395,7 +11412,7 @@
           [c, u, d] = (0, G.uD)(),
           m = a.useMemo(() => (0, r.O9)(l), [l]),
           p = a.useMemo(
-            () => (0, Wa.mn)(t?.milestone_desc || { english: "" }),
+            () => (0, za.mn)(t?.milestone_desc || { english: "" }),
             [t?.milestone_desc],
           ),
           _ = a.useMemo(
@@ -11528,7 +11545,7 @@
                 text: A,
                 className: cr().MilestoneTitleField,
                 onChangeText: (e, t) => {
-                  (0, Wa.pV)(A, t, e), y({ ...A });
+                  (0, za.pV)(A, t, e), y({ ...A });
                 },
                 kvName: void 0,
                 rgRealms: L,
@@ -12283,8 +12300,8 @@
               Boolean(
                 l.commitments?.some(
                   (t) =>
-                    (0, Wa.nU)(t.localized_title, e) ||
-                    (0, Wa.nU)(t.milestone_desc, e),
+                    (0, za.nU)(t.localized_title, e) ||
+                    (0, za.nU)(t.milestone_desc, e),
                 ),
               ),
             [l.commitments],
@@ -12763,8 +12780,8 @@
           ),
           "other" === i &&
             a.createElement(Vr, { values: t.otherNameLoc, mapLanguages: l }),
-          _ && a.createElement(zr, { checked: u, onChange: d }),
-          _ && u && a.createElement(Wr, { checked: m, onChange: p }),
+          _ && a.createElement(Wr, { checked: u, onChange: d }),
+          _ && u && a.createElement(zr, { checked: m, onChange: p }),
           a.createElement($r, {
             selectedOption: "unspecified" !== i ? i : "",
             kernelMode: !!_ && u,
@@ -12825,7 +12842,7 @@
           s,
         );
       }
-      function zr(e) {
+      function Wr(e) {
         const { checked: t, onChange: n } = e;
         return a.createElement(
           Hr,
@@ -12843,7 +12860,7 @@
           ),
         );
       }
-      function Wr(e) {
+      function zr(e) {
         const { checked: t, onChange: n } = e;
         return a.createElement(
           Hr,
@@ -15379,7 +15396,7 @@
           V();
         }, []),
           a.useEffect(() => () => K.cancel("ReorderableList unmounting"), [K]);
-        const z = (e, t) => {
+        const W = (e, t) => {
             K.token.reason ||
               (F.current.firstElementChild?.getBoundingClientRect().height >
                 0 &&
@@ -15404,7 +15421,7 @@
               })(t, e),
               e.preventDefault());
           },
-          W = (e, n) => {
+          z = (e, n) => {
             const a = g.OQ(n > e ? n - 1 : n, 0, t.length - 1);
             e != a && (C ? C(e, a) : (0, s.yY)(t, e, a), X(a), p && p(t));
           },
@@ -15421,7 +15438,7 @@
                   M(void 0),
                   N(void 0);
               })(),
-              W(P, T));
+              z(P, T));
           },
           j = (e) => {
             if (!b || K.token.reason) return;
@@ -15459,7 +15476,7 @@
               n = Number.parseInt(t);
             if (0 == t.length || isNaN(n)) return;
             const a = n - 1;
-            e != a && W(e, a);
+            e != a && z(e, a);
           },
           [q, X] = a.useState(void 0);
         return a.createElement(
@@ -15513,7 +15530,7 @@
                     S && c().DisabledGrab,
                   ),
                   src: o,
-                  onMouseDown: Boolean(S) ? void 0 : (e) => z(e, r),
+                  onMouseDown: Boolean(S) ? void 0 : (e) => W(e, r),
                 }),
                 a.createElement("input", {
                   className: (0, E.A)(c().WhitelistNumber, S && c().Disabled),

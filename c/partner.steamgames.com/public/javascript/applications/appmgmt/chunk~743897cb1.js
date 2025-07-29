@@ -12993,6 +12993,7 @@
             size: _ = "Medium",
             animatedAvatar: __webpack_require__,
             className: _,
+            strBackupAvatarURL: _,
             ..._
           } = this.props;
           let _ = "";
@@ -13004,12 +13005,13 @@
                   _._.MEDIA_CDN_COMMUNITY_URL +
                   "images/" +
                   __webpack_require__.image_small)
-              : _ &&
-                ((_ = _.avatar_url_medium),
-                "Small" == _ || "X-Small" == _
-                  ? (_ = _.avatar_url)
-                  : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
-                    (_ = _.avatar_url_full)),
+              : _
+                ? ((_ = _.avatar_url_medium),
+                  "Small" == _ || "X-Small" == _
+                    ? (_ = _.avatar_url)
+                    : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
+                      (_ = _.avatar_url_full))
+                : _ && (_ = _),
             _.createElement(_, {
               strAvatarURL: _,
               size: _,
@@ -27605,12 +27607,19 @@
               "mp4",
               "mpeg",
               "ogv",
+              "webp",
+              "avif",
             ].indexOf(_)
-          )
+          ) {
+            let _ = _ || _;
             return void this.SetUploadFileError(
               5,
-              (0, _._)("#Chat_Settings_Error_ChatFileTypeNotSupported", _),
+              (0, _._)(
+                "#Chat_Settings_Error_ChatUploadFileTypeNotSupported",
+                _,
+              ),
             );
+          }
           const _ = await __webpack_require__(_);
           this.SetFileToUpload(_.file),
             (this.m_fileUploadProps.imageHeight = _.height),
@@ -27630,12 +27639,14 @@
               ),
             );
           let _ = _.name.split(".").pop().toLowerCase();
-          -1 != ["zip"].indexOf(_)
-            ? this.SetFileToUpload(_)
-            : this.SetUploadFileError(
-                5,
-                (0, _._)("#Chat_Settings_Error_ChatFileTypeNotSupported", _),
-              );
+          if (-1 != ["zip"].indexOf(_)) this.SetFileToUpload(_);
+          else {
+            let _ = _ || _;
+            this.SetUploadFileError(
+              5,
+              (0, _._)("#Chat_Settings_Error_FileTypeNotZip", _),
+            );
+          }
         }
         SetFileToUpload(_) {
           if (

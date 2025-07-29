@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Nieuwe uitgaven",
 	"Menu_OnSale": "In de uitverkoop",
 	"Menu_SearchPlaceholder": "Zoeken in de winkel",
+	"Menu_ClearSearchTerm": "Zoekterm wissen",
 	"Menu_Wishlist": "Verlanglijst",
 	"Menu_Cart": "Winkelwagen",
 	"Menu_Popover_TopLinks": "Populaire links",

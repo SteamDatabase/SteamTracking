@@ -480,6 +480,7 @@
     27007: (e) => {
       e.exports = {
         Group: "_1ml4SNc3LIyBDHIf8ekVSw",
+        CenteredPill: "L2J24Sa_dQql2exoKoBMi",
         Button: "HijmccPB1BKyhOwhX1EVl",
         Disabled: "_3hmGW9wIxNIoPPu1aS7rFm",
         Active: "_3-_jME_xsuvgT3Dvq4bw_q",
@@ -1799,7 +1800,7 @@
             r.e(3506),
             r.e(4017),
             r.e(9433),
-          ]).then(r.bind(r, 97472)),
+          ]).then(r.bind(r, 89025)),
         ),
         he = u.lazy(() =>
           Promise.all([
@@ -5603,6 +5604,7 @@
         }
         SetDOMFocusAndScroll(e, t) {
           this.UpdateParentActiveChild(),
+            this.m_Tree.OnChildActivated(e),
             this.m_Tree.BIsActiveFocus()
               ? ((0, a.wT)(
                   !this.m_Tree.BUseVirtualFocus(),
@@ -5675,8 +5677,7 @@
                           inline: "nearest",
                         });
               }
-            })(this, t),
-            this.m_Tree.OnChildActivated(e);
+            })(this, t);
         }
       }
       (0, n.Cg)([o.o], H.prototype, "OnDOMFocus", null),
@@ -16205,7 +16206,7 @@
         );
         return n.createElement(a, { value: l }, r);
       }
-      const c = () => o().useActiveSteamInterface().GetServiceTransport(),
+      const c = () => o().useActiveSteamInterface()?.GetServiceTransport(),
         u = () => o().useActiveSteamInterface().GetAnonymousServiceTransport(),
         m = () => o().useStorage(),
         d = () => o().useActiveSteamInterface();
@@ -21122,19 +21123,17 @@
             c = 0,
             u = s.innerWidth,
             m = s.innerHeight,
-            d = 1,
-            p = n?.getBoundingClientRect();
+            d = n?.getBoundingClientRect();
           if (i)
             if (
               (t.bScreenCoordinates ||
                 void 0 === a ||
                 void 0 === o ||
                 ((a += s.screenLeft), (o += s.screenTop)),
-              p && (p = b.pd(s, p)),
+              d && (d = b.pd(s, d)),
               t.targetMonitor)
             )
-              (d = t.targetMonitor.flMonitorScale),
-                (l = t.targetMonitor.nScreenLeft),
+              (l = t.targetMonitor.nScreenLeft),
                 (c = t.targetMonitor.nScreenTop),
                 (u = t.targetMonitor.nScreenWidth),
                 (m = t.targetMonitor.nScreenHeight);
@@ -21150,12 +21149,8 @@
                 (m = e.availHeight);
             }
           (t.bOverlapHorizontal || t.bOverlapVertical) && (a = o = void 0);
-          let h = r.getBoundingClientRect();
-          if (t.flGamepadScale && t.flGamepadScale > 0) {
-            const e = t.flGamepadScale;
-            h = new DOMRect(h.x * e, h.y * e, h.width * e, h.height * e);
-          }
-          let g = {
+          const p = r.getBoundingClientRect();
+          let h = {
               menuLeft: void 0,
               menuRight: void 0,
               menuTop: void 0,
@@ -21164,76 +21159,76 @@
               menuHeight: void 0,
               menuMinWidth: void 0,
             },
-            _ = a ?? p.left,
-            f = a ?? p.right,
-            C = h.width;
-          t.bMatchWidth && ((C = f - _), (g.menuWidth = C)),
-            t.bGrowToElementWidth && (g.menuMinWidth = Math.max(C, f - _));
-          let w = (t.bOverlapHorizontal ? f : _) - l - C,
-            M = w > 0,
-            S = l + u - (t.bOverlapHorizontal ? _ : f) - C,
-            v = S > 0,
-            y = (t.bPreferPopLeft || !v) && M;
-          M ||
-            v ||
-            ((y = M > v),
-            t.bFitToWindow && ((C += (y ? w : S) - 8), (g.menuWidth = C))),
-            y
-              ? (g.menuRight = u - (t.bOverlapHorizontal ? f : _))
-              : (g.menuLeft = t.bOverlapHorizontal ? _ : f);
-          let B = o ?? p.top,
-            E = o ?? p.bottom,
-            R = r.scrollHeight;
-          t.bMatchHeight && ((R = E - B), (g.menuHeight = R));
-          let I = (t.bOverlapVertical ? E : B) - c - R,
-            T = I > 0,
-            D = c + m - (t.bOverlapVertical ? B : E) - R,
-            L = D > 0,
-            k = (t.bPreferPopTop || !L) && T && !t.bDisablePopTop;
-          if (!T && !L) {
+            g = a ?? d.left,
+            _ = a ?? d.right,
+            f = p.width;
+          t.bMatchWidth && ((f = _ - g), (h.menuWidth = f)),
+            t.bGrowToElementWidth && (h.menuMinWidth = Math.max(f, _ - g));
+          let C = (t.bOverlapHorizontal ? _ : g) - l - f,
+            w = C > 0,
+            M = l + u - (t.bOverlapHorizontal ? g : _) - f,
+            S = M > 0,
+            v = (t.bPreferPopLeft || !S) && w;
+          w ||
+            S ||
+            ((v = w > S),
+            t.bFitToWindow && ((f += (v ? C : M) - 8), (h.menuWidth = f))),
+            v
+              ? (h.menuRight = u - (t.bOverlapHorizontal ? _ : g))
+              : (h.menuLeft = t.bOverlapHorizontal ? g : _);
+          let y = o ?? d.top,
+            B = o ?? d.bottom,
+            E = r.scrollHeight;
+          t.bMatchHeight && ((E = B - y), (h.menuHeight = E));
+          let R = (t.bOverlapVertical ? B : y) - c - E,
+            I = R > 0,
+            T = c + m - (t.bOverlapVertical ? y : B) - E,
+            D = T > 0,
+            L = (t.bPreferPopTop || !D) && I && !t.bDisablePopTop;
+          if (!I && !D) {
             const e =
               void 0 !== t.bShiftToFitWindow
                 ? t.bShiftToFitWindow
                 : !!t.bFitToWindow && !t.bOverlapHorizontal;
-            (k = I > D && !t.bDisablePopTop),
-              e && (k ? (g.menuTop = 4) : (g.menuBottom = 4)),
+            (L = R > T && !t.bDisablePopTop),
+              e && (L ? (h.menuTop = 4) : (h.menuBottom = 4)),
               t.bFitToWindow &&
-                (e ? (R = Math.min(R, m - 8)) : (R += k ? I : D),
-                (g.menuHeight = R - 8));
+                (e ? (E = Math.min(E, m - 8)) : (E += L ? R : T),
+                (h.menuHeight = E - 8));
           }
-          void 0 === g.menuBottom &&
-            void 0 === g.menuTop &&
-            (k
-              ? (g.menuBottom = m - (t.bOverlapVertical ? E : B))
-              : (g.menuTop = t.bOverlapVertical ? B : E)),
+          void 0 === h.menuBottom &&
+            void 0 === h.menuTop &&
+            (L
+              ? (h.menuBottom = m - (t.bOverlapVertical ? B : y))
+              : (h.menuTop = t.bOverlapVertical ? y : B)),
             i
-              ? (g.menuHeight || (g.menuHeight = h.height),
-                g.menuWidth || (g.menuWidth = h.width),
-                g.menuBottom &&
-                  !g.menuTop &&
-                  ((g.menuTop = m - g.menuBottom - g.menuHeight),
-                  (g.menuBottom = void 0)),
-                g.menuRight &&
-                  !g.menuLeft &&
-                  ((g.menuLeft = u - g.menuRight - g.menuWidth),
-                  (g.menuRight = void 0)))
+              ? (h.menuHeight || (h.menuHeight = p.height),
+                h.menuWidth || (h.menuWidth = p.width),
+                h.menuBottom &&
+                  !h.menuTop &&
+                  ((h.menuTop = m - h.menuBottom - h.menuHeight),
+                  (h.menuBottom = void 0)),
+                h.menuRight &&
+                  !h.menuLeft &&
+                  ((h.menuLeft = u - h.menuRight - h.menuWidth),
+                  (h.menuRight = void 0)))
               : "fixed" != s.getComputedStyle(r).position &&
-                (g.menuLeft && (g.menuLeft += s.scrollX),
-                g.menuTop && (g.menuTop += s.scrollY),
-                g.menuBottom &&
-                  (g.menuBottom +=
+                (h.menuLeft && (h.menuLeft += s.scrollX),
+                h.menuTop && (h.menuTop += s.scrollY),
+                h.menuBottom &&
+                  (h.menuBottom +=
                     s.document.body.clientHeight - s.scrollY - s.innerHeight),
-                g.menuRight &&
-                  (g.menuRight +=
+                h.menuRight &&
+                  (h.menuRight +=
                     s.document.body.clientWidth - s.scrollX - s.innerWidth)),
             (e ||
-              g.menuLeft !== this.state.menuLeft ||
-              g.menuRight !== this.state.menuRight ||
-              g.menuTop !== this.state.menuTop ||
-              g.menuBottom !== this.state.menuBottom ||
-              g.menuWidth !== this.state.menuWidth ||
-              g.menuHeight !== this.state.menuHeight) &&
-              this.setState(g);
+              h.menuLeft !== this.state.menuLeft ||
+              h.menuRight !== this.state.menuRight ||
+              h.menuTop !== this.state.menuTop ||
+              h.menuBottom !== this.state.menuBottom ||
+              h.menuWidth !== this.state.menuWidth ||
+              h.menuHeight !== this.state.menuHeight) &&
+              this.setState(h);
         }
         PositionPopupWindow() {
           if (
@@ -21248,11 +21243,9 @@
           const e = this.props.popup?.window,
             t = this.props.options;
           if (t.bScreenCoordinates) {
-            let r = this.parentWin?.devicePixelRatio;
-            if (t.targetMonitor) {
-              let e = t.flGamepadScale || 1;
-              r = (t.targetMonitor.flMonitorScale ?? 1) / e;
-            }
+            const r =
+              t.targetMonitor?.flScaleToTargetMonitor ??
+              this.parentWin?.devicePixelRatio;
             return (
               e?.SteamClient.Window.MoveTo(
                 this.state.menuLeft,
@@ -21286,39 +21279,27 @@
         }
         render() {
           let e = { visibility: this.state.ready ? "visible" : "hidden" };
-          if (
-            this.props.options.flGamepadScale &&
-            this.props.options.flGamepadScale > 0
-          )
-            e.zoom = this.props.options.flGamepadScale;
-          else if (
-            this.props.options.bScreenCoordinates &&
-            this.props.options.targetMonitor &&
-            this.m_elMenu?.ownerDocument?.defaultView
-          ) {
-            const t = this.m_elMenu.ownerDocument.defaultView.devicePixelRatio;
-            1 != t &&
-              (e.zoom =
-                (this.props.options.targetMonitor.flMonitorScale ?? 1) / t);
-          }
-          this.props.popup
-            ? (this.PositionPopupWindow(),
-              void 0 !== this.state.menuMinWidth &&
-                (e.minWidth = Math.floor(this.state.menuMinWidth)))
-            : (void 0 !== this.state.menuTop
-                ? (e.top = this.state.menuTop)
-                : void 0 !== this.state.menuBottom &&
-                  (e.bottom = this.state.menuBottom),
-              void 0 !== this.state.menuLeft
-                ? (e.left = this.state.menuLeft)
-                : void 0 !== this.state.menuRight &&
-                  (e.right = this.state.menuRight),
-              void 0 !== this.state.menuHeight &&
-                (e.height = this.state.menuHeight),
-              void 0 !== this.state.menuWidth &&
-                (e.width = this.state.menuWidth),
-              void 0 !== this.state.menuMinWidth &&
-                (e.minWidth = this.state.menuMinWidth));
+          this.props.options.flElementZoom &&
+            this.props.options.flElementZoom > 0 &&
+            (e.zoom = this.props.options.flElementZoom),
+            this.props.popup
+              ? (this.PositionPopupWindow(),
+                void 0 !== this.state.menuMinWidth &&
+                  (e.minWidth = Math.floor(this.state.menuMinWidth)))
+              : (void 0 !== this.state.menuTop
+                  ? (e.top = this.state.menuTop)
+                  : void 0 !== this.state.menuBottom &&
+                    (e.bottom = this.state.menuBottom),
+                void 0 !== this.state.menuLeft
+                  ? (e.left = this.state.menuLeft)
+                  : void 0 !== this.state.menuRight &&
+                    (e.right = this.state.menuRight),
+                void 0 !== this.state.menuHeight &&
+                  (e.height = this.state.menuHeight),
+                void 0 !== this.state.menuWidth &&
+                  (e.width = this.state.menuWidth),
+                void 0 !== this.state.menuMinWidth &&
+                  (e.minWidth = this.state.menuMinWidth));
           let t = this.props.options.strClassName || v().contextMenu;
           return (
             (this.props.options.bCreateHidden ||
@@ -22783,25 +22764,27 @@
             descriptionId: l,
             role: c = "radiogroup",
             children: m,
-            ...d
+            centeredPillStyle: d,
+            ...p
           } = e,
-          p = { value: t, setValue: r, disabled: i };
+          h = { value: t, setValue: r, disabled: i };
         return s.createElement(
           E.Provider,
-          { value: p },
+          { value: h },
           s.createElement(
             o.Z,
             {
               role: c,
               "aria-labelledby": a,
               "aria-describedby": l,
-              ...d,
+              ...p,
               className: (0, u.A)(
                 B().Group,
                 "Shared_Radio_Group",
                 n,
                 i && B().Disabled,
-                p.bVertical && B().VerticalGrouping,
+                h.bVertical && B().VerticalGrouping,
+                d && B().CenteredPill,
               ),
             },
             m,
@@ -35464,6 +35447,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",

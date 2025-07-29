@@ -67,7 +67,7 @@
         Fj: () => m,
         Hj: () => r,
         Ho: () => d,
-        N_: () => b,
+        N_: () => P,
         PL: () => l,
         XY: () => f,
         Yw: () => s,
@@ -76,7 +76,7 @@
         on: () => c,
         s4: () => w,
         tW: () => o,
-        vz: () => P,
+        vz: () => b,
         x: () => u,
         yu: () => _,
       });
@@ -343,10 +343,10 @@
           t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
         );
       }
-      function P(e, t) {
-        return t.filter((t) => b(e, t));
-      }
       function b(e, t) {
+        return t.filter((t) => P(e, t));
+      }
+      function P(e, t) {
         return m[t].rgAcceptableTypes.includes(e);
       }
     },
@@ -598,81 +598,99 @@
     },
     69343: (e, t, i) => {
       "use strict";
-      i.d(t, { PD: () => h, Vr: () => l, jj: () => p });
+      i.d(t, { PD: () => g, Vr: () => p, jj: () => d });
       var s = i(2160),
         n = i(22837),
         o = i(61859),
         r = i(41735),
         a = i.n(r);
       class c {}
-      class l extends c {
-        m_cancelToken = void 0;
-        async UploadAllImages(e, t) {
-          const i = this.GetUploadImages(),
-            s = this.BGetUploadsAreInSerial(),
-            n = i.filter((i) => {
-              const s = i.IsValidAssetType(e, t);
-              return "pending" === i.status && !s.error && !s.needsCrop;
-            });
-          for (const e of n) e.status = "waiting";
-          const o = [],
-            r = a().CancelToken.source();
-          this.m_cancelToken = r;
-          const c = async (e) => {
-            e.status = "uploading";
-            const t = await this.UploadSingleImage(
-              e,
-              e.filename,
-              e.language ?? -1,
-              r.token,
-            );
-            return (
-              (e.status = t.bSuccess ? "success" : "failed"),
-              (e.message =
-                !t.bSuccess && t.elErrorMessage ? t.elErrorMessage : ""),
-              t
-            );
-          };
-          if (s)
-            for (const e of n) {
-              const t = await c(e);
-              o.push({ image: e, uploadResult: t });
+      function l(e, t, i) {
+        const s = e.filter((e) => {
+          const s = e.IsValidAssetType(t, i);
+          return "pending" === e.status && !s.error && !s.needsCrop;
+        });
+        return s.forEach((e) => (e.status = "waiting")), s;
+      }
+      async function h(e, t, i, s, n, o) {
+        const r = l(e, s, n),
+          a = [];
+        let c = 0;
+        const h = Array.from({ length: Math.floor(t) }, () =>
+          (async () => {
+            for (; c < r.length; ) {
+              const e = c++,
+                t = r[e];
+              t.status = "uploading";
+              const s = await i(t, t.filename, t.language ?? -1, o);
+              (t.status = s.bSuccess ? "success" : "failed"),
+                (t.message =
+                  !s.bSuccess && s.elErrorMessage ? s.elErrorMessage : ""),
+                (a[e] = { image: t, uploadResult: s });
             }
-          else {
-            let e = 0;
-            const t = async () => {
-                for (; e < n.length; ) {
-                  const t = e++,
-                    i = n[t],
-                    s = await c(i);
-                  o[t] = { image: i, uploadResult: s };
-                }
-              },
-              i = 4,
-              s = Array.from({ length: i }, () => t());
-            await Promise.all(s);
-          }
-          const l = [];
-          for (const e of o)
-            l.push({
-              bSuccess: e.uploadResult.bSuccess,
-              image: e.image,
-              uploadResult: e.uploadResult.result,
-            });
-          return l;
+          })(),
+        );
+        return (
+          await Promise.all(h),
+          a.map((e) => ({
+            bSuccess: e.uploadResult.bSuccess,
+            image: e.image,
+            uploadResult: e.uploadResult.result,
+          }))
+        );
+      }
+      class p extends c {
+        m_cancel = void 0;
+        async UploadAllImages(e, t) {
+          this.m_cancel = a().CancelToken.source();
+          const i = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let s;
+          const n = this.UploadSingleImage.bind(this);
+          return (
+            (s =
+              i > 1
+                ? await h(
+                    this.GetUploadImages(),
+                    i,
+                    n,
+                    e,
+                    t,
+                    this.m_cancel.token,
+                  )
+                : await (async function (e, t, i, s, n) {
+                    const o = l(e, i, s),
+                      r = [];
+                    for (const e of o) {
+                      e.status = "uploading";
+                      const i = await t(e, e.filename, e.language ?? -1, n);
+                      (e.status = i.bSuccess ? "success" : "failed"),
+                        (e.message =
+                          !i.bSuccess && i.elErrorMessage
+                            ? i.elErrorMessage
+                            : ""),
+                        r.push({
+                          bSuccess: i.bSuccess,
+                          image: e,
+                          uploadResult: i.result,
+                        });
+                    }
+                    return r;
+                  })(this.GetUploadImages(), n, e, t, this.m_cancel.token)),
+            s
+          );
         }
         CancelAllUploads() {
-          this.m_cancelToken?.cancel((0, o.we)("#ImageUpload_CancelRequest"));
+          this.m_cancel?.cancel((0, o.we)("#ImageUpload_CancelRequest"));
         }
       }
-      function h(e, t, i) {
+      function g(e, t, i) {
         if (((null != e && null != e) || (e = t), !i || 0 === i.length))
           return e;
         for (const t of i) if (o.A0.IsELanguageValidInRealm(e, t)) return e;
         for (const e of i) if (o.A0.IsELanguageValidInRealm(t, e)) return t;
         return i.includes(s.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function p(e, t = 0, i = !0) {
+      function d(e, t = 0, i = !0) {
         let s = e.lastIndexOf(".");
         -1 != s && (e = e.slice(0, s).toLowerCase());
         let o = null,
@@ -755,16 +773,16 @@
             include_all_purchase_options: _,
             include_screenshots: w,
             include_trailers: f,
-            include_ratings: P,
-            include_tag_count: b,
+            include_ratings: b,
+            include_tag_count: P,
             include_reviews: k,
             include_basic_info: y,
             include_supported_languages: v,
             include_full_description: L,
-            include_included_items: T,
-            include_assets_without_overrides: I,
-            apply_user_filters: D,
-            include_links: R,
+            include_included_items: I,
+            include_assets_without_overrides: T,
+            apply_user_filters: E,
+            include_links: D,
           } = i;
         if (
           ((0, o.useEffect)(() => {
@@ -775,16 +793,16 @@
               include_all_purchase_options: _,
               include_screenshots: w,
               include_trailers: f,
-              include_ratings: P,
-              include_tag_count: b,
+              include_ratings: b,
+              include_tag_count: P,
               include_reviews: k,
               include_basic_info: y,
               include_supported_languages: v,
               include_full_description: L,
-              include_included_items: T,
-              include_assets_without_overrides: I,
-              apply_user_filters: D,
-              include_links: R,
+              include_included_items: I,
+              include_assets_without_overrides: T,
+              apply_user_filters: E,
+              include_links: D,
             };
             let o = null;
             return (
@@ -801,15 +819,15 @@
                   })),
               () => o?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, p, d, u, m, _, w, f, P, b, k, y, v, L, T, I, D, R, h]),
+          }, [e, t, s, p, d, u, m, _, w, f, b, P, k, y, v, L, I, T, E, D, h]),
           !e)
         )
           return [null, 2];
         if (!1 === p) return [void 0, 2];
         if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!a.A.Get().BHasStoreItem(e, t, i)) return [void 0, 1];
-        const E = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return E ? [E, 3] : [null, 2];
+        const R = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return R ? [R, 3] : [null, 2];
       }
       function l(e, t, i) {
         return c(e, 0, t, i);
@@ -843,8 +861,8 @@
             include_tag_count: _,
             include_reviews: w,
             include_basic_info: f,
-            include_supported_languages: P,
-            include_full_description: b,
+            include_supported_languages: b,
+            include_full_description: P,
             include_included_items: k,
             include_assets_without_overrides: y,
             apply_user_filters: v,
@@ -864,8 +882,8 @@
                 include_tag_count: _,
                 include_reviews: w,
                 include_basic_info: f,
-                include_supported_languages: P,
-                include_full_description: b,
+                include_supported_languages: b,
+                include_full_description: P,
                 include_included_items: k,
                 include_assets_without_overrides: y,
                 apply_user_filters: v,
@@ -887,7 +905,7 @@
               }),
               () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, c, l, h, p, g, d, u, m, _, w, f, P, b, k, y, v, L]),
+          }, [e, t, s, c, l, h, p, g, d, u, m, _, w, f, b, P, k, y, v, L]),
           !e)
         )
           return 2;

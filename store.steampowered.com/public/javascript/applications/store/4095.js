@@ -579,7 +579,7 @@
           reject: t,
         };
       }
-      a.d(t, { x: () => n });
+      a.d(t, { x0: () => n });
     },
     12611: (e, t, a) => {
       "use strict";
@@ -8650,6 +8650,56 @@
       const F = new H();
       window.uiBroadcastWatchStore = F;
     },
+    78511: (e, t, a) => {
+      "use strict";
+      a.d(t, { o: () => s, q: () => o });
+      var n = a(34629),
+        i = a(14947),
+        r = a(82705);
+      function s(e) {
+        return "waiting" == e || "uploading" == e || "processing" == e;
+      }
+      class o {
+        m_originalSize = { width: 0, height: 0 };
+        m_originalDataUrl = "";
+        dataUrl = void 0;
+        width = 0;
+        height = 0;
+        status = "pending";
+        message = "";
+        language = void 0;
+        file;
+        filename;
+        uploadTime;
+        fileType;
+        constructor(e, t, a, n, s) {
+          (0, i.Gn)(this),
+            (this.file = e),
+            (this.filename = t),
+            (this.fileType = (0, r.yh)(t) ?? 0),
+            (this.language = a),
+            (this.uploadTime = Date.now()),
+            (this.status = "pending"),
+            (this.m_originalSize = s),
+            (this.height = s.height),
+            (this.width = s.width),
+            (this.m_originalDataUrl = n),
+            (this.dataUrl = n);
+        }
+        ResetImage() {
+          (this.height = this.m_originalSize.height),
+            (this.width = this.m_originalSize.width),
+            (this.dataUrl = this.m_originalDataUrl);
+        }
+        GetImageOptionLabel() {}
+      }
+      (0, n.Cg)([i.sH], o.prototype, "dataUrl", void 0),
+        (0, n.Cg)([i.sH], o.prototype, "width", void 0),
+        (0, n.Cg)([i.sH], o.prototype, "height", void 0),
+        (0, n.Cg)([i.sH], o.prototype, "status", void 0),
+        (0, n.Cg)([i.sH], o.prototype, "message", void 0),
+        (0, n.Cg)([i.sH], o.prototype, "language", void 0);
+    },
     28954: (e, t, a) => {
       "use strict";
       a.d(t, { VE: () => w, bT: () => b, zO: () => E });
@@ -8665,7 +8715,7 @@
         u = a(61859),
         p = a(78327),
         h = a(86355),
-        _ = a(40521),
+        _ = a(64953),
         g = a(69343),
         f = a(81393),
         S = a(64753),
@@ -8898,7 +8948,7 @@
         d = a(14771),
         c = a(82817),
         u = a(86355),
-        p = a(40521),
+        p = a(64953),
         h = a(3577);
       const _ = {
         GetBaseURL: () => `${i.TS.CLAN_CDN_ASSET_URL}images/`,
@@ -8971,7 +9021,7 @@
           return await this.AsyncGetImageResolutionInternal(s, n, i);
         },
         async AsyncGetImageResolutionInternal(e, t, a) {
-          const n = (0, h.x)();
+          const n = (0, h.x0)();
           let i = new Image();
           (i.crossOrigin = "anonymous"),
             (i.onerror = (t) => {
@@ -9084,61 +9134,21 @@
         BIsClanImageVideo: (e) => 4 == e.file_type || 5 == e.file_type,
       };
     },
-    40521: (e, t, a) => {
+    64953: (e, t, a) => {
       "use strict";
-      a.d(t, { M7: () => g, K_: () => f });
+      a.d(t, { K_: () => g, M7: () => _ });
       var n = a(34629),
         i = a(14947),
         r = a(73744),
         s = a(61859),
-        o = a(82705);
-      class l {
-        m_originalSize = { width: 0, height: 0 };
-        m_originalDataUrl = "";
-        dataUrl = void 0;
-        width = 0;
-        height = 0;
-        status = "pending";
-        message = "";
-        language = void 0;
-        file;
-        filename;
-        uploadTime;
-        fileType;
-        constructor(e, t, a, n, r) {
-          (0, i.Gn)(this),
-            (this.file = e),
-            (this.filename = t),
-            (this.fileType = (0, o.yh)(t) ?? 0),
-            (this.language = a),
-            (this.uploadTime = Date.now()),
-            (this.status = "pending"),
-            (this.m_originalSize = r),
-            (this.height = r.height),
-            (this.width = r.width),
-            (this.m_originalDataUrl = n),
-            (this.dataUrl = n);
-        }
-        ResetImage() {
-          (this.height = this.m_originalSize.height),
-            (this.width = this.m_originalSize.width),
-            (this.dataUrl = this.m_originalDataUrl);
-        }
-        GetImageOptionLabel() {}
-      }
-      (0, n.Cg)([i.sH], l.prototype, "dataUrl", void 0),
-        (0, n.Cg)([i.sH], l.prototype, "width", void 0),
-        (0, n.Cg)([i.sH], l.prototype, "height", void 0),
-        (0, n.Cg)([i.sH], l.prototype, "status", void 0),
-        (0, n.Cg)([i.sH], l.prototype, "message", void 0),
-        (0, n.Cg)([i.sH], l.prototype, "language", void 0);
-      var m = a(66331),
-        d = a(82817);
-      const c = 960,
-        u = 311,
-        p = 480,
-        h = 156;
-      class _ extends l {
+        o = a(78511),
+        l = a(66331),
+        m = a(82817);
+      const d = 960,
+        c = 311,
+        u = 480,
+        p = 156;
+      class h extends o.q {
         m_rgImageOptions;
         m_currentImageOption = void 0;
         m_currentImageOptionKey = void 0;
@@ -9163,8 +9173,8 @@
               (n = e.height),
               (i = !e.bDisableEnforceDimensions));
           }
-          const l = this.width >= a && this.height >= n,
-            c = i ? this.width === a && this.height === n : l,
+          const d = this.width >= a && this.height >= n,
+            c = i ? this.width === a && this.height === n : d,
             u = t && t != this.fileType,
             p =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
@@ -9173,7 +9183,7 @@
                   this.fileType,
                   this.m_rgImageOptions?.map((e) => e.artworkType) || [],
                 ).length,
-            h = Boolean((0, m.t)(this.fileType));
+            h = Boolean((0, l.t)(this.fileType));
           let _ = "",
             g = !1;
           return (
@@ -9183,10 +9193,10 @@
                 : u
                   ? (_ = (0, s.we)(
                       "#ImageUpload_InvalidFormat",
-                      (0, d.EG)(t) ?? "",
+                      (0, m.EG)(t) ?? "",
                     ))
                   : c || h
-                    ? l
+                    ? d
                       ? !c &&
                         h &&
                         ((_ = (0, s.we)(
@@ -9211,8 +9221,8 @@
             this.fileType,
             this.m_rgImageOptions?.map((e) => e.artworkType),
           );
-          let t = S(this.width, this.height, e, !1);
-          if ((void 0 === t && (t = S(this.width, this.height, e, !0)), t)) {
+          let t = f(this.width, this.height, e, !1);
+          if ((void 0 === t && (t = f(this.width, this.height, e, !0)), t)) {
             const e = this.m_rgImageOptions.find((e) => e.artworkType == t);
             if (e) return e;
           }
@@ -9232,9 +9242,9 @@
             (this.m_currentImageOptionKey = e?.sKey);
         }
       }
-      (0, n.Cg)([i.sH], _.prototype, "m_currentImageOption", void 0),
-        (0, n.Cg)([i.sH], _.prototype, "m_currentImageOptionKey", void 0);
-      class g extends _ {
+      (0, n.Cg)([i.sH], h.prototype, "m_currentImageOption", void 0),
+        (0, n.Cg)([i.sH], h.prototype, "m_currentImageOptionKey", void 0);
+      class _ extends h {
         bCropped = !1;
         localizedImageGroupPrimaryImage;
         media;
@@ -9267,84 +9277,122 @@
           return r.Ho.includes(this.fileType);
         }
         GetResizeDimension() {
-          return f(this.GetCurrentImageOption()?.artworkType);
+          return g(this.GetCurrentImageOption()?.artworkType);
         }
       }
-      function f(e) {
+      function g(e) {
         return "background" === e
           ? [
-              { width: c, height: u },
-              { width: p, height: h },
+              { width: d, height: c },
+              { width: u, height: p },
             ]
           : "capsule" === e || "spotlight" === e
             ? [{ width: r.Fj[e].width / 2, height: r.Fj[e].height / 2 }]
             : void 0;
       }
-      function S(e, t, a, n = !1) {
+      function f(e, t, a, n = !1) {
         if (a)
           for (let i of a) {
             if (n ? (0, r.s4)(e, t, i) : (0, r.yu)(e, t, i)) return i;
           }
       }
-      (0, n.Cg)([i.sH], g.prototype, "bCropped", void 0);
+      (0, n.Cg)([i.sH], _.prototype, "bCropped", void 0);
     },
     69343: (e, t, a) => {
       "use strict";
-      a.d(t, { PD: () => d, Vr: () => m, jj: () => c });
+      a.d(t, { PD: () => u, Vr: () => c, jj: () => p });
       var n = a(2160),
         i = a(22837),
         r = a(61859),
         s = a(41735),
         o = a.n(s);
       class l {}
-      class m extends l {
-        m_allCancelTokens = new Array();
+      function m(e, t, a) {
+        const n = e.filter((e) => {
+          const n = e.IsValidAssetType(t, a);
+          return "pending" === e.status && !n.error && !n.needsCrop;
+        });
+        return n.forEach((e) => (e.status = "waiting")), n;
+      }
+      async function d(e, t, a, n, i, r) {
+        const s = m(e, n, i),
+          o = [];
+        let l = 0;
+        const d = Array.from({ length: Math.floor(t) }, () =>
+          (async () => {
+            for (; l < s.length; ) {
+              const e = l++,
+                t = s[e];
+              t.status = "uploading";
+              const n = await a(t, t.filename, t.language ?? -1, r);
+              (t.status = n.bSuccess ? "success" : "failed"),
+                (t.message =
+                  !n.bSuccess && n.elErrorMessage ? n.elErrorMessage : ""),
+                (o[e] = { image: t, uploadResult: n });
+            }
+          })(),
+        );
+        return (
+          await Promise.all(d),
+          o.map((e) => ({
+            bSuccess: e.uploadResult.bSuccess,
+            image: e.image,
+            uploadResult: e.uploadResult.result,
+          }))
+        );
+      }
+      class c extends l {
+        m_cancel = void 0;
         async UploadAllImages(e, t) {
-          const a = this.GetUploadImages(),
-            n = this.BGetUploadsAreInSerial(),
-            i = a.filter((a) => {
-              const n = a.IsValidAssetType(e, t);
-              return "pending" === a.status && !n.error && !n.needsCrop;
-            });
-          for (const e of i) e.status = "uploading";
-          const r = [];
-          for (const e of i) {
-            const t = o().CancelToken.source();
-            this.m_allCancelTokens.push(t);
-            const a = this.UploadSingleImage(
-              e,
-              e.filename,
-              e.language ?? -1,
-              t.token,
-            );
-            r.push({ image: e, promise: a }), n && (await a);
-          }
-          n || (await Promise.all(r.map((e) => e.promise)));
-          const s = [];
-          for (const e of r) {
-            const t = await e.promise,
-              a = e.image;
-            s.push({ bSuccess: t.bSuccess, image: a, uploadResult: t.result }),
-              t.bSuccess
-                ? (a.status = "success")
-                : ((a.status = "failed"), (a.message = t.elErrorMessage ?? ""));
-          }
-          return s;
+          this.m_cancel = o().CancelToken.source();
+          const a = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let n;
+          const i = this.UploadSingleImage.bind(this);
+          return (
+            (n =
+              a > 1
+                ? await d(
+                    this.GetUploadImages(),
+                    a,
+                    i,
+                    e,
+                    t,
+                    this.m_cancel.token,
+                  )
+                : await (async function (e, t, a, n, i) {
+                    const r = m(e, a, n),
+                      s = [];
+                    for (const e of r) {
+                      e.status = "uploading";
+                      const a = await t(e, e.filename, e.language ?? -1, i);
+                      (e.status = a.bSuccess ? "success" : "failed"),
+                        (e.message =
+                          !a.bSuccess && a.elErrorMessage
+                            ? a.elErrorMessage
+                            : ""),
+                        s.push({
+                          bSuccess: a.bSuccess,
+                          image: e,
+                          uploadResult: a.result,
+                        });
+                    }
+                    return s;
+                  })(this.GetUploadImages(), i, e, t, this.m_cancel.token)),
+            n
+          );
         }
         CancelAllUploads() {
-          for (let e of this.m_allCancelTokens)
-            e.cancel((0, r.we)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
+          this.m_cancel?.cancel((0, r.we)("#ImageUpload_CancelRequest"));
         }
       }
-      function d(e, t, a) {
+      function u(e, t, a) {
         if (((null != e && null != e) || (e = t), !a || 0 === a.length))
           return e;
         for (const t of a) if (r.A0.IsELanguageValidInRealm(e, t)) return e;
         for (const e of a) if (r.A0.IsELanguageValidInRealm(t, e)) return t;
         return a.includes(n.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function c(e, t = 0, a = !0) {
+      function p(e, t = 0, a = !0) {
         let n = e.lastIndexOf(".");
         -1 != n && (e = e.slice(0, n).toLowerCase());
         let r = null,
@@ -11841,7 +11889,7 @@
             }),
             this.m_cm)
           ) {
-            let a = o.w.Init(l.hg);
+            let a = o.w.Init(l.QU);
             return (
               a.Body().set_announcementid(e.AnnouncementGID),
               a.Body().set_vote_up(!!t),
@@ -13326,7 +13374,7 @@
         }
       }
       function s(e) {
-        const t = (0, n.x)(),
+        const t = (0, n.x0)(),
           a = new Image();
         return (
           (a.onload = () => t.resolve(a)),
@@ -13339,7 +13387,7 @@
         );
       }
       function o(e) {
-        const t = (0, n.x)(),
+        const t = (0, n.x0)(),
           a = document.createElement("video");
         return (
           (a.preload = "metadata"),
@@ -13361,7 +13409,7 @@
       async function d(e, t) {
         if (t) return o(URL.createObjectURL(e));
         {
-          const t = (0, n.x)(),
+          const t = (0, n.x0)(),
             a = new FileReader();
           (a.onload = () => t.resolve(a.result ?? void 0)),
             (a.onerror = () => {
@@ -18502,21 +18550,26 @@
       }
       const T = 7;
       function B(e) {
-        const { bSingleLineMode: t, storeItem: a, onlyOneDiscountPct: n } = e,
-          i = (0, l.f1)();
+        const {
+            bSingleLineMode: t,
+            storeItem: a,
+            onlyOneDiscountPct: n,
+            bHidePrePurchase: i,
+          } = e,
+          s = (0, l.f1)();
         if (!a) return null;
-        const s =
-            !a.BIsComingSoon() && a.GetReleaseDateRTime() + T * w.Kp.PerDay > i,
-          o = (0, C.A)(
+        const o =
+            !a.BIsComingSoon() && a.GetReleaseDateRTime() + T * w.Kp.PerDay > s,
+          m = (0, C.A)(
             g().StoreSalePriceWidgetContainer,
             t && g().SingleLineMode,
             "StoreSalePriceWidgetContainer",
-            s && g().NewItem,
+            o && g().NewItem,
           );
         if (e.bShowInLibrary)
           return r.createElement(
             "div",
-            { className: o },
+            { className: m },
             r.createElement(
               "div",
               { className: g().StoreSalePriceBox },
@@ -18532,7 +18585,7 @@
               );
           return r.createElement(
             "div",
-            { className: o },
+            { className: m },
             r.createElement("div", { className: g().StoreSalePriceBox }, e),
           );
         }
@@ -18541,8 +18594,8 @@
             return 0 == a.GetStoreItemType() && 1 == a.GetAppType()
               ? r.createElement(
                   "div",
-                  { className: o },
-                  s &&
+                  { className: m },
+                  o &&
                     r.createElement(
                       "div",
                       { className: g().StoreSaleNewItem },
@@ -18556,8 +18609,8 @@
                 )
               : r.createElement(
                   "div",
-                  { className: o },
-                  s &&
+                  { className: m },
+                  o &&
                     r.createElement(
                       "div",
                       { className: g().StoreSaleNewItem },
@@ -18575,7 +18628,7 @@
           )
             return r.createElement(
               "div",
-              { className: o },
+              { className: m },
               r.createElement(
                 "div",
                 { className: g().StoreSalePriceBox },
@@ -18583,20 +18636,21 @@
               ),
             );
         }
-        const m = a.GetBestPurchaseOption();
-        if (!m || !m.formatted_final_price) return null;
-        let d = m.discount_pct,
-          c = n || 2 != a.GetStoreItemType() ? void 0 : m.bundle_discount_pct,
-          u = m.formatted_final_price;
+        const d = a.GetBestPurchaseOption();
+        if (!d || !d.formatted_final_price) return null;
+        let c = d.discount_pct,
+          u = n || 2 != a.GetStoreItemType() ? void 0 : d.bundle_discount_pct,
+          p = d.formatted_final_price;
         return r.createElement(A, {
           bSingleLineMode: t,
-          nBaseDiscountPercentage: c,
-          nDiscountPercentage: d,
+          nBaseDiscountPercentage: u,
+          nDiscountPercentage: c,
           bIsPrePurchase: a.BIsPrePurchase(),
-          strBestPurchaseOriginalPriceFormatted: m.formatted_original_price,
-          strBestPurchasePriceFormatted: u,
-          bHideDiscountPercentForCompliance: m.hide_discount_pct_for_compliance,
-          bShowNewFlag: s,
+          strBestPurchaseOriginalPriceFormatted: d.formatted_original_price,
+          strBestPurchasePriceFormatted: p,
+          bHideDiscountPercentForCompliance: d.hide_discount_pct_for_compliance,
+          bShowNewFlag: o,
+          bHidePrePurchase: i,
         });
       }
       function A(e) {
@@ -18609,12 +18663,13 @@
             strBestPurchasePriceFormatted: o,
             bHideDiscountPercentForCompliance: l,
             bShowNewFlag: m,
+            bHidePrePurchase: d,
           } = e,
-          d = l;
-        let c;
+          c = l;
+        let u;
         return (
           a &&
-            (c = d
+            (u = c
               ? (0, v.we)("#Discount_ARIA_Label_SpecialPrice", s)
               : (0, v.we)("#Discount_ARIA_Label", a, s, o)),
           r.createElement(
@@ -18629,9 +18684,9 @@
                 [g().PrePurchase]: Boolean(n),
                 [g().NewItem]: Boolean(m),
               }),
-              "aria-label": c,
+              "aria-label": u,
             },
-            Boolean(n) &&
+            Boolean(n && !d) &&
               r.createElement(
                 "div",
                 { className: (0, C.A)(g().StoreSalePrepurchaseLabel) },
@@ -18647,25 +18702,25 @@
                 { className: g().StoreSaleNewItem },
                 (0, v.we)("#Flag_New"),
               ),
-            Boolean(i && a && !d) &&
+            Boolean(i && a && !c) &&
               r.createElement(
                 "span",
                 { className: (0, C.A)(g().BaseDiscount) },
                 `-${i}%`,
               ),
-            Boolean(a && !d) &&
+            Boolean(a && !c) &&
               r.createElement(
                 "div",
                 { className: g().StoreSaleDiscountBox },
                 `-${a}%`,
               ),
-            Boolean(d) &&
+            Boolean(c) &&
               r.createElement(
                 "div",
                 { className: g().DiscountIconCtn },
                 r.createElement(f.XH_, null),
               ),
-            Boolean(a && s && !d)
+            Boolean(a && s && !c)
               ? r.createElement(
                   "div",
                   { className: (0, C.A)(g().StoreSaleDiscountedPriceCtn) },

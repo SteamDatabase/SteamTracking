@@ -4335,7 +4335,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				card_number = $('stored_card_number');
 				if ( BStoredCreditCardRequiresSecurityCode( method.value ) )
 				{
-					$('payment_method_review_row_provider_cvv').style.display = 'block';
+					$('payment_method_review_row_provider_cvv').style.display = 'flex';
 					$('security_code_cached').value = '';
 				}
 			}
@@ -4349,7 +4349,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else
 				card_number = '';
 
-						$('payment_method_review_row_provider').style.display = 'block';
+						$('payment_method_review_row_provider').style.display = 'flex';
 			$('payment_method_review_row_steam_account').style.display = 'none';
 			$('payment_method_review_row_min_provider_amount').style.display = 'none';
 			$('payment_method_review_provider_total').style.display = 'none';
@@ -4358,15 +4358,15 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			if ( providerPaymentMethod == 0 )
 			{
 								$('payment_method_review_row_provider_cvv').style.display = 'none';
-				$('payment_method_review_row_steam_account').style.display = 'block';
+				$('payment_method_review_row_steam_account').style.display = 'flex';
 				$('payment_method_review_row_provider').style.display = 'none';
 			}
 			else if ( steamAccountTotal > 0 )
 			{
-								$('payment_method_review_row_steam_account').style.display = 'block';
-				$('payment_method_review_provider_total').style.display = 'block';
-				$('payment_method_review_steam_account_total').style.display = 'block';
-				$('payment_method_review_row_min_provider_amount').style.display = hitMinProviderAmount ? 'block' : 'none';
+								$('payment_method_review_row_steam_account').style.display = 'flex';
+				$('payment_method_review_provider_total').style.display = 'flex';
+				$('payment_method_review_steam_account_total').style.display = 'flex';
+				$('payment_method_review_row_min_provider_amount').style.display = hitMinProviderAmount ? 'flex' : 'none';
 			}
 			else
 			{

@@ -2517,6 +2517,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 @media screen and (max-width: 910px) {
   ._1dKR2IPNQSHs1MAIXBvt_R {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
   ._1dKR2IPNQSHs1MAIXBvt_R ._1X3j2g29SBtsrFMgNiKi_Y {
     max-width: 100%;

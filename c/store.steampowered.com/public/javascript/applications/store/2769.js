@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "新品",
 	"Menu_OnSale": "特卖中",
 	"Menu_SearchPlaceholder": "搜索商店",
+	"Menu_ClearSearchTerm": "清除搜索词",
 	"Menu_Wishlist": "愿望单",
 	"Menu_Cart": "购物车",
 	"Menu_Popover_TopLinks": "热门链接",

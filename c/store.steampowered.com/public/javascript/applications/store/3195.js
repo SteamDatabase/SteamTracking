@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Yeni Çıkanlar",
 	"Menu_OnSale": "İndirimde",
 	"Menu_SearchPlaceholder": "Mağazada ara",
+	"Menu_ClearSearchTerm": "Arama terimini temizle",
 	"Menu_Wishlist": "İstek Listesi",
 	"Menu_Cart": "Sepet",
 	"Menu_Popover_TopLinks": "Popüler Bağlantılar",

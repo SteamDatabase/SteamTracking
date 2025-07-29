@@ -5404,12 +5404,19 @@
               "mp4",
               "mpeg",
               "ogv",
+              "webp",
+              "avif",
             ].indexOf(n)
-          )
+          ) {
+            let e = n || a;
             return void this.SetUploadFileError(
               5,
-              (0, w.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", a),
+              (0, w.we)(
+                "#Chat_Settings_Error_ChatUploadFileTypeNotSupported",
+                e,
+              ),
             );
+          }
           const s = await r(e);
           this.SetFileToUpload(s.file),
             (this.m_fileUploadProps.imageHeight = s.height),
@@ -5429,12 +5436,14 @@
               ),
             );
           let i = e.name.split(".").pop().toLowerCase();
-          -1 != ["zip"].indexOf(i)
-            ? this.SetFileToUpload(e)
-            : this.SetUploadFileError(
-                5,
-                (0, w.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", r),
-              );
+          if (-1 != ["zip"].indexOf(i)) this.SetFileToUpload(e);
+          else {
+            let e = i || r;
+            this.SetUploadFileError(
+              5,
+              (0, w.we)("#Chat_Settings_Error_FileTypeNotZip", e),
+            );
+          }
         }
         SetFileToUpload(e) {
           if (

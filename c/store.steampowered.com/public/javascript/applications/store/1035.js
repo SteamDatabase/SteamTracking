@@ -399,6 +399,7 @@
             size: _ = "Medium",
             animatedAvatar: __webpack_require__,
             className: _,
+            strBackupAvatarURL: _,
             ..._
           } = this.props;
           let _ = "";
@@ -410,12 +411,13 @@
                   _._.MEDIA_CDN_COMMUNITY_URL +
                   "images/" +
                   __webpack_require__.image_small)
-              : _ &&
-                ((_ = _.avatar_url_medium),
-                "Small" == _ || "X-Small" == _
-                  ? (_ = _.avatar_url)
-                  : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
-                    (_ = _.avatar_url_full)),
+              : _
+                ? ((_ = _.avatar_url_medium),
+                  "Small" == _ || "X-Small" == _
+                    ? (_ = _.avatar_url)
+                    : ("Large" != _ && "X-Large" != _ && "FillArea" != _) ||
+                      (_ = _.avatar_url_full))
+                : _ && (_ = _),
             _.createElement(_, {
               strAvatarURL: _,
               size: _,

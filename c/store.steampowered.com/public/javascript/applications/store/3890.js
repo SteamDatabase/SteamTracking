@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Новоиздадени",
 	"Menu_OnSale": "На разпродажба",
 	"Menu_SearchPlaceholder": "Търсене в магазина",
+	"Menu_ClearSearchTerm": "Изчистване на търсения термин",
 	"Menu_Wishlist": "Списък с желания",
 	"Menu_Cart": "Кошница",
 	"Menu_Popover_TopLinks": "Най-популярни връзки",

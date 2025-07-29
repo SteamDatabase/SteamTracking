@@ -5313,6 +5313,7 @@
               },
               _.createElement(_._, {
                 storeItem: _,
+                bHidePrePurchase: !0,
               }),
             )
           : _.createElement("div", {

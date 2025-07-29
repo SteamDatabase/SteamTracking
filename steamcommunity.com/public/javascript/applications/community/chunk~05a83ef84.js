@@ -1563,7 +1563,7 @@
             to: b,
           } = e,
           [v, C] = a.useState(o),
-          [_, k] = a.useState(r || "https://"),
+          [_, k] = a.useState(r),
           T = a.useRef(null),
           w = a.useRef(null),
           [B, E] = a.useState(m);
@@ -1673,6 +1673,7 @@
           a.createElement(s.pd, {
             ref: w,
             value: _,
+            placeholder: "https://",
             onChange: (e) => k(e.currentTarget.value),
             label: (0, i.we)("#FormattingToolbar_LinkAddress"),
             mustBeURL: !0,

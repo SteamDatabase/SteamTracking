@@ -2057,161 +2057,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        m_filesToUpload = _._.array();
-        m_fnCreateUploadImage;
-        m_onlyAssetGroup = void 0;
-        m_rgExistingAssetGroups = void 0;
-        m_rgImageSizes = void 0;
-        constructor(_) {
-          super(), (0, _._)(this), (this.m_fnCreateUploadImage = _);
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        DeleteUploadImage(_) {
-          const _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 &&
-            (this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]));
-        }
-        SetExistingAssetGroups(_, _) {
-          (this.m_rgExistingAssetGroups = _), (this.m_rgImageSizes = _);
-        }
-        SetOnlyAssetGroup(_) {
-          this.m_onlyAssetGroup = _;
-        }
-        async AddImageForLanguage(_, _) {
-          if ((0, _._)(_.type) || (0, _._)(_.type)) {
-            const _ = await (0, _._)(_, (0, _._)(_.type));
-            if (_) {
-              const _ = this.m_fnCreateUploadImage(
-                () => this.GetImageOptions(),
-                this.m_onlyAssetGroup,
-                _,
-                _,
-                _,
-              );
-              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
-            }
-          } else
-            console.error(
-              "CLocalizedGroupImageUploader failed to determine file type, not image, video or subtitle",
-              _,
-              _.type,
-            );
-          return !1;
-        }
-        GetImageOptions() {
-          const _ = (_, _, _, _, _) => ({
-              baseFilename: _,
-              language: _,
-              bNew: _,
-              size: {
-                width: _,
-                height: _,
-              },
-            }),
-            _ = [];
-          for (const _ of this.m_filesToUpload.filter(
-            (_) => "pending" == _.status || (0, _._)(_.status),
-          ))
-            if (this.m_onlyAssetGroup)
-              _.push(
-                _(
-                  this.m_onlyAssetGroup.baseFilename,
-                  _.language ?? 0,
-                  !0,
-                  _.width,
-                  _.height,
-                ),
-              );
-            else {
-              const _ = (0, _._)(_.filename).baseFilename,
-                _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
-              _.push(_(_, _.language ?? 0, !0, _.width, _.height)),
-                _ != _ && _.push(_(_, -1, !0, _.width, _.height));
-            }
-          let _ = this.m_rgExistingAssetGroups ?? [],
-            _ = this.m_rgImageSizes ?? [];
-          if (this.m_onlyAssetGroup) {
-            const _ = __webpack_require__.findIndex(
-              (_) => _.baseFilename == this.m_onlyAssetGroup.baseFilename,
-            );
-            (0, _._)(
-              -1 != _,
-              "onlyAssetGroup isn't in the existing assets list",
-            ),
-              (_ = [_[_]]),
-              (_ = [_[_]]);
-          }
-          const _ = _._(_, _).flatMap(([_, _]) =>
-              ((_, _) =>
-                _.languages.map((_) =>
-                  _(_.baseFilename, _, !1, _?.width ?? 0, _?.height ?? 0),
-                ))(_, _),
-            ),
-            _ = _.concat(_).reduce((_, _) => {
-              const _ = _.get(_.baseFilename) ?? [];
-              return __webpack_require__.push(_), _.set(_.baseFilename, _), _;
-            }, new Map()),
-            _ = [];
-          for (const _ of _.keys()) {
-            const _ = _.get(_).filter((_) => -1 != _.language),
-              _ = new Set(_.map((_) => _.language)).size,
-              _ =
-                _ > 1
-                  ? (0, _._)("#StoreAdmin_ExtraAssetUpload_LocalizeGroup", _, _)
-                  : _,
-              _ = new Map();
-            for (let _ of _.filter((_) => !_.bNew).concat(
-              _.filter((_) => _.bNew),
-            ))
-              _.set(_.language, _);
-            const _ = Array.from(_.values()).filter((_) => !_.bNew),
-              _ = _.length > 0 ? _[0].size : void 0,
-              _ = _.filter((_) => _.bNew)._(0)?.size,
-              _ = _.filter((_) => _.bNew).some(
-                (_) => _.size.width != _.width || _.size.height != _.height,
-              ),
-              _ = {
-                sKey: _,
-                fnGetLabelText: () => _,
-                width: _?.width ?? 0,
-                height: _?.height ?? 0,
-                bEnforceDimensions: !1,
-                groupName: _,
-                bMismatchedNewSizes: _,
-                rgExistingLanguages: _.filter((_) => !_.bNew).map(
-                  (_) => _.language,
-                ),
-              };
-            _.push(_);
-          }
-          return (
-            _.sort((_, _) => (_.sKey < _.sKey ? -1 : _.sKey > _.sKey ? 1 : 0)),
-            _
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "m_onlyAssetGroup", void 0),
-        (0, _._)([_._], _.prototype, "m_rgExistingAssetGroups", void 0),
-        (0, _._)([_._], _.prototype, "m_rgImageSizes", void 0),
-        (0, _._)([_._], _.prototype, "GetUploadImages", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "SetExistingAssetGroups", null),
-        (0, _._)([_._], _.prototype, "SetOnlyAssetGroup", null),
-        (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _._ {
         m_bAllowVideos;
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
@@ -2350,18 +2195,30 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _ {
+      class _ extends _._ {
+        m_nAppId;
         m_strBeginUploadUrl;
         m_strCompleteUploadUrl;
-        constructor(_, _, _) {
-          super((_, _, _, _, _) => new _(_, !!_, _, _, _, _)),
+        static m_mapConcurrentCompletions = new Set();
+        m_filesToUpload = _._.array();
+        m_bExtraAssetsV2Videos = !1;
+        m_onlyAssetGroup = void 0;
+        m_rgExistingAssetGroups = void 0;
+        m_rgImageSizes = void 0;
+        constructor(_, _, _, _) {
+          super(),
             (0, _._)(this),
+            (this.m_bExtraAssetsV2Videos = _),
+            (this.m_nAppId = _),
             (this.m_strBeginUploadUrl = _),
             (this.m_strCompleteUploadUrl = _);
         }
         BGetUploadsAreInSerial() {
-          return !0;
+          return !1;
         }
         GetErrorsFromErrorResponse(_) {
           let _;
@@ -2387,6 +2244,48 @@
                 ),
             _
           );
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        DeleteUploadImage(_) {
+          const _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 &&
+            (this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        SetExistingAssetGroups(_, _) {
+          (this.m_rgExistingAssetGroups = _), (this.m_rgImageSizes = _);
+        }
+        SetOnlyAssetGroup(_) {
+          this.m_onlyAssetGroup = _;
+        }
+        async AddImageForLanguage(_, _) {
+          if ((0, _._)(_.type) || (0, _._)(_.type)) {
+            const _ = await (0, _._)(_, (0, _._)(_.type));
+            if (_) {
+              const _ = new _(
+                this.m_bExtraAssetsV2Videos,
+                !!this.m_onlyAssetGroup,
+                () => this.GetImageOptions(),
+                _,
+                _,
+                _,
+              );
+              return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+            }
+          } else
+            console.error(
+              "AddImageForLanguage failed to determine file type, not image, video or subtitle",
+              _,
+              _.type,
+            );
+          return !1;
         }
         async UploadSingleImage(_, _, _, _) {
           const _ = _.GetCurrentImageOption()?.groupName ?? _;
@@ -2436,13 +2335,20 @@
           const _ = Date.now();
           for (; Date.now() - _ < 3e5; ) {
             const _ = new FormData();
-            let _;
-            _.append("sessionid", _._.SESSIONID),
+            if (
+              (_.append("sessionid", _._.SESSIONID),
               _.append("request_id", _.toString()),
               _.append("name", _),
               _.append("asset_type", "extra_asset_v2"),
-              -1 != _ && _.append("language", (0, _._)(_));
+              -1 != _ && _.append("language", (0, _._)(_)),
+              _.m_mapConcurrentCompletions.has(this.m_nAppId))
+            ) {
+              await (0, _._)(Math.floor(1e3 * Math.random()) + 500);
+              continue;
+            }
+            let _;
             try {
+              _.m_mapConcurrentCompletions.add(this.m_nAppId);
               const _ = await _().post(this.m_strCompleteUploadUrl, _, {
                 withCredentials: !0,
                 cancelToken: _,
@@ -2474,6 +2380,8 @@
                   result: null,
                 }
               );
+            } finally {
+              _.m_mapConcurrentCompletions.delete(this.m_nAppId);
             }
             if (_.complete)
               return {
@@ -2481,20 +2389,126 @@
                 elErrorMessage: null,
                 result: _.rgExtraAssets,
               };
-            await (0, _._)(Math.floor(1e3 * Math.random()));
+            await (0, _._)(Math.floor(1e3 * Math.random()) + 500);
           }
           return {
             bSuccess: !1,
             elErrorMessage: (0, _._)("#StoreAdmin_ExtraAssetUpload_Timeout"),
           };
         }
+        GetImageOptions() {
+          const _ = (_, _, _, _, _) => ({
+              baseFilename: _,
+              language: _,
+              bNew: _,
+              size: {
+                width: _,
+                height: _,
+              },
+            }),
+            _ = [];
+          for (const _ of this.m_filesToUpload.filter(
+            (_) => "pending" == _.status || (0, _._)(_.status),
+          ))
+            if (this.m_onlyAssetGroup)
+              _.push(
+                _(
+                  this.m_onlyAssetGroup.baseFilename,
+                  _.language ?? 0,
+                  !0,
+                  _.width,
+                  _.height,
+                ),
+              );
+            else {
+              const _ = (0, _._)(_.filename).baseFilename,
+                _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
+              _.push(_(_, _.language ?? 0, !0, _.width, _.height)),
+                _ != _ && _.push(_(_, -1, !0, _.width, _.height));
+            }
+          let _ = this.m_rgExistingAssetGroups ?? [],
+            _ = this.m_rgImageSizes ?? [];
+          if (this.m_onlyAssetGroup) {
+            const _ = __webpack_require__.findIndex(
+              (_) => _.baseFilename == this.m_onlyAssetGroup.baseFilename,
+            );
+            (0, _._)(
+              -1 != _,
+              "onlyAssetGroup isn't in the existing assets list",
+            ),
+              (_ = [_[_]]),
+              (_ = [_[_]]);
+          }
+          const _ = _._(_, _).flatMap(([_, _]) =>
+              ((_, _) =>
+                _.languages.map((_) =>
+                  _(_.baseFilename, _, !1, _?.width ?? 0, _?.height ?? 0),
+                ))(_, _),
+            ),
+            _ = _.concat(_).reduce((_, _) => {
+              const _ = _.get(_.baseFilename) ?? [];
+              return __webpack_require__.push(_), _.set(_.baseFilename, _), _;
+            }, new Map()),
+            _ = [];
+          for (const _ of _.keys()) {
+            const _ = _.get(_).filter((_) => -1 != _.language),
+              _ = new Set(_.map((_) => _.language)).size,
+              _ =
+                _ > 1
+                  ? (0, _._)("#StoreAdmin_ExtraAssetUpload_LocalizeGroup", _, _)
+                  : _,
+              _ = new Map();
+            for (let _ of _.filter((_) => !_.bNew).concat(
+              _.filter((_) => _.bNew),
+            ))
+              _.set(_.language, _);
+            const _ = Array.from(_.values()).filter((_) => !_.bNew),
+              _ = _.length > 0 ? _[0].size : void 0,
+              _ = _.filter((_) => _.bNew)._(0)?.size,
+              _ = _.filter((_) => _.bNew).some(
+                (_) => _.size.width != _.width || _.size.height != _.height,
+              ),
+              _ = {
+                sKey: _,
+                fnGetLabelText: () => _,
+                width: _?.width ?? 0,
+                height: _?.height ?? 0,
+                bEnforceDimensions: !1,
+                groupName: _,
+                bMismatchedNewSizes: _,
+                rgExistingLanguages: _.filter((_) => !_.bNew).map(
+                  (_) => _.language,
+                ),
+              };
+            _.push(_);
+          }
+          return (
+            _.sort((_, _) => (_.sKey < _.sKey ? -1 : _.sKey > _.sKey ? 1 : 0)),
+            _
+          );
+        }
       }
       function _() {
         const { bExtraAssetsV2Videos: _ } = (0, _._)(),
-          _ = (0, _._)("ajaxbeginuploadassetasync"),
+          { _: _, type: __webpack_require__ } = (0, _._)();
+        (0, _._)(
+          0 == __webpack_require__,
+          "ExtraAssetsUploader can only be used on apps",
+        );
+        const _ = (0, _._)("ajaxbeginuploadassetasync"),
           _ = (0, _._)("ajaxtrytocompleteuploadasset");
-        return _.useMemo(() => new _(_, _, _), [_, _, _]);
+        return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
       }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "m_onlyAssetGroup", void 0),
+        (0, _._)([_._], _.prototype, "m_rgExistingAssetGroups", void 0),
+        (0, _._)([_._], _.prototype, "m_rgImageSizes", void 0),
+        (0, _._)([_._], _.prototype, "GetUploadImages", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "SetExistingAssetGroups", null),
+        (0, _._)([_._], _.prototype, "SetOnlyAssetGroup", null),
+        (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3960,7 +3974,7 @@
                       controls: !!_,
                       loop: !_ && !!_,
                     },
-                    _,
+                    ..._,
                   ]
                 );
               },
@@ -4428,7 +4442,7 @@
             _: _,
           } = _,
           [_, _] = _.useState(__webpack_require__),
-          [_, _] = _.useState(_ || "https://"),
+          [_, _] = _.useState(_),
           _ = _.useRef(null),
           _ = _.useRef(null),
           [_, _] = _.useState(_);
@@ -4512,6 +4526,7 @@
           _.createElement(_._, {
             ref: _,
             value: _,
+            placeholder: "https://",
             onChange: (_) => _(_.currentTarget.value),
             label: (0, _._)("#FormattingToolbar_LinkAddress"),
             mustBeURL: !0,
@@ -5886,6 +5901,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6021,6 +6037,13 @@
           ":method:",
           _,
         );
+      }
+      function _() {
+        const _ = _.useContext(_);
+        return {
+          type: _.eStoreItemType,
+          _: _.storeItemID,
+        };
       }
       function _() {
         return _.useContext(_).queueExtraAssetUpload;

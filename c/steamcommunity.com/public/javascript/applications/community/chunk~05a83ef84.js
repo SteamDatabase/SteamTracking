@@ -1911,7 +1911,7 @@
             _: _,
           } = _,
           [_, _] = _.useState(__webpack_require__),
-          [_, _] = _.useState(_ || "https://"),
+          [_, _] = _.useState(_),
           _ = _.useRef(null),
           _ = _.useRef(null),
           [_, _] = _.useState(_);
@@ -2031,6 +2031,7 @@
           _.createElement(_._, {
             ref: _,
             value: _,
+            placeholder: "https://",
             onChange: (_) => _(_.currentTarget.value),
             label: (0, _._)("#FormattingToolbar_LinkAddress"),
             mustBeURL: !0,

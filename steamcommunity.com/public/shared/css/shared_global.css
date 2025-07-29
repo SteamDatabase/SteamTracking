@@ -2803,6 +2803,9 @@ body.v6 #footer_nav .popup_menu .hr{
 .shared_game_rating .game_rating_icon {
 	margin-right: 10px;
 }
+.shared_game_rating .game_rating_icon img {
+	max-height: 90px;
+}
 .shared_game_rating p.descriptorText {
 	margin: 0;
 

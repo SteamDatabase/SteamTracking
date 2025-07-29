@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "新鮮出爐",
 	"Menu_OnSale": "特價中",
 	"Menu_SearchPlaceholder": "搜尋商店",
+	"Menu_ClearSearchTerm": "清除搜尋詞彙",
 	"Menu_Wishlist": "願望清單",
 	"Menu_Cart": "購物車",
 	"Menu_Popover_TopLinks": "熱門連結",

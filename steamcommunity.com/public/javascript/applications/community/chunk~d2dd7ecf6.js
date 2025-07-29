@@ -1903,13 +1903,13 @@
     },
     4033: (e, t, a) => {
       "use strict";
-      a.d(t, { O9: () => L, PY: () => N, fY: () => R });
+      a.d(t, { O9: () => N, PY: () => R, fY: () => y });
       var n = a(65946),
         l = a(75844),
         r = a(90626),
         o = a(22837),
         i = a(2160),
-        c = a(40521),
+        c = a(64953),
         s = a(69343),
         m = a(63556),
         g = a(68255),
@@ -1928,8 +1928,9 @@
         S = a(66331),
         k = a(61859),
         b = a(27344),
-        D = a.n(b);
-      function L(e) {
+        D = a.n(b),
+        L = a(78511);
+      function N(e) {
         const {
             imageUploader: t,
             fnUploadComplete: a,
@@ -2020,7 +2021,7 @@
               "div",
               { className: D().UploadPreviewCtn },
               g.map((e) =>
-                r.createElement(y, {
+                r.createElement(T, {
                   key: "arttabupload_" + e.filename + "_" + e.uploadTime,
                   asset: e,
                   forceResolution: o,
@@ -2030,7 +2031,7 @@
               ),
             ),
           ),
-          r.createElement(N, {
+          r.createElement(R, {
             imageUploader: t,
             fnOnUploadImageRequested: async () => {
               const e = await t.UploadAllImages(o);
@@ -2039,11 +2040,16 @@
           }),
         );
       }
-      function N(e) {
+      function R(e) {
         const { imageUploader: t, fnOnUploadImageRequested: a } = e,
           [l] = (0, n.q3)(() => [t.GetUploadImages()]),
           o = l.some((e) => "pending" == e.status),
-          i = l.some((e) => "uploading" == e.status);
+          i = l.some(
+            (e) =>
+              "waiting" == e.status ||
+              "uploading" == e.status ||
+              "processing" == e.status,
+          );
         return r.createElement(
           "div",
           {
@@ -2064,12 +2070,12 @@
             ),
         );
       }
-      function R(e, t, a, n, l) {
+      function y(e, t, a, n, l) {
         let o = new Array();
         return (
           e.GetUploadImages().forEach((i) => {
             o.push(
-              r.createElement(y, {
+              r.createElement(T, {
                 key: t + i.file + "_" + i.uploadTime,
                 asset: i,
                 forceResolution: a,
@@ -2082,7 +2088,7 @@
           o
         );
       }
-      const y = (0, l.PA)(function (e) {
+      const T = (0, l.PA)(function (e) {
         var t, a, n, l, s;
         const { asset: m, fnOnRemove: d, languageRealms: u } = e,
           p =
@@ -2101,7 +2107,9 @@
                   .filter((e) => !e.data.bHiddenFromDropdown),
           I = {
             pending: (0, k.we)("#ImageUpload_Pending"),
+            waiting: (0, k.we)("#ImageUpload_Waiting"),
             uploading: (0, k.we)("#ImageUpload_Uploading"),
+            processing: (0, k.we)("#ImageUpload_Processing"),
             success: (0, k.we)("#ImageUpload_SuccessCard"),
             failed: (0, k.we)("#ImageUpload_Failed"),
           },
@@ -2127,22 +2135,22 @@
             : null,
           f = m.IsValidAssetType(e.forceResolution, e.forceFileType),
           b = "pending" == m.status;
-        let L = I[m.status];
+        let N = I[m.status];
         "pending" == m.status &&
           (f.needsCrop
-            ? (L = (0, k.we)("#ImageUpload_NeedsCrop"))
-            : f.error && (L = (0, k.we)("#ImageUpload_Invalid")));
-        let N;
-        const R = m.GetCurrentImageOption();
-        R &&
-          (N =
+            ? (N = (0, k.we)("#ImageUpload_NeedsCrop"))
+            : f.error && (N = (0, k.we)("#ImageUpload_Invalid")));
+        let R;
+        const y = m.GetCurrentImageOption();
+        y &&
+          (R =
             null ===
-              (a = null == p ? void 0 : p.find((e) => e.data.sKey == R.sKey)) ||
+              (a = null == p ? void 0 : p.find((e) => e.data.sKey == y.sKey)) ||
             void 0 === a
               ? void 0
               : a.data);
-        N ||
-          (N =
+        R ||
+          (R =
             null === (n = null == p ? void 0 : p[0]) || void 0 === n
               ? void 0
               : n.data);
@@ -2154,7 +2162,7 @@
             { className: D().UploadPreviewDelete, onClick: () => d(m) },
             r.createElement(w.sED, null),
           ),
-          r.createElement(T, { asset: m }),
+          r.createElement(G, { asset: m }),
           C &&
             r.createElement(g.m, {
               strDropDownClassName: E().DropDownScroll,
@@ -2168,7 +2176,7 @@
             r.createElement(g.m, {
               label: m.GetImageOptionLabel(),
               rgOptions: p,
-              selectedOption: N,
+              selectedOption: R,
               onChange: (e) => m.SetCurrentImageOption(e.data),
               disabled: !b,
             }),
@@ -2200,8 +2208,8 @@
                 [D().UploadPreviewError]: "failed" == m.status,
               }),
             },
-            L,
-            Boolean("uploading" == m.status) &&
+            N,
+            (0, L.o)(m.status) &&
               r.createElement(
                 "div",
                 { className: _().FlexCenter },
@@ -2251,7 +2259,7 @@
             ),
         );
       });
-      function T(e) {
+      function G(e) {
         const { asset: t } = e;
         return t.BIsVideo()
           ? r.createElement(
@@ -2259,7 +2267,7 @@
               {
                 className: D().PreviewImgCtn,
                 onClick: (e) => {
-                  (0, v.pg)(r.createElement(G, { asset: t }), (0, f.uX)(e));
+                  (0, v.pg)(r.createElement(U, { asset: t }), (0, f.uX)(e));
                 },
               },
               r.createElement(
@@ -2296,7 +2304,7 @@
               ),
             );
       }
-      function G(e) {
+      function U(e) {
         const { asset: t, closeModal: a } = e;
         return r.createElement(
           p.o0,

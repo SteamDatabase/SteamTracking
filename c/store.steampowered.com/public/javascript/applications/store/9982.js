@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "新作",
 	"Menu_OnSale": "セール中",
 	"Menu_SearchPlaceholder": "ストアを検索",
+	"Menu_ClearSearchTerm": "検索キーワードをクリア",
 	"Menu_Wishlist": "ウィッシュリスト",
 	"Menu_Cart": "カート",
 	"Menu_Popover_TopLinks": "トップリンク",

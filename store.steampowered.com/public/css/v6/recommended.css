@@ -3341,6 +3341,7 @@ body.v6 h2.morelike_section_divider
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 1.4;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 
@@ -3374,6 +3375,10 @@ body.v6 h2.morelike_section_divider
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+}
+
+p.outliers_options {
+	font-size: 13px;
 }
 
 .review_language_outliers_group_header {
@@ -3462,6 +3467,11 @@ body.v6 h2.morelike_section_divider
 	margin-right: 30px;
 }
 
+.review_language_outliers_group_languages > .score .game_review_summary {
+	font-weight: 500;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
 .review_language_outliers,
 .review_recent_events {
 			font-family: "Motiva Sans", Sans-serif;
@@ -3487,6 +3497,10 @@ body.v6 h2.morelike_section_divider
 .outlier_subtitle {
 	font-size: 13px;
 	color: rgba( 255,255,255,0.8);
+}
+.outlier_subtitle span {
+	font-weight: 500;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .review_language_outliers img {
 	margin-bottom: -10px;

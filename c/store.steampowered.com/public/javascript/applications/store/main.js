@@ -284,7 +284,7 @@
         Backdrop: "_19o1GB7ysfrWKLYpqZ6aXu",
         Active: "_2IyR9WyPwYb15ILBjPvLR9",
         StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
-        BackdropActive: "_2Hg5IdjoAbSO_XR_XJfEzL",
+        BackdropClosed: "_1Zsv2NkXHxE5LTvs92Jqvd",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
         MobileWebview: "_3yYpWFO_3ReYuGtMqbygx",
         HideTransition: "YNdpuNoh9QiKr4kpbAIwZ",
@@ -663,6 +663,7 @@
     chunkid: (module) => {
       module.exports = {
         Group: "_1ml4SNc3LIyBDHIf8ekVSw",
+        CenteredPill: "L2J24Sa_dQql2exoKoBMi",
         Button: "HijmccPB1BKyhOwhX1EVl",
         Disabled: "_3hmGW9wIxNIoPPu1aS7rFm",
         Active: "_3-_jME_xsuvgT3Dvq4bw_q",
@@ -34877,6 +34878,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -34967,6 +34969,28 @@
           },
           _,
         );
+      }
+      function _() {
+        let [_, _] = _.useState(!0);
+        return [
+          _,
+          _.useCallback(
+            (_) => {
+              if (!_) return;
+              let _ = () => {
+                _("visible" == _.ownerDocument.visibilityState);
+              };
+              return (
+                _.ownerDocument.addEventListener("visibilitychange", () =>
+                  __webpack_require__(),
+                ),
+                __webpack_require__(),
+                () => _.ownerDocument.removeEventListener("visibilitychange", _)
+              );
+            },
+            [_],
+          ),
+        ];
       }
       function _(_, _) {
         _.useLayoutEffect(() => {
@@ -35320,7 +35344,7 @@
           __webpack_require__,
         );
       }
-      const _ = () => _().useActiveSteamInterface().GetServiceTransport(),
+      const _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
         _ = () => _().useActiveSteamInterface().GetAnonymousServiceTransport(),
         _ = () => _().useStorage(),
         _ = () => _().useActiveSteamInterface();
@@ -51203,7 +51227,6 @@
             _ = 0,
             _ = _.innerWidth,
             _ = _.innerHeight,
-            _ = 1,
             _ = _?.getBoundingClientRect();
           if (_)
             if (
@@ -51214,8 +51237,7 @@
               _ && (_ = _._(_, _)),
               _.targetMonitor)
             )
-              (_ = _.targetMonitor.flMonitorScale),
-                (_ = _.targetMonitor.nScreenLeft),
+              (_ = _.targetMonitor.nScreenLeft),
                 (_ = _.targetMonitor.nScreenTop),
                 (_ = _.targetMonitor.nScreenWidth),
                 (_ = _.targetMonitor.nScreenHeight);
@@ -51231,11 +51253,7 @@
                 (_ = _.availHeight);
             }
           (_.bOverlapHorizontal || _.bOverlapVertical) && (_ = _ = void 0);
-          let _ = __webpack_require__.getBoundingClientRect();
-          if (_.flGamepadScale && _.flGamepadScale > 0) {
-            const _ = _.flGamepadScale;
-            _ = new DOMRect(_._ * _, _._ * _, _.width * _, _.height * _);
-          }
+          const _ = __webpack_require__.getBoundingClientRect();
           let _ = {
               menuLeft: void 0,
               menuRight: void 0,
@@ -51329,11 +51347,9 @@
           const _ = this.props.popup?.window,
             _ = this.props.options;
           if (_.bScreenCoordinates) {
-            let _ = this.parentWin?.devicePixelRatio;
-            if (_.targetMonitor) {
-              let _ = _.flGamepadScale || 1;
-              _ = (_.targetMonitor.flMonitorScale ?? 1) / _;
-            }
+            const _ =
+              _.targetMonitor?.flScaleToTargetMonitor ??
+              this.parentWin?.devicePixelRatio;
             return (
               _?.SteamClient.Window.MoveTo(
                 this.state.menuLeft,
@@ -51369,39 +51385,27 @@
           let _ = {
             visibility: this.state.ready ? "visible" : "hidden",
           };
-          if (
-            this.props.options.flGamepadScale &&
-            this.props.options.flGamepadScale > 0
-          )
-            _.zoom = this.props.options.flGamepadScale;
-          else if (
-            this.props.options.bScreenCoordinates &&
-            this.props.options.targetMonitor &&
-            this.m_elMenu?.ownerDocument?.defaultView
-          ) {
-            const _ = this.m_elMenu.ownerDocument.defaultView.devicePixelRatio;
-            1 != _ &&
-              (_.zoom =
-                (this.props.options.targetMonitor.flMonitorScale ?? 1) / _);
-          }
-          this.props.popup
-            ? (this.PositionPopupWindow(),
-              void 0 !== this.state.menuMinWidth &&
-                (_.minWidth = Math.floor(this.state.menuMinWidth)))
-            : (void 0 !== this.state.menuTop
-                ? (_.top = this.state.menuTop)
-                : void 0 !== this.state.menuBottom &&
-                  (_.bottom = this.state.menuBottom),
-              void 0 !== this.state.menuLeft
-                ? (_.left = this.state.menuLeft)
-                : void 0 !== this.state.menuRight &&
-                  (_.right = this.state.menuRight),
-              void 0 !== this.state.menuHeight &&
-                (_.height = this.state.menuHeight),
-              void 0 !== this.state.menuWidth &&
-                (_.width = this.state.menuWidth),
-              void 0 !== this.state.menuMinWidth &&
-                (_.minWidth = this.state.menuMinWidth));
+          this.props.options.flElementZoom &&
+            this.props.options.flElementZoom > 0 &&
+            (_.zoom = this.props.options.flElementZoom),
+            this.props.popup
+              ? (this.PositionPopupWindow(),
+                void 0 !== this.state.menuMinWidth &&
+                  (_.minWidth = Math.floor(this.state.menuMinWidth)))
+              : (void 0 !== this.state.menuTop
+                  ? (_.top = this.state.menuTop)
+                  : void 0 !== this.state.menuBottom &&
+                    (_.bottom = this.state.menuBottom),
+                void 0 !== this.state.menuLeft
+                  ? (_.left = this.state.menuLeft)
+                  : void 0 !== this.state.menuRight &&
+                    (_.right = this.state.menuRight),
+                void 0 !== this.state.menuHeight &&
+                  (_.height = this.state.menuHeight),
+                void 0 !== this.state.menuWidth &&
+                  (_.width = this.state.menuWidth),
+                void 0 !== this.state.menuMinWidth &&
+                  (_.minWidth = this.state.menuMinWidth));
           let _ = this.props.options.strClassName || _().contextMenu;
           return (
             (this.props.options.bCreateHidden ||
@@ -53093,6 +53097,7 @@
             descriptionId: _,
             role: _ = "radiogroup",
             children: _,
+            centeredPillStyle: _,
             ..._
           } = _,
           _ = {
@@ -53118,6 +53123,7 @@
                 _,
                 _ && _().Disabled,
                 _.bVertical && _().VerticalGrouping,
+                _ && _().CenteredPill,
               ),
             },
             _,
@@ -67170,6 +67176,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -67893,6 +67900,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
@@ -71700,11 +71708,12 @@
       function _() {
         return _.useContext(_);
       }
-      function _(_) {
+      function _(_, _) {
         const _ = new URLSearchParams({
           term: _,
+          snr: _,
         });
-        return `${_._.STORE_BASE_URL}search/?${_.toString()}`;
+        return `${_._.STORE_BASE_URL}search/?${__webpack_require__.toString()}`;
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(_.IsReady());
@@ -73926,10 +73935,11 @@
         });
       function _(_) {
         const { getMouseHandlers: _, active: __webpack_require__ } = _,
-          _ = (function () {
-            const { term: _ } = _();
-            return (0, _.useMemo)(() => _(_), [_]);
-          })();
+          _ = (function (_) {
+            const { term: _ } = _(),
+              _ = (0, _._)(_);
+            return (0, _.useMemo)(() => _(_, _), [_, _]);
+          })("advancedsearch");
         return _.createElement(
           "a",
           {
@@ -74015,7 +74025,8 @@
               _(), _.preventDefault();
             },
             [_],
-          );
+          ),
+          _ = (0, _._)("search");
         return _.createElement(
           "form",
           {
@@ -74026,6 +74037,11 @@
             action: `${_._.STORE_BASE_URL}search`,
             onBlur: _,
           },
+          _.createElement("input", {
+            type: "hidden",
+            name: "snr",
+            value: _,
+          }),
           _.createElement(
             "div",
             {
@@ -75892,7 +75908,7 @@
           _.createElement(
             _,
             {
-              href: `${_._.STORE_BASE_URL}sale/steamawards/`,
+              href: `${_._.STORE_BASE_URL}steamawards/`,
             },
             _("#Menu_Section_SpecialSections_SteamAwards"),
           ),
@@ -76558,6 +76574,7 @@
           {
             className: _()(
               _.StoreMenuContainer,
+              !_ && _.BackdropClosed,
               (_ || _) && _.BackdropVisible,
               _ && _.GamepadUI,
             ),
@@ -76790,7 +76807,9 @@
                 role: "presentation",
               }),
               _.Localize("#Menu_Wishlist"),
-              _ > 0 && _.createElement(_, null, _),
+              void 0 !== _ &&
+                _ > 0 &&
+                _.createElement(_, null, _.toLocaleString()),
             )
           : null;
       }
@@ -76816,7 +76835,7 @@
               },
               _.createElement(_, null),
               _.Localize("#Menu_Cart"),
-              _ > 0 && _.createElement(_, null, _),
+              _ > 0 && _.createElement(_, null, _.toLocaleString()),
             )
           : null;
       }
@@ -76868,7 +76887,7 @@
           }),
         );
       }
-      function _(_) {
+      const _ = _.memo(function (_) {
         const { openMoreSection: _ } = _,
           {
             setTerm: __webpack_require__,
@@ -76876,6 +76895,7 @@
             onActive: _,
             closeSearch: _,
           } = _(),
+          _ = (0, _._)("mobilesearch"),
           _ = _.useCallback(
             (_) => {
               try {
@@ -76887,7 +76907,7 @@
                       _();
                       break;
                     case "show_search_results":
-                      window.location.href = _(_.term);
+                      window.location.href = _(_.term, _);
                       break;
                     case "set_search_query":
                       _(), __webpack_require__(_.term), _();
@@ -76897,7 +76917,7 @@
                   }
               } catch (_) {}
             },
-            [_, _, __webpack_require__, _, _],
+            [_, _, __webpack_require__, _, _, _],
           );
         return (
           _.useEffect(
@@ -76911,7 +76931,7 @@
           ),
           null
         );
-      }
+      });
       var _ = __webpack_require__("chunkid");
       function _() {
         const _ = _(_),

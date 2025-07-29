@@ -482,7 +482,7 @@
           reject: t,
         };
       }
-      n.d(t, { x: () => i });
+      n.d(t, { x0: () => i });
     },
     12611: (e, t, n) => {
       "use strict";
@@ -892,8 +892,8 @@
         qF: () => P,
         mW: () => O,
         wv: () => x,
-        GU: () => j,
-        bv: () => U,
+        GU: () => U,
+        bv: () => j,
         Kd: () => F,
         RZ: () => M,
         cB: () => he,
@@ -959,12 +959,12 @@
       const B = 593110,
         P = 1675200,
         R = [B, 766, 221410],
-        j = 39049601,
-        U = 41316928,
+        U = 39049601,
+        j = 41316928,
         F = 4,
         O = 20,
         x = 45559995,
-        H = [4145017, 35143931, j, F, U],
+        H = [4145017, 35143931, U, F, j],
         M = 9e4,
         z = [12, 34];
       function N(e) {
@@ -2315,7 +2315,7 @@
         BIsNextFest() {
           const e = this.jsondata.sale_vanity_id;
           return (
-            new l.b(this.clanSteamID).GetAccountID() == j &&
+            new l.b(this.clanSteamID).GetAccountID() == U &&
             e &&
             e.toLowerCase().startsWith("nextfest")
           );
@@ -2775,6 +2775,54 @@
         );
       }
     },
+    78511: (e, t, n) => {
+      "use strict";
+      n.d(t, { o: () => o, q: () => r });
+      var i = n(34629),
+        s = n(14947),
+        a = n(82705);
+      function o(e) {
+        return "waiting" == e || "uploading" == e || "processing" == e;
+      }
+      class r {
+        constructor(e, t, n, i, o) {
+          var r;
+          (this.m_originalSize = { width: 0, height: 0 }),
+            (this.m_originalDataUrl = ""),
+            (this.dataUrl = void 0),
+            (this.width = 0),
+            (this.height = 0),
+            (this.status = "pending"),
+            (this.message = ""),
+            (this.language = void 0),
+            (0, s.Gn)(this),
+            (this.file = e),
+            (this.filename = t),
+            (this.fileType =
+              null !== (r = (0, a.yh)(t)) && void 0 !== r ? r : 0),
+            (this.language = n),
+            (this.uploadTime = Date.now()),
+            (this.status = "pending"),
+            (this.m_originalSize = o),
+            (this.height = o.height),
+            (this.width = o.width),
+            (this.m_originalDataUrl = i),
+            (this.dataUrl = i);
+        }
+        ResetImage() {
+          (this.height = this.m_originalSize.height),
+            (this.width = this.m_originalSize.width),
+            (this.dataUrl = this.m_originalDataUrl);
+        }
+        GetImageOptionLabel() {}
+      }
+      (0, i.Cg)([s.sH], r.prototype, "dataUrl", void 0),
+        (0, i.Cg)([s.sH], r.prototype, "width", void 0),
+        (0, i.Cg)([s.sH], r.prototype, "height", void 0),
+        (0, i.Cg)([s.sH], r.prototype, "status", void 0),
+        (0, i.Cg)([s.sH], r.prototype, "message", void 0),
+        (0, i.Cg)([s.sH], r.prototype, "language", void 0);
+    },
     28954: (e, t, n) => {
       "use strict";
       n.d(t, { M0: () => y, VE: () => b, vN: () => S, zO: () => G });
@@ -2790,7 +2838,7 @@
         u = n(61859),
         h = n(78327),
         p = n(86355),
-        _ = n(40521),
+        _ = n(64953),
         g = n(69343),
         v = n(81393),
         E = n(64753),
@@ -3012,7 +3060,7 @@
         c = n(14771),
         m = n(82817),
         u = n(86355),
-        h = n(40521),
+        h = n(64953),
         p = n(3577);
       const _ = {
         GetBaseURL: () => `${s.TS.CLAN_CDN_ASSET_URL}images/`,
@@ -3091,7 +3139,7 @@
           return await this.AsyncGetImageResolutionInternal(o, i, s);
         },
         async AsyncGetImageResolutionInternal(e, t, n) {
-          const i = (0, p.x)();
+          const i = (0, p.x0)();
           let s = new Image();
           (s.crossOrigin = "anonymous"),
             (s.onerror = (t) => {
@@ -3206,55 +3254,17 @@
         BIsClanImageVideo: (e) => 4 == e.file_type || 5 == e.file_type,
       };
     },
-    40521: (e, t, n) => {
+    64953: (e, t, n) => {
       "use strict";
-      n.d(t, { M7: () => p, IS: () => u, T2: () => h });
+      n.d(t, { IS: () => m, M7: () => h, T2: () => u });
       var i = n(34629),
         s = n(14947),
         a = n(73744),
         o = n(61859),
-        r = n(82705);
-      class l {
-        constructor(e, t, n, i, a) {
-          var o;
-          (this.m_originalSize = { width: 0, height: 0 }),
-            (this.m_originalDataUrl = ""),
-            (this.dataUrl = void 0),
-            (this.width = 0),
-            (this.height = 0),
-            (this.status = "pending"),
-            (this.message = ""),
-            (this.language = void 0),
-            (0, s.Gn)(this),
-            (this.file = e),
-            (this.filename = t),
-            (this.fileType =
-              null !== (o = (0, r.yh)(t)) && void 0 !== o ? o : 0),
-            (this.language = n),
-            (this.uploadTime = Date.now()),
-            (this.status = "pending"),
-            (this.m_originalSize = a),
-            (this.height = a.height),
-            (this.width = a.width),
-            (this.m_originalDataUrl = i),
-            (this.dataUrl = i);
-        }
-        ResetImage() {
-          (this.height = this.m_originalSize.height),
-            (this.width = this.m_originalSize.width),
-            (this.dataUrl = this.m_originalDataUrl);
-        }
-        GetImageOptionLabel() {}
-      }
-      (0, i.Cg)([s.sH], l.prototype, "dataUrl", void 0),
-        (0, i.Cg)([s.sH], l.prototype, "width", void 0),
-        (0, i.Cg)([s.sH], l.prototype, "height", void 0),
-        (0, i.Cg)([s.sH], l.prototype, "status", void 0),
-        (0, i.Cg)([s.sH], l.prototype, "message", void 0),
-        (0, i.Cg)([s.sH], l.prototype, "language", void 0);
-      var d = n(66331),
-        c = n(82817);
-      class m extends l {
+        r = n(78511),
+        l = n(66331),
+        d = n(82817);
+      class c extends r.q {
         constructor(e, t, n, i, a, o) {
           super(e, t, n, a, o),
             (this.m_currentImageOption = void 0),
@@ -3266,7 +3276,7 @@
           var n, i;
           let s = 0,
             r = 0,
-            l = !1,
+            c = !1,
             m =
               !this.m_rgImageOptions ||
               0 === this.m_rgImageOptions.length ||
@@ -3279,16 +3289,16 @@
                     : t.sKey)
                 );
               });
-          if (e) (s = e.width), (r = e.height), (l = !0);
+          if (e) (s = e.width), (r = e.height), (c = !0);
           else if (this.GetCurrentImageOption()) {
             const e = a.Fj[this.GetCurrentImageOption().artworkType];
             e &&
               ((s = e.width),
               (r = e.height),
-              (l = !e.bDisableEnforceDimensions));
+              (c = !e.bDisableEnforceDimensions));
           }
           const u = this.width >= s && this.height >= r,
-            h = l ? this.width === s && this.height === r : u,
+            h = c ? this.width === s && this.height === r : u,
             p = t && t != this.fileType,
             _ =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
@@ -3299,7 +3309,7 @@
                     ? void 0
                     : n.map((e) => e.artworkType)) || [],
                 ).length,
-            g = Boolean((0, d.t)(this.fileType));
+            g = Boolean((0, l.t)(this.fileType));
           let v = "",
             E = !1;
           return (
@@ -3309,7 +3319,7 @@
                 : p
                   ? (v = (0, o.we)(
                       "#ImageUpload_InvalidFormat",
-                      null !== (i = (0, c.EG)(t)) && void 0 !== i ? i : "",
+                      null !== (i = (0, d.EG)(t)) && void 0 !== i ? i : "",
                     ))
                   : h || g
                     ? u
@@ -3340,8 +3350,8 @@
               ? void 0
               : e.map((e) => e.artworkType),
           );
-          let n = _(this.width, this.height, t, !1);
-          if ((void 0 === n && (n = _(this.width, this.height, t, !0)), n)) {
+          let n = p(this.width, this.height, t, !1);
+          if ((void 0 === n && (n = p(this.width, this.height, t, !0)), n)) {
             const e = this.m_rgImageOptions.find((e) => e.artworkType == n);
             if (e) return e;
           }
@@ -3364,9 +3374,9 @@
             (this.m_currentImageOptionKey = null == e ? void 0 : e.sKey);
         }
       }
-      (0, i.Cg)([s.sH], m.prototype, "m_currentImageOption", void 0),
-        (0, i.Cg)([s.sH], m.prototype, "m_currentImageOptionKey", void 0);
-      class u extends m {
+      (0, i.Cg)([s.sH], c.prototype, "m_currentImageOption", void 0),
+        (0, i.Cg)([s.sH], c.prototype, "m_currentImageOptionKey", void 0);
+      class m extends c {
         constructor(e, t, n, i, s, a, o) {
           super(e, t, n, i, s, a), (this.video = o);
         }
@@ -3385,7 +3395,7 @@
         }
         GetResizeDimension() {}
       }
-      class h extends m {
+      class u extends c {
         constructor(e, t, n, i) {
           super(e, t, n, i, URL.createObjectURL(e), { width: 0, height: 0 });
         }
@@ -3400,7 +3410,7 @@
         }
         GetResizeDimension() {}
       }
-      class p extends m {
+      class h extends c {
         constructor(e, t, n, i, a, o, r, l) {
           super(e, t, n, i, a, o),
             (this.bCropped = !1),
@@ -3469,76 +3479,125 @@
           );
         }
       }
-      function _(e, t, n, i = !1) {
+      function p(e, t, n, i = !1) {
         if (n)
           for (let s of n) {
             if (i ? (0, a.s4)(e, t, s) : (0, a.yu)(e, t, s)) return s;
           }
       }
-      (0, i.Cg)([s.sH], p.prototype, "bCropped", void 0);
+      (0, i.Cg)([s.sH], h.prototype, "bCropped", void 0);
     },
     69343: (e, t, n) => {
       "use strict";
-      n.d(t, { PD: () => c, Vr: () => d, jj: () => m });
+      n.d(t, { PD: () => u, Vr: () => m, jj: () => h });
       var i = n(2160),
         s = n(22837),
         a = n(61859),
         o = n(41735),
         r = n.n(o);
       class l {}
-      class d extends l {
+      function d(e, t, n) {
+        const i = e.filter((e) => {
+          const i = e.IsValidAssetType(t, n);
+          return "pending" === e.status && !i.error && !i.needsCrop;
+        });
+        return i.forEach((e) => (e.status = "waiting")), i;
+      }
+      async function c(e, t, n, i, s, a) {
+        const o = d(e, i, s),
+          r = [];
+        let l = 0;
+        const c = Array.from({ length: Math.floor(t) }, () =>
+          (async () => {
+            for (var e; l < o.length; ) {
+              const t = l++,
+                i = o[t];
+              i.status = "uploading";
+              const s = await n(
+                i,
+                i.filename,
+                null !== (e = i.language) && void 0 !== e ? e : -1,
+                a,
+              );
+              (i.status = s.bSuccess ? "success" : "failed"),
+                (i.message =
+                  !s.bSuccess && s.elErrorMessage ? s.elErrorMessage : ""),
+                (r[t] = { image: i, uploadResult: s });
+            }
+          })(),
+        );
+        return (
+          await Promise.all(c),
+          r.map((e) => ({
+            bSuccess: e.uploadResult.bSuccess,
+            image: e.image,
+            uploadResult: e.uploadResult.result,
+          }))
+        );
+      }
+      class m extends l {
         constructor() {
-          super(...arguments), (this.m_allCancelTokens = new Array());
+          super(...arguments), (this.m_cancel = void 0);
         }
         async UploadAllImages(e, t) {
-          var n, i;
-          const s = this.GetUploadImages(),
-            a = this.BGetUploadsAreInSerial(),
-            o = s.filter((n) => {
-              const i = n.IsValidAssetType(e, t);
-              return "pending" === n.status && !i.error && !i.needsCrop;
-            });
-          for (const e of o) e.status = "uploading";
-          const l = [];
-          for (const e of o) {
-            const t = r().CancelToken.source();
-            this.m_allCancelTokens.push(t);
-            const i = this.UploadSingleImage(
-              e,
-              e.filename,
-              null !== (n = e.language) && void 0 !== n ? n : -1,
-              t.token,
-            );
-            l.push({ image: e, promise: i }), a && (await i);
-          }
-          a || (await Promise.all(l.map((e) => e.promise)));
-          const d = [];
-          for (const e of l) {
-            const t = await e.promise,
-              n = e.image;
-            d.push({ bSuccess: t.bSuccess, image: n, uploadResult: t.result }),
-              t.bSuccess
-                ? (n.status = "success")
-                : ((n.status = "failed"),
-                  (n.message =
-                    null !== (i = t.elErrorMessage) && void 0 !== i ? i : ""));
-          }
-          return d;
+          this.m_cancel = r().CancelToken.source();
+          const n = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let i;
+          const s = this.UploadSingleImage.bind(this);
+          return (
+            (i =
+              n > 1
+                ? await c(
+                    this.GetUploadImages(),
+                    n,
+                    s,
+                    e,
+                    t,
+                    this.m_cancel.token,
+                  )
+                : await (async function (e, t, n, i, s) {
+                    var a;
+                    const o = d(e, n, i),
+                      r = [];
+                    for (const e of o) {
+                      e.status = "uploading";
+                      const n = await t(
+                        e,
+                        e.filename,
+                        null !== (a = e.language) && void 0 !== a ? a : -1,
+                        s,
+                      );
+                      (e.status = n.bSuccess ? "success" : "failed"),
+                        (e.message =
+                          !n.bSuccess && n.elErrorMessage
+                            ? n.elErrorMessage
+                            : ""),
+                        r.push({
+                          bSuccess: n.bSuccess,
+                          image: e,
+                          uploadResult: n.result,
+                        });
+                    }
+                    return r;
+                  })(this.GetUploadImages(), s, e, t, this.m_cancel.token)),
+            i
+          );
         }
         CancelAllUploads() {
-          for (let e of this.m_allCancelTokens)
+          var e;
+          null === (e = this.m_cancel) ||
+            void 0 === e ||
             e.cancel((0, a.we)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
         }
       }
-      function c(e, t, n) {
+      function u(e, t, n) {
         if (((null != e && null != e) || (e = t), !n || 0 === n.length))
           return e;
         for (const t of n) if (a.A0.IsELanguageValidInRealm(e, t)) return e;
         for (const e of n) if (a.A0.IsELanguageValidInRealm(t, e)) return t;
         return n.includes(i.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function m(e, t = 0, n = !0) {
+      function h(e, t = 0, n = !0) {
         let i = e.lastIndexOf(".");
         -1 != i && (e = e.slice(0, i).toLowerCase());
         let a = null,
@@ -5176,7 +5235,7 @@
             }),
             this.m_cm)
           ) {
-            let n = r.w.Init(l.hg);
+            let n = r.w.Init(l.QU);
             return (
               n.Body().set_announcementid(e.AnnouncementGID),
               n.Body().set_vote_up(!!t),
@@ -6342,7 +6401,7 @@
         }
       }
       function o(e) {
-        const t = (0, i.x)(),
+        const t = (0, i.x0)(),
           n = new Image();
         return (
           (n.onload = () => t.resolve(n)),
@@ -6355,7 +6414,7 @@
         );
       }
       function r(e) {
-        const t = (0, i.x)(),
+        const t = (0, i.x0)(),
           n = document.createElement("video");
         return (
           (n.preload = "metadata"),
@@ -6377,7 +6436,7 @@
       async function c(e, t) {
         if (t) return r(URL.createObjectURL(e));
         {
-          const t = (0, i.x)(),
+          const t = (0, i.x0)(),
             n = new FileReader();
           (n.onload = () => {
             var e;

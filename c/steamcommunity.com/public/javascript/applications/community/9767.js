@@ -99,6 +99,9 @@
     chunkid: (module) => {
       module.exports = {
         Root: "_3i_h6xYLxqWT-wquwrB4P8",
+        "Size-1": "_2BS49hUFyqY2YQ3X6Am-Oe",
+        "Size-2": "_3GAcWYWoOxZKAt2NY-d-M-",
+        "Size-3": "q85ksguLIHUIA6Z5aWE2b",
         Track: "wCPKWvwCOuo-4mHzhEcBW",
         Handle: "_14qr0P2xMoRiEbcekixcZh",
       };
@@ -1010,6 +1013,7 @@
         {
           prop: "size",
           className: (_) => _[`Size-${_}`],
+          responsive: !0,
         },
         {
           prop: "color",
@@ -1164,90 +1168,17 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const {
-            variant: _,
-            radius: __webpack_require__,
-            children: _,
-            value: _,
-            onValueChange: _,
-          } = _,
-          [_, _] = (0, _.useState)({}),
-          _ = (0, _.useCallback)(
-            (_, _) =>
-              _((_) => ({
-                ..._,
-                [_]: _,
-              })),
-            [],
-          ),
-          _ = (0, _.useCallback)(
-            (_, _) =>
-              _((_) => {
-                const _ = {
-                  ..._,
-                };
-                return _[_] === _ && delete _[_], _;
-              }),
-            [],
-          );
+        const { options: _, ...__webpack_require__ } = _;
         return _.createElement(
-          _,
+          _.Root,
           {
-            variant: _,
-            radius: __webpack_require__,
-            className: _.SegmentedControlBox,
-            tabIndex: 0,
-            onKeyDown: (_) => {
-              let _ = 0;
-              switch (_.key) {
-                case " ":
-                case "Enter":
-                case "ArrowRight":
-                  _ = 1;
-                  break;
-                case "ArrowLeft":
-                  _ = -1;
-              }
-              if (_) {
-                const _ = _[_],
-                  _ = Array.from(Object.values(_)).sort(_),
-                  _ = __webpack_require__.findIndex((_) => _ === _);
-                (0, _._)(
-                  "number" == typeof _,
-                  "Could not find current segmented value position",
-                );
-                const _ = _ + _,
-                  _ = _[_ < 0 ? _.length + _ : _ % _.length],
-                  _ = Object.keys(_).find((_) => _[_] === _);
-                "string" != typeof _
-                  ? console.error("Could not find next segmeneted value")
-                  : _(_);
-              }
-            },
+            ...__webpack_require__,
           },
-          _.createElement(
-            _.Provider,
-            {
-              value: (0, _.useMemo)(
-                () => ({
-                  value: _,
-                  onValueChange: _,
-                  register: _,
-                  unregister: _,
-                }),
-                [_, _, _, _],
-              ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.SegmentedControl,
-              },
-              _,
-              _.createElement(_, {
-                radius: __webpack_require__,
-              }),
-            ),
+          _.map((_) =>
+            _.createElement(_.Item, {
+              value: _,
+              key: _,
+            }),
           ),
         );
       }
@@ -1265,7 +1196,7 @@
             ? 1
             : 0;
       }
-      _.Item = function (_) {
+      (_.Item = function (_) {
         const { value: _, children: __webpack_require__ } = _,
           _ = (0, _.useContext)(_),
           [_, _] = (0, _.useState)(),
@@ -1280,7 +1211,8 @@
           return null;
         const { value: _, onValueChange: _ } = _,
           _ = _ === _,
-          _ = _ ? void 0 : () => _(_);
+          _ = _ ? void 0 : () => _(_),
+          _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
         return _.createElement(
           "div",
           {
@@ -1289,9 +1221,97 @@
             "data-selected": _ ? "true" : "false",
             className: _.Item,
           },
-          __webpack_require__,
+          _,
         );
-      };
+      }),
+        (_.Root = function (_) {
+          const {
+              variant: _,
+              radius: __webpack_require__,
+              children: _,
+              value: _,
+              onValueChange: _,
+            } = _,
+            [_, _] = (0, _.useState)({}),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => ({
+                  ..._,
+                  [_]: _,
+                })),
+              [],
+            ),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => {
+                  const _ = {
+                    ..._,
+                  };
+                  return _[_] === _ && delete _[_], _;
+                }),
+              [],
+            );
+          return _.createElement(
+            _,
+            {
+              variant: _,
+              radius: __webpack_require__,
+              className: _.SegmentedControlBox,
+              tabIndex: 0,
+              onKeyDown: (_) => {
+                let _ = 0;
+                switch (_.key) {
+                  case " ":
+                  case "Enter":
+                  case "ArrowRight":
+                    _ = 1;
+                    break;
+                  case "ArrowLeft":
+                    _ = -1;
+                }
+                if (_) {
+                  const _ = _[_],
+                    _ = Array.from(Object.values(_)).sort(_),
+                    _ = __webpack_require__.findIndex((_) => _ === _);
+                  (0, _._)(
+                    "number" == typeof _,
+                    "Could not find current segmented value position",
+                  );
+                  const _ = _ + _,
+                    _ = _[_ < 0 ? _.length + _ : _ % _.length],
+                    _ = Object.keys(_).find((_) => _[_] === _);
+                  "string" != typeof _
+                    ? console.error("Could not find next segmeneted value")
+                    : _(_);
+                }
+              },
+            },
+            _.createElement(
+              _.Provider,
+              {
+                value: (0, _.useMemo)(
+                  () => ({
+                    value: _,
+                    onValueChange: _,
+                    register: _,
+                    unregister: _,
+                  }),
+                  [_, _, _, _],
+                ),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.SegmentedControl,
+                },
+                _,
+                _.createElement(_, {
+                  radius: __webpack_require__,
+                }),
+              ),
+            ),
+          );
+        });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
           const _ = _(
@@ -1768,7 +1788,7 @@
                   },
                   onKeyDown: (_) => {
                     var _;
-                    switch ((console.log("REEE"), _.key)) {
+                    switch (_.key) {
                       case "Escape":
                         return void (
                           null === (_ = _.current) ||
@@ -2225,6 +2245,11 @@
               onFocusChange: _,
               onSelectionChange: _,
               clearable: _,
+              focusedIndex: _,
+              onFocusedIndexChange: _,
+              refPopover: _,
+              placeholder: _,
+              ..._
             } = _("<SelectTrigger>"),
             _ = {
               tabIndex: 0,
@@ -2251,6 +2276,7 @@
                 radius: _,
                 hasValue: !!_,
                 tabIndex: 0,
+                ..._,
               }),
               _,
               void 0,
@@ -2462,12 +2488,16 @@
         );
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.forwardRef)(function (_, _) {
-          const { value: __webpack_require__, onChange: _ } = _;
+          const {
+            value: __webpack_require__,
+            onChange: _,
+            size: _ = "2",
+            color: _,
+          } = _;
           return _.createElement(
             "div",
             {
               ref: _,
-              className: _.Root,
               role: "switch",
               "aria-checked": !!__webpack_require__,
               onClick: () => _(!__webpack_require__),
@@ -2478,6 +2508,14 @@
                   _.stopPropagation());
               },
               tabIndex: 0,
+              "data-accent-color": _,
+              ..._(
+                {
+                  size: _,
+                  className: _.Root,
+                },
+                _,
+              ),
             },
             _.children,
           );
@@ -2512,7 +2550,15 @@
             Track: _,
             Handle: _,
           },
-        );
+        ),
+        _ = [
+          ..._,
+          {
+            prop: "size",
+            className: (_) => _[`Size-${_}`],
+            responsive: !0,
+          },
+        ];
       function _(_) {
         const { bActive: _, onActiveChange: __webpack_require__ } = _;
         return {
@@ -3063,7 +3109,11 @@
                       step: _,
                     }),
                     _ = [..._];
-                  (_[_] = _), _(_), _ && _(_);
+                  (_[_] = _),
+                    _(_),
+                    _ && _(_),
+                    _.preventDefault(),
+                    _.stopPropagation();
                   break;
                 }
                 case "PageUp":
@@ -3078,7 +3128,11 @@
                       step: _,
                     }),
                     _ = [..._];
-                  (_[_] = _), _(_), _ && _(_);
+                  (_[_] = _),
+                    _(_),
+                    _ && _(_),
+                    _.preventDefault(),
+                    _.stopPropagation();
                   break;
                 }
               }
@@ -4701,7 +4755,7 @@
             flexGrow: "0",
           },
           _.createElement(
-            _,
+            _.Root,
             {
               value: _ ? "on" : "off",
               onValueChange: (_) => __webpack_require__("on" === _),

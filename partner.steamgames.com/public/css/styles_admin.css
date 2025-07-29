@@ -5,7 +5,7 @@
 	max-width: 1280px;
 	text-align: left;
 	margin: 0 auto 64px auto;
-	min-height: calc( 100vh - 409px );
+		min-height: calc( 100vh - 409px );
 }
 
  .AdminPageContent.dashboard {
@@ -2936,6 +2936,26 @@ div.image_all_ages_appropriate
 }
 
 .movie_screenshot_ctn {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.trailer_missing_source {
+	margin-top: auto;
+	display: inline-block;
+
+	padding: 2px 4px;
+	border-radius: 3px;
+	margin-left: 3px;
+	color: black;
+	background: #e67122;
+	font-size: 12px;
+}
+
+.trailer_missing_source .ttip {
+	color: black;
+	vertical-align: text-top;
 }
 
 .movie_screenshot

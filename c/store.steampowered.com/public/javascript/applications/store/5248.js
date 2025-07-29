@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Nye udgivelser",
 	"Menu_OnSale": "På udsalg",
 	"Menu_SearchPlaceholder": "Søg i butikken",
+	"Menu_ClearSearchTerm": "Ryd søgeord",
 	"Menu_Wishlist": "Ønskeliste",
 	"Menu_Cart": "Indkøbskurv",
 	"Menu_Popover_TopLinks": "Populære links",

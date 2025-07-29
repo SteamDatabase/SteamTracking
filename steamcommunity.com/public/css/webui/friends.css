@@ -2871,6 +2871,27 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   color: #dfe3e6;
   box-shadow: inset 0 1px 1px 0px #000a;
 }
+.radio_Group_1ml4S.radio_CenteredPill_L2J24 {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  box-shadow: none;
+}
+.radio_Group_1ml4S.radio_CenteredPill_L2J24 > :first-child {
+  border-radius: 20px 0px 0px 20px;
+  border-top: 2px solid #282c2f;
+  border-bottom: 2px solid #282c2f;
+  border-left: 2px solid #282c2f;
+  border-right: none;
+}
+.radio_Group_1ml4S.radio_CenteredPill_L2J24 > :last-child {
+  border-radius: 0px 20px 20px 0px;
+  border-top: 2px solid #282c2f;
+  border-bottom: 2px solid #282c2f;
+  border-right: 2px solid #282c2f;
+  border-left: none;
+}
 .radio_Button_Hijmc {
   flex: 1;
   display: flex;
@@ -2892,12 +2913,30 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .radio_Button_Hijmc.radio_Disabled_3hmGW {
   cursor: default;
 }
+.radio_CenteredPill_L2J24 .radio_Button_Hijmc {
+  flex: none;
+  margin-right: 0px;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #282c2f;
+  color: #fff;
+  min-width: 7%;
+}
+.radio_CenteredPill_L2J24
+  .radio_Button_Hijmc:not(.radio_Active_3-_jM)
+  + .radio_Button_Hijmc:not(.radio_Active_3-_jM)::before {
+  display: none;
+}
 .radio_Button_Hijmc.radio_Active_3-_jM,
 .radio_Button_Hijmc.radio_Active_3-_jM:hover {
   background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
   cursor: default;
   color: #fff;
   border-right: none;
+}
+.radio_CenteredPill_L2J24 .radio_Button_Hijmc.radio_Active_3-_jM,
+.radio_Button_Hijmc.radio_Active_3-_jM:hover {
+  border-right: 2px solid #282c2f;
 }
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW,
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW:hover {
@@ -42010,6 +42049,10 @@ html.web_chat_frame body {
   margin: 0;
   overflow: hidden;
 }
+html.client_chat_frame body.ContextMenuPopupBody,
+html.web_chat_frame body.ContextMenuPopupBody {
+  background: transparent;
+}
 @media (prefers-contrast: more) {
   html.client_chat_frame body.ContextMenuPopupBody:has(.ready),
   html.web_chat_frame body.ContextMenuPopupBody:has(.ready) {
@@ -45403,6 +45446,10 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   user-select: none;
   text-align: center;
   width: 100%;
+}
+.chatFileUploadErrorDescription {
+  white-space: pre-wrap;
+  margin-bottom: 12px;
 }
 .chatRoomInviteInline.msg {
   display: flex;

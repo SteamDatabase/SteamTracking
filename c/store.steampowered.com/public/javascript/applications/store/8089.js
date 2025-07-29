@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Rilisan Terbaru",
 	"Menu_OnSale": "Sedang Didiskon",
 	"Menu_SearchPlaceholder": "Cari di toko",
+	"Menu_ClearSearchTerm": "Hapus kata kunci pencarian",
 	"Menu_Wishlist": "Wishlist",
 	"Menu_Cart": "Keranjang",
 	"Menu_Popover_TopLinks": "Tautan Teratas",

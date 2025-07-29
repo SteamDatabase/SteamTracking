@@ -386,3 +386,8 @@ function UserReview_Moderate_VoteBanUsers( recommendationID, baseURL, callback )
 {
 	UserReview_Moderate( recommendationID, { 'vote_ban_users' : 1 }, baseURL, callback );
 }
+
+function UserReview_Moderate_UpdateLanguage( recommendationID, language, baseURL, callback )
+{
+	UserReview_Moderate( recommendationID, { 'language' : language }, baseURL, callback );
+}

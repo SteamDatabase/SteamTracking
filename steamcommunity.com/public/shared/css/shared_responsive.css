@@ -804,7 +804,7 @@ html.force_desktop body #footer_responsive_optin_spacer {
 
 	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_start {
 		scroll-snap-align: start;
-		overflow: visible;
+		scroll-snap-stop: always;
 	}
 
 	html.responsive:not(.legacy_mobile) .responsive_scroll_snap_ctn {
@@ -821,7 +821,7 @@ html.force_desktop body #footer_responsive_optin_spacer {
 
 	html.responsive.tablet:not(.legacy_mobile) .responsive_scroll_snap_start {
 		scroll-snap-align: start;
-		overflow: visible;
+		scroll-snap-stop: always;
 	}
 
 	html.responsive.tablet:not(.legacy_mobile) .responsive_scroll_snap_ctn {

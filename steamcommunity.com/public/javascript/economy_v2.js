@@ -5507,6 +5507,66 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 }
 
 
+// returns [ roundedStart: Date, tick_interval: string, axis_format: string ]
+function GetXAxisParameters( endDate, days )
+{
+	var strInterval = undefined;
+	var cdaysInterval = undefined;
+
+	// long time: include Jan 1 1970
+	var strFormatStringLong = '%b %#d %Y<span class="priceHistoryTime"> %#I%p</span>';
+
+	// short time: include Jan 1
+	var strFormatString = '%b %#d<span class="priceHistoryTime"> %#I%p</span>';
+
+	if ( days >= 365 * 10 )
+	{
+		strInterval = '2 years';
+		cdaysInterval = 365 * 2;
+	}
+	else if ( days >= 365 * 5 )
+	{
+		strInterval = '1 year';
+		cdaysInterval = 365;
+	}
+	else if ( days >= 365 * 2 )
+	{
+		strInterval = '6 months';
+		cdaysInterval = 180;
+	}
+	else if ( days >= 180 )
+	{
+		strInterval = '1 month';
+		cdaysInterval = 30;
+	}
+	else if ( days >= 90 )
+	{
+		strInterval = '2 weeks';
+		cdaysInterval = 14;
+	}
+	else if ( days >= 14 )
+	{
+		strInterval = '1 week';
+		cdaysInterval = 7;
+	}
+	else
+	{
+		strInterval = '1 day';
+		cdaysInterval = 1;
+	}
+
+	// round delta up to interval so ticks will line up
+	var daysRounded = Math.ceil( days / cdaysInterval ) * cdaysInterval;
+
+	var strFormat = days >= 30 ? strFormatStringLong : strFormatString;
+
+	var epochMillis = endDate.getTime() - ( daysRounded * 24 * 60 * 60 * 1000 );
+	var timeSelected = new Date( epochMillis );
+
+	return [timeSelected, strInterval, strFormat];
+}
+
+
 function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strFormatSuffix )
 {
 	var plot = $J.jqplot('pricehistory', [line1], {
@@ -5516,7 +5576,7 @@ function CreatePriceHistoryGraph( line1, numYAxisTicks, strFormatPrefix, strForm
 		axes:{
 			xaxis:{
 				renderer:$J.jqplot.DateAxisRenderer,
-				tickOptions:{formatString:'%b %#d<span class="priceHistoryTime"> %#I%p<span>'},
+				tickOptions:{formatString:'%b %#d<span class="priceHistoryTime"> %#I%p</span>'},
 				pad: 1
 			},
 			yaxis: {
@@ -5580,19 +5640,18 @@ function GetYAXisForPriceHistoryGraph( plotPriceHistory, timeMin, timeMax )
 
 function pricehistory_zoomDays( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest, days )
 {
-	var timeSelected = new Date( timePriceHistoryLatest.getTime() - ( days * 24 * 60 * 60 * 1000 ) );
+	[ timeSelected, strInterval, strFormat ] = GetXAxisParameters( timePriceHistoryLatest, days );
 
 	plotPriceHistory.axes.xaxis.ticks = [];
-	//plotPriceHistory.resetZoom();
 	plotPriceHistory.axes.xaxis.reset();
 	plotPriceHistory.axes.y2axis.reset();
 
 	var rgYAxis = GetYAXisForPriceHistoryGraph( plotPriceHistory, timeSelected, timePriceHistoryLatest );
 
-	var ticks = ( days == 7 ) ? 7 : 6;
-	plotPriceHistory.axes.xaxis.tickInterval = days / ticks + " days";
+	plotPriceHistory.axes.xaxis.tickInterval = strInterval;
 	plotPriceHistory.axes.xaxis.min = timeSelected;
 	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
+	plotPriceHistory.axes.xaxis.tickOptions.formatString = strFormat;
 
 	plotPriceHistory.axes.yaxis.min = rgYAxis[0];
 	plotPriceHistory.axes.yaxis.max = rgYAxis[1];
@@ -5607,12 +5666,15 @@ function pricehistory_zoomDays( plotPriceHistory, timePriceHistoryEarliest, time
 	return false;
 }
 
+
 function pricehistory_zoomMonthOrLifetime( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest )
 {
-	var timeMonthAgo = new Date( timePriceHistoryLatest.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
-	plotPriceHistory.resetZoom();
+	[ timeSelected, strInterval, strFormat ] = GetXAxisParameters( timePriceHistoryLatest, 30 );
 
-	var days = (timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime()) / ( 24 * 60 * 60 * 1000 );
+	plotPriceHistory.resetZoom();
+	plotPriceHistory.axes.xaxis.reset();
+
+	var days = (timePriceHistoryLatest.getTime() - timeSelected.getTime()) / ( 24 * 60 * 60 * 1000 );
 	if ( days / 7 < 1 )
 	{
 		var difference = timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime();
@@ -5620,12 +5682,10 @@ function pricehistory_zoomMonthOrLifetime( plotPriceHistory, timePriceHistoryEar
 	}
 	else
 	{
-		plotPriceHistory.axes.xaxis.tickInterval = (days / 7) + " days";
+		plotPriceHistory.axes.xaxis.tickInterval = strInterval;
 	}
-	if ( timePriceHistoryEarliest > timeMonthAgo )
-		plotPriceHistory.axes.xaxis.min = timePriceHistoryEarliest;
-	else
-		plotPriceHistory.axes.xaxis.min = timeMonthAgo;
+	plotPriceHistory.axes.xaxis.tickOptions.formatString = strFormat;
+	plotPriceHistory.axes.xaxis.min = timeSelected;
 	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
 
 	var rgYAxis = GetYAXisForPriceHistoryGraph( plotPriceHistory, plotPriceHistory.axes.xaxis.min, timePriceHistoryLatest );
@@ -5644,13 +5704,13 @@ function pricehistory_zoomMonthOrLifetime( plotPriceHistory, timePriceHistoryEar
 
 function pricehistory_zoomLifetime( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest )
 {
-	var timeMonthAgo = new Date( timePriceHistoryLatest.getTime() - ( 30 * 24 * 60 * 60 * 1000 ) );
 	plotPriceHistory.axes.xaxis.ticks = [];
 	plotPriceHistory.resetZoom();
 	plotPriceHistory.axes.xaxis.reset();
 	plotPriceHistory.axes.y2axis.reset();
 
 	var days = (timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime()) / ( 24 * 60 * 60 * 1000 );
+	[ timeStartRounded, strInterval, strFormat ] = GetXAxisParameters( timePriceHistoryLatest, days );
 	if ( days / 7 < 1 )
 	{
 		var difference = timePriceHistoryLatest.getTime() - timePriceHistoryEarliest.getTime();
@@ -5658,12 +5718,13 @@ function pricehistory_zoomLifetime( plotPriceHistory, timePriceHistoryEarliest, 
 	}
 	else
 	{
-		plotPriceHistory.axes.xaxis.tickInterval = (days / 7) + " days";
+		plotPriceHistory.axes.xaxis.tickInterval = strInterval;
 	}
-	plotPriceHistory.axes.xaxis.min = timePriceHistoryEarliest;
+	plotPriceHistory.axes.xaxis.tickOptions.formatString = strFormat;
+	plotPriceHistory.axes.xaxis.min = timeStartRounded;
 	plotPriceHistory.axes.xaxis.max = timePriceHistoryLatest;
 
-	var rgYAxis = GetYAXisForPriceHistoryGraph( plotPriceHistory, timePriceHistoryEarliest, timePriceHistoryLatest );
+	var rgYAxis = GetYAXisForPriceHistoryGraph( plotPriceHistory, timeStartRounded, timePriceHistoryLatest );
 	plotPriceHistory.axes.yaxis.min = rgYAxis[0];
 	plotPriceHistory.axes.yaxis.max = rgYAxis[1];
 	plotPriceHistory.axes.yaxis.numberTicks = rgYAxis[2];

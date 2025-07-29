@@ -4773,7 +4773,7 @@
           ? s.createElement(
               "div",
               { className: k.MessagePriceCtn },
-              s.createElement(z.kb, { storeItem: e }),
+              s.createElement(z.kb, { storeItem: e, bHidePrePurchase: !0 }),
             )
           : s.createElement("div", { className: k.NoPrice });
       }

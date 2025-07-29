@@ -610,6 +610,7 @@
     chunkid: (module) => {
       module.exports = {
         Group: "_1ml4SNc3LIyBDHIf8ekVSw",
+        CenteredPill: "L2J24Sa_dQql2exoKoBMi",
         Button: "HijmccPB1BKyhOwhX1EVl",
         Disabled: "_3hmGW9wIxNIoPPu1aS7rFm",
         Active: "_3-_jME_xsuvgT3Dvq4bw_q",
@@ -16971,52 +16972,94 @@
       }
       (0, _._)([_._], _.prototype, "bCropped", void 0);
       class _ {}
+      function _(_, _, _) {
+        const _ = _.filter((_) => {
+          const _ = _.IsValidAssetType(_, _);
+          return "pending" === _.status && !_.error && !_.needsCrop;
+        });
+        return _.forEach((_) => (_.status = "waiting")), _;
+      }
+      async function _(_, _, _, _, _, _) {
+        const _ = _(_, _, _),
+          _ = [];
+        let _ = 0;
+        const _ = Array.from(
+          {
+            length: Math.floor(_),
+          },
+          () =>
+            (async () => {
+              for (; _ < _.length; ) {
+                const _ = _++,
+                  _ = _[_];
+                _.status = "uploading";
+                const _ = await __webpack_require__(
+                  _,
+                  _.filename,
+                  _.language ?? -1,
+                  _,
+                );
+                (_.status = _.bSuccess ? "success" : "failed"),
+                  (_.message =
+                    !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
+                  (_[_] = {
+                    image: _,
+                    uploadResult: _,
+                  });
+              }
+            })(),
+        );
+        return (
+          await Promise.all(_),
+          _.map((_) => ({
+            bSuccess: _.uploadResult.bSuccess,
+            image: _.image,
+            uploadResult: _.uploadResult.result,
+          }))
+        );
+      }
       class _ extends _ {
-        m_allCancelTokens = new Array();
+        m_cancel = void 0;
         async UploadAllImages(_, _) {
-          const _ = this.GetUploadImages(),
-            _ = this.BGetUploadsAreInSerial(),
-            _ = __webpack_require__.filter((_) => {
-              const _ = __webpack_require__.IsValidAssetType(_, _);
-              return "pending" === _.status && !_.error && !_.needsCrop;
-            });
-          for (const _ of _) _.status = "uploading";
-          const _ = [];
-          for (const _ of _) {
-            const _ = _().CancelToken.source();
-            this.m_allCancelTokens.push(_);
-            const _ = this.UploadSingleImage(
-              _,
-              _.filename,
-              _.language ?? -1,
-              _.token,
-            );
-            _.push({
-              image: _,
-              promise: _,
-            }),
-              _ && (await _);
-          }
-          _ || (await Promise.all(_.map((_) => _.promise)));
-          const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise,
-              _ = _.image;
-            _.push({
-              bSuccess: _.bSuccess,
-              image: _,
-              uploadResult: _.result,
-            }),
-              _.bSuccess
-                ? (_.status = "success")
-                : ((_.status = "failed"), (_.message = _.elErrorMessage ?? ""));
-          }
-          return _;
+          this.m_cancel = _().CancelToken.source();
+          const _ = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let _;
+          const _ = this.UploadSingleImage.bind(this);
+          return (
+            (_ =
+              _ > 1
+                ? await _(
+                    this.GetUploadImages(),
+                    _,
+                    _,
+                    _,
+                    _,
+                    this.m_cancel.token,
+                  )
+                : await (async function (_, _, _, _, _) {
+                    const _ = _(_, _, _),
+                      _ = [];
+                    for (const _ of _) {
+                      _.status = "uploading";
+                      const _ = await _(_, _.filename, _.language ?? -1, _);
+                      (_.status = _.bSuccess ? "success" : "failed"),
+                        (_.message =
+                          !_.bSuccess && _.elErrorMessage
+                            ? _.elErrorMessage
+                            : ""),
+                        _.push({
+                          bSuccess: _.bSuccess,
+                          image: _,
+                          uploadResult: _.result,
+                        });
+                    }
+                    return _;
+                  })(this.GetUploadImages(), _, _, _, this.m_cancel.token)),
+            _
+          );
         }
         CancelAllUploads() {
-          for (let _ of this.m_allCancelTokens)
-            _.cancel((0, _._)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
+          this.m_cancel?.cancel((0, _._)("#ImageUpload_CancelRequest"));
         }
       }
       class _ extends _ {
@@ -38664,6 +38707,7 @@
         }
         SetDOMFocusAndScroll(_, _) {
           this.UpdateParentActiveChild(),
+            this.m_Tree.OnChildActivated(_),
             this.m_Tree.BIsActiveFocus()
               ? ((0, _._)(
                   !this.m_Tree.BUseVirtualFocus(),
@@ -38747,8 +38791,7 @@
                           inline: "nearest",
                         });
               }
-            })(this, _),
-            this.m_Tree.OnChildActivated(_);
+            })(this, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -44723,200 +44766,6 @@
           return "CCommunity_SetRecommendationBotReviewStatus_Response";
         }
       }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.recommendation_ids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  recommendation_ids: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint64String,
-                    pbr: _._.readPackedUint64String,
-                    _: _._.writeRepeatedUint64String,
-                  },
-                  app_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetBotReviewScoreForRecommendation_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.bot_review_score || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  bot_review_score: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetBotReviewScoreForRecommendation_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.key || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  key: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  value: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetBotReviewScoreForRecommendation_Response_BotReviewScoreEntry";
-        }
-      }
       !(function (_) {
         (_.GetApps = function (_, _) {
           return _.SendMsg("Community.GetApps#1", (0, _._)(_, _), _, {
@@ -45170,17 +45019,6 @@
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetBotReviewScoreForRecommendation = function (_, _) {
-            return _.SendMsg(
-              "Community.GetBotReviewScoreForRecommendation#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
                 ePrivilege: 1,
               },
             );
@@ -61804,7 +61642,7 @@
           __webpack_require__,
         );
       }
-      const _ = () => _().useActiveSteamInterface().GetServiceTransport(),
+      const _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
         _ = () => _().useActiveSteamInterface().GetAnonymousServiceTransport(),
         _ = () => _().useStorage();
     },
@@ -71956,7 +71794,6 @@
             _ = 0,
             _ = _.innerWidth,
             _ = _.innerHeight,
-            _ = 1,
             _ = _?.getBoundingClientRect();
           if (_)
             if (
@@ -71967,8 +71804,7 @@
               _ && (_ = _._(_, _)),
               _.targetMonitor)
             )
-              (_ = _.targetMonitor.flMonitorScale),
-                (_ = _.targetMonitor.nScreenLeft),
+              (_ = _.targetMonitor.nScreenLeft),
                 (_ = _.targetMonitor.nScreenTop),
                 (_ = _.targetMonitor.nScreenWidth),
                 (_ = _.targetMonitor.nScreenHeight);
@@ -71984,11 +71820,7 @@
                 (_ = _.availHeight);
             }
           (_.bOverlapHorizontal || _.bOverlapVertical) && (_ = _ = void 0);
-          let _ = __webpack_require__.getBoundingClientRect();
-          if (_.flGamepadScale && _.flGamepadScale > 0) {
-            const _ = _.flGamepadScale;
-            _ = new DOMRect(_._ * _, _._ * _, _.width * _, _.height * _);
-          }
+          const _ = __webpack_require__.getBoundingClientRect();
           let _ = {
               menuLeft: void 0,
               menuRight: void 0,
@@ -72082,11 +71914,9 @@
           const _ = this.props.popup?.window,
             _ = this.props.options;
           if (_.bScreenCoordinates) {
-            let _ = this.parentWin?.devicePixelRatio;
-            if (_.targetMonitor) {
-              let _ = _.flGamepadScale || 1;
-              _ = (_.targetMonitor.flMonitorScale ?? 1) / _;
-            }
+            const _ =
+              _.targetMonitor?.flScaleToTargetMonitor ??
+              this.parentWin?.devicePixelRatio;
             return (
               _?.SteamClient.Window.MoveTo(
                 this.state.menuLeft,
@@ -72122,39 +71952,27 @@
           let _ = {
             visibility: this.state.ready ? "visible" : "hidden",
           };
-          if (
-            this.props.options.flGamepadScale &&
-            this.props.options.flGamepadScale > 0
-          )
-            _.zoom = this.props.options.flGamepadScale;
-          else if (
-            this.props.options.bScreenCoordinates &&
-            this.props.options.targetMonitor &&
-            this.m_elMenu?.ownerDocument?.defaultView
-          ) {
-            const _ = this.m_elMenu.ownerDocument.defaultView.devicePixelRatio;
-            1 != _ &&
-              (_.zoom =
-                (this.props.options.targetMonitor.flMonitorScale ?? 1) / _);
-          }
-          this.props.popup
-            ? (this.PositionPopupWindow(),
-              void 0 !== this.state.menuMinWidth &&
-                (_.minWidth = Math.floor(this.state.menuMinWidth)))
-            : (void 0 !== this.state.menuTop
-                ? (_.top = this.state.menuTop)
-                : void 0 !== this.state.menuBottom &&
-                  (_.bottom = this.state.menuBottom),
-              void 0 !== this.state.menuLeft
-                ? (_.left = this.state.menuLeft)
-                : void 0 !== this.state.menuRight &&
-                  (_.right = this.state.menuRight),
-              void 0 !== this.state.menuHeight &&
-                (_.height = this.state.menuHeight),
-              void 0 !== this.state.menuWidth &&
-                (_.width = this.state.menuWidth),
-              void 0 !== this.state.menuMinWidth &&
-                (_.minWidth = this.state.menuMinWidth));
+          this.props.options.flElementZoom &&
+            this.props.options.flElementZoom > 0 &&
+            (_.zoom = this.props.options.flElementZoom),
+            this.props.popup
+              ? (this.PositionPopupWindow(),
+                void 0 !== this.state.menuMinWidth &&
+                  (_.minWidth = Math.floor(this.state.menuMinWidth)))
+              : (void 0 !== this.state.menuTop
+                  ? (_.top = this.state.menuTop)
+                  : void 0 !== this.state.menuBottom &&
+                    (_.bottom = this.state.menuBottom),
+                void 0 !== this.state.menuLeft
+                  ? (_.left = this.state.menuLeft)
+                  : void 0 !== this.state.menuRight &&
+                    (_.right = this.state.menuRight),
+                void 0 !== this.state.menuHeight &&
+                  (_.height = this.state.menuHeight),
+                void 0 !== this.state.menuWidth &&
+                  (_.width = this.state.menuWidth),
+                void 0 !== this.state.menuMinWidth &&
+                  (_.minWidth = this.state.menuMinWidth));
           let _ = this.props.options.strClassName || _().contextMenu;
           return (
             (this.props.options.bCreateHidden ||
@@ -75537,6 +75355,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",

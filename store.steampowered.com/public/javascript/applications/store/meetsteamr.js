@@ -24,7 +24,13 @@
     15588: (e) => {
       e.exports = {
         Ctn: "_3cmUbcgdPxM7o5hl986RgB",
-        Row: "yueujW6bRizgc-buB29Dw",
+        User: "_3E6Usl36asxUFK3vPKa7Us",
+        EventName: "_2GHTaky49GZrPLyiOgKWB7",
+        SessionInfo: "Kk38rrvnYm3-E2jJMahSH",
+        SessionName: "_2uJvCA4FncHONmSI37VVyw",
+        SessionTime: "_2vYmHfXJIHj2eCv8NsiqZv",
+        RegisteredUsers: "HLiipgmnfEQ2O-9WritfU",
+        CheckedIn: "_17S0ayInAou4_ptPoMguR0",
         DescriptionWrapper: "_17o_wRtaDyujn3Bx4gGiu5",
         Expanded: "mJXTRr0gd2yNafeFp9NOr",
       };
@@ -72,8 +78,8 @@
       var s = n(68797),
         a = n(78327),
         o = n(41735),
-        r = n.n(o),
-        i = n(90626),
+        i = n.n(o),
+        r = n(90626),
         l = n(6144),
         c = n(84933),
         u = n(81393);
@@ -119,8 +125,8 @@
               "ajaxgetbadgeinfo called on wrong unsupported site: " + n,
             );
             const o = n + "actions/ajaxgetbadgeinfo",
-              i = { badgeid: e },
-              l = await r().get(o, { params: i, withCredentials: !0 });
+              r = { badgeid: e },
+              l = await i().get(o, { params: r, withCredentials: !0 });
             if (
               200 == l.status &&
               (1 == l.data?.success || 42 == l.data?.success)
@@ -159,9 +165,9 @@
         constructor() {}
       }
       function m(e) {
-        const [t, n] = (0, i.useState)(d.Get().GetBadgeInfo(e));
+        const [t, n] = (0, r.useState)(d.Get().GetBadgeInfo(e));
         return (
-          (0, i.useEffect)(() => {
+          (0, r.useEffect)(() => {
             !t &&
               e &&
               d
@@ -177,9 +183,9 @@
         d.Get().Test_SetBadgeInfo(e);
       }
       function g(e) {
-        const [t, n] = (0, i.useState)(d.Get().GetInitialBadgeInfo(e));
+        const [t, n] = (0, r.useState)(d.Get().GetInitialBadgeInfo(e));
         return (
-          (0, i.useEffect)(() => {
+          (0, r.useEffect)(() => {
             !t && e && d.Get().LoadBadgeInfo(e);
           }, [e, t]),
           (0, c.hL)(d.Get().GetBadgeInfoChangeCallback(e), () =>
@@ -195,14 +201,14 @@
       var s = n(34629),
         a = n(14947),
         o = n(56055),
-        r = n(62490),
-        i = n(78327);
+        i = n(62490),
+        r = n(78327);
       class l {
         m_rgAnswerToCategoryID = Array();
         m_rgAnswerChosen = Array();
         SetAnswerCategory(e, t) {
           const n = Math.min(e, 64);
-          (this.m_rgAnswerToCategoryID = (0, r.$Y)(
+          (this.m_rgAnswerToCategoryID = (0, i.$Y)(
             this.m_rgAnswerToCategoryID,
             n + 1,
             null,
@@ -216,7 +222,7 @@
         }
         SetAnswer(e, t) {
           const n = Math.min(e, 64);
-          (this.m_rgAnswerChosen = (0, r.$Y)(
+          (this.m_rgAnswerChosen = (0, i.$Y)(
             this.m_rgAnswerChosen,
             n + 1,
             null,
@@ -261,7 +267,7 @@
           return (
             l.s_Singleton ||
               ((l.s_Singleton = new l()),
-              "dev" == i.TS.WEB_UNIVERSE &&
+              "dev" == r.TS.WEB_UNIVERSE &&
                 (window.g_SaleQuizAnswerStore = l.s_Singleton)),
             l.s_Singleton
           );
@@ -280,7 +286,7 @@
         Fq: () => g,
         OC: () => I,
         OM: () => D,
-        Sp: () => b,
+        Sp: () => v,
         Tn: () => E,
         W3: () => f,
         hH: () => h,
@@ -289,8 +295,8 @@
       var s = n(34629),
         a = n(41735),
         o = n.n(a),
-        r = n(14947),
-        i = n(90626),
+        i = n(14947),
+        r = n(90626),
         l = n(68797),
         c = n(6144),
         u = n(84933),
@@ -423,16 +429,16 @@
         }
         async InternalOpenDoor(e, t = !0, n, s = !1) {
           let a = d.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
-          const r = new FormData();
-          r.append("sessionid", d.TS.SESSIONID),
-            n && r.append("datarecord", n),
-            s && r.append("fake_open", "" + s),
-            r.append("door_index", "" + e),
-            r.append("clan_accountid", "" + d.UF.CLANACCOUNTID),
-            t || r.append("open_door", "0");
-          let i = null;
+          const i = new FormData();
+          i.append("sessionid", d.TS.SESSIONID),
+            n && i.append("datarecord", n),
+            s && i.append("fake_open", "" + s),
+            i.append("door_index", "" + e),
+            i.append("clan_accountid", "" + d.UF.CLANACCOUNTID),
+            t || i.append("open_door", "0");
+          let r = null;
           try {
-            let n = await o().post(a, r, { withCredentials: !0 });
+            let n = await o().post(a, i, { withCredentials: !0 });
             if (200 == n?.status && 1 == n?.data?.success)
               return (
                 (this.m_userData[e].opened = t),
@@ -442,13 +448,13 @@
                 this.RecomputeState(),
                 n.data
               );
-            i = (0, l.H)(n);
+            r = (0, l.H)(n);
           } catch (e) {
-            i = (0, l.H)(e);
+            r = (0, l.H)(e);
           }
           return (
             this.m_mapDoorOpenPromise.delete(e),
-            console.error("OpenDoor hit error: " + i.strErrorMsg, i),
+            console.error("OpenDoor hit error: " + r.strErrorMsg, r),
             null
           );
         }
@@ -532,7 +538,7 @@
           );
         }
         constructor() {
-          (0, r.Gn)(this);
+          (0, i.Gn)(this);
         }
         Init() {
           (this.m_userData = (0, d.Tc)("doorinfo", "application_config")),
@@ -547,9 +553,9 @@
         return { fnOpenDoor: h.Get().OpenDoor };
       }
       function S() {
-        const [e, t] = (0, i.useState)(h.Get().BIsInitialized());
+        const [e, t] = (0, r.useState)(h.Get().BIsInitialized());
         return (
-          (0, i.useEffect)(() => {
+          (0, r.useEffect)(() => {
             e || h.Get().LoadDoorData();
           }, [e]),
           (0, u.hL)(h.Get().GetDoorStateInitializedChangeCallback(), t),
@@ -558,27 +564,27 @@
       }
       function D(e) {
         const t = S(),
-          [n, s] = (0, i.useState)(t ? h.Get().BIsDoorOpened(e) : void 0);
+          [n, s] = (0, r.useState)(t ? h.Get().BIsDoorOpened(e) : void 0);
         return (0, u.hL)(h.Get().GetDoorStateChangeCallback(e), s), n;
       }
       function E() {
         const e = S(),
-          [t, n] = (0, i.useState)(e ? h.Get().GetLargestDoorOpenIndex() : p);
+          [t, n] = (0, r.useState)(e ? h.Get().GetLargestDoorOpenIndex() : p);
         return (0, u.hL)(h.Get().GetLargestDoorIndexChange(), n), t;
       }
       function f() {
         const e = S(),
-          [t, n] = (0, i.useState)(!!e && h.Get().BIsAnyDoorOpened());
+          [t, n] = (0, r.useState)(!!e && h.Get().BIsAnyDoorOpened());
         return (0, u.hL)(h.Get().GetIsAnyDoorOpenChange(), n), t;
       }
-      function b(e) {
+      function v(e) {
         h.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
       function C(e, t) {
         h.Get().SetInMemorySpecificDoorState(e, t);
       }
-      (0, s.Cg)([r.sH], h.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, s.Cg)([r.sH], h.prototype, "m_nHighestDoorOpened", void 0),
+      (0, s.Cg)([i.sH], h.prototype, "m_bIsAnyDoorOpened", void 0),
+        (0, s.Cg)([i.sH], h.prototype, "m_nHighestDoorOpened", void 0),
         (0, s.Cg)([u.oI], h.prototype, "BIsDoorOpened", null),
         (0, s.Cg)([u.oI], h.prototype, "OpenDoor", null);
     },
@@ -595,8 +601,8 @@
       var s,
         a = n(34629),
         o = n(14947),
-        r = (n(90626), n(77516)),
-        i = n(81393),
+        i = (n(90626), n(77516)),
+        r = n(81393),
         l = n(6144),
         c = n(84933),
         u = n(78327),
@@ -676,7 +682,7 @@
                   this.m_rgFutureInsertions[n],
                 );
                 t &&
-                  ((0, i.wT)(
+                  ((0, r.wT)(
                     Boolean(t.sectionID),
                     "Expected to have a materialized insertion at this poiunt: " +
                       t.sectionID,
@@ -701,7 +707,7 @@
         BIsInsertableSectionType(e) {
           if (e) {
             if ("sale_item_browser" == e.section_type) return !0;
-            if ((0, r.ye)(e.section_type))
+            if ((0, i.ye)(e.section_type))
               return (
                 !e.smart_section ||
                 ("wishlist" != e.smart_section_type &&
@@ -883,8 +889,8 @@
       var s = n(41735),
         a = n.n(s),
         o = n(58632),
-        r = n.n(o),
-        i = n(90626),
+        i = n.n(o),
+        r = n(90626),
         l = n(20194),
         c = n(75233),
         u = n(17720),
@@ -914,7 +920,7 @@
           });
         return n ? n.get(e) : null;
       }
-      const S = new (r())(
+      const S = new (i())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -983,7 +989,7 @@
             },
             enabled: e?.length > 0,
           }),
-          a = (0, i.useMemo)(() => {
+          a = (0, r.useMemo)(() => {
             const e = new Array();
             return (
               n?.forEach((t) => {
@@ -1001,15 +1007,15 @@
       var s = n(34629),
         a = n(90626),
         o = n(78327),
-        r = n(84933),
-        i = n(14947),
+        i = n(84933),
+        r = n(14947),
         l = n(95034),
         c = n(65946);
       class u {
         m_sParentOrigin;
         m_eventModelJson = void 0;
-        m_setMouseOverSectionID = i.sH.set();
-        m_setMouseOverSubsectionID = i.sH.set();
+        m_setMouseOverSectionID = r.sH.set();
+        m_setMouseOverSubsectionID = r.sH.set();
         m_jumpToSection = void 0;
         m_jumpToSubsection = void 0;
         static s_Singleton;
@@ -1023,7 +1029,7 @@
           );
         }
         constructor() {
-          (0, i.Gn)(this),
+          (0, r.Gn)(this),
             window.opener &&
               ((this.m_sParentOrigin = (0, l.f3)(
                 location.search,
@@ -1064,10 +1070,10 @@
           return this.m_jumpToSubsection;
         }
         ClearJumpToSectionID() {
-          (0, i.h5)(() => (this.m_jumpToSection = void 0));
+          (0, r.h5)(() => (this.m_jumpToSection = void 0));
         }
         ClearJumpToSubectionID() {
-          (0, i.h5)(() => (this.m_jumpToSubsection = void 0));
+          (0, r.h5)(() => (this.m_jumpToSubsection = void 0));
         }
         PostMessage(e) {
           window.opener &&
@@ -1111,13 +1117,13 @@
               case "PartnerEventEditor_Update":
                 if ("eventModelJson" in t && t.eventModelJson) {
                   const e = t;
-                  (0, i.h5)(() => (this.m_eventModelJson = e.eventModelJson));
+                  (0, r.h5)(() => (this.m_eventModelJson = e.eventModelJson));
                 }
                 break;
               case "PartnerEventEditor_MouseOverEditorSection":
                 if ("nSectionID" in t) {
                   const e = t;
-                  (0, i.h5)(() => {
+                  (0, r.h5)(() => {
                     e.bMouseOver
                       ? this.m_setMouseOverSectionID.add(e.nSectionID)
                       : this.m_setMouseOverSectionID.delete(e.nSectionID);
@@ -1127,7 +1133,7 @@
               case "PartnerEventEditor_MouseOverEditorSubsection":
                 if ("strSubsectionID" in t) {
                   const e = t;
-                  (0, i.h5)(() => {
+                  (0, r.h5)(() => {
                     e.bMouseOver
                       ? this.m_setMouseOverSubsectionID.add(e.strSubsectionID)
                       : this.m_setMouseOverSubsectionID.delete(
@@ -1139,13 +1145,13 @@
               case "PartnerEventEditor_JumpToEditorSection":
                 if ("nSectionID" in t) {
                   const e = t;
-                  (0, i.h5)(() => (this.m_jumpToSection = e.nSectionID));
+                  (0, r.h5)(() => (this.m_jumpToSection = e.nSectionID));
                 }
                 break;
               case "PartnerEventEditor_JumpToEditorSubection":
                 if ("strSubsectionID" in t) {
                   const e = t;
-                  (0, i.h5)(() => {
+                  (0, r.h5)(() => {
                     (this.m_jumpToSection = e.nSectionID),
                       (this.m_jumpToSubsection = {
                         nSectionID: e.nSectionID,
@@ -1171,12 +1177,12 @@
             u.Get().ClearJumpToSubectionID();
         }, [e, t]);
       }
-      (0, s.Cg)([i.sH], u.prototype, "m_eventModelJson", void 0),
-        (0, s.Cg)([i.sH], u.prototype, "m_setMouseOverSectionID", void 0),
-        (0, s.Cg)([i.sH], u.prototype, "m_setMouseOverSubsectionID", void 0),
-        (0, s.Cg)([i.sH], u.prototype, "m_jumpToSection", void 0),
-        (0, s.Cg)([i.sH], u.prototype, "m_jumpToSubsection", void 0),
-        (0, s.Cg)([r.oI], u.prototype, "HandleMessage", null);
+      (0, s.Cg)([r.sH], u.prototype, "m_eventModelJson", void 0),
+        (0, s.Cg)([r.sH], u.prototype, "m_setMouseOverSectionID", void 0),
+        (0, s.Cg)([r.sH], u.prototype, "m_setMouseOverSubsectionID", void 0),
+        (0, s.Cg)([r.sH], u.prototype, "m_jumpToSection", void 0),
+        (0, s.Cg)([r.sH], u.prototype, "m_jumpToSubsection", void 0),
+        (0, s.Cg)([i.oI], u.prototype, "HandleMessage", null);
     },
     69409: (e, t, n) => {
       "use strict";
@@ -1184,8 +1190,8 @@
       var s = n(90626),
         a = n(22837),
         o = n(38390),
-        r = n(52038),
-        i = n(61859),
+        i = n(52038),
+        r = n(61859),
         l = n(61336),
         c = n(78327),
         u = n(15392),
@@ -1199,11 +1205,11 @@
               n?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
               const e = (0, a.sf)(c.TS.LANGUAGE),
-                t = i.NT.GetWithFallback(
+                t = r.NT.GetWithFallback(
                   n.jsondata.localized_sale_product_banner,
                   e,
                 ),
-                s = i.NT.GetWithFallback(
+                s = r.NT.GetWithFallback(
                   n.jsondata.localized_sale_product_mobile_banner,
                   e,
                 );
@@ -1221,11 +1227,11 @@
               { href: (0, l.k2)(n.GetSaleURL()), className: u.Link },
               s.createElement("img", {
                 src: m,
-                className: (0, r.A)(u.Banner, u.Big),
+                className: (0, i.A)(u.Banner, u.Big),
               }),
               s.createElement("img", {
                 src: _,
-                className: (0, r.A)(u.Banner, u.Mobile),
+                className: (0, i.A)(u.Banner, u.Mobile),
               }),
             )
           : null;
@@ -1237,14 +1243,14 @@
       var s = n(90626),
         a = n(17720),
         o = n(27144),
-        r = n(15736),
-        i = n(78327);
+        i = n(15736),
+        r = n(78327);
       function l(e) {
         const { accountID: t, bHideWhenNotAvailable: n, bHideName: l } = e,
           [c] = (0, o.KT)(t),
           u = (0, o.KM)(t),
           d = s.useMemo(() => a.b.InitFromAccountID(t), [t]),
-          m = `${i.TS.COMMUNITY_BASE_URL}profiles/${d.ConvertTo64BitString()}`;
+          m = `${r.TS.COMMUNITY_BASE_URL}profiles/${d.ConvertTo64BitString()}`;
         return s.createElement(
           s.Fragment,
           null,
@@ -1258,7 +1264,7 @@
                 "a",
                 { href: m },
                 s.createElement("img", {
-                  className: r.SmallAvatar,
+                  className: i.SmallAvatar,
                   src: c.avatar_url,
                   "data-miniprofile": "s" + d.ConvertTo64BitString(),
                 }),
@@ -1278,8 +1284,8 @@
       var s = n(10981),
         a = n(61859),
         o = n(12155),
-        r = n(90626),
-        i = n(52038),
+        i = n(90626),
+        r = n(52038),
         l = n(95695),
         c = n(84811),
         u = n(64734),
@@ -1296,43 +1302,43 @@
             elAdditionalButtons: g,
           } = e,
           h = (0, d.q3)(() => s());
-        return r.createElement(
-          r.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          r.createElement(
+          i.createElement(
             "div",
             {
-              className: (0, i.A)(
+              className: (0, r.A)(
                 o,
                 u.SectionTitleHeader,
                 u.required_title,
                 "SectionTitleHeader",
               ),
             },
-            r.createElement(
+            i.createElement(
               "div",
               {
-                className: (0, i.A)(
+                className: (0, r.A)(
                   l.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
               },
               t,
-              Boolean(n) && r.createElement(m.o, { tooltip: n }),
+              Boolean(n) && i.createElement(m.o, { tooltip: n }),
             ),
-            r.createElement(
+            i.createElement(
               "div",
               { className: u.SectionTitleButtons },
               g,
-              r.createElement(p, { bIsMinimized: h, fnToggleMinimize: a }),
+              i.createElement(p, { bIsMinimized: h, fnToggleMinimize: a }),
             ),
           ),
-          !h && r.createElement(c.tH, null, _),
+          !h && i.createElement(c.tH, null, _),
         );
       }
       function g(e) {
-        const [t, n] = r.useState(Boolean(e.bStartMinimized));
-        return r.createElement(
+        const [t, n] = i.useState(Boolean(e.bStartMinimized));
+        return i.createElement(
           _,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
@@ -1340,24 +1346,24 @@
       }
       function p(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
-          i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return r.createElement(
+          r = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return i.createElement(
           s.$n,
-          { "data-tooltip-text": (0, a.we)(i), onClick: n },
+          { "data-tooltip-text": (0, a.we)(r), onClick: n },
           e.bIsMinimized
-            ? r.createElement(o.hz4, null)
-            : r.createElement(o.Xjb, null),
+            ? i.createElement(o.hz4, null)
+            : i.createElement(o.Xjb, null),
         );
       }
     },
     68541: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => W, default: () => J });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => W, default: () => $ });
       var s = n(90626),
         a = n(43527),
         o = n(92757),
-        r = n(82715),
-        i = n(22837),
+        i = n(82715),
+        r = n(22837),
         l = n(2160),
         c = n(8527),
         u = n(60746),
@@ -1384,7 +1390,7 @@
         const I = d.O3.GetClanEventModel(t);
         return I
           ? s.createElement(
-              r.tH,
+              i.tH,
               null,
               !I.BIsUnlistedEvent() &&
                 s.createElement(
@@ -1393,7 +1399,7 @@
                   "NOTE: Event needs to be published in unlisted mode for Steam partners to see it. Admin account bypass this check",
                 ),
               s.createElement(_.jA, {
-                lang: (0, i.sf)(c.TS.LANGUAGE),
+                lang: (0, r.sf)(c.TS.LANGUAGE),
                 event: I,
                 adminPanel:
                   c.TS.EREALM === l.TU.k_ESteamRealmChina
@@ -1410,11 +1416,11 @@
         D = n(41735),
         E = n.n(D),
         f = n(38390),
-        b = n(44165),
+        v = n(44165),
         C = n(27144),
-        v = n(10981),
-        w = n(71298),
-        y = n(95034),
+        b = n(10981),
+        y = n(71298),
+        w = n(95034),
         M = n(8905),
         A = n(78395),
         G = n(21869),
@@ -1423,20 +1429,20 @@
         O = n(84933),
         k = n(30470),
         L = n(24484),
-        R = n(15588),
-        N = n.n(R),
-        H = n(52038);
-      function U(e) {
-        const [t] = (0, y.QD)("gid"),
+        N = n(15588),
+        R = n.n(N),
+        U = n(52038);
+      function H(e) {
+        const [t] = (0, w.QD)("gid"),
           n = (0, f.RR)(t),
-          a = (0, i.sf)(k.TS.LANGUAGE);
+          a = (0, r.sf)(k.TS.LANGUAGE);
         return n
           ? s.createElement(
               "div",
-              { className: N().Ctn },
+              { className: R().Ctn },
               s.createElement(
                 "div",
-                { className: N().Row },
+                { className: R().EventName },
                 s.createElement("h2", null, n.GetNameWithFallback(a)),
                 s.createElement(
                   "a",
@@ -1454,7 +1460,7 @@
       function P(e) {
         const { eventModel: t } = e,
           n = (function (e) {
-            const t = (0, b.f1)(),
+            const t = (0, v.f1)(),
               [n] = (0, s.useState)(() =>
                 (0, L.Tc)("registrations", "application_config")
                   .sort((t, n) => {
@@ -1516,15 +1522,16 @@
               [n],
             );
           })(t),
-          [a] = (0, y.QD)("accountid"),
-          o = (0, b.f1)();
+          [a] = (0, w.QD)("accountid"),
+          o = (0, v.f1)();
         return s.createElement(
           "div",
           null,
-          s.createElement(M.p, { accountID: a }),
-          s.createElement("br", null),
-          s.createElement("br", null),
-          s.createElement("br", null),
+          s.createElement(
+            "div",
+            { className: R().User },
+            s.createElement(M.p, { accountID: a }),
+          ),
           s.createElement(F, {
             eventModel: t,
             rgUserRegs: n.today,
@@ -1562,7 +1569,7 @@
                     "div",
                     null,
                     n.map((e) =>
-                      s.createElement(x, {
+                      s.createElement(z, {
                         key: `${e.group_id}_${e.session_id}`,
                         eventModel: t,
                         reg: e,
@@ -1571,16 +1578,16 @@
                   ),
             );
       }
-      function z(e) {
+      function x(e) {
         const { desc: t } = e,
           [n, a] = (0, s.useState)(!1),
           o = (0, s.useCallback)(() => a((e) => !e), []);
         return s.createElement(
           "div",
           {
-            className: (0, H.A)({
-              [N().DescriptionWrapper]: !0,
-              [N().Expanded]: n,
+            className: (0, U.A)({
+              [R().DescriptionWrapper]: !0,
+              [R().Expanded]: n,
             }),
             onClick: o,
             onMouseEnter: () => a(!0),
@@ -1589,11 +1596,11 @@
           t,
         );
       }
-      function x(e) {
+      function z(e) {
         const { reg: t, eventModel: n } = e,
-          [a] = (0, y.QD)("accountid"),
+          [a] = (0, w.QD)("accountid"),
           [o] = (0, C.KT)(a),
-          [i, l] = (0, s.useState)([]),
+          [r, l] = (0, s.useState)([]),
           [c, u] = (0, s.useState)(!1),
           d = (0, s.useMemo)(() => JSON.parse(t.jsondata), [t]),
           { group: m, session: _ } = K(
@@ -1601,27 +1608,27 @@
             t.group_id,
             t.session_id,
           ),
-          [g, h, I] = (0, O.uD)(),
-          D =
-            ((f = n.GID),
-            (b = a),
-            (w = t.group_id),
-            (M = t.session_id),
+          [g, p, h] = (0, O.uD)(),
+          I =
+            ((D = n.GID),
+            (f = a),
+            (v = t.group_id),
+            (y = t.session_id),
             (0, S.n)({
               mutationFn: async ({ rgGuests: e }) => {
                 const t = new FormData();
                 t.append("sessionid", k.TS.SESSIONID),
-                  t.append("gid", f),
-                  t.append("accountid", "" + b),
-                  t.append("meetsteam_group_id", "" + w),
-                  t.append("meetsteam_session_id", "" + M),
+                  t.append("gid", D),
+                  t.append("accountid", "" + f),
+                  t.append("meetsteam_group_id", "" + v),
+                  t.append("meetsteam_session_id", "" + y),
                   e?.length && t.append("guests", e.join("|"));
                 const n = `${k.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
                   s = await E().post(n, t, { withCredentials: !0 });
                 return 1 == s?.data?.success;
               },
             }));
-        var f, b, w, M;
+        var D, f, v, y;
         return s.createElement(
           "div",
           null,
@@ -1629,14 +1636,13 @@
           Boolean(c)
             ? s.createElement(
                 "div",
-                null,
-                s.createElement("br", null),
-                s.createElement("b", null, "Successful Attendance Registered"),
+                { className: R().CheckedIn },
+                "Attendee has been checked in",
               )
             : s.createElement(
-                s.Fragment,
-                null,
-                s.createElement(v.Yh, {
+                "div",
+                { className: R().RegisteredUsers },
+                s.createElement(b.Yh, {
                   label: "Attendee: " + d.name || 0,
                   checked: !0,
                   onChange: (e) => {},
@@ -1646,10 +1652,10 @@
                     s.Fragment,
                     null,
                     d.guest_names.map((e) =>
-                      s.createElement(v.Yh, {
+                      s.createElement(b.Yh, {
                         key: t.group_id + "_" + t.session_id + "_" + e,
                         label: "Guest Name: " + e,
-                        checked: i.includes(e),
+                        checked: r.includes(e),
                         onChange: (t) => {
                           l((n) =>
                             t
@@ -1663,21 +1669,21 @@
                     ),
                   ),
                 s.createElement(
-                  v.jn,
-                  { onClick: h },
-                  (0, p.we)("#Button_Submit"),
+                  b.jn,
+                  { onClick: p },
+                  "Check in selected people",
                 ),
               ),
           s.createElement(
             G.E,
             { active: g },
             s.createElement(
-              r.tH,
+              i.tH,
               null,
               s.createElement(j, {
-                closeModal: I,
-                rgGuestsAttending: i,
-                fnMarkAttendance: D,
+                closeModal: h,
+                rgGuestsAttending: r,
+                fnMarkAttendance: I,
                 fnOnSuccess: () => u(!0),
               }),
             ),
@@ -1691,10 +1697,10 @@
             fnMarkAttendance: a,
             fnOnSuccess: o,
           } = e,
-          r = (0, w.vs)();
-        return r.bLoading
-          ? s.createElement(w.Hh, {
-              state: r,
+          i = (0, y.vs)();
+        return i.bLoading
+          ? s.createElement(y.Hh, {
+              state: i,
               strDialogTitle: (0, p.we)("#Saving"),
               closeModal: t,
             })
@@ -1705,25 +1711,27 @@
                 strTitle: (0, p.we)("#Button_Submit"),
                 bAllowFullSize: !0,
                 onOK: async () => {
-                  r.fnSetLoading(!0),
+                  i.fnSetLoading(!0),
                     a
                       .mutateAsync({ rgGuests: n })
                       .then((e) => {
                         e
                           ? (o(),
-                            r.fnSetStrSuccess("Success! Attendance Marked."))
-                          : r.fnSetStrError(
+                            i.fnSetStrSuccess(
+                              "Success! This person has been checked in.",
+                            ))
+                          : i.fnSetStrError(
                               (0, p.we)("#Login_Error_Network_Description"),
                             );
                       })
                       .catch(() =>
-                        r.fnSetStrError(
+                        i.fnSetStrError(
                           (0, p.we)("#Login_Error_Network_Description"),
                         ),
                       );
                 },
               },
-              "Mark Attendance?",
+              "Mark as checked in?",
             );
       }
       function q(e) {
@@ -1731,25 +1739,15 @@
         return t && n
           ? s.createElement(
               "div",
-              null,
-              s.createElement("hr", null),
+              { className: R().SessionInfo },
               s.createElement(
                 "div",
-                null,
-                "Title: ",
+                { className: R().SessionName },
                 n.localized_session_title[0],
               ),
               s.createElement(
                 "div",
-                null,
-                s.createElement(z, {
-                  desc: `Description: ${n.localized_session_description[0] || ""}`,
-                }),
-              ),
-              s.createElement(
-                "div",
-                null,
-                "Time:",
+                { className: R().SessionTime },
                 (0, B._l)(t.rtime_start, !1, !0),
                 " @",
                 s.createElement(
@@ -1757,6 +1755,13 @@
                   null,
                   (0, B.Vx)(t.rtime_start, t.rtime_end, !0),
                 ),
+              ),
+              s.createElement(
+                "div",
+                null,
+                s.createElement(x, {
+                  desc: `Description: ${n.localized_session_description[0] || ""}`,
+                }),
               ),
               "dev" == k.TS.WEB_UNIVERSE &&
                 s.createElement(
@@ -1776,24 +1781,24 @@
           }
         return { group: null, session: null };
       }
-      var $ = n(97058);
+      var J = n(97058);
       const W = {
         MeetSteamAttendance: () => `${a.B.MeetSteamRoute()}attendance`,
         MeetSteamEvent: () => `${a.B.MeetSteamRoute()}:gid(\\d+)`,
       };
-      function J(e) {
+      function $(e) {
         return s.createElement(
           o.dO,
           null,
           s.createElement(o.qh, {
             path: W.MeetSteamAttendance(),
-            render: (e) => s.createElement(U, { ...e }),
+            render: (e) => s.createElement(H, { ...e }),
           }),
           s.createElement(o.qh, {
             path: W.MeetSteamEvent(),
             render: (e) => s.createElement(I, { ...e }),
           }),
-          s.createElement(o.qh, null, s.createElement($.a, null)),
+          s.createElement(o.qh, null, s.createElement(J.a, null)),
         );
       }
     },

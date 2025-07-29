@@ -377,16 +377,38 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        const _ = (0, _._)();
+        return "PrivateApps_" + _._.accountid;
+      }
+      function _() {
+        return _._.IN_STEAMUI;
+      }
+      async function _(_, _) {
+        const _ = _();
+        await _.StoreObject(_, _);
+      }
+      const _ = ["AccountPrivateApps"];
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _();
         return (0, _._)({
-          queryKey: ["AccountPrivateApps"],
+          queryKey: _,
           queryFn: async () => {
+            let _;
+            _ &&
+              (_ = await (async function (_) {
+                const _ = _();
+                return await _.GetObject(_);
+              })(_));
             const _ = _._.Init(_),
               _ = await _.GetPrivateAppList(_, _);
-            if (!__webpack_require__.BSuccess())
-              throw __webpack_require__.GetErrorMessage();
-            return new Set(
-              __webpack_require__.Body().private_apps(!0).appids(),
+            if (!_.BSuccess()) {
+              if (_) return new Set(_);
+              throw _.GetErrorMessage();
+            }
+            return (
+              _ && (await _(_, _.Body().private_apps(!0).appids())),
+              new Set(_.Body().private_apps(!0).appids())
             );
           },
           enabled: !!_._.accountid,
@@ -397,35 +419,28 @@
         return !!_._.accountid && !!_ && (_ ? _.has(_) : void 0);
       }
       function _(_) {
-        _.invalidateQueries({
-          queryKey: ["AccountPrivateApps"],
-        });
-      }
-      function _(_) {
         const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _(),
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: async (_) => _(_, [_], _),
-          onSuccess: (_, _) => _(_, [_], _),
-          onError() {
-            _(_);
-          },
+          onSuccess: (_, _) => _(_, [_], _, _ ? _ : null),
         });
       }
       function _() {
         const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _(),
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: async (_) => {
-            const { rgAppIDs: __webpack_require__, bPrivate: _ } = _;
-            return _(_, __webpack_require__, _);
+            const { rgAppIDs: _, bPrivate: _ } = _;
+            return _(_, _, _);
           },
           onSuccess: (_, _) => {
             const { rgAppIDs: _, bPrivate: _ } = _;
-            _(_, _, _);
-          },
-          onError() {
-            _(_);
+            _(_, _, _, _ ? _ : null);
           },
         });
       }
@@ -435,14 +450,15 @@
         const _ = await _.ToggleAppPrivacy(_, _);
         if (!_.BSuccess()) throw _.GetErrorMessage();
       }
-      function _(_, _, _) {
-        _.setQueryData(["AccountPrivateApps"], (_) => {
+      function _(_, _, _, _) {
+        _.setQueryData(_, (_) => {
           if (!_) return;
           const _ = new Set(_);
           return (
             _.forEach((_) => {
               _ ? _.add(_) : _.delete(_);
             }),
+            _ && _(_, Array.from(_.values())),
             _
           );
         });

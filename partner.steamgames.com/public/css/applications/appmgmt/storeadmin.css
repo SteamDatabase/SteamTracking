@@ -2276,11 +2276,13 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   ._16DzRvjcqFcYr0NYcWmTrg {
     min-width: 320px;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 }
 .BasicUI ._16DzRvjcqFcYr0NYcWmTrg {
   min-width: unset;
   scroll-snap-align: unset;
+  scroll-snap-stop: unset;
 }
 .center_row_trgt.ItemCount_1 ._16DzRvjcqFcYr0NYcWmTrg {
   width: 50%;

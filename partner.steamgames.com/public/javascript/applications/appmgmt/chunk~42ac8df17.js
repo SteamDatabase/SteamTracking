@@ -4983,7 +4983,7 @@
         constructor(e) {
           (0, s.Gn)(this), (this.m_elVideo = e);
         }
-        async PlayMPD(e) {}
+        async PlayMPD(e, t, a) {}
         async PlayWebRTC(e, t, a, r, n) {
           (this.m_strBroadcastSteamID = e),
             (this.m_ulWebRTCSessionID = a),
@@ -6146,25 +6146,25 @@
             this.Play();
         }
         StartBroadcast(e) {
-          this.InitPlayer(),
-            e.m_data.url
-              ? ((this.m_player = new p.Zn(this.m_elVideo)),
-                this.m_player.PlayMPD(
-                  e.m_data.url,
-                  e.m_strCDNAuthUrlParameters,
-                  e.m_data.hls_url,
-                  this.m_bStartWithSubtitles,
-                ))
-              : ((this.m_player = new f(this.m_elVideo)),
-                this.m_player.PlayWebRTC(
-                  this.m_steamIDBroadcast,
-                  e.m_ulViewerToken,
-                  e.m_data.webrtc_session_id,
-                  e.m_data.webrtc_turn_server,
-                  e.m_data.webrtc_offer_sdp,
-                )),
-            this.SetVolume(this.m_nVolume),
-            this.m_player.SetMuted(this.m_bMuted);
+          if ((this.InitPlayer(), e.m_data.url)) {
+            let t = new p.Zn(this.m_elVideo);
+            t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+              (this.m_player = t),
+              this.m_player.PlayMPD(
+                e.m_data.url,
+                e.m_data.hls_url,
+                e.m_strCDNAuthUrlParameters,
+              );
+          } else
+            (this.m_player = new f(this.m_elVideo)),
+              this.m_player.PlayWebRTC(
+                this.m_steamIDBroadcast,
+                e.m_ulViewerToken,
+                e.m_data.webrtc_session_id,
+                e.m_data.webrtc_turn_server,
+                e.m_data.webrtc_offer_sdp,
+              );
+          this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
           let t = this.m_player.GetDASHPlayerStats();
           t &&
             t.SetBroadcasterAndViewerInfo(
@@ -6177,30 +6177,23 @@
             (this.m_BroadcastInfo = U.StartInfo(this.m_steamIDBroadcast));
         }
         StartClip(e) {
-          this.InitPlayer(),
-            (this.m_player = new p.Zn(this.m_elVideo)),
-            this.m_player.PlayMPD(
-              e.m_data.clip_url,
-              null,
-              null,
-              this.m_bStartWithSubtitles,
-            ),
+          this.InitPlayer();
+          let t = new p.Zn(this.m_elVideo);
+          t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = t),
+            this.m_player.PlayMPD(e.m_data.clip_url),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
         StartVOD(e) {
           this.InitPlayer();
           let t = new p.Zn(this.m_elVideo);
-          (this.m_player = t),
+          t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = t),
             h.iA.logged_in &&
               e.m_nAppIDVOD &&
               t.SetBookmarkAdapter(new C.M(e.m_nAppIDVOD)),
-            this.m_player.PlayMPD(
-              e.m_manifestURL,
-              null,
-              null,
-              this.m_bStartWithSubtitles,
-            ),
+            this.m_player.PlayMPD(e.m_manifestURL),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
@@ -9487,7 +9480,7 @@
             }),
             this.m_cm)
           ) {
-            let a = o.w.Init(l.hg);
+            let a = o.w.Init(l.QU);
             return (
               a.Body().set_announcementid(e.AnnouncementGID),
               a.Body().set_vote_up(!!t),
@@ -18803,21 +18796,26 @@
       }
       const B = 7;
       function C(e) {
-        const { bSingleLineMode: t, storeItem: a, onlyOneDiscountPct: r } = e,
-          n = (0, o.f1)();
+        const {
+            bSingleLineMode: t,
+            storeItem: a,
+            onlyOneDiscountPct: r,
+            bHidePrePurchase: n,
+          } = e,
+          s = (0, o.f1)();
         if (!a) return null;
-        const s =
-            !a.BIsComingSoon() && a.GetReleaseDateRTime() + B * b.Kp.PerDay > n,
-          l = (0, y.A)(
+        const l =
+            !a.BIsComingSoon() && a.GetReleaseDateRTime() + B * b.Kp.PerDay > s,
+          c = (0, y.A)(
             _().StoreSalePriceWidgetContainer,
             t && _().SingleLineMode,
             "StoreSalePriceWidgetContainer",
-            s && _().NewItem,
+            l && _().NewItem,
           );
         if (e.bShowInLibrary)
           return i.createElement(
             "div",
-            { className: l },
+            { className: c },
             i.createElement(
               "div",
               { className: _().StoreSalePriceBox },
@@ -18833,7 +18831,7 @@
               );
           return i.createElement(
             "div",
-            { className: l },
+            { className: c },
             i.createElement("div", { className: _().StoreSalePriceBox }, e),
           );
         }
@@ -18842,8 +18840,8 @@
             return 0 == a.GetStoreItemType() && 1 == a.GetAppType()
               ? i.createElement(
                   "div",
-                  { className: l },
-                  s &&
+                  { className: c },
+                  l &&
                     i.createElement(
                       "div",
                       { className: _().StoreSaleNewItem },
@@ -18857,8 +18855,8 @@
                 )
               : i.createElement(
                   "div",
-                  { className: l },
-                  s &&
+                  { className: c },
+                  l &&
                     i.createElement(
                       "div",
                       { className: _().StoreSaleNewItem },
@@ -18876,7 +18874,7 @@
           )
             return i.createElement(
               "div",
-              { className: l },
+              { className: c },
               i.createElement(
                 "div",
                 { className: _().StoreSalePriceBox },
@@ -18884,20 +18882,21 @@
               ),
             );
         }
-        const c = a.GetBestPurchaseOption();
-        if (!c || !c.formatted_final_price) return null;
-        let m = c.discount_pct,
-          d = r || 2 != a.GetStoreItemType() ? void 0 : c.bundle_discount_pct,
-          u = c.formatted_final_price;
+        const m = a.GetBestPurchaseOption();
+        if (!m || !m.formatted_final_price) return null;
+        let d = m.discount_pct,
+          u = r || 2 != a.GetStoreItemType() ? void 0 : m.bundle_discount_pct,
+          p = m.formatted_final_price;
         return i.createElement(E, {
           bSingleLineMode: t,
-          nBaseDiscountPercentage: d,
-          nDiscountPercentage: m,
+          nBaseDiscountPercentage: u,
+          nDiscountPercentage: d,
           bIsPrePurchase: a.BIsPrePurchase(),
-          strBestPurchaseOriginalPriceFormatted: c.formatted_original_price,
-          strBestPurchasePriceFormatted: u,
-          bHideDiscountPercentForCompliance: c.hide_discount_pct_for_compliance,
-          bShowNewFlag: s,
+          strBestPurchaseOriginalPriceFormatted: m.formatted_original_price,
+          strBestPurchasePriceFormatted: p,
+          bHideDiscountPercentForCompliance: m.hide_discount_pct_for_compliance,
+          bShowNewFlag: l,
+          bHidePrePurchase: n,
         });
       }
       function E(e) {
@@ -18910,12 +18909,13 @@
             strBestPurchasePriceFormatted: o,
             bHideDiscountPercentForCompliance: l,
             bShowNewFlag: c,
+            bHidePrePurchase: m,
           } = e,
-          m = l;
-        let d;
+          d = l;
+        let u;
         return (
           a &&
-            (d = m
+            (u = d
               ? (0, S.we)("#Discount_ARIA_Label_SpecialPrice", s)
               : (0, S.we)("#Discount_ARIA_Label", a, s, o)),
           i.createElement(
@@ -18930,9 +18930,9 @@
                 [_().PrePurchase]: Boolean(r),
                 [_().NewItem]: Boolean(c),
               }),
-              "aria-label": d,
+              "aria-label": u,
             },
-            Boolean(r) &&
+            Boolean(r && !m) &&
               i.createElement(
                 "div",
                 { className: (0, y.A)(_().StoreSalePrepurchaseLabel) },
@@ -18948,25 +18948,25 @@
                 { className: _().StoreSaleNewItem },
                 (0, S.we)("#Flag_New"),
               ),
-            Boolean(n && a && !m) &&
+            Boolean(n && a && !d) &&
               i.createElement(
                 "span",
                 { className: (0, y.A)(_().BaseDiscount) },
                 `-${n}%`,
               ),
-            Boolean(a && !m) &&
+            Boolean(a && !d) &&
               i.createElement(
                 "div",
                 { className: _().StoreSaleDiscountBox },
                 `-${a}%`,
               ),
-            Boolean(m) &&
+            Boolean(d) &&
               i.createElement(
                 "div",
                 { className: _().DiscountIconCtn },
                 i.createElement(h.XH_, null),
               ),
-            Boolean(a && s && !m)
+            Boolean(a && s && !d)
               ? i.createElement(
                   "div",
                   { className: (0, y.A)(_().StoreSaleDiscountedPriceCtn) },

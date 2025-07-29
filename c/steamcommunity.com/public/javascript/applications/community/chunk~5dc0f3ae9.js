@@ -9998,7 +9998,7 @@
             (0, _._)(this),
             (this.m_elVideo = _);
         }
-        async PlayMPD(_) {}
+        async PlayMPD(_, _, _) {}
         async PlayWebRTC(_, _, _, _, _) {
           (this.m_strBroadcastSteamID = _),
             (this.m_ulWebRTCSessionID = _),
@@ -11182,25 +11182,25 @@
             this.Play();
         }
         StartBroadcast(_) {
-          this.InitPlayer(),
-            _.m_data.url
-              ? ((this.m_player = new _._(this.m_elVideo)),
-                this.m_player.PlayMPD(
-                  _.m_data.url,
-                  _.m_strCDNAuthUrlParameters,
-                  _.m_data.hls_url,
-                  this.m_bStartWithSubtitles,
-                ))
-              : ((this.m_player = new _(this.m_elVideo)),
-                this.m_player.PlayWebRTC(
-                  this.m_steamIDBroadcast,
-                  _.m_ulViewerToken,
-                  _.m_data.webrtc_session_id,
-                  _.m_data.webrtc_turn_server,
-                  _.m_data.webrtc_offer_sdp,
-                )),
-            this.SetVolume(this.m_nVolume),
-            this.m_player.SetMuted(this.m_bMuted);
+          if ((this.InitPlayer(), _.m_data.url)) {
+            let _ = new _._(this.m_elVideo);
+            _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+              (this.m_player = _),
+              this.m_player.PlayMPD(
+                _.m_data.url,
+                _.m_data.hls_url,
+                _.m_strCDNAuthUrlParameters,
+              );
+          } else
+            (this.m_player = new _(this.m_elVideo)),
+              this.m_player.PlayWebRTC(
+                this.m_steamIDBroadcast,
+                _.m_ulViewerToken,
+                _.m_data.webrtc_session_id,
+                _.m_data.webrtc_turn_server,
+                _.m_data.webrtc_offer_sdp,
+              );
+          this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
           let _ = this.m_player.GetDASHPlayerStats();
           _ &&
             _.SetBroadcasterAndViewerInfo(
@@ -11213,30 +11213,23 @@
             (this.m_BroadcastInfo = _.StartInfo(this.m_steamIDBroadcast));
         }
         StartClip(_) {
-          this.InitPlayer(),
-            (this.m_player = new _._(this.m_elVideo)),
-            this.m_player.PlayMPD(
-              _.m_data.clip_url,
-              null,
-              null,
-              this.m_bStartWithSubtitles,
-            ),
+          this.InitPlayer();
+          let _ = new _._(this.m_elVideo);
+          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = _),
+            this.m_player.PlayMPD(_.m_data.clip_url),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
         StartVOD(_) {
           this.InitPlayer();
           let _ = new _._(this.m_elVideo);
-          (this.m_player = _),
+          _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
+            (this.m_player = _),
             _._.logged_in &&
               _.m_nAppIDVOD &&
               _.SetBookmarkAdapter(new _._(_.m_nAppIDVOD)),
-            this.m_player.PlayMPD(
-              _.m_manifestURL,
-              null,
-              null,
-              this.m_bStartWithSubtitles,
-            ),
+            this.m_player.PlayMPD(_.m_manifestURL),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
@@ -20014,7 +20007,12 @@
       const _ = 7;
       function _(_) {
         var _, _, _;
-        const { bSingleLineMode: _, storeItem: _, onlyOneDiscountPct: _ } = _,
+        const {
+            bSingleLineMode: _,
+            storeItem: _,
+            onlyOneDiscountPct: _,
+            bHidePrePurchase: _,
+          } = _,
           _ = (0, _._)();
         if (!_) return null;
         const _ =
@@ -20146,6 +20144,7 @@
           strBestPurchasePriceFormatted: _,
           bHideDiscountPercentForCompliance: _.hide_discount_pct_for_compliance,
           bShowNewFlag: _,
+          bHidePrePurchase: _,
         });
       }
       function _(_) {
@@ -20158,6 +20157,7 @@
             strBestPurchasePriceFormatted: _,
             bHideDiscountPercentForCompliance: _,
             bShowNewFlag: _,
+            bHidePrePurchase: _,
           } = _,
           _ = _;
         let _;
@@ -20180,7 +20180,7 @@
               }),
               "aria-label": _,
             },
-            Boolean(_) &&
+            Boolean(_ && !_) &&
               _.createElement(
                 "div",
                 {

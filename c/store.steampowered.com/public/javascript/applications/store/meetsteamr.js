@@ -24,7 +24,13 @@
     chunkid: (module) => {
       module.exports = {
         Ctn: "_3cmUbcgdPxM7o5hl986RgB",
-        Row: "yueujW6bRizgc-buB29Dw",
+        User: "_3E6Usl36asxUFK3vPKa7Us",
+        EventName: "_2GHTaky49GZrPLyiOgKWB7",
+        SessionInfo: "Kk38rrvnYm3-E2jJMahSH",
+        SessionName: "_2uJvCA4FncHONmSI37VVyw",
+        SessionTime: "_2vYmHfXJIHj2eCv8NsiqZv",
+        RegisteredUsers: "HLiipgmnfEQ2O-9WritfU",
+        CheckedIn: "_17S0ayInAou4_ptPoMguR0",
         DescriptionWrapper: "_17o_wRtaDyujn3Bx4gGiu5",
         Expanded: "mJXTRr0gd2yNafeFp9NOr",
       };
@@ -1552,7 +1558,7 @@
               _.createElement(
                 "div",
                 {
-                  className: _().Row,
+                  className: _().EventName,
                 },
                 _.createElement(
                   "h2",
@@ -1650,12 +1656,15 @@
         return _.createElement(
           "div",
           null,
-          _.createElement(_._, {
-            accountID: _,
-          }),
-          _.createElement("br", null),
-          _.createElement("br", null),
-          _.createElement("br", null),
+          _.createElement(
+            "div",
+            {
+              className: _().User,
+            },
+            _.createElement(_._, {
+              accountID: _,
+            }),
+          ),
           _.createElement(_, {
             eventModel: _,
             rgUserRegs: _.today,
@@ -1768,13 +1777,16 @@
           Boolean(_)
             ? _.createElement(
                 "div",
-                null,
-                _.createElement("br", null),
-                _.createElement("b", null, "Successful Attendance Registered"),
+                {
+                  className: _().CheckedIn,
+                },
+                "Attendee has been checked in",
               )
             : _.createElement(
-                _.Fragment,
-                null,
+                "div",
+                {
+                  className: _().RegisteredUsers,
+                },
                 _.createElement(_._, {
                   label: "Attendee: " + _.name || 0,
                   checked: !0,
@@ -1806,7 +1818,7 @@
                   {
                     onClick: _,
                   },
-                  (0, _._)("#Button_Submit"),
+                  "Check in selected people",
                 ),
               ),
           _.createElement(
@@ -1855,7 +1867,9 @@
                       .then((_) => {
                         _
                           ? (_(),
-                            _.fnSetStrSuccess("Success! Attendance Marked."))
+                            _.fnSetStrSuccess(
+                              "Success! This person has been checked in.",
+                            ))
                           : _.fnSetStrError(
                               (0, _._)("#Login_Error_Network_Description"),
                             );
@@ -1867,7 +1881,7 @@
                       );
                 },
               },
-              "Mark Attendance?",
+              "Mark as checked in?",
             );
       }
       function _(_) {
@@ -1875,25 +1889,21 @@
         return _ && __webpack_require__
           ? _.createElement(
               "div",
-              null,
-              _.createElement("hr", null),
+              {
+                className: _().SessionInfo,
+              },
               _.createElement(
                 "div",
-                null,
-                "Title: ",
+                {
+                  className: _().SessionName,
+                },
                 __webpack_require__.localized_session_title[0],
               ),
               _.createElement(
                 "div",
-                null,
-                _.createElement(_, {
-                  desc: `Description: ${__webpack_require__.localized_session_description[0] || ""}`,
-                }),
-              ),
-              _.createElement(
-                "div",
-                null,
-                "Time:",
+                {
+                  className: _().SessionTime,
+                },
                 (0, _._)(_.rtime_start, !1, !0),
                 " @",
                 _.createElement(
@@ -1901,6 +1911,13 @@
                   null,
                   (0, _._)(_.rtime_start, _.rtime_end, !0),
                 ),
+              ),
+              _.createElement(
+                "div",
+                null,
+                _.createElement(_, {
+                  desc: `Description: ${__webpack_require__.localized_session_description[0] || ""}`,
+                }),
               ),
               "dev" == _._.WEB_UNIVERSE &&
                 _.createElement(

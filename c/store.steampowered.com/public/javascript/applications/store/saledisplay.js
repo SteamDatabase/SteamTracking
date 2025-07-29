@@ -1667,7 +1667,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             imageUploader: _,
@@ -1791,7 +1792,12 @@
           } = _,
           [_] = (0, _._)(() => [_.GetUploadImages()]),
           _ = _.some((_) => "pending" == _.status),
-          _ = _.some((_) => "uploading" == _.status);
+          _ = _.some(
+            (_) =>
+              "waiting" == _.status ||
+              "uploading" == _.status ||
+              "processing" == _.status,
+          );
         return _.createElement(
           "div",
           {
@@ -1847,7 +1853,9 @@
           }).filter((_) => !_.data.bHiddenFromDropdown),
           _ = {
             pending: (0, _._)("#ImageUpload_Pending"),
+            waiting: (0, _._)("#ImageUpload_Waiting"),
             uploading: (0, _._)("#ImageUpload_Uploading"),
+            processing: (0, _._)("#ImageUpload_Processing"),
             success: (0, _._)("#ImageUpload_SuccessCard"),
             failed: (0, _._)("#ImageUpload_Failed"),
           },
@@ -1952,7 +1960,7 @@
               }),
             },
             _,
-            Boolean("uploading" == _.status) &&
+            (0, _._)(_.status) &&
               _.createElement(
                 "div",
                 {

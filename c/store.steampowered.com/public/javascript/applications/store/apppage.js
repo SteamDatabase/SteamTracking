@@ -6542,10 +6542,12 @@
       function _(_) {
         let { trailer: _ } = _,
           [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _._)(),
           _ = (0, _._)(_.CarouselItem, _.DashTrailer);
         return _.createElement(
           _._,
           {
+            ref: _,
             className: _,
             onFocusWithin: _,
           },
@@ -6560,7 +6562,7 @@
               hlsManifest: _.hlsManifest,
               screenshot: _.poster,
               altText: _.title,
-              forcePause: !__webpack_require__,
+              forcePause: !__webpack_require__ || !_,
               onPlaybackEnd: null,
               title: _.title,
               category: _.category,

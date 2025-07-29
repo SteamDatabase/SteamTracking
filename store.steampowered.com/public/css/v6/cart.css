@@ -706,22 +706,38 @@ body.v6 .cart_digital_notice_ctn h2
 
 .payment_method_review_row
 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 	position: relative;
 	overflow: hidden;
 }
 
+
 .payment_method_total
 {
 	position: absolute;
-	right: 165px;
+	right: 160px;
 	top: 0px;
+}
+
+.payment_method_review_text_steam_account {
+	display: flex;
 }
 
 .payment_method_review_method_label
 {
 	color: #8BC53F;
+	display: inline-block;
+	max-width: 246px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
+.edit_method {
+	margin-left: 4px;
+}
 
 .checkout_review_cart_item {
 	margin: 3px 0;
@@ -779,9 +795,8 @@ body.v6 .cart_digital_notice_ctn h2
 }
 
 .checkout_review_hit_min_provider_amount_div {
-	position: absolute;
-	left: 278px;
 	top: 0px;
+	margin-left: auto;
 }
 
 .duplicate_app_list {
@@ -820,21 +835,21 @@ body.v6 .cart_digital_notice_ctn h2
 }
 
 .review_row {
+	display: flex;
+	flex-direction: column;
 	position: relative;
 	margin-bottom: 12px;
 	line-height: 14px;
 }
 
 .review_row .review_row_label {
-	position: absolute;
-	left: 0px;
 	color: #7092a5;
 	font-size: 13px;
 	line-height: 15px;
 }
 
 .review_row .review_row_value {
-	padding-left: 135px;
+	padding-left: 35px;
 	color: #C6D4DF;
 	min-height: 15px;
 	font-size: 13px;
@@ -2603,8 +2618,9 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	margin-right: 4px;
 }
 
-#checkout_review_payment_info_area {
+#checkout_review_payment_info_area:not( .review_row ) {
 	display: flex;
+	gap: 20px;
 }
 
 .review_info_ctn {

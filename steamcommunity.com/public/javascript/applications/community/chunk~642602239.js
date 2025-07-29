@@ -3351,23 +3351,25 @@
             size: t = "Medium",
             animatedAvatar: r,
             className: n,
-            ...a
+            strBackupAvatarURL: a,
+            ...c
           } = this.props;
-          let c = "";
+          let m = "";
           return (
             r && r.image_small && 0 != r.image_small.length
-              ? (c = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
-              : e &&
-                ((c = e.avatar_url_medium),
-                "Small" == t || "X-Small" == t
-                  ? (c = e.avatar_url)
-                  : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
-                    (c = e.avatar_url_full)),
+              ? (m = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
+              : e
+                ? ((m = e.avatar_url_medium),
+                  "Small" == t || "X-Small" == t
+                    ? (m = e.avatar_url)
+                    : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
+                      (m = e.avatar_url_full))
+                : a && (m = a),
             i.createElement(g, {
-              strAvatarURL: c,
+              strAvatarURL: m,
               size: t,
               className: (0, o.A)((0, s.rO)(e), n),
-              ...a,
+              ...c,
             })
           );
         }

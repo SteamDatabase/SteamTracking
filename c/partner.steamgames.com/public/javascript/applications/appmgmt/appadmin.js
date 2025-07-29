@@ -1239,27 +1239,31 @@
         );
       }
       function _(_) {
+        const { nAppId: _, strAppType: __webpack_require__ } = _,
+          _ = (0, _._)();
+        return (
+          ("Game" == __webpack_require__ ||
+            "Application" == __webpack_require__ ||
+            "DLC" == __webpack_require__ ||
+            "Music" == __webpack_require__) &&
+          _.createElement(_, {
+            nPartnerID: _,
+            nAppID: _,
+          })
+        );
+      }
+      function _(_) {
         const {
-            nAppId: _,
-            nParentAppId: __webpack_require__,
-            strAppType: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = "Game" == _ || "Application" == _ || "DLC" == _ || "Music" == _,
-          _ = "Demo" == _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              nPartnerID: _,
-              nAppID: _,
-            }),
-          _ &&
-            _.createElement(_, {
-              demoAppID: _,
-              parentAppId: __webpack_require__,
-            }),
+          nAppId: _,
+          nParentAppId: __webpack_require__,
+          strAppType: _,
+        } = _;
+        return (
+          "Demo" == _ &&
+          _.createElement(_, {
+            demoAppID: _,
+            parentAppId: __webpack_require__,
+          })
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -2688,7 +2692,7 @@
             }
           } else
             console.error(
-              "CLocalizedGroupImageUploader failed to determine file type, not image, video or subtitle",
+              "AddImageForLanguage failed to determine file type, not image, video or subtitle",
               _,
               _.type,
             );
@@ -3072,6 +3076,60 @@
           _,
         );
       }
+      function _(_) {
+        const {
+            unAppID: _,
+            bShowSteamChina: __webpack_require__,
+            bHasCompletedContentSurvey: _,
+          } = _,
+          _ = {
+            appid: _,
+          },
+          _ = (0, _._)(_),
+          [_, _, _] = _.useMemo(() => {
+            if (!_ || _.isLoading || !_.data) return ["", "", !1];
+            let _ = [..._.data.restricted_countries];
+            return (
+              __webpack_require__ || (_ = _.filter((_) => "XC" !== _)),
+              _.data.no_restrictions
+                ? ["", "", !1]
+                : [_?.join(", "), _.data.allowed_countries?.join(", "), !_]
+            );
+          }, [_, __webpack_require__, _]);
+        return _.length || _.length
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.length > 0 &&
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#AppLanding_RegionRestrictions_Allowed", _),
+                ),
+              _.length > 0 &&
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#AppLanding_RegionRestrictions_Blocked", _),
+                ),
+              _ &&
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)(
+                    "#AppLanding_RegionRestrictions_ContentSurvey",
+                    _.createElement("a", {
+                      href: `${_._.PARTNER_BASE_URL}/contentdescriptors/editsurvey/${_}`,
+                    }),
+                  ),
+                ),
+            )
+          : _.createElement(
+              "div",
+              null,
+              (0, _._)("#AppLanding_RegionRestrictions_None"),
+            );
+      }
       const _ = {
         CommunityItem: (_, _) => `/apps/communityitems/${_}/${_}`,
         AppLanding: (_) => `/apps/landing/${_}`,
@@ -3108,11 +3166,19 @@
                     _.createElement(_._, {
                       ..._,
                     }),
-                  "storeadmin-applanding": (_) =>
+                  "storeadmin-applanding-statsrollup": (_) =>
+                    _.createElement(_, {
+                      ..._,
+                    }),
+                  "storeadmin-applanding-demowishlistemails": (_) =>
                     _.createElement(_, {
                       ..._,
                     }),
                   "storeadmin-editions-editor": (_) =>
+                    _.createElement(_, {
+                      ..._,
+                    }),
+                  "appadmin-restrictedcountries": (_) =>
                     _.createElement(_, {
                       ..._,
                     }),

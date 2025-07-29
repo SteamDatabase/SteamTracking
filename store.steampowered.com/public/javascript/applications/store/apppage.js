@@ -5386,10 +5386,11 @@
       function ua(e) {
         let { trailer: t } = e,
           [n, r] = (0, a.useState)(!1),
-          l = (0, U.A)(ta.CarouselItem, ta.DashTrailer);
+          [l, o] = (0, g.TP)(),
+          i = (0, U.A)(ta.CarouselItem, ta.DashTrailer);
         return a.createElement(
           s.Z,
-          { className: l, onFocusWithin: r },
+          { ref: o, className: i, onFocusWithin: r },
           a.createElement(
             ra.K,
             { mode: "JustLoad", bHorizontal: !0 },
@@ -5398,7 +5399,7 @@
               hlsManifest: t.hlsManifest,
               screenshot: t.poster,
               altText: t.title,
-              forcePause: !n,
+              forcePause: !n || !l,
               onPlaybackEnd: null,
               title: t.title,
               category: t.category,

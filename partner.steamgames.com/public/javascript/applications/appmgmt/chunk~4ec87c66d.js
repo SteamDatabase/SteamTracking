@@ -42368,6 +42368,7 @@
             ),
             i.createElement(K.Bq, {
               bIsPrePurchase: !1,
+              bHidePrePurchase: !1,
               bSingleLineMode: !1,
               nDiscountPercentage: 50,
               nBaseDiscountPercentage: null,
@@ -62796,6 +62797,7 @@
           ),
           c.createElement(yr.Bq, {
             bSingleLineMode: !0,
+            bHidePrePurchase: !1,
             nBaseDiscountPercentage: 0,
             nDiscountPercentage: t.discount_percentage,
             strBestPurchaseOriginalPriceFormatted: Yr(

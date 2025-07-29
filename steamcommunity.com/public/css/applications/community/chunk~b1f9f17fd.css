@@ -7010,6 +7010,9 @@ html.tablet
     margin: 0 16px 0 0;
   }
 }
+.ScrollSnapCarousel ._2Y2C1oQ7JEMkq2AoDp_S0A {
+  scroll-snap-align: start;
+}
 ._2Y2C1oQ7JEMkq2AoDp_S0A .CapsuleBottomBar {
   height: 44px;
 }

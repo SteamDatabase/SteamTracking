@@ -65297,6 +65297,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = "bTrailerCarouselAutoAdvance";
@@ -67224,57 +67225,50 @@
                 if (_.enable_faceted_browsing) return;
                 const _ = async () => {
                   const _ = (_) =>
-                      (function (_, _) {
-                        const _ = _.map((_, _) => ({
-                          capsule: _,
-                          index: _,
-                        }))
-                          .sort((_, _) => {
-                            var _, _;
-                            const _ =
-                                null !== (_ = _.get(_.capsule._)) &&
-                                void 0 !== _
-                                  ? _
-                                  : 0,
-                              _ =
-                                null !== (_ = _.get(_.capsule._)) &&
-                                void 0 !== _
-                                  ? _
-                                  : 0;
-                            return _ !== _ ? _ - _ : _.index - _.index;
-                          })
-                          .map((_) => _.capsule);
-                        return _;
-                      })(_, _),
-                    { rgCapsules: _ } = await _(
-                      _,
-                      _(_, _, _),
-                      _,
-                      _,
-                      _,
-                      void 0,
-                      _,
-                      _,
-                      _,
-                      _,
-                      _,
-                      _,
-                      _,
-                    ),
-                    _ = _.trailer_carousel_allow_apps_without_trailers
-                      ? _
-                      : _.filter((_) => {
-                          var _;
-                          return null === (_ = _._.Get().GetApp(_._)) ||
-                            void 0 === _
-                            ? void 0
-                            : _.BHasTrailers(_);
-                        });
-                  _.Debug(
-                    _.length != _.length
-                      ? `Loaded ${_.length} items, ${_.length - _.length} items filtered out`
-                      : `Loaded ${_.length} items`,
+                    (function (_, _) {
+                      const _ = _.map((_, _) => ({
+                        capsule: _,
+                        index: _,
+                      }))
+                        .sort((_, _) => {
+                          var _, _;
+                          const _ =
+                              null !== (_ = _.get(_.capsule._)) && void 0 !== _
+                                ? _
+                                : 0,
+                            _ =
+                              null !== (_ = _.get(_.capsule._)) && void 0 !== _
+                                ? _
+                                : 0;
+                          return _ !== _ ? _ - _ : _.index - _.index;
+                        })
+                        .map((_) => _.capsule);
+                      return _;
+                    })(_, _);
+                  let { rgCapsules: _ } = await _(
+                    _,
+                    _(_, _, _),
+                    _,
+                    _,
+                    _,
+                    void 0,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
+                    _,
                   );
+                  (_ = _.filter((_) => null != _.type && (0, _._)(_.type))),
+                    _.trailer_carousel_allow_apps_without_trailers ||
+                      (_ = _.filter((_) => {
+                        var _;
+                        return null === (_ = _._.Get().GetApp(_._)) ||
+                          void 0 === _
+                          ? void 0
+                          : _.BHasTrailers(_);
+                      }));
                   const _ = _.slice(_, _ + _).map((_) => _._);
                   if (1 == (await _._.Get().QueueMultipleAppRequests(_, _._))) {
                     const _ = _.flatMap((_) =>
@@ -68009,7 +68003,6 @@
               rgCapsules: __webpack_require__ ? [] : _,
             };
           })(_);
-        console.log(_, _);
         let _ = _;
         return (
           (null == _ ? void 0 : _.length) > 0 && (_ = _),

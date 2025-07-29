@@ -8952,6 +8952,62 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "waiting" == _ || "uploading" == _ || "processing" == _;
+      }
+      class _ {
+        m_originalSize = {
+          width: 0,
+          height: 0,
+        };
+        m_originalDataUrl = "";
+        dataUrl = void 0;
+        width = 0;
+        height = 0;
+        status = "pending";
+        message = "";
+        language = void 0;
+        file;
+        filename;
+        uploadTime;
+        fileType;
+        constructor(_, _, _, _, _) {
+          (0, _._)(this),
+            (this.file = _),
+            (this.filename = _),
+            (this.fileType = (0, _._)(_) ?? 0),
+            (this.language = _),
+            (this.uploadTime = Date.now()),
+            (this.status = "pending"),
+            (this.m_originalSize = _),
+            (this.height = _.height),
+            (this.width = _.width),
+            (this.m_originalDataUrl = _),
+            (this.dataUrl = _);
+        }
+        ResetImage() {
+          (this.height = this.m_originalSize.height),
+            (this.width = this.m_originalSize.width),
+            (this.dataUrl = this.m_originalDataUrl);
+        }
+        GetImageOptionLabel() {}
+      }
+      (0, _._)([_._], _.prototype, "dataUrl", void 0),
+        (0, _._)([_._], _.prototype, "width", void 0),
+        (0, _._)([_._], _.prototype, "height", void 0),
+        (0, _._)([_._], _.prototype, "status", void 0),
+        (0, _._)([_._], _.prototype, "message", void 0),
+        (0, _._)([_._], _.prototype, "language", void 0);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -9445,57 +9501,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_originalSize = {
-          width: 0,
-          height: 0,
-        };
-        m_originalDataUrl = "";
-        dataUrl = void 0;
-        width = 0;
-        height = 0;
-        status = "pending";
-        message = "";
-        language = void 0;
-        file;
-        filename;
-        uploadTime;
-        fileType;
-        constructor(_, _, _, _, _) {
-          (0, _._)(this),
-            (this.file = _),
-            (this.filename = _),
-            (this.fileType = (0, _._)(_) ?? 0),
-            (this.language = _),
-            (this.uploadTime = Date.now()),
-            (this.status = "pending"),
-            (this.m_originalSize = _),
-            (this.height = _.height),
-            (this.width = _.width),
-            (this.m_originalDataUrl = _),
-            (this.dataUrl = _);
-        }
-        ResetImage() {
-          (this.height = this.m_originalSize.height),
-            (this.width = this.m_originalSize.width),
-            (this.dataUrl = this.m_originalDataUrl);
-        }
-        GetImageOptionLabel() {}
-      }
-      (0, _._)([_._], _.prototype, "dataUrl", void 0),
-        (0, _._)([_._], _.prototype, "width", void 0),
-        (0, _._)([_._], _.prototype, "height", void 0),
-        (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0),
-        (0, _._)([_._], _.prototype, "language", void 0);
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 960,
         _ = 311,
         _ = 480,
         _ = 156;
-      class _ extends _ {
+      class _ extends _._ {
         m_rgImageOptions;
         m_currentImageOption = void 0;
         m_currentImageOptionKey = void 0;
@@ -9669,52 +9682,94 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       class _ {}
+      function _(_, _, _) {
+        const _ = _.filter((_) => {
+          const _ = _.IsValidAssetType(_, _);
+          return "pending" === _.status && !_.error && !_.needsCrop;
+        });
+        return _.forEach((_) => (_.status = "waiting")), _;
+      }
+      async function _(_, _, _, _, _, _) {
+        const _ = _(_, _, _),
+          _ = [];
+        let _ = 0;
+        const _ = Array.from(
+          {
+            length: Math.floor(_),
+          },
+          () =>
+            (async () => {
+              for (; _ < _.length; ) {
+                const _ = _++,
+                  _ = _[_];
+                _.status = "uploading";
+                const _ = await __webpack_require__(
+                  _,
+                  _.filename,
+                  _.language ?? -1,
+                  _,
+                );
+                (_.status = _.bSuccess ? "success" : "failed"),
+                  (_.message =
+                    !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
+                  (_[_] = {
+                    image: _,
+                    uploadResult: _,
+                  });
+              }
+            })(),
+        );
+        return (
+          await Promise.all(_),
+          _.map((_) => ({
+            bSuccess: _.uploadResult.bSuccess,
+            image: _.image,
+            uploadResult: _.uploadResult.result,
+          }))
+        );
+      }
       class _ extends _ {
-        m_allCancelTokens = new Array();
+        m_cancel = void 0;
         async UploadAllImages(_, _) {
-          const _ = this.GetUploadImages(),
-            _ = this.BGetUploadsAreInSerial(),
-            _ = __webpack_require__.filter((_) => {
-              const _ = __webpack_require__.IsValidAssetType(_, _);
-              return "pending" === _.status && !_.error && !_.needsCrop;
-            });
-          for (const _ of _) _.status = "uploading";
-          const _ = [];
-          for (const _ of _) {
-            const _ = _().CancelToken.source();
-            this.m_allCancelTokens.push(_);
-            const _ = this.UploadSingleImage(
-              _,
-              _.filename,
-              _.language ?? -1,
-              _.token,
-            );
-            _.push({
-              image: _,
-              promise: _,
-            }),
-              _ && (await _);
-          }
-          _ || (await Promise.all(_.map((_) => _.promise)));
-          const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise,
-              _ = _.image;
-            _.push({
-              bSuccess: _.bSuccess,
-              image: _,
-              uploadResult: _.result,
-            }),
-              _.bSuccess
-                ? (_.status = "success")
-                : ((_.status = "failed"), (_.message = _.elErrorMessage ?? ""));
-          }
-          return _;
+          this.m_cancel = _().CancelToken.source();
+          const _ = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let _;
+          const _ = this.UploadSingleImage.bind(this);
+          return (
+            (_ =
+              _ > 1
+                ? await _(
+                    this.GetUploadImages(),
+                    _,
+                    _,
+                    _,
+                    _,
+                    this.m_cancel.token,
+                  )
+                : await (async function (_, _, _, _, _) {
+                    const _ = _(_, _, _),
+                      _ = [];
+                    for (const _ of _) {
+                      _.status = "uploading";
+                      const _ = await _(_, _.filename, _.language ?? -1, _);
+                      (_.status = _.bSuccess ? "success" : "failed"),
+                        (_.message =
+                          !_.bSuccess && _.elErrorMessage
+                            ? _.elErrorMessage
+                            : ""),
+                        _.push({
+                          bSuccess: _.bSuccess,
+                          image: _,
+                          uploadResult: _.result,
+                        });
+                    }
+                    return _;
+                  })(this.GetUploadImages(), _, _, _, this.m_cancel.token)),
+            _
+          );
         }
         CancelAllUploads() {
-          for (let _ of this.m_allCancelTokens)
-            _.cancel((0, _._)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
+          this.m_cancel?.cancel((0, _._)("#ImageUpload_CancelRequest"));
         }
       }
       function _(_, _, _) {
@@ -19739,6 +19794,7 @@
             bSingleLineMode: _,
             storeItem: __webpack_require__,
             onlyOneDiscountPct: _,
+            bHidePrePurchase: _,
           } = _,
           _ = (0, _._)();
         if (!__webpack_require__) return null;
@@ -19871,6 +19927,7 @@
           strBestPurchasePriceFormatted: _,
           bHideDiscountPercentForCompliance: _.hide_discount_pct_for_compliance,
           bShowNewFlag: _,
+          bHidePrePurchase: _,
         });
       }
       function _(_) {
@@ -19883,6 +19940,7 @@
             strBestPurchasePriceFormatted: _,
             bHideDiscountPercentForCompliance: _,
             bShowNewFlag: _,
+            bHidePrePurchase: _,
           } = _,
           _ = _;
         let _;
@@ -19905,7 +19963,7 @@
               }),
               "aria-label": _,
             },
-            Boolean(_) &&
+            Boolean(_ && !_) &&
               _.createElement(
                 "div",
                 {

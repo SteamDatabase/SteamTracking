@@ -282,7 +282,7 @@
         Backdrop: "_19o1GB7ysfrWKLYpqZ6aXu",
         Active: "_2IyR9WyPwYb15ILBjPvLR9",
         StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
-        BackdropActive: "_2Hg5IdjoAbSO_XR_XJfEzL",
+        BackdropClosed: "_1Zsv2NkXHxE5LTvs92Jqvd",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
         MobileWebview: "_3yYpWFO_3ReYuGtMqbygx",
         HideTransition: "YNdpuNoh9QiKr4kpbAIwZ",
@@ -659,6 +659,7 @@
     27007: (e) => {
       e.exports = {
         Group: "_1ml4SNc3LIyBDHIf8ekVSw",
+        CenteredPill: "L2J24Sa_dQql2exoKoBMi",
         Button: "HijmccPB1BKyhOwhX1EVl",
         Disabled: "_3hmGW9wIxNIoPPu1aS7rFm",
         Active: "_3-_jME_xsuvgT3Dvq4bw_q",
@@ -31687,20 +31688,21 @@
       "use strict";
       r.d(t, {
         $$: () => s,
-        BZ: () => B,
+        BZ: () => w,
         CH: () => a,
-        DF: () => p,
+        DF: () => _,
         ML: () => l,
-        OP: () => b,
+        OP: () => B,
         Qi: () => m,
-        YR: () => f,
+        TP: () => d,
+        YR: () => b,
         _g: () => o,
-        bs: () => h,
-        gc: () => g,
-        hL: () => d,
+        bs: () => f,
+        gc: () => p,
+        hL: () => g,
         l6: () => u,
-        uD: () => _,
-        wm: () => w,
+        uD: () => h,
+        wm: () => y,
         xA: () => c,
       });
       var i = r(90626),
@@ -31793,14 +31795,34 @@
           i,
         );
       }
-      function d(e, t) {
+      function d() {
+        let [e, t] = i.useState(!0);
+        return [
+          e,
+          i.useCallback(
+            (e) => {
+              if (!e) return;
+              let r = () => {
+                t("visible" == e.ownerDocument.visibilityState);
+              };
+              return (
+                e.ownerDocument.addEventListener("visibilitychange", () => r()),
+                r(),
+                () => e.ownerDocument.removeEventListener("visibilitychange", r)
+              );
+            },
+            [t],
+          ),
+        ];
+      }
+      function g(e, t) {
         i.useLayoutEffect(() => {
           if (!t || !e) return;
           const r = e.Register(t);
           return () => r.Unregister();
         }, [e, t]);
       }
-      function g(e) {
+      function p(e) {
         const [t, r] = i.useState(e?.Value);
         return (
           i.useEffect(() => {
@@ -31811,7 +31833,7 @@
           t
         );
       }
-      function p(e, t) {
+      function _(e, t) {
         return (
           (function (e, t) {
             const [r, n] = i.useState(e);
@@ -31828,7 +31850,7 @@
           })(e, t) || e
         );
       }
-      function _(e = !1) {
+      function h(e = !1) {
         const [t, r] = i.useState(e);
         return [
           t,
@@ -31836,7 +31858,7 @@
           i.useCallback(() => r(!1), []),
         ];
       }
-      function h(e) {
+      function f(e) {
         const t = i.useRef();
         return i.useCallback(
           () => (
@@ -31847,7 +31869,7 @@
           [e],
         );
       }
-      function f(e) {
+      function b(e) {
         const t = i.useRef({ value: void 0, bConstructed: !1 });
         return (
           t.current.bConstructed ||
@@ -31855,7 +31877,7 @@
           t.current.value
         );
       }
-      function b() {
+      function B() {
         const [e, t] = i.useState(!1);
         return [
           e,
@@ -31865,7 +31887,7 @@
           },
         ];
       }
-      function B(e) {
+      function w(e) {
         const [t, r] = i.useState(!1);
         return (
           i.useEffect(() => {
@@ -31891,7 +31913,7 @@
           t
         );
       }
-      function w(e) {
+      function y(e) {
         const t = i.useRef(e);
         return (
           (t.current.length !== e.length ||
@@ -32100,7 +32122,7 @@
         );
         return i.createElement(a, { value: l }, r);
       }
-      const c = () => o().useActiveSteamInterface().GetServiceTransport(),
+      const c = () => o().useActiveSteamInterface()?.GetServiceTransport(),
         u = () => o().useActiveSteamInterface().GetAnonymousServiceTransport(),
         m = () => o().useStorage(),
         d = () => o().useActiveSteamInterface();
@@ -46022,19 +46044,17 @@
             c = 0,
             u = s.innerWidth,
             m = s.innerHeight,
-            d = 1,
-            g = i?.getBoundingClientRect();
+            d = i?.getBoundingClientRect();
           if (n)
             if (
               (t.bScreenCoordinates ||
                 void 0 === a ||
                 void 0 === o ||
                 ((a += s.screenLeft), (o += s.screenTop)),
-              g && (g = h.pd(s, g)),
+              d && (d = h.pd(s, d)),
               t.targetMonitor)
             )
-              (d = t.targetMonitor.flMonitorScale),
-                (l = t.targetMonitor.nScreenLeft),
+              (l = t.targetMonitor.nScreenLeft),
                 (c = t.targetMonitor.nScreenTop),
                 (u = t.targetMonitor.nScreenWidth),
                 (m = t.targetMonitor.nScreenHeight);
@@ -46050,12 +46070,8 @@
                 (m = e.availHeight);
             }
           (t.bOverlapHorizontal || t.bOverlapVertical) && (a = o = void 0);
-          let p = r.getBoundingClientRect();
-          if (t.flGamepadScale && t.flGamepadScale > 0) {
-            const e = t.flGamepadScale;
-            p = new DOMRect(p.x * e, p.y * e, p.width * e, p.height * e);
-          }
-          let _ = {
+          const g = r.getBoundingClientRect();
+          let p = {
               menuLeft: void 0,
               menuRight: void 0,
               menuTop: void 0,
@@ -46064,76 +46080,76 @@
               menuHeight: void 0,
               menuMinWidth: void 0,
             },
-            f = a ?? g.left,
-            b = a ?? g.right,
-            B = p.width;
-          t.bMatchWidth && ((B = b - f), (_.menuWidth = B)),
-            t.bGrowToElementWidth && (_.menuMinWidth = Math.max(B, b - f));
-          let w = (t.bOverlapHorizontal ? b : f) - l - B,
-            y = w > 0,
-            M = l + u - (t.bOverlapHorizontal ? f : b) - B,
-            C = M > 0,
-            S = (t.bPreferPopLeft || !C) && y;
-          y ||
-            C ||
-            ((S = y > C),
-            t.bFitToWindow && ((B += (S ? w : M) - 8), (_.menuWidth = B))),
-            S
-              ? (_.menuRight = u - (t.bOverlapHorizontal ? b : f))
-              : (_.menuLeft = t.bOverlapHorizontal ? f : b);
-          let v = o ?? g.top,
-            R = o ?? g.bottom,
-            z = r.scrollHeight;
-          t.bMatchHeight && ((z = R - v), (_.menuHeight = z));
-          let I = (t.bOverlapVertical ? R : v) - c - z,
-            T = I > 0,
-            E = c + m - (t.bOverlapVertical ? v : R) - z,
-            F = E > 0,
-            O = (t.bPreferPopTop || !F) && T && !t.bDisablePopTop;
-          if (!T && !F) {
+            _ = a ?? d.left,
+            f = a ?? d.right,
+            b = g.width;
+          t.bMatchWidth && ((b = f - _), (p.menuWidth = b)),
+            t.bGrowToElementWidth && (p.menuMinWidth = Math.max(b, f - _));
+          let B = (t.bOverlapHorizontal ? f : _) - l - b,
+            w = B > 0,
+            y = l + u - (t.bOverlapHorizontal ? _ : f) - b,
+            M = y > 0,
+            C = (t.bPreferPopLeft || !M) && w;
+          w ||
+            M ||
+            ((C = w > M),
+            t.bFitToWindow && ((b += (C ? B : y) - 8), (p.menuWidth = b))),
+            C
+              ? (p.menuRight = u - (t.bOverlapHorizontal ? f : _))
+              : (p.menuLeft = t.bOverlapHorizontal ? _ : f);
+          let S = o ?? d.top,
+            v = o ?? d.bottom,
+            R = r.scrollHeight;
+          t.bMatchHeight && ((R = v - S), (p.menuHeight = R));
+          let z = (t.bOverlapVertical ? v : S) - c - R,
+            I = z > 0,
+            T = c + m - (t.bOverlapVertical ? S : v) - R,
+            E = T > 0,
+            F = (t.bPreferPopTop || !E) && I && !t.bDisablePopTop;
+          if (!I && !E) {
             const e =
               void 0 !== t.bShiftToFitWindow
                 ? t.bShiftToFitWindow
                 : !!t.bFitToWindow && !t.bOverlapHorizontal;
-            (O = I > E && !t.bDisablePopTop),
-              e && (O ? (_.menuTop = 4) : (_.menuBottom = 4)),
+            (F = z > T && !t.bDisablePopTop),
+              e && (F ? (p.menuTop = 4) : (p.menuBottom = 4)),
               t.bFitToWindow &&
-                (e ? (z = Math.min(z, m - 8)) : (z += O ? I : E),
-                (_.menuHeight = z - 8));
+                (e ? (R = Math.min(R, m - 8)) : (R += F ? z : T),
+                (p.menuHeight = R - 8));
           }
-          void 0 === _.menuBottom &&
-            void 0 === _.menuTop &&
-            (O
-              ? (_.menuBottom = m - (t.bOverlapVertical ? R : v))
-              : (_.menuTop = t.bOverlapVertical ? v : R)),
+          void 0 === p.menuBottom &&
+            void 0 === p.menuTop &&
+            (F
+              ? (p.menuBottom = m - (t.bOverlapVertical ? v : S))
+              : (p.menuTop = t.bOverlapVertical ? S : v)),
             n
-              ? (_.menuHeight || (_.menuHeight = p.height),
-                _.menuWidth || (_.menuWidth = p.width),
-                _.menuBottom &&
-                  !_.menuTop &&
-                  ((_.menuTop = m - _.menuBottom - _.menuHeight),
-                  (_.menuBottom = void 0)),
-                _.menuRight &&
-                  !_.menuLeft &&
-                  ((_.menuLeft = u - _.menuRight - _.menuWidth),
-                  (_.menuRight = void 0)))
+              ? (p.menuHeight || (p.menuHeight = g.height),
+                p.menuWidth || (p.menuWidth = g.width),
+                p.menuBottom &&
+                  !p.menuTop &&
+                  ((p.menuTop = m - p.menuBottom - p.menuHeight),
+                  (p.menuBottom = void 0)),
+                p.menuRight &&
+                  !p.menuLeft &&
+                  ((p.menuLeft = u - p.menuRight - p.menuWidth),
+                  (p.menuRight = void 0)))
               : "fixed" != s.getComputedStyle(r).position &&
-                (_.menuLeft && (_.menuLeft += s.scrollX),
-                _.menuTop && (_.menuTop += s.scrollY),
-                _.menuBottom &&
-                  (_.menuBottom +=
+                (p.menuLeft && (p.menuLeft += s.scrollX),
+                p.menuTop && (p.menuTop += s.scrollY),
+                p.menuBottom &&
+                  (p.menuBottom +=
                     s.document.body.clientHeight - s.scrollY - s.innerHeight),
-                _.menuRight &&
-                  (_.menuRight +=
+                p.menuRight &&
+                  (p.menuRight +=
                     s.document.body.clientWidth - s.scrollX - s.innerWidth)),
             (e ||
-              _.menuLeft !== this.state.menuLeft ||
-              _.menuRight !== this.state.menuRight ||
-              _.menuTop !== this.state.menuTop ||
-              _.menuBottom !== this.state.menuBottom ||
-              _.menuWidth !== this.state.menuWidth ||
-              _.menuHeight !== this.state.menuHeight) &&
-              this.setState(_);
+              p.menuLeft !== this.state.menuLeft ||
+              p.menuRight !== this.state.menuRight ||
+              p.menuTop !== this.state.menuTop ||
+              p.menuBottom !== this.state.menuBottom ||
+              p.menuWidth !== this.state.menuWidth ||
+              p.menuHeight !== this.state.menuHeight) &&
+              this.setState(p);
         }
         PositionPopupWindow() {
           if (
@@ -46148,11 +46164,9 @@
           const e = this.props.popup?.window,
             t = this.props.options;
           if (t.bScreenCoordinates) {
-            let r = this.parentWin?.devicePixelRatio;
-            if (t.targetMonitor) {
-              let e = t.flGamepadScale || 1;
-              r = (t.targetMonitor.flMonitorScale ?? 1) / e;
-            }
+            const r =
+              t.targetMonitor?.flScaleToTargetMonitor ??
+              this.parentWin?.devicePixelRatio;
             return (
               e?.SteamClient.Window.MoveTo(
                 this.state.menuLeft,
@@ -46186,39 +46200,27 @@
         }
         render() {
           let e = { visibility: this.state.ready ? "visible" : "hidden" };
-          if (
-            this.props.options.flGamepadScale &&
-            this.props.options.flGamepadScale > 0
-          )
-            e.zoom = this.props.options.flGamepadScale;
-          else if (
-            this.props.options.bScreenCoordinates &&
-            this.props.options.targetMonitor &&
-            this.m_elMenu?.ownerDocument?.defaultView
-          ) {
-            const t = this.m_elMenu.ownerDocument.defaultView.devicePixelRatio;
-            1 != t &&
-              (e.zoom =
-                (this.props.options.targetMonitor.flMonitorScale ?? 1) / t);
-          }
-          this.props.popup
-            ? (this.PositionPopupWindow(),
-              void 0 !== this.state.menuMinWidth &&
-                (e.minWidth = Math.floor(this.state.menuMinWidth)))
-            : (void 0 !== this.state.menuTop
-                ? (e.top = this.state.menuTop)
-                : void 0 !== this.state.menuBottom &&
-                  (e.bottom = this.state.menuBottom),
-              void 0 !== this.state.menuLeft
-                ? (e.left = this.state.menuLeft)
-                : void 0 !== this.state.menuRight &&
-                  (e.right = this.state.menuRight),
-              void 0 !== this.state.menuHeight &&
-                (e.height = this.state.menuHeight),
-              void 0 !== this.state.menuWidth &&
-                (e.width = this.state.menuWidth),
-              void 0 !== this.state.menuMinWidth &&
-                (e.minWidth = this.state.menuMinWidth));
+          this.props.options.flElementZoom &&
+            this.props.options.flElementZoom > 0 &&
+            (e.zoom = this.props.options.flElementZoom),
+            this.props.popup
+              ? (this.PositionPopupWindow(),
+                void 0 !== this.state.menuMinWidth &&
+                  (e.minWidth = Math.floor(this.state.menuMinWidth)))
+              : (void 0 !== this.state.menuTop
+                  ? (e.top = this.state.menuTop)
+                  : void 0 !== this.state.menuBottom &&
+                    (e.bottom = this.state.menuBottom),
+                void 0 !== this.state.menuLeft
+                  ? (e.left = this.state.menuLeft)
+                  : void 0 !== this.state.menuRight &&
+                    (e.right = this.state.menuRight),
+                void 0 !== this.state.menuHeight &&
+                  (e.height = this.state.menuHeight),
+                void 0 !== this.state.menuWidth &&
+                  (e.width = this.state.menuWidth),
+                void 0 !== this.state.menuMinWidth &&
+                  (e.minWidth = this.state.menuMinWidth));
           let t = this.props.options.strClassName || y().contextMenu;
           return (
             (this.props.options.bCreateHidden ||
@@ -47709,25 +47711,27 @@
             descriptionId: l,
             role: c = "radiogroup",
             children: m,
-            ...d
+            centeredPillStyle: d,
+            ...g
           } = e,
-          g = { value: t, setValue: r, disabled: s };
+          p = { value: t, setValue: r, disabled: s };
         return n.createElement(
           oe.Provider,
-          { value: g },
+          { value: p },
           n.createElement(
             a.Z,
             {
               role: c,
               "aria-labelledby": o,
               "aria-describedby": l,
-              ...d,
+              ...g,
               className: (0, u.A)(
                 ae().Group,
                 "Shared_Radio_Group",
                 i,
                 s && ae().Disabled,
-                g.bVertical && ae().VerticalGrouping,
+                p.bVertical && ae().VerticalGrouping,
+                d && ae().CenteredPill,
               ),
             },
             m,
@@ -60648,6 +60652,7 @@
         oI: () => c.o,
         cZ: () => n.cZ,
         hL: () => i.hL,
+        TP: () => i.TP,
         w6: () => l.w6,
         ML: () => i.ML,
         xA: () => i.xA,
@@ -61341,6 +61346,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
@@ -64849,9 +64855,9 @@
       function er() {
         return n.useContext(Yt);
       }
-      function tr(e) {
-        const t = new URLSearchParams({ term: e });
-        return `${Vt.TS.STORE_BASE_URL}search/?${t.toString()}`;
+      function tr(e, t) {
+        const r = new URLSearchParams({ term: e, snr: t });
+        return `${Vt.TS.STORE_BASE_URL}search/?${r.toString()}`;
       }
       function rr(e) {
         const [t, r] = (0, n.useState)(e.IsReady());
@@ -66417,10 +66423,11 @@
         });
       function Mi(e) {
         const { getMouseHandlers: t, active: r } = e,
-          i = (function () {
-            const { term: e } = er();
-            return (0, n.useMemo)(() => tr(e), [e]);
-          })();
+          i = (function (e) {
+            const { term: t } = er(),
+              r = (0, U.ru)(e);
+            return (0, n.useMemo)(() => tr(t, r), [t, r]);
+          })("advancedsearch");
         return n.createElement(
           "a",
           {
@@ -66497,7 +66504,8 @@
               _(), e.preventDefault();
             },
             [_],
-          );
+          ),
+          f = (0, U.ru)("search");
         return n.createElement(
           "form",
           {
@@ -66508,6 +66516,7 @@
             action: `${Vt.TS.STORE_BASE_URL}search`,
             onBlur: d,
           },
+          n.createElement("input", { type: "hidden", name: "snr", value: f }),
           n.createElement(
             "div",
             { className: ur.SearchInputContainer },
@@ -67951,7 +67960,7 @@
           ),
           n.createElement(
             Ki,
-            { href: `${Vt.TS.STORE_BASE_URL}sale/steamawards/` },
+            { href: `${Vt.TS.STORE_BASE_URL}steamawards/` },
             ar("#Menu_Section_SpecialSections_SteamAwards"),
           ),
           n.createElement(
@@ -68530,6 +68539,7 @@
           {
             className: lr()(
               cr.StoreMenuContainer,
+              !t && cr.BackdropClosed,
               (d || t) && cr.BackdropVisible,
               o && cr.GamepadUI,
             ),
@@ -68730,7 +68740,9 @@
               },
               n.createElement($s, { role: "presentation" }),
               sr.Localize("#Menu_Wishlist"),
-              t > 0 && n.createElement(Zs, null, t),
+              void 0 !== t &&
+                t > 0 &&
+                n.createElement(Zs, null, t.toLocaleString()),
             )
           : null;
       }
@@ -68750,7 +68762,7 @@
               },
               n.createElement(Qs, null),
               sr.Localize("#Menu_Cart"),
-              e > 0 && n.createElement(Zs, null, e),
+              e > 0 && n.createElement(Zs, null, e.toLocaleString()),
             )
           : null;
       }
@@ -68802,10 +68814,11 @@
           }),
         );
       }
-      function Ys(e) {
+      const Ys = n.memo(function (e) {
         const { openMoreSection: t } = e,
           { setTerm: r, openSearch: i, onActive: s, closeSearch: a } = er(),
-          o = n.useCallback(
+          o = (0, U.ru)("mobilesearch"),
+          l = n.useCallback(
             (e) => {
               try {
                 if ("" !== e.origin) return;
@@ -68816,7 +68829,7 @@
                       t();
                       break;
                     case "show_search_results":
-                      window.location.href = tr(n.term);
+                      window.location.href = tr(n.term, o);
                       break;
                     case "set_search_query":
                       s(), r(n.term), i();
@@ -68826,21 +68839,21 @@
                   }
               } catch (e) {}
             },
-            [t, s, r, i, a],
+            [t, s, r, i, a, o],
           );
         return (
           n.useEffect(
             () =>
               navigator.userAgent.match(/(android)/i)
-                ? (document.addEventListener("message", o),
-                  () => document.removeEventListener("message", o))
-                : (window.addEventListener("message", o),
-                  () => window.removeEventListener("message", o)),
-            [o],
+                ? (document.addEventListener("message", l),
+                  () => document.removeEventListener("message", l))
+                : (window.addEventListener("message", l),
+                  () => window.removeEventListener("message", l)),
+            [l],
           ),
           null
         );
-      }
+      });
       var Xs = r(12447);
       function Js() {
         const e = rr(sr),

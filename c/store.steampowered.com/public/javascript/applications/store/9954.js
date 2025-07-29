@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Nya släpp",
 	"Menu_OnSale": "På rea",
 	"Menu_SearchPlaceholder": "Sök i butiken",
+	"Menu_ClearSearchTerm": "Rensa sökord",
 	"Menu_Wishlist": "Önskelista",
 	"Menu_Cart": "Kundvagn",
 	"Menu_Popover_TopLinks": "Topplänkar",

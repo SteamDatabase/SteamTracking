@@ -46670,6 +46670,7 @@
             ),
             _.createElement(_._, {
               bIsPrePurchase: !1,
+              bHidePrePurchase: !1,
               bSingleLineMode: !1,
               nDiscountPercentage: 50,
               nBaseDiscountPercentage: null,
@@ -70373,6 +70374,7 @@
           ),
           _.createElement(_._, {
             bSingleLineMode: !0,
+            bHidePrePurchase: !1,
             nBaseDiscountPercentage: 0,
             nDiscountPercentage: _.discount_percentage,
             strBestPurchaseOriginalPriceFormatted: _(

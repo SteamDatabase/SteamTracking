@@ -11405,23 +11405,25 @@
             size: t = "Medium",
             animatedAvatar: r,
             className: i,
-            ...s
+            strBackupAvatarURL: s,
+            ...m
           } = this.props;
-          let m = "";
+          let c = "";
           return (
             r && r.image_small && 0 != r.image_small.length
-              ? (m = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
-              : e &&
-                ((m = e.avatar_url_medium),
-                "Small" == t || "X-Small" == t
-                  ? (m = e.avatar_url)
-                  : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
-                    (m = e.avatar_url_full)),
+              ? (c = l.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + r.image_small)
+              : e
+                ? ((c = e.avatar_url_medium),
+                  "Small" == t || "X-Small" == t
+                    ? (c = e.avatar_url)
+                    : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
+                      (c = e.avatar_url_full))
+                : s && (c = s),
             a.createElement(B, {
-              strAvatarURL: m,
+              strAvatarURL: c,
               size: t,
               className: (0, o.A)((0, n.rO)(e), i),
-              ...s,
+              ...m,
             })
           );
         }
@@ -24817,12 +24819,19 @@
               "mp4",
               "mpeg",
               "ogv",
+              "webp",
+              "avif",
             ].indexOf(s)
-          )
+          ) {
+            let e = s || a;
             return void this.SetUploadFileError(
               5,
-              (0, M.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", a),
+              (0, M.we)(
+                "#Chat_Settings_Error_ChatUploadFileTypeNotSupported",
+                e,
+              ),
             );
+          }
           const n = await r(e);
           this.SetFileToUpload(n.file),
             (this.m_fileUploadProps.imageHeight = n.height),
@@ -24842,12 +24851,14 @@
               ),
             );
           let i = e.name.split(".").pop().toLowerCase();
-          -1 != ["zip"].indexOf(i)
-            ? this.SetFileToUpload(e)
-            : this.SetUploadFileError(
-                5,
-                (0, M.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", r),
-              );
+          if (-1 != ["zip"].indexOf(i)) this.SetFileToUpload(e);
+          else {
+            let e = i || r;
+            this.SetUploadFileError(
+              5,
+              (0, M.we)("#Chat_Settings_Error_FileTypeNotZip", e),
+            );
+          }
         }
         SetFileToUpload(e) {
           if (

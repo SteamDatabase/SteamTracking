@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Uudet julkaisut",
 	"Menu_OnSale": "Alennuksessa",
 	"Menu_SearchPlaceholder": "Hae kaupasta",
+	"Menu_ClearSearchTerm": "Tyhjennä hakutermi",
 	"Menu_Wishlist": "Toivelista",
 	"Menu_Cart": "Ostoskori",
 	"Menu_Popover_TopLinks": "Suositut linkit",

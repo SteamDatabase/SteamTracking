@@ -3027,7 +3027,7 @@
             ),
             (this.m_player = new Ye.Zn(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
-            this.m_player.PlayMPD(t, null, null, !1),
+            this.m_player.PlayMPD(t),
             (this.m_bMuted = it("muted")),
             (this.m_nVolume = it("volume")),
             this.m_player.SetMuted(this.m_bMuted),

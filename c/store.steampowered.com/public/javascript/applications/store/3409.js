@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Новинки",
 	"Menu_OnSale": "Зі знижкою",
 	"Menu_SearchPlaceholder": "Пошук у крамниці",
+	"Menu_ClearSearchTerm": "Очистити критерій пошуку",
 	"Menu_Wishlist": "Список бажаного",
 	"Menu_Cart": "Кошик",
 	"Menu_Popover_TopLinks": "Найпопулярніші посилання",

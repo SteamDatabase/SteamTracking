@@ -398,6 +398,7 @@
     chunkid: (module) => {
       module.exports = {
         Group: "_1ml4SNc3LIyBDHIf8ekVSw",
+        CenteredPill: "L2J24Sa_dQql2exoKoBMi",
         Button: "HijmccPB1BKyhOwhX1EVl",
         Disabled: "_3hmGW9wIxNIoPPu1aS7rFm",
         Active: "_3-_jME_xsuvgT3Dvq4bw_q",
@@ -8795,6 +8796,7 @@
         SetDOMFocusAndScroll(_, _) {
           var _;
           this.UpdateParentActiveChild(),
+            this.m_Tree.OnChildActivated(_),
             this.m_Tree.BIsActiveFocus()
               ? ((0, _._)(
                   !this.m_Tree.BUseVirtualFocus(),
@@ -8894,8 +8896,7 @@
                           inline: "nearest",
                         });
               }
-            })(this, _),
-            this.m_Tree.OnChildActivated(_);
+            })(this, _);
         }
       }
       (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -18040,194 +18041,6 @@
           return "CCommunity_SetRecommendationBotReviewStatus_Response";
         }
       }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.recommendation_ids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  recommendation_ids: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint64String,
-                    pbr: _._.readPackedUint64String,
-                    _: _._.writeRepeatedUint64String,
-                  },
-                  app_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetBotReviewScoreForRecommendation_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.bot_review_score || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  bot_review_score: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetBotReviewScoreForRecommendation_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.key || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  key: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  value: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetBotReviewScoreForRecommendation_Response_BotReviewScoreEntry";
-        }
-      }
       !(function (_) {
         (_.GetApps = function (_, _) {
           return _.SendMsg("Community.GetApps#1", (0, _._)(_, _), _, {
@@ -18481,17 +18294,6 @@
               (0, _._)(_, _),
               _,
               {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetBotReviewScoreForRecommendation = function (_, _) {
-            return _.SendMsg(
-              "Community.GetBotReviewScoreForRecommendation#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
                 ePrivilege: 1,
               },
             );
@@ -34528,9 +34330,18 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _, __webpack_require__ = []) {
+        const _ = _.useCallback(_, []);
+        _.useEffect(() => {
+          if (!_) return;
+          const _ = setTimeout(_, _);
+          return () => clearTimeout(_);
+        }, [_, ...__webpack_require__]);
+      }
       function _(_, _, __webpack_require__ = []) {
         const _ = _.useRef(_);
         (_.current = _),
@@ -34964,7 +34775,12 @@
           __webpack_require__,
         );
       }
-      const _ = () => _().useActiveSteamInterface().GetServiceTransport(),
+      const _ = () => {
+          var _;
+          return null === (_ = _().useActiveSteamInterface()) || void 0 === _
+            ? void 0
+            : _.GetServiceTransport();
+        },
         _ = () => _().useActiveSteamInterface().GetAnonymousServiceTransport(),
         _ = () => _().useStorage(),
         _ = () => _().useActiveSteamInterface();
@@ -46720,7 +46536,6 @@
             _ = 0,
             _ = _.innerWidth,
             _ = _.innerHeight,
-            _ = 1,
             _ = null == _ ? void 0 : _.getBoundingClientRect();
           if (_)
             if (
@@ -46731,8 +46546,7 @@
               _ && (_ = _._(_, _)),
               _.targetMonitor)
             )
-              (_ = _.targetMonitor.flMonitorScale),
-                (_ = _.targetMonitor.nScreenLeft),
+              (_ = _.targetMonitor.nScreenLeft),
                 (_ = _.targetMonitor.nScreenTop),
                 (_ = _.targetMonitor.nScreenWidth),
                 (_ = _.targetMonitor.nScreenHeight);
@@ -46748,11 +46562,7 @@
                 (_ = _.availHeight);
             }
           (_.bOverlapHorizontal || _.bOverlapVertical) && (_ = _ = void 0);
-          let _ = __webpack_require__.getBoundingClientRect();
-          if (_.flGamepadScale && _.flGamepadScale > 0) {
-            const _ = _.flGamepadScale;
-            _ = new DOMRect(_._ * _, _._ * _, _.width * _, _.height * _);
-          }
+          const _ = __webpack_require__.getBoundingClientRect();
           let _ = {
               menuLeft: void 0,
               menuRight: void 0,
@@ -46834,7 +46644,7 @@
               this.setState(_);
         }
         PositionPopupWindow() {
-          var _, _, _, _;
+          var _, _, _, _, _;
           if (
             !(
               void 0 !== this.state.menuLeft &&
@@ -46850,17 +46660,16 @@
                 : _.window,
             _ = this.props.options;
           if (_.bScreenCoordinates) {
-            let _ =
-              null === (_ = this.parentWin) || void 0 === _
-                ? void 0
-                : _.devicePixelRatio;
-            if (_.targetMonitor) {
-              let _ = _.flGamepadScale || 1;
-              _ =
-                (null !== (_ = _.targetMonitor.flMonitorScale) && void 0 !== _
-                  ? _
-                  : 1) / _;
-            }
+            const _ =
+              null !==
+                (_ =
+                  null === (_ = _.targetMonitor) || void 0 === _
+                    ? void 0
+                    : _.flScaleToTargetMonitor) && void 0 !== _
+                ? _
+                : null === (_ = this.parentWin) || void 0 === _
+                  ? void 0
+                  : _.devicePixelRatio;
             return (
               null == _ ||
                 _.SteamClient.Window.MoveTo(
@@ -46898,53 +46707,30 @@
             });
         }
         render() {
-          var _, _, _;
           let _ = {
             visibility: this.state.ready ? "visible" : "hidden",
           };
-          if (
-            this.props.options.flGamepadScale &&
-            this.props.options.flGamepadScale > 0
-          )
-            _.zoom = this.props.options.flGamepadScale;
-          else if (
-            this.props.options.bScreenCoordinates &&
-            this.props.options.targetMonitor &&
-            (null ===
-              (_ =
-                null === (_ = this.m_elMenu) || void 0 === _
-                  ? void 0
-                  : _.ownerDocument) || void 0 === _
-              ? void 0
-              : _.defaultView)
-          ) {
-            const _ = this.m_elMenu.ownerDocument.defaultView.devicePixelRatio;
-            1 != _ &&
-              (_.zoom =
-                (null !==
-                  (_ = this.props.options.targetMonitor.flMonitorScale) &&
-                void 0 !== _
-                  ? _
-                  : 1) / _);
-          }
-          this.props.popup
-            ? (this.PositionPopupWindow(),
-              void 0 !== this.state.menuMinWidth &&
-                (_.minWidth = Math.floor(this.state.menuMinWidth)))
-            : (void 0 !== this.state.menuTop
-                ? (_.top = this.state.menuTop)
-                : void 0 !== this.state.menuBottom &&
-                  (_.bottom = this.state.menuBottom),
-              void 0 !== this.state.menuLeft
-                ? (_.left = this.state.menuLeft)
-                : void 0 !== this.state.menuRight &&
-                  (_.right = this.state.menuRight),
-              void 0 !== this.state.menuHeight &&
-                (_.height = this.state.menuHeight),
-              void 0 !== this.state.menuWidth &&
-                (_.width = this.state.menuWidth),
-              void 0 !== this.state.menuMinWidth &&
-                (_.minWidth = this.state.menuMinWidth));
+          this.props.options.flElementZoom &&
+            this.props.options.flElementZoom > 0 &&
+            (_.zoom = this.props.options.flElementZoom),
+            this.props.popup
+              ? (this.PositionPopupWindow(),
+                void 0 !== this.state.menuMinWidth &&
+                  (_.minWidth = Math.floor(this.state.menuMinWidth)))
+              : (void 0 !== this.state.menuTop
+                  ? (_.top = this.state.menuTop)
+                  : void 0 !== this.state.menuBottom &&
+                    (_.bottom = this.state.menuBottom),
+                void 0 !== this.state.menuLeft
+                  ? (_.left = this.state.menuLeft)
+                  : void 0 !== this.state.menuRight &&
+                    (_.right = this.state.menuRight),
+                void 0 !== this.state.menuHeight &&
+                  (_.height = this.state.menuHeight),
+                void 0 !== this.state.menuWidth &&
+                  (_.width = this.state.menuWidth),
+                void 0 !== this.state.menuMinWidth &&
+                  (_.minWidth = this.state.menuMinWidth));
           let _ = this.props.options.strClassName || _().contextMenu;
           return (
             (this.props.options.bCreateHidden ||
@@ -48687,6 +48473,7 @@
             descriptionId: _,
             role: _ = "radiogroup",
             children: _,
+            centeredPillStyle: _,
             ..._
           } = _,
           _ = {
@@ -48712,6 +48499,7 @@
                 _,
                 _ && _().Disabled,
                 _.bVertical && _().VerticalGrouping,
+                _ && _().CenteredPill,
               ),
             },
             _,
@@ -65623,6 +65411,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -66280,6 +66069,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",

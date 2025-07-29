@@ -3163,242 +3163,257 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-          const { match: _ } = _,
-            [__webpack_require__, _] = _.useState(!1),
-            [_, _] = _.useState(""),
-            [_, _] = _.useState(""),
-            _ = _.useRef(),
-            _ = _.useMemo(() => new _._(_._.CLANSTEAMID), []),
-            _ = _.useMemo(() => new _._(), []),
-            _ = _.useMemo(() => _().CancelToken.source(), []),
-            {
-              bIsFetching: _,
-              nHiddenEventCount: _,
-              rgEventModels: _,
-              fnRefetch: _,
-            } = (0, _._)(_),
-            {
-              rgClanEventData: _,
-              bHasNextPage: _,
-              fnFetchNextPage: _,
-              bIsFetching: _,
-              bIsFetchingNextPage: _,
-              clanEventSummaryStatus: _,
-              clanEventSummaryLoadError: _,
-              fnRefetch: _,
-            } = (0, _._)(_, 10, _);
-          _.useEffect(
-            () => (_(), _(), () => _.cancel("EventListView to unload")),
-            [_, _, _],
-          );
-          const _ = (0, _._)(_),
-            _ = _.useMemo(() => {
+        const { match: _ } = _,
+          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(""),
+          _ = _.useRef(),
+          _ = _.useMemo(() => new _._(_._.CLANSTEAMID), []),
+          _ = _.useMemo(() => new _._(), []),
+          _ = _.useMemo(() => _().CancelToken.source(), []),
+          {
+            bIsFetching: _,
+            nHiddenEventCount: _,
+            rgEventModels: _,
+            fnRefetch: _,
+          } = (0, _._)(_),
+          {
+            rgClanEventData: _,
+            bHasNextPage: _,
+            fnFetchNextPage: _,
+            bIsFetching: _,
+            bIsFetchingNextPage: _,
+            clanEventSummaryStatus: _,
+            clanEventSummaryLoadError: _,
+            fnRefetch: _,
+          } = (0, _._)(_, 10, _);
+        _.useEffect(
+          () => (_(), _(), () => _.cancel("EventListView to unload")),
+          [_, _, _],
+        );
+        const _ = (function (_, _) {
+            const [__webpack_require__, _] = _.useState(!0);
+            return (
+              (0, _._)(() => _(!1), 4e3),
+              _.useEffect(() => {
+                _ || _ || _(!1);
+              }, [_, _]),
+              __webpack_require__
+            );
+          })(_, _),
+          _ = (0, _._)(_),
+          _ = _.useMemo(() => {
+            (0, _._)(
+              !_ || _.every((_) => null != _),
+              "draftClanEvents has a null event",
+            );
+            const _ = new Map();
+            return (
+              null == _ ||
+                _.pages
+                  .flatMap((_) => _)
+                  .map((_) => (0, _._)(_, _))
+                  .forEach((_) => _.set(_.GID, _)),
+              null == _ || _.forEach((_) => _.set(_.GID, _)),
+              Array.from(_.values())
+            );
+          }, [_, null == _ ? void 0 : _.pages, _]);
+        _.useEffect(() => {
+          const _ = _.filter((_) =>
+            Boolean(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
+          ).map((_) => _.GID);
+          _.length > 0 && _._.LoadStatsForEvents(_, _, _);
+        }, [_, _, _]),
+          _.useEffect(() => {
+            if ("error" == _) {
+              const _ = (0, _._)(_);
               (0, _._)(
-                !_ || _.every((_) => null != _),
-                "draftClanEvents has a null event",
+                _.createElement(
+                  _._,
+                  null,
+                  (0, _._)("#Error_Description", _.errorCode, _.strErrorMsg),
+                ),
+                window,
               );
-              const _ = new Map();
-              return (
-                null == _ ||
-                  _.pages
-                    .flatMap((_) => _)
-                    .map((_) => (0, _._)(_, _))
-                    .forEach((_) => _.set(_.GID, _)),
-                null == _ || _.forEach((_) => _.set(_.GID, _)),
-                Array.from(_.values())
-              );
-            }, [_, null == _ ? void 0 : _.pages, _]);
-          _.useEffect(() => {
-            const _ = _.filter((_) =>
-              Boolean(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
-            ).map((_) => _.GID);
-            _.length > 0 && _._.LoadStatsForEvents(_, _, _);
-          }, [_, _, _]),
-            _.useEffect(() => {
-              if ("error" == _) {
-                const _ = (0, _._)(_);
-                (0, _._)(
-                  _.createElement(
-                    _._,
-                    null,
-                    (0, _._)("#Error_Description", _.errorCode, _.strErrorMsg),
-                  ),
-                  window,
-                );
-              }
-            }, [_, _]);
-          const _ = (_, _) => {
-              var _;
-              const _ = [];
-              let _ = _;
-              if ((null == _ ? void 0 : _.length) > 0) {
-                (_ = _.slice().filter((_) => {
-                  var _;
-                  return (
-                    _.visibility_state === _ &&
-                    !(
-                      Boolean(_) &&
-                      !(null ===
-                        (_ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE))) ||
-                      void 0 === _
-                        ? void 0
-                        : __webpack_require__.toLocaleLowerCase().includes(_))
-                    )
-                  );
-                })),
-                  _.sort(
-                    (_, _) => (
-                      (0, _._)(
-                        _ !== _,
-                        `Unexpected duplicates in the list: ${_} ${_}`,
-                      ),
-                      _.BShowLibrarySpotlight(!0) &&
-                      !_.BShowLibrarySpotlight(!0)
-                        ? -1
-                        : !_.BShowLibrarySpotlight(!0) &&
-                            _.BShowLibrarySpotlight(!0)
-                          ? 1
-                          : _.startTime - _.startTime
-                    ),
-                  );
-                for (const _ of _)
-                  _.push(
-                    _.createElement(_, {
-                      key: _.GID,
-                      appid_or_vanity_str: _.params.appid_or_vanity_str,
-                      gid: _.GID,
-                      eventModel: _,
-                      bShowEventMetaDataSizes: __webpack_require__,
-                      refresh: () => {
-                        _(), _();
-                      },
-                    }),
-                  );
-              }
-              for (
-                let _ = 0;
-                _ <
-                _ -
-                  (null !== (_ = null == _ ? void 0 : _.length) && void 0 !== _
-                    ? _
-                    : 0);
-                _++
-              )
-                _.push(
-                  _.createElement(
-                    "div",
-                    {
-                      key: `tile_${_}_ghost_${_}`,
-                      className: _.TileContainer,
-                    },
-                    _.createElement(_._, {
-                      capsules_per_row: [1],
-                      is_event_dash_row: !0,
-                    }),
-                  ),
-                );
-              return _;
-            },
-            _ = _.useCallback(
-              (_) => {
-                _ && !_ && _();
-              },
-              [_, _],
-            );
-          _.useEffect(() => {
-            _.Schedule(200, () =>
-              _(null == _ ? void 0 : _.trim().toLocaleLowerCase()),
-            );
+            }
           }, [_, _]);
-          const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
-            _ = _(_._.k_EEventStateStaged),
-            _ = _(_._.k_EEventStateUnlisted),
-            _ = _(_._.k_EEventStateVisible),
-            _ = _.useMemo(() => {
-              if (!_) return;
-              if (_ || !_) return _;
-              const _ = _.length >= 10 ? _.length - 10 : _.length,
-                _ = _.createElement(_._, {
-                  key: "visibilityTracker",
-                  trigger: "repeated",
-                  onVisibilityChange: _,
-                });
-              return [..._.slice(0, _), _, ..._.slice(_)];
-            }, [_, _, _, _]),
-            _ = _.length > 0 || _.length > 0 || _.length > 0 || _.length > 0;
-          return _.createElement(
-            "div",
-            {
-              ref: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)("maincontent", _().EventDashboardCtn),
-              },
-              _.createElement(_, {
-                appid_or_vanity_str: _.params.appid_or_vanity_str,
-              }),
-              _.createElement(
-                _._,
-                {
-                  requireAdmin: !0,
-                  clanSteamID: _,
-                },
+        const _ = (_, _) => {
+            var _;
+            const _ = [];
+            let _ = _;
+            if ((null == _ ? void 0 : _.length) > 0) {
+              (_ = _.slice().filter((_) => {
+                var _;
+                return (
+                  _.visibility_state === _ &&
+                  !(
+                    Boolean(_) &&
+                    !(null ===
+                      (_ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE))) ||
+                    void 0 === _
+                      ? void 0
+                      : __webpack_require__.toLocaleLowerCase().includes(_))
+                  )
+                );
+              })),
+                _.sort(
+                  (_, _) => (
+                    (0, _._)(
+                      _ !== _,
+                      `Unexpected duplicates in the list: ${_} ${_}`,
+                    ),
+                    _.BShowLibrarySpotlight(!0) && !_.BShowLibrarySpotlight(!0)
+                      ? -1
+                      : !_.BShowLibrarySpotlight(!0) &&
+                          _.BShowLibrarySpotlight(!0)
+                        ? 1
+                        : _.startTime - _.startTime
+                  ),
+                );
+              for (const _ of _)
+                _.push(
+                  _.createElement(_, {
+                    key: _.GID,
+                    appid_or_vanity_str: _.params.appid_or_vanity_str,
+                    gid: _.GID,
+                    eventModel: _,
+                    bShowEventMetaDataSizes: __webpack_require__,
+                    refresh: () => {
+                      _(), _();
+                    },
+                  }),
+                );
+            }
+            for (
+              let _ = 0;
+              _ <
+              _ -
+                (null !== (_ = null == _ ? void 0 : _.length) && void 0 !== _
+                  ? _
+                  : 0);
+              _++
+            )
+              _.push(
                 _.createElement(
                   "div",
                   {
-                    className: (0, _._)(
-                      "maincontent",
-                      _().EventDashboardCtn,
-                      _().EventDashAdminToolsCtn,
-                      _().FlexRowContainer,
-                    ),
+                    key: `tile_${_}_ghost_${_}`,
+                    className: _.TileContainer,
                   },
                   _.createElement(_._, {
-                    label: "Show Event Metadata Size",
-                    tooltip:
-                      "Surfaces the size of the biggest sections in the event's metadata",
-                    onChange: _,
-                    checked: __webpack_require__,
+                    capsules_per_row: [1],
+                    is_event_dash_row: !0,
                   }),
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: (_) =>
-                        (0, _._)(_.createElement(_, null), (0, _._)(_)),
-                    },
-                    "Show Publishing Audit History",
-                  ),
                 ),
-                Boolean(_.GetAccountID() == _._) &&
-                  _.createElement(
-                    "a",
-                    {
-                      href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
-                      target: "_blank",
-                    },
-                    "Content Hub Graphana Stats Page",
-                  ),
-              ),
-            ),
-            (_ || _ || _.length > 0) &&
+              );
+            return _;
+          },
+          _ = _.useCallback(
+            (_) => {
+              _ && !_ && _();
+            },
+            [_, _],
+          );
+        _.useEffect(() => {
+          _.Schedule(200, () =>
+            _(null == _ ? void 0 : _.trim().toLocaleLowerCase()),
+          );
+        }, [_, _]);
+        const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
+          _ = _(_._.k_EEventStateStaged),
+          _ = _(_._.k_EEventStateUnlisted),
+          _ = _(_._.k_EEventStateVisible),
+          _ = _.useMemo(() => {
+            if (!_) return;
+            if (_ || !_) return _;
+            const _ = _.length >= 10 ? _.length - 10 : _.length,
+              _ = _.createElement(_._, {
+                key: "visibilityTracker",
+                trigger: "repeated",
+                onVisibilityChange: _,
+              });
+            return [..._.slice(0, _), _, ..._.slice(_)];
+          }, [_, _, _, _]),
+          _ = _.length > 0 || _.length > 0 || _.length > 0 || _.length > 0;
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)("maincontent", _().EventDashboardCtn),
+            },
+            _.createElement(_, {
+              appid_or_vanity_str: _.params.appid_or_vanity_str,
+            }),
+            _.createElement(
+              _._,
+              {
+                requireAdmin: !0,
+                clanSteamID: _,
+              },
               _.createElement(
                 "div",
                 {
                   className: (0, _._)(
-                    _().EventDashboardCtn,
-                    _().EventDashboardSearchCtn,
                     "maincontent",
+                    _().EventDashboardCtn,
+                    _().EventDashAdminToolsCtn,
+                    _().FlexRowContainer,
                   ),
                 },
                 _.createElement(_._, {
-                  type: "text",
-                  label: "Search",
-                  value: _,
-                  onChange: (_) => _(_.target.value),
+                  label: "Show Event Metadata Size",
+                  tooltip:
+                    "Surfaces the size of the biggest sections in the event's metadata",
+                  onChange: _,
+                  checked: __webpack_require__,
                 }),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: (_) =>
+                      (0, _._)(_.createElement(_, null), (0, _._)(_)),
+                  },
+                  "Show Publishing Audit History",
+                ),
               ),
+              Boolean(_.GetAccountID() == _._) &&
+                _.createElement(
+                  "a",
+                  {
+                    href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
+                    target: "_blank",
+                  },
+                  "Content Hub Graphana Stats Page",
+                ),
+            ),
+          ),
+          (_ || _ || _.length > 0) &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().EventDashboardCtn,
+                  _().EventDashboardSearchCtn,
+                  "maincontent",
+                ),
+              },
+              _.createElement(_._, {
+                type: "text",
+                label: "Search",
+                value: _,
+                onChange: (_) => _(_.target.value),
+              }),
+            ),
+          _ &&
+            _.createElement(_._, {
+              position: "center",
+              string: (0, _._)("#Loading"),
+            }),
+          !_ &&
             _.createElement(
               "div",
               {
@@ -3549,9 +3564,9 @@
                 ),
               ),
             ),
-          );
-        }),
-        _ = (0, _._)((_) => {
+        );
+      });
+      const _ = (0, _._)((_) => {
           const { appid_or_vanity_str: _ } = _,
             _ = new _._(_._.CLANSTEAMID),
             _ = _._.GetClanInfoByClanAccountID(

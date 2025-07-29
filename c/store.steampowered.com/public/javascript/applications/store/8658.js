@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Новинки",
 	"Menu_OnSale": "Со скидкой",
 	"Menu_SearchPlaceholder": "Поиск по магазину",
+	"Menu_ClearSearchTerm": "Удалить критерий поиска",
 	"Menu_Wishlist": "Список желаемого",
 	"Menu_Cart": "Корзина",
 	"Menu_Popover_TopLinks": "Популярные ссылки",

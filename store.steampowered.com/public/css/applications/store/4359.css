@@ -20,11 +20,13 @@
   ._16DzRvjcqFcYr0NYcWmTrg {
     min-width: 320px;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 }
 .BasicUI ._16DzRvjcqFcYr0NYcWmTrg {
   min-width: unset;
   scroll-snap-align: unset;
+  scroll-snap-stop: unset;
 }
 .center_row_trgt.ItemCount_1 ._16DzRvjcqFcYr0NYcWmTrg {
   width: 50%;
@@ -771,6 +773,9 @@ html.tablet
   ._2Y2C1oQ7JEMkq2AoDp_S0A {
     margin: 0 16px 0 0;
   }
+}
+.ScrollSnapCarousel ._2Y2C1oQ7JEMkq2AoDp_S0A {
+  scroll-snap-align: start;
 }
 ._2Y2C1oQ7JEMkq2AoDp_S0A .CapsuleBottomBar {
   height: 44px;

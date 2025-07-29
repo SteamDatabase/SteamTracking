@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "เกมวางจำหน่ายล่าสุด",
 	"Menu_OnSale": "ลดราคา",
 	"Menu_SearchPlaceholder": "ค้นหาในร้านค้า",
+	"Menu_ClearSearchTerm": "ลบคำค้นหา",
 	"Menu_Wishlist": "สิ่งที่อยากได้",
 	"Menu_Cart": "รถเข็น",
 	"Menu_Popover_TopLinks": "ลิงก์ยอดนิยม",

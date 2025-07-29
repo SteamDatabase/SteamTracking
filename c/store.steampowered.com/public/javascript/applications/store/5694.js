@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Új megjelenés",
 	"Menu_OnSale": "Akciós",
 	"Menu_SearchPlaceholder": "Keresés az Áruházban",
+	"Menu_ClearSearchTerm": "Keresési kifejezés törlése",
 	"Menu_Wishlist": "Kívánságlista",
 	"Menu_Cart": "Kosár",
 	"Menu_Popover_TopLinks": "Legfontosabb hivatkozások",

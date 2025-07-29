@@ -2889,6 +2889,60 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "waiting" == _ || "uploading" == _ || "processing" == _;
+      }
+      class _ {
+        constructor(_, _, _, _, _) {
+          var _;
+          (this.m_originalSize = {
+            width: 0,
+            height: 0,
+          }),
+            (this.m_originalDataUrl = ""),
+            (this.dataUrl = void 0),
+            (this.width = 0),
+            (this.height = 0),
+            (this.status = "pending"),
+            (this.message = ""),
+            (this.language = void 0),
+            (0, _._)(this),
+            (this.file = _),
+            (this.filename = _),
+            (this.fileType =
+              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : 0),
+            (this.language = _),
+            (this.uploadTime = Date.now()),
+            (this.status = "pending"),
+            (this.m_originalSize = _),
+            (this.height = _.height),
+            (this.width = _.width),
+            (this.m_originalDataUrl = _),
+            (this.dataUrl = _);
+        }
+        ResetImage() {
+          (this.height = this.m_originalSize.height),
+            (this.width = this.m_originalSize.width),
+            (this.dataUrl = this.m_originalDataUrl);
+        }
+        GetImageOptionLabel() {}
+      }
+      (0, _._)([_._], _.prototype, "dataUrl", void 0),
+        (0, _._)([_._], _.prototype, "width", void 0),
+        (0, _._)([_._], _.prototype, "height", void 0),
+        (0, _._)([_._], _.prototype, "status", void 0),
+        (0, _._)([_._], _.prototype, "message", void 0),
+        (0, _._)([_._], _.prototype, "language", void 0);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -3375,51 +3429,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        constructor(_, _, _, _, _) {
-          var _;
-          (this.m_originalSize = {
-            width: 0,
-            height: 0,
-          }),
-            (this.m_originalDataUrl = ""),
-            (this.dataUrl = void 0),
-            (this.width = 0),
-            (this.height = 0),
-            (this.status = "pending"),
-            (this.message = ""),
-            (this.language = void 0),
-            (0, _._)(this),
-            (this.file = _),
-            (this.filename = _),
-            (this.fileType =
-              null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : 0),
-            (this.language = _),
-            (this.uploadTime = Date.now()),
-            (this.status = "pending"),
-            (this.m_originalSize = _),
-            (this.height = _.height),
-            (this.width = _.width),
-            (this.m_originalDataUrl = _),
-            (this.dataUrl = _);
-        }
-        ResetImage() {
-          (this.height = this.m_originalSize.height),
-            (this.width = this.m_originalSize.width),
-            (this.dataUrl = this.m_originalDataUrl);
-        }
-        GetImageOptionLabel() {}
-      }
-      (0, _._)([_._], _.prototype, "dataUrl", void 0),
-        (0, _._)([_._], _.prototype, "width", void 0),
-        (0, _._)([_._], _.prototype, "height", void 0),
-        (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0),
-        (0, _._)([_._], _.prototype, "language", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _ {
+      class _ extends _._ {
         constructor(_, _, _, _, _, _) {
           super(_, _, _, _, _),
             (this.m_currentImageOption = void 0),
@@ -3674,57 +3687,105 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       class _ {}
+      function _(_, _, _) {
+        const _ = _.filter((_) => {
+          const _ = _.IsValidAssetType(_, _);
+          return "pending" === _.status && !_.error && !_.needsCrop;
+        });
+        return _.forEach((_) => (_.status = "waiting")), _;
+      }
+      async function _(_, _, _, _, _, _) {
+        const _ = _(_, _, _),
+          _ = [];
+        let _ = 0;
+        const _ = Array.from(
+          {
+            length: Math.floor(_),
+          },
+          () =>
+            (async () => {
+              for (var _; _ < _.length; ) {
+                const _ = _++,
+                  _ = _[_];
+                _.status = "uploading";
+                const _ = await __webpack_require__(
+                  _,
+                  _.filename,
+                  null !== (_ = _.language) && void 0 !== _ ? _ : -1,
+                  _,
+                );
+                (_.status = _.bSuccess ? "success" : "failed"),
+                  (_.message =
+                    !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
+                  (_[_] = {
+                    image: _,
+                    uploadResult: _,
+                  });
+              }
+            })(),
+        );
+        return (
+          await Promise.all(_),
+          _.map((_) => ({
+            bSuccess: _.uploadResult.bSuccess,
+            image: _.image,
+            uploadResult: _.uploadResult.result,
+          }))
+        );
+      }
       class _ extends _ {
         constructor() {
-          super(...arguments), (this.m_allCancelTokens = new Array());
+          super(...arguments), (this.m_cancel = void 0);
         }
         async UploadAllImages(_, _) {
-          var _, _;
-          const _ = this.GetUploadImages(),
-            _ = this.BGetUploadsAreInSerial(),
-            _ = _.filter((_) => {
-              const _ = __webpack_require__.IsValidAssetType(_, _);
-              return "pending" === _.status && !_.error && !_.needsCrop;
-            });
-          for (const _ of _) _.status = "uploading";
-          const _ = [];
-          for (const _ of _) {
-            const _ = _().CancelToken.source();
-            this.m_allCancelTokens.push(_);
-            const _ = this.UploadSingleImage(
-              _,
-              _.filename,
-              null !== (_ = _.language) && void 0 !== _ ? _ : -1,
-              _.token,
-            );
-            _.push({
-              image: _,
-              promise: _,
-            }),
-              _ && (await _);
-          }
-          _ || (await Promise.all(_.map((_) => _.promise)));
-          const _ = [];
-          for (const _ of _) {
-            const _ = await _.promise,
-              _ = _.image;
-            _.push({
-              bSuccess: _.bSuccess,
-              image: _,
-              uploadResult: _.result,
-            }),
-              _.bSuccess
-                ? (_.status = "success")
-                : ((_.status = "failed"),
-                  (_.message =
-                    null !== (_ = _.elErrorMessage) && void 0 !== _ ? _ : ""));
-          }
-          return _;
+          this.m_cancel = _().CancelToken.source();
+          const _ = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let _;
+          const _ = this.UploadSingleImage.bind(this);
+          return (
+            (_ =
+              _ > 1
+                ? await _(
+                    this.GetUploadImages(),
+                    _,
+                    _,
+                    _,
+                    _,
+                    this.m_cancel.token,
+                  )
+                : await (async function (_, _, _, _, _) {
+                    var _;
+                    const _ = _(_, _, _),
+                      _ = [];
+                    for (const _ of _) {
+                      _.status = "uploading";
+                      const _ = await _(
+                        _,
+                        _.filename,
+                        null !== (_ = _.language) && void 0 !== _ ? _ : -1,
+                        _,
+                      );
+                      (_.status = _.bSuccess ? "success" : "failed"),
+                        (_.message =
+                          !_.bSuccess && _.elErrorMessage
+                            ? _.elErrorMessage
+                            : ""),
+                        _.push({
+                          bSuccess: _.bSuccess,
+                          image: _,
+                          uploadResult: _.result,
+                        });
+                    }
+                    return _;
+                  })(this.GetUploadImages(), _, _, _, this.m_cancel.token)),
+            _
+          );
         }
         CancelAllUploads() {
-          for (let _ of this.m_allCancelTokens)
+          var _;
+          null === (_ = this.m_cancel) ||
+            void 0 === _ ||
             _.cancel((0, _._)("#ImageUpload_CancelRequest"));
-          this.m_allCancelTokens = new Array();
         }
       }
       function _(_, _, _) {

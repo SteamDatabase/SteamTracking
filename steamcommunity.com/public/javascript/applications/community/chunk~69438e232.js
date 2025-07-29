@@ -6072,8 +6072,8 @@
         Y = r(3088),
         K = r(22797),
         Q = r(69381),
-        X = r(81393),
-        Z = r(6144),
+        Z = r(81393),
+        X = r(6144),
         J = r(56011),
         $ = r(73745),
         ee = r(42951),
@@ -6252,7 +6252,7 @@
         }
         SetGlobalHeaderHidden(e) {
           const t = document.getElementsByClassName("responsive_header");
-          (0, X.wT)(t.length <= 1, "Must have at most one responsive_header"),
+          (0, Z.wT)(t.length <= 1, "Must have at most one responsive_header"),
             t.length >= 1 && (t[0].style.display = e ? "none" : null);
         }
         SetFooterPinnedToBottom(e) {
@@ -6492,7 +6492,7 @@
         constructor() {
           super(...arguments),
             (this.m_refContent = s.createRef()),
-            (this.m_sendReadInfo = new Z.LU()),
+            (this.m_sendReadInfo = new X.LU()),
             (this.m_bSentRead = !1);
         }
         OnEnterVisible() {
@@ -8573,70 +8573,6 @@
           return "CGameSummary";
         }
       }
-      class X extends v.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            X.prototype.appid || C.Sg(X.M()),
-            v.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
-                fields: {
-                  appid: { n: 1, br: C.qM.readUint32, bw: C.gp.writeUint32 },
-                  total_playtime_percentagex100: {
-                    n: 2,
-                    br: C.qM.readUint32,
-                    bw: C.gp.writeUint32,
-                  },
-                  relative_playtime_percentagex100: {
-                    n: 3,
-                    br: C.qM.readUint32,
-                    bw: C.gp.writeUint32,
-                  },
-                },
-              }),
-            X.sm_m
-          );
-        }
-        static MBF() {
-          return X.sm_mbf || (X.sm_mbf = C.w0(X.M())), X.sm_mbf;
-        }
-        toObject(e = !1) {
-          return X.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return C.BT(X.M(), e, t);
-        }
-        static fromObject(e) {
-          return C.Uq(X.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (M().BinaryReader)(e),
-            r = new X();
-          return X.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return C.zj(X.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (M().BinaryWriter)();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          C.i0(X.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (M().BinaryWriter)();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSimpleGameSummary";
-        }
-      }
       class Z extends v.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -8651,7 +8587,11 @@
                 proto: Z,
                 fields: {
                   appid: { n: 1, br: C.qM.readUint32, bw: C.gp.writeUint32 },
-                  rank: { n: 2, br: C.qM.readUint32, bw: C.gp.writeUint32 },
+                  total_playtime_percentagex100: {
+                    n: 2,
+                    br: C.qM.readUint32,
+                    bw: C.gp.writeUint32,
+                  },
                   relative_playtime_percentagex100: {
                     n: 3,
                     br: C.qM.readUint32,
@@ -8694,6 +8634,66 @@
           return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CSimpleGameSummary";
+        }
+      }
+      class X extends v.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            X.prototype.appid || C.Sg(X.M()),
+            v.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            X.sm_m ||
+              (X.sm_m = {
+                proto: X,
+                fields: {
+                  appid: { n: 1, br: C.qM.readUint32, bw: C.gp.writeUint32 },
+                  rank: { n: 2, br: C.qM.readUint32, bw: C.gp.writeUint32 },
+                  relative_playtime_percentagex100: {
+                    n: 3,
+                    br: C.qM.readUint32,
+                    bw: C.gp.writeUint32,
+                  },
+                },
+              }),
+            X.sm_m
+          );
+        }
+        static MBF() {
+          return X.sm_mbf || (X.sm_mbf = C.w0(X.M())), X.sm_mbf;
+        }
+        toObject(e = !1) {
+          return X.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return C.BT(X.M(), e, t);
+        }
+        static fromObject(e) {
+          return C.Uq(X.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (M().BinaryReader)(e),
+            r = new X();
+          return X.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return C.zj(X.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (M().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          C.i0(X.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (M().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CGameRank";
         }
       }
@@ -8711,7 +8711,7 @@
                 proto: J,
                 fields: {
                   category: { n: 1, br: C.qM.readString, bw: C.gp.writeString },
-                  rankings: { n: 2, c: Z, r: !0, q: !0 },
+                  rankings: { n: 2, c: X, r: !0, q: !0 },
                 },
               }),
             J.sm_m
@@ -9234,7 +9234,7 @@
                   stats: { n: 2, c: L },
                   appid: { n: 4, c: K, r: !0, q: !0 },
                   relative_monthly_stats: { n: 5, c: L },
-                  game_summary: { n: 6, c: X, r: !0, q: !0 },
+                  game_summary: { n: 6, c: Z, r: !0, q: !0 },
                 },
               }),
             ae.sm_m
@@ -11670,16 +11670,16 @@
       }
       const Ke = (e, t, r) => ["useMeetSteamGetRegistrationDetails", e, t, r];
       var Qe = r(34629),
-        Xe = r(14947);
-      class Ze {
+        Ze = r(14947);
+      class Xe {
         static Get() {
-          return Ze.s_Singleton || (Ze.s_Singleton = new Ze()), Ze.s_Singleton;
+          return Xe.s_Singleton || (Xe.s_Singleton = new Xe()), Xe.s_Singleton;
         }
         constructor() {
           (this.m_isLoading = !1),
             (this.m_existingRegistrations = new Map()),
             (this.m_selections = new Map()),
-            (0, Xe.Gn)(this);
+            (0, Ze.Gn)(this);
         }
         Init(e, t, r, i) {
           (this.m_transport = e),
@@ -11700,7 +11700,7 @@
           const r = await b.GetRegistrations(this.m_transport, e);
           (this.m_isLoading = !1),
             r.BSuccess() &&
-              (0, Xe.h5)(() => {
+              (0, Ze.h5)(() => {
                 r.Body()
                   .registrations()
                   .forEach((e) => {
@@ -11837,12 +11837,12 @@
         }
       }
       function Je() {
-        return (0, o.q3)(() => Ze.Get().BIsLoading());
+        return (0, o.q3)(() => Xe.Get().BIsLoading());
       }
-      (0, Qe.Cg)([Xe.sH], Ze.prototype, "m_isLoading", void 0),
-        (0, Qe.Cg)([Xe.sH], Ze.prototype, "m_existingRegistrations", void 0),
-        (0, Qe.Cg)([Xe.sH], Ze.prototype, "m_selections", void 0),
-        (0, Qe.Cg)([Xe.XI.bound], Ze.prototype, "SetSelection", null);
+      (0, Qe.Cg)([Ze.sH], Xe.prototype, "m_isLoading", void 0),
+        (0, Qe.Cg)([Ze.sH], Xe.prototype, "m_existingRegistrations", void 0),
+        (0, Qe.Cg)([Ze.sH], Xe.prototype, "m_selections", void 0),
+        (0, Qe.Cg)([Ze.XI.bound], Xe.prototype, "SetSelection", null);
       var $e = r(60746),
         et = r(9154),
         tt = r(738),
@@ -12140,7 +12140,7 @@
                 .filter((e) =>
                   e.sessions.some(
                     (t) =>
-                      Ze.Get().GetRegistrationStatus(e.group_id, t.id) == s,
+                      Xe.Get().GetRegistrationStatus(e.group_id, t.id) == s,
                   ),
                 )
                 .filter((e) => Boolean(e.ask_registration_question))
@@ -12293,7 +12293,7 @@
                   (e, t) =>
                     e.set(
                       t.id,
-                      Ze.Get().GetRegistrationStatus(r.group_id, t.id),
+                      Xe.Get().GetRegistrationStatus(r.group_id, t.id),
                     ),
                   new Map(),
                 ),
@@ -12342,8 +12342,8 @@
                             p(() =>
                               ((e) => {
                                 const t =
-                                  Ze.Get().GetSelection(r.group_id) == e;
-                                Ze.Get().SetSelection(
+                                  Xe.Get().GetSelection(r.group_id) == e;
+                                Xe.Get().SetSelection(
                                   r.group_id,
                                   t ? void 0 : e,
                                 );
@@ -12569,7 +12569,7 @@
         !(function (e, t, r, i) {
           m.useEffect(() => {
             (async () => {
-              Ze.Get().Init(e, t, r, i), await Ze.Get().Load();
+              Xe.Get().Init(e, t, r, i), await Xe.Get().Load();
             })();
           }, [e, t, r, i]);
         })(l, s.iA.accountid, t.clanSteamID.GetAccountID(), t.GID);
@@ -12578,16 +12578,16 @@
           w = Tt(),
           S = Je(),
           v = c || S,
-          M = (0, o.q3)(() => Ze.Get().BHaveSelectionsChanged()),
-          C = (0, o.q3)(() => Ze.Get().BIsAddingOrChangingSelections()),
-          E = (0, o.q3)(() => Ze.Get().BHasAlreadyRegistered()),
+          M = (0, o.q3)(() => Xe.Get().BHaveSelectionsChanged()),
+          C = (0, o.q3)(() => Xe.Get().BIsAddingOrChangingSelections()),
+          E = (0, o.q3)(() => Xe.Get().BHasAlreadyRegistered()),
           R = (0, o.q3)(() =>
-            Ze.Get()
+            Xe.Get()
               .GetSelectedGroups()
               .reduce((e, r) => {
                 var i, n, a;
                 const s = It(t, r),
-                  o = Ze.Get().GetSelection(s.group_id),
+                  o = Xe.Get().GetSelection(s.group_id),
                   l =
                     null !==
                       (a =
@@ -12656,7 +12656,7 @@
                     eventModel: t,
                     fnConfirm: async (e) => {
                       d(!0),
-                        (await Ze.Get().Save(e)) || h(),
+                        (await Xe.Get().Save(e)) || h(),
                         y.refetch(),
                         d(!1);
                     },
@@ -12762,8 +12762,8 @@
         return m.createElement(At, {
           ...e,
           fnOnClick: (e, t) => {
-            const r = Ze.Get().GetSelection(e) == t;
-            Ze.Get().SetSelection(e, r ? void 0 : t);
+            const r = Xe.Get().GetSelection(e) == t;
+            Xe.Get().SetSelection(e, r ? void 0 : t);
           },
           rgAvailability: null == a ? void 0 : a.data,
           bAllowedToRegisterIfFull:
@@ -13055,12 +13055,12 @@
           }),
           [h, b, w] = (0, a.uD)(!1),
           [S, v, M] = (0, o.q3)(() => [
-            Ze.Get().GetRegistrationStatus(n.group.group_id, n.session.id),
-            Ze.Get().BIsRegisteredForDifferentSessionInGroup(
+            Xe.Get().GetRegistrationStatus(n.group.group_id, n.session.id),
+            Xe.Get().BIsRegisteredForDifferentSessionInGroup(
               n.group.group_id,
               n.session.id,
             ),
-            Ze.Get().BGetRegistrationSessionID(n.group.group_id),
+            Xe.Get().BGetRegistrationSessionID(n.group.group_id),
           ]),
           C =
             null ===
@@ -14089,12 +14089,19 @@
               "mp4",
               "mpeg",
               "ogv",
+              "webp",
+              "avif",
             ].indexOf(l)
-          )
+          ) {
+            let e = l || o;
             return void this.SetUploadFileError(
               5,
-              (0, g.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", o),
+              (0, g.we)(
+                "#Chat_Settings_Error_ChatUploadFileTypeNotSupported",
+                e,
+              ),
             );
+          }
           const c = await a(e);
           this.SetFileToUpload(c.file),
             (this.m_fileUploadProps.imageHeight = c.height),
@@ -14123,12 +14130,14 @@
               ),
             );
           let s = e.name.split(".").pop().toLowerCase();
-          -1 != ["zip"].indexOf(s)
-            ? this.SetFileToUpload(e)
-            : this.SetUploadFileError(
-                5,
-                (0, g.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", a),
-              );
+          if (-1 != ["zip"].indexOf(s)) this.SetFileToUpload(e);
+          else {
+            let e = s || a;
+            this.SetUploadFileError(
+              5,
+              (0, g.we)("#Chat_Settings_Error_FileTypeNotZip", e),
+            );
+          }
         }
         SetFileToUpload(e) {
           if (
@@ -14668,18 +14677,18 @@
       var Y = r(65946),
         K = r(52038),
         Q = r(49333);
-      function X(e) {
+      function Z(e) {
         const { fileUploadManager: t } = e,
           r = (0, Y.q3)(() => t.file_upload_props.eUploadState);
         return 1 == r
-          ? a.createElement(Z, { fileUploadManager: t })
+          ? a.createElement(X, { fileUploadManager: t })
           : 3 == r || 5 == r || 4 == r
             ? a.createElement($, { fileUploadManager: t })
             : 0 != r
               ? a.createElement(J, { fileUploadManager: t })
               : null;
       }
-      function Z(e) {
+      function X(e) {
         const { fileUploadManager: t } = e,
           r = t.file;
         return a.createElement(
@@ -15151,7 +15160,7 @@
               "div",
               null,
               a.createElement(H, { fileUploadManager: n }),
-              a.createElement(X, { fileUploadManager: n }),
+              a.createElement(Z, { fileUploadManager: n }),
             )
           : t
             ? a.createElement("div", null, (0, g.we)("#CloudUpload_NotSupport"))
@@ -15707,8 +15716,8 @@
         K =
           /(?:steampowered\.com|valve\.org\/store|store\.\S+\.steam\.dev|steam\.dev\/store|store\.steamchina\.com)\/(?:news|newshub)\/(group|app)\/(\w+)\/view\/(\d+)/i,
         Q = /:\/\/medal.tv\/(?:clip|clips)\/([a-z0-9]+)/i,
-        X = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
-        Z = /twitter\.com\/(\w+)(\/?)$/i,
+        Z = /sketchfab.com\/(?:models\/(?:[^\/\s]+-)?)([a-z0-9]{32})/i,
+        X = /twitter\.com\/(\w+)(\/?)$/i,
         J = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
         $ = /twitch\.tv\/(\w+)(\/?)$/i,
         ee =
@@ -15743,8 +15752,8 @@
                   { urlRegExp: new RegExp(K), fnBBComponent: ge },
                   { urlRegExp: new RegExp(H), fnBBComponent: pe },
                   { urlRegExp: new RegExp(Q), fnBBComponent: oe },
-                  { urlRegExp: new RegExp(X), fnBBComponent: le },
-                  { urlRegExp: new RegExp(Z), fnBBComponent: Be },
+                  { urlRegExp: new RegExp(Z), fnBBComponent: le },
+                  { urlRegExp: new RegExp(X), fnBBComponent: Be },
                   { urlRegExp: new RegExp(J), fnBBComponent: ye },
                   { urlRegExp: new RegExp($), fnBBComponent: fe },
                   { urlRegExp: new RegExp(ee), fnBBComponent: he },
@@ -15794,7 +15803,7 @@
         return (0, T.Pm)(e, null == t ? void 0 : t.event);
       }
       function le(e, t) {
-        let r = new RegExp(X).exec(e);
+        let r = new RegExp(Z).exec(e);
         if (r && r.length > 1) {
           let e = r[1];
           if (e && e.length > 1) return i.createElement(W, { modelID: e });

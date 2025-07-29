@@ -3230,7 +3230,7 @@
             ),
             (this.m_player = new _._(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
-            this.m_player.PlayMPD(_, null, null, !1),
+            this.m_player.PlayMPD(_),
             (this.m_bMuted = _("muted")),
             (this.m_nVolume = _("volume")),
             this.m_player.SetMuted(this.m_bMuted),

@@ -20,6 +20,7 @@
 	"Menu_NewReleases": "Lançamentos",
 	"Menu_OnSale": "Em oferta",
 	"Menu_SearchPlaceholder": "Buscar na loja",
+	"Menu_ClearSearchTerm": "Limpar termo de busca",
 	"Menu_Wishlist": "Lista de desejos",
 	"Menu_Cart": "Carrinho",
 	"Menu_Popover_TopLinks": "Links principais",

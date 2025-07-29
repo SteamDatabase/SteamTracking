@@ -1685,20 +1685,24 @@ body.v6 .game_description_column h2.gradientbg {
 	justify-content: center;
 	width: 32px;
 	height: 32px;
-	line-height: 1;
-	font-size: 18px;
-	font-weight: bold;
 	background: rgba(0, 0, 0, 0.5);
 	color: white;
 	border-radius: 50%;
 	user-select: none;
 	opacity: 0;
 	transition: opacity 0.2s ease;
+
+	img {
+		transition: margin-left 0.2s ease;
+	}
 }
 
 .game_area_description .bb_img_play_pause.paused {
 	opacity: 1;
-	text-indent: 3px; /* nudge to center */
+
+	img {
+		margin-left: 3px;
+	}
 }
 
 .game_area_description .bb_img_ctn:hover .bb_img_play_pause.playing {
