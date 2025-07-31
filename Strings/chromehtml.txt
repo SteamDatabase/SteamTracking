@@ -2118,7 +2118,6 @@ EUFSPartitionEnrollmentStatus
 EUFSPartitionSegmentStatus
 EUFSPartitionType
 EUniverse
-EUserConfigStoreNamespace
 EUserNewsEventType
 EVideoEncryptionKeyTrackType
 EVideoFileFormat
@@ -3932,6 +3931,7 @@ Zulu
 \n\ndependency
 \n\ndeprecated
 \n\nerror_code
+\n\nfullscreen
 \n\ngo_package
 \n\ninput_type
 \n\nis_default
@@ -4555,7 +4555,6 @@ eurotransit
 event created
 event deleted
 event updated
-events
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
 expires
@@ -5153,7 +5152,6 @@ libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
-library
 librt.so.1
 libtier0_s.so
 libvstdlib_s.so

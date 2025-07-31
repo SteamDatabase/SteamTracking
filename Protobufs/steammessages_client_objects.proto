@@ -614,6 +614,7 @@ message CMsgShortcutInfo {
 	optional bool is_devkit_shortcut = 18;
 	optional string devkit_gameid = 19;
 	optional bool remote_launch_available = 20;
+	optional string sortas = 21;
 }
 
 message CMsgShortcutInfos {

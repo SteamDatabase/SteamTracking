@@ -1005,6 +1005,7 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
+(1vc
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -2162,6 +2163,7 @@ $ffn
 18IDecodedVideoFrame
 18IUDPSocketCallback
 18IWorkThreadFactory
+19:37:29
 19CCuratorPreferences
 19CHTTPClientResponse
 19CMsgIPAddressBucket
@@ -2240,7 +2242,6 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:28:39
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2462,7 +2463,6 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9HDD
 9IGv
 9IMemAlloc
 9PE,$
@@ -5169,7 +5169,6 @@ EUFSPartitionEnrollmentStatus
 EUFSPartitionSegmentStatus
 EUFSPartitionType
 EUniverse
-EUserConfigStoreNamespace
 EUserNewsEventType
 EVP lib
 EVP_CIPHER_CTX_copy
@@ -6388,7 +6387,7 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul 24 2025
+Jul 31 2025
 July
 June
 K'iche'
@@ -13003,7 +13002,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenB
+ggen
 givenName
 global constructors keyed to 
 global destructors keyed to 
@@ -15302,7 +15301,6 @@ libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
-library
 library bug
 library has no ciphers
 librt.so.1

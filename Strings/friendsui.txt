@@ -5206,6 +5206,7 @@ Zulu
 \n\ndeprecated
 \n\nerror_code
 \n\nframe_size
+\n\nfullscreen
 \n\ngamma_ramp
 \n\ngo_package
 \n\ninput_mark
@@ -6378,11 +6379,8 @@ https://avatars.beta.steamstatic.com/
 https://avatars.cdn.steamchina.eccdnx.com/
 https://avatars.steamstatic.com/
 https://beta.steamcommunity.com/
-https://cdn.beta.steampowered.com/steamcommunity/beta/
 https://cdn.beta.steampowered.com/store
-https://cdn.steamchina.eccdnx.com/steamcommunity/public/
 https://cdn.steamchina.eccdnx.com/store
-https://cdn.steamstatic.com/steamcommunity/public/
 https://cdn.steamstatic.com/store
 https://clan.beta.steamstatic.com/
 https://clan.cdn.steamchina.eccdnx.com/
@@ -6391,7 +6389,9 @@ https://community-china.%s.steam.dev/
 https://community-china.beta.valve.org/
 https://community.%s.steam.dev/
 https://community.csgo.com.cn/
+https://community.steamstatic.com/
 https://my.steamchina.com/
+https://my.steamchina.eccdnx.com/
 https://partner.steamgames.com/
 https://s.team/q/
 https://shared.beta.steamstatic.com/
@@ -6401,7 +6401,6 @@ https://shared.cdn.steamchina.eccdnx.com/store_item_assets/steam/apps
 https://shared.steamstatic.com/
 https://shared.steamstatic.com/store_item_assets/steam/apps
 https://steam-chat.com/
-https://steamcommunity-a.akamaihd.net/
 https://steamcommunity.com/
 https://steamloopback.host
 https://steampublishbeta.valve.org/

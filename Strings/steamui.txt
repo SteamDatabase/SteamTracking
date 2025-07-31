@@ -2061,6 +2061,7 @@ ${LANGUAGE}
 %s frame stats: %d frames, %2.2f%% dropped, capture: %2.2fms, convert: %2.2fms, encode: %2.2fms, network: %2.2fms, decode: %2.2fms, display: %2.2fms %2.2f FPS, latency: %2.2fms, input latency: %2.2fms\n
 %s invoked without a prompt callback registered
 %s is currently read-only.\nDid you wish to check out file from P4?\n
+%s is set to a bad value %f!
 %s overflow!\n
 %s rates: [min=%lld][max=%lld][avg=%lld]
 %s requires %d arguments; only %d given
@@ -2109,6 +2110,7 @@ ${LANGUAGE}
 %s/%s-argv.json
 %s/%s-settings.json
 %s/%s.desktop
+%s/%s.json
 %s/%s.png
 %s/%s/%s.previous.txt
 %s/%s/%s.txt
@@ -2135,6 +2137,7 @@ ${LANGUAGE}
 %s/appcache/librarycache
 %s/assets.vdf
 %s/chromehtml
+%s/cloudstorage
 %s/controller_base/
 %s/controller_base/%s
 %s/controller_base/templates/%s
@@ -2169,7 +2172,6 @@ ${LANGUAGE}
 %s/vhui.log
 %s/video_bitrate
 %s: %s returned %s %d (%s), disconnecting TCP connection. %d sends, %lld bytes outstanding %s\n
-%s: %s|||%s-%dx%d
 %s: (%d bit)\n
 %s: Command '%s' returned: %d
 %s: Corrupt stream, resetting\n
@@ -3256,6 +3258,7 @@ ${LANGUAGE}
 (\t"6\n\vCMsgJSAlert
 (\t"7\n"CMsgTest_NotifyClient_Notification
 (\t"7\n"CMsgTest_NotifyServer_Notification
+(\t"7\n5CAccountHardware_UpdateControllerUsageReport_Response"
 (\t"8\n#CParental_ParentalLock_Notification
 (\t"8\n\rCMsgJSConfirm
 (\t"8\n\tCMsgMulti
@@ -3620,6 +3623,7 @@ ${LANGUAGE}
 (\v2>.CGameRecording_QueryPhases_Response.Phase.BackgroundRecording
 (\v2>.CSteamTV_GetBroadcastChannelBroadcasters_Response.Broadcaster
 (\v2?.CCommunity_GetUserPartnerEventViewStatus_Response.PartnerEvent
+(\v2@.CAccountHardware_UpdateControllerUsageReport_Request.Controller
 (\v2@.CAccountHardware_VRCompatibilityCheck_Response.ComponentDisplay
 (\v2@.CAuthentication_RefreshToken_Enumerate_Response.TokenUsageEvent
 (\v2@.CCommunity_MarkPartnerEventsForUser_Request.PartnerEventMarking
@@ -4279,6 +4283,7 @@ ${LANGUAGE}
 *ZN23CSystemReportController20JSSubmitSystemReportEPKc9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN23CSystemReportController21YldSubmitSystemReportERK10CUtlString9CSmartPtrI18CJSCallbackPromiseEEUlP29UploadLocalClientLogsResult_tbS5_E_
 *ZN23CSystemReportController22JSGenerateSystemReportE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
+*ZN23CValveControllerManager34RunUpdateUsageReportIfNecessaryJobEvEUlvE_
 *ZN24CFamilySharingController18SetPreferredLenderEjj9CSmartPtrI18CJSCallbackPromiseEEUlP26SetPreferredLenderResult_tbS2_E_
 *ZN24CGameRecordingController13FindIDForClipE7CGameIDEUlPKcE_
 *ZN24CGameRecordingController15BCreateTimelineE7CGameIDP10CUtlStringPP19CGameTimelineWriterEUlPKcE_
@@ -6319,6 +6324,7 @@ ${LANGUAGE}
 /data/src/clientcommon/waylandcontext.cpp
 /data/src/clientcommon/webui_job_dispatcher.cpp
 /data/src/clientcommon/webui_transport.cpp
+/data/src/common/RateLimiter.h
 /data/src/common/amount.cpp
 /data/src/common/amount.h
 /data/src/common/appregkeystring.h
@@ -7226,6 +7232,8 @@ ${LANGUAGE}
 10CUtlMemoryIN11CUtlHashMapISsN29CVRDeviceConnectivityListener13ListenerSet_tE10CDefEqualsISsE11HashFunctorISsESsE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapISt4pairISsN2vr22ETrackedDevicePropertyEEN25CVRPropertyChangeListener13ListenerSet_tE10CDefEqualsIS4_E11HashFunctorIS4_ES4_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapISt4pairISsN2vr22ETrackedDevicePropertyEEN25CVRPropertyChangeListener13ListenerSet_tE10CDefEqualsIS4_E11HashFunctorIS4_ES4_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapISt4pairIj10CUtlStringEN16CTokenBucketBaseIS3_E12ClientData_tE10CDefEqualsIS3_E11HashFunctorIS3_ES3_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapISt4pairIj10CUtlStringEN16CTokenBucketBaseIS3_E12ClientData_tE10CDefEqualsIS3_E11HashFunctorIS3_ES3_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapISt4pairIyN2vr22ETrackedDevicePropertyEE10CUtlVectorIPN25CVRPropertyChangeListener13ListenerSet_tES_IS8_EE10CDefEqualsIS4_E11HashFunctorIS4_ES4_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapISt4pairIyN2vr22ETrackedDevicePropertyEE10CUtlVectorIPN25CVRPropertyChangeListener13ListenerSet_tES_IS8_EE10CDefEqualsIS4_E11HashFunctorIS4_ES4_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tEE
@@ -7566,6 +7574,7 @@ ${LANGUAGE}
 10CUtlVectorIN11CUtlHashMapISsN21CVRPathChangeListener13ListenerSet_tE10CDefEqualsISsE11HashFunctorISsESsE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapISsN29CVRDeviceConnectivityListener13ListenerSet_tE10CDefEqualsISsE11HashFunctorISsESsE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapISt4pairISsN2vr22ETrackedDevicePropertyEEN25CVRPropertyChangeListener13ListenerSet_tE10CDefEqualsIS4_E11HashFunctorIS4_ES4_E12HashBucket_tE10CUtlMemoryISC_EE
+10CUtlVectorIN11CUtlHashMapISt4pairIj10CUtlStringEN16CTokenBucketBaseIS3_E12ClientData_tE10CDefEqualsIS3_E11HashFunctorIS3_ES3_E12HashBucket_tE10CUtlMemoryISC_EE
 10CUtlVectorIN11CUtlHashMapISt4pairIyN2vr22ETrackedDevicePropertyEES_IPN25CVRPropertyChangeListener13ListenerSet_tE10CUtlMemoryIS7_EE10CDefEqualsIS4_E11HashFunctorIS4_ES4_E12HashBucket_tES8_ISG_EE
 10CUtlVectorIN11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIii10CDefEqualsIiE11HashFunctorIiEiE12HashBucket_tE10CUtlMemoryIS6_EE
@@ -7790,6 +7799,7 @@ ${LANGUAGE}
 11CUtlHashMapISsN21CVRPathChangeListener13ListenerSet_tE10CDefEqualsISsE11HashFunctorISsESsE
 11CUtlHashMapISsN29CVRDeviceConnectivityListener13ListenerSet_tE10CDefEqualsISsE11HashFunctorISsESsE
 11CUtlHashMapISt4pairISsN2vr22ETrackedDevicePropertyEEN25CVRPropertyChangeListener13ListenerSet_tE10CDefEqualsIS3_E11HashFunctorIS3_ES3_E
+11CUtlHashMapISt4pairIj10CUtlStringEN16CTokenBucketBaseIS2_E12ClientData_tE10CDefEqualsIS2_E11HashFunctorIS2_ES2_E
 11CUtlHashMapISt4pairIyN2vr22ETrackedDevicePropertyEE10CUtlVectorIPN25CVRPropertyChangeListener13ListenerSet_tE10CUtlMemoryIS7_EE10CDefEqualsIS3_E11HashFunctorIS3_ES3_E
 11CUtlHashMapIiN22CCompletionPortManager11SAssocEntryE10CDefEqualsIiE11HashFunctorIiEiE
 11CUtlHashMapIii10CDefEqualsIiE11HashFunctorIiEiE
@@ -7955,7 +7965,7 @@ ${LANGUAGE}
 12CUtlDelegateIFbRKN11IHTMLWindow23OpenFileDialogRequest_tEEE
 12CUtlDelegateIFvP11IHTMLWindowEE
 12CUtlDelegateIFvPN11IHTMLWindow14ErrorStrings_tEEE
-12CUtlDelegateIFviiiiddPKciiEE
+12CUtlDelegateIFviiiibddPKciiEE
 12CVideoFormat
 12CWebUIMsgJob
 12FamilyGroups
@@ -8369,6 +8379,7 @@ ${LANGUAGE}
 16CStreamVideoMode
 16CStreamingKeymap
 16CStructNetPacket
+16CTokenBucketBaseISt4pairIj10CUtlStringEE
 16CTrackedCallback
 16CTransportDialog
 16CVR2DGameOverlay
@@ -8522,6 +8533,7 @@ ${LANGUAGE}
 18CScheduledFunctionI19CSettingsControllerE
 18CScheduledFunctionI20CWebSocketConnectionE
 18CScheduledFunctionI21CHTTPClientConnectionE
+18CScheduledFunctionI23CValveControllerManagerE
 18CScheduledFunctionI24CGameRecordingControllerE
 18CScheduledFunctionI25CHTTPClientNetworkRequestE
 18CScheduledFunctionI25CHardwareUpdateControllerE
@@ -9137,6 +9149,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI29CSteamUICurrentUserControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI29CSteamUICurrentUserControllerJjbEE
 20CJSMethodCallHandlerI29CSteamUICurrentUserControllerJyEE
+20CJSMethodCallHandlerI30CSteamUICloudStorageControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerIN4vgui4HTMLEJ9CSmartPtrI15CJSCallbackFuncEEE
 20CMarketingController
 20CMsgClientHideFriend
@@ -10036,6 +10049,7 @@ ${LANGUAGE}
 30CShader_GetStaleBucket_Request
 30CShader_RegisterShader_Request
 30CSteamOSSLS_SetEnabled_Request
+30CSteamUICloudStorageController
 30CStoreBrowse_GetItems_Response
 30CStore_GetTagList_Response_Tag
 30CSystemBluetoothControllerStub
@@ -11548,6 +11562,7 @@ ${LANGUAGE}
 5,czQH
 5-535;5A5Q5e5o5q5w5{5}5
 5.CAccountHardware_RegisterValveIndexComponent_Request
+5.CAccountHardware_UpdateControllerUsageReport_Request
 5.CAuthenticationSupport_MarkTokenCompromised_Response"
 5.CAuthenticationSupport_QueryRefreshTokenByID_Request
 5.CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"
@@ -11628,6 +11643,7 @@ ${LANGUAGE}
 51CTransportValidation_TriggerSyntheticEvents_Request
 524288
 52CAccountHardware_RegisterValveIndexComponent_Request
+52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
 52CAuthenticationSupport_QueryRefreshTokenByID_Request
 52CChatRoom_SetChatRoomGroupWatchingBroadcast_Response
@@ -11647,6 +11663,7 @@ ${LANGUAGE}
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
 52F*
 53CAccountHardware_RegisterValveIndexComponent_Response
+53CAccountHardware_UpdateControllerUsageReport_Response
 53CAuthenticationSupport_QueryRefreshTokenByID_Response
 53CCommunity_GetBotReviewScoreForRecommendation_Request
 53CCommunity_GetUserPartnerEventsAppPriorities_Response
@@ -11855,6 +11872,7 @@ ${LANGUAGE}
 6-lwZA
 6-nn
 6.CAccountHardware_RegisterValveIndexComponent_Response"
+6.CAccountHardware_UpdateControllerUsageReport_Response"
 6.CAuthenticationSupport_QueryRefreshTokenByID_Response"
 6.CCommunity_GetBotReviewScoreForRecommendation_Request
 6.CCommunity_GetUserPartnerEventsAppPriorities_Response"
@@ -11890,6 +11908,7 @@ ${LANGUAGE}
 61CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response
 61CSteamTV_GetBroadcastChannelBroadcasters_Response_Broadcaster
 62CCommunity_GetUserPartnerEventViewStatus_Response_PartnerEvent
+63CAccountHardware_UpdateControllerUsageReport_Request_Controller
 63CAccountHardware_VRCompatibilityCheck_Response_ComponentDisplay
 63CAuthentication_RefreshToken_Enumerate_Response_TokenUsageEvent
 63CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
@@ -12326,7 +12345,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hh_}
 9IGv
 9Inventory
 9PE,$
@@ -12410,6 +12428,7 @@ ${LANGUAGE}
 :\v-2147483648
 :authorit
 :authority
+:eBj
 :eaI
 :metho
 :method
@@ -12499,6 +12518,7 @@ ${LANGUAGE}
 <\n8k_EStreamControlInputControllerWirelessPresence_OBSOLETE
 <\n8k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime
 <\n\ffamily_group
+<\n\nController
 <\n\vfilter_tags
 <\tVc]h7
 <appId>
@@ -13266,6 +13286,7 @@ Account logon denied, need two-factor code
 Account not verified
 Account: %s \n
 AccountHardware
+AccountHardware.UpdateControllerUsageReport#1
 AccountName
 AccountPrivateData
 AccountPublicData
@@ -13557,6 +13578,7 @@ Apps.SetShortcutIcon
 Apps.SetShortcutIsVR
 Apps.SetShortcutLaunchOptions
 Apps.SetShortcutName
+Apps.SetShortcutSortAs
 Apps.SetShortcutStartDir
 Apps.SetStreamingClientForApp
 Apps.SetThirdPartyControllerConfiguration
@@ -13636,6 +13658,7 @@ Attempted to set an invalid startup mode
 Attempting cloud eval with invalid user type %s
 Attempting to fetch value instead of handling error 
 Attempting to purchase same app in different packages
+Attempting to remove more tokens than the bucket size! starting: %u, toremove: %u
 Attempting to save a clip to %s from %s, %s[%llu] to %s[%llu]: %d timelines, %s including current, %s recording
 AttribCapabilityGroup
 AuDp,
@@ -16423,6 +16446,7 @@ CSteamUIAppController::RefreshAllDynamicConfigs - Process App KV
 CSteamUIAppController::RefreshAllLaunchOptions
 CSteamUIAppController::RefreshApplication
 CSteamUIAppController::RefreshShortcuts
+CSteamUICloudStorageController::OnPostLogonState
 CSteamUIController::OnGamepadUIIdleThresholdReached
 CSteamUIController::OnUIModeChanged
 CSteamUICurrentUserController::OnClanInfoChanged
@@ -17308,6 +17332,7 @@ Cloud.ResolveAppSyncConflict
 Cloud.RetryAppSync
 CloudManager
 CloudManager\HintAppsToPreload
+CloudStorage.WriteKey
 Code Signing
 Code=
 CodeSignature
@@ -18691,7 +18716,6 @@ EUFSPartitionEnrollmentStatus
 EUFSPartitionSegmentStatus
 EUFSPartitionType
 EUniverse
-EUserConfigStoreNamespace
 EUserNewsEventType
 EUserReviewScore
 EUserReviewScorePreference
@@ -19347,6 +19371,7 @@ Failed to get Steam Service Start function
 Failed to get callback when creating UGC item for clip %s upload
 Failed to get clip loading lock when loading all clips
 Failed to get clip summary after saving clip
+Failed to get controller identity for slot: %d\n
 Failed to get current OS branch
 Failed to get data from device: %s. will return silence.
 Failed to get lock after waiting in %s\n
@@ -21429,6 +21454,7 @@ Invalid index %u
 Invalid install path
 Invalid interlace type specified
 Invalid item type
+Invalid key
 Invalid key for map field.
 Invalid key or variable name.
 Invalid launch configuration
@@ -21648,7 +21674,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 24 2025 23:28:56
+Jul 31 2025 19:37:44
 July
 JumpList
 Jumplist
@@ -23165,6 +23191,7 @@ Method UpdateAuthSessionWithMobileConfirmation() not implemented.
 Method UpdateAuthSessionWithSteamGuardCode() not implemented.
 Method UpdateChatMessageFlair() not implemented.
 Method UpdateContentDescriptors() not implemented.
+Method UpdateControllerUsageReport() not implemented.
 Method UpdateMarketingMessage() not implemented.
 Method UpdateMemberListView() not implemented.
 Method UpdateMessageReaction() not implemented.
@@ -23847,6 +23874,7 @@ N2vr19IVRSteamPrivate_022E
 N2vr19IVRSteamPrivate_023E
 N2vr19IVRSteamPrivate_024E
 N30CGetControllerConfigWorkerBase46CCallbackInternal_OnReceivedDownloadItemResultE
+N30CSteamUICloudStorageController34CCallbackInternal_OnPostLogonStateE
 N30CStreamingClientGameController30CCallback_OnStreamClientResultE
 N30CStreamingClientGameController41CCallback_OnRemoteClientStartStreamResultE
 N30CStreamingClientGameController43CCallback_OnRemoteClientStartStreamProgressE
@@ -24010,12 +24038,12 @@ N6detail10ClosurePtrIMNS_12GenericClassEFP14IHTMLResponsesPKcS5_iiiijbEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFbRKN11IHTMLWindow23OpenFileDialogRequest_tEEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFvP11IHTMLWindowEEE
 N6detail10ClosurePtrIMNS_12GenericClassEFvPN11IHTMLWindow14ErrorStrings_tEEEE
-N6detail10ClosurePtrIMNS_12GenericClassEFviiiiddPKciiEEE
+N6detail10ClosurePtrIMNS_12GenericClassEFviiiibddPKciiEEE
 N6detail13FastDelegateNIP14IHTMLResponsesJPKcS4_iiiijbEEE
 N6detail13FastDelegateNIbJRKN11IHTMLWindow23OpenFileDialogRequest_tEEEE
 N6detail13FastDelegateNIvJP11IHTMLWindowEEE
 N6detail13FastDelegateNIvJPN11IHTMLWindow14ErrorStrings_tEEEE
-N6detail13FastDelegateNIvJiiiiddPKciiEEE
+N6detail13FastDelegateNIvJiiiibddPKciiEEE
 N6google8protobuf10BytesValueE
 N6google8protobuf10FloatValueE
 N6google8protobuf10Int32ValueE
@@ -27503,6 +27531,7 @@ Skipped at least 1 frame while encoding video\n
 Skipping global binding registration: feature unsupported: %s
 Skipping in-progress or failed download for %u, asset type %s
 Skipping js method registration, already exists: %s
+Skipping usage report for controller: %s\n
 Sleep
 Sleep - buffer full
 Sleeping for new frame
@@ -27672,6 +27701,7 @@ St24_Weak_result_type_memfunIPFN6google8protobuf4util6StatusEPNS2_9converter23Pr
 St4pairI14CMetricsSymbol13MetricValue_tE
 St4pairI14CMetricsSymbolS0_E
 St4pairISsN2vr22ETrackedDevicePropertyEE
+St4pairIj10CUtlStringE
 St4pairIj9CSmartPtrI18CJSCallbackPromiseEE
 St4pairIyN2vr22ETrackedDevicePropertyEE
 St5_BindIFPFN6google8protobuf4util6StatusEPNS2_9converter23ProtoStreamObjectWriterENS1_11StringPieceEES6_St12_PlaceholderILi1EEEE
@@ -29226,6 +29256,7 @@ U\n$incoming_invite_mutual_friends_lists
 U\n\fPurchaseInit
 U\n\nDeleteClip
 U\n\nExportClip
+U\n\vcontrollers
 U`2d
 UehX
 Ugaritic
@@ -29448,6 +29479,7 @@ UpdateBios
 UpdateChatMessageFlair
 UpdateConfigurationItem
 UpdateContentDescriptors
+UpdateControllerUsageReport
 UpdateDeviceList
 UpdateDock
 UpdateIMECandidates
@@ -30052,6 +30084,7 @@ Window.SetGamepadUIAutoDisplayScale
 Window.SetGamepadUIManualDisplayScaleFactor
 WindowMaximized
 WindowRestored
+Windowed
 Windows
 WindowsEndSession
 Wired
@@ -30507,6 +30540,7 @@ YldTriggerScreenReaderAction
 YldTrimAll
 YldUnmount
 YldUpdateDownloadSourceList
+YldUpdateUsageReportIfNecessary
 YldZipClip
 YnFpW
 YooMoney
@@ -30693,6 +30727,7 @@ Zulu
 \fGB z
 \fJP~d(2
 \fVHjt
+\f\n\fCAppOverview
 \g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number
 \k is not followed by a braced, angle-bracketed, or quoted name
 \n            Not After : 
@@ -31157,6 +31192,7 @@ Zulu
 \n3CQueuedMatchmakingGameHost_SearchForPlayers_Request
 \n3wV
 \n4CAccountHardware_RegisterValveIndexComponent_Request
+\n4CAccountHardware_UpdateControllerUsageReport_Request
 \n4CQueuedMatchmakingGameHost_SearchForPlayers_Response
 \n4steammessages_remoteclient_service.steamclient.proto
 \n5 K^at
@@ -31553,6 +31589,7 @@ Zulu
 \n\nfree_spots
 \n\nfromitemid
 \n\nfull_audio
+\n\nfullscreen
 \n\ngame_count
 \n\ngamma_ramp
 \n\ngateway_ip
@@ -32571,7 +32608,6 @@ Zulu
 \vOverlayTabs
 \vVIhw
 \vZ\nyVR
-\v\n\fCAppOverview
 \v\n\fRemoteClient
 \v\n\rClientMetrics
 \v\vTSG
@@ -34745,6 +34781,7 @@ cloud_sync_completed
 cloud_sync_down
 cloud_sync_up
 cloudconflict
+cloudstorage/
 clping
 cm_sysid
 cmac
@@ -38244,6 +38281,7 @@ has_adult_content
 has_adult_content_sex
 has_adult_content_violence
 has_community_visible_stats
+has_custom_sort_as
 has_dlc
 has_favorite_badge
 has_leaderboards
@@ -38445,12 +38483,9 @@ https://avatars.beta.steamstatic.com/
 https://avatars.cdn.steamchina.eccdnx.com/
 https://avatars.steamstatic.com/
 https://beta.steamcommunity.com/
-https://cdn.beta.steampowered.com/steamcommunity/beta/
 https://cdn.beta.steampowered.com/store
-https://cdn.steamchina.eccdnx.com/steamcommunity/public/
 https://cdn.steamchina.eccdnx.com/store
 https://cdn.steamstatic.com/controller_config/
-https://cdn.steamstatic.com/steamcommunity/public/
 https://cdn.steamstatic.com/store
 https://clan.beta.steamstatic.com/
 https://clan.cdn.steamchina.eccdnx.com/
@@ -38459,9 +38494,11 @@ https://community-china.%s.steam.dev/
 https://community-china.beta.valve.org/
 https://community.%s.steam.dev/
 https://community.csgo.com.cn/
+https://community.steamstatic.com/
 https://help.steamchina.com/zh/kb/%s
 https://local.steam.dev:8283
 https://my.steamchina.com/
+https://my.steamchina.eccdnx.com/
 https://partner.steam-api.com
 https://partner.steamgames.com/
 https://s.team/q/
@@ -38472,7 +38509,6 @@ https://shared.cdn.steamchina.eccdnx.com/store_item_assets/steam/apps
 https://shared.steamstatic.com/
 https://shared.steamstatic.com/store_item_assets/steam/apps
 https://steam-chat.com/
-https://steamcommunity-a.akamaihd.net/
 https://steamcommunity.com/
 https://steamloopback.host
 https://steamloopback.host/gamerecordings/clips/%s/%s
@@ -42252,6 +42288,7 @@ m_Sequences[ iSequence ].cmdList
 m_ServerName
 m_SettingsArrayChangedCallbacks
 m_ShortcutPath
+m_SortAs
 m_SortedItems
 m_SpewThrottle
 m_StartDir
@@ -42559,6 +42596,7 @@ m_mapStatsBucket
 m_mapStatsBucket[iBucket]
 m_mapSyncingApps
 m_mapTimelineClips
+m_mapTokens
 m_mapUGCScreenshotPromise
 m_mapUnknownApps
 m_mapUserNotificationToCount
@@ -42607,6 +42645,7 @@ m_pClientRequest->m_pWebSocketConnectionCallback
 m_pClientRequest.Get()
 m_pClientSession
 m_pCloudController
+m_pCloudStorageController
 m_pConnection
 m_pConnectionCallback
 m_pConnectionCallback == NULL
@@ -42864,6 +42903,7 @@ m_sCaptureMethod
 m_sCheckoutURL
 m_sClientName
 m_sClientVideoDecoderInfo
+m_sCloudStorageDirectory
 m_sCmd
 m_sColorName
 m_sCommunityCDNDomain
@@ -43070,6 +43110,7 @@ m_strWebSessionID
 m_strWindowConfig
 m_telemetry
 m_threadedResolver
+m_tokenBucketControllerReports
 m_trackedDeviceConnectivityListener
 m_trackedDevicePropertyListener
 m_treeAppsInstalled

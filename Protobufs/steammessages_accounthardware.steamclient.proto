@@ -43,6 +43,18 @@ message CAccountHardware_QueryAccountsRegisteredToSerial_Response {
 	repeated .CAccountHardware_QueryAccountsRegisteredToSerial_Accounts accounts = 1;
 }
 
+message CAccountHardware_UpdateControllerUsageReport_Request {
+	message Controller {
+		optional string serial_number = 1;
+		optional string controller_code = 2;
+	}
+
+	repeated .CAccountHardware_UpdateControllerUsageReport_Request.Controller controllers = 1;
+}
+
+message CAccountHardware_UpdateControllerUsageReport_Response {
+}
+
 message CAccountHardware_SteamControllerSetConfig_ControllerConfig {
 	optional string appidorname = 1;
 	optional uint64 publishedfileid = 2;
@@ -159,6 +171,7 @@ service AccountHardware {
 	rpc RegisterSteamController (.CAccountHardware_RegisterSteamController_Request) returns (.CAccountHardware_RegisterSteamController_Response);
 	rpc CompleteSteamControllerRegistration (.CAccountHardware_CompleteSteamControllerRegistration_Request) returns (.CAccountHardware_CompleteSteamControllerRegistration_Response);
 	rpc QueryAccountsRegisteredToController (.CAccountHardware_QueryAccountsRegisteredToSerial_Request) returns (.CAccountHardware_QueryAccountsRegisteredToSerial_Response);
+	rpc UpdateControllerUsageReport (.CAccountHardware_UpdateControllerUsageReport_Request) returns (.CAccountHardware_UpdateControllerUsageReport_Response);
 	rpc SetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerSetConfig_Request) returns (.CAccountHardware_SteamControllerSetConfig_Response);
 	rpc GetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerGetConfig_Request) returns (.CAccountHardware_SteamControllerGetConfig_Response);
 	rpc DeRegisterSteamController (.CAccountHardware_DeRegisterSteamController_Request) returns (.CAccountHardware_DeRegisterSteamController_Response);

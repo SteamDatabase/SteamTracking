@@ -164,11 +164,12 @@ message CMsgBrowserResized {
 	optional double y = 3;
 	optional double width = 4;
 	optional double height = 5;
-	optional double dpi_horizontal = 6;
-	optional double dpi_vertical = 7;
-	optional string display_name = 8;
-	optional uint32 display_width = 9;
-	optional uint32 display_height = 10;
+	optional bool fullscreen = 6;
+	optional double dpi_horizontal = 7;
+	optional double dpi_vertical = 8;
+	optional string display_name = 9;
+	optional uint32 display_width = 10;
+	optional uint32 display_height = 11;
 }
 
 message CMsgPostURL {

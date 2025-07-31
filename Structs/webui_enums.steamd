@@ -974,12 +974,6 @@ enum ETwoFactorTokenSteamguardScheme
 	k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2;
 }
 
-enum EUserConfigStoreNamespace
-{
-	k_EUserConfigStoreNamespaceInvalid = 0;
-	k_EUserConfigStoreNamespaceLibrary = 1;
-}
-
 enum EVoiceCallState
 {
 	k_EVoiceCallState_None = 0;

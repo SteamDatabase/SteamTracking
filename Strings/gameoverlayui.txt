@@ -1375,6 +1375,7 @@ $\nY8O
 18CMsgSavePageToJPEG
 18CTextureIdProperty
 18CUtlCharConversion
+19:37:40
 19CDirContentsWatcher
 19CGPUStatsReaderNvml
 19CIngameCPUCoreGraph
@@ -1442,7 +1443,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:28:54
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -1624,6 +1624,7 @@ $\nY8O
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
 > or is NULL
 >/dev/null
+>9Ux
 >= or is NULL
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
@@ -2929,7 +2930,6 @@ EUFSPartitionEnrollmentStatus
 EUFSPartitionSegmentStatus
 EUFSPartitionType
 EUniverse
-EUserConfigStoreNamespace
 EUserNewsEventType
 EVCert
 EVideoEncryptionKeyTrackType
@@ -3647,7 +3647,7 @@ Japanese
 Javanese
 JoinedGroup
 Joystick
-Jul 24 2025
+Jul 31 2025
 July
 June
 K'iche'
@@ -5883,6 +5883,7 @@ Zulu
 \n\ndependency
 \n\ndeprecated
 \n\nerror_code
+\n\nfullscreen
 \n\ngo_package
 \n\ninput_type
 \n\nis_default
@@ -6712,7 +6713,6 @@ event
 event created
 event deleted
 event updated
-events
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exit
 expandableSpace
@@ -7094,11 +7094,8 @@ https://avatars.beta.steamstatic.com/
 https://avatars.cdn.steamchina.eccdnx.com/
 https://avatars.steamstatic.com/
 https://beta.steamcommunity.com/
-https://cdn.beta.steampowered.com/steamcommunity/beta/
 https://cdn.beta.steampowered.com/store
-https://cdn.steamchina.eccdnx.com/steamcommunity/public/
 https://cdn.steamchina.eccdnx.com/store
-https://cdn.steamstatic.com/steamcommunity/public/
 https://cdn.steamstatic.com/store
 https://clan.beta.steamstatic.com/
 https://clan.cdn.steamchina.eccdnx.com/
@@ -7107,7 +7104,9 @@ https://community-china.%s.steam.dev/
 https://community-china.beta.valve.org/
 https://community.%s.steam.dev/
 https://community.csgo.com.cn/
+https://community.steamstatic.com/
 https://my.steamchina.com/
+https://my.steamchina.eccdnx.com/
 https://partner.steamgames.com/
 https://s.team/q/
 https://shared.beta.steamstatic.com/
@@ -7117,7 +7116,6 @@ https://shared.cdn.steamchina.eccdnx.com/store_item_assets/steam/apps
 https://shared.steamstatic.com/
 https://shared.steamstatic.com/store_item_assets/steam/apps
 https://steam-chat.com/
-https://steamcommunity-a.akamaihd.net/
 https://steamcommunity.com/
 https://steamloopback.host
 https://steampublishbeta.valve.org/
@@ -7543,7 +7541,6 @@ libdl.so.2
 libm.so.6
 libnvidia-ml.so.1
 libpthread.so.0
-library
 librt.so.1
 libsteam.so
 libtier0_s.so

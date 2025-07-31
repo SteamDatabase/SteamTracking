@@ -2348,6 +2348,8 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
+19:37:29
+19:37:37
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -2425,8 +2427,6 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:28:39
-23:28:47
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -2782,7 +2782,6 @@ $ffn
 = or is NULL
 =!=-=3=7=?=C=o=s=u=y={=
 ==zGdd
-=Dbb
 =Tie
 =Uec
 =VX7
@@ -5405,7 +5404,6 @@ EUFSPartitionEnrollmentStatus
 EUFSPartitionSegmentStatus
 EUFSPartitionType
 EUniverse
-EUserConfigStoreNamespace
 EUserNewsEventType
 EVP lib
 EVP_CIPHER_CTX_copy
@@ -6530,7 +6528,7 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul 24 2025
+Jul 31 2025
 July
 June
 K'iche'
@@ -8747,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 24 2025 23:28:47
+Startup - updater built Jul 31 2025 19:37:37
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -15407,7 +15405,6 @@ libpng does not support gamma+background+rgb_to_gray
 libpng error: %s
 libpng warning: %s
 libpthread.so.0
-library
 library bug
 library has no ciphers
 librt.so.1
