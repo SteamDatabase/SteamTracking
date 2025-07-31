@@ -2511,6 +2511,13 @@
               this.m_persistState.m_fnSetAutoplayEnabled &&
               this.m_persistState.m_fnSetAudioMuted(_));
         }
+        TogglePlayPauseState() {
+          return this.IsInitialized()
+            ? this.m_player.IsPaused()
+              ? _.Play
+              : _.Pause
+            : _.None;
+        }
         TogglePlayPause() {
           return this.IsInitialized()
             ? this.m_player.IsPaused()
@@ -3015,7 +3022,9 @@
               _,
             );
           }),
+          _ = _.length > 1,
           _ = !!_.m_fnSetAutoplayEnabled,
+          _ = _ || !_,
           _ = {
             left: _.nLeft,
             top: _.nTop,
@@ -3027,8 +3036,9 @@
               style: _,
               className: _().SettingsMenu,
             },
-            _,
+            _ && _,
             _ &&
+              _ &&
               _.createElement("div", {
                 className: _().Separator,
               }),
@@ -3416,6 +3426,7 @@
           ("once" != _ || !_.current) && ("active" == _ || _)
         );
       }
+      const _ = 200;
       function _(_) {
         let {
             player: _,
@@ -3453,6 +3464,7 @@
               _.createElement(_, {
                 player: _,
                 enabled: _ && !_,
+                fullscreen: __webpack_require__,
               }),
               _.createElement(_, null),
               _.createElement(
@@ -3536,20 +3548,21 @@
         );
       }
       function _(_) {
-        let { player: _, enabled: __webpack_require__ } = _,
+        let { player: _, enabled: __webpack_require__, fullscreen: _ } = _,
           {
             refBackground: _,
             inputEvents: _,
             clickEvents: _,
             fnRemoveEvent: _,
-          } = (function (_) {
+          } = (function (_, _) {
             let _ = (0, _.useRef)(),
               _ = (0, _.useRef)(1),
+              _ = (0, _.useRef)(0),
               [_, _] = (0, _.useState)([]),
               _ = (0, _.useCallback)(
                 (_) => {
                   if (_.target != _.current) return;
-                  let _ = _.TogglePlayPause(),
+                  let _ = _.TogglePlayPauseState(),
                     _ = _.current++;
                   _((_) => [
                     {
@@ -3558,23 +3571,39 @@
                     },
                     ..._,
                   ]);
+                  let _ = () => {
+                    (_.current = 0), _.TogglePlayPause();
+                  };
+                  if ("mouse" == _.pointerType)
+                    return _.current
+                      ? (window.clearTimeout(_.current),
+                        (_.current = 0),
+                        void _())
+                      : void (_.current = window.setTimeout(_, _));
+                  _();
                 },
-                [_, _, _],
+                [_, _, _, _, _],
               ),
               _ = (0, _.useCallback)(
                 (_) => {
                   _((_) => _.filter((_) => _.nID != _));
                 },
                 [_],
-              ),
-              _ = _(_);
+              );
+            (0, _.useEffect)(
+              () => () => {
+                window.clearTimeout(_.current), (_.current = 0);
+              },
+              [_],
+            );
+            let _ = _(_);
             return {
               refBackground: _,
               inputEvents: _,
               clickEvents: _,
               fnRemoveEvent: _,
             };
-          })(_),
+          })(_, _.fnToggleFullscreen),
           _ = (0, _._)(_().BackgroundClick, __webpack_require__ && _().Enabled);
         return _.createElement(
           "div",
