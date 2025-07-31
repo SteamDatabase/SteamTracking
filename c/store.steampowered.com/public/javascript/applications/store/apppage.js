@@ -2536,6 +2536,9 @@
         Seek(_) {
           this.m_player.Seek(this.m_nVideoStartTime + _);
         }
+        SeekRelative(_) {
+          this.m_player.Seek(this.m_nPlaybackTime + _);
+        }
         UpdatePersistState(_) {
           this.m_persistState != _ &&
             ((this.m_persistState = _),
@@ -2683,6 +2686,17 @@
             (0, _.useEffect)(() => {
               let _ = _.current;
               (_.current = !1), (_ && !_) || _(_);
+            }, [_, _, _]);
+          })(_, _);
+          let _ = (0, _.useCallback)(() => {
+            __webpack_require__(!0, _);
+          }, [__webpack_require__]);
+          !(function (_, _) {
+            let _ = (0, _.useRef)(!0),
+              _ = (0, _._)(() => _.GetMuted());
+            (0, _.useEffect)(() => {
+              let _ = _.current;
+              (_.current = !1), _ || _();
             }, [_, _, _]);
           })(_, _);
           let _ = (0, _.useCallback)(
@@ -3426,7 +3440,8 @@
           ("once" != _ || !_.current) && ("active" == _ || _)
         );
       }
-      const _ = 200;
+      const _ = 200,
+        _ = 5e3;
       function _(_) {
         let {
             player: _,
@@ -3440,11 +3455,31 @@
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _);
         _ = _ || _;
-        let _ = (0, _._)(
-          _().PlayerControls,
-          __webpack_require__.bFullscreen && _().Fullscreen,
-          _ && _().ShowControls,
-        );
+        let _ = (function (_, _) {
+            let _ = _.fnToggleFullscreen,
+              _ = (0, _.useCallback)(
+                (_) => {
+                  _.repeat ||
+                    ("Space" == _.code
+                      ? (_.TogglePlayPause(), _.preventDefault())
+                      : "ArrowLeft" == _.code
+                        ? _.SeekRelative(-_ / 1e3)
+                        : "ArrowRight" == _.code
+                          ? _.SeekRelative(_ / 1e3)
+                          : "f" == _.key || "F" == _.key
+                            ? (__webpack_require__(), _.preventDefault())
+                            : ("m" != _.key && "M" != _.key) ||
+                              (_.SetMute(!_.GetMuted()), _.preventDefault()));
+                },
+                [_, _],
+              );
+            return _;
+          })(_, __webpack_require__),
+          _ = (0, _._)(
+            _().PlayerControls,
+            __webpack_require__.bFullscreen && _().Fullscreen,
+            _ && _().ShowControls,
+          );
         return _.createElement(
           _.Provider,
           {
@@ -3455,6 +3490,8 @@
             {
               className: _,
               ..._,
+              onKeyDown: _,
+              tabIndex: 0,
             },
             _.createElement(
               "div",

@@ -2348,8 +2348,6 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
-19:37:29
-19:37:37
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -2420,6 +2418,8 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+22:21:06
+22:21:14
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -8745,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 31 2025 19:37:37
+Startup - updater built Jul 31 2025 22:21:14
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

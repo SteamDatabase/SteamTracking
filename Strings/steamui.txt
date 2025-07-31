@@ -21674,7 +21674,7 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 31 2025 19:37:44
+Jul 31 2025 22:21:22
 July
 JumpList
 Jumplist
@@ -26551,6 +26551,7 @@ SDL_DestroyAudioStream
 SDL_DestroySurface
 SDL_DestroyWindow
 SDL_DisableScreenSaver
+SDL_ENABLE_GTK
 SDL_EnableScreenSaver
 SDL_GAMECONTROLLERCONFIG
 SDL_GAMECONTROLLER_USE_BUTTON_LABELS
