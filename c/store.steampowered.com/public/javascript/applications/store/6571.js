@@ -25,6 +25,7 @@
 	"Menu_Cart": "Cart",
 	"Menu_Popover_TopLinks": "Top Links",
 	"Menu_Popover_StoreHome": "Store Home",
+	"Menu_Popover_GreatonDeck": "Great on Deck",
 	"Menu_Popover_FreeToPlay": "Free to Play",
 	"Menu_Popover_SteamCharts": "Steam Charts",
 	"Menu_Popover_Upcoming": "Upcoming Releases",

@@ -174,6 +174,7 @@
         CapsuleGrid: "_2lLDOXJibKONAZT_v5JYdM",
         CapsuleRow: "fYUHRTrzGItaGhMLuUZ3W",
         BrowseButtonGrid: "Jj8HIlIT-yPI1DfChaARk",
+        BrowseLinkColumn: "_2IqRL8KcprlBPhrtT1Y8bL",
       };
     },
     chunkid: (module) => {
@@ -74605,64 +74606,117 @@
         return _.createElement(
           _,
           null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, null),
-            _.createElement(_, null),
-          ),
+          _.createElement(_, null, _.createElement(_, null)),
         );
       }
       const _ = {
         include_assets: !0,
       };
       function _() {
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}charts/`,
-            },
-            _("#Menu_Popover_SteamCharts"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}explore/upcoming`,
-            },
-            _("#Menu_Popover_Upcoming"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}points/`,
-            },
-            _("#Menu_Popover_PointsShop"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
-            },
-            _("#Menu_Popover_GiftCards"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}news/`,
-            },
-            _("#Menu_Popover_NewsAndUpdates"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}account/preferences/`,
-            },
-            _("#Menu_Popover_Preferences"),
-          ),
-        );
+        return (0, _._)()
+          ? _.createElement(
+              _,
+              {
+                className: _.BrowseLinkColumn,
+              },
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}charts/`,
+                },
+                _("#Menu_Popover_SteamCharts"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}explore/upcoming`,
+                },
+                _("#Menu_Popover_Upcoming"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}points/`,
+                },
+                _("#Menu_Popover_PointsShop"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
+                },
+                _("#Menu_Popover_GiftCards"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}news/`,
+                },
+                _("#Menu_Popover_NewsAndUpdates"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}account/preferences/`,
+                },
+                _("#Menu_Popover_Preferences"),
+              ),
+            )
+          : _.createElement(
+              _,
+              {
+                className: _.BrowseLinkColumn,
+              },
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}/`,
+                },
+                _("#Menu_Popover_StoreHome"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}charts/`,
+                },
+                _("#Menu_Popover_SteamCharts"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}explore/upcoming`,
+                },
+                _("#Menu_Popover_Upcoming"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}points/`,
+                },
+                _("#Menu_Popover_PointsShop"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
+                },
+                _("#Menu_Popover_GiftCards"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}news/`,
+                },
+                _("#Menu_Popover_NewsAndUpdates"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}account/preferences/`,
+                },
+                _("#Menu_Popover_Preferences"),
+              ),
+            );
       }
       function _() {
         return (
@@ -74713,7 +74767,7 @@
                       {
                         className: _.ButtonLabel,
                       },
-                      "Store Home",
+                      _("#Menu_Popover_StoreHome"),
                     ),
                   ),
                   _.createElement(
@@ -74726,7 +74780,7 @@
                       {
                         className: _.ButtonLabel,
                       },
-                      "Great on Deck",
+                      _("#Menu_Popover_GreatonDeck"),
                     ),
                   ),
                   _.createElement(
@@ -74750,6 +74804,7 @@
                   _.createElement(_, null),
                   _.createElement(_, null),
                 ),
+                _.createElement(_, null),
               ),
             )
           : _.createElement(
@@ -74815,6 +74870,7 @@
                       ),
                     ),
                 ),
+                _.createElement(_, null),
               ),
             );
       }
@@ -75312,7 +75368,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)(),
@@ -75341,7 +75396,8 @@
           staleTime: 864e5,
         };
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _() {
         return _.createElement(
           _,
@@ -75377,52 +75433,56 @@
               const _ = new Set(),
                 _ = new Set(),
                 _ = [],
-                _ = [],
-                _ = _.slice(),
-                _ = _.slice(),
-                _ = _;
-              for (const _ of [_, _]) {
-                const _ = _ == _ ? _ : _;
-                for (; _.length < _; ) {
-                  let _;
+                _ = [];
+              for (const _ of (function* (_, _, _) {
+                const _ = _.slice(),
+                  _ = _.slice(),
+                  _ = __webpack_require__.slice();
+                for (; _.length || _.length; ) {
                   if (_.length) {
                     const _ = _.shift();
-                    _ =
-                      "hubconfig" in _
-                        ? {
-                            type: "hub",
-                            strHandle: _.hubconfig.handle,
-                            strName: _.hubconfig.display_name,
-                            strURLPath: _.hubconfig.url_path,
-                          }
-                        : {
-                            type: "tag",
-                            unTagID: _.tagid,
-                          };
-                  } else if (_.length) {
-                    _ = {
-                      type: "tag",
-                      unTagID: _.shift().tagid,
-                    };
-                  } else {
-                    if (!_.length) break;
-                    {
-                      const _ = _.shift();
-                      _ = {
-                        type: "hub",
-                        strHandle: _._,
-                        strName: _.Localize(_.strLocToken),
-                        strURLPath: _.strSalePageURL,
-                      };
-                    }
+                    "hubconfig" in _
+                      ? yield {
+                          type: "hub",
+                          strHandle: _.hubconfig.handle,
+                          strName: _.hubconfig.display_name,
+                          strURLPath: _.hubconfig.url_path,
+                        }
+                      : yield {
+                          type: "tag",
+                          unTagID: _.tagid,
+                        };
                   }
-                  "tag" == _.type
-                    ? !_.has(_.unTagID) &&
-                      _.unTagID in _ &&
-                      (_.add(_.unTagID), _.push(_))
-                    : "hub" == _.type &&
-                      (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
+                  if (_.length) {
+                    const _ = _.shift();
+                    yield {
+                      type: "tag",
+                      unTagID: _.tagid,
+                    };
+                  }
                 }
+                for (; _.length; ) {
+                  const _ = _.shift();
+                  yield {
+                    type: "hub",
+                    strHandle: _._,
+                    strName: _.Localize(_.strLocToken),
+                    strURLPath: _.strSalePageURL,
+                  };
+                }
+              })(_, _, _)) {
+                let _;
+                if (_.length < _) _ = _;
+                else {
+                  if (!(_.length < _)) break;
+                  _ = _;
+                }
+                "tag" == _.type
+                  ? !_.has(_.unTagID) &&
+                    _.unTagID in _ &&
+                    (_.add(_.unTagID), _.push(_))
+                  : "hub" == _.type &&
+                    (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
               }
               return [_, _];
             }, [_, _, _, _, _, _, _]);

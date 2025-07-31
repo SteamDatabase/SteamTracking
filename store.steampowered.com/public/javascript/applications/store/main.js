@@ -172,6 +172,7 @@
         CapsuleGrid: "_2lLDOXJibKONAZT_v5JYdM",
         CapsuleRow: "fYUHRTrzGItaGhMLuUZ3W",
         BrowseButtonGrid: "Jj8HIlIT-yPI1DfChaARk",
+        BrowseLinkColumn: "_2IqRL8KcprlBPhrtT1Y8bL",
       };
     },
     7802: (e) => {
@@ -66972,50 +66973,85 @@
         return n.createElement(
           qi,
           null,
-          n.createElement(
-            Hi,
-            null,
-            n.createElement(gn, null),
-            n.createElement(un, null),
-          ),
+          n.createElement(Hi, null, n.createElement(gn, null)),
         );
       }
       const cn = { include_assets: !0 };
       function un() {
-        return n.createElement(
-          Zi,
-          null,
-          n.createElement(
-            Ki,
-            { href: `${Vt.TS.STORE_BASE_URL}charts/` },
-            ar("#Menu_Popover_SteamCharts"),
-          ),
-          n.createElement(
-            Ki,
-            { href: `${Vt.TS.STORE_BASE_URL}explore/upcoming` },
-            ar("#Menu_Popover_Upcoming"),
-          ),
-          n.createElement(
-            Ki,
-            { href: `${Vt.TS.STORE_BASE_URL}points/` },
-            ar("#Menu_Popover_PointsShop"),
-          ),
-          n.createElement(
-            Ki,
-            { href: `${Vt.TS.STORE_BASE_URL}digitalgiftcards/` },
-            ar("#Menu_Popover_GiftCards"),
-          ),
-          n.createElement(
-            Ki,
-            { href: `${Vt.TS.STORE_BASE_URL}news/` },
-            ar("#Menu_Popover_NewsAndUpdates"),
-          ),
-          n.createElement(
-            Ki,
-            { href: `${Vt.TS.STORE_BASE_URL}account/preferences/` },
-            ar("#Menu_Popover_Preferences"),
-          ),
-        );
+        return (0, s.Qn)()
+          ? n.createElement(
+              Zi,
+              { className: Ai.BrowseLinkColumn },
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}charts/` },
+                ar("#Menu_Popover_SteamCharts"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}explore/upcoming` },
+                ar("#Menu_Popover_Upcoming"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}points/` },
+                ar("#Menu_Popover_PointsShop"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}digitalgiftcards/` },
+                ar("#Menu_Popover_GiftCards"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}news/` },
+                ar("#Menu_Popover_NewsAndUpdates"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}account/preferences/` },
+                ar("#Menu_Popover_Preferences"),
+              ),
+            )
+          : n.createElement(
+              Zi,
+              { className: Ai.BrowseLinkColumn },
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}/` },
+                ar("#Menu_Popover_StoreHome"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}charts/` },
+                ar("#Menu_Popover_SteamCharts"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}explore/upcoming` },
+                ar("#Menu_Popover_Upcoming"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}points/` },
+                ar("#Menu_Popover_PointsShop"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}digitalgiftcards/` },
+                ar("#Menu_Popover_GiftCards"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}news/` },
+                ar("#Menu_Popover_NewsAndUpdates"),
+              ),
+              n.createElement(
+                Ki,
+                { href: `${Vt.TS.STORE_BASE_URL}account/preferences/` },
+                ar("#Menu_Popover_Preferences"),
+              ),
+            );
       }
       function mn() {
         return xr(), ji({ count: 10 }, cn), ki({ count: 10 }, cn), Pi(), null;
@@ -67042,7 +67078,7 @@
                     n.createElement(
                       "div",
                       { className: Ai.ButtonLabel },
-                      "Store Home",
+                      ar("#Menu_Popover_StoreHome"),
                     ),
                   ),
                   n.createElement(
@@ -67051,7 +67087,7 @@
                     n.createElement(
                       "div",
                       { className: Ai.ButtonLabel },
-                      "Great on Deck",
+                      ar("#Menu_Popover_GreatonDeck"),
                     ),
                   ),
                   n.createElement(
@@ -67071,6 +67107,7 @@
                   n.createElement(fn, null),
                   n.createElement(bn, null),
                 ),
+                n.createElement(un, null),
               ),
             )
           : n.createElement(
@@ -67120,6 +67157,7 @@
                       ),
                     ),
                 ),
+                n.createElement(un, null),
               ),
             );
       }
@@ -67502,20 +67540,19 @@
           }),
         );
       }
-      var jn = r(7802),
-        kn = r(60779),
-        Dn = r(39020);
-      function Pn() {
+      var jn = r(72148),
+        kn = r(39020);
+      function Dn() {
         const e = (0, J.ce)(),
           t = (0, x.KV)(),
           r = (0, Y.LH)();
         return (0, j.I)({
-          ...An(t, e),
+          ...Pn(t, e),
           enabled: !!r,
           initialData: r ? void 0 : [],
         });
       }
-      function An(e, t) {
+      function Pn(e, t) {
         return {
           queryKey: ["RecommendedTagsForUser", t.country, t.language],
           queryFn: () =>
@@ -67532,7 +67569,8 @@
           staleTime: 864e5,
         };
       }
-      var Un = r(72148);
+      var An = r(60779),
+        Un = r(7802);
       function qn() {
         return n.createElement(
           qi,
@@ -67549,14 +67587,14 @@
         );
       }
       function Nn() {
-        return (0, Dn.Fv)(Vt.TS.LANGUAGE), Dr(Vt.iA.logged_in), Pn(), null;
+        return (0, kn.Fv)(Vt.TS.LANGUAGE), Dr(Vt.iA.logged_in), Dn(), null;
       }
       const Gn = n.memo(function () {
           const [e, t] = (function () {
             const { data: e } = Dr(),
-              { data: t } = Pn(),
+              { data: t } = Dn(),
               r = rr(Nr),
-              { data: i } = (0, Dn.Fv)(Vt.TS.LANGUAGE),
+              { data: i } = (0, kn.Fv)(Vt.TS.LANGUAGE),
               s = n.useMemo(() => Ye.fW(Gr().slice(), 0, Wi.A(Hn)), []),
               a = sn(),
               o = a ? 6 : 4,
@@ -67566,46 +67604,50 @@
               const n = new Set(),
                 a = new Set(),
                 c = [],
-                u = [],
-                m = e.slice(),
-                d = t.slice(),
-                g = s;
-              for (const e of [c, u]) {
-                const t = e == c ? o : l;
-                for (; e.length < t; ) {
-                  let t;
-                  if (m.length) {
-                    const e = m.shift();
-                    t =
-                      "hubconfig" in e
-                        ? {
-                            type: "hub",
-                            strHandle: e.hubconfig.handle,
-                            strName: e.hubconfig.display_name,
-                            strURLPath: e.hubconfig.url_path,
-                          }
-                        : { type: "tag", unTagID: e.tagid };
-                  } else if (d.length) {
-                    t = { type: "tag", unTagID: d.shift().tagid };
-                  } else {
-                    if (!g.length) break;
-                    {
-                      const e = g.shift();
-                      t = {
-                        type: "hub",
-                        strHandle: e.id,
-                        strName: Nr.Localize(e.strLocToken),
-                        strURLPath: e.strSalePageURL,
-                      };
-                    }
+                u = [];
+              for (const r of (function* (e, t, r) {
+                const i = e.slice(),
+                  n = t.slice(),
+                  s = r.slice();
+                for (; i.length || n.length; ) {
+                  if (i.length) {
+                    const e = i.shift();
+                    "hubconfig" in e
+                      ? yield {
+                          type: "hub",
+                          strHandle: e.hubconfig.handle,
+                          strName: e.hubconfig.display_name,
+                          strURLPath: e.hubconfig.url_path,
+                        }
+                      : yield { type: "tag", unTagID: e.tagid };
                   }
-                  "tag" == t.type
-                    ? !a.has(t.unTagID) &&
-                      t.unTagID in i &&
-                      (a.add(t.unTagID), e.push(t))
-                    : "hub" == t.type &&
-                      (n.has(t.strHandle) || (n.add(t.strHandle), e.push(t)));
+                  if (n.length) {
+                    const e = n.shift();
+                    yield { type: "tag", unTagID: e.tagid };
+                  }
                 }
+                for (; s.length; ) {
+                  const e = s.shift();
+                  yield {
+                    type: "hub",
+                    strHandle: e.id,
+                    strName: Nr.Localize(e.strLocToken),
+                    strURLPath: e.strSalePageURL,
+                  };
+                }
+              })(e, t, s)) {
+                let e;
+                if (c.length < o) e = c;
+                else {
+                  if (!(u.length < l)) break;
+                  e = u;
+                }
+                "tag" == r.type
+                  ? !a.has(r.unTagID) &&
+                    r.unTagID in i &&
+                    (a.add(r.unTagID), e.push(r))
+                  : "hub" == r.type &&
+                    (n.has(r.strHandle) || (n.add(r.strHandle), e.push(r)));
               }
               return [c, u];
             }, [o, l, e, t, s, r, i]);
@@ -67617,7 +67659,7 @@
                 null,
                 n.createElement(
                   ce.Z,
-                  { "flow-children": "row", className: jn.TopCategories },
+                  { "flow-children": "row", className: Un.TopCategories },
                   e.map((e) =>
                     "hub" === e.type
                       ? n.createElement(Vn, {
@@ -67629,10 +67671,10 @@
                 ),
                 n.createElement(
                   ce.Z,
-                  { "flow-children": "row", className: jn.TagLinksContainer },
+                  { "flow-children": "row", className: Un.TagLinksContainer },
                   n.createElement(
                     ce.Z,
-                    { "flow-children": "row", className: jn.TagLinks },
+                    { "flow-children": "row", className: Un.TagLinks },
                     t.map((e) =>
                       "hub" === e.type
                         ? n.createElement(Qn, {
@@ -67660,40 +67702,40 @@
         return n.createElement(
           Kn,
           { title: s, href: a },
-          n.createElement(li, { category: r, className: jn.CategoryTileImage }),
+          n.createElement(li, { category: r, className: Un.CategoryTileImage }),
         );
       }
       function Zn(e) {
         const { featuredTag: t } = e,
           { unTagID: r } = t,
-          i = (0, U.aL)((0, kn.r)(r), "big-category-link");
+          i = (0, U.aL)((0, An.r)(r), "big-category-link");
         return n.createElement(
           Kn,
-          { title: n.createElement(kn.K, { tagid: r }), href: i },
-          n.createElement(ci, { tagid: r, className: jn.CategoryTileImage }),
+          { title: n.createElement(An.K, { tagid: r }), href: i },
+          n.createElement(ci, { tagid: r, className: Un.CategoryTileImage }),
         );
       }
       function Kn(e) {
         const { children: t, title: r, href: i } = e;
         return n.createElement(
           Ce.Ii,
-          { className: jn.CategoryLink, href: i },
+          { className: Un.CategoryLink, href: i },
           t,
-          n.createElement("div", { className: jn.Gradient }),
+          n.createElement("div", { className: Un.Gradient }),
           n.createElement(
             "div",
-            { className: jn.CategoryTitleAlign },
-            n.createElement("div", { className: jn.CategoryTitle }, r),
+            { className: Un.CategoryTitleAlign },
+            n.createElement("div", { className: Un.CategoryTitle }, r),
           ),
         );
       }
       function $n(e) {
         const { featuredLink: t } = e,
-          r = (0, U.aL)((0, kn.r)(t.unTagID), "small-category-link");
+          r = (0, U.aL)((0, An.r)(t.unTagID), "small-category-link");
         return n.createElement(
           Ce.Ii,
-          { className: jn.TagLink, href: r, fnCanTakeFocus: Un.Nw },
-          n.createElement(kn.K, { tagid: t.unTagID }),
+          { className: Un.TagLink, href: r, fnCanTakeFocus: jn.Nw },
+          n.createElement(An.K, { tagid: t.unTagID }),
         );
       }
       function Qn(e) {
@@ -67704,7 +67746,7 @@
           );
         return n.createElement(
           Ce.Ii,
-          { className: jn.TagLink, href: r, fnCanTakeFocus: Un.Nw },
+          { className: Un.TagLink, href: r, fnCanTakeFocus: jn.Nw },
           t.strName,
         );
       }

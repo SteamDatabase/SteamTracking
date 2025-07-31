@@ -6277,6 +6277,7 @@ var _ = "bz3JO4um03s-";
 var _ = "VpezFJtD5Jk-";
 var _ = "P-RpS3TL4ck-";
 var _ = "_3tjjTZcUesk-";
+var _ = "-vs6zKlfDOQ-";
 var _ = "zMIGQslm-QQ-";
 var _ = "cewzj0KMkus-";
 var _ = "_3nkzqYA4FK4-";
@@ -6474,8 +6475,8 @@ function _() {
 var _ = _(_(), 1);
 function _() {
   return (0, _.jsx)(_, {
-    children: (0, _.jsxs)(_, {
-      children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+    children: (0, _.jsx)(_, {
+      children: (0, _.jsx)(_, {}),
     }),
   });
 }
@@ -6483,34 +6484,69 @@ var _ = {
   include_assets: !0,
 };
 function _() {
-  return (0, _.jsxs)(_, {
-    children: [
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}charts/`,
-        children: _("#Menu_Popover_SteamCharts"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}explore/upcoming`,
-        children: _("#Menu_Popover_Upcoming"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}points/`,
-        children: _("#Menu_Popover_PointsShop"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}digitalgiftcards/`,
-        children: _("#Menu_Popover_GiftCards"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}news/`,
-        children: _("#Menu_Popover_NewsAndUpdates"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}account/preferences/`,
-        children: _("#Menu_Popover_Preferences"),
-      }),
-    ],
-  });
+  return _()
+    ? (0, _.jsxs)(_, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}charts/`,
+            children: _("#Menu_Popover_SteamCharts"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}explore/upcoming`,
+            children: _("#Menu_Popover_Upcoming"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}points/`,
+            children: _("#Menu_Popover_PointsShop"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}digitalgiftcards/`,
+            children: _("#Menu_Popover_GiftCards"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}news/`,
+            children: _("#Menu_Popover_NewsAndUpdates"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}account/preferences/`,
+            children: _("#Menu_Popover_Preferences"),
+          }),
+        ],
+      })
+    : (0, _.jsxs)(_, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}/`,
+            children: _("#Menu_Popover_StoreHome"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}charts/`,
+            children: _("#Menu_Popover_SteamCharts"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}explore/upcoming`,
+            children: _("#Menu_Popover_Upcoming"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}points/`,
+            children: _("#Menu_Popover_PointsShop"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}digitalgiftcards/`,
+            children: _("#Menu_Popover_GiftCards"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}news/`,
+            children: _("#Menu_Popover_NewsAndUpdates"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}account/preferences/`,
+            children: _("#Menu_Popover_Preferences"),
+          }),
+        ],
+      });
 }
 function _() {
   return (
@@ -6552,14 +6588,14 @@ function _() {
                     href: "",
                     children: (0, _.jsx)("div", {
                       className: _,
-                      children: "Store Home",
+                      children: _("#Menu_Popover_StoreHome"),
                     }),
                   }),
                   (0, _.jsx)(_, {
                     href: "greatondeck/",
                     children: (0, _.jsx)("div", {
                       className: _,
-                      children: "Great on Deck",
+                      children: _("#Menu_Popover_GreatonDeck"),
                     }),
                   }),
                   (0, _.jsx)(_, {
@@ -6575,6 +6611,7 @@ function _() {
               (0, _.jsxs)(_, {
                 children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
               }),
+              (0, _.jsx)(_, {}),
             ],
           }),
         ],
@@ -6619,6 +6656,7 @@ function _() {
                     }),
                 ],
               }),
+              (0, _.jsx)(_, {}),
             ],
           }),
         ],
@@ -7190,23 +7228,6 @@ function _() {
   });
 }
 var _ = _(_(), 1);
-var _ = "KS3VoNPGZ8c-";
-var _ = "Fn8mFRDdRio-";
-var _ = "FNE-mPeXzQA-";
-var _ = "pWS9WkhTQxE-";
-var _ = "MjVgWd26-Ks-";
-var _ = "i0CnQqTCYIQ-";
-var _ = "jLuOSBgXneI-";
-var _ = "O-5tWVDApEQ-";
-var _ = "pFyqFohCcGg-";
-function _(_) {
-  let { tagid: _, language: _ = _.LANGUAGE } = _;
-  return _(_, _) || String(_);
-}
-function _(_, _ = _.LANGUAGE) {
-  let _ = _(_, _);
-  return `${_.STORE_BASE_URL}tags/${_(_)}/${_}`;
-}
 function _() {
   let _ = _(),
     _ = _(),
@@ -7234,6 +7255,23 @@ async function _(_, _) {
     throw `Error loading recommended tags: ${_.GetErrorMessage()}`;
   return _.Body().toObject().tags || [];
 }
+function _(_) {
+  let { tagid: _, language: _ = _.LANGUAGE } = _;
+  return _(_, _) || String(_);
+}
+function _(_, _ = _.LANGUAGE) {
+  let _ = _(_, _);
+  return `${_.STORE_BASE_URL}tags/${_(_)}/${_}`;
+}
+var _ = "KS3VoNPGZ8c-";
+var _ = "Fn8mFRDdRio-";
+var _ = "FNE-mPeXzQA-";
+var _ = "pWS9WkhTQxE-";
+var _ = "MjVgWd26-Ks-";
+var _ = "i0CnQqTCYIQ-";
+var _ = "jLuOSBgXneI-";
+var _ = "O-5tWVDApEQ-";
+var _ = "pFyqFohCcGg-";
 var _ = _(_(), 1);
 function _() {
   return (0, _.jsxs)(_, {
@@ -7333,49 +7371,54 @@ function _() {
     let _ = new Set(),
       _ = new Set(),
       _ = [],
-      _ = [],
-      _ = _.slice(),
-      _ = _.slice(),
-      _ = _;
-    for (let _ of [_, _]) {
-      let _ = _ == _ ? _ : _;
-      for (; _.length < _; ) {
-        let _;
-        if (_.length) {
-          let _ = _.shift();
-          "hubconfig" in _
-            ? (_ = {
-                type: "hub",
-                strHandle: _.hubconfig.handle,
-                strName: _.hubconfig.display_name,
-                strURLPath: _.hubconfig.url_path,
-              })
-            : (_ = {
-                type: "tag",
-                unTagID: _.tagid,
-              });
-        } else if (_.length)
-          _ = {
-            type: "tag",
-            unTagID: _.shift().tagid,
-          };
-        else if (_.length) {
-          let _ = _.shift();
-          _ = {
-            type: "hub",
-            strHandle: _._,
-            strName: _.Localize(_.strLocToken),
-            strURLPath: _.strSalePageURL,
-          };
-        } else break;
-        _.type == "tag"
-          ? !_.has(_.unTagID) && _.unTagID in _ && (_.add(_.unTagID), _.push(_))
-          : _.type == "hub" &&
-            (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
-      }
+      _ = [];
+    for (let _ of _(_, _, _)) {
+      let _;
+      if (_.length < _) _ = _;
+      else if (_.length < _) _ = _;
+      else break;
+      _.type == "tag"
+        ? !_.has(_.unTagID) && _.unTagID in _ && (_.add(_.unTagID), _.push(_))
+        : _.type == "hub" &&
+          (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
     }
     return [_, _];
   }, [_, _, _, _, _, _, _]);
+}
+function* _(_, _, _) {
+  let _ = _.slice(),
+    _ = _.slice(),
+    _ = _.slice();
+  for (; _.length || _.length; ) {
+    if (_.length) {
+      let _ = _.shift();
+      "hubconfig" in _
+        ? yield {
+            type: "hub",
+            strHandle: _.hubconfig.handle,
+            strName: _.hubconfig.display_name,
+            strURLPath: _.hubconfig.url_path,
+          }
+        : yield {
+            type: "tag",
+            unTagID: _.tagid,
+          };
+    }
+    _.length &&
+      (yield {
+        type: "tag",
+        unTagID: _.shift().tagid,
+      });
+  }
+  for (; _.length; ) {
+    let _ = _.shift();
+    yield {
+      type: "hub",
+      strHandle: _._,
+      strName: _.Localize(_.strLocToken),
+      strURLPath: _.strSalePageURL,
+    };
+  }
 }
 function _(_) {
   let { featuredCategory: _ } = _,
