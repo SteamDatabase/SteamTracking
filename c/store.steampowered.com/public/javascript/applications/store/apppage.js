@@ -3095,7 +3095,8 @@
               _ = (0, _.useRef)(null),
               _ = _.useCallback(
                 (_) => {
-                  if ("mouse" != _.pointerType) return;
+                  if ("mouse" != _.pointerType && "pen" != _.pointerType)
+                    return;
                   _.current = _.currentTarget;
                   let _ = _.current.getBoundingClientRect(),
                     _ = _(_, _, _.clientX);

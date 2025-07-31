@@ -2745,7 +2745,8 @@
               o = (0, a.useRef)(null),
               i = a.useCallback(
                 (t) => {
-                  if ("mouse" != t.pointerType) return;
+                  if ("mouse" != t.pointerType && "pen" != t.pointerType)
+                    return;
                   l.current = t.currentTarget;
                   let n = l.current.getBoundingClientRect(),
                     a = gt(e, n, t.clientX);
