@@ -15,13 +15,12 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -5009,7 +5008,7 @@ var _ = class _ extends _.Message {
       _,
       {
         bConstMethod: !0,
-        ePrivilege: 0,
+        ePrivilege: 2,
         eWebAPIKeyRequirement: 1,
       },
     );
@@ -5338,6 +5337,267 @@ var _ = "xfZcMLcNsgU-";
 var _ = "KdTm5UPqjB8-";
 var _ = "G-AxgYgeAPM-";
 var _ = "_10mrxtI-TKw-";
+var _ = "jFxjWAAnwh0-";
+var _ = "nrnKbyUwmmM-";
+var _ = "Y0bm1KMFrV0-";
+var _ = "mNbUH9KL26E-";
+var _ = "if7QNfxYlOQ-";
+var _ = "WX-9qmaHLTE-";
+var _ = "C9NNJwjrlDU-";
+var _ = "w78HTWD3DeQ-";
+var _ = _(_(), 1),
+  _ = _(_(), 1);
+var _ = _(_());
+function _(_) {
+  let _ = _(),
+    { data: _ } = _();
+  if (_)
+    return "appid" in _
+      ? _?.has(_.appid)
+      : "packageid" in _
+        ? _?.some((_) => "packageid" in _ && _.packageid == _.packageid)
+        : "bundleid" in _
+          ? _?.some((_) => "bundleid" in _ && _.bundleid == _.bundleid)
+          : !1;
+}
+function _() {
+  let { data: _ } = _();
+  return _.useMemo(
+    () =>
+      _?.line_items?.map((_) =>
+        _.packageid
+          ? {
+              packageid: _.packageid,
+            }
+          : {
+              bundleid: _.bundleid,
+            },
+      ),
+    [_],
+  );
+}
+function _() {
+  let _ = _(),
+    _ = _(),
+    _ = _();
+  return _({
+    queryKey: ["AppIDsInCart", _],
+    queryFn: async () => {
+      let _ = await Promise.all(_.map((_) => _.fetchQuery(_(_, _)))),
+        _ = new Set();
+      return _.forEach((_) => _.included_appids?.forEach((_) => _.add(_))), _;
+    },
+    enabled: _ !== void 0,
+  });
+}
+var _ = _(_(), 1);
+function _(_) {
+  let { children: _, collapse: _ } = _,
+    _ = "itemid" in _ ? _.itemid : void 0,
+    { data: _ } = _(_),
+    _ = _(_),
+    _ = "itemid" in _ ? _ : _.filterFailures,
+    _;
+  if (
+    (_
+      ? (_ = (0, _.jsx)(_, {}))
+      : _?.ignored
+        ? (_ = (0, _.jsx)(_, {}))
+        : _?.already_owned
+          ? (_ = (0, _.jsx)(_, {}))
+          : _?.on_wishlist && (_ = (0, _.jsx)(_, {})),
+    !_)
+  )
+    return _;
+  let { className: _, children: _, ..._ } = _.props,
+    _ = (0, _.default)(_, _, _ && _);
+  return _.cloneElement(
+    _,
+    {
+      ..._,
+      className: _,
+    },
+    _,
+    _,
+  );
+}
+function _(_) {
+  let { className: _, svg: _, children: _ } = _;
+  return (0, _.jsxs)("div", {
+    className: (0, _.default)(_, _),
+    children: [
+      _,
+      (0, _.jsx)("div", {
+        className: _,
+        children: _,
+      }),
+    ],
+  });
+}
+function _() {
+  return (0, _.jsx)(_, {
+    className: _,
+    svg: (0, _.jsx)(_, {}),
+    children: _("#ItemFlag_InLibrary"),
+  });
+}
+function _() {
+  return (0, _.jsx)(_, {
+    className: _,
+    svg: (0, _.jsx)(_, {}),
+    children: _("#ItemFlag_OnWishlist"),
+  });
+}
+function _() {
+  return (0, _.jsx)(_, {
+    className: _,
+    svg: (0, _.jsx)(_, {}),
+    children: _("#ItemFlag_InCart"),
+  });
+}
+function _() {
+  return (0, _.jsx)(_, {
+    className: _,
+    svg: (0, _.jsx)(_, {}),
+    children: _("#ItemFlag_Ignored"),
+  });
+}
+function _() {
+  return (0, _.jsxs)("svg", {
+    version: "1.1",
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "SVGIcon_Button SVGIcon_Library",
+    _: "0px",
+    _: "0px",
+    width: "256px",
+    height: "256px",
+    viewBox: "0 0 256 256",
+    children: [
+      (0, _.jsx)("rect", {
+        _: "34",
+        _: "12",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "10",
+        strokeLinejoin: "round",
+        strokeMiterlimit: "10",
+        width: "64",
+        height: "232",
+      }),
+      (0, _.jsx)("rect", {
+        _: "98",
+        _: "64",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "10",
+        strokeLinejoin: "round",
+        strokeMiterlimit: "10",
+        width: "64",
+        height: "180",
+      }),
+      (0, _.jsx)("rect", {
+        _: "162",
+        _: "12",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "10",
+        strokeLinejoin: "round",
+        strokeMiterlimit: "10",
+        width: "64",
+        height: "232",
+      }),
+      (0, _.jsx)("line", {
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "14",
+        strokeMiterlimit: "10",
+        _: "58",
+        _: "38",
+        _: "80",
+        _: "38",
+      }),
+      (0, _.jsx)("line", {
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "14",
+        strokeMiterlimit: "10",
+        _: "120",
+        _: "94",
+        _: "140",
+        _: "94",
+      }),
+      (0, _.jsx)("line", {
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "14",
+        strokeMiterlimit: "10",
+        _: "184",
+        _: "38",
+        _: "206",
+        _: "38",
+      }),
+    ],
+  });
+}
+function _() {
+  return (0, _.jsx)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 100 100",
+    children: (0, _.jsx)("polygon", {
+      stroke: "currentColor",
+      fill: "currentColor",
+      points:
+        "50 4.7 61.1 38.9 97.2 38.9 68 60.1 79.2 94.4 50 73.2 20.8 94.4 32 60.1 2.8 38.9 38.9 38.9 50 4.7",
+      strokeLinejoin: "round",
+      strokeWidth: "5",
+    }),
+  });
+}
+function _() {
+  return (0, _.jsx)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 36 36",
+    fill: "none",
+    children: (0, _.jsx)("path", {
+      _: "M33.63 8.05005L30.11 20.81C29.9416 21.453 29.5645 22.0219 29.0378 22.4273C28.5111 22.8328 27.8647 23.0518 27.2 23.05H14.75C14.1022 23.0507 13.4715 22.8416 12.9524 22.4541C12.4333 22.0665 12.0536 21.5213 11.87 20.9L7.56 8.05005H2V4.05005H8.28C8.90845 4.05122 9.52067 4.24973 10.0302 4.61755C10.5398 4.98538 10.921 5.50394 11.12 6.10005L11.78 8.10005L33.63 8.05005ZM15 27.05C14.5055 27.05 14.0222 27.1967 13.6111 27.4714C13.2 27.7461 12.8795 28.1365 12.6903 28.5933C12.5011 29.0502 12.4516 29.5528 12.548 30.0378C12.6445 30.5227 12.8826 30.9682 13.2322 31.3178C13.5819 31.6674 14.0273 31.9056 14.5123 32.002C14.9972 32.0985 15.4999 32.049 15.9567 31.8597C16.4135 31.6705 16.804 31.3501 17.0787 30.939C17.3534 30.5278 17.5 30.0445 17.5 29.55C17.5 28.887 17.2366 28.2511 16.7678 27.7823C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1967 25.6111 27.4714C25.2 27.7461 24.8795 28.1365 24.6903 28.5933C24.5011 29.0502 24.4516 29.5528 24.548 30.0378C24.6445 30.5227 24.8826 30.9682 25.2322 31.3178C25.5819 31.6674 26.0273 31.9056 26.5123 32.002C26.9972 32.0985 27.4999 32.049 27.9567 31.8597C28.4135 31.6705 28.804 31.3501 29.0787 30.939C29.3534 30.5278 29.5 30.0445 29.5 29.55C29.5 28.887 29.2366 28.2511 28.7678 27.7823C28.2989 27.3134 27.663 27.05 27 27.05Z",
+      fill: "currentColor",
+    }),
+  });
+}
+function _() {
+  return (0, _.jsxs)("svg", {
+    version: "1.1",
+    _: "Layer_2",
+    xmlns: "http://www.w3.org/2000/svg",
+    _: "0px",
+    _: "0px",
+    width: "256px",
+    height: "256px",
+    viewBox: "0 0 256 256",
+    children: [
+      (0, _.jsx)("line", {
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "45",
+        strokeMiterlimit: "10",
+        _: "212",
+        _: "212",
+        _: "44",
+        _: "44",
+      }),
+      (0, _.jsx)("line", {
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "45",
+        strokeMiterlimit: "10",
+        _: "44",
+        _: "212",
+        _: "212",
+        _: "44",
+      }),
+    ],
+  });
+}
 var _ = _(_(), 1);
 function _(_) {
   let { rgItemIDs: _ } = _;
@@ -5360,31 +5620,35 @@ var _ = _.memo(function (_) {
   let { itemid: _, active: _, className: _, ..._ } = _,
     { data: _ } = _(_),
     { data: _ } = _(_);
-  return (0, _.jsxs)(_, {
-    ..._,
-    storeItem: _,
-    className: (0, _.default)(_, _ === void 0 && _, _ && _, _),
-    children: [
-      (0, _.jsx)(_, {
-        itemid: _,
-      }),
-      (0, _.jsxs)("div", {
-        className: _,
-        children: [
-          (0, _.jsx)("div", {
-            className: _,
-            children: _?.name,
-          }),
-          (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)(_, {
-              storeItem: _,
-              purchaseOption: _,
+  return (0, _.jsx)(_, {
+    itemid: _,
+    collapse: !0,
+    children: (0, _.jsxs)(_, {
+      ..._,
+      storeItem: _,
+      className: (0, _.default)(_, _ === void 0 && _, _ && _, _),
+      children: [
+        (0, _.jsx)(_, {
+          itemid: _,
+        }),
+        (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            (0, _.jsx)("div", {
+              className: _,
+              children: _?.name,
             }),
-          }),
-        ],
-      }),
-    ],
+            (0, _.jsx)("div", {
+              className: _,
+              children: (0, _.jsx)(_, {
+                storeItem: _,
+                purchaseOption: _,
+              }),
+            }),
+          ],
+        }),
+      ],
+    }),
   });
 });
 function _(_) {
@@ -5608,6 +5872,7 @@ function _(_) {
 var _ = _(_(), 1),
   _ = {
     include_assets: !0,
+    apply_user_filters: !0,
   },
   _ = {
     include_tags: !0,
@@ -7167,6 +7432,7 @@ function _() {
 }
 var _ = {
     include_assets: !0,
+    apply_user_filters: !0,
   },
   _ = Math.floor(Date.now() / (10 * 60 * 1e3));
 function _(_) {

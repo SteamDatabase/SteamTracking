@@ -3,7 +3,7 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_());
@@ -3600,7 +3600,15 @@ async function _(_, _) {
     return _.Body().toObject()?.cart;
   } else if (_(_)) {
     let _ = _.Init(_);
-    _(_), _.Body().set_gidreplayoftransid(_.gid);
+    _(
+      {
+        country: _.country_code,
+        language: _.LANGUAGE,
+        realm: _.EREALM,
+      },
+      _,
+    ),
+      _.Body().set_gidreplayoftransid(_.gid);
     let _ = await _.ValidateCart(_, _);
     if (!_.BSuccess()) throw `Error loading ReplayCart: ${_.GetErrorMessage()}`;
     return _(_.Body().toObject());

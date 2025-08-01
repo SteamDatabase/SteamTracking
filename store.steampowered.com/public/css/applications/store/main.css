@@ -5784,6 +5784,83 @@ button._2Cp17yynz2h_StEQZcNnqB {
   font-weight: 500;
   line-height: 16px;
 }
+._3dtnlw7cvJhAMGafZPipGv {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-size: 10px;
+  color: #111;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  height: 18px;
+  line-height: 19px;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 4px;
+  overflow: hidden;
+}
+._3dtnlw7cvJhAMGafZPipGv > svg {
+  height: 12px;
+  width: 12px;
+  margin-right: 4px;
+}
+._3dtnlw7cvJhAMGafZPipGv ._2UUMzfFoTLL0YlWt710fZi {
+  flex: 1;
+  white-space: nowrap;
+  margin-right: 4px;
+}
+._3dtnlw7cvJhAMGafZPipGv._1Ywwc4rP-p7ADlRoCRtVUb {
+  background: #4f95bd;
+}
+._3dtnlw7cvJhAMGafZPipGv._3Rgc5idc13zGnjAaIpVNAR {
+  background: #d3deea;
+  background-size: 11px;
+}
+._3dtnlw7cvJhAMGafZPipGv.rG10F9nINvk6AFeTNj9Ki {
+  background: #a3cf06;
+}
+._3dtnlw7cvJhAMGafZPipGv._1ge0IdDaPOEl5amf8DGCZI {
+  background: #bfbfbf;
+}
+._3dtnlw7cvJhAMGafZPipGv._1_lO06CLuPyjAqfqgEyOTw {
+  left: 0;
+  right: 0;
+  background: #bfbfbf;
+}
+._3Tsl0PufrncX7yyZgZZIGJ {
+  position: relative;
+}
+.aeeMsJQ4JhwpTeEyXMKFF._3Tsl0PufrncX7yyZgZZIGJ
+  ._3dtnlw7cvJhAMGafZPipGv
+  ._2UUMzfFoTLL0YlWt710fZi {
+  min-width: 0;
+  margin-right: 0;
+  width: 0;
+  transition: width .25s, margin .25s;
+  interpolate-size: allow-keywords;
+}
+.aeeMsJQ4JhwpTeEyXMKFF._3Tsl0PufrncX7yyZgZZIGJ:hover
+  ._3dtnlw7cvJhAMGafZPipGv
+  ._2UUMzfFoTLL0YlWt710fZi {
+  width: auto;
+  margin-right: 4px;
+}
+.aeeMsJQ4JhwpTeEyXMKFF.vcnCXoFrgQJKrQgEAZDhV._3Tsl0PufrncX7yyZgZZIGJ
+  ._3dtnlw7cvJhAMGafZPipGv {
+  padding-left: 4px;
+}
+.aeeMsJQ4JhwpTeEyXMKFF._3Tsl0PufrncX7yyZgZZIGJ:hover ._3dtnlw7cvJhAMGafZPipGv {
+  max-width: 120px;
+}
+.aeeMsJQ4JhwpTeEyXMKFF._3Tsl0PufrncX7yyZgZZIGJ:hover
+  ._3dtnlw7cvJhAMGafZPipGv._1_lO06CLuPyjAqfqgEyOTw {
+  max-width: none;
+  padding-right: 4px;
+}
+.vcnCXoFrgQJKrQgEAZDhV._3Tsl0PufrncX7yyZgZZIGJ:hover ._3dtnlw7cvJhAMGafZPipGv {
+  padding-left: 18px;
+}
 .oeCR-_-EhS8CaxEaFAqDZ {
   min-height: 0;
   overflow-y: auto;

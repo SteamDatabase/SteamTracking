@@ -117,6 +117,20 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ds_flag: "_3dtnlw7cvJhAMGafZPipGv",
+        ds_label: "_2UUMzfFoTLL0YlWt710fZi",
+        ds_owned_flag: "_1Ywwc4rP-p7ADlRoCRtVUb",
+        ds_wishlist_flag: "_3Rgc5idc13zGnjAaIpVNAR",
+        ds_incart_flag: "rG10F9nINvk6AFeTNj9Ki",
+        ds_ignored_flag: "_1ge0IdDaPOEl5amf8DGCZI",
+        ds_excluded_by_preferences_flag: "_1_lO06CLuPyjAqfqgEyOTw",
+        ds_flagged: "_3Tsl0PufrncX7yyZgZZIGJ",
+        ds_collapse_flag: "aeeMsJQ4JhwpTeEyXMKFF",
+        ds_collapse_flag_tiny: "vcnCXoFrgQJKrQgEAZDhV",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         CapsuleList: "_16WEqEDIlh-957kKg14gBt",
         ItemCapsule: "_3Z1skIYVoqLbYiP2wy46Ce",
         Active: "tHXw2oCZIXQZPrZvcoSPB",
@@ -1226,13 +1240,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return !!_;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -1379,7 +1393,15 @@
         }
         if ((0, _._)(_)) {
           const _ = _._.Init(_._);
-          (0, _._)(_), __webpack_require__.Body().set_gidreplayoftransid(_.gid);
+          (0, _._)(
+            {
+              country: _._.country_code,
+              language: _._.LANGUAGE,
+              realm: _._.EREALM,
+            },
+            _,
+          ),
+            __webpack_require__.Body().set_gidreplayoftransid(_.gid);
           const _ = await _._.ValidateCart(_, _);
           if (!_.BSuccess())
             throw `Error loading ReplayCart: ${_.GetErrorMessage()}`;
@@ -37039,6 +37061,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -37123,6 +37146,10 @@
             return _(_, _, "include_screenshots", "screenshots");
           })(_, _),
         );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(_(_, _));
       }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
@@ -72560,7 +72587,7 @@
               _,
               {
                 bConstMethod: !0,
-                ePrivilege: 0,
+                ePrivilege: 2,
                 eWebAPIKeyRequirement: 1,
               },
             );
@@ -73188,7 +73215,287 @@
             )
           : _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _(),
+          { data: __webpack_require__ } = (function () {
+            const _ = _(),
+              _ = (0, _._)(),
+              _ = (0, _._)();
+            return (0, _._)({
+              queryKey: ["AppIDsInCart", _],
+              queryFn: async () => {
+                const _ = await Promise.all(
+                    _.map((_) =>
+                      __webpack_require__.fetchQuery((0, _._)(_, _)),
+                    ),
+                  ),
+                  _ = new Set();
+                return (
+                  _.forEach((_) => _.included_appids?.forEach((_) => _.add(_))),
+                  _
+                );
+              },
+              enabled: void 0 !== _,
+            });
+          })();
+        return _
+          ? "appid" in _
+            ? __webpack_require__?.has(_.appid)
+            : "packageid" in _
+              ? _?.some((_) => "packageid" in _ && _.packageid == _.packageid)
+              : "bundleid" in _ &&
+                _?.some((_) => "bundleid" in _ && _.bundleid == _.bundleid)
+          : void 0;
+      }
+      function _() {
+        const { data: _ } = (0, _._)();
+        return _.useMemo(
+          () =>
+            _?.line_items?.map((_) =>
+              _.packageid
+                ? {
+                    packageid: _.packageid,
+                  }
+                : {
+                    bundleid: _.bundleid,
+                  },
+            ),
+          [_],
+        );
+      }
+      function _(_) {
+        const { children: _, collapse: __webpack_require__ } = _,
+          _ = "itemid" in _ ? _.itemid : void 0,
+          { data: _ } = (0, _._)(_),
+          _ = _(_),
+          _ = "itemid" in _ ? _ : _.filterFailures;
+        let _;
+        if (
+          (_
+            ? (_ = _.createElement(_, null))
+            : _?.ignored
+              ? (_ = _.createElement(_, null))
+              : _?.already_owned
+                ? (_ = _.createElement(_, null))
+                : _?.on_wishlist && (_ = _.createElement(_, null)),
+          !_)
+        )
+          return _;
+        const { className: _, children: _, ..._ } = _.props,
+          _ = _()(_, _.ds_flagged, __webpack_require__ && _.ds_collapse_flag);
+        return _.cloneElement(
+          _,
+          {
+            ..._,
+            className: _,
+          },
+          _,
+          _,
+        );
+      }
+      function _(_) {
+        const { className: _, svg: __webpack_require__, children: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _()(_.ds_flag, _),
+          },
+          __webpack_require__,
+          _.createElement(
+            "div",
+            {
+              className: _.ds_label,
+            },
+            _,
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          {
+            className: _.ds_owned_flag,
+            svg: _.createElement(_, null),
+          },
+          _("#ItemFlag_InLibrary"),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          {
+            className: _.ds_wishlist_flag,
+            svg: _.createElement(_, null),
+          },
+          _("#ItemFlag_OnWishlist"),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          {
+            className: _.ds_incart_flag,
+            svg: _.createElement(_, null),
+          },
+          _("#ItemFlag_InCart"),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          {
+            className: _.ds_ignored_flag,
+            svg: _.createElement(_, null),
+          },
+          _("#ItemFlag_Ignored"),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Library",
+            _: "0px",
+            _: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          _.createElement("rect", {
+            _: "34",
+            _: "12",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "10",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            width: "64",
+            height: "232",
+          }),
+          _.createElement("rect", {
+            _: "98",
+            _: "64",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "10",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            width: "64",
+            height: "180",
+          }),
+          _.createElement("rect", {
+            _: "162",
+            _: "12",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "10",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            width: "64",
+            height: "232",
+          }),
+          _.createElement("line", {
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "14",
+            strokeMiterlimit: "10",
+            _: "58",
+            _: "38",
+            _: "80",
+            _: "38",
+          }),
+          _.createElement("line", {
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "14",
+            strokeMiterlimit: "10",
+            _: "120",
+            _: "94",
+            _: "140",
+            _: "94",
+          }),
+          _.createElement("line", {
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "14",
+            strokeMiterlimit: "10",
+            _: "184",
+            _: "38",
+            _: "206",
+            _: "38",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 100 100",
+          },
+          _.createElement("polygon", {
+            stroke: "currentColor",
+            fill: "currentColor",
+            points:
+              "50 4.7 61.1 38.9 97.2 38.9 68 60.1 79.2 94.4 50 73.2 20.8 94.4 32 60.1 2.8 38.9 38.9 38.9 50 4.7",
+            strokeLinejoin: "round",
+            strokeWidth: "5",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+          },
+          _.createElement("path", {
+            _: "M33.63 8.05005L30.11 20.81C29.9416 21.453 29.5645 22.0219 29.0378 22.4273C28.5111 22.8328 27.8647 23.0518 27.2 23.05H14.75C14.1022 23.0507 13.4715 22.8416 12.9524 22.4541C12.4333 22.0665 12.0536 21.5213 11.87 20.9L7.56 8.05005H2V4.05005H8.28C8.90845 4.05122 9.52067 4.24973 10.0302 4.61755C10.5398 4.98538 10.921 5.50394 11.12 6.10005L11.78 8.10005L33.63 8.05005ZM15 27.05C14.5055 27.05 14.0222 27.1967 13.6111 27.4714C13.2 27.7461 12.8795 28.1365 12.6903 28.5933C12.5011 29.0502 12.4516 29.5528 12.548 30.0378C12.6445 30.5227 12.8826 30.9682 13.2322 31.3178C13.5819 31.6674 14.0273 31.9056 14.5123 32.002C14.9972 32.0985 15.4999 32.049 15.9567 31.8597C16.4135 31.6705 16.804 31.3501 17.0787 30.939C17.3534 30.5278 17.5 30.0445 17.5 29.55C17.5 28.887 17.2366 28.2511 16.7678 27.7823C16.2989 27.3134 15.663 27.05 15 27.05ZM27 27.05C26.5055 27.05 26.0222 27.1967 25.6111 27.4714C25.2 27.7461 24.8795 28.1365 24.6903 28.5933C24.5011 29.0502 24.4516 29.5528 24.548 30.0378C24.6445 30.5227 24.8826 30.9682 25.2322 31.3178C25.5819 31.6674 26.0273 31.9056 26.5123 32.002C26.9972 32.0985 27.4999 32.049 27.9567 31.8597C28.4135 31.6705 28.804 31.3501 29.0787 30.939C29.3534 30.5278 29.5 30.0445 29.5 29.55C29.5 28.887 29.2366 28.2511 28.7678 27.7823C28.2989 27.3134 27.663 27.05 27 27.05Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            _: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            _: "0px",
+            _: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          _.createElement("line", {
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "45",
+            strokeMiterlimit: "10",
+            _: "212",
+            _: "212",
+            _: "44",
+            _: "44",
+          }),
+          _.createElement("line", {
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "45",
+            strokeMiterlimit: "10",
+            _: "44",
+            _: "212",
+            _: "212",
+            _: "44",
+          }),
+        );
+      }
       function _(_) {
         const { rgItemIDs: _ } = _;
         return _.createElement(
@@ -73218,39 +73525,46 @@
         return _.createElement(
           _,
           {
-            ..._,
-            storeItem: _,
-            className: _()(
-              _.ItemCapsule,
-              void 0 === __webpack_require__ && _.Hover,
-              __webpack_require__ && _.Active,
-              _,
-            ),
-          },
-          _.createElement(_, {
             itemid: _,
-          }),
+            collapse: !0,
+          },
           _.createElement(
-            "div",
+            _,
             {
-              className: _.Content,
+              ..._,
+              storeItem: _,
+              className: _()(
+                _.ItemCapsule,
+                void 0 === __webpack_require__ && _.Hover,
+                __webpack_require__ && _.Active,
+                _,
+              ),
             },
+            _.createElement(_, {
+              itemid: _,
+            }),
             _.createElement(
               "div",
               {
-                className: _.Title,
+                className: _.Content,
               },
-              _?.name,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.DiscountCtn,
-              },
-              _.createElement(_, {
-                storeItem: _,
-                purchaseOption: _,
-              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Title,
+                },
+                _?.name,
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.DiscountCtn,
+                },
+                _.createElement(_, {
+                  storeItem: _,
+                  purchaseOption: _,
+                }),
+              ),
             ),
           ),
         );
@@ -73369,6 +73683,7 @@
       }
       const _ = {
           include_assets: !0,
+          apply_user_filters: !0,
         },
         _ = {
           include_tags: !0,
@@ -75298,6 +75613,7 @@
       }
       const _ = {
           include_assets: !0,
+          apply_user_filters: !0,
         },
         _ = Math.floor(Date.now() / 6e5);
       function _(_) {
@@ -78831,7 +79147,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 24288), _((_._ = _));
+      return (_ = 75396), _((_._ = _));
       var _;
     });
     _._();

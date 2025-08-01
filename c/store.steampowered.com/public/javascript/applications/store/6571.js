@@ -94,7 +94,11 @@
 	"Menu_SearchBar_NoMatches": "No items match your query.",
 	"Menu_SearchBar_AdvancedSearch": "Advanced Search",
 	"Menu_Search": "Search",
-	"Menu_Label": "Store menu"
+	"Menu_Label": "Store menu",
+	"ItemFlag_InLibrary": "IN LIBRARY",
+	"ItemFlag_OnWishlist": "ON WISHLIST",
+	"ItemFlag_InCart": "IN CART",
+	"ItemFlag_Ignored": "IGNORED"
 }`);
     },
   },
