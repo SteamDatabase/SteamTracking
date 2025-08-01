@@ -98,7 +98,8 @@
 	"ItemFlag_InLibrary": "IN LIBRARY",
 	"ItemFlag_OnWishlist": "ON WISHLIST",
 	"ItemFlag_InCart": "IN CART",
-	"ItemFlag_Ignored": "IGNORED"
+	"ItemFlag_Ignored": "IGNORED",
+	"ItemFlag_ExcludedByPreferences": "EXCLUDED BY PREFERENCES"
 }`);
     },
   },
