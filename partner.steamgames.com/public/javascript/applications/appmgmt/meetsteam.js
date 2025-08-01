@@ -62,7 +62,7 @@
         g = Symbol.for("react.memo"),
         p = Symbol.for("react.lazy"),
         h = Symbol.for("react.offscreen");
-      function v(e) {
+      function _(e) {
         if ("object" == typeof e && null !== e) {
           var t = e.$$typeof;
           switch (t) {
@@ -94,10 +94,10 @@
       }
       (n = Symbol.for("react.module.reference")),
         (t.isForwardRef = function (e) {
-          return v(e) === m;
+          return _(e) === m;
         }),
         (t.isFragment = function (e) {
-          return v(e) === l;
+          return _(e) === l;
         });
     },
     98193: (e, t, n) => {
@@ -121,8 +121,8 @@
         g = n(45737),
         p = n.n(g),
         h = n(24484),
-        v = n(56545),
-        _ = n(85737),
+        _ = n(56545),
+        v = n(85737),
         f = n(64753),
         S = n(20194),
         y = n(75233),
@@ -154,9 +154,9 @@
         return (0, S.I)({
           queryKey: ["useMeetSteamGetAllRegistration", t, n],
           queryFn: async () => {
-            const n = v.w.Init(_.q3);
+            const n = _.w.Init(v.q3);
             n.Body().set_clan_event_gid(t);
-            const a = await _.ZK.GetRegistrations(e, n);
+            const a = await v.ZK.GetRegistrations(e, n);
             return a.BSuccess()
               ? a
                   .Body()
@@ -172,14 +172,14 @@
         L = n(96001),
         F = n(16676),
         G = n(26161),
-        x = n(78395),
-        O = n(21869),
+        O = n(78395),
+        x = n(21869),
         $ = n(22797),
         z = n(26408),
         U = n(52038),
         j = n(61859),
-        Y = n(91675),
-        q = n(30470),
+        q = n(91675),
+        Y = n(30470),
         W = n(30565),
         K = n.n(W),
         H = n(34283),
@@ -205,7 +205,7 @@
         Init() {
           const e = (0, h.Tc)("store_feature_token", "application_config");
           (0, X.wT)(Boolean(e), "require store_feature_token"),
-            (this.m_steamInterface = new ee.D(q.TS.WEBAPI_BASE_URL, e));
+            (this.m_steamInterface = new ee.D(Y.TS.WEBAPI_BASE_URL, e));
         }
       }
       function ne() {
@@ -219,8 +219,8 @@
           [u, d] = r.useState(""),
           [E, g] = r.useState(""),
           [p, h] = r.useState(!1),
-          v = ne(),
-          _ = (0, S.I)({
+          _ = ne(),
+          v = (0, S.I)({
             queryKey: ["MeetSteamInviteDirectDialog", n, c],
             queryFn: async () => {
               const e = {
@@ -228,7 +228,7 @@
                   gid: n,
                   type: 6,
                 },
-                t = await Z.Nl.GetUserActionData(v, e);
+                t = await Z.Nl.GetUserActionData(_, e);
               return t.BSuccess() && t.Body().jsondata()
                 ? JSON.parse(t.Body().jsondata())
                 : {};
@@ -236,17 +236,17 @@
             enabled: Boolean(n) && c > 0,
           });
         r.useEffect(() => {
-          _.isLoading ||
-            (_.isSuccess &&
-              (d(_.data.partner_id ? _.data.partner_id.toString() : ""),
-              g(_.data.email_override ?? ""),
-              h(_.data.allow_registration_if_full ?? !1)));
-        }, [_.isLoading, _.isSuccess, _.data]);
+          v.isLoading ||
+            (v.isSuccess &&
+              (d(v.data.partner_id ? v.data.partner_id.toString() : ""),
+              g(v.data.email_override ?? ""),
+              h(v.data.allow_registration_if_full ?? !1)));
+        }, [v.isLoading, v.isSuccess, v.data]);
         return r.createElement(
-          x.o0,
+          O.o0,
           {
             strTitle: "Invite User",
-            bOKDisabled: !c || a || _.isLoading,
+            bOKDisabled: !c || a || v.isLoading,
             onOK: async () => {
               l(!0);
               const e = Number.parseInt(u) > 0 ? Number.parseInt(u) : 0,
@@ -265,7 +265,7 @@
                 r = a && 1 == a.success;
               r || i("We hit error during invite, check console: " + a?.msg),
                 l(!1),
-                _.refetch(),
+                v.refetch(),
                 r && t();
             },
             onCancel: t,
@@ -283,7 +283,7 @@
                 value: c,
               }),
               0 != c &&
-                !_.isLoading &&
+                !v.isLoading &&
                 r.createElement(
                   r.Fragment,
                   null,
@@ -313,7 +313,7 @@
               position: "center",
               string: (0, j.we)("#Saving"),
             }),
-          _.isLoading &&
+          v.isLoading &&
             r.createElement($.t, {
               size: "small",
               position: "center",
@@ -329,7 +329,7 @@
           [u, d] = (0, r.useState)(null),
           [E, g] = (0, r.useState)(null);
         return r.createElement(
-          x.o0,
+          O.o0,
           {
             strTitle: "Invite Users",
             bOKDisabled: !a || 0 == a.length || null != u,
@@ -500,14 +500,14 @@
           l = t.map((e) => e.strEmailOverride).join(","),
           s = t.map((e) => (e.bAllowRegistrationIfFull ? "1" : "0")).join(",");
         let i = new FormData();
-        i.append("sessionid", q.TS.SESSIONID),
+        i.append("sessionid", Y.TS.SESSIONID),
           i.append("gid", e),
           i.append("accounts", a),
           i.append("partnerids", r),
           i.append("emailoverride", l),
           i.append("allowregistrationiffull", s),
           i.append("forceupdate", n ? "1" : "0");
-        const c = `${q.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
+        const c = `${Y.TS.PARTNER_BASE_URL}/meetsteam/ajaxinviteusers`;
         try {
           const e = await w().post(c, i, { withCredentials: !0 });
           if (1 != e?.data?.success) {
@@ -540,10 +540,10 @@
       const pe = r.createContext({
         loadMeetSteamAllRegistration: async (e, t) =>
           await (function (e) {
-            ve ||
-              (ve = new (de())(
+            _e ||
+              (_e = new (de())(
                 async (t) => {
-                  const n = v.w.Init(Z.j3);
+                  const n = _.w.Init(Z.j3);
                   n.Body().set_gids([...t]), n.Body().set_type(6);
                   const a = await Z.Nl.GetMultipleUserActionData(e, n);
                   if (!a.BSuccess())
@@ -574,7 +574,7 @@
                 },
                 { maxBatchSize: 5 },
               ));
-            return ve;
+            return _e;
           })(e).load(t),
       });
       function he(e, t, n) {
@@ -584,8 +584,8 @@
           enabled: !!n,
         };
       }
-      let ve;
-      var _e = n(7860);
+      let _e;
+      var ve = n(7860);
       function fe(e, t) {
         const n = (0, L.a)(),
           a = r.useContext(ye),
@@ -593,7 +593,7 @@
         return l.isLoading ? null : l.data;
       }
       function Se(e, t) {
-        return _e.L.getQueryData(["PartnerEmailAndName", e, t]);
+        return ve.L.getQueryData(["PartnerEmailAndName", e, t]);
       }
       const ye = r.createContext({
         loadPartnerEmailAndName: async (e, t, n) =>
@@ -601,10 +601,10 @@
             we ||
               (we = new (de())(
                 async (t) => {
-                  const n = v.w.Init(_.g9);
+                  const n = _.w.Init(v.g9);
                   n.Body().set_accountids(t.map((e) => e.accountID)),
                     n.Body().set_partnerids(t.map((e) => e.partnerID));
-                  const a = await _.ZK.GetBatchPartnerEmailAndName(e, n);
+                  const a = await v.ZK.GetBatchPartnerEmailAndName(e, n);
                   if (!a.BSuccess())
                     throw `Failed to call GetBatchPartnerEmailAndName with details: ${a.GetErrorMessage()}`;
                   const r = new Map();
@@ -653,13 +653,13 @@
             "Analyse Top Partner Coverage",
           ),
           r.createElement(
-            O.E,
+            x.E,
             { active: n },
             r.createElement(
               u.tH,
               null,
               r.createElement(
-                x.o0,
+                O.o0,
                 {
                   closeModal: l,
                   bAllowFullSize: !0,
@@ -898,7 +898,7 @@
             [a],
           );
         return r.createElement(
-          x.o0,
+          O.o0,
           {
             bAlertDialog: !0,
             bAllowFullSize: !0,
@@ -926,9 +926,9 @@
                     onClick: async () => {
                       await (async function (e, t) {
                         let n = new FormData();
-                        n.append("sessionid", q.TS.SESSIONID),
+                        n.append("sessionid", Y.TS.SESSIONID),
                           n.append("gid", t);
-                        const a = `${q.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
+                        const a = `${Y.TS.PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails`;
                         try {
                           const r = await w().post(a, n, {
                             withCredentials: !0,
@@ -1017,19 +1017,25 @@
           i = (0, L.a)(),
           c = Ee(n),
           o = P(i, n, l?.group_id),
-          u = (0, r.useMemo)(() => {
+          [u, m] = (0, r.useMemo)(() => {
             const e = o?.data?.filter((e) => e.session_id == s.id),
-              t = new Map();
+              t = new Map(),
+              n = new Map();
             return (
               e?.forEach((e) => {
-                t.set(new Re.b2(e.steamid).GetAccountID(), e);
+                const a = new Re.b2(e.steamid).GetAccountID();
+                if ((t.set(a, e), e.jsondata)) {
+                  const t = JSON.parse(e.jsondata);
+                  t.pre_event_partner_questions &&
+                    n.set(a, t.pre_event_partner_questions);
+                }
               }),
-              t
+              [t, n]
             );
           }, [s, o]),
-          m = c?.filter((e) => u.has(new Re.b2(e.steamid).GetAccountID()));
+          d = c?.filter((e) => u.has(new Re.b2(e.steamid).GetAccountID()));
         return r.createElement(
-          x.o0,
+          O.o0,
           {
             bAlertDialog: !0,
             bAllowFullSize: !0,
@@ -1045,56 +1051,64 @@
               "a",
               {
                 onClick: () =>
-                  (function (e, t, n) {
-                    const a = [];
-                    a.push([
-                      "SteamID",
-                      "Name",
-                      "Invited",
-                      "Partner",
-                      "Email Override",
-                      "Guest Count",
-                      "Reg Confirmation Email Sent",
-                    ]),
-                      t.forEach((e) => {
-                        const t = [],
-                          r = e.partner_id ? (0, A.Yd)(e.partner_id) : void 0;
-                        t.push("" + e.steamid),
-                          t.push(e.name),
-                          t.push(e.invited ? "YES" : ""),
-                          t.push(r ? `${r?.name} (${e.partner_id})` : ""),
-                          t.push(e.email_override),
-                          t.push(
+                  (function (e, t, n, a, r) {
+                    const l = [],
+                      s = [
+                        "SteamID",
+                        "Name",
+                        "Invited",
+                        "Partner",
+                        "Email Override",
+                        "Guest Count",
+                        "Reg Confirmation Email Sent",
+                      ];
+                    e.ask_registration_question && s.push("Pre Reg Answer");
+                    l.push(s),
+                      n.forEach((t) => {
+                        const n = [],
+                          s = t.partner_id ? (0, A.Yd)(t.partner_id) : void 0;
+                        n.push("" + t.steamid),
+                          n.push(t.name),
+                          n.push(t.invited ? "YES" : ""),
+                          n.push(s ? `${s?.name} (${t.partner_id})` : ""),
+                          n.push(t.email_override),
+                          n.push(
                             "" +
-                              (e.guests_registered
-                                ? e.guests_registered - 1
+                              (t.guests_registered
+                                ? t.guests_registered - 1
                                 : 0),
                           );
-                        const l = new Re.b2(e.steamid);
-                        if (n.has(l.GetAccountID())) {
-                          const a = xe(n.get(l.GetAccountID()), e);
-                          if (a) {
-                            const e = new Date(1e3 * a)
+                        const i = new Re.b2(t.steamid);
+                        if (a.has(i.GetAccountID())) {
+                          const e = Oe(a.get(i.GetAccountID()), t);
+                          if (e) {
+                            const t = new Date(1e3 * e)
                               .toISOString()
                               .replace("T", " ")
                               .split(".")[0];
-                            t.push(e);
-                          } else t.push("");
-                        } else t.push("");
-                        a.push(t);
-                        for (let t = 0; t < e.guest_names?.length; t++) {
+                            n.push(t);
+                          } else n.push("");
+                        } else n.push("");
+                        if (e.ask_registration_question) {
+                          const t = r
+                            .get(i.GetAccountID())
+                            ?.find((t) => t.group_id == e.group_id);
+                          t && n.push(t.question);
+                        }
+                        l.push(n);
+                        for (let e = 0; e < t.guest_names?.length; e++) {
                           const n = [];
                           n.push("(guest)"),
-                            n.push(e.guest_names[t]),
-                            a.push(n);
+                            n.push(t.guest_names[e]),
+                            l.push(n);
                         }
                       });
-                    const r =
+                    const i =
                       "meetsteam_" +
-                      e.replace(/[ <>:"/\\|?*\x00-\x1F]/g, "_") +
+                      t.replace(/[ <>:"/\\|?*\x00-\x1F]/g, "_") +
                       ".csv";
-                    Q.g.WriteCSVToFile(a, r);
-                  })(a, m, u),
+                    Q.g.WriteCSVToFile(l, i);
+                  })(l, a, d, u, m),
               },
               "Export to CSV",
             ),
@@ -1123,41 +1137,46 @@
                   }),
                 ),
                 r.createElement("th", null, "Reg Confirm Email Sent"),
+                l.ask_registration_question &&
+                  r.createElement("th", null, "Answer"),
               ),
             ),
             r.createElement(
               "tbody",
               null,
-              m?.flatMap((e) => {
-                const t = [
-                  r.createElement(Oe, {
-                    key: "regrow" + e.steamid,
-                    regInfo: u.get(new Re.b2(e.steamid).GetAccountID()),
-                    inviteInfo: e,
-                  }),
-                ];
-                for (let n = 0; n < e.guest_names?.length; n++)
-                  t.push(
+              d?.flatMap((e) => {
+                const t = new Re.b2(e.steamid).GetAccountID(),
+                  n = [
+                    r.createElement(xe, {
+                      key: "regrow" + e.steamid,
+                      group: l,
+                      regInfo: u.get(t),
+                      inviteInfo: e,
+                      preRegQuestions: m.get(t),
+                    }),
+                  ];
+                for (let t = 0; t < e.guest_names?.length; t++)
+                  n.push(
                     r.createElement($e, {
-                      key: "regguestrow" + e.steamid + "_" + n,
-                      guestName: e.guest_names[n],
+                      key: "regguestrow" + e.steamid + "_" + t,
+                      guestName: e.guest_names[t],
                     }),
                   );
-                return t;
+                return n;
               }),
             ),
           ),
         );
       }
-      function xe(e, t) {
+      function Oe(e, t) {
         const n = `registration_emailed_${e.group_id}_${e.session_id}`;
         let a = null;
         return n in t && (a = t[n]), a;
       }
-      function Oe(e) {
-        const { inviteInfo: t, regInfo: n } = e,
-          [a] = (0, A.UA)(t.partner_id),
-          l = xe(n, t);
+      function xe(e) {
+        const { inviteInfo: t, regInfo: n, group: a, preRegQuestions: l } = e,
+          [s] = (0, A.UA)(t.partner_id),
+          i = Oe(n, t);
         return r.createElement(
           "tr",
           null,
@@ -1167,7 +1186,7 @@
           r.createElement(
             "td",
             null,
-            a?.name,
+            s?.name,
             " ",
             t.partner_id ? `(${t.partner_id})` : "",
           ),
@@ -1177,7 +1196,13 @@
             null,
             n.guests_registered ? n.guests_registered - 1 : 0,
           ),
-          r.createElement("td", null, l ? (0, j.TW)(l) : ""),
+          r.createElement("td", null, i ? (0, j.TW)(i) : ""),
+          a.ask_registration_question &&
+            r.createElement(
+              "td",
+              null,
+              l?.find((e) => e.group_id == a.group_id)?.question || "",
+            ),
         );
       }
       function $e(e) {
@@ -1209,13 +1234,13 @@
             "Show Registration Across Events",
           ),
           r.createElement(
-            O.E,
+            x.E,
             { active: n },
             r.createElement(
               u.tH,
               null,
               r.createElement(
-                x.o0,
+                O.o0,
                 {
                   closeModal: l,
                   bAllowFullSize: !0,
@@ -1226,7 +1251,7 @@
                   : r.createElement(
                       r.Fragment,
                       null,
-                      r.createElement(Ye, { rgGidMeetSteamEvents: s }),
+                      r.createElement(qe, { rgGidMeetSteamEvents: s }),
                       r.createElement(
                         F.$n,
                         { onClick: () => i(null) },
@@ -1239,7 +1264,7 @@
         );
       }
       const je = (0, ce.FB)();
-      function Ye(e) {
+      function qe(e) {
         const { rgGidMeetSteamEvents: t } = e,
           { rgAllRegistrations: n, rgPartnerIDs: a } = (function (e) {
             const t = ge(e),
@@ -1347,7 +1372,7 @@
             )
           : r.createElement($.t, { string: (0, j.we)("#Loading") });
       }
-      var qe = n(65);
+      var Ye = n(65);
       function We(e) {
         const t = Ke();
         return r.createElement(
@@ -1403,7 +1428,7 @@
                   ? [...i]
                   : i?.filter((e) => e.endTime >= new Date().getTime() / 1e3),
               t = Array.from(
-                (0, qe.bv)(e, (e) => (0, qe.J2)(new Date(1e3 * e.startTime))),
+                (0, Ye.bv)(e, (e) => (0, Ye.J2)(new Date(1e3 * e.startTime))),
               );
             return t?.sort((e) => -e[0]), t;
           }, [i, a]);
@@ -1419,7 +1444,7 @@
                   r.createElement(
                     "a",
                     {
-                      href: `${q.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
+                      href: `${Y.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/`,
                     },
                     "Open Meet Steam Event Dashboard",
                   ),
@@ -1504,7 +1529,7 @@
                 r.createElement(
                   "a",
                   {
-                    href: `${q.TS.COMMUNITY_BASE_URL}gid/${a.ConvertTo64BitString()}/partnerevents/edit/${n}`,
+                    href: `${Y.TS.COMMUNITY_BASE_URL}gid/${a.ConvertTo64BitString()}/partnerevents/edit/${n}`,
                   },
                   "Edit",
                 ),
@@ -1515,7 +1540,7 @@
                 " | ",
                 r.createElement(
                   "a",
-                  { href: `${q.TS.STORE_BASE_URL}meetsteam/${n}` },
+                  { href: `${Y.TS.STORE_BASE_URL}meetsteam/${n}` },
                   "View",
                 ),
               ),
@@ -1531,7 +1556,7 @@
                   r.createElement(
                     "a",
                     {
-                      href: `${q.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${q.iA.accountid}`,
+                      href: `${Y.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${Y.iA.accountid}`,
                     },
                     "QR Page",
                   ),
@@ -1639,7 +1664,7 @@
               " | ",
               r.createElement(
                 "a",
-                { href: `${q.TS.PARTNER_BASE_URL}meetsteam/survey/${t}` },
+                { href: `${Y.TS.PARTNER_BASE_URL}meetsteam/survey/${t}` },
                 "Survey",
               ),
             )
@@ -1670,7 +1695,7 @@
             u.tH,
             null,
             r.createElement(
-              O.E,
+              x.E,
               { active: n },
               r.createElement(re, { hideModal: l, gid: t }),
             ),
@@ -1698,7 +1723,7 @@
             u.tH,
             null,
             r.createElement(
-              O.E,
+              x.E,
               { active: n },
               r.createElement(ae, { hideModal: l, gid: t }),
             ),
@@ -1726,7 +1751,7 @@
             u.tH,
             null,
             r.createElement(
-              O.E,
+              x.E,
               { active: n },
               r.createElement(Le, { hideModal: l, gid: t }),
             ),
@@ -1749,11 +1774,11 @@
               onClick: async (e) => {
                 e.preventDefault(), e.stopPropagation(), l(!0);
                 const a = await (async function (e, t) {
-                  const n = v.w.Init(_.VI),
+                  const n = _.w.Init(v.VI),
                     a = D.b.InitFromClanID((0, G.H)());
                   n.Body().set_clan_event_gid(t),
                     n.Body().set_steamid(a.ConvertTo64BitString());
-                  const r = await _.ZK.TestFireEmails(e, n);
+                  const r = await v.ZK.TestFireEmails(e, n);
                   return console.log("test fire", r), r.GetEResult();
                 })(n, t);
                 i(a);
@@ -1762,10 +1787,10 @@
             "Email Self",
           ),
           r.createElement(
-            O.E,
+            x.E,
             { active: a },
             r.createElement(
-              x.o0,
+              O.o0,
               {
                 bAlertDialog: !0,
                 strTitle: "Test Emails",
@@ -1808,8 +1833,8 @@
           [d, E, g] = (0, f.uD)(),
           p = P((0, L.a)(), t, n?.group_id);
         let h = Math.min((m?.guest_count / l.max_capacity) * 100, 100),
-          v = m?.guest_count > 0 ? `${h}%` : "0%",
-          _ = m?.guest_count >= l.max_capacity;
+          _ = m?.guest_count > 0 ? `${h}%` : "0%",
+          v = m?.guest_count >= l.max_capacity;
         const S = Intl.DateTimeFormat().resolvedOptions().timeZone,
           y =
             "in_person" === l.location_type
@@ -1839,11 +1864,11 @@
                   r = a.utcOffset() - n.utcOffset(),
                   l = new Date(1e3 * (e + 60 * r)),
                   s = new Date();
-                return `${l.getFullYear() == s.getFullYear() ? ((0, Y.$w))(l, !1, !1) : ((0, Y._9))(l, !1, !1)} ${(0, Y.KC)(e + 60 * r)} ${a.format("z")}`;
+                return `${l.getFullYear() == s.getFullYear() ? ((0, q.$w))(l, !1, !1) : ((0, q._9))(l, !1, !1)} ${(0, q.KC)(e + 60 * r)} ${a.format("z")}`;
               })(l.rtime_start, y),
             ),
           ),
-          r.createElement("td", null, (0, Y.IH)(l.rtime_end - l.rtime_start)),
+          r.createElement("td", null, (0, q.IH)(l.rtime_end - l.rtime_start)),
           r.createElement(
             "td",
             null,
@@ -1855,8 +1880,8 @@
               "div",
               { className: K().CapacityBarMax },
               r.createElement("div", {
-                className: (0, U.A)(K().CapacityBarCurrent, _ ? K().Full : ""),
-                style: { width: v },
+                className: (0, U.A)(K().CapacityBarCurrent, v ? K().Full : ""),
+                style: { width: _ },
               }),
             ),
           ),
@@ -1890,7 +1915,7 @@
               u.tH,
               null,
               r.createElement(
-                O.E,
+                x.E,
                 { active: d },
                 r.createElement(Ge, {
                   gid: t,
@@ -1979,7 +2004,7 @@
             title: `${t.name} in ${t.place} around ${t.time}: Interest: ${n.toLocaleString()}`,
             bStartMinimized: !0,
           },
-          r.createElement(vt, { conf: t, rgSurveyInterest: a }),
+          r.createElement(_t, { conf: t, rgSurveyInterest: a }),
         );
       }
       function ht(e) {
@@ -1997,7 +2022,7 @@
             return parseFloat(e);
         }
       }
-      function vt(e) {
+      function _t(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           a = (0, r.useMemo)(
             () => n.filter((e) => e.results?.attending?.includes(t.id)),
@@ -2035,7 +2060,7 @@
         return s
           ? l?.length
             ? a && 0 != a.length
-              ? r.createElement(_t, { conf: t, rgSurveyInterest: a })
+              ? r.createElement(vt, { conf: t, rgSurveyInterest: a })
               : r.createElement("div", null, "No users with interest")
             : r.createElement($.t, {
                 position: "center",
@@ -2046,7 +2071,7 @@
               string: `Loading ${i} of ${a.length}`,
             });
       }
-      function _t(e) {
+      function vt(e) {
         const { conf: t, rgSurveyInterest: n } = e,
           a = (0, y.jE)();
         return r.createElement(
@@ -2407,11 +2432,11 @@
             const t = (0, S.I)({
               queryKey: ["useMeetSteamSaleOperators"],
               queryFn: async () => {
-                const t = v.w.Init(_.Rl),
+                const t = _.w.Init(v.Rl),
                   n = new Date();
                 n.setFullYear(n.getFullYear() - 2),
                   t.Body().set_rt_oldest_date(0);
-                const a = await _.ZK.GetSaleEventOrganizers(e, t);
+                const a = await v.ZK.GetSaleEventOrganizers(e, t);
                 return a.BSuccess()
                   ? a
                       .Body()
@@ -2445,7 +2470,7 @@
                         const n = (0, ct.z0)(t.accountid),
                           a =
                             ((r = t.accountid),
-                            _e.L.getQueryData(["UserEmailAndLangs", r]));
+                            ve.L.getQueryData(["UserEmailAndLangs", r]));
                         var r;
                         e.push([
                           n?.m_strPlayerName || "",
@@ -2531,10 +2556,10 @@
             " Events",
           ),
           r.createElement(
-            O.E,
+            x.E,
             { active: a },
             r.createElement(
-              x.o0,
+              O.o0,
               { bAlertDialog: !0, closeModal: s, strTitle: `${t}'s Events` },
               n.map((e) => r.createElement(kt, { gid: e, key: e })),
             ),
@@ -2548,7 +2573,7 @@
           ? r.createElement(
               "a",
               {
-                href: `${q.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
+                href: `${Y.TS.COMMUNITY_BASE_URL}gid/${n.clanSteamID.ConvertTo64BitString()}/partnerevents/edit/${t}`,
                 target: "_blank",
               },
               r.createElement("div", null, n.GetNameWithFallback(0)),
@@ -2603,9 +2628,9 @@
       var Lt = n(65946),
         Ft = n(79645),
         Gt = n(1909),
-        xt = n(56330),
-        Ot = n(85761),
-        $t = n.n(Ot);
+        Ot = n(56330),
+        xt = n(85761),
+        $t = n.n(xt);
       function zt(e) {
         const t = (function () {
             const [e] = (0, r.useState)(() =>
@@ -2729,7 +2754,7 @@
                       l &&
                         r.createElement(
                           "div",
-                          { className: xt.ErrorStylesWithIcon },
+                          { className: Ot.ErrorStylesWithIcon },
                           (0, j.we)("#Error_ErrorCommunicatingWithNetwork"),
                         ),
                     ),
@@ -2869,7 +2894,7 @@
               null,
               r.createElement("h1", null, (0, j.we)("#MeetSteam_You")),
               r.createElement("p", null, (0, j.we)("#MeetSteam_You_Desc")),
-              r.createElement(Yt, {
+              r.createElement(qt, {
                 nPartnerID: t.partner_id,
                 label: (0, j.we)("#MeetSteam_You_Company"),
                 setPartnerID: (e) => n({ ...t, partner_id: e }),
@@ -2963,7 +2988,7 @@
               string: (0, j.we)("#Loading"),
             });
       }
-      function Yt(e) {
+      function qt(e) {
         const { nPartnerID: t, setPartnerID: n, label: a } = e,
           l = (0, Ft.c)(b.iA.accountid);
         if (!l)
@@ -2989,7 +3014,7 @@
           })
         );
       }
-      var qt = n(20587),
+      var Yt = n(20587),
         Wt = n(13038),
         Kt = n.n(Wt);
       function Ht(e) {
@@ -3094,7 +3119,7 @@
                     o &&
                       r.createElement(
                         "div",
-                        { className: xt.ErrorStylesWithIcon },
+                        { className: Ot.ErrorStylesWithIcon },
                         (0, j.we)("#Error_ErrorCommunicatingWithNetwork"),
                       ),
                   ),
@@ -3307,7 +3332,7 @@
       function nn(e) {
         return (
           (0, r.useEffect)(() => {
-            qt.O3.Init();
+            Yt.O3.Init();
           }, []),
           r.createElement(
             i.m,

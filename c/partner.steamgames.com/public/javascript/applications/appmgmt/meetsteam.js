@@ -1097,14 +1097,20 @@
           _ = (0, _._)(),
           _ = _(__webpack_require__),
           _ = _(_, __webpack_require__, _?.group_id),
-          _ = (0, _.useMemo)(() => {
+          [_, _] = (0, _.useMemo)(() => {
             const _ = _?.data?.filter((_) => _.session_id == _._),
+              _ = new Map(),
               _ = new Map();
             return (
               _?.forEach((_) => {
-                _.set(new _._(_.steamid).GetAccountID(), _);
+                const _ = new _._(_.steamid).GetAccountID();
+                if ((_.set(_, _), _.jsondata)) {
+                  const _ = JSON.parse(_.jsondata);
+                  _.pre_event_partner_questions &&
+                    __webpack_require__.set(_, _.pre_event_partner_questions);
+                }
               }),
-              _
+              [_, _]
             );
           }, [_, _]),
           _ = _?.filter((_) => _.has(new _._(_.steamid).GetAccountID()));
@@ -1127,45 +1133,52 @@
               "a",
               {
                 onClick: () =>
-                  (function (_, _, _) {
-                    const _ = [];
-                    _.push([
-                      "SteamID",
-                      "Name",
-                      "Invited",
-                      "Partner",
-                      "Email Override",
-                      "Guest Count",
-                      "Reg Confirmation Email Sent",
-                    ]),
-                      _.forEach((_) => {
+                  (function (_, _, _, _, _) {
+                    const _ = [],
+                      _ = [
+                        "SteamID",
+                        "Name",
+                        "Invited",
+                        "Partner",
+                        "Email Override",
+                        "Guest Count",
+                        "Reg Confirmation Email Sent",
+                      ];
+                    _.ask_registration_question && _.push("Pre Reg Answer");
+                    _.push(_),
+                      __webpack_require__.forEach((_) => {
                         const _ = [],
                           _ = _.partner_id ? (0, _._)(_.partner_id) : void 0;
-                        _.push("" + _.steamid),
-                          _.push(_.name),
-                          _.push(_.invited ? "YES" : ""),
-                          _.push(_ ? `${_?.name} (${_.partner_id})` : ""),
-                          _.push(_.email_override),
-                          _.push(
+                        __webpack_require__.push("" + _.steamid),
+                          __webpack_require__.push(_.name),
+                          __webpack_require__.push(_.invited ? "YES" : ""),
+                          __webpack_require__.push(
+                            _ ? `${_?.name} (${_.partner_id})` : "",
+                          ),
+                          __webpack_require__.push(_.email_override),
+                          __webpack_require__.push(
                             "" +
                               (_.guests_registered
                                 ? _.guests_registered - 1
                                 : 0),
                           );
                         const _ = new _._(_.steamid);
-                        if (__webpack_require__.has(_.GetAccountID())) {
-                          const _ = _(
-                            __webpack_require__.get(_.GetAccountID()),
-                            _,
-                          );
+                        if (_.has(_.GetAccountID())) {
+                          const _ = _(_.get(_.GetAccountID()), _);
                           if (_) {
                             const _ = new Date(1e3 * _)
                               .toISOString()
                               .replace("T", " ")
                               .split(".")[0];
-                            _.push(_);
-                          } else _.push("");
-                        } else _.push("");
+                            __webpack_require__.push(_);
+                          } else __webpack_require__.push("");
+                        } else __webpack_require__.push("");
+                        if (_.ask_registration_question) {
+                          const _ = _.get(_.GetAccountID())?.find(
+                            (_) => _.group_id == _.group_id,
+                          );
+                          _ && __webpack_require__.push(_.question);
+                        }
                         _.push(_);
                         for (let _ = 0; _ < _.guest_names?.length; _++) {
                           const _ = [];
@@ -1179,7 +1192,7 @@
                       _.replace(/[ <>:"/\\|?*\x00-\x1F]/g, "_") +
                       ".csv";
                     _._.WriteCSVToFile(_, _);
-                  })(_, _, _),
+                  })(_, _, _, _, _),
               },
               "Export to CSV",
             ),
@@ -1210,21 +1223,26 @@
                   }),
                 ),
                 _.createElement("th", null, "Reg Confirm Email Sent"),
+                _.ask_registration_question &&
+                  _.createElement("th", null, "Answer"),
               ),
             ),
             _.createElement(
               "tbody",
               null,
               _?.flatMap((_) => {
-                const _ = [
-                  _.createElement(_, {
-                    key: "regrow" + _.steamid,
-                    regInfo: _.get(new _._(_.steamid).GetAccountID()),
-                    inviteInfo: _,
-                  }),
-                ];
+                const _ = new _._(_.steamid).GetAccountID(),
+                  _ = [
+                    _.createElement(_, {
+                      key: "regrow" + _.steamid,
+                      group: _,
+                      regInfo: _.get(_),
+                      inviteInfo: _,
+                      preRegQuestions: _.get(_),
+                    }),
+                  ];
                 for (let _ = 0; _ < _.guest_names?.length; _++)
-                  _.push(
+                  __webpack_require__.push(
                     _.createElement(_, {
                       key: "regguestrow" + _.steamid + "_" + _,
                       guestName: _.guest_names[_],
@@ -1242,7 +1260,12 @@
         return _ in _ && (_ = _[_]), _;
       }
       function _(_) {
-        const { inviteInfo: _, regInfo: __webpack_require__ } = _,
+        const {
+            inviteInfo: _,
+            regInfo: __webpack_require__,
+            group: _,
+            preRegQuestions: _,
+          } = _,
           [_] = (0, _._)(_.partner_id),
           _ = _(__webpack_require__, _);
         return _.createElement(
@@ -1267,6 +1290,12 @@
               : 0,
           ),
           _.createElement("td", null, _ ? (0, _._)(_) : ""),
+          _.ask_registration_question &&
+            _.createElement(
+              "td",
+              null,
+              _?.find((_) => _.group_id == _.group_id)?.question || "",
+            ),
         );
       }
       function _(_) {
