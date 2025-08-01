@@ -1078,55 +1078,56 @@
             focusView: r,
             removeNode: l,
             activeLanguage: d,
+            allowAnimations: m,
           } = e,
-          [m, p] = (0, o.OP)(),
-          [_, g, C] = (0, o.uD)(),
-          h = (0, c.FD)(),
-          S = u.useCallback(() => {
-            r(), C();
-          }, [r, C]),
-          f = u.useMemo(() => h.find((e) => (0, i.q3)(e) === t), [t, h]),
-          A = f ? (0, i.q3)(f) : null,
-          { elLocalizedImageGroupDialog: y, elLocalizedImageGroupControl: w } =
-            B(f, d, r),
-          D = (0, s.Un)(),
-          T = (e) => {
+          [p, _] = (0, o.OP)(),
+          [g, C, h] = (0, o.uD)(),
+          S = (0, c.FD)(),
+          f = u.useCallback(() => {
+            r(), h();
+          }, [r, h]),
+          A = u.useMemo(() => S.find((e) => (0, i.q3)(e) === t), [t, S]),
+          y = A ? (0, i.q3)(A) : null,
+          { elLocalizedImageGroupDialog: w, elLocalizedImageGroupControl: D } =
+            B(A, d, r),
+          T = (0, s.Un)(),
+          I = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           };
-        let I;
-        if (f) {
-          const e = (0, i.IP)(f, !0, d);
+        let x;
+        if (A) {
+          const e = (0, i.IP)(A, m, d);
           if (e) {
-            const t = (0, i.Bv)(f, d);
-            I =
+            const t = (0, i.Bv)(A, d);
+            x =
               1 == e.usage
                 ? u.createElement("video", {
-                    key: A,
+                    key: y,
                     className: N.ExtraAssetImg,
-                    src: (0, s.cn)(e.url, D),
-                    title: A,
+                    src: (0, s.cn)(e.url, T),
+                    title: y,
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
                     autoPlay: !0,
-                    onClick: T,
+                    onClick: I,
                   })
                 : u.createElement("img", {
-                    key: A,
+                    key: y,
                     className: N.ExtraAssetImg,
-                    src: (0, s.cn)(e.url, D),
+                    src: (0, s.cn)(e.url, T),
                     alt: t,
-                    title: A,
+                    title: y,
                   });
           } else
-            I = u.createElement(
+            x = u.createElement(
               "span",
               { className: N.ExtraAssetError },
               (0, P.we)("#StoreAdmin_GameDescription_MissingImageLanguage", t),
             );
         } else
-          I = u.createElement(
+          x = u.createElement(
             "span",
             { className: N.ExtraAssetError },
             (0, P.we)("#StoreAdmin_GameDescription_MissingImage", t),
@@ -1134,34 +1135,34 @@
         return u.createElement(
           u.Fragment,
           null,
-          _ &&
+          g &&
             u.createElement(U, {
-              editAsset: A,
+              editAsset: y,
               onAssetSelected: (e) => a({ src: e }),
-              hideModal: S,
+              hideModal: f,
             }),
-          y,
+          w,
           u.createElement(
             "span",
             {
               className: (0, v.A)(
                 N.ExtraAssetImgTag,
                 N.ExtraAssetControlsContainer,
-                m && N.Hovered,
+                p && N.Hovered,
                 n && N.InDeprecatedLink,
               ),
-              ...p,
+              ..._,
               title: "",
             },
             n && u.createElement(M, null),
             u.createElement(
               "span",
               { className: N.ExtraAssetControls },
-              w,
+              D,
               u.createElement(
                 b.ff,
                 {
-                  onClick: g,
+                  onClick: C,
                   tooltip: (0, P.we)(
                     "#StoreAdmin_GameDescription_ReplaceImage",
                   ),
@@ -1177,7 +1178,7 @@
                 u.createElement(k.X, null),
               ),
             ),
-            I,
+            x,
           ),
         );
       }
@@ -4721,7 +4722,8 @@
           S.useEffect(() => {
             u.current && u.current();
           }, [i, o]);
-        const g = (0, Re.sf)(t);
+        const g = (0, Re.sf)(t),
+          E = "awards" != l;
         return S.createElement(
           Ue,
           {
@@ -4751,7 +4753,11 @@
                 refOnUpdate: u,
                 refView: c,
               },
-              S.createElement(Ke, { schema: d, activeLanguage: g }),
+              S.createElement(Ke, {
+                schema: d,
+                activeLanguage: g,
+                allowAnimations: E,
+              }),
             ),
           ),
         );
@@ -4885,8 +4891,8 @@
         );
       }
       function Ke(e) {
-        const { schema: t, activeLanguage: n } = e,
-          a = S.useMemo(
+        const { schema: t, activeLanguage: n, allowAnimations: a } = e,
+          r = S.useMemo(
             () => [
               {
                 type: t.pm_schema.nodes.image,
@@ -4895,15 +4901,16 @@
                   src: e.attrs.src,
                   inLink: e.marks.some((e) => e.type == t.pm_schema.marks.link),
                   activeLanguage: n,
+                  allowAnimations: a,
                 }),
               },
             ],
-            [t, n],
+            [t, n, a],
           );
         return S.createElement(
           S.Fragment,
           null,
-          S.createElement(A, { specs: a }),
+          S.createElement(A, { specs: r }),
           S.createElement(T.pw, { nodeType: t.pm_schema.nodes.image }),
         );
       }

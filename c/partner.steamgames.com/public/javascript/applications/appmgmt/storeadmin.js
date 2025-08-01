@@ -1155,6 +1155,7 @@
             focusView: _,
             removeNode: _,
             activeLanguage: _,
+            allowAnimations: _,
           } = _,
           [_, _] = (0, _._)(),
           [_, _, _] = (0, _._)(),
@@ -1173,7 +1174,7 @@
           };
         let _;
         if (_) {
-          const _ = (0, _._)(_, !0, _);
+          const _ = (0, _._)(_, _, _);
           if (_) {
             const _ = (0, _._)(_, _);
             _ =
@@ -5370,7 +5371,8 @@
           _.useEffect(() => {
             _.current && _.current();
           }, [_, _]);
-        const _ = (0, _._)(_);
+        const _ = (0, _._)(_),
+          _ = "awards" != _;
         return _.createElement(
           _,
           {
@@ -5403,6 +5405,7 @@
               _.createElement(_, {
                 schema: _,
                 activeLanguage: _,
+                allowAnimations: _,
               }),
             ),
           ),
@@ -5566,7 +5569,11 @@
         );
       }
       function _(_) {
-        const { schema: _, activeLanguage: __webpack_require__ } = _,
+        const {
+            schema: _,
+            activeLanguage: __webpack_require__,
+            allowAnimations: _,
+          } = _,
           _ = _.useMemo(
             () => [
               {
@@ -5576,10 +5583,11 @@
                   src: _.attrs.src,
                   inLink: _.marks.some((_) => _.type == _.pm_schema.marks.link),
                   activeLanguage: __webpack_require__,
+                  allowAnimations: _,
                 }),
               },
             ],
-            [_, __webpack_require__],
+            [_, __webpack_require__, _],
           );
         return _.createElement(
           _.Fragment,
