@@ -2052,9 +2052,12 @@ body.v6 .game_area_description h2.bb_tag strong {
 .block .block_content_inner #AwardsDefault {
     padding: 5px 0px;
 }
-    .block .block_content_inner #AwardsDefault img {
-        max-width: 276px;
-    }
+.block .block_content_inner #AwardsDefault img {
+	max-width: 276px;
+}
+.block .block_content_inner #AwardsDefault video {
+	max-width: 276px;
+}
 
 
 .block .block_content_inner p {
