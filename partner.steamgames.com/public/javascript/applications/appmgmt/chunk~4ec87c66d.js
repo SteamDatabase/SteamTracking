@@ -71800,7 +71800,10 @@
       function g(e) {
         return r.createElement(p, {
           ...e,
-          rgAdditional: [{ data: null, label: "Show All Users Plan" }],
+          rgAdditional: [
+            { bIsSeparator: !0 },
+            { data: null, label: "Show All" },
+          ],
         });
       }
     },

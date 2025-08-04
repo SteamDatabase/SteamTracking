@@ -8437,6 +8437,7 @@ ${LANGUAGE}
 17CMsgSystemDisplay
 17CMsgUpdateToolTip
 17CNegotiatedConfig
+17CPeriodicFunctionI25CGamescopeControllerLinuxE
 17CSDLAudioRecorder
 17CScheduledFunctor
 17CSetFlashStateMsg
@@ -8535,6 +8536,7 @@ ${LANGUAGE}
 18CScheduledFunctionI21CHTTPClientConnectionE
 18CScheduledFunctionI23CValveControllerManagerE
 18CScheduledFunctionI24CGameRecordingControllerE
+18CScheduledFunctionI25CGamescopeControllerLinuxE
 18CScheduledFunctionI25CHTTPClientNetworkRequestE
 18CScheduledFunctionI25CHardwareUpdateControllerE
 18CScheduledFunctionI27CHTTPServerClientConnectionE
@@ -11926,6 +11928,7 @@ ${LANGUAGE}
 64CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 65536
+659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 666666666666666666666666666666666666666666666666
 66CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults
@@ -11970,6 +11973,7 @@ ${LANGUAGE}
 6tpD4
 6uu?>
 6uu?uj
+6uuu
 6yy_&
 7,gm;
 7.CAuthentication_BeginAuthSessionViaCredentials_Request
@@ -12428,7 +12432,6 @@ ${LANGUAGE}
 :\v-2147483648
 :authorit
 :authority
-:eBj
 :eaI
 :metho
 :method
@@ -13679,6 +13682,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
+Aug  4 2025 21:38:46
 August
 Aura
 Australia/Adelaide
@@ -15061,8 +15065,10 @@ CGamescopeController: set unified framerate UI enabled: %d
 CGamescopeController: set use game refresh rate in steam: %d
 CGamescopeController: skipping external display populate workaround
 CGamescopeController: skipping target framerate update as active display info isn't present
+CGamescopeControllerLinux::OnAppLifetimeNotification
 CGamescopeControllerLinux::OnScreenshotTriggered
 CGamescopeControllerLinux::OnSystemDisplayModeChanged
+CGamescopeControllerLinux::ReportPerfStats
 CGamescopeControllerLinux::YldGetState(): app-wants: %d
 CGamescope_GetState_Request"B\n
 CGamescope_GetState_Response
@@ -21674,7 +21680,6 @@ JoystickMapping
 JoystickName
 JpL9=
 JsonObjectWriter was not fully closed.
-Jul 31 2025 22:21:22
 July
 JumpList
 Jumplist
@@ -23787,6 +23792,7 @@ N24CSystemDisplayController46CCallbackInternal_OnDisplayManagerStateUpdatedE
 N24CSystemStorageController45CCallbackInternal_OnLibraryFoldersInitializedE
 N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
 N25CGamescopeControllerLinux39CCallbackInternal_OnScreenshotTriggeredE
+N25CGamescopeControllerLinux43CCallbackInternal_OnAppLifetimeNotificationE
 N25CGamescopeControllerLinux44CCallbackInternal_OnSystemDisplayModeChangedE
 N25CHardwareUpdateController29CCallback_OnControllerDetailsE
 N25CHardwareUpdateController34CCallback_OnControllerDisconnectedE
@@ -32668,6 +32674,7 @@ Zulu
 ^hmpsv
 ^j[o3
 ^oEZ_
+_(knN
 _55j
 _Accum
 _DIR
@@ -33264,6 +33271,7 @@ app_list
 app_mark_validation
 app_move
 app_name
+app_performance_stats
 app_relationships
 app_start_validation
 app_type
@@ -37759,7 +37767,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenb
 ghost_
 gidlist
 gidparentcomment
@@ -46253,6 +46261,7 @@ request too large for drbg
 requestCAFile
 requestExtensions
 requestList
+request_app_performance_stats
 request_body_sz
 request_headers
 request_headers_names

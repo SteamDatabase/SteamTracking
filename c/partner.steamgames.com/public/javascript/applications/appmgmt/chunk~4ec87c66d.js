@@ -80768,8 +80768,11 @@
           ..._,
           rgAdditional: [
             {
+              bIsSeparator: !0,
+            },
+            {
               data: null,
-              label: "Show All Users Plan",
+              label: "Show All",
             },
           ],
         });

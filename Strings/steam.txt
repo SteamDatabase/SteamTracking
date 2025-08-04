@@ -2408,6 +2408,8 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:38:33
+21:38:40
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -2418,8 +2420,6 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
-22:21:06
-22:21:14
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3239,6 +3239,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
+Aug  4 2025
 August
 Aura
 AuthANY
@@ -6528,7 +6529,6 @@ Jobs
 JoinedGroup
 Joystick
 JpL9=
-Jul 31 2025
 July
 June
 K'iche'
@@ -8745,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jul 31 2025 22:21:14
+Startup - updater built Aug  4 2025 21:38:40
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

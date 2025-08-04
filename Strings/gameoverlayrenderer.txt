@@ -88,6 +88,7 @@ CSharedMemStream has memory already locked for put. Don't write with memory lock
 CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
 Clearing input stream because it is about to overflow\n
 Corrupt render stream (getting cmd)... %s\n
+Corrupt render stream: k_EBeginFrame\n
 Corrupt render stream: k_ECreateCustomCursor (custom2)\n
 Corrupt render stream: k_ECreateCustomCursor (custom3)\n
 Corrupt render stream: k_ECreateCustomCursor\n
