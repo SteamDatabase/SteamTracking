@@ -1891,8 +1891,13 @@
             m = n?.bMismatchedNewSizes;
           let p = "";
           s
-            ? l &&
-              (p = (0, d.we)("#ImageUpload_InvalidFormat", (0, u.EG)(t) ?? ""))
+            ? l
+              ? (p = (0, d.we)(
+                  "#ImageUpload_InvalidFormat",
+                  (0, u.EG)(t) ?? "",
+                ))
+              : n?.groupName.trim().length > 0 ||
+                (p = (0, d.we)("#ImageUpload_EmptyBaseName"))
             : (p = (0, d.we)("#ImageUpload_InvalidFormatSelected"));
           const _ = [],
             g = [];
@@ -2114,7 +2119,11 @@
                 i = a[e];
               (t.status = "uploading"), r++;
               try {
-                const e = await this.StartImageUpload(t, this.m_cancel.token);
+                const e = await this.StartImageUpload(
+                  t,
+                  i,
+                  this.m_cancel.token,
+                );
                 if (e.bSuccess) {
                   const n = (0, h.x0)();
                   o.set(e.nRequestId, (e) => n.resolve(e));
@@ -2204,20 +2213,21 @@
             c.filter((e) => e.bSuccess).forEach((e) => (e.uploadResult = u)), c
           );
         }
-        async StartImageUpload(e, t) {
-          let n;
+        async StartImageUpload(e, t, n) {
+          let a;
           {
-            const a = new FormData();
-            a.append("sessionid", s.TS.SESSIONID),
-              a.append("asset_type", "extra_asset_v2"),
-              a.append("file", e.file);
+            const r = new FormData();
+            r.append("sessionid", s.TS.SESSIONID),
+              r.append("asset_type", "extra_asset_v2"),
+              r.append("file", e.file),
+              r.append("name", t);
             try {
-              const r = await E().post(this.m_strBeginUploadUrl, a, {
+              const t = await E().post(this.m_strBeginUploadUrl, r, {
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
-                cancelToken: t,
+                cancelToken: n,
               });
-              if (!(200 == r.status && r.data.request_id > 0))
+              if (!(200 == t.status && t.data.request_id > 0))
                 return (
                   console.warn(
                     "CExtraAssetsImageUploader.UploadSingleImage failed",
@@ -2225,7 +2235,7 @@
                   ),
                   { bSuccess: !1, elErrorMessage: null }
                 );
-              (n = r.data.request_id), (e.status = "processing");
+              (a = t.data.request_id), (e.status = "processing");
             } catch (e) {
               const t = this.GetErrorsFromErrorResponse(e);
               return (
@@ -2238,7 +2248,7 @@
               );
             }
           }
-          return { bSuccess: !0, nRequestId: n };
+          return { bSuccess: !0, nRequestId: a };
         }
         async CheckUploadStatus(e, t) {
           const n = new FormData();

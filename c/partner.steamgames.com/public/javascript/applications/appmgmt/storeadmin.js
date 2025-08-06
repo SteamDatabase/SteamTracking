@@ -2083,8 +2083,10 @@
             _ = _?.bMismatchedNewSizes;
           let _ = "";
           _
-            ? _ &&
-              (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_) ?? ""))
+            ? _
+              ? (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_) ?? ""))
+              : _?.groupName.trim().length > 0 ||
+                (_ = (0, _._)("#ImageUpload_EmptyBaseName"))
             : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected"));
           const _ = [],
             _ = [];
@@ -2312,7 +2314,11 @@
                 _ = _[_];
               (_.status = "uploading"), _++;
               try {
-                const _ = await this.StartImageUpload(_, this.m_cancel.token);
+                const _ = await this.StartImageUpload(
+                  _,
+                  _,
+                  this.m_cancel.token,
+                );
                 if (_.bSuccess) {
                   const _ = (0, _._)();
                   _.set(_.nRequestId, (_) => __webpack_require__.resolve(_));
@@ -2415,13 +2421,14 @@
             _.filter((_) => _.bSuccess).forEach((_) => (_.uploadResult = _)), _
           );
         }
-        async StartImageUpload(_, _) {
+        async StartImageUpload(_, _, _) {
           let _;
           {
             const _ = new FormData();
             _.append("sessionid", _._.SESSIONID),
               _.append("asset_type", "extra_asset_v2"),
-              _.append("file", _.file);
+              _.append("file", _.file),
+              _.append("name", _);
             try {
               const _ = await _().post(this.m_strBeginUploadUrl, _, {
                 withCredentials: !0,

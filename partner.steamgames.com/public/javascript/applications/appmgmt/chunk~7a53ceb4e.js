@@ -701,34 +701,30 @@
         for (const e of i) if (o.A0.IsELanguageValidInRealm(t, e)) return t;
         return i.includes(s.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function d(e, t = 0, i = !0) {
-        let s = e.lastIndexOf(".");
-        -1 != s && (e = e.slice(0, s).toLowerCase());
-        let o = null,
-          r = 0;
-        e.endsWith("korean") && ((o = 4), (r = 6));
-        const a = (e) => e.replace(/[\s_-]+$/g, "");
+      function d(e, t = 0) {
+        let i = e.lastIndexOf(".");
+        -1 != i && (e = e.slice(0, i).toLowerCase());
+        let s = null,
+          o = 0;
+        e.endsWith("korean") && ((s = 4), (o = 6));
         for (let t = 0; t < 31; ++t) {
-          const s = (0, n.ww)(t);
-          if (s.length <= r) continue;
-          if (e.endsWith(s)) {
-            let n = !i;
-            if (i && e.length > s.length + 2) {
-              const t = e[e.length - s.length - 1];
-              n = !/\p{Alphabetic}|\p{Number}/u.test(t);
-            }
-            n && ((o = t), (r = s.length));
+          const i = (0, n.ww)(t);
+          if (i.length <= o) continue;
+          if (e.endsWith(i) && e.length > i.length + 2) {
+            const n = e[e.length - i.length - 1];
+            /\p{Alphabetic}|\p{Number}/u.test(n) || ((s = t), (o = i.length));
           }
-          const c = (0, n.Lg)(t);
-          c.length <= r ||
-            (e.endsWith(c) &&
-              a(e.substring(0, e.length - c.length)).length > 0 &&
-              ((o = t), (r = c.length)));
+          const r = (0, n.Lg)(t);
+          r.length <= o || (e.endsWith(r) && ((s = t), (o = r.length)));
         }
         return {
-          language: o ?? t,
-          baseFilename: r > 0 ? a(e.substring(0, e.length - r)) : e,
+          language: s ?? t,
+          baseFilename:
+            o > 0
+              ? ((r = e.substring(0, e.length - o)), r.replace(/[\s_-]+$/g, ""))
+              : e,
         };
+        var r;
       }
     },
     82705: (e, t, i) => {
