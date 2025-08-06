@@ -3602,34 +3602,30 @@
         for (const e of n) if (a.A0.IsELanguageValidInRealm(t, e)) return t;
         return n.includes(i.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function h(e, t = 0, n = !0) {
-        let i = e.lastIndexOf(".");
-        -1 != i && (e = e.slice(0, i).toLowerCase());
-        let a = null,
-          o = 0;
-        e.endsWith("korean") && ((a = 4), (o = 6));
-        const r = (e) => e.replace(/[\s_-]+$/g, "");
+      function h(e, t = 0) {
+        let n = e.lastIndexOf(".");
+        -1 != n && (e = e.slice(0, n).toLowerCase());
+        let i = null,
+          a = 0;
+        e.endsWith("korean") && ((i = 4), (a = 6));
         for (let t = 0; t < 31; ++t) {
-          const i = (0, s.ww)(t);
-          if (i.length <= o) continue;
-          if (e.endsWith(i)) {
-            let s = !n;
-            if (n && e.length > i.length + 2) {
-              const t = e[e.length - i.length - 1];
-              s = !/\p{Alphabetic}|\p{Number}/u.test(t);
-            }
-            s && ((a = t), (o = i.length));
+          const n = (0, s.ww)(t);
+          if (n.length <= a) continue;
+          if (e.endsWith(n) && e.length > n.length + 2) {
+            const s = e[e.length - n.length - 1];
+            /\p{Alphabetic}|\p{Number}/u.test(s) || ((i = t), (a = n.length));
           }
-          const l = (0, s.Lg)(t);
-          l.length <= o ||
-            (e.endsWith(l) &&
-              r(e.substring(0, e.length - l.length)).length > 0 &&
-              ((a = t), (o = l.length)));
+          const o = (0, s.Lg)(t);
+          o.length <= a || (e.endsWith(o) && ((i = t), (a = o.length)));
         }
         return {
-          language: null != a ? a : t,
-          baseFilename: o > 0 ? r(e.substring(0, e.length - o)) : e,
+          language: null != i ? i : t,
+          baseFilename:
+            a > 0
+              ? ((o = e.substring(0, e.length - a)), o.replace(/[\s_-]+$/g, ""))
+              : e,
         };
+        var o;
       }
     },
     68359: (e, t, n) => {

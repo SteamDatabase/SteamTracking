@@ -2750,6 +2750,7 @@
     "ImageUpload_InvalidResolution": "The new images for %1$s are different sizes than the ones already there.",
     "ImageUpload_MismatchedResolution": "The new images for %1$s have differing sizes.",
     "ImageUpload_InvalidFileType": "The file type is not supported for this asset.",
+    "ImageUpload_EmptyBaseName": "The base asset name could not be determined. See note above about file names and languages.",
     "ImageUpload_ReplaceLanguage": "This image will replace the %1$s version.",
     "ImageUpload_CropPreview": "Final image",
     "ImageUpload_LocalizedAssets": "Uploaded Languages",

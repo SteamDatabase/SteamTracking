@@ -3800,34 +3800,30 @@
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
         return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function _(_, _ = 0, __webpack_require__ = !0) {
+      function _(_, _ = 0) {
         let _ = _.lastIndexOf(".");
         -1 != _ && (_ = _.slice(0, _).toLowerCase());
         let _ = null,
           _ = 0;
         _.endsWith("korean") && ((_ = 4), (_ = 6));
-        const _ = (_) => _.replace(/[\s_-]+$/g, "");
         for (let _ = 0; _ < 31; ++_) {
           const _ = (0, _._)(_);
           if (_.length <= _) continue;
-          if (_.endsWith(_)) {
-            let _ = !__webpack_require__;
-            if (__webpack_require__ && _.length > _.length + 2) {
-              const _ = _[_.length - _.length - 1];
-              _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
-            }
-            _ && ((_ = _), (_ = _.length));
+          if (_.endsWith(_) && _.length > _.length + 2) {
+            const _ = _[_.length - _.length - 1];
+            /\p{Alphabetic}|\p{Number}/u.test(_) || ((_ = _), (_ = _.length));
           }
           const _ = (0, _._)(_);
-          _.length <= _ ||
-            (_.endsWith(_) &&
-              _(_.substring(0, _.length - _.length)).length > 0 &&
-              ((_ = _), (_ = _.length)));
+          _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
         }
         return {
           language: null != _ ? _ : _,
-          baseFilename: _ > 0 ? _(_.substring(0, _.length - _)) : _,
+          baseFilename:
+            _ > 0
+              ? ((_ = _.substring(0, _.length - _)), _.replace(/[\s_-]+$/g, ""))
+              : _,
         };
+        var _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
