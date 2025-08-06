@@ -40543,9 +40543,10 @@
       }
       function f(e) {
         const t = (0, r.sf)(n.r.LANGUAGE),
-          a = (0, s.z5)(e.children, t),
-          o = "string" == typeof a ? [a] : a;
-        return i.createElement(c, { rgSources: o });
+          a = e.args.src ?? e.children,
+          o = (0, s.z5)(a, t),
+          l = "string" == typeof o ? [o] : o;
+        return i.createElement(c, { rgSources: l });
       }
       function y(e) {
         return i.createElement("div", { className: e.args[""] }, e.children);

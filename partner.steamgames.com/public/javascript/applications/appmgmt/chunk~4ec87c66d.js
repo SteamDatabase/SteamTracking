@@ -49469,7 +49469,7 @@
                 try {
                   const t = await I().post(
                     "https://api.monday.com/v2/",
-                    JSON.stringify({ query: r, variables: JSON.stringify(n) }),
+                    JSON.stringify({ query: r, variables: n }),
                     {
                       headers: {
                         Authorization: e,

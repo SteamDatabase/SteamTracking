@@ -46729,7 +46729,8 @@
       }
       function _(_) {
         const _ = (0, _._)(_._.LANGUAGE),
-          _ = (0, _._)(_.children, _),
+          _ = _.args.src ?? _.children,
+          _ = (0, _._)(_, _),
           _ = "string" == typeof _ ? [_] : _;
         return _.createElement(_, {
           rgSources: _,

@@ -55123,7 +55123,7 @@
                     "https://api.monday.com/v2/",
                     JSON.stringify({
                       query: _,
-                      variables: JSON.stringify(_),
+                      variables: _,
                     }),
                     {
                       headers: {
