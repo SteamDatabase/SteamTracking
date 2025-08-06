@@ -299,6 +299,7 @@
         FieldDescription: "_1W1to_azoBRG95oNAFpf9Q",
         ModalPosition: "_3A5ujtARm6atH4phJ5i1i6",
         _: "_3-NqubDUyBx8l_lXBrjzUJ",
+        FooterVisible: "_3bdRx6sqp4zgADo5c-9jUb",
         WithStandardPadding: "_1XQXQY77uXZfE0KSWEADf_",
         NoHeaderPadding: "_1Y7qW0oDUNH6gMRGqujwo6",
         ModalClickToDismiss: "_27uCSNGt2GM1oh3MbvqAS",
@@ -4209,7 +4210,7 @@
           [_, _] = (0, _._)(`${_}ScrollLeft`, 250, 0),
           _ = _.useRef(0),
           _ = _.useRef(0),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         let _ = _.useCallback(
           (_) => {
             const { scrollTop: _, scrollLeft: __webpack_require__ } =
@@ -6184,7 +6185,7 @@
             (_.current = void 0), (_.current = void 0);
           }, []),
           _ = (function (_, _) {
-            const _ = _.useRef();
+            const _ = _.useRef(void 0);
             return _.useCallback(
               (_, _) => {
                 let _ = "sine";
@@ -6379,7 +6380,7 @@
         );
       }
       function _(_) {
-        const _ = _.useRef(),
+        const _ = _.useRef(void 0),
           _ = _.useContext(_);
         return (
           _.current || (_.current = __webpack_require__(_ || {})), _.current
@@ -17663,7 +17664,7 @@
         ];
       }
       function _(_) {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return _.useCallback(
           () => (
             (_.current && _.current.factory == _) ||
@@ -17766,7 +17767,7 @@
                 });
       }
       function _(_, _) {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return _.useCallback((_) => {
           _.current && __webpack_require__.current(), (_.current = _(_));
         }, _);
@@ -20283,6 +20284,7 @@
               (_ |= _.NoWindowShadow),
               (_ |= _.NoRoundedCorners),
               (_ |= _.OverrideRedirect),
+              (_ |= _.ForceBrowserVisible),
               _
             );
           case _.Tooltip:
@@ -20349,7 +20351,8 @@
             "IgnoreSteamDisplayScale"),
           (_[(_.TransparentParentWindow = 4194304)] =
             "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale");
+          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
       })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
@@ -21952,6 +21955,8 @@
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
+          "/.millennium/Dist",
+          "/react-waypoint/",
         ];
       function _() {
         try {
@@ -22247,7 +22252,8 @@
         return [_, ..._]
           .map((_) => {
             try {
-              return String(_);
+              let _ = String(_);
+              return "[object Object]" == _ && (_ = JSON.stringify(_)), _;
             } catch (_) {
               return "[Stringify Error]";
             }
@@ -26800,7 +26806,7 @@
               onOptionsActionDescription: _,
             };
           })(_ ?? _, _),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_, _.navRef),
           _ = _.useCallback(
             (_) => {
@@ -27097,7 +27103,7 @@
           } = _,
           [_, _, _, _] = (function () {
             let _ = _.useRef(null),
-              _ = _.useRef();
+              _ = _.useRef(void 0);
             _.useLayoutEffect(() => {
               let _ = _.current;
               if (!_ || _.current) return;
@@ -27299,9 +27305,9 @@
           ),
           _ = (function (_, _) {
             const _ = _.useMemo(() => new Map(), []),
-              _ = _.useRef();
+              _ = _.useRef(_);
             _.current = _;
-            const _ = _.useRef();
+            const _ = _.useRef(_);
             _.current = _;
             const _ = _.useCallback(
               (_) => (_) => {
@@ -27421,7 +27427,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const { className: __webpack_require__, ..._ } = _;
-        let _ = _.useRef(),
+        let _ = _.useRef(void 0),
           _ = (0, _._)(_, _);
         const [_, _] = _.useState(!1),
           _ = _.useCallback(() => {
@@ -31877,7 +31883,7 @@
           } = _,
           _ = (0, _._)(),
           _ = _?.ownerWindow || window,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.current || (_.current = new _._()),
           _.useLayoutEffect(() => {
@@ -32107,7 +32113,7 @@
               bRegisterManagersWithWindow: _ = !0,
               ..._
             } = _,
-            _ = _.useRef();
+            _ = _.useRef(void 0);
           _.current || (_.current = new _._());
           let _ = _.createElement(_._, {
             ..._,
@@ -32495,7 +32501,7 @@
           _ = (0, _._)(),
           [_, _] = _.useState(null),
           [_, _] = _.useState(!1),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         if (
           (_.useEffect(() => {
             if (_) {
@@ -35510,7 +35516,7 @@
       var _ = __webpack_require__("chunkid");
       let _ = 0;
       function _() {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return (
           void 0 === _.current && (_.current = "svgid_" + _++),
           [_.current, `url(#${_.current})`]
@@ -38387,8 +38393,8 @@
           _ = (0, _._)(),
           _ = (_.state && _.state[_]) ?? _,
           _ = _.useRef(!1),
-          _ = _.useRef(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
+          _ = _.useRef(void 0),
           _ = _.useCallback(
             (_) => {
               if (_.current && ((_.current = _), !_.current)) {
@@ -39149,7 +39155,12 @@
       }
       function _(_, _) {
         return (
-          !!window.location.href.match("[?&]" + _ + "=") ||
+          !!(
+            window &&
+            window.location &&
+            window.location.href &&
+            window.location.href.match("[?&]" + _ + "=")
+          ) ||
           !(
             "undefined" == typeof navigator ||
             !navigator.userAgent ||

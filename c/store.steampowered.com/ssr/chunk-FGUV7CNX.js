@@ -21,7 +21,7 @@ function _(_) {
     _ = _.useCallback(() => {
       _();
     }, [_]),
-    _ = _.useRef();
+    _ = _.useRef(void 0);
   return (
     _(_, !0, !0),
     (0, _.jsx)(_, {

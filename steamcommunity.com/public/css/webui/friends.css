@@ -2920,12 +2920,14 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   background-color: transparent;
   border: 2px solid #282c2f;
   color: #fff;
-  min-width: 7%;
+  min-width: 85px;
+  text-shadow: none;
 }
 .radio_CenteredPill_L2J24
   .radio_Button_Hijmc:not(.radio_Active_3-_jM)
   + .radio_Button_Hijmc:not(.radio_Active_3-_jM)::before {
   display: none;
+  width: 0px;
 }
 .radio_Button_Hijmc.radio_Active_3-_jM,
 .radio_Button_Hijmc.radio_Active_3-_jM:hover {
@@ -2933,10 +2935,6 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   cursor: default;
   color: #fff;
   border-right: none;
-}
-.radio_CenteredPill_L2J24 .radio_Button_Hijmc.radio_Active_3-_jM,
-.radio_Button_Hijmc.radio_Active_3-_jM:hover {
-  border-right: 2px solid #282c2f;
 }
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW,
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW:hover {
@@ -4281,7 +4279,9 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   scroll-padding: 80px 0px;
   flex-direction: column;
 }
-.gamepaddialog_ModalPosition_3A5uj.gamepaddialog_VR_3-Nqu {
+.gamepaddialog_ModalPosition_3A5uj.gamepaddialog_VR_3-Nqu:not(
+    .gamepaddialog_FooterVisible_3bdRx
+  ) {
   bottom: 0;
 }
 .gamepaddialog_ModalPosition_3A5uj.gamepaddialog_WithStandardPadding_1XQXQ {

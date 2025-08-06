@@ -3510,7 +3510,7 @@ function _(_, _, _) {
   return {
     queryKey: _(_),
     queryFn: () => _(_, _),
-    staleTime: 30 * 60 * 1e3,
+    staleTime: 1800 * 1e3,
     ..._,
   };
 }

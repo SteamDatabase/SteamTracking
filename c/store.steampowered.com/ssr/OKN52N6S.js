@@ -1,7 +1,6 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -18,6 +17,14 @@ import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -29,10 +36,6 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -52,11 +55,7 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import {
@@ -78,8 +77,9 @@ import {
   _,
   _,
 } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -3003,7 +3003,7 @@ function _(_) {
         .Body()
         .toObject();
     },
-    staleTime: 10 * 60 * 1e3,
+    staleTime: 600 * 1e3,
   };
 }
 function _() {
@@ -3410,7 +3410,7 @@ function _(_) {
     _ = (0, _.useRef)(null),
     _ = (0, _.useRef)(null),
     _ = (0, _.useRef)(null),
-    _ = (0, _.useRef)();
+    _ = (0, _.useRef)(void 0);
   if (!_ && (!_.children || _.children.length === 0))
     return (0, _.jsx)(_, {
       item: _,
@@ -3707,7 +3707,7 @@ function _(_) {
     } = _,
     [_, _] = (0, _.useState)(!1),
     _ = (0, _.useRef)(null),
-    _ = (0, _.useRef)();
+    _ = (0, _.useRef)(void 0);
   (0, _.useEffect)(() => {
     _.current &&
       (_
@@ -4267,8 +4267,8 @@ var _ = class extends _ {
 var _ = _(_());
 function _(_) {
   let { strWebAPIToken: _, steamid: _, children: _ } = _,
-    _ = _.useRef(),
-    _ = _.useRef(),
+    _ = _.useRef(void 0),
+    _ = _.useRef(void 0),
     _ = _.useCallback(
       () => (
         _.current || (_.current = new _(_.WEBAPI_BASE_URL, _, !1, _)), _.current
@@ -4485,7 +4485,7 @@ function _(_, _ = {}) {
       nMaxTimeoutExtensions: _ = 3,
     } = _,
     [_, _] = _.default.useState(_),
-    _ = _.default.useRef();
+    _ = _.default.useRef(void 0);
   return (
     _.default.useEffect(() => {
       let _ = performance.now();
@@ -4543,7 +4543,7 @@ function _(_, _, _) {
   return {
     queryKey: ["GetWishlistItemsOnSale"],
     queryFn: () => _(_, _, _),
-    staleTime: 15 * 60 * 1e3,
+    staleTime: 900 * 1e3,
     enabled: _.logged_in,
   };
 }
@@ -5636,7 +5636,7 @@ function _(_, _, _ = 10, _ = void 0) {
   return {
     queryKey: ["MostVisitedItems", _],
     queryFn: () => _(_, _, _, _),
-    staleTime: 5 * 60 * 1e3,
+    staleTime: 300 * 1e3,
   };
 }
 function _(_ = 10, _ = {}, _ = !0) {
@@ -5669,7 +5669,7 @@ function _(_ = 10, _ = {}, _ = !0) {
         return !_ || _.filter_failure < 40;
       }).sort((_, _) => _(_) - _(_));
     },
-    staleTime: 5 * 60 * 1e3,
+    staleTime: 300 * 1e3,
     enabled: _,
   });
 }
@@ -5784,7 +5784,7 @@ function _(_) {
     _ = _ !== void 0;
   (0, _.useEffect)(() => {
     if (_ === void 0) return;
-    let _ = window.setTimeout(() => _(void 0), 5 * 60 * 1e3);
+    let _ = window.setTimeout(() => _(void 0), 300 * 1e3);
     return () => window.clearTimeout(_);
   }, [_]);
   let _ = _.useMemo(
@@ -6019,7 +6019,7 @@ function _(_) {
       }),
       [],
     ),
-    _ = _.useRef();
+    _ = _.useRef(void 0);
   _.current = (_) => {
     if (_ == 0) return !1;
     switch (_.key) {
@@ -7387,7 +7387,7 @@ var _ = {
     include_assets: !0,
     apply_user_filters: !0,
   },
-  _ = Math.floor(Date.now() / (10 * 60 * 1e3));
+  _ = Math.floor(Date.now() / (600 * 1e3));
 function _(_) {
   let { rgRecentApps: _ } = _,
     { data: _ } = _(_),
@@ -8597,7 +8597,7 @@ function _(_) {
     [_, _] = _.useState(),
     [_, _] = _.useState(_),
     [_, _] = _.useState(!1),
-    _ = _.useRef();
+    _ = _.useRef(void 0);
   _.current || (_.current = new WeakMap()),
     (0, _.useLayoutEffect)(() => {
       (_.current = new WeakMap()), _("visible");
@@ -9060,7 +9060,7 @@ function _(_) {
     _ = _(),
     [_, _] = _.useState(null),
     [_, _] = _.useState(!1),
-    _ = _.useRef();
+    _ = _.useRef(void 0);
   if (
     (_.useEffect(() => {
       if (_) {

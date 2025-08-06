@@ -25,6 +25,7 @@
 	"Menu_Cart": "购物车",
 	"Menu_Popover_TopLinks": "热门链接",
 	"Menu_Popover_StoreHome": "商店主页",
+	"Menu_Popover_GreatonDeck": "非常适合 Deck",
 	"Menu_Popover_FreeToPlay": "免费开玩游戏",
 	"Menu_Popover_SteamCharts": "Steam 榜单",
 	"Menu_Popover_Upcoming": "即将推出",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "没有符合您查询条件的物品。",
 	"Menu_SearchBar_AdvancedSearch": "高级搜索",
 	"Menu_Search": "搜索",
-	"Menu_Label": "商店菜单"
+	"Menu_Label": "商店菜单",
+	"ItemFlag_InLibrary": "在库中",
+	"ItemFlag_OnWishlist": "在愿望单中",
+	"ItemFlag_InCart": "在购物车中",
+	"ItemFlag_Ignored": "已忽略",
+	"ItemFlag_ExcludedByPreferences": "已按偏好排除"
 }`);
     },
   },

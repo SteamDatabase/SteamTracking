@@ -4636,7 +4636,7 @@
       }
       function _(_) {
         const { strLegalText: _ } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             (_.current = _),

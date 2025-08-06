@@ -5,13 +5,7 @@ import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -34,10 +28,17 @@ import {
   _,
   _,
   _,
+  _,
+  _,
 } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import {
-  _,
-  _,
   _,
   _,
   _,
@@ -57,12 +58,11 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -6832,8 +6832,7 @@ var _ = _(_());
 function _(_) {
   return atob(_.replace(/-/g, "+").replace(/_/g, "/"));
 }
-var _ = 60 * 15,
-  _ = 60 * 3;
+var _ = 900;
 function _(_) {
   try {
     if (!_ || typeof _ != "string") return null;
@@ -12775,7 +12774,87 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       super(),
         _.prototype.family_groupid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [5], null);
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        _.sm_m ||
+          (_.sm_m = {
+            proto: _,
+            fields: {
+              family_groupid: {
+                _: 1,
+                _: _.readUint64String,
+                _: _.writeUint64String,
+              },
+              rtime_joined: {
+                _: 2,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              rtime_left: {
+                _: 3,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              role: {
+                _: 4,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              participated: {
+                _: 5,
+                _: _.readBool,
+                _: _.writeBool,
+              },
+            },
+          }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "FamilyGroupMembership";
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.family_groupid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [5, 10], null);
     }
     static sm_m;
     static sm_mbf;
@@ -12829,6 +12908,12 @@ var _ = class _ extends _.Message {
                 _: 9,
                 _: _.readBool,
                 _: _.writeBool,
+              },
+              membership_history: {
+                _: 10,
+                _: _,
+                _: !0,
+                _: !0,
               },
             },
           }),
@@ -16338,6 +16423,110 @@ var _ = class _ extends _.Message {
       return "CFamilyGroups_ClearCooldownSkip_Response";
     }
   },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.family_groupid || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        _.sm_m ||
+          (_.sm_m = {
+            proto: _,
+            fields: {
+              family_groupid: {
+                _: 1,
+                _: _.readUint64String,
+                _: _.writeUint64String,
+              },
+              rtime32_target: {
+                _: 2,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+            },
+          }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "CFamilyGroups_RollbackFamilyGroup_Request";
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _
+        ? {
+            $jspbMessageInstance: _,
+          }
+        : {};
+    }
+    static fromObject(_) {
+      return new _();
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _;
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {}
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "CFamilyGroups_RollbackFamilyGroup_Response";
+    }
+  },
   _;
 ((_) => {
   function _(_, _) {
@@ -16509,6 +16698,12 @@ var _ = class _ extends _.Message {
     });
   }
   _.ClearCooldownSkip = _;
+  function _(_, _) {
+    return _.SendMsg("FamilyGroups.RollbackFamilyGroup#1", _(_, _), _, {
+      ePrivilege: 5,
+    });
+  }
+  _.RollbackFamilyGroup = _;
 })((_ ||= {}));
 var _;
 ((_) => (
@@ -16707,8 +16902,8 @@ function _(_) {
 function _(_) {
   return _(_) || _(_) || _(_);
 }
-var _ = 60 * 60 * 48,
-  _ = 60 * 10,
+var _ = 3600 * 48,
+  _ = 600,
   _ = !1,
   _ = new _("SteamNotificationStore"),
   _ = _.Debug,
@@ -17545,7 +17740,7 @@ function _(_) {
 var _ = _(_()),
   _ = _(_());
 function _(_, _, _, _) {
-  let _ = (0, _.useRef)(),
+  let _ = (0, _.useRef)(void 0),
     _ = (0, _.useRef)(void 0),
     _ = _();
   _.current = _;
@@ -17810,7 +18005,7 @@ function _(_, _) {
     }
   return _;
 }
-var _ = 60 * 60 * 24 * 7 * 2,
+var _ = 3600 * 24 * 7 * 2,
   _ = class {
     m_CMInterface;
     m_mapAppInfo = _.map();
@@ -18345,7 +18540,8 @@ _([_], _.prototype, "m_bInitialized", 2),
   _([_], _.prototype, "m_broadcastViewerCount", 2),
   _([_], _.prototype, "m_strBroadcastTitle", 2),
   _([_], _.prototype, "m_bCommunityBanned", 2),
-  _([_], _.prototype, "m_bOnSteamDeck", 2);
+  _([_], _.prototype, "m_bOnSteamDeck", 2),
+  _([_], _.prototype, "m_bNameInitialized", 2);
 function _(_) {
   let _ = _(),
     _ = _.default.useContext(_);
@@ -25524,6 +25720,8 @@ var _ = {
     "(localhost|127.0.0.1):(?!(80|443))",
     "chrome-extension://",
     "HTMLDivElement.onreset \\(/market",
+    "/.millennium/Dist",
+    "/react-waypoint/",
   ];
 function _() {
   try {
@@ -25716,7 +25914,8 @@ function _(_, ..._) {
     : [_, ..._]
         .map((_) => {
           try {
-            return String(_);
+            let _ = String(_);
+            return _ == "[object Object]" && (_ = JSON.stringify(_)), _;
           } catch {
             return "[Stringify Error]";
           }
@@ -26750,7 +26949,7 @@ function _(_) {
     );
   }
 }
-var _ = 60 * 60,
+var _ = 3600,
   _ = "(1)",
   _ = class {
     m_WebUIServiceTransport;

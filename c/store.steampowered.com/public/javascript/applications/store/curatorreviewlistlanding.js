@@ -1003,7 +1003,7 @@
           const _ = ["maxresdefault", "mqdefault", "default"],
             [__webpack_require__, _] = _.useState(0);
           _.useEffect(() => _(0), [_.video]);
-          const _ = _.useRef();
+          const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
             return _.createElement(_._, {
               className: _.className,

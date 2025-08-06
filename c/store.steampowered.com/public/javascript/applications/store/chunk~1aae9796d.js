@@ -5198,7 +5198,7 @@
           _ = _(_, _, _, _),
           { bIsIgnored: _, fnUpdateIgnored: _ } = (0, _._)(_),
           { bIsWishlisted: _, fnUpdateWishlist: _ } = (0, _._)(_),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         if (
           (_.useEffect(() => {
             _ &&
@@ -6173,7 +6173,7 @@
           _ = (0, _._)(_._.STORE_BASE_URL + "wishlist"),
           _ = (0, _._)(),
           _ = _?.ownerWindow || window,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             __webpack_require__ &&
@@ -6419,8 +6419,8 @@
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(0),
-          _ = _.useRef(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
+          _ = _.useRef(void 0),
           [_, _] = _.useState(),
           { bCookieLoaded: _ } = (function (_, _, _) {
             const _ = _.useCallback(() => {

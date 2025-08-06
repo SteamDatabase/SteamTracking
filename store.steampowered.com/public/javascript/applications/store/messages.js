@@ -3958,7 +3958,7 @@
         p = r(18654),
         _ = r.n(p),
         B = r(3661),
-        y = r(89274),
+        y = r(37346),
         b = r(72860),
         f = r(70300),
         w = r(47235),
@@ -4225,7 +4225,7 @@
       }
       function m(e) {
         const { strLegalText: t } = e,
-          r = a.useRef();
+          r = a.useRef(void 0);
         return (
           a.useEffect(() => {
             (r.current = t),

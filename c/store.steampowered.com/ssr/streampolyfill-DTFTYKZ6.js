@@ -2879,7 +2879,7 @@ var _ = _((exports, module) => {
                     while (--_ != 0);
                     break;
                   }
-                  if (64 & _)
+                  if ((64 & _) != 0)
                     return (
                       (_.msg = "invalid distance code"),
                       (_ = _.avail_in - _),
@@ -2902,8 +2902,8 @@ var _ = _((exports, module) => {
                 }
                 break;
               }
-              if (64 & _)
-                return 32 & _
+              if ((64 & _) != 0)
+                return (32 & _) != 0
                   ? ((_ = _.avail_in - _),
                     (_ = _ >> 3 < _ ? _ >> 3 : _),
                     (_ += _),
@@ -3033,15 +3033,15 @@ var _ = _((exports, module) => {
                   (_ = _[_ + 2]), (_ = 6);
                   break;
                 }
-                if (16 & _) {
+                if ((16 & _) != 0) {
                   (_ = 15 & _), (_ = _[_ + 2]), (_ = 2);
                   break;
                 }
-                if (!(64 & _)) {
+                if ((64 & _) == 0) {
                   (_ = _), (_ = _ / 3 + _[_ + 2]);
                   break;
                 }
-                if (32 & _) {
+                if ((32 & _) != 0) {
                   _ = 7;
                   break;
                 }
@@ -3102,7 +3102,7 @@ var _ = _((exports, module) => {
                   (_ = 15 & _), (_ = _[_ + 2]), (_ = 4);
                   break;
                 }
-                if (!(64 & _)) {
+                if ((64 & _) == 0) {
                   (_ = _), (_ = _ / 3 + _[_ + 2]);
                   break;
                 }
@@ -3419,7 +3419,7 @@ var _ = _((exports, module) => {
             _ += _
           )
             _.set(_, 3 * (_ + _));
-          for (_ = 1 << (_ - 1); _ & _; _ >>>= 1) _ ^= _;
+          for (_ = 1 << (_ - 1); (_ & _) != 0; _ >>>= 1) _ ^= _;
           for (_ ^= _, _ = (1 << _) - 1; (_ & _) !== _[_]; )
             _--, (_ -= _), (_ = (1 << _) - 1);
         }
@@ -4031,7 +4031,7 @@ var _ = _((exports, module) => {
                 (this.mode = 32), (_.msg = "incorrect header check");
                 break;
               }
-              if (!(_ & PRESET_DICT)) {
+              if ((_ & PRESET_DICT) == 0) {
                 this.mode = 22;
                 break;
               }

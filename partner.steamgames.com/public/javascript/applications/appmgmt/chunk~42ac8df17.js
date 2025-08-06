@@ -19696,7 +19696,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          c = (0, r.useRef)(),
+          c = (0, r.useRef)(void 0),
           [d, y] = (function () {
             const [e, t] = r.useState(void 0),
               a = r.useCallback(() => t(void 0), []),

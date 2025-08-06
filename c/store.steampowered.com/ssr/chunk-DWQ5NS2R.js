@@ -414,7 +414,7 @@ function _(_, _, _, _) {
   return {
     queryKey: _(_, _),
     queryFn: async () => (await _(_, _, _))[_] || null,
-    staleTime: 6 * 60 * 60 * 1e3,
+    staleTime: 360 * 60 * 1e3,
     enabled: !!_,
   };
 }
@@ -425,7 +425,7 @@ function _(_, _) {
   return {
     queryKey: _(_, "default_info"),
     queryFn: async () => _(await _(_, _, "default_info")),
-    staleTime: 6 * 60 * 60 * 1e3,
+    staleTime: 360 * 60 * 1e3,
     enabled: !!_,
   };
 }
@@ -433,14 +433,14 @@ function _(_, _) {
   return {
     ..._(_, _),
     select: (_) => _.best_purchase_option || null,
-    staleTime: 10 * 60 * 1e3,
+    staleTime: 600 * 1e3,
   };
 }
 function _(_, _) {
   return {
     ..._(_, _),
     select: (_) => _.self_purchase_option || _.best_purchase_option || null,
-    staleTime: 10 * 60 * 1e3,
+    staleTime: 600 * 1e3,
   };
 }
 function _(_, _) {

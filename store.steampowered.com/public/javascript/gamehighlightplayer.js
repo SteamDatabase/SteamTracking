@@ -334,7 +334,16 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 
 		if ( $Container.data( 'dash-player' ) )
 	{
-		this.SendDashTrailerState( 'highlight_movie_' + id, true );
+		if ( document.visibilityState !== 'hidden' )
+		{
+			this.SendDashTrailerState( 'highlight_movie_' + id, true );
+		}
+		else
+		{
+			this.m_bPausedForHidden = true;
+			this.SendDashTrailerState( 'highlight_movie_' + id, false );
+		}
+
 		return;
 	}
 

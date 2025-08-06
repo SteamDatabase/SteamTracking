@@ -25,6 +25,7 @@
 	"Menu_Cart": "Winkelwagen",
 	"Menu_Popover_TopLinks": "Populaire links",
 	"Menu_Popover_StoreHome": "Winkel-startpagina",
+	"Menu_Popover_GreatonDeck": "Geweldig op Deck",
 	"Menu_Popover_FreeToPlay": "Gratis spelen",
 	"Menu_Popover_SteamCharts": "Steam-lijsten",
 	"Menu_Popover_Upcoming": "Aankomende uitgaven",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Er zijn geen resultaten voor je zoekopdracht.",
 	"Menu_SearchBar_AdvancedSearch": "Geavanceerd zoeken",
 	"Menu_Search": "Zoeken",
-	"Menu_Label": "Winkelmenu"
+	"Menu_Label": "Winkelmenu",
+	"ItemFlag_InLibrary": "IN BIBLIOTHEEK",
+	"ItemFlag_OnWishlist": "OP VERLANGLIJST",
+	"ItemFlag_InCart": "IN WINKELWAGEN",
+	"ItemFlag_Ignored": "GENEGEERD",
+	"ItemFlag_ExcludedByPreferences": "UITGESLOTEN DOOR VOORKEUREN"
 }`);
     },
   },

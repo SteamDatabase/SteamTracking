@@ -504,7 +504,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           [_, _] = (0, _._)();
         return (
           (0, _.useEffect)(() => {

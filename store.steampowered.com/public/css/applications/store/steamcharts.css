@@ -5677,6 +5677,7 @@ td.rdtYear:hover {
   padding: 3px 4px 3px 4px;
   height: 18px;
   display: flex;
+  gap: 3px;
   align-items: center;
   white-space: nowrap;
   z-index: 5;

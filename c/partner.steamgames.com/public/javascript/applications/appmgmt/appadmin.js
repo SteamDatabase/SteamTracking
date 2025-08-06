@@ -10,6 +10,9 @@
         AssetEntryCtn: "_3WKFF37v6B8RkdWSwoMKm8",
         AssetPreview: "vbwNI7DB9YCpONKEKNJdz",
         PlaceholderAsset: "_1dBf1uIxpYFOh3qoJO5pbm",
+        AssetGuidelinesSection: "u1yBUQz2o0QPurem4vag_",
+        GuidelineHeader: "_6EHaek-StehydaNbI15Ju",
+        GuidelineCtn: "_3VIqbsJ49gYqALudZ26ocN",
       };
     },
     chunkid: (module) => {
@@ -2471,89 +2474,41 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        itemDefinition = null;
-        constructor(_) {
-          (0, _._)(this), this.SetCommunityItemDefinitionFromProto(_);
+      function _(_, _) {
+        let _ = [];
+        switch (_) {
+          case "image_large":
+            _.item_image_large && __webpack_require__.push(_.item_image_large);
+            break;
+          case "image_small":
+            _.item_image_small && __webpack_require__.push(_.item_image_small);
+            break;
+          case "movie_large":
+            _.item_movie_webm && __webpack_require__.push(_.item_movie_webm),
+              _.item_movie_mp4 && __webpack_require__.push(_.item_movie_mp4);
         }
-        SetCommunityItemDefinitionFromProto(_) {
-          this.itemDefinition = {
-            name: _.item_name,
-            active: _.active,
-            title: _.item_title,
-            appid: _.appid,
-            itemid: _.item_type,
-            deleted: _.deleted,
-            image_small: _.item_image_small,
-            image_large: _.item_image_large,
-            movie_large_mp4: _.item_movie_mp4,
-            movie_large_webm: _.item_movie_webm,
-            movie_small_mp4: _.item_movie_mp4_small,
-            movie_small_webm: _.item_movie_webm_small,
-            item_class: _.item_class,
-          };
-        }
-        get AppID() {
-          return this.itemDefinition.appid;
-        }
-        get BIsActive() {
-          return this.itemDefinition.active;
-        }
-        get ItemID() {
-          return this.itemDefinition.itemid;
-        }
-        get BIsDeleted() {
-          return this.itemDefinition.deleted;
-        }
-        get ItemClass() {
-          return this.itemDefinition.item_class;
-        }
-        GetSourcesForAssetType(_) {
-          let _ = [];
-          switch (_) {
-            case "image_large":
-              this.itemDefinition.image_large &&
-                _.push(this.itemDefinition.image_large);
-              break;
-            case "image_small":
-              this.itemDefinition.image_small &&
-                _.push(this.itemDefinition.image_small);
-              break;
-            case "movie_large":
-              this.itemDefinition.movie_large_webm &&
-                _.push(this.itemDefinition.movie_large_webm),
-                this.itemDefinition.movie_large_mp4 &&
-                  _.push(this.itemDefinition.movie_large_mp4);
-          }
-          return _;
-        }
+        return _;
       }
       function _(_, _) {
         return [`InProgressItemDefinition_${_}_${_}`];
       }
-      function _(_, _) {
-        return `${_._.BASE_URL_SHARED_CDN}community_assets/images/items/${_}/${_}`;
-      }
-      (0, _._)([_._], _.prototype, "itemDefinition", void 0);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        m_rgAssetRequirements = [];
         m_currentImageOptionKey = void 0;
-        m_bDuplicateAssetType = !1;
-        constructor(_, _, _, _, _) {
+        m_fnGetImageOptions;
+        constructor(_, _, _, _) {
           const _ = (0, _._)(_);
           super(_, _.name, _, _.src, _),
             (0, _._)(this),
-            (this.m_rgAssetRequirements = _),
-            (this.m_bDuplicateAssetType = _);
+            (this.m_fnGetImageOptions = _);
         }
         IsValidAssetType(_, _) {
           const _ = _ && _ != this.fileType,
@@ -2564,10 +2519,12 @@
             _
               ? _ && (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_)))
               : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
-            _ || (_ = "No valid asset provided"),
-            this.m_bDuplicateAssetType &&
-              (_ =
-                "This asset type is already provided. Please delete the old asset first."),
+            _ || (_ = (0, _._)("#CommunityItems_NoValidAsset_Error")),
+            _?.bDuplicateAssetType &&
+              (_ = (0, _._)(
+                "#CommunityItems_DuplicateAssetType_Error",
+                _.fnGetLabelText(),
+              )),
             {
               error: _,
               needsCrop: !1,
@@ -2585,36 +2542,18 @@
           return !1;
         }
         get ImageOptions() {
-          let _ = [];
-          return (
-            this.m_rgAssetRequirements.forEach((_) => {
-              _.width === this.width &&
-                _.height === this.height &&
-                _.accepted_filetypes.includes(this.fileType) &&
-                _.push({
-                  asset_type: _.asset_type,
-                  sKey: this.filename,
-                  fnGetLabelText: () => _.label,
-                  width: this.width,
-                  height: this.height,
-                  bEnforceDimensions: !1,
-                  bHiddenFromDropdown: !1,
-                });
-            }),
-            _
+          return this.m_fnGetImageOptions().filter(
+            (_) => this.filename === _.sKey,
           );
         }
         GetCurrentImageOptionKey() {
           return this.m_currentImageOptionKey;
         }
         GetCurrentImageOption() {
-          return this.GetCurrentImageOptionKey()
-            ? this.ImageOptions.find(
-                (_) => _.sKey === this.GetCurrentImageOptionKey(),
-              )
-            : this.ImageOptions.length
-              ? this.ImageOptions[0]
-              : null;
+          const _ = this.m_fnGetImageOptions();
+          return this.m_currentImageOptionKey
+            ? _.find((_) => _.sKey === this.m_currentImageOptionKey)
+            : _.find((_) => this.filename === _.sKey);
         }
         SetCurrentImageOption(_) {
           this.m_currentImageOptionKey = _?.sKey;
@@ -2643,9 +2582,7 @@
           }
         }
       }
-      (0, _._)([_._], _.prototype, "m_rgAssetRequirements", void 0),
-        (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0),
-        (0, _._)([_._], _.prototype, "m_bDuplicateAssetType", void 0),
+      (0, _._)([_._], _.prototype, "m_currentImageOptionKey", void 0),
         (0, _._)([_._], _.prototype, "ImageOptions", null),
         (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
       class _ extends _._ {
@@ -2687,16 +2624,40 @@
           if ((0, _._)(_.type) || (0, _._)(_.type)) {
             const _ = await (0, _._)(_, (0, _._)(_.type));
             if (_) {
-              const _ = new _(_, _, _, this.m_rgAssetRequirements, !1);
+              const _ = new _(_, _, _, () => this.GetImageOptions());
               return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
             }
           } else
             console.error(
-              "AddImageForLanguage failed to determine file type, not image, video or subtitle",
+              "Failed to determine file type, not image, video or subtitle",
               _,
               _.type,
             );
           return !1;
+        }
+        GetImageOptions() {
+          let _ = [],
+            _ = new Set();
+          for (const _ of this.m_filesToUpload.filter(
+            (_) => "pending" == _.status || (0, _._)(_.status),
+          ))
+            this.m_rgAssetRequirements.forEach((_) => {
+              _.width === _.width &&
+                _.height === _.height &&
+                _.accepted_filetypes.includes(_.fileType) &&
+                (_.push({
+                  asset_type: _.asset_type,
+                  sKey: _.filename,
+                  fnGetLabelText: () => _.label,
+                  width: _.width,
+                  height: _.height,
+                  bEnforceDimensions: !0,
+                  bHiddenFromDropdown: !1,
+                  bDuplicateAssetType: Boolean(_.has(_.asset_type)),
+                }),
+                _.add(_.asset_type));
+            });
+          return _;
         }
         async UploadSingleImage(_, _, _, _) {
           let _ = null;
@@ -2705,14 +2666,12 @@
             _.append("sessionid", _._.SESSIONID);
           const _ = _.GetCurrentImageOption();
           _.append("strAssetType", _.asset_type);
-          const _ = (0, _._)(_);
-          if (!_)
+          if (!(0, _._)(_))
             return {
               bSuccess: !1,
               elErrorMessage:
                 "Invalid file extension, cannot determine mimetype",
             };
-          _.append("mimetype", _);
           try {
             _ = await _().post(this.m_strUploadPath, _, {
               withCredentials: !0,
@@ -2722,14 +2681,19 @@
               cancelToken: _,
             });
           } catch (_) {
-            const _ = (0, _._)(_);
-            console.log("CCommunityItemAssetUploader.UploadFile failed", _, _),
-              (_ = _.response);
+            console.error((0, _._)(_)?.strErrorMsg);
           }
-          return {
-            bSuccess: !0,
-            result: _?.data,
-          };
+          return !_.data || _.data.error
+            ? {
+                bSuccess: !1,
+                elErrorMessage:
+                  _.data.error ??
+                  (0, _._)("#CommunityItems_GenericUpload_Error"),
+              }
+            : {
+                bSuccess: !0,
+                result: _?.data,
+              };
         }
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
@@ -2756,24 +2720,81 @@
           "div",
           null,
           _.createElement(_._, {
+            elOverrideDragAndDropText: (0, _._)(
+              "#CommunityItems_Upload_Instructions",
+            ),
             imageUploader: _,
             rgRealmList: [_._.k_ESteamRealmGlobal],
             fnUploadComplete: (_) => {
-              for (const _ of _) {
-                if (!_.bSuccess) continue;
-                _.uploadResult;
-              }
               var _, _;
-              (_ = _),
+              _.some((_) => _.bSuccess) &&
+                ((_ = _),
                 (_ = __webpack_require__),
                 _._.invalidateQueries({
                   queryKey: _(_, _),
-                });
+                }));
             },
           }),
         );
       }
       var _ = __webpack_require__("chunkid");
+      class _ {
+        m_ItemDefinition = null;
+        m_ItemKV = null;
+        constructor(_, _) {
+          (0, _._)(this), this.LoadItemDefinition(_, _);
+        }
+        LoadItemDefinition(_, _) {
+          (this.m_ItemDefinition = _
+            ? {
+                item_type: _.item_type,
+                item_class: _.item_class,
+                item_description: _.item_description,
+                editor_accountid: _.editor_accountid,
+                deleted: _.deleted,
+                active: _.active,
+                appid: _.appid,
+                item_image_composed: _.item_image_composed,
+                item_image_large: _.item_image_large,
+                item_image_small: _.item_image_small,
+                item_key_values: _.item_key_values,
+                item_movie_mp4: _.item_movie_mp4,
+                item_movie_mp4_small: _.item_movie_mp4_small,
+                item_internal_name: _.item_name,
+                item_series: _.item_series,
+                item_movie_webm: _.item_movie_webm,
+                item_movie_webm_small: _.item_movie_webm_small,
+                item_image_composed_foil: _.item_image_composed_foil,
+                item_last_changed: _.item_last_changed,
+                broadcast_channel_id: _.broadcast_channel_id,
+              }
+            : _),
+            (this.m_ItemKV = JSON.parse(this.m_ItemDefinition.item_key_values));
+        }
+        get AppID() {
+          return this.m_ItemDefinition.appid;
+        }
+        get BIsActive() {
+          return this.m_ItemDefinition.active;
+        }
+        get ItemID() {
+          return this.m_ItemDefinition.item_type;
+        }
+        get BIsDeleted() {
+          return this.m_ItemDefinition.deleted;
+        }
+        get ItemClass() {
+          return this.m_ItemDefinition.item_class;
+        }
+        get CommunityItemDef() {
+          return this.m_ItemDefinition;
+        }
+      }
+      function _(_, _) {
+        return `${_._.COMMUNITY_ASSETS_BASE_URL}images/items/${_}/${_}`;
+      }
+      (0, _._)([_._], _.prototype, "m_ItemDefinition", void 0),
+        (0, _._)([_._], _.prototype, "m_ItemKV", void 0);
       const _ = [
           {
             asset_type: "movie_large",
@@ -2837,6 +2858,11 @@
                 strIntro: (0, _._)(
                   "#CommunityItems_StartupMovie_GuidelineImage_Intro",
                 ),
+                rgBulletPoints: [
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineImage_BulletPoint_1",
+                  ),
+                ],
               },
             ],
           },
@@ -2872,7 +2898,7 @@
                 return 200 == _?.status && 1 == _.data?.success
                   ? _.data.def
                   : (console.error(
-                      "useGetInProgressCommunityItemDefinition:",
+                      "useGetInProgressCommunityItemDefinition: ",
                       _?.data.error,
                     ),
                     null);
@@ -2935,7 +2961,7 @@
         return _.createElement(
           "div",
           {
-            className: _.GuidelineContainer,
+            className: _.GuidelineCtn,
           },
           _.createElement(
             "div",
@@ -3000,6 +3026,7 @@
             {
               className: _.AssetTitle,
             },
+            "*",
             _.label,
           ),
           _.createElement(
@@ -3009,14 +3036,16 @@
             },
             _.is_video
               ? _.createElement(_, {
-                  rgSources: __webpack_require__.GetSourcesForAssetType(
+                  rgSources: _(
                     _.asset_type,
+                    __webpack_require__.CommunityItemDef,
                   ),
                   unAppID: __webpack_require__.AppID,
                 })
               : _.createElement(_, {
-                  rgSources: __webpack_require__.GetSourcesForAssetType(
+                  rgSources: _(
                     _.asset_type,
+                    __webpack_require__.CommunityItemDef,
                   ),
                   unAppID: __webpack_require__.AppID,
                 }),
@@ -3047,7 +3076,7 @@
       }
       function _(_) {
         const { rgSources: _, unAppID: __webpack_require__ } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         if (
           (_.useEffect(() => {
             _.current && _.current.load();

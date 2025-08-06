@@ -25,6 +25,7 @@
 	"Menu_Cart": "Košík",
 	"Menu_Popover_TopLinks": "Nejlepší odkazy",
 	"Menu_Popover_StoreHome": "Domovská stránka",
+	"Menu_Popover_GreatonDeck": "Ideální pro Deck",
 	"Menu_Popover_FreeToPlay": "Free to play",
 	"Menu_Popover_SteamCharts": "Žebříčky",
 	"Menu_Popover_Upcoming": "Nadcházející",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Vašemu zadání neodpovídají žádné produkty.",
 	"Menu_SearchBar_AdvancedSearch": "Pokročilé vyhledávání",
 	"Menu_Search": "Vyhledávání",
-	"Menu_Label": "Nabídka obchodu"
+	"Menu_Label": "Nabídka obchodu",
+	"ItemFlag_InLibrary": "V KNIHOVNĚ",
+	"ItemFlag_OnWishlist": "V SEZNAMU PŘÁNÍ",
+	"ItemFlag_InCart": "V KOŠÍKU",
+	"ItemFlag_Ignored": "IGNOROVÁNO",
+	"ItemFlag_ExcludedByPreferences": "VYLOUČENO NA ZÁKLADĚ PŘEDVOLEB"
 }`);
     },
   },

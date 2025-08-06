@@ -25,6 +25,7 @@
 	"Menu_Cart": "Panier",
 	"Menu_Popover_TopLinks": "Liens populaires",
 	"Menu_Popover_StoreHome": "Accueil",
+	"Menu_Popover_GreatonDeck": "Parfait pour Steam Deck",
 	"Menu_Popover_FreeToPlay": "Free-to-play",
 	"Menu_Popover_SteamCharts": "Classements Steam",
 	"Menu_Popover_Upcoming": "Prochaines sorties",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Aucun article ne correspond à votre recherche.",
 	"Menu_SearchBar_AdvancedSearch": "Recherche avancée",
 	"Menu_Search": "Rechercher",
-	"Menu_Label": "Menu du magasin"
+	"Menu_Label": "Menu du magasin",
+	"ItemFlag_InLibrary": "DANS LA BIBLIOTHÈQUE",
+	"ItemFlag_OnWishlist": "SUR LISTE DE SOUHAITS",
+	"ItemFlag_InCart": "DANS LE PANIER",
+	"ItemFlag_Ignored": "IGNORÉS",
+	"ItemFlag_ExcludedByPreferences": "PRODUIT EXCLU SELON VOS PRÉFÉRENCES"
 }`);
     },
   },

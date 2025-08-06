@@ -6182,7 +6182,7 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           _ = _(),
           _ = (0, _._)(() => _.GetScrollableWidthPX()),
           _ = (0, _._)(() => _.GetVisualWindowStartPX()),
@@ -6283,7 +6283,7 @@
       }
       function _(_, _) {
         const _ = _().fnRegisterMouseEvent,
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           _ = (0, _.useCallback)(() => {
             _.current = __webpack_require__(_, _);
           }, [_, _, _]),
@@ -6552,7 +6552,7 @@
             playbackCoordinator: _,
             fnSetSelectionClipRange: __webpack_require__,
           } = _,
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           { onMarkerCreated: _ } = _();
         return _.createElement(
           _._,
@@ -6654,8 +6654,8 @@
       function _(_) {
         const _ = (0, _._)(() => _.GetAutoScrollPauseTimeout()),
           _ = (0, _._)(() => _.GetVisualWindowStartPX()),
-          _ = (0, _.useRef)(),
-          _ = (0, _.useRef)();
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0);
         return (
           (0, _.useEffect)(() => {
             _.current && _.current ? _.current.Hide() : (_.current = !0);
@@ -7312,7 +7312,7 @@
           })(),
           _ = _(),
           _ = _ || !_,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         let _ = (0, _._)(_, _);
         const _ = (function () {
           const _ = _(),
@@ -8073,8 +8073,8 @@
             __webpack_require__.strTimelineID ==
               (null == _ ? void 0 : _.strTimelineID),
           { ref: _, ..._ } = (function (_, _) {
-            const _ = _.useRef(),
-              _ = _.useRef(),
+            const _ = _.useRef(void 0),
+              _ = _.useRef(void 0),
               _ = _.useCallback(
                 (_) => {
                   if (!_.current) return;
@@ -8493,20 +8493,20 @@
             _ = _(),
             _ = _(),
             _ = (function (_, _, _, _, _) {
-              const _ = (0, _.useRef)(),
+              const _ = (0, _.useRef)(void 0),
                 _ = (0, _._)(() => _.GetScrollableWidthPX()),
                 _ = (0, _._)(() => _.GetScrollWindowWidth()),
                 [_, _] = (0, _.useState)(0),
-                _ = (0, _.useRef)(),
-                _ = (0, _.useRef)(),
+                _ = (0, _.useRef)(void 0),
+                _ = (0, _.useRef)(void 0),
                 { clearPlaybackAnimation: _, startPlaybackAnimation: _ } =
                   (function (_, _, _) {
-                    const _ = (0, _.useRef)(),
+                    const _ = (0, _.useRef)(void 0),
                       _ = _.GetGameRecordingVideo(),
-                      _ = (0, _.useRef)(),
-                      _ = (0, _.useRef)(),
-                      _ = (0, _.useRef)(),
-                      _ = (0, _.useRef)(),
+                      _ = (0, _.useRef)(void 0),
+                      _ = (0, _.useRef)(void 0),
+                      _ = (0, _.useRef)(void 0),
+                      _ = (0, _.useRef)(void 0),
                       _ = (0, _.useCallback)(() => {
                         if (!_.current) return;
                         const _ = _.GetGlobalMSPlaytime();
@@ -9563,9 +9563,9 @@
           _ = (0, _._)(() => "Overlay" === _.GetRecordingMode()),
           _ = (0, _._)(() => _.ConvertPXOffsetToGlobalMS(_, !1)),
           _ = (0, _._)(() => _.GetTimelineParentCtnRef()),
-          _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
           _ = (0, _._)(() => _.GetThumbnailComponent()),
           _ = _(),
           _ = (0, _._)({
@@ -9790,10 +9790,10 @@
           _ = _();
         return (
           (function (_, _, _, _, _, _) {
-            const _ = (0, _.useRef)(),
+            const _ = (0, _.useRef)(void 0),
               _ = (0, _.useRef)(!1),
-              _ = (0, _.useRef)(),
-              _ = (0, _.useRef)(),
+              _ = (0, _.useRef)(void 0),
+              _ = (0, _.useRef)(void 0),
               _ = (0, _._)(() => _.GetScrollableWidthPX()),
               _ = (0, _._)(() => _.GetScrollWindowWidth());
             (0, _.useEffect)(
@@ -9925,10 +9925,10 @@
           _ = _();
         return (
           (function (_, _, _, _, _, _) {
-            const _ = (0, _.useRef)(),
+            const _ = (0, _.useRef)(void 0),
               _ = (0, _.useRef)(!1),
-              _ = (0, _.useRef)(),
-              _ = (0, _.useRef)(),
+              _ = (0, _.useRef)(void 0),
+              _ = (0, _.useRef)(void 0),
               _ = (0, _._)(() => _.GetScrollableWidthPX()),
               _ = (0, _._)(() => _.GetScrollWindowWidth());
             (0, _.useEffect)(
@@ -10497,8 +10497,8 @@
         const { timelineView: _, scrollSize: __webpack_require__ } = _,
           _ = _(),
           _ = (function (_, _) {
-            const _ = (0, _.useRef)(),
-              _ = (0, _.useRef)(),
+            const _ = (0, _.useRef)(void 0),
+              _ = (0, _.useRef)(void 0),
               _ = (0, _._)(() => _.GetScrollableWidthPX()),
               _ = (0, _.useCallback)(
                 (_) => (0, _._)((_ * _) / _.scrollBarWidth),
@@ -10690,7 +10690,7 @@
                   : 0;
               }),
               [_, _] = (0, _.useState)(!1),
-              _ = (0, _.useRef)();
+              _ = (0, _.useRef)(void 0);
             (0, _.useEffect)(() => {
               if (_.GetAutoScrollPaused())
                 return (

@@ -4696,7 +4696,7 @@
       function _(_) {
         const { deleteNote: _, hidden: __webpack_require__, pmState: _ } = _,
           [_, _] = _.useState(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ =
             null === (_ = _.useContext(_).bSpellcheckEnabled) ||
             void 0 === _ ||
@@ -5929,7 +5929,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const _ = _.useRef(),
+        const _ = _.useRef(void 0),
           _ = _.useCallback(
             (_) => {
               _.currentTarget.files.length > 0 &&

@@ -711,7 +711,7 @@
       function _(_) {
         const { oChat: _, emoticonStore: __webpack_require__ } = _,
           [_, _] = _.useState(""),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(() => _.m_bRateLimited),
           _ = _.useCallback(
             (_) => {

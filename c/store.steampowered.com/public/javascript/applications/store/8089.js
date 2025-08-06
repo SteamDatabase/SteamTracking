@@ -25,6 +25,7 @@
 	"Menu_Cart": "Keranjang",
 	"Menu_Popover_TopLinks": "Tautan Teratas",
 	"Menu_Popover_StoreHome": "Beranda Toko",
+	"Menu_Popover_GreatonDeck": "Kompatibel dengan Deck",
 	"Menu_Popover_FreeToPlay": "F2P",
 	"Menu_Popover_SteamCharts": "Grafik Steam",
 	"Menu_Popover_Upcoming": "Rilisan Mendatang",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Tidak ada item yang cocok dengan permintaan.",
 	"Menu_SearchBar_AdvancedSearch": "Pencarian Lebih Lanjut",
 	"Menu_Search": "Cari",
-	"Menu_Label": "Menu Toko"
+	"Menu_Label": "Menu Toko",
+	"ItemFlag_InLibrary": "DI PERPUSTAKAAN",
+	"ItemFlag_OnWishlist": "DALAM WISHLIST",
+	"ItemFlag_InCart": "DI KERANJANG",
+	"ItemFlag_Ignored": "DIABAIKAN",
+	"ItemFlag_ExcludedByPreferences": "DIKECUALIKAN BERDASARKAN PREFERENSI"
 }`);
     },
   },

@@ -25,6 +25,7 @@
 	"Menu_Cart": "Ostoskori",
 	"Menu_Popover_TopLinks": "Suositut linkit",
 	"Menu_Popover_StoreHome": "Kauppasivu",
+	"Menu_Popover_GreatonDeck": "Toimii hyvin Deckillä",
 	"Menu_Popover_FreeToPlay": "Pelaa ilmaiseksi",
 	"Menu_Popover_SteamCharts": "Steam-tilastot",
 	"Menu_Popover_Upcoming": "Tulevat julkaisut",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Haku ei tuottanut tuloksia.",
 	"Menu_SearchBar_AdvancedSearch": "Tarkennettu haku",
 	"Menu_Search": "Haku",
-	"Menu_Label": "Kaupan valikko"
+	"Menu_Label": "Kaupan valikko",
+	"ItemFlag_InLibrary": "KIRJASTOSSA",
+	"ItemFlag_OnWishlist": "TOIVELISTALLA",
+	"ItemFlag_InCart": "OSTOSKORISSA",
+	"ItemFlag_Ignored": "OHITETTU",
+	"ItemFlag_ExcludedByPreferences": "POISTETTU ASETUSTEN PERUSTEELLA"
 }`);
     },
   },

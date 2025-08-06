@@ -9319,7 +9319,12 @@
           const n = e.IsValidAssetType(t, a);
           return "pending" === e.status && !n.error && !n.needsCrop;
         });
-        return n.forEach((e) => (e.status = "waiting")), n;
+        return (
+          n.forEach((e) => {
+            (e.status = "waiting"), (e.message = "");
+          }),
+          n
+        );
       }
       async function d(e, t, a, n, i, r) {
         const s = m(e, n, i),
@@ -9405,6 +9410,7 @@
         let r = null,
           s = 0;
         e.endsWith("korean") && ((r = 4), (s = 6));
+        const o = (e) => e.replace(/[\s_-]+$/g, "");
         for (let t = 0; t < 31; ++t) {
           const n = (0, i.ww)(t);
           if (n.length <= s) continue;
@@ -9416,12 +9422,15 @@
             }
             i && ((r = t), (s = n.length));
           }
-          const o = (0, i.Lg)(t);
-          o.length <= s || (e.endsWith(o) && ((r = t), (s = o.length)));
+          const l = (0, i.Lg)(t);
+          l.length <= s ||
+            (e.endsWith(l) &&
+              o(e.substring(0, e.length - l.length)).length > 0 &&
+              ((r = t), (s = l.length)));
         }
         return {
           language: r ?? t,
-          baseFilename: s > 0 ? e.substring(0, e.length - s - 1) : e,
+          baseFilename: s > 0 ? o(e.substring(0, e.length - s)) : e,
         };
       }
     },
@@ -14730,7 +14739,7 @@
           } = e,
           [c, u] = n.useState(!1),
           p = n.useCallback(() => c, [c]),
-          h = n.useRef(),
+          h = n.useRef(void 0),
           g = (0, _.Qn)();
         let f = r ?? {};
         return (
@@ -17605,7 +17614,7 @@
         f = a.n(g),
         S = a(3661),
         C = a(72237),
-        v = a(89274),
+        v = a(37346),
         y = a(20684),
         w = a(94095),
         b = a(72860),
@@ -18286,54 +18295,56 @@
         );
       }
     },
-    89274: (e, t, a) => {
+    37346: (e, t, a) => {
       "use strict";
-      a.d(t, { M: () => _, V: () => h });
-      var n = a(90626),
-        i = a(92909),
-        r = a(34010),
-        s = a(30894),
-        o = a(82097),
-        l = a(12155),
-        m = a(18654),
-        d = a.n(m),
-        c = a(52038),
-        u = a(61859),
-        p = a(94011);
-      const h = (0, a(75844).PA)(function (e) {
+      a.d(t, { M: () => h, V: () => p });
+      var n = a(90626);
+      var i = a(34010),
+        r = a(30894),
+        s = a(82097),
+        o = a(12155),
+        l = a(18654),
+        m = a.n(l),
+        d = a(52038),
+        c = a(61859),
+        u = a(94011);
+      const p = (0, a(75844).PA)(function (e) {
         const { appids: t, hide_status_banners: a } = e,
-          r = t.length > 0 && t.every((e) => s.Fm.Get().BOwnsApp(e)),
-          m = t.length > 0 && t.every((e) => s.Fm.Get().BIsGameWishlisted(e)),
-          h = t.some((e) => {
-            const t = o.A.Get().GetApp(e);
-            return t && _(e, t?.GetParentAppID());
+          i = t.length > 0 && t.every((e) => r.Fm.Get().BOwnsApp(e)),
+          l = t.length > 0 && t.every((e) => r.Fm.Get().BIsGameWishlisted(e)),
+          p = t.some((e) => {
+            const t = s.A.Get().GetApp(e);
+            return t && h(e, t?.GetParentAppID());
           }),
-          g = r && !a,
-          f = m && !a;
+          _ = i && !a,
+          g = l && !a;
         return n.createElement(
           "div",
-          { className: (0, c.A)(d().CapsuleDecorators, "CapsuleDecorators") },
+          { className: (0, d.A)(m().CapsuleDecorators, "CapsuleDecorators") },
+          _ &&
+            n.createElement(
+              "span",
+              { className: (0, d.A)(m().Banner, m().Blue) },
+              n.createElement("img", {
+                src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC",
+                className: m().LinesImg,
+              }),
+              (0, c.we)("#Sale_InLibrary"),
+            ),
           g &&
             n.createElement(
               "span",
-              { className: (0, c.A)(d().Banner, d().Blue) },
-              n.createElement("img", { src: i.A, className: d().LinesImg }),
-              (0, u.we)("#Sale_InLibrary"),
+              { className: m().Banner },
+              n.createElement(o.qnF, { className: m().LinesImg }),
+              (0, c.we)("#Sale_OnWishlist"),
             ),
-          f &&
-            n.createElement(
-              "span",
-              { className: d().Banner },
-              n.createElement(l.qnF, { className: d().LinesImg }),
-              (0, u.we)("#Sale_OnWishlist"),
-            ),
-          h && n.createElement(p.K, null),
+          p && n.createElement(u.K, null),
         );
       });
-      function _(e, t) {
+      function h(e, t) {
         if (t || e) {
           const a = t || e;
-          return a && r.j.Get().BIsAppStreaming(a);
+          return a && i.j.Get().BIsAppStreaming(a);
         }
         return !1;
       }
@@ -21765,12 +21776,6 @@
           a = (0, n.we)(t);
         return a != t ? a : (0, n.we)("#PartnerEvent_Other");
       }
-    },
-    92909: (e, t, a) => {
-      "use strict";
-      a.d(t, { A: () => n });
-      const n =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
     },
   },
 ]);

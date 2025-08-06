@@ -373,11 +373,11 @@
         const { children: t, timeoutMS: n, ...s } = e,
           u = (function (e = 2) {
             const t = (0, r.W6)(),
-              n = a.useRef(),
+              n = a.useRef(void 0),
               o = (0, r.zy)(),
               s = (0, l.ho)(),
               u = o.state && o.state[c],
-              d = a.useRef(),
+              d = a.useRef(void 0),
               [p, _] = a.useState(u);
             return (
               a.useLayoutEffect(() => {

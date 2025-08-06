@@ -590,7 +590,7 @@
           const _ = ["maxresdefault", "mqdefault", "default"],
             [__webpack_require__, _] = _.useState(0);
           _.useEffect(() => _(0), [_.video]);
-          const _ = _.useRef();
+          const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
             return _.createElement(_._, {
               className: _.className,
@@ -4632,7 +4632,7 @@
           ),
           [_, _] = (0, _.useState)(0),
           [_, _] = (0, _.useState)(null),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           _ = (0, _._)("CuratorFeedSuggestRow"),
           _ = (0, _.useCallback)(() => {
             if (!_.token.reason)

@@ -362,6 +362,7 @@
         GridArea: "uh0Q7gKQw3ZgTwvd5mQiZ",
         Background: "_1i6AhxSEgz1FAUyiEt1Xsk",
         Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
+        ZIndex: "_3MdwIbGpGWeiE-O2owd3VF",
       };
     },
     chunkid: (module) => {
@@ -421,6 +422,7 @@
         ToggleButton: "_3V5IjC_ZPSm6AYNrG_TxIH",
         TriggerToggle: "_3vaVGwEWyzdBk2qShNHAXp",
         TriggerSelect: "_1yO0Yb-sqZJEjjMYT3Cd_v",
+        NoToggleTrigger: "_3xdjQos6PV3wwD8xfObB_T",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -563,6 +565,11 @@
         })(_)
           ? `var(--spacing-${_})`
           : _;
+      }
+      function _(_) {
+        if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
+        const [_, __webpack_require__] = _.split(" ");
+        return `rgb( from ${`var(--color-${_})`} r g b / ${__webpack_require__} )`;
       }
       var _ = __webpack_require__("chunkid");
       const _ = [
@@ -782,13 +789,19 @@
             prop: "background",
             responsive: !0,
             className: _.Background,
-            cssProperty: (_) => ["--background", `var(--color-${_})`],
+            cssProperty: (_) => ["--background", _(_)],
           },
           {
             prop: "overflow",
             responsive: !0,
             className: _.Overflow,
             cssProperty: "--overflow",
+          },
+          {
+            prop: "zIndex",
+            responsive: !0,
+            className: _.ZIndex,
+            cssProperty: "--z-index",
           },
         ];
       var _ = __webpack_require__("chunkid");
@@ -1017,9 +1030,144 @@
         },
         {
           prop: "color",
-          cssProperty: (_) => ["--separator-color", `var(--color-${_})`],
+          cssProperty: (_) => ["--separator-color", _(_)],
         },
       ];
+      var _ = __webpack_require__("chunkid");
+      const _ = _.forwardRef(function (_, _) {
+          const {
+            variant: __webpack_require__ = "default",
+            size: _ = "2",
+            ..._
+          } = _;
+          return _.createElement("button", {
+            type: "button",
+            ..._(
+              {
+                ..._,
+                variant: __webpack_require__,
+                size: _,
+                className: _.Button,
+              },
+              _,
+            ),
+          });
+        }),
+        _ = [
+          ..._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`Size-${_}`],
+          },
+          {
+            prop: "variant",
+            className: (_) => _[`Variant-${_}`],
+          },
+          {
+            prop: "color",
+            dataProperty: (_) => ["accent-color", `${_}`],
+          },
+        ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { gutter: _ = 0 } = _;
+        return [
+          (0, _._)(),
+          (0, _._)({
+            apply: (_) => {
+              const { rects: _, elements: _, availableHeight: _ } = _,
+                _ = {
+                  maxHeight:
+                    "number" == typeof _
+                      ? _ - _ + "px"
+                      : `calc( ${_}px - var(--spacing-${_}) )`,
+                  overflowY: "auto",
+                  boxSizing: "border-box",
+                  zIndex: "1",
+                };
+              "target" === _.width && (_.width = `${_.reference.width}px`),
+                Object.assign(_.floating.style, _);
+            },
+          }),
+        ];
+      }
+      const _ = {
+        Root: function (_) {
+          const { children: _, ...__webpack_require__ } = _,
+            _ = (function (_) {
+              const { open: _, onOpenChange: __webpack_require__ } = _;
+              let _ = _;
+              0;
+              const _ = (0, _._)({
+                  open: _,
+                  onOpenChange: __webpack_require__,
+                  middleware: _(_),
+                  whileElementsMounted: _._,
+                }),
+                _ = (0, _._)(_.context),
+                _ = (0, _._)(_.context, {
+                  keyboardHandlers: !_,
+                }),
+                { getFloatingProps: _, getReferenceProps: _ } = (0, _._)([
+                  _,
+                  _,
+                ]);
+              return {
+                floating: _,
+                getFloatingProps: _,
+                getReferenceProps: _,
+                open: _,
+              };
+            })(__webpack_require__);
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _,
+          );
+        },
+        Anchor: function (_) {
+          const { children: _ } = _,
+            _ = _.Children.only(_),
+            _ = (0, _.useContext)(_);
+          return _
+            ? _
+              ? (0, _.cloneElement)(_, {
+                  ref: _.floating.refs.setReference,
+                  ..._.getReferenceProps(),
+                })
+              : (console.error(
+                  "<PopoverAnchor> must be a child of <PopoverRoot>.",
+                ),
+                null)
+            : null;
+        },
+        Positioner: (0, _.forwardRef)(function (_, _) {
+          const { children: __webpack_require__, className: _ } = _,
+            _ = (0, _.useContext)(_),
+            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
+          if (!_)
+            return (
+              console.error(
+                "<PopoverPositioner> must be a child of <PopoverRoot>.",
+              ),
+              null
+            );
+          if (!_.open) return null;
+          const _ = _.Children.only(__webpack_require__);
+          return (0, _.cloneElement)(_, {
+            ref: _,
+            style: _.floating.floatingStyles,
+            className: _,
+            ..._.getFloatingProps(),
+          });
+        }),
+      };
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.forwardRef)(function (_, _) {
@@ -1083,87 +1231,54 @@
         );
       });
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { extracted: _, remaining: __webpack_require__ } = (function (_) {
-            return _(_, _);
-          })(_),
-          {
-            variant: _,
-            size: _,
-            beforeContent: _,
-            afterContent: _,
-            ..._
-          } = __webpack_require__;
-        return _.createElement(
-          _,
-          {
-            ..._,
-            variant: _,
-            size: _,
-            beforeContent: _,
-            afterContent: _,
-            cursor: "text",
-          },
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
       const _ = (0, _.forwardRef)(function (_, _) {
-        const {
-          value: __webpack_require__,
-          onTextChange: _,
-          onChange: _,
-          className: _,
-          ..._
-        } = _;
-        return _.createElement("input", {
-          ref: _,
-          type: "text",
-          ..._,
-          className: _()(_.Reset, _.TextInput, _),
-          value: __webpack_require__ || "",
-          onChange: (_) => {
-            _(_.target.value), _ && _(_);
-          },
-        });
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
+          const { extracted: __webpack_require__, remaining: _ } = (function (
+              _,
+            ) {
+              return _(_, _);
+            })(_),
+            {
+              variant: _,
+              size: _,
+              beforeContent: _,
+              afterContent: _,
+              ..._
+            } = _;
+          return _.createElement(
+            _,
+            {
+              ref: _,
+              ...__webpack_require__,
+              variant: _,
+              size: _,
+              beforeContent: _,
+              afterContent: _,
+              cursor: "text",
+            },
+            _.createElement(_, {
+              ..._,
+            }),
+          );
+        }),
+        _ = (0, _.forwardRef)(function (_, _) {
           const {
-            variant: __webpack_require__ = "default",
-            size: _ = "2",
+            value: __webpack_require__,
+            onTextChange: _,
+            onChange: _,
+            className: _,
             ..._
           } = _;
-          return _.createElement("button", {
-            type: "button",
-            ..._(
-              {
-                ..._,
-                variant: __webpack_require__,
-                size: _,
-                className: _.Button,
-              },
-              _,
-            ),
+          return _.createElement("input", {
+            ref: _,
+            type: "text",
+            ..._,
+            className: _()(_.Reset, _.TextInput, _),
+            value: __webpack_require__ || "",
+            onChange: (_) => {
+              _(_.target.value), _ && _(_);
+            },
           });
-        }),
-        _ = [
-          ..._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`Size-${_}`],
-          },
-          {
-            prop: "variant",
-            className: (_) => _[`Variant-${_}`],
-          },
-          {
-            prop: "color",
-            dataProperty: (_) => ["accent-color", `${_}`],
-          },
-        ];
+        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
@@ -1408,105 +1523,6 @@
           className: _.Skeleton,
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(null);
-      function _(_) {
-        const { gutter: _ = 0 } = _;
-        return [
-          (0, _._)(),
-          (0, _._)({
-            apply: (_) => {
-              const { rects: _, elements: _, availableHeight: _ } = _,
-                _ = {
-                  maxHeight:
-                    "number" == typeof _
-                      ? _ - _ + "px"
-                      : `calc( ${_}px - var(--spacing-${_}) )`,
-                  overflowY: "auto",
-                  boxSizing: "border-box",
-                  zIndex: "1",
-                };
-              "target" === _.width && (_.width = `${_.reference.width}px`),
-                Object.assign(_.floating.style, _);
-            },
-          }),
-        ];
-      }
-      const _ = {
-        Root: function (_) {
-          const { children: _, ...__webpack_require__ } = _,
-            _ = (function (_) {
-              const { open: _, onOpenChange: __webpack_require__ } = _;
-              let _ = _;
-              0;
-              const _ = (0, _._)({
-                  open: _,
-                  onOpenChange: __webpack_require__,
-                  middleware: _(_),
-                  whileElementsMounted: _._,
-                }),
-                _ = (0, _._)(_.context),
-                _ = (0, _._)(_.context),
-                { getFloatingProps: _, getReferenceProps: _ } = (0, _._)([
-                  _,
-                  _,
-                ]);
-              return {
-                floating: _,
-                getFloatingProps: _,
-                getReferenceProps: _,
-                open: _,
-              };
-            })(__webpack_require__);
-          return _.createElement(
-            _.Provider,
-            {
-              value: _,
-            },
-            _,
-          );
-        },
-        Anchor: function (_) {
-          const { children: _ } = _,
-            _ = _.Children.only(_),
-            _ = (0, _.useContext)(_);
-          return _
-            ? _
-              ? (0, _.cloneElement)(_, {
-                  ref: _.floating.refs.setReference,
-                  ..._.getReferenceProps(),
-                })
-              : (console.error(
-                  "<PopoverAnchor> must be a child of <PopoverRoot>.",
-                ),
-                null)
-            : null;
-        },
-        Positioner: (0, _.forwardRef)(function (_, _) {
-          const { children: __webpack_require__, className: _ } = _,
-            _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
-          return _
-            ? _.open
-              ? _.createElement(
-                  "div",
-                  {
-                    ref: _,
-                    style: _.floating.floatingStyles,
-                    className: _,
-                    ..._.getFloatingProps(),
-                  },
-                  __webpack_require__,
-                )
-              : null
-            : (console.error(
-                "<PopoverPositioner> must be a child of <PopoverRoot>.",
-              ),
-              null);
-        }),
-      };
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.forwardRef)(function (_, _) {
           return _.createElement(_, {
@@ -1566,7 +1582,7 @@
         {
           prop: "color",
           className: _.Color,
-          cssProperty: (_) => ["--icon-color", `var(--color-${_})`],
+          cssProperty: (_) => ["--icon-color", _(_)],
         },
       ];
       function _(_) {
@@ -1665,16 +1681,15 @@
           const {
               children: _,
               state: __webpack_require__,
-              variant: _,
-              size: _,
               clearable: _ = !0,
+              ..._
             } = _,
-            [_, _] = (0, _.useState)(null),
-            _ = (0, _.useRef)(null),
+            [_, _] = (0, _.useState)(void 0);
+          (0, _.useEffect)(() => _(void 0), [__webpack_require__.bOpen]);
+          const _ = (0, _.useRef)(null),
             _ = {
               ...__webpack_require__,
-              variant: _,
-              size: _,
+              ..._,
               focusedValue: _,
               onFocusChange: _,
               refPopover: _,
@@ -1723,15 +1738,13 @@
               onInputChange: _,
               placeholder: _,
               selectedValue: _,
-              variant: _,
-              size: _,
-              radius: _,
               focusedValue: _,
               onFocusChange: _,
               rgFilteredOptions: _,
               onSelectionChange: _,
               refPopover: _,
               clearable: _,
+              ..._
             } = _("<ComboboxTrigger>"),
             _ = (0, _.useRef)(null);
           (0, _.useEffect)(() => {
@@ -1765,10 +1778,8 @@
                 beforeContent: __webpack_require__,
                 afterContent: _,
                 cursor: "pointer",
-                variant: _,
-                size: _,
-                radius: _,
                 tabIndex: 0,
+                ..._,
               },
               _.createElement(
                 _,
@@ -2456,7 +2467,7 @@
               _.createElement(_, {
                 direction: _,
                 wrap: _ ? "wrap" : void 0,
-                gap: "column" === _ ? "1" : "2",
+                gap: "column" === _ ? "1" : "4",
                 role: "group",
                 ..._,
               }),
@@ -2663,7 +2674,6 @@
         return _.createElement(
           _,
           {
-            paddingLeft: "2",
             marginBottom: "4",
           },
           _.createElement(
@@ -2709,7 +2719,6 @@
             _,
             {
               color: __webpack_require__ ? "accent" : void 0,
-              weight: __webpack_require__ ? "medium" : void 0,
             },
             _,
           ),
@@ -2948,7 +2957,7 @@
       }
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, color: __webpack_require__, ..._ } = _,
           {
             min: _,
             max: _,
@@ -2964,7 +2973,7 @@
           _.Provider,
           {
             value: {
-              ...__webpack_require__,
+              ..._,
               handles: _,
             },
           },
@@ -2972,6 +2981,7 @@
             "div",
             {
               className: _.SliderRoot,
+              "data-accent-color": __webpack_require__,
               ref: _,
               onPointerDown: (_) => {
                 if (
@@ -3170,29 +3180,23 @@
           { maxPrice: _, currency: _ } = (function () {
             const _ = (0, _.useContext)(_);
             return (0, _._)(_, "No filter config provider found!"), _;
-          })();
+          })(),
+          [_, _] = (0, _.useState)(!1);
         if (_ <= 0) return null;
         const _ = [0, _],
           _ = (_) => (_) => {
             const _ = [..._];
-            (_[_] = _._(_, _[0], _[1])), __webpack_require__(_);
+            (_[_] = _._(_, _[0], _[1])), __webpack_require__(_), _(!0);
           },
           _ = _[0] === _[0] ? void 0 : _[0],
-          _ = _[1] === _[1] ? void 0 : _[1];
+          _ = _[1] === _[1] ? void 0 : _[1],
+          _ = void 0 === _ && void 0 === _ && !_;
         return _.createElement(
           _,
           {
             direction: "column",
             gap: "2",
-            paddingLeft: "2",
           },
-          _.createElement(
-            _,
-            {
-              weight: "medium",
-            },
-            (0, _._)("#AdvancedSearch_PriceFieldLabel"),
-          ),
           _.createElement(
             _,
             {
@@ -3224,7 +3228,10 @@
             value: [_[0], _[1]],
             min: _[0],
             max: _[1],
-            onValueChange: __webpack_require__,
+            onValueChange: (_) => {
+              _(!0), __webpack_require__(_);
+            },
+            color: _ ? "dull" : void 0,
           }),
         );
       }
@@ -3837,6 +3844,10 @@
               },
             ],
           },
+          {
+            type: "facet",
+            facet: "ItemSet",
+          },
         ],
         _ = [
           {
@@ -3871,18 +3882,6 @@
               {
                 facet: "Type",
                 tag: [..._, "Type_Hands"],
-              },
-            ],
-          },
-          {
-            facet: "ItemSet",
-            trigger: [
-              {
-                facet: "Weapon",
-              },
-              {
-                facet: "Type",
-                tag: _,
               },
             ],
           },
@@ -4011,48 +4010,56 @@
                     _[_] || (_[_] = []), _[_].push(_);
                   },
                   _ = [];
-                for (const _ of _) {
-                  const _ = {
-                      fieldType: "select",
-                      strLabel: _(_.label, _),
-                      rgOptions: _.options.map(
-                        ({ facet: _, tag: _, label: _ }) => (
-                          _(_, _),
-                          {
-                            facet: _,
-                            tag: _,
-                            strLabel: _(
-                              _ || {
-                                facet: _,
-                                tag: _,
-                              },
-                              _,
-                            ),
-                          }
+                for (const _ of _)
+                  if ("select" === _.type) {
+                    const _ = {
+                        fieldType: "select",
+                        strLabel: _(_.label, _),
+                        rgOptions: _.options.map(
+                          ({ facet: _, tag: _, label: _ }) => (
+                            _(_, _),
+                            {
+                              facet: _,
+                              tag: _,
+                              strLabel: _(
+                                _ || {
+                                  facet: _,
+                                  tag: _,
+                                },
+                                _,
+                              ),
+                            }
+                          ),
                         ),
-                      ),
-                    },
-                    _ = new Intl.Collator();
-                  _.rgOptions.sort((_, _) =>
-                    "Type" === _.facet
-                      ? -1
-                      : "Type" === _.facet
-                        ? 1
-                        : _.compare(_.strLabel, _.strLabel),
-                  );
-                  const _ = _.rgOptions.find((_) => "Type" === _.facet),
-                    _ = _
-                      ? {
-                          facet: _.facet,
-                          tag: _.tag,
-                        }
-                      : void 0;
-                  _.push({
-                    facet: _,
-                    img: _.img,
-                    toggle: _,
-                  });
-                }
+                      },
+                      _ = new Intl.Collator();
+                    _.rgOptions.sort((_, _) =>
+                      "Type" === _.facet
+                        ? -1
+                        : "Type" === _.facet
+                          ? 1
+                          : _.compare(_.strLabel, _.strLabel),
+                    );
+                    const _ = _.rgOptions.find((_) => "Type" === _.facet),
+                      _ = _
+                        ? {
+                            facet: _.facet,
+                            tag: _.tag,
+                          }
+                        : void 0;
+                    _.push({
+                      facet: _,
+                      img: _.img,
+                      toggle: _,
+                    });
+                  } else {
+                    const _ = _[_.facet];
+                    _.push({
+                      facet: _(_, "select"),
+                      img: "",
+                    });
+                    for (const _ of Object.keys(_.tags || {})) _(_.name, _);
+                  }
                 const _ = [];
                 for (const _ of _) {
                   const { facet: _, tag: _ } = _;
@@ -4192,6 +4199,7 @@
           _ = [
             ...Object.values(_.facets.Type || {}),
             ...Object.values(_.facets.Weapon || {}),
+            ...Object.values(_.facets.ItemSet),
           ].some((_) => _);
         return _.createElement(
           _.Fragment,
@@ -4215,7 +4223,7 @@
             _,
             {
               gap: "2",
-              marginTop: "4",
+              marginTop: "2",
               align: "stretch",
             },
             _.map((_) =>
@@ -4294,7 +4302,7 @@
           _,
           {
             flexGrow: "1",
-            background: "dull-a2",
+            background: "dull-2 25%",
             radius: "md",
             padding: "5",
             justify: "center",
@@ -4321,8 +4329,14 @@
             children: _,
             muted: _,
             onToggle: _,
+            onClear: _,
             ..._
           } = _,
+          _ = _
+            ? (_) => {
+                _.stopPropagation(), _.preventDefault(), _();
+              }
+            : void 0,
           _ = _
             ? (_) => {
                 _.stopPropagation(), _.preventDefault(), _();
@@ -4331,12 +4345,13 @@
         let _ = _.createElement(
           _,
           {
+            background: "dull-2 25%",
             flexGrow: "1",
             align: "center",
             paddingX: "3",
             paddingY: "2",
             gap: "2",
-            className: _.TriggerSelect,
+            className: _.NoToggleTrigger,
           },
           _.createElement(
             _,
@@ -4345,32 +4360,46 @@
             },
             _,
           ),
-          _.createElement(_, null),
+          _ && _
+            ? _.createElement(_, {
+                onClick: _,
+              })
+            : _.createElement(_, null),
         );
         return (
           _ &&
             (_ = _.createElement(
               _.Fragment,
               null,
-              __webpack_require__ &&
-                _.createElement("div", {
-                  className: _.ImgBlur,
-                  style: {
-                    backgroundImage: `url("${__webpack_require__}")`,
-                    pointerEvents: "none",
-                  },
-                }),
               _.createElement(
                 _,
                 {
                   align: "center",
+                  background: "dull-2 25%",
                   gap: "2",
                   paddingY: "1",
                   paddingX: "3",
                   flexGrow: "1",
                   className: _.TriggerToggle,
                   onClick: _,
+                  position: "relative",
                 },
+                _.createElement(
+                  _,
+                  {
+                    overflow: "hidden",
+                    position: "absolute",
+                    inset: "0",
+                  },
+                  __webpack_require__ &&
+                    _.createElement("div", {
+                      className: _.ImgBlur,
+                      style: {
+                        backgroundImage: `url("${__webpack_require__}")`,
+                        pointerEvents: "none",
+                      },
+                    }),
+                ),
                 __webpack_require__ &&
                   _.createElement("img", {
                     src: __webpack_require__,
@@ -4378,6 +4407,7 @@
                       width: "70px",
                       height: "70px",
                       objectFit: "contain",
+                      zIndex: "1",
                     },
                     alt: "",
                   }),
@@ -4385,6 +4415,7 @@
                   _,
                   {
                     flexGrow: "1",
+                    zIndex: "1",
                   },
                   _,
                 ),
@@ -4392,6 +4423,7 @@
               _.createElement(
                 _,
                 {
+                  background: "dull-2 25%",
                   align: "center",
                   justify: "center",
                   padding: "5",
@@ -4404,13 +4436,12 @@
             _,
             {
               ..._,
+              gap: "1",
               flexGrow: "1",
               ref: _,
-              background: "dull-a2",
               radius: "md",
               className: _.Trigger,
               position: "relative",
-              overflow: "hidden",
               "data-active": !!_,
               "data-muted": !!_,
             },
@@ -4464,6 +4495,7 @@
                 active: !!_,
                 muted: _ && !_,
                 onToggle: _,
+                onClear: () => _.onSelectionChange(void 0),
               }),
             },
             !_ && _.createElement(_.Value, null, __webpack_require__),
@@ -4597,6 +4629,7 @@
                   _.createElement(_, {
                     size: "1",
                     orientation: "vertical",
+                    color: "dull-6",
                   }),
                   _.createElement(
                     _,
@@ -4604,17 +4637,8 @@
                       flexGrow: "1",
                     },
                     _.createElement(_, {
-                      radius: "full",
-                      variant: "inset",
-                      value: _.strSearch || "",
-                      onTextChange: (_) =>
-                        __webpack_require__({
-                          ..._,
-                          strSearch: _,
-                        }),
-                      placeholder: (0, _._)(
-                        "#AdvancedSearch_TextSearch_Placeholder",
-                      ),
+                      filter: _,
+                      onFilterChange: __webpack_require__,
                     }),
                   ),
                 ),
@@ -4648,8 +4672,8 @@
                   _,
                   {
                     marginTop: _,
-                    justify: "end",
                     gap: _,
+                    justify: "end",
                   },
                   _.createElement(
                     _,
@@ -4739,6 +4763,83 @@
                     (0, _._)("#AdvancedSearch_Search"),
                   ),
                 ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        var _, _;
+        const { filter: _, onFilterChange: _ } = _,
+          _ = _.bSteamItems
+            ? _
+            : null === (_ = _.filterInGame.app) || void 0 === _
+              ? void 0
+              : _.appid,
+          _ = (0, _._)({
+            queryKey: ["market_search_suggestions", _.strSearch, _],
+            queryFn: async () => {
+              const _ = await fetch(
+                `/newmarket/searchsuggestionsresults?q=${_.strSearch}${_ ? `&appid=${_}` : ""}`,
+              );
+              return await _.json();
+            },
+            placeholderData: (_) => _,
+            enabled: !!_.strSearch,
+          }),
+          _ = !!_.strSearch;
+        return _.createElement(
+          _.Root,
+          {
+            open: _,
+            onOpenChange: () => {},
+            width: "target",
+          },
+          _.createElement(
+            _.Anchor,
+            null,
+            _.createElement(_, {
+              radius: "full",
+              variant: "inset",
+              value: _.strSearch || "",
+              onTextChange: (_) =>
+                _({
+                  ..._,
+                  strSearch: _,
+                }),
+              placeholder: (0, _._)("#AdvancedSearch_TextSearch_Placeholder"),
+            }),
+          ),
+          _.createElement(
+            _.Positioner,
+            null,
+            _.createElement(
+              _,
+              null,
+              _.createElement(
+                _,
+                {
+                  direction: "column",
+                  gap: "2",
+                },
+                null === (_ = _.data) || void 0 === _
+                  ? void 0
+                  : _.results.map((_) =>
+                      _.createElement(
+                        _.Option,
+                        {
+                          onSelect: () => {},
+                          key: _.market_name + _.app_id,
+                        },
+                        _.createElement(
+                          _,
+                          {
+                            key: _.market_name + _.app_id,
+                          },
+                          _.market_name,
+                        ),
+                      ),
+                    ),
               ),
             ),
           ),
@@ -5078,6 +5179,7 @@
             {
               columns: "repeat( auto-fit, minmax( 230px, 1fr ) )",
               gap: "2",
+              marginTop: "2",
             },
             _.map((_) =>
               _.createElement(_, {
@@ -5523,7 +5625,7 @@
         const {
             defaultTextSize: _ = "3",
             accentColor: __webpack_require__ = "blue",
-            dullColor: _ = "slate",
+            dullColor: _ = "greyneutral",
             breakpoints: _,
             children: _,
           } = _,

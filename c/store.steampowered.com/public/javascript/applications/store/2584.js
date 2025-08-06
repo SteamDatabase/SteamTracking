@@ -392,11 +392,11 @@
         const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
           _ = (function (_ = 2) {
             const _ = (0, _._)(),
-              _ = _.useRef(),
+              _ = _.useRef(void 0),
               _ = (0, _._)(),
               _ = (0, _._)(),
               _ = _.state && _.state[_],
-              _ = _.useRef(),
+              _ = _.useRef(void 0),
               [_, _] = _.useState(_);
             return (
               _.useLayoutEffect(() => {

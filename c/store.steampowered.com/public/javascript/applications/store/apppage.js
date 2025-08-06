@@ -2673,13 +2673,46 @@
         let [__webpack_require__, _] = (function (_) {
           let [_, __webpack_require__] = _(),
             _ = (0, _.useRef)(void 0),
-            _ = _(_),
+            _ = (0, _.useRef)(!1),
+            _ = (0, _.useRef)({
+              element: void 0,
+              bKeepControls: !1,
+            }),
             _ = (0, _.useCallback)(
               (_) => {
-                __webpack_require__(!0, _ ? 0 : _);
+                if (_.target == _.current.element) return;
+                let _ = (function (_) {
+                  let _ = _.target,
+                    _ = _.currentTarget;
+                  for (; _ && _ != _; ) {
+                    if ("true" == _.dataset?.keepcontrols) return !0;
+                    _ = _.parentElement;
+                  }
+                  return !1;
+                })(_);
+                _.current = {
+                  element: _.target,
+                  bKeepControls: _,
+                };
               },
-              [__webpack_require__],
-            );
+              [_],
+            ),
+            _ = (0, _.useCallback)(
+              (_) => {
+                _.current.bKeepControls || _.current
+                  ? __webpack_require__(!0, 0)
+                  : __webpack_require__(!0, _);
+              },
+              [_, _, __webpack_require__],
+            ),
+            _ =
+              (_(_),
+              (0, _.useCallback)(
+                (_) => {
+                  (_.current = _), _(_);
+                },
+                [_, _],
+              ));
           !(function (_, _) {
             let _ = (0, _.useRef)(!0),
               _ = _(_);
@@ -2689,8 +2722,8 @@
             }, [_, _, _]);
           })(_, _);
           let _ = (0, _.useCallback)(() => {
-            __webpack_require__(!0, _);
-          }, [__webpack_require__]);
+            _(_);
+          }, [_]);
           !(function (_, _) {
             let _ = (0, _.useRef)(!0),
               _ = (0, _._)(() => _.GetMuted());
@@ -2701,27 +2734,26 @@
           })(_, _);
           let _ = (0, _.useCallback)(
               (_) => {
-                "touch" != _.pointerType &&
-                  (_(_) || _
-                    ? __webpack_require__(!0, 0)
-                    : __webpack_require__(!0, _(_)));
+                "touch" != _.pointerType && (_(_), _(_(_)));
               },
-              [__webpack_require__, _],
+              [_, _],
+            ),
+            _ = (0, _.useCallback)(
+              (_) => {
+                "touch" != _.pointerType && (_(_), _(_(_)));
+              },
+              [_, _],
             ),
             _ = (0, _.useCallback)(
               (_) => {
                 "touch" != _.pointerType &&
-                  (_(_) || _
-                    ? __webpack_require__(!0, 0)
-                    : __webpack_require__(!0, _(_)));
+                  ((_.current = {
+                    element: void 0,
+                    bKeepControls: !1,
+                  }),
+                  _(_));
               },
-              [__webpack_require__, _],
-            ),
-            _ = (0, _.useCallback)(
-              (_) => {
-                "touch" != _.pointerType && (_ || __webpack_require__(!0, _));
-              },
-              [__webpack_require__, _],
+              [_, _],
             ),
             _ = (0, _.useCallback)(
               (_) => {
@@ -2738,10 +2770,9 @@
             _ = (0, _.useCallback)(
               (_) => {
                 let _ = _.current;
-                (_.current = void 0),
-                  _.currentTarget == _ && (_ || __webpack_require__(!0, _(_)));
+                (_.current = void 0), _.currentTarget == _ && _(_(_));
               },
-              [__webpack_require__, _],
+              [_],
             );
           return [
             _,
@@ -2759,15 +2790,6 @@
       }
       function _(_) {
         return "touch" == _.pointerType ? _ : _;
-      }
-      function _(_) {
-        let _ = _.target,
-          _ = _.currentTarget;
-        for (; _ && _ != _; ) {
-          if ("true" == _.dataset?.keepcontrols) return !0;
-          _ = _.parentElement;
-        }
-        return !1;
       }
       function _(_) {
         let _ = (0, _.useRef)(null);
@@ -3449,8 +3471,8 @@
             category: _,
             title: _,
           } = _,
-          _ = (0, _.useRef)(),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
           [_, _] = _(_, _),
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _);
@@ -3592,7 +3614,7 @@
             clickEvents: _,
             fnRemoveEvent: _,
           } = (function (_, _) {
-            let _ = (0, _.useRef)(),
+            let _ = (0, _.useRef)(void 0),
               _ = (0, _.useRef)(1),
               _ = (0, _.useRef)(0),
               [_, _] = (0, _.useState)([]),
@@ -3755,7 +3777,7 @@
             category: _,
             title: _,
           } = _,
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           [_, _] = (function (_, _, _) {
             let [_, _] = (function (_, _) {
               let [_, _] = _(),
@@ -3798,7 +3820,7 @@
             })(_, _);
             return (_ = _ || _), [_, _];
           })(_, _, _),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _);
         _ = _ || _;
@@ -4054,7 +4076,7 @@
           _ = (0, _.useCallback)(() => {
             _(), _();
           }, [_, _]),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _),
           _ = _
@@ -4188,7 +4210,7 @@
         let [_, _] = (0, _._)(!0),
           [_, _] = (function (_, _, _, _) {
             let _ = _(),
-              _ = _.useRef();
+              _ = _.useRef(void 0);
             _.current || (_.current = new _(_));
             let _ = (0, _._)(
               (_) => {

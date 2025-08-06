@@ -25,6 +25,7 @@
 	"Menu_Cart": "Kundvagn",
 	"Menu_Popover_TopLinks": "Topplänkar",
 	"Menu_Popover_StoreHome": "Startsida",
+	"Menu_Popover_GreatonDeck": "Bra på Deck",
 	"Menu_Popover_FreeToPlay": "Gratis att spela",
 	"Menu_Popover_SteamCharts": "Steam-listor",
 	"Menu_Popover_Upcoming": "Kommande lanseringar",
@@ -91,7 +92,12 @@
 	"Menu_SearchBar_YourTopGenres": "Genrer för dig",
 	"Menu_SearchBar_BrowseBy": "Sök per ...",
 	"Menu_Search": "Sök",
-	"Menu_Label": "Butiksmeny"
+	"Menu_Label": "Butiksmeny",
+	"ItemFlag_InLibrary": "I BIBLIOTEKET",
+	"ItemFlag_OnWishlist": "PÅ ÖNSKELISTAN",
+	"ItemFlag_InCart": "I KUNDVAGNEN",
+	"ItemFlag_Ignored": "IGNORERADE",
+	"ItemFlag_ExcludedByPreferences": "EXKLUDERADES AV DINA PREFERENSER"
 }`);
     },
   },

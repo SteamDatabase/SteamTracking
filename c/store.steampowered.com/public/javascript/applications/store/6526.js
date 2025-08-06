@@ -25,6 +25,7 @@
 	"Menu_Cart": "Giỏ hàng",
 	"Menu_Popover_TopLinks": "Liên kết đầu",
 	"Menu_Popover_StoreHome": "Trang chủ cửa hàng",
+	"Menu_Popover_GreatonDeck": "Tuyệt trên Deck",
 	"Menu_Popover_FreeToPlay": "Chơi miễn phí",
 	"Menu_Popover_SteamCharts": "Bảng xếp hạng Steam",
 	"Menu_Popover_Upcoming": "Phát hành sắp ra mắt",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Không có sản phẩm nào khớp với truy vấn.",
 	"Menu_SearchBar_AdvancedSearch": "Tìm kiếm nâng cao",
 	"Menu_Search": "Tìm kiếm",
-	"Menu_Label": "Menu cửa hàng"
+	"Menu_Label": "Menu cửa hàng",
+	"ItemFlag_InLibrary": "TRONG THƯ VIỆN",
+	"ItemFlag_OnWishlist": "TRONG DANH SÁCH ƯỚC",
+	"ItemFlag_InCart": "TRONG GIỎ HÀNG",
+	"ItemFlag_Ignored": "ĐÃ PHỚT LỜ",
+	"ItemFlag_ExcludedByPreferences": "LOẠI TRỪ DỰA TRÊN TÙY CHỈNH"
 }`);
     },
   },

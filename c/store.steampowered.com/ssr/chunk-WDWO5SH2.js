@@ -1,8 +1,8 @@
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -1678,7 +1678,7 @@ function _(_, _) {
         }),
         (_.onUpdate = function (_, _) {
           var _ = _.observedBits | 0;
-          _ & _ &&
+          (_ & _) !== 0 &&
             _.setState({
               value: _.getValue(),
             });
@@ -2282,8 +2282,8 @@ function _(_, _, _) {
     _ = _(),
     _ = (_.state && _.state[_]) ?? _,
     _ = _.useRef(!1),
-    _ = _.useRef(),
-    _ = _.useRef(),
+    _ = _.useRef(void 0),
+    _ = _.useRef(void 0),
     _ = _.useCallback(
       (_) => {
         if (_.current && ((_.current = _), !_.current)) {
@@ -2417,7 +2417,7 @@ var _ = class extends _ {
   }
 };
 function _(_, _) {
-  let _ = _.default.useRef();
+  let _ = _.default.useRef(void 0);
   return _.default.useCallback(
     (_, _) => {
       let _ = "sine";
@@ -2633,7 +2633,7 @@ function _(_) {
     [_, _] = _(`${_}ScrollLeft`, 250, 0),
     _ = _.default.useRef(0),
     _ = _.default.useRef(0),
-    _ = _.default.useRef(),
+    _ = _.default.useRef(void 0),
     _ = _.default.useCallback(
       (_) => {
         let { scrollTop: _, scrollLeft: _ } = _.currentTarget;

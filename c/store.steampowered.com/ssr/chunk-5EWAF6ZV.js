@@ -1,8 +1,8 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -52,7 +52,7 @@ function _(_, _, _) {
       let _ = {};
       return (_?.tags || []).forEach(({ tagid: _, name: _ }) => (_[_] = _)), _;
     },
-    staleTime: 60 * 60 * 1e3,
+    staleTime: 3600 * 1e3,
   };
 }
 function _(_, _) {

@@ -9,7 +9,7 @@ function _(_, _, _, _, _) {
   return {
     queryKey: ["StoreQuery", _],
     queryFn: () => _(_, _, _, _, _),
-    staleTime: 10 * 60 * 1e3,
+    staleTime: 600 * 1e3,
   };
 }
 async function _(_, _, _, _, _) {

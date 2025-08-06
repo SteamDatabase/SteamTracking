@@ -297,6 +297,7 @@
         FieldDescription: "_1W1to_azoBRG95oNAFpf9Q",
         ModalPosition: "_3A5ujtARm6atH4phJ5i1i6",
         VR: "_3-NqubDUyBx8l_lXBrjzUJ",
+        FooterVisible: "_3bdRx6sqp4zgADo5c-9jUb",
         WithStandardPadding: "_1XQXQY77uXZfE0KSWEADf_",
         NoHeaderPadding: "_1Y7qW0oDUNH6gMRGqujwo6",
         ModalClickToDismiss: "_27uCSNGt2GM1oh3MbvqAS",
@@ -1800,7 +1801,7 @@
             r.e(3506),
             r.e(4017),
             r.e(9433),
-          ]).then(r.bind(r, 89025)),
+          ]).then(r.bind(r, 74085)),
         ),
         he = u.lazy(() =>
           Promise.all([
@@ -3886,7 +3887,7 @@
           [d, p] = (0, l.Xz)(`${t}ScrollLeft`, 250, 0),
           h = o.useRef(0),
           g = o.useRef(0),
-          _ = o.useRef();
+          _ = o.useRef(void 0);
         let f = o.useCallback(
           (e) => {
             const { scrollTop: t, scrollLeft: r } = e.currentTarget;
@@ -5720,7 +5721,7 @@
             (l.current = void 0), (c.current = void 0);
           }, []),
           m = (function (e, t) {
-            const r = n.useRef();
+            const r = n.useRef(void 0);
             return n.useCallback(
               (n, s) => {
                 let a = "sine";
@@ -5902,7 +5903,7 @@
         );
       }
       function l(e) {
-        const t = i.useRef(),
+        const t = i.useRef(void 0),
           r = i.useContext(a);
         return t.current || (t.current = r(e || {})), t.current;
       }
@@ -15994,7 +15995,7 @@
         ];
       }
       function _(e) {
-        const t = n.useRef();
+        const t = n.useRef(void 0);
         return n.useCallback(
           () => (
             (t.current && t.current.factory == e) ||
@@ -16088,7 +16089,7 @@
                 });
       }
       function o(e, t) {
-        const r = n.useRef();
+        const r = n.useRef(void 0);
         return n.useCallback((t) => {
           r.current && r.current(), (r.current = e(t));
         }, t);
@@ -18407,6 +18408,7 @@
               (t |= M.NoWindowShadow),
               (t |= M.NoRoundedCorners),
               (t |= M.OverrideRedirect),
+              (t |= M.ForceBrowserVisible),
               t
             );
           case S.Tooltip:
@@ -18473,7 +18475,8 @@
             "IgnoreSteamDisplayScale"),
           (e[(e.TransparentParentWindow = 4194304)] =
             "TransparentParentWindow"),
-          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale");
+          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (e[(e.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
       })(M || (M = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -19950,6 +19953,8 @@
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
+          "/.millennium/Dist",
+          "/react-waypoint/",
         ];
       function f() {
         try {
@@ -20239,7 +20244,8 @@
         return [e, ...t]
           .map((e) => {
             try {
-              return String(e);
+              let t = String(e);
+              return "[object Object]" == t && (t = JSON.stringify(e)), t;
             } catch (e) {
               return "[Stringify Error]";
             }
@@ -24309,7 +24315,7 @@
             const i = (0, m.we)("#Field_MoreInfo_Action");
             return { onOptionsButton: n, onOptionsActionDescription: i };
           })(R ?? n, E),
-          Z = s.useRef(),
+          Z = s.useRef(void 0),
           K = (0, d.Ue)(Z, e.navRef),
           Y = s.useCallback(
             (e) => {
@@ -24552,7 +24558,7 @@
           } = e,
           [l, c, m, d] = (function () {
             let e = s.useRef(null),
-              t = s.useRef();
+              t = s.useRef(void 0);
             s.useLayoutEffect(() => {
               let r = e.current;
               if (!r || t.current) return;
@@ -24718,9 +24724,9 @@
           })(s.useMemo(() => t.findIndex((e) => e == r), [t, r])),
           o = (function (e, t) {
             const r = s.useMemo(() => new Map(), []),
-              n = s.useRef();
+              n = s.useRef(e);
             n.current = e;
-            const i = s.useRef();
+            const i = s.useRef(t);
             i.current = t;
             const a = s.useCallback(
               (e) => (t) => {
@@ -24819,7 +24825,7 @@
       var rt = r(4437);
       const nt = s.forwardRef(function (e, t) {
         const { className: r, ...i } = e;
-        let a = s.useRef(),
+        let a = s.useRef(void 0),
           l = (0, d.Ue)(t, a);
         const [c, u] = s.useState(!1),
           p = s.useCallback(() => {
@@ -28930,7 +28936,7 @@
           } = e,
           s = (0, l.R7)(),
           m = s?.ownerWindow || window,
-          d = i.useRef();
+          d = i.useRef(void 0);
         return (
           d.current || (d.current = new o.z()),
           i.useLayoutEffect(() => {
@@ -29112,7 +29118,7 @@
               bRegisterManagersWithWindow: _ = !0,
               ...b
             } = e,
-            C = i.useRef();
+            C = i.useRef(void 0);
           C.current || (C.current = new B.SZ());
           let M = i.createElement(y.L, {
             ...b,
@@ -29460,7 +29466,7 @@
           c = (0, s.oJ)(),
           [u, m] = n.useState(null),
           [d, p] = n.useState(!1),
-          h = n.useRef();
+          h = n.useRef(void 0);
         if (
           (n.useEffect(() => {
             if (t) {
@@ -32330,7 +32336,7 @@
       var n = r(90626);
       let i = 0;
       function s() {
-        const e = n.useRef();
+        const e = n.useRef(void 0);
         return (
           void 0 === e.current && (e.current = "svgid_" + i++),
           [e.current, `url(#${e.current})`]
@@ -34946,8 +34952,8 @@
           o = (0, i.zy)(),
           l = (o.state && o.state[s]) ?? r,
           c = n.useRef(!1),
-          u = n.useRef(),
-          m = n.useRef(),
+          u = n.useRef(void 0),
+          m = n.useRef(void 0),
           d = n.useCallback(
             (e) => {
               if (c.current && ((u.current = e), !m.current)) {
@@ -35670,7 +35676,12 @@
       }
       function d(e, t) {
         return (
-          !!window.location.href.match("[?&]" + t + "=") ||
+          !!(
+            window &&
+            window.location &&
+            window.location.href &&
+            window.location.href.match("[?&]" + t + "=")
+          ) ||
           !(
             "undefined" == typeof navigator ||
             !navigator.userAgent ||

@@ -1425,11 +1425,11 @@
         const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
           _ = (function (_ = 2) {
             const _ = (0, _._)(),
-              _ = _.useRef(),
+              _ = _.useRef(void 0),
               _ = (0, _._)(),
               _ = (0, _._)(),
               _ = _.state && _.state[_],
-              _ = _.useRef(),
+              _ = _.useRef(void 0),
               [_, _] = _.useState(_);
             return (
               _.useLayoutEffect(() => {
@@ -1740,6 +1740,72 @@
         }
       })();
       window.ClientConnectionAPI = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_ItemDefinition = null;
+        m_ItemKV = null;
+        constructor(_, _) {
+          (0, _._)(this), this.LoadItemDefinition(_, _);
+        }
+        LoadItemDefinition(_, _) {
+          (this.m_ItemDefinition = _
+            ? {
+                item_type: _.item_type,
+                item_class: _.item_class,
+                item_description: _.item_description,
+                editor_accountid: _.editor_accountid,
+                deleted: _.deleted,
+                active: _.active,
+                appid: _.appid,
+                item_image_composed: _.item_image_composed,
+                item_image_large: _.item_image_large,
+                item_image_small: _.item_image_small,
+                item_key_values: _.item_key_values,
+                item_movie_mp4: _.item_movie_mp4,
+                item_movie_mp4_small: _.item_movie_mp4_small,
+                item_internal_name: _.item_name,
+                item_series: _.item_series,
+                item_movie_webm: _.item_movie_webm,
+                item_movie_webm_small: _.item_movie_webm_small,
+                item_image_composed_foil: _.item_image_composed_foil,
+                item_last_changed: _.item_last_changed,
+                broadcast_channel_id: _.broadcast_channel_id,
+              }
+            : _),
+            (this.m_ItemKV = JSON.parse(this.m_ItemDefinition.item_key_values));
+        }
+        get AppID() {
+          return this.m_ItemDefinition.appid;
+        }
+        get BIsActive() {
+          return this.m_ItemDefinition.active;
+        }
+        get ItemID() {
+          return this.m_ItemDefinition.item_type;
+        }
+        get BIsDeleted() {
+          return this.m_ItemDefinition.deleted;
+        }
+        get ItemClass() {
+          return this.m_ItemDefinition.item_class;
+        }
+        get CommunityItemDef() {
+          return this.m_ItemDefinition;
+        }
+      }
+      function _(_, _) {
+        return `${_._.COMMUNITY_ASSETS_BASE_URL}images/items/${_}/${_}`;
+      }
+      (0, _._)([_._], _.prototype, "m_ItemDefinition", void 0),
+        (0, _._)([_._], _.prototype, "m_ItemKV", void 0);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -10677,6 +10743,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         (0, _._)(
@@ -11538,19 +11605,10 @@
             let _ = {
                 backgroundImage:
                   "url(" +
-                  _._.MEDIA_CDN_COMMUNITY_URL +
-                  "images/items/" +
-                  _.appid +
-                  "/" +
-                  _.community_item_data.item_image_small +
+                  (0, _._)(_.appid, _.community_item_data.item_image_small) +
                   ")",
               },
-              _ =
-                _._.MEDIA_CDN_COMMUNITY_URL +
-                "images/items/" +
-                _.appid +
-                "/" +
-                _.community_item_data.item_image_large;
+              _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
             return _.createElement(
               _,
               {
@@ -11627,11 +11685,7 @@
           let _ = {
               backgroundImage:
                 "url(" +
-                _._.MEDIA_CDN_COMMUNITY_URL +
-                "images/items/" +
-                _.appid +
-                "/" +
-                _.community_item_data.item_image_large +
+                (0, _._)(_.appid, _.community_item_data.item_image_large) +
                 ")",
             },
             _ = _.createElement("div", {
@@ -11655,21 +11709,11 @@
                 controls: !1,
               },
               _.createElement("source", {
-                src:
-                  _._.MEDIA_CDN_COMMUNITY_URL +
-                  "images/items/" +
-                  _.appid +
-                  "/" +
-                  _,
+                src: (0, _._)(_.appid, _),
                 type: "video/webm",
               }),
               _.createElement("source", {
-                src:
-                  _._.MEDIA_CDN_COMMUNITY_URL +
-                  "images/items/" +
-                  _.appid +
-                  "/" +
-                  _,
+                src: (0, _._)(_.appid, _),
                 type: "video/mp4",
               }),
             );
@@ -11734,20 +11778,11 @@
         }
         render() {
           const _ = this.props.definition.rewardDefinition;
-          let _ =
-              _._.MEDIA_CDN_COMMUNITY_URL +
-              "images/items/" +
-              _.appid +
-              "/" +
-              _.community_item_data.item_image_small,
+          let _ = (0, _._)(_.appid, _.community_item_data.item_image_small),
             _ = {
               backgroundImage:
                 "url(" +
-                _._.MEDIA_CDN_COMMUNITY_URL +
-                "images/items/" +
-                _.appid +
-                "/" +
-                _.community_item_data.item_image_large +
+                (0, _._)(_.appid, _.community_item_data.item_image_large) +
                 ")",
             };
           return _.createElement(
@@ -11960,21 +11995,17 @@
                     controls: !1,
                   },
                   _.createElement("source", {
-                    src:
-                      _._.MEDIA_CDN_COMMUNITY_URL +
-                      "images/items/" +
-                      _.appid +
-                      "/" +
+                    src: (0, _._)(
+                      _.appid,
                       _.community_item_data.item_movie_webm,
+                    ),
                     type: "video/webm",
                   }),
                   _.createElement("source", {
-                    src:
-                      _._.MEDIA_CDN_COMMUNITY_URL +
-                      "images/items/" +
-                      _.appid +
-                      "/" +
+                    src: (0, _._)(
+                      _.appid,
                       _.community_item_data.item_movie_mp4,
+                    ),
                     type: "video/mp4",
                   }),
                 ),
@@ -12276,12 +12307,7 @@
         }
         render() {
           const _ = this.props.definition.rewardDefinition;
-          let _ =
-            _._.MEDIA_CDN_COMMUNITY_URL +
-            "images/items/" +
-            _.appid +
-            "/" +
-            _.community_item_data.item_image_large;
+          let _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
           return _.createElement(
             _,
             {
@@ -12334,12 +12360,7 @@
         }
         render() {
           const _ = this.props.definition.rewardDefinition;
-          let _ =
-            _._.MEDIA_CDN_COMMUNITY_URL +
-            "images/items/" +
-            _.appid +
-            "/" +
-            _.community_item_data.item_image_large;
+          let _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
           return _.createElement(
             _,
             {
@@ -12364,21 +12385,11 @@
                   controls: !1,
                 },
                 _.createElement("source", {
-                  src:
-                    _._.MEDIA_CDN_COMMUNITY_URL +
-                    "images/items/" +
-                    _.appid +
-                    "/" +
-                    _.community_item_data.item_movie_webm,
+                  src: (0, _._)(_.appid, _.community_item_data.item_movie_webm),
                   type: "video/webm",
                 }),
                 _.createElement("source", {
-                  src:
-                    _._.MEDIA_CDN_COMMUNITY_URL +
-                    "images/items/" +
-                    _.appid +
-                    "/" +
-                    _.community_item_data.item_movie_mp4,
+                  src: (0, _._)(_.appid, _.community_item_data.item_movie_mp4),
                   type: "video/mp4",
                 }),
                 _.createElement("img", {
@@ -12825,7 +12836,7 @@
               let _ = (0, _._)(_.appid, _);
               3 == _.community_item_class &&
                 (_ =
-                  _._.COMMUNITY_BASE_URL +
+                  _._.COMMUNITY_CDN_URL +
                   "economy/profilebackground/items/" +
                   _.appid +
                   "/" +
@@ -13825,7 +13836,7 @@
         let _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
         3 == _.community_item_class &&
           (_ =
-            _._.COMMUNITY_BASE_URL +
+            _._.COMMUNITY_CDN_URL +
             "economy/profilebackground/items/" +
             _.appid +
             "/" +
@@ -13936,7 +13947,7 @@
               videoProps: {
                 className: _.ImageBackground,
                 poster:
-                  _._.COMMUNITY_BASE_URL +
+                  _._.COMMUNITY_CDN_URL +
                   "economy/profilebackground/items/" +
                   _.definition.appid +
                   "/" +
@@ -13979,7 +13990,7 @@
             _.createElement("img", {
               className: _.ImageBackground,
               src:
-                _._.COMMUNITY_BASE_URL +
+                _._.COMMUNITY_CDN_URL +
                 "economy/profilebackground/items/" +
                 _.definition.appid +
                 "/" +
@@ -13998,7 +14009,7 @@
             _.createElement("img", {
               className: _.ImageMedium,
               src:
-                _._.COMMUNITY_BASE_URL +
+                _._.COMMUNITY_CDN_URL +
                 "economy/profilebackground/items/" +
                 _.definition.appid +
                 "/" +
@@ -19684,22 +19695,19 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_}/${_}`;
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_.community_item_class) {
           case 15:
           case 14:
           case 11:
-            return _(_.appid, _.community_item_data.item_image_small);
+            return (0, _._)(_.appid, _.community_item_data.item_image_small);
           case 3:
             return `${_._.COMMUNITY_BASE_URL}economy/profilebackground/items/${_.appid}/${_.community_item_data.item_image_large}?size=320x200`;
           default:
-            return _(_.appid, _.community_item_data.item_image_large);
+            return (0, _._)(_.appid, _.community_item_data.item_image_large);
         }
       }
     },

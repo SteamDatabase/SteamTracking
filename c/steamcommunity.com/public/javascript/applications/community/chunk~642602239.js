@@ -2807,6 +2807,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map([
           [
@@ -2999,13 +3000,13 @@
             "url",
             {
               Constructor: function (_) {
-                let _ = _(_.args);
+                let _ = (0, _._)(_(_.args));
                 if (!_) {
                   const _ = _.children;
                   "string" == typeof _ &&
                     (__webpack_require__.startsWith("http://") ||
                       __webpack_require__.startsWith("https://")) &&
-                    (_ = _);
+                    (_ = (0, _._)(_));
                 }
                 const _ =
                     "button" == _(_.args, "style") ? _().LinkButton : null,
@@ -6208,6 +6209,22 @@
             ),
           ),
         );
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        if (!_) return _;
+        const _ = _.trim(),
+          _ = _.toLowerCase();
+        return __webpack_require__.startsWith("javascript:") ||
+          __webpack_require__.startsWith("data:") ||
+          __webpack_require__.startsWith("vbscript:")
+          ? ""
+          : _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

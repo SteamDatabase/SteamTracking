@@ -1773,7 +1773,7 @@
             onActivate: y,
             onGamepadDirection: A,
           } = (function (e) {
-            const t = u.useRef(),
+            const t = u.useRef(void 0),
               o = (0, a.FN)(),
               r = u.useCallback(() => {
                 if (
@@ -2235,7 +2235,7 @@
       const p = () => s.useContext(b);
       function f(e) {
         const { view: t, refUpdateToolbar: o, children: r } = e,
-          n = s.useRef();
+          n = s.useRef(void 0);
         n.current || (n.current = new i.lu()),
           s.useEffect(
             () => (

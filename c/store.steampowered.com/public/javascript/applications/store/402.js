@@ -25,6 +25,7 @@
 	"Menu_Cart": "購物車",
 	"Menu_Popover_TopLinks": "熱門連結",
 	"Menu_Popover_StoreHome": "商店首頁",
+	"Menu_Popover_GreatonDeck": "非常適合 Deck",
 	"Menu_Popover_FreeToPlay": "免費遊玩",
 	"Menu_Popover_SteamCharts": "Steam 榜單",
 	"Menu_Popover_Upcoming": "即將發行",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "沒有符合您查詢條件的項目。",
 	"Menu_SearchBar_AdvancedSearch": "進階搜尋",
 	"Menu_Search": "搜尋",
-	"Menu_Label": "商店選單"
+	"Menu_Label": "商店選單",
+	"ItemFlag_InLibrary": "於收藏庫內",
+	"ItemFlag_OnWishlist": "於願望清單內",
+	"ItemFlag_InCart": "於購物車內",
+	"ItemFlag_Ignored": "已忽略",
+	"ItemFlag_ExcludedByPreferences": "已按偏好設定排除"
 }`);
     },
   },

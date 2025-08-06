@@ -286,6 +286,7 @@ STEAM_OVERLAY_LOGGING_FLUSH
 STEAM_OVERLAY_WINDOW_BLACKLIST
 SetNotificationInset
 SetNotificationPosition
+SetScaleFactors( %1.2f, %1.2f, %1.2f, %1.2f)\n
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 St11logic_error
 St12length_error
@@ -347,6 +348,8 @@ VR_Compositor_OverlayVSync_%u
 VTT for 
 Value
 Value 0x%x
+ValveGetOutputBounds( %d, %d, %d, %d)\n
+ValveGetScreenSize( %d, %d )\n
 ValveHookScreenshots
 ValveIsScreenshotsHooked
 ValveTakeScreenshot not implemented for this surface\n

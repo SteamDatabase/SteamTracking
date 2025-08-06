@@ -298,7 +298,8 @@
         (0, r.Cg)([n.sH], c.prototype, "m_broadcastViewerCount", void 0),
         (0, r.Cg)([n.sH], c.prototype, "m_strBroadcastTitle", void 0),
         (0, r.Cg)([n.sH], c.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([n.sH], c.prototype, "m_bOnSteamDeck", void 0);
+        (0, r.Cg)([n.sH], c.prototype, "m_bOnSteamDeck", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_bNameInitialized", void 0);
     },
     14336: (e, t, a) => {
       a.d(t, { z0: () => y, DW: () => S, js: () => h, hW: () => g });
@@ -339,7 +340,7 @@
         return (0, n.I)(f(a, t, e));
       }
       function g(e) {
-        const t = r.useRef(),
+        const t = r.useRef(void 0),
           a = h(e);
         return a.data
           ? a

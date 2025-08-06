@@ -25,6 +25,7 @@
 	"Menu_Cart": "カート",
 	"Menu_Popover_TopLinks": "トップリンク",
 	"Menu_Popover_StoreHome": "ストアホーム",
+	"Menu_Popover_GreatonDeck": "Deckで快適に動作",
 	"Menu_Popover_FreeToPlay": "無料プレイ",
 	"Menu_Popover_SteamCharts": "Steamチャート",
 	"Menu_Popover_Upcoming": "近日登場",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "検索条件に一致するアイテムはありません。",
 	"Menu_SearchBar_AdvancedSearch": "高度な検索",
 	"Menu_Search": "検索",
-	"Menu_Label": "ストアメニュー"
+	"Menu_Label": "ストアメニュー",
+	"ItemFlag_InLibrary": "ライブラリ内",
+	"ItemFlag_OnWishlist": "ウィッシュリストに追加済み",
+	"ItemFlag_InCart": "カート内",
+	"ItemFlag_Ignored": "スルー中",
+	"ItemFlag_ExcludedByPreferences": "個人設定により除外"
 }`);
     },
   },

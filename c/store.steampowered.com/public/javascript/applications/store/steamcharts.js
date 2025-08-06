@@ -6459,7 +6459,7 @@
             children: _,
             bIsPreview: _,
           } = _,
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(() =>
             _.GetImageURLWithFallback("sale_header", __webpack_require__),
           ),
@@ -6720,7 +6720,7 @@
             onDropFiles: _,
             renderDesciption: __webpack_require__,
             elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
+            elOverrideDragAndDropText: _,
           } = _,
           [_, _] = (function (_) {
             const [_, __webpack_require__] = _.useState(!1);
@@ -6752,7 +6752,7 @@
             ];
           })(_),
           [_, _] = (function (_, _) {
-            const _ = _.useRef(),
+            const _ = _.useRef(void 0),
               _ = _.useCallback(
                 (_) => {
                   _.currentTarget.files.length > 0 &&
@@ -6839,7 +6839,7 @@
         const {
             imageUploader: _,
             fnUploadComplete: __webpack_require__,
-            strOverrideDragAndDropText: _,
+            elOverrideDragAndDropText: _,
             forceResolution: _,
             elAdditonalButtons: _,
             rgRealmList: _,
@@ -6921,7 +6921,7 @@
           {
             onDropFiles: _,
             elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
+            elOverrideDragAndDropText: _,
           },
           _.createElement(
             _.Fragment,
@@ -7096,22 +7096,22 @@
               disabled: !_,
             }),
           _ &&
-            _.warnings?.map((_) =>
+            _.warnings?.map((_, _) =>
               _.createElement(
                 "div",
                 {
-                  key: _,
+                  key: `warning${_}`,
                   className: _().UploadPreviewWarning,
                 },
                 _,
               ),
             ),
           _ &&
-            _.messages?.map((_) =>
+            _.messages?.map((_, _) =>
               _.createElement(
                 "div",
                 {
-                  key: _,
+                  key: `message${_}`,
                   className: _().UploadPreviewMessage,
                 },
                 _,
@@ -10859,7 +10859,7 @@
         }, [_, _]);
         const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
           _ = _ && _ == _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           (0, _._)((_) => _ == _ && (_.current?.scrollIntoView(), _(!0), !0)),
           _.createElement(
@@ -13720,7 +13720,7 @@
             minDate: _,
             maxDate: _,
           } = _,
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           _ = (0, _.useRef)(null),
           _ = (0, _.useCallback)(
             (_) => {
@@ -15127,9 +15127,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTM3OEVDNTUyMUM0MTFFNDgxN0ZEN0MzNjYzNzcxOTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTM3OEVDNTYyMUM0MTFFNDgxN0ZEN0MzNjYzNzcxOTYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMzc4RUM1MzIxQzQxMUU0ODE3RkQ3QzM2NjM3NzE5NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMzc4RUM1NDIxQzQxMUU0ODE3RkQ3QzM2NjM3NzE5NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps9jzFQAAACPSURBVHjaYvz//z+DkJDQdQYGhpsMCMAKxMZAHPXu3bt9cFGQYkFBwQ0gGoaBfAEgzgfibUDsBxNnYsAOfgKxJBBvAeIZMEEWZBVA52xA5gOdUAEUc8NQDBTkBEoGMOAByCYLAjUsRzM5AKtioMQzIEW0ydjcHIBTMSE3M0Ij5RKQfQ6HGiOgIXogBkCAAQDGVT+0v+n6EQAAAABJRU5ErkJggg==";
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { Item: _ } = _,
           _ = (0, _._)(_),
@@ -15170,10 +15167,13 @@
                 {
                   className: (0, _._)(_().Banner),
                 },
-                _.createElement("img", {
-                  src: _ ? _._ : _,
-                  className: _().LinesImg,
-                }),
+                _
+                  ? _.createElement(_.oQr, {
+                      className: _().LinesImg,
+                    })
+                  : _.createElement(_.qnF, {
+                      className: _().LinesImg,
+                    }),
                 _.createElement(
                   "div",
                   {

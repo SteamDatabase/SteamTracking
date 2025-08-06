@@ -25,6 +25,7 @@
 	"Menu_Cart": "Кошница",
 	"Menu_Popover_TopLinks": "Най-популярни връзки",
 	"Menu_Popover_StoreHome": "Начална страница на магазина",
+	"Menu_Popover_GreatonDeck": "Страхотно преживяване в Steam Deck",
 	"Menu_Popover_FreeToPlay": "Безплатни",
 	"Menu_Popover_SteamCharts": "Steam диаграми",
 	"Menu_Popover_Upcoming": "Предстоящи издания",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Няма съответстващи артикули за текущото Ви запитване.",
 	"Menu_SearchBar_AdvancedSearch": "Разширено търсене",
 	"Menu_Search": "Търсачка",
-	"Menu_Label": "Меню за магазина"
+	"Menu_Label": "Меню за магазина",
+	"ItemFlag_InLibrary": "В БИБЛИОТЕКАТА",
+	"ItemFlag_OnWishlist": "В СПИСЪКА С ЖЕЛАНИЯ",
+	"ItemFlag_InCart": "В КОШНИЦАТА",
+	"ItemFlag_Ignored": "ИГНОРИРАНИ",
+	"ItemFlag_ExcludedByPreferences": "ИЗКЛЮЧЕНО ОТ ПРЕДПОЧИТАНИЯТА"
 }`);
     },
   },

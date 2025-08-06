@@ -5492,6 +5492,7 @@ pwrd_telecom
 pwrd_unicom
 pwrite64
 py_generic_services
+q"sm
 quantil
 quechua
 qwest

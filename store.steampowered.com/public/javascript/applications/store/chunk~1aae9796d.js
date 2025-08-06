@@ -4553,7 +4553,7 @@
           C = Be(_, o, l, d),
           { bIsIgnored: w, fnUpdateIgnored: I } = (0, we.TK)(t),
           { bIsWishlisted: D, fnUpdateWishlist: M } = (0, we.u4)(t),
-          B = c.useRef();
+          B = c.useRef(void 0);
         if (
           (c.useEffect(() => {
             a && B.current && B.current.focus({ preventScroll: !0 });
@@ -5404,7 +5404,7 @@
           d = (0, l.aL)(E.TS.STORE_BASE_URL + "wishlist"),
           m = (0, u.R7)(),
           p = m?.ownerWindow || window,
-          h = c.useRef();
+          h = c.useRef(void 0);
         return (
           c.useEffect(() => {
             r && h.current && h.current.focus({ preventScroll: !0 });
@@ -5617,8 +5617,8 @@
           D = (0, C.AS)(),
           [B, T] = n.useState(!1),
           [k, P] = n.useState(0),
-          R = n.useRef(),
-          N = n.useRef(),
+          R = n.useRef(void 0),
+          N = n.useRef(void 0),
           [O, G] = n.useState(),
           { bCookieLoaded: V } = (function (e, t, r) {
             const s = n.useCallback(() => {

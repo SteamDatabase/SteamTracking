@@ -6586,7 +6586,7 @@ var _ = _((exports, module) => {
       for (; _ < _ && _[_++] == _; )
         for (_++; ; ) {
           var _ = _[_++];
-          if (!(_ & 128)) break;
+          if ((_ & 128) == 0) break;
         }
     else
       for (; _ < _; ) {
@@ -11636,7 +11636,7 @@ _.getNumBitsAbs = function () {
   if (this.isNegative()) return this._(_) ? 64 : this.neg().getNumBitsAbs();
   for (
     var _ = this.high != 0 ? this.high : this.low, _ = 31;
-    _ > 0 && !(_ & (1 << _));
+    _ > 0 && (_ & (1 << _)) == 0;
     _--
   );
   return this.high != 0 ? _ + 33 : _ + 1;

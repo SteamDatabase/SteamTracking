@@ -72,7 +72,7 @@
             _ = (0, _.useRef)(null),
             _ = (0, _.useRef)(null),
             _ = (0, _.useRef)(0),
-            _ = (0, _.useRef)();
+            _ = (0, _.useRef)(void 0);
           (0, _.useEffect)(
             () => () => {
               window.clearTimeout(_.current),

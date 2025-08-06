@@ -1284,7 +1284,7 @@ function _(_, _) {
   return {
     queryKey: _(_),
     queryFn: () => _(_, _),
-    staleTime: 10 * 60 * 1e3,
+    staleTime: 600 * 1e3,
     enabled: !!_ && _ != "0",
   };
 }

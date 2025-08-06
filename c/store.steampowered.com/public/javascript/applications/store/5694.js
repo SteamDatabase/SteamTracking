@@ -25,6 +25,7 @@
 	"Menu_Cart": "Kosár",
 	"Menu_Popover_TopLinks": "Legfontosabb hivatkozások",
 	"Menu_Popover_StoreHome": "Áruház főoldal",
+	"Menu_Popover_GreatonDeck": "Decken remek",
 	"Menu_Popover_FreeToPlay": "Ingyenesen játszható",
 	"Menu_Popover_SteamCharts": "Steam Kimutatások",
 	"Menu_Popover_Upcoming": "Közelgő megjelenések",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Nincs a keresésednek megfelelő elem.",
 	"Menu_SearchBar_AdvancedSearch": "Bővített keresés",
 	"Menu_Search": "Keresés",
-	"Menu_Label": "Áruházi menü"
+	"Menu_Label": "Áruházi menü",
+	"ItemFlag_InLibrary": "KÖNYVTÁRBAN",
+	"ItemFlag_OnWishlist": "KÍVÁNSÁGLISTÁN",
+	"ItemFlag_InCart": "KOSÁRBAN",
+	"ItemFlag_Ignored": "MELLŐZVE",
+	"ItemFlag_ExcludedByPreferences": "BEÁLLÍTÁSOK ALAPJÁN KIZÁRVA"
 }`);
     },
   },

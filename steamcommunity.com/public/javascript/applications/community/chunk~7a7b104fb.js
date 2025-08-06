@@ -667,7 +667,7 @@
       function A(e) {
         const { oChat: t, emoticonStore: r } = e,
           [i, a] = o.useState(""),
-          s = o.useRef(),
+          s = o.useRef(void 0),
           l = (0, n.q3)(() => t.m_bRateLimited),
           c = o.useCallback(
             (e) => {

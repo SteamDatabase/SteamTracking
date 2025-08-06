@@ -1224,8 +1224,15 @@ GDynamicStore = {
 		}
 		else
 		{
-			$Description.html( '<div>Buy this bundle to save %1$s%% off all %2$s items!</div>'.replace( '%1$s', Math.round( Bundle.m_nDiscountPct ) ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ).replace( '%%', '%' ) );
+			if ( Math.round( Bundle.m_nDiscountPct ) == 0 )
+			{
+				$Description.html( '<div>Buy this bundle to get all %1$s items!</div>'.replace( '%1$s', Bundle.m_cTotalItemsInBundle ) );
+			}
+			else {
+				$Description.html( '<div>Buy this bundle to save %1$s%% off all %2$s items!</div>'.replace( '%1$s', Math.round( Bundle.m_nDiscountPct ) ).replace( '%2$s', Bundle.m_cTotalItemsInBundle ).replace( '%%', '%' ) );
+			}
 		}
+
 
 		var rgItemsWithCaps = [];
 		for ( var iBundleItem = 0; iBundleItem < Bundle.m_rgBundleItems.length; iBundleItem++ )

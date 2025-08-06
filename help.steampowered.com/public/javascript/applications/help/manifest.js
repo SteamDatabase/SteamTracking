@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9936829";
+var CLSTAMP = "9954349";
 (() => {
   "use strict";
   var a,
@@ -145,7 +145,7 @@ var CLSTAMP = "9936829";
         823: "ea1fb557b77d8a614787",
         831: "10dc211dfd129c6a445e",
         833: "f3f0b28b561cb224bdc4",
-        976: "314b4b8bf6da71246b46",
+        976: "6884bc21c25eb1f39b9d",
         1389: "fe3868a58b709d19c435",
         1423: "303645506af77a8362e6",
         1721: "c634214059eacac26a24",
@@ -155,10 +155,10 @@ var CLSTAMP = "9936829";
         2446: "1e14cfdf0fc0983649b4",
         2481: "9228b76c1c704b442c41",
         2664: "b2575bb3018dd3ca2ccc",
-        2959: "411af5b7c52ea082b3fc",
+        2959: "187b56858e0f5f9b87e5",
         3140: "5ff8d86b8d7df01c5d0b",
         3589: "2d4113d858d09aaabfcb",
-        3594: "d881e8ba302a38a1df6e",
+        3594: "d144d7dd8d37329f48b4",
         3867: "5fdc84016800f0b3c40b",
         4102: "be3069fad7610e99339b",
         4694: "59882d00b140e10d48f6",
@@ -167,13 +167,13 @@ var CLSTAMP = "9936829";
         5103: "562df98ec7b9d228b91b",
         5388: "710efa21ee07c9414d56",
         5553: "08b5c9539bc942ec2914",
-        5803: "eab8884aa8f552992912",
+        5803: "b52f4dd92741a49ae96a",
         6120: "c67b94bacbdd365430fd",
         6428: "6afb711ae8d4f17c01cd",
         6430: "8786a9f8a5a963f2a065",
         6472: "eb56e2ef6d9911e69d36",
-        6577: "595d702eeaf2278967e7",
-        6752: "cca86e0d351d1d064a2b",
+        6577: "dad1940bf53f86ed6744",
+        6752: "122a100b1b862b823be3",
         6888: "a903baf584c83ae0a57c",
         7345: "99ee2c8fc99ede9a068c",
         7442: "687451a1c77d69b18b96",
@@ -183,7 +183,7 @@ var CLSTAMP = "9936829";
         8021: "a9f8dff17bd16871e4c5",
         8291: "e10f61693c78e5d19ef8",
         8443: "505a73108fc538196a3d",
-        8522: "1834eb4e836a3bf3393d",
+        8522: "5b234cd55f70ed34c0a6",
         8547: "03361207aad5f54dc1a7",
         8674: "0978a270bbb4e95912d5",
         8724: "0b65723fc78210be4b29",

@@ -641,7 +641,7 @@
         f = a(18654),
         v = a.n(f),
         E = a(3661),
-        g = a(89274),
+        g = a(37346),
         h = a(72860),
         b = a(70300),
         C = a(47235),
@@ -894,7 +894,7 @@
           const t = ["maxresdefault", "mqdefault", "default"],
             [a, o] = n.useState(0);
           n.useEffect(() => o(0), [e.video]);
-          const l = n.useRef();
+          const l = n.useRef(void 0);
           if (e.altImgWithFallback && e.altImgWithFallback.length > 0)
             return n.createElement(r.o, {
               className: e.className,

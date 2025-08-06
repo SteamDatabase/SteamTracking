@@ -582,7 +582,7 @@
           const t = ["maxresdefault", "mqdefault", "default"],
             [n, o] = a.useState(0);
           a.useEffect(() => o(0), [e.video]);
-          const l = a.useRef();
+          const l = a.useRef(void 0);
           if (e.altImgWithFallback && e.altImgWithFallback.length > 0)
             return a.createElement(r.o, {
               className: e.className,
@@ -4038,7 +4038,7 @@
           ),
           [o, l] = (0, r.useState)(0),
           [s, i] = (0, r.useState)(null),
-          c = (0, r.useRef)(),
+          c = (0, r.useRef)(void 0),
           u = (0, Kt.m)("CuratorFeedSuggestRow"),
           d = (0, r.useCallback)(() => {
             if (!u.token.reason)

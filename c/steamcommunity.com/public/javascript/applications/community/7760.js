@@ -137,7 +137,7 @@
             width: 0,
             height: 0,
           }),
-          _ = (0, _.useRef)();
+          _ = (0, _.useRef)(void 0);
         return (
           (0, _.useLayoutEffect)(() => {
             if (_) {
@@ -932,7 +932,7 @@
           _ = __webpack_require__
             ? (0, _._)("#EventEditor_ReplaceImage_Title")
             : (0, _._)("#EventEditor_InsertImage_Title"),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             _ && _.current.Focus();
@@ -973,7 +973,7 @@
           [_, _] = _.useState(_.poster),
           [_, _] = _.useState(!!_.autoplay),
           [_, _] = _.useState(!!_.controls),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         _.useEffect(() => {
           _ && _.current.Focus();
         }, [_]);

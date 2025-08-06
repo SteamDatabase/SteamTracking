@@ -22,15 +22,15 @@ import {
 } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -97,6 +97,7 @@ var _ = {
   FieldDescription: "_5BLJdCp0mew-",
   ModalPosition: "eGUcXf9qmGo-",
   _: "jLL34-DFetc-",
+  FooterVisible: "MKL8peeVDj4-",
   WithStandardPadding: "_0pzkMgnBDek-",
   NoHeaderPadding: "thcCErzFlaA-",
   ModalClickToDismiss: "BO2jqunP5fQ-",
@@ -2417,7 +2418,14 @@ function _(_) {
     case 0:
       return (_ |= 8192), (_ |= 8), (_ |= 512), (_ |= 4194304), _;
     case 1:
-      return (_ |= _(0)), (_ |= 16384), (_ |= 262144), (_ |= 1048576), _;
+      return (
+        (_ |= _(0)),
+        (_ |= 16384),
+        (_ |= 262144),
+        (_ |= 1048576),
+        (_ |= 16777216),
+        _
+      );
     case 2:
       return (_ |= _(0)), (_ |= 262144), (_ |= 16384), (_ |= 4), (_ |= _()), _;
     case 3:
@@ -3107,7 +3115,7 @@ function _(_) {
       children: _,
     } = _,
     _ = _()?.ownerWindow || window,
-    _ = _.default.useRef();
+    _ = _.default.useRef(void 0);
   return (
     _.current || (_.current = new _()),
     _.default.useLayoutEffect(() => {
@@ -3947,7 +3955,7 @@ var _ = _(_()),
         bRegisterManagersWithWindow: _ = !0,
         ..._
       } = _,
-      _ = _.useRef();
+      _ = _.useRef(void 0);
     _.current || (_.current = new _());
     let _ = (0, _.jsx)(_, {
       ..._,
@@ -4595,7 +4603,7 @@ var _ = _.forwardRef(function (_, _) {
     _ = _ ?? 0,
     _ = _ ?? "center",
     _ = _(_ ?? _, _),
-    _ = _.useRef(),
+    _ = _.useRef(void 0),
     _ = _(_, _.navRef),
     _ = _.useCallback(
       (_) => {
@@ -5570,7 +5578,7 @@ function _(_) {
 }
 function _() {
   let _ = _.useRef(null),
-    _ = _.useRef();
+    _ = _.useRef(void 0);
   _.useLayoutEffect(() => {
     let _ = _.current;
     if (!_ || _.current) return;
@@ -5764,9 +5772,9 @@ function _(_) {
 }
 function _(_, _) {
   let _ = _.useMemo(() => new Map(), []),
-    _ = _.useRef();
+    _ = _.useRef(_);
   _.current = _;
-  let _ = _.useRef();
+  let _ = _.useRef(_);
   _.current = _;
   let _ = _.useCallback(
     (_) => (_) => {
@@ -5883,7 +5891,7 @@ var _ = "TW2ZQnLvgIc-";
 var _ = _(_()),
   _ = _.forwardRef(function (_, _) {
     let { className: _, ..._ } = _,
-      _ = _.useRef(),
+      _ = _.useRef(void 0),
       _ = _(_, _),
       [_, _] = _.useState(!1),
       _ = _.useCallback(() => {

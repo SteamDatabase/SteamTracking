@@ -1383,7 +1383,7 @@
             onClick: (e) => n(o),
             onDoubleClick: (e) => a(o),
           },
-          u.createElement(z, { extraAsset: t, controls: !1 }),
+          u.createElement(W, { extraAsset: t, controls: !1 }),
         );
       }
       function G(e) {
@@ -1547,7 +1547,7 @@
                 !1 !== (await C({ strExtraAssetFileName: e, mapAltText: t })),
               isMutatePending: h,
               fnGetImage: (e, t) =>
-                u.createElement(z, {
+                u.createElement(W, {
                   extraAsset: a.get(e),
                   caption: !1,
                   controls: !1,
@@ -1571,7 +1571,7 @@
               "div",
               { className: N.ExtraAssetsGrid },
               n.map((e) =>
-                u.createElement(z, {
+                u.createElement(W, {
                   key: (0, i.q3)(e),
                   extraAsset: e,
                   primaryLanguage: m,
@@ -1588,7 +1588,7 @@
           a = (0, I.L)(),
           r = (0, c.FD)(),
           o = u.useMemo(() => r.filter(i.pN), [r]),
-          l = W(o);
+          l = z(o);
         u.useEffect(() => {
           const e = (e) => ({
             baseFilename: (0, i.K7)(e),
@@ -1599,7 +1599,7 @@
         }, [a, o, t, l]);
         const s = (function (e) {
             const t = u.useMemo(() => (e ? [e] : []), [e]),
-              n = W(t);
+              n = z(t);
             return n?.length > 0 ? n[0] : void 0;
           })(t),
           { rgRealmList: d } = (0, c.aJ)();
@@ -1648,7 +1648,7 @@
           }),
         );
       }
-      function W(e) {
+      function z(e) {
         const [t, n] = u.useState(void 0),
           a = (0, s.Un)();
         return (
@@ -1657,7 +1657,7 @@
               let t = (0, i.IP)(e, !1, -1);
               return (
                 t || (t = (0, i.IP)(e, !0, -1)),
-                (0, d.II)(await (0, d.S2)((0, s.cn)(t?.url, a), 1 == t.usage))
+                (0, d.II)(await (0, d.S2)((0, s.cn)(t?.url, a), 1 == t?.usage))
               );
             });
             Promise.all(t).then(n);
@@ -1665,14 +1665,14 @@
           t
         );
       }
-      function z(e) {
+      function W(e) {
         const {
             extraAsset: t,
             caption: n = !0,
             controls: a = !0,
             primaryLanguage: r,
           } = e,
-          l = u.useRef(),
+          l = u.useRef(void 0),
           c = (0, o.BZ)(l),
           [d, m, p] = (0, o.uD)(),
           _ = (0, s.Un)(),
@@ -2005,29 +2005,28 @@
         E = n.n(g),
         C = n(29655),
         h = n(3577),
-        S = n(81393),
-        f = n(62490),
+        S = n(62490),
+        f = n(81393),
         b = n(6419);
-      class k extends m.Vr {
-        m_nAppId;
-        m_strBeginUploadUrl;
-        m_strCompleteUploadUrl;
-        static m_mapConcurrentCompletions = new Set();
-        m_filesToUpload = l.sH.array();
+      class k extends m.ss {
+        m_cancel = void 0;
         m_bExtraAssetsV2Videos = !1;
+        m_strGetExtraAssetsUrl;
+        m_strBeginUploadUrl;
+        m_strCheckStatusUrl;
+        m_strCompleteUploadUrl;
+        m_filesToUpload = l.sH.array();
         m_onlyAssetGroup = void 0;
         m_rgExistingAssetGroups = void 0;
         m_rgImageSizes = void 0;
-        constructor(e, t, n, a) {
+        constructor(e, t, n, a, r) {
           super(),
             (0, l.Gn)(this),
-            (this.m_bExtraAssetsV2Videos = a),
-            (this.m_nAppId = e),
+            (this.m_bExtraAssetsV2Videos = r),
+            (this.m_strGetExtraAssetsUrl = e),
             (this.m_strBeginUploadUrl = t),
-            (this.m_strCompleteUploadUrl = n);
-        }
-        BGetUploadsAreInSerial() {
-          return !1;
+            (this.m_strCheckStatusUrl = n),
+            (this.m_strCompleteUploadUrl = a);
         }
         GetErrorsFromErrorResponse(e) {
           let t;
@@ -2035,8 +2034,10 @@
           return (
             n
               ? (t = [
-                  ...n,
-                  r.createElement("br"),
+                  ...n.map((e, t) =>
+                    r.createElement("span", { key: `error${t}` }, e),
+                  ),
+                  n?.length > 0 ? r.createElement("br") : void 0,
                   r.createElement(
                     "a",
                     {
@@ -2096,29 +2097,135 @@
             );
           return !1;
         }
-        async UploadSingleImage(e, t, n, a) {
-          const r = e.GetCurrentImageOption()?.groupName ?? t;
-          let l;
+        async UploadAllImages(e, t) {
+          this.m_cancel = E().CancelToken.source();
+          const n = (0, m.$l)(this.GetUploadImages(), e, t),
+            a = n.map(
+              (e) => e.GetCurrentImageOption()?.groupName ?? e.filename,
+            );
+          let r = 0;
+          const o = new Map(),
+            l = new Map();
+          let s = 0;
+          const i = async () => {
+            for (; s < n.length; ) {
+              const e = s++,
+                t = n[e],
+                i = a[e];
+              (t.status = "uploading"), r++;
+              try {
+                const e = await this.StartImageUpload(t, this.m_cancel.token);
+                if (e.bSuccess) {
+                  const n = (0, h.x0)();
+                  o.set(e.nRequestId, (e) => n.resolve(e));
+                  const a = new Promise((e, t) => setTimeout(() => t(), 3e5));
+                  try {
+                    const r = await Promise.race([a, n.promise]);
+                    l.set(e.nRequestId, {
+                      bSuccess: 1 == r,
+                      uploadImage: t,
+                      strGroupName: i,
+                      elErrorMessage:
+                        1 == r
+                          ? void 0
+                          : (0, d.we)("#MediaConvert_InternalError"),
+                    });
+                  } catch {
+                    l.set(e.nRequestId, {
+                      bSuccess: !1,
+                      uploadImage: t,
+                      strGroupName: i,
+                      elErrorMessage: (0, d.we)(
+                        "#StoreAdmin_ExtraAssetUpload_Timeout",
+                      ),
+                    });
+                  } finally {
+                    o.delete(e.nRequestId);
+                  }
+                } else
+                  (t.status = e.bSuccess ? "success" : "failed"),
+                    (t.message =
+                      !e.bSuccess && e.elErrorMessage ? e.elErrorMessage : "");
+              } finally {
+                r--;
+              }
+            }
+          };
+          Array.from({ length: Math.floor(4) }, () => i());
+          const c = [];
+          for (;;) {
+            if (o.size > 0) {
+              const e = Array.from(o.keys()),
+                { bSuccess: t, rgStatus: n } = await this.CheckUploadStatus(
+                  e,
+                  this.m_cancel.token,
+                );
+              if (t)
+                for (const [t, a] of S.qQ(e, n))
+                  if (22 != a) {
+                    const e = o.get(t);
+                    o.delete(t), e?.(a);
+                  }
+            }
+            const e = new Map(l);
+            l.clear();
+            for (const [
+              t,
+              {
+                bSuccess: n,
+                uploadImage: a,
+                strGroupName: r,
+                elErrorMessage: o,
+              },
+            ] of e) {
+              if (!n) {
+                (a.status = "failed"),
+                  (a.message = o),
+                  c.push({ bSuccess: !1, image: a, uploadResult: [] });
+                continue;
+              }
+              const e = await this.CompleteUpload(
+                t,
+                r,
+                a.language,
+                this.m_cancel.token,
+              );
+              (a.status = e.bSuccess ? "success" : "failed"),
+                (a.message = e.bSuccess ? "" : e.elErrorMessage),
+                c.push({ bSuccess: e.bSuccess, image: a, uploadResult: [] });
+            }
+            if (s >= n.length && 0 == r && 0 == l.size) break;
+            this.m_cancel.token.throwIfRequested(), await (0, h.yI)(1e3);
+          }
+          const { rgExtraAssets: u } = await this.GetExtraAssets(
+            this.m_cancel.token,
+          );
+          return (
+            c.filter((e) => e.bSuccess).forEach((e) => (e.uploadResult = u)), c
+          );
+        }
+        async StartImageUpload(e, t) {
+          let n;
           {
-            const t = new FormData();
-            t.append("sessionid", s.TS.SESSIONID),
-              t.append("asset_type", "extra_asset_v2"),
-              t.append("file", e.file);
+            const a = new FormData();
+            a.append("sessionid", s.TS.SESSIONID),
+              a.append("asset_type", "extra_asset_v2"),
+              a.append("file", e.file);
             try {
-              const n = await E().post(this.m_strBeginUploadUrl, t, {
+              const r = await E().post(this.m_strBeginUploadUrl, a, {
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
-                cancelToken: a,
+                cancelToken: t,
               });
-              if (!(200 == n.status && n.data.request_id > 0))
+              if (!(200 == r.status && r.data.request_id > 0))
                 return (
                   console.warn(
                     "CExtraAssetsImageUploader.UploadSingleImage failed",
                     this.m_strBeginUploadUrl,
                   ),
-                  { bSuccess: !1, elErrorMessage: null, result: null }
+                  { bSuccess: !1, elErrorMessage: null }
                 );
-              (l = n.data.request_id), (e.status = "processing");
+              (n = r.data.request_id), (e.status = "processing");
             } catch (e) {
               const t = this.GetErrorsFromErrorResponse(e);
               return (
@@ -2127,65 +2234,118 @@
                   this.m_strBeginUploadUrl,
                   t,
                 ),
-                { bSuccess: !1, elErrorMessage: t, result: null }
+                { bSuccess: !1, elErrorMessage: t }
               );
             }
           }
-          const i = Date.now();
-          for (; Date.now() - i < 3e5; ) {
-            const e = new FormData();
-            if (
-              (e.append("sessionid", s.TS.SESSIONID),
-              e.append("request_id", l.toString()),
-              e.append("name", r),
-              e.append("asset_type", "extra_asset_v2"),
-              -1 != n && e.append("language", (0, o.Lg)(n)),
-              k.m_mapConcurrentCompletions.has(this.m_nAppId))
-            ) {
-              await (0, h.yI)(Math.floor(1e3 * Math.random()) + 500);
-              continue;
-            }
-            let t;
-            try {
-              k.m_mapConcurrentCompletions.add(this.m_nAppId);
-              const n = await E().post(this.m_strCompleteUploadUrl, e, {
-                withCredentials: !0,
-                cancelToken: a,
-              });
-              if (200 != n.status || "object" != typeof n.data)
-                return (
-                  console.warn(
-                    "CExtraAssetsImageUploader.UploadSingleImage failed",
-                    this.m_strCompleteUploadUrl,
-                  ),
-                  { bSuccess: !1, elErrorMessage: null, result: null }
-                );
-              t = n.data;
-            } catch (e) {
-              const t = this.GetErrorsFromErrorResponse(e);
+          return { bSuccess: !0, nRequestId: n };
+        }
+        async CheckUploadStatus(e, t) {
+          const n = new FormData();
+          let a;
+          n.append("sessionid", s.TS.SESSIONID),
+            n.append("request_ids", e.join(","));
+          try {
+            const e = await E().post(this.m_strCheckStatusUrl, n, {
+              withCredentials: !0,
+              cancelToken: t,
+            });
+            if (200 != e.status || "object" != typeof e.data)
               return (
                 console.warn(
-                  "CExtraAssetsImageUploader.UploadSingleImage failed",
-                  this.m_strCompleteUploadUrl,
-                  t,
+                  "CExtraAssetsImageUploader.CheckUploadStatus failed",
+                  this.m_strCheckStatusUrl,
                 ),
-                { bSuccess: !1, elErrorMessage: t, result: null }
+                { bSuccess: !1 }
               );
-            } finally {
-              k.m_mapConcurrentCompletions.delete(this.m_nAppId);
-            }
-            if (t.complete)
-              return {
-                bSuccess: !0,
-                elErrorMessage: null,
-                result: t.rgExtraAssets,
-              };
-            await (0, h.yI)(Math.floor(1e3 * Math.random()) + 500);
+            a = e.data;
+          } catch (e) {
+            const t = this.GetErrorsFromErrorResponse(e);
+            return (
+              console.warn(
+                "CExtraAssetsImageUploader.CheckUploadStatus failed",
+                this.m_strCheckStatusUrl,
+                t,
+              ),
+              { bSuccess: !1, elErrorMessage: t }
+            );
           }
-          return {
-            bSuccess: !1,
-            elErrorMessage: (0, d.we)("#StoreAdmin_ExtraAssetUpload_Timeout"),
-          };
+          return { bSuccess: !0, rgStatus: a.status };
+        }
+        async CompleteUpload(e, t, n, a) {
+          const r = new FormData();
+          let l;
+          r.append("sessionid", s.TS.SESSIONID),
+            r.append("request_id", e.toString()),
+            r.append("name", t),
+            r.append("asset_type", "extra_asset_v2"),
+            -1 != n && r.append("language", (0, o.Lg)(n));
+          try {
+            const e = await E().post(this.m_strCompleteUploadUrl, r, {
+              withCredentials: !0,
+              cancelToken: a,
+            });
+            if (200 != e.status || "object" != typeof e.data)
+              return (
+                console.warn(
+                  "CExtraAssetsImageUploader.CompleteUpload failed",
+                  this.m_strCompleteUploadUrl,
+                ),
+                { bSuccess: !1 }
+              );
+            l = e.data;
+          } catch (e) {
+            const t = this.GetErrorsFromErrorResponse(e);
+            return (
+              console.warn(
+                "CExtraAssetsImageUploader.CompleteUpload failed",
+                this.m_strCompleteUploadUrl,
+                t,
+              ),
+              { bSuccess: !1, elErrorMessage: t }
+            );
+          }
+          return (
+            (0, f.wT)(
+              l.complete,
+              "CompleteUpload shouldn't be run until all uploads are complete",
+            ),
+            { bSuccess: !0 }
+          );
+        }
+        async GetExtraAssets(e) {
+          const t = new FormData();
+          let n;
+          t.append("sessionid", s.TS.SESSIONID);
+          try {
+            const a = await E().post(this.m_strGetExtraAssetsUrl, t, {
+              withCredentials: !0,
+              cancelToken: e,
+            });
+            if (200 != a.status || "object" != typeof a.data)
+              return (
+                console.warn(
+                  "CExtraAssetsImageUploader.GetExtraAssets failed",
+                  this.m_strGetExtraAssetsUrl,
+                ),
+                { bSuccess: !1 }
+              );
+            n = a.data;
+          } catch (e) {
+            const t = this.GetErrorsFromErrorResponse(e);
+            return (
+              console.warn(
+                "CExtraAssetsImageUploader.GetExtraAssets failed",
+                this.m_strGetExtraAssetsUrl,
+                t,
+              ),
+              { bSuccess: !1 }
+            );
+          }
+          return { bSuccess: !0, rgExtraAssets: n.rgExtraAssets };
+        }
+        CancelAllUploads() {
+          this.m_cancel?.cancel((0, d.we)("#ImageUpload_CancelRequest"));
         }
         GetImageOptions() {
           const e = (e, t, n, a, r) => ({
@@ -2220,21 +2380,19 @@
             const e = n.findIndex(
               (e) => e.baseFilename == this.m_onlyAssetGroup.baseFilename,
             );
-            (0, S.wT)(
+            (0, f.wT)(
               -1 != e,
               "onlyAssetGroup isn't in the existing assets list",
             ),
               (n = [n[e]]),
               (a = [a[e]]);
           }
-          const r = f
-              .qQ(n, a)
-              .flatMap(([t, n]) =>
-                ((t, n) =>
-                  t.languages.map((a) =>
-                    e(t.baseFilename, a, !1, n?.width ?? 0, n?.height ?? 0),
-                  ))(t, n),
-              ),
+          const r = S.qQ(n, a).flatMap(([t, n]) =>
+              ((t, n) =>
+                t.languages.map((a) =>
+                  e(t.baseFilename, a, !1, n?.width ?? 0, n?.height ?? 0),
+                ))(t, n),
+            ),
             o = t.concat(r).reduce((e, t) => {
               const n = e.get(t.baseFilename) ?? [];
               return n.push(t), e.set(t.baseFilename, n), e;
@@ -2286,11 +2444,11 @@
       }
       function A() {
         const { bExtraAssetsV2Videos: e } = (0, C.vh)(),
-          { id: t, type: n } = (0, C.a1)();
-        (0, S.wT)(0 == n, "ExtraAssetsUploader can only be used on apps");
-        const a = (0, C.Z3)("ajaxbeginuploadassetasync"),
+          t = (0, C.Z3)("ajaxgetextraassets"),
+          n = (0, C.Z3)("ajaxbeginuploadassetasync"),
+          a = (0, C.Z3)("ajaxcheckuploadassetsstatus"),
           o = (0, C.Z3)("ajaxtrytocompleteuploadasset");
-        return r.useMemo(() => new k(t, a, o, e), [t, a, o, e]);
+        return r.useMemo(() => new k(t, n, a, o, e), [t, n, a, o, e]);
       }
       (0, a.Cg)([l.sH], k.prototype, "m_filesToUpload", void 0),
         (0, a.Cg)([l.sH], k.prototype, "m_onlyAssetGroup", void 0),
@@ -3697,8 +3855,8 @@
             },
           },
         },
-        W = "noborder",
-        z = "equalcells",
+        z = "noborder",
+        W = "equalcells",
         $ = U.of({
           tableGroup: "block",
           cellContent: "paragraph block*",
@@ -3757,8 +3915,8 @@
         SetTableClass(e) {
           this.table.className = (0, G.A)(
             O().Table,
-            e.attrs[W] && O().NoBorder,
-            e.attrs[z] && O().EqualCells,
+            e.attrs[z] && O().NoBorder,
+            e.attrs[W] && O().EqualCells,
           );
         }
       }
@@ -3788,7 +3946,7 @@
             onActivate: _,
             onGamepadDirection: g,
           } = (function (e) {
-            const t = S.useRef(),
+            const t = S.useRef(void 0),
               n = (0, x.FN)(),
               a = S.useCallback(() => {
                 n.ShowVirtualKeyboard();
@@ -5171,15 +5329,14 @@
       n.d(t, {
         FD: () => m,
         L4: () => p,
-        TQ: () => f,
-        Y7: () => C,
+        TQ: () => S,
+        Y7: () => E,
         Z3: () => _,
         _M: () => u,
-        a1: () => g,
-        aJ: () => S,
-        cz: () => E,
-        gg: () => b,
-        vh: () => h,
+        aJ: () => h,
+        cz: () => g,
+        gg: () => f,
+        vh: () => C,
       });
       var a = n(2160),
         r = n(81393),
@@ -5203,7 +5360,7 @@
           d,
           { queueExtraAssetUpload: i },
           s.createElement(
-            y,
+            A,
             null,
             s.createElement(
               l.jy,
@@ -5279,31 +5436,27 @@
             }),
             [a, l, m, n, p, _, u],
           );
-        return a ? s.createElement(k.Provider, { value: g }, t) : null;
+        return a ? s.createElement(b.Provider, { value: g }, t) : null;
       }
       function m() {
-        return s.useContext(k).rgExtraAssetsData.rgExtraAssets;
+        return s.useContext(b).rgExtraAssetsData.rgExtraAssets;
       }
       function p() {
-        return s.useContext(k).rgExtraAssetsData;
+        return s.useContext(b).rgExtraAssetsData;
       }
       function _(e) {
         return s
-          .useContext(k)
+          .useContext(b)
           .strGameControllerURLFormat.replace(":method:", e);
       }
       function g() {
-        const e = s.useContext(k);
-        return { type: e.eStoreItemType, id: e.storeItemID };
+        return s.useContext(b).queueExtraAssetUpload;
       }
       function E() {
-        return s.useContext(k).queueExtraAssetUpload;
+        return s.useContext(b).onExtraAssetsUpdated;
       }
       function C() {
-        return s.useContext(k).onExtraAssetsUpdated;
-      }
-      function h() {
-        const e = s.useContext(k),
+        const e = s.useContext(b),
           t = i.iA.is_support;
         return {
           bExtraAssetsV2Videos: e.bExtraAssetsV2Videos && t,
@@ -5311,8 +5464,8 @@
           setExtraAssetsV2Videos: e.setExtraAssetsV2Videos,
         };
       }
-      function S() {
-        const e = s.useContext(k),
+      function h() {
+        const e = s.useContext(b),
           t = s.useMemo(
             () =>
               e.bAppHasSteamChinaToolsEnabled
@@ -5325,15 +5478,15 @@
           rgRealmList: t,
         };
       }
+      function S() {
+        return s.useContext(k).bUseRichEditor;
+      }
       function f() {
-        return s.useContext(A).bUseRichEditor;
+        return s.useContext(k).setUseRichEditor;
       }
-      function b() {
-        return s.useContext(A).setUseRichEditor;
-      }
-      const k = s.createContext(void 0),
-        A = s.createContext(void 0);
-      function y(e) {
+      const b = s.createContext(void 0),
+        k = s.createContext(void 0);
+      function A(e) {
         const t = "storeEditorDisableRichEditor",
           [n, a] = s.useState(() => !localStorage.getItem(t)),
           r = s.useCallback((e) => {
@@ -5343,7 +5496,7 @@
             () => ({ bUseRichEditor: n, setUseRichEditor: r }),
             [n, r],
           );
-        return s.createElement(A.Provider, { value: o }, e.children);
+        return s.createElement(k.Provider, { value: o }, e.children);
       }
     },
     51669: (e, t, n) => {
@@ -6432,7 +6585,7 @@
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(W, {
+          a.createElement(z, {
             refTextArea: o,
             value: r,
             rctToolbarControls: n,
@@ -6440,7 +6593,7 @@
           a.createElement($, { language: t, value: r, refTextArea: o }),
         );
       }
-      function W(e) {
+      function z(e) {
         const { refTextArea: t, value: n, rctToolbarControls: o } = e,
           l = a.useCallback(
             (e, a) => {
@@ -6460,7 +6613,7 @@
           F.Ez,
           null,
           a.createElement(
-            z,
+            W,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_Bold"),
@@ -6470,7 +6623,7 @@
             a.createElement(c.l4n, null),
           ),
           a.createElement(
-            z,
+            W,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_Italic"),
@@ -6480,7 +6633,7 @@
             a.createElement(c.UKJ, null),
           ),
           a.createElement(
-            z,
+            W,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_Underline"),
@@ -6491,7 +6644,7 @@
           ),
           a.createElement(F.XQ, null),
           a.createElement(
-            z,
+            W,
             {
               fnInsertText: s,
               tooltip: (0, r.we)("#FormattingToolbar_BulletedList"),
@@ -6501,7 +6654,7 @@
             a.createElement(c.JPq, null),
           ),
           a.createElement(
-            z,
+            W,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_HeadingLevel2"),
@@ -6512,7 +6665,7 @@
           ),
           a.createElement(F.XQ, null),
           a.createElement(
-            z,
+            W,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#FormattingToolbar_InsertLink"),
@@ -6522,7 +6675,7 @@
             a.createElement(c.YqK, null),
           ),
           a.createElement(
-            z,
+            W,
             {
               fnInsertText: l,
               tooltip: (0, r.we)("#EventEditor_InsertImage"),
@@ -6535,7 +6688,7 @@
           o,
         );
       }
-      function z(e) {
+      function W(e) {
         const {
           fnInsertText: t,
           tooltip: n,
@@ -6720,8 +6873,8 @@
         He = n(61336),
         Ke = n(91291),
         Ve = n.n(Ke),
-        We = n(99956),
-        ze = n(49411);
+        ze = n(99956),
+        We = n(49411);
       const $e = "capsule_index_";
       function je(e) {
         const {
@@ -6846,7 +6999,7 @@
           } = e,
           [m] = (0, Ce.G6)(t.id, (0, Pe.SW)(t.type), be.Xh),
           p = (0, Ge.n9)(),
-          _ = (0, ze.w)(),
+          _ = (0, We.w)(),
           g = (0, a.useMemo)(() => m?.GetIncludedAppIDsOrSelf(), [m]);
         if (!m) return null;
         const E = (0, He.NT)(
@@ -6895,7 +7048,7 @@
                       m.GetFormattedSteamReleaseDate(),
                     ),
                   ),
-                  a.createElement(We.n, {
+                  a.createElement(ze.n, {
                     bHideTitle: !0,
                     rgTagIDs: m.GetTagIDs(),
                     instanceNum: o,
@@ -8229,8 +8382,8 @@
         );
         return e;
       }
-      var Wt,
-        zt = n(34629),
+      var zt,
+        Wt = n(34629),
         $t = n(30470),
         jt = n(6144),
         Yt = n(73745),
@@ -8357,97 +8510,97 @@
       }
       function Zt(e) {
         switch (e) {
-          case Wt.k_ECurrencyCodeGBP:
+          case zt.k_ECurrencyCodeGBP:
             return "GBP";
-          case Wt.k_ECurrencyCodeEUR:
+          case zt.k_ECurrencyCodeEUR:
             return "EUR";
-          case Wt.k_ECurrencyCodeCHF:
+          case zt.k_ECurrencyCodeCHF:
             return "CHF";
-          case Wt.k_ECurrencyCodeRUB:
+          case zt.k_ECurrencyCodeRUB:
             return "RUB";
-          case Wt.k_ECurrencyCodePLN:
+          case zt.k_ECurrencyCodePLN:
             return "PLN";
-          case Wt.k_ECurrencyCodeBRL:
+          case zt.k_ECurrencyCodeBRL:
             return "BRL";
-          case Wt.k_ECurrencyCodeJPY:
+          case zt.k_ECurrencyCodeJPY:
             return "JPY";
-          case Wt.k_ECurrencyCodeNOK:
+          case zt.k_ECurrencyCodeNOK:
             return "NOK";
-          case Wt.k_ECurrencyCodeIDR:
+          case zt.k_ECurrencyCodeIDR:
             return "IDR";
-          case Wt.k_ECurrencyCodeMYR:
+          case zt.k_ECurrencyCodeMYR:
             return "MYR";
-          case Wt.k_ECurrencyCodePHP:
+          case zt.k_ECurrencyCodePHP:
             return "PHP";
-          case Wt.k_ECurrencyCodeSGD:
+          case zt.k_ECurrencyCodeSGD:
             return "SGD";
-          case Wt.k_ECurrencyCodeTHB:
+          case zt.k_ECurrencyCodeTHB:
             return "THB";
-          case Wt.k_ECurrencyCodeVND:
+          case zt.k_ECurrencyCodeVND:
             return "VND";
-          case Wt.k_ECurrencyCodeKRW:
+          case zt.k_ECurrencyCodeKRW:
             return "KRW";
-          case Wt.k_ECurrencyCodeTRY:
+          case zt.k_ECurrencyCodeTRY:
             return "TRY";
-          case Wt.k_ECurrencyCodeUAH:
+          case zt.k_ECurrencyCodeUAH:
             return "UAH";
-          case Wt.k_ECurrencyCodeMXN:
+          case zt.k_ECurrencyCodeMXN:
             return "MXN";
-          case Wt.k_ECurrencyCodeCAD:
+          case zt.k_ECurrencyCodeCAD:
             return "CAD";
-          case Wt.k_ECurrencyCodeAUD:
+          case zt.k_ECurrencyCodeAUD:
             return "AUD";
-          case Wt.k_ECurrencyCodeNZD:
+          case zt.k_ECurrencyCodeNZD:
             return "NZD";
-          case Wt.k_ECurrencyCodeCNY:
+          case zt.k_ECurrencyCodeCNY:
             return "CNY";
-          case Wt.k_ECurrencyCodeINR:
+          case zt.k_ECurrencyCodeINR:
             return "INR";
-          case Wt.k_ECurrencyCodeCLP:
+          case zt.k_ECurrencyCodeCLP:
             return "CLP";
-          case Wt.k_ECurrencyCodePEN:
+          case zt.k_ECurrencyCodePEN:
             return "PEN";
-          case Wt.k_ECurrencyCodeCOP:
+          case zt.k_ECurrencyCodeCOP:
             return "COP";
-          case Wt.k_ECurrencyCodeZAR:
+          case zt.k_ECurrencyCodeZAR:
             return "ZAR";
-          case Wt.k_ECurrencyCodeHKD:
+          case zt.k_ECurrencyCodeHKD:
             return "HKD";
-          case Wt.k_ECurrencyCodeTWD:
+          case zt.k_ECurrencyCodeTWD:
             return "TWD";
-          case Wt.k_ECurrencyCodeSAR:
+          case zt.k_ECurrencyCodeSAR:
             return "SAR";
-          case Wt.k_ECurrencyCodeAED:
+          case zt.k_ECurrencyCodeAED:
             return "AED";
-          case Wt.k_ECurrencyCodeSEK:
+          case zt.k_ECurrencyCodeSEK:
             return "SEK";
-          case Wt.k_ECurrencyCodeARS:
+          case zt.k_ECurrencyCodeARS:
             return "ARS";
-          case Wt.k_ECurrencyCodeILS:
+          case zt.k_ECurrencyCodeILS:
             return "ILS";
-          case Wt.k_ECurrencyCodeBYN:
+          case zt.k_ECurrencyCodeBYN:
             return "BYN";
-          case Wt.k_ECurrencyCodeKZT:
+          case zt.k_ECurrencyCodeKZT:
             return "KZT";
-          case Wt.k_ECurrencyCodeKWD:
+          case zt.k_ECurrencyCodeKWD:
             return "KWD";
-          case Wt.k_ECurrencyCodeQAR:
+          case zt.k_ECurrencyCodeQAR:
             return "QAR";
-          case Wt.k_ECurrencyCodeCRC:
+          case zt.k_ECurrencyCodeCRC:
             return "CRC";
-          case Wt.k_ECurrencyCodeUYU:
+          case zt.k_ECurrencyCodeUYU:
             return "UYU";
-          case Wt.k_ECurrencyCodeBGN:
+          case zt.k_ECurrencyCodeBGN:
             return "BGN";
-          case Wt.k_ECurrencyCodeHRK:
+          case zt.k_ECurrencyCodeHRK:
             return "HRK";
-          case Wt.k_ECurrencyCodeCZK:
+          case zt.k_ECurrencyCodeCZK:
             return "CZK";
-          case Wt.k_ECurrencyCodeDKK:
+          case zt.k_ECurrencyCodeDKK:
             return "DKK";
-          case Wt.k_ECurrencyCodeHUF:
+          case zt.k_ECurrencyCodeHUF:
             return "HUF";
-          case Wt.k_ECurrencyCodeRON:
+          case zt.k_ECurrencyCodeRON:
             return "RON";
           default:
             return "USD";
@@ -8455,99 +8608,99 @@
       }
       function Jt(e) {
         switch (e) {
-          case Wt.k_ECurrencyCodeUSD:
+          case zt.k_ECurrencyCodeUSD:
             return "US Dollar";
-          case Wt.k_ECurrencyCodeGBP:
+          case zt.k_ECurrencyCodeGBP:
             return "GB Pounds";
-          case Wt.k_ECurrencyCodeEUR:
+          case zt.k_ECurrencyCodeEUR:
             return "Euros";
-          case Wt.k_ECurrencyCodeCHF:
+          case zt.k_ECurrencyCodeCHF:
             return "Swiss Francs";
-          case Wt.k_ECurrencyCodeRUB:
+          case zt.k_ECurrencyCodeRUB:
             return "Russian Rubles";
-          case Wt.k_ECurrencyCodePLN:
+          case zt.k_ECurrencyCodePLN:
             return "Polish zloty";
-          case Wt.k_ECurrencyCodeBRL:
+          case zt.k_ECurrencyCodeBRL:
             return "Brazilian Reals";
-          case Wt.k_ECurrencyCodeJPY:
+          case zt.k_ECurrencyCodeJPY:
             return "Japanese Yen";
-          case Wt.k_ECurrencyCodeNOK:
+          case zt.k_ECurrencyCodeNOK:
             return "Norwegian Krone";
-          case Wt.k_ECurrencyCodeIDR:
+          case zt.k_ECurrencyCodeIDR:
             return "Indonesian Rupiah";
-          case Wt.k_ECurrencyCodeMYR:
+          case zt.k_ECurrencyCodeMYR:
             return "Malaysian Ringgit";
-          case Wt.k_ECurrencyCodePHP:
+          case zt.k_ECurrencyCodePHP:
             return "Philippine Peso";
-          case Wt.k_ECurrencyCodeSGD:
+          case zt.k_ECurrencyCodeSGD:
             return "Singapore Dollar";
-          case Wt.k_ECurrencyCodeTHB:
+          case zt.k_ECurrencyCodeTHB:
             return "Thai Baht";
-          case Wt.k_ECurrencyCodeVND:
+          case zt.k_ECurrencyCodeVND:
             return "Vietnamese Dong";
-          case Wt.k_ECurrencyCodeKRW:
+          case zt.k_ECurrencyCodeKRW:
             return "Korean Won";
-          case Wt.k_ECurrencyCodeTRY:
+          case zt.k_ECurrencyCodeTRY:
             return "Turkish Lira";
-          case Wt.k_ECurrencyCodeUAH:
+          case zt.k_ECurrencyCodeUAH:
             return "Ukrainian Hryvnia";
-          case Wt.k_ECurrencyCodeMXN:
+          case zt.k_ECurrencyCodeMXN:
             return "Mexican Peso";
-          case Wt.k_ECurrencyCodeCAD:
+          case zt.k_ECurrencyCodeCAD:
             return "Canadian Dollar";
-          case Wt.k_ECurrencyCodeAUD:
+          case zt.k_ECurrencyCodeAUD:
             return "Australian Dollar";
-          case Wt.k_ECurrencyCodeNZD:
+          case zt.k_ECurrencyCodeNZD:
             return "New Zealand Dollar";
-          case Wt.k_ECurrencyCodeCNY:
+          case zt.k_ECurrencyCodeCNY:
             return "Chinese Yuan";
-          case Wt.k_ECurrencyCodeINR:
+          case zt.k_ECurrencyCodeINR:
             return "Indian Rupee";
-          case Wt.k_ECurrencyCodeCLP:
+          case zt.k_ECurrencyCodeCLP:
             return "Chilean Peso";
-          case Wt.k_ECurrencyCodePEN:
+          case zt.k_ECurrencyCodePEN:
             return "Peruvian Sol";
-          case Wt.k_ECurrencyCodeCOP:
+          case zt.k_ECurrencyCodeCOP:
             return "Colombian Peso";
-          case Wt.k_ECurrencyCodeZAR:
+          case zt.k_ECurrencyCodeZAR:
             return "South African Rand";
-          case Wt.k_ECurrencyCodeHKD:
+          case zt.k_ECurrencyCodeHKD:
             return "Hong Kong Dollar";
-          case Wt.k_ECurrencyCodeTWD:
+          case zt.k_ECurrencyCodeTWD:
             return "Taiwanese Dollar";
-          case Wt.k_ECurrencyCodeSAR:
+          case zt.k_ECurrencyCodeSAR:
             return "Saudi Arabian Riyal";
-          case Wt.k_ECurrencyCodeAED:
+          case zt.k_ECurrencyCodeAED:
             return "Emirati Dirham";
-          case Wt.k_ECurrencyCodeSEK:
+          case zt.k_ECurrencyCodeSEK:
             return "Swedish Krona";
-          case Wt.k_ECurrencyCodeARS:
+          case zt.k_ECurrencyCodeARS:
             return "Argentine Peso";
-          case Wt.k_ECurrencyCodeILS:
+          case zt.k_ECurrencyCodeILS:
             return "Israeli New Shequel";
-          case Wt.k_ECurrencyCodeBYN:
+          case zt.k_ECurrencyCodeBYN:
             return "Belarusian Ruble";
-          case Wt.k_ECurrencyCodeKZT:
+          case zt.k_ECurrencyCodeKZT:
             return "Kazakhstani Tenge";
-          case Wt.k_ECurrencyCodeKWD:
+          case zt.k_ECurrencyCodeKWD:
             return "Kuwaiti Dinar";
-          case Wt.k_ECurrencyCodeQAR:
+          case zt.k_ECurrencyCodeQAR:
             return "Qatari Rial";
-          case Wt.k_ECurrencyCodeCRC:
+          case zt.k_ECurrencyCodeCRC:
             return "Costa Rican Colon";
-          case Wt.k_ECurrencyCodeUYU:
+          case zt.k_ECurrencyCodeUYU:
             return "Uruguayan Peso";
-          case Wt.k_ECurrencyCodeBGN:
+          case zt.k_ECurrencyCodeBGN:
             return "Bulgarian lev";
-          case Wt.k_ECurrencyCodeHRK:
+          case zt.k_ECurrencyCodeHRK:
             return "Croatian kuna";
-          case Wt.k_ECurrencyCodeCZK:
+          case zt.k_ECurrencyCodeCZK:
             return "Czech koruna";
-          case Wt.k_ECurrencyCodeDKK:
+          case zt.k_ECurrencyCodeDKK:
             return "Danish krone";
-          case Wt.k_ECurrencyCodeHUF:
+          case zt.k_ECurrencyCodeHUF:
             return "Hungarian forint";
-          case Wt.k_ECurrencyCodeRON:
+          case zt.k_ECurrencyCodeRON:
             return "Romanian leu";
           default:
             return "";
@@ -8555,97 +8708,97 @@
       }
       function en(e, t = on.k_ERegionCodeInvalid) {
         switch (e) {
-          case Wt.k_ECurrencyCodeGBP:
+          case zt.k_ECurrencyCodeGBP:
             return "gbp";
-          case Wt.k_ECurrencyCodeEUR:
+          case zt.k_ECurrencyCodeEUR:
             return "eur";
-          case Wt.k_ECurrencyCodeCHF:
+          case zt.k_ECurrencyCodeCHF:
             return "chf";
-          case Wt.k_ECurrencyCodeRUB:
+          case zt.k_ECurrencyCodeRUB:
             return "rub";
-          case Wt.k_ECurrencyCodePLN:
+          case zt.k_ECurrencyCodePLN:
             return "pln";
-          case Wt.k_ECurrencyCodeBRL:
+          case zt.k_ECurrencyCodeBRL:
             return "brl";
-          case Wt.k_ECurrencyCodeJPY:
+          case zt.k_ECurrencyCodeJPY:
             return "jpy";
-          case Wt.k_ECurrencyCodeNOK:
+          case zt.k_ECurrencyCodeNOK:
             return "nok";
-          case Wt.k_ECurrencyCodeIDR:
+          case zt.k_ECurrencyCodeIDR:
             return "idr";
-          case Wt.k_ECurrencyCodeMYR:
+          case zt.k_ECurrencyCodeMYR:
             return "myr";
-          case Wt.k_ECurrencyCodePHP:
+          case zt.k_ECurrencyCodePHP:
             return "php";
-          case Wt.k_ECurrencyCodeSGD:
+          case zt.k_ECurrencyCodeSGD:
             return "sgd";
-          case Wt.k_ECurrencyCodeTHB:
+          case zt.k_ECurrencyCodeTHB:
             return "thb";
-          case Wt.k_ECurrencyCodeVND:
+          case zt.k_ECurrencyCodeVND:
             return "vnd";
-          case Wt.k_ECurrencyCodeKRW:
+          case zt.k_ECurrencyCodeKRW:
             return "krw";
-          case Wt.k_ECurrencyCodeTRY:
+          case zt.k_ECurrencyCodeTRY:
             return "try";
-          case Wt.k_ECurrencyCodeUAH:
+          case zt.k_ECurrencyCodeUAH:
             return "uah";
-          case Wt.k_ECurrencyCodeMXN:
+          case zt.k_ECurrencyCodeMXN:
             return "mxn";
-          case Wt.k_ECurrencyCodeCAD:
+          case zt.k_ECurrencyCodeCAD:
             return "cad";
-          case Wt.k_ECurrencyCodeAUD:
+          case zt.k_ECurrencyCodeAUD:
             return "aud";
-          case Wt.k_ECurrencyCodeNZD:
+          case zt.k_ECurrencyCodeNZD:
             return "nzd";
-          case Wt.k_ECurrencyCodeCNY:
+          case zt.k_ECurrencyCodeCNY:
             return "cny";
-          case Wt.k_ECurrencyCodeINR:
+          case zt.k_ECurrencyCodeINR:
             return "inr";
-          case Wt.k_ECurrencyCodeCLP:
+          case zt.k_ECurrencyCodeCLP:
             return "clp";
-          case Wt.k_ECurrencyCodePEN:
+          case zt.k_ECurrencyCodePEN:
             return "pen";
-          case Wt.k_ECurrencyCodeCOP:
+          case zt.k_ECurrencyCodeCOP:
             return "cop";
-          case Wt.k_ECurrencyCodeZAR:
+          case zt.k_ECurrencyCodeZAR:
             return "zar";
-          case Wt.k_ECurrencyCodeHKD:
+          case zt.k_ECurrencyCodeHKD:
             return "hkd";
-          case Wt.k_ECurrencyCodeTWD:
+          case zt.k_ECurrencyCodeTWD:
             return "twd";
-          case Wt.k_ECurrencyCodeSAR:
+          case zt.k_ECurrencyCodeSAR:
             return "sar";
-          case Wt.k_ECurrencyCodeAED:
+          case zt.k_ECurrencyCodeAED:
             return "aed";
-          case Wt.k_ECurrencyCodeSEK:
+          case zt.k_ECurrencyCodeSEK:
             return "sek";
-          case Wt.k_ECurrencyCodeARS:
+          case zt.k_ECurrencyCodeARS:
             return "ars";
-          case Wt.k_ECurrencyCodeILS:
+          case zt.k_ECurrencyCodeILS:
             return "ils";
-          case Wt.k_ECurrencyCodeBYN:
+          case zt.k_ECurrencyCodeBYN:
             return "byn";
-          case Wt.k_ECurrencyCodeKZT:
+          case zt.k_ECurrencyCodeKZT:
             return "kzt";
-          case Wt.k_ECurrencyCodeKWD:
+          case zt.k_ECurrencyCodeKWD:
             return "kwd";
-          case Wt.k_ECurrencyCodeQAR:
+          case zt.k_ECurrencyCodeQAR:
             return "qar";
-          case Wt.k_ECurrencyCodeCRC:
+          case zt.k_ECurrencyCodeCRC:
             return "crc";
-          case Wt.k_ECurrencyCodeUYU:
+          case zt.k_ECurrencyCodeUYU:
             return "uyu";
-          case Wt.k_ECurrencyCodeBGN:
+          case zt.k_ECurrencyCodeBGN:
             return "bgn";
-          case Wt.k_ECurrencyCodeHRK:
+          case zt.k_ECurrencyCodeHRK:
             return "hrk";
-          case Wt.k_ECurrencyCodeCZK:
+          case zt.k_ECurrencyCodeCZK:
             return "czk";
-          case Wt.k_ECurrencyCodeDKK:
+          case zt.k_ECurrencyCodeDKK:
             return "dkk";
-          case Wt.k_ECurrencyCodeHUF:
+          case zt.k_ECurrencyCodeHUF:
             return "huf";
-          case Wt.k_ECurrencyCodeRON:
+          case zt.k_ECurrencyCodeRON:
             return "ron";
           default:
             return t == on.k_ERegionCodeCIS
@@ -8664,108 +8817,108 @@
           (function (e) {
             switch (e) {
               case "USD":
-                return Wt.k_ECurrencyCodeUSD;
+                return zt.k_ECurrencyCodeUSD;
               case "GBP":
-                return Wt.k_ECurrencyCodeGBP;
+                return zt.k_ECurrencyCodeGBP;
               case "EUR":
-                return Wt.k_ECurrencyCodeEUR;
+                return zt.k_ECurrencyCodeEUR;
               case "CHF":
-                return Wt.k_ECurrencyCodeCHF;
+                return zt.k_ECurrencyCodeCHF;
               case "RUB":
-                return Wt.k_ECurrencyCodeRUB;
+                return zt.k_ECurrencyCodeRUB;
               case "PLN":
-                return Wt.k_ECurrencyCodePLN;
+                return zt.k_ECurrencyCodePLN;
               case "BRL":
-                return Wt.k_ECurrencyCodeBRL;
+                return zt.k_ECurrencyCodeBRL;
               case "JPY":
-                return Wt.k_ECurrencyCodeJPY;
+                return zt.k_ECurrencyCodeJPY;
               case "NOK":
-                return Wt.k_ECurrencyCodeNOK;
+                return zt.k_ECurrencyCodeNOK;
               case "IDR":
-                return Wt.k_ECurrencyCodeIDR;
+                return zt.k_ECurrencyCodeIDR;
               case "MYR":
-                return Wt.k_ECurrencyCodeMYR;
+                return zt.k_ECurrencyCodeMYR;
               case "PHP":
-                return Wt.k_ECurrencyCodePHP;
+                return zt.k_ECurrencyCodePHP;
               case "SGD":
-                return Wt.k_ECurrencyCodeSGD;
+                return zt.k_ECurrencyCodeSGD;
               case "THB":
-                return Wt.k_ECurrencyCodeTHB;
+                return zt.k_ECurrencyCodeTHB;
               case "VND":
-                return Wt.k_ECurrencyCodeVND;
+                return zt.k_ECurrencyCodeVND;
               case "KRW":
-                return Wt.k_ECurrencyCodeKRW;
+                return zt.k_ECurrencyCodeKRW;
               case "TRY":
-                return Wt.k_ECurrencyCodeTRY;
+                return zt.k_ECurrencyCodeTRY;
               case "UAH":
-                return Wt.k_ECurrencyCodeUAH;
+                return zt.k_ECurrencyCodeUAH;
               case "MXN":
-                return Wt.k_ECurrencyCodeMXN;
+                return zt.k_ECurrencyCodeMXN;
               case "CAD":
-                return Wt.k_ECurrencyCodeCAD;
+                return zt.k_ECurrencyCodeCAD;
               case "AUD":
-                return Wt.k_ECurrencyCodeAUD;
+                return zt.k_ECurrencyCodeAUD;
               case "NZD":
-                return Wt.k_ECurrencyCodeNZD;
+                return zt.k_ECurrencyCodeNZD;
               case "CNY":
-                return Wt.k_ECurrencyCodeCNY;
+                return zt.k_ECurrencyCodeCNY;
               case "INR":
-                return Wt.k_ECurrencyCodeINR;
+                return zt.k_ECurrencyCodeINR;
               case "CLP":
-                return Wt.k_ECurrencyCodeCLP;
+                return zt.k_ECurrencyCodeCLP;
               case "PEN":
-                return Wt.k_ECurrencyCodePEN;
+                return zt.k_ECurrencyCodePEN;
               case "COP":
-                return Wt.k_ECurrencyCodeCOP;
+                return zt.k_ECurrencyCodeCOP;
               case "ZAR":
-                return Wt.k_ECurrencyCodeZAR;
+                return zt.k_ECurrencyCodeZAR;
               case "HKD":
-                return Wt.k_ECurrencyCodeHKD;
+                return zt.k_ECurrencyCodeHKD;
               case "TWD":
-                return Wt.k_ECurrencyCodeTWD;
+                return zt.k_ECurrencyCodeTWD;
               case "SAR":
-                return Wt.k_ECurrencyCodeSAR;
+                return zt.k_ECurrencyCodeSAR;
               case "AED":
-                return Wt.k_ECurrencyCodeAED;
+                return zt.k_ECurrencyCodeAED;
               case "SEK":
-                return Wt.k_ECurrencyCodeSEK;
+                return zt.k_ECurrencyCodeSEK;
               case "ARS":
-                return Wt.k_ECurrencyCodeARS;
+                return zt.k_ECurrencyCodeARS;
               case "ILS":
-                return Wt.k_ECurrencyCodeILS;
+                return zt.k_ECurrencyCodeILS;
               case "BYN":
-                return Wt.k_ECurrencyCodeBYN;
+                return zt.k_ECurrencyCodeBYN;
               case "KZT":
-                return Wt.k_ECurrencyCodeKZT;
+                return zt.k_ECurrencyCodeKZT;
               case "KWD":
-                return Wt.k_ECurrencyCodeKWD;
+                return zt.k_ECurrencyCodeKWD;
               case "QAR":
-                return Wt.k_ECurrencyCodeQAR;
+                return zt.k_ECurrencyCodeQAR;
               case "CRC":
-                return Wt.k_ECurrencyCodeCRC;
+                return zt.k_ECurrencyCodeCRC;
               case "UYU":
-                return Wt.k_ECurrencyCodeUYU;
+                return zt.k_ECurrencyCodeUYU;
               case "BGN":
-                return Wt.k_ECurrencyCodeBGN;
+                return zt.k_ECurrencyCodeBGN;
               case "HRK":
-                return Wt.k_ECurrencyCodeHRK;
+                return zt.k_ECurrencyCodeHRK;
               case "CZK":
-                return Wt.k_ECurrencyCodeCZK;
+                return zt.k_ECurrencyCodeCZK;
               case "DKK":
-                return Wt.k_ECurrencyCodeDKK;
+                return zt.k_ECurrencyCodeDKK;
               case "HUF":
-                return Wt.k_ECurrencyCodeHUF;
+                return zt.k_ECurrencyCodeHUF;
               case "RON":
-                return Wt.k_ECurrencyCodeRON;
+                return zt.k_ECurrencyCodeRON;
               default:
-                return Wt.k_ECurrencyCodeInvalid;
+                return zt.k_ECurrencyCodeInvalid;
             }
           })(e.toUpperCase()),
         )} (${e})`;
       }
-      (0, zt.Cg)([Yt.oI], Xt.prototype, "LoadMoreProposal", null),
-        (0, zt.Cg)([Yt.oI], Xt.prototype, "RejectProposal", null),
-        (0, zt.Cg)([Yt.oI], Xt.prototype, "AcceptProposal", null),
+      (0, Wt.Cg)([Yt.oI], Xt.prototype, "LoadMoreProposal", null),
+        (0, Wt.Cg)([Yt.oI], Xt.prototype, "RejectProposal", null),
+        (0, Wt.Cg)([Yt.oI], Xt.prototype, "AcceptProposal", null),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -8816,55 +8969,55 @@
             (e[(e.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
             (e[(e.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
             (e[(e.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(Wt || (Wt = {}));
-      const nn = [Wt.k_ECurrencyCodeTRY, Wt.k_ECurrencyCodeARS],
+        })(zt || (zt = {}));
+      const nn = [zt.k_ECurrencyCodeTRY, zt.k_ECurrencyCodeARS],
         an = [
-          Wt.k_ECurrencyCodeUSD,
-          Wt.k_ECurrencyCodeGBP,
-          Wt.k_ECurrencyCodeEUR,
-          Wt.k_ECurrencyCodeCHF,
-          Wt.k_ECurrencyCodeRUB,
-          Wt.k_ECurrencyCodePLN,
-          Wt.k_ECurrencyCodeBRL,
-          Wt.k_ECurrencyCodeJPY,
-          Wt.k_ECurrencyCodeNOK,
-          Wt.k_ECurrencyCodeIDR,
-          Wt.k_ECurrencyCodeMYR,
-          Wt.k_ECurrencyCodePHP,
-          Wt.k_ECurrencyCodeSGD,
-          Wt.k_ECurrencyCodeTHB,
-          Wt.k_ECurrencyCodeVND,
-          Wt.k_ECurrencyCodeKRW,
-          Wt.k_ECurrencyCodeUAH,
-          Wt.k_ECurrencyCodeMXN,
-          Wt.k_ECurrencyCodeCAD,
-          Wt.k_ECurrencyCodeAUD,
-          Wt.k_ECurrencyCodeNZD,
-          Wt.k_ECurrencyCodeCNY,
-          Wt.k_ECurrencyCodeINR,
-          Wt.k_ECurrencyCodeCLP,
-          Wt.k_ECurrencyCodePEN,
-          Wt.k_ECurrencyCodeCOP,
-          Wt.k_ECurrencyCodeZAR,
-          Wt.k_ECurrencyCodeHKD,
-          Wt.k_ECurrencyCodeTWD,
-          Wt.k_ECurrencyCodeSAR,
-          Wt.k_ECurrencyCodeAED,
-          Wt.k_ECurrencyCodeILS,
-          Wt.k_ECurrencyCodeKZT,
-          Wt.k_ECurrencyCodeKWD,
-          Wt.k_ECurrencyCodeQAR,
-          Wt.k_ECurrencyCodeCRC,
-          Wt.k_ECurrencyCodeUYU,
+          zt.k_ECurrencyCodeUSD,
+          zt.k_ECurrencyCodeGBP,
+          zt.k_ECurrencyCodeEUR,
+          zt.k_ECurrencyCodeCHF,
+          zt.k_ECurrencyCodeRUB,
+          zt.k_ECurrencyCodePLN,
+          zt.k_ECurrencyCodeBRL,
+          zt.k_ECurrencyCodeJPY,
+          zt.k_ECurrencyCodeNOK,
+          zt.k_ECurrencyCodeIDR,
+          zt.k_ECurrencyCodeMYR,
+          zt.k_ECurrencyCodePHP,
+          zt.k_ECurrencyCodeSGD,
+          zt.k_ECurrencyCodeTHB,
+          zt.k_ECurrencyCodeVND,
+          zt.k_ECurrencyCodeKRW,
+          zt.k_ECurrencyCodeUAH,
+          zt.k_ECurrencyCodeMXN,
+          zt.k_ECurrencyCodeCAD,
+          zt.k_ECurrencyCodeAUD,
+          zt.k_ECurrencyCodeNZD,
+          zt.k_ECurrencyCodeCNY,
+          zt.k_ECurrencyCodeINR,
+          zt.k_ECurrencyCodeCLP,
+          zt.k_ECurrencyCodePEN,
+          zt.k_ECurrencyCodeCOP,
+          zt.k_ECurrencyCodeZAR,
+          zt.k_ECurrencyCodeHKD,
+          zt.k_ECurrencyCodeTWD,
+          zt.k_ECurrencyCodeSAR,
+          zt.k_ECurrencyCodeAED,
+          zt.k_ECurrencyCodeILS,
+          zt.k_ECurrencyCodeKZT,
+          zt.k_ECurrencyCodeKWD,
+          zt.k_ECurrencyCodeQAR,
+          zt.k_ECurrencyCodeCRC,
+          zt.k_ECurrencyCodeUYU,
         ],
         rn = new Set(an);
-      Wt.k_ECurrencyCodeSEK,
-        Wt.k_ECurrencyCodeBGN,
-        Wt.k_ECurrencyCodeHRK,
-        Wt.k_ECurrencyCodeCZK,
-        Wt.k_ECurrencyCodeDKK,
-        Wt.k_ECurrencyCodeHUF,
-        Wt.k_ECurrencyCodeRON;
+      zt.k_ECurrencyCodeSEK,
+        zt.k_ECurrencyCodeBGN,
+        zt.k_ECurrencyCodeHRK,
+        zt.k_ECurrencyCodeCZK,
+        zt.k_ECurrencyCodeDKK,
+        zt.k_ECurrencyCodeHUF,
+        zt.k_ECurrencyCodeRON;
       var on;
       !(function (e) {
         (e[(e.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
@@ -9052,8 +9205,8 @@
           a.proposed_prices.region_amounts.map((t) => {
             const a = dn(t.name),
               s =
-                n.GetRecommendPrice(e, Wt.k_ECurrencyCodeUSD, a) ||
-                n.GetScaledRecommendedPrice(e, Wt.k_ECurrencyCodeUSD, a);
+                n.GetRecommendPrice(e, zt.k_ECurrencyCodeUSD, a) ||
+                n.GetScaledRecommendedPrice(e, zt.k_ECurrencyCodeUSD, a);
             An(l, t, a, s, r, o);
           }),
           {
@@ -9114,7 +9267,7 @@
                     const o = new Array();
                     bn(t).length > 0 && o.push("currency_missing");
                     const l = t.proposed_prices.base_amounts.find(
-                        (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
+                        (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
                       )?.amount.amount,
                       s = yn(l, n, r, t);
                     (s.rgAboveThreshold.length > 0 ||
@@ -9499,13 +9652,13 @@
             packageID: t.packageid,
             mapPartnerPaidByPackage: n,
           }),
-          a.createElement(Wn, {
+          a.createElement(zn, {
             packageID: t.packageid,
             mapPartnerPaidByPackage: n,
           }),
         );
       }
-      function Wn(e) {
+      function zn(e) {
         const { packageID: t, mapPartnerPaidByPackage: n } = e,
           r = n.get(t);
         return r
@@ -9513,12 +9666,12 @@
               "div",
               null,
               r.map((e) =>
-                a.createElement(zn, { key: "partner" + e, partnerID: e }),
+                a.createElement(Wn, { key: "partner" + e, partnerID: e }),
               ),
             )
           : null;
       }
-      function zn(e) {
+      function Wn(e) {
         const { partnerID: t } = e,
           [n] = (0, En.UA)(t);
         return n
@@ -9576,7 +9729,7 @@
         const { proposal: t, oGuideline: n, mapCurrentPrices: r } = e,
           o = r.get(t.packageid),
           l = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
           )?.amount.amount;
         return a.createElement(
           "tr",
@@ -9593,7 +9746,7 @@
             });
           }),
           ln.map((e) => {
-            const r = Wt.k_ECurrencyCodeUSD,
+            const r = zt.k_ECurrencyCodeUSD,
               s =
                 n.GetRecommendPrice(l, r, e) ||
                 n.GetScaledRecommendedPrice(l, r, e);
@@ -9926,12 +10079,12 @@
       function ia(e) {
         const { proposal: t, mapCurrentPrices: n } = e,
           r = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
           )?.amount.amount,
           o = n
             .get(t.packageid)
             ?.current_costs.base_amounts.find(
-              (e) => e.currency_code == Wt.k_ECurrencyCodeUSD,
+              (e) => e.currency_code == zt.k_ECurrencyCodeUSD,
             )?.amount;
         return a.createElement(
           a.Fragment,
@@ -10020,9 +10173,9 @@
       function da(e) {
         const { proposal: t, oGuideline: n } = e,
           r = t.proposed_prices.base_amounts.find(
-            (e) => e.amount.currency_code == Wt.k_ECurrencyCodeUSD,
+            (e) => e.amount.currency_code == zt.k_ECurrencyCodeUSD,
           )?.amount.amount,
-          o = n.GetRecommendPrice(r, Wt.k_ECurrencyCodeUSD);
+          o = n.GetRecommendPrice(r, zt.k_ECurrencyCodeUSD);
         return a.createElement(
           a.Fragment,
           null,
@@ -11122,7 +11275,7 @@
           { className: Aa.ReorderableListWithArrows },
           t.length > 0 &&
             t.map((e, t) =>
-              a.createElement(Wa, {
+              a.createElement(za, {
                 key: "reorderable-" + t,
                 index: t,
                 item: e,
@@ -11137,7 +11290,7 @@
           a.createElement("a", { onClick: () => (n(t.concat([o()])), !1) }, s),
         );
       }
-      function Wa(e) {
+      function za(e) {
         const {
           index: t,
           item: n,
@@ -11167,7 +11320,7 @@
           ),
         );
       }
-      var za = n(4544),
+      var Wa = n(4544),
         $a = n(44165),
         ja = n(1909),
         Ya = n(78395),
@@ -11226,11 +11379,11 @@
                 key: o + "_" + e,
                 type: "hidden",
                 name: `${o}[${(0, Z.Lg)(e, "english")}]`,
-                value: (0, za.VX)(t, e),
+                value: (0, Wa.VX)(t, e),
               }),
             );
           });
-        const p = (0, za.VX)(t, u) || "";
+        const p = (0, Wa.VX)(t, u) || "";
         return a.createElement(
           "div",
           { className: c },
@@ -11419,7 +11572,7 @@
           [c, u, d] = (0, G.uD)(),
           m = a.useMemo(() => (0, r.O9)(l), [l]),
           p = a.useMemo(
-            () => (0, za.mn)(t?.milestone_desc || { english: "" }),
+            () => (0, Wa.mn)(t?.milestone_desc || { english: "" }),
             [t?.milestone_desc],
           ),
           _ = a.useMemo(
@@ -11552,7 +11705,7 @@
                 text: A,
                 className: cr().MilestoneTitleField,
                 onChangeText: (e, t) => {
-                  (0, za.pV)(A, t, e), y({ ...A });
+                  (0, Wa.pV)(A, t, e), y({ ...A });
                 },
                 kvName: void 0,
                 rgRealms: L,
@@ -12307,8 +12460,8 @@
               Boolean(
                 l.commitments?.some(
                   (t) =>
-                    (0, za.nU)(t.localized_title, e) ||
-                    (0, za.nU)(t.milestone_desc, e),
+                    (0, Wa.nU)(t.localized_title, e) ||
+                    (0, Wa.nU)(t.milestone_desc, e),
                 ),
               ),
             [l.commitments],
@@ -12787,8 +12940,8 @@
           ),
           "other" === i &&
             a.createElement(Vr, { values: t.otherNameLoc, mapLanguages: l }),
-          _ && a.createElement(Wr, { checked: u, onChange: d }),
-          _ && u && a.createElement(zr, { checked: m, onChange: p }),
+          _ && a.createElement(zr, { checked: u, onChange: d }),
+          _ && u && a.createElement(Wr, { checked: m, onChange: p }),
           a.createElement($r, {
             selectedOption: "unspecified" !== i ? i : "",
             kernelMode: !!_ && u,
@@ -12849,7 +13002,7 @@
           s,
         );
       }
-      function Wr(e) {
+      function zr(e) {
         const { checked: t, onChange: n } = e;
         return a.createElement(
           Hr,
@@ -12867,7 +13020,7 @@
           ),
         );
       }
-      function zr(e) {
+      function Wr(e) {
         const { checked: t, onChange: n } = e;
         return a.createElement(
           Hr,
@@ -15181,7 +15334,7 @@
       const g = () => l.useContext(C);
       function E(e) {
         const { view: t, refUpdateToolbar: n, children: a } = e,
-          r = l.useRef();
+          r = l.useRef(void 0);
         r.current || (r.current = new c.lu()),
           l.useEffect(
             () => (
@@ -15390,7 +15543,7 @@
           [L, R] = a.useState(0),
           [B, M] = a.useState(void 0),
           [O, U] = a.useState(""),
-          F = a.useRef(),
+          F = a.useRef(void 0),
           G = a.useMemo(() => new Array(), []),
           H = a.useMemo(() => new Array(), []),
           K = a.useMemo(() => _().CancelToken.source(), []),
@@ -15403,7 +15556,7 @@
           V();
         }, []),
           a.useEffect(() => () => K.cancel("ReorderableList unmounting"), [K]);
-        const W = (e, t) => {
+        const z = (e, t) => {
             K.token.reason ||
               (F.current.firstElementChild?.getBoundingClientRect().height >
                 0 &&
@@ -15428,7 +15581,7 @@
               })(t, e),
               e.preventDefault());
           },
-          z = (e, n) => {
+          W = (e, n) => {
             const a = g.OQ(n > e ? n - 1 : n, 0, t.length - 1);
             e != a && (C ? C(e, a) : (0, s.yY)(t, e, a), X(a), p && p(t));
           },
@@ -15445,7 +15598,7 @@
                   M(void 0),
                   N(void 0);
               })(),
-              z(P, T));
+              W(P, T));
           },
           j = (e) => {
             if (!b || K.token.reason) return;
@@ -15483,7 +15636,7 @@
               n = Number.parseInt(t);
             if (0 == t.length || isNaN(n)) return;
             const a = n - 1;
-            e != a && z(e, a);
+            e != a && W(e, a);
           },
           [q, X] = a.useState(void 0);
         return a.createElement(
@@ -15537,7 +15690,7 @@
                     S && c().DisabledGrab,
                   ),
                   src: o,
-                  onMouseDown: Boolean(S) ? void 0 : (e) => W(e, r),
+                  onMouseDown: Boolean(S) ? void 0 : (e) => z(e, r),
                 }),
                 a.createElement("input", {
                   className: (0, E.A)(c().WhitelistNumber, S && c().Disabled),

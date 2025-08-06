@@ -17456,7 +17456,7 @@
             bFilterToSales: _,
           } = _,
           [_, _] = _.useState(null),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = _.useRef(null),
           _ = _.useCallback(
             (_) => {
@@ -25805,7 +25805,7 @@
       }
       function _(_) {
         const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             _.current && (_.current.load(), _.current.play());
@@ -25934,7 +25934,7 @@
             rgSupportArtwork: _,
             strUploadAjaxURL: _,
             fnOnUploadSuccess: _,
-            strOverrideDragAndDropText: (0, _._)(
+            elOverrideDragAndDropText: (0, _._)(
               "#Template_Section_MediaUpdate_DnD",
             ),
           }),
@@ -26904,7 +26904,7 @@
             mediaRow: _,
             fnUpdateColumnsOfMediaRow: _,
           } = _,
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_),
           { bHighlighted: _, fnJumpTo: _ } = (function (_, _, _) {
             _.useEffect(() => {
@@ -30444,7 +30444,7 @@
           },
           _ = ((_ = !0), (0, _._)((0, _._)(__webpack_require__), _));
         var _;
-        const _ = _.useRef(),
+        const _ = _.useRef(void 0),
           _ = (0, _._)(_),
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
@@ -51780,7 +51780,7 @@
             children: _,
             bIsPreview: _,
           } = _,
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(() =>
             __webpack_require__.GetImageURLWithFallback("sale_header", _),
           ),
@@ -53355,7 +53355,7 @@
         }, [_, _]);
         const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
           _ = _ && _ == _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           (0, _._)((_) => {
             var _;
@@ -56827,7 +56827,7 @@
           _ = _(_, _, _, _),
           { bIsIgnored: _, fnUpdateIgnored: _ } = (0, _._)(_),
           { bIsWishlisted: _, fnUpdateWishlist: _ } = (0, _._)(_),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         if (
           (_.useEffect(() => {
             _ &&
@@ -57817,7 +57817,7 @@
           _ = (0, _._)(_._.STORE_BASE_URL + "wishlist"),
           _ = (0, _._)(),
           _ = (null == _ ? void 0 : _.ownerWindow) || window,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             __webpack_require__ &&
@@ -67420,7 +67420,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!!_),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           [_, _] = (0, _._)(_, _._),
           _ =
             _ && (null == _ ? void 0 : _.HasDemoStandaloneStorePage())
@@ -67433,7 +67433,7 @@
           [_, _] = _.useState(0),
           [_, _] = _.useState(),
           _ = (0, _._)(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_),
           _ = (0, _._)();
         _.useEffect(() => {
@@ -68060,7 +68060,7 @@
               }
             );
           })(_, __webpack_require__, _, _, _, _, _, _),
-          _ = (0, _.useRef)();
+          _ = (0, _.useRef)(void 0);
         return (
           (0, _.useEffect)(() => {
             _.current && !_ && _ && (_.current.innerHTML = _.strSubtitle);
@@ -69777,7 +69777,7 @@
               : 0,
           ),
           [_, _] = (0, _.useState)(0),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(() => _._.Get().GetLargestAnswerQuestion());
         (0, _.useEffect)(() => {
           _ > _ && _ ? _(_) : _ && 0 == _ && _ > 1 && (_(_ + 1), _(0));
@@ -72299,7 +72299,7 @@
       }
       function _(_) {
         const { onClick: _ } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             var _;
@@ -72334,7 +72334,7 @@
             event: _,
             history: _,
           } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         _.useEffect(() => {
           var _, _;
           const _ =
@@ -72622,7 +72622,7 @@
           [_, _] = (0, _._)(),
           _ = _(__webpack_require__.tabs, _, _, _),
           _ = (0, _._)(),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         _.useEffect(() => {
           var _;
           const _ = document.getElementById("Tab_" + _.unique_id);
@@ -72777,7 +72777,7 @@
             setTabUniqueIDQueryParam: _,
           } = _,
           _ = (0, _._)(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = _.useCallback(
             (_) => {
               if (
@@ -77989,8 +77989,8 @@
             setTargetVideo: _,
           } = _,
           { bVisible: _, ref: _ } = (0, _._)(),
-          _ = (0, _.useRef)(),
-          _ = (0, _.useRef)();
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0);
         (0, _.useEffect)(() => {
           _(_);
         }, [_, _]),
@@ -78297,7 +78297,7 @@
       function _(_) {
         const { displayOrder: _, content: __webpack_require__, section: _ } = _,
           _ = (0, _._)(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_),
           { bHighlighted: _ } = (function (_, _, _) {
             _.useEffect(() => {
@@ -80365,7 +80365,7 @@
           [_, _] = _.useState(0),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(""),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = _.useMemo(() => new Array(), []),
           _ = _.useMemo(() => new Array(), []),
           _ = _.useMemo(() => _().CancelToken.source(), []),
@@ -80743,8 +80743,8 @@
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(0),
-          _ = _.useRef(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
+          _ = _.useRef(void 0),
           [_, _] = _.useState(),
           { bCookieLoaded: _ } = (function (_, _, _) {
             const _ = _.useCallback(() => {

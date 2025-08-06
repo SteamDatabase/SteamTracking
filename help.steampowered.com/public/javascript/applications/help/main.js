@@ -421,6 +421,7 @@
         FieldDescription: "_1W1to_azoBRG95oNAFpf9Q",
         ModalPosition: "_3A5ujtARm6atH4phJ5i1i6",
         VR: "_3-NqubDUyBx8l_lXBrjzUJ",
+        FooterVisible: "_3bdRx6sqp4zgADo5c-9jUb",
         WithStandardPadding: "_1XQXQY77uXZfE0KSWEADf_",
         NoHeaderPadding: "_1Y7qW0oDUNH6gMRGqujwo6",
         ModalClickToDismiss: "_27uCSNGt2GM1oh3MbvqAS",
@@ -2498,7 +2499,7 @@
         },
       };
     },
-    8439: (e, t, r) => {
+    59: (e, t, r) => {
       "use strict";
       r(3808), r(3977);
       var i = r(626),
@@ -5835,6 +5836,7 @@
               (t |= rt.NoWindowShadow),
               (t |= rt.NoRoundedCorners),
               (t |= rt.OverrideRedirect),
+              (t |= rt.ForceBrowserVisible),
               t
             );
           case it.Tooltip:
@@ -5896,7 +5898,8 @@
             "IgnoreSteamDisplayScale"),
           (e[(e.TransparentParentWindow = 4194304)] =
             "TransparentParentWindow"),
-          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale");
+          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (e[(e.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
       })(rt || (rt = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -6531,7 +6534,7 @@
           } = e,
           s = lt(),
           a = s?.ownerWindow || window,
-          o = i.useRef();
+          o = i.useRef(void 0);
         return (
           o.current || (o.current = new qe.z()),
           i.useLayoutEffect(() => {
@@ -7943,7 +7946,7 @@
               bRegisterManagersWithWindow: p = !0,
               ...g
             } = e,
-            _ = i.useRef();
+            _ = i.useRef(void 0);
           _.current || (_.current = new Gt());
           let h = i.createElement(pr, {
             ...g,
@@ -11314,7 +11317,7 @@
             const s = (0, Xe.we)("#Field_MoreInfo_Action");
             return { onOptionsButton: n, onOptionsActionDescription: s };
           })(S ?? n, M),
-          x = i.useRef(),
+          x = i.useRef(void 0),
           G = (0, Je.Ue)(x, e.navRef),
           H = i.useCallback(
             (e) => {
@@ -11557,7 +11560,7 @@
           } = e,
           [o, l, c, m] = (function () {
             let e = i.useRef(null),
-              t = i.useRef();
+              t = i.useRef(void 0);
             i.useLayoutEffect(() => {
               let r = e.current;
               if (!r || t.current) return;
@@ -11725,9 +11728,9 @@
           })(i.useMemo(() => t.findIndex((e) => e == r), [t, r])),
           o = (function (e, t) {
             const r = i.useMemo(() => new Map(), []),
-              n = i.useRef();
+              n = i.useRef(e);
             n.current = e;
-            const s = i.useRef();
+            const s = i.useRef(t);
             s.current = t;
             const a = i.useCallback(
               (e) => (t) => {
@@ -11825,7 +11828,7 @@
       var ms = r(4437);
       const us = i.forwardRef(function (e, t) {
         const { className: r, ...n } = e;
-        let s = i.useRef(),
+        let s = i.useRef(void 0),
           a = (0, Je.Ue)(t, s);
         const [o, l] = i.useState(!1),
           c = i.useCallback(() => {
@@ -11927,8 +11930,8 @@
           a = (0, d.zy)(),
           o = (a.state && a.state[n]) ?? r,
           l = i.useRef(!1),
-          c = i.useRef(),
-          m = i.useRef(),
+          c = i.useRef(void 0),
+          m = i.useRef(void 0),
           u = i.useCallback(
             (e) => {
               if (l.current && ((c.current = e), !m.current)) {
@@ -11962,7 +11965,7 @@
             (a.current = void 0), (o.current = void 0);
           }, []),
           c = (function (e, t) {
-            const r = i.useRef();
+            const r = i.useRef(void 0);
             return i.useCallback(
               (i, n) => {
                 let s = "sine";
@@ -12331,7 +12334,7 @@
           [c, m] = fs(`${t}ScrollLeft`, 250, 0),
           u = i.useRef(0),
           d = i.useRef(0),
-          p = i.useRef();
+          p = i.useRef(void 0);
         let g = i.useCallback(
           (e) => {
             const { scrollTop: t, scrollLeft: r } = e.currentTarget;
@@ -13604,7 +13607,7 @@
           s = i.useContext(yr).DialogWrapper,
           [a, o] = i.useState(null),
           [l, c] = i.useState(!1),
-          m = i.useRef();
+          m = i.useRef(void 0);
         if (
           (i.useEffect(() => {
             if (t) {
@@ -13751,7 +13754,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          a = (0, i.useRef)(),
+          a = (0, i.useRef)(void 0),
           [o, l] = (function () {
             const [e, t] = i.useState(void 0),
               r = i.useCallback(() => t(void 0), []),
@@ -15585,7 +15588,12 @@
           const i = e.IsValidAssetType(t, r);
           return "pending" === e.status && !i.error && !i.needsCrop;
         });
-        return i.forEach((e) => (e.status = "waiting")), i;
+        return (
+          i.forEach((e) => {
+            (e.status = "waiting"), (e.message = "");
+          }),
+          i
+        );
       }
       async function lo(e, t, r, i, n, s) {
         const a = oo(e, i, n),
@@ -15707,6 +15715,7 @@
             let n = null,
               s = 0;
             e.endsWith("korean") && ((n = 4), (s = 6));
+            const a = (e) => e.replace(/[\s_-]+$/g, "");
             for (let t = 0; t < 31; ++t) {
               const i = (0, xe.ww)(t);
               if (i.length <= s) continue;
@@ -15718,12 +15727,15 @@
                 }
                 a && ((n = t), (s = i.length));
               }
-              const a = (0, xe.Lg)(t);
-              a.length <= s || (e.endsWith(a) && ((n = t), (s = a.length)));
+              const o = (0, xe.Lg)(t);
+              o.length <= s ||
+                (e.endsWith(o) &&
+                  a(e.substring(0, e.length - o.length)).length > 0 &&
+                  ((n = t), (s = o.length)));
             }
             return {
               language: n ?? t,
-              baseFilename: s > 0 ? e.substring(0, e.length - s - 1) : e,
+              baseFilename: s > 0 ? a(e.substring(0, e.length - s)) : e,
             };
           })(e.name, t);
           return this.AddImageForLanguage(e, r);
@@ -29994,7 +30006,17 @@
           label: (0, Xe.we)("#language_selection_" + (0, xe.Lg)(n)),
         });
       }
-      const op = new Map([
+      function op(e) {
+        if (!e) return e;
+        const t = e.trim(),
+          r = t.toLowerCase();
+        return r.startsWith("javascript:") ||
+          r.startsWith("data:") ||
+          r.startsWith("vbscript:")
+          ? ""
+          : t;
+      }
+      const lp = new Map([
           [
             "b",
             {
@@ -30025,7 +30047,7 @@
             "h1",
             {
               Constructor: function (e) {
-                return up("h1", e, (0, ft.A)(va().Header1, "BB_Header1"));
+                return dp("h1", e, (0, ft.A)(va().Header1, "BB_Header1"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -30035,7 +30057,7 @@
             "h2",
             {
               Constructor: function (e) {
-                return up("h2", e, (0, ft.A)(va().Header2, "BB_Header2"));
+                return dp("h2", e, (0, ft.A)(va().Header2, "BB_Header2"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -30045,7 +30067,7 @@
             "h3",
             {
               Constructor: function (e) {
-                return up("h3", e, (0, ft.A)(va().Header3, "BB_Header3"));
+                return dp("h3", e, (0, ft.A)(va().Header3, "BB_Header3"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -30055,7 +30077,7 @@
             "h4",
             {
               Constructor: function (e) {
-                return up("h4", e, (0, ft.A)(va().Header4, "BB_Header4"));
+                return dp("h4", e, (0, ft.A)(va().Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -30065,7 +30087,7 @@
             "h5",
             {
               Constructor: function (e) {
-                return up("h5", e, (0, ft.A)(va().Header5, "BB_Header5"));
+                return dp("h5", e, (0, ft.A)(va().Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -30075,7 +30097,7 @@
             "center",
             {
               Constructor: function (e) {
-                let t = mp(e.args, "id");
+                let t = up(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
@@ -30097,7 +30119,7 @@
             "smalltext",
             {
               Constructor: function (e) {
-                return up("div", e, (0, ft.A)(va().SmallText, "BB_SmallText"));
+                return dp("div", e, (0, ft.A)(va().SmallText, "BB_SmallText"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -30179,17 +30201,17 @@
             "url",
             {
               Constructor: function (e) {
-                let t = mp(e.args);
+                let t = op(up(e.args));
                 if (!t) {
                   const r = e.children;
                   "string" == typeof r &&
                     (r.startsWith("http://") || r.startsWith("https://")) &&
-                    (t = r);
+                    (t = op(r));
                 }
                 const r =
-                    "button" == mp(e.args, "style") ? va().LinkButton : null,
-                  n = r && mp(e.args, "buttoncolor");
-                let s = mp(e.args, "id");
+                    "button" == up(e.args, "style") ? va().LinkButton : null,
+                  n = r && up(e.args, "buttoncolor");
+                let s = up(e.args, "id");
                 s &&
                   "string" == typeof s &&
                   s.length > 0 &&
@@ -30206,7 +30228,7 @@
                     e.children,
                   );
                 return i.createElement(
-                  dp,
+                  pp,
                   {
                     className: r,
                     href: t,
@@ -30223,7 +30245,7 @@
             "quote",
             {
               Constructor: function (e) {
-                const t = mp(e.args, "author");
+                const t = up(e.args, "author");
                 return i.createElement(
                   "blockquote",
                   { className: (0, ft.A)(va().BlockQuote, e.className) },
@@ -30312,7 +30334,7 @@
             "*",
             {
               Constructor: function (e) {
-                let t = mp(e.args, "id");
+                let t = up(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
@@ -30332,9 +30354,9 @@
             "table",
             {
               Constructor: function (e) {
-                const t = mp(e.args, "noborder"),
-                  r = mp(e.args, "equalcells"),
-                  n = mp(e.args, "colwidth");
+                const t = up(e.args, "noborder"),
+                  r = up(e.args, "equalcells"),
+                  n = up(e.args, "colwidth");
                 return i.createElement(
                   "table",
                   {
@@ -30352,7 +30374,7 @@
                       n
                         .split(",")
                         .map((e, t) =>
-                          i.createElement(pp, { key: t, width: e }),
+                          i.createElement(gp, { key: t, width: e }),
                         ),
                     ),
                   i.createElement("tbody", null, e.children),
@@ -30381,7 +30403,7 @@
             "th",
             {
               Constructor: function (e) {
-                return gp("th", e);
+                return _p("th", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -30392,7 +30414,7 @@
             "td",
             {
               Constructor: function (e) {
-                return gp("td", e);
+                return _p("td", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -30403,11 +30425,11 @@
             "expand",
             {
               Constructor: function (e) {
-                const t = Boolean(mp(e.args, "expanded")),
+                const t = Boolean(up(e.args, "expanded")),
                   [r, n] = i.useState(t),
-                  s = mp(e.args, "title"),
-                  a = mp(e.args, "collapsed_str"),
-                  o = mp(e.args, "expanded_str"),
+                  s = up(e.args, "title"),
+                  a = up(e.args, "collapsed_str"),
+                  o = up(e.args, "expanded_str"),
                   l = (function (e, t, r, i) {
                     switch (e) {
                       case "details":
@@ -30437,7 +30459,7 @@
                           style: va().ExpandSection_ShowMore,
                         };
                     }
-                  })(mp(e.args, "type"), s, a, o);
+                  })(up(e.args, "type"), s, a, o);
                 return i.createElement(
                   "div",
                   {
@@ -30481,7 +30503,7 @@
             {
               Constructor: function (e) {
                 const { event: t, showErrorInfo: r } = e.context,
-                  n = mp(e.args);
+                  n = up(e.args);
                 if (n)
                   return i.createElement(Xd, { eventGID: n, bPreviewMode: r });
                 if (t) {
@@ -30497,12 +30519,12 @@
             "calendarevent",
             {
               Constructor: function (e) {
-                const t = mp(e.args, "title"),
-                  r = mp(e.args, "start") ?? mp(e.args, "datetime"),
-                  n = mp(e.args, "end") ?? mp(e.args, "datetime"),
-                  s = mp(e.args, "body") ?? null,
-                  a = mp(e.args, "location") ?? null,
-                  o = mp(e.args, "id") ?? "",
+                const t = up(e.args, "title"),
+                  r = up(e.args, "start") ?? up(e.args, "datetime"),
+                  n = up(e.args, "end") ?? up(e.args, "datetime"),
+                  s = up(e.args, "body") ?? null,
+                  a = up(e.args, "location") ?? null,
+                  o = up(e.args, "id") ?? "",
                   l = new Date(r),
                   c = l.getUTCFullYear(),
                   m = ("0" + (l.getUTCMonth() + 1)).slice(-2),
@@ -30609,11 +30631,11 @@
             "doclink",
             {
               Constructor: function (e) {
-                const t = mp(e.args),
-                  r = "button" == mp(e.args, "style") ? va().LinkButton : null,
-                  n = r && mp(e.args, "buttoncolor");
+                const t = up(e.args),
+                  r = "button" == up(e.args, "style") ? va().LinkButton : null,
+                  n = r && up(e.args, "buttoncolor");
                 return i.createElement(
-                  dp,
+                  pp,
                   {
                     className: r,
                     style: { backgroundColor: n },
@@ -30629,7 +30651,7 @@
             "color",
             {
               Constructor: function (e) {
-                const t = mp(e.args);
+                const t = up(e.args);
                 return i.createElement(
                   "span",
                   { style: { color: t } },
@@ -30643,7 +30665,7 @@
             "bgcolor",
             {
               Constructor: function (e) {
-                const t = mp(e.args);
+                const t = up(e.args);
                 return i.createElement(
                   "span",
                   { style: { backgroundColor: t } },
@@ -30669,12 +30691,12 @@
             },
           ],
         ]),
-        lp = new Map([
+        cp = new Map([
           [
             "looping_media",
             {
               Constructor: function (e) {
-                const t = _p(e.args);
+                const t = hp(e.args);
                 return i.createElement(rp, {
                   video: t,
                   bAutoPlay: !0,
@@ -30685,16 +30707,16 @@
               autocloses: !1,
             },
           ],
-          ["video", { Constructor: hp, autocloses: !1 }],
+          ["video", { Constructor: fp, autocloses: !1 }],
           [
             "youtubeorvideo",
             {
               Constructor: function (e) {
                 if ((0, s.Y2)() || "CN" == s.TS.COUNTRY.toLocaleUpperCase())
-                  return hp(e);
-                const t = mp(e.args, "youtubeid"),
-                  r = mp(e.args, "size"),
-                  n = mp(e.args, "seconds"),
+                  return fp(e);
+                const t = up(e.args, "youtubeid"),
+                  r = up(e.args, "size"),
+                  n = up(e.args, "seconds"),
                   { sizeStr: a, alignStr: o } = sl(r);
                 return i.createElement(Yo, {
                   videoID: t,
@@ -30712,7 +30734,7 @@
             {
               Constructor: function (e) {
                 if ((0, s.Y2)()) return null;
-                let t = mp(e.args);
+                let t = up(e.args);
                 if (t) {
                   let e = t.split(";");
                   if (2 == e.length) {
@@ -30733,7 +30755,7 @@
             },
           ],
         ]);
-      function cp(e, t, r = 0) {
+      function mp(e, t, r = 0) {
         if (e && 0 != e.length) {
           if (e?.startsWith(Ia)) return go.ReplacementTokenToClanImageURL(e);
           if (e?.startsWith(Ta)) {
@@ -30756,13 +30778,13 @@
           return e;
         }
       }
-      function mp(e, t) {
+      function up(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function up(e, t, r) {
-        let n = mp(t.args, "id");
+      function dp(e, t, r) {
+        let n = up(t.args, "id");
         return (
-          n || (n = mp(t.args)),
+          n || (n = up(t.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&
@@ -30775,7 +30797,7 @@
           )
         );
       }
-      const dp = (e) => {
+      const pp = (e) => {
         const { href: t, ...r } = e;
         let n,
           s = (0, Ra.OZ)(t);
@@ -30796,7 +30818,7 @@
           i.createElement(Qt.Ii, { ...r, href: s, rel: n }, e.children),
         );
       };
-      function pp(e) {
+      function gp(e) {
         const { width: t } = e;
         let r;
         return (
@@ -30804,10 +30826,10 @@
           i.createElement("col", { style: r })
         );
       }
-      function gp(e, t) {
-        const r = mp(t.args, "width"),
-          n = mp(t.args, "colspan"),
-          s = mp(t.args, "rowspan"),
+      function _p(e, t) {
+        const r = up(t.args, "width"),
+          n = up(t.args, "colspan"),
+          s = up(t.args, "rowspan"),
           a = {};
         return (
           n && parseInt(n) > 1 && (a.colSpan = parseInt(n)),
@@ -30823,21 +30845,21 @@
           )
         );
       }
-      function _p(e) {
-        let t = mp(e, "poster");
+      function hp(e) {
+        let t = up(e, "poster");
         t && (t = (0, jr.L$)(t));
         const r = new Array();
         {
-          const t = mp(e, "mp4");
+          const t = up(e, "mp4");
           t && r.push({ sURL: (0, jr.L$)(t), sFormat: "video/mp4" });
-          const i = mp(e, "webm");
+          const i = up(e, "webm");
           i && r.push({ sURL: (0, jr.L$)(i), sFormat: "video/webm" });
         }
         const i = (0, xe.sf)(De.TS.LANGUAGE),
           n = 0 != i,
           s = new Array();
         for (let t = 0; t < 31; t++) {
-          const r = mp(e, "sub_" + (0, xe.ww)(t));
+          const r = up(e, "sub_" + (0, xe.ww)(t));
           r &&
             s.push({
               sURL: (0, jr.L$)(r),
@@ -30845,7 +30867,7 @@
               sKind: "subtitles",
               bDefault: n && t == i,
             });
-          const a = mp(e, "cap_" + (0, xe.ww)(t));
+          const a = up(e, "cap_" + (0, xe.ww)(t));
           a &&
             s.push({
               sURL: (0, jr.L$)(a),
@@ -30856,17 +30878,17 @@
         }
         return { sPoster: t, rgVideoSources: r, rgVideoTracks: s };
       }
-      function hp(e) {
-        const t = _p(e.args),
+      function fp(e) {
+        const t = hp(e.args),
           r = e.children ? e.children.toString() : void 0;
         r &&
           r.startsWith("http") &&
           t.rgVideoSources.push({ sURL: (0, jr.L$)(r), sFormat: "video/webm" });
-        const n = mp(e.args, "autoplay"),
+        const n = up(e.args, "autoplay"),
           s = "0" !== n && "off" !== n && "false" !== n,
-          a = mp(e.args, "controls"),
+          a = up(e.args, "controls"),
           o = "0" !== a && "off" !== a && "false" !== a,
-          l = mp(e.args, "loop"),
+          l = up(e.args, "loop"),
           c = "0" !== a && "off" !== a && "false" !== a;
         return i.createElement(rp, {
           video: t,
@@ -30875,9 +30897,9 @@
           bLoop: l ? c : s,
         });
       }
-      const fp = "ː",
-        bp = 604800;
-      class yp {
+      const bp = "ː",
+        yp = 604800;
+      class Bp {
         constructor() {
           (0, w.Gn)(this);
         }
@@ -30886,7 +30908,7 @@
         m_rtMostRecentEmoticon = void 0;
         static sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g");
         static sm_UnvalidatedEmoticonRegex = new RegExp(
-          `(?:${fp}|:)([a-zA-Z0-9_\\-]+)(?:${fp}|:)`,
+          `(?:${bp}|:)([a-zA-Z0-9_\\-]+)(?:${bp}|:)`,
           "g",
         );
         m_rgEmoticons = [];
@@ -30905,10 +30927,10 @@
             : s.TS.COMMUNITY_CDN_URL + "economy/emoticon/" + e;
         }
         static GetEmoticonReplaceRegex() {
-          return yp.sm_EmoticonRegex;
+          return Bp.sm_EmoticonRegex;
         }
         static GetUnvalidatedEmoticonReplaceRegex() {
-          return yp.sm_UnvalidatedEmoticonRegex;
+          return Bp.sm_UnvalidatedEmoticonRegex;
         }
         static BEmoticonFilterMatch(e, t) {
           return (
@@ -30917,14 +30939,14 @@
         }
         static FilterEmoticons(e, t) {
           return t && ":" !== t
-            ? e.filter((e) => yp.BEmoticonFilterMatch(e, t))
+            ? e.filter((e) => Bp.BEmoticonFilterMatch(e, t))
             : e;
         }
         static BStickerFilterMatch(e, t) {
           return e.name.toLowerCase().indexOf(t.toLowerCase()) > -1;
         }
         static FilterStickers(e, t) {
-          return t ? e.filter((e) => yp.BStickerFilterMatch(e, t)) : e;
+          return t ? e.filter((e) => Bp.BStickerFilterMatch(e, t)) : e;
         }
         SearchEmoticons(e, t = 25, r = !0) {
           function i(e) {
@@ -31078,7 +31100,7 @@
           this.m_rgRecentStickers = this.BuildRecentList(this.m_rgStickers);
         }
         BuildRecentList(e) {
-          const t = this.GetServerTime() - bp,
+          const t = this.GetServerTime() - yp,
             r = e.filter(
               ({ last_used: e, time_received: r }) => e || (r && r > t),
             );
@@ -31096,7 +31118,7 @@
             (this.m_rgEmoticons = []),
             (this.m_rgRecentEmoticons = void 0),
             (this.m_rtMostRecentEmoticon = void 0);
-          let t = this.GetServerTime() - bp;
+          let t = this.GetServerTime() - yp;
           for (let r of e) {
             let e = r.name;
             e.startsWith("^")
@@ -31118,12 +31140,12 @@
             (this.m_bEmoticonListRequested = !1);
         }
       }
-      (0, f.Cg)([w.sH], yp.prototype, "m_bInitialized", void 0),
-        (0, f.Cg)([w.sH], yp.prototype, "m_rtMostRecentEmoticon", void 0),
-        (0, f.Cg)([w.sH], yp.prototype, "m_rtLastStickerOrEffect", void 0),
-        (0, f.Cg)([w.XI], yp.prototype, "TrackEmoticonUsage", null);
+      (0, f.Cg)([w.sH], Bp.prototype, "m_bInitialized", void 0),
+        (0, f.Cg)([w.sH], Bp.prototype, "m_rtMostRecentEmoticon", void 0),
+        (0, f.Cg)([w.sH], Bp.prototype, "m_rtLastStickerOrEffect", void 0),
+        (0, f.Cg)([w.XI], Bp.prototype, "TrackEmoticonUsage", null);
       r(2060);
-      function Bp(e, t) {
+      function wp(e, t) {
         return Nr(
           e,
           (function (e) {
@@ -31135,19 +31157,19 @@
           })(t),
         );
       }
-      function wp(e, t, r) {
+      function Mp(e, t, r) {
         let n = e;
         return (
           n.toLowerCase().startsWith("http") || (n = "http://" + n),
-          i.createElement(Mp, { url: n, event: t }, r || e)
+          i.createElement(Sp, { url: n, event: t }, r || e)
         );
       }
-      const Mp = (e) => {
+      const Sp = (e) => {
         const { url: t, event: r, className: n, style: a } = e;
         let o,
           l = (0, Ra.OZ)(t);
         (l = (function (e, t) {
-          return Bp(e, t)
+          return wp(e, t)
             ? (s.TS.IN_CLIENT ? "steam://openurl_external/" : "") + Lr(e)
             : (0, jr.NT)(e);
         })(l, r)),
@@ -31169,9 +31191,9 @@
           ),
         );
       };
-      var Sp = r(6205);
-      class vp extends fa {
-        m_LinkFilter = Sp.O;
+      var vp = r(6205);
+      class Cp extends fa {
+        m_LinkFilter = vp.O;
         m_parentNode = void 0;
         m_mapHostToComponent;
         m_globalStoreLink;
@@ -31207,7 +31229,7 @@
                       );
                     break;
                   }
-              n || super.AppendNode(wp(i)),
+              n || super.AppendNode(Mp(i)),
                 (r = e.input.substring(e.index + i.length)),
                 (e = this.m_LinkFilter.exec(r));
             }
@@ -31215,7 +31237,7 @@
           r.length > 0 && super.AppendText(r, t);
         }
       }
-      class Cp extends fa {
+      class Rp extends fa {
         m_parentNode = void 0;
         constructor(e, t) {
           super(e), (this.m_parentNode = t);
@@ -31228,27 +31250,27 @@
             super.AppendText(r, t);
         }
       }
-      var Rp = r(6516),
-        Ip = r.n(Rp);
-      const Tp = new Map([
-          ...Array.from(op.entries()),
+      var Ip = r(6516),
+        Tp = r.n(Ip);
+      const Ep = new Map([
           ...Array.from(lp.entries()),
+          ...Array.from(cp.entries()),
           [
             "section",
             {
               Constructor: function (e) {
-                let t = mp(e.args, "id");
+                let t = up(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
                   "#" === t[0] &&
                   (t = t.substring(1));
-                const r = mp(e.args, "style"),
+                const r = up(e.args, "style"),
                   n = (0, ft.A)(
-                    Ip().Section,
-                    "note" == r && Ip().Note,
-                    "important" == r && Ip().Important,
-                    "warning" == r && Ip().Warning,
+                    Tp().Section,
+                    "note" == r && Tp().Note,
+                    "important" == r && Tp().Important,
+                    "warning" == r && Tp().Warning,
                   );
                 return i.createElement(
                   "div",
@@ -31269,7 +31291,7 @@
                   (r = e?.args?.[""]);
                 const n = e?.args?.alt,
                   s = (function (e, t, r = 0) {
-                    return cp(e, t, r);
+                    return mp(e, t, r);
                   })(r, e.language);
                 return null == s
                   ? null
@@ -31277,18 +31299,18 @@
                     ? ((r = s),
                       t
                         ? i.createElement(ga, {
-                            className: Ip().FAQImage,
+                            className: Tp().FAQImage,
                             src: r,
                             alt: n,
                           })
                         : ((r = r.replace("http://", "https://")),
                           i.createElement("img", {
-                            className: Ip().FAQImage,
+                            className: Tp().FAQImage,
                             src: r,
                             alt: n,
                           })))
                     : i.createElement(_a, {
-                        className: Ip().FAQImage,
+                        className: Tp().FAQImage,
                         rgSources: s,
                         alt: n,
                       });
@@ -31300,7 +31322,7 @@
             "exclude_realm",
             {
               Constructor: function (e) {
-                const t = mp(e.args);
+                const t = up(e.args);
                 return ("global" == t &&
                   s.TS.EREALM == S.TU.k_ESteamRealmGlobal) ||
                   ("china" == t && (0, s.Y2)())
@@ -31311,12 +31333,12 @@
             },
           ],
         ]),
-        Ep = (e) => {
+        zp = (e) => {
           const { text: t, bShowErrorInfo: r } = e,
             n = i.useCallback(
               (e) =>
-                new Cp(
-                  new vp(
+                new Rp(
+                  new Cp(
                     new ba(new ha(), 0),
                     e,
                     [{ urlRegExp: /youtu.be|youtube.com/i, fnBBComponent: al }],
@@ -31326,15 +31348,15 @@
                 ),
               [],
             ),
-            a = i.useRef(new Ma(Tp, n, s.TS.LANGUAGE));
+            a = i.useRef(new Ma(Ep, n, s.TS.LANGUAGE));
           return i.createElement(
             "div",
-            { className: Ip().FAQContainer },
+            { className: Tp().FAQContainer },
             a.current.ParseBBCode(t, { showErrorInfo: r }),
           );
         };
-      var zp = r(8735);
-      const Fp = (e) => {
+      var Fp = r(8735);
+      const Op = (e) => {
           const { title: t, content: r, bIsPreview: n, elSideBars: a } = e,
             o = (0, d.zy)();
           return (
@@ -31347,26 +31369,26 @@
             }, [o]),
             i.createElement(
               "div",
-              { className: (0, ft.A)(zp.FAQViewPage, s.TS.LANGUAGE) },
+              { className: (0, ft.A)(Fp.FAQViewPage, s.TS.LANGUAGE) },
               i.createElement(
                 "a",
-                { className: zp.SupportTitle, href: `${s.TS.HELP_BASE_URL}` },
+                { className: Fp.SupportTitle, href: `${s.TS.HELP_BASE_URL}` },
                 (0, Xe.we)("#FAQViewer_SteamSupport"),
               ),
               i.createElement(
                 "div",
-                { className: zp.Columns },
+                { className: Fp.Columns },
                 i.createElement(
                   "div",
-                  { className: (0, ft.A)(zp.LeftCol) },
-                  i.createElement("div", { className: zp.TopColorBar }),
+                  { className: (0, ft.A)(Fp.LeftCol) },
+                  i.createElement("div", { className: Fp.TopColorBar }),
                   i.createElement(
                     "div",
-                    { className: zp.FAQTopicCtn },
+                    { className: Fp.FAQTopicCtn },
                     i.createElement(
                       "div",
                       {
-                        className: zp.FAQTitle,
+                        className: Fp.FAQTitle,
                         role: "heading",
                         "aria-level": 1,
                       },
@@ -31374,25 +31396,25 @@
                     ),
                     i.createElement(
                       "div",
-                      { className: zp.FAQContent },
-                      i.createElement(Ep, { text: r, bShowErrorInfo: n }),
+                      { className: Fp.FAQContent },
+                      i.createElement(zp, { text: r, bShowErrorInfo: n }),
                     ),
                   ),
                 ),
                 i.createElement(
                   "div",
-                  { className: zp.RightCol },
-                  i.createElement("div", { className: zp.SectionCtn }, a),
+                  { className: Fp.RightCol },
+                  i.createElement("div", { className: Fp.SectionCtn }, a),
                 ),
               ),
             )
           );
         },
-        Op = (e) =>
-          i.createElement("div", { className: zp.FAQViewPage }, e.children);
-      var Ap = r(7735);
-      const Dp = "nicknames";
-      const kp = new (Be())(
+        Ap = (e) =>
+          i.createElement("div", { className: Fp.FAQViewPage }, e.children);
+      var Dp = r(7735);
+      const kp = "nicknames";
+      const Wp = new (Be())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -31437,26 +31459,26 @@
             })(e),
           { cache: !1 },
         ),
-        Wp = "avatarandpersonas";
-      var Up = r(5736);
-      function Pp(e) {
+        Up = "avatarandpersonas";
+      var Pp = r(5736);
+      function jp(e) {
         const { accountID: t, bHideWhenNotAvailable: r, bHideName: n } = e,
           [a] = (function (e) {
             const { data: t, isLoading: r } = (0, Po.I)({
-              queryKey: [Wp, e],
-              queryFn: () => kp.load(e),
+              queryKey: [Up, e],
+              queryFn: () => Wp.load(e),
             });
             return [t, r];
           })(t),
           o = (function (e) {
             const t = (0, g.KV)(),
               { data: r, isLoading: i } = (0, Po.I)({
-                queryKey: [Dp],
+                queryKey: [kp],
                 queryFn: async () => {
                   const e = new Map();
                   if (s.iA.logged_in) {
-                    const r = M.w.Init(Ap.dN),
-                      i = (await Ap.xt.GetNicknameList(t, r)).Body().toObject();
+                    const r = M.w.Init(Dp.dN),
+                      i = (await Dp.xt.GetNicknameList(t, r)).Body().toObject();
                     i?.nicknames &&
                       i.nicknames.length > 0 &&
                       i.nicknames.forEach((t) => {
@@ -31483,7 +31505,7 @@
                 "a",
                 { href: c },
                 i.createElement("img", {
-                  className: Up.SmallAvatar,
+                  className: Pp.SmallAvatar,
                   src: a.avatar_url,
                   "data-miniprofile": "s" + l.ConvertTo64BitString(),
                 }),
@@ -31496,31 +31518,31 @@
               ),
         );
       }
-      var jp,
-        Lp = r(1675);
+      var Lp,
+        Np = r(1675);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
           (e.k_eCommunityEdit = "edit"),
           (e.k_eCommunityDashboard = "dashboard"),
           (e.k_eCommunityPreview = "preview");
-      })(jp || (jp = {}));
-      const Np = (e) => {
+      })(Lp || (Lp = {}));
+      const qp = (e) => {
         const { route: t, faqid: r } = e,
           n = (function (e, t) {
             let r = "/faqs/" + s.UF.VANITY_ID + "/";
             switch (e) {
-              case jp.k_eView:
-              case jp.k_eCommunityView:
+              case Lp.k_eView:
+              case Lp.k_eCommunityView:
                 r += "view/" + ge(t);
                 break;
-              case jp.k_eCommunityEdit:
+              case Lp.k_eCommunityEdit:
                 r += "edit/" + ge(t);
                 break;
-              case jp.k_eCommunityDashboard:
+              case Lp.k_eCommunityDashboard:
                 r += "dashboard";
                 break;
-              case jp.k_eCommunityPreview:
+              case Lp.k_eCommunityPreview:
                 r += "preview/" + ge(t);
             }
             return r;
@@ -31542,9 +31564,9 @@
                 e.children,
               );
       };
-      var qp = r(572),
-        xp = r(6891);
-      const Gp = (e) => {
+      var xp = r(572),
+        Gp = r(6891);
+      const Hp = (e) => {
           const { faqContent: t } = e,
             [r, n] = (function (e, t, r) {
               const [n, s] = i.useState(null),
@@ -31564,19 +31586,19 @@
           return de.Get().BHasFAQEdit()
             ? i.createElement(
                 "div",
-                { className: (0, ft.A)(xp.Section, xr.ValveOnlyBackground) },
+                { className: (0, ft.A)(Gp.Section, xr.ValveOnlyBackground) },
                 i.createElement(
                   "div",
-                  { className: xp.TopicHeader },
+                  { className: Gp.TopicHeader },
                   (0, Xe.we)("#FAQViewer_AdminLinks"),
                 ),
                 i.createElement(
                   "div",
-                  { className: qp.InfoRow },
+                  { className: xp.InfoRow },
                   (0, Xe.PP)(
                     "#FAQViewer_Admin_LastUpdate",
                     r?.author_account_id
-                      ? i.createElement(Pp, {
+                      ? i.createElement(jp, {
                           accountID: Number.parseInt(r.author_account_id),
                         })
                       : (0, Xe.we)("#FAQViewer_UnknownUser"),
@@ -31585,16 +31607,16 @@
                       null,
                       (0, Xe.TW)(t.timestamp) +
                         "@" +
-                        (0, Lp.KC)(t.timestamp, { bForce24HourClock: !1 }),
+                        (0, Np.KC)(t.timestamp, { bForce24HourClock: !1 }),
                     ),
                   ),
                 ),
-                i.createElement(Hp, { faqContent: t }),
+                i.createElement(Vp, { faqContent: t }),
                 i.createElement(
-                  Np,
+                  qp,
                   {
                     faqid: t.faq_id,
-                    route: jp.k_eCommunityEdit,
+                    route: Lp.k_eCommunityEdit,
                     bForceAnchor: !0,
                   },
                   (0, Xe.we)("#FAQViewer_GotoEditor"),
@@ -31602,7 +31624,7 @@
               )
             : null;
         },
-        Hp = (e) => {
+        Vp = (e) => {
           const { faqContent: t } = e,
             [r, n] = (function (e) {
               const [t, r] = i.useState(de.Get().GetFAQDraftContent(e)),
@@ -31626,10 +31648,10 @@
           const s = r.GetLastSavedDraftVersion(t.language);
           return i.createElement(
             "div",
-            { className: qp.InfoRow },
+            { className: xp.InfoRow },
             (0, Xe.PP)(
               "#FAQViewer_DraftNewer",
-              i.createElement(Pp, {
+              i.createElement(jp, {
                 accountID: Number.parseInt(s.author_account_id),
               }),
               i.createElement(
@@ -31637,29 +31659,29 @@
                 null,
                 (0, Xe.TW)(s.timestamp) +
                   "@" +
-                  (0, Lp.KC)(s.timestamp, { bForce24HourClock: !1 }),
+                  (0, Np.KC)(s.timestamp, { bForce24HourClock: !1 }),
               ),
             ),
           );
         },
-        Vp = (e) =>
+        Kp = (e) =>
           i.createElement(
             i.Fragment,
             null,
             i.createElement(
               "div",
-              { className: (0, ft.A)(xp.Section, xp.NeedHelp) },
+              { className: (0, ft.A)(Gp.Section, Gp.NeedHelp) },
               i.createElement(
                 "div",
-                { className: xp.LeftCol },
+                { className: Gp.LeftCol },
                 i.createElement(Et._VW, { role: "presentation" }),
               ),
               i.createElement(
                 "div",
-                { className: xp.RightCol },
+                { className: Gp.RightCol },
                 i.createElement(
                   "div",
-                  { className: xp.TopicHeader },
+                  { className: Gp.TopicHeader },
                   (0, Xe.we)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
                 ),
                 i.createElement(
@@ -31669,7 +31691,7 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: xp.CenterButtonCtn },
+                  { className: Gp.CenterButtonCtn },
                   i.createElement(
                     "a",
                     {
@@ -31684,18 +31706,18 @@
             !(0, s.Y2)() &&
               i.createElement(
                 "div",
-                { className: (0, ft.A)(xp.Section, xp.CommunityHelp) },
+                { className: (0, ft.A)(Gp.Section, Gp.CommunityHelp) },
                 i.createElement(
                   "div",
-                  { className: xp.LeftCol },
+                  { className: Gp.LeftCol },
                   i.createElement(Et.ROZ, { role: "presentation" }),
                 ),
                 i.createElement(
                   "div",
-                  { className: xp.RightCol },
+                  { className: Gp.RightCol },
                   i.createElement(
                     "div",
-                    { className: xp.TopicHeader },
+                    { className: Gp.TopicHeader },
                     (0, Xe.we)("#FAQViewer_SideBar_CommunityHelp_Title"),
                   ),
                   i.createElement(
@@ -31705,7 +31727,7 @@
                   ),
                   i.createElement(
                     "div",
-                    { className: xp.CenterButtonCtn },
+                    { className: Gp.CenterButtonCtn },
                     i.createElement(
                       "a",
                       {
@@ -31718,9 +31740,9 @@
                 ),
               ),
           );
-      var Kp = r(4043),
-        Qp = r.n(Kp);
-      const Yp = (e) => {
+      var Qp = r(4043),
+        Yp = r.n(Qp);
+      const Zp = (e) => {
           const { faqid: t } = e,
             [r, n] = (function (e, t) {
               return [e && de.Get().GetFAQPublishedContent(e, t), !0];
@@ -31731,23 +31753,23 @@
             }, []),
             n
               ? r
-                ? i.createElement(Fp, {
+                ? i.createElement(Op, {
                     title: r.title,
                     content: r.content,
                     elSideBars: [
-                      i.createElement(Vp, { key: "sidebar", faqContent: r }),
-                      i.createElement(Gp, { key: "adminbar", faqContent: r }),
+                      i.createElement(Kp, { key: "sidebar", faqContent: r }),
+                      i.createElement(Hp, { key: "adminbar", faqContent: r }),
                     ],
                   })
                 : i.createElement(
-                    Op,
+                    Ap,
                     null,
-                    i.createElement(Zp, {
+                    i.createElement($p, {
                       strError: (0, Xe.we)("#FAQViewer_NoFAQFound"),
                     }),
                   )
               : i.createElement(
-                  Op,
+                  Ap,
                   null,
                   i.createElement(Mo, {
                     position: "center",
@@ -31757,26 +31779,26 @@
                 )
           );
         },
-        Zp = (e) =>
+        $p = (e) =>
           i.createElement(
             "div",
-            { className: Qp().ErrorCtn },
-            i.createElement("div", { className: Qp().ErrorMsg }, e.strError),
+            { className: Yp().ErrorCtn },
+            i.createElement("div", { className: Yp().ErrorMsg }, e.strError),
             i.createElement(
               "a",
-              { className: Qp().EscapeLink, href: s.TS.HELP_BASE_URL },
+              { className: Yp().EscapeLink, href: s.TS.HELP_BASE_URL },
               (0, Xe.we)("#Help_GoToHomepage"),
             ),
           );
-      var $p = r(7692);
-      function Xp(e) {
+      var Xp = r(7692);
+      function Jp(e) {
         const { redirectUrl: t = s.TS.HELP_BASE_URL, accountName: r } = e,
           n = (0, g.rW)(),
           [a, o] = (0, i.useState)(!1),
           l = !!(0, d.W5)(c());
         return i.createElement(
           "div",
-          { className: l ? void 0 : $p.LoginContainer },
+          { className: l ? void 0 : Xp.LoginContainer },
           a
             ? i.createElement(xu, null)
             : i.createElement(Gu, {
@@ -31794,8 +31816,8 @@
               }),
         );
       }
-      const Jp = i.lazy(() => r.e(976).then(r.bind(r, 9299))),
-        eg = (e) =>
+      const eg = i.lazy(() => r.e(976).then(r.bind(r, 9299))),
+        tg = (e) =>
           i.createElement(
             u.Kd,
             { basename: m() },
@@ -31803,7 +31825,7 @@
               "div",
               { className: kr().App },
               i.createElement(
-                tg,
+                rg,
                 null,
                 i.createElement(
                   Pe.tH,
@@ -31814,7 +31836,7 @@
                     i.createElement(Mr, {
                       config: {
                         "green-envelope": () =>
-                          i.createElement(Jp, {
+                          i.createElement(eg, {
                             bResponsiveHeader: !1,
                             notifications: (0, s.Tc)(
                               "steam_notifications",
@@ -31822,7 +31844,7 @@
                             ),
                           }),
                         "green-envelope-responsive": () =>
-                          i.createElement(Jp, {
+                          i.createElement(eg, {
                             bResponsiveHeader: !0,
                             notifications: (0, s.Tc)(
                               "steam_notifications",
@@ -31862,7 +31884,7 @@
                                       ? B.A.fromString(t, !0, 16).toString()
                                       : null;
                                   })(t);
-                                return i.createElement(Yp, { faqid: n });
+                                return i.createElement(Zp, { faqid: n });
                               },
                             },
                           }),
@@ -31872,7 +31894,7 @@
                         { path: [...l(), c()] },
                         i.createElement(Mr, {
                           config: {
-                            login: (e) => i.createElement(Xp, { ...e }),
+                            login: (e) => i.createElement(Jp, { ...e }),
                           },
                         }),
                       ),
@@ -31883,7 +31905,7 @@
               ),
             ),
           );
-      function tg(e) {
+      function rg(e) {
         const { children: t } = e;
         return i.createElement(
           Ir.Ay,
@@ -31892,7 +31914,7 @@
             s.ss,
             null,
             i.createElement(
-              ig,
+              ng,
               null,
               i.createElement(
                 Fr,
@@ -31911,12 +31933,12 @@
           ),
         );
       }
-      function rg() {
+      function ig() {
         const e = (0, s.Tc)("help_user_config", "application_config");
         return new h.D(s.TS.WEBAPI_BASE_URL, e?.webapi_token);
       }
-      function ig(e) {
-        const t = (0, Je.bs)(rg),
+      function ng(e) {
+        const t = (0, Je.bs)(ig),
           r = (0, Je.bs)(i.useCallback(() => new _.A(), [])),
           n = (0, i.useMemo)(
             () => ({ useActiveAccount: () => s.iA.steamid }),
@@ -31932,14 +31954,14 @@
           ),
         );
       }
-      var ng = r(8812);
+      var sg = r(8812);
       r(4641);
       (0, w.jK)({ enforceActions: "never" }),
         (0, $e.oQ)(async () => {
           document.getElementById("application_config")
             ? (0, s.XJ)("application_config")
             : (0, s.XJ)(),
-            (0, ng.aj)().Init(
+            (0, sg.aj)().Init(
               "Help",
               CLSTAMP,
               new h.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -31958,15 +31980,15 @@
                   ]);
                 Xe.pf.InitFromObjects(s, o, n, a);
               }
-              for (const e of sg) Xe.pf.AddTokens(e);
-              sg = void 0;
+              for (const e of ag) Xe.pf.AddTokens(e);
+              ag = void 0;
             })(s.TS.LANGUAGE),
             document.getElementById("application_root") &&
               n
                 .createRoot(document.getElementById("application_root"))
-                .render(i.createElement(eg, {}));
+                .render(i.createElement(tg, {}));
         });
-      let sg = [];
+      let ag = [];
     },
     2160: (e, t, r) => {
       "use strict";
@@ -32761,7 +32783,7 @@
             s.current && document.activeElement == s.current,
         });
         const l = (function (e) {
-            const t = o.useRef(),
+            const t = o.useRef(void 0),
               r = o.useContext(_);
             t.current || (t.current = r(e || {}));
             return t.current;
@@ -55586,7 +55608,7 @@
         );
       }
       function d(e) {
-        const t = i.useRef();
+        const t = i.useRef(void 0);
         return i.useCallback(
           () => (
             (t.current && t.current.factory == e) ||
@@ -55627,7 +55649,7 @@
                 });
       }
       function o(e, t) {
-        const r = i.useRef();
+        const r = i.useRef(void 0);
         return i.useCallback((t) => {
           r.current && r.current(), (r.current = e(t));
         }, t);
@@ -61814,6 +61836,8 @@
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
+          "/.millennium/Dist",
+          "/react-waypoint/",
         ];
       function J() {
         try {
@@ -62103,7 +62127,8 @@
         return [e, ...t]
           .map((e) => {
             try {
-              return String(e);
+              let t = String(e);
+              return "[object Object]" == t && (t = JSON.stringify(e)), t;
             } catch (e) {
               return "[Stringify Error]";
             }
@@ -66323,7 +66348,7 @@
       var i = r(626);
       let n = 0;
       function s() {
-        const e = i.useRef();
+        const e = i.useRef(void 0);
         return (
           void 0 === e.current && (e.current = "svgid_" + n++),
           [e.current, `url(#${e.current})`]
@@ -68048,7 +68073,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 8439), e((e.s = t));
+      return (t = 59), e((e.s = t));
       var t;
     });
     e.O();

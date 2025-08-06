@@ -25,6 +25,7 @@
 	"Menu_Cart": "Koszyk",
 	"Menu_Popover_TopLinks": "Najpopularniejsze linki",
 	"Menu_Popover_StoreHome": "Strona główna sklepu",
+	"Menu_Popover_GreatonDeck": "Świetne na Decku",
 	"Menu_Popover_FreeToPlay": "Free to Play",
 	"Menu_Popover_SteamCharts": "Notowania Steam",
 	"Menu_Popover_Upcoming": "Nadchodzące tytuły",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Żadne elementy nie pasują do twojego zapytania.",
 	"Menu_SearchBar_AdvancedSearch": "Wyszukiwanie zaawansowane",
 	"Menu_Search": "Szukaj",
-	"Menu_Label": "Menu sklepu"
+	"Menu_Label": "Menu sklepu",
+	"ItemFlag_InLibrary": "W BIBLIOTECE",
+	"ItemFlag_OnWishlist": "NA LIŚCIE ŻYCZEŃ",
+	"ItemFlag_InCart": "W KOSZYKU",
+	"ItemFlag_Ignored": "ZIGNOROWANO",
+	"ItemFlag_ExcludedByPreferences": "WYKLUCZONO PRZEZ PREFERENCJE"
 }`);
     },
   },

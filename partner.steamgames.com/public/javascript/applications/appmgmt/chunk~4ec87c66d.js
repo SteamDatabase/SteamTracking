@@ -5360,6 +5360,14 @@
           e != this.m_model.collect_game_profile_intent &&
             ((this.m_model.collect_game_profile_intent = e), this.SetDirty(!0));
         }
+        BIsCollectGameDiscountRequirement() {
+          return this.m_model.collect_game_discount_requirement;
+        }
+        SetCollectGameDiscountRequirement(e) {
+          e != this.m_model.collect_game_discount_requirement &&
+            ((this.m_model.collect_game_discount_requirement = e),
+            this.SetDirty(!0));
+        }
         BHasCollectDemoDeadlineDate() {
           return Boolean(this.m_model.collect_demo_deadline);
         }
@@ -6563,6 +6571,18 @@
           [o.XI.bound],
           w.prototype,
           "SetCollectGameProfileIntent",
+          null,
+        ),
+        (0, n.Cg)(
+          [g.oI],
+          w.prototype,
+          "BIsCollectGameDiscountRequirement",
+          null,
+        ),
+        (0, n.Cg)(
+          [o.XI.bound],
+          w.prototype,
+          "SetCollectGameDiscountRequirement",
           null,
         ),
         (0, n.Cg)([g.oI], w.prototype, "BHasCollectDemoDeadlineDate", null),
@@ -23617,14 +23637,15 @@
       }
       function Pt(e) {
         const t = s.Mt.Get(),
-          [a, r, i, l] = (0, Fe.q3)(() => [
+          [a, r, i, l, o] = (0, Fe.q3)(() => [
             t.BIsAdditionalFeaturingSectionEnabled(),
             t.BIsCollectTrailerPermissions(),
             t.BIsCollectDemoPermissions(),
             t.BIsCollectGameProfileIntent(),
+            t.BIsCollectGameDiscountRequirement(),
           ]),
-          [o, c] = (0, n.useState)(t.BHasCollectDemoDeadlineDate()),
-          [d] = (0, Fe.q3)(() => [t.GetEventStartTime()]);
+          [c, d] = (0, n.useState)(t.BHasCollectDemoDeadlineDate()),
+          [u] = (0, Fe.q3)(() => [t.GetEventStartTime()]);
         return n.createElement(
           rt.qx,
           { title: "Additional Featuring Section", bStartMinimized: !1 },
@@ -23685,11 +23706,19 @@
                 onChange: t.SetCollectGameProfileIntent,
                 checked: l,
               }),
-              o
+              n.createElement(m.Yh, {
+                label:
+                  "Show that discount is required (also needs one of the options above to be selected)",
+                tooltip:
+                  "This lets the partner know that we expect a discount in order to include their game in this event for featuring",
+                onChange: t.SetCollectGameDiscountRequirement,
+                checked: o,
+              }),
+              c
                 ? n.createElement(vt.K, {
                     strDescription:
-                      "Date by which partners have a submitted, reviewed and approved demo or discount",
-                    nLatestTime: d,
+                      "Date by which partners have a submitted, reviewed and approved demo, trailer, or discount",
+                    nLatestTime: u,
                     nEarliestTime: 0,
                     fnGetTimeToUpdate: t.GetCollectDemoDeadlineDate,
                     fnSetTimeToUpdate: t.SetCollectDemoDeadlineDate,
@@ -23697,9 +23726,9 @@
                 : n.createElement(m.Yh, {
                     label: "Show a specific due date",
                     tooltip:
-                      "Date by which partners have a submitted, reviewed and approved demo or discount",
-                    onChange: c,
-                    checked: o,
+                      "Date by which partners have a submitted, reviewed and approved demo, trailer, or discount",
+                    onChange: d,
+                    checked: c,
                   }),
             ),
           ),
@@ -25421,7 +25450,7 @@
               n.createElement(
                 "p",
                 null,
-                "Specify when the trailer will be available. If missing, we won't show in the documentation",
+                "Specify when our official trailer will be made available. If this is not set, we won't show this info in the auto-generated documentation.",
               ),
               n.createElement(vt.K, {
                 strDescription: "Trailer Live Date",
@@ -36150,8 +36179,11 @@
         const { optInDefinition: t } = e,
           a = t.event_title[b.TS.LANGUAGE] || t.event_title.english,
           r = t.do_anytime.enter_discounts,
-          i = t.launch_demo?.enabled,
-          [s, l, o] = (0, Fe.q3)(() => [
+          i = t.public_doc_wiki_url,
+          s = t.launch_demo?.enabled,
+          l = Boolean(t.collect_trailer_permissions),
+          o = Boolean(t.collect_game_discount_requirement),
+          [c, m, d] = (0, Fe.q3)(() => [
             ts.Get().GetModel().jsondata.trailer_permission,
             ts.Get().GetModel().jsondata.rtime_granting_trailer,
             ts.Get().GetModel().jsondata.accountid_granting_trailer,
@@ -36196,11 +36228,15 @@
             null,
             (0, R.we)("#OptIn_Collect_Trailer_check", a),
           ),
-          n.createElement(
-            "p",
-            null,
-            (0, R.we)("#OptIn_Collect_Permission_DocReminder"),
-          ),
+          i &&
+            n.createElement(
+              "p",
+              null,
+              (0, R.oW)(
+                "#OptIn_Collect_Permission_DocReminder_wLink",
+                n.createElement("a", { href: `${i}`, target: "_blank" }),
+              ),
+            ),
           n.createElement(
             "div",
             { className: "eligibility" },
@@ -36209,23 +36245,45 @@
               null,
               (0, R.we)("#OptIn_Collect_Trailer_eligibility"),
             ),
-            Boolean(r && t.collect_demo_deadline) &&
+            Boolean(r || o) &&
               n.createElement(
-                "p",
+                n.Fragment,
                 null,
-                (0, R.we)(
-                  "#OptIn_Collect_Trailer_check_req_discount",
-                  (0, R.$z)(t.collect_demo_deadline),
-                ),
+                t.collect_demo_deadline
+                  ? n.createElement(
+                      "p",
+                      null,
+                      (0, R.we)(
+                        "#OptIn_Collect_Trailer_check_req_discount",
+                        (0, R.$z)(t.collect_demo_deadline),
+                      ),
+                    )
+                  : n.createElement(
+                      "p",
+                      null,
+                      (0, R.we)(
+                        "#OptIn_Collect_Trailer_check_req_discount_noDate",
+                      ),
+                    ),
               ),
-            Boolean(i && t.collect_demo_deadline) &&
+            Boolean(s || l) &&
               n.createElement(
-                "p",
+                n.Fragment,
                 null,
-                (0, R.we)(
-                  "#OptIn_Collect_Trailer_deadline_1",
-                  (0, R.$z)(t.collect_demo_deadline),
-                ),
+                t.collect_demo_deadline
+                  ? n.createElement(
+                      "p",
+                      null,
+                      (0, R.we)(
+                        "#OptIn_Collect_Trailer_deadline_1",
+                        (0, R.$z)(t.collect_demo_deadline),
+                      ),
+                    )
+                  : n.createElement(
+                      "p",
+                      null,
+                      (0, R.we)("#OptIn_Collect_Trailer_deadline_1_noDate"),
+                    ),
               ),
           ),
           n.createElement(
@@ -36235,7 +36293,7 @@
               type: "radio",
               id: "GatherTrailerPermission",
               onChange: () => ts.Get().SetCheckedTrailerUsage(!0),
-              checked: Boolean(s && l),
+              checked: Boolean(c && m),
               value: "1",
               name: "trailer_permission",
             }),
@@ -36252,7 +36310,7 @@
               type: "radio",
               id: "GatherTrailerNoPermission",
               onChange: () => ts.Get().SetCheckedTrailerUsage(!1),
-              checked: Boolean(!s && !l),
+              checked: Boolean(!c && !m),
               value: "0",
               name: "trailer_permission",
             }),
@@ -36262,16 +36320,16 @@
               (0, R.we)("#OptIn_Collect_Trailer_nocheck_label"),
             ),
           ),
-          Boolean(l) &&
+          Boolean(m) &&
             n.createElement("input", {
               type: "hidden",
-              value: l,
+              value: m,
               name: "rtime_granting_trailer",
             }),
-          Boolean(o) &&
+          Boolean(d) &&
             n.createElement("input", {
               type: "hidden",
-              value: o,
+              value: d,
               name: "accountid_granting_trailer",
             }),
           n.createElement("br", null),
@@ -36282,7 +36340,8 @@
         const { optInDefinition: t } = e,
           a = t.event_title[b.TS.LANGUAGE] || t.event_title.english,
           r = t.do_anytime.enter_discounts,
-          [i, s, l] = (0, Fe.q3)(() => [
+          i = t.public_doc_wiki_url,
+          [s, l, o] = (0, Fe.q3)(() => [
             ts.Get().GetModel().jsondata.demo_permission,
             ts.Get().GetModel().jsondata.rtime_granting_demo,
             ts.Get().GetModel().jsondata.accountid_granting_demo,
@@ -36323,11 +36382,15 @@
             ),
           ),
           n.createElement("p", null, (0, R.we)("#OptIn_Collect_Demo_check", a)),
-          n.createElement(
-            "p",
-            null,
-            (0, R.we)("#OptIn_Collect_Permission_DocReminder"),
-          ),
+          i &&
+            n.createElement(
+              "p",
+              null,
+              (0, R.oW)(
+                "#OptIn_Collect_Permission_DocReminder_wLink",
+                n.createElement("a", { href: `${i}`, target: "_blank" }),
+              ),
+            ),
           n.createElement(
             "div",
             { className: "eligibility" },
@@ -36362,7 +36425,7 @@
               type: "radio",
               id: "GatherDemoPermission",
               onChange: () => ts.Get().SetCheckedDemorUsage(!0),
-              checked: Boolean(i && s),
+              checked: Boolean(s && l),
               value: "1",
               name: "demo_permission",
             }),
@@ -36379,7 +36442,7 @@
               type: "radio",
               id: "GatherNoDemoPermission",
               onChange: () => ts.Get().SetCheckedDemorUsage(!1),
-              checked: Boolean(!i && !s),
+              checked: Boolean(!s && !l),
               value: "0",
               name: "demo_permission",
             }),
@@ -36389,16 +36452,16 @@
               (0, R.we)("#OptIn_Collect_Demo_nocheck_label"),
             ),
           ),
-          Boolean(s) &&
-            n.createElement("input", {
-              type: "hidden",
-              value: s,
-              name: "rtime_granting_demo",
-            }),
           Boolean(l) &&
             n.createElement("input", {
               type: "hidden",
               value: l,
+              name: "rtime_granting_demo",
+            }),
+          Boolean(o) &&
+            n.createElement("input", {
+              type: "hidden",
+              value: o,
               name: "accountid_granting_demo",
             }),
           n.createElement("br", null),
@@ -49800,7 +49863,7 @@
             l.createElement(te.a, {
               rgSupportArtwork: n,
               rgRealmList: r,
-              strOverrideDragAndDropText:
+              elOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
               strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}promotion/sales/ajaxuploadasset/${t.GetClanAccountID()}`,
               fnOnUploadSuccess: i,
@@ -50270,7 +50333,7 @@
             l.createElement(te.a, {
               rgSupportArtwork: a,
               rgRealmList: n,
-              strOverrideDragAndDropText:
+              elOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
               strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=spotlights`,
               fnOnUploadSuccess: r,
@@ -50900,7 +50963,7 @@
             l.createElement(te.a, {
               rgSupportArtwork: n,
               rgRealmList: r,
-              strOverrideDragAndDropText:
+              elOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
               strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=${t.GetTypeString()}`,
               fnOnUploadSuccess: i,
@@ -51459,7 +51522,7 @@
             l.createElement(te.a, {
               rgSupportArtwork: n,
               rgRealmList: r,
-              strOverrideDragAndDropText:
+              elOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
               strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${t.GetID()}&clustertype=${t.GetTypeString()}`,
               fnOnUploadSuccess: i,
@@ -51957,7 +52020,7 @@
             l.createElement(te.a, {
               rgSupportArtwork: r,
               rgRealmList: i,
-              strOverrideDragAndDropText:
+              elOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
               strUploadAjaxURL: `${T.TS.PARTNER_BASE_URL}appsupport/ajaxuploadasset/${a.GetID()}`,
               fnOnUploadSuccess: s,
@@ -53233,7 +53296,7 @@
                 l.createElement(p.a, {
                   rgSupportArtwork: S,
                   rgRealmList: v,
-                  strOverrideDragAndDropText:
+                  elOverrideDragAndDropText:
                     "Drag any asset here to upload (max 5MB)",
                   strUploadAjaxURL: `${B.TS.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
                   fnOnUploadSuccess: y,
@@ -70864,7 +70927,7 @@
             bFilterToSales: g,
           } = e,
           [D, I] = r.useState(null),
-          C = r.useRef(),
+          C = r.useRef(void 0),
           T = r.useRef(null),
           B = r.useCallback(
             (e) => {
@@ -72557,7 +72620,7 @@
             s = (0, c.useRef)(null),
             l = (0, c.useRef)(null),
             o = (0, c.useRef)(0),
-            m = (0, c.useRef)();
+            m = (0, c.useRef)(void 0);
           (0, c.useEffect)(
             () => () => {
               window.clearTimeout(o.current),
@@ -76874,7 +76937,7 @@
       }
       function lt(e) {
         const { onClick: t } = e,
-          a = i.useRef();
+          a = i.useRef(void 0);
         return (
           i.useEffect(() => {
             a?.current?.scrollIntoView();

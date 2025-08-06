@@ -1,15 +1,23 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -21,28 +29,19 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -452,7 +451,7 @@ function _(_, _) {
   return {
     queryKey: ["StoreBrowsePriceStops", _],
     queryFn: async () => _(_, _),
-    staleTime: 24 * 60 * 60 * 1e3,
+    staleTime: 1440 * 60 * 1e3,
   };
 }
 async function _(_, _) {
@@ -7739,7 +7738,7 @@ function _(_, _, _, _, _ = 0, _ = {}) {
   return {
     queryKey: _(_, _, _),
     queryFn: () => _(_, _, _, _, _, _),
-    staleTime: 10 * 60 * 1e3,
+    staleTime: 600 * 1e3,
   };
 }
 function _(_, _ = 0, _ = {}) {
@@ -7764,6 +7763,38 @@ function _(_, _) {
     queryKey: _(_),
     exact: !1,
   });
+}
+var _ = _({
+  Methods: ["POST"],
+});
+async function _(_) {
+  return _("/wishlist/action/reorder", {
+    method: "POST",
+    body: JSON.stringify({
+      rgApps: _,
+    }),
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+  });
+}
+function _(_, _, _) {
+  _(_ >= 0 && _ < _.length, `Invalid source index: ${_} items: ${_.length}`),
+    _(_ >= 0 && _ < _.length, `Invalid target index: ${_} items: ${_.length}`);
+  let _ = _.slice(),
+    _ = _.splice(_, 1);
+  _.splice(_, 0, ..._);
+  let _ = [];
+  return (
+    _.forEach((_, _) => {
+      let _ = _ + 1;
+      _.priority != _ && ((_.priority = _), _.push(_));
+    }),
+    {
+      rgNewItems: _,
+      rgChangedIndicies: _,
+    }
+  );
 }
 var _ = _(_(), 1);
 var _ = "/TB3SP4DA.png";
@@ -7830,7 +7861,7 @@ function _(_, _) {
       let _ = await _(_, _);
       return new Set(_);
     },
-    staleTime: 10 * 60 * 1e3,
+    staleTime: 600 * 1e3,
   };
 }
 function _() {
@@ -8540,7 +8571,7 @@ function _(_) {
     _ = _.useCallback((_) => {
       _(parseInt(_.currentTarget.value));
     }, []),
-    _ = _.useRef();
+    _ = _.useRef(void 0);
   if (
     ((_.current = () => {
       _ !== void 0 &&
@@ -9600,7 +9631,7 @@ var _ = _.forwardRef(function (_, _) {
     _ = _(),
     _ = _ ? _ + _ : _ + _,
     _ = _ ? 30 : 10,
-    _ = _.useRef(),
+    _ = _.useRef(void 0),
     _ = _.useCallback((_) => {
       _.current && clearTimeout(_.current),
         (_.current = setTimeout(() => {

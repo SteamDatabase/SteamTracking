@@ -2,7 +2,6 @@ ${AUDIO_URL}international2020/${}.wav
 ${AUDIO_URL}international2022/${}.wav
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
-${BASE_URL_SHARED_CDN}community_assets/images/items/${}/${}
 ${BASE_URL_SHARED_CDN}social_sharing/
 ${BASE_URL_SHARED_CDN}store_item_assets/
 ${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
@@ -129,6 +128,7 @@ ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
 ${CLAN_CDN_ASSET_URL}images/clan/${}/${}
 ${CLAN_CDN_ASSET_URL}locimages/
+${COMMUNITY_ASSETS_BASE_URL}images/items/${}/${}
 ${COMMUNITY_BASE_URL}
 ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
@@ -192,7 +192,6 @@ ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
 ${COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}economy/image/${}/512x512
-${COMMUNITY_BASE_URL}economy/profilebackground/items/${appid}/${item_image_large}
 ${COMMUNITY_BASE_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
 ${COMMUNITY_BASE_URL}eventadmin/ajaxgetcapabilities
 ${COMMUNITY_BASE_URL}eventadmin/ajaxupdatepartneremailtarget
@@ -380,6 +379,8 @@ ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
 ${COMMUNITY_CDN_URL}economy/emoticonlarge/${}
 ${COMMUNITY_CDN_URL}economy/image/${icon_url}
 ${COMMUNITY_CDN_URL}economy/profilebackground/${image_large}?size=${}x${}
+${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}
+${COMMUNITY_CDN_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
 ${COMMUNITY_CDN_URL}economy/stickerjson/${}?l=${}&origin=${}
 ${COMMUNITY_CDN_URL}public/images/broadcast/apphub_default_thumbnail.jpg
 ${COMMUNITY_CDN_URL}public/images/profile/2020/bg_dots.png
@@ -947,8 +948,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/clans/
 ${MEDIA_CDN_COMMUNITY_URL}images/clans/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_large}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_small}
-${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_movie_mp4}
-${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_movie_webm}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${_ ? _ : _}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${hero_carousel_image}

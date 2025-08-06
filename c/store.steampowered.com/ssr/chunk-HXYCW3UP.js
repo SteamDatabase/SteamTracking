@@ -38,7 +38,7 @@ function _(_, _) {
         throw `Error loading store preferences: ${_.GetErrorMessage()}`;
       return _.Body().toObject();
     },
-    staleTime: 1 * 60 * 60 * 1e3,
+    staleTime: 3600 * 1e3,
   };
 }
 function _() {

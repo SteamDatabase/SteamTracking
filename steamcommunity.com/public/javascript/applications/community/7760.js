@@ -129,7 +129,7 @@
         const { className: t, toolbar: n, children: a } = e,
           [o, l] = (0, N.OP)(),
           [r, s] = m.useState({ top: 0, left: 0, width: 0, height: 0 }),
-          i = (0, m.useRef)();
+          i = (0, m.useRef)(void 0);
         return (
           (0, m.useLayoutEffect)(() => {
             if (o) {
@@ -790,7 +790,7 @@
           c = n
             ? (0, C.we)("#EventEditor_ReplaceImage_Title")
             : (0, C.we)("#EventEditor_InsertImage_Title"),
-          d = m.useRef();
+          d = m.useRef(void 0);
         return (
           m.useEffect(() => {
             t && d.current.Focus();
@@ -829,7 +829,7 @@
           [d, u] = m.useState(o.poster),
           [p, E] = m.useState(!!o.autoplay),
           [_, h] = m.useState(!!o.controls),
-          v = m.useRef();
+          v = m.useRef(void 0);
         m.useEffect(() => {
           t && v.current.Focus();
         }, [t]);

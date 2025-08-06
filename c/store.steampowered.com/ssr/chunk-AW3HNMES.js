@@ -24,7 +24,7 @@ function _(_, _, _, _, _ = 5, _) {
   return {
     queryKey: ["SearchSuggestions", _, _, _],
     queryFn: () => _(_, _, _, _, _, _),
-    staleTime: 5 * 60 * 1e3,
+    staleTime: 300 * 1e3,
     enabled: !!_,
   };
 }

@@ -301,6 +301,12 @@
           for (let t of e.rgAdaptationSets) if (t.bContainsThumbnails) return t;
           return null;
         }
+        GetThumbnailDurationMS() {
+          let e = this.GetThumbnailAdaptation();
+          if (!e || 0 == e.rgRepresentations.length) return 0;
+          let t = e.rgRepresentations[0];
+          return G(t) / (t.nTileWidthCount * t.nTileHeightCount);
+        }
         GetStartTime() {
           return !this.IsLiveContent() && this.m_rgPeriods.length > 0
             ? this.m_rgPeriods[0].nStart
@@ -2644,10 +2650,11 @@
           t && (this.m_videoRepSelected = null);
         }
         GetThumbnail(e) {
-          return (
-            (e += this.GetAvailableVideoStartTime()),
-            this.m_mpd.GetThumbnail(1e3 * e)
-          );
+          (e += this.GetAvailableVideoStartTime()),
+            (e += Math.floor(this.m_mpd.GetThumbnailDurationMS() / 1e3));
+          let t = this.GetAvailableVideoStartTime(),
+            i = this.GetBufferedLiveEdgeTime();
+          return (e = u.OQ(e, t, i)), this.m_mpd.GetThumbnail(1e3 * e);
         }
         BHasTimedText() {
           return this.m_nTimedText > 0;

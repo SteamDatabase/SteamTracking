@@ -3733,6 +3733,13 @@ function UpdatePaymentInfoForm()
 			bDisabledPaymentMethod = true;
 			$('payment_method_specific_note').innerHTML = 'We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
 		}
+		else if ( method.value == 'paypalunavailable' )
+		{
+			g_bShowAddressForm = false;
+			bShowPaymentSpecificNote = true;
+			bDisabledPaymentMethod = true;
+			$('payment_method_specific_note').innerHTML = 'PayPal is currently unavailable in your country.';
+		}
 		else if ( method.value == 'guest' )
 		{
 			g_bShowAddressForm = false;

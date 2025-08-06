@@ -3636,7 +3636,7 @@
             ...m
           } = e,
           [c, d] = (0, n.useState)(!1),
-          p = (0, n.useRef)();
+          p = (0, n.useRef)(void 0);
         return n.createElement(B.Z, {
           ref: p,
           ...m,

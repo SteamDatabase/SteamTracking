@@ -522,7 +522,8 @@
         (0, i.Cg)([a.sH], d.prototype, "m_broadcastViewerCount", void 0),
         (0, i.Cg)([a.sH], d.prototype, "m_strBroadcastTitle", void 0),
         (0, i.Cg)([a.sH], d.prototype, "m_bCommunityBanned", void 0),
-        (0, i.Cg)([a.sH], d.prototype, "m_bOnSteamDeck", void 0);
+        (0, i.Cg)([a.sH], d.prototype, "m_bOnSteamDeck", void 0),
+        (0, i.Cg)([a.sH], d.prototype, "m_bNameInitialized", void 0);
     },
     14336: (e, t, n) => {
       "use strict";

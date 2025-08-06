@@ -1,4 +1,4 @@
-var CLSTAMP = "9948949";
+var CLSTAMP = "9953681";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -10690,6 +10690,7 @@ var CLSTAMP = "9948949";
                 (t |= r.NoWindowShadow),
                 (t |= r.NoRoundedCorners),
                 (t |= r.OverrideRedirect),
+                (t |= r.ForceBrowserVisible),
                 t
               );
             case i.Tooltip:
@@ -10769,7 +10770,8 @@ var CLSTAMP = "9948949";
               "IgnoreSteamDisplayScale"),
             (e[(e.TransparentParentWindow = 4194304)] =
               "TransparentParentWindow"),
-            (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale");
+            (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+            (e[(e.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
         })(r || (r = {})),
           (function (e) {
             (e[(e.Overlay = 0)] = "Overlay"),
@@ -11148,9 +11150,9 @@ var CLSTAMP = "9948949";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 4 2025 : 11:01:02",
-                BUILD_TIME_UTC: "Aug 4 2025 : 18:01:02",
-                BUILD_RTIME_UTC: 1754330462,
+                BUILD_TIME_LOCAL: "Aug 5 2025 : 15:04:30",
+                BUILD_TIME_UTC: "Aug 5 2025 : 22:04:30",
+                BUILD_RTIME_UTC: 1754431470,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -24646,9 +24648,9 @@ var CLSTAMP = "9948949";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 4 2025 : 11:01:02",
-                    BUILD_TIME_UTC: "Aug 4 2025 : 18:01:02",
-                    BUILD_RTIME_UTC: 1754330462,
+                    BUILD_TIME_LOCAL: "Aug 5 2025 : 15:04:30",
+                    BUILD_TIME_UTC: "Aug 5 2025 : 22:04:30",
+                    BUILD_RTIME_UTC: 1754431470,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25314,7 +25316,7 @@ var CLSTAMP = "9948949";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "e004d81b1c66800c00b4",
+        9858: "176d20878b93695bd673",
         9869: "f100b512c375f3f33d22",
         9887: "b3e18a3b56733822ec70",
       }[e]),

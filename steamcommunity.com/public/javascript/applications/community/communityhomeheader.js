@@ -340,7 +340,7 @@
         s = a(43899);
       const l = r.forwardRef(function (e, t) {
         const { children: a, navTreeRef: l, ...m } = e,
-          u = r.useRef(),
+          u = r.useRef(void 0),
           d = (0, n.Ue)(u, l),
           p = (0, o.Qn)(),
           _ = (0, s.AO)("__nav_tree_root");

@@ -4231,7 +4231,7 @@
             ..._
           } = _,
           [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useRef)();
+          _ = (0, _.useRef)(void 0);
         return _.createElement(_._, {
           ref: _,
           ..._,

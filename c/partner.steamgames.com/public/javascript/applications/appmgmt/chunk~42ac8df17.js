@@ -21931,7 +21931,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           [_, _] = (function () {
             const [_, _] = _.useState(void 0),
               _ = _.useCallback(() => _(void 0), []),

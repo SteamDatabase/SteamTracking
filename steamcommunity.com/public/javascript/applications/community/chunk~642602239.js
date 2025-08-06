@@ -2214,21 +2214,21 @@
     59952: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $A: () => W,
-        B8: () => F,
-        Er: () => C,
-        N2: () => A,
-        Pk: () => L,
-        Sz: () => k,
-        Tu: () => I,
-        UT: () => H,
-        W4: () => w,
-        ZS: () => D,
-        Zb: () => R,
-        _J: () => z,
-        ck: () => U,
-        j$: () => T,
-        z5: () => v,
+        $A: () => H,
+        B8: () => z,
+        Er: () => M,
+        N2: () => v,
+        Pk: () => F,
+        Sz: () => D,
+        Tu: () => N,
+        UT: () => V,
+        W4: () => A,
+        ZS: () => P,
+        Zb: () => k,
+        _J: () => U,
+        ck: () => O,
+        j$: () => I,
+        z5: () => C,
       });
       var n = r(33645),
         i = r.n(n),
@@ -2249,8 +2249,9 @@
         y = r(61859),
         S = r(61336),
         B = r(30470),
-        b = r(12611);
-      const w = new Map([
+        b = r(12611),
+        w = r(90622);
+      const A = new Map([
           [
             "b",
             {
@@ -2277,14 +2278,14 @@
               autocloses: !1,
             },
           ],
-          ["h1", { Constructor: R, autocloses: !1, skipFollowingNewline: !0 }],
-          ["h2", { Constructor: k, autocloses: !1, skipFollowingNewline: !0 }],
-          ["h3", { Constructor: D, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h1", { Constructor: k, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h2", { Constructor: D, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h3", { Constructor: P, autocloses: !1, skipFollowingNewline: !0 }],
           [
             "h4",
             {
               Constructor: function (e) {
-                return N("h4", e, (0, _.A)(i().Header4, "BB_Header4"));
+                return R("h4", e, (0, _.A)(i().Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -2294,7 +2295,7 @@
             "h5",
             {
               Constructor: function (e) {
-                return N("h5", e, (0, _.A)(i().Header5, "BB_Header5"));
+                return R("h5", e, (0, _.A)(i().Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -2304,7 +2305,7 @@
             "center",
             {
               Constructor: function (e) {
-                let t = T(e.args, "id");
+                let t = I(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
@@ -2326,7 +2327,7 @@
             "smalltext",
             {
               Constructor: function (e) {
-                return N("div", e, (0, _.A)(i().SmallText, "BB_SmallText"));
+                return R("div", e, (0, _.A)(i().SmallText, "BB_SmallText"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -2408,17 +2409,17 @@
             "url",
             {
               Constructor: function (e) {
-                let t = T(e.args);
+                let t = (0, w.J)(I(e.args));
                 if (!t) {
                   const r = e.children;
                   "string" == typeof r &&
                     (r.startsWith("http://") || r.startsWith("https://")) &&
-                    (t = r);
+                    (t = (0, w.J)(r));
                 }
                 const r =
-                    "button" == T(e.args, "style") ? i().LinkButton : null,
-                  n = r && T(e.args, "buttoncolor");
-                let a = T(e.args, "id");
+                    "button" == I(e.args, "style") ? i().LinkButton : null,
+                  n = r && I(e.args, "buttoncolor");
+                let a = I(e.args, "id");
                 a &&
                   "string" == typeof a &&
                   a.length > 0 &&
@@ -2435,7 +2436,7 @@
                     e.children,
                   );
                 return c.createElement(
-                  P,
+                  L,
                   {
                     className: r,
                     href: t,
@@ -2448,7 +2449,7 @@
               autocloses: !1,
             },
           ],
-          ["quote", { Constructor: L, autocloses: !1 }],
+          ["quote", { Constructor: F, autocloses: !1 }],
           [
             "pullquote",
             {
@@ -2488,19 +2489,19 @@
               autocloses: !1,
             },
           ],
-          ["list", { Constructor: F, autocloses: !1, skipInternalNewline: !0 }],
+          ["list", { Constructor: z, autocloses: !1, skipInternalNewline: !0 }],
           [
             "olist",
-            { Constructor: z, autocloses: !1, skipInternalNewline: !0 },
+            { Constructor: U, autocloses: !1, skipInternalNewline: !0 },
           ],
-          ["*", { Constructor: U, autocloses: !0, skipInternalNewline: !0 }],
+          ["*", { Constructor: O, autocloses: !0, skipInternalNewline: !0 }],
           [
             "table",
             {
               Constructor: function (e) {
-                const t = T(e.args, "noborder"),
-                  r = T(e.args, "equalcells"),
-                  n = T(e.args, "colwidth");
+                const t = I(e.args, "noborder"),
+                  r = I(e.args, "equalcells"),
+                  n = I(e.args, "colwidth");
                 return c.createElement(
                   "table",
                   {
@@ -2518,7 +2519,7 @@
                       n
                         .split(",")
                         .map((e, t) =>
-                          c.createElement(O, { key: t, width: e }),
+                          c.createElement(x, { key: t, width: e }),
                         ),
                     ),
                   c.createElement("tbody", null, e.children),
@@ -2547,7 +2548,7 @@
             "th",
             {
               Constructor: function (e) {
-                return x("th", e);
+                return G("th", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -2558,7 +2559,7 @@
             "td",
             {
               Constructor: function (e) {
-                return x("td", e);
+                return G("td", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -2569,11 +2570,11 @@
             "expand",
             {
               Constructor: function (e) {
-                const t = Boolean(T(e.args, "expanded")),
+                const t = Boolean(I(e.args, "expanded")),
                   [r, n] = c.useState(t),
-                  a = T(e.args, "title"),
-                  s = T(e.args, "collapsed_str"),
-                  o = T(e.args, "expanded_str"),
+                  a = I(e.args, "title"),
+                  s = I(e.args, "collapsed_str"),
+                  o = I(e.args, "expanded_str"),
                   l = (function (e, t, r, n) {
                     switch (e) {
                       case "details":
@@ -2603,7 +2604,7 @@
                           style: i().ExpandSection_ShowMore,
                         };
                     }
-                  })(T(e.args, "type"), a, s, o);
+                  })(I(e.args, "type"), a, s, o);
                 return c.createElement(
                   "div",
                   {
@@ -2647,7 +2648,7 @@
             {
               Constructor: function (e) {
                 const { event: t, showErrorInfo: r } = e.context,
-                  n = T(e.args);
+                  n = I(e.args);
                 if (n)
                   return c.createElement(h.y, { eventGID: n, bPreviewMode: r });
                 if (t) {
@@ -2664,22 +2665,22 @@
             {
               Constructor: function (e) {
                 var t, r, n, a, s;
-                const o = T(e.args, "title"),
+                const o = I(e.args, "title"),
                   m =
-                    null !== (t = T(e.args, "start")) && void 0 !== t
+                    null !== (t = I(e.args, "start")) && void 0 !== t
                       ? t
-                      : T(e.args, "datetime"),
+                      : I(e.args, "datetime"),
                   u =
-                    null !== (r = T(e.args, "end")) && void 0 !== r
+                    null !== (r = I(e.args, "end")) && void 0 !== r
                       ? r
-                      : T(e.args, "datetime"),
+                      : I(e.args, "datetime"),
                   d =
-                    null !== (n = T(e.args, "body")) && void 0 !== n ? n : null,
+                    null !== (n = I(e.args, "body")) && void 0 !== n ? n : null,
                   p =
-                    null !== (a = T(e.args, "location")) && void 0 !== a
+                    null !== (a = I(e.args, "location")) && void 0 !== a
                       ? a
                       : null,
-                  h = null !== (s = T(e.args, "id")) && void 0 !== s ? s : "",
+                  h = null !== (s = I(e.args, "id")) && void 0 !== s ? s : "",
                   g = new Date(m),
                   E = g.getUTCFullYear(),
                   f = ("0" + (g.getUTCMonth() + 1)).slice(-2),
@@ -2692,8 +2693,8 @@
                   v = ("0" + (w.getUTCMonth() + 1)).slice(-2),
                   C = ("0" + w.getUTCDate()).slice(-2),
                   M = ("0" + w.getUTCHours()).slice(-2),
-                  I = ("0" + w.getUTCMinutes()).slice(-2),
-                  N = `${A}${v}${C}T${M}${I}00Z`;
+                  T = ("0" + w.getUTCMinutes()).slice(-2),
+                  N = `${A}${v}${C}T${M}${T}00Z`;
                 let R;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
@@ -2786,11 +2787,11 @@
             "doclink",
             {
               Constructor: function (e) {
-                const t = T(e.args),
-                  r = "button" == T(e.args, "style") ? i().LinkButton : null,
-                  n = r && T(e.args, "buttoncolor");
+                const t = I(e.args),
+                  r = "button" == I(e.args, "style") ? i().LinkButton : null,
+                  n = r && I(e.args, "buttoncolor");
                 return c.createElement(
-                  P,
+                  L,
                   {
                     className: r,
                     style: { backgroundColor: n },
@@ -2806,7 +2807,7 @@
             "color",
             {
               Constructor: function (e) {
-                const t = T(e.args);
+                const t = I(e.args);
                 return c.createElement(
                   "span",
                   { style: { color: t } },
@@ -2820,7 +2821,7 @@
             "bgcolor",
             {
               Constructor: function (e) {
-                const t = T(e.args);
+                const t = I(e.args);
                 return c.createElement(
                   "span",
                   { style: { backgroundColor: t } },
@@ -2846,19 +2847,19 @@
             },
           ],
         ]),
-        A = new Map([
-          ["looping_media", { Constructor: W, autocloses: !1 }],
-          ["video", { Constructor: H, autocloses: !1 }],
+        v = new Map([
+          ["looping_media", { Constructor: H, autocloses: !1 }],
+          ["video", { Constructor: V, autocloses: !1 }],
           ["youtubeorvideo", { Constructor: p.Eo, autocloses: !1 }],
           ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
         ]);
-      function v(e, t, r = 0) {
-        return M(e, t, r);
+      function C(e, t, r = 0) {
+        return T(e, t, r);
       }
-      async function C(e, t, r = 0) {
-        return M(e, t, r);
+      async function M(e, t, r = 0) {
+        return T(e, t, r);
       }
-      function M(e, t, r = 0) {
+      function T(e, t, r = 0) {
         if (e && 0 != e.length) {
           if (null == e ? void 0 : e.startsWith(b.lw))
             return d.z.ReplacementTokenToClanImageURL(e);
@@ -2882,16 +2883,16 @@
           return e;
         }
       }
-      function T(e, t) {
+      function I(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function I(e, t) {
+      function N(e, t) {
         return (r) => e({ ...r, className: (0, _.A)(r.className, t) });
       }
-      function N(e, t, r) {
-        let n = T(t.args, "id");
+      function R(e, t, r) {
+        let n = I(t.args, "id");
         return (
-          n || (n = T(t.args)),
+          n || (n = I(t.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&
@@ -2904,16 +2905,16 @@
           )
         );
       }
-      function R(e) {
-        return N("h1", e, (0, _.A)(i().Header1, "BB_Header1"));
-      }
       function k(e) {
-        return N("h2", e, (0, _.A)(i().Header2, "BB_Header2"));
+        return R("h1", e, (0, _.A)(i().Header1, "BB_Header1"));
       }
       function D(e) {
-        return N("h3", e, (0, _.A)(i().Header3, "BB_Header3"));
+        return R("h2", e, (0, _.A)(i().Header2, "BB_Header2"));
       }
-      const P = (e) => {
+      function P(e) {
+        return R("h3", e, (0, _.A)(i().Header3, "BB_Header3"));
+      }
+      const L = (e) => {
         const { href: t, ...r } = e;
         let n,
           i = (0, u.OZ)(t);
@@ -2936,8 +2937,8 @@
           c.createElement(s.Ii, { ...r, href: i, rel: n }, e.children),
         );
       };
-      function L(e) {
-        const t = T(e.args, "author");
+      function F(e) {
+        const t = I(e.args, "author");
         return c.createElement(
           "blockquote",
           { className: (0, _.A)(i().BlockQuote, e.className) },
@@ -2952,22 +2953,22 @@
           e.children,
         );
       }
-      function F(e) {
+      function z(e) {
         return c.createElement(
           "ul",
           { className: (0, _.A)(i().List, "bullets") },
           e.children,
         );
       }
-      function z(e) {
+      function U(e) {
         return c.createElement(
           "ol",
           { className: i().OrderedList },
           e.children,
         );
       }
-      function U(e) {
-        let t = T(e.args, "id");
+      function O(e) {
+        let t = I(e.args, "id");
         return (
           t &&
             "string" == typeof t &&
@@ -2981,7 +2982,7 @@
           )
         );
       }
-      function O(e) {
+      function x(e) {
         const { width: t } = e;
         let r;
         return (
@@ -2989,10 +2990,10 @@
           c.createElement("col", { style: r })
         );
       }
-      function x(e, t) {
-        const r = T(t.args, "width"),
-          n = T(t.args, "colspan"),
-          a = T(t.args, "rowspan"),
+      function G(e, t) {
+        const r = I(t.args, "width"),
+          n = I(t.args, "colspan"),
+          a = I(t.args, "rowspan"),
           s = {};
         return (
           n && parseInt(n) > 1 && (s.colSpan = parseInt(n)),
@@ -3008,21 +3009,21 @@
           )
         );
       }
-      function G(e) {
-        let t = T(e, "poster");
+      function W(e) {
+        let t = I(e, "poster");
         t && (t = (0, S.L$)(t));
         const r = new Array();
         {
-          const t = T(e, "mp4");
+          const t = I(e, "mp4");
           t && r.push({ sURL: (0, S.L$)(t), sFormat: "video/mp4" });
-          const n = T(e, "webm");
+          const n = I(e, "webm");
           n && r.push({ sURL: (0, S.L$)(n), sFormat: "video/webm" });
         }
         const n = (0, a.sf)(B.TS.LANGUAGE),
           i = 0 != n,
           s = new Array();
         for (let t = 0; t < 31; t++) {
-          const r = T(e, "sub_" + (0, a.ww)(t));
+          const r = I(e, "sub_" + (0, a.ww)(t));
           r &&
             s.push({
               sURL: (0, S.L$)(r),
@@ -3030,7 +3031,7 @@
               sKind: "subtitles",
               bDefault: i && t == n,
             });
-          const o = T(e, "cap_" + (0, a.ww)(t));
+          const o = I(e, "cap_" + (0, a.ww)(t));
           o &&
             s.push({
               sURL: (0, S.L$)(o),
@@ -3041,8 +3042,8 @@
         }
         return { sPoster: t, rgVideoSources: r, rgVideoTracks: s };
       }
-      function W(e) {
-        const t = G(e.args);
+      function H(e) {
+        const t = W(e.args);
         return c.createElement(g.L, {
           video: t,
           bAutoPlay: !0,
@@ -3050,17 +3051,17 @@
           bLoop: !0,
         });
       }
-      function H(e) {
-        const t = G(e.args),
+      function V(e) {
+        const t = W(e.args),
           r = e.children ? e.children.toString() : void 0;
         r &&
           r.startsWith("http") &&
           t.rgVideoSources.push({ sURL: (0, S.L$)(r), sFormat: "video/webm" });
-        const n = T(e.args, "autoplay"),
+        const n = I(e.args, "autoplay"),
           i = "0" !== n && "off" !== n && "false" !== n,
-          a = T(e.args, "controls"),
+          a = I(e.args, "controls"),
           s = "0" !== a && "off" !== a && "false" !== a,
-          o = T(e.args, "loop"),
+          o = I(e.args, "loop"),
           l = "0" !== a && "off" !== a && "false" !== a;
         return c.createElement(g.L, {
           video: t,
@@ -5074,6 +5075,20 @@
             ),
           ),
         );
+    },
+    90622: (e, t, r) => {
+      "use strict";
+      function n(e) {
+        if (!e) return e;
+        const t = e.trim(),
+          r = t.toLowerCase();
+        return r.startsWith("javascript:") ||
+          r.startsWith("data:") ||
+          r.startsWith("vbscript:")
+          ? ""
+          : t;
+      }
+      r.d(t, { J: () => n });
     },
     42951: (e, t, r) => {
       "use strict";

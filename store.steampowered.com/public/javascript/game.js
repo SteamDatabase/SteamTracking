@@ -2444,3 +2444,154 @@ function SetupReviewFilterMenus()
 
 }
 
+// Go through images on the store page and add:
+// - Click to play/pause for animated images.
+// - Magnifying glass to zoom in when an image has a bigger version available.
+$J(document).ready(function() {
+	// TODO: add back initial paused state is based reduced motion preference. We were using
+	// `window.matchMedia("(prefers-reduced-motion: reduce)").matches` but it turns out that this is set when users
+	// don't expect it, such as if they have some animations turned off in Windows or other things. We're going to
+	// add a setting to client and then we can plumb it through here, which should help.
+	const bInitiallyPaused = false;
+	let bPaused = bInitiallyPaused;
+
+	function addActionBar($el) {
+		const $iconArea = $J(`<div class='bb_img_icons' />`);
+		$el.append($iconArea);
+		return $iconArea;
+	}
+
+	function addPlayPauseIcon($outerDiv, $actionBar) {
+		const strTooltip = "Your browser has a setting enabled to reduce on-screen motion, so this animated image is paused by default.";
+		const strPanel = 'data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" role="button"';
+		const $btnPlayPause = $J(`<div class='bb_img_play_pause' ${strPanel} data-tooltip='${strTooltip}' data-tooltip-visible=${bInitiallyPaused}>
+			<img width="18" height="18" draggable="false" />
+		</div>`);
+		$actionBar.append($btnPlayPause);
+
+		$btnPlayPause.on("click", function(e) {
+			e.stopPropagation(); // so it doesn't double trigger outer click
+			$outerDiv.trigger("click");
+		});
+
+		return $btnPlayPause;
+	}
+
+	function addExpandIcon($actionBar, $img) {
+		const strPanel = 'data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" role="button"';
+		const $btnExpand = $J(`<div class='bb_img_expand' ${strPanel}>🔎</div>`);
+		$actionBar.append($btnExpand);
+
+		$btnExpand.on("click", function(e) {
+			const src = $img.attr("src");
+			const newSrc = src.replace("/extras/", "/extras_big/");
+			window.open(newSrc, "_blank");
+		});
+
+		return $btnExpand;
+	}
+
+	function updatePlayPauseStyle($el, bPaused, bInitial) {
+		$el.toggleClass("paused", bPaused);
+		$el.toggleClass("playing", !bPaused);
+		const $img = $el.find('img');
+		$img.attr('src', bPaused ? "/public/images/ico/media_playback/play.svg" : "/public/images/ico/media_playback/pause.svg");
+		$img.attr('alt', bPaused ? "Play animation" : "Pause animation");
+		if (!bInitial) {
+			// hide the initial tooltip, that should only show if the image started paused and has never been played
+			$el.removeAttr("data-tooltip-visible");
+		}
+	}
+
+	function updatePlayPauseOnAll()
+	{
+		bPaused = !bPaused;
+
+		$J(".bb_img_ctn").each(function() {
+			const $outerDiv = $J(this);
+
+			const $pic = $outerDiv.find("picture");
+			const $video = $outerDiv.find("video");
+
+			const bVideoWithSources = $video.length !== 0 && $video.find("source").length > 0;
+
+			const $btnPlayPause = $outerDiv.find('.bb_img_play_pause');
+
+			if ($pic.length > 0) {
+				// handle click-to-play for picture elements
+				const $source = $pic.find("source[media]");
+				const $img = $pic.find("img");
+
+				const gifSrc = $img.attr("src");
+				const posterSrc = $source.attr("srcset");
+
+				// on first click, drop the media attribute so the source always applies
+				if ($source.attr("media")) {
+					$source.removeAttr("media");
+				}
+
+				$source.attr("srcset", bPaused ? posterSrc : gifSrc);
+				updatePlayPauseStyle($btnPlayPause, bPaused, false);
+
+				// force re-evaluation by replacing <img src> with a dummy and then back
+				const temp = $img.attr("src");
+				$img.attr("src", "").attr("src", temp);
+			} else if (bVideoWithSources) {
+				// handle click-to-play for video elements
+				const elVideo = $video[0];
+
+				if (bPaused) {
+					elVideo.pause();
+				} else {
+					elVideo.play();
+				}
+
+				updatePlayPauseStyle($btnPlayPause, bPaused, false);
+			}
+		});
+	}
+
+	$J(".bb_img_ctn").each(function() {
+		const $outerDiv = $J(this);
+
+		const $pic = $outerDiv.find("picture");
+		const $video = $outerDiv.find("video");
+		const $img = $outerDiv.find("img");
+
+		const $actionBar = addActionBar($outerDiv);
+
+		// only imgs can have expand buttons
+		let $btnExpand = null;
+		if ($img.length !== 0 && $img.data("has-big") !== undefined) {
+			$btnExpand = addExpandIcon($actionBar, $img);
+		}
+
+		const bVideoWithSources = $video.length !== 0 && $video.find("source").length > 0;
+
+		// only picture and video elements have play/pause buttons
+		let $btnPlayPause = null;
+		if ($pic.length !== 0 || bVideoWithSources) {
+			$btnPlayPause = addPlayPauseIcon($outerDiv, $actionBar);
+			updatePlayPauseStyle($btnPlayPause, bPaused, true);
+		}
+
+		if ($pic.length > 0) {
+			// handle click-to-play for picture elements
+			$outerDiv.on("click", function() {
+				updatePlayPauseOnAll();
+			});
+		} else if (bVideoWithSources) {
+			// handle click-to-play for video elements
+			const elVideo = $video[0];
+
+			if (bPaused) {
+				elVideo.removeAttribute("autoplay");
+			}
+
+			$outerDiv.on("click", function() {
+				updatePlayPauseOnAll();
+			});
+		}
+	});
+});
+

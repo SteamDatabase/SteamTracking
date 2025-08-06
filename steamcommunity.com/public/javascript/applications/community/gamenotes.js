@@ -4192,7 +4192,7 @@
       function gt(e) {
         const { deleteNote: t, hidden: r, pmState: i } = e,
           [a, s] = n.useState(),
-          o = n.useRef(),
+          o = n.useRef(void 0),
           l =
             null === (c = n.useContext(Fe).bSpellcheckEnabled) ||
             void 0 === c ||
@@ -5284,7 +5284,7 @@
         n = r(72739),
         a = r(56011);
       function s(e, t) {
-        const r = i.useRef(),
+        const r = i.useRef(void 0),
           a = i.useCallback(
             (t) => {
               t.currentTarget.files.length > 0 &&

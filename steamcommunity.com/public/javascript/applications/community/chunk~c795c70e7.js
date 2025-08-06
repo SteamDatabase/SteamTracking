@@ -251,6 +251,12 @@
           for (let t of e.rgAdaptationSets) if (t.bContainsThumbnails) return t;
           return null;
         }
+        GetThumbnailDurationMS() {
+          let e = this.GetThumbnailAdaptation();
+          if (!e || 0 == e.rgRepresentations.length) return 0;
+          let t = e.rgRepresentations[0];
+          return G(t) / (t.nTileWidthCount * t.nTileHeightCount);
+        }
         GetStartTime() {
           return !this.IsLiveContent() && this.m_rgPeriods.length > 0
             ? this.m_rgPeriods[0].nStart
@@ -1493,8 +1499,8 @@
                 "Failed to parse MPD file",
                 this.m_strMPD,
               );
-            let o = X(r),
-              a = Q(o);
+            let o = Q(r),
+              a = X(o);
             if (
               ((n = {
                 strMPD: t,
@@ -2595,10 +2601,11 @@
           t && (this.m_videoRepSelected = null);
         }
         GetThumbnail(e) {
-          return (
-            (e += this.GetAvailableVideoStartTime()),
-            this.m_mpd.GetThumbnail(1e3 * e)
-          );
+          (e += this.GetAvailableVideoStartTime()),
+            (e += Math.floor(this.m_mpd.GetThumbnailDurationMS() / 1e3));
+          let t = this.GetAvailableVideoStartTime(),
+            i = this.GetBufferedLiveEdgeTime();
+          return (e = u.OQ(e, t, i)), this.m_mpd.GetThumbnail(1e3 * e);
         }
         BHasTimedText() {
           return this.m_nTimedText > 0;
@@ -2612,7 +2619,7 @@
           return { nWidth: t.nWidth, nHeight: t.nHeight };
         }
       }
-      function X(e) {
+      function Q(e) {
         let t = "",
           i = "",
           n = "",
@@ -2629,7 +2636,7 @@
           t && i ? (n ? `${t}; codecs="${i}, ${n}` : `${t}; codecs="${i}`) : ""
         );
       }
-      function Q(e) {
+      function X(e) {
         let t = !1;
         try {
           t = MediaSource.isTypeSupported(e);

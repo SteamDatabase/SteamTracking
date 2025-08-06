@@ -2810,8 +2810,8 @@
     "AdvancedSearch_NoFacets": "There are no filters available for this game.",
     "AdvancedSearch_FacetLoadError": "Something went wrong while loading the filters for this game.",
     "AdvancedSearch_PriceFieldLabel": "Price",
-    "AdvancedSearch_MinPricePlaceholder": "Min",
-    "AdvancedSearch_MaxPricePlaceholder": "Max",
+    "AdvancedSearch_MinPricePlaceholder": "Min Price",
+    "AdvancedSearch_MaxPricePlaceholder": "Max Price",
     "AdvancedSearch_CustomFilter_All": "All",
     "AdvancedSearch_CustomFilter_Other": "Other"
 }

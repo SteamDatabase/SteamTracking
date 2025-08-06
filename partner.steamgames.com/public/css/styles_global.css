@@ -823,7 +823,7 @@ a.tab, .tab a {
 	margin: 0 auto;
 	text-align: center;
 	color: #B0AEAC;
-	padding-bottom: 10px;
+	padding: 10px 0;
 	background: #000000;
 }
 

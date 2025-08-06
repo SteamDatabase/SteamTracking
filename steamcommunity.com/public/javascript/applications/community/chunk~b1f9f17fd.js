@@ -15946,7 +15946,7 @@
             bFilterToSales: s,
           } = e,
           [d, u] = c.useState(null),
-          m = c.useRef(),
+          m = c.useRef(void 0),
           p = c.useRef(null),
           g = c.useCallback(
             (e) => {
@@ -23471,7 +23471,7 @@
       }
       function qi(e) {
         const { curAssetURL: t, imageClassname: a } = e,
-          n = c.useRef();
+          n = c.useRef(void 0);
         return (
           c.useEffect(() => {
             n.current && (n.current.load(), n.current.play());
@@ -23592,7 +23592,7 @@
             rgSupportArtwork: Vi,
             strUploadAjaxURL: r,
             fnOnUploadSuccess: i,
-            strOverrideDragAndDropText: (0, M.we)(
+            elOverrideDragAndDropText: (0, M.we)(
               "#Template_Section_MediaUpdate_DnD",
             ),
           }),
@@ -24445,7 +24445,7 @@
             mediaRow: m,
             fnUpdateColumnsOfMediaRow: _,
           } = e,
-          p = c.useRef(),
+          p = c.useRef(void 0),
           g = (0, fe.BZ)(p),
           { bHighlighted: h, fnJumpTo: v } = (function (e, t, a) {
             c.useEffect(() => {
@@ -27607,7 +27607,7 @@
           },
           I = ((G = !0), (0, r.Nx)((0, r.LY)(a), G));
         var G;
-        const k = c.useRef(),
+        const k = c.useRef(void 0),
           N = (0, bi.BZ)(k),
           [P, R] = c.useState(!1),
           F = (0, E.cv)(),
@@ -46837,7 +46837,7 @@
       function L(e) {
         var t;
         const { event: a, language: r, children: o, bIsPreview: l } = e,
-          s = i.useRef(),
+          s = i.useRef(void 0),
           c = (0, n.q3)(() => a.GetImageURLWithFallback("sale_header", r)),
           d = M.U.Get().BHasSalePageBackgroundOverride(),
           u = i.useMemo(
@@ -48206,7 +48206,7 @@
         }, [t, r]);
         const c = (0, n.q3)(() => Be.TU.Get().GetMouseOverSectionID()),
           d = t && t == c,
-          u = i.useRef();
+          u = i.useRef(void 0);
         return (
           (0, Be.lM)((e) => {
             var a;
@@ -51249,7 +51249,7 @@
           v = Ae(_, l, s, c),
           { bIsIgnored: S, fnUpdateIgnored: E } = (0, Ce.TK)(t),
           { bIsWishlisted: y, fnUpdateWishlist: b } = (0, Ce.u4)(t),
-          f = n.useRef();
+          f = n.useRef(void 0);
         if (
           (n.useEffect(() => {
             r && f.current && f.current.focus({ preventScroll: !0 });
@@ -52115,7 +52115,7 @@
           s = (0, M.aL)(q.TS.STORE_BASE_URL + "wishlist"),
           c = (0, G.R7)(),
           d = (null == c ? void 0 : c.ownerWindow) || window,
-          u = n.useRef();
+          u = n.useRef(void 0);
         return (
           n.useEffect(() => {
             a && u.current && u.current.focus({ preventScroll: !0 });
@@ -60606,7 +60606,7 @@
           [b, f] = n.useState(!1),
           [w, C] = n.useState(!1),
           [T, I] = n.useState(!!s),
-          B = n.useRef(),
+          B = n.useRef(void 0),
           [A, M] = (0, o.t7)(t, Lt.Gy),
           G =
             i && (null == A ? void 0 : A.HasDemoStandaloneStorePage())
@@ -60619,7 +60619,7 @@
           [O, L] = n.useState(0),
           [z, x] = n.useState(),
           U = (0, Qa.$9)(),
-          H = n.useRef(),
+          H = n.useRef(void 0),
           q = (0, _e.ru)(Ka),
           j = (0, Rt.b)();
         n.useEffect(() => {
@@ -61161,7 +61161,7 @@
               { bLoading: !c.BHasTitle(e, t, a), title: c.GetTitle(e, t, a) }
             );
           })(t, a, i, r, o, l, s, c),
-          m = (0, n.useRef)();
+          m = (0, n.useRef)(void 0);
         return (
           (0, n.useEffect)(() => {
             m.current && !d && u && (m.current.innerHTML = u.strSubtitle);
@@ -62647,7 +62647,7 @@
               : 0,
           ),
           [N, P] = (0, n.useState)(0),
-          R = n.useRef(),
+          R = n.useRef(void 0),
           F = (0, Ke.q3)(() => bi.N.Get().GetLargestAnswerQuestion());
         (0, n.useEffect)(() => {
           F > G && C ? k(F) : C && 0 == F && G > 1 && (P(N + 1), k(0));
@@ -64919,7 +64919,7 @@
       }
       function ur(e) {
         const { onClick: t } = e,
-          a = n.useRef();
+          a = n.useRef(void 0);
         return (
           n.useEffect(() => {
             var e;
@@ -64947,7 +64947,7 @@
       }
       function mr(e) {
         const { section: t, activeTab: a, event: i, history: r } = e,
-          o = n.useRef();
+          o = n.useRef(void 0);
         n.useEffect(() => {
           var e, t;
           const a =
@@ -65199,7 +65199,7 @@
           [d, u] = (0, re.L2)(),
           m = Er(a.tabs, s, d, u),
           _ = (0, E.Qn)(),
-          p = n.useRef();
+          p = n.useRef(void 0);
         n.useEffect(() => {
           var e;
           const t = document.getElementById("Tab_" + o.unique_id);
@@ -65337,7 +65337,7 @@
             setTabUniqueIDQueryParam: o,
           } = e,
           l = (0, Wt.MU)(),
-          s = n.useRef(),
+          s = n.useRef(void 0),
           c = n.useCallback(
             (e) => {
               if ((null == a ? void 0 : a.GetTab()) !== e) {
@@ -70026,8 +70026,8 @@
             setTargetVideo: s,
           } = e,
           { bVisible: c, ref: d } = (0, be.hd)(),
-          u = (0, n.useRef)(),
-          m = (0, n.useRef)();
+          u = (0, n.useRef)(void 0),
+          m = (0, n.useRef)(void 0);
         (0, n.useEffect)(() => {
           i(c);
         }, [c, i]),
@@ -70287,7 +70287,7 @@
       function os(e) {
         const { displayOrder: t, content: a, section: i } = e,
           r = (0, E.Qn)(),
-          o = n.useRef(),
+          o = n.useRef(void 0),
           l = (0, Fr.BZ)(o),
           { bHighlighted: s } = (function (e, t, a) {
             n.useEffect(() => {
@@ -72097,7 +72097,7 @@
           [N, P] = n.useState(0),
           [R, F] = n.useState(void 0),
           [O, L] = n.useState(""),
-          z = n.useRef(),
+          z = n.useRef(void 0),
           x = n.useMemo(() => new Array(), []),
           U = n.useMemo(() => new Array(), []),
           H = n.useMemo(() => p().CancelToken.source(), []),
@@ -72436,8 +72436,8 @@
           I = (0, f.AS)(),
           [B, A] = n.useState(!1),
           [G, k] = n.useState(0),
-          N = n.useRef(),
-          P = n.useRef(),
+          N = n.useRef(void 0),
+          P = n.useRef(void 0),
           [R, F] = n.useState(),
           { bCookieLoaded: O } = (function (e, t, a) {
             const i = n.useCallback(() => {

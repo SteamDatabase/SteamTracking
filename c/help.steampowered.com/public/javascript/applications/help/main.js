@@ -427,6 +427,7 @@
         FieldDescription: "_1W1to_azoBRG95oNAFpf9Q",
         ModalPosition: "_3A5ujtARm6atH4phJ5i1i6",
         _: "_3-NqubDUyBx8l_lXBrjzUJ",
+        FooterVisible: "_3bdRx6sqp4zgADo5c-9jUb",
         WithStandardPadding: "_1XQXQY77uXZfE0KSWEADf_",
         NoHeaderPadding: "_1Y7qW0oDUNH6gMRGqujwo6",
         ModalClickToDismiss: "_27uCSNGt2GM1oh3MbvqAS",
@@ -6112,6 +6113,7 @@
               (_ |= _.NoWindowShadow),
               (_ |= _.NoRoundedCorners),
               (_ |= _.OverrideRedirect),
+              (_ |= _.ForceBrowserVisible),
               _
             );
           case _.Tooltip:
@@ -6173,7 +6175,8 @@
             "IgnoreSteamDisplayScale"),
           (_[(_.TransparentParentWindow = 4194304)] =
             "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale");
+          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
       })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
@@ -6861,7 +6864,7 @@
           } = _,
           _ = _(),
           _ = _?.ownerWindow || window,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.current || (_.current = new _._()),
           _.useLayoutEffect(() => {
@@ -8480,7 +8483,7 @@
               bRegisterManagersWithWindow: _ = !0,
               ..._
             } = _,
-            _ = _.useRef();
+            _ = _.useRef(void 0);
           _.current || (_.current = new _());
           let _ = _.createElement(_, {
             ..._,
@@ -12262,7 +12265,7 @@
               onOptionsActionDescription: _,
             };
           })(_ ?? _, _),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_, _.navRef),
           _ = _.useCallback(
             (_) => {
@@ -12559,7 +12562,7 @@
           } = _,
           [_, _, _, _] = (function () {
             let _ = _.useRef(null),
-              _ = _.useRef();
+              _ = _.useRef(void 0);
             _.useLayoutEffect(() => {
               let _ = _.current;
               if (!_ || _.current) return;
@@ -12760,9 +12763,9 @@
           ),
           _ = (function (_, _) {
             const _ = _.useMemo(() => new Map(), []),
-              _ = _.useRef();
+              _ = _.useRef(_);
             _.current = _;
-            const _ = _.useRef();
+            const _ = _.useRef(_);
             _.current = _;
             const _ = _.useCallback(
               (_) => (_) => {
@@ -12881,7 +12884,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const { className: __webpack_require__, ..._ } = _;
-        let _ = _.useRef(),
+        let _ = _.useRef(void 0),
           _ = (0, _._)(_, _);
         const [_, _] = _.useState(!1),
           _ = _.useCallback(() => {
@@ -12987,8 +12990,8 @@
           _ = (0, _._)(),
           _ = (_.state && _.state[_]) ?? _,
           _ = _.useRef(!1),
-          _ = _.useRef(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
+          _ = _.useRef(void 0),
           _ = _.useCallback(
             (_) => {
               if (_.current && ((_.current = _), !_.current)) {
@@ -13022,7 +13025,7 @@
             (_.current = void 0), (_.current = void 0);
           }, []),
           _ = (function (_, _) {
-            const _ = _.useRef();
+            const _ = _.useRef(void 0);
             return _.useCallback(
               (_, _) => {
                 let _ = "sine";
@@ -13469,7 +13472,7 @@
           [_, _] = _(`${_}ScrollLeft`, 250, 0),
           _ = _.useRef(0),
           _ = _.useRef(0),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         let _ = _.useCallback(
           (_) => {
             const { scrollTop: _, scrollLeft: __webpack_require__ } =
@@ -14812,7 +14815,7 @@
           _ = _.useContext(_).DialogWrapper,
           [_, _] = _.useState(null),
           [_, _] = _.useState(!1),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         if (
           (_.useEffect(() => {
             if (_) {
@@ -14982,7 +14985,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           [_, _] = (function () {
             const [_, _] = _.useState(void 0),
               _ = _.useCallback(() => _(void 0), []),
@@ -16977,7 +16980,12 @@
           const _ = _.IsValidAssetType(_, _);
           return "pending" === _.status && !_.error && !_.needsCrop;
         });
-        return _.forEach((_) => (_.status = "waiting")), _;
+        return (
+          _.forEach((_) => {
+            (_.status = "waiting"), (_.message = "");
+          }),
+          _
+        );
       }
       async function _(_, _, _, _, _, _) {
         const _ = _(_, _, _),
@@ -17115,6 +17123,7 @@
             let _ = null,
               _ = 0;
             _.endsWith("korean") && ((_ = 4), (_ = 6));
+            const _ = (_) => _.replace(/[\s_-]+$/g, "");
             for (let _ = 0; _ < 31; ++_) {
               const _ = (0, _._)(_);
               if (_.length <= _) continue;
@@ -17127,11 +17136,14 @@
                 _ && ((_ = _), (_ = _.length));
               }
               const _ = (0, _._)(_);
-              _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
+              _.length <= _ ||
+                (_.endsWith(_) &&
+                  _(_.substring(0, _.length - _.length)).length > 0 &&
+                  ((_ = _), (_ = _.length)));
             }
             return {
               language: _ ?? _,
-              baseFilename: _ > 0 ? _.substring(0, _.length - _ - 1) : _,
+              baseFilename: _ > 0 ? _(_.substring(0, _.length - _)) : _,
             };
           })(_.name, _);
           return this.AddImageForLanguage(_, __webpack_require__);
@@ -33194,6 +33206,16 @@
           label: (0, _._)("#language_selection_" + (0, _._)(_)),
         });
       }
+      function _(_) {
+        if (!_) return _;
+        const _ = _.trim(),
+          _ = _.toLowerCase();
+        return __webpack_require__.startsWith("javascript:") ||
+          __webpack_require__.startsWith("data:") ||
+          __webpack_require__.startsWith("vbscript:")
+          ? ""
+          : _;
+      }
       const _ = new Map([
           [
             "b",
@@ -33391,13 +33413,13 @@
             "url",
             {
               Constructor: function (_) {
-                let _ = _(_.args);
+                let _ = _(_(_.args));
                 if (!_) {
                   const _ = _.children;
                   "string" == typeof _ &&
                     (__webpack_require__.startsWith("http://") ||
                       __webpack_require__.startsWith("https://")) &&
-                    (_ = _);
+                    (_ = _(_));
                 }
                 const _ =
                     "button" == _(_.args, "style") ? _().LinkButton : null,
@@ -36342,7 +36364,7 @@
             _.current && document.activeElement == _.current,
         });
         const _ = (function (_) {
-            const _ = _.useRef(),
+            const _ = _.useRef(void 0),
               _ = _.useContext(_);
             _.current || (_.current = __webpack_require__(_ || {}));
             return _.current;
@@ -61486,7 +61508,7 @@
         );
       }
       function _(_) {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return _.useCallback(
           () => (
             (_.current && _.current.factory == _) ||
@@ -61530,7 +61552,7 @@
                 });
       }
       function _(_, _) {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return _.useCallback((_) => {
           _.current && __webpack_require__.current(), (_.current = _(_));
         }, _);
@@ -68952,6 +68974,8 @@
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
+          "/.millennium/Dist",
+          "/react-waypoint/",
         ];
       function _() {
         try {
@@ -69247,7 +69271,8 @@
         return [_, ..._]
           .map((_) => {
             try {
-              return String(_);
+              let _ = String(_);
+              return "[object Object]" == _ && (_ = JSON.stringify(_)), _;
             } catch (_) {
               return "[Stringify Error]";
             }
@@ -73714,7 +73739,7 @@
       var _ = __webpack_require__("chunkid");
       let _ = 0;
       function _() {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return (
           void 0 === _.current && (_.current = "svgid_" + _++),
           [_.current, `url(#${_.current})`]
@@ -75569,7 +75594,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 8439), _((_._ = _));
+      return (_ = 59), _((_._ = _));
       var _;
     });
     _._();

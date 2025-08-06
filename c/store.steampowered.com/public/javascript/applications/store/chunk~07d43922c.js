@@ -15864,7 +15864,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!!_),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           [_, _] = (0, _._)(_, _._),
           _ =
             _ && _?.HasDemoStandaloneStorePage()
@@ -15877,7 +15877,7 @@
           [_, _] = _.useState(0),
           [_, _] = _.useState(),
           _ = (0, _._)(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_),
           _ = (0, _._)();
         _.useEffect(() => {
@@ -16471,7 +16471,7 @@
               }
             );
           })(_, __webpack_require__, _, _, _, _, _, _),
-          _ = (0, _.useRef)();
+          _ = (0, _.useRef)(void 0);
         return (
           (0, _.useEffect)(() => {
             _.current && !_ && _ && (_.current.innerHTML = _.strSubtitle);
@@ -18108,7 +18108,7 @@
               : 0,
           ),
           [_, _] = (0, _.useState)(0),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(() => _._.Get().GetLargestAnswerQuestion());
         (0, _.useEffect)(() => {
           _ > _ && _ ? _(_) : _ && 0 == _ && _ > 1 && (_(_ + 1), _(0));
@@ -20349,7 +20349,7 @@
       }
       function _(_) {
         const { onClick: _ } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             _?.current?.scrollIntoView();
@@ -20381,7 +20381,7 @@
             event: _,
             history: _,
           } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         _.useEffect(() => {
           const _ = _.jsondata.sale_sections?.find(
             (_) => "sale_item_browser" === _.section_type,
@@ -20658,7 +20658,7 @@
           [_, _] = (0, _._)(),
           _ = _(_.tabs, _, _, _),
           _ = (0, _._)(),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         _.useEffect(() => {
           const _ = document.getElementById("Tab_" + _.unique_id);
           if (_ && _?.current?.parentElement) {
@@ -20799,7 +20799,7 @@
             setTabUniqueIDQueryParam: _,
           } = _,
           _ = (0, _._)(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = _.useCallback(
             (_) => {
               if (__webpack_require__?.GetTab() !== _) {
@@ -25500,8 +25500,8 @@
             setTargetVideo: _,
           } = _,
           { bVisible: _, ref: _ } = (0, _._)(),
-          _ = (0, _.useRef)(),
-          _ = (0, _.useRef)();
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0);
         (0, _.useEffect)(() => {
           _(_);
         }, [_, _]),
@@ -25849,7 +25849,7 @@
       function _(_) {
         const { displayOrder: _, content: __webpack_require__, section: _ } = _,
           _ = (0, _._)(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_),
           { bHighlighted: _ } = (function (_, _, _) {
             _.useEffect(() => {

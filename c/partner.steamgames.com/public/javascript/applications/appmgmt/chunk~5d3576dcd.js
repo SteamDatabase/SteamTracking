@@ -300,7 +300,8 @@
         (0, _._)([_._], _.prototype, "m_broadcastViewerCount", void 0),
         (0, _._)([_._], _.prototype, "m_strBroadcastTitle", void 0),
         (0, _._)([_._], _.prototype, "m_bCommunityBanned", void 0),
-        (0, _._)([_._], _.prototype, "m_bOnSteamDeck", void 0);
+        (0, _._)([_._], _.prototype, "m_bOnSteamDeck", void 0),
+        (0, _._)([_._], _.prototype, "m_bNameInitialized", void 0);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
@@ -351,7 +352,7 @@
         return (0, _._)(_(_, _, _));
       }
       function _(_) {
-        const _ = _.useRef(),
+        const _ = _.useRef(void 0),
           _ = _(_);
         return _.data
           ? _

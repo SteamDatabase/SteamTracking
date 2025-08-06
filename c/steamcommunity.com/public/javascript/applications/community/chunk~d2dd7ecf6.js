@@ -2066,7 +2066,7 @@
             onDropFiles: _,
             renderDesciption: __webpack_require__,
             elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
+            elOverrideDragAndDropText: _,
           } = _,
           [_, _] = (0, _._)(_),
           [_, _] = (0, _._)(_, {
@@ -2185,7 +2185,7 @@
         const {
             imageUploader: _,
             fnUploadComplete: __webpack_require__,
-            strOverrideDragAndDropText: _,
+            elOverrideDragAndDropText: _,
             forceResolution: _,
             elAdditonalButtons: _,
             rgRealmList: _,
@@ -2268,7 +2268,7 @@
           {
             onDropFiles: _,
             elAdditonalButtons: _,
-            strOverrideDragAndDropText: _,
+            elOverrideDragAndDropText: _,
           },
           _.createElement(
             _.Fragment,
@@ -2477,11 +2477,11 @@
           _ &&
             (null === (_ = _.warnings) || void 0 === _
               ? void 0
-              : _.map((_) =>
+              : _.map((_, _) =>
                   _.createElement(
                     "div",
                     {
-                      key: _,
+                      key: `warning${_}`,
                       className: _().UploadPreviewWarning,
                     },
                     _,
@@ -2490,11 +2490,11 @@
           _ &&
             (null === (_ = _.messages) || void 0 === _
               ? void 0
-              : _.map((_) =>
+              : _.map((_, _) =>
                   _.createElement(
                     "div",
                     {
-                      key: _,
+                      key: `message${_}`,
                       className: _().UploadPreviewMessage,
                     },
                     _,
@@ -4488,7 +4488,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const _ = _.useRef(),
+        const _ = _.useRef(void 0),
           _ = _.useCallback(
             (_) => {
               _.currentTarget.files.length > 0 &&

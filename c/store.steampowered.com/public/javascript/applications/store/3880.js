@@ -25,6 +25,7 @@
 	"Menu_Cart": "장바구니",
 	"Menu_Popover_TopLinks": "인기 링크",
 	"Menu_Popover_StoreHome": "상점 홈",
+	"Menu_Popover_GreatonDeck": "Deck 완벽 호환",
 	"Menu_Popover_FreeToPlay": "무료 플레이",
 	"Menu_Popover_SteamCharts": "Steam 차트",
 	"Menu_Popover_Upcoming": "출시 예정 게임",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "일치하는 검색 결과가 없습니다.",
 	"Menu_SearchBar_AdvancedSearch": "고급 검색",
 	"Menu_Search": "검색",
-	"Menu_Label": "상점 메뉴"
+	"Menu_Label": "상점 메뉴",
+	"ItemFlag_InLibrary": "라이브러리에 있음",
+	"ItemFlag_OnWishlist": "찜 목록에 있음",
+	"ItemFlag_InCart": "장바구니에 있음",
+	"ItemFlag_Ignored": "제외로 지정함",
+	"ItemFlag_ExcludedByPreferences": "환경 설정에 따라 제외"
 }`);
     },
   },

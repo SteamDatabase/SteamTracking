@@ -13394,7 +13394,7 @@
           } = e,
           [d, u] = i.useState(!1),
           g = i.useCallback(() => d, [d]),
-          _ = i.useRef(),
+          _ = i.useRef(void 0),
           h = (0, p.Qn)();
         let B = null != s ? s : {};
         return (
@@ -20865,7 +20865,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          g = (0, i.useRef)(),
+          g = (0, i.useRef)(void 0),
           [_, h] = (0, s.XC)();
         return (
           (0, i.useEffect)(() => {

@@ -1009,7 +1009,7 @@
             bShowCapsuleArt: s,
             broadcastEmbedContext: r,
           } = e,
-          o = (0, l.useRef)(),
+          o = (0, l.useRef)(void 0),
           i = (0, l.useMemo)(() => {
             const e = M.j
               .Get()

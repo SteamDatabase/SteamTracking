@@ -25,6 +25,7 @@
 	"Menu_Cart": "Coș",
 	"Menu_Popover_TopLinks": "Linkuri populare",
 	"Menu_Popover_StoreHome": "Pagina principală a magazinului",
+	"Menu_Popover_GreatonDeck": "Impecabile pe Deck",
 	"Menu_Popover_FreeToPlay": "Gratuite",
 	"Menu_Popover_SteamCharts": "Clasamentele Steam",
 	"Menu_Popover_Upcoming": "Lansări viitoare",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Nu a fost găsit niciun rezultat.",
 	"Menu_SearchBar_AdvancedSearch": "Căutare avansată",
 	"Menu_Search": "Căutare",
-	"Menu_Label": "Meniul de magazin"
+	"Menu_Label": "Meniul de magazin",
+	"ItemFlag_InLibrary": "ÎN BIBLIOTECĂ",
+	"ItemFlag_OnWishlist": "ÎN LISTA DE DORINȚE",
+	"ItemFlag_InCart": "ÎN COȘ",
+	"ItemFlag_Ignored": "IGNORAT",
+	"ItemFlag_ExcludedByPreferences": "PRODUS EXCLUS ÎN FUNCȚIE DE PREFERINȚE"
 }`);
     },
   },

@@ -22,7 +22,7 @@ function _(..._) {
           });
 }
 function _(_, _) {
-  let _ = _.useRef();
+  let _ = _.useRef(void 0);
   return _.useCallback((_) => {
     _.current && _.current(), (_.current = _(_));
   }, _);

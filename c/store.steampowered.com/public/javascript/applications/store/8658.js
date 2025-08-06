@@ -6,7 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "russian",
 	"review_summary_reviewrate": "%1$s% из %2$s обзоров положительные",
-	"Discount_ARIA_Label": "Скидка — %1$s. Обычная цена — %2$s, цена со скидкой — %3$s",
+	"Discount_ARIA_Label": "Скидка — %1$s%. Обычная цена — %2$s, цена со скидкой — %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "Специальная цена: %1$s",
 	"Price_Free": "Бесплатный продукт",
 	"AddToCartButton_InCart": "В корзине",
@@ -25,6 +25,7 @@
 	"Menu_Cart": "Корзина",
 	"Menu_Popover_TopLinks": "Популярные ссылки",
 	"Menu_Popover_StoreHome": "Домашняя страница магазина",
+	"Menu_Popover_GreatonDeck": "Отлично на Deck",
 	"Menu_Popover_FreeToPlay": "Бесплатные игры",
 	"Menu_Popover_SteamCharts": "Чарты Steam",
 	"Menu_Popover_Upcoming": "Будущие новинки",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "По вашему запросу ничего не нашлось.",
 	"Menu_SearchBar_AdvancedSearch": "Расширенный поиск",
 	"Menu_Search": "Поиск",
-	"Menu_Label": "Меню магазина"
+	"Menu_Label": "Меню магазина",
+	"ItemFlag_InLibrary": "В БИБЛИОТЕКЕ",
+	"ItemFlag_OnWishlist": "В ЖЕЛАЕМОМ",
+	"ItemFlag_InCart": "В КОРЗИНЕ",
+	"ItemFlag_Ignored": "СКРЫТО",
+	"ItemFlag_ExcludedByPreferences": "ИСКЛЮЧЕНО СОГЛАСНО НАСТРОЙКАМ"
 }`);
     },
   },

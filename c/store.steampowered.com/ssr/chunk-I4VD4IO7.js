@@ -140,15 +140,11 @@ function _(_) {
   });
 }
 function _(_, _, _) {
-  if (typeof _.structuralSharing == "function")
-    return _.structuralSharing(_, _);
-  if (_.structuralSharing !== !1) {
-    if (0)
-      try {
-      } catch (_) {}
-    return _(_, _);
-  }
-  return _;
+  return typeof _.structuralSharing == "function"
+    ? _.structuralSharing(_, _)
+    : _.structuralSharing !== !1
+      ? _(_, _)
+      : _;
 }
 function _(_, _, _ = 0) {
   let _ = [..._, _];
@@ -450,7 +446,7 @@ var _ = class {
         }, this.gcTime));
   }
   updateGcTime(_) {
-    this.gcTime = Math.max(this.gcTime || 0, _ ?? (_ ? 1 / 0 : 5 * 60 * 1e3));
+    this.gcTime = Math.max(this.gcTime || 0, _ ?? (_ ? 1 / 0 : 300 * 1e3));
   }
   clearGcTimeout() {
     this.#e && (clearTimeout(this.#e), (this.#e = void 0));

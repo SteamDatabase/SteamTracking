@@ -25,6 +25,7 @@
 	"Menu_Cart": "Καλάθι",
 	"Menu_Popover_TopLinks": "Κορυφαίοι σύνδεσμοι",
 	"Menu_Popover_StoreHome": "Αρχική σελίδα Καταστήματος",
+	"Menu_Popover_GreatonDeck": "Υπέροχο στο Steam Deck",
 	"Menu_Popover_FreeToPlay": "Δωρεάν για παίξιμο",
 	"Menu_Popover_SteamCharts": "Γραφήματα Steam",
 	"Menu_Popover_Upcoming": "Επερχόμενες κυκλοφορίες",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Κανένα στοιχείο δεν ταιριάζει με την αναζήτησή σας.",
 	"Menu_SearchBar_AdvancedSearch": "Σύνθετη αναζήτηση",
 	"Menu_Search": "Αναζήτηση",
-	"Menu_Label": "Μενού Καταστήματος"
+	"Menu_Label": "Μενού Καταστήματος",
+	"ItemFlag_InLibrary": "ΣΤΗ ΣΥΛΛΟΓΗ",
+	"ItemFlag_OnWishlist": "ΣΤΗ ΛΙΣΤΑ ΕΠΙΘΥΜΙΩΝ",
+	"ItemFlag_InCart": "ΣΤΟ ΚΑΛΑΘΙ",
+	"ItemFlag_Ignored": "ΣΕ ΑΓΝΟΗΣΗ",
+	"ItemFlag_ExcludedByPreferences": "ΕΞΑΙΡΕΘΗΚΕ ΑΠΟ ΠΡΟΤΙΜΗΣΕΙΣ"
 }`);
     },
   },

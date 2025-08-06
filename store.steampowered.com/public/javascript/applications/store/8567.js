@@ -5,7 +5,7 @@
   [8567],
   {
     28567: (e, t, r) => {
-      r.d(t, { DT: () => j, Uy: () => R, Pt: () => A, bD: () => h });
+      r.d(t, { DT: () => S, Uy: () => R, Pt: () => h, bD: () => j });
       var i,
         a,
         s = r(56545),
@@ -260,52 +260,52 @@
           return "CAccountPrivateApps_GetPrivateAppList_Response";
         }
       }
-      class y extends n.Message {
+      class d extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            y.prototype.private_apps || o.Sg(y.M()),
+            d.prototype.private_apps || o.Sg(d.M()),
             n.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            y.sm_m ||
-              (y.sm_m = { proto: y, fields: { private_apps: { n: 1, c: u } } }),
-            y.sm_m
+            d.sm_m ||
+              (d.sm_m = { proto: d, fields: { private_apps: { n: 1, c: u } } }),
+            d.sm_m
           );
         }
         static MBF() {
-          return y.sm_mbf || (y.sm_mbf = o.w0(y.M())), y.sm_mbf;
+          return d.sm_mbf || (d.sm_mbf = o.w0(d.M())), d.sm_mbf;
         }
         toObject(e = !1) {
-          return y.toObject(e, this);
+          return d.toObject(e, this);
         }
         static toObject(e, t) {
-          return o.BT(y.M(), e, t);
+          return o.BT(d.M(), e, t);
         }
         static fromObject(e) {
-          return o.Uq(y.M(), e);
+          return o.Uq(d.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (c().BinaryReader)(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
+            r = new d();
+          return d.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return o.zj(y.MBF(), e, t);
+          return o.zj(d.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (c().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          o.i0(y.M(), e, t);
+          o.i0(d.M(), e, t);
         }
         serializeBase64String() {
           var e = new (c().BinaryWriter)();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAccountPrivateApsClient_NotifyPrivateAppListChanged_Notification";
@@ -332,10 +332,10 @@
         (function (e) {
           e.NotifyPrivateAppListChangedHandler = {
             name: "AccountPrivateAppsClient.NotifyPrivateAppListChanged#1",
-            request: y,
+            request: d,
           };
         })(a || (a = {}));
-      var d = r(20194),
+      var y = r(20194),
         g = r(75233),
         f = r(51614),
         b = r(23809),
@@ -351,48 +351,59 @@
         await e.StoreObject(r, t);
       }
       const w = ["AccountPrivateApps"];
-      function A() {
-        const e = (0, b.KV)(),
-          t = (0, b.rX)(),
-          r = v();
-        return (0, d.I)({
+      function A(e) {
+        const { transport: t, storage: r, bUseLocalCache: a, bEnabled: n } = e;
+        return {
           queryKey: w,
           queryFn: async () => {
-            let a;
-            r &&
-              (a = await (async function (e) {
+            let e;
+            a &&
+              (e = await (async function (e) {
                 const t = M();
                 return await e.GetObject(t);
-              })(t));
+              })(r));
             const n = s.w.Init(m),
-              c = await i.GetPrivateAppList(e, n);
+              c = await i.GetPrivateAppList(t, n);
             if (!c.BSuccess()) {
-              if (a) return new Set(a);
+              if (e) return new Set(e);
               throw c.GetErrorMessage();
             }
             return (
-              r && (await _(t, c.Body().private_apps(!0).appids())),
+              a && (await _(r, c.Body().private_apps(!0).appids())),
               new Set(c.Body().private_apps(!0).appids())
             );
           },
-          enabled: !!z.iA.accountid,
-        });
+          enabled: n,
+        };
+      }
+      function h() {
+        const e = (0, b.KV)(),
+          t = (0, b.rX)(),
+          r = v();
+        return (0, y.I)(
+          A({
+            transport: e,
+            storage: t,
+            bUseLocalCache: r,
+            bEnabled: !!z.iA.accountid,
+          }),
+        );
       }
       function R(e) {
-        const { data: t } = A();
+        const { data: t } = h();
         return !!z.iA.accountid && !!e && (t ? t.has(e) : void 0);
       }
-      function h(e) {
+      function j(e) {
         const t = (0, b.KV)(),
           r = (0, g.jE)(),
           i = v(),
           a = (0, b.rX)();
         return (0, f.n)({
-          mutationFn: async (r) => S(t, [e], r),
-          onSuccess: (t, s) => P(r, [e], s, i ? a : null),
+          mutationFn: async (r) => P(t, [e], r),
+          onSuccess: (t, s) => T(r, [e], s, i ? a : null),
         });
       }
-      function j() {
+      function S() {
         const e = (0, b.KV)(),
           t = (0, g.jE)(),
           r = v(),
@@ -400,21 +411,21 @@
         return (0, f.n)({
           mutationFn: async (t) => {
             const { rgAppIDs: r, bPrivate: i } = t;
-            return S(e, r, i);
+            return P(e, r, i);
           },
           onSuccess: (e, a) => {
             const { rgAppIDs: s, bPrivate: n } = a;
-            P(t, s, n, r ? i : null);
+            T(t, s, n, r ? i : null);
           },
         });
       }
-      async function S(e, t, r) {
+      async function P(e, t, r) {
         const a = s.w.Init(l);
         a.Body().set_appids(t.slice()), a.Body().set_private(r);
         const n = await i.ToggleAppPrivacy(e, a);
         if (!n.BSuccess()) throw n.GetErrorMessage();
       }
-      function P(e, t, r, i) {
+      function T(e, t, r, i) {
         e.setQueryData(w, (e) => {
           if (!e) return;
           const a = new Set(e);

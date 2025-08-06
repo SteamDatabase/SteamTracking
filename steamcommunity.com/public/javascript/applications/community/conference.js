@@ -653,7 +653,7 @@
           const t = ["maxresdefault", "mqdefault", "default"],
             [n, o] = a.useState(0);
           a.useEffect(() => o(0), [e.video]);
-          const l = a.useRef();
+          const l = a.useRef(void 0);
           if (e.altImgWithFallback && e.altImgWithFallback.length > 0)
             return a.createElement(fe.o, {
               className: e.className,

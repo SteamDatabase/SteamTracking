@@ -12449,7 +12449,7 @@
       function gi(e) {
         const { oChat: t, emoticonStore: r } = e,
           [i, a] = d.useState(""),
-          s = d.useRef(),
+          s = d.useRef(void 0),
           n = (0, m.q3)(() => t.m_bRateLimited),
           o = d.useCallback(
             (e) => {
@@ -13574,7 +13574,7 @@
             bShowCapsuleArt: a,
             broadcastEmbedContext: s,
           } = e,
-          n = (0, d.useRef)(),
+          n = (0, d.useRef)(void 0),
           o = (0, d.useMemo)(() => {
             const e = Wi.j
               .Get()

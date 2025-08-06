@@ -1817,7 +1817,7 @@
               let _ = (0, _._)(_, !1, -1);
               return (
                 _ || (_ = (0, _._)(_, !0, -1)),
-                (0, _._)(await (0, _._)((0, _._)(_?.url, _), 1 == _.usage))
+                (0, _._)(await (0, _._)((0, _._)(_?.url, _), 1 == _?.usage))
               );
             });
             Promise.all(_).then(__webpack_require__);
@@ -1832,7 +1832,7 @@
             controls: _ = !0,
             primaryLanguage: _,
           } = _,
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_),
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(),
@@ -2201,25 +2201,24 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        m_nAppId;
-        m_strBeginUploadUrl;
-        m_strCompleteUploadUrl;
-        static m_mapConcurrentCompletions = new Set();
-        m_filesToUpload = _._.array();
+        m_cancel = void 0;
         m_bExtraAssetsV2Videos = !1;
+        m_strGetExtraAssetsUrl;
+        m_strBeginUploadUrl;
+        m_strCheckStatusUrl;
+        m_strCompleteUploadUrl;
+        m_filesToUpload = _._.array();
         m_onlyAssetGroup = void 0;
         m_rgExistingAssetGroups = void 0;
         m_rgImageSizes = void 0;
-        constructor(_, _, _, _) {
+        constructor(_, _, _, _, _) {
           super(),
             (0, _._)(this),
             (this.m_bExtraAssetsV2Videos = _),
-            (this.m_nAppId = _),
+            (this.m_strGetExtraAssetsUrl = _),
             (this.m_strBeginUploadUrl = _),
+            (this.m_strCheckStatusUrl = _),
             (this.m_strCompleteUploadUrl = _);
-        }
-        BGetUploadsAreInSerial() {
-          return !1;
         }
         GetErrorsFromErrorResponse(_) {
           let _;
@@ -2227,8 +2226,16 @@
           return (
             _
               ? (_ = [
-                  ..._,
-                  _.createElement("br"),
+                  ...__webpack_require__.map((_, _) =>
+                    _.createElement(
+                      "span",
+                      {
+                        key: `error${_}`,
+                      },
+                      _,
+                    ),
+                  ),
+                  _?.length > 0 ? _.createElement("br") : void 0,
                   _.createElement(
                     "a",
                     {
@@ -2288,8 +2295,127 @@
             );
           return !1;
         }
-        async UploadSingleImage(_, _, _, _) {
-          const _ = _.GetCurrentImageOption()?.groupName ?? _;
+        async UploadAllImages(_, _) {
+          this.m_cancel = _().CancelToken.source();
+          const _ = (0, _._)(this.GetUploadImages(), _, _),
+            _ = __webpack_require__.map(
+              (_) => _.GetCurrentImageOption()?.groupName ?? _.filename,
+            );
+          let _ = 0;
+          const _ = new Map(),
+            _ = new Map();
+          let _ = 0;
+          const _ = async () => {
+            for (; _ < _.length; ) {
+              const _ = _++,
+                _ = _[_],
+                _ = _[_];
+              (_.status = "uploading"), _++;
+              try {
+                const _ = await this.StartImageUpload(_, this.m_cancel.token);
+                if (_.bSuccess) {
+                  const _ = (0, _._)();
+                  _.set(_.nRequestId, (_) => __webpack_require__.resolve(_));
+                  const _ = new Promise((_, _) => setTimeout(() => _(), 3e5));
+                  try {
+                    const _ = await Promise.race([_, _.promise]);
+                    _.set(_.nRequestId, {
+                      bSuccess: 1 == _,
+                      uploadImage: _,
+                      strGroupName: _,
+                      elErrorMessage:
+                        1 == _
+                          ? void 0
+                          : (0, _._)("#MediaConvert_InternalError"),
+                    });
+                  } catch {
+                    _.set(_.nRequestId, {
+                      bSuccess: !1,
+                      uploadImage: _,
+                      strGroupName: _,
+                      elErrorMessage: (0, _._)(
+                        "#StoreAdmin_ExtraAssetUpload_Timeout",
+                      ),
+                    });
+                  } finally {
+                    _.delete(_.nRequestId);
+                  }
+                } else
+                  (_.status = _.bSuccess ? "success" : "failed"),
+                    (_.message =
+                      !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : "");
+              } finally {
+                _--;
+              }
+            }
+          };
+          Array.from(
+            {
+              length: Math.floor(4),
+            },
+            () => _(),
+          );
+          const _ = [];
+          for (;;) {
+            if (_.size > 0) {
+              const _ = Array.from(_.keys()),
+                { bSuccess: _, rgStatus: _ } = await this.CheckUploadStatus(
+                  _,
+                  this.m_cancel.token,
+                );
+              if (_)
+                for (const [_, _] of _._(_, _))
+                  if (22 != _) {
+                    const _ = _.get(_);
+                    _.delete(_), _?.(_);
+                  }
+            }
+            const _ = new Map(_);
+            _.clear();
+            for (const [
+              _,
+              {
+                bSuccess: _,
+                uploadImage: _,
+                strGroupName: _,
+                elErrorMessage: _,
+              },
+            ] of _) {
+              if (!_) {
+                (_.status = "failed"),
+                  (_.message = _),
+                  _.push({
+                    bSuccess: !1,
+                    image: _,
+                    uploadResult: [],
+                  });
+                continue;
+              }
+              const _ = await this.CompleteUpload(
+                _,
+                _,
+                _.language,
+                this.m_cancel.token,
+              );
+              (_.status = _.bSuccess ? "success" : "failed"),
+                (_.message = _.bSuccess ? "" : _.elErrorMessage),
+                _.push({
+                  bSuccess: _.bSuccess,
+                  image: _,
+                  uploadResult: [],
+                });
+            }
+            if (_ >= _.length && 0 == _ && 0 == _.size) break;
+            this.m_cancel.token.throwIfRequested(), await (0, _._)(1e3);
+          }
+          const { rgExtraAssets: _ } = await this.GetExtraAssets(
+            this.m_cancel.token,
+          );
+          return (
+            _.filter((_) => _.bSuccess).forEach((_) => (_.uploadResult = _)), _
+          );
+        }
+        async StartImageUpload(_, _) {
           let _;
           {
             const _ = new FormData();
@@ -2313,7 +2439,6 @@
                   {
                     bSuccess: !1,
                     elErrorMessage: null,
-                    result: null,
                   }
                 );
               (_ = _.data.request_id), (_.status = "processing");
@@ -2328,74 +2453,143 @@
                 {
                   bSuccess: !1,
                   elErrorMessage: _,
-                  result: null,
                 }
               );
             }
           }
-          const _ = Date.now();
-          for (; Date.now() - _ < 3e5; ) {
-            const _ = new FormData();
-            if (
-              (_.append("sessionid", _._.SESSIONID),
-              _.append("request_id", _.toString()),
-              _.append("name", _),
-              _.append("asset_type", "extra_asset_v2"),
-              -1 != _ && _.append("language", (0, _._)(_)),
-              _.m_mapConcurrentCompletions.has(this.m_nAppId))
-            ) {
-              await (0, _._)(Math.floor(1e3 * Math.random()) + 500);
-              continue;
-            }
-            let _;
-            try {
-              _.m_mapConcurrentCompletions.add(this.m_nAppId);
-              const _ = await _().post(this.m_strCompleteUploadUrl, _, {
-                withCredentials: !0,
-                cancelToken: _,
-              });
-              if (200 != _.status || "object" != typeof _.data)
-                return (
-                  console.warn(
-                    "CExtraAssetsImageUploader.UploadSingleImage failed",
-                    this.m_strCompleteUploadUrl,
-                  ),
-                  {
-                    bSuccess: !1,
-                    elErrorMessage: null,
-                    result: null,
-                  }
-                );
-              _ = _.data;
-            } catch (_) {
-              const _ = this.GetErrorsFromErrorResponse(_);
+          return {
+            bSuccess: !0,
+            nRequestId: _,
+          };
+        }
+        async CheckUploadStatus(_, _) {
+          const _ = new FormData();
+          let _;
+          __webpack_require__.append("sessionid", _._.SESSIONID),
+            __webpack_require__.append("request_ids", _.join(","));
+          try {
+            const _ = await _().post(this.m_strCheckStatusUrl, _, {
+              withCredentials: !0,
+              cancelToken: _,
+            });
+            if (200 != _.status || "object" != typeof _.data)
               return (
                 console.warn(
-                  "CExtraAssetsImageUploader.UploadSingleImage failed",
-                  this.m_strCompleteUploadUrl,
-                  _,
+                  "CExtraAssetsImageUploader.CheckUploadStatus failed",
+                  this.m_strCheckStatusUrl,
                 ),
                 {
                   bSuccess: !1,
-                  elErrorMessage: _,
-                  result: null,
                 }
               );
-            } finally {
-              _.m_mapConcurrentCompletions.delete(this.m_nAppId);
-            }
-            if (_.complete)
-              return {
-                bSuccess: !0,
-                elErrorMessage: null,
-                result: _.rgExtraAssets,
-              };
-            await (0, _._)(Math.floor(1e3 * Math.random()) + 500);
+            _ = _.data;
+          } catch (_) {
+            const _ = this.GetErrorsFromErrorResponse(_);
+            return (
+              console.warn(
+                "CExtraAssetsImageUploader.CheckUploadStatus failed",
+                this.m_strCheckStatusUrl,
+                _,
+              ),
+              {
+                bSuccess: !1,
+                elErrorMessage: _,
+              }
+            );
           }
           return {
-            bSuccess: !1,
-            elErrorMessage: (0, _._)("#StoreAdmin_ExtraAssetUpload_Timeout"),
+            bSuccess: !0,
+            rgStatus: _.status,
           };
+        }
+        async CompleteUpload(_, _, _, _) {
+          const _ = new FormData();
+          let _;
+          _.append("sessionid", _._.SESSIONID),
+            _.append("request_id", _.toString()),
+            _.append("name", _),
+            _.append("asset_type", "extra_asset_v2"),
+            -1 != _ && _.append("language", (0, _._)(_));
+          try {
+            const _ = await _().post(this.m_strCompleteUploadUrl, _, {
+              withCredentials: !0,
+              cancelToken: _,
+            });
+            if (200 != _.status || "object" != typeof _.data)
+              return (
+                console.warn(
+                  "CExtraAssetsImageUploader.CompleteUpload failed",
+                  this.m_strCompleteUploadUrl,
+                ),
+                {
+                  bSuccess: !1,
+                }
+              );
+            _ = _.data;
+          } catch (_) {
+            const _ = this.GetErrorsFromErrorResponse(_);
+            return (
+              console.warn(
+                "CExtraAssetsImageUploader.CompleteUpload failed",
+                this.m_strCompleteUploadUrl,
+                _,
+              ),
+              {
+                bSuccess: !1,
+                elErrorMessage: _,
+              }
+            );
+          }
+          return (
+            (0, _._)(
+              _.complete,
+              "CompleteUpload shouldn't be run until all uploads are complete",
+            ),
+            {
+              bSuccess: !0,
+            }
+          );
+        }
+        async GetExtraAssets(_) {
+          const _ = new FormData();
+          let _;
+          _.append("sessionid", _._.SESSIONID);
+          try {
+            const _ = await _().post(this.m_strGetExtraAssetsUrl, _, {
+              withCredentials: !0,
+              cancelToken: _,
+            });
+            if (200 != _.status || "object" != typeof _.data)
+              return (
+                console.warn(
+                  "CExtraAssetsImageUploader.GetExtraAssets failed",
+                  this.m_strGetExtraAssetsUrl,
+                ),
+                {
+                  bSuccess: !1,
+                }
+              );
+            _ = _.data;
+          } catch (_) {
+            const _ = this.GetErrorsFromErrorResponse(_);
+            return (
+              console.warn(
+                "CExtraAssetsImageUploader.GetExtraAssets failed",
+                this.m_strGetExtraAssetsUrl,
+                _,
+              ),
+              {
+                bSuccess: !1,
+              }
+            );
+          }
+          return {
+            bSuccess: !0,
+            rgExtraAssets: _.rgExtraAssets,
+          };
+        }
+        CancelAllUploads() {
+          this.m_cancel?.cancel((0, _._)("#ImageUpload_CancelRequest"));
         }
         GetImageOptions() {
           const _ = (_, _, _, _, _) => ({
@@ -2491,14 +2685,11 @@
       }
       function _() {
         const { bExtraAssetsV2Videos: _ } = (0, _._)(),
-          { _: _, type: __webpack_require__ } = (0, _._)();
-        (0, _._)(
-          0 == __webpack_require__,
-          "ExtraAssetsUploader can only be used on apps",
-        );
-        const _ = (0, _._)("ajaxbeginuploadassetasync"),
+          _ = (0, _._)("ajaxgetextraassets"),
+          _ = (0, _._)("ajaxbeginuploadassetasync"),
+          _ = (0, _._)("ajaxcheckuploadassetsstatus"),
           _ = (0, _._)("ajaxtrytocompleteuploadasset");
-        return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
+        return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "m_onlyAssetGroup", void 0),
@@ -4289,7 +4480,7 @@
             onActivate: _,
             onGamepadDirection: _,
           } = (function (_) {
-            const _ = _.useRef(),
+            const _ = _.useRef(void 0),
               _ = (0, _._)(),
               _ = _.useCallback(() => {
                 __webpack_require__.ShowVirtualKeyboard();
@@ -5909,7 +6100,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6045,13 +6235,6 @@
           ":method:",
           _,
         );
-      }
-      function _() {
-        const _ = _.useContext(_);
-        return {
-          type: _.eStoreItemType,
-          _: _.storeItemID,
-        };
       }
       function _() {
         return _.useContext(_).queueExtraAssetUpload;
@@ -17653,7 +17836,7 @@
             refUpdateToolbar: __webpack_require__,
             children: _,
           } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         _.current || (_.current = new _._()),
           _.useEffect(
             () => (
@@ -17942,7 +18125,7 @@
           [_, _] = _.useState(0),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(""),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = _.useMemo(() => new Array(), []),
           _ = _.useMemo(() => new Array(), []),
           _ = _.useMemo(() => _().CancelToken.source(), []),

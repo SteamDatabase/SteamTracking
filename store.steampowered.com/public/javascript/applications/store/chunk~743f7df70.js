@@ -5221,7 +5221,7 @@
     },
     90335: (e, t, r) => {
       "use strict";
-      r.d(t, { us: () => ii, fh: () => ai });
+      r.d(t, { us: () => ai, fh: () => ni });
       var i = r(99376),
         a = r(42780),
         n = r(90626),
@@ -7686,7 +7686,7 @@
                     n.createElement(
                       "div",
                       { className: Fe().FAQDisplay },
-                      n.createElement(ai, { text: o, event: null }),
+                      n.createElement(ni, { text: o, event: null }),
                     ),
                 ),
               n.createElement("div", { className: Fe().SessionOptions }, r),
@@ -8346,7 +8346,7 @@
                     n.Fragment,
                     null,
                     n.createElement("div", null, (0, w.we)("#MeetSteam_FAQ")),
-                    n.createElement(ai, { text: m, event: null }),
+                    n.createElement(ni, { text: m, event: null }),
                   ),
               ),
             ),
@@ -8996,8 +8996,9 @@
         }
         return (0, m.Pm)(t, r?.event);
       }
-      function cr(e) {
-        let t = (0, s.j$)(e.args) || (0, s.j$)(e.args, "href");
+      var cr = r(90622);
+      function ur(e) {
+        let t = (0, cr.J)((0, s.j$)(e.args) || (0, s.j$)(e.args, "href"));
         const r = (0, s.j$)(e.args, "style"),
           i = (0, s.j$)(e.args, "id"),
           a = (0, s.j$)(e.args, "buttoncolor"),
@@ -9046,7 +9047,7 @@
                 )
         );
       }
-      function ur(e) {
+      function dr(e) {
         const t = (0, s.j$)(e.args, "href"),
           r = Vt(t);
         return r
@@ -9054,13 +9055,13 @@
               event: e.context.event,
               partnerEventStore: ht.O3,
             })
-          : n.createElement(cr, { ...e });
+          : n.createElement(ur, { ...e });
       }
-      var dr = r(48079),
-        pr = r(93267),
-        _r = r(67523),
-        gr = r.n(_r);
-      const fr = (e) => {
+      var pr = r(48079),
+        _r = r(93267),
+        gr = r(67523),
+        fr = r.n(gr);
+      const br = (e) => {
         const [t, r] = (0, n.useState)(!0),
           [i, a] = (0, n.useState)(null);
         if (
@@ -9105,7 +9106,7 @@
           i)
         )
           return e.bIsPreviewMode
-            ? n.createElement("div", { className: gr().ErrorDiv }, i)
+            ? n.createElement("div", { className: fr().ErrorDiv }, i)
             : null;
         if (t)
           return n.createElement(Se.t, {
@@ -9124,17 +9125,17 @@
               { sURL: l.strMP4URL, sFormat: "video/mp4" },
             ],
           };
-        return n.createElement(pr.L, {
+        return n.createElement(_r.L, {
           bControls: !0,
           bAutoPlay: !1,
           bLoop: !1,
           video: o,
         });
       };
-      var br = r(19432),
-        yr = r(6469),
-        Br = r(84811);
-      const wr = n.lazy(() =>
+      var yr = r(19432),
+        Br = r(6469),
+        wr = r(84811);
+      const hr = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -9157,11 +9158,11 @@
             r.e(8396),
           ]).then(r.bind(r, 72224)),
         ),
-        hr = (e) => {
+        Sr = (e) => {
           const t = (0, n.useRef)(null),
-            [r, i] = (0, n.useState)(yr.K.Get().GetVODForAppID(e.appid)),
+            [r, i] = (0, n.useState)(Br.K.Get().GetVODForAppID(e.appid)),
             [a, s] = (0, n.useState)(
-              !Boolean(yr.K.Get().GetVODForAppID(e.appid)),
+              !Boolean(Br.K.Get().GetVODForAppID(e.appid)),
             );
           return (
             (0, n.useEffect)(
@@ -9172,14 +9173,14 @@
               if (
                 (r &&
                   r.appid != e.appid &&
-                  (a = yr.K.Get().GetVODForAppID(e.appid)),
+                  (a = Br.K.Get().GetVODForAppID(e.appid)),
                 !a)
               ) {
                 const r = async () => {
                   t.current && t.current();
                   const r = b().CancelToken.source();
                   (t.current = r.cancel),
-                    (a = await yr.K.Get().LoadVODForAppID(e.appid)),
+                    (a = await Br.K.Get().LoadVODForAppID(e.appid)),
                     r.token.reason || i(a),
                     s(!1);
                 };
@@ -9198,14 +9199,14 @@
                 )
               : n.createElement(
                   "div",
-                  { className: br.BroadcastCtn },
+                  { className: yr.BroadcastCtn },
                   n.createElement(
-                    Br.tH,
+                    wr.tH,
                     null,
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(wr, {
+                      n.createElement(hr, {
                         nAppIDVOD: e.appid,
                         watchLocation: 9,
                         bStartPaused: !0,
@@ -9215,16 +9216,16 @@
                 )
           );
         };
-      var Sr = r(26296),
-        Mr = r(56011),
-        vr = r(45699),
-        Cr = r(39362);
-      function zr(e) {
+      var Mr = r(26296),
+        vr = r(56011),
+        Cr = r(45699),
+        zr = r(39362);
+      function Rr(e) {
         const { fileUploadManager: t } = e,
-          r = (0, n.useRef)();
+          r = (0, n.useRef)(void 0);
         return n.createElement(
           "div",
-          { className: Cr.Ctn },
+          { className: zr.Ctn },
           n.createElement("input", {
             type: "file",
             accept: ".jpg,.jpeg,.png,.gif,.webm,.mpg,.mpeg,.ogv,.mp4",
@@ -9238,7 +9239,7 @@
             },
           }),
           n.createElement(
-            vr.fu,
+            Cr.fu,
             {
               type: "button",
               title: (0, w.we)("#Button_Upload"),
@@ -9249,47 +9250,47 @@
           ),
         );
       }
-      var Rr = r(49333);
-      function Er(e) {
+      var Er = r(49333);
+      function Ur(e) {
         const { fileUploadManager: t } = e,
           r = (0, W.q3)(() => t.file_upload_props.eUploadState);
         return 1 == r
-          ? n.createElement(Ur, { fileUploadManager: t })
+          ? n.createElement(Ir, { fileUploadManager: t })
           : 3 == r || 5 == r || 4 == r
-            ? n.createElement(Fr, { fileUploadManager: t })
+            ? n.createElement(Tr, { fileUploadManager: t })
             : 0 != r
-              ? n.createElement(Ir, { fileUploadManager: t })
+              ? n.createElement(Fr, { fileUploadManager: t })
               : null;
       }
-      function Ur(e) {
+      function Ir(e) {
         const { fileUploadManager: t } = e,
           r = t.file;
         return n.createElement(
           "div",
-          { className: Rr.UploadPreviewContainer },
+          { className: Er.UploadPreviewContainer },
           Boolean(-1 != r.type.indexOf("image")) &&
             n.createElement("img", {
-              className: Rr.UploadPreview,
+              className: Er.UploadPreview,
               src: t.file_upload_data_url,
             }),
           Boolean(-1 != r.type.indexOf("video")) &&
             n.createElement(bt.CeX, null),
           n.createElement(
             "div",
-            { className: Rr.FileUploadFileName },
+            { className: Er.FileUploadFileName },
             "'",
             r.name,
             "'",
           ),
           n.createElement(
             "div",
-            { className: Rr.FileUploadCancel, onClick: () => t.Reset() },
+            { className: Er.FileUploadCancel, onClick: () => t.Reset() },
             n.createElement(bt.sED, null),
           ),
           n.createElement(
             I.jn,
             {
-              className: Rr.FileUploadBtn,
+              className: Er.FileUploadBtn,
               onClick: async () => {
                 await t.BeginFileUpload(), t.Reset();
               },
@@ -9298,7 +9299,7 @@
           ),
         );
       }
-      function Ir(e) {
+      function Fr(e) {
         const { fileUploadManager: t } = e,
           [r, i, a] = (0, W.q3)(() => [
             t.file_upload_props.file,
@@ -9309,13 +9310,13 @@
           l = { width: a + "%" };
         return n.createElement(
           "div",
-          { className: Rr.FileUploadProgressContainer },
-          n.createElement("div", { className: Rr.FileUploadProgressName }, s),
+          { className: Er.FileUploadProgressContainer },
+          n.createElement("div", { className: Er.FileUploadProgressName }, s),
           n.createElement(
             "div",
             {
               className: (0, ve.A)(
-                Rr.FileUploadProgressBarContainer,
+                Er.FileUploadProgressBarContainer,
                 "DialogProgressBar_ProgressBarContainer",
               ),
             },
@@ -9326,7 +9327,7 @@
           ),
         );
       }
-      function Fr(e) {
+      function Tr(e) {
         const { fileUploadManager: t } = e,
           [r, i, a] = (0, W.q3)(() => [
             t.file_upload_props.strErrorDescription,
@@ -9337,16 +9338,16 @@
           l = r || (0, w.we)("#Chat_Upload_ErrorCloud");
         return n.createElement(
           "div",
-          { className: Rr.FileUploadProgressContainer },
-          n.createElement("div", { className: Rr.FileUploadProgressName }, s),
+          { className: Er.FileUploadProgressContainer },
+          n.createElement("div", { className: Er.FileUploadProgressName }, s),
           n.createElement(
             "div",
-            { className: Rr.FileUploadErrorDescription },
+            { className: Er.FileUploadErrorDescription },
             l,
           ),
           n.createElement(
             "div",
-            { className: Rr.FileUploadActions },
+            { className: Er.FileUploadActions },
             n.createElement(
               I.dR,
               { className: "DialogLayout_NoMinWidth" },
@@ -9369,15 +9370,15 @@
           ),
         );
       }
-      var Tr = r(41951),
-        Nr = r(75933),
-        Wr = r(1596);
-      function Ar(e) {
+      var Nr = r(41951),
+        Wr = r(75933),
+        Ar = r(1596);
+      function Dr(e) {
         const t = (0, h.Qn)(),
-          r = (0, Nr.a4)(Nr.Wn),
+          r = (0, Wr.a4)(Wr.Wn),
           i = "true" === String((0, s.j$)(e.args, "autoadvance")).toLowerCase();
         return n.createElement(
-          Wr.F,
+          Ar.F,
           {
             hideArrows: !r,
             hidePips: t,
@@ -9391,27 +9392,27 @@
           e.children,
         );
       }
-      var Dr = r(90874),
-        jr = r(65088),
-        Or = r.n(jr),
-        xr = r(61949);
-      function qr(e) {
+      var jr = r(90874),
+        Or = r(65088),
+        xr = r.n(Or),
+        qr = r(61949);
+      function kr(e) {
         const { strURL: t, children: r } = e;
         return (
           "string" == typeof t
             ? !(0, o.ZF)(t)
             : t.some((e) => !(0, o.ZF)(e))
         )
-          ? n.createElement(kr, { children: r })
+          ? n.createElement(Gr, { children: r })
           : n.createElement(n.Fragment, null, r);
       }
-      function kr(e) {
+      function Gr(e) {
         const { children: t } = e;
-        return (0, xr.Ey)()
+        return (0, qr.Ey)()
           ? n.createElement(n.Fragment, null, t)
           : n.createElement(
               "div",
-              { className: Or().ImageBlocked },
+              { className: xr().ImageBlocked },
               (0, w.oW)(
                 "#Image_Externally_Hosted_Hidden",
                 n.createElement("a", {
@@ -9420,13 +9421,13 @@
               ),
             );
       }
-      let Gr = null;
-      function Pr() {
+      let Pr = null;
+      function Lr() {
         return (
-          null == Gr &&
-            (Gr = new Map([
-              ["url", { Constructor: cr, autocloses: !1 }],
-              ["dynamiclink", { Constructor: ur, autocloses: !1 }],
+          null == Pr &&
+            (Pr = new Map([
+              ["url", { Constructor: ur, autocloses: !1 }],
+              ["dynamiclink", { Constructor: dr, autocloses: !1 }],
               [
                 "h1",
                 {
@@ -9475,36 +9476,36 @@
                 "*",
                 { Constructor: s.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Lr, autocloses: !1 }],
+              ["img", { Constructor: Hr, autocloses: !1 }],
               ["previewyoutube", { Constructor: U.gH, autocloses: !1 }],
               ["looping_media", { Constructor: s.$A, autocloses: !1 }],
               ["video", { Constructor: s.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: U.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: Yr, autocloses: !0 }],
-              ["vod", { Constructor: Vr, autocloses: !1 }],
+              ["trailer", { Constructor: Vr, autocloses: !0 }],
+              ["vod", { Constructor: $r, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: $r,
+                  Constructor: Qr,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Zr, autocloses: !1 }],
-              ["claimitem", { Constructor: Kr, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: Xr, autocloses: !1 }],
-              ["actiondialog", { Constructor: ei, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: ri, autocloses: !0 }],
-              ["docimg", { Constructor: Hr, autocloses: !1 }],
-              ["carousel", { Constructor: Ar, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: Kr, autocloses: !1 }],
+              ["claimitem", { Constructor: Xr, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: Jr, autocloses: !1 }],
+              ["actiondialog", { Constructor: ti, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: ii, autocloses: !0 }],
+              ["docimg", { Constructor: Yr, autocloses: !1 }],
+              ["carousel", { Constructor: Dr, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: je, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: Ke, autocloses: !1 }],
             ])),
-          Gr
+          Pr
         );
       }
-      function Lr(e) {
+      function Hr(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = (0, s.j$)(e.args, "src") || e.children?.toString();
         i || (i = (0, s.j$)(e.args));
@@ -9517,15 +9518,15 @@
             (e = !(0, o.ZF)(i)),
             r?.BHasTag("auto_rssfeed") && (e = !1),
             t
-              ? n.createElement(Sr.i, {
+              ? n.createElement(Mr.i, {
                   src: i,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
               : ((i = (0, o.L$)(i)),
                 n.createElement(
-                  qr,
+                  kr,
                   { strURL: i },
-                  n.createElement(Tr.o, {
+                  n.createElement(Nr.o, {
                     src: i,
                     crossOrigin: e ? "anonymous" : void 0,
                   }),
@@ -9533,12 +9534,12 @@
           );
         }
         return n.createElement(
-          qr,
+          kr,
           { strURL: a },
           n.createElement(St.c, { rgSources: a }),
         );
       }
-      function Hr(e) {
+      function Yr(e) {
         const t = (0, s.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -9554,40 +9555,40 @@
           n.createElement(St.c, { rgSources: i, alt: r })
         );
       }
-      function Yr(e) {
-        const t = Qr(
+      function Vr(e) {
+        const t = Zr(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = Qr(e.args, "trailerid", 0);
-        return n.createElement(fr, {
+          r = Zr(e.args, "trailerid", 0);
+        return n.createElement(br, {
           appid: t,
           trailerBaseID: r,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Vr(e) {
-        const t = Qr(e.args, "appid", 0);
-        return n.createElement(hr, {
+      function $r(e) {
+        const t = Zr(e.args, "appid", 0);
+        return n.createElement(Sr, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function $r(e) {
+      function Qr(e) {
         const t = (0, s.j$)(e.args, "name"),
           r = (0, s.j$)(e.args, "title"),
           i = (0, s.j$)(e.args, "company"),
           a = (0, s.j$)(e.args, "photo");
         return e.context.bShowShortSpeakerInfo
-          ? n.createElement(dr.S8, {
+          ? n.createElement(pr.S8, {
               name: t,
               title: r,
               company: i,
               photo: a,
               bio: e.children,
             })
-          : n.createElement(dr.$k, {
+          : n.createElement(pr.$k, {
               name: t,
               title: r,
               company: i,
@@ -9595,11 +9596,11 @@
               bio: e.children,
             });
       }
-      function Qr(e, t, r) {
+      function Zr(e, t, r) {
         const i = (0, s.j$)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function Zr(e) {
+      function Kr(e) {
         const t = (0, s.j$)(e.args, "name"),
           r =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -9613,7 +9614,7 @@
           ? e.children
           : null;
       }
-      function Kr(e) {
+      function Xr(e) {
         const t = e.context.showErrorInfo;
         if (!h.iA.logged_in)
           return n.createElement(
@@ -9631,9 +9632,9 @@
             case "sticker":
               i = 11;
           }
-        return n.createElement(Dr.m, { bPreviewMode: t, rewardType: i });
+        return n.createElement(jr.m, { bPreviewMode: t, rewardType: i });
       }
-      function Xr(e) {
+      function Jr(e) {
         const t = Number.parseInt((0, s.j$)(e.args, "id")) || 0,
           r =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -9651,7 +9652,7 @@
           (!o && !r) || (o && r) ? e.children : null
         );
       }
-      function Jr(e) {
+      function ei(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, z.h)(e),
             r = (0, z.Q)();
@@ -9677,12 +9678,12 @@
         }
         return { bInitialState: !0 };
       }
-      function ei(e) {
+      function ti(e) {
         const t = (0, s.j$)(e.args, "action"),
           r = (0, s.j$)(e.args, "initialToken"),
           i = (0, s.j$)(e.args, "successToken"),
           a = (0, s.j$)(e.args, "failToken"),
-          l = Jr(t);
+          l = ei(t);
         if (!(t && r && i && a)) {
           return e.context.showErrorInfo
             ? n.createElement(
@@ -9700,7 +9701,7 @@
                 onClick: (s) => {
                   (0, he.pg)(
                     n.createElement(
-                      ti,
+                      ri,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -9709,7 +9710,7 @@
                       },
                       e.children,
                     ),
-                    (0, Mr.uX)(s),
+                    (0, vr.uX)(s),
                   );
                 },
               },
@@ -9723,7 +9724,7 @@
               (0, w.we)("#Login_SignIn"),
             );
       }
-      function ti(e) {
+      function ri(e) {
         const {
             strAction: t,
             children: r,
@@ -9732,7 +9733,7 @@
             strSuccessToken: s,
             strFailToken: l,
           } = e,
-          o = Jr(t),
+          o = ei(t),
           [m, c] = n.useState(Boolean(o.fnAction));
         n.useEffect(() => {
           o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
@@ -9771,7 +9772,7 @@
           ),
         );
       }
-      function ri(e) {
+      function ii(e) {
         const { showErrorInfo: t, event: r } = e.context,
           i = r.clanSteamID.GetAccountID(),
           [a] = n.useState(
@@ -9804,26 +9805,26 @@
           ? n.createElement(
               "div",
               null,
-              n.createElement(zr, { fileUploadManager: a }),
-              n.createElement(Er, { fileUploadManager: a }),
+              n.createElement(Rr, { fileUploadManager: a }),
+              n.createElement(Ur, { fileUploadManager: a }),
             )
           : t
             ? n.createElement("div", null, (0, w.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class ii {
+      class ai {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(s.W4.entries()),
-          ...Array.from(Pr().entries()),
+          ...Array.from(Lr().entries()),
         ]);
         static AddDictionary(e) {
-          ii.sm_BBCodeDictionary = new Map([
-            ...Array.from(ii.sm_BBCodeDictionary.entries()),
+          ai.sm_BBCodeDictionary = new Map([
+            ...Array.from(ai.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function ai(e) {
+      function ni(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -9845,7 +9846,7 @@
               ),
             [r, l],
           ),
-          _ = (0, Rt.YR)(() => new i.B(ii.sm_BBCodeDictionary, c, s));
+          _ = (0, Rt.YR)(() => new i.B(ai.sm_BBCodeDictionary, c, s));
         return (
           n.useEffect(() => {
             _.UpdateOverrideLanguage(s);

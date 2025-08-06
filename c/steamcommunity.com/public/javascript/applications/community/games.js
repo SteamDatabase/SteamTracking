@@ -7948,7 +7948,7 @@
                 nMaxTimeoutExtensions: _ = 3,
               } = _,
               [_, _] = _.useState(_),
-              _ = _.useRef();
+              _ = _.useRef(void 0);
             return (
               _.useEffect(() => {
                 const _ = performance.now();
@@ -8519,11 +8519,14 @@
         await _.StoreObject(_, _);
       }
       const _ = ["AccountPrivateApps"];
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _();
-        return (0, _._)({
+      function _(_) {
+        const {
+          transport: _,
+          storage: __webpack_require__,
+          bUseLocalCache: _,
+          bEnabled: _,
+        } = _;
+        return {
           queryKey: _,
           queryFn: async () => {
             let _;
@@ -8531,7 +8534,7 @@
               (_ = await (async function (_) {
                 const _ = _();
                 return await _.GetObject(_);
-              })(_));
+              })(__webpack_require__));
             const _ = _._.Init(_),
               _ = await _.GetPrivateAppList(_, _);
             if (!_.BSuccess()) {
@@ -8539,12 +8542,29 @@
               throw _.GetErrorMessage();
             }
             return (
-              _ && (await _(_, _.Body().private_apps(!0).appids())),
+              _ &&
+                (await _(
+                  __webpack_require__,
+                  _.Body().private_apps(!0).appids(),
+                )),
               new Set(_.Body().private_apps(!0).appids())
             );
           },
-          enabled: !!_._.accountid,
-        });
+          enabled: _,
+        };
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _();
+        return (0, _._)(
+          _({
+            transport: _,
+            storage: _,
+            bUseLocalCache: _,
+            bEnabled: !!_._.accountid,
+          }),
+        );
       }
       function _(_) {
         const { data: _ } = _();
@@ -11274,7 +11294,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const { children: __webpack_require__, navTreeRef: _, ..._ } = _,
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_, _),
           _ = (0, _._)(),
           _ = (0, _._)("__nav_tree_root");

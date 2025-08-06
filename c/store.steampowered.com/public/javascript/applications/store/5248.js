@@ -25,6 +25,7 @@
 	"Menu_Cart": "Indkøbskurv",
 	"Menu_Popover_TopLinks": "Populære links",
 	"Menu_Popover_StoreHome": "Startside",
+	"Menu_Popover_GreatonDeck": "Godt på Deck",
 	"Menu_Popover_FreeToPlay": "Gratis at spille",
 	"Menu_Popover_SteamCharts": "Steam-lister",
 	"Menu_Popover_Upcoming": "Kommende udgivelser",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Ingen emner matchede forespørgslen.",
 	"Menu_SearchBar_AdvancedSearch": "Avanceret søgning",
 	"Menu_Search": "Søg",
-	"Menu_Label": "Butiksmenu"
+	"Menu_Label": "Butiksmenu",
+	"ItemFlag_InLibrary": "I BIBLIOTEK",
+	"ItemFlag_OnWishlist": "PÅ ØNSKELISTE",
+	"ItemFlag_InCart": "I KURV",
+	"ItemFlag_Ignored": "IGNORERET",
+	"ItemFlag_ExcludedByPreferences": "UDELUKKET EFTER EGNE PRÆFERENCER"
 }`);
     },
   },

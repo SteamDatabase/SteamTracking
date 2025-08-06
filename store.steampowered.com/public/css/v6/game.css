@@ -1705,7 +1705,8 @@ body.v6 .game_description_column h2.gradientbg {
 	}
 }
 
-.game_area_description .bb_img_ctn:hover .bb_img_play_pause.playing {
+.game_area_description .bb_img_ctn:hover .bb_img_play_pause.playing,
+.game_area_description .bb_img_ctn .bb_img_play_pause.playing.gpfocus {
 	opacity: 1;
 }
 
@@ -1746,7 +1747,8 @@ body.v6 .game_description_column h2.gradientbg {
 	cursor: pointer;
 }
 
-.game_area_description .bb_img_ctn:hover .bb_img_expand {
+.game_area_description .bb_img_ctn:hover .bb_img_expand,
+.game_area_description .bb_img_ctn .bb_img_expand.gpfocus {
 	opacity: 1;
 	pointer-events: auto;
 }

@@ -37,10 +37,10 @@
     23910: (e, t, a) => {
       "use strict";
       a.d(t, {
-        DU: () => c,
+        DU: () => i,
         I8: () => r,
         Rw: () => s,
-        Sy: () => i,
+        Sy: () => c,
         e5: () => u,
         k: () => l,
         nY: () => o,
@@ -127,7 +127,7 @@
         }
         return "Unknown Type";
       }
-      function c(e) {
+      function i(e) {
         switch (e) {
           case 8:
             return "Just launched the app just once";
@@ -139,7 +139,7 @@
             return "Played the app within the last year but not in the last three months";
         }
       }
-      function i(e) {
+      function c(e) {
         switch (e) {
           case 3:
           case 4:
@@ -185,8 +185,8 @@
         s = a(90626),
         l = a(68797),
         o = a(78327),
-        c = a(62792);
-      class i {
+        i = a(62792);
+      class c {
         m_mapAppIDToPaymentPartners = new Map();
         m_mapAppIDToPromise = new Map();
         m_mapPackageIDToPaymentPartners = new Map();
@@ -281,24 +281,24 @@
           let n = null;
           try {
             const s = { appid: e, packageid: t, bundleid: a },
-              c = o.TS.PARTNER_BASE_URL + "promotion/dailydeals/ajaxgetpartner",
-              i = await r().get(c, { params: s, withCredentials: !0 });
-            if (200 == i?.status && 1 == i.data?.success)
+              i = o.TS.PARTNER_BASE_URL + "promotion/dailydeals/ajaxgetpartner",
+              c = await r().get(i, { params: s, withCredentials: !0 });
+            if (200 == c?.status && 1 == c.data?.success)
               return e
-                ? (this.m_mapAppIDToPaymentPartners.set(e, i.data.partnerinfo),
+                ? (this.m_mapAppIDToPaymentPartners.set(e, c.data.partnerinfo),
                   this.m_mapAppIDToPaymentPartners.get(e))
                 : t
                   ? (this.m_mapPackageIDToPaymentPartners.set(
                       t,
-                      i.data.partnerinfo,
+                      c.data.partnerinfo,
                     ),
                     this.m_mapPackageIDToPaymentPartners.get(t))
                   : (this.m_mapBundleIDToPaymentPartners.set(
                       a,
-                      i.data.partnerinfo,
+                      c.data.partnerinfo,
                     ),
                     this.m_mapBundleIDToPaymentPartners.get(a));
-            n = (0, l.H)(i);
+            n = (0, l.H)(c);
           } catch (e) {
             n = (0, l.H)(e);
           }
@@ -314,11 +314,11 @@
         static s_Singleton;
         static Get() {
           return (
-            i.s_Singleton ||
-              ((i.s_Singleton = new i()),
+            c.s_Singleton ||
+              ((c.s_Singleton = new c()),
               "dev" == o.TS.WEB_UNIVERSE &&
-                (window.g_DailyDealEditStore = i.s_Singleton)),
-            i.s_Singleton
+                (window.g_DailyDealEditStore = c.s_Singleton)),
+            c.s_Singleton
           );
         }
         constructor() {}
@@ -327,18 +327,18 @@
         return d(e, 0);
       }
       function u(e) {
-        return d(e.id, (0, c.gy)(e));
+        return d(e.id, (0, i.gy)(e));
       }
       function d(e, t) {
-        const [a, n] = s.useState(() => i.Get().GetInfoForStoreItem(e, t));
+        const [a, n] = s.useState(() => c.Get().GetInfoForStoreItem(e, t));
         return (
           s.useEffect(() => {
             e
-              ? i.Get().BHasInfoForStoreItem(e, t) && null != a
-                ? i.Get().BHasInfoForStoreItem(e, t) &&
-                  a != i.Get().GetInfoForStoreItem(e, t) &&
-                  n(i.Get().GetInfoForStoreItem(e, t))
-                : i.Get().LoadStoreItemPartnerInfo(e, t).then(n)
+              ? c.Get().BHasInfoForStoreItem(e, t) && null != a
+                ? c.Get().BHasInfoForStoreItem(e, t) &&
+                  a != c.Get().GetInfoForStoreItem(e, t) &&
+                  n(c.Get().GetInfoForStoreItem(e, t))
+                : c.Get().LoadStoreItemPartnerInfo(e, t).then(n)
               : n(null);
           }, [e, t, a]),
           a
@@ -349,12 +349,12 @@
         return (
           (0, s.useEffect)(() => {
             if (e?.length > 0) {
-              const t = e.map((e) => i.Get().LoadStoreItemPartnerInfo(e, 0));
+              const t = e.map((e) => c.Get().LoadStoreItemPartnerInfo(e, 0));
               Promise.all(t).then(() => {
                 const t = new Map();
                 e.forEach((e) => {
-                  i.Get().BHasInfoForApp(e) &&
-                    t.set(e, i.Get().GetInfoForApp(e));
+                  c.Get().BHasInfoForApp(e) &&
+                    t.set(e, c.Get().GetInfoForApp(e));
                 }),
                   a(t);
               });
@@ -371,8 +371,8 @@
         _w: () => u,
         ap: () => s,
         cG: () => m,
-        iN: () => c,
-        pc: () => i,
+        iN: () => i,
+        pc: () => c,
         sq: () => l,
       });
       var n = a(90626),
@@ -395,13 +395,13 @@
       function o(...e) {
         return [...new Set(e.flat())];
       }
-      function c(e) {
+      function i(e) {
         const { href: t, children: a } = e;
         return t
           ? n.createElement("a", { ...e }, a)
           : n.createElement(n.Fragment, null, a);
       }
-      function i(e, t) {
+      function c(e, t) {
         const a = {
             sText: (0, r.we)(
               "#Dashboard_UpcomingEvents_AppReleaseState_unavailable",
@@ -491,8 +491,8 @@
         s = a(90626),
         l = a(17720),
         o = a(4796),
-        c = a(31540),
-        i = a(96001),
+        i = a(31540),
+        c = a(96001),
         m = a(56545),
         u = a(20194);
       var d = a(44165),
@@ -518,19 +518,19 @@
       }
       function b(e) {
         const { oEditableMessage: t, idKey: a } = e,
-          [o, c] = (0, r.q3)(() => [
+          [o, i] = (0, r.q3)(() => [
             t.GetUpdateEventClanAccountID(),
             t.GetUpdateEventGID(),
           ]),
-          [i] = (0, g.G6)(a?.id, (0, p.JK)(a?.item_type), n.rz),
+          [c] = (0, g.G6)(a?.id, (0, p.JK)(a?.item_type), n.rz),
           m = (0, s.useMemo)(() => l.b.InitFromClanID(o), [o]),
-          u = 12 != i?.GetAppType() ? i?.GetParentAppID() : void 0;
+          u = 12 != c?.GetAppType() ? c?.GetParentAppID() : void 0;
         return s.createElement(
           "div",
           null,
           s.createElement(w, {
             appid: u || a.id,
-            selectedEventGID: c,
+            selectedEventGID: i,
             fnSetUpdateEvent: t.SetUpdateEvent,
             label: (0, I.we)("#EventDropDown_MM_FeaturedEvent"),
             tooltip: (0, I.we)("#EventDropDown_MM_FeaturedEvent_ttip"),
@@ -544,7 +544,7 @@
               s.createElement(
                 "a",
                 {
-                  href: `${D.TS.COMMUNITY_BASE_URL}gid/${m.ConvertTo64BitString()}/partnerevents/edit/${c}`,
+                  href: `${D.TS.COMMUNITY_BASE_URL}gid/${m.ConvertTo64BitString()}/partnerevents/edit/${i}`,
                   target: "_blank",
                 },
                 "open event for edit",
@@ -567,16 +567,16 @@
           b = (0, d.f1)(),
           { clanInfo: w, bLoadingClanInfo: S } = (0, o.vF)(t),
           P = (function (e, t) {
-            const a = (0, i.a)(),
+            const a = (0, c.a)(),
               n = (0, s.useMemo)(() => l.b.InitFromClanID(e), [e]),
               r = (0, u.I)({
                 queryKey: ["eventdraftrecent", e, t],
                 queryFn: async () => {
-                  const e = m.w.Init(c.FF);
+                  const e = m.w.Init(i.FF);
                   return (
                     e.Body().set_steamid(n.ConvertTo64BitString()),
                     t && e.Body().set_rtime_oldest_date(t),
-                    (await c.oH.GetDraftAndRecentPartnerEventSnippet(a, e))
+                    (await i.oH.GetDraftAndRecentPartnerEventSnippet(a, e))
                       .Body()
                       .toObject().snippets
                   );
@@ -697,8 +697,8 @@
         s = a(90626),
         l = a(55263),
         o = a(16676),
-        c = a(6144),
-        i = a(52038),
+        i = a(6144),
+        c = a(52038),
         m = a(61859),
         u = a(78327),
         d = a(52249),
@@ -709,7 +709,7 @@
             strLabel: a,
             itemType: n,
             fnFilterID: l,
-            className: i,
+            className: c,
             tooltip: g,
             autoFocus: f,
             bIncludeRetired: h,
@@ -721,7 +721,7 @@
           [A, b] = s.useState(""),
           [w, S] = s.useState(!1),
           [P, y] = s.useState(!1),
-          [C] = s.useState(new c.LU()),
+          [C] = s.useState(new i.LU()),
           [L, k] = s.useState(new Array()),
           [T, M] = s.useState(new Array()),
           [N, F] = s.useState(new Array()),
@@ -798,7 +798,7 @@
         const O = E && !I && 0 == n;
         return s.createElement(
           "div",
-          { className: i },
+          { className: c },
           s.createElement(
             "div",
             { className: d.AppSearchInputContainer },
@@ -876,7 +876,7 @@
       }
       function _(e) {
         const { name: t, id: a, type: n, is_visible: r, fnSetItemID: o } = e,
-          [c] = (0, l.G6)(a, n, { include_assets: !0 });
+          [i] = (0, l.G6)(a, n, { include_assets: !0 });
         let u = "#DailyDeals_HeaderArtMissing";
         switch (n) {
           case 1:
@@ -890,9 +890,9 @@
           { className: d.ResultRow, onClick: () => o() },
           s.createElement(
             "div",
-            { className: (0, i.A)(d.AvatarImageCtn, "AvatarImageCtn") },
+            { className: (0, c.A)(d.AvatarImageCtn, "AvatarImageCtn") },
             s.createElement("img", {
-              src: c?.GetAssets()?.GetHeaderURL(),
+              src: i?.GetAssets()?.GetHeaderURL(),
               className: d.AvatarImage,
               alt: (0, m.we)(u),
             }),
@@ -918,7 +918,7 @@
       a.d(t, {
         Uh: () => o,
         VX: () => r,
-        mn: () => c,
+        mn: () => i,
         nU: () => l,
         pV: () => s,
       });
@@ -943,7 +943,7 @@
         }
         return t;
       }
-      function c(e) {
+      function i(e) {
         const t = new Array();
         for (let a = 0; a < 31; ++a) {
           const r = (0, n.Lg)(a);
@@ -960,8 +960,8 @@
         s = a(90626),
         l = a(22837),
         o = a(73744),
-        c = a(82705),
-        i = a(63556),
+        i = a(82705),
+        c = a(63556),
         m = a(45737),
         u = a.n(m),
         d = a(12155),
@@ -992,8 +992,8 @@
             size: "small",
             string: "Checking Assets...",
           });
-        const c = r.map((e, t) => (e ? -1 : t)).filter((e) => -1 !== e);
-        return 0 === c.length
+        const i = r.map((e, t) => (e ? -1 : t)).filter((e) => -1 !== e);
+        return 0 === i.length
           ? s.createElement(h._, {
               bDone: !0,
               name: "Uploaded assets verified",
@@ -1005,9 +1005,9 @@
               null,
               s.createElement(h._, {
                 bDone: !1,
-                name: `${c.length} Asset(s) uploaded failed to fetch`,
+                name: `${i.length} Asset(s) uploaded failed to fetch`,
               }),
-              c
+              i
                 .map((e) => ({ url: t[e], lang: a[e] }))
                 .map((e) =>
                   s.createElement(h._, {
@@ -1042,11 +1042,11 @@
             fnDeletAssetLang: r,
             imageClassname: l,
             fnDeleteAllAssets: o,
-            showDeleteAll: c = !0,
+            showDeleteAll: i = !0,
             bVerifyAssets: m,
             bVideoAsset: d,
           } = e,
-          [g, _] = s.useState(a ?? i.O.Get().GetCurEditLanguage() ?? t[0]),
+          [g, _] = s.useState(a ?? c.O.Get().GetCurEditLanguage() ?? t[0]),
           [f, h] = s.useState(n(g)),
           I = s.useMemo(() => [...t].sort(), [t]);
         s.useEffect(() => {
@@ -1086,7 +1086,7 @@
                   }),
                 ),
               ),
-              c &&
+              i &&
                 Boolean(I.length) &&
                 s.createElement(
                   "a",
@@ -1148,7 +1148,7 @@
             { className: _().ArtNoArt },
             (0, p.we)("#ImageDisplay_NoAssetUploaded"),
           );
-        const n = (0, c.yh)(t);
+        const n = (0, i.yh)(t);
         return o.Ho.includes(n)
           ? s.createElement(w, { ...e })
           : o.x.includes(n)
@@ -1163,7 +1163,7 @@
       }
       function w(e) {
         const { curAssetURL: t, imageClassname: a } = e,
-          n = s.useRef();
+          n = s.useRef(void 0);
         return (
           s.useEffect(() => {
             n.current && (n.current.load(), n.current.play());
@@ -1207,14 +1207,14 @@
     },
     28865: (e, t, a) => {
       "use strict";
-      a.d(t, { _: () => i });
+      a.d(t, { _: () => c });
       var n = a(90626),
         r = a(32754),
         s = a(48576),
         l = a.n(s),
         o = a(52038),
-        c = a(12155);
-      function i(e) {
+        i = a(12155);
+      function c(e) {
         const { bDone: t, name: a, tooltip: s } = e;
         return n.createElement(
           "div",
@@ -1227,7 +1227,7 @@
                 t ? l().StatusIconDone : l().StatusNotDone,
               ),
             },
-            t ? n.createElement(c.Jlk, null) : n.createElement(c.X, null),
+            t ? n.createElement(i.Jlk, null) : n.createElement(i.X, null),
           ),
           n.createElement(r.he, { toolTipContent: s }, a),
         );
@@ -1241,10 +1241,10 @@
         s = a(12493),
         l = a(30894),
         o = (a(55263), a(45699)),
-        c = a(78327);
-      function i(e) {
+        i = a(78327);
+      function c(e) {
         const { href: t, children: a, bAllowFocuseableAnchor: r, ...s } = e;
-        return (0, c.Y2)()
+        return (0, i.Y2)()
           ? n.createElement("div", { ...s }, a)
           : r
             ? n.createElement(o.Ii, { href: t, ...s }, a)
@@ -1325,7 +1325,7 @@
                     "div",
                     { className: D.FlexRowContainer },
                     n.createElement(
-                      i,
+                      c,
                       {
                         href: (0, g.k2)(C),
                         className: E.AvatarLink,
@@ -1353,7 +1353,7 @@
                           ),
                         },
                         n.createElement(
-                          i,
+                          c,
                           { href: (0, g.k2)(C), className: E.CreatorNameName },
                           w.GetName(),
                         ),
@@ -1402,7 +1402,7 @@
                       "a",
                       {
                         href:
-                          c.TS.COMMUNITY_BASE_URL +
+                          i.TS.COMMUNITY_BASE_URL +
                           "gid/" +
                           w.GetClanSteamID().ConvertTo64BitString() +
                           "/members/",
@@ -1447,22 +1447,22 @@
     },
     8905: (e, t, a) => {
       "use strict";
-      a.d(t, { p: () => c });
+      a.d(t, { p: () => i });
       var n = a(90626),
         r = a(17720),
         s = a(27144),
         l = a(15736),
         o = a(78327);
-      function c(e) {
-        const { accountID: t, bHideWhenNotAvailable: a, bHideName: c } = e,
-          [i] = (0, s.KT)(t),
+      function i(e) {
+        const { accountID: t, bHideWhenNotAvailable: a, bHideName: i } = e,
+          [c] = (0, s.KT)(t),
           m = (0, s.KM)(t),
           u = n.useMemo(() => r.b.InitFromAccountID(t), [t]),
           d = `${o.TS.COMMUNITY_BASE_URL}profiles/${u.ConvertTo64BitString()}`;
         return n.createElement(
           n.Fragment,
           null,
-          Boolean(!i)
+          Boolean(!c)
             ? n.createElement(
                 n.Fragment,
                 null,
@@ -1473,14 +1473,14 @@
                 { href: d },
                 n.createElement("img", {
                   className: l.SmallAvatar,
-                  src: i.avatar_url,
+                  src: c.avatar_url,
                   "data-miniprofile": "s" + u.ConvertTo64BitString(),
                 }),
-                Boolean(!c) &&
+                Boolean(!i) &&
                   n.createElement(
                     "span",
                     null,
-                    m ? `${m} (${i.persona_name})` : i.persona_name,
+                    m ? `${m} (${c.persona_name})` : c.persona_name,
                   ),
               ),
         );

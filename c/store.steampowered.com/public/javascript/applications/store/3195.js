@@ -25,6 +25,7 @@
 	"Menu_Cart": "Sepet",
 	"Menu_Popover_TopLinks": "Popüler Bağlantılar",
 	"Menu_Popover_StoreHome": "Mağaza Ana Sayfası",
+	"Menu_Popover_GreatonDeck": "Deck'te Mükemmel",
 	"Menu_Popover_FreeToPlay": "Oynaması Ücretsiz",
 	"Menu_Popover_SteamCharts": "Steam Sıralamaları",
 	"Menu_Popover_Upcoming": "Pek Yakında Çıkacaklar",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "Sorgunuzla eşleşen öğe bulunamadı.",
 	"Menu_SearchBar_AdvancedSearch": "Gelişmiş Arama",
 	"Menu_Search": "Ara",
-	"Menu_Label": "Mağaza menüsü"
+	"Menu_Label": "Mağaza menüsü",
+	"ItemFlag_InLibrary": "KÜTÜPHANEDE",
+	"ItemFlag_OnWishlist": "İSTEK LİSTESİNDE",
+	"ItemFlag_InCart": "SEPETTE",
+	"ItemFlag_Ignored": "YOK SAYILDI",
+	"ItemFlag_ExcludedByPreferences": "TERCİHLER DOĞRULTUSUNDA DÂHİL EDİLMEDİ"
 }`);
     },
   },

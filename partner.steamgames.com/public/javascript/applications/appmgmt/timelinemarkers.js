@@ -6714,7 +6714,7 @@
           [a, s] = (0, n.useState)(!1),
           [l, o] = (0, n.useState)(!1),
           [m, c] = (0, n.useState)(),
-          d = (0, n.useRef)(),
+          d = (0, n.useRef)(void 0),
           g = Wr(),
           p = (0, qe.q3)(() => g.GetScrollableWidthPX()),
           f = (0, qe.q3)(() => g.GetVisualWindowStartPX()),
@@ -6808,7 +6808,7 @@
       }
       function zi(e, t) {
         const r = Ri().fnRegisterMouseEvent,
-          i = (0, n.useRef)(),
+          i = (0, n.useRef)(void 0),
           a = (0, n.useCallback)(() => {
             i.current = r(e, t);
           }, [r, t, e]),
@@ -7047,8 +7047,8 @@
       function Li(e) {
         const t = (0, qe.q3)(() => e.GetAutoScrollPauseTimeout()),
           r = (0, qe.q3)(() => e.GetVisualWindowStartPX()),
-          i = (0, n.useRef)(),
-          a = (0, n.useRef)();
+          i = (0, n.useRef)(void 0),
+          a = (0, n.useRef)(void 0);
         return (
           (0, n.useEffect)(() => {
             i.current && a.current ? a.current.Hide() : (i.current = !0);
@@ -7274,8 +7274,8 @@
           f =
             t.entry?.id == p?.strEntryID && t.strTimelineID == p?.strTimelineID,
           { ref: h, ..._ } = (function (e, t) {
-            const r = n.useRef(),
-              i = n.useRef(),
+            const r = n.useRef(void 0),
+              i = n.useRef(void 0),
               a = n.useCallback(
                 (t) => {
                   if (!r.current) return;
@@ -7647,20 +7647,20 @@
             l = Wr(),
             o = Gi(),
             m = (function (e, t, r, i, a) {
-              const s = (0, n.useRef)(),
+              const s = (0, n.useRef)(void 0),
                 l = (0, qe.q3)(() => t.GetScrollableWidthPX()),
                 o = (0, qe.q3)(() => t.GetScrollWindowWidth()),
                 [m, c] = (0, n.useState)(0),
-                d = (0, n.useRef)(),
-                u = (0, n.useRef)(),
+                d = (0, n.useRef)(void 0),
+                u = (0, n.useRef)(void 0),
                 { clearPlaybackAnimation: g, startPlaybackAnimation: p } =
                   (function (e, t, r) {
-                    const i = (0, n.useRef)(),
+                    const i = (0, n.useRef)(void 0),
                       a = e.GetGameRecordingVideo(),
-                      s = (0, n.useRef)(),
-                      l = (0, n.useRef)(),
-                      o = (0, n.useRef)(),
-                      m = (0, n.useRef)(),
+                      s = (0, n.useRef)(void 0),
+                      l = (0, n.useRef)(void 0),
+                      o = (0, n.useRef)(void 0),
+                      m = (0, n.useRef)(void 0),
                       c = (0, n.useCallback)(() => {
                         if (!i.current) return;
                         const n = e.GetGlobalMSPlaytime();
@@ -8834,9 +8834,9 @@
           l = (0, qe.q3)(() => "Overlay" === s.GetRecordingMode()),
           o = (0, qe.q3)(() => a.ConvertPXOffsetToGlobalMS(t, !1)),
           m = (0, qe.q3)(() => a.GetTimelineParentCtnRef()),
-          c = (0, n.useRef)(),
-          d = (0, n.useRef)(),
-          g = (0, n.useRef)(),
+          c = (0, n.useRef)(void 0),
+          d = (0, n.useRef)(void 0),
+          g = (0, n.useRef)(void 0),
           p = (0, qe.q3)(() => a.GetThumbnailComponent()),
           f = Pi(),
           h = (0, te.fS)({
@@ -9050,10 +9050,10 @@
           o = Gi();
         return (
           (function (e, t, r, i, a, s) {
-            const l = (0, n.useRef)(),
+            const l = (0, n.useRef)(void 0),
               o = (0, n.useRef)(!1),
-              m = (0, n.useRef)(),
-              c = (0, n.useRef)(),
+              m = (0, n.useRef)(void 0),
+              c = (0, n.useRef)(void 0),
               d = (0, qe.q3)(() => t.GetScrollableWidthPX()),
               u = (0, qe.q3)(() => t.GetScrollWindowWidth());
             (0, n.useEffect)(
@@ -9178,10 +9178,10 @@
           o = Gi();
         return (
           (function (e, t, r, i, a, s) {
-            const l = (0, n.useRef)(),
+            const l = (0, n.useRef)(void 0),
               o = (0, n.useRef)(!1),
-              m = (0, n.useRef)(),
-              c = (0, n.useRef)(),
+              m = (0, n.useRef)(void 0),
+              c = (0, n.useRef)(void 0),
               d = (0, qe.q3)(() => t.GetScrollableWidthPX()),
               u = (0, qe.q3)(() => t.GetScrollWindowWidth());
             (0, n.useEffect)(
@@ -9676,8 +9676,8 @@
         const { timelineView: t, scrollSize: r } = e,
           i = _r(),
           a = (function (e, t) {
-            const r = (0, n.useRef)(),
-              i = (0, n.useRef)(),
+            const r = (0, n.useRef)(void 0),
+              i = (0, n.useRef)(void 0),
               a = (0, qe.q3)(() => e.GetScrollableWidthPX()),
               s = (0, n.useCallback)(
                 (e) => (0, Ke.OB)((a * e) / t.scrollBarWidth),
@@ -9848,7 +9848,7 @@
                   : 0;
               }),
               [c, d] = (0, n.useState)(!1),
-              g = (0, n.useRef)();
+              g = (0, n.useRef)(void 0);
             (0, n.useEffect)(() => {
               if (i.GetAutoScrollPaused())
                 return (

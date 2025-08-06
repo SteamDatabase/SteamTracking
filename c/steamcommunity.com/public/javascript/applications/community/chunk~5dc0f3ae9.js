@@ -14383,7 +14383,7 @@
           } = _,
           [_, _] = _.useState(!1),
           _ = _.useCallback(() => _, [_]),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)();
         let _ = null != _ ? _ : {};
         return (
@@ -22737,7 +22737,7 @@
             displayWidth: 0,
             displayHeight: 0,
           }),
-          _ = (0, _.useRef)(),
+          _ = (0, _.useRef)(void 0),
           [_, _] = (0, _._)();
         return (
           (0, _.useEffect)(() => {

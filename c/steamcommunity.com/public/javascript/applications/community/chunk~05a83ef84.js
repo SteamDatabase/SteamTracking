@@ -2165,7 +2165,7 @@
             onActivate: _,
             onGamepadDirection: _,
           } = (function (_) {
-            const _ = _.useRef(),
+            const _ = _.useRef(void 0),
               _ = (0, _._)(),
               _ = _.useCallback(() => {
                 if (
@@ -2695,7 +2695,7 @@
             refUpdateToolbar: __webpack_require__,
             children: _,
           } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         _.current || (_.current = new _._()),
           _.useEffect(
             () => (

@@ -308,7 +308,8 @@
         (0, _._)([_._], _.prototype, "m_broadcastViewerCount", void 0),
         (0, _._)([_._], _.prototype, "m_strBroadcastTitle", void 0),
         (0, _._)([_._], _.prototype, "m_bCommunityBanned", void 0),
-        (0, _._)([_._], _.prototype, "m_bOnSteamDeck", void 0);
+        (0, _._)([_._], _.prototype, "m_bOnSteamDeck", void 0),
+        (0, _._)([_._], _.prototype, "m_bNameInitialized", void 0);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

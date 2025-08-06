@@ -1279,7 +1279,7 @@
       }
       function _(_) {
         const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
             _.current && (_.current.load(), _.current.play());

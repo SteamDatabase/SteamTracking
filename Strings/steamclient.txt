@@ -3308,6 +3308,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1JpQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -15593,7 +15594,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H8I]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -32873,6 +32873,7 @@ SCT_set_log_entry_type
 SCT_set_signature_nid
 SCT_set_version
 SDL Mapping for %x/%x: %s\n
+SDL.joystick.cap.mono_led
 SDL.joystick.cap.player_led
 SDL.joystick.cap.rgb_led
 SDL.joystick.cap.rumble
@@ -58150,7 +58151,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug  4 2025 21:38:44
+steam Aug  5 2025 23:27:32
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

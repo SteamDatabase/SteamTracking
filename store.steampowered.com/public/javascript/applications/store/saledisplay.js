@@ -249,11 +249,11 @@
         const { children: t, timeoutMS: n, ...s } = e,
           m = (function (e = 2) {
             const t = (0, r.W6)(),
-              n = a.useRef(),
+              n = a.useRef(void 0),
               l = (0, r.zy)(),
               s = (0, i.ho)(),
               m = l.state && l.state[c],
-              g = a.useRef(),
+              g = a.useRef(void 0),
               [d, p] = a.useState(m);
             return (
               a.useLayoutEffect(() => {
@@ -1194,7 +1194,7 @@
       }
       function R(e) {
         const { event: t, language: n, children: o, bIsPreview: l } = e,
-          i = r.useRef(),
+          i = r.useRef(void 0),
           s = (0, a.q3)(() => t.GetImageURLWithFallback("sale_header", n)),
           c = L.U.Get().BHasSalePageBackgroundOverride(),
           u = r.useMemo(
@@ -1427,7 +1427,7 @@
             onDropFiles: t,
             renderDesciption: n,
             elAdditonalButtons: a,
-            strOverrideDragAndDropText: o,
+            elOverrideDragAndDropText: o,
           } = e,
           [l, i] = (function (e) {
             const [t, n] = r.useState(!1);
@@ -1459,7 +1459,7 @@
             ];
           })(t),
           [s, c] = (function (e, t) {
-            const n = r.useRef(),
+            const n = r.useRef(void 0),
               a = r.useCallback(
                 (t) => {
                   t.currentTarget.files.length > 0 &&
@@ -1535,7 +1535,7 @@
         const {
             imageUploader: t,
             fnUploadComplete: n,
-            strOverrideDragAndDropText: o,
+            elOverrideDragAndDropText: o,
             forceResolution: l,
             elAdditonalButtons: i,
             rgRealmList: s,
@@ -1612,7 +1612,7 @@
           {
             onDropFiles: m,
             elAdditonalButtons: g,
-            strOverrideDragAndDropText: o,
+            elOverrideDragAndDropText: o,
           },
           r.createElement(
             r.Fragment,
@@ -1745,18 +1745,18 @@
               disabled: !c,
             }),
           c &&
-            s.warnings?.map((e) =>
+            s.warnings?.map((e, t) =>
               r.createElement(
                 "div",
-                { key: e, className: Te().UploadPreviewWarning },
+                { key: `warning${t}`, className: Te().UploadPreviewWarning },
                 e,
               ),
             ),
           c &&
-            s.messages?.map((e) =>
+            s.messages?.map((e, t) =>
               r.createElement(
                 "div",
-                { key: e, className: Te().UploadPreviewMessage },
+                { key: `message${t}`, className: Te().UploadPreviewMessage },
                 e,
               ),
             ),
@@ -5002,7 +5002,7 @@
         }, [t, o]);
         const c = (0, a.q3)(() => dn.TU.Get().GetMouseOverSectionID()),
           u = t && t == c,
-          m = r.useRef();
+          m = r.useRef(void 0);
         return (
           (0, dn.lM)((e) => t == e && (m.current?.scrollIntoView(), s(!0), !0)),
           r.createElement(

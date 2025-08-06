@@ -13165,11 +13165,11 @@
     44832: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ox: () => w,
-        V9: () => _,
-        Xe: () => f,
-        ew: () => h,
-        s0: () => b,
+        Ox: () => S,
+        V9: () => B,
+        Xe: () => h,
+        ew: () => b,
+        s0: () => w,
       });
       var i = r(90626),
         n = r(59952),
@@ -13182,27 +13182,28 @@
         d = r(61336),
         u = r(78327),
         p = r(73560),
-        g = r(91254);
-      function _() {
+        g = r(91254),
+        _ = r(90622);
+      function B() {
         return i.useMemo(
           () => ({
             style: {
               defaultValue: null,
               fnReadValue: (e) => e.attrs.style || null,
               fnRenderEditor: (e, t) =>
-                i.createElement(B, { value: e, setValue: t }),
+                i.createElement(y, { value: e, setValue: t }),
             },
             buttoncolor: {
               defaultValue: null,
               fnReadValue: (e) => e.attrs.buttoncolor || null,
               fnRenderEditor: (e, t) =>
-                i.createElement(y, { value: e, setValue: t }),
+                i.createElement(f, { value: e, setValue: t }),
             },
           }),
           [],
         );
       }
-      function B(e) {
+      function y(e) {
         const { value: t, setValue: r } = e;
         return i.createElement(
           s.o1,
@@ -13219,7 +13220,7 @@
           }),
         );
       }
-      function y(e) {
+      function f(e) {
         const { value: t, setValue: r } = e;
         return i.createElement(
           i.Fragment,
@@ -13244,20 +13245,20 @@
           }),
         );
       }
-      function f(e) {
+      function h(e) {
         return "button" === e
           ? (0, c.A)(o.LinkButton, "LinkButton")
           : (0, c.A)(o.Link, "Link");
       }
-      function h(e, t) {
+      function b(e, t) {
         if ("button" == e && t) return `background-color: ${t};`;
       }
-      function b(e) {
-        let t = (0, n.j$)(e.args) || (0, n.j$)(e.args, "href");
+      function w(e) {
+        let t = (0, _.J)((0, n.j$)(e.args) || (0, n.j$)(e.args, "href"));
         const r = (0, n.j$)(e.args, "style"),
           s = (0, n.j$)(e.args, "id"),
           o = (0, n.j$)(e.args, "buttoncolor"),
-          c = f(r),
+          c = h(r),
           m = e.context.event,
           p = n.z5(t, e.language, null == m ? void 0 : m.rtime32_last_modified);
         if (void 0 === p) return e.children || "";
@@ -13298,7 +13299,7 @@
                 )
         );
       }
-      function w(e) {
+      function S(e) {
         const t = (0, n.j$)(e.args, "href"),
           r = (0, p.W7)(t);
         return r
@@ -13306,7 +13307,7 @@
               event: e.context.event,
               partnerEventStore: g.O3,
             })
-          : i.createElement(b, { ...e });
+          : i.createElement(w, { ...e });
       }
     },
     42011: (e, t, r) => {
@@ -14639,7 +14640,7 @@
         V = r(39362);
       function H(e) {
         const { fileUploadManager: t } = e,
-          r = (0, a.useRef)();
+          r = (0, a.useRef)(void 0);
         return a.createElement(
           "div",
           { className: V.Ctn },

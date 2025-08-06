@@ -491,6 +491,7 @@
         FieldDescription: "_1W1to_azoBRG95oNAFpf9Q",
         ModalPosition: "_3A5ujtARm6atH4phJ5i1i6",
         VR: "_3-NqubDUyBx8l_lXBrjzUJ",
+        FooterVisible: "_3bdRx6sqp4zgADo5c-9jUb",
         WithStandardPadding: "_1XQXQY77uXZfE0KSWEADf_",
         NoHeaderPadding: "_1Y7qW0oDUNH6gMRGqujwo6",
         ModalClickToDismiss: "_27uCSNGt2GM1oh3MbvqAS",
@@ -2125,7 +2126,7 @@
         l = r(87133);
       const c = n.forwardRef(function (e, t) {
         const { children: r, navTreeRef: c, ...u } = e,
-          m = n.useRef(),
+          m = n.useRef(void 0),
           d = (0, i.Ue)(m, c),
           g = (0, s.Qn)(),
           p = (0, l.AO)("__nav_tree_root");
@@ -3182,7 +3183,7 @@
           [d, g] = (0, l.Xz)(`${t}ScrollLeft`, 250, 0),
           p = o.useRef(0),
           _ = o.useRef(0),
-          h = o.useRef();
+          h = o.useRef(void 0);
         let f = o.useCallback(
           (e) => {
             const { scrollTop: t, scrollLeft: r } = e.currentTarget;
@@ -5085,7 +5086,7 @@
             (l.current = void 0), (c.current = void 0);
           }, []),
           m = (function (e, t) {
-            const r = i.useRef();
+            const r = i.useRef(void 0);
             return i.useCallback(
               (i, s) => {
                 let a = "sine";
@@ -5212,7 +5213,7 @@
             l.current && document.activeElement == l.current,
         });
         const u = (function (e) {
-            const t = n.useRef(),
+            const t = n.useRef(void 0),
               r = n.useContext(a);
             t.current || (t.current = r(e || {}));
             return t.current;
@@ -31882,7 +31883,7 @@
         ];
       }
       function f(e) {
-        const t = i.useRef();
+        const t = i.useRef(void 0);
         return i.useCallback(
           () => (
             (t.current && t.current.factory == e) ||
@@ -31976,7 +31977,7 @@
                 });
       }
       function o(e, t) {
-        const r = i.useRef();
+        const r = i.useRef(void 0);
         return i.useCallback((t) => {
           r.current && r.current(), (r.current = e(t));
         }, t);
@@ -38391,6 +38392,7 @@
               (t |= y.NoWindowShadow),
               (t |= y.NoRoundedCorners),
               (t |= y.OverrideRedirect),
+              (t |= y.ForceBrowserVisible),
               t
             );
           case M.Tooltip:
@@ -38457,7 +38459,8 @@
             "IgnoreSteamDisplayScale"),
           (e[(e.TransparentParentWindow = 4194304)] =
             "TransparentParentWindow"),
-          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale");
+          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (e[(e.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
       })(y || (y = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -43257,6 +43260,8 @@
           "(localhost|127.0.0.1):(?!(80|443))",
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
+          "/.millennium/Dist",
+          "/react-waypoint/",
         ];
       function J() {
         try {
@@ -43546,7 +43551,8 @@
         return [e, ...t]
           .map((e) => {
             try {
-              return String(e);
+              let t = String(e);
+              return "[object Object]" == t && (t = JSON.stringify(e)), t;
             } catch (e) {
               return "[Stringify Error]";
             }
@@ -46452,7 +46458,7 @@
           } = e,
           u = (0, a.R7)(),
           m = u?.ownerWindow || window,
-          d = i.useRef();
+          d = i.useRef(void 0);
         return (
           d.current || (d.current = new s.z()),
           i.useLayoutEffect(() => {
@@ -49290,7 +49296,7 @@
             const s = (0, m.we)("#Field_MoreInfo_Action");
             return { onOptionsButton: i, onOptionsActionDescription: s };
           })(R ?? i, v),
-          V = n.useRef(),
+          V = n.useRef(void 0),
           Z = (0, $.Ue)(V, e.navRef),
           K = n.useCallback(
             (e) => {
@@ -49574,9 +49580,9 @@
           })(n.useMemo(() => t.findIndex((e) => e == r), [t, r])),
           o = (function (e, t) {
             const r = n.useMemo(() => new Map(), []),
-              i = n.useRef();
+              i = n.useRef(e);
             i.current = e;
-            const s = n.useRef();
+            const s = n.useRef(t);
             s.current = t;
             const a = n.useCallback(
               (e) => (t) => {
@@ -49761,7 +49767,7 @@
       var xt = r(4437);
       const jt = n.forwardRef(function (e, t) {
         const { className: r, ...i } = e;
-        let s = n.useRef(),
+        let s = n.useRef(void 0),
           o = (0, $.Ue)(t, s);
         const [l, c] = n.useState(!1),
           u = n.useCallback(() => {
@@ -53489,7 +53495,7 @@
               bRegisterManagersWithWindow: b = !0,
               ...B
             } = e,
-            w = n.useRef();
+            w = n.useRef(void 0);
           w.current || (w.current = new M.SZ());
           let S = n.createElement(y.L, {
             ...B,
@@ -53837,7 +53843,7 @@
           c = (0, s.oJ)(),
           [u, m] = i.useState(null),
           [d, g] = i.useState(!1),
-          p = i.useRef();
+          p = i.useRef(void 0);
         if (
           (i.useEffect(() => {
             if (t) {
@@ -54184,6 +54190,7 @@
         nkJ: () => Ee,
         nm_: () => yt,
         o5Q: () => ot,
+        oQr: () => Gt,
         oY9: () => qe,
         ofN: () => Ot,
         oy: () => Wt,
@@ -58076,6 +58083,38 @@
           }),
         );
       }
+      function Gt(e) {
+        return i.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3",
+            y: "4",
+            width: "29",
+            height: "7",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3",
+            y: "15",
+            width: "29",
+            height: "7",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            x: "3",
+            y: "26",
+            width: "29",
+            height: "7",
+          }),
+        );
+      }
     },
     32630: (e, t, r) => {
       "use strict";
@@ -58140,7 +58179,7 @@
       var i = r(90626);
       let n = 0;
       function s() {
-        const e = i.useRef();
+        const e = i.useRef(void 0);
         return (
           void 0 === e.current && (e.current = "svgid_" + n++),
           [e.current, `url(#${e.current})`]
@@ -58674,7 +58713,7 @@
           } = e,
           [m, d, g, p] = (function () {
             let e = n.useRef(null),
-              t = n.useRef();
+              t = n.useRef(void 0);
             n.useLayoutEffect(() => {
               let r = e.current;
               if (!r || t.current) return;
@@ -60734,7 +60773,7 @@
         a = r(30600);
       function o(e = !1) {
         let [t, r] = (0, i.useState)(!1),
-          a = (0, i.useRef)(),
+          a = (0, i.useRef)(null),
           o = (0, s.QS)(
             (e) => {
               if (((a.current = e), !e)) return void r(!1);
@@ -60787,9 +60826,9 @@
         const t = i.useRef(!0),
           r = i.useRef(void 0),
           n = i.useRef(void 0),
-          o = i.useRef();
+          o = i.useRef(e);
         o.current = e;
-        const l = i.useRef(),
+        const l = i.useRef(void 0),
           c = i.useCallback((e) => {
             l.current !== e && ((l.current = e), (t.current = !0));
           }, []),
@@ -60830,8 +60869,8 @@
           o = (0, n.zy)(),
           l = (o.state && o.state[s]) ?? r,
           c = i.useRef(!1),
-          u = i.useRef(),
-          m = i.useRef(),
+          u = i.useRef(void 0),
+          m = i.useRef(void 0),
           d = i.useCallback(
             (e) => {
               if (c.current && ((u.current = e), !m.current)) {
@@ -61616,7 +61655,12 @@
       }
       function p(e, t) {
         return (
-          !!window.location.href.match("[?&]" + t + "=") ||
+          !!(
+            window &&
+            window.location &&
+            window.location.href &&
+            window.location.href.match("[?&]" + t + "=")
+          ) ||
           !(
             "undefined" == typeof navigator ||
             !navigator.userAgent ||
@@ -63297,7 +63341,7 @@
         const { url: t, bHasRecoveryEmail: r, strPostFormID: i } = e,
           [o, l] = n.useState(""),
           [c, u] = n.useState(""),
-          m = n.useRef(),
+          m = n.useRef(void 0),
           d = n.useCallback((e) => {
             var t;
             (!e.target.value ||
@@ -65072,7 +65116,7 @@
             nMaxTimeoutExtensions: s = 3,
           } = t,
           [a, o] = n.useState(e),
-          l = n.useRef();
+          l = n.useRef(void 0);
         return (
           n.useEffect(() => {
             const t = performance.now();
@@ -66413,7 +66457,7 @@
               }),
               [],
             ),
-            m = n.useRef();
+            m = n.useRef(void 0);
           m.current = (e) => {
             if (0 == o) return !1;
             switch (e.key) {
@@ -68719,7 +68763,7 @@
           [u, m] = n.useState(),
           [d, g] = n.useState(t),
           [p, _] = n.useState(!1),
-          h = n.useRef();
+          h = n.useRef(void 0);
         h.current || (h.current = new WeakMap()),
           (0, n.useLayoutEffect)(() => {
             (h.current = new WeakMap()), c("visible");
@@ -69723,7 +69767,7 @@
             r.e(7854),
             r.e(1240),
             r.e(2414),
-          ]).then(r.bind(r, 19857)),
+          ]).then(r.bind(r, 23373)),
         ),
         Ga = n.lazy(() =>
           Promise.all([

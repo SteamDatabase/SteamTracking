@@ -25,6 +25,7 @@
 	"Menu_Cart": "รถเข็น",
 	"Menu_Popover_TopLinks": "ลิงก์ยอดนิยม",
 	"Menu_Popover_StoreHome": "หน้าหลักร้านค้า",
+	"Menu_Popover_GreatonDeck": "เล่นได้ดีบน Steam Deck",
 	"Menu_Popover_FreeToPlay": "เล่นฟรี",
 	"Menu_Popover_SteamCharts": "อันดับบน Steam",
 	"Menu_Popover_Upcoming": "ใกล้วางจำหน่าย",
@@ -93,7 +94,12 @@
 	"Menu_SearchBar_NoMatches": "ไม่มีไอเท็มใดตรงกับคิวรีของคุณ",
 	"Menu_SearchBar_AdvancedSearch": "การค้นหาขั้นสูง",
 	"Menu_Search": "ค้นหา",
-	"Menu_Label": "เมนูร้านค้า"
+	"Menu_Label": "เมนูร้านค้า",
+	"ItemFlag_InLibrary": "อยู่ในคลัง",
+	"ItemFlag_OnWishlist": "อยู่ในสิ่งที่อยากได้",
+	"ItemFlag_InCart": "อยู่ในรถเข็น",
+	"ItemFlag_Ignored": "รายการที่ละเว้น",
+	"ItemFlag_ExcludedByPreferences": "ละเว้นตามการปรับแต่ง"
 }`);
     },
   },

@@ -121,163 +121,8 @@ function _(_, _, _) {
     };
   return _.toLocaleTimeString(_, _);
 }
-var _ = "x-valve-request-type",
-  _ = "x-valve-loader-index",
-  _ = "x-valve-refetch-payload";
-async function* _(_) {
-  let _ = "";
-  for (;;) {
-    let { done: _, value: _ } = await _.read();
-    if (_ || _ === void 0) break;
-    _ += _;
-    let _ = _.split(`
-`);
-    if (_.length !== 0) {
-      _ = _.pop();
-      for (let _ of _) yield _;
-    }
-  }
-  _ !== "" && (yield _);
-}
-async function* _(_, _, _) {
-  "TextDecoderStream" in window ||
-    (await import("./streampolyfill-XXXXXXXX.js"));
-  let _ = new Headers(_);
-  _.append(_, "routeData");
-  let _ = (
-    await fetch(_, {
-      credentials: "same-origin",
-      headers: _,
-      signal: _,
-    })
-  ).body
-    ?.pipeThrough(new TextDecoderStream())
-    .getReader();
-  if (!_) throw "no response body reader";
-  for await (let _ of _(_)) {
-    if (_?.aborted) return;
-    yield _;
-  }
-}
-async function _(_, _, _, _) {
-  let _ = [],
-    _ = _.map((_) => [_, _.toString()]);
-  _ !== void 0 && _.push([_, _]);
-  for await (let _ of _(_, _, _)) _.push(JSON.parse(_));
-  return _;
-}
-async function _(_, _, _, _) {
-  return (await _(_, [_], _, _))[0];
-}
 var _ = _(_(), 1);
 var _ = _(_(), 1);
-var _ = _(_(), 1);
-function _(_) {
-  switch (_) {
-    case 0:
-      return Uint8Array;
-    case 1:
-      return Int8Array;
-    case 2:
-      return Uint8ClampedArray;
-    case 3:
-      return Int16Array;
-    case 4:
-      return Uint16Array;
-    case 5:
-      return Int32Array;
-    case 6:
-      return Uint32Array;
-    case 7:
-      return Float32Array;
-    case 8:
-      return Float64Array;
-    case 9:
-      return Set;
-    case 10:
-      return Map;
-  }
-}
-function _(_) {
-  return JSON.parse(_, (_, _) => {
-    if (_ && typeof _ == "object" && "_t" in _) {
-      let _ = _(_._);
-      return _ ? new _(_._) : _;
-    }
-    return _;
-  });
-}
-function _(_) {
-  return _ ? _(_) : null;
-}
-var _ = Symbol.for("No loader context"),
-  _ = (0, _.createContext)(_);
-function _(_) {
-  let [_, _] = (0, _.useState)(_.loaderData),
-    [_, _] = (0, _.useState)(),
-    _ = (0, _.useCallback)(
-      async (_) => {
-        let _ = new URL(location.href),
-          _ = _.pathname + _.search + _.hash,
-          _ = _ ? JSON.stringify(_) : "",
-          _ = _ + _;
-        if (_) {
-          if (_.fetchKey === _) return _.promise;
-          _.abortController.abort();
-        }
-        let _ = new AbortController(),
-          _ = _(_, _._, _ ? _ : void 0, _.signal);
-        _({
-          promise: _,
-          abortController: _,
-          fetchKey: _,
-        });
-        try {
-          let _ = await _;
-          return _(_), _(void 0), _;
-        } catch (_) {
-          if (!_.signal.aborted) throw (_(void 0), _);
-        }
-        return _;
-      },
-      [_._, _],
-    );
-  return (
-    (0, _.useEffect)(() => {
-      _(_.loaderData);
-      {
-        let _ = _();
-        if (_?.loaderData) {
-          let _ = [..._.loaderData];
-          (_[_._] = _.loaderData),
-            _({
-              ..._,
-              loaderData: _,
-            });
-        }
-      }
-    }, [_.loaderData, _._]),
-    (0, _.jsx)(_.Provider, {
-      value: {
-        loaderData: _,
-        refetchFn: _,
-        fetchState: _,
-      },
-      children: _.children,
-    })
-  );
-}
-function _(_) {
-  let _ = (0, _.useContext)(_);
-  if (_ === _) throw `Used ${_} outside of LoaderContext`;
-  return _;
-}
-function _() {
-  return _("useLoaderData").loaderData;
-}
-function _() {
-  return _("useRefetchLoader").refetchFn;
-}
 var _ = _(_(), 1);
 var _ = _(_(), 1),
   _ = _(_(), 1),
@@ -641,5 +486,160 @@ async function _(_) {
     console.error(_), (location.href = _);
   }
   _ = void 0;
+}
+var _ = _(_(), 1);
+function _(_) {
+  switch (_) {
+    case 0:
+      return Uint8Array;
+    case 1:
+      return Int8Array;
+    case 2:
+      return Uint8ClampedArray;
+    case 3:
+      return Int16Array;
+    case 4:
+      return Uint16Array;
+    case 5:
+      return Int32Array;
+    case 6:
+      return Uint32Array;
+    case 7:
+      return Float32Array;
+    case 8:
+      return Float64Array;
+    case 9:
+      return Set;
+    case 10:
+      return Map;
+  }
+}
+function _(_) {
+  return JSON.parse(_, (_, _) => {
+    if (_ && typeof _ == "object" && "_t" in _) {
+      let _ = _(_._);
+      return _ ? new _(_._) : _;
+    }
+    return _;
+  });
+}
+function _(_) {
+  return _ ? _(_) : null;
+}
+var _ = Symbol.for("No loader context"),
+  _ = (0, _.createContext)(_);
+function _(_) {
+  let [_, _] = (0, _.useState)(_.loaderData),
+    [_, _] = (0, _.useState)(),
+    _ = (0, _.useCallback)(
+      async (_) => {
+        let _ = new URL(location.href),
+          _ = _.pathname + _.search + _.hash,
+          _ = _ ? JSON.stringify(_) : "",
+          _ = _ + _;
+        if (_) {
+          if (_.fetchKey === _) return _.promise;
+          _.abortController.abort();
+        }
+        let _ = new AbortController(),
+          _ = _(_, _._, _ ? _ : void 0, _.signal);
+        _({
+          promise: _,
+          abortController: _,
+          fetchKey: _,
+        });
+        try {
+          let _ = await _;
+          return _(_), _(void 0), _;
+        } catch (_) {
+          if (!_.signal.aborted) throw (_(void 0), _);
+        }
+        return _;
+      },
+      [_._, _],
+    );
+  return (
+    (0, _.useEffect)(() => {
+      _(_.loaderData);
+      {
+        let _ = _();
+        if (_?.loaderData) {
+          let _ = [..._.loaderData];
+          (_[_._] = _.loaderData),
+            _({
+              ..._,
+              loaderData: _,
+            });
+        }
+      }
+    }, [_.loaderData, _._]),
+    (0, _.jsx)(_.Provider, {
+      value: {
+        loaderData: _,
+        refetchFn: _,
+        fetchState: _,
+      },
+      children: _.children,
+    })
+  );
+}
+function _(_) {
+  let _ = (0, _.useContext)(_);
+  if (_ === _) throw `Used ${_} outside of LoaderContext`;
+  return _;
+}
+function _() {
+  return _("useLoaderData").loaderData;
+}
+function _() {
+  return _("useRefetchLoader").refetchFn;
+}
+var _ = "x-valve-request-type",
+  _ = "x-valve-loader-index",
+  _ = "x-valve-refetch-payload";
+async function* _(_) {
+  let _ = "";
+  for (;;) {
+    let { done: _, value: _ } = await _.read();
+    if (_ || _ === void 0) break;
+    _ += _;
+    let _ = _.split(`
+`);
+    if (_.length !== 0) {
+      _ = _.pop();
+      for (let _ of _) yield _;
+    }
+  }
+  _ !== "" && (yield _);
+}
+async function* _(_, _, _) {
+  "TextDecoderStream" in window ||
+    (await import("./streampolyfill-XXXXXXXX.js"));
+  let _ = new Headers(_);
+  _.append(_, "routeData");
+  let _ = (
+    await fetch(_, {
+      credentials: "same-origin",
+      headers: _,
+      signal: _,
+    })
+  ).body
+    ?.pipeThrough(new TextDecoderStream())
+    .getReader();
+  if (!_) throw "no response body reader";
+  for await (let _ of _(_)) {
+    if (_?.aborted) return;
+    yield _;
+  }
+}
+async function _(_, _, _, _) {
+  let _ = [],
+    _ = _.map((_) => [_, _.toString()]);
+  _ !== void 0 && _.push([_, _]);
+  for await (let _ of _(_, _, _)) _.push(_(_));
+  return _;
+}
+async function _(_, _, _, _) {
+  return (await _(_, [_], _, _))[0];
 }
 export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

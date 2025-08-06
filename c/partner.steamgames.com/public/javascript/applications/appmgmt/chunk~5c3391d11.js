@@ -2454,7 +2454,7 @@
           } = _,
           [_, _] = _.useState(!1),
           _ = _.useCallback(() => _, [_]),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)();
         let _ = _ ?? {};
         return (

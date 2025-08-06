@@ -69,7 +69,7 @@
             o = (0, d.useRef)(null),
             l = (0, d.useRef)(null),
             s = (0, d.useRef)(0),
-            c = (0, d.useRef)();
+            c = (0, d.useRef)(void 0);
           (0, d.useEffect)(
             () => () => {
               window.clearTimeout(s.current),

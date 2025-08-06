@@ -3501,7 +3501,12 @@
           const i = e.IsValidAssetType(t, n);
           return "pending" === e.status && !i.error && !i.needsCrop;
         });
-        return i.forEach((e) => (e.status = "waiting")), i;
+        return (
+          i.forEach((e) => {
+            (e.status = "waiting"), (e.message = "");
+          }),
+          i
+        );
       }
       async function c(e, t, n, i, s, a) {
         const o = d(e, i, s),
@@ -3603,6 +3608,7 @@
         let a = null,
           o = 0;
         e.endsWith("korean") && ((a = 4), (o = 6));
+        const r = (e) => e.replace(/[\s_-]+$/g, "");
         for (let t = 0; t < 31; ++t) {
           const i = (0, s.ww)(t);
           if (i.length <= o) continue;
@@ -3614,12 +3620,15 @@
             }
             s && ((a = t), (o = i.length));
           }
-          const r = (0, s.Lg)(t);
-          r.length <= o || (e.endsWith(r) && ((a = t), (o = r.length)));
+          const l = (0, s.Lg)(t);
+          l.length <= o ||
+            (e.endsWith(l) &&
+              r(e.substring(0, e.length - l.length)).length > 0 &&
+              ((a = t), (o = l.length)));
         }
         return {
           language: null != a ? a : t,
-          baseFilename: o > 0 ? e.substring(0, e.length - o - 1) : e,
+          baseFilename: o > 0 ? r(e.substring(0, e.length - o)) : e,
         };
       }
     },

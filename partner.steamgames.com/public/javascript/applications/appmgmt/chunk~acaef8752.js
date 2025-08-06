@@ -72,7 +72,7 @@
             onDropFiles: t,
             renderDesciption: a,
             elAdditonalButtons: n,
-            strOverrideDragAndDropText: r,
+            elOverrideDragAndDropText: r,
           } = e,
           [i, o] = (0, p.hk)(t),
           [s, m] = (0, p.Ss)(t, {
@@ -136,7 +136,7 @@
         const {
             imageUploader: t,
             fnUploadComplete: a,
-            strOverrideDragAndDropText: r,
+            elOverrideDragAndDropText: r,
             forceResolution: i,
             elAdditonalButtons: o,
             rgRealmList: s,
@@ -213,7 +213,7 @@
           {
             onDropFiles: p,
             elAdditonalButtons: f,
-            strOverrideDragAndDropText: r,
+            elOverrideDragAndDropText: r,
           },
           l.createElement(
             l.Fragment,
@@ -331,18 +331,18 @@
               disabled: !p,
             }),
           p &&
-            c.warnings?.map((e) =>
+            c.warnings?.map((e, t) =>
               l.createElement(
                 "div",
-                { key: e, className: k().UploadPreviewWarning },
+                { key: `warning${t}`, className: k().UploadPreviewWarning },
                 e,
               ),
             ),
           p &&
-            c.messages?.map((e) =>
+            c.messages?.map((e, t) =>
               l.createElement(
                 "div",
-                { key: e, className: k().UploadPreviewMessage },
+                { key: `message${t}`, className: k().UploadPreviewMessage },
                 e,
               ),
             ),
@@ -771,7 +771,7 @@
         r = a(72739),
         l = a(56011);
       function i(e, t) {
-        const a = n.useRef(),
+        const a = n.useRef(void 0),
           l = n.useCallback(
             (t) => {
               t.currentTarget.files.length > 0 &&
