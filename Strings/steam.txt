@@ -2425,9 +2425,8 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:27:18
-23:27:24
-23:27:25
+23:12:20
+23:12:27
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -3240,7 +3239,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug  5 2025
+Aug  6 2025
 August
 Aura
 AuthANY
@@ -8746,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug  5 2025 23:27:24
+Startup - updater built Aug  6 2025 23:12:27
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

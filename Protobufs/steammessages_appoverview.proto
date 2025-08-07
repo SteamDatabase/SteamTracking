@@ -154,13 +154,3 @@ message CAppOverview_Change {
 	optional bool full_update = 3;
 	optional bool update_complete = 4;
 }
-
-message CAppBootstrapData {
-	optional uint32 appid = 1;
-	optional bool hidden = 2;
-	repeated string user_tag = 3;
-}
-
-message CLibraryBootstrapData {
-	repeated .CAppBootstrapData app_data = 1;
-}

@@ -5405,7 +5405,6 @@ ${LANGUAGE}
 .BNW^h
 .CAchievements_GetInfo_Request
 .CAchievements_GetInfo_Response
-.CAppBootstrapData*
 .CAppOverview_PerClientData
 .CAuthentication_DeviceDetails
 .CBluetoothManager_Pair_Request
@@ -6285,7 +6284,6 @@ ${LANGUAGE}
 /\n\tping_data
 /\n\treactions
 /\n\tvariables
-/\nzr4
 /app/extra/chrome
 /appcache/
 /appcontrollericons%d/%s/%s
@@ -8412,7 +8410,6 @@ ${LANGUAGE}
 16VideoClient_Stub
 1724792014
 17Achievements_Stub
-17CAppBootstrapData
 17CCrossProcessPipe
 17CDummyCnxCallback
 17CFileWriterThread
@@ -9280,7 +9277,6 @@ ${LANGUAGE}
 21CHTMLWindowController
 21CHTTPClientConnection
 21CHTTPClientWorkThread
-21CLibraryBootstrapData
 21CLogFileAsyncCallback
 21CMetricsReporterChain
 21CMsgAchievementChange
@@ -12350,6 +12346,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9Hd\}
 9IGv
 9Inventory
 9PE,$
@@ -13519,7 +13516,6 @@ Apps.GetFriendsWhoPlay
 Apps.GetGameActionDetails
 Apps.GetGameActionForApp
 Apps.GetLaunchOptionsForApp
-Apps.GetLibraryBootstrapData
 Apps.GetMyAchievementsForApp
 Apps.GetPlaytime
 Apps.GetPrePurchasedApps
@@ -13683,7 +13679,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug  5 2025 23:27:32
+Aug  6 2025 23:12:33
 August
 Aura
 Australia/Adelaide
@@ -14420,7 +14416,6 @@ CAchievements_GetInfo_Request
 CAchievements_GetInfo_Response
 CAdHocValidation::~CAdHocValidation()
 CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
-CAppBootstrapData
 CAppMoveFolderJob
 CAppOverview_Change
 CAppOverview_PerClientData
@@ -15539,7 +15534,6 @@ CLibraryAssetCache::OnPostLogonState
 CLibraryAssetCache::RunFrame()
 CLibraryAssetCleanupJob
 CLibraryAssetConversionJob
-CLibraryBootstrapData
 CLinuxSupport
 CLinuxSupport::OnAppChangeNotification
 CLinuxSupport::OnConfigUpdated
@@ -22187,7 +22181,6 @@ LoadModule
 LoadOverviewData
 LoadTGA: Only type 2 and 10 targa RGB images supported\n
 LoadUserSettingsData
-LoadUserTagsFromConfig
 Loaded Config for Last Resort Path for App ID %u, Controller %u: %s\n
 Loaded Config for Local Override Path for App ID %u, Controller %u: %s\n
 Loaded Config for Local Selection Path for App ID %u, Controller %u: %s\n
@@ -33258,7 +33251,6 @@ app_backup
 app_buildid_hwm
 app_change_compat_tool
 app_change_number
-app_data
 app_download_enable
 app_id
 app_indicator_new_with_path
@@ -37769,7 +37761,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen"
 ghost_
 gidlist
 gidparentcomment
@@ -49826,7 +49818,6 @@ user_filter_failure
 user_info
 user_initiated
 user_subscribed
-user_tag
 usercloud://
 usercloud://%s
 usercloud://%s/%s
