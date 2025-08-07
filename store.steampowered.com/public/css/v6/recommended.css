@@ -3368,15 +3368,6 @@ body.v6 h2.morelike_section_divider
 	align-items: center;
 }
 
-.outlier_languages_themselves {
-	background: rgba(0,0,0,0.2);
-	padding: 12px;
-	border-radius: 4px;
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-}
-
 p.outliers_options {
 	font-size: 13px;
 }
@@ -3425,18 +3416,22 @@ p.outliers_options {
 	border-width: 10px;
 	margin-left: -10px;
 }
+.review_language_outliers_group_languages > .all_languages_total {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+}
 .review_language_outliers_group_languages > .languages {
 	flex: 1;
 	flex-wrap: wrap;
 	display: flex;
 	color: #acb2b8;
 	gap: 4px;
-	justify-content: flex-end;
 }
-.review_language_outliers_group_languages > .languages :nth-child(3) ~ * {
+.review_language_outliers_group_languages > .languages :nth-child(7) ~ * {
 	display: none;
 }
-.review_language_outliers_group_languages.expand_languages > .languages :nth-child(3) ~ * {
+.review_language_outliers_group_languages.expand_languages > .languages :nth-child(7) ~ * {
 	display: inline;
 }
 .review_language_outliers_group_languages > .expand_languages_btn {
