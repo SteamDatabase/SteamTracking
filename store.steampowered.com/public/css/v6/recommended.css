@@ -3483,22 +3483,26 @@ p.outliers_options {
 	border-radius: 13px;
 	background: #515C68;
 }
-.outlier_title {
-	font-size: 19px;
-	line-height: 1.1;
-	font-weight: 300;
-	color: white;
+.outlier_totals {
+	font-size: 13px;
+	display: flex;
+	gap: 20px;
 }
-.outlier_subtitle {
+.outlier_disclaimer {
 	font-size: 13px;
 	color: rgba( 255,255,255,0.8);
 }
-.outlier_subtitle span {
+.outlier_disclaimer span {
 	font-weight: 500;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+.review_summary_count {
+	font-weight: bold;
+	color: #ffffff;
+}
 .review_language_outliers img {
 	margin-bottom: -10px;
+	height: 30px;
 }
 .review_language_outliers .explanation {
 	margin-left: 10px;
@@ -3506,6 +3510,9 @@ p.outliers_options {
 }
 .review_language_outliers > div {
 	align-content: center;
+}
+.review_language_outliers a {
+	text-decoration: underline;
 }
 .review_language_outliers_table {
 	display: flex;
