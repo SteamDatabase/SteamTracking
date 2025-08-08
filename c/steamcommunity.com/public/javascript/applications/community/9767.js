@@ -4780,7 +4780,7 @@
             queryKey: ["market_search_suggestions", _.strSearch, _],
             queryFn: async () => {
               const _ = await fetch(
-                `/newmarket/searchsuggestionsresults?q=${_.strSearch}${_ ? `&appid=${_}` : ""}`,
+                `/market/searchsuggestionsresults?q=${_.strSearch}${_ ? `&appid=${_}` : ""}`,
               );
               return await _.json();
             },
