@@ -1343,6 +1343,7 @@ $\nY8O
 16HTMLComboBoxHost
 16IDynamicFunction
 16ListPanelDragger
+17:16:36
 17CFileWriterThread
 17CIngameFPSCPUInfo
 17CIngameFPSGPUInfo
@@ -1442,7 +1443,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:12:30
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -1767,7 +1767,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug  6 2025
+Aug  8 2025
 August
 Aura
 Authorize
@@ -2330,6 +2330,9 @@ CPULabel
 CPUSpeed
 CPUSpeedMax
 CPUSpeedUnits
+CPUTemp
+CPUTempSpaceAfter
+CPUTempUnits
 CPUUtilization
 CPUUtilizationMax
 CPUUtilizationSep
@@ -3494,6 +3497,7 @@ Imperial_Aramaic
 Import 
 Import "
 In dispute
+InGameOverlayAllowKMDriveOnWindows
 InGameOverlayScreenshotEnableAVIF
 InGameOverlayScreenshotHotKey
 InGameOverlayScreenshotSaveUncompressed

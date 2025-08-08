@@ -2335,6 +2335,7 @@
     "Settings_InGame_PerfOverlay_FPSCPUGPURAMDetails": "FPS, CPU, GPU & RAM Full Details",
     "Settings_InGame_PerfOverlayShowFPSGraph": "Show FPS Avg/Min Graph",
     "Settings_InGame_PerfOverlayShowCPUGraph": "Show CPU Utilization Per-Core Graph",
+    "Settings_InGame_PerfOverlayAllowKMDriver": "Enable kernel driver based metrics (CPU Temperature)",
     "Settings_InGame_PerfOverlay_TextSize": "Text size scaling",
     "Settings_InGame_PerfOverlay_Saturation": "Text contrast/saturation",
     "Settings_InGame_PerfOverlay_BGOpacity": "Background opacity",

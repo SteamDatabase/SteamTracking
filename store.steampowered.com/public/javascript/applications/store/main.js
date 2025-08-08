@@ -33047,6 +33047,12 @@
                     br: u.qM.readString,
                     bw: u.gp.writeString,
                   },
+                  start_date: {
+                    n: 8,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
+                  end_date: { n: 9, br: u.qM.readUint32, bw: u.gp.writeUint32 },
                 },
               }),
             _.sm_m

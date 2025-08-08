@@ -3946,6 +3946,7 @@ ${LANGUAGE}
 )\n\vimage_types
 )haI
 )n/h%fPn
+)system\InGameOverlayAllowKMDriveOnWindows
 )zKIx+
 *%*/*O*U*_*e*k*m*s*
 *&2>NBVZ~rfj."6:
@@ -13679,7 +13680,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug  6 2025 23:12:33
+Aug  8 2025 17:17:49
 August
 Aura
 Australia/Adelaide
@@ -34335,6 +34336,7 @@ cSeqsAcked > 0
 cU!\f}QP
 c\n!NotifyCommunityPreferencesChanged
 c\n!NotifyPerFriendPreferencesChanged
+c\n#overlay_fps_counter_allow_km_driver
 c\n(gamescope_use_game_refresh_rate_in_steam
 c\n)steam_input_configurator_error_msg_enable
 c\n+library_whats_new_show_only_product_updates
@@ -36848,6 +36850,7 @@ external_reference
 extra compressed data
 extra data in message
 e{YG
+e~TA
 f&dy
 f.N%H
 f3a13e7b077f0f631a651dc554b2a377fe87fdc7
@@ -44831,6 +44834,7 @@ outputitemdefid
 overall_estimated_time_remaining_sec
 overall_percent_complete
 overflow error
+overlay_fps_counter_allow_km_driver
 overlay_fps_counter_bgopacity
 overlay_fps_counter_corner
 overlay_fps_counter_cpu_graph

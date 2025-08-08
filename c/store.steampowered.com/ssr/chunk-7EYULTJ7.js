@@ -430,6 +430,16 @@ var _ = class _ extends _.Message {
                 _: _.readString,
                 _: _.writeString,
               },
+              start_date: {
+                _: 8,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              end_date: {
+                _: 9,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
             },
           }),
         _.sm_m

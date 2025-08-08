@@ -155,21 +155,25 @@
           };
         if (
           (!i.url && a && (i.url = g.TS.STORE_BASE_URL + a.store_url_path),
-          a?.best_purchase_option?.active_discounts?.length &&
-            -1 !== t.spotlight_body?.indexOf("%1$s"))
+          -1 !== t.spotlight_body?.indexOf("%1$s"))
         ) {
-          const e = new Date(
-            1e3 * a.best_purchase_option.active_discounts[0].discount_end_date,
-          );
-          i.body = t.spotlight_body?.replace(
-            "%1$s",
-            e.toLocaleTimeString(S.pf.GetPreferredLocales(), {
-              hour: "numeric",
-              minute: "2-digit",
-              month: "short",
-              day: "numeric",
-            }),
-          );
+          let e;
+          a?.best_purchase_option?.active_discounts?.length
+            ? (e = new Date(
+                1e3 *
+                  a.best_purchase_option.active_discounts[0].discount_end_date,
+              ))
+            : t.end_date && (e = new Date(1e3 * t.end_date)),
+            e &&
+              (i.body = t.spotlight_body?.replace(
+                "%1$s",
+                e.toLocaleTimeString(S.pf.GetPreferredLocales(), {
+                  hour: "numeric",
+                  minute: "2-digit",
+                  month: "short",
+                  day: "numeric",
+                }),
+              ));
         }
         return n.createElement(b, { spotlight: i });
       }
