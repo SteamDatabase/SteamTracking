@@ -31,8 +31,9 @@
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
-        "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
+        "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
         Focusable: "_1cd-wdIp5lIWsydAxII-vY",
+        "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
         "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
         ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
         Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
@@ -413,6 +414,7 @@
         TagButton: "Fjfz2cC73ckcYluf8xJXh",
         Icon: "_1t5uZMQ4sN1vXrw3I6-KY6",
         TruncatingPortraitRow: "_1nAGBiWu7n1ggCy-E5i035",
+        NoFilters: "_3g3vv3kHTPCWqMi7peBikQ",
       };
     },
     chunkid: (module) => {
@@ -2786,7 +2788,7 @@
         const {
           rgToggles: _,
           onChange: __webpack_require__,
-          values: _,
+          state: _,
           computeNext: _ = (_, _) => _,
         } = _;
         return _.createElement(
@@ -2798,16 +2800,11 @@
           _.map((_) =>
             _.createElement(_, {
               key: `${_.facet}_${_.tag}`,
-              active: _[_.facet] && _[_.facet][_.tag],
+              active: _.facets[_.facet] && _.facets[_.facet][_.tag],
               onActiveChange: (_) =>
                 ((_, _, _) => {
-                  const _ = {
-                    ..._,
-                    [_]: {
-                      ..._[_],
-                    },
-                  };
-                  (_[_][_] = _), __webpack_require__(_(_, _));
+                  const _ = _(_, _, _, _);
+                  __webpack_require__(_(_.facets, _.facets));
                 })(_.facet, _.tag, _),
               label: _.strLabel,
             }),
@@ -2815,6 +2812,7 @@
         );
       }
       function _(_) {
+        const { children: _, ...__webpack_require__ } = _;
         return _.createElement(
           _,
           {
@@ -2822,26 +2820,35 @@
             gapX: "2",
             marginTop: "4",
             columns: "repeat( auto-fit, minmax( 300px, 1fr ) )",
+            ...__webpack_require__,
           },
-          _.children,
+          _,
+        );
+      }
+      function _(_, _, _, _) {
+        const _ = {
+          ..._,
+          facets: {
+            ..._.facets,
+            [_]: {
+              ..._.facets[_],
+              [_]: !0,
+            },
+          },
+        };
+        return (
+          _ ||
+            (1 === Object.keys(_.facets[_]).length
+              ? delete _.facets[_]
+              : delete _.facets[_][_]),
+          _
         );
       }
       function _(_) {
         const { facet: _, state: __webpack_require__, onStateChange: _ } = _;
         switch (_.fieldType) {
           case "checkbox": {
-            const _ = (_, _, _) => {
-              _({
-                ...__webpack_require__,
-                facets: {
-                  ...__webpack_require__.facets,
-                  [_]: {
-                    ...__webpack_require__.facets[_],
-                    [_]: _,
-                  },
-                },
-              });
-            };
+            const _ = (_, _, _) => _(_(__webpack_require__, _, _, _));
             return _.createElement(_, {
               ..._,
               value: __webpack_require__.facets,
@@ -2850,22 +2857,14 @@
           }
           case "select": {
             const _ = (_, _) => {
-              const _ = {
+              let _ = {
                 ...__webpack_require__,
                 facets: {
                   ...__webpack_require__.facets,
                 },
               };
-              _ &&
-                (_.facets[_.facet] = {
-                  ..._.facets[_.facet],
-                  [_.tag]: !1,
-                }),
-                _ &&
-                  (_.facets[_.facet] = {
-                    ..._.facets[_.facet],
-                    [_.tag]: !0,
-                  }),
+              _ && (_ = _(_, _.facet, _.tag, !1)),
+                _ && (_ = _(_, _.facet, _.tag, !0)),
                 _(_);
             };
             return _.createElement(_, {
@@ -2876,17 +2875,7 @@
           }
           case "toggle":
           case "togglebutton": {
-            const _ = (_) =>
-                _({
-                  ...__webpack_require__,
-                  facets: {
-                    ...__webpack_require__.facets,
-                    [_.facet]: {
-                      ...__webpack_require__.facets[_.facet],
-                      [_.tag]: _,
-                    },
-                  },
-                }),
+            const _ = (_) => _(_(__webpack_require__, _.facet, _.tag, _)),
               _ =
                 __webpack_require__.facets[_.facet] &&
                 __webpack_require__.facets[_.facet][_.tag];
@@ -2911,7 +2900,7 @@
             return _.createElement(_, {
               ..._,
               onChange: _,
-              values: __webpack_require__.facets,
+              state: __webpack_require__,
             });
           }
           default:
@@ -3883,6 +3872,9 @@
                 facet: "Type",
                 tag: [..._, "Type_Hands"],
               },
+              {
+                facet: "ItemSet",
+              },
             ],
           },
           {
@@ -3951,6 +3943,12 @@
             trigger: {
               facet: "Type",
               tag: "CSGO_Tool_Sticker",
+            },
+          },
+          {
+            facet: "Rarity",
+            trigger: {
+              facet: "ItemSet",
             },
           },
         ];
@@ -4136,7 +4134,7 @@
                                   ..._[_.name],
                                 },
                               };
-                              return (_[_.name][_] = !1), _;
+                              return delete _[_.name][_], _;
                             }
                             return _;
                           },
@@ -4173,10 +4171,7 @@
                         ..._.facets,
                       },
                     }),
-                  (_.facets[_] = {
-                    ..._.facets[_],
-                    [_]: !1,
-                  }));
+                  (_ = _(_, _, _, !1)));
             }
           _(_), _ && _(_);
         }, [_, _, _]);
@@ -4224,7 +4219,7 @@
             {
               gap: "2",
               marginTop: "2",
-              align: "stretch",
+              columns: "1fr 1fr 1fr 1fr",
             },
             _.map((_) =>
               _.createElement(
@@ -4266,7 +4261,9 @@
           }),
           _.createElement(
             _,
-            null,
+            {
+              minHeight: "88px",
+            },
             _.createElement(_, {
               ...__webpack_require__,
             }),
@@ -4302,9 +4299,9 @@
           _,
           {
             flexGrow: "1",
-            background: "dull-2 25%",
-            radius: "md",
-            padding: "5",
+            background: "dull-5 50%",
+            radius: "sm",
+            paddingY: "5",
             justify: "center",
             ..._,
             "data-active": !!_,
@@ -4345,7 +4342,7 @@
         let _ = _.createElement(
           _,
           {
-            background: "dull-2 25%",
+            background: "dull-5 50%",
             flexGrow: "1",
             align: "center",
             paddingX: "3",
@@ -4375,7 +4372,7 @@
                 _,
                 {
                   align: "center",
-                  background: "dull-2 25%",
+                  background: "dull-5 50%",
                   gap: "2",
                   paddingY: "1",
                   paddingX: "3",
@@ -4383,6 +4380,8 @@
                   className: _.TriggerToggle,
                   onClick: _,
                   position: "relative",
+                  "data-active": !!_,
+                  "data-muted": !!_,
                 },
                 _.createElement(
                   _,
@@ -4423,10 +4422,12 @@
               _.createElement(
                 _,
                 {
-                  background: "dull-2 25%",
+                  background: "dull-5 50%",
                   align: "center",
                   justify: "center",
                   padding: "5",
+                  "data-active": !!_,
+                  "data-muted": !!_,
                   className: _.TriggerSelect,
                 },
                 _.createElement(_, null),
@@ -4516,7 +4517,7 @@
                     {
                       inline: !0,
                       align: "center",
-                      gap: "1",
+                      gap: "2",
                     },
                     _.strLabel,
                     _ && _.createElement(_, null),
@@ -4580,7 +4581,12 @@
             searchPath: _,
             ..._
           } = _,
-          _ = _.bSteamItems;
+          _ = _.bSteamItems,
+          _ = _ ? _.filterSteam : _.filterInGame,
+          _ =
+            0 !== _.price[0] ||
+            _.price[1] !== _.maxPrice ||
+            Object.keys(_.facets).length > 0;
         return _.createElement(
           _.Provider,
           {
@@ -4688,6 +4694,7 @@
                                 filterSteam: {
                                   ..._.filterSteam,
                                   facets: {},
+                                  price: [0, _.maxPrice],
                                 },
                               }
                             : {
@@ -4695,10 +4702,12 @@
                                 filterInGame: {
                                   ..._.filterInGame,
                                   facets: {},
+                                  price: [0, _.maxPrice],
                                 },
                               },
                         );
                       },
+                      disabled: !_,
                     },
                     (0, _._)("#AdvancedSearch_Reset"),
                   ),
@@ -5007,7 +5016,13 @@
           return _.createElement(
             _,
             null,
-            (0, _._)("#AdvancedSearch_FacetLoadError"),
+            _.createElement(
+              _,
+              {
+                size: "4",
+              },
+              (0, _._)("#AdvancedSearch_FacetLoadError"),
+            ),
           );
         return _.createElement(
           _.Fragment,
@@ -5150,16 +5165,6 @@
             state: _,
             onStateChange: _,
           } = _,
-          _ = (_) => {
-            const _ = _(_.facets[__webpack_require__] || {});
-            _({
-              ..._,
-              facets: {
-                ..._.facets,
-                [_]: _,
-              },
-            });
-          },
           _ = Object.keys(_).filter((_) => _.indexOf(_) < 1),
           _ = _.facets[__webpack_require__] || {};
         return _.createElement(
@@ -5171,6 +5176,7 @@
             _,
             {
               weight: "medium",
+              size: "3",
             },
             _,
           ),
@@ -5188,17 +5194,10 @@
                 onActiveChange: (_) =>
                   ((_, _) => {
                     if (_.includes(_)) {
-                      const _ = {};
-                      for (const _ of _) _[_] = _;
-                      _((_) => ({
-                        ..._,
-                        ..._,
-                      }));
-                    } else
-                      _((_) => ({
-                        ..._,
-                        [_]: _,
-                      }));
+                      let _ = _;
+                      for (const _ of _) _ = _(_, __webpack_require__, _, _);
+                      _(_);
+                    } else _(_(_, __webpack_require__, _, _));
                   })(_, _),
                 label: _[_].localized_name,
                 icon: _[_],
@@ -5240,41 +5239,57 @@
             );
         return _.createElement(
           _,
-          null,
-          !_ &&
-            _.map((_) =>
-              _.createElement(
-                _,
-                {
-                  key: _.appid,
-                  onClick: () => _(_.appid),
-                  tabIndex: 0,
-                  onKeyDown: (_) => {
-                    return (
-                      (__webpack_require__ = _.key),
-                      (_ = _.appid),
-                      void (
-                        (" " !== __webpack_require__ &&
-                          "Enter" !== __webpack_require__) ||
-                        _(_)
-                      )
-                    );
-                    var _, _;
-                  },
-                  role: "button",
-                  width: "92px",
-                  height: "138px",
-                },
-                _.createElement("img", {
-                  src: _.img,
-                  alt: _.name,
-                  style: {
+          {
+            direction: "column",
+            marginTop: "4",
+            marginBottom: "2",
+          },
+          _.createElement(
+            _,
+            {
+              weight: "medium",
+              size: "3",
+            },
+            (0, _._)("#AdvancedSearch_AppSelect_YourGames"),
+          ),
+          _.createElement(
+            _,
+            null,
+            !_ &&
+              _.map((_) =>
+                _.createElement(
+                  _,
+                  {
+                    key: _.appid,
+                    onClick: () => _(_.appid),
+                    tabIndex: 0,
+                    onKeyDown: (_) => {
+                      return (
+                        (__webpack_require__ = _.key),
+                        (_ = _.appid),
+                        void (
+                          (" " !== __webpack_require__ &&
+                            "Enter" !== __webpack_require__) ||
+                          _(_)
+                        )
+                      );
+                      var _, _;
+                    },
+                    role: "button",
                     width: "92px",
+                    height: "138px",
                   },
-                }),
+                  _.createElement("img", {
+                    src: _.img,
+                    alt: _.name,
+                    style: {
+                      width: "92px",
+                    },
+                  }),
+                ),
               ),
-            ),
-          _ && _,
+            _ && _,
+          ),
         );
       }
       function _(_) {
@@ -5291,6 +5306,7 @@
           _,
           {
             minHeight: "min(400px, 30vh)",
+            direction: "column",
           },
           _.children,
         );
@@ -5340,7 +5356,14 @@
           return _;
         })(_);
         if (
-          (_ && (_.facets = _), _.bSteamItems && _ && _[_] && _.facets.Game)
+          (_ && (_.facets = _),
+          "number" == typeof _.unFilterMinPrice &&
+            _.unFilterMinPrice > 0 &&
+            (_.price[0] = _.unFilterMinPrice),
+          "number" == typeof _.unFilterMaxPrice &&
+            _.unFilterMaxPrice < _.config.maxPrice &&
+            (_.price[1] = _.unFilterMaxPrice),
+          _.bSteamItems && _ && _[_] && _.facets.Game)
         ) {
           const _ = Object.keys(_.facets.Game)[0],
             _ = _[_].tags;
@@ -5404,13 +5427,24 @@
         return _.createElement(
           _,
           {
+            flexGrow: "1",
+            radius: "sm",
+            direction: "column",
             align: "center",
-            secondary: !0,
-            _: "div",
-            marginTop: _,
-            size: "4",
+            justify: "center",
+            marginTop: "2",
+            className: _.NoFilters,
           },
-          _.children,
+          _.createElement(
+            _,
+            {
+              align: "center",
+              secondary: !0,
+              _: "div",
+              marginTop: _,
+            },
+            _.children,
+          ),
         );
       }
       function _(_) {
@@ -5427,7 +5461,13 @@
           return _.createElement(
             _,
             null,
-            (0, _._)("#AdvancedSearch_FacetLoadError"),
+            _.createElement(
+              _,
+              {
+                size: "4",
+              },
+              (0, _._)("#AdvancedSearch_FacetLoadError"),
+            ),
           );
         const _ = (function (_) {
           if (_ === _) return _;
@@ -5443,7 +5483,37 @@
         const { appid: _, facets: __webpack_require__, ..._ } = _,
           _ = _(_, __webpack_require__);
         return 0 === _.length
-          ? _.createElement(_, null, (0, _._)("#AdvancedSearch_NoFacets"))
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                _,
+                null,
+                _.createElement(
+                  _,
+                  {
+                    align: "center",
+                    secondary: !0,
+                    _: "div",
+                    marginTop: _,
+                    size: "6",
+                    weight: "heavy",
+                  },
+                  (0, _._)("#AdvancedSearch_NoFacets"),
+                ),
+                _.createElement(
+                  _,
+                  {
+                    align: "center",
+                    secondary: !0,
+                    _: "div",
+                    marginTop: _,
+                    size: "4",
+                  },
+                  (0, _._)("#AdvancedSearch_NoFacetsSearch"),
+                ),
+              ),
+            )
           : _.createElement(_, {
               facets: _,
               ..._,
@@ -5477,7 +5547,7 @@
           initialData: _,
         });
       }
-      const _ = 5;
+      const _ = 2;
       function _(_, _) {
         return (0, _.useMemo)(() => {
           if (!_) return [];
@@ -5628,6 +5698,7 @@
             dullColor: _ = "greyneutral",
             breakpoints: _,
             children: _,
+            zoo: _,
           } = _,
           _ = {
             "--default-font-size": `var(--text-size-${_})`,
@@ -5717,7 +5788,9 @@
             },
             _.createElement(
               _,
-              null,
+              {
+                zoo: !0,
+              },
               _.createElement(_, {
                 ..._,
                 filter: _.state,
