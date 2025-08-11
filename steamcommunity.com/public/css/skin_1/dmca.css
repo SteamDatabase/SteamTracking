@@ -24,6 +24,11 @@ body {
 				url( 'https://community.fastly.steamstatic.com/public/images/groups/content_header_rule.png' ) -4px 0px no-repeat;
 }
 
+.dmca_email_notification, .dmca_email_notification p
+{
+	color: black;
+}
+
 /* left column */
 .leftcol
 {

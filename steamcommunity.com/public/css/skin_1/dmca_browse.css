@@ -25,6 +25,11 @@
 	background-color: #555555;
 }
 
+.dmca_notice_checkbox
+{
+	margin-right: 10px;
+}
+
 .dmca_notice_id
 {
 	min-width: 70px;
@@ -110,7 +115,13 @@
 	width: 230px;
 }
 
-.dmca_paging_controls
+.dmca_browse_controls
 {
 	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.dmca_paging_controls
+{
 }
