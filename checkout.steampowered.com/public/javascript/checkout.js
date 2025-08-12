@@ -3738,7 +3738,7 @@ function UpdatePaymentInfoForm()
 			g_bShowAddressForm = false;
 			bShowPaymentSpecificNote = true;
 			bDisabledPaymentMethod = true;
-			$('payment_method_specific_note').innerHTML = 'PayPal is currently unavailable in your country. <a href="https://help.steampowered.com/en/faqs/view/731C-13C7-7D04-A11E#purpp" target="_blank">Learn More</a>';
+			$('payment_method_specific_note').innerHTML = 'PayPal is currently unavailable in your country. <a href="https://help.steampowered.com/faqs/view/731C-13C7-7D04-A11E#purpp" target="_blank">Learn More</a>';
 		}
 		else if ( method.value == 'guest' )
 		{
