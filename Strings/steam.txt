@@ -1383,7 +1383,6 @@ $ffn
 , value=
 ,!MbDg[
 ,#,/,5,9,A,W,Y,i,w,
-,?vTa
 ,CBKE
 ,Reason=
 ,\n'k_EMsgAISGetPackageChangeNumberResponse
@@ -2310,8 +2309,6 @@ $ffn
 172.16
 172.16.3.31
 172.16.3.39
-17:16:23
-17:16:33
 17CBootstrapLogFile
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2421,6 +2418,8 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+22:59:06
+22:59:12
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3240,7 +3239,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug  8 2025
+Aug 11 2025
 August
 Aura
 AuthANY
@@ -8746,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug  8 2025 17:16:33
+Startup - updater built Aug 11 2025 22:59:12
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -9618,6 +9617,8 @@ Wallet (Nodwin)
 Warning
 Warning parsing text-format 
 Warning: %s
+Warning: failed to init crash handler: failed to create crash handler\n
+Warning: failed to init crash handler: no factory\n
 Warning: failed to set thread priority: foreign thread unsupported\n
 Warning: failed to set thread priority: set failed for %d: %s\n
 Warning: failed to set thread priority: set failed for priority %d\n
@@ -13009,7 +13010,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen:
 givenName
 glBegin
 glBindTexture
