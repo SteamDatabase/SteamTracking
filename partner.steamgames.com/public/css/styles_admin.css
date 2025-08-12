@@ -185,9 +185,7 @@ body.ban_keys #landingNav > a.active {
 }
 
 .errormsg {
-	padding: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding: 5px 10px 5px 10px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	border: 1px solid #a81a28;
@@ -197,6 +195,38 @@ body.ban_keys #landingNav > a.active {
 .errormsg a {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.publishwarning {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			padding: 24px;
+	font-size: 15px;
+	margin: 5px -20px 15px;
+	background: -webkit-linear-gradient( 270deg, #b75b1c 5%,#974813 95%);
+	background: linear-gradient( 180deg, #b75b1c 5%,#974813 95%);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+	border-radius: 4px;
+	animation: warning_highlight 1s 1;
+	color: white;
+}
+
+.publishwarning a {
+	text-decoration: underline;
+	cursor: pointer;
+	color: white;
+	font-weight: 500;
+}
+
+@keyframes warning_highlight {
+	0% {
+		filter: brightness( 2 )
+	}
+
+	100% {
+		filter: brightness( 1 )
+	}
 }
 
 .warningmsg {

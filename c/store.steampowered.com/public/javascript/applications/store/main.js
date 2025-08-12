@@ -1620,7 +1620,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       const _ = 1,
         _ = 4,
@@ -1903,7 +1902,7 @@
             return "unknown";
         }
       }
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -1998,25 +1997,6 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (_[(_.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (_[(_.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (_[(_.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -48286,7 +48266,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "/react-waypoint/",
+          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
         ];
       function _() {
         try {
@@ -55279,6 +55259,7 @@
             childrenContainerWidth: _ = "fixed",
             onContextMenu: _,
             onActivate: _,
+            padding: _,
             ..._
           } = _,
           { actionDescriptions: _, gamepadEvents: _, props: _ } = (0, _._)(_),
@@ -55306,6 +55287,7 @@
             actionDescriptionMap: _,
             explainer: _,
             explainerTitle: _,
+            padding: _,
             ..._,
           },
           _.createElement(_, {
@@ -76775,15 +76757,16 @@
           ),
           _ = _(),
           { bSearchVisible: _, openSearch: _, closeSearch: _ } = _(),
+          _ = _.useRef(null),
           _ = _.useCallback(() => {
-            _(void 0);
+            _.current?.TakeFocus(), _(void 0);
           }, []),
           _ = _.useCallback(() => {
-            _(), _();
-          }, [_, _]),
+            _(void 0), _();
+          }, [_]),
           _ = _.useCallback(
             (_) => {
-              _((_) => (_ == _ ? void 0 : _)), _();
+              _((_) => (_ === _ ? void 0 : _)), _();
             },
             [_],
           ),
@@ -76817,6 +76800,7 @@
                     className: _.Content,
                     role: "navigation",
                     "aria-label": _("#Menu_Label"),
+                    navRef: _,
                   },
                   _.createElement(
                     _,
@@ -77127,6 +77111,10 @@
             () => __webpack_require__(_),
             [__webpack_require__, _],
           ),
+          _ = _.useCallback(
+            () => __webpack_require__(void 0),
+            [__webpack_require__],
+          ),
           _ = _.useCallback(() => _(!0), []),
           _ = _.useCallback(
             (_) => {
@@ -77147,6 +77135,8 @@
           {
             className: _()(_.MenuButton, _ && _.Active),
             focusClassName: _.ButtonFocus,
+            onCancelButton: _,
+            onOKButton: _,
             onMouseEnter: _,
             onClick: _,
             ref: _,

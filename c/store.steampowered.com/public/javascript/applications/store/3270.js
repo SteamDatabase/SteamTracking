@@ -19,7 +19,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -2379,8 +2378,7 @@
               );
             const _ = [];
             for (const _ of __webpack_require__.Body().sessions())
-              _.device_type() !== _._.k_EGamingDeviceType_Unknown &&
-                _.push(_.toObject());
+              0 !== _.device_type() && _.push(_.toObject());
             return {
               sessions: _,
               refetchInterval:

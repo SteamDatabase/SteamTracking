@@ -1967,7 +1967,18 @@
     },
     43258: (e, t, a) => {
       "use strict";
-      a.d(t, { AK: () => v, Z8: () => y, fV: () => f, mH: () => b });
+      a.d(t, {
+        AK: () => w,
+        KH: () => v,
+        Z8: () => D,
+        fV: () => k,
+        g5: () => A,
+        hV: () => f,
+        i9: () => B,
+        mH: () => I,
+        tW: () => y,
+        up: () => C,
+      });
       var n = a(34629),
         r = a(2160),
         i = a(22837),
@@ -1983,15 +1994,86 @@
         g = a(23910),
         h = a(61859),
         E = a(62490);
-      function S(e, t) {
+      const S = { isInvalid: !1, storeItemBinding: 0, canModifyStoreItems: !0 },
+        v = {
+          0: {
+            ...S,
+            type: 0,
+            label: "Invalid type",
+            storeItemType: -1,
+            isInvalid: !0,
+          },
+          12: {
+            ...S,
+            type: 12,
+            label: "Invalid type",
+            storeItemType: -1,
+            isInvalid: !0,
+          },
+          1: { ...S, type: 1, label: "Owns apps", storeItemType: 0 },
+          2: { ...S, type: 2, label: "Does not own apps", storeItemType: 0 },
+          3: { ...S, type: 3, label: "Owns packages", storeItemType: 1 },
+          4: {
+            ...S,
+            type: 4,
+            label: "Does not own packages",
+            storeItemType: 1,
+          },
+          5: { ...S, type: 5, label: "Wishlists apps", storeItemType: 0 },
+          6: { ...S, type: 6, label: "Follows apps", storeItemType: 0 },
+          8: {
+            ...S,
+            type: 8,
+            label: "Launched apps",
+            tooltip: "Just launched the app just once",
+            storeItemType: 0,
+          },
+          7: {
+            ...S,
+            type: 7,
+            label: "Played apps a lot",
+            tooltip: "Minimum of 4 hours of playtime",
+            storeItemType: 0,
+          },
+          9: {
+            ...S,
+            type: 9,
+            label: "Recently played apps",
+            tooltip: "Played the app within the last year",
+            storeItemType: 0,
+          },
+          10: {
+            ...S,
+            type: 10,
+            label: "Lapsed players for apps",
+            tooltip:
+              "Played the app within the last year but not in the last three months",
+            storeItemType: 0,
+          },
+          11: {
+            ...S,
+            type: 11,
+            label: "Plays Similar Apps",
+            tooltip:
+              "Algorithmically targets players who play apps with similar tags to the selected app(s)",
+            storeItemType: 0,
+            storeItemBinding: 1,
+            canModifyStoreItems: !1,
+            isInvalid: !0,
+          },
+        };
+      function y(e) {
+        return v[e];
+      }
+      function b(e, t) {
         if (
           ((t.temp_id =
             ("clause" in t ? t.clause + "_" : "filter_") +
-            ++f.sm_nTempIDCounter),
+            ++k.sm_nTempIDCounter),
           "children" in t)
         )
           Array.isArray(t.children)
-            ? t.children.forEach((t) => S(e, t))
+            ? t.children.forEach((t) => b(e, t))
             : (console.error(
                 `marketing message ${e}:  clause error, clearing its setting so we can continue in the editor. `,
                 (0, l.HO)(t),
@@ -2005,7 +2087,21 @@
               : (e.id_list = []);
         }
       }
-      function v(e, t) {
+      function f(e, t, a) {
+        const n = y(t.filter_type),
+          r = { filter_type: a, id_list: [...t.id_list] },
+          i = y(r.filter_type);
+        return (
+          n.storeItemType !== i.storeItemType && (r.id_list = []),
+          1 === i.storeItemBinding &&
+            ((r.id_list = []),
+            e.BHasAssociatedItem() &&
+              (0, m.JK)(e.GetStoreItemKey().item_type) === i.storeItemType &&
+              (r.id_list = [e.GetStoreItemKey().id])),
+          r
+        );
+      }
+      function w(e, t) {
         if (!e || !t) return null;
         const a = JSON.parse(t) || {};
         return (
@@ -2020,11 +2116,11 @@
           a.experiment_control_group &&
             (a.experiment_control_group = parseInt(a.experiment_control_group)),
           a.user_filters &&
-            ((a.no_filters_required = !1), S(e, a.user_filters)),
+            ((a.no_filters_required = !1), b(e, a.user_filters)),
           a
         );
       }
-      function y(e, t) {
+      function D(e, t) {
         switch (e) {
           case 1:
             return (0, m.wR)(t);
@@ -2035,7 +2131,7 @@
         }
         return null;
       }
-      function b(e) {
+      function I(e) {
         if (e?.user_filters?.children?.length > 0) {
           let t = 0;
           return (
@@ -2047,7 +2143,60 @@
         }
         return 0;
       }
-      class f {
+      function C(e, t) {
+        return [T(e, t, y(t.filter_type))].filter((e) => void 0 !== e);
+      }
+      function T(e, t, a) {
+        if (1 === a.storeItemBinding)
+          return 1 != t.id_list.length
+            ? `Must have exactly one app in the filter. Currently selected: ${t.id_list.length}`
+            : e.BHasAssociatedItem()
+              ? (0, m.JK)(e.GetStoreItemKey().item_type) !== a.storeItemType
+                ? `The filter and the message item are different: incompatible store item types: \n\t\t\t${e.GetStoreItemKey().item_type} and ${(0, m.Rz)(a.storeItemType)}`
+                : e.GetStoreItemKey().id !== t.id_list[0]
+                  ? "The filter and the message item are different: must have identical ids"
+                  : void 0
+              : "The filter and the message item are different";
+      }
+      function B(e) {
+        return 0 == e.GetType()
+          ? "Invalid Marketing Message type '----------'. Please correct in editor tab before attempting to save"
+          : e
+                .GetUserMessageFilters()
+                .children.some((t, a) => !e.BHasSomeIDForAndUserFilter(a))
+            ? "Incomplete Marketing Message User Filter settings. No user can see this marketing message in the current setup."
+            : e
+                  .FlattenUserMessageFilterToFlattened()
+                  .some((t) => C(e, t).length > 0)
+              ? "Please address the filter errors before saving the message"
+              : void 0;
+      }
+      function A(e) {
+        const t = [];
+        return (
+          (function (e) {
+            if (1 == e.GetUserMessageFilterCount()) {
+              const t = e.FlattenUserMessageFilterToFlattened()[0].filter_type;
+              return 2 == t || 4 == t;
+            }
+            return !1;
+          })(e) &&
+            e.bHasAssociatedItem() &&
+            t.push(
+              "Weak targeting (because not owned). Will automatically use player's tags to filter and personalized to customers.",
+            ),
+          (function (e) {
+            return e
+              .FlattenUserMessageFilterToFlattened()
+              .some((e) => 11 === e.filter_type);
+          })(e) &&
+            t.push(
+              "Will automatically use the player's tags to prioritize the message output based on the selected app (as similar apps filter is used).",
+            ),
+          t
+        );
+      }
+      class k {
         m_oMessage = null;
         m_originalMessage = null;
         m_oTemplateVars = null;
@@ -2082,7 +2231,7 @@
               ];
           }
           (this.m_oTemplateVars = (0, c.c2)(e.template_vars_json) || {}),
-            (this.m_oAdditionalRestrictions = v(
+            (this.m_oAdditionalRestrictions = w(
               e.gid,
               e.additional_restrictions_json,
             )),
@@ -2112,7 +2261,7 @@
           );
         }
         SetupStoreItemKey() {
-          (this.m_storeItemKey = y(
+          (this.m_storeItemKey = D(
             this.m_oMessage.association_type,
             this.m_oMessage.associated_id,
           )),
@@ -2401,7 +2550,7 @@
           return this.m_oAdditionalRestrictions?.must_have_client_package_lte;
         }
         GetUserMessageFilterCount() {
-          return b(this.m_oAdditionalRestrictions);
+          return I(this.m_oAdditionalRestrictions);
         }
         FlattenUserMessageFilterToFlattened() {
           return (
@@ -2683,7 +2832,7 @@
         ReplaceUserFilter(e) {
           (this.m_oAdditionalRestrictions.no_filters_required = !1),
             (this.m_oAdditionalRestrictions.user_filters = e),
-            S(this.GetGID(), this.m_oAdditionalRestrictions.user_filters),
+            b(this.GetGID(), this.m_oAdditionalRestrictions.user_filters),
             this.Dispatch();
         }
         AddNewAndUserFilter(e = { filter_type: 1, id_list: [] }) {
@@ -2693,13 +2842,13 @@
               (this.m_oAdditionalRestrictions.user_filters = {
                 clause: "and",
                 children: [],
-                temp_id: "and_" + ++f.sm_nTempIDCounter,
+                temp_id: "and_" + ++k.sm_nTempIDCounter,
               }),
-            (e.temp_id = "filter_" + ++f.sm_nTempIDCounter);
+            (e.temp_id = "filter_" + ++k.sm_nTempIDCounter);
           const t = {
             clause: "or",
             children: [e],
-            temp_id: "or_" + ++f.sm_nTempIDCounter,
+            temp_id: "or_" + ++k.sm_nTempIDCounter,
           };
           this.m_oAdditionalRestrictions.user_filters.children.push(t),
             this.Dispatch();
@@ -2720,7 +2869,7 @@
           const a = this.m_oAdditionalRestrictions.user_filters;
           (0, d.wT)("children" in a.children[e], "or clauses broken"),
             "children" in a.children[e] &&
-              ((t.temp_id = "filter_" + ++f.sm_nTempIDCounter),
+              ((t.temp_id = "filter_" + ++k.sm_nTempIDCounter),
               a.children[e].children.push(t),
               this.Dispatch());
         }
@@ -2739,7 +2888,7 @@
           (0, d.wT)("children" in n.children[t], "or clauses broken"),
             "children" in n.children[t] &&
               JSON.stringify(n.children[t].children[a]) != JSON.stringify(e) &&
-              ((e.temp_id = "filter_" + ++f.sm_nTempIDCounter),
+              ((e.temp_id = "filter_" + ++k.sm_nTempIDCounter),
               (n.children[t].children[a] = e),
               this.Dispatch());
         }
@@ -2924,69 +3073,69 @@
           (this.m_bDirty = !0), this.m_callback.Dispatch(this);
         }
       }
-      (0, n.Cg)([l.sH], f.prototype, "m_bDirty", void 0),
-        (0, n.Cg)([u.o], f.prototype, "GetAltTextRaw", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearAllLegacyRestrictions", null),
-        (0, n.Cg)([u.o], f.prototype, "SetExplicitNoLegalPartnerNeeded", null),
-        (0, n.Cg)([u.o], f.prototype, "SetAdminNote", null),
-        (0, n.Cg)([u.o], f.prototype, "SetName", null),
-        (0, n.Cg)([u.o], f.prototype, "SetType", null),
-        (0, n.Cg)([u.o], f.prototype, "SetVisibility", null),
-        (0, n.Cg)([u.o], f.prototype, "SetAssociation", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearAssociation", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMessageTime", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMessageStartTime", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMessageEndTime", null),
-        (0, n.Cg)([u.o], f.prototype, "SetCountryAllow", null),
-        (0, n.Cg)([u.o], f.prototype, "SetCountryDeny", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearCountryRestrictions", null),
-        (0, n.Cg)([u.o], f.prototype, "SetAndConvertURL", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustOwnAppID", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustNotOwnAppID", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustOwnPackageID", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustNotOwnPackageID", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustHaveLaunchedAppID", null),
-        (0, n.Cg)([u.o], f.prototype, "SetLinkURL", null),
-        (0, n.Cg)([u.o], f.prototype, "SetRealm", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustUseClientLanguage", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustHaveClientPackageGTE", null),
-        (0, n.Cg)([u.o], f.prototype, "SetMustHaveClientPackageLTE", null),
-        (0, n.Cg)([u.o], f.prototype, "SetPlatformWindows", null),
-        (0, n.Cg)([u.o], f.prototype, "SetPlatformMac", null),
-        (0, n.Cg)([u.o], f.prototype, "SetPlatformLinux", null),
-        (0, n.Cg)([u.o], f.prototype, "SetNoFiltersRequired", null),
-        (0, n.Cg)([u.o], f.prototype, "AddToWatchList", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearWatchList", null),
-        (0, n.Cg)([u.o], f.prototype, "RemoveFromWatchList", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearUserDynamicFilter", null),
-        (0, n.Cg)([u.o], f.prototype, "ReplaceUserFilter", null),
-        (0, n.Cg)([u.o], f.prototype, "AddNewAndUserFilter", null),
-        (0, n.Cg)([u.o], f.prototype, "RemoveAndUserFilter", null),
-        (0, n.Cg)([u.o], f.prototype, "AddNewOrUserFilter", null),
-        (0, n.Cg)([u.o], f.prototype, "RemoveOrUserFilterAt", null),
-        (0, n.Cg)([u.o], f.prototype, "UpdateUserFilter", null),
-        (0, n.Cg)([u.o], f.prototype, "SetButtonToken", null),
-        (0, n.Cg)([u.o], f.prototype, "SetLegalTextPartnerName", null),
-        (0, n.Cg)([u.o], f.prototype, "SetHidePriceOnMessage", null),
-        (0, n.Cg)([u.o], f.prototype, "SetTemplateAssetImagePath", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearAllAssetObjects", null),
-        (0, n.Cg)([u.o], f.prototype, "DeleteAssetObjectLang", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearUserFilters", null),
-        (0, n.Cg)([u.o], f.prototype, "SetInternalAssetURL", null),
-        (0, n.Cg)([u.o], f.prototype, "SetCustomLegalText", null),
-        (0, n.Cg)([u.o], f.prototype, "SetUseCustomLegalText", null),
-        (0, n.Cg)([u.o], f.prototype, "SetAnimatedAssetsEnabled", null),
-        (0, n.Cg)([u.o], f.prototype, "SetAssociatedItemReleaseState", null),
-        (0, n.Cg)([u.o], f.prototype, "SetSaleEvent", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearSalePage", null),
-        (0, n.Cg)([u.o], f.prototype, "SetRequiresSalePage", null),
-        (0, n.Cg)([u.o], f.prototype, "SetRequiresSalePageType", null),
-        (0, n.Cg)([u.o], f.prototype, "SetPlanAssetRequestGID", null),
-        (0, n.Cg)([u.o], f.prototype, "SetAltText", null),
-        (0, n.Cg)([u.o], f.prototype, "SetUpdateEvent", null),
-        (0, n.Cg)([u.o], f.prototype, "ClearUpdateEvent", null),
-        (0, n.Cg)([u.o], f.prototype, "RevertChanges", null),
-        (0, n.Cg)([l.XI.bound], f.prototype, "Dispatch", null);
+      (0, n.Cg)([l.sH], k.prototype, "m_bDirty", void 0),
+        (0, n.Cg)([u.o], k.prototype, "GetAltTextRaw", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearAllLegacyRestrictions", null),
+        (0, n.Cg)([u.o], k.prototype, "SetExplicitNoLegalPartnerNeeded", null),
+        (0, n.Cg)([u.o], k.prototype, "SetAdminNote", null),
+        (0, n.Cg)([u.o], k.prototype, "SetName", null),
+        (0, n.Cg)([u.o], k.prototype, "SetType", null),
+        (0, n.Cg)([u.o], k.prototype, "SetVisibility", null),
+        (0, n.Cg)([u.o], k.prototype, "SetAssociation", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearAssociation", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMessageTime", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMessageStartTime", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMessageEndTime", null),
+        (0, n.Cg)([u.o], k.prototype, "SetCountryAllow", null),
+        (0, n.Cg)([u.o], k.prototype, "SetCountryDeny", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearCountryRestrictions", null),
+        (0, n.Cg)([u.o], k.prototype, "SetAndConvertURL", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustOwnAppID", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustNotOwnAppID", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustOwnPackageID", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustNotOwnPackageID", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustHaveLaunchedAppID", null),
+        (0, n.Cg)([u.o], k.prototype, "SetLinkURL", null),
+        (0, n.Cg)([u.o], k.prototype, "SetRealm", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustUseClientLanguage", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustHaveClientPackageGTE", null),
+        (0, n.Cg)([u.o], k.prototype, "SetMustHaveClientPackageLTE", null),
+        (0, n.Cg)([u.o], k.prototype, "SetPlatformWindows", null),
+        (0, n.Cg)([u.o], k.prototype, "SetPlatformMac", null),
+        (0, n.Cg)([u.o], k.prototype, "SetPlatformLinux", null),
+        (0, n.Cg)([u.o], k.prototype, "SetNoFiltersRequired", null),
+        (0, n.Cg)([u.o], k.prototype, "AddToWatchList", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearWatchList", null),
+        (0, n.Cg)([u.o], k.prototype, "RemoveFromWatchList", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearUserDynamicFilter", null),
+        (0, n.Cg)([u.o], k.prototype, "ReplaceUserFilter", null),
+        (0, n.Cg)([u.o], k.prototype, "AddNewAndUserFilter", null),
+        (0, n.Cg)([u.o], k.prototype, "RemoveAndUserFilter", null),
+        (0, n.Cg)([u.o], k.prototype, "AddNewOrUserFilter", null),
+        (0, n.Cg)([u.o], k.prototype, "RemoveOrUserFilterAt", null),
+        (0, n.Cg)([u.o], k.prototype, "UpdateUserFilter", null),
+        (0, n.Cg)([u.o], k.prototype, "SetButtonToken", null),
+        (0, n.Cg)([u.o], k.prototype, "SetLegalTextPartnerName", null),
+        (0, n.Cg)([u.o], k.prototype, "SetHidePriceOnMessage", null),
+        (0, n.Cg)([u.o], k.prototype, "SetTemplateAssetImagePath", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearAllAssetObjects", null),
+        (0, n.Cg)([u.o], k.prototype, "DeleteAssetObjectLang", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearUserFilters", null),
+        (0, n.Cg)([u.o], k.prototype, "SetInternalAssetURL", null),
+        (0, n.Cg)([u.o], k.prototype, "SetCustomLegalText", null),
+        (0, n.Cg)([u.o], k.prototype, "SetUseCustomLegalText", null),
+        (0, n.Cg)([u.o], k.prototype, "SetAnimatedAssetsEnabled", null),
+        (0, n.Cg)([u.o], k.prototype, "SetAssociatedItemReleaseState", null),
+        (0, n.Cg)([u.o], k.prototype, "SetSaleEvent", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearSalePage", null),
+        (0, n.Cg)([u.o], k.prototype, "SetRequiresSalePage", null),
+        (0, n.Cg)([u.o], k.prototype, "SetRequiresSalePageType", null),
+        (0, n.Cg)([u.o], k.prototype, "SetPlanAssetRequestGID", null),
+        (0, n.Cg)([u.o], k.prototype, "SetAltText", null),
+        (0, n.Cg)([u.o], k.prototype, "SetUpdateEvent", null),
+        (0, n.Cg)([u.o], k.prototype, "ClearUpdateEvent", null),
+        (0, n.Cg)([u.o], k.prototype, "RevertChanges", null),
+        (0, n.Cg)([l.XI.bound], k.prototype, "Dispatch", null);
     },
     81418: (e, t, a) => {
       "use strict";
@@ -49555,7 +49704,7 @@
                       N.fnSetSuccess(!0))
                     : (N.fnSetError(!0),
                       N.fnSetStrError(
-                        "Chech console for errors and/or try again shortly",
+                        "Check console for errors and/or try again shortly",
                       ));
                 },
               },
@@ -53743,129 +53892,119 @@
     },
     7706: (e, t, a) => {
       "use strict";
-      a.d(t, { V: () => w, u: () => b });
-      var n = a(68612),
-        r = a(65946),
-        i = a(90626),
-        s = a(62792),
-        l = a(55263),
-        o = a(16676),
-        c = a(56330),
-        m = a(9154),
-        d = a(738),
-        u = a(22797),
-        p = a(56011),
-        _ = a(52038),
-        g = a(61859),
-        h = a(78327),
-        E = a(98076),
-        S = a(45737),
-        v = a.n(S),
-        y = a(81393);
-      function b(e) {
+      a.d(t, { V: () => D, u: () => f });
+      var n = a(43258),
+        r = a(68612),
+        i = a(65946),
+        s = a(90626),
+        l = a(62792),
+        o = a(55263),
+        c = a(16676),
+        m = a(56330),
+        d = a(9154),
+        u = a(738),
+        p = a(22797),
+        _ = a(56011),
+        g = a(52038),
+        h = a(61859),
+        E = a(78327),
+        S = a(98076),
+        v = a(45737),
+        y = a.n(v),
+        b = a(81393);
+      function f(e) {
         const { oEditableMessage: t } = e,
-          a = (0, r.q3)(() => t.BIsDirty());
-        return i.createElement(
+          a = (0, i.q3)(() => t.BIsDirty());
+        return s.createElement(
           "div",
-          { className: (0, _.A)(v().SectionCtn, v().ActionBar) },
-          i.createElement(
+          { className: (0, g.A)(y().SectionCtn, y().ActionBar) },
+          s.createElement(
             "div",
-            { className: E.ButtonRow },
-            i.createElement(
-              o.jn,
+            { className: S.ButtonRow },
+            s.createElement(
+              c.jn,
               {
                 onClick: (e) =>
-                  (0, d.pg)(
-                    i.createElement(f, { oEditableMessage: t }),
-                    (0, p.uX)(e),
+                  (0, u.pg)(
+                    s.createElement(w, { oEditableMessage: t }),
+                    (0, _.uX)(e),
                   ),
               },
-              (0, g.we)(a ? "#Button_Save" : "#Button_Saved"),
+              (0, h.we)(a ? "#Button_Save" : "#Button_Saved"),
             ),
-            i.createElement("div", { className: E.ButtonRowSpacer }),
-            i.createElement(
-              o.$n,
+            s.createElement("div", { className: S.ButtonRowSpacer }),
+            s.createElement(
+              c.$n,
               {
                 onClick: (e) => {
-                  (0, d.pg)(
-                    i.createElement(D, { oEditableMessage: t }),
-                    (0, p.uX)(e),
+                  (0, u.pg)(
+                    s.createElement(I, { oEditableMessage: t }),
+                    (0, _.uX)(e),
                   );
                 },
               },
-              (0, g.we)("#Button_Delete"),
+              (0, h.we)("#Button_Delete"),
             ),
-            i.createElement(
-              o.$n,
+            s.createElement(
+              c.$n,
               {
                 disabled: !a,
                 onClick: (e) =>
-                  (0, d.pg)(
-                    i.createElement(m.o0, {
-                      strTitle: (0, g.we)("#Dialog_AreYouSure"),
-                      strDescription: (0, g.we)("#DailyDeals_UnsavedChanges"),
+                  (0, u.pg)(
+                    s.createElement(d.o0, {
+                      strTitle: (0, h.we)("#Dialog_AreYouSure"),
+                      strDescription: (0, h.we)("#DailyDeals_UnsavedChanges"),
                       onOK: () => t.RevertChanges(),
                     }),
-                    (0, p.uX)(e),
+                    (0, _.uX)(e),
                   ),
               },
-              (0, g.we)("#Button_Revert"),
+              (0, h.we)("#Button_Revert"),
             ),
           ),
         );
       }
-      function f(e) {
-        const { oEditableMessage: t, closeModal: a } = e,
-          n = t.GetUserMessageFilters();
-        return (
-          (0, y.wT)("and" == n.clause, "Unexpected usefilter structure"),
-          0 == t.GetType()
-            ? i.createElement(m.o0, {
-                bAlertDialog: !0,
-                bDestructiveWarning: !0,
-                strTitle: "Save Not Possible",
-                strDescription:
-                  "Invalid Marketing Message type '----------'. Please correct in editor tab before attempting to save",
-                closeModal: a,
-              })
-            : n.children.some((e, a) => !t.BHasSomeIDForAndUserFilter(a))
-              ? i.createElement(m.o0, {
-                  bAlertDialog: !0,
-                  bDestructiveWarning: !0,
-                  strTitle: "Save Not Possible",
-                  strDescription:
-                    "Incomplete Marketing Message User Filter settings. No user can see this marketing message in the current setup.",
-                  closeModal: a,
-                })
-              : i.createElement(w, { oEditableMessage: t, closeModal: a })
-        );
-      }
       function w(e) {
         const { oEditableMessage: t, closeModal: a } = e,
-          { fnUpdateMarketingMessage: r } = (0, n.kG)(),
-          [s, l] = i.useState(!0),
-          [o, c] = i.useState(!1);
+          r = t.GetUserMessageFilters();
+        (0, b.wT)("and" == r.clause, "Unexpected usefilter structure");
+        const i = (0, n.i9)(t);
+        return i
+          ? s.createElement(d.o0, {
+              bAlertDialog: !0,
+              bDestructiveWarning: !0,
+              strTitle: "Save Not Possible",
+              strDescription: i,
+              closeModal: a,
+            })
+          : s.createElement(D, { oEditableMessage: t, closeModal: a });
+      }
+      function D(e) {
+        const { oEditableMessage: t, closeModal: a } = e,
+          { fnUpdateMarketingMessage: n } = (0, r.kG)(),
+          [i, l] = s.useState(!0),
+          [o, c] = s.useState(!1);
         return (
-          i.useEffect(() => {
-            r(t)
+          s.useEffect(() => {
+            n(t)
               .then((e) => {
                 c(e), t.SaveSuccessClearDirty();
               })
               .catch((e) => c(!1))
               .finally(() => l(!1));
-          }, [r, t]),
-          i.createElement(
-            m.o0,
+          }, [n, t]),
+          s.createElement(
+            d.o0,
             { strTitle: "Saving", bAlertDialog: !0, closeModal: a },
-            Boolean(s)
-              ? i.createElement(u.t, {
+            Boolean(i)
+              ? s.createElement(p.t, {
                   size: "medium",
                   position: "center",
-                  string: (0, g.we)("#Saving"),
+                  string: (0, h.we)("#Saving"),
                 })
               : Boolean(o)
-                ? i.createElement("div", null, "Save successful")
-                : i.createElement(
+                ? s.createElement("div", null, "Save successful")
+                : s.createElement(
                     "div",
                     null,
                     "Save failed. Please try again later (check consoles for details)",
@@ -53873,56 +54012,56 @@
           )
         );
       }
-      function D(e) {
+      function I(e) {
         const { oEditableMessage: t, closeModal: a } = e,
-          [r, l] = i.useState(!1),
-          [o, d] = i.useState(void 0),
-          { fnDeleteMarketingMessage: p } = (0, n.qw)();
-        return i.createElement(
-          m.o0,
+          [n, i] = s.useState(!1),
+          [o, c] = s.useState(void 0),
+          { fnDeleteMarketingMessage: u } = (0, r.qw)();
+        return s.createElement(
+          d.o0,
           {
             strTitle: "Delete Marketing Message?",
             strDescription:
               "Only delete this message if it has never been shown to customers. Are you sure you want to remove the promotion plan for the following? This can't be undone, but a new one can be created if needed.  This only removes the record from the Steam database. If this message has already been published, the files published will remain on the web cluster.",
             onCancel: a,
             onOK: () => {
-              l(!0),
-                p(t.GetModel()).then((e) => {
+              i(!0),
+                u(t.GetModel()).then((e) => {
                   e
                     ? (window.location.href =
-                        h.TS.PARTNER_BASE_URL + "promotion/planning/dashboard")
-                    : d("Failed To Delete, check console");
+                        E.TS.PARTNER_BASE_URL + "promotion/planning/dashboard")
+                    : c("Failed To Delete, check console");
                 });
             },
-            bOKDisabled: r,
+            bOKDisabled: n,
           },
           Boolean(t.BHasFeaturedStoreItem()) &&
-            i.createElement(I, {
+            s.createElement(C, {
               id: t.GetStoreItemKey().id,
-              storeItemType: (0, s.JK)(t.GetStoreItemKey().item_type),
+              storeItemType: (0, l.JK)(t.GetStoreItemKey().item_type),
             }),
-          Boolean(r && !o) &&
-            i.createElement(u.t, {
+          Boolean(n && !o) &&
+            s.createElement(p.t, {
               size: "medium",
               position: "center",
-              string: (0, g.we)("#Deleting"),
+              string: (0, h.we)("#Deleting"),
             }),
-          Boolean(o) && i.createElement("div", { className: c.ErrorStyles }, o),
+          Boolean(o) && s.createElement("div", { className: m.ErrorStyles }, o),
         );
       }
-      function I(e) {
+      function C(e) {
         const { id: t, storeItemType: a } = e,
-          [n] = (0, l.G6)(t, a, { include_basic_info: !0, include_assets: !0 });
+          [n] = (0, o.G6)(t, a, { include_basic_info: !0, include_assets: !0 });
         return n
-          ? i.createElement(
+          ? s.createElement(
               "div",
               null,
-              i.createElement("img", {
+              s.createElement("img", {
                 src:
                   n.GetAssets().GetSmallCapsuleURL() ||
                   n.GetAssets().GetHeaderURL(),
               }),
-              i.createElement(
+              s.createElement(
                 "span",
                 null,
                 "Name: ",
@@ -53932,17 +54071,17 @@
                 ")",
               ),
             )
-          : i.createElement(u.t, {
+          : s.createElement(p.t, {
               size: "medium",
               position: "center",
-              string: (0, g.we)("#Loading"),
+              string: (0, h.we)("#Loading"),
             });
       }
     },
     50250: (e, t, a) => {
       "use strict";
-      a.d(t, { O: () => N, f: () => w });
-      var n = a(23910),
+      a.d(t, { O: () => R, f: () => w });
+      var n = a(43258),
         r = a(90626),
         i = a(55263),
         s = a(45737),
@@ -53966,11 +54105,7 @@
         const { oEditableMessage: t } = e,
           a = t.GetUserMessageFilters();
         (0, g.wT)("and" == a.clause, "Unexpected usefilter structure");
-        const [n, i, s] = (0, b.q3)(() => [
-          t.BIsNoFilterRequired(),
-          D(t),
-          t.bHasAssociatedItem(),
-        ]);
+        const [i, s] = (0, b.q3)(() => [t.BIsNoFilterRequired(), (0, n.g5)(t)]);
         return r.createElement(
           "div",
           { className: l().SectionCtn },
@@ -53984,20 +54119,25 @@
               "Required",
             ),
           ),
-          Boolean(i && s) &&
-            r.createElement(
-              "div",
-              { className: f.InfoStylesWithIcon },
-              "Weak targeting (because not owned). Will automatically use player's tags to filter and personalized to customers.",
+          r.createElement(
+            "div",
+            null,
+            s.map((e) =>
+              r.createElement(
+                "div",
+                { key: e, className: f.InfoStylesWithIcon },
+                e,
+              ),
             ),
-          Boolean(!n) &&
-            r.createElement(I, { andFilter: a, oEditableMessage: t }),
+          ),
+          Boolean(!i) &&
+            r.createElement(D, { andFilter: a, oEditableMessage: t }),
           r.createElement("br", null),
           r.createElement(u.Yh, {
             label: "Show to all users; no filters to be applied.",
             tooltip:
               "Checking this to on will show to all users in the Steam Realm. This will also clear any dynamic filters associated with the marketing messages including legacy filter settings.",
-            checked: n,
+            checked: i,
             onChange: (e) => {
               t.SetNoFiltersRequired(e),
                 e && (t.ClearUserFilters(), t.ClearAllLegacyRestrictions());
@@ -54006,13 +54146,6 @@
         );
       }
       function D(e) {
-        if (1 == e.GetUserMessageFilterCount()) {
-          const t = e.FlattenUserMessageFilterToFlattened()[0].filter_type;
-          return 2 == t || 4 == t;
-        }
-        return !1;
-      }
-      function I(e) {
         const { andFilter: t, oEditableMessage: a } = e;
         return (
           (0, g.wT)("and" == t.clause, "Expected And Filter"),
@@ -54023,7 +54156,7 @@
               r.createElement(
                 r.Fragment,
                 { key: e.temp_id },
-                r.createElement(T, {
+                r.createElement(C, {
                   orFilter: e,
                   andIndex: t,
                   oEditableMessage: a,
@@ -54057,7 +54190,7 @@
           )
         );
       }
-      function C(e) {
+      function I(e) {
         const { strTitle: t, onOK: a, strTooltip: n } = e;
         return r.createElement(
           y.he,
@@ -54075,7 +54208,7 @@
           }),
         );
       }
-      function T(e) {
+      function C(e) {
         const { orFilter: t, oEditableMessage: a, andIndex: n } = e;
         return (
           (0, g.wT)("or" == t.clause, "Expected OR Filter"),
@@ -54090,13 +54223,13 @@
                 return (
                   (s =
                     0 == n && 0 == i
-                      ? r.createElement(B, { oEditableMessage: a, andIndex: n })
+                      ? r.createElement(T, { oEditableMessage: a, andIndex: n })
                       : 0 == i
-                        ? r.createElement(A, {
+                        ? r.createElement(B, {
                             oEditableMessage: a,
                             andIndex: n,
                           })
-                        : r.createElement(k, null)),
+                        : r.createElement(A, null)),
                   r.createElement(
                     r.Fragment,
                     { key: e.temp_id },
@@ -54104,9 +54237,10 @@
                     r.createElement(
                       "div",
                       { className: d().CaseContainer },
-                      r.createElement(M, {
+                      r.createElement(k, {
                         clause: t.clause,
                         filter: e,
+                        oEditableMessage: a,
                         fnUpdateFilter: (e) => a.UpdateUserFilter(e, n, i),
                         onRemoveOrClause: () => a.RemoveOrUserFilterAt(n, i),
                       }),
@@ -54142,7 +54276,7 @@
           )
         );
       }
-      function B(e) {
+      function T(e) {
         const { oEditableMessage: t, andIndex: a } = e;
         return r.createElement(
           "div",
@@ -54166,14 +54300,14 @@
           r.createElement(
             "div",
             { className: d().RemoveConditionBtn },
-            r.createElement(C, {
+            r.createElement(I, {
               strTitle: "Remove Must Clause",
               onOK: () => t.RemoveAndUserFilter(a),
             }),
           ),
         );
       }
-      function A(e) {
+      function B(e) {
         const { oEditableMessage: t, andIndex: a } = e;
         return r.createElement(
           "div",
@@ -54197,36 +54331,41 @@
           r.createElement(
             "div",
             { className: d().RemoveConditionBtn },
-            r.createElement(C, {
+            r.createElement(I, {
               strTitle: "Remove Must Clause",
               onOK: () => t.RemoveAndUserFilter(a),
             }),
           ),
         );
       }
-      function k(e) {
+      function A(e) {
         return r.createElement(
           "div",
           { className: (0, h.A)(d().ConditionTitle, d().ConditionTitleOr) },
           "OR...",
         );
       }
-      function M(e) {
+      function k(e) {
         const {
-            filter: t,
-            fnUpdateFilter: a,
-            clause: i,
-            onRemoveOrClause: s,
+            clause: t,
+            filter: a,
+            oEditableMessage: i,
+            fnUpdateFilter: s,
+            onRemoveOrClause: l,
           } = e,
-          l = (0, r.useMemo)(
+          o = (0, r.useMemo)(
             () =>
-              n.k.map((e) => ({
-                label: (0, n.nY)(e),
-                data: e,
-                tooltip: (0, n.DU)(e),
-              })),
+              Object.values(n.KH)
+                .filter((e) => !e.isInvalid)
+                .map((e) => ({
+                  label: e.label,
+                  data: e.type,
+                  tooltip: e.tooltip,
+                })),
             [],
-          );
+          ),
+          m = (0, n.tW)(a.filter_type),
+          p = (0, n.up)(i, a);
         return r.createElement(
           "div",
           null,
@@ -54238,96 +54377,115 @@
               { className: d().CaseTypeSelect },
               r.createElement(u.m, {
                 strDropDownClassName: (0, h.A)(c().DropDownScroll),
-                rgOptions: l,
-                selectedOption: t.filter_type,
+                rgOptions: o,
+                selectedOption: a.filter_type,
                 onChange: (e) => {
-                  const r = { filter_type: e.data, id_list: [...t.id_list] };
-                  (0, n.Sy)(r.filter_type) !== (0, n.Sy)(t.filter_type) &&
-                    (r.id_list = []),
-                    a(r);
+                  s((0, n.hV)(i, a, e.data));
                 },
               }),
             ),
             r.createElement(
               "div",
               { className: d().RemoveCaseBtn },
-              r.createElement(C, {
+              r.createElement(I, {
                 strTitle: "Remove Or Filter Clause",
-                onOK: s,
+                onOK: l,
               }),
             ),
           ),
-          r.createElement(
-            "div",
-            { className: d().ConditionDescription },
-            "Add one or more product for this condition.",
-          ),
+          m.canModifyStoreItems &&
+            r.createElement(
+              "div",
+              { className: d().ConditionDescription },
+              "Add one or more product for this condition.",
+            ),
           r.createElement(
             "div",
             { className: d().SelectedProductList },
-            t.id_list.map((e) =>
-              r.createElement(P, {
-                key: "item" + t.temp_id + "_" + e,
-                filter_type: t.filter_type,
+            a.id_list.map((e) =>
+              r.createElement(M, {
+                key: "item" + a.temp_id + "_" + e,
+                filter_type: a.filter_type,
+                filterDefinition: m,
                 id: e,
+                readonly: !m.canModifyStoreItems,
                 fnRemoveItem: () => {
-                  const n = t.id_list.findIndex((t) => t == e);
-                  (0, g.wT)(n >= 0, `Did not find ${e} in list`),
-                    t.id_list.splice(n, 1);
-                  const r = {
-                    filter_type: t.filter_type,
-                    id_list: [...t.id_list],
+                  const t = a.id_list.findIndex((t) => t == e);
+                  (0, g.wT)(t >= 0, `Did not find ${e} in list`),
+                    a.id_list.splice(t, 1);
+                  const n = {
+                    filter_type: a.filter_type,
+                    id_list: [...a.id_list],
                   };
-                  a(r);
+                  s(n);
                 },
               }),
             ),
-            r.createElement(
-              "div",
-              { className: d().AddProductBtnCtn },
+            m.canModifyStoreItems &&
               r.createElement(
-                u.$n,
-                {
-                  onClick: (e) =>
-                    (0, _.pg)(
-                      r.createElement(R, {
-                        filter: t,
-                        onSelected: (e) => {
-                          const n = {
-                            filter_type: t.filter_type,
-                            id_list: [...t.id_list, e],
-                          };
-                          a(n);
-                        },
-                      }),
-                      (0, E.uX)(e),
-                    ),
-                },
-                "+",
-                (0, n.Sy)(t.filter_type) ? " PACKAGE" : " APP",
+                "div",
+                { className: d().AddProductBtnCtn },
+                r.createElement(
+                  u.$n,
+                  {
+                    onClick: (e) =>
+                      (0, _.pg)(
+                        r.createElement(P, {
+                          filter: a,
+                          filterDefinition: m,
+                          onSelected: (e) => {
+                            const t = {
+                              filter_type: a.filter_type,
+                              id_list: [...a.id_list, e],
+                            };
+                            s(t);
+                          },
+                        }),
+                        (0, E.uX)(e),
+                      ),
+                  },
+                  "+",
+                  1 === m.storeItemType ? " PACKAGE" : " APP",
+                ),
+              ),
+          ),
+          r.createElement(
+            "div",
+            null,
+            p.map((e) =>
+              r.createElement(
+                "div",
+                { key: e, className: f.WarningStylesWithIcon },
+                e,
               ),
             ),
           ),
         );
       }
-      function P(e) {
-        const { filter_type: t, id: a, fnRemoveItem: s } = e,
-          l = (0, n.Sy)(t) ? 1 : 0,
-          [o] = (0, i.G6)(a, l, {});
-        let c;
+      function M(e) {
+        const {
+            filter_type: t,
+            filterDefinition: a,
+            id: n,
+            readonly: s,
+            fnRemoveItem: l,
+          } = e,
+          o = a.storeItemType,
+          [c] = (0, i.G6)(n, o, {});
+        let m;
         return (
-          (c = o
-            ? `${o.GetName()} (${a})`
+          (m = c
+            ? `${c.GetName()} (${n})`
             : r.createElement(
                 r.Fragment,
                 null,
                 r.createElement(
                   "i",
                   null,
-                  "Hidden " + (0 == l ? "App" : "Package"),
+                  "Hidden " + (0 == o ? "App" : "Package"),
                 ),
                 " ",
-                `(${a})`,
+                `(${n})`,
               )),
           r.createElement(
             "div",
@@ -54335,21 +54493,27 @@
             r.createElement(
               "div",
               { className: d().SelectedProduct },
-              c,
-              r.createElement(
-                "div",
-                { className: d().RemoveSelectedProductBtn },
-                r.createElement(C, { strTitle: `Remove ${c}?`, onOK: s }),
-              ),
+              m,
+              !s &&
+                r.createElement(
+                  "div",
+                  { className: d().RemoveSelectedProductBtn },
+                  r.createElement(I, { strTitle: `Remove ${m}?`, onOK: l }),
+                ),
             ),
-            r.createElement("span", null, "Or"),
+            !s && r.createElement("span", null, "Or"),
           )
         );
       }
-      function R(e) {
-        const { closeModal: t, filter: a, onSelected: s } = e,
+      function P(e) {
+        const {
+            closeModal: t,
+            filter: a,
+            filterDefinition: n,
+            onSelected: s,
+          } = e,
           [l, o] = (0, r.useState)(null),
-          c = (0, n.Sy)(a.filter_type),
+          c = 1 === n.storeItemType,
           m = c ? 1 : 0,
           [_] = (0, i.G6)(l, m, {}),
           [g, h] = (0, r.useState)(!1);
@@ -54386,7 +54550,7 @@
           ),
         );
       }
-      function N(e, t) {
+      function R(e, t) {
         let a = null;
         if (4 == e.GetAppType() || 11 == e.GetAppType())
           (a = {
@@ -65453,7 +65617,7 @@
             ? "Claim Ownership of Production Design?"
             : "Remove ownership of production design",
           strDescription: r
-            ? "Do you want to cliam ownership of the artwork and localizations required for this plans promotion?"
+            ? "Do you want to claim ownership of the artwork and localizations required for this promotion plan?"
             : "Remove the current owner of the production design on this event?",
           closeModal: a,
           onOK: () => {

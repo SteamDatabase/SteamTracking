@@ -17113,38 +17113,32 @@
           return this.m_clanSteamID;
         }
         async AddImage(_, _ = 0) {
-          const { language: __webpack_require__ } = (function (
-            _,
-            _ = 0,
-            __webpack_require__ = !0,
-          ) {
+          const { language: __webpack_require__ } = (function (_, _ = 0) {
             let _ = _.lastIndexOf(".");
             -1 != _ && (_ = _.slice(0, _).toLowerCase());
             let _ = null,
               _ = 0;
             _.endsWith("korean") && ((_ = 4), (_ = 6));
-            const _ = (_) => _.replace(/[\s_-]+$/g, "");
             for (let _ = 0; _ < 31; ++_) {
               const _ = (0, _._)(_);
               if (_.length <= _) continue;
-              if (_.endsWith(_)) {
-                let _ = !__webpack_require__;
-                if (__webpack_require__ && _.length > _.length + 2) {
-                  const _ = _[_.length - _.length - 1];
-                  _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
-                }
-                _ && ((_ = _), (_ = _.length));
+              if (_.endsWith(_) && _.length > _.length + 2) {
+                const _ = _[_.length - _.length - 1];
+                /\p{Alphabetic}|\p{Number}/u.test(_) ||
+                  ((_ = _), (_ = _.length));
               }
               const _ = (0, _._)(_);
-              _.length <= _ ||
-                (_.endsWith(_) &&
-                  _(_.substring(0, _.length - _.length)).length > 0 &&
-                  ((_ = _), (_ = _.length)));
+              _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
             }
             return {
               language: _ ?? _,
-              baseFilename: _ > 0 ? _(_.substring(0, _.length - _)) : _,
+              baseFilename:
+                _ > 0
+                  ? ((_ = _.substring(0, _.length - _)),
+                    _.replace(/[\s_-]+$/g, ""))
+                  : _,
             };
+            var _;
           })(_.name, _);
           return this.AddImageForLanguage(_, __webpack_require__);
         }
@@ -30583,9 +30577,7 @@
           device_friendly_name: _,
           machine_id: __webpack_require__,
           platform_type: 1,
-          gaming_device_type: _._.ON_DECK
-            ? _._.k_EGamingDeviceType_SteamDeck
-            : _._.k_EGamingDeviceType_StandardPC,
+          gaming_device_type: _._.ON_DECK ? 544 : 1,
         };
       }
       async function _() {
@@ -35546,7 +35538,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       const _ = 1,
         _ = 4;
@@ -35806,7 +35797,7 @@
             return "unknown";
         }
       }
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -35901,25 +35892,6 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (_[(_.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (_[(_.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (_[(_.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -68975,7 +68947,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "/react-waypoint/",
+          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
         ];
       function _() {
         try {

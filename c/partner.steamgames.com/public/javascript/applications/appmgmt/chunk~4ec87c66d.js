@@ -1996,6 +1996,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2012,6 +2018,106 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+          isInvalid: !1,
+          storeItemBinding: 0,
+          canModifyStoreItems: !0,
+        },
+        _ = {
+          0: {
+            ..._,
+            type: 0,
+            label: "Invalid type",
+            storeItemType: -1,
+            isInvalid: !0,
+          },
+          12: {
+            ..._,
+            type: 12,
+            label: "Invalid type",
+            storeItemType: -1,
+            isInvalid: !0,
+          },
+          1: {
+            ..._,
+            type: 1,
+            label: "Owns apps",
+            storeItemType: 0,
+          },
+          2: {
+            ..._,
+            type: 2,
+            label: "Does not own apps",
+            storeItemType: 0,
+          },
+          3: {
+            ..._,
+            type: 3,
+            label: "Owns packages",
+            storeItemType: 1,
+          },
+          4: {
+            ..._,
+            type: 4,
+            label: "Does not own packages",
+            storeItemType: 1,
+          },
+          5: {
+            ..._,
+            type: 5,
+            label: "Wishlists apps",
+            storeItemType: 0,
+          },
+          6: {
+            ..._,
+            type: 6,
+            label: "Follows apps",
+            storeItemType: 0,
+          },
+          8: {
+            ..._,
+            type: 8,
+            label: "Launched apps",
+            tooltip: "Just launched the app just once",
+            storeItemType: 0,
+          },
+          7: {
+            ..._,
+            type: 7,
+            label: "Played apps a lot",
+            tooltip: "Minimum of 4 hours of playtime",
+            storeItemType: 0,
+          },
+          9: {
+            ..._,
+            type: 9,
+            label: "Recently played apps",
+            tooltip: "Played the app within the last year",
+            storeItemType: 0,
+          },
+          10: {
+            ..._,
+            type: 10,
+            label: "Lapsed players for apps",
+            tooltip:
+              "Played the app within the last year but not in the last three months",
+            storeItemType: 0,
+          },
+          11: {
+            ..._,
+            type: 11,
+            label: "Plays Similar Apps",
+            tooltip:
+              "Algorithmically targets players who play apps with similar tags to the selected app(s)",
+            storeItemType: 0,
+            storeItemBinding: 1,
+            canModifyStoreItems: !1,
+            isInvalid: !0,
+          },
+        };
+      function _(_) {
+        return _[_];
+      }
       function _(_, _) {
         if (
           ((_.temp_id =
@@ -2033,6 +2139,23 @@
               ? (_.id_list = _.id_list.map((_) => parseInt("" + _)))
               : (_.id_list = []);
         }
+      }
+      function _(_, _, _) {
+        const _ = _(_.filter_type),
+          _ = {
+            filter_type: _,
+            id_list: [..._.id_list],
+          },
+          _ = _(_.filter_type);
+        return (
+          _.storeItemType !== _.storeItemType && (_.id_list = []),
+          1 === _.storeItemBinding &&
+            ((_.id_list = []),
+            _.BHasAssociatedItem() &&
+              (0, _._)(_.GetStoreItemKey().item_type) === _.storeItemType &&
+              (_.id_list = [_.GetStoreItemKey()._])),
+          _
+        );
       }
       function _(_, _) {
         if (!_ || !_) return null;
@@ -2075,6 +2198,59 @@
           );
         }
         return 0;
+      }
+      function _(_, _) {
+        return [_(_, _, _(_.filter_type))].filter((_) => void 0 !== _);
+      }
+      function _(_, _, _) {
+        if (1 === _.storeItemBinding)
+          return 1 != _.id_list.length
+            ? `Must have exactly one app in the filter. Currently selected: ${_.id_list.length}`
+            : _.BHasAssociatedItem()
+              ? (0, _._)(_.GetStoreItemKey().item_type) !== _.storeItemType
+                ? `The filter and the message item are different: incompatible store item types: \n\t\t\t${_.GetStoreItemKey().item_type} and ${(0, _._)(_.storeItemType)}`
+                : _.GetStoreItemKey()._ !== _.id_list[0]
+                  ? "The filter and the message item are different: must have identical ids"
+                  : void 0
+              : "The filter and the message item are different";
+      }
+      function _(_) {
+        return 0 == _.GetType()
+          ? "Invalid Marketing Message type '----------'. Please correct in editor tab before attempting to save"
+          : _.GetUserMessageFilters().children.some(
+                (_, _) => !_.BHasSomeIDForAndUserFilter(_),
+              )
+            ? "Incomplete Marketing Message User Filter settings. No user can see this marketing message in the current setup."
+            : _.FlattenUserMessageFilterToFlattened().some(
+                  (_) => _(_, _).length > 0,
+                )
+              ? "Please address the filter errors before saving the message"
+              : void 0;
+      }
+      function _(_) {
+        const _ = [];
+        return (
+          (function (_) {
+            if (1 == _.GetUserMessageFilterCount()) {
+              const _ = _.FlattenUserMessageFilterToFlattened()[0].filter_type;
+              return 2 == _ || 4 == _;
+            }
+            return !1;
+          })(_) &&
+            _.bHasAssociatedItem() &&
+            _.push(
+              "Weak targeting (because not owned). Will automatically use player's tags to filter and personalized to customers.",
+            ),
+          (function (_) {
+            return _.FlattenUserMessageFilterToFlattened().some(
+              (_) => 11 === _.filter_type,
+            );
+          })(_) &&
+            _.push(
+              "Will automatically use the player's tags to prioritize the message output based on the selected app (as similar apps filter is used).",
+            ),
+          _
+        );
       }
       class _ {
         m_oMessage = null;
@@ -55210,7 +55386,7 @@
                       _.fnSetSuccess(!0))
                     : (_.fnSetError(!0),
                       _.fnSetStrError(
-                        "Chech console for errors and/or try again shortly",
+                        "Check console for errors and/or try again shortly",
                       ));
                 },
               },
@@ -59848,6 +60024,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -59915,31 +60092,20 @@
       function _(_) {
         const { oEditableMessage: _, closeModal: __webpack_require__ } = _,
           _ = _.GetUserMessageFilters();
-        return (
-          (0, _._)("and" == _.clause, "Unexpected usefilter structure"),
-          0 == _.GetType()
-            ? _.createElement(_._, {
-                bAlertDialog: !0,
-                bDestructiveWarning: !0,
-                strTitle: "Save Not Possible",
-                strDescription:
-                  "Invalid Marketing Message type '----------'. Please correct in editor tab before attempting to save",
-                closeModal: __webpack_require__,
-              })
-            : _.children.some((_, _) => !_.BHasSomeIDForAndUserFilter(_))
-              ? _.createElement(_._, {
-                  bAlertDialog: !0,
-                  bDestructiveWarning: !0,
-                  strTitle: "Save Not Possible",
-                  strDescription:
-                    "Incomplete Marketing Message User Filter settings. No user can see this marketing message in the current setup.",
-                  closeModal: __webpack_require__,
-                })
-              : _.createElement(_, {
-                  oEditableMessage: _,
-                  closeModal: __webpack_require__,
-                })
-        );
+        (0, _._)("and" == _.clause, "Unexpected usefilter structure");
+        const _ = (0, _._)(_);
+        return _
+          ? _.createElement(_._, {
+              bAlertDialog: !0,
+              bDestructiveWarning: !0,
+              strTitle: "Save Not Possible",
+              strDescription: _,
+              closeModal: __webpack_require__,
+            })
+          : _.createElement(_, {
+              oEditableMessage: _,
+              closeModal: __webpack_require__,
+            });
       }
       function _(_) {
         const { oEditableMessage: _, closeModal: __webpack_require__ } = _,
@@ -60084,11 +60250,7 @@
         const { oEditableMessage: _ } = _,
           _ = _.GetUserMessageFilters();
         (0, _._)("and" == _.clause, "Unexpected usefilter structure");
-        const [_, _, _] = (0, _._)(() => [
-          _.BIsNoFilterRequired(),
-          _(_),
-          _.bHasAssociatedItem(),
-        ]);
+        const [_, _] = (0, _._)(() => [_.BIsNoFilterRequired(), (0, _._)(_)]);
         return _.createElement(
           "div",
           {
@@ -60106,14 +60268,20 @@
               "Required",
             ),
           ),
-          Boolean(_ && _) &&
-            _.createElement(
-              "div",
-              {
-                className: _.InfoStylesWithIcon,
-              },
-              "Weak targeting (because not owned). Will automatically use player's tags to filter and personalized to customers.",
+          _.createElement(
+            "div",
+            null,
+            _.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _.InfoStylesWithIcon,
+                },
+                _,
+              ),
             ),
+          ),
           Boolean(!_) &&
             _.createElement(_, {
               andFilter: _,
@@ -60131,13 +60299,6 @@
             },
           }),
         );
-      }
-      function _(_) {
-        if (1 == _.GetUserMessageFilterCount()) {
-          const _ = _.FlattenUserMessageFilterToFlattened()[0].filter_type;
-          return 2 == _ || 4 == _;
-        }
-        return !1;
       }
       function _(_) {
         const { andFilter: _, oEditableMessage: __webpack_require__ } = _;
@@ -60257,6 +60418,7 @@
                       _.createElement(_, {
                         clause: _.clause,
                         filter: _,
+                        oEditableMessage: __webpack_require__,
                         fnUpdateFilter: (_) =>
                           __webpack_require__.UpdateUserFilter(_, _, _),
                         onRemoveOrClause: () =>
@@ -60389,20 +60551,25 @@
       }
       function _(_) {
         const {
-            filter: _,
-            fnUpdateFilter: __webpack_require__,
             clause: _,
+            filter: __webpack_require__,
+            oEditableMessage: _,
+            fnUpdateFilter: _,
             onRemoveOrClause: _,
           } = _,
           _ = (0, _.useMemo)(
             () =>
-              _._.map((_) => ({
-                label: (0, _._)(_),
-                data: _,
-                tooltip: (0, _._)(_),
-              })),
+              Object.values(_._)
+                .filter((_) => !_.isInvalid)
+                .map((_) => ({
+                  label: _.label,
+                  data: _.type,
+                  tooltip: _.tooltip,
+                })),
             [],
-          );
+          ),
+          _ = (0, _._)(__webpack_require__.filter_type),
+          _ = (0, _._)(_, __webpack_require__);
         return _.createElement(
           "div",
           null,
@@ -60419,15 +60586,9 @@
               _.createElement(_._, {
                 strDropDownClassName: (0, _._)(_().DropDownScroll),
                 rgOptions: _,
-                selectedOption: _.filter_type,
+                selectedOption: __webpack_require__.filter_type,
                 onChange: (_) => {
-                  const _ = {
-                    filter_type: _.data,
-                    id_list: [..._.id_list],
-                  };
-                  (0, _._)(_.filter_type) !== (0, _._)(_.filter_type) &&
-                    (_.id_list = []),
-                    __webpack_require__(_);
+                  _((0, _._)(_, __webpack_require__, _.data));
                 },
               }),
             ),
@@ -60442,73 +60603,100 @@
               }),
             ),
           ),
-          _.createElement(
-            "div",
-            {
-              className: _().ConditionDescription,
-            },
-            "Add one or more product for this condition.",
-          ),
+          _.canModifyStoreItems &&
+            _.createElement(
+              "div",
+              {
+                className: _().ConditionDescription,
+              },
+              "Add one or more product for this condition.",
+            ),
           _.createElement(
             "div",
             {
               className: _().SelectedProductList,
             },
-            _.id_list.map((_) =>
+            __webpack_require__.id_list.map((_) =>
               _.createElement(_, {
-                key: "item" + _.temp_id + "_" + _,
-                filter_type: _.filter_type,
+                key: "item" + __webpack_require__.temp_id + "_" + _,
+                filter_type: __webpack_require__.filter_type,
+                filterDefinition: _,
                 _: _,
+                readonly: !_.canModifyStoreItems,
                 fnRemoveItem: () => {
-                  const _ = _.id_list.findIndex((_) => _ == _);
+                  const _ = __webpack_require__.id_list.findIndex(
+                    (_) => _ == _,
+                  );
                   (0, _._)(_ >= 0, `Did not find ${_} in list`),
-                    _.id_list.splice(_, 1);
+                    __webpack_require__.id_list.splice(_, 1);
                   const _ = {
-                    filter_type: _.filter_type,
-                    id_list: [..._.id_list],
+                    filter_type: __webpack_require__.filter_type,
+                    id_list: [...__webpack_require__.id_list],
                   };
-                  __webpack_require__(_);
+                  _(_);
                 },
               }),
             ),
-            _.createElement(
-              "div",
-              {
-                className: _().AddProductBtnCtn,
-              },
+            _.canModifyStoreItems &&
               _.createElement(
-                _._,
+                "div",
                 {
-                  onClick: (_) =>
-                    (0, _._)(
-                      _.createElement(_, {
-                        filter: _,
-                        onSelected: (_) => {
-                          const _ = {
-                            filter_type: _.filter_type,
-                            id_list: [..._.id_list, _],
-                          };
-                          __webpack_require__(_);
-                        },
-                      }),
-                      (0, _._)(_),
-                    ),
+                  className: _().AddProductBtnCtn,
                 },
-                "+",
-                (0, _._)(_.filter_type) ? " PACKAGE" : " APP",
+                _.createElement(
+                  _._,
+                  {
+                    onClick: (_) =>
+                      (0, _._)(
+                        _.createElement(_, {
+                          filter: __webpack_require__,
+                          filterDefinition: _,
+                          onSelected: (_) => {
+                            const _ = {
+                              filter_type: __webpack_require__.filter_type,
+                              id_list: [...__webpack_require__.id_list, _],
+                            };
+                            _(_);
+                          },
+                        }),
+                        (0, _._)(_),
+                      ),
+                  },
+                  "+",
+                  1 === _.storeItemType ? " PACKAGE" : " APP",
+                ),
+              ),
+          ),
+          _.createElement(
+            "div",
+            null,
+            _.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _.WarningStylesWithIcon,
+                },
+                _,
               ),
             ),
           ),
         );
       }
       function _(_) {
-        const { filter_type: _, _: __webpack_require__, fnRemoveItem: _ } = _,
-          _ = (0, _._)(_) ? 1 : 0,
-          [_] = (0, _._)(__webpack_require__, _, {});
+        const {
+            filter_type: _,
+            filterDefinition: __webpack_require__,
+            _: _,
+            readonly: _,
+            fnRemoveItem: _,
+          } = _,
+          _ = __webpack_require__.storeItemType,
+          [_] = (0, _._)(_, _, {});
         let _;
         return (
           (_ = _
-            ? `${_.GetName()} (${__webpack_require__})`
+            ? `${_.GetName()} (${_})`
             : _.createElement(
                 _.Fragment,
                 null,
@@ -60518,7 +60706,7 @@
                   "Hidden " + (0 == _ ? "App" : "Package"),
                 ),
                 " ",
-                `(${__webpack_require__})`,
+                `(${_})`,
               )),
           _.createElement(
             "div",
@@ -60531,25 +60719,31 @@
                 className: _().SelectedProduct,
               },
               _,
-              _.createElement(
-                "div",
-                {
-                  className: _().RemoveSelectedProductBtn,
-                },
-                _.createElement(_, {
-                  strTitle: `Remove ${_}?`,
-                  onOK: _,
-                }),
-              ),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().RemoveSelectedProductBtn,
+                  },
+                  _.createElement(_, {
+                    strTitle: `Remove ${_}?`,
+                    onOK: _,
+                  }),
+                ),
             ),
-            _.createElement("span", null, "Or"),
+            !_ && _.createElement("span", null, "Or"),
           )
         );
       }
       function _(_) {
-        const { closeModal: _, filter: __webpack_require__, onSelected: _ } = _,
+        const {
+            closeModal: _,
+            filter: __webpack_require__,
+            filterDefinition: _,
+            onSelected: _,
+          } = _,
           [_, _] = (0, _.useState)(null),
-          _ = (0, _._)(__webpack_require__.filter_type),
+          _ = 1 === _.storeItemType,
           _ = _ ? 1 : 0,
           [_] = (0, _._)(_, _, {}),
           [_, _] = (0, _.useState)(!1);
@@ -73479,7 +73673,7 @@
             ? "Claim Ownership of Production Design?"
             : "Remove ownership of production design",
           strDescription: _
-            ? "Do you want to cliam ownership of the artwork and localizations required for this plans promotion?"
+            ? "Do you want to claim ownership of the artwork and localizations required for this promotion plan?"
             : "Remove the current owner of the production design on this event?",
           closeModal: __webpack_require__,
           onOK: () => {

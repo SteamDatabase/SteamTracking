@@ -633,7 +633,7 @@ var CLSTAMP = "steamdb";
               return _;
           }
         }
-        var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+        var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
         !(function (_) {
           (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -729,26 +729,6 @@ var CLSTAMP = "steamdb";
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(_ || (_ = {})),
-          (function (_) {
-            (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-              "k_EGamingDeviceType_Unknown"),
-              (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-                "k_EGamingDeviceType_StandardPC"),
-              (_[(_.k_EGamingDeviceType_Console = 256)] =
-                "k_EGamingDeviceType_Console"),
-              (_[(_.k_EGamingDeviceType_PS3 = 272)] =
-                "k_EGamingDeviceType_PS3"),
-              (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-                "k_EGamingDeviceType_Steambox"),
-              (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-                "k_EGamingDeviceType_Tesla"),
-              (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-                "k_EGamingDeviceType_Handheld"),
-              (_[(_.k_EGamingDeviceType_Phone = 528)] =
-                "k_EGamingDeviceType_Phone"),
-              (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-                "k_EGamingDeviceType_SteamDeck");
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -2102,67 +2082,67 @@ var CLSTAMP = "steamdb";
       ".js?contenthash=" +
       {
         43: "2d1569711644a97b27c9",
-        762: "2019df6784866b26b05b",
-        976: "f83a0e348459381f3521",
-        1225: "b3e273fcdea9d22b307a",
-        1449: "2e3b8887a33e2b652dde",
-        1499: "cefa656df7e2d6ae84d6",
-        1973: "41e98cfc1b6cf2cb3df2",
-        2256: "7fc831f83987ae356f46",
-        2320: "22b2967769654a91bc07",
-        2435: "4efeaac42659cb029657",
-        2632: "047219ee18b0b1dda252",
-        2749: "8ce0c8e48b11780aecf8",
-        2945: "93322acb94769e3d43b6",
-        2954: "acd9ad33c0576dc05943",
-        3e3: "6004590238b9f5880c3d",
-        3016: "2448400178e0f135048c",
-        3232: "fb96857b792f2a5908cd",
-        3415: "3832db6dba8e5bfe2d04",
-        3485: "9330bbb64afbf14bd78d",
+        762: "02265f6492da42f65b90",
+        976: "0a637ebff826c6e3bd88",
+        1225: "f202e60767579b8a5ac1",
+        1449: "bff6ad92c2ad418b4c88",
+        1499: "3d403579755c2b14eab3",
+        1973: "3623284070bd687ef334",
+        2256: "5ed00538250a248a2e3c",
+        2320: "7376f7832566c2bc9382",
+        2435: "1ec1eec95048333911fb",
+        2632: "d4261a0be0b67562ff99",
+        2749: "d08cfad7146ea9043c8c",
+        2945: "b7e4606030f8634a2723",
+        2954: "4baec3161f1391d0fec8",
+        3e3: "90b3f717d202459122e0",
+        3016: "b343a97c4d1f23e01875",
+        3232: "7cee6e1a4c4b2675eea3",
+        3415: "8c7a34dabdb80bd80728",
+        3485: "ac0b7420e339220f0155",
         3710: "357f6ded3ff9007f8dcb",
-        3789: "779288d1f48b1b809be3",
-        3912: "527ec7c3a95c82c9927d",
-        4154: "80963e36fe1168a8df1c",
+        3789: "566508e04b1dcb878d79",
+        3912: "692d0938fd61e6458e9a",
+        4154: "00dd5942bb059793755f",
         4302: "007fb103f98af096e099",
-        4434: "b2f6555748a2890bd101",
-        4488: "ce0c6462dbb2bd38582a",
-        4776: "532ef2d0a4fb7ad695c8",
-        4787: "8481349b6c1cb4d4de38",
-        5018: "7398c20c5131579efc47",
-        5110: "7f3f0c156fd989e141e4",
-        5241: "722f6f11747ab7b88493",
-        5341: "5fb4b098cadd2d7e9fad",
-        5480: "ded8c56b48a39dd15fe5",
-        6031: "0d5de035d3b888eb0ee7",
-        6127: "4bdce6fd99ff19efdafe",
-        6149: "98577551b59b14f577be",
-        6165: "81cbe57eb142d2b6732a",
-        6208: "0643a0c7bd7cd6d7d985",
-        6239: "40e874e4d2e6e172df37",
-        6385: "1395ba0fd8ffe41f5b5a",
+        4434: "22475b44b1003808ce73",
+        4488: "246419720ac9c62f0643",
+        4776: "beccac86ed494d346983",
+        4787: "b34afd62f9fcdf7a569f",
+        5018: "53ad444f0f07706157fd",
+        5110: "0efc74bda18209cfbdc0",
+        5241: "102e7e522536b0fdaac8",
+        5341: "88b1746e7243b487c991",
+        5480: "cf68b6c8030f02b83f34",
+        6031: "8ba610f26de57bc1522e",
+        6127: "ae6492fd331c59c1e4bf",
+        6149: "37e9038695adfc1de3aa",
+        6165: "91e15ee0b8eb5a76a57a",
+        6208: "fb0090afe2cfdae4fd35",
+        6239: "e6918f447c35abac3fc3",
+        6385: "4a8eeeab96daf71d4c60",
         6518: "8cd538c22d2143bbefe7",
-        6523: "e0d0d6d3291f6b142e2c",
-        6562: "1b47d4accf77b99eb12b",
-        6609: "65a39cd9ab90302d6588",
-        6888: "862e8c49b5e66a6e4cfc",
-        6971: "2c83c705da0385ecfe8a",
-        7487: "9de4d810b40e23e73b26",
-        7539: "575e9ea85fbd20f76d87",
-        7591: "7c494175d0e5936a6862",
-        7786: "a2eed4ffa7de9cd3eb8e",
-        7861: "f4bcb59387c8bf41af1d",
-        8025: "4b58e422efe63c40a8db",
-        8194: "2a96bd8606a182431ba6",
-        8306: "3df5309a03ae7d7520d5",
-        8759: "58acff5edc9bd067e5b3",
-        8766: "e77af3c6267c9fbc33ce",
-        8967: "95c41f31c348e9c78a5c",
+        6523: "509876c06728577c9a0b",
+        6562: "2a4b430923ec129ca082",
+        6609: "e45ded4259a95bb50cf4",
+        6888: "fec8b86d295ab945280c",
+        6971: "5fa20c9ecf1af230029b",
+        7487: "f0180fd976a6c9865d78",
+        7539: "569e055618acf068b4ae",
+        7591: "8a8aa6737201823cf318",
+        7786: "70e9eb491e2308955e20",
+        7861: "cad2e64ff75a5a27f89f",
+        8025: "c2086e5bf9e3d67faec6",
+        8194: "6a8008402602c9b36650",
+        8306: "0ec07c192c5848af3991",
+        8759: "7ec57a7486817e13f6c1",
+        8766: "cbb2c47c120c57a814e3",
+        8967: "68435a25bf23d6db3ec5",
         9027: "ea9c7d7754fa995b186c",
-        9152: "39a971a7a22bfb5c348e",
-        9712: "2ef234ffb4ed5f6ecad7",
-        9746: "b2d5ee0df27ec7fc5f3d",
-        9808: "2236518d6c984fd37a4f",
+        9152: "d12ddafffecba758e476",
+        9712: "1d3a277d46228b160b92",
+        9746: "d2ea4c2abee3d6cb3e6d",
+        9808: "0b35194035db33cc5668",
       }[_]),
     (_.miniCssF = (_) => {}),
     (_._ = (function () {
@@ -2308,6 +2288,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(99447));
+  var _ = _._(void 0, [1068], () => _(50125));
   _ = _._(_);
 })();

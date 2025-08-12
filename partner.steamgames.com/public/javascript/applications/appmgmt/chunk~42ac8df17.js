@@ -11770,7 +11770,7 @@
     },
     44467: (e, t, a) => {
       "use strict";
-      a.d(t, { j: () => et });
+      a.d(t, { j: () => $e });
       var r,
         n = a(90626),
         i = a(82415),
@@ -13036,15 +13036,14 @@
         });
       }
       var V,
-        x = a(22837),
-        q = a(64753),
-        K = a(45699),
-        Y = a(70163);
-      function Q(e) {
+        x = a(64753),
+        q = a(45699),
+        K = a(70163);
+      function Y(e) {
         const { children: t, ...a } = e;
         return n.createElement(
-          K.fu,
-          { className: Y.GreenButton, type: "button", ...a },
+          q.fu,
+          { className: K.GreenButton, type: "button", ...a },
           n.createElement("span", null, t),
         );
       }
@@ -13066,16 +13065,76 @@
           (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
           (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
       })(V || (V = {}));
-      var J,
-        X = a(20194),
-        Z = a(54806),
-        $ = a(68950);
+      var Q,
+        J = a(20194),
+        X = a(54806),
+        Z = a(68950);
       a(31540);
+      class $ extends y.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            $.prototype.client_instanceid || f.Sg($.M()),
+            y.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            $.sm_m ||
+              ($.sm_m = {
+                proto: $,
+                fields: {
+                  client_instanceid: {
+                    n: 1,
+                    br: f.qM.readUint64String,
+                    bw: f.gp.writeUint64String,
+                  },
+                },
+              }),
+            $.sm_m
+          );
+        }
+        static MBF() {
+          return $.sm_mbf || ($.sm_mbf = f.w0($.M())), $.sm_mbf;
+        }
+        toObject(e = !1) {
+          return $.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.BT($.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.Uq($.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (S().BinaryReader)(e),
+            a = new $();
+          return $.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.zj($.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (S().BinaryWriter)();
+          return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.i0($.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (S().BinaryWriter)();
+          return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientLogonInfo_Request";
+        }
+      }
       class ee extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ee.prototype.client_instanceid || f.Sg(ee.M()),
+            ee.prototype.protocol_version || f.Sg(ee.M()),
             y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -13086,10 +13145,16 @@
               (ee.sm_m = {
                 proto: ee,
                 fields: {
-                  client_instanceid: {
+                  protocol_version: {
                     n: 1,
-                    br: f.qM.readUint64String,
-                    bw: f.gp.writeUint64String,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                  os: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
+                  machine_name: {
+                    n: 3,
+                    br: f.qM.readString,
+                    bw: f.gp.writeString,
                   },
                 },
               }),
@@ -13128,51 +13193,22 @@
           return ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetClientLogonInfo_Request";
+          return "CClientComm_GetClientLogonInfo_Response";
         }
       }
       class te extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            te.prototype.protocol_version || f.Sg(te.M()),
-            y.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            te.sm_m ||
-              (te.sm_m = {
-                proto: te,
-                fields: {
-                  protocol_version: {
-                    n: 1,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                  os: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
-                  machine_name: {
-                    n: 3,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                },
-              }),
-            te.sm_m
-          );
-        }
-        static MBF() {
-          return te.sm_mbf || (te.sm_mbf = f.w0(te.M())), te.sm_mbf;
+          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return te.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.BT(te.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return f.Uq(te.M(), e);
+          return new te();
         }
         static deserializeBinary(e) {
           let t = new (S().BinaryReader)(e),
@@ -13180,36 +13216,58 @@
           return te.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.zj(te.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new (S().BinaryWriter)();
           return te.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(te.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (S().BinaryWriter)();
           return te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetClientLogonInfo_Response";
+          return "CClientComm_GetAllClientLogonInfo_Request";
         }
       }
       class ae extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            ae.prototype.sessions || f.Sg(ae.M()),
+            y.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            ae.sm_m ||
+              (ae.sm_m = {
+                proto: ae,
+                fields: {
+                  sessions: { n: 1, c: re, r: !0, q: !0 },
+                  refetch_interval_sec: {
+                    n: 2,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                },
+              }),
+            ae.sm_m
+          );
+        }
+        static MBF() {
+          return ae.sm_mbf || (ae.sm_mbf = f.w0(ae.M())), ae.sm_mbf;
         }
         toObject(e = !1) {
           return ae.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return f.BT(ae.M(), e, t);
         }
         static fromObject(e) {
-          return new ae();
+          return f.Uq(ae.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (S().BinaryReader)(e),
@@ -13217,27 +13275,29 @@
           return ae.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return f.zj(ae.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (S().BinaryWriter)();
           return ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          f.i0(ae.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (S().BinaryWriter)();
           return ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetAllClientLogonInfo_Request";
+          return "CClientComm_GetAllClientLogonInfo_Response";
         }
       }
       class re extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            re.prototype.sessions || f.Sg(re.M()),
-            y.Message.initialize(this, e, 0, -1, [1], null);
+            re.prototype.client_instanceid || f.Sg(re.M()),
+            y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -13247,12 +13307,29 @@
               (re.sm_m = {
                 proto: re,
                 fields: {
-                  sessions: { n: 1, c: ne, r: !0, q: !0 },
-                  refetch_interval_sec: {
+                  client_instanceid: {
+                    n: 1,
+                    br: f.qM.readUint64String,
+                    bw: f.gp.writeUint64String,
+                  },
+                  protocol_version: {
                     n: 2,
                     br: f.qM.readUint32,
                     bw: f.gp.writeUint32,
                   },
+                  os_name: { n: 3, br: f.qM.readString, bw: f.gp.writeString },
+                  machine_name: {
+                    n: 4,
+                    br: f.qM.readString,
+                    bw: f.gp.writeString,
+                  },
+                  os_type: { n: 5, br: f.qM.readInt32, bw: f.gp.writeInt32 },
+                  device_type: {
+                    n: 6,
+                    br: f.qM.readInt32,
+                    bw: f.gp.writeInt32,
+                  },
+                  realm: { n: 7, br: f.qM.readInt32, bw: f.gp.writeInt32 },
                 },
               }),
             re.sm_m
@@ -13290,7 +13367,7 @@
           return re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetAllClientLogonInfo_Response";
+          return "CClientComm_GetAllClientLogonInfo_Response_Session";
         }
       }
       class ne extends y.Message {
@@ -13313,24 +13390,6 @@
                     br: f.qM.readUint64String,
                     bw: f.gp.writeUint64String,
                   },
-                  protocol_version: {
-                    n: 2,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                  os_name: { n: 3, br: f.qM.readString, bw: f.gp.writeString },
-                  machine_name: {
-                    n: 4,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  os_type: { n: 5, br: f.qM.readInt32, bw: f.gp.writeInt32 },
-                  device_type: {
-                    n: 6,
-                    br: f.qM.readInt32,
-                    bw: f.gp.writeInt32,
-                  },
-                  realm: { n: 7, br: f.qM.readInt32, bw: f.gp.writeInt32 },
                 },
               }),
             ne.sm_m
@@ -13368,15 +13427,15 @@
           return ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetAllClientLogonInfo_Response_Session";
+          return "CClientComm_GetClientInfo_Request";
         }
       }
       class ie extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ie.prototype.client_instanceid || f.Sg(ie.M()),
-            y.Message.initialize(this, e, 0, -1, void 0, null);
+            ie.prototype.package_version || f.Sg(ie.M()),
+            y.Message.initialize(this, e, 0, -1, [7, 10], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13386,10 +13445,50 @@
               (ie.sm_m = {
                 proto: ie,
                 fields: {
-                  client_instanceid: {
+                  package_version: {
                     n: 1,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                  os: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
+                  machine_name: {
+                    n: 3,
+                    br: f.qM.readString,
+                    bw: f.gp.writeString,
+                  },
+                  ip_public: {
+                    n: 4,
+                    br: f.qM.readString,
+                    bw: f.gp.writeString,
+                  },
+                  ip_private: {
+                    n: 5,
+                    br: f.qM.readString,
+                    bw: f.gp.writeString,
+                  },
+                  bytes_available: {
+                    n: 6,
                     br: f.qM.readUint64String,
                     bw: f.gp.writeUint64String,
+                  },
+                  running_games: { n: 7, c: se, r: !0, q: !0 },
+                  protocol_version: {
+                    n: 8,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                  clientcomm_version: {
+                    n: 9,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                  local_users: {
+                    n: 10,
+                    r: !0,
+                    q: !0,
+                    br: f.qM.readUint32,
+                    pbr: f.qM.readPackedUint32,
+                    bw: f.gp.writeRepeatedUint32,
                   },
                 },
               }),
@@ -13428,15 +13527,15 @@
           return ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetClientInfo_Request";
+          return "CClientComm_ClientData";
         }
       }
       class se extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            se.prototype.package_version || f.Sg(se.M()),
-            y.Message.initialize(this, e, 0, -1, [7, 10], null);
+            se.prototype.appid || f.Sg(se.M()),
+            y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -13446,50 +13545,16 @@
               (se.sm_m = {
                 proto: se,
                 fields: {
-                  package_version: {
-                    n: 1,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
+                  appid: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
+                  extra_info: {
+                    n: 2,
+                    br: f.qM.readString,
+                    bw: f.gp.writeString,
                   },
-                  os: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
-                  machine_name: {
+                  time_running_sec: {
                     n: 3,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  ip_public: {
-                    n: 4,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  ip_private: {
-                    n: 5,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  bytes_available: {
-                    n: 6,
-                    br: f.qM.readUint64String,
-                    bw: f.gp.writeUint64String,
-                  },
-                  running_games: { n: 7, c: oe, r: !0, q: !0 },
-                  protocol_version: {
-                    n: 8,
                     br: f.qM.readUint32,
                     bw: f.gp.writeUint32,
-                  },
-                  clientcomm_version: {
-                    n: 9,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                  local_users: {
-                    n: 10,
-                    r: !0,
-                    q: !0,
-                    br: f.qM.readUint32,
-                    pbr: f.qM.readPackedUint32,
-                    bw: f.gp.writeRepeatedUint32,
                   },
                 },
               }),
@@ -13528,14 +13593,14 @@
           return se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_ClientData";
+          return "CClientComm_ClientData_RunningGames";
         }
       }
       class oe extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            oe.prototype.appid || f.Sg(oe.M()),
+            oe.prototype.client_info || f.Sg(oe.M()),
             y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -13545,19 +13610,7 @@
             oe.sm_m ||
               (oe.sm_m = {
                 proto: oe,
-                fields: {
-                  appid: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                  extra_info: {
-                    n: 2,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                  time_running_sec: {
-                    n: 3,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                },
+                fields: { client_info: { n: 1, c: ie } },
               }),
             oe.sm_m
           );
@@ -13594,15 +13647,15 @@
           return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_ClientData_RunningGames";
+          return "CClientComm_GetClientInfo_Response";
         }
       }
       class le extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            le.prototype.client_info || f.Sg(le.M()),
-            y.Message.initialize(this, e, 0, -1, void 0, null);
+            le.prototype.fields || f.Sg(le.M()),
+            y.Message.initialize(this, e, 0, -1, [6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13611,7 +13664,29 @@
             le.sm_m ||
               (le.sm_m = {
                 proto: le,
-                fields: { client_info: { n: 1, c: se } },
+                fields: {
+                  fields: { n: 1, br: f.qM.readString, bw: f.gp.writeString },
+                  filters: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
+                  client_instanceid: {
+                    n: 3,
+                    br: f.qM.readUint64String,
+                    bw: f.gp.writeUint64String,
+                  },
+                  include_client_info: {
+                    n: 4,
+                    br: f.qM.readBool,
+                    bw: f.gp.writeBool,
+                  },
+                  language: { n: 5, br: f.qM.readString, bw: f.gp.writeString },
+                  filter_appids: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: f.qM.readUint32,
+                    pbr: f.qM.readPackedUint32,
+                    bw: f.gp.writeRepeatedUint32,
+                  },
+                },
               }),
             le.sm_m
           );
@@ -13648,15 +13723,15 @@
           return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetClientInfo_Response";
+          return "CClientComm_GetClientAppList_Request";
         }
       }
       class ce extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ce.prototype.fields || f.Sg(ce.M()),
-            y.Message.initialize(this, e, 0, -1, [6], null);
+            ce.prototype.bytes_available || f.Sg(ce.M()),
+            y.Message.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13666,26 +13741,27 @@
               (ce.sm_m = {
                 proto: ce,
                 fields: {
-                  fields: { n: 1, br: f.qM.readString, bw: f.gp.writeString },
-                  filters: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
-                  client_instanceid: {
-                    n: 3,
+                  bytes_available: {
+                    n: 1,
                     br: f.qM.readUint64String,
                     bw: f.gp.writeUint64String,
                   },
-                  include_client_info: {
+                  apps: { n: 2, c: me, r: !0, q: !0 },
+                  client_info: { n: 3, c: ie },
+                  refetch_interval_sec_full: {
                     n: 4,
-                    br: f.qM.readBool,
-                    bw: f.gp.writeBool,
-                  },
-                  language: { n: 5, br: f.qM.readString, bw: f.gp.writeString },
-                  filter_appids: {
-                    n: 6,
-                    r: !0,
-                    q: !0,
                     br: f.qM.readUint32,
-                    pbr: f.qM.readPackedUint32,
-                    bw: f.gp.writeRepeatedUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                  refetch_interval_sec_changing: {
+                    n: 5,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                  refetch_interval_sec_updating: {
+                    n: 6,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
                   },
                 },
               }),
@@ -13724,15 +13800,15 @@
           return ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetClientAppList_Request";
+          return "CClientComm_GetClientAppList_Response";
         }
       }
       class me extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            me.prototype.bytes_available || f.Sg(me.M()),
-            y.Message.initialize(this, e, 0, -1, [2], null);
+            me.prototype.appid || f.Sg(me.M()),
+            y.Message.initialize(this, e, 0, -1, [17], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13741,83 +13817,6 @@
             me.sm_m ||
               (me.sm_m = {
                 proto: me,
-                fields: {
-                  bytes_available: {
-                    n: 1,
-                    br: f.qM.readUint64String,
-                    bw: f.gp.writeUint64String,
-                  },
-                  apps: { n: 2, c: de, r: !0, q: !0 },
-                  client_info: { n: 3, c: se },
-                  refetch_interval_sec_full: {
-                    n: 4,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                  refetch_interval_sec_changing: {
-                    n: 5,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                  refetch_interval_sec_updating: {
-                    n: 6,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                },
-              }),
-            me.sm_m
-          );
-        }
-        static MBF() {
-          return me.sm_mbf || (me.sm_mbf = f.w0(me.M())), me.sm_mbf;
-        }
-        toObject(e = !1) {
-          return me.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return f.BT(me.M(), e, t);
-        }
-        static fromObject(e) {
-          return f.Uq(me.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (S().BinaryReader)(e),
-            a = new me();
-          return me.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return f.zj(me.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (S().BinaryWriter)();
-          return me.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(me.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (S().BinaryWriter)();
-          return me.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_GetClientAppList_Response";
-        }
-      }
-      class de extends y.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            de.prototype.appid || f.Sg(de.M()),
-            y.Message.initialize(this, e, 0, -1, [17], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            de.sm_m ||
-              (de.sm_m = {
-                proto: de,
                 fields: {
                   appid: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
                   app: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
@@ -13843,7 +13842,7 @@
                     br: f.qM.readUint64String,
                     bw: f.gp.writeUint64String,
                   },
-                  dlcs: { n: 17, c: ue, r: !0, q: !0 },
+                  dlcs: { n: 17, c: de, r: !0, q: !0 },
                   favorite: { n: 18, br: f.qM.readBool, bw: f.gp.writeBool },
                   auto_update: { n: 19, br: f.qM.readBool, bw: f.gp.writeBool },
                   installed: { n: 20, br: f.qM.readBool, bw: f.gp.writeBool },
@@ -13912,6 +13911,68 @@
                   },
                 },
               }),
+            me.sm_m
+          );
+        }
+        static MBF() {
+          return me.sm_mbf || (me.sm_mbf = f.w0(me.M())), me.sm_mbf;
+        }
+        toObject(e = !1) {
+          return me.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.BT(me.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.Uq(me.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (S().BinaryReader)(e),
+            a = new me();
+          return me.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.zj(me.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (S().BinaryWriter)();
+          return me.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.i0(me.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (S().BinaryWriter)();
+          return me.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_GetClientAppList_Response_AppData";
+        }
+      }
+      class de extends y.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            de.prototype.appid || f.Sg(de.M()),
+            y.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            de.sm_m ||
+              (de.sm_m = {
+                proto: de,
+                fields: {
+                  appid: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
+                  app: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
+                  installed: {
+                    n: 3,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                },
+              }),
             de.sm_m
           );
         }
@@ -13947,7 +14008,7 @@
           return de.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetClientAppList_Response_AppData";
+          return "CClientComm_GetClientAppList_Response_AppData_DLCData";
         }
       }
       class ue extends y.Message {
@@ -13965,12 +14026,16 @@
               (ue.sm_m = {
                 proto: ue,
                 fields: {
-                  appid: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                  app: { n: 2, br: f.qM.readString, bw: f.gp.writeString },
-                  installed: {
-                    n: 3,
+                  appid: {
+                    n: 1,
+                    q: !0,
                     br: f.qM.readUint32,
                     bw: f.gp.writeUint32,
+                  },
+                  client_instanceid: {
+                    n: 2,
+                    br: f.qM.readUint64String,
+                    bw: f.gp.writeUint64String,
                   },
                 },
               }),
@@ -14009,51 +14074,22 @@
           return ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_GetClientAppList_Response_AppData_DLCData";
+          return "CClientComm_InstallClientApp_Request";
         }
       }
       class pe extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            pe.prototype.appid || f.Sg(pe.M()),
-            y.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            pe.sm_m ||
-              (pe.sm_m = {
-                proto: pe,
-                fields: {
-                  appid: {
-                    n: 1,
-                    q: !0,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                  client_instanceid: {
-                    n: 2,
-                    br: f.qM.readUint64String,
-                    bw: f.gp.writeUint64String,
-                  },
-                },
-              }),
-            pe.sm_m
-          );
-        }
-        static MBF() {
-          return pe.sm_mbf || (pe.sm_mbf = f.w0(pe.M())), pe.sm_mbf;
+          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return pe.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.BT(pe.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return f.Uq(pe.M(), e);
+          return new pe();
         }
         static deserializeBinary(e) {
           let t = new (S().BinaryReader)(e),
@@ -14061,72 +14097,35 @@
           return pe.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.zj(pe.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new (S().BinaryWriter)();
           return pe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(pe.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (S().BinaryWriter)();
           return pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_InstallClientApp_Request";
+          return "CClientComm_InstallClientApp_Response";
         }
       }
       class _e extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return _e.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new _e();
-        }
-        static deserializeBinary(e) {
-          let t = new (S().BinaryReader)(e),
-            a = new _e();
-          return _e.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (S().BinaryWriter)();
-          return _e.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (S().BinaryWriter)();
-          return _e.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_InstallClientApp_Response";
-        }
-      }
-      class he extends y.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
           super(),
-            he.prototype.appid || f.Sg(he.M()),
+            _e.prototype.appid || f.Sg(_e.M()),
             y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            he.sm_m ||
-              (he.sm_m = {
-                proto: he,
+            _e.sm_m ||
+              (_e.sm_m = {
+                proto: _e,
                 fields: {
                   appid: {
                     n: 1,
@@ -14141,20 +14140,57 @@
                   },
                 },
               }),
-            he.sm_m
+            _e.sm_m
           );
         }
         static MBF() {
-          return he.sm_mbf || (he.sm_mbf = f.w0(he.M())), he.sm_mbf;
+          return _e.sm_mbf || (_e.sm_mbf = f.w0(_e.M())), _e.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _e.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.BT(_e.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.Uq(_e.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (S().BinaryReader)(e),
+            a = new _e();
+          return _e.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.zj(_e.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (S().BinaryWriter)();
+          return _e.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.i0(_e.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (S().BinaryWriter)();
+          return _e.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_UninstallClientApp_Request";
+        }
+      }
+      class he extends y.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return he.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.BT(he.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return f.Uq(he.M(), e);
+          return new he();
         }
         static deserializeBinary(e) {
           let t = new (S().BinaryReader)(e),
@@ -14162,72 +14198,35 @@
           return he.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.zj(he.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new (S().BinaryWriter)();
           return he.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(he.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (S().BinaryWriter)();
           return he.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_UninstallClientApp_Request";
+          return "CClientComm_UninstallClientApp_Response";
         }
       }
       class ge extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return ge.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new ge();
-        }
-        static deserializeBinary(e) {
-          let t = new (S().BinaryReader)(e),
-            a = new ge();
-          return ge.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (S().BinaryWriter)();
-          return ge.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (S().BinaryWriter)();
-          return ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_UninstallClientApp_Response";
-        }
-      }
-      class ye extends y.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
           super(),
-            ye.prototype.appid || f.Sg(ye.M()),
+            ge.prototype.appid || f.Sg(ge.M()),
             y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            ye.sm_m ||
-              (ye.sm_m = {
-                proto: ye,
+            ge.sm_m ||
+              (ge.sm_m = {
+                proto: ge,
                 fields: {
                   appid: {
                     n: 1,
@@ -14245,6 +14244,77 @@
                     n: 3,
                     br: f.qM.readUint64String,
                     bw: f.gp.writeUint64String,
+                  },
+                },
+              }),
+            ge.sm_m
+          );
+        }
+        static MBF() {
+          return ge.sm_mbf || (ge.sm_mbf = f.w0(ge.M())), ge.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ge.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.BT(ge.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.Uq(ge.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (S().BinaryReader)(e),
+            a = new ge();
+          return ge.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.zj(ge.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (S().BinaryWriter)();
+          return ge.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.i0(ge.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (S().BinaryWriter)();
+          return ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_SetClientAppUpdateState_Request";
+        }
+      }
+      class ye extends y.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            ye.prototype.client_instanceid || f.Sg(ye.M()),
+            y.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            ye.sm_m ||
+              (ye.sm_m = {
+                proto: ye,
+                fields: {
+                  client_instanceid: {
+                    n: 1,
+                    br: f.qM.readUint64String,
+                    bw: f.gp.writeUint64String,
+                  },
+                  appid: {
+                    n: 2,
+                    q: !0,
+                    br: f.qM.readUint32,
+                    bw: f.gp.writeUint32,
+                  },
+                  query_params: {
+                    n: 3,
+                    br: f.qM.readString,
+                    bw: f.gp.writeString,
                   },
                 },
               }),
@@ -14283,56 +14353,22 @@
           return ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_SetClientAppUpdateState_Request";
+          return "CClientComm_LaunchClientApp_Request";
         }
       }
       class Se extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            Se.prototype.client_instanceid || f.Sg(Se.M()),
-            y.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Se.sm_m ||
-              (Se.sm_m = {
-                proto: Se,
-                fields: {
-                  client_instanceid: {
-                    n: 1,
-                    br: f.qM.readUint64String,
-                    bw: f.gp.writeUint64String,
-                  },
-                  appid: {
-                    n: 2,
-                    q: !0,
-                    br: f.qM.readUint32,
-                    bw: f.gp.writeUint32,
-                  },
-                  query_params: {
-                    n: 3,
-                    br: f.qM.readString,
-                    bw: f.gp.writeString,
-                  },
-                },
-              }),
-            Se.sm_m
-          );
-        }
-        static MBF() {
-          return Se.sm_mbf || (Se.sm_mbf = f.w0(Se.M())), Se.sm_mbf;
+          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Se.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.BT(Se.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return f.Uq(Se.M(), e);
+          return new Se();
         }
         static deserializeBinary(e) {
           let t = new (S().BinaryReader)(e),
@@ -14340,21 +14376,19 @@
           return Se.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.zj(Se.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new (S().BinaryWriter)();
           return Se.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(Se.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (S().BinaryWriter)();
           return Se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_LaunchClientApp_Request";
+          return "CClientComm_LaunchClientApp_Response";
         }
       }
       class fe extends y.Message {
@@ -14389,58 +14423,23 @@
           return fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClientComm_LaunchClientApp_Response";
+          return "CClientComm_SetClientAppUpdateState_Response";
         }
       }
       class be extends y.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return be.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new be();
-        }
-        static deserializeBinary(e) {
-          let t = new (S().BinaryReader)(e),
-            a = new be();
-          return be.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (S().BinaryWriter)();
-          return be.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new (S().BinaryWriter)();
-          return be.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_SetClientAppUpdateState_Response";
-        }
-      }
-      class we extends y.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
           super(),
-            we.prototype.client_instanceid || f.Sg(we.M()),
+            be.prototype.client_instanceid || f.Sg(be.M()),
             y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            we.sm_m ||
-              (we.sm_m = {
-                proto: we,
+            be.sm_m ||
+              (be.sm_m = {
+                proto: be,
                 fields: {
                   client_instanceid: {
                     n: 1,
@@ -14450,20 +14449,57 @@
                   enable: { n: 2, br: f.qM.readBool, bw: f.gp.writeBool },
                 },
               }),
-            we.sm_m
+            be.sm_m
           );
         }
         static MBF() {
-          return we.sm_mbf || (we.sm_mbf = f.w0(we.M())), we.sm_mbf;
+          return be.sm_mbf || (be.sm_mbf = f.w0(be.M())), be.sm_mbf;
+        }
+        toObject(e = !1) {
+          return be.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.BT(be.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.Uq(be.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (S().BinaryReader)(e),
+            a = new be();
+          return be.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.zj(be.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (S().BinaryWriter)();
+          return be.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.i0(be.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (S().BinaryWriter)();
+          return be.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientComm_EnableOrDisableDownloads_Request";
+        }
+      }
+      class we extends y.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return we.toObject(e, this);
         }
         static toObject(e, t) {
-          return f.BT(we.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return f.Uq(we.M(), e);
+          return new we();
         }
         static deserializeBinary(e) {
           let t = new (S().BinaryReader)(e),
@@ -14471,53 +14507,16 @@
           return we.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return f.zj(we.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new (S().BinaryWriter)();
           return we.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(we.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (S().BinaryWriter)();
-          return we.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientComm_EnableOrDisableDownloads_Request";
-        }
-      }
-      class ve extends y.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), y.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return ve.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new ve();
-        }
-        static deserializeBinary(e) {
-          let t = new (S().BinaryReader)(e),
-            a = new ve();
-          return ve.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new (S().BinaryWriter)();
-          return ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (S().BinaryWriter)();
-          return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return we.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientComm_EnableOrDisableDownloads_Response";
@@ -14527,93 +14526,93 @@
         (e.GetClientLogonInfo = function (e, t) {
           return e.SendMsg(
             "ClientComm.GetClientLogonInfo#1",
-            (0, g.I8)(ee, t),
-            te,
+            (0, g.I8)($, t),
+            ee,
             { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
           (e.GetAllClientLogonInfo = function (e, t) {
             return e.SendMsg(
               "ClientComm.GetAllClientLogonInfo#1",
-              (0, g.I8)(ae, t),
-              re,
+              (0, g.I8)(te, t),
+              ae,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetClientInfo = function (e, t) {
             return e.SendMsg(
               "ClientComm.GetClientInfo#1",
-              (0, g.I8)(ie, t),
-              le,
+              (0, g.I8)(ne, t),
+              oe,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetClientAppList = function (e, t) {
             return e.SendMsg(
               "ClientComm.GetClientAppList#1",
-              (0, g.I8)(ce, t),
-              me,
+              (0, g.I8)(le, t),
+              ce,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.InstallClientApp = function (e, t) {
             return e.SendMsg(
               "ClientComm.InstallClientApp#1",
-              (0, g.I8)(pe, t),
-              _e,
+              (0, g.I8)(ue, t),
+              pe,
               { ePrivilege: 1 },
             );
           }),
           (e.UninstallClientApp = function (e, t) {
             return e.SendMsg(
               "ClientComm.UninstallClientApp#1",
-              (0, g.I8)(he, t),
-              ge,
+              (0, g.I8)(_e, t),
+              he,
               { ePrivilege: 1 },
             );
           }),
           (e.LaunchClientApp = function (e, t) {
             return e.SendMsg(
               "ClientComm.LaunchClientApp#1",
-              (0, g.I8)(Se, t),
-              fe,
+              (0, g.I8)(ye, t),
+              Se,
               { ePrivilege: 1 },
             );
           }),
           (e.SetClientAppUpdateState = function (e, t) {
             return e.SendMsg(
               "ClientComm.SetClientAppUpdateState#1",
-              (0, g.I8)(ye, t),
-              be,
+              (0, g.I8)(ge, t),
+              fe,
               { ePrivilege: 1 },
             );
           }),
           (e.EnableOrDisableDownloads = function (e, t) {
             return e.SendMsg(
               "ClientComm.EnableOrDisableDownloads#1",
-              (0, g.I8)(we, t),
-              ve,
+              (0, g.I8)(be, t),
+              we,
               { ePrivilege: 1 },
             );
           });
-      })(J || (J = {}));
-      const Ie = "RemoteDownload_OnlineClient",
-        Be = "RemoteDownload_ClientAppList",
-        Ce = "RemoteDownload_ClientAppData";
-      class Ee extends Error {
+      })(Q || (Q = {}));
+      const ve = "RemoteDownload_OnlineClient",
+        Ie = "RemoteDownload_ClientAppList",
+        Be = "RemoteDownload_ClientAppData";
+      class Ce extends Error {
         constructor(e, t) {
           super(e), (this.result = t);
         }
         result;
       }
-      function Te() {
+      function Ee() {
         const e = (0, U.KV)(),
-          t = (0, $.LH)();
-        return (0, X.I)({
-          queryKey: [Ie, t],
+          t = (0, Z.LH)();
+        return (0, J.I)({
+          queryKey: [ve, t],
           queryFn: async () => {
-            const t = g.w.Init(ae),
-              a = await J.GetAllClientLogonInfo(e, t);
+            const t = g.w.Init(te),
+              a = await Q.GetAllClientLogonInfo(e, t);
             if (1 !== a.GetEResult())
               throw (
                 (console.error(
@@ -14627,8 +14626,7 @@
               );
             const r = [];
             for (const e of a.Body().sessions())
-              e.device_type() !== x.zm.k_EGamingDeviceType_Unknown &&
-                r.push(e.toObject());
+              0 !== e.device_type() && r.push(e.toObject());
             return {
               sessions: r,
               refetchInterval: a.Body().refetch_interval_sec() || 300,
@@ -14638,7 +14636,7 @@
           refetchInterval: (e) => 1e3 * (e.state.data?.refetchInterval || 300),
         });
       }
-      class Ae {
+      class Te {
         constructor(e) {
           Object.assign(this, e.toObject()),
             (this.bytes_to_download = parseInt(e.bytes_to_download()) || 0),
@@ -14709,14 +14707,14 @@
               : 0;
         }
       }
-      async function Ge(e, t, a) {
+      async function Ae(e, t, a) {
         const r = t.client_instanceid,
-          n = g.w.Init(ce);
+          n = g.w.Init(le);
         n.Body().set_fields("games"),
           n.Body().set_filters(a),
           n.Body().set_client_instanceid(r),
           n.Body().set_include_client_info(!0);
-        const i = await J.GetClientAppList(e, n);
+        const i = await Q.GetClientAppList(e, n);
         if (1 !== i.GetEResult())
           throw (
             (console.error(
@@ -14724,14 +14722,14 @@
               i.GetEResult(),
               i.Hdr().transport_error(),
             ),
-            new Ee(
+            new Ce(
               `Error from GetClientAppList: ${i.GetEResult()}`,
               i.GetEResult(),
             ))
           );
         const s = new Map();
         for (const e of i.Body().apps()) {
-          const t = new Ae(e);
+          const t = new Te(e);
           s.set(e.appid(), t);
         }
         return {
@@ -14745,20 +14743,20 @@
           },
         };
       }
-      function De(e, t, a) {
-        return [Be, e, t, a];
+      function Ge(e, t, a) {
+        return [Ie, e, t, a];
       }
-      function Me(e, t = !0) {
-        const a = Te(),
+      function De(e, t = !0) {
+        const a = Ee(),
           r = (0, U.KV)(),
-          i = (0, $.LH)(),
+          i = (0, Z.LH)(),
           s = (e) => {
             t && ((21 != e.result && 16 != e.result) || a.refetch());
           },
-          o = (0, Z.E)({
+          o = (0, X.E)({
             queries: (a.data?.sessions || []).map((e) => ({
-              queryKey: De(i, e.client_instanceid, "none"),
-              queryFn: async () => Ge(r, e, "none"),
+              queryKey: Ge(i, e.client_instanceid, "none"),
+              queryFn: async () => Ae(r, e, "none"),
               staletime: 36e5,
               refetchInterval: (e) =>
                 1e3 * (e.state.data?.refetchIntervals.full || 3600),
@@ -14776,13 +14774,13 @@
             [e],
           ),
           c = (0, N.jE)(),
-          m = (0, Z.E)({
+          m = (0, X.E)({
             queries: (a.data?.sessions || []).map((e, a) => ({
-              queryKey: De(i, e.client_instanceid, "changing"),
+              queryKey: Ge(i, e.client_instanceid, "changing"),
               queryFn: async () =>
                 (async function (e, t, a, r) {
                   if (!r) return;
-                  const n = await Ge(e, t, a);
+                  const n = await Ae(e, t, a);
                   for (const [e, t] of n.mapApps) r.mapApps.set(e, t);
                   return { ...n, mapApps: r.mapApps };
                 })(r, e, "changing", o[a].data),
@@ -14811,21 +14809,21 @@
           ),
           refetch: () => {
             for (const e of a.data?.sessions || []) {
-              const t = De(i, e.client_instanceid, "changing");
+              const t = Ge(i, e.client_instanceid, "changing");
               c.removeQueries({ queryKey: t });
             }
             for (const e of o) e.refetch();
           },
         };
       }
-      function Re(e, t) {
-        return [Ce, e, t];
+      function Me(e, t) {
+        return [Be, e, t];
       }
-      function ke(e, t = !0) {
-        const a = (0, $.LH)(),
-          { rgQueries: r } = Me(void 0, t);
-        return (0, X.I)({
-          queryKey: Re(a, e),
+      function Re(e, t = !0) {
+        const a = (0, Z.LH)(),
+          { rgQueries: r } = De(void 0, t);
+        return (0, J.I)({
+          queryKey: Me(a, e),
           queryFn: () => {
             const t = new Map();
             for (const a of r)
@@ -14847,30 +14845,30 @@
           gcTime: 0,
         });
       }
-      var Le = a(30894),
-        Fe = a(88997),
-        ze = a(68451),
-        Oe = a(58579),
-        Ue = a.n(Oe);
-      const Pe = {
+      var ke = a(30894),
+        Le = a(88997),
+        Fe = a(68451),
+        ze = a(58579),
+        Oe = a.n(ze);
+      const Ue = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
         bDisablePopTop: !0,
       };
-      function Ne(e) {
+      function Pe(e) {
         const { setRemoteClientID: t, rgSessions: a } = e,
           r = (0, n.useCallback)(
             (e) => {
               a?.length > 0 &&
-                (0, Fe.lX)(
-                  n.createElement(We, {
+                (0, Le.lX)(
+                  n.createElement(Ne, {
                     sessions: a,
                     setRemoteDownloadClientId: t,
                   }),
                   e,
-                  Pe,
+                  Ue,
                 );
             },
             [t, a],
@@ -14878,18 +14876,18 @@
         return a?.length > 1
           ? n.createElement(
               "button",
-              { onClick: r, className: Ue().ClientSelectDropdown },
-              n.createElement(je, null),
+              { onClick: r, className: Oe().ClientSelectDropdown },
+              n.createElement(We, null),
             )
           : null;
       }
-      function We({ sessions: e, setRemoteDownloadClientId: t }) {
+      function Ne({ sessions: e, setRemoteDownloadClientId: t }) {
         return n.createElement(
           "ul",
-          { className: Ue().ClientListDropdownMenu },
+          { className: Oe().ClientListDropdownMenu },
           e.map((e) =>
             n.createElement(
-              ze.kt,
+              Fe.kt,
               {
                 onSelected: () => {
                   t(e.client_instanceid);
@@ -14900,9 +14898,9 @@
                 "#GamesList_Client_Indicator",
                 (function (e) {
                   switch (e) {
-                    case x.zm.k_EGamingDeviceType_StandardPC:
+                    case 1:
                       return (0, m.we)("#Library_DeviceType_PC");
-                    case x.zm.k_EGamingDeviceType_SteamDeck:
+                    case 544:
                       return (0, m.we)("#Library_DeviceType_SteamDeck");
                     default:
                       return;
@@ -14914,7 +14912,7 @@
           ),
         );
       }
-      function je(e) {
+      function We(e) {
         return n.createElement(
           "svg",
           {
@@ -14929,19 +14927,19 @@
           }),
         );
       }
-      var He = a(9154),
-        Ve = a(12155),
-        xe = a(22797),
-        qe = a(99034),
-        Ke = a.n(qe);
-      const Ye = { include_platforms: !0 };
-      function Qe(e) {
+      var je = a(9154),
+        He = a(12155),
+        Ve = a(22797),
+        xe = a(99034),
+        qe = a.n(xe);
+      const Ke = { include_platforms: !0 };
+      function Ye(e) {
         const { appid: t } = e,
-          [a] = (0, o.t7)(t, Ye),
-          [r, i, s] = (0, q.uD)(!1),
+          [a] = (0, o.t7)(t, Ke),
+          [r, i, s] = (0, x.uD)(!1),
           { mutateAsync: l } = H({ appid: t }),
           [c, d] = (0, n.useState)(!1),
-          u = (0, Le.Lg)(t);
+          u = (0, ke.Lg)(t);
         return a
           ? u
             ? null
@@ -14949,13 +14947,13 @@
                 n.Fragment,
                 null,
                 n.createElement(
-                  Q,
+                  Y,
                   {
                     onClick: async () => {
                       try {
                         d(!0),
                           await l(),
-                          Le.Fm.Get().InvalidateCache(),
+                          ke.Fm.Get().InvalidateCache(),
                           d(!1),
                           i();
                       } catch (e) {
@@ -14967,40 +14965,40 @@
                       }
                     },
                   },
-                  c && n.createElement(xe.t, { size: "small" }),
+                  c && n.createElement(Ve.t, { size: "small" }),
                   (0, m.we)("#Sale_AddToLibrary_NoPlus"),
                 ),
                 n.createElement(
                   h.tH,
                   null,
                   n.createElement(
-                    He.EN,
+                    je.EN,
                     { active: r },
                     n.createElement(
-                      He.o0,
+                      je.o0,
                       {
                         strTitle: (0, m.we)("#Sale_AddedToLibrary"),
                         strDescription: (0, m.PP)(
                           "#Sale_AddToLibrary_DialogDesc",
                           n.createElement(
                             "span",
-                            { className: Ke().GameName },
+                            { className: qe().GameName },
                             a.GetName(),
                           ),
                         ),
                         closeModal: s,
                         bAlertDialog: !0,
                       },
-                      n.createElement(Je, { appid: t, storeItem: a }),
+                      n.createElement(Qe, { appid: t, storeItem: a }),
                     ),
                   ),
                 ),
               )
           : null;
       }
-      function Je(e) {
+      function Qe(e) {
         const { appid: t, storeItem: a } = e,
-          r = Te(),
+          r = Ee(),
           [i, s] = (0, n.useState)(0),
           [o, l] = (0, n.useState)(!1);
         if (W.TS.IN_CLIENT) return;
@@ -15008,7 +15006,7 @@
           m = r.data?.sessions?.filter((e) => {
             switch (e.device_type) {
               default:
-              case x.zm.k_EGamingDeviceType_StandardPC:
+              case 1:
                 {
                   const t = (function (e) {
                     switch (e) {
@@ -15233,7 +15231,7 @@
                   if (c.steamos_linux && t.includes("Linux")) return !0;
                 }
                 break;
-              case x.zm.k_EGamingDeviceType_SteamDeck:
+              case 544:
                 return c.windows || c.steamos_linux;
             }
             return !1;
@@ -15242,21 +15240,21 @@
           const e = m[i];
           return n.createElement(
             "div",
-            { className: Ke().RemoteOptions },
+            { className: qe().RemoteOptions },
             Boolean(o)
-              ? n.createElement(Ze, { session: e })
+              ? n.createElement(Xe, { session: e })
               : n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(Xe, {
+                  n.createElement(Je, {
                     rgAcceptableSession: m,
                     session: e,
                     setSessionIndex: s,
                   }),
                   n.createElement(
                     "div",
-                    { className: Ke().ActionRow },
-                    n.createElement($e, {
+                    { className: qe().ActionRow },
+                    n.createElement(Ze, {
                       appid: t,
                       session: e,
                       setRemoteDownloadRequested: l,
@@ -15267,7 +15265,7 @@
         }
         return null;
       }
-      function Xe(e) {
+      function Je(e) {
         const { rgAcceptableSession: t, session: a, setSessionIndex: r } = e;
         return n.createElement(
           n.Fragment,
@@ -15279,13 +15277,13 @@
           ),
           n.createElement(
             "div",
-            { className: Ke().ClientSelector },
+            { className: qe().ClientSelector },
             n.createElement(
               "span",
-              { className: Ke().ClientName },
+              { className: qe().ClientName },
               a.machine_name,
             ),
-            n.createElement(Ne, {
+            n.createElement(Pe, {
               rgSessions: t,
               setRemoteClientID: (e) => {
                 const a = t.findIndex((t) => t.client_instanceid === e);
@@ -15295,11 +15293,11 @@
           ),
         );
       }
-      function Ze(e) {
+      function Xe(e) {
         const { session: t } = e;
         return n.createElement(
           "div",
-          { className: Ke().DownloadStartedCtn },
+          { className: qe().DownloadStartedCtn },
           (0, m.we)("#Sale_AddToLibrary_DownloadStarted"),
           n.createElement("br", null),
           n.createElement(
@@ -15311,18 +15309,18 @@
           ),
         );
       }
-      function $e(e) {
+      function Ze(e) {
         const { appid: t, session: a, setRemoteDownloadRequested: r } = e,
           i = (function (e, t, a) {
             const r = (0, U.KV)(),
-              n = ke(e),
-              i = (0, $.LH)(),
+              n = Re(e),
+              i = (0, Z.LH)(),
               s = (0, N.jE)();
             return (0, P.n)({
               mutationFn: async () => {
-                const a = g.w.Init(pe);
+                const a = g.w.Init(ue);
                 a.Body().set_appid(e), a.Body().set_client_instanceid(t);
-                const o = await J.InstallClientApp(r, a);
+                const o = await Q.InstallClientApp(r, a);
                 if (1 != o.GetEResult())
                   throw (
                     (console.error(
@@ -15333,7 +15331,7 @@
                   );
                 const l = n?.data;
                 l && l.get(t) && l.get(t).app.SetDownloading(),
-                  s.setQueryData(Re(i, e), l),
+                  s.setQueryData(Me(i, e), l),
                   n.refetch();
               },
               onSuccess: a,
@@ -15343,30 +15341,30 @@
           n.Fragment,
           null,
           n.createElement(
-            Q,
+            Y,
             {
               onClick: () => {
                 i.mutateAsync(), r(!0);
               },
             },
-            n.createElement(Ve.f5X, null),
+            n.createElement(He.f5X, null),
             (0, m.we)("#Button_StartDownload"),
           ),
           n.createElement(
             "div",
-            { className: Ke().LearnMoreCtn },
+            { className: qe().LearnMoreCtn },
             n.createElement(
               "a",
               {
                 href: "https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409",
-                className: Ke().InlineLink,
+                className: qe().InlineLink,
               },
               (0, m.we)("#Button_Learn"),
             ),
           ),
         );
       }
-      function et(e) {
+      function $e(e) {
         const { info: t, className: a } = e,
           r = (0, n.useRef)({ include_release: !0 }),
           [u] = (0, o.G6)(t?.id, (0, s.SW)(t?.type), r.current),
@@ -15384,7 +15382,7 @@
             return n.createElement(
               "div",
               { className: a },
-              n.createElement(Qe, { appid: e }),
+              n.createElement(Ye, { appid: e }),
             );
           }
           return null;

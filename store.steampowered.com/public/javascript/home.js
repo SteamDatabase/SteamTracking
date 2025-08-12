@@ -1984,7 +1984,7 @@ GHomepage = {
 		// micro trailer
 		if ( rgItemData.microtrailer )
 		{
-			let $Video = $J( '<video class="microtrailer_video" loop muted aria-hidden=true>' ).appendTo( $ItemLink );
+			let $Video = $J( '<video class="microtrailer_video" loop muted aria-hidden=true>' ).appendTo( $ImageCapsule );
 			$Video.on( "canplay", function() {
 				$Item.addClass( "has_microtrailer" );
 			} );

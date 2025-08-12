@@ -210,6 +210,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_, 2),
@@ -2787,6 +2788,104 @@
             _,
             _,
           ]);
+        return _.useMemo(
+          () =>
+            _
+              ? {
+                  reference: _,
+                  floating: _,
+                  item: _,
+                }
+              : {},
+          [_, _, _, _],
+        );
+      }
+      const _ = new Map([
+        ["select", "listbox"],
+        ["combobox", "listbox"],
+        ["label", !1],
+      ]);
+      function _(_, _) {
+        var _;
+        void 0 === _ && (_ = {});
+        const { open: _, floatingId: _ } = _,
+          { enabled: _ = !0, role: _ = "dialog" } = _,
+          _ = null != (_ = _.get(_)) ? _ : _,
+          _ = _(),
+          _ = null != _(),
+          _ = _.useMemo(
+            () =>
+              "tooltip" === _ || "label" === _
+                ? {
+                    ["aria-" + ("label" === _ ? "labelledby" : "describedby")]:
+                      _ ? _ : void 0,
+                  }
+                : {
+                    "aria-expanded": _ ? "true" : "false",
+                    "aria-haspopup": "alertdialog" === _ ? "dialog" : _,
+                    "aria-controls": _ ? _ : void 0,
+                    ...("listbox" === _ && {
+                      role: "combobox",
+                    }),
+                    ...("menu" === _ && {
+                      _: _,
+                    }),
+                    ...("menu" === _ &&
+                      _ && {
+                        role: "menuitem",
+                      }),
+                    ...("select" === _ && {
+                      "aria-autocomplete": "none",
+                    }),
+                    ...("combobox" === _ && {
+                      "aria-autocomplete": "list",
+                    }),
+                  },
+            [_, _, _, _, _, _],
+          ),
+          _ = _.useMemo(() => {
+            const _ = {
+              _: _,
+              ...(_ && {
+                role: _,
+              }),
+            };
+            return "tooltip" === _ || "label" === _
+              ? _
+              : {
+                  ..._,
+                  ...("menu" === _ && {
+                    "aria-labelledby": _,
+                  }),
+                };
+          }, [_, _, _, _]),
+          _ = _.useCallback(
+            (_) => {
+              let { active: _, selected: _ } = _;
+              const _ = {
+                role: "option",
+                ...(_ && {
+                  _: _ + "-option",
+                }),
+              };
+              switch (_) {
+                case "select":
+                  return {
+                    ..._,
+                    "aria-selected": _ && _,
+                  };
+                case "combobox":
+                  return {
+                    ..._,
+                    ...(_ && {
+                      "aria-selected": !0,
+                    }),
+                  };
+              }
+              return {};
+            },
+            [_, _],
+          );
         return _.useMemo(
           () =>
             _

@@ -435,11 +435,11 @@ function HomeRenderSteamDeckSection( rgFeaturedSteamDeckGames )
 
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgSteamAwardDefs )
 {
-	var k_nTier1ItemsMin = 14;
-	var k_nTier1ItemsMax = 14;
+	var k_nTier1ItemsMin = 16;
+	var k_nTier1ItemsMax = 16;
 
-	var k_nTier2ItemsMin = 14;
-	var k_nTier2ItemsMax = 14;
+	var k_nTier2ItemsMin = 16;
+	var k_nTier2ItemsMax = 16;
 
 	if ( rgDisplayLists.steam_award_winners && rgSteamAwardDefs )
 	{
@@ -560,7 +560,7 @@ function HomeSaleBlock( rgItems, $Parent, strFeatureContext )
 			bFourRow = false;
 		else if ( rgRemainingItems.length == 4 )
 			bFourRow = true;
-		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bFourRow ? 4 : 3, strFeatureContext, SaleCap );
+		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, 4, strFeatureContext, SaleCap );
 		bFourRow = !bFourRow;
 	}
 	BindSaleCapAutoSizeEvents( $Parent );

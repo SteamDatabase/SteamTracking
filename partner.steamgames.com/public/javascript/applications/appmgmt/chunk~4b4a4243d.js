@@ -37,15 +37,11 @@
     23910: (e, t, a) => {
       "use strict";
       a.d(t, {
-        DU: () => i,
         I8: () => r,
         Rw: () => s,
-        Sy: () => c,
-        e5: () => u,
-        k: () => l,
-        nY: () => o,
-        rz: () => d,
-        s8: () => m,
+        e5: () => o,
+        rz: () => i,
+        s8: () => l,
         uu: () => n,
       });
       const n = [1, 2, 11, 3, 4, 10, 5, 6, 13, 14, 15, 16],
@@ -99,56 +95,8 @@
             return "--------------------";
         }
       }
-      const l = [1, 2, 3, 4, 5, 6, 8, 7, 9, 10];
-      function o(e) {
-        switch (e) {
-          case 0:
-            return "Invalid type";
-          case 1:
-            return "Owns apps";
-          case 2:
-            return "Does not own apps";
-          case 3:
-            return "Owns packages";
-          case 4:
-            return "Does not own packages";
-          case 5:
-            return "Wishlists apps";
-          case 6:
-            return "Follows apps";
-          case 8:
-            return "Launched apps";
-          case 7:
-            return "Played apps a lot";
-          case 9:
-            return "Recently played apps";
-          case 10:
-            return "Lapsed players for apps";
-        }
-        return "Unknown Type";
-      }
-      function i(e) {
-        switch (e) {
-          case 8:
-            return "Just launched the app just once";
-          case 7:
-            return "Minimum of 4 hours of playtime";
-          case 9:
-            return "Played the app within the last year";
-          case 10:
-            return "Played the app within the last year but not in the last three months";
-        }
-      }
-      function c(e) {
-        switch (e) {
-          case 3:
-          case 4:
-            return !0;
-        }
-        return !1;
-      }
-      var m;
-      function u(e, t) {
+      var l;
+      function o(e, t) {
         let a = !0;
         return (
           1 == e
@@ -170,8 +118,8 @@
             "k_EMarketingMessageFlagsPlatformLinux"),
           (e[(e.k_EMarketingMessageFlagsPlatformRestrictions = 14)] =
             "k_EMarketingMessageFlagsPlatformRestrictions");
-      })(m || (m = {}));
-      const d = {
+      })(l || (l = {}));
+      const i = {
         include_assets: !0,
         include_basic_info: !0,
         include_release: !0,
@@ -485,7 +433,7 @@
     },
     13549: (e, t, a) => {
       "use strict";
-      a.d(t, { i: () => A, q: () => w });
+      a.d(t, { i: () => D, q: () => S });
       var n = a(23910),
         r = a(65946),
         s = a(90626),
@@ -503,9 +451,9 @@
         h = a(56330),
         E = a(22797),
         I = a(61859),
-        D = a(30470),
-        v = a(26408);
-      function A(e) {
+        v = a(30470),
+        A = a(26408);
+      function D(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, r.q3)(() => [t.GetStoreItemKey()]);
         return a && "app" == a.item_type
@@ -528,7 +476,7 @@
         return s.createElement(
           "div",
           null,
-          s.createElement(w, {
+          s.createElement(S, {
             appid: u || a.id,
             selectedEventGID: i,
             fnSetUpdateEvent: t.SetUpdateEvent,
@@ -544,7 +492,7 @@
               s.createElement(
                 "a",
                 {
-                  href: `${D.TS.COMMUNITY_BASE_URL}gid/${m.ConvertTo64BitString()}/partnerevents/edit/${i}`,
+                  href: `${v.TS.COMMUNITY_BASE_URL}gid/${m.ConvertTo64BitString()}/partnerevents/edit/${i}`,
                   target: "_blank",
                 },
                 "open event for edit",
@@ -554,7 +502,7 @@
             ),
         );
       }
-      function w(e) {
+      function S(e) {
         const {
             appid: t,
             selectedEventGID: a,
@@ -562,11 +510,11 @@
             label: r,
             tooltip: p,
             strUrlLearnMore: g,
-            bFilterOutDrafts: A,
+            bFilterOutDrafts: D,
           } = e,
           b = (0, d.f1)(),
-          { clanInfo: w, bLoadingClanInfo: S } = (0, o.vF)(t),
-          P = (function (e, t) {
+          { clanInfo: S, bLoadingClanInfo: P } = (0, o.vF)(t),
+          w = (function (e, t) {
             const a = (0, c.a)(),
               n = (0, s.useMemo)(() => l.b.InitFromClanID(e), [e]),
               r = (0, u.I)({
@@ -603,10 +551,10 @@
                     ),
               [r.data, r.isLoading],
             );
-          })(w?.clanAccountID, b - 2592e3),
+          })(S?.clanAccountID, b - 2592e3),
           y = (0, s.useMemo)(
-            () => (A ? P?.filter((e) => !e.hidden) : P),
-            [P, A],
+            () => (D ? w?.filter((e) => !e.hidden) : w),
+            [w, D],
           ),
           C = (0, s.useMemo)(
             () =>
@@ -631,14 +579,14 @@
           ),
           L = y?.find((e) => e.gid === a);
         return (
-          "dev" == D.TS.WEB_UNIVERSE &&
+          "dev" == v.TS.WEB_UNIVERSE &&
             console.log(
               `AssetRequestSelectPartnerEvent: selectedEventGID=${a} === selected?.gid=${L?.gid}`,
               a,
               L,
               L?.gid,
             ),
-          y || (!S && !w?.appid)
+          y || (!P && !S?.appid)
             ? y && 0 != y.length
               ? s.createElement(
                   s.Fragment,
@@ -655,7 +603,7 @@
                     label: r,
                     tooltip: p,
                     selectedOption: L,
-                    onChange: (e) => n(w.clanAccountID, e.data.gid),
+                    onChange: (e) => n(S.clanAccountID, e.data.gid),
                     rgOptions: C,
                   }),
                 )
@@ -667,7 +615,7 @@
                     null,
                     r,
                     " ",
-                    s.createElement(v.o, { tooltip: p }),
+                    s.createElement(A.o, { tooltip: p }),
                   ),
                   s.createElement(
                     "div",
@@ -675,7 +623,7 @@
                     (0, I.oW)(
                       "#EventDropDown_NoEventFound",
                       s.createElement("a", {
-                        href: `${D.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
+                        href: `${v.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
                         target: "_blank",
                       }),
                     ),
@@ -715,12 +663,12 @@
             bIncludeRetired: h,
             bShowDLCToggle: E,
             bOnlyDLC: I,
-            bRunQueryOnLoad: D,
-            rgParentAppIDs: v,
+            bRunQueryOnLoad: v,
+            rgParentAppIDs: A,
           } = e,
-          [A, b] = s.useState(""),
-          [w, S] = s.useState(!1),
-          [P, y] = s.useState(!1),
+          [D, b] = s.useState(""),
+          [S, P] = s.useState(!1),
+          [w, y] = s.useState(!1),
           [C] = s.useState(new i.LU()),
           [L, k] = s.useState(new Array()),
           [T, M] = s.useState(new Array()),
@@ -741,9 +689,9 @@
                   break;
                 default:
                   I ? (a.includedlc = !0) : !1 === t && (a.includedlc = !1),
-                    v &&
+                    A &&
                       ((a.bfilterappids = !0),
-                      (a.rgParentAppIds = JSON.stringify(v)));
+                      (a.rgParentAppIds = JSON.stringify(A)));
               }
               const o = await r().get(s, { params: a, withCredentials: !0 });
               200 == o?.status && 1 == o.data?.success
@@ -762,11 +710,11 @@
                 : (k([]), M([]), F([])),
                 y(!1);
             },
-            [l, n, h, I, v],
+            [l, n, h, I, A],
           ),
           G = (0, s.useCallback)(
             (e) => {
-              S(e), U(B.current?.value, e);
+              P(e), U(B.current?.value, e);
             },
             [U, B],
           ),
@@ -782,7 +730,7 @@
         let H;
         switch (
           (s.useEffect(() => {
-            D && U(A);
+            v && U(D);
           }, []),
           n)
         ) {
@@ -810,14 +758,14 @@
               tooltip: g,
               placeholder: H,
               onChange: x,
-              value: A,
-              bAlwaysShowClearAction: A.length > 0,
+              value: D,
+              bAlwaysShowClearAction: D.length > 0,
               focusOnMount: f,
             }),
             O &&
               s.createElement(o.Yh, {
                 ref: R,
-                checked: w,
+                checked: S,
                 onChange: G,
                 className: d.AppSearchDLCCheckbox,
                 label: (0, m.we)("#StoreAdmin_Search_IncludeDLC"),
@@ -826,7 +774,7 @@
           s.createElement(
             "div",
             { className: d.Results },
-            P &&
+            w &&
               s.createElement(
                 "div",
                 { className: d.LoadingContainer },
@@ -954,7 +902,7 @@
     },
     71725: (e, t, a) => {
       "use strict";
-      a.d(t, { z: () => v });
+      a.d(t, { z: () => A });
       var n = a(41735),
         r = a.n(n),
         s = a(90626),
@@ -976,7 +924,7 @@
         if (
           ((0, s.useEffect)(() => {
             let e = !1;
-            const a = n ? I : D;
+            const a = n ? I : v;
             return (
               Promise.all(t.map((e) => a(e))).then((t) => {
                 e || o(t);
@@ -1025,7 +973,7 @@
           (a.onload = () => t(!0)), (a.onerror = () => t(!1)), (a.src = e);
         });
       }
-      function D(e) {
+      function v(e) {
         return new Promise((t) => {
           const a = document.createElement("video");
           (a.preload = "metadata"),
@@ -1034,7 +982,7 @@
             (a.src = e);
         });
       }
-      function v(e) {
+      function A(e) {
         const {
             rgAssetLangs: t,
             initialLang: a,
@@ -1053,7 +1001,7 @@
           const e = n(g);
           e ? h(e) : I.length > 0 ? _(I[0]) : h(null);
         }, [g, n, I]);
-        const D = (0, s.useMemo)(() => t.map((e) => n(e)), [n, t]);
+        const v = (0, s.useMemo)(() => t.map((e) => n(e)), [n, t]);
         return s.createElement(
           "div",
           { className: u().UploadedImageDisplayCtn },
@@ -1077,7 +1025,7 @@
                 "div",
                 { className: u().LangSelectCtn },
                 I.map((e) =>
-                  s.createElement(A, {
+                  s.createElement(D, {
                     key: e,
                     language: e,
                     selectedLanguage: g,
@@ -1100,12 +1048,12 @@
                   (0, p.we)("#Button_DeleteAll"),
                 ),
               Boolean(m) &&
-                s.createElement(E, { rgAssetURL: D, rgLang: t, bIsImage: !d }),
+                s.createElement(E, { rgAssetURL: v, rgLang: t, bIsImage: !d }),
             ),
           ),
         );
       }
-      function A(e) {
+      function D(e) {
         const {
             language: t,
             selectedLanguage: a,
@@ -1150,9 +1098,9 @@
           );
         const n = (0, i.yh)(t);
         return o.Ho.includes(n)
-          ? s.createElement(w, { ...e })
+          ? s.createElement(S, { ...e })
           : o.x.includes(n)
-            ? s.createElement(S, {
+            ? s.createElement(P, {
                 className: a || _().ArtPreview,
                 strTextURL: t,
               })
@@ -1161,7 +1109,7 @@
                 src: t,
               });
       }
-      function w(e) {
+      function S(e) {
         const { curAssetURL: t, imageClassname: a } = e,
           n = s.useRef(void 0);
         return (
@@ -1182,7 +1130,7 @@
           )
         );
       }
-      function S(e) {
+      function P(e) {
         const { strTextURL: t, className: a } = e,
           [n, l] = s.useState("");
         return (
@@ -1235,7 +1183,7 @@
     },
     24655: (e, t, a) => {
       "use strict";
-      a.d(t, { hA: () => v, ux: () => A });
+      a.d(t, { hA: () => A, ux: () => D });
       var n = a(90626),
         r = a(76217),
         s = a(12493),
@@ -1260,20 +1208,20 @@
         h = a(22797),
         E = a(56524),
         I = a(2193),
-        D = a(95695);
-      function v(e) {
+        v = a(95695);
+      function A(e) {
         const {
             creatorID: t,
             bShowTagline: a,
             bHideCreatorType: o,
             bSmallFormat: m,
-            bHideFollowButton: v,
-            bAddLinkToMemberList: A,
+            bHideFollowButton: A,
+            bAddLinkToMemberList: D,
             bMinimalDisplay: b,
           } = e,
-          w = (0, s.FV)(t.clan_account_id),
-          [S] = (0, l.L2)();
-        if (S || !w)
+          S = (0, s.FV)(t.clan_account_id),
+          [P] = (0, l.L2)();
+        if (P || !S)
           return n.createElement(
             "div",
             { className: E.DevSummaryWidgetCtn },
@@ -1283,15 +1231,15 @@
               position: "center",
             }),
           );
-        const P = t.type,
+        const w = t.type,
           y =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          C = w.GetCreatorHomeURL(P),
-          L = w.GetNumFollowers();
+          C = S.GetCreatorHomeURL(w),
+          L = S.GetNumFollowers();
         return n.createElement(
           _.tH,
           null,
@@ -1315,7 +1263,7 @@
                 n.createElement("div", {
                   className: E.DevSummaryBackground,
                   style: {
-                    backgroundImage: `url(${w.GetAvatarURLFullSize()} )`,
+                    backgroundImage: `url(${S.GetAvatarURLFullSize()} )`,
                   },
                 }),
                 n.createElement(
@@ -1323,7 +1271,7 @@
                   { className: (0, u.A)(E.DevSummaryContent) },
                   n.createElement(
                     "div",
-                    { className: D.FlexRowContainer },
+                    { className: v.FlexRowContainer },
                     n.createElement(
                       c,
                       {
@@ -1333,14 +1281,14 @@
                       },
                       n.createElement("img", {
                         className: (0, u.A)(E.Avatar, "Avatar_Trgt"),
-                        src: w.GetAvatarURLFullSize(),
+                        src: S.GetAvatarURLFullSize(),
                       }),
                     ),
                     n.createElement(
                       "div",
                       {
                         className: (0, u.A)(
-                          D.FlexColumnContainer,
+                          v.FlexColumnContainer,
                           E.CreatorDescCtn,
                         ),
                       },
@@ -1349,39 +1297,39 @@
                         {
                           className: (0, u.A)(
                             E.CreatorTitleCtn,
-                            D.FlexColumnContainer,
+                            v.FlexColumnContainer,
                           ),
                         },
                         n.createElement(
                           c,
                           { href: (0, g.k2)(C), className: E.CreatorNameName },
-                          w.GetName(),
+                          S.GetName(),
                         ),
                         Boolean(a) &&
                           n.createElement(
                             "div",
                             {
                               className: (0, u.A)(
-                                D.FlexColumnContainer,
+                                v.FlexColumnContainer,
                                 E.CreatorTagline,
                               ),
                             },
-                            w.GetTagLine(),
+                            S.GetTagLine(),
                           ),
                       ),
                       n.createElement(
                         "div",
                         {
                           className: (0, u.A)({
-                            [D.FlexColumnContainer]: m,
-                            [D.FlexRowContainer]: !m,
+                            [v.FlexColumnContainer]: m,
+                            [v.FlexRowContainer]: !m,
                             [E.SocialFollowersCtn]: !0,
                           }),
                         },
                         n.createElement(
                           "div",
                           { className: (0, u.A)(E.FollowBtnCtn) },
-                          Boolean(!v) &&
+                          Boolean(!A) &&
                             n.createElement(I.of, {
                               clanAccountID: t.clan_account_id,
                               creatorID: t,
@@ -1397,14 +1345,14 @@
                       ),
                     ),
                   ),
-                  Boolean(A) &&
+                  Boolean(D) &&
                     n.createElement(
                       "a",
                       {
                         href:
                           i.TS.COMMUNITY_BASE_URL +
                           "gid/" +
-                          w.GetClanSteamID().ConvertTo64BitString() +
+                          S.GetClanSteamID().ConvertTo64BitString() +
                           "/members/",
                         target: "_blank",
                         className: E.MembersListLink,
@@ -1417,7 +1365,7 @@
           ),
         );
       }
-      function A(e) {
+      function D(e) {
         const { clanInfo: t, bAddLinkToMemberList: a } = e;
         if (
           ((0, m.wT)(
@@ -1435,7 +1383,7 @@
         return n.createElement(
           "div",
           { className: E.CuratorHoverCtn },
-          n.createElement(v, {
+          n.createElement(A, {
             creatorID: r,
             bSmallFormat: !0,
             bShowTagline: !0,

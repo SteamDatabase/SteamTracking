@@ -7,6 +7,7 @@
     35111: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         BannerContainer: "_29jK3MyNRDW7PAcrm59l_O",
         BannerHeader: "_3yxJH3baj7mwTTYzBIyi_Z",
         BannerContentDesktop: "Cek1s5Ixk2xYmkqjjESD0",

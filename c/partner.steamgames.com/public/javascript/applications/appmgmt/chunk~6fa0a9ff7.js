@@ -28,11 +28,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -339,6 +339,26 @@
           }
         );
       }
+      const _ = _.createContext(void 0);
+      function _(_) {
+        const { table: _, setColumnSizeOverride: __webpack_require__ } = _,
+          _ = (0, _.useRef)(_);
+        _.current = _;
+        const _ = (0, _.useMemo)(
+          () => ({
+            table: _.current,
+            setColumnSizeOverride: __webpack_require__,
+          }),
+          [__webpack_require__],
+        );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.children,
+        );
+      }
       const _ = _.forwardRef(function (_, _) {
         const {
             data: __webpack_require__,
@@ -360,8 +380,10 @@
             onGroupingChange: _,
             onVisibleRowsChange: _,
             renderGroup: _,
+            virtualizeType: _ = "element",
           } = _,
           _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)({}),
           [_, _] = (0, _.useState)({}),
           _ = _.map((_) =>
             "accessorKey" in _
@@ -371,6 +393,17 @@
                 }
               : _,
           ),
+          _ = _.map((_) => {
+            let _ = _[_._];
+            return (
+              void 0 === _ && "accessorKey" in _ && (_ = _[_.accessorKey]),
+              (_ ??= _.size),
+              {
+                ..._,
+                size: _,
+              }
+            );
+          }),
           _ = (0, _._)({
             data: __webpack_require__,
             columns: _,
@@ -404,12 +437,17 @@
         const _ = (0, _._)({
             count: _.length,
             scrollMargin: _,
-            getScrollElement: _.useCallback(() => _.current, []),
+            getScrollElement: _.useCallback(
+              () => ("element" === _ ? _.current : window),
+              [_],
+            ),
+            scrollToFn: (_, _, _) =>
+              "window" === _ ? (0, _._)(_, _, _) : (0, _._)(_, _, _),
             estimateSize: _.useCallback(() => _, [_]),
             overscan: _,
             initialRect: void 0,
             observeElementOffset: _,
-            observeElementRect: _,
+            observeElementRect: (_, _) => ("window" === _ ? _(_, _) : _(_, _)),
           }),
           _ = (0, _.useRef)(0),
           _ = _.useMemo(() => {
@@ -436,7 +474,12 @@
             count: _[0]?.getVisibleCells().length ?? 0,
             overscan: 6,
             horizontal: !0,
-            getScrollElement: () => _.current,
+            getScrollElement: _.useCallback(
+              () => ("element" === _ ? _.current : window),
+              [_],
+            ),
+            scrollToFn: (_, _, _) =>
+              "window" === _ ? (0, _._)(_, _, _) : (0, _._)(_, _, _),
             rangeExtractor(_) {
               const _ = _[0]?.getVisibleCells() ?? [],
                 _ = new Set((0, _._)(_));
@@ -448,7 +491,7 @@
               );
             },
             observeElementOffset: _,
-            observeElementRect: _,
+            observeElementRect: (_, _) => ("window" === _ ? _(_, _) : _(_, _)),
           });
         (0, _.useEffect)(() => {
           _.measure();
@@ -484,7 +527,7 @@
             ],
           );
         const _ = (0, _.useRef)(null),
-          _ = _ ? _ : 0;
+          _ = _ ? (_ ?? 0) : 0;
         let _ = 0;
         const _ = _[0]?.getVisibleCells(),
           _ = _.getVirtualItems(),
@@ -494,52 +537,59 @@
           _?.column.getIsPinned() && (_ += _.size);
         }
         return _.createElement(
-          "div",
+          _,
           {
-            className: _,
-            ref: _,
-            style: {
-              width: _,
-              height: _,
-              overflow: "auto",
-              maxWidth: "fit-content",
-              scrollPadding: `${_}px 0 0 ${_}px`,
-            },
+            table: _,
+            setColumnSizeOverride: _,
           },
           _.createElement(
             "div",
             {
-              role: "table",
+              className: _,
               ref: _,
-              "aria-rowcount": __webpack_require__.length,
               style: {
-                minHeight: _,
-                width: _.getTotalSize(),
-                "--virtualPos": `${_}px`,
-                ..._,
+                width: _,
+                height: _,
+                overflow: "element" === _ ? "auto" : void 0,
+                maxWidth: "fit-content",
+                scrollPadding: `${_}px 0 0 ${_}px`,
               },
             },
-            _.getHeaderGroups().map((_) =>
-              _.createElement(_, {
-                key: _._,
-                group: _,
-                sticky: _,
-                nHeaderHeight: _,
-              }),
-            ),
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.key,
-                row: _[_.index],
-                size: _.size,
-                rowVirtualizer: _,
-                index: _.index,
-                measureRef: _.measureElement,
-                scrollContainerRef: _,
-                nItemHeight: _,
-                renderGroup: _,
-                rowEnd: _,
-              }),
+            _.createElement(
+              "div",
+              {
+                role: "table",
+                ref: _,
+                "aria-rowcount": __webpack_require__.length,
+                style: {
+                  minHeight: _,
+                  width: _.getTotalSize(),
+                  "--virtualPos": `${_}px`,
+                  ..._,
+                },
+              },
+              _.getHeaderGroups().map((_) =>
+                _.createElement(_, {
+                  key: _._,
+                  group: _,
+                  sticky: _,
+                  nHeaderHeight: _,
+                }),
+              ),
+              _.map((_) =>
+                _.createElement(_, {
+                  key: _.key,
+                  row: _[_.index],
+                  size: _.size,
+                  rowVirtualizer: _,
+                  index: _.index,
+                  measureRef: _.measureElement,
+                  scrollContainerRef: _,
+                  nItemHeight: _,
+                  renderGroup: _,
+                  rowEnd: _,
+                }),
+              ),
             ),
           ),
         );
@@ -558,7 +608,7 @@
           left: "left" === _ ? `${_.getStart("left")}px` : void 0,
           right: "right" === _ ? `${_.getAfter("right")}px` : void 0,
           position: _ ? "sticky" : "relative",
-          width: _.getSize(),
+          minWidth: _.getSize(),
           zIndex: _ ? 1 : 0,
         };
       }
@@ -589,54 +639,15 @@
                 (_.onClick = _.column.getToggleSortingHandler())),
               _.column.columnDef.meta?.strHeaderTooltip &&
                 (_.title = _.column.columnDef.meta?.strHeaderTooltip),
-              _.createElement(
-                _,
-                {
-                  role: "columnheader",
-                  key: _._,
-                  "data-pinned": !!_.column.getIsPinned(),
-                  className: _()(
-                    _().ColumnHeader,
-                    "button" === _ && _().SortButton,
-                    _.column.columnDef.meta?.headerClassname,
-                  ),
-                  style: {
-                    width: `var(--header-${_._}-size)`,
-                    height: void 0 !== _ ? `${_}px` : void 0,
-                    ..._(_.column),
-                  },
-                  ..._,
-                },
-                _?.column.getCanResize() &&
-                  _.createElement("div", {
-                    role: "presentation",
-                    onDoubleClick: () => _.column.resetSize(),
-                    onMouseDown: _.getResizeHandler(),
-                    onTouchStart: _.getResizeHandler(),
-                    onClick: (_) => _.stopPropagation(),
-                    className: _()(_().ResizeHandle, _().PrevResizeHandle),
-                  }),
-                _.isPlaceholder
-                  ? null
-                  : (0, _._)(_.column.columnDef.header, _.getContext()),
-                _ &&
-                  !_.column.columnDef.meta?.bDisableSortButton &&
-                  _.createElement("div", {
-                    className: _().SortIndicator,
-                  }),
-                _.column.getCanResize() &&
-                  _.createElement("div", {
-                    role: "presentation",
-                    onDoubleClick: () => _.column.resetSize(),
-                    onMouseDown: _.getResizeHandler(),
-                    onTouchStart: _.getResizeHandler(),
-                    onClick: (_) => _.stopPropagation(),
-                    className: _()(
-                      _().ResizeHandle,
-                      _.column.getIsResizing() && _().IsResizing,
-                    ),
-                  }),
-              )
+              _.createElement(_, {
+                key: _._,
+                header: _,
+                prevHeader: _,
+                HeaderElement: _,
+                nHeaderHeight: _,
+                sortDirection: _,
+                conditionalProps: _,
+              })
             );
           }),
         );
@@ -708,30 +719,147 @@
               _ = _.column.getIsPinned();
             return (
               _ ? (_ += _.size) : void 0 === _ && (_ = _.start),
-              _.createElement(
-                "div",
-                {
-                  className: _()(
-                    _().FancyTableCell,
-                    _.column.columnDef.meta?.cellClassname,
-                  ),
-                  key: _._,
-                  "data-index": _.index,
-                  "data-table-column-id": _.column._,
-                  ref: __webpack_require__.measureElement,
-                  style: {
-                    width: `var(--col-${_.column._}-size)`,
-                    transform: _ ? void 0 : `translateX(${_ - _}px)`,
-                    ..._(_.column),
-                  },
-                },
-                _.createElement(_, {
-                  CellComponent: _.column.columnDef.cell,
-                  context: _.getContext(),
-                }),
-              )
+              _.createElement(_, {
+                cell: _,
+                key: _._,
+                rowVirtualizer: __webpack_require__,
+                index: _.index,
+                transform: _ ? void 0 : `translateX(${_ - _}px)`,
+              })
             );
           }),
+        );
+      }
+      function _(_, _) {
+        const _ = (0, _.useContext)(_),
+          _ = _.columnDef.meta?.bGrowToFit,
+          _ = _._,
+          _ = _ ? _.getSize() : 0,
+          _ = _.getIsSorted();
+        (0, _.useLayoutEffect)(() => {
+          if (!_) return;
+          if (!_.current) return;
+          const _ = _.current?.scrollWidth;
+          if (!_) return;
+          const _ = _.current.getBoundingClientRect().width,
+            _ = window.getComputedStyle(_.current);
+          let _ = _;
+          if (_ > _) {
+            if (_.paddingLeft) {
+              let _ = parseInt(_.paddingLeft);
+              isNaN(_) || (_ += _);
+            }
+            if (_.paddingRight) {
+              let _ = parseInt(_.paddingRight);
+              isNaN(_) || (_ += _);
+            }
+          }
+          _ > _ &&
+            __webpack_require__.setColumnSizeOverride((_) =>
+              _[_] > _
+                ? _
+                : {
+                    ..._,
+                    [_]: _,
+                  },
+            );
+        }, [_, _, _, _, _, _]);
+      }
+      function _(_) {
+        const {
+            header: _,
+            prevHeader: __webpack_require__,
+            HeaderElement: _,
+            nHeaderHeight: _,
+            sortDirection: _,
+            conditionalProps: _,
+          } = _,
+          _ = (0, _.useRef)(null);
+        return (
+          _(_.column, _),
+          _.createElement(
+            _,
+            {
+              role: "columnheader",
+              key: _._,
+              ref: _,
+              "data-pinned": !!_.column.getIsPinned(),
+              className: _()(
+                _().ColumnHeader,
+                "button" === _ && _().SortButton,
+                _.column.columnDef.meta?.headerClassname,
+              ),
+              style: {
+                width: `var(--header-${_._}-size)`,
+                height: void 0 !== _ ? `${_}px` : void 0,
+                ..._(_.column),
+              },
+              ..._,
+            },
+            __webpack_require__?.column.getCanResize() &&
+              _.createElement("div", {
+                role: "presentation",
+                onDoubleClick: () => __webpack_require__.column.resetSize(),
+                onMouseDown: __webpack_require__.getResizeHandler(),
+                onTouchStart: __webpack_require__.getResizeHandler(),
+                onClick: (_) => _.stopPropagation(),
+                className: _()(_().ResizeHandle, _().PrevResizeHandle),
+              }),
+            _.isPlaceholder
+              ? null
+              : (0, _._)(_.column.columnDef.header, _.getContext()),
+            _ &&
+              !_.column.columnDef.meta?.bDisableSortButton &&
+              _.createElement("div", {
+                className: _().SortIndicator,
+              }),
+            _.column.getCanResize() &&
+              _.createElement("div", {
+                role: "presentation",
+                onDoubleClick: () => _.column.resetSize(),
+                onMouseDown: _.getResizeHandler(),
+                onTouchStart: _.getResizeHandler(),
+                onClick: (_) => _.stopPropagation(),
+                className: _()(
+                  _().ResizeHandle,
+                  _.column.getIsResizing() && _().IsResizing,
+                ),
+              }),
+          )
+        );
+      }
+      function _(_) {
+        const {
+            cell: _,
+            rowVirtualizer: __webpack_require__,
+            index: _,
+            transform: _,
+          } = _,
+          _ = _.useRef(null),
+          _ = (0, _._)(_, __webpack_require__.measure);
+        return (
+          _(_.column, _),
+          _.createElement(
+            "div",
+            {
+              className: _()(
+                _().FancyTableCell,
+                _.column.columnDef.meta?.cellClassname,
+              ),
+              "data-index": _,
+              "data-table-column-id": _.column._,
+              ref: _,
+              style: {
+                width: `var(--col-${_.column._}-size)`,
+                transform: _,
+                ..._(_.column),
+              },
+            },
+            _.createElement(_, {
+              CellComponent: _.column.columnDef.cell,
+              context: _.getContext(),
+            }),
+          )
         );
       }
       const _ = _.memo(

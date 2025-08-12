@@ -2612,7 +2612,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       const _ = 1,
         _ = 4;
@@ -2850,7 +2849,7 @@
         }
         return !1;
       }
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -2945,25 +2944,6 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (_[(_.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (_[(_.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (_[(_.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -21956,7 +21936,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "/react-waypoint/",
+          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
         ];
       function _() {
         try {
@@ -29249,6 +29229,7 @@
         FId: () => _,
         Gj3: () => _,
         JPq: () => _,
+        K6w: () => _,
         Kz1: () => _,
         LSz: () => _,
         MGO: () => _,
@@ -29263,6 +29244,7 @@
         _V3: () => _,
         b8_: () => _,
         bmT: () => _,
+        dWO: () => _,
         ffu: () => _,
         glU: () => _,
         i3G: () => _,
@@ -29277,6 +29259,7 @@
         lrM: () => _,
         _: () => _,
         pcV: () => _,
+        q8c: () => _,
         qOW: () => _,
         qzO: () => _,
         r7n: () => _,
@@ -30638,6 +30621,132 @@
               _: "M14.232 31.152a8.408 8.408 0 0 1-7.767-5.193 8.427 8.427 0 0 1 1.81-9.172l1.632-1.623a1.784 1.784 0 0 1 2.518 2.527l-1.62 1.618a4.854 4.854 0 0 0 3.427 8.282 4.845 4.845 0 0 0 3.427-1.42l1.622-1.624a1.782 1.782 0 0 1 2.525 2.515l-1.627 1.64a8.376 8.376 0 0 1-5.947 2.45Zm15.41-11.923a8.428 8.428 0 0 0 0-11.914 8.413 8.413 0 0 0-11.903 0L16.116 8.95a1.784 1.784 0 0 0 2.53 2.516l1.613-1.62a4.845 4.845 0 0 1 8.275 3.43 4.855 4.855 0 0 1-1.42 3.431l-1.62 1.618a1.784 1.784 0 0 0 2.518 2.527l1.63-1.623Zm-6.813-2.563a1.782 1.782 0 0 0-2.522-2.52l-5.493 5.498a1.782 1.782 0 0 0 2.522 2.52l5.493-5.498Z",
             }),
           ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "2",
+            _: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "2",
+            _: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "2",
+            _: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "8",
+            _: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "4",
+            _: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "12",
+            _: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          _.createElement("rect", {
+            _: "2",
+            _: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "5",
+            _: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "3",
+            _: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          _.createElement("rect", {
+            _: "7",
+            _: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
         );
       }
       function _() {

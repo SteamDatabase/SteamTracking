@@ -43,10 +43,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       const _ = [1, 2, 11, 3, 4, 10, 5, 6, 13, 14, 15, 16],
         _ = [
@@ -98,54 +94,6 @@
           default:
             return "--------------------";
         }
-      }
-      const _ = [1, 2, 3, 4, 5, 6, 8, 7, 9, 10];
-      function _(_) {
-        switch (_) {
-          case 0:
-            return "Invalid type";
-          case 1:
-            return "Owns apps";
-          case 2:
-            return "Does not own apps";
-          case 3:
-            return "Owns packages";
-          case 4:
-            return "Does not own packages";
-          case 5:
-            return "Wishlists apps";
-          case 6:
-            return "Follows apps";
-          case 8:
-            return "Launched apps";
-          case 7:
-            return "Played apps a lot";
-          case 9:
-            return "Recently played apps";
-          case 10:
-            return "Lapsed players for apps";
-        }
-        return "Unknown Type";
-      }
-      function _(_) {
-        switch (_) {
-          case 8:
-            return "Just launched the app just once";
-          case 7:
-            return "Minimum of 4 hours of playtime";
-          case 9:
-            return "Played the app within the last year";
-          case 10:
-            return "Played the app within the last year but not in the last three months";
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case 3:
-          case 4:
-            return !0;
-        }
-        return !1;
       }
       var _;
       function _(_, _) {

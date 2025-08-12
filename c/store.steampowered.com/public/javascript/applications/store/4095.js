@@ -25,6 +25,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         BannerContainer: "_29jK3MyNRDW7PAcrm59l_O",
         BannerHeader: "_3yxJH3baj7mwTTYzBIyi_Z",
         BannerContentDesktop: "Cek1s5Ixk2xYmkqjjESD0",
@@ -9791,34 +9792,30 @@
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
         return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function _(_, _ = 0, __webpack_require__ = !0) {
+      function _(_, _ = 0) {
         let _ = _.lastIndexOf(".");
         -1 != _ && (_ = _.slice(0, _).toLowerCase());
         let _ = null,
           _ = 0;
         _.endsWith("korean") && ((_ = 4), (_ = 6));
-        const _ = (_) => _.replace(/[\s_-]+$/g, "");
         for (let _ = 0; _ < 31; ++_) {
           const _ = (0, _._)(_);
           if (_.length <= _) continue;
-          if (_.endsWith(_)) {
-            let _ = !__webpack_require__;
-            if (__webpack_require__ && _.length > _.length + 2) {
-              const _ = _[_.length - _.length - 1];
-              _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
-            }
-            _ && ((_ = _), (_ = _.length));
+          if (_.endsWith(_) && _.length > _.length + 2) {
+            const _ = _[_.length - _.length - 1];
+            /\p{Alphabetic}|\p{Number}/u.test(_) || ((_ = _), (_ = _.length));
           }
           const _ = (0, _._)(_);
-          _.length <= _ ||
-            (_.endsWith(_) &&
-              _(_.substring(0, _.length - _.length)).length > 0 &&
-              ((_ = _), (_ = _.length)));
+          _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
         }
         return {
           language: _ ?? _,
-          baseFilename: _ > 0 ? _(_.substring(0, _.length - _)) : _,
+          baseFilename:
+            _ > 0
+              ? ((_ = _.substring(0, _.length - _)), _.replace(/[\s_-]+$/g, ""))
+              : _,
         };
+        var _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -16602,7 +16599,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, ...__webpack_require__ } = _;
@@ -16676,9 +16672,9 @@
                 "#GamesList_Client_Indicator",
                 (function (_) {
                   switch (_) {
-                    case _._.k_EGamingDeviceType_StandardPC:
+                    case 1:
                       return (0, _._)("#Library_DeviceType_PC");
-                    case _._.k_EGamingDeviceType_SteamDeck:
+                    case 544:
                       return (0, _._)("#Library_DeviceType_SteamDeck");
                     default:
                       return;
@@ -16798,7 +16794,7 @@
           _ = _.data?.sessions?.filter((_) => {
             switch (_.device_type) {
               default:
-              case _._.k_EGamingDeviceType_StandardPC:
+              case 1:
                 {
                   const _ = (0, _._)(_.os_type);
                   if (_.windows && _.includes("Windows")) return !0;
@@ -16806,7 +16802,7 @@
                   if (_.steamos_linux && _.includes("Linux")) return !0;
                 }
                 break;
-              case _._.k_EGamingDeviceType_SteamDeck:
+              case 544:
                 return _.windows || _.steamos_linux;
             }
             return !1;

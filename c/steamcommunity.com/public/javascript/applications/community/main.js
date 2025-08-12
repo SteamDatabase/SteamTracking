@@ -127,9 +127,12 @@
     },
     chunkid: (module) => {
       module.exports = {
-        PlaceholderOption: "_3HRZ9PwD1FEyggK0KYanvB",
+        ContentReportDialog: "_1nRygtq_ihqZUjZS4TYN8n",
+        BlockList: "_26Mh3pOoHvN94uQqD5U12q",
+        BlockListItem: "_2tqpD1Hr0c3LCAUSe4r3Yp",
+        BottomButtons: "_2g3WvB3F6WH2CPUBwVzny3",
+        ReportAs: "_22Uov0GdUIzithIQM81W9o",
         DetailedReasonTextArea: "_1PUlL2I2RWFcIXXAWteNhd",
-        ReasonSelect: "_36lsCwQAUWgi5eljcRNPfM",
       };
     },
     chunkid: (module) => {
@@ -2347,46 +2350,10 @@
             : _
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          active: _,
-          onOK: __webpack_require__,
-          closeModal: _,
-          bCloseOnOK: _,
-          children: _,
-          ..._
-        } = _;
-        if (!_) return null;
-        const _ =
-          ("string" == typeof _.strTitle && _.strTitle) ||
-          (0, _._)("#Steam_Platform");
-        return _.createElement(
-          _._,
-          {
-            onlyPopoutIfNeeded: !0,
-            popupHeight: 340,
-            popupWidth: 640,
-            strTitle: _,
-          },
-          _.createElement(
-            _._,
-            {
-              ..._,
-              onCancel: _,
-              onOK: () => {
-                __webpack_require__(), _ && _();
-              },
-            },
-            _,
-          ),
-        );
-      }
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -6581,160 +6548,6 @@
           return "CContentModeration_GetContentReportSubjectGroup_Response";
         }
       }
-      function _(_) {
-        const _ = (function (_, _, _, _) {
-            const _ = (0, _._)();
-            return (0, _._)({
-              mutationKey: ["report_forum_post", _, _, _, _],
-              mutationFn: async (_) => {
-                const _ = _._.Init(_);
-                _.Body().set_steamid(_),
-                  _.Body().set_gidforum(_),
-                  _.Body().set_gidtopic(_),
-                  _.Body().set_gidcomment(_),
-                  _.Body().set_report(_.text),
-                  _.Body().set_report_reason(_.reason);
-                const _ = await _.ReportPost(_, _);
-                if (1 !== _.GetEResult()) throw new Error(_.GetErrorMessage());
-              },
-            });
-          })(_.clanSteamId, _.gidForum, _.gidTopic, _.gidComment),
-          [__webpack_require__, _] = (0, _.useState)(!1);
-        return (
-          (0, _.useEffect)(() => {
-            document.getElementById(_.anchorId).onclick = () => _(!0);
-          }),
-          _.createElement(_, {
-            reportSubjectMutation: _,
-            subjectType: 1,
-            subjectGroupId: _.gidTopic,
-            subjectId: _.gidComment,
-            showDialog: __webpack_require__,
-            setShowDialog: _,
-          })
-        );
-      }
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(0),
-          [_, _] = (0, _.useState)("submit"),
-          _ = (0, _.useRef)(void 0),
-          _ = _.reportSubjectMutation,
-          _ = [1, 2],
-          _ = [
-            {
-              label: (0, _._)("#ReportContent_PickAReason"),
-              data: 0,
-            },
-          ];
-        for (const _ of _) {
-          if (_.excludedReasons && _.excludedReasons.has(_)) continue;
-          const _ = {
-              name: "Unknown",
-              description: "Unknown",
-            },
-            _ = (0, _._)(
-              "#ContentReportReason_NameColonDescription",
-              _.name,
-              _.description,
-            );
-          _.push({
-            label: _,
-            data: _,
-          });
-        }
-        const _ = () => {
-          _("submit"), _.setShowDialog(!1), window.location.reload();
-        };
-        return _.createElement(
-          _.Fragment,
-          null,
-          "submit" === _ &&
-            _.createElement(
-              _,
-              {
-                active: _.showDialog,
-                bCloseOnOK: !1,
-                closeModal: () => _.setShowDialog(!1),
-                bOKDisabled: 0 === _,
-                strTitle: (0, _._)("#ReportContent_Title"),
-                strDescription: (0, _._)("#ReportContent_Description"),
-                strOKButtonText: (0, _._)("#ReportContent_ReportButton"),
-                onOK: async () => {
-                  var _, _;
-                  const _ =
-                      null !==
-                        (_ =
-                          null === (_ = _.current) || void 0 === _
-                            ? void 0
-                            : _.value) && void 0 !== _
-                        ? _
-                        : "",
-                    _ = {
-                      reason: _,
-                      text: _,
-                    };
-                  _.mutateAsync(_)
-                    .catch(() => _("error"))
-                    .then(() => _("submitted"));
-                },
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().ReasonSelect,
-                },
-                _.createElement(_._, {
-                  rgOptions: _,
-                  onChange: (_) => {
-                    var _;
-                    return __webpack_require__(
-                      null !== (_ = null == _ ? void 0 : _.data) && void 0 !== _
-                        ? _
-                        : 0,
-                    );
-                  },
-                  selectedOption: 0,
-                }),
-              ),
-              0 !== _ &&
-                _.createElement(
-                  "div",
-                  null,
-                  _.createElement(_._, {
-                    ref: _,
-                    className: (0, _._)(
-                      _().BasicTextInput,
-                      _().Textarea,
-                      _().DetailedReasonTextArea,
-                    ),
-                    placeholder: (0, _._)("#ReportContent_DetailsPlaceholder"),
-                  }),
-                ),
-            ),
-          "submitted" === _ &&
-            _.createElement(_, {
-              active: _.showDialog,
-              bCloseOnOK: !0,
-              closeModal: _,
-              bAlertDialog: !0,
-              strTitle: (0, _._)("#ContentReportSubmitted_Title"),
-              strDescription: (0, _._)("#ContentReportSubmitted_Description"),
-              onOK: _,
-            }),
-          "error" === _ &&
-            _.createElement(_, {
-              active: _.showDialog,
-              bCloseOnOK: !0,
-              closeModal: _,
-              bAlertDialog: !0,
-              strTitle: (0, _._)("#ContentReportSubmissionError_Title"),
-              strDescription: (0, _._)(
-                "#ContentReportSubmissionError_Description",
-              ),
-              onOK: _,
-            }),
-        );
-      }
       !(function (_) {
         (_.CreateContentReport = function (_, _) {
           return _.SendMsg(
@@ -6918,6 +6731,463 @@
             );
           });
       })(_ || (_ = {}));
+      const _ = new Map();
+      function _(_) {
+        switch (_) {
+          case 0:
+            return (0, _._)("#ContentReportReason_Invalid");
+          case 1:
+            return (0, _._)("#ContentReportReason_None");
+          case 2:
+            return (0, _._)("#ContentReportReason_Unknown");
+          case 3:
+            return (0, _._)("#ContentReportReason_Harassment");
+          case 4:
+            return (0, _._)("#ContentReportReason_BullyingAndIntimidation");
+          case 5:
+            return (0, _._)("#ContentReportReason_Stalking");
+          case 6:
+            return (0, _._)("#ContentReportReason_Doxxing");
+          case 7:
+            return (0, _._)("#ContentReportReason_OtherHarassment");
+          case 8:
+            return (0, _._)("#ContentReportReason_EncouragingViolence");
+          case 9:
+            return (0, _._)("#ContentReportReason_EncouragingSelfHarm");
+          case 10:
+            return (0, _._)("#ContentReportReason_EncouragingSuicide");
+          case 11:
+            return (0, _._)("#ContentReportReason_OtherViolenceOrSelfHarm");
+          case 12:
+            return (0, _._)("#ContentReportReason_PhishingOrAccountTheft");
+          case 13:
+            return (0, _._)("#ContentReportReason_AttemptedScamming");
+          case 14:
+            return (0, _._)("#ContentReportReason_LinkingToMaliciousContent");
+          case 15:
+            return (0, _._)("#ContentReportReason_Impersonation");
+          case 16:
+            return (0, _._)("#ContentReportReason_OtherScamsAndTheft");
+          case 17:
+            return (0, _._)("#ContentReportReason_EncouragingTerrorism");
+          case 18:
+            return (0, _._)("#ContentReportReason_OrganizingTerrorism");
+          case 19:
+            return (0, _._)("#ContentReportReason_OtherTerrorism");
+          case 20:
+            return (0, _._)("#ContentReportReason_TargetedAbuse");
+          case 21:
+            return (0, _._)("#ContentReportReason_NamingAndShaming");
+          case 22:
+            return (0, _._)("#ContentReportReason_Discrimination");
+          case 23:
+            return (0, _._)("#ContentReportReason_OtherAbuse");
+          case 24:
+            return (0, _._)("#ContentReportReason_Trolling");
+          case 25:
+            return (0, _._)("#ContentReportReason_Baiting");
+          case 26:
+            return (0, _._)("#ContentReportReason_Derailing");
+          case 27:
+            return (0, _._)("#ContentReportReason_OtherDisruptive");
+          case 28:
+            return (0, _._)("#ContentReportReason_Spam");
+          case 29:
+            return (0, _._)("#ContentReportReason_Begging");
+          case 30:
+            return (0, _._)("#ContentReportReason_Reposting");
+          case 31:
+            return (0, _._)("#ContentReportReason_OtherOffTopic");
+          case 32:
+            return (0, _._)("#ContentReportReason_CSAMSexualContent");
+          case 33:
+            return (0, _._)("#ContentReportReason_CSAMGroomingOrEnticement");
+          case 34:
+            return (0, _._)("#ContentReportReason_CSAMOther");
+          case 35:
+            return (0, _._)("#ContentReportReason_NudityOrSexualContent");
+          case 36:
+            return (0, _._)("#ContentReportReason_NonConsensualMaterial");
+          case 37:
+            return (0, _._)("#ContentReportReason_Advertising");
+          case 38:
+            return (0, _._)("#ContentReportReason_ReferralLinks");
+          case 39:
+            return (0, _._)("#ContentReportReason_Gambling");
+          case 40:
+            return (0, _._)("#ContentReportReason_Raffles");
+          case 41:
+            return (0, _._)("#ContentReportReason_OtherCommercialActivity");
+          case 42:
+            return (0, _._)("#ContentReportReason_InauthenticReview");
+          case 43:
+            return (0, _._)(
+              "#ContentReportReason_HiddenAdvertisementOrCommercialCommunication",
+            );
+          case 44:
+            return (0, _._)(
+              "#ContentReportReason_MisleadingInformationAboutGoodsOrServices",
+            );
+          case 45:
+            return (0, _._)(
+              "#ContentReportReason_MisleadingInformationAboutConsumerRights",
+            );
+          case 46:
+            return (0, _._)(
+              "#ContentReportReason_NoncomplianceWithPricingRegulations",
+            );
+          case 47:
+            return (0, _._)("#ContentReportReason_RightToBeForgottenViolation");
+          case 48:
+            return (0, _._)(
+              "#ContentReportReason_MissingProcessingGroundForData",
+            );
+          case 49:
+            return (0, _._)(
+              "#ContentReportReason_OtherDataProtectionAndPrivacyViolation",
+            );
+          case 50:
+            return (0, _._)("#ContentReportReason_GenderedHarassment");
+          case 51:
+            return (0, _._)(
+              "#ContentReportReason_GenderedBullyingAndIntimidation",
+            );
+          case 52:
+            return (0, _._)("#ContentReportReason_GenderedStalking");
+          case 53:
+            return (0, _._)("#ContentReportReason_GenderedDoxxing");
+          case 54:
+            return (0, _._)("#ContentReportReason_GenderedOtherHarassment");
+          case 55:
+            return (0, _._)("#ContentReportReason_GenderedEncouragingViolence");
+          case 56:
+            return (0, _._)("#ContentReportReason_GenderedTargetedAbuse");
+          case 57:
+            return (0, _._)("#ContentReportReason_CSAMFakedSexualContent");
+          case 58:
+            return (0, _._)(
+              "#ContentReportReason_GenderedNonConsensualMaterial",
+            );
+          case 59:
+            return (0, _._)(
+              "#ContentReportReason_FakedGenderedNonConsensualMaterial",
+            );
+          case 60:
+            return (0, _._)("#ContentReportReason_FakedNonConsensualMaterial");
+          default:
+            return "";
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (function (_, _, _, _) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              mutationKey: ["report_forum_post", _, _, _, _],
+              mutationFn: async (_) => {
+                const _ = _._.Init(_);
+                _.Body().set_steamid(_),
+                  _.Body().set_gidforum(_),
+                  _.Body().set_gidtopic(_),
+                  _.Body().set_gidcomment(_),
+                  _.Body().set_report(_.text),
+                  _.Body().set_report_reason(_.reason);
+                const _ = await _.ReportPost(_, _);
+                if (1 !== _.GetEResult()) throw new Error(_.GetErrorMessage());
+              },
+            });
+          })(_.clanSteamId, _.gidForum, _.gidTopic, _.gidComment),
+          [__webpack_require__, _] = (0, _.useState)(!1);
+        (0, _.useEffect)(() => {
+          document.getElementById(_.anchorId).onclick = () => _(!0);
+        });
+        const _ = new Set([42]);
+        return _.createElement(_, {
+          reportSubjectMutation: _,
+          subjectType: 1,
+          subjectGroupId: _.gidTopic,
+          subjectId: _.gidComment,
+          showDialog: __webpack_require__,
+          setShowDialog: _,
+          excludedReasons: _,
+          refreshOnSubmit: !0,
+        });
+      }
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)(0),
+          [_, _] = (0, _.useState)("category"),
+          _ = (0, _.useRef)(void 0),
+          _ = _.reportSubjectMutation,
+          _ = new Set(),
+          _ = [],
+          _ =
+            (0 === _.size &&
+              (_.set(
+                "#ContentReportReasonCategory_Harassment",
+                [3, 4, 5, 6, 7],
+              ),
+              _.set(
+                "#ContentReportReasonCategory_ViolenceAndSelfHarm",
+                [8, 9, 10, 11],
+              ),
+              _.set(
+                "#ContentReportReasonCategory_ScamsAndTheft",
+                [12, 13, 14, 15, 16],
+              ),
+              _.set("#ContentReportReasonCategory_Terrorism", [17, 18, 19]),
+              _.set("#ContentReportReasonCategory_Abusive", [20, 21, 22, 23]),
+              _.set(
+                "#ContentReportReasonCategory_Disruptive",
+                [24, 25, 26, 27],
+              ),
+              _.set("#ContentReportReasonCategory_Offtopic", [28, 29, 30, 31]),
+              _.set("#ContentReportReasonCategory_CSAM", [32, 33, 34]),
+              _.set("#ContentReportReasonCategory_NudityOrSexualContent", [35]),
+              _.set("#ContentReportReasonCategory_Nonconsensual", [36]),
+              _.set(
+                "#ContentReportReasonCategory_Commercial",
+                [37, 38, 39, 40, 41],
+              ),
+              _.set("#ContentReportReasonCategory_Privacy", [47, 48, 49]),
+              _.set("#ContentReportReasonCategory_ReviewManipulation", [42]),
+              _.set(
+                "#ContentReportReasonCategory_ConsumerInformation",
+                [43, 44, 45, 46],
+              )),
+            _);
+        for (const _ of _.keys()) {
+          const _ = _.get(_).filter(
+            (_) => !_.excludedReasons || !_.excludedReasons.has(_),
+          );
+          0 !== _.length &&
+            (1 === _.length
+              ? (_.push({
+                  text: _(_[0]),
+                  action: () => {
+                    _(_[0]), _("submit");
+                  },
+                }),
+                _.add(_[0]))
+              : _.push({
+                  text: (0, _._)(_),
+                  action: () => {
+                    __webpack_require__(_), _("reason");
+                  },
+                }));
+        }
+        const _ = _.map((_) => ({
+          text: _(_),
+          action: () => {
+            _(_), _("submit");
+          },
+        }));
+        if (!_.showDialog) return null;
+        let _ = "";
+        return (
+          (_ =
+            "submitted" === _
+              ? (0, _._)("#ContentReportSubmitted_Title")
+              : "error" === _
+                ? (0, _._)("#ContentReportSubmissionError_Title")
+                : (0, _._)("#ReportContent_Title")),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              _._,
+              {
+                active: _.showDialog,
+              },
+              _.createElement(
+                _._,
+                {
+                  title: _,
+                  closeModal: () => _.setShowDialog(!1),
+                  className: _().ContentReportDialog,
+                },
+                "category" === _ &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(
+                      "p",
+                      null,
+                      (0, _._)("#ReportContent_PickACategory"),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        className: _().BlockList,
+                      },
+                      _.map((_, _) =>
+                        _.createElement(_, {
+                          key: _,
+                          text: _.text,
+                          onClick: _.action,
+                        }),
+                      ),
+                      _.createElement(
+                        "a",
+                        {
+                          className: _().BlockListItem,
+                          href: "https://steamcommunity.com/dmca/create",
+                        },
+                        (0, _._)("#ReportContent_CopyrightInfringement"),
+                      ),
+                      _.createElement(
+                        "a",
+                        {
+                          className: _().BlockListItem,
+                          href: "https://steamcommunity.com/trademark/createtrademarkcomplaint/",
+                        },
+                        (0, _._)("#ReportContent_TrademarkComplaint"),
+                      ),
+                    ),
+                  ),
+                "reason" === _ &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(
+                      "p",
+                      null,
+                      (0, _._)("#ReportContent_PickAReason"),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        className: _().BlockList,
+                      },
+                      _.map((_, _) =>
+                        _.createElement(_, {
+                          key: _,
+                          text: _.text,
+                          onClick: _.action,
+                        }),
+                      ),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        className: _().BottomButtons,
+                      },
+                      _.createElement(
+                        _._,
+                        {
+                          onClick: () => _("category"),
+                        },
+                        "« ",
+                        (0, _._)("#ReportContent_Back"),
+                      ),
+                    ),
+                  ),
+                "submit" === _ &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(
+                      "p",
+                      null,
+                      _.createElement(
+                        "span",
+                        {
+                          className: _().ReportAs,
+                        },
+                        (0, _._)("#ReportContent_ReportAs"),
+                      ),
+                      " ",
+                      _(_),
+                    ),
+                    _.createElement(
+                      "p",
+                      null,
+                      (0, _._)("#ReportContent_Attestation"),
+                    ),
+                    _.createElement(
+                      _._,
+                      null,
+                      _.createElement(_._, {
+                        ref: _,
+                        className: (0, _._)(
+                          _().BasicTextInput,
+                          _().Textarea,
+                          _().DetailedReasonTextArea,
+                        ),
+                        placeholder: (0, _._)(
+                          "#ReportContent_DetailsPlaceholder",
+                        ),
+                      }),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        className: _().BottomButtons,
+                      },
+                      _.createElement(
+                        _._,
+                        {
+                          onClick: () =>
+                            _.has(_) ? _("category") : _("reason"),
+                        },
+                        "« ",
+                        (0, _._)("#ReportContent_Back"),
+                      ),
+                      _.createElement(
+                        _._,
+                        {
+                          onClick: async () => {
+                            var _, _;
+                            const _ =
+                                null !==
+                                  (_ =
+                                    null === (_ = _.current) || void 0 === _
+                                      ? void 0
+                                      : _.value) && void 0 !== _
+                                  ? _
+                                  : "",
+                              _ = {
+                                reason: _,
+                                text: _,
+                              };
+                            _.mutateAsync(_)
+                              .then(() => _("submitted"))
+                              .then(() => _.onSubmitted && _.onSubmitted())
+                              .catch(() => _("error"));
+                          },
+                        },
+                        (0, _._)("#ReportContent_ReportButton"),
+                      ),
+                    ),
+                  ),
+                "submitted" === _ &&
+                  _.createElement(
+                    "p",
+                    null,
+                    (0, _._)("#ContentReportSubmitted_Description"),
+                  ),
+                "error" === _ &&
+                  _.createElement(
+                    "p",
+                    null,
+                    (0, _._)("#ContentReportSubmissionError_Description"),
+                  ),
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          _._,
+          {
+            className: _().BlockListItem,
+            onClick: _.onClick,
+          },
+          _.text,
+        );
+      }
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -7238,6 +7508,14 @@
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
         _ = () => (_._.IS_OGG ? "games" : "groups"),
         _ = {
           DiagData: () => "/:anything*/diagdata",
@@ -7546,6 +7824,10 @@
                           _.createElement(_, {
                             ..._,
                           }),
+                        marketsearchinput: (_) =>
+                          _.createElement(_, {
+                            ..._,
+                          }),
                       },
                     }),
                   ),
@@ -7700,7 +7982,6 @@
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       (0, _._)({
@@ -7809,7 +8090,6 @@
         return 5 == _ || 6 == _;
       }
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -8098,7 +8378,7 @@
             return "unknown";
         }
       }
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -8193,25 +8473,6 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (_[(_.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (_[(_.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (_[(_.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -39689,7 +39950,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -40581,7 +40841,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -40592,9 +40851,8 @@
         return _.useContext(_);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       function _(_, _, _) {
         const _ = _.useRef(void 0),
           [_, _] = _.useState(void 0),
@@ -40707,54 +40965,6 @@
         Render(_, _) {
           this.m_fnReadyToRender(_);
         }
-      }
-      function _(_) {
-        let _ = (0, _._)();
-        _.useEffect(() => {
-          let _ = new _._(_);
-          _._.SetCurrentLoggedInAccountID(_.GetAccountID());
-        }, [_]);
-        const _ = _.useRef(void 0),
-          _ = _.useCallback(
-            (_) => (
-              _.bIgnoreSavedDimensions || _.strRestoreDetails
-                ? _.strRestoreDetails &&
-                  _._.SetRestoreDetails(_, _.strRestoreDetails, !1)
-                : (_.strRestoreDetails = _._.GetRestoreDetails(_)),
-              _
-            ),
-            [_],
-          ),
-          _ = _.useCallback(
-            (_, _, _) => {
-              _.current &&
-                _.setTimeout(() => {
-                  _.SteamClient.Window.GetWindowRestoreDetails().then((_) => {
-                    let _ = _.current != _;
-                    _ &&
-                      _ &&
-                      (_ || _) &&
-                      (_._.SetRestoreDetails(_, _, !1), (_.current = _));
-                  });
-                }, 30);
-            },
-            [_],
-          ),
-          _ = _.useCallback(
-            (_, _) => {
-              _.SteamClient.Window.GetWindowRestoreDetails().then((_) => {
-                (_.current = _), _(_, _, !0);
-              });
-            },
-            [_],
-          );
-        return _
-          ? {
-              updateParamsBeforeShow: _,
-              onResize: _,
-              onLoad: _,
-            }
-          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -41666,7 +41876,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "/react-waypoint/",
+          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
         ];
       function _() {
         try {
@@ -49535,6 +49745,7 @@
             childrenContainerWidth: _ = "fixed",
             onContextMenu: _,
             onActivate: _,
+            padding: _,
             ..._
           } = _,
           { actionDescriptions: _, gamepadEvents: _, props: _ } = (0, _._)(_),
@@ -49562,6 +49773,7 @@
             actionDescriptionMap: _,
             explainer: _,
             explainerTitle: _,
+            padding: _,
             ..._,
           },
           _.createElement(_, {
@@ -54857,7 +55069,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
       function _(_) {
         const { labelledBy: _ } = _ || {},
           [__webpack_require__, _] = _.useState(null);
@@ -56380,225 +56600,6 @@
             className: "ModalPosition_Content",
             children: _,
           }),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { popup: _, className: __webpack_require__, ..._ } = _,
-          _ = (0, _._)(_),
-          _ = _.useRef(null);
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            if (_ && (0, _._)(_, "Window.SetResizeGrip")) {
-              let _ = 0,
-                _ = 0;
-              const _ = _.getBoundingClientRect(),
-                _ = _.ownerDocument.defaultView;
-              _ &&
-                _ &&
-                !_ &&
-                ((_ = Math.ceil(_.innerWidth - _.left)),
-                (_ = Math.ceil(_.innerHeight - _.top))),
-                _.SteamClient.Window.SetResizeGrip(_, _);
-            }
-            return () => {
-              (0, _._)(_, "Window.SetResizeGrip") &&
-                _.SteamClient.Window.SetResizeGrip(0, 0);
-            };
-          }, [_, _]),
-          _
-            ? null
-            : _.createElement("div", {
-                className: (0, _._)("window_resize_grip", __webpack_require__),
-                ref: _,
-                ..._,
-              })
-        );
-      }
-      const _ = (_) =>
-        (function (_) {
-          const _ = (0, _._)().ownerWindow,
-            _ = (0, _._)(),
-            [_, _] = _.useState(() =>
-              _ ||
-              (!0 === _.onlyPopoutIfNeeded &&
-                _.popupHeight < 0.9 * _.innerHeight &&
-                _.popupWidth < 0.9 * _.innerWidth &&
-                "visible" == _.document.visibilityState)
-                ? "inline"
-                : "popout",
-            );
-          return "inline" === _
-            ? _.createElement(
-                _._,
-                {
-                  active: !0,
-                },
-                _.children,
-              )
-            : "popout" === _
-              ? _.createElement(_, {
-                  ..._,
-                })
-              : null;
-        })({
-          modal: !0,
-          ..._,
-        });
-      function _(_) {
-        var _;
-        const {
-            strName: __webpack_require__,
-            strTitle: _,
-            popupWidth: _,
-            popupHeight: _,
-            browserType: _,
-            onDismiss: _,
-            refPopup: _,
-            children: _,
-            titleBarClassName: _,
-            saveDimensionsKey: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = null == _ ? void 0 : _.ownerWindow,
-          _ = (0, _._)(),
-          _ = {
-            ...(0, _._)(_),
-            onClose: _,
-          };
-        let _ = 0;
-        _.resizable && (_ |= _._.Resizable),
-          (_.minWidth || _.minHeight) &&
-            (_ |= _._.ApplyBrowserScaleToDimensions),
-          _.fullscreen && (_ |= _._.FullScreen);
-        const _ =
-            "PopupWindow_" +
-            (__webpack_require__ ? `${__webpack_require__}_` : "") +
-            _.useId(),
-          { popup: _, element: _ } = (0, _._)(
-            _,
-            {
-              title: _,
-              dimensions: {
-                width: _,
-                height: _,
-              },
-              html_class: "client_chat_frame fullheight ModalDialogPopup",
-              body_class: "fullheight ModalDialogBody",
-              popup_class: "fullheight",
-              browserType: _,
-              minWidth: _.minWidth,
-              minHeight: _.minHeight,
-              replace_existing_popup: !0,
-              center_on_window: (null == _ ? void 0 : _.BCenterPopupsOnWindow())
-                ? _
-                : void 0,
-              eCreationFlags: _,
-              target_browser: null == _ ? void 0 : _.GetBrowserInfo(),
-            },
-            _,
-          );
-        if (
-          (_.useEffect(
-            () => ((0, _._)(_, _), () => (0, _._)(_, void 0)),
-            [_, _],
-          ),
-          _.useEffect(() => {
-            _ && (_.document.title = null != _ ? _ : __webpack_require__);
-          }, [_, _, __webpack_require__]),
-          !_)
-        )
-          return null;
-        const _ =
-            null !== (_ = _.modal) && void 0 !== _ ? _ : _.onlyPopoutIfNeeded,
-          _ = !_.resizable;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(_, {
-              popup: _,
-            }),
-          _.createPortal(
-            _.createElement(
-              _._,
-              {
-                ownerWindow: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "PopupFullWindow",
-                  onContextMenu: _._,
-                },
-                _.createElement(_._, {
-                  className: _,
-                  hideMin: _,
-                  hideMax: _,
-                  popup: _,
-                  hideActions: !_,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    bCenterPopupsOnWindow:
-                      null == _ ? void 0 : _.BCenterPopupsOnWindow(),
-                    browserInfo: null == _ ? void 0 : _.GetBrowserInfo(),
-                  },
-                  _,
-                ),
-              ),
-              _.resizable &&
-                _.createElement(_, {
-                  popup: _,
-                }),
-            ),
-            _,
-          ),
-        );
-      }
-      function _(_) {
-        const { popup: _ } = _,
-          _ = _.useCallback(() => {
-            null == _ || _.SteamClient.Window.BringToFront();
-          }, [_]);
-        return (
-          _.useEffect(_, [_]),
-          _.createElement(
-            _._,
-            {
-              active: !0,
-            },
-            _.createElement("div", {
-              style: {
-                position: "fixed",
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0,
-              },
-              onClick: _,
-            }),
-          )
         );
       }
     },
@@ -64895,7 +64896,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 16778), _((_._ = _));
+      return (_ = 5103), _((_._ = _));
       var _;
     });
     _._();

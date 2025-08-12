@@ -475,17 +475,46 @@
       const _ = {
           nodes: {
             paragraph: {
+              attrs: {
+                align: {
+                  default: "left",
+                },
+              },
               content: "inline*",
               group: "block",
               parseDOM: [
                 {
                   tag: "p",
+                  getAttrs: (_) => ({
+                    align: _.style.textAlign || "left",
+                  }),
                 },
               ],
-              toDOM: _("p", (0, _._)("pm_paragraph", _().Paragraph)),
+              toDOM(_) {
+                const _ = {
+                  class: (0, _._)("pm_paragraph", _().Paragraph),
+                };
+                return (
+                  _.attrs.align &&
+                    "left" != _.attrs.align &&
+                    (_.style = `text-align: ${_.attrs.align}`),
+                  ["p", _, 0]
+                );
+              },
               bbCode: {
                 tag: "p",
                 autocloses: !0,
+                BBArgsToAttrs: (_) => ({
+                  align: _.align,
+                }),
+                AttrsToBBArgs: (_) => {
+                  let _ = {
+                    args: {},
+                  };
+                  return (
+                    _.align && "left" != _.align && (_.args.align = _.align), _
+                  );
+                },
               },
             },
             heading: {
@@ -493,34 +522,57 @@
                 level: {
                   default: 1,
                 },
+                align: {
+                  default: "left",
+                },
               },
               content: "inline*",
               group: "block",
               defining: !0,
-              parseDOM: [1, 2, 3, 4, 5].map((_) => ({
-                tag: `h${_}`,
-                attrs: {
-                  level: _,
-                },
-              })),
-              toDOM: (_) => [
-                "h" + _.attrs.level,
-                {
+              parseDOM: [1, 2, 3, 4, 5].map(function (_) {
+                return {
+                  tag: `h${_}`,
+                  getAttrs: (_) => ({
+                    level: _,
+                    align: _.style.textAlign || "left",
+                  }),
+                };
+              }),
+              toDOM(_) {
+                const _ = {
                   class:
                     `BB_Header${_.attrs.level} ` +
                     _()[`Header${_.attrs.level}`],
-                },
-                0,
-              ],
-              bbCode: [1, 2, 3, 4, 5].map((_) => ({
-                tag: `h${_}`,
-                BBArgsToAttrs: () => ({
-                  level: _,
-                }),
-                AttrsToBBArgs: (_) => ({
-                  tag: `h${_.level}`,
-                }),
-              })),
+                };
+                return (
+                  _.attrs.align &&
+                    "left" != _.attrs.align &&
+                    (_.style = `text-align: ${_.attrs.align}`),
+                  ["h" + _.attrs.level, _, 0]
+                );
+              },
+              bbCode: [1, 2, 3, 4, 5].map(function (_) {
+                return {
+                  tag: `h${_}`,
+                  BBArgsToAttrs: (_) => ({
+                    level: _,
+                    align: _.align || "left",
+                  }),
+                  AttrsToBBArgs: (_) => {
+                    let _ = {
+                      tag: `h${_.level}`,
+                      args: {},
+                    };
+                    return (
+                      _.align &&
+                        "left" != _.align &&
+                        _.args &&
+                        (_.args.align = _.align),
+                      _
+                    );
+                  },
+                };
+              }),
             },
             image: {
               inline: !0,
@@ -1008,7 +1060,7 @@
         }
         TryCreateNode(_, _, _) {
           let _ = _._.from(_);
-          if (!_.node.validContent(_)) {
+          if (!_.node.validContent(_))
             if (_.acceptNode) {
               let _ = _.filter((_) => _.type == _.acceptNode);
               if (!_.length) {
@@ -1027,12 +1079,11 @@
                     : _.acceptNode.create(void 0, _));
               }
               _ = _._.from(_);
-            }
-            _.node.isInline ||
-              (_ = _._.from(
-                _.filter((_) => !_.isText || !_.text.match(/^\s*$/)),
-              ));
-          }
+            } else
+              _.node.isInline ||
+                (_ = _._.from(
+                  _.filter((_) => !_.isText || !_.text.match(/^\s*$/)),
+                ));
           try {
             return _.node.createAndFill(_, _) || _.node.createChecked(_, _);
           } catch (_) {
@@ -1130,30 +1181,33 @@
                     : _.push(_);
               } else {
                 let _;
-                (_ = _.nodes.paragraph.validContent(_)
-                  ? _.nodes.paragraph
-                  : _.get(_.type.name)),
-                  _
-                    ? _.accumulate(_, _)
-                    : ((0, _._)(
-                        !1,
-                        `Couldn't accept ${_.type.name} at root of document, converting to paragraph`,
-                      ),
-                      (_ = _.nodes.paragraph),
-                      _.accumulate(
-                        _.nodes.paragraph,
-                        __webpack_require__.text(
-                          (function (_) {
-                            let _ = "";
-                            return (
-                              _.descendants((_) => {
-                                _.isText && (_ += _.text);
-                              }),
-                              _
-                            );
-                          })(_),
-                        ),
-                      ));
+                if (
+                  ((_ = _.nodes.paragraph.validContent(_)
+                    ? _.nodes.paragraph
+                    : _.get(_.type.name)),
+                  _)
+                )
+                  _.accumulate(_, _);
+                else {
+                  (0, _._)(
+                    !1,
+                    `Couldn't accept ${_.type.name} at root of document, converting to paragraph`,
+                  );
+                  const _ = (function (_) {
+                    let _ = "";
+                    return (
+                      _.descendants((_) => {
+                        _.isText && (_ += _.text);
+                      }),
+                      _
+                    );
+                  })(_);
+                  _ &&
+                    _.accumulate(
+                      _.nodes.paragraph,
+                      __webpack_require__.text(_),
+                    );
+                }
               }
             }),
             (!_.nodes.length && _.length) || _.emit(!0),
@@ -1397,8 +1451,18 @@
         };
       }
       function _(_, _, _) {
-        let { $from: _, _: _, node: _ } = _.selection;
-        return !_ && _ <= _.end() && (_ = _.parent), !!_ && _.hasMarkup(_, _);
+        if (_.type !== _) return !1;
+        if (void 0 === _) return !0;
+        for (const _ in _) if (_[_] !== _.attrs[_]) return !1;
+        return !0;
+      }
+      function _(_, _, _) {
+        let { $from: _, _: _ } = _.selection;
+        for (let _ = _.depth; _ > 0; _--) {
+          if (_ > _.end(_)) return !1;
+          if (_(_.node(_), _, _)) return !0;
+        }
+        return !1;
       }
       function _(_, _, _) {
         const { $from: _, _: _ } = _.selection;

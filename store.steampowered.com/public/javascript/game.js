@@ -2187,9 +2187,9 @@ function CloseReviewSettingsModal()
 
 function BindFocusVideoOnTablet()
 {
-    $J( '.highlight_movie' ).on( "focusout", function( event ) {
+	$J( '.highlight_movie' ).on( "focusout", function( event ) {
 		this.pause();
-    } );
+	} );
 }
 
 /* Shows a full screen version of the media carousel using a clone of the existing carousel's content */
@@ -2519,11 +2519,18 @@ $J(document).ready(function() {
 
 			if ($pic.length > 0) {
 				// handle click-to-play for picture elements
-				const $source = $pic.find("source[media]");
+				const $source = $pic.find("source");
 				const $img = $pic.find("img");
 
 				const gifSrc = $img.attr("src");
-				const posterSrc = $source.attr("srcset");
+				let posterSrc = $source.attr("srcset");
+
+				// store the source's srcset the first time we come through here so we have it after we change it
+				if (!$source.data('original-srcset')) {
+					$source.data('original-srcset', posterSrc);
+				} else {
+					posterSrc = $source.data('original-srcset');
+				}
 
 				// on first click, drop the media attribute so the source always applies
 				if ($source.attr("media")) {

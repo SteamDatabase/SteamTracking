@@ -11,7 +11,7 @@
 	"Price_Free": "Бесплатный продукт",
 	"AddToCartButton_InCart": "В корзине",
 	"AddToCartButton_AddToCart": "Добавить в корзину",
-	"PlayGameButton_PlayNow": "Воспроизвести",
+	"PlayGameButton_PlayNow": "Играть",
 	"AddToLibraryButton": "Добавить в библиотеку",
 	"Button_SignIn": "Войти",
 	"SignInToAddToLibrary_Tooltip": "Войдите, чтобы добавить этот бесплатный продукт в свой аккаунт.",

@@ -5424,7 +5424,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5559,6 +5558,7 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8188,9 +8188,7 @@
           device_friendly_name: _,
           machine_id: __webpack_require__,
           platform_type: 1,
-          gaming_device_type: _._.ON_DECK
-            ? _._.k_EGamingDeviceType_SteamDeck
-            : _._.k_EGamingDeviceType_StandardPC,
+          gaming_device_type: _._.ON_DECK ? 544 : 1,
         };
       }
       async function _() {

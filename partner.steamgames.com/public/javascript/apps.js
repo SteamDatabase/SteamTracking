@@ -415,7 +415,7 @@ function MigrateTargetFixup( migrateSelect )
 	}
 }
 
-function AppMigrate( appidSrc, appidDest, bForce, bMergeLite )
+function AppMigrate( appidSrc, appidDest, bForce, bMergeLite, bStatsOnly )
 {
 	if ( isNaN( appidDest ) )
 	{
@@ -431,7 +431,8 @@ function AppMigrate( appidSrc, appidDest, bForce, bMergeLite )
 	AppsAjaxRequest( g_szBaseURL + '/apps/migrate/' + appidSrc + '/' + appidDest ,
 		{
 			'force': bForce,
-			'lite': bMergeLite
+			'lite': bMergeLite,
+			'statsonly' : bStatsOnly
 		},
 		function( results )
 		{
@@ -440,7 +441,7 @@ function AppMigrate( appidSrc, appidDest, bForce, bMergeLite )
 	);
 }
 
-function AppMigrateFromSelector( appidSrc, bForce, bMergeLite, selector )
+function AppMigrateFromSelector( appidSrc, bForce, bMergeLite, selector, bStatsOnly )
 {
 	var appidDest = selector.options[ selector.selectedIndex ].value;
 
@@ -450,7 +451,7 @@ function AppMigrateFromSelector( appidSrc, bForce, bMergeLite, selector )
 		return;
 	}
 
-	AppMigrate( appidSrc, appidDest, bForce, bMergeLite );
+	AppMigrate( appidSrc, appidDest, bForce, bMergeLite, bStatsOnly );
 }
 
 

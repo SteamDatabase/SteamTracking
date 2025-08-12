@@ -27,6 +27,7 @@
     35111: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         BannerContainer: "_29jK3MyNRDW7PAcrm59l_O",
         BannerHeader: "_3yxJH3baj7mwTTYzBIyi_Z",
         BannerContentDesktop: "Cek1s5Ixk2xYmkqjjESD0",
@@ -9404,34 +9405,30 @@
         for (const e of a) if (r.A0.IsELanguageValidInRealm(t, e)) return t;
         return a.includes(n.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function p(e, t = 0, a = !0) {
-        let n = e.lastIndexOf(".");
-        -1 != n && (e = e.slice(0, n).toLowerCase());
-        let r = null,
-          s = 0;
-        e.endsWith("korean") && ((r = 4), (s = 6));
-        const o = (e) => e.replace(/[\s_-]+$/g, "");
+      function p(e, t = 0) {
+        let a = e.lastIndexOf(".");
+        -1 != a && (e = e.slice(0, a).toLowerCase());
+        let n = null,
+          r = 0;
+        e.endsWith("korean") && ((n = 4), (r = 6));
         for (let t = 0; t < 31; ++t) {
-          const n = (0, i.ww)(t);
-          if (n.length <= s) continue;
-          if (e.endsWith(n)) {
-            let i = !a;
-            if (a && e.length > n.length + 2) {
-              const t = e[e.length - n.length - 1];
-              i = !/\p{Alphabetic}|\p{Number}/u.test(t);
-            }
-            i && ((r = t), (s = n.length));
+          const a = (0, i.ww)(t);
+          if (a.length <= r) continue;
+          if (e.endsWith(a) && e.length > a.length + 2) {
+            const i = e[e.length - a.length - 1];
+            /\p{Alphabetic}|\p{Number}/u.test(i) || ((n = t), (r = a.length));
           }
-          const l = (0, i.Lg)(t);
-          l.length <= s ||
-            (e.endsWith(l) &&
-              o(e.substring(0, e.length - l.length)).length > 0 &&
-              ((r = t), (s = l.length)));
+          const s = (0, i.Lg)(t);
+          s.length <= r || (e.endsWith(s) && ((n = t), (r = s.length)));
         }
         return {
-          language: r ?? t,
-          baseFilename: s > 0 ? o(e.substring(0, e.length - s)) : e,
+          language: n ?? t,
+          baseFilename:
+            r > 0
+              ? ((s = e.substring(0, e.length - r)), s.replace(/[\s_-]+$/g, ""))
+              : e,
         };
+        var s;
       }
     },
     68359: (e, t, a) => {
@@ -15732,7 +15729,7 @@
     },
     30786: (e, t, a) => {
       "use strict";
-      a.d(t, { j: () => Q });
+      a.d(t, { j: () => $ });
       var n = a(90626),
         i = a(82415),
         r = a(62792),
@@ -15787,44 +15784,43 @@
           },
         });
       }
-      var E = a(22837),
-        I = a(64753),
-        D = a(45699),
-        T = a(70163);
-      function B(e) {
+      var E = a(64753),
+        I = a(45699),
+        D = a(70163);
+      function T(e) {
         const { children: t, ...a } = e;
         return n.createElement(
-          D.fu,
-          { className: T.GreenButton, type: "button", ...a },
+          I.fu,
+          { className: D.GreenButton, type: "button", ...a },
           n.createElement("span", null, t),
         );
       }
-      var A = a(31258),
-        k = a(79908),
-        G = a(30894),
-        L = a(88997),
-        R = a(60155),
-        P = a(58579),
-        M = a.n(P);
-      const H = {
+      var B = a(31258),
+        A = a(79908),
+        k = a(30894),
+        G = a(88997),
+        L = a(60155),
+        R = a(58579),
+        P = a.n(R);
+      const M = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
         bDisablePopTop: !0,
       };
-      function V(e) {
+      function H(e) {
         const { setRemoteClientID: t, rgSessions: a } = e,
           i = (0, n.useCallback)(
             (e) => {
               a?.length > 0 &&
-                (0, L.lX)(
-                  n.createElement(F, {
+                (0, G.lX)(
+                  n.createElement(V, {
                     sessions: a,
                     setRemoteDownloadClientId: t,
                   }),
                   e,
-                  H,
+                  M,
                 );
             },
             [t, a],
@@ -15832,18 +15828,18 @@
         return a?.length > 1
           ? n.createElement(
               "button",
-              { onClick: i, className: M().ClientSelectDropdown },
-              n.createElement(N, null),
+              { onClick: i, className: P().ClientSelectDropdown },
+              n.createElement(F, null),
             )
           : null;
       }
-      function F({ sessions: e, setRemoteDownloadClientId: t }) {
+      function V({ sessions: e, setRemoteDownloadClientId: t }) {
         return n.createElement(
           "ul",
-          { className: M().ClientListDropdownMenu },
+          { className: P().ClientListDropdownMenu },
           e.map((e) =>
             n.createElement(
-              R.kt,
+              L.kt,
               {
                 onSelected: () => {
                   t(e.client_instanceid);
@@ -15854,9 +15850,9 @@
                 "#GamesList_Client_Indicator",
                 (function (e) {
                   switch (e) {
-                    case E.zm.k_EGamingDeviceType_StandardPC:
+                    case 1:
                       return (0, m.we)("#Library_DeviceType_PC");
-                    case E.zm.k_EGamingDeviceType_SteamDeck:
+                    case 544:
                       return (0, m.we)("#Library_DeviceType_SteamDeck");
                     default:
                       return;
@@ -15868,7 +15864,7 @@
           ),
         );
       }
-      function N(e) {
+      function F(e) {
         return n.createElement(
           "svg",
           {
@@ -15883,19 +15879,19 @@
           }),
         );
       }
-      var U = a(51706),
-        O = a(12155),
-        x = a(22797),
-        W = a(99034),
-        j = a.n(W);
-      const z = { include_platforms: !0 };
-      function q(e) {
+      var N = a(51706),
+        U = a(12155),
+        O = a(22797),
+        x = a(99034),
+        W = a.n(x);
+      const j = { include_platforms: !0 };
+      function z(e) {
         const { appid: t } = e,
-          [a] = (0, s.t7)(t, z),
-          [i, r, o] = (0, I.uD)(!1),
+          [a] = (0, s.t7)(t, j),
+          [i, r, o] = (0, E.uD)(!1),
           { mutateAsync: l } = b({ appid: t }),
           [d, c] = (0, n.useState)(!1),
-          u = (0, G.Lg)(t);
+          u = (0, k.Lg)(t);
         return a
           ? u
             ? null
@@ -15903,13 +15899,13 @@
                 n.Fragment,
                 null,
                 n.createElement(
-                  B,
+                  T,
                   {
                     onClick: async () => {
                       try {
                         c(!0),
                           await l(),
-                          G.Fm.Get().InvalidateCache(),
+                          k.Fm.Get().InvalidateCache(),
                           c(!1),
                           r();
                       } catch (e) {
@@ -15921,40 +15917,40 @@
                       }
                     },
                   },
-                  d && n.createElement(x.t, { size: "small" }),
+                  d && n.createElement(O.t, { size: "small" }),
                   (0, m.we)("#Sale_AddToLibrary_NoPlus"),
                 ),
                 n.createElement(
                   h.tH,
                   null,
                   n.createElement(
-                    U.EN,
+                    N.EN,
                     { active: i },
                     n.createElement(
-                      U.o0,
+                      N.o0,
                       {
                         strTitle: (0, m.we)("#Sale_AddedToLibrary"),
                         strDescription: (0, m.PP)(
                           "#Sale_AddToLibrary_DialogDesc",
                           n.createElement(
                             "span",
-                            { className: j().GameName },
+                            { className: W().GameName },
                             a.GetName(),
                           ),
                         ),
                         closeModal: o,
                         bAlertDialog: !0,
                       },
-                      n.createElement(Z, { appid: t, storeItem: a }),
+                      n.createElement(q, { appid: t, storeItem: a }),
                     ),
                   ),
                 ),
               )
           : null;
       }
-      function Z(e) {
+      function q(e) {
         const { appid: t, storeItem: a } = e,
-          i = (0, k.Vc)(),
+          i = (0, A.Vc)(),
           [r, s] = (0, n.useState)(0),
           [o, l] = (0, n.useState)(!1);
         if (y.TS.IN_CLIENT) return;
@@ -15962,15 +15958,15 @@
           d = i.data?.sessions?.filter((e) => {
             switch (e.device_type) {
               default:
-              case E.zm.k_EGamingDeviceType_StandardPC:
+              case 1:
                 {
-                  const t = (0, A.g)(e.os_type);
+                  const t = (0, B.g)(e.os_type);
                   if (m.windows && t.includes("Windows")) return !0;
                   if (m.mac && t.includes("Mac")) return !0;
                   if (m.steamos_linux && t.includes("Linux")) return !0;
                 }
                 break;
-              case E.zm.k_EGamingDeviceType_SteamDeck:
+              case 544:
                 return m.windows || m.steamos_linux;
             }
             return !1;
@@ -15979,21 +15975,21 @@
           const e = d[r];
           return n.createElement(
             "div",
-            { className: j().RemoteOptions },
+            { className: W().RemoteOptions },
             Boolean(o)
-              ? n.createElement(Y, { session: e })
+              ? n.createElement(K, { session: e })
               : n.createElement(
                   n.Fragment,
                   null,
-                  n.createElement(K, {
+                  n.createElement(Z, {
                     rgAcceptableSession: d,
                     session: e,
                     setSessionIndex: s,
                   }),
                   n.createElement(
                     "div",
-                    { className: j().ActionRow },
-                    n.createElement($, {
+                    { className: W().ActionRow },
+                    n.createElement(Y, {
                       appid: t,
                       session: e,
                       setRemoteDownloadRequested: l,
@@ -16004,7 +16000,7 @@
         }
         return null;
       }
-      function K(e) {
+      function Z(e) {
         const { rgAcceptableSession: t, session: a, setSessionIndex: i } = e;
         return n.createElement(
           n.Fragment,
@@ -16016,13 +16012,13 @@
           ),
           n.createElement(
             "div",
-            { className: j().ClientSelector },
+            { className: W().ClientSelector },
             n.createElement(
               "span",
-              { className: j().ClientName },
+              { className: W().ClientName },
               a.machine_name,
             ),
-            n.createElement(V, {
+            n.createElement(H, {
               rgSessions: t,
               setRemoteClientID: (e) => {
                 const a = t.findIndex((t) => t.client_instanceid === e);
@@ -16032,11 +16028,11 @@
           ),
         );
       }
-      function Y(e) {
+      function K(e) {
         const { session: t } = e;
         return n.createElement(
           "div",
-          { className: j().DownloadStartedCtn },
+          { className: W().DownloadStartedCtn },
           (0, m.we)("#Sale_AddToLibrary_DownloadStarted"),
           n.createElement("br", null),
           n.createElement(
@@ -16048,37 +16044,37 @@
           ),
         );
       }
-      function $(e) {
+      function Y(e) {
         const { appid: t, session: a, setRemoteDownloadRequested: i } = e,
-          r = (0, k.we)(t, a.client_instanceid);
+          r = (0, A.we)(t, a.client_instanceid);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
-            B,
+            T,
             {
               onClick: () => {
                 r.mutateAsync(), i(!0);
               },
             },
-            n.createElement(O.f5X, null),
+            n.createElement(U.f5X, null),
             (0, m.we)("#Button_StartDownload"),
           ),
           n.createElement(
             "div",
-            { className: j().LearnMoreCtn },
+            { className: W().LearnMoreCtn },
             n.createElement(
               "a",
               {
                 href: "https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409",
-                className: j().InlineLink,
+                className: W().InlineLink,
               },
               (0, m.we)("#Button_Learn"),
             ),
           ),
         );
       }
-      function Q(e) {
+      function $(e) {
         const { info: t, className: a } = e,
           c = (0, n.useRef)({ include_release: !0 }),
           [h] = (0, s.G6)(t?.id, (0, r.SW)(t?.type), c.current),
@@ -16096,7 +16092,7 @@
             return n.createElement(
               "div",
               { className: a },
-              n.createElement(q, { appid: e }),
+              n.createElement(z, { appid: e }),
             );
           }
           return null;

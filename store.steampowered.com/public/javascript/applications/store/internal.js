@@ -268,7 +268,7 @@
               : null,
             M = !!(E ? E(R, a) : R),
             B = "function" == typeof h ? h(M) : h,
-            x = "function" == typeof I ? I(M) : I;
+            D = "function" == typeof I ? I(M) : I;
           M &&
             ((B = (function () {
               for (
@@ -283,13 +283,13 @@
                 })
                 .join(" ");
             })(B, d)),
-            (x = (0, l.A)({}, x, u)));
-          var T = (0, l.A)(
-            { "aria-current": (M && s) || null, className: B, style: x, to: i },
+            (D = (0, l.A)({}, D, u)));
+          var x = (0, l.A)(
+            { "aria-current": (M && s) || null, className: B, style: D, to: i },
             A,
           );
           return (
-            g !== f ? (T.ref = t || v) : (T.innerRef = v), n.createElement(_, T)
+            g !== f ? (x.ref = t || v) : (x.innerRef = v), n.createElement(_, x)
           );
         });
       });
@@ -593,7 +593,7 @@
     },
     21820: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => x });
+      a.r(t), a.d(t, { default: () => D });
       var r = a(41735),
         s = a.n(r),
         n = a(78327),
@@ -1104,7 +1104,7 @@
             })
           );
         },
-        x = () => {
+        D = () => {
           const [e, t] = m.useState([]),
             [a, r] = m.useState(1),
             [s, i] = m.useState(1);
@@ -2060,9 +2060,9 @@
         (0, s.Cg)([o.oI], M.prototype, "OnSelectedStartApp", null),
         (0, s.Cg)([o.oI], M.prototype, "OnSelectedEndApp", null),
         (M = (0, s.Cg)([C.PA], M));
-      var x,
-        T = a(17720),
-        D = a(6144),
+      var D,
+        x = a(17720),
+        T = a(6144),
         O = a(56545),
         P = a(80613),
         L = a.n(P),
@@ -2731,7 +2731,7 @@
               { ePrivilege: 2, eWebAPIKeyRequirement: 2 },
             );
           });
-      })(x || (x = {}));
+      })(D || (D = {}));
       var K = a(72839),
         Y = a(82097);
       class Z {
@@ -2744,7 +2744,7 @@
         }
       }
       class J {
-        m_callbacksLoaded = new D.lu();
+        m_callbacksLoaded = new T.lu();
         m_rgClusters;
         constructor(e, t, a, r, s) {
           const n = O.w.Init(W);
@@ -2753,15 +2753,15 @@
             n.Body().set_steamid(t || i.iA.steamid),
             r && n.Body().set_clusters_to_return(r),
             n.Body().set_sort(a),
-            x
-              .IdentifyClustersFromPlaytime(e.GetServiceTransport(), n)
-              .then((e) => {
+            D.IdentifyClustersFromPlaytime(e.GetServiceTransport(), n).then(
+              (e) => {
                 const t = e.Body();
                 this.m_rgClusters = [];
                 for (const e of t.clusters())
                   this.m_rgClusters.push(this.ReadCluster(e, s));
                 this.m_callbacksLoaded.Dispatch(this.m_rgClusters);
-              });
+              },
+            );
         }
         ReadCluster(e, t) {
           let a;
@@ -2844,7 +2844,7 @@
           p = _.useCallback((e) => o(e.data), [o]);
         let d = !1;
         const u = _.useRef(i.iA.steamid),
-          h = a && new T.b(a);
+          h = a && new x.b(a);
         let g;
         h &&
           h.BIsValid() &&
@@ -3985,6 +3985,41 @@
                 bExclude: l,
                 strName: "RecSixMonths",
                 strTitle: (0, d.we)("#RecommenderDemos_RecSixMonths"),
+                strSubtitle: (0, d.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              i.createElement(f, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecAllTimeNew",
+                strTitle: (0, d.we)("#RecommenderDemos_RecAllTimeNew"),
+                strSubtitle: (0, d.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              i.createElement(f, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecFiveYearNew",
+                strTitle: (0, d.we)("#RecommenderDemos_RecFiveYearNew"),
+                strSubtitle: (0, d.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              i.createElement(f, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecTwoYearNew",
+                strTitle: (0, d.we)("#RecommenderDemos_RecTwoYearNew"),
+                strSubtitle: (0, d.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              i.createElement(f, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecOneYearNew",
+                strTitle: (0, d.we)("#RecommenderDemos_RecOneYearNew"),
+                strSubtitle: (0, d.we)("#RecommenderDemos_Rec_Desc"),
+              }),
+              i.createElement(f, {
+                nAccountID: a,
+                bExclude: l,
+                strName: "RecSixMonthsNew",
+                strTitle: (0, d.we)("#RecommenderDemos_RecSixMonthsNew"),
                 strSubtitle: (0, d.we)("#RecommenderDemos_Rec_Desc"),
               }),
               i.createElement(f, {

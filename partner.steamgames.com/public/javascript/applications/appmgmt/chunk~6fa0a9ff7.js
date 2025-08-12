@@ -22,98 +22,98 @@
     },
     66051: (e, t, n) => {
       "use strict";
-      n.d(t, { k: () => z });
-      var r = n(67796),
-        o = n(16666),
+      n.d(t, { k: () => y });
+      var r = n(8871),
+        o = n(67796),
+        i = n(16666),
         l = n(92148),
-        i = n(59366),
-        a = n(64238),
-        s = n.n(a),
-        c = n(90626),
-        u = n(31718),
-        m = n.n(u),
-        d = n(76217),
-        g = n(23310),
-        f = n(8871),
+        a = n(59366),
+        s = n(64238),
+        c = n.n(s),
+        u = n(90626),
+        d = n(31718),
+        m = n.n(d),
+        g = n(76217),
+        f = n(23310),
         p = n(94104);
-      const h = c.memo(function (e) {
+      const h = u.memo(function (e) {
         const {
             virtualizer: t,
             bDynamic: n,
             idx: r,
             rowGap: o,
-            renderItem: l,
+            renderItem: i,
           } = e,
-          i = c.useCallback(
+          l = u.useCallback(
             (e, n, o) => (t.scrollToIndex(r, { align: "center" }), !0),
             [t, r],
           );
-        return c.createElement(
-          d.Z,
+        return u.createElement(
+          g.Z,
           {
             ref: n ? t.measureElement : void 0,
             "data-index": r,
-            fnScrollIntoViewHandler: i,
+            fnScrollIntoViewHandler: l,
             scrollIntoViewWhenChildFocused: "force",
             style: { width: "100%", paddingBottom: o },
           },
-          l(r),
+          i(r),
         );
       });
-      c.forwardRef(function (e, t) {
+      u.forwardRef(function (e, t) {
         const {
             nRows: n,
-            nItemHeight: r,
-            nRowGap: o,
+            nItemHeight: o,
+            nRowGap: i,
             overscan: l,
-            renderItem: i,
-            bDynamic: a,
-            className: s,
-            forceVirtualizeType: u,
+            renderItem: a,
+            bDynamic: s,
+            className: c,
+            forceVirtualizeType: d,
             initialOffset: m,
-            onOffsetChange: g,
+            onOffsetChange: f,
             ...h
           } = e,
-          [w, C] = (0, c.useState)(u),
-          [E, S] = c.useState(),
-          [x, z] = c.useState(),
-          R = c.useCallback(
+          [b, C] = (0, u.useState)(d),
+          [E, S] = u.useState(),
+          [z, x] = u.useState(),
+          R = u.useCallback(
             (e) => {
-              if (!e || "window" == u) return;
+              if (!e || "window" == d) return;
               const t = (0, p._f)(e, "y");
-              (0, c.startTransition)(() => {
+              (0, u.startTransition)(() => {
                 S(t || void 0),
-                  z(e.offsetTop),
-                  u || C(t ? "element" : "window");
+                  x(e.offsetTop),
+                  d || C(t ? "element" : "window");
               });
             },
-            [u],
+            [d],
           ),
-          y = (0, f.Ue)(R, t),
+          y = (0, r.Ue)(R, t),
           H = {
             nRows: n,
-            nItemHeight: r,
-            nRowGap: o,
+            nItemHeight: o,
+            nRowGap: i,
             overscan: l,
-            renderItem: i,
-            bDynamic: a,
-            forceVirtualizeType: u,
+            renderItem: a,
+            bDynamic: s,
+            forceVirtualizeType: d,
             initialOffset: m,
-            onOffsetChange: g,
+            onOffsetChange: f,
           };
-        return c.createElement(
-          d.Z,
-          { className: s, ref: y, ...h },
-          c.createElement(
-            c.Suspense,
+        return u.createElement(
+          g.Z,
+          { className: c, ref: y, ...h },
+          u.createElement(
+            u.Suspense,
             null,
-            "element" === w &&
-              c.createElement(b, {
+            "element" === b &&
+              u.createElement(w, {
                 ...H,
-                nScrollMargin: x || 0,
+                nScrollMargin: z || 0,
                 elScrollable: E,
               }),
-            "window" === w && c.createElement(v, { ...H, nScrollMargin: x }),
+            "window" === b && u.createElement(v, { ...H, nScrollMargin: z }),
           ),
         );
       });
@@ -127,11 +127,11 @@
             initialOffset: a,
             onOffsetChange: s,
           } = e,
-          u = r + o,
-          m = (0, l.XW)({
+          c = r + o,
+          d = (0, l.XW)({
             count: n,
             scrollMargin: t,
-            estimateSize: c.useCallback(() => u, [u]),
+            estimateSize: u.useCallback(() => c, [c]),
             overscan: i,
             initialOffset: a,
             initialRect: void 0,
@@ -142,15 +142,15 @@
             },
           });
         return (
-          c.useEffect(() => {
-            (0, c.startTransition)(() => {
-              m.measure();
+          u.useEffect(() => {
+            (0, u.startTransition)(() => {
+              d.measure();
             });
-          }, [m, u]),
-          c.createElement(w, { ...e, virtualizer: m })
+          }, [d, c]),
+          u.createElement(b, { ...e, virtualizer: d })
         );
       }
-      function b(e) {
+      function w(e) {
         const {
             nRows: t,
             nScrollMargin: n,
@@ -159,45 +159,45 @@
             nRowGap: i = 10,
             overscan: a = 6,
             initialOffset: s,
-            onOffsetChange: u,
+            onOffsetChange: c,
           } = e,
-          m = o + i,
-          d = (0, l.Te)({
+          d = o + i,
+          m = (0, l.Te)({
             count: t,
             scrollMargin: n - (r?.offsetTop || 0),
             getScrollElement: () => r,
-            estimateSize: c.useCallback(() => m, [m]),
+            estimateSize: u.useCallback(() => d, [d]),
             overscan: a,
             initialRect: r ? void 0 : { height: 1e3, width: 1e3 },
             initialOffset: s,
             observeElementOffset: E,
-            observeElementRect: x,
+            observeElementRect: z,
             onChange(e, t) {
-              u?.(e.scrollOffset);
+              c?.(e.scrollOffset);
             },
           });
         return (
-          c.useEffect(() => {
-            (0, c.startTransition)(() => {
-              d.measure();
+          u.useEffect(() => {
+            (0, u.startTransition)(() => {
+              m.measure();
             });
-          }, [d, m]),
-          c.createElement(w, { ...e, virtualizer: d })
+          }, [m, d]),
+          u.createElement(b, { ...e, virtualizer: m })
         );
       }
-      function w(e) {
+      function b(e) {
         const { virtualizer: t, nRowGap: n, renderItem: r, bDynamic: o } = e,
-          l = t.getVirtualItems(),
-          i = l.length ? l[0].start - t.options.scrollMargin : 0,
+          i = t.getVirtualItems(),
+          l = i.length ? i[0].start - t.options.scrollMargin : 0,
           a = Math.max(0, t.getTotalSize());
-        return c.createElement(
-          d.Z,
+        return u.createElement(
+          g.Z,
           {
             "flow-children": "column",
-            navEntryPreferPosition: g.iU.MAINTAIN_Y,
+            navEntryPreferPosition: f.iU.MAINTAIN_Y,
             style: { height: `${a}px`, width: "100%", position: "relative" },
           },
-          c.createElement(
+          u.createElement(
             "div",
             {
               style: {
@@ -205,11 +205,11 @@
                 top: 0,
                 left: 0,
                 width: "100%",
-                transform: `translateY( ${i}px )`,
+                transform: `translateY( ${l}px )`,
               },
             },
-            l.map((e) =>
-              c.createElement(h, {
+            i.map((e) =>
+              u.createElement(h, {
                 key: e.key,
                 virtualizer: t,
                 bDynamic: o,
@@ -224,7 +224,7 @@
       function C(e) {
         return (...t) => {
           queueMicrotask(() => {
-            (0, c.startTransition)(() => {
+            (0, u.startTransition)(() => {
               e(...t);
             });
           });
@@ -240,14 +240,14 @@
             : (r) => t(n[e.options.horizontal ? "scrollLeft" : "scrollTop"], r),
         );
         const o = () => r(!0),
-          l = () => r(!1);
+          i = () => r(!1);
         return (
-          l(),
+          i(),
           n.addEventListener("scroll", o, { passive: !0 }),
-          n.addEventListener("scrollend", l, { passive: !0 }),
+          n.addEventListener("scrollend", i, { passive: !0 }),
           () => {
             n.removeEventListener("scroll", o),
-              n.removeEventListener("scrollend", l);
+              n.removeEventListener("scrollend", i);
           }
         );
       }
@@ -263,7 +263,7 @@
           }
         );
       }
-      function x(e, t) {
+      function z(e, t) {
         const n = e.scrollElement;
         if (!n) return;
         const r = C((e) =>
@@ -272,7 +272,7 @@
         r(n.getBoundingClientRect());
         const o = n.ownerDocument.defaultView;
         if (!o?.ResizeObserver) return () => {};
-        const l = new o.ResizeObserver((e) => {
+        const i = new o.ResizeObserver((e) => {
           e[0]?.borderBoxSize[0]
             ? r({
                 width: e[0].borderBoxSize[0].inlineSize,
@@ -281,107 +281,138 @@
             : r(n.getBoundingClientRect());
         });
         return (
-          l.observe(n, { box: "border-box" }),
+          i.observe(n, { box: "border-box" }),
           () => {
-            l.unobserve(n);
+            i.unobserve(n);
           }
         );
       }
-      const z = c.forwardRef(function (e, t) {
+      const x = u.createContext(void 0);
+      function R(e) {
+        const { table: t, setColumnSizeOverride: n } = e,
+          r = (0, u.useRef)(t);
+        r.current = t;
+        const o = (0, u.useMemo)(
+          () => ({ table: r.current, setColumnSizeOverride: n }),
+          [n],
+        );
+        return u.createElement(x.Provider, { value: o }, e.children);
+      }
+      const y = u.forwardRef(function (e, t) {
         const {
             data: n,
-            columns: a,
+            columns: r,
             className: s,
-            width: u,
-            height: m,
-            nScrollMargin: d,
+            width: c,
+            height: d,
+            nScrollMargin: m,
             nItemHeight: g,
             nHeaderHeight: f,
             overscan: p = 6,
             stickyHeader: h,
             initialSorting: v,
-            initialColumnFilters: b,
-            initialGrouping: w,
+            initialColumnFilters: w,
+            initialGrouping: b,
             initialExpanded: C,
-            initialColumnPinning: S,
-            initialColumnVisibility: z,
-            onGroupingChange: R,
-            onVisibleRowsChange: I,
-            renderGroup: T,
+            initialColumnPinning: x,
+            initialColumnVisibility: y,
+            onGroupingChange: H,
+            onVisibleRowsChange: F,
+            renderGroup: k,
+            virtualizeType: V = "element",
           } = e,
-          F = (0, c.useRef)(null),
-          [k, V] = (0, c.useState)({}),
-          M = a.map((e) =>
+          D = (0, u.useRef)(null),
+          [M, O] = (0, u.useState)({}),
+          [G, N] = (0, u.useState)({}),
+          P = r.map((e) =>
             "accessorKey" in e
-              ? { ...e, filterFn: k[e.accessorKey] ?? e.filterFn }
+              ? { ...e, filterFn: M[e.accessorKey] ?? e.filterFn }
               : e,
           ),
-          D = (0, r.N4)({
+          L = P.map((e) => {
+            let t = G[e.id];
+            return (
+              void 0 === t && "accessorKey" in e && (t = G[e.accessorKey]),
+              (t ??= e.size),
+              { ...e, size: t }
+            );
+          }),
+          B = (0, o.N4)({
             data: n,
-            columns: M,
+            columns: L,
             defaultColumn: { minSize: 60, maxSize: 800 },
             initialState: {
               sorting: v,
-              grouping: w ?? [],
+              grouping: b ?? [],
               expanded: C,
-              columnPinning: S ?? {},
-              columnFilters: b,
-              columnVisibility: z,
+              columnPinning: x ?? {},
+              columnFilters: w,
+              columnVisibility: y,
             },
-            getCoreRowModel: (0, o.HT)(),
-            getSortedRowModel: (0, o.h5)(),
-            getFilteredRowModel: (0, o.hM)(),
-            getGroupedRowModel: (0, o.cU)(),
+            getCoreRowModel: (0, i.HT)(),
+            getSortedRowModel: (0, i.h5)(),
+            getFilteredRowModel: (0, i.hM)(),
+            getGroupedRowModel: (0, i.cU)(),
             columnResizeMode: "onChange",
           }),
-          { rows: O, flatRows: G } = D.getRowModel(),
-          P = O.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
-          N = D.getState().grouping;
-        (0, c.useEffect)(() => {
-          R?.(N);
-        }, [R, N]),
-          (0, c.useEffect)(() => {
-            I?.(P);
-          }, [I, P.length]);
-        const _ = (0, l.Te)({
-            count: P.length,
-            scrollMargin: d,
-            getScrollElement: c.useCallback(() => X.current, []),
-            estimateSize: c.useCallback(() => g, [g]),
+          { rows: _, flatRows: $ } = B.getRowModel(),
+          W = _.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
+          A = B.getState().grouping;
+        (0, u.useEffect)(() => {
+          H?.(A);
+        }, [H, A]),
+          (0, u.useEffect)(() => {
+            F?.(W);
+          }, [F, W.length]);
+        const X = (0, l.Te)({
+            count: W.length,
+            scrollMargin: m,
+            getScrollElement: u.useCallback(
+              () => ("element" === V ? j.current : window),
+              [V],
+            ),
+            scrollToFn: (e, t, n) =>
+              "window" === V ? (0, a.e8)(e, t, n) : (0, a.Ox)(e, t, n),
+            estimateSize: u.useCallback(() => g, [g]),
             overscan: p,
             initialRect: void 0,
             observeElementOffset: E,
-            observeElementRect: x,
+            observeElementRect: (e, t) => ("window" === V ? S(e, t) : z(e, t)),
           }),
-          B = (0, c.useRef)(0),
-          L = c.useMemo(() => {
-            const e = D.getFlatHeaders(),
+          U = (0, u.useRef)(0),
+          K = u.useMemo(() => {
+            const e = B.getFlatHeaders(),
               t = {};
             for (let n = 0; n < e.length; n++) {
               const r = e[n];
               (t[`--header-${r.id}-size`] = `${r.getSize()}px`),
                 (t[`--col-${r.column.id}-size`] = `${r.column.getSize()}px`);
             }
-            return (B.current += 1), t;
-          }, [D.getState().columnSizingInfo, D.getState().columnSizing, a]);
-        c.useEffect(() => {
-          (0, c.startTransition)(() => {
-            _.measure();
+            return (U.current += 1), t;
+          }, [B.getState().columnSizingInfo, B.getState().columnSizing, r]);
+        u.useEffect(() => {
+          (0, u.startTransition)(() => {
+            X.measure();
           });
-        }, [_, g]);
-        const $ = _.getVirtualItems(),
-          A = $[0]?.start ?? 0,
-          W = _.getTotalSize(),
-          U = (0, l.Te)({
+        }, [X, g]);
+        const Z = X.getVirtualItems(),
+          q = Z[0]?.start ?? 0,
+          Q = X.getTotalSize(),
+          Y = (0, l.Te)({
             estimateSize: (e) =>
-              P[0]?.getVisibleCells()[e].column.getSize() ?? 0,
-            count: P[0]?.getVisibleCells().length ?? 0,
+              W[0]?.getVisibleCells()[e].column.getSize() ?? 0,
+            count: W[0]?.getVisibleCells().length ?? 0,
             overscan: 6,
             horizontal: !0,
-            getScrollElement: () => X.current,
+            getScrollElement: u.useCallback(
+              () => ("element" === V ? j.current : window),
+              [V],
+            ),
+            scrollToFn: (e, t, n) =>
+              "window" === V ? (0, a.e8)(e, t, n) : (0, a.Ox)(e, t, n),
             rangeExtractor(e) {
-              const t = P[0]?.getVisibleCells() ?? [],
-                n = new Set((0, i.vp)(e));
+              const t = W[0]?.getVisibleCells() ?? [],
+                n = new Set((0, a.vp)(e));
               return (
                 t.forEach((e, t) => {
                   e.column.getIsPinned() && n.add(t);
@@ -390,103 +421,107 @@
               );
             },
             observeElementOffset: E,
-            observeElementRect: x,
+            observeElementRect: (e, t) => ("window" === V ? S(e, t) : z(e, t)),
           });
-        (0, c.useEffect)(() => {
-          U.measure();
-        }, [B.current]),
-          (0, c.useImperativeHandle)(
+        (0, u.useEffect)(() => {
+          Y.measure();
+        }, [U.current]),
+          (0, u.useImperativeHandle)(
             t,
             () => ({
-              getData: () => G.map((e) => e.original),
-              getVisibleRows: () => P,
-              getState: D.getState,
-              getColumns: D.getAllColumns,
-              getColumnDefs: () => M,
-              setColumnFilters: D.setColumnFilters,
-              resetColumnFilters: D.resetColumnFilters,
-              setColumnFilterFnOverride: V,
-              getColumnFilterFnOverride: () => k,
-              getContainerElement: () => X.current,
-              getTableElement: () => F.current,
+              getData: () => $.map((e) => e.original),
+              getVisibleRows: () => W,
+              getState: B.getState,
+              getColumns: B.getAllColumns,
+              getColumnDefs: () => P,
+              setColumnFilters: B.setColumnFilters,
+              resetColumnFilters: B.resetColumnFilters,
+              setColumnFilterFnOverride: O,
+              getColumnFilterFnOverride: () => M,
+              getContainerElement: () => j.current,
+              getTableElement: () => D.current,
               scrollToColumn(e, t) {
-                U.scrollToIndex(e.getIndex(), t);
+                Y.scrollToIndex(e.getIndex(), t);
               },
             }),
             [
-              G,
-              P,
-              D.setColumnFilters,
-              D.resetColumnFilters,
-              D.getState,
-              D.getAllColumns,
-              k,
+              $,
+              W,
+              B.setColumnFilters,
+              B.resetColumnFilters,
+              B.getState,
+              B.getAllColumns,
               M,
-              U,
+              P,
+              Y,
             ],
           );
-        const X = (0, c.useRef)(null),
-          Z = h ? f : 0;
-        let q = 0;
-        const K = P[0]?.getVisibleCells(),
-          Q = U.getVirtualItems(),
-          Y = Q[Q.length - 1]?.end;
-        for (const e of Q) {
-          const t = K[e.index];
-          t?.column.getIsPinned() && (q += e.size);
+        const j = (0, u.useRef)(null),
+          J = h ? (f ?? 0) : 0;
+        let ee = 0;
+        const te = W[0]?.getVisibleCells(),
+          ne = Y.getVirtualItems(),
+          re = ne[ne.length - 1]?.end;
+        for (const e of ne) {
+          const t = te[e.index];
+          t?.column.getIsPinned() && (ee += e.size);
         }
-        return c.createElement(
-          "div",
-          {
-            className: s,
-            ref: X,
-            style: {
-              width: u,
-              height: m,
-              overflow: "auto",
-              maxWidth: "fit-content",
-              scrollPadding: `${Z}px 0 0 ${q}px`,
-            },
-          },
-          c.createElement(
+        return u.createElement(
+          R,
+          { table: B, setColumnSizeOverride: N },
+          u.createElement(
             "div",
             {
-              role: "table",
-              ref: F,
-              "aria-rowcount": n.length,
+              className: s,
+              ref: j,
               style: {
-                minHeight: W,
-                width: D.getTotalSize(),
-                "--virtualPos": `${A}px`,
-                ...L,
+                width: c,
+                height: d,
+                overflow: "element" === V ? "auto" : void 0,
+                maxWidth: "fit-content",
+                scrollPadding: `${J}px 0 0 ${ee}px`,
               },
             },
-            D.getHeaderGroups().map((e) =>
-              c.createElement(y, {
-                key: e.id,
-                group: e,
-                sticky: h,
-                nHeaderHeight: f,
-              }),
-            ),
-            $.map((e) =>
-              c.createElement(H, {
-                key: e.key,
-                row: P[e.index],
-                size: e.size,
-                rowVirtualizer: U,
-                index: e.index,
-                measureRef: _.measureElement,
-                scrollContainerRef: X,
-                nItemHeight: g,
-                renderGroup: T,
-                rowEnd: Y,
-              }),
+            u.createElement(
+              "div",
+              {
+                role: "table",
+                ref: D,
+                "aria-rowcount": n.length,
+                style: {
+                  minHeight: Q,
+                  width: B.getTotalSize(),
+                  "--virtualPos": `${q}px`,
+                  ...K,
+                },
+              },
+              B.getHeaderGroups().map((e) =>
+                u.createElement(I, {
+                  key: e.id,
+                  group: e,
+                  sticky: h,
+                  nHeaderHeight: f,
+                }),
+              ),
+              Z.map((e) =>
+                u.createElement(T, {
+                  key: e.key,
+                  row: W[e.index],
+                  size: e.size,
+                  rowVirtualizer: Y,
+                  index: e.index,
+                  measureRef: X.measureElement,
+                  scrollContainerRef: j,
+                  nItemHeight: g,
+                  renderGroup: k,
+                  rowEnd: re,
+                }),
+              ),
             ),
           ),
         );
       });
-      function R(e) {
+      function H(e) {
         const t = e.getIsPinned();
         return {
           borderRight:
@@ -500,102 +535,65 @@
           left: "left" === t ? `${e.getStart("left")}px` : void 0,
           right: "right" === t ? `${e.getAfter("right")}px` : void 0,
           position: t ? "sticky" : "relative",
-          width: e.getSize(),
+          minWidth: e.getSize(),
           zIndex: t ? 1 : 0,
         };
       }
-      function y(e) {
-        const { group: t, sticky: n, nHeaderHeight: o } = e;
-        return c.createElement(
+      function I(e) {
+        const { group: t, sticky: n, nHeaderHeight: r } = e;
+        return u.createElement(
           "div",
           {
             role: "row",
-            className: s()(
+            className: c()(
               m().FancyTableRow,
               m().FancyTableHeader,
               n && m().StickyHeader,
             ),
           },
           t.headers.map((e, n) => {
-            const l = t.headers[n - 1],
+            const o = t.headers[n - 1],
               i = {},
-              a = e.column.getIsSorted();
-            a &&
+              l = e.column.getIsSorted();
+            l &&
               !e.column.columnDef.meta?.bDisableSortButton &&
-              (i["aria-sort"] = "asc" === a ? "ascending" : "descending");
-            let u = "div";
+              (i["aria-sort"] = "asc" === l ? "ascending" : "descending");
+            let a = "div";
             return (
               e.column.getCanSort() &&
                 !e.column.columnDef.meta?.bDisableSortButton &&
-                ((u = "button"),
+                ((a = "button"),
                 (i.onClick = e.column.getToggleSortingHandler())),
               e.column.columnDef.meta?.strHeaderTooltip &&
                 (i.title = e.column.columnDef.meta?.strHeaderTooltip),
-              c.createElement(
-                u,
-                {
-                  role: "columnheader",
-                  key: e.id,
-                  "data-pinned": !!e.column.getIsPinned(),
-                  className: s()(
-                    m().ColumnHeader,
-                    "button" === u && m().SortButton,
-                    e.column.columnDef.meta?.headerClassname,
-                  ),
-                  style: {
-                    width: `var(--header-${e.id}-size)`,
-                    height: void 0 !== o ? `${o}px` : void 0,
-                    ...R(e.column),
-                  },
-                  ...i,
-                },
-                l?.column.getCanResize() &&
-                  c.createElement("div", {
-                    role: "presentation",
-                    onDoubleClick: () => l.column.resetSize(),
-                    onMouseDown: l.getResizeHandler(),
-                    onTouchStart: l.getResizeHandler(),
-                    onClick: (e) => e.stopPropagation(),
-                    className: s()(m().ResizeHandle, m().PrevResizeHandle),
-                  }),
-                e.isPlaceholder
-                  ? null
-                  : (0, r.Kv)(e.column.columnDef.header, e.getContext()),
-                a &&
-                  !e.column.columnDef.meta?.bDisableSortButton &&
-                  c.createElement("div", { className: m().SortIndicator }),
-                e.column.getCanResize() &&
-                  c.createElement("div", {
-                    role: "presentation",
-                    onDoubleClick: () => e.column.resetSize(),
-                    onMouseDown: e.getResizeHandler(),
-                    onTouchStart: e.getResizeHandler(),
-                    onClick: (e) => e.stopPropagation(),
-                    className: s()(
-                      m().ResizeHandle,
-                      e.column.getIsResizing() && m().IsResizing,
-                    ),
-                  }),
-              )
+              u.createElement(V, {
+                key: e.id,
+                header: e,
+                prevHeader: o,
+                HeaderElement: a,
+                nHeaderHeight: r,
+                sortDirection: l,
+                conditionalProps: i,
+              })
             );
           }),
         );
       }
-      const H = c.memo(function (e) {
+      const T = u.memo(function (e) {
         const {
           row: t,
           size: n,
           rowVirtualizer: r,
           measureRef: o,
-          index: l,
-          nItemHeight: i,
+          index: i,
+          nItemHeight: l,
           renderGroup: a,
         } = e;
-        return c.createElement(
+        return u.createElement(
           "div",
           {
             role: "row",
-            className: s()(
+            className: c()(
               m().FancyTableRow,
               t.getCanExpand() && m().ExpandableRow,
             ),
@@ -603,84 +601,187 @@
               minHeight: t.getCanExpand() ? void 0 : `${n}px`,
               transform: "translateY(var(--virtualPos))",
             },
-            "data-even": l % 2 == 0,
-            "data-index": l,
+            "data-even": i % 2 == 0,
+            "data-index": i,
             ref: o,
           },
-          c.createElement(I, {
+          u.createElement(F, {
             row: t,
             rowVirtualizer: r,
-            nItemHeight: i,
+            nItemHeight: l,
             renderGroup: a,
           }),
         );
       });
-      function I(e) {
+      function F(e) {
         const { row: t, rowVirtualizer: n, renderGroup: r } = e;
         if (t.getCanExpand()) {
           const e = r ?? (() => t.groupingValue);
-          return c.createElement(
+          return u.createElement(
             "button",
             {
               className: m().RowGroup,
               "aria-expanded": t.getIsExpanded(),
               onClick: t.getToggleExpandedHandler(),
             },
-            c.createElement("div", { className: m().GroupExpandIndicator }),
+            u.createElement("div", { className: m().GroupExpandIndicator }),
             e(t),
           );
         }
         const o = n.getVirtualItems(),
-          l = t.getVisibleCells();
-        let i,
+          i = t.getVisibleCells();
+        let l,
           a = 0;
-        return c.createElement(
-          c.Fragment,
+        return u.createElement(
+          u.Fragment,
           null,
           o.map((e) => {
-            const t = l[e.index],
+            const t = i[e.index],
               r = t.column.getIsPinned();
             return (
-              r ? (a += e.size) : void 0 === i && (i = e.start),
-              c.createElement(
-                "div",
-                {
-                  className: s()(
-                    m().FancyTableCell,
-                    t.column.columnDef.meta?.cellClassname,
-                  ),
-                  key: t.id,
-                  "data-index": e.index,
-                  "data-table-column-id": t.column.id,
-                  ref: n.measureElement,
-                  style: {
-                    width: `var(--col-${t.column.id}-size)`,
-                    transform: r ? void 0 : `translateX(${i - a}px)`,
-                    ...R(t.column),
-                  },
-                },
-                c.createElement(T, {
-                  CellComponent: t.column.columnDef.cell,
-                  context: t.getContext(),
-                }),
-              )
+              r ? (a += e.size) : void 0 === l && (l = e.start),
+              u.createElement(D, {
+                cell: t,
+                key: t.id,
+                rowVirtualizer: n,
+                index: e.index,
+                transform: r ? void 0 : `translateX(${l - a}px)`,
+              })
             );
           }),
         );
       }
-      const T = c.memo(
+      function k(e, t) {
+        const n = (0, u.useContext)(x),
+          r = e.columnDef.meta?.bGrowToFit,
+          o = e.id,
+          i = r ? e.getSize() : 0,
+          l = e.getIsSorted();
+        (0, u.useLayoutEffect)(() => {
+          if (!r) return;
+          if (!t.current) return;
+          const e = t.current?.scrollWidth;
+          if (!e) return;
+          const l = t.current.getBoundingClientRect().width,
+            a = window.getComputedStyle(t.current);
+          let s = e;
+          if (e > l) {
+            if (a.paddingLeft) {
+              let e = parseInt(a.paddingLeft);
+              isNaN(e) || (s += e);
+            }
+            if (a.paddingRight) {
+              let e = parseInt(a.paddingRight);
+              isNaN(e) || (s += e);
+            }
+          }
+          s > i &&
+            n.setColumnSizeOverride((e) => (e[o] > s ? e : { ...e, [o]: s }));
+        }, [r, o, n, i, t, l]);
+      }
+      function V(e) {
+        const {
+            header: t,
+            prevHeader: n,
+            HeaderElement: r,
+            nHeaderHeight: i,
+            sortDirection: l,
+            conditionalProps: a,
+          } = e,
+          s = (0, u.useRef)(null);
+        return (
+          k(t.column, s),
+          u.createElement(
+            r,
+            {
+              role: "columnheader",
+              key: t.id,
+              ref: s,
+              "data-pinned": !!t.column.getIsPinned(),
+              className: c()(
+                m().ColumnHeader,
+                "button" === r && m().SortButton,
+                t.column.columnDef.meta?.headerClassname,
+              ),
+              style: {
+                width: `var(--header-${t.id}-size)`,
+                height: void 0 !== i ? `${i}px` : void 0,
+                ...H(t.column),
+              },
+              ...a,
+            },
+            n?.column.getCanResize() &&
+              u.createElement("div", {
+                role: "presentation",
+                onDoubleClick: () => n.column.resetSize(),
+                onMouseDown: n.getResizeHandler(),
+                onTouchStart: n.getResizeHandler(),
+                onClick: (e) => e.stopPropagation(),
+                className: c()(m().ResizeHandle, m().PrevResizeHandle),
+              }),
+            t.isPlaceholder
+              ? null
+              : (0, o.Kv)(t.column.columnDef.header, t.getContext()),
+            l &&
+              !t.column.columnDef.meta?.bDisableSortButton &&
+              u.createElement("div", { className: m().SortIndicator }),
+            t.column.getCanResize() &&
+              u.createElement("div", {
+                role: "presentation",
+                onDoubleClick: () => t.column.resetSize(),
+                onMouseDown: t.getResizeHandler(),
+                onTouchStart: t.getResizeHandler(),
+                onClick: (e) => e.stopPropagation(),
+                className: c()(
+                  m().ResizeHandle,
+                  t.column.getIsResizing() && m().IsResizing,
+                ),
+              }),
+          )
+        );
+      }
+      function D(e) {
+        const { cell: t, rowVirtualizer: n, index: o, transform: i } = e,
+          l = u.useRef(null),
+          a = (0, r.XB)(l, n.measure);
+        return (
+          k(t.column, l),
+          u.createElement(
+            "div",
+            {
+              className: c()(
+                m().FancyTableCell,
+                t.column.columnDef.meta?.cellClassname,
+              ),
+              "data-index": o,
+              "data-table-column-id": t.column.id,
+              ref: a,
+              style: {
+                width: `var(--col-${t.column.id}-size)`,
+                transform: i,
+                ...H(t.column),
+              },
+            },
+            u.createElement(M, {
+              CellComponent: t.column.columnDef.cell,
+              context: t.getContext(),
+            }),
+          )
+        );
+      }
+      const M = u.memo(
         function (e) {
-          return (0, r.Kv)(e.CellComponent, e.context);
+          return (0, o.Kv)(e.CellComponent, e.context);
         },
         (e, t) => e.context.getValue() === t.context.getValue(),
       );
     },
     9161: (e, t, n) => {
       "use strict";
-      n.d(t, { g: () => l });
+      n.d(t, { g: () => i });
       var r = n(40323),
         o = n.n(r);
-      class l {
+      class i {
         static ParseCSVFile(e) {
           return new Promise((t, n) => {
             const r = {
@@ -712,7 +813,7 @@
         }
         static WriteCSVToFile(e, t) {
           const n = o().unparse(e, { header: !0 });
-          l.WriteFile(new Blob([n], { type: "text/csv:charset=utf-8;" }), t);
+          i.WriteFile(new Blob([n], { type: "text/csv:charset=utf-8;" }), t);
         }
         static m_DummyValueForQuestionHack = 0;
         static WriteXMLToFile(e, t) {
@@ -721,7 +822,7 @@
           let r =
             "<" + n() + 'xml version="1.0" encoding="UTF-8" ' + n() + ">\n";
           (r += new XMLSerializer().serializeToString(e)),
-            l.WriteFile(
+            i.WriteFile(
               new Blob([r], { type: "application/xml:charset=utf-8;" }),
               t,
             );

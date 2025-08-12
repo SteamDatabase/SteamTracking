@@ -6391,7 +6391,7 @@ html.mobile_client body.v7menu .home_page_body_ctn:not(.has_takeover) .v7menu_sp
 /* 2025 Game Page Widening */
 
 body.v6.widestore .page_content {
-	max-width: 1100px;
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -6415,7 +6415,7 @@ body.v6.widestore #store_header {
 }
 
 .widestore div#store_header .content {
-	max-width: 1100px;
+	max-width: 1200px;
 	width: 100%;
 }
 
@@ -6434,7 +6434,7 @@ body.v6.widestore #store_header {
 	}
 
 	body.v6.widestore .page_content {
-		max-width: 1100px;
+		max-width: 1200px;
 		width: auto;
 		margin: 0 2%;
 	}
@@ -6528,7 +6528,7 @@ body.v6.widestore #store_header {
 	}
 }
 
-@media screen and (max-width: 1100px) and (min-width: 500px) {
+@media screen and (max-width: 1200px) and (min-width: 500px) {
 	body.v6.widestore .page_content {
 		width: 98%;
 	}

@@ -1516,7 +1516,7 @@
         ey: () => M,
         fL: () => C,
         g5: () => u,
-        iE: () => A,
+        iE: () => P,
         im: () => a,
         kF: () => p,
         ke: () => s,
@@ -1527,7 +1527,6 @@
         ww: () => _,
         x6: () => h,
         y4: () => l,
-        zm: () => O,
       });
       const s = 1,
         a = 4,
@@ -1810,7 +1809,7 @@
             return "unknown";
         }
       }
-      var S, v, R, z, I, T, E, F, O, W, L, x, j, k, D, P, A;
+      var S, v, R, z, I, T, E, F, O, W, L, x, j, k, D, P;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -1907,30 +1906,11 @@
               "k_EActivateGameOverlayToWebPageMode_Modal");
         })(F || (F = {})),
         (function (e) {
-          (e[(e.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (e[(e.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (e[(e.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (e[(e.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (e[(e.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (e[(e.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (e[(e.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
-        })(O || (O = {})),
-        (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(W || (W = {})),
+        })(O || (O = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -1956,7 +1936,7 @@
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(L || (L = {})),
+        })(W || (W = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -1964,14 +1944,14 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(x || (x = {})),
+        })(L || (L = {})),
         (function (e) {
           (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
             (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-        })(j || (j = {})),
+        })(x || (x = {})),
         (function (e) {
           (e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
@@ -1985,13 +1965,13 @@
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
               "k_EAppReleaseState_Disabled");
-        })(k || (k = {})),
+        })(j || (j = {})),
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
             (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-        })(D || (D = {})),
+        })(k || (k = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -2024,7 +2004,7 @@
             (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (e[(e.k_EInstallMgrStateCanceled = 16)] =
               "k_EInstallMgrStateCanceled");
-        })(P || (P = {})),
+        })(D || (D = {})),
         (function (e) {
           (e[(e.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
@@ -2032,7 +2012,7 @@
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(A || (A = {}));
+        })(P || (P = {}));
     },
     9344: (e, t, r) => {
       "use strict";
@@ -43267,7 +43247,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "/react-waypoint/",
+          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
         ];
       function J() {
         try {
@@ -49656,16 +49636,17 @@
             childrenContainerWidth: h = "fixed",
             onContextMenu: f,
             onActivate: b,
-            ...B
+            padding: B,
+            ...w
           } = e,
-          { actionDescriptions: w, gamepadEvents: y, props: M } = (0, Ft.C7)(B),
-          C = n.useId(),
-          S = { label: t, description: u ?? i };
+          { actionDescriptions: y, gamepadEvents: M, props: C } = (0, Ft.C7)(w),
+          S = n.useId(),
+          v = { label: t, description: u ?? i };
         return n.createElement(
           ht,
           {
-            accessibilityId: C,
-            ...S,
+            accessibilityId: S,
+            ...v,
             className: l,
             disabled: o,
             onActivate: b,
@@ -49677,16 +49658,17 @@
             autoFocus: p,
             indentLevel: _,
             onContextMenu: f,
-            actionDescriptionMap: w,
+            actionDescriptionMap: y,
             explainer: s,
             explainerTitle: a,
-            ...y,
+            padding: B,
+            ...M,
           },
           n.createElement(Ce, {
-            ..._t(C, S),
+            ..._t(S, v),
             menuLabel: t,
             disabled: o,
-            ...M,
+            ...C,
             ref: c,
           }),
         );
@@ -68688,24 +68670,25 @@
           ),
           o = na(),
           { bSearchVisible: l, openSearch: c, closeSearch: u } = er(),
-          m = n.useCallback(() => {
-            i(void 0);
-          }, []),
+          m = n.useRef(null),
           d = n.useCallback(() => {
-            m(), u();
-          }, [m, u]),
-          g = n.useCallback(
+            m.current?.TakeFocus(), i(void 0);
+          }, []),
+          g = n.useCallback(() => {
+            i(void 0), u();
+          }, [u]),
+          p = n.useCallback(
             (e) => {
-              i((t) => (t == e ? void 0 : e)), u();
+              i((t) => (t === e ? void 0 : e)), u();
             },
             [u],
           ),
-          p = n.useCallback(() => g("more"), [g]);
+          _ = n.useCallback(() => p("more"), [p]);
         (0, n.useEffect)(() => {
-          l && m();
-        }, [l, m]);
-        const _ = n.useRef(null),
-          h = n.useRef(null);
+          l && d();
+        }, [l, d]);
+        const h = n.useRef(null),
+          f = n.useRef(null);
         return n.createElement(
           He.Ay,
           {
@@ -68716,7 +68699,7 @@
           },
           n.createElement(
             ia,
-            { bShowBackdrop: l || !!r, closePopoverAndSearch: d, refPage: t },
+            { bShowBackdrop: l || !!r, closePopoverAndSearch: g, refPage: t },
             Vt.TS.IN_MOBILE_WEBVIEW
               ? n.createElement(Pi, null)
               : n.createElement(
@@ -68726,16 +68709,17 @@
                     className: cr.Content,
                     role: "navigation",
                     "aria-label": ar("#Menu_Label"),
+                    navRef: m,
                   },
                   n.createElement(
                     sa,
                     {
-                      openPopover: g,
+                      openPopover: p,
                       activeSection: r,
                       visibleSections: s,
                       setVisibleSections: a,
-                      refPopover: _,
-                      refActiveButton: h,
+                      refPopover: h,
+                      refActiveButton: f,
                     },
                     o && n.createElement(Pi, null),
                     !o &&
@@ -68748,13 +68732,13 @@
                 ),
             n.createElement(Ys, {
               activeSection: r,
-              closePopover: m,
+              closePopover: d,
               visibleSections: s,
-              refPopover: _,
-              refActiveButton: h,
+              refPopover: h,
+              refActiveButton: f,
             }),
           ),
-          n.createElement(da, { openMoreSection: p }),
+          n.createElement(da, { openMoreSection: _ }),
         );
       });
       function ia(e) {
@@ -69010,8 +68994,9 @@
           } = e,
           [c, u] = n.useState(!1),
           m = n.useCallback(() => r(t), [r, t]),
-          d = n.useCallback(() => u(!0), []),
-          g = n.useCallback(
+          d = n.useCallback(() => r(void 0), [r]),
+          g = n.useCallback(() => u(!0), []),
+          p = n.useCallback(
             (e) => {
               if (s && "Tab" === e.key && !e.shiftKey && l.current) {
                 const t = (0, Vi.U_)(l.current);
@@ -69030,11 +69015,13 @@
           {
             className: lr()(cr.MenuButton, s && cr.Active),
             focusClassName: cr.ButtonFocus,
-            onMouseEnter: d,
+            onCancelButton: d,
+            onOKButton: m,
+            onMouseEnter: g,
             onClick: m,
             ref: o,
             "aria-expanded": !!s,
-            onKeyDown: g,
+            onKeyDown: p,
           },
           n.createElement(
             "div",

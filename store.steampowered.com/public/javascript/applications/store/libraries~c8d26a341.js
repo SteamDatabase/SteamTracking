@@ -5,61 +5,345 @@
   [9236],
   {
     49742: (e, t, n) => {
-      var o =
-          Object.assign ||
-          function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = arguments[t];
-              for (var o in n)
-                Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o]);
+      t.default = void 0;
+      var r = (function (e) {
+          if (e && e.__esModule) return e;
+          if (null === e || ("object" !== l(e) && "function" != typeof e))
+            return { default: e };
+          var t = c();
+          if (t && t.has(e)) return t.get(e);
+          var n = {},
+            r = Object.defineProperty && Object.getOwnPropertyDescriptor;
+          for (var o in e)
+            if (Object.prototype.hasOwnProperty.call(e, o)) {
+              var i = r ? Object.getOwnPropertyDescriptor(e, o) : null;
+              i && (i.get || i.set)
+                ? Object.defineProperty(n, o, i)
+                : (n[o] = e[o]);
             }
-            return e;
-          },
-        i = (function () {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var o = t[n];
-              (o.enumerable = o.enumerable || !1),
-                (o.configurable = !0),
-                "value" in o && (o.writable = !0),
-                Object.defineProperty(e, o.key, o);
-            }
-          }
-          return function (t, n, o) {
-            return n && e(t.prototype, n), o && e(t, o), t;
-          };
-        })(),
-        r = n(90626),
-        u = c(r),
-        s = c(n(61410)),
-        a = c(n(54863)),
-        l = c(n(10297)),
-        g = n(1224);
-      function c(e) {
+          (n.default = e), t && t.set(e, n);
+          return n;
+        })(n(90626)),
+        o = a(n(61410)),
+        i = a(n(54863)),
+        u = a(n(90652)),
+        s = n(1224);
+      function a(e) {
         return e && e.__esModule ? e : { default: e };
       }
-      var d = function () {
+      function c() {
+        if ("function" != typeof WeakMap) return null;
+        var e = new WeakMap();
+        return (
+          (c = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function l(e) {
+        return (
+          (l =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (e) {
+                  return typeof e;
+                }
+              : function (e) {
+                  return e &&
+                    "function" == typeof Symbol &&
+                    e.constructor === Symbol &&
+                    e !== Symbol.prototype
+                    ? "symbol"
+                    : typeof e;
+                }),
+          l(e)
+        );
+      }
+      function f(e, t) {
+        var n = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var r = Object.getOwnPropertySymbols(e);
+          t &&
+            (r = r.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+        }
+        return n;
+      }
+      function g(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var n = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? f(Object(n), !0).forEach(function (t) {
+                v(e, t, n[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : f(Object(n)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(n, t),
+                  );
+                });
+        }
+        return e;
+      }
+      function p(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var r = t[n];
+          (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+        }
+      }
+      function d(e) {
+        return function () {
+          var t,
+            n = y(e);
+          if (
+            (function () {
+              if ("undefined" == typeof Reflect || !Reflect.construct)
+                return !1;
+              if (Reflect.construct.sham) return !1;
+              if ("function" == typeof Proxy) return !0;
+              try {
+                return (
+                  Date.prototype.toString.call(
+                    Reflect.construct(Date, [], function () {}),
+                  ),
+                  !0
+                );
+              } catch (e) {
+                return !1;
+              }
+            })()
+          ) {
+            var r = y(this).constructor;
+            t = Reflect.construct(n, arguments, r);
+          } else t = n.apply(this, arguments);
+          return (function (e, t) {
+            if (t && ("object" === l(t) || "function" == typeof t)) return t;
+            return h(e);
+          })(this, t);
+        };
+      }
+      function h(e) {
+        if (void 0 === e)
+          throw new ReferenceError(
+            "this hasn't been initialised - super() hasn't been called",
+          );
+        return e;
+      }
+      function y(e) {
+        return (
+          (y = Object.setPrototypeOf
+            ? Object.getPrototypeOf
+            : function (e) {
+                return e.__proto__ || Object.getPrototypeOf(e);
+              }),
+          y(e)
+        );
+      }
+      function m(e, t) {
+        return (
+          (m =
+            Object.setPrototypeOf ||
+            function (e, t) {
+              return (e.__proto__ = t), e;
+            }),
+          m(e, t)
+        );
+      }
+      function v(e, t, n) {
+        return (
+          t in e
+            ? Object.defineProperty(e, t, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (e[t] = n),
+          e
+        );
+      }
+      var b = function () {
           return !0;
         },
-        h = (function (e) {
-          function t(e) {
-            var n = e.alwaysRenderSuggestions;
-            !(function (e, t) {
-              if (!(e instanceof t))
-                throw new TypeError("Cannot call a class as a function");
-            })(this, t);
-            var o = (function (e, t) {
-              if (!e)
-                throw new ReferenceError(
-                  "this hasn't been initialised - super() hasn't been called",
-                );
-              return !t || ("object" != typeof t && "function" != typeof t)
-                ? e
-                : t;
-            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        S = "suggestions-revealed",
+        O = "input-focused",
+        w = "input-changed",
+        I = "escape-pressed",
+        j = (function (e) {
+          !(function (e, t) {
+            if ("function" != typeof t && null !== t)
+              throw new TypeError(
+                "Super expression must either be null or a function",
+              );
+            (e.prototype = Object.create(t && t.prototype, {
+              constructor: { value: e, writable: !0, configurable: !0 },
+            })),
+              t && m(e, t);
+          })(c, e);
+          var t,
+            n,
+            o,
+            a = d(c);
+          function c(e) {
+            var t,
+              n = e.alwaysRenderSuggestions;
             return (
-              f.call(o),
-              (o.state = {
+              (function (e, t) {
+                if (!(e instanceof t))
+                  throw new TypeError("Cannot call a class as a function");
+              })(this, c),
+              v(h((t = a.call(this))), "onDocumentMouseDown", function (e) {
+                t.justClickedOnSuggestionsContainer = !1;
+                for (
+                  var n = (e.detail && e.detail.target) || e.target;
+                  null !== n && n !== document;
+                ) {
+                  if (
+                    n.getAttribute &&
+                    null !== n.getAttribute("data-suggestion-index")
+                  )
+                    return;
+                  if (n === t.suggestionsContainer)
+                    return void (t.justClickedOnSuggestionsContainer = !0);
+                  n = n.parentNode;
+                }
+              }),
+              v(h(t), "storeAutowhateverRef", function (e) {
+                null !== e && (t.autowhatever = e);
+              }),
+              v(h(t), "onSuggestionMouseEnter", function (e, n) {
+                var r = n.sectionIndex,
+                  o = n.itemIndex;
+                t.updateHighlightedSuggestion(r, o),
+                  e.target === t.pressedSuggestion &&
+                    (t.justSelectedSuggestion = !0),
+                  (t.justMouseEntered = !0),
+                  setTimeout(function () {
+                    t.justMouseEntered = !1;
+                  });
+              }),
+              v(h(t), "highlightFirstSuggestion", function () {
+                t.updateHighlightedSuggestion(
+                  t.props.multiSection ? 0 : null,
+                  0,
+                );
+              }),
+              v(h(t), "onDocumentMouseUp", function () {
+                t.pressedSuggestion &&
+                  !t.justSelectedSuggestion &&
+                  t.input.focus(),
+                  (t.pressedSuggestion = null);
+              }),
+              v(h(t), "onSuggestionMouseDown", function (e) {
+                t.justSelectedSuggestion ||
+                  ((t.justSelectedSuggestion = !0),
+                  (t.pressedSuggestion = e.target));
+              }),
+              v(h(t), "onSuggestionsClearRequested", function () {
+                var e = t.props.onSuggestionsClearRequested;
+                e && e();
+              }),
+              v(h(t), "onSuggestionSelected", function (e, n) {
+                var r = t.props,
+                  o = r.alwaysRenderSuggestions,
+                  i = r.onSuggestionSelected,
+                  u = r.onSuggestionsFetchRequested;
+                i && i(e, n);
+                var s = t.props.shouldKeepSuggestionsOnSelect(n.suggestion);
+                o || s
+                  ? u({
+                      value: n.suggestionValue,
+                      reason: "suggestion-selected",
+                    })
+                  : t.onSuggestionsClearRequested(),
+                  t.resetHighlightedSuggestion();
+              }),
+              v(h(t), "onSuggestionClick", function (e) {
+                var n = t.props,
+                  r = n.alwaysRenderSuggestions,
+                  o = n.focusInputOnSuggestionClick,
+                  i = t.getSuggestionIndices(t.findSuggestionElement(e.target)),
+                  u = i.sectionIndex,
+                  s = i.suggestionIndex,
+                  a = t.getSuggestion(u, s),
+                  c = t.props.getSuggestionValue(a);
+                t.maybeCallOnChange(e, c, "click"),
+                  t.onSuggestionSelected(e, {
+                    suggestion: a,
+                    suggestionValue: c,
+                    suggestionIndex: s,
+                    sectionIndex: u,
+                    method: "click",
+                  });
+                var l = t.props.shouldKeepSuggestionsOnSelect(a);
+                r || l || t.closeSuggestions(),
+                  !0 === o ? t.input.focus() : t.onBlur(),
+                  setTimeout(function () {
+                    t.justSelectedSuggestion = !1;
+                  });
+              }),
+              v(h(t), "onBlur", function () {
+                var e = t.props,
+                  n = e.inputProps,
+                  r = e.shouldRenderSuggestions,
+                  o = n.value,
+                  i = n.onBlur,
+                  u = t.getHighlightedSuggestion(),
+                  s = r(o, "input-blurred");
+                t.setState({
+                  isFocused: !1,
+                  highlightedSectionIndex: null,
+                  highlightedSuggestionIndex: null,
+                  highlightedSuggestion: null,
+                  valueBeforeUpDown: null,
+                  isCollapsed: !s,
+                }),
+                  i && i(t.blurEvent, { highlightedSuggestion: u });
+              }),
+              v(h(t), "onSuggestionMouseLeave", function (e) {
+                t.resetHighlightedSuggestion(!1),
+                  t.justSelectedSuggestion &&
+                    e.target === t.pressedSuggestion &&
+                    (t.justSelectedSuggestion = !1);
+              }),
+              v(h(t), "onSuggestionTouchStart", function () {
+                t.justSelectedSuggestion = !0;
+              }),
+              v(h(t), "onSuggestionTouchMove", function () {
+                (t.justSelectedSuggestion = !1),
+                  (t.pressedSuggestion = null),
+                  t.input.focus();
+              }),
+              v(h(t), "itemProps", function (e) {
+                return {
+                  "data-section-index": e.sectionIndex,
+                  "data-suggestion-index": e.itemIndex,
+                  onMouseEnter: t.onSuggestionMouseEnter,
+                  onMouseLeave: t.onSuggestionMouseLeave,
+                  onMouseDown: t.onSuggestionMouseDown,
+                  onTouchStart: t.onSuggestionTouchStart,
+                  onTouchMove: t.onSuggestionTouchMove,
+                  onClick: t.onSuggestionClick,
+                };
+              }),
+              v(h(t), "renderSuggestionsContainer", function (e) {
+                var n = e.containerProps,
+                  r = e.children;
+                return (0, t.props.renderSuggestionsContainer)({
+                  containerProps: n,
+                  children: r,
+                  query: t.getQuery(),
+                });
+              }),
+              (t.state = {
                 isFocused: !1,
                 isCollapsed: !n,
                 highlightedSectionIndex: null,
@@ -67,33 +351,15 @@
                 highlightedSuggestion: null,
                 valueBeforeUpDown: null,
               }),
-              (o.justPressedUpDown = !1),
-              (o.justMouseEntered = !1),
-              (o.pressedSuggestion = null),
-              o
+              (t.justPressedUpDown = !1),
+              (t.justMouseEntered = !1),
+              (t.pressedSuggestion = null),
+              t
             );
           }
           return (
-            (function (e, t) {
-              if ("function" != typeof t && null !== t)
-                throw new TypeError(
-                  "Super expression must either be null or a function, not " +
-                    typeof t,
-                );
-              (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                  value: e,
-                  enumerable: !1,
-                  writable: !0,
-                  configurable: !0,
-                },
-              })),
-                t &&
-                  (Object.setPrototypeOf
-                    ? Object.setPrototypeOf(e, t)
-                    : (e.__proto__ = t));
-            })(t, e),
-            i(t, [
+            (t = c),
+            (n = [
               {
                 key: "componentDidMount",
                 value: function () {
@@ -111,18 +377,24 @@
                 },
               },
               {
-                key: "componentWillReceiveProps",
+                key: "UNSAFE_componentWillReceiveProps",
                 value: function (e) {
-                  (0, a.default)(e.suggestions, this.props.suggestions)
+                  var t =
+                    0 === this.state.highlightedSuggestionIndex &&
+                    this.props.highlightFirstSuggestion &&
+                    !e.highlightFirstSuggestion;
+                  (0, i.default)(e.suggestions, this.props.suggestions)
                     ? e.highlightFirstSuggestion &&
                       e.suggestions.length > 0 &&
                       !1 === this.justPressedUpDown &&
-                      !1 === this.justMouseEntered &&
-                      this.highlightFirstSuggestion()
-                    : this.willRenderSuggestions(e)
-                      ? this.state.isCollapsed &&
-                        !this.justSelectedSuggestion &&
-                        this.revealSuggestions()
+                      !1 === this.justMouseEntered
+                      ? this.highlightFirstSuggestion()
+                      : t && this.resetHighlightedSuggestion()
+                    : this.willRenderSuggestions(e, "suggestions-updated")
+                      ? (this.state.isCollapsed &&
+                          !this.justSelectedSuggestion &&
+                          this.revealSuggestions(),
+                        t && this.resetHighlightedSuggestion())
                       : this.resetHighlightedSuggestion();
                 },
               },
@@ -130,14 +402,14 @@
                 key: "componentDidUpdate",
                 value: function (e, t) {
                   var n = this.props,
-                    o = n.suggestions,
-                    i = n.onSuggestionHighlighted,
-                    r = n.highlightFirstSuggestion;
-                  if (!(0, a.default)(o, e.suggestions) && o.length > 0 && r)
+                    r = n.suggestions,
+                    o = n.onSuggestionHighlighted,
+                    u = n.highlightFirstSuggestion;
+                  if (!(0, i.default)(r, e.suggestions) && r.length > 0 && u)
                     this.highlightFirstSuggestion();
-                  else if (i) {
-                    var u = this.getHighlightedSuggestion();
-                    u != t.highlightedSuggestion && i({ suggestion: u });
+                  else if (o) {
+                    var s = this.getHighlightedSuggestion();
+                    s != t.highlightedSuggestion && o({ suggestion: s });
                   }
                 },
               },
@@ -157,19 +429,19 @@
               {
                 key: "updateHighlightedSuggestion",
                 value: function (e, t, n) {
-                  var o = this;
-                  this.setState(function (i) {
-                    var r = i.valueBeforeUpDown;
+                  var r = this;
+                  this.setState(function (o) {
+                    var i = o.valueBeforeUpDown;
                     return (
                       null === t
-                        ? (r = null)
-                        : null === r && void 0 !== n && (r = n),
+                        ? (i = null)
+                        : null === i && void 0 !== n && (i = n),
                       {
                         highlightedSectionIndex: e,
                         highlightedSuggestionIndex: t,
                         highlightedSuggestion:
-                          null === t ? null : o.getSuggestion(e, t),
-                        valueBeforeUpDown: r,
+                          null === t ? null : r.getSuggestion(e, t),
+                        valueBeforeUpDown: i,
                       }
                     );
                   });
@@ -214,10 +486,10 @@
                 key: "getSuggestion",
                 value: function (e, t) {
                   var n = this.props,
-                    o = n.suggestions,
-                    i = n.multiSection,
-                    r = n.getSectionSuggestions;
-                  return i ? r(o[e])[t] : o[t];
+                    r = n.suggestions,
+                    o = n.multiSection,
+                    i = n.getSectionSuggestions;
+                  return o ? i(r[e])[t] : r[t];
                 },
               },
               {
@@ -253,7 +525,10 @@
                 value: function (e) {
                   var t = e;
                   do {
-                    if (null !== t.getAttribute("data-suggestion-index"))
+                    if (
+                      t.getAttribute &&
+                      null !== t.getAttribute("data-suggestion-index")
+                    )
                       return t;
                     t = t.parentNode;
                   } while (null !== t);
@@ -266,20 +541,20 @@
               {
                 key: "maybeCallOnChange",
                 value: function (e, t, n) {
-                  var o = this.props.inputProps,
-                    i = o.value,
-                    r = o.onChange;
-                  t !== i && r(e, { newValue: t, method: n });
+                  var r = this.props.inputProps,
+                    o = r.value,
+                    i = r.onChange;
+                  t !== o && i(e, { newValue: t, method: n });
                 },
               },
               {
                 key: "willRenderSuggestions",
-                value: function (e) {
-                  var t = e.suggestions,
-                    n = e.inputProps,
+                value: function (e, t) {
+                  var n = e.suggestions,
+                    r = e.inputProps,
                     o = e.shouldRenderSuggestions,
-                    i = n.value;
-                  return t.length > 0 && o(i);
+                    i = r.value;
+                  return n.length > 0 && o(i, t);
                 },
               },
               {
@@ -296,41 +571,42 @@
                   var e = this,
                     t = this.props,
                     n = t.suggestions,
-                    i = t.renderInputComponent,
-                    r = t.onSuggestionsFetchRequested,
-                    s = t.renderSuggestion,
-                    a = t.inputProps,
-                    c = t.multiSection,
-                    h = t.renderSectionTitle,
-                    f = t.id,
-                    p = t.getSectionSuggestions,
-                    m = t.theme,
-                    v = t.getSuggestionValue,
-                    S = t.alwaysRenderSuggestions,
-                    y = t.highlightFirstSuggestion,
-                    I = this.state,
-                    b = I.isFocused,
-                    w = I.isCollapsed,
-                    C = I.highlightedSectionIndex,
-                    _ = I.highlightedSuggestionIndex,
-                    x = I.valueBeforeUpDown,
-                    O = S ? d : this.props.shouldRenderSuggestions,
-                    j = a.value,
-                    P = a.onFocus,
-                    k = a.onKeyDown,
-                    R = this.willRenderSuggestions(this.props),
-                    E = S || (b && !w && R),
-                    T = E ? n : [],
-                    D = o({}, a, {
+                    o = t.renderInputComponent,
+                    i = t.onSuggestionsFetchRequested,
+                    a = t.renderSuggestion,
+                    c = t.inputProps,
+                    l = t.multiSection,
+                    f = t.renderSectionTitle,
+                    p = t.id,
+                    d = t.getSectionSuggestions,
+                    h = t.theme,
+                    y = t.getSuggestionValue,
+                    m = t.alwaysRenderSuggestions,
+                    v = t.highlightFirstSuggestion,
+                    j = t.containerProps,
+                    P = this.state,
+                    _ = P.isFocused,
+                    C = P.isCollapsed,
+                    x = P.highlightedSectionIndex,
+                    k = P.highlightedSuggestionIndex,
+                    D = P.valueBeforeUpDown,
+                    R = m ? b : this.props.shouldRenderSuggestions,
+                    E = c.value,
+                    M = c.onFocus,
+                    T = c.onKeyDown,
+                    H = this.willRenderSuggestions(this.props, "render"),
+                    F = m || (_ && !C && H),
+                    q = F ? n : [],
+                    A = g({}, c, {
                       onFocus: function (t) {
                         if (
                           !e.justSelectedSuggestion &&
                           !e.justClickedOnSuggestionsContainer
                         ) {
-                          var n = O(j);
+                          var n = R(E, O);
                           e.setState({ isFocused: !0, isCollapsed: !n }),
-                            P && P(t),
-                            n && r({ value: j, reason: "input-focused" });
+                            M && M(t),
+                            n && i({ value: E, reason: O });
                         }
                       },
                       onBlur: function (t) {
@@ -342,73 +618,72 @@
                       },
                       onChange: function (t) {
                         var n = t.target.value,
-                          i = O(n);
+                          r = R(n, w);
                         e.maybeCallOnChange(t, n, "type"),
                           e.suggestionsContainer &&
                             (e.suggestionsContainer.scrollTop = 0),
                           e.setState(
-                            o(
+                            g(
                               {},
-                              y
+                              v
                                 ? {}
                                 : {
                                     highlightedSectionIndex: null,
                                     highlightedSuggestionIndex: null,
                                     highlightedSuggestion: null,
                                   },
-                              { valueBeforeUpDown: null, isCollapsed: !i },
+                              { valueBeforeUpDown: null, isCollapsed: !r },
                             ),
                           ),
-                          i
-                            ? r({ value: n, reason: "input-changed" })
+                          r
+                            ? i({ value: n, reason: w })
                             : e.onSuggestionsClearRequested();
                       },
-                      onKeyDown: function (t, o) {
-                        var i = t.keyCode;
-                        switch (i) {
+                      onKeyDown: function (t, r) {
+                        var o = t.keyCode;
+                        switch (o) {
                           case 40:
                           case 38:
-                            if (w)
-                              O(j) &&
-                                (r({
-                                  value: j,
-                                  reason: "suggestions-revealed",
-                                }),
-                                e.revealSuggestions());
+                            if (C)
+                              R(E, S) &&
+                                (i({ value: E, reason: S }),
+                                e.revealSuggestions(),
+                                t.preventDefault());
                             else if (n.length > 0) {
-                              var u = o.newHighlightedSectionIndex,
-                                s = o.newHighlightedItemIndex,
-                                a = void 0;
-                              (a =
-                                null === s
-                                  ? null === x
-                                    ? j
-                                    : x
-                                  : e.getSuggestionValueByIndex(u, s)),
-                                e.updateHighlightedSuggestion(u, s, j),
+                              var u,
+                                s = r.newHighlightedSectionIndex,
+                                a = r.newHighlightedItemIndex;
+                              (u =
+                                null === a
+                                  ? null === D
+                                    ? E
+                                    : D
+                                  : e.getSuggestionValueByIndex(s, a)),
+                                e.updateHighlightedSuggestion(s, a, E),
                                 e.maybeCallOnChange(
                                   t,
-                                  a,
-                                  40 === i ? "down" : "up",
-                                );
+                                  u,
+                                  40 === o ? "down" : "up",
+                                ),
+                                t.preventDefault();
                             }
-                            t.preventDefault(),
-                              (e.justPressedUpDown = !0),
+                            (e.justPressedUpDown = !0),
                               setTimeout(function () {
                                 e.justPressedUpDown = !1;
                               });
                             break;
                           case 13:
                             if (229 === t.keyCode) break;
-                            var l = e.getHighlightedSuggestion();
-                            if ((E && !S && e.closeSuggestions(), null != l)) {
-                              var g = v(l);
-                              e.maybeCallOnChange(t, g, "enter"),
+                            var c = e.getHighlightedSuggestion();
+                            if ((F && !m && e.closeSuggestions(), null != c)) {
+                              t.preventDefault();
+                              var l = y(c);
+                              e.maybeCallOnChange(t, l, "enter"),
                                 e.onSuggestionSelected(t, {
-                                  suggestion: l,
-                                  suggestionValue: g,
-                                  suggestionIndex: _,
-                                  sectionIndex: C,
+                                  suggestion: c,
+                                  suggestionValue: l,
+                                  suggestionIndex: k,
+                                  sectionIndex: x,
                                   method: "enter",
                                 }),
                                 (e.justSelectedSuggestion = !0),
@@ -418,462 +693,440 @@
                             }
                             break;
                           case 27:
-                            E && t.preventDefault();
-                            var c = E && !S;
-                            if (null === x) {
-                              if (!c) {
-                                e.maybeCallOnChange(t, "", "escape"),
-                                  O("")
-                                    ? r({ value: "", reason: "escape-pressed" })
-                                    : e.onSuggestionsClearRequested();
-                              }
-                            } else e.maybeCallOnChange(t, x, "escape");
-                            c
-                              ? (e.onSuggestionsClearRequested(),
-                                e.closeSuggestions())
-                              : e.resetHighlightedSuggestion();
+                            F && t.preventDefault();
+                            var f = F && !m;
+                            null === D
+                              ? f ||
+                                (e.maybeCallOnChange(t, "", "escape"),
+                                R("", I)
+                                  ? i({ value: "", reason: I })
+                                  : e.onSuggestionsClearRequested())
+                              : e.maybeCallOnChange(t, D, "escape"),
+                              f
+                                ? (e.onSuggestionsClearRequested(),
+                                  e.closeSuggestions())
+                                : e.resetHighlightedSuggestion();
                         }
-                        k && k(t);
+                        T && T(t);
                       },
                     }),
-                    M = { query: this.getQuery() };
-                  return u.default.createElement(l.default, {
-                    multiSection: c,
-                    items: T,
-                    renderInputComponent: i,
+                    U = { query: this.getQuery() };
+                  return r.default.createElement(u.default, {
+                    multiSection: l,
+                    items: q,
+                    renderInputComponent: o,
                     renderItemsContainer: this.renderSuggestionsContainer,
-                    renderItem: s,
-                    renderItemData: M,
-                    renderSectionTitle: h,
-                    getSectionItems: p,
-                    highlightedSectionIndex: C,
-                    highlightedItemIndex: _,
-                    inputProps: D,
+                    renderItem: a,
+                    renderItemData: U,
+                    renderSectionTitle: f,
+                    getSectionItems: d,
+                    highlightedSectionIndex: x,
+                    highlightedItemIndex: k,
+                    containerProps: j,
+                    inputProps: A,
                     itemProps: this.itemProps,
-                    theme: (0, g.mapToAutowhateverTheme)(m),
-                    id: f,
+                    theme: (0, s.mapToAutowhateverTheme)(h),
+                    id: p,
                     ref: this.storeAutowhateverRef,
                   });
                 },
               },
             ]),
-            t
+            n && p(t.prototype, n),
+            o && p(t, o),
+            c
           );
         })(r.Component);
-      (h.propTypes = {
-        suggestions: s.default.array.isRequired,
-        onSuggestionsFetchRequested: function (e, t) {
-          var n = e[t];
-          if ("function" != typeof n)
-            throw new Error(
-              "'onSuggestionsFetchRequested' must be implemented. See: https://github.com/moroshko/react-autosuggest#onSuggestionsFetchRequestedProp",
-            );
-        },
-        onSuggestionsClearRequested: function (e, t) {
-          var n = e[t];
-          if (!1 === e.alwaysRenderSuggestions && "function" != typeof n)
-            throw new Error(
-              "'onSuggestionsClearRequested' must be implemented. See: https://github.com/moroshko/react-autosuggest#onSuggestionsClearRequestedProp",
-            );
-        },
-        onSuggestionSelected: s.default.func,
-        onSuggestionHighlighted: s.default.func,
-        renderInputComponent: s.default.func,
-        renderSuggestionsContainer: s.default.func,
-        getSuggestionValue: s.default.func.isRequired,
-        renderSuggestion: s.default.func.isRequired,
-        inputProps: function (e, t) {
-          var n = e[t];
-          if (!n.hasOwnProperty("value"))
-            throw new Error("'inputProps' must have 'value'.");
-          if (!n.hasOwnProperty("onChange"))
-            throw new Error("'inputProps' must have 'onChange'.");
-        },
-        shouldRenderSuggestions: s.default.func,
-        alwaysRenderSuggestions: s.default.bool,
-        multiSection: s.default.bool,
-        renderSectionTitle: function (e, t) {
-          var n = e[t];
-          if (!0 === e.multiSection && "function" != typeof n)
-            throw new Error(
-              "'renderSectionTitle' must be implemented. See: https://github.com/moroshko/react-autosuggest#renderSectionTitleProp",
-            );
-        },
-        getSectionSuggestions: function (e, t) {
-          var n = e[t];
-          if (!0 === e.multiSection && "function" != typeof n)
-            throw new Error(
-              "'getSectionSuggestions' must be implemented. See: https://github.com/moroshko/react-autosuggest#getSectionSuggestionsProp",
-            );
-        },
-        focusInputOnSuggestionClick: s.default.bool,
-        highlightFirstSuggestion: s.default.bool,
-        theme: s.default.object,
-        id: s.default.string,
-      }),
-        (h.defaultProps = {
+      (t.default = j),
+        v(j, "propTypes", {
+          suggestions: o.default.array.isRequired,
+          onSuggestionsFetchRequested: function (e, t) {
+            var n = e[t];
+            if ("function" != typeof n)
+              throw new Error(
+                "'onSuggestionsFetchRequested' must be implemented. See: https://github.com/moroshko/react-autosuggest#onSuggestionsFetchRequestedProp",
+              );
+          },
+          onSuggestionsClearRequested: function (e, t) {
+            var n = e[t];
+            if (!1 === e.alwaysRenderSuggestions && "function" != typeof n)
+              throw new Error(
+                "'onSuggestionsClearRequested' must be implemented. See: https://github.com/moroshko/react-autosuggest#onSuggestionsClearRequestedProp",
+              );
+          },
+          shouldKeepSuggestionsOnSelect: o.default.func,
+          onSuggestionSelected: o.default.func,
+          onSuggestionHighlighted: o.default.func,
+          renderInputComponent: o.default.func,
+          renderSuggestionsContainer: o.default.func,
+          getSuggestionValue: o.default.func.isRequired,
+          renderSuggestion: o.default.func.isRequired,
+          inputProps: function (e, t) {
+            var n = e[t];
+            if (!n) throw new Error("'inputProps' must be passed.");
+            if (!Object.prototype.hasOwnProperty.call(n, "value"))
+              throw new Error("'inputProps' must have 'value'.");
+            if (!Object.prototype.hasOwnProperty.call(n, "onChange"))
+              throw new Error("'inputProps' must have 'onChange'.");
+          },
+          shouldRenderSuggestions: o.default.func,
+          alwaysRenderSuggestions: o.default.bool,
+          multiSection: o.default.bool,
+          renderSectionTitle: function (e, t) {
+            var n = e[t];
+            if (!0 === e.multiSection && "function" != typeof n)
+              throw new Error(
+                "'renderSectionTitle' must be implemented. See: https://github.com/moroshko/react-autosuggest#renderSectionTitleProp",
+              );
+          },
+          getSectionSuggestions: function (e, t) {
+            var n = e[t];
+            if (!0 === e.multiSection && "function" != typeof n)
+              throw new Error(
+                "'getSectionSuggestions' must be implemented. See: https://github.com/moroshko/react-autosuggest#getSectionSuggestionsProp",
+              );
+          },
+          focusInputOnSuggestionClick: o.default.bool,
+          highlightFirstSuggestion: o.default.bool,
+          theme: o.default.object,
+          id: o.default.string,
+          containerProps: o.default.object,
+        }),
+        v(j, "defaultProps", {
           renderSuggestionsContainer: function (e) {
             var t = e.containerProps,
               n = e.children;
-            return u.default.createElement("div", t, n);
+            return r.default.createElement("div", t, n);
           },
           shouldRenderSuggestions: function (e) {
             return e.trim().length > 0;
           },
           alwaysRenderSuggestions: !1,
           multiSection: !1,
+          shouldKeepSuggestionsOnSelect: function () {
+            return !1;
+          },
           focusInputOnSuggestionClick: !0,
           highlightFirstSuggestion: !1,
-          theme: g.defaultTheme,
+          theme: s.defaultTheme,
           id: "1",
-        });
-      var f = function () {
-        var e = this;
-        (this.onDocumentMouseDown = function (t) {
-          e.justClickedOnSuggestionsContainer = !1;
-          for (
-            var n = (t.detail && t.detail.target) || t.target;
-            null !== n && n !== document;
-          ) {
-            if (null !== n.getAttribute("data-suggestion-index")) return;
-            if (n === e.suggestionsContainer)
-              return void (e.justClickedOnSuggestionsContainer = !0);
-            n = n.parentNode;
-          }
-        }),
-          (this.storeAutowhateverRef = function (t) {
-            null !== t && (e.autowhatever = t);
-          }),
-          (this.onSuggestionMouseEnter = function (t, n) {
-            var o = n.sectionIndex,
-              i = n.itemIndex;
-            e.updateHighlightedSuggestion(o, i),
-              t.target === e.pressedSuggestion &&
-                (e.justSelectedSuggestion = !0),
-              (e.justMouseEntered = !0),
-              setTimeout(function () {
-                e.justMouseEntered = !1;
-              });
-          }),
-          (this.highlightFirstSuggestion = function () {
-            e.updateHighlightedSuggestion(e.props.multiSection ? 0 : null, 0);
-          }),
-          (this.onDocumentMouseUp = function () {
-            e.pressedSuggestion && !e.justSelectedSuggestion && e.input.focus(),
-              (e.pressedSuggestion = null);
-          }),
-          (this.onSuggestionMouseDown = function (t) {
-            e.justSelectedSuggestion ||
-              ((e.justSelectedSuggestion = !0),
-              (e.pressedSuggestion = t.target));
-          }),
-          (this.onSuggestionsClearRequested = function () {
-            var t = e.props.onSuggestionsClearRequested;
-            t && t();
-          }),
-          (this.onSuggestionSelected = function (t, n) {
-            var o = e.props,
-              i = o.alwaysRenderSuggestions,
-              r = o.onSuggestionSelected,
-              u = o.onSuggestionsFetchRequested;
-            r && r(t, n),
-              i
-                ? u({ value: n.suggestionValue, reason: "suggestion-selected" })
-                : e.onSuggestionsClearRequested(),
-              e.resetHighlightedSuggestion();
-          }),
-          (this.onSuggestionClick = function (t) {
-            var n = e.props,
-              o = n.alwaysRenderSuggestions,
-              i = n.focusInputOnSuggestionClick,
-              r = e.getSuggestionIndices(e.findSuggestionElement(t.target)),
-              u = r.sectionIndex,
-              s = r.suggestionIndex,
-              a = e.getSuggestion(u, s),
-              l = e.props.getSuggestionValue(a);
-            e.maybeCallOnChange(t, l, "click"),
-              e.onSuggestionSelected(t, {
-                suggestion: a,
-                suggestionValue: l,
-                suggestionIndex: s,
-                sectionIndex: u,
-                method: "click",
-              }),
-              o || e.closeSuggestions(),
-              !0 === i ? e.input.focus() : e.onBlur(),
-              setTimeout(function () {
-                e.justSelectedSuggestion = !1;
-              });
-          }),
-          (this.onBlur = function () {
-            var t = e.props,
-              n = t.inputProps,
-              o = t.shouldRenderSuggestions,
-              i = n.value,
-              r = n.onBlur,
-              u = e.getHighlightedSuggestion(),
-              s = o(i);
-            e.setState({
-              isFocused: !1,
-              highlightedSectionIndex: null,
-              highlightedSuggestionIndex: null,
-              highlightedSuggestion: null,
-              valueBeforeUpDown: null,
-              isCollapsed: !s,
-            }),
-              r && r(e.blurEvent, { highlightedSuggestion: u });
-          }),
-          (this.onSuggestionMouseLeave = function (t) {
-            e.resetHighlightedSuggestion(!1),
-              e.justSelectedSuggestion &&
-                t.target === e.pressedSuggestion &&
-                (e.justSelectedSuggestion = !1);
-          }),
-          (this.onSuggestionTouchStart = function () {
-            e.justSelectedSuggestion = !0;
-          }),
-          (this.onSuggestionTouchMove = function () {
-            (e.justSelectedSuggestion = !1),
-              (e.pressedSuggestion = null),
-              e.input.focus();
-          }),
-          (this.itemProps = function (t) {
-            return {
-              "data-section-index": t.sectionIndex,
-              "data-suggestion-index": t.itemIndex,
-              onMouseEnter: e.onSuggestionMouseEnter,
-              onMouseLeave: e.onSuggestionMouseLeave,
-              onMouseDown: e.onSuggestionMouseDown,
-              onTouchStart: e.onSuggestionTouchStart,
-              onTouchMove: e.onSuggestionTouchMove,
-              onClick: e.onSuggestionClick,
-            };
-          }),
-          (this.renderSuggestionsContainer = function (t) {
-            var n = t.containerProps,
-              o = t.children;
-            return (0, e.props.renderSuggestionsContainer)({
-              containerProps: n,
-              children: o,
-              query: e.getQuery(),
-            });
-          });
-      };
-      t.default = h;
-    },
-    26649: (e, t, n) => {
-      e.exports = n(49742).default;
-    },
-    1224: (e, t) => {
-      Object.defineProperty(t, "__esModule", { value: !0 });
-      (t.defaultTheme = {
-        container: "react-autosuggest__container",
-        containerOpen: "react-autosuggest__container--open",
-        input: "react-autosuggest__input",
-        inputOpen: "react-autosuggest__input--open",
-        inputFocused: "react-autosuggest__input--focused",
-        suggestionsContainer: "react-autosuggest__suggestions-container",
-        suggestionsContainerOpen:
-          "react-autosuggest__suggestions-container--open",
-        suggestionsList: "react-autosuggest__suggestions-list",
-        suggestion: "react-autosuggest__suggestion",
-        suggestionFirst: "react-autosuggest__suggestion--first",
-        suggestionHighlighted: "react-autosuggest__suggestion--highlighted",
-        sectionContainer: "react-autosuggest__section-container",
-        sectionContainerFirst: "react-autosuggest__section-container--first",
-        sectionTitle: "react-autosuggest__section-title",
-      }),
-        (t.mapToAutowhateverTheme = function (e) {
-          var t = {};
-          for (var n in e)
-            switch (n) {
-              case "suggestionsContainer":
-                t.itemsContainer = e[n];
-                break;
-              case "suggestionsContainerOpen":
-                t.itemsContainerOpen = e[n];
-                break;
-              case "suggestion":
-                t.item = e[n];
-                break;
-              case "suggestionFirst":
-                t.itemFirst = e[n];
-                break;
-              case "suggestionHighlighted":
-                t.itemHighlighted = e[n];
-                break;
-              case "suggestionsList":
-                t.itemsList = e[n];
-                break;
-              default:
-                t[n] = e[n];
-            }
-          return t;
+          containerProps: {},
         });
     },
-    72988: (e, t, n) => {
-      var o =
-          Object.assign ||
-          function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = arguments[t];
-              for (var o in n)
-                Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o]);
+    90652: (e, t, n) => {
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.default = void 0);
+      var r = (function (e) {
+          if (e && e.__esModule) return e;
+          if (null === e || ("object" !== h(e) && "function" != typeof e))
+            return { default: e };
+          var t = l();
+          if (t && t.has(e)) return t.get(e);
+          var n = {},
+            r = Object.defineProperty && Object.getOwnPropertyDescriptor;
+          for (var o in e)
+            if (Object.prototype.hasOwnProperty.call(e, o)) {
+              var i = r ? Object.getOwnPropertyDescriptor(e, o) : null;
+              i && (i.get || i.set)
+                ? Object.defineProperty(n, o, i)
+                : (n[o] = e[o]);
             }
-            return e;
-          },
-        i = function (e, t) {
-          if (Array.isArray(e)) return e;
-          if (Symbol.iterator in Object(e))
-            return (function (e, t) {
-              var n = [],
-                o = !0,
-                i = !1,
-                r = void 0;
-              try {
-                for (
-                  var u, s = e[Symbol.iterator]();
-                  !(o = (u = s.next()).done) &&
-                  (n.push(u.value), !t || n.length !== t);
-                  o = !0
-                );
-              } catch (e) {
-                (i = !0), (r = e);
-              } finally {
-                try {
-                  !o && s.return && s.return();
-                } finally {
-                  if (i) throw r;
-                }
-              }
-              return n;
-            })(e, t);
-          throw new TypeError(
-            "Invalid attempt to destructure non-iterable instance",
-          );
-        },
-        r = (function () {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var o = t[n];
-              (o.enumerable = o.enumerable || !1),
-                (o.configurable = !0),
-                "value" in o && (o.writable = !0),
-                Object.defineProperty(e, o.key, o);
-            }
-          }
-          return function (t, n, o) {
-            return n && e(t.prototype, n), o && e(t, o), t;
-          };
-        })(),
-        u = n(90626),
-        s = h(u),
-        a = h(n(61410)),
-        l = h(n(40444)),
-        g = h(n(62035)),
-        c = h(n(52562)),
-        d = h(n(83989));
-      function h(e) {
+          (n.default = e), t && t.set(e, n);
+          return n;
+        })(n(90626)),
+        o = c(n(61410)),
+        i = c(n(40444)),
+        u = c(n(62035)),
+        s = c(n(86578)),
+        a = c(n(48326));
+      function c(e) {
         return e && e.__esModule ? e : { default: e };
       }
-      var f = {},
-        p = (function (e) {
-          function t(e) {
-            !(function (e, t) {
-              if (!(e instanceof t))
-                throw new TypeError("Cannot call a class as a function");
-            })(this, t);
-            var n = (function (e, t) {
-              if (!e)
-                throw new ReferenceError(
-                  "this hasn't been initialised - super() hasn't been called",
+      function l() {
+        if ("function" != typeof WeakMap) return null;
+        var e = new WeakMap();
+        return (
+          (l = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function f(e, t) {
+        var n = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var r = Object.getOwnPropertySymbols(e);
+          t &&
+            (r = r.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+        }
+        return n;
+      }
+      function g(e) {
+        for (var t = 1; t < arguments.length; t++) {
+          var n = null != arguments[t] ? arguments[t] : {};
+          t % 2
+            ? f(Object(n), !0).forEach(function (t) {
+                O(e, t, n[t]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : f(Object(n)).forEach(function (t) {
+                  Object.defineProperty(
+                    e,
+                    t,
+                    Object.getOwnPropertyDescriptor(n, t),
+                  );
+                });
+        }
+        return e;
+      }
+      function p(e, t) {
+        return (
+          (function (e) {
+            if (Array.isArray(e)) return e;
+          })(e) ||
+          (function (e, t) {
+            if ("undefined" == typeof Symbol || !(Symbol.iterator in Object(e)))
+              return;
+            var n = [],
+              r = !0,
+              o = !1,
+              i = void 0;
+            try {
+              for (
+                var u, s = e[Symbol.iterator]();
+                !(r = (u = s.next()).done) &&
+                (n.push(u.value), !t || n.length !== t);
+                r = !0
+              );
+            } catch (e) {
+              (o = !0), (i = e);
+            } finally {
+              try {
+                r || null == s.return || s.return();
+              } finally {
+                if (o) throw i;
+              }
+            }
+            return n;
+          })(e, t) ||
+          (function (e, t) {
+            if (!e) return;
+            if ("string" == typeof e) return d(e, t);
+            var n = Object.prototype.toString.call(e).slice(8, -1);
+            "Object" === n && e.constructor && (n = e.constructor.name);
+            if ("Map" === n || "Set" === n) return Array.from(n);
+            if (
+              "Arguments" === n ||
+              /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+            )
+              return d(e, t);
+          })(e, t) ||
+          (function () {
+            throw new TypeError(
+              "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+            );
+          })()
+        );
+      }
+      function d(e, t) {
+        (null == t || t > e.length) && (t = e.length);
+        for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
+        return r;
+      }
+      function h(e) {
+        return (
+          (h =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (e) {
+                  return typeof e;
+                }
+              : function (e) {
+                  return e &&
+                    "function" == typeof Symbol &&
+                    e.constructor === Symbol &&
+                    e !== Symbol.prototype
+                    ? "symbol"
+                    : typeof e;
+                }),
+          h(e)
+        );
+      }
+      function y(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var r = t[n];
+          (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+        }
+      }
+      function m(e) {
+        return function () {
+          var t,
+            n = b(e);
+          if (
+            (function () {
+              if ("undefined" == typeof Reflect || !Reflect.construct)
+                return !1;
+              if (Reflect.construct.sham) return !1;
+              if ("function" == typeof Proxy) return !0;
+              try {
+                return (
+                  Date.prototype.toString.call(
+                    Reflect.construct(Date, [], function () {}),
+                  ),
+                  !0
                 );
-              return !t || ("object" != typeof t && "function" != typeof t)
-                ? e
-                : t;
-            })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+              } catch (e) {
+                return !1;
+              }
+            })()
+          ) {
+            var r = b(this).constructor;
+            t = Reflect.construct(n, arguments, r);
+          } else t = n.apply(this, arguments);
+          return (function (e, t) {
+            if (t && ("object" === h(t) || "function" == typeof t)) return t;
+            return v(e);
+          })(this, t);
+        };
+      }
+      function v(e) {
+        if (void 0 === e)
+          throw new ReferenceError(
+            "this hasn't been initialised - super() hasn't been called",
+          );
+        return e;
+      }
+      function b(e) {
+        return (
+          (b = Object.setPrototypeOf
+            ? Object.getPrototypeOf
+            : function (e) {
+                return e.__proto__ || Object.getPrototypeOf(e);
+              }),
+          b(e)
+        );
+      }
+      function S(e, t) {
+        return (
+          (S =
+            Object.setPrototypeOf ||
+            function (e, t) {
+              return (e.__proto__ = t), e;
+            }),
+          S(e, t)
+        );
+      }
+      function O(e, t, n) {
+        return (
+          t in e
+            ? Object.defineProperty(e, t, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (e[t] = n),
+          e
+        );
+      }
+      var w = {},
+        I = (function (e) {
+          !(function (e, t) {
+            if ("function" != typeof t && null !== t)
+              throw new TypeError(
+                "Super expression must either be null or a function",
+              );
+            (e.prototype = Object.create(t && t.prototype, {
+              constructor: { value: e, writable: !0, configurable: !0 },
+            })),
+              t && S(e, t);
+          })(l, e);
+          var t,
+            n,
+            o,
+            c = m(l);
+          function l(e) {
+            var t;
             return (
-              (n.storeInputReference = function (e) {
-                null !== e && (n.input = e);
+              (function (e, t) {
+                if (!(e instanceof t))
+                  throw new TypeError("Cannot call a class as a function");
+              })(this, l),
+              O(v((t = c.call(this, e))), "storeInputReference", function (e) {
+                null !== e && (t.input = e);
+                var n = t.props.inputProps.ref;
+                n &&
+                  ("function" == typeof n
+                    ? n(e)
+                    : "object" === h(n) &&
+                      Object.prototype.hasOwnProperty.call(n, "current") &&
+                      (n.current = e));
               }),
-              (n.storeItemsContainerReference = function (e) {
-                null !== e && (n.itemsContainer = e);
+              O(v(t), "storeItemsContainerReference", function (e) {
+                null !== e && (t.itemsContainer = e);
               }),
-              (n.onHighlightedItemChange = function (e) {
-                n.highlightedItem = e;
+              O(v(t), "onHighlightedItemChange", function (e) {
+                t.highlightedItem = e;
               }),
-              (n.getItemId = function (e, t) {
-                return null === t
-                  ? null
-                  : "react-autowhatever-" +
-                      n.props.id +
-                      "-" +
-                      (null === e ? "" : "section-" + e) +
-                      "-item-" +
-                      t;
+              O(v(t), "getItemId", function (e, n) {
+                if (null === n) return null;
+                var r = t.props.id,
+                  o = null === e ? "" : "section-".concat(e);
+                return "react-autowhatever-"
+                  .concat(r, "-")
+                  .concat(o, "-item-")
+                  .concat(n);
               }),
-              (n.onFocus = function (e) {
-                var t = n.props.inputProps;
-                n.setState({ isInputFocused: !0 }), t.onFocus && t.onFocus(e);
+              O(v(t), "onFocus", function (e) {
+                var n = t.props.inputProps;
+                t.setState({ isInputFocused: !0 }), n.onFocus && n.onFocus(e);
               }),
-              (n.onBlur = function (e) {
-                var t = n.props.inputProps;
-                n.setState({ isInputFocused: !1 }), t.onBlur && t.onBlur(e);
+              O(v(t), "onBlur", function (e) {
+                var n = t.props.inputProps;
+                t.setState({ isInputFocused: !1 }), n.onBlur && n.onBlur(e);
               }),
-              (n.onKeyDown = function (e) {
-                var t = n.props,
-                  o = t.inputProps,
-                  r = t.highlightedSectionIndex,
-                  u = t.highlightedItemIndex;
-                switch (e.key) {
-                  case "ArrowDown":
-                  case "ArrowUp":
-                    var s = "ArrowDown" === e.key ? "next" : "prev",
-                      a = n.sectionIterator[s]([r, u]),
-                      l = i(a, 2),
-                      g = l[0],
-                      c = l[1];
-                    o.onKeyDown(e, {
-                      newHighlightedSectionIndex: g,
-                      newHighlightedItemIndex: c,
+              O(v(t), "onKeyDown", function (e) {
+                var n = t.props,
+                  r = n.inputProps,
+                  o = n.highlightedSectionIndex,
+                  i = n.highlightedItemIndex,
+                  u = e.keyCode;
+                switch (u) {
+                  case 40:
+                  case 38:
+                    var s = 40 === u ? "next" : "prev",
+                      a = p(t.sectionIterator[s]([o, i]), 2),
+                      c = a[0],
+                      l = a[1];
+                    r.onKeyDown(e, {
+                      newHighlightedSectionIndex: c,
+                      newHighlightedItemIndex: l,
                     });
                     break;
                   default:
-                    o.onKeyDown(e, {
-                      highlightedSectionIndex: r,
-                      highlightedItemIndex: u,
+                    r.onKeyDown(e, {
+                      highlightedSectionIndex: o,
+                      highlightedItemIndex: i,
                     });
                 }
               }),
-              (n.highlightedItem = null),
-              (n.state = { isInputFocused: !1 }),
-              n.setSectionsItems(e),
-              n.setSectionIterator(e),
-              n.setTheme(e),
-              n
+              (t.highlightedItem = null),
+              (t.state = { isInputFocused: !1 }),
+              t.setSectionsItems(e),
+              t.setSectionIterator(e),
+              t.setTheme(e),
+              t
             );
           }
           return (
-            (function (e, t) {
-              if ("function" != typeof t && null !== t)
-                throw new TypeError(
-                  "Super expression must either be null or a function, not " +
-                    typeof t,
-                );
-              (e.prototype = Object.create(t && t.prototype, {
-                constructor: {
-                  value: e,
-                  enumerable: !1,
-                  writable: !0,
-                  configurable: !0,
-                },
-              })),
-                t &&
-                  (Object.setPrototypeOf
-                    ? Object.setPrototypeOf(e, t)
-                    : (e.__proto__ = t));
-            })(t, e),
-            r(t, [
+            (t = l),
+            (n = [
               {
                 key: "componentDidMount",
                 value: function () {
@@ -918,7 +1171,7 @@
               {
                 key: "setSectionIterator",
                 value: function (e) {
-                  this.sectionIterator = (0, l.default)({
+                  this.sectionIterator = (0, i.default)({
                     multiSection: e.multiSection,
                     data: e.multiSection
                       ? this.sectionsLengths
@@ -929,7 +1182,7 @@
               {
                 key: "setTheme",
                 value: function (e) {
-                  this.theme = (0, g.default)(e.theme);
+                  this.theme = (0, u.default)(e.theme);
                 },
               },
               {
@@ -941,40 +1194,40 @@
                     n = this.props,
                     o = n.id,
                     i = n.items,
-                    r = n.renderItem,
-                    u = n.renderItemData,
-                    a = n.renderSectionTitle,
-                    l = n.highlightedSectionIndex,
+                    u = n.renderItem,
+                    c = n.renderItemData,
+                    l = n.renderSectionTitle,
+                    f = n.highlightedSectionIndex,
                     g = n.highlightedItemIndex,
-                    h = n.itemProps;
+                    p = n.itemProps;
                   return i.map(function (n, i) {
-                    var f = "react-autowhatever-" + o + "-",
-                      p = f + "section-" + i + "-",
-                      m = 0 === i;
-                    return s.default.createElement(
+                    var d = "react-autowhatever-".concat(o, "-"),
+                      h = "".concat(d, "section-").concat(i, "-"),
+                      y = 0 === i;
+                    return r.default.createElement(
                       "div",
                       t(
-                        p + "container",
+                        "".concat(h, "container"),
                         "sectionContainer",
-                        m && "sectionContainerFirst",
+                        y && "sectionContainerFirst",
                       ),
-                      s.default.createElement(c.default, {
+                      r.default.createElement(s.default, {
                         section: n,
-                        renderSectionTitle: a,
+                        renderSectionTitle: l,
                         theme: t,
-                        sectionKeyPrefix: p,
+                        sectionKeyPrefix: h,
                       }),
-                      s.default.createElement(d.default, {
+                      r.default.createElement(a.default, {
                         items: e.sectionsItems[i],
-                        itemProps: h,
-                        renderItem: r,
-                        renderItemData: u,
+                        itemProps: p,
+                        renderItem: u,
+                        renderItemData: c,
                         sectionIndex: i,
-                        highlightedItemIndex: l === i ? g : null,
+                        highlightedItemIndex: f === i ? g : null,
                         onHighlightedItemChange: e.onHighlightedItemChange,
                         getItemId: e.getItemId,
                         theme: t,
-                        keyPrefix: f,
+                        keyPrefix: d,
                         ref: e.storeItemsListReference,
                       }),
                     );
@@ -990,20 +1243,20 @@
                     n = this.props,
                     o = n.id,
                     i = n.renderItem,
-                    r = n.renderItemData,
-                    u = n.highlightedSectionIndex,
-                    a = n.highlightedItemIndex,
+                    u = n.renderItemData,
+                    s = n.highlightedSectionIndex,
+                    c = n.highlightedItemIndex,
                     l = n.itemProps;
-                  return s.default.createElement(d.default, {
+                  return r.default.createElement(a.default, {
                     items: e,
                     itemProps: l,
                     renderItem: i,
-                    renderItemData: r,
-                    highlightedItemIndex: null === u ? a : null,
+                    renderItemData: u,
+                    highlightedItemIndex: null === s ? c : null,
                     onHighlightedItemChange: this.onHighlightedItemChange,
                     getItemId: this.getItemId,
                     theme: t,
-                    keyPrefix: "react-autowhatever-" + o + "-",
+                    keyPrefix: "react-autowhatever-".concat(o, "-"),
                   });
                 },
               },
@@ -1017,12 +1270,12 @@
                         e.offsetParent === t
                           ? e.offsetTop
                           : e.offsetTop - t.offsetTop,
-                      o = t.scrollTop;
-                    n < o
-                      ? (o = n)
-                      : n + e.offsetHeight > o + t.offsetHeight &&
-                        (o = n + e.offsetHeight - t.offsetHeight),
-                      o !== t.scrollTop && (t.scrollTop = o);
+                      r = t.scrollTop;
+                    n < r
+                      ? (r = n)
+                      : n + e.offsetHeight > r + t.offsetHeight &&
+                        (r = n + e.offsetHeight - t.offsetHeight),
+                      r !== t.scrollTop && (t.scrollTop = r);
                   }
                 },
               },
@@ -1032,46 +1285,48 @@
                   var e = this.theme,
                     t = this.props,
                     n = t.id,
-                    i = t.multiSection,
-                    r = t.renderInputComponent,
+                    o = t.multiSection,
+                    i = t.renderInputComponent,
                     u = t.renderItemsContainer,
-                    a = t.highlightedSectionIndex,
-                    l = t.highlightedItemIndex,
-                    g = this.state.isInputFocused,
-                    c = i ? this.renderSections() : this.renderItems(),
-                    d = null !== c,
-                    h = this.getItemId(a, l),
-                    f = "react-autowhatever-" + n,
-                    p = o(
+                    s = t.highlightedSectionIndex,
+                    a = t.highlightedItemIndex,
+                    c = this.state.isInputFocused,
+                    l = o ? this.renderSections() : this.renderItems(),
+                    f = null !== l,
+                    p = this.getItemId(s, a),
+                    d = "react-autowhatever-".concat(n),
+                    h = g(
                       {
                         role: "combobox",
                         "aria-haspopup": "listbox",
-                        "aria-owns": f,
-                        "aria-expanded": d,
+                        "aria-owns": d,
+                        "aria-expanded": f,
                       },
                       e(
-                        "react-autowhatever-" + n + "-container",
+                        "react-autowhatever-".concat(n, "-container"),
                         "container",
-                        d && "containerOpen",
+                        f && "containerOpen",
                       ),
+                      {},
                       this.props.containerProps,
                     ),
-                    m = r(
-                      o(
+                    y = i(
+                      g(
                         {
                           type: "text",
                           value: "",
                           autoComplete: "off",
                           "aria-autocomplete": "list",
-                          "aria-controls": f,
-                          "aria-activedescendant": h,
+                          "aria-controls": d,
+                          "aria-activedescendant": p,
                         },
                         e(
-                          "react-autowhatever-" + n + "-input",
+                          "react-autowhatever-".concat(n, "-input"),
                           "input",
-                          d && "inputOpen",
-                          g && "inputFocused",
+                          f && "inputOpen",
+                          c && "inputFocused",
                         ),
+                        {},
                         this.props.inputProps,
                         {
                           onFocus: this.onFocus,
@@ -1082,66 +1337,68 @@
                         },
                       ),
                     ),
-                    v = u({
-                      containerProps: o(
-                        { id: f, role: "listbox" },
+                    m = u({
+                      containerProps: g(
+                        { id: d, role: "listbox" },
                         e(
-                          "react-autowhatever-" + n + "-items-container",
+                          "react-autowhatever-".concat(n, "-items-container"),
                           "itemsContainer",
-                          d && "itemsContainerOpen",
+                          f && "itemsContainerOpen",
                         ),
                         { ref: this.storeItemsContainerReference },
                       ),
-                      children: c,
+                      children: l,
                     });
-                  return s.default.createElement("div", p, m, v);
+                  return r.default.createElement("div", h, y, m);
                 },
               },
-            ]),
-            t
+            ]) && y(t.prototype, n),
+            o && y(t, o),
+            l
           );
-        })(u.Component);
-      (p.propTypes = {
-        id: a.default.string,
-        multiSection: a.default.bool,
-        renderInputComponent: a.default.func,
-        renderItemsContainer: a.default.func,
-        items: a.default.array.isRequired,
-        renderItem: a.default.func,
-        renderItemData: a.default.object,
-        renderSectionTitle: a.default.func,
-        getSectionItems: a.default.func,
-        containerProps: a.default.object,
-        inputProps: a.default.object,
-        itemProps: a.default.oneOfType([a.default.object, a.default.func]),
-        highlightedSectionIndex: a.default.number,
-        highlightedItemIndex: a.default.number,
-        theme: a.default.oneOfType([a.default.object, a.default.array]),
-      }),
-        (p.defaultProps = {
+        })(r.Component);
+      (t.default = I),
+        O(I, "propTypes", {
+          id: o.default.string,
+          multiSection: o.default.bool,
+          renderInputComponent: o.default.func,
+          renderItemsContainer: o.default.func,
+          items: o.default.array.isRequired,
+          renderItem: o.default.func,
+          renderItemData: o.default.object,
+          renderSectionTitle: o.default.func,
+          getSectionItems: o.default.func,
+          containerProps: o.default.object,
+          inputProps: o.default.object,
+          itemProps: o.default.oneOfType([o.default.object, o.default.func]),
+          highlightedSectionIndex: o.default.number,
+          highlightedItemIndex: o.default.number,
+          theme: o.default.oneOfType([o.default.object, o.default.array]),
+        }),
+        O(I, "defaultProps", {
           id: "1",
           multiSection: !1,
           renderInputComponent: function (e) {
-            return s.default.createElement("input", e);
+            return r.default.createElement("input", e);
           },
           renderItemsContainer: function (e) {
             var t = e.containerProps,
               n = e.children;
-            return s.default.createElement("div", t, n);
+            return r.default.createElement("div", t, n);
           },
           renderItem: function () {
             throw new Error("`renderItem` must be provided");
           },
-          renderItemData: f,
+          renderItemData: w,
           renderSectionTitle: function () {
             throw new Error("`renderSectionTitle` must be provided");
           },
           getSectionItems: function () {
             throw new Error("`getSectionItems` must be provided");
           },
-          containerProps: f,
-          inputProps: f,
-          itemProps: f,
+          containerProps: w,
+          inputProps: w,
+          itemProps: w,
           highlightedSectionIndex: null,
           highlightedItemIndex: null,
           theme: {
@@ -1161,122 +1418,258 @@
               "react-autowhatever__section-container--first",
             sectionTitle: "react-autowhatever__section-title",
           },
-        }),
-        (t.default = p);
+        });
     },
-    73522: (e, t, n) => {
-      Object.defineProperty(t, "__esModule", { value: !0 });
-      var o =
-          Object.assign ||
-          function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = arguments[t];
-              for (var o in n)
-                Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o]);
+    53490: (e, t, n) => {
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.default = void 0);
+      var r = (function (e) {
+          if (e && e.__esModule) return e;
+          if (null === e || ("object" !== a(e) && "function" != typeof e))
+            return { default: e };
+          var t = s();
+          if (t && t.has(e)) return t.get(e);
+          var n = {},
+            r = Object.defineProperty && Object.getOwnPropertyDescriptor;
+          for (var o in e)
+            if (Object.prototype.hasOwnProperty.call(e, o)) {
+              var i = r ? Object.getOwnPropertyDescriptor(e, o) : null;
+              i && (i.get || i.set)
+                ? Object.defineProperty(n, o, i)
+                : (n[o] = e[o]);
             }
-            return e;
-          },
-        i = (function () {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var o = t[n];
-              (o.enumerable = o.enumerable || !1),
-                (o.configurable = !0),
-                "value" in o && (o.writable = !0),
-                Object.defineProperty(e, o.key, o);
-            }
-          }
-          return function (t, n, o) {
-            return n && e(t.prototype, n), o && e(t, o), t;
-          };
-        })(),
-        r = n(90626),
-        u = l(r),
-        s = l(n(61410)),
-        a = l(n(468));
-      function l(e) {
+          (n.default = e), t && t.set(e, n);
+          return n;
+        })(n(90626)),
+        o = u(n(61410)),
+        i = u(n(14196));
+      function u(e) {
         return e && e.__esModule ? e : { default: e };
       }
+      function s() {
+        if ("function" != typeof WeakMap) return null;
+        var e = new WeakMap();
+        return (
+          (s = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function a(e) {
+        return (
+          (a =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (e) {
+                  return typeof e;
+                }
+              : function (e) {
+                  return e &&
+                    "function" == typeof Symbol &&
+                    e.constructor === Symbol &&
+                    e !== Symbol.prototype
+                    ? "symbol"
+                    : typeof e;
+                }),
+          a(e)
+        );
+      }
+      function c() {
+        return (
+          (c =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n)
+                  Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+              }
+              return e;
+            }),
+          c.apply(this, arguments)
+        );
+      }
+      function l(e, t) {
+        var n = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var r = Object.getOwnPropertySymbols(e);
+          t &&
+            (r = r.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+        }
+        return n;
+      }
+      function f(e, t) {
+        if (null == e) return {};
+        var n,
+          r,
+          o = (function (e, t) {
+            if (null == e) return {};
+            var n,
+              r,
+              o = {},
+              i = Object.keys(e);
+            for (r = 0; r < i.length; r++)
+              (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+            return o;
+          })(e, t);
+        if (Object.getOwnPropertySymbols) {
+          var i = Object.getOwnPropertySymbols(e);
+          for (r = 0; r < i.length; r++)
+            (n = i[r]),
+              t.indexOf(n) >= 0 ||
+                (Object.prototype.propertyIsEnumerable.call(e, n) &&
+                  (o[n] = e[n]));
+        }
+        return o;
+      }
       function g(e, t) {
-        if (!e)
+        for (var n = 0; n < t.length; n++) {
+          var r = t[n];
+          (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+        }
+      }
+      function p(e) {
+        return function () {
+          var t,
+            n = h(e);
+          if (
+            (function () {
+              if ("undefined" == typeof Reflect || !Reflect.construct)
+                return !1;
+              if (Reflect.construct.sham) return !1;
+              if ("function" == typeof Proxy) return !0;
+              try {
+                return (
+                  Date.prototype.toString.call(
+                    Reflect.construct(Date, [], function () {}),
+                  ),
+                  !0
+                );
+              } catch (e) {
+                return !1;
+              }
+            })()
+          ) {
+            var r = h(this).constructor;
+            t = Reflect.construct(n, arguments, r);
+          } else t = n.apply(this, arguments);
+          return (function (e, t) {
+            if (t && ("object" === a(t) || "function" == typeof t)) return t;
+            return d(e);
+          })(this, t);
+        };
+      }
+      function d(e) {
+        if (void 0 === e)
           throw new ReferenceError(
             "this hasn't been initialised - super() hasn't been called",
           );
-        return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
+        return e;
       }
-      var c = (function (e) {
-        function t() {
-          var e, n, o;
+      function h(e) {
+        return (
+          (h = Object.setPrototypeOf
+            ? Object.getPrototypeOf
+            : function (e) {
+                return e.__proto__ || Object.getPrototypeOf(e);
+              }),
+          h(e)
+        );
+      }
+      function y(e, t) {
+        return (
+          (y =
+            Object.setPrototypeOf ||
+            function (e, t) {
+              return (e.__proto__ = t), e;
+            }),
+          y(e, t)
+        );
+      }
+      function m(e, t, n) {
+        return (
+          t in e
+            ? Object.defineProperty(e, t, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (e[t] = n),
+          e
+        );
+      }
+      var v = (function (e) {
+        !(function (e, t) {
+          if ("function" != typeof t && null !== t)
+            throw new TypeError(
+              "Super expression must either be null or a function",
+            );
+          (e.prototype = Object.create(t && t.prototype, {
+            constructor: { value: e, writable: !0, configurable: !0 },
+          })),
+            t && y(e, t);
+        })(s, e);
+        var t,
+          n,
+          o,
+          u = p(s);
+        function s() {
+          var e;
           !(function (e, t) {
             if (!(e instanceof t))
               throw new TypeError("Cannot call a class as a function");
-          })(this, t);
-          for (var i = arguments.length, r = Array(i), u = 0; u < i; u++)
-            r[u] = arguments[u];
+          })(this, s);
+          for (var t = arguments.length, n = new Array(t), r = 0; r < t; r++)
+            n[r] = arguments[r];
           return (
-            (n = o =
-              g(
-                this,
-                (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(
-                  e,
-                  [this].concat(r),
-                ),
-              )),
-            (o.storeItemReference = function (e) {
-              null !== e && (o.item = e);
+            m(
+              d((e = u.call.apply(u, [this].concat(n)))),
+              "storeItemReference",
+              function (t) {
+                null !== t && (e.item = t);
+              },
+            ),
+            m(d(e), "onMouseEnter", function (t) {
+              var n = e.props,
+                r = n.sectionIndex,
+                o = n.itemIndex;
+              e.props.onMouseEnter(t, { sectionIndex: r, itemIndex: o });
             }),
-            (o.onMouseEnter = function (e) {
-              var t = o.props,
-                n = t.sectionIndex,
-                i = t.itemIndex;
-              o.props.onMouseEnter(e, { sectionIndex: n, itemIndex: i });
+            m(d(e), "onMouseLeave", function (t) {
+              var n = e.props,
+                r = n.sectionIndex,
+                o = n.itemIndex;
+              e.props.onMouseLeave(t, { sectionIndex: r, itemIndex: o });
             }),
-            (o.onMouseLeave = function (e) {
-              var t = o.props,
-                n = t.sectionIndex,
-                i = t.itemIndex;
-              o.props.onMouseLeave(e, { sectionIndex: n, itemIndex: i });
+            m(d(e), "onMouseDown", function (t) {
+              var n = e.props,
+                r = n.sectionIndex,
+                o = n.itemIndex;
+              e.props.onMouseDown(t, { sectionIndex: r, itemIndex: o });
             }),
-            (o.onMouseDown = function (e) {
-              var t = o.props,
-                n = t.sectionIndex,
-                i = t.itemIndex;
-              o.props.onMouseDown(e, { sectionIndex: n, itemIndex: i });
+            m(d(e), "onClick", function (t) {
+              var n = e.props,
+                r = n.sectionIndex,
+                o = n.itemIndex;
+              e.props.onClick(t, { sectionIndex: r, itemIndex: o });
             }),
-            (o.onClick = function (e) {
-              var t = o.props,
-                n = t.sectionIndex,
-                i = t.itemIndex;
-              o.props.onClick(e, { sectionIndex: n, itemIndex: i });
-            }),
-            g(o, n)
+            e
           );
         }
         return (
-          (function (e, t) {
-            if ("function" != typeof t && null !== t)
-              throw new TypeError(
-                "Super expression must either be null or a function, not " +
-                  typeof t,
-              );
-            (e.prototype = Object.create(t && t.prototype, {
-              constructor: {
-                value: e,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-              },
-            })),
-              t &&
-                (Object.setPrototypeOf
-                  ? Object.setPrototypeOf(e, t)
-                  : (e.__proto__ = t));
-          })(t, e),
-          i(t, [
+          (t = s),
+          (n = [
             {
               key: "shouldComponentUpdate",
               value: function (e) {
-                return (0, a.default)(e, this.props, ["renderItemData"]);
+                return (0, i.default)(e, this.props, ["renderItemData"]);
               },
             },
             {
@@ -1285,147 +1678,279 @@
                 var e = this.props,
                   t = e.isHighlighted,
                   n = e.item,
-                  i = e.renderItem,
-                  r = e.renderItemData,
-                  s = (function (e, t) {
-                    var n = {};
-                    for (var o in e)
-                      t.indexOf(o) >= 0 ||
-                        (Object.prototype.hasOwnProperty.call(e, o) &&
-                          (n[o] = e[o]));
-                    return n;
-                  })(e, [
+                  o = e.renderItem,
+                  i = e.renderItemData,
+                  u = f(e, [
                     "isHighlighted",
                     "item",
                     "renderItem",
                     "renderItemData",
                   ]);
                 return (
-                  delete s.sectionIndex,
-                  delete s.itemIndex,
-                  "function" == typeof s.onMouseEnter &&
-                    (s.onMouseEnter = this.onMouseEnter),
-                  "function" == typeof s.onMouseLeave &&
-                    (s.onMouseLeave = this.onMouseLeave),
-                  "function" == typeof s.onMouseDown &&
-                    (s.onMouseDown = this.onMouseDown),
-                  "function" == typeof s.onClick && (s.onClick = this.onClick),
-                  u.default.createElement(
+                  delete u.sectionIndex,
+                  delete u.itemIndex,
+                  "function" == typeof u.onMouseEnter &&
+                    (u.onMouseEnter = this.onMouseEnter),
+                  "function" == typeof u.onMouseLeave &&
+                    (u.onMouseLeave = this.onMouseLeave),
+                  "function" == typeof u.onMouseDown &&
+                    (u.onMouseDown = this.onMouseDown),
+                  "function" == typeof u.onClick && (u.onClick = this.onClick),
+                  r.default.createElement(
                     "li",
-                    o({ role: "option" }, s, { ref: this.storeItemReference }),
-                    i(n, o({ isHighlighted: t }, r)),
+                    c({ role: "option" }, u, { ref: this.storeItemReference }),
+                    o(
+                      n,
+                      (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                          var n = null != arguments[t] ? arguments[t] : {};
+                          t % 2
+                            ? l(Object(n), !0).forEach(function (t) {
+                                m(e, t, n[t]);
+                              })
+                            : Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(
+                                  e,
+                                  Object.getOwnPropertyDescriptors(n),
+                                )
+                              : l(Object(n)).forEach(function (t) {
+                                  Object.defineProperty(
+                                    e,
+                                    t,
+                                    Object.getOwnPropertyDescriptor(n, t),
+                                  );
+                                });
+                        }
+                        return e;
+                      })({ isHighlighted: t }, i),
+                    ),
                   )
                 );
               },
             },
           ]),
-          t
+          n && g(t.prototype, n),
+          o && g(t, o),
+          s
         );
       })(r.Component);
-      (c.propTypes = {
-        sectionIndex: s.default.number,
-        isHighlighted: s.default.bool.isRequired,
-        itemIndex: s.default.number.isRequired,
-        item: s.default.any.isRequired,
-        renderItem: s.default.func.isRequired,
-        renderItemData: s.default.object.isRequired,
-        onMouseEnter: s.default.func,
-        onMouseLeave: s.default.func,
-        onMouseDown: s.default.func,
-        onClick: s.default.func,
-      }),
-        (t.default = c);
+      (t.default = v),
+        m(v, "propTypes", {
+          sectionIndex: o.default.number,
+          isHighlighted: o.default.bool.isRequired,
+          itemIndex: o.default.number.isRequired,
+          item: o.default.any.isRequired,
+          renderItem: o.default.func.isRequired,
+          renderItemData: o.default.object.isRequired,
+          onMouseEnter: o.default.func,
+          onMouseLeave: o.default.func,
+          onMouseDown: o.default.func,
+          onClick: o.default.func,
+        });
     },
-    83989: (e, t, n) => {
-      Object.defineProperty(t, "__esModule", { value: !0 });
-      var o =
-          Object.assign ||
-          function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = arguments[t];
-              for (var o in n)
-                Object.prototype.hasOwnProperty.call(n, o) && (e[o] = n[o]);
+    48326: (e, t, n) => {
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.default = void 0);
+      var r = (function (e) {
+          if (e && e.__esModule) return e;
+          if (null === e || ("object" !== c(e) && "function" != typeof e))
+            return { default: e };
+          var t = a();
+          if (t && t.has(e)) return t.get(e);
+          var n = {},
+            r = Object.defineProperty && Object.getOwnPropertyDescriptor;
+          for (var o in e)
+            if (Object.prototype.hasOwnProperty.call(e, o)) {
+              var i = r ? Object.getOwnPropertyDescriptor(e, o) : null;
+              i && (i.get || i.set)
+                ? Object.defineProperty(n, o, i)
+                : (n[o] = e[o]);
             }
-            return e;
-          },
-        i = (function () {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var o = t[n];
-              (o.enumerable = o.enumerable || !1),
-                (o.configurable = !0),
-                "value" in o && (o.writable = !0),
-                Object.defineProperty(e, o.key, o);
-            }
-          }
-          return function (t, n, o) {
-            return n && e(t.prototype, n), o && e(t, o), t;
-          };
-        })(),
-        r = n(90626),
-        u = g(r),
-        s = g(n(61410)),
-        a = g(n(73522)),
-        l = g(n(468));
-      function g(e) {
+          (n.default = e), t && t.set(e, n);
+          return n;
+        })(n(90626)),
+        o = s(n(61410)),
+        i = s(n(53490)),
+        u = s(n(14196));
+      function s(e) {
         return e && e.__esModule ? e : { default: e };
       }
-      function c(e, t) {
-        if (!e)
+      function a() {
+        if ("function" != typeof WeakMap) return null;
+        var e = new WeakMap();
+        return (
+          (a = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function c(e) {
+        return (
+          (c =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (e) {
+                  return typeof e;
+                }
+              : function (e) {
+                  return e &&
+                    "function" == typeof Symbol &&
+                    e.constructor === Symbol &&
+                    e !== Symbol.prototype
+                    ? "symbol"
+                    : typeof e;
+                }),
+          c(e)
+        );
+      }
+      function l() {
+        return (
+          (l =
+            Object.assign ||
+            function (e) {
+              for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n)
+                  Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+              }
+              return e;
+            }),
+          l.apply(this, arguments)
+        );
+      }
+      function f(e, t) {
+        var n = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+          var r = Object.getOwnPropertySymbols(e);
+          t &&
+            (r = r.filter(function (t) {
+              return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+        }
+        return n;
+      }
+      function g(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var r = t[n];
+          (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+        }
+      }
+      function p(e) {
+        return function () {
+          var t,
+            n = h(e);
+          if (
+            (function () {
+              if ("undefined" == typeof Reflect || !Reflect.construct)
+                return !1;
+              if (Reflect.construct.sham) return !1;
+              if ("function" == typeof Proxy) return !0;
+              try {
+                return (
+                  Date.prototype.toString.call(
+                    Reflect.construct(Date, [], function () {}),
+                  ),
+                  !0
+                );
+              } catch (e) {
+                return !1;
+              }
+            })()
+          ) {
+            var r = h(this).constructor;
+            t = Reflect.construct(n, arguments, r);
+          } else t = n.apply(this, arguments);
+          return (function (e, t) {
+            if (t && ("object" === c(t) || "function" == typeof t)) return t;
+            return d(e);
+          })(this, t);
+        };
+      }
+      function d(e) {
+        if (void 0 === e)
           throw new ReferenceError(
             "this hasn't been initialised - super() hasn't been called",
           );
-        return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
+        return e;
       }
-      var d = (function (e) {
-        function t() {
-          var e, n, o;
+      function h(e) {
+        return (
+          (h = Object.setPrototypeOf
+            ? Object.getPrototypeOf
+            : function (e) {
+                return e.__proto__ || Object.getPrototypeOf(e);
+              }),
+          h(e)
+        );
+      }
+      function y(e, t) {
+        return (
+          (y =
+            Object.setPrototypeOf ||
+            function (e, t) {
+              return (e.__proto__ = t), e;
+            }),
+          y(e, t)
+        );
+      }
+      function m(e, t, n) {
+        return (
+          t in e
+            ? Object.defineProperty(e, t, {
+                value: n,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (e[t] = n),
+          e
+        );
+      }
+      var v = (function (e) {
+        !(function (e, t) {
+          if ("function" != typeof t && null !== t)
+            throw new TypeError(
+              "Super expression must either be null or a function",
+            );
+          (e.prototype = Object.create(t && t.prototype, {
+            constructor: { value: e, writable: !0, configurable: !0 },
+          })),
+            t && y(e, t);
+        })(a, e);
+        var t,
+          n,
+          o,
+          s = p(a);
+        function a() {
+          var e;
           !(function (e, t) {
             if (!(e instanceof t))
               throw new TypeError("Cannot call a class as a function");
-          })(this, t);
-          for (var i = arguments.length, r = Array(i), u = 0; u < i; u++)
-            r[u] = arguments[u];
+          })(this, a);
+          for (var t = arguments.length, n = new Array(t), r = 0; r < t; r++)
+            n[r] = arguments[r];
           return (
-            (n = o =
-              c(
-                this,
-                (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(
-                  e,
-                  [this].concat(r),
-                ),
-              )),
-            (o.storeHighlightedItemReference = function (e) {
-              o.props.onHighlightedItemChange(null === e ? null : e.item);
-            }),
-            c(o, n)
+            m(
+              d((e = s.call.apply(s, [this].concat(n)))),
+              "storeHighlightedItemReference",
+              function (t) {
+                e.props.onHighlightedItemChange(null === t ? null : t.item);
+              },
+            ),
+            e
           );
         }
         return (
-          (function (e, t) {
-            if ("function" != typeof t && null !== t)
-              throw new TypeError(
-                "Super expression must either be null or a function, not " +
-                  typeof t,
-              );
-            (e.prototype = Object.create(t && t.prototype, {
-              constructor: {
-                value: e,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-              },
-            })),
-              t &&
-                (Object.setPrototypeOf
-                  ? Object.setPrototypeOf(e, t)
-                  : (e.__proto__ = t));
-          })(t, e),
-          i(t, [
+          (t = a),
+          (n = [
             {
               key: "shouldComponentUpdate",
               value: function (e) {
-                return (0, l.default)(e, this.props, ["itemProps"]);
+                return (0, u.default)(e, this.props, ["itemProps"]);
               },
             },
             {
@@ -1434,39 +1959,64 @@
                 var e = this,
                   t = this.props,
                   n = t.items,
-                  i = t.itemProps,
-                  r = t.renderItem,
+                  o = t.itemProps,
+                  u = t.renderItem,
                   s = t.renderItemData,
-                  l = t.sectionIndex,
-                  g = t.highlightedItemIndex,
-                  c = t.getItemId,
-                  d = t.theme,
-                  h = t.keyPrefix,
-                  f = null === l ? h : h + "section-" + l + "-",
-                  p = "function" == typeof i;
-                return u.default.createElement(
+                  a = t.sectionIndex,
+                  c = t.highlightedItemIndex,
+                  g = t.getItemId,
+                  p = t.theme,
+                  d = t.keyPrefix,
+                  h = null === a ? d : "".concat(d, "section-").concat(a, "-"),
+                  y = "function" == typeof o;
+                return r.default.createElement(
                   "ul",
-                  o({ role: "listbox" }, d(f + "items-list", "itemsList")),
+                  l(
+                    { role: "listbox" },
+                    p("".concat(h, "items-list"), "itemsList"),
+                  ),
                   n.map(function (t, n) {
-                    var h = 0 === n,
-                      m = n === g,
-                      v = f + "item-" + n,
-                      S = p ? i({ sectionIndex: l, itemIndex: n }) : i,
-                      y = o(
-                        { id: c(l, n), "aria-selected": m },
-                        d(v, "item", h && "itemFirst", m && "itemHighlighted"),
+                    var d = 0 === n,
+                      v = n === c,
+                      b = "".concat(h, "item-").concat(n),
+                      S = y ? o({ sectionIndex: a, itemIndex: n }) : o,
+                      O = (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                          var n = null != arguments[t] ? arguments[t] : {};
+                          t % 2
+                            ? f(Object(n), !0).forEach(function (t) {
+                                m(e, t, n[t]);
+                              })
+                            : Object.getOwnPropertyDescriptors
+                              ? Object.defineProperties(
+                                  e,
+                                  Object.getOwnPropertyDescriptors(n),
+                                )
+                              : f(Object(n)).forEach(function (t) {
+                                  Object.defineProperty(
+                                    e,
+                                    t,
+                                    Object.getOwnPropertyDescriptor(n, t),
+                                  );
+                                });
+                        }
+                        return e;
+                      })(
+                        { id: g(a, n), "aria-selected": v },
+                        p(b, "item", d && "itemFirst", v && "itemHighlighted"),
+                        {},
                         S,
                       );
                     return (
-                      m && (y.ref = e.storeHighlightedItemReference),
-                      u.default.createElement(
-                        a.default,
-                        o({}, y, {
-                          sectionIndex: l,
-                          isHighlighted: m,
+                      v && (O.ref = e.storeHighlightedItemReference),
+                      r.default.createElement(
+                        i.default,
+                        l({}, O, {
+                          sectionIndex: a,
+                          isHighlighted: v,
                           itemIndex: n,
                           item: t,
-                          renderItem: r,
+                          renderItem: u,
                           renderItemData: s,
                         }),
                       )
@@ -1476,203 +2026,354 @@
               },
             },
           ]),
-          t
+          n && g(t.prototype, n),
+          o && g(t, o),
+          a
         );
       })(r.Component);
-      (d.propTypes = {
-        items: s.default.array.isRequired,
-        itemProps: s.default.oneOfType([s.default.object, s.default.func]),
-        renderItem: s.default.func.isRequired,
-        renderItemData: s.default.object.isRequired,
-        sectionIndex: s.default.number,
-        highlightedItemIndex: s.default.number,
-        onHighlightedItemChange: s.default.func.isRequired,
-        getItemId: s.default.func.isRequired,
-        theme: s.default.func.isRequired,
-        keyPrefix: s.default.string.isRequired,
-      }),
-        (d.defaultProps = { sectionIndex: null }),
-        (t.default = d);
+      (t.default = v),
+        m(v, "propTypes", {
+          items: o.default.array.isRequired,
+          itemProps: o.default.oneOfType([o.default.object, o.default.func]),
+          renderItem: o.default.func.isRequired,
+          renderItemData: o.default.object.isRequired,
+          sectionIndex: o.default.number,
+          highlightedItemIndex: o.default.number,
+          onHighlightedItemChange: o.default.func.isRequired,
+          getItemId: o.default.func.isRequired,
+          theme: o.default.func.isRequired,
+          keyPrefix: o.default.string.isRequired,
+        }),
+        m(v, "defaultProps", { sectionIndex: null });
     },
-    52562: (e, t, n) => {
-      Object.defineProperty(t, "__esModule", { value: !0 });
-      var o = (function () {
-          function e(e, t) {
-            for (var n = 0; n < t.length; n++) {
-              var o = t[n];
-              (o.enumerable = o.enumerable || !1),
-                (o.configurable = !0),
-                "value" in o && (o.writable = !0),
-                Object.defineProperty(e, o.key, o);
+    86578: (e, t, n) => {
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.default = void 0);
+      var r = (function (e) {
+          if (e && e.__esModule) return e;
+          if (null === e || ("object" !== a(e) && "function" != typeof e))
+            return { default: e };
+          var t = s();
+          if (t && t.has(e)) return t.get(e);
+          var n = {},
+            r = Object.defineProperty && Object.getOwnPropertyDescriptor;
+          for (var o in e)
+            if (Object.prototype.hasOwnProperty.call(e, o)) {
+              var i = r ? Object.getOwnPropertyDescriptor(e, o) : null;
+              i && (i.get || i.set)
+                ? Object.defineProperty(n, o, i)
+                : (n[o] = e[o]);
             }
-          }
-          return function (t, n, o) {
-            return n && e(t.prototype, n), o && e(t, o), t;
-          };
-        })(),
-        i = n(90626),
-        r = a(i),
-        u = a(n(61410)),
-        s = a(n(468));
-      function a(e) {
+          (n.default = e), t && t.set(e, n);
+          return n;
+        })(n(90626)),
+        o = u(n(61410)),
+        i = u(n(14196));
+      function u(e) {
         return e && e.__esModule ? e : { default: e };
       }
-      var l = (function (e) {
-        function t() {
-          return (
-            (function (e, t) {
-              if (!(e instanceof t))
-                throw new TypeError("Cannot call a class as a function");
-            })(this, t),
-            (function (e, t) {
-              if (!e)
+      function s() {
+        if ("function" != typeof WeakMap) return null;
+        var e = new WeakMap();
+        return (
+          (s = function () {
+            return e;
+          }),
+          e
+        );
+      }
+      function a(e) {
+        return (
+          (a =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (e) {
+                  return typeof e;
+                }
+              : function (e) {
+                  return e &&
+                    "function" == typeof Symbol &&
+                    e.constructor === Symbol &&
+                    e !== Symbol.prototype
+                    ? "symbol"
+                    : typeof e;
+                }),
+          a(e)
+        );
+      }
+      function c(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var r = t[n];
+          (r.enumerable = r.enumerable || !1),
+            (r.configurable = !0),
+            "value" in r && (r.writable = !0),
+            Object.defineProperty(e, r.key, r);
+        }
+      }
+      function l(e) {
+        return function () {
+          var t,
+            n = f(e);
+          if (
+            (function () {
+              if ("undefined" == typeof Reflect || !Reflect.construct)
+                return !1;
+              if (Reflect.construct.sham) return !1;
+              if ("function" == typeof Proxy) return !0;
+              try {
+                return (
+                  Date.prototype.toString.call(
+                    Reflect.construct(Date, [], function () {}),
+                  ),
+                  !0
+                );
+              } catch (e) {
+                return !1;
+              }
+            })()
+          ) {
+            var r = f(this).constructor;
+            t = Reflect.construct(n, arguments, r);
+          } else t = n.apply(this, arguments);
+          return (function (e, t) {
+            if (t && ("object" === a(t) || "function" == typeof t)) return t;
+            return (function (e) {
+              if (void 0 === e)
                 throw new ReferenceError(
                   "this hasn't been initialised - super() hasn't been called",
                 );
-              return !t || ("object" != typeof t && "function" != typeof t)
-                ? e
-                : t;
-            })(
-              this,
-              (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments),
-            )
-          );
-        }
+              return e;
+            })(e);
+          })(this, t);
+        };
+      }
+      function f(e) {
         return (
-          (function (e, t) {
+          (f = Object.setPrototypeOf
+            ? Object.getPrototypeOf
+            : function (e) {
+                return e.__proto__ || Object.getPrototypeOf(e);
+              }),
+          f(e)
+        );
+      }
+      function g(e, t) {
+        return (
+          (g =
+            Object.setPrototypeOf ||
+            function (e, t) {
+              return (e.__proto__ = t), e;
+            }),
+          g(e, t)
+        );
+      }
+      var p,
+        d,
+        h,
+        y = (function (e) {
+          !(function (e, t) {
             if ("function" != typeof t && null !== t)
               throw new TypeError(
-                "Super expression must either be null or a function, not " +
-                  typeof t,
+                "Super expression must either be null or a function",
               );
             (e.prototype = Object.create(t && t.prototype, {
-              constructor: {
-                value: e,
-                enumerable: !1,
-                writable: !0,
-                configurable: !0,
-              },
+              constructor: { value: e, writable: !0, configurable: !0 },
             })),
-              t &&
-                (Object.setPrototypeOf
-                  ? Object.setPrototypeOf(e, t)
-                  : (e.__proto__ = t));
-          })(t, e),
-          o(t, [
-            {
-              key: "shouldComponentUpdate",
-              value: function (e) {
-                return (0, s.default)(e, this.props);
+              t && g(e, t);
+          })(s, e);
+          var t,
+            n,
+            o,
+            u = l(s);
+          function s() {
+            return (
+              (function (e, t) {
+                if (!(e instanceof t))
+                  throw new TypeError("Cannot call a class as a function");
+              })(this, s),
+              u.apply(this, arguments)
+            );
+          }
+          return (
+            (t = s),
+            (n = [
+              {
+                key: "shouldComponentUpdate",
+                value: function (e) {
+                  return (0, i.default)(e, this.props);
+                },
               },
-            },
-            {
-              key: "render",
-              value: function () {
-                var e = this.props,
-                  t = e.section,
-                  n = e.renderSectionTitle,
-                  o = e.theme,
-                  i = e.sectionKeyPrefix,
-                  u = n(t);
-                return u
-                  ? r.default.createElement(
-                      "div",
-                      o(i + "title", "sectionTitle"),
-                      u,
-                    )
-                  : null;
+              {
+                key: "render",
+                value: function () {
+                  var e = this.props,
+                    t = e.section,
+                    n = e.renderSectionTitle,
+                    o = e.theme,
+                    i = e.sectionKeyPrefix,
+                    u = n(t);
+                  return u
+                    ? r.default.createElement(
+                        "div",
+                        o("".concat(i, "title"), "sectionTitle"),
+                        u,
+                      )
+                    : null;
+                },
               },
-            },
-          ]),
-          t
-        );
-      })(i.Component);
-      (l.propTypes = {
-        section: u.default.any.isRequired,
-        renderSectionTitle: u.default.func.isRequired,
-        theme: u.default.func.isRequired,
-        sectionKeyPrefix: u.default.string.isRequired,
-      }),
-        (t.default = l);
+            ]) && c(t.prototype, n),
+            o && c(t, o),
+            s
+          );
+        })(r.Component);
+      (t.default = y),
+        (p = y),
+        (d = "propTypes"),
+        (h = {
+          section: o.default.any.isRequired,
+          renderSectionTitle: o.default.func.isRequired,
+          theme: o.default.func.isRequired,
+          sectionKeyPrefix: o.default.string.isRequired,
+        }),
+        d in p
+          ? Object.defineProperty(p, d, {
+              value: h,
+              enumerable: !0,
+              configurable: !0,
+              writable: !0,
+            })
+          : (p[d] = h);
     },
-    468: (e, t) => {
-      Object.defineProperty(t, "__esModule", { value: !0 });
-      var n =
-        "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
-          ? function (e) {
-              return typeof e;
-            }
-          : function (e) {
-              return e &&
-                "function" == typeof Symbol &&
-                e.constructor === Symbol &&
-                e !== Symbol.prototype
-                ? "symbol"
-                : typeof e;
-            };
-      t.default = function (e, t) {
-        var o =
-          arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        if (e === t) return !1;
-        var i = Object.keys(e),
-          r = Object.keys(t);
-        if (i.length !== r.length) return !0;
-        var u = {},
-          s = void 0,
-          a = void 0;
-        for (s = 0, a = o.length; s < a; s++) u[o[s]] = !0;
-        for (s = 0, a = i.length; s < a; s++) {
-          var l = i[s],
-            g = e[l],
-            c = t[l];
-          if (g !== c) {
-            if (
-              !u[l] ||
-              null === g ||
-              null === c ||
-              "object" !== (void 0 === g ? "undefined" : n(g)) ||
-              "object" !== (void 0 === c ? "undefined" : n(c))
-            )
-              return !0;
-            var d = Object.keys(g),
-              h = Object.keys(c);
-            if (d.length !== h.length) return !0;
-            for (var f = 0, p = d.length; f < p; f++) {
-              var m = d[f];
-              if (g[m] !== c[m]) return !0;
+    14196: (e, t) => {
+      function n(e) {
+        return (
+          (n =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (e) {
+                  return typeof e;
+                }
+              : function (e) {
+                  return e &&
+                    "function" == typeof Symbol &&
+                    e.constructor === Symbol &&
+                    e !== Symbol.prototype
+                    ? "symbol"
+                    : typeof e;
+                }),
+          n(e)
+        );
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.default = function (e, t) {
+          var r =
+            arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+          if (e === t) return !1;
+          var o = Object.keys(e),
+            i = Object.keys(t);
+          if (o.length !== i.length) return !0;
+          var u,
+            s,
+            a = {};
+          for (u = 0, s = r.length; u < s; u++) a[r[u]] = !0;
+          for (u = 0, s = o.length; u < s; u++) {
+            var c = o[u],
+              l = e[c],
+              f = t[c];
+            if (l !== f) {
+              if (
+                !a[c] ||
+                null === l ||
+                null === f ||
+                "object" !== n(l) ||
+                "object" !== n(f)
+              )
+                return !0;
+              var g = Object.keys(l),
+                p = Object.keys(f);
+              if (g.length !== p.length) return !0;
+              for (var d = 0, h = g.length; d < h; d++) {
+                var y = g[d];
+                if (l[y] !== f[y]) return !0;
+              }
             }
           }
-        }
-        return !1;
-      };
+          return !1;
+        });
     },
-    10297: (e, t, n) => {
-      e.exports = n(72988).default;
+    26649: (e, t, n) => {
+      e.exports = n(49742).default;
+    },
+    1224: (e, t) => {
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.mapToAutowhateverTheme = t.defaultTheme = void 0);
+      t.defaultTheme = {
+        container: "react-autosuggest__container",
+        containerOpen: "react-autosuggest__container--open",
+        input: "react-autosuggest__input",
+        inputOpen: "react-autosuggest__input--open",
+        inputFocused: "react-autosuggest__input--focused",
+        suggestionsContainer: "react-autosuggest__suggestions-container",
+        suggestionsContainerOpen:
+          "react-autosuggest__suggestions-container--open",
+        suggestionsList: "react-autosuggest__suggestions-list",
+        suggestion: "react-autosuggest__suggestion",
+        suggestionFirst: "react-autosuggest__suggestion--first",
+        suggestionHighlighted: "react-autosuggest__suggestion--highlighted",
+        sectionContainer: "react-autosuggest__section-container",
+        sectionContainerFirst: "react-autosuggest__section-container--first",
+        sectionTitle: "react-autosuggest__section-title",
+      };
+      t.mapToAutowhateverTheme = function (e) {
+        var t = {};
+        for (var n in e)
+          switch (n) {
+            case "suggestionsContainer":
+              t.itemsContainer = e[n];
+              break;
+            case "suggestionsContainerOpen":
+              t.itemsContainerOpen = e[n];
+              break;
+            case "suggestion":
+              t.item = e[n];
+              break;
+            case "suggestionFirst":
+              t.itemFirst = e[n];
+              break;
+            case "suggestionHighlighted":
+              t.itemHighlighted = e[n];
+              break;
+            case "suggestionsList":
+              t.itemsList = e[n];
+              break;
+            default:
+              t[n] = e[n];
+          }
+        return t;
+      };
     },
     62035: (e, t, n) => {
       Object.defineProperty(t, "__esModule", { value: !0 });
-      var o = function (e, t) {
+      var r = function (e, t) {
         if (Array.isArray(e)) return e;
         if (Symbol.iterator in Object(e))
           return (function (e, t) {
             var n = [],
-              o = !0,
-              i = !1,
-              r = void 0;
+              r = !0,
+              o = !1,
+              i = void 0;
             try {
               for (
                 var u, s = e[Symbol.iterator]();
-                !(o = (u = s.next()).done) &&
+                !(r = (u = s.next()).done) &&
                 (n.push(u.value), !t || n.length !== t);
-                o = !0
+                r = !0
               );
             } catch (e) {
-              (i = !0), (r = e);
+              (o = !0), (i = e);
             } finally {
               try {
-                !o && s.return && s.return();
+                !r && s.return && s.return();
               } finally {
-                if (i) throw r;
+                if (o) throw i;
               }
             }
             return n;
@@ -1681,39 +2382,39 @@
           "Invalid attempt to destructure non-iterable instance",
         );
       };
-      function i(e) {
+      function o(e) {
         if (Array.isArray(e)) {
           for (var t = 0, n = Array(e.length); t < e.length; t++) n[t] = e[t];
           return n;
         }
         return Array.from(e);
       }
-      var r,
+      var i,
         u = n(99317),
-        s = (r = u) && r.__esModule ? r : { default: r },
+        s = (i = u) && i.__esModule ? i : { default: i },
         a = function (e) {
           return e;
         };
       (t.default = function (e) {
         var t = Array.isArray(e) && 2 === e.length ? e : [e, null],
-          n = o(t, 2),
-          r = n[0],
+          n = r(t, 2),
+          i = n[0],
           u = n[1];
         return function (e) {
           for (
-            var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), o = 1;
-            o < t;
-            o++
+            var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1;
+            r < t;
+            r++
           )
-            n[o - 1] = arguments[o];
-          var l = n
+            n[r - 1] = arguments[r];
+          var c = n
             .map(function (e) {
-              return r[e];
+              return i[e];
             })
             .filter(a);
-          return "string" == typeof l[0] || "function" == typeof u
-            ? { key: e, className: u ? u.apply(void 0, i(l)) : l.join(" ") }
-            : { key: e, style: s.default.apply(void 0, [{}].concat(i(l))) };
+          return "string" == typeof c[0] || "function" == typeof u
+            ? { key: e, className: u ? u.apply(void 0, o(c)) : c.join(" ") }
+            : { key: e, style: s.default.apply(void 0, [{}].concat(o(c))) };
         };
       }),
         (e.exports = t.default);
@@ -1734,9 +2435,9 @@
         Object.assign ||
         function (e, t) {
           for (
-            var o,
-              i,
-              r = (function (e) {
+            var r,
+              o,
+              i = (function (e) {
                 if (null == e)
                   throw new TypeError(
                     "Object.assign cannot be called with null or undefined",
@@ -1747,10 +2448,10 @@
             u < arguments.length;
             u++
           ) {
-            (o = arguments[u]), (i = n(Object(o)));
-            for (var s = 0; s < i.length; s++) r[i[s]] = o[i[s]];
+            (r = arguments[u]), (o = n(Object(r)));
+            for (var s = 0; s < o.length; s++) i[o[s]] = r[o[s]];
           }
-          return r;
+          return i;
         };
     },
     40444: (e) => {
@@ -1759,23 +2460,23 @@
         if (Symbol.iterator in Object(e))
           return (function (e, t) {
             var n = [],
-              o = !0,
-              i = !1,
-              r = void 0;
+              r = !0,
+              o = !1,
+              i = void 0;
             try {
               for (
                 var u, s = e[Symbol.iterator]();
-                !(o = (u = s.next()).done) &&
+                !(r = (u = s.next()).done) &&
                 (n.push(u.value), !t || n.length !== t);
-                o = !0
+                r = !0
               );
             } catch (e) {
-              (i = !0), (r = e);
+              (o = !0), (i = e);
             } finally {
               try {
-                !o && s.return && s.return();
+                !r && s.return && s.return();
               } finally {
-                if (i) throw r;
+                if (o) throw i;
               }
             }
             return n;
@@ -1786,22 +2487,22 @@
       };
       e.exports = function (e) {
         var n = e.data,
-          o = e.multiSection;
-        function i(e) {
-          var i = t(e, 2),
-            r = i[0],
-            u = i[1];
-          return o
-            ? null === u || u === n[r] - 1
+          r = e.multiSection;
+        function o(e) {
+          var o = t(e, 2),
+            i = o[0],
+            u = o[1];
+          return r
+            ? null === u || u === n[i] - 1
               ? null ===
-                (r = (function (e) {
+                (i = (function (e) {
                   for (null === e ? (e = 0) : e++; e < n.length && 0 === n[e]; )
                     e++;
                   return e === n.length ? null : e;
-                })(r))
+                })(i))
                 ? [null, null]
-                : [r, 0]
-              : [r, u + 1]
+                : [i, 0]
+              : [i, u + 1]
             : 0 === n || u === n - 1
               ? [null, null]
               : null === u
@@ -1809,25 +2510,25 @@
                 : [null, u + 1];
         }
         return {
-          next: i,
+          next: o,
           prev: function (e) {
-            var i = t(e, 2),
-              r = i[0],
-              u = i[1];
-            return o
+            var o = t(e, 2),
+              i = o[0],
+              u = o[1];
+            return r
               ? null === u || 0 === u
                 ? null ===
-                  (r = (function (e) {
+                  (i = (function (e) {
                     for (
                       null === e ? (e = n.length - 1) : e--;
                       e >= 0 && 0 === n[e];
                     )
                       e--;
                     return -1 === e ? null : e;
-                  })(r))
+                  })(i))
                   ? [null, null]
-                  : [r, n[r] - 1]
-                : [r, u - 1]
+                  : [i, n[i] - 1]
+                : [i, u - 1]
               : 0 === n || 0 === u
                 ? [null, null]
                 : null === u
@@ -1835,7 +2536,7 @@
                   : [null, u - 1];
           },
           isLast: function (e) {
-            return null === i(e)[1];
+            return null === o(e)[1];
           },
         };
       };
@@ -1846,7 +2547,7 @@
         if (!e || !t) return !1;
         var n = e.length;
         if (t.length !== n) return !1;
-        for (var o = 0; o < n; o++) if (e[o] !== t[o]) return !1;
+        for (var r = 0; r < n; r++) if (e[r] !== t[r]) return !1;
         return !0;
       };
     },

@@ -196,7 +196,7 @@
         "Image-1": "_2BP4s6zHDy_5HIqCoVQqIg",
         "Image-2": "y5NNNiOOneEJF6_a7pq8O",
         ExtraAssetName: "_1v6uTQuGLshmZKWXULJOSr",
-        EnableExtraAssetsV2Ctn: "eeKg-l7aZaopjLwnTg0pT",
+        InstructionsForLocAssets: "_1SZZIXmXR7Rw30KxYPB-tJ",
         LocalizeAssetDialogContent: "_1yX-VOaM5vG__71wYRKXpF",
         DisplayLocImage: "_3DKy0FBx7VieVYhRL6ykCt",
         LocalizeAssetsDialogDescription: "_2AS-5DvwKtFXZy1pWhENnE",
@@ -222,8 +222,6 @@
         ImgPreviewContainer: "_15tW0aE5WXrWrGgguKGlWn",
         ImgPreview: "xUnBDVbIvtL7vyAS4rn2t",
         DuplicatePreview: "_14-dbrekvOWYS09OPByyHh",
-        EnableExtraAssetsV2Ctn: "_20VH0unQDu2_N7XNfRnqm_",
-        EnableExtraAssetsV2: "t_bWl0P39cVyepTUbLxKp",
       };
     },
     chunkid: (module) => {
@@ -279,11 +277,6 @@
         ImageCtn: "kbtD90I1ou1gx_xO8tcXC",
         ImageSrc: "_1Md62ii5C2Q4QaiqWoEdhf",
         ImageCheckboxes: "_3eo-7msJ5jV20gub1qOBn",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        ValveOnly: "eUTKmOUlH3cY_22TnBS8k",
       };
     },
     chunkid: (module) => {
@@ -1145,7 +1138,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1761,51 +1753,46 @@
             return _?.length > 0 ? _[0] : void 0;
           })(_),
           { rgRealmList: _ } = (0, _._)();
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, {
-            imageUploader: _,
-            rgRealmList: _,
-            fnUploadComplete: (_) => {
-              const _ = _
-                ? [..._].reverse().find((_) => _.bSuccess)?.uploadResult
-                : null;
-              _ && __webpack_require__(_);
-            },
-            elAdditonalButtons: _.createElement(
-              _.Fragment,
-              null,
-              _ &&
-                _ &&
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)(
-                    "#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Instructions",
+        let _;
+        return (
+          (_ =
+            _ && !_
+              ? (0, _._)(
+                  "#StoreAdmin_ExtraAssetUpload_Instructions_AdditionalNoSize",
+                )
+              : _ && _
+                ? (0, _._)(
+                    "#StoreAdmin_ExtraAssetUpload_Instructions_AdditionalWithSize",
                     _.width,
                     _.height,
-                  ),
-                ),
-              _ &&
-                !_ &&
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)(
-                    "#StoreAdmin_ExtraAssetUpload_LocalizeAsset_InstructionsWithSize",
-                  ),
-                ),
-              !_ &&
+                  )
+                : (0, _._)("#StoreAdmin_ExtraAssetUpload_Instructions_Base")),
+          _.createElement(
+            "div",
+            null,
+            _.createElement(_._, {
+              imageUploader: _,
+              rgRealmList: _,
+              fnUploadComplete: (_) => {
+                const _ = _
+                  ? [..._].reverse().find((_) => _.bSuccess)?.uploadResult
+                  : null;
+                _ && __webpack_require__(_);
+              },
+              elOverrideDragAndDropText: _,
+              elAdditonalButtons: _.createElement(
+                _.Fragment,
+                null,
                 _.createElement(
                   "div",
                   {
-                    className: _.EnableExtraAssetsV2Ctn,
+                    className: _.InstructionsForLocAssets,
                   },
-                  _.createElement(_._, null),
+                  (0, _._)("#StoreAdmin_ExtraAssetUpload_Instructions_Note"),
                 ),
-            ),
-          }),
+              ),
+            }),
+          )
         );
       }
       function _(_) {
@@ -2058,15 +2045,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        m_bAllowVideos;
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
         m_rgCurrentImageOptionKey = void 0;
-        constructor(_, _, _, _, _, _) {
+        constructor(_, _, _, _, _) {
           const _ = (0, _._)(_);
           super(_, _.name, _, _.src, _),
             (0, _._)(this),
-            (this.m_bAllowVideos = _),
             (this.m_bLockedToSpecificAsset = _),
             (this.m_fnGetImageOptions = _);
         }
@@ -2183,10 +2168,9 @@
             case 3:
             case 10:
             case 2:
-              return !0;
             case 4:
             case 5:
-              return this.m_bAllowVideos;
+              return !0;
             default:
               return !1;
           }
@@ -2204,7 +2188,6 @@
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_cancel = void 0;
-        m_bExtraAssetsV2Videos = !1;
         m_strGetExtraAssetsUrl;
         m_strBeginUploadUrl;
         m_strCheckStatusUrl;
@@ -2213,10 +2196,9 @@
         m_onlyAssetGroup = void 0;
         m_rgExistingAssetGroups = void 0;
         m_rgImageSizes = void 0;
-        constructor(_, _, _, _, _) {
+        constructor(_, _, _, _) {
           super(),
             (0, _._)(this),
-            (this.m_bExtraAssetsV2Videos = _),
             (this.m_strGetExtraAssetsUrl = _),
             (this.m_strBeginUploadUrl = _),
             (this.m_strCheckStatusUrl = _),
@@ -2280,8 +2262,7 @@
             const _ = await (0, _._)(_, (0, _._)(_.type));
             if (_) {
               const _ = new _(
-                this.m_bExtraAssetsV2Videos,
-                !!this.m_onlyAssetGroup,
+                !this.m_onlyAssetGroup,
                 () => this.GetImageOptions(),
                 _,
                 _,
@@ -2691,12 +2672,11 @@
         }
       }
       function _() {
-        const { bExtraAssetsV2Videos: _ } = (0, _._)(),
-          _ = (0, _._)("ajaxgetextraassets"),
+        const _ = (0, _._)("ajaxgetextraassets"),
           _ = (0, _._)("ajaxbeginuploadassetasync"),
           _ = (0, _._)("ajaxcheckuploadassetsstatus"),
           _ = (0, _._)("ajaxtrytocompleteuploadasset");
-        return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
+        return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "m_onlyAssetGroup", void 0),
@@ -2708,374 +2688,6 @@
         (0, _._)([_._], _.prototype, "SetExistingAssetGroups", null),
         (0, _._)([_._], _.prototype, "SetOnlyAssetGroup", null),
         (0, _._)([_._], _.prototype, "AddImageForLanguage", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { rgUploads: _ } = _,
-          _ = _.useMemo(() => new Set(), []),
-          _ = _.findIndex(({ _: _ }) => !__webpack_require__.has(_)),
-          _ = (0, _._)();
-        return _.map(({ _: _, upload: _ }, _) =>
-          _.createElement(_, {
-            key: _,
-            active: _ == _,
-            upload: _,
-            fnUploadPrepared: () =>
-              ((_) => {
-                __webpack_require__.add(_), _();
-              })(_),
-            fnUploadComplete: () =>
-              ((_) => {
-                __webpack_require__.delete(_), _();
-              })(_),
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            upload: _,
-            active: __webpack_require__,
-            fnUploadPrepared: _,
-            fnUploadComplete: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
-          { bExtraAssetsV2Videos: _ } = (0, _._)();
-        _.useEffect(() => {
-          __webpack_require__ &&
-            ((function (_, _) {
-              switch (_.type) {
-                case "image/jpeg":
-                  return "jpg";
-                case "image/png":
-                  return "png";
-                case "image/gif":
-                  return "gif";
-                case "image/webp":
-                  return "webp";
-                case "video/mp4":
-                  return _ ? "mp4" : void 0;
-                case "video/webm":
-                  return _ ? "webm" : void 0;
-                default:
-                  return;
-              }
-            })(_.file, _) ||
-              _(
-                (0, _._)(
-                  "#StoreAdmin_UploadError_UnsupportedFileType",
-                  _.file.name,
-                ),
-              )),
-            _(__webpack_require__);
-        }, [__webpack_require__, _, _]);
-        const [_, _] = _.useState(!1),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return _
-          ? _
-            ? _.createElement(
-                _._,
-                {
-                  active: !0,
-                },
-                _.createElement(_._, {
-                  bAlertDialog: !0,
-                  strTitle: (0, _._)("#Error_Generic"),
-                  strDescription: _,
-                  strOKButtonText: (0, _._)("#Button_OK"),
-                  closeModal: () => _.onCancel(),
-                }),
-              )
-            : _.createElement(_, {
-                upload: _,
-                isUploading: _,
-                doUpload: async (_, _) => {
-                  _(), _(!0);
-                  try {
-                    if (!(await _.AddImageForLanguage(_.file, _)))
-                      return void _(
-                        (0, _._)("#StoreAdmin_UploadError_UnableToGetFileInfo"),
-                      );
-                    const _ = (await _.UploadAllImages())[0];
-                    if (!_.bSuccess)
-                      return void _(
-                        (0, _._)(
-                          "#StoreAdmin_UploadError_Generic",
-                          _.image.message,
-                        ),
-                      );
-                    _(_.uploadResult), _.onComplete((0, _._)(_)), _();
-                  } finally {
-                    _(!1);
-                  }
-                },
-              })
-          : null;
-      }
-      function _(_) {
-        const { upload: _, isUploading: __webpack_require__, doUpload: _ } = _,
-          { file: _, onCancel: _ } = _,
-          { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = (0, _._)(),
-          _ = _.useCallback((_) => _?.replace(_, "_") ?? "", [_]),
-          { baseFilename: _, language: _ } = (0, _._)(_.name, -1),
-          [_, _] = _.useState(() => _(_)),
-          _ = _.useMemo(() => _(_), [_, _]),
-          _ = (0, _._)(_.languages),
-          _ = (function (_, _, _) {
-            return 1 == _?.length ? _[0] : -1 != _ ? _ : _;
-          })(
-            _.map((_) => _.data),
-            _,
-            _.activeLanguage,
-          ),
-          [_, _] = _.useState(_),
-          [_, _] = _.useState(void 0),
-          _ = _.name;
-        _.useEffect(() => {
-          _(() => {
-            if (!_) return;
-            const { baseFilename: _ } = (0, _._)(_),
-              _ = _.find((_) => (0, _._)(_) == _);
-            if (!_) return;
-            if ((0, _._)(_)) return _;
-            const _ = _.images?.[(0, _._)(_)];
-            return _;
-          });
-        }, [_, _, _, _]);
-        const _ =
-            (function (_) {
-              return _ && _.length > 0;
-            })(_) && !__webpack_require__
-              ? () => _(_, _)
-              : void 0,
-          _ = _.useCallback(() => {
-            _.onComplete((0, _._)(_));
-          }, [_, _]),
-          _ = _
-            ? (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
-            : (0, _._)("#Button_Upload");
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-            onDismiss: _,
-            className: _.UploadModal,
-          },
-          _.createElement(
-            _._,
-            {
-              onSubmit: (_) => {
-                _.preventDefault(), _ && _();
-              },
-            },
-            _.createElement(
-              _._,
-              null,
-              (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadNew"),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                file: _,
-                isVideo: _(_),
-                duplicate: _,
-                bShowThrobber: __webpack_require__,
-                onUseDuplicate: _,
-              }),
-              _.createElement(_, {
-                name: _,
-                validatedName: _,
-                setName: _,
-                disabled: __webpack_require__,
-              }),
-              _.length > 1 &&
-                _.createElement(_._, {
-                  rgOptions: _,
-                  selectedOption: _,
-                  onChange: (_) => _(_.data),
-                }),
-              _.createElement(
-                "div",
-                {
-                  className: _.EnableExtraAssetsV2Ctn,
-                },
-                _.createElement(_, null),
-              ),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_._, {
-                onOK: _,
-                strOKText: _,
-                bOKDisabled: !_,
-                onCancel: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-          bExtraAssetsV2Videos: _,
-          bExtraAssetsV2VideosAllowed: __webpack_require__,
-          setExtraAssetsV2Videos: _,
-        } = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__ &&
-            _.createElement(_._, {
-              className: _.EnableExtraAssetsV2,
-              label: "Videos allowed",
-              checked: _,
-              onChange: (_) => _(_),
-            }),
-        );
-      }
-      function _(_) {
-        const {
-            file: _,
-            isVideo: __webpack_require__,
-            duplicate: _,
-            bShowThrobber: _,
-            onUseDuplicate: _,
-          } = _,
-          _ = _.useMemo(() => URL.createObjectURL(_), [_]),
-          _ = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _.DuplicateMessage,
-              },
-              (0, _._)("#StoreAdmin_ExtraAssetUpload_FileNameInuse"),
-            ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.SideBySideComparison, _ && _.Loading),
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.ThrobberContainer,
-                },
-                _.createElement(_._, {
-                  position: "center",
-                  size: "xlarge",
-                }),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.ImgPreviewContainer,
-                    _.DuplicatePreview,
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ImageLabel,
-                  },
-                  (0, _._)("#StoreAdmin_ExtraAssetUpload_Original"),
-                ),
-                _.createElement("img", {
-                  src:
-                    "name" in _
-                      ? (0, _._)(_, 0, _)
-                      : (0, _._)((0, _._)(_, !1)?.url, _),
-                  className: _.ImgPreview,
-                }),
-              ),
-            _.createElement(
-              "div",
-              {
-                className: _.ImgPreviewContainer,
-              },
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ImageLabel,
-                  },
-                  (0, _._)("#StoreAdmin_ExtraAssetUpload_Replacement"),
-                ),
-              !__webpack_require__ &&
-                _.createElement("img", {
-                  src: _,
-                  className: _.ImgPreview,
-                }),
-              __webpack_require__ &&
-                _.createElement("video", {
-                  src: _,
-                  className: _.ImgPreview,
-                  muted: !0,
-                  loop: !0,
-                  playsInline: !0,
-                  autoPlay: !0,
-                }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            name: _,
-            setName: __webpack_require__,
-            validatedName: _,
-            disabled: _,
-          } = _,
-          _ = _.useCallback((_) => _ && _.element.select(), []);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, {
-            value: _,
-            onChange: (_) => __webpack_require__(_.currentTarget.value),
-            label: (0, _._)("#StoreAdmin_ExtraAssetUpload_EnterAName"),
-            ref: _,
-            disabled: _,
-            description: (0, _._)(
-              "#StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename",
-              _.createElement("b", null, _),
-            ),
-          }),
-        );
-      }
-      function _(_) {
-        return _.type.startsWith("video/");
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3467,7 +3079,7 @@
         }
         TryCreateNode(_, _, _) {
           let _ = _._.from(_);
-          if (!_.node.validContent(_)) {
+          if (!_.node.validContent(_))
             if (_.acceptNode) {
               let _ = _.filter((_) => _.type == _.acceptNode);
               if (!_.length) {
@@ -3486,12 +3098,11 @@
                     : _.acceptNode.create(void 0, _));
               }
               _ = _._.from(_);
-            }
-            _.node.isInline ||
-              (_ = _._.from(
-                _.filter((_) => !_.isText || !_.text.match(/^\s*$/)),
-              ));
-          }
+            } else
+              _.node.isInline ||
+                (_ = _._.from(
+                  _.filter((_) => !_.isText || !_.text.match(/^\s*$/)),
+                ));
           try {
             return _.node.createAndFill(_, _) || _.node.createChecked(_, _);
           } catch (_) {
@@ -3584,30 +3195,33 @@
                     : _.push(_);
               } else {
                 let _;
-                (_ = _.nodes.paragraph.validContent(_)
-                  ? _.nodes.paragraph
-                  : _.get(_.type.name)),
-                  _
-                    ? _.accumulate(_, _)
-                    : ((0, _._)(
-                        !1,
-                        `Couldn't accept ${_.type.name} at root of document, converting to paragraph`,
-                      ),
-                      (_ = _.nodes.paragraph),
-                      _.accumulate(
-                        _.nodes.paragraph,
-                        __webpack_require__.text(
-                          (function (_) {
-                            let _ = "";
-                            return (
-                              _.descendants((_) => {
-                                _.isText && (_ += _.text);
-                              }),
-                              _
-                            );
-                          })(_),
-                        ),
-                      ));
+                if (
+                  ((_ = _.nodes.paragraph.validContent(_)
+                    ? _.nodes.paragraph
+                    : _.get(_.type.name)),
+                  _)
+                )
+                  _.accumulate(_, _);
+                else {
+                  (0, _._)(
+                    !1,
+                    `Couldn't accept ${_.type.name} at root of document, converting to paragraph`,
+                  );
+                  const _ = (function (_) {
+                    let _ = "";
+                    return (
+                      _.descendants((_) => {
+                        _.isText && (_ += _.text);
+                      }),
+                      _
+                    );
+                  })(_);
+                  _ &&
+                    _.accumulate(
+                      _.nodes.paragraph,
+                      __webpack_require__.text(_),
+                    );
+                }
               }
             }),
             (!_.nodes.length && _.length) || _.emit(!0),
@@ -3998,20 +3612,71 @@
           ],
         ];
       }
+      function _(_) {
+        return {
+          tag: `h${_}`,
+          BBArgsToAttrs: (_) => ({
+            level: _,
+            align: _.align || "left",
+          }),
+          AttrsToBBArgs: (_) => {
+            let _ = {
+              tag: `h${_.level}`,
+              args: {},
+            };
+            return (
+              _.align &&
+                "left" != _.align &&
+                _.args &&
+                (_.args.align = _.align),
+              _
+            );
+          },
+        };
+      }
       const _ = {
           nodes: {
             paragraph: {
+              attrs: {
+                align: {
+                  default: "left",
+                },
+              },
               content: "inline*",
               group: "block",
               parseDOM: [
                 {
                   tag: "p",
+                  getAttrs: (_) => ({
+                    align: _.style.textAlign || "left",
+                  }),
                 },
               ],
-              toDOM: _("p", (0, _._)("pm_paragraph", _().Paragraph)),
+              toDOM(_) {
+                const _ = {
+                  class: (0, _._)("pm_paragraph", _().Paragraph),
+                };
+                return (
+                  _.attrs.align &&
+                    "left" != _.attrs.align &&
+                    (_.style = `text-align: ${_.attrs.align}`),
+                  ["p", _, 0]
+                );
+              },
               bbCode: {
                 tag: "p",
                 autocloses: !0,
+                BBArgsToAttrs: (_) => ({
+                  align: _.align,
+                }),
+                AttrsToBBArgs: (_) => {
+                  let _ = {
+                    args: {},
+                  };
+                  return (
+                    _.align && "left" != _.align && (_.args.align = _.align), _
+                  );
+                },
               },
             },
             heading: {
@@ -4019,34 +3684,36 @@
                 level: {
                   default: 1,
                 },
+                align: {
+                  default: "left",
+                },
               },
               content: "inline*",
               group: "block",
               defining: !0,
-              parseDOM: [1, 2, 3, 4, 5].map((_) => ({
-                tag: `h${_}`,
-                attrs: {
-                  level: _,
-                },
-              })),
-              toDOM: (_) => [
-                "h" + _.attrs.level,
-                {
+              parseDOM: [1, 2, 3, 4, 5].map(function (_) {
+                return {
+                  tag: `h${_}`,
+                  getAttrs: (_) => ({
+                    level: _,
+                    align: _.style.textAlign || "left",
+                  }),
+                };
+              }),
+              toDOM(_) {
+                const _ = {
                   class:
                     `BB_Header${_.attrs.level} ` +
                     _()[`Header${_.attrs.level}`],
-                },
-                0,
-              ],
-              bbCode: [1, 2, 3, 4, 5].map((_) => ({
-                tag: `h${_}`,
-                BBArgsToAttrs: () => ({
-                  level: _,
-                }),
-                AttrsToBBArgs: (_) => ({
-                  tag: `h${_.level}`,
-                }),
-              })),
+                };
+                return (
+                  _.attrs.align &&
+                    "left" != _.attrs.align &&
+                    (_.style = `text-align: ${_.attrs.align}`),
+                  ["h" + _.attrs.level, _, 0]
+                );
+              },
+              bbCode: [1, 2, 3, 4, 5].map(_),
             },
             image: {
               inline: !0,
@@ -5102,6 +4769,78 @@
         );
       }
       function _(_) {
+        const {
+            nodeTypes: _,
+            attrs: __webpack_require__,
+            children: _,
+            ..._
+          } = _,
+          { callbacks: _, view: _ } = (0, _._)(),
+          [_, _] = _.useState(() => (0, _._)(_.state, _, __webpack_require__)),
+          _ = _.useCallback(
+            (_) => _((0, _._)(_.state, _, __webpack_require__)),
+            [_, __webpack_require__],
+          );
+        (0, _._)(_, _);
+        const _ = _.useMemo(
+            () => (0, _._)(_, __webpack_require__),
+            [_, __webpack_require__],
+          ),
+          _ = !!_;
+        return _.createElement(_._, {
+          ..._,
+          command: _,
+          toggled: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const { schema: _ } = _;
+        let _ = _.nodes.paragraph,
+          _ = _.nodes.heading;
+        const _ = _.useMemo(() => [_, _], [_, _]);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _,
+            {
+              tooltip: "#FormattingToolbar_AlignLeft",
+              keyboardShortcut: "Ctrl-Shift-L",
+              nodeTypes: _,
+              attrs: {
+                align: "left",
+              },
+            },
+            _.createElement(_.K6w, null),
+          ),
+          _.createElement(
+            _,
+            {
+              tooltip: "#FormattingToolbar_AlignCenter",
+              keyboardShortcut: "Ctrl-Shift-E",
+              nodeTypes: _,
+              attrs: {
+                align: "center",
+              },
+            },
+            _.createElement(_.q8c, null),
+          ),
+          _.createElement(
+            _,
+            {
+              tooltip: "#FormattingToolbar_AlignRight",
+              keyboardShortcut: "Ctrl-Shift-R",
+              nodeTypes: _,
+              attrs: {
+                align: "right",
+              },
+            },
+            _.createElement(_.dWO, null),
+          ),
+        );
+      }
+      function _(_) {
         const { schema: _, maxLevel: __webpack_require__ = 1, levels: _ } = _,
           _ = __webpack_require__ + _ - 1;
         return _.createElement(
@@ -5459,31 +5198,28 @@
                         level: {
                           default: 2,
                         },
+                        align: {
+                          default: "left",
+                        },
                       },
                       parseDOM: [1, 2, 3, 4, 5, 6]
                         .map((_) => ({
                           tag: `h${_}`,
-                          attrs: {
+                          getAttrs: (_) => ({
                             level: 2,
-                          },
+                            align: _.style.textAlign || "left",
+                          }),
                         }))
                         .concat(
                           [1, 2, 3, 4, 5, 6].map((_) => ({
                             tag: `span[data-ccp-parastyle="heading ${_}"]`,
-                            attrs: {
+                            getAttrs: (_) => ({
                               level: 2,
-                            },
+                              align: _.style.textAlign || "left",
+                            }),
                           })),
                         ),
-                      bbCode: [2].map((_) => ({
-                        tag: `h${_}`,
-                        BBArgsToAttrs: () => ({
-                          level: _,
-                        }),
-                        AttrsToBBArgs: (_) => ({
-                          tag: `h${_.level}`,
-                        }),
-                      })),
+                      bbCode: [2].map(_),
                     },
                     bullet_list: _,
                     list_item: _,
@@ -5761,6 +5497,10 @@
                   nodeType: _.nodes.image,
                 }),
               ),
+            _.createElement(_._, null),
+            _.createElement(_, {
+              schema: _,
+            }),
             _.createElement(_._, null),
             _,
           ),
@@ -6106,7 +5846,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6114,6 +5853,337 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgUploads: _ } = _,
+          _ = _.useMemo(() => new Set(), []),
+          _ = _.findIndex(({ _: _ }) => !__webpack_require__.has(_)),
+          _ = (0, _._)();
+        return _.map(({ _: _, upload: _ }, _) =>
+          _.createElement(_, {
+            key: _,
+            active: _ == _,
+            upload: _,
+            fnUploadPrepared: () =>
+              ((_) => {
+                __webpack_require__.add(_), _();
+              })(_),
+            fnUploadComplete: () =>
+              ((_) => {
+                __webpack_require__.delete(_), _();
+              })(_),
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            upload: _,
+            active: __webpack_require__,
+            fnUploadPrepared: _,
+            fnUploadComplete: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(void 0);
+        _.useEffect(() => {
+          __webpack_require__ &&
+            ((function (_) {
+              switch (_.type) {
+                case "image/jpeg":
+                  return "jpg";
+                case "image/png":
+                  return "png";
+                case "image/gif":
+                  return "gif";
+                case "image/webp":
+                  return "webp";
+                case "video/mp4":
+                  return "mp4";
+                case "video/webm":
+                  return "webm";
+                default:
+                  return;
+              }
+            })(_.file) ||
+              _(
+                (0, _._)(
+                  "#StoreAdmin_UploadError_UnsupportedFileType",
+                  _.file.name,
+                ),
+              )),
+            _(__webpack_require__);
+        }, [__webpack_require__, _]);
+        const [_, _] = _.useState(!1),
+          _ = (0, _._)(),
+          _ = _();
+        return _
+          ? _
+            ? _.createElement(
+                _._,
+                {
+                  active: !0,
+                },
+                _.createElement(_._, {
+                  bAlertDialog: !0,
+                  strTitle: (0, _._)("#Error_Generic"),
+                  strDescription: _,
+                  strOKButtonText: (0, _._)("#Button_OK"),
+                  closeModal: () => _.onCancel(),
+                }),
+              )
+            : _.createElement(_, {
+                upload: _,
+                isUploading: _,
+                doUpload: async (_, _) => {
+                  _(), _(!0);
+                  try {
+                    if (!(await _.AddImageForLanguage(_.file, _)))
+                      return void _(
+                        (0, _._)("#StoreAdmin_UploadError_UnableToGetFileInfo"),
+                      );
+                    const _ = (await _.UploadAllImages())[0];
+                    if (!_.bSuccess)
+                      return void _(
+                        (0, _._)(
+                          "#StoreAdmin_UploadError_Generic",
+                          _.image.message,
+                        ),
+                      );
+                    _(_.uploadResult), _.onComplete((0, _._)(_)), _();
+                  } finally {
+                    _(!1);
+                  }
+                },
+              })
+          : null;
+      }
+      function _(_) {
+        const { upload: _, isUploading: __webpack_require__, doUpload: _ } = _,
+          { file: _, onCancel: _ } = _,
+          { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = _(),
+          _ = _.useCallback((_) => _?.replace(_, "_") ?? "", [_]),
+          { baseFilename: _, language: _ } = (0, _._)(_.name, -1),
+          [_, _] = _.useState(() => _(_)),
+          _ = _.useMemo(() => _(_), [_, _]),
+          _ = (0, _._)(_.languages),
+          _ = (function (_, _, _) {
+            return 1 == _?.length ? _[0] : -1 != _ ? _ : _;
+          })(
+            _.map((_) => _.data),
+            _,
+            _.activeLanguage,
+          ),
+          [_, _] = _.useState(_),
+          [_, _] = _.useState(void 0),
+          _ = _.name;
+        _.useEffect(() => {
+          _(() => {
+            if (!_) return;
+            const { baseFilename: _ } = (0, _._)(_),
+              _ = _.find((_) => (0, _._)(_) == _);
+            if (!_) return;
+            if ((0, _._)(_)) return _;
+            const _ = _.images?.[(0, _._)(_)];
+            return _;
+          });
+        }, [_, _, _, _]);
+        const _ =
+            (function (_) {
+              return _ && _.length > 0;
+            })(_) && !__webpack_require__
+              ? () => _(_, _)
+              : void 0,
+          _ = _.useCallback(() => {
+            _.onComplete((0, _._)(_));
+          }, [_, _]),
+          _ = _
+            ? (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadAndReplace")
+            : (0, _._)("#Button_Upload");
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+            onDismiss: _,
+            className: _.UploadModal,
+          },
+          _.createElement(
+            _._,
+            {
+              onSubmit: (_) => {
+                _.preventDefault(), _ && _();
+              },
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#StoreAdmin_ExtraAssetUpload_UploadNew"),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                file: _,
+                isVideo: _(_),
+                duplicate: _,
+                bShowThrobber: __webpack_require__,
+                onUseDuplicate: _,
+              }),
+              _.createElement(_, {
+                name: _,
+                validatedName: _,
+                setName: _,
+                disabled: __webpack_require__,
+              }),
+              _.length > 1 &&
+                _.createElement(_._, {
+                  rgOptions: _,
+                  selectedOption: _,
+                  onChange: (_) => _(_.data),
+                }),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_._, {
+                onOK: _,
+                strOKText: _,
+                bOKDisabled: !_,
+                onCancel: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            file: _,
+            isVideo: __webpack_require__,
+            duplicate: _,
+            bShowThrobber: _,
+            onUseDuplicate: _,
+          } = _,
+          _ = _.useMemo(() => URL.createObjectURL(_), [_]),
+          _ = (0, _._)();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _.DuplicateMessage,
+              },
+              (0, _._)("#StoreAdmin_ExtraAssetUpload_FileNameInuse"),
+            ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.SideBySideComparison, _ && _.Loading),
+            },
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.ThrobberContainer,
+                },
+                _.createElement(_._, {
+                  position: "center",
+                  size: "xlarge",
+                }),
+              ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _.ImgPreviewContainer,
+                    _.DuplicatePreview,
+                  ),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ImageLabel,
+                  },
+                  (0, _._)("#StoreAdmin_ExtraAssetUpload_Original"),
+                ),
+                _.createElement("img", {
+                  src:
+                    "name" in _
+                      ? (0, _._)(_, 0, _)
+                      : (0, _._)((0, _._)(_, !1)?.url, _),
+                  className: _.ImgPreview,
+                }),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _.ImgPreviewContainer,
+              },
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ImageLabel,
+                  },
+                  (0, _._)("#StoreAdmin_ExtraAssetUpload_Replacement"),
+                ),
+              !__webpack_require__ &&
+                _.createElement("img", {
+                  src: _,
+                  className: _.ImgPreview,
+                }),
+              __webpack_require__ &&
+                _.createElement("video", {
+                  src: _,
+                  className: _.ImgPreview,
+                  muted: !0,
+                  loop: !0,
+                  playsInline: !0,
+                  autoPlay: !0,
+                }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            name: _,
+            setName: __webpack_require__,
+            validatedName: _,
+            disabled: _,
+          } = _,
+          _ = _.useCallback((_) => _ && _.element.select(), []);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_._, {
+            value: _,
+            onChange: (_) => __webpack_require__(_.currentTarget.value),
+            label: (0, _._)("#StoreAdmin_ExtraAssetUpload_EnterAName"),
+            ref: _,
+            disabled: _,
+            description: (0, _._)(
+              "#StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename",
+              _.createElement("b", null, _),
+            ),
+          }),
+        );
+      }
+      function _(_) {
+        return _.type.startsWith("video/");
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _ } = _,
@@ -6143,7 +6213,7 @@
             _.createElement(
               _._,
               null,
-              _.createElement(_._, {
+              _.createElement(_, {
                 rgUploads: __webpack_require__,
               }),
               _,
@@ -6189,21 +6259,6 @@
                 )
               );
           }, [_]),
-          { bExtraAssetsV2Videos: _, setExtraAssetsV2Videos: _ } =
-            (function () {
-              const _ = "storeUseExtraAssetsV2Videos",
-                [_, __webpack_require__] = _.useState(
-                  () => !!localStorage.getItem(_),
-                ),
-                _ = _.useCallback((_) => {
-                  _ ? localStorage.setItem(_, "1") : localStorage.removeItem(_),
-                    __webpack_require__(_);
-                }, []);
-              return {
-                bExtraAssetsV2Videos: _,
-                setExtraAssetsV2Videos: _,
-              };
-            })(),
           _ = _.useMemo(
             () => ({
               rgExtraAssetsData: {
@@ -6215,11 +6270,9 @@
               onExtraAssetsUpdated: _,
               storeItemID: _?.nStoreItemID,
               eStoreItemType: _?.eStoreItemType,
-              bExtraAssetsV2Videos: _,
-              setExtraAssetsV2Videos: _,
               bAppHasSteamChinaToolsEnabled: _,
             }),
-            [_, _, _, __webpack_require__, _, _, _],
+            [_, _, _, __webpack_require__, _],
           );
         return _
           ? _.createElement(
@@ -6248,15 +6301,6 @@
       }
       function _() {
         return _.useContext(_).onExtraAssetsUpdated;
-      }
-      function _() {
-        const _ = _.useContext(_),
-          _ = _._.is_support;
-        return {
-          bExtraAssetsV2Videos: _.bExtraAssetsV2Videos && _,
-          bExtraAssetsV2VideosAllowed: _,
-          setExtraAssetsV2Videos: _.setExtraAssetsV2Videos,
-        };
       }
       function _() {
         const _ = _.useContext(_),
@@ -16677,8 +16721,7 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const [_, __webpack_require__, _] = (0, _._)(),
           {
@@ -16748,22 +16791,19 @@
                 mapAltText: _.alt_text,
               })) ?? [],
             [_],
-          );
-        if (!_._.is_support) return null;
-        const _ = (_, _) => {
-          const _ = (0, _._)(_),
-            _ = (0, _._)(29 == _ ? 6 : 0);
-          return _ in _[_].urls
-            ? _[_].urls[_]
-            : _ in _[_].urls
+          ),
+          _ = (_, _) => {
+            const _ = (0, _._)(_),
+              _ = (0, _._)(29 == _ ? 6 : 0);
+            return _ in _[_].urls
               ? _[_].urls[_]
-              : null;
-        };
+              : _ in _[_].urls
+                ? _[_].urls[_]
+                : null;
+          };
         return _.createElement(
           "div",
-          {
-            className: _.ValveOnly,
-          },
+          null,
           _ &&
             _.createElement(_._, {
               entries: _,
@@ -17238,6 +17278,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -17273,8 +17315,22 @@
         };
       }
       function _(_, _, _) {
-        let { $from: _, _: _, node: _ } = _.selection;
-        return !_ && _ <= _.end() && (_ = _.parent), !!_ && _.hasMarkup(_, _);
+        if (_.type !== _) return !1;
+        if (void 0 === _) return !0;
+        for (const _ in _) if (_[_] !== _.attrs[_]) return !1;
+        return !0;
+      }
+      function _(_, _, _) {
+        let { $from: _, _: _ } = _.selection;
+        for (let _ = _.depth; _ > 0; _--) {
+          if (_ > _.end(_)) return !1;
+          if (_(_.node(_), _, _)) return !0;
+        }
+        return !1;
+      }
+      function _(_, _, _) {
+        for (let _ of _) if (_(_, _, _)) return _;
+        return null;
       }
       function _(_, _, _) {
         const { $from: _, _: _ } = _.selection;
@@ -17283,6 +17339,31 @@
           if (void 0 === _ ? _.type === _ : _.hasMarkup(_, _))
             return _.before(_);
         }
+      }
+      function _(_, _) {
+        return (_, _) => {
+          const { $from: _ } = _.selection;
+          let _ = null,
+            _ = 0;
+          for (let _ = _.depth; _ > 0; _--) {
+            const _ = _.node(_);
+            if (_.includes(_.type)) {
+              (_ = _), (_ = _.before(_));
+              break;
+            }
+          }
+          return (
+            !!_ &&
+            (_ &&
+              _(
+                _._.setNodeMarkup(_, _.type, {
+                  ..._.attrs,
+                  ..._,
+                }),
+              ),
+            !0)
+          );
+        };
       }
       function _(_, _, __webpack_require__ = {}) {
         return new _._(_, (_, _, _, _) => {

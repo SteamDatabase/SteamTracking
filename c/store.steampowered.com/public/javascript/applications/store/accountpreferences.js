@@ -1619,7 +1619,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.k_ETwoFactorTokenSteamguardScheme_None = 0)] =
@@ -2191,10 +2190,7 @@
             : _.createElement(_.FH7, {
                 className: _.DeviceLogo,
               });
-        else if (
-          1 == _.platform_type &&
-          _.gaming_device_type === _._.k_EGamingDeviceType_SteamDeck
-        )
+        else if (1 == _.platform_type && 544 === _.gaming_device_type)
           _ = _
             ? _.createElement(_.VRo, {
                 className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
@@ -2262,7 +2258,7 @@
               "#accountpreferences_authorized_devices_type_mobile",
             );
           case 1:
-            return _.gaming_device_type === _._.k_EGamingDeviceType_SteamDeck
+            return 544 === _.gaming_device_type
               ? (0, _._)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )

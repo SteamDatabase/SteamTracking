@@ -2446,18 +2446,17 @@
         DO: () => h,
         ID: () => p,
         Lg: () => u,
-        Rh: () => T,
+        Rh: () => I,
         S$: () => n,
         Zi: () => d,
         aP: () => i,
-        iE: () => L,
+        iE: () => D,
         im: () => a,
         kF: () => o,
         ke: () => s,
         sf: () => m,
         ww: () => l,
         x6: () => c,
-        zm: () => v,
       });
       const s = 1,
         a = 4;
@@ -2695,7 +2694,7 @@
         }
         return !1;
       }
-      var g, _, f, b, C, w, M, S, v, y, B, E, R, I, T, D, L;
+      var g, _, f, b, C, w, M, S, v, y, B, E, R, I, T, D;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -2792,30 +2791,11 @@
               "k_EActivateGameOverlayToWebPageMode_Modal");
         })(S || (S = {})),
         (function (e) {
-          (e[(e.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (e[(e.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (e[(e.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (e[(e.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (e[(e.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (e[(e.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (e[(e.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
-        })(v || (v = {})),
-        (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(y || (y = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -2841,7 +2821,7 @@
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(B || (B = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -2849,14 +2829,14 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(E || (E = {})),
+        })(B || (B = {})),
         (function (e) {
           (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
             (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-        })(R || (R = {})),
+        })(E || (E = {})),
         (function (e) {
           (e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
@@ -2870,13 +2850,13 @@
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
               "k_EAppReleaseState_Disabled");
-        })(I || (I = {})),
+        })(R || (R = {})),
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
             (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-        })(T || (T = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -2909,7 +2889,7 @@
             (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (e[(e.k_EInstallMgrStateCanceled = 16)] =
               "k_EInstallMgrStateCanceled");
-        })(D || (D = {})),
+        })(T || (T = {})),
         (function (e) {
           (e[(e.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
@@ -2917,7 +2897,7 @@
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(L || (L = {}));
+        })(D || (D = {}));
     },
     45699: (e, t, r) => {
       "use strict";
@@ -19954,7 +19934,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "/react-waypoint/",
+          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
         ];
       function f() {
         try {
@@ -26523,13 +26503,14 @@
         CeX: () => w,
         Epp: () => B,
         FId: () => P,
-        Gj3: () => G,
+        Gj3: () => Y,
         JPq: () => D,
-        Kz1: () => X,
+        K6w: () => V,
+        Kz1: () => J,
         LSz: () => W,
         MGO: () => u,
-        Moo: () => Y,
-        O7b: () => Q,
+        Moo: () => $,
+        O7b: () => ee,
         Q9b: () => y,
         QRo: () => g,
         UKJ: () => U,
@@ -26539,30 +26520,32 @@
         _V3: () => C,
         b8_: () => p,
         bmT: () => k,
+        dWO: () => j,
         ffu: () => _,
         glU: () => M,
         i3G: () => m,
-        iYj: () => j,
+        iYj: () => Z,
         jE0: () => L,
         jRw: () => O,
         jXA: () => z,
         jvG: () => E,
-        kdM: () => Z,
+        kdM: () => X,
         l4n: () => T,
         lMJ: () => f,
         lrM: () => h,
         nl: () => b,
         pcV: () => l,
+        q8c: () => q,
         qOW: () => F,
         qzO: () => A,
         r7n: () => N,
         rxV: () => S,
-        tI4: () => q,
+        tI4: () => K,
         u49: () => d,
-        vet: () => K,
+        vet: () => Q,
         x7X: () => x,
         xIk: () => o,
-        ycU: () => V,
+        ycU: () => G,
       });
       var n = r(90626),
         i = (r(51396), r(97875)),
@@ -27857,6 +27840,132 @@
           {
             version: "1.1",
             xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          n.createElement("rect", {
+            x: "2",
+            y: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "2",
+            y: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "2",
+            y: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "2",
+            y: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function j() {
+        return n.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          n.createElement("rect", {
+            x: "2",
+            y: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "8",
+            y: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "4",
+            y: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "12",
+            y: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function q() {
+        return n.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+          },
+          n.createElement("rect", {
+            x: "2",
+            y: "4",
+            width: "20",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "5",
+            y: "8",
+            width: "14",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "3",
+            y: "12",
+            width: "18",
+            height: "2",
+            fill: "currentcolor",
+          }),
+          n.createElement("rect", {
+            x: "7",
+            y: "16",
+            width: "10",
+            height: "2",
+            fill: "currentcolor",
+          }),
+        );
+      }
+      function G() {
+        return n.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
             className: "SVGIcon_Button SVGIcon_TextIndent",
             viewBox: "0 0 36 36",
             fill: "none",
@@ -27880,7 +27989,7 @@
           ),
         );
       }
-      function j() {
+      function Z() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27912,7 +28021,7 @@
           ),
         );
       }
-      function q() {
+      function K() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27946,7 +28055,7 @@
           ),
         );
       }
-      function G() {
+      function Y() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27982,7 +28091,7 @@
           ),
         );
       }
-      function Z(e) {
+      function X(e) {
         const { bGreyOutRightSide: t, ...r } = e;
         return t
           ? n.createElement(
@@ -28028,7 +28137,7 @@
               }),
             );
       }
-      function K(e) {
+      function Q(e) {
         return n.createElement(
           "svg",
           {
@@ -28072,7 +28181,7 @@
           }),
         );
       }
-      function Y(e) {
+      function $(e) {
         return n.createElement(
           "svg",
           {
@@ -28090,7 +28199,7 @@
           }),
         );
       }
-      function X(e) {
+      function J(e) {
         return n.createElement(
           "svg",
           {
@@ -28110,7 +28219,7 @@
           }),
         );
       }
-      function Q(e) {
+      function ee(e) {
         return n.createElement(
           "svg",
           {

@@ -25,6 +25,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         BannerContainer: "_29jK3MyNRDW7PAcrm59l_O",
         BannerHeader: "_3yxJH3baj7mwTTYzBIyi_Z",
         BannerContentDesktop: "Cek1s5Ixk2xYmkqjjESD0",
@@ -6403,7 +6404,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -8712,8 +8712,7 @@
               );
             const _ = [];
             for (const _ of __webpack_require__.Body().sessions())
-              _.device_type() !== _._.k_EGamingDeviceType_Unknown &&
-                _.push(_.toObject());
+              0 !== _.device_type() && _.push(_.toObject());
             return {
               sessions: _,
               refetchInterval:
@@ -16763,7 +16762,6 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, ...__webpack_require__ } = _;
@@ -16898,7 +16896,7 @@
               : __webpack_require__.filter((_) => {
                   switch (_.device_type) {
                     default:
-                    case _._.k_EGamingDeviceType_StandardPC:
+                    case 1:
                       {
                         const _ = (function (_) {
                           switch (_) {
@@ -17123,7 +17121,7 @@
                         if (_.steamos_linux && _.includes("Linux")) return !0;
                       }
                       break;
-                    case _._.k_EGamingDeviceType_SteamDeck:
+                    case 544:
                       return _.windows || _.steamos_linux;
                   }
                   return !1;
@@ -22806,7 +22804,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = {
         bFitToWindow: !0,
@@ -22872,9 +22869,9 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_EGamingDeviceType_StandardPC:
+          case 1:
             return (0, _._)("#Library_DeviceType_PC");
-          case _._.k_EGamingDeviceType_SteamDeck:
+          case 544:
             return (0, _._)("#Library_DeviceType_SteamDeck");
           default:
             return;

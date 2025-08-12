@@ -15709,34 +15709,32 @@
           return this.m_clanSteamID;
         }
         async AddImage(e, t = 0) {
-          const { language: r } = (function (e, t = 0, r = !0) {
-            let i = e.lastIndexOf(".");
-            -1 != i && (e = e.slice(0, i).toLowerCase());
-            let n = null,
-              s = 0;
-            e.endsWith("korean") && ((n = 4), (s = 6));
-            const a = (e) => e.replace(/[\s_-]+$/g, "");
+          const { language: r } = (function (e, t = 0) {
+            let r = e.lastIndexOf(".");
+            -1 != r && (e = e.slice(0, r).toLowerCase());
+            let i = null,
+              n = 0;
+            e.endsWith("korean") && ((i = 4), (n = 6));
             for (let t = 0; t < 31; ++t) {
-              const i = (0, xe.ww)(t);
-              if (i.length <= s) continue;
-              if (e.endsWith(i)) {
-                let a = !r;
-                if (r && e.length > i.length + 2) {
-                  const t = e[e.length - i.length - 1];
-                  a = !/\p{Alphabetic}|\p{Number}/u.test(t);
-                }
-                a && ((n = t), (s = i.length));
+              const r = (0, xe.ww)(t);
+              if (r.length <= n) continue;
+              if (e.endsWith(r) && e.length > r.length + 2) {
+                const s = e[e.length - r.length - 1];
+                /\p{Alphabetic}|\p{Number}/u.test(s) ||
+                  ((i = t), (n = r.length));
               }
-              const o = (0, xe.Lg)(t);
-              o.length <= s ||
-                (e.endsWith(o) &&
-                  a(e.substring(0, e.length - o.length)).length > 0 &&
-                  ((n = t), (s = o.length)));
+              const s = (0, xe.Lg)(t);
+              s.length <= n || (e.endsWith(s) && ((i = t), (n = s.length)));
             }
             return {
-              language: n ?? t,
-              baseFilename: s > 0 ? a(e.substring(0, e.length - s)) : e,
+              language: i ?? t,
+              baseFilename:
+                n > 0
+                  ? ((s = e.substring(0, e.length - n)),
+                    s.replace(/[\s_-]+$/g, ""))
+                  : e,
             };
+            var s;
           })(e.name, t);
           return this.AddImageForLanguage(e, r);
         }
@@ -27862,9 +27860,7 @@
           device_friendly_name: t,
           machine_id: r,
           platform_type: 1,
-          gaming_device_type: s.TS.ON_DECK
-            ? xe.zm.k_EGamingDeviceType_SteamDeck
-            : xe.zm.k_EGamingDeviceType_StandardPC,
+          gaming_device_type: s.TS.ON_DECK ? 544 : 1,
         };
       }
       async function Zu() {
@@ -32014,14 +32010,13 @@
         S$: () => i,
         ey: () => d,
         fL: () => p,
-        iE: () => z,
+        iE: () => E,
         im: () => s,
         kF: () => a,
         ke: () => n,
         sf: () => m,
         ww: () => o,
         x6: () => l,
-        zm: () => M,
       });
       const n = 1,
         s = 4;
@@ -32281,7 +32276,7 @@
             return "unknown";
         }
       }
-      var g, _, h, f, b, y, B, w, M, S, v, C, R, I, T, E, z;
+      var g, _, h, f, b, y, B, w, M, S, v, C, R, I, T, E;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -32378,30 +32373,11 @@
               "k_EActivateGameOverlayToWebPageMode_Modal");
         })(w || (w = {})),
         (function (e) {
-          (e[(e.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (e[(e.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (e[(e.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (e[(e.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (e[(e.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (e[(e.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (e[(e.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
-        })(M || (M = {})),
-        (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(S || (S = {})),
+        })(M || (M = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -32427,7 +32403,7 @@
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(v || (v = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -32435,14 +32411,14 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(C || (C = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
             (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-        })(R || (R = {})),
+        })(C || (C = {})),
         (function (e) {
           (e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
@@ -32456,13 +32432,13 @@
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
               "k_EAppReleaseState_Disabled");
-        })(I || (I = {})),
+        })(R || (R = {})),
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
             (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-        })(T || (T = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -32495,7 +32471,7 @@
             (e[(e.k_EInstallMgrStateFailed = 15)] = "k_EInstallMgrStateFailed"),
             (e[(e.k_EInstallMgrStateCanceled = 16)] =
               "k_EInstallMgrStateCanceled");
-        })(E || (E = {})),
+        })(T || (T = {})),
         (function (e) {
           (e[(e.k_EWindowBringToFrontInvalid = 0)] =
             "k_EWindowBringToFrontInvalid"),
@@ -32503,7 +32479,7 @@
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(z || (z = {}));
+        })(E || (E = {}));
     },
     5699: (e, t, r) => {
       "use strict";
@@ -61837,7 +61813,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "/react-waypoint/",
+          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
         ];
       function J() {
         try {

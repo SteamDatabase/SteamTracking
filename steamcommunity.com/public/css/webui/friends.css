@@ -17196,6 +17196,42 @@ html:not(.touch)
 .reactions_ReactionHover_12Ox3 .reactions_ReactionName_2bwkm {
   font-weight: 600;
 }
+.contentmoderationreportdialog_ContentReportDialog_1nRyg p {
+  margin-top: 0;
+}
+.contentmoderationreportdialog_BlockList_26Mh3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.contentmoderationreportdialog_BlockListItem_2tqpD {
+  display: block;
+  background-color: #777;
+  color: #fff;
+  padding: 4px 12px;
+}
+.contentmoderationreportdialog_BottomButtons_2g3Wv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+}
+.contentmoderationreportdialog_BottomButtons_2g3Wv button {
+  max-width: 50%;
+}
+.contentmoderationreportdialog_ReportAs_22Uov {
+  font-weight: bold;
+}
+.contentmoderationreportdialog_DetailedReasonTextArea_1PUlL {
+  margin-top: 12px;
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 80px;
+}
 @keyframes quickaccessvoicecontrolssteamdeck_BackgroundAnimation_23GbG {
   from {
     background-position: 0 100%;
@@ -26499,6 +26535,23 @@ svg.remoteplay_IconMobile_2371n {
 .remoteplay_Footer_2l7VY.DialogFooter {
   margin-top: 0;
   margin-bottom: 24px;
+}
+.remoteplay_GamePickerItem_2HXnn {
+  max-width: 190px;
+  line-height: 20px;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100%;
+}
+.remoteplay_GamePickerItem_2HXnn .remoteplay_Icon_1846- {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  float: left;
+}
+.remoteplay_GamePickerItem_2HXnn .remoteplay_Icon_1846- img {
+  width: 100%;
+  height: 100%;
 }
 @keyframes reorderablelist_BackgroundAnimation_3Jw1U {
   from {

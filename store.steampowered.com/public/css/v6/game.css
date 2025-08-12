@@ -6460,6 +6460,10 @@ body.v6 .page_content.notes {
     width: 1053px;
 }
 
+.widestore .saleEventBannerBig {
+	width: 1200px;
+}
+
 .saleEventBannerLink {
     display: block;
     margin-bottom: 16px;
@@ -6773,7 +6777,7 @@ a.open_in_steam_body:hover {
 }
 
 .widestore .queue_ctn {
-    max-width: 1100px;
+    max-width: 1200px;
 	width: 100%;
     background: rgba( 0, 0, 0, 0.2 );
 	margin: 0px auto;
@@ -6798,7 +6802,7 @@ body.v6.widestore .game_area_already_owned.page_content {
 		    line-height: 40px;
 	color: #a3cf06;
     margin-bottom: 1px;
-	max-width: 1100px;
+	max-width: 1200px;
 	width: 100%;
 }
 
@@ -6818,7 +6822,7 @@ body.v6.widestore .game_area_already_owned.master_sub {
     padding: 0px 16px 16px 16px;
 	margin: 0px auto;
     margin-bottom: 40px;
-	max-width: calc(1100px - 32px);
+	max-width: calc(1200px - 32px);
 }
 
 .widestore .steam_curator_recommendation
@@ -6842,7 +6846,7 @@ body.v6.widestore .game_area_already_owned.master_sub {
 	max-width: 1168px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
 	body.v6.widestore .game_area_already_owned.page_content {
 		width: calc(100% - 50px);
 		padding: 0 25px;

@@ -14511,7 +14511,6 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, ...__webpack_require__ } = _;
@@ -16257,8 +16256,7 @@
               );
             const _ = [];
             for (const _ of __webpack_require__.Body().sessions())
-              _.device_type() !== _._.k_EGamingDeviceType_Unknown &&
-                _.push(_.toObject());
+              0 !== _.device_type() && _.push(_.toObject());
             return {
               sessions: _,
               refetchInterval:
@@ -16546,9 +16544,9 @@
                 "#GamesList_Client_Indicator",
                 (function (_) {
                   switch (_) {
-                    case _._.k_EGamingDeviceType_StandardPC:
+                    case 1:
                       return (0, _._)("#Library_DeviceType_PC");
-                    case _._.k_EGamingDeviceType_SteamDeck:
+                    case 544:
                       return (0, _._)("#Library_DeviceType_SteamDeck");
                     default:
                       return;
@@ -16668,7 +16666,7 @@
           _ = _.data?.sessions?.filter((_) => {
             switch (_.device_type) {
               default:
-              case _._.k_EGamingDeviceType_StandardPC:
+              case 1:
                 {
                   const _ = (function (_) {
                     switch (_) {
@@ -16893,7 +16891,7 @@
                   if (_.steamos_linux && _.includes("Linux")) return !0;
                 }
                 break;
-              case _._.k_EGamingDeviceType_SteamDeck:
+              case 544:
                 return _.windows || _.steamos_linux;
             }
             return !1;
