@@ -2330,9 +2330,6 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
-18:25:03
-18:25:11
-18:25:12
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -2398,6 +2395,8 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+20:51:34
+20:51:41
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -8746,7 +8745,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 14 2025 18:25:11
+Startup - updater built Aug 14 2025 20:51:41
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

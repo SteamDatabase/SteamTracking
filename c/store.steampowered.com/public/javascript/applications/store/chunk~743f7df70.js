@@ -180,6 +180,1293 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_event_gid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_event_gid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  registration_group_id: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  registration_session_id: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  guest_count: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  jsondata: {
+                    _: 7,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  skip_email: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_UpdateRegistration_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_UpdateRegistration_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_event_gid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_event_gid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetAvailability_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.availability || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  availability: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetAvailability_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.group_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  group_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  session_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  guest_count: {
+                    _: 3,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetAvailability_Response_Session";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_event_gid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_event_gid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetRegistrations_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.registrations || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  registrations: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetRegistrations_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.group_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  group_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  session_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  steamid: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  guests_registered: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  jsondata: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  rt_attendance_marked: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  attendance_count: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  guests_attendance: {
+                    _: 8,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetRegistrations_Response_Registration";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_event_gid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_event_gid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_EmailInvitees_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.num_emailed || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  num_emailed: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  num_skipped: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_EmailInvitees_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clan_event_gid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clan_event_gid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CParterMeetSteam_TestFireEmails_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.sessionids || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sessionids: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CParterMeetSteam_TestFireEmails_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.rt_oldest_date || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  rt_oldest_date: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetSaleEventOrganizers_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.accountid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  accountid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  clan_event_gids: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readFixed64String,
+                    pbr: _._.readPackedFixed64String,
+                    _: _._.writeRepeatedFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSaleEventOrganizerInfo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.info || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  info: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetSaleEventOrganizers_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.accountids || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  accountids: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  partnerids: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetBatchPartnerEmailAndName_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.accountid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  accountid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  partnerid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  realname: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  email: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerEmailAndName";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.info || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  info: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPartnerMeetSteam_GetBatchPartnerEmailAndName_Response";
+        }
+      }
+      !(function (_) {
+        (_.UpdateRegistration = function (_, _) {
+          return _.SendMsg(
+            "PartnerMeetSteam.UpdateRegistration#1",
+            (0, _._)(_, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
+        }),
+          (_.GetAvailability = function (_, _) {
+            return _.SendMsg(
+              "PartnerMeetSteam.GetAvailability#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetRegistrations = function (_, _) {
+            return _.SendMsg(
+              "PartnerMeetSteam.GetRegistrations#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.EmailInvitees = function (_, _) {
+            return _.SendMsg(
+              "PartnerMeetSteam.EmailInvitees#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 4,
+              },
+            );
+          }),
+          (_.TestFireEmails = function (_, _) {
+            return _.SendMsg(
+              "PartnerMeetSteam.TestFireEmails#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 4,
+              },
+            );
+          }),
+          (_.GetSaleEventOrganizers = function (_, _) {
+            return _.SendMsg(
+              "PartnerMeetSteam.GetSaleEventOrganizers#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 4,
+              },
+            );
+          }),
+          (_.GetBatchPartnerEmailAndName = function (_, _) {
+            return _.SendMsg(
+              "PartnerMeetSteam.GetBatchPartnerEmailAndName#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          });
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -4784,6 +6071,105 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return (0, _._)({
+          queryKey: _(_, _),
+          queryFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_clan_event_gid(_);
+            const _ = await _._.GetAvailability(_, _);
+            return _.BSuccess()
+              ? _.Body()
+                  .availability()
+                  .map((_) => _.toObject())
+              : [];
+          },
+          enabled: (0, _._)() == _,
+          staleTime: 10 * _._.PerMinute,
+        });
+      }
+      const _ = (_, _) => ["useMeetSteamGetAvailability", _, _];
+      function _(_, _, _, _) {
+        return (0, _._)({
+          queryKey: _(_, _, _),
+          queryFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_type(6),
+              _.Body().set_steamid(
+                _._.InitFromAccountID(_).ConvertTo64BitString(),
+              ),
+              _.Body().set_gid(_);
+            const _ = (0, _._)(),
+              _ = await _._.GetUserActionData(_.GetServiceTransport(), _);
+            return _.BSuccess() && _.Body().jsondata()
+              ? JSON.parse(_.Body().jsondata())
+              : {};
+          },
+          enabled: (0, _._)() == _ && !!_,
+        });
+      }
+      const _ = (_, _, _) => ["useMeetSteamGetRegistrationDetails", _, _, _];
+      function _(_) {
+        const _ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        return {
+          sDisplayTimeZone:
+            "in_person" === _.location_type
+              ? (_.in_person_time_zone ?? _._)
+              : _,
+          rtime_start: _.rtime_start,
+          rtime_end: _.rtime_end,
+        };
+      }
+      function _(_) {
+        return (0, _._)(() => _(_));
+      }
+      function _(_, _) {
+        const _ = _().unix(_),
+          _ = _().unix(_)._(_).utcOffset() - __webpack_require__.utcOffset();
+        return new Date(1e3 * (_ + 60 * _));
+      }
+      function _(_, _) {
+        const _ = _(_, _),
+          _ = new Date();
+        return __webpack_require__.getFullYear() == _.getFullYear()
+          ? (0, _._)(_)
+          : (0, _._)(_);
+      }
+      function _(_, _, _, _) {
+        const _ = _().unix(_),
+          _ = _().unix(_)._(_).utcOffset() - _.utcOffset(),
+          _ = _().unix(_),
+          _ = _().unix(_)._(_),
+          _ = _.utcOffset() - _.utcOffset();
+        return (
+          (0, _._)(_ + 60 * _, _ + 60 * _, !0) + (_ ? "" : " " + _.format("z"))
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5759,6 +7145,1561 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_isLoading = !1;
+        m_existingRegistrations = new Map();
+        m_selections = new Map();
+        m_transport;
+        m_userAccountID;
+        m_clanAccountID;
+        m_gidClanEvent;
+        static s_Singleton;
+        static Get() {
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+        }
+        constructor() {
+          (0, _._)(this);
+        }
+        Init(_, _, _, _) {
+          (this.m_transport = _),
+            (this.m_userAccountID = _),
+            (this.m_clanAccountID = _),
+            (this.m_gidClanEvent = _);
+        }
+        async Load() {
+          if (this.m_isLoading) return;
+          if (this.m_clanAccountID != (0, _._)()) return;
+          const _ = _._.Init(_._),
+            _ = _._.InitFromAccountID(this.m_userAccountID);
+          _.Body().set_clan_event_gid(this.m_gidClanEvent),
+            _.Body().set_steamid(_.ConvertTo64BitString()),
+            this.m_existingRegistrations.clear(),
+            this.m_selections.clear(),
+            (this.m_isLoading = !0);
+          const _ = await _._.GetRegistrations(this.m_transport, _);
+          (this.m_isLoading = !1),
+            __webpack_require__.BSuccess() &&
+              (0, _._)(() => {
+                __webpack_require__
+                  .Body()
+                  .registrations()
+                  .forEach((_) => {
+                    const _ = _.toObject(),
+                      _ = {
+                        ..._,
+                        regmodel: _.jsondata ? JSON.parse(_.jsondata) : void 0,
+                      };
+                    this.m_existingRegistrations.set(_.group_id, _),
+                      this.m_selections.set(_.group_id, _.session_id);
+                  });
+              });
+        }
+        SetSelection(_, _) {
+          _ > 0 ? this.m_selections.set(_, _) : this.m_selections.delete(_);
+        }
+        BIsLoading() {
+          return this.m_isLoading;
+        }
+        GetSelectedGroups() {
+          return Array.from(this.m_selections.keys());
+        }
+        GetSelection(_) {
+          return this.m_selections.get(_);
+        }
+        GetRegistrationStatus(_, _) {
+          const _ = this.m_existingRegistrations.get(_)?.session_id == _,
+            _ = this.m_selections.get(_) == _;
+          return _ && _ ? 1 : !_ && _ ? 2 : _ && !_ ? 3 : 0;
+        }
+        BIsRegisteredForDifferentSessionInGroup(_, _) {
+          const _ = Boolean(this.m_existingRegistrations.get(_)),
+            _ = this.m_selections.get(_) == _,
+            _ =
+              this.m_existingRegistrations.get(_)?.session_id ==
+              this.m_selections.get(_);
+          return _ && !_ && _;
+        }
+        BGetRegistrationSessionID(_) {
+          return this.m_existingRegistrations.get(_)?.session_id;
+        }
+        BHaveSelectionsChanged() {
+          return (
+            (0 != this.m_selections.size ||
+              0 != this.m_existingRegistrations.size) &&
+            (this.m_selections.size != this.m_existingRegistrations.size ||
+              !Array.from(this.m_selections.entries()).every(
+                (_) =>
+                  this.m_existingRegistrations.get(_[0])?.session_id == _[1],
+              ))
+          );
+        }
+        BIsAddingOrChangingSelections() {
+          return Array.from(this.m_selections.entries()).some(
+            (_) =>
+              !this.m_existingRegistrations.get(_[0]) ||
+              this.m_existingRegistrations.get(_[0]).session_id != _[1],
+          );
+        }
+        BHasAlreadyRegistered() {
+          return this.m_existingRegistrations.size > 0;
+        }
+        BHasSomeRegistration() {
+          return this.m_existingRegistrations.size > 0;
+        }
+        async Save(_) {
+          const _ = [];
+          _ = Object.fromEntries(
+            Object.entries(_).filter(
+              ([_]) => !_.startsWith("registration_emailed_"),
+            ),
+          );
+          for (const [__webpack_require__, _] of this.m_selections) {
+            const _ = _._.Init(_._);
+            _.Body().set_clan_event_gid(this.m_gidClanEvent),
+              _.Body().set_steamid(
+                _._.InitFromAccountID(
+                  this.m_userAccountID,
+                ).ConvertTo64BitString(),
+              ),
+              _.Body().set_registration_group_id(__webpack_require__),
+              _.Body().set_registration_session_id(_),
+              _.Body().set_guest_count(_.guests_registered ?? 1),
+              _.Body().set_jsondata(JSON.stringify(_)),
+              _.push(_);
+          }
+          for (const [_, __webpack_require__] of this.m_existingRegistrations) {
+            if (this.m_selections.has(__webpack_require__.group_id)) continue;
+            const _ = _._.Init(_._);
+            _.Body().set_clan_event_gid(this.m_gidClanEvent),
+              _.Body().set_steamid(
+                _._.InitFromAccountID(
+                  this.m_userAccountID,
+                ).ConvertTo64BitString(),
+              ),
+              _.Body().set_registration_group_id(_),
+              _.Body().set_registration_session_id(0),
+              _.Body().set_guest_count(0),
+              _.Body().set_jsondata(JSON.stringify({})),
+              _.push(_);
+          }
+          let _ = !0;
+          for (let _ = 0; _ < _.length; _++) {
+            const _ = _[_],
+              _ = _ == _.length - 1;
+            _.Body().set_skip_email(!_);
+            const _ = await _._.UpdateRegistration(this.m_transport, _);
+            _ = _ && _.BSuccess();
+          }
+          return await this.Load(), _;
+        }
+      }
+      function _() {
+        return (0, _._)(() => _.Get().BIsLoading());
+      }
+      (0, _._)([_._], _.prototype, "m_isLoading", void 0),
+        (0, _._)([_._], _.prototype, "m_existingRegistrations", void 0),
+        (0, _._)([_._], _.prototype, "m_selections", void 0),
+        (0, _._)([_._.bound], _.prototype, "SetSelection", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            eventModel: _,
+            fnConfirm: __webpack_require__,
+            fnHideModal: _,
+            nMaxPerTeam: _,
+            bAddingOrChangingSessions: _,
+            transport: _,
+          } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          [_, _] = _.useState({}),
+          [_, _] = _.useState(!1),
+          _ = _.useCallback(
+            (_) => {
+              _({
+                ..._,
+                ..._,
+              });
+            },
+            [_],
+          ),
+          _ = (0, _._)(_, _.clanSteamID.GetAccountID(), _.GID, _._.accountid),
+          {
+            sUserAccountEmail: _,
+            sUserAccountRealName: _,
+            rgPartners: _,
+          } = _.useMemo(
+            () => ({
+              sUserAccountRealName: (0, _._)("realname", "application_config"),
+              sUserAccountEmail: (0, _._)("email", "application_config"),
+              rgPartners: (0, _._)("partners", "application_config") ?? [],
+            }),
+            [],
+          ),
+          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
+          _ = _.useMemo(() => {
+            const _ = [];
+            return (
+              null == _ &&
+                _.push({
+                  data: void 0,
+                  label: (0, _._)("#MeetSteam_ChoosePartner"),
+                }),
+              _.push(
+                ..._.map((_, _) => ({
+                  data: _.partnerid,
+                  label: _.partner_name,
+                })),
+              ),
+              _.push({
+                data: 0,
+                label: (0, _._)("#MeetSteam_ChoosePartnerOther"),
+              }),
+              _
+            );
+          }, [_, _]);
+        _.useEffect(() => {
+          if (!_.isSuccess) return;
+          const _ = _.find((_) => _.partnerid == _.data.partner_id),
+            _ = 0 === _.data.partner_id ? 0 : _?.partnerid;
+          _(_), _(_), _(_.data);
+        }, [_.isSuccess, _.data, _]);
+        const _ = _?.length > 0,
+          _ = !_ || null != _,
+          _ = _ && 0 === _;
+        _.useEffect(() => {
+          if (_ == _) return;
+          if ((_(_), !_ || !_)) return;
+          let _;
+          const _ = _.find((_) => _.partnerid == _);
+          var _;
+          (_ =
+            _ || !_
+              ? {
+                  name: _?.length > 0 ? _ : void 0,
+                  email_override: _?.length > 0 ? _ : void 0,
+                  partner_id: 0,
+                }
+              : {
+                  name:
+                    _.partneruserrealname?.length > 0
+                      ? _.partneruserrealname
+                      : void 0,
+                  company: _.partner_name?.length > 0 ? _.partner_name : void 0,
+                  email_override:
+                    _.partneruseremail?.length > 0
+                      ? _.partneruseremail
+                      : void 0,
+                  partner_id: _.partnerid,
+                }),
+            Object.values(_).some((_) => null != _) &&
+              _(
+                ((_ = _),
+                Object.fromEntries(
+                  Object.entries(_).filter(([_, _]) => void 0 !== _),
+                )),
+              );
+        }, [_, _, _, _, _, _, _, _, _]);
+        const _ = _.isLoading || _,
+          _ = _
+            ? (0, _._)("#MeetSteam_Register_title", _.GetNameWithFallback(_))
+            : (0, _._)("#MeetSteam_Unregister_title"),
+          _ =
+            !_ ||
+            (_ &&
+              _.name?.length > 0 &&
+              (!_.guest_names || _.guest_names?.every((_) => _.length > 0)) &&
+              _.email_override?.length > 0 &&
+              _.company?.length > 0);
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _ &&
+            _.createElement(
+              _._,
+              {
+                "aria-label": _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
+                bOKDisabled: !0,
+                bHideCloseIcon: !0,
+                onCancel: () => !1,
+              },
+              _.createElement(_._, {
+                size: "medium",
+                position: "center",
+                string: _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
+              }),
+            ),
+          !_ &&
+            _.createElement(
+              _._,
+              {
+                strTitle: _,
+                onCancel: _,
+                bOKDisabled: !_,
+                onOK: async () => {
+                  _(!0), await __webpack_require__(_), _(!1), _.refetch(), _();
+                },
+              },
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    null,
+                    (0, _._)("#MeetSteam_Reg_Intro"),
+                  ),
+                  _.createElement("br", null),
+                  _ &&
+                    _.createElement(_._, {
+                      label: (0, _._)("#MeetSteam_Reg_Preset"),
+                      tooltip: (0, _._)("#MeetSteam_Reg_Preset_ttip"),
+                      rgOptions: _,
+                      selectedOption: _,
+                      onChange: (_) => _(_.data),
+                    }),
+                  _ &&
+                    _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Name"),
+                        value: _.name || "",
+                        onChange: (_) =>
+                          _({
+                            name: _.currentTarget.value,
+                          }),
+                      }),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Email"),
+                        value: _.email_override || "",
+                        mustBeEmail: !0,
+                        onChange: (_) =>
+                          _({
+                            email_override: _.currentTarget.value,
+                          }),
+                      }),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Company"),
+                        value: _.company || "",
+                        onChange: (_) =>
+                          _({
+                            company: _.currentTarget.value,
+                          }),
+                      }),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#MeetSteam_Reg_Game"),
+                        value: _.game || "",
+                        onChange: (_) =>
+                          _({
+                            game: _.currentTarget.value,
+                          }),
+                      }),
+                      Boolean(_ > 0) &&
+                        _.createElement(_._, {
+                          label: (0, _._)("#MeetSteam_Reg_GuestCount"),
+                          tooltip: (0, _._)("#MeetSteam_Reg_GuestCount_ttip"),
+                          rgOptions: Array.from({
+                            length: _ + 1,
+                          }).map((_, _) => ({
+                            data: _,
+                            label: _,
+                          })),
+                          selectedOption: (_.guests_registered ?? 1) - 1,
+                          onChange: (_) =>
+                            _({
+                              guests_registered: _.data + 1,
+                              guest_names:
+                                _.guest_names?.length > _.data
+                                  ? _.guest_names.slice(0, _.data)
+                                  : _._(_.guest_names ?? [], _.data, ""),
+                            }),
+                        }),
+                      Boolean(_.guests_registered > 1) &&
+                        _.createElement(
+                          "div",
+                          null,
+                          _.createElement(
+                            "div",
+                            null,
+                            (0, _._)("#MeetSteam_Reg_Others"),
+                          ),
+                          _.createElement("br", null),
+                          _.guest_names.map((_, _) =>
+                            _.createElement(_._, {
+                              key: "guesname_" + _,
+                              type: "text",
+                              label: (0, _._)("#MeetSteam_Reg_Others_name"),
+                              value: _,
+                              onChange: (_) => {
+                                const _ = [..._.guest_names];
+                                (_[_] = _.currentTarget.value),
+                                  _({
+                                    guest_names: _,
+                                  });
+                              },
+                            }),
+                          ),
+                        ),
+                      _.createElement(_, {
+                        eventModel: _,
+                        oReg: _,
+                        fnUpdateRegistration: _,
+                      }),
+                    ),
+                ),
+            ),
+        );
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            oReg: __webpack_require__,
+            fnUpdateRegistration: _,
+          } = _,
+          _ =
+            ((_ = _.jsondata.meet_steam_groups),
+            (_ = 2),
+            (0, _._)(() =>
+              _.filter((_) =>
+                _.sessions.some(
+                  (_) => _.Get().GetRegistrationStatus(_.group_id, _._) == _,
+                ),
+              )
+                .filter((_) => Boolean(_.ask_registration_question))
+                .map((_) => _.group_id),
+            ));
+        var _, _;
+        return _ && 0 != _.length
+          ? _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "h3",
+                null,
+                (0, _._)("#MeetSteam_Reg_Question_title"),
+              ),
+              _.createElement(
+                "p",
+                null,
+                (0, _._)("#MeetSteam_Reg_Question_desc"),
+              ),
+              _.map((_) => {
+                const _ = _.jsondata.meet_steam_groups.find(
+                  (_) => _.group_id == _,
+                );
+                return _.createElement(_, {
+                  key: "groupquestion" + _,
+                  groupInfo: _,
+                  oReg: __webpack_require__,
+                  fnUpdateText: (_) => {
+                    let _ = __webpack_require__.pre_event_partner_questions
+                        ? [...__webpack_require__.pre_event_partner_questions]
+                        : [],
+                      _ = _.findIndex((_) => _.group_id == _);
+                    _ < 0
+                      ? _.push({
+                          group_id: _,
+                          question: _,
+                        })
+                      : (_[_] = {
+                          group_id: _,
+                          question: _,
+                        }),
+                      _({
+                        pre_event_partner_questions: _,
+                      });
+                  },
+                });
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const { fnUpdateText: _, groupInfo: __webpack_require__, oReg: _ } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          [_, _] = (0, _._)(() => [
+            __webpack_require__.localized_session_title[_] ||
+              __webpack_require__.localized_session_title[0] ||
+              "",
+            _.pre_event_partner_questions?.find(
+              (_) => _.group_id == __webpack_require__.group_id,
+            )?.question || "",
+          ]);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_._, null, _),
+          _.createElement(
+            "div",
+            {
+              className: "DialogInput_Wrapper",
+            },
+            _.createElement("textarea", {
+              value: _,
+              className: (0, _._)(
+                "DialogTextInputBase",
+                "_DialogInputContainer",
+              ),
+              cols: 80,
+              rows: 3,
+              placeholder: (0, _._)("#MeetSteam_Reg_Question_placeholder"),
+              onChange: (_) => _(_.currentTarget.value),
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = "America/Los_Angeles";
+      function _(_) {
+        const _ = _.context.event,
+          _ = _.context.showErrorInfo,
+          _ = (0, _._)(_.args, "group_id"),
+          _ = Number.parseInt(_),
+          _ = (0, _._)(() => _(_, _));
+        return _
+          ? _.clanSteamID.GetAccountID() != (0, _._)()
+            ? _
+              ? _.createElement("div", null, "Only support on special group")
+              : null
+            : _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_, {
+                  eventModel: _,
+                }),
+                _.createElement(_, {
+                  groupData: _,
+                  eventModel: _,
+                }),
+                _.createElement(_, {
+                  eventModel: _,
+                }),
+              )
+          : _
+            ? _.createElement(
+                "div",
+                null,
+                "Failed to find session group id ",
+                _,
+              )
+            : null;
+      }
+      function _(_) {
+        const { eventModel: _ } = _;
+        return (0, _._)(() => _.Get().BHasSomeRegistration())
+          ? _.createElement(_, {
+              eventModel: _,
+              accountID: _._.accountid,
+            })
+          : null;
+      }
+      function _(_) {
+        const { eventModel: _, accountID: __webpack_require__ } = _,
+          _ = (function (_, _) {
+            const _ = (0, _._)({
+              queryKey: ["useMeetSteamQRCode", _, _],
+              queryFn: async () => {
+                const _ = _._.STORE_BASE_URL + "meetsteam/attendance_qrcode",
+                  _ = {
+                    gid: _,
+                    accountid: _,
+                  };
+                return (
+                  await _().get(_, {
+                    params: _,
+                    withCredentials: !0,
+                  })
+                ).data;
+              },
+            });
+            return _.data?.qrcode;
+          })(_.GID, __webpack_require__),
+          _ = "qr-code-display-marker",
+          { refIsFirst: _, bIsFirst: _ } = (function (_) {
+            const [_, __webpack_require__] = _.useState(!1),
+              _ = _.useRef(null);
+            return (
+              _.useEffect(() => {
+                const _ = document.querySelectorAll("." + _);
+                _.current &&
+                  _.length > 0 &&
+                  __webpack_require__(_[0] === _.current);
+              }, [_]),
+              {
+                refIsFirst: _,
+                bIsFirst: _,
+              }
+            );
+          })(_);
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: (0, _._)(_),
+          },
+          Boolean(_ && _) &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("div", null, (0, _._)("#MeetSteam_QR_CheckIn")),
+              _.createElement("img", {
+                src: _,
+              }),
+            ),
+        );
+      }
+      function _() {
+        const _ = (0, _._)("promotion_operation_token", "application_config");
+        (0, _._)(
+          Boolean(_) || !_._.accountid,
+          "require promotion_operation_token",
+        );
+        return _.useMemo(
+          () => new _._(_._.WEBAPI_BASE_URL, _).GetServiceTransport(),
+          [_],
+        );
+      }
+      function _() {
+        const [_] = (0, _.useState)(() =>
+          Number.parseInt(
+            (0, _._)("meet_steam_visibility_id", "application_config"),
+          ),
+        );
+        return _;
+      }
+      function _(_) {
+        const { groupData: _, eventModel: __webpack_require__ } = _,
+          _ = _(),
+          _ = (0, _._)(),
+          _ = _(),
+          _ = _(),
+          _ = (0, _._)(
+            _,
+            __webpack_require__.clanSteamID.GetAccountID(),
+            __webpack_require__.GID,
+          ),
+          _ = (0, _.useMemo)(
+            () => _?.sessions?.sort((_, _) => _.rtime_start - _.rtime_start),
+            [_?.sessions],
+          ),
+          _ = _(),
+          _ = (0, _._)(() =>
+            _?.reduce(
+              (_, _) =>
+                _.set(_._, _.Get().GetRegistrationStatus(_.group_id, _._)),
+              new Map(),
+            ),
+          ),
+          _ = (0, _._)(
+            _,
+            __webpack_require__.clanSteamID.GetAccountID(),
+            __webpack_require__.GID,
+            _._.accountid,
+          ),
+          _ = _.isSuccess && !!_.data.allow_registration_if_full;
+        if (!_.isSuccess)
+          return _.createElement(
+            "div",
+            null,
+            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+          );
+        if (_ && _._.accountid)
+          return _.createElement(_._, {
+            size: "medium",
+            position: "center",
+            string: (0, _._)("#Loading"),
+          });
+        return _.group_visibility_tokens?.length > 0 &&
+          !_.group_visibility_tokens.includes(_) &&
+          !_
+          ? null
+          : _.createElement(
+              _,
+              {
+                groupData: _,
+              },
+              _?.map((_, _) => {
+                const _ = _.data.find(
+                    (_) => _.group_id === _.group_id && _.session_id === _._,
+                  ),
+                  _ = _.get(_._),
+                  _ = _ + 1 < _.length;
+                return _.createElement(
+                  _.Fragment,
+                  {
+                    key: "timecol_" + _.group_id + "_" + _._,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SessionColumnCtn,
+                    },
+                    _.createElement(_, {
+                      sessionData: _,
+                      onClick: () =>
+                        _(() =>
+                          ((_) => {
+                            const _ = _.Get().GetSelection(_.group_id) == _;
+                            _.Get().SetSelection(_.group_id, _ ? void 0 : _);
+                          })(_._),
+                        ),
+                      nGuestReservations: _?.guest_count || 0,
+                      eRegistrationStatus: _,
+                      bAllowedToRegisterIfFull: _,
+                    }),
+                  ),
+                  _ && _.createElement(_, null),
+                );
+              }),
+            );
+      }
+      function _(_) {
+        const { groupData: _, children: __webpack_require__ } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          _ = _._.GetWithFallback(_?.localized_session_title, _),
+          _ = _._.GetWithFallback(_?.localized_session_description, _),
+          _ = _._.GetWithFallback(_?.localized_intended_audience, _),
+          _ = _._.GetWithFallback(_?.localized_sesssion_faq, _),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)({
+                  [_().Ctn]: !0,
+                  [_().CtnRegistered]: !1,
+                  [_().VisibilityOverride]:
+                    _ && _.group_visibility_tokens?.length > 0,
+                }),
+              },
+              Boolean(_) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SessionTitle,
+                  },
+                  _,
+                ),
+              Boolean(_) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SessionDesc,
+                  },
+                  _,
+                ),
+              Boolean(_) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SessionAudience,
+                  },
+                  (0, _._)("#MeetSteam_Session_Audience", _),
+                ),
+              Boolean(_) &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().ExpanderRow,
+                    },
+                    _.createElement(_._, {
+                      bExpanded: _,
+                      setExpanded: _,
+                    }),
+                    _.createElement("div", null, (0, _._)("#MeetSteam_FAQ")),
+                  ),
+                  _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().FAQDisplay,
+                      },
+                      _.createElement(_._, {
+                        text: _,
+                        event: null,
+                      }),
+                    ),
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: _().SessionOptions,
+                },
+                __webpack_require__,
+              ),
+            )
+          : null;
+      }
+      function _(_, _, _, _) {
+        const _ = _ || (0 === _ && _ > 0) || 1 === _ || 2 === _ || 3 === _;
+        let _ = null,
+          _ = null;
+        return (
+          1 == _
+            ? ((_ = (0, _._)("#MeetSteam_Registered")), (_ = _().Registered))
+            : 2 == _
+              ? ((_ = (0, _._)("#MeetSteam_Registering")),
+                (_ = _().Registering))
+              : 3 == _
+                ? ((_ = (0, _._)("#MeetSteam_Unegistering")),
+                  (_ = _().Unregistering))
+                : _ &&
+                  ((_ = (0, _._)("#MeetSteam_Already")),
+                  (_ = _().RegisteredElsewhere)),
+          {
+            bEnabled: _,
+            strStatusClass: _,
+            strStatusToken: _,
+          }
+        );
+      }
+      function _(_) {
+        const {
+            sessionData: _,
+            onClick: __webpack_require__,
+            nGuestReservations: _,
+            eRegistrationStatus: _ = 0,
+            bAllowedToRegisterIfFull: _,
+          } = _,
+          _ = (0, _._)(() => _.max_capacity),
+          _ = Math.max(0, _ - (_ || 0)),
+          { strStatusClass: _, strStatusToken: _, bEnabled: _ } = _(_, _, _),
+          { sDisplayTimeZone: _, rtime_start: _, rtime_end: _ } = (0, _._)(_),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(_, _, _);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().SessionInstance, _),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().StatusText,
+              },
+              _.createElement("span", null, _),
+            ),
+            _.createElement(
+              "button",
+              {
+                className: (0, _._)(_().Button, _().Background),
+                disabled: !_,
+                onClick: __webpack_require__,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().Title,
+                },
+                _,
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().TimeFrame,
+                },
+                _,
+              ),
+            ),
+            _.createElement(_, {
+              nAvailableSpace: _,
+              bAllowedToRegisterIfFull: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+          nAvailableSpace: _,
+          bAllowedToRegisterIfFull: __webpack_require__,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          __webpack_require__ ||
+            _.createElement(
+              _.Fragment,
+              null,
+              " ",
+              _ < 1
+                ? _.createElement(
+                    "div",
+                    {
+                      className: _().SoldOut,
+                    },
+                    (0, _._)("#MeetSteam_SoldOut"),
+                  )
+                : _.createElement(
+                    "div",
+                    {
+                      className: _().MaxSize,
+                    },
+                    (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
+                  ),
+              " ",
+            ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _().InstanceDivider,
+          },
+          "◆",
+        );
+      }
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = "complete-registration-marker",
+          { refIsLast: _, bIsLast: _ } = (function (_) {
+            const [_, _] = _.useState(!1),
+              _ = _.useRef(null);
+            return (
+              _.useEffect(() => {
+                const _ = document.querySelectorAll("." + _);
+                _.current &&
+                  _.length > 0 &&
+                  __webpack_require__(_[_.length - 1] === _.current);
+              }, [_]),
+              {
+                refIsLast: _,
+                bIsLast: _,
+              }
+            );
+          })(_),
+          _ = _(),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1);
+        !(function (_, _, _, _) {
+          _.useEffect(() => {
+            (async () => {
+              _.Get().Init(_, _, _, _), await _.Get().Load();
+            })();
+          }, [_, _, _, _]);
+        })(_, _._.accountid, _.clanSteamID.GetAccountID(), _.GID);
+        const _ = (0, _._)(_, _.clanSteamID.GetAccountID(), _.GID),
+          [_, _, _] = (0, _._)(),
+          _ = _(),
+          _ = _(),
+          _ = _ || _,
+          _ = (0, _._)(() => _.Get().BHaveSelectionsChanged()),
+          _ = (0, _._)(() => _.Get().BIsAddingOrChangingSelections()),
+          _ = (0, _._)(() => _.Get().BHasAlreadyRegistered()),
+          _ = (0, _._)(() =>
+            _.Get()
+              .GetSelectedGroups()
+              .reduce((_, _) => {
+                const _ = _(_, _),
+                  _ = _.Get().GetSelection(_.group_id),
+                  _ = _.sessions?.find((_) => _._ == _)?.max_per_team ?? 0;
+                return Math.max(_, _);
+              }, 1),
+          );
+        return (
+          (function (_) {
+            _.useEffect(() => {
+              if (_)
+                return (
+                  (window.onbeforeunload = () =>
+                    (0, _._)("#EventEditor_UnsavedChanges")),
+                  () => {
+                    window.onbeforeunload = () => {};
+                  }
+                );
+            }, [_]);
+          })(_),
+          _.createElement(
+            "div",
+            {
+              ref: _,
+              className: (0, _._)(
+                _,
+                _().CompleteRegistrationCtn,
+                _ && _ && _().Visible,
+              ),
+            },
+            _.createElement(
+              "p",
+              null,
+              _
+                ? (0, _._)("#MeetSteam_UpdateRegistration_Desc")
+                : (0, _._)("#MeetSteam_CompleteRegistration_Desc"),
+            ),
+            _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                !_ &&
+                  _.createElement(
+                    _._,
+                    {
+                      disabled: !_,
+                      onClick: () => _(() => _(!0)),
+                    },
+                    _
+                      ? (0, _._)("#MeetSteam_UpdateRegistration")
+                      : (0, _._)("#MeetSteam_CompleteRegistration"),
+                  ),
+                _ &&
+                  _.createElement(_._, {
+                    size: "small",
+                    position: "center",
+                    string: (0, _._)("#Saving"),
+                  }),
+                _ &&
+                  _.createElement(_, {
+                    eventModel: _,
+                    fnConfirm: async (_) => {
+                      _(!0), (await _.Get().Save(_)) || _(), _.refetch(), _(!1);
+                    },
+                    fnHideModal: () => _(!1),
+                    nMaxPerTeam: _,
+                    bAddingOrChangingSessions: _,
+                    transport: _,
+                  }),
+                _ &&
+                  _.createElement(
+                    _._,
+                    {
+                      active: !0,
+                    },
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#Error_Generic"),
+                      strDescription: (0, _._)("#MeetSteam_RegistrationFailed"),
+                      closeModal: _,
+                    }),
+                  ),
+              ),
+          )
+        );
+      }
+      function _(_, _) {
+        const _ = _?.jsondata?.meet_steam_groups || [];
+        return __webpack_require__?.find((_) => _.group_id == _);
+      }
+      function _() {
+        return _._.Get().BIsUserLoggedIn()
+          ? (_) => _()
+          : () =>
+              (0, _._)(
+                _.createElement(_._, {
+                  strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
+                  strDescription: (0, _._)(
+                    "#EventDisplay_Share_NotLoggedIn_Description",
+                  ),
+                  strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
+                  onOK: () => (0, _._)(),
+                }),
+                window,
+              );
+      }
+      function _(_) {
+        const _ = _.context.event,
+          _ = _.context.showErrorInfo,
+          _ = (0, _._)(_.args, "schedule_id"),
+          _ = Number.parseInt(_),
+          _ = (0, _._)(() =>
+            (function (_, _) {
+              const _ = _?.jsondata?.meet_steam_schedules || [];
+              return __webpack_require__?.find((_) => _.schedule_id == _);
+            })(_, _),
+          );
+        return _
+          ? _.clanSteamID.GetAccountID() != (0, _._)()
+            ? _
+              ? _.createElement("div", null, "Only support on special group")
+              : null
+            : _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_, {
+                  scheduleData: _,
+                  eventModel: _,
+                }),
+                _.createElement(_, {
+                  eventModel: _,
+                }),
+              )
+          : _
+            ? _.createElement(
+                "div",
+                null,
+                "Failed to find session schedule id ",
+                _,
+              )
+            : null;
+      }
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = _(),
+          _ = _(),
+          _ = (0, _._)(_, _.clanSteamID.GetAccountID(), _.GID),
+          _ = (0, _._)(_, _.clanSteamID.GetAccountID(), _.GID, _._.accountid);
+        if (!_.isSuccess)
+          return _.createElement(
+            "div",
+            null,
+            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+          );
+        if (_ && _._.accountid)
+          return _.createElement(_._, {
+            size: "medium",
+            position: "center",
+            string: (0, _._)("#Loading"),
+          });
+        return _.createElement(_, {
+          ..._,
+          fnOnClick: (_, _) => {
+            const _ = _.Get().GetSelection(_) == _;
+            _.Get().SetSelection(_, _ ? void 0 : _);
+          },
+          rgAvailability: _?.data,
+          bAllowedToRegisterIfFull: _?.data?.allow_registration_if_full,
+        });
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            scheduleData: __webpack_require__,
+            bAllowedToRegisterIfFull: _,
+            fnOnClick: _,
+            rgAvailability: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _(),
+          [_, _, _] = (0, _._)(() => [
+            _.jsondata.meet_steam_groups,
+            __webpack_require__.in_person_time_zone ?? _,
+            __webpack_require__.location_type,
+          ]),
+          [_, _, _] = (0, _.useMemo)(() => {
+            if (!_) return [null, null, null];
+            const _ = new Map(),
+              _ = new Map();
+            for (const _ of _)
+              if (
+                !(_.group_visibility_tokens?.length > 0) ||
+                _.group_visibility_tokens.includes(_) ||
+                _
+              )
+                for (const _ of _.sessions) {
+                  const _ = (
+                    "in_person" == _
+                      ? _().unix(_.rtime_start)._(_)
+                      : _().unix(_.rtime_start)
+                  ).format("YYYY-MM-DD");
+                  _.has(_) || _.set(_, []),
+                    _.get(_).push({
+                      group: _,
+                      session: _,
+                    });
+                }
+            for (const _ of _.session_breaks || []) {
+              const _ = (
+                "in_person" == _
+                  ? _().unix(_.rtime_start)._(_)
+                  : _().unix(_.rtime_start)
+              ).format("YYYY-MM-DD");
+              _.has(_) || _.set(_, []), _.get(_).push(_);
+            }
+            for (const _ of Array.from(_.keys()))
+              _.get(_).sort(
+                (_, _) => _.session.rtime_start - _.session.rtime_start,
+              );
+            return [_, _, Array.from(_.keys()).sort()];
+          }, [_, _, _, _, _, __webpack_require__.session_breaks]);
+        return _
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.map((_) => {
+                const _ = _.get(_);
+                return _.createElement(
+                  "div",
+                  {
+                    key: "day_" + _,
+                    className: _().SingleDayCtn,
+                  },
+                  _.createElement(_, {
+                    scheduleData: __webpack_require__,
+                    bAllowedToRegisterIfFull: _,
+                    fnOnClick: _,
+                    rgDayGroupSessions: _,
+                    rgBreakSessions: _.get(_) || [],
+                    rgAvailability: _,
+                  }),
+                );
+              }),
+            )
+          : _.createElement(
+              "div",
+              null,
+              "No Meet Steam Events; please create some first.",
+            );
+      }
+      function _(_) {
+        const {
+            scheduleData: _,
+            rgDayGroupSessions: __webpack_require__,
+            rgBreakSessions: _,
+            bAllowedToRegisterIfFull: _,
+            fnOnClick: _,
+            rgAvailability: _,
+          } = _,
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            for (const _ of __webpack_require__)
+              0 == _.length ||
+              _[_.length - 1][0].session.rtime_start != _.session.rtime_start
+                ? _.push([_])
+                : _[_.length - 1].push(_);
+            return _;
+          }, [__webpack_require__]),
+          { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(
+            __webpack_require__[0].session,
+          ),
+          _ = (0, _._)(_, _);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "h2",
+            {
+              className: _().ScheduleTopDate,
+            },
+            _,
+          ),
+          _.filter((_) => _.rtime_end <= _[0][0].session.rtime_start).map((_) =>
+            _.createElement(_, {
+              key: `breaks_${_.schedule_id}_${_.break_id}`,
+              scheduleData: _,
+              breakSession: _,
+            }),
+          ),
+          _.map((_, _) => {
+            let _ = [];
+            if (_ + 1 < _.length) {
+              const _ = _[0].session.rtime_start,
+                _ = _[_ + 1][0].session.rtime_end;
+              _ = _.filter((_) => _ < _.rtime_start && _.rtime_end < _);
+            }
+            return _.createElement(
+              _.Fragment,
+              {
+                key: "start_" + _[0].session.rtime_start,
+              },
+              _.createElement(_, {
+                bAllowedToRegisterIfFull: _,
+                fnOnClick: _,
+                scheduleData: _,
+                rgSlotSessions: _,
+                rgAvailability: _,
+              }),
+              _.map((_) =>
+                _.createElement(_, {
+                  key: `breaks_${_.schedule_id}_${_.break_id}`,
+                  scheduleData: _,
+                  breakSession: _,
+                }),
+              ),
+            );
+          }),
+          _.filter(
+            (_) => _.rtime_start >= _[_.length - 1][0].session.rtime_end,
+          ).map((_) =>
+            _.createElement(_, {
+              key: `breaks_${_.schedule_id}_${_.break_id}`,
+              scheduleData: _,
+              breakSession: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { scheduleData: _, breakSession: __webpack_require__ } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _._)(
+            () =>
+              __webpack_require__.localized_break_description[_] ||
+              __webpack_require__.localized_break_description[0] ||
+              "",
+          ),
+          _ = (0, _._)(() => ({
+            rtime_start: __webpack_require__.rtime_start,
+            rtime_end: __webpack_require__.rtime_end,
+            location_type: _.location_type,
+            in_person_time_zone: _.in_person_time_zone,
+          }));
+        return _.createElement(
+          "div",
+          {
+            className: _().ScheduleRow,
+          },
+          _.createElement(_, {
+            session: _,
+          }),
+          _.createElement("div", null, _),
+        );
+      }
+      function _(_) {
+        const {
+          scheduleData: _,
+          rgSlotSessions: __webpack_require__,
+          bAllowedToRegisterIfFull: _,
+          fnOnClick: _,
+          rgAvailability: _,
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _().ScheduleRow,
+          },
+          _.createElement(_, {
+            session: __webpack_require__[0].session,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().ScheduleSessionsColumn,
+            },
+            __webpack_require__.map((_) =>
+              _.createElement(_, {
+                key: `entry_${_.group.group_id}_${_.session._}`,
+                bAllowedToRegisterIfFull: _,
+                fnOnClick: _,
+                session: _,
+                rgAvailability: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { session: _ } = _,
+          {
+            sDisplayTimeZone: __webpack_require__,
+            rtime_start: _,
+            rtime_end: _,
+          } = (0, _._)(_),
+          _ = (0, _._)(_, __webpack_require__),
+          _ = (0, _._)(_, _, __webpack_require__);
+        return _.createElement(
+          "div",
+          {
+            className: _().ScheduleTimeColumn,
+          },
+          _.createElement("div", null, _),
+          _.createElement(
+            "div",
+            {
+              className: _().Timezone,
+            },
+            _,
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            session: _,
+            bAllowedToRegisterIfFull: __webpack_require__,
+            fnOnClick: _,
+            rgAvailability: _,
+          } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          [_, _, _, _] = (0, _._)(() => [
+            _.group.localized_session_title?.[_] ||
+              _.group.localized_session_description?.[0] ||
+              "",
+            _.group.localized_intended_audience?.[_] ||
+              _.group.localized_intended_audience?.[0] ||
+              "",
+            _.group.localized_sesssion_faq?.[_] ||
+              _.group.localized_intended_audience?.[0] ||
+              "",
+            _.group.localized_session_description?.[_] ||
+              _.group.localized_intended_audience?.[0] ||
+              "",
+          ]),
+          [_, _, _] = (0, _._)(!1),
+          [_, _, _] = (0, _._)(() => [
+            _.Get().GetRegistrationStatus(_.group.group_id, _.session._),
+            _.Get().BIsRegisteredForDifferentSessionInGroup(
+              _.group.group_id,
+              _.session._,
+            ),
+            _.Get().BGetRegistrationSessionID(_.group.group_id),
+          ]),
+          _ = _?.find(
+            (_) =>
+              _.group_id === _.group.group_id && _.session_id === _.session._,
+          )?.guest_count,
+          _ = Math.max(0, _.session.max_capacity - (_ || 0)),
+          {
+            strStatusClass: _,
+            strStatusToken: _,
+            bEnabled: _,
+          } = _(_, _, __webpack_require__, _),
+          _ =
+            _ && _
+              ? _.group.sessions.find((_) => _._ == _)?.rtime_start
+              : void 0;
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: _
+              ? (0, _._)("#MeetSteam_AlreadyReg", (0, _._)(_), (0, _._)(_))
+              : void 0,
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().SessionInstance, _),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().StatusText,
+              },
+              _.createElement("span", null, _),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().Background,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().SessionTitle,
+                },
+                _,
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SessionAudience,
+                  },
+                  (0, _._)("#MeetSteam_Session_Audience", _),
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: _().SessionInfoLink,
+                  onClick: _,
+                },
+                (0, _._)("#MeetSteam_Session_Details"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ScheduleActionRow,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    onClick: () => {
+                      _ && _(_.group.group_id, _.session._);
+                    },
+                    disabled: !_,
+                  },
+                  (0, _._)(1 == _ ? "#Button_Unselect" : "#Button_Select"),
+                ),
+              ),
+            ),
+            _.createElement(_, {
+              nAvailableSpace: _,
+              bAllowedToRegisterIfFull: __webpack_require__,
+            }),
+            _.createElement(
+              _._,
+              {
+                active: _,
+              },
+              _.createElement(
+                _._,
+                {
+                  strTitle: _,
+                  bAlertDialog: !0,
+                  bAllowFullSize: !0,
+                  closeModal: _,
+                },
+                _.createElement("div", null, _),
+                _.createElement("div", null, _),
+                Boolean(_) &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement("div", null, (0, _._)("#MeetSteam_FAQ")),
+                    _.createElement(_._, {
+                      text: _,
+                      event: null,
+                    }),
+                  ),
+              ),
+            ),
+          ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6349,1493 +9290,6 @@
         (0, _._)([_._], _.prototype, "CommitFileUpload", null),
         (0, _._)([_._], _.prototype, "ClearFileUploadError", null),
         (0, _._)([_._], _.prototype, "Reset", null);
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.clan_event_gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  clan_event_gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  steamid: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  registration_group_id: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  registration_session_id: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  guest_count: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  jsondata: {
-                    _: 7,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  skip_email: {
-                    _: 8,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_UpdateRegistration_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_UpdateRegistration_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.clan_event_gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  clan_event_gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetAvailability_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.availability || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  availability: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetAvailability_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.group_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  group_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  session_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  guest_count: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetAvailability_Response_Session";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.clan_event_gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  clan_event_gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  steamid: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetRegistrations_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.registrations || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  registrations: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetRegistrations_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.group_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  group_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  session_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  steamid: {
-                    _: 3,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  guests_registered: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  jsondata: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  rt_attendance_marked: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  attendance_count: {
-                    _: 7,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  guests_attendance: {
-                    _: 8,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetRegistrations_Response_Registration";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.clan_event_gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  clan_event_gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  steamid: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_EmailInvitees_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.num_emailed || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  num_emailed: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  num_skipped: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_EmailInvitees_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.clan_event_gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  clan_event_gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  steamid: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CParterMeetSteam_TestFireEmails_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.sessionids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  sessionids: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CParterMeetSteam_TestFireEmails_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.rt_oldest_date || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  rt_oldest_date: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetSaleEventOrganizers_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.accountid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  accountid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  clan_event_gids: {
-                    _: 2,
-                    _: !0,
-                    _: !0,
-                    _: _._.readFixed64String,
-                    pbr: _._.readPackedFixed64String,
-                    _: _._.writeRepeatedFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleEventOrganizerInfo";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.info || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  info: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetSaleEventOrganizers_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.accountids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  accountids: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                  partnerids: {
-                    _: 2,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetBatchPartnerEmailAndName_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.accountid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  accountid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  partnerid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  realname: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  email: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerEmailAndName";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.info || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  info: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CPartnerMeetSteam_GetBatchPartnerEmailAndName_Response";
-        }
-      }
-      !(function (_) {
-        (_.UpdateRegistration = function (_, _) {
-          return _.SendMsg(
-            "PartnerMeetSteam.UpdateRegistration#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            },
-          );
-        }),
-          (_.GetAvailability = function (_, _) {
-            return _.SendMsg(
-              "PartnerMeetSteam.GetAvailability#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 0,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          }),
-          (_.GetRegistrations = function (_, _) {
-            return _.SendMsg(
-              "PartnerMeetSteam.GetRegistrations#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.EmailInvitees = function (_, _) {
-            return _.SendMsg(
-              "PartnerMeetSteam.EmailInvitees#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.TestFireEmails = function (_, _) {
-            return _.SendMsg(
-              "PartnerMeetSteam.TestFireEmails#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.GetSaleEventOrganizers = function (_, _) {
-            return _.SendMsg(
-              "PartnerMeetSteam.GetSaleEventOrganizers#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.GetBatchPartnerEmailAndName = function (_, _) {
-            return _.SendMsg(
-              "PartnerMeetSteam.GetBatchPartnerEmailAndName#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          });
-      })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return (0, _._)({
-          queryKey: _(_, _),
-          queryFn: async () => {
-            const _ = _._.Init(_);
-            _.Body().set_clan_event_gid(_);
-            const _ = await _.GetAvailability(_, _);
-            return _.BSuccess()
-              ? _.Body()
-                  .availability()
-                  .map((_) => _.toObject())
-              : [];
-          },
-          enabled: (0, _._)() == _,
-          staleTime: 10 * _._.PerMinute,
-        });
-      }
-      const _ = (_, _) => ["useMeetSteamGetAvailability", _, _];
-      function _(_, _, _, _) {
-        return (0, _._)({
-          queryKey: _(_, _, _),
-          queryFn: async () => {
-            const _ = _._.Init(_._);
-            _.Body().set_type(6),
-              _.Body().set_steamid(
-                _._.InitFromAccountID(_).ConvertTo64BitString(),
-              ),
-              _.Body().set_gid(_);
-            const _ = (0, _._)(),
-              _ = await _._.GetUserActionData(_.GetServiceTransport(), _);
-            return _.BSuccess() && _.Body().jsondata()
-              ? JSON.parse(_.Body().jsondata())
-              : {};
-          },
-          enabled: (0, _._)() == _ && !!_,
-        });
-      }
-      const _ = (_, _, _) => ["useMeetSteamGetRegistrationDetails", _, _, _];
-      class _ {
-        m_isLoading = !1;
-        m_existingRegistrations = new Map();
-        m_selections = new Map();
-        m_transport;
-        m_userAccountID;
-        m_clanAccountID;
-        m_gidClanEvent;
-        static s_Singleton;
-        static Get() {
-          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-        Init(_, _, _, _) {
-          (this.m_transport = _),
-            (this.m_userAccountID = _),
-            (this.m_clanAccountID = _),
-            (this.m_gidClanEvent = _);
-        }
-        async Load() {
-          if (this.m_isLoading) return;
-          if (this.m_clanAccountID != (0, _._)()) return;
-          const _ = _._.Init(_),
-            _ = _._.InitFromAccountID(this.m_userAccountID);
-          _.Body().set_clan_event_gid(this.m_gidClanEvent),
-            _.Body().set_steamid(_.ConvertTo64BitString()),
-            this.m_existingRegistrations.clear(),
-            this.m_selections.clear(),
-            (this.m_isLoading = !0);
-          const _ = await _.GetRegistrations(this.m_transport, _);
-          (this.m_isLoading = !1),
-            __webpack_require__.BSuccess() &&
-              (0, _._)(() => {
-                __webpack_require__
-                  .Body()
-                  .registrations()
-                  .forEach((_) => {
-                    const _ = _.toObject(),
-                      _ = {
-                        ..._,
-                        regmodel: _.jsondata ? JSON.parse(_.jsondata) : void 0,
-                      };
-                    this.m_existingRegistrations.set(_.group_id, _),
-                      this.m_selections.set(_.group_id, _.session_id);
-                  });
-              });
-        }
-        SetSelection(_, _) {
-          _ > 0 ? this.m_selections.set(_, _) : this.m_selections.delete(_);
-        }
-        BIsLoading() {
-          return this.m_isLoading;
-        }
-        GetSelectedGroups() {
-          return Array.from(this.m_selections.keys());
-        }
-        GetSelection(_) {
-          return this.m_selections.get(_);
-        }
-        GetRegistrationStatus(_, _) {
-          const _ = this.m_existingRegistrations.get(_)?.session_id == _,
-            _ = this.m_selections.get(_) == _;
-          return _ && _ ? 1 : !_ && _ ? 2 : _ && !_ ? 3 : 0;
-        }
-        BIsRegisteredForDifferentSessionInGroup(_, _) {
-          const _ = Boolean(this.m_existingRegistrations.get(_)),
-            _ = this.m_selections.get(_) == _,
-            _ =
-              this.m_existingRegistrations.get(_)?.session_id ==
-              this.m_selections.get(_);
-          return _ && !_ && _;
-        }
-        BGetRegistrationSessionID(_) {
-          return this.m_existingRegistrations.get(_)?.session_id;
-        }
-        BHaveSelectionsChanged() {
-          return (
-            (0 != this.m_selections.size ||
-              0 != this.m_existingRegistrations.size) &&
-            (this.m_selections.size != this.m_existingRegistrations.size ||
-              !Array.from(this.m_selections.entries()).every(
-                (_) =>
-                  this.m_existingRegistrations.get(_[0])?.session_id == _[1],
-              ))
-          );
-        }
-        BIsAddingOrChangingSelections() {
-          return Array.from(this.m_selections.entries()).some(
-            (_) =>
-              !this.m_existingRegistrations.get(_[0]) ||
-              this.m_existingRegistrations.get(_[0]).session_id != _[1],
-          );
-        }
-        BHasAlreadyRegistered() {
-          return this.m_existingRegistrations.size > 0;
-        }
-        async Save(_) {
-          const _ = [];
-          _ = Object.fromEntries(
-            Object.entries(_).filter(
-              ([_]) => !_.startsWith("registration_emailed_"),
-            ),
-          );
-          for (const [__webpack_require__, _] of this.m_selections) {
-            const _ = _._.Init(_);
-            _.Body().set_clan_event_gid(this.m_gidClanEvent),
-              _.Body().set_steamid(
-                _._.InitFromAccountID(
-                  this.m_userAccountID,
-                ).ConvertTo64BitString(),
-              ),
-              _.Body().set_registration_group_id(__webpack_require__),
-              _.Body().set_registration_session_id(_),
-              _.Body().set_guest_count(_.guests_registered ?? 1),
-              _.Body().set_jsondata(JSON.stringify(_)),
-              _.push(_);
-          }
-          for (const [_, __webpack_require__] of this.m_existingRegistrations) {
-            if (this.m_selections.has(__webpack_require__.group_id)) continue;
-            const _ = _._.Init(_);
-            _.Body().set_clan_event_gid(this.m_gidClanEvent),
-              _.Body().set_steamid(
-                _._.InitFromAccountID(
-                  this.m_userAccountID,
-                ).ConvertTo64BitString(),
-              ),
-              _.Body().set_registration_group_id(_),
-              _.Body().set_registration_session_id(0),
-              _.Body().set_guest_count(0),
-              _.Body().set_jsondata(JSON.stringify({})),
-              _.push(_);
-          }
-          let _ = !0;
-          for (let _ = 0; _ < _.length; _++) {
-            const _ = _[_],
-              _ = _ == _.length - 1;
-            _.Body().set_skip_email(!_);
-            const _ = await _.UpdateRegistration(this.m_transport, _);
-            _ = _ && _.BSuccess();
-          }
-          return await this.Load(), _;
-        }
-      }
-      function _() {
-        return (0, _._)(() => _.Get().BIsLoading());
-      }
-      (0, _._)([_._], _.prototype, "m_isLoading", void 0),
-        (0, _._)([_._], _.prototype, "m_existingRegistrations", void 0),
-        (0, _._)([_._], _.prototype, "m_selections", void 0),
-        (0, _._)([_._.bound], _.prototype, "SetSelection", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7843,1331 +9297,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            eventModel: _,
-            fnConfirm: __webpack_require__,
-            fnHideModal: _,
-            nMaxPerTeam: _,
-            bAddingOrChangingSessions: _,
-            transport: _,
-          } = _,
-          _ = (0, _._)(_._.LANGUAGE),
-          [_, _] = _.useState({}),
-          [_, _] = _.useState(!1),
-          _ = _.useCallback(
-            (_) => {
-              _({
-                ..._,
-                ..._,
-              });
-            },
-            [_],
-          ),
-          _ = _(0, _.clanSteamID.GetAccountID(), _.GID, _._.accountid),
-          {
-            sUserAccountEmail: _,
-            sUserAccountRealName: _,
-            rgPartners: _,
-          } = _.useMemo(
-            () => ({
-              sUserAccountRealName: (0, _._)("realname", "application_config"),
-              sUserAccountEmail: (0, _._)("email", "application_config"),
-              rgPartners: (0, _._)("partners", "application_config") ?? [],
-            }),
-            [],
-          ),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          _ = _.useMemo(() => {
-            const _ = [];
-            return (
-              null == _ &&
-                _.push({
-                  data: void 0,
-                  label: (0, _._)("#MeetSteam_ChoosePartner"),
-                }),
-              _.push(
-                ..._.map((_, _) => ({
-                  data: _.partnerid,
-                  label: _.partner_name,
-                })),
-              ),
-              _.push({
-                data: 0,
-                label: (0, _._)("#MeetSteam_ChoosePartnerOther"),
-              }),
-              _
-            );
-          }, [_, _]);
-        _.useEffect(() => {
-          if (!_.isSuccess) return;
-          const _ = _.find((_) => _.partnerid == _.data.partner_id),
-            _ = 0 === _.data.partner_id ? 0 : _?.partnerid;
-          _(_), _(_), _(_.data);
-        }, [_.isSuccess, _.data, _]);
-        const _ = _?.length > 0,
-          _ = !_ || null != _,
-          _ = _ && 0 === _;
-        _.useEffect(() => {
-          if (_ == _) return;
-          if ((_(_), !_ || !_)) return;
-          let _;
-          const _ = _.find((_) => _.partnerid == _);
-          var _;
-          (_ =
-            _ || !_
-              ? {
-                  name: _?.length > 0 ? _ : void 0,
-                  email_override: _?.length > 0 ? _ : void 0,
-                  partner_id: 0,
-                }
-              : {
-                  name:
-                    _.partneruserrealname?.length > 0
-                      ? _.partneruserrealname
-                      : void 0,
-                  company: _.partner_name?.length > 0 ? _.partner_name : void 0,
-                  email_override:
-                    _.partneruseremail?.length > 0
-                      ? _.partneruseremail
-                      : void 0,
-                  partner_id: _.partnerid,
-                }),
-            Object.values(_).some((_) => null != _) &&
-              _(
-                ((_ = _),
-                Object.fromEntries(
-                  Object.entries(_).filter(([_, _]) => void 0 !== _),
-                )),
-              );
-        }, [_, _, _, _, _, _, _, _, _]);
-        const _ = _.isLoading || _,
-          _ = _
-            ? (0, _._)("#MeetSteam_Register_title", _.GetNameWithFallback(_))
-            : (0, _._)("#MeetSteam_Unregister_title"),
-          _ =
-            !_ ||
-            (_ &&
-              _.name?.length > 0 &&
-              (!_.guest_names || _.guest_names?.every((_) => _.length > 0)) &&
-              _.email_override?.length > 0 &&
-              _.company?.length > 0);
-        return _.createElement(
-          _._,
-          {
-            active: !0,
-          },
-          _ &&
-            _.createElement(
-              _._,
-              {
-                "aria-label": _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
-                bOKDisabled: !0,
-                bHideCloseIcon: !0,
-                onCancel: () => !1,
-              },
-              _.createElement(_._, {
-                size: "medium",
-                position: "center",
-                string: _ ? (0, _._)("#Saving") : (0, _._)("#Loading"),
-              }),
-            ),
-          !_ &&
-            _.createElement(
-              _._,
-              {
-                strTitle: _,
-                onCancel: _,
-                bOKDisabled: !_,
-                onOK: async () => {
-                  _(!0), await __webpack_require__(_), _(!1), _.refetch(), _();
-                },
-              },
-              _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    null,
-                    (0, _._)("#MeetSteam_Reg_Intro"),
-                  ),
-                  _.createElement("br", null),
-                  _ &&
-                    _.createElement(_._, {
-                      label: (0, _._)("#MeetSteam_Reg_Preset"),
-                      tooltip: (0, _._)("#MeetSteam_Reg_Preset_ttip"),
-                      rgOptions: _,
-                      selectedOption: _,
-                      onChange: (_) => _(_.data),
-                    }),
-                  _ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Name"),
-                        value: _.name || "",
-                        onChange: (_) =>
-                          _({
-                            name: _.currentTarget.value,
-                          }),
-                      }),
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Email"),
-                        value: _.email_override || "",
-                        mustBeEmail: !0,
-                        onChange: (_) =>
-                          _({
-                            email_override: _.currentTarget.value,
-                          }),
-                      }),
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Company"),
-                        value: _.company || "",
-                        onChange: (_) =>
-                          _({
-                            company: _.currentTarget.value,
-                          }),
-                      }),
-                      _.createElement(_._, {
-                        type: "text",
-                        label: (0, _._)("#MeetSteam_Reg_Game"),
-                        value: _.game || "",
-                        onChange: (_) =>
-                          _({
-                            game: _.currentTarget.value,
-                          }),
-                      }),
-                      Boolean(_ > 0) &&
-                        _.createElement(_._, {
-                          label: (0, _._)("#MeetSteam_Reg_GuestCount"),
-                          tooltip: (0, _._)("#MeetSteam_Reg_GuestCount_ttip"),
-                          rgOptions: Array.from({
-                            length: _ + 1,
-                          }).map((_, _) => ({
-                            data: _,
-                            label: _,
-                          })),
-                          selectedOption: (_.guests_registered ?? 1) - 1,
-                          onChange: (_) =>
-                            _({
-                              guests_registered: _.data + 1,
-                              guest_names:
-                                _.guest_names?.length > _.data
-                                  ? _.guest_names.slice(0, _.data)
-                                  : _._(_.guest_names ?? [], _.data, ""),
-                            }),
-                        }),
-                      Boolean(_.guests_registered > 1) &&
-                        _.createElement(
-                          "div",
-                          null,
-                          _.createElement(
-                            "div",
-                            null,
-                            (0, _._)("#MeetSteam_Reg_Others"),
-                          ),
-                          _.createElement("br", null),
-                          _.guest_names.map((_, _) =>
-                            _.createElement(_._, {
-                              key: "guesname_" + _,
-                              type: "text",
-                              label: (0, _._)("#MeetSteam_Reg_Others_name"),
-                              value: _,
-                              onChange: (_) => {
-                                const _ = [..._.guest_names];
-                                (_[_] = _.currentTarget.value),
-                                  _({
-                                    guest_names: _,
-                                  });
-                              },
-                            }),
-                          ),
-                        ),
-                      _.createElement(_, {
-                        eventModel: _,
-                        oReg: _,
-                        fnUpdateRegistration: _,
-                      }),
-                    ),
-                ),
-            ),
-        );
-      }
-      function _(_) {
-        const {
-            eventModel: _,
-            oReg: __webpack_require__,
-            fnUpdateRegistration: _,
-          } = _,
-          _ =
-            ((_ = _.jsondata.meet_steam_groups),
-            (_ = 2),
-            (0, _._)(() =>
-              _.filter((_) =>
-                _.sessions.some(
-                  (_) => _.Get().GetRegistrationStatus(_.group_id, _._) == _,
-                ),
-              )
-                .filter((_) => Boolean(_.ask_registration_question))
-                .map((_) => _.group_id),
-            ));
-        var _, _;
-        return _ && 0 != _.length
-          ? _.createElement(
-              "div",
-              null,
-              _.createElement(
-                "h3",
-                null,
-                (0, _._)("#MeetSteam_Reg_Question_title"),
-              ),
-              _.createElement(
-                "p",
-                null,
-                (0, _._)("#MeetSteam_Reg_Question_desc"),
-              ),
-              _.map((_) => {
-                const _ = _.jsondata.meet_steam_groups.find(
-                  (_) => _.group_id == _,
-                );
-                return _.createElement(_, {
-                  key: "groupquestion" + _,
-                  groupInfo: _,
-                  oReg: __webpack_require__,
-                  fnUpdateText: (_) => {
-                    let _ = __webpack_require__.pre_event_partner_questions
-                        ? [...__webpack_require__.pre_event_partner_questions]
-                        : [],
-                      _ = _.findIndex((_) => _.group_id == _);
-                    _ < 0
-                      ? _.push({
-                          group_id: _,
-                          question: _,
-                        })
-                      : (_[_] = {
-                          group_id: _,
-                          question: _,
-                        }),
-                      _({
-                        pre_event_partner_questions: _,
-                      });
-                  },
-                });
-              }),
-            )
-          : null;
-      }
-      function _(_) {
-        const { fnUpdateText: _, groupInfo: __webpack_require__, oReg: _ } = _,
-          _ = (0, _._)(_._.LANGUAGE),
-          [_, _] = (0, _._)(() => [
-            __webpack_require__.localized_session_title[_] ||
-              __webpack_require__.localized_session_title[0] ||
-              "",
-            _.pre_event_partner_questions?.find(
-              (_) => _.group_id == __webpack_require__.group_id,
-            )?.question || "",
-          ]);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, null, _),
-          _.createElement(
-            "div",
-            {
-              className: "DialogInput_Wrapper",
-            },
-            _.createElement("textarea", {
-              value: _,
-              className: (0, _._)(
-                "DialogTextInputBase",
-                "_DialogInputContainer",
-              ),
-              cols: 80,
-              rows: 3,
-              placeholder: (0, _._)("#MeetSteam_Reg_Question_placeholder"),
-              onChange: (_) => _(_.currentTarget.value),
-            }),
-          ),
-        );
-      }
-      const _ = "America/Los_Angeles";
-      function _(_) {
-        const _ = _.context.event,
-          _ = _.context.showErrorInfo,
-          _ = (0, _._)(_.args, "group_id"),
-          _ = Number.parseInt(_),
-          _ = (0, _._)(() => _(_, _));
-        return _
-          ? _.clanSteamID.GetAccountID() != (0, _._)()
-            ? _
-              ? _.createElement("div", null, "Only support on special group")
-              : null
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  groupData: _,
-                  eventModel: _,
-                }),
-                _.createElement(_, {
-                  eventModel: _,
-                }),
-              )
-          : _
-            ? _.createElement(
-                "div",
-                null,
-                "Failed to find session group id ",
-                _,
-              )
-            : null;
-      }
-      function _() {
-        const _ = (0, _._)("promotion_operation_token", "application_config");
-        (0, _._)(
-          Boolean(_) || !_._.accountid,
-          "require promotion_operation_token",
-        );
-        return _.useMemo(
-          () => new _._(_._.WEBAPI_BASE_URL, _).GetServiceTransport(),
-          [_],
-        );
-      }
-      function _() {
-        const [_] = (0, _.useState)(() =>
-          Number.parseInt(
-            (0, _._)("meet_steam_visibility_id", "application_config"),
-          ),
-        );
-        return _;
-      }
-      function _(_) {
-        const { groupData: _, eventModel: __webpack_require__ } = _,
-          _ = _(),
-          _ = (0, _._)(),
-          _ = _(),
-          _ = _(),
-          _ = _(
-            _,
-            __webpack_require__.clanSteamID.GetAccountID(),
-            __webpack_require__.GID,
-          ),
-          _ = (0, _.useMemo)(
-            () => _?.sessions?.sort((_, _) => _.rtime_start - _.rtime_start),
-            [_?.sessions],
-          ),
-          _ = _(),
-          _ = (0, _._)(() =>
-            _?.reduce(
-              (_, _) =>
-                _.set(_._, _.Get().GetRegistrationStatus(_.group_id, _._)),
-              new Map(),
-            ),
-          ),
-          _ = _(
-            0,
-            __webpack_require__.clanSteamID.GetAccountID(),
-            __webpack_require__.GID,
-            _._.accountid,
-          ),
-          _ = _.isSuccess && !!_.data.allow_registration_if_full;
-        if (!_.isSuccess)
-          return _.createElement(
-            "div",
-            null,
-            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-          );
-        if (_ && _._.accountid)
-          return _.createElement(_._, {
-            size: "medium",
-            position: "center",
-            string: (0, _._)("#Loading"),
-          });
-        return _.group_visibility_tokens?.length > 0 &&
-          !_.group_visibility_tokens.includes(_) &&
-          !_
-          ? null
-          : _.createElement(
-              _,
-              {
-                groupData: _,
-              },
-              _?.map((_, _) => {
-                const _ = _.data.find(
-                    (_) => _.group_id === _.group_id && _.session_id === _._,
-                  ),
-                  _ = _.get(_._),
-                  _ = _ + 1 < _.length;
-                return _.createElement(
-                  _.Fragment,
-                  {
-                    key: "timecol_" + _.group_id + "_" + _._,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().SessionColumnCtn,
-                    },
-                    _.createElement(_, {
-                      sessionData: _,
-                      onClick: () =>
-                        _(() =>
-                          ((_) => {
-                            const _ = _.Get().GetSelection(_.group_id) == _;
-                            _.Get().SetSelection(_.group_id, _ ? void 0 : _);
-                          })(_._),
-                        ),
-                      nGuestReservations: _?.guest_count || 0,
-                      eRegistrationStatus: _,
-                      bAllowedToRegisterIfFull: _,
-                    }),
-                  ),
-                  _ && _.createElement(_, null),
-                );
-              }),
-            );
-      }
-      function _(_) {
-        const { groupData: _, children: __webpack_require__ } = _,
-          _ = (0, _._)(_._.LANGUAGE),
-          _ = _._.GetWithFallback(_?.localized_session_title, _),
-          _ = _._.GetWithFallback(_?.localized_session_description, _),
-          _ = _._.GetWithFallback(_?.localized_intended_audience, _),
-          _ = _._.GetWithFallback(_?.localized_sesssion_faq, _),
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)(!1);
-        return _
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)({
-                  [_().Ctn]: !0,
-                  [_().CtnRegistered]: !1,
-                  [_().VisibilityOverride]:
-                    _ && _.group_visibility_tokens?.length > 0,
-                }),
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SessionTitle,
-                  },
-                  _,
-                ),
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SessionDesc,
-                  },
-                  _,
-                ),
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SessionAudience,
-                  },
-                  (0, _._)("#MeetSteam_Session_Audience", _),
-                ),
-              Boolean(_) &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ExpanderRow,
-                    },
-                    _.createElement(_._, {
-                      bExpanded: _,
-                      setExpanded: _,
-                    }),
-                    _.createElement("div", null, (0, _._)("#MeetSteam_FAQ")),
-                  ),
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().FAQDisplay,
-                      },
-                      _.createElement(_, {
-                        text: _,
-                        event: null,
-                      }),
-                    ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SessionOptions,
-                },
-                __webpack_require__,
-              ),
-            )
-          : null;
-      }
-      function _(_, _, _, _) {
-        const _ = _ || (0 === _ && _ > 0) || 1 === _ || 2 === _ || 3 === _;
-        let _ = null,
-          _ = null;
-        return (
-          1 == _
-            ? ((_ = (0, _._)("#MeetSteam_Registered")), (_ = _().Registered))
-            : 2 == _
-              ? ((_ = (0, _._)("#MeetSteam_Registering")),
-                (_ = _().Registering))
-              : 3 == _
-                ? ((_ = (0, _._)("#MeetSteam_Unegistering")),
-                  (_ = _().Unregistering))
-                : _ &&
-                  ((_ = (0, _._)("#MeetSteam_Already")),
-                  (_ = _().RegisteredElsewhere)),
-          {
-            bEnabled: _,
-            strStatusClass: _,
-            strStatusToken: _,
-          }
-        );
-      }
-      function _(_, _, _, _) {
-        const _ = _().unix(_),
-          _ = _().unix(_)._(_).utcOffset() - _.utcOffset(),
-          _ = _().unix(_),
-          _ = _().unix(_)._(_),
-          _ = _.utcOffset() - _.utcOffset();
-        return (
-          (0, _._)(_ + 60 * _, _ + 60 * _, !0) + (_ ? "" : " " + _.format("z"))
-        );
-      }
-      function _(_, _) {
-        const _ = _().unix(_),
-          _ = _().unix(_)._(_).utcOffset() - __webpack_require__.utcOffset(),
-          _ = new Date(1e3 * (_ + 60 * _)),
-          _ = new Date();
-        return _.getFullYear() == _.getFullYear() ? (0, _._)(_) : (0, _._)(_);
-      }
-      function _(_) {
-        const {
-            sessionData: _,
-            onClick: __webpack_require__,
-            nGuestReservations: _,
-            eRegistrationStatus: _ = 0,
-            bAllowedToRegisterIfFull: _,
-          } = _,
-          [_, _, _] = (0, _._)(() => [
-            _.rtime_start,
-            _.rtime_end,
-            _.max_capacity,
-          ]),
-          _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          _ =
-            "in_person" === _.location_type ? (_.in_person_time_zone ?? _) : _,
-          _ = Math.max(0, _ - (_ || 0)),
-          { strStatusClass: _, strStatusToken: _, bEnabled: _ } = _(_, _, _);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().SessionInstance, _),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().StatusText,
-              },
-              _.createElement("span", null, _),
-            ),
-            _.createElement(
-              "button",
-              {
-                className: (0, _._)(_().Button, _().Background),
-                disabled: !_,
-                onClick: __webpack_require__,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Title,
-                },
-                _(_, _),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().TimeFrame,
-                },
-                _(_, _, _),
-              ),
-            ),
-            _.createElement(_, {
-              nAvailableSpace: _,
-              bAllowedToRegisterIfFull: _,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-          nAvailableSpace: _,
-          bAllowedToRegisterIfFull: __webpack_require__,
-        } = _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          __webpack_require__ ||
-            _.createElement(
-              _.Fragment,
-              null,
-              " ",
-              _ < 1
-                ? _.createElement(
-                    "div",
-                    {
-                      className: _().SoldOut,
-                    },
-                    (0, _._)("#MeetSteam_SoldOut"),
-                  )
-                : _.createElement(
-                    "div",
-                    {
-                      className: _().MaxSize,
-                    },
-                    (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
-                  ),
-              " ",
-            ),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "div",
-          {
-            className: _().InstanceDivider,
-          },
-          "◆",
-        );
-      }
-      function _(_) {
-        const { eventModel: _ } = _,
-          _ = "complete-registration-marker",
-          { refIsLast: _, bIsLast: _ } = (function (_) {
-            const [_, _] = _.useState(!1),
-              _ = _.useRef(null);
-            return (
-              _.useEffect(() => {
-                const _ = document.querySelectorAll("." + _);
-                _.current &&
-                  _.length > 0 &&
-                  __webpack_require__(_[_.length - 1] === _.current);
-              }, [_]),
-              {
-                refIsLast: _,
-                bIsLast: _,
-              }
-            );
-          })(_),
-          _ = _(),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1);
-        !(function (_, _, _, _) {
-          _.useEffect(() => {
-            (async () => {
-              _.Get().Init(_, _, _, _), await _.Get().Load();
-            })();
-          }, [_, _, _, _]);
-        })(_, _._.accountid, _.clanSteamID.GetAccountID(), _.GID);
-        const _ = _(_, _.clanSteamID.GetAccountID(), _.GID),
-          [_, _, _] = (0, _._)(),
-          _ = _(),
-          _ = _(),
-          _ = _ || _,
-          _ = (0, _._)(() => _.Get().BHaveSelectionsChanged()),
-          _ = (0, _._)(() => _.Get().BIsAddingOrChangingSelections()),
-          _ = (0, _._)(() => _.Get().BHasAlreadyRegistered()),
-          _ = (0, _._)(() =>
-            _.Get()
-              .GetSelectedGroups()
-              .reduce((_, _) => {
-                const _ = _(_, _),
-                  _ = _.Get().GetSelection(_.group_id),
-                  _ = _.sessions?.find((_) => _._ == _)?.max_per_team ?? 0;
-                return Math.max(_, _);
-              }, 1),
-          );
-        return (
-          (function (_) {
-            _.useEffect(() => {
-              if (_)
-                return (
-                  (window.onbeforeunload = () =>
-                    (0, _._)("#EventEditor_UnsavedChanges")),
-                  () => {
-                    window.onbeforeunload = () => {};
-                  }
-                );
-            }, [_]);
-          })(_),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: (0, _._)(
-                _,
-                _().CompleteRegistrationCtn,
-                _ && _ && _().Visible,
-              ),
-            },
-            _.createElement(
-              "p",
-              null,
-              _
-                ? (0, _._)("#MeetSteam_UpdateRegistration_Desc")
-                : (0, _._)("#MeetSteam_CompleteRegistration_Desc"),
-            ),
-            _ &&
-              _.createElement(
-                _.Fragment,
-                null,
-                !_ &&
-                  _.createElement(
-                    _._,
-                    {
-                      disabled: !_,
-                      onClick: () => _(() => _(!0)),
-                    },
-                    _
-                      ? (0, _._)("#MeetSteam_UpdateRegistration")
-                      : (0, _._)("#MeetSteam_CompleteRegistration"),
-                  ),
-                _ &&
-                  _.createElement(_._, {
-                    size: "small",
-                    position: "center",
-                    string: (0, _._)("#Saving"),
-                  }),
-                _ &&
-                  _.createElement(_, {
-                    eventModel: _,
-                    fnConfirm: async (_) => {
-                      _(!0), (await _.Get().Save(_)) || _(), _.refetch(), _(!1);
-                    },
-                    fnHideModal: () => _(!1),
-                    nMaxPerTeam: _,
-                    bAddingOrChangingSessions: _,
-                    transport: _,
-                  }),
-                _ &&
-                  _.createElement(
-                    _._,
-                    {
-                      active: !0,
-                    },
-                    _.createElement(_._, {
-                      strTitle: (0, _._)("#Error_Generic"),
-                      strDescription: (0, _._)("#MeetSteam_RegistrationFailed"),
-                      closeModal: _,
-                    }),
-                  ),
-              ),
-          )
-        );
-      }
-      function _(_, _) {
-        const _ = _?.jsondata?.meet_steam_groups || [];
-        return __webpack_require__?.find((_) => _.group_id == _);
-      }
-      function _() {
-        return _._.Get().BIsUserLoggedIn()
-          ? (_) => _()
-          : () =>
-              (0, _._)(
-                _.createElement(_._, {
-                  strTitle: (0, _._)("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: (0, _._)(
-                    "#EventDisplay_Share_NotLoggedIn_Description",
-                  ),
-                  strOKButtonText: (0, _._)("#MobileLogin_SignIn"),
-                  onOK: () => (0, _._)(),
-                }),
-                window,
-              );
-      }
-      function _(_) {
-        const _ = _.context.event,
-          _ = _.context.showErrorInfo,
-          _ = (0, _._)(_.args, "schedule_id"),
-          _ = Number.parseInt(_),
-          _ = (0, _._)(() =>
-            (function (_, _) {
-              const _ = _?.jsondata?.meet_steam_schedules || [];
-              return __webpack_require__?.find((_) => _.schedule_id == _);
-            })(_, _),
-          );
-        return _
-          ? _.clanSteamID.GetAccountID() != (0, _._)()
-            ? _
-              ? _.createElement("div", null, "Only support on special group")
-              : null
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  scheduleData: _,
-                  eventModel: _,
-                }),
-                _.createElement(_, {
-                  eventModel: _,
-                }),
-              )
-          : _
-            ? _.createElement(
-                "div",
-                null,
-                "Failed to find session schedule id ",
-                _,
-              )
-            : null;
-      }
-      function _(_) {
-        const { eventModel: _ } = _,
-          _ = _(),
-          _ = _(),
-          _ = _(_, _.clanSteamID.GetAccountID(), _.GID),
-          _ = _(0, _.clanSteamID.GetAccountID(), _.GID, _._.accountid);
-        if (!_.isSuccess)
-          return _.createElement(
-            "div",
-            null,
-            (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-          );
-        if (_ && _._.accountid)
-          return _.createElement(_._, {
-            size: "medium",
-            position: "center",
-            string: (0, _._)("#Loading"),
-          });
-        return _.createElement(_, {
-          ..._,
-          fnOnClick: (_, _) => {
-            const _ = _.Get().GetSelection(_) == _;
-            _.Get().SetSelection(_, _ ? void 0 : _);
-          },
-          rgAvailability: _?.data,
-          bAllowedToRegisterIfFull: _?.data?.allow_registration_if_full,
-        });
-      }
-      function _(_) {
-        const {
-            eventModel: _,
-            scheduleData: __webpack_require__,
-            bAllowedToRegisterIfFull: _,
-            fnOnClick: _,
-            rgAvailability: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = _(),
-          [_, _, _] = (0, _._)(() => [
-            _.jsondata.meet_steam_groups,
-            __webpack_require__.in_person_time_zone ?? _,
-            __webpack_require__.location_type,
-          ]),
-          [_, _, _] = (0, _.useMemo)(() => {
-            if (!_) return [null, null, null];
-            const _ = new Map(),
-              _ = new Map();
-            for (const _ of _)
-              if (
-                !(_.group_visibility_tokens?.length > 0) ||
-                _.group_visibility_tokens.includes(_) ||
-                _
-              )
-                for (const _ of _.sessions) {
-                  const _ = (
-                    "in_person" == _
-                      ? _().unix(_.rtime_start)._(_)
-                      : _().unix(_.rtime_start)
-                  ).format("YYYY-MM-DD");
-                  _.has(_) || _.set(_, []),
-                    _.get(_).push({
-                      group: _,
-                      session: _,
-                    });
-                }
-            for (const _ of _.session_breaks || []) {
-              const _ = (
-                "in_person" == _
-                  ? _().unix(_.rtime_start)._(_)
-                  : _().unix(_.rtime_start)
-              ).format("YYYY-MM-DD");
-              _.has(_) || _.set(_, []), _.get(_).push(_);
-            }
-            for (const _ of Array.from(_.keys()))
-              _.get(_).sort(
-                (_, _) => _.session.rtime_start - _.session.rtime_start,
-              );
-            return [_, _, Array.from(_.keys()).sort()];
-          }, [_, _, _, _, _, __webpack_require__.session_breaks]),
-          _ =
-            "in_person" == _
-              ? _
-              : Intl.DateTimeFormat().resolvedOptions().timeZone;
-        return _
-          ? _.createElement(
-              _.Fragment,
-              null,
-              _.map((_) => {
-                const _ = _.get(_);
-                return _.createElement(
-                  "div",
-                  {
-                    key: "day_" + _,
-                    className: _().SingleDayCtn,
-                  },
-                  _.createElement(
-                    "h2",
-                    {
-                      className: _().ScheduleTopDate,
-                    },
-                    _(_[0].session.rtime_start, _),
-                  ),
-                  _.createElement(_, {
-                    scheduleData: __webpack_require__,
-                    bAllowedToRegisterIfFull: _,
-                    fnOnClick: _,
-                    rgDayGroupSessions: _,
-                    rgBreakSessions: _.get(_) || [],
-                    rgAvailability: _,
-                  }),
-                );
-              }),
-            )
-          : _.createElement(
-              "div",
-              null,
-              "No Meet Steam Events; please create some first.",
-            );
-      }
-      function _(_) {
-        const {
-            scheduleData: _,
-            rgDayGroupSessions: __webpack_require__,
-            rgBreakSessions: _,
-            bAllowedToRegisterIfFull: _,
-            fnOnClick: _,
-            rgAvailability: _,
-          } = _,
-          _ = (0, _.useMemo)(() => {
-            const _ = [];
-            for (const _ of __webpack_require__)
-              0 == _.length ||
-              _[_.length - 1][0].session.rtime_start != _.session.rtime_start
-                ? _.push([_])
-                : _[_.length - 1].push(_);
-            return _;
-          }, [__webpack_require__]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.filter((_) => _.rtime_end <= _[0][0].session.rtime_start).map((_) =>
-            _.createElement(_, {
-              key: `breaks_${_.schedule_id}_${_.break_id}`,
-              scheduleData: _,
-              breakSession: _,
-            }),
-          ),
-          _.map((_, _) => {
-            let _ = [];
-            if (_ + 1 < _.length) {
-              const _ = _[0].session.rtime_start,
-                _ = _[_ + 1][0].session.rtime_end;
-              _ = _.filter((_) => _ < _.rtime_start && _.rtime_end < _);
-            }
-            return _.createElement(
-              _.Fragment,
-              {
-                key: "start_" + _[0].session.rtime_start,
-              },
-              _.createElement(_, {
-                bAllowedToRegisterIfFull: _,
-                fnOnClick: _,
-                scheduleData: _,
-                rgSlotSessions: _,
-                rgAvailability: _,
-              }),
-              _.map((_) =>
-                _.createElement(_, {
-                  key: `breaks_${_.schedule_id}_${_.break_id}`,
-                  scheduleData: _,
-                  breakSession: _,
-                }),
-              ),
-            );
-          }),
-          _.filter(
-            (_) => _.rtime_start >= _[_.length - 1][0].session.rtime_end,
-          ).map((_) =>
-            _.createElement(_, {
-              key: `breaks_${_.schedule_id}_${_.break_id}`,
-              scheduleData: _,
-              breakSession: _,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const { scheduleData: _, breakSession: __webpack_require__ } = _,
-          _ = (0, _._)(_._.LANGUAGE),
-          [_, _, _] = (0, _._)(() => [
-            __webpack_require__.localized_break_description[_] ||
-              __webpack_require__.localized_break_description[0] ||
-              "",
-            __webpack_require__.rtime_start,
-            __webpack_require__.rtime_end,
-          ]);
-        return _.createElement(
-          "div",
-          {
-            className: _().ScheduleRow,
-          },
-          _.createElement(_, {
-            scheduleData: _,
-            rtStart: _,
-            rtEnd: _,
-          }),
-          _.createElement("div", null, _),
-        );
-      }
-      function _(_) {
-        const {
-            scheduleData: _,
-            rgSlotSessions: __webpack_require__,
-            bAllowedToRegisterIfFull: _,
-            fnOnClick: _,
-            rgAvailability: _,
-          } = _,
-          [_, _] = (0, _._)(() => [
-            __webpack_require__[0].session.rtime_start,
-            __webpack_require__[0].session.rtime_end,
-          ]);
-        return _.createElement(
-          "div",
-          {
-            className: _().ScheduleRow,
-          },
-          _.createElement(_, {
-            scheduleData: _,
-            rtStart: _,
-            rtEnd: _,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().ScheduleSessionsColumn,
-            },
-            __webpack_require__.map((_) =>
-              _.createElement(_, {
-                key: `entry_${_.group.group_id}_${_.session._}`,
-                bAllowedToRegisterIfFull: _,
-                fnOnClick: _,
-                session: _,
-                rgAvailability: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { scheduleData: _, rtStart: __webpack_require__, rtEnd: _ } = _,
-          [_, _] = (0, _._)(() => [
-            _.in_person_time_zone ?? _,
-            _.location_type,
-          ]),
-          _ =
-            "in_person" == _
-              ? _
-              : Intl.DateTimeFormat().resolvedOptions().timeZone,
-          _ =
-            "in_person" == _
-              ? _().unix(__webpack_require__)._(_)
-              : _().unix(__webpack_require__);
-        return _.createElement(
-          "div",
-          {
-            className: _().ScheduleTimeColumn,
-          },
-          _.createElement("div", null, _(__webpack_require__, _, _, !0)),
-          _.createElement(
-            "div",
-            {
-              className: _().Timezone,
-            },
-            `${_.format("z")}`,
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            session: _,
-            bAllowedToRegisterIfFull: __webpack_require__,
-            fnOnClick: _,
-            rgAvailability: _,
-          } = _,
-          _ = (0, _._)(_._.LANGUAGE),
-          [_, _, _, _] = (0, _._)(() => [
-            _.group.localized_session_title?.[_] ||
-              _.group.localized_session_description?.[0] ||
-              "",
-            _.group.localized_intended_audience?.[_] ||
-              _.group.localized_intended_audience?.[0] ||
-              "",
-            _.group.localized_sesssion_faq?.[_] ||
-              _.group.localized_intended_audience?.[0] ||
-              "",
-            _.group.localized_session_description?.[_] ||
-              _.group.localized_intended_audience?.[0] ||
-              "",
-          ]),
-          [_, _, _] = (0, _._)(!1),
-          [_, _, _] = (0, _._)(() => [
-            _.Get().GetRegistrationStatus(_.group.group_id, _.session._),
-            _.Get().BIsRegisteredForDifferentSessionInGroup(
-              _.group.group_id,
-              _.session._,
-            ),
-            _.Get().BGetRegistrationSessionID(_.group.group_id),
-          ]),
-          _ = _?.find(
-            (_) =>
-              _.group_id === _.group.group_id && _.session_id === _.session._,
-          )?.guest_count,
-          _ = Math.max(0, _.session.max_capacity - (_ || 0)),
-          {
-            strStatusClass: _,
-            strStatusToken: _,
-            bEnabled: _,
-          } = _(_, _, __webpack_require__, _),
-          _ =
-            _ && _
-              ? _.group.sessions.find((_) => _._ == _)?.rtime_start
-              : void 0;
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: _
-              ? (0, _._)("#MeetSteam_AlreadyReg", (0, _._)(_), (0, _._)(_))
-              : void 0,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().SessionInstance, _),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().StatusText,
-              },
-              _.createElement("span", null, _),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().Background,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().SessionTitle,
-                },
-                _,
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SessionAudience,
-                  },
-                  (0, _._)("#MeetSteam_Session_Audience", _),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SessionInfoLink,
-                  onClick: _,
-                },
-                (0, _._)("#MeetSteam_Session_Details"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ScheduleActionRow,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => {
-                      _ && _(_.group.group_id, _.session._);
-                    },
-                    disabled: !_,
-                  },
-                  (0, _._)(1 == _ ? "#Button_Unselect" : "#Button_Select"),
-                ),
-              ),
-            ),
-            _.createElement(_, {
-              nAvailableSpace: _,
-              bAllowedToRegisterIfFull: __webpack_require__,
-            }),
-            _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  strTitle: _,
-                  bAlertDialog: !0,
-                  bAllowFullSize: !0,
-                  closeModal: _,
-                },
-                _.createElement("div", null, _),
-                _.createElement("div", null, _),
-                Boolean(_) &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement("div", null, (0, _._)("#MeetSteam_FAQ")),
-                    _.createElement(_, {
-                      text: _,
-                      event: null,
-                    }),
-                  ),
-              ),
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9276,6 +9408,8 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9574,6 +9708,7 @@
       (0, _._)([_._], _.prototype, "OnSketchFabClick", null),
         (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -10225,7 +10360,8 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { fileUploadManager: _ } = _,
           _ = (0, _._)(() => _.file_upload_props.eUploadState);
@@ -10386,6 +10522,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -10407,6 +10545,8 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -10623,14 +10763,14 @@
               [
                 "meetsteamsessiongroup",
                 {
-                  Constructor: _,
+                  Constructor: _._,
                   autocloses: !1,
                 },
               ],
               [
                 "meetsteamscheduleview",
                 {
-                  Constructor: _,
+                  Constructor: _._,
                   autocloses: !1,
                 },
               ],

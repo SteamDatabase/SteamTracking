@@ -23,6 +23,19 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Ctn: "_35KiKa7cq-3mn4lChNW67c",
+        EventName: "e-36dCsEtoK52wg6Qx1iq",
+        AtendeeSearchRow: "_1KbfPGq52sl-NB4ku90gN3",
+        AttendeeRow: "_35gHo_M6tBBUOL8PWGEmA9",
+        DisplaySessionCtn: "_1Wizm765ubdl9a--uQOfaH",
+        DisplaySessionTitle: "_3G3wSJfgZHDXiuHWWc9ioy",
+        DisplaySessionRow: "w4AXxxc4vt_ojFLD9z6Wl",
+        DisplaySession: "_27ybiS1mMlsYotyoQGVmI_",
+        DisplaySessionTime: "_2TlbPEaCKSbIwsmzTxvbJR",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Ctn: "_3cmUbcgdPxM7o5hl986RgB",
         User: "_3E6Usl36asxUFK3vPKa7Us",
         EventName: "_2GHTaky49GZrPLyiOgKWB7",
@@ -1531,20 +1544,116 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        for (const _ of _)
+          if (_.group_id === _) {
+            const _ = _.sessions.find((_) => _._ === _);
+            if (_)
+              return {
+                group: _,
+                session: _,
+              };
+          }
+        return {
+          group: null,
+          session: null,
+        };
+      }
+      function _(_, _) {
+        const _ = (0, _._)(),
+          [_] = (0, _.useState)(() =>
+            (0, _._)("registrations", "application_config")
+              .map((_) => ((_.userReg = JSON.parse(_.jsondata)), _))
+              .sort((_, _) => {
+                const _ = _(
+                    _.jsondata.meet_steam_groups,
+                    _.group_id,
+                    _.session_id,
+                  ),
+                  _ = _(_.jsondata.meet_steam_groups, _.group_id, _.session_id);
+                return (
+                  (_?.session?.rtime_start || 0) -
+                  (_?.session?.rtime_start || 0)
+                );
+              })
+              .map((_) => {
+                const _ = _(
+                  _.jsondata.meet_steam_groups,
+                  _.group_id,
+                  _.session_id,
+                );
+                return (
+                  (_.relativeToToday = (function (_, _) {
+                    if (!_) return "past";
+                    const { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(_),
+                      _ = (0, _._)(_, _),
+                      _ = void 0 !== _ ? new Date(1e3 * _) : new Date(),
+                      _ = new Date(_.getFullYear(), _.getMonth(), _.getDate()),
+                      _ = new Date(
+                        _.getFullYear(),
+                        _.getMonth(),
+                        _.getDate() + 1,
+                      );
+                    return _ >= _ && _ < _
+                      ? "today"
+                      : _ < _
+                        ? "past"
+                        : "future";
+                  })(_?.session, _)),
+                  (_.rtSesssionTime = _.session.rtime_start),
+                  _
+                );
+              }),
+          ),
+          _ = _?.trim().toLowerCase() || "";
+        return (0, _.useMemo)(
+          () =>
+            _.filter(
+              (_) =>
+                !_.length ||
+                _.userReg.name?.toLowerCase().includes(_) ||
+                _.userReg.company?.toLowerCase().includes(_) ||
+                _.userReg.guest_names?.find((_) =>
+                  _.toLowerCase().includes(_),
+                ) ||
+                _.userReg.email_override?.toLowerCase().includes(_),
+            ),
+          [_, _],
+        );
+      }
+      function _(_, _) {
+        return (0, _.useMemo)(
+          () =>
+            _.reduce(
+              (_, _) => (
+                _[_.relativeToToday] || (_[_.relativeToToday] = []),
+                _[_.relativeToToday].push(_),
+                _
+              ),
+              {
+                today: [],
+                past: [],
+                future: [],
+              },
+            ),
+          [_, _],
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const [_] = (0, _._)("gid"),
           _ = (0, _._)(_),
@@ -1584,73 +1693,7 @@
       }
       function _(_) {
         const { eventModel: _ } = _,
-          _ = (function (_) {
-            const _ = (0, _._)(),
-              [_] = (0, _.useState)(() =>
-                (0, _._)("registrations", "application_config")
-                  .sort((_, _) => {
-                    const _ = _(
-                        _.jsondata.meet_steam_groups,
-                        _.group_id,
-                        _.session_id,
-                      ),
-                      _ = _(
-                        _.jsondata.meet_steam_groups,
-                        _.group_id,
-                        _.session_id,
-                      );
-                    return (
-                      (_?.session?.rtime_start || 0) -
-                      (_?.session?.rtime_start || 0)
-                    );
-                  })
-                  .map((_) => {
-                    const _ = _(
-                      _.jsondata.meet_steam_groups,
-                      _.group_id,
-                      _.session_id,
-                    );
-                    return (
-                      (_.relativeToToday = (function (_, _) {
-                        const _ = new Date(1e3 * _),
-                          _ = void 0 !== _ ? new Date(1e3 * _) : new Date(),
-                          _ = new Date(
-                            _.getFullYear(),
-                            _.getMonth(),
-                            _.getDate(),
-                          ),
-                          _ = new Date(
-                            _.getFullYear(),
-                            _.getMonth(),
-                            _.getDate() + 1,
-                          );
-                        return _ >= _ && _ < _
-                          ? "today"
-                          : _ < _
-                            ? "past"
-                            : "future";
-                      })(_?.session?.rtime_start || 0, _)),
-                      _
-                    );
-                  }),
-              );
-            return (0, _.useMemo)(
-              () =>
-                __webpack_require__.reduce(
-                  (_, _) => (
-                    _[_.relativeToToday] || (_[_.relativeToToday] = []),
-                    _[_.relativeToToday].push(_),
-                    _
-                  ),
-                  {
-                    today: [],
-                    past: [],
-                    future: [],
-                  },
-                ),
-              [_],
-            );
-          })(_),
+          _ = _(_(_)),
           [_] = (0, _._)("accountid"),
           _ = (0, _._)();
         return _.createElement(
@@ -1704,13 +1747,15 @@
                 : _.createElement(
                     "div",
                     null,
-                    __webpack_require__.map((_) =>
-                      _.createElement(_, {
-                        key: `${_.group_id}_${_.session_id}`,
-                        eventModel: _,
-                        reg: _,
-                      }),
-                    ),
+                    __webpack_require__
+                      .sort((_, _) => _.rtSesssionTime - _.rtSesssionTime)
+                      .map((_) =>
+                        _.createElement(_, {
+                          key: `${_.group_id}_${_.session_id}`,
+                          eventModel: _,
+                          reg: _,
+                        }),
+                      ),
                   ),
             );
       }
@@ -1738,7 +1783,7 @@
           [_] = (0, _._)(_),
           [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(!1),
-          _ = (0, _.useMemo)(() => JSON.parse(_.jsondata), [_]),
+          _ = _.userReg,
           { group: _, session: _ } = _(
             __webpack_require__.jsondata.meet_steam_groups,
             _.group_id,
@@ -1789,7 +1834,7 @@
                 },
                 _.createElement(_._, {
                   label: "Attendee: " + _.name || 0,
-                  checked: !0,
+                  checked: Boolean(_),
                   onChange: (_) => {},
                 }),
                 Boolean(_.guest_names?.length > 0) &&
@@ -1929,25 +1974,246 @@
             )
           : _.createElement("div", null, "Session Infomrmation Missing");
       }
-      function _(_, _, _) {
-        for (const _ of _)
-          if (_.group_id === _) {
-            const _ = _.sessions.find((_) => _._ === _);
-            if (_)
-              return {
-                group: _,
-                session: _,
-              };
-          }
-        return {
-          group: null,
-          session: null,
-        };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_] = (0, _._)("gid"),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_._.LANGUAGE),
+          [_, _] = (0, _.useState)("");
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _().Ctn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().EventName,
+                },
+                _.createElement(
+                  "h1",
+                  null,
+                  __webpack_require__.GetNameWithFallback(_),
+                ),
+                _.createElement(
+                  "a",
+                  {
+                    href: `${_._.STORE_BASE_URL}meetsteam/${_}`,
+                    target: "_blank",
+                  },
+                  "See Event Details",
+                ),
+              ),
+              _.createElement(_, {
+                eventModel: _,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().AtendeeSearchRow,
+                },
+                _.createElement(_._, {
+                  type: "text",
+                  label: "Search for an attendee",
+                  value: _,
+                  onChange: (_) => _(_.currentTarget.value || ""),
+                  placeholder: "Type name or partner or email address",
+                }),
+              ),
+              _.createElement(_, {
+                eventModel: _,
+                strSearch: _.toLowerCase(),
+              }),
+            )
+          : _.createElement(_._, {
+              string: (0, _._)("#Loading"),
+            });
       }
-      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { eventModel: _, strSearch: __webpack_require__ } = _,
+          _ = _(_, __webpack_require__),
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useMemo)(() => {
+            const _ = new Map();
+            return (
+              _.forEach((_) => {
+                [_.userReg.name, ...(_.userReg.guest_names || [])].forEach(
+                  (_) => {
+                    const _ = __webpack_require__.toLowerCase();
+                    _.has(_) ? _.get(_).push(_) : _.set(_, [_]);
+                  },
+                );
+              }),
+              [_, Array.from(_.keys()).sort()]
+            );
+          }, [_]);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement("h3", null, "Attendees"),
+          Boolean(_)
+            ? _.createElement(_, {
+                eventModel: _,
+                rgSelected: _,
+                strSearch: __webpack_require__,
+                onCleanSelection: () => _(null),
+              })
+            : _.createElement(
+                _.Fragment,
+                null,
+                _.filter(
+                  (_) =>
+                    !__webpack_require__ || _.includes(__webpack_require__),
+                ).map((_) =>
+                  _.createElement(
+                    "div",
+                    {
+                      key: _,
+                      className: _().AttendeeRow,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: () => {
+                          _(_.get(_.toLowerCase()));
+                        },
+                      },
+                      _,
+                    ),
+                  ),
+                ),
+              ),
+        );
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            rgSelected: __webpack_require__,
+            strSearch: _,
+            onCleanSelection: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _(__webpack_require__, _);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            _._,
+            {
+              onClick: _,
+            },
+            "Clear Selection",
+          ),
+          _.createElement(_, {
+            eventModel: _,
+            rgUserRegs: _.today,
+            strTitle: "Today " + (0, _._)(_),
+          }),
+          _.createElement(_, {
+            eventModel: _,
+            rgUserRegs: _.future,
+            bHideIfEmpty: !0,
+            strTitle: "Future",
+          }),
+          _.createElement(_, {
+            eventModel: _,
+            rgUserRegs: _.past,
+            bHideIfEmpty: !0,
+            strTitle: "Past",
+          }),
+        );
+      }
+      function _(_) {
+        const { eventModel: _ } = _,
+          _ = (0, _._)(),
+          _ = _.useMemo(
+            () =>
+              _?.jsondata?.meet_steam_groups?.flatMap((_) =>
+                _.sessions.map((_) => {
+                  const { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(_),
+                    _ = (0, _._)(_, _);
+                  return {
+                    group: _,
+                    session: _,
+                    displayDate: _,
+                  };
+                }),
+              ),
+            [_?.jsondata?.meet_steam_groups],
+          ),
+          _ = _?.reduce(
+            (_, _) => (null == _ || _.displayDate < _ ? _.displayDate : _),
+            void 0,
+          ),
+          _ = _.some((_) => (0, _._)(_, _.displayDate)),
+          _ = _.useMemo(
+            () => _?.filter((_) => (0, _._)(_ ? _ : _, _.displayDate)),
+            [_, _, _, _],
+          );
+        if (_ && 0 != _.length)
+          return _.createElement(
+            "div",
+            {
+              className: _().DisplaySessionCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().DisplaySessionTitle,
+              },
+              _ ? "Today's Sessions" : "Upcoming Sessions",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().DisplaySessionRow,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: `${_.group.group_id}_${_.session._}`,
+                  group: _.group,
+                  session: _.session,
+                }),
+              ),
+            ),
+          );
+      }
+      function _(_) {
+        const { group: _, session: __webpack_require__ } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(
+            __webpack_require__,
+          ),
+          _ = (0, _._)(_, _);
+        return _.createElement(
+          "div",
+          {
+            className: _().DisplaySession,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().DisplaySessionTitle,
+            },
+            _.localized_session_title[_] ?? _.localized_session_title[0],
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().DisplaySessionTime,
+            },
+            _,
+          ),
+        );
+      }
       const _ = {
         MeetSteamAttendance: () => `${_._.MeetSteamRoute()}attendance`,
         MeetSteamEvent: () => `${_._.MeetSteamRoute()}:gid(\\d+)`,
+        MeetSteamAttendeeList: () => `${_._.MeetSteamRoute()}attendeelist`,
       };
       function _(_) {
         return _.createElement(
@@ -1955,6 +2221,13 @@
           null,
           _.createElement(_._, {
             path: _.MeetSteamAttendance(),
+            render: (_) =>
+              _.createElement(_, {
+                ..._,
+              }),
+          }),
+          _.createElement(_._, {
+            path: _.MeetSteamAttendeeList(),
             render: (_) =>
               _.createElement(_, {
                 ..._,
