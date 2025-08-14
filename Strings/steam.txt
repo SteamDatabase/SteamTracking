@@ -2330,6 +2330,9 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:25:03
+18:25:11
+18:25:12
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -2418,8 +2421,6 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
-22:59:06
-22:59:12
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3239,7 +3240,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 11 2025
+Aug 14 2025
 August
 Aura
 AuthANY
@@ -8745,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 11 2025 22:59:12
+Startup - updater built Aug 14 2025 18:25:11
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

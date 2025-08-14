@@ -97,7 +97,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-22:59:09
+18:25:06
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -116,7 +116,7 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-Aug 11 2025
+Aug 14 2025
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock

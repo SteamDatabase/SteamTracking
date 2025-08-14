@@ -1024,6 +1024,10 @@ message CMsgBrowserFocusChanged {
 	optional bool focused = 2;
 }
 
+message CMsgRenderProcessTerminated {
+	optional uint32 browser_handle = 1;
+}
+
 message CMsgSetProtocolBlockList {
 	optional uint32 browser_handle = 1;
 	optional string list = 2;

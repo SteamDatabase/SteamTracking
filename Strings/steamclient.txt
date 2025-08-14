@@ -717,6 +717,7 @@
 !tI)i
 !tX)i
 !transport_->HasChannel(name)
+!vecCmdLine.IsEmpty()
 !vecEntryFields.IsEmpty()
 !zipBucketDirIter.BCurrentIsDir()
 " \n\rCMsgSetUIMode
@@ -3308,7 +3309,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1JpQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -12124,6 +12124,7 @@ $steammessages_parental_objects.proto"
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
+27CMsgRenderProcessTerminated
 27CMsgSetControllerSourceMode
 27CMsgSetVRKeyboardVisibility
 27CMsgSteamDatagramDiagnostic
@@ -19724,6 +19725,7 @@ CMsgRemoteClientStatus
 CMsgRemoteClientWifiAPStatus
 CMsgRemoteDeviceProofRequest
 CMsgRemoteDeviceProofResponse
+CMsgRenderProcessTerminated
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
@@ -24102,7 +24104,6 @@ Failed to find writer for shader cache type %d
 Failed to flush state during dongle update!
 Failed to flush store '%s' to '%s'
 Failed to fork process
-Failed to fork process\n
 Failed to get KV for configstore %s despite having initialized
 Failed to get ParentalSettings\Settings from config file for account ID %u
 Failed to get ParentalSettings\Signature from config file for account ID %u
@@ -24245,6 +24246,7 @@ Failed to sign install script
 Failed to sign install script %s.
 Failed to signal shared fd server\n
 Failed to simulate user activity to inhibit screen saver\n
+Failed to spawn process\n
 Failed to spawn share thread for shared fd: %d\n
 Failed to start Addl Log Instance for prefix %s
 Failed to start accepting P2P FakeIP connect request from %s; cannot assign ephemeral IP\n
@@ -58151,7 +58153,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 11 2025 22:59:15
+steam Aug 14 2025 18:25:15
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

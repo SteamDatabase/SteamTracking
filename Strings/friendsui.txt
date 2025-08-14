@@ -1784,6 +1784,7 @@ $\nY8O
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
+27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
 27CMsgZoomToElementAtPosition
 27CSharedConnectionController
@@ -2590,6 +2591,7 @@ CMsgPopupCreated
 CMsgPopupHTMLWindow
 CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
+CMsgRenderProcessTerminated
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged

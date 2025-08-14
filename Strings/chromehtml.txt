@@ -903,6 +903,7 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI27CMsgFocusedNodeTextResponseE
 16CHTMLProtoBufMsgI27CMsgNeedsSharedTexturePaintE
 16CHTMLProtoBufMsgI27CMsgProcessInfoNotificationE
+16CHTMLProtoBufMsgI27CMsgRenderProcessTerminatedE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
 16CHTMLProtoBufMsgI28CMsgScalePageToValueResponseE
 16CHTMLProtoBufMsgI28CMsgSetAccessibilitySettingsE
@@ -1035,6 +1036,7 @@ $\n k_SystemAudioPortDirection_Input
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
+27CMsgRenderProcessTerminated
 27CMsgSetVRKeyboardVisibility
 27CMsgZoomToElementAtPosition
 28CMsgGetCookiesForURLResponse
@@ -1642,6 +1644,7 @@ CMsgPopupCreated
 CMsgPopupHTMLWindow
 CMsgPopupHTMLWindowResponse
 CMsgProcessInfoNotification
+CMsgRenderProcessTerminated
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
@@ -2465,6 +2468,7 @@ HTML_MSG_FUNC eHTMLCommands_NodeGotFocus
 HTML_MSG_FUNC eHTMLCommands_OpenNewTab
 HTML_MSG_FUNC eHTMLCommands_OpenSteamURL
 HTML_MSG_FUNC eHTMLCommands_PageSecurity
+HTML_MSG_FUNC eHTMLCommands_RenderProcessTerminated
 HTML_MSG_FUNC eHTMLCommands_RequestFullScreen
 HTML_MSG_FUNC eHTMLCommands_ResizeGripChanged
 HTML_MSG_FUNC eHTMLCommands_SavePageToJPEGResponse
@@ -3860,6 +3864,7 @@ Yapi Kredi
 YooMoney
 Yoruba
 You must refund this transaction to wallet
+Y|qQWg
 Z-google.golang.org/protobuf/types/descriptorpb
 Ziraat Bank
 Zong
@@ -5492,7 +5497,6 @@ pwrd_telecom
 pwrd_unicom
 pwrite64
 py_generic_services
-q"sm
 quantil
 quechua
 qwest
@@ -5542,6 +5546,7 @@ root
 routes
 ru_RU
 russian
+sGHt
 samesite
 sc_schinese
 scale

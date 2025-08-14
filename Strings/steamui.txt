@@ -2844,6 +2844,7 @@ ${LANGUAGE}
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1vvq
 (8GXgw
 (8HXhx
 (<PDxl
@@ -9706,6 +9707,7 @@ ${LANGUAGE}
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
+27CMsgRenderProcessTerminated
 27CMsgSetControllerSourceMode
 27CMsgSetVRKeyboardVisibility
 27CMsgSystemAudioManagerState
@@ -12347,7 +12349,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9Hd\}
+9H$T}
 9IGv
 9Inventory
 9PE,$
@@ -13680,7 +13682,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 11 2025 22:59:18
+Aug 14 2025 18:25:18
 August
 Aura
 Australia/Adelaide
@@ -15854,6 +15856,7 @@ CMsgRemoteClientStatus
 CMsgRemoteClientWifiAPStatus
 CMsgRemoteDeviceProofRequest
 CMsgRemoteDeviceProofResponse
+CMsgRenderProcessTerminated
 CMsgRequestFullScreen
 CMsgRequestProcessInfo
 CMsgResizeGripChanged
@@ -37763,7 +37766,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen"
+ggen
 ghost_
 gidlist
 gidparentcomment
