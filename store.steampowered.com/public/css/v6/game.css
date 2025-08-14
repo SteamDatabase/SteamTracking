@@ -1665,6 +1665,7 @@ body.v6 .game_description_column h2.gradientbg {
 
 .game_area_description .bb_img {
 	max-width: 100%;
+	height: auto;
 }
 
 .game_area_description .bb_img_icons {
