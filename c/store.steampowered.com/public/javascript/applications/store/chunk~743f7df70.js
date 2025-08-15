@@ -6075,6 +6075,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6129,17 +6130,16 @@
       const _ = (_, _, _) => ["useMeetSteamGetRegistrationDetails", _, _, _];
       function _(_) {
         const _ = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        return {
-          sDisplayTimeZone:
-            "in_person" === _.location_type
-              ? (_.in_person_time_zone ?? _._)
-              : _,
-          rtime_start: _.rtime_start,
-          rtime_end: _.rtime_end,
-        };
+        return "in_person" === _.location_type
+          ? (_.in_person_time_zone ?? _._)
+          : _;
       }
       function _(_) {
-        return (0, _._)(() => _(_));
+        return (0, _._)(() => ({
+          rtime_start: _.rtime_start,
+          rtime_end: _.rtime_end,
+          sDisplayTimeZone: _(_),
+        }));
       }
       function _(_, _) {
         const _ = _().unix(_),
@@ -6152,6 +6152,11 @@
         return __webpack_require__.getFullYear() == _.getFullYear()
           ? (0, _._)(_)
           : (0, _._)(_);
+      }
+      function _(_, _) {
+        const _ = _().unix(_),
+          _ = _().unix(_)._(_).utcOffset() - __webpack_require__.utcOffset();
+        return (0, _._)(_ + 60 * _);
       }
       function _(_, _, _, _) {
         const _ = _().unix(_),

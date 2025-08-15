@@ -1535,6 +1535,7 @@ ${STORE_BASE_URL}meetsteam/${GID}
 ${STORE_BASE_URL}meetsteam/${GID}/${}
 ${STORE_BASE_URL}meetsteam/${}
 ${STORE_BASE_URL}meetsteam/ajaxupdateattendance
+${STORE_BASE_URL}meetsteam/ajaxupdatecapacity
 ${STORE_BASE_URL}meetsteam/attendance?gid=${}&accountid=${accountid}
 ${STORE_BASE_URL}meetsteam/attendance_qrcode
 ${STORE_BASE_URL}mobile

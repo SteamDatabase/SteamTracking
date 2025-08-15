@@ -26,12 +26,24 @@
         Ctn: "_35KiKa7cq-3mn4lChNW67c",
         EventName: "e-36dCsEtoK52wg6Qx1iq",
         AtendeeSearchRow: "_1KbfPGq52sl-NB4ku90gN3",
+        AtendeeListButtonRow: "_2JLogmiR30ClrphBajhwYK",
+        BackToListIcon: "_3bl-GtsF8LkmzsRFkqjeCz",
         AttendeeRow: "_35gHo_M6tBBUOL8PWGEmA9",
-        DisplaySessionCtn: "_1Wizm765ubdl9a--uQOfaH",
-        DisplaySessionTitle: "_3G3wSJfgZHDXiuHWWc9ioy",
-        DisplaySessionRow: "w4AXxxc4vt_ojFLD9z6Wl",
+        DisplayDaysCtn: "_1b8sKAzr4LILvJyl7fkRrL",
+        DateName: "_32Ut51xzdWXCL6OOaz4vY2",
+        DisplayDaySessions: "_32v8UGu0FfxnCHtltxqiEV",
+        NotToday: "_1PB1JESsJ8abJrTzTqOVBk",
+        DisplayDaySessionsRow: "_3DhIykQH8p8dQb2VOZg4-L",
         DisplaySession: "_27ybiS1mMlsYotyoQGVmI_",
-        DisplaySessionTime: "_2TlbPEaCKSbIwsmzTxvbJR",
+        Header: "_1jOgBHcEXg1l6kSowBxwn6",
+        SessionName: "vl9qom9droT0L3xZs2JhG",
+        SessionTime: "PG1xFNh9UdoEjEvvw22V5",
+        CapacityCtn: "_2jxcROaKoRgZCIKUHALVRH",
+        CapacityBarMax: "_2Kd3cw8fPPyzDXTWBxltj7",
+        CapacityBarCurrent: "_3jKSoLI8ytiyq9ELWTJNVY",
+        Full: "_27_ZZ6xz-L8KC1u6uQmDz",
+        SetCapacityButton: "_1BPqndgvTdc3n4fPDlcvAQ",
+        SetCapacityInput: "QnMJIDEn4Rz26VtL1RdUu",
       };
     },
     chunkid: (module) => {
@@ -45,7 +57,6 @@
         RegisteredUsers: "HLiipgmnfEQ2O-9WritfU",
         CheckedIn: "_17S0ayInAou4_ptPoMguR0",
         DescriptionWrapper: "_17o_wRtaDyujn3Bx4gGiu5",
-        Expanded: "mJXTRr0gd2yNafeFp9NOr",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1586,8 +1597,8 @@
                 return (
                   (_.relativeToToday = (function (_, _) {
                     if (!_) return "past";
-                    const { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(_),
-                      _ = (0, _._)(_, _),
+                    const _ = (0, _._)(_),
+                      _ = (0, _._)(_.rtime_start, _),
                       _ = void 0 !== _ ? new Date(1e3 * _) : new Date(),
                       _ = new Date(_.getFullYear(), _.getMonth(), _.getDate()),
                       _ = new Date(
@@ -1653,7 +1664,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const [_] = (0, _._)("gid"),
           _ = (0, _._)(_),
@@ -1779,8 +1791,8 @@
       }
       function _(_) {
         const { reg: _, eventModel: __webpack_require__ } = _,
-          [_] = (0, _._)("accountid"),
-          [_] = (0, _._)(_),
+          _ = new _._(_.steamid).GetAccountID(),
+          [_] = (0, _._)(_.userReg.accountid),
           [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(!1),
           _ = _.userReg,
@@ -1835,7 +1847,7 @@
                 _.createElement(_._, {
                   label: "Attendee: " + _.name || 0,
                   checked: Boolean(_),
-                  onChange: (_) => {},
+                  controlled: !0,
                 }),
                 Boolean(_.guest_names?.length > 0) &&
                   _.createElement(
@@ -1930,7 +1942,14 @@
             );
       }
       function _(_) {
-        const { session: _, group: __webpack_require__ } = _;
+        const { session: _, group: __webpack_require__ } = _,
+          {
+            sDisplayTimeZone: _,
+            rtime_start: _,
+            rtime_end: _,
+          } = (0, _._)(_.session),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(_, _, _);
         return _ && __webpack_require__
           ? _.createElement(
               "div",
@@ -1949,13 +1968,9 @@
                 {
                   className: _().SessionTime,
                 },
-                (0, _._)(_.rtime_start, !1, !0),
-                " @",
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)(_.rtime_start, _.rtime_end, !0),
-                ),
+                _,
+                " @ ",
+                _.createElement("b", null, _),
               ),
               _.createElement(
                 "div",
@@ -1977,7 +1992,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = new Date(_.getTime());
+        return _.setHours(0, 0, 0, 0), _;
+      }
       function _(_) {
         const [_] = (0, _._)("gid"),
           _ = (0, _._)(_),
@@ -2020,6 +2041,7 @@
                   type: "text",
                   label: "Search for an attendee",
                   value: _,
+                  bShowClearAction: !0,
                   onChange: (_) => _(_.currentTarget.value || ""),
                   placeholder: "Type name or partner or email address",
                 }),
@@ -2051,42 +2073,47 @@
               [_, Array.from(_.keys()).sort()]
             );
           }, [_]);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement("h3", null, "Attendees"),
-          Boolean(_)
-            ? _.createElement(_, {
-                eventModel: _,
-                rgSelected: _,
-                strSearch: __webpack_require__,
-                onCleanSelection: () => _(null),
-              })
-            : _.createElement(
-                _.Fragment,
-                null,
-                _.filter(
-                  (_) =>
-                    !__webpack_require__ || _.includes(__webpack_require__),
-                ).map((_) =>
-                  _.createElement(
-                    "div",
-                    {
-                      key: _,
-                      className: _().AttendeeRow,
-                    },
+        return (
+          _.useEffect(() => {
+            _(null);
+          }, [__webpack_require__]),
+          _.createElement(
+            "div",
+            null,
+            _.createElement("h3", null, "Attendees"),
+            Boolean(_)
+              ? _.createElement(_, {
+                  eventModel: _,
+                  rgSelected: _,
+                  strSearch: __webpack_require__,
+                  onCleanSelection: () => _(null),
+                })
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _.filter(
+                    (_) =>
+                      !__webpack_require__ || _.includes(__webpack_require__),
+                  ).map((_) =>
                     _.createElement(
-                      _._,
+                      "div",
                       {
-                        onClick: () => {
-                          _(_.get(_.toLowerCase()));
-                        },
+                        key: _,
+                        className: _().AttendeeRow,
                       },
-                      _,
+                      _.createElement(
+                        _._,
+                        {
+                          onClick: () => {
+                            _(_.get(_.toLowerCase()));
+                          },
+                        },
+                        _,
+                      ),
                     ),
                   ),
                 ),
-              ),
+          )
         );
       }
       function _(_) {
@@ -2102,11 +2129,20 @@
           "div",
           null,
           _.createElement(
-            _._,
+            "div",
             {
-              onClick: _,
+              className: _().AtendeeListButtonRow,
             },
-            "Clear Selection",
+            _.createElement(
+              _._,
+              {
+                onClick: _,
+              },
+              _.createElement(_.uMb, {
+                className: _().BackToListIcon,
+              }),
+              "Back to full list",
+            ),
           ),
           _.createElement(_, {
             eventModel: _,
@@ -2130,12 +2166,11 @@
       function _(_) {
         const { eventModel: _ } = _,
           _ = (0, _._)(),
-          _ = _.useMemo(
-            () =>
-              _?.jsondata?.meet_steam_groups?.flatMap((_) =>
+          _ = _.useMemo(() => {
+            const _ = _?.jsondata?.meet_steam_groups?.flatMap((_) =>
                 _.sessions.map((_) => {
-                  const { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(_),
-                    _ = (0, _._)(_, _);
+                  const _ = (0, _._)(_),
+                    _ = (0, _._)(_.rtime_start, _);
                   return {
                     group: _,
                     session: _,
@@ -2143,52 +2178,135 @@
                   };
                 }),
               ),
-            [_?.jsondata?.meet_steam_groups],
+              _ = _?.filter((_) => _(_.displayDate) >= _(_));
+            var _;
+            return (
+              (_ = (_) => _(_.displayDate)),
+              (_ ?? []).reduce((_, _) => {
+                const _ = _(_),
+                  _ = Math.floor(__webpack_require__.getTime() / 1e3),
+                  _ = _.get(_) || [];
+                return _.set(_, [..._, _]), _;
+              }, new Map())
+            );
+          }, [_?.jsondata?.meet_steam_groups, _]),
+          _ = _.useMemo(() => {
+            const _ = (0, _._)("registrations", "application_config");
+            if (_ && "object" == typeof _)
+              return _.reduce((_, _) => {
+                const _ = `${_.group_id}_${_.session_id}`,
+                  _ = _.get(_) ?? [];
+                return _.push(_), _.set(_, _), _;
+              }, new Map());
+          }, []);
+        if (0 == _.size || !_) return;
+        const _ =
+            Array.from(_.keys()).reduce(
+              (_, _) =>
+                null == _ || (1e3 * _ > __webpack_require__.getTime() && _ < _)
+                  ? _
+                  : _,
+              void 0,
+            ) ?? 0,
+          _ = Array.from(_.keys()).some((_) => (0, _._)(_, new Date(1e3 * _)));
+        return _.createElement(
+          "div",
+          {
+            className: _().DisplayDaysCtn,
+          },
+          Array.from(_.keys()).map((_) =>
+            _.createElement(_, {
+              key: _,
+              eventModel: _,
+              date: new Date(1e3 * _),
+              sessionsAndGroups: _.get(_),
+              rgRegistrationInfo: _,
+              isToday: (0, _._)(_ ? _ : new Date(1e3 * _), new Date(1e3 * _)),
+            }),
           ),
-          _ = _?.reduce(
-            (_, _) => (null == _ || _.displayDate < _ ? _.displayDate : _),
-            void 0,
-          ),
-          _ = _.some((_) => (0, _._)(_, _.displayDate)),
-          _ = _.useMemo(
-            () => _?.filter((_) => (0, _._)(_ ? _ : _, _.displayDate)),
-            [_, _, _, _],
-          );
-        if (_ && 0 != _.length)
-          return _.createElement(
-            "div",
-            {
-              className: _().DisplaySessionCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().DisplaySessionTitle,
-              },
-              _ ? "Today's Sessions" : "Upcoming Sessions",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().DisplaySessionRow,
-              },
-              _.map((_) =>
-                _.createElement(_, {
-                  key: `${_.group.group_id}_${_.session._}`,
-                  group: _.group,
-                  session: _.session,
-                }),
-              ),
-            ),
-          );
+        );
       }
       function _(_) {
-        const { group: _, session: __webpack_require__ } = _,
-          _ = (0, _._)(_._.LANGUAGE),
-          { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(
-            __webpack_require__,
+        const {
+          eventModel: _,
+          date: __webpack_require__,
+          sessionsAndGroups: _,
+          rgRegistrationInfo: _,
+          isToday: _,
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().DisplayDaySessions, !_ && _().NotToday),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().DateName,
+            },
+            (0, _._)(__webpack_require__),
           ),
-          _ = (0, _._)(_, _);
+          _.createElement(
+            "div",
+            {
+              className: _().DisplayDaySessionsRow,
+            },
+            _.map((_) =>
+              _.createElement(_, {
+                key: `${_.group.group_id}_${_.session._}`,
+                eventModel: _,
+                date: __webpack_require__,
+                registrations:
+                  _.get(`${_.group.group_id}_${_.session._}`) ?? [],
+                group: _.group,
+                session: _.session,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            eventModel: _,
+            date: __webpack_require__,
+            group: _,
+            session: _,
+            registrations: _,
+          } = _,
+          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _._)(),
+          { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(_),
+          _ = (0, _._)(_, _),
+          _ = _.reduce((_, _) => _ + (_.guests_registered ?? 0), 0),
+          _ = _.reduce(
+            (_, _) =>
+              _ +
+              (_.rt_attendance_marked > 0 && _.guests_registered
+                ? _.guests_registered
+                : 0),
+            0,
+          ),
+          [_, _, _] = (0, _._)(),
+          _ =
+            ((_ = _.GID),
+            (_ = _.group_id),
+            (_ = _._),
+            (0, _._)({
+              mutationFn: async ({ nCapacity: _ }) => {
+                const _ = new FormData();
+                _.append("sessionid", _._.SESSIONID),
+                  _.append("gid", _),
+                  _.append("meetsteam_group_id", "" + _),
+                  _.append("meetsteam_session_id", "" + _),
+                  _.append("capacity", "" + _);
+                const _ = `${_._.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
+                  _ = await _().post(_, _, {
+                    withCredentials: !0,
+                  });
+                return 1 == _?.data?.success;
+              },
+            }));
+        var _, _, _;
         return _.createElement(
           "div",
           {
@@ -2197,16 +2315,139 @@
           _.createElement(
             "div",
             {
-              className: _().DisplaySessionTitle,
+              className: _().Header,
             },
-            _.localized_session_title[_] ?? _.localized_session_title[0],
+            _.createElement(
+              "div",
+              {
+                className: _().SessionName,
+              },
+              _.localized_session_title[_] ?? _.localized_session_title[0],
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().SessionTime,
+              },
+              _,
+            ),
           ),
+          _.createElement(_, {
+            title: "Registered:",
+            nCount: _,
+            nCapacity: _.max_capacity,
+          }),
+          _.createElement(_, {
+            title: "Checked in:",
+            nCount: _,
+            nCapacity: _.max_capacity,
+          }),
+          _(__webpack_require__) >= _(_) &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                _._,
+                {
+                  className: (0, _._)(_().SetCapacityButton),
+                  onClick: _,
+                },
+                "Update capacity...",
+              ),
+              _.createElement(
+                _._,
+                {
+                  active: _,
+                },
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    closeModal: _,
+                    nCapacity: _.max_capacity ?? 0,
+                    fnUpdateCapacity: _,
+                    fnOnSuccess: () => window.location.reload(),
+                  }),
+                ),
+              ),
+            ),
+        );
+      }
+      function _(_) {
+        const {
+            closeModal: _,
+            nCapacity: __webpack_require__,
+            fnUpdateCapacity: _,
+            fnOnSuccess: _,
+          } = _,
+          [_, _] = _.useState(__webpack_require__.toString()),
+          _ = (0, _._)();
+        return _.bLoading
+          ? _.createElement(_._, {
+              state: _,
+              strDialogTitle: (0, _._)("#Saving"),
+              closeModal: _,
+            })
+          : _.createElement(
+              _._,
+              {
+                onCancel: _,
+                strTitle: (0, _._)("Update Capacity"),
+                bAllowFullSize: !0,
+                onOK: async () => {
+                  _.fnSetLoading(!0);
+                  const _ = Number.isNaN(Number.parseInt(_))
+                    ? void 0
+                    : Number.parseInt(_);
+                  _.mutateAsync({
+                    nCapacity: _,
+                  })
+                    .then((_) => {
+                      _
+                        ? (_(), _.fnSetStrSuccess("Max capacity updated."))
+                        : _.fnSetStrError(
+                            (0, _._)("#Login_Error_Network_Description"),
+                          );
+                    })
+                    .catch(() =>
+                      _.fnSetStrError(
+                        (0, _._)("#Login_Error_Network_Description"),
+                      ),
+                    );
+                },
+              },
+              _.createElement(_._, {
+                className: _().SetCapacityInput,
+                label: "New capacity",
+                type: "text",
+                autoComplete: "off",
+                value: _,
+                onChange: (_) => _(_.currentTarget.value),
+              }),
+            );
+      }
+      function _(_) {
+        const { title: _, nCount: __webpack_require__, nCapacity: _ } = _,
+          _ = __webpack_require__ >= _,
+          _ = Math.min((__webpack_require__ / _) * 100, 100),
+          _ = __webpack_require__ > 0 ? `${_}%` : "0%";
+        return _.createElement(
+          "div",
+          {
+            className: _().CapacityCtn,
+          },
+          _.createElement("span", null, _, " ", __webpack_require__, " / ", _),
           _.createElement(
             "div",
             {
-              className: _().DisplaySessionTime,
+              className: _().CapacityBarMax,
             },
-            _,
+            _.createElement("div", {
+              className: (0, _._)(_().CapacityBarCurrent, _ ? _().Full : ""),
+              style: {
+                width: _,
+              },
+            }),
           ),
         );
       }

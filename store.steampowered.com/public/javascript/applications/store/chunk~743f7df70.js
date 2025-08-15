@@ -5546,13 +5546,14 @@
     62216: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Mr: () => v,
+        Mr: () => C,
+        Sk: () => w,
         Ue: () => S,
         _t: () => h,
         mG: () => b,
         my: () => f,
         rF: () => M,
-        rb: () => w,
+        us: () => v,
       });
       var i = r(56545),
         a = r(85737),
@@ -5608,17 +5609,16 @@
       const B = (e, t, r) => ["useMeetSteamGetRegistrationDetails", e, t, r];
       function w(e) {
         const t = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        return {
-          sDisplayTimeZone:
-            "in_person" === e.location_type
-              ? (e.in_person_time_zone ?? g.hh)
-              : t,
-          rtime_start: e.rtime_start,
-          rtime_end: e.rtime_end,
-        };
+        return "in_person" === e.location_type
+          ? (e.in_person_time_zone ?? g.hh)
+          : t;
       }
       function h(e) {
-        return (0, u.q3)(() => w(e));
+        return (0, u.q3)(() => ({
+          rtime_start: e.rtime_start,
+          rtime_end: e.rtime_end,
+          sDisplayTimeZone: w(e),
+        }));
       }
       function S(e, t) {
         const r = _().unix(e),
@@ -5630,7 +5630,12 @@
           i = new Date();
         return r.getFullYear() == i.getFullYear() ? (0, d.$w)(r) : (0, d._9)(r);
       }
-      function v(e, t, r, i) {
+      function v(e, t) {
+        const r = _().unix(e),
+          i = _().unix(e).tz(t).utcOffset() - r.utcOffset();
+        return (0, d.KC)(e + 60 * i);
+      }
+      function C(e, t, r, i) {
         const a = _().unix(e),
           n = _().unix(e).tz(r).utcOffset() - a.utcOffset(),
           s = _().unix(t),
