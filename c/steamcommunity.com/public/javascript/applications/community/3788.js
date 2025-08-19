@@ -11,6 +11,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = "undefined" != typeof document ? _.useLayoutEffect : _.useEffect;
       function _(_, _) {
         if (_ === _) return !0;
@@ -211,6 +212,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_, 2),
@@ -282,6 +284,9 @@
               0 === _.detail &&
               "touch" === _.pointerType))
         );
+      }
+      function _() {
+        return /apple/i.test(navigator.vendor);
       }
       function _() {
         const _ = /android/i;
@@ -1222,7 +1227,7 @@
         _ = _.forwardRef(function (_, _) {
           const [__webpack_require__, _] = _.useState();
           _(() => {
-            /apple/i.test(navigator.vendor) && _("button");
+            _() && _("button");
           }, []);
           const _ = {
             ref: _,
@@ -2200,6 +2205,123 @@
             }),
             [_, _, _, _],
           )
+        );
+      }
+      function _(_, _) {
+        void 0 === _ && (_ = {});
+        const {
+            open: __webpack_require__,
+            onOpenChange: _,
+            events: _,
+            dataRef: _,
+            elements: _,
+          } = _,
+          { enabled: _ = !0, visibleOnly: _ = !0 } = _,
+          _ = _.useRef(!1),
+          _ = _.useRef(-1),
+          _ = _.useRef(!0);
+        _.useEffect(() => {
+          if (!_) return;
+          const _ = (0, _._)(_.domReference);
+          function _() {
+            !__webpack_require__ &&
+              (0, _._)(_.domReference) &&
+              _.domReference === _(_(_.domReference)) &&
+              (_.current = !0);
+          }
+          function _() {
+            _.current = !0;
+          }
+          return (
+            _.addEventListener("blur", _),
+            _.addEventListener("keydown", _, !0),
+            () => {
+              _.removeEventListener("blur", _),
+                _.removeEventListener("keydown", _, !0);
+            }
+          );
+        }, [_.domReference, __webpack_require__, _]),
+          _.useEffect(() => {
+            if (_)
+              return (
+                _._("openchange", _),
+                () => {
+                  _.off("openchange", _);
+                }
+              );
+            function _(_) {
+              let { reason: _ } = _;
+              ("reference-press" !== _ && "escape-key" !== _) ||
+                (_.current = !0);
+            }
+          }, [_, _]),
+          _.useEffect(
+            () => () => {
+              _(_);
+            },
+            [],
+          );
+        const _ = _.useMemo(
+          () => ({
+            onPointerDown(_) {
+              _(_.nativeEvent) || (_.current = !1);
+            },
+            onMouseLeave() {
+              _.current = !1;
+            },
+            onFocus(_) {
+              if (_.current) return;
+              const _ = _(_.nativeEvent);
+              if (_ && (0, _._)(_))
+                try {
+                  if (
+                    _() &&
+                    _().toLowerCase().startsWith("mac") &&
+                    !navigator.maxTouchPoints
+                  )
+                    throw Error();
+                  if (!_.matches(":focus-visible")) return;
+                } catch (_) {
+                  if (!_.current && !_(_)) return;
+                }
+              _(!0, _.nativeEvent, "focus");
+            },
+            onBlur(_) {
+              _.current = !1;
+              const _ = _.relatedTarget,
+                _ = _.nativeEvent,
+                _ =
+                  (0, _._)(_) &&
+                  _.hasAttribute(_("focus-guard")) &&
+                  "outside" === _.getAttribute("data-type");
+              _.current = window.setTimeout(() => {
+                var _;
+                const _ = _(
+                  _.domReference ? _.domReference.ownerDocument : document,
+                );
+                (_ || _ !== _.domReference) &&
+                  (_(
+                    null == (_ = _.current.floatingContext)
+                      ? void 0
+                      : _.refs.floating.current,
+                    _,
+                  ) ||
+                    _(_.domReference, _) ||
+                    _ ||
+                    _(!1, _, "focus"));
+              });
+            },
+          }),
+          [_, _.domReference, _, _],
+        );
+        return _.useMemo(
+          () =>
+            _
+              ? {
+                  reference: _,
+                }
+              : {},
+          [_, _],
         );
       }
       const _ = "active",

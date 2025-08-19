@@ -247,6 +247,7 @@ ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
+${COMMUNITY_BASE_URL}groups/community_market/discussions/
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}

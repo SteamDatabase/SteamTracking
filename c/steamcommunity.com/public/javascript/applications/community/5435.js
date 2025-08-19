@@ -10,29 +10,40 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, initialValue: __webpack_require__ } = _,
+        const { appid: _, initialValue: __webpack_require__, debugMode: _ } = _,
           [_, _] = (0, _.useState)(__webpack_require__),
           _ = (0, _.useRef)(null);
         return _.createElement(
-          _.MarketBaseUIRoot,
-          null,
+          _._.Provider,
+          {
+            value: _,
+          },
           _.createElement(
-            _._,
-            {
-              width: "259px",
-              ref: _,
-            },
-            _.createElement(_._, {
-              value: _,
-              onTextChange: _,
-              appid: _,
-              radius: "none",
-              variant: "default",
-              name: "q",
-              autoComplete: "off",
-            }),
+            _.MarketBaseUIRoot,
+            null,
+            _.createElement(
+              _._,
+              {
+                width: "259px",
+                ref: _,
+                position: "relative",
+                style: {
+                  zIndex: 402,
+                },
+              },
+              _.createElement(_._, {
+                value: _,
+                onTextChange: _,
+                appid: _,
+                radius: "none",
+                variant: "default",
+                name: "q",
+                autoComplete: "off",
+              }),
+            ),
           ),
         );
       }

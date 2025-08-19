@@ -5,30 +5,40 @@
   [5435],
   {
     55435: (e, t, a) => {
-      a.r(t), a.d(t, { default: () => r });
-      var n = a(91547),
-        u = a(90626),
-        l = a(19560),
-        i = a(90534);
-      function r(e) {
-        const { appid: t, initialValue: a } = e,
-          [r, o] = (0, u.useState)(a),
-          s = (0, u.useRef)(null);
-        return u.createElement(
-          l.MarketBaseUIRoot,
-          null,
-          u.createElement(
-            i.a,
-            { width: "259px", ref: s },
-            u.createElement(n.xs, {
-              value: r,
-              onTextChange: o,
-              appid: t,
-              radius: "none",
-              variant: "default",
-              name: "q",
-              autoComplete: "off",
-            }),
+      a.r(t), a.d(t, { default: () => o });
+      var n = a(83281),
+        u = a(64480),
+        l = a(90626),
+        i = a(19560),
+        r = a(90534);
+      function o(e) {
+        const { appid: t, initialValue: a, debugMode: o } = e,
+          [s, c] = (0, l.useState)(a),
+          d = (0, l.useRef)(null);
+        return l.createElement(
+          n.u.Provider,
+          { value: o },
+          l.createElement(
+            i.MarketBaseUIRoot,
+            null,
+            l.createElement(
+              r.a,
+              {
+                width: "259px",
+                ref: d,
+                position: "relative",
+                style: { zIndex: 402 },
+              },
+              l.createElement(u.xs, {
+                value: s,
+                onTextChange: c,
+                appid: t,
+                radius: "none",
+                variant: "default",
+                name: "q",
+                autoComplete: "off",
+              }),
+            ),
           ),
         );
       }
