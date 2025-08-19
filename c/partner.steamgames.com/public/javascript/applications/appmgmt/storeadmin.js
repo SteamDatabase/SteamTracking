@@ -1703,6 +1703,11 @@
                 className: _.AltTextBtn,
               },
               _.createElement(
+                "p",
+                null,
+                (0, _._)("#StoreAdmin_CustomImages_Title"),
+              ),
+              _.createElement(
                 _._,
                 {
                   onClick: _,

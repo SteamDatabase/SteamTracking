@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Переглянути...",
 	"Menu_SearchBar_NoMatches": "За вашим запитом нічого не знайдено.",
 	"Menu_SearchBar_AdvancedSearch": "Розширений пошук",
+	"Menu_SearchBar_CategoryGameCount": "ігри: %1$s",
 	"Menu_Search": "Пошук",
 	"Menu_Label": "Меню крамниці",
 	"ItemFlag_InLibrary": "У БІБЛІОТЕЦІ",

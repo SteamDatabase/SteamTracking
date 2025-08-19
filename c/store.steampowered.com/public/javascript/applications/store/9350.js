@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Caută după...",
 	"Menu_SearchBar_NoMatches": "Nu a fost găsit niciun rezultat.",
 	"Menu_SearchBar_AdvancedSearch": "Căutare avansată",
+	"Menu_SearchBar_CategoryGameCount": "%1$s jocuri",
 	"Menu_Search": "Căutare",
 	"Menu_Label": "Meniul de magazin",
 	"ItemFlag_InLibrary": "ÎN BIBLIOTECĂ",

@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Telusuri berdasarkan...",
 	"Menu_SearchBar_NoMatches": "Tidak ada item yang cocok dengan permintaan.",
 	"Menu_SearchBar_AdvancedSearch": "Pencarian Lebih Lanjut",
+	"Menu_SearchBar_CategoryGameCount": "%1$s game",
 	"Menu_Search": "Cari",
 	"Menu_Label": "Menu Toko",
 	"ItemFlag_InLibrary": "DI PERPUSTAKAAN",

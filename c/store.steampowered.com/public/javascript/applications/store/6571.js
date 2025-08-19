@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Browse by...",
 	"Menu_SearchBar_NoMatches": "No items match your query.",
 	"Menu_SearchBar_AdvancedSearch": "Advanced Search",
+	"Menu_SearchBar_CategoryGameCount": "%1$s games",
 	"Menu_Search": "Search",
 	"Menu_Label": "Store menu",
 	"ItemFlag_InLibrary": "IN LIBRARY",

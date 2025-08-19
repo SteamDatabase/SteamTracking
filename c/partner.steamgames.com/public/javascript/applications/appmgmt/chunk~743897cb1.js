@@ -13266,6 +13266,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13504,6 +13507,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return (0, _._)({
@@ -13563,6 +13571,41 @@
         });
       }
       const _ = (_, _, _) => ["useMeetSteamGetRegistrationDetails", _, _, _];
+      function _(_) {
+        const _ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        return "in_person" === _.location_type
+          ? (_.in_person_time_zone ?? _._)
+          : _;
+      }
+      function _(_) {
+        return (0, _._)(() => ({
+          rtime_start: _.rtime_start,
+          rtime_end: _.rtime_end,
+          sDisplayTimeZone: _(_),
+        }));
+      }
+      function _(_, _) {
+        const _ = (function (_, _) {
+            const _ = _().unix(_),
+              _ =
+                _().unix(_)._(_).utcOffset() - __webpack_require__.utcOffset();
+            return new Date(1e3 * (_ + 60 * _));
+          })(_, _),
+          _ = new Date();
+        return __webpack_require__.getFullYear() == _.getFullYear()
+          ? (0, _._)(_)
+          : (0, _._)(_);
+      }
+      function _(_, _, _, _) {
+        const _ = _().unix(_),
+          _ = _().unix(_)._(_).utcOffset() - _.utcOffset(),
+          _ = _().unix(_),
+          _ = _().unix(_)._(_),
+          _ = _.utcOffset() - _.utcOffset();
+        return (
+          (0, _._)(_ + 60 * _, _ + 60 * _, !0) + (_ ? "" : " " + _.format("z"))
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -26225,6 +26268,9 @@
         BHasAlreadyRegistered() {
           return this.m_existingRegistrations.size > 0;
         }
+        BHasSomeRegistration() {
+          return this.m_existingRegistrations.size > 0;
+        }
         async Save(_) {
           const _ = [];
           _ = Object.fromEntries(
@@ -26645,7 +26691,10 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = "America/Los_Angeles";
       function _(_) {
         const _ = _.context.event,
@@ -26662,6 +26711,9 @@
                 _.Fragment,
                 null,
                 _.createElement(_, {
+                  eventModel: _,
+                }),
+                _.createElement(_, {
                   groupData: _,
                   eventModel: _,
                 }),
@@ -26677,6 +26729,70 @@
                 _,
               )
             : null;
+      }
+      function _(_) {
+        const { eventModel: _ } = _;
+        return (0, _._)(() => _.Get().BHasSomeRegistration())
+          ? _.createElement(_, {
+              eventModel: _,
+              accountID: _._.accountid,
+            })
+          : null;
+      }
+      function _(_) {
+        const { eventModel: _, accountID: __webpack_require__ } = _,
+          _ = (function (_, _) {
+            const _ = (0, _._)({
+              queryKey: ["useMeetSteamQRCode", _, _],
+              queryFn: async () => {
+                const _ = _._.STORE_BASE_URL + "meetsteam/attendance_qrcode",
+                  _ = {
+                    gid: _,
+                    accountid: _,
+                  };
+                return (
+                  await _().get(_, {
+                    params: _,
+                    withCredentials: !0,
+                  })
+                ).data;
+              },
+            });
+            return _.data?.qrcode;
+          })(_.GID, __webpack_require__),
+          _ = "qr-code-display-marker",
+          { refIsFirst: _, bIsFirst: _ } = (function (_) {
+            const [_, __webpack_require__] = _.useState(!1),
+              _ = _.useRef(null);
+            return (
+              _.useEffect(() => {
+                const _ = document.querySelectorAll("." + _);
+                _.current &&
+                  _.length > 0 &&
+                  __webpack_require__(_[0] === _.current);
+              }, [_]),
+              {
+                refIsFirst: _,
+                bIsFirst: _,
+              }
+            );
+          })(_);
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: (0, _._)(_),
+          },
+          Boolean(_ && _) &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("div", null, (0, _._)("#MeetSteam_QR_CheckIn")),
+              _.createElement("img", {
+                src: _,
+              }),
+            ),
+        );
       }
       function _() {
         const _ = (0, _._)("promotion_operation_token", "application_config");
@@ -26887,23 +27003,6 @@
           }
         );
       }
-      function _(_, _, _, _) {
-        const _ = _().unix(_),
-          _ = _().unix(_)._(_).utcOffset() - _.utcOffset(),
-          _ = _().unix(_),
-          _ = _().unix(_)._(_),
-          _ = _.utcOffset() - _.utcOffset();
-        return (
-          (0, _._)(_ + 60 * _, _ + 60 * _, !0) + (_ ? "" : " " + _.format("z"))
-        );
-      }
-      function _(_, _) {
-        const _ = _().unix(_),
-          _ = _().unix(_)._(_).utcOffset() - __webpack_require__.utcOffset(),
-          _ = new Date(1e3 * (_ + 60 * _)),
-          _ = new Date();
-        return _.getFullYear() == _.getFullYear() ? (0, _._)(_) : (0, _._)(_);
-      }
       function _(_) {
         const {
             sessionData: _,
@@ -26912,16 +27011,12 @@
             eRegistrationStatus: _ = 0,
             bAllowedToRegisterIfFull: _,
           } = _,
-          [_, _, _] = (0, _._)(() => [
-            _.rtime_start,
-            _.rtime_end,
-            _.max_capacity,
-          ]),
-          _ = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          _ =
-            "in_person" === _.location_type ? (_.in_person_time_zone ?? _) : _,
+          _ = (0, _._)(() => _.max_capacity),
           _ = Math.max(0, _ - (_ || 0)),
-          { strStatusClass: _, strStatusToken: _, bEnabled: _ } = _(_, _, _);
+          { strStatusClass: _, strStatusToken: _, bEnabled: _ } = _(_, _, _),
+          { sDisplayTimeZone: _, rtime_start: _, rtime_end: _ } = (0, _._)(_),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)(_, _, _);
         return _.createElement(
           _.Fragment,
           null,
@@ -26949,14 +27044,14 @@
                 {
                   className: _().Title,
                 },
-                _(_, _),
+                _,
               ),
               _.createElement(
                 "div",
                 {
                   className: _().TimeFrame,
                 },
-                _(_, _, _),
+                _,
               ),
             ),
             _.createElement(_, {
@@ -27266,11 +27361,7 @@
                 (_, _) => _.session.rtime_start - _.session.rtime_start,
               );
             return [_, _, Array.from(_.keys()).sort()];
-          }, [_, _, _, _, _, __webpack_require__.session_breaks]),
-          _ =
-            "in_person" == _
-              ? _
-              : Intl.DateTimeFormat().resolvedOptions().timeZone;
+          }, [_, _, _, _, _, __webpack_require__.session_breaks]);
         return _
           ? _.createElement(
               _.Fragment,
@@ -27283,13 +27374,6 @@
                     key: "day_" + _,
                     className: _().SingleDayCtn,
                   },
-                  _.createElement(
-                    "h2",
-                    {
-                      className: _().ScheduleTopDate,
-                    },
-                    _(_[0].session.rtime_start, _),
-                  ),
                   _.createElement(_, {
                     scheduleData: __webpack_require__,
                     bAllowedToRegisterIfFull: _,
@@ -27324,10 +27408,21 @@
                 ? _.push([_])
                 : _[_.length - 1].push(_);
             return _;
-          }, [__webpack_require__]);
+          }, [__webpack_require__]),
+          { sDisplayTimeZone: _, rtime_start: _ } = (0, _._)(
+            __webpack_require__[0].session,
+          ),
+          _ = (0, _._)(_, _);
         return _.createElement(
           _.Fragment,
           null,
+          _.createElement(
+            "h2",
+            {
+              className: _().ScheduleTopDate,
+            },
+            _,
+          ),
           _.filter((_) => _.rtime_end <= _[0][0].session.rtime_start).map((_) =>
             _.createElement(_, {
               key: `breaks_${_.schedule_id}_${_.break_id}`,
@@ -27377,47 +27472,44 @@
       function _(_) {
         const { scheduleData: _, breakSession: __webpack_require__ } = _,
           _ = (0, _._)(_._.LANGUAGE),
-          [_, _, _] = (0, _._)(() => [
-            __webpack_require__.localized_break_description[_] ||
+          _ = (0, _._)(
+            () =>
+              __webpack_require__.localized_break_description[_] ||
               __webpack_require__.localized_break_description[0] ||
               "",
-            __webpack_require__.rtime_start,
-            __webpack_require__.rtime_end,
-          ]);
+          ),
+          _ = (0, _._)(() => ({
+            rtime_start: __webpack_require__.rtime_start,
+            rtime_end: __webpack_require__.rtime_end,
+            location_type: _.location_type,
+            in_person_time_zone: _.in_person_time_zone,
+          }));
         return _.createElement(
           "div",
           {
             className: _().ScheduleRow,
           },
           _.createElement(_, {
-            scheduleData: _,
-            rtStart: _,
-            rtEnd: _,
+            session: _,
           }),
           _.createElement("div", null, _),
         );
       }
       function _(_) {
         const {
-            scheduleData: _,
-            rgSlotSessions: __webpack_require__,
-            bAllowedToRegisterIfFull: _,
-            fnOnClick: _,
-            rgAvailability: _,
-          } = _,
-          [_, _] = (0, _._)(() => [
-            __webpack_require__[0].session.rtime_start,
-            __webpack_require__[0].session.rtime_end,
-          ]);
+          scheduleData: _,
+          rgSlotSessions: __webpack_require__,
+          bAllowedToRegisterIfFull: _,
+          fnOnClick: _,
+          rgAvailability: _,
+        } = _;
         return _.createElement(
           "div",
           {
             className: _().ScheduleRow,
           },
           _.createElement(_, {
-            scheduleData: _,
-            rtStart: _,
-            rtEnd: _,
+            session: __webpack_require__[0].session,
           }),
           _.createElement(
             "div",
@@ -27437,31 +27529,26 @@
         );
       }
       function _(_) {
-        const { scheduleData: _, rtStart: __webpack_require__, rtEnd: _ } = _,
-          [_, _] = (0, _._)(() => [
-            _.in_person_time_zone ?? _,
-            _.location_type,
-          ]),
-          _ =
-            "in_person" == _
-              ? _
-              : Intl.DateTimeFormat().resolvedOptions().timeZone,
-          _ =
-            "in_person" == _
-              ? _().unix(__webpack_require__)._(_)
-              : _().unix(__webpack_require__);
+        const { session: _ } = _,
+          {
+            sDisplayTimeZone: __webpack_require__,
+            rtime_start: _,
+            rtime_end: _,
+          } = (0, _._)(_),
+          _ = (0, _._)(_, __webpack_require__),
+          _ = (0, _._)(_, _, __webpack_require__);
         return _.createElement(
           "div",
           {
             className: _().ScheduleTimeColumn,
           },
-          _.createElement("div", null, _(__webpack_require__, _, _, !0)),
+          _.createElement("div", null, _),
           _.createElement(
             "div",
             {
               className: _().Timezone,
             },
-            `${_.format("z")}`,
+            _,
           ),
         );
       }

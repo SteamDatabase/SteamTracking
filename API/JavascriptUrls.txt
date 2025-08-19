@@ -1539,6 +1539,7 @@ ${STORE_BASE_URL}meetsteam/ajaxupdateattendance
 ${STORE_BASE_URL}meetsteam/ajaxupdatecapacity
 ${STORE_BASE_URL}meetsteam/attendance?gid=${}&accountid=${accountid}
 ${STORE_BASE_URL}meetsteam/attendance_qrcode
+${STORE_BASE_URL}meetsteam/attendeelist?gid=${}
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile#mobile_section
 ${STORE_BASE_URL}mobile/?show=steamapp
@@ -1676,10 +1677,12 @@ ${STORE_CDN_URL}/public/shared/images/footer/valve_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
+${STORE_CDN_URL}categories/image/
 ${STORE_CDN_URL}categories/image/category/${handle}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}categories/image/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}categories/image/creator/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}categories/image/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
+${STORE_CDN_URL}categories/searchsuggestionsimage/
 ${STORE_CDN_URL}images/storepagebackground/${}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
@@ -2671,6 +2674,7 @@ https://partner.steamgames.com/admin/store/suggestclusteritemsjson/
 https://partner.steamgames.com/admin/store/suggestitemjson/
 https://partner.steamgames.com/admin/store/suggestpackagejson/
 https://partner.steamgames.com/apprelease/ajaxupdatereleaserequest/${nAppId}
+https://partner.steamgames.com/apps/addmmpartnerapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/addworkshopcreatorapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/ajaxaddtag/${nAppId}
 https://partner.steamgames.com/apps/ajaxcreatenewapp/
@@ -2688,6 +2692,7 @@ https://partner.steamgames.com/apps/musicalbumimages/${itemID}
 https://partner.steamgames.com/apps/releaseapp/${appid}
 https://partner.steamgames.com/apps/releaseapppreload/${appid}
 https://partner.steamgames.com/apps/releaseappprepurchase/${appid}
+https://partner.steamgames.com/apps/removemmpartnerapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/removeworkshopcreatorapp/${g_ConsumerAppID}
 https://partner.steamgames.com/apps/retireapp/${nAppID}
 https://partner.steamgames.com/appsharing/ajaxcreateinvite/${nPublisherID}

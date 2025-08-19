@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Selaa",
 	"Menu_SearchBar_NoMatches": "Haku ei tuottanut tuloksia.",
 	"Menu_SearchBar_AdvancedSearch": "Tarkennettu haku",
+	"Menu_SearchBar_CategoryGameCount": "%1$s peliä",
 	"Menu_Search": "Haku",
 	"Menu_Label": "Kaupan valikko",
 	"ItemFlag_InLibrary": "KIRJASTOSSA",

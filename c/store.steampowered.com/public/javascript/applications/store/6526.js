@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Duyệt theo...",
 	"Menu_SearchBar_NoMatches": "Không có sản phẩm nào khớp với truy vấn.",
 	"Menu_SearchBar_AdvancedSearch": "Tìm kiếm nâng cao",
+	"Menu_SearchBar_CategoryGameCount": "%1$s trò chơi",
 	"Menu_Search": "Tìm kiếm",
 	"Menu_Label": "Menu cửa hàng",
 	"ItemFlag_InLibrary": "TRONG THƯ VIỆN",

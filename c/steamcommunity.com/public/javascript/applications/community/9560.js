@@ -2983,7 +2983,7 @@
           },
         ];
       function _(_) {
-        const { bActive: _, onActiveChange: __webpack_require__ } = _;
+        const { bActive: _, onActiveChange: __webpack_require__, ..._ } = _;
         return {
           role: "button",
           tabIndex: 0,
@@ -2995,6 +2995,7 @@
               _.stopPropagation());
           },
           "aria-pressed": _,
+          ..._,
         };
       }
       var _ = __webpack_require__("chunkid");
@@ -3298,7 +3299,7 @@
             gap: "4",
             align: "center",
           },
-          _.map((_) =>
+          _.filter((_) => !_.condition || _.condition(_)).map((_) =>
             _.createElement(_, {
               key: `${_.facet}_${_.tag}`,
               active: _.facets[_.facet] && _.facets[_.facet][_.tag],
@@ -3411,14 +3412,7 @@
         }
       }
       function _(_, _, _) {
-        const _ = Object.keys(_.tags || {}).map((_) => {
-          const _ = {
-            facet: _.name,
-            tag: _,
-            strLabel: _.tags[_].localized_name,
-          };
-          return _.tags[_].color && (_.color = `#${_.tags[_].color}`), _;
-        });
+        const _ = Object.keys(_.tags || {}).map((_) => _(_.name, _, _.tags[_]));
         if (_) _.sort(_);
         else {
           const _ = new Intl.Collator();
@@ -3429,6 +3423,14 @@
           rgOptions: _,
           fieldType: _,
         };
+      }
+      function _(_, _, _) {
+        const _ = {
+          facet: _,
+          tag: _,
+          strLabel: _.localized_name,
+        };
+        return _.color && (_.color = `#${_.color}`), _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -4456,18 +4458,6 @@
             ],
           },
           {
-            facet: "Quality",
-            trigger: [
-              {
-                facet: "Weapon",
-              },
-              {
-                facet: "Type",
-                tag: _,
-              },
-            ],
-          },
-          {
             facet: "KeychainCapsule",
             trigger: {
               facet: "Type",
@@ -4525,9 +4515,38 @@
           },
           {
             facet: "Rarity",
-            trigger: {
-              facet: "ItemSet",
-            },
+            trigger: [
+              {
+                facet: "Weapon",
+              },
+              {
+                facet: "Type",
+                tag: [
+                  ..._,
+                  "CSGO_Tool_Keychain",
+                  "CSGO_Tool_Sticker",
+                  "Type_CustomPlayer",
+                ],
+              },
+              {
+                facet: "ItemSet",
+              },
+            ],
+          },
+          {
+            facet: "Quality",
+            trigger: [
+              {
+                facet: "Weapon",
+              },
+              {
+                facet: "Type",
+                tag: [..._, "CSGO_Type_MusicKit"],
+              },
+              {
+                facet: "ItemSet",
+              },
+            ],
           },
         ],
         _ = {
@@ -4539,9 +4558,101 @@
             "WearCategory4",
             "WearCategoryNA",
           ],
-        };
+        },
+        _ = [
+          {
+            items: [
+              {
+                facet: "Weapon",
+              },
+              {
+                facet: "Type",
+                tag: [..._],
+              },
+            ],
+            rarities: [
+              "Rarity_Common_Weapon",
+              "Rarity_Uncommon_Weapon",
+              "Rarity_Rare_Weapon",
+              "Rarity_Mythical_Weapon",
+              "Rarity_Legendary_Weapon",
+              "Rarity_Ancient_Weapon",
+              "Rarity_Contraband",
+            ],
+          },
+          {
+            items: [
+              {
+                facet: "Type",
+                tag: "CSGO_Tool_Keychain",
+              },
+            ],
+            rarities: [
+              "Rarity_Common",
+              "Rarity_Rare",
+              "Rarity_Mythical",
+              "Rarity_Legendary",
+              "Rarity_Ancient",
+            ],
+          },
+          {
+            items: [
+              {
+                facet: "Type",
+                tag: "CSGO_Tool_Sticker",
+              },
+            ],
+            rarities: [
+              "Rarity_Common",
+              "Rarity_Rare",
+              "Rarity_Mythical",
+              "Rarity_Legendary",
+              "Rarity_Ancient",
+              "Rarity_Contraband",
+            ],
+          },
+          {
+            items: [
+              {
+                facet: "Type",
+                tag: "Type_CustomPlayer",
+              },
+            ],
+            rarities: [
+              "Rarity_Rare_Character",
+              "Rarity_Mythical_Character",
+              "Rarity_Legendary_Character",
+              "Rarity_Ancient_Character",
+            ],
+          },
+          {
+            items: [
+              {
+                facet: "ItemSet",
+              },
+            ],
+            rarities: [
+              "Rarity_Common_Weapon",
+              "Rarity_Uncommon_Weapon",
+              "Rarity_Rare_Weapon",
+              "Rarity_Mythical_Weapon",
+              "Rarity_Legendary_Weapon",
+              "Rarity_Ancient_Weapon",
+              "Rarity_Contraband",
+              "Rarity_Common",
+              "Rarity_Rare",
+              "Rarity_Mythical",
+              "Rarity_Legendary",
+              "Rarity_Ancient",
+              "Rarity_Rare_Character",
+              "Rarity_Mythical_Character",
+              "Rarity_Legendary_Character",
+              "Rarity_Ancient_Character",
+            ],
+          },
+        ];
       function _(_) {
-        const _ = Array.isArray(_.trigger) ? _.trigger : [_.trigger];
+        const _ = Array.isArray(_) ? _ : [_];
         return (_) =>
           _.some((_) =>
             (function (_, _) {
@@ -4692,7 +4803,7 @@
                       const _ = _.tags && _.tags.strange,
                         _ = _.tags && _.tags.tournament;
                       (0, _._)(_ && _, "Could not find expected toggle tags");
-                      const _ = _(_);
+                      const _ = _(_.trigger);
                       return {
                         facet: {
                           strLabel: _.localized_name,
@@ -4707,6 +4818,10 @@
                               facet: _.name,
                               tag: "tournament",
                               strLabel: _.localized_name,
+                              condition: _({
+                                facet: "Type",
+                                tag: _,
+                              }),
                             },
                           ],
                           computeNext: (_, _) => {
@@ -4731,6 +4846,26 @@
                         condition: _,
                       };
                     }
+                    if ("Rarity" === _.name && _.tags) {
+                      const _ = [];
+                      for (const _ of _) {
+                        const _ = _(_.items),
+                          _ = [];
+                        for (const _ of _.rarities) {
+                          const _ = _.tags[_];
+                          _ && _.push(_(_.name, _, _));
+                        }
+                        _.push({
+                          facet: {
+                            fieldType: "select",
+                            strLabel: _.localized_name,
+                            rgOptions: _,
+                          },
+                          condition: _,
+                        });
+                      }
+                      return _;
+                    }
                     let _;
                     if (_[_.name]) {
                       const _ = _[_.name].reduce(
@@ -4751,7 +4886,7 @@
                     }
                     return {
                       facet: _(_, "select", _),
-                      condition: _(_),
+                      condition: _(_.trigger),
                     };
                   }),
                   otherFacet: _,
@@ -4762,15 +4897,37 @@
           ),
           [_, _] = (0, _.useState)(() => _.filter((_) => _.condition(_)));
         (0, _.useEffect)(() => {
-          const _ = [];
           let _ = null;
-          for (const _ of _)
-            if (__webpack_require__.condition(_)) _.push(_);
-            else {
-              const _ = _(_.facet);
-              for (const [_, _] of _)
-                _.facets[_] &&
-                  _.facets[_][_] &&
+          const _ = _.filter((_) => _.condition(_)),
+            _ = () =>
+              [
+                ..._.map((_) => _.facet),
+                ..._,
+                _,
+                ..._.map((_) => _.facet),
+              ].reduce((_, _) => {
+                const _ = (function (_) {
+                  switch (_.fieldType) {
+                    case "checkbox":
+                    case "select":
+                      return _.rgOptions.map(({ facet: _, tag: _ }) => [_, _]);
+                    case "toggle":
+                    case "togglebutton":
+                      return [[_.facet, _.tag]];
+                    case "togglegroup":
+                      return _.rgToggles.map(({ facet: _, tag: _ }) => [_, _]);
+                    default:
+                      return (0, _._)(_, "Unhandled facet type"), [];
+                  }
+                })(_);
+                for (const [_, _] of _) _[_] || (_[_] = {}), (_[_][_] = !0);
+                return _;
+              }, {});
+          let _ = null;
+          for (const _ of Object.keys(_.facets))
+            for (const _ of Object.keys(_.facets[_]))
+              _ || (_ = __webpack_require__()),
+                (_[_] && _[_][_]) ||
                   (_ ||
                     (_ = {
                       ..._,
@@ -4779,9 +4936,8 @@
                       },
                     }),
                   (_ = _(_, _, _, !1)));
-            }
           _(_), _ && _(_);
-        }, [_, _, _]);
+        }, [_, _, _, _, _, _]);
         const _ = (_) => {
             const _ = {
               ..._,
@@ -4850,6 +5006,10 @@
                     var _, _;
                   },
                   muted: _ && !(_.facets[_.facet] && _.facets[_.facet][_.tag]),
+                  title:
+                    "CSGO_Type_WeaponCase" === _.tag
+                      ? (0, _._)("#AdvancedSearch_CSContainers_Tooltip")
+                      : void 0,
                 },
                 _.strLabel,
               ),
@@ -4897,10 +5057,12 @@
             muted: __webpack_require__,
             onActiveChange: _,
             children: _,
+            title: _,
           } = _,
           _ = _({
             bActive: _,
             onActiveChange: _,
+            title: _,
           });
         return _.createElement(
           _,
@@ -5158,21 +5320,8 @@
           ),
         );
       }
-      function _(_) {
-        switch (_.fieldType) {
-          case "checkbox":
-          case "select":
-            return _.rgOptions.map(({ facet: _, tag: _ }) => [_, _]);
-          case "toggle":
-          case "togglebutton":
-            return [[_.facet, _.tag]];
-          case "togglegroup":
-            return _.rgToggles.map(({ facet: _, tag: _ }) => [_, _]);
-          default:
-            return (0, _._)(_, "Unhandled facet type"), [];
-        }
-      }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 753,
         _ = 730,
         _ = `${_}_Game`,
@@ -5300,6 +5449,8 @@
                       _,
                       {
                         flexGrow: "1",
+                        gap: "2",
+                        align: "center",
                       },
                       _.createElement(
                         "a",
@@ -5308,6 +5459,22 @@
                           className: _.BetaLink,
                         },
                         (0, _._)("#AdvancedSearch_BetaTag"),
+                      ),
+                      _.createElement(_, {
+                        size: "1",
+                        orientation: "vertical",
+                        color: "dull-6",
+                      }),
+                      _.createElement(
+                        "span",
+                        {
+                          onClick: () => {
+                            (0, _._)("marketFiltersBeta", "0", 30),
+                              window.location.reload();
+                          },
+                          className: _.BetaLink,
+                        },
+                        (0, _._)("#AdvancedSearch_Beta_OptOut"),
                       ),
                     ),
                     _.createElement(
@@ -5487,6 +5654,7 @@
             placeholder: (0, _._)("#AdvancedSearch_TextSearch_Placeholder"),
             ..._,
             afterContent: _,
+            title: (0, _._)("#AdvancedSearch_TextSearch_Tooltip"),
           }),
           _.createElement(
             _.Suggestions,
@@ -6002,11 +6170,12 @@
                 height: "138px",
               }),
             );
+        const _ = _._.logged_in;
         return _.createElement(
           _,
           {
             direction: "column",
-            marginTop: "4",
+            marginTop: "2",
             marginBottom: "2",
           },
           _.createElement(
@@ -6015,7 +6184,9 @@
               weight: "medium",
               size: "3",
             },
-            (0, _._)("#AdvancedSearch_AppSelect_YourGames"),
+            _
+              ? (0, _._)("#AdvancedSearch_AppSelect_YourGames")
+              : (0, _._)("#AdvancedSearch_AppSelect_PopularGames"),
           ),
           _.createElement(
             _,

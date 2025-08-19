@@ -203,9 +203,10 @@ html.tablet .glance_ctn {
 	padding: unset;
 }
 
-/* hide the developer, publisher, released sections since we're using a different layout for mobile */
-html.tablet .release_date,
-html.tablet .dev_row {
+/* hide the developer, publisher, released sections since we're using a different layout for tablet */
+html.tablet .glance_ctn .glance_mid_ctn .release_date,
+html.tablet .glance_ctn .glance_mid_ctn .dev_row,
+html.tablet .details_block .dev_row {
 	display: none;
 }
 

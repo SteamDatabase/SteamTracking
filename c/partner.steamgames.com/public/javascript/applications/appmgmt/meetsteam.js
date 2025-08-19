@@ -1730,6 +1730,14 @@
                     },
                     "QR Page",
                   ),
+                  " | ",
+                  _.createElement(
+                    "a",
+                    {
+                      href: `${_._.STORE_BASE_URL}meetsteam/attendeelist?gid=${_}`,
+                    },
+                    "Attendance List",
+                  ),
                   _.createElement(_, {
                     gid: _,
                   }),

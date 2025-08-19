@@ -186,11 +186,11 @@
   margin-bottom: 0px;
   margin-top: 65px;
 }
-html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
+html.responsive.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   margin-top: 65px;
 }
 @media screen and (max-width: 910px) {
-  ._1Un6hCqh2IuOm0WLmrrA7w {
+  html.responsive ._1Un6hCqh2IuOm0WLmrrA7w {
     margin-top: 65px;
   }
 }

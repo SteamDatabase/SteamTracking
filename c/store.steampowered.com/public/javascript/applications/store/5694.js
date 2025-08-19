@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Böngészési elv...",
 	"Menu_SearchBar_NoMatches": "Nincs a keresésednek megfelelő elem.",
 	"Menu_SearchBar_AdvancedSearch": "Bővített keresés",
+	"Menu_SearchBar_CategoryGameCount": "%1$s játék",
 	"Menu_Search": "Keresés",
 	"Menu_Label": "Áruházi menü",
 	"ItemFlag_InLibrary": "KÖNYVTÁRBAN",

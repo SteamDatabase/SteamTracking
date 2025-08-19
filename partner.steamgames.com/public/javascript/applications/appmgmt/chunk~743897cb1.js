@@ -11614,7 +11614,13 @@
     },
     50304: (e, t, r) => {
       "use strict";
-      r.d(t, { m: () => M, V: () => S });
+      r.d(t, {
+        rF: () => U,
+        Mr: () => W,
+        my: () => R,
+        mG: () => F,
+        _t: () => I,
+      });
       var i = r(56545),
         a = r(85737),
         s = r(65689),
@@ -11834,10 +11840,15 @@
       var _ = r(20194),
         y = r(17720),
         b = r(26161),
-        f = r(14771);
-      function M(e, t, r) {
+        f = r(14771),
+        M = r(65946),
+        w = r(91675),
+        S = r(87937),
+        h = r.n(S),
+        z = r(85383);
+      function R(e, t, r) {
         return (0, _.I)({
-          queryKey: w(t, r),
+          queryKey: v(t, r),
           queryFn: async () => {
             const t = i.w.Init(a.Vj);
             t.Body().set_clan_event_gid(r);
@@ -11853,10 +11864,10 @@
           staleTime: 10 * f.Kp.PerMinute,
         });
       }
-      const w = (e, t) => ["useMeetSteamGetAvailability", e, t];
-      function S(e, t, r, a) {
+      const v = (e, t) => ["useMeetSteamGetAvailability", e, t];
+      function F(e, t, r, a) {
         return (0, _.I)({
-          queryKey: h(t, r, a),
+          queryKey: T(t, r, a),
           queryFn: async () => {
             const e = i.w.Init(s.V4);
             e.Body().set_type(6),
@@ -11890,7 +11901,39 @@
           enabled: (0, b.H)() == t && !!a,
         });
       }
-      const h = (e, t, r) => ["useMeetSteamGetRegistrationDetails", e, t, r];
+      const T = (e, t, r) => ["useMeetSteamGetRegistrationDetails", e, t, r];
+      function C(e) {
+        const t = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        return "in_person" === e.location_type
+          ? (e.in_person_time_zone ?? z.hh)
+          : t;
+      }
+      function I(e) {
+        return (0, M.q3)(() => ({
+          rtime_start: e.rtime_start,
+          rtime_end: e.rtime_end,
+          sDisplayTimeZone: C(e),
+        }));
+      }
+      function U(e, t) {
+        const r = (function (e, t) {
+            const r = h().unix(e),
+              i = h().unix(e).tz(t).utcOffset() - r.utcOffset();
+            return new Date(1e3 * (e + 60 * i));
+          })(e, t),
+          i = new Date();
+        return r.getFullYear() == i.getFullYear() ? (0, w.$w)(r) : (0, w._9)(r);
+      }
+      function W(e, t, r, i) {
+        const a = h().unix(e),
+          s = h().unix(e).tz(r).utcOffset() - a.utcOffset(),
+          n = h().unix(t),
+          o = h().unix(t).tz(r),
+          l = o.utcOffset() - n.utcOffset();
+        return (
+          (0, w.Vx)(e + 60 * s, t + 60 * l, !0) + (i ? "" : " " + o.format("z"))
+        );
+      }
     },
     26505: (e, t, r) => {
       "use strict";
@@ -14763,7 +14806,7 @@
     },
     85383: (e, t, r) => {
       "use strict";
-      r.d(t, { Xk: () => Dr, ac: () => Cr, hh: () => Tr });
+      r.d(t, { Xk: () => Vr, ac: () => Wr, hh: () => Ur });
       var i,
         a,
         s = r(22837),
@@ -23595,6 +23638,9 @@
         BHasAlreadyRegistered() {
           return this.m_existingRegistrations.size > 0;
         }
+        BHasSomeRegistration() {
+          return this.m_existingRegistrations.size > 0;
+        }
         async Save(e) {
           const t = [];
           e = Object.fromEntries(
@@ -23683,7 +23729,12 @@
             },
             [c],
           ),
-          b = (0, sr.V)(o, t.clanSteamID.GetAccountID(), t.GID, l.iA.accountid),
+          b = (0, sr.mG)(
+            o,
+            t.clanSteamID.GetAccountID(),
+            t.GID,
+            l.iA.accountid,
+          ),
           {
             sUserAccountEmail: f,
             sUserAccountRealName: M,
@@ -23986,14 +24037,17 @@
           ),
         );
       }
-      var Fr = r(91151);
-      const Tr = "America/Los_Angeles";
-      function Cr(e) {
+      var Fr = r(91151),
+        Tr = r(20194),
+        Cr = r(41735),
+        Ir = r.n(Cr);
+      const Ur = "America/Los_Angeles";
+      function Wr(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, g.j$)(e.args, "group_id"),
           a = Number.parseInt(i),
-          s = (0, m.q3)(() => Gr(t, a));
+          s = (0, m.q3)(() => Lr(t, a));
         return s
           ? t.clanSteamID.GetAccountID() != (0, lr.H)()
             ? r
@@ -24002,8 +24056,9 @@
             : d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(Wr, { groupData: s, eventModel: t }),
-                d.createElement(xr, { eventModel: t }),
+                d.createElement(jr, { eventModel: t }),
+                d.createElement(Nr, { groupData: s, eventModel: t }),
+                d.createElement(Dr, { eventModel: t }),
               )
           : r
             ? d.createElement(
@@ -24014,7 +24069,51 @@
               )
             : null;
       }
-      function Ir() {
+      function jr(e) {
+        const { eventModel: t } = e;
+        return (0, m.q3)(() => cr.Get().BHasSomeRegistration())
+          ? d.createElement(Or, { eventModel: t, accountID: l.iA.accountid })
+          : null;
+      }
+      function Or(e) {
+        const { eventModel: t, accountID: r } = e,
+          i = (function (e, t) {
+            const r = (0, Tr.I)({
+              queryKey: ["useMeetSteamQRCode", e, t],
+              queryFn: async () => {
+                const r = dt.TS.STORE_BASE_URL + "meetsteam/attendance_qrcode",
+                  i = { gid: e, accountid: t };
+                return (await Ir().get(r, { params: i, withCredentials: !0 }))
+                  .data;
+              },
+            });
+            return r.data?.qrcode;
+          })(t.GID, r),
+          a = "qr-code-display-marker",
+          { refIsFirst: s, bIsFirst: n } = (function (e) {
+            const [t, r] = d.useState(!1),
+              i = d.useRef(null);
+            return (
+              d.useEffect(() => {
+                const t = document.querySelectorAll("." + e);
+                i.current && t.length > 0 && r(t[0] === i.current);
+              }, [e]),
+              { refIsFirst: i, bIsFirst: t }
+            );
+          })(a);
+        return d.createElement(
+          "div",
+          { ref: s, className: (0, b.A)(a) },
+          Boolean(i && n) &&
+            d.createElement(
+              d.Fragment,
+              null,
+              d.createElement("div", null, (0, y.we)("#MeetSteam_QR_CheckIn")),
+              d.createElement("img", { src: i }),
+            ),
+        );
+      }
+      function qr() {
         const e = (0, br.Tc)("promotion_operation_token", "application_config");
         (0, n.wT)(
           Boolean(e) || !l.iA.accountid,
@@ -24025,7 +24124,7 @@
           [e],
         );
       }
-      function Ur() {
+      function Er() {
         const [e] = (0, d.useState)(() =>
           Number.parseInt(
             (0, br.Tc)("meet_steam_visibility_id", "application_config"),
@@ -24033,18 +24132,18 @@
         );
         return e;
       }
-      function Wr(e) {
+      function Nr(e) {
         const { groupData: t, eventModel: r } = e,
-          i = Ir(),
+          i = qr(),
           a = (0, fr.MU)(),
-          s = Ur(),
+          s = Er(),
           n = ur(),
-          o = (0, sr.m)(i, r.clanSteamID.GetAccountID(), r.GID),
+          o = (0, sr.my)(i, r.clanSteamID.GetAccountID(), r.GID),
           c = (0, d.useMemo)(
             () => t?.sessions?.sort((e, t) => e.rtime_start - t.rtime_start),
             [t?.sessions],
           ),
-          u = kr(),
+          u = Hr(),
           g = (0, m.q3)(() =>
             c?.reduce(
               (e, r) =>
@@ -24052,7 +24151,12 @@
               new Map(),
             ),
           ),
-          p = (0, sr.V)(i, r.clanSteamID.GetAccountID(), r.GID, l.iA.accountid),
+          p = (0, sr.mG)(
+            i,
+            r.clanSteamID.GetAccountID(),
+            r.GID,
+            l.iA.accountid,
+          ),
           B = p.isSuccess && !!p.data.allow_registration_if_full;
         if (!o.isSuccess)
           return d.createElement(
@@ -24071,7 +24175,7 @@
           !a
           ? null
           : d.createElement(
-              jr,
+              Ar,
               { groupData: t },
               c?.map((e, r) => {
                 const i = o.data.find(
@@ -24085,7 +24189,7 @@
                   d.createElement(
                     "div",
                     { className: Sr().SessionColumnCtn },
-                    d.createElement(Nr, {
+                    d.createElement(xr, {
                       sessionData: e,
                       onClick: () =>
                         u(() =>
@@ -24099,12 +24203,12 @@
                       bAllowedToRegisterIfFull: B,
                     }),
                   ),
-                  s && d.createElement(Pr, null),
+                  s && d.createElement(kr, null),
                 );
               }),
             );
       }
-      function jr(e) {
+      function Ar(e) {
         const { groupData: t, children: r } = e,
           i = (0, s.sf)(dt.TS.LANGUAGE),
           a = y.NT.GetWithFallback(t?.localized_session_title, i),
@@ -24155,7 +24259,7 @@
             )
           : null;
       }
-      function Or(e, t, r, i) {
+      function Pr(e, t, r, i) {
         const a = r || (0 === e && t > 0) || 1 === e || 2 === e || 3 === e;
         let s = null,
           n = null;
@@ -24174,27 +24278,7 @@
           { bEnabled: a, strStatusClass: n, strStatusToken: s }
         );
       }
-      function qr(e, t, r, i) {
-        const a = u().unix(e),
-          s = u().unix(e).tz(r).utcOffset() - a.utcOffset(),
-          n = u().unix(t),
-          o = u().unix(t).tz(r),
-          l = o.utcOffset() - n.utcOffset();
-        return (
-          (0, yr.Vx)(e + 60 * s, t + 60 * l, !0) +
-          (i ? "" : " " + o.format("z"))
-        );
-      }
-      function Er(e, t) {
-        const r = u().unix(e),
-          i = u().unix(e).tz(t).utcOffset() - r.utcOffset(),
-          a = new Date(1e3 * (e + 60 * i)),
-          s = new Date();
-        return a.getFullYear() == s.getFullYear()
-          ? (0, yr.$w)(a)
-          : (0, yr._9)(a);
-      }
-      function Nr(e) {
+      function xr(e) {
         const {
             sessionData: t,
             onClick: r,
@@ -24202,49 +24286,41 @@
             eRegistrationStatus: a = 0,
             bAllowedToRegisterIfFull: s,
           } = e,
-          [n, o, l] = (0, m.q3)(() => [
-            t.rtime_start,
-            t.rtime_end,
-            t.max_capacity,
-          ]),
-          c = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          u =
-            "in_person" === t.location_type ? (t.in_person_time_zone ?? Tr) : c,
-          g = Math.max(0, l - (i || 0)),
-          { strStatusClass: p, strStatusToken: B, bEnabled: _ } = Or(a, g, s);
+          n = (0, m.q3)(() => t.max_capacity),
+          o = Math.max(0, n - (i || 0)),
+          { strStatusClass: l, strStatusToken: c, bEnabled: u } = Pr(a, o, s),
+          { sDisplayTimeZone: g, rtime_start: p, rtime_end: B } = (0, sr._t)(t),
+          _ = (0, sr.rF)(p, g),
+          y = (0, sr.Mr)(p, B, g);
         return d.createElement(
           d.Fragment,
           null,
           d.createElement(
             "div",
-            { className: (0, b.A)(Sr().SessionInstance, p) },
+            { className: (0, b.A)(Sr().SessionInstance, l) },
             d.createElement(
               "div",
               { className: Sr().StatusText },
-              d.createElement("span", null, B),
+              d.createElement("span", null, c),
             ),
             d.createElement(
               "button",
               {
                 className: (0, b.A)(Sr().Button, Sr().Background),
-                disabled: !_,
+                disabled: !u,
                 onClick: r,
               },
-              d.createElement("div", { className: Sr().Title }, Er(n, u)),
-              d.createElement(
-                "div",
-                { className: Sr().TimeFrame },
-                qr(n, o, u),
-              ),
+              d.createElement("div", { className: Sr().Title }, _),
+              d.createElement("div", { className: Sr().TimeFrame }, y),
             ),
-            d.createElement(Ar, {
-              nAvailableSpace: g,
+            d.createElement(Gr, {
+              nAvailableSpace: o,
               bAllowedToRegisterIfFull: s,
             }),
           ),
         );
       }
-      function Ar(e) {
+      function Gr(e) {
         const { nAvailableSpace: t, bAllowedToRegisterIfFull: r } = e;
         return d.createElement(
           d.Fragment,
@@ -24269,10 +24345,10 @@
             ),
         );
       }
-      function Pr() {
+      function kr() {
         return d.createElement("div", { className: Sr().InstanceDivider }, "◆");
       }
-      function xr(e) {
+      function Dr(e) {
         const { eventModel: t } = e,
           r = "complete-registration-marker",
           { refIsLast: i, bIsLast: a } = (function (e) {
@@ -24286,7 +24362,7 @@
               { refIsLast: i, bIsLast: t }
             );
           })(r),
-          s = Ir(),
+          s = qr(),
           [n, c] = d.useState(!1),
           [u, g] = d.useState(!1);
         !(function (e, t, r, i) {
@@ -24296,9 +24372,9 @@
             })();
           }, [e, t, r, i]);
         })(s, l.iA.accountid, t.clanSteamID.GetAccountID(), t.GID);
-        const p = (0, sr.m)(s, t.clanSteamID.GetAccountID(), t.GID),
+        const p = (0, sr.my)(s, t.clanSteamID.GetAccountID(), t.GID),
           [B, f, M] = (0, o.uD)(),
-          w = kr(),
+          w = Hr(),
           S = ur(),
           h = n || S,
           z = (0, m.q3)(() => cr.Get().BHaveSelectionsChanged()),
@@ -24309,7 +24385,7 @@
               .Get()
               .GetSelectedGroups()
               .reduce((e, r) => {
-                const i = Gr(t, r),
+                const i = Lr(t, r),
                   a = cr.Get().GetSelection(i.group_id),
                   s = i.sessions?.find((e) => e.id == a)?.max_per_team ?? 0;
                 return Math.max(e, s);
@@ -24393,11 +24469,11 @@
           )
         );
       }
-      function Gr(e, t) {
+      function Lr(e, t) {
         const r = e?.jsondata?.meet_steam_groups || [];
         return r?.find((e) => e.group_id == t);
       }
-      function kr() {
+      function Hr() {
         return dr.KN.Get().BIsUserLoggedIn()
           ? (e) => e()
           : () =>
@@ -24413,7 +24489,7 @@
                 window,
               );
       }
-      function Dr(e) {
+      function Vr(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, g.j$)(e.args, "schedule_id"),
@@ -24432,8 +24508,8 @@
             : d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(Lr, { scheduleData: s, eventModel: t }),
-                d.createElement(xr, { eventModel: t }),
+                d.createElement(Qr, { scheduleData: s, eventModel: t }),
+                d.createElement(Dr, { eventModel: t }),
               )
           : r
             ? d.createElement(
@@ -24444,12 +24520,17 @@
               )
             : null;
       }
-      function Lr(e) {
+      function Qr(e) {
         const { eventModel: t } = e,
-          r = Ir(),
+          r = qr(),
           i = ur(),
-          a = (0, sr.m)(r, t.clanSteamID.GetAccountID(), t.GID),
-          s = (0, sr.V)(r, t.clanSteamID.GetAccountID(), t.GID, l.iA.accountid);
+          a = (0, sr.my)(r, t.clanSteamID.GetAccountID(), t.GID),
+          s = (0, sr.mG)(
+            r,
+            t.clanSteamID.GetAccountID(),
+            t.GID,
+            l.iA.accountid,
+          );
         if (!a.isSuccess)
           return d.createElement(
             "div",
@@ -24462,7 +24543,7 @@
             position: "center",
             string: (0, y.we)("#Loading"),
           });
-        return d.createElement(Hr, {
+        return d.createElement(Kr, {
           ...e,
           fnOnClick: (e, t) => {
             const r = cr.Get().GetSelection(e) == t;
@@ -24472,7 +24553,7 @@
           bAllowedToRegisterIfFull: s?.data?.allow_registration_if_full,
         });
       }
-      function Hr(e) {
+      function Kr(e) {
         const {
             eventModel: t,
             scheduleData: r,
@@ -24481,10 +24562,10 @@
             rgAvailability: s,
           } = e,
           n = (0, fr.HN)(),
-          o = Ur(),
+          o = Er(),
           [l, c, g] = (0, m.q3)(() => [
             t.jsondata.meet_steam_groups,
-            r.in_person_time_zone ?? Tr,
+            r.in_person_time_zone ?? Ur,
             r.location_type,
           ]),
           [p, B, _] = (0, d.useMemo)(() => {
@@ -24519,11 +24600,7 @@
                 (e, t) => e.session.rtime_start - t.session.rtime_start,
               );
             return [e, t, Array.from(e.keys()).sort()];
-          }, [l, o, n, g, c, r.session_breaks]),
-          y =
-            "in_person" == g
-              ? c
-              : Intl.DateTimeFormat().resolvedOptions().timeZone;
+          }, [l, o, n, g, c, r.session_breaks]);
         return l
           ? d.createElement(
               d.Fragment,
@@ -24533,12 +24610,7 @@
                 return d.createElement(
                   "div",
                   { key: "day_" + e, className: Sr().SingleDayCtn },
-                  d.createElement(
-                    "h2",
-                    { className: Sr().ScheduleTopDate },
-                    Er(t[0].session.rtime_start, y),
-                  ),
-                  d.createElement(Vr, {
+                  d.createElement(Yr, {
                     scheduleData: r,
                     bAllowedToRegisterIfFull: i,
                     fnOnClick: a,
@@ -24555,7 +24627,7 @@
               "No Meet Steam Events; please create some first.",
             );
       }
-      function Vr(e) {
+      function Yr(e) {
         const {
             scheduleData: t,
             rgDayGroupSessions: r,
@@ -24572,14 +24644,17 @@
                 ? e.push([t])
                 : e[e.length - 1].push(t);
             return e;
-          }, [r]);
+          }, [r]),
+          { sDisplayTimeZone: l, rtime_start: m } = (0, sr._t)(r[0].session),
+          c = (0, sr.rF)(m, l);
         return d.createElement(
           d.Fragment,
           null,
+          d.createElement("h2", { className: Sr().ScheduleTopDate }, c),
           i
             .filter((e) => e.rtime_end <= o[0][0].session.rtime_start)
             .map((e) =>
-              d.createElement(Qr, {
+              d.createElement($r, {
                 key: `breaks_${t.schedule_id}_${e.break_id}`,
                 scheduleData: t,
                 breakSession: e,
@@ -24595,7 +24670,7 @@
             return d.createElement(
               d.Fragment,
               { key: "start_" + e[0].session.rtime_start },
-              d.createElement(Kr, {
+              d.createElement(Jr, {
                 bAllowedToRegisterIfFull: a,
                 fnOnClick: s,
                 scheduleData: t,
@@ -24603,7 +24678,7 @@
                 rgAvailability: n,
               }),
               l.map((e) =>
-                d.createElement(Qr, {
+                d.createElement($r, {
                   key: `breaks_${t.schedule_id}_${e.break_id}`,
                   scheduleData: t,
                   breakSession: e,
@@ -24616,7 +24691,7 @@
               (e) => e.rtime_start >= o[o.length - 1][0].session.rtime_end,
             )
             .map((e) =>
-              d.createElement(Qr, {
+              d.createElement($r, {
                 key: `breaks_${t.schedule_id}_${e.break_id}`,
                 scheduleData: t,
                 breakSession: e,
@@ -24624,44 +24699,45 @@
             ),
         );
       }
-      function Qr(e) {
+      function $r(e) {
         const { scheduleData: t, breakSession: r } = e,
           i = (0, s.sf)(dt.TS.LANGUAGE),
-          [a, n, o] = (0, m.q3)(() => [
-            r.localized_break_description[i] ||
+          a = (0, m.q3)(
+            () =>
+              r.localized_break_description[i] ||
               r.localized_break_description[0] ||
               "",
-            r.rtime_start,
-            r.rtime_end,
-          ]);
+          ),
+          n = (0, m.q3)(() => ({
+            rtime_start: r.rtime_start,
+            rtime_end: r.rtime_end,
+            location_type: t.location_type,
+            in_person_time_zone: t.in_person_time_zone,
+          }));
         return d.createElement(
           "div",
           { className: Sr().ScheduleRow },
-          d.createElement(Yr, { scheduleData: t, rtStart: n, rtEnd: o }),
+          d.createElement(Zr, { session: n }),
           d.createElement("div", null, a),
         );
       }
-      function Kr(e) {
+      function Jr(e) {
         const {
-            scheduleData: t,
-            rgSlotSessions: r,
-            bAllowedToRegisterIfFull: i,
-            fnOnClick: a,
-            rgAvailability: s,
-          } = e,
-          [n, o] = (0, m.q3)(() => [
-            r[0].session.rtime_start,
-            r[0].session.rtime_end,
-          ]);
+          scheduleData: t,
+          rgSlotSessions: r,
+          bAllowedToRegisterIfFull: i,
+          fnOnClick: a,
+          rgAvailability: s,
+        } = e;
         return d.createElement(
           "div",
           { className: Sr().ScheduleRow },
-          d.createElement(Yr, { scheduleData: t, rtStart: n, rtEnd: o }),
+          d.createElement(Zr, { session: r[0].session }),
           d.createElement(
             "div",
             { className: Sr().ScheduleSessionsColumn },
             r.map((e) =>
-              d.createElement($r, {
+              d.createElement(Xr, {
                 key: `entry_${e.group.group_id}_${e.session.id}`,
                 bAllowedToRegisterIfFull: i,
                 fnOnClick: a,
@@ -24672,29 +24748,19 @@
           ),
         );
       }
-      function Yr(e) {
-        const { scheduleData: t, rtStart: r, rtEnd: i } = e,
-          [a, s] = (0, m.q3)(() => [
-            t.in_person_time_zone ?? Tr,
-            t.location_type,
-          ]),
-          n =
-            "in_person" == s
-              ? a
-              : Intl.DateTimeFormat().resolvedOptions().timeZone,
-          o = "in_person" == s ? u().unix(r).tz(n) : u().unix(r);
+      function Zr(e) {
+        const { session: t } = e,
+          { sDisplayTimeZone: r, rtime_start: i, rtime_end: a } = (0, sr._t)(t),
+          s = (0, sr.rF)(i, r),
+          n = (0, sr.Mr)(i, a, r);
         return d.createElement(
           "div",
           { className: Sr().ScheduleTimeColumn },
-          d.createElement("div", null, qr(r, i, n, !0)),
-          d.createElement(
-            "div",
-            { className: Sr().Timezone },
-            `${o.format("z")}`,
-          ),
+          d.createElement("div", null, n),
+          d.createElement("div", { className: Sr().Timezone }, s),
         );
       }
-      function $r(e) {
+      function Xr(e) {
         const {
             session: t,
             bAllowedToRegisterIfFull: r,
@@ -24736,7 +24802,7 @@
             strStatusClass: R,
             strStatusToken: v,
             bEnabled: F,
-          } = Or(M, z, r, w),
+          } = Pr(M, z, r, w),
           T =
             w && S
               ? t.group.sessions.find((e) => e.id == S)?.rtime_start
@@ -24786,7 +24852,7 @@
                 ),
               ),
             ),
-            d.createElement(Ar, {
+            d.createElement(Gr, {
               nAvailableSpace: z,
               bAllowedToRegisterIfFull: r,
             }),

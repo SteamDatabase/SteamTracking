@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Bla etter …",
 	"Menu_SearchBar_NoMatches": "Ingen treff på søket.",
 	"Menu_SearchBar_AdvancedSearch": "Avansert søk",
+	"Menu_SearchBar_CategoryGameCount": "%1$s spill",
 	"Menu_Search": "Søk",
 	"Menu_Label": "Butikkmeny",
 	"ItemFlag_InLibrary": "I BIBLIOTEKET",

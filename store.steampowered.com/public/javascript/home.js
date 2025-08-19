@@ -58,6 +58,7 @@ GHomepage = {
 
 	bSteamOS: false,
 	eHWVariant: 0, /* k_EHardwareVariant_Unknown */
+	eGamingDeviceType: 0, /* k_EGamingDeviceType_Unknown */
 
 	InitLayout: function()
 	{
@@ -221,6 +222,7 @@ GHomepage = {
 			GHomepage.unBackgroundAppID = rgParams.unBackgroundAppID || 0;
 			GHomepage.bSteamOS = rgParams.bSteamOS || false;
 			GHomepage.eHWVariant = rgParams.eHWVariant || 0;
+			GHomepage.eGamingDeviceType = rgParams.eGamingDeviceType || 0;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -247,6 +249,7 @@ GHomepage = {
 						u: g_AccountID,
 						hwsos: Number( GHomepage.bSteamOS ),
 						hwvar: GHomepage.eHWVariant,
+						hwtype: GHomepage.eGamingDeviceType,
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -2910,6 +2913,7 @@ var g_bDisableAutoloader = false;
 							depth: ele.index || 0,
 							hwsos: Number( GHomepage.bSteamOS ),
 							hwvar: GHomepage.eHWVariant,
+							hwtype: GHomepage.eGamingDeviceType,
 						},
 						//dataType: 'json',
 						type: 'GET'

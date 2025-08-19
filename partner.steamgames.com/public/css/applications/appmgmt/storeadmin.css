@@ -1436,7 +1436,16 @@ video._1W2-3_i4cuGzBmocT-ZAk5 {
   flex-direction: column;
 }
 ._1JdiJTPLBYcAxWzLqjYV5P {
-  width: 25%;
+  background: #000;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+._1JdiJTPLBYcAxWzLqjYV5P button.DialogButton.Primary {
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .doWjXy-F7LwBxlzCUBAGC {
   position: relative;
@@ -2657,7 +2666,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   max-height: 38px;
 }
 .widestore ._78Qv2C95AM2DNCuLD5o8U {
-  width: 255px;
+  width: 275px;
 }
 html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
   width: 220px;

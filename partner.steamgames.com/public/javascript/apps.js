@@ -2122,9 +2122,6 @@ function ImageUploadCallback(jsonResponse)
 			case "clienticon":
 				id = "appIco";
 				break;
-			case "clienttga":
-				id = "appTga";
-				break;
 			case "workshop_header":
 				id = "workshop_header";
 				break;
@@ -3946,4 +3943,143 @@ function onAjaxFail( xhr )
 	} catch(e) {};
 	ShowAlertDialog( "Error", msg );
 }
+
+
+
+var g_ConsumerAppID = 0;
+
+function AddMMPartnerAppId()
+{
+	var appid = $('add_mmpartner_app_id').value;
+
+	if ( appid == '' || isNaN( appid ) )
+	{
+		alert( $('add_mmpartner_app_id').value + ' is not a valid app id' );
+		return;
+	}
+
+	try
+	{
+		new Ajax.Request('https://partner.steamgames.com/apps/addmmpartnerapp/' + g_ConsumerAppID,
+			{
+				method:'post',
+				parameters: { 'mmpartner_app_id' : appid, 'sessionid': g_sessionID },
+				onSuccess: function(transport)
+				{
+					if ( transport.responseText ){
+						try {
+							var result = transport.responseText.evalJSON(true);
+						} catch ( e ) {
+							// Failure
+							OnAddMMPartnerAppIdFailure( transport.responseText );
+						}
+
+						// Success...
+						if ( result.success == 1 )
+						{
+							OnAddMMPartnerAppIdSuccess( appid )
+							return;
+						}
+						else
+						{
+							OnAddMMPartnerAppIdFailure( transport.responseText );
+							return;
+						}
+					}
+
+								},
+				onFailure: function()
+				{
+					OnAddMMPartnerAppIdFailure( transport.responseText );
+				}
+			});
+	}
+	catch(e)
+	{
+		OnAddMMPartnerAppIdFailure( transport.responseText );
+	}
+}
+
+function OnAddMMPartnerAppIdSuccess( appid )
+{
+	appid = parseInt(appid, 10);
+	var app_row = $('mmpartner_app_' + appid );
+	if ( !app_row )
+	{
+		var app_table = $('mmpartner_app_table');
+		var app_row = app_table.insertRow();
+		var cell1 = app_row.insertCell(0);
+		var cell2 = app_row.insertCell(1);
+		cell1.innerHTML = appid;
+		cell2.innerHTML = '<a href="javascript:RemoveMMPartnerAppId(' + appid + ');">Remove</a>';
+	}
+}
+
+function OnAddMMPartnerAppIdFailure( sErrorText )
+{
+	alert( 'error adding new app publish permission'+sErrorText );
+}
+
+function RemoveMMPartnerAppId( appid )
+{
+	try
+	{
+
+		new Ajax.Request('https://partner.steamgames.com/apps/removemmpartnerapp/' + g_ConsumerAppID,
+			{
+				method:'post',
+				parameters: { 'mmpartner_app_id' : appid, 'sessionid': g_sessionID },
+				onSuccess: function(transport)
+				{
+					if ( transport.responseText ){
+						try {
+							var result = transport.responseText.evalJSON(true);
+						} catch ( e ) {
+							// Failure
+							OnRemoveMMPartnerAppIdFailure( transport.responseText );
+						}
+						// Success...
+						if ( result.success == 1 )
+						{
+							OnRemoveMMPartnerAppIdSuccess( appid )
+							return;
+						}
+						else
+						{
+							OnRemoveMMPartnerAppIdFailure( transport.responseText );
+							return;
+						}
+					}
+
+								},
+				onFailure: function()
+				{
+					OnRemoveMMPartnerAppIdFailure( transport.responseText );
+				}
+			});
+	}
+	catch(e)
+	{
+		OnRemoveMMPartnerAppIdFailure( transport.responseText );
+	}
+}
+
+function OnRemoveMMPartnerAppIdSuccess( appid )
+{
+	var app_table = $('mmpartner_app_table');
+	for ( var i = 0; i < app_table.rows.length; i++ )
+	{
+		if ( app_table.rows[i].id == 'mmpartner_app_' + appid )
+		{
+			app_table.deleteRow( i );
+			return;
+		}
+	}
+}
+
+function OnRemoveMMPartnerAppIdFailure( errortext )
+{
+	alert( 'error removing app partner'+errortext );
+}
+
 

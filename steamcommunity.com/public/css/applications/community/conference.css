@@ -2349,12 +2349,6 @@ div#footer {
   height: 16px;
   display: none;
 }
-html.responsive.touch
-  ._3tSqDwD1rkt0nwIB8025VK
-  ._19xFd3vdYEozXiTDzOEto9
-  ._1rjE02_5_HPWGT3UJXQKL2 {
-  top: 9px;
-}
 @media screen and (max-width: 500px) {
   html.responsive
     ._3tSqDwD1rkt0nwIB8025VK
@@ -2425,22 +2419,6 @@ html.responsive.touch
     .kxtN0yE4qv3o_wwBWnnLs {
     display: none;
   }
-  html.responsive.touch
-    ._3tSqDwD1rkt0nwIB8025VK
-    ._19xFd3vdYEozXiTDzOEto9.Hidden
-    ._22bby_AsedipJlq0-5qtmY {
-    width: 100vw;
-    padding-left: 5px;
-  }
-  html.responsive.touch
-    ._3tSqDwD1rkt0nwIB8025VK
-    ._19xFd3vdYEozXiTDzOEto9.Hidden
-    ._22bby_AsedipJlq0-5qtmY
-    .kxtN0yE4qv3o_wwBWnnLs {
-    display: block;
-    font-size: 12px;
-    margin-left: 6px;
-  }
 }
 @media screen and (max-width: 910px) and (max-width: 500px) {
   html.responsive
@@ -2489,10 +2467,6 @@ html.responsive.touch
     ._1rjE02_5_HPWGT3UJXQKL2:hover {
     cursor: pointer;
   }
-}
-html.responsive.touch ._3tSqDwD1rkt0nwIB8025VK ._19xFd3vdYEozXiTDzOEto9 {
-  top: -12px;
-  min-width: calc(100vw - 20px);
 }
 @media screen and (max-width: 500px) {
   html.responsive ._3tSqDwD1rkt0nwIB8025VK ._19xFd3vdYEozXiTDzOEto9 {
@@ -2593,10 +2567,6 @@ html.responsive.touch ._3tSqDwD1rkt0nwIB8025VK ._1qlknQargwyqHQhwj_8oum {
     margin-left: 50px;
     width: 100%;
   }
-}
-html.responsive.touch ._3tSqDwD1rkt0nwIB8025VK ._1qlknQargwyqHQhwj_8oum {
-  margin-left: 0px;
-  margin-top: 30px;
 }
 @media screen and (max-width: 500px) {
   html.responsive ._3tSqDwD1rkt0nwIB8025VK ._1qlknQargwyqHQhwj_8oum {
@@ -2763,12 +2733,6 @@ html.responsive.touch .oP_SPwwzov5nQN2TQUAEf {
 ._1HPPRdXNo8sgT-dXQ9h-5l ._1AbLqPiq2KJuEV09TbddQW ._3i2i50OjRZCY5qTtlLvN7G {
   width: 100%;
 }
-html.responsive.touch
-  ._1HPPRdXNo8sgT-dXQ9h-5l
-  ._1AbLqPiq2KJuEV09TbddQW
-  ._3i2i50OjRZCY5qTtlLvN7G {
-  display: none;
-}
 @media screen and (max-width: 500px) {
   html.responsive
     ._1HPPRdXNo8sgT-dXQ9h-5l
@@ -2779,13 +2743,6 @@ html.responsive.touch
 }
 ._1HPPRdXNo8sgT-dXQ9h-5l ._1AbLqPiq2KJuEV09TbddQW ._3iVf9n6tpBlwoSdiOW3Jhf {
   display: none;
-}
-html.responsive.touch
-  ._1HPPRdXNo8sgT-dXQ9h-5l
-  ._1AbLqPiq2KJuEV09TbddQW
-  ._3iVf9n6tpBlwoSdiOW3Jhf {
-  display: block;
-  width: 100%;
 }
 @media screen and (max-width: 500px) {
   html.responsive

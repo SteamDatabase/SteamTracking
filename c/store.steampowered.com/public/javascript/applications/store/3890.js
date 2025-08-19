@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Преглед по…",
 	"Menu_SearchBar_NoMatches": "Няма съответстващи артикули за текущото Ви запитване.",
 	"Menu_SearchBar_AdvancedSearch": "Разширено търсене",
+	"Menu_SearchBar_CategoryGameCount": "%1$s игри",
 	"Menu_Search": "Търсачка",
 	"Menu_Label": "Меню за магазина",
 	"ItemFlag_InLibrary": "В БИБЛИОТЕКАТА",

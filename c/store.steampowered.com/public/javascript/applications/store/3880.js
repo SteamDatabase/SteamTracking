@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "검색 기준...",
 	"Menu_SearchBar_NoMatches": "일치하는 검색 결과가 없습니다.",
 	"Menu_SearchBar_AdvancedSearch": "고급 검색",
+	"Menu_SearchBar_CategoryGameCount": "게임 %1$s개",
 	"Menu_Search": "검색",
 	"Menu_Label": "상점 메뉴",
 	"ItemFlag_InLibrary": "라이브러리에 있음",

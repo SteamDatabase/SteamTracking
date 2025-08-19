@@ -337,6 +337,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 	{
 		oElemState.bWantsHover = true;
 		var accountId = ( typeof g_AccountID !== 'undefined' ) && !rgHoverData['public'] ? g_AccountID : 0;
+		var languages = ( typeof g_Languages !== 'undefined' ) ? g_Languages : [];
 		var bPublic = rgHoverData['public'] || accountId == 0;
 		var strTargetPrefix = '';
 		var strUrlTarget = '';
@@ -375,13 +376,14 @@ function GameHover( elem, event, divHover, rgHoverData )
 
 		if ( !$HoverData.length && !oElemState.bAjaxRequestMade )
 		{
-			var rgAjaxParams = { u: accountId, l: 'english' };
+			var rgAjaxParams = { u: accountId, l: 'english', ls: languages };
 			if ( bPublic )
 			{
 				// is cc needed?
 				rgAjaxParams = {
 					/*cc: rgHoverData['cc'],*/
 					l: 'english',
+					ls: languages,
 					origin: self.origin
 				};
 			}

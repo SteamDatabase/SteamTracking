@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Просмотреть...",
 	"Menu_SearchBar_NoMatches": "По вашему запросу ничего не нашлось.",
 	"Menu_SearchBar_AdvancedSearch": "Расширенный поиск",
+	"Menu_SearchBar_CategoryGameCount": "Игр: %1$s",
 	"Menu_Search": "Поиск",
 	"Menu_Label": "Меню магазина",
 	"ItemFlag_InLibrary": "В БИБЛИОТЕКЕ",

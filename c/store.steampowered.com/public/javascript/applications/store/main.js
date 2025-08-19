@@ -166,10 +166,15 @@
         AdvancedSearch: "_2Cp17yynz2h_StEQZcNnqB",
         Active: "vHnThqOPQZvwPy0YyMOyR",
         CategorySuggestion: "_2tdhUFMMsjGr_BI7uMcoWy",
+        CreatorSuggestion: "_2XPIpbEqZoXb_YHkEZm_hP",
         TiledBackground: "_2dRxpZNISTpHLewxzJ7o9r",
         BackgroundGradient: "_2w-jD5qv9RsHiUz19AVLGO",
         Content: "NOctYARrXun3C2m8ZOA3u",
-        CategoryIcon: "_3852oj6diaYgwaA7_k2JEJ",
+        TagName: "_3pCOrLJqmsJ4tQlUamNYyl",
+        GameCount: "_3OXIIlPZdEJ8toS6in8CcY",
+        CreatorAvatar: "_1fWW6CwAeZNAqI9Fp0Mvpr",
+        CreatorName: "_3b2Xyt0JnMPVXPLPKWLdd-",
+        CategoryGridSuggestion: "pL9V4hzvI0RysTdCufdAS",
         NoMatches: "Cof2gdY95obJE9ekAvmbf",
       };
     },
@@ -918,6 +923,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./marketing_arabic.json": [83190, 9307],
         "./marketing_brazilian.json": [66864, 1065],
         "./marketing_bulgarian.json": [6383, 9650],
         "./marketing_czech.json": [26818, 7064],
@@ -965,6 +971,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./marketing_arabic.json": [83190, 9307],
         "./marketing_brazilian.json": [66864, 1065],
         "./marketing_bulgarian.json": [6383, 9650],
         "./marketing_czech.json": [26818, 7064],
@@ -36927,7 +36934,11 @@
               const _ = await _.GetItemsToFeature(_, _);
               if (!_.BSuccess()) throw _.GetErrorMessage();
               if (_) {
-                const { cacheStoreItemData: _, data_request: _ } = _,
+                const { cacheStoreItemData: _ } = _,
+                  _ = {
+                    ..._.data_request,
+                    apply_user_filters: !0,
+                  },
                   _ = (_) => _ && _(_, _);
                 _.Body()
                   .spotlights()
@@ -72930,10 +72941,14 @@
 	}
 ]`),
         _ = {};
-      (_.brazilian = () =>
+      (_.arabic = () =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 66864, 19))),
+          .then(__webpack_require__._.bind(__webpack_require__, 83190, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 66864, 19))),
         (_.bulgarian = () =>
           __webpack_require__
             ._("chunkid")
@@ -73636,7 +73651,21 @@
               : null;
       }
       function _(_) {
-        const { hubcategoryid: _, className: __webpack_require__ } = _,
+        switch (_) {
+          case "square":
+            return `${_._.STORE_CDN_URL}categories/image/`;
+          case "wide":
+            return `${_._.STORE_CDN_URL}categories/searchsuggestionsimage/`;
+          default:
+            return (0, _._)(_, `Unknown type: ${_}`), "";
+        }
+      }
+      function _(_) {
+        const {
+            hubcategoryid: _,
+            type: __webpack_require__ = "square",
+            className: _,
+          } = _,
           { data: _ } = (function () {
             const _ = (0, _._)(),
               _ = (0, _._)(),
@@ -73646,34 +73675,82 @@
           _ = _?.get(_);
         if (_)
           return _.createElement("img", {
-            className: __webpack_require__,
+            className: _,
             alt: "",
-            src: `${_._.STORE_CDN_URL}categories/image/category/${_.handle}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+            src: `${_(__webpack_require__)}/category/${_.handle}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
           });
       }
       function _(_) {
-        const { category: _, className: __webpack_require__ } = _;
+        const {
+          category: _,
+          type: __webpack_require__ = "square",
+          className: _,
+        } = _;
         return _.createElement("img", {
-          className: __webpack_require__,
+          className: _,
           alt: "",
-          src: `${_._.STORE_CDN_URL}categories/image/category/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+          src: `${_(__webpack_require__)}/category/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
         });
       }
       function _(_) {
-        const { tagid: _, className: __webpack_require__ } = _;
+        const {
+          tagid: _,
+          type: __webpack_require__ = "square",
+          className: _,
+        } = _;
         return _.createElement("img", {
-          className: __webpack_require__,
+          className: _,
           alt: "",
-          src: `${_._.STORE_CDN_URL}categories/image/tags/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+          src: `${_(__webpack_require__)}/tags/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
         });
       }
       function _(_) {
-        const { creatorid: _, className: __webpack_require__ } = _;
+        const {
+          creatorid: _,
+          type: __webpack_require__ = "square",
+          className: _,
+        } = _;
         return _.createElement("img", {
-          className: __webpack_require__,
+          className: _,
           alt: "",
-          src: `${_._.STORE_CDN_URL}categories/image/creator/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
+          src: `${_(__webpack_require__)}/creator/${_}?cc=${_._.COUNTRY}&l=${_._.LANGUAGE}`,
         });
+      }
+      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      function _(_, _) {
+        let _ = "0000000000000000000000000000000000000000";
+        var _;
+        "string" == typeof _
+          ? (_ = _)
+          : _ &&
+            ((_ = _),
+            (_ = [..._].map((_) => _.toString(16).padStart(2, "0")).join("")));
+        let _ = ".jpg";
+        "0000000000000000000000000000000000000000" === _ && (_ = _),
+          44 == _.length &&
+            ((_ = __webpack_require__.slice(-4)),
+            (_ = __webpack_require__.slice(0, 40)));
+        let _ = _._.AVATAR_BASE_URL;
+        switch (
+          (_ ||
+            ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (_ += __webpack_require__.slice(0, 2) + "/")),
+          (_ += _),
+          _)
+        ) {
+          case "X-Small":
+          case "Small":
+            break;
+          case "Medium":
+          case "MediumLarge":
+            _ += "_medium";
+            break;
+          case "Large":
+          case "X-Large":
+          case "FillArea":
+            _ += "_full";
+        }
+        return (_ += _), _;
       }
       const _ = {
           include_assets: !0,
@@ -73723,22 +73800,39 @@
               items: _.rgTextItems,
             })),
           _.rgSubSectionItems?.length &&
-            (_ = _.createElement(
-              _,
-              {
-                title: _.strSubSectionTitle,
-                horizontal: !0,
-              },
-              _.rgSubSectionItems.map(({ item_id: _ }, _) =>
-                _.createElement(_, {
-                  key: (0, _._)(_),
-                  itemid: _,
-                  index: _,
-                  active: "categories" == _ && _ == __webpack_require__,
-                  getMouseHandlers: _,
-                }),
-              ),
-            )),
+            (_ =
+              "recent" == _.eListType
+                ? _.createElement(
+                    _,
+                    {
+                      title: _.strSubSectionTitle,
+                      horizontal: !0,
+                    },
+                    _.rgSubSectionItems.map(({ item_id: _ }, _) =>
+                      _.createElement(_, {
+                        key: (0, _._)(_),
+                        itemid: _,
+                        index: _,
+                        active: "categories" == _ && _ == __webpack_require__,
+                        getMouseHandlers: _,
+                      }),
+                    ),
+                  )
+                : _.createElement(
+                    _,
+                    {
+                      title: _.strSubSectionTitle,
+                    },
+                    _.rgSubSectionItems.map(({ item_id: _ }, _) =>
+                      _.createElement(_, {
+                        key: (0, _._)(_),
+                        itemid: _,
+                        index: _,
+                        active: "categories" == _ && _ == __webpack_require__,
+                        getMouseHandlers: _,
+                      }),
+                    ),
+                  )),
           _.eListType)
         ) {
           case "suggestions":
@@ -73914,12 +74008,11 @@
           _.useEffect(() => {
             __webpack_require__(_ || _);
           }, [_]);
-          const _ = _.rgMainItems.length,
-            _ = _.rgSubSectionItems?.length || 0,
-            _ =
+          const _ =
               ("apps" == _.activeSection
                 ? _.rgMainItems
                 : _.rgSubSectionItems) || [],
+            _ = "recent" == _.eListType,
             _ = _.useCallback(
               (_, _) => ({
                 onMouseEnter: () => {
@@ -73943,30 +74036,40 @@
               }),
               [],
             ),
+            _ = (_) => "categories" == _ && _,
+            _ = (_, _ = !0) => {
+              switch (_) {
+                case "apps":
+                  return _.rgMainItems.length;
+                case "categories":
+                  const _ = _.rgSubSectionItems?.length || 0;
+                  return _ && _ ? (_ > 0 ? 1 : 0) : _;
+                case "advancedsearch":
+                  return 1;
+                default:
+                  return (0, _._)(_, `unknown section ${_}`), 0;
+              }
+            },
+            _ = (_, _ = !1) => {
+              const _ = ["apps", "categories", "advancedsearch"];
+              let _ =
+                (__webpack_require__.indexOf(_) + (_ ? -1 : 1) + _.length) %
+                _.length;
+              return (
+                0 == _(_[_]) && (_ = (_ + (_ ? -1 : 1) + _.length) % _.length),
+                0 == _(_[_]) ? _ : _[_]
+              );
+            },
             _ = _.useRef(void 0);
           _.current = (_) => {
-            if (0 == _) return !1;
             switch (_.key) {
               case "ArrowUp":
                 return (
                   _(({ activeSection: _, iActiveIndex: _ }) => {
-                    let _ =
-                        (void 0 === _ ||
-                        "categories" == _ ||
-                        "advancedsearch" == _
-                          ? 0
-                          : _) - 1,
+                    let _ = (void 0 === _ || _(_) ? 0 : _) - 1,
                       _ = _;
                     return (
-                      _ < 0 &&
-                        ("categories" == _
-                          ? (_ = _ > 0 ? "apps" : "advancedsearch")
-                          : "advancedsearch" == _
-                            ? _ > 0
-                              ? (_ = "categories")
-                              : _ > 0 && (_ = "apps")
-                            : "apps" == _ && (_ = "advancedsearch"),
-                        (_ = "apps" == _ ? _ - 1 : 0)),
+                      _ < 0 && ((_ = _(_, !0)), (_ = _(_) - 1)),
                       {
                         activeSection: _,
                         iActiveIndex: _,
@@ -73982,16 +74085,7 @@
                     let _ = (_ ?? -1) + 1,
                       _ = _;
                     return (
-                      _ >= ("apps" == _ ? _ : -1) &&
-                        ("categories" == _
-                          ? (_ = "advancedsearch")
-                          : "advancedsearch" == _
-                            ? _ > 0
-                              ? (_ = "apps")
-                              : _ > 0 && (_ = "categories")
-                            : "apps" == _ &&
-                              (_ = _ > 0 ? "categories" : "advancedsearch"),
-                        (_ = 0)),
+                      _ >= _(_) && ((_ = _(_)), (_ = 0)),
                       {
                         activeSection: _,
                         iActiveIndex: _,
@@ -74002,31 +74096,40 @@
                   !0
                 );
               case "ArrowLeft":
-                return (
-                  _((_) =>
-                    "categories" == _.activeSection
-                      ? {
-                          activeSection: "categories",
-                          iActiveIndex: ((_.iActiveIndex ?? 0) + _ - 1) % _,
+                if (_(_.activeSection))
+                  return (
+                    _((_) => {
+                      const { activeSection: _, iActiveIndex: _ } = _;
+                      if (_(_)) {
+                        const _ = _(_, !1);
+                        return {
+                          activeSection: _,
+                          iActiveIndex: ((_ ?? 0) + _ - 1) % _,
                           eLastInputSource: "keyboard",
-                        }
-                      : _,
-                  ),
-                  "categories" == _.activeSection
-                );
+                        };
+                      }
+                      return _;
+                    }),
+                    !0
+                  );
+                break;
               case "ArrowRight":
-                return (
-                  _((_) =>
-                    "categories" == _.activeSection
-                      ? {
+                if (_(_.activeSection))
+                  return (
+                    _((_) => {
+                      const { activeSection: _, iActiveIndex: _ } = _;
+                      if (_(_.activeSection)) {
+                        return {
                           activeSection: "categories",
-                          iActiveIndex: ((_.iActiveIndex ?? 0) + 1) % _,
+                          iActiveIndex: ((_ ?? 0) + 1) % _(_, !1),
                           eLastInputSource: "keyboard",
-                        }
-                      : _,
-                  ),
-                  "categories" == _.activeSection
-                );
+                        };
+                      }
+                      return _;
+                    }),
+                    !0
+                  );
+                break;
               case "Enter": {
                 const {
                   activeSection: _,
@@ -74207,42 +74310,152 @@
           });
         }),
         _ = _.memo(function (_) {
-          const {
-              itemid: _,
-              index: __webpack_require__,
-              getMouseHandlers: _,
-              active: _,
-            } = _,
+          const { itemid: _, ...__webpack_require__ } = _,
             { data: _ } = (0, _._)(_),
             _ = (0, _._)(`${_._.STORE_BASE_URL}${_?.store_url_path || "/"}`);
-          return _.createElement(
-            "a",
-            {
-              className: _()(_.CategorySuggestion, _ && _.Active),
-              href: _,
-              ..._("categories", __webpack_require__),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.TiledBackground,
-              },
-              _.createElement(_, {
-                itemid: _,
-              }),
-              _.createElement("div", {
-                className: _.BackgroundGradient,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.Content,
-              },
-              _.createElement("div", null, _?.name),
-            ),
-          );
+          return "creatorid" in _
+            ? _.createElement(
+                _,
+                {
+                  className: _.CreatorSuggestion,
+                  itemid: _,
+                  url: _,
+                  ...__webpack_require__,
+                },
+                _.createElement(_, {
+                  itemid: _,
+                }),
+              )
+            : _.createElement(
+                _,
+                {
+                  itemid: _,
+                  url: _,
+                  ...__webpack_require__,
+                },
+                _.createElement(_, {
+                  itemid: _,
+                }),
+              );
         });
+      function _(_) {
+        const {
+          url: _,
+          itemid: __webpack_require__,
+          grid: _ = !1,
+          className: _,
+          index: _,
+          getMouseHandlers: _,
+          active: _,
+          children: _,
+        } = _;
+        return _.createElement(
+          "a",
+          {
+            className: _()(
+              _.CategorySuggestion,
+              _ && _.CategoryGridSuggestion,
+              _,
+              _ && _.Active,
+            ),
+            href: _,
+            ..._("categories", _),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.TiledBackground,
+            },
+            _.createElement(_, {
+              itemid: __webpack_require__,
+              type: _ ? "square" : "wide",
+            }),
+            _.createElement("div", {
+              className: _.BackgroundGradient,
+            }),
+          ),
+          _,
+        );
+      }
+      function _(_) {
+        const { itemid: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _?.clan_avatar &&
+            _.createElement("img", {
+              className: _.CreatorAvatar,
+              src: _(_.clan_avatar, "Medium"),
+              alt: "",
+            }),
+          _.createElement(
+            "div",
+            {
+              className: _.CreatorName,
+            },
+            __webpack_require__?.name,
+          ),
+          _.createElement(_, {
+            storeItem: __webpack_require__,
+          }),
+        );
+      }
+      function _(_) {
+        const { itemid: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _.TagName,
+            },
+            __webpack_require__?.name,
+          ),
+          _.createElement(_, {
+            storeItem: __webpack_require__,
+          }),
+        );
+      }
+      function _(_) {
+        const { storeItem: _ } = _;
+        return _ && _.game_count
+          ? _.createElement(
+              "div",
+              {
+                className: _.GameCount,
+              },
+              _(
+                "#Menu_SearchBar_CategoryGameCount",
+                _.game_count.toLocaleString(),
+              ),
+            )
+          : null;
+      }
+      const _ = _.memo(function (_) {
+        const { itemid: _, ...__webpack_require__ } = _,
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}${_?.store_url_path || "/"}`);
+        return _.createElement(
+          _,
+          {
+            itemid: _,
+            url: _,
+            grid: !0,
+            ...__webpack_require__,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Content,
+            },
+            _.createElement("div", null, _?.name),
+          ),
+        );
+      });
       function _(_) {
         const { getMouseHandlers: _, active: __webpack_require__ } = _,
           _ = (function (_) {
@@ -77135,11 +77348,12 @@
           {
             className: _()(_.MenuButton, _ && _.Active),
             focusClassName: _.ButtonFocus,
-            onCancelButton: _,
-            onOKButton: _,
-            onMouseEnter: _,
-            onClick: _,
             ref: _,
+            onClick: _,
+            onOKButton: _,
+            onCancelButton: _,
+            onMouseEnter: _,
+            onGamepadFocus: _,
             "aria-expanded": !!_,
             onKeyDown: _,
           },
@@ -77291,7 +77505,9 @@
                       _(), __webpack_require__(_.term), _();
                       break;
                     case "close_search_results":
-                      _();
+                      window.setTimeout(() => {
+                        document.hasFocus() || _();
+                      }, 1);
                   }
               } catch (_) {}
             },
@@ -79054,6 +79270,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 2218],
         "./main_brazilian.json": [52333, 1606],
         "./main_bulgarian.json": [21334, 4893],
         "./main_czech.json": [26312, 67],
@@ -79101,6 +79318,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 2218],
         "./main_brazilian.json": [52333, 1606],
         "./main_bulgarian.json": [21334, 4893],
         "./main_czech.json": [26312, 67],
@@ -79149,7 +79367,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 75396), _((_._ = _));
+      return (_ = 2204), _((_._ = _));
       var _;
     });
     _._();

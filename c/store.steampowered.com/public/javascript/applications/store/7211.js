@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Περιήγηση ανά…",
 	"Menu_SearchBar_NoMatches": "Κανένα στοιχείο δεν ταιριάζει με την αναζήτησή σας.",
 	"Menu_SearchBar_AdvancedSearch": "Σύνθετη αναζήτηση",
+	"Menu_SearchBar_CategoryGameCount": "%1$s παιχνίδια",
 	"Menu_Search": "Αναζήτηση",
 	"Menu_Label": "Μενού Καταστήματος",
 	"ItemFlag_InLibrary": "ΣΤΗ ΣΥΛΛΟΓΗ",

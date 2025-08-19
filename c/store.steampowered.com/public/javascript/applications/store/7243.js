@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "เปิดหาตาม...",
 	"Menu_SearchBar_NoMatches": "ไม่มีไอเท็มใดตรงกับคิวรีของคุณ",
 	"Menu_SearchBar_AdvancedSearch": "การค้นหาขั้นสูง",
+	"Menu_SearchBar_CategoryGameCount": "%1$s เกม",
 	"Menu_Search": "ค้นหา",
 	"Menu_Label": "เมนูร้านค้า",
 	"ItemFlag_InLibrary": "อยู่ในคลัง",

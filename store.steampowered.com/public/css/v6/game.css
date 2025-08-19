@@ -549,6 +549,10 @@ img.game_header_image_full {
     margin-bottom: 15px;
 }
 
+.widestore .notice_box_content {
+	width: auto;
+}
+
 .notice_box_content b {
 	font-weight: normal;
 	color: #f47b20;
@@ -3056,6 +3060,8 @@ img.package_header {
 	font-size: 14px;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 	gap: 8px;
 }
 
@@ -6688,7 +6694,7 @@ a.open_in_steam_body:hover {
 }
 
 .widestore #game_highlights .leftcol {
-	width: 820px;
+	width: 824px;
 	float: unset;
 }
 

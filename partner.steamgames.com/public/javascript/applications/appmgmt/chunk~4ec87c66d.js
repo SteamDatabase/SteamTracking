@@ -238,6 +238,7 @@
         EmailStatusTodo: "_3bvmesOZFGCGwyytDy6Z-u",
         EmailTitle: "ZubnXh2yMM06gevGzvi3b",
         Selected: "UaNa5L5y0mtCFnTnZnBSy",
+        ErrorSpan: "_3K9BSwReOfTVu8eZqwC9NC",
       };
     },
     83271: (e) => {
@@ -33210,7 +33211,7 @@
                 })
               : n.createElement(
                   "span",
-                  null,
+                  { className: (0, v.A)({ [dr.ErrorSpan]: !s }) },
                   s ? s.accounts_emailed : "error loading estimate",
                 ),
           ),
@@ -33224,7 +33225,7 @@
                 })
               : n.createElement(
                   "span",
-                  null,
+                  { className: (0, v.A)({ [dr.ErrorSpan]: !s }) },
                   s
                     ? s.accounts_not_emailed_opted_out
                     : "error loading estimate",

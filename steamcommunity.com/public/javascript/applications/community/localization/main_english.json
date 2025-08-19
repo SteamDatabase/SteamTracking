@@ -2784,6 +2784,7 @@
     "AdvancedSearch_Search": "Search",
     "AdvancedSearch_AppSelect_Placeholder": "Select a game...",
     "AdvancedSearch_AppSelect_YourGames": "Your recently played games with items",
+    "AdvancedSearch_AppSelect_PopularGames": "Popular games with items",
     "AdvancedSearch_AppSelect_Clear": "Clear selection",
     "AdvancedSearch_TextSearch_Placeholder": "Search...",
     "AdvancedSearch_TypeSwitch_InGame": "In Game Items",
@@ -2798,5 +2799,8 @@
     "AdvancedSearch_CustomFilter_Other": "Other",
     "AdvancedSearch_FilterGeneric_Placeholder": "Filter...",
     "AdvancedSearch_AppSelect_FilterPlaceholder": "Filter by name...",
-    "AdvancedSearch_BetaTag": "Beta feature - Give feedback"
+    "AdvancedSearch_BetaTag": "Beta feature - Give feedback",
+    "AdvancedSearch_TextSearch_Tooltip": "Search across Market item names...",
+    "AdvancedSearch_Beta_OptOut": "Switch to old filters",
+    "AdvancedSearch_CSContainers_Tooltip": "Weapon Cases, Sticker Capsules, Souvenir Packages, etc"
 }

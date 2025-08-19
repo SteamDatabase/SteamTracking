@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "絞り込み検索...",
 	"Menu_SearchBar_NoMatches": "検索条件に一致するアイテムはありません。",
 	"Menu_SearchBar_AdvancedSearch": "高度な検索",
+	"Menu_SearchBar_CategoryGameCount": "%1$sゲーム",
 	"Menu_Search": "検索",
 	"Menu_Label": "ストアメニュー",
 	"ItemFlag_InLibrary": "ライブラリ内",

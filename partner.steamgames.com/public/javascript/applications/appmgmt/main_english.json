@@ -982,6 +982,7 @@
     "StoreAdmin_UploadError_Unknown": "There was an unexpected error during upload.  Please try again later.",
     "StoreAdmin_UploadError_Generic": "There was an error during upload: \"%1$s\"",
     "StoreAdmin_UploadError_UploadOKButEditFailed": "Upload appeared to succeed but was unable to edit the document.  Please try using the toolbar to insert the image.",
+    "StoreAdmin_CustomImages_Title": "Your custom images:",
     "StoreAdmin_EditAltText_Button": "Edit Accessibility Text (Alt Text)",
     "StoreAdmin_EditAltText_Title": "Image Accessibility Text (Alt Text)",
     "StoreAdmin_EditAltText_Desc": "Please describe what is happening and shown in each image below for players that use screen readers.",

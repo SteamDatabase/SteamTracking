@@ -2026,13 +2026,20 @@ input.filter_search_box:focus {
 }
 
 .market_advancedsearch_bottombuttons {
-	text-align: right;
 	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 30px;
+}
+
+.market_bottombuttons_optin {
+	flex: 1;
+	cursor: pointer;
 }
 
 .market_advancedsearch_bottombuttons > div {
 	vertical-align: middle;
-	margin-left: 30px;
 }
 
 .market_app_selector {

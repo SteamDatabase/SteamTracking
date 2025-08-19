@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Procházet podle...",
 	"Menu_SearchBar_NoMatches": "Vašemu zadání neodpovídají žádné produkty.",
 	"Menu_SearchBar_AdvancedSearch": "Pokročilé vyhledávání",
+	"Menu_SearchBar_CategoryGameCount": "Hry: %1$s",
 	"Menu_Search": "Vyhledávání",
 	"Menu_Label": "Nabídka obchodu",
 	"ItemFlag_InLibrary": "V KNIHOVNĚ",

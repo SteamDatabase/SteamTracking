@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Sorteren op ...",
 	"Menu_SearchBar_NoMatches": "Er zijn geen resultaten voor je zoekopdracht.",
 	"Menu_SearchBar_AdvancedSearch": "Geavanceerd zoeken",
+	"Menu_SearchBar_CategoryGameCount": "%1$s spellen",
 	"Menu_Search": "Zoeken",
 	"Menu_Label": "Winkelmenu",
 	"ItemFlag_InLibrary": "IN BIBLIOTHEEK",

@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Göz at...",
 	"Menu_SearchBar_NoMatches": "Sorgunuzla eşleşen öğe bulunamadı.",
 	"Menu_SearchBar_AdvancedSearch": "Gelişmiş Arama",
+	"Menu_SearchBar_CategoryGameCount": "%1$s oyun",
 	"Menu_Search": "Ara",
 	"Menu_Label": "Mağaza menüsü",
 	"ItemFlag_InLibrary": "KÜTÜPHANEDE",

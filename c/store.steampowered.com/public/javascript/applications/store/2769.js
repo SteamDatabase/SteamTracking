@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "浏览关键词：",
 	"Menu_SearchBar_NoMatches": "没有符合您查询条件的物品。",
 	"Menu_SearchBar_AdvancedSearch": "高级搜索",
+	"Menu_SearchBar_CategoryGameCount": "%1$s 款游戏",
 	"Menu_Search": "搜索",
 	"Menu_Label": "商店菜单",
 	"ItemFlag_InLibrary": "在库中",

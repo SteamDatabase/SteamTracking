@@ -143,7 +143,7 @@ html.tablet #main_content .two_column.left {
 	display: flex;
 	flex-direction: column;
 	position: fixed;
-	top: 0px;
+	top: var( --store-menu-overlap-height, 46px );
 	left: 0px;
 	height: 100%;
 	background-color: var(--gpStoreDarkerGrey);

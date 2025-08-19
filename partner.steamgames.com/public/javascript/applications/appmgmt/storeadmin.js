@@ -1553,6 +1553,11 @@
               "div",
               { className: N.AltTextBtn },
               u.createElement(
+                "p",
+                null,
+                (0, P.we)("#StoreAdmin_CustomImages_Title"),
+              ),
+              u.createElement(
                 p.jn,
                 { onClick: _ },
                 (0, P.we)("#StoreAdmin_EditAltText_Button"),

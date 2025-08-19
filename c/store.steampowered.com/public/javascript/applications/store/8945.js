@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "Parcourir par ...",
 	"Menu_SearchBar_NoMatches": "Aucun article ne correspond à votre recherche.",
 	"Menu_SearchBar_AdvancedSearch": "Recherche avancée",
+	"Menu_SearchBar_CategoryGameCount": "%1$s jeux",
 	"Menu_Search": "Rechercher",
 	"Menu_Label": "Menu du magasin",
 	"ItemFlag_InLibrary": "DANS LA BIBLIOTHÈQUE",

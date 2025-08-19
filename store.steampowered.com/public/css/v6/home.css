@@ -1775,6 +1775,12 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	color: #67c1f5;
 	text-align: center;
 }
+
+.home_page_content .more_content_title,
+.home_page_content .more_content_desc {
+	text-align: center;
+}
+
 #content_callout .more_content_title {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -1785,7 +1791,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	text-align: center;
 }
 #content_callout .more_content_title span {
-
 	padding: 0px 10px;
 }
 #content_callout .more_content_desc {
@@ -1967,7 +1972,7 @@ body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn
 	}
 
 	html.responsive body.v6 .home_content_ctn .page_content_ctn.dark {
-		padding: 0 2%;
+		padding: 20px 2% 0 2%;
 	}
 
 	html.responsive .home_content.twowide a.home_content_item {
@@ -2313,7 +2318,7 @@ html.responsive .store_main_capsule,
 	}
 
 	html.responsive.tablet body.v6 .home_content_ctn .page_content_ctn.dark {
-		padding: 0 2%;
+		padding: 20px 2% 0 2%;
 	}
 
 	html.responsive.tablet .home_content.twowide a.home_content_item {
@@ -5779,6 +5784,15 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 .top_new_releases.below_tabs
 {
 	margin-top: 50px;
+}
+
+
+@media screen and (max-width: 910px)
+{
+	.top_new_releases.below_tabs
+	{
+		margin-top: 0px;
+	}
 }
 
 html.gpnav_active .maincap:focus-within

@@ -1490,7 +1490,7 @@
           n = t.GID,
           a = D.b.InitFromClanID((0, G.H)()),
           l = (0, L.a)(),
-          s = (0, R.m)(l, (0, G.H)(), n),
+          s = (0, R.my)(l, (0, G.H)(), n),
           i = s.isSuccess ? s.data : null,
           c = t.GetNameWithFallback(0),
           o = (0, r.useMemo)(() => {
@@ -1559,6 +1559,14 @@
                       href: `${Y.TS.STORE_BASE_URL}meetsteam/attendance?gid=${n}&accountid=${Y.iA.accountid}`,
                     },
                     "QR Page",
+                  ),
+                  " | ",
+                  r.createElement(
+                    "a",
+                    {
+                      href: `${Y.TS.STORE_BASE_URL}meetsteam/attendeelist?gid=${n}`,
+                    },
+                    "Attendance List",
                   ),
                   r.createElement(tt, { gid: n }),
                   r.createElement(at, { gid: n }),

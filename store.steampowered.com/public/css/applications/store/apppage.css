@@ -2470,7 +2470,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 .widestore ._292IWiCTro5jiTmIxiDfyc {
   width: 275px;
-  height: 158px;
+  height: auto;
   margin: 0;
 }
 html.responsive.touch .widestore ._292IWiCTro5jiTmIxiDfyc {
@@ -2513,10 +2513,6 @@ html.responsive.touch
   border-radius: 4px;
   padding: 16px;
 }
-html.responsive.touch ._2fynndXXlBKZiRaoG9GuDP {
-  flex-direction: column;
-  border-radius: 0px;
-}
 @media screen and (max-width: 500px) {
   html.responsive ._2fynndXXlBKZiRaoG9GuDP {
     flex-direction: column;
@@ -2528,12 +2524,6 @@ html.responsive.touch ._2fynndXXlBKZiRaoG9GuDP {
 }
 ._2fynndXXlBKZiRaoG9GuDP .mcjC8_8ivZdyhU3QKlFrN ._2Ti5cIvl7SlIoK7eSIapbL {
   width: 219px;
-}
-html.responsive.touch
-  ._2fynndXXlBKZiRaoG9GuDP
-  .mcjC8_8ivZdyhU3QKlFrN
-  ._2Ti5cIvl7SlIoK7eSIapbL {
-  width: 100%;
 }
 @media screen and (max-width: 500px) {
   html.responsive
@@ -2562,9 +2552,6 @@ html.responsive.touch
   border: #000 2px solid;
   border-radius: 2px;
   padding-left: 10px;
-}
-html.responsive.touch ._2fynndXXlBKZiRaoG9GuDP .RccYVBGN6ikWjuKE_Ba6N {
-  display: none;
 }
 @media screen and (max-width: 500px) {
   html.responsive ._2fynndXXlBKZiRaoG9GuDP .RccYVBGN6ikWjuKE_Ba6N {

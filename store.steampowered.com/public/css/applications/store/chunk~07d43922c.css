@@ -2054,9 +2054,6 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   padding: 0px var(--gpSpace-Gutter);
   max-width: unset;
 }
-html.responsive.touch ._2cFtCV85TXR2hWfKk_kTIR {
-  margin-bottom: 8px;
-}
 @media screen and (max-width: 500px) {
   html.responsive ._2cFtCV85TXR2hWfKk_kTIR {
     margin-bottom: 8px;
@@ -2086,10 +2083,6 @@ html.responsive.touch .saHqNV-7xE9caBAreUZiX {
     padding-left: 15px;
     font-size: 32px;
   }
-}
-html.responsive.touch .saHqNV-7xE9caBAreUZiX {
-  font-size: 36px;
-  padding-left: 0px;
 }
 @media screen and (max-width: 500px) {
   html.responsive .saHqNV-7xE9caBAreUZiX {
@@ -3458,13 +3451,13 @@ html.responsive.touch ._3CGy1EaqFgVMH1Atf-TZBY ._3r0QUass81YGH3Z60FLMEt {
     box-sizing: border-box;
   }
 }
-html.tablet ._3CGy1EaqFgVMH1Atf-TZBY ._3r0QUass81YGH3Z60FLMEt {
+html.responsive.tablet ._3CGy1EaqFgVMH1Atf-TZBY ._3r0QUass81YGH3Z60FLMEt {
   margin: 0px;
   padding: 0px;
   scroll-padding: 0px 64px;
 }
 @media screen and (max-width: 910px) {
-  ._3CGy1EaqFgVMH1Atf-TZBY ._3r0QUass81YGH3Z60FLMEt {
+  html.responsive ._3CGy1EaqFgVMH1Atf-TZBY ._3r0QUass81YGH3Z60FLMEt {
     margin: 0px;
     padding: 0px;
     scroll-padding: 0px 64px;
@@ -3481,19 +3474,22 @@ html.tablet ._3CGy1EaqFgVMH1Atf-TZBY ._3r0QUass81YGH3Z60FLMEt {
   padding: 16px 0px 16px;
   max-width: 95vw;
 }
-html.tablet
+html.responsive.tablet
   html.responsive.touch
   ._3CGy1EaqFgVMH1Atf-TZBY
   ._3dRLIZQcZZZferry8YKpd_ {
   scroll-padding: 0px 64px;
 }
 @media screen and (max-width: 910px) {
-  html.responsive.touch ._3CGy1EaqFgVMH1Atf-TZBY ._3dRLIZQcZZZferry8YKpd_ {
+  html.responsive
+    html.responsive.touch
+    ._3CGy1EaqFgVMH1Atf-TZBY
+    ._3dRLIZQcZZZferry8YKpd_ {
     scroll-padding: 0px 64px;
   }
 }
 @media screen and (max-width: 910px) {
-  html.tablet
+  html.responsive.tablet
     html.responsive
     ._3CGy1EaqFgVMH1Atf-TZBY
     ._3dRLIZQcZZZferry8YKpd_ {
@@ -3501,7 +3497,10 @@ html.tablet
   }
 }
 @media screen and (max-width: 910px) and (max-width: 910px) {
-  html.responsive ._3CGy1EaqFgVMH1Atf-TZBY ._3dRLIZQcZZZferry8YKpd_ {
+  html.responsive
+    html.responsive
+    ._3CGy1EaqFgVMH1Atf-TZBY
+    ._3dRLIZQcZZZferry8YKpd_ {
     scroll-padding: 0px 64px;
   }
 }

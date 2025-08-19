@@ -93,6 +93,7 @@
 	"Menu_SearchBar_BrowseBy": "瀏覽依據…",
 	"Menu_SearchBar_NoMatches": "沒有符合您查詢條件的項目。",
 	"Menu_SearchBar_AdvancedSearch": "進階搜尋",
+	"Menu_SearchBar_CategoryGameCount": "%1$s 款遊戲",
 	"Menu_Search": "搜尋",
 	"Menu_Label": "商店選單",
 	"ItemFlag_InLibrary": "於收藏庫內",
