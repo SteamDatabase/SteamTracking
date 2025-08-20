@@ -104,8 +104,8 @@
 	}
 
 	/* hide the developer, publisher, released sections since we're using a different layout for mobile */
-	html.responsive .glance_ctn .glance_mid_ctn .release_date,
-	html.responsive .glance_ctn .glance_mid_ctn .dev_row,
+	html.responsive .glance_ctn .glance_ctn_responsive_left .release_date,
+	html.responsive .glance_ctn .glance_ctn_responsive_left .dev_row,
 	html.responsive .details_block .dev_row {
 		display: none;
 	}

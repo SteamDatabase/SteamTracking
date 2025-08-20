@@ -204,8 +204,8 @@ html.tablet .glance_ctn {
 }
 
 /* hide the developer, publisher, released sections since we're using a different layout for tablet */
-html.tablet .glance_ctn .glance_mid_ctn .release_date,
-html.tablet .glance_ctn .glance_mid_ctn .dev_row,
+html.tablet .glance_ctn .glance_ctn_responsive_left .release_date,
+html.tablet .glance_ctn .glance_ctn_responsive_left .dev_row,
 html.tablet .details_block .dev_row {
 	display: none;
 }
