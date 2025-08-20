@@ -1793,6 +1793,7 @@
         const { reg: _, eventModel: __webpack_require__ } = _,
           _ = new _._(_.steamid).GetAccountID(),
           [_] = (0, _._)(_.userReg.accountid),
+          [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)(!1),
           _ = _.userReg,
@@ -1808,14 +1809,16 @@
             (_ = _.group_id),
             (_ = _.session_id),
             (0, _._)({
-              mutationFn: async ({ rgGuests: _ }) => {
+              mutationFn: async ({ bIncludeSelf: _, rgGuests: _ }) => {
                 const _ = new FormData();
-                _.append("sessionid", _._.SESSIONID),
-                  _.append("gid", _),
-                  _.append("accountid", "" + _),
-                  _.append("meetsteam_group_id", "" + _),
-                  _.append("meetsteam_session_id", "" + _),
-                  _?.length && _.append("guests", _.join("|"));
+                __webpack_require__.append("sessionid", _._.SESSIONID),
+                  __webpack_require__.append("gid", _),
+                  __webpack_require__.append("accountid", "" + _),
+                  __webpack_require__.append("meetsteam_group_id", "" + _),
+                  __webpack_require__.append("meetsteam_session_id", "" + _),
+                  __webpack_require__.append("include_self", "" + (_ ? 1 : 0)),
+                  _?.length &&
+                    __webpack_require__.append("guests", _.join("|"));
                 const _ = `${_._.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
                   _ = await _().post(_, _, {
                     withCredentials: !0,
@@ -1846,8 +1849,8 @@
                 },
                 _.createElement(_._, {
                   label: "Attendee: " + _.name || 0,
-                  checked: Boolean(_),
-                  controlled: !0,
+                  checked: _,
+                  onChange: _,
                 }),
                 Boolean(_.guest_names?.length > 0) &&
                   _.createElement(
@@ -1888,6 +1891,7 @@
               null,
               _.createElement(_, {
                 closeModal: _,
+                bIncludeSelf: _,
                 rgGuestsAttending: _,
                 fnMarkAttendance: _,
                 fnOnSuccess: () => _(!0),
@@ -1899,7 +1903,8 @@
       function _(_) {
         const {
             closeModal: _,
-            rgGuestsAttending: __webpack_require__,
+            bIncludeSelf: __webpack_require__,
+            rgGuestsAttending: _,
             fnMarkAttendance: _,
             fnOnSuccess: _,
           } = _,
@@ -1919,7 +1924,8 @@
                 onOK: async () => {
                   _.fnSetLoading(!0),
                     _.mutateAsync({
-                      rgGuests: __webpack_require__,
+                      bIncludeSelf: __webpack_require__,
+                      rgGuests: _,
                     })
                       .then((_) => {
                         _

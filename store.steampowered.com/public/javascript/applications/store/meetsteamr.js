@@ -306,10 +306,10 @@
     35400: (e, t, n) => {
       "use strict";
       n.d(t, {
-        DV: () => D,
+        DV: () => I,
         Fq: () => g,
         OC: () => S,
-        OM: () => I,
+        OM: () => D,
         Sp: () => v,
         Tn: () => E,
         W3: () => f,
@@ -576,7 +576,7 @@
       function S() {
         return { fnOpenDoor: h.Get().OpenDoor };
       }
-      function D() {
+      function I() {
         const [e, t] = (0, i.useState)(h.Get().BIsInitialized());
         return (
           (0, i.useEffect)(() => {
@@ -586,18 +586,18 @@
           e
         );
       }
-      function I(e) {
-        const t = D(),
+      function D(e) {
+        const t = I(),
           [n, s] = (0, i.useState)(t ? h.Get().BIsDoorOpened(e) : void 0);
         return (0, u.hL)(h.Get().GetDoorStateChangeCallback(e), s), n;
       }
       function E() {
-        const e = D(),
+        const e = I(),
           [t, n] = (0, i.useState)(e ? h.Get().GetLargestDoorOpenIndex() : _);
         return (0, u.hL)(h.Get().GetLargestDoorIndexChange(), n), t;
       }
       function f() {
-        const e = D(),
+        const e = I(),
           [t, n] = (0, i.useState)(!!e && h.Get().BIsAnyDoorOpened());
         return (0, u.hL)(h.Get().GetIsAnyDoorOpenChange(), n), t;
       }
@@ -615,12 +615,12 @@
     34824: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Fb: () => I,
+        Fb: () => D,
         Jz: () => E,
         M$: () => S,
         Tb: () => h,
         YH: () => _,
-        tO: () => D,
+        tO: () => I,
       });
       var s,
         a = n(34629),
@@ -846,10 +846,10 @@
       function S(e, t) {
         return g.Get().GetChangeCallback(e, t);
       }
-      function D(e) {
+      function I(e) {
         g.Get().AppCapsuleFound(e);
       }
-      function I() {
+      function D() {
         return g.Get().GetAnyNonMaterializedInsertionRequest();
       }
       function E(e) {
@@ -944,7 +944,7 @@
           });
         return n ? n.get(e) : null;
       }
-      const D = new (r())(
+      const I = new (r())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -989,23 +989,23 @@
             })(e),
           { cache: !1 },
         ),
-        I = "avatarandpersonas";
+        D = "avatarandpersonas";
       function E(e) {
         const { data: t, isLoading: n } = (0, l.I)({
-          queryKey: [I, e],
-          queryFn: () => D.load(e),
+          queryKey: [D, e],
+          queryFn: () => I.load(e),
         });
         return [t, n];
       }
       function f(e) {
         const t = (0, c.jE)(),
           { data: n, isLoading: s } = (0, l.I)({
-            queryKey: [I, e],
+            queryKey: [D, e],
             queryFn: async () => {
-              const n = await D.loadMany(e);
+              const n = await I.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [I, new u.b(e.steamid).GetAccountID()];
+                  const n = [D, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -1436,9 +1436,9 @@
             )
           : null;
       }
-      var D = n(51614),
-        I = n(41735),
-        E = n.n(I),
+      var I = n(51614),
+        D = n(41735),
+        E = n.n(D),
         f = n(62216),
         v = n(44165),
         C = n(30470),
@@ -1650,40 +1650,42 @@
         const { reg: t, eventModel: n } = e,
           a = new z.b2(t.steamid).GetAccountID(),
           [o] = (0, A.KT)(t.userReg.accountid),
-          [i, l] = (0, s.useState)([]),
-          [c, u] = (0, s.useState)(!1),
-          d = t.userReg,
-          { group: m, session: p } = b(
+          [i, l] = (0, s.useState)(!0),
+          [c, u] = (0, s.useState)([]),
+          [d, m] = (0, s.useState)(!1),
+          p = t.userReg,
+          { group: g, session: _ } = b(
             n.jsondata.meet_steam_groups,
             t.group_id,
             t.session_id,
           ),
-          [g, _, h] = (0, P.uD)(),
-          S =
-            ((I = n.GID),
-            (f = a),
-            (v = t.group_id),
-            (y = t.session_id),
-            (0, D.n)({
-              mutationFn: async ({ rgGuests: e }) => {
-                const t = new FormData();
-                t.append("sessionid", C.TS.SESSIONID),
-                  t.append("gid", I),
-                  t.append("accountid", "" + f),
-                  t.append("meetsteam_group_id", "" + v),
-                  t.append("meetsteam_session_id", "" + y),
-                  e?.length && t.append("guests", e.join("|"));
-                const n = `${C.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
-                  s = await E().post(n, t, { withCredentials: !0 });
-                return 1 == s?.data?.success;
+          [h, S, D] = (0, P.uD)(),
+          f =
+            ((v = n.GID),
+            (y = a),
+            (w = t.group_id),
+            (M = t.session_id),
+            (0, I.n)({
+              mutationFn: async ({ bIncludeSelf: e, rgGuests: t }) => {
+                const n = new FormData();
+                n.append("sessionid", C.TS.SESSIONID),
+                  n.append("gid", v),
+                  n.append("accountid", "" + y),
+                  n.append("meetsteam_group_id", "" + w),
+                  n.append("meetsteam_session_id", "" + M),
+                  n.append("include_self", "" + (e ? 1 : 0)),
+                  t?.length && n.append("guests", t.join("|"));
+                const s = `${C.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
+                  a = await E().post(s, n, { withCredentials: !0 });
+                return 1 == a?.data?.success;
               },
             }));
-        var I, f, v, y;
+        var v, y, w, M;
         return s.createElement(
           "div",
           null,
-          s.createElement(V, { group: m, session: p }),
-          Boolean(c)
+          s.createElement(V, { group: g, session: _ }),
+          Boolean(d)
             ? s.createElement(
                 "div",
                 { className: F().CheckedIn },
@@ -1693,21 +1695,21 @@
                 "div",
                 { className: F().RegisteredUsers },
                 s.createElement(G.Yh, {
-                  label: "Attendee: " + d.name || 0,
-                  checked: Boolean(a),
-                  controlled: !0,
+                  label: "Attendee: " + p.name || 0,
+                  checked: i,
+                  onChange: l,
                 }),
-                Boolean(d.guest_names?.length > 0) &&
+                Boolean(p.guest_names?.length > 0) &&
                   s.createElement(
                     s.Fragment,
                     null,
-                    d.guest_names.map((e) =>
+                    p.guest_names.map((e) =>
                       s.createElement(G.Yh, {
                         key: t.group_id + "_" + t.session_id + "_" + e,
                         label: "Guest Name: " + e,
-                        checked: i.includes(e),
+                        checked: c.includes(e),
                         onChange: (t) => {
-                          l((n) =>
+                          u((n) =>
                             t
                               ? n.includes(e)
                                 ? n
@@ -1720,21 +1722,22 @@
                   ),
                 s.createElement(
                   G.jn,
-                  { onClick: _ },
+                  { onClick: S },
                   "Check in selected people",
                 ),
               ),
           s.createElement(
             L.E,
-            { active: g },
+            { active: h },
             s.createElement(
               r.tH,
               null,
               s.createElement(W, {
-                closeModal: h,
-                rgGuestsAttending: i,
-                fnMarkAttendance: S,
-                fnOnSuccess: () => u(!0),
+                closeModal: D,
+                bIncludeSelf: i,
+                rgGuestsAttending: c,
+                fnMarkAttendance: f,
+                fnOnSuccess: () => m(!0),
               }),
             ),
           ),
@@ -1743,14 +1746,15 @@
       function W(e) {
         const {
             closeModal: t,
-            rgGuestsAttending: n,
-            fnMarkAttendance: a,
-            fnOnSuccess: o,
+            bIncludeSelf: n,
+            rgGuestsAttending: a,
+            fnMarkAttendance: o,
+            fnOnSuccess: r,
           } = e,
-          r = (0, B.vs)();
-        return r.bLoading
+          i = (0, B.vs)();
+        return i.bLoading
           ? s.createElement(B.Hh, {
-              state: r,
+              state: i,
               strDialogTitle: (0, _.we)("#Saving"),
               closeModal: t,
             })
@@ -1761,21 +1765,21 @@
                 strTitle: (0, _.we)("#Button_Submit"),
                 bAllowFullSize: !0,
                 onOK: async () => {
-                  r.fnSetLoading(!0),
-                    a
-                      .mutateAsync({ rgGuests: n })
+                  i.fnSetLoading(!0),
+                    o
+                      .mutateAsync({ bIncludeSelf: n, rgGuests: a })
                       .then((e) => {
                         e
-                          ? (o(),
-                            r.fnSetStrSuccess(
+                          ? (r(),
+                            i.fnSetStrSuccess(
                               "Success! This person has been checked in.",
                             ))
-                          : r.fnSetStrError(
+                          : i.fnSetStrError(
                               (0, _.we)("#Login_Error_Network_Description"),
                             );
                       })
                       .catch(() =>
-                        r.fnSetStrError(
+                        i.fnSetStrError(
                           (0, _.we)("#Login_Error_Network_Description"),
                         ),
                       );
@@ -2082,12 +2086,12 @@
                 : 0),
             0,
           ),
-          [h, S, I] = (0, P.uD)(),
+          [h, S, D] = (0, P.uD)(),
           y =
             ((b = t.GID),
             (w = a.group_id),
             (M = o.id),
-            (0, D.n)({
+            (0, I.n)({
               mutationFn: async ({ nCapacity: e }) => {
                 const t = new FormData();
                 t.append("sessionid", C.TS.SESSIONID),
@@ -2140,7 +2144,7 @@
                   r.tH,
                   null,
                   s.createElement(ce, {
-                    closeModal: I,
+                    closeModal: D,
                     nCapacity: o.max_capacity ?? 0,
                     fnUpdateCapacity: y,
                     fnOnSuccess: () => window.location.reload(),
