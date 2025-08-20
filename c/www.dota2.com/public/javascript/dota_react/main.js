@@ -1186,6 +1186,121 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Tooltip: "xmSKwZMwh_krcVR4nHVzF",
+        CarouselFade: "_1XxeHWmqDjH7zi69Oekdb1",
+        StandardButton: "T2G2_0t6tzSxhXjT7-oDk",
+        ButtonText: "_1U4_6mYW0VNpnTNMne5_N1",
+        Icon: "_2BNyZrBffEpsVesF3tILyv",
+        Play: "_1mVosJ-CdctpJDK6Ruq2Yw",
+        SteamLogo: "_1lUqxpVoFCXQvdcNMrTcSy",
+        ToolTip: "LMU_Yl5SKdGKN7C1_fCT2",
+        PlayerReportTooltip: "_3xKh8FXlezKA0T9eC1dr6m",
+        TextStyleDisplay: "_9iyAUgVKeN3VKB8Tb7L-w",
+        TextStyleSmallHeading: "_1AZPViqsOZuBzogtw2IyJz",
+        TextStyleHeading: "_1KDAF1LCvruow5mzkwhsL1",
+        TextStyleSectionHeading: "_2wQrzzh0A4JyQU3LNSFF6W",
+        TextStyleOverline: "_1rIAXh00D2iaIzWTwdnYJJ",
+        TextStyleButton: "_2utfoPGepMpFYTspGC9hjj",
+        TextStyleCaption: "_1JOTbjMig1mCnlrqNfbfMx",
+        TextStyleBody: "_15tNiWiiFaqlo38lQTVzFj",
+        TextStyleDescription: "_2N34w_juDnVzVy1EnuFWnB",
+        TextStyleThumbnailBody: "_1FytFtum86KHVTNzPg2hOk",
+        TextStyleFootnote: "_1HiFI6ll6LfU97F0fA_SRn",
+        MajorHeaderPreTitle: "_2NGLFyWpACLA9aks4acv35",
+        MajorHeaderTitle: "_2oJQfyWE7-rEVJp_SuUGqF",
+        MajorHeaderSubtitle: "_1uhhy5Ly8bRl4xbBLdM-dx",
+        TextColorYellow: "_3Tt0ZVdwfENsiB53Zl6U5P",
+        TextColorOrange: "_3bePbMaSpDJyd3jfbXQUWf",
+        TextColorRed: "nDOcfCQy7jlSs1aI7LnLX",
+        TextColorDarkRed: "_1YbMVHcrj-la9tAqGPzd6W",
+        TextColorBlack: "O_vEe_J3rgBhy7N1u91JP",
+        TextColorDarkerGold: "_3jYh6nEqzhKTXeeh5saLcL",
+        TextColorDarkGold: "_3boW3gtjtQTZ13wYVh-PfP",
+        TextColorGold: "_3dF6yip8U2b7nnbbG4rZqV",
+        TextColorLightGold: "_39xUgCuhBtF8Ukvzf19bzk",
+        TextColorLighterGold: "_2U485d31gCK6JiRQWjjzSV",
+        TextColorLightestGold: "_1P8pztwE5yYHLvrS8qRFGn",
+        TextColorGrey: "_1YfUd1kp4n46GqtswKvwrK",
+        TextColorLightGrey: "_3l1Z2h98zOayDaulaxyEEQ",
+        TextColorLighterGrey: "_2BBg4Qtb__LbIdK_WuzCrl",
+        TextColorLightestGrey: "_3Uz6rl3zVfUsKek-2B_xZx",
+        TextColorWhite: "_2A5zRq_Enl6ZaoGeghouKq",
+        TextColorGoldGlow: "_1USKs6sryXfAm23OI8fASh",
+        TextColorGreenGlow: "_2BRO9neQQKZXffwon_93et",
+        TextColorYellowShadowGradient: "_2DSEsELD_xOWt5knTSkwSV",
+        TextColorYellowGradient: "_3GmboHA_vAyufHxPkQySvD",
+        TextColorFVArcanaGradient: "_1bR-3QFfMbFA7Qi8F9NUH6",
+        TextColorPurpleGradient: "_3yzUWuE1ZQQxY4sRN0AVg8",
+        TextColorGreenGradient: "_10QQ_USO737cwT2H8A7oie",
+        TextColorBlueGradient: "Y9vxkfsQIsRBw1M_hFV4C",
+        TextColorPhantomGradient: "_33mfZGY6UFtXkDO8PW8WtI",
+        TextColorBlueShadowGradient: "LTMcx-9xitV0LgIFP8oOv",
+        TextColorGoldGradient: "QgJCMSJHYh9eB6HkLB3so",
+        InternationalCountdownContainer: "_3Jd7XRFiN009CFTgoT2Vs5",
+        InternationalCountdown: "_27P_JsOC68FcLcIAn8CK39",
+        SubDividerTop: "_1my8zYsHpVzi9vLEJg-ItW",
+        SubDividerBottom: "_3mkTFvBCKBZIHuE72LZI-u",
+        CountdownPreHeader: "_2Qx4Eabt-RPEIXlj51icv6",
+        CountdownHeader: "_3K7F8CtwE-7Thu5gCopzAD",
+        CountdownTimer: "_2DZuqadxPqd5mnVzN5IsKD",
+        CountdownDesc: "_eO6bLInXdwlroUVstSnD",
+        CountdownLogo: "_3leTb0E80TqzDGBKlvz6Dz",
+        ViewScheduleButton: "z-QHpUSEuL3IENeb7FhFW",
+        SocialIcons: "_3m2hn597deasT5WSoFW8Kn",
+        IconImg: "_1BnfV39fozLXuV277NwhQU",
+        SocialMedia: "_1_v1-V3jxp_6-c-42QW3Zc",
+        KeepUpHeader: "_2usI12Z2SEkvimL-C7F_0p",
+        InternationalPrizeSplits: "_3gw6h8oKLSA7buIloDPvvW",
+        DividerTop: "aYwUx7SUL4E8cXry2RGx0",
+        PrizeGridContain: "_2KYsHmgfSz9AZP6agJIc0H",
+        PrizePoolLabel: "_32qSk6XkasDvA9avj1UTx8",
+        PrizePoolValue: "_2dz9cYABRsCkSCoFSvIDpt",
+        Title: "_3-0TCEA6drUBuAPDYJB0ll",
+        Underline: "_3Wg5WWm3wTGiT41A_f57eo",
+        Grid: "_39t59SwbH0mnM4F6XTdgOA",
+        GridRow: "_2aApny5lB8AGZ9Hg734WZU",
+        GridEntry: "_2NTt3dbuNe8MBHfkHWryh_",
+        PrizeValue: "_3DCKRDtJhILRD5udy1d-vI",
+        Place: "_2Lx80FwMuzzWNUwP6Tp6tV",
+        TheInternational2025Plugs: "_254cw7_w1u8yUvEhqvOWlQ",
+        PlugsSmallHead: "_2rggVcUUDvuy8Kue7T41qq",
+        PlugsHeader: "pFPdnYZF2BJu1-EPVubqg",
+        PlugsDesc: "_17w2RxwcBKYwGzG2UVRPga",
+        BattlePassPlug: "_3esF_0DEfupw91LDlCCdWr",
+        BPPlugTextContainer: "_18Nv4a6GU1W3zYolVqJH9t",
+        BPPlugText: "_1hl0yfxpYGLTUtqZpek0Bk",
+        TI13BPOverline: "_3_mOQgMMf_kkV-56TcnzpS",
+        TI13BPHeader: "_2AP1Opq0ubF8hrpuHEfVl2",
+        TI13BPDetails: "_3jSJE37KaD07nfWOmgWDwi",
+        BPPlugBtn: "LMJWtXCZvOXOxvp1_0xDs",
+        StickersPlug: "_1ZDsPoCZz2JXVJp9IOkcSK",
+        StickersPlugImgContainer: "UwdskqI3jVkVVvlG2r8oE",
+        StickersPlugImg: "Ni1LE-dLzMLYc_0eKnBu9",
+        StickersPlugTextContainer: "_3ZZjMdfRi9YWYanbURLds2",
+        TI11BPOverline: "yDicPHCiQfVOPkdFTHV2z",
+        TI11BPHeader: "_26U5d_dqvUVkZJzQJv4soW",
+        TI11BPDetails: "_3SrOgus6QWJEvTsQ7hvlWd",
+        FantasyPlug: "_1Ph399l1BfOdL2M7Cv13eK",
+        PlugContainers: "_2aaKkSsoIgyEDQQHPRdhSm",
+        FantasyContainer: "_2gOsTH18E6YNlejWOkClKk",
+        PlugImg: "_3UwtxXWcZV05QnHGziFFLC",
+        PlugText: "_xh2e2o0ITiKYty8AYHUO",
+        SupportersClubContainer: "_2tKXUlttTuF7oFKU8JuNVq",
+        PredictionsContainer: "_26_fwVjj72O1rXPwtPN2Tl",
+        BPPlugImgContainer: "_2sKF4ujaeWy-sA57okdZT8",
+        BPPlugImg: "_3jfABccWiuKyPGlz9-8ASx",
+        InternationalTeamListTeam: "_3TkEvZLDiWRZafSK9JM5XJ",
+        TeamTextContainer: "_3FTUjE5eE9CMrqlr73JnqD",
+        TeamRegion: "_2fKUhEHnSTOQxeYj5vKhwX",
+        TeamName: "_32__ym6iITwSdXmAtvjVST",
+        MagentaTeamLogo: "hpI5WHItMVQMAAfLhWU3U",
+        DividerPronounced: "vok2KgNAECkOC0pQbjQ4O",
+        InternationalTeamList: "_P-lkLIiCQ6A-KKakSScI",
+        TeamGrid: "_3PBBkx4_gipewdeF3fdmMt",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DPCLeagueStandingsSummary: "_77L-f2bctzgAGnPYefelI",
         Header: "oXqZZjQWaW1OyiXso9MIc",
         Label: "_1xuqr06QI6LSmBsvdPnH8A",
@@ -3035,6 +3150,13 @@
         TI13CenterBox: "_3y3srlm169jw1WlTRLCwXQ",
         TI13Season: "_3cLPrvobvEkmO6l7j6lC9T",
         TI13PrizePoolBox: "n8Ev-iqifncyo1-CXZD8H",
+        TI14Logo: "_2dAZMfbkzJaBFiDURqn4dl",
+        DPCHeaderTI2025: "_39fiZSDzfp4-nKGOTMFk7l",
+        TI14BannerContainer: "_299BgSvrVe5r7sp9OhbBwE",
+        TI14BannerContent: "_3g8f62ftDgBy4LSt7-XeTI",
+        TI14CenterBox: "_2ZamEdxtFPZEoFWZy0vvhJ",
+        TI14Season: "_3k60pPos5WXYaJUo3CzMED",
+        TI14PrizePoolBox: "_3cf1riAJeMcuatgnx2w6Se",
       };
     },
     chunkid: (module) => {
@@ -4169,6 +4291,7 @@
         FieldDescription: "kxDRYTvr4WHr-TDTrNk0f",
         ModalPosition: "_1A0Q4dfS2-MkS3uF_wiuNP",
         _: "_3_qSDvnKE5DHbAfbTWKuiQ",
+        FooterVisible: "_2AnPFoKoy2vC1k7nHAOklK",
         WithStandardPadding: "_3KUshs_DW3zQQ1mbsMMkV9",
         NoHeaderPadding: "HEGHgbW0fxagxFhTKt3_M",
         ModalClickToDismiss: "_39ylkqAXS6h3RoELysoA3Z",
@@ -7048,7 +7171,7 @@
           video: _,
         }) => {
           const _ = (0, _.useContext)(_._),
-            _ = (0, _.useRef)();
+            _ = (0, _.useRef)(void 0);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -7250,7 +7373,7 @@
         },
         _ = ({ video: _, index: _ }) => {
           const _ = (0, _.useContext)(_._),
-            _ = (0, _.useRef)();
+            _ = (0, _.useRef)(void 0);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -13117,7 +13240,7 @@
         }) => {
           const _ = (0, _.useContext)(_._),
             _ = _(),
-            _ = (0, _.useRef)();
+            _ = (0, _.useRef)(void 0);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -14281,7 +14404,7 @@
           ),
         _ = ({ filename: _, index: _ }) => {
           const _ = (0, _.useContext)(_._),
-            _ = (0, _.useRef)();
+            _ = (0, _.useRef)(void 0);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -14401,7 +14524,7 @@
         },
         _ = ({ heroName: _, index: _ }) => {
           const _ = (0, _.useContext)(_._),
-            _ = (0, _.useRef)();
+            _ = (0, _.useRef)(void 0);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -20142,6 +20265,7 @@
               _._.INTERNATIONAL_2023_QUALIFIERS,
               _._.INTERNATIONAL_2023,
               _._.INTERNATIONAL_2024,
+              _._.INTERNATIONAL_2025,
             ].reverse();
           let _ = {
             year: "numeric",
@@ -20172,7 +20296,8 @@
                 let _ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.jpg )`;
                 (0, _._)(_)
                   ? (_ = `url( ${_._.CDN_URL}apps/dota2/images/leagues/${_}/images/image_8.png )`)
-                  : _ == _._.INTERNATIONAL_2025 &&
+                  : (_ == _._.INTERNATIONAL_2024 ||
+                      _ == _._.INTERNATIONAL_2025) &&
                     (_ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.png )`);
                 let _ = null;
                 if ((0, _._)(_)) {
@@ -20401,7 +20526,7 @@
       })(_ || (_ = {}));
       const _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)(!1),
-            _ = (0, _.useRef)(),
+            _ = (0, _.useRef)(void 0),
             _ = _.options.findIndex((_) => _.selectedOption == _?.value);
           !(function (_, _) {
             (0, _.useEffect)(() => {
@@ -21261,7 +21386,7 @@
           }, []);
           const _ = _.is_event_completed && _.event_type != _._.EXTERNAL,
             _ = _.event == _._.INTERNATIONAL_2025,
-            _ = _(1725260400);
+            _ = _(1756969200);
           let { days: _ } = _;
           return _.createElement(
             "div",
@@ -30669,6 +30794,958 @@
         );
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      const _ = 1756972800,
+        _ = (0, _._)(() => {
+          const _ = _();
+          return _._.Get().GetEventInfo(_).event != _._.INTERNATIONAL_2025
+            ? null
+            : _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().SocialMedia),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().TextStyleOverline,
+                      _().KeepUpHeader,
+                    ),
+                  },
+                  (0, _._)("#ti11_bp_social_title"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().SocialIcons),
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://twitter.com/dota2ti",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_twitter.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://facebook.com/dota2/",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_fb.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://instagram.com/dota2",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_insta.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://twitch.tv/directory/game/Dota%202",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_twitch.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://youtube.com/user/dota2",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_yt.png`,
+                    }),
+                  ),
+                ),
+              );
+        }),
+        _ =
+          ((0, _._)(() => {
+            const _ = _(),
+              _ = _._.Get().GetEventInfo(_);
+            if (_.event != _._.INTERNATIONAL_2024) return null;
+            const _ = _._.Get().GetLeagueData(_, _.leagues[0].league_id);
+            let _ = [];
+            const _ = _?.prize_pool?.total_prize_pool || 0;
+            return (
+              _?.prize_pool.prize_split_pct_x100.forEach((_) =>
+                _.push(
+                  `$${(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5)).toLocaleString()}`,
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().InternationalPrizeSplits,
+                },
+                _.createElement("div", {
+                  className: _().DividerTop,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().PrizeGridContain,
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "1500",
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().PrizePoolLabel,
+                    },
+                    (0, _._)("#dpc_total_prize_pool"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().PrizePoolValue,
+                    },
+                    _ > 0 ? "$" + _.toLocaleString() : "",
+                  ),
+                  _.createElement("div", {
+                    className: _().Underline,
+                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Title,
+                    },
+                    (0, _._)("#dpc_placement_prizes"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Grid,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().GridRow,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[0] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_1"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().GridRow,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[1] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_2"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[2] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_3"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[3] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_4"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().GridRow,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[4] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_5"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[5] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_6"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[6] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_7"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[7] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_8"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().GridRow,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[8] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_9"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[9] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_10"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[10] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_11"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[11] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_12"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[12] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_13"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().GridRow,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[13] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_14"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[14] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_15"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[15] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_16"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[16] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_17"),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().GridEntry,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().PrizeValue,
+                          },
+                          _ ? _[17] : "",
+                          " ",
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Place,
+                          },
+                          (0, _._)("#place_18"),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            );
+          }),
+          (0, _._)(() => {
+            const _ = _();
+            return _._.Get().GetEventInfo(_).event != _._.INTERNATIONAL_2025
+              ? null
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().BPPlugImgContainer,
+                    },
+                    _.createElement("img", {
+                      className: _().BPPlugImg,
+                      src: `${_._.IMG_URL}international2024/esports_site/footer_bg01.png`,
+                    }),
+                    _.createElement(_, null),
+                  ),
+                );
+          }),
+          (0, _._)(() => {
+            const _ = _(),
+              _ = _._.Get().GetEventInfo(_);
+            if (_.event != _._.INTERNATIONAL_2025) return null;
+            _._.Get().GetLeagueData(_, _.leagues[0].league_id);
+            const _ = _(_);
+            return _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().InternationalCountdownContainer),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().InternationalCountdown,
+                },
+                _.createElement("div", {
+                  className: (0, _._)(_().SubDividerTop),
+                }),
+                !_ &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(
+                          _().TextStyleOverline,
+                          _().CountdownPreHeader,
+                        ),
+                      },
+                      (0, _._)("#ti14_countdown_preheader"),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(
+                          _().TextStyleOverline,
+                          _().CountdownHeader,
+                        ),
+                      },
+                      (0, _._)("#ti14_countdown_header"),
+                    ),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().TextStyleBody,
+                      _().TextColorLighterGrey,
+                      _().CountdownDesc,
+                    ),
+                  },
+                  (0, _._)("#ti14_countdown_desc"),
+                ),
+                !_ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _().CountdownTimer,
+                        _().TextStyleDisplay,
+                      ),
+                    },
+                    _.createElement(_, {
+                      timestampNoMs: _,
+                    }),
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().SocialIcons),
+                    },
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://twitter.com/dota2ti",
+                      },
+                      _.createElement("img", {
+                        className: _().IconImg,
+                        src: `${_._.IMG_URL}international2023/icons/social_twitter.png`,
+                      }),
+                    ),
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://facebook.com/dota2/",
+                      },
+                      _.createElement("img", {
+                        className: _().IconImg,
+                        src: `${_._.IMG_URL}international2023/icons/social_fb.png`,
+                      }),
+                    ),
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://instagram.com/dota2",
+                      },
+                      _.createElement("img", {
+                        className: _().IconImg,
+                        src: `${_._.IMG_URL}international2023/icons/social_insta.png`,
+                      }),
+                    ),
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://twitch.tv/directory/game/Dota%202",
+                      },
+                      _.createElement("img", {
+                        className: _().IconImg,
+                        src: `${_._.IMG_URL}international2023/icons/social_twitch.png`,
+                      }),
+                    ),
+                    _.createElement(
+                      "a",
+                      {
+                        href: "https://youtube.com/user/dota2",
+                      },
+                      _.createElement("img", {
+                        className: _().IconImg,
+                        src: `${_._.IMG_URL}international2023/icons/social_yt.png`,
+                      }),
+                    ),
+                  ),
+                _.createElement("div", {
+                  className: (0, _._)(_().SubDividerBottom),
+                }),
+              ),
+            );
+          })),
+        _ = (0, _._)(
+          ({ nTeamID: _, strName: _, strRegion: __webpack_require__ }) =>
+            _.createElement(
+              "div",
+              {
+                className: _().InternationalTeamListTeam,
+                "data-aos": "fade-up",
+                "data-aos-duration": "2500",
+              },
+              _.createElement("div", {
+                className: _().MagentaTeamLogo,
+                style: {
+                  backgroundImage: `url( ${_._.IMG_URL}international2025/teamlogos/${_}.png )`,
+                },
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().TeamTextContainer),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().TeamName,
+                      _().TextColorWhite,
+                      _().TextStyleHeading,
+                    ),
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().TeamRegion,
+                      _().TextStyleSmallHeading,
+                    ),
+                  },
+                  (0, _._)(__webpack_require__),
+                ),
+              ),
+            ),
+        ),
+        _ = (0, _._)(() => {
+          const _ = _();
+          if (_._.Get().GetEventInfo(_).event != _._.INTERNATIONAL_2025)
+            return null;
+          const _ = [
+            {
+              nTeamID: 36,
+              strTeamName: "Natus Vincere",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 2163,
+              strTeamName: "Team Liquid",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 7119388,
+              strTeamName: "Team Spirit",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 7554697,
+              strTeamName: "Nigma Galaxy",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 7732977,
+              strTeamName: "BOOM Esports",
+              strTeamRegion: "#dpc_region_sea",
+            },
+            {
+              nTeamID: 8255888,
+              strTeamName: "BB Team",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 8261500,
+              strTeamName: "Xtreme Gaming",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 8291895,
+              strTeamName: "Tundra Esports",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 8599101,
+              strTeamName: "Gaimin Gladiators",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 9247354,
+              strTeamName: "Team Falcons",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 9303484,
+              strTeamName: "Heroic",
+              strTeamRegion: "#dpc_region_sa",
+            },
+            {
+              nTeamID: 9467224,
+              strTeamName: "Aurora Gaming",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 9572001,
+              strTeamName: "PVISION",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 9640842,
+              strTeamName: "Team Tidebound",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 9651185,
+              strTeamName: "Wildcard",
+              strTeamRegion: "#dpc_region_na",
+            },
+            {
+              nTeamID: 9691969,
+              strTeamName: "Team Nemesis",
+              strTeamRegion: "#dpc_region_sea",
+            },
+          ];
+          return (
+            (function (_) {
+              for (let _ = _.length - 1; _ > 0; _--) {
+                let _ = Math.floor(Math.random() * (_ + 1)),
+                  _ = _[_];
+                (_[_] = _[_]), (_[_] = _);
+              }
+            })(_),
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("div", {
+                className: (0, _._)(_().DividerPronounced),
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().InternationalTeamList,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().TextStyleOverline, _().Title),
+                  },
+                  (0, _._)("#dpc_participating_teams"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().TeamGrid,
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "1500",
+                  },
+                  _.map((_) =>
+                    _.createElement(_, {
+                      key: _.nTeamID,
+                      nTeamID: _.nTeamID,
+                      strName: _.strTeamName,
+                      strRegion: _.strTeamRegion,
+                    }),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().TextStyleOverline,
+                      _().KeepUpHeader,
+                    ),
+                  },
+                  (0, _._)("#ti14_social_title"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().SocialIcons),
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://twitter.com/dota2ti",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_twitter.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://facebook.com/dota2/",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_fb.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://instagram.com/dota2",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_insta.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://twitch.tv/directory/game/Dota%202",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_twitch.png`,
+                    }),
+                  ),
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://youtube.com/user/dota2",
+                    },
+                    _.createElement("img", {
+                      className: _().IconImg,
+                      src: `${_._.IMG_URL}international2023/icons/social_yt.png`,
+                    }),
+                  ),
+                ),
+              ),
+            )
+          );
+        }),
+        _ = (0, _._)(() =>
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_, null),
+            _.createElement(_, null),
+          ),
+        );
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = (0, _._)(() => {
         const _ = _(),
           { nLeagueID: _, nNodeID: __webpack_require__ } =
@@ -31702,7 +32779,7 @@
         }),
         _ = (0, _._)(({ bLeft: _, nAccountID: _ }) => {
           const _ = _._.Get().GetWatchPageContext(),
-            _ = (0, _.useRef)(),
+            _ = (0, _.useRef)(void 0),
             _ = _._.Get().getItemList(),
             _ = _._.Get().GetLeagueNode(_.nLeagueID, _.nNodeID),
             _ =
@@ -32949,6 +34026,7 @@
             {
               className: _().DPCHomePage,
             },
+            _.createElement(_, null),
             _.createElement(_, null),
             _.createElement(_, null),
             _.createElement(_, null),
@@ -36541,28 +37619,36 @@
             ),
           );
         }),
-        _ =
-          ((0, _._)(() => {
-            const _ = _();
-            if (_ != _._.INTERNATIONAL_2025) return null;
-            const _ = _._.Get().GetEventInfo(_);
-            if (_.event != _._.INTERNATIONAL_2025) return null;
-            const _ = _._.Get().GetLeagueData(_, _.leagues[0].league_id),
-              _ = _?.prize_pool?.total_prize_pool || 0;
-            return _.createElement(
+        _ = (0, _._)(() => {
+          const _ = _();
+          if (_ != _._.INTERNATIONAL_2025) return null;
+          const _ = _._.Get().GetEventInfo(_);
+          if (_.event != _._.INTERNATIONAL_2025) return null;
+          const _ = _._.Get().GetLeagueData(_, _.leagues[0].league_id),
+            _ = _?.prize_pool?.total_prize_pool || 0;
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement("img", {
+              className: _().TI14Logo,
+              src: `${_._.IMG_URL}international2025/ti2025_logo.png`,
+              "data-aos": "zoom-out",
+              "data-aos-duration": "1500",
+            }),
+            _.createElement(
               "div",
               {
-                className: _().DPCHeaderTI2024,
+                className: _().DPCHeaderTI2025,
               },
               _.createElement(
                 "div",
                 {
-                  className: _().TI13BannerContainer,
+                  className: _().TI14BannerContainer,
                 },
                 _.createElement(
                   "div",
                   {
-                    className: _().TI13BannerContent,
+                    className: _().TI14BannerContent,
                     "data-aos": "zoom-out",
                     "data-aos-duration": "1500",
                   },
@@ -36589,12 +37675,12 @@
                           className: _().EventPhaseDates,
                         },
                         _.createElement(_(), {
-                          date: 17256096e5,
+                          date: 17569728e5,
                           format: "MMM DD",
                         }),
                         " - ",
                         _.createElement(_(), {
-                          date: 17259912e5,
+                          date: 1757268e6,
                           format: "DD",
                         }),
                       ),
@@ -36603,7 +37689,7 @@
                         {
                           className: _().EventPhaseVenue,
                         },
-                        (0, _._)("#ti13_online"),
+                        (0, _._)("#ti14_online"),
                       ),
                     ),
                     _.createElement(
@@ -36616,7 +37702,7 @@
                         {
                           className: _().EventPhaseTitle,
                         },
-                        (0, _._)("#dpc_finals"),
+                        (0, _._)("#dpc_ti_intro_title"),
                       ),
                       _.createElement(
                         "div",
@@ -36624,12 +37710,12 @@
                           className: _().EventPhaseDates,
                         },
                         _.createElement(_(), {
-                          date: 17262144e5,
+                          date: 17575776e5,
                           format: "MMM DD",
                         }),
                         " - ",
                         _.createElement(_(), {
-                          date: 17264232e5,
+                          date: 17578728e5,
                           format: "DD",
                         }),
                       ),
@@ -36638,38 +37724,31 @@
                         {
                           className: _().EventPhaseVenue,
                         },
-                        (0, _._)("#ti13_main_event_venue"),
+                        (0, _._)("#ti14_main_event_venue"),
                       ),
                     ),
                   ),
                   _.createElement(
                     "div",
                     {
-                      className: _().TI13CenterBox,
+                      className: _().TI14CenterBox,
                     },
-                    _.createElement(
-                      _._,
-                      {
-                        _: {
-                          state: {
-                            bAutoScroll: !0,
-                          },
-                          pathname: _._.dpc_watch((0, _._)(_)),
+                    _.createElement(_._, {
+                      _: {
+                        state: {
+                          bAutoScroll: !0,
                         },
-                        className: _().CenterContent,
-                        "data-aos": "zoom-out",
-                        "data-aos-duration": "1500",
+                        pathname: _._.dpc_watch((0, _._)(_)),
                       },
-                      _.createElement("img", {
-                        className: _().TILogo,
-                        src: `${_._.IMG_URL}international2024/esports_site/logo_ti_gold.png`,
-                      }),
-                    ),
+                      className: _().CenterContent,
+                      "data-aos": "zoom-out",
+                      "data-aos-duration": "1500",
+                    }),
                   ),
                   _.createElement(
                     "div",
                     {
-                      className: _().TI13PrizePoolBox,
+                      className: _().TI14PrizePoolBox,
                     },
                     _.createElement(
                       "div",
@@ -36688,103 +37767,104 @@
                   ),
                 ),
               ),
-            );
-          }),
-          (0, _._)(() => {
-            const _ = _();
-            let _ = "#212026",
-              _ = "#212026";
-            switch (_) {
-              case _._.SPRING_2021_LEAGUE:
-                (_ = "#0E4830"), (_ = "#142030");
-                break;
-              case _._.SPRING_2021_MAJOR:
-                (_ = "#081121"), (_ = "#081121");
-                break;
-              case _._.INTERNATIONAL_2021_QUALIFIERS:
-              case _._.INTERNATIONAL_2021:
-                (_ = "#141416"), (_ = "#141416");
-                break;
-              case _._.WINTER_2021_LEAGUE:
-              case _._.WINTER_2021_LEAGUE_FINALS:
-                (_ = "#39445a"), (_ = "#39445a");
-                break;
-              case _._.SPRING_2022_LEAGUE:
-                (_ = "#456462"), (_ = "#42605e");
-                break;
-              case _._.SPRING_2022_MAJOR:
-                (_ = "#bbde04"), (_ = "#c2cdcf");
-                break;
-              case _._.CHINA_SPRING_2022_LEAGUE_FINALS:
-                (_ = "#456462"), (_ = "#42605e");
-                break;
-              case _._.SUMMER_2022_LEAGUE:
-                (_ = "#c0317d"), (_ = "#439594");
-                break;
-              case _._.SUMMER_2022_MAJOR:
-                (_ = "#ffa800"), (_ = "#d9d9d9");
-                break;
-              case _._.INTERNATIONAL_2022_LASTCHANCE:
-              case _._.INTERNATIONAL_2022:
-                (_ = "#101216"), (_ = "#101216");
-                break;
-              case _._.WINTER_2023_MAJOR:
-                (_ = "#000000"), (_ = "#000000");
-                break;
-              case _._.WINTER_2023_LEAGUE:
-              case _._.SPRING_2023_LEAGUE:
-              case _._.SPRING_2023_MAJOR:
-              case _._.SUMMER_2023_LEAGUE:
-              case _._.SUMMER_2023_MAJOR:
-                (_ = "#10033F"), (_ = "#10033F");
-                break;
-              case _._.INTERNATIONAL_2023_QUALIFIERS:
-              case _._.INTERNATIONAL_2023:
-              case _._.INTERNATIONAL_2024:
-              case _._.INTERNATIONAL_2025:
-                (_ = "#222127"), (_ = "#222127");
-            }
-            let _ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.jpg ), linear-gradient( to right, ${_} 49%, ${_} 51% )`;
-            return (
-              (0, _._)(_)
-                ? (_ = `url( ${_._.CDN_URL}apps/dota2/images/leagues/${_}/images/image_8.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`)
-                : (_ == _._.INTERNATIONAL_2024 ||
-                    _ == _._.INTERNATIONAL_2025) &&
-                  (_ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`),
-              _.createElement(
-                "div",
-                {
-                  className: _().DPCHeaderImage,
-                  style: {
-                    height: 400,
-                    backgroundImage: _,
-                  },
+            ),
+          );
+        }),
+        _ = (0, _._)(() => {
+          const _ = _();
+          let _ = "#212026",
+            _ = "#212026";
+          switch (_) {
+            case _._.SPRING_2021_LEAGUE:
+              (_ = "#0E4830"), (_ = "#142030");
+              break;
+            case _._.SPRING_2021_MAJOR:
+              (_ = "#081121"), (_ = "#081121");
+              break;
+            case _._.INTERNATIONAL_2021_QUALIFIERS:
+            case _._.INTERNATIONAL_2021:
+              (_ = "#141416"), (_ = "#141416");
+              break;
+            case _._.WINTER_2021_LEAGUE:
+            case _._.WINTER_2021_LEAGUE_FINALS:
+              (_ = "#39445a"), (_ = "#39445a");
+              break;
+            case _._.SPRING_2022_LEAGUE:
+              (_ = "#456462"), (_ = "#42605e");
+              break;
+            case _._.SPRING_2022_MAJOR:
+              (_ = "#bbde04"), (_ = "#c2cdcf");
+              break;
+            case _._.CHINA_SPRING_2022_LEAGUE_FINALS:
+              (_ = "#456462"), (_ = "#42605e");
+              break;
+            case _._.SUMMER_2022_LEAGUE:
+              (_ = "#c0317d"), (_ = "#439594");
+              break;
+            case _._.SUMMER_2022_MAJOR:
+              (_ = "#ffa800"), (_ = "#d9d9d9");
+              break;
+            case _._.INTERNATIONAL_2022_LASTCHANCE:
+            case _._.INTERNATIONAL_2022:
+              (_ = "#101216"), (_ = "#101216");
+              break;
+            case _._.WINTER_2023_MAJOR:
+              (_ = "#000000"), (_ = "#000000");
+              break;
+            case _._.WINTER_2023_LEAGUE:
+            case _._.SPRING_2023_LEAGUE:
+            case _._.SPRING_2023_MAJOR:
+            case _._.SUMMER_2023_LEAGUE:
+            case _._.SUMMER_2023_MAJOR:
+              (_ = "#10033F"), (_ = "#10033F");
+              break;
+            case _._.INTERNATIONAL_2023_QUALIFIERS:
+            case _._.INTERNATIONAL_2023:
+            case _._.INTERNATIONAL_2024:
+            case _._.INTERNATIONAL_2025:
+              (_ = "#222127"), (_ = "#222127");
+          }
+          let _ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.jpg ), linear-gradient( to right, ${_} 49%, ${_} 51% )`;
+          return (
+            (0, _._)(_)
+              ? (_ = `url( ${_._.CDN_URL}apps/dota2/images/leagues/${_}/images/image_8.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`)
+              : (_ == _._.INTERNATIONAL_2024 || _ == _._.INTERNATIONAL_2025) &&
+                (_ = `url( ${_._.IMG_URL}dpc/headers/dpc_header_event_${(0, _._)(_)}.png ), linear-gradient( to right, ${_} 49%, ${_} 51% )`),
+            _.createElement(
+              "div",
+              {
+                className: _().DPCHeaderImage,
+                style: {
+                  height: 400,
+                  backgroundImage: _,
                 },
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-                _.createElement(_, null),
-              )
-            );
-          })),
+              },
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+              _.createElement(_, null),
+            )
+          );
+        }),
         _ = (0, _._)(() => {
           const _ = _();
           return _._.Get().GetSpoilerBlockState(_) != _._.UNKNOWN
@@ -41017,7 +42097,7 @@
           onSlideIn: _,
         }) => {
           const _ = (0, _.useContext)(_._),
-            _ = (0, _.useRef)(),
+            _ = (0, _.useRef)(void 0),
             _ =
               -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
               -1 != navigator.userAgent.toLowerCase().indexOf("macintosh");
@@ -44273,6 +45353,10 @@
                       data_int32s: [_],
                     },
                     {
+                      name: "lobby_type",
+                      data_int32s: [7],
+                    },
+                    {
                       name: "team_won",
                       data_bools: [_],
                     },
@@ -47145,7 +48229,7 @@
         return "";
       }
       function _(_) {
-        switch (_ && 0 != _.length ? _ : "ti13") {
+        switch (_ && 0 != _.length ? _ : "ti14") {
           case "spring21":
             return _._.SPRING_2021_LEAGUE;
           case "springmajor21":
@@ -47251,7 +48335,7 @@
         return _.toString();
       }
       function _() {
-        return "ti13";
+        return "ti14";
       }
       function _(_) {
         const { nLeagueID: _ } = _._.Get().GetBestCurrentLeagueNode(_);
@@ -51982,7 +53066,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       const _ = 1,
         _ = 4;
@@ -52204,7 +53287,7 @@
         }
         return !1;
       }
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -52299,25 +53382,6 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (_[(_.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (_[(_.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (_[(_.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -52762,7 +53826,7 @@
             _.current && document.activeElement == _.current,
         });
         const _ = (function (_) {
-            const _ = _.useRef(),
+            const _ = _.useRef(void 0),
               _ = _.useContext(_);
             _.current || (_.current = __webpack_require__(_ || {}));
             return _.current;
@@ -56657,7 +57721,7 @@
                 });
       }
       function _(_, _) {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return _.useCallback((_) => {
           _.current && __webpack_require__.current(), (_.current = _(_));
         }, _);
@@ -70912,9 +71976,7 @@
           device_friendly_name: _,
           machine_id: __webpack_require__,
           platform_type: 1,
-          gaming_device_type: _._.ON_DECK
-            ? _._.k_EGamingDeviceType_SteamDeck
-            : _._.k_EGamingDeviceType_StandardPC,
+          gaming_device_type: _._.ON_DECK ? 544 : 1,
         };
       }
       async function _() {
@@ -73513,6 +74575,16 @@
         });
       }
       var _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (!_) return _;
+        const _ = _.trim(),
+          _ = _.toLowerCase();
+        return __webpack_require__.startsWith("javascript:") ||
+          __webpack_require__.startsWith("data:") ||
+          __webpack_require__.startsWith("vbscript:")
+          ? ""
+          : _;
+      }
       const _ = new Map([
         [
           "b",
@@ -73710,13 +74782,13 @@
           "url",
           {
             Constructor: function (_) {
-              let _ = _(_.args);
+              let _ = _(_(_.args));
               if (!_) {
                 const _ = _.children;
                 "string" == typeof _ &&
                   (__webpack_require__.startsWith("http://") ||
                     __webpack_require__.startsWith("https://")) &&
-                  (_ = _);
+                  (_ = _(_));
               }
               const _ = "button" == _(_.args, "style") ? _().LinkButton : null,
                 _ = _ && _(_.args, "buttoncolor");
@@ -75203,6 +76275,7 @@
               (_ |= _.NoWindowShadow),
               (_ |= _.NoRoundedCorners),
               (_ |= _.OverrideRedirect),
+              (_ |= _.ForceBrowserVisible),
               _
             );
           case _.Tooltip:
@@ -75269,7 +76342,8 @@
             "IgnoreSteamDisplayScale"),
           (_[(_.TransparentParentWindow = 4194304)] =
             "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale");
+          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
       })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
@@ -79354,75 +80428,99 @@
       }
       (0, _._)([_._], _.prototype, "bCropped", void 0);
       class _ {}
-      class _ extends _ {
-        m_cancelToken = void 0;
-        async UploadAllImages(_, _) {
-          const _ = this.GetUploadImages(),
-            _ = this.BGetUploadsAreInSerial(),
-            _ = __webpack_require__.filter((_) => {
-              const _ = __webpack_require__.IsValidAssetType(_, _);
-              return "pending" === _.status && !_.error && !_.needsCrop;
-            });
-          for (const _ of _) _.status = "waiting";
-          const _ = [],
-            _ = _().CancelToken.source();
-          this.m_cancelToken = _;
-          const _ = async (_) => {
-            _.status = "uploading";
-            const _ = await this.UploadSingleImage(
-              _,
-              _.filename,
-              _.language ?? -1,
-              _.token,
-            );
-            return (
-              (_.status = _.bSuccess ? "success" : "failed"),
-              (_.message =
-                !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
-              _
-            );
-          };
-          if (_)
-            for (const _ of _) {
-              const _ = await _(_);
-              _.push({
-                image: _,
-                uploadResult: _,
-              });
-            }
-          else {
-            let _ = 0;
-            const _ = async () => {
-                for (; _ < _.length; ) {
-                  const _ = _++,
-                    _ = _[_],
-                    _ = await _(_);
-                  _[_] = {
+      function _(_, _, _) {
+        const _ = _.filter((_) => {
+          const _ = _.IsValidAssetType(_, _);
+          return "pending" === _.status && !_.error && !_.needsCrop;
+        });
+        return (
+          _.forEach((_) => {
+            (_.status = "waiting"), (_.message = "");
+          }),
+          _
+        );
+      }
+      async function _(_, _, _, _, _, _) {
+        const _ = _(_, _, _),
+          _ = [];
+        let _ = 0;
+        const _ = Array.from(
+          {
+            length: Math.floor(_),
+          },
+          () =>
+            (async () => {
+              for (; _ < _.length; ) {
+                const _ = _++,
+                  _ = _[_];
+                _.status = "uploading";
+                const _ = await __webpack_require__(
+                  _,
+                  _.filename,
+                  _.language ?? -1,
+                  _,
+                );
+                (_.status = _.bSuccess ? "success" : "failed"),
+                  (_.message =
+                    !_.bSuccess && _.elErrorMessage ? _.elErrorMessage : ""),
+                  (_[_] = {
                     image: _,
                     uploadResult: _,
-                  };
-                }
-              },
-              _ = 4,
-              _ = Array.from(
-                {
-                  length: _,
-                },
-                () => _(),
-              );
-            await Promise.all(_);
-          }
-          const _ = [];
-          for (const _ of _)
-            _.push({
-              bSuccess: _.uploadResult.bSuccess,
-              image: _.image,
-              uploadResult: _.uploadResult.result,
-            });
-          return _;
+                  });
+              }
+            })(),
+        );
+        return (
+          await Promise.all(_),
+          _.map((_) => ({
+            bSuccess: _.uploadResult.bSuccess,
+            image: _.image,
+            uploadResult: _.uploadResult.result,
+          }))
+        );
+      }
+      class _ extends _ {
+        m_cancel = void 0;
+        async UploadAllImages(_, _) {
+          this.m_cancel = _().CancelToken.source();
+          const _ = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let _;
+          const _ = this.UploadSingleImage.bind(this);
+          return (
+            (_ =
+              _ > 1
+                ? await _(
+                    this.GetUploadImages(),
+                    _,
+                    _,
+                    _,
+                    _,
+                    this.m_cancel.token,
+                  )
+                : await (async function (_, _, _, _, _) {
+                    const _ = _(_, _, _),
+                      _ = [];
+                    for (const _ of _) {
+                      _.status = "uploading";
+                      const _ = await _(_, _.filename, _.language ?? -1, _);
+                      (_.status = _.bSuccess ? "success" : "failed"),
+                        (_.message =
+                          !_.bSuccess && _.elErrorMessage
+                            ? _.elErrorMessage
+                            : ""),
+                        _.push({
+                          bSuccess: _.bSuccess,
+                          image: _,
+                          uploadResult: _.result,
+                        });
+                    }
+                    return _;
+                  })(this.GetUploadImages(), _, _, _, this.m_cancel.token)),
+            _
+          );
         }
         CancelAllUploads() {
-          this.m_cancelToken?.cancel((0, _._)("#ImageUpload_CancelRequest"));
+          this.m_cancel?.cancel((0, _._)("#ImageUpload_CancelRequest"));
         }
       }
       var _ = __webpack_require__("chunkid");
@@ -79469,11 +80567,7 @@
           return this.m_clanSteamID;
         }
         async AddImage(_, _ = 0) {
-          const { language: __webpack_require__ } = (function (
-            _,
-            _ = 0,
-            __webpack_require__ = !0,
-          ) {
+          const { language: __webpack_require__ } = (function (_, _ = 0) {
             let _ = _.lastIndexOf(".");
             -1 != _ && (_ = _.slice(0, _).toLowerCase());
             let _ = null,
@@ -79482,21 +80576,23 @@
             for (let _ = 0; _ < 31; ++_) {
               const _ = (0, _._)(_);
               if (_.length <= _) continue;
-              if (_.endsWith(_)) {
-                let _ = !__webpack_require__;
-                if (__webpack_require__ && _.length > _.length + 2) {
-                  const _ = _[_.length - _.length - 1];
-                  _ = !/\p{Alphabetic}|\p{Number}/u.test(_);
-                }
-                _ && ((_ = _), (_ = _.length));
+              if (_.endsWith(_) && _.length > _.length + 2) {
+                const _ = _[_.length - _.length - 1];
+                /\p{Alphabetic}|\p{Number}/u.test(_) ||
+                  ((_ = _), (_ = _.length));
               }
               const _ = (0, _._)(_);
               _.length <= _ || (_.endsWith(_) && ((_ = _), (_ = _.length)));
             }
             return {
               language: _ ?? _,
-              baseFilename: _ > 0 ? _.substring(0, _.length - _ - 1) : _,
+              baseFilename:
+                _ > 0
+                  ? ((_ = _.substring(0, _.length - _)),
+                    _.replace(/[\s_-]+$/g, ""))
+                  : _,
             };
+            var _;
           })(_.name, _);
           return this.AddImageForLanguage(_, __webpack_require__);
         }
@@ -95400,7 +96496,7 @@
               onOptionsActionDescription: _,
             };
           })(_ ?? _, _),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
           _ = (0, _._)(_, _.navRef),
           _ = _.useCallback(
             (_) => {
@@ -95697,7 +96793,7 @@
           } = _,
           [_, _, _, _] = (function () {
             let _ = _.useRef(null),
-              _ = _.useRef();
+              _ = _.useRef(void 0);
             _.useLayoutEffect(() => {
               let _ = _.current;
               if (!_ || _.current) return;
@@ -95899,9 +96995,9 @@
           ),
           _ = (function (_, _) {
             const _ = _.useMemo(() => new Map(), []),
-              _ = _.useRef();
+              _ = _.useRef(_);
             _.current = _;
-            const _ = _.useRef();
+            const _ = _.useRef(_);
             _.current = _;
             const _ = _.useCallback(
               (_) => (_) => {
@@ -96021,7 +97117,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const { className: __webpack_require__, ..._ } = _;
-        let _ = _.useRef(),
+        let _ = _.useRef(void 0),
           _ = (0, _._)(_, _);
         const [_, _] = _.useState(!1),
           _ = _.useCallback(() => {
@@ -96128,8 +97224,8 @@
           _ = (0, _._)(),
           _ = (_.state && _.state[_]) ?? _,
           _ = _.useRef(!1),
-          _ = _.useRef(),
-          _ = _.useRef(),
+          _ = _.useRef(void 0),
+          _ = _.useRef(void 0),
           _ = _.useCallback(
             (_) => {
               if (_.current && ((_.current = _), !_.current)) {
@@ -96163,7 +97259,7 @@
             (_.current = void 0), (_.current = void 0);
           }, []),
           _ = (function (_, _) {
-            const _ = _.useRef();
+            const _ = _.useRef(void 0);
             return _.useCallback(
               (_, _) => {
                 let _ = "sine";
@@ -96610,7 +97706,7 @@
           [_, _] = _(`${_}ScrollLeft`, 250, 0),
           _ = _.useRef(0),
           _ = _.useRef(0),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         let _ = _.useCallback(
           (_) => {
             const { scrollTop: _, scrollLeft: __webpack_require__ } =
@@ -98822,7 +99918,7 @@
           _ = (0, _._)(),
           [_, _] = _.useState(null),
           [_, _] = _.useState(!1),
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         if (
           (_.useEffect(() => {
             if (_) {
@@ -99017,7 +100113,7 @@
           } = _,
           _ = (0, _._)(),
           _ = _?.ownerWindow || window,
-          _ = _.useRef();
+          _ = _.useRef(void 0);
         return (
           _.current || (_.current = new _._()),
           _.useLayoutEffect(() => {
@@ -99247,7 +100343,7 @@
               bRegisterManagersWithWindow: _ = !0,
               ..._
             } = _,
-            _ = _.useRef();
+            _ = _.useRef(void 0);
           _.current || (_.current = new _._());
           let _ = _.createElement(_._, {
             ..._,
@@ -100171,7 +101267,7 @@
       var _ = __webpack_require__("chunkid");
       let _ = 0;
       function _() {
-        const _ = _.useRef();
+        const _ = _.useRef(void 0);
         return (
           void 0 === _.current && (_.current = "svgid_" + _++),
           [_.current, `url(#${_.current})`]
@@ -103903,6 +104999,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
@@ -104116,7 +105213,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 76489), _((_._ = _));
+      return (_ = 18645), _((_._ = _));
       var _;
     });
     _._();

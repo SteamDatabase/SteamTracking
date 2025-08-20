@@ -4900,7 +4900,11 @@
               !t
             )
               return;
-            const e = { appid: l.r.DOTA_APP_ID, u: _, team_id: t },
+            const e = {
+                appid: l.r.DOTA_APP_ID,
+                u: "public" !== l.r.WEB_UNIVERSE ? "beta" : _,
+                team_id: t,
+              },
               a = await r().get(
                 l.r.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
                 { params: e },

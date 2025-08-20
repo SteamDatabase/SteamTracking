@@ -1182,6 +1182,121 @@
         TeamGrid: "_1XtL5_QQLVFQW_ws3F6ccZ",
       };
     },
+    94180: (e) => {
+      e.exports = {
+        Tooltip: "xmSKwZMwh_krcVR4nHVzF",
+        CarouselFade: "_1XxeHWmqDjH7zi69Oekdb1",
+        StandardButton: "T2G2_0t6tzSxhXjT7-oDk",
+        ButtonText: "_1U4_6mYW0VNpnTNMne5_N1",
+        Icon: "_2BNyZrBffEpsVesF3tILyv",
+        Play: "_1mVosJ-CdctpJDK6Ruq2Yw",
+        SteamLogo: "_1lUqxpVoFCXQvdcNMrTcSy",
+        ToolTip: "LMU_Yl5SKdGKN7C1_fCT2",
+        PlayerReportTooltip: "_3xKh8FXlezKA0T9eC1dr6m",
+        TextStyleDisplay: "_9iyAUgVKeN3VKB8Tb7L-w",
+        TextStyleSmallHeading: "_1AZPViqsOZuBzogtw2IyJz",
+        TextStyleHeading: "_1KDAF1LCvruow5mzkwhsL1",
+        TextStyleSectionHeading: "_2wQrzzh0A4JyQU3LNSFF6W",
+        TextStyleOverline: "_1rIAXh00D2iaIzWTwdnYJJ",
+        TextStyleButton: "_2utfoPGepMpFYTspGC9hjj",
+        TextStyleCaption: "_1JOTbjMig1mCnlrqNfbfMx",
+        TextStyleBody: "_15tNiWiiFaqlo38lQTVzFj",
+        TextStyleDescription: "_2N34w_juDnVzVy1EnuFWnB",
+        TextStyleThumbnailBody: "_1FytFtum86KHVTNzPg2hOk",
+        TextStyleFootnote: "_1HiFI6ll6LfU97F0fA_SRn",
+        MajorHeaderPreTitle: "_2NGLFyWpACLA9aks4acv35",
+        MajorHeaderTitle: "_2oJQfyWE7-rEVJp_SuUGqF",
+        MajorHeaderSubtitle: "_1uhhy5Ly8bRl4xbBLdM-dx",
+        TextColorYellow: "_3Tt0ZVdwfENsiB53Zl6U5P",
+        TextColorOrange: "_3bePbMaSpDJyd3jfbXQUWf",
+        TextColorRed: "nDOcfCQy7jlSs1aI7LnLX",
+        TextColorDarkRed: "_1YbMVHcrj-la9tAqGPzd6W",
+        TextColorBlack: "O_vEe_J3rgBhy7N1u91JP",
+        TextColorDarkerGold: "_3jYh6nEqzhKTXeeh5saLcL",
+        TextColorDarkGold: "_3boW3gtjtQTZ13wYVh-PfP",
+        TextColorGold: "_3dF6yip8U2b7nnbbG4rZqV",
+        TextColorLightGold: "_39xUgCuhBtF8Ukvzf19bzk",
+        TextColorLighterGold: "_2U485d31gCK6JiRQWjjzSV",
+        TextColorLightestGold: "_1P8pztwE5yYHLvrS8qRFGn",
+        TextColorGrey: "_1YfUd1kp4n46GqtswKvwrK",
+        TextColorLightGrey: "_3l1Z2h98zOayDaulaxyEEQ",
+        TextColorLighterGrey: "_2BBg4Qtb__LbIdK_WuzCrl",
+        TextColorLightestGrey: "_3Uz6rl3zVfUsKek-2B_xZx",
+        TextColorWhite: "_2A5zRq_Enl6ZaoGeghouKq",
+        TextColorGoldGlow: "_1USKs6sryXfAm23OI8fASh",
+        TextColorGreenGlow: "_2BRO9neQQKZXffwon_93et",
+        TextColorYellowShadowGradient: "_2DSEsELD_xOWt5knTSkwSV",
+        TextColorYellowGradient: "_3GmboHA_vAyufHxPkQySvD",
+        TextColorFVArcanaGradient: "_1bR-3QFfMbFA7Qi8F9NUH6",
+        TextColorPurpleGradient: "_3yzUWuE1ZQQxY4sRN0AVg8",
+        TextColorGreenGradient: "_10QQ_USO737cwT2H8A7oie",
+        TextColorBlueGradient: "Y9vxkfsQIsRBw1M_hFV4C",
+        TextColorPhantomGradient: "_33mfZGY6UFtXkDO8PW8WtI",
+        TextColorBlueShadowGradient: "LTMcx-9xitV0LgIFP8oOv",
+        TextColorGoldGradient: "QgJCMSJHYh9eB6HkLB3so",
+        InternationalCountdownContainer: "_3Jd7XRFiN009CFTgoT2Vs5",
+        InternationalCountdown: "_27P_JsOC68FcLcIAn8CK39",
+        SubDividerTop: "_1my8zYsHpVzi9vLEJg-ItW",
+        SubDividerBottom: "_3mkTFvBCKBZIHuE72LZI-u",
+        CountdownPreHeader: "_2Qx4Eabt-RPEIXlj51icv6",
+        CountdownHeader: "_3K7F8CtwE-7Thu5gCopzAD",
+        CountdownTimer: "_2DZuqadxPqd5mnVzN5IsKD",
+        CountdownDesc: "_eO6bLInXdwlroUVstSnD",
+        CountdownLogo: "_3leTb0E80TqzDGBKlvz6Dz",
+        ViewScheduleButton: "z-QHpUSEuL3IENeb7FhFW",
+        SocialIcons: "_3m2hn597deasT5WSoFW8Kn",
+        IconImg: "_1BnfV39fozLXuV277NwhQU",
+        SocialMedia: "_1_v1-V3jxp_6-c-42QW3Zc",
+        KeepUpHeader: "_2usI12Z2SEkvimL-C7F_0p",
+        InternationalPrizeSplits: "_3gw6h8oKLSA7buIloDPvvW",
+        DividerTop: "aYwUx7SUL4E8cXry2RGx0",
+        PrizeGridContain: "_2KYsHmgfSz9AZP6agJIc0H",
+        PrizePoolLabel: "_32qSk6XkasDvA9avj1UTx8",
+        PrizePoolValue: "_2dz9cYABRsCkSCoFSvIDpt",
+        Title: "_3-0TCEA6drUBuAPDYJB0ll",
+        Underline: "_3Wg5WWm3wTGiT41A_f57eo",
+        Grid: "_39t59SwbH0mnM4F6XTdgOA",
+        GridRow: "_2aApny5lB8AGZ9Hg734WZU",
+        GridEntry: "_2NTt3dbuNe8MBHfkHWryh_",
+        PrizeValue: "_3DCKRDtJhILRD5udy1d-vI",
+        Place: "_2Lx80FwMuzzWNUwP6Tp6tV",
+        TheInternational2025Plugs: "_254cw7_w1u8yUvEhqvOWlQ",
+        PlugsSmallHead: "_2rggVcUUDvuy8Kue7T41qq",
+        PlugsHeader: "pFPdnYZF2BJu1-EPVubqg",
+        PlugsDesc: "_17w2RxwcBKYwGzG2UVRPga",
+        BattlePassPlug: "_3esF_0DEfupw91LDlCCdWr",
+        BPPlugTextContainer: "_18Nv4a6GU1W3zYolVqJH9t",
+        BPPlugText: "_1hl0yfxpYGLTUtqZpek0Bk",
+        TI13BPOverline: "_3_mOQgMMf_kkV-56TcnzpS",
+        TI13BPHeader: "_2AP1Opq0ubF8hrpuHEfVl2",
+        TI13BPDetails: "_3jSJE37KaD07nfWOmgWDwi",
+        BPPlugBtn: "LMJWtXCZvOXOxvp1_0xDs",
+        StickersPlug: "_1ZDsPoCZz2JXVJp9IOkcSK",
+        StickersPlugImgContainer: "UwdskqI3jVkVVvlG2r8oE",
+        StickersPlugImg: "Ni1LE-dLzMLYc_0eKnBu9",
+        StickersPlugTextContainer: "_3ZZjMdfRi9YWYanbURLds2",
+        TI11BPOverline: "yDicPHCiQfVOPkdFTHV2z",
+        TI11BPHeader: "_26U5d_dqvUVkZJzQJv4soW",
+        TI11BPDetails: "_3SrOgus6QWJEvTsQ7hvlWd",
+        FantasyPlug: "_1Ph399l1BfOdL2M7Cv13eK",
+        PlugContainers: "_2aaKkSsoIgyEDQQHPRdhSm",
+        FantasyContainer: "_2gOsTH18E6YNlejWOkClKk",
+        PlugImg: "_3UwtxXWcZV05QnHGziFFLC",
+        PlugText: "_xh2e2o0ITiKYty8AYHUO",
+        SupportersClubContainer: "_2tKXUlttTuF7oFKU8JuNVq",
+        PredictionsContainer: "_26_fwVjj72O1rXPwtPN2Tl",
+        BPPlugImgContainer: "_2sKF4ujaeWy-sA57okdZT8",
+        BPPlugImg: "_3jfABccWiuKyPGlz9-8ASx",
+        InternationalTeamListTeam: "_3TkEvZLDiWRZafSK9JM5XJ",
+        TeamTextContainer: "_3FTUjE5eE9CMrqlr73JnqD",
+        TeamRegion: "_2fKUhEHnSTOQxeYj5vKhwX",
+        TeamName: "_32__ym6iITwSdXmAtvjVST",
+        MagentaTeamLogo: "hpI5WHItMVQMAAfLhWU3U",
+        DividerPronounced: "vok2KgNAECkOC0pQbjQ4O",
+        InternationalTeamList: "_P-lkLIiCQ6A-KKakSScI",
+        TeamGrid: "_3PBBkx4_gipewdeF3fdmMt",
+      };
+    },
     4507: (e) => {
       e.exports = {
         DPCLeagueStandingsSummary: "_77L-f2bctzgAGnPYefelI",
@@ -3031,6 +3146,13 @@
         TI13CenterBox: "_3y3srlm169jw1WlTRLCwXQ",
         TI13Season: "_3cLPrvobvEkmO6l7j6lC9T",
         TI13PrizePoolBox: "n8Ev-iqifncyo1-CXZD8H",
+        TI14Logo: "_2dAZMfbkzJaBFiDURqn4dl",
+        DPCHeaderTI2025: "_39fiZSDzfp4-nKGOTMFk7l",
+        TI14BannerContainer: "_299BgSvrVe5r7sp9OhbBwE",
+        TI14BannerContent: "_3g8f62ftDgBy4LSt7-XeTI",
+        TI14CenterBox: "_2ZamEdxtFPZEoFWZy0vvhJ",
+        TI14Season: "_3k60pPos5WXYaJUo3CzMED",
+        TI14PrizePoolBox: "_3cf1riAJeMcuatgnx2w6Se",
       };
     },
     46245: (e) => {
@@ -4165,6 +4287,7 @@
         FieldDescription: "kxDRYTvr4WHr-TDTrNk0f",
         ModalPosition: "_1A0Q4dfS2-MkS3uF_wiuNP",
         VR: "_3_qSDvnKE5DHbAfbTWKuiQ",
+        FooterVisible: "_2AnPFoKoy2vC1k7nHAOklK",
         WithStandardPadding: "_3KUshs_DW3zQQ1mbsMMkV9",
         NoHeaderPadding: "HEGHgbW0fxagxFhTKt3_M",
         ModalClickToDismiss: "_39ylkqAXS6h3RoELysoA3Z",
@@ -5559,7 +5682,7 @@
         (T.prototype.sqrTo = function (e, t) {
           e.squareTo(t), this.reduce(t);
         });
-      var C = [
+      var I = [
           2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
           67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137,
           139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211,
@@ -5568,7 +5691,7 @@
           383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461,
           463, 467, 479, 487, 491, 499, 503, 509,
         ],
-        I = (1 << 26) / C[C.length - 1];
+        C = (1 << 26) / I[I.length - 1];
       (n.prototype.chunkSize = function (e) {
         return Math.floor((Math.LN2 * this.DB) / Math.log(e));
       }),
@@ -5712,9 +5835,9 @@
             a = t.getLowestSetBit();
           if (a <= 0) return !1;
           var r = t.shiftRight(a);
-          (e = (e + 1) >> 1) > C.length && (e = C.length);
+          (e = (e + 1) >> 1) > I.length && (e = I.length);
           for (var s = i(), o = 0; o < e; ++o) {
-            s.fromInt(C[o]);
+            s.fromInt(I[o]);
             var l = s.modPow(r, this);
             if (0 != l.compareTo(n.ONE) && 0 != l.compareTo(t)) {
               for (var c = 1; c++ < a && 0 != l.compareTo(t); )
@@ -5977,14 +6100,14 @@
         (n.prototype.isProbablePrime = function (e) {
           var t,
             a = this.abs();
-          if (1 == a.t && a[0] <= C[C.length - 1]) {
-            for (t = 0; t < C.length; ++t) if (a[0] == C[t]) return !0;
+          if (1 == a.t && a[0] <= I[I.length - 1]) {
+            for (t = 0; t < I.length; ++t) if (a[0] == I[t]) return !0;
             return !1;
           }
           if (a.isEven()) return !1;
-          for (t = 1; t < C.length; ) {
-            for (var r = C[t], n = t + 1; n < C.length && r < I; ) r *= C[n++];
-            for (r = a.modInt(r); t < n; ) if (r % C[t++] == 0) return !1;
+          for (t = 1; t < I.length; ) {
+            for (var r = I[t], n = t + 1; n < I.length && r < C; ) r *= I[n++];
+            for (r = a.modInt(r); t < n; ) if (r % I[t++] == 0) return !1;
           }
           return a.millerRabin(e);
         });
@@ -6130,9 +6253,9 @@
         e && Object.assign(n, e);
       }
     },
-    76489: (e, t, a) => {
+    18645: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => Mo });
+      a.d(t, { o: () => Wo });
       var r = a(89506),
         n = a(85608),
         i = a(35927),
@@ -6454,8 +6577,8 @@
         S = a(88351),
         w = a(54953),
         T = a.n(w),
-        C = a(39043),
-        I = a.n(C),
+        I = a(39043),
+        C = a.n(I),
         N = a(21384),
         B = a(27866),
         M = a(88409),
@@ -6533,7 +6656,7 @@
             ),
           );
         },
-        A = () => {
+        L = () => {
           const e = [
               { token: "#header_heroes", url: `${r.r.BASE_URL}heroes` },
               { token: "#header_item_explorer", url: `${r.r.BASE_URL}items` },
@@ -6589,7 +6712,7 @@
             ),
           );
         },
-        L = () => {
+        A = () => {
           const e = (0, S.zy)().pathname.substr(1);
           return s.createElement(
             "div",
@@ -6613,7 +6736,7 @@
               ),
             ),
             s.createElement("div", { className: R().VerticalBar }),
-            s.createElement(A, null),
+            s.createElement(L, null),
             s.createElement("div", { className: R().Spacer }),
             s.createElement(
               "div",
@@ -6656,9 +6779,9 @@
       var P = a(36305),
         k = a(90622),
         G = a(4417),
-        O = a(32389),
+        x = a(32389),
         W = a(18804),
-        x = a(73202);
+        O = a(73202);
       const { detect: F } = a(51744),
         U = F();
       function z() {
@@ -6715,12 +6838,12 @@
               },
               s.createElement(
                 "div",
-                { className: (0, N.A)(I().BattlepassSegment, e) },
+                { className: (0, N.A)(C().BattlepassSegment, e) },
                 m &&
                   s.createElement(
                     "video",
                     {
-                      className: I().BackgroundVideo,
+                      className: C().BackgroundVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -6742,25 +6865,25 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().Text,
-                        l && I().NeverTradeable,
+                        C().Text,
+                        l && C().NeverTradeable,
                         new Set([j.LeftTop, j.LeftMiddle, j.LeftBottom]).has(
                           o,
-                        ) && I().Left,
+                        ) && C().Left,
                         new Set([j.CenterTop, j.CenterBottom]).has(o) &&
-                          I().Center,
+                          C().Center,
                         new Set([j.RightTop, j.RightMiddle, j.RightBottom]).has(
                           o,
-                        ) && I().Right,
+                        ) && C().Right,
                         new Set([j.LeftTop, j.CenterTop, j.RightTop]).has(o) &&
-                          I().Top,
+                          C().Top,
                         new Set([j.LeftMiddle, j.RightMiddle]).has(o) &&
-                          I().Middle,
+                          C().Middle,
                         new Set([
                           j.LeftBottom,
                           j.CenterBottom,
                           j.RightBottom,
-                        ]).has(o) && I().Bottom,
+                        ]).has(o) && C().Bottom,
                       ),
                       ...((o == j.CenterTop || o == j.CenterBottom) && {
                         "data-aos": "fade-in",
@@ -6777,9 +6900,9 @@
                         "div",
                         {
                           className: (0, N.A)(
-                            I().TextStyleOverline,
-                            I().TextColorGold,
-                            I().HeaderPrefix,
+                            C().TextStyleOverline,
+                            C().TextColorGold,
+                            C().HeaderPrefix,
                           ),
                         },
                         (0, B.Wn)(t),
@@ -6789,10 +6912,10 @@
                         "div",
                         {
                           className: (0, N.A)(
-                            I().TextStyleHeading,
-                            I().TextColorGoldGradient,
-                            I().TextColorGoldGlow,
-                            I().Header,
+                            C().TextStyleHeading,
+                            C().TextColorGoldGradient,
+                            C().TextColorGoldGlow,
+                            C().Header,
                           ),
                         },
                         (0, B.Wn)(a),
@@ -6802,9 +6925,9 @@
                         "div",
                         {
                           className: (0, N.A)(
-                            I().TextStyleBody,
-                            I().TextColorLightestGrey,
-                            I().Body,
+                            C().TextStyleBody,
+                            C().TextColorLightestGrey,
+                            C().Body,
                           ),
                         },
                         (0, B.Wn)(n),
@@ -6816,9 +6939,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleFootnote,
-                        I().TextColorLighterGold,
-                        I().Footer,
+                        C().TextStyleFootnote,
+                        C().TextColorLighterGold,
+                        C().Footer,
                       ),
                     },
                     (0, B.Wn)("#battlepass_never_tradeable"),
@@ -6828,11 +6951,11 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().LevelReward,
-                        c <= 80 && I().Bronze,
-                        c > 80 && c <= 225 && I().Silver,
-                        c > 225 && c <= 1e3 && I().Gold,
-                        c > 1e3 && I().Platium,
+                        C().LevelReward,
+                        c <= 80 && C().Bronze,
+                        c > 80 && c <= 225 && C().Silver,
+                        c > 225 && c <= 1e3 && C().Gold,
+                        c > 1e3 && C().Platium,
                       ),
                       style: {
                         background: `linear-gradient(90deg, rgba(3, 2, 2, 0) 22.92%, rgba(3, 2, 2, 0.6) 100%), url( ${r.r.IMG_URL}international2020/stone_rect_small.png )`,
@@ -6840,25 +6963,25 @@
                       "data-aos": "slide-right",
                     },
                     s.createElement("img", {
-                      className: I().StoneLeft,
+                      className: C().StoneLeft,
                       src: `${r.r.IMG_URL}international2020/stone_left.png`,
                     }),
                     s.createElement("img", {
-                      className: I().LevelShield,
+                      className: C().LevelShield,
                       src: `${r.r.IMG_URL}international2020/bp_level_shield.png`,
                     }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().LevelText,
+                          C().TextStyleOverline,
+                          C().LevelText,
                         ),
                       },
                       (0, B.Wn)("#battlepass_level", c),
                     ),
                   ),
-                s.createElement("div", { className: I().Content }, u),
+                s.createElement("div", { className: C().Content }, u),
               ),
             )
           );
@@ -6871,22 +6994,22 @@
             backgroundColor: "#1B1B21",
             textColor: "#ECD393",
             border: !0,
-            className: I().Tooltip,
+            className: C().Tooltip,
           }),
         V = ({ level: e, andAbove: t }) =>
           s.createElement(
             "div",
-            { className: I().BPLevelContainer },
+            { className: C().BPLevelContainer },
             s.createElement("img", {
-              className: I().BPShieldSmall,
+              className: C().BPShieldSmall,
               src: `${r.r.IMG_URL}international2020/bp_shield_small.png`,
             }),
             s.createElement(
               "div",
               {
                 className: (0, N.A)(
-                  I().TextStyleFootnote,
-                  I().TextColorDarkGold,
+                  C().TextStyleFootnote,
+                  C().TextColorDarkGold,
                 ),
               },
               (0, B.Wn)("#battlepass_bp_level", e),
@@ -6895,14 +7018,14 @@
           ),
         Y = ({ heroName: e }) =>
           s.createElement("img", {
-            className: I().BPHeroImage,
+            className: C().BPHeroImage,
             src: `${r.r.IMG_URL}heroes/wide/${e}.png`,
           }),
         $ = ({ video: e }) =>
           s.createElement(
             "video",
             {
-              className: I().SeasonalEffectVideo,
+              className: C().SeasonalEffectVideo,
               autoPlay: !0,
               preload: "auto",
               muted: !0,
@@ -6923,7 +7046,7 @@
           return s.createElement(
             "div",
             {
-              className: I().PlayButton,
+              className: C().PlayButton,
               onClick: () => {
                 new Audio(
                   `${r.r.AUDIO_URL}international2020/${e[t]}.wav`,
@@ -6932,14 +7055,14 @@
               },
             },
             s.createElement("img", {
-              className: I().Arrow,
+              className: C().Arrow,
               src: `${r.r.IMG_URL}international2020/button_arrow.png`,
             }),
           );
         },
         Z = ({ index: e, heroLeft: t, heroRight: a, video: n }) => {
-          const i = (0, s.useContext)(O.Yc),
-            o = (0, s.useRef)();
+          const i = (0, s.useContext)(x.Yc),
+            o = (0, s.useRef)(void 0);
           return (
             (0, s.useEffect)(() => {
               function t() {
@@ -6949,20 +7072,20 @@
             }, [i, e]),
             s.createElement(
               "div",
-              { className: I().ImmortalTreasureSet },
+              { className: C().ImmortalTreasureSet },
               s.createElement(
                 "div",
-                { className: I().VideoContainer },
+                { className: C().VideoContainer },
                 t &&
                   s.createElement("img", {
-                    className: (0, N.A)(I().HeroImage, I().Left),
+                    className: (0, N.A)(C().HeroImage, C().Left),
                     src: `${r.r.IMG_URL}international2020/immortals/art/${n}.png`,
                   }),
                 s.createElement(
                   "video",
                   {
                     ref: o,
-                    className: I().ImmortalVideo,
+                    className: C().ImmortalVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -6981,7 +7104,7 @@
                 ),
                 a &&
                   s.createElement("img", {
-                    className: (0, N.A)(I().HeroImage, I().Right),
+                    className: (0, N.A)(C().HeroImage, C().Right),
                     src: `${r.r.IMG_URL}international2020/immortals/art/${n}.png`,
                   }),
               ),
@@ -6989,7 +7112,7 @@
           );
         },
         Q = ({ treasureID: e }) => {
-          const t = (0, s.useContext)(O.Yc),
+          const t = (0, s.useContext)(x.Yc),
             [a, r] = (0, s.useState)(t.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -7000,14 +7123,14 @@
             }, [t]),
             s.createElement(
               "div",
-              { className: I().NameAndDesc },
+              { className: C().NameAndDesc },
               s.createElement(
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleSmallHeading,
-                    I().TextColorLightestGold,
-                    I().ImmortalName,
+                    C().TextStyleSmallHeading,
+                    C().TextColorLightestGold,
+                    C().ImmortalName,
                   ),
                 },
                 (0, B.Wn)(`#battlepass_immortal_${e}_${a + 1}_name`),
@@ -7016,9 +7139,9 @@
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleBody,
-                    I().TextColorLightestGrey,
-                    I().ImmortalDesc,
+                    C().TextStyleBody,
+                    C().TextColorLightestGrey,
+                    C().ImmortalDesc,
                   ),
                 },
                 (0, B.Wn)(`#battlepass_immortal_${e}_${a + 1}_desc`),
@@ -7037,17 +7160,17 @@
             "div",
             {
               className: (0, N.A)(
-                I().ImmortalDot,
-                t && I().Rare,
-                a && I().VeryRare,
-                r && I().UltraRare,
-                n && I().CosmicallyRare,
+                C().ImmortalDot,
+                t && C().Rare,
+                a && C().VeryRare,
+                r && C().UltraRare,
+                n && C().CosmicallyRare,
               ),
             },
             s.createElement(Y, { heroName: e }),
           ),
         X = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -7060,9 +7183,9 @@
               "div",
               {
                 className: (0, N.A)(
-                  I().TextStyleSmallHeading,
-                  I().TextColorWhite,
-                  I().SprayName,
+                  C().TextStyleSmallHeading,
+                  C().TextColorWhite,
+                  C().SprayName,
                 ),
               },
               (0, B.Wn)(""),
@@ -7072,19 +7195,19 @@
         ee = ({ spray: e, level: t }) =>
           s.createElement(
             "div",
-            { className: I().SprayDot },
+            { className: C().SprayDot },
             s.createElement("img", {
-              className: I().SprayIcon,
+              className: C().SprayIcon,
               src: `${r.r.IMG_URL}international2020/sprays/spray_${e}.png`,
             }),
             s.createElement(
               "div",
-              { className: (0, N.A)(I().TextStyleFootnote, I().TextColorGold) },
+              { className: (0, N.A)(C().TextStyleFootnote, C().TextColorGold) },
               t,
             ),
           ),
         te = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -7095,14 +7218,14 @@
             }, [e]),
             s.createElement(
               "div",
-              { className: I().NameAndDesc },
+              { className: C().NameAndDesc },
               s.createElement(
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleSmallHeading,
-                    I().TextColorLightestGold,
-                    I().AssistantName,
+                    C().TextStyleSmallHeading,
+                    C().TextColorLightestGold,
+                    C().AssistantName,
                   ),
                 },
                 (0, B.Wn)(`#battlepass_assistant_${t + 1}`),
@@ -7111,9 +7234,9 @@
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleBody,
-                    I().TextColorLightestGrey,
-                    I().AssistantDesc,
+                    C().TextStyleBody,
+                    C().TextColorLightestGrey,
+                    C().AssistantDesc,
                   ),
                 },
                 (0, B.Wn)(`#battlepass_assistant_desc_${t + 1}`),
@@ -7122,8 +7245,8 @@
           );
         },
         ae = ({ video: e, index: t }) => {
-          const a = (0, s.useContext)(O.Yc),
-            n = (0, s.useRef)();
+          const a = (0, s.useContext)(x.Yc),
+            n = (0, s.useRef)(void 0);
           return (
             (0, s.useEffect)(() => {
               function e() {
@@ -7135,7 +7258,7 @@
               "video",
               {
                 ref: n,
-                className: I().BackgroundVideo,
+                className: C().BackgroundVideo,
                 autoPlay: !0,
                 preload: "auto",
                 muted: !0,
@@ -7156,14 +7279,14 @@
         re = ({ consumable: e }) =>
           s.createElement(
             "div",
-            { className: I().ConsumableDot },
+            { className: C().ConsumableDot },
             s.createElement("img", {
-              className: I().ConsumableIcon,
+              className: C().ConsumableIcon,
               src: `${r.r.IMG_URL}international2020/consumables/consumable_${e}.png`,
             }),
           ),
         ne = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -7174,14 +7297,14 @@
             }, [e]),
             s.createElement(
               "div",
-              { className: I().NameAndDesc },
+              { className: C().NameAndDesc },
               s.createElement(
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleSmallHeading,
-                    I().TextColorLightestGold,
-                    I().ConsumablesName,
+                    C().TextStyleSmallHeading,
+                    C().TextColorLightestGold,
+                    C().ConsumablesName,
                   ),
                 },
                 (0, B.Wn)(`#battlepass_consumable_${t + 1}`),
@@ -7190,9 +7313,9 @@
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleBody,
-                    I().TextColorLightestGrey,
-                    I().ConsumablesDesc,
+                    C().TextStyleBody,
+                    C().TextColorLightestGrey,
+                    C().ConsumablesDesc,
                   ),
                 },
                 (0, B.Wn)(`#battlepass_consumable_desc_${t + 1}`),
@@ -7201,7 +7324,7 @@
           );
         },
         ie = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -7214,9 +7337,9 @@
               "div",
               {
                 className: (0, N.A)(
-                  I().TextStyleSmallHeading,
-                  I().TextColorWhite,
-                  I().SeasonalEffectName,
+                  C().TextStyleSmallHeading,
+                  C().TextColorWhite,
+                  C().SeasonalEffectName,
                 ),
               },
               (0, B.Wn)(`#battlepass_seasonal_effect_name_${t + 1}`),
@@ -7226,19 +7349,19 @@
         se = ({ effect: e, level: t }) =>
           s.createElement(
             "div",
-            { className: I().SeasonalEffectDot },
+            { className: C().SeasonalEffectDot },
             s.createElement("img", {
-              className: I().SeasonalEffectIcon,
+              className: C().SeasonalEffectIcon,
               src: `${r.r.IMG_URL}international2020/seasonal_effects/seasonal_effect_icon_${e}.png`,
             }),
             s.createElement(
               "div",
-              { className: (0, N.A)(I().TextStyleFootnote, I().TextColorGold) },
+              { className: (0, N.A)(C().TextStyleFootnote, C().TextColorGold) },
               t,
             ),
           ),
         oe = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -7251,9 +7374,9 @@
               "div",
               {
                 className: (0, N.A)(
-                  I().TextStyleSmallHeading,
-                  I().TextColorWhite,
-                  I().RiverVialName,
+                  C().TextStyleSmallHeading,
+                  C().TextColorWhite,
+                  C().RiverVialName,
                 ),
               },
               (0, B.Wn)(`#battlepass_river_vial_name_${t + 1}`),
@@ -7263,30 +7386,30 @@
         le = ({ vial: e, level: t }) =>
           s.createElement(
             "div",
-            { className: I().RiverVialDot },
+            { className: C().RiverVialDot },
             s.createElement("img", {
-              className: I().RiverVialIcon,
+              className: C().RiverVialIcon,
               src: `${r.r.IMG_URL}international2020/river_vials/river_vial_icon_${e}.png`,
             }),
             s.createElement(
               "div",
-              { className: (0, N.A)(I().TextStyleFootnote, I().TextColorGold) },
+              { className: (0, N.A)(C().TextStyleFootnote, C().TextColorGold) },
               t,
             ),
           ),
         ce = ({ audiofiles: e, name: t, level: a }) =>
           s.createElement(
             "div",
-            { className: I().SoundPack },
+            { className: C().SoundPack },
             s.createElement(
               "div",
-              { className: I().Play },
+              { className: C().Play },
               s.createElement(K, { audiofiles: e }),
             ),
             s.createElement(
               "div",
-              { className: I().RightSection },
-              s.createElement("div", { className: I().Name }, (0, B.Wn)(t)),
+              { className: C().RightSection },
+              s.createElement("div", { className: C().Name }, (0, B.Wn)(t)),
               s.createElement(V, { level: a }),
             ),
           ),
@@ -7301,21 +7424,21 @@
             "div",
             {
               className: (0, N.A)(
-                I().PopupPanelContainer,
-                e && I().ShowPopupPanel,
+                C().PopupPanelContainer,
+                e && C().ShowPopupPanel,
               ),
               onClick: () => t(!1),
             },
             s.createElement(
               "div",
               {
-                className: (0, N.A)(I().PopupPanel, a),
+                className: (0, N.A)(C().PopupPanel, a),
                 onClick: (e) => e.stopPropagation(),
               },
               n &&
                 s.createElement(
                   "div",
-                  { className: I().CloseButton, onClick: () => t(!1) },
+                  { className: C().CloseButton, onClick: () => t(!1) },
                   s.createElement("img", { src: `${r.r.IMG_URL}close.png` }),
                 ),
               i,
@@ -7334,30 +7457,30 @@
           s.createElement(
             "div",
             {
-              className: I().BuyBattlePassCapsule,
+              className: C().BuyBattlePassCapsule,
               style: {
                 borderTop: `1px solid ${e}`,
                 backgroundImage: `linear-gradient( ${t}, ${n} )`,
               },
             },
             s.createElement("img", {
-              className: I().CapsuleTitle,
+              className: C().CapsuleTitle,
               onError: (e) =>
                 (e.target.src = `${r.r.IMG_URL}international2020/title_english.png`),
               src: `${r.r.IMG_URL}international2020/title_${r.r.LANGUAGE}.png`,
             }),
             s.createElement(
               "div",
-              { className: (0, N.A)(I().TextStyleOverline) },
+              { className: (0, N.A)(C().TextStyleOverline) },
               (0, B.Wn)("#battlepass_purchase_level", i),
             ),
             s.createElement(
               "div",
               {
                 className: (0, N.A)(
-                  I().TextStyleFootnote,
-                  I().TextColorGreenGlow,
-                  I().CapsuleDiscount,
+                  C().TextStyleFootnote,
+                  C().TextColorGreenGlow,
+                  C().CapsuleDiscount,
                 ),
               },
               o && (0, B.Wn)("#battlepass_purchase_discount", o, i),
@@ -7366,11 +7489,11 @@
               "div",
               {
                 onClick: () =>
-                  Mo.PurchaseOnSteamStore(c, 1, window.location.href),
+                  Wo.PurchaseOnSteamStore(c, 1, window.location.href),
                 className: (0, N.A)(
-                  I().TextStyleButton,
-                  I().TextColorWhite,
-                  I().CapsulePurchaseButton,
+                  C().TextStyleButton,
+                  C().TextColorWhite,
+                  C().CapsulePurchaseButton,
                 ),
                 style: {
                   borderTop: `1px solid ${e}`,
@@ -7383,21 +7506,21 @@
         ue = ({ heroName: e, name: t, level: a }) =>
           s.createElement(
             "div",
-            { className: I().Taunt },
+            { className: C().Taunt },
             s.createElement("img", {
-              className: I().HeroIcon,
+              className: C().HeroIcon,
               src: `${r.r.IMG_URL}heroes/icons/${e}.png`,
             }),
             s.createElement(
               "div",
-              { className: I().Details },
+              { className: C().Details },
               s.createElement(
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleCaption,
-                    I().TextColorLightestGrey,
-                    I().Name,
+                    C().TextStyleCaption,
+                    C().TextColorLightestGrey,
+                    C().Name,
                   ),
                 },
                 (0, B.Wn)(t),
@@ -7409,21 +7532,21 @@
           s.createElement(
             "div",
             {
-              className: I().MajorHeaderDivider,
+              className: C().MajorHeaderDivider,
               style: {
                 backgroundImage: `url( ${r.r.IMG_URL}international2020/stone_rect.png )`,
               },
             },
             s.createElement("img", {
-              className: (0, N.A)(I().StoneCap, I().Left),
+              className: (0, N.A)(C().StoneCap, C().Left),
               src: `${r.r.IMG_URL}international2020/stone_left.png`,
             }),
             s.createElement(
               "div",
               {
                 className: (0, N.A)(
-                  I().TextStyleSectionHeading,
-                  I().TextColorGoldGlow,
+                  C().TextStyleSectionHeading,
+                  C().TextColorGoldGlow,
                 ),
               },
               (0, B.Wn)(e),
@@ -7433,15 +7556,15 @@
                 "div",
                 {
                   className: (0, N.A)(
-                    I().TextStyleDescription,
-                    I().TextColorLightestGrey,
-                    I().MajorHeaderSubtitle,
+                    C().TextStyleDescription,
+                    C().TextColorLightestGrey,
+                    C().MajorHeaderSubtitle,
                   ),
                 },
                 (0, B.Wn)(t),
               ),
             s.createElement("img", {
-              className: (0, N.A)(I().StoneCap, I().Right),
+              className: (0, N.A)(C().StoneCap, C().Right),
               src: `${r.r.IMG_URL}international2020/stone_right.png`,
             }),
           );
@@ -7460,24 +7583,24 @@
           this.setState({ nImmortalTreasureSelected: e });
         }
         render() {
-          const e = Mo.getPrizePool();
+          const e = Wo.getPrizePool();
           return s.createElement(
             "div",
-            { className: I().BattlepassPage },
-            s.createElement(x.mg, null),
-            s.createElement(L, null),
+            { className: C().BattlepassPage },
+            s.createElement(O.mg, null),
+            s.createElement(A, null),
             s.createElement(
               "div",
-              { className: I().TopHeader },
+              { className: C().TopHeader },
               s.createElement("img", {
-                className: I().Title,
+                className: C().Title,
                 onError: (e) =>
                   (e.target.src = `${r.r.IMG_URL}international2020/logo_english.png`),
                 src: `${r.r.IMG_URL}international2020/logo_${r.r.LANGUAGE}.png`,
               }),
               s.createElement(
                 "div",
-                { className: I().Aegis },
+                { className: C().Aegis },
                 s.createElement(
                   "video",
                   {
@@ -7511,14 +7634,14 @@
               ),
               s.createElement(
                 "div",
-                { className: I().PrizePoolContainer },
+                { className: C().PrizePoolContainer },
                 s.createElement(
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleOverline,
-                      I().TextColorLightGold,
-                      I().PrizePoolLabel,
+                      C().TextStyleOverline,
+                      C().TextColorLightGold,
+                      C().PrizePoolLabel,
                     ),
                   },
                   (0, B.Wn)("#battlepass_prizepool_overline"),
@@ -7527,9 +7650,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleDisplay,
-                      I().TextColorGoldGlow,
-                      I().PrizePoolValue,
+                      C().TextStyleDisplay,
+                      C().TextColorGoldGlow,
+                      C().PrizePoolValue,
                     ),
                   },
                   e > 0 ? "$" + e.toLocaleString() : "...",
@@ -7537,14 +7660,14 @@
               ),
               s.createElement(
                 "div",
-                { className: I().PrizePoolTextContainer },
+                { className: C().PrizePoolTextContainer },
                 s.createElement(
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleOverline,
-                      I().TextColorLightGold,
-                      I().BPPurchaseTitle,
+                      C().TextStyleOverline,
+                      C().TextColorLightGold,
+                      C().BPPurchaseTitle,
                     ),
                   },
                   (0, B.Wn)("#battlepass_purchase_title"),
@@ -7553,9 +7676,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleBody,
-                      I().TextColorLightestGrey,
-                      I().BPPurchaseBody,
+                      C().TextStyleBody,
+                      C().TextColorLightestGrey,
+                      C().BPPurchaseBody,
                     ),
                   },
                   (0, B.Wn)("#battlepass_purchase_body"),
@@ -7563,7 +7686,7 @@
               ),
               s.createElement(
                 "div",
-                { className: I().BuyBattlepassSection },
+                { className: C().BuyBattlepassSection },
                 s.createElement(de, {
                   colorTopEdge: "#C9E2F0",
                   colorTop: "#475576",
@@ -7599,7 +7722,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().GuildsHeight,
+                heightClassName: C().GuildsHeight,
                 headerPrefix: "#battlepass_all_new",
                 headerText: "#battlepass_guilds_title",
                 bodyText: "#battlepass_guilds_desc",
@@ -7608,33 +7731,33 @@
               s.createElement(
                 "div",
                 {
-                  className: I().Guilds,
+                  className: C().Guilds,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/guilds_bg.png )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: I().GuildTopRow },
+                  { className: C().GuildTopRow },
                   s.createElement(
                     "div",
                     {
                       className: (0, N.A)(
-                        I().GuildTopRowElement,
-                        I().DailyContracts,
+                        C().GuildTopRowElement,
+                        C().DailyContracts,
                       ),
                     },
                     s.createElement("img", {
-                      className: I().DailyContractsImage,
+                      className: C().DailyContractsImage,
                       src: `${r.r.IMG_URL}international2020/guilds_1.png`,
                     }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().Title,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().Title,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_contracts_title"),
@@ -7643,9 +7766,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleThumbnailBody,
-                          I().TextColorLightestGrey,
-                          I().Desc,
+                          C().TextStyleThumbnailBody,
+                          C().TextColorLightestGrey,
+                          C().Desc,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_contracts_desc"),
@@ -7655,21 +7778,21 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().GuildTopRowElement,
-                        I().GuildChallenges,
+                        C().GuildTopRowElement,
+                        C().GuildChallenges,
                       ),
                     },
                     s.createElement("img", {
-                      className: I().DailyContractsImage,
+                      className: C().DailyContractsImage,
                       src: `${r.r.IMG_URL}international2020/guilds_2.png`,
                     }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().Title,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().Title,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_challenges_title"),
@@ -7678,9 +7801,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleThumbnailBody,
-                          I().TextColorLightestGrey,
-                          I().Desc,
+                          C().TextStyleThumbnailBody,
+                          C().TextColorLightestGrey,
+                          C().Desc,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_challenges_desc"),
@@ -7689,19 +7812,19 @@
                   s.createElement(
                     "div",
                     {
-                      className: (0, N.A)(I().GuildTopRowElement, I().LevelUp),
+                      className: (0, N.A)(C().GuildTopRowElement, C().LevelUp),
                     },
                     s.createElement("img", {
-                      className: I().DailyContractsImage,
+                      className: C().DailyContractsImage,
                       src: `${r.r.IMG_URL}international2020/guilds_2b.png`,
                     }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().Title,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().Title,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_playgames_title"),
@@ -7710,9 +7833,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleThumbnailBody,
-                          I().TextColorLightestGrey,
-                          I().Desc,
+                          C().TextStyleThumbnailBody,
+                          C().TextColorLightestGrey,
+                          C().Desc,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_playgames_desc"),
@@ -7721,15 +7844,15 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: I().GuildRewards },
+                  { className: C().GuildRewards },
                   s.createElement("img", {
-                    className: I().RewardImage,
+                    className: C().RewardImage,
                     src: `${r.r.IMG_URL}international2020/guilds_3.png`,
                   }),
                   s.createElement(
                     "div",
                     {
-                      className: (0, N.A)(I().TextColorLightestGold, I().Title),
+                      className: (0, N.A)(C().TextColorLightestGold, C().Title),
                     },
                     (0, B.Wn)("#battlepass_guilds_rewards_title"),
                   ),
@@ -7737,9 +7860,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleThumbnailBody,
-                        I().TextColorLightestGrey,
-                        I().Desc,
+                        C().TextStyleThumbnailBody,
+                        C().TextColorLightestGrey,
+                        C().Desc,
                       ),
                     },
                     (0, B.Wn)("#battlepass_guilds_rewards_desc"),
@@ -7749,14 +7872,14 @@
                   "tchinese" != r.r.LANGUAGE &&
                   s.createElement(
                     "div",
-                    { className: I().GuildsChat },
+                    { className: C().GuildsChat },
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().Title,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().Title,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_chat_title"),
@@ -7765,9 +7888,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleThumbnailBody,
-                          I().TextColorLighterGrey,
-                          I().Desc,
+                          C().TextStyleThumbnailBody,
+                          C().TextColorLighterGrey,
+                          C().Desc,
                         ),
                       },
                       (0, B.Wn)("#battlepass_guilds_chat_desc"),
@@ -7778,7 +7901,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().SummerEventHeight,
+                heightClassName: C().SummerEventHeight,
                 headerPrefix: "#battlepass_coming_soon",
                 headerText: "#battlepass_summer_event_title",
                 bodyText: "#battlepass_summer_event_desc",
@@ -7787,7 +7910,7 @@
               s.createElement(
                 "div",
                 {
-                  className: I().SummerEvent,
+                  className: C().SummerEvent,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/summer_event_bg.png )`,
                   },
@@ -7795,15 +7918,15 @@
                 s.createElement(k.z, { bottom: !0, color: "#000000" }),
                 s.createElement(
                   "div",
-                  { className: I().BottomSection },
+                  { className: C().BottomSection },
                   s.createElement(
                     "div",
-                    { className: I().Tease1 },
+                    { className: C().Tease1 },
                     (0, B.Wn)("#battlepass_summer_tease_1"),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().Tease2 },
+                    { className: C().Tease2 },
                     (0, B.Wn)("#battlepass_summer_tease_2"),
                   ),
                 ),
@@ -7812,7 +7935,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().DivinePathHeight,
+                heightClassName: C().DivinePathHeight,
                 headerPrefix: "#battlepass_divine_path_prefix",
                 headerText: "#battlepass_divine_path_title",
                 bodyText: "#battlepass_divine_path_desc",
@@ -7821,7 +7944,7 @@
               s.createElement(
                 "div",
                 {
-                  className: I().DivinePath,
+                  className: C().DivinePath,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/divine_path_bg.png )`,
                   },
@@ -7834,12 +7957,12 @@
                   endPct: 100,
                 }),
                 s.createElement("img", {
-                  className: I().DivineOverlay,
+                  className: C().DivineOverlay,
                   src: `${r.r.IMG_URL}international2020/divine_overlay.png`,
                 }),
                 s.createElement(
                   "div",
-                  { className: I().SecondMap, "data-aos": "fade-slide-left" },
+                  { className: C().SecondMap, "data-aos": "fade-slide-left" },
                   (0, B.Wn)("#battlepass_divine_path_map"),
                 ),
               ),
@@ -7847,7 +7970,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().GauntletHeight,
+                heightClassName: C().GauntletHeight,
                 headerPrefix: "#battlepass_new",
                 headerText: "#battlepass_gauntlet_title",
                 bodyText: "#battlepass_gauntlet_desc",
@@ -7856,52 +7979,52 @@
               s.createElement(
                 "div",
                 {
-                  className: I().Gauntlet,
+                  className: C().Gauntlet,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/gauntlet_bg.png )`,
                   },
                 },
-                s.createElement("div", { className: I().GoldDivider }),
+                s.createElement("div", { className: C().GoldDivider }),
                 s.createElement(
                   "div",
-                  { className: I().Progress },
+                  { className: C().Progress },
                   (0, B.Wn)("#battlepass_gauntlet_progress"),
                 ),
                 s.createElement(
                   "div",
-                  { className: I().Pips },
+                  { className: C().Pips },
                   s.createElement(
                     "div",
-                    { className: I().PipContainer },
+                    { className: C().PipContainer },
                     s.createElement(
                       "div",
-                      { className: (0, N.A)(I().Pip, I().Win) },
+                      { className: (0, N.A)(C().Pip, C().Win) },
                       s.createElement("img", {
-                        className: I().Checkmark,
+                        className: C().Checkmark,
                         src: `${r.r.IMG_URL}international2020/icon_check.png`,
                       }),
                     ),
                     s.createElement("div", {
-                      className: (0, N.A)(I().Pip, I().Win),
+                      className: (0, N.A)(C().Pip, C().Win),
                     }),
                     s.createElement("div", {
-                      className: (0, N.A)(I().Pip, I().Win),
+                      className: (0, N.A)(C().Pip, C().Win),
                     }),
                   ),
-                  s.createElement("div", { className: I().VerticalDivider }),
+                  s.createElement("div", { className: C().VerticalDivider }),
                   s.createElement(
                     "div",
-                    { className: I().PipContainer },
+                    { className: C().PipContainer },
                     s.createElement(
                       "div",
-                      { className: (0, N.A)(I().Pip, I().Lose) },
+                      { className: (0, N.A)(C().Pip, C().Lose) },
                       s.createElement("img", {
-                        className: I().Xmark,
+                        className: C().Xmark,
                         src: `${r.r.IMG_URL}international2020/icon_x.png`,
                       }),
                     ),
                     s.createElement("div", {
-                      className: (0, N.A)(I().Pip, I().Lose),
+                      className: (0, N.A)(C().Pip, C().Lose),
                     }),
                   ),
                 ),
@@ -7909,23 +8032,23 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleBody,
-                      I().TestColorLightestGrey,
-                      I().Desc2,
+                      C().TextStyleBody,
+                      C().TestColorLightestGrey,
+                      C().Desc2,
                     ),
                   },
                   (0, B.Wn)("#battlepass_gauntlet_desc2"),
                 ),
                 s.createElement("img", {
-                  className: I().HeroImage1,
+                  className: C().HeroImage1,
                   src: `${r.r.IMG_URL}international2020/gauntlet_1.png`,
                 }),
                 s.createElement("img", {
-                  className: I().HeroImage2,
+                  className: C().HeroImage2,
                   src: `${r.r.IMG_URL}international2020/gauntlet_2.png`,
                 }),
                 s.createElement("img", {
-                  className: I().HeroImage3,
+                  className: C().HeroImage3,
                   src: `${r.r.IMG_URL}international2020/gauntlet_3.png`,
                 }),
               ),
@@ -7933,7 +8056,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().BountiesHeight,
+                heightClassName: C().BountiesHeight,
                 headerPrefix: "#battlepass_new",
                 headerText: "#battlepass_bounties_title",
                 bodyText: "#battlepass_bounties_desc",
@@ -7941,7 +8064,7 @@
                 centerWidth: 1138,
               },
               s.createElement("div", {
-                className: I().Bounties,
+                className: C().Bounties,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}international2020/bounty_bg.png )`,
                 },
@@ -7950,7 +8073,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().GiftBattlePassHeight,
+                heightClassName: C().GiftBattlePassHeight,
                 headerPrefix: "#battlepass_new",
                 headerText: "#battlepass_gift_title",
                 bodyText: "#battlepass_gift_desc",
@@ -7958,7 +8081,7 @@
                 centerWidth: 1410,
               },
               s.createElement("div", {
-                className: I().GiftBattlePass,
+                className: C().GiftBattlePass,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}international2020/gift_bg.png )`,
                 },
@@ -7967,7 +8090,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().MatchPredictionsHeight,
+                heightClassName: C().MatchPredictionsHeight,
                 headerPrefix: "#battlepass_new",
                 headerText: "#battlepass_match_predictions_title",
                 bodyText: "#battlepass_match_predictions_desc",
@@ -7975,7 +8098,7 @@
                 centerWidth: 1450,
               },
               s.createElement("div", {
-                className: I().MatchPredictions,
+                className: C().MatchPredictions,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}international2020/match_predictions_bg.png )`,
                 },
@@ -7984,7 +8107,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().MVPHeight,
+                heightClassName: C().MVPHeight,
                 headerPrefix: "#battlepass_revamped",
                 headerText: "#battlepass_mvp_title",
                 bodyText: "#battlepass_mvp_desc",
@@ -7992,11 +8115,11 @@
               },
               s.createElement(
                 "div",
-                { className: I().MVP },
+                { className: C().MVP },
                 s.createElement(
                   "video",
                   {
-                    className: I().BackgroundVideo,
+                    className: C().BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -8031,7 +8154,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().VersusScreenHeight,
+                heightClassName: C().VersusScreenHeight,
                 headerPrefix: "#battlepass_updated",
                 headerText: "#battlepass_versus_screen_title",
                 bodyText: "#battlepass_versus_screen_desc",
@@ -8040,11 +8163,11 @@
               },
               s.createElement(
                 "div",
-                { className: I().VersusScreen },
+                { className: C().VersusScreen },
                 s.createElement(
                   "video",
                   {
-                    className: I().BackgroundVideo,
+                    className: C().BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -8065,7 +8188,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().PauseMinigamesHeight,
+                heightClassName: C().PauseMinigamesHeight,
                 headerPrefix: "#battlepass_new",
                 headerText: "#battlepass_pause_minigames_title",
                 bodyText: "#battlepass_pause_minigames_desc",
@@ -8073,7 +8196,7 @@
                 centerWidth: 1300,
               },
               s.createElement("div", {
-                className: I().PauseMinigames,
+                className: C().PauseMinigames,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}international2020/pause_screen_bg.png )`,
                 },
@@ -8082,125 +8205,125 @@
             s.createElement(
               H,
               {
-                heightClassName: I().AssistantHeight,
+                heightClassName: C().AssistantHeight,
                 headerText: "#battlepass_assistant_title",
                 justifyContent: j.CenterTop,
               },
               s.createElement(
                 "div",
                 {
-                  className: I().Assistant,
+                  className: C().Assistant,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_2.jpg )`,
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
-                    className: I().AssistantCarousel,
+                    className: C().AssistantCarousel,
                     naturalSlideWidth: 100,
                     naturalSlideHeight: 52,
                     totalSlides: 6,
                   },
                   s.createElement(
-                    O.Ap,
+                    x.Ap,
                     null,
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 0 },
                       s.createElement("img", {
-                        className: I().Assistant,
+                        className: C().Assistant,
                         src: `${r.r.IMG_URL}international2020/assistant/assistant_1.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 1 },
                       s.createElement("img", {
-                        className: I().Assistant,
+                        className: C().Assistant,
                         src: `${r.r.IMG_URL}international2020/assistant/assistant_2.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 2 },
                       s.createElement("img", {
-                        className: I().Assistant,
+                        className: C().Assistant,
                         src: `${r.r.IMG_URL}international2020/assistant/assistant_3.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 3 },
                       s.createElement("img", {
-                        className: I().Assistant,
+                        className: C().Assistant,
                         src: `${r.r.IMG_URL}international2020/assistant/assistant_4.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 4 },
                       s.createElement("img", {
-                        className: I().Assistant,
+                        className: C().Assistant,
                         src: `${r.r.IMG_URL}international2020/assistant/assistant_6.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 5 },
                       s.createElement("img", {
-                        className: I().Assistant,
+                        className: C().Assistant,
                         src: `${r.r.IMG_URL}international2020/assistant/assistant_7.png`,
                       }),
                     ),
                   ),
                   s.createElement(
-                    O._X,
-                    { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                    x._X,
+                    { className: (0, N.A)(C().CarouselArrow, C().Left) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(
-                    O.CC,
-                    { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                    x.CC,
+                    { className: (0, N.A)(C().CarouselArrow, C().Right) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().CarouselDots },
+                    { className: C().CarouselDots },
                     s.createElement(
-                      O.cL,
-                      { className: I().Dot, slide: 0 },
+                      x.cL,
+                      { className: C().Dot, slide: 0 },
                       s.createElement("div", null),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().Dot, slide: 1 },
+                      x.cL,
+                      { className: C().Dot, slide: 1 },
                       s.createElement("div", null),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().Dot, slide: 2 },
+                      x.cL,
+                      { className: C().Dot, slide: 2 },
                       s.createElement("div", null),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().Dot, slide: 3 },
+                      x.cL,
+                      { className: C().Dot, slide: 3 },
                       s.createElement("div", null),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().Dot, slide: 4 },
+                      x.cL,
+                      { className: C().Dot, slide: 4 },
                       s.createElement("div", null),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().Dot, slide: 5 },
+                      x.cL,
+                      { className: C().Dot, slide: 5 },
                       s.createElement("div", null),
                     ),
                   ),
@@ -8211,26 +8334,26 @@
             s.createElement(_e, { title: "#battlepass_returning_features" }),
             s.createElement(
               H,
-              { heightClassName: I().ReturningFeaturesHeight },
+              { heightClassName: C().ReturningFeaturesHeight },
               s.createElement(
                 "div",
                 {
-                  className: I().ReturningFeatures,
+                  className: C().ReturningFeatures,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_features_bg.png )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: I().FeatureRow },
+                  { className: C().FeatureRow },
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementDouble,
+                      className: C().FeatureElementDouble,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_1.png )`,
                       },
@@ -8239,9 +8362,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_rank_double_down_title"),
@@ -8250,8 +8373,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_rank_double_down_desc"),
@@ -8260,11 +8383,11 @@
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementDouble,
+                      className: C().FeatureElementDouble,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_2.png )`,
                       },
@@ -8273,9 +8396,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_collectors_cache_title"),
@@ -8284,8 +8407,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_collectors_cache_desc"),
@@ -8294,15 +8417,15 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: I().FeatureRow },
+                  { className: C().FeatureRow },
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementTriple,
+                      className: C().FeatureElementTriple,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_3.png )`,
                       },
@@ -8311,9 +8434,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_high_five_title"),
@@ -8322,8 +8445,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_high_five_desc"),
@@ -8332,11 +8455,11 @@
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementTriple,
+                      className: C().FeatureElementTriple,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_4.png )`,
                       },
@@ -8345,9 +8468,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_tipping_title"),
@@ -8356,8 +8479,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_tipping_desc"),
@@ -8366,11 +8489,11 @@
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementTriple,
+                      className: C().FeatureElementTriple,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_5.png )`,
                       },
@@ -8379,9 +8502,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_arcana_title"),
@@ -8390,8 +8513,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_arcana_desc"),
@@ -8400,15 +8523,15 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: I().FeatureRow },
+                  { className: C().FeatureRow },
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementTriple,
+                      className: C().FeatureElementTriple,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_6.png )`,
                       },
@@ -8417,9 +8540,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_evolving_chat_title"),
@@ -8428,8 +8551,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_evolving_chat_desc"),
@@ -8438,11 +8561,11 @@
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementTriple,
+                      className: C().FeatureElementTriple,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_7.png )`,
                       },
@@ -8451,9 +8574,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_recycling_title"),
@@ -8462,8 +8585,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_recycling_desc"),
@@ -8472,11 +8595,11 @@
                   s.createElement(
                     "div",
                     {
-                      className: I().FeatureElementTriple,
+                      className: C().FeatureElementTriple,
                       "data-aos": "fade-slide-up",
                     },
                     s.createElement("div", {
-                      className: I().FeatureImage,
+                      className: C().FeatureImage,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}international2020/returning_feature_8.png )`,
                       },
@@ -8485,9 +8608,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLightestGold,
-                          I().FeatureTitle,
+                          C().TextStyleOverline,
+                          C().TextColorLightestGold,
+                          C().FeatureTitle,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_trivia_title"),
@@ -8496,8 +8619,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().FeatureDesc,
-                          I().TextStyleThumbnailBody,
+                          C().FeatureDesc,
+                          C().TextStyleThumbnailBody,
                         ),
                       },
                       (0, B.Wn)("#battlepass_returning_trivia_desc"),
@@ -8513,7 +8636,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().ImmortalsHeight,
+                heightClassName: C().ImmortalsHeight,
                 headerPrefix: "2020",
                 headerText: "#battlepass_immortals_header",
                 bodyText: "#battlepass_immortals_desc",
@@ -8522,37 +8645,37 @@
               s.createElement(
                 "div",
                 {
-                  className: I().Immortals,
+                  className: C().Immortals,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_15.jpg )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: I().TreasureList },
+                  { className: C().TreasureList },
                   s.createElement(
                     "div",
                     {
                       className: (0, N.A)(
-                        I().Treasure,
-                        I().Enabled,
+                        C().Treasure,
+                        C().Enabled,
                         1 == this.state.nImmortalTreasureSelected &&
-                          I().Selected,
+                          C().Selected,
                       ),
                       onClick: () => this.onImmortalSelect(1),
                     },
                     s.createElement("img", {
-                      className: I().TreasureIcon,
+                      className: C().TreasureIcon,
                       src: `${r.r.IMG_URL}international2020/immortal_treasure_1.png`,
                     }),
-                    s.createElement("div", { className: I().TreasureBorder }),
+                    s.createElement("div", { className: C().TreasureBorder }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLighterGold,
-                          I().TreasureName,
+                          C().TextStyleOverline,
+                          C().TextColorLighterGold,
+                          C().TreasureName,
                         ),
                       },
                       (0, B.Wn)("#battlepass_immortals_treasure_1"),
@@ -8562,25 +8685,25 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().Treasure,
-                        I().Enabled,
+                        C().Treasure,
+                        C().Enabled,
                         2 == this.state.nImmortalTreasureSelected &&
-                          I().Selected,
+                          C().Selected,
                       ),
                       onClick: () => this.onImmortalSelect(2),
                     },
                     s.createElement("img", {
-                      className: I().TreasureIcon,
+                      className: C().TreasureIcon,
                       src: `${r.r.IMG_URL}international2020/immortal_treasure_2.png`,
                     }),
-                    s.createElement("div", { className: I().TreasureBorder }),
+                    s.createElement("div", { className: C().TreasureBorder }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLighterGold,
-                          I().TreasureName,
+                          C().TextStyleOverline,
+                          C().TextColorLighterGold,
+                          C().TreasureName,
                         ),
                       },
                       (0, B.Wn)("#battlepass_immortals_treasure_2"),
@@ -8590,25 +8713,25 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().Treasure,
-                        I().Enabled,
+                        C().Treasure,
+                        C().Enabled,
                         3 == this.state.nImmortalTreasureSelected &&
-                          I().Selected,
+                          C().Selected,
                       ),
                       onClick: () => this.onImmortalSelect(3),
                     },
                     s.createElement("img", {
-                      className: I().TreasureIcon,
+                      className: C().TreasureIcon,
                       src: `${r.r.IMG_URL}international2020/immortal_treasure_3.png`,
                     }),
-                    s.createElement("div", { className: I().TreasureBorder }),
+                    s.createElement("div", { className: C().TreasureBorder }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorLighterGold,
-                          I().TreasureName,
+                          C().TextStyleOverline,
+                          C().TextColorLighterGold,
+                          C().TreasureName,
                         ),
                       },
                       (0, B.Wn)("#battlepass_immortals_treasure_3"),
@@ -8619,24 +8742,24 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().CarouselContainer,
+                      C().CarouselContainer,
                       1 == this.state.nImmortalTreasureSelected &&
-                        I().ShowCarousel,
+                        C().ShowCarousel,
                     ),
                   },
                   s.createElement(
-                    O.gi,
+                    x.gi,
                     {
-                      className: I().ImmortalCarousel,
+                      className: C().ImmortalCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 37,
                       totalSlides: 11,
                     },
                     s.createElement(
-                      O.Ap,
+                      x.Ap,
                       null,
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 0 },
                         s.createElement(Z, {
                           index: 0,
@@ -8645,7 +8768,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 1 },
                         s.createElement(Z, {
                           index: 1,
@@ -8654,7 +8777,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 2 },
                         s.createElement(Z, {
                           index: 2,
@@ -8663,7 +8786,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 3 },
                         s.createElement(Z, {
                           index: 3,
@@ -8672,7 +8795,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 4 },
                         s.createElement(Z, {
                           index: 4,
@@ -8681,7 +8804,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 5 },
                         s.createElement(Z, {
                           index: 5,
@@ -8690,7 +8813,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 6 },
                         s.createElement(Z, {
                           index: 6,
@@ -8699,7 +8822,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 7 },
                         s.createElement(Z, {
                           index: 7,
@@ -8708,7 +8831,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 8 },
                         s.createElement(Z, {
                           index: 8,
@@ -8717,7 +8840,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 9 },
                         s.createElement(Z, {
                           index: 9,
@@ -8726,46 +8849,46 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 10 },
                         s.createElement(Z, { index: 10, video: "emblem" }),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: I().CarouselDots },
+                      { className: C().CarouselDots },
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 0 },
                         s.createElement(J, { heroName: "tinker" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 1 },
                         s.createElement(J, { heroName: "night_stalker" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 2 },
                         s.createElement(J, { heroName: "warlock" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 3 },
                         s.createElement(J, { heroName: "life_stealer" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 4 },
                         s.createElement(J, { heroName: "keeper_of_the_light" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 5 },
                         s.createElement(J, { heroName: "slark" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 6,
                           "data-tip": (0, B.Wn)("#battlepass_tooltip_rare"),
@@ -8773,7 +8896,7 @@
                         s.createElement(J, { rare: !0, heroName: "puck" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 7,
                           "data-tip": (0, B.Wn)(
@@ -8786,7 +8909,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 8,
                           "data-tip": (0, B.Wn)(
@@ -8799,7 +8922,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 9,
                           "data-tip": (0, B.Wn)(
@@ -8812,7 +8935,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 10,
                           "data-tip": (0, B.Wn)(
@@ -8827,19 +8950,19 @@
                       s.createElement(q, null),
                     ),
                     s.createElement(
-                      O._X,
-                      { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                      x._X,
+                      { className: (0, N.A)(C().CarouselArrow, C().Left) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                        className: I().ArrowImage,
+                        className: C().ArrowImage,
                       }),
                     ),
                     s.createElement(
-                      O.CC,
-                      { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                      x.CC,
+                      { className: (0, N.A)(C().CarouselArrow, C().Right) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                        className: I().ArrowImage,
+                        className: C().ArrowImage,
                       }),
                     ),
                     s.createElement(Q, {
@@ -8850,9 +8973,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleCaption,
-                        I().TextColorLightGrey,
-                        I().TreasureLevels,
+                        C().TextStyleCaption,
+                        C().TextColorLightGrey,
+                        C().TreasureLevels,
                       ),
                     },
                     (0, B.Wn)("#battlepass_immortals_levels_1_desc"),
@@ -8862,24 +8985,24 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().CarouselContainer,
+                      C().CarouselContainer,
                       2 == this.state.nImmortalTreasureSelected &&
-                        I().ShowCarousel,
+                        C().ShowCarousel,
                     ),
                   },
                   s.createElement(
-                    O.gi,
+                    x.gi,
                     {
-                      className: I().ImmortalCarousel,
+                      className: C().ImmortalCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 37,
                       totalSlides: 11,
                     },
                     s.createElement(
-                      O.Ap,
+                      x.Ap,
                       null,
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 0 },
                         s.createElement(Z, {
                           index: 0,
@@ -8888,7 +9011,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 1 },
                         s.createElement(Z, {
                           index: 1,
@@ -8897,7 +9020,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 2 },
                         s.createElement(Z, {
                           index: 2,
@@ -8906,7 +9029,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 3 },
                         s.createElement(Z, {
                           index: 3,
@@ -8915,7 +9038,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 4 },
                         s.createElement(Z, {
                           index: 4,
@@ -8924,7 +9047,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 5 },
                         s.createElement(Z, {
                           index: 5,
@@ -8933,7 +9056,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 6 },
                         s.createElement(Z, {
                           index: 6,
@@ -8942,7 +9065,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 7 },
                         s.createElement(Z, {
                           index: 7,
@@ -8951,7 +9074,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 8 },
                         s.createElement(Z, {
                           index: 8,
@@ -8960,7 +9083,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 9 },
                         s.createElement(Z, {
                           index: 9,
@@ -8969,46 +9092,46 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 10 },
                         s.createElement(Z, { index: 10, video: "emblem" }),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: I().CarouselDots },
+                      { className: C().CarouselDots },
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 0 },
                         s.createElement(J, { heroName: "sven" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 1 },
                         s.createElement(J, { heroName: "magnataur" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 2 },
                         s.createElement(J, { heroName: "slardar" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 3 },
                         s.createElement(J, { heroName: "troll_warlord" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 4 },
                         s.createElement(J, { heroName: "witch_doctor" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 5 },
                         s.createElement(J, { heroName: "silencer" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 6,
                           "data-tip": (0, B.Wn)("#battlepass_tooltip_rare"),
@@ -9016,7 +9139,7 @@
                         s.createElement(J, { rare: !0, heroName: "jakiro" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 7,
                           "data-tip": (0, B.Wn)(
@@ -9029,7 +9152,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 8,
                           "data-tip": (0, B.Wn)(
@@ -9042,7 +9165,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 9,
                           "data-tip": (0, B.Wn)(
@@ -9052,7 +9175,7 @@
                         s.createElement(J, { ultrarare: !0, heroName: "ursa" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 10,
                           "data-tip": (0, B.Wn)(
@@ -9067,19 +9190,19 @@
                       s.createElement(q, null),
                     ),
                     s.createElement(
-                      O._X,
-                      { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                      x._X,
+                      { className: (0, N.A)(C().CarouselArrow, C().Left) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                        className: I().ArrowImage,
+                        className: C().ArrowImage,
                       }),
                     ),
                     s.createElement(
-                      O.CC,
-                      { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                      x.CC,
+                      { className: (0, N.A)(C().CarouselArrow, C().Right) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                        className: I().ArrowImage,
+                        className: C().ArrowImage,
                       }),
                     ),
                     s.createElement(Q, {
@@ -9090,9 +9213,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleCaption,
-                        I().TextColorLightGrey,
-                        I().TreasureLevels,
+                        C().TextStyleCaption,
+                        C().TextColorLightGrey,
+                        C().TreasureLevels,
                       ),
                     },
                     (0, B.Wn)("#battlepass_immortals_levels_2_desc"),
@@ -9102,24 +9225,24 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().CarouselContainer,
+                      C().CarouselContainer,
                       3 == this.state.nImmortalTreasureSelected &&
-                        I().ShowCarousel,
+                        C().ShowCarousel,
                     ),
                   },
                   s.createElement(
-                    O.gi,
+                    x.gi,
                     {
-                      className: I().ImmortalCarousel,
+                      className: C().ImmortalCarousel,
                       naturalSlideWidth: 100,
                       naturalSlideHeight: 37,
                       totalSlides: 10,
                     },
                     s.createElement(
-                      O.Ap,
+                      x.Ap,
                       null,
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 0 },
                         s.createElement(Z, {
                           index: 0,
@@ -9128,7 +9251,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 1 },
                         s.createElement(Z, {
                           index: 1,
@@ -9137,7 +9260,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 2 },
                         s.createElement(Z, {
                           index: 2,
@@ -9146,7 +9269,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 3 },
                         s.createElement(Z, {
                           index: 3,
@@ -9155,7 +9278,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 4 },
                         s.createElement(Z, {
                           index: 4,
@@ -9164,7 +9287,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 5 },
                         s.createElement(Z, {
                           index: 5,
@@ -9173,7 +9296,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 6 },
                         s.createElement(Z, {
                           index: 6,
@@ -9182,7 +9305,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 7 },
                         s.createElement(Z, {
                           index: 7,
@@ -9191,7 +9314,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 8 },
                         s.createElement(Z, {
                           index: 8,
@@ -9200,46 +9323,46 @@
                         }),
                       ),
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { index: 10 },
                         s.createElement(Z, { index: 9, video: "emblem" }),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: I().CarouselDots },
+                      { className: C().CarouselDots },
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 0 },
                         s.createElement(J, { heroName: "lich" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 1 },
                         s.createElement(J, { heroName: "oracle" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 2 },
                         s.createElement(J, { heroName: "rattletrap" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 3 },
                         s.createElement(J, { heroName: "pugna" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 4 },
                         s.createElement(J, { heroName: "treant" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { slide: 5 },
                         s.createElement(J, { heroName: "gyrocopter" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 6,
                           "data-tip": (0, B.Wn)("#battlepass_tooltip_rare"),
@@ -9247,7 +9370,7 @@
                         s.createElement(J, { rare: !0, heroName: "unknown" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 7,
                           "data-tip": (0, B.Wn)(
@@ -9257,7 +9380,7 @@
                         s.createElement(J, { veryrare: !0, heroName: "pugna" }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 8,
                           "data-tip": (0, B.Wn)(
@@ -9270,7 +9393,7 @@
                         }),
                       ),
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         {
                           slide: 9,
                           "data-tip": (0, B.Wn)(
@@ -9285,19 +9408,19 @@
                       s.createElement(q, null),
                     ),
                     s.createElement(
-                      O._X,
-                      { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                      x._X,
+                      { className: (0, N.A)(C().CarouselArrow, C().Left) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                        className: I().ArrowImage,
+                        className: C().ArrowImage,
                       }),
                     ),
                     s.createElement(
-                      O.CC,
-                      { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                      x.CC,
+                      { className: (0, N.A)(C().CarouselArrow, C().Right) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                        className: I().ArrowImage,
+                        className: C().ArrowImage,
                       }),
                     ),
                     s.createElement(Q, {
@@ -9308,9 +9431,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleCaption,
-                        I().TextColorLightGrey,
-                        I().TreasureLevels,
+                        C().TextStyleCaption,
+                        C().TextColorLightGrey,
+                        C().TreasureLevels,
                       ),
                     },
                     (0, B.Wn)("#battlepass_immortals_levels_3_desc"),
@@ -9320,9 +9443,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleFootnote,
-                      I().TextColorDarkGold,
-                      I().ImmortalsTrade,
+                      C().TextStyleFootnote,
+                      C().TextColorDarkGold,
+                      C().ImmortalsTrade,
                     ),
                   },
                   (0, B.Wn)("#battlepass_immortals_trade"),
@@ -9332,7 +9455,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().TerrainHeight,
+                heightClassName: C().TerrainHeight,
                 headerPrefix: "#battlepass_terrain_prefix",
                 headerText: "#battlepass_terrain_header",
                 bodyText: "#battlepass_terrain_desc",
@@ -9342,11 +9465,11 @@
               },
               s.createElement(
                 "div",
-                { className: I().Terrain },
+                { className: C().Terrain },
                 s.createElement(
                   "video",
                   {
-                    className: I().BackgroundVideo,
+                    className: C().BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -9374,7 +9497,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().MiniPudgeHeight,
+                heightClassName: C().MiniPudgeHeight,
                 headerPrefix: "#battlepass_minipudge_prefix",
                 headerText: "#battlepass_minipudge_header",
                 bodyText: "#battlepass_minipudge_desc",
@@ -9382,7 +9505,7 @@
                 justifyContent: j.CenterBottom,
               },
               s.createElement("div", {
-                className: I().MiniPudge,
+                className: C().MiniPudge,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}international2020/pudge_arcana_bg.png )`,
                 },
@@ -9398,7 +9521,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().AntimageHeight,
+                heightClassName: C().AntimageHeight,
                 headerPrefix: "#battlepass_antimage_prefix",
                 headerText: "#battlepass_antimage_header",
                 bodyText: "#battlepass_antimage_desc",
@@ -9406,7 +9529,7 @@
                 justifyContent: j.CenterBottom,
               },
               s.createElement("div", {
-                className: I().Antimage,
+                className: C().Antimage,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}international2020/antimage_arcana_bg.png )`,
                 },
@@ -9422,13 +9545,13 @@
             s.createElement(
               H,
               {
-                heightClassName: I().WraithKingHeight,
+                heightClassName: C().WraithKingHeight,
                 levelReward: 375,
                 backgroundVideo: "wk_arc_banner",
               },
               s.createElement(
                 "div",
-                { className: I().WraithKing },
+                { className: C().WraithKing },
                 s.createElement(k.z, {
                   bottom: !0,
                   color: "#000000",
@@ -9438,9 +9561,9 @@
                 }),
                 s.createElement(
                   "div",
-                  { className: I().WKContainer },
+                  { className: C().WKContainer },
                   s.createElement("img", {
-                    className: I().WKTitle,
+                    className: C().WKTitle,
                     onError: (e) =>
                       (e.target.src = `${r.r.IMG_URL}international2020/wraith_king_title_english.png`),
                     src: `${r.r.IMG_URL}international2020/wraith_king_title_${r.r.LANGUAGE}.png`,
@@ -9449,9 +9572,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleOverline,
-                        I().TextColorLightGold,
-                        I().SubTitle,
+                        C().TextStyleOverline,
+                        C().TextColorLightGold,
+                        C().SubTitle,
                       ),
                     },
                     (0, B.Wn)("#battlepass_wraithking_header"),
@@ -9460,9 +9583,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorLightestGrey,
-                        I().Body,
+                        C().TextStyleBody,
+                        C().TextColorLightestGrey,
+                        C().Body,
                       ),
                     },
                     (0, B.Wn)("#battlepass_wraithking_desc"),
@@ -9472,9 +9595,9 @@
                     {
                       href: `${r.r.BASE_URL}theonetrueking`,
                       className: (0, N.A)(
-                        I().TextStyleButton,
-                        I().TextColorLightestGrey,
-                        I().LearnMoreButton,
+                        C().TextStyleButton,
+                        C().TextColorLightestGrey,
+                        C().LearnMoreButton,
                       ),
                     },
                     (0, B.Wn)("#battlepass_learn_more"),
@@ -9484,11 +9607,11 @@
             ),
             s.createElement(
               H,
-              { heightClassName: I().QueenOfPainHeight, levelReward: 445 },
+              { heightClassName: C().QueenOfPainHeight, levelReward: 445 },
               s.createElement(
                 "div",
                 {
-                  className: I().QueenOfPain,
+                  className: C().QueenOfPain,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/qop_arcana_bg.png )`,
                   },
@@ -9502,9 +9625,9 @@
                 }),
                 s.createElement(
                   "div",
-                  { className: I().QopContainer },
+                  { className: C().QopContainer },
                   s.createElement("img", {
-                    className: I().QopTitle,
+                    className: C().QopTitle,
                     onError: (e) =>
                       (e.target.src = `${r.r.IMG_URL}international2020/qop_title_english.png`),
                     src: `${r.r.IMG_URL}international2020/qop_title_${r.r.LANGUAGE}.png`,
@@ -9513,9 +9636,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleOverline,
-                        I().TextColorLightGold,
-                        I().SubTitle,
+                        C().TextStyleOverline,
+                        C().TextColorLightGold,
+                        C().SubTitle,
                       ),
                     },
                     (0, B.Wn)("#battlepass_qop_header"),
@@ -9524,9 +9647,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorLightestGrey,
-                        I().Body,
+                        C().TextStyleBody,
+                        C().TextColorLightestGrey,
+                        C().Body,
                       ),
                     },
                     (0, B.Wn)("#battlepass_qop_desc"),
@@ -9536,9 +9659,9 @@
                     {
                       href: `${r.r.BASE_URL}eminenceofristul`,
                       className: (0, N.A)(
-                        I().TextStyleButton,
-                        I().TextColorLightestGrey,
-                        I().LearnMoreButton,
+                        C().TextStyleButton,
+                        C().TextColorLightestGrey,
+                        C().LearnMoreButton,
                       ),
                     },
                     (0, B.Wn)("#battlepass_learn_more"),
@@ -9549,7 +9672,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().WindrangerHeight,
+                heightClassName: C().WindrangerHeight,
                 levelReward: 575,
                 headerPrefix: "#battlepass_windranger_prefix",
                 headerText: "#battlepass_windranger_header",
@@ -9557,7 +9680,7 @@
                 justifyContent: j.CenterBottom,
               },
               s.createElement("div", {
-                className: I().Windranger,
+                className: C().Windranger,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}international2020/windranger_arcana_bg.png )`,
                 },
@@ -9573,7 +9696,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().CustomTowersHeight,
+                heightClassName: C().CustomTowersHeight,
                 levelReward: 200,
                 headerText: "#battlepass_custom_towers_header",
                 neverTradeable: !0,
@@ -9582,18 +9705,18 @@
               s.createElement(
                 "div",
                 {
-                  className: I().CustomTowers,
+                  className: C().CustomTowers,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_3.jpg )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: I().CustomTowersVideoContainer },
+                  { className: C().CustomTowersVideoContainer },
                   s.createElement(
                     "video",
                     {
-                      className: I().CustomTowersVideo,
+                      className: C().CustomTowersVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -9610,11 +9733,11 @@
                     }),
                   ),
                   s.createElement("img", {
-                    className: I().CustomTowersImage1,
+                    className: C().CustomTowersImage1,
                     src: `${r.r.IMG_URL}international2020/custom_tower_1.png`,
                   }),
                   s.createElement("img", {
-                    className: I().CustomTowersImage2,
+                    className: C().CustomTowersImage2,
                     src: `${r.r.IMG_URL}international2020/custom_tower_2.png`,
                   }),
                 ),
@@ -9622,9 +9745,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleBody,
-                      I().TextColorLightestGrey,
-                      I().CustomTowersBody,
+                      C().TextStyleBody,
+                      C().TextColorLightestGrey,
+                      C().CustomTowersBody,
                     ),
                   },
                   (0, B.Wn)("#battlepass_custom_towers_desc"),
@@ -9634,7 +9757,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().KillStreakHeight,
+                heightClassName: C().KillStreakHeight,
                 headerPrefix: "#battlepass_new",
                 headerText: "#battlepass_kill_streak_header",
                 bodyText: "#battlepass_kill_streak_desc",
@@ -9643,13 +9766,13 @@
               s.createElement(
                 "div",
                 {
-                  className: I().KillStreak,
+                  className: C().KillStreak,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_15.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().KillStreakOverlay,
+                  className: C().KillStreakOverlay,
                   src: `${r.r.IMG_URL}international2020/killstreak.png`,
                 }),
               ),
@@ -9657,7 +9780,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().PingCosmeticsHeight,
+                heightClassName: C().PingCosmeticsHeight,
                 headerPrefix: "#battlepass_new",
                 headerText: "#battlepass_ping_cosmetics_header",
                 bodyText: "#battlepass_ping_cosmetics_desc",
@@ -9666,13 +9789,13 @@
               s.createElement(
                 "div",
                 {
-                  className: I().PingCosmetics,
+                  className: C().PingCosmetics,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_11.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().PingImage,
+                  className: C().PingImage,
                   src: `${r.r.IMG_URL}international2020/ping_cosmetics_bg.png`,
                 }),
               ),
@@ -9680,88 +9803,88 @@
             s.createElement(
               H,
               {
-                heightClassName: I().ConsumablesHeight,
+                heightClassName: C().ConsumablesHeight,
                 headerText: "#battlepass_consumables_title",
                 justifyContent: j.CenterTop,
               },
               s.createElement(
                 "div",
                 {
-                  className: I().Consumables,
+                  className: C().Consumables,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_10.jpg )`,
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
-                    className: I().ConsumablesCarousel,
+                    className: C().ConsumablesCarousel,
                     naturalSlideWidth: 100,
                     naturalSlideHeight: 52,
                     totalSlides: 4,
                   },
                   s.createElement(
                     "div",
-                    { className: I().CarouselDots },
+                    { className: C().CarouselDots },
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 0 },
                       s.createElement(re, { consumable: 1 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 1 },
                       s.createElement(re, { consumable: 2 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 2 },
                       s.createElement(re, { consumable: 3 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 3 },
                       s.createElement(re, { consumable: 4 }),
                     ),
                   ),
                   s.createElement(
-                    O.Ap,
+                    x.Ap,
                     null,
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 0 },
                       s.createElement(ae, { index: 0, video: "portal" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 1 },
                       s.createElement(ae, { index: 1, video: "ball" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 2 },
                       s.createElement(ae, { index: 2, video: "disco" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 3 },
                       s.createElement(ae, { index: 3, video: "pepper" }),
                     ),
                   ),
                   s.createElement(
-                    O._X,
-                    { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                    x._X,
+                    { className: (0, N.A)(C().CarouselArrow, C().Left) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(
-                    O.CC,
-                    { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                    x.CC,
+                    { className: (0, N.A)(C().CarouselArrow, C().Right) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(ne, null),
@@ -9771,7 +9894,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().SpraysHeight,
+                heightClassName: C().SpraysHeight,
                 headerPrefix: "#battlepass_updated",
                 headerText: "#battlepass_sprays_header",
                 bodyText: "#battlepass_sprays_desc",
@@ -9780,300 +9903,300 @@
               s.createElement(
                 "div",
                 {
-                  className: I().Sprays,
+                  className: C().Sprays,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_12.jpg )`,
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
-                    className: I().SprayCarousel,
+                    className: C().SprayCarousel,
                     naturalSlideWidth: 100,
                     naturalSlideHeight: 60,
                     totalSlides: 20,
                   },
                   s.createElement(
-                    O.Ap,
-                    { className: I().CarouselFade },
+                    x.Ap,
+                    { className: C().CarouselFade },
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 0 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_1.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 1 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_2.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 2 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_3.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 3 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_4.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 4 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_5.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 5 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_6.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 6 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_7.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 7 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_8.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 8 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_9.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 9 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_10.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 10 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_11.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 11 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_12.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 12 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_13.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 13 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_14.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 14 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_15.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 15 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_16.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 16 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_17.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 17 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_18.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 18 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_19.png`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 19 },
                       s.createElement("img", {
-                        className: I().Spray,
+                        className: C().Spray,
                         src: `${r.r.IMG_URL}international2020/sprays/spray_20.png`,
                       }),
                     ),
                   ),
                   s.createElement(
-                    O._X,
-                    { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                    x._X,
+                    { className: (0, N.A)(C().CarouselArrow, C().Left) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(
-                    O.CC,
-                    { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                    x.CC,
+                    { className: (0, N.A)(C().CarouselArrow, C().Right) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(X, null),
                   s.createElement(
                     "div",
-                    { className: I().CarouselDots },
+                    { className: C().CarouselDots },
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 0 },
                       s.createElement(ee, { spray: 1, level: 24 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 1 },
                       s.createElement(ee, { spray: 2, level: 56 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 2 },
                       s.createElement(ee, { spray: 3, level: 106 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 3 },
                       s.createElement(ee, { spray: 4, level: 163 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 4 },
                       s.createElement(ee, { spray: 5, level: 236 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 5 },
                       s.createElement(ee, { spray: 6, level: 266 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 6 },
                       s.createElement(ee, { spray: 7, level: 292 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 7 },
                       s.createElement(ee, { spray: 8, level: 313 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 8 },
                       s.createElement(ee, { spray: 9, level: 353 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 9 },
                       s.createElement(ee, { spray: 10, level: 405 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 10 },
                       s.createElement(ee, { spray: 11, level: 455 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 11 },
                       s.createElement(ee, { spray: 12, level: 515 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 12 },
                       s.createElement(ee, { spray: 13, level: 557 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 13 },
                       s.createElement(ee, { spray: 14, level: 612 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 14 },
                       s.createElement(ee, { spray: 15, level: 665 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 15 },
                       s.createElement(ee, { spray: 16, level: 725 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 16 },
                       s.createElement(ee, { spray: 17, level: 785 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 17 },
                       s.createElement(ee, { spray: 18, level: 875 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 18 },
                       s.createElement(ee, { spray: 19, level: 955 }),
                     ),
                     s.createElement(
-                      O.cL,
+                      x.cL,
                       { slide: 19 },
                       s.createElement(ee, { spray: 20, level: 1305 }),
                     ),
@@ -10084,14 +10207,14 @@
             s.createElement(
               H,
               {
-                heightClassName: I().TauntsHeight,
+                heightClassName: C().TauntsHeight,
                 headerText: "#battlepass_taunts_header",
                 justifyContent: j.CenterTop,
               },
               s.createElement(
                 "div",
                 {
-                  className: I().Taunts,
+                  className: C().Taunts,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_13.jpg )`,
                   },
@@ -10104,32 +10227,32 @@
                 }),
                 s.createElement(
                   "div",
-                  { className: I().TauntBackgroundContainer },
+                  { className: C().TauntBackgroundContainer },
                   s.createElement("img", {
                     className: (0, N.A)(
-                      I().TauntBackground,
-                      I().TauntBackground1,
+                      C().TauntBackground,
+                      C().TauntBackground1,
                     ),
                     src: `${r.r.IMG_URL}international2020/taunt_1.png`,
                   }),
                   s.createElement("img", {
                     className: (0, N.A)(
-                      I().TauntBackground,
-                      I().TauntBackground2,
+                      C().TauntBackground,
+                      C().TauntBackground2,
                     ),
                     src: `${r.r.IMG_URL}international2020/taunt_2.png`,
                   }),
                   s.createElement("img", {
                     className: (0, N.A)(
-                      I().TauntBackground,
-                      I().TauntBackground3,
+                      C().TauntBackground,
+                      C().TauntBackground3,
                     ),
                     src: `${r.r.IMG_URL}international2020/taunt_3.png`,
                   }),
                 ),
                 s.createElement(
                   "div",
-                  { className: I().TauntList },
+                  { className: C().TauntList },
                   s.createElement(ue, {
                     heroName: "void_spirit",
                     name: "#battlepass_taunt_1",
@@ -10201,7 +10324,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().EmoticonsHeight,
+                heightClassName: C().EmoticonsHeight,
                 headerText: "#battlepass_emoticons_header",
                 bodyText: "#battlepass_emoticons_desc",
                 justifyContent: j.CenterTop,
@@ -10209,59 +10332,59 @@
               s.createElement(
                 "div",
                 {
-                  className: I().Emoticons,
+                  className: C().Emoticons,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_4.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().Mars,
+                  className: C().Mars,
                   src: `${r.r.IMG_URL}international2020/emoticon_mars.png`,
                 }),
                 s.createElement("img", {
-                  className: I().Pango,
+                  className: C().Pango,
                   src: `${r.r.IMG_URL}international2020/emoticon_pango.png`,
                 }),
                 s.createElement(
                   "div",
                   {
                     className: (0, N.A)(
-                      I().EmoticonsGuild,
-                      I().EmoticonListContainer,
+                      C().EmoticonsGuild,
+                      C().EmoticonListContainer,
                     ),
                   },
                   s.createElement(
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleSmallHeading,
-                        I().TextColorLightestGold,
-                        I().EmoticonPackHeader,
+                        C().TextStyleSmallHeading,
+                        C().TextColorLightestGold,
+                        C().EmoticonPackHeader,
                       ),
                     },
                     (0, B.Wn)("#battlepass_emoticons_guild_pack"),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().EmoticonList },
+                    { className: C().EmoticonList },
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/guild_emoticon_1.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/guild_emoticon_2.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/guild_emoticon_3.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/guild_emoticon_4.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/guild_emoticon_5.gif`,
                     }),
                   ),
@@ -10270,78 +10393,78 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().EmoticonsBattlePass,
-                      I().EmoticonListContainer,
+                      C().EmoticonsBattlePass,
+                      C().EmoticonListContainer,
                     ),
                   },
                   s.createElement(
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleSmallHeading,
-                        I().TextColorLightestGold,
-                        I().EmoticonPackHeader,
+                        C().TextStyleSmallHeading,
+                        C().TextColorLightestGold,
+                        C().EmoticonPackHeader,
                       ),
                     },
                     (0, B.Wn)("#battlepass_emoticons_general_packs"),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().EmoticonList },
+                    { className: C().EmoticonList },
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_1.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_2.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_3.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_4.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_5.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_6.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_7.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_8.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_9.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_10.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_11.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_12.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_13.gif`,
                     }),
                     s.createElement("img", {
-                      className: I().Emoticon,
+                      className: C().Emoticon,
                       src: `${r.r.IMG_URL}international2020/emoticons/general_emoticon_14.gif`,
                     }),
                   ),
@@ -10351,7 +10474,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().ChatWheelHeight,
+                heightClassName: C().ChatWheelHeight,
                 headerText: "#battlepass_chat_wheel_header",
                 bodyText: "#battlepass_chat_wheel_desc",
                 justifyContent: j.CenterTop,
@@ -10359,37 +10482,37 @@
               s.createElement(
                 "div",
                 {
-                  className: I().ChatWheel,
+                  className: C().ChatWheel,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_3.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().ChatWheelOverlay,
+                  className: C().ChatWheelOverlay,
                   src: `${r.r.IMG_URL}international2020/chat_wheel_bg.png`,
                 }),
                 s.createElement(
                   "div",
                   {
                     className: (0, N.A)(
-                      I().SoundPackContainer,
-                      I().CasterSoundPacks,
+                      C().SoundPackContainer,
+                      C().CasterSoundPacks,
                     ),
                   },
                   s.createElement(
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleSmallHeading,
-                        I().TextColorLightestGold,
-                        I().CasterPackHeader,
+                        C().TextStyleSmallHeading,
+                        C().TextColorLightestGold,
+                        C().CasterPackHeader,
                       ),
                     },
                     (0, B.Wn)("#battlepass_chat_wheel_caster_packs"),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().SoundPackList },
+                    { className: C().SoundPackList },
                     s.createElement(ce, {
                       audiofiles: [
                         "casterpack1/takaya_haliava",
@@ -10498,9 +10621,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleFootnote,
-                        I().TextColorGold,
-                        I().DifferentSample,
+                        C().TextStyleFootnote,
+                        C().TextColorGold,
+                        C().DifferentSample,
                       ),
                     },
                     (0, B.Wn)("#battlepass_chat_wheel_different_sample"),
@@ -10509,16 +10632,16 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleSmallHeading,
-                        I().TextColorLightestGold,
-                        I().SoundPackHeader,
+                        C().TextStyleSmallHeading,
+                        C().TextColorLightestGold,
+                        C().SoundPackHeader,
                       ),
                     },
                     (0, B.Wn)("#battlepass_chat_wheel_sound_packs"),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().SoundPackList },
+                    { className: C().SoundPackList },
                     s.createElement(ce, {
                       audiofiles: ["boing"],
                       name: "#battlepass_chat_wheel_boing",
@@ -10557,15 +10680,15 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: (0, N.A)(I().EscalatingChatWheelContainer) },
+                    { className: (0, N.A)(C().EscalatingChatWheelContainer) },
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleOverline,
-                          I().TextColorGold,
-                          I().HeaderPrefix,
-                          I().EscalatingChatWheelPrefix,
+                          C().TextStyleOverline,
+                          C().TextColorGold,
+                          C().HeaderPrefix,
+                          C().EscalatingChatWheelPrefix,
                         ),
                       },
                       (0, B.Wn)("#battlepass_new"),
@@ -10574,9 +10697,9 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleSmallHeading,
-                          I().TextColorLightestGold,
-                          I().EscalatingChatWheelHeader,
+                          C().TextStyleSmallHeading,
+                          C().TextColorLightestGold,
+                          C().EscalatingChatWheelHeader,
                         ),
                       },
                       (0, B.Wn)("#battlepass_chat_wheel_escalating"),
@@ -10585,8 +10708,8 @@
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleBody,
-                          I().EscalatingChatWheelDesc,
+                          C().TextStyleBody,
+                          C().EscalatingChatWheelDesc,
                         ),
                       },
                       (0, B.Wn)("#battlepass_chat_wheel_escalating_desc"),
@@ -10598,7 +10721,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().EvolvingCourierHeight,
+                heightClassName: C().EvolvingCourierHeight,
                 headerPrefix: "#battlepass_evolving_courier_prefix",
                 headerText: "#battlepass_evolving_courier_header",
                 bodyText: "#battlepass_evolving_courier_desc",
@@ -10607,18 +10730,18 @@
               s.createElement(
                 "div",
                 {
-                  className: I().EvolvingCourier,
+                  className: C().EvolvingCourier,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/evolving_courier_bg.png )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: I().CourierImageContainer },
+                  { className: C().CourierImageContainer },
                   s.createElement(
                     "video",
                     {
-                      className: I().CourierVideo,
+                      className: C().CourierVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -10635,11 +10758,11 @@
                     }),
                   ),
                   s.createElement("img", {
-                    className: I().CourierOverlay1,
+                    className: C().CourierOverlay1,
                     src: `${r.r.IMG_URL}international2020/cat_1.png`,
                   }),
                   s.createElement("img", {
-                    className: I().CourierOverlay2,
+                    className: C().CourierOverlay2,
                     src: `${r.r.IMG_URL}international2020/cat_2.png`,
                   }),
                 ),
@@ -10647,9 +10770,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleFootnote,
-                      I().TextColorLightGrey,
-                      I().Versions,
+                      C().TextStyleFootnote,
+                      C().TextColorLightGrey,
+                      C().Versions,
                     ),
                   },
                   (0, B.Wn)("#battlepass_evolving_courier_versions"),
@@ -10658,9 +10781,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleCaption,
-                      I().TextColorGold,
-                      I().Unlocks,
+                      C().TextStyleCaption,
+                      C().TextColorGold,
+                      C().Unlocks,
                     ),
                   },
                   (0, B.Wn)("#battlepass_unlocks_at_levels"),
@@ -10669,9 +10792,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleCaption,
-                      I().TextColorGold,
-                      I().UnlocksLevels,
+                      C().TextStyleCaption,
+                      C().TextColorGold,
+                      C().UnlocksLevels,
                     ),
                   },
                   (0, B.Wn)("#battlepass_evolving_courier_levels"),
@@ -10681,7 +10804,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().MusicPackHeight,
+                heightClassName: C().MusicPackHeight,
                 headerPrefix: "#battlepass_international_10",
                 headerText: "#battlepass_music_pack_header",
                 bodyText: "#battlepass_music_pack_desc",
@@ -10690,13 +10813,13 @@
               s.createElement(
                 "div",
                 {
-                  className: I().MusicPack,
+                  className: C().MusicPack,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_4.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().MusicPackOverlay1,
+                  className: C().MusicPackOverlay1,
                   src: `${r.r.IMG_URL}international2020/musicpack_keyart.png`,
                 }),
               ),
@@ -10704,7 +10827,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().VoiceAnnouncerHeight,
+                heightClassName: C().VoiceAnnouncerHeight,
                 levelReward: 75,
                 headerPrefix: "#battlepass_voice_announcer_prefix",
                 headerText: "#battlepass_voice_announcer_header",
@@ -10714,13 +10837,13 @@
               s.createElement(
                 "div",
                 {
-                  className: I().VoiceAnnouncer,
+                  className: C().VoiceAnnouncer,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_3.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().VoiceAnnouncerOverlay,
+                  className: C().VoiceAnnouncerOverlay,
                   src: `${r.r.IMG_URL}international2020/voice_announcer_bg.png`,
                 }),
               ),
@@ -10728,7 +10851,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().RangedAttackHeight,
+                heightClassName: C().RangedAttackHeight,
                 levelReward: 1575,
                 headerText: "#battlepass_ranged_attack_header",
                 bodyText: "#battlepass_ranged_attack_desc",
@@ -10737,18 +10860,18 @@
               s.createElement(
                 "div",
                 {
-                  className: I().RangedAttack,
+                  className: C().RangedAttack,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_5.jpg )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: I().RangedAttackImageContainer },
+                  { className: C().RangedAttackImageContainer },
                   s.createElement(
                     "video",
                     {
-                      className: I().RangedAttackVideo,
+                      className: C().RangedAttackVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -10765,7 +10888,7 @@
                     }),
                   ),
                   s.createElement("img", {
-                    className: I().RangedAttackOverlay1,
+                    className: C().RangedAttackOverlay1,
                     src: `${r.r.IMG_URL}international2020/rangedattack_keyart.png`,
                   }),
                 ),
@@ -10774,7 +10897,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().EmblemEffectHeight,
+                heightClassName: C().EmblemEffectHeight,
                 headerPrefix: "#battlepass_emblem_effect_prefix",
                 headerText: "#battlepass_emblem_effect_header",
                 bodyText: "#battlepass_emblem_effect_desc",
@@ -10783,13 +10906,13 @@
               s.createElement(
                 "div",
                 {
-                  className: I().EmblemEffect,
+                  className: C().EmblemEffect,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_13.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().EmblemEffectOverlay,
+                  className: C().EmblemEffectOverlay,
                   src: `${r.r.IMG_URL}international2020/emblem_bg.png`,
                 }),
                 s.createElement(k.z, { top: !0, color: "#000000" }),
@@ -10798,7 +10921,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().SeasonalEffectsHeight,
+                heightClassName: C().SeasonalEffectsHeight,
                 headerText: "#battlepass_seasonal_effects_header",
                 bodyText: "#battlepass_seasonal_effects_desc",
                 justifyContent: j.CenterTop,
@@ -10806,301 +10929,301 @@
               s.createElement(
                 "div",
                 {
-                  className: I().SeasonalEffects,
+                  className: C().SeasonalEffects,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_4.jpg )`,
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
-                    className: I().SeasonalEffectsCarousel,
+                    className: C().SeasonalEffectsCarousel,
                     naturalSlideWidth: 100,
                     naturalSlideHeight: 51,
                     totalSlides: 26,
                   },
                   s.createElement(
-                    O.Ap,
+                    x.Ap,
                     null,
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 0 },
                       s.createElement($, { video: "high_five_lvl1" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 1 },
                       s.createElement($, { video: "fountain" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 2 },
                       s.createElement($, { video: "teleport" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 3 },
                       s.createElement($, { video: "blink_lvl1" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 4 },
                       s.createElement($, { video: "level_up" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 5 },
                       s.createElement($, { video: "euls_cyclone" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 6 },
                       s.createElement($, { video: "fountain2" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 7 },
                       s.createElement($, { video: "agh_lvl1" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 8 },
                       s.createElement($, { video: "teleport_lvl2" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 9 },
                       s.createElement($, { video: "force_staff" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 10 },
                       s.createElement($, { video: "blink_lvl2" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 11 },
                       s.createElement($, { video: "bottle" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 12 },
                       s.createElement($, { video: "high_five_lvl2" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 13 },
                       s.createElement($, { video: "killstreak_fire" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 14 },
                       s.createElement($, { video: "fountain3" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 15 },
                       s.createElement($, { video: "deny" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 16 },
                       s.createElement($, { video: "phase_boots" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 17 },
                       s.createElement($, { video: "agh_lvl2" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 18 },
                       s.createElement($, { video: "mekansm" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 19 },
                       s.createElement($, { video: "teleport_lvl3" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 20 },
                       s.createElement($, { video: "killstreak_gold" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 21 },
                       s.createElement($, { video: "high_five_lvl3" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 22 },
                       s.createElement($, { video: "maelstrom_mjollnir" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 23 },
                       s.createElement($, { video: "shivas_guard" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 24 },
                       s.createElement($, { video: "radiance" }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 25 },
                       s.createElement($, { video: "attack_modifier" }),
                     ),
                   ),
                   s.createElement(
-                    O._X,
-                    { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                    x._X,
+                    { className: (0, N.A)(C().CarouselArrow, C().Left) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(
-                    O.CC,
-                    { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                    x.CC,
+                    { className: (0, N.A)(C().CarouselArrow, C().Right) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(ie, null),
                   s.createElement(
                     "div",
-                    { className: I().CarouselDots },
+                    { className: C().CarouselDots },
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 0 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 0 },
                       s.createElement(se, { effect: 1, level: 1 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 1 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 1 },
                       s.createElement(se, { effect: 2, level: 2 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 2 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 2 },
                       s.createElement(se, { effect: 3, level: 14 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 3 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 3 },
                       s.createElement(se, { effect: 4, level: 30 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 4 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 4 },
                       s.createElement(se, { effect: 5, level: 50 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 5 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 5 },
                       s.createElement(se, { effect: 6, level: 78 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 6 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 6 },
                       s.createElement(se, { effect: 7, level: 104 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 7 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 7 },
                       s.createElement(se, { effect: 8, level: 118 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 8 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 8 },
                       s.createElement(se, { effect: 9, level: 136 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 9 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 9 },
                       s.createElement(se, { effect: 10, level: 184 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 10 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 10 },
                       s.createElement(se, { effect: 11, level: 225 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 11 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 11 },
                       s.createElement(se, { effect: 12, level: 265 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 12 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 12 },
                       s.createElement(se, { effect: 13, level: 275 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 13 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 13 },
                       s.createElement(se, { effect: 14, level: 285 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 14 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 14 },
                       s.createElement(se, { effect: 15, level: 315 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 15 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 15 },
                       s.createElement(se, { effect: 16, level: 383 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 16 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 16 },
                       s.createElement(se, { effect: 17, level: 415 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 17 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 17 },
                       s.createElement(se, { effect: 18, level: 425 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 18 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 18 },
                       s.createElement(se, { effect: 19, level: 505 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 19 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 19 },
                       s.createElement(se, { effect: 20, level: 702 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 20 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 20 },
                       s.createElement(se, { effect: 21, level: 765 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 21 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 21 },
                       s.createElement(se, { effect: 22, level: 895 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 22 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 22 },
                       s.createElement(se, { effect: 23, level: 905 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 23 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 23 },
                       s.createElement(se, { effect: 24, level: 1025 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 24 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 24 },
                       s.createElement(se, { effect: 25, level: 1355 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { className: I().CarouselDot, slide: 25 },
+                      x.cL,
+                      { className: C().CarouselDot, slide: 25 },
                       s.createElement(se, { effect: 26, level: 1575 }),
                     ),
                   ),
@@ -11110,7 +11233,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().ExclusiveWardHeight,
+                heightClassName: C().ExclusiveWardHeight,
                 headerPrefix: "#battlepass_exclusive_ward_prefix",
                 headerText: "#battlepass_exclusive_ward_header",
                 bodyText: "#battlepass_exclusive_ward_desc",
@@ -11119,13 +11242,13 @@
               s.createElement(
                 "div",
                 {
-                  className: I().ExclusiveWard,
+                  className: C().ExclusiveWard,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_10.jpg )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().WardImage,
+                  className: C().WardImage,
                   src: `${r.r.IMG_URL}international2020/ward_bg.png`,
                 }),
               ),
@@ -11133,7 +11256,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().RiverVialsHeight,
+                heightClassName: C().RiverVialsHeight,
                 headerText: "#battlepass_river_vials_header",
                 bodyText: "#battlepass_river_vials_desc",
                 justifyContent: j.CenterTop,
@@ -11141,132 +11264,132 @@
               s.createElement(
                 "div",
                 {
-                  className: I().RiverVials,
+                  className: C().RiverVials,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_6.jpg )`,
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
-                    className: I().RiverVialsCarousel,
+                    className: C().RiverVialsCarousel,
                     naturalSlideWidth: 100,
                     naturalSlideHeight: 50,
                     totalSlides: 7,
                   },
                   s.createElement(
-                    O.Ap,
+                    x.Ap,
                     null,
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 0 },
                       s.createElement("img", {
-                        className: I().RiverVial,
+                        className: C().RiverVial,
                         src: `${r.r.IMG_URL}international2020/river_vials/river_vial_1.jpg`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 1 },
                       s.createElement("img", {
-                        className: I().RiverVial,
+                        className: C().RiverVial,
                         src: `${r.r.IMG_URL}international2020/river_vials/river_vial_2.jpg`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 2 },
                       s.createElement("img", {
-                        className: I().RiverVial,
+                        className: C().RiverVial,
                         src: `${r.r.IMG_URL}international2020/river_vials/river_vial_3.jpg`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 3 },
                       s.createElement("img", {
-                        className: I().RiverVial,
+                        className: C().RiverVial,
                         src: `${r.r.IMG_URL}international2020/river_vials/river_vial_4.jpg`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 4 },
                       s.createElement("img", {
-                        className: I().RiverVial,
+                        className: C().RiverVial,
                         src: `${r.r.IMG_URL}international2020/river_vials/river_vial_5.jpg`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 5 },
                       s.createElement("img", {
-                        className: I().RiverVial,
+                        className: C().RiverVial,
                         src: `${r.r.IMG_URL}international2020/river_vials/river_vial_6.jpg`,
                       }),
                     ),
                     s.createElement(
-                      O.q7,
+                      x.q7,
                       { index: 6 },
                       s.createElement("img", {
-                        className: I().RiverVial,
+                        className: C().RiverVial,
                         src: `${r.r.IMG_URL}international2020/river_vials/river_vial_7.jpg`,
                       }),
                     ),
                   ),
                   s.createElement(
-                    O._X,
-                    { className: (0, N.A)(I().CarouselArrow, I().Left) },
+                    x._X,
+                    { className: (0, N.A)(C().CarouselArrow, C().Left) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(
-                    O.CC,
-                    { className: (0, N.A)(I().CarouselArrow, I().Right) },
+                    x.CC,
+                    { className: (0, N.A)(C().CarouselArrow, C().Right) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2020/arrow_left.png`,
-                      className: I().ArrowImage,
+                      className: C().ArrowImage,
                     }),
                   ),
                   s.createElement(oe, null),
                   s.createElement(
                     "div",
-                    { className: I().CarouselDots },
+                    { className: C().CarouselDots },
                     s.createElement(
-                      O.cL,
-                      { slide: 0, className: I().CarouselDot },
+                      x.cL,
+                      { slide: 0, className: C().CarouselDot },
                       s.createElement(le, { vial: 1, level: 66 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { slide: 1, className: I().CarouselDot },
+                      x.cL,
+                      { slide: 1, className: C().CarouselDot },
                       s.createElement(le, { vial: 2, level: 122 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { slide: 2, className: I().CarouselDot },
+                      x.cL,
+                      { slide: 2, className: C().CarouselDot },
                       s.createElement(le, { vial: 3, level: 218 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { slide: 3, className: I().CarouselDot },
+                      x.cL,
+                      { slide: 3, className: C().CarouselDot },
                       s.createElement(le, { vial: 4, level: 365 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { slide: 4, className: I().CarouselDot },
+                      x.cL,
+                      { slide: 4, className: C().CarouselDot },
                       s.createElement(le, { vial: 5, level: 615 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { slide: 5, className: I().CarouselDot },
+                      x.cL,
+                      { slide: 5, className: C().CarouselDot },
                       s.createElement(le, { vial: 6, level: 812 }),
                     ),
                     s.createElement(
-                      O.cL,
-                      { slide: 6, className: I().CarouselDot },
+                      x.cL,
+                      { slide: 6, className: C().CarouselDot },
                       s.createElement(le, { vial: 7, level: 1905 }),
                     ),
                   ),
@@ -11276,7 +11399,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().TributeHeight,
+                heightClassName: C().TributeHeight,
                 headerText: "#battlepass_tribute_header",
                 bodyText: "#battlepass_tribute_desc",
                 justifyContent: j.CenterTop,
@@ -11284,44 +11407,44 @@
               s.createElement(
                 "div",
                 {
-                  className: I().Tribute,
+                  className: C().Tribute,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/tribute_bg.png )`,
                   },
                 },
                 s.createElement("img", {
-                  className: I().TributeImage,
+                  className: C().TributeImage,
                   src: `${r.r.IMG_URL}international2020/tribute_image.png`,
                 }),
                 s.createElement(
                   "div",
-                  { className: I().TributeRewards },
+                  { className: C().TributeRewards },
                   s.createElement(
                     "div",
-                    { className: I().TributeReward },
+                    { className: C().TributeReward },
                     s.createElement(
                       "div",
-                      { className: I().TributeRewardLevel },
+                      { className: C().TributeRewardLevel },
                       (0, B.Wn)("#battlepass_tribute_level", 100),
                     ),
                     s.createElement(V, { level: 64, andAbove: !0 }),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().TributeReward },
+                    { className: C().TributeReward },
                     s.createElement(
                       "div",
-                      { className: I().TributeRewardLevel },
+                      { className: C().TributeRewardLevel },
                       (0, B.Wn)("#battlepass_tribute_level", 200),
                     ),
                     s.createElement(V, { level: 257, andAbove: !0 }),
                   ),
                   s.createElement(
                     "div",
-                    { className: I().TributeReward },
+                    { className: C().TributeReward },
                     s.createElement(
                       "div",
-                      { className: I().TributeRewardLevel },
+                      { className: C().TributeRewardLevel },
                       (0, B.Wn)("#battlepass_tribute_level", 300),
                     ),
                     s.createElement(V, { level: 885, andAbove: !0 }),
@@ -11332,7 +11455,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().TrustOfTheBenefactorHeight,
+                heightClassName: C().TrustOfTheBenefactorHeight,
                 headerText: "#battlepass_trust_benefactor_header",
                 bodyText: "#battlepass_trust_benefactor_desc",
                 justifyContent: j.CenterTop,
@@ -11340,7 +11463,7 @@
               s.createElement(
                 "div",
                 {
-                  className: I().TrustOfTheBenefactor,
+                  className: C().TrustOfTheBenefactor,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_9.jpg )`,
                   },
@@ -11360,16 +11483,16 @@
                   endPct: 100,
                 }),
                 s.createElement("img", {
-                  className: I().TrustImage,
+                  className: C().TrustImage,
                   src: `${r.r.IMG_URL}international2020/benefactor_bg.png`,
                 }),
                 s.createElement(
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleFootnote,
-                      I().TextColorDarkGold,
-                      I().Receive,
+                      C().TextStyleFootnote,
+                      C().TextColorDarkGold,
+                      C().Receive,
                     ),
                   },
                   (0, B.Wn)("#battlepass_trust_benefactor_receive"),
@@ -11378,9 +11501,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleFootnote,
-                      I().TextColorDarkGold,
-                      I().View,
+                      C().TextStyleFootnote,
+                      C().TextColorDarkGold,
+                      C().View,
                     ),
                     onClick: () => this.showBenefactorPopup(!0),
                   },
@@ -11391,7 +11514,7 @@
             s.createElement(
               H,
               {
-                heightClassName: I().AegisRoshanHeight,
+                heightClassName: C().AegisRoshanHeight,
                 headerPrefix: "#battlepass_aegis_roshan_prefix",
                 headerText: "#battlepass_aegis_roshan_header",
                 justifyContent: j.CenterTop,
@@ -11399,7 +11522,7 @@
               s.createElement(
                 "div",
                 {
-                  className: I().AegisRoshan,
+                  className: C().AegisRoshan,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}international2020/backgrounds/background_1.jpg )`,
                   },
@@ -11413,21 +11536,21 @@
                 }),
                 s.createElement(
                   "div",
-                  { className: I().Rewards },
+                  { className: C().Rewards },
                   s.createElement(
                     "div",
-                    { className: I().Reward },
+                    { className: C().Reward },
                     s.createElement("img", {
-                      className: I().RewardImage1,
+                      className: C().RewardImage1,
                       src: `${r.r.IMG_URL}international2020/collector_1.png`,
                     }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleSmallHeading,
-                          I().FontColorLighestGrey,
-                          I().RewardName,
+                          C().TextStyleSmallHeading,
+                          C().FontColorLighestGrey,
+                          C().RewardName,
                         ),
                       },
                       (0, B.Wn)("#battlepass_aegis_roshan_aegis"),
@@ -11436,17 +11559,17 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: I().Reward },
+                    { className: C().Reward },
                     s.createElement("img", {
-                      className: I().RewardImage2,
+                      className: C().RewardImage2,
                       src: `${r.r.IMG_URL}international2020/collector_2.png`,
                     }),
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          I().TextStyleSmallHeading,
-                          I().RewardName,
+                          C().TextStyleSmallHeading,
+                          C().RewardName,
                         ),
                       },
                       (0, B.Wn)("#battlepass_aegis_roshan_roshan"),
@@ -11458,9 +11581,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleBody,
-                      I().TextColorLightestGrey,
-                      I().Description,
+                      C().TextStyleBody,
+                      C().TextColorLightestGrey,
+                      C().Description,
                     ),
                   },
                   (0, B.Wn)("#battlepass_aegis_roshan_desc"),
@@ -11469,9 +11592,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleFootnote,
-                      I().TextColorDarkGold,
-                      I().Description,
+                      C().TextStyleFootnote,
+                      C().TextColorDarkGold,
+                      C().Description,
                     ),
                   },
                   (0, B.Wn)("#battlepass_aegis_roshan_footnote"),
@@ -11482,7 +11605,7 @@
             s.createElement(
               me,
               {
-                className: I().BenefactorPopup,
+                className: C().BenefactorPopup,
                 hasCloseButton: !0,
                 shouldShow: this.state.bShowBenefactorPopup,
                 showFunc: (e) => this.showBenefactorPopup(e),
@@ -11494,9 +11617,9 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleOverline,
-                      I().TextColorDarkGold,
-                      I().BenefactorTitle,
+                      C().TextStyleOverline,
+                      C().TextColorDarkGold,
+                      C().BenefactorTitle,
                     ),
                   },
                   (0, B.Wn)("#battlepass_trust_benefactor_header"),
@@ -11505,23 +11628,23 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      I().TextStyleSmallHeading,
-                      I().TextColorLightestGold,
-                      I().BenefactorSubTitle,
+                      C().TextStyleSmallHeading,
+                      C().TextColorLightestGold,
+                      C().BenefactorSubTitle,
                     ),
                   },
                   (0, B.Wn)("#battlepass_benefactor_subtitle"),
                 ),
                 s.createElement(
                   "div",
-                  { className: I().Entries },
+                  { className: C().Entries },
                   s.createElement(
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_1"),
@@ -11530,9 +11653,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_2"),
@@ -11541,9 +11664,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_3"),
@@ -11552,9 +11675,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_4"),
@@ -11563,9 +11686,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_5"),
@@ -11574,9 +11697,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_6"),
@@ -11585,9 +11708,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_7"),
@@ -11596,9 +11719,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_8"),
@@ -11607,9 +11730,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_9"),
@@ -11618,9 +11741,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_10"),
@@ -11629,9 +11752,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_11"),
@@ -11640,9 +11763,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_12"),
@@ -11651,9 +11774,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_13"),
@@ -11662,9 +11785,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_14"),
@@ -11673,9 +11796,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_15"),
@@ -11684,9 +11807,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_16"),
@@ -11695,9 +11818,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_17"),
@@ -11706,9 +11829,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_18"),
@@ -11717,9 +11840,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_19"),
@@ -11728,9 +11851,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_20"),
@@ -11739,9 +11862,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_21"),
@@ -11750,9 +11873,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_22"),
@@ -11761,9 +11884,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_23"),
@@ -11772,9 +11895,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_24"),
@@ -11783,9 +11906,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_25"),
@@ -11794,9 +11917,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_26"),
@@ -11805,9 +11928,9 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        I().TextStyleBody,
-                        I().TextColorGrey,
-                        I().Entry,
+                        C().TextStyleBody,
+                        C().TextColorGrey,
+                        C().Entry,
                       ),
                     },
                     (0, B.Wn)("#battlepass_trust_benefactor_entry_27"),
@@ -11864,8 +11987,8 @@
             (e[(e.Right = 2)] = "Right");
         })(fe || (fe = {}));
       const Te = (0, s.createContext)(null),
-        Ce = () => (0, s.useContext)(Te);
-      function Ie(e) {
+        Ie = () => (0, s.useContext)(Te);
+      function Ce(e) {
         return s.createElement(
           Te.Provider,
           { value: e.immortalCarouselContext },
@@ -11898,7 +12021,7 @@
             "div",
             { className: we().BattlePassImmortalCarouselTI11 },
             s.createElement(
-              Ie,
+              Ce,
               { immortalCarouselContext: g },
               o.map((a, n) =>
                 s.createElement(
@@ -11911,7 +12034,7 @@
                     ),
                   },
                   s.createElement(
-                    O.gi,
+                    x.gi,
                     {
                       className: we().ImmortalCarousel,
                       naturalSlideWidth: 101,
@@ -11926,11 +12049,11 @@
                         "div",
                         { className: we().SliderContainer },
                         s.createElement(
-                          O.Ap,
+                          x.Ap,
                           null,
                           a.arrImmortals.map((e, t) =>
                             s.createElement(
-                              O.q7,
+                              x.q7,
                               {
                                 key: `im_${n}_${t}`,
                                 index: t,
@@ -11955,7 +12078,7 @@
                       s.createElement(Re, { treasureID: c }),
                     ),
                     s.createElement(
-                      O._X,
+                      x._X,
                       { className: (0, N.A)(we().CarouselArrow, we().Left) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}${e}/icons/scroll_arrow.png`,
@@ -11963,7 +12086,7 @@
                       }),
                     ),
                     s.createElement(
-                      O.CC,
+                      x.CC,
                       { className: (0, N.A)(we().CarouselArrow, we().Right) },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}${e}/icons/scroll_arrow.png`,
@@ -11975,7 +12098,7 @@
                       { className: we().CarouselDots },
                       a.arrImmortals.map((e, t) =>
                         s.createElement(
-                          O.cL,
+                          x.cL,
                           {
                             key: `dot_${n}_${t}`,
                             slide: t,
@@ -12037,7 +12160,7 @@
           );
         },
         Be = () => {
-          const e = Ce();
+          const e = Ie();
           return s.createElement(W.A, {
             effect: "solid",
             borderColor: e.strSecondaryColor,
@@ -12056,9 +12179,9 @@
           bGold: i,
           bEmblem: o,
         }) => {
-          const l = (0, s.useContext)(O.Yc),
-            c = Ce(),
-            m = (0, s.useRef)();
+          const l = (0, s.useContext)(x.Yc),
+            c = Ie(),
+            m = (0, s.useRef)(void 0);
           return (
             (0, s.useEffect)(() => {
               function t() {
@@ -12146,8 +12269,8 @@
           );
         },
         Re = ({ treasureID: e }) => {
-          const t = (0, s.useContext)(O.Yc),
-            a = Ce(),
+          const t = (0, s.useContext)(x.Yc),
+            a = Ie(),
             [r, n] = (0, s.useState)(t.state.currentSlide);
           (0, s.useEffect)(() => {
             function e() {
@@ -12179,7 +12302,7 @@
           );
         },
         De = ({ strHeroName: e, eRarity: t, bSelected: a, bEmblem: n }) => {
-          const i = Ce(),
+          const i = Ie(),
             o = "emblem" == e ? "emblem" : e;
           let l = `${r.r.IMG_URL}heroes/wide/${o}.png`;
           return (
@@ -12207,10 +12330,10 @@
             )
           );
         };
-      var Ae = a(40889),
-        Le = a.n(Ae);
+      var Le = a(40889),
+        Ae = a.n(Le);
       const Pe = ({ textLabelColor: e, strLocPrefix: t, rgLevels: a }) => {
-          const r = (0, s.useContext)(O.Yc),
+          const r = (0, s.useContext)(x.Yc),
             [n, i] = (0, s.useState)(r.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -12221,13 +12344,13 @@
             }, [r]),
             s.createElement(
               "div",
-              { className: Le().NameAndDesc },
+              { className: Ae().NameAndDesc },
               s.createElement(
                 "div",
                 {
                   className: (0, N.A)(
-                    Le().TextStyleHeading,
-                    Le().RiverVialName,
+                    Ae().TextStyleHeading,
+                    Ae().RiverVialName,
                   ),
                 },
                 (0, B.Wn)(`#${t}${n + 1}`),
@@ -12236,9 +12359,9 @@
                 "div",
                 {
                   className: (0, N.A)(
-                    Le().TextStyleBody,
-                    Le().TextColorLighterGrey,
-                    Le().RiverVialDesc,
+                    Ae().TextStyleBody,
+                    Ae().TextColorLighterGrey,
+                    Ae().RiverVialDesc,
                   ),
                 },
                 (0, B.Wn)("#ti11_bp_unlocks_at_level", a[n]),
@@ -12249,14 +12372,14 @@
         ke = ({ vial: e, level: t, levelLabelColor: a, strContentDir: n }) =>
           s.createElement(
             "div",
-            { className: Le().RiverVialDot },
+            { className: Ae().RiverVialDot },
             s.createElement("img", {
-              className: Le().RiverVialIcon,
+              className: Ae().RiverVialIcon,
               src: `${r.r.IMG_URL}${n}/river_vials/river_vial_icon_${e}.png`,
             }),
             s.createElement(
               "div",
-              { className: (0, N.A)(Le().TextStyleFootnote, Le()[a]) },
+              { className: (0, N.A)(Ae().TextStyleFootnote, Ae()[a]) },
               t,
             ),
           ),
@@ -12271,29 +12394,29 @@
           s.createElement(
             "div",
             {
-              className: Le().RiverVials,
+              className: Ae().RiverVials,
               style: { backgroundImage: `url( ${r.r.IMG_URL}${e}/${t} )` },
             },
             s.createElement(
-              O.gi,
+              x.gi,
               {
-                className: Le().RiverVialsCarousel,
+                className: Ae().RiverVialsCarousel,
                 naturalSlideWidth: 16,
                 naturalSlideHeight: 9,
                 totalSlides: n.length,
               },
               s.createElement(
                 "div",
-                { className: Le().BlackBackgroundContainer },
+                { className: Ae().BlackBackgroundContainer },
                 s.createElement(
                   "div",
-                  { className: Le().VialsVideoContainer },
+                  { className: Ae().VialsVideoContainer },
                   s.createElement(
-                    O.Ap,
+                    x.Ap,
                     null,
                     n.map((t, a) =>
                       s.createElement(
-                        O.q7,
+                        x.q7,
                         { key: `Slide-${a}`, index: a },
                         s.createElement(k.z, {
                           bottom: !0,
@@ -12328,7 +12451,7 @@
                           zIndex: 2,
                         }),
                         s.createElement("img", {
-                          className: Le().RiverVial,
+                          className: Ae().RiverVial,
                           src: `${r.r.IMG_URL}${e}/river_vials/river_vial_${a + 1}.jpg`,
                         }),
                       ),
@@ -12338,7 +12461,7 @@
               ),
               s.createElement(
                 "div",
-                { className: Le().NameAndDescContainer },
+                { className: Ae().NameAndDescContainer },
                 s.createElement(Pe, {
                   textLabelColor: o,
                   strLocPrefix: a,
@@ -12347,11 +12470,11 @@
               ),
               s.createElement(
                 "div",
-                { className: Le().CarouselDots },
+                { className: Ae().CarouselDots },
                 n.map((t, a) =>
                   s.createElement(
-                    O.cL,
-                    { key: `Dot-${a}`, slide: a, className: Le().CarouselDot },
+                    x.cL,
+                    { key: `Dot-${a}`, slide: a, className: Ae().CarouselDot },
                     s.createElement(ke, {
                       vial: a + 1,
                       level: t,
@@ -12362,26 +12485,26 @@
                 ),
               ),
               s.createElement(
-                O._X,
-                { className: (0, N.A)(Le().CarouselArrow, Le().Left) },
+                x._X,
+                { className: (0, N.A)(Ae().CarouselArrow, Ae().Left) },
                 s.createElement("img", {
                   src: `${r.r.IMG_URL}${e}/icons/scroll_arrow.png`,
-                  className: Le().ArrowImage,
+                  className: Ae().ArrowImage,
                 }),
               ),
               s.createElement(
-                O.CC,
-                { className: (0, N.A)(Le().CarouselArrow, Le().Right) },
+                x.CC,
+                { className: (0, N.A)(Ae().CarouselArrow, Ae().Right) },
                 s.createElement("img", {
                   src: `${r.r.IMG_URL}${e}/icons/scroll_arrow.png`,
-                  className: Le().ArrowImage,
+                  className: Ae().ArrowImage,
                 }),
               ),
             ),
           );
-      var Oe = a(6743),
-        We = a.n(Oe);
-      function xe(e) {
+      var xe = a(6743),
+        We = a.n(xe);
+      function Oe(e) {
         const t = 1e3 * e,
           [a, r] = (0, s.useState)(t - new Date().getTime());
         return (
@@ -12404,7 +12527,7 @@
         ze = ({ value: e, label: t }) =>
           s.createElement(s.Fragment, null, e + t),
         je = ({ timestampNoMs: e }) => {
-          const t = xe(e);
+          const t = Oe(e);
           let { days: a, hours: r, minutes: n, seconds: i } = t;
           return (
             a + r + n + i <= 0 && ((a = 0), (r = 0), (n = 0), (i = 0)),
@@ -12875,10 +12998,10 @@
                       Ve().CapsuleDiscount,
                     ),
                   },
-                  Mo.GetBPDiscount(36, l) &&
+                  Wo.GetBPDiscount(36, l) &&
                     (0, B.Wn)(
                       "#battlepass_purchase_discount",
-                      Mo.GetBPDiscount(36, l),
+                      Wo.GetBPDiscount(36, l),
                       o,
                     ),
                 ),
@@ -12886,7 +13009,7 @@
                   "div",
                   {
                     onClick: () =>
-                      Mo.PurchaseOnSteamStore(l, 1, window.location.href),
+                      Wo.PurchaseOnSteamStore(l, 1, window.location.href),
                     className: (0, N.A)(
                       Ve().TextStyleButton,
                       Ve().TextColorWhite,
@@ -12899,7 +13022,7 @@
                   },
                   (0, B.Wn)(
                     "#battlepass_purchase_label",
-                    "undefined" !== Mo.GetBPPrice(l) ? Mo.GetBPPrice(l) : "",
+                    "undefined" !== Wo.GetBPPrice(l) ? Wo.GetBPPrice(l) : "",
                   ),
                 ),
               ),
@@ -12975,7 +13098,7 @@
                 "div",
                 {
                   onClick: () =>
-                    Mo.PurchaseOnSteamStore(l, 1, window.location.href),
+                    Wo.PurchaseOnSteamStore(l, 1, window.location.href),
                   className: (0, N.A)(
                     Ve().TextStyleButton,
                     Ve().TextColorWhite,
@@ -12988,7 +13111,7 @@
                 },
                 (0, B.Wn)(
                   "#battlepass_purchase_label",
-                  "undefined" !== Mo.GetBPPrice(l) ? Mo.GetBPPrice(l) : "",
+                  "undefined" !== Wo.GetBPPrice(l) ? Wo.GetBPPrice(l) : "",
                 ),
               ),
             ),
@@ -13007,7 +13130,7 @@
           );
         },
         gt = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -13058,8 +13181,8 @@
             ),
           ),
         Et = ({ filename: e, index: t }) => {
-          const a = (0, s.useContext)(O.Yc),
-            n = (0, s.useRef)();
+          const a = (0, s.useContext)(x.Yc),
+            n = (0, s.useRef)(void 0);
           return (
             (0, s.useEffect)(() => {
               function e() {
@@ -13134,7 +13257,7 @@
             }),
           ),
         vt = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           return (
             (0, s.useEffect)(() => {
@@ -13171,8 +13294,8 @@
           );
         },
         ft = ({ heroName: e, index: t }) => {
-          const a = (0, s.useContext)(O.Yc),
-            n = (0, s.useRef)();
+          const a = (0, s.useContext)(x.Yc),
+            n = (0, s.useRef)(void 0);
           return (
             (0, s.useEffect)(() => {
               function e() {
@@ -13258,7 +13381,7 @@
             ),
           ),
         St = () => {
-          const e = (0, s.useContext)(O.Yc),
+          const e = (0, s.useContext)(x.Yc),
             [t, a] = (0, s.useState)(e.state.currentSlide);
           (0, s.useEffect)(() => {
             function t() {
@@ -13326,7 +13449,7 @@
             }),
           );
         },
-        Ct = ({
+        It = ({
           preTitle: e,
           title: t,
           id: a,
@@ -13358,19 +13481,19 @@
               (0, B.Wn)(t),
             ),
           );
-      let It = class extends s.Component {
+      let Ct = class extends s.Component {
         constructor(e) {
           super(e);
         }
         render() {
-          const e = Mo.getPrizePool(),
+          const e = Wo.getPrizePool(),
             t = Ue(Ze);
           return s.createElement(
             "div",
             { id: Ke, className: Ve().BattlepassPage2022 },
             s.createElement(He.A, { bOverlapping: !0 }),
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement("title", null, (0, B.Wn)("#ti11_bp_title")),
             ),
@@ -14909,7 +15032,7 @@
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
                     className: Ve().TauntsCarousel,
                     naturalSlideWidth: 16,
@@ -14924,11 +15047,11 @@
                       "div",
                       { className: Ve().TauntsVideoContainer },
                       s.createElement(
-                        O.Ap,
+                        x.Ap,
                         null,
                         lt.map((e, t) =>
                           s.createElement(
-                            O.q7,
+                            x.q7,
                             { key: `TauntSlide-${t}`, index: t },
                             s.createElement(ft, {
                               heroName: e.heroName,
@@ -14938,7 +15061,7 @@
                         ),
                         ct.map((e, t) =>
                           s.createElement(
-                            O.q7,
+                            x.q7,
                             {
                               key: `TauntSlide-${t + lt.length}`,
                               index: t + lt.length,
@@ -14980,7 +15103,7 @@
                         { className: Ve().CarouselDots },
                         lt.map((e, t) =>
                           s.createElement(
-                            O.cL,
+                            x.cL,
                             { key: `TauntDot-${t}`, slide: t },
                             s.createElement(yt, {
                               heroName: e.heroName,
@@ -15010,7 +15133,7 @@
                         { className: Ve().CarouselDots },
                         ct.map((e, t) =>
                           s.createElement(
-                            O.cL,
+                            x.cL,
                             {
                               key: `TauntDot-${t + lt.length}`,
                               slide: t + lt.length,
@@ -15122,7 +15245,7 @@
                 }),
               ),
             ),
-            s.createElement(Ct, {
+            s.createElement(It, {
               title: "#ti11_bp_p1_head",
               id: "rewards&treasures",
             }),
@@ -15494,7 +15617,7 @@
                 ),
               ),
             ),
-            s.createElement(Ct, {
+            s.createElement(It, {
               preTitle: "#battlepass_new",
               title: "#ti11_bp_mhead_treasure",
               id: "rewards&treasures",
@@ -16713,7 +16836,7 @@
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
                     className: Ve().SprayCarousel,
                     naturalSlideWidth: 155,
@@ -16724,11 +16847,11 @@
                     "div",
                     { className: Ve().SpraysImageContainer },
                     s.createElement(
-                      O.Ap,
+                      x.Ap,
                       null,
                       nt.map((e, t) =>
                         s.createElement(
-                          O.q7,
+                          x.q7,
                           { key: `SpraySlide-${t}`, index: t },
                           s.createElement("img", {
                             className: Ve().Spray,
@@ -16744,7 +16867,7 @@
                     { className: Ve().CarouselDots },
                     nt.map((e, t) =>
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { key: `SprayDot-${t}`, slide: t },
                         s.createElement(ht, {
                           filename: e.filename,
@@ -16754,7 +16877,7 @@
                     ),
                   ),
                   s.createElement(
-                    O._X,
+                    x._X,
                     { className: (0, N.A)(Ve().CarouselArrow, Ve().Left) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2022/icons/scroll_arrow.png`,
@@ -16762,7 +16885,7 @@
                     }),
                   ),
                   s.createElement(
-                    O.CC,
+                    x.CC,
                     { className: (0, N.A)(Ve().CarouselArrow, Ve().Right) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2022/icons/scroll_arrow.png`,
@@ -16790,7 +16913,7 @@
                   },
                 },
                 s.createElement(
-                  O.gi,
+                  x.gi,
                   {
                     className: Ve().ConsumablesCarousel,
                     naturalSlideWidth: 16,
@@ -16809,11 +16932,11 @@
                       "div",
                       { className: Ve().ConsumablesVideoContainer },
                       s.createElement(
-                        O.Ap,
+                        x.Ap,
                         null,
                         ot.map((e, t) =>
                           s.createElement(
-                            O.q7,
+                            x.q7,
                             { key: `ConsumableSlide-${t}`, index: t },
                             s.createElement(Et, {
                               index: t,
@@ -16829,14 +16952,14 @@
                     { className: Ve().CarouselDots },
                     ot.map((e, t) =>
                       s.createElement(
-                        O.cL,
+                        x.cL,
                         { key: `ConsumableDot-${t}`, slide: t },
                         s.createElement(bt, { filename: e.iconFilename }),
                       ),
                     ),
                   ),
                   s.createElement(
-                    O._X,
+                    x._X,
                     { className: (0, N.A)(Ve().CarouselArrow, Ve().Left) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2022/icons/scroll_arrow.png`,
@@ -16844,7 +16967,7 @@
                     }),
                   ),
                   s.createElement(
-                    O.CC,
+                    x.CC,
                     { className: (0, N.A)(Ve().CarouselArrow, Ve().Right) },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}international2022/icons/scroll_arrow.png`,
@@ -17542,7 +17665,7 @@
                 ),
               ),
             ),
-            s.createElement(Ct, {
+            s.createElement(It, {
               preTitle: "#ti11_bp_mhead_new_return_bp",
               title: "#ti11_bp_mhead_ti_features",
             }),
@@ -17821,7 +17944,7 @@
                 ),
               ),
             ),
-            s.createElement(Ct, {
+            s.createElement(It, {
               preTitle: "#ti11_bp_mhead_new_return_bp",
               title: "#ti11_bp_mhead_bp_features",
             }),
@@ -18001,13 +18124,13 @@
           );
         }
       };
-      It = (0, n.Cg)([f.PA], It);
-      const Nt = It;
+      Ct = (0, n.Cg)([f.PA], Ct);
+      const Nt = Ct;
       var Bt = a(85886),
         Mt = a(86067),
         Rt = a(64710),
         Dt = a.n(Rt);
-      const At = ({ event: e }) => {
+      const Lt = ({ event: e }) => {
         const t = new Date(1e3 * e.GetStartTimeAndDateUnixSeconds()),
           a = (0, i.sf)(r.r.LANGUAGE),
           n = e.GetSummaryWithFallback(a),
@@ -18040,13 +18163,13 @@
           ),
         );
       };
-      var Lt = a(94610),
+      var At = a(94610),
         Pt = a(88910),
         kt = a.n(Pt),
         Gt = a(86475),
-        Ot = a(55589),
-        Wt = a.n(Ot);
-      const xt = ({ event: e }) => {
+        xt = a(55589),
+        Wt = a.n(xt);
+      const Ot = ({ event: e }) => {
         const t = new Date(1e3 * e.GetStartTimeAndDateUnixSeconds()),
           a = (0, i.sf)(r.r.LANGUAGE),
           n = (0, Gt.Yj)(e.GetDescriptionWithFallback(a), ["img"]);
@@ -18169,8 +18292,8 @@
             if (zt(c, e) && ((E += 1), !(E <= 15 * o))) {
               if (((b += 1), b > 15)) break;
               c
-                ? p.push(s.createElement(xt, { event: e, key: e.GID }))
-                : _.push(s.createElement(At, { event: e, key: e.GID }));
+                ? p.push(s.createElement(Ot, { event: e, key: e.GID }))
+                : _.push(s.createElement(Lt, { event: e, key: e.GID }));
             }
           const f = Math.ceil((h - 1) / 15);
           g.push(
@@ -18224,7 +18347,7 @@
               { className: Ut().BlogOverviewPage },
               s.createElement(He.A, { bOverlapping: !0 }),
               s.createElement(
-                x.mg,
+                O.mg,
                 null,
                 s.createElement("title", null, (0, B.Wn)("#news_title")),
               ),
@@ -18311,7 +18434,7 @@
             if (
               e != o &&
               (zt(!1, e) &&
-                b.push(s.createElement(At, { event: e, key: e.GID })),
+                b.push(s.createElement(Lt, { event: e, key: e.GID })),
               3 == b.length)
             )
               break;
@@ -18321,8 +18444,8 @@
           return s.createElement(
             "div",
             { className: kt().BlogEntryPage },
-            s.createElement(x.mg, null, s.createElement("title", null, f)),
-            s.createElement(Lt.A, null),
+            s.createElement(O.mg, null, s.createElement("title", null, f)),
+            s.createElement(At.A, null),
             !u && s.createElement(He.A, { bOverlapping: !0 }),
             !u &&
               r.r.VALVE_INTERNAL &&
@@ -18386,7 +18509,7 @@
         Qt = a(92225),
         Jt = a(89790);
       const Xt = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = $t.E.Get().GetEventInfo(e),
             a = t && t.is_event_completed,
             r = $t.E.Get().GetSpoilerBlockState(e) == Zt.h7.BLOCKED;
@@ -18471,6 +18594,7 @@
               Zt.Dq.INTERNATIONAL_2023_QUALIFIERS,
               Zt.Dq.INTERNATIONAL_2023,
               Zt.Dq.INTERNATIONAL_2024,
+              Zt.Dq.INTERNATIONAL_2025,
             ].reverse();
           let n = { year: "numeric", month: "short" };
           return s.createElement(
@@ -18494,7 +18618,8 @@
                 let o = `url( ${r.r.IMG_URL}dpc/headers/dpc_header_event_${(0, Kt.p$)(a)}.jpg )`;
                 (0, $t.e)(a)
                   ? (o = `url( ${r.r.CDN_URL}apps/dota2/images/leagues/${a}/images/image_8.png )`)
-                  : a == Zt.Dq.INTERNATIONAL_2025 &&
+                  : (a == Zt.Dq.INTERNATIONAL_2024 ||
+                      a == Zt.Dq.INTERNATIONAL_2025) &&
                     (o = `url( ${r.r.IMG_URL}dpc/headers/dpc_header_event_${(0, Kt.p$)(a)}.png )`);
                 let l = null;
                 if ((0, $t.e)(a)) {
@@ -18542,7 +18667,7 @@
           );
         }),
         ta = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = $t.E.Get().GetWatchPageContext(),
             a = $t.E.Get().GetEventInfo(e),
             r = ((0, S.W6)(), (0, S.zy)()),
@@ -18684,7 +18809,7 @@
       })(la || (la = {}));
       const ca = (e) => {
           const [t, a] = (0, s.useState)(!1),
-            n = (0, s.useRef)(),
+            n = (0, s.useRef)(void 0),
             i = e.options.findIndex((t) => e.selectedOption == t?.value);
           !(function (e, t) {
             (0, s.useEffect)(() => {
@@ -19014,7 +19139,7 @@
           );
         }),
         Ta = 244,
-        Ca = ({ bLeft: e, adjustDate: t }) => {
+        Ia = ({ bLeft: e, adjustDate: t }) => {
           const [a, n] = (0, s.useState)(!1),
             i = (0, s.useRef)(null);
           return (
@@ -19051,9 +19176,9 @@
             )
           );
         },
-        Ia =
+        Ca =
           ((0, f.PA)(({ eDivision: e, setDivision: t }) => {
-            const a = di(),
+            const a = vi(),
               n = $t.E.Get().GetEventInfo(a),
               i = $t.E.Get().GetWatchPageContext(),
               o = [
@@ -19122,7 +19247,7 @@
             arrTimestamps: a,
             nOverrideTimestamp: r,
           }) => {
-            const n = di(),
+            const n = vi(),
               i = (0, S.zy)(),
               o = $t.E.Get().GetWatchPageContext(),
               l = 0 == t,
@@ -19144,28 +19269,28 @@
               f = $t.E.Get().GetFirstUnwatchedGame(e, t),
               w = $t.E.Get().GetLeagueNodeVODs(e, t, f)?.length > 0,
               T = m?.eNodeGroupType == Zt.Kq.ROUND_ROBIN,
-              C = $t.E.Get().GetNodeLabelStrings(n, e, t, Zt.LY.SHORT),
-              I =
+              I = $t.E.Get().GetNodeLabelStrings(n, e, t, Zt.LY.SHORT),
+              C =
                 l && r
                   ? r
                   : 0 != c?.actual_time
                     ? c?.actual_time
                     : c?.scheduled_time,
-              M = a.findIndex((e) => (r || I) >= e && (r || I) < e + 86400),
+              M = a.findIndex((e) => (r || C) >= e && (r || C) < e + 86400),
               R = $t.E.Get().GetSpoilerBlockState(n) == Zt.h7.BLOCKED,
               D =
                 !R ||
                 !$t.E.Get().IsLeagueNodeBracket(e, t) ||
                 $t.E.Get().IsAnyGameWatched(e, t),
-              A = p && T ? `${p?.wins} - ${p?.losses}` : "",
-              L = g && T ? `${g?.wins} - ${g?.losses}` : "",
-              P = R ? "?" : E || b ? `${c?.team_1_wins}` : A,
-              k = R ? "?" : E || b ? `${c?.team_2_wins}` : L,
+              L = p && T ? `${p?.wins} - ${p?.losses}` : "",
+              A = g && T ? `${g?.wins} - ${g?.losses}` : "",
+              P = R ? "?" : E || b ? `${c?.team_1_wins}` : L,
+              k = R ? "?" : E || b ? `${c?.team_2_wins}` : A,
               G = $t.E.Get().GetTeamNames(u),
-              O = $t.E.Get().GetTeamNames(_);
+              x = $t.E.Get().GetTeamNames(_);
             let W = G ? G.name : "#dpc_tbd",
-              x = O ? O.name : "#dpc_tbd";
-            R && !D && ((W = "#dpc_hidden"), (x = "#dpc_hidden"));
+              O = x ? x.name : "#dpc_tbd";
+            R && !D && ((W = "#dpc_hidden"), (O = "#dpc_hidden"));
             const F =
                 (o?.nLeagueID == e &&
                   o.nNodeID == t &&
@@ -19194,14 +19319,14 @@
                   "div",
                   { className: ra().Time },
                   s.createElement(_a(), {
-                    date: r ? 1e3 * r : 1e3 * I,
+                    date: r ? 1e3 * r : 1e3 * C,
                     format: "LT",
                   }),
                 ),
                 s.createElement(
                   "div",
                   { className: ra().Description },
-                  C.map((e, t) =>
+                  I.map((e, t) =>
                     s.createElement(
                       "div",
                       {
@@ -19223,18 +19348,18 @@
                 s.createElement(
                   "div",
                   { className: ra().TeamsContainer },
-                  s.createElement(Ia, {
+                  s.createElement(Ca, {
                     nTeamID: u,
                     strTeamInfo: P,
                     bWinner: b && !R && c?.team_1_wins > c?.team_2_wins,
                     strTeamName: W,
                     bShowTeams: D,
                   }),
-                  s.createElement(Ia, {
+                  s.createElement(Ca, {
                     nTeamID: _,
                     strTeamInfo: k,
                     bWinner: b && !R && c?.team_2_wins > c?.team_1_wins,
-                    strTeamName: x,
+                    strTeamName: O,
                     bShowTeams: D,
                   }),
                 ),
@@ -19327,7 +19452,7 @@
           },
         ),
         Ba = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = $t.E.Get().GetEventInfo(e),
             a = $t.E.Get().GetWatchPageContext(),
             [r, n] = (0, s.useState)(Zt.ke.UNSET),
@@ -19440,8 +19565,8 @@
           }, []);
           const S = t.is_event_completed && t.event_type != Zt.J7.EXTERNAL,
             w = t.event == Zt.Dq.INTERNATIONAL_2025,
-            T = xe(1725260400);
-          let { days: C } = T;
+            T = Oe(1756969200);
+          let { days: I } = T;
           return s.createElement(
             "div",
             {
@@ -19471,8 +19596,8 @@
                 s.createElement(
                   "div",
                   { className: ra().InactiveEvent },
-                  C > 0
-                    ? (0, B.Wn)("#dpc_ti_road_upcoming", C)
+                  I > 0
+                    ? (0, B.Wn)("#dpc_ti_road_upcoming", I)
                     : (0, B.Wn)("#dpc_ti_road_soon"),
                 ),
               !S &&
@@ -19480,7 +19605,7 @@
                 s.createElement(
                   "div",
                   { className: ra().MatchesContainer, ref: c },
-                  s.createElement(Ca, { bLeft: !0, adjustDate: f }),
+                  s.createElement(Ia, { bLeft: !0, adjustDate: f }),
                   s.createElement(
                     pa.A,
                     {
@@ -19601,7 +19726,7 @@
                       }),
                     ),
                   ),
-                  s.createElement(Ca, { bLeft: !1, adjustDate: f }),
+                  s.createElement(Ia, { bLeft: !1, adjustDate: f }),
                 ),
             ),
           );
@@ -19609,7 +19734,7 @@
       var Ma = a(73681),
         Ra = a.n(Ma),
         Da = (a(92568), a(99155));
-      const Aa = (e) => {
+      const La = (e) => {
           const [t] = (0, s.useState)({
               active: !1,
               first: !0,
@@ -19658,15 +19783,15 @@
             s.createElement(S.qh, { ...e })
           );
         },
-        La = (0, S.y)((e) =>
+        Aa = (0, S.y)((e) =>
           r.r && r.r.ENABLE_METRICS
-            ? s.createElement(Aa, { ...e })
+            ? s.createElement(La, { ...e })
             : s.createElement(S.qh, { ...e }),
         );
       var Pa = a(98441),
         ka = a.n(Pa);
       const Ga = 1668931200,
-        Oa = 1669104e3,
+        xa = 1669104e3,
         Wa = [
           { eRegion: Zt.ZM.CN, nTimestamp: Ga },
           { eRegion: Zt.ZM.CN, nTimestamp: 1668942e3 },
@@ -19730,8 +19855,8 @@
           { eRegion: Zt.ZM.NA, nTimestamp: 1669600800 },
           { eRegion: Zt.ZM.SEA, nTimestamp: 1669611600 },
         ],
-        xa = [
-          { eRegion: Zt.ZM.CN, nTimestamp: Oa },
+        Oa = [
+          { eRegion: Zt.ZM.CN, nTimestamp: xa },
           { eRegion: Zt.ZM.CN, nTimestamp: 1669114800 },
           { eRegion: Zt.ZM.EEU, nTimestamp: 1669125600 },
           { eRegion: Zt.ZM.SA, nTimestamp: 1669136400 },
@@ -20494,7 +20619,7 @@
                   { className: ka().Subtitle },
                   (0, B.Wn)("#dpc_about_weekly_schedule_ii"),
                 ),
-                s.createElement(Fa, { arrMatches: xa }),
+                s.createElement(Fa, { arrMatches: Oa }),
                 s.createElement("br", null),
                 s.createElement(
                   "div",
@@ -20703,7 +20828,7 @@
         $a = a(52448),
         Ka = a.n($a);
       const Za = (0, f.PA)(({ bCenterElements: e = !1 }) => {
-          const t = di();
+          const t = vi();
           return s.createElement(
             "div",
             { className: Ka().DPCAboutBanner },
@@ -20751,7 +20876,7 @@
           );
         }),
         Qa = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetEventInfo(t),
             r = $t.E.Get().GetEventDates(t).sort();
           let n = !1,
@@ -21007,7 +21132,7 @@
           );
         }),
         Ja = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetEventInfo(t),
             r = (0, S.W6)(),
             [n, i] = (0, s.useState)({ nLeagueID: 0, nNodeID: 0 }),
@@ -21149,7 +21274,7 @@
           );
         }),
         Xa = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             r = $t.E.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID),
             n = a?.actual_time ? a?.actual_time : a.scheduled_time,
@@ -21191,9 +21316,9 @@
               $t.E.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
             w = !f || $t.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
           let T = a ? `${a.team_1_wins} - ${a.team_2_wins}` : "";
-          const C =
+          const I =
               0 == a?.team_id_1 ? "#dpc_tbd" : S ? l?.name : "#dpc_hidden",
-            I = 0 == a?.team_id_2 ? "#dpc_tbd" : S ? c?.name : "#dpc_hidden";
+            C = 0 == a?.team_id_2 ? "#dpc_tbd" : S ? c?.name : "#dpc_hidden";
           (w && h) || (T = "#dpc_vs");
           const M = w
             ? a?.matches.length
@@ -21254,7 +21379,7 @@
                   s.createElement(
                     "div",
                     { className: qa().TeamName },
-                    (0, B.Wn)(C),
+                    (0, B.Wn)(I),
                   ),
                   i &&
                     !f &&
@@ -21311,7 +21436,7 @@
                   s.createElement(
                     "div",
                     { className: qa().TeamName },
-                    (0, B.Wn)(I),
+                    (0, B.Wn)(C),
                   ),
                   i &&
                     !f &&
@@ -21378,7 +21503,7 @@
           );
         }),
         er = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             {
               nLeagueID: a,
               nNodeID: n,
@@ -21571,7 +21696,7 @@
           );
         }),
         tr = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             [t, a] = (0, s.useState)(""),
             [n, i] = (0, s.useState)(Zt.ke.UNSET),
             [o, l] = (0, s.useState)(Zt.ZM.UNSET),
@@ -21640,7 +21765,7 @@
       var ar = a(88839),
         rr = a.n(ar);
       const nr = (0, f.PA)(() => {
-        const e = di(),
+        const e = vi(),
           t = $t.E.Get().GetEventInfo(e),
           [a, n] = (0, s.useState)(0),
           i = $t.E.Get().GetDPCStandings(t?.registration_period);
@@ -21790,7 +21915,7 @@
         lr = a(95195),
         cr = a.n(lr);
       const mr = (0, f.PA)((e) => {
-        const t = di(),
+        const t = vi(),
           a = $t.E.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
           r = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
           n = !r || $t.E.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
@@ -21819,17 +21944,17 @@
               : ""
             : "?",
           T = e.nNodeID == e.nExpandedNodeID,
-          C = e.nNodeID != e.nExpandedNodeID && 0 != e.nExpandedNodeID,
-          I = $t.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
-          M = I
+          I = e.nNodeID != e.nExpandedNodeID && 0 != e.nExpandedNodeID,
+          C = $t.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
+          M = C
             ? 1
             : i
               ? a.matches.length
               : $t.E.Get().GetNodeTypeGameCount(a?.node_type),
           R = 115 + 30 * M + (e.strBackgroundColor ? 12 : 0),
           D = T ? 1.5 * or.aO : or.aO,
-          A = T ? R : or.fq,
-          L = T ? -or.aO / 3 : 0,
+          L = T ? R : or.fq,
+          A = T ? -or.aO / 3 : 0,
           P = T ? -or.fq / 2 : 0,
           k = $t.E.Get().GetNodeTypeString(a?.node_type);
         return t === Zt.Dq.INTERNATIONAL_2022_LASTCHANCE &&
@@ -21846,17 +21971,17 @@
                   className: (0, N.A)(
                     cr().BracketNode,
                     T && cr().Expanded,
-                    C && cr().OtherExpanded,
+                    I && cr().OtherExpanded,
                     e.strBackgroundColor && cr().ShowingColor,
-                    I && cr().IsLive,
+                    C && cr().IsLive,
                   ),
                   style: {
                     background: e.strBackgroundColor
                       ? `linear-gradient( ${e.strBackgroundColor}33, ${e.strBackgroundColor}33 ), linear-gradient( #27272D, #27272D )`
                       : "#27272D",
                     width: D,
-                    height: A,
-                    marginLeft: L,
+                    height: L,
+                    marginLeft: A,
                     marginTop: P,
                   },
                   onClick: () =>
@@ -21987,7 +22112,7 @@
                       s.createElement("div", { className: cr().Score }, w),
                     ),
                     s.createElement("div", { className: cr().Separator }),
-                    !I &&
+                    !C &&
                       (0, Ya.bu)(1, M).map((r) => {
                         const n = !i || r - 1 < a?.matches.length,
                           o =
@@ -22008,7 +22133,7 @@
                             `${e.nNodeID}`,
                             (0, Kt.MA)(r, Kt.ZE.SERIES),
                           ),
-                          m = I
+                          m = C
                             ? "#dpc_watch_live"
                             : o
                               ? "#dpc_watch_vod"
@@ -22032,7 +22157,7 @@
                             {
                               to: {
                                 state: { bAutoScroll: !0 },
-                                pathname: I ? c : l,
+                                pathname: C ? c : l,
                               },
                               className: cr().DetailsButton,
                             },
@@ -22040,7 +22165,7 @@
                           ),
                         );
                       }),
-                    I &&
+                    C &&
                       s.createElement(
                         "div",
                         { className: cr().LiveContainer },
@@ -22069,7 +22194,7 @@
       var dr = a(99722),
         ur = a.n(dr);
       const _r = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetLeagueNodeGroup(e.nLeagueID, e.nNodeGroupID),
             r = Math.pow(2, Math.ceil(Math.log(a?.team_count) / Math.log(2)));
           if (null == a) return null;
@@ -22236,7 +22361,7 @@
             }),
           ),
         hr = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             [a, r] = (0, s.useState)(!0),
             [n, i] = (0, s.useState)(0),
             { nLeagueID: o, nNodeGroupID: l } =
@@ -22318,7 +22443,7 @@
       var Er = a(1312),
         br = a.n(Er);
       const vr = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetEventInfo(t),
             r = e.bStyleStopThree && 1 == e.nStanding,
             n = e.bStyleStopThree && 2 == e.nStanding,
@@ -22381,7 +22506,7 @@
           );
         }),
         fr = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetEventInfo(t),
             r = a?.leagues.find(
               (t) =>
@@ -22434,8 +22559,8 @@
         Sr = a.n(yr),
         wr = a(47942),
         Tr = a.n(wr);
-      const Cr = (0, f.PA)((e) => {
-        const t = di(),
+      const Ir = (0, f.PA)((e) => {
+        const t = vi(),
           a = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
           [r, n] = (0, s.useState)({
             nRow: -1,
@@ -22501,15 +22626,15 @@
           : y
             ? ((w = g), (T = p))
             : S && ((w = h), (T = h));
-        let C = !1;
-        const I = 50 + 55 * (c.length + 1),
+        let I = !1;
+        const C = 50 + 55 * (c.length + 1),
           M = c.length > 0;
         return s.createElement(
           "div",
           { className: (0, N.A)(Tr().DPCStandingsGrid, !M && Tr().NoData) },
           s.createElement(
             "div",
-            { className: Tr().GridMain, style: { width: I, height: 40 + I } },
+            { className: Tr().GridMain, style: { width: C, height: 40 + C } },
             s.createElement(
               "div",
               { className: Tr().Header },
@@ -22553,7 +22678,7 @@
                         f = E?.team_id_1 == _ ? E?.team_1_wins : E?.team_2_wins;
                       E?.team_1_wins == E?.team_2_wins &&
                         E?.is_completed &&
-                        (C = !0);
+                        (I = !0);
                       const y = h
                           ? E?.is_completed
                             ? `${b} - ${f}`
@@ -22721,7 +22846,7 @@
                     (0, B.Wn)("#dpc_win"),
                   ),
                 ),
-                C &&
+                I &&
                   s.createElement(
                     "div",
                     { className: Tr().LegendItem },
@@ -22758,12 +22883,12 @@
             ),
         );
       });
-      var Ir = a(31942),
-        Nr = a.n(Ir),
+      var Cr = a(31942),
+        Nr = a.n(Cr),
         Br = a(1531),
         Mr = a.n(Br);
       const Rr = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
             r = e.nTiebreak >= 0,
             n = $t.E.Get().GetEventPhaseNodeGroupID(
@@ -22933,7 +23058,7 @@
           );
         }),
         Dr = (0, f.PA)((e) => {
-          const t = di(),
+          const t = vi(),
             a = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
             r = $t.E.Get().GetTeamStanding(
               e.nLeagueID,
@@ -23015,8 +23140,8 @@
                   ),
               );
         }),
-        Ar = (0, f.PA)((e) => {
-          const t = di(),
+        Lr = (0, f.PA)((e) => {
+          const t = vi(),
             { nLeagueID: a, nNodeGroupID: r } =
               $t.E.Get().GetEventPhaseNodeGroupID(
                 t,
@@ -23086,8 +23211,8 @@
             ),
           );
         }),
-        Lr = (0, f.PA)((e) => {
-          const t = di(),
+        Ar = (0, f.PA)((e) => {
+          const t = vi(),
             { nLeagueID: a, nNodeGroupID: r } =
               $t.E.Get().GetEventPhaseNodeGroupID(
                 t,
@@ -23136,7 +23261,7 @@
                 }),
               o &&
                 e.bShowGrid &&
-                s.createElement(Cr, {
+                s.createElement(Ir, {
                   ePhase: e.ePhase,
                   eRegion: e.eRegion,
                   eDivision: e.eDivision,
@@ -23168,7 +23293,7 @@
                         nTiebreak: t,
                       }),
                     e.bShowGrid &&
-                      s.createElement(Cr, {
+                      s.createElement(Ir, {
                         ePhase: e.ePhase,
                         eRegion: e.eRegion,
                         eDivision: e.eDivision,
@@ -23181,7 +23306,7 @@
           );
         }),
         Pr = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = (0, S.W6)(),
             a = (0, S.g)(),
             r = (0, Kt.JF)(a.strPhase);
@@ -23273,7 +23398,7 @@
               }),
             ),
             r == Zt.sI.OVERALL &&
-              s.createElement(Lr, {
+              s.createElement(Ar, {
                 ePhase: r,
                 eDivision: c,
                 eRegion: l,
@@ -23293,7 +23418,7 @@
           );
         }),
         kr = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = (0, S.W6)(),
             a = (0, S.g)(),
             r = $t.E.Get().GetEventInfo(e);
@@ -23388,7 +23513,7 @@
                     }),
                   ),
                   l == Zt.sI.WILD_CARD &&
-                    s.createElement(Lr, {
+                    s.createElement(Ar, {
                       ePhase: Zt.sI.WILD_CARD,
                       eRegion: Zt.ZM.UNSET,
                       eDivision: Zt.ke.UNSET,
@@ -23414,7 +23539,7 @@
                       bShowTiebreakers: !0,
                     }),
                   l == Zt.sI.GROUP_STAGE &&
-                    s.createElement(Lr, {
+                    s.createElement(Ar, {
                       ePhase: Zt.sI.GROUP_STAGE,
                       eRegion: Zt.ZM.UNSET,
                       eDivision: Zt.ke.UNSET,
@@ -23427,7 +23552,7 @@
                       bShowTiebreakers: !0,
                     }),
                   l == Zt.sI.GROUP_A &&
-                    s.createElement(Lr, {
+                    s.createElement(Ar, {
                       ePhase: Zt.sI.GROUP_A,
                       eRegion: Zt.ZM.UNSET,
                       eDivision: Zt.ke.UNSET,
@@ -23440,7 +23565,7 @@
                       bShowTiebreakers: !0,
                     }),
                   l == Zt.sI.GROUP_B &&
-                    s.createElement(Lr, {
+                    s.createElement(Ar, {
                       ePhase: Zt.sI.GROUP_B,
                       eRegion: Zt.ZM.UNSET,
                       eDivision: Zt.ke.UNSET,
@@ -23453,7 +23578,7 @@
                       bShowTiebreakers: !0,
                     }),
                   l == Zt.sI.GROUP_C &&
-                    s.createElement(Lr, {
+                    s.createElement(Ar, {
                       ePhase: Zt.sI.GROUP_C,
                       eRegion: Zt.ZM.UNSET,
                       eDivision: Zt.ke.UNSET,
@@ -23466,7 +23591,7 @@
                       bShowTiebreakers: !0,
                     }),
                   l == Zt.sI.GROUP_D &&
-                    s.createElement(Lr, {
+                    s.createElement(Ar, {
                       ePhase: Zt.sI.GROUP_D,
                       eRegion: Zt.ZM.UNSET,
                       eDivision: Zt.ke.UNSET,
@@ -23511,7 +23636,7 @@
                 });
         }),
         Gr = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = (0, S.W6)(),
             a = (0, S.g)(),
             r = [
@@ -23582,8 +23707,8 @@
                   ),
                 });
         }),
-        Or = (0, f.PA)(() => {
-          const e = di(),
+        xr = (0, f.PA)(() => {
+          const e = vi(),
             t = (0, S.W6)(),
             a = (0, S.g)(),
             r = [
@@ -23654,7 +23779,7 @@
                 });
         }),
         Wr = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = (0, S.W6)(),
             a = (0, S.g)(),
             r = [
@@ -23735,7 +23860,7 @@
             ),
             n == Zt.sI.DPC_POINT_STANDINGS && s.createElement(nr, null),
             n == Zt.sI.GROUP_A &&
-              s.createElement(Lr, {
+              s.createElement(Ar, {
                 ePhase: Zt.sI.GROUP_A,
                 eRegion: Zt.ZM.UNSET,
                 eDivision: Zt.ke.UNSET,
@@ -23748,7 +23873,7 @@
                 bShowTiebreakers: !0,
               }),
             n == Zt.sI.GROUP_B &&
-              s.createElement(Lr, {
+              s.createElement(Ar, {
                 ePhase: Zt.sI.GROUP_B,
                 eRegion: Zt.ZM.UNSET,
                 eDivision: Zt.ke.UNSET,
@@ -23761,7 +23886,7 @@
                 bShowTiebreakers: !0,
               }),
             n == Zt.sI.GROUP_C &&
-              s.createElement(Lr, {
+              s.createElement(Ar, {
                 ePhase: Zt.sI.GROUP_C,
                 eRegion: Zt.ZM.UNSET,
                 eDivision: Zt.ke.UNSET,
@@ -23774,7 +23899,7 @@
                 bShowTiebreakers: !0,
               }),
             n == Zt.sI.GROUP_D &&
-              s.createElement(Lr, {
+              s.createElement(Ar, {
                 ePhase: Zt.sI.GROUP_D,
                 eRegion: Zt.ZM.UNSET,
                 eDivision: Zt.ke.UNSET,
@@ -23796,7 +23921,7 @@
                 bNarrow: !1,
               }),
             n == Zt.sI.GROUP_STAGE &&
-              s.createElement(Ar, {
+              s.createElement(Lr, {
                 ePhase: Zt.sI.GROUP_STAGE,
                 eRegion: Zt.ZM.UNSET,
                 eDivision: Zt.ke.UNSET,
@@ -23841,7 +23966,7 @@
               }),
           );
         }),
-        xr = (0, f.PA)(() =>
+        Or = (0, f.PA)(() =>
           s.createElement(
             "div",
             {
@@ -23851,7 +23976,7 @@
               },
             },
             s.createElement(Pr, null),
-            s.createElement(Or, null),
+            s.createElement(xr, null),
             s.createElement(kr, null),
             s.createElement(Gr, null),
             s.createElement(Wr, null),
@@ -23861,7 +23986,7 @@
       var Fr = a(92952),
         Ur = a.n(Fr);
       (0, f.PA)(() => {
-        const e = di(),
+        const e = vi(),
           t = $t.E.Get().GetEventInfo(e);
         if (t.event != Zt.Dq.INTERNATIONAL_2021) return null;
         const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
@@ -23885,7 +24010,7 @@
         );
       });
       const zr = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = $t.E.Get().GetEventInfo(e);
           if (t.event != Zt.Dq.INTERNATIONAL_2021) return null;
           const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
@@ -24222,7 +24347,7 @@
           );
         }),
         jr = (0, f.PA)(() => {
-          const e = di();
+          const e = vi();
           return $t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2021
             ? null
             : s.createElement(
@@ -24383,7 +24508,7 @@
           ),
         ),
         qr = (0, f.PA)(() => {
-          const e = di();
+          const e = vi();
           if ($t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2021)
             return null;
           const t = [
@@ -24527,7 +24652,7 @@
         $r = a.n(Yr);
       const Kr = 1665799200,
         Zr = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = $t.E.Get().GetEventInfo(e);
           if (t.event != Zt.Dq.INTERNATIONAL_2022) return null;
           $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
@@ -24646,7 +24771,7 @@
         }),
         Qr =
           ((0, f.PA)(() => {
-            const e = di(),
+            const e = vi(),
               t = $t.E.Get().GetEventInfo(e);
             if (t.event != Zt.Dq.INTERNATIONAL_2022) return null;
             const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
@@ -24984,7 +25109,7 @@
             );
           }),
           (0, f.PA)(() => {
-            const e = di();
+            const e = vi();
             return $t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2022
               ? null
               : s.createElement(
@@ -25312,7 +25437,7 @@
           ),
         ),
         Xr = (0, f.PA)(() => {
-          const e = di();
+          const e = vi();
           if ($t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2022)
             return null;
           const t = [
@@ -25471,7 +25596,7 @@
         an = a.n(tn);
       const rn = 169713e4,
         nn = (0, f.PA)(() => {
-          const e = di(),
+          const e = vi(),
             t = $t.E.Get().GetEventInfo(e);
           if (t.event != Zt.Dq.INTERNATIONAL_2023) return null;
           $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
@@ -25589,7 +25714,7 @@
         }),
         sn =
           ((0, f.PA)(() => {
-            const e = di(),
+            const e = vi(),
               t = $t.E.Get().GetEventInfo(e);
             if (t.event != Zt.Dq.INTERNATIONAL_2023) return null;
             const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
@@ -25927,7 +26052,7 @@
             );
           }),
           (0, f.PA)(() => {
-            const e = di();
+            const e = vi();
             return $t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2023
               ? null
               : s.createElement(
@@ -26033,7 +26158,7 @@
           ),
         ),
         ln = (0, f.PA)(() => {
-          const e = di();
+          const e = vi();
           if ($t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2023)
             return null;
           const t = [
@@ -26191,7 +26316,7 @@
       var mn = a(22067),
         dn = a.n(mn);
       const un = (0, f.PA)(() => {
-          const e = di();
+          const e = vi();
           return $t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2024
             ? null
             : s.createElement(
@@ -26255,7 +26380,7 @@
         }),
         _n =
           ((0, f.PA)(() => {
-            const e = di(),
+            const e = vi(),
               t = $t.E.Get().GetEventInfo(e);
             if (t.event != Zt.Dq.INTERNATIONAL_2024) return null;
             const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
@@ -26593,7 +26718,7 @@
             );
           }),
           (0, f.PA)(() => {
-            const e = di();
+            const e = vi();
             return $t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2024
               ? null
               : s.createElement(
@@ -26712,7 +26837,7 @@
           ),
         ),
         gn = (0, f.PA)(() => {
-          const e = di();
+          const e = vi();
           if ($t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2024)
             return null;
           const t = [
@@ -26846,10 +26971,777 @@
             s.createElement(gn, null),
           ),
         );
-      var En = a(87715),
+      var En = a(94180),
         bn = a.n(En);
-      const vn = (0, f.PA)(() => {
-        const e = di(),
+      const vn = 1756972800,
+        fn = (0, f.PA)(() => {
+          const e = vi();
+          return $t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2025
+            ? null
+            : s.createElement(
+                "div",
+                { className: (0, N.A)(bn().SocialMedia) },
+                s.createElement(
+                  "div",
+                  {
+                    className: (0, N.A)(
+                      bn().TextStyleOverline,
+                      bn().KeepUpHeader,
+                    ),
+                  },
+                  (0, B.Wn)("#ti11_bp_social_title"),
+                ),
+                s.createElement(
+                  "div",
+                  { className: (0, N.A)(bn().SocialIcons) },
+                  s.createElement(
+                    "a",
+                    { href: "https://twitter.com/dota2ti" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_twitter.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://facebook.com/dota2/" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_fb.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://instagram.com/dota2" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_insta.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://twitch.tv/directory/game/Dota%202" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_twitch.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://youtube.com/user/dota2" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_yt.png`,
+                    }),
+                  ),
+                ),
+              );
+        }),
+        yn =
+          ((0, f.PA)(() => {
+            const e = vi(),
+              t = $t.E.Get().GetEventInfo(e);
+            if (t.event != Zt.Dq.INTERNATIONAL_2024) return null;
+            const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
+            let r = [];
+            const n = a?.prize_pool?.total_prize_pool || 0;
+            return (
+              a?.prize_pool.prize_split_pct_x100.forEach((e) =>
+                r.push(
+                  `$${(100 * Math.floor((a.prize_pool.total_prize_pool * e) / 1e6 + 0.5)).toLocaleString()}`,
+                ),
+              ),
+              s.createElement(
+                "div",
+                { className: bn().InternationalPrizeSplits },
+                s.createElement("div", { className: bn().DividerTop }),
+                s.createElement(
+                  "div",
+                  {
+                    className: bn().PrizeGridContain,
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "1500",
+                  },
+                  s.createElement(
+                    "div",
+                    { className: bn().PrizePoolLabel },
+                    (0, B.Wn)("#dpc_total_prize_pool"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: bn().PrizePoolValue },
+                    n > 0 ? "$" + n.toLocaleString() : "",
+                  ),
+                  s.createElement("div", { className: bn().Underline }),
+                  s.createElement(
+                    "div",
+                    { className: bn().Title },
+                    (0, B.Wn)("#dpc_placement_prizes"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: bn().Grid },
+                    s.createElement(
+                      "div",
+                      { className: bn().GridRow },
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[0] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_1"),
+                        ),
+                      ),
+                    ),
+                    s.createElement(
+                      "div",
+                      { className: bn().GridRow },
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[1] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_2"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[2] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_3"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[3] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_4"),
+                        ),
+                      ),
+                    ),
+                    s.createElement(
+                      "div",
+                      { className: bn().GridRow },
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[4] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_5"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[5] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_6"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[6] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_7"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[7] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_8"),
+                        ),
+                      ),
+                    ),
+                    s.createElement(
+                      "div",
+                      { className: bn().GridRow },
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[8] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_9"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[9] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_10"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[10] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_11"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[11] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_12"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[12] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_13"),
+                        ),
+                      ),
+                    ),
+                    s.createElement(
+                      "div",
+                      { className: bn().GridRow },
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[13] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_14"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[14] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_15"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[15] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_16"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[16] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_17"),
+                        ),
+                      ),
+                      s.createElement(
+                        "div",
+                        { className: bn().GridEntry },
+                        s.createElement(
+                          "div",
+                          { className: bn().PrizeValue },
+                          a ? r[17] : "",
+                          " ",
+                        ),
+                        s.createElement(
+                          "div",
+                          { className: bn().Place },
+                          (0, B.Wn)("#place_18"),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            );
+          }),
+          (0, f.PA)(() => {
+            const e = vi();
+            return $t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2025
+              ? null
+              : s.createElement(
+                  s.Fragment,
+                  null,
+                  s.createElement(
+                    "div",
+                    { className: bn().BPPlugImgContainer },
+                    s.createElement("img", {
+                      className: bn().BPPlugImg,
+                      src: `${r.r.IMG_URL}international2024/esports_site/footer_bg01.png`,
+                    }),
+                    s.createElement(fn, null),
+                  ),
+                );
+          }),
+          (0, f.PA)(() => {
+            const e = vi(),
+              t = $t.E.Get().GetEventInfo(e);
+            if (t.event != Zt.Dq.INTERNATIONAL_2025) return null;
+            $t.E.Get().GetLeagueData(e, t.leagues[0].league_id);
+            const a = Ue(vn);
+            return s.createElement(
+              "div",
+              { className: (0, N.A)(bn().InternationalCountdownContainer) },
+              s.createElement(
+                "div",
+                { className: bn().InternationalCountdown },
+                s.createElement("div", {
+                  className: (0, N.A)(bn().SubDividerTop),
+                }),
+                !a &&
+                  s.createElement(
+                    s.Fragment,
+                    null,
+                    s.createElement(
+                      "div",
+                      {
+                        className: (0, N.A)(
+                          bn().TextStyleOverline,
+                          bn().CountdownPreHeader,
+                        ),
+                      },
+                      (0, B.Wn)("#ti14_countdown_preheader"),
+                    ),
+                    s.createElement(
+                      "div",
+                      {
+                        className: (0, N.A)(
+                          bn().TextStyleOverline,
+                          bn().CountdownHeader,
+                        ),
+                      },
+                      (0, B.Wn)("#ti14_countdown_header"),
+                    ),
+                  ),
+                s.createElement(
+                  "div",
+                  {
+                    className: (0, N.A)(
+                      bn().TextStyleBody,
+                      bn().TextColorLighterGrey,
+                      bn().CountdownDesc,
+                    ),
+                  },
+                  (0, B.Wn)("#ti14_countdown_desc"),
+                ),
+                !a &&
+                  s.createElement(
+                    "div",
+                    {
+                      className: (0, N.A)(
+                        bn().CountdownTimer,
+                        bn().TextStyleDisplay,
+                      ),
+                    },
+                    s.createElement(je, { timestampNoMs: vn }),
+                  ),
+                a &&
+                  s.createElement(
+                    "div",
+                    { className: (0, N.A)(bn().SocialIcons) },
+                    s.createElement(
+                      "a",
+                      { href: "https://twitter.com/dota2ti" },
+                      s.createElement("img", {
+                        className: bn().IconImg,
+                        src: `${r.r.IMG_URL}international2023/icons/social_twitter.png`,
+                      }),
+                    ),
+                    s.createElement(
+                      "a",
+                      { href: "https://facebook.com/dota2/" },
+                      s.createElement("img", {
+                        className: bn().IconImg,
+                        src: `${r.r.IMG_URL}international2023/icons/social_fb.png`,
+                      }),
+                    ),
+                    s.createElement(
+                      "a",
+                      { href: "https://instagram.com/dota2" },
+                      s.createElement("img", {
+                        className: bn().IconImg,
+                        src: `${r.r.IMG_URL}international2023/icons/social_insta.png`,
+                      }),
+                    ),
+                    s.createElement(
+                      "a",
+                      { href: "https://twitch.tv/directory/game/Dota%202" },
+                      s.createElement("img", {
+                        className: bn().IconImg,
+                        src: `${r.r.IMG_URL}international2023/icons/social_twitch.png`,
+                      }),
+                    ),
+                    s.createElement(
+                      "a",
+                      { href: "https://youtube.com/user/dota2" },
+                      s.createElement("img", {
+                        className: bn().IconImg,
+                        src: `${r.r.IMG_URL}international2023/icons/social_yt.png`,
+                      }),
+                    ),
+                  ),
+                s.createElement("div", {
+                  className: (0, N.A)(bn().SubDividerBottom),
+                }),
+              ),
+            );
+          })),
+        Sn = (0, f.PA)(({ nTeamID: e, strName: t, strRegion: a }) =>
+          s.createElement(
+            "div",
+            {
+              className: bn().InternationalTeamListTeam,
+              "data-aos": "fade-up",
+              "data-aos-duration": "2500",
+            },
+            s.createElement("div", {
+              className: bn().MagentaTeamLogo,
+              style: {
+                backgroundImage: `url( ${r.r.IMG_URL}international2025/teamlogos/${e}.png )`,
+              },
+            }),
+            s.createElement(
+              "div",
+              { className: (0, N.A)(bn().TeamTextContainer) },
+              s.createElement(
+                "div",
+                {
+                  className: (0, N.A)(
+                    bn().TeamName,
+                    bn().TextColorWhite,
+                    bn().TextStyleHeading,
+                  ),
+                },
+                t,
+              ),
+              s.createElement(
+                "div",
+                {
+                  className: (0, N.A)(
+                    bn().TeamRegion,
+                    bn().TextStyleSmallHeading,
+                  ),
+                },
+                (0, B.Wn)(a),
+              ),
+            ),
+          ),
+        ),
+        wn = (0, f.PA)(() => {
+          const e = vi();
+          if ($t.E.Get().GetEventInfo(e).event != Zt.Dq.INTERNATIONAL_2025)
+            return null;
+          const t = [
+            {
+              nTeamID: 36,
+              strTeamName: "Natus Vincere",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 2163,
+              strTeamName: "Team Liquid",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 7119388,
+              strTeamName: "Team Spirit",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 7554697,
+              strTeamName: "Nigma Galaxy",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 7732977,
+              strTeamName: "BOOM Esports",
+              strTeamRegion: "#dpc_region_sea",
+            },
+            {
+              nTeamID: 8255888,
+              strTeamName: "BB Team",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 8261500,
+              strTeamName: "Xtreme Gaming",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 8291895,
+              strTeamName: "Tundra Esports",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 8599101,
+              strTeamName: "Gaimin Gladiators",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 9247354,
+              strTeamName: "Team Falcons",
+              strTeamRegion: "#dpc_region_weu",
+            },
+            {
+              nTeamID: 9303484,
+              strTeamName: "Heroic",
+              strTeamRegion: "#dpc_region_sa",
+            },
+            {
+              nTeamID: 9467224,
+              strTeamName: "Aurora Gaming",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 9572001,
+              strTeamName: "PVISION",
+              strTeamRegion: "#dpc_region_eeu",
+            },
+            {
+              nTeamID: 9640842,
+              strTeamName: "Team Tidebound",
+              strTeamRegion: "#dpc_region_cn",
+            },
+            {
+              nTeamID: 9651185,
+              strTeamName: "Wildcard",
+              strTeamRegion: "#dpc_region_na",
+            },
+            {
+              nTeamID: 9691969,
+              strTeamName: "Team Nemesis",
+              strTeamRegion: "#dpc_region_sea",
+            },
+          ];
+          return (
+            (function (e) {
+              for (let t = e.length - 1; t > 0; t--) {
+                let a = Math.floor(Math.random() * (t + 1)),
+                  r = e[t];
+                (e[t] = e[a]), (e[a] = r);
+              }
+            })(t),
+            s.createElement(
+              s.Fragment,
+              null,
+              s.createElement("div", {
+                className: (0, N.A)(bn().DividerPronounced),
+              }),
+              s.createElement(
+                "div",
+                { className: bn().InternationalTeamList },
+                s.createElement(
+                  "div",
+                  { className: (0, N.A)(bn().TextStyleOverline, bn().Title) },
+                  (0, B.Wn)("#dpc_participating_teams"),
+                ),
+                s.createElement(
+                  "div",
+                  {
+                    className: bn().TeamGrid,
+                    "data-aos": "fade-up",
+                    "data-aos-duration": "1500",
+                  },
+                  t.map((e) =>
+                    s.createElement(Sn, {
+                      key: e.nTeamID,
+                      nTeamID: e.nTeamID,
+                      strName: e.strTeamName,
+                      strRegion: e.strTeamRegion,
+                    }),
+                  ),
+                ),
+                s.createElement(
+                  "div",
+                  {
+                    className: (0, N.A)(
+                      bn().TextStyleOverline,
+                      bn().KeepUpHeader,
+                    ),
+                  },
+                  (0, B.Wn)("#ti14_social_title"),
+                ),
+                s.createElement(
+                  "div",
+                  { className: (0, N.A)(bn().SocialIcons) },
+                  s.createElement(
+                    "a",
+                    { href: "https://twitter.com/dota2ti" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_twitter.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://facebook.com/dota2/" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_fb.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://instagram.com/dota2" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_insta.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://twitch.tv/directory/game/Dota%202" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_twitch.png`,
+                    }),
+                  ),
+                  s.createElement(
+                    "a",
+                    { href: "https://youtube.com/user/dota2" },
+                    s.createElement("img", {
+                      className: bn().IconImg,
+                      src: `${r.r.IMG_URL}international2023/icons/social_yt.png`,
+                    }),
+                  ),
+                ),
+              ),
+            )
+          );
+        }),
+        Tn = (0, f.PA)(() =>
+          s.createElement(
+            s.Fragment,
+            null,
+            s.createElement(yn, null),
+            s.createElement(wn, null),
+          ),
+        );
+      var In = a(87715),
+        Cn = a.n(In);
+      const Nn = (0, f.PA)(() => {
+        const e = vi(),
           { nLeagueID: t, nNodeID: a } = $t.E.Get().GetNextLeagueNode(
             e,
             null,
@@ -26866,68 +27758,68 @@
           .toString();
         return s.createElement(
           "div",
-          { className: bn().DPCNextMatchBanner },
+          { className: Cn().DPCNextMatchBanner },
           s.createElement(
             "div",
-            { className: bn().BannerContents },
+            { className: Cn().BannerContents },
             s.createElement(
               "div",
-              { className: bn().LeftLabels },
+              { className: Cn().LeftLabels },
               s.createElement(
                 "div",
-                { className: bn().ComingUp },
+                { className: Cn().ComingUp },
                 (0, B.Wn)("#dpc_coming_up"),
               ),
               s.createElement(
                 "div",
-                { className: (0, N.A)(bn().TeamNames, r && bn().Visible) },
-                s.createElement("div", { className: bn().TeamName }, n?.name),
+                { className: (0, N.A)(Cn().TeamNames, r && Cn().Visible) },
+                s.createElement("div", { className: Cn().TeamName }, n?.name),
                 s.createElement(
                   "div",
-                  { className: bn().Versus },
+                  { className: Cn().Versus },
                   (0, B.Wn)("#dpc_vs"),
                 ),
-                s.createElement("div", { className: bn().TeamName }, i?.name),
+                s.createElement("div", { className: Cn().TeamName }, i?.name),
               ),
               s.createElement(
                 "div",
-                { className: (0, N.A)(bn().WatchLive, r && bn().Visible) },
+                { className: (0, N.A)(Cn().WatchLive, r && Cn().Visible) },
                 (0, B.Wn)("#dpc_watch_live"),
               ),
               s.createElement(
                 "div",
-                { className: (0, N.A)(bn().Timestamp, r && bn().Visible) },
+                { className: (0, N.A)(Cn().Timestamp, r && Cn().Visible) },
                 o,
               ),
             ),
             s.createElement(
               "div",
-              { className: (0, N.A)(bn().TeamWrapper, bn().First) },
+              { className: (0, N.A)(Cn().TeamWrapper, Cn().First) },
               s.createElement(wa, {
-                className: bn().TeamDiagonal,
+                className: Cn().TeamDiagonal,
                 nTeamID: r.team_id_1,
               }),
             ),
             s.createElement(
               "div",
-              { className: (0, N.A)(bn().TeamWrapper, bn().Second) },
+              { className: (0, N.A)(Cn().TeamWrapper, Cn().Second) },
               s.createElement(wa, {
-                className: bn().TeamDiagonal,
+                className: Cn().TeamDiagonal,
                 nTeamID: r.team_id_2,
               }),
             ),
             s.createElement(
               "div",
-              { className: bn().ScheduleButtonContainer },
+              { className: Cn().ScheduleButtonContainer },
               s.createElement(
                 y.N_,
                 {
                   to: v.J.dpc_schedule((0, Kt.p$)(e), `${t}`, `${a}`),
-                  className: bn().ScheduleButton,
+                  className: Cn().ScheduleButton,
                 },
                 s.createElement(
                   "div",
-                  { className: bn().Label },
+                  { className: Cn().Label },
                   (0, B.Wn)("#dpc_view_schedule"),
                 ),
               ),
@@ -26935,25 +27827,25 @@
           ),
         );
       });
-      var fn = a(80179),
-        yn = a(43270),
-        Sn = a.n(yn);
-      function wn(e, t) {
+      var Bn = a(80179),
+        Mn = a(43270),
+        Rn = a.n(Mn);
+      function Dn(e, t) {
         return Array.from(
           Array.from(Array(t - e + 1).keys()).map((t) => t + e),
         );
       }
-      const Tn = (0, s.createContext)(null),
-        Cn = () => (0, s.useContext)(Tn);
-      function In(e) {
+      const Ln = (0, s.createContext)(null),
+        An = () => (0, s.useContext)(Ln);
+      function Pn(e) {
         return s.createElement(
-          Tn.Provider,
+          Ln.Provider,
           { value: e.seriesDetailsContext },
           e.children,
         );
       }
-      const Nn = (0, f.PA)(() => {
-          const e = di(),
+      const kn = (0, f.PA)(() => {
+          const e = vi(),
             t = $t.E.Get().GetEventInfo(e),
             a = $t.E.Get().GetWatchPageContext(),
             n = (0, S.W6)(),
@@ -26991,7 +27883,7 @@
                       (e) =>
                         !$t.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
                     ),
-                    r = wn(1, 5).find(
+                    r = Dn(1, 5).find(
                       (e) =>
                         !$t.E.Get().IsGameWatched(t?.nLeagueID, t?.nNodeID, e),
                     );
@@ -27013,14 +27905,14 @@
                 ? null
                 : s.createElement(
                     "div",
-                    { className: Sn().DPCSeriesDetails },
+                    { className: Rn().DPCSeriesDetails },
                     s.createElement(
                       "div",
                       {
                         className: (0, N.A)(
-                          Sn().BGContainer,
-                          i && p && Sn().Large,
-                          l && Sn().ShowChat,
+                          Rn().BGContainer,
+                          i && p && Rn().Large,
+                          l && Rn().ShowChat,
                         ),
                         style: {
                           backgroundImage: `url( ${r.r.IMG_URL}backgrounds/bg_grout_texture.jpg )`,
@@ -27028,9 +27920,9 @@
                       },
                       s.createElement(
                         "div",
-                        { className: Sn().Container },
+                        { className: Rn().Container },
                         s.createElement(
-                          In,
+                          Pn,
                           {
                             seriesDetailsContext: {
                               bLarge: i && p,
@@ -27038,11 +27930,11 @@
                               bShowChat: l,
                             },
                           },
-                          s.createElement(Mn, null),
-                          s.createElement(Rn, null),
-                          s.createElement(An, null),
+                          s.createElement(xn, null),
+                          s.createElement(Wn, null),
+                          s.createElement(Fn, null),
                         ),
-                        s.createElement(Bn, {
+                        s.createElement(Gn, {
                           bLarge: i,
                           setLarge: o,
                           bShowChat: l,
@@ -27064,8 +27956,8 @@
               : null
           );
         }),
-        Bn = (0, f.PA)((e) => {
-          const t = di(),
+        Gn = (0, f.PA)((e) => {
+          const t = vi(),
             a = $t.E.Get().GetWatchPageContext(),
             n = $t.E.Get().GetLeagueData(t, a.nLeagueID),
             o = 0 == a.nSeriesGame ? 1 : a.nSeriesGame,
@@ -27162,42 +28054,42 @@
                 Zt.VE.LEAGUE_BROADCAST_TWITCH;
           return s.createElement(
             "div",
-            { className: Sn().DPCSeriesFooter },
+            { className: Rn().DPCSeriesFooter },
             s.createElement(
               "div",
-              { className: (0, N.A)(Sn().LeftTabs, d && Sn().Hidden) },
+              { className: (0, N.A)(Rn().LeftTabs, d && Rn().Hidden) },
               s.createElement(
                 Kt.eX,
                 {
                   to: h,
                   condition: p,
                   className: (0, N.A)(
-                    Sn().SeriesViewTab,
-                    g && Sn().Selected,
-                    p && Sn().Valid,
+                    Rn().SeriesViewTab,
+                    g && Rn().Selected,
+                    p && Rn().Valid,
                   ),
                 },
-                s.createElement(qt.np, { className: Sn().SeriesViewTabImage }),
+                s.createElement(qt.np, { className: Rn().SeriesViewTabImage }),
               ),
               s.createElement(
                 y.N_,
                 {
                   to: b,
                   className: (0, N.A)(
-                    Sn().SeriesViewTab,
-                    E && Sn().Selected,
-                    Sn().Valid,
+                    Rn().SeriesViewTab,
+                    E && Rn().Selected,
+                    Rn().Valid,
                   ),
                 },
-                s.createElement(qt.mo, { className: Sn().SeriesViewTabImage }),
+                s.createElement(qt.mo, { className: Rn().SeriesViewTabImage }),
               ),
             ),
             s.createElement(
               "div",
               {
                 className: (0, N.A)(
-                  Sn().CenterOptions,
-                  0 == m.length && Sn().Hidden,
+                  Rn().CenterOptions,
+                  0 == m.length && Rn().Hidden,
                 ),
               },
               s.createElement(ca, {
@@ -27209,13 +28101,13 @@
               }),
               s.createElement(
                 "a",
-                { href: _, className: Sn().OutlineButton },
+                { href: _, className: Rn().OutlineButton },
                 s.createElement(
                   "div",
-                  { className: Sn().Contents },
+                  { className: Rn().Contents },
                   (0, B.Wn)(u),
                   s.createElement("div", {
-                    className: Sn().ExternalLinkIcon,
+                    className: Rn().ExternalLinkIcon,
                     style: {
                       backgroundImage: `url( ${r.r.IMG_URL}icons/external_arrow.png )`,
                     },
@@ -27227,9 +28119,9 @@
               "div",
               {
                 className: (0, N.A)(
-                  Sn().RightTabs,
-                  !e.bLargeAllowed && Sn().Hidden,
-                  f && Sn().HasChatOption,
+                  Rn().RightTabs,
+                  !e.bLargeAllowed && Rn().Hidden,
+                  f && Rn().HasChatOption,
                 ),
               },
               f &&
@@ -27237,43 +28129,43 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      Sn().SizeTab,
-                      e.bShowChat && Sn().Selected,
-                      Sn().RightGap,
+                      Rn().SizeTab,
+                      e.bShowChat && Rn().Selected,
+                      Rn().RightGap,
                     ),
                     onClick: () => e.setShowChat(!e.bShowChat),
                   },
-                  s.createElement(qt.oy, { className: Sn().SizeTabImage }),
+                  s.createElement(qt.oy, { className: Rn().SizeTabImage }),
                 ),
               s.createElement(
                 "div",
                 {
                   className: (0, N.A)(
-                    Sn().SizeTab,
-                    (!e.bLarge || !e.bLargeAllowed) && Sn().Selected,
+                    Rn().SizeTab,
+                    (!e.bLarge || !e.bLargeAllowed) && Rn().Selected,
                   ),
                   onClick: () => e.setLarge(!1),
                 },
-                s.createElement(qt.LP, { className: Sn().SizeTabImage }),
+                s.createElement(qt.LP, { className: Rn().SizeTabImage }),
               ),
               s.createElement(
                 "div",
                 {
                   className: (0, N.A)(
-                    Sn().SizeTab,
-                    e.bLarge && e.bLargeAllowed && Sn().Selected,
-                    !e.bLargeAllowed && Sn().NotAllowed,
+                    Rn().SizeTab,
+                    e.bLarge && e.bLargeAllowed && Rn().Selected,
+                    !e.bLargeAllowed && Rn().NotAllowed,
                   ),
                   onClick: () => e.setLarge(!0),
                 },
-                s.createElement(qt.Uf, { className: Sn().SizeTabImage }),
+                s.createElement(qt.Uf, { className: Rn().SizeTabImage }),
               ),
             ),
           );
         }),
-        Mn = (0, f.PA)(() => {
-          const e = di(),
-            t = Cn(),
+        xn = (0, f.PA)(() => {
+          const e = vi(),
+            t = An(),
             a = $t.E.Get().GetWatchPageContext(),
             r = $t.E.Get().GetLeagueNode(a.nLeagueID, a.nNodeID),
             n = $t.E.Get().GetLeagueNodeInfo(a.nLeagueID, a.nNodeID),
@@ -27306,11 +28198,11 @@
             "div",
             {
               className: (0, N.A)(
-                Sn().DPCSeriesDetailsHeader,
-                t.bLarge && Sn().Large,
+                Rn().DPCSeriesDetailsHeader,
+                t.bLarge && Rn().Large,
               ),
             },
-            s.createElement(Dn, {
+            s.createElement(On, {
               nTeamID: r?.team_id_1,
               bLeft: !0,
               bWinner: o,
@@ -27327,7 +28219,7 @@
                   `${a.nLeagueID}`,
                   `${a.nNodeID}`,
                 ),
-                className: Sn().CenterSection,
+                className: Rn().CenterSection,
               },
               d.map((e, t) =>
                 s.createElement(
@@ -27335,8 +28227,8 @@
                   {
                     key: `${a.nLeagueID}_${a.nNodeID}_${t}`,
                     className: (0, N.A)(
-                      0 == t && Sn().Header1,
-                      1 == t && Sn().Header2,
+                      0 == t && Rn().Header1,
+                      1 == t && Rn().Header2,
                     ),
                   },
                   (0, B.Wn)(e),
@@ -27345,26 +28237,26 @@
               u &&
                 !_ &&
                 s.createElement(_a(), {
-                  className: Sn().Timestamp,
+                  className: Rn().Timestamp,
                   date: 1e3 * r?.scheduled_time,
                   format: "MMM DD LT",
                 }),
               p &&
                 !_ &&
                 s.createElement(_a(), {
-                  className: Sn().Timestamp,
+                  className: Rn().Timestamp,
                   date: 1e3 * r?.actual_time,
                   format: "MMM DD LT",
                 }),
               _ &&
                 s.createElement(
                   "div",
-                  { className: (0, N.A)(Sn().LiveBanner) },
+                  { className: (0, N.A)(Rn().LiveBanner) },
                   (0, B.Wn)("#dpc_live"),
-                  s.createElement("div", { className: Sn().Dot }),
+                  s.createElement("div", { className: Rn().Dot }),
                 ),
             ),
-            s.createElement(Dn, {
+            s.createElement(On, {
               nTeamID: r?.team_id_2,
               bLeft: !1,
               bWinner: l,
@@ -27375,8 +28267,8 @@
             }),
           );
         }),
-        Rn = (0, f.PA)(() => {
-          const e = di(),
+        Wn = (0, f.PA)(() => {
+          const e = vi(),
             t = $t.E.Get().GetWatchPageContext(),
             a = $t.E.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             r = a?.is_completed;
@@ -27388,11 +28280,11 @@
               "div",
               {
                 className: (0, N.A)(
-                  Sn().DPCSeriesGameSelector,
-                  !r && Sn().Collapse,
+                  Rn().DPCSeriesGameSelector,
+                  !r && Rn().Collapse,
                 ),
               },
-              wn(1, n).map((a) => {
+              Dn(1, n).map((a) => {
                 const r = t.nSeriesGame == a,
                   i =
                     t.eSeriesDisplay == Kt.ZE.SERIES
@@ -27410,15 +28302,15 @@
                     ),
                     key: `match_${a}`,
                     className: (0, N.A)(
-                      Sn().GameOption,
-                      r && Sn().Selected,
-                      1 == a && Sn().First,
-                      a == n && Sn().Last,
+                      Rn().GameOption,
+                      r && Rn().Selected,
+                      1 == a && Rn().First,
+                      a == n && Rn().Last,
                     ),
                   },
                   s.createElement(
                     "div",
-                    { className: Sn().Label },
+                    { className: Rn().Label },
                     (0, B.Wn)("#dpc_game_number", a),
                   ),
                 );
@@ -27426,7 +28318,7 @@
             )
           );
         }),
-        Dn = (0, f.PA)(
+        On = (0, f.PA)(
           ({
             nTeamID: e,
             bLeft: t,
@@ -27436,8 +28328,8 @@
             bShowRecord: i,
             bHideTeams: o,
           }) => {
-            const l = di(),
-              c = Cn(),
+            const l = vi(),
+              c = An(),
               m = $t.E.Get().GetWatchPageContext(),
               d = $t.E.Get().GetLeagueNodeInfo(m.nLeagueID, m.nNodeID),
               u = $t.E.Get().GetEventPhaseNodeGroupID(
@@ -27454,48 +28346,48 @@
               "div",
               {
                 className: (0, N.A)(
-                  Sn().DPCSeriesDetailsHeaderTeam,
-                  t && Sn().Left,
-                  !t && Sn().Right,
-                  a && !h && Sn().Winner,
-                  c.bLarge && Sn().Large,
-                  c.bShowChat && Sn().ShowChat,
+                  Rn().DPCSeriesDetailsHeaderTeam,
+                  t && Rn().Left,
+                  !t && Rn().Right,
+                  a && !h && Rn().Winner,
+                  c.bLarge && Rn().Large,
+                  c.bShowChat && Rn().ShowChat,
                 ),
               },
               s.createElement(
                 "div",
-                { className: Sn().TopSection },
+                { className: Rn().TopSection },
                 s.createElement(
                   "div",
-                  { className: Sn().Labels },
-                  s.createElement("div", { className: Sn().TeamName }, _?.name),
+                  { className: Rn().Labels },
+                  s.createElement("div", { className: Rn().TeamName }, _?.name),
                   i &&
                     !h &&
-                    s.createElement("div", { className: Sn().Record }, g),
+                    s.createElement("div", { className: Rn().Record }, g),
                 ),
                 !o && s.createElement(wa, { nTeamID: e, bTooltip: !0 }),
                 s.createElement(
                   "div",
-                  { className: Sn().Pips },
+                  { className: Rn().Pips },
                   s.createElement("div", {
                     className: (0, N.A)(
-                      Sn().Pip,
-                      r > 0 && !h && Sn().Filled,
-                      n > 0 && Sn().Visible,
+                      Rn().Pip,
+                      r > 0 && !h && Rn().Filled,
+                      n > 0 && Rn().Visible,
                     ),
                   }),
                   s.createElement("div", {
                     className: (0, N.A)(
-                      Sn().Pip,
-                      r > 1 && !h && Sn().Filled,
-                      n > 1 && Sn().Visible,
+                      Rn().Pip,
+                      r > 1 && !h && Rn().Filled,
+                      n > 1 && Rn().Visible,
                     ),
                   }),
                   s.createElement("div", {
                     className: (0, N.A)(
-                      Sn().Pip,
-                      r > 2 && !h && Sn().Filled,
-                      n > 2 && Sn().Visible,
+                      Rn().Pip,
+                      r > 2 && !h && Rn().Filled,
+                      n > 2 && Rn().Visible,
                     ),
                   }),
                 ),
@@ -27503,9 +28395,9 @@
             );
           },
         ),
-        An = (0, f.PA)(() => {
-          const e = di(),
-            t = Cn(),
+        Fn = (0, f.PA)(() => {
+          const e = vi(),
+            t = An(),
             a = $t.E.Get().GetWatchPageContext();
           return (
             $t.E.Get().GetSpoilerBlockState(e) == Zt.h7.UNBLOCKED &&
@@ -27514,20 +28406,20 @@
               "div",
               {
                 className: (0, N.A)(
-                  Sn().DPCSeriesDetailsBody,
-                  t.bLarge && Sn().Large,
+                  Rn().DPCSeriesDetailsBody,
+                  t.bLarge && Rn().Large,
                 ),
               },
-              s.createElement(Ln, null),
-              s.createElement(Pn, null),
-              s.createElement(kn, null),
-              s.createElement(xn, null),
-              s.createElement(Fn, null),
+              s.createElement(Un, null),
+              s.createElement(zn, null),
+              s.createElement(jn, null),
+              s.createElement(Yn, null),
+              s.createElement($n, null),
             )
           );
         }),
-        Ln = (0, f.PA)(() => {
-          const e = di(),
+        Un = (0, f.PA)(() => {
+          const e = vi(),
             t = $t.E.Get().GetWatchPageContext(),
             a = $t.E.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             n =
@@ -27550,8 +28442,8 @@
                   "div",
                   {
                     className: (0, N.A)(
-                      Sn().DPCSeriesDetailsOverview,
-                      n && Sn().Visible,
+                      Rn().DPCSeriesDetailsOverview,
+                      n && Rn().Visible,
                     ),
                     style: {
                       backgroundImage: `url( ${r.r.IMG_URL}backgrounds/gameblur01.jpg )`,
@@ -27559,22 +28451,22 @@
                   },
                   s.createElement(
                     "div",
-                    { className: Sn().CenterContainer },
+                    { className: Rn().CenterContainer },
                     !_ &&
                       s.createElement(
                         "div",
-                        { className: Sn().ResultsAllowSpoilers },
+                        { className: Rn().ResultsAllowSpoilers },
                         s.createElement(
                           "div",
-                          { className: Sn().Results },
+                          { className: Rn().Results },
                           (0, B.Wn)(o),
                         ),
                         s.createElement(
                           "div",
                           {
                             className: (0, N.A)(
-                              Sn().TeamsDraw,
-                              i && Sn().Visible,
+                              Rn().TeamsDraw,
+                              i && Rn().Visible,
                             ),
                           },
                           s.createElement(wa, {
@@ -27590,28 +28482,28 @@
                           "div",
                           {
                             className: (0, N.A)(
-                              Sn().TeamWinner,
-                              !i && Sn().Visible,
+                              Rn().TeamWinner,
+                              !i && Rn().Visible,
                             ),
                           },
                           s.createElement(wa, { nTeamID: l, nSize: 64 }),
                         ),
                         s.createElement(
                           "div",
-                          { className: Sn().WinningTeamName },
+                          { className: Rn().WinningTeamName },
                           u,
                         ),
                         !i &&
                           s.createElement(
                             "div",
-                            { className: Sn().WinningRecord },
+                            { className: Rn().WinningRecord },
                             (0, B.Wn)("#dpc_wins_score", c, m),
                           ),
                       ),
                     _ &&
                       s.createElement(
                         "div",
-                        { className: Sn().ResultsSpoilersBlocked },
+                        { className: Rn().ResultsSpoilersBlocked },
                         s.createElement(wa, {
                           nTeamID: a?.team_id_1,
                           nSize: 90,
@@ -27626,8 +28518,8 @@
                 )
             : null;
         }),
-        Pn = (0, f.PA)(() => {
-          const e = di(),
+        zn = (0, f.PA)(() => {
+          const e = vi(),
             t = $t.E.Get().GetWatchPageContext(),
             a = $t.E.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             n = t.eSeriesDisplay == Kt.ZE.GAME && a?.is_completed,
@@ -27652,29 +28544,29 @@
           return s.createElement(
             "div",
             {
-              className: Sn().DPCSeriesDetailsGameOverview,
+              className: Rn().DPCSeriesDetailsGameOverview,
               style: {
                 backgroundImage: `url( ${r.r.IMG_URL}backgrounds/gameblur01.jpg )`,
               },
             },
             s.createElement(
               "div",
-              { className: Sn().CenterContainer },
+              { className: Rn().CenterContainer },
               s.createElement(
                 "div",
-                { className: Sn().Game },
+                { className: Rn().Game },
                 (0, B.Wn)("#dpc_game_number", t.nSeriesGame),
               ),
               u &&
                 s.createElement(
                   "div",
-                  { className: Sn().TeamWinner },
+                  { className: Rn().TeamWinner },
                   s.createElement(wa, { nTeamID: c, nSize: 64 }),
                 ),
               u &&
                 s.createElement(
                   "div",
-                  { className: Sn().WinningTeamName },
+                  { className: Rn().WinningTeamName },
                   m?.name,
                 ),
               s.createElement(
@@ -27686,7 +28578,7 @@
                     `${t.nNodeID}`,
                     (0, Kt.MA)(t.nSeriesGame, Kt.ZE.VOD),
                   ),
-                  className: (0, N.A)(Sn().WatchVod, !d && Sn().Disabled),
+                  className: (0, N.A)(Rn().WatchVod, !d && Rn().Disabled),
                 },
                 (0, B.Wn)(d ? "#dpc_watch_vod" : "#dpc_no_vod"),
               ),
@@ -27699,15 +28591,15 @@
                     `${t.nNodeID}`,
                     (0, Kt.MA)(t.nSeriesGame, Kt.ZE.DETAILS),
                   ),
-                  className: Sn().Details,
+                  className: Rn().Details,
                 },
                 (0, B.Wn)("#dpc_game_details"),
               ),
             ),
           );
         }),
-        kn = (0, f.PA)(() => {
-          const e = di(),
+        jn = (0, f.PA)(() => {
+          const e = vi(),
             t = $t.E.Get().GetWatchPageContext(),
             a = $t.E.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             n = t.eSeriesDisplay == Kt.ZE.DETAILS && a?.is_completed,
@@ -27720,7 +28612,7 @@
               : s.createElement(
                   "div",
                   {
-                    className: Sn().DPCSeriesDetailsGameDetails,
+                    className: Rn().DPCSeriesDetailsGameDetails,
                     style: {
                       backgroundImage: `url( ${r.r.IMG_URL}backgrounds/gameblur01.jpg )`,
                     },
@@ -27728,34 +28620,34 @@
                   !l &&
                     s.createElement(
                       "div",
-                      { className: Sn().Body },
-                      s.createElement(On, {
+                      { className: Rn().Body },
+                      s.createElement(qn, {
                         nTeamID: a?.team_id_1,
                         bLeft: !0,
                         nSelectedAccountID: i,
                         setSelectedAccountID: o,
                       }),
-                      s.createElement(On, {
+                      s.createElement(qn, {
                         nTeamID: a?.team_id_2,
                         bLeft: !1,
                         nSelectedAccountID: i,
                         setSelectedAccountID: o,
                       }),
-                      s.createElement(Gn, { bLeft: !0, nAccountID: i }),
-                      s.createElement(Gn, { bLeft: !1, nAccountID: i }),
+                      s.createElement(Hn, { bLeft: !0, nAccountID: i }),
+                      s.createElement(Hn, { bLeft: !1, nAccountID: i }),
                     ),
                   l &&
                     s.createElement(
                       "div",
-                      { className: Sn().NoGame },
+                      { className: Rn().NoGame },
                       (0, B.Wn)("#dpc_no_game_num", t.nSeriesGame),
                     ),
                 )
             : null;
         }),
-        Gn = (0, f.PA)(({ bLeft: e, nAccountID: t }) => {
+        Hn = (0, f.PA)(({ bLeft: e, nAccountID: t }) => {
           const a = $t.E.Get().GetWatchPageContext(),
-            n = (0, s.useRef)(),
+            n = (0, s.useRef)(void 0),
             i = Va.B5.Get().getItemList(),
             o = $t.E.Get().GetLeagueNode(a.nLeagueID, a.nNodeID),
             l =
@@ -27782,20 +28674,20 @@
               "div",
               {
                 className: (0, N.A)(
-                  Sn().MatchSectionDetailsOverlay,
-                  u && Sn().Visible,
-                  e && Sn().Left,
-                  !e && Sn().Right,
+                  Rn().MatchSectionDetailsOverlay,
+                  u && Rn().Visible,
+                  e && Rn().Left,
+                  !e && Rn().Right,
                 ),
               },
               s.createElement(
                 "div",
-                { className: Sn().TopSection },
+                { className: Rn().TopSection },
                 E &&
                   s.createElement(
                     "video",
                     {
-                      className: Sn().HeroPortraitContainer,
+                      className: Rn().HeroPortraitContainer,
                       ref: n,
                       autoPlay: !0,
                       preload: "auto",
@@ -27813,15 +28705,15 @@
                   ),
                 s.createElement(
                   "div",
-                  { className: Sn().Player },
+                  { className: Rn().Player },
                   s.createElement(
                     "div",
-                    { className: Sn().PlayerName },
+                    { className: Rn().PlayerName },
                     m?.pro_name,
                   ),
-                  s.createElement("div", { className: Sn().TeamName }, p?.name),
+                  s.createElement("div", { className: Rn().TeamName }, p?.name),
                   s.createElement("div", {
-                    className: Sn().PlayerImage,
+                    className: Rn().PlayerImage,
                     style: {
                       backgroundImage: `url( ${r.r.CDN_URL}apps/dota2/players/${t}.png )`,
                     },
@@ -27831,13 +28723,13 @@
               ),
               s.createElement(
                 "div",
-                { className: Sn().ItemSection },
+                { className: Rn().ItemSection },
                 m?.items.map((e, a) => {
                   const n = i?.itemabilities.find((t) => t.id == e);
                   return n
                     ? s.createElement("div", {
                         key: `${t}_${a}`,
-                        className: Sn().ItemIcon,
+                        className: Rn().ItemIcon,
                         style: {
                           backgroundImage: `url( ${r.r.IMG_URL}items/${n?.name.replace("item_", "")}.png )`,
                         },
@@ -27845,18 +28737,18 @@
                     : null;
                 }),
               ),
-              s.createElement("div", { className: Sn().PlaystyleSection }),
+              s.createElement("div", { className: Rn().PlaystyleSection }),
             )
           );
         }),
-        On = (0, f.PA)(
+        qn = (0, f.PA)(
           ({
             nTeamID: e,
             bLeft: t,
             nSelectedAccountID: a,
             setSelectedAccountID: r,
           }) => {
-            const n = di(),
+            const n = vi(),
               i = $t.E.Get().GetWatchPageContext(),
               o = $t.E.Get().GetLeagueNode(i.nLeagueID, i.nNodeID),
               l =
@@ -27918,32 +28810,32 @@
                 "div",
                 {
                   className: (0, N.A)(
-                    Sn().MatchSectionTeam,
-                    t && Sn().Left,
-                    !t && Sn().Right,
+                    Rn().MatchSectionTeam,
+                    t && Rn().Left,
+                    !t && Rn().Right,
                   ),
                 },
                 s.createElement(
                   "div",
-                  { className: (0, N.A)(Sn().TeamHeading, d && Sn().Winner) },
+                  { className: (0, N.A)(Rn().TeamHeading, d && Rn().Winner) },
                   s.createElement(
                     "div",
-                    { className: Sn().Team },
+                    { className: Rn().Team },
                     (0, B.Wn)(u),
                   ),
                   !_ &&
                     s.createElement(
                       "div",
-                      { className: Sn().Score },
+                      { className: Rn().Score },
                       m ? l?.radiant_score : l?.dire_score,
                     ),
                 ),
                 5 == p?.length &&
                   s.createElement(
                     "div",
-                    { className: Sn().PlayerList },
+                    { className: Rn().PlayerList },
                     p.map((e) =>
-                      s.createElement(Wn, {
+                      s.createElement(Vn, {
                         key: `${e.nAccountID}`,
                         nSelectedAccountID: a,
                         setSelectedAccountID: r,
@@ -27962,7 +28854,7 @@
             );
           },
         ),
-        Wn = (0, f.PA)(
+        Vn = (0, f.PA)(
           ({
             bLeft: e,
             nHoveredAccountID: t,
@@ -27977,7 +28869,7 @@
             nDeaths: u,
             nAssists: _,
           }) => {
-            const p = di(),
+            const p = vi(),
               g = $t.E.Get().GetWatchPageContext(),
               h = Va.B5.Get().getHeroList(),
               E = h?.heroes.find((e) => e.id == c),
@@ -27996,10 +28888,10 @@
               "div",
               {
                 className: (0, N.A)(
-                  Sn().MatchSectionPlayer,
-                  e && Sn().Left,
-                  !e && Sn().Right,
-                  y && Sn().Selected,
+                  Rn().MatchSectionPlayer,
+                  e && Rn().Left,
+                  !e && Rn().Right,
+                  y && Rn().Selected,
                 ),
                 onClick: () => i(n == l ? 0 : l),
                 onMouseEnter: () => {
@@ -28012,29 +28904,29 @@
               !S &&
                 s.createElement(
                   "div",
-                  { className: (0, N.A)(Sn().HeroAndLevel) },
-                  s.createElement("div", { className: Sn().HeroName }, b),
-                  s.createElement("div", { className: Sn().Level }, f),
+                  { className: (0, N.A)(Rn().HeroAndLevel) },
+                  s.createElement("div", { className: Rn().HeroName }, b),
+                  s.createElement("div", { className: Rn().Level }, f),
                 ),
               s.createElement("div", {
-                className: Sn().HeroIcon,
+                className: Rn().HeroIcon,
                 style: {
                   backgroundImage: `url( ${r.r.CDN_URL}apps/dota2/players/${l}.png )`,
                 },
               }),
               s.createElement(
                 "div",
-                { className: Sn().NameAndStats },
-                s.createElement("div", { className: Sn().PlayerName }, o),
-                !S && c && s.createElement("div", { className: Sn().Stats }, v),
+                { className: Rn().NameAndStats },
+                s.createElement("div", { className: Rn().PlayerName }, o),
+                !S && c && s.createElement("div", { className: Rn().Stats }, v),
               ),
             );
           },
         ),
-        xn = (0, f.PA)(() => {
-          const e = di(),
+        Yn = (0, f.PA)(() => {
+          const e = vi(),
             t = (0, S.W6)(),
-            a = Cn(),
+            a = An(),
             r = $t.E.Get().GetWatchPageContext(),
             n = $t.E.Get().GetLeagueNode(r.nLeagueID, r.nNodeID),
             i = $t.E.Get().GetLeagueNodeVODs(
@@ -28080,16 +28972,16 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        Sn().DPCSeriesDetailsGameVOD,
-                        a.bLarge && Sn().Large,
+                        Rn().DPCSeriesDetailsGameVOD,
+                        a.bLarge && Rn().Large,
                       ),
                     },
                     s.createElement(
                       "div",
-                      { key: `${l}_${c}`, className: Sn().VideoContainer },
+                      { key: `${l}_${c}`, className: Rn().VideoContainer },
                       l &&
-                        s.createElement(fn.N1, {
-                          classnames: Sn().YouTubePlayer,
+                        s.createElement(Bn.N1, {
+                          classnames: Rn().YouTubePlayer,
                           video: l,
                           autoplay: !1,
                           playsInline: !0,
@@ -28101,7 +28993,7 @@
                         !l &&
                         s.createElement(
                           "div",
-                          { className: Sn().NoVOD },
+                          { className: Rn().NoVOD },
                           (0, B.Wn)("#dpc_no_vod_long"),
                         ),
                     ),
@@ -28109,9 +29001,9 @@
               : null
           );
         }),
-        Fn = (0, f.PA)(() => {
-          const e = di(),
-            t = Cn(),
+        $n = (0, f.PA)(() => {
+          const e = vi(),
+            t = An(),
             a = $t.E.Get().GetWatchPageContext(),
             n = $t.E.Get().IsLeagueNodeLive(e, a.nLeagueID, a.nNodeID),
             i = $t.E.Get().GetLeagueNodeLiveStreams(e, a.nLeagueID, a.nNodeID),
@@ -28138,13 +29030,13 @@
                     "div",
                     {
                       className: (0, N.A)(
-                        Sn().DPCSeriesDetailsGameLive,
-                        t.bLarge && Sn().Large,
+                        Rn().DPCSeriesDetailsGameLive,
+                        t.bLarge && Rn().Large,
                       ),
                     },
                     s.createElement(
                       "div",
-                      { key: l, className: Sn().VideoContainer },
+                      { key: l, className: Rn().VideoContainer },
                       s.createElement("iframe", {
                         src: l,
                         height: "100%",
@@ -28158,8 +29050,8 @@
                       {
                         key: `${l}_chat`,
                         className: (0, N.A)(
-                          Sn().Chat,
-                          c && t.bShowChat && Sn().Shown,
+                          Rn().Chat,
+                          c && t.bShowChat && Rn().Shown,
                         ),
                       },
                       s.createElement("iframe", {
@@ -28173,16 +29065,16 @@
               : null
           );
         });
-      var Un,
-        zn = a(58568),
-        jn = a.n(zn);
+      var Kn,
+        Zn = a(58568),
+        Qn = a.n(Zn);
       !(function (e) {
         (e[(e.POPULAR = 1)] = "POPULAR"),
           (e[(e.FAVORITE = 2)] = "FAVORITE"),
           (e[(e.ALL = 3)] = "ALL");
-      })(Un || (Un = {}));
-      const Hn = (0, f.PA)(() => {
-          const e = di(),
+      })(Kn || (Kn = {}));
+      const Jn = (0, f.PA)(() => {
+          const e = vi(),
             [t, a] = (0, s.useState)(8),
             n = $t.E.Get().GetFavoriteTeams(),
             i = $t.E.Get().GetPopularTeams(),
@@ -28190,39 +29082,39 @@
               .GetEventTeams(e)
               ?.filter((e) => Number(e)),
             l = o?.length || 0,
-            [c, m] = (0, s.useState)(Un.POPULAR);
+            [c, m] = (0, s.useState)(Kn.POPULAR);
           (0, s.useEffect)(() => {
-            l > 0 && l <= 20 && (m(Un.ALL), l > 8 && l <= 12 && a(l));
+            l > 0 && l <= 20 && (m(Kn.ALL), l > 8 && l <= 12 && a(l));
           }, [l]);
           const d = [
-              { value: Un.POPULAR, strLabel: "#dpc_popular" },
-              { value: Un.FAVORITE, strLabel: "#dpc_following" },
-              { value: Un.ALL, strLabel: "#dpc_all" },
+              { value: Kn.POPULAR, strLabel: "#dpc_popular" },
+              { value: Kn.FAVORITE, strLabel: "#dpc_following" },
+              { value: Kn.ALL, strLabel: "#dpc_all" },
             ],
-            u = (c == Un.ALL ? o : c == Un.POPULAR ? i : n)?.filter((e) =>
+            u = (c == Kn.ALL ? o : c == Kn.POPULAR ? i : n)?.filter((e) =>
               o?.includes(e),
             ),
             _ = t < u?.length;
-          return (u && 0 != u.length) || c === Un.FAVORITE
+          return (u && 0 != u.length) || c === Kn.FAVORITE
             ? e === Zt.Dq.INTERNATIONAL_2022
               ? null
               : s.createElement(
                   "div",
-                  { className: jn().DPCTeamList },
+                  { className: Qn().DPCTeamList },
                   s.createElement(
                     "div",
                     {
-                      className: jn().DPCTeamList,
+                      className: Qn().DPCTeamList,
                       style: {
                         backgroundImage: `url( ${r.r.IMG_URL}backgrounds/bg_granite_texture_teams.jpg )`,
                       },
                     },
                     s.createElement(
                       "div",
-                      { className: jn().Header },
+                      { className: Qn().Header },
                       s.createElement(
                         "div",
-                        { className: jn().Title },
+                        { className: Qn().Title },
                         (0, B.Wn)("#dpc_header_teams"),
                       ),
                       s.createElement(ca, {
@@ -28234,17 +29126,17 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: jn().TeamList },
+                      { className: Qn().TeamList },
                       u?.map(
                         (e, a) =>
                           a < t &&
-                          s.createElement(qn, { key: `Team_${e}`, nTeamID: e }),
+                          s.createElement(Xn, { key: `Team_${e}`, nTeamID: e }),
                       ),
-                      c === Un.FAVORITE &&
+                      c === Kn.FAVORITE &&
                         (!u || 0 == u.length) &&
                         s.createElement(
                           "div",
-                          { className: jn().NoFollowedTeams },
+                          { className: Qn().NoFollowedTeams },
                           (0, B.Wn)("#dpc_no_followed_teams_playing"),
                         ),
                     ),
@@ -28252,7 +29144,7 @@
                       s.createElement(
                         "div",
                         {
-                          className: jn().ShowMoreButton,
+                          className: Qn().ShowMoreButton,
                           onClick: () => a(t + 4),
                         },
                         (0, B.Wn)("#dpc_show_more"),
@@ -28261,8 +29153,8 @@
                 )
             : null;
         }),
-        qn = (0, f.PA)(({ nTeamID: e }) => {
-          const t = di(),
+        Xn = (0, f.PA)(({ nTeamID: e }) => {
+          const t = vi(),
             a = $t.E.Get().GetEventInfo(t),
             n = $t.E.Get().GetFavoriteTeams(),
             i = $t.E.Get().GetTeamNames(e),
@@ -28284,13 +29176,13 @@
             T = Ra()(1e3 * b?.scheduled_time)
               .format("DD MMM LT")
               .toString(),
-            C = $t.E.Get().GetNodeLabelStrings(
+            I = $t.E.Get().GetNodeLabelStrings(
               t,
               h?.nLeagueID,
               h?.nNodeID,
               Zt.LY.LONG,
             ),
-            I = $t.E.Get().GetNodeLabelStrings(
+            C = $t.E.Get().GetNodeLabelStrings(
               t,
               E?.nLeagueID,
               E?.nNodeID,
@@ -28299,24 +29191,24 @@
             M = $t.E.Get().GetLeagueNode(E?.nLeagueID, E?.nNodeID),
             R = M?.team_id_1 == e ? M?.team_id_2 : M?.team_id_1,
             D = $t.E.Get().GetTeamNames(R),
-            A = 0 == R ? "#dpc_tbd" : D?.name,
-            L = M?.team_1_wins == M?.team_2_wins,
+            L = 0 == R ? "#dpc_tbd" : D?.name,
+            A = M?.team_1_wins == M?.team_2_wins,
             P =
-              !L &&
+              !A &&
               (M?.team_id_1 == e
                 ? M?.team_1_wins > M?.team_2_wins
                 : M?.team_2_wins > M?.team_1_wins),
             k = M?.team_id_1 == e ? M?.team_1_wins : M?.team_2_wins,
             G = M?.team_id_1 == e ? M?.team_2_wins : M?.team_1_wins,
-            O = n?.includes(e),
+            x = n?.includes(e),
             W = 0 != r.r.ACCOUNT_ID,
-            x = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
+            O = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
             F =
-              x &&
+              O &&
               $t.E.Get().IsLeagueNodeBracket(E?.nLeagueID, E?.nNodeID) &&
               !$t.E.Get().IsAnyGameWatched(E?.nLeagueID, E?.nNodeID),
             U =
-              x &&
+              O &&
               $t.E.Get().IsLeagueNodeBracket(h?.nLeagueID, h?.nNodeID) &&
               !$t.E.Get().IsAnyGameWatched(h?.nLeagueID, h?.nNodeID),
             z =
@@ -28335,17 +29227,17 @@
               )),
             s.createElement(
               "div",
-              { className: jn().TeamEntry },
+              { className: Qn().TeamEntry },
               s.createElement(
                 "div",
-                { className: jn().FavoriteSection },
+                { className: Qn().FavoriteSection },
                 s.createElement(
                   "div",
                   {
                     className: (0, N.A)(
-                      jn().FollowingLine,
-                      O && jn().IsFollowing,
-                      W && jn().CanFollow,
+                      Qn().FollowingLine,
+                      x && Qn().IsFollowing,
+                      W && Qn().CanFollow,
                     ),
                     onClick: () => {
                       W && $t.E.Get().ToggleFavoriteTeam(e);
@@ -28362,56 +29254,56 @@
                         ),
                       ),
                       direction: "top",
-                      strTooltipClassname: jn().ToolTip,
+                      strTooltipClassname: Qn().ToolTip,
                     },
                     s.createElement("div", {
-                      className: jn().Star,
+                      className: Qn().Star,
                       style: {
-                        backgroundImage: `url( ${r.r.IMG_URL}icons/${O ? "star_gold" : "star_black"}.png )`,
+                        backgroundImage: `url( ${r.r.IMG_URL}icons/${x ? "star_gold" : "star_black"}.png )`,
                       },
                     }),
                   ),
                 ),
               ),
               s.createElement(wa, {
-                className: jn().TeamLogo,
+                className: Qn().TeamLogo,
                 nTeamID: e,
                 nSize: 64,
               }),
               s.createElement(
                 "div",
-                { className: jn().TeamInfoSection },
+                { className: Qn().TeamInfoSection },
                 s.createElement(
                   "div",
-                  { className: jn().TeamInfo },
-                  s.createElement("div", { className: jn().TeamName }, i?.name),
-                  s.createElement("div", { className: jn().Record }, _),
+                  { className: Qn().TeamInfo },
+                  s.createElement("div", { className: Qn().TeamName }, i?.name),
+                  s.createElement("div", { className: Qn().Record }, _),
                 ),
                 p?.length > 0 &&
                   s.createElement(
                     "div",
-                    { className: jn().Region },
+                    { className: Qn().Region },
                     (0, B.Wn)(p),
                   ),
                 g?.length > 0 &&
                   s.createElement(
                     "div",
-                    { className: jn().Division },
+                    { className: Qn().Division },
                     (0, B.Wn)(g),
                   ),
               ),
               s.createElement(
                 "div",
-                { className: jn().PlayerSection },
+                { className: Qn().PlayerSection },
                 u?.map((e) =>
                   s.createElement(
                     "div",
-                    { key: `${e}`, className: jn().PlayerImageContainer },
+                    { key: `${e}`, className: Qn().PlayerImageContainer },
                     s.createElement(
                       "div",
-                      { className: jn().PlayerGradient },
+                      { className: Qn().PlayerGradient },
                       s.createElement(fa, {
-                        className: jn().PlayerImage,
+                        className: Qn().PlayerImage,
                         nAccountID: e,
                       }),
                     ),
@@ -28421,56 +29313,56 @@
               s.createElement(
                 y.N_,
                 {
-                  className: jn().MatchSection,
+                  className: Qn().MatchSection,
                   to: { state: { bAutoScroll: !0 }, pathname: j },
                 },
                 s.createElement(
                   "div",
-                  { className: jn().TopBar },
+                  { className: Qn().TopBar },
                   !F &&
                     !b &&
                     M &&
-                    !x &&
+                    !O &&
                     P &&
                     (0, B.Wn)("#dpc_last_match_win", k, G),
                   !F &&
                     !b &&
                     M &&
-                    !x &&
+                    !O &&
                     !P &&
-                    !L &&
+                    !A &&
                     (0, B.Wn)("#dpc_last_match_loss", k, G),
                   !F &&
                     !b &&
                     M &&
-                    !x &&
-                    L &&
+                    !O &&
+                    A &&
                     (0, B.Wn)("#dpc_last_match_draw", k, G),
-                  !F && !b && M && x && (0, B.Wn)("#dpc_last_match", k, G),
+                  !F && !b && M && O && (0, B.Wn)("#dpc_last_match", k, G),
                   !U && b && (0, B.Wn)("#dpc_next_match", T),
                 ),
                 s.createElement(
                   "div",
-                  { className: jn().BottomSectionWrapper },
+                  { className: Qn().BottomSectionWrapper },
                   !F &&
                     !b &&
                     M &&
                     s.createElement(
                       "div",
-                      { className: jn().BottomSection },
+                      { className: Qn().BottomSection },
                       s.createElement(wa, {
-                        className: jn().VSTeamLogo,
+                        className: Qn().VSTeamLogo,
                         nTeamID: R,
                         bTooltip: !0,
                       }),
                       s.createElement(
                         "div",
-                        { className: jn().Labels },
-                        s.createElement("div", { className: jn().TeamName }, A),
+                        { className: Qn().Labels },
+                        s.createElement("div", { className: Qn().TeamName }, L),
                         s.createElement(
                           "div",
-                          { className: jn().Context },
-                          z && (0, B.Wn)(I[I.length - 1]),
+                          { className: Qn().Context },
+                          z && (0, B.Wn)(C[C.length - 1]),
                         ),
                       ),
                     ),
@@ -28478,20 +29370,20 @@
                     b &&
                     s.createElement(
                       "div",
-                      { className: jn().BottomSection },
+                      { className: Qn().BottomSection },
                       s.createElement(wa, {
-                        className: jn().VSTeamLogo,
+                        className: Qn().VSTeamLogo,
                         nTeamID: f,
                         bTooltip: !0,
                       }),
                       s.createElement(
                         "div",
-                        { className: jn().Labels },
-                        s.createElement("div", { className: jn().TeamName }, w),
+                        { className: Qn().Labels },
+                        s.createElement("div", { className: Qn().TeamName }, w),
                         s.createElement(
                           "div",
-                          { className: jn().Context },
-                          z && (0, B.Wn)(C[C.length - 1]),
+                          { className: Qn().Context },
+                          z && (0, B.Wn)(I[I.length - 1]),
                         ),
                       ),
                     ),
@@ -28500,10 +29392,10 @@
             )
           );
         });
-      var Vn = a(58985),
-        Yn = a.n(Vn);
-      const $n = (0, f.PA)(() => {
-          const e = di(),
+      var ei = a(58985),
+        ti = a.n(ei);
+      const ai = (0, f.PA)(() => {
+          const e = vi(),
             t = $t.E.Get().GetFavoriteTeams(),
             a = $t.E.Get()
               .GetEventNodes(e)
@@ -28525,22 +29417,22 @@
             : s.createElement(
                 "div",
                 {
-                  className: Yn().DPCFollowedTeamMatches,
+                  className: ti().DPCFollowedTeamMatches,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}backgrounds/bg_stone_texture.png )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: Yn().MatchesContainer },
+                  { className: ti().MatchesContainer },
                   s.createElement(
                     "div",
-                    { className: Yn().Header },
+                    { className: ti().Header },
                     (0, B.Wn)("#dpc_recent_series_followed"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Yn().SeriesList },
+                    { className: ti().SeriesList },
                     a.map((e, a) => {
                       if (a >= 3) return null;
                       const r = $t.E.Get().GetLeagueNode(
@@ -28550,7 +29442,7 @@
                         n = t.includes(r?.team_id_1)
                           ? r?.team_id_1
                           : r?.team_id_2;
-                      return s.createElement(Kn, {
+                      return s.createElement(ri, {
                         key: `${e.nLeagueID}_${e.nNodeID}`,
                         nLeagueID: e.nLeagueID,
                         nNodeID: e.nNodeID,
@@ -28561,8 +29453,8 @@
                 ),
               );
         }),
-        Kn = (0, f.PA)((e) => {
-          const t = di(),
+        ri = (0, f.PA)((e) => {
+          const t = vi(),
             a = $t.E.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
             r = a?.actual_time,
             n = $t.E.Get().GetNodeLabelStrings(
@@ -28580,30 +29472,30 @@
             u = !l || a?.team_id_2 == e.nFavoriteTeam || c ? a?.team_id_2 : 0;
           return s.createElement(
             "div",
-            { className: Yn().DPCFollowedTeamSeries },
+            { className: ti().DPCFollowedTeamSeries },
             s.createElement(
               "div",
               {
-                className: Yn().Gradient,
+                className: ti().Gradient,
                 style: {
                   background: `linear-gradient( to right, ${i?.color_primary}22, ${o?.color_primary}22 )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: Yn().Header },
+                { className: ti().Header },
                 s.createElement(_a(), {
-                  className: Yn().Timestamp,
+                  className: ti().Timestamp,
                   date: 1e3 * r,
                   format: "MMMM DD, LT",
                 }),
               ),
               s.createElement(
                 "div",
-                { className: Yn().Body },
+                { className: ti().Body },
                 s.createElement(
                   "div",
-                  { className: Yn().TeamsVS },
+                  { className: ti().TeamsVS },
                   s.createElement(wa, { nTeamID: d, nSize: 64 }),
                   (0, B.Wn)("#dpc_vs"),
                   s.createElement(wa, { nTeamID: u, nSize: 64 }),
@@ -28612,14 +29504,14 @@
                   n.length > 0 &&
                   s.createElement(
                     "div",
-                    { className: Yn().Description1 },
+                    { className: ti().Description1 },
                     (0, B.Wn)(n[0]),
                   ),
                 (m || !l) &&
                   n.length > 1 &&
                   s.createElement(
                     "div",
-                    { className: Yn().Description2 },
+                    { className: ti().Description2 },
                     (0, B.Wn)(n[1]),
                   ),
                 s.createElement(
@@ -28634,7 +29526,7 @@
                         (0, Kt.MA)(1, Kt.ZE.VOD),
                       ),
                     },
-                    className: Yn().WatchVod,
+                    className: ti().WatchVod,
                   },
                   (0, B.Wn)("#dpc_watch_vod"),
                 ),
@@ -28642,10 +29534,10 @@
             ),
           );
         });
-      var Zn = a(6461),
-        Qn = a.n(Zn);
-      const Jn = (0, f.PA)(({ ePhase: e, eDivision: t }) => {
-        const a = di();
+      var ni = a(6461),
+        ii = a.n(ni);
+      const si = (0, f.PA)(({ ePhase: e, eDivision: t }) => {
+        const a = vi();
         let r = [];
         t == Zt.ke.DIVISION_I &&
           r.push({
@@ -28671,13 +29563,13 @@
           i = n.length > 0;
         return s.createElement(
           "div",
-          { className: Qn().DPCStandingsDivision },
+          { className: ii().DPCStandingsDivision },
           s.createElement(
             "div",
-            { className: (0, N.A)(Qn().TeamLists, !i && Qn().NoData) },
+            { className: (0, N.A)(ii().TeamLists, !i && ii().NoData) },
             Object.values(Zt.ZM).map((n) =>
               $t.E.Get().BEventHasRegion(a, n)
-                ? s.createElement(Lr, {
+                ? s.createElement(Ar, {
                     key: n,
                     ePhase: e,
                     eRegion: n,
@@ -28696,16 +29588,16 @@
           n.length > 0 &&
             s.createElement(
               "div",
-              { className: Qn().LegendContainer },
+              { className: ii().LegendContainer },
               s.createElement(
                 "div",
-                { className: Qn().LegendCenter },
+                { className: ii().LegendCenter },
                 r.map((e, t) =>
                   s.createElement(
                     "div",
-                    { key: `hl${t}`, className: Qn().LegendItem },
+                    { key: `hl${t}`, className: ii().LegendItem },
                     s.createElement("div", {
-                      className: Qn().ColorSquare,
+                      className: ii().ColorSquare,
                       style: {
                         background: `linear-gradient( ${e.strColor}35, ${e.strColor}13 )`,
                         borderTop: `1px solid ${e.strColor}`,
@@ -28713,7 +29605,7 @@
                     }),
                     s.createElement(
                       "div",
-                      { className: Qn().Description },
+                      { className: ii().Description },
                       (0, B.Wn)(e.strDescription),
                     ),
                   ),
@@ -28722,10 +29614,10 @@
             ),
         );
       });
-      var Xn = a(4507),
-        ei = a.n(Xn);
-      const ti = (0, f.PA)(() => {
-        const e = di(),
+      var oi = a(4507),
+        li = a.n(oi);
+      const ci = (0, f.PA)(() => {
+        const e = vi(),
           t = $t.E.Get().GetEventInfo(e),
           [a, n] = (0, s.useState)(Zt.ke.DIVISION_I);
         if ($t.E.Get().GetEventType(e) != Zt.J7.LEAGUE) return null;
@@ -28738,17 +29630,17 @@
         return s.createElement(
           "div",
           {
-            className: ei().DPCLeagueStandingsSummary,
+            className: li().DPCLeagueStandingsSummary,
             style: {
               backgroundImage: `url( ${r.r.IMG_URL}backgrounds/bg_granite_texture.jpg )`,
             },
           },
           s.createElement(
             "div",
-            { className: ei().Header },
+            { className: li().Header },
             s.createElement(
               "div",
-              { className: ei().Label },
+              { className: li().Label },
               (0, B.Wn)("#dpc_header_standings"),
             ),
             s.createElement(ca, {
@@ -28758,7 +29650,7 @@
               setOption: n,
             }),
           ),
-          s.createElement(Jn, { ePhase: Zt.sI.OVERALL, eDivision: a }),
+          s.createElement(si, { ePhase: Zt.sI.OVERALL, eDivision: a }),
           s.createElement(k.z, {
             bottom: !0,
             color: "#161618",
@@ -28768,11 +29660,11 @@
           }),
         );
       });
-      var ai = a(85931),
-        ri = a.n(ai);
-      const ni = (0, f.PA)(() => {
+      var mi = a(85931),
+        di = a.n(mi);
+      const ui = (0, f.PA)(() => {
         const e = (0, S.g)(),
-          t = di();
+          t = vi();
         if (!e.strLeagueID || !e.strNodeID || !e.strSeriesDisplay)
           return s.createElement(S.rd, {
             to: v.J.dpc_watch(
@@ -28804,28 +29696,29 @@
           }),
           s.createElement(
             "div",
-            { className: ri().DPCHomePage },
+            { className: di().DPCHomePage },
+            s.createElement(kn, null),
             s.createElement(Nn, null),
-            s.createElement(vn, null),
-            s.createElement(ti, null),
-            s.createElement($n, null),
-            s.createElement(Hn, null),
+            s.createElement(ci, null),
+            s.createElement(ai, null),
+            s.createElement(Jn, null),
             s.createElement(Vr, null),
             s.createElement(en, null),
             s.createElement(cn, null),
             s.createElement(hn, null),
+            s.createElement(Tn, null),
           )
         );
       });
-      var ii = a(46245),
-        si = a.n(ii);
-      const oi = (0, f.PA)(() =>
-          di() != Zt.Dq.INTERNATIONAL_2023
+      var _i = a(46245),
+        pi = a.n(_i);
+      const gi = (0, f.PA)(() =>
+          vi() != Zt.Dq.INTERNATIONAL_2023
             ? null
             : s.createElement(
                 "div",
                 {
-                  className: si().InternationalRulesPage,
+                  className: pi().InternationalRulesPage,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
                   },
@@ -28833,22 +29726,22 @@
                 s.createElement(
                   "div",
                   {
-                    className: si().Header,
+                    className: pi().Header,
                     style: {
                       backgroundImage: `url( ${r.r.IMG_URL}dpc/top_block.jpg )`,
                     },
                   },
                   s.createElement(
                     "div",
-                    { className: si().Title },
+                    { className: pi().Title },
                     `${(0, B.Wn)("#dpc_event_ti12")} ${(0, B.Wn)("#dpc_tirules_header")}`,
                   ),
                   s.createElement(
                     "div",
-                    { className: si().Content },
+                    { className: pi().Content },
                     s.createElement(
                       "div",
-                      { className: si().SubHeader },
+                      { className: pi().SubHeader },
                       `${(0, B.Wn)("#dpc_upper_bracket")}`,
                     ),
                     s.createElement(
@@ -28859,7 +29752,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)(
                             "#dpc_tirules_main_event_upper_bracket_format",
                           ),
@@ -28870,7 +29763,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)(
                             "#dpc_tirules_main_event_upper_bracket_r1_priority",
                           ),
@@ -28881,7 +29774,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)(
                             "#dpc_tirules_main_event_other_rounds_priority",
                           ),
@@ -28890,7 +29783,7 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: si().SubHeader },
+                      { className: pi().SubHeader },
                       `${(0, B.Wn)("#dpc_lower_bracket")}`,
                     ),
                     s.createElement(
@@ -28901,7 +29794,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)(
                             "#dpc_tirules2023_main_event_lower_bracket_format",
                           ),
@@ -28912,7 +29805,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)(
                             "#dpc_tirules_main_event_lower_bracket_r1_priority",
                           ),
@@ -28923,7 +29816,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)(
                             "#dpc_tirules_main_event_other_rounds_priority",
                           ),
@@ -28932,7 +29825,7 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: si().SubHeader },
+                      { className: pi().SubHeader },
                       `${(0, B.Wn)("#dpc_bracket_grand_final")}`,
                     ),
                     s.createElement(
@@ -28943,7 +29836,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#dpc_tirules_grand_finals_format"),
                         ),
                       ),
@@ -28952,7 +29845,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#dpc_tirules_grand_finals_priority"),
                         ),
                       ),
@@ -28961,13 +29854,13 @@
                 ),
               ),
         ),
-        li = (0, f.PA)(() =>
-          di() != Zt.Dq.INTERNATIONAL_2024
+        hi = (0, f.PA)(() =>
+          vi() != Zt.Dq.INTERNATIONAL_2024
             ? null
             : s.createElement(
                 "div",
                 {
-                  className: si().InternationalRulesPage,
+                  className: pi().InternationalRulesPage,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
                   },
@@ -28975,22 +29868,22 @@
                 s.createElement(
                   "div",
                   {
-                    className: si().Header,
+                    className: pi().Header,
                     style: {
                       backgroundImage: `url( ${r.r.IMG_URL}dpc/top_block.jpg )`,
                     },
                   },
                   s.createElement(
                     "div",
-                    { className: si().Title },
+                    { className: pi().Title },
                     `${(0, B.Wn)("#dpc_event_ti13")}`,
                   ),
                   s.createElement(
                     "div",
-                    { className: si().Content },
+                    { className: pi().Content },
                     s.createElement(
                       "div",
-                      { className: si().SubHeader },
+                      { className: pi().SubHeader },
                       (0, B.Wn)("#ti13_group_stage_sp_rules"),
                     ),
                     s.createElement(
@@ -29001,7 +29894,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_group_stage_sp_game1"),
                         ),
                       ),
@@ -29010,7 +29903,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_group_stage_sp_game2"),
                         ),
                       ),
@@ -29019,7 +29912,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_group_stage_sp_game3"),
                         ),
                       ),
@@ -29028,14 +29921,14 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_group_stage_sp_game4"),
                         ),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: si().SubHeader },
+                      { className: pi().SubHeader },
                       (0, B.Wn)("#ti13_group_stage_tie_rules"),
                     ),
                     s.createElement(
@@ -29046,7 +29939,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_first_second_tie"),
                         ),
                       ),
@@ -29058,7 +29951,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_bo3"),
                           ),
                         ),
@@ -29069,7 +29962,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_second_third_tie"),
                         ),
                       ),
@@ -29081,7 +29974,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_bo3"),
                           ),
                         ),
@@ -29092,7 +29985,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_third_fourth_tie"),
                         ),
                       ),
@@ -29104,7 +29997,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_third_fourth"),
                           ),
                         ),
@@ -29115,7 +30008,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_three_way_first_tie"),
                         ),
                       ),
@@ -29127,7 +30020,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)(
                               "#ti13_tie_resolve_first_with_round_robin",
                             ),
@@ -29138,7 +30031,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)(
                               "#ti13_tie_resolve_second_and_third_place_bo1",
                             ),
@@ -29151,7 +30044,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_three_way_second_tie"),
                         ),
                       ),
@@ -29163,7 +30056,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)(
                               "#ti13_tie_resolve_second_with_round_robin",
                             ),
@@ -29174,7 +30067,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_third_fourth_other"),
                           ),
                         ),
@@ -29185,7 +30078,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_four_way_tie"),
                         ),
                       ),
@@ -29197,7 +30090,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_four_way_1"),
                           ),
                         ),
@@ -29206,7 +30099,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_four_way_2"),
                           ),
                         ),
@@ -29215,7 +30108,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_four_way_3"),
                           ),
                         ),
@@ -29224,7 +30117,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_four_way_4"),
                           ),
                         ),
@@ -29233,7 +30126,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_tie_resolve_four_way_5"),
                           ),
                         ),
@@ -29241,7 +30134,7 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: si().SubHeader },
+                      { className: pi().SubHeader },
                       (0, B.Wn)("#ti13_seeding_decider_sp_rules"),
                     ),
                     s.createElement(
@@ -29252,7 +30145,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_best_of_three"),
                         ),
                       ),
@@ -29264,7 +30157,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_seeding_decider_sp_rules_1"),
                           ),
                         ),
@@ -29273,7 +30166,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_seeding_decider_sp_rules_2"),
                           ),
                         ),
@@ -29282,7 +30175,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_seeding_decider_sp_rules_3"),
                           ),
                         ),
@@ -29290,7 +30183,7 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: si().SubHeader },
+                      { className: pi().SubHeader },
                       (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules"),
                     ),
                     s.createElement(
@@ -29301,7 +30194,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_best_of_three"),
                         ),
                       ),
@@ -29313,7 +30206,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo3_1"),
                           ),
                         ),
@@ -29322,7 +30215,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo3_2"),
                           ),
                         ),
@@ -29331,7 +30224,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo3_3"),
                           ),
                         ),
@@ -29340,7 +30233,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo3_4"),
                           ),
                         ),
@@ -29351,7 +30244,7 @@
                         null,
                         s.createElement(
                           "div",
-                          { className: si().Description },
+                          { className: pi().Description },
                           (0, B.Wn)("#ti13_best_of_five"),
                         ),
                       ),
@@ -29363,7 +30256,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo5_1"),
                           ),
                         ),
@@ -29372,7 +30265,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo5_2"),
                           ),
                         ),
@@ -29381,7 +30274,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo5_3"),
                           ),
                         ),
@@ -29390,7 +30283,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo5_4"),
                           ),
                         ),
@@ -29399,7 +30292,7 @@
                           null,
                           s.createElement(
                             "div",
-                            { className: si().Description },
+                            { className: pi().Description },
                             (0, B.Wn)("#ti13_playoffs_and_ti_sp_rules_bo5_5"),
                           ),
                         ),
@@ -29409,26 +30302,26 @@
                 ),
               ),
         ),
-        ci = (0, f.PA)(() =>
+        Ei = (0, f.PA)(() =>
           s.createElement(
             s.Fragment,
             null,
-            s.createElement(oi, null),
-            s.createElement(li, null),
+            s.createElement(gi, null),
+            s.createElement(hi, null),
           ),
         );
       _a().globalLocale = Ra().locale(window.navigator.language);
-      const mi = (0, s.createContext)(null),
-        di = () => (0, s.useContext)(mi);
-      function ui(e) {
+      const bi = (0, s.createContext)(null),
+        vi = () => (0, s.useContext)(bi);
+      function fi(e) {
         return s.createElement(
-          mi.Provider,
+          bi.Provider,
           { value: e.eventContext },
           e.children,
         );
       }
-      const _i = (0, f.PA)(() => {
-          const e = di();
+      const yi = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SPRING_2021_LEAGUE
             ? null
             : s.createElement(
@@ -29501,8 +30394,8 @@
                 ),
               );
         }),
-        pi = (0, f.PA)(() => {
-          const e = di();
+        Si = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SPRING_2021_MAJOR
             ? null
             : s.createElement(
@@ -29638,8 +30531,8 @@
                 ),
               );
         }),
-        gi = (0, f.PA)(() => {
-          const e = di();
+        wi = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.INTERNATIONAL_2021_QUALIFIERS
             ? null
             : s.createElement(
@@ -29724,8 +30617,8 @@
                 ),
               );
         }),
-        hi = (0, f.PA)(() => {
-          const e = di();
+        Ti = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.INTERNATIONAL_2021
             ? null
             : s.createElement(
@@ -29820,8 +30713,8 @@
                 ),
               );
         }),
-        Ei = (0, f.PA)(() =>
-          di() != Zt.Dq.WINTER_2021_LEAGUE
+        Ii = (0, f.PA)(() =>
+          vi() != Zt.Dq.WINTER_2021_LEAGUE
             ? null
             : s.createElement(
                 "div",
@@ -29873,8 +30766,8 @@
                 ),
               ),
         ),
-        bi = (0, f.PA)(() =>
-          di() != Zt.Dq.WINTER_2021_LEAGUE_FINALS
+        Ci = (0, f.PA)(() =>
+          vi() != Zt.Dq.WINTER_2021_LEAGUE_FINALS
             ? null
             : s.createElement(
                 "div",
@@ -29926,8 +30819,8 @@
                 ),
               ),
         ),
-        vi = (0, f.PA)(() =>
-          di() != Zt.Dq.SPRING_2022_LEAGUE
+        Ni = (0, f.PA)(() =>
+          vi() != Zt.Dq.SPRING_2022_LEAGUE
             ? null
             : s.createElement(
                 "div",
@@ -29979,8 +30872,8 @@
                 ),
               ),
         ),
-        fi = (0, f.PA)(() =>
-          di() != Zt.Dq.SPRING_2022_MAJOR
+        Bi = (0, f.PA)(() =>
+          vi() != Zt.Dq.SPRING_2022_MAJOR
             ? null
             : s.createElement(
                 "div",
@@ -30072,8 +30965,8 @@
                 ),
               ),
         ),
-        yi = (0, f.PA)(() =>
-          di() != Zt.Dq.CHINA_SPRING_2022_LEAGUE_FINALS
+        Mi = (0, f.PA)(() =>
+          vi() != Zt.Dq.CHINA_SPRING_2022_LEAGUE_FINALS
             ? null
             : s.createElement(
                 "div",
@@ -30125,8 +31018,8 @@
                 ),
               ),
         ),
-        Si = (0, f.PA)(() => {
-          const e = di();
+        Ri = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SUMMER_2022_LEAGUE
             ? null
             : s.createElement(
@@ -30211,8 +31104,8 @@
                 ),
               );
         }),
-        wi = (0, f.PA)(() => {
-          const e = di();
+        Di = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SUMMER_2022_MAJOR
             ? null
             : s.createElement(
@@ -30360,8 +31253,8 @@
                 ),
               );
         }),
-        Ti = (0, f.PA)(() => {
-          const e = di();
+        Li = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.INTERNATIONAL_2022_LASTCHANCE
             ? null
             : s.createElement(
@@ -30482,8 +31375,8 @@
                 ),
               );
         }),
-        Ci = (0, f.PA)(() => {
-          const e = di();
+        Ai = (0, f.PA)(() => {
+          const e = vi();
           if (e != Zt.Dq.INTERNATIONAL_2022) return null;
           const t = $t.E.Get().GetEventInfo(e);
           if (t.event != Zt.Dq.INTERNATIONAL_2022) return null;
@@ -30628,8 +31521,8 @@
             ),
           );
         }),
-        Ii = (0, f.PA)(() => {
-          const e = di();
+        Pi = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.WINTER_2023_LEAGUE
             ? null
             : s.createElement(
@@ -30732,8 +31625,8 @@
                 ),
               );
         }),
-        Ni = (0, f.PA)(() => {
-          const e = di();
+        ki = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.WINTER_2023_MAJOR
             ? null
             : s.createElement(
@@ -30898,8 +31791,8 @@
                 ),
               );
         }),
-        Bi = (0, f.PA)(() => {
-          const e = di();
+        Gi = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SPRING_2023_LEAGUE
             ? null
             : s.createElement(
@@ -31002,8 +31895,8 @@
                 ),
               );
         }),
-        Mi = (0, f.PA)(() => {
-          const e = di();
+        xi = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SPRING_2023_MAJOR
             ? null
             : s.createElement(
@@ -31169,8 +32062,8 @@
                 ),
               );
         }),
-        Ri = (0, f.PA)(() => {
-          const e = di();
+        Wi = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SUMMER_2023_LEAGUE
             ? null
             : s.createElement(
@@ -31273,8 +32166,8 @@
                 ),
               );
         }),
-        Di = (0, f.PA)(() => {
-          const e = di();
+        Oi = (0, f.PA)(() => {
+          const e = vi();
           return e != Zt.Dq.SUMMER_2023_MAJOR
             ? null
             : s.createElement(
@@ -31435,8 +32328,8 @@
                 ),
               );
         }),
-        Ai = (0, f.PA)(() => {
-          const e = di();
+        Fi = (0, f.PA)(() => {
+          const e = vi();
           if (e != Zt.Dq.INTERNATIONAL_2023_QUALIFIERS) return null;
           const t = $t.E.Get().GetEventInfo(e);
           if (t.event != Zt.Dq.INTERNATIONAL_2023_QUALIFIERS) return null;
@@ -31483,8 +32376,8 @@
             ),
           );
         }),
-        Li = (0, f.PA)(() => {
-          const e = di();
+        Ui = (0, f.PA)(() => {
+          const e = vi();
           if (e != Zt.Dq.INTERNATIONAL_2023) return null;
           const t = $t.E.Get().GetEventInfo(e);
           if (t.event != Zt.Dq.INTERNATIONAL_2023) return null;
@@ -31622,8 +32515,8 @@
             ),
           );
         }),
-        Pi = (0, f.PA)(() => {
-          const e = di();
+        zi = (0, f.PA)(() => {
+          const e = vi();
           if (e != Zt.Dq.INTERNATIONAL_2024) return null;
           const t = $t.E.Get().GetEventInfo(e);
           if (t.event != Zt.Dq.INTERNATIONAL_2024) return null;
@@ -31756,24 +32649,32 @@
             ),
           );
         }),
-        ki =
-          ((0, f.PA)(() => {
-            const e = di();
-            if (e != Zt.Dq.INTERNATIONAL_2025) return null;
-            const t = $t.E.Get().GetEventInfo(e);
-            if (t.event != Zt.Dq.INTERNATIONAL_2025) return null;
-            const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id),
-              n = a?.prize_pool?.total_prize_pool || 0;
-            return s.createElement(
+        ji = (0, f.PA)(() => {
+          const e = vi();
+          if (e != Zt.Dq.INTERNATIONAL_2025) return null;
+          const t = $t.E.Get().GetEventInfo(e);
+          if (t.event != Zt.Dq.INTERNATIONAL_2025) return null;
+          const a = $t.E.Get().GetLeagueData(e, t.leagues[0].league_id),
+            n = a?.prize_pool?.total_prize_pool || 0;
+          return s.createElement(
+            s.Fragment,
+            null,
+            s.createElement("img", {
+              className: ja().TI14Logo,
+              src: `${r.r.IMG_URL}international2025/ti2025_logo.png`,
+              "data-aos": "zoom-out",
+              "data-aos-duration": "1500",
+            }),
+            s.createElement(
               "div",
-              { className: ja().DPCHeaderTI2024 },
+              { className: ja().DPCHeaderTI2025 },
               s.createElement(
                 "div",
-                { className: ja().TI13BannerContainer },
+                { className: ja().TI14BannerContainer },
                 s.createElement(
                   "div",
                   {
-                    className: ja().TI13BannerContent,
+                    className: ja().TI14BannerContent,
                     "data-aos": "zoom-out",
                     "data-aos-duration": "1500",
                   },
@@ -31792,19 +32693,19 @@
                         "div",
                         { className: ja().EventPhaseDates },
                         s.createElement(_a(), {
-                          date: 17256096e5,
+                          date: 17569728e5,
                           format: "MMM DD",
                         }),
                         " - ",
                         s.createElement(_a(), {
-                          date: 17259912e5,
+                          date: 1757268e6,
                           format: "DD",
                         }),
                       ),
                       s.createElement(
                         "div",
                         { className: ja().EventPhaseVenue },
-                        (0, B.Wn)("#ti13_online"),
+                        (0, B.Wn)("#ti14_online"),
                       ),
                     ),
                     s.createElement(
@@ -31813,51 +32714,44 @@
                       s.createElement(
                         "div",
                         { className: ja().EventPhaseTitle },
-                        (0, B.Wn)("#dpc_finals"),
+                        (0, B.Wn)("#dpc_ti_intro_title"),
                       ),
                       s.createElement(
                         "div",
                         { className: ja().EventPhaseDates },
                         s.createElement(_a(), {
-                          date: 17262144e5,
+                          date: 17575776e5,
                           format: "MMM DD",
                         }),
                         " - ",
                         s.createElement(_a(), {
-                          date: 17264232e5,
+                          date: 17578728e5,
                           format: "DD",
                         }),
                       ),
                       s.createElement(
                         "div",
                         { className: ja().EventPhaseVenue },
-                        (0, B.Wn)("#ti13_main_event_venue"),
+                        (0, B.Wn)("#ti14_main_event_venue"),
                       ),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: ja().TI13CenterBox },
-                    s.createElement(
-                      y.N_,
-                      {
-                        to: {
-                          state: { bAutoScroll: !0 },
-                          pathname: v.J.dpc_watch((0, Kt.p$)(e)),
-                        },
-                        className: ja().CenterContent,
-                        "data-aos": "zoom-out",
-                        "data-aos-duration": "1500",
+                    { className: ja().TI14CenterBox },
+                    s.createElement(y.N_, {
+                      to: {
+                        state: { bAutoScroll: !0 },
+                        pathname: v.J.dpc_watch((0, Kt.p$)(e)),
                       },
-                      s.createElement("img", {
-                        className: ja().TILogo,
-                        src: `${r.r.IMG_URL}international2024/esports_site/logo_ti_gold.png`,
-                      }),
-                    ),
+                      className: ja().CenterContent,
+                      "data-aos": "zoom-out",
+                      "data-aos-duration": "1500",
+                    }),
                   ),
                   s.createElement(
                     "div",
-                    { className: ja().TI13PrizePoolBox },
+                    { className: ja().TI14PrizePoolBox },
                     s.createElement(
                       "div",
                       { className: ja().PrizePoolTitle },
@@ -31871,102 +32765,104 @@
                   ),
                 ),
               ),
-            );
-          }),
-          (0, f.PA)(() => {
-            const e = di();
-            let t = "#212026",
-              a = "#212026";
-            switch (e) {
-              case Zt.Dq.SPRING_2021_LEAGUE:
-                (t = "#0E4830"), (a = "#142030");
-                break;
-              case Zt.Dq.SPRING_2021_MAJOR:
-                (t = "#081121"), (a = "#081121");
-                break;
-              case Zt.Dq.INTERNATIONAL_2021_QUALIFIERS:
-              case Zt.Dq.INTERNATIONAL_2021:
-                (t = "#141416"), (a = "#141416");
-                break;
-              case Zt.Dq.WINTER_2021_LEAGUE:
-              case Zt.Dq.WINTER_2021_LEAGUE_FINALS:
-                (t = "#39445a"), (a = "#39445a");
-                break;
-              case Zt.Dq.SPRING_2022_LEAGUE:
-                (t = "#456462"), (a = "#42605e");
-                break;
-              case Zt.Dq.SPRING_2022_MAJOR:
-                (t = "#bbde04"), (a = "#c2cdcf");
-                break;
-              case Zt.Dq.CHINA_SPRING_2022_LEAGUE_FINALS:
-                (t = "#456462"), (a = "#42605e");
-                break;
-              case Zt.Dq.SUMMER_2022_LEAGUE:
-                (t = "#c0317d"), (a = "#439594");
-                break;
-              case Zt.Dq.SUMMER_2022_MAJOR:
-                (t = "#ffa800"), (a = "#d9d9d9");
-                break;
-              case Zt.Dq.INTERNATIONAL_2022_LASTCHANCE:
-              case Zt.Dq.INTERNATIONAL_2022:
-                (t = "#101216"), (a = "#101216");
-                break;
-              case Zt.Dq.WINTER_2023_MAJOR:
-                (t = "#000000"), (a = "#000000");
-                break;
-              case Zt.Dq.WINTER_2023_LEAGUE:
-              case Zt.Dq.SPRING_2023_LEAGUE:
-              case Zt.Dq.SPRING_2023_MAJOR:
-              case Zt.Dq.SUMMER_2023_LEAGUE:
-              case Zt.Dq.SUMMER_2023_MAJOR:
-                (t = "#10033F"), (a = "#10033F");
-                break;
-              case Zt.Dq.INTERNATIONAL_2023_QUALIFIERS:
-              case Zt.Dq.INTERNATIONAL_2023:
-              case Zt.Dq.INTERNATIONAL_2024:
-              case Zt.Dq.INTERNATIONAL_2025:
-                (t = "#222127"), (a = "#222127");
-            }
-            let n = `url( ${r.r.IMG_URL}dpc/headers/dpc_header_event_${(0, Kt.p$)(e)}.jpg ), linear-gradient( to right, ${t} 49%, ${a} 51% )`;
-            return (
-              (0, $t.e)(e)
-                ? (n = `url( ${r.r.CDN_URL}apps/dota2/images/leagues/${e}/images/image_8.png ), linear-gradient( to right, ${t} 49%, ${a} 51% )`)
-                : (e == Zt.Dq.INTERNATIONAL_2024 ||
-                    e == Zt.Dq.INTERNATIONAL_2025) &&
-                  (n = `url( ${r.r.IMG_URL}dpc/headers/dpc_header_event_${(0, Kt.p$)(e)}.png ), linear-gradient( to right, ${t} 49%, ${a} 51% )`),
-              s.createElement(
-                "div",
-                {
-                  className: ja().DPCHeaderImage,
-                  style: { height: 400, backgroundImage: n },
-                },
-                s.createElement(_i, null),
-                s.createElement(pi, null),
-                s.createElement(gi, null),
-                s.createElement(hi, null),
-                s.createElement(Ei, null),
-                s.createElement(bi, null),
-                s.createElement(vi, null),
-                s.createElement(fi, null),
-                s.createElement(yi, null),
-                s.createElement(Si, null),
-                s.createElement(wi, null),
-                s.createElement(Ti, null),
-                s.createElement(Ci, null),
-                s.createElement(Ii, null),
-                s.createElement(Ni, null),
-                s.createElement(Bi, null),
-                s.createElement(Mi, null),
-                s.createElement(Ri, null),
-                s.createElement(Di, null),
-                s.createElement(Ai, null),
-                s.createElement(Li, null),
-                s.createElement(Pi, null),
-              )
-            );
-          })),
-        Gi = (0, f.PA)(() => {
-          const e = di();
+            ),
+          );
+        }),
+        Hi = (0, f.PA)(() => {
+          const e = vi();
+          let t = "#212026",
+            a = "#212026";
+          switch (e) {
+            case Zt.Dq.SPRING_2021_LEAGUE:
+              (t = "#0E4830"), (a = "#142030");
+              break;
+            case Zt.Dq.SPRING_2021_MAJOR:
+              (t = "#081121"), (a = "#081121");
+              break;
+            case Zt.Dq.INTERNATIONAL_2021_QUALIFIERS:
+            case Zt.Dq.INTERNATIONAL_2021:
+              (t = "#141416"), (a = "#141416");
+              break;
+            case Zt.Dq.WINTER_2021_LEAGUE:
+            case Zt.Dq.WINTER_2021_LEAGUE_FINALS:
+              (t = "#39445a"), (a = "#39445a");
+              break;
+            case Zt.Dq.SPRING_2022_LEAGUE:
+              (t = "#456462"), (a = "#42605e");
+              break;
+            case Zt.Dq.SPRING_2022_MAJOR:
+              (t = "#bbde04"), (a = "#c2cdcf");
+              break;
+            case Zt.Dq.CHINA_SPRING_2022_LEAGUE_FINALS:
+              (t = "#456462"), (a = "#42605e");
+              break;
+            case Zt.Dq.SUMMER_2022_LEAGUE:
+              (t = "#c0317d"), (a = "#439594");
+              break;
+            case Zt.Dq.SUMMER_2022_MAJOR:
+              (t = "#ffa800"), (a = "#d9d9d9");
+              break;
+            case Zt.Dq.INTERNATIONAL_2022_LASTCHANCE:
+            case Zt.Dq.INTERNATIONAL_2022:
+              (t = "#101216"), (a = "#101216");
+              break;
+            case Zt.Dq.WINTER_2023_MAJOR:
+              (t = "#000000"), (a = "#000000");
+              break;
+            case Zt.Dq.WINTER_2023_LEAGUE:
+            case Zt.Dq.SPRING_2023_LEAGUE:
+            case Zt.Dq.SPRING_2023_MAJOR:
+            case Zt.Dq.SUMMER_2023_LEAGUE:
+            case Zt.Dq.SUMMER_2023_MAJOR:
+              (t = "#10033F"), (a = "#10033F");
+              break;
+            case Zt.Dq.INTERNATIONAL_2023_QUALIFIERS:
+            case Zt.Dq.INTERNATIONAL_2023:
+            case Zt.Dq.INTERNATIONAL_2024:
+            case Zt.Dq.INTERNATIONAL_2025:
+              (t = "#222127"), (a = "#222127");
+          }
+          let n = `url( ${r.r.IMG_URL}dpc/headers/dpc_header_event_${(0, Kt.p$)(e)}.jpg ), linear-gradient( to right, ${t} 49%, ${a} 51% )`;
+          return (
+            (0, $t.e)(e)
+              ? (n = `url( ${r.r.CDN_URL}apps/dota2/images/leagues/${e}/images/image_8.png ), linear-gradient( to right, ${t} 49%, ${a} 51% )`)
+              : (e == Zt.Dq.INTERNATIONAL_2024 ||
+                  e == Zt.Dq.INTERNATIONAL_2025) &&
+                (n = `url( ${r.r.IMG_URL}dpc/headers/dpc_header_event_${(0, Kt.p$)(e)}.png ), linear-gradient( to right, ${t} 49%, ${a} 51% )`),
+            s.createElement(
+              "div",
+              {
+                className: ja().DPCHeaderImage,
+                style: { height: 400, backgroundImage: n },
+              },
+              s.createElement(yi, null),
+              s.createElement(Si, null),
+              s.createElement(wi, null),
+              s.createElement(Ti, null),
+              s.createElement(Ii, null),
+              s.createElement(Ci, null),
+              s.createElement(Ni, null),
+              s.createElement(Bi, null),
+              s.createElement(Mi, null),
+              s.createElement(Ri, null),
+              s.createElement(Di, null),
+              s.createElement(Li, null),
+              s.createElement(Ai, null),
+              s.createElement(Pi, null),
+              s.createElement(ki, null),
+              s.createElement(Gi, null),
+              s.createElement(xi, null),
+              s.createElement(Wi, null),
+              s.createElement(Oi, null),
+              s.createElement(Fi, null),
+              s.createElement(Ui, null),
+              s.createElement(zi, null),
+              s.createElement(ji, null),
+            )
+          );
+        }),
+        qi = (0, f.PA)(() => {
+          const e = vi();
           return $t.E.Get().GetSpoilerBlockState(e) != Zt.h7.UNKNOWN
             ? null
             : s.createElement(
@@ -32071,7 +32967,7 @@
                 ),
               );
         }),
-        Oi = (0, f.PA)(() => {
+        Vi = (0, f.PA)(() => {
           const e = (function () {
               const [e, t] = (0, s.useState)(!0);
               return (
@@ -32139,17 +33035,17 @@
             "div",
             { className: ja().DPCRoot },
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement("title", null, (0, B.Wn)("#dpc_page_title")),
             ),
             s.createElement(
-              ui,
+              fi,
               { eventContext: d },
               s.createElement(He.A, { bOverlapping: !1 }),
-              s.createElement(Gi, null),
+              s.createElement(qi, null),
               s.createElement(Ba, null),
-              s.createElement(ki, null),
+              s.createElement(Hi, null),
               s.createElement(ta, null),
               p &&
                 s.createElement(
@@ -32161,24 +33057,24 @@
                 s.createElement(
                   S.dO,
                   null,
-                  s.createElement(La, {
+                  s.createElement(Aa, {
                     path: v.J.dpc_watch(
                       ":strEvent?",
                       ":strLeagueID?",
                       ":strNodeID?",
                       ":strSeriesDisplay?",
                     ),
-                    component: ni,
+                    component: ui,
                   }),
-                  s.createElement(La, {
+                  s.createElement(Aa, {
                     path: v.J.dpc_standings(
                       ":strEvent?",
                       ":strPhase?",
                       ":strSelection?",
                     ),
-                    component: xr,
+                    component: Or,
                   }),
-                  s.createElement(La, {
+                  s.createElement(Aa, {
                     path: v.J.dpc_schedule(
                       ":strEvent?",
                       ":strMonthOrLeague?",
@@ -32186,17 +33082,17 @@
                     ),
                     component: tr,
                   }),
-                  s.createElement(La, {
+                  s.createElement(Aa, {
                     path: v.J.dpc_about(":strEvent?"),
                     component: Ua,
                   }),
-                  s.createElement(La, {
+                  s.createElement(Aa, {
                     path: v.J.dpc_ti_standings(":strEvent?"),
                     component: nr,
                   }),
-                  s.createElement(La, {
+                  s.createElement(Aa, {
                     path: v.J.dpc_ti_rules(":strEvent?"),
-                    component: ci,
+                    component: Ei,
                   }),
                   s.createElement(S.rd, { from: v.J.dpc_root(), to: _ }),
                 ),
@@ -32204,14 +33100,14 @@
             ),
           );
         });
-      var Wi = a(32972),
-        xi = a.n(Wi);
-      function Fi() {
+      var Yi = a(32972),
+        $i = a.n(Yi);
+      function Ki() {
         const { height: e, width: t } = Ee();
         let a = 5;
         return t < 1300 && (a = 4), t < 1e3 && (a = 3), t < 600 && (a = 2), a;
       }
-      const Ui = ({ hero: e, hidden: t, pos: a }) => {
+      const Zi = ({ hero: e, hidden: t, pos: a }) => {
           let n = "";
           switch (e.primary_attr) {
             case 0:
@@ -32226,36 +33122,36 @@
             case 3:
               n = "universal";
           }
-          let i = Fi();
+          let i = Ki();
           const o = Math.max(0, a % i),
             l = Math.max(0, Math.floor(a / i));
           return s.createElement(
             y.N_,
             {
               to: v.J.hero(e.name_english_loc.replace(/ /g, "").toLowerCase()),
-              className: (0, N.A)(xi().HeroIcon, t && xi().Hidden),
+              className: (0, N.A)($i().HeroIcon, t && $i().Hidden),
               style: {
                 backgroundImage: `url( ${r.r.IMG_URL}heroes/${e.name.replace("npc_dota_hero_", "")}.png`,
-                left: `calc( ( 5 - ${i} ) * 122px + ${o} * ( 100% - ${xi().heroIconWidth}px ) / 4 )`,
-                top: `calc( ${l} * ${xi().heroIconPaddedHeight}px )`,
+                left: `calc( ( 5 - ${i} ) * 122px + ${o} * ( 100% - ${$i().heroIconWidth}px ) / 4 )`,
+                top: `calc( ${l} * ${$i().heroIconPaddedHeight}px )`,
               },
             },
             s.createElement(
               "div",
-              { className: xi().HeroNameContainer },
+              { className: $i().HeroNameContainer },
               s.createElement("img", {
                 src: `${r.r.IMG_URL}icons/hero_${n}.png`,
-                className: xi().PrimaryStatIcon,
+                className: $i().PrimaryStatIcon,
               }),
               s.createElement(
                 "div",
-                { className: xi().HeroName },
+                { className: $i().HeroName },
                 (0, B.Wn)(e.name_loc),
               ),
             ),
             s.createElement(
               "div",
-              { className: xi().FadeContainer },
+              { className: $i().FadeContainer },
               s.createElement(k.z, {
                 bottom: !0,
                 color: "#000000",
@@ -32266,7 +33162,7 @@
             ),
           );
         },
-        zi = ({ heroList: e }) => {
+        Qi = ({ heroList: e }) => {
           const [t, a] = (0, s.useState)(0),
             [n, i] = (0, s.useState)(0),
             [o, l] = (0, s.useState)(""),
@@ -32286,13 +33182,13 @@
             };
           let m = 0;
           e && e.heroes.forEach((e) => (m += c(e) ? 1 : 0));
-          const d = Fi(),
-            u = parseInt(xi().heroIconPaddedHeight);
+          const d = Ki(),
+            u = parseInt($i().heroIconPaddedHeight);
           let _ = 0;
           return s.createElement(
             "div",
             {
-              className: xi().HeroGrid,
+              className: $i().HeroGrid,
               style: {
                 backgroundImage: `url( ${r.r.IMG_URL}backgrounds/greyfade.jpg )`,
               },
@@ -32300,42 +33196,42 @@
             s.createElement(
               "div",
               {
-                className: xi().Header,
+                className: $i().Header,
                 "data-aos": "fade-in",
                 "data-aos-duration": "1000",
               },
-              s.createElement("div", { className: xi().Trapezoid }),
+              s.createElement("div", { className: $i().Trapezoid }),
               s.createElement(
                 "div",
-                { className: xi().TitleText },
+                { className: $i().TitleText },
                 (0, B.Wn)("#herogrid_choose"),
               ),
               s.createElement(
                 "div",
-                { className: xi().SubtitleText },
+                { className: $i().SubtitleText },
                 (0, B.Wn)("#home_choose_body"),
               ),
             ),
             s.createElement(
               "div",
-              { className: xi().FilterContainer },
+              { className: $i().FilterContainer },
               s.createElement(
                 "div",
-                { className: xi().FilterLabel },
+                { className: $i().FilterLabel },
                 (0, B.Wn)("#herogrid_filter"),
               ),
               s.createElement(
                 "div",
-                { className: xi().SpecificFilterContainer },
+                { className: $i().SpecificFilterContainer },
                 s.createElement(
                   "div",
-                  { className: xi().SelectorLabel },
+                  { className: $i().SelectorLabel },
                   (0, B.Wn)("#herogrid_attribute"),
                 ),
                 s.createElement("div", {
                   className: (0, N.A)(
-                    xi().Filter,
-                    1 == t && 0 == o.length && xi().Selected,
+                    $i().Filter,
+                    1 == t && 0 == o.length && $i().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}herogrid/filter-str-active.png )`,
@@ -32344,8 +33240,8 @@
                 }),
                 s.createElement("div", {
                   className: (0, N.A)(
-                    xi().Filter,
-                    2 == t && 0 == o.length && xi().Selected,
+                    $i().Filter,
+                    2 == t && 0 == o.length && $i().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}herogrid/filter-agi-active.png )`,
@@ -32354,8 +33250,8 @@
                 }),
                 s.createElement("div", {
                   className: (0, N.A)(
-                    xi().Filter,
-                    3 == t && 0 == o.length && xi().Selected,
+                    $i().Filter,
+                    3 == t && 0 == o.length && $i().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}herogrid/filter-int-active.png )`,
@@ -32364,8 +33260,8 @@
                 }),
                 s.createElement("div", {
                   className: (0, N.A)(
-                    xi().Filter,
-                    4 == t && 0 == o.length && xi().Selected,
+                    $i().Filter,
+                    4 == t && 0 == o.length && $i().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}herogrid/filter-uni-active.png )`,
@@ -32375,16 +33271,16 @@
               ),
               s.createElement(
                 "div",
-                { className: xi().SpecificFilterContainer },
+                { className: $i().SpecificFilterContainer },
                 s.createElement(
                   "div",
-                  { className: xi().SelectorLabel },
+                  { className: $i().SelectorLabel },
                   (0, B.Wn)("#herogrid_complexity"),
                 ),
                 s.createElement("div", {
                   className: (0, N.A)(
-                    xi().Filter,
-                    n >= 1 && 0 == o.length && xi().Selected,
+                    $i().Filter,
+                    n >= 1 && 0 == o.length && $i().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}herogrid/filter-diamond.png )`,
@@ -32393,8 +33289,8 @@
                 }),
                 s.createElement("div", {
                   className: (0, N.A)(
-                    xi().Filter,
-                    n >= 2 && 0 == o.length && xi().Selected,
+                    $i().Filter,
+                    n >= 2 && 0 == o.length && $i().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}herogrid/filter-diamond.png )`,
@@ -32403,8 +33299,8 @@
                 }),
                 s.createElement("div", {
                   className: (0, N.A)(
-                    xi().Filter,
-                    n >= 3 && 0 == o.length && xi().Selected,
+                    $i().Filter,
+                    n >= 3 && 0 == o.length && $i().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}herogrid/filter-diamond.png )`,
@@ -32414,12 +33310,12 @@
               ),
               s.createElement(
                 "div",
-                { className: xi().SearchBarContainer },
+                { className: $i().SearchBarContainer },
                 s.createElement(
                   "div",
-                  { className: xi().SearchBar },
+                  { className: $i().SearchBar },
                   s.createElement("div", {
-                    className: xi().MagnifyingGlass,
+                    className: $i().MagnifyingGlass,
                     style: {
                       backgroundImage: `url( ${r.r.IMG_URL}icons/search.svg )`,
                     },
@@ -32438,18 +33334,18 @@
             ),
             s.createElement(
               "div",
-              { className: (0, N.A)(xi().StateLoading, !e && xi().Show) },
+              { className: (0, N.A)($i().StateLoading, !e && $i().Show) },
               (0, B.Wn)("#loading"),
             ),
             s.createElement(
               "div",
-              { className: (0, N.A)(xi().NoHeroes, e && 0 == m && xi().Show) },
+              { className: (0, N.A)($i().NoHeroes, e && 0 == m && $i().Show) },
               (0, B.Wn)("#herogrid_noheroes"),
             ),
             s.createElement(
               "div",
               {
-                className: xi().GridList,
+                className: $i().GridList,
                 style: { height: Math.ceil(m / d) * u + 40 },
               },
               e &&
@@ -32460,7 +33356,7 @@
                     const t = c(e);
                     return (
                       (_ += t ? 1 : 0),
-                      s.createElement(Ui, {
+                      s.createElement(Zi, {
                         key: e.id,
                         hero: e,
                         hidden: !t,
@@ -32471,81 +33367,81 @@
             ),
           );
         },
-        ji = (0, f.PA)((e) => {
+        Ji = (0, f.PA)((e) => {
           const t = Va.B5.Get().getHeroList();
           return s.createElement(
             "div",
-            { className: xi().HeroGridPage },
+            { className: $i().HeroGridPage },
             s.createElement(He.A, { bOverlapping: !0 }),
-            s.createElement(Lt.A, null),
+            s.createElement(At.A, null),
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement("title", null, (0, B.Wn)("#herogrid_title")),
             ),
-            s.createElement(zi, { heroList: t }),
+            s.createElement(Qi, { heroList: t }),
             s.createElement(P.K, null),
           );
         });
-      var Hi = a(82101),
-        qi = a(48463),
-        Vi = a.n(qi);
-      const Yi = () =>
+      var Xi = a(82101),
+        es = a(48463),
+        ts = a.n(es);
+      const as = () =>
           s.createElement(
             "a",
             { href: "https://store.steampowered.com/app/570/Dota_2/" },
             s.createElement(
               "div",
-              { className: Vi().PlayButton },
+              { className: ts().PlayButton },
               s.createElement("div", {
-                className: Vi().SteamLogo,
+                className: ts().SteamLogo,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}/icons/steam.svg )`,
                 },
               }),
               s.createElement(
                 "div",
-                { className: Vi().RightSide },
+                { className: ts().RightSide },
                 s.createElement(
                   "div",
-                  { className: Vi().PlayForFree },
+                  { className: ts().PlayForFree },
                   (0, B.Wn)("#play_for_free"),
                 ),
                 s.createElement(
                   "div",
-                  { className: Vi().Download },
+                  { className: ts().Download },
                   (0, B.Wn)("#download_on_steam"),
                 ),
               ),
             ),
           ),
-        $i = (e) =>
+        rs = (e) =>
           e.link
             ? s.createElement(
                 y.N_,
-                { to: e.link, className: Vi().StandardButton },
+                { to: e.link, className: ts().StandardButton },
                 s.createElement(
                   "div",
-                  { className: Vi().ButtonText },
+                  { className: ts().ButtonText },
                   (0, B.Wn)(e.text),
                 ),
               )
             : s.createElement(
                 "div",
-                { className: Vi().StandardButton },
+                { className: ts().StandardButton },
                 s.createElement(
                   "div",
-                  { className: Vi().ButtonText },
+                  { className: ts().ButtonText },
                   (0, B.Wn)(e.text),
                 ),
               ),
-        Ki = () => s.createElement("div", { className: Vi().HorizBar }),
-        Zi = () =>
+        ns = () => s.createElement("div", { className: ts().HorizBar }),
+        is = () =>
           s.createElement("div", {
-            className: Vi().RightArrow,
+            className: ts().RightArrow,
             style: { backgroundImage: `url( ${r.r.IMG_URL}/arrow_left.png )` },
           }),
-        Qi = (0, f.PA)(() => {
+        ss = (0, f.PA)(() => {
           const e = Va.B5.Get().getHeroList();
           let t = [];
           return (
@@ -32557,14 +33453,14 @@
             t.forEach((e, a) => t[a].push(...e)),
             s.createElement(
               "div",
-              { className: Vi().HeroGrid },
+              { className: ts().HeroGrid },
               e &&
                 t.map((e, t) =>
                   s.createElement(
                     "div",
                     {
                       key: "Row" + t,
-                      className: (0, N.A)(Vi().HeroGridRow, `Row${t}`),
+                      className: (0, N.A)(ts().HeroGridRow, `Row${t}`),
                       style: {
                         width: 255 * (e.length + 2),
                         animationDuration:
@@ -32594,27 +33490,27 @@
                           to: v.J.hero(
                             e.name_english_loc.replace(/ /g, "").toLowerCase(),
                           ),
-                          className: Vi().HeroIcon,
+                          className: ts().HeroIcon,
                           style: {
                             backgroundImage: `url( ${r.r.IMG_URL}heroes/${e.name.replace("npc_dota_hero_", "")}.png`,
                           },
                         },
                         s.createElement(
                           "div",
-                          { className: Vi().HeroNameContainer },
+                          { className: ts().HeroNameContainer },
                           s.createElement("img", {
                             src: `${r.r.IMG_URL}icons/hero_${a}.png`,
-                            className: Vi().PrimaryStatIcon,
+                            className: ts().PrimaryStatIcon,
                           }),
                           s.createElement(
                             "div",
-                            { className: Vi().HeroName },
+                            { className: ts().HeroName },
                             (0, B.Wn)(e.name_loc),
                           ),
                         ),
                         s.createElement(
                           "div",
-                          { className: Vi().FadeContainer },
+                          { className: ts().FadeContainer },
                           s.createElement(k.z, {
                             bottom: !0,
                             color: "#000000",
@@ -32630,7 +33526,7 @@
             )
           );
         }),
-        Ji = (e) => {
+        os = (e) => {
           const [t, a] = (0, s.useState)(void 0);
           t ||
             Mt.O3.LoadPartnerEventsPageable(
@@ -32644,29 +33540,29 @@
             for (const e of t)
               if (
                 (zt(!1, e) &&
-                  n.push(s.createElement(At, { event: e, key: e.GID })),
+                  n.push(s.createElement(Lt, { event: e, key: e.GID })),
                 3 == n.length)
               )
                 break;
           return s.createElement(
             "div",
-            { className: Vi().HomePage },
+            { className: ts().HomePage },
             s.createElement(He.A, { bOverlapping: !0 }),
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement("title", null, (0, B.Wn)("#home_title")),
             ),
             s.createElement(
               "div",
-              { className: Vi().HeaderSection },
+              { className: ts().HeaderSection },
               s.createElement(
                 "div",
-                { className: Vi().BackgroundVideoContainer },
+                { className: ts().BackgroundVideoContainer },
                 s.createElement(
                   "video",
                   {
-                    className: Vi().BackgroundVideo,
+                    className: ts().BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -32686,62 +33582,62 @@
               s.createElement(
                 "div",
                 {
-                  className: Vi().QuoteContainer,
+                  className: ts().QuoteContainer,
                   "data-aos": "fade-right",
                   "data-aos-delay": "1000",
                   "data-aos-duration": "2500",
                 },
                 s.createElement(
                   "div",
-                  { className: Vi().Quote },
+                  { className: ts().Quote },
                   s.createElement(
                     "div",
-                    { className: Vi().QuoteText },
+                    { className: ts().QuoteText },
                     (0, B.Wn)("#quote_destructoid_quote"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Vi().QuoteCredit },
+                    { className: ts().QuoteCredit },
                     (0, B.Wn)("#quote_destructoid_credit"),
                   ),
                 ),
-                s.createElement(Ki, null),
-                s.createElement(Yi, null),
+                s.createElement(ns, null),
+                s.createElement(as, null),
               ),
-              s.createElement("div", { className: Vi().BottomFade }),
+              s.createElement("div", { className: ts().BottomFade }),
             ),
             s.createElement(
               "div",
-              { className: Vi().NewsSection },
+              { className: ts().NewsSection },
               s.createElement(
                 "div",
-                { className: Vi().NewsTop },
+                { className: ts().NewsTop },
                 s.createElement(
                   "div",
-                  { className: Vi().Latest },
+                  { className: ts().Latest },
                   (0, B.Wn)("#home_latest_news"),
                 ),
                 s.createElement(
                   y.N_,
-                  { to: v.J.news(), className: Vi().ViewAll },
+                  { to: v.J.news(), className: ts().ViewAll },
                   (0, B.Wn)("#home_view_all"),
-                  s.createElement(Zi, null),
+                  s.createElement(is, null),
                 ),
               ),
-              s.createElement("div", { className: Vi().NewsCapsules }, n),
+              s.createElement("div", { className: ts().NewsCapsules }, n),
             ),
             s.createElement(
               "div",
-              { className: Vi().BattleSection },
+              { className: ts().BattleSection },
               s.createElement(
                 "div",
-                { className: Vi().BattleBG },
+                { className: ts().BattleBG },
                 s.createElement("img", {
-                  className: Vi().BattleImg,
+                  className: ts().BattleImg,
                   src: `${r.r.IMG_URL}/home/radiant_dire5.jpg`,
                 }),
                 s.createElement("img", {
-                  className: (0, N.A)(Vi().BattleImg, Vi().BattleImgMobile),
+                  className: (0, N.A)(ts().BattleImg, ts().BattleImgMobile),
                   src: `${r.r.IMG_URL}/home/battle_mobile.jpg`,
                 }),
                 s.createElement(k.z, {
@@ -32754,30 +33650,30 @@
               ),
               s.createElement(
                 "div",
-                { className: Vi().LeftHalf },
+                { className: ts().LeftHalf },
                 s.createElement(
                   "div",
                   {
-                    className: Vi().HeaderText,
+                    className: ts().HeaderText,
                     "data-aos": "fade-up",
                     "data-aos-duration": "1500",
                   },
                   (0, B.Wn)("#home_battle_join"),
                 ),
-                s.createElement(Ki, null),
+                s.createElement(ns, null),
                 s.createElement(
                   "div",
-                  { className: Vi().BodyText },
+                  { className: ts().BodyText },
                   (0, B.Wn)("#home_battle_body"),
                   s.createElement(
                     y.N_,
                     { to: v.J.news() },
                     s.createElement(
                       "div",
-                      { className: Vi().StandardButton },
+                      { className: ts().StandardButton },
                       s.createElement(
                         "div",
-                        { className: Vi().ButtonText },
+                        { className: ts().ButtonText },
                         (0, B.Wn)("#home_battle_button"),
                       ),
                     ),
@@ -32787,7 +33683,7 @@
             ),
             s.createElement(
               "div",
-              { className: Vi().ChooseSection },
+              { className: ts().ChooseSection },
               s.createElement(k.z, {
                 top: !0,
                 color: "#000000",
@@ -32805,60 +33701,60 @@
               s.createElement(
                 "div",
                 {
-                  className: Vi().HeaderText,
+                  className: ts().HeaderText,
                   "data-aos": "fade-up",
                   "data-aos-duration": "2000",
                 },
                 (0, B.Wn)("#home_choose_header"),
               ),
-              s.createElement(Ki, null),
+              s.createElement(ns, null),
               s.createElement(
                 "div",
-                { className: Vi().BodyText },
+                { className: ts().BodyText },
                 (0, B.Wn)("#home_choose_body"),
                 s.createElement(
                   y.N_,
                   { to: v.J.herogrid() },
                   s.createElement(
                     "div",
-                    { className: Vi().StandardButton },
+                    { className: ts().StandardButton },
                     s.createElement(
                       "div",
-                      { className: Vi().ButtonText },
+                      { className: ts().ButtonText },
                       (0, B.Wn)("#home_choose_button"),
                     ),
                   ),
                 ),
               ),
-              s.createElement(Qi, null),
+              s.createElement(ss, null),
             ),
             s.createElement(
               "div",
               {
-                className: Vi().ProCircuitSection,
+                className: ts().ProCircuitSection,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}/home/dpc.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: Vi().DPCSmImgs },
+                { className: ts().DPCSmImgs },
                 s.createElement("img", {
-                  className: (0, N.A)(Vi().DPCSmImg, Vi().Img1),
+                  className: (0, N.A)(ts().DPCSmImg, ts().Img1),
                   src: `${r.r.IMG_URL}/home/dpc_ti9_1.jpg`,
                   "data-aos": "fade-up",
                   "data-aos-delay": "300",
                   "data-aos-duration": "2500",
                 }),
                 s.createElement("img", {
-                  className: (0, N.A)(Vi().DPCSmImg, Vi().Img2),
+                  className: (0, N.A)(ts().DPCSmImg, ts().Img2),
                   src: `${r.r.IMG_URL}/home/dpc_ti9_2.jpg`,
                   "data-aos": "fade-up",
                   "data-aos-delay": "600",
                   "data-aos-duration": "2500",
                 }),
                 s.createElement("img", {
-                  className: (0, N.A)(Vi().DPCSmImg, Vi().Img3),
+                  className: (0, N.A)(ts().DPCSmImg, ts().Img3),
                   src: `${r.r.IMG_URL}/home/dpc_ti9_3.jpg`,
                   "data-aos": "fade-up",
                   "data-aos-delay": "1000",
@@ -32866,63 +33762,63 @@
                 }),
               ),
               s.createElement("div", {
-                className: Vi().DPCIcon,
+                className: ts().DPCIcon,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}/icons/dpc.svg )`,
                 },
               }),
               s.createElement(
                 "div",
-                { className: Vi().HeaderText },
+                { className: ts().HeaderText },
                 (0, B.Wn)("#home_dpc_header"),
               ),
-              s.createElement(Ki, null),
+              s.createElement(ns, null),
               s.createElement(
                 "div",
-                { className: Vi().BodyText },
+                { className: ts().BodyText },
                 (0, B.Wn)("#home_dpc_body"),
               ),
             ),
             s.createElement(
               "div",
               {
-                className: Vi().JoinBattleSection,
+                className: ts().JoinBattleSection,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}/home/background4.png )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: Vi().HeaderText },
+                { className: ts().HeaderText },
                 (0, B.Wn)("#home_join_header"),
               ),
-              s.createElement(Ki, null),
+              s.createElement(ns, null),
               s.createElement(
                 "a",
                 { href: "https://store.steampowered.com/app/570/Dota_2/" },
-                s.createElement($i, { text: "#home_play_free_now" }),
+                s.createElement(rs, { text: "#home_play_free_now" }),
               ),
             ),
             s.createElement(P.K, null),
           );
         };
-      var Xi = a(25465),
-        es = a.n(Xi);
-      const ts = (e) =>
+      var ls = a(25465),
+        cs = a.n(ls);
+      const ms = (e) =>
           s.createElement(
             "div",
-            { className: (0, N.A)(es().Capsule, e.large && es().Large) },
+            { className: (0, N.A)(cs().Capsule, e.large && cs().Large) },
             e.image &&
               !e.video &&
               s.createElement("img", {
-                className: es().Image,
+                className: cs().Image,
                 src: `${r.r.IMG_URL}${e.image}`,
               }),
             e.video &&
               s.createElement(
                 "video",
                 {
-                  className: es().Video,
+                  className: cs().Video,
                   autoPlay: !0,
                   preload: "auto",
                   muted: !0,
@@ -32939,37 +33835,37 @@
                   src: `${r.r.VIDEO_URL}${e.video}.mp4`,
                 }),
               ),
-            s.createElement("div", { className: es().Title }, e.title),
+            s.createElement("div", { className: cs().Title }, e.title),
             s.createElement(
               "div",
-              { className: es().Description },
+              { className: cs().Description },
               e.description,
             ),
           ),
-        as = (e) =>
+        ds = (e) =>
           s.createElement(
             "div",
-            { className: es().EntryList },
-            s.createElement("div", { className: es().Title }, e.title),
+            { className: cs().EntryList },
+            s.createElement("div", { className: cs().Title }, e.title),
             e.entrySections.map((e, t) =>
               s.createElement(
                 "ul",
                 {
                   key: t,
-                  className: (0, N.A)(es().EntrySection, e.bold && es().Bold),
+                  className: (0, N.A)(cs().EntrySection, e.bold && cs().Bold),
                 },
                 e.entries.map((e, t) =>
-                  s.createElement("li", { key: t, className: es().Entry }, e),
+                  s.createElement("li", { key: t, className: cs().Entry }, e),
                 ),
               ),
             ),
           ),
-        rs = () =>
+        us = () =>
           s.createElement(
             "div",
-            { className: es().SpringCleaningPage },
+            { className: cs().SpringCleaningPage },
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement(
                 "title",
@@ -32978,39 +33874,39 @@
               ),
             ),
             s.createElement(He.A, { bOverlapping: !0 }),
-            s.createElement(Lt.A, null),
+            s.createElement(At.A, null),
             s.createElement("div", {
-              className: es().HeaderImage,
+              className: cs().HeaderImage,
               style: {
                 backgroundImage: `url( ${r.r.IMG_URL}springcleaning22/keyart.jpg )`,
               },
             }),
             s.createElement(
               "div",
-              { className: es().HeaderText },
+              { className: cs().HeaderText },
               s.createElement(
                 "div",
-                { className: es().MainTitle },
+                { className: cs().MainTitle },
                 (0, B.Wn)("#springcleaning_title"),
               ),
               s.createElement(
                 "div",
-                { className: es().MainDesc },
+                { className: cs().MainDesc },
                 (0, B.Wn)("#springcleaning22_desc"),
               ),
             ),
             s.createElement(
               "div",
               {
-                className: es().CapsuleSection,
+                className: cs().CapsuleSection,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}springcleaning22/featured.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: es().CapuleList },
-                s.createElement(ts, {
+                { className: cs().CapuleList },
+                s.createElement(ms, {
                   image: "springcleaning22/aghs_tooltips.png",
                   title: (0, B.Wn)("#springcleaning22_aghs_tooltips"),
                   description: (0, B.Wn)(
@@ -33018,21 +33914,21 @@
                   ),
                   large: !0,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/mute.jpg",
                   video: "springcleaning22/mute",
                   title: (0, B.Wn)("#springcleaning22_muting_ui"),
                   description: (0, B.Wn)("#springcleaning22_muting_ui_desc"),
                   large: !0,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/shop_search.jpg",
                   video: "springcleaning22/shop_search",
                   title: (0, B.Wn)("#springcleaning22_shop_search"),
                   description: (0, B.Wn)("#springcleaning22_shop_search_desc"),
                   large: !0,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/hero_demo.jpg",
                   video: "springcleaning22/hero_demo",
                   title: (0, B.Wn)("#springcleaning22_demo_hero"),
@@ -33087,7 +33983,7 @@
                   ),
                   large: !0,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/expanded_stat_tooltips.png",
                   title: (0, B.Wn)("#springcleaning22_item_tooltips"),
                   description: (0, B.Wn)(
@@ -33095,7 +33991,7 @@
                   ),
                   large: !1,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/damage_colors.png",
                   title: (0, B.Wn)("#springcleaning22_colored_ability_damage"),
                   description: (0, B.Wn)(
@@ -33103,7 +33999,7 @@
                   ),
                   large: !1,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/plural_strings.png",
                   title: (0, B.Wn)("#springcleaning22_pluralized_strings"),
                   description: (0, B.Wn)(
@@ -33111,7 +34007,7 @@
                   ),
                   large: !1,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/permanent_buffs.png",
                   title: (0, B.Wn)("#springcleaning22_permanent_debuffs"),
                   description: (0, B.Wn)(
@@ -33119,7 +34015,7 @@
                   ),
                   large: !1,
                 }),
-                s.createElement(ts, {
+                s.createElement(ms, {
                   image: "springcleaning22/post_game.jpg",
                   video: "springcleaning22/post_game",
                   title: (0, B.Wn)("#springcleaning22_post_game_sortable"),
@@ -33133,15 +34029,15 @@
             s.createElement(
               "div",
               {
-                className: es().ListSection,
+                className: cs().ListSection,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}springcleaning22/list.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: es().ListList },
-                s.createElement(as, {
+                { className: cs().ListList },
+                s.createElement(ds, {
                   title: (0, B.Wn)("#gameplay"),
                   entrySections: [
                     {
@@ -33280,7 +34176,7 @@
                     },
                   ],
                 }),
-                s.createElement(as, {
+                s.createElement(ds, {
                   title: (0, B.Wn)("#rubick"),
                   entrySections: [
                     {
@@ -33339,7 +34235,7 @@
                     },
                   ],
                 }),
-                s.createElement(as, {
+                s.createElement(ds, {
                   title: (0, B.Wn)("#user_interface"),
                   entrySections: [
                     {
@@ -33394,7 +34290,7 @@
                     },
                   ],
                 }),
-                s.createElement(as, {
+                s.createElement(ds, {
                   title: (0, B.Wn)("#cosmetics"),
                   entrySections: [
                     {
@@ -33460,7 +34356,7 @@
                     },
                   ],
                 }),
-                s.createElement(as, {
+                s.createElement(ds, {
                   title: (0, B.Wn)("#performance"),
                   entrySections: [
                     {
@@ -33484,7 +34380,7 @@
                     },
                   ],
                 }),
-                s.createElement(as, {
+                s.createElement(ds, {
                   title: (0, B.Wn)("#dota_plus"),
                   entrySections: [
                     {
@@ -33590,7 +34486,7 @@
                     },
                   ],
                 }),
-                s.createElement(as, {
+                s.createElement(ds, {
                   title: (0, B.Wn)("#custom_games"),
                   entrySections: [
                     {
@@ -33610,7 +34506,7 @@
                     },
                   ],
                 }),
-                s.createElement(as, {
+                s.createElement(ds, {
                   title: (0, B.Wn)("#workshop"),
                   entrySections: [
                     {
@@ -33625,16 +34521,16 @@
             ),
             s.createElement(P.K, null),
           );
-      var ns = a(97914),
-        is = a.n(ns);
-      const ss = () => (
+      var _s = a(97914),
+        ps = a.n(_s);
+      const gs = () => (
         console.log(r.r.IMG_URL),
         s.createElement(
           "div",
-          { className: is().RequestForProposalPage },
+          { className: ps().RequestForProposalPage },
           s.createElement(He.A, { bOverlapping: !1 }),
           s.createElement(
-            x.mg,
+            O.mg,
             null,
             s.createElement(
               "title",
@@ -33642,27 +34538,27 @@
               "Dota 2 - Majors and Minors Registration",
             ),
           ),
-          s.createElement(Lt.A, null),
+          s.createElement(At.A, null),
           s.createElement(
             "div",
-            { className: is().Background },
+            { className: ps().Background },
             s.createElement(
               "div",
-              { className: is().ContentFrame },
+              { className: ps().ContentFrame },
               s.createElement(
                 "div",
-                { className: is().PageTop },
+                { className: ps().PageTop },
                 s.createElement(
                   "div",
-                  { className: is().Title },
+                  { className: ps().Title },
                   (0, B.Wn)("#dpc_rfp_title"),
                   s.createElement("br", null),
                   (0, B.Wn)("#dpc_rfp_subtitle"),
                 ),
-                s.createElement("div", { className: is().SmoothLine }),
+                s.createElement("div", { className: ps().SmoothLine }),
                 s.createElement(
                   "div",
-                  { className: is().TextBody },
+                  { className: ps().TextBody },
                   s.createElement("div", null, (0, B.Wn)("#dpc_rfp_body")),
                   s.createElement("br", null),
                   s.createElement(
@@ -33698,20 +34594,20 @@
           s.createElement(P.K, null),
         )
       );
-      var os = a(53497),
-        ls = a.n(os);
-      const cs = [
+      var hs = a(53497),
+        Es = a.n(hs);
+      const bs = [
           9467224, 8255888, 7732977, 8599101, 9303484, 36, 7554697, 9572001,
           9247354, 2163, 9691969, 7119388, 9640842, 8291895, 9651185, 8261500,
         ],
-        ms = [
+        vs = [
           134513080, 1479611086, 102822329, 70473277, 70210046, 111750003,
           113439358, 870350113, 238146811, 82262664, 92647162, 172234089,
           341358028, 40547474, 92253768, 39128794, 60943014, 182672432,
           89269794, 113863940, 250056809, 191966736, 192154945, 94439767,
           1202001315, 186301610, 98887913, 121265419,
         ],
-        ds = () => {
+        fs = () => {
           const [e, t] = (0, s.useState)([]),
             [a, n] = (0, s.useState)([]),
             [i, o] = (0, s.useState)([]),
@@ -33802,10 +34698,10 @@
             },
             T =
               "Image files must be named <friend id>.png, and the id must be a valid id",
-            C = "Image dimensions must be 1024x512 pixels",
-            I = "Image must be a compatible .png file",
+            I = "Image dimensions must be 1024x512 pixels",
+            C = "Image must be a compatible .png file",
             M = "Image must have a transparent background",
-            R = [T, C, I, M],
+            R = [T, I, C, M],
             D = (() => {
               const t = [];
               return (
@@ -33842,7 +34738,7 @@
                     s.createElement(
                       "div",
                       { key: "FileDimensionsWarning" },
-                      s.createElement("b", null, C),
+                      s.createElement("b", null, I),
                       " ",
                     ),
                     s.createElement("br", {
@@ -33863,7 +34759,7 @@
                     s.createElement(
                       "div",
                       { key: "FileLoadingWarning" },
-                      s.createElement("b", null, I),
+                      s.createElement("b", null, C),
                       " ",
                     ),
                     s.createElement("br", { key: "FileLoadingWarningBreak" }),
@@ -33893,7 +34789,7 @@
                 t
               );
             })(),
-            A = (() => {
+            L = (() => {
               if (0 === f.length) return null;
               const e = [
                 s.createElement("br", {
@@ -33913,7 +34809,7 @@
               }
               return e;
             })(),
-            L = ({
+            A = ({
               proName: e,
               accountId: t,
               pos: a,
@@ -33931,10 +34827,10 @@
               }
               return s.createElement(
                 "div",
-                { className: ls().PlayerAutographContainer },
+                { className: Es().PlayerAutographContainer },
                 s.createElement(
                   "div",
-                  { className: o ? ls().NoZoom : ls().ClickZoom },
+                  { className: o ? Es().NoZoom : Es().ClickZoom },
                   s.createElement(
                     "label",
                     null,
@@ -33953,29 +34849,29 @@
                     s.createElement("img", {
                       src: l,
                       className: o
-                        ? ls().AutographImagePlaceholder
-                        : (0, N.A)(ls().AutographImage, ls().Checkered),
+                        ? Es().AutographImagePlaceholder
+                        : (0, N.A)(Es().AutographImage, Es().Checkered),
                       alt: "Checkbox",
                     }),
                   ),
                 ),
                 s.createElement(
                   "span",
-                  { className: ls().PlayerProName },
+                  { className: Es().PlayerProName },
                   e || "(missing pro name)",
                 ),
                 s.createElement(
                   "span",
-                  { className: ls().PlayerAccountId },
+                  { className: Es().PlayerAccountId },
                   t ? `(${t})` : "(missing account id)",
                 ),
               );
             },
             k = (e, t) => {
               if (12 == r.r.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) {
-                if (cs.includes(e?.team_id) && !cs.includes(t?.team_id))
+                if (bs.includes(e?.team_id) && !bs.includes(t?.team_id))
                   return -1;
-                if (!cs.includes(e?.team_id) && cs.includes(t?.team_id))
+                if (!bs.includes(e?.team_id) && bs.includes(t?.team_id))
                   return 1;
               }
               return e.hasUploadedAutograph && !t.hasUploadedAutograph
@@ -33990,49 +34886,49 @@
             G = 0 == r.r.ACCOUNT_ID && !r.r.VALVE_INTERNAL;
           return s.createElement(
             "div",
-            { className: ls().MajorsRegistrationAutographsPage },
+            { className: Es().MajorsRegistrationAutographsPage },
             s.createElement(He.A, { bOverlapping: !1 }),
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement("title", null, "Dota 2 - Pro Registration"),
             ),
-            s.createElement(Lt.A, null),
+            s.createElement(At.A, null),
             s.createElement(
               "div",
-              { className: ls().Background },
+              { className: Es().Background },
               s.createElement(
                 "div",
-                { className: ls().ContentFrame },
+                { className: Es().ContentFrame },
                 s.createElement(
                   "div",
-                  { className: ls().PageTop },
+                  { className: Es().PageTop },
                   s.createElement(
                     "div",
-                    { className: ls().Title },
+                    { className: Es().Title },
                     `${(0, B.Wn)("#home_title")} ${(0, B.Wn)("#dpc_event_2024season")}`,
                     s.createElement("br", null),
                     "Dota Pro Registration",
                   ),
                   s.createElement(
                     "div",
-                    { className: (0, N.A)(ls().Header) },
+                    { className: (0, N.A)(Es().Header) },
                     "Player Autographs",
                   ),
                   G &&
                     s.createElement(
                       "div",
-                      { className: ls().NeedToLogin },
+                      { className: Es().NeedToLogin },
                       s.createElement(
                         "div",
-                        { className: ls().SignInMessage },
+                        { className: Es().SignInMessage },
                         "Please sign in to your Steam account",
                       ),
                       s.createElement(
                         "a",
                         {
                           href: `${r.r.COMMUNITY_URL}oauth/login?client_id=${r.r.CLIENT_ID}&response_type=token&state=${v.J.proregistration_autographs().substr(1)}`,
-                          className: ls().SignInButton,
+                          className: Es().SignInButton,
                         },
                         "Sign in",
                       ),
@@ -34040,13 +34936,13 @@
                   !G &&
                     s.createElement(
                       "div",
-                      { className: ls().SubmitAutographs },
+                      { className: Es().SubmitAutographs },
                       s.createElement(
                         "div",
                         null,
                         s.createElement(
                           "h3",
-                          { className: ls().Requirements },
+                          { className: Es().Requirements },
                           "Requirements",
                         ),
                         s.createElement(
@@ -34074,7 +34970,7 @@
                         ),
                         s.createElement(
                           "h3",
-                          { className: ls().Notes },
+                          { className: Es().Notes },
                           "Notes",
                         ),
                         s.createElement(
@@ -34096,10 +34992,10 @@
                           ),
                         ),
                       ),
-                      s.createElement("div", { className: ls().SmoothLine }),
+                      s.createElement("div", { className: Es().SmoothLine }),
                       s.createElement(
                         "h3",
-                        { className: ls().ImageUploadHeader },
+                        { className: Es().ImageUploadHeader },
                         "Image Upload",
                       ),
                       s.createElement(
@@ -34127,7 +35023,7 @@
                           },
                         },
                         s.createElement("input", {
-                          className: ls().FileInput,
+                          className: Es().FileInput,
                           type: "file",
                           name: "autograph",
                           id: "autographFiles",
@@ -34153,10 +35049,10 @@
                             0 === D.length &&
                               s.createElement(
                                 "div",
-                                { className: ls().FileInput },
+                                { className: Es().FileInput },
                                 "Ready to upload",
                                 s.createElement("img", {
-                                  className: ls().CheckmarkIcon,
+                                  className: Es().CheckmarkIcon,
                                   src: `${r.r.IMG_URL}international2020/icon_check.png`,
                                 }),
                               ),
@@ -34167,7 +35063,7 @@
                                 null,
                                 "Fix the following errors:",
                                 s.createElement("img", {
-                                  className: ls().XIcon,
+                                  className: Es().XIcon,
                                   src: `${r.r.IMG_URL}international2020/icon_x.png`,
                                 }),
                                 " ",
@@ -34175,7 +35071,7 @@
                             D.length > 0 &&
                               s.createElement(
                                 "div",
-                                { className: ls().FileErrors },
+                                { className: Es().FileErrors },
                                 s.createElement("br", null),
                                 D,
                               ),
@@ -34189,20 +35085,20 @@
                                 ? "hidden"
                                 : "submit",
                             value: "Upload Files",
-                            className: (0, N.A)(ls().SubmitButton),
+                            className: (0, N.A)(Es().SubmitButton),
                           }),
                         ),
                       ),
-                      s.createElement("div", null, A),
+                      s.createElement("div", null, L),
                       s.createElement("br", null),
-                      s.createElement("div", { className: ls().SmoothLine }),
+                      s.createElement("div", { className: Es().SmoothLine }),
                     ),
                   s.createElement("canvas", { id: "canvas", hidden: !0 }),
                 ),
                 !G &&
                   s.createElement(
                     "div",
-                    { className: ls().ViewAutographs },
+                    { className: Es().ViewAutographs },
                     s.createElement("br", null),
                     s.createElement(
                       "div",
@@ -34226,7 +35122,7 @@
                                 { key: `${e.team_id}Container` },
                                 s.createElement(
                                   "div",
-                                  { className: ls().TeamName },
+                                  { className: Es().TeamName },
                                   e.name || "(Team name)",
                                   e.team_id ? ` (${e.team_id})` : "",
                                 ),
@@ -34234,7 +35130,7 @@
                                   "div",
                                   {
                                     key: `${e.team_id}Row`,
-                                    className: ls().TeamAutographRow,
+                                    className: Es().TeamAutographRow,
                                   },
                                   e.autographs.map((e, t) => {
                                     const {
@@ -34244,9 +35140,9 @@
                                       file: i,
                                       timestamp: o,
                                     } = e;
-                                    return ms.includes(n)
+                                    return vs.includes(n)
                                       ? null
-                                      : s.createElement(L, {
+                                      : s.createElement(A, {
                                           key: n,
                                           proName: r,
                                           accountId: n,
@@ -34271,16 +35167,16 @@
             s.createElement(P.K, null),
           );
         };
-      var us = a(34327),
-        _s = a.n(us);
-      const ps = [
+      var ys = a(34327),
+        Ss = a.n(ys);
+      const ws = [
           {
             imageName: "sign-signature-postit-note.jpg",
             locIdentifier: "sign",
             bullets: 4,
           },
         ],
-        gs = [
+        Ts = [
           {
             imageName: "photograph-signature.jpg",
             locIdentifier: "photograph",
@@ -34332,33 +35228,33 @@
             bullets: 5,
           },
         ],
-        hs = ({ rowInfo: e, orderedListStart: t }) =>
+        Is = ({ rowInfo: e, orderedListStart: t }) =>
           s.createElement(
             "div",
-            { className: _s().ImagePreparationContainer },
+            { className: Ss().ImagePreparationContainer },
             s.createElement(
               "div",
-              { className: _s().ClickZoom },
+              { className: Ss().ClickZoom },
               s.createElement(
                 "label",
                 null,
                 s.createElement("input", { type: "checkbox" }),
                 s.createElement("img", {
                   src: `${r.r.IMG_URL}dpc/autograph_guidelines/${e.imageName}`,
-                  className: _s().ImagePreparationImage,
+                  className: Ss().ImagePreparationImage,
                   alt: "ImagePrep",
                 }),
               ),
             ),
             s.createElement(
               "div",
-              { className: _s().ImagePreparationDetails },
+              { className: Ss().ImagePreparationDetails },
               s.createElement(
                 "ol",
                 { start: t },
                 s.createElement(
                   "li",
-                  { className: _s().ImagePreparationHeader },
+                  { className: Ss().ImagePreparationHeader },
                   (0, B.Wn)(`#autograph_preparation_${e.locIdentifier}_header`),
                 ),
               ),
@@ -34373,7 +35269,7 @@
                         "li",
                         {
                           key: `${e}-${r}`,
-                          className: _s().ImagePreparationBulletText,
+                          className: Ss().ImagePreparationBulletText,
                         },
                         (0, B.Wn)(`#autograph_preparation_${e}_bullet_${r}`),
                       ),
@@ -34383,13 +35279,13 @@
               ),
             ),
           ),
-        Es = () =>
+        Cs = () =>
           s.createElement(
             "div",
-            { className: _s().AutographGuidelines },
+            { className: Ss().AutographGuidelines },
             s.createElement(He.A, { bOverlapping: !1 }),
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement(
                 "title",
@@ -34397,69 +35293,69 @@
                 (0, B.Wn)("#autograph_guidelines_title"),
               ),
             ),
-            s.createElement(Lt.A, null),
+            s.createElement(At.A, null),
             s.createElement(
               "div",
-              { className: _s().Background },
+              { className: Ss().Background },
               s.createElement(
                 "div",
-                { className: _s().ContentFrame },
+                { className: Ss().ContentFrame },
                 s.createElement(
                   "div",
-                  { className: _s().Page },
+                  { className: Ss().Page },
                   s.createElement("img", {
                     src: `${r.r.IMG_URL}dpc/dpc_logo.png`,
-                    className: _s().DPCLogo,
+                    className: Ss().DPCLogo,
                   }),
                   s.createElement(
                     "div",
-                    { className: _s().Header },
+                    { className: Ss().Header },
                     (0, B.Wn)("#autograph_guidelines_top_header"),
                   ),
-                  s.createElement("div", { className: _s().SmoothLine }),
+                  s.createElement("div", { className: Ss().SmoothLine }),
                   s.createElement(
                     "div",
-                    { className: _s().Subheader },
+                    { className: Ss().Subheader },
                     (0, B.Wn)("#autograph_examples_header"),
                   ),
                   s.createElement(
                     "div",
-                    { className: _s().ExamplesRow },
+                    { className: Ss().ExamplesRow },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/autograph_guidelines/example-signature-1.jpg`,
-                      className: _s().ExamplesImage,
+                      className: Ss().ExamplesImage,
                     }),
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: _s().CheckMarkLeft,
+                      className: Ss().CheckMarkLeft,
                     }),
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/autograph_guidelines/example-signature-2.jpg`,
-                      className: _s().ExamplesImage,
+                      className: Ss().ExamplesImage,
                     }),
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: _s().CheckMarkRight,
+                      className: Ss().CheckMarkRight,
                     }),
                   ),
                   s.createElement(
                     "div",
-                    { className: _s().ExamplesDescription },
+                    { className: Ss().ExamplesDescription },
                     (0, B.Wn)("#autograph_examples_format_and_details"),
                   ),
                   s.createElement(
                     "div",
-                    { className: _s().ExamplesDescription },
+                    { className: Ss().ExamplesDescription },
                     (0, B.Wn)("#autograph_examples_size"),
                   ),
-                  s.createElement("div", { className: _s().SmoothLine }),
+                  s.createElement("div", { className: Ss().SmoothLine }),
                   s.createElement(
                     "div",
-                    { className: _s().Subheader },
+                    { className: Ss().Subheader },
                     (0, B.Wn)("#autograph_creation_header"),
                   ),
-                  ps.map((e, t) =>
-                    s.createElement(hs, {
+                  ws.map((e, t) =>
+                    s.createElement(Is, {
                       key: `ImagePreparationContainer${t}`,
                       rowInfo: e,
                       orderedListStart: t + 1,
@@ -34467,58 +35363,58 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: _s().SignatureCreationRules },
+                    { className: Ss().SignatureCreationRules },
                     s.createElement(
                       "div",
-                      { className: _s().SignatureRulesContainer },
+                      { className: Ss().SignatureRulesContainer },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}dpc/autograph_guidelines/guidelines-clarity.jpg`,
-                        className: _s().SignatureRulesImage,
+                        className: Ss().SignatureRulesImage,
                       }),
                       s.createElement(
                         "div",
-                        { className: _s().SignatureRulesDetails },
+                        { className: Ss().SignatureRulesDetails },
                         (0, B.Wn)("#autograph_creation_rule_1"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: _s().SignatureRulesContainer },
+                      { className: Ss().SignatureRulesContainer },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}dpc/autograph_guidelines/guidelines-thickness.jpg`,
-                        className: _s().SignatureRulesImage,
+                        className: Ss().SignatureRulesImage,
                       }),
                       s.createElement(
                         "div",
-                        { className: _s().SignatureRulesDetails },
+                        { className: Ss().SignatureRulesDetails },
                         (0, B.Wn)("#autograph_creation_rule_2"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: _s().SignatureRulesContainerLast },
+                      { className: Ss().SignatureRulesContainerLast },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}dpc/autograph_guidelines/guidelines-imagery.jpg`,
-                        className: _s().SignatureRulesImage,
+                        className: Ss().SignatureRulesImage,
                       }),
                       s.createElement(
                         "div",
-                        { className: _s().SignatureRulesDetails },
+                        { className: Ss().SignatureRulesDetails },
                         (0, B.Wn)("#autograph_creation_rule_3"),
                       ),
                     ),
                   ),
-                  s.createElement("div", { className: _s().SmoothLine }),
+                  s.createElement("div", { className: Ss().SmoothLine }),
                   s.createElement(
                     "div",
-                    { className: _s().Subheader },
+                    { className: Ss().Subheader },
                     (0, B.Wn)("#autograph_preparation_header"),
                   ),
-                  gs.map((e, t) =>
-                    s.createElement(hs, {
+                  Ts.map((e, t) =>
+                    s.createElement(Is, {
                       key: `ImagePreparationContainer${t}`,
                       rowInfo: e,
-                      orderedListStart: t + ps.length + 1,
+                      orderedListStart: t + ws.length + 1,
                     }),
                   ),
                 ),
@@ -34526,43 +35422,43 @@
             ),
             s.createElement(P.K, null),
           );
-      var bs = a(96739),
-        vs = a.n(bs);
-      const fs = [
+      var Ns = a(96739),
+        Bs = a.n(Ns);
+      const Ms = [
           {
             imageName: "example-player-silhouette.jpg",
             locIdentifier: "general_guidelines",
             bullets: 6,
           },
         ],
-        ys = [
+        Rs = [
           {
             imageName: "photography-lighting-setup.png",
             locIdentifier: "lighting_guidelines",
             bullets: 4,
           },
         ],
-        Ss = ({ rowInfo: e }) =>
+        Ds = ({ rowInfo: e }) =>
           s.createElement(
             "div",
-            { className: vs().PortraitGuidelineContainer },
+            { className: Bs().PortraitGuidelineContainer },
             s.createElement(
               "div",
-              { className: vs().ClickZoom },
+              { className: Bs().ClickZoom },
               s.createElement(
                 "label",
                 null,
                 s.createElement("input", { type: "checkbox" }),
                 s.createElement("img", {
                   src: `${r.r.IMG_URL}dpc/portrait_guidelines/${e.imageName}`,
-                  className: vs().GuidelinesImage,
+                  className: Bs().GuidelinesImage,
                   alt: "PortraitGuideline",
                 }),
               ),
             ),
             s.createElement(
               "div",
-              { className: vs().GuidelinesDetails },
+              { className: Bs().GuidelinesDetails },
               s.createElement(
                 "ul",
                 null,
@@ -34574,7 +35470,7 @@
                         "li",
                         {
                           key: `${e}-${r}`,
-                          className: vs().GuidelinesBulletText,
+                          className: Bs().GuidelinesBulletText,
                         },
                         (0, B.Wn)(`#portrait_${e}_bullet_${r}`),
                       ),
@@ -34584,13 +35480,13 @@
               ),
             ),
           ),
-        ws = () =>
+        Ls = () =>
           s.createElement(
             "div",
-            { className: vs().PortraitGuidelines },
+            { className: Bs().PortraitGuidelines },
             s.createElement(He.A, { bOverlapping: !1 }),
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement(
                 "title",
@@ -34598,72 +35494,72 @@
                 (0, B.Wn)("#portrait_guidelines_title"),
               ),
             ),
-            s.createElement(Lt.A, null),
+            s.createElement(At.A, null),
             s.createElement(
               "div",
-              { className: vs().Background },
+              { className: Bs().Background },
               s.createElement(
                 "div",
-                { className: vs().ContentFrame },
+                { className: Bs().ContentFrame },
                 s.createElement(
                   "div",
-                  { className: vs().Page },
+                  { className: Bs().Page },
                   s.createElement(
                     "div",
-                    { className: vs().Header },
+                    { className: Bs().Header },
                     (0, B.Wn)("#portrait_guidelines_top_header"),
                   ),
-                  s.createElement("div", { className: vs().SmoothLine }),
+                  s.createElement("div", { className: Bs().SmoothLine }),
                   s.createElement(
                     "div",
-                    { className: vs().Subheader },
+                    { className: Bs().Subheader },
                     (0, B.Wn)("#portrait_examples_header"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().ExamplesRow },
+                    { className: Bs().ExamplesRow },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/portrait_guidelines/example-player-1.jpg`,
-                      className: vs().ExamplesImage,
+                      className: Bs().ExamplesImage,
                     }),
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: vs().CheckMarkLeft,
+                      className: Bs().CheckMarkLeft,
                     }),
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/portrait_guidelines/example-player-2.jpg`,
-                      className: vs().ExamplesImage,
+                      className: Bs().ExamplesImage,
                     }),
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: vs().CheckMarkRight,
+                      className: Bs().CheckMarkRight,
                     }),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().ExamplesDescription },
+                    { className: Bs().ExamplesDescription },
                     (0, B.Wn)("#portrait_examples_description"),
                   ),
-                  s.createElement("div", { className: vs().SmoothLine }),
+                  s.createElement("div", { className: Bs().SmoothLine }),
                   s.createElement(
                     "div",
-                    { className: vs().Subheader },
+                    { className: Bs().Subheader },
                     (0, B.Wn)("#portrait_general_guidelines_header"),
                   ),
-                  fs.map((e, t) =>
-                    s.createElement(Ss, {
+                  Ms.map((e, t) =>
+                    s.createElement(Ds, {
                       key: `PortraitGuidelineContainerTop${t}`,
                       rowInfo: e,
                     }),
                   ),
-                  s.createElement("div", { className: vs().SmoothLine }),
+                  s.createElement("div", { className: Bs().SmoothLine }),
                   s.createElement(
                     "div",
-                    { className: vs().Subheader },
+                    { className: Bs().Subheader },
                     (0, B.Wn)("#portrait_lighting_guidelines_header"),
                   ),
-                  ys.map((e, t) =>
-                    s.createElement(Ss, {
+                  Rs.map((e, t) =>
+                    s.createElement(Ds, {
                       key: `PortraitGuidelineContaineBottomr${t}`,
                       rowInfo: e,
                     }),
@@ -34673,15 +35569,15 @@
             ),
             s.createElement(P.K, null),
           );
-      var Ts = a(62482),
-        Cs = a.n(Ts);
-      const Is = () =>
+      var As = a(62482),
+        Ps = a.n(As);
+      const ks = () =>
         s.createElement(
           "div",
-          { className: Cs().VoiceLineGuidelines },
+          { className: Ps().VoiceLineGuidelines },
           s.createElement(He.A, { bOverlapping: !1 }),
           s.createElement(
-            x.mg,
+            O.mg,
             null,
             s.createElement(
               "title",
@@ -34689,26 +35585,26 @@
               (0, B.Wn)("#voiceline_guidelines_title"),
             ),
           ),
-          s.createElement(Lt.A, null),
+          s.createElement(At.A, null),
           s.createElement(
             "div",
-            { className: Cs().Background },
+            { className: Ps().Background },
             s.createElement(
               "div",
-              { className: Cs().ContentFrame },
+              { className: Ps().ContentFrame },
               s.createElement(
                 "div",
-                { className: Cs().Page },
+                { className: Ps().Page },
                 s.createElement("img", {
                   src: `${r.r.IMG_URL}dpc/dpc_logo.png`,
-                  className: Cs().DPCLogo,
+                  className: Ps().DPCLogo,
                 }),
                 s.createElement(
                   "div",
-                  { className: Cs().Header },
+                  { className: Ps().Header },
                   (0, B.Wn)("#voiceline_guidelines_top_header"),
                 ),
-                s.createElement("div", { className: Cs().SmoothLine }),
+                s.createElement("div", { className: Ps().SmoothLine }),
                 s.createElement(
                   "ul",
                   null,
@@ -34773,109 +35669,109 @@
                     (0, B.Wn)("#voiceline_guidelines_bullet_12"),
                   ),
                 ),
-                s.createElement("div", { className: Cs().SmoothLine }),
+                s.createElement("div", { className: Ps().SmoothLine }),
               ),
             ),
           ),
           s.createElement(P.K, null),
         );
-      var Ns = a(46566),
-        Bs = a.n(Ns);
-      const Ms = (0, f.PA)((e) =>
+      var Gs = a(46566),
+        xs = a.n(Gs);
+      const Ws = (0, f.PA)((e) =>
         s.createElement(
           "div",
           {
-            className: Bs().ControllerFAQPage,
+            className: xs().ControllerFAQPage,
             style: {
               backgroundImage: `url( ${r.r.IMG_URL}backgrounds/slate_bg_01.jpg )`,
             },
           },
           s.createElement(He.A, { bOverlapping: !1 }),
           s.createElement(
-            x.mg,
+            O.mg,
             null,
             s.createElement("title", null, (0, B.Wn)("#controller_faq_title")),
           ),
           s.createElement("div", {
-            className: Bs().HeaderImage,
+            className: xs().HeaderImage,
             style: {
               backgroundImage: `url( ${r.r.IMG_URL}labyrinth/assistant_controller.jpg )`,
             },
           }),
           s.createElement(
             "div",
-            { className: Bs().Body },
+            { className: xs().Body },
             s.createElement(
               "div",
-              { className: Bs().TopHeader },
+              { className: xs().TopHeader },
               (0, B.Wn)("#controller_faq_title"),
             ),
             s.createElement(
               "div",
-              { className: Bs().TopBody },
+              { className: xs().TopBody },
               (0, B.Wn)("#controller_faq_body"),
             ),
             s.createElement(
               "div",
-              { className: Bs().FAQ },
+              { className: xs().FAQ },
               s.createElement(
                 "div",
-                { className: Bs().FAQQuestion },
+                { className: xs().FAQQuestion },
                 (0, B.Wn)("#controller_faq_q_1"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQAnswer },
+                { className: xs().FAQAnswer },
                 (0, B.Wn)("#controller_faq_a_1"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQQuestion },
+                { className: xs().FAQQuestion },
                 (0, B.Wn)("#controller_faq_q_2"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQAnswer },
+                { className: xs().FAQAnswer },
                 (0, B.Wn)("#controller_faq_a_2"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQQuestion },
+                { className: xs().FAQQuestion },
                 (0, B.Wn)("#controller_faq_q_3"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQAnswer },
+                { className: xs().FAQAnswer },
                 (0, B.Wn)("#controller_faq_a_3"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQQuestion },
+                { className: xs().FAQQuestion },
                 (0, B.Wn)("#controller_faq_q_4"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQAnswer },
+                { className: xs().FAQAnswer },
                 (0, B.Wn)("#controller_faq_a_4"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQQuestion },
+                { className: xs().FAQQuestion },
                 (0, B.Wn)("#controller_faq_q_5"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQAnswer },
+                { className: xs().FAQAnswer },
                 (0, B.Wn)("#controller_faq_a_5"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQQuestion },
+                { className: xs().FAQQuestion },
                 (0, B.Wn)("#controller_faq_q_6"),
               ),
               s.createElement(
                 "div",
-                { className: Bs().FAQAnswer },
+                { className: xs().FAQAnswer },
                 (0, B.Wn)("#controller_faq_a_6"),
               ),
             ),
@@ -34883,21 +35779,21 @@
           s.createElement(P.K, null),
         ),
       );
-      var Rs = a(12983),
-        Ds = a.n(Rs);
-      class As extends s.Component {
+      var Os = a(12983),
+        Fs = a.n(Os);
+      class Us extends s.Component {
         render() {
           return s.createElement(
             "div",
             {
-              className: Ds().PastUpdates,
+              className: Fs().PastUpdates,
               style: {
                 backgroundImage: `url( ${r.r.IMG_URL}backgrounds/greyfade.jpg )`,
               },
             },
             s.createElement(He.A, { bOverlapping: !0 }),
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement(
                 "title",
@@ -34907,21 +35803,21 @@
             ),
             s.createElement(
               "div",
-              { className: Ds().HeaderSection },
+              { className: Fs().HeaderSection },
               s.createElement(
                 "div",
-                { className: Ds().Headline },
+                { className: Fs().Headline },
                 (0, B.Wn)("#header_previous_updates"),
               ),
             ),
             s.createElement(
               "div",
-              { className: Ds().UpdatesContainer },
+              { className: Fs().UpdatesContainer },
               s.createElement(
                 "a",
                 { href: "https://www.dota2.com/primalbeast", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/primalbeast_social.jpg )`,
                   },
@@ -34933,7 +35829,7 @@
                 "a",
                 { href: "https://www.dota2.com/labyrinth", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/labyrinth_social.jpg )`,
                   },
@@ -34945,7 +35841,7 @@
                 "a",
                 { href: "https://www.dota2.com/marci", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/marci_social.jpg )`,
                   },
@@ -34957,7 +35853,7 @@
                 "a",
                 { href: "https://www.dota2.com/nemestice", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/nemestice_social.jpg )`,
                   },
@@ -34969,7 +35865,7 @@
                 "a",
                 { href: "https://www.dota2.com/dawnbreaker", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/dawnbreaker_social.jpg )`,
                   },
@@ -34981,7 +35877,7 @@
                 "a",
                 { href: "https://www.dota2.com/mistwoods", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/hoodwink_social.jpg )`,
                   },
@@ -34993,7 +35889,7 @@
                 "a",
                 { href: "https://www.dota2.com/diretide", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/diretide_twitter.png )`,
                   },
@@ -35005,7 +35901,7 @@
                 "a",
                 { href: "https://www.dota2.com/risinggale", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/wr_social.png )`,
                   },
@@ -35017,7 +35913,7 @@
                 "a",
                 { href: "https://www.dota2.com/aghanim", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/aghs_share.png )`,
                   },
@@ -35032,7 +35928,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/am_social.png )`,
                   },
@@ -35047,7 +35943,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/qop_twitter.png )`,
                   },
@@ -35062,7 +35958,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/wk_social.jpg )`,
                   },
@@ -35077,7 +35973,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti10_social.jpg )`,
                   },
@@ -35092,7 +35988,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/flockheart_img.jpg )`,
                   },
@@ -35104,7 +36000,7 @@
                 "a",
                 { href: "https://www.dota2.com/outlanders", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/outlanders_social.jpg )`,
                   },
@@ -35119,7 +36015,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/acolyte_social.jpg )`,
                   },
@@ -35131,7 +36027,7 @@
                 "a",
                 { href: "https://www.dota2.com/planetfall", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/planetfall_social.jpg )`,
                   },
@@ -35146,7 +36042,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti9_social.jpg )`,
                   },
@@ -35158,7 +36054,7 @@
                 "a",
                 { href: "https://www.dota2.com/mars", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/mars_social.jpg )`,
                   },
@@ -35170,7 +36066,7 @@
                 "a",
                 { href: "http://www.dota2.com/frosthaven", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/frosthaven_social.jpg )`,
                   },
@@ -35182,7 +36078,7 @@
                 "a",
                 { href: "https://www.dota2.com/720", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/720_social.jpg )`,
                   },
@@ -35194,7 +36090,7 @@
                 "a",
                 { href: "https://www.dota2.com/grimstroke", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/grimstroke_social.jpg )`,
                   },
@@ -35209,7 +36105,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti8_social.jpg )`,
                   },
@@ -35224,7 +36120,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/pudge_social.jpg )`,
                   },
@@ -35236,7 +36132,7 @@
                 "a",
                 { href: "http://www.dota2.com/plus", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/plus_social.jpg )`,
                   },
@@ -35251,7 +36147,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/duelingfates_social.jpg )`,
                   },
@@ -35266,7 +36162,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti7_social.jpg )`,
                   },
@@ -35281,7 +36177,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/bladeform_social.jpg )`,
                   },
@@ -35293,7 +36189,7 @@
                 "a",
                 { href: "http://www.dota2.com/700", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/700_social.jpg )`,
                   },
@@ -35305,7 +36201,7 @@
                 "a",
                 { href: "http://www.dota2.com/darkrift", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/darkrift_social.jpg )`,
                   },
@@ -35320,7 +36216,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti6_social.jpg )`,
                   },
@@ -35335,7 +36231,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/shanghai_social.jpg )`,
                   },
@@ -35347,7 +36243,7 @@
                 "a",
                 { href: "http://www.dota2.com/winter2016", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/winterbp_social.jpg )`,
                   },
@@ -35362,7 +36258,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/balance_social.jpg )`,
                   },
@@ -35374,7 +36270,7 @@
                 "a",
                 { href: "http://www.dota2.com/reborn", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/reborn_social.jpg )`,
                   },
@@ -35389,7 +36285,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti5_social.jpg )`,
                   },
@@ -35404,7 +36300,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/compendium_social.jpg )`,
                   },
@@ -35419,7 +36315,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/newbloom2015_social.jpg )`,
                   },
@@ -35434,7 +36330,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/snows_social.jpg )`,
                   },
@@ -35446,7 +36342,7 @@
                 "a",
                 { href: "http://www.dota2.com/oracle/day2", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/oracle_social.jpg )`,
                   },
@@ -35461,7 +36357,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/rekindling_social.jpg )`,
                   },
@@ -35473,7 +36369,7 @@
                 "a",
                 { href: "http://www.dota2.com/techies/", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/techies_social.jpg )`,
                   },
@@ -35488,7 +36384,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti4_social.jpg )`,
                   },
@@ -35503,7 +36399,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/cleaning_social.jpg )`,
                   },
@@ -35518,7 +36414,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/newbloom2014_social.jpg )`,
                   },
@@ -35530,7 +36426,7 @@
                 "a",
                 { href: "http://www.dota2.com/wraithnight/", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/wraith_social.jpg )`,
                   },
@@ -35545,7 +36441,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/spirits_social.jpg )`,
                   },
@@ -35557,7 +36453,7 @@
                 "a",
                 { href: "http://www.dota2.com/firstblood/", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/firstblood_social.jpg )`,
                   },
@@ -35572,7 +36468,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/beta_social.jpg )`,
                   },
@@ -35587,7 +36483,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/ti3_social.jpg )`,
                   },
@@ -35599,7 +36495,7 @@
                 "a",
                 { href: "http://www.dota2.com/greeviling/", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/greevling_social.jpg )`,
                   },
@@ -35614,7 +36510,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/diretide2012_social.jpg )`,
                   },
@@ -35629,7 +36525,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/aegis_social.jpg )`,
                   },
@@ -35641,7 +36537,7 @@
                 "a",
                 { href: "http://www.dota2.com/spoilsofwar/", target: "_blank" },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/spoils_social.jpg )`,
                   },
@@ -35656,7 +36552,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: Ds().UpdateBlock,
+                  className: Fs().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}/pastupdates/heroes_social.jpg )`,
                   },
@@ -35669,13 +36565,13 @@
           );
         }
       }
-      var Ls = a(61840),
-        Ps = a(1775),
-        ks = a.n(Ps),
-        Gs = a(4665);
-      const Os = ({ index: e, video: t, name: a, onSlideIn: n }) => {
-          const i = (0, s.useContext)(O.Yc),
-            o = (0, s.useRef)(),
+      var zs = a(61840),
+        js = a(1775),
+        Hs = a.n(js),
+        qs = a(4665);
+      const Vs = ({ index: e, video: t, name: a, onSlideIn: n }) => {
+          const i = (0, s.useContext)(x.Yc),
+            o = (0, s.useRef)(void 0),
             l =
               -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
               -1 != navigator.userAgent.toLowerCase().indexOf("macintosh");
@@ -35693,17 +36589,17 @@
             }, [i, e, a, n]),
             s.createElement(
               "div",
-              { className: ks().SlideContainer },
+              { className: Hs().SlideContainer },
               l
                 ? s.createElement("img", {
-                    className: ks().TreasureVideo,
+                    className: Hs().TreasureVideo,
                     src: `${r.r.VIDEO_URL}/augupdate23/${t}.png`,
                   })
                 : s.createElement(
                     "video",
                     {
                       ref: o,
-                      className: ks().TreasureVideo,
+                      className: Hs().TreasureVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -35719,66 +36615,66 @@
             )
           );
         },
-        Ws = (e) => {
+        Ys = (e) => {
           const [t, a] = s.useState(1),
             n = e.comparisons.length - 1;
           return s.createElement(
             "div",
-            { className: ks().ComparisonSelector },
+            { className: Hs().ComparisonSelector },
             s.createElement(
               "div",
-              { className: ks().ComparisonOptions },
+              { className: Hs().ComparisonOptions },
               e.comparisons.map((e, a) =>
                 s.createElement(
                   "div",
                   {
                     key: `ComparisonOption_${a}`,
                     className: (0, N.A)(
-                      ks().SliderInset,
-                      t != a && ks().Hidden,
+                      Hs().SliderInset,
+                      t != a && Hs().Hidden,
                     ),
                   },
                   s.createElement(
                     "div",
-                    { className: ks().SliderColumn },
+                    { className: Hs().SliderColumn },
                     s.createElement(
                       "div",
-                      { className: ks().SliderText },
+                      { className: Hs().SliderText },
                       s.createElement(
                         "div",
-                        { className: ks().MapTitle },
+                        { className: Hs().MapTitle },
                         (0, B.Wn)(e.title),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MapBody },
+                        { className: Hs().MapBody },
                         (0, B.Wn)(e.subtitle),
                       ),
                     ),
-                    s.createElement(Gs.EW, {
+                    s.createElement(qs.EW, {
                       itemOne: s.createElement("img", {
                         src: `${r.r.IMG_URL}${e.img_before}`,
-                        className: ks().SliderImageSpecs,
+                        className: Hs().SliderImageSpecs,
                       }),
                       itemTwo: s.createElement("img", {
                         src: `${r.r.IMG_URL}${e.img_after}`,
-                        className: ks().SliderImageSpecs,
+                        className: Hs().SliderImageSpecs,
                       }),
                     }),
                     s.createElement(
                       "div",
-                      { className: ks().BeforeAfter },
+                      { className: Hs().BeforeAfter },
                       s.createElement(
                         "div",
-                        { className: ks().Before },
+                        { className: Hs().Before },
                         (0, B.Wn)("#aug23_maprendering_before"),
                       ),
                       s.createElement("div", {
-                        className: ks().BeforeAfterLine,
+                        className: Hs().BeforeAfterLine,
                       }),
                       s.createElement(
                         "div",
-                        { className: ks().After },
+                        { className: Hs().After },
                         (0, B.Wn)("#aug23_maprendering_after"),
                       ),
                     ),
@@ -35788,15 +36684,15 @@
             ),
             s.createElement(
               "div",
-              { className: ks().ComparisonSelectors },
+              { className: Hs().ComparisonSelectors },
               e.comparisons.map((e, r) =>
                 s.createElement(
                   "div",
                   {
                     key: `ComparisonSelector_${r}`,
                     className: (0, N.A)(
-                      r === n ? ks().LionOption : ks().ComparisonOption,
-                      t == r && ks().Selected,
+                      r === n ? Hs().LionOption : Hs().ComparisonOption,
+                      t == r && Hs().Selected,
                     ),
                     onClick: () => a(r),
                   },
@@ -35806,46 +36702,46 @@
             ),
           );
         },
-        xs = (0, f.PA)(() => {
+        $s = (0, f.PA)(() => {
           const [e, t] = s.useState("#aug23_cc_treasure_name3");
-          Mo.getPatchNotes("7.34", r.r.LANGUAGE);
+          Wo.getPatchNotes("7.34", r.r.LANGUAGE);
           return s.createElement(
             "div",
-            { className: ks().Aug2023Page },
+            { className: Hs().Aug2023Page },
             s.createElement(
-              x.mg,
+              O.mg,
               null,
               s.createElement("title", null, (0, B.Wn)("#aug23_title_main")),
             ),
             s.createElement(He.A, { bOverlapping: !0 }),
-            s.createElement(Lt.A, null),
+            s.createElement(At.A, null),
             s.createElement(
               "div",
-              { className: ks().HeaderContainer },
+              { className: Hs().HeaderContainer },
               s.createElement(
                 "div",
                 {
-                  className: ks().HeaderInset,
+                  className: Hs().HeaderInset,
                   style: {
                     backgroundImage: `url( ${r.r.IMG_URL}augupdate23/loadout_armory_2023_web_header_cropped.jpg )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: ks().HeaderText },
+                  { className: Hs().HeaderText },
                   s.createElement(
                     "div",
-                    { className: ks().MainTitle },
+                    { className: Hs().MainTitle },
                     (0, B.Wn)("#aug23_title_main"),
                   ),
                   s.createElement(
                     "div",
-                    { className: ks().Tagline },
+                    { className: Hs().Tagline },
                     (0, B.Wn)("#aug23_title_sub_bottom"),
                   ),
                   s.createElement(
                     "div",
-                    { className: ks().SubTagline },
+                    { className: Hs().SubTagline },
                     (0, B.Wn)("#aug23_title_sub_top"),
                   ),
                 ),
@@ -35860,127 +36756,127 @@
             s.createElement(
               "div",
               {
-                className: ks().Container,
+                className: Hs().Container,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: ks().Inset },
+                { className: Hs().Inset },
                 s.createElement(
                   "div",
-                  { className: ks().SingleRow },
+                  { className: Hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: ks().XLText },
+                    { className: Hs().XLText },
                     s.createElement(
                       "div",
-                      { className: ks().XLTitle },
+                      { className: Hs().XLTitle },
                       (0, B.Wn)("#aug23_armory_title"),
                     ),
-                    s.createElement("div", { className: ks().HorizDivider }),
+                    s.createElement("div", { className: Hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: ks().XLSubtitle },
+                      { className: Hs().XLSubtitle },
                       (0, B.Wn)("#aug23_armory_title_sub"),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().XLBody },
+                      { className: Hs().XLBody },
                       (0, B.Wn)("#aug23_armory_body"),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: ks().XLImage,
+                      className: Hs().XLImage,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement("img", {
                       src: `${r.r.IMG_URL}augupdate23/browse_armory.png`,
-                      className: ks().XLImageSpecs,
+                      className: Hs().XLImageSpecs,
                     }),
                   ),
                   s.createElement(
                     "div",
-                    { className: ks().LText },
+                    { className: Hs().LText },
                     s.createElement(
                       "div",
-                      { className: ks().LTitle },
+                      { className: Hs().LTitle },
                       (0, B.Wn)("#aug23_armory_browse_title"),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().LBody },
+                      { className: Hs().LBody },
                       (0, B.Wn)("#aug23_armory_browse_body"),
                     ),
                   ),
                 ),
                 s.createElement(
                   "div",
-                  { className: ks().RowColumn },
+                  { className: Hs().RowColumn },
                   s.createElement(
                     "div",
                     {
-                      className: ks().Row,
+                      className: Hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: ks().MText },
+                      { className: Hs().MText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_armory_paperdoll_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_armory_paperdoll_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().RowImage },
+                      { className: Hs().RowImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/armory_item_combos.png`,
-                        className: ks().RowImageSpecs,
+                        className: Hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: ks().Row,
+                      className: Hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: ks().MText },
+                      { className: Hs().MText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_armory_global_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_armory_global_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().RowImage },
+                      { className: Hs().RowImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/global_armory_items.png`,
-                        className: ks().RowImageSpecs,
+                        className: Hs().RowImageSpecs,
                       }),
                     ),
                   ),
@@ -35988,85 +36884,85 @@
                 s.createElement(
                   "div",
                   {
-                    className: ks().GridRow,
+                    className: Hs().GridRow,
                     "data-aos": "fade-up",
                     "data-aos-delay": "200",
                     "data-aos-duration": "2000",
                   },
                   s.createElement(
                     "div",
-                    { className: ks().GridColumn },
+                    { className: Hs().GridColumn },
                     s.createElement(
                       "div",
-                      { className: ks().GridImage },
+                      { className: Hs().GridImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/armory_item_highlight.png`,
-                        className: ks().GridImageSpecs,
+                        className: Hs().GridImageSpecs,
                       }),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().GridText },
+                      { className: Hs().GridText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_armory_highlight_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_armory_highlight_body"),
                       ),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: ks().GridColumn },
+                    { className: Hs().GridColumn },
                     s.createElement(
                       "div",
-                      { className: ks().GridImage },
+                      { className: Hs().GridImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/armory_stack_duplicates.png`,
-                        className: ks().GridImageSpecs,
+                        className: Hs().GridImageSpecs,
                       }),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().GridText },
+                      { className: Hs().GridText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_armory_stack_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_armory_stack_body"),
                       ),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: ks().GridColumn },
+                    { className: Hs().GridColumn },
                     s.createElement(
                       "div",
-                      { className: ks().GridImage },
+                      { className: Hs().GridImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/armory_sort_market_value.png`,
-                        className: ks().GridImageSpecs,
+                        className: Hs().GridImageSpecs,
                       }),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().GridText },
+                      { className: Hs().GridText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_armory_sort_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_armory_sort_body"),
                       ),
                     ),
@@ -36076,54 +36972,54 @@
             ),
             s.createElement(
               "div",
-              { className: ks().ContainerCarousel },
+              { className: Hs().ContainerCarousel },
               s.createElement(
                 "div",
-                { className: ks().Inset },
+                { className: Hs().Inset },
                 s.createElement(
                   "div",
-                  { className: ks().CCText },
+                  { className: Hs().CCText },
                   s.createElement(
                     "div",
-                    { className: ks().CCTitle },
+                    { className: Hs().CCTitle },
                     (0, B.Wn)("#aug23_cc_title"),
                   ),
-                  s.createElement("div", { className: ks().HorizDivider }),
+                  s.createElement("div", { className: Hs().HorizDivider }),
                   s.createElement(
                     "div",
-                    { className: ks().CCSubtitle },
+                    { className: Hs().CCSubtitle },
                     (0, B.Wn)("#aug23_cc_sub"),
                   ),
                   s.createElement(
                     "div",
-                    { className: ks().CCBody },
+                    { className: Hs().CCBody },
                     (0, B.Wn)("#aug23_cc_body"),
                   ),
                   s.createElement(
                     "div",
                     {
                       onClick: () =>
-                        Mo.PurchaseOnSteamStore(24613, 1, window.location.href),
+                        Wo.PurchaseOnSteamStore(24613, 1, window.location.href),
                       className: (0, N.A)(
-                        ks().CCBtn,
-                        ks().TextStyleButton,
-                        ks().TextColorWhite,
-                        ks().CapsulePurchaseButton,
+                        Hs().CCBtn,
+                        Hs().TextStyleButton,
+                        Hs().TextColorWhite,
+                        Hs().CapsulePurchaseButton,
                       ),
                     },
                     (0, B.Wn)(
                       "#aug23_cc_btn",
-                      "undefined" !== Mo.GetBPPrice(24613)
-                        ? Mo.GetBPPrice(24613)
+                      "undefined" !== Wo.GetBPPrice(24613)
+                        ? Wo.GetBPPrice(24613)
                         : "",
                     ),
                   ),
                 ),
               ),
               s.createElement(
-                O.gi,
+                x.gi,
                 {
-                  className: ks().TreasureCarousel,
+                  className: Hs().TreasureCarousel,
                   naturalSlideWidth: 540,
                   naturalSlideHeight: 960,
                   totalSlides: 16,
@@ -36133,17 +37029,17 @@
                   dragEnabled: !1,
                 },
                 s.createElement(
-                  O.Ap,
-                  { className: ks().TreasureSlider },
+                  x.Ap,
+                  { className: Hs().TreasureSlider },
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 0,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 0,
                       video: "cc_abaddon",
                       name: "#aug23_cc_treasure_name1",
@@ -36153,14 +37049,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 1,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 1,
                       video: "cc_alchemist",
                       name: "#aug23_cc_treasure_name2",
@@ -36170,14 +37066,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 2,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 2,
                       video: "cc_antimage",
                       name: "#aug23_cc_treasure_name3",
@@ -36187,14 +37083,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 3,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 3,
                       video: "cc_dawnbreaker",
                       name: "#aug23_cc_treasure_name4",
@@ -36204,14 +37100,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 4,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 4,
                       video: "cc_dazzle",
                       name: "#aug23_cc_treasure_name5",
@@ -36221,14 +37117,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 5,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 5,
                       video: "cc_death_prophet",
                       name: "#aug23_cc_treasure_name6",
@@ -36238,14 +37134,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 6,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 6,
                       video: "cc_hoodwink",
                       name: "#aug23_cc_treasure_name7",
@@ -36255,14 +37151,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 7,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 7,
                       video: "cc_jakiro",
                       name: "#aug23_cc_treasure_name8",
@@ -36272,14 +37168,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 8,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 8,
                       video: "cc_kunkka",
                       name: "#aug23_cc_treasure_name9",
@@ -36289,14 +37185,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 9,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 9,
                       video: "cc_legion_commander",
                       name: "#aug23_cc_treasure_name10",
@@ -36306,14 +37202,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 10,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 10,
                       video: "cc_marci",
                       name: "#aug23_cc_treasure_name11",
@@ -36323,14 +37219,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 11,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 11,
                       video: "cc_primal_beast",
                       name: "#aug23_cc_treasure_name12",
@@ -36340,14 +37236,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 12,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 12,
                       video: "cc_snapfire",
                       name: "#aug23_cc_treasure_name13",
@@ -36357,14 +37253,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 13,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 13,
                       video: "cc_spectre",
                       name: "#aug23_cc_treasure_name14",
@@ -36374,14 +37270,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 14,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 14,
                       video: "cc_storm_spirit",
                       name: "#aug23_cc_treasure_name15",
@@ -36391,14 +37287,14 @@
                     }),
                   ),
                   s.createElement(
-                    O.q7,
+                    x.q7,
                     {
                       index: 15,
-                      className: ks().TreasureSlide,
-                      innerClassName: ks().TreasureInnerSlide,
-                      classNameHidden: ks().TreasureSlideHidden,
+                      className: Hs().TreasureSlide,
+                      innerClassName: Hs().TreasureInnerSlide,
+                      classNameHidden: Hs().TreasureSlideHidden,
                     },
-                    s.createElement(Os, {
+                    s.createElement(Vs, {
                       index: 15,
                       video: "cc_wraith_king",
                       name: "#aug23_cc_treasure_name16",
@@ -36410,100 +37306,100 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: ks().TreasureName },
+                  { className: Hs().TreasureName },
                   (0, B.Wn)(e),
                 ),
                 s.createElement(
                   "div",
-                  { className: ks().CarouselDots },
+                  { className: Hs().CarouselDots },
                   s.createElement(
-                    O._X,
-                    { className: ks().TreasureBack },
+                    x._X,
+                    { className: Hs().TreasureBack },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 0 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 0 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 1 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 1 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 2 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 2 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 3 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 3 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 4 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 4 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 5 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 5 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 6 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 6 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 7 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 7 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 8 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 8 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 9 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 9 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 10 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 10 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 11 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 11 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 12 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 12 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 13 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 13 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 14 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 14 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.cL,
-                    { className: ks().TreasureSelector, slide: 15 },
+                    x.cL,
+                    { className: Hs().TreasureSelector, slide: 15 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
-                    O.CC,
-                    { className: ks().TreasureNext },
+                    x.CC,
+                    { className: Hs().TreasureNext },
                     s.createElement("div", null),
                   ),
                 ),
@@ -36512,212 +37408,212 @@
             s.createElement(
               "div",
               {
-                className: ks().Container,
+                className: Hs().Container,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: ks().Inset },
+                { className: Hs().Inset },
                 s.createElement(
                   "div",
-                  { className: ks().SingleRow },
+                  { className: Hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: ks().XLText },
+                    { className: Hs().XLText },
                     s.createElement(
                       "div",
-                      { className: ks().XLTitle },
+                      { className: Hs().XLTitle },
                       (0, B.Wn)("#aug23_playerbehavior_title"),
                     ),
-                    s.createElement("div", { className: ks().HorizDivider }),
+                    s.createElement("div", { className: Hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: ks().XLSubtitle },
+                      { className: Hs().XLSubtitle },
                       (0, B.Wn)("#aug23_playerbehavior_subtitle"),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().XLBody },
+                      { className: Hs().XLBody },
                       (0, B.Wn)("#aug23_playerbehavior_body"),
                     ),
                   ),
                 ),
                 s.createElement(
                   "div",
-                  { className: ks().RowColumn },
+                  { className: Hs().RowColumn },
                   s.createElement(
                     "div",
                     {
-                      className: (0, N.A)(ks().Row, ks().Flip),
+                      className: (0, N.A)(Hs().Row, Hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: ks().MText },
+                      { className: Hs().MText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_playerbehavior_matchmaking_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_playerbehavior_matchmaking_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().RowImage },
+                      { className: Hs().RowImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/behavior_matchmaking.png`,
-                        className: ks().RowImageSpecs,
+                        className: Hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: ks().Row,
+                      className: Hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: ks().MText },
+                      { className: Hs().MText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_playerbehavior_reporting_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_playerbehavior_reporting_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().RowImage },
+                      { className: Hs().RowImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/behavior_reporting.png`,
-                        className: ks().RowImageSpecs,
+                        className: Hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: (0, N.A)(ks().Row, ks().Flip),
+                      className: (0, N.A)(Hs().Row, Hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: ks().MText },
+                      { className: Hs().MText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_playerbehavior_goodreport_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_playerbehavior_goodreport_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().RowImage },
+                      { className: Hs().RowImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/behavior_good_reports.png`,
-                        className: ks().RowImageSpecs,
+                        className: Hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: ks().Row,
+                      className: Hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: ks().MText },
+                      { className: Hs().MText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_playerbehavior_chat_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_playerbehavior_chat_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().RowImage },
+                      { className: Hs().RowImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/behavior_toxic_chat.png`,
-                        className: ks().RowImageSpecs,
+                        className: Hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: (0, N.A)(ks().Row, ks().Flip),
+                      className: (0, N.A)(Hs().Row, Hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: ks().MText },
+                      { className: Hs().MText },
                       s.createElement(
                         "div",
-                        { className: ks().MTitle },
+                        { className: Hs().MTitle },
                         (0, B.Wn)("#aug23_playerbehavior_scores_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().MBody },
+                        { className: Hs().MBody },
                         (0, B.Wn)("#aug23_playerbehavior_scores_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: ks().RowImage },
+                      { className: Hs().RowImage },
                       s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/summary_behavior.png`,
-                        className: ks().RowImageSpecs,
+                        className: Hs().RowImageSpecs,
                       }),
                     ),
                   ),
                 ),
                 s.createElement(
                   "div",
-                  { className: ks().SingleRow },
+                  { className: Hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: ks().XLText },
+                    { className: Hs().XLText },
                     s.createElement(
                       "div",
-                      { className: ks().XLTitle },
+                      { className: Hs().XLTitle },
                       (0, B.Wn)("#aug23_playerbehavior_forward_title"),
                     ),
-                    s.createElement("div", { className: ks().HorizDivider }),
+                    s.createElement("div", { className: Hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: ks().XLBody },
+                      { className: Hs().XLBody },
                       (0, B.Wn)("#aug23_playerbehavior_forward_body"),
                     ),
                   ),
@@ -36727,29 +37623,29 @@
             s.createElement(
               "div",
               {
-                className: ks().Container,
+                className: Hs().Container,
                 style: {
                   backgroundImage: `url( ${r.r.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: ks().Inset },
+                { className: Hs().Inset },
                 s.createElement(
                   "div",
-                  { className: ks().SingleRow },
+                  { className: Hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: ks().XLText },
+                    { className: Hs().XLText },
                     s.createElement(
                       "div",
-                      { className: ks().XLTitle },
+                      { className: Hs().XLTitle },
                       (0, B.Wn)("#aug23_maprendering_title"),
                     ),
-                    s.createElement("div", { className: ks().HorizDivider }),
+                    s.createElement("div", { className: Hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: ks().XLBody },
+                      { className: Hs().XLBody },
                       (0, B.Wn)("#aug23_maprendering_body"),
                     ),
                   ),
@@ -36757,8 +37653,8 @@
               ),
               s.createElement(
                 "div",
-                { className: ks().SliderContainer },
-                s.createElement(Ws, {
+                { className: Hs().SliderContainer },
+                s.createElement(Ys, {
                   comparisons: [
                     {
                       title: "#aug23_maprendering_particles_title",
@@ -36789,51 +37685,51 @@
               ),
               s.createElement(
                 "div",
-                { className: ks().SingleSliderContainer },
+                { className: Hs().SingleSliderContainer },
                 s.createElement(
                   "div",
-                  { className: ks().SingleSliderInset },
+                  { className: Hs().SingleSliderInset },
                   s.createElement(
                     "div",
-                    { className: ks().SingleSliderColumn },
+                    { className: Hs().SingleSliderColumn },
                     s.createElement(
                       "div",
-                      { className: ks().SingleSliderText },
+                      { className: Hs().SingleSliderText },
                       s.createElement(
                         "div",
-                        { className: ks().SingleMapTitle },
+                        { className: Hs().SingleMapTitle },
                         (0, B.Wn)("#aug23_maprendering_final_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: ks().SingleMapBody },
+                        { className: Hs().SingleMapBody },
                         (0, B.Wn)("#aug23_maprendering_final_body"),
                       ),
                     ),
-                    s.createElement(Gs.EW, {
+                    s.createElement(qs.EW, {
                       itemOne: s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/FinalMapBefore.jpg`,
-                        className: ks().SingleSliderImageSpecs,
+                        className: Hs().SingleSliderImageSpecs,
                       }),
                       itemTwo: s.createElement("img", {
                         src: `${r.r.IMG_URL}augupdate23/FinalMapAfter.jpg`,
-                        className: ks().SingleSliderImageSpecs,
+                        className: Hs().SingleSliderImageSpecs,
                       }),
                     }),
                     s.createElement(
                       "div",
-                      { className: ks().SingleBeforeAfter },
+                      { className: Hs().SingleBeforeAfter },
                       s.createElement(
                         "div",
-                        { className: ks().Before },
+                        { className: Hs().Before },
                         (0, B.Wn)("#aug23_maprendering_before"),
                       ),
                       s.createElement("div", {
-                        className: ks().SingleBeforeAfterLine,
+                        className: Hs().SingleBeforeAfterLine,
                       }),
                       s.createElement(
                         "div",
-                        { className: ks().After },
+                        { className: Hs().After },
                         (0, B.Wn)("#aug23_maprendering_after"),
                       ),
                     ),
@@ -36844,14 +37740,14 @@
             s.createElement(P.K, null),
           );
         });
-      var Fs = a(64171),
-        Us = a.n(Fs);
-      const zs = () =>
+      var Ks = a(64171),
+        Zs = a.n(Ks);
+      const Qs = () =>
           s.createElement("div", {
-            className: Us().RightArrow,
+            className: Zs().RightArrow,
             style: { backgroundImage: `url( ${r.r.IMG_URL}/arrow_left.png )` },
           }),
-        js = ({
+        Js = ({
           shouldShow: e,
           showFunc: t,
           className: a,
@@ -36862,32 +37758,32 @@
             "div",
             {
               className: (0, N.A)(
-                Us().PopupPanelContainer,
-                e && Us().ShowPopupPanel,
+                Zs().PopupPanelContainer,
+                e && Zs().ShowPopupPanel,
               ),
               onClick: () => t(!1),
             },
             s.createElement(
               "div",
               {
-                className: (0, N.A)(Us().PopupPanel, a),
+                className: (0, N.A)(Zs().PopupPanel, a),
                 onClick: (e) => e.stopPropagation(),
               },
               n &&
                 s.createElement(
                   "div",
-                  { className: Us().CloseButton, onClick: () => t(!1) },
+                  { className: Zs().CloseButton, onClick: () => t(!1) },
                   s.createElement("img", { src: `${r.r.IMG_URL}close.png` }),
                 ),
               i,
             ),
           );
-      class Hs extends s.Component {
+      class Xs extends s.Component {
         constructor(e) {
           super(e), (this.state = { bPopupVisible: !1 });
         }
         handleClick = (e) => {
-          if (Mo.getShortFilmOwnership()) {
+          if (Wo.getShortFilmOwnership()) {
             const e =
               r.r.BASE_URL +
               v.J.shortfilm() +
@@ -36896,36 +37792,36 @@
           } else this.setState({ bPopupVisible: e });
         };
         handleAccepted = () => {
-          Mo.grantShortFilmAppIDOwnership();
+          Wo.grantShortFilmAppIDOwnership();
           const e =
             r.r.BASE_URL +
             v.J.shortfilm() +
             "/redirecttosteamcommunityshortfilm/";
           history.pushState("", "", e), history.go();
         };
-        BGetOwnsApp = () => Mo.getShortFilmOwnership();
+        BGetOwnsApp = () => Wo.getShortFilmOwnership();
         render() {
           return (
             this.BGetOwnsApp(),
             s.createElement(
               "div",
-              { className: Us().HomePage },
+              { className: Zs().HomePage },
               s.createElement(He.A, { bOverlapping: !0 }),
               s.createElement(
-                x.mg,
+                O.mg,
                 null,
                 s.createElement("title", null, (0, B.Wn)("#filmcontest_title")),
               ),
               s.createElement(
                 "div",
-                { className: Us().HeaderSection },
+                { className: Zs().HeaderSection },
                 s.createElement(
                   "div",
-                  { className: Us().BackgroundVideoContainer },
+                  { className: Zs().BackgroundVideoContainer },
                   s.createElement(
                     "video",
                     {
-                      className: Us().BackgroundVideo,
+                      className: Zs().BackgroundVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -36945,14 +37841,14 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: Us().TitleContainer },
+                  { className: Zs().TitleContainer },
                   s.createElement(
                     "div",
-                    { className: Us().TopRow },
+                    { className: Zs().TopRow },
                     s.createElement(
                       "video",
                       {
-                        className: Us().HeroLogo,
+                        className: Zs().HeroLogo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -36966,10 +37862,10 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: Us().ButtonRow },
+                      { className: Zs().ButtonRow },
                       s.createElement(
                         "div",
-                        { className: Us().CommunityDesc },
+                        { className: Zs().CommunityDesc },
                         (0, B.Wn)("#filmcontest_submit_label"),
                       ),
                       0 == r.r.ACCOUNT_ID &&
@@ -36982,17 +37878,17 @@
                             "div",
                             {
                               className: (0, N.A)(
-                                Us().FilmButton,
-                                Us().SteamButton,
+                                Zs().FilmButton,
+                                Zs().SteamButton,
                               ),
                             },
                             s.createElement(
                               "div",
-                              { className: Us().ButtonText },
+                              { className: Zs().ButtonText },
                               (0, B.Wn)("#filmcontest_login_steam"),
                             ),
                             s.createElement("div", {
-                              className: Us().SteamLogo,
+                              className: Zs().SteamLogo,
                             }),
                           ),
                         ),
@@ -37002,20 +37898,20 @@
                           {
                             onClick: () => this.handleClick(!0),
                             className: (0, N.A)(
-                              Us().FilmButton,
-                              Us().SteamButton,
+                              Zs().FilmButton,
+                              Zs().SteamButton,
                             ),
                           },
                           s.createElement(
                             "div",
-                            { className: Us().ButtonText },
+                            { className: Zs().ButtonText },
                             (0, B.Wn)("#filmcontest_button_submit"),
                           ),
-                          s.createElement(zs, null),
+                          s.createElement(Qs, null),
                         ),
                       s.createElement(
                         "div",
-                        { className: Us().CommunityDesc },
+                        { className: Zs().CommunityDesc },
                         (0, B.Wn)("#filmcontest_community"),
                       ),
                       s.createElement(
@@ -37023,78 +37919,78 @@
                         { href: "https://steamcommunity.com/dota2shortfilm/" },
                         s.createElement(
                           "div",
-                          { className: Us().FilmButton },
+                          { className: Zs().FilmButton },
                           s.createElement(
                             "div",
-                            { className: Us().ButtonText },
+                            { className: Zs().ButtonText },
                             (0, B.Wn)("#filmcontest_submissions"),
                           ),
-                          s.createElement(zs, null),
+                          s.createElement(Qs, null),
                         ),
                       ),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().Introduction },
+                    { className: Zs().Introduction },
                     (0, B.Wn)("#filmcontest25_intro"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().Prizes },
+                    { className: Zs().Prizes },
                     s.createElement(
                       "div",
-                      { className: (0, N.A)(Us().Prize, Us().Prize1) },
+                      { className: (0, N.A)(Zs().Prize, Zs().Prize1) },
                       s.createElement(
                         "div",
-                        { className: Us().PrizeAmount },
+                        { className: Zs().PrizeAmount },
                         (0, B.Wn)("#filmcontest_prize1_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: Us().PrizeLabel },
+                        { className: Zs().PrizeLabel },
                         (0, B.Wn)("#filmcontest_prize1_label"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: (0, N.A)(Us().Prize, Us().Prize2) },
+                      { className: (0, N.A)(Zs().Prize, Zs().Prize2) },
                       s.createElement(
                         "div",
-                        { className: Us().PrizeAmount },
+                        { className: Zs().PrizeAmount },
                         (0, B.Wn)("#filmcontest_prize2_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: Us().PrizeLabel },
+                        { className: Zs().PrizeLabel },
                         (0, B.Wn)("#filmcontest_prize2_label"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: (0, N.A)(Us().Prize, Us().Prize3) },
+                      { className: (0, N.A)(Zs().Prize, Zs().Prize3) },
                       s.createElement(
                         "div",
-                        { className: Us().PrizeAmount },
+                        { className: Zs().PrizeAmount },
                         (0, B.Wn)("#filmcontest_prize3_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: Us().PrizeLabel },
+                        { className: Zs().PrizeLabel },
                         (0, B.Wn)("#filmcontest_prize3_label"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: (0, N.A)(Us().Prize, Us().Prize4) },
+                      { className: (0, N.A)(Zs().Prize, Zs().Prize4) },
                       s.createElement(
                         "div",
-                        { className: Us().PrizeAmount },
+                        { className: Zs().PrizeAmount },
                         (0, B.Wn)("#filmcontest_prize4_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: Us().PrizeLabel },
+                        { className: Zs().PrizeLabel },
                         (0, B.Wn)("#filmcontest_prize4_label"),
                       ),
                     ),
@@ -37103,17 +37999,17 @@
               ),
               s.createElement(
                 "div",
-                { className: Us().WallpaperSection },
+                { className: Zs().WallpaperSection },
                 s.createElement(
                   "div",
-                  { className: Us().WallpaperTitle },
+                  { className: Zs().WallpaperTitle },
                   (0, B.Wn)("#filmcontest_previous_winners"),
                 ),
                 s.createElement(
                   "div",
-                  { className: Us().Wallpapers },
+                  { className: Zs().Wallpapers },
                   s.createElement("iframe", {
-                    className: Us().PreviousWinnerVideo,
+                    className: Zs().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube-nocookie.com/embed/p0qKpJXOJsY",
@@ -37124,7 +38020,7 @@
                     allowFullScreen: !0,
                   }),
                   s.createElement("iframe", {
-                    className: Us().PreviousWinnerVideo,
+                    className: Zs().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube-nocookie.com/embed/d8N2A8KePP4",
@@ -37135,7 +38031,7 @@
                     allowFullScreen: !0,
                   }),
                   s.createElement("iframe", {
-                    className: Us().PreviousWinnerVideo,
+                    className: Zs().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube-nocookie.com/embed/LJ6CoMgr2U8",
@@ -37149,25 +38045,25 @@
               ),
               s.createElement(
                 "div",
-                { className: Us().GuidelinesSection },
-                s.createElement("div", { className: Us().Divider }),
-                s.createElement("div", { className: Us().DividerBottom }),
+                { className: Zs().GuidelinesSection },
+                s.createElement("div", { className: Zs().Divider }),
+                s.createElement("div", { className: Zs().DividerBottom }),
                 s.createElement(
                   "div",
-                  { className: Us().Quote },
+                  { className: Zs().Quote },
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesHeader },
+                    { className: Zs().GuidelinesHeader },
                     (0, B.Wn)("#filmcontest_rulesofentry"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesTitle },
+                    { className: Zs().GuidelinesTitle },
                     (0, B.Wn)("#filmcontest_eligibility"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -37180,17 +38076,17 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesTitle },
+                    { className: Zs().GuidelinesTitle },
                     (0, B.Wn)("#filmcontest_entry"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesSubTitle },
+                    { className: Zs().GuidelinesSubTitle },
                     (0, B.Wn)("#filmcontest_entry_subtitle"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -37258,12 +38154,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesTitle },
+                    { className: Zs().GuidelinesTitle },
                     (0, B.Wn)("#filmcontest_instructions"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -37296,12 +38192,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesTitle },
+                    { className: Zs().GuidelinesTitle },
                     (0, B.Wn)("#filmcontest_winners"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -37314,12 +38210,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesTitle },
+                    { className: Zs().GuidelinesTitle },
                     (0, B.Wn)("#filmcontest_prizes"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -37337,12 +38233,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesTitle },
+                    { className: Zs().GuidelinesTitle },
                     (0, B.Wn)("#filmcontest_release"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -37355,12 +38251,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesTitle },
+                    { className: Zs().GuidelinesTitle },
                     (0, B.Wn)("#filmcontest_general"),
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -37373,17 +38269,17 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: Us().GuidelinesList },
+                    { className: Zs().GuidelinesList },
                     (0, B.Wn)("#filmcontest_sponsored_desc"),
                   ),
                 ),
               ),
               s.createElement(
                 "div",
-                { className: Us().EndRow },
+                { className: Zs().EndRow },
                 s.createElement(
                   "div",
-                  { className: Us().EndRowText },
+                  { className: Zs().EndRowText },
                   (0, B.Wn)("#filmcontest25_intro"),
                   0 == r.r.ACCOUNT_ID &&
                     s.createElement(
@@ -37395,16 +38291,16 @@
                         "div",
                         {
                           className: (0, N.A)(
-                            Us().FilmButton,
-                            Us().SteamButton,
+                            Zs().FilmButton,
+                            Zs().SteamButton,
                           ),
                         },
                         s.createElement(
                           "div",
-                          { className: Us().ButtonText },
+                          { className: Zs().ButtonText },
                           (0, B.Wn)("#filmcontest_login_steam"),
                         ),
-                        s.createElement("div", { className: Us().SteamLogo }),
+                        s.createElement("div", { className: Zs().SteamLogo }),
                       ),
                     ),
                   0 != r.r.ACCOUNT_ID &&
@@ -37412,26 +38308,26 @@
                       "div",
                       {
                         onClick: () => this.handleClick(!0),
-                        className: (0, N.A)(Us().FilmButton, Us().SteamButton),
+                        className: (0, N.A)(Zs().FilmButton, Zs().SteamButton),
                       },
                       s.createElement(
                         "div",
-                        { className: Us().ButtonText },
+                        { className: Zs().ButtonText },
                         (0, B.Wn)("#filmcontest_button_submit"),
                       ),
-                      s.createElement(zs, null),
+                      s.createElement(Qs, null),
                     ),
                 ),
                 s.createElement("img", {
-                  className: Us().EndRowImage,
+                  className: Zs().EndRowImage,
                   src: `${r.r.IMG_URL}shortfilmcontest2025/clapper_2025.png`,
                 }),
               ),
               s.createElement(P.K, null),
               s.createElement(
-                js,
+                Js,
                 {
-                  className: Us().ShortFilmPopup,
+                  className: Zs().ShortFilmPopup,
                   hasCloseButton: !0,
                   shouldShow: this.state.bPopupVisible,
                   showFunc: (e) => this.handleClick(e),
@@ -37441,7 +38337,7 @@
                   "div",
                   {
                     onClick: () => this.handleAccepted(),
-                    className: (0, N.A)(Us().FilmButton, Us().SteamButton),
+                    className: (0, N.A)(Zs().FilmButton, Zs().SteamButton),
                   },
                   (0, B.Wn)("#filmcontest_i_agree"),
                 ),
@@ -37451,53 +38347,53 @@
           );
         }
       }
-      var qs = a(74522),
-        Vs = a(65908),
-        Ys = a(20360),
-        $s = a(73425),
-        Ks = a(13807);
-      let Zs = s.lazy(() => a.e(1448).then(a.bind(a, 41448))),
-        Qs = s.lazy(() =>
+      var eo = a(74522),
+        to = a(65908),
+        ao = a(20360),
+        ro = a(73425),
+        no = a(13807);
+      let io = s.lazy(() => a.e(1448).then(a.bind(a, 41448))),
+        so = s.lazy(() =>
           Promise.all([a.e(6745), a.e(4349), a.e(9863)]).then(a.bind(a, 69863)),
         ),
-        Js = s.lazy(() => a.e(6858).then(a.bind(a, 76858))),
-        Xs = s.lazy(() =>
+        oo = s.lazy(() => a.e(6858).then(a.bind(a, 76858))),
+        lo = s.lazy(() =>
           Promise.all([a.e(6745), a.e(4349), a.e(151)]).then(a.bind(a, 40151)),
         ),
-        eo = s.lazy(() => a.e(5046).then(a.bind(a, 65046))),
-        to = s.lazy(() => a.e(9831).then(a.bind(a, 99831))),
-        ao = s.lazy(() => a.e(9467).then(a.bind(a, 69467))),
-        ro = s.lazy(() => a.e(1831).then(a.bind(a, 71831))),
-        no = s.lazy(() =>
+        co = s.lazy(() => a.e(5046).then(a.bind(a, 65046))),
+        mo = s.lazy(() => a.e(9831).then(a.bind(a, 99831))),
+        uo = s.lazy(() => a.e(9467).then(a.bind(a, 69467))),
+        _o = s.lazy(() => a.e(1831).then(a.bind(a, 71831))),
+        po = s.lazy(() =>
           Promise.all([a.e(6745), a.e(5665)]).then(a.bind(a, 85665)),
         ),
-        io = s.lazy(() => a.e(4848).then(a.bind(a, 94848))),
-        so = s.lazy(() => a.e(1649).then(a.bind(a, 11649))),
-        oo = s.lazy(() => a.e(7460).then(a.bind(a, 17460))),
-        lo = s.lazy(() =>
+        go = s.lazy(() => a.e(4848).then(a.bind(a, 94848))),
+        ho = s.lazy(() => a.e(1649).then(a.bind(a, 11649))),
+        Eo = s.lazy(() => a.e(7460).then(a.bind(a, 17460))),
+        bo = s.lazy(() =>
           Promise.all([a.e(6745), a.e(4398)]).then(a.bind(a, 84398)),
         ),
-        co = s.lazy(() => a.e(3038).then(a.bind(a, 40657))),
-        mo = s.lazy(() => a.e(2805).then(a.bind(a, 32805))),
-        uo = s.lazy(() => a.e(2896).then(a.bind(a, 12896))),
-        _o = s.lazy(() => a.e(4172).then(a.bind(a, 84172))),
-        po = s.lazy(() => a.e(8644).then(a.bind(a, 88644))),
-        go =
+        vo = s.lazy(() => a.e(3038).then(a.bind(a, 40657))),
+        fo = s.lazy(() => a.e(2805).then(a.bind(a, 32805))),
+        yo = s.lazy(() => a.e(2896).then(a.bind(a, 12896))),
+        So = s.lazy(() => a.e(4172).then(a.bind(a, 84172))),
+        wo = s.lazy(() => a.e(8644).then(a.bind(a, 88644))),
+        To =
           (s.lazy(() => a.e(3903).then(a.bind(a, 33903))),
           s.lazy(() =>
             Promise.all([a.e(189), a.e(7084)]).then(a.bind(a, 4533)),
           )),
-        ho = s.lazy(() =>
+        Io = s.lazy(() =>
           Promise.all([a.e(189), a.e(7084)]).then(a.bind(a, 54302)),
         ),
-        Eo = s.lazy(() =>
+        Co = s.lazy(() =>
           Promise.all([a.e(189), a.e(7084)]).then(a.bind(a, 77671)),
         );
-      const bo = new Vs.E({
+      const No = new to.E({
           defaultOptions: { queries: { gcTime: 864e5, staleTime: 1 / 0 } },
         }),
-        vo = (0, $s.s)({ storage: window.localStorage });
-      let fo = class extends s.Component {
+        Bo = (0, ro.s)({ storage: window.localStorage });
+      let Mo = class extends s.Component {
         componentDidMount() {
           b().init({
             disable: !1,
@@ -37522,14 +38418,14 @@
             "div",
             { className: T().DotaRoot },
             s.createElement(
-              x.vd,
+              O.vd,
               null,
               s.createElement(
-                Ys.t,
+                ao.t,
                 {
-                  client: bo,
+                  client: No,
                   persistOptions: {
-                    persister: vo,
+                    persister: Bo,
                     buster: "v1",
                     maxAge: 6e4,
                     dehydrateOptions: {
@@ -37538,10 +38434,10 @@
                   },
                 },
                 s.createElement(
-                  Ks.VQ,
+                  no.VQ,
                   { useActiveSteamInterface: () => {}, useStorage: () => {} },
                   s.createElement(
-                    qs.EO,
+                    eo.EO,
                     null,
                     s.createElement(
                       y.Kd,
@@ -37552,202 +38448,202 @@
                         s.createElement(
                           S.dO,
                           null,
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.home(),
-                            component: Ji,
+                            component: os,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.newsentry(":id"),
                             component: Ht,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.news(":updates?"),
                             component: jt,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.battlepass(),
                             component: ge,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.battlepass_ti10(),
                             component: ge,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.battlepass_international2022(),
                             component: Nt,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.proregistration_requestforproposal(),
-                            component: ss,
+                            component: gs,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.proregistration_autographs(),
-                            component: ds,
+                            component: fs,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.autographguidelines(),
-                            component: Es,
+                            component: Cs,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.portraitguidelines(),
-                            component: ws,
+                            component: Ls,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.voicelineguidelines(),
-                            component: Is,
+                            component: ks,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.hero(":id"),
-                            component: Hi.uV,
+                            component: Xi.uV,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.herogrid(),
-                            component: ji,
+                            component: Ji,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.pastupdates(),
-                            component: As,
+                            component: Us,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.controllerfaq(),
-                            component: Ms,
+                            component: Ws,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.dpc_event_root(":strEvent?"),
-                            component: Oi,
+                            component: Vi,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.patchnotes(":version?"),
-                            component: Ls.Ny,
+                            component: zs.Ny,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.dawnbreaker(),
-                            component: Zs,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.marci(),
-                            component: Js,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.labyrinth(),
-                            component: Xs,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.shortfilm(),
-                            component: Hs,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.nemestice(),
-                            component: Qs,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.springcleaning(),
-                            component: rs,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.primalbeast(),
-                            component: eo,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.battlereport(),
-                            component: to,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.muerta(),
-                            component: ao,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.new_frontiers(),
-                            component: ro,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.summer2023update(),
-                            component: xs,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.international2023(),
-                            component: no,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.international2023alt(),
-                            component: no,
-                          }),
-                          s.createElement(La, {
-                            path: v.J.winter2023(),
                             component: io,
                           }),
-                          s.createElement(La, {
-                            path: v.J.crownfall_comic(),
-                            render: () =>
-                              s.createElement(so, { comic_id: "act1_intro" }),
-                          }),
-                          s.createElement(La, {
-                            path: v.J.crownfall_comic2(),
-                            render: () =>
-                              s.createElement(so, { comic_id: "act2_intro" }),
-                          }),
-                          s.createElement(La, {
-                            path: v.J.crownfall_comic3(),
-                            render: () =>
-                              s.createElement(so, { comic_id: "act3_intro" }),
-                          }),
-                          s.createElement(La, {
-                            path: v.J.crownfall_comic4(),
-                            render: () =>
-                              s.createElement(so, { comic_id: "act4_intro" }),
-                          }),
-                          s.createElement(La, {
-                            path: v.J.crownfall(),
+                          s.createElement(Aa, {
+                            path: v.J.marci(),
                             component: oo,
                           }),
-                          s.createElement(La, {
-                            path: v.J.international2024(),
+                          s.createElement(Aa, {
+                            path: v.J.labyrinth(),
                             component: lo,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
+                            path: v.J.shortfilm(),
+                            component: Xs,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.nemestice(),
+                            component: so,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.springcleaning(),
+                            component: us,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.primalbeast(),
+                            component: co,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.battlereport(),
+                            component: mo,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.muerta(),
+                            component: uo,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.new_frontiers(),
+                            component: _o,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.summer2023update(),
+                            component: $s,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.international2023(),
+                            component: po,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.international2023alt(),
+                            component: po,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.winter2023(),
+                            component: go,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.crownfall_comic(),
+                            render: () =>
+                              s.createElement(ho, { comic_id: "act1_intro" }),
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.crownfall_comic2(),
+                            render: () =>
+                              s.createElement(ho, { comic_id: "act2_intro" }),
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.crownfall_comic3(),
+                            render: () =>
+                              s.createElement(ho, { comic_id: "act3_intro" }),
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.crownfall_comic4(),
+                            render: () =>
+                              s.createElement(ho, { comic_id: "act4_intro" }),
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.crownfall(),
+                            component: Eo,
+                          }),
+                          s.createElement(Aa, {
+                            path: v.J.international2024(),
+                            component: bo,
+                          }),
+                          s.createElement(Aa, {
                             path: v.J.ringmaster(),
                             render: () =>
                               s.createElement(S.rd, {
                                 to: v.J.international2024(),
                               }),
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.ringmaster_comic(),
-                            render: () => s.createElement(co, null),
+                            render: () => s.createElement(vo, null),
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.kez(),
-                            component: uo,
+                            component: yo,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.kez_comic(),
-                            component: mo,
+                            component: fo,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.patch738(),
-                            component: _o,
+                            component: So,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.springcleaning2025(),
-                            component: po,
+                            component: wo,
                           }),
                           !1,
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.teamdetails(":id"),
-                            component: go,
+                            component: To,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.personadetails(":id"),
-                            component: ho,
+                            component: Io,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.dotaplustester(
                               ":strFeature?",
                               ":strConfig?",
                             ),
-                            component: Eo,
+                            component: Co,
                           }),
-                          s.createElement(La, {
+                          s.createElement(Aa, {
                             path: v.J.other(":page"),
                             render: () =>
                               s.createElement(S.rd, { to: v.J.home() }),
@@ -37762,23 +38658,23 @@
           );
         }
       };
-      fo = (0, n.Cg)([f.PA], fo);
-      const yo = fo;
-      var So = a(42489),
-        wo = a(81886),
-        To = a(48061),
-        Co = a(2593),
-        Io = a(4248);
-      class No {
-        m_asyncPrizePool = new Co.N();
-        m_asyncPatchNotesListData = new Co.N();
-        m_asyncPatchNotesData = new Co.L();
-        m_asyncBPPrice = new Co.L();
-        m_asyncBPDiscount = new Co.L();
+      Mo = (0, n.Cg)([f.PA], Mo);
+      const Ro = Mo;
+      var Do = a(42489),
+        Lo = a(81886),
+        Ao = a(87037),
+        Po = a(2593),
+        ko = a(4248);
+      class Go {
+        m_asyncPrizePool = new Po.N();
+        m_asyncPatchNotesListData = new Po.N();
+        m_asyncPatchNotesData = new Po.L();
+        m_asyncBPPrice = new Po.L();
+        m_asyncBPDiscount = new Po.L();
         m_nSelectedAbilityIndex = 0;
-        m_asyncShortFilmOwnership = new Co.N();
+        m_asyncShortFilmOwnership = new Po.N();
         m_BBCodeDictionary = new Map([
-          ...Array.from(To.W4.entries()),
+          ...Array.from(Ao.W4.entries()),
           ["color", { Constructor: B.Fl, autocloses: !1 }],
           ["block", { Constructor: B.x4, autocloses: !1 }],
           ["spoiler", { Constructor: B.qd, autocloses: !1 }],
@@ -37795,14 +38691,14 @@
         m_BBCodeParser = new p(
           this.m_BBCodeDictionary,
           this.BBCodeAccumulator,
-          Io.TS.LANGUAGE,
+          ko.TS.LANGUAGE,
         );
         constructor() {
-          (0, So.Gn)(this);
+          (0, Do.Gn)(this);
         }
         Init() {
-          wo.H(document.getElementById("dota_react_root")).render(
-            s.createElement(yo, { app: this }),
+          Lo.H(document.getElementById("dota_react_root")).render(
+            s.createElement(Ro, { app: this }),
           );
         }
         getPrizePool() {
@@ -37842,7 +38738,7 @@
             h()
               .get(v.J.react("getbpprices"), { params: { item_defs: a } })
               .then((t) => {
-                (0, So.h5)(() => {
+                (0, Do.h5)(() => {
                   const a = Object.entries(t?.data);
                   if (a.length == e.length)
                     for (const [e, t] of a)
@@ -37886,7 +38782,7 @@
                 params: { event_id: e, itemdefs: r },
               })
               .then((e) => {
-                (0, So.h5)(() => {
+                (0, Do.h5)(() => {
                   t.forEach((e, t) => {
                     this.m_asyncBPDiscount.getAsyncDataWrapper(e).clearData();
                   });
@@ -37951,14 +38847,14 @@
           });
         }
       }
-      (0, n.Cg)([So.sH], No.prototype, "m_nSelectedAbilityIndex", void 0);
-      var Bo = a(49773);
+      (0, n.Cg)([Do.sH], Go.prototype, "m_nSelectedAbilityIndex", void 0);
+      var xo = a(49773);
       a(5090);
       new Map();
       a(14106);
-      let Mo = new No();
-      (0, So.jK)({ enforceActions: "never" });
-      const Ro = [
+      let Wo = new Go();
+      (0, Do.jK)({ enforceActions: "never" });
+      const Oo = [
         "main",
         "springcleaning22",
         "juneupdate22",
@@ -37975,12 +38871,12 @@
         "springcleaning2025",
       ];
       document.addEventListener("DOMContentLoaded", async function () {
-        (0, Bo.XJ)("application_config"),
+        (0, xo.XJ)("application_config"),
           (0, r.p)(),
           await (async function (e) {
             const t = await Promise.all([
               a(59568)(`./shared_${e}.json`),
-              ...Ro.map((t) => a(59483)(`./${t}_${e}.json`)),
+              ...Oo.map((t) => a(59483)(`./${t}_${e}.json`)),
             ]);
             let r = {};
             for (const e of t) r = { ...r, ...e };
@@ -37988,14 +38884,14 @@
             if (n !== e) {
               const e = await Promise.all([
                 a(59568)(`./shared_${n}.json`),
-                ...Ro.map((e) => a(59483)(`./${e}_${n}.json`)),
+                ...Oo.map((e) => a(59483)(`./${e}_${n}.json`)),
               ]);
               let i = {};
               for (const t of e) i = { ...i, ...t };
               ga.pf.InitFromObjects(r, i, t[0].default, e[0].default);
             } else ga.pf.InitFromObjects(r, null, t[0].default, null);
           })(r.r.LANGUAGE),
-          Mo.Init();
+          Wo.Init();
       });
     },
     33706: (e, t, a) => {
@@ -38004,8 +38900,8 @@
         B5: () => B,
         HJ: () => b,
         JD: () => v,
-        MT: () => I,
-        k4: () => C,
+        MT: () => C,
+        k4: () => I,
         lm: () => w,
         mU: () => f,
         nK: () => N,
@@ -38156,7 +39052,7 @@
             })(t),
         };
       }
-      function C(e, t, a, r, n, i, s, o, c, m, d) {
+      function I(e, t, a, r, n, i, s, o, c, m, d) {
         const u = {
           project_id: 2,
           published_version: 12,
@@ -38212,7 +39108,7 @@
         };
         return (0, l.I)(T(g, u));
       }
-      function I(e, t, a, r, n, i, s, o, c, m) {
+      function C(e, t, a, r, n, i, s, o, c, m) {
         const d = {
           project_id: 54,
           published_version: 1,
@@ -38259,6 +39155,7 @@
                   elements: [
                     { name: "player_mmr", data_int32s: [o] },
                     { name: "game_mode", data_int32s: [c] },
+                    { name: "lobby_type", data_int32s: [7] },
                     { name: "team_won", data_bools: [m] },
                   ],
                 },
@@ -40430,14 +41327,14 @@
         S_: () => b,
         hS: () => v,
         Wn: () => S,
-        JE: () => C,
+        JE: () => I,
         pO: () => w,
         OK: () => T,
       });
       var r = a(35927),
         n = a(89506),
         i = a(7552),
-        s = a(48061),
+        s = a(87037),
         o = a(85608),
         l = a(45031);
       class c extends i.Component {
@@ -40500,7 +41397,7 @@
       }
       (0, o.Cg)([l.oI], c.prototype, "OnImageError", null);
       var m = a(68613),
-        d = a(76489);
+        d = a(18645);
       function u(e) {
         return i.createElement(
           "span",
@@ -40552,7 +41449,7 @@
         return i.createElement("div", { className: e.args[""] }, e.children);
       }
       function S(e, ...t) {
-        return d.o.GetBBCodeParser().ParseBBCode(C(e, ...t), {});
+        return d.o.GetBBCodeParser().ParseBBCode(I(e, ...t), {});
       }
       function w(e) {
         return e
@@ -40562,7 +41459,7 @@
       function T(e) {
         return e?.replace(/\[url=steam:.*?\[\/url]/g, "");
       }
-      function C(e, ...t) {
+      function I(e, ...t) {
         if (!e) return "";
         let a = (0, m.we)(e, ...t);
         return (
@@ -40940,7 +41837,7 @@
         return "";
       }
       function m(e) {
-        switch (e && 0 != e.length ? e : "ti13") {
+        switch (e && 0 != e.length ? e : "ti14") {
           case "spring21":
             return n.Dq.SPRING_2021_LEAGUE;
           case "springmajor21":
@@ -41046,7 +41943,7 @@
         return e.toString();
       }
       function u() {
-        return "ti13";
+        return "ti14";
       }
       function _(e) {
         const { nLeagueID: t } = i.E.Get().GetBestCurrentLeagueNode(e);
@@ -41650,7 +42547,7 @@
     82101: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Hq: () => x,
+        Hq: () => O,
         b9: () => W,
         cT: () => B,
         sG: () => N,
@@ -41663,7 +42560,7 @@
         o = a(33960),
         l = a.n(o),
         c = a(21384),
-        m = a(76489),
+        m = a(18645),
         d = a(68446),
         u = a(55651),
         _ = a(27866),
@@ -41689,16 +42586,16 @@
         ],
         T = new Map();
       T.set("ringmaster", "v5");
-      const C = new Map();
-      function I(e) {
+      const I = new Map();
+      function C(e) {
         const t = a(99769),
           r =
             -1 != navigator.userAgent.toLowerCase().indexOf("safari") &&
             -1 != navigator.userAgent.toLowerCase().indexOf("macintosh"),
-          n = C.has(e) && C.get(e);
+          n = I.has(e) && I.get(e);
         return (t || r) && n;
       }
-      C.set("ringmaster", !1);
+      I.set("ringmaster", !1);
       const N = (e) => {
           const t = e.heroname.split("npc_dota_hero_").pop();
           return t
@@ -41711,7 +42608,7 @@
                     e.portraitClassName,
                   ),
                 },
-                !I(t) &&
+                !C(t) &&
                   n.createElement(
                     "video",
                     {
@@ -41735,7 +42632,7 @@
                       src: `${r.r.VIDEO_URL}heroes/renders/${t}.png`,
                     }),
                   ),
-                I(t) &&
+                C(t) &&
                   n.createElement("img", {
                     className: (0, c.A)(l().HeroPortrait, e.videoClassName),
                     src: `${r.r.VIDEO_URL}heroes/renders/${t}.png`,
@@ -41968,7 +42865,7 @@
                     }),
                   ),
                 ),
-                n.createElement(A, { heroData: e }),
+                n.createElement(L, { heroData: e }),
               ),
             ),
           );
@@ -42033,7 +42930,7 @@
             n.createElement("div", { className: l().Line }),
           );
         },
-        A = ({ heroData: e }) =>
+        L = ({ heroData: e }) =>
           e
             ? n.createElement(
                 "div",
@@ -42304,7 +43201,7 @@
                 ),
               )
             : null,
-        L = ({ heroData: e }) =>
+        A = ({ heroData: e }) =>
           e
             ? n.createElement(
                 "div",
@@ -42598,18 +43495,18 @@
             )
           );
         },
-        O = ({ heroData: e }) =>
+        x = ({ heroData: e }) =>
           n.createElement(
             "div",
             { className: l().DetailsBar },
-            n.createElement(L, { heroData: e }),
+            n.createElement(A, { heroData: e }),
             n.createElement("div", { className: l().VerticalSeperator }),
             n.createElement(k, { heroData: e }),
             n.createElement("div", { className: l().VerticalSeperator }),
             n.createElement(G, { heroData: e }),
           ),
         W = new Map([["marci_pickmeup", "marci_companion_run_secondary"]]),
-        x = [
+        O = [
           "abilities/lich_death_charge",
           "abilities/necrolyte_sadist",
           "abilities/nevermore_necromastery",
@@ -43022,27 +43919,27 @@
                 : 3 == s.dispellable && (E = "#no");
           let w = s.desc_loc,
             T = s.scepter_loc,
-            C = s.shard_loc;
+            I = s.shard_loc;
           s.special_values.forEach((e) => {
             let t =
               e.values_float.length > 0 ? (0, y.F)(e.values_float[0]) : "0";
             if (e.values_shard.length > 0) {
               let t = e.values_shard[0].toString();
-              (C = C.replace(
+              (I = I.replace(
                 new RegExp("%" + e.name.toLowerCase() + "%", "g"),
                 t,
               )),
-                (C = C.replace(new RegExp("%" + e.name + "%", "g"), t)),
-                (C = C.replace(
+                (I = I.replace(new RegExp("%" + e.name + "%", "g"), t)),
+                (I = I.replace(
                   new RegExp("%bonus_" + e.name.toLowerCase() + "%", "g"),
                   t,
                 )),
-                (C = C.replace(new RegExp("%bonus_" + e.name + "%", "g"), t)),
-                (C = C.replace(
+                (I = I.replace(new RegExp("%bonus_" + e.name + "%", "g"), t)),
+                (I = I.replace(
                   new RegExp("%shard_" + e.name.toLowerCase() + "%", "g"),
                   t,
                 )),
-                (C = C.replace(new RegExp("%shard_" + e.name + "%", "g"), t));
+                (I = I.replace(new RegExp("%shard_" + e.name + "%", "g"), t));
             }
             if (e.values_scepter.length > 0) {
               let t = e.values_scepter[0].toString();
@@ -43070,34 +43967,34 @@
                 new RegExp("%" + e.name.toLowerCase() + "%", "g"),
                 t,
               )),
-              (C = C.replace(
+              (I = I.replace(
                 new RegExp("%" + e.name.toLowerCase() + "%", "g"),
                 t,
               )),
               (w = w.replace(new RegExp("%" + e.name + "%", "g"), t)),
               (T = T.replace(new RegExp("%" + e.name + "%", "g"), t)),
-              (C = C.replace(new RegExp("%" + e.name + "%", "g"), t));
+              (I = I.replace(new RegExp("%" + e.name + "%", "g"), t));
           }),
             (w = w.replace(/\%\%/g, "%")),
             (T = T.replace(/\%\%/g, "%")),
-            (C = C.replace(/\%\%/g, "%")),
+            (I = I.replace(/\%\%/g, "%")),
             (w = w.replace(/<h2>/g, "<b>")),
             (w = w.replace(/<\/h2>/g, "</b>")),
             (w = w.replace(/<h1>/g, "<b>")),
             (w = w.replace(/<\/h1>/g, "</b>\n\n"));
-          const I = e.name.replace("npc_dota_hero_", "");
+          const C = e.name.replace("npc_dota_hero_", "");
           let N = s.name;
-          b && (N = I + "_aghanims_shard"), v && (N = I + "_aghanims_scepter");
+          b && (N = C + "_aghanims_shard"), v && (N = C + "_aghanims_scepter");
           let B = w;
-          b && !s.ability_is_granted_by_shard && (B = C),
+          b && !s.ability_is_granted_by_shard && (B = I),
             v && !s.ability_is_granted_by_scepter && (B = T);
           const M = (e) => {
               m.o.setSelectedAbilityIndex(e), a(!0);
             },
             R = v && s.ability_has_scepter && !s.ability_is_granted_by_scepter,
             D = b && s.ability_has_shard && !s.ability_is_granted_by_shard,
-            A = v && s.ability_is_granted_by_scepter,
-            L = b && s.ability_is_granted_by_shard;
+            L = v && s.ability_is_granted_by_scepter,
+            A = b && s.ability_is_granted_by_shard;
           return n.createElement(
             "div",
             { className: l().HeroAbilities },
@@ -43121,15 +44018,15 @@
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
-                    poster: `${r.r.VIDEO_URL}abilities/${I}/${N}.jpg`,
+                    poster: `${r.r.VIDEO_URL}abilities/${C}/${N}.jpg`,
                   },
                   n.createElement("source", {
                     type: "video/webm",
-                    src: `${r.r.VIDEO_URL}abilities/${I}/${N}.webm`,
+                    src: `${r.r.VIDEO_URL}abilities/${C}/${N}.webm`,
                   }),
                   n.createElement("source", {
                     type: "video/mp4",
-                    src: `${r.r.VIDEO_URL}abilities/${I}/${N}.mp4`,
+                    src: `${r.r.VIDEO_URL}abilities/${C}/${N}.mp4`,
                   }),
                 ),
               ),
@@ -43246,13 +44143,13 @@
                         { className: l().AghType },
                         (0, _.Wn)("#ability_upgrade_shard"),
                       ),
-                    A &&
+                    L &&
                       n.createElement(
                         "div",
                         { className: l().AghType },
                         (0, _.Wn)("#ability_new_scepter"),
                       ),
-                    L &&
+                    A &&
                       n.createElement(
                         "div",
                         { className: l().AghType },
@@ -43674,12 +44571,12 @@
                 }),
                 n.createElement(M, { key: o?.id, heroData: o }),
                 n.createElement(D, { heroData: o }),
-                n.createElement(A, { heroData: o }),
+                n.createElement(L, { heroData: o }),
               ),
               n.createElement(
                 "div",
                 { className: l().DetailsBarContainer },
-                n.createElement(O, { heroData: o }),
+                n.createElement(x, { heroData: o }),
               ),
               n.createElement(
                 "div",
@@ -43709,9 +44606,9 @@
         O1: () => T,
         ZV: () => N,
         fX: () => R,
-        fs: () => C,
+        fs: () => I,
         ob: () => M,
-        wL: () => A,
+        wL: () => L,
       });
       var r = a(89506),
         n = a(7552),
@@ -43720,7 +44617,7 @@
         o = a(19783),
         l = a.n(o),
         c = a(21384),
-        m = a(76489),
+        m = a(18645),
         d = a(68446),
         u = a(55651),
         _ = a(27866),
@@ -43757,7 +44654,7 @@
             ),
           ),
         ),
-        C = (0, d.PA)(
+        I = (0, d.PA)(
           ({ patchnotes: e, headerClassName: t, notesListClassName: a }) =>
             n.createElement(
               "div",
@@ -43775,7 +44672,7 @@
               ),
               e?.map((e, t) => {
                 let r = e.generic?.map((e, t) =>
-                  n.createElement(I, { key: t, noteElement: e }),
+                  n.createElement(C, { key: t, noteElement: e }),
                 );
                 return n.createElement(
                   "div",
@@ -43797,7 +44694,7 @@
               }),
             ),
         ),
-        I = ({ noteElement: e }) => {
+        C = ({ noteElement: e }) => {
           let t = e.note;
           return (
             (t = t.replace(
@@ -43864,7 +44761,7 @@
                 e?.map((e, t) => {
                   if (e.is_general_note) {
                     let a = e.ability_notes?.map((e, t) =>
-                      n.createElement(I, { key: t, noteElement: e }),
+                      n.createElement(C, { key: t, noteElement: e }),
                     );
                     return n.createElement(
                       "div",
@@ -44505,7 +45402,7 @@
               ),
           );
         }),
-        A = (0, d.PA)(
+        L = (0, d.PA)(
           ({ patchnotes: e, headerClassName: t, notesListClassName: a }) =>
             n.createElement(
               "div",
@@ -44526,7 +45423,7 @@
                 e?.map((e, t) => {
                   if (e.is_general_note) {
                     let a = e.neutral_creep_notes?.map((e, t) =>
-                      n.createElement(I, { key: t, noteElement: e }),
+                      n.createElement(C, { key: t, noteElement: e }),
                     );
                     return n.createElement(
                       "div",
@@ -44539,7 +45436,7 @@
                       a,
                     );
                   }
-                  return n.createElement(L, {
+                  return n.createElement(A, {
                     key: "neutral_creep_" + t,
                     note: e,
                   });
@@ -44547,7 +45444,7 @@
               ),
             ),
         ),
-        L = (0, d.PA)(({ note: e }) =>
+        A = (0, d.PA)(({ note: e }) =>
           n.createElement(
             "div",
             { className: l().PatchNoteNeutralCreep },
@@ -44683,8 +45580,8 @@
                   },
                   (0, _.Wn)("#patchnotes_external"),
                 ),
-              n.createElement(C, { patchnotes: c?.general_notes }),
-              n.createElement(A, { patchnotes: c?.neutral_creeps }),
+              n.createElement(I, { patchnotes: c?.general_notes }),
+              n.createElement(L, { patchnotes: c?.neutral_creeps }),
               n.createElement(N, { patchnotes: c?.items }),
               n.createElement(N, {
                 patchnotes: c?.neutral_items,
@@ -44837,14 +45734,13 @@
       a.d(t, {
         DO: () => m,
         Lg: () => l,
-        iE: () => N,
+        iE: () => C,
         im: () => n,
         kF: () => i,
         ke: () => r,
         sf: () => c,
         ww: () => s,
         x6: () => o,
-        zm: () => v,
       });
       const r = 1,
         n = 4;
@@ -45066,7 +45962,7 @@
         }
         return !1;
       }
-      var d, u, _, p, g, h, E, b, v, f, y, S, w, T, C, I, N;
+      var d, u, _, p, g, h, E, b, v, f, y, S, w, T, I, C;
       !(function (e) {
         (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -45163,30 +46059,11 @@
               "k_EActivateGameOverlayToWebPageMode_Modal");
         })(b || (b = {})),
         (function (e) {
-          (e[(e.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (e[(e.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (e[(e.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (e[(e.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (e[(e.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (e[(e.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (e[(e.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
-        })(v || (v = {})),
-        (function (e) {
           (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
             (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
               "k_ELoginUIStyleNewWithoutQRCode"),
             (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-        })(f || (f = {})),
+        })(v || (v = {})),
         (function (e) {
           (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
             "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -45212,7 +46089,7 @@
               "k_ECommunityProfileItemProperty_MovieWebMSmall"),
             (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
               "k_ECommunityProfileItemProperty_MovieMP4Small");
-        })(y || (y = {})),
+        })(f || (f = {})),
         (function (e) {
           (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
             "k_ERaiseGameWindowResult_NotRunning"),
@@ -45220,14 +46097,14 @@
               "k_ERaiseGameWindowResult_Success"),
             (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
               "k_ERaiseGameWindowResult_Failure");
-        })(S || (S = {})),
+        })(y || (y = {})),
         (function (e) {
           (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
             (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
             (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
             (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
             (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-        })(w || (w = {})),
+        })(S || (S = {})),
         (function (e) {
           (e[(e.k_EAppReleaseState_Unknown = 0)] =
             "k_EAppReleaseState_Unknown"),
@@ -45241,13 +46118,13 @@
               "k_EAppReleaseState_Released"),
             (e[(e.k_EAppReleaseState_Disabled = 5)] =
               "k_EAppReleaseState_Disabled");
-        })(T || (T = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
             (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
             (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
             (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-        })(C || (C = {})),
+        })(T || (T = {})),
         (function (e) {
           (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
             (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -45288,7 +46165,7 @@
               "k_EWindowBringToFrontAndForceOS"),
             (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(N || (N = {}));
+        })(C || (C = {}));
     },
     80305: (e, t, a) => {
       "use strict";
@@ -45405,7 +46282,7 @@
             "flow-children": S,
             ...w
           } = e,
-          { elemProps: T, navOptions: C, gamepadEvents: I } = (0, s.sl)(w),
+          { elemProps: T, navOptions: I, gamepadEvents: C } = (0, s.sl)(w),
           { refDiv: N, tree: B } = (function (e) {
             const {
                 navID: t,
@@ -45461,10 +46338,10 @@
           });
         (0, r.hL)(B.OnActivateCallbacks, a),
           (0, r.hL)(B.OnDeactivateCallbacks, d),
-          (0, m.KF)(I, N, B),
+          (0, m.KF)(C, N, B),
           i.useLayoutEffect(() => {
             const e = (0, o.O)(S);
-            B.Root.SetProperties({ ...C, layout: e });
+            B.Root.SetProperties({ ...I, layout: e });
           });
         const M = (0, n.Ue)(N, E.ref);
         return i.createElement(
@@ -45568,7 +46445,7 @@
             i.current && document.activeElement == i.current,
         });
         const l = (function (e) {
-            const t = o.useRef(),
+            const t = o.useRef(void 0),
               a = o.useContext(g);
             t.current || (t.current = a(e || {}));
             return t.current;
@@ -45737,7 +46614,7 @@
             resetNavOnEntry: w,
             ...T
           } = e,
-          { gamepadEvents: C, actionDescriptions: I, props: N } = y(T);
+          { gamepadEvents: I, actionDescriptions: C, props: N } = y(T);
         return {
           elemProps: N,
           navOptions: {
@@ -45762,9 +46639,9 @@
             fnScrollIntoViewHandler: f,
             scrollIntoViewType: S,
             resetNavOnEntry: w,
-            actionDescriptionMap: { ..._, ...I },
+            actionDescriptionMap: { ..._, ...C },
           },
-          gamepadEvents: C,
+          gamepadEvents: I,
         };
       }
       function w(e) {
@@ -45806,15 +46683,15 @@
         };
       }
       const T = w("div");
-      function C(e) {
+      function I(e) {
         return (
           l.eZ.PlayNavSound(l.PN.DefaultOk),
           (0, c.kD)(e.currentTarget) && e.currentTarget.click(),
           !0
         );
       }
-      const I = o.createContext(void 0);
-      I.Provider;
+      const C = o.createContext(void 0);
+      C.Provider;
       function N(e, t, a, r, i) {
         const {
             elemProps: {
@@ -45836,13 +46713,13 @@
           { ref: w, node: T } = f({ layout: y, ..._ });
         g.onOKButton ||
           ((("onClick" in u && u.onClick) || (E && (!0 === E || E(u)))) &&
-            (g.onOKButton = C)),
+            (g.onOKButton = I)),
           _.focusable && !v
             ? (u.tabIndex = u.tabIndex || 0)
             : !_.focusable && v && (u.tabIndex = u.tabIndex ?? -1),
           (0, d.Ui)(g, w);
         const N = (0, n.Ue)(r, w),
-          B = (0, o.useContext)(I)?.Component;
+          B = (0, o.useContext)(C)?.Component;
         let M = { ...u };
         return (
           "onClick" in u && (M.role ??= "button"),
@@ -46029,24 +46906,24 @@
           T = (0, m.bJ)();
         (E.className = i()(E.className, "Panel", T && "Focusable")),
           (0, d.Ui)(v, S);
-        const C = (0, r.Ue)(S, t);
+        const I = (0, r.Ue)(S, t);
         (!b.focusable && !b.focusableIfNoChildren) ||
           (w && w.Tree.BUseVirtualFocus()) ||
           (E.tabIndex = E.tabIndex || 0),
           b.focusable && (n || v.onOKButton) && (E.role ??= "button");
-        const I = (0, s.useContext)(u).Component;
+        const C = (0, s.useContext)(u).Component;
         return s.createElement(
           o.TJ.Provider,
           { value: w },
           w
-            ? s.createElement(I, {
+            ? s.createElement(C, {
                 ...E,
-                divRef: C,
+                divRef: I,
                 node: w,
                 focusClassName: i()(p, "gpfocus"),
                 focusWithinClassName: i()(g, "gpfocuswithin"),
               })
-            : s.createElement("div", { ...E, ref: C }),
+            : s.createElement("div", { ...E, ref: I }),
         );
       });
     },
@@ -46693,8 +47570,8 @@
           }
         }
       }
-      const C = new c.wd("ScrollSnap").Debug;
-      let I = !1;
+      const I = new c.wd("ScrollSnap").Debug;
+      let C = !1;
       let N;
       function B(e) {
         if (!e) return { left: 0, top: 0, right: 0, bottom: 0 };
@@ -46715,7 +47592,7 @@
           r = r.offsetParent;
         }
         for (r = e?.parentElement; r; ) {
-          const { scrollTop: e, scrollLeft: n } = x(r);
+          const { scrollTop: e, scrollLeft: n } = O(r);
           if (((t -= e), (a -= n), "ownerDocument" in r)) {
             if ("fixed" === window.getComputedStyle(r).position) break;
           }
@@ -46754,7 +47631,7 @@
             ? parseInt(e)
             : (console.log("Unsupported length", e), 0);
       }
-      function A(e) {
+      function L(e) {
         if (!("ownerDocument" in e))
           return { left: 0, right: 0, top: 0, bottom: 0 };
         const t = e.ownerDocument.defaultView.getComputedStyle(e);
@@ -46765,7 +47642,7 @@
           bottom: D(t.scrollMarginBottom),
         };
       }
-      function L(e, t) {
+      function A(e, t) {
         let a = (function (e) {
           let t;
           return (
@@ -46794,10 +47671,10 @@
         return e > -1 && e < 1;
       }
       function k(e, t, a, r, n) {
-        C(
+        I(
           "----------------------------------------------------------------------------------",
         ),
-          C("Scrolling Into View:", t);
+          I("Scrolling Into View:", t);
         let i = [],
           s = t,
           o = B(t),
@@ -46805,12 +47682,12 @@
         for (; s; ) {
           let e = f(s);
           e || (e = v(s));
-          let t = A(s),
-            a = L(e, B(e)),
+          let t = L(s),
+            a = A(e, B(e)),
             c = W(e),
             m = { element: e, left: 0, top: 0 };
           if (
-            (C(
+            (I(
               "Checking scroll div",
               e,
               `scroll y:${c.scrollTop} of ${c.MaxScrollTop()}, x:${c.scrollLeft} of ${c.MaxScrollLeft()}, adjusted =>`,
@@ -46829,7 +47706,7 @@
               n &&
                 ((m.top = Math.min(l, Math.abs(m.top)) * (m.top < 0 ? -1 : 1)),
                 (l -= Math.abs(m.top))),
-              C(`- checked y: ${m.top}`)),
+              I(`- checked y: ${m.top}`)),
             (r && "x" != r) ||
               !y(e, "x") ||
               ((m.left = R(o, a, t, "x")),
@@ -46842,7 +47719,7 @@
                 ((m.left =
                   Math.min(l, Math.abs(m.left)) * (m.left < 0 ? -1 : 1)),
                 (l -= Math.abs(m.left))),
-              C(`- checked x: ${m.left}`)),
+              I(`- checked x: ${m.left}`)),
             i.push(m),
             n && !l)
           )
@@ -46868,8 +47745,8 @@
             (r = E.OQ(r, 0, t.MaxScrollTop())),
             (P(t.scrollLeft - n) && P(t.scrollTop - r)) ||
               (t.scrollTo({ left: n, top: r, behavior: a }),
-              c || (C("Scrolling:"), (c = !0)),
-              C(
+              c || (I("Scrolling:"), (c = !0)),
+              I(
                 `- ${e.top},${e.left} => ${r}, ${n}, behavior: ${a}`,
                 e.element,
               ));
@@ -46986,13 +47863,13 @@
         }
       }
       (0, r.Cg)([o.o], G.prototype, "ResetScrollState", null);
-      const O = new WeakMap();
+      const x = new WeakMap();
       function W(e) {
-        let t = O.get(e);
-        return t || ((t = new G(e)), O.set(e, t)), t;
+        let t = x.get(e);
+        return t || ((t = new G(e)), x.set(e, t)), t;
       }
-      function x(e) {
-        const t = O.get(e);
+      function O(e) {
+        const t = x.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -47815,7 +48692,7 @@
                 let { node: a, eScrollType: n } = r.pop(),
                   i = 0 == r.length;
                 if (
-                  (void 0 === n && (n = I ? j.NoTransform : j.Standard),
+                  (void 0 === n && (n = C ? j.NoTransform : j.Standard),
                   a?.m_Properties?.fnScrollIntoViewHandler &&
                     !1 !== a.m_Properties.fnScrollIntoViewHandler(e, t, a))
                 )
@@ -47833,7 +48710,7 @@
                     t.top > s.ownerDocument.defaultView.innerHeight + r) &&
                     ((a = !0),
                     n ||
-                      C(
+                      I(
                         `Disabling smooth scrolling, ${t.bottom} < ${-r}, ${t.top} > ${s.ownerDocument.defaultView.innerHeight} + ${r} `,
                       ));
                   let i = a ? "auto" : "smooth";
@@ -47843,7 +48720,7 @@
                       ? k(0, s, i)
                       : s.scrollIntoView({ behavior: i, block: "nearest" });
                 } else
-                  C("No previous element for scrolling, will jump"),
+                  I("No previous element for scrolling, will jump"),
                     o
                       ? k(0, s, "auto")
                       : s?.scrollIntoView({
@@ -49174,7 +50051,7 @@
                 });
       }
       function o(e, t) {
-        const a = r.useRef();
+        const a = r.useRef(void 0);
         return r.useCallback((t) => {
           a.current && a.current(), (a.current = e(t));
         }, t);
@@ -49309,9 +50186,9 @@
         r.k_EAccountFlagSupervisor;
       a(95848);
     },
-    48061: (e, t, a) => {
+    87037: (e, t, a) => {
       "use strict";
-      a.d(t, { W4: () => ki, j$: () => Wi, UT: () => Hi, z5: () => Gi });
+      a.d(t, { W4: () => Gi, j$: () => Oi, UT: () => qi, z5: () => xi });
       var r = a(75555),
         n = a.n(r),
         i = a(35927),
@@ -49415,7 +50292,7 @@
         S = a.n(y),
         w = a(42489),
         T = a(49773);
-      class C {
+      class I {
         constructor() {
           (0, w.Gn)(this);
         }
@@ -49482,16 +50359,16 @@
           );
         }
       }
-      (0, f.Cg)([w.sH], C.prototype, "m_mapYouTubeVideo", void 0),
-        (0, f.Cg)([w.sH], C.prototype, "m_mapSharedFile", void 0);
-      const I = new C();
+      (0, f.Cg)([w.sH], I.prototype, "m_mapYouTubeVideo", void 0),
+        (0, f.Cg)([w.sH], I.prototype, "m_mapSharedFile", void 0);
+      const C = new I();
       var N = a(41679),
         B = a(85552),
         M = a(50063),
         R = a(21384),
         D = a(68613);
-      var A,
-        L = a(80179),
+      var L,
+        A = a(80179),
         P = a(84576),
         k = a.n(P);
       function G(e) {
@@ -49514,7 +50391,7 @@
           });
         (0, c.useEffect)(() => {
           o &&
-            I.LoadYouTubeDynamicData([t], u)
+            C.LoadYouTubeDynamicData([t], u)
               .then((e) => {
                 !u.token.reason && e.length > 0 && (p(e[0]), d(!0));
               })
@@ -49524,7 +50401,7 @@
                 ),
               );
         }, [o, u, t]);
-        if (((0, L.VC)(a && !0), o)) {
+        if (((0, A.VC)(a && !0), o)) {
           const e = _.title,
             a = _.views,
             r = _.description;
@@ -49569,7 +50446,7 @@
           );
         }
         return c.createElement(
-          L.gZ,
+          A.gZ,
           { video: t },
           c.createElement(
             "div",
@@ -49580,7 +50457,7 @@
                 T.TS.COMMUNITY_CDN_URL +
                 "public/shared/images/responsive/youtube_16x9_placeholder.gif",
             }),
-            c.createElement(L.N1, {
+            c.createElement(A.N1, {
               video: t,
               autoplay: r ?? !1,
               startSeconds: n,
@@ -49592,10 +50469,10 @@
           ),
         );
       }
-      function O(e) {
+      function x(e) {
         return {
-          sizeStr: e == A.full ? P.sizeFull : P.sizeThumb,
-          alignStr: e == A.full ? "" : e == A.left ? P.floatLeft : P.floatRight,
+          sizeStr: e == L.full ? P.sizeFull : P.sizeThumb,
+          alignStr: e == L.full ? "" : e == L.left ? P.floatLeft : P.floatRight,
         };
       }
       !(function (e) {
@@ -49603,9 +50480,9 @@
           (e.right = "rightthumb"),
           (e.full = "full"),
           (e.summary = "summary");
-      })(A || (A = {}));
+      })(L || (L = {}));
       var W,
-        x = a(68446),
+        O = a(68446),
         F = a(73681),
         U = a(74679),
         z = a(82460),
@@ -51064,55 +51941,55 @@
           return "CCommunity_DeleteCommentFromThread_Request";
         }
       }
-      class Ce extends le.Message {
+      class Ie extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Ce.toObject(e, this);
+          return Ie.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new Ce();
+          return new Ie();
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Ce();
-          return Ce.deserializeBinaryFromReader(a, t);
+            a = new Ie();
+          return Ie.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Ce.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_DeleteCommentFromThread_Response";
         }
       }
-      class Ie extends le.Message {
+      class Ce extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ie.prototype.commentthreadtype || me.Sg(Ie.M()),
+            Ce.prototype.commentthreadtype || me.Sg(Ce.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Ie.sm_m ||
-              (Ie.sm_m = {
-                proto: Ie,
+            Ce.sm_m ||
+              (Ce.sm_m = {
+                proto: Ce,
                 fields: {
                   commentthreadtype: {
                     n: 1,
@@ -51147,39 +52024,39 @@
                   },
                 },
               }),
-            Ie.sm_m
+            Ce.sm_m
           );
         }
         static MBF() {
-          return Ie.sm_mbf || (Ie.sm_mbf = me.w0(Ie.M())), Ie.sm_mbf;
+          return Ce.sm_mbf || (Ce.sm_mbf = me.w0(Ce.M())), Ce.sm_mbf;
         }
         toObject(e = !1) {
-          return Ie.toObject(e, this);
+          return Ce.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(Ie.M(), e, t);
+          return me.BT(Ce.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(Ie.M(), e);
+          return me.Uq(Ce.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Ie();
-          return Ie.deserializeBinaryFromReader(a, t);
+            a = new Ce();
+          return Ce.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(Ie.MBF(), e, t);
+          return me.zj(Ce.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Ce.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(Ie.M(), e, t);
+          me.i0(Ce.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_RateCommentThread_Request";
@@ -51530,71 +52407,11 @@
           return "CCommunity_RateClanAnnouncement_Response";
         }
       }
-      class Ae extends le.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ae.prototype.announcementid || me.Sg(Ae.M()),
-            le.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ae.sm_m ||
-              (Ae.sm_m = {
-                proto: Ae,
-                fields: {
-                  announcementid: {
-                    n: 1,
-                    br: me.qM.readUint64String,
-                    bw: me.gp.writeUint64String,
-                  },
-                },
-              }),
-            Ae.sm_m
-          );
-        }
-        static MBF() {
-          return Ae.sm_mbf || (Ae.sm_mbf = me.w0(Ae.M())), Ae.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ae.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return me.BT(Ae.M(), e, t);
-        }
-        static fromObject(e) {
-          return me.Uq(Ae.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (ce().BinaryReader)(e),
-            a = new Ae();
-          return Ae.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return me.zj(Ae.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (ce().BinaryWriter)();
-          return Ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          me.i0(Ae.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (ce().BinaryWriter)();
-          return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetClanAnnouncementVoteForUser_Request";
-        }
-      }
       class Le extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Le.prototype.voted_up || me.Sg(Le.M()),
+            Le.prototype.announcementid || me.Sg(Le.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -51605,8 +52422,11 @@
               (Le.sm_m = {
                 proto: Le,
                 fields: {
-                  voted_up: { n: 1, br: me.qM.readBool, bw: me.gp.writeBool },
-                  voted_down: { n: 2, br: me.qM.readBool, bw: me.gp.writeBool },
+                  announcementid: {
+                    n: 1,
+                    br: me.qM.readUint64String,
+                    bw: me.gp.writeUint64String,
+                  },
                 },
               }),
             Le.sm_m
@@ -51642,6 +52462,63 @@
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
           return Le.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetClanAnnouncementVoteForUser_Request";
+        }
+      }
+      class Ae extends le.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ae.prototype.voted_up || me.Sg(Ae.M()),
+            le.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Ae.sm_m ||
+              (Ae.sm_m = {
+                proto: Ae,
+                fields: {
+                  voted_up: { n: 1, br: me.qM.readBool, bw: me.gp.writeBool },
+                  voted_down: { n: 2, br: me.qM.readBool, bw: me.gp.writeBool },
+                },
+              }),
+            Ae.sm_m
+          );
+        }
+        static MBF() {
+          return Ae.sm_mbf || (Ae.sm_mbf = me.w0(Ae.M())), Ae.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ae.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return me.BT(Ae.M(), e, t);
+        }
+        static fromObject(e) {
+          return me.Uq(Ae.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (ce().BinaryReader)(e),
+            a = new Ae();
+          return Ae.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return me.zj(Ae.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (ce().BinaryWriter)();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          me.i0(Ae.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (ce().BinaryWriter)();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_GetClanAnnouncementVoteForUser_Response";
@@ -51854,20 +52731,20 @@
           return "CCommunity_GetClanLocGroupImages_Response";
         }
       }
-      class Oe extends le.Message {
+      class xe extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Oe.prototype.steamid || me.Sg(Oe.M()),
+            xe.prototype.steamid || me.Sg(xe.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Oe.sm_m ||
-              (Oe.sm_m = {
-                proto: Oe,
+            xe.sm_m ||
+              (xe.sm_m = {
+                proto: xe,
                 fields: {
                   steamid: {
                     n: 1,
@@ -51881,39 +52758,39 @@
                   },
                 },
               }),
-            Oe.sm_m
+            xe.sm_m
           );
         }
         static MBF() {
-          return Oe.sm_mbf || (Oe.sm_mbf = me.w0(Oe.M())), Oe.sm_mbf;
+          return xe.sm_mbf || (xe.sm_mbf = me.w0(xe.M())), xe.sm_mbf;
         }
         toObject(e = !1) {
-          return Oe.toObject(e, this);
+          return xe.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(Oe.M(), e, t);
+          return me.BT(xe.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(Oe.M(), e);
+          return me.Uq(xe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Oe();
-          return Oe.deserializeBinaryFromReader(a, t);
+            a = new xe();
+          return xe.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(Oe.MBF(), e, t);
+          return me.zj(xe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(Oe.M(), e, t);
+          me.i0(xe.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_GetAvatarHistory_Request";
@@ -51933,7 +52810,7 @@
             We.sm_m ||
               (We.sm_m = {
                 proto: We,
-                fields: { avatars: { n: 1, c: xe, r: !0, q: !0 } },
+                fields: { avatars: { n: 1, c: Oe, r: !0, q: !0 } },
               }),
             We.sm_m
           );
@@ -51973,20 +52850,20 @@
           return "CCommunity_GetAvatarHistory_Response";
         }
       }
-      class xe extends le.Message {
+      class Oe extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xe.prototype.avatar_sha1 || me.Sg(xe.M()),
+            Oe.prototype.avatar_sha1 || me.Sg(Oe.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            xe.sm_m ||
-              (xe.sm_m = {
-                proto: xe,
+            Oe.sm_m ||
+              (Oe.sm_m = {
+                proto: Oe,
                 fields: {
                   avatar_sha1: {
                     n: 1,
@@ -52005,39 +52882,39 @@
                   },
                 },
               }),
-            xe.sm_m
+            Oe.sm_m
           );
         }
         static MBF() {
-          return xe.sm_mbf || (xe.sm_mbf = me.w0(xe.M())), xe.sm_mbf;
+          return Oe.sm_mbf || (Oe.sm_mbf = me.w0(Oe.M())), Oe.sm_mbf;
         }
         toObject(e = !1) {
-          return xe.toObject(e, this);
+          return Oe.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(xe.M(), e, t);
+          return me.BT(Oe.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(xe.M(), e);
+          return me.Uq(Oe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new xe();
-          return xe.deserializeBinaryFromReader(a, t);
+            a = new Oe();
+          return Oe.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(xe.MBF(), e, t);
+          return me.zj(Oe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(xe.M(), e, t);
+          me.i0(Oe.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_GetAvatarHistory_Response_AvatarData";
@@ -53998,14 +54875,14 @@
             return e.SendMsg(
               "Community.DeleteCommentFromThread#1",
               (0, oe.I8)(Te, t),
-              Ce,
+              Ie,
               { ePrivilege: 1 },
             );
           }),
           (e.RateCommentThread = function (e, t) {
             return e.SendMsg(
               "Community.RateCommentThread#1",
-              (0, oe.I8)(Ie, t),
+              (0, oe.I8)(Ce, t),
               Ne,
               { ePrivilege: 3 },
             );
@@ -54029,8 +54906,8 @@
           (e.GetClanAnnouncementVoteForUser = function (e, t) {
             return e.SendMsg(
               "Community.GetClanAnnouncementVoteForUser#1",
-              (0, oe.I8)(Ae, t),
-              Le,
+              (0, oe.I8)(Le, t),
+              Ae,
               { ePrivilege: 1 },
             );
           }),
@@ -54045,7 +54922,7 @@
           (e.GetAvatarHistory = function (e, t) {
             return e.SendMsg(
               "Community.GetAvatarHistory#1",
-              (0, oe.I8)(Oe, t),
+              (0, oe.I8)(xe, t),
               We,
               { ePrivilege: 1 },
             );
@@ -54298,7 +55175,7 @@
             (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
             (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
         })(Tt || (Tt = {}));
-      class Ct {
+      class It {
         constructor() {
           (0, w.Gn)(this);
         }
@@ -54312,25 +55189,25 @@
         static Get() {
           return (
             (0, $.wT)(
-              !!Ct.s_EventUserStore,
+              !!It.s_EventUserStore,
               "Have not yet initialized global EventUserStore",
             ),
-            Ct.s_EventUserStore
+            It.s_EventUserStore
           );
         }
         static IsInitialized() {
-          return !!Ct.s_EventUserStore;
+          return !!It.s_EventUserStore;
         }
         static async InitGlobal(e) {
-          if (!Ct.s_EventUserStore) {
-            const t = new Ct();
+          if (!It.s_EventUserStore) {
+            const t = new It();
             await t.Init(e),
-              (Ct.s_EventUserStore = t),
+              (It.s_EventUserStore = t),
               "dev" == T.TS.WEB_UNIVERSE && (window.g_EventUserStore = t);
           }
         }
         static BIsInited() {
-          return Boolean(Ct.s_EventUserStore);
+          return Boolean(It.s_EventUserStore);
         }
         async Init(e) {
           (this.m_cm = e), (this.m_tracker = new yt(e));
@@ -54339,7 +55216,7 @@
             ((0, w.h5)(() => {
               t.forEach((e) => {
                 let t = new wt(e.clanid),
-                  a = { result: t, promise: Ct.RemapToPromise(t), bLoaded: !0 };
+                  a = { result: t, promise: It.RemapToPromise(t), bLoaded: !0 };
                 this.CopyFromResponseToTrack(a, e),
                   this.m_mapClanToUserPermissions.set(e.clanid, a);
               });
@@ -54475,7 +55352,7 @@
             let t = new wt(e.GetAccountID());
             this.m_mapClanToUserPermissions.set(a, {
               result: t,
-              promise: Ct.RemapToPromise(t),
+              promise: It.RemapToPromise(t),
               bLoaded: !1,
             });
           }
@@ -54649,7 +55526,7 @@
               return this.m_mapAnnounceGIDToVote.get(e.AnnouncementGID);
             let a;
             if (this.m_cm) {
-              let t = oe.w.Init(Ae);
+              let t = oe.w.Init(Le);
               t.Body().set_announcementid(e.AnnouncementGID);
               let r = await se.GetClanAnnouncementVoteForUser(
                 this.m_cm.GetServiceTransport(),
@@ -54710,11 +55587,11 @@
           );
         }
       }
-      (0, f.Cg)([w.sH], Ct.prototype, "m_mapClanToUserPermissions", void 0),
-        (0, f.Cg)([w.sH], Ct.prototype, "m_mapAnnounceGIDToVote", void 0),
-        (0, f.Cg)([w.sH], Ct.prototype, "m_setReadEventGIDs", void 0),
-        (0, f.Cg)([w.XI], Ct.prototype, "CopyFromResponseToTrack", null);
-      class It {
+      (0, f.Cg)([w.sH], It.prototype, "m_mapClanToUserPermissions", void 0),
+        (0, f.Cg)([w.sH], It.prototype, "m_mapAnnounceGIDToVote", void 0),
+        (0, f.Cg)([w.sH], It.prototype, "m_setReadEventGIDs", void 0),
+        (0, f.Cg)([w.XI], It.prototype, "CopyFromResponseToTrack", null);
+      class Ct {
         constructor() {
           (0, w.Gn)(this);
         }
@@ -54776,15 +55653,15 @@
           );
         }
       }
-      (0, f.Cg)([w.sH], It.prototype, "m_bValidatedEmail", void 0),
-        (0, f.Cg)([w.sH], It.prototype, "m_nMobileDeviceCount", void 0);
-      let Nt = new It();
+      (0, f.Cg)([w.sH], Ct.prototype, "m_bValidatedEmail", void 0),
+        (0, f.Cg)([w.sH], Ct.prototype, "m_nMobileDeviceCount", void 0);
+      let Nt = new Ct();
       var Bt = a(23684),
         Mt = a(53179),
         Rt = a(92225),
         Dt = a(2001),
-        At = a(99377),
-        Lt = a.n(At);
+        Lt = a(99377),
+        At = a.n(Lt);
       const Pt = a(64435);
       function kt(e, t) {
         const a = Pt.tz.guess(),
@@ -54806,7 +55683,7 @@
           )
         );
       }
-      const Gt = (0, x.PA)((e) => {
+      const Gt = (0, O.PA)((e) => {
           const {
               dateAndTime: t,
               bSingleLine: a,
@@ -54816,7 +55693,7 @@
             i = !r && Boolean(t),
             s = !n && Boolean(t),
             o = i && (0, D.TW)(t),
-            l = e.stylesmodule ? { ...Lt(), ...e.stylesmodule } : Lt();
+            l = e.stylesmodule ? { ...At(), ...e.stylesmodule } : At();
           return a
             ? c.createElement(
                 "span",
@@ -54847,7 +55724,7 @@
                 ),
               );
         }),
-        Ot = (e) => {
+        xt = (e) => {
           const t = c.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
@@ -54872,8 +55749,8 @@
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             a = this.props.stylesmodule
-              ? { ...Lt(), ...this.props.stylesmodule }
-              : Lt();
+              ? { ...At(), ...this.props.stylesmodule }
+              : At();
           let r =
             this.props.bHideEndTime ||
             null == this.props.endDateAndTime ||
@@ -54968,8 +55845,8 @@
           );
         }
       };
-      Wt = (0, f.Cg)([x.PA], Wt);
-      let xt = class extends c.Component {
+      Wt = (0, f.Cg)([O.PA], Wt);
+      let Ot = class extends c.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -54977,8 +55854,8 @@
               bHideEndTime: a,
             } = this.props,
             r = this.props.stylesmodule
-              ? { ...Lt(), ...this.props.stylesmodule }
-              : Lt();
+              ? { ...At(), ...this.props.stylesmodule }
+              : At();
           if (null == e || 0 == e)
             return c.createElement(
               "div",
@@ -54999,7 +55876,7 @@
               (0, D.TW)(e, s),
             );
           let l = c.createElement(
-            Ot,
+            xt,
             { rtFullDate: e, stylesmodule: r },
             c.createElement(
               "div",
@@ -55016,7 +55893,7 @@
             (i < e &&
               e < i + Dt.Kp.PerWeek &&
               (l = c.createElement(
-                Ot,
+                xt,
                 { rtFullDate: e, stylesmodule: r },
                 c.createElement(
                   "div",
@@ -55039,7 +55916,7 @@
           const m = e <= i && i <= t;
           m &&
             (l = c.createElement(
-              Ot,
+              xt,
               { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
               c.createElement(
                 "span",
@@ -55094,11 +55971,11 @@
               ),
             );
           }
-          const _ = c.createElement(Ot, { rtFullDate: t, stylesmodule: r }, d);
+          const _ = c.createElement(xt, { rtFullDate: t, stylesmodule: r }, d);
           return c.createElement("div", { className: r.ShortDateRange }, l, _);
         }
       };
-      xt = (0, f.Cg)([x.PA], xt);
+      Ot = (0, f.Cg)([O.PA], Ot);
       var Ft = a(89790),
         Ut = a(29028),
         zt = a(84229),
@@ -55540,20 +56417,20 @@
           return "CAuthentication_GetPasswordRSAPublicKey_Response";
         }
       }
-      class Ca extends le.Message {
+      class Ia extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ca.prototype.device_friendly_name || me.Sg(Ca.M()),
+            Ia.prototype.device_friendly_name || me.Sg(Ia.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Ca.sm_m ||
-              (Ca.sm_m = {
-                proto: Ca,
+            Ia.sm_m ||
+              (Ia.sm_m = {
+                proto: Ia,
                 fields: {
                   device_friendly_name: {
                     n: 1,
@@ -55582,71 +56459,6 @@
                     bw: me.gp.writeBytes,
                   },
                   app_type: { n: 7, br: me.qM.readEnum, bw: me.gp.writeEnum },
-                },
-              }),
-            Ca.sm_m
-          );
-        }
-        static MBF() {
-          return Ca.sm_mbf || (Ca.sm_mbf = me.w0(Ca.M())), Ca.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ca.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return me.BT(Ca.M(), e, t);
-        }
-        static fromObject(e) {
-          return me.Uq(Ca.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (ce().BinaryReader)(e),
-            a = new Ca();
-          return Ca.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return me.zj(Ca.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (ce().BinaryWriter)();
-          return Ca.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          me.i0(Ca.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (ce().BinaryWriter)();
-          return Ca.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_DeviceDetails";
-        }
-      }
-      class Ia extends le.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ia.prototype.confirmation_type || me.Sg(Ia.M()),
-            le.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ia.sm_m ||
-              (Ia.sm_m = {
-                proto: Ia,
-                fields: {
-                  confirmation_type: {
-                    n: 1,
-                    br: me.qM.readEnum,
-                    bw: me.gp.writeEnum,
-                  },
-                  associated_message: {
-                    n: 2,
-                    br: me.qM.readString,
-                    bw: me.gp.writeString,
-                  },
                 },
               }),
             Ia.sm_m
@@ -55684,6 +56496,71 @@
           return Ia.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CAuthentication_DeviceDetails";
+        }
+      }
+      class Ca extends le.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ca.prototype.confirmation_type || me.Sg(Ca.M()),
+            le.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Ca.sm_m ||
+              (Ca.sm_m = {
+                proto: Ca,
+                fields: {
+                  confirmation_type: {
+                    n: 1,
+                    br: me.qM.readEnum,
+                    bw: me.gp.writeEnum,
+                  },
+                  associated_message: {
+                    n: 2,
+                    br: me.qM.readString,
+                    bw: me.gp.writeString,
+                  },
+                },
+              }),
+            Ca.sm_m
+          );
+        }
+        static MBF() {
+          return Ca.sm_mbf || (Ca.sm_mbf = me.w0(Ca.M())), Ca.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ca.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return me.BT(Ca.M(), e, t);
+        }
+        static fromObject(e) {
+          return me.Uq(Ca.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (ce().BinaryReader)(e),
+            a = new Ca();
+          return Ca.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return me.zj(Ca.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (ce().BinaryWriter)();
+          return Ca.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          me.i0(Ca.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (ce().BinaryWriter)();
+          return Ca.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CAuthentication_AllowedConfirmation";
         }
       }
@@ -55712,7 +56589,7 @@
                     br: me.qM.readEnum,
                     bw: me.gp.writeEnum,
                   },
-                  device_details: { n: 3, c: Ca },
+                  device_details: { n: 3, c: Ia },
                   website_id: {
                     n: 4,
                     d: "Unknown",
@@ -55790,7 +56667,7 @@
                     bw: me.gp.writeBytes,
                   },
                   interval: { n: 4, br: me.qM.readFloat, bw: me.gp.writeFloat },
-                  allowed_confirmations: { n: 5, c: Ia, r: !0, q: !0 },
+                  allowed_confirmations: { n: 5, c: Ca, r: !0, q: !0 },
                   version: { n: 6, br: me.qM.readInt32, bw: me.gp.writeInt32 },
                 },
               }),
@@ -55889,7 +56766,7 @@
                     br: me.qM.readString,
                     bw: me.gp.writeString,
                   },
-                  device_details: { n: 9, c: Ca },
+                  device_details: { n: 9, c: Ia },
                   guard_data: {
                     n: 10,
                     br: me.qM.readString,
@@ -55972,7 +56849,7 @@
                     bw: me.gp.writeBytes,
                   },
                   interval: { n: 3, br: me.qM.readFloat, bw: me.gp.writeFloat },
-                  allowed_confirmations: { n: 4, c: Ia, r: !0, q: !0 },
+                  allowed_confirmations: { n: 4, c: Ca, r: !0, q: !0 },
                   steamid: {
                     n: 5,
                     br: me.qM.readUint64String,
@@ -56103,20 +56980,20 @@
           return "CAuthentication_PollAuthSessionStatus_Request";
         }
       }
-      class Aa extends le.Message {
+      class La extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Aa.prototype.new_client_id || me.Sg(Aa.M()),
+            La.prototype.new_client_id || me.Sg(La.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Aa.sm_m ||
-              (Aa.sm_m = {
-                proto: Aa,
+            La.sm_m ||
+              (La.sm_m = {
+                proto: La,
                 fields: {
                   new_client_id: {
                     n: 1,
@@ -56160,66 +57037,6 @@
                   },
                 },
               }),
-            Aa.sm_m
-          );
-        }
-        static MBF() {
-          return Aa.sm_mbf || (Aa.sm_mbf = me.w0(Aa.M())), Aa.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Aa.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return me.BT(Aa.M(), e, t);
-        }
-        static fromObject(e) {
-          return me.Uq(Aa.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (ce().BinaryReader)(e),
-            a = new Aa();
-          return Aa.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return me.zj(Aa.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (ce().BinaryWriter)();
-          return Aa.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          me.i0(Aa.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (ce().BinaryWriter)();
-          return Aa.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthentication_PollAuthSessionStatus_Response";
-        }
-      }
-      class La extends le.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            La.prototype.client_id || me.Sg(La.M()),
-            le.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            La.sm_m ||
-              (La.sm_m = {
-                proto: La,
-                fields: {
-                  client_id: {
-                    n: 1,
-                    br: me.qM.readUint64String,
-                    bw: me.gp.writeUint64String,
-                  },
-                },
-              }),
             La.sm_m
           );
         }
@@ -56253,6 +57070,66 @@
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
           return La.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthentication_PollAuthSessionStatus_Response";
+        }
+      }
+      class Aa extends le.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Aa.prototype.client_id || me.Sg(Aa.M()),
+            le.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Aa.sm_m ||
+              (Aa.sm_m = {
+                proto: Aa,
+                fields: {
+                  client_id: {
+                    n: 1,
+                    br: me.qM.readUint64String,
+                    bw: me.gp.writeUint64String,
+                  },
+                },
+              }),
+            Aa.sm_m
+          );
+        }
+        static MBF() {
+          return Aa.sm_mbf || (Aa.sm_mbf = me.w0(Aa.M())), Aa.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Aa.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return me.BT(Aa.M(), e, t);
+        }
+        static fromObject(e) {
+          return me.Uq(Aa.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (ce().BinaryReader)(e),
+            a = new Aa();
+          return Aa.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return me.zj(Aa.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (ce().BinaryWriter)();
+          return Aa.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          me.i0(Aa.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (ce().BinaryWriter)();
+          return Aa.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_GetAuthSessionInfo_Request";
@@ -56499,20 +57376,20 @@
           return "CAuthentication_GetAuthSessionRiskInfo_Response";
         }
       }
-      class Oa extends le.Message {
+      class xa extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Oa.prototype.client_id || me.Sg(Oa.M()),
+            xa.prototype.client_id || me.Sg(xa.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Oa.sm_m ||
-              (Oa.sm_m = {
-                proto: Oa,
+            xa.sm_m ||
+              (xa.sm_m = {
+                proto: xa,
                 fields: {
                   client_id: {
                     n: 1,
@@ -56532,39 +57409,39 @@
                   },
                 },
               }),
-            Oa.sm_m
+            xa.sm_m
           );
         }
         static MBF() {
-          return Oa.sm_mbf || (Oa.sm_mbf = me.w0(Oa.M())), Oa.sm_mbf;
+          return xa.sm_mbf || (xa.sm_mbf = me.w0(xa.M())), xa.sm_mbf;
         }
         toObject(e = !1) {
-          return Oa.toObject(e, this);
+          return xa.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(Oa.M(), e, t);
+          return me.BT(xa.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(Oa.M(), e);
+          return me.Uq(xa.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Oa();
-          return Oa.deserializeBinaryFromReader(a, t);
+            a = new xa();
+          return xa.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(Oa.MBF(), e, t);
+          return me.zj(xa.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Oa.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return xa.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(Oa.M(), e, t);
+          me.i0(xa.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Oa.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return xa.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_NotifyRiskQuizResults_Notification";
@@ -56628,36 +57505,36 @@
           return "CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults";
         }
       }
-      class xa extends le.Message {
+      class Oa extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return xa.toObject(e, this);
+          return Oa.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new xa();
+          return new Oa();
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new xa();
-          return xa.deserializeBinaryFromReader(a, t);
+            a = new Oa();
+          return Oa.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return xa.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Oa.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return xa.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Oa.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_GetAuthSessionsForAccount_Request";
@@ -58850,14 +59727,14 @@
             return e.SendMsg(
               "Authentication.PollAuthSessionStatus#1",
               (0, oe.I8)(Da, t),
-              Aa,
+              La,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetAuthSessionInfo = function (e, t) {
             return e.SendMsg(
               "Authentication.GetAuthSessionInfo#1",
-              (0, oe.I8)(La, t),
+              (0, oe.I8)(Aa, t),
               Pa,
               { ePrivilege: 1 },
             );
@@ -58873,7 +59750,7 @@
           (e.NotifyRiskQuizResults = function (e, t) {
             return e.SendNotification(
               "Authentication.NotifyRiskQuizResults#1",
-              (0, oe.I8)(Oa, t),
+              (0, oe.I8)(xa, t),
               { ePrivilege: 1 },
             );
           }),
@@ -58912,7 +59789,7 @@
           (e.GetAuthSessionsForAccount = function (e, t) {
             return e.SendMsg(
               "Authentication.GetAuthSessionsForAccount#1",
-              (0, oe.I8)(xa, t),
+              (0, oe.I8)(Oa, t),
               Fa,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -59147,7 +60024,7 @@
         }
         async GetDeviceDetails() {
           const e = await this.m_onDeviceDetailsCallback();
-          return Ca.fromObject(e);
+          return Ia.fromObject(e);
         }
       }
       function Sr(e) {
@@ -59238,21 +60115,21 @@
         (0, f.Cg)([ft.o], yr.prototype, "SetTokenToRevoke", null);
       var wr,
         Tr = a(4496),
-        Cr = a(89993);
-      class Ir extends le.Message {
+        Ir = a(89993);
+      class Cr extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ir.prototype.time || me.Sg(Ir.M()),
+            Cr.prototype.time || me.Sg(Cr.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Ir.sm_m ||
-              (Ir.sm_m = {
-                proto: Ir,
+            Cr.sm_m ||
+              (Cr.sm_m = {
+                proto: Cr,
                 fields: {
                   time: { n: 1, br: me.qM.readUint32, bw: me.gp.writeUint32 },
                   usage_type: { n: 2, br: me.qM.readEnum, bw: me.gp.writeEnum },
@@ -59268,39 +60145,39 @@
                   },
                 },
               }),
-            Ir.sm_m
+            Cr.sm_m
           );
         }
         static MBF() {
-          return Ir.sm_mbf || (Ir.sm_mbf = me.w0(Ir.M())), Ir.sm_mbf;
+          return Cr.sm_mbf || (Cr.sm_mbf = me.w0(Cr.M())), Cr.sm_mbf;
         }
         toObject(e = !1) {
-          return Ir.toObject(e, this);
+          return Cr.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(Ir.M(), e, t);
+          return me.BT(Cr.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(Ir.M(), e);
+          return me.Uq(Cr.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Ir();
-          return Ir.deserializeBinaryFromReader(a, t);
+            a = new Cr();
+          return Cr.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(Ir.MBF(), e, t);
+          return me.zj(Cr.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Ir.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Cr.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(Ir.M(), e, t);
+          me.i0(Cr.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Ir.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Cr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_UsageEvent";
@@ -59613,7 +60490,7 @@
                     br: me.qM.readFixed64String,
                     bw: me.gp.writeFixed64String,
                   },
-                  usages: { n: 16, c: Ir, r: !0, q: !0 },
+                  usages: { n: 16, c: Cr, r: !0, q: !0 },
                 },
               }),
             Rr.sm_m
@@ -59747,20 +60624,20 @@
           return "CTwoFactor_AddAuthenticator_Request";
         }
       }
-      class Ar extends le.Message {
+      class Lr extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ar.prototype.shared_secret || me.Sg(Ar.M()),
+            Lr.prototype.shared_secret || me.Sg(Lr.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Ar.sm_m ||
-              (Ar.sm_m = {
-                proto: Ar,
+            Lr.sm_m ||
+              (Lr.sm_m = {
+                proto: Lr,
                 fields: {
                   shared_secret: {
                     n: 1,
@@ -59812,58 +60689,58 @@
                   },
                 },
               }),
-            Ar.sm_m
+            Lr.sm_m
           );
         }
         static MBF() {
-          return Ar.sm_mbf || (Ar.sm_mbf = me.w0(Ar.M())), Ar.sm_mbf;
+          return Lr.sm_mbf || (Lr.sm_mbf = me.w0(Lr.M())), Lr.sm_mbf;
         }
         toObject(e = !1) {
-          return Ar.toObject(e, this);
+          return Lr.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(Ar.M(), e, t);
+          return me.BT(Lr.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(Ar.M(), e);
+          return me.Uq(Lr.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Ar();
-          return Ar.deserializeBinaryFromReader(a, t);
+            a = new Lr();
+          return Lr.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(Ar.MBF(), e, t);
+          return me.zj(Lr.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Ar.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Lr.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(Ar.M(), e, t);
+          me.i0(Lr.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Ar.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Lr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_AddAuthenticator_Response";
         }
       }
-      class Lr extends le.Message {
+      class Ar extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Lr.prototype.steamid || me.Sg(Lr.M()),
+            Ar.prototype.steamid || me.Sg(Ar.M()),
             le.Message.initialize(this, e, 0, -1, [5], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Lr.sm_m ||
-              (Lr.sm_m = {
-                proto: Lr,
+            Ar.sm_m ||
+              (Ar.sm_m = {
+                proto: Ar,
                 fields: {
                   steamid: {
                     n: 1,
@@ -59899,39 +60776,39 @@
                   },
                 },
               }),
-            Lr.sm_m
+            Ar.sm_m
           );
         }
         static MBF() {
-          return Lr.sm_mbf || (Lr.sm_mbf = me.w0(Lr.M())), Lr.sm_mbf;
+          return Ar.sm_mbf || (Ar.sm_mbf = me.w0(Ar.M())), Ar.sm_mbf;
         }
         toObject(e = !1) {
-          return Lr.toObject(e, this);
+          return Ar.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(Lr.M(), e, t);
+          return me.BT(Ar.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(Lr.M(), e);
+          return me.Uq(Ar.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Lr();
-          return Lr.deserializeBinaryFromReader(a, t);
+            a = new Ar();
+          return Ar.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(Lr.MBF(), e, t);
+          return me.zj(Ar.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Lr.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Ar.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(Lr.M(), e, t);
+          me.i0(Ar.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Lr.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Ar.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_FinalizeAddAuthenticator_Request";
@@ -60140,36 +61017,36 @@
           return "CTwoFactor_RemoveAuthenticator_Response";
         }
       }
-      class Or extends le.Message {
+      class xr extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Or.toObject(e, this);
+          return xr.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new Or();
+          return new xr();
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new Or();
-          return Or.deserializeBinaryFromReader(a, t);
+            a = new xr();
+          return xr.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return Or.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return xr.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return Or.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return xr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_RemoveAuthenticatorViaChallengeStart_Request";
@@ -60231,20 +61108,20 @@
           return "CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response";
         }
       }
-      class xr extends le.Message {
+      class Or extends le.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xr.prototype.sms_code || me.Sg(xr.M()),
+            Or.prototype.sms_code || me.Sg(Or.M()),
             le.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            xr.sm_m ||
-              (xr.sm_m = {
-                proto: xr,
+            Or.sm_m ||
+              (Or.sm_m = {
+                proto: Or,
                 fields: {
                   sms_code: {
                     n: 1,
@@ -60264,39 +61141,39 @@
                   },
                 },
               }),
-            xr.sm_m
+            Or.sm_m
           );
         }
         static MBF() {
-          return xr.sm_mbf || (xr.sm_mbf = me.w0(xr.M())), xr.sm_mbf;
+          return Or.sm_mbf || (Or.sm_mbf = me.w0(Or.M())), Or.sm_mbf;
         }
         toObject(e = !1) {
-          return xr.toObject(e, this);
+          return Or.toObject(e, this);
         }
         static toObject(e, t) {
-          return me.BT(xr.M(), e, t);
+          return me.BT(Or.M(), e, t);
         }
         static fromObject(e) {
-          return me.Uq(xr.M(), e);
+          return me.Uq(Or.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (ce().BinaryReader)(e),
-            a = new xr();
-          return xr.deserializeBinaryFromReader(a, t);
+            a = new Or();
+          return Or.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return me.zj(xr.MBF(), e, t);
+          return me.zj(Or.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (ce().BinaryWriter)();
-          return xr.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Or.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          me.i0(xr.M(), e, t);
+          me.i0(Or.M(), e, t);
         }
         serializeBase64String() {
           var e = new (ce().BinaryWriter)();
-          return xr.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Or.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request";
@@ -60583,14 +61460,14 @@
             return e.SendMsg(
               "TwoFactor.AddAuthenticator#1",
               (0, oe.I8)(Dr, t),
-              Ar,
+              Lr,
               { ePrivilege: 1 },
             );
           }),
           (e.FinalizeAddAuthenticator = function (e, t) {
             return e.SendMsg(
               "TwoFactor.FinalizeAddAuthenticator#1",
-              (0, oe.I8)(Lr, t),
+              (0, oe.I8)(Ar, t),
               Pr,
               { ePrivilege: 1 },
             );
@@ -60614,7 +61491,7 @@
           (e.RemoveAuthenticatorViaChallengeStart = function (e, t) {
             return e.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
-              (0, oe.I8)(Or, t),
+              (0, oe.I8)(xr, t),
               Wr,
               { ePrivilege: 9 },
             );
@@ -60622,7 +61499,7 @@
           (e.RemoveAuthenticatorViaChallengeContinue = function (e, t) {
             return e.SendMsg(
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
-              (0, oe.I8)(xr, t),
+              (0, oe.I8)(Or, t),
               Ur,
               { ePrivilege: 9 },
             );
@@ -61002,12 +61879,12 @@
           this.m_eStatus = 7;
         }
         async StartMoveAuthenticator() {
-          this.m_weakAuthWebInterface = new Cr.D(
+          this.m_weakAuthWebInterface = new Ir.D(
             T.TS.WEBAPI_BASE_URL,
             this.m_strWeakAuthToken,
           );
           try {
-            const e = oe.w.Init(Or),
+            const e = oe.w.Init(xr),
               t = await wr.RemoveAuthenticatorViaChallengeStart(
                 this.m_weakAuthWebInterface.GetServiceTransport(),
                 e,
@@ -61029,7 +61906,7 @@
           }
         }
         async ResendMoveCode() {
-          const e = oe.w.Init(Or),
+          const e = oe.w.Init(xr),
             t = await wr.RemoveAuthenticatorViaChallengeStart(
               this.m_weakAuthWebInterface.GetServiceTransport(),
               e,
@@ -61043,7 +61920,7 @@
             (this.m_eStatus = 8);
         }
         async FinishMoveAuthenticator(e) {
-          const t = oe.w.Init(xr);
+          const t = oe.w.Init(Or);
           t.Body().set_sms_code(e),
             t.Body().set_generate_new_token(!0),
             t.Body().set_version(2);
@@ -61566,7 +62443,7 @@
             c.createElement(
               "div",
               { className: Jr().Login },
-              c.createElement(Cn, { ...r }),
+              c.createElement(In, { ...r }),
               a,
             ),
           ),
@@ -61650,9 +62527,7 @@
           device_friendly_name: t,
           machine_id: a,
           platform_type: 1,
-          gaming_device_type: T.TS.ON_DECK
-            ? i.zm.k_EGamingDeviceType_SteamDeck
-            : i.zm.k_EGamingDeviceType_StandardPC,
+          gaming_device_type: T.TS.ON_DECK ? 544 : 1,
         };
       }
       async function wn() {
@@ -61757,7 +62632,7 @@
           },
         };
       }
-      function Cn(e) {
+      function In(e) {
         const {
             transport: t,
             onSuccess: a,
@@ -61846,7 +62721,7 @@
                   className: Jr().HeaderLogo,
                   onBack: e.onBack,
                 }),
-              c.createElement(In, { refreshInfo: i }),
+              c.createElement(Cn, { refreshInfo: i }),
               a,
               c.createElement(
                 "div",
@@ -61883,7 +62758,7 @@
                 ? (0, D.we)("#Login_RefreshSignIn")
                 : (0, D.we)("#Login_SignInTitle"),
             ),
-            c.createElement(In, { refreshInfo: e.refreshInfo }),
+            c.createElement(Cn, { refreshInfo: e.refreshInfo }),
           );
           return c.createElement(
             gi,
@@ -61946,7 +62821,7 @@
             );
         }
       }
-      function In(e) {
+      function Cn(e) {
         if (!e.refreshInfo) return null;
         let t;
         switch (e.refreshInfo?.reason ?? 2) {
@@ -62053,7 +62928,7 @@
           c.createElement(Gn, {
             tone: b ? "danger" : void 0,
             label: c.createElement(
-              On,
+              xn,
               { highlight: !0 },
               (0, D.we)("#Login_SignIn_WithAccountName"),
             ),
@@ -62066,7 +62941,7 @@
           }),
           c.createElement(Gn, {
             tone: b ? "danger" : void 0,
-            label: c.createElement(On, null, (0, D.we)("#Login_Password")),
+            label: c.createElement(xn, null, (0, D.we)("#Login_Password")),
             value: o,
             onChange: (e) => {
               p(!0), l(e);
@@ -62117,7 +62992,7 @@
           c.createElement(
             "div",
             { className: Jr().QRSection },
-            r ? c.createElement(Ln, { ...e }) : c.createElement(An, { ...e }),
+            r ? c.createElement(An, { ...e }) : c.createElement(Ln, { ...e }),
           )
         );
       }
@@ -62160,10 +63035,10 @@
           ),
         );
       }
-      function An(e) {
+      function Ln(e) {
         return c.createElement(kn, { ...e });
       }
-      function Ln(e) {
+      function An(e) {
         const [t, a] = (0, c.useState)(!1);
         return t
           ? c.createElement(kn, { ...e, bShowHideButton: !0, setShowQR: a })
@@ -62216,7 +63091,7 @@
           "div",
           { className: Jr().QRCodeContainer },
           c.createElement(
-            On,
+            xn,
             { highlight: !0 },
             (0, D.we)("#Login_SignIn_OrWithQRCode"),
           ),
@@ -62257,12 +63132,12 @@
         return c.createElement(
           "div",
           { className: Jr().TextField },
-          "string" == typeof t ? c.createElement(On, null, t) : t,
-          c.createElement(xn, { type: "error" }, a),
+          "string" == typeof t ? c.createElement(xn, null, t) : t,
+          c.createElement(On, { type: "error" }, a),
           c.createElement(Wn, { autoFocus: n, tone: s, ...i }),
         );
       }
-      function On(e) {
+      function xn(e) {
         const { children: t, highlight: a } = e;
         return c.createElement(
           "div",
@@ -62289,7 +63164,7 @@
           disabled: o,
         });
       }
-      function xn(e) {
+      function On(e) {
         const { children: t, type: a } = e;
         return c.createElement(
           "div",
@@ -63087,7 +63962,7 @@
       function Si(e) {
         const { redirectURL: t, guestOption: a } = e,
           [r] = (0, c.useState)(
-            new Cr.D(T.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new Ir.D(T.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [n, i] = (0, c.useState)(!1);
         return c.createElement(
@@ -63148,7 +64023,7 @@
           this.m_bLoadWasCancelled = !0;
         }
         ToggleMenu(e) {
-          const t = Ct.Get().BIsUserLoggedIn();
+          const t = It.Get().BIsUserLoggedIn();
           t || T.TS.IN_CLIENT
             ? (!t &&
                 T.TS.IN_CLIENT &&
@@ -63216,13 +64091,13 @@
           const t = e.GID;
           return (
             (Nt.BHasValidatedEmail() &&
-              Ct.Get().BFollowsEventAndNotifiedBy(
+              It.Get().BFollowsEventAndNotifiedBy(
                 e.clanSteamID,
                 t,
                 Tt.k_ENotifyFlagByEmail,
               )) ||
             (Nt.BHasPushNotification() &&
-              Ct.Get().BFollowsEventAndNotifiedBy(
+              It.Get().BFollowsEventAndNotifiedBy(
                 e.clanSteamID,
                 t,
                 Tt.k_ENotifyFlagByPush,
@@ -63271,7 +64146,7 @@
               );
         }
       };
-      function Ci(e) {
+      function Ii(e) {
         const { bPreviewMode: t, eventGID: a, ...r } = e,
           n = (0, V.RR)(a);
         if (!n)
@@ -63285,13 +64160,13 @@
         const s = (0, i.sf)(T.TS.LANGUAGE);
         return c.createElement(Ti, { lang: s, ...r, eventModel: n });
       }
-      function Ii(e) {
+      function Ci(e) {
         return F.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
       (0, f.Cg)([jt.oI], Ti.prototype, "ToggleMenu", null),
         (0, f.Cg)([jt.oI], Ti.prototype, "ShowMenu", null),
         (0, f.Cg)([jt.oI], Ti.prototype, "HideMenu", null),
-        (Ti = (0, f.Cg)([x.PA], Ti));
+        (Ti = (0, f.Cg)([O.PA], Ti));
       let Ni = class extends c.Component {
         state = { bIsRequestInFlight: !1 };
         async OnChangeFollowOrIgnore(e, t, a) {
@@ -63300,7 +64175,7 @@
           if (n && n != i.kF) {
             this.setState({ bIsRequestInFlight: !0 });
             try {
-              await Ct.Get().SetFollowOrUnfollowEvent(
+              await It.Get().SetFollowOrUnfollowEvent(
                 !e,
                 t,
                 r.clanSteamID,
@@ -63377,8 +64252,8 @@
             t = encodeURIComponent(this.GetExternalCalendarEventTitle()),
             a = encodeURIComponent(this.GetExternalCalendarEventBody()),
             r = e.GetStartTimeAndDateUnixSeconds(),
-            n = Ii(r),
-            i = Ii(e.GetEndTimeAndDateUnixSeconds() || r + Dt.Kp.PerHour),
+            n = Ci(r),
+            i = Ci(e.GetEndTimeAndDateUnixSeconds() || r + Dt.Kp.PerHour),
             s =
               (T.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
               `https://calendar.google.com/calendar/r/eventedit?text=${t}&details=${a}&dates=${n}/${i}`;
@@ -63489,7 +64364,7 @@
                   c.createElement(Mt.Yh, {
                     label: (0, D.we)("#EventDisplay_Reminder_ViaEmail"),
                     disabled: !s,
-                    checked: Ct.Get().BFollowsEventAndNotifiedBy(
+                    checked: It.Get().BFollowsEventAndNotifiedBy(
                       e.clanSteamID,
                       e.GID,
                       Tt.k_ENotifyFlagByEmail,
@@ -63530,7 +64405,7 @@
                   c.createElement(Mt.Yh, {
                     label: (0, D.we)("#EventDisplay_Reminder_ViaMobileApp"),
                     disabled: !o,
-                    checked: Ct.Get().BFollowsEventAndNotifiedBy(
+                    checked: It.Get().BFollowsEventAndNotifiedBy(
                       e.clanSteamID,
                       e.GID,
                       Tt.k_ENotifyFlagByPush,
@@ -63608,7 +64483,7 @@
       (0, f.Cg)([jt.oI], Ni.prototype, "OnChangeFollowByEmail", null),
         (0, f.Cg)([jt.oI], Ni.prototype, "OnChangeFollowByPush", null),
         (0, f.Cg)([jt.oI], Ni.prototype, "TrackEventAction", null),
-        (Ni = (0, f.Cg)([x.PA], Ni));
+        (Ni = (0, f.Cg)([O.PA], Ni));
       class Bi {
         m_bUserHasVolumePreference = !1;
         m_flVolumePreference = 0;
@@ -63701,7 +64576,7 @@
             style: { width: l >= 1 && l < 100 ? `${l}%` : void 0 },
           },
           c.createElement(Di, { rgVideoSources: a.rgVideoSources }),
-          c.createElement(Ai, { rgVideoTracks: a.rgVideoTracks }),
+          c.createElement(Li, { rgVideoTracks: a.rgVideoTracks }),
         );
       });
       function Ri(e) {
@@ -63728,15 +64603,15 @@
             }),
           );
       }
-      function Ai(e) {
+      function Li(e) {
         const { rgVideoTracks: t } = e;
         return t
           ? t.map((e, a) =>
-              c.createElement(Li, { key: a, track: e, rgVideoTracks: t }),
+              c.createElement(Ai, { key: a, track: e, rgVideoTracks: t }),
             )
           : null;
       }
-      function Li(e) {
+      function Ai(e) {
         const { track: t, rgVideoTracks: a } = e;
         let r = t.eLanguage;
         if ((0, T.Y2)())
@@ -63758,7 +64633,17 @@
         });
       }
       var Pi = a(83169);
-      const ki = new Map([
+      function ki(e) {
+        if (!e) return e;
+        const t = e.trim(),
+          a = t.toLowerCase();
+        return a.startsWith("javascript:") ||
+          a.startsWith("data:") ||
+          a.startsWith("vbscript:")
+          ? ""
+          : t;
+      }
+      const Gi = new Map([
         [
           "b",
           {
@@ -63785,7 +64670,7 @@
           "h1",
           {
             Constructor: function (e) {
-              return xi("h1", e, (0, R.A)(n().Header1, "BB_Header1"));
+              return Fi("h1", e, (0, R.A)(n().Header1, "BB_Header1"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -63795,7 +64680,7 @@
           "h2",
           {
             Constructor: function (e) {
-              return xi("h2", e, (0, R.A)(n().Header2, "BB_Header2"));
+              return Fi("h2", e, (0, R.A)(n().Header2, "BB_Header2"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -63805,7 +64690,7 @@
           "h3",
           {
             Constructor: function (e) {
-              return xi("h3", e, (0, R.A)(n().Header3, "BB_Header3"));
+              return Fi("h3", e, (0, R.A)(n().Header3, "BB_Header3"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -63815,7 +64700,7 @@
           "h4",
           {
             Constructor: function (e) {
-              return xi("h4", e, (0, R.A)(n().Header4, "BB_Header4"));
+              return Fi("h4", e, (0, R.A)(n().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -63825,7 +64710,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return xi("h5", e, (0, R.A)(n().Header5, "BB_Header5"));
+              return Fi("h5", e, (0, R.A)(n().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -63835,7 +64720,7 @@
           "center",
           {
             Constructor: function (e) {
-              let t = Wi(e.args, "id");
+              let t = Oi(e.args, "id");
               t &&
                 "string" == typeof t &&
                 t.length > 0 &&
@@ -63857,7 +64742,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return xi("div", e, (0, R.A)(n().SmallText, "BB_SmallText"));
+              return Fi("div", e, (0, R.A)(n().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -63939,16 +64824,16 @@
           "url",
           {
             Constructor: function (e) {
-              let t = Wi(e.args);
+              let t = ki(Oi(e.args));
               if (!t) {
                 const a = e.children;
                 "string" == typeof a &&
                   (a.startsWith("http://") || a.startsWith("https://")) &&
-                  (t = a);
+                  (t = ki(a));
               }
-              const a = "button" == Wi(e.args, "style") ? n().LinkButton : null,
-                r = a && Wi(e.args, "buttoncolor");
-              let i = Wi(e.args, "id");
+              const a = "button" == Oi(e.args, "style") ? n().LinkButton : null,
+                r = a && Oi(e.args, "buttoncolor");
+              let i = Oi(e.args, "id");
               i &&
                 "string" == typeof i &&
                 i.length > 0 &&
@@ -63965,7 +64850,7 @@
                   e.children,
                 );
               return c.createElement(
-                Fi,
+                Ui,
                 { className: a, href: t, id: i, style: { backgroundColor: r } },
                 e.children,
               );
@@ -63977,7 +64862,7 @@
           "quote",
           {
             Constructor: function (e) {
-              const t = Wi(e.args, "author");
+              const t = Oi(e.args, "author");
               return c.createElement(
                 "blockquote",
                 { className: (0, R.A)(n().BlockQuote, e.className) },
@@ -64066,7 +64951,7 @@
           "*",
           {
             Constructor: function (e) {
-              let t = Wi(e.args, "id");
+              let t = Oi(e.args, "id");
               t &&
                 "string" == typeof t &&
                 t.length > 0 &&
@@ -64086,9 +64971,9 @@
           "table",
           {
             Constructor: function (e) {
-              const t = Wi(e.args, "noborder"),
-                a = Wi(e.args, "equalcells"),
-                r = Wi(e.args, "colwidth");
+              const t = Oi(e.args, "noborder"),
+                a = Oi(e.args, "equalcells"),
+                r = Oi(e.args, "colwidth");
               return c.createElement(
                 "table",
                 {
@@ -64105,7 +64990,7 @@
                     null,
                     r
                       .split(",")
-                      .map((e, t) => c.createElement(Ui, { key: t, width: e })),
+                      .map((e, t) => c.createElement(zi, { key: t, width: e })),
                   ),
                 c.createElement("tbody", null, e.children),
               );
@@ -64133,7 +65018,7 @@
           "th",
           {
             Constructor: function (e) {
-              return zi("th", e);
+              return ji("th", e);
             },
             autocloses: !1,
             skipInternalNewline: !0,
@@ -64144,7 +65029,7 @@
           "td",
           {
             Constructor: function (e) {
-              return zi("td", e);
+              return ji("td", e);
             },
             autocloses: !1,
             skipInternalNewline: !0,
@@ -64155,11 +65040,11 @@
           "expand",
           {
             Constructor: function (e) {
-              const t = Boolean(Wi(e.args, "expanded")),
+              const t = Boolean(Oi(e.args, "expanded")),
                 [a, r] = c.useState(t),
-                i = Wi(e.args, "title"),
-                s = Wi(e.args, "collapsed_str"),
-                o = Wi(e.args, "expanded_str"),
+                i = Oi(e.args, "title"),
+                s = Oi(e.args, "collapsed_str"),
+                o = Oi(e.args, "expanded_str"),
                 l = (function (e, t, a, r) {
                   switch (e) {
                     case "details":
@@ -64188,7 +65073,7 @@
                         style: n().ExpandSection_ShowMore,
                       };
                   }
-                })(Wi(e.args, "type"), i, s, o);
+                })(Oi(e.args, "type"), i, s, o);
               return c.createElement(
                 "div",
                 {
@@ -64229,9 +65114,9 @@
           {
             Constructor: function (e) {
               const { event: t, showErrorInfo: a } = e.context,
-                r = Wi(e.args);
+                r = Oi(e.args);
               if (r)
-                return c.createElement(Ci, { eventGID: r, bPreviewMode: a });
+                return c.createElement(Ii, { eventGID: r, bPreviewMode: a });
               if (t) {
                 const e = (0, i.sf)(b.TS.LANGUAGE);
                 return c.createElement(Ti, { eventModel: t, lang: e });
@@ -64245,12 +65130,12 @@
           "calendarevent",
           {
             Constructor: function (e) {
-              const t = Wi(e.args, "title"),
-                a = Wi(e.args, "start") ?? Wi(e.args, "datetime"),
-                r = Wi(e.args, "end") ?? Wi(e.args, "datetime"),
-                i = Wi(e.args, "body") ?? null,
-                s = Wi(e.args, "location") ?? null,
-                o = Wi(e.args, "id") ?? "",
+              const t = Oi(e.args, "title"),
+                a = Oi(e.args, "start") ?? Oi(e.args, "datetime"),
+                r = Oi(e.args, "end") ?? Oi(e.args, "datetime"),
+                i = Oi(e.args, "body") ?? null,
+                s = Oi(e.args, "location") ?? null,
+                o = Oi(e.args, "id") ?? "",
                 m = new Date(a),
                 d = m.getUTCFullYear(),
                 u = ("0" + (m.getUTCMonth() + 1)).slice(-2),
@@ -64281,12 +65166,12 @@
               } catch (e) {
                 console.error(e);
               }
-              let C =
+              let I =
                 "https://calendar.google.com/calendar/render?action=TEMPLATE";
-              (C += `&text=${encodeURI(t)}`),
-                (C += `&details=${encodeURI(i)}`),
-                (C += `&dates=${encodeURI(h + "/" + w)}`);
-              const I = (e) => {
+              (I += `&text=${encodeURI(t)}`),
+                (I += `&details=${encodeURI(i)}`),
+                (I += `&dates=${encodeURI(h + "/" + w)}`);
+              const C = (e) => {
                 if ("ReactNativeWebView" in window) {
                   const a = window.ReactNativeWebView,
                     r = {
@@ -64318,7 +65203,7 @@
                         n().CalendarEventLink,
                       ),
                       href: T,
-                      onClick: I,
+                      onClick: C,
                       download: "steam_deck_white_release.ics",
                     },
                     "Apple",
@@ -64330,7 +65215,7 @@
                       "SaleSectionCalendarEventLink",
                       n().CalendarEventLink,
                     ),
-                    href: C,
+                    href: I,
                   },
                   "Google",
                 ),
@@ -64343,7 +65228,7 @@
                         n().CalendarEventLink,
                       ),
                       href: T,
-                      onClick: I,
+                      onClick: C,
                       download: "steam_deck_white_release.ics",
                     },
                     "Outlook",
@@ -64357,11 +65242,11 @@
           "doclink",
           {
             Constructor: function (e) {
-              const t = Wi(e.args),
-                a = "button" == Wi(e.args, "style") ? n().LinkButton : null,
-                r = a && Wi(e.args, "buttoncolor");
+              const t = Oi(e.args),
+                a = "button" == Oi(e.args, "style") ? n().LinkButton : null,
+                r = a && Oi(e.args, "buttoncolor");
               return c.createElement(
-                Fi,
+                Ui,
                 {
                   className: a,
                   style: { backgroundColor: r },
@@ -64377,7 +65262,7 @@
           "color",
           {
             Constructor: function (e) {
-              const t = Wi(e.args);
+              const t = Oi(e.args);
               return c.createElement(
                 "span",
                 { style: { color: t } },
@@ -64391,7 +65276,7 @@
           "bgcolor",
           {
             Constructor: function (e) {
-              const t = Wi(e.args);
+              const t = Oi(e.args);
               return c.createElement(
                 "span",
                 { style: { backgroundColor: t } },
@@ -64422,7 +65307,7 @@
           "looping_media",
           {
             Constructor: function (e) {
-              const t = ji(e.args);
+              const t = Hi(e.args);
               return c.createElement(Mi, {
                 video: t,
                 bAutoPlay: !0,
@@ -64433,17 +65318,17 @@
             autocloses: !1,
           },
         ],
-        ["video", { Constructor: Hi, autocloses: !1 }],
+        ["video", { Constructor: qi, autocloses: !1 }],
         [
           "youtubeorvideo",
           {
             Constructor: function (e) {
               if ((0, T.Y2)() || "CN" == T.TS.COUNTRY.toLocaleUpperCase())
-                return Hi(e);
-              const t = Wi(e.args, "youtubeid"),
-                a = Wi(e.args, "size"),
-                r = Wi(e.args, "seconds"),
-                { sizeStr: n, alignStr: i } = O(a);
+                return qi(e);
+              const t = Oi(e.args, "youtubeid"),
+                a = Oi(e.args, "size"),
+                r = Oi(e.args, "seconds"),
+                { sizeStr: n, alignStr: i } = x(a);
               return c.createElement(G, {
                 videoID: t,
                 nStartSeconds: r ? Number.parseInt(r) : void 0,
@@ -64460,13 +65345,13 @@
           {
             Constructor: function (e) {
               if ((0, T.Y2)()) return null;
-              let t = Wi(e.args);
+              let t = Oi(e.args);
               if (t) {
                 let e = t.split(";");
                 if (2 == e.length) {
                   let t = e[0],
                     a = e[1].toLocaleLowerCase();
-                  const { sizeStr: r, alignStr: n } = O(a);
+                  const { sizeStr: r, alignStr: n } = x(a);
                   return c.createElement(G, {
                     videoID: t,
                     classNameAlign: n,
@@ -64481,10 +65366,10 @@
           },
         ],
       ]);
-      function Gi(e, t, a = 0) {
-        return Oi(e, t, a);
+      function xi(e, t, a = 0) {
+        return Wi(e, t, a);
       }
-      function Oi(e, t, a = 0) {
+      function Wi(e, t, a = 0) {
         if (e && 0 != e.length) {
           if (e?.startsWith(Pi.lw))
             return v.z.ReplacementTokenToClanImageURL(e);
@@ -64508,13 +65393,13 @@
           return e;
         }
       }
-      function Wi(e, t) {
+      function Oi(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function xi(e, t, a) {
-        let r = Wi(t.args, "id");
+      function Fi(e, t, a) {
+        let r = Oi(t.args, "id");
         return (
-          r || (r = Wi(t.args)),
+          r || (r = Oi(t.args)),
           r &&
             "string" == typeof r &&
             r.length > 0 &&
@@ -64527,7 +65412,7 @@
           )
         );
       }
-      const Fi = (e) => {
+      const Ui = (e) => {
         const { href: t, ...a } = e;
         let r,
           n = (function (e, t, a) {
@@ -64558,7 +65443,7 @@
           c.createElement(s.Ii, { ...a, href: n, rel: r }, e.children),
         );
       };
-      function Ui(e) {
+      function zi(e) {
         const { width: t } = e;
         let a;
         return (
@@ -64566,10 +65451,10 @@
           c.createElement("col", { style: a })
         );
       }
-      function zi(e, t) {
-        const a = Wi(t.args, "width"),
-          r = Wi(t.args, "colspan"),
-          i = Wi(t.args, "rowspan"),
+      function ji(e, t) {
+        const a = Oi(t.args, "width"),
+          r = Oi(t.args, "colspan"),
+          i = Oi(t.args, "rowspan"),
           s = {};
         return (
           r && parseInt(r) > 1 && (s.colSpan = parseInt(r)),
@@ -64585,21 +65470,21 @@
           )
         );
       }
-      function ji(e) {
-        let t = Wi(e, "poster");
+      function Hi(e) {
+        let t = Oi(e, "poster");
         t && (t = (0, E.L$)(t));
         const a = new Array();
         {
-          const t = Wi(e, "mp4");
+          const t = Oi(e, "mp4");
           t && a.push({ sURL: (0, E.L$)(t), sFormat: "video/mp4" });
-          const r = Wi(e, "webm");
+          const r = Oi(e, "webm");
           r && a.push({ sURL: (0, E.L$)(r), sFormat: "video/webm" });
         }
         const r = (0, i.sf)(b.TS.LANGUAGE),
           n = 0 != r,
           s = new Array();
         for (let t = 0; t < 31; t++) {
-          const a = Wi(e, "sub_" + (0, i.ww)(t));
+          const a = Oi(e, "sub_" + (0, i.ww)(t));
           a &&
             s.push({
               sURL: (0, E.L$)(a),
@@ -64607,7 +65492,7 @@
               sKind: "subtitles",
               bDefault: n && t == r,
             });
-          const o = Wi(e, "cap_" + (0, i.ww)(t));
+          const o = Oi(e, "cap_" + (0, i.ww)(t));
           o &&
             s.push({
               sURL: (0, E.L$)(o),
@@ -64618,17 +65503,17 @@
         }
         return { sPoster: t, rgVideoSources: a, rgVideoTracks: s };
       }
-      function Hi(e) {
-        const t = ji(e.args),
+      function qi(e) {
+        const t = Hi(e.args),
           a = e.children ? e.children.toString() : void 0;
         a &&
           a.startsWith("http") &&
           t.rgVideoSources.push({ sURL: (0, E.L$)(a), sFormat: "video/webm" });
-        const r = Wi(e.args, "autoplay"),
+        const r = Oi(e.args, "autoplay"),
           n = "0" !== r && "off" !== r && "false" !== r,
-          i = Wi(e.args, "controls"),
+          i = Oi(e.args, "controls"),
           s = "0" !== i && "off" !== i && "false" !== i,
-          o = Wi(e.args, "loop"),
+          o = Oi(e.args, "loop"),
           l = "0" !== i && "off" !== i && "false" !== i;
         return c.createElement(Mi, {
           video: t,
@@ -65178,9 +66063,9 @@
         Ad: () => R,
         Wf: () => y,
         Dr: () => S,
-        yq: () => C,
+        yq: () => I,
         R7: () => B,
-        k5: () => I,
+        k5: () => C,
       });
       var r = a(85608),
         n = a(35927);
@@ -65281,7 +66166,7 @@
       function T() {
         return (0, E.td)() ? y.Composited : y.None;
       }
-      function C(e) {
+      function I(e) {
         let t = y.None;
         switch (e) {
           case S.Overlay:
@@ -65294,15 +66179,16 @@
             );
           case S.Notification:
             return (
-              (t |= C(S.Overlay)),
+              (t |= I(S.Overlay)),
               (t |= y.NoWindowShadow),
               (t |= y.NoRoundedCorners),
               (t |= y.OverrideRedirect),
+              (t |= y.ForceBrowserVisible),
               t
             );
           case S.Tooltip:
             return (
-              (t |= C(S.Overlay)),
+              (t |= I(S.Overlay)),
               (t |= y.NoRoundedCorners),
               (t |= y.NoWindowShadow),
               (t |= y.TooltipHint),
@@ -65331,9 +66217,9 @@
             );
         }
       }
-      function I() {
+      function C() {
         const { ownerWindow: e } = B(),
-          t = A.GetPopupForWindow(e);
+          t = L.GetPopupForWindow(e);
         return t?.browser_info || d;
       }
       !(function (e) {
@@ -65364,7 +66250,8 @@
             "IgnoreSteamDisplayScale"),
           (e[(e.TransparentParentWindow = 4194304)] =
             "TransparentParentWindow"),
-          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale");
+          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (e[(e.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
       })(y || (y = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -65443,14 +66330,14 @@
           let a,
             r,
             i,
-            s = A.GetExistingPopup(this.m_strName);
+            s = L.GetExistingPopup(this.m_strName);
           (s && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
             s
               ? ((r = s.m_element),
                 (a = s.m_popup),
                 (i = s.m_renderWhenReady),
-                A.RemoveTrackedPopup(s),
+                L.RemoveTrackedPopup(s),
                 s.ReleasePopup(),
                 a?.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
                 a?.removeEventListener("unload", s.OnUnload),
@@ -65489,7 +66376,7 @@
                   this.m_element &&
                   this.RenderInternal(this.m_popup, this.m_element, t);
               })),
-            A.AddTrackedPopup(this),
+            L.AddTrackedPopup(this),
             s &&
               (this.OnCreateInternal(),
               t != n.iE.k_EWindowBringToFrontInvalid && this.Focus(t)));
@@ -65541,7 +66428,7 @@
         }
         OnUnload(e) {
           this.RemoveEventListeners(),
-            A.RemoveTrackedPopup(this),
+            L.RemoveTrackedPopup(this),
             this.OnClose(),
             (this.m_popup = void 0);
         }
@@ -65681,14 +66568,14 @@
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  A.SetRestoreDetails(
+                  L.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires,
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = A.GetRestoreDetails(
+                  (e.strRestoreDetails = L.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                   ))),
               e
@@ -65715,7 +66602,7 @@
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !a &&
-                    (A.SetRestoreDetails(e, t, this.m_bExpires),
+                    (L.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -65728,7 +66615,7 @@
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            A.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            L.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }.prototype,
@@ -65988,8 +66875,8 @@
         "DebouncedSaveSavedDimensionStore",
         null,
       );
-      const A = new D();
-      window.g_PopupManager = A;
+      const L = new D();
+      window.g_PopupManager = L;
     },
     56468: (e, t, a) => {
       "use strict";
@@ -66085,7 +66972,7 @@
       "use strict";
       a.d(t, {
         DJ: () => U,
-        G6: () => x,
+        G6: () => O,
         zv: () => D,
         lh: () => Y,
         wv: () => M,
@@ -66238,10 +67125,10 @@
         w = a(33743);
       a(7552), a(50063);
       var T = a(55640),
-        C = a(2001),
-        I = a(72345);
+        I = a(2001),
+        C = a(72345);
       (0, r.Cg)(
-        [I.o],
+        [C.o],
         class {
           m_eventModel;
           m_entry;
@@ -66270,7 +67157,7 @@
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
           (e[(e.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
       })(D || (D = {}));
-      var A, L, P, k, G, O;
+      var L, A, P, k, G, x;
       function W(e) {
         return (
           "items" === e ||
@@ -66294,7 +67181,7 @@
             "k_EStoreFilterClauseTypePrice"),
           (e[(e.k_EStoreFilterClauseTypeAppType = 7)] =
             "k_EStoreFilterClauseTypeAppType");
-      })(A || (A = {})),
+      })(L || (L = {})),
         (function (e) {
           (e[(e.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
             (e[(e.k_ELanguage = 1)] = "k_ELanguage"),
@@ -66302,7 +67189,7 @@
             (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
             (e[(e.k_EPrice = 4)] = "k_EPrice"),
             (e[(e.k_EAppType = 5)] = "k_EAppType");
-        })(L || (L = {})),
+        })(A || (A = {})),
         (function (e) {
           (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
             (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
@@ -66323,8 +67210,8 @@
         (function (e) {
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
-        })(O || (O = {}));
-      const x = {
+        })(x || (x = {}));
+      const O = {
         capsules: [],
         events: [],
         links: [],
@@ -66970,7 +67857,7 @@
           const t = new Date().getTime() / 1e3;
           return (
             !(V.includes(this.type) && this.endTime && t > this.endTime) &&
-            !(this.startTime && t > this.startTime + 60 * C.Kp.PerDay)
+            !(this.startTime && t > this.startTime + 60 * I.Kp.PerDay)
           );
         }
         BShowLibrarySpotlightText() {
@@ -68014,7 +68901,7 @@
     },
     67394: (e, t, a) => {
       "use strict";
-      a.d(t, { z: () => ae });
+      a.d(t, { z: () => ne });
       var r = a(83169),
         n = a(4248),
         i = a(35927),
@@ -68266,8 +69153,8 @@
         S = a(73913),
         w = a(68613),
         T = a(49773),
-        C = a(85473);
-      class I {
+        I = a(85473);
+      class C {
         m_originalSize = { width: 0, height: 0 };
         m_originalDataUrl = "";
         dataUrl = void 0;
@@ -68320,20 +69207,20 @@
         }
         GetImageOptionLabel() {}
       }
-      (0, o.Cg)([d.sH], I.prototype, "dataUrl", void 0),
-        (0, o.Cg)([d.sH], I.prototype, "width", void 0),
-        (0, o.Cg)([d.sH], I.prototype, "height", void 0),
-        (0, o.Cg)([d.sH], I.prototype, "status", void 0),
-        (0, o.Cg)([d.sH], I.prototype, "message", void 0),
-        (0, o.Cg)([d.sH], I.prototype, "language", void 0);
+      (0, o.Cg)([d.sH], C.prototype, "dataUrl", void 0),
+        (0, o.Cg)([d.sH], C.prototype, "width", void 0),
+        (0, o.Cg)([d.sH], C.prototype, "height", void 0),
+        (0, o.Cg)([d.sH], C.prototype, "status", void 0),
+        (0, o.Cg)([d.sH], C.prototype, "message", void 0),
+        (0, o.Cg)([d.sH], C.prototype, "language", void 0);
       var N,
         B = a(53179),
         M = a(45031),
         R = a(68446),
         D = a(28926),
-        A = a(84229),
-        L = a(85317),
-        P = a.n(L),
+        L = a(84229),
+        A = a(85317),
+        P = a.n(A),
         k = a(33743);
       !(function (e) {
         (e.topleft = "topleft"),
@@ -68698,7 +69585,7 @@
                         className: P().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
-                      l.createElement(A.sED, null),
+                      l.createElement(L.sED, null),
                     ),
                   !this.props.bDisableLink &&
                     l.createElement(
@@ -68707,7 +69594,7 @@
                         className: P().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
-                      l.createElement(A.xv8, null),
+                      l.createElement(L.xv8, null),
                     ),
                   l.createElement(
                     "div",
@@ -68806,9 +69693,9 @@
         (0, o.Cg)([M.oI], G.prototype, "OnSaveLink", null),
         (0, o.Cg)([M.oI], G.prototype, "OnEditLink", null),
         (G = (0, o.Cg)([R.PA], G));
-      var O = a(89790),
+      var x = a(89790),
         W = a(21384),
-        x = a(29636);
+        O = a(29636);
       class F extends l.Component {
         state = {
           region: {
@@ -68916,7 +69803,7 @@
               500,
             );
           return l.createElement(
-            O.x_,
+            x.x_,
             {
               onEscKeypress: this.props.closeModal,
               bDisableBackgroundDismiss: !0,
@@ -68943,7 +69830,7 @@
               l.createElement(
                 "div",
                 {
-                  className: x.CropImage,
+                  className: O.CropImage,
                   style: { width: a.width, height: a.height },
                 },
                 l.createElement("img", {
@@ -68969,10 +69856,10 @@
               ),
               l.createElement(
                 "div",
-                { className: x.CropPreviewGroup },
+                { className: O.CropPreviewGroup },
                 l.createElement(
                   "div",
-                  { className: x.CropPreviewLabel },
+                  { className: O.CropPreviewLabel },
                   (0, w.we)("#ImageUpload_CropPreview"),
                 ),
                 l.createElement("div", { style: this.GetPreviewWindowStyle() }),
@@ -69056,7 +69943,7 @@
       }
       (0, o.Cg)([M.oI], F.prototype, "OnCrop", null),
         (0, o.Cg)([M.oI], F.prototype, "UpdateCrop", null);
-      class Y extends I {
+      class Y extends C {
         m_rgImageOptions;
         m_currentImageOption = void 0;
         m_currentImageOptionKey = void 0;
@@ -69204,68 +70091,91 @@
       }
       (0, o.Cg)([d.sH], $.prototype, "bCropped", void 0);
       class Z {}
-      class Q extends Z {
-        m_cancelToken = void 0;
-        async UploadAllImages(e, t) {
-          const a = this.GetUploadImages(),
-            r = this.BGetUploadsAreInSerial(),
-            n = a.filter((a) => {
-              const r = a.IsValidAssetType(e, t);
-              return "pending" === a.status && !r.error && !r.needsCrop;
-            });
-          for (const e of n) e.status = "waiting";
-          const i = [],
-            s = m().CancelToken.source();
-          this.m_cancelToken = s;
-          const o = async (e) => {
-            e.status = "uploading";
-            const t = await this.UploadSingleImage(
-              e,
-              e.filename,
-              e.language ?? -1,
-              s.token,
-            );
-            return (
-              (e.status = t.bSuccess ? "success" : "failed"),
-              (e.message =
-                !t.bSuccess && t.elErrorMessage ? t.elErrorMessage : ""),
-              t
-            );
-          };
-          if (r)
-            for (const e of n) {
-              const t = await o(e);
-              i.push({ image: e, uploadResult: t });
+      function Q(e, t, a) {
+        const r = e.filter((e) => {
+          const r = e.IsValidAssetType(t, a);
+          return "pending" === e.status && !r.error && !r.needsCrop;
+        });
+        return (
+          r.forEach((e) => {
+            (e.status = "waiting"), (e.message = "");
+          }),
+          r
+        );
+      }
+      async function J(e, t, a, r, n, i) {
+        const s = Q(e, r, n),
+          o = [];
+        let l = 0;
+        const c = Array.from({ length: Math.floor(t) }, () =>
+          (async () => {
+            for (; l < s.length; ) {
+              const e = l++,
+                t = s[e];
+              t.status = "uploading";
+              const r = await a(t, t.filename, t.language ?? -1, i);
+              (t.status = r.bSuccess ? "success" : "failed"),
+                (t.message =
+                  !r.bSuccess && r.elErrorMessage ? r.elErrorMessage : ""),
+                (o[e] = { image: t, uploadResult: r });
             }
-          else {
-            let e = 0;
-            const t = async () => {
-                for (; e < n.length; ) {
-                  const t = e++,
-                    a = n[t],
-                    r = await o(a);
-                  i[t] = { image: a, uploadResult: r };
-                }
-              },
-              a = 4,
-              r = Array.from({ length: a }, () => t());
-            await Promise.all(r);
-          }
-          const l = [];
-          for (const e of i)
-            l.push({
-              bSuccess: e.uploadResult.bSuccess,
-              image: e.image,
-              uploadResult: e.uploadResult.result,
-            });
-          return l;
+          })(),
+        );
+        return (
+          await Promise.all(c),
+          o.map((e) => ({
+            bSuccess: e.uploadResult.bSuccess,
+            image: e.image,
+            uploadResult: e.uploadResult.result,
+          }))
+        );
+      }
+      class X extends Z {
+        m_cancel = void 0;
+        async UploadAllImages(e, t) {
+          this.m_cancel = m().CancelToken.source();
+          const a = this.BGetUploadsAreInSerial() ? 1 : 4;
+          let r;
+          const n = this.UploadSingleImage.bind(this);
+          return (
+            (r =
+              a > 1
+                ? await J(
+                    this.GetUploadImages(),
+                    a,
+                    n,
+                    e,
+                    t,
+                    this.m_cancel.token,
+                  )
+                : await (async function (e, t, a, r, n) {
+                    const i = Q(e, a, r),
+                      s = [];
+                    for (const e of i) {
+                      e.status = "uploading";
+                      const a = await t(e, e.filename, e.language ?? -1, n);
+                      (e.status = a.bSuccess ? "success" : "failed"),
+                        (e.message =
+                          !a.bSuccess && a.elErrorMessage
+                            ? a.elErrorMessage
+                            : ""),
+                        s.push({
+                          bSuccess: a.bSuccess,
+                          image: e,
+                          uploadResult: a.result,
+                        });
+                    }
+                    return s;
+                  })(this.GetUploadImages(), n, e, t, this.m_cancel.token)),
+            r
+          );
         }
         CancelAllUploads() {
-          this.m_cancelToken?.cancel((0, w.we)("#ImageUpload_CancelRequest"));
+          this.m_cancel?.cancel((0, w.we)("#ImageUpload_CancelRequest"));
         }
       }
-      var J = a(47171);
-      class X extends Q {
+      var ee = a(47171);
+      class te extends X {
         m_filesToUpload = d.sH.array();
         m_filesCompleted = d.sH.array();
         m_clanImagesV2;
@@ -69283,7 +70193,7 @@
               n?.map((e) => {
                 const t = g[e];
                 return (
-                  (0, J.wT)(Boolean(t), `Artwork Type not in Map ${e}`),
+                  (0, ee.wT)(Boolean(t), `Artwork Type not in Map ${e}`),
                   {
                     sKey: e,
                     width: t.width,
@@ -69308,30 +70218,32 @@
           return this.m_clanSteamID;
         }
         async AddImage(e, t = 0) {
-          const { language: a } = (function (e, t = 0, a = !0) {
-            let r = e.lastIndexOf(".");
-            -1 != r && (e = e.slice(0, r).toLowerCase());
-            let n = null,
-              s = 0;
-            e.endsWith("korean") && ((n = 4), (s = 6));
+          const { language: a } = (function (e, t = 0) {
+            let a = e.lastIndexOf(".");
+            -1 != a && (e = e.slice(0, a).toLowerCase());
+            let r = null,
+              n = 0;
+            e.endsWith("korean") && ((r = 4), (n = 6));
             for (let t = 0; t < 31; ++t) {
-              const r = (0, i.ww)(t);
-              if (r.length <= s) continue;
-              if (e.endsWith(r)) {
-                let i = !a;
-                if (a && e.length > r.length + 2) {
-                  const t = e[e.length - r.length - 1];
-                  i = !/\p{Alphabetic}|\p{Number}/u.test(t);
-                }
-                i && ((n = t), (s = r.length));
+              const a = (0, i.ww)(t);
+              if (a.length <= n) continue;
+              if (e.endsWith(a) && e.length > a.length + 2) {
+                const i = e[e.length - a.length - 1];
+                /\p{Alphabetic}|\p{Number}/u.test(i) ||
+                  ((r = t), (n = a.length));
               }
-              const o = (0, i.Lg)(t);
-              o.length <= s || (e.endsWith(o) && ((n = t), (s = o.length)));
+              const s = (0, i.Lg)(t);
+              s.length <= n || (e.endsWith(s) && ((r = t), (n = s.length)));
             }
             return {
-              language: n ?? t,
-              baseFilename: s > 0 ? e.substring(0, e.length - s - 1) : e,
+              language: r ?? t,
+              baseFilename:
+                n > 0
+                  ? ((s = e.substring(0, e.length - n)),
+                    s.replace(/[\s_-]+$/g, ""))
+                  : e,
             };
+            var s;
           })(e.name, t);
           return this.AddImageForLanguage(e, a);
         }
@@ -69380,9 +70292,9 @@
           return (this.m_filesToUpload = [...this.m_filesToUpload, n]), !0;
         }
         async AddExistingClanImage(e, t = 0) {
-          const a = ae.GetHashAndExt(e);
+          const a = ne.GetHashAndExt(e);
           if (!a) return !1;
-          const r = ae.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, a),
+          const r = ne.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, a),
             n = await m()({ url: r, method: "GET", responseType: "blob" }),
             i = (0, S.pE)(n.data, e.file_name);
           return await this.AddImage(i, t);
@@ -69434,7 +70346,7 @@
           this.CancelAllUploads(), this.UploadAllImages();
         }
         async handleUploadRefresh(e) {
-          await C.pU.LoadClanImages(this.m_clanSteamID, !0, e);
+          await I.pU.LoadClanImages(this.m_clanSteamID, !0, e);
         }
         BGetUploadsAreInSerial() {
           return !1;
@@ -69493,21 +70405,21 @@
           );
         }
       }
-      (0, o.Cg)([d.sH], X.prototype, "m_filesToUpload", void 0),
-        (0, o.Cg)([d.sH], X.prototype, "m_filesCompleted", void 0),
-        (0, o.Cg)([d.sH], X.prototype, "m_lastError", void 0),
-        (0, o.Cg)([y.o], X.prototype, "AddImage", null),
-        (0, o.Cg)([y.o], X.prototype, "AddExistingClanImage", null),
-        (0, o.Cg)([y.o], X.prototype, "DeleteUploadImageByIndex", null),
-        (0, o.Cg)([y.o], X.prototype, "DeleteUploadImage", null),
-        (0, o.Cg)([y.o], X.prototype, "ClearImages", null);
-      class ee extends X {
+      (0, o.Cg)([d.sH], te.prototype, "m_filesToUpload", void 0),
+        (0, o.Cg)([d.sH], te.prototype, "m_filesCompleted", void 0),
+        (0, o.Cg)([d.sH], te.prototype, "m_lastError", void 0),
+        (0, o.Cg)([y.o], te.prototype, "AddImage", null),
+        (0, o.Cg)([y.o], te.prototype, "AddExistingClanImage", null),
+        (0, o.Cg)([y.o], te.prototype, "DeleteUploadImageByIndex", null),
+        (0, o.Cg)([y.o], te.prototype, "DeleteUploadImage", null),
+        (0, o.Cg)([y.o], te.prototype, "ClearImages", null);
+      class ae extends te {
         constructor(e, t, a) {
           super(e, t, a, !1);
         }
       }
-      var te = a(2001);
-      const ae = {
+      var re = a(2001);
+      const ne = {
         GetBaseURL: () => `${n.TS.CLAN_CDN_ASSET_URL}images/`,
         GetBaseURLV2: () => `${n.TS.CLAN_CDN_ASSET_URL}locimages/`,
         ReplacementTokenToClanImageURL(e) {
@@ -69538,14 +70450,14 @@
           return e.substring(0, e.length - t.length);
         },
         GetExtStringFromHashAndExt: (e) => e.substring(e.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(e, t, a = C.wI.full) {
+        GenerateURLFromHashAndExt(e, t, a = I.wI.full) {
           return this.GenerateURLFromHashAndExtAndLang(e, t, a, -1, void 0);
         },
-        GenerateURLFromHashAndExtAndLang(e, t, a = C.wI.full, r, n) {
+        GenerateURLFromHashAndExtAndLang(e, t, a = I.wI.full, r, n) {
           e instanceof s.b && (e = e.GetAccountID());
           let o = this.GetBaseURL();
           const l = null != r && -1 != r;
-          if (a != C.wI.full || l) {
+          if (a != I.wI.full || l) {
             let s = t.substring(t.lastIndexOf(".")),
               c = t.substring(0, t.length - s.length);
             return l && 0 != r && "localized_image_group" == n
@@ -69617,7 +70529,7 @@
               const t = { success: 2 };
               (t.width = n.width),
                 (t.height = n.height),
-                (0, J.wT)(
+                (0, ee.wT)(
                   t.width > 0 && t.height > 0,
                   "unexpected image resolution discovered for strURL: " + e,
                 ),
@@ -69683,7 +70595,7 @@
             }),
             (l.src = a);
           let c = 0;
-          for (; void 0 === o && c < 100; ) await (0, te.IP)(100), (c += 1);
+          for (; void 0 === o && c < 100; ) await (0, re.IP)(100), (c += 1);
           if (
             (c >= 100 &&
               void 0 === o &&
@@ -69691,7 +70603,7 @@
             s)
           )
             throw (console.log(s), { success: 2, err_msg: s });
-          const m = new ee(e, void 0),
+          const m = new ae(e, void 0),
             d = new $(
               o,
               r,
@@ -70888,7 +71800,7 @@
             T.sm_m ||
               (T.sm_m = {
                 proto: T,
-                fields: { results: { n: 1, c: C, r: !0, q: !0 } },
+                fields: { results: { n: 1, c: I, r: !0, q: !0 } },
               }),
             T.sm_m
           );
@@ -70928,20 +71840,20 @@
           return "CStoreCatalog_GetDevPagesForPartner_Response";
         }
       }
-      class C extends u.Message {
+      class I extends u.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            C.prototype.clan_accountid || p.Sg(C.M()),
+            I.prototype.clan_accountid || p.Sg(I.M()),
             u.Message.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
                 fields: {
                   clan_accountid: {
                     n: 1,
@@ -70957,39 +71869,39 @@
                   },
                 },
               }),
-            C.sm_m
+            I.sm_m
           );
         }
         static MBF() {
-          return C.sm_mbf || (C.sm_mbf = p.w0(C.M())), C.sm_mbf;
+          return I.sm_mbf || (I.sm_mbf = p.w0(I.M())), I.sm_mbf;
         }
         toObject(e = !1) {
-          return C.toObject(e, this);
+          return I.toObject(e, this);
         }
         static toObject(e, t) {
-          return p.BT(C.M(), e, t);
+          return p.BT(I.M(), e, t);
         }
         static fromObject(e) {
-          return p.Uq(C.M(), e);
+          return p.Uq(I.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (_().BinaryReader)(e),
-            a = new C();
-          return C.deserializeBinaryFromReader(a, t);
+            a = new I();
+          return I.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return p.zj(C.MBF(), e, t);
+          return p.zj(I.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (_().BinaryWriter)();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          p.i0(C.M(), e, t);
+          p.i0(I.M(), e, t);
         }
         serializeBase64String() {
           var e = new (_().BinaryWriter)();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreCatalog_GetDevPagesForPartner_Response_CDevPageInfo";
@@ -71029,7 +71941,7 @@
             );
           });
       })(c || (c = {}));
-      class I {
+      class C {
         constructor() {
           (0, s.Gn)(this);
         }
@@ -71045,7 +71957,7 @@
                   a = m.b.InitFromClanID(t),
                   r = new l(a);
                 r.Initialize(e),
-                  (r.m_promise = I.GetAsPromise(r)),
+                  (r.m_promise = C.GetAsPromise(r)),
                   this.m_mapClanToCreatorHome.set(t, r);
               });
             let t = (0, o.Tc)("creatorhomeforapp", "application_config");
@@ -71171,10 +72083,10 @@
             : [];
         }
       }
-      (0, r.Cg)([s.sH], I.prototype, "m_mapClanToCreatorHome", void 0),
-        (0, r.Cg)([s.sH], I.prototype, "m_mapAppToCreatorIDList", void 0),
-        (0, r.Cg)([s.XI], I.prototype, "LazyInit", null);
-      const N = new I();
+      (0, r.Cg)([s.sH], C.prototype, "m_mapClanToCreatorHome", void 0),
+        (0, r.Cg)([s.sH], C.prototype, "m_mapAppToCreatorIDList", void 0),
+        (0, r.Cg)([s.XI], C.prototype, "LazyInit", null);
+      const N = new C();
       window.g_CreatorHomeStore = N;
     },
     19939: (e, t, a) => {
@@ -72881,7 +73793,7 @@
                   categories: { n: 22, c: y },
                   reviews: { n: 23, c: S },
                   basic_info: { n: 24, c: T },
-                  tags: { n: 25, c: I, r: !0, q: !0 },
+                  tags: { n: 25, c: C, r: !0, q: !0 },
                   assets: { n: 30, c: N },
                   release: { n: 31, c: B },
                   platforms: { n: 32, c: M },
@@ -72897,7 +73809,7 @@
                   self_purchase_option: { n: 43, c: D },
                   screenshots: { n: 50, c: P },
                   trailers: { n: 51, c: G },
-                  supported_languages: { n: 52, c: x, r: !0, q: !0 },
+                  supported_languages: { n: 52, c: O, r: !0, q: !0 },
                   store_url_path_override: {
                     n: 53,
                     br: d.qM.readString,
@@ -73328,9 +74240,9 @@
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  publishers: { n: 2, c: C, r: !0, q: !0 },
-                  developers: { n: 3, c: C, r: !0, q: !0 },
-                  franchises: { n: 4, c: C, r: !0, q: !0 },
+                  publishers: { n: 2, c: I, r: !0, q: !0 },
+                  developers: { n: 3, c: I, r: !0, q: !0 },
+                  franchises: { n: 4, c: I, r: !0, q: !0 },
                   capsule_headline: {
                     n: 5,
                     br: d.qM.readString,
@@ -73376,72 +74288,11 @@
           return "StoreItem_BasicInfo";
         }
       }
-      class C extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            C.prototype.name || d.Sg(C.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
-                fields: {
-                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
-                  creator_clan_account_id: {
-                    n: 2,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                },
-              }),
-            C.sm_m
-          );
-        }
-        static MBF() {
-          return C.sm_mbf || (C.sm_mbf = d.w0(C.M())), C.sm_mbf;
-        }
-        toObject(e = !1) {
-          return C.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(C.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(C.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (m().BinaryReader)(e),
-            a = new C();
-          return C.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(C.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (m().BinaryWriter)();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(C.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (m().BinaryWriter)();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_BasicInfo_CreatorHomeLink";
-        }
-      }
       class I extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            I.prototype.tagid || d.Sg(I.M()),
+            I.prototype.name || d.Sg(I.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -73452,8 +74303,12 @@
               (I.sm_m = {
                 proto: I,
                 fields: {
-                  tagid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
-                  weight: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  name: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
+                  creator_clan_account_id: {
+                    n: 2,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
                 },
               }),
             I.sm_m
@@ -73489,6 +74344,63 @@
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_BasicInfo_CreatorHomeLink";
+        }
+      }
+      class C extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            C.prototype.tagid || d.Sg(C.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
+                fields: {
+                  tagid: { n: 1, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                  weight: { n: 2, br: d.qM.readUint32, bw: d.gp.writeUint32 },
+                },
+              }),
+            C.sm_m
+          );
+        }
+        static MBF() {
+          return C.sm_mbf || (C.sm_mbf = d.w0(C.M())), C.sm_mbf;
+        }
+        toObject(e = !1) {
+          return C.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(C.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(C.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (m().BinaryReader)(e),
+            a = new C();
+          return C.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(C.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (m().BinaryWriter)();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(C.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (m().BinaryWriter)();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_Tag";
@@ -73937,7 +74849,7 @@
                     br: d.qM.readString,
                     bw: d.gp.writeString,
                   },
-                  active_discounts: { n: 20, c: A, r: !0, q: !0 },
+                  active_discounts: { n: 20, c: L, r: !0, q: !0 },
                   user_can_purchase_as_gift: {
                     n: 31,
                     br: d.qM.readBool,
@@ -73975,7 +74887,7 @@
                     br: d.qM.readBool,
                     bw: d.gp.writeBool,
                   },
-                  recurrence_info: { n: 46, c: L },
+                  recurrence_info: { n: 46, c: A },
                   free_to_keep_ends: {
                     n: 47,
                     br: d.qM.readUint32,
@@ -74021,20 +74933,20 @@
           return "StoreItem_PurchaseOption";
         }
       }
-      class A extends c.Message {
+      class L extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            A.prototype.discount_amount || d.Sg(A.M()),
+            L.prototype.discount_amount || d.Sg(L.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
+            L.sm_m ||
+              (L.sm_m = {
+                proto: L,
                 fields: {
                   discount_amount: {
                     n: 1,
@@ -74050,87 +74962,6 @@
                     n: 3,
                     br: d.qM.readUint32,
                     bw: d.gp.writeUint32,
-                  },
-                },
-              }),
-            A.sm_m
-          );
-        }
-        static MBF() {
-          return A.sm_mbf || (A.sm_mbf = d.w0(A.M())), A.sm_mbf;
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(A.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(A.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (m().BinaryReader)(e),
-            a = new A();
-          return A.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(A.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (m().BinaryWriter)();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(A.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (m().BinaryWriter)();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreItem_PurchaseOption_Discount";
-        }
-      }
-      class L extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            L.prototype.packageid || d.Sg(L.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
-                fields: {
-                  packageid: { n: 1, br: d.qM.readInt32, bw: d.gp.writeInt32 },
-                  billing_agreement_type: {
-                    n: 2,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  renewal_time_unit: {
-                    n: 3,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  renewal_time_period: {
-                    n: 4,
-                    br: d.qM.readInt32,
-                    bw: d.gp.writeInt32,
-                  },
-                  renewal_price_in_cents: {
-                    n: 5,
-                    br: d.qM.readInt64String,
-                    bw: d.gp.writeInt64String,
-                  },
-                  formatted_renewal_price: {
-                    n: 6,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
                   },
                 },
               }),
@@ -74167,6 +74998,87 @@
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PurchaseOption_Discount";
+        }
+      }
+      class A extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            A.prototype.packageid || d.Sg(A.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
+                fields: {
+                  packageid: { n: 1, br: d.qM.readInt32, bw: d.gp.writeInt32 },
+                  billing_agreement_type: {
+                    n: 2,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  renewal_time_unit: {
+                    n: 3,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  renewal_time_period: {
+                    n: 4,
+                    br: d.qM.readInt32,
+                    bw: d.gp.writeInt32,
+                  },
+                  renewal_price_in_cents: {
+                    n: 5,
+                    br: d.qM.readInt64String,
+                    bw: d.gp.writeInt64String,
+                  },
+                  formatted_renewal_price: {
+                    n: 6,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                },
+              }),
+            A.sm_m
+          );
+        }
+        static MBF() {
+          return A.sm_mbf || (A.sm_mbf = d.w0(A.M())), A.sm_mbf;
+        }
+        toObject(e = !1) {
+          return A.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(A.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(A.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (m().BinaryReader)(e),
+            a = new A();
+          return A.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(A.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (m().BinaryWriter)();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(A.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (m().BinaryWriter)();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_PurchaseOption_RecurrenceInfo";
@@ -74343,58 +75255,58 @@
           return "StoreItem_Trailers";
         }
       }
-      class O extends c.Message {
+      class x extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            O.prototype.filename || d.Sg(O.M()),
+            x.prototype.filename || d.Sg(x.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
+            x.sm_m ||
+              (x.sm_m = {
+                proto: x,
                 fields: {
                   filename: { n: 1, br: d.qM.readString, bw: d.gp.writeString },
                   type: { n: 2, br: d.qM.readString, bw: d.gp.writeString },
                 },
               }),
-            O.sm_m
+            x.sm_m
           );
         }
         static MBF() {
-          return O.sm_mbf || (O.sm_mbf = d.w0(O.M())), O.sm_mbf;
+          return x.sm_mbf || (x.sm_mbf = d.w0(x.M())), x.sm_mbf;
         }
         toObject(e = !1) {
-          return O.toObject(e, this);
+          return x.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(O.M(), e, t);
+          return d.BT(x.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(O.M(), e);
+          return d.Uq(x.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (m().BinaryReader)(e),
-            a = new O();
-          return O.deserializeBinaryFromReader(a, t);
+            a = new x();
+          return x.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(O.MBF(), e, t);
+          return d.zj(x.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (m().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(O.M(), e, t);
+          d.i0(x.M(), e, t);
         }
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_Trailers_VideoSource";
@@ -74430,9 +75342,9 @@
                     br: d.qM.readEnum,
                     bw: d.gp.writeEnum,
                   },
-                  trailer_480p: { n: 3, c: O, r: !0, q: !0 },
-                  trailer_max: { n: 4, c: O, r: !0, q: !0 },
-                  microtrailer: { n: 5, c: O, r: !0, q: !0 },
+                  trailer_480p: { n: 3, c: x, r: !0, q: !0 },
+                  trailer_max: { n: 4, c: x, r: !0, q: !0 },
+                  microtrailer: { n: 5, c: x, r: !0, q: !0 },
                   screenshot_medium: {
                     n: 10,
                     br: d.qM.readString,
@@ -74489,20 +75401,20 @@
           return "StoreItem_Trailers_Trailer";
         }
       }
-      class x extends c.Message {
+      class O extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.elanguage || d.Sg(x.M()),
+            O.prototype.elanguage || d.Sg(O.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   elanguage: {
                     n: 1,
@@ -74521,39 +75433,39 @@
                   subtitles: { n: 4, br: d.qM.readBool, bw: d.gp.writeBool },
                 },
               }),
-            x.sm_m
+            O.sm_m
           );
         }
         static MBF() {
-          return x.sm_mbf || (x.sm_mbf = d.w0(x.M())), x.sm_mbf;
+          return O.sm_mbf || (O.sm_mbf = d.w0(O.M())), O.sm_mbf;
         }
         toObject(e = !1) {
-          return x.toObject(e, this);
+          return O.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(x.M(), e, t);
+          return d.BT(O.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(x.M(), e);
+          return d.Uq(O.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (m().BinaryReader)(e),
-            a = new x();
-          return x.deserializeBinaryFromReader(a, t);
+            a = new O();
+          return O.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(x.MBF(), e, t);
+          return d.zj(O.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (m().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(x.M(), e, t);
+          d.i0(O.M(), e, t);
         }
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_SupportedLanguage";
@@ -76800,8 +77712,8 @@
                     pbr: d.qM.readPackedEnum,
                     bw: d.gp.writeRepeatedEnum,
                   },
-                  predefined_filter: { n: 5, c: Ce },
-                  tagids_must_match: { n: 10, c: Ie, r: !0, q: !0 },
+                  predefined_filter: { n: 5, c: Ie },
+                  tagids_must_match: { n: 10, c: Ce, r: !0, q: !0 },
                   tagids_exclude: {
                     n: 11,
                     r: !0,
@@ -77003,76 +77915,12 @@
           return "CStoreQueryFilters_TypeFilters";
         }
       }
-      class Ce extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ce.prototype.filter_type || d.Sg(Ce.M()),
-            c.Message.initialize(this, e, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ce.sm_m ||
-              (Ce.sm_m = {
-                proto: Ce,
-                fields: {
-                  filter_type: { n: 1, br: d.qM.readEnum, bw: d.gp.writeEnum },
-                  language_preferences: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: d.qM.readInt32,
-                    pbr: d.qM.readPackedInt32,
-                    bw: d.gp.writeRepeatedInt32,
-                  },
-                },
-              }),
-            Ce.sm_m
-          );
-        }
-        static MBF() {
-          return Ce.sm_mbf || (Ce.sm_mbf = d.w0(Ce.M())), Ce.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ce.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Ce.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Ce.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (m().BinaryReader)(e),
-            a = new Ce();
-          return Ce.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ce.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (m().BinaryWriter)();
-          return Ce.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Ce.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (m().BinaryWriter)();
-          return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreQueryFilters_PredefinedFilter";
-        }
-      }
       class Ie extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ie.prototype.tagids || d.Sg(Ie.M()),
-            c.Message.initialize(this, e, 0, -1, [1], null);
+            Ie.prototype.filter_type || d.Sg(Ie.M()),
+            c.Message.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -77082,8 +77930,9 @@
               (Ie.sm_m = {
                 proto: Ie,
                 fields: {
-                  tagids: {
-                    n: 1,
+                  filter_type: { n: 1, br: d.qM.readEnum, bw: d.gp.writeEnum },
+                  language_preferences: {
+                    n: 2,
                     r: !0,
                     q: !0,
                     br: d.qM.readInt32,
@@ -77125,6 +77974,69 @@
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQueryFilters_PredefinedFilter";
+        }
+      }
+      class Ce extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ce.prototype.tagids || d.Sg(Ce.M()),
+            c.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Ce.sm_m ||
+              (Ce.sm_m = {
+                proto: Ce,
+                fields: {
+                  tagids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: d.qM.readInt32,
+                    pbr: d.qM.readPackedInt32,
+                    bw: d.gp.writeRepeatedInt32,
+                  },
+                },
+              }),
+            Ce.sm_m
+          );
+        }
+        static MBF() {
+          return Ce.sm_mbf || (Ce.sm_mbf = d.w0(Ce.M())), Ce.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ce.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Ce.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Ce.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (m().BinaryReader)(e),
+            a = new Ce();
+          return Ce.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Ce.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (m().BinaryWriter)();
+          return Ce.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Ce.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (m().BinaryWriter)();
+          return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreQueryFilters_TagFilter";
@@ -77469,70 +78381,12 @@
           return "CStoreQuery_Query_Request";
         }
       }
-      class Ae extends c.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Ae.prototype.metadata || d.Sg(Ae.M()),
-            c.Message.initialize(this, e, 0, -1, [2, 3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Ae.sm_m ||
-              (Ae.sm_m = {
-                proto: Ae,
-                fields: {
-                  metadata: { n: 1, c: Re },
-                  ids: { n: 2, c: H, r: !0, q: !0 },
-                  store_items: { n: 3, c: b, r: !0, q: !0 },
-                },
-              }),
-            Ae.sm_m
-          );
-        }
-        static MBF() {
-          return Ae.sm_mbf || (Ae.sm_mbf = d.w0(Ae.M())), Ae.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ae.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return d.BT(Ae.M(), e, t);
-        }
-        static fromObject(e) {
-          return d.Uq(Ae.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (m().BinaryReader)(e),
-            a = new Ae();
-          return Ae.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return d.zj(Ae.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (m().BinaryWriter)();
-          return Ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          d.i0(Ae.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (m().BinaryWriter)();
-          return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreQuery_Query_Response";
-        }
-      }
       class Le extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Le.prototype.query_name || d.Sg(Le.M()),
-            c.Message.initialize(this, e, 0, -1, void 0, null);
+            Le.prototype.metadata || d.Sg(Le.M()),
+            c.Message.initialize(this, e, 0, -1, [2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -77542,35 +78396,9 @@
               (Le.sm_m = {
                 proto: Le,
                 fields: {
-                  query_name: {
-                    n: 1,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  context: { n: 2, c: j },
-                  search_term: {
-                    n: 3,
-                    br: d.qM.readString,
-                    bw: d.gp.writeString,
-                  },
-                  max_results: {
-                    n: 4,
-                    br: d.qM.readUint32,
-                    bw: d.gp.writeUint32,
-                  },
-                  filters: { n: 5, c: we },
-                  data_request: { n: 6, c: z },
-                  use_spellcheck: {
-                    n: 7,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
-                  },
-                  search_tags: { n: 8, br: d.qM.readBool, bw: d.gp.writeBool },
-                  search_creators: {
-                    n: 9,
-                    br: d.qM.readBool,
-                    bw: d.gp.writeBool,
-                  },
+                  metadata: { n: 1, c: Re },
+                  ids: { n: 2, c: H, r: !0, q: !0 },
+                  store_items: { n: 3, c: b, r: !0, q: !0 },
                 },
               }),
             Le.sm_m
@@ -77606,6 +78434,90 @@
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
           return Le.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQuery_Query_Response";
+        }
+      }
+      class Ae extends c.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ae.prototype.query_name || d.Sg(Ae.M()),
+            c.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Ae.sm_m ||
+              (Ae.sm_m = {
+                proto: Ae,
+                fields: {
+                  query_name: {
+                    n: 1,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  context: { n: 2, c: j },
+                  search_term: {
+                    n: 3,
+                    br: d.qM.readString,
+                    bw: d.gp.writeString,
+                  },
+                  max_results: {
+                    n: 4,
+                    br: d.qM.readUint32,
+                    bw: d.gp.writeUint32,
+                  },
+                  filters: { n: 5, c: we },
+                  data_request: { n: 6, c: z },
+                  use_spellcheck: {
+                    n: 7,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                  search_tags: { n: 8, br: d.qM.readBool, bw: d.gp.writeBool },
+                  search_creators: {
+                    n: 9,
+                    br: d.qM.readBool,
+                    bw: d.gp.writeBool,
+                  },
+                },
+              }),
+            Ae.sm_m
+          );
+        }
+        static MBF() {
+          return Ae.sm_mbf || (Ae.sm_mbf = d.w0(Ae.M())), Ae.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ae.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return d.BT(Ae.M(), e, t);
+        }
+        static fromObject(e) {
+          return d.Uq(Ae.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (m().BinaryReader)(e),
+            a = new Ae();
+          return Ae.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return d.zj(Ae.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (m().BinaryWriter)();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          d.i0(Ae.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (m().BinaryWriter)();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreQuery_SearchSuggestions_Request";
@@ -77801,55 +78713,55 @@
           return "CStoreQuery_GetItemsByUserRecommendedTags_Request_Section";
         }
       }
-      class Oe extends c.Message {
+      class xe extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Oe.prototype.sections || d.Sg(Oe.M()),
+            xe.prototype.sections || d.Sg(xe.M()),
             c.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Oe.sm_m ||
-              (Oe.sm_m = {
-                proto: Oe,
+            xe.sm_m ||
+              (xe.sm_m = {
+                proto: xe,
                 fields: { sections: { n: 1, c: We, r: !0, q: !0 } },
               }),
-            Oe.sm_m
+            xe.sm_m
           );
         }
         static MBF() {
-          return Oe.sm_mbf || (Oe.sm_mbf = d.w0(Oe.M())), Oe.sm_mbf;
+          return xe.sm_mbf || (xe.sm_mbf = d.w0(xe.M())), xe.sm_mbf;
         }
         toObject(e = !1) {
-          return Oe.toObject(e, this);
+          return xe.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(Oe.M(), e, t);
+          return d.BT(xe.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(Oe.M(), e);
+          return d.Uq(xe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (m().BinaryReader)(e),
-            a = new Oe();
-          return Oe.deserializeBinaryFromReader(a, t);
+            a = new xe();
+          return xe.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(Oe.MBF(), e, t);
+          return d.zj(xe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (m().BinaryWriter)();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(Oe.M(), e, t);
+          d.i0(xe.M(), e, t);
         }
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreQuery_GetItemsByUserRecommendedTags_Response";
@@ -77913,20 +78825,20 @@
           return "CStoreQuery_GetItemsByUserRecommendedTags_Response_Section";
         }
       }
-      class xe extends c.Message {
+      class Oe extends c.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            xe.prototype.sort || d.Sg(xe.M()),
+            Oe.prototype.sort || d.Sg(Oe.M()),
             c.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            xe.sm_m ||
-              (xe.sm_m = {
-                proto: xe,
+            Oe.sm_m ||
+              (Oe.sm_m = {
+                proto: Oe,
                 fields: {
                   sort: { n: 1, d: 0, br: d.qM.readEnum, bw: d.gp.writeEnum },
                   max_items: {
@@ -77951,39 +78863,39 @@
                   context: { n: 7, c: j },
                 },
               }),
-            xe.sm_m
+            Oe.sm_m
           );
         }
         static MBF() {
-          return xe.sm_mbf || (xe.sm_mbf = d.w0(xe.M())), xe.sm_mbf;
+          return Oe.sm_mbf || (Oe.sm_mbf = d.w0(Oe.M())), Oe.sm_mbf;
         }
         toObject(e = !1) {
-          return xe.toObject(e, this);
+          return Oe.toObject(e, this);
         }
         static toObject(e, t) {
-          return d.BT(xe.M(), e, t);
+          return d.BT(Oe.M(), e, t);
         }
         static fromObject(e) {
-          return d.Uq(xe.M(), e);
+          return d.Uq(Oe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (m().BinaryReader)(e),
-            a = new xe();
-          return xe.deserializeBinaryFromReader(a, t);
+            a = new Oe();
+          return Oe.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return d.zj(xe.MBF(), e, t);
+          return d.zj(Oe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (m().BinaryWriter)();
-          return xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          d.i0(xe.M(), e, t);
+          d.i0(Oe.M(), e, t);
         }
         serializeBase64String() {
           var e = new (m().BinaryWriter)();
-          return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStoreQuery_GetItemByUserCombinedTagsPriority_Request";
@@ -78078,7 +78990,7 @@
       }
       !(function (e) {
         (e.Query = function (e, t) {
-          return e.SendMsg("StoreQuery.Query#1", (0, o.I8)(De, t), Ae, {
+          return e.SendMsg("StoreQuery.Query#1", (0, o.I8)(De, t), Le, {
             bConstMethod: !0,
             ePrivilege: 1,
             eWebAPIKeyRequirement: 1,
@@ -78087,7 +78999,7 @@
           (e.SearchSuggestions = function (e, t) {
             return e.SendMsg(
               "StoreQuery.SearchSuggestions#1",
-              (0, o.I8)(Le, t),
+              (0, o.I8)(Ae, t),
               Pe,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -78096,14 +79008,14 @@
             return e.SendMsg(
               "StoreQuery.GetItemsByUserRecommendedTags#1",
               (0, o.I8)(ke, t),
-              Oe,
+              xe,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetItemByUserCombinedTagsPriority = function (e, t) {
             return e.SendMsg(
               "StoreQuery.GetItemByUserCombinedTagsPriority#1",
-              (0, o.I8)(xe, t),
+              (0, o.I8)(Oe, t),
               Fe,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -79969,12 +80881,12 @@
     37109: (e, t, a) => {
       "use strict";
       a.d(t, {
-        tz: () => I,
+        tz: () => C,
         P: () => T,
         kt: () => N,
         il: () => D,
         ai: () => R,
-        aE: () => A,
+        aE: () => L,
       });
       var r = a(85608),
         n = a(80305),
@@ -80018,7 +80930,7 @@
         S = a(45031),
         w = a(49773);
       const T = d.createContext(null);
-      let C = class extends d.Component {
+      let I = class extends d.Component {
         static contextType = T;
         m_navRef = (0, n.b$)();
         get instance() {
@@ -80138,13 +81050,13 @@
           }
         }
       };
-      function I(e) {
+      function C(e) {
         const t = d.useId();
-        return d.createElement(C, { labelId: t, ...e });
+        return d.createElement(I, { labelId: t, ...e });
       }
-      (0, r.Cg)([S.oI], C.prototype, "HideIfSubmenu", null),
-        (0, r.Cg)([S.oI], C.prototype, "HideMenu", null),
-        (C = (0, r.Cg)([m.PA], C));
+      (0, r.Cg)([S.oI], I.prototype, "HideIfSubmenu", null),
+        (0, r.Cg)([S.oI], I.prototype, "HideMenu", null),
+        (I = (0, r.Cg)([m.PA], I));
       class N extends d.PureComponent {
         static contextType = T;
         m_ref = d.createRef();
@@ -80274,7 +81186,7 @@
         }
         RenderSubMenu() {
           return d.createElement(
-            I,
+            C,
             { onMouseEnter: this.OnSubMenuMouseEnter, label: this.props.label },
             this.props.children,
           );
@@ -80496,12 +81408,12 @@
               ? (p.menuRight = m - (t.bOverlapHorizontal ? h : g))
               : (p.menuLeft = t.bOverlapHorizontal ? g : h);
           let T = o ?? u.top,
-            C = o ?? u.bottom,
-            I = a.scrollHeight;
-          t.bMatchHeight && ((I = C - T), (p.menuHeight = I));
-          let N = (t.bOverlapVertical ? C : T) - c - I,
+            I = o ?? u.bottom,
+            C = a.scrollHeight;
+          t.bMatchHeight && ((C = I - T), (p.menuHeight = C));
+          let N = (t.bOverlapVertical ? I : T) - c - C,
             B = N > 0,
-            M = c + d - (t.bOverlapVertical ? T : C) - I,
+            M = c + d - (t.bOverlapVertical ? T : I) - C,
             R = M > 0,
             D = (t.bPreferPopTop || !R) && B && !t.bDisablePopTop;
           if (!B && !R) {
@@ -80512,14 +81424,14 @@
             (D = N > M && !t.bDisablePopTop),
               e && (D ? (p.menuTop = 4) : (p.menuBottom = 4)),
               t.bFitToWindow &&
-                (e ? (I = Math.min(I, d - 8)) : (I += D ? N : M),
-                (p.menuHeight = I - 8));
+                (e ? (C = Math.min(C, d - 8)) : (C += D ? N : M),
+                (p.menuHeight = C - 8));
           }
           void 0 === p.menuBottom &&
             void 0 === p.menuTop &&
             (D
-              ? (p.menuBottom = d - (t.bOverlapVertical ? C : T))
-              : (p.menuTop = t.bOverlapVertical ? T : C)),
+              ? (p.menuBottom = d - (t.bOverlapVertical ? I : T))
+              : (p.menuTop = t.bOverlapVertical ? T : I)),
             n
               ? (p.menuHeight || (p.menuHeight = _.height),
                 p.menuWidth || (p.menuWidth = _.width),
@@ -80647,7 +81559,7 @@
           className: h().ContextMenuMouseOverlay,
         });
       }
-      function A(e) {
+      function L(e) {
         let t = [],
           a = f.uX(e),
           r = a.getSelection(),
@@ -80786,7 +81698,7 @@
               t.push(...e));
         }
         if (t.length)
-          (0, u.lX)(d.createElement(I, null, t), e, { bRootContextMenu: !0 });
+          (0, u.lX)(d.createElement(C, null, t), e, { bRootContextMenu: !0 });
         else {
           if (e.shiftKey) return;
           e.preventDefault(), e.stopPropagation();
@@ -80798,10 +81710,10 @@
         (0, r.Cg)([S.oI], R.prototype, "OnBlur", null),
         (0, r.Cg)([S.oI], R.prototype, "OnKeyDown", null),
         (R = (0, r.Cg)([m.PA], R));
-      const L = "EnableContextMenuBlurDelay3";
+      const A = "EnableContextMenuBlurDelay3";
       function P() {
         return (
-          "true" === (window.localStorage && window.localStorage.getItem(L))
+          "true" === (window.localStorage && window.localStorage.getItem(A))
         );
       }
     },
@@ -80811,14 +81723,14 @@
         pF: () => z,
         f3: () => M,
         a3: () => B,
-        $n: () => x,
+        $n: () => O,
         Yh: () => j,
-        UC: () => A,
+        UC: () => L,
         U9: () => k,
         Mw: () => nt,
         t6: () => w,
         D0: () => ht,
-        wi: () => I,
+        wi: () => C,
         Dm: () => gt,
         Y9: () => T,
         pd: () => J,
@@ -80826,7 +81738,7 @@
         VQ: () => U,
         yA: () => Wt,
         jn: () => W,
-        iK: () => C,
+        iK: () => I,
         Zy: () => ee,
       });
       var r = a(85608),
@@ -80914,8 +81826,8 @@
             })
           );
         });
-      let C = (0, l.Ri)("DialogSubHeader", "heading", { "aria-level": 3 }),
-        I =
+      let I = (0, l.Ri)("DialogSubHeader", "heading", { "aria-level": 3 }),
+        C =
           ((0, l.Ri)("SettingsDialogSubHeader", "heading", { "aria-level": 3 }),
           (0, l.Ri)("DialogFooter")),
         N = (0, l.Ri)("DialogLabel _DialogLayout"),
@@ -80930,11 +81842,11 @@
         D = S("DialogThreeColLayout _DialogColLayout");
       S("DialogTwoThirdColLayout _DialogColLayout"),
         (0, l.Ri)("DialogColumn _DialogLayout");
-      function A(e) {
-        const t = E("Content", L);
+      function L(e) {
+        const t = E("Content", A);
         return n.createElement(t, { ...e });
       }
-      function L(e) {
+      function A(e) {
         let { children: t, bCenterVertically: a, refElem: r, ...i } = e,
           s =
             "DialogContent _DialogLayout" +
@@ -80966,7 +81878,7 @@
       function k(e) {
         const { classNameContent: t, bCenterVertically: a, ...r } = e;
         return n.createElement(
-          A,
+          L,
           { className: t, bCenterVertically: a },
           n.createElement(P, { ...r }),
         );
@@ -80989,7 +81901,7 @@
         );
       }
       (0, r.Cg)([c.o], P.prototype, "OnSubmit", null);
-      const O = n.forwardRef(function (e, t) {
+      const x = n.forwardRef(function (e, t) {
           const a = h(),
             { svgicon: r, ...s } = e,
             o = (0, m.A)(
@@ -81029,7 +81941,7 @@
           );
         }),
         W = n.forwardRef(function (e, t) {
-          return n.createElement(O, {
+          return n.createElement(x, {
             preferredFocus: !0,
             type: e.onClick ? "button" : "submit",
             ...e,
@@ -81042,8 +81954,8 @@
             ),
           });
         }),
-        x = n.forwardRef(function (e, t) {
-          return n.createElement(O, {
+        O = n.forwardRef(function (e, t) {
+          return n.createElement(x, {
             type: "button",
             ...e,
             ref: t,
@@ -81056,7 +81968,7 @@
           });
         });
       n.forwardRef(function (e, t) {
-        return n.createElement(O, {
+        return n.createElement(x, {
           type: "button",
           ...e,
           ref: t,
@@ -81069,7 +81981,7 @@
         });
       }),
         n.forwardRef(function (e, t) {
-          return n.createElement(O, {
+          return n.createElement(x, {
             type: "button",
             ...e,
             ref: t,
@@ -81080,7 +81992,7 @@
           });
         }),
         n.forwardRef(function (e, t) {
-          return n.createElement(O, {
+          return n.createElement(x, {
             type: "button",
             ...e,
             ref: t,
@@ -81102,7 +82014,7 @@
             " ",
           ),
           n.createElement(
-            x,
+            O,
             {
               onClick: e.onCancel,
               disabled: e.bCancelDisabled,
@@ -81113,8 +82025,8 @@
         );
       }
       function U(e) {
-        const t = e.bOKDisabled ? x : W,
-          a = e.bOKDisabled ? W : x;
+        const t = e.bOKDisabled ? O : W,
+          a = e.bOKDisabled ? W : O;
         return n.createElement(
           D,
           null,
@@ -81131,7 +82043,7 @@
             " ",
           ),
           n.createElement(
-            x,
+            O,
             { onClick: e.onCancel, disabled: e.bCancelDisabled },
             e.strCancelText || (0, d.we)("#Button_Cancel"),
           ),
@@ -81644,10 +82556,10 @@
             T = this.state.m_bCompletedCopiedAnimation;
           this.m_CopiedAnimation && (w = "copiedAnimation animationPlaying"),
             T && (w = "copiedAnimation animationComplete");
-          let C = {};
+          let I = {};
           void 0 !== this.state.m_CopiedYPos &&
-            (C.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-          let I = n.createElement(
+            (I.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+          let C = n.createElement(
             n.Fragment,
             null,
             n.createElement(
@@ -81669,7 +82581,7 @@
                   "div",
                   { className: "displayRow" },
                   n.createElement(
-                    x,
+                    O,
                     {
                       className: "DialogInput_CopyAction Primary",
                       onClick: this.OnCopyClick,
@@ -81678,7 +82590,7 @@
                   ),
                   n.createElement(
                     "div",
-                    { style: C, className: w },
+                    { style: I, className: w },
                     (0, d.we)("#Button_Copied"),
                   ),
                 ),
@@ -81720,7 +82632,7 @@
                     ),
                     " ",
                   ),
-                  I,
+                  C,
                   this.state.m_bNumberBelowMinRange
                     ? n.createElement(
                         "div",
@@ -81786,7 +82698,7 @@
                     : null,
                 ),
               )
-            : I;
+            : C;
         }
       }
       (0, r.Cg)([V.oI], J.prototype, "OnInputRef", null),
@@ -82472,10 +83384,10 @@
         activeObject;
         instance;
         constructor(e) {
-          this.instance = new Ce(e, !1);
+          this.instance = new Ie(e, !1);
         }
       }
-      class Ce {
+      class Ie {
         m_parent;
         m_window;
         m_container = null;
@@ -82535,7 +83447,7 @@
           return this.m_container && Y.id(this.m_container, e);
         }
       }
-      class Ie {
+      class Ce {
         m_strUniqueID;
         m_mapEmbeddedHovers = new WeakMap();
         constructor(e) {
@@ -82566,7 +83478,7 @@
         Me = a(88762);
       const Re = new Me.wd("DragDrop").Debug;
       class De extends n.Component {
-        m_coordinator = new Le();
+        m_coordinator = new Ae();
         OnDrop(e, t) {
           t > e && t--, t != e && this.props.onReorder(e, t);
         }
@@ -82604,14 +83516,14 @@
           );
         }
       }
-      function Ae(e, t, a, r) {
+      function Le(e, t, a, r) {
         return r
           ? a && e > a.left && e < a.right && t > a.top && t < a.bottom
           : a && e >= a.left && e <= a.right && t >= a.top && t <= a.bottom;
       }
       (0, r.Cg)([V.oI], De.prototype, "OnDrop", null);
-      class Le {
-        m_embeddedElement = new Ie("DragGhosts");
+      class Ae {
+        m_embeddedElement = new Ce("DragGhosts");
         m_rgDropRegions = [];
         m_activeDraggable;
         m_rgActiveDropRegions = [];
@@ -82756,7 +83668,7 @@
               const i = r + t,
                 s = n + a,
                 o = e.GetDragDocument().body.getBoundingClientRect();
-              if (Ae(r, n, o) && !Ae(i, s, o, !0)) {
+              if (Le(r, n, o) && !Le(i, s, o, !0)) {
                 const t = Be.Fu(
                     i,
                     o.left,
@@ -82790,7 +83702,7 @@
               this.m_activeDropRegion.OnDragMove(r, n, this.m_activeDraggable);
         }
       }
-      (0, r.Cg)([V.oI], Le.prototype, "OnDragGhostRef", null);
+      (0, r.Cg)([V.oI], Ae.prototype, "OnDragGhostRef", null);
       class Pe extends n.Component {
         constructor(e) {
           super(e), (0, Se.Gn)(this);
@@ -83078,7 +83990,7 @@
         }
       }
       (0, r.Cg)([V.oI], Ge.prototype, "OnRef", null);
-      class Oe extends n.Component {
+      class xe extends n.Component {
         m_divRef = n.createRef();
         constructor(e) {
           super(e), (this.state = {});
@@ -83113,7 +84025,7 @@
           );
         }
         BDraggableInRegion(e, t, a) {
-          return Ae(e, t, this.GetClientRect());
+          return Le(e, t, this.GetClientRect());
         }
         GetElement() {
           return this.m_divRef.current;
@@ -83155,7 +84067,7 @@
           );
         }
       }
-      class We extends Oe {
+      class We extends xe {
         BDraggableInRegion(e, t, a) {
           let r = this.GetClientRect();
           return (
@@ -83165,7 +84077,7 @@
           );
         }
       }
-      var xe = a(26868),
+      var Oe = a(26868),
         Fe = a(25725),
         Ue = a(21352);
       a(67058), a(49717);
@@ -83455,7 +84367,7 @@
           s = n.useContext(rt),
           o = a?.padding ?? "standard";
         return n.createElement(
-          A,
+          L,
           {
             style: r,
             className: (0, m.A)(
@@ -83528,7 +84440,7 @@
           n.useEffect(() => {
             e.bAutoFocusPageContent && y.current?.TakeFocus();
           }, []);
-          const { refForPageList: T, refForPage: C } = (function () {
+          const { refForPageList: T, refForPage: I } = (function () {
             const e = n.useMemo(() => new Qe(), []);
             n.useEffect(
               () => (
@@ -83580,7 +84492,7 @@
                   ),
                   navRef: p,
                   onButtonDown: (e) => {
-                    e.detail.button == xe.pR.OK &&
+                    e.detail.button == Oe.pR.OK &&
                       y.current?.TakeFocus(e.detail.button);
                   },
                   onFocusWithin: v,
@@ -83629,9 +84541,9 @@
                     toggleHideList: e.toggleHideList,
                   }),
                 e.renderPageContent
-                  ? e.renderPageContent(_, C, tt)
+                  ? e.renderPageContent(_, I, tt)
                   : n.createElement(tt, {
-                      ref: C,
+                      ref: I,
                       activePage: _,
                       stylesheet: a,
                     }),
@@ -83816,22 +84728,22 @@
             verticalAlignment: S,
             iconLocation: w,
             tooltip: T,
-            explainer: C,
-            explainerTitle: I,
+            explainer: I,
+            explainerTitle: C,
             ...N
           } = e,
           B = (0, mt.Qn)(),
           M = c ?? "inline",
           R = w ?? "front",
           D = "front" == R && !!o,
-          A = "before-children" == R && !!o,
-          L = "inline" == M && !!l,
+          L = "before-children" == R && !!o,
+          A = "inline" == M && !!l,
           P = "below" == M && !!l,
           k = u ?? (B ? "shift-children-below" : "keep-inline"),
           G = !!(N.onClick || N.onActivate || N.focusable),
-          O = (null != o && D) || null != r || (L && null != l),
+          x = (null != o && D) || null != r || (A && null != l),
           W = _ ?? "min",
-          x = g ?? "standard",
+          O = g ?? "standard",
           F = h ?? "standard",
           U = b ?? "standard",
           z = f ?? !0,
@@ -83845,8 +84757,8 @@
             if (null == t) return {};
             const i = (0, d.we)("#Field_MoreInfo_Action");
             return { onOptionsButton: r, onOptionsActionDescription: i };
-          })(I ?? r, C),
-          Y = n.useRef(),
+          })(C ?? r, I),
+          Y = n.useRef(void 0),
           $ = (0, V.Ue)(Y, e.navRef),
           K = n.useCallback(
             (e) => {
@@ -83870,8 +84782,8 @@
               v,
               ct().Field,
               E && ct().Disabled,
-              O && ct().WithFirstRow,
-              L && ct().WithChildrenInline,
+              x && ct().WithFirstRow,
+              A && ct().WithChildrenInline,
               P && ct().WithChildrenBelow,
               "center" == H && ct().VerticalAlignCenter,
               "shift-children-below" == k && ct().InlineWrapShiftsChildrenBelow,
@@ -83880,7 +84792,7 @@
               "thick" == U && ct().WithBottomSeparatorThick,
               "fixed" == W && ct().ChildrenWidthFixed,
               "max" == W && ct().ChildrenWidthGrow,
-              "standard" == x && ct().ExtraPaddingOnChildrenBelow,
+              "standard" == O && ct().ExtraPaddingOnChildrenBelow,
               "standard" == F && ct().StandardPadding,
               "compact" == F && ct().CompactPadding,
               G && ct().Clickable,
@@ -83888,7 +84800,7 @@
             ),
             style: { "--indent-level": j },
           },
-          O &&
+          x &&
             n.createElement(
               "div",
               { className: ct().FieldLabelRow },
@@ -83904,11 +84816,11 @@
                 r,
                 T && n.createElement(p, { tooltip: T }),
               ),
-              L &&
+              A &&
                 n.createElement(
                   "div",
                   { className: ct().FieldChildrenWithIcon },
-                  A &&
+                  L &&
                     n.createElement(
                       "div",
                       {
@@ -83930,7 +84842,7 @@
             n.createElement(
               "div",
               { className: ct().FieldChildrenWithIcon },
-              A &&
+              L &&
                 n.createElement(
                   "div",
                   { className: (0, m.A)(ct().FieldIcon, ct().BeforeChildren) },
@@ -84027,7 +84939,7 @@
                 s
               );
             })(a, e, v);
-          return n.createElement(x, { ...f, ...y, disabled: c, ref: t });
+          return n.createElement(O, { ...f, ...y, disabled: c, ref: t });
         }),
         bt = n.forwardRef(function (e, t) {
           const {
@@ -84076,10 +84988,10 @@
         return n.createElement(
           St.A,
           { className: o, appear: !1, enter: s, exit: s },
-          n.createElement(Ct, { key: t, childrenClasses: a }, r),
+          n.createElement(It, { key: t, childrenClasses: a }, r),
         );
       }
-      function Ct(e) {
+      function It(e) {
         const {
             sizeClass: t,
             children: a,
@@ -84089,7 +85001,7 @@
           } = e,
           [l, c, d, u] = (function () {
             let e = n.useRef(null),
-              t = n.useRef();
+              t = n.useRef(void 0);
             n.useLayoutEffect(() => {
               let a = e.current;
               if (!a || t.current) return;
@@ -84169,7 +85081,7 @@
               ),
             );
       }
-      function It(e, t) {
+      function Ct(e, t) {
         return {
           base: t,
           enterStart: e.Enter,
@@ -84207,7 +85119,7 @@
           n.createElement("div", { className: Bt().PageListItem_Title }, r),
         );
       }
-      function At(e) {
+      function Lt(e) {
         const { bTransparent: t, className: a, ...r } = e;
         return n.createElement("div", {
           className: (0, m.A)(a, Bt().Separator),
@@ -84229,11 +85141,11 @@
             stylesheet: Bt(),
             showTitle: i,
             PageListItemComponent: Dt,
-            PageListSeparatorComponent: At,
+            PageListSeparatorComponent: Lt,
             renderPageContent:
               e.renderPageContent ||
               ((t, a, r) =>
-                n.createElement(Lt, {
+                n.createElement(At, {
                   pages: e.pages,
                   activePage: t,
                   refForPage: a,
@@ -84242,7 +85154,7 @@
           }),
         );
       });
-      function Lt(e) {
+      function At(e) {
         const { pages: t, activePage: a, refForPage: r, PageComponent: i } = e,
           s = (function (e) {
             let t = n.useRef(e),
@@ -84255,9 +85167,9 @@
           })(n.useMemo(() => t.findIndex((e) => e == a), [t, a])),
           o = (function (e, t) {
             const a = n.useMemo(() => new Map(), []),
-              r = n.useRef();
+              r = n.useRef(e);
             r.current = e;
-            const i = n.useRef();
+            const i = n.useRef(t);
             i.current = t;
             const s = n.useCallback(
               (e) => (t) => {
@@ -84291,7 +85203,7 @@
           Tt,
           {
             childrenKey: a?.identifier,
-            childrenClasses: It(Bt(), Bt().ContentTransition),
+            childrenClasses: Ct(Bt(), Bt().ContentTransition),
             directionClass: l,
             animate: s != vt.None,
           },
@@ -84331,7 +85243,7 @@
           n.Fragment,
           null,
           n.createElement(
-            x,
+            O,
             {
               id: c,
               className: (0, m.A)(kt().DropDownControlButton, a),
@@ -84353,10 +85265,10 @@
           s && n.createElement("div", { id: d, style: { display: "none" } }, s),
         );
       });
-      var Ot = a(42779);
+      var xt = a(42779);
       const Wt = n.forwardRef(function (e, t) {
         const { className: a, ...r } = e;
-        let i = n.useRef(),
+        let i = n.useRef(void 0),
           o = (0, V.Ue)(t, i);
         const [l, c] = n.useState(!1),
           m = n.useCallback(() => {
@@ -84375,12 +85287,12 @@
             autoComplete: "off",
             ref: o,
             inlineControls: n.createElement(
-              x,
+              O,
               {
                 "aria-label": (0, d.we)(
                   l ? "#Login_HidePassword" : "#Login_ShowPassword",
                 ),
-                className: Ot.TogglePasswordVisibilityBtn,
+                className: xt.TogglePasswordVisibilityBtn,
                 onPointerDown: m,
                 onOKButton: m,
               },
@@ -84447,8 +85359,8 @@
           },
         });
       });
-      var xt = a(68216),
-        Ft = a.n(xt),
+      var Ot = a(68216),
+        Ft = a.n(Ot),
         Ut = a(7491),
         zt = a(87548),
         jt = a.n(zt),
@@ -84459,8 +85371,8 @@
           s = (0, Ht.zy)(),
           o = (s.state && s.state[r]) ?? a,
           l = n.useRef(!1),
-          c = n.useRef(),
-          m = n.useRef(),
+          c = n.useRef(void 0),
+          m = n.useRef(void 0),
           d = n.useCallback(
             (e) => {
               if (l.current && ((c.current = e), !m.current)) {
@@ -84494,7 +85406,7 @@
             (s.current = void 0), (o.current = void 0);
           }, []),
           c = (function (e, t) {
-            const a = n.useRef();
+            const a = n.useRef(void 0);
             return n.useCallback(
               (r, n) => {
                 let i = "sine";
@@ -84538,19 +85450,19 @@
               g = s.current ?? n,
               h = o.current ?? u;
             switch (a.detail.button) {
-              case xe.pR.DIR_UP:
+              case Oe.pR.DIR_UP:
                 if (g <= 2) return !1;
                 s.current = Math.max(0, g - d * i);
                 break;
-              case xe.pR.DIR_DOWN:
+              case Oe.pR.DIR_DOWN:
                 if (g >= m - d - 2) return !1;
                 s.current = Math.min(m - d, g + d * i);
                 break;
-              case xe.pR.DIR_LEFT:
+              case Oe.pR.DIR_LEFT:
                 if (h <= 2) return !1;
                 o.current = Math.max(0, h - p * i);
                 break;
-              case xe.pR.DIR_RIGHT:
+              case Oe.pR.DIR_RIGHT:
                 if (h >= _ - p - 2) return !1;
                 o.current = Math.min(_ - p, h + p * i);
                 break;
@@ -84863,7 +85775,7 @@
           [c, m] = qt(`${t}ScrollLeft`, 250, 0),
           d = n.useRef(0),
           u = n.useRef(0),
-          _ = n.useRef();
+          _ = n.useRef(void 0);
         let p = n.useCallback(
           (e) => {
             const { scrollTop: t, scrollLeft: a } = e.currentTarget;
@@ -85512,9 +86424,9 @@
         OnGamepadDirection(e) {
           if (this.props.disabled) return !1;
           let t = 0;
-          if (e.detail.button == xe.pR.DIR_LEFT) t = -1;
+          if (e.detail.button == Oe.pR.DIR_LEFT) t = -1;
           else {
-            if (e.detail.button != xe.pR.DIR_RIGHT) return !1;
+            if (e.detail.button != Oe.pR.DIR_RIGHT) return !1;
             t = 1;
           }
           e.detail.is_repeat
@@ -85763,23 +86675,23 @@
               onChangeComplete: S,
               onChangeStart: w,
               renderNotch: T,
-              renderValue: C,
-              resetValue: I,
+              renderValue: I,
+              resetValue: C,
               resetValueAppearance: N = "top-caret",
               showBookendLabels: B,
               showHandle: M,
               step: R,
               strValueSuffix: D,
-              trackStyleOverride: A,
-              trackStyleBackground: L,
+              trackStyleOverride: L,
+              trackStyleBackground: A,
               trackForegroundVisible: P = !0,
               trackTone: k,
               ...G
             } = this.props,
-            O = B ?? !1,
-            W = f ?? !O,
-            x = O ? 2 : b,
-            F = O
+            x = B ?? !1,
+            W = f ?? !x,
+            O = x ? 2 : b,
+            F = x
               ? [
                   { notchIndex: 0, label: `${e}` },
                   { notchIndex: 1, label: `${t}` },
@@ -85791,10 +86703,10 @@
             H = null != z,
             q = "top-caret" == N,
             Y = !q,
-            $ = C || ee,
+            $ = I || ee,
             K = {};
           this.CanResetToDefault &&
-            (K[xe.pR.SECONDARY] = (0, d.we)("#ResetToDefault"));
+            (K[Oe.pR.SECONDARY] = (0, d.we)("#ResetToDefault"));
           let Z = `${Ft().SliderHandle} SliderHandle`,
             Q = `${Ft().SliderHandleContainer} SliderHandleContainer `;
           "verticalline" == p
@@ -85889,7 +86801,7 @@
                     Ft().SliderTrack,
                     null != b && W && Ft().SliderHasNotches,
                     { [Ft().SliderTrackDark]: "dark" === k },
-                    L,
+                    A,
                     "SliderTrack",
                   ),
                   style: this.props.trackStyleOverride,
@@ -85920,8 +86832,8 @@
                     ),
                   ),
               ),
-              n.createElement(Ca, {
-                notchCount: x,
+              n.createElement(Ia, {
+                notchCount: O,
                 notchLabels: F,
                 sliderValue: this.normalizedClampedValue,
                 notchTicksVisible: W,
@@ -85931,7 +86843,7 @@
           );
         }
       }
-      function Ca(e) {
+      function Ia(e) {
         let {
             sliderValue: t,
             notchCount: a,
@@ -85947,7 +86859,7 @@
           let r = l.find((t) => t.notchIndex == e);
           r && (c = !0),
             d.push(
-              n.createElement(Ia, {
+              n.createElement(Ca, {
                 key: e,
                 notchIndex: e,
                 sliderValue: t,
@@ -85964,7 +86876,7 @@
           d,
         );
       }
-      function Ia(e) {
+      function Ca(e) {
         const t = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
           a = e.notchCount <= 3 && !e.notchTicksVisible,
           r = a && 0 == e.notchIndex,
@@ -86284,7 +87196,7 @@
     },
     25744: (e, t, a) => {
       "use strict";
-      a.d(t, { L: () => C });
+      a.d(t, { L: () => I });
       var r = a(7552);
       function n(e) {
         const [t, a] = (0, r.useState)(!0);
@@ -86484,7 +87396,7 @@
             );
         }, [e]);
       }
-      function C(e) {
+      function I(e) {
         let {
           ModalManager: t,
           bRegisterModalManager: a = !0,
@@ -86534,7 +87446,7 @@
                 return e instanceof f._F
                   ? r.createElement(N, { ...a, modal: e, Component: s ?? B })
                   : e instanceof f.$9
-                    ? r.createElement(I, {
+                    ? r.createElement(C, {
                         ...a,
                         modal: e,
                         bUseDialogElement: l,
@@ -86568,7 +87480,7 @@
           )
         );
       }
-      function I(e) {
+      function C(e) {
         const {
           modal: t,
           rctActiveContextMenus: a,
@@ -86871,7 +87783,7 @@
           c = (0, s.oJ)(),
           [m, d] = r.useState(null),
           [u, _] = r.useState(!1),
-          p = r.useRef();
+          p = r.useRef(void 0);
         if (
           (r.useEffect(() => {
             if (t) {
@@ -87020,7 +87932,7 @@
           } = e,
           i = (0, l.R7)(),
           d = i?.ownerWindow || window,
-          u = n.useRef();
+          u = n.useRef(void 0);
         return (
           u.current || (u.current = new o.z()),
           n.useLayoutEffect(() => {
@@ -87184,8 +88096,8 @@
         );
       }
       var T = a(25744),
-        C = a(5404);
-      const I = n.createContext({}),
+        I = a(5404);
+      const C = n.createContext({}),
         N = n.memo(function (e) {
           const {
               children: t,
@@ -87202,8 +88114,8 @@
               bRegisterManagersWithWindow: h = !0,
               ...b
             } = e,
-            v = n.useRef();
-          v.current || (v.current = new C.SZ());
+            v = n.useRef(void 0);
+          v.current || (v.current = new I.SZ());
           let y = n.createElement(T.L, {
             ...b,
             DialogWrapper: o,
@@ -87226,7 +88138,7 @@
             [o],
           );
           return n.createElement(
-            I.Provider,
+            C.Provider,
             { value: S },
             n.createElement(
               d,
@@ -87237,15 +88149,15 @@
           );
         });
       function B() {
-        return n.useContext(I).ModalManager;
+        return n.useContext(C).ModalManager;
       }
       function M() {
-        return n.useContext(I).DialogWrapper;
+        return n.useContext(C).DialogWrapper;
       }
       function R(e) {
         const t = B();
         n.useEffect(() => {
-          if (e) return C.BR.RegisterModalManager(t, e);
+          if (e) return I.BR.RegisterModalManager(t, e);
         }, [e, t]);
       }
     },
@@ -88042,7 +88954,7 @@
       var r = a(7552);
       let n = 0;
       function i() {
-        const e = r.useRef();
+        const e = r.useRef(void 0);
         return (
           void 0 === e.current && (e.current = "svgid_" + n++),
           [e.current, `url(#${e.current})`]
@@ -88543,7 +89455,7 @@
           [v, f] = r.useState(void 0),
           [y, S] = r.useState(void 0),
           [w, T] = r.useState(!1),
-          [C, I] = r.useState(!1),
+          [I, C] = r.useState(!1),
           [N, B] = r.useState(null),
           M = r.useCallback(() => {
             let e = t;
@@ -88564,7 +89476,7 @@
               o && o.setAttribute("style", "display: none;");
             let b = c,
               {
-                nLeft: C,
+                nLeft: I,
                 nTop: B,
                 nOverflow: M,
                 nLateralOverflow: R,
@@ -88593,7 +89505,7 @@
                   nLateralOverflow: i,
                 } = m(e, d, u, l, h, r.innerWidth, r.innerHeight);
               if (
-                (n < M && ((b = e), (C = t), (B = a), (M = n), (R = i)),
+                (n < M && ((b = e), (I = t), (B = a), (M = n), (R = i)),
                 M > (_ ?? 10))
               )
                 return (
@@ -88601,20 +89513,20 @@
                     "Not showing hover because it didn't fit in the main or alt direction",
                   ),
                   N.setAttribute("style", "display: none;"),
-                  I(!0),
+                  C(!0),
                   void g?.()
                 );
             }
             0 === p ||
               E ||
-              ([B, C] = (function (e, t, a, r, n) {
+              ([B, I] = (function (e, t, a, r, n) {
                 let i = Math.max(t[0], t[1]);
                 void 0 !== e && (i = Math.min(e, i));
                 i = Math.max(0, i);
                 const s = t[0] > t[1] ? i : -i;
                 "left" === a || "right" === a ? (r += s) : (n += s);
                 return [r, n];
-              })(p, R, b ?? "right", B, C));
+              })(p, R, b ?? "right", B, I));
             let D = null;
             switch (b) {
               case "left":
@@ -88630,7 +89542,7 @@
                 D = s;
             }
             D && D.setAttribute("style", ""),
-              C != v && f(C),
+              I != v && f(I),
               B != y && S(B),
               w || T(!0);
           }, [t, N, w, a, c, d, u, _, p, v, y, g]);
@@ -88652,7 +89564,7 @@
               className: (0, s.A)(
                 l().HoverPosition,
                 D && w && l().Ready,
-                C && l().NoSpace,
+                I && l().NoSpace,
                 o && l().EnablePointerEvents,
                 n,
               ),
@@ -88815,13 +89727,13 @@
             hoverPositionProps: E,
             children: t,
           };
-        let C = { ...h };
+        let I = { ...h };
         return (
           _
-            ? ((C.onPointerEnter = S), (C.onPointerLeave = w))
-            : ((C.onMouseEnter = S), (C.onMouseLeave = w)),
+            ? ((I.onPointerEnter = S), (I.onPointerLeave = w))
+            : ((I.onMouseEnter = S), (I.onMouseLeave = w)),
           {
-            divProps: C,
+            divProps: I,
             stateHandlers: { setTarget: y, setHovered: v },
             tooltipProps: T,
           }
@@ -88940,7 +89852,7 @@
     },
     80179: (e, t, a) => {
       "use strict";
-      a.d(t, { gZ: () => x, N1: () => W, VC: () => G });
+      a.d(t, { gZ: () => O, N1: () => W, VC: () => G });
       var r,
         n = a(85608),
         i = a(7552),
@@ -89368,10 +90280,10 @@
           },
           preferenceControls: { isTechnicallyNecessary: !0 },
         },
-        C = JSON.parse(
+        I = JSON.parse(
           '{"h":{"countries":{"AF":"Afghanistan","AX":"Aland Islands","AL":"Albania","DZ":"Algeria","AS":"American Samoa","AD":"Andorra","AO":"Angola","AI":"Anguilla","AQ":"Antarctica","AG":"Antigua and Barbuda","AR":"Argentina","AM":"Armenia","AW":"Aruba","AU":"Australia","AT":"Austria","AZ":"Azerbaijan","BS":"Bahamas","BH":"Bahrain","BD":"Bangladesh","BB":"Barbados","BY":"Belarus","BE":"Belgium","BZ":"Belize","BJ":"Benin","BM":"Bermuda","BT":"Bhutan","BO":"Bolivia","BA":"Bosnia and Herzegovina","BW":"Botswana","BV":"Bouvet Island","BR":"Brazil","IO":"British Indian Ocean Territory","BN":"Brunei Darussalam","BG":"Bulgaria","BF":"Burkina Faso","BI":"Burundi","KH":"Cambodia","CM":"Cameroon","CA":"Canada","CV":"Cabo Verde","KY":"Cayman Islands","CF":"Central African Republic","TD":"Chad","CL":"Chile","CN":"China","XC":"China","CX":"Christmas Island","CC":"Cocos (Keeling) Islands","CO":"Colombia","KM":"Comoros","CG":"Congo","CD":"Congo, the Democratic Republic of the","CK":"Cook Islands","CR":"Costa Rica","CI":"Cote d\'Ivoire","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","DJ":"Djibouti","DM":"Dominica","DO":"Dominican Republic","EC":"Ecuador","EG":"Egypt","SV":"El Salvador","GQ":"Equatorial Guinea","ER":"Eritrea","EE":"Estonia","ET":"Ethiopia","FK":"Falkland Islands (Malvinas)","FO":"Faroe Islands","FJ":"Fiji","FI":"Finland","FR":"France","GF":"French Guiana","PF":"French Polynesia","TF":"French Southern Territories","GA":"Gabon","GM":"Gambia","GE":"Georgia","DE":"Germany","GH":"Ghana","GI":"Gibraltar","GR":"Greece","GL":"Greenland","GD":"Grenada","GP":"Guadeloupe","GU":"Guam","GT":"Guatemala","GN":"Guinea","GW":"Guinea-Bissau","GG":"Guernsey","GY":"Guyana","HT":"Haiti","HM":"Heard and Mc Donald Islands","VA":"Holy See(Vatican City State)","HN":"Honduras","HK":"Hong Kong","HU":"Hungary","IS":"Iceland","IN":"India","ID":"Indonesia","IQ":"Iraq","IE":"Ireland","IM":"Isle of Man","IL":"Israel","IT":"Italy","JM":"Jamaica","JP":"Japan","JE":"Jersey","JO":"Jordan","KZ":"Kazakhstan","KE":"Kenya","KI":"Kiribati","KR":"Korea, Republic of","KW":"Kuwait","KG":"Kyrgyzstan","LA":"Lao People\'s Democratic Republic","LV":"Latvia","LB":"Lebanon","LS":"Lesotho","LR":"Liberia","LI":"Liechtenstein","LT":"Lithuania","LU":"Luxembourg","LY":"Libya","MO":"Macau","MK":"North Macedonia, Republic of","MG":"Madagascar","MW":"Malawi","MY":"Malaysia","MV":"Maldives","ML":"Mali","MT":"Malta","MH":"Marshall Islands","MQ":"Martinique","MR":"Mauritania","MU":"Mauritius","YT":"Mayotte","MX":"Mexico","FM":"Micronesia, Federated States of","MD":"Moldova, Republic of","MC":"Monaco","MN":"Mongolia","ME":"Montenegro","MS":"Montserrat","MA":"Morocco","MZ":"Mozambique","MM":"Myanmar","NA":"Namibia","NR":"Nauru","NP":"Nepal","NL":"Netherlands","AN":"Netherlands Antilles","NC":"New Caledonia","NZ":"New Zealand","NI":"Nicaragua","NE":"Niger","NG":"Nigeria","NU":"Niue","NF":"Norfolk Island","MP":"Northern Mariana Islands","NO":"Norway","OM":"Oman","PK":"Pakistan","PW":"Palau","PS":"Palestinian Territory, Occupied","PA":"Panama","PG":"Papua New Guinea","PY":"Paraguay","PE":"Peru","PH":"Philippines","PN":"Pitcairn","PL":"Poland","PT":"Portugal","PR":"Puerto Rico","QA":"Qatar","RE":"Reunion","RO":"Romania","RU":"Russian Federation","RW":"Rwanda","SH":"Saint Helena","KN":"Saint Kitts and Nevis","LC":"Saint Lucia","PM":"Saint Pierre and Miquelon","VC":"Saint Vincent and the Grenadines","WS":"Samoa","SM":"San Marino","ST":"Sao Tome and Principe","SA":"Saudi Arabia","SN":"Senegal","RS":"Serbia","SC":"Seychelles","SL":"Sierra Leone","SG":"Singapore","SK":"Slovakia","SI":"Slovenia","SB":"Solomon Islands","SO":"Somalia","ZA":"South Africa","GS":"South Georgia and the South Sandwich Islands","ES":"Spain","LK":"Sri Lanka","SD":"Sudan","SR":"Suriname","SJ":"Svalbard and Jan Mayen","SY":"Syria","SZ":"Eswatini","SE":"Sweden","CH":"Switzerland","TW":"Taiwan","TJ":"Tajikistan","TZ":"Tanzania, United Republic of","TH":"Thailand","TL":"Timor-Leste","TG":"Togo","TK":"Tokelau","TO":"Tonga","TT":"Trinidad and Tobago","TN":"Tunisia","TR":"Turkey","TM":"Turkmenistan","TC":"Turks and Caicos Islands","TV":"Tuvalu","UG":"Uganda","UA":"Ukraine","AE":"United Arab Emirates","GB":"United Kingdom","US":"United States","UM":"United States Minor Outlying Islands","UY":"Uruguay","UZ":"Uzbekistan","VU":"Vanuatu","VE":"Venezuela","VN":"Viet Nam","VG":"Virgin Islands, British","VI":"Virgin Islands, U.S.","WF":"Wallis and Futuna","EH":"Western Sahara","YE":"Yemen","ZM":"Zambia","ZW":"Zimbabwe"},"eucountries":{"AT":"Austria","BE":"Belgium","BG":"Bulgaria","HR":"Croatia","CY":"Cyprus","CZ":"Czech Republic","DK":"Denmark","EE":"Estonia","FI":"Finland","FR":"France","DE":"Germany","GR":"Greece","HU":"Hungary","IE":"Ireland","IT":"Italy","LV":"Latvia","LT":"Lithuania","LU":"Luxembourg","MT":"Malta","NL":"Netherlands","PL":"Poland","PT":"Portugal","RO":"Romania","SK":"Slovakia","SI":"Slovenia","ES":"Spain","SE":"Sweden","GB":"United Kingdom"},"eeacountries":{"NO":"Norway","IS":"Iceland","LI":"Liechtenstein"},"usstates":{"AL":"Alabama","AK":"Alaska","AS":"American Samoa","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District of Columbia","FM":"Federated States of Micronesia","FL":"Florida","GA":"Georgia","GU":"Guam","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MH":"Marshall Islands","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","MP":"Northern Mariana Islands","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PW":"Palau","PA":"Pennsylvania","PR":"Puerto Rico","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VI":"U.S. Virgin Islands","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","AA":"Armed Forces Americas","AE":"Armed Forces","AP":"Armed Forces Pacific"}}}',
         ).h;
-      async function I(e) {
+      async function C(e) {
         if ((0, S.nA)(w.TS.EREALM)) return { version: 1, preference_state: 0 };
         if (w.iA.logged_in) {
           const t = (await r.GetCookiePreferences(e, {}))
@@ -89391,7 +90303,7 @@
           }
         } catch (e) {}
         const t = w.TS.COUNTRY;
-        return t in C.eucountries || t in C.eeacountries || "CH" === t
+        return t in I.eucountries || t in I.eeacountries || "CH" === t
           ? { version: 1, preference_state: 4 }
           : { version: 1, preference_state: 0 };
       }
@@ -89401,7 +90313,7 @@
         const e = (0, B.KV)();
         return (0, N.I)(
           (function (e) {
-            return { queryKey: ["CookiePreferences"], queryFn: () => I(e) };
+            return { queryKey: ["CookiePreferences"], queryFn: () => C(e) };
           })(e),
         );
       }
@@ -89431,22 +90343,22 @@
           : void 0;
       }
       var D,
-        A = a(68613);
+        L = a(68613);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
       })(D || (D = {}));
-      let L = D.NotLoaded,
+      let A = D.NotLoaded,
         P = [];
       function k(e) {
-        if (L != D.Loaded) {
-          if (L == D.NotLoaded) {
+        if (A != D.Loaded) {
+          if (A == D.NotLoaded) {
             let e = document.createElement("script");
             e.src = "https://www.youtube.com/iframe_api";
             let t = document.getElementsByTagName("script")[0];
             t.parentNode.insertBefore(e, t),
-              (window.onYouTubeIframeAPIReady = O);
+              (window.onYouTubeIframeAPIReady = x);
           }
           e && (P.includes(e) || P.push(e));
         } else e && e();
@@ -89457,8 +90369,8 @@
           t && e && k();
         }, [t, e]);
       }
-      function O() {
-        L = D.Loaded;
+      function x() {
+        A = D.Loaded;
         for (let e of P) e();
         P = [];
       }
@@ -89599,7 +90511,7 @@
         }
         render() {
           return i.createElement(
-            x,
+            O,
             { video: this.props.video },
             i.createElement(
               o.Y,
@@ -89619,14 +90531,14 @@
           );
         }
       }
-      function x(e) {
+      function O(e) {
         const { video: t, children: a } = e;
         return R("youtube")
           ? a
           : i.createElement(
               "a",
               { href: `https://www.youtube.com/watch?v=${t}` },
-              (0, A.we)("#EventCalendar_WatchYouTubeVideo"),
+              (0, L.we)("#EventCalendar_WatchYouTubeVideo"),
             );
       }
       (0, n.Cg)([l.oI], W.prototype, "BindPlayerContainer", null),
@@ -91101,6 +92013,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
@@ -91304,7 +92217,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 76489), e((e.s = t));
+      return (t = 18645), e((e.s = t));
       var t;
     });
     e.O();

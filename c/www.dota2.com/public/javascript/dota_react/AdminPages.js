@@ -5999,7 +5999,7 @@
               return;
             const _ = {
                 appid: _._.DOTA_APP_ID,
-                _: _,
+                _: "public" !== _._.WEB_UNIVERSE ? "beta" : _,
                 team_id: _,
               },
               _ = await _().get(

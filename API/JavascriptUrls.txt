@@ -819,6 +819,7 @@ ${IMG_URL}international2023/icons/social_yt.png
 ${IMG_URL}international2023/ti_logo_full_color.png
 ${IMG_URL}international2024/esports_site/footer_bg01.png
 ${IMG_URL}international2024/esports_site/logo_ti_gold.png
+${IMG_URL}international2025/ti2025_logo.png
 ${IMG_URL}items/${}.png
 ${IMG_URL}locked.png
 ${IMG_URL}logo.png
@@ -3602,6 +3603,7 @@ url( ${IMG_URL}international2022/reward_montage/ti11_small_mmrtokens.png )
 url( ${IMG_URL}international2022/reward_montage/ti11_small_themedtreasure.png )
 url( ${IMG_URL}international2022/reward_montage/ti11_small_trust.png )
 url( ${IMG_URL}international2022/wards.png )
+url( ${IMG_URL}international2025/teamlogos/${}.png )
 url( ${IMG_URL}items/${}.png
 url( ${IMG_URL}items/${}.png )
 url( ${IMG_URL}labyrinth/assistant_controller.jpg )
