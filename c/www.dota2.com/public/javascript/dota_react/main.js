@@ -26939,10 +26939,12 @@
                 value: _._.PLAYOFF,
                 strLabel: "#dpc_playoff",
               },
-              {
-                value: _._.RESULTS,
-                strLabel: "#dpc_results",
-              },
+              _ !== _._.INTERNATIONAL_2025
+                ? {
+                    value: _._.RESULTS,
+                    strLabel: "#dpc_results",
+                  }
+                : void 0,
             ],
             _ = (0, _._)(_.strPhase);
           if (_._.Get().GetEventType(_) != _._.INTERNATIONAL) return null;

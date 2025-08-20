@@ -23811,7 +23811,9 @@
                 ? { value: Zt.sI.ELIMINATION, strLabel: "#dpc_elimination" }
                 : void 0,
               { value: Zt.sI.PLAYOFF, strLabel: "#dpc_playoff" },
-              { value: Zt.sI.RESULTS, strLabel: "#dpc_results" },
+              e !== Zt.Dq.INTERNATIONAL_2025
+                ? { value: Zt.sI.RESULTS, strLabel: "#dpc_results" }
+                : void 0,
             ],
             n = (0, Kt.JF)(a.strPhase);
           if ($t.E.Get().GetEventType(e) != Zt.J7.INTERNATIONAL) return null;
