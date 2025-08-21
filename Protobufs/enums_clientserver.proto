@@ -1136,6 +1136,7 @@ enum EMsg {
 	k_EMsgClientMMSGetLobbyStatusResponse = 6627;
 	k_EMsgMMSGetLobbyList = 6628;
 	k_EMsgMMSGetLobbyListResponse = 6629;
+	k_EMsgGameServerPolicyUpdate = 6631;
 	k_EMsgNonStdMsgBase = 6800;
 	k_EMsgNonStdMsgMemcached = 6801;
 	k_EMsgNonStdMsgHTTPServer = 6802;

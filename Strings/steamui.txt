@@ -160,6 +160,7 @@
  7Me}
  = { <proto text format> }". To set fields within it, use syntax like "
  A33s?
+ Accessibility/ScreenReaderLocale
  Accessibility/ScreenReaderVolume
  BackUp() can only be called after Next().
  Beta
@@ -519,7 +520,6 @@
 ""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
-""\n CSteamOSManager_GetState_Request"I\n!CSteamOSManager_GetState_Response
 ""\n SiteServerUI_CancelLogin_Request"O\n!SiteServerUI_CancelLogin_Response
 ""\n SiteServerUI_GetLanguage_Request"5\n!SiteServerUI_GetLanguage_Response
 ""\n SiteServerUI_LoginStatus_Request"}\n!SiteServerUI_LoginStatus_Response
@@ -2218,6 +2218,7 @@ ${LANGUAGE}
 %s: restoring previous glx context\n
 %s: result: %d - %s
 %s: set hostname to %s\n
+%s: set screen reader voice: %s -> %s
 %s: set timezone to %s\n
 %s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
 %s: skipping set as steamos-manager is already in the desired state: %d -> %d
@@ -2844,7 +2845,6 @@ ${LANGUAGE}
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1vvq
 (8GXgw
 (8HXhx
 (<PDxl
@@ -3213,6 +3213,7 @@ ${LANGUAGE}
 (\r:\n4294967295
 (\t""\n CParental_ValidateToken_Response"g\n"CParental_ValidatePassword_Request
 (\t""\n CPlayer_SetProfileTheme_Response"Y\n%CPlayer_SetProfilePreferences_Request
+(\t""\n CSteamOSManager_GetState_Request"I\n!CSteamOSManager_GetState_Response
 (\t"#\n!CChatRoom_RenameChatRoom_Response"g\n!CChatRoom_ReorderChatRoom_Request
 (\t"#\n!SiteServerUI_SetLanguage_Response"#\n!SiteServerUI_ClientStatus_Request"
 (\t"#\n\rCDebugDumpMsg
@@ -4241,6 +4242,7 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvE43CWebUISteamOSManagerApplyMandatoryUpdateJob
 *ZN23CSteamOSControllerLinux10InitializeEvE47CWebUISteamOSManagerOptOutOfSideloadedClientJob
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE16_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlRK10CUtlStringE24_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK32CSteamOSManager_GetState_RequestR33CSteamOSManager_GetState_ResponseE_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK36CSteamOSManager_FactoryReset_RequestR37CSteamOSManager_FactoryReset_ResponseE2_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlRK44CSteamOSManager_ApplyMandatoryUpdate_RequestR45CSteamOSManager_ApplyMandatoryUpdate_ResponseE1_
@@ -4272,6 +4274,7 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux19SetScreenReaderRateEfEUlvE_
 *ZN23CSteamOSControllerLinux20CommitTDPLimitUpdateEvEUlvE_
 *ZN23CSteamOSControllerLinux20SetScreenReaderPitchEfEUlvE_
+*ZN23CSteamOSControllerLinux21SetScreenReaderLocaleEPKcEUlvE_
 *ZN23CSteamOSControllerLinux21SetScreenReaderVolumeEfEUlvE_
 *ZN23CSteamOSControllerLinux22SetScreenReaderEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux23CommitChargeLimitUpdateEvEUlvE_
@@ -6383,6 +6386,7 @@ ${LANGUAGE}
 /data/src/common/linuxhelpers_x11.cpp
 /data/src/common/logfile.cpp
 /data/src/common/logger.cpp
+/data/src/common/messageobjects.cpp
 /data/src/common/metrics/metrics.cpp
 /data/src/common/msg.cpp
 /data/src/common/msgbase.h
@@ -6588,7 +6592,7 @@ ${LANGUAGE}
 /data/src/steamUI/spewmanager.cpp
 /data/src/steamUI/startupmodemanager.cpp
 /data/src/steamUI/steamosmanager.cpp
-/data/src/steamUI/steamosmanager.cpp:564
+/data/src/steamUI/steamosmanager.cpp:586
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -7870,6 +7874,7 @@ ${LANGUAGE}
 128 Kbps
 128K
 12Achievements
+12CAddressInfo
 12CAppDownload
 12CAppOverview
 12CAppPriority
@@ -7937,6 +7942,7 @@ ${LANGUAGE}
 12CHTTPRequest
 12CIPRangeList
 12CIntProperty
+12CLicenseInfo
 12CLogInstance
 12CMessageList
 12CMsgCellList
@@ -8098,8 +8104,10 @@ ${LANGUAGE}
 14 (default)
 14Authentication
 14Broadcast_Stub
+14CCBAccountInfo
 14CChatRoomState
 14CClanEventData
+14CClanEventInfo
 14CColorProperty
 14CCryptoKeyBase
 14CFloatProperty
@@ -8107,6 +8115,7 @@ ${LANGUAGE}
 14CFrameFunctionI19CQueuedLambdaRunnerE
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CFrameFunctionI7CJobMgrE
+14CGuestPassInfo
 14CHFontProperty
 14CHIDDeviceInfo
 14CHLModProvider
@@ -8116,6 +8125,8 @@ ${LANGUAGE}
 14CJobFutureBase
 14CLEDController
 14CLEDDeviceTest
+14CMachineIDInfo
+14CMessageObject
 14CMetricsString
 14CMsgAuthTicket
 14CMsgGameAction
@@ -8214,6 +8225,7 @@ ${LANGUAGE}
 15CBaseGameAction
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+15CChatMemberInfo
 15CChatRoomMember
 15CCloud_UserFile
 15CConVarAccessor
@@ -8412,6 +8424,7 @@ ${LANGUAGE}
 16VideoClient_Stub
 1724792014
 17Achievements_Stub
+17CClientWalletInfo
 17CCrossProcessPipe
 17CDummyCnxCallback
 17CFileWriterThread
@@ -8438,6 +8451,7 @@ ${LANGUAGE}
 17CMsgUpdateToolTip
 17CNegotiatedConfig
 17CPeriodicFunctionI25CGamescopeControllerLinuxE
+17CPurchaseGiftInfo
 17CSDLAudioRecorder
 17CScheduledFunctor
 17CSetFlashStateMsg
@@ -8593,9 +8607,11 @@ ${LANGUAGE}
 19CAPICallBackPromiseI30RemoteStorageAppSyncedClient_tE
 19CAPICallBackPromiseI30RemoteStorageAppSyncedServer_tE
 19CAPICallBackPromiseI33RemoteStorageConflictResolution_tE
+19CActivationCodeInfo
 19CAppOverview_Change
 19CChatRoomGroupState
 19CClientHandshakeMsg
+19CClientMicroTxnInfo
 19CCuratorPreferences
 19CCustomImageManager
 19CDesktopStreamLinux
@@ -9183,6 +9199,7 @@ ${LANGUAGE}
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
 20CPrepareConfigWorker
+20CPurchaseReceiptInfo
 20CRecordedInputStream
 20CRefCountServiceBaseILb1E6CRefMTE
 20CRefCountServiceBaseILb1E6CRefSTE
@@ -9262,6 +9279,7 @@ ${LANGUAGE}
 21CAPICallYieldInternalI18CreateItemResult_tE
 21CAPICallYieldInternalI24SubmitItemUpdateResult_tE
 21CAPICallYieldInternalI37RemoteStorageFileWriteAsyncComplete_tE
+21CClanAnnouncementInfo
 21CCloud_Delete_Request
 21CDiscoveryPingRequest
 21CEC25519PublicKeyBase
@@ -9302,6 +9320,7 @@ ${LANGUAGE}
 21CMsgSystemUpdateState
 21COpenSSLCachedSession
 21CPreviewConfigPromise
+21CPurchaseLineItemInfo
 21CRemotePlayController
 21CScheduledFunctionMgr
 21CScreenshotController
@@ -9399,6 +9418,7 @@ ${LANGUAGE}
 22SiteManagerClient_Stub
 22SteamInputManager_Stub
 22StoreItem_RelatedItems
+23CActivationCodeItemInfo
 23CBroadcastWebRTCSession
 23CChatRoomMemberListView
 23CClanEventUserNewsTuple
@@ -9601,6 +9621,7 @@ ${LANGUAGE}
 25TestServerFromClient_Stub
 25TransportValidationClient
 26AuthenticationSupport_Stub
+26CActivationCodePackageInfo
 26CAddFavoriteServersByIPJob
 26CAppOverview_PerClientData
 26CAuthenticationResponseMsg
@@ -12317,6 +12338,7 @@ ${LANGUAGE}
 9CCallbackI9CSteamDoc26SteamServersDisconnected_tLb0EE
 9CCallbackI9CSteamDoc27SteamServerConnectFailure_tLb0EE
 9CCallbackI9CSteamDoc32NetFakeLocalSystemStateChanged_tLb0EE
+9CCardInfo
 9CChatRole
 9CJSObject
 9CMsgClose
@@ -12349,7 +12371,6 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
-9H$T}
 9IGv
 9Inventory
 9PE,$
@@ -13264,6 +13285,7 @@ Acceptable OCSP Responses
 Accepted
 AcceptedForGameRankedByAcceptanceDate
 Access Denied
+AccessToken
 Accessibility/ColorFilterName
 Accessibility/DebugVisualizer
 Accessibility/DesktopUIScale
@@ -13291,7 +13313,10 @@ Account not verified
 Account: %s \n
 AccountHardware
 AccountHardware.UpdateControllerUsageReport#1
+AccountIDCreator
+AccountIDLastUpdated
 AccountName
+AccountNum
 AccountPrivateData
 AccountPublicData
 Accounts not friends
@@ -13358,6 +13383,8 @@ AdditionalRoute
 Address
 Address is invalid or contains invalid characters
 Address too small!
+Address1
+Address2
 AddressType
 Admin
 Administrator OK
@@ -13461,6 +13488,7 @@ AppError_16
 AppError_18
 AppID
 AppID: %u (%s)\n
+AppIDToRedirect
 AppModalQueryBox
 AppProperties
 AppRelationship
@@ -13682,7 +13710,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 15 2025 20:25:16
+Aug 20 2025 20:57:19
 August
 Aura
 Australia/Adelaide
@@ -14046,6 +14074,7 @@ Bank Transfer (Degica)
 Banned
 BaseControls
 BaseGameAction
+BasePrice
 BaseURLSharedCDN
 Basic %s
 Basic OCSP Response
@@ -14076,6 +14105,8 @@ BigPicture/Monitor
 BigPicture/Windowed
 Billing agreement cancelled
 Billing name is invalid because it looks like it contains credit card data
+BillingCurrency
+BillingTotal
 Bind to %s failed: %s\n
 Biometric Info
 BitCash
@@ -14144,6 +14175,7 @@ BluezProfileManager1Proxy
 Bnl1l
 BoaCompra Gold
 Board revision: %u
+Body
 Body (first 1024 bytes): %s
 Bogus DAC index %d
 Bogus DAC value 0x%x
@@ -17090,6 +17122,14 @@ CaptivePortal_Redirected
 Capture
 CaptureDebugTraceOutput
 CaptureDescriptionID
+CardBinID
+CardExpMonth
+CardExpYear
+CardHolderFirstName
+CardHolderLastName
+CardID
+CardLast4Digits
+CardNumber
 Carian
 Carnet
 Cart is not valid for purchase
@@ -17190,10 +17230,13 @@ ChunkSize
 Chunks
 CipherString
 Ciphersuites
+City
 Clan
 ClanAssetCDN
 ClanData
+ClanID
 Class
+CleanTemporarySessions
 Cleanup: Library cache cleanup completed in %llums and deleted %i files
 CleanupBackgroundRecordings
 CleanupSystemReports
@@ -17367,6 +17410,7 @@ Comma separated list of metrics operations.  Overrides disabled catalogs
 Command
 Command: %s\n
 CommandLine static
+CommentCount
 Comments by user
 Commit charge limit update: %d - %d
 Commit tdp limit update: %d - %d
@@ -17615,7 +17659,9 @@ Couldn't scale cursor: %s\n
 Couldn't serialize controller configuration.
 Couldn't write %s: %s\n
 CountOrderedBytes
+CountryCode
 Coupon has expired
+CpuBoostState
 CpuScalingGovernor
 Create
 Create a test LED device
@@ -17671,6 +17717,7 @@ Credit Card (Nodwin)
 Credit card number is invalid (does not pass LUHN checksum)
 Credit card number provided does not match the credit card type
 Credit would exceed max allowed wallet balance
+CreditCardType
 Critical
 CrlID
 Croatian
@@ -17683,8 +17730,10 @@ Culture Voucher
 CumulativeSumToAverageRow_C
 Cuneiform
 CuratorRecommendedGame
+Currency
 Currency Conversion
 Currency of purchase does not match currency of wallet
+CurrencyCode
 Current
 CurrentCellID
 Cursor
@@ -17966,7 +18015,9 @@ DecoderDescriptionID
 Default
 Default initial allocation size for PB arena
 Default value for an enum field must be an identifier.
+DefaultDesktopSession
 DefaultFixed
+DefaultLoginMode
 DefaultUnderline
 DefaultVerySmall
 Define Arithmetic Table 0x%02x: 0x%02x
@@ -18943,7 +18994,9 @@ Error reading from datastream
 Error reading from stream
 Error reporting not implemented.
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.AmbientLightSensor1: %s (%s, %d)
+Error setting property '%s' on interface com.steampowered.SteamOSManager1.Audio1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.BatteryChargeLimit1: %s (%s, %d)
+Error setting property '%s' on interface com.steampowered.SteamOSManager1.CpuBoost1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.CpuScaling1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.FanControl1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.GpuPerformanceLevel1: %s (%s, %d)
@@ -18953,6 +19006,7 @@ Error setting property '%s' on interface com.steampowered.SteamOSManager1.Manage
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.Manager: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.PerformanceProfile1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.ScreenReader0: %s (%s, %d)
+Error setting property '%s' on interface com.steampowered.SteamOSManager1.SessionManagement1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.TdpLimit1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.WifiDebug1: %s (%s, %d)
 Error setting property '%s' on interface com.steampowered.SteamOSManager1.WifiPowerManagement1: %s (%s, %d)
@@ -19018,6 +19072,7 @@ Error: %s: failed to create skeleton\n
 Error: %s: failed to create system report file path
 Error: %s: failed to emit screen reader action: %d - %s
 Error: %s: failed to export agent: %s\n
+Error: %s: failed to find a voice name for locale: %s
 Error: %s: failed to find home directory
 Error: %s: failed to find root device for drive: 0x%c
 Error: %s: failed to get gdbus connection: %s\n
@@ -19111,7 +19166,13 @@ Error: failed to set TDP limit: cap1
 Error: failed to unregister for X11 property callback
 Error: invalid adapter id: 0x%x
 Error: invalid profile: %s
+Error: invalid screen reader locale: %s
 Error=%s ErrorID=%d (0x%x) Line number=%d
+ErrorAppID
+ErrorHeadline
+ErrorLinkText
+ErrorLinkURL
+ErrorString
 Errors
 Escape
 Estonian
@@ -19125,6 +19186,9 @@ Event Text
 EventData
 EventDurationSeconds
 EventFlags
+EventName
+EventNotes
+EventTime
 EventType
 Exception validating current work item
 Excluded
@@ -19208,6 +19272,7 @@ External Account is not linked to a Steam account
 External Account linked to another Steam account
 External sequences are not valid
 ExternalStorageTransferReport
+ExternalValidation
 Extra compressed data
 Extra text starting with character 0x%02x='%c'
 Eyefinity
@@ -19583,6 +19648,7 @@ Finnish
 First
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
+FirstName
 FirstTimeComplete
 FiveHours
 FixedDiv1_C
@@ -19957,12 +20023,15 @@ GameAction [AppID %u, ActionID %u] : %s changed task to %s with "%s"\n
 GameAction [AppID %u, ActionID %u] : %s continues with user response "%s"\n
 GameAction [AppID %u, ActionID %u] : %s failed with %s with "%s"\n
 GameAction [AppID %u, ActionID %u] : %s waiting for user response to %s "%s"\n
+GameCode
+GameCodeFromKey
 GameController
 GameControllerInput
 GameControllerPID
 GameControllerVID
 GameInfo
 GameInviteNotification
+GameItemID
 GameList
 GameManagedItems
 GameManualURL
@@ -20324,6 +20393,7 @@ GetPeerContentInfo
 GetPerFriendPreferences
 GetPerGameSettings
 GetPlatformCapabilities
+GetPlatformFromOS
 GetPlatformMainPanel()
 GetPlatformName
 GetPlayerLinkDetails
@@ -20420,6 +20490,11 @@ GetWindowSize() == 0 && GetPacketCount() == 0
 GetWishlistDemoEmailStatus
 GettingLegacyKey
 Gift
+GiftMessage
+GiftTemplate
+GifteeAccountID
+GifteeEmail
+GifteeName
 Giropay
 Glagolitic
 Global Collect unknown error
@@ -20732,6 +20807,7 @@ HardwareUpdate: attempt to run command when updater is not supported
 Has not logged in on PS3 with required app
 HasAnyCachedLocalContent
 HasField
+HasWallet
 Hash
 Hash Algorithm: 
 Hausa
@@ -20739,6 +20815,7 @@ HdmiCecState
 Header
 Header compression/decompression error
 Header of Literals' block doesn't respect format specification
+Headline
 Headphones
 Headset
 Health Check: CHTTPClient not ready
@@ -21155,6 +21232,8 @@ InitXInput2
 Initial Upload
 Initial packet in multi-packet UDP message is too large and would exceed initially allocated buffer
 InitialCaps
+InitialPeriod
+InitialTimeUnit
 Initialize
 InitializeVGui
 Initialized CSteamOSTelemetry: version: %s
@@ -21317,6 +21396,7 @@ Installs.RegisterForShowRegisterCDKey
 Installs.SetAppList
 Installs.SetCreateShortcuts
 Installs.SetInstallFolder
+InstanceName
 Instant clip requested for game %s\n
 InstantClipJob
 Insufficient Funds
@@ -21558,6 +21638,7 @@ IsClosed()
 IsContained
 IsContainer
 IsCustomLauncherType() == (m_unCustomLauncherAppID != k_uAppIdInvalid )
+IsGift
 IsInFriendsUIBeta
 IsInList(after)
 IsInList(before)
@@ -21589,6 +21670,9 @@ Issuer certificate lookup error
 Italian
 Itau Online
 Item or entry has been deleted
+ItemAppId
+ItemCount
+ItemDescription
 ItemDeselected
 ItemPropertyUpdate
 ItemSelected
@@ -21908,6 +21992,7 @@ KeyCodeTyped
 KeyCodeUnhandled
 KeyFocusTicked
 KeyModeSet
+KeyRangeID
 KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
@@ -22064,6 +22149,7 @@ Last CStreamTransportSteamNetworkingSocketsBase destroyed, turning off manual po
 Last Message Repeated %d times.\n%s
 Last-Modified
 LastInstallFolderIndex
+LastName
 Latam_Spanish
 Latin
 Latvian
@@ -22092,6 +22178,7 @@ LeftTrackpadX
 LeftTrackpadY
 LeftTrigger
 Legacy Free Sub
+LegacyKey
 LegacyPairing
 LegionGoS
 Length Required
@@ -22107,6 +22194,7 @@ LibraryLowBandwidthMode
 LibraryLowPerfMode
 License Imported From Steam2
 License expired
+LicenseType
 Licensed Site
 Lider
 Limbu
@@ -22117,6 +22205,7 @@ Limited use, delayed activation
 Limited user account
 LimitedLocal
 LineItem
+LineItemCount
 LinePay
 Linear_B
 Link
@@ -22377,6 +22466,7 @@ Mask Algorithm:
 Master App Editor
 Master Subscription
 MasterCard
+MasterPackageID
 Mastercard (BoaCompra)
 Matched '%s' -> '%s'\n
 Max block allocation size for PB arena
@@ -22384,6 +22474,7 @@ Max outstanding pipelined reqs per connection
 MaxChargeLevel
 MaxProtocol
 MaxResults
+MaxUseCount
 Maximize
 Maximum capture: %dx%d %.2f FPS
 Maximum family size exceeded
@@ -22468,6 +22559,7 @@ MessageBox
 MessageBox.ButtonHeight
 MessageBoxText
 MessageLite at 0x
+MessageObject
 MessageOptions
 MessageReaction
 MessageSet is not supported in proto3.
@@ -23265,7 +23357,9 @@ Minimize
 MinimizeToSysTray
 Minimum
 Minute
+MinuteLimit
 Minutes
+MinutesUsed
 Mirror
 MirrorPlane
 MirrorRow_C
@@ -25022,6 +25116,7 @@ Option2
 Option3
 Options
 Order: 
+OrderID
 Origin
 Oriya
 Osmanya
@@ -25061,6 +25156,7 @@ OverrideBrowserComposerMode
 Overwriting on-disk registry with newly created registry.
 OwnGameplayInfo
 Owner
+OwnerID
 P,E9
 P-192
 P-224
@@ -25417,6 +25513,8 @@ Pacific/Tongatapu
 Package requires an invitation for a reservation to purchase
 Package version: %d
 Package version: local
+PackageCount
+PackageID
 Packet has illegal total message size of %d
 Page
 PageChanged
@@ -25509,7 +25607,9 @@ Payment method allows multiple pending transactions, but there is an overlap of 
 Payment method is disabled
 Payment method is not allowed for this purchase
 Payment requires additional authentication step
+PaymentID
 PaymentInfo
+PaymentMethod
 Payshop
 Pd8\f
 Pe6^
@@ -25535,6 +25635,7 @@ Period
 Permanent
 Permanent Identifier
 Permanent Redirect
+Permissions
 PermitDownloadClientUpdates
 Permitted
 Persian
@@ -25641,12 +25742,15 @@ Portuguese
 Position
 Post DNS resolve
 PostChatMessage
+PostCode
 PostCommentToThread
 PostRecv
 PostStatusToFriends
+PostTime
 PostToLibrary
 PostToSteamUI
 PostedAnnouncement
+PosterID
 Potential overflow in png_zalloc()
 PowerA Fusion Pro 2 Controller
 PowerA Spectra Infinity Controller
@@ -25775,9 +25879,11 @@ Punjabi (Shahmukhi)
 Purchase
 Purchase not yet settled
 Purchase pending
+PurchaseCountryCode
 PurchaseFinalize
 PurchaseOption
 PurchaseRequest
+PurchaseStatus
 PurchasedCustomization
 PutInternal: Not enough space for put when locked\n
 Q$By5
@@ -26098,6 +26204,7 @@ RecentLocalPlayed
 RecentLocalPlayedGameIDs
 Rechecks the library assets for the given appid
 Recieved unknown ESystemIMType
+RecipientAddress
 RecommendedGame
 Reconfiguring
 ReconnectMode
@@ -26141,6 +26248,7 @@ RefreshSubscriptionMetadata
 RefreshTokenDescription
 RefreshVotingQueue
 Refreshing process list for game %s\n
+Refundable
 Refunded
 Refunded to wallet
 Region Locked
@@ -26305,6 +26413,8 @@ Render KeyValues stats
 Rendered
 Renew failed
 Renew next period
+RenewalPeriod
+RenewalTimeUnit
 ReorderChatRoom
 Repaint
 Repair Steam service
@@ -26389,6 +26499,7 @@ Require Explicit Policy
 RequirePostHandshake
 Required fields are not allowed in proto3.
 Requires 64bit operating system
+RequiresCachedPmtMethod
 RescaleBase
 Rescan
 RescheduleTrimAll
@@ -26428,6 +26539,7 @@ Restarts Steam Windows service
 Restored data doesn't match checksum
 Restricted country
 Restricted device
+ResultDetail
 Resume
 ResumeAppSession
 ResumeProcess
@@ -26966,10 +27078,13 @@ SafeMode
 SafeModifyItems
 SafetyPay
 SalePageFilter
+SalesTerritoryCode
+SalesTerritoryCodeFromKey
 Salt
 Samaritan
 Same as previous value
 Sampling factors too large for interleaved scan
+Sandbox
 Santander Rio
 Saturday
 Saurashtra
@@ -27085,6 +27200,7 @@ ScaleUVRowUp2_Linear_C
 Scan script does not transmit all data
 ScanForInstalledNonSteamApps
 ScheduledEvent
+ScheduledSendOnDate
 ScheduledTrimAll
 Score
 Scoreboard Key:\n
@@ -27187,6 +27303,8 @@ SendSAS
 SendSteamBroadcastPacket
 SendSteamToSteamPacket
 SendThumbnailToRelay
+SenderAddress
+SenderName
 Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
@@ -27195,16 +27313,19 @@ Sent message: %s - %u bytes\n
 Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
+Sentiment
 September
 Serbian
 Serial
 Serial number: %s
+SerialNumber
 Server
 Server Busy
 Server Shutdown
 Server Time: %s \n
 Server not expecting a connection
 Server push is disabled by peer
+ServerAddress
 ServerBrowser.AddFavoriteServer
 ServerBrowser.AddFavoriteServersByIP
 ServerBrowser.CancelServerQuery
@@ -27228,6 +27349,7 @@ ServerBrowser.RequestPlayerDetails
 ServerBrowser.SetServerListPreferences
 ServerConfigEnabled
 ServerInfoFile
+ServerPassword
 ServerPreference
 ServerVirtualizedMemberLists
 Service Read Only
@@ -27257,6 +27379,7 @@ Set manual gpu clock hz: %d
 Set offline mode: %d
 Set platform performance profile: %s
 Set screen reader enabled: %d
+Set screen reader locale: %s
 Set screen reader pitch: %f
 Set screen reader rate: %f
 Set screen reader volume: %f
@@ -27352,6 +27475,7 @@ SetRepeatedUInt64
 SetReservationPositionMessage
 SetRow_C
 SetScreenReaderEnabled
+SetScreenReaderLocale
 SetScreenReaderPitch
 SetScreenReaderRate
 SetScreenReaderVolume
@@ -27459,6 +27583,7 @@ SharedJSContext.GetDesiredSteamUIWindows#1
 Shavian
 ShellCmd
 Shift
+Shipping
 Shipping address failed validation
 ShopeePay
 Shopping Cart Not Found
@@ -27495,6 +27620,7 @@ SignInstallScript
 SignIntoFriends
 SignalAppExitSyncDone
 SignalAppLaunchIntent
+Signature
 Signature check failed
 SignatureAlgorithms
 SignatureCheck
@@ -27788,6 +27914,7 @@ StartupMode
 StartupModeTmp
 StartupModeTmpIsValid
 StartupSteam
+State
 State Remote Host              Timeout Sec Num Req SSL       Virtual Host                   Request\n
 StaticFileWriterThread()
 Stats.RecordActivationEvent
@@ -27860,8 +27987,6 @@ SteamController_SwitchSupport
 SteamController_XBoxDriver
 SteamController_XBoxSupport
 SteamDeck
-SteamDeck LCD
-SteamDeck OLED
 SteamDeckIgnoreRegistrationPrompt
 SteamDeckRegisteredSerialNumber
 SteamDeckRegisteredSteamID
@@ -27877,6 +28002,7 @@ SteamGamesUIModule
 SteamGuardPhishingReport
 SteamHIDPipeFromRemote_%u
 SteamHIDPipeToRemote_%u
+SteamID
 SteamID: %s (%llu) \n
 SteamInput/Configurator/ErrorMsgEnabled
 SteamInputManager
@@ -27915,8 +28041,12 @@ SteamOSManager.NotifyStateChanged#1
 SteamOSManager.OptOutOfSideloadedClient#1
 SteamOSManager1AmbientLightSensor1
 SteamOSManager1AmbientLightSensor1Proxy
+SteamOSManager1Audio1
+SteamOSManager1Audio1Proxy
 SteamOSManager1BatteryChargeLimit1
 SteamOSManager1BatteryChargeLimit1Proxy
+SteamOSManager1CpuBoost1
+SteamOSManager1CpuBoost1Proxy
 SteamOSManager1CpuScaling1
 SteamOSManager1CpuScaling1Proxy
 SteamOSManager1FactoryReset1
@@ -27944,6 +28074,8 @@ SteamOSManager1PerformanceProfile1
 SteamOSManager1PerformanceProfile1Proxy
 SteamOSManager1ScreenReader0
 SteamOSManager1ScreenReader0Proxy
+SteamOSManager1SessionManagement1
+SteamOSManager1SessionManagement1Proxy
 SteamOSManager1Storage1
 SteamOSManager1Storage1Proxy
 SteamOSManager1TdpLimit1
@@ -27978,6 +28110,7 @@ SteamOSTelemetry: set plugin enabled: %d->%d
 SteamPipeWorkStatsReport
 SteamProcessRecording
 SteamRealPath
+SteamRealm
 SteamRemotePlayInput
 SteamRuntimeEnabled
 SteamRuntimeVersion
@@ -28345,6 +28478,9 @@ SwapUVRow_C
 Swedish
 Switch
 SwitchBackgroundRecordingGame
+SwitchToDesktopMode
+SwitchToGameMode
+SwitchToLoginMode
 SwitchToUser
 Switching Protocols
 Switching to desktopui (from legacy vgui mode)\n
@@ -28829,6 +28965,7 @@ TenfootJoystickGUIDID
 Tenpay
 TerminateProcess
 Terminating
+TerritoryCode
 Tesla
 Test
 Test CD-Key
@@ -28945,9 +29082,16 @@ Time
 Time Stamp signing
 Time Stamping
 Time is out of sync
+TimeAcked
 TimeCellIDSet
+TimeCreated
 TimeDetected
+TimeExpiration
+TimeLastUpdated
 TimeMediaDetected
+TimeNextProcess
+TimeRedeemed
+TimeSent
 TimeSubmitted
 Timed Trial
 Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()\n
@@ -29001,6 +29145,8 @@ Tooltip.Delay
 TooltipHTML
 TooltipWindow
 Toss
+Total
+TotalDiscount
 TotalHD
 Touch'n Go
 TouchControllerInput
@@ -29016,7 +29162,10 @@ Traditional_Chinese
 Trailer
 Trailer Field: 0x
 Trailers
+TransID
 Transaction expired
+TransactionID
+TransactionTime
 Transcode Behind
 Transfer-Encoding
 Transferring
@@ -29498,6 +29647,7 @@ UpdatePackageReservations
 UpdateSettings
 UpdateSteamAnnouncementLastRead
 UpdateTextFilterDictionary
+UpdateTime
 UpdateTokenVersion
 UpdateVProfTreeEntry
 UpdateVProfTreeEntry:Modify
@@ -29794,6 +29944,7 @@ Vakiflar Bank
 Valencian
 Valid
 Valid palette required for paletted images
+ValidDesktopSessions
 ValidateEmailAddress
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
@@ -29887,7 +30038,10 @@ Visa Electron (BoaCompra)
 VisibleOnlyOnAvailablePlatforms
 VisibleOnlyWhenInstalled
 Vm\t2
+Voice
+VoiceLocales
 VoiceReceiveVolume
+VoicesForLocale
 Volume
 VolumeDown
 VolumeUp
@@ -29983,6 +30137,8 @@ WaitingVerification
 WakeAllowed
 Wallet
 Wallet (Nodwin)
+WalletAmt
+WalletCur
 WantsOfflineMode
 Warming Config Cache %d\n
 Warning
@@ -30532,6 +30688,7 @@ YldSetDiscovering
 YldSetEnabled
 YldSetPlatformPerformanceProfile
 YldSetPluginEnabled
+YldSetScreenReaderLocale
 YldSetScreenReaderMode
 YldSetTrusted
 YldSetWakeAllowed
@@ -32665,6 +32822,7 @@ Zulu
 ^QyY
 ^[A-Za-z_][A-Za-z0-9_.]+$
 ^\n!gamerecording_background_max_keep
+^\n"accessibility_screen_reader_locale
 ^\n$gamerecording_automatic_gain_control
 ^\n\rGetThumbnails
 ^\n\rQueryByFakeIP
@@ -32952,6 +33110,7 @@ accessibility_high_contrast_mode
 accessibility_minimum_font_size
 accessibility_reduce_motion
 accessibility_screen_reader_enabled
+accessibility_screen_reader_locale
 accessibility_screen_reader_pitch
 accessibility_screen_reader_rate
 accessibility_screen_reader_volume
@@ -33039,6 +33198,7 @@ address1
 address2
 addressFamily
 address_of_request_url
+addressinfo
 addrinfo addr is not af inet
 addrinfo_wrap
 admin_request_spoofing_steamid
@@ -33206,6 +33366,10 @@ amharic
 amount
 amount != INT64_MIN
 amount_in_cents
+amt.GetCurrencyCode() == GetCurrency()
+amtInitial.GetCurrencyCode() == GetCurrency()
+amtRecurring.GetCurrencyCode() == GetCurrency()
+amtrecurring
 an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)
 android
 android32
@@ -33481,6 +33645,7 @@ audio
 audio frame
 audio read
 audio send
+audio1
 audioSamplingRate
 audio_channel_config
 audio_channel_count
@@ -33517,6 +33682,7 @@ authorizatio
 authorization
 authsafes
 auto
+auto*
 auto:
 auto_fade_enabled
 auto_scale_factor
@@ -33595,6 +33761,7 @@ azerbaijani
 azure
 a{oa{sv}}
 a{qv}
+a{sas}
 a{su}
 a{sv}
 b"Iq
@@ -34440,6 +34607,7 @@ capsule_filename
 capsule_headline
 capwapAC
 capwapWTP
+cardinfo
 caseIgnoreIA5StringSyntax
 cast5-cbc
 cast5-cfb
@@ -34797,6 +34965,7 @@ cmcCA
 cmcRA
 cmd=
 cmll_t4_init_key
+cmn-LATN-PINYIN
 cms datafinal error
 cms lib
 cms_CompressedData_create
@@ -34863,7 +35032,9 @@ com.steampowered.SteamOSLogSubmitter.Helper
 com.steampowered.SteamOSLogSubmitter.Manager
 com.steampowered.SteamOSManager1
 com.steampowered.SteamOSManager1.AmbientLightSensor1
+com.steampowered.SteamOSManager1.Audio1
 com.steampowered.SteamOSManager1.BatteryChargeLimit1
+com.steampowered.SteamOSManager1.CpuBoost1
 com.steampowered.SteamOSManager1.CpuScaling1
 com.steampowered.SteamOSManager1.FactoryReset1
 com.steampowered.SteamOSManager1.FanControl1
@@ -34877,6 +35048,7 @@ com.steampowered.SteamOSManager1.Manager
 com.steampowered.SteamOSManager1.Manager2
 com.steampowered.SteamOSManager1.PerformanceProfile1
 com.steampowered.SteamOSManager1.ScreenReader0
+com.steampowered.SteamOSManager1.SessionManagement1
 com.steampowered.SteamOSManager1.Storage1
 com.steampowered.SteamOSManager1.TdpLimit1
 com.steampowered.SteamOSManager1.UdevEvents1
@@ -35210,6 +35382,8 @@ counts
 covalensolutions.com
 covariant return thunk to 
 cpEV
+cpu-boost-state
+cpu-boost1
 cpu-scaling-governor
 cpu-scaling1
 cpu_governor_manual_max_mhz
@@ -35782,6 +35956,8 @@ def_load_bio
 def_serial_cb
 def_time_cb
 default
+default-desktop-session
+default-login-mode
 default://
 default://%s
 default://controller_base/basicui.vdf
@@ -36323,6 +36499,8 @@ eControllerRumblePreference
 eControllerStyle
 eControllerType
 eControllerType_OBSOLETE
+eCurrencyCode
+eCurrencyCodeDelayed
 eDisplayStatus
 eEnableThirdPartyControllerConfiguration
 eError
@@ -36332,8 +36510,9 @@ eFamilyGroupRole
 eFlag
 eFlow
 eFrameType < k_EFrameTypeMax
+eGamingDeviceType
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
-eHardwareVariant
+eHardwareVariant_DoNotUse
 eInstallState
 eKey
 eKeyType == k_ECryptoKeyTypeRSAPublic
@@ -36547,6 +36726,7 @@ empty file structure
 empty srtp protection profile list
 empty.vdf
 emsg=%d
+en-US
 en_US
 en_US.UTF8
 enable
@@ -36614,6 +36794,7 @@ encryption_timestamp
 end_date
 end_num
 end_time
+enddate
 endmntent
 endpoint
 endtime
@@ -37176,6 +37357,7 @@ fps_limit_options_external
 fputc
 fputs
 fqi\tH
+fr-FR
 fr_FR
 fragmented client hello
 frame
@@ -37208,6 +37390,7 @@ freeaddrinfo
 freeifaddrs
 french
 freopen
+frequency
 freshestCRL
 frexp
 friend_chat_tabs_opened
@@ -37601,6 +37784,7 @@ game_server_steam_id
 gamedir
 gameid
 gameid "%s" not found\n
+gameitemid
 gamemode
 gamenotes/
 gameoverlayrenderer.so
@@ -37766,7 +37950,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen:0n
 ghost_
 gidlist
 gidparentcomment
@@ -38162,6 +38346,7 @@ handle-cancel
 handle-cancel-pairing
 handle-capture-debug-trace-output
 handle-change-passphrase
+handle-clean-temporary-sessions
 handle-collect
 handle-connect
 handle-connect-profile
@@ -38255,6 +38440,9 @@ handle-start
 handle-start-discovery
 handle-stop
 handle-stop-discovery
+handle-switch-to-desktop-mode
+handle-switch-to-game-mode
+handle-switch-to-login-mode
 handle-throttle
 handle-trigger
 handle-trigger-action
@@ -38275,6 +38463,7 @@ handle-unregister-profile
 handle-update-bios
 handle-update-configuration-item
 handle-update-dock
+handle-valid-desktop-sessions
 handle-volume-down
 handle-volume-up
 handle-wait
@@ -39520,7 +39709,9 @@ is_wifi_scanning_enabled
 is_xinput_device_OBSOLETE
 isalnum
 isalpha
+isbundle
 isevcert
+isinbundle
 ispageload
 isredirect
 isspace
@@ -39538,6 +39729,7 @@ issuerUID
 issuer_and_serial
 issuer_steamid
 issuingDistributionPoint
+istypegame
 iswcntrl
 iswctype
 iswspace
@@ -41027,6 +41219,7 @@ k_EMsgGSStatusReply
 k_EMsgGSStatusUpdate_Unused
 k_EMsgGSUserPlaying
 k_EMsgGameServerOutOfDate
+k_EMsgGameServerPolicyUpdate
 k_EMsgGenericReply
 k_EMsgGetUserIPCountry
 k_EMsgGetUserIPCountryResponse
@@ -41985,6 +42178,7 @@ linear
 linebuffer_ctrl
 linebuffer_new
 lineheight
+lineitems
 link
 link_bandwidth
 link_description
@@ -43858,6 +44052,8 @@ n?SZn?
 nAchieved
 nActiveController
 nActiveTrack
+nAmount
+nAmountDelayed
 nAppID
 nAppID == appID
 nAppIDPlayingElsewhere
@@ -45116,6 +45312,7 @@ package $0;\n\n
 package/beta_cache.vdf
 package_header
 package_requests
+packages
 packages_to_reserve
 packages_to_unreserve
 packed
@@ -45350,6 +45547,7 @@ perform_encryption
 performance-profile
 performance-profile1
 performed_age_verification
+period
 permission != k_EAuthTokenPermission_Invalid
 permissions changed
 permitted
@@ -45489,7 +45687,6 @@ plasma
 platform
 platform:
 platform_linux
-platform_performance_profile
 platform_windows
 platforms_to_sync
 play
@@ -45798,6 +45995,7 @@ prop_id != 0 && prop_id - 1 < 3
 prop_id != 0 && prop_id - 1 < 4
 prop_id != 0 && prop_id - 1 < 5
 prop_id != 0 && prop_id - 1 < 6
+prop_id != 0 && prop_id - 1 < 8
 properties
 properties-changed
 property
@@ -45854,6 +46052,7 @@ pstrNew == pszString
 pstrProxy && pbExcludeLocal
 pszShortICULanguageCode
 pszThreadName != NULL
+pt-BR
 pt-br
 pt_BR
 pt_PT
@@ -46719,6 +46918,8 @@ schinese
 score
 scots
 screen-reader0
+screen_reader_locale_default
+screen_reader_locales_available
 screenreader.vdf
 screenshot
 screenshot_full
@@ -46955,6 +47156,7 @@ session->last_sent_stream_id < frame->hd.stream_id
 session->obq_flood_counter_ > 0
 session->remote_window_size > 0
 session->server
+session-management1
 session.mpd
 session_after_frame_sent1
 session_after_header_block_received
@@ -47674,6 +47876,7 @@ start_pairing_response
 start_past_days
 start_queue_position
 start_timeline_id
+startdate
 started
 started-by-uid
 startindex_override
@@ -47802,6 +48005,7 @@ steamIDClan.GetEAccountType() == k_EAccountTypeClan
 steamIDLobby
 steamIDUser.IsValid()
 steamLoginSecure
+steamRealm
 steam_beta_name
 steam_china_only
 steam_china_only/disabled_in_steam_china
@@ -47827,8 +48031,12 @@ steam_oslog_submitter_manager_proxy_get_property
 steam_oslog_submitter_manager_proxy_set_property
 steam_osmanager1_ambient_light_sensor1_proxy_get_property
 steam_osmanager1_ambient_light_sensor1_proxy_set_property
+steam_osmanager1_audio1_proxy_get_property
+steam_osmanager1_audio1_proxy_set_property
 steam_osmanager1_battery_charge_limit1_proxy_get_property
 steam_osmanager1_battery_charge_limit1_proxy_set_property
+steam_osmanager1_cpu_boost1_proxy_get_property
+steam_osmanager1_cpu_boost1_proxy_set_property
 steam_osmanager1_cpu_scaling1_proxy_get_property
 steam_osmanager1_cpu_scaling1_proxy_set_property
 steam_osmanager1_fan_control1_proxy_get_property
@@ -47845,6 +48053,8 @@ steam_osmanager1_performance_profile1_proxy_get_property
 steam_osmanager1_performance_profile1_proxy_set_property
 steam_osmanager1_screen_reader0_proxy_get_property
 steam_osmanager1_screen_reader0_proxy_set_property
+steam_osmanager1_session_management1_proxy_get_property
+steam_osmanager1_session_management1_proxy_set_property
 steam_osmanager1_tdp_limit1_proxy_get_property
 steam_osmanager1_tdp_limit1_proxy_set_property
 steam_osmanager1_wifi_debug1_proxy_get_property
@@ -49917,6 +50127,7 @@ value.x509crl
 value=
 values
 valve
+valve-device-type
 valve-hw-os
 valve-hw-variant
 valve.steam.desktop
@@ -50077,6 +50288,8 @@ vms_load
 vms_merger
 vms_unload
 vng]VPKFA;5/(
+voice
+voice-locales
 voice_input_gain
 voice_mic_device_name
 voice_mic_input_gain
@@ -50088,6 +50301,7 @@ voice_speaker_output_gain
 voice_use_auto_gain_control
 voice_use_echo_cancellation
 voice_use_noise_cancellation
+voices-for-locale
 void
 void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
 void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)

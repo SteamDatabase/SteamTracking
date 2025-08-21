@@ -1,4 +1,4 @@
-var CLSTAMP = "9982032";
+var CLSTAMP = "10002680";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -169,33 +169,33 @@ var CLSTAMP = "9982032";
         n.d(t, {
           $6: () => P,
           DO: () => T,
-          H2: () => Y,
+          H2: () => $,
           ID: () => I,
           IV: () => _,
           Iy: () => m,
           JP: () => g,
           Lg: () => k,
           ME: () => E,
-          Rh: () => $,
+          Rh: () => K,
           S$: () => r,
           SS: () => W,
           Sx: () => U,
           TQ: () => B,
-          WU: () => Z,
+          WU: () => q,
           aP: () => i,
           ak: () => M,
-          ck: () => O,
+          ck: () => D,
           cw: () => l,
           ey: () => F,
-          fL: () => D,
+          fL: () => O,
           g5: () => h,
-          iE: () => X,
+          iE: () => Y,
           im: () => o,
           jH: () => N,
           jr: () => A,
           kF: () => y,
           ke: () => s,
-          lc: () => K,
+          lc: () => Z,
           lm: () => p,
           mZ: () => C,
           oe: () => v,
@@ -211,7 +211,6 @@ var CLSTAMP = "9982032";
           ww: () => x,
           x6: () => L,
           y4: () => c,
-          zm: () => V,
         });
         const s = 1,
           o = 4,
@@ -484,7 +483,7 @@ var CLSTAMP = "9982032";
               return "push";
           }
         }
-        function D(e) {
+        function O(e) {
           switch (e) {
             case 0:
               return "vgui";
@@ -506,7 +505,7 @@ var CLSTAMP = "9982032";
               return "unknown";
           }
         }
-        var O, A, N, z, P, H, W, U, V, G, j, q, Z, K, $, Y, X;
+        var D, A, N, z, P, H, W, U, V, G, j, q, Z, K, $, Y;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -522,7 +521,7 @@ var CLSTAMP = "9982032";
               "k_EConnectivityTestResult_WifiDisabled"),
             (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
               "k_EConnectivityTestResult_NoLAN");
-        })(O || (O = {})),
+        })(D || (D = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -604,31 +603,11 @@ var CLSTAMP = "9982032";
                 "k_EActivateGameOverlayToWebPageMode_Modal");
           })(U || (U = {})),
           (function (e) {
-            (e[(e.k_EGamingDeviceType_Unknown = 0)] =
-              "k_EGamingDeviceType_Unknown"),
-              (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
-                "k_EGamingDeviceType_StandardPC"),
-              (e[(e.k_EGamingDeviceType_Console = 256)] =
-                "k_EGamingDeviceType_Console"),
-              (e[(e.k_EGamingDeviceType_PS3 = 272)] =
-                "k_EGamingDeviceType_PS3"),
-              (e[(e.k_EGamingDeviceType_Steambox = 288)] =
-                "k_EGamingDeviceType_Steambox"),
-              (e[(e.k_EGamingDeviceType_Tesla = 320)] =
-                "k_EGamingDeviceType_Tesla"),
-              (e[(e.k_EGamingDeviceType_Handheld = 512)] =
-                "k_EGamingDeviceType_Handheld"),
-              (e[(e.k_EGamingDeviceType_Phone = 528)] =
-                "k_EGamingDeviceType_Phone"),
-              (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-                "k_EGamingDeviceType_SteamDeck");
-          })(V || (V = {})),
-          (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(G || (G = {})),
+          })(V || (V = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -654,7 +633,7 @@ var CLSTAMP = "9982032";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(j || (j = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -662,14 +641,14 @@ var CLSTAMP = "9982032";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(q || (q = {})),
+          })(j || (j = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(Z || (Z = {})),
+          })(q || (q = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -683,13 +662,13 @@ var CLSTAMP = "9982032";
                 "k_EAppReleaseState_Released"),
               (e[(e.k_EAppReleaseState_Disabled = 5)] =
                 "k_EAppReleaseState_Disabled");
-          })(K || (K = {})),
+          })(Z || (Z = {})),
           (function (e) {
             (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
               (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
               (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
               (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-          })($ || ($ = {})),
+          })(K || (K = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
               (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
@@ -723,7 +702,7 @@ var CLSTAMP = "9982032";
                 "k_EInstallMgrStateFailed"),
               (e[(e.k_EInstallMgrStateCanceled = 16)] =
                 "k_EInstallMgrStateCanceled");
-          })(Y || (Y = {})),
+          })($ || ($ = {})),
           (function (e) {
             (e[(e.k_EWindowBringToFrontInvalid = 0)] =
               "k_EWindowBringToFrontInvalid"),
@@ -731,7 +710,7 @@ var CLSTAMP = "9982032";
                 "k_EWindowBringToFrontAndForceOS"),
               (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
                 "k_EWindowBringToFrontWithoutForcingOS");
-          })(X || (X = {}));
+          })(Y || (Y = {}));
       },
       85243: (e, t, n) => {
         "use strict";
@@ -7715,11 +7694,6 @@ var CLSTAMP = "9982032";
                       br: s.qM.readString,
                       bw: s.gp.writeString,
                     },
-                    is_steam_box: {
-                      n: 99,
-                      br: s.qM.readBool,
-                      bw: s.gp.writeBool,
-                    },
                     client_instance_id: {
                       n: 100,
                       br: s.qM.readUint64String,
@@ -7751,11 +7725,6 @@ var CLSTAMP = "9982032";
                       br: s.qM.readBool,
                       bw: s.gp.writeBool,
                     },
-                    is_steam_deck: {
-                      n: 107,
-                      br: s.qM.readBool,
-                      bw: s.gp.writeBool,
-                    },
                     access_token: {
                       n: 108,
                       br: s.qM.readString,
@@ -7766,7 +7735,26 @@ var CLSTAMP = "9982032";
                       br: s.qM.readBool,
                       bw: s.gp.writeBool,
                     },
-                    is_tesla: { n: 110, br: s.qM.readBool, bw: s.gp.writeBool },
+                    is_steam_box_deprecated: {
+                      n: 99,
+                      br: s.qM.readBool,
+                      bw: s.gp.writeBool,
+                    },
+                    is_steam_deck_deprecated: {
+                      n: 107,
+                      br: s.qM.readBool,
+                      bw: s.gp.writeBool,
+                    },
+                    is_tesla_deprecated: {
+                      n: 110,
+                      br: s.qM.readBool,
+                      bw: s.gp.writeBool,
+                    },
+                    gaming_device_type: {
+                      n: 111,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
                   },
                 }),
               m.sm_m
@@ -8194,6 +8182,7 @@ var CLSTAMP = "9982032";
           i = n.n(r),
           s = n(48307);
         n(29218);
+        r.Message;
         r.Message;
         r.Message;
         r.Message;
@@ -9207,13 +9196,13 @@ var CLSTAMP = "9982032";
           DF: () => k,
           L$: () => m,
           ML: () => _,
-          OP: () => D,
+          OP: () => O,
           Qi: () => C,
           SK: () => d,
           Sz: () => x,
           Z3: () => a,
           _g: () => f,
-          aA: () => O,
+          aA: () => D,
           bB: () => u,
           bs: () => I,
           dh: () => S,
@@ -9533,7 +9522,7 @@ var CLSTAMP = "9982032";
             a = [w("mousedown", s), w("touchstart", o)];
           return (0, i.Ue)(...a);
         }
-        function D() {
+        function O() {
           const [e, t] = r.useState(!1);
           return [
             e,
@@ -9543,7 +9532,7 @@ var CLSTAMP = "9982032";
             },
           ];
         }
-        function O(e = "vertical") {
+        function D(e = "vertical") {
           const t = "vertical" == e,
             n = r.useRef(),
             s = r.useRef(!0),
@@ -11150,9 +11139,9 @@ var CLSTAMP = "9982032";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 15 2025 : 13:56:21",
-                BUILD_TIME_UTC: "Aug 15 2025 : 20:56:21",
-                BUILD_RTIME_UTC: 1755291381,
+                BUILD_TIME_LOCAL: "Aug 20 2025 : 14:00:54",
+                BUILD_TIME_UTC: "Aug 20 2025 : 21:00:54",
+                BUILD_RTIME_UTC: 1755723654,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -13980,7 +13969,7 @@ var CLSTAMP = "9982032";
               this.state.ready &&
               this.props.instance.visible
             ) {
-              const e = O() ? 150 : 0;
+              const e = D() ? 150 : 0;
               this.props.instance.OnCancel(e);
             }
           }
@@ -14382,26 +14371,26 @@ var CLSTAMP = "9982032";
           (0, r.Cg)([w.oI], I.prototype, "OnBlur", null),
           (0, r.Cg)([w.oI], I.prototype, "OnKeyDown", null),
           (I = (0, r.Cg)([c.PA], I));
-        const D = "EnableContextMenuBlurDelay3";
-        function O() {
+        const O = "EnableContextMenuBlurDelay3";
+        function D() {
           return (
-            "true" === (window.localStorage && window.localStorage.getItem(D))
+            "true" === (window.localStorage && window.localStorage.getItem(O))
           );
         }
         function A() {
           const e = null != window.localStorage,
-            [t, n] = l.useState(O());
+            [t, n] = l.useState(D());
           return [
             e,
             t,
             l.useCallback((e) => {
               if (!window.localStorage)
                 return void console.error(
-                  `Attempt to change setting with no localStorage available: ${D}`,
+                  `Attempt to change setting with no localStorage available: ${O}`,
                 );
               n(e);
               const t = e ? "true" : "false";
-              window.localStorage.setItem(D, t);
+              window.localStorage.setItem(O, t);
             }, []),
           ];
         }
@@ -15624,7 +15613,7 @@ var CLSTAMP = "9982032";
           NCC: () => Ht,
           NtH: () => zt,
           OSJ: () => En,
-          OWN: () => O,
+          OWN: () => D,
           OeC: () => te,
           OiG: () => tt,
           P7C: () => Fe,
@@ -15636,7 +15625,7 @@ var CLSTAMP = "9982032";
           QHH: () => oe,
           QQ4: () => Ue,
           QcV: () => dt,
-          Qte: () => De,
+          Qte: () => Oe,
           RO3: () => V,
           ROZ: () => Ae,
           Rkk: () => p,
@@ -15662,7 +15651,7 @@ var CLSTAMP = "9982032";
           YNO: () => x,
           Yb3: () => rn,
           YuU: () => $e,
-          ZPc: () => Dt,
+          ZPc: () => Ot,
           ZWw: () => Me,
           ZjT: () => Zt,
           ZnA: () => pn,
@@ -15720,7 +15709,7 @@ var CLSTAMP = "9982032";
           lMJ: () => Be,
           lRD: () => qt,
           m59: () => _,
-          mrd: () => D,
+          mrd: () => O,
           nGC: () => ee,
           nm_: () => dn,
           o5Q: () => $t,
@@ -15728,7 +15717,7 @@ var CLSTAMP = "9982032";
           oy: () => yn,
           pDR: () => X,
           qcc: () => Ye,
-          qnF: () => Ot,
+          qnF: () => Dt,
           qzq: () => Ne,
           rNt: () => vn,
           rfv: () => Ge,
@@ -15754,7 +15743,7 @@ var CLSTAMP = "9982032";
           xv8: () => Y,
           yFA: () => G,
           yUp: () => j,
-          y_e: () => Oe,
+          y_e: () => De,
           ypD: () => xt,
           zD7: () => M,
           zHo: () => xe,
@@ -16501,7 +16490,7 @@ var CLSTAMP = "9982032";
             ),
           );
         }
-        function D(e) {
+        function O(e) {
           return r.createElement(
             "svg",
             {
@@ -16517,7 +16506,7 @@ var CLSTAMP = "9982032";
             }),
           );
         }
-        function O() {
+        function D() {
           return r.createElement(
             "svg",
             {
@@ -18581,7 +18570,7 @@ var CLSTAMP = "9982032";
             ),
           );
         }
-        function De(e) {
+        function Oe(e) {
           const t = (0, i.A)(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
@@ -18614,7 +18603,7 @@ var CLSTAMP = "9982032";
             }),
           );
         }
-        function Oe() {
+        function De() {
           return r.createElement(
             "svg",
             {
@@ -20359,7 +20348,7 @@ var CLSTAMP = "9982032";
             ),
           );
         }
-        function Dt() {
+        function Ot() {
           return r.createElement(
             "svg",
             {
@@ -20390,7 +20379,7 @@ var CLSTAMP = "9982032";
             ),
           );
         }
-        function Ot(e) {
+        function Dt(e) {
           return r.createElement(
             "svg",
             {
@@ -23014,7 +23003,7 @@ var CLSTAMP = "9982032";
           _l: () => f,
           a8: () => r,
           cc: () => x,
-          dt: () => O,
+          dt: () => D,
           gR: () => b,
           lQ: () => w,
           qZ: () => A,
@@ -23473,7 +23462,7 @@ var CLSTAMP = "9982032";
           for (; e.length < t; ) e = n + e;
           return e;
         }
-        function D(e) {
+        function O(e) {
           return (
             (void 0 === e || isNaN(e)) && (e = 0),
             {
@@ -23484,9 +23473,9 @@ var CLSTAMP = "9982032";
             }
           );
         }
-        function O(e, t, n) {
+        function D(e, t, n) {
           let r = e < 0;
-          const i = D((e = r ? 0 - e : e)),
+          const i = O((e = r ? 0 - e : e)),
             o = i.fraction.toFixed(2).split(".")[1],
             a = t ?? !0;
           let c = !a || "00" == o;
@@ -23526,7 +23515,7 @@ var CLSTAMP = "9982032";
         }
         function A(e, t, n) {
           let r = e < 0;
-          const i = D((e = r ? 0 - e : e)),
+          const i = O((e = r ? 0 - e : e)),
             o = F(i.seconds.toString(), 2, "0"),
             a = i.fraction.toFixed(2).split(".")[1],
             c = t ?? !0;
@@ -24648,9 +24637,9 @@ var CLSTAMP = "9982032";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 15 2025 : 13:56:21",
-                    BUILD_TIME_UTC: "Aug 15 2025 : 20:56:21",
-                    BUILD_RTIME_UTC: 1755291381,
+                    BUILD_TIME_LOCAL: "Aug 20 2025 : 14:00:54",
+                    BUILD_TIME_UTC: "Aug 20 2025 : 21:00:54",
+                    BUILD_RTIME_UTC: 1755723654,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24919,11 +24908,11 @@ var CLSTAMP = "9982032";
             r.createElement(
               b.s,
               { debug: !0, steamUI: !0 },
-              r.createElement(D, { cm: t }, n),
+              r.createElement(O, { cm: t }, n),
             )
           );
         }
-        function D(e) {
+        function O(e) {
           const { cm: t, children: n } = e,
             i = r.useCallback(() => t, [t]),
             o = (0, M.bs)(() => new S.A()),
@@ -25238,7 +25227,7 @@ var CLSTAMP = "9982032";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "41ea8a3518a0e28446b8",
+        3569: "befa6a3141e83cd215d2",
         3583: "f831ab7edbd9ffa591ac",
         3594: "8cd7c1d152a632ee7a02",
         3714: "ab7010eec823473536d8",
@@ -25316,7 +25305,7 @@ var CLSTAMP = "9982032";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "4227195013dca7877907",
+        9858: "7770a29400f71ebc6d00",
         9869: "f100b512c375f3f33d22",
         9887: "b3e18a3b56733822ec70",
       }[e]),

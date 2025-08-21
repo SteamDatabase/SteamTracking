@@ -848,6 +848,7 @@ $\nY8O
 /data/src/common/language.cpp
 /data/src/common/linuxhelpers.cpp
 /data/src/common/logger.cpp
+/data/src/common/messageobjects.cpp
 /data/src/common/platformhelpers.cpp
 /data/src/common/steam/client_api.cpp
 /data/src/common/steamid.cpp
@@ -1184,6 +1185,7 @@ $\nY8O
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
 11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyE
 11KeyValuesAD
+12CAddressInfo
 12CAutoReleaseI15CJSCallbackFuncE
 12CDynamicFuncIPF15nvmlReturn_enumP13nvmlDevice_st27nvmlTemperatureSensors_enumPjEE
 12CDynamicFuncIPF15nvmlReturn_enumP13nvmlDevice_stP13nvmlMemory_stEE
@@ -1193,6 +1195,7 @@ $\nY8O
 12CDynamicFuncIPF15nvmlReturn_enumjPP13nvmlDevice_stEE
 12CDynamicFuncIPF15nvmlReturn_enumvEE
 12CIntProperty
+12CLicenseInfo
 12CLogInstance
 12CMsgSetFocus
 12CMsgStopFind
@@ -1223,9 +1226,14 @@ $\nY8O
 13CMsgShowPopup
 13CMsgSizePopup
 13CMsgWasHidden
+14CCBAccountInfo
+14CClanEventInfo
 14CColorProperty
 14CFloatProperty
+14CGuestPassInfo
 14CHFontProperty
+14CMachineIDInfo
+14CMessageObject
 14CMsgHideWindow
 14CMsgMouseLeave
 14CMsgMouseWheel
@@ -1257,6 +1265,7 @@ $\nY8O
 14IRunGameEngine
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+15CChatMemberInfo
 15CConVarAccessor
 15CIngameFPSGraph
 15CJSCallbackFunc
@@ -1343,6 +1352,7 @@ $\nY8O
 16HTMLComboBoxHost
 16IDynamicFunction
 16ListPanelDragger
+17CClientWalletInfo
 17CFileWriterThread
 17CIngameFPSCPUInfo
 17CIngameFPSGPUInfo
@@ -1357,6 +1367,7 @@ $\nY8O
 17CMsgSearchResults
 17CMsgStartDownload
 17CMsgUpdateToolTip
+17CPurchaseGiftInfo
 17CScreenshotThread
 17CStreamReaderBase
 17DirectoryTreeView
@@ -1375,6 +1386,8 @@ $\nY8O
 18CMsgSavePageToJPEG
 18CTextureIdProperty
 18CUtlCharConversion
+19CActivationCodeInfo
+19CClientMicroTxnInfo
 19CDirContentsWatcher
 19CGPUStatsReaderNvml
 19CIngameCPUCoreGraph
@@ -1401,7 +1414,7 @@ $\nY8O
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
-20:25:16
+20:57:16
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -1418,9 +1431,11 @@ $\nY8O
 20CMsgSetSteamBetaName
 20CMultipleCallResultsI15COverlayVRState24GameStatsSessionIssued_tE
 20COverlayWebVguiFrame
+20CPurchaseReceiptInfo
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
@@ -1432,6 +1447,7 @@ $\nY8O
 21CMsgResizeGripChanged
 21CMsgSetVerticalScroll
 21CMsgSetWindowPosition
+21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
 22CFrameEventPerfTracker
@@ -1443,6 +1459,7 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
+23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
 23CMsgCanGoBackAndForward
@@ -1468,6 +1485,7 @@ $\nY8O
 25CMsgSetSharedPaintBuffers
 25CMsgVerticalScrollBarSize
 25CPanelAnimationDictionary
+26CActivationCodePackageInfo
 26CMsgFileLoadDialogResponse
 26CMsgLinkAtPositionResponse
 26CMsgSavePageToJPEGResponse
@@ -1591,6 +1609,7 @@ $\nY8O
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI22SerializedOverlayPumps20OverlayEscapeState_tLb0EE
 9CCallbackI22SerializedOverlayPumps21ScreenshotTriggered_tLb0EE
+9CCardInfo
 9CJSObject
 9CMsgClose
 9CMsgKeyUp
@@ -1670,6 +1689,7 @@ AcceptPanel
 Accepted
 AcceptedForGameRankedByAcceptanceDate
 Access Denied
+AccessToken
 Account Disabled
 Account Locked Down
 Account Logon Denied
@@ -1686,6 +1706,9 @@ Account is not allowed
 Account locked
 Account logon denied, need two-factor code
 Account not verified
+AccountIDCreator
+AccountIDLastUpdated
+AccountNum
 Accounts not friends
 AchievementUnlocked
 Activate
@@ -1709,6 +1732,8 @@ AddedGameToWishlist
 AdditionalRoute
 Address is invalid or contains invalid characters
 Address too small!
+Address1
+Address2
 Admin
 Administrator OK
 Adult Content
@@ -1742,6 +1767,8 @@ Announcement
 Anonymous Game Server
 Anonymous User
 App Running
+AppID
+AppIDToRedirect
 AppModalQueryBox
 AppRootPanel
 AppendedSHA
@@ -1768,7 +1795,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 15 2025
+Aug 20 2025
 August
 Aura
 Authorize
@@ -1828,6 +1855,7 @@ Banned
 BaseControls
 BaseGameOverlayUIPanel
 BasePanel()->RunFrame()
+BasePrice
 Basque
 Batak
 Beeline
@@ -1838,6 +1866,8 @@ Beta
 BgColor
 Billing agreement cancelled
 Billing name is invalid because it looks like it contains credit card data
+BillingCurrency
+BillingTotal
 BitCash
 Bitcoin
 BitmapImagePanel
@@ -1847,6 +1877,7 @@ Blocked
 Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
 BoaCompra Gold
+Body
 Boleto Bancario
 Boleto Flash
 Book Voucher
@@ -2421,6 +2452,14 @@ CaptionGripPanel::OnThink()
 CaptivePortal
 CaptivePortal_InPlace
 CaptivePortal_Redirected
+CardBinID
+CardExpMonth
+CardExpYear
+CardHolderFirstName
+CardHolderLastName
+CardID
+CardLast4Digits
+CardNumber
 Carian
 Carnet
 Cart is not valid for purchase
@@ -2455,7 +2494,10 @@ CheckForLayoutFilesChanges
 Checking for game crash
 Cherokee
 China
+City
 Clan
+ClanID
+Class
 Clear
 ClearButton
 ClearField
@@ -2540,6 +2582,7 @@ ComboBoxHost
 ComboBtn
 ComboMenu
 Command
+CommentCount
 Comments by user
 Committing
 Common
@@ -2603,6 +2646,7 @@ Couldn't parse script file: expected <event name>, found nothing\n
 Couldn't parse script sequence '%s': expected '{', found '%s'\n
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'\n
 Couldn't write %s: %s\n
+CountryCode
 Coupon has expired
 Create
 Create process failed
@@ -2620,14 +2664,17 @@ Credit Card (Nodwin)
 Credit card number is invalid (does not pass LUHN checksum)
 Credit card number provided does not match the credit card type
 Credit would exceed max allowed wallet balance
+CreditCardType
 Croatian
 Crypto
 Ctrl
 Culture Voucher
 Cuneiform
 CuratorRecommendedGame
+Currency
 Currency Conversion
 Currency of purchase does not match currency of wallet
+CurrencyCode
 Cursor
 CursorEntered
 CursorEnteredChild
@@ -3018,11 +3065,20 @@ Error: CLinuxSystemHWMonitorThread: failed to initialize\n
 Error: CLinuxSystemHWMonitorThread: frame error, exiting\n
 Error: failed to disable wireless power management: %d\n
 Error: failed to open: %s\n
+ErrorAppID
+ErrorHeadline
+ErrorLinkText
+ErrorLinkURL
+ErrorString
 Errors
 Escape
 Estonian
 Ethiopic
 Event Text
+EventName
+EventNotes
+EventTime
+EventType
 Execute: %s\n
 Existing cancelled license
 Exito
@@ -3065,6 +3121,7 @@ Extensions to non-lite types can only be declared in non-lite files.  Note that 
 External
 External Account is not linked to a Steam account
 External Account linked to another Steam account
+ExternalValidation
 FAIL
 FAILED_PRECONDITION
 FATAL
@@ -3197,7 +3254,9 @@ FindEntry
 Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
+FirstName
 FiveHours
+Flags
 FlashWindow
 Flicker
 FoCLcx
@@ -3295,11 +3354,14 @@ Game Release
 Game Server
 Game Voucher
 GameAppID
+GameCode
+GameCodeFromKey
 GameFPS
 GameFPSLabel
 GameFPSValue
 GameFPSValueWarning
 GameFPSValueWarningDesaturated
+GameItemID
 GameManagedItems
 GameOverlay exiting due to missing PID argument\n
 GameOverlay exiting due to missing manuallyclearframes argument\n
@@ -3351,6 +3413,7 @@ GetOSType
 GetPanelAnimationDictionary()
 GetPanelKeyBindingMapDictionary()
 GetPanelMessageMapDictionary()
+GetPlatformFromOS
 GetRawRepeatedField
 GetRepeatedBool
 GetRepeatedDouble
@@ -3373,6 +3436,11 @@ GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 GetVParent()
 Gift
+GiftMessage
+GiftTemplate
+GifteeAccountID
+GifteeEmail
+GifteeName
 Giropay
 Glagolitic
 Global Collect unknown error
@@ -3438,7 +3506,9 @@ Hardware Promo
 Hardware not capable of IPT
 Has not logged in on PS3 with required app
 HasField
+HasWallet
 Hausa
+Headline
 Headphones
 Headset
 Hebrew
@@ -3530,6 +3600,8 @@ IngameFPSGraph
 Inherited
 Init
 Init Failed
+InitialPeriod
+InitialTimeUnit
 InitializingRenderStream()
 InputCanceled
 InputCompleted
@@ -3538,6 +3610,7 @@ Inscriptional_Pahlavi
 Inscriptional_Parthian
 InsertTabImage
 Install path removed
+InstanceName
 InstantClipKey
 Insufficient Funds
 Insufficient Privilege
@@ -3621,6 +3694,7 @@ Is Bank
 Is64BitOS
 Is64BitOS()
 IsARM64() || GetCPUInformation().m_bSSE2
+IsGift
 IsLabelEditingAllowed()
 IsPointInCaptureRegion
 IsPowerOfTwo( nNewCapacity )
@@ -3635,6 +3709,9 @@ IsVisible()
 Italian
 Itau Online
 Item or entry has been deleted
+ItemAppId
+ItemCount
+ItemDescription
 ItemDeselected
 ItemSelected
 Items
@@ -3831,6 +3908,7 @@ KeyCodeTyped
 KeyCodeUnhandled
 KeyFocusTicked
 KeyModeSet
+KeyRangeID
 KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
@@ -3894,6 +3972,7 @@ LanguageMenu
 Laser
 Last %d input commands (most recent first):\n
 Last Message Repeated %d times.\n%s
+LastName
 Latam_Spanish
 Latin
 Latvian
@@ -3904,11 +3983,14 @@ LayoutFileChanged
 LayoutTemplates
 Left
 Legacy Free Sub
+LegacyKey
+LegionGoS
 Length Required
 Lepcha
 Library
 License Imported From Steam2
 License expired
+LicenseType
 Licensed Site
 Lider
 Limbu
@@ -3918,6 +4000,7 @@ Limited User (forced)
 Limited use, delayed activation
 Limited user account
 LimitedLocal
+LineItemCount
 LinePay
 Linear_B
 Linkaja
@@ -4055,11 +4138,13 @@ MarkerKey
 Master App Editor
 Master Subscription
 MasterCard
+MasterPackageID
 Mastercard (BoaCompra)
 Matched '%s' -> '%s'\n
 MaxFPSNumber
 MaxLabel
 MaxResults
+MaxUseCount
 Maximize
 Maximum family size exceeded
 MaybeAllocateAligned cannot fail here.
@@ -4110,6 +4195,7 @@ MessageBox
 MessageBox.ButtonHeight
 MessageBoxText
 MessageLite at 0x
+MessageObject
 MessageOptions
 MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
@@ -4128,6 +4214,8 @@ MinFPSNumber
 MinLabel
 Minimize
 MinimizeToSysTray
+MinuteLimit
+MinutesUsed
 Mirror
 MirroredNotStriped
 Misdirected Request
@@ -4417,6 +4505,7 @@ NULL != pchFileName
 NULL != pchPrefixPassed
 NULL == m_pFile
 NVIDIA
+Name
 NameEntry
 NamePart
 Nanaco
@@ -4580,6 +4669,7 @@ Option must not use reserved name "uninterpreted_option".
 Option1
 Option2
 Option3
+OrderID
 Oriya
 Osmanya
 Other
@@ -4600,6 +4690,7 @@ OverlayShown
 OverlayWebFrame
 OverlayWebPopup
 Owner
+OwnerID
 PATCH
 PCRE does not support \L, \l, \N{name}, \U, or \u
 PERMISSION_DENIED
@@ -4617,6 +4708,8 @@ PRUNE
 PSN Ticket is invalid
 Package id 0
 Package requires an invitation for a reservation to purchase
+PackageCount
+PackageID
 Page
 PageChanged
 PageCountChanged
@@ -4674,7 +4767,9 @@ Payment method allows multiple pending transactions, but there is an overlap of 
 Payment method is disabled
 Payment method is not allowed for this purchase
 Payment requires additional authentication step
+PaymentID
 PaymentInfo
+PaymentMethod
 Payshop
 Peer Server
 PeerServer
@@ -4690,6 +4785,7 @@ PerfTextLarge
 PerfTextLargeClassic
 Permanent
 Permanent Redirect
+Permissions
 Persian
 Persistence Failed
 Persistent Logfiles created which have no cleanup limit specified!
@@ -4723,6 +4819,7 @@ Plat_IsInDebugSession
 Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
+Plat_IsTesla
 Plat_MSTime
 Plat_MSTime64
 Plat_OutputDebugString
@@ -4742,7 +4839,10 @@ PopulateFileList
 PopulateFileNameCompletion
 PopupHTML
 Portuguese
+PostCode
+PostTime
 PostedAnnouncement
+PosterID
 Preallocating
 Precondition Failed
 Precondition Required
@@ -4794,6 +4894,8 @@ Punjabi (Shahmukhi)
 Purchase
 Purchase not yet settled
 Purchase pending
+PurchaseCountryCode
+PurchaseStatus
 PutInternal: Not enough space for put when locked\n
 QIWI
 QkkXa
@@ -4845,6 +4947,7 @@ Read Failed
 Rebuild
 ReceivedNewGame
 ReceivesGroupComment
+RecipientAddress
 RecommendedGame
 Reconfiguring
 Recurring
@@ -4862,6 +4965,7 @@ RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 Red Pagos
 RedCompra
+Refundable
 Refunded
 Refunded to wallet
 Region Locked
@@ -4880,6 +4984,8 @@ Remote call failed
 RemoveLast
 Renew failed
 Renew next period
+RenewalPeriod
+RenewalTimeUnit
 Repaint
 Repeated fields can't have default values.
 Request Entity Too Large
@@ -4900,6 +5006,7 @@ Requested range not satisfiable
 Requested size is too large to fit into size_t.
 Required fields are not allowed in proto3.
 Requires 64bit operating system
+RequiresCachedPmtMethod
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
@@ -4910,6 +5017,7 @@ Resource\warning.wav
 Response Not Received
 Restricted country
 Restricted device
+ResultDetail
 Retail
 Retired
 Retry later
@@ -4952,14 +5060,18 @@ STEAM_USE_DYNAMIC_VRS
 STRING
 SafeMode
 SafetyPay
+SalesTerritoryCode
+SalesTerritoryCodeFromKey
 Samaritan
 Same as previous value
+Sandbox
 Santander Rio
 Saturday
 Saurashtra
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Sberbank
 ScheduledEvent
+ScheduledSendOnDate
 Score
 Scots
 Screenshot
@@ -5000,9 +5112,12 @@ SelectedNewPOTW
 Self updating
 SendHotKeyAndVisibilityState()
 SendPerGameConfiguration()
+SenderAddress
+SenderName
 Sending of an email failed
 SentenceMode
 SentenceModeMenu
+Sentiment
 Seperator
 SeperatorBack
 SeperatorFront
@@ -5015,6 +5130,8 @@ SerializedSurface requires the vgui::IVGui system to run!\n
 Server
 Server Busy
 Server Shutdown
+ServerAddress
+ServerPassword
 Service Read Only
 Service Unavailable
 ServiceDescriptorProto
@@ -5067,6 +5184,7 @@ Shared library locked
 Shavian
 ShellCmd
 Shift
+Shipping
 Shipping address failed validation
 ShopeePay
 Shopping Cart Not Found
@@ -5078,6 +5196,7 @@ ShowContextMenu
 ShowIMECandidates
 ShowPanel
 Shutting down overlay\n
+Signature
 Signature check failed
 Simple
 Simplified_Chinese
@@ -5197,6 +5316,7 @@ St9time_base
 Staging
 StandardPC
 Startup
+State
 StaticFileWriterThread()
 StatusText
 Steam
@@ -5214,6 +5334,7 @@ SteamBox
 SteamCache
 SteamChina_SChinese
 SteamDeck
+SteamID
 SteamRealPath
 SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
@@ -5338,6 +5459,7 @@ Telugu
 Temporary Redirect
 Tenpay
 Terminating
+TerritoryCode
 Tesla
 Test
 Test CD-Key
@@ -5402,6 +5524,13 @@ Tifinagh
 Tigrinya
 Time
 Time is out of sync
+TimeAcked
+TimeCreated
+TimeExpiration
+TimeLastUpdated
+TimeNextProcess
+TimeRedeemed
+TimeSent
 Timed Trial
 Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()\n
 Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
@@ -5433,6 +5562,8 @@ Tooltip.Delay
 TooltipHTML
 TooltipWindow
 Toss
+Total
+TotalDiscount
 Touch'n Go
 Trade
 Trade Fee
@@ -5440,7 +5571,10 @@ Trade Scam
 Trade Scam Old
 Trading
 Traditional_Chinese
+TransID
 Transaction expired
+TransactionID
+TransactionTime
 Transcode Behind
 TreeImage
 TreeNode
@@ -5548,6 +5682,7 @@ Update Started
 Update required
 UpdateIMECandidates
 UpdateStats
+UpdateTime
 Updated Disabled by app
 Upgrade Required
 Upload Disconnected
@@ -5729,6 +5864,8 @@ Waiting for shared fd client failed\n
 Waiting on game
 Wallet
 Wallet (Nodwin)
+WalletAmt
+WalletCur
 Warning
 Warning parsing text-format 
 Warning: %s: lsof is required to run steam and it may not be available - please install
@@ -6158,6 +6295,7 @@ account
 account flags changed
 active
 additional_includes
+addressinfo
 afrikaans
 aggregate_value
 airtel
@@ -6179,6 +6317,11 @@ alse
 amazon
 amazon.com
 amharic
+amount
+amt.GetCurrencyCode() == GetCurrency()
+amtInitial.GetCurrencyCode() == GetCurrency()
+amtRecurring.GetCurrencyCode() == GetCurrency()
+amtrecurring
 an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)
 android
 android32
@@ -6337,6 +6480,7 @@ candidate
 cannot create std::vector larger than max_size()
 canvas_oop_rasterization
 card*
+cardinfo
 catalan
 category_1
 category_10
@@ -6625,6 +6769,7 @@ depotdeltapatch
 depotonly
 depots
 derive
+description
 desktopoverlay
 details
 details_tab
@@ -6675,6 +6820,8 @@ durationcontrolinit
 dutch
 dynamic_cast
 eCmd > 0 && eCmd < eHTMLCommands_None
+eCurrencyCode
+eCurrencyCodeDelayed
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 eRet != k_ESteamRealmUnknown
 east
@@ -6694,8 +6841,10 @@ elementtagname
 embedded_unknown
 emphasis
 empty
+en-US
 en_US
 enabled
+enddate
 endmntent
 engadget.com
 english
@@ -6817,6 +6966,7 @@ foxsports.com
 fprintf
 fputc
 fputs
+fr-FR
 fr_FR
 frame_brGrip
 frame_captiongrip
@@ -6836,6 +6986,7 @@ free
 freeaddrinfo
 french
 freopen
+frequency
 frexp
 friends
 friends/
@@ -6876,6 +7027,7 @@ g_vecTempTextBuffer
 galician
 galileo
 game
+gameitemid
 gameoverlayrenderer.so
 gameoverlayui
 gamepad+mouse.vdf
@@ -7215,10 +7367,13 @@ is_large()
 is_save
 isalnum
 isalpha
+isbundle
 isevcert
+isinbundle
 ispageload
 isredirect
 isspace
+istypegame
 iswcntrl
 iswspace
 it_IT
@@ -7555,6 +7710,7 @@ like
 lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
 lineStartIndex >= _utext
 lineheight
+lineitems
 link
 link_url
 linux
@@ -7729,6 +7885,7 @@ m_pFriendButtons
 m_pImageList
 m_pImagePanel
 m_pKV
+m_pKeyValues
 m_pLogInstance
 m_pMapFile
 m_pMutex
@@ -7941,6 +8098,8 @@ music
 mustownapp
 mwa!
 myspace.com
+nAmount
+nAmountDelayed
 nBytes
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nDay < 32
@@ -8084,6 +8243,7 @@ pToolWindow
 pWatcher != NULL
 package
 package $0;\n\n
+packages
 packed
 page
 page->m_pToolWindow == this
@@ -8193,6 +8353,7 @@ pcrecpp::RE::no_arg
 pcrecpp::RE::~RE()
 peering
 perfectworld
+period
 permissions changed
 persian
 php_class_prefix
@@ -8250,6 +8411,7 @@ pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
 pszArg0 && *pszArg0
+pt-BR
 pt-br
 pt_BR
 pt_PT
@@ -8279,6 +8441,7 @@ py_generic_services
 qR5FE%
 qsort
 quantil
+quantity
 quechua
 queueAsList
 queueAsList[ iData ]
@@ -8531,6 +8694,7 @@ stackpath
 start
 startIndex < m_TextStream.Count()
 startItem >= 0
+startdate
 startup
 state
 statfs
@@ -8572,6 +8736,7 @@ steam:
 steam://
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
+steamRealm
 steam_beta_name
 steam_dev.cfg
 steam_id

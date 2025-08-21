@@ -9,7 +9,6 @@
   f_frsize: %lu\n
   what():  
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./012312CIMENullImpl
  +0000
  --enable-duplicate-detection
  --force
@@ -501,6 +500,7 @@ $\nY8O
 /data/src/common/language.cpp
 /data/src/common/linuxhelpers.cpp
 /data/src/common/linuxhelpers_x11.cpp
+/data/src/common/messageobjects.cpp
 /data/src/common/platformhelpers.cpp
 /data/src/common/registry.cpp
 /data/src/common/string_misc.cpp
@@ -757,6 +757,7 @@ $\nY8O
 11CUtlHashMapImN14CSchemeManager9FontKey_tE10CDefEqualsImE11HashFunctorImEmE
 11KeyValuesAD
 123456789
+12CAddressInfo
 12CBaseSurface
 12CDynamicFuncIPF14SDL_PowerStatePiS1_EE
 12CDynamicFuncIPFP10SDL_WindowPKciiyEE
@@ -781,8 +782,15 @@ $\nY8O
 12CDynamicFuncIPFvPvEE
 12CDynamicFuncIPFvjEE
 12CDynamicFuncIPFvvEE
+12CIMENullImpl
+12CLicenseInfo
 13CUIFontFilePB
 13VPanelWrapper
+14CCBAccountInfo
+14CClanEventInfo
+14CGuestPassInfo
+14CMachineIDInfo
+14CMessageObject
 14CSchemeManager
 14CSerializedIME
 14CUtlLinkedListI10CUtlStringiE
@@ -796,15 +804,20 @@ $\nY8O
 14ConCommandBase
 14IBaseInterface
 14ISurfaceHelper
+15CChatMemberInfo
 16CStyleAppearance
 16IIMEPostCallback
+17CClientWalletInfo
 17CFileWriterThread
+17CPurchaseGiftInfo
 17CStreamReaderBase
 17CUtlPriorityQueueI13MessageItem_tPFbRKS0_S2_E32CDefUtlPriorityQueueSetIndexFuncIS0_EE
 17CVGUI2DLLValidate
 17IVGuiModuleLoader
 18CSerializedSurface
 18CUtlCharConversion
+19CActivationCodeInfo
+19CClientMicroTxnInfo
 19CUtlNoEscConversion
 1A26b
 1wsHp
@@ -815,11 +828,16 @@ $\nY8O
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 20CNotificationManager
+20CPurchaseReceiptInfo
 20CUIFontFilePackagePB
+21CClanAnnouncementInfo
 21CLocalizedStringTable
+21CPurchaseLineItemInfo
 21CUtlCStringConversion
+23CActivationCodeItemInfo
 23CVGuiSystemModuleLoader
 24CDirWatcherPollingThread
+26CActivationCodePackageInfo
 2>/dev/null
 2@KEY_2
 3#KEY_3
@@ -874,6 +892,7 @@ $\nY8O
 8\foQS
 8\n\textension
 9(KEY_9
+9CCardInfo
 9CStyleSet
 9IValidate
 9\n\noneof_decl
@@ -914,6 +933,10 @@ ASCII
 ASCII conversion buffer too small
 ASCII//TRANSLIT
 A\n\nannotation
+AccessToken
+AccountIDCreator
+AccountIDLastUpdated
+AccountNum
 AddAllocatedMessage
 AddBool
 AddDouble
@@ -927,10 +950,14 @@ AddUInt32
 AddUInt64
 Adding custom font file: %s\n
 Address too small!
+Address1
+Address2
 Afrikaans
 Albanian
 Already saw decimal point or exponent; can't have another one.
 Amharic
+AppID
+AppIDToRedirect
 Application built with libpng-
 Application jmp_buf size changed
 Application must supply a known background gamma
@@ -971,9 +998,13 @@ Bad expression token: %c at %d in %s\n
 Bad flag in RTime32DateAdd
 Bad format string in CLocalizeStringTable::ConstructString\n
 Bangla
+BasePrice
 BaseSettings
 Basque
 Belarusian
+BillingCurrency
+BillingTotal
+Body
 Boolean default must be true or false.
 Bosnian
 BottomLeft
@@ -1356,6 +1387,14 @@ Cannot copy json_name to a proto of a different size.
 Cannot get here
 Cannot skip field value, unexpected token: 
 Caps Lock
+CardBinID
+CardExpMonth
+CardExpYear
+CardHolderFirstName
+CardHolderLastName
+CardID
+CardLast4Digits
+CardNumber
 Catalan
 ChaCha20_ctr32
 ChaCha20_ssse3
@@ -1364,12 +1403,16 @@ Changing resolution from (%d, %d) to (%d, %d)\n
 Cherokee
 ChromeController
 ChromeHTML_Controller_003
+City
+ClanID
+Class
 ClearField
 ClearSchemeSettings
 CloseExternal
 Closing socket.\n
 Colors
 Command
+CommentCount
 Compression buffer size cannot be changed because it is in use
 Compression buffer size cannot be reduced below 6
 ConCommand '%s' not currently supported in config file\n
@@ -1386,11 +1429,15 @@ Couldn't find custom font file '%s'\n
 Couldn't find scheme color '%s'\n
 Couldn't parse default value "
 Couldn't write %s: %s\n
+CountryCode
 CreateInterface
 CreateMilesMusicAudioDevice
 CreateMilesSoundAudioDevice
 CreateMilesVoiceAudioDevice
+CreditCardType
 Croatian
+Currency
+CurrencyCode
 CursorEntered
 CursorEnteredChild
 CursorExited
@@ -1428,6 +1475,7 @@ Delayed
 Delete
 DescriptorProto
 DescriptorProtosH
+Details
 Detected leaked fd
 DialogConfigOverlay_%dx%d.vdf
 Division or mod by zero: dividend.hi=
@@ -1485,9 +1533,18 @@ Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
 Error: failed to disable wireless power management: %d\n
 Error: texture file '%s' does not exist or is invalid\n
+ErrorAppID
+ErrorHeadline
+ErrorLinkText
+ErrorLinkURL
 ErrorSerial
+ErrorString
 Errors in %s:\n%s
 Estonian
+EventName
+EventNotes
+EventTime
+EventType
 Execute: %s\n
 Expanded map entry type 
 Expect a decimal number, got: 
@@ -1520,6 +1577,7 @@ ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
+ExternalValidation
 Extra compressed data
 FAILED_PRECONDITION
 FATAL
@@ -1608,6 +1666,8 @@ Filipino
 Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
+FirstName
+Flags
 FoCLcx
 FontManager()
 Fonts
@@ -1679,6 +1739,9 @@ GL_EXT_texture_filter_anisotropic
 GL_EXT_texture_lod_bias
 GL_NVX_gpu_memory_info
 Galician
+GameCode
+GameCodeFromKey
+GameItemID
 GeneratedCodeInfo
 Georgian
 German
@@ -1701,6 +1764,7 @@ GetInts()
 GetMessage
 GetNameFromOSType
 GetOSType
+GetPlatformFromOS
 GetRawRepeatedField
 GetRepeatedBool
 GetRepeatedDouble
@@ -1722,6 +1786,11 @@ GetUInt32
 GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 GetWin32Stats
+GiftMessage
+GiftTemplate
+GifteeAccountID
+GifteeEmail
+GifteeName
 Google.Protobuf.Reflection
 Gray color space not permitted on RGB PNG
 Greek
@@ -1744,7 +1813,9 @@ HKLM32
 HKLM64
 HOME
 HasField
+HasWallet
 Hausa
+Headline
 Hebrew
 Hex and octal numbers must be integers.
 Hidden
@@ -1798,6 +1869,9 @@ Indonesian
 Infinite time value
 Init
 InitXInput2
+InitialPeriod
+InitialTimeUnit
+InstanceName
 Insufficient memory for eXIf chunk data
 Insufficient memory for hIST chunk data
 Insufficient memory for pCAL parameter
@@ -1874,6 +1948,7 @@ Invalid wire type for CPPTYPE_UINT32:
 Invalid wire type for CPPTYPE_UINT64: 
 Irish
 Is64BitOS
+IsGift
 IsInList(after)
 IsInList(before)
 IsText()
@@ -1881,6 +1956,9 @@ IsValid()
 IsValidIndex( elem )
 IsValidIndex(elem)
 Italian
+ItemAppId
+ItemCount
+ItemDescription
 JArray
 JSType
 JZJ{.
@@ -1957,6 +2035,7 @@ KeyCodeReleased
 KeyCodeTyped
 KeyCodeUnhandled
 KeyFocusTicked
+KeyRangeID
 KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
@@ -2004,11 +2083,15 @@ LOCK_EX
 LOCK_SH
 Label
 Language
+LastName
 Latam_Spanish
 Latvian
 LayoutFile
 LayoutFileChanged
+LegacyKey
 Libpng jmp_buf still allocated
+LicenseType
+LineItemCount
 Lithuanian
 LoadFileIntoBuffer: NULL parameters
 LoadFileRangeIntoBuffer_Internal
@@ -2063,7 +2146,9 @@ MapValueRef::SetUInt64Value
 Marathi
 March
 Marlett
+MasterPackageID
 Matched '%s' -> '%s'\n
+MaxUseCount
 MaybeAllocateAligned cannot fail here.
 Memory allocation failed while processing sCAL
 Menu
@@ -2075,6 +2160,7 @@ Message missing required fields:
 Message of type "
 Message type "
 MessageLite at 0x
+MessageObject
 MessageOptions
 MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
@@ -2083,7 +2169,9 @@ Messages can't have default values.
 MethodDescriptorProto
 MethodOptions
 Minute
+MinuteLimit
 Minutes
+MinutesUsed
 Missing IHDR before IDAT
 Missing PLTE before IDAT
 Missing field: FileDescriptorProto.name.
@@ -2316,9 +2404,11 @@ Option "
 Option field "
 Option must have a name.
 Option must not use reserved name "uninterpreted_option".
+OrderID
 Out of Memory
 Out of memory
 Overwriting on-disk registry with newly created registry.
+OwnerID
 PCS illuminant is not D50
 PERFORMANCE
 PERMISSION_DENIED
@@ -2333,9 +2423,15 @@ PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
 PORTABILITY
 POSIX
 PRETTY_NAME
+PackageCount
+PackageID
 Palette is NULL in indexed image
+PaymentID
+PaymentMethod
 Pe6^
+Permissions
 Persian
+Phone
 Pid that we should be watching for
 Plat_AbsoluteTime
 Plat_AbsoluteTimeToFloat
@@ -2347,6 +2443,7 @@ Plat_IsChromeOS
 Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
+Plat_IsTesla
 Plat_IsWSL
 Plat_MSTime
 Plat_OutputDebugString
@@ -2363,6 +2460,9 @@ Platform Error: module '%s' failed to initialize\n
 Platform Error: module version ('%s, %s) invalid, not loading\n
 Polish
 Portuguese
+PostCode
+PostTime
+PosterID
 Potential overflow in png_zalloc()
 PrepareBuffer( nNewLength ) == pstrNew
 Primary
@@ -2372,6 +2472,8 @@ Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 Punjabi (Gurmukhi)
 Punjabi (Shahmukhi)
+PurchaseCountryCode
+PurchaseStatus
 Qkkbal
 Quechua
 Quit
@@ -2389,12 +2491,14 @@ Read Error
 Read failure in png_handle_zTXt
 Read palette index exceeding num_palette
 Really too many panels, crashing
+RecipientAddress
 Recursion limit at end of parse should be 
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
+Refundable
 Registry
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena, 
@@ -2405,15 +2509,19 @@ Render command has left edge > right edge: '%s'\n
 Render command has top edge > bottom edge: '%s'\n
 Render command has x0 and x1 reversed: '%s'\n
 Render command has y0 and y1 reversed: '%s'\n
+RenewalPeriod
+RenewalTimeUnit
 Repeated fields can't have default values.
 Request Major code %d
 Requested size is too large to fit into size_t.
 Required fields are not allowed in proto3.
+RequiresCachedPmtMethod
 Reserved numbers must be positive integers.
 Reserved range $0 to $1 overlaps with already-defined range $2 to $3.
 Reserved range end number must be greater than start number.
 ResourceID
 ResourceID 0x%x
+ResultDetail
 Romanian
 Row has too many bytes to allocate in memory
 RunCommand
@@ -2454,9 +2562,13 @@ STEAM_SCREEN_SCALE
 STEAM_TOUCH_CLICK_MODE
 STEAM_USE_DYNAMIC_VRS
 STRING
+SalesTerritoryCode
+SalesTerritoryCodeFromKey
+Sandbox
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
 Saving unknown chunk:
+ScheduledSendOnDate
 Scheme
 Scots
 Second
@@ -2468,8 +2580,12 @@ SecureRandomBytes
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
 SendSHMemFDToClient pid %d failed: %d %s\n
+SenderAddress
+SenderName
+Sentiment
 September
 Serbian
+SerialNumber
 SerializedSurface::DrawOutlinedCircle() not yet implemented\n
 SerializedSurface::DrawPolyLine() not yet implemented\n
 SerializedSurface::DrawTexturedLine() not yet implemented\n
@@ -2477,6 +2593,8 @@ SerializedSurface::DrawTexturedPolyLine() not yet implemented\n
 SerializedSurface::DrawTexturedPolygon() not yet implemented\n
 SerializedSurface::DrawTexturedSubRect() not yet implemented\n
 SerializedSurface::RestrictPaintToSinglePanel() not yet implemented\n
+ServerAddress
+ServerPassword
 ServiceDescriptorProto
 ServiceOptions
 Set Steam client UI language
@@ -2509,7 +2627,9 @@ SetTopLevelFocus
 SetUInt32
 SetUInt64
 ShellExecute
+Shipping
 Should not reach here.
+Signature
 Simplified_Chinese
 Sindhi
 Sinhala
@@ -2600,6 +2720,7 @@ St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
+State
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -2609,7 +2730,9 @@ SteamApp
 SteamBootstrapper_GetEUniverse
 SteamChina_SChinese
 SteamGameId=
+SteamID
 SteamRealPath
+SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 SteamStdLib::CCommandLineParam::~CCommandLineParam()
 SteamStdLib::CommandLine()
@@ -2670,6 +2793,7 @@ Tajik
 Tamil
 Tatar
 Telugu
+TerritoryCode
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)\n
 Thai
 The JSON camel-case name of field "
@@ -2694,6 +2818,13 @@ ThreadSleep
 Thursday
 Tick
 Tigrinya
+TimeAcked
+TimeCreated
+TimeExpiration
+TimeLastUpdated
+TimeNextProcess
+TimeRedeemed
+TimeSent
 Tokens
 Too many IDATs found
 Too many arguments. %d arguments at most.
@@ -2703,7 +2834,12 @@ Too many vgui panels, busiest parent %s/%s\n
 Too much image data
 TopLeft
 TopRight
+Total
+TotalDiscount
 Traditional_Chinese
+TransID
+TransactionID
+TransactionTime
 Tried to merge messages of different types 
 Tried to register a non-generated type with the generated type registry.
 True
@@ -2757,6 +2893,7 @@ Unrecognized unit type for pHYs chunk
 Unsupported
 Unsupported: type mismatch
 UpdateMouseFocus()
+UpdateTime
 Urdu
 UserConfigData
 Uyghur
@@ -2892,6 +3029,8 @@ WM_PROTOCOLS
 WM_STATE
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+WalletAmt
+WalletCur
 Warning
 Warning parsing text-format 
 Warning: %s: lsof is required to run steam and it may not be available - please install
@@ -3059,6 +3198,7 @@ XlibMessage
 XsBI
 XwcLookupString
 XwcTextListToTextProperty
+YQH]F
 YYYY
 YbZ6[
 YearOrMore
@@ -3334,6 +3474,7 @@ accessor_ == other.accessor_
 active
 additional_includes
 additive
+addressinfo
 aesni_cbc_encrypt
 aesni_ccm64_decrypt_blocks
 aesni_ccm64_encrypt_blocks
@@ -3364,6 +3505,11 @@ alpha
 alphasort64
 alse
 amharic
+amount
+amt.GetCurrencyCode() == GetCurrency()
+amtInitial.GetCurrencyCode() == GetCurrency()
+amtRecurring.GetCurrencyCode() == GetCurrency()
+amtrecurring
 antialias
 ar_AE
 arabic
@@ -3481,6 +3627,7 @@ can't convert uint64 to int32 (data loss)
 can't convert uint64 to int64 (data loss)
 can't reach here.
 cannot create std::vector larger than max_size()
+cardinfo
 catalan
 cbActual < (uint32)nBufSizeWithTerminator
 cbToRead <= 1024 * 1024 * 1024
@@ -3576,6 +3723,7 @@ delete[]
 delta
 desc.maxCodePoint >= 0 && FcCharSetHasChar(diffSet, desc.maxCodePoint) && (desc.maxCodePoint == curChar + 0xff || !FcCharSetHasChar(diffSet, desc.maxCodePoint + 1))
 desc.minCodePoint >= 0 && FcCharSetHasChar(diffSet, desc.minCodePoint) && (desc.minCodePoint == curChar || !FcCharSetHasChar(diffSet, desc.minCodePoint - 1))
+description
 descs.Count() >= 1
 desktop
 dgettext
@@ -3603,6 +3751,8 @@ duplicate
 duplicate sRGB information ignored
 dutch
 dynamic_cast
+eCurrencyCode
+eCurrencyCodeDelayed
 eEKEY_E
 eXIf
 echo "%s" | sudo -n tee "%s"
@@ -3628,11 +3778,13 @@ ecp_nistz256_to_mont
 el_GR
 elem + num <= Count()
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
+en-US
 en_US
 encrypted_contents
 encrypted_font_files
 end-down
 end-right
+enddate
 endmntent
 english
 enum
@@ -3719,12 +3871,14 @@ fork
 fprintf
 fputc
 fputs
+fr-FR
 fr_FR
 fread
 free
 freeaddrinfo
 french
 freopen
+frequency
 frexp
 fscanf
 fscanf disk-free output failed\n
@@ -3762,6 +3916,7 @@ ga-alpha color-map: too few entries
 gai_strerror
 galician
 galileo
+gameitemid
 gameoverlayrenderer.so
 gamma table being rebuilt
 gamma value
@@ -4117,12 +4272,16 @@ ioctl
 irish
 is_large()
 isalnum
+isbundle
+isinbundle
 isspace
+istypegame
 iswcntrl
 iswspace
 it_IT
 italian
 italic
+items
 jJKEY_J
 ja_JP
 japanese
@@ -4205,6 +4364,7 @@ libsteam.so
 libtier0_s.so
 libunity.so.9
 libvstdlib_s.so
+lineitems
 link
 listen
 lithuanian
@@ -4318,6 +4478,7 @@ m_memNodes
 m_nAllocationCount >= 0
 m_p == NULL
 m_pData
+m_pKeyValues
 m_pMemory
 m_pParent == this
 m_pPlatformModuleData
@@ -4426,6 +4587,8 @@ mprotect
 msync
 munmap
 mwa!
+nAmount
+nAmountDelayed
 nBytes
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nDay < 32
@@ -4522,6 +4685,7 @@ pWatcher != NULL
 package
 package $0;\n\n
 package_version
+packages
 packed
 padding
 padding-bottom
@@ -4548,6 +4712,7 @@ pchEncodedData
 pchRegPath
 pclose
 pcubDecodedData
+period
 persian
 php_class_prefix
 php_generic_services
@@ -4626,6 +4791,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pt-BR
 pt-br
 pt_BR
 pt_PT
@@ -4656,6 +4822,7 @@ qQKEY_Q
 qR5FE%
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
 qsort
+quantity
 quechua
 rRKEY_R
 read
@@ -4819,6 +4986,7 @@ src!=NULL
 sscanf
 stackLevel >= 0 && stackLevel < m_errorIndex
 start
+startdate
 state
 statfs
 statfs64
@@ -4849,6 +5017,7 @@ stdin
 stdout
 steam.desktop
 steam/games/PlatformMenu.vdf
+steamRealm
 steamclient.so
 steamconsole.so
 steamdeck-hwmon

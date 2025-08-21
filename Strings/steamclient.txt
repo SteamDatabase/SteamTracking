@@ -769,7 +769,6 @@
 ""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
-""\n CSteamOSManager_GetState_Request"I\n!CSteamOSManager_GetState_Response
 ""\n SiteServerUI_CancelLogin_Request"O\n!SiteServerUI_CancelLogin_Response
 ""\n SiteServerUI_GetLanguage_Request"5\n!SiteServerUI_GetLanguage_Response
 ""\n SiteServerUI_LoginStatus_Request"}\n!SiteServerUI_LoginStatus_Response
@@ -2453,6 +2452,7 @@ $steammessages_parental_objects.proto"
 %s/appcache/sdr_config.txt
 %s/appworkshop_%u.acf
 %s/audio.foz
+%s/cloudstorage
 %s/config
 %s/config_%u_%s.vdf
 %s/content/%u
@@ -3697,6 +3697,7 @@ $steammessages_parental_objects.proto"
 (\r:\n4294967295
 (\t""\n CParental_ValidateToken_Response"g\n"CParental_ValidatePassword_Request
 (\t""\n CPlayer_SetProfileTheme_Response"Y\n%CPlayer_SetProfilePreferences_Request
+(\t""\n CSteamOSManager_GetState_Request"I\n!CSteamOSManager_GetState_Response
 (\t"#\n!CChatRoom_RenameChatRoom_Response"g\n!CChatRoom_ReorderChatRoom_Request
 (\t"#\n!SiteServerUI_SetLanguage_Response"#\n!SiteServerUI_ClientStatus_Request"
 (\t"#\n\rCDebugDumpMsg
@@ -6631,6 +6632,7 @@ $steammessages_parental_objects.proto"
 .google.protobuf.ServiceOptions"
 .google.protobuf.SourceCodeInfo
 .include
+.json
 .lbN
 .log
 .m4a
@@ -6838,7 +6840,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/clientlinkfilter.cpp
 /data/src/clientdll/clientlinkfilter.h
 /data/src/clientdll/clientnetworkingapi.cpp
-/data/src/clientdll/clientnetworkingapi.cpp:2838
+/data/src/clientdll/clientnetworkingapi.cpp:2841
 /data/src/clientdll/clientparties.cpp
 /data/src/clientdll/clientservicemethodlist.cpp
 /data/src/clientdll/clientsharedconnection.cpp
@@ -6929,7 +6931,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/subscribedfilelistcache.cpp
 /data/src/clientdll/subscribedfilemanager.cpp
 /data/src/clientdll/systemaudiomanager_linux.cpp
-/data/src/clientdll/systemdisplaymanager.cpp:133
+/data/src/clientdll/systemdisplaymanager.cpp:134
 /data/src/clientdll/systemdisplaymanager_wayland.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp:337
@@ -9313,6 +9315,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI26CMsgClientUCMAddScreenshotE
 12CProtoBufMsgI26CMsgClientUFSGetUGCDetailsE
 12CProtoBufMsgI26CMsgClientWalletInfoUpdateE
+12CProtoBufMsgI26CMsgGameServerPolicyUpdateE
 12CProtoBufMsgI26CMsgRemoteClientAcceptEULAE
 12CProtoBufMsgI26SiteServerUI_Login_RequestE
 12CProtoBufMsgI26SiteServerUI_Quit_ResponseE
@@ -11962,6 +11965,7 @@ $steammessages_parental_objects.proto"
 26CMsgClientWalletInfoUpdate
 26CMsgControllerInputBinding
 26CMsgFileLoadDialogResponse
+26CMsgGameServerPolicyUpdate
 26CMsgLinkAtPositionResponse
 26CMsgNetworkDeviceIP4Config
 26CMsgNetworkDeviceIP6Config
@@ -12874,6 +12878,7 @@ $steammessages_parental_objects.proto"
 32CClientHTTPSaveResponseToDiskJob
 32CClientJobClientLogUploadRequest
 32CClientJobFormatRemovableStorage
+32CClientJobGameServerPolicyUpdate
 32CClientJobGetEmbeddedClientToken
 32CClientJobReportParentalPlaytime
 32CClientJobStartPeerContentServer
@@ -15595,6 +15600,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hx/]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -18263,6 +18269,7 @@ CClientJobFriendRemovedFromSource
 CClientJobFriendUserStatusPublished
 CClientJobGCMessageFailed
 CClientJobGCMessageReceived
+CClientJobGameServerPolicyUpdate
 CClientJobGatherRuntimeInformation: container steam-runtime-system-info output obtained in %d ms
 CClientJobGatherRuntimeInformation: mkstemp failed\n
 CClientJobGatherRuntimeInformation: read output failed\n
@@ -18668,6 +18675,7 @@ CDepotCDNInterface
 CDepotDownloadMgr
 CDepotDownloadMgr - get content cache info
 CDepotDownloadMgr::BYldRequestDepotChunks: same chunk requested twice for depot %u
+CDepotDownloadMgr::BYldRequestDepotManifest(App: %d, Depot: %d, Manifest: %llu, branch: %s): Failed to get manifest request code, '%s'
 CDepotDownloadMgr::BYldRequestDepotManifest: same manifest %llu requested twice
 CDepotDownloadMgr::BYldRequestDepotPatch: same patch %llu->%llu requested twice
 CDepotDownloadMgr::GetNextChunkForDownload: caller chunk indicies out of date
@@ -19646,6 +19654,7 @@ CMsgGameServerData
 CMsgGameServerOutOfDate
 CMsgGameServerPingQueryData
 CMsgGameServerPlayersQueryData
+CMsgGameServerPolicyUpdate
 CMsgGameServerRemove
 CMsgGameServerRulesQueryData
 CMsgGamescopeState
@@ -24127,7 +24136,6 @@ Failed to get list of missing chunks (no connection)
 Failed to get list of missing chunks (service timeout)
 Failed to get lock after waiting in %s\n
 Failed to get manifest for depot %u
-Failed to get manifest request Code for depot %d manifest %llu - %s (%d) - %s
 Failed to get missing chunks
 Failed to get public key for universe %s, encrypted connection setup failed\n
 Failed to get user encryption key, cannot encrypt or decrypt files!
@@ -27805,6 +27813,7 @@ LegacyKeyDiskLocation
 LegacyKeyProofOfPurchaseTicket
 LegacyKeyRegistrationMethod
 LegacyKeyRegistryLocation
+LegionGoS
 Length Required
 Lenovo
 Lenovo Legion Go Controller
@@ -33825,6 +33834,7 @@ SetAccountNameForCachedCredentialLogin
 SetAchievement
 SetActive
 SetActiveBeta
+SetAdditionalAppId
 SetAdditionalClientArgData
 SetAdminQuery
 SetAllocatedMessage
@@ -39702,7 +39712,6 @@ Zulu
 \n\fis_partnered
 \n\fis_publisher
 \n\fis_read_only
-\n\fis_steam_box
 \n\fis_temporary
 \n\fis_uploading
 \n\fitem_assetid
@@ -39897,6 +39906,7 @@ Zulu
 \n\naccountids
 \n\nadapter_id
 \n\napp_branch
+\n\napp_id_aux
 \n\napp_played
 \n\nappid_list
 \n\nauth_token
@@ -40256,7 +40266,6 @@ Zulu
 \n\ripv6_and_port
 \n\ris_bot_review
 \n\ris_only_delta
-\n\ris_steam_deck
 \n\ris_subscribed
 \n\ris_system_key
 \n\ris_unmounting
@@ -41759,6 +41768,7 @@ app_denied_tokens
 app_dlc_status
 app_force_preload
 app_id
+app_id_secondary
 app_ids
 app_info_find
 app_info_http_min
@@ -43671,7 +43681,6 @@ context not dane enabled
 context not initialised
 context.m_vecStack.Count() <= 1
 continue
-continuing without it
 control command failed
 control=mangohud\n
 controller
@@ -45198,6 +45207,7 @@ empty srtp protection profile list
 empty_binding
 empty_sub_command
 emsg=%d
+en-US
 en_US
 en_us
 enable
@@ -45588,7 +45598,6 @@ failed to set pool
 failed to swap context
 failed_connect_challenges
 failed_relay_routing_token
-failing download
 failure
 failure_reason_code
 failure_strings
@@ -45887,6 +45896,7 @@ fps_only\n
 fputc
 fputs
 fqi\tH
+fr-FR
 fr_FR
 fragmented client hello
 frame->hd.type == NGHTTP2_HEADERS
@@ -46430,7 +46440,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen6
 ghjkl
 gidlist
 gidparentcomment
@@ -48178,6 +48188,8 @@ is_service_available
 is_shared_file
 is_site_license_lock
 is_status_led_control_available
+is_steam_box_deprecated
+is_steam_deck_deprecated
 is_steamchina_account
 is_steamguard_enabled
 is_steamvr_device
@@ -48185,7 +48197,7 @@ is_store_whitelisted
 is_tdp_limit_available
 is_tdp_limit_enabled
 is_tearing_enabled
-is_tesla
+is_tesla_deprecated
 is_trim_running
 is_trim_supported
 is_twofactor_enabled
@@ -49677,6 +49689,7 @@ k_EMsgGSStatusReply
 k_EMsgGSStatusUpdate_Unused
 k_EMsgGSUserPlaying
 k_EMsgGameServerOutOfDate
+k_EMsgGameServerPolicyUpdate
 k_EMsgGenericReply
 k_EMsgGetUserIPCountry
 k_EMsgGetUserIPCountryResponse
@@ -50873,9 +50886,9 @@ low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:637
 low-pri yield - /data/src/clientdll/autocloud.cpp:812
 low-pri yield - /data/src/clientdll/autocloud.cpp:902
-low-pri yield - /data/src/clientdll/clientjob.cpp:423
-low-pri yield - /data/src/clientdll/clientjob.cpp:454
-low-pri yield - /data/src/clientdll/clientjob.cpp:763
+low-pri yield - /data/src/clientdll/clientjob.cpp:435
+low-pri yield - /data/src/clientdll/clientjob.cpp:466
+low-pri yield - /data/src/clientdll/clientjob.cpp:775
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2557
@@ -53229,6 +53242,7 @@ matches >= 0
 matchid
 matching_file_type
 matching_members
+matchmaking_aux_appid
 matchmaking_dontwaitforping
 matchmaking_pingonstart
 matchmaking_uptodate
@@ -55704,7 +55718,6 @@ platform override cache: ignore bad entry %u "%s" "%s"
 platform_access
 platform_linux
 platform_overrides
-platform_performance_profile
 platform_windows
 platforms
 platforms_to_sync
@@ -56087,6 +56100,7 @@ pszCode[3] == '\0' || pszCode[4] == '\0'
 pszFmt && *pszFmt
 pszThreadName != NULL
 pszVal && *pszVal
+pt-BR
 pt-br
 pt_BR
 pt_PT
@@ -57077,6 +57091,8 @@ score
 scoring_penalty_relay_cluster
 scots
 scout runtime container
+screen_reader_locale_default
+screen_reader_locales_available
 screenshot_full
 screenshot_handle
 screenshot_medium
@@ -58153,7 +58169,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 15 2025 20:25:17
+steam Aug 20 2025 20:57:16
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -555,7 +555,6 @@ enum EGamingDeviceType
 	k_EGamingDeviceType_Console = 256;
 	k_EGamingDeviceType_PS3 = 272;
 	k_EGamingDeviceType_Steambox = 288;
-	k_EGamingDeviceType_Tesla = 320;
 	k_EGamingDeviceType_Handheld = 512;
 	k_EGamingDeviceType_Phone = 528;
 	k_EGamingDeviceType_SteamDeck = 544;

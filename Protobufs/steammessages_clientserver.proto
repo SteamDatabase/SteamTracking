@@ -28,6 +28,7 @@ message CMsgClientP2PConnectionInfo {
 	optional bytes candidate = 4;
 	optional fixed64 legacy_connection_id_src = 5;
 	optional bytes rendezvous = 6;
+	optional uint32 app_id_secondary = 7;
 }
 
 message CMsgClientP2PConnectionFailInfo {
@@ -156,6 +157,11 @@ message CMsgClientAuthListAck {
 	repeated uint32 ticket_crc = 1;
 	repeated uint32 app_ids = 2;
 	optional uint32 message_sequence = 3;
+}
+
+message CMsgGameServerPolicyUpdate {
+	optional uint32 app_id = 1;
+	optional uint32 app_id_aux = 2;
 }
 
 message CMsgClientLicenseList {

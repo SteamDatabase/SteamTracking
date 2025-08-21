@@ -5974,6 +5974,7 @@ elem + num <= Count()
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elementtagname
 emphasis
+en-US
 en_US
 enable_audio_streaming
 enable_audio_uncompressed
@@ -6102,6 +6103,7 @@ foxsports.com
 fprintf
 fputc
 fputs
+fr-FR
 fr_FR
 frame_brGrip
 frame_captiongrip
@@ -7619,6 +7621,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pt-BR
 pt-br
 pt_BR
 pt_PT

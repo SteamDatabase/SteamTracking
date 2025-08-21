@@ -74,7 +74,6 @@ message CMsgClientLogon {
 	optional string machine_name = 96;
 	optional string machine_name_userchosen = 97;
 	optional string country_override = 98;
-	optional bool is_steam_box = 99;
 	optional uint64 client_instance_id = 100;
 	optional string two_factor_code = 101;
 	optional bool supports_rate_limit_response = 102;
@@ -82,10 +81,12 @@ message CMsgClientLogon {
 	optional int32 priority_reason = 104;
 	optional .CMsgClientSecret embedded_client_secret = 105;
 	optional bool disable_partner_autogrants = 106;
-	optional bool is_steam_deck = 107;
 	optional string access_token = 108;
 	optional bool is_chrome_os = 109;
-	optional bool is_tesla = 110;
+	optional bool is_steam_box_deprecated = 99;
+	optional bool is_steam_deck_deprecated = 107;
+	optional bool is_tesla_deprecated = 110;
+	optional uint32 gaming_device_type = 111;
 }
 
 message CMsgClientLogonResponse {

@@ -2395,8 +2395,8 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-20:25:03
-20:25:10
+20:57:05
+20:57:12
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -3239,7 +3239,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 15 2025
+Aug 20 2025
 August
 Aura
 AuthANY
@@ -6634,6 +6634,7 @@ Latvian
 Leaked KeyValues (%u):\n
 Leaked mem: %s %s\n
 Legacy Free Sub
+LegionGoS
 Length Required
 Libpng jmp_buf still allocated
 Library
@@ -8745,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 15 2025 20:25:10
+Startup - updater built Aug 20 2025 20:57:12
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -12555,6 +12556,7 @@ emit_string
 empty file structure
 empty srtp protection profile list
 emsg=%d
+en-US
 en_US
 en_US.UTF-8
 enable
@@ -12872,6 +12874,7 @@ fprintf
 fputc
 fputs
 fqi\tH
+fr-FR
 fr_FR
 fragmented client hello
 frame->hd.type == NGHTTP2_HEADERS
@@ -15060,6 +15063,7 @@ k_EMsgGSStatusReply
 k_EMsgGSStatusUpdate_Unused
 k_EMsgGSUserPlaying
 k_EMsgGameServerOutOfDate
+k_EMsgGameServerPolicyUpdate
 k_EMsgGenericReply
 k_EMsgGetUserIPCountry
 k_EMsgGetUserIPCountryResponse
@@ -17207,6 +17211,7 @@ pstrNew == pszString
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 pszThreadName != NULL
+pt-BR
 pt-br
 pt_BR
 pt_PT

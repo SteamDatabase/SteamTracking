@@ -1005,7 +1005,7 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1vd
+(1vb
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -2209,7 +2209,7 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-20:25:03
+20:57:05
 20CAlignedYUV420Buffer
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
@@ -2268,7 +2268,6 @@ $ffn
 28IVideoRecordingSegmentWriter
 29CNetConnectionDestroyWorkItem
 29IHTTPStreamingResponseHandler
-2FVQ
 2GJH
 2Ht\l
 2T26
@@ -3118,7 +3117,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 15 2025
+Aug 20 2025
 August
 Aura
 AuthANY
@@ -6499,6 +6498,7 @@ Latvian
 Leaked KeyValues (%u):\n
 Leaked mem: %s %s\n
 Legacy Free Sub
+LegionGoS
 Length Required
 Library
 License Imported From Steam2
@@ -12576,6 +12576,7 @@ emit_string
 empty file structure
 empty srtp protection profile list
 emsg=%d
+en-US
 en_US
 enabled_logs
 enc_data
@@ -12873,6 +12874,7 @@ fprintf
 fputc
 fputs
 fqi\tH
+fr-FR
 fr_FR
 frag_duration
 fragmented client hello
@@ -14969,6 +14971,7 @@ k_EMsgGSStatusReply
 k_EMsgGSStatusUpdate_Unused
 k_EMsgGSUserPlaying
 k_EMsgGameServerOutOfDate
+k_EMsgGameServerPolicyUpdate
 k_EMsgGenericReply
 k_EMsgGetUserIPCountry
 k_EMsgGetUserIPCountryResponse
@@ -17212,6 +17215,7 @@ pstrNew == pszString
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 pszThreadName != NULL
+pt-BR
 pt-br
 pt_BR
 pt_PT

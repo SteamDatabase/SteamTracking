@@ -215,7 +215,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         const _ = 1,
           _ = 4,
@@ -510,7 +509,7 @@ var CLSTAMP = "steamdb";
               return "unknown";
           }
         }
-        var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+        var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
         !(function (_) {
           (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -606,26 +605,6 @@ var CLSTAMP = "steamdb";
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(_ || (_ = {})),
-          (function (_) {
-            (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-              "k_EGamingDeviceType_Unknown"),
-              (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-                "k_EGamingDeviceType_StandardPC"),
-              (_[(_.k_EGamingDeviceType_Console = 256)] =
-                "k_EGamingDeviceType_Console"),
-              (_[(_.k_EGamingDeviceType_PS3 = 272)] =
-                "k_EGamingDeviceType_PS3"),
-              (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-                "k_EGamingDeviceType_Steambox"),
-              (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-                "k_EGamingDeviceType_Tesla"),
-              (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-                "k_EGamingDeviceType_Handheld"),
-              (_[(_.k_EGamingDeviceType_Phone = 528)] =
-                "k_EGamingDeviceType_Phone"),
-              (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-                "k_EGamingDeviceType_SteamDeck");
           })(_ || (_ = {})),
           (function (_) {
             (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -8242,11 +8221,6 @@ var CLSTAMP = "steamdb";
                       _: _._.readString,
                       _: _._.writeString,
                     },
-                    is_steam_box: {
-                      _: 99,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
                     client_instance_id: {
                       _: 100,
                       _: _._.readUint64String,
@@ -8281,11 +8255,6 @@ var CLSTAMP = "steamdb";
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
-                    is_steam_deck: {
-                      _: 107,
-                      _: _._.readBool,
-                      _: _._.writeBool,
-                    },
                     access_token: {
                       _: 108,
                       _: _._.readString,
@@ -8296,10 +8265,25 @@ var CLSTAMP = "steamdb";
                       _: _._.readBool,
                       _: _._.writeBool,
                     },
-                    is_tesla: {
+                    is_steam_box_deprecated: {
+                      _: 99,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    is_steam_deck_deprecated: {
+                      _: 107,
+                      _: _._.readBool,
+                      _: _._.writeBool,
+                    },
+                    is_tesla_deprecated: {
                       _: 110,
                       _: _._.readBool,
                       _: _._.writeBool,
+                    },
+                    gaming_device_type: {
+                      _: 111,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),
@@ -8731,6 +8715,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__._(_),
           _ = __webpack_require__("chunkid");
         __webpack_require__("chunkid");
+        _.Message;
         _.Message;
         _.Message;
         _.Message;
@@ -12579,9 +12564,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 15 2025 : 13:56:21",
-                BUILD_TIME_UTC: "Aug 15 2025 : 20:56:21",
-                BUILD_RTIME_UTC: 1755291381,
+                BUILD_TIME_LOCAL: "Aug 20 2025 : 14:00:54",
+                BUILD_TIME_UTC: "Aug 20 2025 : 21:00:54",
+                BUILD_RTIME_UTC: 1755723654,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -26879,9 +26864,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 15 2025 : 13:56:21",
-                    BUILD_TIME_UTC: "Aug 15 2025 : 20:56:21",
-                    BUILD_RTIME_UTC: 1755291381,
+                    BUILD_TIME_LOCAL: "Aug 20 2025 : 14:00:54",
+                    BUILD_TIME_UTC: "Aug 20 2025 : 21:00:54",
+                    BUILD_RTIME_UTC: 1755723654,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27551,7 +27536,7 @@ var CLSTAMP = "steamdb";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
         3366: "e918a13ca146f6e8dec5",
-        3569: "41ea8a3518a0e28446b8",
+        3569: "befa6a3141e83cd215d2",
         3583: "f831ab7edbd9ffa591ac",
         3594: "8cd7c1d152a632ee7a02",
         3714: "ab7010eec823473536d8",
@@ -27629,7 +27614,7 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "4227195013dca7877907",
+        9858: "7770a29400f71ebc6d00",
         9869: "f100b512c375f3f33d22",
         9887: "b3e18a3b56733822ec70",
       }[_]),

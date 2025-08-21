@@ -2675,6 +2675,7 @@ Laser
 Latam_Spanish
 Latvian
 Legacy Free Sub
+LegionGoS
 Length Required
 Library
 License Imported From Steam2
@@ -3864,7 +3865,6 @@ Yapi Kredi
 YooMoney
 Yoruba
 You must refund this transaction to wallet
-Y|qQWg
 Z-google.golang.org/protobuf/types/descriptorpb
 Ziraat Bank
 Zong
@@ -4537,6 +4537,7 @@ edit_state_flags
 el_GR
 elementtagname
 embedded_unknown
+en-US
 en_US
 enables CEF usage of the Chromium keyring
 enables Chromium remote debugging, defaulting to localhost:8080
@@ -4629,6 +4630,7 @@ force_direct_hwnd_popups
 forever
 fputc
 fputs
+fr-FR
 fr_FR
 franchise
 fread
@@ -5474,6 +5476,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pt-BR
 pt-br
 pt_BR
 pt_PT
@@ -5546,7 +5549,6 @@ root
 routes
 ru_RU
 russian
-sGHt
 samesite
 sc_schinese
 scale
