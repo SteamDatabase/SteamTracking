@@ -180,20 +180,21 @@
     },
     chunkid: (module) => {
       module.exports = {
+        storeMenuResponsiveModeWidth: "730px",
         TopDestinations: "_1vOm3pf-0J2OtSr27xPgBP",
         BrowseLinkSection: "_3DYXcTryqomaHXCoQolTr_",
         BrowseContentGrid: "_3b26-ybbQJNqGukiWkIUp8",
+        BrowseLinkGridLarge: "JWPtoi9esADBpUUkODq1z",
+        BrowseLinkGridSmall: "_2SVHFh60yRjQbYRg6t2mcK",
+        BrowseLinkColumn: "_2IqRL8KcprlBPhrtT1Y8bL",
         BrowseLinkGrid: "-bDCBiZsIWB-_6IzGxbhz",
         BrowseLinkButton: "_15eaL848WovXjJ0POHaD9D",
         Label: "_3W0fAmrZB7mfUJZ8QRpquy",
         ButtonLabel: "_3JmGSFfarJIfLqzni43JFQ",
         SubLabel: "_15LI4ya5Dm0JI0f0GAMvaW",
-        BrowseLinkGridSmall: "_2SVHFh60yRjQbYRg6t2mcK",
-        BrowseLinkGridLarge: "JWPtoi9esADBpUUkODq1z",
         CapsuleGrid: "_2lLDOXJibKONAZT_v5JYdM",
         CapsuleRow: "fYUHRTrzGItaGhMLuUZ3W",
         BrowseButtonGrid: "Jj8HIlIT-yPI1DfChaARk",
-        BrowseLinkColumn: "_2IqRL8KcprlBPhrtT1Y8bL",
       };
     },
     chunkid: (module) => {
@@ -36005,6 +36006,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -36852,35 +36855,44 @@
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = (0, _._)(),
-          { storeBrowseContext: _, cacheStoreItemData: _ } = (0, _._)();
+          _ = (0, _._)(),
+          _ = (0, _._)();
         return (0, _._)(
-          (function (_, _, _, _) {
-            const { storeBrowseContext: _, cacheStoreItemData: _ } = _;
-            return {
-              ..._(
-                _,
-                _,
-                {
-                  rgAdditionalRecommendationIDs: _ ?? [],
-                },
-                _ && {
-                  data_request: _,
-                  cacheStoreItemData: _,
-                },
-              ),
-              enabled: _._.logged_in,
-              select: (_) =>
-                (_.purchase_recommendations || []).map((_) => _.item_id),
-            };
-          })(
-            _,
-            {
+          (function (_, _, _, _, _) {
+            const {
               storeBrowseContext: _,
+              dataLoader: _,
               cacheStoreItemData: _,
-            },
-            _,
-            _,
-          ),
+            } = _;
+            return {
+              queryKey: ["PackagePurchaseRecommendations", _],
+              queryFn: async () => {
+                const _ = await _.fetchQuery(
+                    _(
+                      _,
+                      _,
+                      {
+                        rgAdditionalRecommendationIDs: _ ?? [],
+                      },
+                      _ && {
+                        data_request: _,
+                        cacheStoreItemData: _,
+                      },
+                    ),
+                  ),
+                  _ = (_?.purchase_recommendations || []).map((_) => _.item_id),
+                  _ = await Promise.all(
+                    _.map((_) => _.fetchQuery((0, _._)(_, _))),
+                  );
+                return _.filter((_, _) => {
+                  const _ = _[_];
+                  return !_?.already_owned && !_?.ignored;
+                });
+              },
+              enabled: _._.logged_in,
+              staleTime: 6e5,
+            };
+          })(_, _, _, _, _),
         );
       }
       function _(_, _, __webpack_require__ = !0) {
@@ -77257,7 +77269,7 @@
             (_ -= _[_]), _.push(_[_][0]);
           if (_.length < _.length - 1) {
             for (; _.length && _ < _; ) (_ += _[_.length - 1]), _.pop();
-            _.push(_[_.length - 1][0]);
+            1 == _.length && _.splice(0, _.length), _.push(_[_.length - 1][0]);
           }
           _(new Set(_));
         }, [_, _, _, _, _]),
@@ -77267,7 +77279,7 @@
               _.current = _.current[_].current;
             } else _.current = null;
           }, [__webpack_require__, _, _]);
-        const _ = (_, _) => {
+        const _ = (_, _, _) => {
             const [_, _] = _;
             if (_ && !_.has(_)) return null;
             const _ = __webpack_require__ === _;
@@ -77276,7 +77288,7 @@
               _.createElement(_, {
                 key: _,
                 section: _,
-                label: _,
+                label: _ ?? _,
                 openPopover: _,
                 active: __webpack_require__ === _,
                 previousActive: _,
@@ -77285,6 +77297,7 @@
               })
             );
           },
+          _ = _ && 1 == _.size ? _("#Menu_Popover_Menu") : void 0,
           _ = _[_.length - 1];
         return _.createElement(
           "div",
@@ -77302,9 +77315,9 @@
               {
                 className: _.DynamicMenuButtons,
               },
-              _.slice(0, -1).map(_),
+              _.slice(0, -1).map((_, _) => _(_, _)),
             ),
-            _(_, _.length - 1),
+            _(_, _.length - 1, _),
           ),
           _,
         );

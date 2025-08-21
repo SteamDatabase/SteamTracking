@@ -3492,6 +3492,7 @@ p.outliers_options {
 .outlier_totals {
 	font-size: 13px;
 	display: flex;
+	flex: 1;
 	gap: 20px;
 }
 .outlier_disclaimer {
@@ -3512,6 +3513,7 @@ p.outliers_options {
 }
 .review_language_outliers .explanation {
 	margin-left: 10px;
+	display: flex;
 	flex: 1;
 }
 .review_language_outliers > div {

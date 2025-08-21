@@ -42,6 +42,7 @@
 	"Menu_Popover_SpecialSections": "Special Sections",
 	"Menu_Popover_ViewAll": "View All",
 	"Menu_Popover_More": "More",
+	"Menu_Popover_Menu": "Menu",
 	"Menu_Section_Browse_RecentlyViewed": "Recently viewed",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Pick up where you left off",
 	"Menu_Section_Browse_Recommended": "Recommended for you",

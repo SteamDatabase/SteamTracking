@@ -1,9 +1,9 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -15,31 +15,27 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -60,6 +56,7 @@ import {
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -101,11 +98,14 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -6642,17 +6642,17 @@ var _ = _(_(), 1),
   _ = _(_(), 1);
 var _ = "b-HJJEhQMU8-";
 var _ = "mI7yDdWRs7s-";
+var _ = "bz3JO4um03s-";
+var _ = "_5ugSucgZfms-";
+var _ = "-vs6zKlfDOQ-";
 var _ = "lXuAiu-iXVg-";
 var _ = "NNdAu3V92ks-";
 var _ = "ZB189Gu3K08-";
 var _ = "AEA4GfrWyfA-";
 var _ = "_9zveWEWUE7E-";
-var _ = "_5ugSucgZfms-";
-var _ = "bz3JO4um03s-";
 var _ = "VpezFJtD5Jk-";
 var _ = "P-RpS3TL4ck-";
 var _ = "_3tjjTZcUesk-";
-var _ = "-vs6zKlfDOQ-";
 var _ = "zMIGQslm-QQ-";
 var _ = "cewzj0KMkus-";
 var _ = "_3nkzqYA4FK4-";
@@ -7346,35 +7346,40 @@ function _(_) {
 var _ = _(_(), 1);
 function _(_, _) {
   let _ = _(),
-    { storeBrowseContext: _, cacheStoreItemData: _ } = _();
-  return _(
-    _(
-      _,
-      {
-        storeBrowseContext: _,
-        cacheStoreItemData: _,
-      },
-      _,
-      _,
-    ),
-  );
+    _ = _(),
+    _ = _();
+  return _(_(_, _, _, _, _));
 }
-function _(_, _, _, _) {
-  let { storeBrowseContext: _, cacheStoreItemData: _ } = _;
+function _(_, _, _, _, _) {
+  let { storeBrowseContext: _, dataLoader: _, cacheStoreItemData: _ } = _;
   return {
-    ..._(
-      _,
-      _,
-      {
-        rgAdditionalRecommendationIDs: _ ?? [],
-      },
-      _ && {
-        data_request: _,
-        cacheStoreItemData: _,
-      },
-    ),
+    queryKey: ["PackagePurchaseRecommendations", _],
+    queryFn: async () => {
+      let _ = (
+          (
+            await _.fetchQuery(
+              _(
+                _,
+                _,
+                {
+                  rgAdditionalRecommendationIDs: _ ?? [],
+                },
+                _ && {
+                  data_request: _,
+                  cacheStoreItemData: _,
+                },
+              ),
+            )
+          )?.purchase_recommendations || []
+        ).map((_) => _.item_id),
+        _ = await Promise.all(_.map((_) => _.fetchQuery(_(_, _))));
+      return _.filter((_, _) => {
+        let _ = _[_];
+        return !(_?.already_owned || _?.ignored);
+      });
+    },
     enabled: _.logged_in,
-    select: (_) => (_.purchase_recommendations || []).map((_) => _.item_id),
+    staleTime: 600 * 1e3,
   };
 }
 function _(_, _, _, _) {
@@ -8909,7 +8914,7 @@ function _(_) {
     for (let _ = 0; _ < _.length && _[_] < _; _++) (_ -= _[_]), _.push(_[_][0]);
     if (_.length < _.length - 1) {
       for (; _.length && _ < _; ) (_ += _[_.length - 1]), _.pop();
-      _.push(_[_.length - 1][0]);
+      _.length == 1 && _.splice(0, _.length), _.push(_[_.length - 1][0]);
     }
     _(new Set(_));
   }, [_, _, _, _, _]),
@@ -8920,7 +8925,7 @@ function _(_) {
       } else _.current = null;
     }, [_, _, _]);
   let _,
-    _ = (_, _) => {
+    _ = (_, _, _) => {
       let [_, _] = _;
       if (_ && !_.has(_)) return null;
       let _ = _ === _;
@@ -8930,7 +8935,7 @@ function _(_) {
           _,
           {
             section: _,
-            label: _,
+            label: _ ?? _,
             openPopover: _,
             active: _ === _,
             previousActive: _,
@@ -8941,6 +8946,7 @@ function _(_) {
         )
       );
     },
+    _ = _ && _.size == 1 ? _("#Menu_Popover_Menu") : void 0,
     _ = _[_.length - 1];
   return (0, _.jsxs)("div", {
     className: _,
@@ -8951,9 +8957,9 @@ function _(_) {
         children: [
           (0, _.jsx)("div", {
             className: _,
-            children: _.slice(0, -1).map(_),
+            children: _.slice(0, -1).map((_, _) => _(_, _)),
           }),
-          _(_, _.length - 1),
+          _(_, _.length - 1, _),
         ],
       }),
       _,

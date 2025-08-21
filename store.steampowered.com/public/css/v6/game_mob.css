@@ -354,6 +354,17 @@
 	html.responsive .review_recent_events.has_events .review_anomalous_events_des {
 		font-size: 14px;
 	}
+	html.responsive .review_language_outliers {
+		display: flex;
+	}
+	html.responsive .review_language_outliers .explanation .outlier_totals {
+		display: flex;
+		flex-direction: column;
+		gap: 0px;
+	}
+	html.responsive .review_language_outliers .explanation {
+		flex-direction: column;
+	}
 
 	/* section headers */
 	html.responsive .responsive_apppage_reviewblock .block_title,
@@ -897,6 +908,9 @@
 	html.responsive .review_score_summaries {
 		display: none;
 	}
+	html.responsive body.v6 h2.user_reviews_header .header_links > span {
+		justify-content: flex-start;
+	}
 	html.responsive .review_language_outliers {
 		max-width: 100%;
 	}
@@ -905,6 +919,7 @@
 	}
 	html.responsive body.v6 h2.user_reviews_header {
 		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	/* remove horizontal borders */
