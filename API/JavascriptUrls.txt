@@ -258,6 +258,7 @@ ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/appfilters/${}
 ${COMMUNITY_BASE_URL}market/listings/${app_id}/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
+${COMMUNITY_BASE_URL}market/steamitemfiltersicon/${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
 ${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${}
 ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage

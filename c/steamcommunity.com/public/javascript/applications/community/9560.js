@@ -1385,7 +1385,6 @@
           return _.createElement(
             _,
             {
-              ref: _,
               ...__webpack_require__,
               variant: _,
               size: _,
@@ -1394,6 +1393,7 @@
               cursor: "text",
             },
             _.createElement(_, {
+              ref: _,
               ..._,
             }),
           );
@@ -2161,6 +2161,50 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            refPopover: _,
+            inputValue: __webpack_require__,
+            onInputChange: _,
+            activeIndex: _,
+            popoverPlacement: _,
+            setActiveIndex: _,
+            setOpen: _,
+            filterPlaceholder: _,
+            onIndexSelected: _,
+          } = _("<Combobox.Options>"),
+          _ = (_) => {
+            "Enter" === _.key &&
+              null !== _ &&
+              (_(_), _(null), _(!1), _.preventDefault(), _.stopPropagation());
+          },
+          _ = _.startsWith("top");
+        return _.createElement(
+          _.Positioner,
+          {
+            ref: _,
+          },
+          _ && _.children,
+          _.createElement(_, {
+            margin: "3",
+            variant: "inset",
+            radius: "sm",
+            value: __webpack_require__,
+            onTextChange: _,
+            onKeyDown: _,
+            onKeyDownCapture: _,
+            placeholder: _,
+            ref: (_) => {
+              _ &&
+                _.focus({
+                  preventScroll: !0,
+                });
+            },
+          }),
+          !_ && _.children,
+        );
+      }
       function _(_) {
         const { value: _, children: __webpack_require__ } = _,
           { onSelectionChange: _ } = _("<ComboboxTrigger>");
@@ -2310,42 +2354,53 @@
           );
         },
         Option: _,
-        Options: function (_) {
+        Options: _,
+        VirtualizedOptions: function (_) {
           const {
-              refPopover: _,
-              inputValue: __webpack_require__,
-              onInputChange: _,
-              activeIndex: _,
-              popoverPlacement: _,
-              setActiveIndex: _,
-              setOpen: _,
-              filterPlaceholder: _,
-              onIndexSelected: _,
-            } = _("<Combobox.Options>"),
-            _ = (_) => {
-              "Enter" === _.key &&
-                null !== _ &&
-                (_(_), _(null), _(!1), _.preventDefault(), _.stopPropagation());
-            },
-            _ = _.startsWith("top");
+              items: _,
+              renderItem: __webpack_require__,
+              overscan: _ = 5,
+              ..._
+            } = _,
+            { bOpen: _, refPopover: _ } = _("<ComboboxVirtualizedOptions>"),
+            _ = (0, _._)({
+              count: _ && _.current ? _.length : 0,
+              getScrollElement: () => _.current,
+              enabled: _,
+              ..._,
+            });
           return _.createElement(
-            _.Positioner,
+            _,
+            null,
+            _.createElement(
+              _._,
+              {
+                height: `${_.getTotalSize()}px`,
+                position: "relative",
+                width: "100%",
+              },
+              _.getVirtualItems().map((_) =>
+                __webpack_require__(_[_.index], _),
+              ),
+            ),
+          );
+        },
+        VirtualizedOption: function (_) {
+          const { virtualItem: _, ...__webpack_require__ } = _;
+          return _.createElement(
+            _._,
             {
-              ref: _,
+              position: "absolute",
+              width: "100%",
+              style: {
+                top: 0,
+                left: 0,
+                transform: `translateY(${_.start}px)`,
+              },
             },
-            _ && _.children,
             _.createElement(_, {
-              margin: "3",
-              variant: "inset",
-              radius: "sm",
-              value: __webpack_require__,
-              onTextChange: _,
-              onKeyDown: _,
-              onKeyDownCapture: _,
-              autoFocus: !0,
-              placeholder: _,
+              ...__webpack_require__,
             }),
-            !_ && _.children,
           );
         },
         Trigger: function (_) {
@@ -4092,92 +4147,28 @@
         };
       var _ = __webpack_require__("chunkid");
       const _ = [
-          {
-            type: "select",
-            label: {
-              facet: "Type",
-              tag: "CSGO_Type_Rifle",
-            },
-            img: _.Rifle,
-            options: [
-              {
-                label: "#AdvancedSearch_CustomFilter_All",
-                facet: "Type",
-                tag: "CSGO_Type_Rifle",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_aug",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_ak47",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_sg556",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_m4a1_silencer",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_galilar",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_famas",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_m4a1",
-              },
-            ],
-          },
-          {
-            type: "select",
-            label: {
-              facet: "Type",
-              tag: "CSGO_Type_SMG",
-            },
-            img: _.SMG,
-            options: [
-              {
-                label: "#AdvancedSearch_CustomFilter_All",
-                facet: "Type",
-                tag: "CSGO_Type_SMG",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_bizon",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_mac10",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_mp7",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_ump45",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_mp9",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_mp5sd",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_p90",
-              },
-            ],
-          },
+          "weapon_knife_push",
+          "weapon_knife_survival_bowie",
+          "weapon_knife_gypsy_jackknife",
+          "weapon_knife_falchion",
+          "weapon_knife_tactical",
+          "weapon_knife_gut",
+          "weapon_knife_kukri",
+          "weapon_knife_canis",
+          "weapon_knife_cord",
+          "weapon_knife_ursus",
+          "weapon_knife_flip",
+          "weapon_knife_outdoor",
+          "weapon_knife_css",
+          "weapon_knife_skeleton",
+          "weapon_knife_stiletto",
+          "weapon_knife_widowmaker",
+          "weapon_knife_butterfly",
+          "weapon_knife_m9_bayonet",
+          "weapon_knife_karambit",
+          "weapon_bayonet",
+        ],
+        _ = [
           {
             type: "select",
             label: {
@@ -4230,6 +4221,92 @@
               {
                 facet: "Weapon",
                 tag: "weapon_cz75a",
+              },
+            ],
+          },
+          {
+            type: "select",
+            label: {
+              facet: "Type",
+              tag: "CSGO_Type_SMG",
+            },
+            img: _.SMG,
+            options: [
+              {
+                label: "#AdvancedSearch_CustomFilter_All",
+                facet: "Type",
+                tag: "CSGO_Type_SMG",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_bizon",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_mac10",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_mp7",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_ump45",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_mp9",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_mp5sd",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_p90",
+              },
+            ],
+          },
+          {
+            type: "select",
+            label: {
+              facet: "Type",
+              tag: "CSGO_Type_Rifle",
+            },
+            img: _.Rifle,
+            options: [
+              {
+                label: "#AdvancedSearch_CustomFilter_All",
+                facet: "Type",
+                tag: "CSGO_Type_Rifle",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_aug",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_ak47",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_sg556",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_m4a1_silencer",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_galilar",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_famas",
+              },
+              {
+                facet: "Weapon",
+                tag: "weapon_m4a1",
               },
             ],
           },
@@ -4331,86 +4408,10 @@
                 facet: "Type",
                 tag: "CSGO_Type_Knife",
               },
-              {
+              ..._.map((_) => ({
                 facet: "Weapon",
-                tag: "weapon_knife_push",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_survival_bowie",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_gypsy_jackknife",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_falchion",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_tactical",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_gut",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_kukri",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_canis",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_cord",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_ursus",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_flip",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_outdoor",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_css",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_skeleton",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_stiletto",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_widowmaker",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_butterfly",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_m9_bayonet",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_knife_karambit",
-              },
-              {
-                facet: "Weapon",
-                tag: "weapon_bayonet",
-              },
+                tag: _,
+              })),
             ],
           },
           {
@@ -4433,7 +4434,6 @@
           },
         ],
         _ = [
-          "CSGO_Type_Knife",
           "CSGO_Type_Machinegun",
           "CSGO_Type_Pistol",
           "CSGO_Type_Rifle",
@@ -4441,6 +4441,7 @@
           "CSGO_Type_Shotgun",
           "CSGO_Type_SniperRifle",
         ],
+        _ = ["CSGO_Type_Knife", ..._],
         _ = [
           {
             facet: "Exterior",
@@ -4564,10 +4565,11 @@
             items: [
               {
                 facet: "Weapon",
+                exclude: _,
               },
               {
                 facet: "Type",
-                tag: [..._],
+                tag: _,
               },
             ],
             rarities: [
@@ -4588,7 +4590,6 @@
               },
             ],
             rarities: [
-              "Rarity_Common",
               "Rarity_Rare",
               "Rarity_Mythical",
               "Rarity_Legendary",
@@ -4603,7 +4604,6 @@
               },
             ],
             rarities: [
-              "Rarity_Common",
               "Rarity_Rare",
               "Rarity_Mythical",
               "Rarity_Legendary",
@@ -4658,13 +4658,21 @@
             (function (_, _) {
               const _ = _.facets[_.facet];
               if (!_) return !1;
-              for (const [_, _] of Object.entries(_)) {
-                if (!_) continue;
-                if (!_.tag) return !0;
-                const _ = "string" != typeof _.tag;
-                if (!_ && _.tag === _) return !0;
-                if (_ && _.tag.includes(_)) return !0;
-              }
+              for (const [_, _] of Object.entries(_))
+                if (_) {
+                  if ("exclude" in _) {
+                    return (
+                      !(!("string" != typeof _.exclude) && _.exclude === _) &&
+                      !_.exclude.includes(_)
+                    );
+                  }
+                  {
+                    if (!_.tag) return !0;
+                    const _ = "string" != typeof _.tag;
+                    if (!_ && _.tag === _) return !0;
+                    if (_ && _.tag.includes(_)) return !0;
+                  }
+                }
               return !1;
             })(_, _),
           );
@@ -4818,10 +4826,16 @@
                               facet: _.name,
                               tag: "tournament",
                               strLabel: _.localized_name,
-                              condition: _({
-                                facet: "Type",
-                                tag: _,
-                              }),
+                              condition: _([
+                                {
+                                  facet: "Type",
+                                  tag: _,
+                                },
+                                {
+                                  facet: "Weapon",
+                                  exclude: _,
+                                },
+                              ]),
                             },
                           ],
                           computeNext: (_, _) => {
@@ -5894,7 +5908,7 @@
                   _.push({
                     appid: _,
                     name: _.localized_name,
-                    icon: "",
+                    icon: `${_._.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${_}`,
                     link: "",
                   }));
               }
@@ -6547,23 +6561,23 @@
                 (0, _._)("#AdvancedSearch_AppSelect_Placeholder"),
               ),
           ),
-          _.createElement(
-            _.Options,
-            null,
-            _.rgFilteredOptions.map((_) =>
+          _.createElement(_.VirtualizedOptions, {
+            estimateSize: () => 48,
+            items: _.rgFilteredOptions,
+            renderItem: (_, _) =>
               _.createElement(
-                _.Option,
+                _.VirtualizedOption,
                 {
                   value: _,
                   key: _.appid,
+                  virtualItem: _,
                 },
                 _.createElement(_, {
                   app: _,
                   active: _ === _,
                 }),
               ),
-            ),
-          ),
+          }),
         );
       }
       function _(_) {
@@ -6578,13 +6592,8 @@
             gap: "2",
           },
           _ &&
-            _.createElement("img", {
-              src: _,
-              style: {
-                width: "var(--spacing-6)",
-                height: "var(--spacing-6)",
-              },
-              alt: "",
+            _.createElement(_, {
+              icon: _,
             }),
           _.createElement(
             _,
@@ -6594,6 +6603,34 @@
             },
             __webpack_require__,
           ),
+        );
+      }
+      const _ = {};
+      function _(_) {
+        const { icon: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(!!_[_]);
+        return (
+          (0, _.useEffect)(() => {
+            let _ = !0;
+            return (
+              setTimeout(() => {
+                _ && _(!0);
+              }, 100),
+              () => {
+                _ = !1;
+              }
+            );
+          }, []),
+          __webpack_require__ && (_[_] = !0),
+          _.createElement("img", {
+            src: __webpack_require__ ? _ : "",
+            style: {
+              width: "var(--spacing-6)",
+              height: "var(--spacing-6)",
+              visibility: __webpack_require__ ? void 0 : "hidden",
+            },
+            alt: "",
+          })
         );
       }
       function _() {
