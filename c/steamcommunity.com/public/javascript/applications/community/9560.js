@@ -454,6 +454,9 @@
           ),
         );
       }
+      function _() {
+        return (0, _.useContext)(_);
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -484,24 +487,39 @@
               breakpoints: _,
             },
             _.createElement(
-              "div",
-              {
-                className: _()(_.Root, "noOpinionatedGlobalStyles"),
-                style: _,
-              },
+              _,
+              null,
               _.createElement(
                 "div",
                 {
-                  "data-accent-color": __webpack_require__,
-                  "data-dull-color": _,
+                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                  style: _,
                 },
-                _,
-                !1,
+                _.createElement(
+                  "div",
+                  {
+                    "data-accent-color": __webpack_require__,
+                    "data-dull-color": _,
+                  },
+                  _,
+                  !1,
+                ),
               ),
             ),
           ),
         );
       });
+      function _(_) {
+        const { children: _ } = _,
+          { formFactorOverride: __webpack_require__ } = _();
+        return _.createElement(
+          _._,
+          {
+            formFactor: __webpack_require__,
+          },
+          _,
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1009,6 +1027,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1041,8 +1061,25 @@
           _,
         );
       }
+      function _(_) {
+        const { formFactor: _, children: __webpack_require__ } = _;
+        return _
+          ? _.createElement(
+              _.Provider,
+              {
+                value: _,
+              },
+              __webpack_require__,
+            )
+          : _.createElement(_.Fragment, null, __webpack_require__);
+      }
       function _() {
         return (0, _.useContext)(_);
+      }
+      const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
+      function _(_) {
+        const _ = _();
+        return _[_] >= _[_];
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3369,18 +3406,16 @@
         );
       }
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          _,
-          {
-            gapY: "2",
-            gapX: "2",
-            marginTop: "4",
-            columns: "repeat( auto-fit, minmax( 300px, 1fr ) )",
-            ...__webpack_require__,
+        return _.createElement(_, {
+          gapY: "2",
+          gapX: "2",
+          marginTop: "4",
+          columns: {
+            initial: "1fr",
+            _: "repeat( auto-fit, minmax( 300px, 1fr ) )",
           },
-          _,
-        );
+          ..._,
+        });
       }
       function _(_, _, _, _) {
         const _ = {
@@ -3856,7 +3891,7 @@
             onTextChange: (_) => {
               const _ = _(_, _.bWholeUnitsOnly);
               _ === _(_, _.bWholeUnitsOnly)
-                ? (_ && _(null), __webpack_require__(_))
+                ? (null !== _ && _(null), __webpack_require__(_))
                 : ("" !== _ && isNaN(_(_, _.bWholeUnitsOnly))) || _(_);
             },
             onBlur: () => {
@@ -3877,14 +3912,14 @@
           : _ === 1 / 0
             ? _
             : _
-              ? Math.round(_).toString()
+              ? Math.round(_ / 100).toString()
               : (_ / 100).toFixed(2);
       }
       function _(_, _) {
         return _ === _
           ? 1 / 0
           : _
-            ? parseInt(_)
+            ? 100 * parseInt(_)
             : Math.round(100 * parseFloat(_));
       }
       const _ = 3;
@@ -4835,6 +4870,9 @@
                                   facet: "Weapon",
                                   exclude: _,
                                 },
+                                {
+                                  facet: "ItemSet",
+                                },
                               ]),
                             },
                           ],
@@ -4996,7 +5034,10 @@
             {
               gap: "2",
               marginTop: "2",
-              columns: "1fr 1fr 1fr 1fr",
+              columns: {
+                initial: "1fr 1fr",
+                _: "1fr 1fr 1fr 1fr",
+              },
             },
             _.map((_) =>
               _.createElement(
@@ -5335,6 +5376,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 753,
         _ = 730,
@@ -5355,12 +5397,7 @@
             ..._
           } = _,
           _ = _.bSteamItems,
-          [_, _] = (0, _.useState)(!1),
-          _ = _ ? _.filterSteam : _.filterInGame,
-          _ =
-            0 !== _.price[0] ||
-            _.price[1] !== _.maxPrice ||
-            Object.keys(_.facets).length > 0;
+          _ = (0, _._)("sm");
         return _.createElement(
           _._.Provider,
           {
@@ -5379,7 +5416,10 @@
               _.createElement(
                 _._,
                 {
-                  minWidth: "min( 75vw, 800px )",
+                  minWidth: {
+                    initial: void 0,
+                    _: "min( 75vw, 800px )",
+                  },
                 },
                 _.createElement(
                   "form",
@@ -5400,8 +5440,15 @@
                     _,
                     {
                       gap: _,
-                      align: "center",
+                      align: {
+                        initial: "stretch",
+                        _: "center",
+                      },
                       marginY: _,
+                      direction: {
+                        initial: "column",
+                        _: "row",
+                      },
                     },
                     _.createElement(_, {
                       showSteamItems: _,
@@ -5411,11 +5458,12 @@
                           bSteamItems: _,
                         }),
                     }),
-                    _.createElement(_, {
-                      size: "1",
-                      orientation: "vertical",
-                      color: "dull-6",
-                    }),
+                    _ &&
+                      _.createElement(_, {
+                        size: "1",
+                        orientation: "vertical",
+                        color: "dull-6",
+                      }),
                     _.createElement(
                       _._,
                       {
@@ -5453,150 +5501,176 @@
                         suggestedInitialApp: _.filterInGame.app,
                       }),
                   ),
-                  _.createElement(
-                    _,
-                    {
-                      align: "center",
-                      marginTop: _,
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        flexGrow: "1",
-                        gap: "2",
-                        align: "center",
-                      },
-                      _.createElement(
-                        "a",
-                        {
-                          href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
-                          className: _.BetaLink,
-                        },
-                        (0, _._)("#AdvancedSearch_BetaTag"),
-                      ),
-                      _.createElement(_, {
-                        size: "1",
-                        orientation: "vertical",
-                        color: "dull-6",
-                      }),
-                      _.createElement(
-                        "span",
-                        {
-                          onClick: () => {
-                            (0, _._)("marketFiltersBeta", "0", 30),
-                              window.location.reload();
-                          },
-                          className: _.BetaLink,
-                        },
-                        (0, _._)("#AdvancedSearch_Beta_OptOut"),
-                      ),
-                    ),
-                    _.createElement(
-                      _,
-                      {
-                        gap: _,
-                        justify: "end",
-                      },
-                      _.createElement(
-                        _,
-                        {
-                          color: "dull",
-                          variant: "ghost",
-                          onClick: () => {
-                            __webpack_require__(
-                              _
-                                ? {
-                                    ..._,
-                                    strSearch: "",
-                                    filterSteam: {
-                                      ..._.filterSteam,
-                                      facets: {},
-                                      price: [0, _.maxPrice],
-                                    },
-                                  }
-                                : {
-                                    ..._,
-                                    strSearch: "",
-                                    filterInGame: {
-                                      ..._.filterInGame,
-                                      facets: {},
-                                      price: [0, _.maxPrice],
-                                    },
-                                  },
-                            );
-                          },
-                          disabled: !_,
-                        },
-                        (0, _._)("#AdvancedSearch_Reset"),
-                      ),
-                      _.createElement(
-                        _,
-                        {
-                          type: "submit",
-                          onClick: () => {
-                            _(!0),
-                              (window.location.href = (function (
-                                _,
-                                _,
-                                __webpack_require__ = "market/search",
-                              ) {
-                                const {
-                                  strSearch: _,
-                                  bSteamItems: _,
-                                  filterInGame: _,
-                                  filterSteam: _,
-                                } = _;
-                                let _ = _;
-                                _ &&
-                                  ((_ = {
-                                    ..._,
-                                    facets: {
-                                      ..._.facets,
-                                    },
-                                  }),
-                                  _.app &&
-                                    (_.facets.Game = {
-                                      [`app_${_.app.appid}`]: !0,
-                                    }),
-                                  (_.app = {
-                                    appid: _,
-                                    name: "",
-                                    icon: "",
-                                    link: "",
-                                  }));
-                                const {
-                                    app: _,
-                                    facets: _,
-                                    price: [_, _],
-                                  } = _,
-                                  _ = new FormData();
-                                _ && _.set("appid", _.appid.toString());
-                                _ && _.set("q", _);
-                                for (const _ of Object.keys(_))
-                                  if (_[_])
-                                    for (const _ of Object.keys(_[_]))
-                                      _[_][_] &&
-                                        _.append(
-                                          `category_${_.appid}_${_}[]`,
-                                          `tag_${_}`,
-                                        );
-                                _ > 0 && _.append("price_min", _.toString());
-                                _ > _ &&
-                                  _ < _.maxPrice &&
-                                  _.append("price_max", _.toString());
-                                return `${_._.COMMUNITY_BASE_URL}${__webpack_require__}?${new URLSearchParams(_).toString()}`;
-                              })(_, _, _));
-                          },
-                          disabled: _,
-                        },
-                        (0, _._)("#AdvancedSearch_Search"),
-                      ),
-                    ),
-                  ),
+                  _.createElement(_, {
+                    filter: _,
+                    onFilterChange: __webpack_require__,
+                    config: _,
+                    searchPath: _,
+                  }),
                 ),
               ),
             ),
           ),
+        );
+      }
+      function _(_) {
+        const {
+            filter: _,
+            onFilterChange: __webpack_require__,
+            config: _,
+            searchPath: _,
+          } = _,
+          _ = _.bSteamItems,
+          [_, _] = (0, _.useState)(!1),
+          _ = _ ? _.filterSteam : _.filterInGame,
+          _ =
+            0 !== _.price[0] ||
+            _.price[1] !== _.maxPrice ||
+            Object.keys(_.facets).length > 0,
+          _ = (0, _._)("sm"),
+          _ = _.createElement(
+            _,
+            {
+              type: "submit",
+              onClick: () => {
+                _(!0),
+                  (window.location.href = (function (
+                    _,
+                    _,
+                    __webpack_require__ = "market/search",
+                  ) {
+                    const {
+                      strSearch: _,
+                      bSteamItems: _,
+                      filterInGame: _,
+                      filterSteam: _,
+                    } = _;
+                    let _ = _;
+                    _ &&
+                      ((_ = {
+                        ..._,
+                        facets: {
+                          ..._.facets,
+                        },
+                      }),
+                      _.app &&
+                        (_.facets.Game = {
+                          [`app_${_.app.appid}`]: !0,
+                        }),
+                      (_.app = {
+                        appid: _,
+                        name: "",
+                        icon: "",
+                        link: "",
+                      }));
+                    const {
+                        app: _,
+                        facets: _,
+                        price: [_, _],
+                      } = _,
+                      _ = new FormData();
+                    _ && _.set("appid", _.appid.toString());
+                    _ && _.set("q", _);
+                    for (const _ of Object.keys(_))
+                      if (_[_])
+                        for (const _ of Object.keys(_[_]))
+                          _[_][_] &&
+                            _.append(`category_${_.appid}_${_}[]`, `tag_${_}`);
+                    _ > 0 && _.append("price_min", _.toString());
+                    _ > _ &&
+                      _ < _.maxPrice &&
+                      _.append("price_max", _.toString());
+                    return `${_._.COMMUNITY_BASE_URL}${__webpack_require__}?${new URLSearchParams(_).toString()}`;
+                  })(_, _, _));
+              },
+              disabled: _,
+            },
+            (0, _._)("#AdvancedSearch_Search"),
+          );
+        return _.createElement(
+          _,
+          {
+            justify: _ ? "between" : void 0,
+            marginTop: _,
+            direction: _ ? "row" : "column",
+            gap: "2",
+          },
+          _.createElement(
+            _,
+            {
+              gap: "2",
+              align: "center",
+              justify: "between",
+            },
+            _.createElement(
+              "a",
+              {
+                href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
+                className: _.BetaLink,
+              },
+              (0, _._)("#AdvancedSearch_BetaTag"),
+            ),
+            _ &&
+              _.createElement(_, {
+                size: "1",
+                orientation: "vertical",
+                color: "dull-6",
+              }),
+            _.createElement(
+              "span",
+              {
+                onClick: () => {
+                  (0, _._)("marketFiltersBeta", "0", 30),
+                    window.location.reload();
+                },
+                className: _.BetaLink,
+              },
+              (0, _._)("#AdvancedSearch_Beta_OptOut"),
+            ),
+          ),
+          _ &&
+            _.createElement(
+              _,
+              {
+                gap: _,
+                justify: "end",
+              },
+              _ &&
+                _.createElement(
+                  _,
+                  {
+                    color: "dull",
+                    variant: "ghost",
+                    onClick: () => {
+                      __webpack_require__(
+                        _
+                          ? {
+                              ..._,
+                              strSearch: "",
+                              filterSteam: {
+                                ..._.filterSteam,
+                                facets: {},
+                                price: [0, _.maxPrice],
+                              },
+                            }
+                          : {
+                              ..._,
+                              strSearch: "",
+                              filterInGame: {
+                                ..._.filterInGame,
+                                facets: {},
+                                price: [0, _.maxPrice],
+                              },
+                            },
+                      );
+                    },
+                    disabled: !_,
+                  },
+                  (0, _._)("#AdvancedSearch_Reset"),
+                ),
+              _,
+            ),
+          !_ && _,
         );
       }
       function _(_) {
@@ -6203,8 +6277,10 @@
               : (0, _._)("#AdvancedSearch_AppSelect_PopularGames"),
           ),
           _.createElement(
-            _,
-            null,
+            "div",
+            {
+              className: _.TruncatingPortraitRow,
+            },
             !_ &&
               _.map((_) =>
                 _.createElement(
@@ -6228,6 +6304,8 @@
                     role: "button",
                     width: "92px",
                     height: "138px",
+                    flexGrow: "1",
+                    flexBasis: "92px",
                   },
                   _.createElement("img", {
                     src: _.img,
@@ -6240,15 +6318,6 @@
               ),
             _ && _,
           ),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _.TruncatingPortraitRow,
-          },
-          _.children,
         );
       }
       function _(_) {
