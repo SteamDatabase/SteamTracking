@@ -2097,21 +2097,23 @@ body.v6 .game_area_description h2.bb_tag strong {
 }
 
 .communitylink_achievement_images {
-	padding: 4px 0px 4px 0px;
+	padding: 4px 0;
+	display: flex;
+	gap: 4px;
+	justify-content: space-between;
 	overflow: hidden;
 	margin-bottom: 5px;
 }
 
-.communitylink_achievement {
-	float: left;
+div.communitylink_achievement, a.communitylink_achievement {
 	width: 64px;
-	height: 64px;
-	margin-right: 4px;
+	aspect-ratio: 1/1;
+	flex: 1;
 }
 
-.widestore .communitylink_achievement {
-	width: 60px;
-	height: 60px;
+img.communitylink_achievement {
+	aspect-ratio: 1/1;
+	width: 100%;
 }
 
 a.communitylink_achievement.communitylink_achivement_plusmore {
@@ -2124,8 +2126,6 @@ a.communitylink_achievement.communitylink_achivement_plusmore {
 
 			color: #67c1f5;
 	text-align: center;
-    height: 64px;
-    padding: 0 4px;
     margin-right: 0px;
     display: flex;
     flex-direction: row;
@@ -2133,6 +2133,7 @@ a.communitylink_achievement.communitylink_achivement_plusmore {
     justify-content: center;
     line-height: 14px;
 }
+
 a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     color: #ffffff;
     text-decoration: none;
@@ -2144,10 +2145,6 @@ a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
     background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-.widestore a.communitylink_achievement.communitylink_achivement_plusmore {
-	height: 60px;
 }
 
 .communitylink_points_shop_images {
