@@ -631,7 +631,7 @@
     "Button_Share": "Share",
     "Button_Ignore": "Ignore",
     "DirectMessageFromNonFriend": "Message from a user that is not your friend",
-    "DirectMessageFromNonFriendNote": "NOTE: Do not share your account name, password, or any personal information such as a credit card number or social security number with anyone.  A Valve or Steam representative will never ask you for these things.",
+    "DirectMessageFromNonFriendNote": "NOTE: Valve or Steam representatives will NEVER contact you via chat. Use extreme caution when opening links, especially if they require signing into Steam. If it is suspicious, unexpected, urgent, or generous then it is likely a scam.",
     "NonFriendAction_Block": "Block Communications",
     "NonFriendAction_Allow": "Allow Communications",
     "Friend_Menu_Open": "Options",

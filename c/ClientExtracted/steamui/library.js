@@ -12564,9 +12564,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 21 2025 : 16:16:01",
-                BUILD_TIME_UTC: "Aug 21 2025 : 23:16:01",
-                BUILD_RTIME_UTC: 1755818161,
+                BUILD_TIME_LOCAL: "Aug 22 2025 : 14:53:05",
+                BUILD_TIME_UTC: "Aug 22 2025 : 21:53:05",
+                BUILD_RTIME_UTC: 1755899585,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -26868,9 +26868,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 21 2025 : 16:16:01",
-                    BUILD_TIME_UTC: "Aug 21 2025 : 23:16:01",
-                    BUILD_RTIME_UTC: 1755818161,
+                    BUILD_TIME_LOCAL: "Aug 22 2025 : 14:53:05",
+                    BUILD_TIME_UTC: "Aug 22 2025 : 21:53:05",
+                    BUILD_RTIME_UTC: 1755899585,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27519,7 +27519,7 @@ var CLSTAMP = "steamdb";
         2225: "dc3d09d21b6992daad2e",
         2263: "75e7c03a4e544519908e",
         2266: "eea6d65831676709717e",
-        2320: "64ee85cb1171ed9a0a8c",
+        2320: "fb99b00c253d83a0a564",
         2438: "8f65974f3b158c8c2d8e",
         2448: "c1f0b015f00cac957233",
         2481: "66f55470397856651e8f",
@@ -27618,7 +27618,7 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "a7085f6db70b86153f08",
+        9858: "ae4aecb64ceabb7375c6",
         9869: "f100b512c375f3f33d22",
         9887: "b3e18a3b56733822ec70",
       }[_]),

@@ -66,6 +66,11 @@ function _(_, _, _, _) {
       return _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _);
   }, [_, _, _]);
 }
+function _(_, _) {
+  _.useLayoutEffect(() => {
+    if (!(!_ || !_)) return _.classList.add(_), () => _.classList.remove(_);
+  }, [_, _]);
+}
 function _(_, _, _, _) {
   return _(
     _,
@@ -135,4 +140,4 @@ function _(_, ..._) {
   }
   return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };
+export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

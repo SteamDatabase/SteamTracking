@@ -2395,8 +2395,6 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-20:17:51
-20:17:58
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2410,6 +2408,8 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:51:49
+21:51:55
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -3239,7 +3239,7 @@ Attempting to purchase same app in different packages
 AttribCapabilityGroup
 Audio Behind
 Audio Init Failed
-Aug 21 2025
+Aug 22 2025
 August
 Aura
 AuthANY
@@ -8746,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Aug 21 2025 20:17:58
+Startup - updater built Aug 22 2025 21:51:55
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

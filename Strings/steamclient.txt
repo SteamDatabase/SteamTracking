@@ -4720,6 +4720,7 @@ $steammessages_parental_objects.proto"
 *ZL24timed_trial_add_playtimePvR9ConParamsR10ConCommandEUlvE_
 *ZL26peer_content_server_statusPvR9ConParamsR10ConCommandEUlvE_
 *ZL26timed_trial_reset_playtimePvR9ConParamsR10ConCommandEUlvE_
+*ZL33test_concurrent_textfilter_changePvR9ConParamsR10ConCommandEUlvE_
 *ZL8app_stopPvR9ConParamsR10ConCommandEUlvE_
 *ZN10CClientUGC10DeleteItemEyE17CAPIJobDeleteItem
 *ZN10CClientUGC13AddDependencyEyyE20CAPIJobAddDependency
@@ -31915,6 +31916,7 @@ QueryServerByFakeIP
 QueryServerData
 Querying foreign install path for AppID %u
 Quest
+Queue up multiple text filter changes to the UI
 Queue: Total: %d Current: %d\n--------- END\n
 QueueDidChange
 QueueEntriesHaveChanged_t
@@ -58169,7 +58171,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 21 2025 20:18:03
+steam Aug 22 2025 21:52:01
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58788,6 +58790,7 @@ territory_code
 test
 test a voice encode
 test an opus voice encode
+test_concurrent_textfilter_change
 test_dc_ping_ms
 test_dc_via_relay_pop_id
 test_dropcon

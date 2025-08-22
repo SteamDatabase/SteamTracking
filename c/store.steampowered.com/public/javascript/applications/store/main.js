@@ -146,6 +146,7 @@
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
         searchBarMinWidth: "350px",
+        SuppressScrollOnBody: "uT8RS__OHNuFWvh1I4mO9",
         SearchBar: "WFyPwmwIjPaI784fImRbi",
         MenuActive: "_1u5lJbV7kBEJq4lH6V2RzL",
         SearchForm: "_1KU9eASfov1GnFQRbyLIdR",
@@ -181,6 +182,7 @@
     chunkid: (module) => {
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
+        SuppressScrollOnBody: "tmxkKoAj-IgGLmNEnizdB",
         TopDestinations: "_1vOm3pf-0J2OtSr27xPgBP",
         BrowseLinkSection: "_3DYXcTryqomaHXCoQolTr_",
         BrowseContentGrid: "_3b26-ybbQJNqGukiWkIUp8",
@@ -264,6 +266,7 @@
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
         narrowWidth: "500px",
+        SuppressScrollOnBody: "uFovI2_j4i5rfhV6Ke4hc",
         Section: "_2ihG7DC0YPrw01ComUbKnY",
         Wide: "JeKLaTDB6BY1_KxkPBi7y",
         SectionTitle: "_3wkp8GaMeHBsrImd61r1X-",
@@ -333,11 +336,13 @@
     chunkid: (module) => {
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
+        SuppressScrollOnBody: "_1-YmIjW2emvkVCWr8K6wTM",
       };
     },
     chunkid: (module) => {
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
+        SuppressScrollOnBody: "_2vfjuXKSFCjvHgH1RXw0lo",
         PopoverContainer: "oeCR-_-EhS8CaxEaFAqDZ",
         Popover: "_2RyPu-qJzs6novxZiGSDf-",
         PopoverContent: "_2t1IMWc-EYYJD-dsioJxSp",
@@ -349,6 +354,7 @@
     chunkid: (module) => {
       module.exports = {
         storeMenuResponsiveModeWidth: "730px",
+        SuppressScrollOnBody: "_3P35fS4GIxSzg97CKNIAH2",
         ResponsiveHeaderContent: "_16qZv-fX6ub_MdNsHedaLI",
         ElementTakeover: "txwuWWnqKAsmG1rtZbvLo",
         SearchContainer: "_2uvYMNMk0jXWUkQtneMERT",
@@ -34891,6 +34897,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -34971,6 +34978,11 @@
               _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
             );
         }, [_, _, _]);
+      }
+      function _(_, _) {
+        _.useLayoutEffect(() => {
+          if (_ && _) return _.classList.add(_), () => _.classList.remove(_);
+        }, [_, _]);
       }
       function _(_, _, _, _) {
         return _(
@@ -71802,6 +71814,12 @@
         });
         return `${_._.STORE_BASE_URL}search/?${__webpack_require__.toString()}`;
       }
+      function _(_ = !0) {
+        (0, _._)(
+          document?.documentElement,
+          _ ? _.SuppressScrollOnBody : void 0,
+        );
+      }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(_.IsReady());
         return (
@@ -74652,6 +74670,7 @@
           );
         return (
           _.useEffect(() => (_(_), () => _(void 0)), [_, _]),
+          _(_),
           _.createElement(
             "div",
             {
@@ -74748,33 +74767,36 @@
             },
             [_, _],
           );
-        return _.createElement(
-          _,
-          {
-            className: _.PopoverContainer,
-            visible: _,
-            msAnimationDuration: 100,
-          },
+        return (
+          _(_),
           _.createElement(
-            "div",
+            _,
             {
-              className: _()(
-                _.Popover,
-                _._.IN_MOBILE_WEBVIEW && _.MobileWebview,
-              ),
+              className: _.PopoverContainer,
+              visible: _,
+              msAnimationDuration: 100,
             },
             _.createElement(
-              _._,
+              "div",
               {
-                "flow-children": "row",
-                className: _.PopoverContent,
-                onCancelButton: __webpack_require__,
-                ref: _,
-                onKeyDown: _,
+                className: _()(
+                  _.Popover,
+                  _._.IN_MOBILE_WEBVIEW && _.MobileWebview,
+                ),
               },
-              _,
+              _.createElement(
+                _._,
+                {
+                  "flow-children": "row",
+                  className: _.PopoverContent,
+                  onCancelButton: __webpack_require__,
+                  ref: _,
+                  onKeyDown: _,
+                },
+                _,
+              ),
             ),
-          ),
+          )
         );
       }
       var _ = __webpack_require__("chunkid");
