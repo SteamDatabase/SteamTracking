@@ -3930,7 +3930,7 @@
         return Math.pow(_, 1 / _);
       }
       function _(_) {
-        return Math.pow(_, _);
+        return Math.round(Math.pow(_, _));
       }
       const _ =
           __webpack_require__._ +

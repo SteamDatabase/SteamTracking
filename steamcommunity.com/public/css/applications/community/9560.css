@@ -1463,6 +1463,7 @@
 .Ib6RCjwueJUjl7aWNipFW {
   padding-left: 10px;
   padding-right: 10px;
+  touch-action: none;
 }
 .Ib6RCjwueJUjl7aWNipFW .-nNjOur8lh62cpxs1Jnth {
   display: flex;

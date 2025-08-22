@@ -3178,7 +3178,7 @@
         return Math.pow(e, 1 / zt);
       }
       function Gt(e) {
-        return Math.pow(e, zt);
+        return Math.round(Math.pow(e, zt));
       }
       const Ft =
           n.p +
