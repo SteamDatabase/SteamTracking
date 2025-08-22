@@ -1,4 +1,4 @@
-var CLSTAMP = "10002680";
+var CLSTAMP = "10006850";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11139,9 +11139,9 @@ var CLSTAMP = "10002680";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 20 2025 : 14:00:54",
-                BUILD_TIME_UTC: "Aug 20 2025 : 21:00:54",
-                BUILD_RTIME_UTC: 1755723654,
+                BUILD_TIME_LOCAL: "Aug 21 2025 : 16:16:01",
+                BUILD_TIME_UTC: "Aug 21 2025 : 23:16:01",
+                BUILD_RTIME_UTC: 1755818161,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -14662,7 +14662,9 @@ var CLSTAMP = "10002680";
             const n = c.sm_ErrorReportingStore;
             n
               ? n
-                  .ReportError(e)
+                  .ReportError(e, {
+                    strComponentStack: t.componentStack || void 0,
+                  })
                   .then(
                     (e) =>
                       e && this.setState({ identifierHash: e.identifierHash }),
@@ -24637,9 +24639,9 @@ var CLSTAMP = "10002680";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 20 2025 : 14:00:54",
-                    BUILD_TIME_UTC: "Aug 20 2025 : 21:00:54",
-                    BUILD_RTIME_UTC: 1755723654,
+                    BUILD_TIME_LOCAL: "Aug 21 2025 : 16:16:01",
+                    BUILD_TIME_UTC: "Aug 21 2025 : 23:16:01",
+                    BUILD_RTIME_UTC: 1755818161,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25305,7 +25307,7 @@ var CLSTAMP = "10002680";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "7770a29400f71ebc6d00",
+        9858: "a7085f6db70b86153f08",
         9869: "f100b512c375f3f33d22",
         9887: "b3e18a3b56733822ec70",
       }[e]),

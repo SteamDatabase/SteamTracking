@@ -6608,7 +6608,7 @@ ${LANGUAGE}
 /data/src/steamUI/steamurlcontroller.cpp
 /data/src/steamUI/streamingservergameactions.cpp
 /data/src/steamUI/systemaudiocontroller.cpp
-/data/src/steamUI/systembluetoothcontroller.cpp:519
+/data/src/steamUI/systembluetoothcontroller.cpp:528
 /data/src/steamUI/systemcontroller.cpp
 /data/src/steamUI/systemdevkitcontroller.cpp
 /data/src/steamUI/systemdevkitcontroller.cpp:75
@@ -13710,7 +13710,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 20 2025 20:57:19
+Aug 21 2025 20:18:06
 August
 Aura
 Australia/Adelaide
@@ -37950,7 +37950,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen:0n
+ggen:2n
 ghost_
 gidlist
 gidparentcomment
@@ -46619,6 +46619,7 @@ revocation_reason
 revoked
 rfZN"6\n
 rfc822Mailbox
+rfkill unblock bluetooth
 rgAchievements
 rgApps
 rgFailedRequestIndices
