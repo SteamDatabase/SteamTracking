@@ -30,7 +30,7 @@ php update.php "$@"
 
 git add -A
 MESSAGE=$(git_commit_message)
-git commit -S -a -m "${MESSAGE}"
+git commit -S -a -m "${MESSAGE}" || true
 git push
 
 rm "${LOCKFILE}"
