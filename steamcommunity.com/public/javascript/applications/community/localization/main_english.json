@@ -2798,7 +2798,7 @@
     "AdvancedSearch_CustomFilter_All": "All",
     "AdvancedSearch_CustomFilter_Other": "Other",
     "AdvancedSearch_FilterGeneric_Placeholder": "Filter...",
-    "AdvancedSearch_AppSelect_FilterPlaceholder": "Filter by name...",
+    "AdvancedSearch_AppSelect_FilterPlaceholder": "Filter by game...",
     "AdvancedSearch_BetaTag": "Beta feature - Give feedback",
     "AdvancedSearch_TextSearch_Tooltip": "Search across Market item names...",
     "AdvancedSearch_Beta_OptOut": "Switch to old filters",

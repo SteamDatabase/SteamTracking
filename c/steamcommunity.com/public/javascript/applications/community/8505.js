@@ -7,6 +7,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -202,6 +203,107 @@
         };
       }
       const _ = function (_) {
+        return (
+          void 0 === _ && (_ = {}),
+          {
+            name: "flip",
+            options: _,
+            async _(_) {
+              var _, _;
+              const {
+                  placement: _,
+                  middlewareData: _,
+                  rects: _,
+                  initialPlacement: _,
+                  platform: _,
+                  elements: _,
+                } = _,
+                {
+                  mainAxis: _ = !0,
+                  crossAxis: _ = !0,
+                  fallbackPlacements: _,
+                  fallbackStrategy: _ = "bestFit",
+                  fallbackAxisSideDirection: _ = "none",
+                  flipAlignment: _ = !0,
+                  ..._
+                } = (0, _._)(_, _);
+              if (null != (_ = _.arrow) && _.alignmentOffset) return {};
+              const _ = (0, _._)(_),
+                _ = (0, _._)(_) === _,
+                _ = await (null == _.isRTL ? void 0 : _.isRTL(_.floating)),
+                _ = _ || (_ || !_ ? [(0, _._)(_)] : (0, _._)(_));
+              _ || "none" === _ || _.push(...(0, _._)(_, _, _, _));
+              const _ = [_, ..._],
+                _ = await _(_, _),
+                _ = [];
+              let _ = (null == (_ = _.flip) ? void 0 : _.overflows) || [];
+              if ((_ && _.push(_[_]), _)) {
+                const _ = (0, _._)(_, _, _);
+                _.push(_[_[0]], _[_[1]]);
+              }
+              if (
+                ((_ = [
+                  ..._,
+                  {
+                    placement: _,
+                    overflows: _,
+                  },
+                ]),
+                !_.every((_) => _ <= 0))
+              ) {
+                var _, _;
+                const _ = ((null == (_ = _.flip) ? void 0 : _.index) || 0) + 1,
+                  _ = _[_];
+                if (_)
+                  return {
+                    data: {
+                      index: _,
+                      overflows: _,
+                    },
+                    reset: {
+                      placement: _,
+                    },
+                  };
+                let _ =
+                  null ==
+                  (_ = _.filter((_) => _.overflows[0] <= 0).sort(
+                    (_, _) => _.overflows[1] - _.overflows[1],
+                  )[0])
+                    ? void 0
+                    : _.placement;
+                if (!_)
+                  switch (_) {
+                    case "bestFit": {
+                      var _;
+                      const _ =
+                        null ==
+                        (_ = _.map((_) => [
+                          _.placement,
+                          _.overflows
+                            .filter((_) => _ > 0)
+                            .reduce((_, _) => _ + _, 0),
+                        ]).sort((_, _) => _[1] - _[1])[0])
+                          ? void 0
+                          : _[0];
+                      _ && (_ = _);
+                      break;
+                    }
+                    case "initialPlacement":
+                      _ = _;
+                  }
+                if (_ !== _)
+                  return {
+                    reset: {
+                      placement: _,
+                    },
+                  };
+              }
+              return {};
+            },
+          }
+        );
+      };
+      const _ = function (_) {
           return (
             void 0 === _ && (_ = 0),
             {
@@ -349,6 +451,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -820,6 +923,7 @@
         );
       }
       const _ = _._,
+        _ = _._,
         _ = (_, _, _) => {
           const _ = new Map(),
             _ = {
@@ -1024,6 +1128,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = Math.min,
         _ = Math.max,
@@ -1032,7 +1140,17 @@
         _ = (_) => ({
           _: _,
           _: _,
-        });
+        }),
+        _ = {
+          left: "right",
+          right: "left",
+          bottom: "top",
+          top: "bottom",
+        },
+        _ = {
+          start: "end",
+          end: "start",
+        };
       function _(_, _) {
         return "function" == typeof _ ? _(_) : _;
       }
@@ -1050,6 +1168,54 @@
       }
       function _(_) {
         return "x" === _(_) ? "y" : "x";
+      }
+      function _(_, _, _) {
+        void 0 === _ && (_ = !1);
+        const _ = _(_),
+          _ = _(_),
+          _ = _(_);
+        let _ =
+          "x" === _
+            ? _ === (_ ? "end" : "start")
+              ? "right"
+              : "left"
+            : "start" === _
+              ? "bottom"
+              : "top";
+        return _.reference[_] > _.floating[_] && (_ = _(_)), [_, _(_)];
+      }
+      function _(_) {
+        const _ = _(_);
+        return [_(_), _, _(_)];
+      }
+      function _(_) {
+        return _.replace(/start|end/g, (_) => _[_]);
+      }
+      function _(_, _, _, _) {
+        const _ = _(_);
+        let _ = (function (_, _, _) {
+          const _ = ["left", "right"],
+            _ = ["right", "left"],
+            _ = ["top", "bottom"],
+            _ = ["bottom", "top"];
+          switch (_) {
+            case "top":
+            case "bottom":
+              return _ ? (_ ? _ : _) : _ ? _ : _;
+            case "left":
+            case "right":
+              return _ ? _ : _;
+            default:
+              return [];
+          }
+        })(_(_), "start" === _, _);
+        return (
+          _ && ((_ = _.map((_) => _ + "-" + _)), _ && (_ = _.concat(_.map(_)))),
+          _
+        );
+      }
+      function _(_) {
+        return _.replace(/left|right|bottom|top/g, (_) => _[_]);
       }
       function _(_) {
         return "number" != typeof _

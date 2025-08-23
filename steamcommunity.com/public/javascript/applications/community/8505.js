@@ -5,7 +5,7 @@
   [8505],
   {
     33559: (t, e, n) => {
-      n.d(e, { Ej: () => s, cY: () => c, rD: () => r });
+      n.d(e, { Ej: () => a, UU: () => c, cY: () => s, rD: () => r });
       var o = n(58015);
       function i(t, e, n) {
         let { reference: i, floating: r } = t;
@@ -16,32 +16,32 @@
           f = "y" === l,
           u = i.x + i.width / 2 - r.width / 2,
           d = i.y + i.height / 2 - r.height / 2,
-          h = i[s] / 2 - r[s] / 2;
-        let m;
+          m = i[s] / 2 - r[s] / 2;
+        let p;
         switch (a) {
           case "top":
-            m = { x: u, y: i.y - r.height };
+            p = { x: u, y: i.y - r.height };
             break;
           case "bottom":
-            m = { x: u, y: i.y + i.height };
+            p = { x: u, y: i.y + i.height };
             break;
           case "right":
-            m = { x: i.x + i.width, y: d };
+            p = { x: i.x + i.width, y: d };
             break;
           case "left":
-            m = { x: i.x - r.width, y: d };
+            p = { x: i.x - r.width, y: d };
             break;
           default:
-            m = { x: i.x, y: i.y };
+            p = { x: i.x, y: i.y };
         }
         switch ((0, o.Sg)(e)) {
           case "start":
-            m[c] -= h * (n && f ? -1 : 1);
+            p[c] -= m * (n && f ? -1 : 1);
             break;
           case "end":
-            m[c] += h * (n && f ? -1 : 1);
+            p[c] += m * (n && f ? -1 : 1);
         }
-        return m;
+        return p;
       }
       const r = async (t, e, n) => {
         const {
@@ -58,48 +58,48 @@
             strategy: r,
           }),
           { x: u, y: d } = i(f, o, a),
-          h = o,
-          m = {},
-          p = 0;
+          m = o,
+          p = {},
+          h = 0;
         for (let n = 0; n < s.length; n++) {
           const { name: l, fn: g } = s[n],
             {
               x: y,
-              y: x,
-              data: w,
-              reset: v,
+              y: w,
+              data: v,
+              reset: x,
             } = await g({
               x: u,
               y: d,
               initialPlacement: o,
-              placement: h,
+              placement: m,
               strategy: r,
-              middlewareData: m,
+              middlewareData: p,
               rects: f,
               platform: c,
               elements: { reference: t, floating: e },
             });
           (u = null != y ? y : u),
-            (d = null != x ? x : d),
-            (m = { ...m, [l]: { ...m[l], ...w } }),
-            v &&
-              p <= 50 &&
-              (p++,
-              "object" == typeof v &&
-                (v.placement && (h = v.placement),
-                v.rects &&
+            (d = null != w ? w : d),
+            (p = { ...p, [l]: { ...p[l], ...v } }),
+            x &&
+              h <= 50 &&
+              (h++,
+              "object" == typeof x &&
+                (x.placement && (m = x.placement),
+                x.rects &&
                   (f =
-                    !0 === v.rects
+                    !0 === x.rects
                       ? await c.getElementRects({
                           reference: t,
                           floating: e,
                           strategy: r,
                         })
-                      : v.rects),
-                ({ x: u, y: d } = i(f, h, a))),
+                      : x.rects),
+                ({ x: u, y: d } = i(f, m, a))),
               (n = -1));
         }
-        return { x: u, y: d, placement: h, strategy: r, middlewareData: m };
+        return { x: u, y: d, placement: m, strategy: r, middlewareData: p };
       };
       async function l(t, e) {
         var n;
@@ -116,11 +116,11 @@
             boundary: f = "clippingAncestors",
             rootBoundary: u = "viewport",
             elementContext: d = "floating",
-            altBoundary: h = !1,
-            padding: m = 0,
+            altBoundary: m = !1,
+            padding: p = 0,
           } = (0, o._3)(e, t),
-          p = (0, o.nI)(m),
-          g = s[h ? ("floating" === d ? "reference" : "floating") : d],
+          h = (0, o.nI)(p),
+          g = s[m ? ("floating" === d ? "reference" : "floating") : d],
           y = (0, o.B1)(
             await l.getClippingRect({
               element:
@@ -137,32 +137,117 @@
               strategy: a,
             }),
           ),
-          x = "floating" === d ? { ...c.floating, x: i, y: r } : c.reference,
-          w = await (null == l.getOffsetParent
+          w = "floating" === d ? { ...c.floating, x: i, y: r } : c.reference,
+          v = await (null == l.getOffsetParent
             ? void 0
             : l.getOffsetParent(s.floating)),
-          v = ((await (null == l.isElement ? void 0 : l.isElement(w))) &&
-            (await (null == l.getScale ? void 0 : l.getScale(w)))) || {
+          x = ((await (null == l.isElement ? void 0 : l.isElement(v))) &&
+            (await (null == l.getScale ? void 0 : l.getScale(v)))) || {
             x: 1,
             y: 1,
           },
           b = (0, o.B1)(
             l.convertOffsetParentRelativeRectToViewportRelativeRect
               ? await l.convertOffsetParentRelativeRectToViewportRelativeRect({
-                  rect: x,
-                  offsetParent: w,
+                  rect: w,
+                  offsetParent: v,
                   strategy: a,
                 })
-              : x,
+              : w,
           );
         return {
-          top: (y.top - b.top + p.top) / v.y,
-          bottom: (b.bottom - y.bottom + p.bottom) / v.y,
-          left: (y.left - b.left + p.left) / v.x,
-          right: (b.right - y.right + p.right) / v.x,
+          top: (y.top - b.top + h.top) / x.y,
+          bottom: (b.bottom - y.bottom + h.bottom) / x.y,
+          left: (y.left - b.left + h.left) / x.x,
+          right: (b.right - y.right + h.right) / x.x,
         };
       }
       const c = function (t) {
+        return (
+          void 0 === t && (t = {}),
+          {
+            name: "flip",
+            options: t,
+            async fn(e) {
+              var n, i;
+              const {
+                  placement: r,
+                  middlewareData: c,
+                  rects: s,
+                  initialPlacement: a,
+                  platform: f,
+                  elements: u,
+                } = e,
+                {
+                  mainAxis: d = !0,
+                  crossAxis: m = !0,
+                  fallbackPlacements: p,
+                  fallbackStrategy: h = "bestFit",
+                  fallbackAxisSideDirection: g = "none",
+                  flipAlignment: y = !0,
+                  ...w
+                } = (0, o._3)(t, e);
+              if (null != (n = c.arrow) && n.alignmentOffset) return {};
+              const v = (0, o.C0)(r),
+                x = (0, o.C0)(a) === a,
+                b = await (null == f.isRTL ? void 0 : f.isRTL(u.floating)),
+                T = p || (x || !y ? [(0, o.bV)(a)] : (0, o.WJ)(a));
+              p || "none" === g || T.push(...(0, o.lP)(a, y, g, b));
+              const L = [a, ...T],
+                R = await l(e, w),
+                k = [];
+              let E = (null == (i = c.flip) ? void 0 : i.overflows) || [];
+              if ((d && k.push(R[v]), m)) {
+                const t = (0, o.w7)(r, s, b);
+                k.push(R[t[0]], R[t[1]]);
+              }
+              if (
+                ((E = [...E, { placement: r, overflows: k }]),
+                !k.every((t) => t <= 0))
+              ) {
+                var C, D;
+                const t = ((null == (C = c.flip) ? void 0 : C.index) || 0) + 1,
+                  e = L[t];
+                if (e)
+                  return {
+                    data: { index: t, overflows: E },
+                    reset: { placement: e },
+                  };
+                let n =
+                  null ==
+                  (D = E.filter((t) => t.overflows[0] <= 0).sort(
+                    (t, e) => t.overflows[1] - e.overflows[1],
+                  )[0])
+                    ? void 0
+                    : D.placement;
+                if (!n)
+                  switch (h) {
+                    case "bestFit": {
+                      var P;
+                      const t =
+                        null ==
+                        (P = E.map((t) => [
+                          t.placement,
+                          t.overflows
+                            .filter((t) => t > 0)
+                            .reduce((t, e) => t + e, 0),
+                        ]).sort((t, e) => t[1] - e[1])[0])
+                          ? void 0
+                          : P[0];
+                      t && (n = t);
+                      break;
+                    }
+                    case "initialPlacement":
+                      n = a;
+                  }
+                if (r !== n) return { reset: { placement: n } };
+              }
+              return {};
+            },
+          }
+        );
+      };
+      const s = function (t) {
           return (
             void 0 === t && (t = 0),
             {
@@ -183,9 +268,9 @@
                       u = l && a ? -1 : 1,
                       d = (0, o._3)(e, t);
                     let {
-                      mainAxis: h,
-                      crossAxis: m,
-                      alignmentAxis: p,
+                      mainAxis: m,
+                      crossAxis: p,
+                      alignmentAxis: h,
                     } = "number" == typeof d
                       ? { mainAxis: d, crossAxis: 0, alignmentAxis: null }
                       : {
@@ -196,9 +281,9 @@
                         };
                     return (
                       s &&
-                        "number" == typeof p &&
-                        (m = "end" === s ? -1 * p : p),
-                      a ? { x: m * u, y: h * f } : { x: h * f, y: m * u }
+                        "number" == typeof h &&
+                        (p = "end" === s ? -1 * h : h),
+                      a ? { x: p * u, y: m * f } : { x: m * f, y: p * u }
                     );
                   })(e, t);
                 return c === (null == (n = s.offset) ? void 0 : n.placement) &&
@@ -210,7 +295,7 @@
             }
           );
         },
-        s = function (t) {
+        a = function (t) {
           return (
             void 0 === t && (t = {}),
             {
@@ -222,8 +307,8 @@
                   f = await l(e, a),
                   u = (0, o.C0)(n),
                   d = (0, o.Sg)(n),
-                  h = "y" === (0, o.TV)(n),
-                  { width: m, height: p } = i.floating;
+                  m = "y" === (0, o.TV)(n),
+                  { width: p, height: h } = i.floating;
                 let g, y;
                 "top" === u || "bottom" === u
                   ? ((g = u),
@@ -235,32 +320,32 @@
                         ? "left"
                         : "right"))
                   : ((y = u), (g = "end" === d ? "top" : "bottom"));
-                const x = p - f[g],
-                  w = m - f[y],
-                  v = !e.middlewareData.shift;
-                let b = x,
-                  T = w;
-                if (h) {
-                  const t = m - f.left - f.right;
-                  T = d || v ? (0, o.jk)(w, t) : t;
+                const w = h - f[g],
+                  v = p - f[y],
+                  x = !e.middlewareData.shift;
+                let b = w,
+                  T = v;
+                if (m) {
+                  const t = p - f.left - f.right;
+                  T = d || x ? (0, o.jk)(v, t) : t;
                 } else {
-                  const t = p - f.top - f.bottom;
-                  b = d || v ? (0, o.jk)(x, t) : t;
+                  const t = h - f.top - f.bottom;
+                  b = d || x ? (0, o.jk)(w, t) : t;
                 }
-                if (v && !d) {
+                if (x && !d) {
                   const t = (0, o.T9)(f.left, 0),
                     e = (0, o.T9)(f.right, 0),
                     n = (0, o.T9)(f.top, 0),
                     i = (0, o.T9)(f.bottom, 0);
-                  h
+                  m
                     ? (T =
-                        m -
+                        p -
                         2 *
                           (0 !== t || 0 !== e
                             ? t + e
                             : (0, o.T9)(f.left, f.right)))
                     : (b =
-                        p -
+                        h -
                         2 *
                           (0 !== n || 0 !== i
                             ? n + i
@@ -268,7 +353,7 @@
                 }
                 await s({ ...e, availableWidth: T, availableHeight: b });
                 const L = await r.getDimensions(c.floating);
-                return m !== L.width || p !== L.height
+                return p !== L.width || h !== L.height
                   ? { reset: { rects: !0 } }
                   : {};
               },
@@ -277,7 +362,7 @@
         };
     },
     28505: (t, e, n) => {
-      n.d(e, { Ej: () => v, ll: () => w, rD: () => b });
+      n.d(e, { Ej: () => b, UU: () => x, ll: () => v, rD: () => T });
       var o = n(58015),
         i = n(33559),
         r = n(977);
@@ -327,9 +412,9 @@
         })(a, n, i)
           ? f(a)
           : (0, o.Jx)(0);
-        let h = (l.left + d.x) / u.x,
-          m = (l.top + d.y) / u.y,
-          p = l.width / u.x,
+        let m = (l.left + d.x) / u.x,
+          p = (l.top + d.y) / u.y,
+          h = l.width / u.x,
           g = l.height / u.y;
         if (a) {
           const t = (0, r.zk)(a),
@@ -341,21 +426,21 @@
               o = (0, r.L9)(n),
               i = e.left + (n.clientLeft + parseFloat(o.paddingLeft)) * t.x,
               l = e.top + (n.clientTop + parseFloat(o.paddingTop)) * t.y;
-            (h *= t.x),
-              (m *= t.y),
-              (p *= t.x),
+            (m *= t.x),
+              (p *= t.y),
+              (h *= t.x),
               (g *= t.y),
-              (h += i),
-              (m += l),
+              (m += i),
+              (p += l),
               (n = (0, r.zk)(n).frameElement);
           }
         }
-        return (0, o.B1)({ width: p, height: g, x: h, y: m });
+        return (0, o.B1)({ width: h, height: g, x: m, y: p });
       }
       function d(t) {
         return u((0, r.ep)(t)).left + (0, r.CP)(t).scrollLeft;
       }
-      function h(t, e, n) {
+      function m(t, e, n) {
         let i;
         if ("viewport" === e)
           i = (function (t, e) {
@@ -418,14 +503,14 @@
         }
         return (0, o.B1)(i);
       }
-      function m(t, e) {
+      function p(t, e) {
         const n = (0, r.$4)(t);
         return (
           !(n === e || !(0, r.vq)(n) || (0, r.eu)(n)) &&
-          ("fixed" === (0, r.L9)(n).position || m(n, e))
+          ("fixed" === (0, r.L9)(n).position || p(n, e))
         );
       }
-      function p(t, e, n) {
+      function h(t, e, n) {
         const i = (0, r.sb)(e),
           l = (0, r.ep)(e),
           c = "fixed" === n,
@@ -467,7 +552,7 @@
           ? n
           : o || (0, r.gJ)(t) || n;
       }
-      const x = {
+      const w = {
         convertOffsetParentRelativeRectToViewportRelativeRect: function (t) {
           let { rect: e, offsetParent: n, strategy: i } = t;
           const l = (0, r.sb)(n),
@@ -516,7 +601,7 @@
                                 "static" === e.position &&
                                 i &&
                                 ["absolute", "fixed"].includes(i.position)) ||
-                              ((0, r.ZU)(c) && !n && m(t, c))
+                              ((0, r.ZU)(c) && !n && p(t, c))
                         )
                           ? (o = o.filter((t) => t !== c))
                           : (i = e),
@@ -530,7 +615,7 @@
             s = c[0],
             a = c.reduce(
               (t, n) => {
-                const i = h(e, n, l);
+                const i = m(e, n, l);
                 return (
                   (t.top = (0, o.T9)(i.top, t.top)),
                   (t.right = (0, o.jk)(i.right, t.right)),
@@ -539,7 +624,7 @@
                   t
                 );
               },
-              h(e, s, l),
+              m(e, s, l),
             );
           return {
             width: a.right - a.left,
@@ -554,7 +639,7 @@
           const i = this.getOffsetParent || y,
             r = this.getDimensions;
           return {
-            reference: p(e, await i(n), o),
+            reference: h(e, await i(n), o),
             floating: { x: 0, y: 0, ...(await r(n)) },
           };
         },
@@ -571,7 +656,7 @@
           return "rtl" === (0, r.L9)(t).direction;
         },
       };
-      function w(t, e, n, i) {
+      function v(t, e, n, i) {
         void 0 === i && (i = {});
         const {
             ancestorScroll: l = !0,
@@ -580,14 +665,14 @@
             layoutShift: f = "function" == typeof IntersectionObserver,
             animationFrame: d = !1,
           } = i,
-          h = c(t),
-          m = l || s ? [...(h ? (0, r.v9)(h) : []), ...(0, r.v9)(e)] : [];
-        m.forEach((t) => {
+          m = c(t),
+          p = l || s ? [...(m ? (0, r.v9)(m) : []), ...(0, r.v9)(e)] : [];
+        p.forEach((t) => {
           l && t.addEventListener("scroll", n, { passive: !0 }),
             s && t.addEventListener("resize", n);
         });
-        const p =
-          h && f
+        const h =
+          m && f
             ? (function (t, e) {
                 let n,
                   i = null;
@@ -602,96 +687,97 @@
                       left: f,
                       top: u,
                       width: d,
-                      height: h,
+                      height: m,
                     } = t.getBoundingClientRect();
-                    if ((s || e(), !d || !h)) return;
-                    const m = {
+                    if ((s || e(), !d || !m)) return;
+                    const p = {
                       rootMargin:
                         -(0, o.RI)(u) +
                         "px " +
                         -(0, o.RI)(l.clientWidth - (f + d)) +
                         "px " +
-                        -(0, o.RI)(l.clientHeight - (u + h)) +
+                        -(0, o.RI)(l.clientHeight - (u + m)) +
                         "px " +
                         -(0, o.RI)(f) +
                         "px",
                       threshold: (0, o.T9)(0, (0, o.jk)(1, a)) || 1,
                     };
-                    let p = !0;
+                    let h = !0;
                     function g(t) {
                       const e = t[0].intersectionRatio;
                       if (e !== a) {
-                        if (!p) return r();
+                        if (!h) return r();
                         e
                           ? r(!1, e)
                           : (n = setTimeout(() => {
                               r(!1, 1e-7);
                             }, 100));
                       }
-                      p = !1;
+                      h = !1;
                     }
                     try {
                       i = new IntersectionObserver(g, {
-                        ...m,
+                        ...p,
                         root: l.ownerDocument,
                       });
                     } catch (t) {
-                      i = new IntersectionObserver(g, m);
+                      i = new IntersectionObserver(g, p);
                     }
                     i.observe(t);
                   })(!0),
                   c
                 );
-              })(h, n)
+              })(m, n)
             : null;
         let g,
           y = -1,
-          x = null;
+          w = null;
         a &&
-          ((x = new ResizeObserver((t) => {
+          ((w = new ResizeObserver((t) => {
             let [o] = t;
             o &&
-              o.target === h &&
-              x &&
-              (x.unobserve(e),
+              o.target === m &&
+              w &&
+              (w.unobserve(e),
               cancelAnimationFrame(y),
               (y = requestAnimationFrame(() => {
-                x && x.observe(e);
+                w && w.observe(e);
               }))),
               n();
           })),
-          h && !d && x.observe(h),
-          x.observe(e));
-        let w = d ? u(t) : null;
+          m && !d && w.observe(m),
+          w.observe(e));
+        let v = d ? u(t) : null;
         return (
           d &&
             (function e() {
               const o = u(t);
-              !w ||
-                (o.x === w.x &&
-                  o.y === w.y &&
-                  o.width === w.width &&
-                  o.height === w.height) ||
+              !v ||
+                (o.x === v.x &&
+                  o.y === v.y &&
+                  o.width === v.width &&
+                  o.height === v.height) ||
                 n();
-              (w = o), (g = requestAnimationFrame(e));
+              (v = o), (g = requestAnimationFrame(e));
             })(),
           n(),
           () => {
-            m.forEach((t) => {
+            p.forEach((t) => {
               l && t.removeEventListener("scroll", n),
                 s && t.removeEventListener("resize", n);
             }),
-              p && p(),
-              x && x.disconnect(),
-              (x = null),
+              h && h(),
+              w && w.disconnect(),
+              (w = null),
               d && cancelAnimationFrame(g);
           }
         );
       }
-      const v = i.Ej,
-        b = (t, e, n) => {
+      const x = i.UU,
+        b = i.Ej,
+        T = (t, e, n) => {
           const o = new Map(),
-            r = { platform: x, ...n },
+            r = { platform: w, ...n },
             l = { ...r.platform, _c: o };
           return (0, i.rD)(t, e, { ...r, platform: l });
         };
@@ -736,7 +822,7 @@
         );
       }
       function u(t) {
-        const { overflow: e, overflowX: n, overflowY: o, display: i } = x(t);
+        const { overflow: e, overflowX: n, overflowY: o, display: i } = w(t);
         return (
           /auto|scroll|overlay|hidden|clip/.test(e + o + n) &&
           !["inline", "contents"].includes(i)
@@ -745,7 +831,7 @@
       function d(t) {
         return ["table", "td", "th"].includes(i(t));
       }
-      function h(t) {
+      function m(t) {
         return [":popover-open", ":modal"].some((e) => {
           try {
             return t.matches(e);
@@ -754,9 +840,9 @@
           }
         });
       }
-      function m(t) {
+      function p(t) {
         const e = g(),
-          n = s(t) ? x(t) : t;
+          n = s(t) ? w(t) : t;
         return (
           ["transform", "translate", "scale", "rotate", "perspective"].some(
             (t) => !!n[t] && "none" !== n[t],
@@ -777,12 +863,12 @@
           )
         );
       }
-      function p(t) {
-        let e = v(t);
+      function h(t) {
+        let e = x(t);
         for (; a(e) && !y(e); ) {
-          if (m(e)) return e;
-          if (h(e)) return null;
-          e = v(e);
+          if (p(e)) return e;
+          if (m(e)) return null;
+          e = x(e);
         }
         return null;
       }
@@ -795,21 +881,21 @@
       function y(t) {
         return ["html", "body", "#document"].includes(i(t));
       }
-      function x(t) {
+      function w(t) {
         return r(t).getComputedStyle(t);
       }
-      function w(t) {
+      function v(t) {
         return s(t)
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: t.scrollX, scrollTop: t.scrollY };
       }
-      function v(t) {
+      function x(t) {
         if ("html" === i(t)) return t;
         const e = t.assignedSlot || t.parentNode || (f(t) && t.host) || l(t);
         return f(e) ? e.host : e;
       }
       function b(t) {
-        const e = v(t);
+        const e = x(t);
         return y(e)
           ? t.ownerDocument
             ? t.ownerDocument.body
@@ -840,18 +926,18 @@
         return e.concat(i, T(i, [], n));
       }
       n.d(e, {
-        $4: () => v,
-        CP: () => w,
-        L9: () => x,
+        $4: () => x,
+        CP: () => v,
+        L9: () => w,
         Lv: () => d,
         Ng: () => f,
         Tc: () => g,
         ZU: () => u,
         ep: () => l,
         eu: () => y,
-        gJ: () => p,
+        gJ: () => h,
         mq: () => i,
-        sQ: () => m,
+        sQ: () => p,
         sb: () => a,
         v9: () => T,
         vq: () => s,
@@ -860,51 +946,105 @@
     },
     58015: (t, e, n) => {
       n.d(e, {
-        B1: () => p,
-        C0: () => a,
+        B1: () => T,
+        C0: () => u,
         Dz: () => h,
         Jx: () => c,
         LI: () => r,
         RI: () => l,
-        Sg: () => f,
+        Sg: () => d,
         T9: () => i,
-        TV: () => d,
-        _3: () => s,
+        TV: () => p,
+        WJ: () => y,
+        _3: () => f,
+        bV: () => x,
         jk: () => o,
-        nI: () => m,
-        sq: () => u,
+        lP: () => v,
+        nI: () => b,
+        sq: () => m,
+        w7: () => g,
       });
       const o = Math.min,
         i = Math.max,
         r = Math.round,
         l = Math.floor,
-        c = (t) => ({ x: t, y: t });
-      function s(t, e) {
+        c = (t) => ({ x: t, y: t }),
+        s = { left: "right", right: "left", bottom: "top", top: "bottom" },
+        a = { start: "end", end: "start" };
+      function f(t, e) {
         return "function" == typeof t ? t(e) : t;
       }
-      function a(t) {
+      function u(t) {
         return t.split("-")[0];
       }
-      function f(t) {
+      function d(t) {
         return t.split("-")[1];
       }
-      function u(t) {
+      function m(t) {
         return "y" === t ? "height" : "width";
       }
-      function d(t) {
-        return ["top", "bottom"].includes(a(t)) ? "y" : "x";
+      function p(t) {
+        return ["top", "bottom"].includes(u(t)) ? "y" : "x";
       }
       function h(t) {
-        return "x" === d(t) ? "y" : "x";
+        return "x" === p(t) ? "y" : "x";
       }
-      function m(t) {
+      function g(t, e, n) {
+        void 0 === n && (n = !1);
+        const o = d(t),
+          i = h(t),
+          r = m(i);
+        let l =
+          "x" === i
+            ? o === (n ? "end" : "start")
+              ? "right"
+              : "left"
+            : "start" === o
+              ? "bottom"
+              : "top";
+        return e.reference[r] > e.floating[r] && (l = x(l)), [l, x(l)];
+      }
+      function y(t) {
+        const e = x(t);
+        return [w(t), e, w(e)];
+      }
+      function w(t) {
+        return t.replace(/start|end/g, (t) => a[t]);
+      }
+      function v(t, e, n, o) {
+        const i = d(t);
+        let r = (function (t, e, n) {
+          const o = ["left", "right"],
+            i = ["right", "left"],
+            r = ["top", "bottom"],
+            l = ["bottom", "top"];
+          switch (t) {
+            case "top":
+            case "bottom":
+              return n ? (e ? i : o) : e ? o : i;
+            case "left":
+            case "right":
+              return e ? r : l;
+            default:
+              return [];
+          }
+        })(u(t), "start" === n, o);
+        return (
+          i && ((r = r.map((t) => t + "-" + i)), e && (r = r.concat(r.map(w)))),
+          r
+        );
+      }
+      function x(t) {
+        return t.replace(/left|right|bottom|top/g, (t) => s[t]);
+      }
+      function b(t) {
         return "number" != typeof t
           ? (function (t) {
               return { top: 0, right: 0, bottom: 0, left: 0, ...t };
             })(t)
           : { top: t, right: t, bottom: t, left: t };
       }
-      function p(t) {
+      function T(t) {
         const { x: e, y: n, width: o, height: i } = t;
         return {
           width: o,

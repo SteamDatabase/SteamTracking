@@ -23,6 +23,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        FilterBorder: "_3xFYpKNlOZ6xjQ529ZgRbr",
+        Top: "_310cGk80jWCZr6LxeueX_5",
+        Bottom: "nLYMJhpffeKLN_8VkTcD_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -411,6 +418,7 @@
         Icon: "_1t5uZMQ4sN1vXrw3I6-KY6",
         BetaLink: "_3PoANvDgGaHNvlIXvT7cEA",
         TruncatingPortraitRow: "_1nAGBiWu7n1ggCy-E5i035",
+        Compact: "_2-ehABIcetU1glyLdFi0tY",
         NoFilters: "_3g3vv3kHTPCWqMi7peBikQ",
         SearchSuggestion: "_2gmdvGWIS321h7LVeTHB4w",
       };
@@ -1417,11 +1425,13 @@
               size: _,
               beforeContent: _,
               afterContent: _,
+              inputRef: _,
               ..._
             } = _;
           return _.createElement(
             _,
             {
+              ref: _,
               ...__webpack_require__,
               variant: _,
               size: _,
@@ -1518,21 +1528,24 @@
       function _(_) {
         const { gutter: _ = 0 } = _;
         return [
+          (0, _._)(),
           (0, _._)(2),
           (0, _._)({
             apply: (_) => {
               const { rects: _, elements: _, availableHeight: _ } = _,
+                _ =
+                  "number" == typeof _
+                    ? _ - _ + "px"
+                    : `calc( ${_}px - var(--spacing-${_}) )`,
                 _ = {
-                  maxHeight:
-                    "number" == typeof _
-                      ? _ - _ + "px"
-                      : `calc( ${_}px - var(--spacing-${_}) )`,
-                  overflowY: "auto",
+                  maxHeight: _,
                   boxSizing: "border-box",
                   zIndex: "1",
                 };
-              "target" === _.width && (_.width = `${_.reference.width}px`),
-                Object.assign(_.floating.style, _);
+              _.scroll && (_.overflowY = "auto"),
+                "target" === _.width && (_.width = `${_.reference.width}px`),
+                Object.assign(_.floating.style, _),
+                _.floating.style.setProperty("--popover-max-height", _);
             },
           }),
         ];
@@ -1867,6 +1880,7 @@
                     focus: !0,
                   },
                   role: "combobox",
+                  scroll: !0,
                 });
               return _.createElement(
                 _.Provider,
@@ -2198,7 +2212,9 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             refPopover: _,
@@ -2210,36 +2226,60 @@
             setOpen: _,
             filterPlaceholder: _,
             onIndexSelected: _,
+            refScrollElement: _,
           } = _("<Combobox.Options>"),
           _ = (_) => {
             "Enter" === _.key &&
               null !== _ &&
               (_(_), _(null), _(!1), _.preventDefault(), _.stopPropagation());
           },
-          _ = _.startsWith("top");
+          _ = _.startsWith("top"),
+          _ = _.createElement(
+            _._,
+            {
+              overflow: "auto",
+              ref: _,
+            },
+            _.children,
+          );
         return _.createElement(
           _.Positioner,
           {
             ref: _,
           },
-          _ && _.children,
-          _.createElement(_, {
-            margin: "3",
-            variant: "inset",
-            radius: "sm",
-            value: __webpack_require__,
-            onTextChange: _,
-            onKeyDown: _,
-            onKeyDownCapture: _,
-            placeholder: _,
-            ref: (_) => {
-              _ &&
-                _.focus({
-                  preventScroll: !0,
-                });
+          _.createElement(
+            _,
+            {
+              direction: "column",
+              maxHeight: "var(--popover-max-height)",
             },
-          }),
-          !_ && _.children,
+            _ && _,
+            _.createElement(
+              _._,
+              {
+                flexShrink: "0",
+                className: (0, _._)(_.FilterBorder, _ ? _.Top : _.Bottom),
+              },
+              _.createElement(_, {
+                margin: "3",
+                variant: "inset",
+                radius: "sm",
+                value: __webpack_require__,
+                onTextChange: _,
+                onKeyDown: _,
+                onKeyDownCapture: _,
+                placeholder: _,
+                inputRef: (_) => {
+                  _ &&
+                    _.focus({
+                      preventScroll: !0,
+                    });
+                },
+                autoComplete: "off",
+              }),
+            ),
+            !_ && _,
+          ),
         );
       }
       function _(_) {
@@ -2327,6 +2367,7 @@
             [_, _] = (0, _.useState)(void 0);
           (0, _.useEffect)(() => _(void 0), [__webpack_require__.bOpen]);
           const _ = (0, _.useRef)(null),
+            _ = (0, _.useRef)(null),
             _ = (0, _.useMemo)(
               () =>
                 __webpack_require__.rgFilteredOptions.findIndex(
@@ -2354,6 +2395,7 @@
                 virtualItemFocus: !0,
               },
               role: "combobox",
+              scroll: !1,
             }),
             _ = {
               ...__webpack_require__,
@@ -2361,6 +2403,7 @@
               focusedValue: _,
               onFocusChange: _,
               refPopover: _,
+              refScrollElement: _,
               clearable: _,
               setOpen: (_) => {
                 _ &&
@@ -2399,7 +2442,11 @@
               overscan: _ = 5,
               ..._
             } = _,
-            { bOpen: _, refPopover: _ } = _("<ComboboxVirtualizedOptions>"),
+            {
+              bOpen: _,
+              refPopover: _,
+              refScrollElement: _,
+            } = _("<ComboboxVirtualizedOptions>"),
             _ = (0, _._)({
               count: _ && _.current ? _.length : 0,
               getScrollElement: () => _.current,
@@ -2441,7 +2488,11 @@
           );
         },
         Trigger: function (_) {
-          const { children: _, beforeContent: __webpack_require__ } = _,
+          const {
+              children: _,
+              beforeContent: __webpack_require__,
+              render: _,
+            } = _,
             {
               bOpen: _,
               setOpen: _,
@@ -2461,6 +2512,10 @@
               popoverPlacement: _,
               ..._
             } = _("<ComboboxTrigger>"),
+            _ = {
+              tabIndex: 0,
+              children: _,
+            },
             _ =
               _ && _
                 ? _.createElement(_, {
@@ -2470,23 +2525,21 @@
                     cursor: "pointer",
                     hitSlop: !0,
                   })
-                : _.createElement(_, null);
-          return _.createElement(
-            _.Anchor,
-            null,
-            _.createElement(
+                : _.createElement(_, null),
+            _ = _(
               _,
-              {
+              _.createElement(_, {
                 beforeContent: __webpack_require__,
                 afterContent: _,
                 hasValue: !!_,
                 cursor: "pointer",
                 tabIndex: 0,
                 ..._,
-              },
+              }),
               _,
-            ),
-          );
+              void 0,
+            );
+          return _.createElement(_.Anchor, null, _);
         },
         DefaultOptionFilter: _,
         Value: function (_) {
@@ -2720,6 +2773,7 @@
                 typeahead: !0,
               },
               role: "select",
+              scroll: !0,
             });
           return _.createElement(
             _.Provider,
@@ -2864,6 +2918,19 @@
         return _ || console.error(`${_} must be used within a <Select>!`), _;
       }
       var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          _,
+          {
+            ..._,
+            viewBoxSize: 16,
+          },
+          _.createElement("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        );
+      }
       const _ = (0, _.forwardRef)(function (_, _) {
         const {
             checked: __webpack_require__,
@@ -2916,20 +2983,6 @@
           },
           _.createElement("path", {
             _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
             fill: "currentColor",
           }),
         );
@@ -5275,6 +5328,15 @@
         );
       });
       function _(_) {
+        return _.rgOptions.length > 15
+          ? _.createElement(_, {
+              ..._,
+            })
+          : _.createElement(_, {
+              ..._,
+            });
+      }
+      function _(_) {
         const {
             rgOptions: _,
             strLabel: __webpack_require__,
@@ -5353,6 +5415,107 @@
             _.Options,
             null,
             _.map((_) =>
+              _.createElement(
+                _.Option,
+                {
+                  value: _,
+                  key: _(_),
+                },
+                _
+                  ? _.strLabel
+                  : _.createElement(
+                      _,
+                      {
+                        align: "center",
+                        gap: "1",
+                      },
+                      _.createElement(_, null),
+                      (0, _._)("#AdvancedSearch_AppSelect_Clear"),
+                    ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            rgOptions: _,
+            strLabel: __webpack_require__,
+            value: _ = {},
+            onChange: _,
+            img: _,
+            toggle: _,
+            hasTypeSelected: _,
+          } = _,
+          _ = (_) => (_ ? `${_.facet}_${_.tag}` : "clear"),
+          _ = (0, _.useMemo)(() => {
+            const _ = _.find((_) => _[_.facet] && _[_.facet][_.tag]);
+            if (_) return _;
+          }, [_, _]);
+        let _ = _;
+        if ((null == _ ? void 0 : _.tag) && _.tag.startsWith("weapon_")) {
+          const _ = _.tag.slice(7);
+          _ in _ && (_ = _[_]);
+        }
+        const _ = _({
+            rgOptions: _,
+            selectedValue: _,
+            onSelectionChange: (_) => _(_, _),
+            filterPlaceholder: "Filter...",
+          }),
+          _ = _
+            ? () => {
+                _(_, _ ? void 0 : _);
+              }
+            : void 0;
+        return _.createElement(
+          _.Root,
+          {
+            state: _,
+            variant: "highlight",
+            radius: "sm",
+          },
+          _.createElement(
+            _.Trigger,
+            {
+              render: _.createElement(_, {
+                img: _,
+                active: !!_,
+                muted: _ && !_,
+                onToggle: _,
+                onClear: () => _.onSelectionChange(void 0),
+              }),
+            },
+            !_ && _.createElement(_.Value, null, __webpack_require__),
+            !!_ &&
+              _.createElement(
+                _.Value,
+                null,
+                __webpack_require__,
+                ": ",
+                _.createElement(
+                  _,
+                  {
+                    color: "accent",
+                    secondary: !0,
+                  },
+                  _.createElement(
+                    _,
+                    {
+                      inline: !0,
+                      align: "center",
+                      gap: "2",
+                    },
+                    _.strLabel,
+                    _ && _.createElement(_, null),
+                  ),
+                ),
+              ),
+          ),
+          _.createElement(
+            _.Options,
+            null,
+            _.rgFilteredOptions.map((_) =>
               _.createElement(
                 _.Option,
                 {
@@ -6234,6 +6397,7 @@
             onSelect: _,
             loading: _,
           } = _,
+          _ = !(0, _._)("sm"),
           _ = (0, _.useMemo)(
             () =>
               Array.isArray(__webpack_require__)
@@ -6279,7 +6443,7 @@
           _.createElement(
             "div",
             {
-              className: _.TruncatingPortraitRow,
+              className: (0, _._)(_.TruncatingPortraitRow, _ && _.Compact),
             },
             !_ &&
               _.map((_) =>
