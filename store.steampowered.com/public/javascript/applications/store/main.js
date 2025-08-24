@@ -64963,7 +64963,7 @@
       }
       function rr(e = !0) {
         (0, wt.i4)(
-          document?.documentElement,
+          window.document?.documentElement,
           e ? Gt.SuppressScrollOnBody : void 0,
         );
       }

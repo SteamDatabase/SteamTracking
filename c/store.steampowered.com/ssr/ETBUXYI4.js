@@ -1,42 +1,37 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -56,56 +51,61 @@ import {
 } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -5866,7 +5866,7 @@ function _(_) {
   return (0, _.useMemo)(() => _(_, _), [_, _]);
 }
 function _(_ = !0) {
-  _(document?.documentElement, _ ? _ : void 0);
+  _(window.document?.documentElement, _ ? _ : void 0);
 }
 var _ = _(_(), 1),
   _ = {

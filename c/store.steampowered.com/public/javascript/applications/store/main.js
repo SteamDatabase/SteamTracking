@@ -71816,7 +71816,7 @@
       }
       function _(_ = !0) {
         (0, _._)(
-          document?.documentElement,
+          window.document?.documentElement,
           _ ? _.SuppressScrollOnBody : void 0,
         );
       }
