@@ -966,7 +966,7 @@
     "StoreAdmin_ExtraAssetUpload_Replacement": "Replacement",
     "StoreAdmin_ExtraAssetUpload_EnterAName": "Enter a name for this file",
     "StoreAdmin_ExtraAssetUpload_UploadAndReplace": "Upload and Replace",
-    "StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename": "This filename will be used: %1$s",
+    "StoreAdmin_ExtraAssetUpload_WillBeSavedAsFilename": "This file name will be used: %1$s",
     "StoreAdmin_ExtraAssetUpload_LocalizeGroup": "%2$s (Group of %1$s)",
     "StoreAdmin_ExtraAssetUpload_LocalizeGroup_Plural": "%2$s (Group of %1$s)",
     "StoreAdmin_ExtraAssetUpload_UnknownUploadFailure": "(additional info)",

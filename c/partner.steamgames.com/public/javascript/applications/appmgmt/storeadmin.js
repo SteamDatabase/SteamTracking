@@ -1155,7 +1155,10 @@
           _ = _.useCallback(() => {
             _(), _();
           }, [_, _]),
-          _ = _.useMemo(() => _.find((_) => (0, _._)(_) === _), [_, _]),
+          _ = _.useMemo(
+            () => _.find((_) => (0, _._)(_).toLowerCase() === _.toLowerCase()),
+            [_, _],
+          ),
           _ = _ ? (0, _._)(_) : null,
           { elLocalizedImageGroupDialog: _, elLocalizedImageGroupControl: _ } =
             _(_, _, _),
@@ -2053,9 +2056,9 @@
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
         m_rgCurrentImageOptionKey = void 0;
-        constructor(_, _, _, _, _) {
+        constructor(_, _, _, _, _, _) {
           const _ = (0, _._)(_);
-          super(_, _.name, _, _.src, _),
+          super(_, _, _, _.src, _),
             (0, _._)(this),
             (this.m_bLockedToSpecificAsset = _),
             (this.m_fnGetImageOptions = _);
@@ -2121,9 +2124,7 @@
         GetResizeDimension() {}
         get ImageOptions() {
           const _ = this.filename.lastIndexOf("."),
-            _ = (
-              -1 != _ ? this.filename.slice(0, _) : this.filename
-            ).toLowerCase(),
+            _ = -1 != _ ? this.filename.slice(0, _) : this.filename,
             _ = this.m_fnGetImageOptions();
           return (
             this.m_bLockedToSpecificAsset ||
@@ -2197,17 +2198,19 @@
         m_strBeginUploadUrl;
         m_strCheckStatusUrl;
         m_strCompleteUploadUrl;
+        m_regexInvalidFilenameCharacters;
         m_filesToUpload = _._.array();
         m_onlyAssetGroup = void 0;
         m_rgExistingAssetGroups = void 0;
         m_rgImageSizes = void 0;
-        constructor(_, _, _, _) {
+        constructor(_, _, _, _, _) {
           super(),
             (0, _._)(this),
             (this.m_strGetExtraAssetsUrl = _),
             (this.m_strBeginUploadUrl = _),
             (this.m_strCheckStatusUrl = _),
-            (this.m_strCompleteUploadUrl = _);
+            (this.m_strCompleteUploadUrl = _),
+            (this.m_regexInvalidFilenameCharacters = _);
         }
         GetErrorsFromErrorResponse(_) {
           let _;
@@ -2266,13 +2269,17 @@
           if ((0, _._)(_.type) || (0, _._)(_.type)) {
             const _ = await (0, _._)(_, (0, _._)(_.type));
             if (_) {
-              const _ = new _(
-                !this.m_onlyAssetGroup,
-                () => this.GetImageOptions(),
-                _,
-                _,
-                _,
-              );
+              const _ = _.name
+                  .toLowerCase()
+                  .replace(this.m_regexInvalidFilenameCharacters, "_"),
+                _ = new _(
+                  !this.m_onlyAssetGroup,
+                  () => this.GetImageOptions(),
+                  _,
+                  _,
+                  _,
+                  _,
+                );
               return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
             }
           } else
@@ -2680,8 +2687,9 @@
         const _ = (0, _._)("ajaxgetextraassets"),
           _ = (0, _._)("ajaxbeginuploadassetasync"),
           _ = (0, _._)("ajaxcheckuploadassetsstatus"),
-          _ = (0, _._)("ajaxtrytocompleteuploadasset");
-        return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
+          _ = (0, _._)("ajaxtrytocompleteuploadasset"),
+          { regexInvalidFilenameCharacters: _ } = (0, _._)();
+        return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "m_onlyAssetGroup", void 0),
@@ -5976,7 +5984,7 @@
         const { upload: _, isUploading: __webpack_require__, doUpload: _ } = _,
           { file: _, onCancel: _ } = _,
           { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = _(),
-          _ = _.useCallback((_) => _?.replace(_, "_") ?? "", [_]),
+          _ = _.useCallback((_) => _?.replace(_, "_").toLowerCase() ?? "", [_]),
           { baseFilename: _, language: _ } = (0, _._)(_.name, -1),
           [_, _] = _.useState(() => _(_)),
           _ = _.useMemo(() => _(_), [_, _]),
