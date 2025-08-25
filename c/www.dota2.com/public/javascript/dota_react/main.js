@@ -20368,7 +20368,10 @@
             [_, _] = _.useState(!1),
             _ = (0, _._)(_),
             _ = (0, _._)(_, _),
-            _ = _.event == _._.INTERNATIONAL_2024,
+            _ =
+              _.event == _._.INTERNATIONAL_2023 ||
+              _.event == _._.INTERNATIONAL_2024 ||
+              _.event == _._.INTERNATIONAL_2025,
             _ = _ && !_.is_event_upcoming;
           return _.createElement(
             "div",
@@ -34746,9 +34749,555 @@
               ),
         ),
         _ = (0, _._)(() =>
+          _() != _._.INTERNATIONAL_2025
+            ? null
+            : _.createElement(
+                "div",
+                {
+                  className: _().InternationalRulesPage,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}backgrounds/bg_granite_texture_sched.jpg )`,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Header,
+                    style: {
+                      backgroundImage: `url( ${_._.IMG_URL}dpc/top_block.jpg )`,
+                    },
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Title,
+                    },
+                    `${(0, _._)("#dpc_event_ti14")}`,
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Content,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().SubHeader,
+                      },
+                      (0, _._)("#ti14_sp_rules"),
+                    ),
+                    _.createElement(
+                      "ul",
+                      null,
+                      _.createElement(
+                        "li",
+                        null,
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Description,
+                          },
+                          (0, _._)("#ti14_best_of_three"),
+                        ),
+                      ),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo3_1"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo3_2"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo3_3"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo3_4"),
+                          ),
+                        ),
+                      ),
+                      _.createElement("br", null),
+                      _.createElement(
+                        "li",
+                        null,
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Description,
+                          },
+                          (0, _._)("#ti14_best_of_five"),
+                        ),
+                      ),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo5_1"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo5_2"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo5_3"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo5_4"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_sp_rules_bo5_5"),
+                          ),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().SubHeader,
+                      },
+                      (0, _._)("#ti14_swiss_rules"),
+                    ),
+                    _.createElement(
+                      "ul",
+                      null,
+                      _.createElement(
+                        "li",
+                        null,
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Description,
+                          },
+                          (0, _._)("#ti14_swiss_rules1"),
+                        ),
+                      ),
+                      _.createElement(
+                        "ol",
+                        null,
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules1_1"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules1_2"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules1_3"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules1_4"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules1_5"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules1_6"),
+                          ),
+                        ),
+                      ),
+                      _.createElement("br", null),
+                      _.createElement(
+                        "li",
+                        null,
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Description,
+                          },
+                          (0, _._)("#ti14_swiss_rules2"),
+                        ),
+                      ),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules2_1"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules2_2"),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules2_3"),
+                          ),
+                        ),
+                      ),
+                      _.createElement("br", null),
+                      _.createElement(
+                        "li",
+                        null,
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Description,
+                          },
+                          (0, _._)("#ti14_swiss_rules3"),
+                        ),
+                      ),
+                      _.createElement(
+                        "ul",
+                        null,
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules3_1"),
+                          ),
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_1_1"),
+                            ),
+                          ),
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_1_2"),
+                            ),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules3_2"),
+                          ),
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_2_1"),
+                            ),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules3_3"),
+                          ),
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_3_1"),
+                            ),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules3_4"),
+                          ),
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_4_1"),
+                            ),
+                          ),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules3_5"),
+                          ),
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_5_1"),
+                            ),
+                          ),
+                        ),
+                        _.createElement("br", null),
+                        _.createElement(
+                          "li",
+                          null,
+                          _.createElement(
+                            "div",
+                            {
+                              className: _().Description,
+                            },
+                            (0, _._)("#ti14_swiss_rules3_6"),
+                          ),
+                        ),
+                        _.createElement(
+                          "ul",
+                          null,
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_6_1"),
+                            ),
+                          ),
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_6_2"),
+                            ),
+                          ),
+                          _.createElement(
+                            "li",
+                            null,
+                            _.createElement(
+                              "div",
+                              {
+                                className: _().Description,
+                              },
+                              (0, _._)("#ti14_swiss_rules3_6_3"),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().SubHeader,
+                      },
+                      (0, _._)("#ti14_seeding"),
+                    ),
+                    _.createElement(
+                      "ul",
+                      null,
+                      _.createElement(
+                        "li",
+                        null,
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().Description,
+                          },
+                          (0, _._)("#ti14_seeding_1"),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+        ),
+        _ = (0, _._)(() =>
           _.createElement(
             _.Fragment,
             null,
+            _.createElement(_, null),
             _.createElement(_, null),
             _.createElement(_, null),
           ),
