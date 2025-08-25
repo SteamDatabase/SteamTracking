@@ -35250,17 +35250,6 @@
                               {
                                 className: _().Description,
                               },
-                              (0, _._)("#ti14_swiss_rules3_6_2"),
-                            ),
-                          ),
-                          _.createElement(
-                            "li",
-                            null,
-                            _.createElement(
-                              "div",
-                              {
-                                className: _().Description,
-                              },
                               (0, _._)("#ti14_swiss_rules3_6_3"),
                             ),
                           ),

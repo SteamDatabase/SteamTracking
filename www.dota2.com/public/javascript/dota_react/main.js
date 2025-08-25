@@ -30727,15 +30727,6 @@
                             s.createElement(
                               "div",
                               { className: pi().Description },
-                              (0, B.Wn)("#ti14_swiss_rules3_6_2"),
-                            ),
-                          ),
-                          s.createElement(
-                            "li",
-                            null,
-                            s.createElement(
-                              "div",
-                              { className: pi().Description },
                               (0, B.Wn)("#ti14_swiss_rules3_6_3"),
                             ),
                           ),
