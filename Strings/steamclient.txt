@@ -6816,8 +6816,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/applicationmanager.cpp
 /data/src/clientdll/applicationmanager.h
 /data/src/clientdll/autocloud.cpp
-/data/src/clientdll/autocloud.cpp:1227
-/data/src/clientdll/autocloud.cpp:1243
+/data/src/clientdll/autocloud.cpp:1235
+/data/src/clientdll/autocloud.cpp:1251
 /data/src/clientdll/baseuser.cpp
 /data/src/clientdll/baseuser.h
 /data/src/clientdll/broadcastupload.cpp
@@ -15713,7 +15713,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42
+;MO42@
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -42058,6 +42058,7 @@ auto
 auto-negotiate
 auto:
 auto_fade_enabled
+autocloudpreservefilesingameinstall
 autoconnect
 autoip-error
 autoip-failed
@@ -50885,9 +50886,9 @@ low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1724
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1929
 low-pri yield - /data/src/clientdll/appdatacache.cpp:870
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
-low-pri yield - /data/src/clientdll/autocloud.cpp:637
-low-pri yield - /data/src/clientdll/autocloud.cpp:812
-low-pri yield - /data/src/clientdll/autocloud.cpp:902
+low-pri yield - /data/src/clientdll/autocloud.cpp:645
+low-pri yield - /data/src/clientdll/autocloud.cpp:820
+low-pri yield - /data/src/clientdll/autocloud.cpp:910
 low-pri yield - /data/src/clientdll/clientjob.cpp:435
 low-pri yield - /data/src/clientdll/clientjob.cpp:466
 low-pri yield - /data/src/clientdll/clientjob.cpp:775
@@ -58171,7 +58172,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 22 2025 21:52:01
+steam Aug 26 2025 17:31:44
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

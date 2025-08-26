@@ -45061,7 +45061,8 @@
                   return "window" === e ? o.g.window : e;
                 })(n);
               for (var r = this._ref; r.parentNode; ) {
-                if ((r = r.parentNode) === document.body) return window;
+                if ("BODY" === (r = r.parentNode).tagName)
+                  return r.ownerDocument.defaultView;
                 var i = window.getComputedStyle(r),
                   p =
                     (t
@@ -45150,8 +45151,10 @@
                     ? this.scrollableAncestor.offsetWidth
                     : this.scrollableAncestor.offsetHeight),
                   (t = n
-                    ? this.scrollableAncestor.getBoundingClientRect().left
-                    : this.scrollableAncestor.getBoundingClientRect().top));
+                    ? (this.scrollableAncestor.getBoundingClientRect?.().left ??
+                      0)
+                    : (this.scrollableAncestor.getBoundingClientRect?.().top ??
+                      0)));
               var b = this.props,
                 z = b.bottomOffset;
               return {
