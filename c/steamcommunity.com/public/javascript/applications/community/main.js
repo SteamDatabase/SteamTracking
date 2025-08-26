@@ -3,6 +3,7 @@
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 1602],
         "./main_brazilian.json": [52333, 2446],
         "./main_bulgarian.json": [21334, 3589],
         "./main_czech.json": [26312, 9515],
@@ -50,6 +51,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 1602],
         "./main_brazilian.json": [52333, 2446],
         "./main_bulgarian.json": [21334, 3589],
         "./main_czech.json": [26312, 9515],
@@ -133,6 +135,15 @@
         BottomButtons: "_2g3WvB3F6WH2CPUBwVzny3",
         ReportAs: "_22Uov0GdUIzithIQM81W9o",
         DetailedReasonTextArea: "_1PUlL2I2RWFcIXXAWteNhd",
+        ChatReportSubmittedBody: "_22q2AtdL5ktX5sVuU9sItK",
+        ChatReportCallToAction: "_31M5aFIazQfIuJ0bCTtsrT",
+        LandingDescriptionCtn: "_2rXtBycRWDbqrLMCjuXhzg",
+        AccountSafetyCtn: "_3BVlfXvJszBFnVGme4yTnV",
+        Icon: "_29JC6Kep6vPIPTUmC8xg-W",
+        Explanation: "_1kX3tAola58cb6bG5wU46d",
+        ExplanationHeader: "_1mtADWws8sX_GRUMKT9h6b",
+        ExplanationBody: "_3eWesiClfi8If1bY0SVd1P",
+        ExplanationMoreInfo: "_1IR8K2Mmix7NIM5w8hdbDB",
       };
     },
     chunkid: (module) => {
@@ -646,6 +657,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./sales_arabic.json": [38822, 3003],
         "./sales_brazilian.json": [5856, 537],
         "./sales_bulgarian.json": [76671, 6466],
         "./sales_czech.json": [15237, 1880],
@@ -693,6 +705,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./sales_arabic.json": [38822, 3003],
         "./sales_brazilian.json": [5856, 537],
         "./sales_bulgarian.json": [76671, 6466],
         "./sales_czech.json": [15237, 1880],
@@ -2357,7 +2370,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6548,6 +6561,9 @@
           return "CContentModeration_GetContentReportSubjectGroup_Response";
         }
       }
+      function _(_) {
+        return !!_ && "value" in _;
+      }
       !(function (_) {
         (_.CreateContentReport = function (_, _) {
           return _.SendMsg(
@@ -6731,7 +6747,225 @@
             );
           });
       })(_ || (_ = {}));
-      const _ = new Map();
+      const _ = [
+        {
+          strLocToken: "#ContentReportReasonCategory_Harassment",
+          children: [
+            {
+              value: 3,
+            },
+            {
+              value: 4,
+            },
+            {
+              value: 5,
+            },
+            {
+              value: 6,
+            },
+            {
+              value: 7,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_ViolenceAndSelfHarm",
+          children: [
+            {
+              value: 8,
+            },
+            {
+              value: 9,
+            },
+            {
+              value: 10,
+            },
+            {
+              value: 11,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_ScamsAndTheft",
+          children: [
+            {
+              value: 12,
+            },
+            {
+              value: 13,
+            },
+            {
+              value: 14,
+            },
+            {
+              value: 15,
+            },
+            {
+              value: 16,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_Terrorism",
+          children: [
+            {
+              value: 17,
+            },
+            {
+              value: 18,
+            },
+            {
+              value: 19,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_Abusive",
+          children: [
+            {
+              value: 20,
+            },
+            {
+              value: 21,
+            },
+            {
+              value: 22,
+            },
+            {
+              value: 23,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_Disruptive",
+          children: [
+            {
+              value: 24,
+            },
+            {
+              value: 25,
+            },
+            {
+              value: 26,
+            },
+            {
+              value: 27,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_Offtopic",
+          children: [
+            {
+              value: 28,
+            },
+            {
+              value: 29,
+            },
+            {
+              value: 30,
+            },
+            {
+              value: 31,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_CSAM",
+          children: [
+            {
+              value: 32,
+            },
+            {
+              value: 33,
+            },
+            {
+              value: 34,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_NudityOrSexualContent",
+          children: [
+            {
+              value: 35,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_Nonconsensual",
+          children: [
+            {
+              value: 36,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_Commercial",
+          children: [
+            {
+              value: 37,
+            },
+            {
+              value: 38,
+            },
+            {
+              value: 39,
+            },
+            {
+              value: 40,
+            },
+            {
+              value: 41,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_Privacy",
+          children: [
+            {
+              value: 47,
+            },
+            {
+              value: 48,
+            },
+            {
+              value: 49,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_ReviewManipulation",
+          children: [
+            {
+              value: 42,
+            },
+          ],
+        },
+        {
+          strLocToken: "#ContentReportReasonCategory_ConsumerInformation",
+          children: [
+            {
+              value: 43,
+            },
+            {
+              value: 44,
+            },
+            {
+              value: 45,
+            },
+            {
+              value: 46,
+            },
+          ],
+        },
+      ];
+      function _(_, _) {
+        if (!_ || 0 === _.size) return !1;
+        if (_(_)) return _.has(_.value);
+        for (const _ of _.children) if (!_(_, _)) return !1;
+        return !0;
+      }
       function _(_) {
         switch (_) {
           case 0:
@@ -18356,40 +18590,6 @@
           return "CChatUsability_ClientUsabilityMetrics_Notification_Metrics";
         }
       }
-      function _(_) {
-        const _ = (function (_, _, _, _) {
-            const _ = (0, _._)();
-            return (0, _._)({
-              mutationKey: ["report_forum_post", _, _, _, _],
-              mutationFn: async (_) => {
-                const _ = _._.Init(_);
-                _.Body().set_steamid(_),
-                  _.Body().set_gidforum(_),
-                  _.Body().set_gidtopic(_),
-                  _.Body().set_gidcomment(_),
-                  _.Body().set_report(_.text),
-                  _.Body().set_report_reason(_.reason);
-                const _ = await _.ReportPost(_, _);
-                if (1 !== _.GetEResult()) throw new Error(_.GetErrorMessage());
-              },
-            });
-          })(_.clanSteamId, _.gidForum, _.gidTopic, _.gidComment),
-          [__webpack_require__, _] = (0, _.useState)(!1);
-        (0, _.useEffect)(() => {
-          document.getElementById(_.anchorId).onclick = () => _(!0);
-        });
-        const _ = new Set([42]);
-        return _.createElement(_, {
-          reportSubjectMutation: _,
-          subjectType: 1,
-          subjectGroupId: _.gidTopic,
-          subjectId: _.gidComment,
-          showDialog: __webpack_require__,
-          setShowDialog: _,
-          excludedReasons: _,
-          refreshOnSubmit: !0,
-        });
-      }
       !(function (_) {
         _.RequestFriendPersonaStates = function (_, _) {
           return _.SendMsg(
@@ -18931,77 +19131,83 @@
             request: _,
           };
         })(_ || (_ = {}));
-      new Set([29, 30, 31, 42, 46, 47, 48, 49, 43, 44, 45]);
+      __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)(0),
-          [_, _] = (0, _.useState)("category"),
+        const _ = (function (_, _, _, _) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              mutationKey: ["report_forum_post", _, _, _, _],
+              mutationFn: async (_) => {
+                const _ = _._.Init(_);
+                _.Body().set_steamid(_),
+                  _.Body().set_gidforum(_),
+                  _.Body().set_gidtopic(_),
+                  _.Body().set_gidcomment(_),
+                  _.Body().set_report(_.text),
+                  _.Body().set_report_reason(_.reason);
+                const _ = await _.ReportPost(_, _);
+                if (1 !== _.GetEResult()) throw new Error(_.GetErrorMessage());
+              },
+            });
+          })(_.clanSteamId, _.gidForum, _.gidTopic, _.gidComment),
+          [__webpack_require__, _] = (0, _.useState)(!1);
+        (0, _.useEffect)(() => {
+          document.getElementById(_.anchorId).onclick = () => _(!0);
+        });
+        const _ = new Set([42]);
+        return _.createElement(_, {
+          reportSubjectMutation: _,
+          subjectType: 1,
+          subjectGroupId: _.gidTopic,
+          subjectId: _.gidComment,
+          showDialog: __webpack_require__,
+          setShowDialog: _,
+          excludedReasons: _,
+        });
+      }
+      new Set([
+        29, 28, 30, 31, 42, 46, 47, 48, 49, 43, 44, 45, 24, 25, 26, 27, 37, 38,
+        39, 40, 41,
+      ]);
+      function _(_) {
+        var _;
+        const [__webpack_require__, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)("reason"),
           _ = (0, _.useRef)(void 0),
-          _ = _.reportSubjectMutation,
-          _ = new Set(),
-          _ = [],
-          _ =
-            (0 === _.size &&
-              (_.set(
-                "#ContentReportReasonCategory_Harassment",
-                [3, 4, 5, 6, 7],
-              ),
-              _.set(
-                "#ContentReportReasonCategory_ViolenceAndSelfHarm",
-                [8, 9, 10, 11],
-              ),
-              _.set(
-                "#ContentReportReasonCategory_ScamsAndTheft",
-                [12, 13, 14, 15, 16],
-              ),
-              _.set("#ContentReportReasonCategory_Terrorism", [17, 18, 19]),
-              _.set("#ContentReportReasonCategory_Abusive", [20, 21, 22, 23]),
-              _.set(
-                "#ContentReportReasonCategory_Disruptive",
-                [24, 25, 26, 27],
-              ),
-              _.set("#ContentReportReasonCategory_Offtopic", [28, 29, 30, 31]),
-              _.set("#ContentReportReasonCategory_CSAM", [32, 33, 34]),
-              _.set("#ContentReportReasonCategory_NudityOrSexualContent", [35]),
-              _.set("#ContentReportReasonCategory_Nonconsensual", [36]),
-              _.set(
-                "#ContentReportReasonCategory_Commercial",
-                [37, 38, 39, 40, 41],
-              ),
-              _.set("#ContentReportReasonCategory_Privacy", [47, 48, 49]),
-              _.set("#ContentReportReasonCategory_ReviewManipulation", [42]),
-              _.set(
-                "#ContentReportReasonCategory_ConsumerInformation",
-                [43, 44, 45, 46],
-              )),
-            _);
-        for (const _ of _.keys()) {
-          const _ = _.get(_).filter(
-            (_) => !_.excludedReasons || !_.excludedReasons.has(_),
-          );
-          0 !== _.length &&
-            (1 === _.length
-              ? (_.push({
-                  text: _(_[0]),
-                  action: () => {
-                    _(_[0]), _("submit");
-                  },
-                }),
-                _.add(_[0]))
-              : _.push({
-                  text: (0, _._)(_),
-                  action: () => {
-                    __webpack_require__(_), _("reason");
-                  },
-                }));
-        }
-        const _ = _.map((_) => ({
-          text: _(_),
-          action: () => {
-            _(_), _("submit");
-          },
-        }));
+          _ = _.reportSubjectMutation;
         if (!_.showDialog) return null;
+        const _ = __webpack_require__.length
+            ? __webpack_require__[__webpack_require__.length - 1]
+            : null,
+          _ = _(_) ? _.value : 0;
+        let _ = [];
+        __webpack_require__.length && !_(_)
+          ? (_ = _.children)
+          : 0 === __webpack_require__.length &&
+            (_ = null !== (_ = _.rgReportReasonTree) && void 0 !== _ ? _ : _);
+        const _ = _.filter((_) => !_(_, _.excludedReasons)).map((_, _) => {
+          let _ = "";
+          return (
+            (_ = _(_)
+              ? _(_.value)
+              : 1 === _.children.length && !_.bForceLocToken && _(_.children[0])
+                ? _(_.children[0].value)
+                : (0, _._)(_.strLocToken)),
+            _.createElement(_, {
+              key: _,
+              text: _,
+              onClick: () =>
+                ((_) => {
+                  let _ = [...__webpack_require__],
+                    _ = _;
+                  _(_) || 1 !== _.children.length || (_ = _.children[0]),
+                    _.push(_),
+                    _(_),
+                    _(_) && _("submit");
+                })(_),
+            })
+          );
+        });
         let _ = "";
         return (
           (_ =
@@ -19025,28 +19231,34 @@
                   closeModal: () => _.setShowDialog(!1),
                   className: _().ContentReportDialog,
                 },
-                "category" === _ &&
+                "reason" === _ &&
                   _.createElement(
                     _.Fragment,
                     null,
+                    !!_.landingDescription &&
+                      !__webpack_require__.length &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().LandingDescriptionCtn,
+                        },
+                        _.landingDescription,
+                      ),
                     _.createElement(
                       "p",
                       null,
-                      (0, _._)("#ReportContent_PickACategory"),
+                      __webpack_require__.length
+                        ? (0, _._)("#ReportContent_PickAReason")
+                        : (0, _._)("#ReportContent_PickACategory"),
                     ),
                     _.createElement(
                       _._,
                       {
                         className: _().BlockList,
                       },
-                      _.map((_, _) =>
-                        _.createElement(_, {
-                          key: _,
-                          text: _.text,
-                          onClick: _.action,
-                        }),
-                      ),
+                      _,
                       !_.bHideCopyrightReportReasons &&
+                        !!__webpack_require__.length &&
                         _.createElement(
                           _.Fragment,
                           null,
@@ -19068,43 +19280,21 @@
                           ),
                         ),
                     ),
-                  ),
-                "reason" === _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      "p",
-                      null,
-                      (0, _._)("#ReportContent_PickAReason"),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        className: _().BlockList,
-                      },
-                      _.map((_, _) =>
-                        _.createElement(_, {
-                          key: _,
-                          text: _.text,
-                          onClick: _.action,
-                        }),
-                      ),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        className: _().BottomButtons,
-                      },
+                    !!__webpack_require__.length &&
                       _.createElement(
                         _._,
                         {
-                          onClick: () => _("category"),
+                          className: _().BottomButtons,
                         },
-                        "« ",
-                        (0, _._)("#ReportContent_Back"),
+                        _.createElement(
+                          _._,
+                          {
+                            onClick: () => _(__webpack_require__.slice(0, -1)),
+                          },
+                          "« ",
+                          (0, _._)("#ReportContent_Back"),
+                        ),
                       ),
-                    ),
                   ),
                 "submit" === _ &&
                   _.createElement(
@@ -19151,8 +19341,9 @@
                       _.createElement(
                         _._,
                         {
-                          onClick: () =>
-                            _.has(_) ? _("category") : _("reason"),
+                          onClick: () => {
+                            _(__webpack_require__.slice(0, -1)), _("reason");
+                          },
                         },
                         "« ",
                         (0, _._)("#ReportContent_Back"),
@@ -19162,6 +19353,16 @@
                         {
                           onClick: async () => {
                             var _, _;
+                            const _ = __webpack_require__.length
+                              ? __webpack_require__[
+                                  __webpack_require__.length - 1
+                                ]
+                              : null;
+                            if (!_ || !_(_))
+                              return void (0, _._)(
+                                !1,
+                                "Content report submitted with invalid reason tree state",
+                              );
                             const _ =
                                 null !==
                                   (_ =
@@ -19171,7 +19372,7 @@
                                   ? _
                                   : "",
                               _ = {
-                                reason: _,
+                                reason: _.value,
                                 text: _,
                               };
                             _.mutateAsync(_)
@@ -20003,9 +20204,7 @@
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       (0, _._)({
         enforceActions: "never",
@@ -40532,6 +40731,10 @@
                     _: 2,
                     _: _,
                   },
+                  summary_language_specific: {
+                    _: 3,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -45745,6 +45948,99 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return (0, _._)(
+          (_) => {
+            if (_ && _)
+              return (
+                _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
+              );
+          },
+          [_, _],
+        );
+      }
+      function _(_, _, _, _) {
+        _.useEffect(() => {
+          if (_ && _)
+            return (
+              _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
+            );
+        }, [_, _, _]);
+      }
+      function _(_, _, _, _) {
+        return _(
+          _,
+          "message",
+          function (_) {
+            _.includes(_.data) && __webpack_require__(this, _);
+          },
+          _,
+        );
+      }
+      function _(_, _) {
+        _.useEffect(() => {
+          if (!_ || !_) return;
+          const _ = () => _(_.visibilityState, _);
+          return (
+            __webpack_require__(),
+            _.addEventListener("visibilitychange", _),
+            () => _.removeEventListener("visibilitychange", _)
+          );
+        }, [_, _]);
+      }
+      function _() {
+        const [_, _] = _.useState(!1);
+        return [
+          _,
+          {
+            onMouseEnter: _.useCallback(() => _(!0), []),
+            onMouseLeave: _.useCallback(() => _(!1), []),
+          },
+        ];
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1);
+        return (
+          _.useEffect(() => {
+            if (!_.current) return;
+            let _ = !1;
+            const _ = (_) => {
+                var _;
+                const _ =
+                  null === (_ = _.current) || void 0 === _
+                    ? void 0
+                    : _.contains(_.target);
+                __webpack_require__(!!_),
+                  _ || (window.removeEventListener("pointermove", _), (_ = !1));
+              },
+              _ = () => {
+                __webpack_require__(!0),
+                  _ || (window.addEventListener("pointermove", _), (_ = !0));
+              };
+            return (
+              _.current.addEventListener("pointerenter", _),
+              () => {
+                window.removeEventListener("pointerenter", _),
+                  _ && window.removeEventListener("pointermove", _);
+              }
+            );
+          }, [_]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -45753,11 +46049,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _._,
+        _: () => _._,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -45829,46 +46125,6 @@
             [_],
           )
         );
-      }
-      function _(_, _, _) {
-        return (0, _._)(
-          (_) => {
-            if (_ && _)
-              return (
-                _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
-              );
-          },
-          [_, _],
-        );
-      }
-      function _(_, _, _, _) {
-        _.useEffect(() => {
-          if (_ && _)
-            return (
-              _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
-            );
-        }, [_, _, _]);
-      }
-      function _(_, _, _, _) {
-        return _(
-          _,
-          "message",
-          function (_) {
-            _.includes(_.data) && __webpack_require__(this, _);
-          },
-          _,
-        );
-      }
-      function _(_, _) {
-        _.useEffect(() => {
-          if (!_ || !_) return;
-          const _ = () => _(_.visibilityState, _);
-          return (
-            __webpack_require__(),
-            _.addEventListener("visibilitychange", _),
-            () => _.removeEventListener("visibilitychange", _)
-          );
-        }, [_, _]);
       }
       function _(_, _) {
         _.useLayoutEffect(() => {
@@ -45952,46 +46208,6 @@
               bConstructed: !0,
             }),
           _.current.value
-        );
-      }
-      function _() {
-        const [_, _] = _.useState(!1);
-        return [
-          _,
-          {
-            onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
-          },
-        ];
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
-        return (
-          _.useEffect(() => {
-            if (!_.current) return;
-            let _ = !1;
-            const _ = (_) => {
-                var _;
-                const _ =
-                  null === (_ = _.current) || void 0 === _
-                    ? void 0
-                    : _.contains(_.target);
-                __webpack_require__(!!_),
-                  _ || (window.removeEventListener("pointermove", _), (_ = !1));
-              },
-              _ = () => {
-                __webpack_require__(!0),
-                  _ || (window.addEventListener("pointermove", _), (_ = !0));
-              };
-            return (
-              _.current.addEventListener("pointerenter", _),
-              () => {
-                window.removeEventListener("pointerenter", _),
-                  _ && window.removeEventListener("pointermove", _);
-              }
-            );
-          }, [_]),
-          _
         );
       }
       function _(_) {
@@ -54458,12 +54674,17 @@
             strComponentStack: _,
           });
       const _ = !0;
+      class _ extends Error {
+        constructor(..._) {
+          super(..._), (this.name = "Assertion Failed");
+        }
+      }
       {
         const _ = console.assert;
         console.assert = (_, _, ..._) => {
           if (!_) {
             const _ = _();
-            _(new Error(_(_, ..._)), 2, _);
+            _(new _(_(_, ..._)), 2, _);
           }
           _.apply(console, [_, _, ..._]);
         };
@@ -54480,6 +54701,9 @@
           _("error", (_) => {
             _(_.error, 0);
           }),
+          _("unhandledrejection", (_) => {
+            _(_.reason, 0);
+          }),
           (_ = window.setTimeout(() => {
             (_ = []), (_ = () => {});
           }, 3e4));
@@ -54493,7 +54717,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
+          "Refused unauthorized RPC command",
         ];
       function _() {
         try {
@@ -54709,7 +54933,9 @@
               }
             })(_, _);
             return _
-              ? (_.strComponentStack &&
+              ? (_.cCallsitesToIgnore &&
+                  _.message.splice(1, _.cCallsitesToIgnore),
+                _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 this.SendErrorReport(_),
                 _)
@@ -55324,6 +55550,17 @@
               (null === (_ = this.m_ReviewInfo) || void 0 === _
                 ? void 0
                 : _.summary_filtered)
+          );
+        }
+        GetFilteredReviewSummaryLanguage() {
+          var _;
+          return (
+            this.BCheckDataRequestIncluded({
+              include_reviews: !0,
+            }),
+            null === (_ = this.m_ReviewInfo) || void 0 === _
+              ? void 0
+              : _.summary_language_specific
           );
         }
         GetShortDescription() {
@@ -62008,6 +62245,7 @@
             children: _,
             directionClass: _,
             animate: _ = !0,
+            sizeClass: _,
           } = _,
           _ = (0, _._)(_().TransitionGroup, _);
         return _.createElement(
@@ -62023,6 +62261,7 @@
             {
               key: _,
               childrenClasses: __webpack_require__,
+              sizeClass: _,
             },
             _,
           ),
@@ -64356,13 +64595,17 @@
         componentDidCatch(_, _) {
           const _ = _.sm_ErrorReportingStore;
           _
-            ? __webpack_require__.ReportError(_).then(
-                (_) =>
-                  _ &&
-                  this.setState({
-                    identifierHash: _.identifierHash,
-                  }),
-              )
+            ? __webpack_require__
+                .ReportError(_, {
+                  strComponentStack: _.componentStack || void 0,
+                })
+                .then(
+                  (_) =>
+                    _ &&
+                    this.setState({
+                      identifierHash: _.identifierHash,
+                    }),
+                )
             : console.warn(
                 "No ErrorReportingStore - use ErrorReportingStore().Init() to configure error reporting to server",
               ),

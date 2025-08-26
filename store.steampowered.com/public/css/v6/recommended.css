@@ -3155,6 +3155,7 @@ div.graph_toggle_icon.down {
 		width: auto;
 		float: none;
 		overflow: hidden;
+		flex-direction: column;
 	}
 
 	html.responsive #review_create .input_box {
@@ -3552,7 +3553,7 @@ p.outliers_options {
 
 /* 2025 Game Page Widening */
 .widestore .review_box .rightcol {
-	width: 585px;
+	width: 566px;
 }
 
 .widestore .review_box .leftcol {
@@ -3563,8 +3564,40 @@ p.outliers_options {
 	width: 765px;
 }
 
+.widestore #review_histogram_recent_section {
+	width: 435px;
+}
+
 .widestore .review_box a.vote_header {
 	margin: 8px 8px 13px 0;
+}
+
+.widestore .review_controls .controlblock {
+	margin-right: unset;
+}
+
+.widestore .review_received_comp {
+	margin-top: unset;
+}
+
+.widestore #review_create .input_box {
+	/* height: auto; */
+	/* width: 100%; */
+	max-width: unset;
+}
+
+.widestore .controls {
+	margin-top: unset;
+	/* min-width: 380px; */
+}
+
+.widestore #review_create {
+	max-width: 100%;
+}
+
+.widestore .review_controls_row {
+	flex-wrap: wrap;
+	gap: 5px;
 }
 
 .widestore #review_create .content {
@@ -3583,30 +3616,9 @@ p.outliers_options {
 .widestore .review_controls_subctn {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-}
-
-.widestore .review_controls .controlblock {
-	margin-right: unset;
-}
-
-.widestore .review_received_comp {
-	margin-top: unset;
-}
-
-.widestore #review_create {
-	max-width: 100%;
-}
-
-.widestore #review_create .input_box {
-	height: auto;
-	width: 100%;
-	max-width: unset;
-}
-
-.widestore .controls {
-	margin-top: unset;
-	min-width: 380px;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 10px;
 }
 
 @media screen and (max-width: 1210px) and (min-width: 500px)
@@ -3644,9 +3656,9 @@ p.outliers_options {
 		overflow: hidden;
 	}
 
-	body.v6.widestore #review_create .input_box {
+	/* body.v6.widestore #review_create .input_box {
 		width: calc( 100% - 24px );
-	}
+	} */
 
 	body.v6.widestore .review_box .leftcol {
 		float: left;
@@ -3669,6 +3681,7 @@ p.outliers_options {
 
 	body.v6.widestore .review_box .rightcol {
 		padding: 8px;
+		width: auto;
 	}
 
 	body.v6.widestore .review_box .rightcol .vote_header {

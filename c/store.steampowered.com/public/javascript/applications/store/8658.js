@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "russian",
 	"review_summary_reviewrate": "%1$s% из %2$s обзоров положительные",
+	"review_summary_reviewrate_language_specific": "%1$s% из %2$s обзоров на этом языке (%3$s) положительные",
 	"Discount_ARIA_Label": "Скидка — %1$s%. Обычная цена — %2$s, цена со скидкой — %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "Специальная цена: %1$s",
 	"Price_Free": "Бесплатный продукт",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Особые разделы",
 	"Menu_Popover_ViewAll": "Просмотреть всё",
 	"Menu_Popover_More": "Прочее",
+	"Menu_Popover_Menu": "Меню",
 	"Menu_Section_Browse_RecentlyViewed": "Недавно просмотренные",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Продолжите там, где остановились",
 	"Menu_Section_Browse_Recommended": "Рекомендовано вам",

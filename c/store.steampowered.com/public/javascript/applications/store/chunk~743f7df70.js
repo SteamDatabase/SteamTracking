@@ -75,6 +75,7 @@
         SessionAudience: "_3DgrT27j0qIz8_26rX4hOc",
         SessionInfoLink: "_1KBfuvwvcwNpnVAMW0JxlH",
         SessionOptions: "_3KAHxFNUEscoxtvBzwWKvs",
+        InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
         SessionColumnCtn: "iUmtJvs3v_bmv-tu43tpL",
         SessionInstance: "_1igTM-TlnNkIhWxl95pTyB",
         Background: "_3k-Bve67pUbtbb7heNH--5",
@@ -84,7 +85,6 @@
         MaxSize: "_3REuR3WLDb6JDzZpI2VkUz",
         SoldOut: "dndEdZn2hpJTIu4zpYoYG",
         Max: "_1-LTOHwZqSK67eUyq4qscx",
-        InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
         Day: "_2Zkbwdhs4WPVI1ZyUHtHUG",
         Time: "_8oQG_Wbl2-Eamq1WKMAoo",
         Registering: "td3x9QaINc75mi2ppkGoF",
@@ -7947,6 +7947,13 @@
                   },
                   (0, _._)("#MeetSteam_Session_Audience", _),
                 ),
+              _.createElement(
+                "div",
+                {
+                  className: _().SessionOptions,
+                },
+                __webpack_require__,
+              ),
               Boolean(_) &&
                 _.createElement(
                   _.Fragment,
@@ -7974,13 +7981,6 @@
                       }),
                     ),
                 ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SessionOptions,
-                },
-                __webpack_require__,
-              ),
             )
           : null;
       }

@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "bulgarian",
 	"review_summary_reviewrate": "%1$s% от %2$s потребителски рецензии за тази игра са положителни",
+	"review_summary_reviewrate_language_specific": "%1$s% от %2$s потребителски рецензии на %3$s за тази игра са положителни",
 	"Discount_ARIA_Label": "%1$s% отстъпка. Обикновено %2$s, намалено до %3$s.",
 	"Discount_ARIA_Label_SpecialPrice": "Специална цена от %1$s.",
 	"Price_Free": "Безплатно",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Специални секции",
 	"Menu_Popover_ViewAll": "Преглед на всички",
 	"Menu_Popover_More": "Още",
+	"Menu_Popover_Menu": "Меню",
 	"Menu_Section_Browse_RecentlyViewed": "Наскоро прегледани",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Продължете оттам, докъдето сте стигнали",
 	"Menu_Section_Browse_Recommended": "Препоръчано за Вас",

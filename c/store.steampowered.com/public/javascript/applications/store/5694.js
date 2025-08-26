@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "hungarian",
 	"review_summary_reviewrate": "E játék %2$s felhasználói értékeléséből %1$s% pozitív.",
+	"review_summary_reviewrate_language_specific": "E játék %2$s %3$s nyelvű felhasználói értékeléséből %1$s% pozitív.",
 	"Discount_ARIA_Label": "%1$s% kedvezmény. Normál ára %2$s, leárazva %3$s.",
 	"Discount_ARIA_Label_SpecialPrice": "Akciós ár: %1$s",
 	"Price_Free": "Ingyenes",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Speciális szakaszok",
 	"Menu_Popover_ViewAll": "Összes megnézése",
 	"Menu_Popover_More": "Továbbiak",
+	"Menu_Popover_Menu": "Menü",
 	"Menu_Section_Browse_RecentlyViewed": "Nemrég megnézett",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Folytasd, ahol abbahagytad",
 	"Menu_Section_Browse_Recommended": "Neked ajánlott",

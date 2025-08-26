@@ -7115,7 +7115,7 @@
       "use strict";
       a.d(t, { q: () => L, Y: () => N });
       var n = a(76217),
-        r = a(64753),
+        r = a(86927),
         s = a(90626),
         i = a(62792),
         o = a(55263),
@@ -9466,7 +9466,7 @@
     },
     53677: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => $o });
+      a.d(t, { H: () => el });
       var n = a(90626),
         r = a(57876),
         s = a(55963),
@@ -22855,15 +22855,16 @@
         );
       }
       var Io = a(94960),
-        Ao = a.n(Io);
-      function Do(e, t) {
+        Ao = a.n(Io),
+        Do = a(86927);
+      function To(e, t) {
         return t
           ? t.startsWith("https://") || t.startsWith("http://")
             ? t
             : `${fe.TS.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`
           : t;
       }
-      function To(e) {
+      function Bo(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, v.Qn)();
         return n.createElement(
@@ -22883,7 +22884,7 @@
             },
             n.createElement(wo, { section: a, event: t, language: r }),
             a?.media_container?.media_rows?.map((t, r) =>
-              n.createElement(Bo, {
+              n.createElement(Go, {
                 key: "templategrid_" + a.unique_id + "_" + r,
                 ...e,
                 row: t,
@@ -22892,7 +22893,7 @@
           ),
         );
       }
-      function Bo(e) {
+      function Go(e) {
         const { event: t, section: a, language: r, row: s } = e,
           i = (0, he.q3)(() => s.media_columns?.length || 0);
         return n.createElement(
@@ -22907,7 +22908,7 @@
             }),
           },
           s.media_columns?.map((t) =>
-            n.createElement(Go, {
+            n.createElement(ko, {
               key: "mc_" + a.unique_id + "_" + t.unique_id,
               ...e,
               content: t,
@@ -22915,7 +22916,7 @@
           ),
         );
       }
-      function Go(e) {
+      function ko(e) {
         const { event: t, section: a, language: r, content: s } = e,
           [i, o, l, c, m, u, d, _, p, g, h, S, f, v, y, b] = (0, he.q3)(() => {
             const e = D.A0.GetELanguageFallback(r);
@@ -22960,7 +22961,7 @@
                 : void 0,
             ];
           });
-        return n.createElement(ko, {
+        return n.createElement(Po, {
           displayOrder: i,
           event: t,
           section: a,
@@ -22983,11 +22984,11 @@
           titleHAlign: b,
         });
       }
-      function ko(e) {
+      function Po(e) {
         const { displayOrder: t, content: a, section: r } = e,
           s = (0, v.Qn)(),
           i = n.useRef(void 0),
-          o = (0, es.BZ)(i),
+          o = (0, Do.BZ)(i),
           { bHighlighted: l } = (function (e, t, a) {
             n.useEffect(() => {
               xr.TU.Get().SetMouseOverSubsection(t, a);
@@ -23024,46 +23025,11 @@
             },
             Boolean(
               !t || t == so.k_HorizontalMediaFirst || t == so.k_MediaTitleDesc,
-            ) && n.createElement(Po, { ...e }),
+            ) && n.createElement(No, { ...e }),
             Boolean(
               t == so.k_HorizontalTextFirst || t == so.k_TitleDescMedia,
-            ) && n.createElement(No, { ...e }),
+            ) && n.createElement(Lo, { ...e }),
           )
-        );
-      }
-      function Po(e) {
-        const {
-          media: t,
-          mediaType: a,
-          mediaHAlign: r,
-          mediaVAlign: s,
-          event: i,
-        } = e;
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            "div",
-            {
-              className: (0, f.A)({
-                [Ao().Media]: !0,
-                [Ao().HorizLeft]: r == oo.k_Left,
-                [Ao().HorizCenter]: !r || r == oo.k_Center,
-                [Ao().HorizRight]: r == oo.k_Right,
-                [Ao().VertTop]: s == oo.k_Top,
-                [Ao().VertCenter]: !s || s == oo.k_Center,
-                [Ao().VertBottom]: s == oo.k_Bottom,
-              }),
-            },
-            n.createElement(Fo, {
-              media: t,
-              mediaType: a,
-              mediaHAlign: r,
-              mediaVAlign: s,
-              clanAccountID: i.clanSteamID.GetAccountID(),
-            }),
-          ),
-          n.createElement(Ro, { ...e }),
         );
       }
       function No(e) {
@@ -23077,7 +23043,6 @@
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(Ro, { ...e }),
           n.createElement(
             "div",
             {
@@ -23091,7 +23056,43 @@
                 [Ao().VertBottom]: s == oo.k_Bottom,
               }),
             },
-            n.createElement(Fo, {
+            n.createElement(Mo, {
+              media: t,
+              mediaType: a,
+              mediaHAlign: r,
+              mediaVAlign: s,
+              clanAccountID: i.clanSteamID.GetAccountID(),
+            }),
+          ),
+          n.createElement(Fo, { ...e }),
+        );
+      }
+      function Lo(e) {
+        const {
+          media: t,
+          mediaType: a,
+          mediaHAlign: r,
+          mediaVAlign: s,
+          event: i,
+        } = e;
+        return n.createElement(
+          n.Fragment,
+          null,
+          n.createElement(Fo, { ...e }),
+          n.createElement(
+            "div",
+            {
+              className: (0, f.A)({
+                [Ao().Media]: !0,
+                [Ao().HorizLeft]: r == oo.k_Left,
+                [Ao().HorizCenter]: !r || r == oo.k_Center,
+                [Ao().HorizRight]: r == oo.k_Right,
+                [Ao().VertTop]: s == oo.k_Top,
+                [Ao().VertCenter]: !s || s == oo.k_Center,
+                [Ao().VertBottom]: s == oo.k_Bottom,
+              }),
+            },
+            n.createElement(Mo, {
               media: t,
               mediaType: a,
               mediaHAlign: r,
@@ -23101,7 +23102,7 @@
           ),
         );
       }
-      function Lo(e) {
+      function Ro(e) {
         const {
           title: t,
           subtitle: a,
@@ -23120,7 +23121,7 @@
           ? n.createElement(
               "div",
               { className: Ao().MediaLogo },
-              n.createElement(Fo, {
+              n.createElement(Mo, {
                 media: c,
                 mediaType: m,
                 mediaHAlign: u,
@@ -23132,7 +23133,7 @@
           : n.createElement(
               n.Fragment,
               null,
-              n.createElement(Ho, {
+              n.createElement(Uo, {
                 event: i,
                 className: Ao().TextFirstTitle,
                 title: t,
@@ -23140,7 +23141,7 @@
                 eTextAlign: s,
                 language: o,
               }),
-              n.createElement(Mo, {
+              n.createElement(Oo, {
                 event: i,
                 className: Ao().TextFirstTitle,
                 subtitle: a,
@@ -23149,7 +23150,7 @@
               }),
             );
       }
-      function Ro(e) {
+      function Fo(e) {
         const {
           description: t,
           event: a,
@@ -23160,8 +23161,8 @@
         return n.createElement(
           "div",
           { className: Ao().TitleDescriptionCtn },
-          n.createElement(Lo, { ...e }),
-          n.createElement(Uo, {
+          n.createElement(Ro, { ...e }),
+          n.createElement(zo, {
             event: a,
             description: t,
             eTextAlign: s,
@@ -23170,7 +23171,7 @@
           }),
         );
       }
-      function Fo(e) {
+      function Mo(e) {
         const {
             media: t,
             mediaType: a,
@@ -23203,7 +23204,7 @@
             n.createElement("img", {
               ref: l,
               onLoad: d,
-              src: Do(i, t.image),
+              src: To(i, t.image),
               alt: "",
               style: {
                 width: "number" == typeof e ? `${e}px` : "auto",
@@ -23219,11 +23220,11 @@
             0 === t.video_mp4_src?.trim().length)
           ? null
           : (t.video_webm_src &&
-              _.push({ sURL: Do(i, t.video_webm_src), sFormat: "video/webm" }),
+              _.push({ sURL: To(i, t.video_webm_src), sFormat: "video/webm" }),
             t.video_mp4_src &&
-              _.push({ sURL: Do(i, t.video_mp4_src), sFormat: "video/mp4" }),
+              _.push({ sURL: To(i, t.video_mp4_src), sFormat: "video/mp4" }),
             n.createElement(Jt.L, {
-              video: { sPoster: Do(i, t.image), rgVideoSources: _ },
+              video: { sPoster: To(i, t.image), rgVideoSources: _ },
               bAutoPlay: !0,
               bControls: !1,
               bLoop: !0,
@@ -23231,7 +23232,7 @@
               mediaScale: o,
             }));
       }
-      function Mo(e) {
+      function Oo(e) {
         const {
             event: t,
             subtitle: a,
@@ -23240,7 +23241,7 @@
             eTextAlign: i,
           } = e,
           o = (0, _t.MU)();
-        return xo(a)
+        return Ho(a)
           ? null
           : n.createElement(
               "div",
@@ -23263,11 +23264,11 @@
               }),
             );
       }
-      const Oo = "[p][/p]";
-      function xo(e) {
-        return !e || 0 == e.length || (e.length == Oo.length && e == Oo);
-      }
+      const xo = "[p][/p]";
       function Ho(e) {
+        return !e || 0 == e.length || (e.length == xo.length && e == xo);
+      }
+      function Uo(e) {
         const {
             event: t,
             title: a,
@@ -23277,7 +23278,7 @@
             eTextAlign: o,
           } = e,
           l = (0, _t.MU)();
-        return xo(a)
+        return Ho(a)
           ? null
           : n.createElement(
               "div",
@@ -23303,7 +23304,7 @@
               }),
             );
       }
-      function Uo(e) {
+      function zo(e) {
         const {
             event: t,
             description: a,
@@ -23312,7 +23313,7 @@
             eDescriptionDisplaySize: i,
           } = e,
           o = (0, _t.MU)();
-        return xo(a)
+        return Ho(a)
           ? null
           : n.createElement(
               "div",
@@ -23337,7 +23338,7 @@
               }),
             );
       }
-      function zo(e) {
+      function qo(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, _t.MU)(),
           i = (0, v.Qn)(),
@@ -23366,13 +23367,13 @@
             },
             n.createElement(wo, { section: a, event: t, language: r }),
             Boolean(a.quiz?.titleSubDesc) &&
-              n.createElement(qo, {
+              n.createElement(Wo, {
                 titleSubDesc: a.quiz.titleSubDesc,
                 event: t,
                 language: r,
               }),
             u.map((e, a) =>
-              n.createElement(Wo, {
+              n.createElement(Vo, {
                 key: e.unique_id,
                 iQuestionIndex: a,
                 question: e,
@@ -23386,7 +23387,7 @@
           ),
         );
       }
-      function qo(e) {
+      function Wo(e) {
         const { event: t, language: a, titleSubDesc: r } = e,
           s = D.A0.GetELanguageFallback(a),
           [i, o, l, c, m, u, d, _, p] = (0, he.q3)(() => [
@@ -23416,7 +23417,7 @@
               ? r.title_media.media_horizontal_alignment
               : void 0,
           ]);
-        return n.createElement(Lo, {
+        return n.createElement(Ro, {
           event: t,
           language: a,
           title: i,
@@ -23430,7 +23431,7 @@
           titleHAlign: p,
         });
       }
-      function Wo(e) {
+      function Vo(e) {
         const {
             question: t,
             language: a,
@@ -23491,9 +23492,9 @@
           ),
         );
       }
-      var Vo = a(94581),
-        jo = a.n(Vo);
-      function Qo(e) {
+      var jo = a(94581),
+        Qo = a.n(jo);
+      function Ko(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, _t.MU)(),
           i = (0, v.Qn)(),
@@ -23521,7 +23522,7 @@
             Boolean(u) &&
               n.createElement(
                 "div",
-                { className: jo().description },
+                { className: Qo().description },
                 n.createElement(za.fh, {
                   text: u,
                   partnerEventStore: bt.O3,
@@ -23531,7 +23532,7 @@
                 }),
               ),
             a.tech_specs?.tech_spec_block_list?.map((e) =>
-              n.createElement(Ko, {
+              n.createElement(Yo, {
                 key: "tsblock_" + e.unique_id,
                 block: e,
                 language: r,
@@ -23541,7 +23542,7 @@
           ),
         );
       }
-      function Ko(e) {
+      function Yo(e) {
         const { block: t, language: a, fallbackLanguage: r } = e,
           s =
             t.localized_block_title?.length > 0
@@ -23550,9 +23551,9 @@
         return n.createElement(
           "div",
           null,
-          n.createElement("div", { className: jo().BlockTitle }, s),
+          n.createElement("div", { className: Qo().BlockTitle }, s),
           t.spec_list.map((e) =>
-            n.createElement(Yo, {
+            n.createElement(Jo, {
               key: "tsitem_" + e.unique_id + "_" + t.unique_id,
               item: e,
               language: a,
@@ -23561,7 +23562,7 @@
           ),
         );
       }
-      function Yo(e) {
+      function Jo(e) {
         const { item: t, language: a, fallbackLanguage: r } = e,
           s =
             t.localized_spec_name?.length > 0
@@ -23591,9 +23592,9 @@
           ),
         );
       }
-      var Jo = a(67634),
-        Zo = a.n(Jo);
-      function Xo(e) {
+      var Zo = a(67634),
+        Xo = a.n(Zo);
+      function $o(e) {
         const { event: t, section: a, language: r } = e,
           s = ((0, _t.MU)(), (0, v.Qn)()),
           [i, o, u, d, _, g, S, b, E, C, w, I, A, T, B, G, k, P] = (0, he.q3)(
@@ -23662,30 +23663,30 @@
               className: (0, f.A)(
                 m.SaleSection,
                 l().SaleSectionCtn,
-                Zo().Container,
+                Xo().Container,
               ),
               style: (0, c.Vb)(a, t, s),
             },
             n.createElement(wo, { section: a, event: t, language: r }),
             n.createElement(
               "div",
-              { className: Zo().MediaOverlayCtn },
+              { className: Xo().MediaOverlayCtn },
               n.createElement(
                 "div",
                 {
                   className: (0, f.A)({
-                    [Zo().TopLeft]: !i || i == lo.k_TopLeft,
-                    [Zo().TopCenter]: i == lo.k_TopCenter,
-                    [Zo().TopRight]: i == lo.k_TopRight,
-                    [Zo().LeftCenter]: i == lo.k_LeftCenter,
-                    [Zo().Center]: i == lo.k_Center,
-                    [Zo().RightCenter]: i == lo.k_RightCenter,
-                    [Zo().BottomLeft]: i == lo.k_BottomLeft,
-                    [Zo().BottomCenter]: i == lo.k_BottomCenter,
-                    [Zo().BottomRight]: i == lo.k_BottomRight,
+                    [Xo().TopLeft]: !i || i == lo.k_TopLeft,
+                    [Xo().TopCenter]: i == lo.k_TopCenter,
+                    [Xo().TopRight]: i == lo.k_TopRight,
+                    [Xo().LeftCenter]: i == lo.k_LeftCenter,
+                    [Xo().Center]: i == lo.k_Center,
+                    [Xo().RightCenter]: i == lo.k_RightCenter,
+                    [Xo().BottomLeft]: i == lo.k_BottomLeft,
+                    [Xo().BottomCenter]: i == lo.k_BottomCenter,
+                    [Xo().BottomRight]: i == lo.k_BottomRight,
                   }),
                 },
-                n.createElement(Ro, {
+                n.createElement(Fo, {
                   title: d,
                   titleAlign: b,
                   subtitle: _,
@@ -23704,7 +23705,7 @@
                   titleMediaScale: P,
                 }),
               ),
-              n.createElement(Fo, {
+              n.createElement(Mo, {
                 media: u,
                 mediaType: o,
                 mediaHAlign: w,
@@ -23715,7 +23716,7 @@
           ),
         );
       }
-      function $o(e) {
+      function el(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           i = (0, v.Qn)();
         switch (a.section_type) {
@@ -23907,13 +23908,13 @@
           case "unselected_empty":
             break;
           case "template_faq":
-            return n.createElement(zo, { ...e });
+            return n.createElement(qo, { ...e });
           case "template_techspec":
-            return n.createElement(Qo, { ...e });
+            return n.createElement(Ko, { ...e });
           case "template_media_content":
-            return n.createElement(To, { ...e });
+            return n.createElement(Bo, { ...e });
           case "template_media_overlay":
-            return n.createElement(Xo, { ...e });
+            return n.createElement($o, { ...e });
           case "media_layout":
             return n.createElement(mo, { ...e });
           case "contenthubsections":

@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "indonesian",
 	"review_summary_reviewrate": "%1$s% positif dari %2$s ulasan pengguna untuk game ini",
+	"review_summary_reviewrate_language_specific": "%1$s% positif dari %2$s ulasan pengguna dalam %3$s untuk game ini",
 	"Discount_ARIA_Label": "Diskon %1$s%. Harga normal %2$s, didiskon menjadi %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "Harga spesial %1$s",
 	"Price_Free": "Gratis",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Bagian Spesial",
 	"Menu_Popover_ViewAll": "Lihat Semua",
 	"Menu_Popover_More": "Lainnya",
+	"Menu_Popover_Menu": "Menu",
 	"Menu_Section_Browse_RecentlyViewed": "Baru dilihat",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Lanjutkan dari yang terakhir dilihat",
 	"Menu_Section_Browse_Recommended": "Direkomendasikan untukmu",

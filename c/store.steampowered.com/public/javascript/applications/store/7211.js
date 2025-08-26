@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "greek",
 	"review_summary_reviewrate": "Το %1$s% των %2$s κριτικών από χρήστες για αυτό το παιχνίδι είναι θετικές",
+	"review_summary_reviewrate_language_specific": "Το %1$s% από τις %2$s κριτικές των χρηστών στα %3$s για αυτό το παιχνίδι είναι θετικές",
 	"Discount_ARIA_Label": "Έκπτωση %1$s%. Κανονική τιμή: %2$s. Με έκπτωση: %3$s.",
 	"Discount_ARIA_Label_SpecialPrice": "Ειδική τιμή: %1$s",
 	"Price_Free": "Δωρεάν",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Ειδικές ενότητες",
 	"Menu_Popover_ViewAll": "Προβολή όλων",
 	"Menu_Popover_More": "Άλλα",
+	"Menu_Popover_Menu": "Μενού",
 	"Menu_Section_Browse_RecentlyViewed": "Είδατε πρόσφατα",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Συνεχίστε από εκεί που μείνατε",
 	"Menu_Section_Browse_Recommended": "Προτεινόμενα για εσάς",

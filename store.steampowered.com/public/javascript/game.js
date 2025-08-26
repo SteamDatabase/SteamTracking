@@ -2015,6 +2015,12 @@ function ReparentAppLandingPageForSmallScreens()
 
 		var fn_reparent = bUseTabletScreenMode ? Responsive_ReparentItemsInTabletMode : Responsive_ReparentItemsInMobileMode;
 
+	if ( bUseTabletScreenMode )
+	{
+		// move the page header image to the top of purchase options
+		fn_reparent( $J('#page_header_img'), $J('#purchaseOptionsContent') );
+	}
+
 	// move early access content into the purchase options parent
 	if ( bUseTabletScreenMode )
 	{

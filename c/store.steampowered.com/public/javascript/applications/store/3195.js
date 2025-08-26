@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "turkish",
 	"review_summary_reviewrate": "Bu oyun için yazılan %2$s kullanıcı incelemesinin %%1$s kadarı olumlu",
+	"review_summary_reviewrate_language_specific": "Bu oyun için yazılan %2$s %3$s kullanıcı incelemesinin %%1$s kadarı olumlu",
 	"Discount_ARIA_Label": "%%1$s indirim. Normalde %2$s, indirimli %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "%1$s özel fiyatıyla",
 	"Price_Free": "Ücretsiz",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Özel Kısımlar",
 	"Menu_Popover_ViewAll": "Tümünü Gör",
 	"Menu_Popover_More": "Daha Fazla",
+	"Menu_Popover_Menu": "Menü",
 	"Menu_Section_Browse_RecentlyViewed": "Son görüntülenenler",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Kaldığınız yerden devam edin",
 	"Menu_Section_Browse_Recommended": "Sizin için tavsiye edilenler",

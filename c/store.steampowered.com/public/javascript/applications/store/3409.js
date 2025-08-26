@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "ukrainian",
 	"review_summary_reviewrate": "%1$s% з %2$s рецензій користувачів на цю гру є позитивними",
+	"review_summary_reviewrate_language_specific": "%1$s% з %2$s користувацьких рецензій (%3$s) на цю гру є позитивними.",
 	"Discount_ARIA_Label": "Знижка %1$s%. %2$s без знижки. %3$s зі знижкою.",
 	"Discount_ARIA_Label_SpecialPrice": "Акційна ціна: %1$s",
 	"Price_Free": "Вільний доступ",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Спеціальні розділи",
 	"Menu_Popover_ViewAll": "Переглянути всі",
 	"Menu_Popover_More": "Більше",
+	"Menu_Popover_Menu": "Меню",
 	"Menu_Section_Browse_RecentlyViewed": "Нещодавно переглянуте",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Продовжити з місця, де зупинилися",
 	"Menu_Section_Browse_Recommended": "Рекомендовано вам",

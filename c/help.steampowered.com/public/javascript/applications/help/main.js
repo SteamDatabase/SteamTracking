@@ -3,6 +3,7 @@
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 1602],
         "./main_brazilian.json": [2333, 2446],
         "./main_bulgarian.json": [1334, 3589],
         "./main_czech.json": [6312, 9515],
@@ -50,6 +51,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 1602],
         "./main_brazilian.json": [2333, 2446],
         "./main_bulgarian.json": [1334, 3589],
         "./main_czech.json": [6312, 9515],
@@ -8528,6 +8530,7 @@
       function _() {
         return _.useContext(_).ModalManager;
       }
+      var _ = __webpack_require__("chunkid");
       function _({ config: _, isDynamic: _ }) {
         const _ = _ ? _ : _;
         return _.createElement(
@@ -12532,6 +12535,7 @@
             children: _,
             directionClass: _,
             animate: _ = !0,
+            sizeClass: _,
           } = _,
           _ = (0, _._)(_().TransitionGroup, _);
         return _.createElement(
@@ -12547,6 +12551,7 @@
             {
               key: _,
               childrenClasses: __webpack_require__,
+              sizeClass: _,
             },
             _,
           ),
@@ -56070,6 +56075,10 @@
                     _: 2,
                     _: _,
                   },
+                  summary_language_specific: {
+                    _: 3,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -61403,18 +61412,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _() {
-        const [, _] = _.useState(0);
-        return _.useCallback(() => _((_) => _ + 1), []);
-      }
       function _(_, _, _) {
         return (0, _._)(
           (_) => {
@@ -61443,6 +61443,25 @@
           },
           _,
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const [, _] = _.useState(0);
+        return _.useCallback(() => _((_) => _ + 1), []);
       }
       function _(_, _) {
         _.useLayoutEffect(() => {
@@ -68912,12 +68931,17 @@
             strComponentStack: _,
           });
       const _ = !0;
+      class _ extends Error {
+        constructor(..._) {
+          super(..._), (this.name = "Assertion Failed");
+        }
+      }
       {
         const _ = console.assert;
         console.assert = (_, _, ..._) => {
           if (!_) {
             const _ = _();
-            _(new Error(_(_, ..._)), 2, _);
+            _(new _(_(_, ..._)), 2, _);
           }
           _.apply(console, [_, _, ..._]);
         };
@@ -68934,6 +68958,9 @@
           _("error", (_) => {
             _(_.error, 0);
           }),
+          _("unhandledrejection", (_) => {
+            _(_.reason, 0);
+          }),
           (_ = window.setTimeout(() => {
             (_ = []), (_ = () => {});
           }, 3e4));
@@ -68947,7 +68974,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
+          "Refused unauthorized RPC command",
         ];
       function _() {
         try {
@@ -69138,7 +69165,9 @@
               }
             })(_, _);
             return _
-              ? (_.strComponentStack &&
+              ? (_.cCallsitesToIgnore &&
+                  _.message.splice(1, _.cCallsitesToIgnore),
+                _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 this.SendErrorReport(_),
                 _)
@@ -69718,6 +69747,14 @@
             }),
             this.m_ReviewInfo?.summary_unfiltered ||
               this.m_ReviewInfo?.summary_filtered
+          );
+        }
+        GetFilteredReviewSummaryLanguage() {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_reviews: !0,
+            }),
+            this.m_ReviewInfo?.summary_language_specific
           );
         }
         GetShortDescription() {
@@ -72196,13 +72233,17 @@
         componentDidCatch(_, _) {
           const _ = _.sm_ErrorReportingStore;
           _
-            ? __webpack_require__.ReportError(_).then(
-                (_) =>
-                  _ &&
-                  this.setState({
-                    identifierHash: _.identifierHash,
-                  }),
-              )
+            ? __webpack_require__
+                .ReportError(_, {
+                  strComponentStack: _.componentStack || void 0,
+                })
+                .then(
+                  (_) =>
+                    _ &&
+                    this.setState({
+                      identifierHash: _.identifierHash,
+                    }),
+                )
             : console.warn(
                 "No ErrorReportingStore - use ErrorReportingStore().Init() to configure error reporting to server",
               ),

@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "koreana",
 	"review_summary_reviewrate": "이 게임에 대한 사용자 평가 %2$s개 중 %1$s%가 긍정적입니다.",
+	"review_summary_reviewrate_language_specific": "이 게임에 대해 %3$s로 작성된 사용자 평가 %2$s개 중 %1$s%가 긍정적입니다.",
 	"Discount_ARIA_Label": "%1$s% 할인. 정상가: %2$s, 할인가: %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "특가: %1$s",
 	"Price_Free": "무료",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "특별 섹션",
 	"Menu_Popover_ViewAll": "전체 보기",
 	"Menu_Popover_More": "더 보기",
+	"Menu_Popover_Menu": "메뉴",
 	"Menu_Section_Browse_RecentlyViewed": "최근에 본 게임",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "마지막으로 본 제품부터 이어서 보기",
 	"Menu_Section_Browse_Recommended": "맞춤 추천",

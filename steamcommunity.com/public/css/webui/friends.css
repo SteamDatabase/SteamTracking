@@ -17008,6 +17008,134 @@ html:not(.touch)
     visibility: collapse;
   }
 }
+.contentmoderationreportdialog_ContentReportDialog_1nRyg p {
+  margin-top: 0;
+}
+.contentmoderationreportdialog_BlockList_26Mh3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.contentmoderationreportdialog_BlockListItem_2tqpD {
+  display: block;
+  background-color: #777;
+  color: #fff;
+  padding: 4px 12px;
+}
+.contentmoderationreportdialog_BottomButtons_2g3Wv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+}
+.contentmoderationreportdialog_BottomButtons_2g3Wv button {
+  max-width: 50%;
+}
+.contentmoderationreportdialog_ReportAs_22Uov {
+  font-weight: bold;
+}
+.contentmoderationreportdialog_DetailedReasonTextArea_1PUlL {
+  margin-top: 12px;
+  width: 93%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 80px;
+}
+.contentmoderationreportdialog_ChatReportSubmittedBody_22q2A {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contentmoderationreportdialog_ChatReportCallToAction_31M5a {
+  color: #8b929a;
+}
+.DialogContent .contentmoderationreportdialog_ChatReportCallToAction_31M5a ul {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  list-style-position: outside;
+  margin-top: .5rem;
+  margin-bottom: 0;
+}
+.contentmoderationreportdialog_LandingDescriptionCtn_2rXtB {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_Icon_29JC6 {
+  color: #ffc82c;
+  width: 48px;
+  margin: 13px 8px;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_Icon_29JC6
+  svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_Icon_29JC6
+  svg
+  path {
+  stroke: currentColor;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_Icon_29JC6
+  svg
+  line,
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_Icon_29JC6
+  svg
+  polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_Icon_29JC6
+  circle {
+  stroke: #ffc82c;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_Explanation_1kX3t {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 8px 12px 0px;
+  gap: 5px;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_ExplanationHeader_1mtAD {
+  font-size: 14px;
+  color: #ffc82c;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_ExplanationBody_3eWes {
+  font-size: 13px;
+  color: #bbaa73;
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_ExplanationMoreInfo_1IR8K {
+  align-self: flex-start;
+  font-size: 10px;
+  color: #e0d4aa;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px dotted rgba(224, 212, 170, 0.6);
+}
+.contentmoderationreportdialog_AccountSafetyCtn_3BVlf
+  .contentmoderationreportdialog_ExplanationMoreInfo_1IR8K:hover {
+  color: #eae3c7;
+  border-bottom: 1px dotted rgba(224, 212, 170, 0.8);
+}
 .messages_SpeakerName_InGame_3xyn_ {
   color: #e3ffc2;
 }
@@ -17195,42 +17323,6 @@ html:not(.touch)
 .reactions_ReactionHover_12Ox3 .reactions_ReactorName_1epTJ,
 .reactions_ReactionHover_12Ox3 .reactions_ReactionName_2bwkm {
   font-weight: 600;
-}
-.contentmoderationreportdialog_ContentReportDialog_1nRyg p {
-  margin-top: 0;
-}
-.contentmoderationreportdialog_BlockList_26Mh3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 8px;
-}
-.contentmoderationreportdialog_BlockListItem_2tqpD {
-  display: block;
-  background-color: #777;
-  color: #fff;
-  padding: 4px 12px;
-}
-.contentmoderationreportdialog_BottomButtons_2g3Wv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 12px;
-  padding-top: 12px;
-}
-.contentmoderationreportdialog_BottomButtons_2g3Wv button {
-  max-width: 50%;
-}
-.contentmoderationreportdialog_ReportAs_22Uov {
-  font-weight: bold;
-}
-.contentmoderationreportdialog_DetailedReasonTextArea_1PUlL {
-  margin-top: 12px;
-  width: 93%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  height: 80px;
 }
 @keyframes quickaccessvoicecontrolssteamdeck_BackgroundAnimation_23GbG {
   from {

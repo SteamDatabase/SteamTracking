@@ -5,7 +5,8 @@
     chunkid: (module) => {
       module.exports = JSON.parse(`{
 	"language": "brazilian",
-	"review_summary_reviewrate": "%1$s% das %2$s análises de usuários deste jogo são positivas",
+	"review_summary_reviewrate": "%1$s% das %2$s análises de usuários deste jogo são positivas.",
+	"review_summary_reviewrate_language_specific": "%1$s% das %2$s análises de usuários em %3$s deste jogo são positivas.",
 	"Discount_ARIA_Label": "%1$s% de desconto. Preço normal: %2$s. Com desconto: %3$s.",
 	"Discount_ARIA_Label_SpecialPrice": "Preço especial: %1$s.",
 	"Price_Free": "Gratuito",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Seções especiais",
 	"Menu_Popover_ViewAll": "Ver tudo",
 	"Menu_Popover_More": "Mais",
+	"Menu_Popover_Menu": "Menu",
 	"Menu_Section_Browse_RecentlyViewed": "Acessados recentemente",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Continue de onde parou",
 	"Menu_Section_Browse_Recommended": "Recomendados para você",

@@ -16004,6 +16004,8 @@
         m_regexCleanWords = null;
         m_bShownFilterTip = !1;
         m_bInitialized = !1;
+        m_bFilterChangedWhileLoading = !1;
+        m_bOngoingLoad = !1;
         m_DataAccess;
         constructor(_) {
           (0, _._)(this);
@@ -16029,9 +16031,8 @@
             await this.LoadTextFilterPreferences(),
             await this.LoadTextFilterWords(),
             await this.RequestUpdatedSettings(),
-            await this.LoadLanguages(),
-            this.OnFilterDataChanged(),
-            (this.m_bInitialized = !0);
+            await (0, _._)(() => !this.m_bOngoingLoad),
+            await this.InitFiltersWithRetry();
         }
         InitSteamEngineLanguages() {
           this.m_WebUIServiceTransport.BIsValid() &&
@@ -16045,11 +16046,22 @@
         }
         OnTextFilterDictionaryChanged(_) {
           return (
-            this.LoadLanguages().then(() => {
-              this.OnFilterDataChanged();
-            }),
+            this.m_bInitialized
+              ? this.InitFiltersWithRetry()
+              : (this.m_bFilterChangedWhileLoading = !0),
             1
           );
+        }
+        async InitFiltersWithRetry() {
+          do {
+            (this.m_bFilterChangedWhileLoading = !1),
+              (this.m_bInitialized = !1),
+              (this.m_bOngoingLoad = !0),
+              await this.LoadLanguages(),
+              this.OnFilterDataChanged(),
+              (this.m_bInitialized = !0);
+          } while (this.m_bFilterChangedWhileLoading);
+          this.m_bOngoingLoad = !1;
         }
         InitSteamEngineLanguage(_) {
           const _ = _._.Init(_);
@@ -16453,6 +16465,8 @@
         (0, _._)([_._], _.prototype, "m_regexBannedWords", void 0),
         (0, _._)([_._], _.prototype, "m_regexCleanWords", void 0),
         (0, _._)([_._], _.prototype, "m_bInitialized", void 0),
+        (0, _._)([_._], _.prototype, "m_bFilterChangedWhileLoading", void 0),
+        (0, _._)([_._], _.prototype, "m_bOngoingLoad", void 0),
         (0, _._)([_._], _.prototype, "Init", null),
         (0, _._)([_._], _.prototype, "OnTextFilterDictionaryChanged", null),
         (0, _._)([_._], _.prototype, "UpdateCommunityPreferences", null),

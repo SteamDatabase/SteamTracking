@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "english",
 	"review_summary_reviewrate": "%1$s% of the %2$s user reviews for this game are positive",
+	"review_summary_reviewrate_language_specific": "%1$s% of the %2$s user reviews in %3$s for this game are positive",
 	"Discount_ARIA_Label": "%1$s% off. %2$s normally, discounted to %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "Special price of %1$s",
 	"Price_Free": "Free",

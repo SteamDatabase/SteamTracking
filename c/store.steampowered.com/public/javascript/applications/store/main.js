@@ -3,6 +3,7 @@
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./shoppingcart_arabic.json": [74221, 1347],
         "./shoppingcart_brazilian.json": [46865, 4977],
         "./shoppingcart_bulgarian.json": [62810, 9050],
         "./shoppingcart_czech.json": [16052, 6771],
@@ -50,6 +51,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./shoppingcart_arabic.json": [74221, 1347],
         "./shoppingcart_brazilian.json": [46865, 4977],
         "./shoppingcart_bulgarian.json": [62810, 9050],
         "./shoppingcart_czech.json": [16052, 6771],
@@ -244,6 +246,7 @@
         Exit: "_9rIUUcLDBmzOF6ae3dqm1",
         ExitActive: "_2-qxNCdn_qJkT8TIBYe4xg",
         Down: "_3uEj_EGp3hFxwPvVMW02QT",
+        MoreSectionTransitionContent: "_1KK7nc1wjHP_-Nj5w1XSlZ",
       };
     },
     chunkid: (module) => {
@@ -1026,6 +1029,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./sales_arabic.json": [38822, 6915],
         "./sales_brazilian.json": [5856, 7633],
         "./sales_bulgarian.json": [76671, 3562],
         "./sales_czech.json": [15237, 3216],
@@ -1073,6 +1077,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./sales_arabic.json": [38822, 6915],
         "./sales_brazilian.json": [5856, 7633],
         "./sales_bulgarian.json": [76671, 3562],
         "./sales_czech.json": [15237, 3216],
@@ -29483,6 +29488,10 @@
                     _: 2,
                     _: _,
                   },
+                  summary_language_specific: {
+                    _: 3,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -34888,69 +34897,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = [], _ = !0) {
-        const _ = _.useRef(_);
-        (_.current = _),
-          _.useEffect(() => {
-            if (!_.current || !_) return;
-            const _ = setInterval(() => {
-              _.current && _.current();
-            }, _);
-            return () => clearInterval(_);
-          }, [_, _, ...__webpack_require__]);
-      }
-      function _() {
-        const [, _] = _.useState(0);
-        return _.useCallback(() => _((_) => _ + 1), []);
-      }
-      function _(_) {
-        const _ = _.useRef({
-          flLastExecutionTimeMs: 0,
-          fnLatestCallback: null,
-          nTimeoutHandle: 0,
-          fnExecuteLatestCallback() {
-            null != this.fnLatestCallback &&
-              (this.fnLatestCallback(),
-              (this.fnLatestCallback = null),
-              (this.flLastExecutionTimeMs = Date.now())),
-              window.clearTimeout(this.nTimeoutHandle),
-              (this.nTimeoutHandle = 0);
-          },
-        });
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            return () => _.fnExecuteLatestCallback();
-          }, []),
-          _.useCallback(
-            (_) => {
-              const _ = _.current;
-              _.fnLatestCallback = _;
-              const _ = Date.now() - _.flLastExecutionTimeMs,
-                _ = Math.max(_ - _, 0);
-              window.clearTimeout(_.nTimeoutHandle),
-                (_.nTimeoutHandle = window.setTimeout(
-                  () => _.fnExecuteLatestCallback(),
-                  _,
-                ));
-            },
-            [_],
-          )
-        );
-      }
       function _(_, _, _, _) {
         _.useEffect(() => {
           const _ = _?.current;
@@ -35015,6 +34964,115 @@
             [_],
           ),
         ];
+      }
+      function _() {
+        const [_, _] = _.useState(!1);
+        return [
+          _,
+          {
+            onMouseEnter: _.useCallback(() => _(!0), []),
+            onMouseLeave: _.useCallback(() => _(!1), []),
+          },
+        ];
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1);
+        return (
+          _.useEffect(() => {
+            if (!_.current) return;
+            let _ = !1;
+            const _ = (_) => {
+                const _ = _.current?.contains(_.target);
+                __webpack_require__(!!_),
+                  _ || (window.removeEventListener("pointermove", _), (_ = !1));
+              },
+              _ = () => {
+                __webpack_require__(!0),
+                  _ || (window.addEventListener("pointermove", _), (_ = !0));
+              };
+            return (
+              _.current.addEventListener("pointerenter", _),
+              () => {
+                window.removeEventListener("pointerenter", _),
+                  _ && window.removeEventListener("pointermove", _);
+              }
+            );
+          }, [_]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, __webpack_require__ = [], _ = !0) {
+        const _ = _.useRef(_);
+        (_.current = _),
+          _.useEffect(() => {
+            if (!_.current || !_) return;
+            const _ = setInterval(() => {
+              _.current && _.current();
+            }, _);
+            return () => clearInterval(_);
+          }, [_, _, ...__webpack_require__]);
+      }
+      function _() {
+        const [, _] = _.useState(0);
+        return _.useCallback(() => _((_) => _ + 1), []);
+      }
+      function _(_) {
+        const _ = _.useRef({
+          flLastExecutionTimeMs: 0,
+          fnLatestCallback: null,
+          nTimeoutHandle: 0,
+          fnExecuteLatestCallback() {
+            null != this.fnLatestCallback &&
+              (this.fnLatestCallback(),
+              (this.fnLatestCallback = null),
+              (this.flLastExecutionTimeMs = Date.now())),
+              window.clearTimeout(this.nTimeoutHandle),
+              (this.nTimeoutHandle = 0);
+          },
+        });
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () => _.fnExecuteLatestCallback();
+          }, []),
+          _.useCallback(
+            (_) => {
+              const _ = _.current;
+              _.fnLatestCallback = _;
+              const _ = Date.now() - _.flLastExecutionTimeMs,
+                _ = Math.max(_ - _, 0);
+              window.clearTimeout(_.nTimeoutHandle),
+                (_.nTimeoutHandle = window.setTimeout(
+                  () => _.fnExecuteLatestCallback(),
+                  _,
+                ));
+            },
+            [_],
+          )
+        );
       }
       function _(_, _) {
         _.useLayoutEffect(() => {
@@ -35085,42 +35143,6 @@
               bConstructed: !0,
             }),
           _.current.value
-        );
-      }
-      function _() {
-        const [_, _] = _.useState(!1);
-        return [
-          _,
-          {
-            onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
-          },
-        ];
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
-        return (
-          _.useEffect(() => {
-            if (!_.current) return;
-            let _ = !1;
-            const _ = (_) => {
-                const _ = _.current?.contains(_.target);
-                __webpack_require__(!!_),
-                  _ || (window.removeEventListener("pointermove", _), (_ = !1));
-              },
-              _ = () => {
-                __webpack_require__(!0),
-                  _ || (window.addEventListener("pointermove", _), (_ = !0));
-              };
-            return (
-              _.current.addEventListener("pointerenter", _),
-              () => {
-                window.removeEventListener("pointerenter", _),
-                  _ && window.removeEventListener("pointermove", _);
-              }
-            );
-          }, [_]),
-          _
         );
       }
       function _(_) {
@@ -48266,12 +48288,17 @@
             strComponentStack: _,
           });
       const _ = !0;
+      class _ extends Error {
+        constructor(..._) {
+          super(..._), (this.name = "Assertion Failed");
+        }
+      }
       {
         const _ = console.assert;
         console.assert = (_, _, ..._) => {
           if (!_) {
             const _ = _();
-            _(new Error(_(_, ..._)), 2, _);
+            _(new _(_(_, ..._)), 2, _);
           }
           _.apply(console, [_, _, ..._]);
         };
@@ -48288,6 +48315,9 @@
           _("error", (_) => {
             _(_.error, 0);
           }),
+          _("unhandledrejection", (_) => {
+            _(_.reason, 0);
+          }),
           (_ = window.setTimeout(() => {
             (_ = []), (_ = () => {});
           }, 3e4));
@@ -48301,7 +48331,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
+          "Refused unauthorized RPC command",
         ];
       function _() {
         try {
@@ -48492,7 +48522,9 @@
               }
             })(_, _);
             return _
-              ? (_.strComponentStack &&
+              ? (_.cCallsitesToIgnore &&
+                  _.message.splice(1, _.cCallsitesToIgnore),
+                _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 this.SendErrorReport(_),
                 _)
@@ -49028,6 +49060,14 @@
             }),
             this.m_ReviewInfo?.summary_unfiltered ||
               this.m_ReviewInfo?.summary_filtered
+          );
+        }
+        GetFilteredReviewSummaryLanguage() {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_reviews: !0,
+            }),
+            this.m_ReviewInfo?.summary_language_specific
           );
         }
         GetShortDescription() {
@@ -56838,13 +56878,17 @@
         componentDidCatch(_, _) {
           const _ = _.sm_ErrorReportingStore;
           _
-            ? __webpack_require__.ReportError(_).then(
-                (_) =>
-                  _ &&
-                  this.setState({
-                    identifierHash: _.identifierHash,
-                  }),
-              )
+            ? __webpack_require__
+                .ReportError(_, {
+                  strComponentStack: _.componentStack || void 0,
+                })
+                .then(
+                  (_) =>
+                    _ &&
+                    this.setState({
+                      identifierHash: _.identifierHash,
+                    }),
+                )
             : console.warn(
                 "No ErrorReportingStore - use ErrorReportingStore().Init() to configure error reporting to server",
               ),
@@ -65061,6 +65105,7 @@
             children: _,
             directionClass: _,
             animate: _ = !0,
+            sizeClass: _,
           } = _,
           _ = (0, _._)(_().TransitionGroup, _);
         return _.createElement(
@@ -65076,6 +65121,7 @@
             {
               key: _,
               childrenClasses: __webpack_require__,
+              sizeClass: _,
             },
             _,
           ),
@@ -71717,7 +71763,8 @@
       function _() {
         return null;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _() {
         return (
           (function (_) {
@@ -71831,10 +71878,14 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = {};
-      (_.brazilian = () =>
+      (_.arabic = () =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 18313, 19))),
+          .then(__webpack_require__._.bind(__webpack_require__, 41301, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 18313, 19))),
         (_.bulgarian = () =>
           __webpack_require__
             ._("chunkid")
@@ -76847,6 +76898,7 @@
                   childrenClasses: (0, _._)(_, _.SectionTransition),
                   directionClass: _,
                   animate: !!_,
+                  sizeClass: _.MoreSectionTransitionContent,
                 },
                 _.createElement(_, {
                   section: _,
@@ -79164,10 +79216,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
-      (_.brazilian = () =>
+      (_.arabic = () =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 46865, 19))),
+          .then(__webpack_require__._.bind(__webpack_require__, 74221, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 46865, 19))),
         (_.bulgarian = () =>
           __webpack_require__
             ._("chunkid")

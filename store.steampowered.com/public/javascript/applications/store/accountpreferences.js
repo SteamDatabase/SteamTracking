@@ -943,9 +943,9 @@
             : null;
         });
       var G = a(6813),
-        L = a(86227),
-        R = a.n(L),
-        F = a(56545),
+        R = a(86227),
+        F = a.n(R),
+        L = a(56545),
         z = a(75487),
         B = a(20194),
         H = a(75233),
@@ -971,7 +971,7 @@
             return (0, B.I)({
               queryKey: [x],
               queryFn: async () => {
-                const t = F.w.Init(z.rX),
+                const t = L.w.Init(z.rX),
                   a = await z.BX.GetInvites(e, t);
                 if (1 != a.GetEResult())
                   throw new Error(
@@ -1003,7 +1003,7 @@
               "div",
               {
                 className: (0, v.A)(
-                  R().PlaytestInvites,
+                  F().PlaytestInvites,
                   "account_settings_container",
                 ),
               },
@@ -1022,12 +1022,12 @@
                 ),
                 n.createElement(
                   "p",
-                  { className: R().Description },
+                  { className: F().Description },
                   (0, _.we)("#PlaytestInvites_Desc1"),
                 ),
                 n.createElement(
                   "p",
-                  { className: R().Description },
+                  { className: F().Description },
                   (0, _.we)("#PlaytestInvites_Desc2"),
                 ),
               ),
@@ -1047,10 +1047,10 @@
         );
         return n.createElement(
           "div",
-          { className: R().PlaytestInvite },
+          { className: F().PlaytestInvite },
           n.createElement(
             "div",
-            { className: R().InviteInfo },
+            { className: F().InviteInfo },
             n.createElement(
               "span",
               null,
@@ -1060,13 +1060,13 @@
           !i.TS.IN_MOBILE_WEBVIEW &&
             n.createElement(
               "div",
-              { className: R().StatusCtn },
+              { className: F().StatusCtn },
               n.createElement(
                 f.Z,
-                { className: R().Buttons },
+                { className: F().Buttons },
                 n.createElement(
                   d.jn,
-                  { className: R().WideButton, noFocusRing: !1, onClick: s },
+                  { className: F().WideButton, noFocusRing: !1, onClick: s },
                   (0, _.we)("#PlaytestInvites_ViewLibrary"),
                 ),
               ),
@@ -1083,7 +1083,7 @@
               a = (0, H.jE)();
             return (0, U.n)({
               mutationFn: async (a) => {
-                const n = F.w.Init(z.q);
+                const n = L.w.Init(z.q);
                 n.Body().add_invite_ids(e),
                   n.Body().set_status(a.bAccept ? 3 : 2);
                 const c = await z.BX.UpdateInvites(t, n);
@@ -1118,12 +1118,12 @@
           n.createElement(
             f.Z,
             {
-              className: R().PlaytestInvite,
+              className: F().PlaytestInvite,
               navEntryPreferPosition: Q.iU.MAINTAIN_X,
             },
             n.createElement(
               "div",
-              { className: R().InviteInfo },
+              { className: F().InviteInfo },
               n.createElement(ce, { steamIDInviter: o }),
               n.createElement(ne, {
                 appStoreItem: c,
@@ -1132,13 +1132,13 @@
               }),
               n.createElement(
                 "div",
-                { className: R().TimeInvited },
+                { className: F().TimeInvited },
                 (0, _.Nm)(t.time_created ?? a),
               ),
             ),
             n.createElement(
               "div",
-              { className: R().StatusCtn },
+              { className: F().StatusCtn },
               s.isPending
                 ? n.createElement(X.t, {
                     size: "medium",
@@ -1147,7 +1147,7 @@
                   })
                 : n.createElement(
                     "div",
-                    { className: R().Buttons },
+                    { className: F().Buttons },
                     n.createElement(
                       d.jn,
                       { noFocusRing: !1, onClick: () => i(!0) },
@@ -1170,23 +1170,23 @@
             : null,
           s = t?.GetStorePageURL(),
           i = n.createElement("img", {
-            className: R().SmallCap,
+            className: F().SmallCap,
             src: t?.GetAssets().GetSmallCapsuleURL() ?? $.A,
           });
         return (
           c == Z && (r = "Valve"),
           n.createElement(
             "div",
-            { className: R().AppInfoCtn },
+            { className: F().AppInfoCtn },
             s ? n.createElement(g.Ii, { href: s }, " ", i, " ") : i,
             n.createElement(
               "div",
-              { className: R().AppDescription },
-              n.createElement("div", { className: R().AppName }, a),
+              { className: F().AppDescription },
+              n.createElement("div", { className: F().AppName }, a),
               r &&
                 n.createElement(
                   "div",
-                  { className: R().AppDetail },
+                  { className: F().AppDetail },
                   (0, _.we)("#PlaytestInvites_AppDeveloper", r),
                 ),
             ),
@@ -1208,8 +1208,8 @@
               "div",
               {
                 className: (0, v.A)(
-                  R().AvatarAndPersona,
-                  R().InviteDescription,
+                  F().AvatarAndPersona,
+                  F().InviteDescription,
                 ),
               },
               n.createElement(V.i8, {
@@ -1235,7 +1235,7 @@
       function se(e) {
         return n.createElement(
           "div",
-          { className: R().InviteDescription },
+          { className: F().InviteDescription },
           (0, _.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         );
       }
@@ -1501,34 +1501,41 @@
               ),
             ),
           ),
-          n.createElement(
-            "div",
-            {
-              className: (0, v.A)(
-                Pe.AuthorizedDeviceHeader,
-                "account_header_line noicon",
-              ),
-            },
+          l?.length > 0 &&
             n.createElement(
-              "div",
+              n.Fragment,
               null,
-              (0, _.we)("#accountpreferences_revoked_devices_revoked_header"),
+              n.createElement(
+                "div",
+                {
+                  className: (0, v.A)(
+                    Pe.AuthorizedDeviceHeader,
+                    "account_header_line noicon",
+                  ),
+                },
+                n.createElement(
+                  "div",
+                  null,
+                  (0, _.we)(
+                    "#accountpreferences_revoked_devices_revoked_header",
+                  ),
+                ),
+              ),
+              n.createElement(
+                "div",
+                { className: "account_settings_container" },
+                n.createElement(
+                  "div",
+                  { className: Pe.SectionDescription },
+                  (0, _.PP)(s, n.createElement("p", null)),
+                ),
+                n.createElement(
+                  "div",
+                  { className: Pe.AuthorizedDeviceGroup },
+                  n.createElement(Ae, { rgDevices: l }),
+                ),
+              ),
             ),
-          ),
-          n.createElement(
-            "div",
-            { className: "account_settings_container" },
-            n.createElement(
-              "div",
-              { className: Pe.SectionDescription },
-              (0, _.PP)(s, n.createElement("p", null)),
-            ),
-            n.createElement(
-              "div",
-              { className: Pe.AuthorizedDeviceGroup },
-              n.createElement(Ae, { rgDevices: l }),
-            ),
-          ),
         );
       });
       function Ae(e) {
@@ -1562,8 +1569,12 @@
             msgTwoFactorStatus: i,
             bShowAuthenticatorActivity: o,
           } = e,
-          [l, m] = (0, n.useState)(!1);
-        let u = (function (e) {
+          [l, m] = (0, n.useState)(!1),
+          u = n.useRef(void 0);
+        n.useEffect(() => {
+          u.current?.BHasFocus() && u.current?.Node().ForceMeasureFocusRing();
+        }, [l]);
+        let p = (function (e) {
           if (2 == e.platform_type) {
             let t = new ke.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
@@ -1580,12 +1591,12 @@
           }
           return e.token_description;
         })(t);
-        u.length &&
-          (u = ` ${(0, _.we)("#accountpreferences_authorized_devices_name_separator")} "${u}"`);
-        const p = ze(t);
-        let f = null;
-        f =
-          p.country && r && r != p.country
+        p.length &&
+          (p = ` ${(0, _.we)("#accountpreferences_authorized_devices_name_separator")} "${p}"`);
+        const E = ze(t);
+        let g = null;
+        g =
+          E.country && r && r != E.country
             ? n.createElement(
                 Se.he,
                 {
@@ -1598,16 +1609,16 @@
                 n.createElement(
                   "div",
                   { className: Pe.LocationSuspicious },
-                  p.location,
+                  E.location,
                   n.createElement(A.$$j, null),
                 ),
               )
             : n.createElement(
                 "div",
                 { className: Pe.LocationNotSuspicious },
-                p.location,
+                E.location,
               );
-        const E = (function (e, t) {
+        const h = (function (e, t) {
           return (
             t?.state > 0 &&
             e.token_id &&
@@ -1615,13 +1626,14 @@
           );
         })(t, i);
         return n.createElement(
-          "div",
+          f.Z,
           {
             className: (0, v.A)(Pe.DeviceContainer, a && Pe.ActiveDevice, s),
             key: "id_" + t.token_id,
-            onClick: () => m(!l),
+            navRef: u,
+            onActivate: () => m(!l),
           },
-          n.createElement(Fe, { device: t, bHasAuthenticator: E }),
+          n.createElement(Le, { device: t, bHasAuthenticator: h }),
           n.createElement(
             "div",
             { className: Pe.DeviceContent },
@@ -1635,7 +1647,7 @@
                   "div",
                   { className: Pe.DeviceName },
                   n.createElement(Be, { device: t }),
-                  u,
+                  p,
                 ),
                 c &&
                   n.createElement(
@@ -1649,7 +1661,7 @@
               n.createElement(
                 "div",
                 { className: Pe.DetailsToggleContainer },
-                f,
+                g,
                 n.createElement(
                   "div",
                   { className: Pe.DetailsToggle },
@@ -1671,7 +1683,7 @@
               bActiveNow: a,
               msgTwoFactorStatus: o && i,
             }),
-            l && n.createElement(Re, { device: t }),
+            l && n.createElement(Fe, { device: t }),
           ),
         );
       }
@@ -1683,7 +1695,7 @@
             })
           : a
             ? null
-            : n.createElement(Le, { device: t });
+            : n.createElement(Re, { device: t });
       }
       function Ge(e) {
         const { msgTwoFactorUsage: t } = e;
@@ -1776,7 +1788,7 @@
             )
           : null;
       }
-      function Le(e) {
+      function Re(e) {
         const { device: t } = e,
           a =
             t.first_seen?.time &&
@@ -1832,7 +1844,7 @@
           )
         );
       }
-      function Re(e) {
+      function Fe(e) {
         const { device: t } = e;
         return n.createElement(
           "div",
@@ -1864,7 +1876,7 @@
           ),
         );
       }
-      function Fe(e) {
+      function Le(e) {
         const { device: t, bHasAuthenticator: a } = e,
           c = 5 == t.effective_token_state;
         let r = null;

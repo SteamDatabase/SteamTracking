@@ -1033,222 +1033,223 @@
     },
     36225: (e, t, n) => {
       "use strict";
-      n.d(t, { AS: () => L, KZ: () => M, c$: () => H });
+      n.d(t, { AS: () => R, KZ: () => O, c$: () => K });
       var a = n(22837),
         r = n(62490),
-        o = n(64753),
-        l = n(51614),
-        s = n(16072),
-        i = n(60863),
-        c = n(92503),
-        u = n(90626),
-        d = n(82817),
-        m = n(71725),
-        p = n(16676),
-        g = n(84811),
-        _ = n(42027),
-        E = n(4869),
-        C = n(78395),
-        h = n(21869),
-        f = n(738),
-        S = n(71696),
-        k = n(30175),
-        b = n(12155),
-        A = n(22797),
-        y = n(32754),
-        w = n(52038),
-        v = n(56011),
-        P = n(61859),
-        D = n(30470),
-        T = n(56520),
-        N = n(43104),
-        I = n(53930),
-        x = n(83247);
-      function L(e) {
+        o = n(86927),
+        l = n(64753),
+        s = n(51614),
+        i = n(16072),
+        c = n(60863),
+        u = n(92503),
+        d = n(90626),
+        m = n(82817),
+        p = n(71725),
+        g = n(16676),
+        _ = n(84811),
+        E = n(42027),
+        C = n(4869),
+        h = n(78395),
+        f = n(21869),
+        S = n(738),
+        k = n(71696),
+        b = n(30175),
+        A = n(12155),
+        y = n(22797),
+        w = n(32754),
+        v = n(52038),
+        P = n(56011),
+        D = n(61859),
+        T = n(30470),
+        N = n(56520),
+        I = n(43104),
+        x = n(53930),
+        L = n(83247);
+      function R(e) {
         const {
             src: t,
             inLink: n,
             setAttrs: a,
             focusView: r,
-            removeNode: l,
-            activeLanguage: d,
-            allowAnimations: m,
+            removeNode: s,
+            activeLanguage: m,
+            allowAnimations: p,
           } = e,
-          [p, g] = (0, o.OP)(),
-          [_, C, h] = (0, o.uD)(),
-          f = (0, c.FD)(),
-          S = u.useCallback(() => {
-            r(), h();
-          }, [r, h]),
-          A = u.useMemo(
-            () => f.find((e) => (0, i.q3)(e).toLowerCase() === t.toLowerCase()),
-            [t, f],
+          [g, _] = (0, o.OP)(),
+          [E, h, f] = (0, l.uD)(),
+          S = (0, u.FD)(),
+          k = d.useCallback(() => {
+            r(), f();
+          }, [r, f]),
+          y = d.useMemo(
+            () => S.find((e) => (0, c.q3)(e).toLowerCase() === t.toLowerCase()),
+            [t, S],
           ),
-          y = A ? (0, i.q3)(A) : null,
-          { elLocalizedImageGroupDialog: v, elLocalizedImageGroupControl: D } =
-            R(A, d, r),
-          T = (0, s.Un)(),
-          I = (e) => {
+          w = y ? (0, c.q3)(y) : null,
+          { elLocalizedImageGroupDialog: P, elLocalizedImageGroupControl: T } =
+            B(y, m, r),
+          N = (0, i.Un)(),
+          x = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           };
-        let x;
-        if (A) {
-          const e = (0, i.IP)(A, m, d);
+        let L;
+        if (y) {
+          const e = (0, c.IP)(y, p, m);
           if (e) {
-            const t = (0, i.Bv)(A, d);
-            x =
+            const t = (0, c.Bv)(y, m);
+            L =
               1 == e.usage
-                ? u.createElement("video", {
-                    key: y,
-                    className: N.ExtraAssetImg,
-                    src: (0, s.cn)(e.url, T),
-                    title: y,
+                ? d.createElement("video", {
+                    key: w,
+                    className: I.ExtraAssetImg,
+                    src: (0, i.cn)(e.url, N),
+                    title: w,
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
                     autoPlay: !0,
-                    onClick: I,
+                    onClick: x,
                   })
-                : u.createElement("img", {
-                    key: y,
-                    className: N.ExtraAssetImg,
-                    src: (0, s.cn)(e.url, T),
+                : d.createElement("img", {
+                    key: w,
+                    className: I.ExtraAssetImg,
+                    src: (0, i.cn)(e.url, N),
                     alt: t,
-                    title: y,
+                    title: w,
                   });
           } else
-            x = u.createElement(
+            L = d.createElement(
               "span",
-              { className: N.ExtraAssetError },
-              (0, P.we)("#StoreAdmin_GameDescription_MissingImageLanguage", t),
+              { className: I.ExtraAssetError },
+              (0, D.we)("#StoreAdmin_GameDescription_MissingImageLanguage", t),
             );
         } else
-          x = u.createElement(
+          L = d.createElement(
             "span",
-            { className: N.ExtraAssetError },
-            (0, P.we)("#StoreAdmin_GameDescription_MissingImage", t),
+            { className: I.ExtraAssetError },
+            (0, D.we)("#StoreAdmin_GameDescription_MissingImage", t),
           );
-        return u.createElement(
-          u.Fragment,
+        return d.createElement(
+          d.Fragment,
           null,
-          _ &&
-            u.createElement(O, {
-              editAsset: y,
+          E &&
+            d.createElement(U, {
+              editAsset: w,
               onAssetSelected: (e) => a({ src: e }),
-              hideModal: S,
+              hideModal: k,
             }),
-          v,
-          u.createElement(
+          P,
+          d.createElement(
             "span",
             {
-              className: (0, w.A)(
-                N.ExtraAssetImgTag,
-                N.ExtraAssetControlsContainer,
-                p && N.Hovered,
-                n && N.InDeprecatedLink,
+              className: (0, v.A)(
+                I.ExtraAssetImgTag,
+                I.ExtraAssetControlsContainer,
+                g && I.Hovered,
+                n && I.InDeprecatedLink,
               ),
-              ...g,
+              ..._,
               title: "",
             },
-            n && u.createElement(B, null),
-            u.createElement(
+            n && d.createElement(M, null),
+            d.createElement(
               "span",
-              { className: N.ExtraAssetControls },
-              D,
-              u.createElement(
-                k.ff,
+              { className: I.ExtraAssetControls },
+              T,
+              d.createElement(
+                b.ff,
                 {
-                  onClick: C,
-                  tooltip: (0, P.we)(
+                  onClick: h,
+                  tooltip: (0, D.we)(
                     "#StoreAdmin_GameDescription_ReplaceImage",
                   ),
                 },
-                u.createElement(E.ffu, null),
+                d.createElement(C.ffu, null),
               ),
-              u.createElement(
-                k.ff,
+              d.createElement(
+                b.ff,
                 {
-                  onClick: l,
-                  tooltip: (0, P.we)("#StoreAdmin_GameDescription_RemoveImage"),
+                  onClick: s,
+                  tooltip: (0, D.we)("#StoreAdmin_GameDescription_RemoveImage"),
                 },
-                u.createElement(b.X, null),
+                d.createElement(A.X, null),
               ),
             ),
-            x,
+            L,
           ),
         );
       }
-      function R(e, t, n) {
-        const [a, r, l] = (0, o.uD)(),
-          s = u.useCallback(() => {
-            n?.(), l();
-          }, [n, l]);
-        let c, d;
+      function B(e, t, n) {
+        const [a, r, o] = (0, l.uD)(),
+          s = d.useCallback(() => {
+            n?.(), o();
+          }, [n, o]);
+        let i, u;
         return (
-          (0, i.pN)(e)
-            ? ((c =
+          (0, c.pN)(e)
+            ? ((i =
                 a &&
-                u.createElement(F, {
+                d.createElement(G, {
                   selectedAsset: e,
                   hideModal: s,
                   activeLanguage: t,
                 })),
-              (d = u.createElement(
-                k.ff,
+              (u = d.createElement(
+                b.ff,
                 {
                   onClick: r,
-                  tooltip: (0, P.we)(
+                  tooltip: (0, D.we)(
                     "#StoreAdmin_GameDescription_EditImageDetails",
                   ),
                 },
-                u.createElement(b.vCk, { className: "SVGIcon_Button" }),
+                d.createElement(A.vCk, { className: "SVGIcon_Button" }),
               )))
-            : (0, i.i$)(e) &&
-              (d = u.createElement(
-                k.ff,
+            : (0, c.i$)(e) &&
+              (u = d.createElement(
+                b.ff,
                 {
                   onClick: () => {},
-                  tooltip: (0, P.we)(
+                  tooltip: (0, D.we)(
                     "#StoreAdmin_GameDescription_EditImageDetails_Legacy",
                   ),
                 },
-                u.createElement(b.R2D, null),
+                d.createElement(A.R2D, null),
               )),
-          { elLocalizedImageGroupDialog: c, elLocalizedImageGroupControl: d }
+          { elLocalizedImageGroupDialog: i, elLocalizedImageGroupControl: u }
         );
       }
-      function B() {
-        return u.createElement(
+      function M() {
+        return d.createElement(
           "span",
-          { className: N.ImageLinkDisabledWarning },
-          u.createElement(
+          { className: I.ImageLinkDisabledWarning },
+          d.createElement(
             "span",
-            { className: N.TopBar },
-            u.createElement(
-              y.Gq,
+            { className: I.TopBar },
+            d.createElement(
+              w.Gq,
               {
-                toolTipContent: (0, P.we)(
+                toolTipContent: (0, D.we)(
                   "#StoreAdmin_GameDescription_ImageLinkDisabled_Description",
                 ),
               },
-              u.createElement(
+              d.createElement(
                 "span",
-                { className: N.TopBarContent },
+                { className: I.TopBarContent },
                 "Disabled",
               ),
             ),
           ),
         );
       }
-      function M(e) {
+      function O(e) {
         const { nodeType: t } = e,
-          { view: n } = (0, k.wU)(),
-          [a, r, l] = (0, o.uD)(),
-          s = u.useCallback(() => {
-            l(), n.focus();
-          }, [l, n]),
-          i = u.useCallback(
+          { view: n } = (0, b.wU)(),
+          [a, r, o] = (0, l.uD)(),
+          s = d.useCallback(() => {
+            o(), n.focus();
+          }, [o, n]),
+          i = d.useCallback(
             (e) => {
               n.dispatch(
                 n.state.tr.insert(
@@ -1260,102 +1261,102 @@
             },
             [n, t, s],
           );
-        return u.createElement(
-          u.Fragment,
+        return d.createElement(
+          d.Fragment,
           null,
-          a && u.createElement(O, { onAssetSelected: i, hideModal: s }),
-          u.createElement(
-            k.ff,
+          a && d.createElement(U, { onAssetSelected: i, hideModal: s }),
+          d.createElement(
+            b.ff,
             {
               onClick: r,
               toggled: a,
               tooltip: "#StoreAdmin_GameDescription_InsertImage",
             },
-            u.createElement(E._V3, null),
+            d.createElement(C._V3, null),
           ),
         );
       }
-      function O(e) {
+      function U(e) {
         const { editAsset: t, onAssetSelected: n, hideModal: a } = e,
-          r = (0, c.FD)(),
-          [o, l] = u.useState(t),
-          [s, d] = (0, S.Y0)(a, i.SG),
-          m = u.useCallback(
+          r = (0, u.FD)(),
+          [o, l] = d.useState(t),
+          [s, i] = (0, k.Y0)(a, c.SG),
+          m = d.useCallback(
             (e) => {
               e && (n(e), a());
             },
             [n, a],
           );
-        return u.createElement(
-          h.E,
+        return d.createElement(
+          f.E,
           { active: !0 },
           s,
-          u.createElement(
-            f.x_,
+          d.createElement(
+            S.x_,
             { onEscKeypress: a },
-            u.createElement(
-              p.U9,
-              { classNameContent: N.ExtraAssetDialogContent },
-              u.createElement(
-                p.Y9,
+            d.createElement(
+              g.U9,
+              { classNameContent: I.ExtraAssetDialogContent },
+              d.createElement(
+                g.Y9,
                 null,
-                (0, P.we)("#StoreAdmin_GameDescription_SelectImage"),
+                (0, D.we)("#StoreAdmin_GameDescription_SelectImage"),
               ),
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: N.ExtraAssetsDialogDescription },
-                u.createElement(
+                { className: I.ExtraAssetsDialogDescription },
+                d.createElement(
                   "div",
                   null,
-                  (0, P.we)("#StoreAdmin_GameDescription_ExistingImages"),
+                  (0, D.we)("#StoreAdmin_GameDescription_ExistingImages"),
                 ),
-                u.createElement(
+                d.createElement(
                   "div",
-                  { className: N.UploadButtonContainer },
-                  u.createElement(
+                  { className: I.UploadButtonContainer },
+                  d.createElement(
                     "div",
                     null,
-                    (0, P.we)("#StoreAdmin_ExtraAssetUpload_UploadNew"),
+                    (0, D.we)("#StoreAdmin_ExtraAssetUpload_UploadNew"),
                   ),
-                  u.createElement(
-                    p.jn,
-                    { className: N.UploadButton, onClick: d },
-                    (0, P.we)("#StoreAdmin_ExtraAssetUpload_BrowseForFile"),
+                  d.createElement(
+                    g.jn,
+                    { className: I.UploadButton, onClick: i },
+                    (0, D.we)("#StoreAdmin_ExtraAssetUpload_BrowseForFile"),
                   ),
                 ),
               ),
-              u.createElement(
-                p.nB,
-                { className: N.ExtraAssetsGridDialog },
-                u.createElement(
+              d.createElement(
+                g.nB,
+                { className: I.ExtraAssetsGridDialog },
+                d.createElement(
                   "div",
                   {
-                    className: (0, w.A)(
-                      N.ExtraAssetsGrid,
-                      N.ExtraAssetsChooser,
+                    className: (0, v.A)(
+                      I.ExtraAssetsGrid,
+                      I.ExtraAssetsChooser,
                     ),
                   },
                   r.map((e) =>
-                    u.createElement(U, {
-                      key: (0, i.q3)(e),
+                    d.createElement(F, {
+                      key: (0, c.q3)(e),
                       extraAsset: e,
                       onSelectAsset: l,
                       onChooseAsset: m,
-                      selected: (0, i.q3)(e) == o,
+                      selected: (0, c.q3)(e) == o,
                     }),
                   ),
                 ),
               ),
-              u.createElement(
-                p.wi,
+              d.createElement(
+                g.wi,
                 null,
-                u.createElement(p.CB, {
+                d.createElement(g.CB, {
                   onCancel: a,
                   onOK: (e) => {
                     e.preventDefault(), m(o);
                   },
                   bOKDisabled: !o,
-                  strOKText: (0, P.we)(
+                  strOKText: (0, D.we)(
                     "#StoreAdmin_GameDescription_UseThisImage",
                   ),
                 }),
@@ -1364,148 +1365,148 @@
           ),
         );
       }
-      function U(e) {
+      function F(e) {
         const {
             extraAsset: t,
             onSelectAsset: n,
             onChooseAsset: a,
             selected: r,
           } = e,
-          o = (0, i.q3)(t);
-        return u.createElement(
+          o = (0, c.q3)(t);
+        return d.createElement(
           "div",
           {
-            className: (0, w.A)(N.ExtraAssetChoice, r && N.Selected),
+            className: (0, v.A)(I.ExtraAssetChoice, r && I.Selected),
             title: o,
             onClick: (e) => n(o),
             onDoubleClick: (e) => a(o),
           },
-          u.createElement(W, { extraAsset: t, controls: !1 }),
+          d.createElement(V, { extraAsset: t, controls: !1 }),
         );
       }
-      function F(e) {
+      function G(e) {
         const { selectedAsset: t, activeLanguage: n, hideModal: a } = e;
         var r, o;
         if (
           ((r = !t),
           (o = a),
-          u.useEffect(() => {
+          d.useEffect(() => {
             r && o();
           }, [r, o]),
           t)
         )
-          return u.createElement(
-            h.E,
+          return d.createElement(
+            f.E,
             { active: !0 },
-            u.createElement(
-              f.x_,
+            d.createElement(
+              S.x_,
               { onEscKeypress: a },
-              u.createElement(
-                p.U9,
-                { classNameContent: N.LocalizeAssetDialogContent },
-                u.createElement(
-                  p.Y9,
+              d.createElement(
+                g.U9,
+                { classNameContent: I.LocalizeAssetDialogContent },
+                d.createElement(
+                  g.Y9,
                   null,
-                  (0, P.we)("#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Title"),
+                  (0, D.we)("#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Title"),
                 ),
-                u.createElement(
+                d.createElement(
                   "div",
-                  { className: N.LocalizeAssetsDialogDescription },
-                  u.createElement(
+                  { className: I.LocalizeAssetsDialogDescription },
+                  d.createElement(
                     "div",
                     null,
-                    (0, P.we)(
+                    (0, D.we)(
                       "#StoreAdmin_ExtraAssetUpload_LocalizeAsset_Desc",
                     ),
                   ),
                 ),
-                u.createElement(
-                  p.nB,
+                d.createElement(
+                  g.nB,
                   null,
-                  u.createElement(K, { onlyExtraAsset: t }),
-                  u.createElement(
-                    g.tH,
+                  d.createElement(z, { onlyExtraAsset: t }),
+                  d.createElement(
+                    _.tH,
                     null,
-                    u.createElement(G, { extraAsset: t, activeLanguage: n }),
+                    d.createElement(H, { extraAsset: t, activeLanguage: n }),
                   ),
                 ),
-                u.createElement(
-                  p.wi,
+                d.createElement(
+                  g.wi,
                   null,
-                  u.createElement(
-                    p.jn,
+                  d.createElement(
+                    g.jn,
                     { onClick: a },
-                    (0, P.we)("#Button_Close"),
+                    (0, D.we)("#Button_Close"),
                   ),
                 ),
               ),
             ),
           );
       }
-      function G(e) {
+      function H(e) {
         const { extraAsset: t, activeLanguage: n } = e,
-          a = (0, i.wN)(t),
-          r = (0, s.Un)(),
-          l = u.useCallback(
-            (e) => (0, s.cn)((0, i.IP)(t, !0, e)?.url, r),
+          a = (0, c.wN)(t),
+          r = (0, i.Un)(),
+          o = d.useCallback(
+            (e) => (0, i.cn)((0, c.IP)(t, !0, e)?.url, r),
             [t, r],
           ),
-          [c, d] = u.useState(void 0),
-          [p, g, _] = (0, o.uD)();
+          [s, u] = d.useState(void 0),
+          [m, g, _] = (0, l.uD)();
         return a
-          ? u.createElement(
+          ? d.createElement(
               "div",
               null,
-              p &&
-                u.createElement(V, {
+              m &&
+                d.createElement($, {
                   extraAsset: t,
-                  deleteLang: c,
+                  deleteLang: s,
                   hideModal: _,
                 }),
-              u.createElement(m.z, {
+              d.createElement(p.z, {
                 rgAssetLangs: a,
                 initialLang: n,
                 showDeleteAll: !1,
-                imageClassname: N.DisplayLocImage,
-                fnGetAssetUrl: l,
+                imageClassname: I.DisplayLocImage,
+                fnGetAssetUrl: o,
                 fnDeletAssetLang: (e) => {
-                  d(e), g();
+                  u(e), g();
                 },
                 fnDeleteAllAssets: () => {
-                  d(void 0), g();
+                  u(void 0), g();
                 },
               }),
             )
           : null;
       }
-      function H(e) {
+      function K(e) {
         const { asset_mtime: t } = e,
-          n = (0, c.FD)(),
-          a = u.useMemo(() => r.WD(n.filter(i.pN), i.K7), [n]),
-          d = u.useMemo(
+          n = (0, u.FD)(),
+          a = d.useMemo(() => r.WD(n.filter(c.pN), c.K7), [n]),
+          o = d.useMemo(
             () =>
               n
-                .filter(i.pN)
+                .filter(c.pN)
                 .map((e) => ({
-                  key: (0, i.K7)(e),
-                  caption: (0, i.K7)(e),
+                  key: (0, c.K7)(e),
+                  caption: (0, c.K7)(e),
                   mapAltText: e.alt_text,
                 })),
             [n],
           ),
-          m = (0, x.gU)(),
-          [g, _, E] = (0, o.uD)(),
+          m = (0, L.gU)(),
+          [p, _, E] = (0, l.uD)(),
           { mutateAsync: C, isPending: h } = (function () {
-            const e = (0, c.Z3)("ajaxmodifyextraassets"),
-              t = (0, c.Y7)();
-            return (0, l.n)({
+            const e = (0, u.Z3)("ajaxmodifyextraassets"),
+              t = (0, u.Y7)();
+            return (0, s.n)({
               mutationFn: async ({
                 strExtraAssetFileName: t,
                 mapAltText: n,
               }) => {
                 if (!t || !n) return !1;
                 const a = new FormData();
-                a.append("sessionid", D.TS.SESSIONID),
+                a.append("sessionid", T.TS.SESSIONID),
                   a.append("action", "alt_text"),
                   a.append("name", t),
                   a.append(
@@ -1524,7 +1525,7 @@
               },
               onError: (e) => {
                 console.error(
-                  (0, P.we)(
+                  (0, D.we)(
                     "#StoreAdmin_UploadError_Generic",
                     "string" == typeof e ? e : e.message,
                   ),
@@ -1532,99 +1533,99 @@
               },
             });
           })();
-        return u.createElement(
-          s.Dx.Provider,
+        return d.createElement(
+          i.Dx.Provider,
           { value: t },
-          g &&
-            u.createElement(T.B, {
-              entries: d,
+          p &&
+            d.createElement(N.B, {
+              entries: o,
               isLoading: !1,
               hideModal: E,
               mutateAltTextAsync: async (e, t) =>
                 !1 !== (await C({ strExtraAssetFileName: e, mapAltText: t })),
               isMutatePending: h,
               fnGetImage: (e, t) =>
-                u.createElement(W, {
+                d.createElement(V, {
                   extraAsset: a.get(e),
                   caption: !1,
                   controls: !1,
                   primaryLanguage: t,
                 }),
             }),
-          n.some(i.pN) &&
-            u.createElement(
+          n.some(c.pN) &&
+            d.createElement(
               "div",
-              { className: N.AltTextBtn },
-              u.createElement(
+              { className: I.AltTextBtn },
+              d.createElement(
                 "p",
                 null,
-                (0, P.we)("#StoreAdmin_CustomImages_Title"),
+                (0, D.we)("#StoreAdmin_CustomImages_Title"),
               ),
-              u.createElement(
-                p.jn,
+              d.createElement(
+                g.jn,
                 { onClick: _ },
-                (0, P.we)("#StoreAdmin_EditAltText_Button"),
+                (0, D.we)("#StoreAdmin_EditAltText_Button"),
               ),
             ),
-          u.createElement(
+          d.createElement(
             "div",
-            { className: N.ExtraAssetsPageList },
-            u.createElement(
+            { className: I.ExtraAssetsPageList },
+            d.createElement(
               "div",
-              { className: N.ExtraAssetsGrid },
+              { className: I.ExtraAssetsGrid },
               n.map((e) =>
-                u.createElement(W, {
-                  key: (0, i.q3)(e),
+                d.createElement(V, {
+                  key: (0, c.q3)(e),
                   extraAsset: e,
                   primaryLanguage: m,
                 }),
               ),
             ),
           ),
-          u.createElement(K, null),
+          d.createElement(z, null),
         );
       }
-      function K(e) {
+      function z(e) {
         const { onlyExtraAsset: t } = e,
-          n = (0, c.Y7)(),
-          a = (0, I.L)(),
-          r = (0, c.FD)(),
-          o = u.useMemo(() => r.filter(i.pN), [r]),
-          l = z(o);
-        u.useEffect(() => {
+          n = (0, u.Y7)(),
+          a = (0, x.L)(),
+          r = (0, u.FD)(),
+          o = d.useMemo(() => r.filter(c.pN), [r]),
+          l = W(o);
+        d.useEffect(() => {
           const e = (e) => ({
-            baseFilename: (0, i.K7)(e),
-            languages: (0, i.i$)(e) ? [0] : (0, i.wN)(e),
+            baseFilename: (0, c.K7)(e),
+            languages: (0, c.i$)(e) ? [0] : (0, c.wN)(e),
           });
           a.SetExistingAssetGroups(o.map(e), l),
             a.SetOnlyAssetGroup(t ? e(t) : null);
         }, [a, o, t, l]);
         const s = (function (e) {
-            const t = u.useMemo(() => (e ? [e] : []), [e]),
-              n = z(t);
+            const t = d.useMemo(() => (e ? [e] : []), [e]),
+              n = W(t);
             return n?.length > 0 ? n[0] : void 0;
           })(t),
-          { rgRealmList: d } = (0, c.aJ)();
+          { rgRealmList: i } = (0, u.aJ)();
         let m;
         return (
           (m =
             t && !s
-              ? (0, P.we)(
+              ? (0, D.we)(
                   "#StoreAdmin_ExtraAssetUpload_Instructions_AdditionalNoSize",
                 )
               : t && s
-                ? (0, P.we)(
+                ? (0, D.we)(
                     "#StoreAdmin_ExtraAssetUpload_Instructions_AdditionalWithSize",
                     s.width,
                     s.height,
                   )
-                : (0, P.we)("#StoreAdmin_ExtraAssetUpload_Instructions_Base")),
-          u.createElement(
+                : (0, D.we)("#StoreAdmin_ExtraAssetUpload_Instructions_Base")),
+          d.createElement(
             "div",
             null,
-            u.createElement(_.O9, {
+            d.createElement(E.O9, {
               imageUploader: a,
-              rgRealmList: d,
+              rgRealmList: i,
               fnUploadComplete: (e) => {
                 const t = e
                   ? [...e].reverse().find((e) => e.bSuccess)?.uploadResult
@@ -1632,29 +1633,29 @@
                 t && n(t);
               },
               elOverrideDragAndDropText: m,
-              elAdditonalButtons: u.createElement(
-                u.Fragment,
+              elAdditonalButtons: d.createElement(
+                d.Fragment,
                 null,
-                u.createElement(
+                d.createElement(
                   "div",
-                  { className: N.InstructionsForLocAssets },
-                  (0, P.we)("#StoreAdmin_ExtraAssetUpload_Instructions_Note"),
+                  { className: I.InstructionsForLocAssets },
+                  (0, D.we)("#StoreAdmin_ExtraAssetUpload_Instructions_Note"),
                 ),
               ),
             }),
           )
         );
       }
-      function z(e) {
-        const [t, n] = u.useState(void 0),
-          a = (0, s.Un)();
+      function W(e) {
+        const [t, n] = d.useState(void 0),
+          a = (0, i.Un)();
         return (
-          u.useEffect(() => {
+          d.useEffect(() => {
             const t = e.map(async (e) => {
-              let t = (0, i.IP)(e, !1, -1);
+              let t = (0, c.IP)(e, !1, -1);
               return (
-                t || (t = (0, i.IP)(e, !0, -1)),
-                (0, d.II)(await (0, d.S2)((0, s.cn)(t?.url, a), 1 == t?.usage))
+                t || (t = (0, c.IP)(e, !0, -1)),
+                (0, m.II)(await (0, m.S2)((0, i.cn)(t?.url, a), 1 == t?.usage))
               );
             });
             Promise.all(t).then(n);
@@ -1662,25 +1663,25 @@
           t
         );
       }
-      function W(e) {
+      function V(e) {
         const {
             extraAsset: t,
             caption: n = !0,
             controls: a = !0,
             primaryLanguage: r,
           } = e,
-          l = u.useRef(void 0),
-          c = (0, o.BZ)(l),
-          [d, m, p] = (0, o.uD)(),
-          g = (0, s.Un)(),
-          _ = (0, i.q3)(t);
-        let C;
-        if ((0, i.i$)(t)) {
-          const e = (0, i.IP)(t, !1);
-          C = e ? [e] : [];
+          s = d.useRef(void 0),
+          u = (0, o.BZ)(s),
+          [m, p, g] = (0, l.uD)(),
+          _ = (0, i.Un)(),
+          E = (0, c.q3)(t);
+        let h;
+        if ((0, c.i$)(t)) {
+          const e = (0, c.IP)(t, !1);
+          h = e ? [e] : [];
         } else {
           const e = 29 == r ? 6 : 0,
-            n = (0, i.wN)(t).sort((t, n) => {
+            n = (0, c.wN)(t).sort((t, n) => {
               if (null != r) {
                 if (t == r && n != r) return -1;
                 if (t != r && n == r) return 1;
@@ -1689,120 +1690,120 @@
               }
               return t - n;
             });
-          C = Array.from({ length: Math.min(3, n.length) }).map((e, a) =>
-            (0, i.IP)(t, 0 == a, n[a]),
+          h = Array.from({ length: Math.min(3, n.length) }).map((e, a) =>
+            (0, c.IP)(t, 0 == a, n[a]),
           );
         }
-        const h = () => {
-            window.open((0, s.cn)(C[0]?.url, g));
+        const f = () => {
+            window.open((0, i.cn)(h[0]?.url, _));
           },
-          { elLocalizedImageGroupDialog: f, elLocalizedImageGroupControl: S } =
-            R(t, null, null),
-          A = (e) => {
+          { elLocalizedImageGroupDialog: S, elLocalizedImageGroupControl: k } =
+            B(t, null, null),
+          y = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           };
-        return u.createElement(
-          u.Fragment,
+        return d.createElement(
+          d.Fragment,
           null,
-          f,
-          u.createElement(
+          S,
+          d.createElement(
             "div",
             {
-              ref: l,
-              className: (0, w.A)(
-                N.ExtraAssetStack,
-                N.ExtraAssetControlsContainer,
-                c && N.Hovered,
+              ref: s,
+              className: (0, v.A)(
+                I.ExtraAssetStack,
+                I.ExtraAssetControlsContainer,
+                u && I.Hovered,
               ),
-              title: _,
+              title: E,
             },
-            d && u.createElement(V, { extraAsset: t, hideModal: p }),
+            m && d.createElement($, { extraAsset: t, hideModal: g }),
             a &&
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: N.ExtraAssetControls, title: "" },
-                S,
-                u.createElement(
-                  k.ff,
+                { className: I.ExtraAssetControls, title: "" },
+                k,
+                d.createElement(
+                  b.ff,
                   {
-                    onClick: h,
-                    tooltip: (0, P.we)(
+                    onClick: f,
+                    tooltip: (0, D.we)(
                       "#StoreAdmin_GameDescription_OpenInNewWindow",
                     ),
                   },
-                  u.createElement(E.glU, null),
+                  d.createElement(C.glU, null),
                 ),
-                u.createElement(
-                  k.ff,
+                d.createElement(
+                  b.ff,
                   {
-                    onClick: () => (0, v.OG)(_),
-                    tooltip: (0, P.we)(
+                    onClick: () => (0, P.OG)(E),
+                    tooltip: (0, D.we)(
                       "#StoreAdmin_GameDescription_CopyNameToClipboard",
                     ),
                   },
-                  u.createElement(E.QRo, null),
+                  d.createElement(C.QRo, null),
                 ),
-                u.createElement(
-                  k.ff,
+                d.createElement(
+                  b.ff,
                   {
-                    onClick: m,
-                    tooltip: (0, P.we)(
+                    onClick: p,
+                    tooltip: (0, D.we)(
                       "#StoreAdmin_GameDescription_DeleteAsset",
                     ),
                   },
-                  u.createElement(b.X, null),
+                  d.createElement(A.X, null),
                 ),
               ),
-            u.createElement(
+            d.createElement(
               "div",
-              { className: N.StackedImageCtn },
-              C.map((e, t) =>
+              { className: I.StackedImageCtn },
+              h.map((e, t) =>
                 1 == e.usage
-                  ? u.createElement("video", {
+                  ? d.createElement("video", {
                       key: e.url + t,
-                      className: (0, w.A)(N.StackedImage, N[`Image-${t}`]),
-                      src: e.url + "?t=" + g,
-                      onDoubleClick: a ? h : void 0,
+                      className: (0, v.A)(I.StackedImage, I[`Image-${t}`]),
+                      src: e.url + "?t=" + _,
+                      onDoubleClick: a ? f : void 0,
                       muted: !0,
                       loop: !0,
                       playsInline: !0,
                       autoPlay: !0,
-                      onClick: A,
+                      onClick: y,
                     })
-                  : u.createElement("img", {
+                  : d.createElement("img", {
                       key: e.url + t,
-                      className: (0, w.A)(N.StackedImage, N[`Image-${t}`]),
-                      src: e.url + "?t=" + g,
-                      onDoubleClick: a ? h : void 0,
+                      className: (0, v.A)(I.StackedImage, I[`Image-${t}`]),
+                      src: e.url + "?t=" + _,
+                      onDoubleClick: a ? f : void 0,
                     }),
               ),
             ),
             n &&
-              u.createElement(
+              d.createElement(
                 "div",
-                { className: N.ExtraAssetName },
-                (0, i.K7)(t),
+                { className: I.ExtraAssetName },
+                (0, c.K7)(t),
               ),
           ),
         );
       }
-      function V(e) {
+      function $(e) {
         const { extraAsset: t, deleteLang: n, hideModal: r } = e,
           {
             mutate: o,
-            isPending: s,
-            isSuccess: d,
+            isPending: l,
+            isSuccess: i,
           } = (function () {
-            const e = (0, c.Z3)("ajaxmodifyextraassets"),
-              t = (0, c.Y7)();
-            return (0, l.n)({
+            const e = (0, u.Z3)("ajaxmodifyextraassets"),
+              t = (0, u.Y7)();
+            return (0, s.n)({
               mutationFn: async ({ extraAsset: t, eLang: n }) => {
                 const r = new FormData();
-                r.append("sessionid", D.TS.SESSIONID),
+                r.append("sessionid", T.TS.SESSIONID),
                   r.append("action", "delete"),
-                  r.append("name", (0, i.K7)(t)),
-                  (0, i.pN)(t) &&
+                  r.append("name", (0, c.K7)(t)),
+                  (0, c.pN)(t) &&
                     null != n &&
                     -1 != n &&
                     r.append("lang", (0, a.Lg)(n));
@@ -1816,7 +1817,7 @@
               },
               onError: (e) => {
                 console.error(
-                  (0, P.we)(
+                  (0, D.we)(
                     "#StoreAdmin_UploadError_Generic",
                     "string" == typeof e ? e : e.message,
                   ),
@@ -1824,24 +1825,24 @@
               },
             });
           })(),
-          m = s || d;
+          m = l || i;
         return (
-          u.useEffect(() => {
-            d && r();
-          }, [d, r]),
-          u.createElement(
-            h.E,
+          d.useEffect(() => {
+            i && r();
+          }, [i, r]),
+          d.createElement(
+            f.E,
             { active: !0 },
-            u.createElement(C.o0, {
+            d.createElement(h.o0, {
               onOK: () => o({ extraAsset: t, eLang: n }),
               bOKDisabled: m,
-              strOKButtonText: (0, P.we)(
+              strOKButtonText: (0, D.we)(
                 "#StoreAdmin_GameDescription_DeleteAsset",
               ),
-              strTitle: (0, P.we)("#StoreAdmin_GameDescription_DeleteAsset"),
+              strTitle: (0, D.we)("#StoreAdmin_GameDescription_DeleteAsset"),
               strDescription: m
-                ? u.createElement(A.t, { position: "center", size: "medium" })
-                : (0, P.we)("#StoreAdmin_GameDescription_DeleteAsset_Confirm"),
+                ? d.createElement(y.t, { position: "center", size: "medium" })
+                : (0, D.we)("#StoreAdmin_GameDescription_DeleteAsset_Confirm"),
               onCancel: r,
             }),
           )
@@ -2560,19 +2561,20 @@
     },
     83247: (e, t, n) => {
       "use strict";
-      n.d(t, { KC: () => _, eE: () => k, gU: () => S, jy: () => g });
+      n.d(t, { KC: () => E, eE: () => b, gU: () => k, jy: () => _ });
       var a = n(90626),
         r = n(16676),
         o = n(6144),
         l = n(52038),
-        s = n(64753),
-        i = n(30470),
-        c = n(97982),
-        u = n(22837),
-        d = n(63556);
-      const m = "v_StoreAdminLanguageChange",
-        p = a.createContext(void 0);
-      function g(e) {
+        s = n(86927),
+        i = n(64753),
+        c = n(30470),
+        u = n(97982),
+        d = n(22837),
+        m = n(63556);
+      const p = "v_StoreAdminLanguageChange",
+        g = a.createContext(void 0);
+      function _(e) {
         const [t, n] = a.useState(),
           r = a.useMemo(
             () => ({ strActiveLanguage: t, setActiveLanguage: n }),
@@ -2586,60 +2588,60 @@
           }, [t]),
           (0, s.l6)(
             window,
-            m,
+            p,
             a.useCallback((e) => {
               e.detail.strLanguage && n(e.detail.strLanguage);
             }, []),
           ),
-          a.createElement(p.Provider, { value: r }, e.children)
+          a.createElement(g.Provider, { value: r }, e.children)
         );
       }
-      function _(e, t, n, r) {
+      function E(e, t, n, r) {
         const l = a.useMemo(() => Array.from(e.keys()), [e]),
           [s] = a.useState(() => {
             const e = new Map(t);
             return new Map(l.map((t) => [t, (0, o.Jc)(e.get(t) || "")]));
           }),
-          c = a.useContext(p),
-          [d, m] = a.useState(() => {
-            return (t = s.size ? s : e).has(i.TS.LANGUAGE)
-              ? i.TS.LANGUAGE
+          i = a.useContext(g),
+          [u, m] = a.useState(() => {
+            return (t = s.size ? s : e).has(c.TS.LANGUAGE)
+              ? c.TS.LANGUAGE
               : t.has("english")
                 ? "english"
                 : t.keys().next().value;
             var t;
           }),
-          g = c?.strActiveLanguage ?? d,
+          p = i?.strActiveLanguage ?? u,
           _ = a.useCallback(
             (e) => {
-              c?.setActiveLanguage(e), m(e);
+              i?.setActiveLanguage(e), m(e);
             },
-            [c],
+            [i],
           ),
-          C = a.createElement(E, {
+          E = a.createElement(C, {
             mapLanguages: e,
             mapValues: s,
-            strActiveLanguage: g,
+            strActiveLanguage: p,
             setActiveLanguage: _,
           }),
-          f =
+          h =
             Boolean(n && r) &&
-            a.createElement(h, {
+            a.createElement(f, {
               rgLanguages: l,
               mapValues: s,
               namePrefix: n,
               rgPath: r,
             });
         return {
-          strActiveLanguage: g,
+          strActiveLanguage: p,
           mapValues: s,
-          rctLanguageSelect: C,
-          rgLanguages: l.map(u.sf),
-          rctHiddenInputs: f,
+          rctLanguageSelect: E,
+          rgLanguages: l.map(d.sf),
+          rctHiddenInputs: h,
           setActiveLanguage: _,
         };
       }
-      function E(e) {
+      function C(e) {
         const {
             mapLanguages: t,
             mapValues: n,
@@ -2652,7 +2654,7 @@
               t.forEach((t, r) => {
                 e.push({
                   data: r,
-                  label: a.createElement(C, {
+                  label: a.createElement(h, {
                     strLocLanguage: t,
                     value: n.get(r),
                   }),
@@ -2663,30 +2665,30 @@
           }, [t, n]),
           i = a.useCallback((e) => l(e.data), [l]);
         return a.createElement(r.m, {
-          strClassName: c.LanguageSelect,
+          strClassName: u.LanguageSelect,
           onChange: i,
           selectedOption: o,
           rgOptions: s,
         });
       }
-      function C(e) {
+      function h(e) {
         const { strLocLanguage: t, value: n } = e,
           [r, o] = a.useState(() => !!n?.Value?.trim()),
-          i = a.useCallback((e) => o(!!e.trim()), []);
+          s = a.useCallback((e) => o(!!e.trim()), []);
         return (
-          (0, s.x2)(n, i),
-          a.useEffect(() => i(n.Value), [i, n]),
+          (0, i.x2)(n, s),
+          a.useEffect(() => s(n.Value), [s, n]),
           a.createElement(
             "span",
-            { className: (0, l.A)(c.LanguageOption, r && c.HasValue) },
+            { className: (0, l.A)(u.LanguageOption, r && u.HasValue) },
             t,
           )
         );
       }
-      function h(e) {
+      function f(e) {
         const { rgLanguages: t, mapValues: n, namePrefix: r, rgPath: o } = e;
         return t.map((e) =>
-          a.createElement(f, {
+          a.createElement(S, {
             key: e,
             language: e,
             value: n.get(e),
@@ -2695,29 +2697,29 @@
           }),
         );
       }
-      const f = a.memo(function (e) {
+      const S = a.memo(function (e) {
         const { language: t, value: n, namePrefix: r, rgPath: o } = e,
-          l = (0, s.gc)(n) || "",
-          i = r + [...o, t].map((e) => `[${e}]`).join("");
-        return a.createElement("input", { type: "hidden", name: i, value: l });
+          l = (0, i.gc)(n) || "",
+          s = r + [...o, t].map((e) => `[${e}]`).join("");
+        return a.createElement("input", { type: "hidden", name: s, value: l });
       });
-      function S() {
-        const e = a.useContext(p);
-        return (0, u.sf)(e?.strActiveLanguage, 0);
+      function k() {
+        const e = a.useContext(g);
+        return (0, d.sf)(e?.strActiveLanguage, 0);
       }
-      function k(e) {
+      function b(e) {
         const {
             strActiveLanguage: t,
             mapValues: n,
             rctLanguageSelect: r,
             setActiveLanguage: o,
-          } = _(e, [], null, null),
-          l = (0, u.sf)(t, 0);
+          } = E(e, [], null, null),
+          l = (0, d.sf)(t, 0);
         return (
           a.useEffect(() => {
-            d.O.Get().SetCurEditLanguage(l);
+            m.O.Get().SetCurEditLanguage(l);
           }, [l]),
-          (0, s.hL)(d.O.Get().GetCallback(), (e) => o((0, u.Lg)(e))),
+          (0, i.hL)(m.O.Get().GetCallback(), (e) => o((0, d.Lg)(e))),
           {
             strActiveLanguage: t,
             eActiveLang: l,
@@ -5562,7 +5564,7 @@
     },
     51669: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Fo });
+      n.r(t), n.d(t, { default: () => Go });
       var a = n(90626),
         r = n(61859),
         o = n(93763),
@@ -14633,11 +14635,12 @@
           ),
         );
       }
-      const Uo = a.lazy(async () => ({
+      var Uo = n(35863);
+      const Fo = a.lazy(async () => ({
         default: (await n.e(4684).then(n.bind(n, 64684)))
           .AccessibilityFeaturesInfo,
       }));
-      function Fo(e) {
+      function Go(e) {
         return a.createElement(
           ie.dO,
           null,
@@ -14675,13 +14678,15 @@
                   "storeadmin-purchaseoptionsorder-edit": (e) =>
                     a.createElement(La, { ...e }),
                   "storeadmin-accessibilityfeatures": (e) =>
-                    a.createElement(Uo, { ...e }),
+                    a.createElement(Fo, { ...e }),
                   "storeadmin-creator-home-edit": (e) =>
                     a.createElement(Po, { ...e }),
                   "storeadmin-app-screenshot-alttext": (e) =>
                     a.createElement(Lo, { ...e }),
                   "storeadmin-creator-home-fixup": (e) =>
                     a.createElement(Mo, { ...e }),
+                  "storeadmin-editions-editor": (e) =>
+                    a.createElement(Uo.H, { ...e }),
                 },
               }),
             ),

@@ -73567,6 +73567,10 @@ var CLSTAMP = "steamdb";
                     _: 2,
                     _: _,
                   },
+                  summary_language_specific: {
+                    _: 3,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -85171,8 +85175,6 @@ var CLSTAMP = "steamdb";
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -85326,6 +85328,286 @@ var CLSTAMP = "steamdb";
         return (
           "unknown CVRGamepadUI_Message_Error_Response_ErrorCode ( " + _ + " )"
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.enum || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  enum: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  appid: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  overlay: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  hwnd: {
+                    _: 4,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUIShared_Icon";
+        }
+      }
+      _.Message;
+      _.Message;
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.frame_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  frame_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  menu: {
+                    _: 2,
+                    _: _,
+                  },
+                  tmp_title: {
+                    _: 1e3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Frame";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.items || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  items: {
+                    _: 1,
+                    _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Frame_FrameMenu";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.tmp_icon || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  tmp_icon: {
+                    _: 1e3,
+                    _: _,
+                  },
+                  tmp_label: {
+                    _: 1001,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Frame_FrameMenu_Item";
+        }
       }
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -85633,7 +85915,7 @@ var CLSTAMP = "steamdb";
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.dashboard_popup_request_id || _._(_._()),
+            _.prototype.dashboard_popup_id || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
         static sm_m;
@@ -85644,7 +85926,7 @@ var CLSTAMP = "steamdb";
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  dashboard_popup_request_id: {
+                  dashboard_popup_id: {
                     _: 1,
                     _: _._.readUint32,
                     _: _._.writeUint32,
@@ -86087,7 +86369,7 @@ var CLSTAMP = "steamdb";
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.dashboard_popup_request_id || _._(_._()),
+            _.prototype.dashboard_popup_id || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
         static sm_m;
@@ -86098,7 +86380,7 @@ var CLSTAMP = "steamdb";
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  dashboard_popup_request_id: {
+                  dashboard_popup_id: {
                     _: 1,
                     _: _._.readUint32,
                     _: _._.writeUint32,
@@ -86583,6 +86865,279 @@ var CLSTAMP = "steamdb";
           return "CVRGamepadUI_Message_ExecuteSteamURL_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_InitFrameSystem_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_InitFrameSystem_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.updated_frames || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  updated_frames: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  deleted_frames: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_UpdateFrameUIs_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.results || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  results: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_UpdateFrameUIs_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.frame_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  frame_id: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  frame_menu_dashboard_popup_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_UpdateFrameUIs_Response_FrameUpdateResult";
+        }
+      }
       class _ {
         m_Client;
         constructor(_) {
@@ -86650,6 +87205,16 @@ var CLSTAMP = "steamdb";
           msgClassRequest_t: _,
           msgClassResponse_t: _,
           strMethod: "ExecuteSteamURL",
+        },
+        "InitFrameSystem#1": {
+          msgClassRequest_t: _,
+          msgClassResponse_t: _,
+          strMethod: "InitFrameSystem",
+        },
+        "UpdateFrameUIs#1": {
+          msgClassRequest_t: _,
+          msgClassResponse_t: _,
+          strMethod: "UpdateFrameUIs",
         },
       };
     },

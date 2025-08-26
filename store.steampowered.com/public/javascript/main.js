@@ -364,7 +364,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 		if ( typeof GDynamicStore != 'undefined' )
 		{
 			strUrlTarget += '?review_score_preference=' + ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
-		}		
+		}
 
 		var targetId = strTargetPrefix + rgHoverData['id'];
 		var $HoverData = $JFromIDOrElement( targetId );
@@ -2306,7 +2306,15 @@ function PreloadImages( elElement )
 		{
 			$Element.find("*[data-background-image-url]").each(function(i, j){
 				var $elTarget = $J(j);
-				$elTarget.css({'background-image': 'url(' + $elTarget.data('background-image-url') + ')' });
+
+				let strBackgroundImg = $elTarget.data('background-image-url');
+				if ( !window.UseTabletScreenMode() && !window.UseMobileScreenMode() )
+				{
+					const strBackgroundImg2x = $elTarget.data('background-image2x-url');
+					if ( strBackgroundImg2x )
+						strBackgroundImg = strBackgroundImg2x
+				}
+				$elTarget.css({'background-image': 'url(' + strBackgroundImg + ')' });
 			});
 
 			$Element.find("img[data-image-url]").each(function(i, j){

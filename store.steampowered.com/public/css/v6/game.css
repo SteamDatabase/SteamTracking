@@ -6438,6 +6438,10 @@ body.v6 .page_content.notes {
 	html.responsive .dlc_highlight .capsule {
 		object-fit: scale-down;
 	}
+
+	html.responsive .dlc_highlight.game_area_dlc_row {
+		display: flex;
+	}
 }
 
 .saleEventBannerStyle {
@@ -6855,10 +6859,11 @@ body.v6.widestore .game_area_already_owned.master_sub {
 	max-width: 1168px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1220px) and (min-width: 910px) {
 	body.v6.widestore .game_area_already_owned.page_content {
 		width: calc(100% - 50px);
 		padding: 0 25px;
+		align-items: center;
 	}
 }
 

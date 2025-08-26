@@ -162,6 +162,7 @@
         SessionAudience: "_3DgrT27j0qIz8_26rX4hOc",
         SessionInfoLink: "_1KBfuvwvcwNpnVAMW0JxlH",
         SessionOptions: "_3KAHxFNUEscoxtvBzwWKvs",
+        InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
         SessionColumnCtn: "iUmtJvs3v_bmv-tu43tpL",
         SessionInstance: "_1igTM-TlnNkIhWxl95pTyB",
         Background: "_3k-Bve67pUbtbb7heNH--5",
@@ -171,7 +172,6 @@
         MaxSize: "_3REuR3WLDb6JDzZpI2VkUz",
         SoldOut: "dndEdZn2hpJTIu4zpYoYG",
         Max: "_1-LTOHwZqSK67eUyq4qscx",
-        InstanceDivider: "_2IUfDPL02-oni7NXCV_ipu",
         Day: "_2Zkbwdhs4WPVI1ZyUHtHUG",
         Time: "_8oQG_Wbl2-Eamq1WKMAoo",
         Registering: "td3x9QaINc75mi2ppkGoF",
@@ -14732,7 +14732,7 @@
       var o = r(52038),
         l = r(42060),
         m = r.n(l),
-        c = r(64753),
+        c = r(86927),
         u = r(20194),
         d = r(30470);
       function g(e) {
@@ -24238,6 +24238,7 @@
                   { className: Sr().SessionAudience },
                   (0, y.we)("#MeetSteam_Session_Audience", o),
                 ),
+              d.createElement("div", { className: Sr().SessionOptions }, r),
               Boolean(l) &&
                 d.createElement(
                   d.Fragment,
@@ -24255,7 +24256,6 @@
                       d.createElement(Fr.fh, { text: l, event: null }),
                     ),
                 ),
-              d.createElement("div", { className: Sr().SessionOptions }, r),
             )
           : null;
       }

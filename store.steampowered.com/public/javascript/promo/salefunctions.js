@@ -274,6 +274,9 @@ function fnRenderHeroCapsule( oItem )
 
 function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 {
+	if ( !rgHeroItems.length )
+		return;
+
 	var Settings = { games_already_in_library: false, localized: true, only_current_platform: true, enforce_minimum: true };
 
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
@@ -315,6 +318,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 			$J(this).find('video.hero_video')[0].pause();
 	} );
 
+	$HeroItemCtn.show();
 	$HeroItemCtn.css('minHeight', '' );
 }
 
@@ -441,6 +445,9 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	var k_nTier2ItemsMin = 16;
 	var k_nTier2ItemsMax = 16;
 
+	if ( !rgDisplayLists.sale_tier1 )
+		return;
+
 	if ( rgDisplayLists.steam_award_winners && rgSteamAwardDefs )
 	{
 		HomeSaleSteamAwardWinners( $J( '.home_steamawards_ctn' ), rgDisplayLists.steam_award_winners, rgSteamAwardDefs );
@@ -504,14 +511,6 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		SaleRenderUnder10Section( $Under10Area, rgDisplayLists.under10 );
 	} );
 
-	var $FranchiseBlock = $J('#franchise_target' );
-	if ( $FranchiseBlock.length )
-	{
-		new CScrollOffsetWatcher($FranchiseBlock, function () {
-			SaleFranchiseBlock($FranchiseBlock, rgFranchiseData);
-		});
-	}
-
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
 
@@ -525,6 +524,8 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
 
 	HomeRenderSteamDeckSection( rgDisplayLists.most_played_deck );
+
+	$J( '.home_morefeatured_ctn' ).show();
 
 	// Render the featured events section
 	// RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgDisplayLists.feature_event_apps );
@@ -926,6 +927,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	else
 	    $FeatureName = 'sale_tag_bucket';
 
+	rgItemsPassingFilter.splice( rgItemsPassingFilter.length - ( rgItemsPassingFilter.length % 3 ) );
 	for ( var iItem = 0; iItem < rgItemsPassingFilter.length; iItem++ )
 		$Row.append( SaleCap( rgItemsPassingFilter[iItem], $FeatureName, 'discount_block_inline' ) );
 
@@ -940,7 +942,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	else if ( $FeatureName == "sale_recommended_by_steam_labs" )
 		$Ctn.append( $J('<a/>', {'class': 'see_more_link btnv6_white_transparent btn_small_tall', 'href': rgTagData.url } ).html( '<span>' + 'Discover more in the Interactive Recommender' + '</span>' ) );
 
-	$Parent.append( $Ctn ).css('height','');
+	$Parent.append( $Ctn ).css('min-height','');
 	GDynamicStore.DecorateDynamicItems( $Parent );
 }
 

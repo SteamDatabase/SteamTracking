@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "spanish",
 	"review_summary_reviewrate": "El %1$s % de las %2$s reseñas de los usuarios sobre este juego son positivas",
+	"review_summary_reviewrate_language_specific": "El %1$s % de las %2$s reseñas de los usuarios en %3$s sobre este juego son positivas",
 	"Discount_ARIA_Label": "%1$s % de descuento. El precio habitual es de %2$s; con el descuento es de %3$s.",
 	"Discount_ARIA_Label_SpecialPrice": "Precio especial de %1$s",
 	"Price_Free": "Gratis",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Miscelánea",
 	"Menu_Popover_ViewAll": "Ver todo",
 	"Menu_Popover_More": "Más",
+	"Menu_Popover_Menu": "Menú",
 	"Menu_Section_Browse_RecentlyViewed": "Vistos recientemente",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Seguir donde lo dejaste",
 	"Menu_Section_Browse_Recommended": "Recomendados para ti",

@@ -4,6 +4,7 @@
   {
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 2218],
         "./main_brazilian.json": [52333, 1606],
         "./main_bulgarian.json": [21334, 4893],
         "./main_czech.json": [26312, 67],
@@ -50,6 +51,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./main_arabic.json": [1825, 2218],
         "./main_brazilian.json": [52333, 1606],
         "./main_bulgarian.json": [21334, 4893],
         "./main_czech.json": [26312, 67],
@@ -849,6 +851,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./sales_arabic.json": [38822, 6915],
         "./sales_brazilian.json": [5856, 7633],
         "./sales_bulgarian.json": [76671, 3562],
         "./sales_czech.json": [15237, 3216],
@@ -896,6 +899,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./sales_arabic.json": [38822, 6915],
         "./sales_brazilian.json": [5856, 7633],
         "./sales_bulgarian.json": [76671, 3562],
         "./sales_czech.json": [15237, 3216],
@@ -12115,6 +12119,10 @@
                     _: 2,
                     _: _,
                   },
+                  summary_language_specific: {
+                    _: 3,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -17502,17 +17510,92 @@
         _: () => _,
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return (0, _._)(
+          (_) => {
+            if (_ && _)
+              return (
+                _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
+              );
+          },
+          [_, _],
+        );
+      }
+      function _(_, _, _, _) {
+        _.useEffect(() => {
+          if (_ && _)
+            return (
+              _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
+            );
+        }, [_, _, _]);
+      }
+      function _(_, _, _, _) {
+        return _(
+          _,
+          "message",
+          function (_) {
+            _.includes(_.data) && __webpack_require__(this, _);
+          },
+          _,
+        );
+      }
+      function _() {
+        const [_, _] = _.useState(!1);
+        return [
+          _,
+          {
+            onMouseEnter: _.useCallback(() => _(!0), []),
+            onMouseLeave: _.useCallback(() => _(!1), []),
+          },
+        ];
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1);
+        return (
+          _.useEffect(() => {
+            if (!_.current) return;
+            let _ = !1;
+            const _ = (_) => {
+                const _ = _.current?.contains(_.target);
+                __webpack_require__(!!_),
+                  _ || (window.removeEventListener("pointermove", _), (_ = !1));
+              },
+              _ = () => {
+                __webpack_require__(!0),
+                  _ || (window.addEventListener("pointermove", _), (_ = !0));
+              };
+            return (
+              _.current.addEventListener("pointerenter", _),
+              () => {
+                window.removeEventListener("pointerenter", _),
+                  _ && window.removeEventListener("pointermove", _);
+              }
+            );
+          }, [_]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -17564,35 +17647,6 @@
             },
             [_],
           )
-        );
-      }
-      function _(_, _, _) {
-        return (0, _._)(
-          (_) => {
-            if (_ && _)
-              return (
-                _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
-              );
-          },
-          [_, _],
-        );
-      }
-      function _(_, _, _, _) {
-        _.useEffect(() => {
-          if (_ && _)
-            return (
-              _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
-            );
-        }, [_, _, _]);
-      }
-      function _(_, _, _, _) {
-        return _(
-          _,
-          "message",
-          function (_) {
-            _.includes(_.data) && __webpack_require__(this, _);
-          },
-          _,
         );
       }
       function _(_, _) {
@@ -17671,42 +17725,6 @@
               bConstructed: !0,
             }),
           _.current.value
-        );
-      }
-      function _() {
-        const [_, _] = _.useState(!1);
-        return [
-          _,
-          {
-            onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
-          },
-        ];
-      }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
-        return (
-          _.useEffect(() => {
-            if (!_.current) return;
-            let _ = !1;
-            const _ = (_) => {
-                const _ = _.current?.contains(_.target);
-                __webpack_require__(!!_),
-                  _ || (window.removeEventListener("pointermove", _), (_ = !1));
-              },
-              _ = () => {
-                __webpack_require__(!0),
-                  _ || (window.addEventListener("pointermove", _), (_ = !0));
-              };
-            return (
-              _.current.addEventListener("pointerenter", _),
-              () => {
-                window.removeEventListener("pointerenter", _),
-                  _ && window.removeEventListener("pointermove", _);
-              }
-            );
-          }, [_]),
-          _
         );
       }
       function _(_) {
@@ -21903,12 +21921,17 @@
             strComponentStack: _,
           });
       const _ = !0;
+      class _ extends Error {
+        constructor(..._) {
+          super(..._), (this.name = "Assertion Failed");
+        }
+      }
       {
         const _ = console.assert;
         console.assert = (_, _, ..._) => {
           if (!_) {
             const _ = _();
-            _(new Error(_(_, ..._)), 2, _);
+            _(new _(_(_, ..._)), 2, _);
           }
           _.apply(console, [_, _, ..._]);
         };
@@ -21925,6 +21948,9 @@
           _("error", (_) => {
             _(_.error, 0);
           }),
+          _("unhandledrejection", (_) => {
+            _(_.reason, 0);
+          }),
           (_ = window.setTimeout(() => {
             (_ = []), (_ = () => {});
           }, 3e4));
@@ -21938,7 +21964,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
-          "TypeError: Failed to execute 'getComputedStyle' on 'Window': parameter 1 is not of type 'Element'.",
+          "Refused unauthorized RPC command",
         ];
       function _() {
         try {
@@ -22129,7 +22155,9 @@
               }
             })(_, _);
             return _
-              ? (_.strComponentStack &&
+              ? (_.cCallsitesToIgnore &&
+                  _.message.splice(1, _.cCallsitesToIgnore),
+                _.strComponentStack &&
                   (_.strComponentStack = _.strComponentStack),
                 this.SendErrorReport(_),
                 _)
@@ -27055,6 +27083,7 @@
             children: _,
             directionClass: _,
             animate: _ = !0,
+            sizeClass: _,
           } = _,
           _ = (0, _._)(_().TransitionGroup, _);
         return _.createElement(
@@ -27070,6 +27099,7 @@
             {
               key: _,
               childrenClasses: __webpack_require__,
+              sizeClass: _,
             },
             _,
           ),
@@ -28998,13 +29028,17 @@
         componentDidCatch(_, _) {
           const _ = _.sm_ErrorReportingStore;
           _
-            ? __webpack_require__.ReportError(_).then(
-                (_) =>
-                  _ &&
-                  this.setState({
-                    identifierHash: _.identifierHash,
-                  }),
-              )
+            ? __webpack_require__
+                .ReportError(_, {
+                  strComponentStack: _.componentStack || void 0,
+                })
+                .then(
+                  (_) =>
+                    _ &&
+                    this.setState({
+                      identifierHash: _.identifierHash,
+                    }),
+                )
             : console.warn(
                 "No ErrorReportingStore - use ErrorReportingStore().Init() to configure error reporting to server",
               ),

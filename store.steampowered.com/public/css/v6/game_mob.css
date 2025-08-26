@@ -465,11 +465,12 @@
 	html.responsive .game_area_dlc_row.ds_flagged {
 		background-color: #417a9b;
 	}
+
 	html.responsive .game_area_dlc_row.ds_flagged .ds_flag {
 		max-width: unset;
 	}
 	html.responsive .game_area_dlc_row.ds_flagged .game_area_dlc_name {
-		padding-top: 28px;
+		padding: 12px 0px;
 		color: white;
 	}
 	html.responsive .game_area_dlc_name {

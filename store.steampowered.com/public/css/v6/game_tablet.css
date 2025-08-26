@@ -132,9 +132,8 @@ html.tablet .purchase_options_content_tablet {
 	display: block !important;
 	box-sizing: border-box;
 	right: 0;
-	padding: 0px;
-	padding-left: 24px;
-	padding-right: var(--gpSpace-Gutter);
+	padding: 10px var(--gpSpace-Gutter) 0px 24px ;
+
 	overflow-y: auto;
 	position: sticky;
 	z-index: 100;
@@ -143,10 +142,10 @@ html.tablet .purchase_options_content_tablet {
 
 	/* Re-defining here prevents the entire page from padding as we scroll */
 	scroll-snap-type: inline;
-	scroll-padding: 160px 0px;
+	scroll-padding-top: 260px;
+	scroll-padding-bottom: 100px;
 
 	width: var(--gpPurchaseOptionsWidth);
-
 }
 
 html.tablet .page_content_ctn {
@@ -233,7 +232,7 @@ html.tablet .game_header_image_ctn > img {
 	display: none !important;
 }
 html.tablet .responsive_page_header_img {
-	display: block !important;
+	display: flex !important;
 }
 
 /* style the game's name.  some of this is to support a ... menu if we choose to use that */
@@ -1347,7 +1346,7 @@ html.tablet .carousel_container .screenshot_carousel_items {
 	box-sizing: border-box;
 	display: flex;
 	max-height: unset;
-	width: calc(100% + 48px);
+	width: calc(100% + 24px);
 	margin-left: -24px;
 	padding: 8px 24px 24px;
 	scroll-snap-type: x mandatory;
@@ -1362,8 +1361,8 @@ html.tablet .carousel_container .highlight_carousel_item {
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: auto;
-	width: 86%;
-	min-width: 86%;
+	width: 98%;
+	min-width: 98%;
 	margin-right: var(--gpSpace-Gap);
 	display: block;
 	scroll-snap-align: center !important;
@@ -1602,11 +1601,14 @@ html.tablet .discount_block .bundle_base_discount {
 	opacity: 0.6;
 }
 
-
-
+html.tablet #carouselContainer {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+}
 
 /* Hide now broadcasting */
-html.tablet .broadcast_embed_top_ctn_trgt {
+html.tablet .broadcast_embed_top_ctn_trgt,
+html.tablet #broadcast {
 	display: none;
 }
 
@@ -1978,7 +1980,7 @@ html.tablet #app_reviews_hash h2 {
 
 
 /* Game advertisement */
-html.tablet .responsive_page_header_img, .saleEventBannerLink {
+html.tablet .saleEventBannerLink {
 	display: flex !important;
 	margin-bottom: unset;
 	box-shadow: var(--gpShadow-Medium);
@@ -2220,7 +2222,7 @@ html.tablet .game_area_already_owned_ctn {
 	display: flex;
 	gap: 6px;
 	align-items: center;
-	padding-bottom: 12px;
+	/* padding-bottom: 12px; */
 	border-bottom: 1px solid var(--gpBackground-LightSoft);
 	width: 100%;
 	flex-direction: row-reverse;
@@ -2338,8 +2340,6 @@ html.tablet #bannerLanguages.responsive_banner_link {
 
 html.tablet #userReviews_responsive {
 	background: unset;
-	padding: 0px;
-	margin-bottom: var(--gpSpace-Gutter);
 	padding: 8px 8px 6px 12px;
 	transition: background-color 0.2s ease;
 	background-color: var(--gpBackground-LightSofter);
@@ -2619,7 +2619,9 @@ html.tablet .game_area_description a {
 	display: inline-flex;
 }
 
-
+html.tablet .page_content_ctn .page_content.middle_page {
+	display: block;
+}
 
 
 /* System requirements */

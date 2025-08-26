@@ -288,7 +288,8 @@
                   return "window" === _ ? __webpack_require__._.window : _;
                 })(_);
               for (var _ = this._ref; _.parentNode; ) {
-                if ((_ = _.parentNode) === document.body) return window;
+                if ("BODY" === (_ = _.parentNode).tagName)
+                  return _.ownerDocument.defaultView;
                 var _ = window.getComputedStyle(_),
                   _ =
                     (_
@@ -377,8 +378,10 @@
                     ? this.scrollableAncestor.offsetWidth
                     : this.scrollableAncestor.offsetHeight),
                   (_ = _
-                    ? this.scrollableAncestor.getBoundingClientRect().left
-                    : this.scrollableAncestor.getBoundingClientRect().top));
+                    ? (this.scrollableAncestor.getBoundingClientRect?.().left ??
+                      0)
+                    : (this.scrollableAncestor.getBoundingClientRect?.().top ??
+                      0)));
               var _ = this.props,
                 _ = _.bottomOffset;
               return {

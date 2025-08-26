@@ -2647,6 +2647,14 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	bottom: 3px;
 	right: 16px;
 }
+
+@media screen and (max-width: 910px)
+{
+	.tab_item .release_date {
+		display: none;
+	}
+}
+
 .tab_item.focus .release_date {
 	right: 30px;
 }
@@ -4957,7 +4965,6 @@ body.v6 .bucket :is(h2,span) span.right{
 }
 
 body.v6 .broadcast_live_stream_icon {
-    height: 13px;
     position: absolute;
 	top: 5px;
 	left: 5px;
@@ -4973,9 +4980,11 @@ body.v6 .broadcast_live_stream_icon {
 	padding: 3px 6px 3px 20px;
 	box-shadow: 0 0 7px #a94847;
 	z-index: 2;
-
     transition: opacity 0.6s;
-}
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 .cluster_maincap_grantingapp {
 	position: absolute;
 	right: 0;
@@ -6417,10 +6426,6 @@ body.v6.widestore #store_header {
 .widestore div#store_header .content {
 	max-width: 1200px;
 	width: 100%;
-}
-
-.widestore .leftcol .ReviewContentCtn {
-	display: flex;
 }
 
 .widestore .cart_status_flex {

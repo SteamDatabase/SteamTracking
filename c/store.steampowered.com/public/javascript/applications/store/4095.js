@@ -144,6 +144,7 @@
         ReviewScore: "_3qvppfM_u0yn2jrpoUo8RM",
         ReviewScoreHeader: "_2t-0jlGgIN_VM7R47pRKfF",
         ReviewScoreCount: "_1wXL_MfRpdKQ3wZiNP5lrH",
+        ReviewScoreLanguage: "_2hfFpA6uUEs5kd5vOxYJuJ",
         ReviewScoreValue: "_3ZWs0kB-1tuqQtie9KK-E7",
         ReviewScoreDivider: "RjCBtV3NpIbC6XUT9ioNK",
         ReviewScoreNone: "_3TKyM7kpo9how33Pgw47_Q",
@@ -17779,10 +17780,20 @@
             include_reviews: !0,
           });
         if (!_) return null;
-        const _ = _._.Get().BShowFilteredUserReviewScores()
-          ? _.GetFilteredReviewSummary()
-          : _.GetUnfilteredReviewSummary();
-        if (!_ || 0 == _.review_score) return null;
+        let _ = _.GetUnfilteredReviewSummary(),
+          _ = "#ReviewScore_UserReviewScoreAria",
+          _ = !1;
+        const _ = (0, _._)("#Language_" + _._.LANGUAGE);
+        if (
+          (_._.Get().BShowFilteredUserReviewScores() &&
+            (_.GetFilteredReviewSummaryLanguage()
+              ? ((_ = !0),
+                (_ = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
+                (_ = _.GetFilteredReviewSummaryLanguage()))
+              : (_ = _.GetFilteredReviewSummary())),
+          !_ || 0 == _.review_score)
+        )
+          return null;
         let _ = _().ReviewScoreNone;
         _ =
           _.review_score > 0 && _.review_score < 5
@@ -17796,14 +17807,19 @@
             {
               className: (0, _._)(_().ReviewScoreValue, _),
             },
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().ReviewScoreLanguage,
+                },
+                (0, _._)("#ReviewScore_UserReviewScore_LanguageSpecific", _),
+              ),
             _.createElement(
               "div",
               {
                 className: _().ReviewScoreLabel,
-                "aria-label": (0, _._)(
-                  "#ReviewScore_UserReviewScoreAria",
-                  _.review_score_label,
-                ),
+                "aria-label": (0, _._)(_, _.review_score_label, _),
               },
               _.review_score_label,
             ),

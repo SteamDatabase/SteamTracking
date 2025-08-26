@@ -146,6 +146,7 @@
         ReviewScore: "_3qvppfM_u0yn2jrpoUo8RM",
         ReviewScoreHeader: "_2t-0jlGgIN_VM7R47pRKfF",
         ReviewScoreCount: "_1wXL_MfRpdKQ3wZiNP5lrH",
+        ReviewScoreLanguage: "_2hfFpA6uUEs5kd5vOxYJuJ",
         ReviewScoreValue: "_3ZWs0kB-1tuqQtie9KK-E7",
         ReviewScoreDivider: "RjCBtV3NpIbC6XUT9ioNK",
         ReviewScoreNone: "_3TKyM7kpo9how33Pgw47_Q",
@@ -16527,29 +16528,42 @@
             { include_reviews: !0 },
           );
         if (!a) return null;
-        const s = p.Fm.Get().BShowFilteredUserReviewScores()
-          ? a.GetFilteredReviewSummary()
-          : a.GetUnfilteredReviewSummary();
-        if (!s || 0 == s.review_score) return null;
-        let o = O().ReviewScoreNone;
-        o =
+        let s = a.GetUnfilteredReviewSummary(),
+          o = "#ReviewScore_UserReviewScoreAria",
+          l = !1;
+        const c = (0, A.we)("#Language_" + F.TS.LANGUAGE);
+        if (
+          (p.Fm.Get().BShowFilteredUserReviewScores() &&
+            (a.GetFilteredReviewSummaryLanguage()
+              ? ((l = !0),
+                (o = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
+                (s = a.GetFilteredReviewSummaryLanguage()))
+              : (s = a.GetFilteredReviewSummary())),
+          !s || 0 == s.review_score)
+        )
+          return null;
+        let d = O().ReviewScoreNone;
+        d =
           s.review_score > 0 && s.review_score < 5
             ? O().ReviewScoreLow
             : 5 == s.review_score
               ? O().ReviewScoreMixed
               : O().ReviewScoreHigh;
-        const l = `${F.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
-          c = n.createElement(
+        const m = `${F.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+          u = n.createElement(
             "div",
-            { className: (0, z.A)(O().ReviewScoreValue, o) },
+            { className: (0, z.A)(O().ReviewScoreValue, d) },
+            l &&
+              n.createElement(
+                "div",
+                { className: O().ReviewScoreLanguage },
+                (0, A.we)("#ReviewScore_UserReviewScore_LanguageSpecific", c),
+              ),
             n.createElement(
               "div",
               {
                 className: O().ReviewScoreLabel,
-                "aria-label": (0, A.we)(
-                  "#ReviewScore_UserReviewScoreAria",
-                  s.review_score_label,
-                ),
+                "aria-label": (0, A.we)(o, s.review_score_label, c),
               },
               s.review_score_label,
             ),
@@ -16577,43 +16591,43 @@
                 (0, A.we)("#GameHover_UserReviewsHeader"),
               ),
           );
-        let d = "#ReviewScore_PercentPositive";
+        let g = "#ReviewScore_PercentPositive";
         if (2 === a.GetStoreItemType())
-          d = "#ReviewScore_PercentPositive_bundle";
+          g = "#ReviewScore_PercentPositive_bundle";
         else if (0 === a.GetStoreItemType())
           switch (a.GetAppType()) {
             case 6:
-              d = "#ReviewScore_PercentPositive_software";
+              g = "#ReviewScore_PercentPositive_software";
               break;
             case 7:
-              d = "#ReviewScore_PercentPositive_video";
+              g = "#ReviewScore_PercentPositive_video";
               break;
             case 10:
-              d = "#ReviewScore_PercentPositive_hardware";
+              g = "#ReviewScore_PercentPositive_hardware";
               break;
             case 8:
-              d = "#ReviewScore_PercentPositive_series";
+              g = "#ReviewScore_PercentPositive_series";
           }
         return n.createElement(
           M.q,
-          { url: l, className: (0, z.A)(O().ReviewScore, "ReviewScore") },
+          { url: m, className: (0, z.A)(O().ReviewScore, "ReviewScore") },
           i &&
             null != s.percent_positive &&
             null != s.review_count &&
-            Boolean(d)
+            Boolean(g)
             ? n.createElement(
                 R.he,
                 {
                   bTopmost: !0,
                   toolTipContent: (0, A.we)(
-                    d,
+                    g,
                     s.percent_positive,
                     s.review_count,
                   ),
                 },
-                c,
+                u,
               )
-            : c,
+            : u,
         );
       }
       const re = (0, a.PA)((e) => {

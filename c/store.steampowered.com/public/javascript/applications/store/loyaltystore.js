@@ -20154,6 +20154,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./loyalty_arabic.json": [74153, 9889],
         "./loyalty_brazilian.json": [54981, 4039],
         "./loyalty_bulgarian.json": [49838, 2960],
         "./loyalty_czech.json": [9584, 7138],
@@ -20201,6 +20202,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {
+        "./loyalty_arabic.json": [74153, 9889],
         "./loyalty_brazilian.json": [54981, 4039],
         "./loyalty_bulgarian.json": [49838, 2960],
         "./loyalty_czech.json": [9584, 7138],

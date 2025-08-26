@@ -382,6 +382,14 @@
               this.m_ReviewInfo?.summary_filtered
           );
         }
+        GetFilteredReviewSummaryLanguage() {
+          return (
+            this.BCheckDataRequestIncluded({
+              include_reviews: !0,
+            }),
+            this.m_ReviewInfo?.summary_language_specific
+          );
+        }
         GetShortDescription() {
           return (
             this.BCheckDataRequestIncluded({

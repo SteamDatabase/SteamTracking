@@ -95,6 +95,7 @@ center
 	font-size: 26px;
 	line-height: 32px;
 	text-overflow: ellipsis;
+	word-break: break-word;
 }
 
 .apphub_CommunitySubSectionArrows

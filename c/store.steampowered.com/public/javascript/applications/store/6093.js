@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "dutch",
 	"review_summary_reviewrate": "%1$s% van de %2$s gebruikersrecensies voor dit spel is positief",
+	"review_summary_reviewrate_language_specific": "%1$s% van de %2$s gebruikersrecensies voor dit spel in het %3$s is positief",
 	"Discount_ARIA_Label": "%1$s% korting. Normaal %2$s, nu voor %3$s.",
 	"Discount_ARIA_Label_SpecialPrice": "Speciale prijs van %1$s",
 	"Price_Free": "Gratis",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Speciale secties",
 	"Menu_Popover_ViewAll": "Alles weergeven",
 	"Menu_Popover_More": "Meer",
+	"Menu_Popover_Menu": "Menu",
 	"Menu_Section_Browse_RecentlyViewed": "Onlangs bekeken",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Ga verder waar je gebleven was",
 	"Menu_Section_Browse_Recommended": "Aanbevolen voor jou",

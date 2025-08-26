@@ -1753,42 +1753,49 @@
               ),
             ),
           ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.AuthorizedDeviceHeader,
-                "account_header_line noicon",
-              ),
-            },
+          _?.length > 0 &&
             _.createElement(
-              "div",
+              _.Fragment,
               null,
-              (0, _._)("#accountpreferences_revoked_devices_revoked_header"),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _.AuthorizedDeviceHeader,
+                    "account_header_line noicon",
+                  ),
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)(
+                    "#accountpreferences_revoked_devices_revoked_header",
+                  ),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: "account_settings_container",
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SectionDescription,
+                  },
+                  (0, _._)(_, _.createElement("p", null)),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.AuthorizedDeviceGroup,
+                  },
+                  _.createElement(_, {
+                    rgDevices: _,
+                  }),
+                ),
+              ),
             ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: "account_settings_container",
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.SectionDescription,
-              },
-              (0, _._)(_, _.createElement("p", null)),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.AuthorizedDeviceGroup,
-              },
-              _.createElement(_, {
-                rgDevices: _,
-              }),
-            ),
-          ),
         );
       });
       function _(_) {
@@ -1828,7 +1835,11 @@
             msgTwoFactorStatus: _,
             bShowAuthenticatorActivity: _,
           } = _,
-          [_, _] = (0, _.useState)(!1);
+          [_, _] = (0, _.useState)(!1),
+          _ = _.useRef(void 0);
+        _.useEffect(() => {
+          _.current?.BHasFocus() && _.current?.Node().ForceMeasureFocusRing();
+        }, [_]);
         let _ = (function (_) {
           if (2 == _.platform_type) {
             let _ = new _.UAParser(_.token_description).getResult();
@@ -1885,7 +1896,7 @@
           );
         })(_, _);
         return _.createElement(
-          "div",
+          _._,
           {
             className: (0, _._)(
               _.DeviceContainer,
@@ -1893,7 +1904,8 @@
               _,
             ),
             key: "id_" + _.token_id,
-            onClick: () => _(!_),
+            navRef: _,
+            onActivate: () => _(!_),
           },
           _.createElement(_, {
             device: _,

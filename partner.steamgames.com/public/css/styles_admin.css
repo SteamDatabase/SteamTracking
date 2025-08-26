@@ -4548,6 +4548,11 @@ img.category_icon {
 	text-transform:uppercase;
 }
 
+.depot_scan_failed {
+	color: lightgrey;
+	text-transform:uppercase;
+}
+
 .section.key_generate_ctn .formrow_large {
     padding: 4px 0;
 }

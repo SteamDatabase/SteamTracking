@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "tchinese",
 	"review_summary_reviewrate": "%2$s 篇使用者評論中有 %1$s% 給予此遊戲好評。",
+	"review_summary_reviewrate_language_specific": "%2$s 篇%3$s使用者評論中有 %1$s% 給予此遊戲好評。",
 	"Discount_ARIA_Label": "折扣幅度 %1$s%。一般為 %2$s，打折後為 %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "特惠價 %1$s",
 	"Price_Free": "免費",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "特殊欄位",
 	"Menu_Popover_ViewAll": "顯示全部",
 	"Menu_Popover_More": "更多",
+	"Menu_Popover_Menu": "選單",
 	"Menu_Section_Browse_RecentlyViewed": "近期瀏覽過",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "從上次停下的地方繼續",
 	"Menu_Section_Browse_Recommended": "為您推薦",

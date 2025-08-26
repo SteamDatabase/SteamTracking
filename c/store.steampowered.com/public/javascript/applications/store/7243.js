@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "thai",
 	"review_summary_reviewrate": "%1$s% จาก %2$s บทวิจารณ์จากผู้ใช้ที่เล่นเกมนี้เป็นแง่บวก",
+	"review_summary_reviewrate_language_specific": "%1$s% จาก %2$s บทวิจารณ์จากผู้ใช้ที่เขียนเกี่ยวกับเกมนี้ในภาษา %3$s เป็นแง่บวก",
 	"Discount_ARIA_Label": "ส่วนลดพิเศษ %1$s% จากปกติ %2$s ลดเหลือ %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "ราคาพิเศษ %1$s",
 	"Price_Free": "ฟรี",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "หมวดพิเศษ",
 	"Menu_Popover_ViewAll": "ดูทั้งหมด",
 	"Menu_Popover_More": "เพิ่มเติม",
+	"Menu_Popover_Menu": "เมนู",
 	"Menu_Section_Browse_RecentlyViewed": "เพิ่งดูล่าสุด",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "เล่นต่อจากที่คุณเล่นค้างไว้",
 	"Menu_Section_Browse_Recommended": "แนะนำสำหรับคุณ",

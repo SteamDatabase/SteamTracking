@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "vietnamese",
 	"review_summary_reviewrate": "%1$s% trên %2$s người dùng đánh giá tích cực trò chơi này",
+	"review_summary_reviewrate_language_specific": "%1$s% trên %2$s người dùng trong %3$s đánh giá trò chơi này tích cực",
 	"Discount_ARIA_Label": "Giảm %1$s%. Giá thường: %2$s, giá giảm: %3$s",
 	"Discount_ARIA_Label_SpecialPrice": "Giá đặc biệt với %1$s",
 	"Price_Free": "Miễn phí",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Mục đặc biệt",
 	"Menu_Popover_ViewAll": "Xem tất cả",
 	"Menu_Popover_More": "Xem thêm",
+	"Menu_Popover_Menu": "Menu",
 	"Menu_Section_Browse_RecentlyViewed": "Gần đây xem",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Bắt đầu từ chỗ bạn bỏ dở",
 	"Menu_Section_Browse_Recommended": "Đề xuất cho bạn",

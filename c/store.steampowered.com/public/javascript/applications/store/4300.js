@@ -5,7 +5,8 @@
     chunkid: (module) => {
       module.exports = JSON.parse(`{
 	"language": "czech",
-	"review_summary_reviewrate": "%1$s % z %2$s uživatelů ohodnotilo tuto hru kladně",
+	"review_summary_reviewrate": "%1$s % z %2$s uživatelských recenzí této hry je kladných.",
+	"review_summary_reviewrate_language_specific": "%1$s % z %2$s uživatelských recenzí této hry v jazyce %3$s je kladných.",
 	"Discount_ARIA_Label": "%1$s% sleva (běžně %2$s, po slevě %3$s)",
 	"Discount_ARIA_Label_SpecialPrice": "Speciální cena %1$s",
 	"Price_Free": "Zdarma",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Různé sekce",
 	"Menu_Popover_ViewAll": "Zobrazit vše",
 	"Menu_Popover_More": "Více",
+	"Menu_Popover_Menu": "Nabídka",
 	"Menu_Section_Browse_RecentlyViewed": "Nedávno zobrazené",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Pokračujte, kde jste skončili",
 	"Menu_Section_Browse_Recommended": "Doporučené pro Vás",

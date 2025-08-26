@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "japanese",
 	"review_summary_reviewrate": "このゲームのユーザーレビュー%2$s件中%1$s%が好評です",
+	"review_summary_reviewrate_language_specific": "このゲームの%3$sのユーザーレビュー%2$s件中%1$s%が好評です",
 	"Discount_ARIA_Label": "%1$s%OFF。通常は%2$sのところを%3$sの割引価格で提供",
 	"Discount_ARIA_Label_SpecialPrice": "特別価格の%1$s",
 	"Price_Free": "無料",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "スペシャルセクション",
 	"Menu_Popover_ViewAll": "すべて表示",
 	"Menu_Popover_More": "その他",
+	"Menu_Popover_Menu": "メニュー",
 	"Menu_Section_Browse_RecentlyViewed": "最近閲覧したアイテム",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "中断したところから再開",
 	"Menu_Section_Browse_Recommended": "あなたへのおすすめ",

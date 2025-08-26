@@ -341,8 +341,22 @@
   align-items: center;
   margin-top: 16px;
 }
+@media screen and (max-width: 500px) {
+  ._3KAHxFNUEscoxtvBzwWKvs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  ._3KAHxFNUEscoxtvBzwWKvs ._2IUfDPL02-oni7NXCV_ipu {
+    display: none;
+  }
+}
 .iUmtJvs3v_bmv-tu43tpL {
   flex-grow: 1;
+}
+@media screen and (max-width: 500px) {
+  .iUmtJvs3v_bmv-tu43tpL {
+    width: 100%;
+  }
 }
 ._1igTM-TlnNkIhWxl95pTyB {
   position: relative;
@@ -491,6 +505,11 @@
   bottom: 0;
   animation: _1zMMdC3loRunAeI72QvaDX .2s;
 }
+@media screen and (max-width: 500px) {
+  ._6ykmNnOs_SfkGOYurJogH._3WTs5L7ce_Du4_KNac_sXd {
+    flex-direction: column;
+  }
+}
 ._6ykmNnOs_SfkGOYurJogH button.DialogButton.Primary {
   line-height: 45px;
 }
@@ -498,10 +517,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  background: #000;
+  margin-top: 8px;
+}
+._3y3yND3p_J6RNdjtcaEBMA button.DialogButton {
+  width: 24px !important;
+  margin: 2px 8px 2px 2px;
 }
 ._2Sh_QTT9mWNhPZHHqdj1gN {
   padding-left: 43px;
+  padding-top: 12px;
   padding-bottom: 18px;
+  background: linear-gradient(to right, #00000069, #00000000);
 }
 ._2Oiew_rwCOmnTk99m8bzBP {
   margin-bottom: 40px;

@@ -104,6 +104,7 @@
         ReviewScore: "_3qvppfM_u0yn2jrpoUo8RM",
         ReviewScoreHeader: "_2t-0jlGgIN_VM7R47pRKfF",
         ReviewScoreCount: "_1wXL_MfRpdKQ3wZiNP5lrH",
+        ReviewScoreLanguage: "_2hfFpA6uUEs5kd5vOxYJuJ",
         ReviewScoreValue: "_3ZWs0kB-1tuqQtie9KK-E7",
         ReviewScoreDivider: "RjCBtV3NpIbC6XUT9ioNK",
         ReviewScoreNone: "_3TKyM7kpo9how33Pgw47_Q",
@@ -2284,9 +2285,9 @@
     87007: (e, t, a) => {
       "use strict";
       a.d(t, {
-        ye: () => V,
+        ye: () => x,
         DJ: () => K,
-        G6: () => x,
+        G6: () => V,
         zv: () => z,
         IS: () => N,
         GE: () => U,
@@ -2494,7 +2495,7 @@
           ? JSON.stringify(e.store_filter)
           : void 0;
       }
-      function V(e) {
+      function x(e) {
         return (
           "items" === e ||
           "trailercarousel" === e ||
@@ -2547,7 +2548,7 @@
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
         })(j || (j = {}));
-      const x = {
+      const V = {
         capsules: [],
         events: [],
         links: [],
@@ -3428,7 +3429,7 @@
               ee.AccumulateCapsuleListIDs([e.capsule], a, r, t);
             }),
             this.jsondata.sale_sections.forEach((e) => {
-              if (V(e.section_type))
+              if (x(e.section_type))
                 ee.AccumulateCapsuleListIDs(e.capsules, a, r, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const n of e.tabs)
@@ -13035,8 +13036,8 @@
           },
         });
       }
-      var V,
-        x = a(64753),
+      var x,
+        V = a(64753),
         q = a(45699),
         K = a(70163);
       function Y(e) {
@@ -13064,7 +13065,7 @@
             "k_EPlatformTypeEmbeddedClient"),
           (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
           (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-      })(V || (V = {}));
+      })(x || (x = {}));
       var Q,
         J = a(20194),
         X = a(54806),
@@ -14929,14 +14930,14 @@
       }
       var je = a(9154),
         He = a(12155),
-        Ve = a(22797),
-        xe = a(99034),
-        qe = a.n(xe);
+        xe = a(22797),
+        Ve = a(99034),
+        qe = a.n(Ve);
       const Ke = { include_platforms: !0 };
       function Ye(e) {
         const { appid: t } = e,
           [a] = (0, o.t7)(t, Ke),
-          [r, i, s] = (0, x.uD)(!1),
+          [r, i, s] = (0, V.uD)(!1),
           { mutateAsync: l } = H({ appid: t }),
           [c, d] = (0, n.useState)(!1),
           u = (0, ke.Lg)(t);
@@ -14965,7 +14966,7 @@
                       }
                     },
                   },
-                  c && n.createElement(Ve.t, { size: "small" }),
+                  c && n.createElement(xe.t, { size: "small" }),
                   (0, m.we)("#Sale_AddToLibrary_NoPlus"),
                 ),
                 n.createElement(
@@ -16567,8 +16568,8 @@
         W = a(86090),
         j = a(95695),
         H = a(82477),
-        V = a(45699),
-        x = a(12155),
+        x = a(45699),
+        V = a(12155),
         q = a(32754);
       const K = (0, n.PA)((e) => {
         const { closeModal: t } = e;
@@ -16644,7 +16645,7 @@
                     a || n ? void 0 : (0, B.we)("#CreatorHome_Follow_tooltip"),
                 },
                 s.createElement(
-                  V.ml,
+                  x.ml,
                   {
                     className: (0, z.A)(
                       j.Button,
@@ -16656,7 +16657,7 @@
                     onClick: i,
                   },
                   r && s.createElement(P.k, { size: 15 }),
-                  !r && (n || a) && s.createElement(x.Jlk, null),
+                  !r && (n || a) && s.createElement(V.Jlk, null),
                   s.createElement(
                     "div",
                     { className: N.FollowBtnText },
@@ -16797,8 +16798,8 @@
         W = a(60014),
         j = a(10050),
         H = a(10224),
-        V = a(38535),
-        x = a(49411);
+        x = a(38535),
+        V = a(49411);
       const q = "DEBUG_UseNewGameHover";
       function K() {
         return window.sessionStorage?.getItem(q) || "default";
@@ -16872,7 +16873,7 @@
           m = (0, i.useRef)(0),
           d = (0, R.CH)(),
           [u] = i.useState(new G.LU()),
-          p = (0, V.dy)(),
+          p = (0, x.dy)(),
           y = (0, i.useCallback)(
             (e = !1) => {
               if ((e && (m.current = 0), l?.length > 0)) {
@@ -17020,29 +17021,42 @@
         const { appInfo: t, bTruncateTotalReviews: a, bShowTooltip: r } = e,
           [n] = (0, g.G6)(t?.id, (0, h.SW)(t?.type), { include_reviews: !0 });
         if (!n) return null;
-        const s = p.Fm.Get().BShowFilteredUserReviewScores()
-          ? n.GetFilteredReviewSummary()
-          : n.GetUnfilteredReviewSummary();
-        if (!s || 0 == s.review_score) return null;
-        let o = z().ReviewScoreNone;
-        o =
+        let s = n.GetUnfilteredReviewSummary(),
+          o = "#ReviewScore_UserReviewScoreAria",
+          l = !1;
+        const c = (0, M.we)("#Language_" + k.TS.LANGUAGE);
+        if (
+          (p.Fm.Get().BShowFilteredUserReviewScores() &&
+            (n.GetFilteredReviewSummaryLanguage()
+              ? ((l = !0),
+                (o = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
+                (s = n.GetFilteredReviewSummaryLanguage()))
+              : (s = n.GetFilteredReviewSummary())),
+          !s || 0 == s.review_score)
+        )
+          return null;
+        let m = z().ReviewScoreNone;
+        m =
           s.review_score > 0 && s.review_score < 5
             ? z().ReviewScoreLow
             : 5 == s.review_score
               ? z().ReviewScoreMixed
               : z().ReviewScoreHigh;
-        const l = `${k.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
-          c = i.createElement(
+        const d = `${k.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+          u = i.createElement(
             "div",
-            { className: (0, D.A)(z().ReviewScoreValue, o) },
+            { className: (0, D.A)(z().ReviewScoreValue, m) },
+            l &&
+              i.createElement(
+                "div",
+                { className: z().ReviewScoreLanguage },
+                (0, M.we)("#ReviewScore_UserReviewScore_LanguageSpecific", c),
+              ),
             i.createElement(
               "div",
               {
                 className: z().ReviewScoreLabel,
-                "aria-label": (0, M.we)(
-                  "#ReviewScore_UserReviewScoreAria",
-                  s.review_score_label,
-                ),
+                "aria-label": (0, M.we)(o, s.review_score_label, c),
               },
               s.review_score_label,
             ),
@@ -17070,43 +17084,43 @@
                 (0, M.we)("#GameHover_UserReviewsHeader"),
               ),
           );
-        let m = "#ReviewScore_PercentPositive";
+        let _ = "#ReviewScore_PercentPositive";
         if (2 === n.GetStoreItemType())
-          m = "#ReviewScore_PercentPositive_bundle";
+          _ = "#ReviewScore_PercentPositive_bundle";
         else if (0 === n.GetStoreItemType())
           switch (n.GetAppType()) {
             case 6:
-              m = "#ReviewScore_PercentPositive_software";
+              _ = "#ReviewScore_PercentPositive_software";
               break;
             case 7:
-              m = "#ReviewScore_PercentPositive_video";
+              _ = "#ReviewScore_PercentPositive_video";
               break;
             case 10:
-              m = "#ReviewScore_PercentPositive_hardware";
+              _ = "#ReviewScore_PercentPositive_hardware";
               break;
             case 8:
-              m = "#ReviewScore_PercentPositive_series";
+              _ = "#ReviewScore_PercentPositive_series";
           }
         return i.createElement(
           B.q,
-          { url: l, className: (0, D.A)(z().ReviewScore, "ReviewScore") },
+          { url: d, className: (0, D.A)(z().ReviewScore, "ReviewScore") },
           r &&
             null != s.percent_positive &&
             null != s.review_count &&
-            Boolean(m)
+            Boolean(_)
             ? i.createElement(
                 T.he,
                 {
                   bTopmost: !0,
                   toolTipContent: (0, M.we)(
-                    m,
+                    _,
                     s.percent_positive,
                     s.review_count,
                   ),
                 },
-                c,
+                u,
               )
-            : c,
+            : u,
         );
       }
       const te = (0, n.PA)((e) => {
@@ -17352,7 +17366,7 @@
           f = (0, W.n9)(),
           b = (0, m.L3)(f),
           w = (0, k.Qn)(),
-          v = (0, x.w)();
+          v = (0, V.w)();
         if (!S && !a) return null;
         if (w) return i.createElement(i.Fragment, null, e.children);
         let I = { id: t.id, type: t.type };
@@ -17928,8 +17942,8 @@
         W = a(61859),
         j = a(22797),
         H = a(29863),
-        V = a(37076),
-        x = a(56681),
+        x = a(37076),
+        V = a(56681),
         q = a(60014),
         K = a(65937),
         Y = a(14326),
@@ -18002,8 +18016,8 @@
               bShowReviewSummary: U,
               bShowDeckCompatibilityDialog: P,
               bAutoFocus: j,
-              fnOnClickOverride: V,
-              bIsMarketingMessage: x,
+              fnOnClickOverride: x,
+              bIsMarketingMessage: V,
             } = e,
             K = (0, q.n9)(),
             Y = (0, X.w)(),
@@ -18065,13 +18079,13 @@
               n.createElement(
                 s.ml,
                 {
-                  onClick: x ? V : null,
+                  onClick: V ? x : null,
                   className: (0, F.A)(
                     L().StoreSaleWidgetContainer,
                     L().SaleItemDefaultCapsuleDisplay,
-                    x ? L().MarketingMessage : "",
+                    V ? L().MarketingMessage : "",
                   ),
-                  ...(0, T.S)(r, K, ae, w, void 0, V),
+                  ...(0, T.S)(r, K, ae, w, void 0, x),
                   preferredFocus: le,
                 },
                 n.createElement(
@@ -18080,9 +18094,9 @@
                   n.createElement(
                     "a",
                     {
-                      href: V ? void 0 : pe,
-                      target: M.TS.IN_CLIENT || V ? void 0 : "_blank",
-                      onClick: V,
+                      href: x ? void 0 : pe,
+                      target: M.TS.IN_CLIENT || x ? void 0 : "_blank",
+                      onClick: x,
                     },
                     n.createElement(
                       "div",
@@ -18102,7 +18116,7 @@
                       le ? L().Bundle : "",
                     ),
                   },
-                  Boolean(de && !V) &&
+                  Boolean(de && !x) &&
                     n.createElement(H.EP, {
                       appID: ue,
                       classOverride: (0, F.A)(
@@ -18117,9 +18131,9 @@
                     n.createElement(
                       "a",
                       {
-                        href: V ? void 0 : pe,
+                        href: x ? void 0 : pe,
                         target: M.TS.IN_CLIENT ? void 0 : "_blank",
-                        onClick: V,
+                        onClick: x,
                       },
                       n.createElement(
                         "div",
@@ -18204,7 +18218,7 @@
                           )
                         : ye,
                     ),
-                  Boolean(!V)
+                  Boolean(!x)
                     ? n.createElement(
                         n.Fragment,
                         null,
@@ -18291,7 +18305,7 @@
           [a] = (0, h.mZ)(t.id, (0, _.SW)(t.type), { include_assets: !0 }),
           r = a?.GetAssets().GetSmallCapsuleURL();
         return n.createElement(
-          V.u,
+          x.u,
           {
             type: (0, B.qr)(t.type),
             id: t.id,
@@ -18472,7 +18486,7 @@
               ),
             },
             Boolean(e.link.localized_link_capsule) &&
-              n.createElement(x.o, { className: L().LinkCapsuleImage, src: a }),
+              n.createElement(V.o, { className: L().LinkCapsuleImage, src: a }),
             Boolean(e.link.materialized_link_capsule) &&
               n.createElement("img", {
                 className: L().LinkCapsuleImage,

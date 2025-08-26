@@ -2584,6 +2584,13 @@ html.responsive.touch
   padding: 0;
   z-index: 1000;
 }
+html.tablet ._2jIJye_-HmWo1Thf6yuIpF {
+  width: 98%;
+  min-width: 98%;
+}
+html.tablet ._3ADDqqKx55ugBLEOJm6pqJ {
+  width: calc(100% + 24px);
+}
 ._2jIJye_-HmWo1Thf6yuIpF {
   width: 86%;
   min-width: 86%;

@@ -6,6 +6,7 @@
       module.exports = JSON.parse(`{
 	"language": "finnish",
 	"review_summary_reviewrate": "Pelin %2$s arvostelusta %1$s % on positiivisia",
+	"review_summary_reviewrate_language_specific": "Kielellä %3$s laaditusta %2$s arvostelusta %1$s % on myönteisiä.",
 	"Discount_ARIA_Label": "–%1$s % normaalihinnasta %2$s, alennettu hinta %3$s.",
 	"Discount_ARIA_Label_SpecialPrice": "Erikoishintaan %1$s",
 	"Price_Free": "Ilmainen",
@@ -42,6 +43,7 @@
 	"Menu_Popover_SpecialSections": "Erikoisosiot",
 	"Menu_Popover_ViewAll": "Näytä kaikki",
 	"Menu_Popover_More": "Lisää",
+	"Menu_Popover_Menu": "Valikko",
 	"Menu_Section_Browse_RecentlyViewed": "Hiljattain katsotut",
 	"Menu_Section_Browse_PickUpWhereYouLeftOff": "Jatka siitä, mihin jäit",
 	"Menu_Section_Browse_Recommended": "Sinulle suositeltuja",
