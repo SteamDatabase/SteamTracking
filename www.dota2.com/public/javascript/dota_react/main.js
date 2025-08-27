@@ -27599,11 +27599,6 @@
               strTeamRegion: "#dpc_region_weu",
             },
             {
-              nTeamID: 8599101,
-              strTeamName: "Gaimin Gladiators",
-              strTeamRegion: "#dpc_region_weu",
-            },
-            {
               nTeamID: 9247354,
               strTeamName: "Team Falcons",
               strTeamRegion: "#dpc_region_weu",
@@ -27637,6 +27632,11 @@
               nTeamID: 9691969,
               strTeamName: "Team Nemesis",
               strTeamRegion: "#dpc_region_sea",
+            },
+            {
+              nTeamID: 9351740,
+              strTeamName: "Yakutou Brothers",
+              strTeamRegion: "#dpc_region_cn",
             },
           ];
           return (
