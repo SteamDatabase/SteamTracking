@@ -318,11 +318,12 @@
 		margin-left: 0px;
 		padding: 4px;
 	}
-	html.responsive .user_reviews_summary_row {
+	html.responsive .glance_ctn .user_reviews_summary_row {
 		font-size: 14px;
 		padding: 4px;
+		line-height: 16px;
 	}
-	html.responsive .user_reviews_summary_row .column {
+	html.responsive .glance_ctn .user_reviews_summary_row .column {
 		text-overflow: unset;
 		white-space: unset;
 	}

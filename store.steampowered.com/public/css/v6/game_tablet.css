@@ -337,11 +337,12 @@ html.tablet .user_reviews {
 	margin-left: 0px;
 	padding: 4px;
 }
-html.tablet .user_reviews_summary_row {
+html.tablet .glance_ctn .user_reviews_summary_row {
 	font-size: unset;
 	padding: 0px;
+	line-height: 16px;
 }
-html.tablet .user_reviews_summary_row .column {
+html.tablet .glance_ctn .user_reviews_summary_row .column {
 	text-overflow: unset;
 	white-space: unset;
 }
