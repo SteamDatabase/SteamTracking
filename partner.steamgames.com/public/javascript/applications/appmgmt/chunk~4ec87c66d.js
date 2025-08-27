@@ -2060,7 +2060,6 @@
             storeItemType: 0,
             storeItemBinding: 1,
             canModifyStoreItems: !1,
-            isInvalid: !0,
           },
         };
       function y(e) {
@@ -2185,14 +2184,6 @@
             e.bHasAssociatedItem() &&
             t.push(
               "Weak targeting (because not owned). Will automatically use player's tags to filter and personalized to customers.",
-            ),
-          (function (e) {
-            return e
-              .FlattenUserMessageFilterToFlattened()
-              .some((e) => 11 === e.filter_type);
-          })(e) &&
-            t.push(
-              "Will automatically use the player's tags to prioritize the message output based on the selected app (as similar apps filter is used).",
             ),
           t
         );
