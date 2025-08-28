@@ -57,10 +57,12 @@ function SetUpCreditCardAuthentication( newUrl, postData )
 {
 	$('cart_area').style.display = 'none';
 	$('receipt_area').style.display = 'none';
-  $('col_right_payment_info').style.display = 'none';
+	$('col_right_payment_info').style.display = 'none';
 	$('credit_card_authentication_area').style.display = 'block';
 	$('pending_receipt_area').style.display = 'none';
-  $('col_right_review').style.display = 'block';
+	$('col_right_review').style.display = 'block';
+	$J('#authentication_button_bottom').show();
+	$J('#authentication_button_inprogress_bottom').hide();
 
 	var form = document.createElement( "form" );
 	form.setAttribute( "method", "post" );
@@ -1215,6 +1217,10 @@ function OnAuthenticationComplete( gidTransID )
 	}
 
 	g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, 120, 15 ), 1*1000 );
+
+	$J('#authentication_button_bottom').hide();
+	$J('#authentication_button_inprogress_bottom').show();
+
 	return true;
 }
 
@@ -5618,6 +5624,8 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 		$J('#purchase_button_disabled_bottom').show();
 		$J('#change_payment_method_button_bottom').show();
 		$J('#cancel_button_bottom').show();
+		$J('#authentication_button_bottom').show();
+		$J('#authentication_button_inprogress_bottom').hide();
 	}
 	catch( e )
 	{

@@ -6867,6 +6867,18 @@ body.v6.widestore .game_area_already_owned.master_sub {
 	}
 }
 
+.agegate_age_validation {
+	background-color: #4D5460;
+	margin: 20px 20px 0px 20px;
+	padding: 10px 20px 10px 20px;
+	border-left: solid #04AEDB 3px;
+}
+
+.agegate_age_validation p {
+	margin-top: 10px;
+	text-align: center;
+}
+
 @media screen and (max-width: 910px)
 {
 
