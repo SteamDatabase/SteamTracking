@@ -948,8 +948,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/${}_${}.jpg
-${MEDIA_CDN_COMMUNITY_URL}images/clans/
-${MEDIA_CDN_COMMUNITY_URL}images/clans/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_large}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${}
@@ -964,11 +962,9 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
 ${MEDIA_CDN_URL}${asset_url}
-${MEDIA_CDN_URL}${}
 ${MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
-${MEDIA_CDN_URL}steam/apps/${}/header.jpg
 ${MEDIA_CDN_URL}steam/clusters/${}/${}/${}${}
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}steam/spotlights/${}/${}${}
@@ -1324,7 +1320,6 @@ ${ROOT_URL}/puzzleinfolist
 ${ROOT_URL}/puzzleleaderboarddata
 ${ROOT_URL}/submitfeedback
 ${ROOT_URL}/updatesdata
-${STATS_BASE_URL}${type}
 ${STATS_BASE_URL}app/details/${}/${}
 ${STATS_BASE_URL}app/wishlist/${}/?dateStart=${}&dateEnd=${}
 ${STATS_BASE_URL}bundles/details/${}/${}
@@ -2043,7 +2038,6 @@ ${profileUrl}/ajaxlevelup/
 ${profileUrl}/ajaxsetnickname/
 ${rateURL}${gid}
 ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
-${sURL}${}
 ${serverUrl}${}?platform=android&hash=${hash}
 ${short_url}/${invite_token}
 ${strBaseURL}${_ ? '' : '/'}${m_bIsMobile ? 'mobilelogin' : 'login'}/

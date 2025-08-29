@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9836925";
+var CLSTAMP = "10025900";
 (() => {
   "use strict";
   var e,
@@ -8,28 +8,28 @@ var CLSTAMP = "9836925";
     n,
     r,
     s,
-    o = {},
-    t = {};
+    d = {},
+    o = {};
   function i(e) {
-    var a = t[e];
+    var a = o[e];
     if (void 0 !== a) return a.exports;
-    var n = (t[e] = { id: e, loaded: !1, exports: {} });
-    return o[e].call(n.exports, n, n.exports, i), (n.loaded = !0), n.exports;
+    var n = (o[e] = { id: e, loaded: !1, exports: {} });
+    return d[e].call(n.exports, n, n.exports, i), (n.loaded = !0), n.exports;
   }
-  (i.m = o),
+  (i.m = d),
     (e = []),
     (i.O = (a, n, r, s) => {
       if (!n) {
-        var o = 1 / 0;
+        var d = 1 / 0;
         for (f = 0; f < e.length; f++) {
-          for (var [n, r, s] = e[f], t = !0, c = 0; c < n.length; c++)
-            (!1 & s || o >= s) && Object.keys(i.O).every((e) => i.O[e](n[c]))
-              ? n.splice(c--, 1)
-              : ((t = !1), s < o && (o = s));
-          if (t) {
+          for (var [n, r, s] = e[f], o = !0, t = 0; t < n.length; t++)
+            (!1 & s || d >= s) && Object.keys(i.O).every((e) => i.O[e](n[t]))
+              ? n.splice(t--, 1)
+              : ((o = !1), s < d && (d = s));
+          if (o) {
             e.splice(f--, 1);
-            var d = r();
-            void 0 !== d && (a = d);
+            var c = r();
+            void 0 !== c && (a = c);
           }
         }
         return a;
@@ -53,11 +53,11 @@ var CLSTAMP = "9836925";
       }
       var s = Object.create(null);
       i.r(s);
-      var o = {};
+      var d = {};
       a = a || [null, n({}), n([]), n(n)];
-      for (var t = 2 & r && e; "object" == typeof t && !~a.indexOf(t); t = n(t))
-        Object.getOwnPropertyNames(t).forEach((a) => (o[a] = () => e[a]));
-      return (o.default = () => e), i.d(s, o), s;
+      for (var o = 2 & r && e; "object" == typeof o && !~a.indexOf(o); o = n(o))
+        Object.getOwnPropertyNames(o).forEach((a) => (d[a] = () => e[a]));
+      return (d.default = () => e), i.d(s, d), s;
     }),
     (i.d = (e, a) => {
       for (var n in a)
@@ -71,127 +71,129 @@ var CLSTAMP = "9836925";
     (i.u = (e) =>
       "javascript/csgo_react/" +
       {
-        647: "main_czech-json",
-        698: "main_dutch-json",
-        727: "main_japanese-json",
-        799: "main_german-json",
-        1117: "main_french-json",
-        1162: "shared_thai-json",
-        1313: "shared_bulgarian-json",
-        2029: "shared_sc_schinese-json",
-        2431: "shared_arabic-json",
-        2443: "shared_latam-json",
-        2537: "shared_schinese-json",
-        2767: "main_polish-json",
-        2844: "shared_japanese-json",
-        2848: "main_ukrainian-json",
-        2942: "main_tchinese-json",
-        3112: "shared_french-json",
-        3185: "main_swedish-json",
-        3252: "shared_polish-json",
-        3277: "main_romanian-json",
-        3323: "main_danish-json",
-        3359: "main_bulgarian-json",
-        3557: "shared_finnish-json",
-        3768: "main_finnish-json",
-        4108: "shared_norwegian-json",
-        4189: "shared_czech-json",
-        4297: "shared_greek-json",
-        4722: "main_koreana-json",
-        4823: "shared_romanian-json",
-        4860: "main_russian-json",
-        4964: "shared_vietnamese-json",
-        5438: "shared_turkish-json",
-        5625: "shared_swedish-json",
-        5849: "shared_portuguese-json",
-        5925: "shared_dutch-json",
-        5933: "shared_italian-json",
-        5948: "shared_hungarian-json",
-        6007: "shared_german-json",
-        6087: "main_latam-json",
-        6492: "shared_spanish-json",
-        6542: "shared_koreana-json",
-        6815: "main_english-json",
-        6817: "main_spanish-json",
-        7236: "main_portuguese-json",
-        7602: "shared_tchinese-json",
-        7781: "shared_ukrainian-json",
-        7890: "main_thai-json",
-        7951: "main_norwegian-json",
-        7975: "shared_english-json",
-        8051: "main_hungarian-json",
-        8155: "main_italian-json",
-        8168: "main_vietnamese-json",
-        8385: "shared_brazilian-json",
-        8754: "shared_indonesian-json",
-        9062: "shared_russian-json",
-        9431: "main_brazilian-json",
-        9568: "main_greek-json",
-        9663: "main_turkish-json",
-        9753: "shared_danish-json",
-        9980: "main_schinese-json",
+        67: "main_czech-json",
+        539: "main_finnish-json",
+        976: "shared_thai-json",
+        1225: "shared_swedish-json",
+        1337: "main_japanese-json",
+        1369: "main_vietnamese-json",
+        1449: "shared_bulgarian-json",
+        1606: "main_brazilian-json",
+        1973: "shared_japanese-json",
+        2256: "shared_english-json",
+        2320: "shared_norwegian-json",
+        2435: "shared_latam-json",
+        2500: "main_spanish-json",
+        2543: "main_latam-json",
+        2632: "shared_spanish-json",
+        2702: "main_french-json",
+        2708: "main_italian-json",
+        2749: "shared_romanian-json",
+        2954: "shared_ukrainian-json",
+        3266: "main_dutch-json",
+        3374: "main_schinese-json",
+        3701: "main_swedish-json",
+        3710: "shared_arabic-json",
+        3912: "shared_italian-json",
+        3940: "main_thai-json",
+        4153: "main_romanian-json",
+        4419: "main_portuguese-json",
+        4893: "main_bulgarian-json",
+        4917: "main_tchinese-json",
+        5018: "shared_french-json",
+        5110: "shared_dutch-json",
+        5241: "shared_tchinese-json",
+        5484: "main_greek-json",
+        6031: "shared_finnish-json",
+        6149: "shared_vietnamese-json",
+        6159: "main_koreana-json",
+        6165: "shared_hungarian-json",
+        6208: "shared_german-json",
+        6236: "main_german-json",
+        6239: "shared_portuguese-json",
+        6523: "shared_danish-json",
+        6562: "shared_brazilian-json",
+        6589: "main_russian-json",
+        6948: "main_norwegian-json",
+        6979: "main_polish-json",
+        7539: "shared_koreana-json",
+        7591: "shared_czech-json",
+        7625: "main_hungarian-json",
+        7786: "shared_schinese-json",
+        7796: "main_turkish-json",
+        7798: "main_ukrainian-json",
+        8025: "shared_russian-json",
+        8306: "shared_indonesian-json",
+        8967: "shared_polish-json",
+        9027: "shared_sc_schinese-json",
+        9152: "shared_turkish-json",
+        9188: "main_english-json",
+        9431: "main_danish-json",
+        9566: "main_indonesian-json",
+        9712: "shared_greek-json",
       }[e] +
       ".js?contenthash=" +
       {
-        647: "a21b42a245710eb56a52",
-        698: "dfda7a06552fc2e92611",
-        727: "0fbb658fb7af17b3fd3b",
-        799: "ff636b1303e48f19484b",
-        1117: "56915e1455a0a98d72cc",
-        1162: "901401dfaaa7ed6daa62",
-        1313: "9d48189d3af0dac6f1ff",
-        2029: "0cfc59d21eba73df637f",
-        2431: "5672d331a17cbd1ad008",
-        2443: "a4b162d3dbf26204382e",
-        2537: "eb1eb760871a634f0aa8",
-        2767: "ebce4cdc49012d767e1a",
-        2844: "b979f5bb7850f7c23339",
-        2848: "0446f83cbf965306bd07",
-        2942: "8d6ca5c83541a5d89e7e",
-        3112: "03aadcedd339a5fe7db6",
-        3185: "3cbacffe11ce6f6892b9",
-        3252: "ababe0c739b2a6d07afc",
-        3277: "722174abcbff8c1e7edf",
-        3323: "dadf610d317014c0c97f",
-        3359: "2d141465b0e550759972",
-        3557: "5418d3ea29220dad98a7",
-        3768: "a34542cce3b36e9f729b",
-        4108: "5b6d0d197265ef01be74",
-        4189: "4b79c6bee6a834704529",
-        4297: "8ef33c7c54c12594cf50",
-        4722: "13ac2c73864fe6a3beac",
-        4823: "d20c40713ac8aa05962f",
-        4860: "a304edc96299f2ceb409",
-        4964: "f3884df3280c38a17d42",
-        5438: "7e86024156b794d505a8",
-        5625: "d3035e1bfb7c4a447d6c",
-        5849: "16c8a3eed427d8b45c10",
-        5925: "35e6f86537785bc1a906",
-        5933: "b6539d9b384c6c6e22f8",
-        5948: "c8f0ed8f8d30a7e520e3",
-        6007: "d27f2a5f3d7db395a719",
-        6087: "72b5834c04a1a1caf9c4",
-        6492: "8375c3a6d8c4098b81cd",
-        6542: "a6c59c229ccdd30a1861",
-        6815: "ea56854e0283a3fd3b5c",
-        6817: "009c4fef06f38e3c1d29",
-        7236: "2f126117c07e8cdee1c1",
-        7602: "41fc77751713f7cef1e5",
-        7781: "3fe27fe76e12a3a4f0a4",
-        7890: "ba5d0ec70afd28cb680b",
-        7951: "73acdb941a259e37d9be",
-        7975: "2c64e75a10bbe23c2749",
-        8051: "0dee59a369b08ad9f830",
-        8155: "ff9d34b697d6a7438a9d",
-        8168: "9f6dd663e747679e06d0",
-        8385: "3815534073193d23b8f0",
-        8754: "d376498e848269b20603",
-        9062: "5261217a69592edcff10",
-        9431: "b5d1bb581b2f1afa908c",
-        9568: "66b3d820a3e5b2a9e1a4",
-        9663: "4a9ced2079a4b07a2a82",
-        9753: "2b47891329283c9d1cd1",
-        9980: "fbbf81e55340d73b85d7",
+        67: "53415709b9b9e418a565",
+        539: "73f22a80c81522e1852a",
+        976: "a0df6a7a246bfde295fc",
+        1225: "f57ee6a9d3a8d0e3d3f6",
+        1337: "456b7f49dc9c26df7479",
+        1369: "fd63c296590e46aed4a3",
+        1449: "1b3b2f447fbe73614b3f",
+        1606: "f1ec7af1a78aa00d487a",
+        1973: "53f17d6f74798877a01b",
+        2256: "938bb92f2c269ecec239",
+        2320: "7c4f2d77a8d63145635d",
+        2435: "41e537b7c6fc03dd3f27",
+        2500: "f2bf68236d803a519616",
+        2543: "b61e93590905971be4d7",
+        2632: "e7791abe8f607baac61b",
+        2702: "4de1500204b48acc0010",
+        2708: "baecaced27b2b0b0d90e",
+        2749: "c898d124401098535530",
+        2954: "10e2c89a79ea26b42fd4",
+        3266: "8c46580cbeef19d65283",
+        3374: "627436307bcaa630f582",
+        3701: "c0143129689b551a3566",
+        3710: "415cc6ce7ac9b155a620",
+        3912: "4dc28462e0c1a0be791b",
+        3940: "1233d8d7dda6ed511bda",
+        4153: "035683483372769655b4",
+        4419: "e2a8b3c59a269ec1dba3",
+        4893: "ba77cda6f90979d38e3d",
+        4917: "8ddb46c137997b96f8bd",
+        5018: "17baad0ba7a3acd1c274",
+        5110: "30f5e13f326aeeb13e37",
+        5241: "fa926d475270c543897e",
+        5484: "751e02a7d114dbab8358",
+        6031: "f841b8073531f5831262",
+        6149: "7a1c59452529b71be537",
+        6159: "b409fa409f10d9d53d0d",
+        6165: "6e0303b17ebf3e3b40e3",
+        6208: "791f43eaea3200e8de39",
+        6236: "06453c7169282c52ce7d",
+        6239: "9a31143f222ff92ba400",
+        6523: "b6ca2870deab293954dc",
+        6562: "fcc25c8c0655c5e216fe",
+        6589: "d4b42718863c064b51a5",
+        6948: "45a641dfc147add4b0d8",
+        6979: "9eaf89b8afff02ef5dc6",
+        7539: "46d69646a451f163be43",
+        7591: "548f23e8344e09329914",
+        7625: "153bc33053c598aa9852",
+        7786: "86ff4b2ce4ffa04031ea",
+        7796: "31aac4a78dcbd5c9728d",
+        7798: "3dd90c26828603b8e04f",
+        8025: "7f874fa2399a40f8f648",
+        8306: "f13cd2910e2483fc1f68",
+        8967: "c708811e847817ec5063",
+        9027: "f1222b7a96e12c3910c3",
+        9152: "43a8da4bbcf56cd8812c",
+        9188: "9d60414142b078eab4dc",
+        9431: "686b532313db89ae72a9",
+        9566: "235de84481dcbc13f774",
+        9712: "3e213d57c5d9b6aee920",
       }[e]),
     (i.miniCssF = (e) => {}),
     (i.g = (function () {
@@ -205,51 +207,51 @@ var CLSTAMP = "9836925";
     (i.o = (e, a) => Object.prototype.hasOwnProperty.call(e, a)),
     (r = {}),
     (s = "csgo_react:"),
-    (i.l = (e, a, n, o) => {
+    (i.l = (e, a, n, d) => {
       if (r[e]) r[e].push(a);
       else {
-        var t, c;
+        var o, t;
         if (void 0 !== n)
           for (
-            var d = document.getElementsByTagName("script"), f = 0;
-            f < d.length;
+            var c = document.getElementsByTagName("script"), f = 0;
+            f < c.length;
             f++
           ) {
-            var b = d[f];
+            var b = c[f];
             if (
               b.getAttribute("src") == e ||
               b.getAttribute("data-webpack") == s + n
             ) {
-              t = b;
+              o = b;
               break;
             }
           }
-        t ||
-          ((c = !0),
-          ((t = document.createElement("script")).charset = "utf-8"),
-          (t.timeout = 120),
-          i.nc && t.setAttribute("nonce", i.nc),
-          t.setAttribute("data-webpack", s + n),
-          (t.src = e)),
+        o ||
+          ((t = !0),
+          ((o = document.createElement("script")).charset = "utf-8"),
+          (o.timeout = 120),
+          i.nc && o.setAttribute("nonce", i.nc),
+          o.setAttribute("data-webpack", s + n),
+          (o.src = e)),
           (r[e] = [a]);
         var h = (a, n) => {
-            (t.onerror = t.onload = null), clearTimeout(l);
+            (o.onerror = o.onload = null), clearTimeout(j);
             var s = r[e];
             if (
               (delete r[e],
-              t.parentNode && t.parentNode.removeChild(t),
+              o.parentNode && o.parentNode.removeChild(o),
               s && s.forEach((e) => e(n)),
               a)
             )
               return a(n);
           },
-          l = setTimeout(
-            h.bind(null, void 0, { type: "timeout", target: t }),
+          j = setTimeout(
+            h.bind(null, void 0, { type: "timeout", target: o }),
             12e4,
           );
-        (t.onerror = h.bind(null, t.onerror)),
-          (t.onload = h.bind(null, t.onload)),
-          c && document.head.appendChild(t);
+        (o.onerror = h.bind(null, o.onerror)),
+          (o.onload = h.bind(null, o.onload)),
+          t && document.head.appendChild(o);
       }
     }),
     (i.r = (e) => {
@@ -259,47 +261,30 @@ var CLSTAMP = "9836925";
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (i.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
+    (i.p = ""),
     (() => {
-      var e;
-      i.g.importScripts && (e = i.g.location + "");
-      var a = i.g.document;
-      if (!e && a && (a.currentScript && (e = a.currentScript.src), !e)) {
-        var n = a.getElementsByTagName("script");
-        if (n.length) for (var r = n.length - 1; r > -1 && !e; ) e = n[r--].src;
-      }
-      if (!e)
-        throw new Error(
-          "Automatic publicPath is not supported in this browser",
-        );
-      (e = e
-        .replace(/#.*$/, "")
-        .replace(/\?.*$/, "")
-        .replace(/\/[^\/]+$/, "/")),
-        (i.p = e + "../../");
-    })(),
-    (() => {
-      var e = { 6700: 0 };
+      var e = { 4556: 0 };
       (i.f.j = (a, n) => {
         var r = i.o(e, a) ? e[a] : void 0;
         if (0 !== r)
           if (r) n.push(r[2]);
-          else if (6700 != a) {
+          else if (4556 != a) {
             var s = new Promise((n, s) => (r = e[a] = [n, s]));
             n.push((r[2] = s));
-            var o = i.p + i.u(a),
-              t = new Error();
+            var d = i.p + i.u(a),
+              o = new Error();
             i.l(
-              o,
+              d,
               (n) => {
                 if (i.o(e, a) && (0 !== (r = e[a]) && (e[a] = void 0), r)) {
                   var s = n && ("load" === n.type ? "missing" : n.type),
-                    o = n && n.target && n.target.src;
-                  (t.message =
-                    "Loading chunk " + a + " failed.\n(" + s + ": " + o + ")"),
-                    (t.name = "ChunkLoadError"),
-                    (t.type = s),
-                    (t.request = o),
-                    r[1](t);
+                    d = n && n.target && n.target.src;
+                  (o.message =
+                    "Loading chunk " + a + " failed.\n(" + s + ": " + d + ")"),
+                    (o.name = "ChunkLoadError"),
+                    (o.type = s),
+                    (o.request = d),
+                    r[1](o);
                 }
               },
               "chunk-" + a,
@@ -311,14 +296,14 @@ var CLSTAMP = "9836925";
       var a = (a, n) => {
           var r,
             s,
-            [o, t, c] = n,
-            d = 0;
-          if (o.some((a) => 0 !== e[a])) {
-            for (r in t) i.o(t, r) && (i.m[r] = t[r]);
-            if (c) var f = c(i);
+            [d, o, t] = n,
+            c = 0;
+          if (d.some((a) => 0 !== e[a])) {
+            for (r in o) i.o(o, r) && (i.m[r] = o[r]);
+            if (t) var f = t(i);
           }
-          for (a && a(n); d < o.length; d++)
-            (s = o[d]), i.o(e, s) && e[s] && e[s][0](), (e[s] = 0);
+          for (a && a(n); c < d.length; c++)
+            (s = d[c]), i.o(e, s) && e[s] && e[s][0](), (e[s] = 0);
           return i.O(f);
         },
         n = (self.webpackChunkcsgo_react = self.webpackChunkcsgo_react || []);
