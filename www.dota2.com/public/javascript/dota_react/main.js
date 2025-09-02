@@ -21001,42 +21001,43 @@
                   },
                   (0, B.Wn)("#dpc_schedule_all_days"),
                 ),
-                s.createElement(
-                  "div",
-                  { className: qa().EventStageContainer },
+                !!c.length &&
                   s.createElement(
                     "div",
-                    { className: qa().Title },
-                    (0, B.Wn)("#dpc_group_stage"),
-                  ),
-                  s.createElement(
-                    "div",
-                    { className: qa().DayList },
-                    c.map((t) =>
-                      s.createElement(
-                        "div",
-                        {
-                          className: (0, N.A)(
-                            qa().DayContainer,
-                            t == e.nDayFilter && qa().Selected,
-                          ),
-                          key: t,
-                          onClick: () => e.setDayFilter(t),
-                        },
-                        s.createElement(_a(), {
-                          format: "DD ",
-                          date: 1e3 * t,
-                          className: qa().DayNumber,
-                        }),
-                        s.createElement(_a(), {
-                          format: "ddd ",
-                          date: 1e3 * t,
-                          className: qa().DayOfWeek,
-                        }),
+                    { className: qa().EventStageContainer },
+                    s.createElement(
+                      "div",
+                      { className: qa().Title },
+                      (0, B.Wn)("#dpc_group_stage"),
+                    ),
+                    s.createElement(
+                      "div",
+                      { className: qa().DayList },
+                      c.map((t) =>
+                        s.createElement(
+                          "div",
+                          {
+                            className: (0, N.A)(
+                              qa().DayContainer,
+                              t == e.nDayFilter && qa().Selected,
+                            ),
+                            key: t,
+                            onClick: () => e.setDayFilter(t),
+                          },
+                          s.createElement(_a(), {
+                            format: "DD ",
+                            date: 1e3 * t,
+                            className: qa().DayNumber,
+                          }),
+                          s.createElement(_a(), {
+                            format: "ddd ",
+                            date: 1e3 * t,
+                            className: qa().DayOfWeek,
+                          }),
+                        ),
                       ),
                     ),
                   ),
-                ),
                 !!m.length &&
                   s.createElement(
                     "div",
