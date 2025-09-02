@@ -484,6 +484,64 @@
       }
       n.d(t, { x0: () => i });
     },
+    40236: (e, t, n) => {
+      "use strict";
+      n.d(t, { BL: () => l, OO: () => d, wY: () => r });
+      var i = n(90626),
+        s = n(8871),
+        a = n(81393);
+      function o(e, t) {
+        return (0, s.QS)(
+          (n) => {
+            if (!n) return;
+            const i = t(n.ownerDocument.defaultView, (t) => {
+              e(t[0]);
+            });
+            return i.observe(n), () => i.unobserve(n);
+          },
+          [e, t],
+        );
+      }
+      function r(e) {
+        return o(
+          e,
+          i.useCallback(
+            (e, t) =>
+              e.ResizeObserver
+                ? new e.ResizeObserver(t)
+                : ((0, a.wT)(!1, "ResizeObserver is not available"),
+                  {
+                    observe: () => {},
+                    unobserve: () => {},
+                    disconnect: () => {},
+                  }),
+            [],
+          ),
+        );
+      }
+      function l(e, t) {
+        return o(
+          e,
+          i.useCallback((e, n) => new e.IntersectionObserver(n, t), [t]),
+        );
+      }
+      function d(e, t) {
+        const n = i.useRef(void 0);
+        return l((t) => {
+          var i, s, a;
+          !n.current &&
+            t.isIntersecting &&
+            (null === (i = e.onEnter) || void 0 === i || i.call(e, t)),
+            n.current &&
+              !t.isIntersecting &&
+              (null === (s = e.onLeave) || void 0 === s || s.call(e, t)),
+            null === (a = e.onIntersectionChange) ||
+              void 0 === a ||
+              a.call(e, t),
+            (n.current = t.isIntersecting);
+        }, t);
+      }
+    },
     12611: (e, t, n) => {
       "use strict";
       n.d(t, { eg: () => s, lw: () => i });

@@ -387,7 +387,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "FocusNavHistoryID",
-        _ = new _._("FocusNavigation").Debug;
+        _ = new _._("FocusHistory").Debug;
       function _(_) {
         const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
           _ = (function (_ = 2) {
@@ -819,7 +819,6 @@
             item: _,
             feature: __webpack_require__,
             depth: _,
-            children: _,
             noImpressionTracking: _,
             ..._
           } = _,
@@ -845,23 +844,14 @@
           _ = _.useCallback(() => {
             _ && _.current != _ && (_.AddImpression(_, _), (_.current = _));
           }, [_, _, _, _]),
-          _ = _.createElement(
-            "a",
-            {
-              ..._,
-              href: _,
-            },
-            _,
-          );
-        return _ && !_
-          ? _.createElement(
-              _._,
-              {
-                onEnter: _,
-              },
-              _,
-            )
-          : _;
+          _ = (0, _._)({
+            onEnter: _,
+          });
+        return _.createElement("a", {
+          ..._,
+          ref: _ && !_ ? _ : void 0,
+          href: _,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -125,6 +125,7 @@
     chunkid: (module) => {
       module.exports = {
         QRBits: "_3BALYLTpJdiDaC7JKmeeFJ",
+        QRImg: "_5S5WqZhvbmRD1cHQT8P-l",
         Bit: "_1YVDTFYSTDWouyIbRs_hN_",
         Active: "_1zNnNw2BDhrN6ML6YxBYJE",
       };
@@ -7497,8 +7498,8 @@
           quality: _ = _._,
           children: __webpack_require__,
           className: _,
-          activeBitColor: _ = null,
-          inactiveBitColor: _ = null,
+          activeBitColor: _ = [33, 35, 40],
+          inactiveBitColor: _ = [255, 255, 255],
           borderWidth: _ = 3,
           typeNumber: _ = 6,
         } = _;
@@ -7526,42 +7527,66 @@
         for (let _ = 0; _ < _.length; _++)
           _.push([].concat(Array(_).fill(!1), _[_], Array(_).fill(!1)));
         for (let _ = 0; _ < _; _++) _.push(Array(_.length + 2 * _).fill(!1));
-        const _ = [],
-          _ = (0, _._)(_().Bit),
-          _ = (0, _._)(_().Bit, _().Active),
-          _ =
-            null !== _
-              ? {
-                  backgroundColor: _,
-                }
-              : {},
-          _ =
-            null !== _
-              ? {
-                  backgroundColor: _,
-                }
-              : {};
-        for (let _ = 0; _ < _.length; _++)
-          for (let _ = 0; _ < _.length; _++) {
-            const _ = _[_][_];
-            _.push(
-              _.createElement("div", {
-                key: `${_}_${_}`,
-                className: _ ? _ : _,
-                style: _ ? _ : _,
-              }),
-            );
-          }
-        let _ = _.length;
+        const _ = (function (_, _, _) {
+            const _ = _.length,
+              _ = _[0].length,
+              _ = new Uint8Array(40 + (_ + 2) * _);
+            let _ = 0;
+            (_[_++] = 71),
+              (_[_++] = 73),
+              (_[_++] = 70),
+              (_[_++] = 56),
+              (_[_++] = 57),
+              (_[_++] = 97),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (_[_++] = 161),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = _[0]),
+              (_[_++] = _[1]),
+              (_[_++] = _[2]),
+              (_[_++] = _[0]),
+              (_[_++] = _[1]),
+              (_[_++] = _[2]),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 255),
+              (_[_++] = 44),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (_[_++] = _),
+              (_[_++] = 0),
+              (_[_++] = 0),
+              (_[_++] = 7);
+            for (let _ = 0; _ < _.length; _++) {
+              (_[_++] = _ + 1), (_[_++] = 128);
+              for (let _ = 0; _ < _.length; _++) _[_++] = _[_][_] ? 0 : 1;
+            }
+            return (_[_++] = 1), (_[_++] = 129), (_[_++] = 0), (_[_++] = 59), _;
+          })(_, _, _),
+          _ = new Blob([_], {
+            type: "image/gif",
+          }),
+          _ = URL.createObjectURL(_);
         return _.createElement(
           "div",
           {
             className: (0, _._)(_().QRBits, _),
-            style: {
-              gridTemplateColumns: `repeat( ${_}, 1fr )`,
-            },
           },
-          _,
+          _.createElement("img", {
+            className: _().QRImg,
+            src: _,
+          }),
         );
       }
       !(function (_) {
@@ -7738,8 +7763,8 @@
               _,
               {
                 borderWidth: 0,
-                activeBitColor: "#212328",
-                inactiveBitColor: _ ? "magenta" : "white",
+                activeBitColor: [21, 23, 28],
+                inactiveBitColor: _ ? [255, 0, 255] : [255, 255, 255],
                 quality: _(_),
                 className: (0, _._)(
                   _().LoginQR,
@@ -8051,8 +8076,9 @@
       }
       async function _() {
         var _, _, _, _, _, _;
-        const [_, _, _] = await Promise.all([
+        const [_, _, _, _] = await Promise.all([
           SteamClient.System.GetOSType(),
+          SteamClient.System.GetSystemInfo(),
           null !==
             (_ =
               null ===
@@ -8089,7 +8115,7 @@
           device_friendly_name: _,
           machine_id: _,
           platform_type: 1,
-          gaming_device_type: _._.ON_DECK ? 544 : 1,
+          gaming_device_type: _.eGamingDeviceType,
         };
       }
       async function _() {

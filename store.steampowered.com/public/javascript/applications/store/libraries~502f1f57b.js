@@ -1882,6 +1882,62 @@
       var n = r(94829)("toUpperCase");
       t.exports = n;
     },
+    38877: (t, e) => {
+      "use strict";
+      var r,
+        n = Symbol.for("react.element"),
+        o = Symbol.for("react.portal"),
+        i = Symbol.for("react.fragment"),
+        a = Symbol.for("react.strict_mode"),
+        u = Symbol.for("react.profiler"),
+        c = Symbol.for("react.provider"),
+        l = Symbol.for("react.context"),
+        s = Symbol.for("react.server_context"),
+        f = Symbol.for("react.forward_ref"),
+        p = Symbol.for("react.suspense"),
+        h = Symbol.for("react.suspense_list"),
+        y = Symbol.for("react.memo"),
+        d = Symbol.for("react.lazy"),
+        v = Symbol.for("react.offscreen");
+      function m(t) {
+        if ("object" == typeof t && null !== t) {
+          var e = t.$$typeof;
+          switch (e) {
+            case n:
+              switch ((t = t.type)) {
+                case i:
+                case u:
+                case a:
+                case p:
+                case h:
+                  return t;
+                default:
+                  switch ((t = t && t.$$typeof)) {
+                    case s:
+                    case l:
+                    case f:
+                    case d:
+                    case y:
+                    case c:
+                      return t;
+                    default:
+                      return e;
+                  }
+              }
+            case o:
+              return e;
+          }
+        }
+      }
+      (r = Symbol.for("react.module.reference")),
+        (e.isFragment = function (t) {
+          return m(t) === i;
+        });
+    },
+    98193: (t, e, r) => {
+      "use strict";
+      t.exports = r(38877);
+    },
     57487: (t, e, r) => {
       "use strict";
       r.d(e, { Ay: () => Ht });

@@ -377,6 +377,8 @@
     "accountpreferences_authorized_devices_type_browser": "Web browser",
     "accountpreferences_authorized_devices_type_mobile": "Mobile device",
     "accountpreferences_authorized_devices_type_steamdeck": "Steam Deck",
+    "accountpreferences_authorized_devices_type_steamos": "SteamOS device",
+    "accountpreferences_authorized_devices_type_legiongos": "Legion Go S",
     "accountpreferences_authorized_devices_type_desktop": "PC Steam Client",
     "accountpreferences_authorized_devices_type_unknown": "Unknown Client",
     "accountpreferences_authorized_devices_state_current": "Current",

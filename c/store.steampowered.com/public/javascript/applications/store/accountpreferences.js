@@ -2202,15 +2202,12 @@
             : _.createElement(_.FH7, {
                 className: _.DeviceLogo,
               });
-        else if (1 == _.platform_type && 544 === _.gaming_device_type)
-          _ = _
-            ? _.createElement(_.VRo, {
-                className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
-              })
-            : _.createElement(_.oEi, {
-                className: _.DeviceLogo,
-              });
-        else
+        else if (
+          1 != _.platform_type ||
+          (544 !== _.gaming_device_type &&
+            545 != _.gaming_device_type &&
+            541 != _.gaming_device_type)
+        )
           switch (_.os_platform) {
             case _._.k_EPlatformTypeWin32:
             case _._.k_EPlatformTypeWin64:
@@ -2233,6 +2230,14 @@
                 className: _.DeviceLogo,
               });
           }
+        else
+          _ = _
+            ? _.createElement(_.VRo, {
+                className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
+              })
+            : _.createElement(_.oEi, {
+                className: _.DeviceLogo,
+              });
         return __webpack_require__
           ? _.createElement(
               "div",
@@ -2274,7 +2279,17 @@
               ? (0, _._)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )
-              : (0, _._)("#accountpreferences_authorized_devices_type_desktop");
+              : 545 == _.gaming_device_type
+                ? (0, _._)(
+                    "#accountpreferences_authorized_devices_type_legiongos",
+                  )
+                : 541 == _.gaming_device_type
+                  ? (0, _._)(
+                      "#accountpreferences_authorized_devices_type_steamos",
+                    )
+                  : (0, _._)(
+                      "#accountpreferences_authorized_devices_type_desktop",
+                    );
           case 2:
             return (0, _._)(
               "#accountpreferences_authorized_devices_type_browser",

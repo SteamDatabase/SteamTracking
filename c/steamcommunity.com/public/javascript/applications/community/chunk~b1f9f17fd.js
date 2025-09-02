@@ -51298,8 +51298,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -51325,7 +51325,10 @@
           _ = Boolean(_),
           _ = _ == _,
           _ = (0, _._)(() => "show" === _._.Get().GetChatVisibility()),
-          _ = _ && (!_ || !_);
+          _ = _ && (!_ || !_),
+          _ = (0, _._)({
+            onEnter: () => _(!0),
+          });
         return _.createElement(
           _._,
           null,
@@ -51340,72 +51343,64 @@
                 fallback: null,
               },
               _.createElement(
-                _._,
+                "div",
                 {
-                  onEnter: () => _(!0),
+                  ref: _,
+                  className: (0, _._)({
+                    [_().SaleBroadcastSection]: _,
+                    [_().SaleBroadcastCtn]: !_,
+                    WideBroadcastCtn: _ && !_,
+                    WideBroadcastNoChatCtn: _ && !_,
+                    SaleBroadcastSection_trgt: !0,
+                  }),
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().SaleBroadcastSection]: _,
-                      [_().SaleBroadcastCtn]: !_,
-                      WideBroadcastCtn: _ && !_,
-                      WideBroadcastNoChatCtn: _ && !_,
-                      SaleBroadcastSection_trgt: !0,
-                    }),
-                  },
-                  Boolean(_) &&
-                    _.createElement(_, {
-                      ..._,
-                      bShowCapsuleArt: !0,
-                      fnFilterStreams: (_) => {
-                        var _, _;
-                        const _ = _._.GetOrCreateBroadcastInfo(
-                          _.steamid,
-                        ).m_nAppID;
-                        return (
-                          ((null === (_ = null == _ ? void 0 : _.jsondata) ||
-                          void 0 === _
-                            ? void 0
-                            : _.broadcast_preroll_vod_appid) &&
-                            _.nAppIDVOD ==
-                              Number(
-                                null ===
-                                  (_ = null == _ ? void 0 : _.jsondata) ||
-                                  void 0 === _
-                                  ? void 0
-                                  : _.broadcast_preroll_vod_appid,
-                              )) ||
-                          (null == _
-                            ? void 0
-                            : _.BIsBroadcastAccountIDWhiteListed(
-                                _.accountid,
-                              )) ||
-                          _.BUsesContentHubForItemSource() ||
-                          !_ ||
-                          _.ShouldShowOnTab(_)
-                        );
-                      },
-                      fnOnVideoEnd: () => _(_),
-                      bSkipPreRoll: _,
-                      bWidePlayer: _,
-                      tabuniqueid:
-                        null === (_ = _.activeTab) || void 0 === _
+                Boolean(_) &&
+                  _.createElement(_, {
+                    ..._,
+                    bShowCapsuleArt: !0,
+                    fnFilterStreams: (_) => {
+                      var _, _;
+                      const _ = _._.GetOrCreateBroadcastInfo(
+                        _.steamid,
+                      ).m_nAppID;
+                      return (
+                        ((null === (_ = null == _ ? void 0 : _.jsondata) ||
+                        void 0 === _
                           ? void 0
-                          : _.GetActiveTabUniqueID(),
-                      tabfilter:
-                        null === (_ = _.activeTab) || void 0 === _
+                          : _.broadcast_preroll_vod_appid) &&
+                          _.nAppIDVOD ==
+                            Number(
+                              null === (_ = null == _ ? void 0 : _.jsondata) ||
+                                void 0 === _
+                                ? void 0
+                                : _.broadcast_preroll_vod_appid,
+                            )) ||
+                        (null == _
                           ? void 0
-                          : __webpack_require__.GetStoreFilter(),
-                    }),
-                  Boolean(!_) &&
-                    _.createElement(_._, {
-                      size: "small",
-                      position: "center",
-                      string: (0, _._)("#Loading"),
-                    }),
-                ),
+                          : _.BIsBroadcastAccountIDWhiteListed(_.accountid)) ||
+                        _.BUsesContentHubForItemSource() ||
+                        !_ ||
+                        _.ShouldShowOnTab(_)
+                      );
+                    },
+                    fnOnVideoEnd: () => _(_),
+                    bSkipPreRoll: _,
+                    bWidePlayer: _,
+                    tabuniqueid:
+                      null === (_ = _.activeTab) || void 0 === _
+                        ? void 0
+                        : _.GetActiveTabUniqueID(),
+                    tabfilter:
+                      null === (_ = _.activeTab) || void 0 === _
+                        ? void 0
+                        : __webpack_require__.GetStoreFilter(),
+                  }),
+                Boolean(!_) &&
+                  _.createElement(_._, {
+                    size: "small",
+                    position: "center",
+                    string: (0, _._)("#Loading"),
+                  }),
               ),
             ),
           ),
@@ -73333,8 +73328,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const {
               item: _,
@@ -73343,36 +73338,36 @@
               indexInSection: _,
             } = _,
             [_, _] = _.useState(!1);
-          return (
-            _.useEffect(
-              () => (
-                __webpack_require__(_, _.unique_id, _, _),
-                () => __webpack_require__(!1, _.unique_id, _, _)
-              ),
+          _.useEffect(
+            () => (
+              __webpack_require__(_, _.unique_id, _, _),
+              () => __webpack_require__(!1, _.unique_id, _, _)
             ),
+          );
+          const _ = (0, _._)(
+            {
+              onEnter: () => _(!0),
+              onLeave: () => _(!1),
+            },
+            {
+              rootMargin: "-55px 0px -50px 0px",
+            },
+          );
+          return _.createElement(
+            "div",
+            {
+              ref: _,
+            },
             _.createElement(
               _._,
               {
-                topOffset: "55px",
-                bottomOffset: "50px",
-                onEnter: () => _(!0),
-                onLeave: () => _(!1),
+                placeholderHeight: "60px",
+                rootMargin: _._,
               },
-              _.createElement(
-                "div",
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    placeholderHeight: "60px",
-                    rootMargin: _._,
-                  },
-                  _.createElement(_, {
-                    item: _,
-                  }),
-                ),
-              ),
-            )
+              _.createElement(_, {
+                item: _,
+              }),
+            ),
           );
         },
         _ = {

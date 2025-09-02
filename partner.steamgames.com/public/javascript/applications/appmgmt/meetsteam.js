@@ -45,65 +45,6 @@
         Table: "_2JSoC65mCQdxh-B_srjUjf",
       };
     },
-    38877: (e, t) => {
-      "use strict";
-      var n,
-        a = Symbol.for("react.element"),
-        r = Symbol.for("react.portal"),
-        l = Symbol.for("react.fragment"),
-        s = Symbol.for("react.strict_mode"),
-        i = Symbol.for("react.profiler"),
-        c = Symbol.for("react.provider"),
-        o = Symbol.for("react.context"),
-        u = Symbol.for("react.server_context"),
-        m = Symbol.for("react.forward_ref"),
-        d = Symbol.for("react.suspense"),
-        E = Symbol.for("react.suspense_list"),
-        g = Symbol.for("react.memo"),
-        p = Symbol.for("react.lazy"),
-        h = Symbol.for("react.offscreen");
-      function _(e) {
-        if ("object" == typeof e && null !== e) {
-          var t = e.$$typeof;
-          switch (t) {
-            case a:
-              switch ((e = e.type)) {
-                case l:
-                case i:
-                case s:
-                case d:
-                case E:
-                  return e;
-                default:
-                  switch ((e = e && e.$$typeof)) {
-                    case u:
-                    case o:
-                    case m:
-                    case p:
-                    case g:
-                    case c:
-                      return e;
-                    default:
-                      return t;
-                  }
-              }
-            case r:
-              return t;
-          }
-        }
-      }
-      (n = Symbol.for("react.module.reference")),
-        (t.isForwardRef = function (e) {
-          return _(e) === m;
-        }),
-        (t.isFragment = function (e) {
-          return _(e) === l;
-        });
-    },
-    98193: (e, t, n) => {
-      "use strict";
-      e.exports = n(38877);
-    },
     36637: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { MeetSteamRoutes: () => tn, default: () => nn });
@@ -129,12 +70,12 @@
         I = n(41735),
         w = n.n(I),
         D = n(17720),
-        b = n(78327),
-        A = n(32179),
+        A = n(78327),
+        b = n(32179),
         C = n(21711);
       function N() {
         const [e] = r.useState(() =>
-          (0, b.Tc)("events_list", "application_config"),
+          (0, A.Tc)("events_list", "application_config"),
         );
         return e;
       }
@@ -142,8 +83,8 @@
         return ["usePartnerRevAndBestAppSlow", e];
       }
       async function M(e) {
-        const t = `${b.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
-          n = { sessionid: b.TS.SESSIONID, partnerid: e },
+        const t = `${A.TS.PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails`,
+          n = { sessionid: A.TS.SESSIONID, partnerid: e },
           a = await w().get(t, { params: n });
         return a?.data?.data;
       }
@@ -170,8 +111,8 @@
       var k = n(38390),
         R = n(50304),
         L = n(96001),
-        F = n(16676),
-        G = n(26161),
+        G = n(16676),
+        F = n(26161),
         O = n(78395),
         x = n(21869),
         $ = n(22797),
@@ -276,7 +217,7 @@
             r.createElement(
               r.Fragment,
               null,
-              r.createElement(F.pd, {
+              r.createElement(G.pd, {
                 type: "number",
                 label: "Account ID",
                 onChange: (e) => o(Number.parseInt(e.currentTarget.value)),
@@ -287,19 +228,19 @@
                 r.createElement(
                   r.Fragment,
                   null,
-                  r.createElement(F.pd, {
+                  r.createElement(G.pd, {
                     type: "number",
                     label: "Partner ID (optional)",
                     onChange: (e) => d(e.currentTarget.value),
                     value: u,
                   }),
-                  r.createElement(F.pd, {
+                  r.createElement(G.pd, {
                     type: "text",
                     label: "Email override (optional)",
                     onChange: (e) => g(e.currentTarget.value.trim()),
                     value: E,
                   }),
-                  r.createElement(F.Yh, {
+                  r.createElement(G.Yh, {
                     controlled: !0,
                     checked: p,
                     onChange: h,
@@ -454,7 +395,7 @@
           r.createElement("br", null),
           r.createElement("br", null),
           r.createElement(
-            F.$n,
+            G.$n,
             null,
             r.createElement(
               "label",
@@ -672,7 +613,7 @@
                       null,
                       r.createElement(Te, { rgGidMeetSteamEvents: s }),
                       r.createElement(
-                        F.$n,
+                        G.$n,
                         { onClick: () => i(null) },
                         "Reset Selection",
                       ),
@@ -682,8 +623,8 @@
           ),
         );
       }
-      const be = (0, ce.FB)();
-      function Ae(e) {
+      const Ae = (0, ce.FB)();
+      function be(e) {
         return (
           (e = e?.filter(
             (t, n) =>
@@ -700,7 +641,7 @@
         );
       }
       function Ce(e) {
-        return Ae(e.cell.getValue());
+        return be(e.cell.getValue());
       }
       function Ne(e, t) {
         const n = ge(t),
@@ -745,7 +686,7 @@
             );
             return e;
           })(),
-          a = (0, A.vh)(n),
+          a = (0, b.vh)(n),
           l = Ne(n, t),
           s = (0, r.useMemo)(() => {
             if (!a || !l) return null;
@@ -755,7 +696,7 @@
                 const n = l.get(t);
                 e.push({
                   partner_id: t,
-                  partner_name: (0, A.Yd)(t)?.name || "Unknown",
+                  partner_name: (0, b.Yd)(t)?.name || "Unknown",
                   invitations:
                     n?.filter(
                       (e) =>
@@ -777,17 +718,17 @@
           }, [a, l, n]),
           i = (0, r.useMemo)(
             () => [
-              be.accessor("partner_id", { header: "Partner ID", size: 100 }),
-              be.accessor("partner_name", {
+              Ae.accessor("partner_id", { header: "Partner ID", size: 100 }),
+              Ae.accessor("partner_name", {
                 header: "Partner Name",
                 size: 300,
               }),
-              be.accessor("invitations", {
+              Ae.accessor("invitations", {
                 header: "Invitations",
                 cell: Ce,
                 size: 300,
               }),
-              be.accessor("registrations", {
+              Ae.accessor("registrations", {
                 header: "Registered to Attend",
                 cell: Ce,
                 size: 300,
@@ -798,7 +739,7 @@
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement(F.JU, null, "Partner Analysis"),
+          r.createElement(G.JU, null, "Partner Analysis"),
           Boolean(s)
             ? r.createElement(
                 u.tH,
@@ -812,7 +753,7 @@
                 }),
                 r.createElement("br", null),
                 r.createElement(
-                  F.$n,
+                  G.$n,
                   {
                     id: "download-csv",
                     onClick: function () {
@@ -827,7 +768,7 @@
                           n.push(
                             "invitations" == e.accessorKey ||
                               "registrations" == e.accessorKey
-                              ? Ae(a)
+                              ? be(a)
                               : a.toString(),
                           );
                         }
@@ -852,7 +793,7 @@
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement(F.JU, null, "Choose Events"),
+          r.createElement(G.JU, null, "Choose Events"),
           t.map((e) =>
             r.createElement(Be, {
               key: e,
@@ -862,7 +803,7 @@
             }),
           ),
           r.createElement(
-            F.$n,
+            G.$n,
             { disabled: 0 == a.length, onClick: () => n(a) },
             "Continue",
           ),
@@ -871,7 +812,7 @@
       function Be(e) {
         const { gidClanEvent: t, rgSelected: n, fnSetSelected: a } = e,
           l = (0, k.RR)(t).GetNameWithFallback(0);
-        return r.createElement(F.Yh, {
+        return r.createElement(G.Yh, {
           label: l,
           checked: n.includes(t),
           onChange: (e) => {
@@ -921,7 +862,7 @@
               r.createElement("div", null, "There are ", s, " registrations."),
               i > 0 &&
                 r.createElement(
-                  F.$n,
+                  G.$n,
                   {
                     onClick: async () => {
                       await (async function (e, t) {
@@ -984,7 +925,7 @@
                   "tbody",
                   null,
                   a?.map((e) =>
-                    r.createElement(Fe, {
+                    r.createElement(Ge, {
                       key: "regentry_" + e.steamid,
                       reg: e,
                     }),
@@ -994,9 +935,9 @@
             ),
         );
       }
-      function Fe(e) {
+      function Ge(e) {
         const { reg: t } = e,
-          [n] = (0, A.UA)(t.partner_id);
+          [n] = (0, b.UA)(t.partner_id);
         return r.createElement(
           "tr",
           null,
@@ -1012,7 +953,7 @@
           r.createElement("td", null, t.email_override),
         );
       }
-      function Ge(e) {
+      function Fe(e) {
         const { hideModal: t, gid: n, title: a, group: l, session: s } = e,
           i = (0, L.a)(),
           c = Ee(n),
@@ -1066,7 +1007,7 @@
                     l.push(s),
                       n.forEach((t) => {
                         const n = [],
-                          s = t.partner_id ? (0, A.Yd)(t.partner_id) : void 0;
+                          s = t.partner_id ? (0, b.Yd)(t.partner_id) : void 0;
                         n.push("" + t.steamid),
                           n.push(t.name),
                           n.push(t.invited ? "YES" : ""),
@@ -1175,7 +1116,7 @@
       }
       function xe(e) {
         const { inviteInfo: t, regInfo: n, group: a, preRegQuestions: l } = e,
-          [s] = (0, A.UA)(t.partner_id),
+          [s] = (0, b.UA)(t.partner_id),
           i = Oe(n, t);
         return r.createElement(
           "tr",
@@ -1186,7 +1127,7 @@
           r.createElement(
             "td",
             null,
-            s?.name,
+            (s?.name ?? t.game) ? `Game: ${t.game}` : "",
             " ",
             t.partner_id ? `(${t.partner_id})` : "",
           ),
@@ -1253,7 +1194,7 @@
                       null,
                       r.createElement(qe, { rgGidMeetSteamEvents: s }),
                       r.createElement(
-                        F.$n,
+                        G.$n,
                         { onClick: () => i(null) },
                         "Reset Selection",
                       ),
@@ -1285,16 +1226,16 @@
               }, [t]);
             return { rgAllRegistrations: a, rgPartnerIDs: n };
           })(t),
-          l = (0, A.vh)(a),
+          l = (0, b.vh)(a),
           s = (0, r.useMemo)(() => {
             if (!l || !n) return null;
             const e = [];
             return (
               n.forEach((t) => {
-                (0, A.Yd)(t.partner_id);
+                (0, b.Yd)(t.partner_id);
                 e.push({
                   partner_id: t.partner_id ? "" + t.partner_id : "",
-                  partner_name: (0, A.Yd)(t.partner_id)?.name || "Unknown",
+                  partner_name: (0, b.Yd)(t.partner_id)?.name || "Unknown",
                   name: t.name,
                   accountid: t.accountid,
                   email: t.email_override,
@@ -1331,7 +1272,7 @@
           ? r.createElement(
               r.Fragment,
               null,
-              r.createElement(F.JU, null, "Registations"),
+              r.createElement(G.JU, null, "Registations"),
               Boolean(s)
                 ? r.createElement(
                     u.tH,
@@ -1345,7 +1286,7 @@
                     }),
                     r.createElement("br", null),
                     r.createElement(
-                      F.$n,
+                      G.$n,
                       {
                         id: "download-csv",
                         onClick: () =>
@@ -1388,7 +1329,7 @@
                 r.createElement(
                   "a",
                   {
-                    href: `${b.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
+                    href: `${A.TS.PARTNER_BASE_URL}meetsteam/surveyresults/${e}`,
                     target: "_blank",
                   },
                   t,
@@ -1400,7 +1341,7 @@
       }
       function Ke() {
         const [e] = (0, r.useState)(() => {
-          const e = (0, b.Tc)("survey_list", "application_config") || {},
+          const e = (0, A.Tc)("survey_list", "application_config") || {},
             t = new Map();
           for (const n of Object.keys(e)) t.set(n, e[n]);
           return t;
@@ -1412,7 +1353,7 @@
         Je = n(19367),
         Qe = n.n(Je);
       function Ze(e) {
-        const t = D.b.InitFromClanID((0, G.H)()),
+        const t = D.b.InitFromClanID((0, F.H)()),
           n = (function () {
             const [e] = (0, r.useState)(() =>
               (0, h.Tc)("event_gids", "application_config"),
@@ -1451,7 +1392,7 @@
                   r.createElement(De, { rgEventGIDs: n }),
                   r.createElement(Ue, { rgEventGIDs: n }),
                 ),
-                r.createElement(F.Yh, {
+                r.createElement(G.Yh, {
                   checked: a,
                   onChange: l,
                   label: "Show Past Events",
@@ -1488,9 +1429,9 @@
       function et(e) {
         const { oEvent: t } = e,
           n = t.GID,
-          a = D.b.InitFromClanID((0, G.H)()),
+          a = D.b.InitFromClanID((0, F.H)()),
           l = (0, L.a)(),
-          s = (0, R.my)(l, (0, G.H)(), n),
+          s = (0, R.my)(l, (0, F.H)(), n),
           i = s.isSuccess ? s.data : null,
           c = t.GetNameWithFallback(0),
           o = (0, r.useMemo)(() => {
@@ -1783,7 +1724,7 @@
                 e.preventDefault(), e.stopPropagation(), l(!0);
                 const a = await (async function (e, t) {
                   const n = _.w.Init(v.VI),
-                    a = D.b.InitFromClanID((0, G.H)());
+                    a = D.b.InitFromClanID((0, F.H)());
                   n.Body().set_clan_event_gid(t),
                     n.Body().set_steamid(a.ConvertTo64BitString());
                   const r = await v.ZK.TestFireEmails(e, n);
@@ -1918,14 +1859,14 @@
           r.createElement(
             "td",
             null,
-            r.createElement(F.$n, { onClick: E }, "Details"),
+            r.createElement(G.$n, { onClick: E }, "Details"),
             r.createElement(
               u.tH,
               null,
               r.createElement(
                 x.E,
                 { active: d },
-                r.createElement(Ge, {
+                r.createElement(Fe, {
                   gid: t,
                   title: i,
                   group: n,
@@ -1956,7 +1897,7 @@
             );
           })(),
           [a, l] = (0, r.useState)(""),
-          s = b.TS.PARTNER_BASE_URL + "meetsteam/2025",
+          s = A.TS.PARTNER_BASE_URL + "meetsteam/2025",
           i = (0, r.useMemo)(() => {
             const e = new Map();
             return (
@@ -1971,7 +1912,7 @@
         return r.createElement(
           "div",
           { className: K().EventList },
-          r.createElement(F.pd, {
+          r.createElement(G.pd, {
             type: "text",
             value: a,
             onChange: (e) => l(e.currentTarget.value.trim()),
@@ -2049,7 +1990,7 @@
                     const e = n.results.partner_id;
                     new D.b(n.steamid).GetAccountID(),
                       await Promise.all([
-                        (0, A.qG)(e),
+                        (0, b.qG)(e),
                         s.prefetchQuery({
                           queryKey: T(e),
                           queryFn: async () => M(e),
@@ -2086,7 +2027,7 @@
           "div",
           null,
           r.createElement(
-            F.$n,
+            G.$n,
             {
               onClick: () => {
                 const e = [];
@@ -2142,7 +2083,7 @@
                           ? (0, it.Lg)(t.results.preferred_language)
                           : "",
                       );
-                    const u = (0, A.Yd)(s);
+                    const u = (0, b.Yd)(s);
                     n.push(u ? u.name : "");
                     const m = B(a, s);
                     m
@@ -2231,7 +2172,7 @@
       }
       function yt(e) {
         const { nPartnerID: t } = e,
-          [n] = (0, A.UA)(t),
+          [n] = (0, b.UA)(t),
           a = (function (e) {
             const t = (0, S.I)({
               queryKey: T(e),
@@ -2292,7 +2233,7 @@
             bStartMinimized: !0,
           },
           r.createElement(
-            F.$n,
+            G.$n,
             {
               onClick: () => {
                 const e = [];
@@ -2330,7 +2271,7 @@
                           ? (0, it.Lg)(t.results.preferred_language)
                           : "",
                       );
-                    const o = (0, A.Yd)(s);
+                    const o = (0, b.Yd)(s);
                     a.push(o ? o.name : "");
                     const u = B(n, s);
                     u
@@ -2368,7 +2309,7 @@
               "tbody",
               null,
               a.map((e) =>
-                r.createElement(bt, {
+                r.createElement(At, {
                   key: "suggested" + e.steamid,
                   survey: e,
                 }),
@@ -2377,7 +2318,7 @@
           ),
         );
       }
-      function bt(e) {
+      function At(e) {
         const { survey: t } = e;
         new Re.b2(t.steamid);
         return r.createElement(
@@ -2396,15 +2337,15 @@
           r.createElement("td", null, t.results.suggestion.trim()),
         );
       }
-      const At = r.createContext({
+      const bt = r.createContext({
         loadUserEmailAndLangs: async (e) =>
           await (function () {
             Nt ||
               (Nt = new (de())(
                 async (e) => {
-                  const t = `${b.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
+                  const t = `${A.TS.PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails`,
                     n = {
-                      sessionid: b.TS.SESSIONID,
+                      sessionid: A.TS.SESSIONID,
                       strAccountIDs: e.join(","),
                     },
                     a = await w().get(t, { params: n, withCredentials: !0 });
@@ -2469,7 +2410,7 @@
               "div",
               null,
               r.createElement(
-                F.$n,
+                G.$n,
                 {
                   onClick: () => {
                     const e = [];
@@ -2531,7 +2472,7 @@
           ),
           a = (0, ct.hW)(n),
           l = (function (e) {
-            const t = r.useContext(At);
+            const t = r.useContext(bt);
             return (0, S.I)(Ct(t, e));
           })(t.accountid),
           s = a.data?.m_strPlayerName || "";
@@ -2557,7 +2498,7 @@
           r.Fragment,
           null,
           r.createElement(
-            F.$n,
+            G.$n,
             { onClick: l },
             "See ",
             n.length.toLocaleString(),
@@ -2634,25 +2575,25 @@
         );
       }
       var Lt = n(65946),
-        Ft = n(79645),
-        Gt = n(1909),
+        Gt = n(79645),
+        Ft = n(1909),
         Ot = n(56330),
         xt = n(85761),
         $t = n.n(xt);
       function zt(e) {
         const t = (function () {
             const [e] = (0, r.useState)(() =>
-              (0, b.Tc)("registration_open", "application_config"),
+              (0, A.Tc)("registration_open", "application_config"),
             );
             return e;
           })(),
           n = (function () {
             const [e] = (0, r.useState)(
-              () => (0, b.Tc)("user_reg", "application_config") || {},
+              () => (0, A.Tc)("user_reg", "application_config") || {},
             );
             return e;
           })(),
-          { data: a } = (0, ct.js)(b.iA.accountid),
+          { data: a } = (0, ct.js)(A.iA.accountid),
           [l, s] = (0, r.useState)(!1),
           [i, c] = (0, r.useState)(!1),
           [o, u] = (0, r.useState)(!1),
@@ -2718,13 +2659,13 @@
                       "div",
                       { className: (0, U.A)(p().SectionCtn, p().ActionBar) },
                       r.createElement(
-                        F.jn,
+                        G.jn,
                         {
                           onClick: async () => {
                             c(!0), s(!1), u(!1);
-                            const e = `${b.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
+                            const e = `${A.TS.PARTNER_BASE_URL}meetsteam/ajaxregisterinterest`,
                               t = new FormData();
-                            t.append("sessionid", b.TS.SESSIONID),
+                            t.append("sessionid", A.TS.SESSIONID),
                               t.append("registrationJson", JSON.stringify(m));
                             try {
                               const n = await w().post(e, t, {
@@ -2841,7 +2782,7 @@
                   r.createElement(
                     "td",
                     null,
-                    r.createElement(F.Yh, {
+                    r.createElement(G.Yh, {
                       checked: t.attending?.includes(e.id),
                       onChange: (a) => {
                         let r = t.attending ? [...t.attending] : [];
@@ -2860,7 +2801,7 @@
             ),
           ),
           r.createElement("br", null),
-          r.createElement(F.pd, {
+          r.createElement(G.pd, {
             type: "text",
             value: t.suggestion || "",
             onChange: (e) => n({ ...t, suggestion: e.currentTarget.value }),
@@ -2870,22 +2811,22 @@
       }
       function jt(e) {
         const { oRegistration: t, fnSetRegistration: n } = e,
-          a = (0, ct.js)(b.iA.accountid),
+          a = (0, ct.js)(A.iA.accountid),
           l = (function (e) {
             const t = (function () {
                 const [e] = (0, r.useState)(
                   () =>
-                    (0, b.Tc)("partner_user_email", "application_config") || "",
+                    (0, A.Tc)("partner_user_email", "application_config") || "",
                 );
                 return e;
               })(),
               n = (function () {
                 const [e] = (0, r.useState)(() =>
-                  (0, b.Tc)("primary_partner_id", "application_config"),
+                  (0, A.Tc)("primary_partner_id", "application_config"),
                 );
                 return e;
               })(),
-              a = fe(b.iA.accountid, e != n ? e : null);
+              a = fe(A.iA.accountid, e != n ? e : null);
             return e == n ? t : a?.email;
           })(t?.partner_id),
           [s, i] = (0, r.useState)(() =>
@@ -2913,7 +2854,7 @@
                 r.createElement(
                   "div",
                   { className: $t().EmailField },
-                  r.createElement(F.pd, {
+                  r.createElement(G.pd, {
                     type: "string",
                     label: (0, j.we)("#MeetSteam_You_Email"),
                     disabled: !s,
@@ -2925,28 +2866,28 @@
                   }),
                 ),
                 !s &&
-                  r.createElement(F.Yh, {
+                  r.createElement(G.Yh, {
                     checked: s,
                     onChange: i,
                     label: (0, j.we)("#MeetSteam_You_Update"),
                     tooltip: (0, j.we)("#MeetSteam_You_Update_ttip"),
                   }),
               ),
-              r.createElement(F.JU, null, (0, j.we)("#MeetSteam_NeverMet")),
-              r.createElement(F.Yh, {
+              r.createElement(G.JU, null, (0, j.we)("#MeetSteam_NeverMet")),
+              r.createElement(G.Yh, {
                 label: (0, j.we)("#MeetSteam_NeverMetNo"),
                 checked: c,
                 onChange: (e) => n({ ...t, have_you_met_steam: !e }),
               }),
               r.createElement(
-                F.JU,
+                G.JU,
                 null,
                 (0, j.we)("#MeetSteam_CapabableEnglish"),
               ),
               r.createElement(
                 "div",
                 { className: $t().RadioButtonCtn },
-                r.createElement(F.Od, {
+                r.createElement(G.Od, {
                   className: $t().RadioButtons,
                   checked: !o,
                   onChange: (e) =>
@@ -2958,7 +2899,7 @@
                     }),
                   label: (0, j.we)("#MeetSteam_CapabableEnglish_Yes"),
                 }),
-                r.createElement(F.Od, {
+                r.createElement(G.Od, {
                   className: $t().RadioButtons,
                   checked: o,
                   onChange: (e) =>
@@ -2966,7 +2907,7 @@
                     n({
                       ...t,
                       english_not_good: !0,
-                      preferred_language: (0, it.sf)(b.TS.LANGUAGE),
+                      preferred_language: (0, it.sf)(A.TS.LANGUAGE),
                     }),
                   label: (0, j.we)("#MeetSteam_CapabableEnglish_No"),
                 }),
@@ -2977,11 +2918,11 @@
                   null,
                   r.createElement("br", null),
                   r.createElement(
-                    F.JU,
+                    G.JU,
                     null,
                     (0, j.we)("#MeetSteam_LanguagePref"),
                   ),
-                  r.createElement(Gt.Ng, {
+                  r.createElement(Ft.Ng, {
                     selectedLang: u,
                     bAllowUnsetOption: !1,
                     strTooltip: (0, j.we)("#MeetSteam_LanguagePref_ttip"),
@@ -2998,7 +2939,7 @@
       }
       function qt(e) {
         const { nPartnerID: t, setPartnerID: n, label: a } = e,
-          l = (0, Ft.c)(b.iA.accountid);
+          l = (0, Gt.c)(A.iA.accountid);
         if (!l)
           return r.createElement($.t, {
             size: "small",
@@ -3011,7 +2952,7 @@
           l.forEach((e) =>
             s.push({ label: e?.partner_name, data: e.partnerid }),
           ),
-          r.createElement(F.m, {
+          r.createElement(G.m, {
             layout: "inline",
             label: a,
             rgOptions: s,
@@ -3026,16 +2967,16 @@
         Wt = n(13038),
         Kt = n.n(Wt);
       function Ht(e) {
-        const { data: t } = (0, ct.js)(b.iA.accountid),
+        const { data: t } = (0, ct.js)(A.iA.accountid),
           n = (function () {
             const [e] = (0, r.useState)(
-              () => (0, b.Tc)("survey_event_name", "application_config") || "",
+              () => (0, A.Tc)("survey_event_name", "application_config") || "",
             );
             return e;
           })(),
           a = (function () {
             const [e] = (0, r.useState)(
-              () => (0, b.Tc)("survey_data", "application_config") || "",
+              () => (0, A.Tc)("survey_data", "application_config") || "",
             );
             return e;
           })(),
@@ -3084,14 +3025,14 @@
                     "div",
                     { className: (0, U.A)(p().SectionCtn, p().ActionBar) },
                     r.createElement(
-                      F.jn,
+                      G.jn,
                       {
                         onClick: async () => {
                           d(!0), u(!1), g(!1);
-                          const e = `${b.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${c}`,
+                          const e = `${A.TS.PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${c}`,
                             t = new FormData();
                           t.append("gid", c),
-                            t.append("sessionid", b.TS.SESSIONID);
+                            t.append("sessionid", A.TS.SESSIONID);
                           let n = {
                             gid: c,
                             simple_response: l,
@@ -3140,13 +3081,13 @@
       function Qt(e) {
         const t = (function () {
             const [e] = (0, r.useState)(
-              () => (0, b.Tc)("event_gids", "application_config") || [],
+              () => (0, A.Tc)("event_gids", "application_config") || [],
             );
             return e;
           })(),
           n = (function () {
             const [e] = (0, r.useState)(
-              () => (0, b.Tc)("survey_results", "application_config") || [],
+              () => (0, A.Tc)("survey_results", "application_config") || [],
             );
             return e;
           })(),
@@ -3155,7 +3096,7 @@
               const [e] = (0, r.useState)(() => {
                 const e = new Map(),
                   t =
-                    (0, b.Tc)("registration_by_gid", "application_config") ||
+                    (0, A.Tc)("registration_by_gid", "application_config") ||
                     {};
                 for (const n in t) {
                   const a = t[n];
@@ -3198,7 +3139,7 @@
             ],
             [a, n],
           ),
-          m = (0, A.vh)(o),
+          m = (0, b.vh)(o),
           d = (0, Vt.B3)(u);
         return !i && m && d
           ? r.createElement(Xt, {
@@ -3237,7 +3178,7 @@
                     (s.email = a.email_override),
                     (s.name = a.name),
                     (s.registrations = "");
-                  const r = (0, A.Yd)(a.partner_id);
+                  const r = (0, b.Yd)(a.partner_id);
                   r && (s.partner_name = r.name),
                     t.forEach((t) => {
                       const n = e.get(t.gidEvent);
@@ -3294,7 +3235,7 @@
                 ),
                 r.createElement("hr", null),
                 r.createElement(
-                  F.$n,
+                  G.$n,
                   {
                     id: "download-csv",
                     onClick: () =>

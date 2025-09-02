@@ -352,6 +352,7 @@ function CreateImageReaderOnLoadFunc( file, loadedImages, numFiles, fnLoadComple
 		img.alt = file.name;
 		img.onload = function() { OnIndividualImageLoaded( file.name, img, loadedImages, numFiles, fnLoadComplete ); };
 		img.onerror = function( e ) { OnIndividualImageLoaded( file.name, null, loadedImages, numFiles, fnLoadComplete ); };
+		img.crossOrigin = 'anonymous';
 		img.src = evt.target.result;
 	};
 }
@@ -380,6 +381,7 @@ function LoadImageURLForUpload( urls )
 		var img = new Image;
 		img.onload = CreateOnIndividualImageLoadedFunc( filename, img, loadedImages, urls.length );
 		img.onerror = CreateOnIndividualImageLoadedFunc( filename, null, loadedImages, urls.length );
+		img.crossOrigin = 'anonymous';
 		img.src = url;
 	}
 }

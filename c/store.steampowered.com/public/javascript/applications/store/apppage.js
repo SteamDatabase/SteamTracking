@@ -5889,10 +5889,10 @@
         _ = __webpack_require__("chunkid");
       const _ = new Map([
           [
-            1245620,
+            2379780,
             {
-              strInternalAppName: "EldenRing",
-              strBannerType: "campfire",
+              strInternalAppName: "Balatro",
+              strBannerType: "bus",
             },
           ],
           [
@@ -5903,17 +5903,59 @@
             },
           ],
           [
-            2379780,
-            {
-              strInternalAppName: "Balatro",
-              strBannerType: "bus",
-            },
-          ],
-          [
             1086940,
             {
               strInternalAppName: "BaldursGate3",
               strBannerType: "knight",
+            },
+          ],
+          [
+            1091500,
+            {
+              strInternalAppName: "Cyberpunk2077",
+              strBannerType: "robot",
+            },
+          ],
+          [
+            1245620,
+            {
+              strInternalAppName: "EldenRing",
+              strBannerType: "campfire",
+            },
+          ],
+          [
+            1794680,
+            {
+              strInternalAppName: "VampireSurvivors",
+              strBannerType: "zombies",
+            },
+          ],
+          [
+            1174180,
+            {
+              strInternalAppName: "RedDeadRedemption2",
+              strBannerType: "campfire",
+            },
+          ],
+          [
+            990080,
+            {
+              strInternalAppName: "HogwartsLegacy",
+              strBannerType: "family",
+            },
+          ],
+          [
+            489830,
+            {
+              strInternalAppName: "Skyrim",
+              strBannerType: "knight",
+            },
+          ],
+          [
+            1942280,
+            {
+              strInternalAppName: "Brotato",
+              strBannerType: "bus",
             },
           ],
           [
@@ -5931,65 +5973,9 @@
             },
           ],
           [
-            377160,
-            {
-              strInternalAppName: "Fallout4",
-              strBannerType: "apocalypse",
-            },
-          ],
-          [
-            1794680,
-            {
-              strInternalAppName: "VampireSurvivors",
-              strBannerType: "zombies",
-            },
-          ],
-          [
-            1145350,
-            {
-              strInternalAppName: "Hades2",
-              strBannerType: "campfire",
-            },
-          ],
-          [
-            1293830,
-            {
-              strInternalAppName: "ForzaHorizon4",
-              strBannerType: "car",
-            },
-          ],
-          [
-            2321470,
-            {
-              strInternalAppName: "DeepRockGalacticSurvivor",
-              strBannerType: "miner",
-            },
-          ],
-          [
-            1091500,
-            {
-              strInternalAppName: "Cyberpunk2077",
-              strBannerType: "robot",
-            },
-          ],
-          [
-            2552430,
-            {
-              strInternalAppName: "KingdomHearts",
-              strBannerType: "family",
-            },
-          ],
-          [
             292030,
             {
               strInternalAppName: "TheWitcher3",
-              strBannerType: "campfire",
-            },
-          ],
-          [
-            1174180,
-            {
-              strInternalAppName: "RedDeadRedemption2",
               strBannerType: "campfire",
             },
           ],
@@ -6001,17 +5987,17 @@
             },
           ],
           [
-            275850,
+            2344520,
             {
-              strInternalAppName: "NoMansSky",
-              strBannerType: "astronaut",
+              strInternalAppName: "Diablo4",
+              strBannerType: "knight",
             },
           ],
           [
-            990080,
+            1145350,
             {
-              strInternalAppName: "HogwartsLegacy",
-              strBannerType: "family",
+              strInternalAppName: "Hades2",
+              strBannerType: "campfire",
             },
           ],
           [
@@ -6022,24 +6008,66 @@
             },
           ],
           [
-            489830,
+            377160,
             {
-              strInternalAppName: "Skyrim",
+              strInternalAppName: "Fallout4",
+              strBannerType: "apocalypse",
+            },
+          ],
+          [
+            2321470,
+            {
+              strInternalAppName: "DeepRockGalacticSurvivor",
+              strBannerType: "miner",
+            },
+          ],
+          [
+            367520,
+            {
+              strInternalAppName: "HollowKnight",
+              strBannerType: "miner",
+            },
+          ],
+          [
+            2767030,
+            {
+              strInternalAppName: "MarvelRivals",
+              strBannerType: "porch",
+            },
+          ],
+          [
+            2679460,
+            {
+              strInternalAppName: "MetaphorReFantazio",
+              strBannerType: "bed",
+            },
+          ],
+          [
+            1313140,
+            {
+              strInternalAppName: "CultOfTheLamb",
+              strBannerType: "city",
+            },
+          ],
+          [
+            275850,
+            {
+              strInternalAppName: "NoMansSky",
+              strBannerType: "astronaut",
+            },
+          ],
+          [
+            2694490,
+            {
+              strInternalAppName: "PathOfExile2",
               strBannerType: "knight",
             },
           ],
           [
-            2344520,
+            1687950,
             {
-              strInternalAppName: "Diablo4",
-              strBannerType: "knight",
-            },
-          ],
-          [
-            1942280,
-            {
-              strInternalAppName: "Brotato",
-              strBannerType: "bus",
+              strInternalAppName: "Persona5Royal",
+              strBannerType: "anime",
             },
           ],
           [
@@ -6050,10 +6078,10 @@
             },
           ],
           [
-            1623730,
+            2142790,
             {
-              strInternalAppName: "Palworld",
-              strBannerType: "woodsman",
+              strInternalAppName: "FieldsOfMistria",
+              strBannerType: "farmer",
             },
           ],
           [
@@ -6061,6 +6089,139 @@
             {
               strInternalAppName: "HELLDIVERS2",
               strBannerType: "porch",
+            },
+          ],
+          [
+            1623730,
+            {
+              strInternalAppName: "Palworld",
+              strBannerType: "woodsman",
+            },
+          ],
+          [
+            588650,
+            {
+              strInternalAppName: "DeadCells",
+              strBannerType: "bus",
+            },
+          ],
+          [
+            1903340,
+            {
+              strInternalAppName: "ClairObscurExpedition33",
+              strBannerType: "campfire",
+            },
+          ],
+          [
+            2993780,
+            {
+              strInternalAppName: "FantasyLifei",
+              strBannerType: "woodsman",
+            },
+          ],
+          [
+            2623190,
+            {
+              strInternalAppName: "Oblivion",
+              strBannerType: "knight",
+            },
+          ],
+          [
+            230410,
+            {
+              strInternalAppName: "Warframe",
+              strBannerType: "robot",
+            },
+          ],
+          [
+            1551360,
+            {
+              strInternalAppName: "ForzaHorizon5",
+              strBannerType: "car",
+            },
+          ],
+          [
+            976730,
+            {
+              strInternalAppName: "HaloMasterChiefCollection",
+              strBannerType: "robot",
+            },
+          ],
+          [
+            12210,
+            {
+              strInternalAppName: "GTAIV",
+              strBannerType: "car",
+            },
+          ],
+          [
+            1562430,
+            {
+              strInternalAppName: "Dredge",
+              strBannerType: "beach",
+            },
+          ],
+          [
+            1446780,
+            {
+              strInternalAppName: "MonsterHunterRise",
+              strBannerType: "campfire",
+            },
+          ],
+          [
+            3164500,
+            {
+              strInternalAppName: "Schedule1",
+              strBannerType: "city",
+            },
+          ],
+          [
+            1817070,
+            {
+              strInternalAppName: "SpiderManRemastered",
+              strBannerType: "superhero",
+            },
+          ],
+          [
+            105600,
+            {
+              strInternalAppName: "Terraria",
+              strBannerType: "miner",
+            },
+          ],
+          [
+            1293830,
+            {
+              strInternalAppName: "ForzaHorizon4",
+              strBannerType: "car",
+            },
+          ],
+          [
+            3527290,
+            {
+              strInternalAppName: "Peak",
+              strBannerType: "porch",
+            },
+          ],
+          [
+            2161700,
+            {
+              strInternalAppName: "Persona3Reload",
+              strBannerType: "anime",
+            },
+          ],
+          [
+            1850570,
+            {
+              strInternalAppName: "DeathStranding",
+              strBannerType: "busstop",
+            },
+          ],
+          [
+            2552430,
+            {
+              strInternalAppName: "KingdomHearts",
+              strBannerType: "family",
             },
           ],
           [
@@ -6075,13 +6236,6 @@
             {
               strInternalAppName: "DiscoElysium",
               strBannerType: "city",
-            },
-          ],
-          [
-            588650,
-            {
-              strInternalAppName: "DeadCells",
-              strBannerType: "bus",
             },
           ],
           [
@@ -6423,6 +6577,7 @@
             _.createElement(
               _._,
               {
+                autoFocus: !0,
                 className: _,
                 "flow-children": "row",
                 navEntryPreferPosition: _._.MAINTAIN_X,
@@ -6644,7 +6799,8 @@
             _._,
             {
               mode: "JustLoad",
-              bHorizontal: !0,
+              horizontal: !0,
+              holdGampadFocus: !0,
             },
             _.createElement(_, {
               dashManifests: _.dashManifests,
@@ -6691,7 +6847,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -6718,7 +6873,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

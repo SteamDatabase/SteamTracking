@@ -1333,52 +1333,6 @@ html.tablet .btn_next_in_queue span .queue_sub_text {
 	font-weight: 400;
 }
 
-
-
-
-/* Carousel items */
-html.tablet .highlight_carousel_item {
-	box-shadow: var(--gpShadow-Medium);
-}
-
-html.tablet .carousel_container .screenshot_carousel_items {
-	overflow-x: scroll;
-	overflow-y: hidden;
-	box-sizing: border-box;
-	display: flex;
-	max-height: unset;
-	width: calc(100% + 24px);
-	margin-left: -24px;
-	padding: 8px 24px 24px;
-	scroll-snap-type: x mandatory;
-}
-
-html.tablet .carousel_container .screenshot_carousel_items::after {
-	content: "\00a0";
-	min-width: 24px;
-}
-
-html.tablet .carousel_container .highlight_carousel_item {
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: auto;
-	width: 98%;
-	min-width: 98%;
-	margin-right: var(--gpSpace-Gap);
-	display: block;
-	scroll-snap-align: center !important;
-}
-
-html.tablet .carousel_container .highlight_carousel_item:last-child {
-	margin-right: 0px;
-}
-
-
-
-
-
-
-
 /* Purchase options */
 .game_area_purchase_game,
 .game_area_offsite_purchase {

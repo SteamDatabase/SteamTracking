@@ -514,7 +514,8 @@
   text-transform: uppercase;
 }
 ._1kyuhxcEgZW8Nhk58HV3vg {
-  display: contents;
+  display: flex;
+  flex-grow: 1;
 }
 ._3y3Xgcp7r_Cct4uEDxv2l6 ._24W_LJfEz2dz2qIgHzN7Cn {
   color: #fff;

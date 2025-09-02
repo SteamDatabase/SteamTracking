@@ -6704,7 +6704,7 @@
           ? _.createElement(
               _._,
               {
-                bHorizontal: !1,
+                horizontal: !1,
                 placeholderWidth: 1,
                 placeholderHeight: 1,
               },
@@ -6887,7 +6887,7 @@
                       _._,
                       {
                         rootMargin: "0px -5px 0px 100%",
-                        bHorizontal: !0,
+                        horizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
                       },
@@ -10242,7 +10242,6 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

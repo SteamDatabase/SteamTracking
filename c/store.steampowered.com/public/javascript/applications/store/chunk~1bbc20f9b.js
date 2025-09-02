@@ -3204,6 +3204,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -3236,7 +3237,8 @@
           const {
               placeholderWidth: _,
               placeholderHeight: _,
-              onRender: __webpack_require__,
+              holdGampadFocus: __webpack_require__,
+              onRender: _,
               style: _,
               mode: _,
               ..._
@@ -3254,7 +3256,7 @@
               });
           }
           const _ = this.BLoadAndUnload() ? "repeated" : "once";
-          return _.createElement(
+          let _ = _.createElement(
             _._,
             {
               ref: this.m_refContainer,
@@ -3264,6 +3266,18 @@
               trigger: _,
             },
             _ && this.props.children,
+          );
+          return (
+            _ &&
+              (_ = _.createElement(
+                _._,
+                {
+                  focusableIfNoChildren: !0,
+                  retainFocus: !0,
+                },
+                _,
+              )),
+            _
           );
         }
       }

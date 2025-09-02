@@ -1726,6 +1726,23 @@
           });
       })(n || (n = {}));
     },
+    23338: (e, t, r) => {
+      "use strict";
+      r.d(t, { Y: () => s, j: () => o });
+      var n = r(90626),
+        i = r(40236),
+        a = r(8871);
+      function s(e) {
+        const t = (0, i.OO)(e, e.options);
+        return n.createElement("span", { ref: t, style: { fontSize: 0 } });
+      }
+      const o = n.forwardRef(function (e, t) {
+        const { onLeave: r, onEnter: s, options: o, ...l } = e,
+          c = (0, i.OO)(e, e.options),
+          m = (0, a.Ue)(c, t);
+        return n.createElement("div", { ref: m, ...l });
+      });
+    },
     61949: (e, t, r) => {
       "use strict";
       r.d(t, { Ey: () => v, Rp: () => A });
@@ -6247,12 +6264,12 @@
         i = r(34629),
         a = r(90626),
         s = r(62490),
-        o = r(94607),
-        l = r(73745),
-        c = r(52038),
-        m = r(22797),
-        u = r(61949),
-        d = r(61859);
+        o = r(73745),
+        l = r(52038),
+        c = r(22797),
+        m = r(61949),
+        u = r(61859),
+        d = r(23338);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
@@ -6273,7 +6290,7 @@
         } else e && e();
       }
       function E(e = !0) {
-        const t = (0, u.Rp)("youtube");
+        const t = (0, m.Rp)("youtube");
         (0, a.useEffect)(() => {
           t && e && g();
         }, [t, e]);
@@ -6422,42 +6439,37 @@
             y,
             { video: this.props.video },
             a.createElement(
-              o.Y,
+              d.j,
               {
+                key: this.m_strPlayerID,
                 onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
+                ref: this.BindPlayerContainer,
+                className: (0, l.A)("YoutubePlayer", this.props.classnames),
               },
-              a.createElement(
-                "div",
-                {
-                  key: this.m_strPlayerID,
-                  ref: this.BindPlayerContainer,
-                  className: (0, c.A)("YoutubePlayer", this.props.classnames),
-                },
-                a.createElement(m.t, { className: "YoutubePlayerThrobber" }),
-              ),
+              a.createElement(c.t, { className: "YoutubePlayerThrobber" }),
             ),
           );
         }
       }
       function y(e) {
         const { video: t, children: r } = e;
-        return (0, u.Rp)("youtube")
+        return (0, m.Rp)("youtube")
           ? r
           : a.createElement(
               "a",
               { href: `https://www.youtube.com/watch?v=${t}` },
-              (0, d.we)("#EventCalendar_WatchYouTubeVideo"),
+              (0, u.we)("#EventCalendar_WatchYouTubeVideo"),
             );
       }
       (_.s_nPlayerIndex = 0),
-        (0, i.Cg)([l.oI], _.prototype, "BindPlayerContainer", null),
-        (0, i.Cg)([l.oI], _.prototype, "OnYoutubeScriptsReady", null),
-        (0, i.Cg)([l.oI], _.prototype, "CreatePlayer", null),
-        (0, i.Cg)([l.oI], _.prototype, "OnPlayerReady", null),
-        (0, i.Cg)([l.oI], _.prototype, "OnPlayerStateChange", null),
-        (0, i.Cg)([l.oI], _.prototype, "OnError", null),
-        (0, i.Cg)([l.oI], _.prototype, "OnPlayerLeftView", null),
-        (0, i.Cg)([l.oI], _.prototype, "PlayVideo", null);
+        (0, i.Cg)([o.oI], _.prototype, "BindPlayerContainer", null),
+        (0, i.Cg)([o.oI], _.prototype, "OnYoutubeScriptsReady", null),
+        (0, i.Cg)([o.oI], _.prototype, "CreatePlayer", null),
+        (0, i.Cg)([o.oI], _.prototype, "OnPlayerReady", null),
+        (0, i.Cg)([o.oI], _.prototype, "OnPlayerStateChange", null),
+        (0, i.Cg)([o.oI], _.prototype, "OnError", null),
+        (0, i.Cg)([o.oI], _.prototype, "OnPlayerLeftView", null),
+        (0, i.Cg)([o.oI], _.prototype, "PlayVideo", null);
     },
   },
 ]);

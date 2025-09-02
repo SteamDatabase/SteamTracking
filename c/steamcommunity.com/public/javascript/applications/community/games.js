@@ -8119,43 +8119,13 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return (0, _._)(
-          (_) => {
-            if (!_) return;
-            const _ = _(_.ownerDocument.defaultView, (_) => {
-              _(_[0]);
-            });
-            return _.observe(_), () => _.unobserve(_);
-          },
-          [_, _],
-        );
-      }
-      function _(_) {
-        return _(
-          _,
-          _.useCallback(
-            (_, _) =>
-              _.ResizeObserver
-                ? new _.ResizeObserver(_)
-                : ((0, _._)(!1, "ResizeObserver is not available"),
-                  {
-                    observe: () => {},
-                    unobserve: () => {},
-                    disconnect: () => {},
-                  }),
-            [],
-          ),
-        );
-      }
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -9772,10 +9742,10 @@
         ..._
       }) {
         const [_, ..._] = _,
-          _ = _((_) => {
+          _ = (0, _._)((_) => {
             _(_.contentRect.width);
           }),
-          _ = _((_) => {
+          _ = (0, _._)((_) => {
             _(_.contentRect.width);
           }),
           [_, _] = (0, _.useState)(0),
@@ -10564,19 +10534,15 @@
           _ = _ ? "button" : _._,
           _ = _ ? () => _(_) : void 0,
           [_, _] = (0, _.useState)(!1),
-          _ =
-            ((_ = (0, _.useCallback)((_) => {
+          _ = (0, _._)(
+            (0, _.useCallback)((_) => {
               _.isIntersecting && _(!0);
-            }, [])),
-            (_ = {
+            }, []),
+            {
               rootMargin: "1800px",
-            }),
-            _(
-              _,
-              _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
-            ));
-        var _, _;
-        const _ = _(_),
+            },
+          ),
+          _ = _(_),
           _ = (0, _._)(),
           _ = _ ? "div" : _._,
           _ = _ ? "span" : "a";

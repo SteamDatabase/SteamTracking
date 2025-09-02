@@ -3328,9 +3328,6 @@
         }
       }
       (r = Symbol.for("react.module.reference")),
-        (e.isForwardRef = function (t) {
-          return m(t) === f;
-        }),
         (e.isFragment = function (t) {
           return m(t) === i;
         });

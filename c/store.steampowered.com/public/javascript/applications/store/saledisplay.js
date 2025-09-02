@@ -246,7 +246,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "FocusNavHistoryID",
-        _ = new _._("FocusNavigation").Debug;
+        _ = new _._("FocusHistory").Debug;
       function _(_) {
         const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
           _ = (function (_ = 2) {

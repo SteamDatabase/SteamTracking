@@ -3334,125 +3334,123 @@
           [__webpack_require__, _] = _.useState(!1),
           _ = _.useCallback(() => _(!0), [_]),
           [_, _] = _.useState(!1),
-          _ = _.useCallback(() => _(!0), [_]);
-        return _.createElement(
-          _._,
-          {
+          _ = _.useCallback(() => _(!0), [_]),
+          _ = (0, _._)({
             onEnter: _,
+          });
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _.PlaytimeCluster,
           },
           _.createElement(
             "div",
             {
-              className: _.PlaytimeCluster,
+              className: _.ClusterInfo,
             },
+            _.createElement("h1", null, "Cluster ", _.nClusterID),
             _.createElement(
-              "div",
-              {
-                className: _.ClusterInfo,
-              },
-              _.createElement("h1", null, "Cluster ", _.nClusterID),
+              _._,
+              null,
               _.createElement(
-                _._,
-                null,
+                "div",
+                {
+                  className: _.Overview,
+                },
                 _.createElement(
                   "div",
-                  {
-                    className: _.Overview,
-                  },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Total Playtime:"),
-                    " ",
-                    Math.floor(_.nPlaytimeMinutes / 6) / 10,
-                    "hr",
-                  ),
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Last Played:"),
-                    " ",
-                    (0, _._)(_.rtLastPlayed),
-                    " ",
-                  ),
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Games played:"),
-                    " ",
-                    _ &&
-                      _.rgAppIDsPlayed.map((_) =>
-                        _.createElement(
-                          _.Fragment,
-                          {
-                            key: _,
-                          },
-                          _.createElement(_, {
-                            appid: _,
-                          }),
-                          ", ",
-                        ),
-                      ),
-                  ),
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Popularity Score:"),
-                    " ",
-                    Math.floor(100 * _.flPopularityScore),
-                    "%  ",
-                    _.createElement(
-                      "span",
-                      {
-                        title:
-                          "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
-                        style: {
-                          cursor: "default",
+                  null,
+                  _.createElement("b", null, "Total Playtime:"),
+                  " ",
+                  Math.floor(_.nPlaytimeMinutes / 6) / 10,
+                  "hr",
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement("b", null, "Last Played:"),
+                  " ",
+                  (0, _._)(_.rtLastPlayed),
+                  " ",
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement("b", null, "Games played:"),
+                  " ",
+                  _ &&
+                    _.rgAppIDsPlayed.map((_) =>
+                      _.createElement(
+                        _.Fragment,
+                        {
+                          key: _,
                         },
-                      },
-                      "(?)",
+                        _.createElement(_, {
+                          appid: _,
+                        }),
+                        ", ",
+                      ),
                     ),
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement("b", null, "Popularity Score:"),
+                  " ",
+                  Math.floor(100 * _.flPopularityScore),
+                  "%  ",
+                  _.createElement(
+                    "span",
+                    {
+                      title:
+                        "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
+                      style: {
+                        cursor: "default",
+                      },
+                    },
+                    "(?)",
                   ),
                 ),
               ),
             ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.ClusterMembers,
+            },
+            _.createElement("h3", null, "Similar titles:"),
             _.createElement(
-              "div",
-              {
-                className: _.ClusterMembers,
-              },
-              _.createElement("h3", null, "Similar titles:"),
+              _._,
+              null,
+              _.createElement(
+                "ul",
+                null,
+                _.rgSimilarItems.map((_, _) =>
+                  __webpack_require__ || _ < 4
+                    ? _.createElement(
+                        "li",
+                        {
+                          key: _.GetUniqueID(),
+                        },
+                        _.createElement(_, {
+                          item: _,
+                        }),
+                      )
+                    : null,
+                ),
+              ),
+            ),
+            !__webpack_require__ &&
               _.createElement(
                 _._,
-                null,
-                _.createElement(
-                  "ul",
-                  null,
-                  _.rgSimilarItems.map((_, _) =>
-                    __webpack_require__ || _ < 4
-                      ? _.createElement(
-                          "li",
-                          {
-                            key: _.GetUniqueID(),
-                          },
-                          _.createElement(_, {
-                            item: _,
-                          }),
-                        )
-                      : null,
-                  ),
-                ),
+                {
+                  onClick: _,
+                },
+                "Show all ",
+                _.rgSimilarItems.length,
               ),
-              !__webpack_require__ &&
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                  },
-                  "Show all ",
-                  _.rgSimilarItems.length,
-                ),
-            ),
           ),
         );
       }

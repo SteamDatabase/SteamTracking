@@ -15723,7 +15723,7 @@
         }
         FindScrollableAncestor(e) {
           return Rn.Kf(e, (e) => {
-            const t = this.props.bHorizontal
+            const t = this.props.horizontal
               ? window.getComputedStyle(e).overflowX
               : window.getComputedStyle(e).overflowY;
             return (
@@ -15750,7 +15750,7 @@
             onVisibilityChange: e,
             rootMargin: t,
             trigger: r,
-            bHorizontal: i,
+            horizontal: i,
             ...a
           } = this.props;
           return o.createElement(

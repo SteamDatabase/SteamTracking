@@ -1410,7 +1410,7 @@
         o = r(79613),
         l = r(60778);
       const c = "FocusNavHistoryID",
-        m = new l.wd("FocusNavigation").Debug;
+        m = new l.wd("FocusHistory").Debug;
       function d(e) {
         const { children: t, timeoutMS: r, ...l } = e,
           d = (function (e = 2) {
@@ -13175,7 +13175,7 @@
             i.createElement(C.J, {
               trigger: "repeated",
               rootMargin: "0px 100% 0px 100%",
-              bHorizontal: !0,
+              horizontal: !0,
               onVisibilityChange: (e) => e && n(),
             }),
             a &&

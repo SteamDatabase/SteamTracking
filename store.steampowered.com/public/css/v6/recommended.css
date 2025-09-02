@@ -3149,6 +3149,10 @@ div.graph_toggle_icon.down {
 	padding-top: 10px;
 }
 
+html.tablet #review_create .content {
+	flex-direction: column;
+}
+
 @media screen and (max-width: 910px )
 {
 	html.responsive #review_create .content {
@@ -3621,7 +3625,7 @@ p.outliers_options {
 	gap: 10px;
 }
 
-@media screen and (max-width: 1210px) and (min-width: 500px)
+@media screen and (max-width: 1215px) and (min-width: 500px)
 {
 	body.v6.widestore .recommendation_highlightv2 .header_image
 	{
@@ -3682,6 +3686,7 @@ p.outliers_options {
 	body.v6.widestore .review_box .rightcol {
 		padding: 8px;
 		width: auto;
+		float: none;
 	}
 
 	body.v6.widestore .review_box .rightcol .vote_header {

@@ -9595,6 +9595,48 @@
           });
       })(i || (i = {}));
     },
+    75612: (e, t, r) => {
+      "use strict";
+      r.d(t, { Y: () => o, j: () => l });
+      var i = r(90626),
+        a = r(8871);
+      function s(e, t) {
+        return (0, a.QS)(
+          (r) => {
+            if (!r) return;
+            const i = t(r.ownerDocument.defaultView, (t) => {
+              e(t[0]);
+            });
+            return i.observe(r), () => i.unobserve(r);
+          },
+          [e, t],
+        );
+      }
+      function n(e, t) {
+        const r = i.useRef(void 0);
+        return (function (e, t) {
+          return s(
+            e,
+            i.useCallback((e, r) => new e.IntersectionObserver(r, t), [t]),
+          );
+        })((t) => {
+          !r.current && t.isIntersecting && e.onEnter?.(t),
+            r.current && !t.isIntersecting && e.onLeave?.(t),
+            e.onIntersectionChange?.(t),
+            (r.current = t.isIntersecting);
+        }, t);
+      }
+      function o(e) {
+        const t = n(e, e.options);
+        return i.createElement("span", { ref: t, style: { fontSize: 0 } });
+      }
+      const l = i.forwardRef(function (e, t) {
+        const { onLeave: r, onEnter: s, options: o, ...l } = e,
+          m = n(e, e.options),
+          c = (0, a.Ue)(m, t);
+        return i.createElement("div", { ref: c, ...l });
+      });
+    },
     61949: (e, t, r) => {
       "use strict";
       r.d(t, { Ey: () => R, Rp: () => z });
@@ -14396,9 +14438,9 @@
         d = r(78327),
         g = r(34629),
         p = r(62490),
-        B = r(94607),
-        _ = r(73745),
-        y = r(61949);
+        B = r(73745),
+        _ = r(61949),
+        y = r(75612);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
@@ -14563,26 +14605,21 @@
             h,
             { video: this.props.video },
             a.createElement(
-              B.Y,
+              y.j,
               {
+                key: this.m_strPlayerID,
                 onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
+                ref: this.BindPlayerContainer,
+                className: (0, m.A)("YoutubePlayer", this.props.classnames),
               },
-              a.createElement(
-                "div",
-                {
-                  key: this.m_strPlayerID,
-                  ref: this.BindPlayerContainer,
-                  className: (0, m.A)("YoutubePlayer", this.props.classnames),
-                },
-                a.createElement(n.t, { className: "YoutubePlayerThrobber" }),
-              ),
+              a.createElement(n.t, { className: "YoutubePlayerThrobber" }),
             ),
           );
         }
       }
       function h(e) {
         const { video: t, children: r } = e;
-        return (0, y.Rp)("youtube")
+        return (0, _.Rp)("youtube")
           ? r
           : a.createElement(
               "a",
@@ -14590,14 +14627,14 @@
               (0, c.we)("#EventCalendar_WatchYouTubeVideo"),
             );
       }
-      (0, g.Cg)([_.oI], S.prototype, "BindPlayerContainer", null),
-        (0, g.Cg)([_.oI], S.prototype, "OnYoutubeScriptsReady", null),
-        (0, g.Cg)([_.oI], S.prototype, "CreatePlayer", null),
-        (0, g.Cg)([_.oI], S.prototype, "OnPlayerReady", null),
-        (0, g.Cg)([_.oI], S.prototype, "OnPlayerStateChange", null),
-        (0, g.Cg)([_.oI], S.prototype, "OnError", null),
-        (0, g.Cg)([_.oI], S.prototype, "OnPlayerLeftView", null),
-        (0, g.Cg)([_.oI], S.prototype, "PlayVideo", null);
+      (0, g.Cg)([B.oI], S.prototype, "BindPlayerContainer", null),
+        (0, g.Cg)([B.oI], S.prototype, "OnYoutubeScriptsReady", null),
+        (0, g.Cg)([B.oI], S.prototype, "CreatePlayer", null),
+        (0, g.Cg)([B.oI], S.prototype, "OnPlayerReady", null),
+        (0, g.Cg)([B.oI], S.prototype, "OnPlayerStateChange", null),
+        (0, g.Cg)([B.oI], S.prototype, "OnError", null),
+        (0, g.Cg)([B.oI], S.prototype, "OnPlayerLeftView", null),
+        (0, g.Cg)([B.oI], S.prototype, "PlayVideo", null);
       var z = r(73662),
         R = r.n(z);
       function v(e) {
@@ -14609,7 +14646,7 @@
             classNameSize: p,
             classNameAlign: B,
           } = e,
-          [_, b] = (0, a.useState)(!r),
+          [y, b] = (0, a.useState)(!r),
           [f, w] = (0, a.useState)(!1),
           z = (0, o.m)("YouTubeInlineSnippet"),
           [v, F] = (0, a.useState)({
@@ -14619,7 +14656,7 @@
             views: "0",
           });
         (0, a.useEffect)(() => {
-          _ &&
+          y &&
             s.R.LoadYouTubeDynamicData([t], z)
               .then((e) => {
                 !z.token.reason && e.length > 0 && (F(e[0]), w(!0));
@@ -14629,15 +14666,15 @@
                   "YouTubeInlineSnippet: " + (0, l.H)(e).strErrorMsg,
                 ),
               );
-        }, [_, z, t]);
+        }, [y, z, t]);
         if (
           ((function (e = !0) {
-            const t = (0, y.Rp)("youtube");
+            const t = (0, _.Rp)("youtube");
             (0, a.useEffect)(() => {
               t && e && M();
             }, [t, e]);
           })(r && !0),
-          _)
+          y)
         ) {
           const e = v.title,
             r = v.views,

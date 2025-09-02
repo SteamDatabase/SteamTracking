@@ -1,42 +1,54 @@
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 var _ = class {
-  m_callbacks;
-  m_currentValue;
-  m_fnEquals;
-  constructor(_, _) {
-    (this.m_callbacks = new _()),
-      (this.m_currentValue = _),
-      (this.m_fnEquals = _);
+  SyncStore(_) {
+    return this.Subscribe(_).Unsubscribe;
   }
-  Set(_) {
-    if (this.m_fnEquals) {
-      if (this.m_fnEquals(this.m_currentValue, _)) return;
-    } else if (this.m_currentValue === _) return;
-    (this.m_currentValue = _), this.m_callbacks.Dispatch(_);
-  }
-  get Value() {
-    return this.m_currentValue;
-  }
-  Subscribe(_) {
-    return {
-      Unsubscribe: this.m_callbacks.Register(_).Unregister,
-    };
-  }
-  get SubscriberCount() {
-    return this.m_callbacks.CountRegistered();
+  GetValue() {
+    return this.Value;
   }
 };
+_([_], _.prototype, "SyncStore", 1), _([_], _.prototype, "GetValue", 1);
+var _ = class extends _ {},
+  _ = class extends _ {
+    m_callbacks;
+    m_currentValue;
+    m_fnEquals;
+    constructor(_, _) {
+      super(),
+        (this.m_callbacks = new _()),
+        (this.m_currentValue = _),
+        (this.m_fnEquals = _);
+    }
+    Set(_) {
+      if (this.m_fnEquals) {
+        if (this.m_fnEquals(this.m_currentValue, _)) return !1;
+      } else if (this.m_currentValue === _) return !1;
+      return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
+    }
+    get Value() {
+      return this.m_currentValue;
+    }
+    Subscribe(_) {
+      return {
+        Unsubscribe: this.m_callbacks.Register(_).Unregister,
+      };
+    }
+    get SubscriberCount() {
+      return this.m_callbacks.CountRegistered();
+    }
+  };
 function _(_, _) {
   return new _(_, _);
 }
-var _ = class {
+var _ = class extends _ {
   m_fnMap;
   m_originalSubscribableValue;
   m_mappedSubscribableValue;
   m_bMappedValueStale = !1;
   constructor(_, _, _) {
-    (this.m_originalSubscribableValue = _),
+    super(),
+      (this.m_originalSubscribableValue = _),
       (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
       (this.m_fnMap = _),
       this.m_originalSubscribableValue.Subscribe(() => {
@@ -48,7 +60,7 @@ var _ = class {
   get Value() {
     return (
       this.m_bMappedValueStale && this.UpdateMappedValue(),
-      this.m_mappedSubscribableValue?.Value
+      this.m_mappedSubscribableValue.Value
     );
   }
   Subscribe(_) {

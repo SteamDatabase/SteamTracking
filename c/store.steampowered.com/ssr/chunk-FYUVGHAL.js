@@ -561,6 +561,8 @@ function _(_) {
     _
   );
 }
+var _ = new _("FocusHistory"),
+  _ = _.Debug;
 var _ = class _ {
   m_root;
   constructor(_) {
@@ -594,26 +596,31 @@ var _ = class _ {
         (_ == 1 || (_ == 0 && _)) && _.BTakeFocus(2);
     });
   }
-  static RestoreSerializedNavNode(_, _) {
+  static RestoreSerializedNavNode(_, _, _ = 0) {
     let { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
-    if (
-      (_ && _(_ == _.NavKey, "navkey mismatch"),
-      _.SetActiveChild(_),
-      _ && _.length)
-    ) {
-      let [_] = _.GetChildren(),
-        _ = new Map();
+    _ && _(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
+    let _ = _.IsDebugEnabled() ? _(_) : "";
+    if (_ && _.length) {
+      let [_] = _.GetChildren();
+      _ != -1 &&
+        _(
+          `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length} - now ${_.length} children.`,
+        );
+      let _ = new Map();
       _.forEach((_) => {
         _.NavKey && _.set(_.NavKey, _);
       });
       for (let _ of _) {
         if (!_.sNavKey) continue;
         let _ = _.get(_.sNavKey);
-        _ && _.RestoreSerializedNavNode(_, _);
+        _ && _.RestoreSerializedNavNode(_, _, _ + 1);
       }
       if (_ != -1 && _[_]?.sNavKey) {
         let _ = _.get(_[_].sNavKey);
-        _ && _.SetActiveChild(_.indexOf(_));
+        _(
+          `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${_ === void 0 ? "MISSING!!" : ""}`,
+        ),
+          _ && _.SetActiveChild(_.indexOf(_));
       }
       let _ = 0,
         _ = 0;
@@ -621,7 +628,7 @@ var _ = class _ {
         for (; _ < _.length && _[_].NavKey; ) _++;
         for (; _ < _.length && _[_].sNavKey; ) _++;
         if (_ >= _.length || _ >= _.length) break;
-        _.RestoreSerializedNavNode(_[_], _[_]), _++, _++;
+        _.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++;
       }
     }
   }
@@ -656,6 +663,12 @@ var _ = class extends _ {
         : !1;
     }
   };
+function _(_) {
+  if (_ == 0) return "";
+  let _ = "";
+  for (let _ = 0; _ < _; _++) _ += "*";
+  return (_ += " "), _;
+}
 function _(_, _) {
   return _ ? typeof _.SteamClient == "object" && _ in _.SteamClient : !1;
 }
@@ -2457,11 +2470,7 @@ var _ = ((_) => (
       return this.m_Tree;
     }
     get NavKey() {
-      return this.m_Properties?.navKey
-        ? this.m_Properties.navKey
-        : this.m_element?._
-          ? this.m_element._
-          : void 0;
+      if (this.m_Properties?.navKey) return this.m_Properties.navKey;
     }
     get Element() {
       return this.m_element;

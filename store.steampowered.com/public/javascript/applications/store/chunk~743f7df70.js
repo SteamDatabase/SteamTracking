@@ -6138,7 +6138,7 @@
         return n
           ? a.createElement(
               c.K,
-              { bHorizontal: !1, placeholderWidth: 1, placeholderHeight: 1 },
+              { horizontal: !1, placeholderWidth: 1, placeholderHeight: 1 },
               s,
             )
           : s;
@@ -6285,7 +6285,7 @@
                       c.K,
                       {
                         rootMargin: "0px -5px 0px 100%",
-                        bHorizontal: !0,
+                        horizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
                       },
@@ -9218,7 +9218,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(2797),
             r.e(7436),

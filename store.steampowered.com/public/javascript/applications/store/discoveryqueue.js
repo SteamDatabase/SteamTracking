@@ -3,6 +3,14 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [9672],
   {
+    15392: (e) => {
+      e.exports = {
+        Link: "-HlDBB290kjpl61uUmRed",
+        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
+        Big: "sGy-bB7uqEt4Hoe7U5iA1",
+        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
     71109: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -15,7 +23,7 @@
     },
     14336: (e, t, i) => {
       "use strict";
-      i.d(t, { mK: () => S, DW: () => h, js: () => C, tb: () => p });
+      i.d(t, { mK: () => g, DW: () => h, js: () => C, tb: () => p });
       var a = i(90626),
         n = i(20194),
         r = i(54806),
@@ -49,12 +57,12 @@
       function C(e) {
         const t = (0, m.KV)(),
           i = a.useContext(y);
-        return (0, n.I)(S(i, t, e));
+        return (0, n.I)(g(i, t, e));
       }
       function h(e) {
         const t = (0, m.KV)(),
           i = a.useContext(y);
-        return (0, r.E)({ queries: e.map((e) => S(i, t, e)) });
+        return (0, r.E)({ queries: e.map((e) => g(i, t, e)) });
       }
       const y = a.createContext({
         loadPersonaState: async (e, t) => {
@@ -88,7 +96,7 @@
       function p() {
         return a.useContext(y);
       }
-      function S(e, t, i) {
+      function g(e, t, i) {
         const a = "string" == typeof i ? new o.b(i).GetAccountID() : i;
         return {
           queryKey: ["PlayerSummary", a],
@@ -102,9 +110,9 @@
       "use strict";
       i.d(t, {
         CC: () => f,
-        Oz: () => S,
+        Oz: () => g,
         Qt: () => b,
-        lu: () => g,
+        lu: () => S,
         ns: () => I,
         os: () => w,
       });
@@ -364,7 +372,7 @@
             (this.m_SteamInterface = new r.D(s.TS.WEBAPI_BASE_URL, e));
         }
       }
-      function S() {
+      function g() {
         const [e, t] = (0, o.useState)(p.Get().GetClaimItemState()),
           [i, a] = (0, o.useState)(!0);
         return (
@@ -381,7 +389,7 @@
       function f() {
         return { fnClaimItem: p.Get().UserClaimItem };
       }
-      function g() {
+      function S() {
         return { fnSetClaimState: p.Get().TEST_OverrideClaimState };
       }
       async function I(e) {
@@ -424,14 +432,68 @@
       (0, a.Cg)([d.oI], p.prototype, "TEST_OverrideClaimState", null),
         (0, a.Cg)([d.oI], p.prototype, "UserClaimItem", null);
     },
+    69409: (e, t, i) => {
+      "use strict";
+      i.d(t, { m: () => d });
+      var a = i(90626),
+        n = i(22837),
+        r = i(38390),
+        m = i(52038),
+        l = i(61859),
+        s = i(61336),
+        o = i(78327),
+        c = i(15392),
+        u = i(27666);
+      function d(e) {
+        const { gidEvent: t } = e,
+          i = (0, r.RR)(t),
+          [d, _] = (0, a.useMemo)(() => {
+            if (
+              i?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              i?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+            ) {
+              const e = (0, n.sf)(o.TS.LANGUAGE),
+                t = l.NT.GetWithFallback(
+                  i.jsondata.localized_sale_product_banner,
+                  e,
+                ),
+                a = l.NT.GetWithFallback(
+                  i.jsondata.localized_sale_product_mobile_banner,
+                  e,
+                );
+              if (t?.length > 0 && a?.length > 0)
+                return [
+                  u.z.GenerateURLFromHashAndExt(i.clanSteamID, t),
+                  u.z.GenerateURLFromHashAndExt(i.clanSteamID, a),
+                ];
+            }
+            return [null, null];
+          }, [i]);
+        return d?.length > 0 && _?.length > 0
+          ? a.createElement(
+              "a",
+              { href: (0, s.k2)(i.GetSaleURL()), className: c.Link },
+              a.createElement("img", {
+                src: d,
+                className: (0, m.A)(c.Banner, c.Big),
+              }),
+              a.createElement("img", {
+                src: _,
+                className: (0, m.A)(c.Banner, c.Mobile),
+              }),
+            )
+          : null;
+      }
+    },
     96236: (e, t, i) => {
       "use strict";
-      i.d(t, { K: () => l });
+      i.d(t, { K: () => s });
       var a = i(34629),
         n = i(90626),
         r = i(84933),
-        m = i(60383);
-      class l extends n.Component {
+        m = i(60383),
+        l = i(76217);
+      class s extends n.Component {
         state = {
           bRenderChildren: !1,
           nPrevRenderWidth: 0,
@@ -462,34 +524,44 @@
           const {
               placeholderWidth: e,
               placeholderHeight: t,
-              onRender: i,
-              style: a,
-              mode: r,
-              ...l
+              holdGampadFocus: i,
+              onRender: a,
+              style: r,
+              mode: s,
+              ...o
             } = this.props,
-            s = this.state.bRenderChildren;
-          let o = a;
-          if (!s) {
+            c = this.state.bRenderChildren;
+          let u = r;
+          if (!c) {
             const i = this.state.nPrevRenderWidth || e,
-              n = this.state.nPrevRenderHeight || t;
-            (void 0 === n && void 0 === i) ||
-              (o = { ...a, minHeight: n, minWidth: i });
+              a = this.state.nPrevRenderHeight || t;
+            (void 0 === a && void 0 === i) ||
+              (u = { ...r, minHeight: a, minWidth: i });
           }
-          const c = this.BLoadAndUnload() ? "repeated" : "once";
-          return n.createElement(
+          const d = this.BLoadAndUnload() ? "repeated" : "once";
+          let _ = n.createElement(
             m.J,
             {
               ref: this.m_refContainer,
-              style: o,
-              ...l,
+              style: u,
+              ...o,
               onVisibilityChange: this.OnVisibilityChange,
-              trigger: c,
+              trigger: d,
             },
-            s && this.props.children,
+            c && this.props.children,
+          );
+          return (
+            i &&
+              (_ = n.createElement(
+                l.Z,
+                { focusableIfNoChildren: !0, retainFocus: !0 },
+                _,
+              )),
+            _
           );
         }
       }
-      (0, a.Cg)([r.oI], l.prototype, "OnVisibilityChange", null);
+      (0, a.Cg)([r.oI], s.prototype, "OnVisibilityChange", null);
     },
     47554: (e, t, i) => {
       "use strict";
@@ -512,12 +584,12 @@
           i = (0, u.G)(),
           [_] = (0, s.QD)("inqueue", "0"),
           [y, p] = (0, a.useState)(!1),
-          [S, f] = (0, a.useState)(!1),
-          [g] = (0, l.t7)(t, { include_assets: !0 }),
+          [g, f] = (0, a.useState)(!1),
+          [S] = (0, l.t7)(t, { include_assets: !0 }),
           I = a.useRef(void 0);
         a.useEffect(() => I.current?.Activate(!0), []);
         const b = (0, h.Qn)(),
-          { eStoreDiscoveryQueueType: w, storePageFilter: v } =
+          { eStoreDiscoveryQueueType: w, storePageFilter: T } =
             a.useMemo(() => {
               if (_?.length > 0) {
                 const e = _.split("_"),
@@ -530,15 +602,15 @@
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
             }, [_]),
-          T = a.useCallback(() => {
+          v = a.useCallback(() => {
             f(!0);
           }, []),
           D = a.useCallback(() => {
             p(!0);
           }, []),
-          R = (0, m.WX)(w, v);
-        return i && g
-          ? S
+          R = (0, m.WX)(w, T);
+        return i && S
+          ? g
             ? null
             : a.createElement(
                 n.u,
@@ -548,7 +620,7 @@
                   {
                     focusable: !0,
                     className: C().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: T,
+                    onSecondaryButton: v,
                     onOKButton: D,
                     onOKActionDescription: (0, d.we)(
                       "#DiscoveryQueue_ResumeWizard",
@@ -565,7 +637,7 @@
                   !b &&
                     a.createElement(
                       "div",
-                      { className: C().CloseButton, onClick: T },
+                      { className: C().CloseButton, onClick: v },
                       a.createElement(o.X, null),
                     ),
                   y &&
@@ -574,7 +646,7 @@
                       bWizardVisible: y,
                       fnCloseModal: () => p(!1),
                       eStoreDiscoveryQueueType: w,
-                      storePageFilter: v,
+                      storePageFilter: T,
                     }),
                 ),
               )

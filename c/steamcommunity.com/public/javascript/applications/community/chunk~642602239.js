@@ -1879,6 +1879,39 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(_, _.options);
+        return _.createElement("span", {
+          ref: _,
+          style: {
+            fontSize: 0,
+          },
+        });
+      }
+      const _ = _.forwardRef(function (_, _) {
+        const {
+            onLeave: __webpack_require__,
+            onEnter: _,
+            options: _,
+            ..._
+          } = _,
+          _ = (0, _._)(_, _.options),
+          _ = (0, _._)(_, _);
+        return _.createElement("div", {
+          ref: _,
+          ..._,
+        });
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -7757,19 +7790,14 @@
             _.createElement(
               _._,
               {
+                key: this.m_strPlayerID,
                 onLeave: this.props.autopause ? this.OnPlayerLeftView : void 0,
+                ref: this.BindPlayerContainer,
+                className: (0, _._)("YoutubePlayer", this.props.classnames),
               },
-              _.createElement(
-                "div",
-                {
-                  key: this.m_strPlayerID,
-                  ref: this.BindPlayerContainer,
-                  className: (0, _._)("YoutubePlayer", this.props.classnames),
-                },
-                _.createElement(_._, {
-                  className: "YoutubePlayerThrobber",
-                }),
-              ),
+              _.createElement(_._, {
+                className: "YoutubePlayerThrobber",
+              }),
             ),
           );
         }

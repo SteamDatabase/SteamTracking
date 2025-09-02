@@ -4064,8 +4064,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const [_, __webpack_require__] = (0, _.useState)(!0);
@@ -4204,27 +4204,28 @@
         }),
         _ = (_) => {
           const { clanAccountID: _ } = _,
-            _ = "-500px";
-          return _.createElement(
-            _._,
-            {
-              onEnter: async () => {
-                const _ = _._.InitFromClanID(_);
-                await Promise.all([
-                  _._.LoadClanInfoForClanSteamID(_),
-                  _._.Get().QueueCuratorAdminInfoLoad(_),
-                ]);
-              },
-              topOffset: _,
-              bottomOffset: _,
-            },
-            _.createElement(
-              "div",
+            _ = "500px",
+            _ = (0, _._)(
               {
-                className: _().TileContainer,
+                onEnter: async () => {
+                  const _ = _._.InitFromClanID(_);
+                  await Promise.all([
+                    _._.LoadClanInfoForClanSteamID(_),
+                    _._.Get().QueueCuratorAdminInfoLoad(_),
+                  ]);
+                },
               },
-              _.createElement("div", null, (0, _._)("#Loading"), " - ", _),
-            ),
+              {
+                rootMargin: `${_} 0px ${_} 0px`,
+              },
+            );
+          return _.createElement(
+            "div",
+            {
+              ref: _,
+              className: _().TileContainer,
+            },
+            _.createElement("div", null, (0, _._)("#Loading"), " - ", _),
           );
         },
         _ = (_) => {

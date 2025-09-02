@@ -2669,7 +2669,7 @@
           _ = _?.get(_.appid) || !1,
           _ = (0, _._)(__webpack_require__),
           _ = _.useCallback(() => {
-            _(_, !_, [_]), _.mutate(_);
+            (0, _._)(_, !_, [_]), _.mutate(_);
           }, [_, _, _, _]);
         return _ && _ && _.is_enabled && 0 != _.applist_base_id
           ? _.createElement(
@@ -3305,24 +3305,6 @@
         }
         return (0, _._)(_);
       }
-      function _(_, _, _) {
-        if (_)
-          for (let _ of _) {
-            const _ = _.applist_custom.find((_) => _.appid == _);
-            _
-              ? (_.is_allowed = !0)
-              : _.applist_custom.push({
-                  appid: _,
-                  is_allowed: !0,
-                });
-          }
-        else {
-          const _ = _.applist_custom.filter(
-            (_) => !__webpack_require__.includes(_.appid),
-          );
-          _.applist_custom = _;
-        }
-      }
       function _(_) {
         const _ = (0, _._)();
         return !_.isSuccess || _.data.is_not_member_of_any_group()
@@ -3511,7 +3493,7 @@
                 ".jpg"),
           _ = _.useCallback(() => {
             _(null),
-              _(__webpack_require__, !_, [_]),
+              (0, _._)(__webpack_require__, !_, [_]),
               _.mutate(__webpack_require__);
           }, [_, __webpack_require__, _, _, _]);
         return _.createElement(
@@ -3985,7 +3967,7 @@
           _ = (!_ && _?.length) || 0,
           _ = _.useCallback(
             (_) => {
-              _(
+              (0, _._)(
                 __webpack_require__,
                 _,
                 _.map((_) => _.appid),
@@ -4112,7 +4094,7 @@
           ),
           _ = _.useCallback(
             (_, _) => {
-              _(__webpack_require__, _, [_.appid]),
+              (0, _._)(__webpack_require__, _, [_.appid]),
                 _.mutate(__webpack_require__);
             },
             [__webpack_require__, _],

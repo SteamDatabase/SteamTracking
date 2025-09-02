@@ -15400,25 +15400,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-        const { onPositionChange: _, onLeave: __webpack_require__ } = _,
-          _ = _.useCallback(
-            (_) => (
-              void 0 === _.previousPosition &&
-                _.currentPosition === _._.above &&
-                __webpack_require__ &&
-                __webpack_require__(_),
-              _ && _(_)
-            ),
-            [_, __webpack_require__],
-          );
-        return _.createElement(_._, {
-          ..._,
-          onPositionChange: _,
-        });
-      };
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -15654,6 +15636,7 @@
         return _._.COMMUNITY_BASE_URL + "broadcast/share/" + _ + "?site=" + _;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         list: [
@@ -16092,48 +16075,46 @@
               className: _().wrapper,
             },
             _.createElement(
-              _,
+              _._,
               {
                 onEnter: this.OnEnter,
                 onLeave: this.OnLeave,
+                onIntersectionChange: (_) => {
+                  _.isIntersecting || this.OnLeave();
+                },
+                className: (0, _._)({
+                  [_().video_placeholder]: !0,
+                  video_placeholder_trgt: !0,
+                  [_().WidePlayer]: this.props.bWidePlayer,
+                }),
+                ref: this.m_iVideoContainerRef,
               },
               _.createElement(
                 "div",
                 {
-                  className: (0, _._)({
-                    [_().video_placeholder]: !0,
-                    video_placeholder_trgt: !0,
-                    [_().WidePlayer]: this.props.bWidePlayer,
-                  }),
-                  ref: this.m_iVideoContainerRef,
+                  className: this.state.bPopout
+                    ? _().broadcast_floating
+                    : _().video_container,
                 },
+                this.state.bPopout &&
+                  _.createElement(_, {
+                    steamIDBroadcast: this.props.stream.steamid,
+                    OnPreventPopup: this.CloseBroadcastPopup,
+                  }),
                 _.createElement(
                   "div",
                   {
-                    className: this.state.bPopout
-                      ? _().broadcast_floating
-                      : _().video_container,
+                    className: _().BroadcastPlayerContainer,
                   },
-                  this.state.bPopout &&
-                    _.createElement(_, {
-                      steamIDBroadcast: this.props.stream.steamid,
-                      OnPreventPopup: this.CloseBroadcastPopup,
-                    }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().BroadcastPlayerContainer,
-                    },
-                    _.createElement(_.default, {
-                      steamIDBroadcast: this.props.stream.steamid,
-                      watchLocation: 6,
-                      bStartMuted: this.props.bStartMuted,
-                      fnRenderBroadcastContext:
-                        this.props.fnRenderBroadcastContext,
-                      fnOnVideoEnd: this.props.fnOnVideoEnd,
-                      nAppIDVOD: this.props.stream.nAppIDVOD,
-                    }),
-                  ),
+                  _.createElement(_.default, {
+                    steamIDBroadcast: this.props.stream.steamid,
+                    watchLocation: 6,
+                    bStartMuted: this.props.bStartMuted,
+                    fnRenderBroadcastContext:
+                      this.props.fnRenderBroadcastContext,
+                    fnOnVideoEnd: this.props.fnOnVideoEnd,
+                    nAppIDVOD: this.props.stream.nAppIDVOD,
+                  }),
                 ),
               ),
             ),

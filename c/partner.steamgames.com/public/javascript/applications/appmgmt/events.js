@@ -344,7 +344,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2327,7 +2326,8 @@
             return "invalid social media type";
         }
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
           __webpack_require__._("chunkid"),
@@ -2907,7 +2907,9 @@
                     _.createElement(_._, {
                       onEnter: this.OnEnterVisible,
                       onLeave: this.OnLeaveVisible,
-                      bottomOffset: "300px",
+                      options: {
+                        rootMargin: "0px 0px -300px 0px",
+                      },
                     }),
                   this.props.bInGamepadUI
                     ? _.createElement(

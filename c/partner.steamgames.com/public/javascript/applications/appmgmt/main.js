@@ -1781,6 +1781,41 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -1818,49 +1853,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1984,7 +1980,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2030,7 +2025,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2096,7 +2090,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2113,7 +2106,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -4389,6 +4381,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new (__webpack_require__("chunkid")._)("FocusHistory"),
+        _ = _.Debug;
       class _ {
         m_root;
         constructor(_) {
@@ -4429,31 +4423,38 @@
                 _.BTakeFocus(_._.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(_, _) {
-          const {
-            sNavKey: __webpack_require__,
-            iActiveChild: _,
-            rgChildren: _,
-          } = _;
-          if (
-            (__webpack_require__ &&
-              (0, _._)(__webpack_require__ == _.NavKey, "navkey mismatch"),
-            _.SetActiveChild(_),
-            _ && _.length)
-          ) {
+        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
+          const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
+          _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
+          const _ = _.IsDebugEnabled()
+            ? (function (_) {
+                if (0 == _) return "";
+                let _ = "";
+                for (let _ = 0; _ < _; _++) _ += "*";
+                return (_ += " "), _;
+              })(__webpack_require__)
+            : "";
+          if (_ && _.length) {
             const [_] = _.GetChildren();
+            -1 != _ &&
+              _(
+                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length} - now ${_.length} children.`,
+              );
             let _ = new Map();
             _.forEach((_) => {
-              _.NavKey && __webpack_require__.set(_.NavKey, _);
+              _.NavKey && _.set(_.NavKey, _);
             });
             for (const _ of _) {
               if (!_.sNavKey) continue;
-              const _ = __webpack_require__.get(_.sNavKey);
-              _ && _.RestoreSerializedNavNode(_, _);
+              const _ = _.get(_.sNavKey);
+              _ && _.RestoreSerializedNavNode(_, _, __webpack_require__ + 1);
             }
             if (-1 != _ && _[_]?.sNavKey) {
-              const _ = __webpack_require__.get(_[_].sNavKey);
-              _ && _.SetActiveChild(_.indexOf(_));
+              const _ = _.get(_[_].sNavKey);
+              _(
+                `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${void 0 === _ ? "MISSING!!" : ""}`,
+              ),
+                _ && _.SetActiveChild(_.indexOf(_));
             }
             let _ = 0,
               _ = 0;
@@ -4461,7 +4462,7 @@
               for (; _ < _.length && _[_].NavKey; ) _++;
               for (; _ < _.length && _[_].sNavKey; ) _++;
               if (_ >= _.length || _ >= _.length) break;
-              _.RestoreSerializedNavNode(_[_], _[_]), _++, _++;
+              _.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++;
             }
           }
         }
@@ -5315,11 +5316,7 @@
           return this.m_Tree;
         }
         get NavKey() {
-          return this.m_Properties?.navKey
-            ? this.m_Properties.navKey
-            : this.m_element?._
-              ? this.m_element._
-              : void 0;
+          return this.m_Properties?.navKey ? this.m_Properties.navKey : void 0;
         }
         get Element() {
           return this.m_element;
@@ -6620,7 +6617,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       class _ {
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(_) {
@@ -17657,21 +17653,19 @@
         }, [_, _]);
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(_?.Value);
-        return (
-          _.useEffect(() => {
-            if (null == _) return;
-            const _ = _.Subscribe(__webpack_require__);
-            return __webpack_require__(_.Value), _?.Unsubscribe;
-          }, [_]),
-          _
+        return _;
+      }
+      function _() {}
+      function _(_) {
+        return _.useSyncExternalStore(
+          _ ? _.SyncStore : _,
+          _ ? _.GetValue : _,
+          _ ? _.GetValue : _,
         );
       }
       function _(_, _) {
         _.useEffect(() => {
-          if (null == _) return;
-          const _ = _.Subscribe(_);
-          return _?.Unsubscribe;
+          if (_ && _) return _.Subscribe(_).Unsubscribe;
         }, [_, _]);
       }
       function _(_, _) {
@@ -22354,7 +22348,7 @@
           ? _.createElement(
               _._,
               {
-                bHorizontal: !1,
+                horizontal: !1,
                 placeholderWidth: 1,
                 placeholderHeight: 1,
               },
@@ -22537,7 +22531,7 @@
                       _._,
                       {
                         rootMargin: "0px -5px 0px 100%",
-                        bHorizontal: !0,
+                        horizontal: !0,
                         placeholderWidth: 1,
                         placeholderHeight: 1,
                       },
@@ -31086,6 +31080,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -31118,7 +31113,8 @@
           const {
               placeholderWidth: _,
               placeholderHeight: _,
-              onRender: __webpack_require__,
+              holdGampadFocus: __webpack_require__,
+              onRender: _,
               style: _,
               mode: _,
               ..._
@@ -31136,7 +31132,7 @@
               });
           }
           const _ = this.BLoadAndUnload() ? "repeated" : "once";
-          return _.createElement(
+          let _ = _.createElement(
             _._,
             {
               ref: this.m_refContainer,
@@ -31146,6 +31142,18 @@
               trigger: _,
             },
             _ && this.props.children,
+          );
+          return (
+            _ &&
+              (_ = _.createElement(
+                _._,
+                {
+                  focusableIfNoChildren: !0,
+                  retainFocus: !0,
+                },
+                _,
+              )),
+            _
           );
         }
       }
@@ -36752,7 +36760,7 @@
         }
         FindScrollableAncestor(_) {
           return _._(_, (_) => {
-            const _ = this.props.bHorizontal
+            const _ = this.props.horizontal
               ? window.getComputedStyle(_).overflowX
               : window.getComputedStyle(_).overflowY;
             return (
@@ -36779,7 +36787,7 @@
             onVisibilityChange: _,
             rootMargin: _,
             trigger: __webpack_require__,
-            bHorizontal: _,
+            horizontal: _,
             ..._
           } = this.props;
           return _.createElement(
@@ -36950,19 +36958,31 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
+        SyncStore(_) {
+          return this.Subscribe(_).Unsubscribe;
+        }
+        GetValue() {
+          return this.Value;
+        }
+      }
+      (0, _._)([_._], _.prototype, "SyncStore", null),
+        (0, _._)([_._], _.prototype, "GetValue", null);
+      class _ extends _ {}
+      class _ extends _ {
         m_callbacks;
         m_currentValue;
         m_fnEquals;
         constructor(_, _) {
-          (this.m_callbacks = new _._()),
+          super(),
+            (this.m_callbacks = new _._()),
             (this.m_currentValue = _),
             (this.m_fnEquals = _);
         }
         Set(_) {
           if (this.m_fnEquals) {
-            if (this.m_fnEquals(this.m_currentValue, _)) return;
-          } else if (this.m_currentValue === _) return;
-          (this.m_currentValue = _), this.m_callbacks.Dispatch(_);
+            if (this.m_fnEquals(this.m_currentValue, _)) return !1;
+          } else if (this.m_currentValue === _) return !1;
+          return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
         }
         get Value() {
           return this.m_currentValue;

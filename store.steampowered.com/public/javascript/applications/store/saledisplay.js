@@ -244,7 +244,7 @@
         i = n(79613),
         s = n(60778);
       const c = "FocusNavHistoryID",
-        u = new s.wd("FocusNavigation").Debug;
+        u = new s.wd("FocusHistory").Debug;
       function m(e) {
         const { children: t, timeoutMS: n, ...s } = e,
           m = (function (e = 2) {

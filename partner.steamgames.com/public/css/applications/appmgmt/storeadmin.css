@@ -1253,9 +1253,15 @@ img.ProseMirror-separator {
   width: 100%;
   border-collapse: collapse;
 }
+._1DSTal-SoqU7Zf0nk0FmRl .DxwrrF6sruBZ-N_Q98dP9 {
+  position: sticky;
+  top: 0;
+  z-index: 13;
+}
 ._1DSTal-SoqU7Zf0nk0FmRl .DxwrrF6sruBZ-N_Q98dP9 th {
   background: #444b55;
   color: #fff;
+  position: unset;
 }
 ._1DSTal-SoqU7Zf0nk0FmRl .DxwrrF6sruBZ-N_Q98dP9 ._3_3Dqx1hIyrpPPlER58SWu {
   width: 240px;

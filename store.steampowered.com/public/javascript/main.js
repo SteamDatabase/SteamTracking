@@ -759,46 +759,6 @@ function RegisterSteamOnWebPanelHiddenHandler( f )
 	});
 }
 
-function InitVideoFocusWatcher()
-{
-	const k_strVideoSelector = 'video[data-video-pause-on-blur],video.fullscreen-bg__video';
-	const k_nBlurTimeout = 20000;
-
-	let nBlurTimeoutId = undefined;
-	const onWindowBlur = function()
-	{
-		if ( !nBlurTimeoutId )
-		{
-			nBlurTimeoutId = window.setTimeout( () =>
-			{
-				
-				$J( k_strVideoSelector ).trigger( 'pause' );
-			}, k_nBlurTimeout );
-		}
-	}
-
-	const onWindowFocus = function()
-	{
-		if ( nBlurTimeoutId )
-		{
-			window.clearTimeout( nBlurTimeoutId );
-		}
-
-		nBlurTimeoutId = undefined;
-		if ( !window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches )
-		{
-			$J( k_strVideoSelector ).trigger( 'play' );
-		}
-	}
-
-	$J( window ).on( 'blur' , onWindowBlur );
-	$J( window ).on( 'focus' , onWindowFocus );
-
-	// Start the blur timer now if the document initially doesn't have focus
-	if ( !document.hasFocus() )
-		onWindowBlur();
-}
-
 $J( function() {
 	InstrumentLinks();
 

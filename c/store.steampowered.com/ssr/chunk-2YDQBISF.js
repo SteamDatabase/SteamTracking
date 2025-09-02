@@ -90,14 +90,14 @@ function _(_, _) {
   }, [_, _]);
 }
 function _(_) {
-  let [_, _] = _.useState(_?.Value);
-  return (
-    _.useEffect(() => {
-      if (_ == null) return;
-      let _ = _.Subscribe(_);
-      return _(_.Value), _?.Unsubscribe;
-    }, [_]),
-    _
+  return _;
+}
+function _() {}
+function _(_) {
+  return _.useSyncExternalStore(
+    _ ? _.SyncStore : _,
+    _ ? _.GetValue : _,
+    _ ? _.GetValue : _,
   );
 }
 function _(_, _) {

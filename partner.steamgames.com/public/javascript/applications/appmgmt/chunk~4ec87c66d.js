@@ -953,6 +953,7 @@
     83854: (e) => {
       e.exports = {
         DateCtn: "_13RGKmbd0bFVxkQJdMEX0t",
+        PromoCreationCtn: "_1C4jsnZrLZXgz2mDsdVsv0",
         Vacation: "_1RS5BRUx0pdtR2xvd3P2oQ",
         Seasons: "_1GNn5Ekyu5iiizG3V_xRal",
       };
@@ -65790,6 +65791,7 @@
               className: (0, b.A)({
                 [M.Vacation]: "vacation" == E,
                 [M.Seasons]: "seasonalsale" == E,
+                [M.PromoCreationCtn]: !0,
               }),
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,

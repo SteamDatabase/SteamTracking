@@ -3379,97 +3379,111 @@
     },
     39575: (e, t, r) => {
       "use strict";
-      r.d(t, { Gt: () => c, LU: () => o, Ze: () => a, nv: () => l });
+      r.d(t, { Gt: () => m, LU: () => c, Ze: () => l, nv: () => u });
       var i = r(81393),
         n = r(45730);
-      class s {
+      const s = new (r(60778).wd)("FocusHistory"),
+        a = s.Debug;
+      class o {
         m_root;
         constructor(e) {
           this.m_root = e;
         }
         static SerializeNavState(e, t = !0, r = !0) {
           return {
-            root: s.SerializeNavNode(e, t, r),
+            root: o.SerializeNavNode(e, t, r),
             bHadFocus: e.BFocusWithin(),
           };
         }
         static SerializeNavNode(e, t = !0, r = !0) {
           let i = null;
-          const [n, a] = e.GetChildren();
+          const [n, s] = e.GetChildren();
           return (
             n.length &&
-              -1 != a &&
+              -1 != s &&
               t &&
-              (i = n.map((e, t) => s.SerializeNavNode(e, t == a || r, r))),
-            { sNavKey: e.NavKey, iActiveChild: a, rgChildren: i }
+              (i = n.map((e, t) => o.SerializeNavNode(e, t == s || r, r))),
+            { sNavKey: e.NavKey, iActiveChild: s, rgChildren: i }
           );
         }
         static RestoreSerializedNavState(e, t, r = 0) {
-          const { root: i, bHadFocus: a } = t;
+          const { root: i, bHadFocus: s } = t;
           e.Tree.Controller.RestoreHistoryTransaction(() => {
-            s.RestoreSerializedNavNode(e, i),
-              (1 == r || (0 == r && a)) && e.BTakeFocus(n.D$.APPLICATION);
+            o.RestoreSerializedNavNode(e, i),
+              (1 == r || (0 == r && s)) && e.BTakeFocus(n.D$.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(e, t) {
-          const { sNavKey: r, iActiveChild: n, rgChildren: a } = t;
-          if (
-            (r && (0, i.wT)(r == e.NavKey, "navkey mismatch"),
-            e.SetActiveChild(n),
-            a && a.length)
-          ) {
+        static RestoreSerializedNavNode(e, t, r = 0) {
+          const { sNavKey: n, iActiveChild: l, rgChildren: c } = t;
+          n && (0, i.wT)(n == e.NavKey, "navkey mismatch"), e.SetActiveChild(l);
+          const u = s.IsDebugEnabled()
+            ? (function (e) {
+                if (0 == e) return "";
+                let t = "";
+                for (let r = 0; r < e; r++) t += "*";
+                return (t += " "), t;
+              })(r)
+            : "";
+          if (c && c.length) {
             const [t] = e.GetChildren();
-            let r = new Map();
+            -1 != l &&
+              a(
+                `${u}Restoring node ${e.NavKey} which had active child ${l} of ${c.length} - now ${t.length} children.`,
+              );
+            let i = new Map();
             t.forEach((e) => {
-              e.NavKey && r.set(e.NavKey, e);
+              e.NavKey && i.set(e.NavKey, e);
             });
-            for (const e of a) {
+            for (const e of c) {
               if (!e.sNavKey) continue;
-              const t = r.get(e.sNavKey);
-              t && s.RestoreSerializedNavNode(t, e);
+              const t = i.get(e.sNavKey);
+              t && o.RestoreSerializedNavNode(t, e, r + 1);
             }
-            if (-1 != n && a[n]?.sNavKey) {
-              const i = r.get(a[n].sNavKey);
-              i && e.SetActiveChild(t.indexOf(i));
+            if (-1 != l && c[l]?.sNavKey) {
+              const r = i.get(c[l].sNavKey);
+              a(
+                `${u}Restoring node ${e.NavKey}, child with focus: ${c[l].sNavKey} ${void 0 === r ? "MISSING!!" : ""}`,
+              ),
+                r && e.SetActiveChild(t.indexOf(r));
             }
-            let i = 0,
-              o = 0;
-            for (; i < t.length && o < a.length; ) {
-              for (; i < t.length && t[i].NavKey; ) i++;
-              for (; o < a.length && a[o].sNavKey; ) o++;
-              if (i >= t.length || o >= a.length) break;
-              s.RestoreSerializedNavNode(t[i], a[o]), i++, o++;
+            let n = 0,
+              s = 0;
+            for (; n < t.length && s < c.length; ) {
+              for (; n < t.length && t[n].NavKey; ) n++;
+              for (; s < c.length && c[s].sNavKey; ) s++;
+              if (n >= t.length || s >= c.length) break;
+              o.RestoreSerializedNavNode(t[n], c[s], r + 1), n++, s++;
             }
           }
         }
       }
-      function a(e) {
-        return s.SerializeNavState(e, !0, !1);
+      function l(e) {
+        return o.SerializeNavState(e, !0, !1);
       }
-      function o(e, t, r = 0) {
-        return s.RestoreSerializedNavState(e, t, r);
+      function c(e, t, r = 0) {
+        return o.RestoreSerializedNavState(e, t, r);
       }
-      class l extends s {
+      class u extends o {
         m_rgHistory = [];
         PushState() {
-          this.m_rgHistory.push(s.SerializeNavState(this.m_root));
+          this.m_rgHistory.push(o.SerializeNavState(this.m_root));
         }
         PopState(e = 0) {
           this.m_rgHistory.length &&
-            s.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), e);
+            o.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), e);
         }
       }
-      class c extends s {
+      class m extends o {
         m_mapHistory = new Map();
         SaveState(e) {
-          this.m_mapHistory.set(e, s.SerializeNavState(this.m_root));
+          this.m_mapHistory.set(e, o.SerializeNavState(this.m_root));
         }
         RestoreState(e, t = 0) {
           const r = this.m_mapHistory.get(e);
           return (
             !!r &&
             (console.log(`Restoring history for state ${e}`),
-            s.RestoreSerializedNavState(this.m_root, r, t),
+            o.RestoreSerializedNavState(this.m_root, r, t),
             !0)
           );
         }
@@ -4233,11 +4247,7 @@
           return this.m_Tree;
         }
         get NavKey() {
-          return this.m_Properties?.navKey
-            ? this.m_Properties.navKey
-            : this.m_element?.id
-              ? this.m_element.id
-              : void 0;
+          return this.m_Properties?.navKey ? this.m_Properties.navKey : void 0;
         }
         get Element() {
           return this.m_element;
@@ -5673,7 +5683,6 @@
       var i = r(80613),
         n = r(36003),
         s = r(44654);
-      r(29233);
       class a {
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(e) {
@@ -31831,19 +31840,19 @@
       r.d(t, {
         $$: () => s,
         CH: () => a,
-        DF: () => u,
+        DF: () => d,
         ML: () => n.ML,
         OP: () => n.OP,
         Qi: () => n.Qi,
         TP: () => n.TP,
-        YR: () => g,
+        YR: () => _,
         _g: () => o,
-        bs: () => d,
-        gc: () => c,
+        bs: () => p,
+        gc: () => m,
         hL: () => l,
         l6: () => n.l6,
-        uD: () => m,
-        wm: () => p,
+        uD: () => g,
+        wm: () => h,
         xA: () => n.xA,
       });
       var i = r(90626),
@@ -31906,17 +31915,17 @@
         }, [e, t]);
       }
       function c(e) {
-        const [t, r] = i.useState(e?.Value);
-        return (
-          i.useEffect(() => {
-            if (null == e) return;
-            const t = e.Subscribe(r);
-            return r(e.Value), t?.Unsubscribe;
-          }, [e]),
-          t
+        return u;
+      }
+      function u() {}
+      function m(e) {
+        return i.useSyncExternalStore(
+          e ? e.SyncStore : c,
+          e ? e.GetValue : u,
+          e ? e.GetValue : u,
         );
       }
-      function u(e, t) {
+      function d(e, t) {
         return (
           (function (e, t) {
             const [r, n] = i.useState(e);
@@ -31933,7 +31942,7 @@
           })(e, t) || e
         );
       }
-      function m(e = !1) {
+      function g(e = !1) {
         const [t, r] = i.useState(e);
         return [
           t,
@@ -31941,7 +31950,7 @@
           i.useCallback(() => r(!1), []),
         ];
       }
-      function d(e) {
+      function p(e) {
         const t = i.useRef(void 0);
         return i.useCallback(
           () => (
@@ -31952,7 +31961,7 @@
           [e],
         );
       }
-      function g(e) {
+      function _(e) {
         const t = i.useRef({ value: void 0, bConstructed: !1 });
         return (
           t.current.bConstructed ||
@@ -31960,7 +31969,7 @@
           t.current.value
         );
       }
-      function p(e) {
+      function h(e) {
         const t = i.useRef(e);
         return (
           (t.current.length !== e.length ||
@@ -32024,7 +32033,7 @@
     },
     40236: (e, t, r) => {
       "use strict";
-      r.d(t, { wY: () => o });
+      r.d(t, { OO: () => l, wY: () => o });
       var i = r(90626),
         n = r(8871),
         s = r(81393);
@@ -32056,6 +32065,20 @@
             [],
           ),
         );
+      }
+      function l(e, t) {
+        const r = i.useRef(void 0);
+        return (function (e, t) {
+          return a(
+            e,
+            i.useCallback((e, r) => new e.IntersectionObserver(r, t), [t]),
+          );
+        })((t) => {
+          !r.current && t.isIntersecting && e.onEnter?.(t),
+            r.current && !t.isIntersecting && e.onLeave?.(t),
+            e.onIntersectionChange?.(t),
+            (r.current = t.isIntersecting);
+        }, t);
       }
     },
     8527: (e, t, r) => {
@@ -34505,6 +34528,7 @@
       r.d(t, {
         or: () => ce,
         EC: () => le,
+        qR: () => Ce,
         EB: () => ye,
         To: () => Me,
         Xl: () => fe,
@@ -36879,6 +36903,19 @@
           },
           onError: r,
         });
+      }
+      function Ce(e, t, r) {
+        if (t)
+          for (let t of r) {
+            const r = e.applist_custom.find((e) => e.appid == t);
+            r
+              ? (r.is_allowed = !0)
+              : e.applist_custom.push({ appid: t, is_allowed: !0 });
+          }
+        else {
+          const t = e.applist_custom.filter((e) => !r.includes(e.appid));
+          e.applist_custom = t;
+        }
       }
     },
     77350: (e, t, r) => {
@@ -59109,11 +59146,11 @@
     6144: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Jc: () => l,
-        Ji: () => d,
-        LU: () => m,
-        YX: () => u,
-        e0: () => g,
+        Jc: () => u,
+        Ji: () => p,
+        LU: () => g,
+        YX: () => d,
+        e0: () => _,
         lu: () => a.l,
       });
       var i = r(34629),
@@ -59121,19 +59158,31 @@
         s = r(6419),
         a = r(91986);
       class o {
+        SyncStore(e) {
+          return this.Subscribe(e).Unsubscribe;
+        }
+        GetValue() {
+          return this.Value;
+        }
+      }
+      (0, i.Cg)([s.o], o.prototype, "SyncStore", null),
+        (0, i.Cg)([s.o], o.prototype, "GetValue", null);
+      class l extends o {}
+      class c extends l {
         m_callbacks;
         m_currentValue;
         m_fnEquals;
         constructor(e, t) {
-          (this.m_callbacks = new a.l()),
+          super(),
+            (this.m_callbacks = new a.l()),
             (this.m_currentValue = e),
             (this.m_fnEquals = t);
         }
         Set(e) {
           if (this.m_fnEquals) {
-            if (this.m_fnEquals(this.m_currentValue, e)) return;
-          } else if (this.m_currentValue === e) return;
-          (this.m_currentValue = e), this.m_callbacks.Dispatch(e);
+            if (this.m_fnEquals(this.m_currentValue, e)) return !1;
+          } else if (this.m_currentValue === e) return !1;
+          return (this.m_currentValue = e), this.m_callbacks.Dispatch(e), !0;
         }
         get Value() {
           return this.m_currentValue;
@@ -59145,17 +59194,18 @@
           return this.m_callbacks.CountRegistered();
         }
       }
-      function l(e, t) {
-        return new o(e, t);
+      function u(e, t) {
+        return new c(e, t);
       }
-      class c {
+      class m extends o {
         m_fnMap;
         m_originalSubscribableValue;
         m_mappedSubscribableValue;
         m_bMappedValueStale = !1;
         constructor(e, t, r) {
-          (this.m_originalSubscribableValue = e),
-            (this.m_mappedSubscribableValue = new o(t(e.Value), r)),
+          super(),
+            (this.m_originalSubscribableValue = e),
+            (this.m_mappedSubscribableValue = new c(t(e.Value), r)),
             (this.m_fnMap = t),
             this.m_originalSubscribableValue.Subscribe(() => {
               this.m_mappedSubscribableValue.SubscriberCount > 0
@@ -59166,7 +59216,7 @@
         get Value() {
           return (
             this.m_bMappedValueStale && this.UpdateMappedValue(),
-            this.m_mappedSubscribableValue?.Value
+            this.m_mappedSubscribableValue.Value
           );
         }
         Subscribe(e) {
@@ -59179,10 +59229,10 @@
             (this.m_bMappedValueStale = !1);
         }
       }
-      function u(e, t, r) {
-        return new c(e, t, r);
+      function d(e, t, r) {
+        return new m(e, t, r);
       }
-      class m {
+      class g {
         m_schTimer;
         m_fnCallback;
         Schedule(e, t) {
@@ -59203,8 +59253,8 @@
           (this.m_fnCallback = void 0), e?.();
         }
       }
-      (0, i.Cg)([s.o], m.prototype, "ScheduledInternal", null);
-      class d {
+      (0, i.Cg)([s.o], g.prototype, "ScheduledInternal", null);
+      class p {
         m_rgListeners = [];
         AddEventListener(e, t, r) {
           e.addEventListener(t, r),
@@ -59216,7 +59266,7 @@
           this.m_rgListeners = [];
         }
       }
-      class g {
+      class _ {
         m_vecCallbacks = [];
         Push(e) {
           this.m_vecCallbacks.push(e);
@@ -59232,7 +59282,7 @@
           return this.Unregister;
         }
       }
-      (0, i.Cg)([s.o], g.prototype, "Unregister", null);
+      (0, i.Cg)([s.o], _.prototype, "Unregister", null);
     },
     52038: (e, t, r) => {
       "use strict";
@@ -64758,7 +64808,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(2298),
             r.e(2797),
@@ -64786,7 +64835,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(2298),
             r.e(2797),
@@ -69498,7 +69546,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(6334),
@@ -69521,8 +69568,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
-            r.e(1406),
+            r.e(6866),
             r.e(7854),
             r.e(8310),
             r.e(7333),
@@ -69533,7 +69581,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(2797),
             r.e(7436),
@@ -69549,14 +69596,13 @@
             r.e(283),
             r.e(177),
             r.e(8396),
-          ]).then(r.bind(r, 70834)),
+          ]).then(r.bind(r, 74968)),
         ),
         Wa = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(7276),
@@ -69580,8 +69626,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
-            r.e(1406),
+            r.e(6866),
             r.e(7854),
             r.e(1240),
             r.e(6855),
@@ -69592,7 +69639,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(2298),
@@ -69616,8 +69662,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
-            r.e(1406),
+            r.e(6866),
             r.e(7854),
             r.e(970),
           ]).then(r.bind(r, 34568)),
@@ -69631,7 +69678,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(2797),
             r.e(7436),
             r.e(7403),
@@ -69694,7 +69740,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(2298),
@@ -69718,8 +69763,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
-            r.e(1406),
+            r.e(6866),
             r.e(7854),
             r.e(970),
           ]).then(r.bind(r, 58426)),
@@ -69729,7 +69775,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(2298),
@@ -69753,8 +69798,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
-            r.e(1406),
+            r.e(6866),
             r.e(7854),
             r.e(1240),
             r.e(3318),
@@ -69824,7 +69870,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(2298),
@@ -69847,7 +69892,8 @@
             r.e(9105),
             r.e(2011),
             r.e(6850),
-            r.e(1406),
+            r.e(7911),
+            r.e(6866),
             r.e(1240),
             r.e(3318),
             r.e(8620),
@@ -69859,7 +69905,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(2298),
             r.e(2797),
@@ -69888,7 +69933,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(2298),
             r.e(2797),
@@ -69917,7 +69961,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(2298),
             r.e(2797),
@@ -69945,7 +69988,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(2797),
@@ -69965,7 +70007,7 @@
             r.e(3846),
             r.e(9105),
             r.e(6850),
-            r.e(1406),
+            r.e(7911),
             r.e(3027),
           ]).then(r.bind(r, 54954)),
         ),
@@ -69974,7 +70016,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(2298),
@@ -70000,7 +70041,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
+            r.e(6866),
             r.e(7854),
             r.e(1240),
             r.e(2414),
@@ -70011,7 +70054,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(6334),
@@ -70034,8 +70076,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
-            r.e(1406),
+            r.e(6866),
             r.e(7854),
             r.e(8310),
             r.e(7333),
@@ -70046,7 +70089,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(7276),
@@ -70070,8 +70112,9 @@
             r.e(2011),
             r.e(6850),
             r.e(4359),
+            r.e(7911),
             r.e(5603),
-            r.e(1406),
+            r.e(6866),
             r.e(7854),
             r.e(1240),
             r.e(6855),
@@ -70083,7 +70126,6 @@
             r.e(8970),
             r.e(6597),
             r.e(2715),
-            r.e(4607),
             r.e(7937),
             r.e(5500),
             r.e(7276),
@@ -70115,7 +70157,6 @@
         no = n.lazy(() =>
           Promise.all([
             r.e(8970),
-            r.e(4607),
             r.e(2797),
             r.e(7436),
             r.e(7403),
@@ -70127,7 +70168,6 @@
         so = n.lazy(() =>
           Promise.all([
             r.e(8970),
-            r.e(4607),
             r.e(2797),
             r.e(7436),
             r.e(7403),
@@ -70139,7 +70179,6 @@
         ao = n.lazy(() =>
           Promise.all([
             r.e(8970),
-            r.e(4607),
             r.e(2797),
             r.e(7436),
             r.e(7403),

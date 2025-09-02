@@ -29,7 +29,6 @@ GHomepage = {
 	rgCommunityRecommendations: [],
 	rgCommunityRecommendationsByAppID: {},
 	strCommunityRecommendationsPrefLastSaved: false,
-	rgRecommendedBySteamLabsApps: [],
 	rgRecommendedByDeepDiveApps: [],
 	rgRecommendedByDeepDiveKeyTags: [],
 	rgRecommendedByDeepDiveAppTags: [],
@@ -41,6 +40,7 @@ GHomepage = {
 	rgRecentAppsByCreator: [],
 	rgAppsRecommendedByCurators: [],
 	rgTopSteamCurators: [],
+	rgAccountTagBuckets: [],
 
 	rgfnCustomRenders: [],
 
@@ -57,6 +57,7 @@ GHomepage = {
 	MainCapCluster: null,
 
 	rgContentHubs: [],
+	rgFeaturedTagBuckets: [],
 
 	bSteamOS: false,
 	eHWVariant: 0, /* k_EHardwareVariant_Unknown */
@@ -101,10 +102,11 @@ GHomepage = {
 						$TakeoverLink.css( 'height', nInitialTakeoverLinkHeight + 'px' );
 				}
 			} ).trigger('Responsive_SmallScreenModeToggled.StoreHomeLayout');
+
+			GHomepage.InitTakeoverVideos();
 		}
 
 		InitHorizontalAutoSliders();
-		InitVideoFocusWatcher();
 
 		if ( $J( '#load_addtl_scroll_target' ).length )
 			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
@@ -192,6 +194,7 @@ GHomepage = {
 				}
 			}
 
+			GHomepage.rgAccountTagBuckets = rgParams.rgAccountTagBuckets || [];
 			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
 			GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
 			GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
@@ -218,6 +221,7 @@ GHomepage = {
 		try {
 			GHomepage.oDisplayListsRaw = rgParams.rgDisplayLists;
 			GHomepage.rgContentHubs = rgParams.rgContentHubs || [];
+			GHomepage.rgFeaturedTagBuckets = rgParams.rgFeaturedTagBuckets || [];
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
 			GHomepage.bIsSeasonalSale = rgParams.bIsSeasonalSale || false;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
@@ -358,6 +362,12 @@ GHomepage = {
 		// Spotlight/specials section
 		try {
 			GHomepage.RenderSpotlightSection();
+		} catch( e ) { OnHomepageException(e); }
+
+		// Tags Section
+		try {
+			if ( !bHaveUser )
+				GHomepage.RenderTagBucketSection();
 		} catch( e ) { OnHomepageException(e); }
 
 		try {
@@ -1467,7 +1477,6 @@ GHomepage = {
 
 	},
 
-
 	RenderRecommendedCreatorApps: function()
 	{
 		let rgRecommendedAppsByCreators = v_shuffle( GHomepage.oAdditionalData.rgRecommendedAppsByCreators ) || [];
@@ -1520,13 +1529,24 @@ GHomepage = {
 		GHomepage.FillPagedCapsuleCarousel( rgCapsulesToRender, $RecommendedCreators,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
-				var nAppId = oItem.appid;
-				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, null, null, rgOptions, nDepth );
-				$CapCtn.append( BuildCreatorCapsuleToAppend( oItem ) );
+				let $CapCtn = null;
+				if ( $RecommendedCreators.hasClass( 'v2' ) )
+				{
+					$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', 'discount_block_inline', false, false, true );
+					GHomepage.AddCuratorToCapsule( $CapCtn, oItem.avatar_sha, oItem.name );
+				}
+				else
+				{
+					let nAppId = oItem.appid;
+					$CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, null, null, rgOptions, nDepth );
+					$CapCtn.append( BuildCreatorCapsuleToAppend( oItem ) );
+				}
 
 				return $CapCtn;
 			},	'creator_recommendations', 4
 		);
+
+		GDynamicStore.MarkAppDisplayed( rgCapsulesToRender, 4 );
 	},
 
 	RenderRecommendedByDeepDiveCarousel: function()
@@ -2042,9 +2062,63 @@ GHomepage = {
 
 	},
 
+	RenderTagBucketSection: function()
+	{
+		$Parent = $J( '#home_accountblocks_section' );
+		if ( !$Parent.length )
+			return;
+
+		$J( '#home_wishlistdlc_section' ).hide();
+
+		const rgTagBuckets = [ ...GHomepage.rgAccountTagBuckets, ...GHomepage.rgFeaturedTagBuckets ];
+
+		$TagBlocksSection = $J( '#home_tags_section' );
+		if ( !rgTagBuckets.length || !$TagBlocksSection.length )
+		{
+			$Parent.hide();
+			return;
+		}
+
+		const k_cTagBucketsToShow = 2;
+		let cTagBlocksShown = 0;
+		for( var iTag = 0; iTag < rgTagBuckets.length && cTagBlocksShown < k_cTagBucketsToShow; iTag++ )
+		{
+			const TagData = rgTagBuckets[iTag];
+			if ( !TagData.items )
+				continue;
+
+			let rgItemsPassingFilter = GHomepage.FilterItemsForDisplay(
+				TagData.items, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
+			);
+
+			if ( rgItemsPassingFilter.length !== 4 )
+				continue;
+
+			let $Ctn = $J( '<div/>', {'class': 'home_discounts_block'} );
+
+			let $TitleCtn = $J('<div/>', { 'class': 'home_title_ctn' } ).append( $J('<div/>', { 'class': 'home_title'}).html( TagData.name ) );
+			$TitleCtn.append( $J('<div/>', { 'class': 'home_section_subtitle'} ).text( TagData.recommended ? 'Recommended tag based on what you play' : 'Featured tag' ) )
+			$Ctn.append( $TitleCtn );
+
+			let $GamesCtn =  $J('<div/>', { 'class': 'home_discount_games_ctn' } );
+			GHomepage.RenderHomeTwoByTwoSection( $GamesCtn, rgItemsPassingFilter, 'sale_tag_bucket_top' );
+			$Ctn.append( $GamesCtn );
+
+			let $SeeMore = $J('<div/>', { 'class': 'see_more_link' } );
+			$SeeMore.append( $J('<a/>', {'class': 'btnv6_white_transparent btn_small_tall', 'href': TagData.url } ).html( '<span>' + 'See More' + '</span>' ) );
+			$Ctn.append( $SeeMore );
+
+			$TagBlocksSection.append( $Ctn );
+			GDynamicStore.MarkAppDisplayed( rgItemsPassingFilter );
+			cTagBlocksShown++;
+		}
+
+		$Parent.css( { minHeight: '' } );
+	},
+
 	RenderWishlistAndDLCArea: function()
 	{
-		let $Parent = $J('#home_sale_account_ctn');
+		let $Parent = $J('#home_accountblocks_section');
 		if ( !$Parent.length )
 			return;
 
@@ -2056,36 +2130,30 @@ GHomepage = {
 			GHomepage.oAdditionalData.dlc_onsale, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
-		// do we have enough to display?
+		// fallback to tags section
 		if ( rgWishlistOnSaleFiltered.length < 4 && rgDLCOnSaleFiltered.length < 4 )
 		{
-			$Parent.hide();
+			GHomepage.RenderTagBucketSection();
 			return;
 		}
 
 		var bSingle = rgWishlistOnSaleFiltered.length < 4 || rgDLCOnSaleFiltered.length < 4;
-		if ( rgWishlistOnSaleFiltered.length < 4 )
-		{
-			$J('#wishlist_tier').parents('.home_discounts_block').hide();
-		}
-		else
+		if ( rgWishlistOnSaleFiltered.length )
 		{
 			if ( bSingle )
 				$J('#wishlist_tier').addClass( 'single_row' );
 			GHomepage.RenderHomeTwoByTwoSection( $J('#wishlist_tier' ), rgWishlistOnSaleFiltered, 'sale_fromyourwishlist', true );
 			GDynamicStore.MarkAppDisplayed( rgWishlistOnSaleFiltered );
+			$J('.wishlist_block').show();
 		}
 
-		if ( rgDLCOnSaleFiltered.length < 4 )
-		{
-			$J('#dlc_tier').parents('.home_discounts_block').hide();
-		}
-		else
+		if ( rgDLCOnSaleFiltered.length )
 		{
 			if ( bSingle )
 				$J('#dlc_tier').addClass( 'single_row' );
 			GHomepage.RenderHomeTwoByTwoSection( $J('#dlc_tier' ), rgDLCOnSaleFiltered, 'sale_dlcforyou', true );
 			GDynamicStore.MarkAppDisplayed( rgDLCOnSaleFiltered );
+			$J('.dlc_block').show();
 		}
 
 		// we load with a fixed height to prevent the page from jumping around.  Eliminate that now.
@@ -2451,7 +2519,8 @@ GHomepage = {
 						'src': 'https://store.fastly.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif'
 					});
 					$Img.data('src-header', rgItemData['header']);
-				} else
+				}
+				else
 				{
 					$Img = $J('<img/>', {
 						'class': 'sale_capsule_image autosize',
@@ -2467,7 +2536,7 @@ GHomepage = {
 		$Img.attr( 'alt', rgItemData['name'] );
 
 		$CapCtn.append( $J('<div/>', {'class': 'sale_capsule_image_ctn add_microtrailer' } ).append( $J('<div/>', {'class': 'sale_capsule_image_hover'} ), $Img ) );
-		$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : '' );
+		$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : 'discount_block_inline' );
 
 		var rgAppInfo = GStoreItemData.rgAppData[ item.appid ];
 		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
@@ -2478,6 +2547,16 @@ GHomepage = {
 		GHomepage.AddMicrotrailerToCapsule( $CapCtn, rgItemData.microtrailer );
 
 		return $CapCtn;
+	},
+
+	AddCuratorToCapsule: function( $CapCtn, strAvatar, strCuratorName )
+	{
+		if ( !strAvatar || !strCuratorName )
+			return;
+
+		let $Curator = $J( '<img/>', { 'class': 'sale_capsule_curator', 'src': GetAvatarURL( strAvatar, '_full' ), 'alt': strCuratorName, "data-tooltip-text": strCuratorName } );
+
+		$CapCtn.append( $Curator );
 	},
 
 	AddMicrotrailersToStaticCaps: function( $Parent )
@@ -2813,7 +2892,6 @@ GHomepage = {
 		return $Item;
 	},
 
-
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )
 	{
 
@@ -2879,6 +2957,98 @@ GHomepage = {
 			$TagList.InstrumentLinks();
 			$TagBlock.show();
 		}
+	},
+
+	PlayTakeoverVideo: function()
+	{
+		const $elDesktopVideo = document.getElementById('home_video_desktop');
+		const $elMobileVideo =  document.getElementById('home_video_mobile');
+
+		
+		if ( window.innerWidth <= 500 )
+		{
+			if ( $elMobileVideo )
+				$elMobileVideo.play();
+			if ( $elDesktopVideo )
+				$elDesktopVideo.pause();
+		}
+		else
+		{
+			if ( $elDesktopVideo )
+				$elDesktopVideo.play();
+			if ( $elMobileVideo )
+				$elMobileVideo.pause();
+		}
+	},
+
+	InitTakeoverVideos: function()
+	{
+		const intersectionOptions = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 0.5
+		};
+
+		let bIsTakeoverVisible = false;
+
+		const elTakeoverVideoCtn = document.getElementById( 'takeover_videos' );
+		if ( elTakeoverVideoCtn )
+		{
+			const intersectionObserver = new IntersectionObserver( ([e]) =>
+			{
+				bIsTakeoverVisible = e.isIntersecting;
+				if ( bIsTakeoverVisible )
+				{
+					fnResetInteractionTimeoutAndPlay();
+				}
+				else
+				{
+					fnPauseVideo();
+				}
+			}, intersectionOptions );
+
+			intersectionObserver.observe( elTakeoverVideoCtn );
+		}
+
+		const k_strVideoSelector = 'video[data-video-pause-on-blur],video.fullscreen-bg__video,video.fullscreen-bg__video_mobile';
+		const k_msActivityTimeout = 30000;
+		let nActivityTimeoutID = undefined;
+
+		const fnResetInteractionTimeoutAndPlay = function()
+		{
+			if ( nActivityTimeoutID )
+			{
+				window.clearTimeout( nActivityTimeoutID );
+			}
+
+			if ( bIsTakeoverVisible )
+			{
+				GHomepage.PlayTakeoverVideo();
+			}
+
+			$J( 'video[data-video-pause-on-blur]' ).trigger( 'play' );
+
+			
+			nActivityTimeoutID = window.setTimeout( fnPauseVideo, k_msActivityTimeout );
+		}
+
+		const fnPauseVideo = function()
+		{
+			
+			$J( k_strVideoSelector ).trigger( 'pause' );
+		}
+
+		const fnStartInteractionTimeout = function()
+		{
+			if ( !nActivityTimeoutID )
+			{
+								nBlurTimeoutId = window.setTimeout( fnPauseVideo, k_msActivityTimeout );
+			}
+		}
+
+		$J( window ).on( 'mouseover click scroll focus touchstart vgp_onfocus resize', fnResetInteractionTimeoutAndPlay );
+
+		fnStartInteractionTimeout();
 	},
 };
 
@@ -3364,11 +3534,31 @@ GSteamCurators = {
 					break;
 				}
 
+				const $CuratorCarousel = $J('.more_apps_by_curators_capsule');
+				GHomepage.FillPagedCapsuleCarousel( rgRecommendedApps, $CuratorCarousel,
+					function( oItem, strFeature, rgOptions, nDepth )
+					{
+						let $CapCtn = null;
+						if ( $CuratorCarousel.hasClass( 'v2' ) )
+						{
+							$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', 'discount_block_inline', false, false, true );
 
-				GHomepage.FillPagedCapsuleCarousel( rgRecommendedApps, $J('.more_apps_by_curators_capsule'),
-					GSteamCurators.BuildHomePageGenericCap,	'curated_app', 4
+							const curatorsCache = GSteamCurators.rgAppsRecommendedByCurators.curators;
+							const clanID = oItem.rgCurators[0];
+							if ( curatorsCache.hasOwnProperty( clanID ) )
+							{
+								const curator = curatorsCache[clanID];
+								GHomepage.AddCuratorToCapsule( $CapCtn, curator.strAvatarHash, curator.name );
+							}
+						}
+						else
+						{
+							$CapCtn  = GSteamCurators.BuildHomePageGenericCap( oItem, strFeature );
+						}
+
+						return $CapCtn;
+					},	'curated_app', 4
 				);
-
 
 				return;
 			}
@@ -4029,25 +4219,3 @@ function InitTopSellersControls( $Controls, RangeInitData )
 	});
 
 }
-
-function PlayTakeoverVideo()
-{
-	const $elDesktopVideo = document.getElementById('home_video_desktop');
-	const $elMobileVideo =  document.getElementById('home_video_mobile');
-
-	if ( window.innerWidth <= 500 )
-	{
-		if ( $elMobileVideo )
-			$elMobileVideo.play();
-		if ( $elDesktopVideo )
-			$elDesktopVideo.pause();
-	}
-	else
-	{
-		if ( $elDesktopVideo )
-			$elDesktopVideo.play();
-		if ( $elMobileVideo )
-			$elMobileVideo.pause();
-	}
-}
-

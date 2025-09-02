@@ -2792,8 +2792,8 @@
         X = a(61859),
         ee = a(21082),
         te = a(55263),
-        ae = a(94607),
-        re = a(84811);
+        ae = a(84811),
+        re = a(40236);
       function se(e) {
         const { SteamInterface: t } = e,
           a = _.useRef(void 0);
@@ -2911,7 +2911,7 @@
           null,
           t.map((e) =>
             _.createElement(
-              re.tH,
+              ae.tH,
               { key: e.nClusterID },
               _.createElement(oe, { cluster: e }),
             ),
@@ -2923,103 +2923,100 @@
           [a, r] = _.useState(!1),
           s = _.useCallback(() => r(!0), [r]),
           [n, i] = _.useState(!1),
-          l = _.useCallback(() => i(!0), [i]);
+          l = _.useCallback(() => i(!0), [i]),
+          o = (0, re.OO)({ onEnter: l });
         return _.createElement(
-          ae.Y,
-          { onEnter: l },
+          "div",
+          { ref: o, className: ee.PlaytimeCluster },
           _.createElement(
             "div",
-            { className: ee.PlaytimeCluster },
+            { className: ee.ClusterInfo },
+            _.createElement("h1", null, "Cluster ", t.nClusterID),
             _.createElement(
-              "div",
-              { className: ee.ClusterInfo },
-              _.createElement("h1", null, "Cluster ", t.nClusterID),
+              ae.tH,
+              null,
               _.createElement(
-                re.tH,
-                null,
+                "div",
+                { className: ee.Overview },
                 _.createElement(
                   "div",
-                  { className: ee.Overview },
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Total Playtime:"),
-                    " ",
-                    Math.floor(t.nPlaytimeMinutes / 6) / 10,
-                    "hr",
-                  ),
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Last Played:"),
-                    " ",
-                    (0, X.$z)(t.rtLastPlayed),
-                    " ",
-                  ),
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Games played:"),
-                    " ",
-                    n &&
-                      t.rgAppIDsPlayed.map((e) =>
-                        _.createElement(
-                          _.Fragment,
-                          { key: e },
-                          _.createElement(me, { appid: e }),
-                          ", ",
-                        ),
-                      ),
-                  ),
-                  _.createElement(
-                    "div",
-                    null,
-                    _.createElement("b", null, "Popularity Score:"),
-                    " ",
-                    Math.floor(100 * t.flPopularityScore),
-                    "%  ",
-                    _.createElement(
-                      "span",
-                      {
-                        title:
-                          "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
-                        style: { cursor: "default" },
-                      },
-                      "(?)",
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              { className: ee.ClusterMembers },
-              _.createElement("h3", null, "Similar titles:"),
-              _.createElement(
-                re.tH,
-                null,
-                _.createElement(
-                  "ul",
                   null,
-                  t.rgSimilarItems.map((e, t) =>
-                    a || t < 4
-                      ? _.createElement(
-                          "li",
-                          { key: e.GetUniqueID() },
-                          _.createElement(pe, { item: e }),
-                        )
-                      : null,
+                  _.createElement("b", null, "Total Playtime:"),
+                  " ",
+                  Math.floor(t.nPlaytimeMinutes / 6) / 10,
+                  "hr",
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement("b", null, "Last Played:"),
+                  " ",
+                  (0, X.$z)(t.rtLastPlayed),
+                  " ",
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement("b", null, "Games played:"),
+                  " ",
+                  n &&
+                    t.rgAppIDsPlayed.map((e) =>
+                      _.createElement(
+                        _.Fragment,
+                        { key: e },
+                        _.createElement(me, { appid: e }),
+                        ", ",
+                      ),
+                    ),
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement("b", null, "Popularity Score:"),
+                  " ",
+                  Math.floor(100 * t.flPopularityScore),
+                  "%  ",
+                  _.createElement(
+                    "span",
+                    {
+                      title:
+                        "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
+                      style: { cursor: "default" },
+                    },
+                    "(?)",
                   ),
                 ),
               ),
-              !a &&
-                _.createElement(
-                  E.$n,
-                  { onClick: s },
-                  "Show all ",
-                  t.rgSimilarItems.length,
-                ),
             ),
+          ),
+          _.createElement(
+            "div",
+            { className: ee.ClusterMembers },
+            _.createElement("h3", null, "Similar titles:"),
+            _.createElement(
+              ae.tH,
+              null,
+              _.createElement(
+                "ul",
+                null,
+                t.rgSimilarItems.map((e, t) =>
+                  a || t < 4
+                    ? _.createElement(
+                        "li",
+                        { key: e.GetUniqueID() },
+                        _.createElement(pe, { item: e }),
+                      )
+                    : null,
+                ),
+              ),
+            ),
+            !a &&
+              _.createElement(
+                E.$n,
+                { onClick: s },
+                "Show all ",
+                t.rgSimilarItems.length,
+              ),
           ),
         );
       }
@@ -3644,7 +3641,7 @@
               "div",
               { className: S.SandboxSection },
               _.createElement(
-                re.tH,
+                ae.tH,
                 null,
                 _.createElement(
                   f.dO,

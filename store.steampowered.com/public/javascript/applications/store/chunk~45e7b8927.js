@@ -20,7 +20,7 @@
         l3: () => N,
         mo: () => g,
         pt: () => l,
-        zq: () => H,
+        zq: () => J,
       });
       var i,
         s = r(80613),
@@ -2714,73 +2714,12 @@
           return "CLoyaltyRewards_BatchedQueryRewardItems_Response_Response";
         }
       }
-      class H extends s.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            H.prototype.steamid || n.Sg(H.M()),
-            s.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            H.sm_m ||
-              (H.sm_m = {
-                proto: H,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.qM.readFixed64String,
-                    bw: n.gp.writeFixed64String,
-                  },
-                  language: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            H.sm_m
-          );
-        }
-        static MBF() {
-          return H.sm_mbf || (H.sm_mbf = n.w0(H.M())), H.sm_mbf;
-        }
-        toObject(e = !1) {
-          return H.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(H.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(H.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (a().BinaryReader)(e),
-            r = new H();
-          return H.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(H.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return H.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(H.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CLoyaltyRewards_GetEquippedProfileItems_Request";
-        }
-      }
       class J extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            J.prototype.active_definitions || n.Sg(J.M()),
-            s.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
+            J.prototype.steamid || n.Sg(J.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2790,9 +2729,12 @@
               (J.sm_m = {
                 proto: J,
                 fields: {
-                  active_definitions: { n: 1, c: N, r: !0, q: !0 },
-                  inactive_definitions: { n: 2, c: N, r: !0, q: !0 },
-                  bundle_definitions: { n: 3, c: N, r: !0, q: !0 },
+                  steamid: {
+                    n: 1,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                  language: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             J.sm_m
@@ -2828,6 +2770,64 @@
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
           return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CLoyaltyRewards_GetEquippedProfileItems_Request";
+        }
+      }
+      class Y extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Y.prototype.active_definitions || n.Sg(Y.M()),
+            s.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Y.sm_m ||
+              (Y.sm_m = {
+                proto: Y,
+                fields: {
+                  active_definitions: { n: 1, c: N, r: !0, q: !0 },
+                  inactive_definitions: { n: 2, c: N, r: !0, q: !0 },
+                  bundle_definitions: { n: 3, c: N, r: !0, q: !0 },
+                },
+              }),
+            Y.sm_m
+          );
+        }
+        static MBF() {
+          return Y.sm_mbf || (Y.sm_mbf = n.w0(Y.M())), Y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(Y.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(Y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (a().BinaryReader)(e),
+            r = new Y();
+          return Y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(Y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CLoyaltyRewards_GetEquippedProfileItems_Response";
@@ -2973,8 +2973,8 @@
           (e.GetEquippedProfileItems = function (e, t) {
             return e.SendMsg(
               "LoyaltyRewards.GetEquippedProfileItems#1",
-              (0, m.I8)(H, t),
-              J,
+              (0, m.I8)(J, t),
+              Y,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           });
@@ -5348,7 +5348,7 @@
         }
         FindScrollableAncestor(e) {
           return a.Kf(e, (e) => {
-            const t = this.props.bHorizontal
+            const t = this.props.horizontal
               ? window.getComputedStyle(e).overflowX
               : window.getComputedStyle(e).overflowY;
             return (
@@ -5375,7 +5375,7 @@
             onVisibilityChange: e,
             rootMargin: t,
             trigger: r,
-            bHorizontal: i,
+            horizontal: i,
             ...a
           } = this.props;
           return s.createElement(

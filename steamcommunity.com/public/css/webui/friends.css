@@ -11745,6 +11745,10 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .qrcode_QRBits_3BALY {
   display: grid;
 }
+.qrcode_QRImg_5S5Wq {
+  width: 100%;
+  image-rendering: pixelated;
+}
 .qrcode_Bit_1YVDT.qrcode_Active_1zNnN {
   background-color: #212328;
 }

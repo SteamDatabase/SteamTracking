@@ -3530,7 +3530,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       let _ = class extends _.Component {
         OnMuteButton(_) {
@@ -4507,6 +4506,7 @@
       (0, _._)([_._], _.prototype, "OnPerformVoteUp", null),
         (0, _._)([_._], _.prototype, "OnDiscussionClicked", null),
         (_ = (0, _._)([_._], _));
+      var _ = __webpack_require__("chunkid");
       const _ = {
         include_assets: !0,
         include_release: !0,
@@ -4519,52 +4519,53 @@
               mode: _,
               forceParentUpdate: _,
             } = _,
-            _ = "-500px",
+            _ = "500px",
             _ = _()[`EventType${_.event_type}`],
             _ = (0, _._)(_().TileContainer, _),
-            _ = "carousel" === _;
-          return _.createElement(
-            _._,
-            {
-              onEnter: () => {
-                !(function (_, _, _) {
-                  const _ = Array();
-                  _.push(_.QueueLoadPartnerEvent(_.clanid, _.unique_id)),
-                    _.appid && _.push(_._.Get().QueueAppRequest(_.appid, _)),
-                    _.clanInfo &&
-                      _.push(
-                        _._.LoadClanInfoForClanAccountID(_.clanInfo.clanid),
-                      ),
-                    Promise.all(_).then(() => {
-                      const _ = _.GetClanEventModel(_.unique_id);
-                      _ &&
-                      _.appid &&
-                      _.appid != _.appid &&
-                      !_._.Get().BHasApp(_.appid, _)
-                        ? _._.Get().QueueAppRequest(_.appid, _).then(_)
-                        : __webpack_require__();
-                    });
-                })(_, __webpack_require__, _);
+            _ = "carousel" === _,
+            _ = (0, _._)(
+              {
+                onEnter: () => {
+                  !(function (_, _, _) {
+                    const _ = Array();
+                    _.push(_.QueueLoadPartnerEvent(_.clanid, _.unique_id)),
+                      _.appid && _.push(_._.Get().QueueAppRequest(_.appid, _)),
+                      _.clanInfo &&
+                        _.push(
+                          _._.LoadClanInfoForClanAccountID(_.clanInfo.clanid),
+                        ),
+                      Promise.all(_).then(() => {
+                        const _ = _.GetClanEventModel(_.unique_id);
+                        _ &&
+                        _.appid &&
+                        _.appid != _.appid &&
+                        !_._.Get().BHasApp(_.appid, _)
+                          ? _._.Get().QueueAppRequest(_.appid, _).then(_)
+                          : __webpack_require__();
+                      });
+                  })(_, __webpack_require__, _);
+                },
               },
-              topOffset: _,
-              bottomOffset: _,
+              {
+                rootMargin: `${_} 0px ${_} 0px`,
+              },
+            );
+          return _.createElement(
+            "div",
+            {
+              className: _,
+              ref: _,
             },
             _.createElement(
               "div",
               {
-                className: _,
+                className: (0, _._)(_().Tile, _().LoadingTile),
               },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().Tile, _().LoadingTile),
-                },
-                _ && _.createElement(_._, null),
-              ),
-              _.createElement("div", {
-                className: _().Footer,
-              }),
+              _ && _.createElement(_._, null),
             ),
+            _.createElement("div", {
+              className: _().Footer,
+            }),
           );
         }),
         _ = (0, _._)((_) => {

@@ -127,6 +127,7 @@
     5804: (e) => {
       e.exports = {
         QRBits: "_3BALYLTpJdiDaC7JKmeeFJ",
+        QRImg: "_5S5WqZhvbmRD1cHQT8P-l",
         Bit: "_1YVDTFYSTDWouyIbRs_hN_",
         Active: "_1zNnNw2BDhrN6ML6YxBYJE",
       };
@@ -7223,8 +7224,8 @@
           quality: t = ce.M,
           children: r,
           className: i,
-          activeBitColor: n = null,
-          inactiveBitColor: s = null,
+          activeBitColor: n = [33, 35, 40],
+          inactiveBitColor: s = [255, 255, 255],
           borderWidth: o = 3,
           typeNumber: c = 6,
         } = e;
@@ -7244,30 +7245,59 @@
         for (let e = 0; e < l.length; e++)
           u.push([].concat(Array(o).fill(!1), l[e], Array(o).fill(!1)));
         for (let e = 0; e < o; e++) u.push(Array(l.length + 2 * o).fill(!1));
-        const m = [],
-          d = (0, f.A)(he().Bit),
-          g = (0, f.A)(he().Bit, he().Active),
-          h = null !== n ? { backgroundColor: n } : {},
-          p = null !== s ? { backgroundColor: s } : {};
-        for (let e = 0; e < u.length; e++)
-          for (let t = 0; t < u.length; t++) {
-            const r = u[e][t];
-            m.push(
-              a.createElement("div", {
-                key: `${e}_${t}`,
-                className: r ? g : d,
-                style: r ? h : p,
-              }),
-            );
-          }
-        let _ = u.length;
+        const m = (function (e, t, r) {
+            const i = e.length,
+              n = e[0].length,
+              s = new Uint8Array(40 + (i + 2) * n);
+            let a = 0;
+            (s[a++] = 71),
+              (s[a++] = 73),
+              (s[a++] = 70),
+              (s[a++] = 56),
+              (s[a++] = 57),
+              (s[a++] = 97),
+              (s[a++] = i),
+              (s[a++] = 0),
+              (s[a++] = n),
+              (s[a++] = 0),
+              (s[a++] = 161),
+              (s[a++] = 0),
+              (s[a++] = 0),
+              (s[a++] = t[0]),
+              (s[a++] = t[1]),
+              (s[a++] = t[2]),
+              (s[a++] = r[0]),
+              (s[a++] = r[1]),
+              (s[a++] = r[2]),
+              (s[a++] = 255),
+              (s[a++] = 255),
+              (s[a++] = 255),
+              (s[a++] = 255),
+              (s[a++] = 255),
+              (s[a++] = 255),
+              (s[a++] = 44),
+              (s[a++] = 0),
+              (s[a++] = 0),
+              (s[a++] = 0),
+              (s[a++] = 0),
+              (s[a++] = i),
+              (s[a++] = 0),
+              (s[a++] = n),
+              (s[a++] = 0),
+              (s[a++] = 0),
+              (s[a++] = 7);
+            for (let t = 0; t < e.length; t++) {
+              (s[a++] = i + 1), (s[a++] = 128);
+              for (let r = 0; r < e.length; r++) s[a++] = e[t][r] ? 0 : 1;
+            }
+            return (s[a++] = 1), (s[a++] = 129), (s[a++] = 0), (s[a++] = 59), s;
+          })(u, n, s),
+          d = new Blob([m], { type: "image/gif" }),
+          g = URL.createObjectURL(d);
         return a.createElement(
           "div",
-          {
-            className: (0, f.A)(he().QRBits, i),
-            style: { gridTemplateColumns: `repeat( ${_}, 1fr )` },
-          },
-          m,
+          { className: (0, f.A)(he().QRBits, i) },
+          a.createElement("img", { className: he().QRImg, src: g }),
         );
       }
       !(function (e) {
@@ -7423,8 +7453,8 @@
               pe,
               {
                 borderWidth: 0,
-                activeBitColor: "#212328",
-                inactiveBitColor: y ? "magenta" : "white",
+                activeBitColor: [21, 23, 28],
+                inactiveBitColor: y ? [255, 0, 255] : [255, 255, 255],
                 quality: we(g),
                 className: (0, f.A)(
                   be().LoginQR,
@@ -7673,17 +7703,18 @@
         );
       }
       async function qe() {
-        const [e, t, r] = await Promise.all([
+        const [e, t, r, i] = await Promise.all([
           SteamClient.System.GetOSType(),
+          SteamClient.System.GetSystemInfo(),
           SteamClient?.Auth?.GetLocalHostname?.() ?? "",
           SteamClient?.Auth?.GetMachineID?.() ?? void 0,
         ]);
         return {
           os_type: e,
-          device_friendly_name: t,
-          machine_id: r,
+          device_friendly_name: r,
+          machine_id: i,
           platform_type: 1,
-          gaming_device_type: v.TS.ON_DECK ? 544 : 1,
+          gaming_device_type: t.eGamingDeviceType,
         };
       }
       async function We() {

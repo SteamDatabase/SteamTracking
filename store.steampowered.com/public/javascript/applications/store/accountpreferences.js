@@ -429,8 +429,8 @@
                   (0, _.we)("#CookiePref_AcceptAll"),
                 ),
               ),
-              n.createElement(S, { settings: e }),
               n.createElement(y, { settings: e }),
+              n.createElement(S, { settings: e }),
               n.createElement(N, { settings: e }),
             ),
             n.createElement(
@@ -594,7 +594,7 @@
             null,
           );
         }),
-        S = (0, u.PA)((e) => {
+        y = (0, u.PA)((e) => {
           const { settings: t } = e,
             a = (0, n.useCallback)(() => {
               t.ToggleRecentApps();
@@ -624,7 +624,7 @@
             ),
           );
         }),
-        y = (0, u.PA)((e) => {
+        S = (0, u.PA)((e) => {
           const { settings: t } = e,
             a = (0, n.useCallback)(() => {
               t.ToggleImpressions();
@@ -1375,8 +1375,8 @@
         ge = a(31258),
         he = a(738),
         we = a(12155),
-        Se = a(32754),
-        ye = a(91675),
+        ye = a(32754),
+        Se = a(91675),
         Ne = a(14771),
         ke = a(11838),
         Pe = a(61359);
@@ -1598,7 +1598,7 @@
         g =
           E.country && r && r != E.country
             ? n.createElement(
-                Se.he,
+                ye.he,
                 {
                   className: Pe.Tooltip,
                   toolTipContent: (0, _.we)(
@@ -1700,7 +1700,7 @@
       function Ge(e) {
         const { msgTwoFactorUsage: t } = e;
         if (!t || !t.time) return null;
-        const a = (0, ye.Nm)(t.time);
+        const a = (0, Se.Nm)(t.time);
         let c = null;
         if (3 == t.usage_type)
           c = (0, _.we)("#authorized_devices_lasttwofactor_login", a);
@@ -1799,10 +1799,10 @@
         );
         return (
           t.last_seen?.time
-            ? (r = (0, ye.Nm)(t.last_seen.time))
+            ? (r = (0, Se.Nm)(t.last_seen.time))
             : t.time_updated &&
               t.time_updated > Math.floor(Date.now() / 1e3 - 7776e3) &&
-              (r = (0, ye.Nm)(t.time_updated)),
+              (r = (0, Se.Nm)(t.time_updated)),
           n.createElement(
             "div",
             { className: Pe.LastSeenRow },
@@ -1872,7 +1872,7 @@
             })(t),
             (0, _.TW)(t.first_seen.time) +
               " @ " +
-              (0, ye.KC)(t.first_seen.time),
+              (0, Se.KC)(t.first_seen.time),
           ),
         );
       }
@@ -1886,13 +1886,12 @@
                 className: (0, v.A)(Pe.DeviceLogo, Pe.RememberedDevice),
               })
             : n.createElement(A.FH7, { className: Pe.DeviceLogo });
-        else if (1 == t.platform_type && 544 === t.gaming_device_type)
-          r = c
-            ? n.createElement(A.VRo, {
-                className: (0, v.A)(Pe.DeviceLogo, Pe.RememberedDevice),
-              })
-            : n.createElement(A.oEi, { className: Pe.DeviceLogo });
-        else
+        else if (
+          1 != t.platform_type ||
+          (544 !== t.gaming_device_type &&
+            545 != t.gaming_device_type &&
+            541 != t.gaming_device_type)
+        )
           switch (t.os_platform) {
             case ge.t.k_EPlatformTypeWin32:
             case ge.t.k_EPlatformTypeWin64:
@@ -1911,6 +1910,12 @@
             case ge.t.k_EPlatformTypeIOS64:
               r = n.createElement(we.rfv, { className: Pe.DeviceLogo });
           }
+        else
+          r = c
+            ? n.createElement(A.VRo, {
+                className: (0, v.A)(Pe.DeviceLogo, Pe.RememberedDevice),
+              })
+            : n.createElement(A.oEi, { className: Pe.DeviceLogo });
         return a
           ? n.createElement(
               "div",
@@ -1952,9 +1957,17 @@
               ? (0, _.we)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )
-              : (0, _.we)(
-                  "#accountpreferences_authorized_devices_type_desktop",
-                );
+              : 545 == t.gaming_device_type
+                ? (0, _.we)(
+                    "#accountpreferences_authorized_devices_type_legiongos",
+                  )
+                : 541 == t.gaming_device_type
+                  ? (0, _.we)(
+                      "#accountpreferences_authorized_devices_type_steamos",
+                    )
+                  : (0, _.we)(
+                      "#accountpreferences_authorized_devices_type_desktop",
+                    );
           case 2:
             return (0, _.we)(
               "#accountpreferences_authorized_devices_type_browser",

@@ -211,6 +211,7 @@ select {
 	flex-direction: row;
 	gap: 8px;
 	margin-bottom: 6px;
+	flex-wrap: wrap;
 }
 
 .reviewTags .reviewTag {

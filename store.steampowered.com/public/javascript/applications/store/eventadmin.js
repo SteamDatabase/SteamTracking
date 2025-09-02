@@ -3624,13 +3624,13 @@
         w = n(12155),
         C = n(22797),
         b = n(32754),
-        y = n(94607),
-        f = n(52038),
-        M = n(56011),
-        A = n(61859),
-        I = n(52081),
-        T = n.n(I),
-        R = n(51706);
+        y = n(52038),
+        f = n(56011),
+        M = n(61859),
+        A = n(52081),
+        I = n.n(A),
+        T = n(51706),
+        R = n(40236);
       const B = (0, p.y)((e) => {
           const [t, n] = (0, u.useState)(!0);
           if (
@@ -3642,7 +3642,7 @@
             t)
           )
             return u.createElement(C.t, {
-              string: (0, A.we)("#Loading"),
+              string: (0, M.we)("#Loading"),
               size: "medium",
             });
           const a = c.Get().GetTrustedEnabledClans(!0),
@@ -3653,7 +3653,7 @@
             u.createElement(
               v.tH,
               null,
-              u.createElement("h1", null, (0, A.we)("#RSSModeration_Title")),
+              u.createElement("h1", null, (0, M.we)("#RSSModeration_Title")),
               u.createElement(D, null),
               u.createElement(k, {
                 rgClanIDs: c
@@ -3663,11 +3663,11 @@
               }),
               u.createElement(P, {
                 rgClanIDs: a,
-                strTitle: (0, A.we)("#RSSModeration_TrustTitle"),
+                strTitle: (0, M.we)("#RSSModeration_TrustTitle"),
               }),
               u.createElement(P, {
                 rgClanIDs: r,
-                strTitle: (0, A.we)("#RSSModeration_RestTitle"),
+                strTitle: (0, M.we)("#RSSModeration_RestTitle"),
               }),
             ),
           );
@@ -3677,19 +3677,19 @@
             [a, r] = (0, u.useState)(void 0);
           return t
             ? u.createElement(C.t, {
-                string: (0, A.we)("#Loading"),
+                string: (0, M.we)("#Loading"),
                 size: "medium",
               })
             : void 0 !== a
               ? Boolean(a.length > 0)
                 ? u.createElement(P, {
                     rgClanIDs: a,
-                    strTitle: (0, A.we)("#RSSModeration_InactiveAutomation"),
+                    strTitle: (0, M.we)("#RSSModeration_InactiveAutomation"),
                   })
                 : u.createElement(
                     "div",
                     null,
-                    (0, A.we)("#RSSModreation_AllAutomationEnabled"),
+                    (0, M.we)("#RSSModreation_AllAutomationEnabled"),
                   )
               : u.createElement(
                   h.$n,
@@ -3701,7 +3701,7 @@
                         n(!1);
                     },
                   },
-                  (0, A.we)("#RSSModeration_FindInActive"),
+                  (0, M.we)("#RSSModeration_FindInActive"),
                   " ",
                 );
         }),
@@ -3716,18 +3716,18 @@
               )),
             u.createElement(
               "div",
-              { className: (0, f.A)(T().SectionContainer) },
+              { className: (0, y.A)(I().SectionContainer) },
               u.createElement(
                 "h2",
                 {
-                  className: (0, f.A)(T().ModSectionTitle),
+                  className: (0, y.A)(I().ModSectionTitle),
                   onDoubleClick: () => r(!a),
                 },
                 n,
                 u.createElement("span", null, " "),
                 u.createElement(
                   h.$n,
-                  { className: T().ResizeButton, onClick: () => r(!a) },
+                  { className: I().ResizeButton, onClick: () => r(!a) },
                   a
                     ? u.createElement(w.hz4, null)
                     : u.createElement(w.Xjb, null),
@@ -3737,7 +3737,7 @@
                 u.createElement(
                   h.$n,
                   { onClick: () => r(!1) },
-                  (0, A.we)("#Sale_ShowContents"),
+                  (0, M.we)("#Sale_ShowContents"),
                 ),
               s,
             )
@@ -3755,25 +3755,23 @@
         }),
         L = (e) => {
           const { clanAccountID: t } = e,
-            n = "-500px";
-          return u.createElement(
-            y.Y,
-            {
-              onEnter: async () => {
-                const e = _.b.InitFromClanID(t);
-                await Promise.all([
-                  g.ac.LoadClanInfoForClanSteamID(e),
-                  r.A.Get().QueueCuratorAdminInfoLoad(t),
-                ]);
+            n = "500px",
+            a = (0, R.OO)(
+              {
+                onEnter: async () => {
+                  const e = _.b.InitFromClanID(t);
+                  await Promise.all([
+                    g.ac.LoadClanInfoForClanSteamID(e),
+                    r.A.Get().QueueCuratorAdminInfoLoad(t),
+                  ]);
+                },
               },
-              topOffset: n,
-              bottomOffset: n,
-            },
-            u.createElement(
-              "div",
-              { className: T().TileContainer },
-              u.createElement("div", null, (0, A.we)("#Loading"), " - ", t),
-            ),
+              { rootMargin: `${n} 0px ${n} 0px` },
+            );
+          return u.createElement(
+            "div",
+            { ref: a, className: I().TileContainer },
+            u.createElement("div", null, (0, M.we)("#Loading"), " - ", t),
           );
         },
         F = (e) => {
@@ -3792,10 +3790,10 @@
             p = r.A.Get().GetRSSAdminStats(t.clanAccountID);
           return u.createElement(
             "div",
-            { className: (0, f.A)(T().TileContainer) },
+            { className: (0, y.A)(I().TileContainer) },
             u.createElement(
               "div",
-              { className: (0, f.A)(T().TileSpread) },
+              { className: (0, y.A)(I().TileSpread) },
               u.createElement(
                 "div",
                 null,
@@ -3812,7 +3810,7 @@
                   u.createElement(
                     "div",
                     null,
-                    (0, A.we)("#CuratorAdmin_RSSFeed"),
+                    (0, M.we)("#CuratorAdmin_RSSFeed"),
                     ":",
                   ),
                   u.createElement("a", { href: n.GetRSSUrl() }, n.GetRSSUrl()),
@@ -3824,7 +3822,7 @@
                     u.createElement(
                       "div",
                       null,
-                      (0, A.we)(
+                      (0, M.we)(
                         "#RSSModeration_TotalEvents",
                         p.total_event_count.toLocaleString(),
                       ),
@@ -3832,7 +3830,7 @@
                     u.createElement(
                       "div",
                       null,
-                      (0, A.we)(
+                      (0, M.we)(
                         "#RSSModeration_RSSEvents",
                         p.rss_event_count.toLocaleString(),
                       ),
@@ -3841,7 +3839,7 @@
                 u.createElement(
                   h.$n,
                   { onClick: () => i(!a) },
-                  (0, A.we)(
+                  (0, M.we)(
                     a
                       ? "#Bbcode_Expand_Details_Expanded"
                       : "#Bbcode_Expand_Details_Collapsed",
@@ -3860,7 +3858,7 @@
                     u.createElement(
                       "a",
                       { href: o },
-                      (0, A.we)("#EventDisplay_NewsHubSubtitle"),
+                      (0, M.we)("#EventDisplay_NewsHubSubtitle"),
                     ),
                   ),
                   u.createElement(
@@ -3869,7 +3867,7 @@
                     u.createElement(
                       "a",
                       { href: l },
-                      (0, A.we)("#CuratorAdmin_RSSFeed_title"),
+                      (0, M.we)("#CuratorAdmin_RSSFeed_title"),
                     ),
                   ),
                   u.createElement(
@@ -3878,7 +3876,7 @@
                     u.createElement(
                       "a",
                       { href: c },
-                      (0, A.we)("#RSSModeration_GroupPage"),
+                      (0, M.we)("#RSSModeration_GroupPage"),
                     ),
                   ),
                   u.createElement(
@@ -3887,7 +3885,7 @@
                     u.createElement(
                       "a",
                       { href: m },
-                      (0, A.we)("#RSSModeration_SupportPage"),
+                      (0, M.we)("#RSSModeration_SupportPage"),
                     ),
                   ),
                   u.createElement(
@@ -3899,7 +3897,7 @@
               ),
               u.createElement(
                 "div",
-                { className: T().CreatorCtn },
+                { className: I().CreatorCtn },
                 u.createElement(S.hA, {
                   bHideCreatorType: !0,
                   creatorID: {
@@ -3920,7 +3918,7 @@
                   : u.createElement(
                       "div",
                       null,
-                      (0, A.we)("#RSSModeration_NoRSSFeed"),
+                      (0, M.we)("#RSSModeration_NoRSSFeed"),
                     ),
               ),
           );
@@ -3929,16 +3927,16 @@
           u.createElement(
             b.he,
             {
-              toolTipContent: (0, A.we)("#RSSModeration_ReindexAndReload_ttip"),
+              toolTipContent: (0, M.we)("#RSSModeration_ReindexAndReload_ttip"),
             },
             u.createElement(
               h.$n,
               {
                 onClick: (t) => {
-                  (0, E.pg)(u.createElement(N, { ...e }), (0, M.uX)(t));
+                  (0, E.pg)(u.createElement(N, { ...e }), (0, f.uX)(t));
                 },
               },
-              (0, A.we)("#RSSModeration_ReindexAndReload"),
+              (0, M.we)("#RSSModeration_ReindexAndReload"),
             ),
           ),
         N = (e) => {
@@ -3947,7 +3945,7 @@
             [s, i] = (0, u.useState)(void 0),
             o = () => e.closeModal && e.closeModal();
           return u.createElement(
-            R.x_,
+            T.x_,
             { onEscKeypress: o },
             u.createElement(
               h.UC,
@@ -3956,7 +3954,7 @@
                 h.Y9,
                 null,
                 " ",
-                (0, A.we)("#RSSModeration_ReindexAndReload"),
+                (0, M.we)("#RSSModeration_ReindexAndReload"),
                 " ",
               ),
               u.createElement(
@@ -3972,7 +3970,7 @@
                         u.createElement(
                           "span",
                           null,
-                          (0, A.we)(
+                          (0, M.we)(
                             "#RSSModeration_Reindex_Verify",
                             e.rgClanIDs.length,
                           ),
@@ -3990,7 +3988,7 @@
                                     .Get()
                                     .ReindexClanEventsAndReloadAccount(r))
                                 ) {
-                                  i((0, A.we)("#Error_Generic_Label"));
+                                  i((0, M.we)("#Error_Generic_Label"));
                                   break;
                                 }
                                 (t += 1), n(t);
@@ -3998,7 +3996,7 @@
                               r(!0);
                             },
                           },
-                          (0, A.we)("#Button_Continue"),
+                          (0, M.we)("#Button_Continue"),
                         ),
                       )
                     : u.createElement(
@@ -4007,7 +4005,7 @@
                         u.createElement(
                           "span",
                           null,
-                          (0, A.we)(
+                          (0, M.we)(
                             "#RSSModeration_Reindex_Action",
                             t,
                             e.rgClanIDs.length,
@@ -4017,13 +4015,13 @@
                           ? u.createElement(
                               "span",
                               null,
-                              (0, A.we)(
+                              (0, M.we)(
                                 "#EventEditor_ImportFromHTML_ConvertFinished",
                               ),
                             )
                           : u.createElement(C.t, {
                               size: "small",
-                              string: (0, A.we)("#Updating"),
+                              string: (0, M.we)("#Updating"),
                             }),
                       ),
                   Boolean(s) && u.createElement("span", null, s, " "),
@@ -4034,7 +4032,7 @@
                   u.createElement(
                     h.$n,
                     { onClick: o },
-                    (0, A.we)(a ? "#Button_OK" : "#Button_Cancel"),
+                    (0, M.we)(a ? "#Button_OK" : "#Button_Cancel"),
                   ),
                 ),
               ),
@@ -4910,7 +4908,7 @@
         return u.createElement(
           "div",
           null,
-          (0, A.PP)(
+          (0, M.PP)(
             n,
             u.createElement(
               "a",
@@ -4929,7 +4927,7 @@
       function we(e) {
         const { modAction: t } = e,
           n =
-            (0, A.TW)(t.m_rtWhen) +
+            (0, M.TW)(t.m_rtWhen) +
             " @ " +
             (0, he.KC)(t.m_rtWhen, { bForce24HourClock: !1 }),
           a = u.createElement(Ee, {
@@ -4941,7 +4939,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_Reviewed",
                 u.createElement("span", null, n),
                 a,
@@ -4951,7 +4949,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_UnReviewed",
                 u.createElement("span", null, n),
                 a,
@@ -4961,7 +4959,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_NewEventType",
                 u.createElement("span", null, n),
                 a,
@@ -4972,7 +4970,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_SeasonTagUpdate",
                 u.createElement("span", null, n),
                 a,
@@ -4983,7 +4981,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_ReReviewed",
                 u.createElement("span", null, n),
                 a,
@@ -4993,7 +4991,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_RemoveFromSC",
                 u.createElement("span", null, n),
                 a,
@@ -5003,7 +5001,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_FlagAdultContent",
                 u.createElement("span", null, n),
                 a,
@@ -5013,7 +5011,7 @@
             return u.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              (0, A.PP)(
+              (0, M.PP)(
                 "#EventModTile_Action_RemoveAdultContent",
                 u.createElement("span", null, n),
                 a,
@@ -5045,7 +5043,7 @@
               u.createElement(
                 "h4",
                 null,
-                (0, A.we)("#EventModTile_Action_Title"),
+                (0, M.we)("#EventModTile_Action_Title"),
               ),
               ((t) => {
                 const { eventModel: n } = e;
@@ -5061,13 +5059,13 @@
                 u.createElement(
                   "a",
                   { onClick: () => n(!1), className: ve.ExpandModActions },
-                  (0, A.we)("#EventModTile_Action_More", s - 3),
+                  (0, M.we)("#EventModTile_Action_More", s - 3),
                 ),
               Boolean(!i && s > 3) &&
                 u.createElement(
                   "a",
                   { onClick: () => n(!0), className: ve.ExpandModActions },
-                  (0, A.we)("#EventModTile_Action_Hide"),
+                  (0, M.we)("#EventModTile_Action_Hide"),
                 ),
             ));
       }
@@ -5246,13 +5244,13 @@
             u.createElement(
               "div",
               null,
-              u.createElement("h2", null, (0, A.we)("#EventModeration_Title")),
+              u.createElement("h2", null, (0, M.we)("#EventModeration_Title")),
               u.createElement(
                 v.tH,
                 null,
                 u.createElement(
                   "div",
-                  { className: (0, f.A)(fe().FlexRowContainer) },
+                  { className: (0, y.A)(fe().FlexRowContainer) },
                   u.createElement(Fe, {
                     fnRequireRefetchEvents: this.RefetchAllEventTiles,
                   }),
@@ -5268,7 +5266,7 @@
               u.createElement(C.t, {
                 position: "center",
                 size: "medium",
-                string: (0, A.we)("#Loading"),
+                string: (0, M.we)("#Loading"),
               }),
           );
         }
@@ -5298,12 +5296,12 @@
               u.createElement(
                 b.he,
                 {
-                  toolTipContent: (0, A.we)(
+                  toolTipContent: (0, M.we)(
                     "#EventModeration_ShowCustomFilter_ttip",
                   ),
                 },
                 u.createElement(h.Yh, {
-                  label: (0, A.we)("#EventModeration_ShowCustomFilter"),
+                  label: (0, M.we)("#EventModeration_ShowCustomFilter"),
                   checked: t.bUseCustomQuery,
                   onChange: (e) => {
                     (t.bUseCustomQuery = e), n();
@@ -5317,7 +5315,7 @@
               u.createElement(
                 "label",
                 { htmlFor: "EventPerLoad" },
-                (0, A.we)("#EventModeration_PerPageLoad"),
+                (0, M.we)("#EventModeration_PerPageLoad"),
               ),
               u.createElement(
                 "div",
@@ -5359,7 +5357,7 @@
               u.createElement(
                 "span",
                 null,
-                (0, A.we)("#EventModeration_FilterByTag"),
+                (0, M.we)("#EventModeration_FilterByTag"),
               ),
               u.createElement(ae.Ay, {
                 isSearchable: !0,
@@ -5378,7 +5376,7 @@
               u.createElement(
                 "span",
                 null,
-                (0, A.we)("#EventModeration_FilterExcludeByTag"),
+                (0, M.we)("#EventModeration_FilterExcludeByTag"),
               ),
               u.createElement(ae.Ay, {
                 isSearchable: !0,
@@ -5397,7 +5395,7 @@
               u.createElement(
                 "span",
                 null,
-                (0, A.we)("#EventModeration_FilterToType"),
+                (0, M.we)("#EventModeration_FilterToType"),
               ),
               u.createElement(ae.Ay, {
                 isSearchable: !0,
@@ -5416,7 +5414,7 @@
               u.createElement(
                 "span",
                 null,
-                (0, A.we)("#EventModeration_FilterToDate"),
+                (0, M.we)("#EventModeration_FilterToDate"),
               ),
               u.createElement(ne(), {
                 timeFormat: !1,
@@ -5442,7 +5440,7 @@
                   );
                 },
                 inputProps: {
-                  placeholder: (0, A.we)("#EventModeration_PickDatee"),
+                  placeholder: (0, M.we)("#EventModeration_PickDatee"),
                   className: Re.TimeWidth,
                 },
               }),
@@ -5462,28 +5460,28 @@
               u.createElement(
                 "label",
                 { htmlFor: "VisibilityStart" },
-                (0, A.we)("#EventModeration_OrderByFirstVisible"),
+                (0, M.we)("#EventModeration_OrderByFirstVisible"),
               ),
             ),
           );
         }),
         Ne = (0, m.PA)((e) => {
           const { onClick: t, event: n, bSaving: a } = e;
-          let r = (0, A.we)("#EventModTile_Moderate_ClearReviewed"),
+          let r = (0, M.we)("#EventModTile_Moderate_ClearReviewed"),
             s = Re.EventModerateClearReview,
             i = !1;
           return (
             (0, se.Xx)(n) ||
-              ((r = (0, A.we)("#EventModTile_Moderate_MarkReviewed")),
+              ((r = (0, M.we)("#EventModTile_Moderate_MarkReviewed")),
               (s = Re.EventModerateMarkReview),
               (i = !0)),
             a &&
-              ((r = (0, A.we)("#EventModTile_Moderate_Saving")),
+              ((r = (0, M.we)("#EventModTile_Moderate_Saving")),
               (s = Re.EventModerateSaving)),
             u.createElement(
               "button",
               {
-                className: (0, f.A)(fe().Button, Re.Button, s),
+                className: (0, y.A)(fe().Button, Re.Button, s),
                 onClick: () => t(i),
                 disabled: a,
               },
@@ -5495,17 +5493,17 @@
         Ue = (0, m.PA)((e) => {
           const { onClick: t, event: n, bSaving: a } = e,
             r = n.BHasTag("adult_only_content");
-          let s = (0, A.we)(
+          let s = (0, M.we)(
             r
               ? "#EventModTile_Moderate_RemoveAdultContent"
               : "#EventModTile_Moderate_FlagAdultContent",
           );
           return (
-            a && (s = (0, A.we)("#EventModTile_Moderate_Saving")),
+            a && (s = (0, M.we)("#EventModTile_Moderate_Saving")),
             u.createElement(
               "button",
               {
-                className: (0, f.A)(fe().Button, Re.Button),
+                className: (0, y.A)(fe().Button, Re.Button),
                 onClick: () => t(!r),
                 disabled: a,
               },
@@ -5517,18 +5515,18 @@
       function Oe(e) {
         const { onClick: t, event: n, bSaving: a } = e,
           r = (0, ee.q3)(() => n.BHasTag("halloween"));
-        let s = (0, A.we)(
+        let s = (0, M.we)(
           r
             ? "#EventModTile_Moderate_RemoveHalloweenFlag"
             : "#EventModTile_Moderate_FlagHalloween",
         );
-        a && (s = (0, A.we)("#EventModTile_Moderate_Saving"));
+        a && (s = (0, M.we)("#EventModTile_Moderate_Saving"));
         const i = Be.HD.GetTimeNowWithOverrideAsDate();
         return i.getMonth() >= 8 && i.getMonth() <= 10
           ? u.createElement(
               "button",
               {
-                className: (0, f.A)(fe().Button, Re.Button),
+                className: (0, y.A)(fe().Button, Re.Button),
                 onClick: () => t(!r),
                 disabled: a,
               },
@@ -5645,12 +5643,12 @@
         OnChangeCategory(e) {
           const { solrData: t } = this.props;
           let n = O.O3.GetClanEventModel(t.unique_id);
-          (0, E.pg)(u.createElement(je, { eventModel: n }), (0, M.uX)(e));
+          (0, E.pg)(u.createElement(je, { eventModel: n }), (0, f.uX)(e));
         }
         OnUpdateSeasonalTag(e) {
           const { solrData: t } = this.props;
           let n = O.O3.GetClanEventModel(t.unique_id);
-          (0, E.pg)(u.createElement(We, { eventModel: n }), (0, M.uX)(e));
+          (0, E.pg)(u.createElement(We, { eventModel: n }), (0, f.uX)(e));
         }
         render() {
           const { solrData: e } = this.props,
@@ -5663,7 +5661,7 @@
           if (i) {
             this.state.bShowAsModal &&
               (o = u.createElement(
-                R.of,
+                T.of,
                 { className: Re.StoreHeaderAdjust },
                 u.createElement(
                   "div",
@@ -5690,15 +5688,15 @@
                       u.createElement(
                         "div",
                         { className: Re.NoCapsuleFallback },
-                        (0, A.we)("#EventModTile_FallbackImageText"),
+                        (0, M.we)("#EventModTile_FallbackImageText"),
                       ),
                   )
                 : u.createElement(
                     "div",
                     { className: Re.NoCapsule },
-                    (0, A.we)("#EventModTile_NoCapsule"),
+                    (0, M.we)("#EventModTile_NoCapsule"),
                   );
-          } else a = (0, A.we)("#Loading");
+          } else a = (0, M.we)("#Loading");
           const l = e.last_modified_date
               ? Date.parse(e.last_modified_date) / 1e3
               : 0,
@@ -5715,7 +5713,7 @@
             u.createElement(
               "div",
               {
-                className: (0, f.A)({ [Re.Tile]: !0, [Re.HalloweenEvent]: h }),
+                className: (0, y.A)({ [Re.Tile]: !0, [Re.HalloweenEvent]: h }),
               },
               u.createElement(
                 "a",
@@ -5744,7 +5742,7 @@
                   u.createElement(
                     "div",
                     {
-                      className: (0, f.A)(
+                      className: (0, y.A)(
                         Re.TileEventType,
                         1 == c ? Re.TileEventOtherType : "",
                       ),
@@ -5755,12 +5753,12 @@
                     u.createElement(
                       "div",
                       { className: Re.HasAdultContent },
-                      (0, A.we)("#EventModTile_HasAdultContent"),
+                      (0, M.we)("#EventModTile_HasAdultContent"),
                     ),
                   this.state.bLoadingEvent &&
                     u.createElement(C.t, {
                       size: "small",
-                      string: (0, A.we)("#Loading"),
+                      string: (0, M.we)("#Loading"),
                     }),
                   u.createElement(
                     "div",
@@ -5786,10 +5784,10 @@
                       u.createElement(
                         "button",
                         {
-                          className: (0, f.A)(fe().Button, Re.Button),
+                          className: (0, y.A)(fe().Button, Re.Button),
                           onClick: this.OnChangeCategory,
                         },
-                        (0, A.we)("#EventModTile_ChangeEventType"),
+                        (0, M.we)("#EventModTile_ChangeEventType"),
                       ),
                       u.createElement(Ue, {
                         onClick: this.SetAdultContentState,
@@ -5805,10 +5803,10 @@
                         u.createElement(
                           "button",
                           {
-                            className: (0, f.A)(fe().Button),
+                            className: (0, y.A)(fe().Button),
                             onClick: this.OnUpdateSeasonalTag,
                           },
-                          (0, A.we)("#EventModTile_SeasonalTag"),
+                          (0, M.we)("#EventModTile_SeasonalTag"),
                         ),
                       u.createElement(Ce, { eventModel: i }),
                     ),
@@ -5823,9 +5821,9 @@
                       u.createElement(
                         "div",
                         { className: Re.LastUpdateTime },
-                        (0, A.we)(
+                        (0, M.we)(
                           "#EventModTile_LastModified",
-                          (0, A.TW)(l) +
+                          (0, M.TW)(l) +
                             "@" +
                             (0, he.KC)(l, { bForce24HourClock: !1 }),
                         ),
@@ -5911,81 +5909,81 @@
             u.createElement(
               "div",
               { className: Re.TileTitle },
-              (0, A.we)("#EventModTile_Analysis"),
+              (0, M.we)("#EventModTile_Analysis"),
             ),
             u.createElement(
               "div",
               null,
-              (0, A.we)("#EventModTile_Stats_Comments", e.nCommentCount),
+              (0, M.we)("#EventModTile_Stats_Comments", e.nCommentCount),
             ),
             u.createElement(
               "div",
               null,
-              (0, A.we)("#EventModTile_Stats_VoteUp", e.nVotesUp),
+              (0, M.we)("#EventModTile_Stats_VoteUp", e.nVotesUp),
             ),
             u.createElement(
               "div",
               null,
-              (0, A.we)("#EventModTile_Stats_VoteDown", e.nVotesDown),
+              (0, M.we)("#EventModTile_Stats_VoteDown", e.nVotesDown),
             ),
             Boolean(t) &&
               u.createElement(
                 "div",
                 { className: Re.ArtHeader },
-                (0, A.we)("#EventModTile_ImageAnalysis_Header", t),
+                (0, M.we)("#EventModTile_ImageAnalysis_Header", t),
                 " ",
               ),
             Boolean(n) &&
               u.createElement(
                 "div",
                 null,
-                (0, A.we)("#EventModTile_ImageAnalysis_Capsule", n),
+                (0, M.we)("#EventModTile_ImageAnalysis_Capsule", n),
                 " ",
               ),
             Boolean(a) &&
               u.createElement(
                 "div",
                 { className: Re.ArtSpotlight },
-                (0, A.we)("#EventModTile_ImageAnalysis_Spotlight", a),
+                (0, M.we)("#EventModTile_ImageAnalysis_Spotlight", a),
                 " ",
               ),
             Boolean(r) &&
               u.createElement(
                 "div",
                 null,
-                (0, A.we)("#EventModTile_ImageAnalysis_Broadcast", r),
+                (0, M.we)("#EventModTile_ImageAnalysis_Broadcast", r),
                 " ",
               ),
             0 == s &&
               u.createElement(
                 "div",
                 { className: Re.AnalysisMissing },
-                (0, A.we)("#EventModTile_ImageAnalysis_None"),
+                (0, M.we)("#EventModTile_ImageAnalysis_None"),
                 " ",
               ),
             0 == this.state.nLocLanguages &&
               u.createElement(C.t, {
                 size: "small",
-                string: (0, A.we)("#EventModTile_LoadingLocs"),
+                string: (0, M.we)("#EventModTile_LoadingLocs"),
               }),
             this.state.nLocLanguages > 0 &&
               u.createElement(
                 "div",
                 null,
-                (0, A.we)("#EventModTile_Languages", this.state.nLocLanguages),
+                (0, M.we)("#EventModTile_Languages", this.state.nLocLanguages),
               ),
             Boolean(i) &&
               u.createElement(
                 "div",
                 null,
-                (0, A.we)("#EventModTile_Languages_Summary", i),
+                (0, M.we)("#EventModTile_Languages_Summary", i),
                 " ",
               ),
             Boolean(o) &&
               u.createElement(
                 "div",
                 null,
-                (0, A.we)("#EventModTile_Languages_Subtitle", o),
+                (0, M.we)("#EventModTile_Languages_Subtitle", o),
                 " ",
               ),
           );
@@ -6035,7 +6033,7 @@
         )
           return u.createElement(C.t, {
             size: "small",
-            string: (0, A.we)("#EventModTile_AppInfoLoading"),
+            string: (0, M.we)("#EventModTile_AppInfoLoading"),
           });
         const { appid: r, clanSteamID: i } = e;
         if (r) {
@@ -6096,7 +6094,7 @@
                   u.createElement(
                     "div",
                     null,
-                    (0, A.we)("#EventModTile_CuratorName", t.group_name),
+                    (0, M.we)("#EventModTile_CuratorName", t.group_name),
                   ),
                 ),
               ),
@@ -6109,9 +6107,9 @@
           const { event: e, hidden: t, published: n } = this.props,
             a = t
               ? n
-                ? (0, A.we)("#EVentModTile_State_Staged")
-                : (0, A.we)("#EVentModTile_State_Draft")
-              : (0, A.we)("#EVentModTile_State_Published"),
+                ? (0, M.we)("#EVentModTile_State_Staged")
+                : (0, M.we)("#EVentModTile_State_Draft")
+              : (0, M.we)("#EVentModTile_State_Published"),
             r = (0, se.iy)(e),
             s = (0, se.A4)(e),
             i = (0, se.ZA)(e);
@@ -6131,74 +6129,74 @@
             u.createElement(
               "div",
               null,
-              (0, A.we)(
+              (0, M.we)(
                 "#EventModTile_Store_Visibility",
                 o
-                  ? (0, A.we)("#WriteReview_Dialog_Yes")
-                  : (0, A.we)("#WriteReview_Dialog_No"),
+                  ? (0, M.we)("#WriteReview_Dialog_Yes")
+                  : (0, M.we)("#WriteReview_Dialog_No"),
                 o
                   ? ""
                   : i
-                    ? (0, A.we)(
+                    ? (0, M.we)(
                         "#EventModTime_Hidden_EventType",
                         e.GetEventTypeAsString(),
                       )
                     : e.BHasTag("hide_store")
-                      ? (0, A.we)("#EventModTime_Hidden_OptOut")
-                      : (0, A.we)("#EventModTime_Hidden_Moderator"),
+                      ? (0, M.we)("#EventModTime_Hidden_OptOut")
+                      : (0, M.we)("#EventModTime_Hidden_Moderator"),
               ),
             ),
             u.createElement(
               "div",
               null,
-              (0, A.we)(
+              (0, M.we)(
                 "#EventModTile_LibraryHome_Visibility",
                 l
-                  ? (0, A.we)("#WriteReview_Dialog_Yes")
-                  : (0, A.we)("#WriteReview_Dialog_No"),
+                  ? (0, M.we)("#WriteReview_Dialog_Yes")
+                  : (0, M.we)("#WriteReview_Dialog_No"),
                 l
                   ? ""
                   : i
-                    ? (0, A.we)(
+                    ? (0, M.we)(
                         "#EventModTime_Hidden_EventType",
                         e.GetEventTypeAsString(),
                       )
                     : e.BHasTag("hide_library_overview")
-                      ? (0, A.we)("#EventModTime_Hidden_OptOut")
-                      : (0, A.we)("#EventModTime_Hidden_Moderator"),
+                      ? (0, M.we)("#EventModTime_Hidden_OptOut")
+                      : (0, M.we)("#EventModTime_Hidden_Moderator"),
               ),
             ),
             u.createElement(
               "div",
               null,
-              (0, A.we)(
+              (0, M.we)(
                 "#EventModTile_LibraryDetail_Visibility",
                 c
-                  ? (0, A.we)("#WriteReview_Dialog_Yes")
-                  : (0, A.we)("#WriteReview_Dialog_No"),
+                  ? (0, M.we)("#WriteReview_Dialog_Yes")
+                  : (0, M.we)("#WriteReview_Dialog_No"),
                 c
                   ? ""
                   : i
-                    ? (0, A.we)(
+                    ? (0, M.we)(
                         "#EventModTime_Hidden_EventType",
                         e.GetEventTypeAsString(),
                       )
                     : e.BHasTag("hide_library_detail")
-                      ? (0, A.we)("#EventModTime_Hidden_OptOut")
-                      : (0, A.we)("#EventModTime_Hidden_Moderator"),
+                      ? (0, M.we)("#EventModTime_Hidden_OptOut")
+                      : (0, M.we)("#EventModTime_Hidden_Moderator"),
               ),
             ),
             e.BHasTag("enable_steam_china") &&
               u.createElement(
                 "div",
                 null,
-                (0, A.we)("#EventModTile_SteamChina_Visibility"),
+                (0, M.we)("#EventModTile_SteamChina_Visibility"),
               ),
             e.BHasTag("disable_steam_global") &&
               u.createElement(
                 "div",
                 null,
-                (0, A.we)("#EventModTile_SteamGlobal_Hidden"),
+                (0, M.we)("#EventModTile_SteamGlobal_Hidden"),
               ),
           );
         }
@@ -6272,18 +6270,18 @@
               );
             });
           n.push({
-            label: (0, A.we)("#PartnerEvent_Curator_Group_Members"),
+            label: (0, M.we)("#PartnerEvent_Curator_Group_Members"),
             value: {
               eventType: 28,
               tags: ["curator", "curator_group_members"],
             },
           }),
             n.push({
-              label: (0, A.we)("#PartnerEvent_Curator_Public"),
+              label: (0, M.we)("#PartnerEvent_Curator_Public"),
               value: { eventType: 28, tags: ["curator", "curator_public"] },
             }),
             n.push({
-              label: (0, A.we)("#PartnerEvent_SteamAwardNominations"),
+              label: (0, M.we)("#PartnerEvent_SteamAwardNominations"),
               value: {
                 eventType: 28,
                 tags: [
@@ -6293,7 +6291,7 @@
               },
             }),
             n.push({
-              label: (0, A.we)("#PartnerEvent_SteamAwardVoteRequest"),
+              label: (0, M.we)("#PartnerEvent_SteamAwardVoteRequest"),
               value: {
                 eventType: 28,
                 tags: ["steam_award_vote_request", "mod_hide_library_overview"],
@@ -6302,23 +6300,23 @@
           const a = [
               {
                 value: { eventType: 15, tags: ["halloween"] },
-                label: "Halloween: " + (0, A.we)("#PartnerEvent_15"),
+                label: "Halloween: " + (0, M.we)("#PartnerEvent_15"),
               },
               {
                 value: { eventType: 22, tags: ["halloween"] },
-                label: "Halloween: " + (0, A.we)("#PartnerEvent_22"),
+                label: "Halloween: " + (0, M.we)("#PartnerEvent_22"),
               },
               {
                 value: { eventType: 23, tags: ["halloween"] },
-                label: "Halloween: " + (0, A.we)("#PartnerEvent_23"),
+                label: "Halloween: " + (0, M.we)("#PartnerEvent_23"),
               },
               {
                 value: { eventType: 24, tags: ["halloween"] },
-                label: "Halloween: " + (0, A.we)("#PartnerEvent_24"),
+                label: "Halloween: " + (0, M.we)("#PartnerEvent_24"),
               },
               {
                 value: { eventType: 35, tags: ["halloween"] },
-                label: "Halloween: " + (0, A.we)("#PartnerEvent_35"),
+                label: "Halloween: " + (0, M.we)("#PartnerEvent_35"),
               },
             ],
             r = Be.HD.GetTimeNowWithOverrideAsDate();
@@ -6327,10 +6325,10 @@
               ? n.unshift(...a)
               : n.push(...a),
             u.createElement(
-              R.o0,
+              T.o0,
               {
-                strTitle: (0, A.we)("#EventModTile_ChangeEventType"),
-                strDescription: (0, A.we)(
+                strTitle: (0, M.we)("#EventModTile_ChangeEventType"),
+                strDescription: (0, M.we)(
                   "#EventModTile_ChangeEventType_Desc",
                   e.GetEventTypeAsString(),
                 ),
@@ -6351,7 +6349,7 @@
                     u.createElement(
                       "div",
                       null,
-                      (0, A.we)("#Chat_Settings_Error_ServerError"),
+                      (0, M.we)("#Chat_Settings_Error_ServerError"),
                       u.createElement("br", null),
                       this.state.strErrorMsg,
                     ),
@@ -6426,9 +6424,9 @@
         render() {
           const { eventModel: e, closeModal: t } = this.props;
           return u.createElement(
-            R.o0,
+            T.o0,
             {
-              strTitle: (0, A.we)("#EventModTile_SeasonalTag"),
+              strTitle: (0, M.we)("#EventModTile_SeasonalTag"),
               onCancel: t,
               onOK: () => this.setState({ bUpdating: !0 }, this.ApplyAction),
             },
@@ -6447,12 +6445,12 @@
                 u.createElement(
                   "label",
                   { htmlFor: "Acceptance" },
-                  (0, A.we)("#EventModTile_SeasonalTag_Desc"),
+                  (0, M.we)("#EventModTile_SeasonalTag_Desc"),
                 ),
                 u.createElement(
                   "div",
                   null,
-                  (0, A.we)("#EventModTile_SeasonalTag_Desc_Secondary"),
+                  (0, M.we)("#EventModTile_SeasonalTag_Desc_Secondary"),
                 ),
                 u.createElement("input", {
                   id: "Horror",
@@ -6473,7 +6471,7 @@
                   u.createElement(
                     "div",
                     null,
-                    (0, A.we)("#Chat_Settings_Error_ServerError"),
+                    (0, M.we)("#Chat_Settings_Error_ServerError"),
                     u.createElement("br", null),
                     this.state.strErrorMsg,
                   ),
@@ -6557,7 +6555,7 @@
           )
             return u.createElement(C.t, {
               string:
-                (0, A.we)("#Loading") +
+                (0, M.we)("#Loading") +
                 (this.state.bLoadingEvent
                   ? " Events"
                   : this.state.bLoadingApps

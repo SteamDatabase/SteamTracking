@@ -30,7 +30,7 @@
       "use strict";
       i.r(t),
         i.d(t, {
-          GreenEnvelope: () => y,
+          GreenEnvelope: () => b,
           default: () => O,
           useSteamNotifications: () => T,
         });
@@ -52,15 +52,15 @@
         N = i.n(h),
         E = i(16264),
         g = i(60383);
-      const b = new m.cE(),
-        y = (0, v.Nr)(function (e) {
+      const y = new m.cE(),
+        b = (0, v.Nr)(function (e) {
           const { bResponsiveHeader: t, notifications: i } = e;
           r.useEffect(() => {
-            i && !b.m_bLoaded && b.ProcessNewNotificationPayload(i);
+            i && !y.m_bLoaded && y.ProcessNewNotificationPayload(i);
           }, [i]);
           const o = (0, a.KV)();
           (0, r.useEffect)(() => {
-            b.setTransport(o),
+            y.setTransport(o),
               (window.RefreshSteamNotifications = () =>
                 (async function (e) {
                   let t = null;
@@ -74,7 +74,7 @@
                       !1,
                     );
                   } catch (e) {}
-                  t && b.ProcessNewNotificationPayload(t);
+                  t && y.ProcessNewNotificationPayload(t);
                 })(o));
           }, [o]);
           const s = T();
@@ -89,10 +89,10 @@
         });
       function T() {
         return (0, o.q3)(() => ({
-          notifications: b.m_rgNotificationRollups,
-          summary: b.m_summary,
-          loaded: b.m_bLoaded,
-          nUnviewed: b.m_nUnviewed,
+          notifications: y.m_rgNotificationRollups,
+          summary: y.m_summary,
+          loaded: y.m_bLoaded,
+          nUnviewed: y.m_nUnviewed,
         }));
       }
       function U() {
@@ -150,7 +150,7 @@
                 ) {
                   null === (t = i.current) || void 0 === t || t.Show();
                   -1 != n.findIndex((e) => !e.item.viewed) &&
-                    b.MarkAllItemsViewed();
+                    y.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
@@ -259,7 +259,7 @@
         t.read ||
           (i && 0 != i.button && 1 != i.button) ||
           !t.notification_id ||
-          b.MarkItemRead(t.notification_id),
+          y.MarkItemRead(t.notification_id),
           e();
       }
       function I() {
@@ -382,7 +382,7 @@
           ),
         );
       }
-      const O = y;
+      const O = b;
     },
     60383: (e, t, i) => {
       "use strict";
@@ -452,7 +452,7 @@
         }
         FindScrollableAncestor(e) {
           return r.Kf(e, (e) => {
-            const t = this.props.bHorizontal
+            const t = this.props.horizontal
               ? window.getComputedStyle(e).overflowX
               : window.getComputedStyle(e).overflowY;
             return (
@@ -479,7 +479,7 @@
             onVisibilityChange: e,
             rootMargin: t,
             trigger: i,
-            bHorizontal: n,
+            horizontal: n,
             ...r
           } = this.props;
           return o.createElement(

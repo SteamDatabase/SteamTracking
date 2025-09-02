@@ -3931,6 +3931,123 @@
           return "CForums_UndeleteDisputedTopic_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  gidforum: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  gidtopic: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  locked: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  audit_note: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CForums_SetTopicLocked_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CForums_SetTopicLocked_Response";
+        }
+      }
       !(function (_) {
         (_.ReportPost = function (_, _) {
           return _.SendMsg("Forums.ReportPost#1", (0, _._)(_, _), _, {
@@ -4010,6 +4127,12 @@
                 eWebAPIKeyRequirement: 2,
               },
             );
+          }),
+          (_.SetTopicLocked = function (_, _) {
+            return _.SendMsg("Forums.SetTopicLocked#1", (0, _._)(_, _), _, {
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 2,
+            });
           });
       })(_ || (_ = {}));
       var _,
@@ -5250,6 +5373,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  note: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -5674,6 +5802,11 @@
                     _: 4,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  note: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),
@@ -8430,6 +8563,128 @@
           return "CFriendMessages_ReportMessage_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid_from || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid_from: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  steamid_to: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  subject_group_id: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  subject_id: {
+                    _: 4,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  resolution: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  reason: {
+                    _: 6,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendMessages_ResolveReport_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CFriendMessages_ResolveReport_Response";
+        }
+      }
       !(function (_) {
         (_.GetRecentMessages = function (_, _) {
           return _.SendMsg(
@@ -8499,6 +8754,17 @@
               _,
               {
                 ePrivilege: 1,
+              },
+            );
+          }),
+          (_.ResolveReport = function (_, _) {
+            return _.SendMsg(
+              "FriendMessages.ResolveReport#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
               },
             );
           });
@@ -19430,6 +19696,38 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -19498,41 +19796,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -19546,7 +19809,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -19615,7 +19877,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -22385,6 +22646,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new (__webpack_require__("chunkid")._)("FocusHistory"),
+        _ = _.Debug;
       class _ {
         constructor(_) {
           this.m_root = _;
@@ -22424,15 +22687,24 @@
                 _.BTakeFocus(_._.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(_, _) {
+        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
           var _;
           const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
-          if (
-            (_ && (0, _._)(_ == _.NavKey, "navkey mismatch"),
-            _.SetActiveChild(_),
-            _ && _.length)
-          ) {
+          _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
+          const _ = _.IsDebugEnabled()
+            ? (function (_) {
+                if (0 == _) return "";
+                let _ = "";
+                for (let _ = 0; _ < _; _++) _ += "*";
+                return (_ += " "), _;
+              })(__webpack_require__)
+            : "";
+          if (_ && _.length) {
             const [_] = _.GetChildren();
+            -1 != _ &&
+              _(
+                `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length} - now ${_.length} children.`,
+              );
             let _ = new Map();
             _.forEach((_) => {
               _.NavKey && _.set(_.NavKey, _);
@@ -22440,14 +22712,17 @@
             for (const _ of _) {
               if (!_.sNavKey) continue;
               const _ = _.get(_.sNavKey);
-              _ && _.RestoreSerializedNavNode(_, _);
+              _ && _.RestoreSerializedNavNode(_, _, __webpack_require__ + 1);
             }
             if (
               -1 != _ &&
               (null === (_ = _[_]) || void 0 === _ ? void 0 : _.sNavKey)
             ) {
               const _ = _.get(_[_].sNavKey);
-              _ && _.SetActiveChild(_.indexOf(_));
+              _(
+                `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${void 0 === _ ? "MISSING!!" : ""}`,
+              ),
+                _ && _.SetActiveChild(_.indexOf(_));
             }
             let _ = 0,
               _ = 0;
@@ -22455,7 +22730,7 @@
               for (; _ < _.length && _[_].NavKey; ) _++;
               for (; _ < _.length && _[_].sNavKey; ) _++;
               if (_ >= _.length || _ >= _.length) break;
-              _.RestoreSerializedNavNode(_[_], _[_]), _++, _++;
+              _.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++;
             }
           }
         }
@@ -23362,16 +23637,14 @@
           return this.m_Tree;
         }
         get NavKey() {
-          var _, _;
+          var _;
           return (
             null === (_ = this.m_Properties) || void 0 === _
               ? void 0
               : _.navKey
           )
             ? this.m_Properties.navKey
-            : (null === (_ = this.m_element) || void 0 === _ ? void 0 : _._)
-              ? this.m_element._
-              : void 0;
+            : void 0;
         }
         get Element() {
           return this.m_element;
@@ -24883,7 +25156,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       class _ {
         static InstallErrorReportingStore(_) {
           this.sm_ErrorReportingStore = _;
@@ -46134,18 +46406,14 @@
         }, [_, _]);
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-          null == _ ? void 0 : _.Value,
-        );
-        return (
-          _.useEffect(() => {
-            if (null == _) return;
-            const _ = _.Subscribe(__webpack_require__);
-            return (
-              __webpack_require__(_.Value), null == _ ? void 0 : _.Unsubscribe
-            );
-          }, [_]),
-          _
+        return _;
+      }
+      function _() {}
+      function _(_) {
+        return _.useSyncExternalStore(
+          _ ? _.SyncStore : _,
+          _ ? _.GetValue : _,
+          _ ? _.GetValue : _,
         );
       }
       function _(_) {
@@ -75144,16 +75412,28 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
+        SyncStore(_) {
+          return this.Subscribe(_).Unsubscribe;
+        }
+        GetValue() {
+          return this.Value;
+        }
+      }
+      (0, _._)([_._], _.prototype, "SyncStore", null),
+        (0, _._)([_._], _.prototype, "GetValue", null);
+      class _ extends _ {}
+      class _ extends _ {
         constructor(_, _) {
-          (this.m_callbacks = new _._()),
+          super(),
+            (this.m_callbacks = new _._()),
             (this.m_currentValue = _),
             (this.m_fnEquals = _);
         }
         Set(_) {
           if (this.m_fnEquals) {
-            if (this.m_fnEquals(this.m_currentValue, _)) return;
-          } else if (this.m_currentValue === _) return;
-          (this.m_currentValue = _), this.m_callbacks.Dispatch(_);
+            if (this.m_fnEquals(this.m_currentValue, _)) return !1;
+          } else if (this.m_currentValue === _) return !1;
+          return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
         }
         get Value() {
           return this.m_currentValue;
@@ -75170,9 +75450,10 @@
       function _(_, _) {
         return new _(_, _);
       }
-      class _ {
+      class _ extends _ {
         constructor(_, _, _) {
-          (this.m_bMappedValueStale = !1),
+          super(),
+            (this.m_bMappedValueStale = !1),
             (this.m_originalSubscribableValue = _),
             (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
             (this.m_fnMap = _),
@@ -75183,12 +75464,9 @@
             });
         }
         get Value() {
-          var _;
           return (
             this.m_bMappedValueStale && this.UpdateMappedValue(),
-            null === (_ = this.m_mappedSubscribableValue) || void 0 === _
-              ? void 0
-              : _.Value
+            this.m_mappedSubscribableValue.Value
           );
         }
         Subscribe(_) {

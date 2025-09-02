@@ -26,14 +26,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Link: "-HlDBB290kjpl61uUmRed",
-        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
-        Big: "sGy-bB7uqEt4Hoe7U5iA1",
-        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ProgressBar: "_3szjUMH5QeRwtXAsLRcWt9",
         AnimateProgress: "_3DjdoQj5NoknowwV5t5JPN",
         loadingBarAnim: "_2SA1xV5w3BGirkDWosGYoX",
@@ -3112,64 +3104,6 @@
               this.m_Items.push(_._.Get().ReadItem(_, _));
           this.m_metadata = _.Body().metadata().toObject();
         }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { gidEvent: _ } = _,
-          _ = (0, _._)(_),
-          [_, _] = (0, _.useMemo)(() => {
-            if (
-              _?.jsondata?.localized_sale_product_banner?.length > 0 &&
-              _?.jsondata?.localized_sale_product_mobile_banner?.length > 0
-            ) {
-              const _ = (0, _._)(_._.LANGUAGE),
-                _ = _._.GetWithFallback(
-                  _.jsondata.localized_sale_product_banner,
-                  _,
-                ),
-                _ = _._.GetWithFallback(
-                  _.jsondata.localized_sale_product_mobile_banner,
-                  _,
-                );
-              if (_?.length > 0 && _?.length > 0)
-                return [
-                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
-                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
-                ];
-            }
-            return [null, null];
-          }, [_]);
-        return _?.length > 0 && _?.length > 0
-          ? _.createElement(
-              "a",
-              {
-                href: (0, _._)(__webpack_require__.GetSaleURL()),
-                className: _.Link,
-              },
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Big),
-              }),
-              _.createElement("img", {
-                src: _,
-                className: (0, _._)(_.Banner, _.Mobile),
-              }),
-            )
-          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
