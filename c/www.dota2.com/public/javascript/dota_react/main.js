@@ -20887,6 +20887,7 @@
             [_, _] = (0, _.useState)(0 == _.nTeamID),
             _ = [
               `${_._.CDN_URL}apps/dota2/teamlogos/${_.nTeamID}.png`,
+              `${_._.IMG_URL}teams_fallback/${_.nTeamID}.png`,
               `${_._.IMG_URL}teams_override/team_unknown_web.png`,
               "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
             ];
@@ -23534,11 +23535,14 @@
                     _?.parent_node_group_id,
                   );
                 if (_?.phase == _._.LEAGUE_PHASE_GROUP_STAGE) {
-                  if (23 == _?.event && _.node_id >= 25 && _.node_id <= 32) {
+                  if (23 == _?.event) {
+                    if (_.node_id >= 25 && _.node_id <= 32) {
+                      _ = !0;
+                      break;
+                    }
                     _ = !0;
-                    break;
                   }
-                  _ = !0;
+                  24 == _?.event && ((_ = !1), (_ = !0));
                   break;
                 }
                 23 == _?.event &&
@@ -26929,7 +26933,7 @@
               _ === _._.INTERNATIONAL_2025
                 ? {
                     value: _._.GROUP_STAGE,
-                    strLabel: "#dpc_group_stage",
+                    strLabel: "#dpc_playoff",
                   }
                 : void 0,
               _ === _._.INTERNATIONAL_2025
@@ -26940,7 +26944,7 @@
                 : void 0,
               {
                 value: _._.PLAYOFF,
-                strLabel: "#dpc_playoff",
+                strLabel: "#dpc_main_event",
               },
               _ !== _._.INTERNATIONAL_2025
                 ? {
@@ -26952,13 +26956,9 @@
             _ = (0, _._)(_.strPhase);
           if (_._.Get().GetEventType(_) != _._.INTERNATIONAL) return null;
           if (!_._[_] || _ == _._.INVALID)
-            return new Date().getTime() < 1725696e6
-              ? _.createElement(_._, {
-                  _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.GROUP_A)),
-                })
-              : _.createElement(_._, {
-                  _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.PLAYOFF)),
-                });
+            return _.createElement(_._, {
+              _: _._.dpc_standings((0, _._)(_), (0, _._)(_._.GROUP_STAGE)),
+            });
           const _ = [
             {
               nMin: 1,
