@@ -336,13 +336,13 @@ $ORIGIN
 16CAdHocValidation
 16CBreakpadFactory
 16IBreakpadFactory
-17:31:28
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
+21:56:02
 21CUtlCStringConversion
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
@@ -368,7 +368,6 @@ Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Assertion failed: length > k_cchMaxString
 Attempting to create a named event with a null name
-Aug 26 2025
 August
 Average %.2f fps, %.2f ms per frame\n
 BCreateDirectory
@@ -611,6 +610,7 @@ Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 SendCrashReport
 SendExistingMinidump
+Sep  2 2025
 September
 SetAppID
 SetComment

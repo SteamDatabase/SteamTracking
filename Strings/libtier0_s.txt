@@ -97,7 +97,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-17:31:32
+21:56:04
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -116,7 +116,6 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-Aug 26 2025
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock
@@ -403,6 +402,7 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
+Sep  2 2025
 ServerMain
 SetAssertDumpStack
 SetAssertFailedNotifyFunc

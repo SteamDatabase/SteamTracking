@@ -15601,7 +15601,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hx/]
+9HX/]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -15713,7 +15713,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42@
+;MO42 
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -46443,7 +46443,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen6
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -58172,7 +58172,7 @@ stderr
 stdin
 stdout
 steam
-steam Aug 26 2025 17:31:44
+steam Sep  2 2025 21:56:12
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

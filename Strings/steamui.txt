@@ -12533,7 +12533,6 @@ ${LANGUAGE}
 <HKEY_CURRENT_USER\Software\Valve\Steam\OverlayScaleInterface
 <INVALID>
 <NULL>
-<Ocn
 <Runtime disabled>
 <Runtime enabled>
 <SpewLevel LogLevel> Sets spew and log levels for all groups
@@ -13711,7 +13710,6 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 26 2025 17:31:50
 August
 Aura
 Australia/Adelaide
@@ -27315,6 +27313,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
+Sep  2 2025 21:56:54
 September
 Serbian
 Serial
@@ -44085,6 +44084,7 @@ nChannel <= STREAM_LAST_VALID_CHANNEL_ID
 nChannels == 2 && nSampleRate == 48000
 nChatFlashMode
 nChildren > 2
+nCloudProgressPercent
 nCompatToolPriority
 nCompressionLevel >= -1 && nCompressionLevel <= 9
 nContentLength != 0
