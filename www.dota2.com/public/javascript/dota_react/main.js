@@ -40232,7 +40232,8 @@
             m = this.GetEventPhaseString(c),
             d =
               l?.event_type == u.J7.INTERNATIONAL &&
-              (c == u.sI.GROUP_A ||
+              (c == u.sI.GROUP_STAGE ||
+                c == u.sI.GROUP_A ||
                 c == u.sI.GROUP_B ||
                 c == u.sI.GROUP_C ||
                 c == u.sI.GROUP_D ||

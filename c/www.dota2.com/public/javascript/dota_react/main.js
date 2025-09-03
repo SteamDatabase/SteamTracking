@@ -46582,7 +46582,8 @@
             _ = this.GetEventPhaseString(_),
             _ =
               _?.event_type == _._.INTERNATIONAL &&
-              (_ == _._.GROUP_A ||
+              (_ == _._.GROUP_STAGE ||
+                _ == _._.GROUP_A ||
                 _ == _._.GROUP_B ||
                 _ == _._.GROUP_C ||
                 _ == _._.GROUP_D ||
