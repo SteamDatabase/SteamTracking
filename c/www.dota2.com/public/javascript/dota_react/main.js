@@ -20746,7 +20746,7 @@
       const _ = _.memo((_) => {
           const [_, __webpack_require__] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(0 == _.nAccountID),
-            _ = `${_._.CDN_URL}apps/dota2/players/${_.nAccountID}.png`,
+            _ = `${_._.IMG_URL}international2025/players/${_.nAccountID}.png`,
             _ = `${_._.IMG_URL}player_unknown.png`;
           return (
             (0, _.useEffect)(() => {
@@ -20817,12 +20817,9 @@
                 return (
                   _?.members.forEach((_) => {
                     _ ||
-                      (_?.registered_member_account_ids?.includes(
-                        _.account_id,
-                      ) &&
-                        (_.role != _ ||
-                          _.includes(_.account_id) ||
-                          ((_ = _), _.push(_.account_id))));
+                      _.role != _ ||
+                      _.includes(_.account_id) ||
+                      ((_ = _), _.push(_.account_id));
                   }),
                   _.createElement(
                     "div",
@@ -32865,7 +32862,7 @@
                   _.createElement("div", {
                     className: _().PlayerImage,
                     style: {
-                      backgroundImage: `url( ${_._.CDN_URL}apps/dota2/players/${_}.png )`,
+                      backgroundImage: `url( ${_._.IMG_URL}international2025/players/${_}.png )`,
                     },
                   }),
                   _.createElement(_, {
@@ -33081,7 +33078,7 @@
               _.createElement("div", {
                 className: _().HeroIcon,
                 style: {
-                  backgroundImage: `url( ${_._.CDN_URL}apps/dota2/players/${_}.png )`,
+                  backgroundImage: `url( ${_._.IMG_URL}international2025/players/${_}.png )`,
                 },
               }),
               _.createElement(
@@ -46603,6 +46600,7 @@
                 46 == _ ||
                 47 == _ ||
                 48 == _),
+            _ = _ == _._.INTERNATIONAL_2025 && _ == _._.GROUP_STAGE,
             _ = this.GetRegionString(_.eRegion, _ == _._.SHORT),
             _ = this.GetDivisionString(_.eDivision, _ == _._.SHORT),
             _ = this.GetBracketNodeString(
@@ -46646,7 +46644,7 @@
                   _.push(
                     _ ? "#dpc_ti_road_intro_title" : "#dpc_ti_intro_title",
                   ),
-                _.push(_));
+                _ ? _.push("#dpc_playoff") : _.push(_));
           return _;
         }
         GetEventType(_) {
