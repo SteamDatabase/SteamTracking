@@ -258,7 +258,16 @@
                   ),
                 ),
                 _.milestones
-                  .sort((_, _) => _.dates[0].rtime - _.dates[0].rtime)
+                  .sort((_, _) =>
+                    _.shipped && _.shipped
+                      ? _.rtime_complete - _.rtime_complete
+                      : _.shipped
+                        ? -1
+                        : _.shipped
+                          ? 1
+                          : _.dates[_.dates.length - 1].rtime -
+                            _.dates[_.dates.length - 1].rtime,
+                  )
                   .map((_) =>
                     _.createElement(_, {
                       key: "ms_" + _.milestone_id,

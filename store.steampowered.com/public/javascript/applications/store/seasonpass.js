@@ -45,19 +45,19 @@
         m = n(60014),
         p = n(55963),
         d = n(1431),
-        u = n.n(d);
-      const _ = { include_assets: !0, include_basic_info: !0 };
+        _ = n.n(d);
+      const u = { include_assets: !0, include_basic_info: !0 };
       function E(e) {
         const { appid: t } = e,
-          [n] = (0, r.t7)(t, _),
+          [n] = (0, r.t7)(t, u),
           a = (0, m.n9)();
         return n && t
           ? s.createElement(
               "div",
-              { className: u().StoreItemCtn },
+              { className: _().StoreItemCtn },
               s.createElement(
                 "div",
-                { className: u().StoreItemRow },
+                { className: _().StoreItemRow },
                 s.createElement(
                   "a",
                   { href: (0, p.wJ)(n.GetStorePageURL(), a) },
@@ -66,7 +66,7 @@
                   }),
                   s.createElement(
                     "div",
-                    { className: u().StoreItemDescription },
+                    { className: _().StoreItemDescription },
                     n.GetShortDescription(),
                     " ",
                   ),
@@ -77,8 +77,8 @@
       }
       var S = n(32630),
         g = n(99376),
-        f = n(42780),
-        h = n(59952),
+        h = n(42780),
+        f = n(59952),
         v = n(12611),
         R = n(30470);
       function w() {
@@ -95,14 +95,14 @@
         A = n(24484),
         D = n(78327);
       function N(e) {
-        return new f.OJ(new f.R8(), 0);
+        return new h.OJ(new h.R8(), 0);
       }
       function G(e) {
         const { text: t, languageOverride: n } = e,
           [a] = (0, s.useState)(
             new g.B(
               new Map([
-                ...Array.from(h.W4.entries()),
+                ...Array.from(f.W4.entries()),
                 ["img", { Constructor: T, autocloses: !1 }],
               ]),
               N,
@@ -225,7 +225,16 @@
                   ),
                 ),
                 t.milestones
-                  .sort((e, t) => e.dates[0].rtime - t.dates[0].rtime)
+                  .sort((e, t) =>
+                    e.shipped && t.shipped
+                      ? e.rtime_complete - t.rtime_complete
+                      : e.shipped
+                        ? -1
+                        : t.shipped
+                          ? 1
+                          : e.dates[e.dates.length - 1].rtime -
+                            t.dates[t.dates.length - 1].rtime,
+                  )
                   .map((e) =>
                     s.createElement(y, {
                       key: "ms_" + e.milestone_id,
