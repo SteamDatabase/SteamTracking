@@ -637,6 +637,20 @@ body.compact_trading_ui .appselect {
 	color: #ffffff;
 }
 
+.market_confirmation_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px 50px;
+	gap: 10px;
+}
+
+.market_confirmation_header {
+	font-size: 22px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
 .market_dialog_purchase_confirmation_inner {
 	background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
 	margin: 0px 50px 0px 50px;

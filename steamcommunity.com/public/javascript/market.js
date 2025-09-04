@@ -231,6 +231,8 @@ CancelMarketBuyOrderDialog = {
 	},
 
 	Dismiss: function() {
+		if ( window.m_confirmationTimeout ) { clearTimeout( window.m_confirmationTimeout ); }
+		window.m_confirmationTimeout = 0;
 	},
 
 	OnAccept: function() {
@@ -287,7 +289,9 @@ CreateBuyOrderDialog = {
 		m_bRequireLocalRate: false,
 	m_bHasLocalRate: false,
 	m_rgLocalRate: {},
-	
+		m_confirmation: 0,
+	m_confirmationTries: 0,
+
 	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
 		this.m_divContents = divPopup;
@@ -349,6 +353,9 @@ CreateBuyOrderDialog = {
 	Show: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		if ( !this.m_bInitialized )
 			this.Initialize( unAppId, strMarketHashName, strMarketItemName, divPopup );
+
+		if ( window.m_confirmationTimeout ) { clearTimeout( window.m_confirmationTimeout ); }
+		window.m_confirmationTimeout = 0;
 
 		if ( !g_bLoggedIn )
 		{
@@ -480,6 +487,23 @@ CreateBuyOrderDialog = {
 		}
 	},
 
+	CancelConfirmation: function() {
+		this.m_confirmationTries = 0;
+		if (window.m_confirmationTimeout) {
+			clearTimeout(window.m_confirmationTimeout);
+		}
+		window.m_confirmationTimeout = 0;
+		if (!this.m_bPurchaseSuccess) {
+			CreateBuyOrderDialog.OnFailure({responseJSON: {message: "There was a problem purchasing your item. Something went wrong while waiting for you to confirm this action. Refresh the page and try again."}});
+			this.m_confirmation = 0;
+		}
+	},
+
+	GetConfirmationState: function() {
+		this.m_confirmationTries++;
+		this.CreateBuyOrder();
+	},
+
 	StartPurchase: function() {
 				if ( !$J('#market_buyorder_dialog_accept_ssa').prop('checked') )
 		{
@@ -519,19 +543,21 @@ CreateBuyOrderDialog = {
 			}
 		}
 
-		new Effect.BlindUp( 'market_buyorder_dialog_paymentinfo_frame_container', { duration: 0.25 } );
-		new Effect.BlindDown( 'market_buyorder_dialog_placing_order', { duration: 0.25 } );
+		new Effect.BlindUp('market_buyorder_dialog_paymentinfo_frame_container', {duration: 0.25});
+		new Effect.BlindDown('market_buyorder_dialog_placing_order', {duration: 0.25});
 
 		$J('#market_buy_commodity_input_price').prop( 'disabled', true);
 		$J('#market_buy_commodity_input_quantity').prop('disabled', true);
 		$J('#market_buyorder_dialog_error').hide();
+		$J('#market_buy_confirmation_required').hide();
 
-		$J('#market_buy_commodity_status').html( 'Placing buy order...' );
+		this.CreateBuyOrder();
+	},
 
+	CreateBuyOrder: function() {
 		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
 		var price_total = Math.round( currency * quantity );
-
 		var first_name = $J('#first_name') ? $J('#first_name').val() : '';
 		var last_name = $J('#last_name') ? $J('#last_name').val() : '';
 		var billing_address = $J('#billing_address') ? $J('#billing_address').val() : '';
@@ -541,6 +567,7 @@ CreateBuyOrderDialog = {
 		var billing_state = g_bHasBillingStates ? ( $J('#billing_state_select') ? $J('#billing_state_select').val() : '' ) : '';
 		var billing_postal_code = $J('#billing_postal_code') ? $J('#billing_postal_code').val() : '';
 		var save_my_address = $J('#save_my_address') ? $J('#save_my_address').prop('checked') : false;
+		var createBuyOrderDialog = this;
 
 		// we'll want to refresh the page behind us when done
 		this.m_bPageNeedsRefresh = true;
@@ -565,20 +592,47 @@ CreateBuyOrderDialog = {
 				billing_city: billing_city,
 				billing_state: billing_state,
 				billing_postal_code: billing_postal_code,
-				save_my_address: save_my_address ? '1' : '0'
+				save_my_address: save_my_address ? '1' : '0',
+				confirmation: this.m_confirmation
 			},
 			crossDomain: true,
 			xhrFields: { withCredentials: true }
 		} ).done( function ( data ) {
 			CreateBuyOrderDialog.OnCreateBuyOrderComplete( { responseJSON: data } );
-		} ).fail( function( jqxhr ) {
+
+		}).fail(function (jqxhr) {
 			// jquery doesn't parse json on fail
-			var data = $J.parseJSON( jqxhr.responseText );
-			CreateBuyOrderDialog.OnCreateBuyOrderComplete( { responseJSON: data } );
+			var data = $J.parseJSON(jqxhr.responseText);
+			if ( data.need_confirmation )
+			{
+				if ( createBuyOrderDialog.m_confirmation === 0 )
+				{
+					new Effect.BlindUp('market_buynow_dialog_paymentinfo_frame_container', {duration: 0.25});
+					$J('#market_buy_confirmation_required').show();
+					$J('#market_buy_commodity_throbber').hide();
+				}
+
+				createBuyOrderDialog.m_confirmation = data.confirmation.confirmation_id;
+				if ( createBuyOrderDialog.m_confirmation )
+				{
+					window.m_confirmationTimeout = setTimeout(function () { createBuyOrderDialog.GetConfirmationState(); }, 1500);
+				}
+			}
+			else if ( createBuyOrderDialog.m_confirmation )
+			{
+				createBuyOrderDialog.CancelConfirmation();
+			}
+			else
+			{
+				CreateBuyOrderDialog.OnCreateBuyOrderComplete( { responseJSON: data } );
+			}
 		} );
 	},
 
 	OnCreateBuyOrderComplete: function( transport ) {
+
+		$J('#market_buy_confirmation_required').hide();
+
 		if ( transport.responseJSON && transport.responseJSON.success == 1 )
 		{
 			$J('#market_buyorder_dialog_purchase_throbber').show();
@@ -1026,7 +1080,6 @@ BuyItemDialog = {
 		var billing_state = g_bHasBillingStates ? ($J('#billing_state_select_buynow') ? $J('#billing_state_select_buynow').val() : '' ) : '';
 		var billing_postal_code = $J('#billing_postal_code_buynow') ? $J('#billing_postal_code_buynow').val() : '';
 		var save_my_address = $J('#save_my_address_buynow') ? $J('#save_my_address_buynow').prop('checked'): false;
-		var sent_confirmation = !!( this.m_confirmation );
 		var buyItemDialog = this;
 
 		$J.ajax({

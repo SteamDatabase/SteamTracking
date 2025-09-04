@@ -3484,6 +3484,9 @@ function PopulateActions( prefix, elActions, rgActions, item, owner )
 			continue;
 		}
 
+		if ( strLink.match( /%owner_steamid%/ ) )
+			continue;
+
 		var elAction = new Element(
 			'a',
 			{
