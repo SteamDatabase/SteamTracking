@@ -23815,7 +23815,13 @@
               e === Zt.Dq.INTERNATIONAL_2025
                 ? { value: Zt.sI.ELIMINATION, strLabel: "#dpc_elimination" }
                 : void 0,
-              { value: Zt.sI.PLAYOFF, strLabel: "#dpc_main_event" },
+              {
+                value: Zt.sI.PLAYOFF,
+                strLabel:
+                  e == Zt.Dq.INTERNATIONAL_2025
+                    ? "#dpc_ti_intro_title"
+                    : "#dpc_main_event",
+              },
               e !== Zt.Dq.INTERNATIONAL_2025
                 ? { value: Zt.sI.RESULTS, strLabel: "#dpc_results" }
                 : void 0,

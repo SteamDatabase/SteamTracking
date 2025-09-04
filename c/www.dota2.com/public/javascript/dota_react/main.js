@@ -26942,7 +26942,10 @@
                 : void 0,
               {
                 value: _._.PLAYOFF,
-                strLabel: "#dpc_main_event",
+                strLabel:
+                  _ == _._.INTERNATIONAL_2025
+                    ? "#dpc_ti_intro_title"
+                    : "#dpc_main_event",
               },
               _ !== _._.INTERNATIONAL_2025
                 ? {
