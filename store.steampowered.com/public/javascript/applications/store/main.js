@@ -33567,7 +33567,7 @@
         const {
             bIncludeDailyDeals: a = !1,
             nIncludeTopNSpecials: o = 0,
-            spotlightLocation: l = {},
+            spotlightLocation: l,
             rgAdditionalRecommendationIDs: u,
           } = r,
           m = {
