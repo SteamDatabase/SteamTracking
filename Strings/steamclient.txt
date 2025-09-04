@@ -2385,7 +2385,6 @@ $steammessages_parental_objects.proto"
 %s.old
 %s.old.%i
 %s.old.1
-%s.previous.txt
 %s.stmp
 %s.txt
 %s/%c%c/%s_%s
@@ -5473,6 +5472,7 @@ $steammessages_parental_objects.proto"
 --ignore-gpu-blocklist
 --implicit-whitelist
 --log-file=%s
+--log-severity=disable
 --master-process
 --no-sandbox
 --null-device
@@ -5671,6 +5671,7 @@ $steammessages_parental_objects.proto"
 -cef-disable-hang-timeouts
 -cef-disable-hevc
 -cef-disable-js-logging
+-cef-disable-logging
 -cef-disable-occlusion
 -cef-disable-renderer-restart
 -cef-disable-safe-shutdown-workaround
@@ -6945,10 +6946,10 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemmanager.cpp:5320
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
-/data/src/clientdll/systemperfmanager_linux.cpp:1399
-/data/src/clientdll/systemperfmanager_linux.cpp:1455
-/data/src/clientdll/systemperfmanager_linux.cpp:1581
-/data/src/clientdll/systemperfmanager_linux.cpp:359
+/data/src/clientdll/systemperfmanager_linux.cpp:1457
+/data/src/clientdll/systemperfmanager_linux.cpp:1513
+/data/src/clientdll/systemperfmanager_linux.cpp:1639
+/data/src/clientdll/systemperfmanager_linux.cpp:387
 /data/src/clientdll/udevcontext.cpp
 /data/src/clientdll/ugcmanager.cpp
 /data/src/clientdll/unified_messages_client.cpp
@@ -15713,7 +15714,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42 
+;MO42p
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -34189,6 +34190,7 @@ SetStreamingPIN
 SetString
 SetSubscriptionsLoadOrder
 SetSyncPlatforms
+SetTDPLimitHelper
 SetThrottleDownloadsWhileStreaming
 SetTimeCreatedDateRange
 SetTimeUpdatedDateRange
@@ -38130,6 +38132,9 @@ YieldingCheckForUpdateSteamClient
 YieldingCollectCommandOutput
 YieldingCollectSystemLogsIfAvailable
 YieldingConnect
+YieldingEnableGraphicsProfiling
+YieldingEnablePerfOverlay
+YieldingEnableSystemTrace
 YieldingGetAvailableDrives
 YieldingGetFileSystemStableId
 YieldingPostProgress
@@ -38138,14 +38143,35 @@ YieldingRefreshLibraryFolders
 YieldingRequestAppsViaHTTP
 YieldingResolveHostNameOrIPWithPort
 YieldingRunTestProgram
+YieldingSetUpdateRate
 YieldingStageFromChunkStores stats (Reads, Unpacks, Writes):
 YieldingUnlockH264
+YieldingUpdateAdvancedSettingsEnabled
+YieldingUpdateAllowExternalDisplayRefreshControl
 YieldingUpdateAppFromBuffer
+YieldingUpdateCPUGovernor
+YieldingUpdateCPUGovernorManualMhz
+YieldingUpdateDynamicRefreshRateEnabled
+YieldingUpdateFPSLimit
+YieldingUpdateFPSLimitEnabled
+YieldingUpdateFSRSharpness
 YieldingUpdateGPUPerformanceLevel
 YieldingUpdateGPUPerformanceManualMhz
+YieldingUpdateHDROnSDRBrightness
+YieldingUpdateHDROnSDRTonemapOperator
+YieldingUpdateLowLatencyModeEnabled
+YieldingUpdatePerfOverlayLevel
 YieldingUpdateRefreshRateManualHz
 YieldingUpdateRemoteClientCache
+YieldingUpdateSetColorManagementEnabled
+YieldingUpdateShowPerfOverlayOverSteam
+YieldingUpdateSplitScalingFilter
+YieldingUpdateSplitScalingScaler
 YieldingUpdateTDPLimit
+YieldingUpdateTDPLimitEnabled
+YieldingUpdateUseDynamicRefreshRateInSteam
+YieldingUpdateVRREnabled
+YieldingUpdateVariableResolutionEnabled
 YieldingValidateFiles
 YieldingWaitForUpdateLock
 YieldingWritePendingAppStateChanges
@@ -43034,6 +43060,7 @@ cdn_auth_url_parameters
 cdn_manifest_url
 cdninfo
 ceeeeiiiionooooo
+cef_log.previous.txt
 cef_log.txt
 cegpublickey
 ceil
@@ -44689,6 +44716,7 @@ disables breakpad in crash dumps
 disables console and log file logging of JS console events
 disables high-DPI support in CEF
 disables loading winh264.dll
+disables logging from CEF
 disables per-process site-isolation
 disables sandboxing in CEF
 disabling wifi power management
@@ -50881,9 +50909,9 @@ loopback
 lost network device
 lost rgb to gray
 lost/gained channels
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1574
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1724
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1929
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1577
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1727
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1932
 low-pri yield - /data/src/clientdll/appdatacache.cpp:870
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:645
@@ -58172,7 +58200,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep  2 2025 21:56:12
+steam Sep  3 2025 23:21:23
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

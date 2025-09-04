@@ -303,7 +303,6 @@ $\n k_SystemAudioPortDirection_Input
 %s%c.temp_write_%x
 %s.%u.tmp
 %s.async%u.tmp
-%s.previous.txt
 %s/.steam/%s
 %s/.steam/steam
 %s/steamXXXXXX
@@ -540,6 +539,7 @@ $\n k_SystemAudioPortDirection_Input
 --gpu-launcher='%s'
 --ignore-gpu-blocklist
 --log-file=%s
+--log-severity=disable
 --no-sandbox
 --password-store=basic
 --proxy-bypass-list="localhost;127.0.0.1"
@@ -577,6 +577,7 @@ $\n k_SystemAudioPortDirection_Input
 -cef-disable-hang-timeouts
 -cef-disable-hevc
 -cef-disable-js-logging
+-cef-disable-logging
 -cef-disable-occlusion
 -cef-disable-renderer-restart
 -cef-disable-safe-shutdown-workaround
@@ -4356,6 +4357,7 @@ cc_enable_arenas
 cc_generic_services
 cdkeyrestrictions
 cdninfo
+cef_log.previous.txt
 cef_log.txt
 cellmap
 certName
@@ -4505,6 +4507,7 @@ disables breakpad in crash dumps
 disables console and log file logging of JS console events
 disables high-DPI support in CEF
 disables loading winh264.dll
+disables logging from CEF
 disables per-process site-isolation
 disables sandboxing in CEF
 disconnected

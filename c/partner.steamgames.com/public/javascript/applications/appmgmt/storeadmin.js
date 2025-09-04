@@ -183,6 +183,7 @@
         UploadButton: "_35DNlmVRsyVbi56Xf_jj9A",
         StandaloneUploadButton: "NK3X0iAqHHQskiywniNiD",
         ExtraAssetsGridDialog: "aaxZ2xZ0gE7RMvrheWWmj",
+        ExtraAssetSearch: "_33MsM-ZTqbPsW8e03kSUKY",
         ExtraAssetsGrid: "_2Uzyt8kZcr-0KU1aoTkiuj",
         ExtraAssetsPageList: "_39FaN2oioTXV-lkAOG0jfE",
         ExtraAssetsChooser: "_12hVxV1z_asvDHFqo9ScMk",
@@ -1149,6 +1150,8 @@
             removeNode: _,
             activeLanguage: _,
             allowAnimations: _,
+            mapValues: _,
+            fnUpdateDocument: _,
           } = _,
           [_, _] = (0, _._)(),
           [_, _, _] = (0, _._)(),
@@ -1215,10 +1218,21 @@
           _ &&
             _.createElement(_, {
               editAsset: _,
-              onAssetSelected: (_) =>
-                _({
-                  src: _,
-                }),
+              bReplace: !0,
+              onAssetSelected: (_, _) => {
+                if (_) {
+                  const _ = new Map();
+                  for (const [__webpack_require__, _] of _) {
+                    const _ = new RegExp(`${_}(?!\\w)`, "g"),
+                      _ = _.Value.replace(_, `${_}`);
+                    _.set(__webpack_require__, _);
+                  }
+                  _(_);
+                } else
+                  _({
+                    src: _,
+                  });
+              },
               hideModal: _,
             }),
           _,
@@ -1378,17 +1392,20 @@
       function _(_) {
         const {
             editAsset: _,
-            onAssetSelected: __webpack_require__,
+            bReplace: __webpack_require__,
+            onAssetSelected: _,
             hideModal: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(_),
           [_, _] = (0, _._)(_, _._),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(""),
           _ = _.useCallback(
-            (_) => {
-              _ && (__webpack_require__(_), _());
+            (_, _) => {
+              _ && (_(_, _), _());
             },
-            [__webpack_require__, _],
+            [_, _],
           );
         return _.createElement(
           _._,
@@ -1442,6 +1459,21 @@
                 ),
               ),
               _.createElement(
+                "div",
+                {
+                  className: _.ExtraAssetSearch,
+                },
+                _.createElement(_._, {
+                  type: "text",
+                  value: _,
+                  bShowClearAction: !0,
+                  onChange: (_) => _(_.currentTarget.value || ""),
+                  placeholder: (0, _._)(
+                    "#StoreAdmin_ExtraAssetUpload_SearchPlaceholder",
+                  ),
+                }),
+              ),
+              _.createElement(
                 _._,
                 {
                   className: _.ExtraAssetsGridDialog,
@@ -1454,12 +1486,12 @@
                       _.ExtraAssetsChooser,
                     ),
                   },
-                  _.map((_) =>
+                  _.filter((_) => (0, _._)(_).includes(_)).map((_) =>
                     _.createElement(_, {
                       key: (0, _._)(_),
                       extraAsset: _,
                       onSelectAsset: _,
-                      onChooseAsset: _,
+                      onChooseAsset: (_) => _(_, _),
                       selected: (0, _._)(_) == _,
                     }),
                   ),
@@ -1468,10 +1500,20 @@
               _.createElement(
                 _._,
                 null,
+                __webpack_require__ &&
+                  _.createElement(_._, {
+                    className: _.ReplaceAllCheck,
+                    checked: _,
+                    onChange: _,
+                    label: (0, _._)("#StoreAdmin_ExtraAssetUpload_ReplaceAll"),
+                    tooltip: (0, _._)(
+                      "#StoreAdmin_ExtraAssetUpload_ReplaceAll_ttip",
+                    ),
+                  }),
                 _.createElement(_._, {
                   onCancel: _,
                   onOK: (_) => {
-                    _.preventDefault(), _(_);
+                    _.preventDefault(), _(_, _);
                   },
                   bOKDisabled: !_,
                   strOKText: (0, _._)(
@@ -1490,19 +1532,30 @@
             onChooseAsset: _,
             selected: _,
           } = _,
+          _ = _.useRef(),
           _ = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.ExtraAssetChoice, _ && _.Selected),
-            title: _,
-            onClick: (_) => __webpack_require__(_),
-            onDoubleClick: (_) => _(_),
-          },
-          _.createElement(_, {
-            extraAsset: _,
-            controls: !1,
-          }),
+        return (
+          _.useLayoutEffect(() => {
+            _ &&
+              _.current?.scrollIntoView({
+                block: "nearest",
+                inline: "nearest",
+              });
+          }, []),
+          _.createElement(
+            "div",
+            {
+              ref: _,
+              className: (0, _._)(_.ExtraAssetChoice, _ && _.Selected),
+              title: _,
+              onClick: (_) => __webpack_require__(_),
+              onDoubleClick: (_) => _(_),
+            },
+            _.createElement(_, {
+              extraAsset: _,
+              controls: !1,
+            }),
+          )
         );
       }
       function _(_) {
@@ -3424,6 +3477,18 @@
                 _.doc,
               ));
         }
+        ReplaceDocument(_) {
+          this.m_bbcode != _ &&
+            this.UpdateState((_) => {
+              this.m_bbcode = _;
+              const _ = this.m_bbcodeParser.ParseBBCode(_);
+              return this.m_state._.replaceWith(
+                0,
+                this.m_state.doc.content.size,
+                _,
+              ).scrollIntoView();
+            });
+        }
       }
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -5183,10 +5248,11 @@
             language: _,
             languages: __webpack_require__,
             rctToolbarControls: _,
-            value: _,
+            mapValues: _,
             editorType: _,
             rctAboveEditor: _,
           } = _,
+          _ = _.get(_),
           [_, _] = _.useState(),
           _ = _.useRef(void 0),
           _ = (function (_) {
@@ -5303,10 +5369,19 @@
             return _.current;
           })((0, _._)(_)),
           [_] = _.useState(() => new Map()),
+          _ = _.useCallback(
+            (_) => {
+              _.has(_) || _.set(_, new _(_, _.Value, (_) => _.Set(_), _));
+            },
+            [_, _],
+          ),
           [_, _] = _.useState();
         _.useEffect(() => {
-          _.has(_) || _.set(_, new _(_, _.Value, (_) => _.Set(_), _)),
-            _(_.get(_));
+          _(_), _(_.get(_));
+        }, [_, _, _, _]);
+        const _ = (0, _._)(_);
+        _.useEffect(() => {
+          _.get(_).ReplaceDocument(_);
         }, [_, _, _]),
           _(_, {
             msAutosaveTimeout: 5e3,
@@ -5354,7 +5429,16 @@
               _.createElement(_, {
                 schema: _,
                 activeLanguage: _,
+                mapValues: _,
                 allowAnimations: _,
+                updateDocument: (_) =>
+                  (function (_, _, _, _) {
+                    _?.CommitChanges();
+                    for (const [_, _] of _) {
+                      const _ = _.get(_);
+                      _ && _.Value != _ && (__webpack_require__(_), _.Set(_));
+                    }
+                  })(_, _, _, _),
               }),
             ),
           ),
@@ -5525,7 +5609,9 @@
         const {
             schema: _,
             activeLanguage: __webpack_require__,
+            mapValues: _,
             allowAnimations: _,
+            updateDocument: _,
           } = _,
           _ = _.useMemo(
             () => [
@@ -5536,11 +5622,13 @@
                   src: _.attrs.src,
                   inLink: _.marks.some((_) => _.type == _.pm_schema.marks.link),
                   activeLanguage: __webpack_require__,
+                  mapValues: _,
                   allowAnimations: _,
+                  fnUpdateDocument: _,
                 }),
               },
             ],
-            [_, __webpack_require__, _],
+            [_, __webpack_require__, _, _, _],
           );
         return _.createElement(
           _.Fragment,
@@ -7618,8 +7706,9 @@
         const {
             language: _,
             rctToolbarControls: __webpack_require__,
-            value: _,
+            mapValues: _,
           } = _,
+          _ = _.get(_),
           _ = _.createRef();
         return _.createElement(
           _.Fragment,
@@ -7860,7 +7949,7 @@
                 },
                 _.createElement(_, {
                   language: _,
-                  value: _.get(_),
+                  mapValues: _,
                   languages: _,
                   rctToolbarControls: _,
                   editorType: _,
@@ -13590,7 +13679,7 @@
                 languages: _,
                 editorType: "milestone",
                 rctToolbarControls: _,
-                value: _.get(_),
+                mapValues: _,
                 rctAboveEditor: _.createElement(_, {
                   appid: _?.completed_appid || _,
                 }),

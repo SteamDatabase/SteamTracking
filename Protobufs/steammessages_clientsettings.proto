@@ -177,7 +177,6 @@ message CMsgClientSettings {
 	optional bool music_pause_on_app_start = 11001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PauseOnAppStartedProcess"];
 	optional bool music_pause_on_voice_chat = 11002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PauseOnVoiceChat"];
 	optional bool music_download_high_quality = 11003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\DownloadHighQualityAudioSoundtracks"];
-	optional bool music_playlist_notification = 11004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PlaylistNowPlayingNotification"];
 	optional .EBroadcastPermission broadcast_permissions = 12000 [default = k_EBroadcastPermissionDisabled, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\Permissions", (setting_default_int) = 1];
 	optional int32 broadcast_output_width = 12001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\OutputWidth"];
 	optional int32 broadcast_output_height = 12002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\OutputHeight", (setting_default_int) = 720];
