@@ -2907,7 +2907,7 @@
           }),
           i =
             t.m_plan.start_date &&
-            s.format(1e3 * (t.m_plan.start_date - me.lF)),
+            s.format(1e3 * (0, me.OS)(void 0, t.m_plan.start_date, "partner")),
           l = t.m_plan,
           [c] = (0, ee.G6)(l.store_item_id, l.store_item_type, {
             include_basic_info: !0,

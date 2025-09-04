@@ -4155,7 +4155,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4194,8 +4193,6 @@
             "seasonalsale",
           ])),
         _ = new Set(["dailydeal", "assetrequest"]),
-        _ = 604800,
-        _ = 172800,
         _ = 0,
         _ = new Map();
       _.set("midweek", "Midweek Deal"),
@@ -4421,6 +4418,13 @@
         });
       const _ = ["midweek", "weekenddeal"];
       new Set(_);
+      function _(_, _, _) {
+        if (_) return _;
+        const _ = _ - ("partner" == _ ? 7 : 2) * _._.PerDay;
+        if (!("artproduction" == _)) return _;
+        const _ = new Date(1e3 * _).getDay();
+        return 6 == _ ? _ - _._.PerDay : 0 == _ ? _ - 2 * _._.PerDay : _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -12382,7 +12386,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_oPromotionPlan = null;
@@ -12874,11 +12877,6 @@
         }
         GetArtTeamDueDate() {
           return this.m_oPromotionPlan.artwork_production_team_due_date;
-        }
-        GetArtTeamDueDateWithFallback() {
-          return this.m_oPromotionPlan.artwork_production_team_due_date
-            ? this.m_oPromotionPlan.artwork_production_team_due_date
-            : this.m_oPromotionPlan.start_date - _._;
         }
         GetSlackChannel() {
           return this.m_oPromotionPlan.slack_channel;
@@ -45219,6 +45217,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -45258,7 +45257,7 @@
           _ = (0, _._)(_, _),
           _ = (0, _._)(),
           _ = Math.floor(Date.now() / 1e3),
-          _ = _?.GetDueDate() ?? _.GetStartDate() - _._,
+          _ = (0, _._)(_?.GetDueDate(), _.GetStartDate(), "partner"),
           _ = _ <= _ && _ != _._,
           _ = (0, _._)(_.GetID()),
           _ = (0, _._)(() => _.GetModel().submitting_accountid),
@@ -45393,7 +45392,7 @@
           { fnCreatePromoInvite: _ } = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _?.GetDueDate() ?? _.GetStartDate() - _._,
+          _ = (0, _._)(_?.GetDueDate(), _.GetStartDate(), "partner"),
           _ = (0, _._)(_.GetPartnerID()),
           _ = (0, _.useCallback)(async () => {
             _.fnSetLoading(!0);
@@ -45675,22 +45674,32 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(null != __webpack_require__),
-          [_] = (0, _._)(() => [_.GetStartDate()]),
-          _ = _ ? _._ : _._;
+          [_] = (0, _._)(() => [_.GetStartDate()]);
         return _
           ? _.createElement(
               _.Fragment,
               null,
               _.createElement("h3", null, _),
-              _.createElement(
-                "div",
-                {
-                  style: {
-                    paddingBottom: "10px",
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    style: {
+                      paddingBottom: "10px",
+                    },
                   },
-                },
-                "Recommended due date is a week before the event starts. This won't prevent them from providing art after this point, but clarifies our expectations of the partner",
-              ),
+                  "Recommended due date is a week before the event starts. This won't prevent them from providing art after this point, but clarifies our expectations of the partner.",
+                ),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    style: {
+                      paddingBottom: "10px",
+                    },
+                  },
+                  "Recommended due date is two days before the event starts, but not on the weekend. This won't prevent them from providing art after this point, but clarifies our expectations.",
+                ),
               _.createElement(
                 "div",
                 {
@@ -45718,7 +45727,15 @@
                     _.createElement(_._, {
                       label: (0, _._)("#AssetRequest_DueDate_ASAP"),
                       onClick: () => {
-                        __webpack_require__ != _._ ? _(_._) : _(_ - _);
+                        __webpack_require__ != _._
+                          ? _(_._)
+                          : _(
+                              (0, _._)(
+                                void 0,
+                                _,
+                                _ ? "partner" : "artproduction",
+                              ),
+                            );
                       },
                       checked: __webpack_require__ == _._,
                     }),
@@ -45739,7 +45756,7 @@
               _.createElement(
                 "h2",
                 null,
-                _(__webpack_require__, _, _),
+                _(__webpack_require__, _, _ ? "partner" : "artproduction"),
                 _.createElement(
                   "div",
                   {
@@ -45833,7 +45850,7 @@
           ? _ == _._
             ? (0, _._)("#AssetRequest_DueDate_ASAP")
             : (0, _._)(_)
-          : (0, _._)(_ - _);
+          : (0, _._)((0, _._)(void 0, _, _));
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -46530,7 +46547,7 @@
           _ = (0, _._)(),
           [_, _] = (0, _._)(() => [
             _.GetArtRequests() || [],
-            _.GetDueDate() ?? _.start_date - _._,
+            (0, _._)(_.GetDueDate(), _.start_date, "partner"),
           ]);
         return _.createElement(
           "div",
@@ -46771,7 +46788,7 @@
             },
             (0, _._)("#AssetRequest_Deadline"),
             " ",
-            _.createElement("span", null, (0, _._)(_, _, _._)),
+            _.createElement("span", null, (0, _._)(_, _, "partner")),
           ),
         );
       }
@@ -48704,7 +48721,8 @@
           ]),
           [_, _] = (0, _._)(_, _, _),
           _ = (0, _._)(__webpack_require__.GetMarketingMessageID("chunkid")),
-          _ = (0, _._)(__webpack_require__.GetMarketingMessageID("chunkid"));
+          _ = (0, _._)(__webpack_require__.GetMarketingMessageID("chunkid")),
+          [_] = (0, _._)(() => [__webpack_require__.GetArtTeamDueDate()]);
         return Boolean(
           __webpack_require__.GetMarketingMessageID("chunkid") && !_,
         ) ||
@@ -48713,42 +48731,53 @@
           ? _.createElement(_._, {
               string: "Loading Marketing Messages",
             })
-          : _.createElement(_._, {
-              label: "Enable requesting featuring assets from partner?",
-              checked: !1,
-              onChange: (_) => {
-                _.SetRequestedArt(
-                  _._.filter((_) => !_.includes(_))
-                    .filter((_) => !_.includes(_))
-                    .filter((_) =>
-                      __webpack_require__.BHasPromotionFeaturingForArtRequirement(
-                        _,
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_._, {
+                label: "Enable requesting featuring assets from partner?",
+                checked: !1,
+                onChange: (_) => {
+                  _.SetRequestedArt(
+                    _._.filter((_) => !_.includes(_))
+                      .filter((_) => !_.includes(_))
+                      .filter((_) =>
+                        __webpack_require__.BHasPromotionFeaturingForArtRequirement(
+                          _,
+                        ),
                       ),
-                    ),
-                ),
-                  _ &&
-                    !(0, _._)(_, _.type) &&
-                    _.AddRequestedArt(
-                      10 == _.type
-                        ? "marketingmessage_art_eventcapsule"
-                        : "marketingmessage_art",
-                    ),
-                  _ &&
-                    !(0, _._)(_, _.type) &&
-                    _.AddRequestedArt(
-                      10 == _.type
-                        ? "marketingmessage_art_2_eventcapsule"
-                        : "marketingmessage_art_2",
-                    ),
-                  (_.GetModel().requested_promotion_name =
-                    __webpack_require__.GetName()),
-                  __webpack_require__.BHasDiscountEventID() &&
-                    (_.GetModel().asset_request_discount_event_id_clone =
-                      __webpack_require__.GetDiscountEventID()),
-                  _.SetRequestEnabled(!0),
-                  _(_);
-              },
-            });
+                  ),
+                    _ &&
+                      !(0, _._)(_, _.type) &&
+                      _.AddRequestedArt(
+                        10 == _.type
+                          ? "marketingmessage_art_eventcapsule"
+                          : "marketingmessage_art",
+                      ),
+                    _ &&
+                      !(0, _._)(_, _.type) &&
+                      _.AddRequestedArt(
+                        10 == _.type
+                          ? "marketingmessage_art_2_eventcapsule"
+                          : "marketingmessage_art_2",
+                      ),
+                    (_.GetModel().requested_promotion_name =
+                      __webpack_require__.GetName()),
+                    __webpack_require__.BHasDiscountEventID() &&
+                      (_.GetModel().asset_request_discount_event_id_clone =
+                        __webpack_require__.GetDiscountEventID()),
+                    _.SetRequestEnabled(!0),
+                    _(_);
+                },
+              }),
+              _.createElement("br", null),
+              _.createElement(_._, {
+                strTitle: "Art Production Team Due Date:",
+                rtDueDate: _,
+                fnSetDueDate: _.SetArtworkProductionTeamDueDate,
+                bPartnerDueDate: !1,
+              }),
+            );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -62123,9 +62152,11 @@
           }, [_, _]),
           _ = (0, _.useCallback)(
             (_) =>
-              _.artwork_production_team_due_date
-                ? _.artwork_production_team_due_date
-                : _.start_date - _._,
+              (0, _._)(
+                _.artwork_production_team_due_date,
+                _.start_date,
+                "artproduction",
+              ),
             [],
           ),
           _ = (_) => _(_.key),
@@ -75072,7 +75103,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditablePlan: _ } = _;
@@ -75297,7 +75327,7 @@
             "h2",
             null,
             "Asset Process: Due ",
-            (0, _._)(_, _, _._),
+            (0, _._)(_, _, "artproduction"),
           ),
           _.createElement(
             "div",
@@ -79645,7 +79675,11 @@
               _.GetFeaturedItemType(),
               _.GetSaleClanEventGID(),
               _.GetStartDate(),
-              _.GetArtTeamDueDate() || _.GetStartDate() - _._,
+              (0, _._)(
+                _.GetArtTeamDueDate(),
+                _.GetStartDate(),
+                "artproduction",
+              ),
             ]),
           _ = (0, _._)(_._.k_ConfigPage_Takeover, _),
           _ = (0, _._)(_),

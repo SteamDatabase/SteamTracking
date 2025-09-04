@@ -3334,7 +3334,8 @@
             day: "numeric",
           }),
           _ =
-            _.m_plan.start_date && _.format(1e3 * (_.m_plan.start_date - _._)),
+            _.m_plan.start_date &&
+            _.format(1e3 * (0, _._)(void 0, _.m_plan.start_date, "partner")),
           _ = _.m_plan,
           [_] = (0, _._)(_.store_item_id, _.store_item_type, {
             include_basic_info: !0,

@@ -4080,24 +4080,23 @@
     67239: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Hm: () => I,
-        I8: () => w,
-        Pq: () => D,
+        Hm: () => w,
+        I8: () => b,
+        OS: () => C,
+        Pq: () => f,
         QP: () => c,
-        Qo: () => C,
-        Ue: () => f,
-        W7: () => g,
-        Yh: () => y,
-        Z7: () => S,
-        ZK: () => h,
-        ZL: () => v,
-        db: () => _,
-        lF: () => u,
+        Qo: () => D,
+        Ue: () => y,
+        W7: () => p,
+        Yh: () => S,
+        Z7: () => h,
+        ZK: () => _,
+        ZL: () => E,
+        db: () => u,
         lt: () => d,
-        n5: () => p,
-        qt: () => b,
-        re: () => E,
-        vm: () => T,
+        qt: () => v,
+        re: () => g,
+        vm: () => I,
         wv: () => m,
       });
       var n = a(17720),
@@ -4137,80 +4136,78 @@
             "seasonalsale",
           ])),
         d = new Set(["dailydeal", "assetrequest"]),
-        u = 604800,
-        p = 172800,
-        _ = 0,
-        g = new Map();
-      g.set("midweek", "Midweek Deal"),
-        g.set("weekenddeal", "Weekend Deal"),
-        g.set("saleevent", "Sale Event"),
-        g.set("themesale", "Theme Sale"),
-        g.set("nextfest", "Next Fests"),
-        g.set("seasonalsale", "Seasonal Sale"),
-        g.set("informational", "Informational"),
-        g.set("launchtracking", "Launch Tracking"),
-        g.set("dailydeal", "Daily Deal"),
-        g.set("vacation", "Vacation/PTO"),
-        g.set("important", "Takeover / Takeunder"),
-        g.set("preload", "Pre-load"),
-        g.set("assetrequest", "Asset Request Only");
-      const h = new Set();
-      h.add("seasonalsale"), h.add("themesale"), h.add("nextfest");
+        u = 0,
+        p = new Map();
+      p.set("midweek", "Midweek Deal"),
+        p.set("weekenddeal", "Weekend Deal"),
+        p.set("saleevent", "Sale Event"),
+        p.set("themesale", "Theme Sale"),
+        p.set("nextfest", "Next Fests"),
+        p.set("seasonalsale", "Seasonal Sale"),
+        p.set("informational", "Informational"),
+        p.set("launchtracking", "Launch Tracking"),
+        p.set("dailydeal", "Daily Deal"),
+        p.set("vacation", "Vacation/PTO"),
+        p.set("important", "Takeover / Takeunder"),
+        p.set("preload", "Pre-load"),
+        p.set("assetrequest", "Asset Request Only");
+      const _ = new Set();
+      _.add("seasonalsale"), _.add("themesale"), _.add("nextfest");
       new Set().add("vacation");
-      const E = new Set();
-      E.add("important");
+      const g = new Set();
+      g.add("important");
+      const h = new Map();
+      h.set("midweek", "#254069"),
+        h.set("weekenddeal", "#254069"),
+        h.set("saleevent", "#819c8a"),
+        h.set("themesale", "#819c8a"),
+        h.set("nextfest", "#819c8a"),
+        h.set("seasonalsale", "#819c8a"),
+        h.set("informational", "#474747"),
+        h.set("launchtracking", "#474747"),
+        h.set("dailydeal", "#80275D"),
+        h.set("vacation", "#6f7485"),
+        h.set("important", "#40ccfd"),
+        h.set("preload", "#A47332"),
+        h.set("assetrequest", "#80875D");
+      const E = new Map();
+      E.set("midweek", "#discount_desc_preset_midweek"),
+        E.set("weekenddeal", "#discount_desc_preset_weekend"),
+        E.set("saleevent", "#discount_desc_preset_special"),
+        E.set("themesale", "#discount_desc_preset_special"),
+        E.set("nextfest", "#discount_desc_preset_special"),
+        E.set("seasonalsale", "#discount_desc_preset_special"),
+        E.set("informational", "#discount_desc_limited_time_date"),
+        E.set("dailydeal", "#discount_desc_preset_daily"),
+        E.set("vacation", "#discount_desc_limited_time_date"),
+        E.set("important", "#discount_desc_limited_time_date"),
+        E.set("preload", "#discount_desc_limited_time_date");
       const S = new Map();
-      S.set("midweek", "#254069"),
-        S.set("weekenddeal", "#254069"),
-        S.set("saleevent", "#819c8a"),
-        S.set("themesale", "#819c8a"),
-        S.set("nextfest", "#819c8a"),
-        S.set("seasonalsale", "#819c8a"),
-        S.set("informational", "#474747"),
-        S.set("launchtracking", "#474747"),
-        S.set("dailydeal", "#80275D"),
-        S.set("vacation", "#6f7485"),
-        S.set("important", "#40ccfd"),
-        S.set("preload", "#A47332"),
-        S.set("assetrequest", "#80875D");
+      S.set("midweek", ["Midweek", "Midweek Deal"]),
+        S.set("weekenddeal", ["Weekend", "Weekend Deal"]);
       const v = new Map();
-      v.set("midweek", "#discount_desc_preset_midweek"),
-        v.set("weekenddeal", "#discount_desc_preset_weekend"),
-        v.set("saleevent", "#discount_desc_preset_special"),
-        v.set("themesale", "#discount_desc_preset_special"),
-        v.set("nextfest", "#discount_desc_preset_special"),
-        v.set("seasonalsale", "#discount_desc_preset_special"),
-        v.set("informational", "#discount_desc_limited_time_date"),
-        v.set("dailydeal", "#discount_desc_preset_daily"),
-        v.set("vacation", "#discount_desc_limited_time_date"),
-        v.set("important", "#discount_desc_limited_time_date"),
-        v.set("preload", "#discount_desc_limited_time_date");
-      const y = new Map();
-      y.set("midweek", ["Midweek", "Midweek Deal"]),
-        y.set("weekenddeal", ["Weekend", "Weekend Deal"]);
-      const b = new Map();
-      b.set("none", ""),
-        b.set("takeover", "Takeover"),
-        b.set("takeunder", "Takeunder"),
-        b.set("hub_takeover", "Hub"),
-        b.set("regional_takeunder", "Regional Takeunder"),
-        b.set("f2p", "F2P"),
-        b.set("ea", "EA"),
-        b.set("steamchina_takeover", "SC Takeover"),
-        b.set("steamchina_only", "SC");
-      const f = [
+      v.set("none", ""),
+        v.set("takeover", "Takeover"),
+        v.set("takeunder", "Takeunder"),
+        v.set("hub_takeover", "Hub"),
+        v.set("regional_takeunder", "Regional Takeunder"),
+        v.set("f2p", "F2P"),
+        v.set("ea", "EA"),
+        v.set("steamchina_takeover", "SC Takeover"),
+        v.set("steamchina_only", "SC");
+      const y = [
           "marketingmessage_art",
           "marketingmessage_art_2",
           "marketingmessage_art_eventcapsule",
           "marketingmessage_art_2_eventcapsule",
         ],
-        w = [
+        b = [
           "takeover_webm_art",
           "takeover_mp4_art",
           "takeover_webm_mobile_art",
           "takeover_mp4_mobile_art",
         ];
-      function D(e) {
+      function f(e) {
         switch (e) {
           case "marketingmessage_art":
             return "Marketing Message Banner";
@@ -4258,7 +4255,7 @@
             return "Unknown Promo Art Request";
         }
       }
-      class I {
+      class w {
         static GetSpotlightEditURL(e) {
           return l.TS.PARTNER_BASE_URL + "admin/store/spotlight/" + e;
         }
@@ -4270,13 +4267,13 @@
         static GetClusterEditURL(e, t) {
           switch (e) {
             case o.ii.k_ConfigPage_Takeover:
-              return I.GetTakeoverEditURL(t);
+              return w.GetTakeoverEditURL(t);
             case o.ii.k_ConfigPage_Takeunder:
-              return I.GetTakeunderEditURL(t);
+              return w.GetTakeunderEditURL(t);
             case o.ii.k_ConfigPage_TakeoverSteamChina:
-              return I.GetSteamChinaTakeoverEditURL(t);
+              return w.GetSteamChinaTakeoverEditURL(t);
             default:
-              return I.GetContentHubTakeoverEditURL(e, t);
+              return w.GetContentHubTakeoverEditURL(e, t);
           }
         }
         static GetTakeoverEditURL(e) {
@@ -4333,8 +4330,8 @@
           return l.TS.PARTNER_BASE_URL + "apps/landing/" + e;
         }
       }
-      const C = new Map();
-      C.set("midweek", {
+      const D = new Map();
+      D.set("midweek", {
         nMaxSlots: 6,
         rtStartModifier: 10 * s.Kp.PerHour,
         rtEndModifier: 3 * s.Kp.PerDay + 10 * s.Kp.PerHour,
@@ -4349,7 +4346,7 @@
         nDaysDiscountEvent: 7,
         rtDays: 3,
       }),
-        C.set("weekenddeal", {
+        D.set("weekenddeal", {
           nMaxSlots: 6,
           rtStartModifier: 3 * s.Kp.PerDay + 10 * s.Kp.PerHour,
           rtEndModifier: 7 * s.Kp.PerDay + 10 * s.Kp.PerHour,
@@ -4364,8 +4361,15 @@
           nDaysDiscountEvent: 7,
           rtDays: 4,
         });
-      const T = ["midweek", "weekenddeal"];
-      new Set(T);
+      const I = ["midweek", "weekenddeal"];
+      new Set(I);
+      function C(e, t, a) {
+        if (e) return e;
+        const n = t - ("partner" == a ? 7 : 2) * s.Kp.PerDay;
+        if (!("artproduction" == a)) return n;
+        const r = new Date(1e3 * n).getDay();
+        return 6 == r ? n - s.Kp.PerDay : 0 == r ? n - 2 * s.Kp.PerDay : n;
+      }
     },
     92135: (e, t, a) => {
       "use strict";
@@ -12051,27 +12055,26 @@
     },
     93742: (e, t, a) => {
       "use strict";
-      a.d(t, { ft: () => E, ll: () => h, ok: () => S, Gr: () => v });
+      a.d(t, { ft: () => h, ll: () => g, ok: () => E, Gr: () => S });
       var n = a(34629),
-        r = a(67239),
-        i = a(14947),
-        s = a(17720),
-        l = a(62792),
-        o = a(81393),
-        c = a(6144),
-        m = a(73745),
-        d = a(78327),
-        u = a(73523);
-      class p {
+        r = a(14947),
+        i = a(17720),
+        s = a(62792),
+        l = a(81393),
+        o = a(6144),
+        c = a(73745),
+        m = a(78327),
+        d = a(73523);
+      class u {
         m_oPromotionPlan = null;
         m_originalPromotionPlan = null;
         m_nPartnerID = null;
         m_nOriginalPartnerID = null;
         m_bDirty = !1;
-        m_callback = new c.lu();
+        m_callback = new o.lu();
         m_storeItemKey = null;
         constructor(e, t) {
-          (0, i.Gn)(this), this.Reset(e, t);
+          (0, r.Gn)(this), this.Reset(e, t);
         }
         Reset(e, t) {
           (this.m_originalPromotionPlan = JSON.parse(JSON.stringify(e))),
@@ -12080,7 +12083,7 @@
             (this.m_nOriginalPartnerID = t),
             (this.m_nPartnerID = t),
             this.m_oPromotionPlan.store_item_id &&
-              (this.m_storeItemKey = (0, l.vo)(
+              (this.m_storeItemKey = (0, s.vo)(
                 this.m_oPromotionPlan.store_item_id,
                 this.m_oPromotionPlan.store_item_type,
               )),
@@ -12214,7 +12217,7 @@
             case "app_main_capsule":
               return this.BHasAdvertisingAppID();
           }
-          return (0, o.wT)(!1, "Unexpected artwork promo type; " + e), !1;
+          return (0, l.wT)(!1, "Unexpected artwork promo type; " + e), !1;
         }
         BHasSpotlightIDs(e) {
           return e >= 0 && this.m_oPromotionPlan.spotlight_ids?.length > e
@@ -12254,11 +12257,11 @@
         }
         GetClusterArray(e) {
           switch (e) {
-            case u.ii.k_ConfigPage_Takeover:
+            case d.ii.k_ConfigPage_Takeover:
               return this.m_oPromotionPlan.takeover_ids;
-            case u.ii.k_ConfigPage_Takeunder:
+            case d.ii.k_ConfigPage_Takeunder:
               return this.m_oPromotionPlan.takeunder_ids;
-            case u.ii.k_ConfigPage_TakeoverSteamChina:
+            case d.ii.k_ConfigPage_TakeoverSteamChina:
               return this.m_oPromotionPlan.steamchina_takeover_ids;
             default:
               return this.m_oPromotionPlan.contenthub_takeover_ids.filter(
@@ -12269,11 +12272,11 @@
         }
         GetClusterReviewedArray(e) {
           switch (e) {
-            case u.ii.k_ConfigPage_Takeover:
+            case d.ii.k_ConfigPage_Takeover:
               return this.m_oPromotionPlan.takeover_reviewed;
-            case u.ii.k_ConfigPage_Takeunder:
+            case d.ii.k_ConfigPage_Takeunder:
               return this.m_oPromotionPlan.takeunder_reviewed;
-            case u.ii.k_ConfigPage_TakeoverSteamChina:
+            case d.ii.k_ConfigPage_TakeoverSteamChina:
               return this.m_oPromotionPlan.steamchina_takeover_reviewed;
             default:
               return (
@@ -12425,11 +12428,11 @@
         }
         GetSaleEditEventURL() {
           if (this.BHasAssociatedSaleEvent()) {
-            const e = s.b.InitFromClanID(
+            const e = i.b.InitFromClanID(
               this.m_oPromotionPlan.sale_clan_account,
             );
             return (
-              d.TS.COMMUNITY_BASE_URL +
+              m.TS.COMMUNITY_BASE_URL +
               "gid/" +
               e.ConvertTo64BitString() +
               "/partnerevents/edit/" +
@@ -12529,7 +12532,7 @@
           return this.m_oPromotionPlan.artwork_localization_request_items || [];
         }
         GetArtworkLocationUploadAssetURL() {
-          return `${d.TS.PARTNER_BASE_URL}promotion/assetportal/localization/${this.m_oPromotionPlan.id}`;
+          return `${m.TS.PARTNER_BASE_URL}promotion/assetportal/localization/${this.m_oPromotionPlan.id}`;
         }
         GetNumArtworkLocalizationRequired() {
           return (
@@ -12550,11 +12553,6 @@
         }
         GetArtTeamDueDate() {
           return this.m_oPromotionPlan.artwork_production_team_due_date;
-        }
-        GetArtTeamDueDateWithFallback() {
-          return this.m_oPromotionPlan.artwork_production_team_due_date
-            ? this.m_oPromotionPlan.artwork_production_team_due_date
-            : this.m_oPromotionPlan.start_date - r.n5;
         }
         GetSlackChannel() {
           return this.m_oPromotionPlan.slack_channel;
@@ -12674,7 +12672,7 @@
           Boolean(this.m_oPromotionPlan.partner_artwork_submission_reviewed) !=
             e &&
             ((this.m_oPromotionPlan.partner_artwork_submission_reviewed = e
-              ? d.iA.accountid
+              ? m.iA.accountid
               : null),
             this.Dispatch());
         }
@@ -12683,7 +12681,7 @@
             this.m_oPromotionPlan.store_item_type == t) ||
             ((this.m_oPromotionPlan.store_item_id = e),
             (this.m_oPromotionPlan.store_item_type = t),
-            (this.m_storeItemKey = (0, l.vo)(
+            (this.m_storeItemKey = (0, s.vo)(
               this.m_oPromotionPlan.store_item_id,
               this.m_oPromotionPlan.store_item_type,
             )),
@@ -12711,7 +12709,7 @@
         SetSaleEventReviewed(e) {
           Boolean(this.m_oPromotionPlan.sale_page_reviewed) != e &&
             ((this.m_oPromotionPlan.sale_page_reviewed = e
-              ? d.iA.accountid
+              ? m.iA.accountid
               : null),
             this.Dispatch());
         }
@@ -12722,7 +12720,7 @@
         SetOptInReviewed(e) {
           Boolean(this.m_oPromotionPlan.opt_in_reviewed) !== e &&
             ((this.m_oPromotionPlan.opt_in_reviewed = e
-              ? d.iA.accountid
+              ? m.iA.accountid
               : null),
             this.Dispatch());
         }
@@ -12733,7 +12731,7 @@
         SetGiveawayReviewed(e) {
           Boolean(this.m_oPromotionPlan.giveaway_reviewed) !== e &&
             ((this.m_oPromotionPlan.giveaway_reviewed = e
-              ? d.iA.accountid
+              ? m.iA.accountid
               : null),
             this.Dispatch());
         }
@@ -12744,7 +12742,7 @@
         SetDiscountEventReviewed(e) {
           Boolean(this.m_oPromotionPlan.discount_event_reviewed) !== e &&
             ((this.m_oPromotionPlan.discount_event_reviewed = e
-              ? d.iA.accountid
+              ? m.iA.accountid
               : null),
             this.Dispatch());
         }
@@ -12755,7 +12753,7 @@
         SetMainCapsuleReviewed(e) {
           Boolean(this.m_oPromotionPlan.main_capsule_reviewed) !== e &&
             ((this.m_oPromotionPlan.main_capsule_reviewed = e
-              ? d.iA.accountid
+              ? m.iA.accountid
               : null),
             this.Dispatch());
         }
@@ -12777,11 +12775,11 @@
           this.m_oPromotionPlan.takeunder_reviewed
             ? Boolean(this.m_oPromotionPlan.takeunder_reviewed[t]) !== e &&
               ((this.m_oPromotionPlan.takeunder_reviewed[t] = e
-                ? d.iA.accountid
+                ? m.iA.accountid
                 : null),
               this.Dispatch())
             : ((this.m_oPromotionPlan.takeunder_reviewed = e
-                ? [d.iA.accountid]
+                ? [m.iA.accountid]
                 : [null]),
               this.Dispatch());
         }
@@ -12804,11 +12802,11 @@
             ? Boolean(this.m_oPromotionPlan.contenthub_takeover_reviewed[t]) !==
                 e &&
               ((this.m_oPromotionPlan.contenthub_takeover_reviewed[t] = e
-                ? d.iA.accountid
+                ? m.iA.accountid
                 : null),
               this.Dispatch())
             : ((this.m_oPromotionPlan.contenthub_takeover_reviewed = e
-                ? [d.iA.accountid]
+                ? [m.iA.accountid]
                 : [null]),
               this.Dispatch());
         }
@@ -12833,35 +12831,35 @@
             ? Boolean(this.m_oPromotionPlan.steamchina_takeover_reviewed[t]) !==
                 e &&
               ((this.m_oPromotionPlan.steamchina_takeover_reviewed[t] = e
-                ? d.iA.accountid
+                ? m.iA.accountid
                 : null),
               this.Dispatch())
             : ((this.m_oPromotionPlan.steamchina_takeover_reviewed = e
-                ? [d.iA.accountid]
+                ? [m.iA.accountid]
                 : [null]),
               this.Dispatch());
         }
         AddClusterID(e, t) {
           switch (e) {
-            case u.ii.k_ConfigPage_Takeover:
+            case d.ii.k_ConfigPage_Takeover:
               this.AddTakeoverID(t);
               break;
-            case u.ii.k_ConfigPage_Takeunder:
+            case d.ii.k_ConfigPage_Takeunder:
               this.AddTakeUnderID(t);
               break;
-            case u.ii.k_ConfigPage_TakeoverSteamChina:
+            case d.ii.k_ConfigPage_TakeoverSteamChina:
               this.AddSteamChinaTakeoverID(t);
           }
         }
         SetClusterID(e, t, a) {
           switch (e) {
-            case u.ii.k_ConfigPage_Takeover:
+            case d.ii.k_ConfigPage_Takeover:
               this.SetTakeoverID(t, a);
               break;
-            case u.ii.k_ConfigPage_Takeunder:
+            case d.ii.k_ConfigPage_Takeunder:
               this.SetTakeunderID(t, a);
               break;
-            case u.ii.k_ConfigPage_TakeoverSteamChina:
+            case d.ii.k_ConfigPage_TakeoverSteamChina:
               this.SetSteamChinaTakeoverID(t, a);
               break;
             default:
@@ -12870,13 +12868,13 @@
         }
         SetClusterReviewed(e, t, a) {
           switch (e) {
-            case u.ii.k_ConfigPage_Takeover:
+            case d.ii.k_ConfigPage_Takeover:
               this.SetTakeoverReviewed(t, a);
               break;
-            case u.ii.k_ConfigPage_Takeunder:
+            case d.ii.k_ConfigPage_Takeunder:
               this.SetTakeunderReviewed(t, a);
               break;
-            case u.ii.k_ConfigPage_TakeoverSteamChina:
+            case d.ii.k_ConfigPage_TakeoverSteamChina:
               this.SetSteamChinaTakeoverReviewed(t, a);
               break;
             default:
@@ -12901,11 +12899,11 @@
           this.m_oPromotionPlan.takeover_reviewed
             ? Boolean(this.m_oPromotionPlan.takeover_reviewed[t]) !== e &&
               ((this.m_oPromotionPlan.takeover_reviewed[t] = e
-                ? d.iA.accountid
+                ? m.iA.accountid
                 : null),
               this.Dispatch())
             : ((this.m_oPromotionPlan.takeover_reviewed = e
-                ? [d.iA.accountid]
+                ? [m.iA.accountid]
                 : [null]),
               this.Dispatch());
         }
@@ -12930,11 +12928,11 @@
             ? Boolean(this.m_oPromotionPlan.marketing_message_reviewed[t]) !==
                 e &&
               ((this.m_oPromotionPlan.marketing_message_reviewed[t] = e
-                ? d.iA.accountid
+                ? m.iA.accountid
                 : null),
               this.Dispatch())
             : ((this.m_oPromotionPlan.marketing_message_reviewed = e
-                ? [d.iA.accountid]
+                ? [m.iA.accountid]
                 : [null]),
               this.Dispatch());
         }
@@ -12955,11 +12953,11 @@
           this.m_oPromotionPlan.spotlight_reviewed
             ? Boolean(this.m_oPromotionPlan.spotlight_reviewed[t]) !== e &&
               ((this.m_oPromotionPlan.spotlight_reviewed[t] = e
-                ? d.iA.accountid
+                ? m.iA.accountid
                 : null),
               this.Dispatch())
             : ((this.m_oPromotionPlan.spotlight_reviewed = e
-                ? [d.iA.accountid]
+                ? [m.iA.accountid]
                 : [null]),
               this.Dispatch());
         }
@@ -12991,7 +12989,7 @@
         SetAdvertisingAppIDReviewed(e) {
           Boolean(this.m_oPromotionPlan.advertising_appid_reviewed) !== e &&
             ((this.m_oPromotionPlan.advertising_appid_reviewed = e
-              ? d.iA.accountid
+              ? m.iA.accountid
               : null),
             this.Dispatch());
         }
@@ -13079,152 +13077,152 @@
           (this.m_bDirty = !0), this.m_callback.Dispatch(this);
         }
       }
-      (0, n.Cg)([i.sH], p.prototype, "m_nPartnerID", void 0),
-        (0, n.Cg)([i.sH], p.prototype, "m_nOriginalPartnerID", void 0),
-        (0, n.Cg)([i.sH], p.prototype, "m_bDirty", void 0),
-        (0, n.Cg)([m.oI], p.prototype, "GetSpotlightReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetMarketingMessageReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetClusterReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetTakeoverReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetSteamChinaTakeoverReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetTakeunderReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetContentHubTakeoverReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetMainCapsuleReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetDiscountEventReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetOptInReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetGiveawayReviewed", null),
+      (0, n.Cg)([r.sH], u.prototype, "m_nPartnerID", void 0),
+        (0, n.Cg)([r.sH], u.prototype, "m_nOriginalPartnerID", void 0),
+        (0, n.Cg)([r.sH], u.prototype, "m_bDirty", void 0),
+        (0, n.Cg)([c.oI], u.prototype, "GetSpotlightReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetMarketingMessageReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetClusterReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetTakeoverReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetSteamChinaTakeoverReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetTakeunderReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetContentHubTakeoverReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetMainCapsuleReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetDiscountEventReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetOptInReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetGiveawayReviewed", null),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "GetPartnerArtworkSubmissionReviewed",
           null,
         ),
-        (0, n.Cg)([m.oI], p.prototype, "GetSalePageReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetAdvertisingReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "GetSlackChannelAsURL", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetPartnerID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetPartnerRequireArtworkReview", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetArtworkOwnerAccountID", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetSalePageReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetAdvertisingReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "GetSlackChannelAsURL", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetPartnerID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetPartnerRequireArtworkReview", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetArtworkOwnerAccountID", null),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "SetArtworkLocalizationDropboxLink",
           null,
         ),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "SetArtworkLocalizationRequestTime",
           null,
         ),
-        (0, n.Cg)([m.oI], p.prototype, "SetOperatorOwnerAccountID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetPlanOwnerAccountID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetArtworkCompleted", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetOperatorOwnerAccountID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetPlanOwnerAccountID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetArtworkCompleted", null),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "SetDeliveryReviewedAccountAndTime",
           null,
         ),
-        (0, n.Cg)([m.oI], p.prototype, "ClearDeliveryReviewedStatus", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetReviewedAccountAndTime", null),
-        (0, n.Cg)([m.oI], p.prototype, "ClearReviewedStatus", null),
+        (0, n.Cg)([c.oI], u.prototype, "ClearDeliveryReviewedStatus", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetReviewedAccountAndTime", null),
+        (0, n.Cg)([c.oI], u.prototype, "ClearReviewedStatus", null),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "SetMarkedCompletedAccountAndTime",
           null,
         ),
-        (0, n.Cg)([m.oI], p.prototype, "ClearMarkedCompletedStatus", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetStartDate", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetEndDate", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetAssociatedAssetURL", null),
+        (0, n.Cg)([c.oI], u.prototype, "ClearMarkedCompletedStatus", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetStartDate", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetEndDate", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetAssociatedAssetURL", null),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "SetPartnerArtworkSubmissionReviewed",
           null,
         ),
-        (0, n.Cg)([m.oI], p.prototype, "SetFeaturedStoreItem", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetSaleEvent", null),
-        (0, n.Cg)([m.oI], p.prototype, "ClearSalePage", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetRequiresSalePage", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetRequiresSalePageType", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetSaleEventReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetOptInID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetOptInReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetGiveawayID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetGiveawayReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetDiscountEventID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetDiscountEventReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetMainCapsuleID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetMainCapsuleReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddTakeUnderID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetTakeunderID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetTakeunderReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddContentHubTakeoverID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetContentHubTakeoverID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetContentHubTakeoverReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddSteamChinaTakeoverID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetSteamChinaTakeoverID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetSteamChinaTakeoverReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddClusterID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetClusterID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetClusterReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddTakeoverID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetTakeoverID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetTakeoverReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddMarketingMessageID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetMarketingMessageID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetMarketingMessageReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddSpotlightID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetSpotlightID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetSpotlightReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetName", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetType", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetFeaturingIntention", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetAdminNote", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetPromotionPlannerNote", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetAdvertisingAppID", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetAdvertisingAppIDReviewed", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetAdvertisingAppIDFromString", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetInternalWikiURL", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetAssetKitURL", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetSlackChannel", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetRequireBroadcastModeration", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetBroadcastModerationNotes", null),
-        (0, n.Cg)([m.oI], p.prototype, "SetModerationIsScheduled", null),
-        (0, n.Cg)([m.oI], p.prototype, "AddToWatchList", null),
-        (0, n.Cg)([m.oI], p.prototype, "RemoveFromWatchList", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetFeaturedStoreItem", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetSaleEvent", null),
+        (0, n.Cg)([c.oI], u.prototype, "ClearSalePage", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetRequiresSalePage", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetRequiresSalePageType", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetSaleEventReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetOptInID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetOptInReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetGiveawayID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetGiveawayReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetDiscountEventID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetDiscountEventReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetMainCapsuleID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetMainCapsuleReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddTakeUnderID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetTakeunderID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetTakeunderReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddContentHubTakeoverID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetContentHubTakeoverID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetContentHubTakeoverReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddSteamChinaTakeoverID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetSteamChinaTakeoverID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetSteamChinaTakeoverReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddClusterID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetClusterID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetClusterReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddTakeoverID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetTakeoverID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetTakeoverReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddMarketingMessageID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetMarketingMessageID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetMarketingMessageReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddSpotlightID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetSpotlightID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetSpotlightReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetName", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetType", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetFeaturingIntention", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetAdminNote", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetPromotionPlannerNote", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetAdvertisingAppID", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetAdvertisingAppIDReviewed", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetAdvertisingAppIDFromString", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetInternalWikiURL", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetAssetKitURL", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetSlackChannel", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetRequireBroadcastModeration", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetBroadcastModerationNotes", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetModerationIsScheduled", null),
+        (0, n.Cg)([c.oI], u.prototype, "AddToWatchList", null),
+        (0, n.Cg)([c.oI], u.prototype, "RemoveFromWatchList", null),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "SetArtworkLocalizationSteamChinaOnly",
           null,
         ),
-        (0, n.Cg)([m.oI], p.prototype, "SetArtworkProductionTeamDueDate", null),
+        (0, n.Cg)([c.oI], u.prototype, "SetArtworkProductionTeamDueDate", null),
         (0, n.Cg)(
-          [m.oI],
-          p.prototype,
+          [c.oI],
+          u.prototype,
           "ToggleArtworkLocalizationRequest",
           null,
         ),
-        (0, n.Cg)([m.oI], p.prototype, "RevertChanges", null);
-      var _ = a(90626);
-      class g {
+        (0, n.Cg)([c.oI], u.prototype, "RevertChanges", null);
+      var p = a(90626);
+      class _ {
         m_model = null;
         InitPromotionPlanToEdit(e, t, a = !1) {
           return (
-            "dev" == d.TS.WEB_UNIVERSE &&
+            "dev" == m.TS.WEB_UNIVERSE &&
               console.log(
                 "(Dev Only) CPromotionPlanEditStore.InitPromotionPlanToEdit with model: " +
                   Boolean(this.m_model),
-                (0, i.HO)(t),
+                (0, r.HO)(t),
               ),
             this.m_model
               ? (this.m_model.Reset(t, e),
                 a && this.m_model.GetCallback().Dispatch(this.m_model))
-              : (this.m_model = new p(t, e)),
+              : (this.m_model = new u(t, e)),
             this.m_model
           );
         }
@@ -13237,41 +13235,41 @@
         static s_Singleton;
         static Get() {
           return (
-            g.s_Singleton ||
-              ((g.s_Singleton = new g()),
-              "dev" == d.TS.WEB_UNIVERSE &&
-                (window.g_PromotionPlanEditStore = g.s_Singleton)),
-            g.s_Singleton
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              "dev" == m.TS.WEB_UNIVERSE &&
+                (window.g_PromotionPlanEditStore = _.s_Singleton)),
+            _.s_Singleton
           );
         }
         constructor() {}
       }
-      function h(e, t, a = !1) {
-        return g.Get().InitPromotionPlanToEdit(e, t, a);
+      function g(e, t, a = !1) {
+        return _.Get().InitPromotionPlanToEdit(e, t, a);
+      }
+      function h() {
+        return _.Get().GetPromotionPlanToEdit();
       }
       function E() {
-        return g.Get().GetPromotionPlanToEdit();
-      }
-      function S() {
-        const e = (0, m.CH)(),
-          [t, a] = _.useState(g.Get().GetPromotionPlanToEdit());
+        const e = (0, c.CH)(),
+          [t, a] = p.useState(_.Get().GetPromotionPlanToEdit());
         return (
-          (0, m.hL)(t?.GetCallback(), (t) => {
+          (0, c.hL)(t?.GetCallback(), (t) => {
             a(t), e();
           }),
           t
         );
       }
-      function v() {
+      function S() {
         return {
-          fnBIsPlanDirty: _.useCallback(
+          fnBIsPlanDirty: p.useCallback(
             () =>
-              !!g.Get().GetPromotionPlanToEdit() &&
-              g.Get().GetPromotionPlanToEdit().BIsDirty(),
+              !!_.Get().GetPromotionPlanToEdit() &&
+              _.Get().GetPromotionPlanToEdit().BIsDirty(),
             [],
           ),
-          fnResetDirtyPlan: _.useCallback(() => {
-            g.Get().ClearEditModel();
+          fnResetDirtyPlan: p.useCallback(() => {
+            _.Get().ClearEditModel();
           }, []),
         };
       }
@@ -41078,7 +41076,7 @@
     },
     34585: (e, t, a) => {
       "use strict";
-      a.d(t, { dR: () => x, BO: () => V, Av: () => j });
+      a.d(t, { dR: () => x, Kx: () => W, BO: () => V, Av: () => j });
       var n = a(92298),
         r = a.n(n),
         i = a(67239),
@@ -41117,7 +41115,7 @@
           s = (0, C.vo)(n, a),
           o = (0, l.bE)(),
           m = Math.floor(Date.now() / 1e3),
-          d = o?.GetDueDate() ?? t.GetStartDate() - i.lF,
+          d = (0, i.OS)(o?.GetDueDate(), t.GetStartDate(), "partner"),
           p = d <= m && d != i.db,
           g = (0, A.vv)(t.GetID()),
           h = (0, c.q3)(() => o.GetModel().submitting_accountid),
@@ -41230,7 +41228,7 @@
           { fnCreatePromoInvite: n } = (0, v.kw)(),
           r = (0, T.vs)(),
           s = (0, l.bE)(),
-          o = s?.GetDueDate() ?? t.GetStartDate() - i.lF,
+          o = (0, i.OS)(s?.GetDueDate(), t.GetStartDate(), "partner"),
           c = (0, I.te)(t.GetPartnerID()),
           m = (0, u.useCallback)(async () => {
             r.fnSetLoading(!0);
@@ -41486,18 +41484,24 @@
           } = e,
           l = (0, o.ok)(),
           [m, p] = (0, u.useState)(null != a),
-          [h] = (0, c.q3)(() => [l.GetStartDate()]),
-          S = s ? i.lF : i.n5;
+          [h] = (0, c.q3)(() => [l.GetStartDate()]);
         return m
           ? u.createElement(
               u.Fragment,
               null,
               u.createElement("h3", null, t),
-              u.createElement(
-                "div",
-                { style: { paddingBottom: "10px" } },
-                "Recommended due date is a week before the event starts. This won't prevent them from providing art after this point, but clarifies our expectations of the partner",
-              ),
+              s &&
+                u.createElement(
+                  "div",
+                  { style: { paddingBottom: "10px" } },
+                  "Recommended due date is a week before the event starts. This won't prevent them from providing art after this point, but clarifies our expectations of the partner.",
+                ),
+              !s &&
+                u.createElement(
+                  "div",
+                  { style: { paddingBottom: "10px" } },
+                  "Recommended due date is two days before the event starts, but not on the weekend. This won't prevent them from providing art after this point, but clarifies our expectations.",
+                ),
               u.createElement(
                 "div",
                 { className: E().EditDueDateContainer },
@@ -41519,7 +41523,15 @@
                     u.createElement(_.Yh, {
                       label: (0, g.we)("#AssetRequest_DueDate_ASAP"),
                       onClick: () => {
-                        a != i.db ? n(i.db) : n(h - S);
+                        a != i.db
+                          ? n(i.db)
+                          : n(
+                              (0, i.OS)(
+                                void 0,
+                                h,
+                                s ? "partner" : "artproduction",
+                              ),
+                            );
                       },
                       checked: a == i.db,
                     }),
@@ -41540,7 +41552,7 @@
               u.createElement(
                 "h2",
                 null,
-                V(a, h, S),
+                V(a, h, s ? "partner" : "artproduction"),
                 u.createElement(
                   "div",
                   { className: E().DateCustomizeCtn },
@@ -41626,7 +41638,7 @@
           ? e == i.db
             ? (0, g.we)("#AssetRequest_DueDate_ASAP")
             : (0, g.TW)(e)
-          : (0, g.TW)(t - a);
+          : (0, g.TW)((0, i.OS)(void 0, t, a));
       }
     },
     88065: (e, t, a) => {
@@ -42264,7 +42276,7 @@
           s = (0, n.bE)(),
           [o, c] = (0, r.q3)(() => [
             s.GetArtRequests() || [],
-            s.GetDueDate() ?? t.start_date - A.lF,
+            (0, A.OS)(s.GetDueDate(), t.start_date, "partner"),
           ]);
         return i.createElement(
           "div",
@@ -42453,7 +42465,7 @@
             { className: c().Deadline },
             (0, h.we)("#AssetRequest_Deadline"),
             " ",
-            i.createElement("span", null, (0, U.BO)(n, r, A.lF)),
+            i.createElement("span", null, (0, U.BO)(n, r, "partner")),
           ),
         );
       }
@@ -44096,47 +44108,59 @@
             a.GetFeaturedItemID(),
             a.GetFeaturedItemType(),
           ]),
-          [m, d] = (0, v.G6)(l, c, D),
-          u = (0, h.dr)(a.GetMarketingMessageID(0)),
-          p = (0, h.dr)(a.GetMarketingMessageID(1));
-        return Boolean(a.GetMarketingMessageID(0) && !u) ||
-          Boolean(a.GetMarketingMessageID(1) && !p) ||
-          (l && 1 == d)
+          [m, u] = (0, v.G6)(l, c, D),
+          p = (0, h.dr)(a.GetMarketingMessageID(0)),
+          _ = (0, h.dr)(a.GetMarketingMessageID(1)),
+          [w] = (0, y.q3)(() => [a.GetArtTeamDueDate()]);
+        return Boolean(a.GetMarketingMessageID(0) && !p) ||
+          Boolean(a.GetMarketingMessageID(1) && !_) ||
+          (l && 1 == u)
           ? i.createElement(E.t, { string: "Loading Marketing Messages" })
-          : i.createElement(o.Yh, {
-              label: "Enable requesting featuring assets from partner?",
-              checked: !1,
-              onChange: (e) => {
-                s.SetRequestedArt(
-                  g.cV
-                    .filter((e) => !b.includes(e))
-                    .filter((e) => !f.includes(e))
-                    .filter((e) =>
-                      a.BHasPromotionFeaturingForArtRequirement(e),
-                    ),
-                ),
-                  u &&
-                    !(0, S.u)(m, u.type) &&
-                    s.AddRequestedArt(
-                      10 == u.type
-                        ? "marketingmessage_art_eventcapsule"
-                        : "marketingmessage_art",
-                    ),
-                  p &&
-                    !(0, S.u)(m, p.type) &&
-                    s.AddRequestedArt(
-                      10 == u.type
-                        ? "marketingmessage_art_2_eventcapsule"
-                        : "marketingmessage_art_2",
-                    ),
-                  (s.GetModel().requested_promotion_name = a.GetName()),
-                  a.BHasDiscountEventID() &&
-                    (s.GetModel().asset_request_discount_event_id_clone =
-                      a.GetDiscountEventID()),
-                  s.SetRequestEnabled(!0),
-                  t(e);
-              },
-            });
+          : i.createElement(
+              i.Fragment,
+              null,
+              i.createElement(o.Yh, {
+                label: "Enable requesting featuring assets from partner?",
+                checked: !1,
+                onChange: (e) => {
+                  s.SetRequestedArt(
+                    g.cV
+                      .filter((e) => !b.includes(e))
+                      .filter((e) => !f.includes(e))
+                      .filter((e) =>
+                        a.BHasPromotionFeaturingForArtRequirement(e),
+                      ),
+                  ),
+                    p &&
+                      !(0, S.u)(m, p.type) &&
+                      s.AddRequestedArt(
+                        10 == p.type
+                          ? "marketingmessage_art_eventcapsule"
+                          : "marketingmessage_art",
+                      ),
+                    _ &&
+                      !(0, S.u)(m, _.type) &&
+                      s.AddRequestedArt(
+                        10 == p.type
+                          ? "marketingmessage_art_2_eventcapsule"
+                          : "marketingmessage_art_2",
+                      ),
+                    (s.GetModel().requested_promotion_name = a.GetName()),
+                    a.BHasDiscountEventID() &&
+                      (s.GetModel().asset_request_discount_event_id_clone =
+                        a.GetDiscountEventID()),
+                    s.SetRequestEnabled(!0),
+                    t(e);
+                },
+              }),
+              i.createElement("br", null),
+              i.createElement(d.Kx, {
+                strTitle: "Art Production Team Due Date:",
+                rtDueDate: w,
+                fnSetDueDate: a.SetArtworkProductionTeamDueDate,
+                bPartnerDueDate: !1,
+              }),
+            );
       }
     },
     27872: (e, t, a) => {
@@ -55726,9 +55750,11 @@
           }, [L, v]),
           X = (0, o.useCallback)(
             (e) =>
-              e.artwork_production_team_due_date
-                ? e.artwork_production_team_due_date
-                : e.start_date - r.n5,
+              (0, r.OS)(
+                e.artwork_production_team_due_date,
+                e.start_date,
+                "artproduction",
+              ),
             [],
           ),
           ee = (e) => g(e.key),
@@ -66858,11 +66884,11 @@
     77155: (e, t, a) => {
       "use strict";
       a.d(t, {
-        In: () => T,
-        VB: () => w,
+        In: () => C,
+        VB: () => f,
         mM: () => n,
-        oz: () => f,
-        uK: () => I,
+        oz: () => b,
+        uK: () => D,
       });
       var n,
         r = a(90626),
@@ -66881,9 +66907,8 @@
         E = a(30470),
         S = a(61859),
         v = a(91675),
-        y = a(67239),
-        b = a(34585);
-      function f(e) {
+        y = a(34585);
+      function b(e) {
         const { oEditablePlan: t } = e;
         return r.createElement(
           r.Fragment,
@@ -66951,7 +66976,7 @@
           ),
         );
       }
-      function w(e) {
+      function f(e) {
         const { oEditablePlan: t } = e,
           a = (0, u.R5)(t.GetID()),
           [n, s] = (0, p.q3)(() => [
@@ -66962,7 +66987,7 @@
           ? r.createElement(
               "div",
               null,
-              r.createElement(D, { oEditablePlan: t }),
+              r.createElement(w, { oEditablePlan: t }),
               Boolean(n?.trim().length > 0) &&
                 r.createElement(
                   "div",
@@ -66987,7 +67012,7 @@
             )
           : null;
       }
-      function D(e) {
+      function w(e) {
         const { oEditablePlan: t } = e,
           [a, n] = (0, p.q3)(() => [
             t.BIsDeliveryReviewed(),
@@ -66999,11 +67024,11 @@
               r.Fragment,
               null,
               Boolean(a)
-                ? r.createElement(A, { oEditablePlan: t })
-                : r.createElement(B, { oEditablePlan: t }),
+                ? r.createElement(B, { oEditablePlan: t })
+                : r.createElement(T, { oEditablePlan: t }),
             );
       }
-      function I(e, t) {
+      function D(e, t) {
         return (0, r.useMemo)(
           () =>
             e.artwork_completed_time
@@ -67018,7 +67043,7 @@
           [e, t],
         );
       }
-      function C(e) {
+      function I(e) {
         const { input: t } = e,
           [a] = (0, p.q3)(() => [t?.art_requests]),
           n = (0, r.useMemo)(() => {
@@ -67082,10 +67107,10 @@
             )
           : null;
       }
-      function T(e) {
+      function C(e) {
         const { oEditablePlan: t } = e,
           a = (0, u.R5)(t.GetPlan().id),
-          i = I((0, u.ru)(t.GetPlan()), a),
+          i = D((0, u.ru)(t.GetPlan()), a),
           [s, l] = (0, p.q3)(() => [t.GetArtTeamDueDate(), t.GetStartDate()]);
         return r.createElement(
           r.Fragment,
@@ -67094,7 +67119,7 @@
             "h2",
             null,
             "Asset Process: Due ",
-            (0, b.BO)(s, l, y.n5),
+            (0, y.BO)(s, l, "artproduction"),
           ),
           r.createElement(
             "div",
@@ -67124,10 +67149,10 @@
               "Localization Complete",
             ),
           ),
-          r.createElement(C, { input: a }),
+          r.createElement(I, { input: a }),
         );
       }
-      function B(e) {
+      function T(e) {
         const { oEditablePlan: t } = e;
         return r.createElement(
           "div",
@@ -67138,7 +67163,7 @@
               className: d.StatusBtn,
               onClick: (e) =>
                 (0, l.pg)(
-                  r.createElement(k, { oEditablePlan: t, bReviewVerify: !0 }),
+                  r.createElement(A, { oEditablePlan: t, bReviewVerify: !0 }),
                   (0, c.uX)(e),
                 ),
             },
@@ -67146,7 +67171,7 @@
           ),
         );
       }
-      function A(e) {
+      function B(e) {
         const { oEditablePlan: t } = e,
           [a, n] = (0, p.q3)(() => [
             t.GetDeliveryReviewTime(),
@@ -67172,7 +67197,7 @@
                   className: d.StatusBtn,
                   onClick: (e) =>
                     (0, l.pg)(
-                      r.createElement(k, {
+                      r.createElement(A, {
                         oEditablePlan: t,
                         bReviewVerify: !1,
                       }),
@@ -67193,7 +67218,7 @@
           ),
         );
       }
-      function k(e) {
+      function A(e) {
         const { oEditablePlan: t, closeModal: a, bReviewVerify: n } = e,
           s = (0, u.R5)(t.GetID()),
           [l, o] = (0, r.useState)(t.GetDeliveryReviewNotes());
@@ -70783,7 +70808,11 @@
               t.GetFeaturedItemType(),
               t.GetSaleClanEventGID(),
               t.GetStartDate(),
-              t.GetArtTeamDueDate() || t.GetStartDate() - m.n5,
+              (0, m.OS)(
+                t.GetArtTeamDueDate(),
+                t.GetStartDate(),
+                "artproduction",
+              ),
             ]),
           U = (0, E.TR)(S.ii.k_ConfigPage_Takeover, D),
           z = (0, v.Ib)(o),

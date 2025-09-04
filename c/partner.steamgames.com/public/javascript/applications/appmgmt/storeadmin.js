@@ -1671,12 +1671,13 @@
           : null;
       }
       function _(_) {
-        const { asset_mtime: _ } = _,
+        const { asset_mtime: _, assets_list: __webpack_require__ } = _,
+          _ = new Map(__webpack_require__),
           _ = (0, _._)(),
-          _ = _.useMemo(() => _._(__webpack_require__.filter(_._), _._), [_]),
+          _ = _.useMemo(() => _._(_.filter(_._), _._), [_]),
           _ = _.useMemo(
             () =>
-              __webpack_require__.filter(_._).map((_) => ({
+              _.filter(_._).map((_) => ({
                 key: (0, _._)(_),
                 caption: (0, _._)(_),
                 mapAltText: _.alt_text,
@@ -1691,9 +1692,9 @@
             return (0, _._)({
               mutationFn: async ({
                 strExtraAssetFileName: _,
-                mapAltText: _,
+                mapAltText: __webpack_require__,
               }) => {
-                if (!_ || !_) return !1;
+                if (!_ || !__webpack_require__) return !1;
                 const _ = new FormData();
                 _.append("sessionid", _._.SESSIONID),
                   _.append("action", "alt_text"),
@@ -1701,7 +1702,7 @@
                   _.append(
                     "alt_text",
                     JSON.stringify(
-                      Object.entries(_).map(([_, _]) => ({
+                      Object.entries(__webpack_require__).map(([_, _]) => ({
                         lang: _,
                         text: _,
                       })),
@@ -1751,9 +1752,10 @@
                   caption: !1,
                   controls: !1,
                   primaryLanguage: _,
+                  mapAssetsList: _,
                 }),
             }),
-          __webpack_require__.some(_._) &&
+          _.some(_._) &&
             _.createElement(
               "div",
               {
@@ -1782,11 +1784,12 @@
               {
                 className: _.ExtraAssetsGrid,
               },
-              __webpack_require__.map((_) =>
+              _.map((_) =>
                 _.createElement(_, {
                   key: (0, _._)(_),
                   extraAsset: _,
                   primaryLanguage: _,
+                  mapAssetsList: _,
                 }),
               ),
             ),
@@ -1880,6 +1883,7 @@
             caption: __webpack_require__ = !0,
             controls: _ = !0,
             primaryLanguage: _,
+            mapAssetsList: _,
           } = _,
           _ = _.useRef(void 0),
           _ = (0, _._)(_),
@@ -1892,15 +1896,17 @@
           _ = _ ? [_] : [];
         } else {
           const _ = 29 == _ ? 6 : 0,
-            _ = (0, _._)(_).sort((_, _) => {
-              if (null != _) {
-                if (_ == _ && _ != _) return -1;
-                if (_ != _ && _ == _) return 1;
-                if (_ == _ && _ != _) return -1;
-                if (_ != _ && _ == _) return 1;
-              }
-              return _ - _;
-            });
+            _ = (0, _._)(_).sort((_, _) =>
+              (function (_, _, _, _) {
+                if (null != _) {
+                  if (_ == _ && _ != _) return -1;
+                  if (_ != _ && _ == _) return 1;
+                  if (_ == _ && _ != _) return -1;
+                  if (_ != _ && _ == _) return 1;
+                }
+                return _ - _;
+              })(_, _, _, _),
+            );
           _ = Array.from({
             length: Math.min(3, _.length),
           }).map((_, _) => (0, _._)(_, 0 == _, _[_]));
@@ -1913,7 +1919,29 @@
           _ = (_) => {
             const _ = _.currentTarget;
             _.paused ? _.play() : _.pause();
-          };
+          },
+          _ = _
+            ? Array.from(_).reduce(
+                (_, [_, _]) =>
+                  __webpack_require__.includes(_) ? [..._, _] : _,
+                [],
+              )
+            : [],
+          _ = new Intl.ListFormat(_._.GetPreferredLocales(), {
+            style: "long",
+            type: "conjunction",
+          }),
+          _ = _.map((_) => (0, _._)("#Language_" + _)),
+          _ =
+            _.length <= 3
+              ? _.format(_)
+              : _.format([
+                  ..._.slice(0, 2),
+                  (0, _._)(
+                    "#StoreAdmin_GameDescription_AssetsInUseOthers",
+                    _.length - 3 + 1,
+                  ),
+                ]);
         return _.createElement(
           _.Fragment,
           null,
@@ -1962,16 +1990,33 @@
                   },
                   _.createElement(_.QRo, null),
                 ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: _,
-                    tooltip: (0, _._)(
-                      "#StoreAdmin_GameDescription_DeleteAsset",
-                    ),
-                  },
-                  _.createElement(_._, null),
-                ),
+                0 == _.length &&
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: _,
+                      tooltip: (0, _._)(
+                        "#StoreAdmin_GameDescription_DeleteAsset",
+                      ),
+                    },
+                    _.createElement(_._, null),
+                  ),
+                _.length > 0 &&
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: () => {},
+                      tooltip: _.createElement(
+                        _.Fragment,
+                        null,
+                        (0, _._)("#StoreAdmin_GameDescription_AssetsInUse1", _),
+                        _.createElement("br", null),
+                        _.createElement("br", null),
+                        (0, _._)("#StoreAdmin_GameDescription_AssetsInUse2"),
+                      ),
+                    },
+                    _.length,
+                  ),
               ),
             _.createElement(
               "div",
@@ -18222,7 +18267,7 @@
           {
             className: _.TooltipWithShortcut,
           },
-          _.createElement("div", null, (0, _._)(_)),
+          _.createElement("div", null, "string" == typeof _ ? (0, _._)(_) : _),
           _.createElement(
             "div",
             null,

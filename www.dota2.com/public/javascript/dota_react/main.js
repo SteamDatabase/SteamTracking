@@ -28948,6 +28948,8 @@
               (l = o?.url.replace("https://youtu.be/", "")),
             o?.url.includes("https://www.youtube.com/watch?v=") &&
               (l = o?.url.replace("https://www.youtube.com/watch?v=", "")),
+            o?.url.includes("&ab_channel=dota2") &&
+              (l = o?.url.replace("&ab_channel=dota2", "")),
             l?.includes("?t="))
           ) {
             const e = l.split("?t=");
