@@ -23920,6 +23920,7 @@
             _ = _._.Get().GetLeagueNodeInfo(_.nLeagueID, _.nNodeID),
             _ = _?.actual_time ? _?.actual_time : _.scheduled_time,
             _ = _?.eNodeGroupType == _._.ROUND_ROBIN,
+            _ = _?.eNodeGroupType == _._.SWISS && _ == _._.INTERNATIONAL_2025,
             _ = _._.Get().GetNodeLabelStrings(
               _,
               _.nLeagueID,
@@ -24046,6 +24047,15 @@
                       },
                       _,
                     ),
+                  _ &&
+                    !_ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().Record,
+                      },
+                      _,
+                    ),
                 ),
                 _.createElement(_, {
                   className: _().TeamLogo,
@@ -24110,6 +24120,15 @@
                     },
                     (0, _._)(_),
                   ),
+                  _ &&
+                    !_ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().Record,
+                      },
+                      _,
+                    ),
                   _ &&
                     !_ &&
                     _.createElement(

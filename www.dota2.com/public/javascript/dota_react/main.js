@@ -21284,48 +21284,50 @@
             r = $t.E.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID),
             n = a?.actual_time ? a?.actual_time : a.scheduled_time,
             i = r?.eNodeGroupType == Zt.Kq.ROUND_ROBIN,
-            o = $t.E.Get().GetNodeLabelStrings(
+            o =
+              r?.eNodeGroupType == Zt.Kq.SWISS && t == Zt.Dq.INTERNATIONAL_2025,
+            l = $t.E.Get().GetNodeLabelStrings(
               t,
               e.nLeagueID,
               e.nNodeID,
               Zt.LY.VERYLONG,
             ),
-            l = $t.E.Get().GetTeamNames(a?.team_id_1),
-            c = $t.E.Get().GetTeamNames(a?.team_id_2),
-            m = $t.E.Get().GetEventPhaseNodeGroupID(
+            c = $t.E.Get().GetTeamNames(a?.team_id_1),
+            m = $t.E.Get().GetTeamNames(a?.team_id_2),
+            d = $t.E.Get().GetEventPhaseNodeGroupID(
               t,
               r.ePhase,
               r.eDivision,
               r.eRegion,
             ),
-            d = $t.E.Get().GetTeamStanding(
-              m?.nLeagueID,
-              m.nNodeGroupID,
+            u = $t.E.Get().GetTeamStanding(
+              d?.nLeagueID,
+              d.nNodeGroupID,
               a?.team_id_1,
             ),
-            u = d ? `${d.wins} - ${d.losses}` : "",
-            _ = $t.E.Get().GetTeamStanding(
-              m?.nLeagueID,
-              m.nNodeGroupID,
+            _ = u ? `${u.wins} - ${u.losses}` : "",
+            p = $t.E.Get().GetTeamStanding(
+              d?.nLeagueID,
+              d.nNodeGroupID,
               a?.team_id_2,
             ),
-            p = _ ? `${_.wins} - ${_.losses}` : "",
-            g = $t.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
-            h = !g && a?.is_completed,
-            E = h && a?.team_1_wins > a?.team_2_wins,
-            b = h && a?.team_2_wins > a?.team_1_wins,
-            f = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
-            S =
-              !f ||
+            g = p ? `${p.wins} - ${p.losses}` : "",
+            h = $t.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
+            E = !h && a?.is_completed,
+            b = E && a?.team_1_wins > a?.team_2_wins,
+            f = E && a?.team_2_wins > a?.team_1_wins,
+            S = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
+            w =
+              !S ||
               !$t.E.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
               $t.E.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
-            w = !f || $t.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
-          let T = a ? `${a.team_1_wins} - ${a.team_2_wins}` : "";
-          const I =
-              0 == a?.team_id_1 ? "#dpc_tbd" : S ? l?.name : "#dpc_hidden",
-            C = 0 == a?.team_id_2 ? "#dpc_tbd" : S ? c?.name : "#dpc_hidden";
-          (w && h) || (T = "#dpc_vs");
-          const M = w
+            T = !S || $t.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
+          let I = a ? `${a.team_1_wins} - ${a.team_2_wins}` : "";
+          const C =
+              0 == a?.team_id_1 ? "#dpc_tbd" : w ? c?.name : "#dpc_hidden",
+            M = 0 == a?.team_id_2 ? "#dpc_tbd" : w ? m?.name : "#dpc_hidden";
+          (T && E) || (I = "#dpc_vs");
+          const R = T
             ? a?.matches.length
             : $t.E.Get().GetNodeTypeGameCount(a?.node_type);
           return s.createElement(
@@ -21333,7 +21335,7 @@
             {
               className: (0, N.A)(
                 qa().DPCScheduleEntry,
-                g && qa().Live,
+                h && qa().Live,
                 e.bExpanded && qa().Expanded,
               ),
             },
@@ -21343,9 +21345,9 @@
               s.createElement(
                 "div",
                 { className: qa().LeftSection },
-                o.map((t, a) => {
-                  const r = o.length > 1 && 0 == a,
-                    n = o.length > 1 && 1 == a;
+                l.map((t, a) => {
+                  const r = l.length > 1 && 0 == a,
+                    n = l.length > 1 && 1 == a;
                   return s.createElement(
                     "div",
                     {
@@ -21378,28 +21380,31 @@
                     className: (0, N.A)(
                       qa().TeamSection,
                       qa().Left,
-                      E && !f && qa().Winner,
+                      b && !S && qa().Winner,
                     ),
                   },
                   s.createElement(
                     "div",
                     { className: qa().TeamName },
-                    (0, B.Wn)(I),
+                    (0, B.Wn)(C),
                   ),
                   i &&
-                    !f &&
-                    s.createElement("div", { className: qa().Record }, u),
+                    !S &&
+                    s.createElement("div", { className: qa().Record }, _),
+                  o &&
+                    !S &&
+                    s.createElement("div", { className: qa().Record }, _),
                 ),
                 s.createElement(wa, {
                   className: qa().TeamLogo,
-                  nTeamID: S ? a?.team_id_1 : 0,
+                  nTeamID: w ? a?.team_id_1 : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
                 s.createElement(
                   "div",
                   { className: qa().CenterContainer },
-                  g &&
+                  h &&
                     s.createElement(
                       y.N_,
                       {
@@ -21420,12 +21425,12 @@
                   s.createElement(
                     "div",
                     { className: qa().Score },
-                    (0, B.Wn)(T),
+                    (0, B.Wn)(I),
                   ),
                 ),
                 s.createElement(wa, {
                   className: qa().TeamLogo,
-                  nTeamID: S ? a?.team_id_2 : 0,
+                  nTeamID: w ? a?.team_id_2 : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
@@ -21435,23 +21440,26 @@
                     className: (0, N.A)(
                       qa().TeamSection,
                       qa().Right,
-                      b && !f && qa().Winner,
+                      f && !S && qa().Winner,
                     ),
                   },
                   s.createElement(
                     "div",
                     { className: qa().TeamName },
-                    (0, B.Wn)(C),
+                    (0, B.Wn)(M),
                   ),
                   i &&
-                    !f &&
-                    s.createElement("div", { className: qa().Record }, p),
+                    !S &&
+                    s.createElement("div", { className: qa().Record }, g),
+                  o &&
+                    !S &&
+                    s.createElement("div", { className: qa().Record }, g),
                 ),
               ),
               s.createElement(
                 "div",
                 { className: qa().RightSection },
-                h &&
+                E &&
                   s.createElement(
                     "div",
                     {
@@ -21477,11 +21485,11 @@
                   e.bExpanded && qa().Expanded,
                 ),
                 style: {
-                  height: e.bExpanded ? 120 * M : 0,
-                  minHeight: e.bExpanded ? 120 * M : 0,
+                  height: e.bExpanded ? 120 * R : 0,
+                  minHeight: e.bExpanded ? 120 * R : 0,
                 },
               },
-              (0, Ya.bu)(1, M).map((t) => {
+              (0, Ya.bu)(1, R).map((t) => {
                 if (t <= a?.matches.length) {
                   const r = a.matches[t - 1];
                   return s.createElement(er, {
