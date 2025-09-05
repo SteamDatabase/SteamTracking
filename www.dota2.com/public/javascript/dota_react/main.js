@@ -21306,28 +21306,35 @@
               a?.team_id_1,
             ),
             _ = u ? `${u.wins} - ${u.losses}` : "",
-            p = $t.E.Get().GetTeamStanding(
+            p = a?.name?.match(/(\d)/g),
+            g =
+              "" == a?.name
+                ? "0 - 0"
+                : p && 2 == p.length
+                  ? `${p[0]} - ${p[1]}`
+                  : "",
+            h = $t.E.Get().GetTeamStanding(
               d?.nLeagueID,
               d.nNodeGroupID,
               a?.team_id_2,
             ),
-            g = p ? `${p.wins} - ${p.losses}` : "",
-            h = $t.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
-            E = !h && a?.is_completed,
-            b = E && a?.team_1_wins > a?.team_2_wins,
-            f = E && a?.team_2_wins > a?.team_1_wins,
-            S = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
-            w =
-              !S ||
+            E = h ? `${h.wins} - ${h.losses}` : "",
+            b = $t.E.Get().IsLeagueNodeLive(t, e.nLeagueID, e.nNodeID),
+            f = !b && a?.is_completed,
+            S = f && a?.team_1_wins > a?.team_2_wins,
+            w = f && a?.team_2_wins > a?.team_1_wins,
+            T = $t.E.Get().GetSpoilerBlockState(t) == Zt.h7.BLOCKED,
+            I =
+              !T ||
               !$t.E.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
               $t.E.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
-            T = !S || $t.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
-          let I = a ? `${a.team_1_wins} - ${a.team_2_wins}` : "";
-          const C =
-              0 == a?.team_id_1 ? "#dpc_tbd" : w ? c?.name : "#dpc_hidden",
-            M = 0 == a?.team_id_2 ? "#dpc_tbd" : w ? m?.name : "#dpc_hidden";
-          (T && E) || (I = "#dpc_vs");
-          const R = T
+            C = !T || $t.E.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID);
+          let M = a ? `${a.team_1_wins} - ${a.team_2_wins}` : "";
+          const R =
+              0 == a?.team_id_1 ? "#dpc_tbd" : I ? c?.name : "#dpc_hidden",
+            D = 0 == a?.team_id_2 ? "#dpc_tbd" : I ? m?.name : "#dpc_hidden";
+          (C && f) || (M = "#dpc_vs");
+          const A = C
             ? a?.matches.length
             : $t.E.Get().GetNodeTypeGameCount(a?.node_type);
           return s.createElement(
@@ -21335,7 +21342,7 @@
             {
               className: (0, N.A)(
                 qa().DPCScheduleEntry,
-                h && qa().Live,
+                b && qa().Live,
                 e.bExpanded && qa().Expanded,
               ),
             },
@@ -21380,31 +21387,31 @@
                     className: (0, N.A)(
                       qa().TeamSection,
                       qa().Left,
-                      b && !S && qa().Winner,
+                      S && !T && qa().Winner,
                     ),
                   },
                   s.createElement(
                     "div",
                     { className: qa().TeamName },
-                    (0, B.Wn)(C),
+                    (0, B.Wn)(R),
                   ),
                   i &&
-                    !S &&
+                    !T &&
                     s.createElement("div", { className: qa().Record }, _),
                   o &&
-                    !S &&
-                    s.createElement("div", { className: qa().Record }, _),
+                    !T &&
+                    s.createElement("div", { className: qa().Record }, g),
                 ),
                 s.createElement(wa, {
                   className: qa().TeamLogo,
-                  nTeamID: w ? a?.team_id_1 : 0,
+                  nTeamID: I ? a?.team_id_1 : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
                 s.createElement(
                   "div",
                   { className: qa().CenterContainer },
-                  h &&
+                  b &&
                     s.createElement(
                       y.N_,
                       {
@@ -21425,12 +21432,12 @@
                   s.createElement(
                     "div",
                     { className: qa().Score },
-                    (0, B.Wn)(I),
+                    (0, B.Wn)(M),
                   ),
                 ),
                 s.createElement(wa, {
                   className: qa().TeamLogo,
-                  nTeamID: w ? a?.team_id_2 : 0,
+                  nTeamID: I ? a?.team_id_2 : 0,
                   nSize: 52,
                   bTooltip: !0,
                 }),
@@ -21440,26 +21447,26 @@
                     className: (0, N.A)(
                       qa().TeamSection,
                       qa().Right,
-                      f && !S && qa().Winner,
+                      w && !T && qa().Winner,
                     ),
                   },
                   s.createElement(
                     "div",
                     { className: qa().TeamName },
-                    (0, B.Wn)(M),
+                    (0, B.Wn)(D),
                   ),
                   i &&
-                    !S &&
-                    s.createElement("div", { className: qa().Record }, g),
+                    !T &&
+                    s.createElement("div", { className: qa().Record }, E),
                   o &&
-                    !S &&
+                    !T &&
                     s.createElement("div", { className: qa().Record }, g),
                 ),
               ),
               s.createElement(
                 "div",
                 { className: qa().RightSection },
-                E &&
+                f &&
                   s.createElement(
                     "div",
                     {
@@ -21485,11 +21492,11 @@
                   e.bExpanded && qa().Expanded,
                 ),
                 style: {
-                  height: e.bExpanded ? 120 * R : 0,
-                  minHeight: e.bExpanded ? 120 * R : 0,
+                  height: e.bExpanded ? 120 * A : 0,
+                  minHeight: e.bExpanded ? 120 * A : 0,
                 },
               },
-              (0, Ya.bu)(1, R).map((t) => {
+              (0, Ya.bu)(1, A).map((t) => {
                 if (t <= a?.matches.length) {
                   const r = a.matches[t - 1];
                   return s.createElement(er, {

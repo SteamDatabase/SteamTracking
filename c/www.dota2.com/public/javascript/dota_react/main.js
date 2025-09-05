@@ -23941,6 +23941,13 @@
               _?.team_id_1,
             ),
             _ = _ ? `${_.wins} - ${_.losses}` : "",
+            _ = _?.name?.match(/(\d)/g),
+            _ =
+              "" == _?.name
+                ? "0 - 0"
+                : _ && 2 == _.length
+                  ? `${_[0]} - ${_[1]}`
+                  : "",
             _ = _._.Get().GetTeamStanding(
               _?.nLeagueID,
               _.nNodeGroupID,
