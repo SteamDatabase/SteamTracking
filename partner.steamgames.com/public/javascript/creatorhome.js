@@ -11,7 +11,7 @@ class CreatorHomeBatchUpdater
 
 		this.m_batchSize = 50;
 		this.m_createrHome = creatorHome;
-		
+
 				this.m_processedCount = 0;
 		this.m_totalCount = 0;
 		this.m_cSuccessCount = 0;
@@ -56,7 +56,7 @@ class CreatorHomeBatchUpdater
 			{
 				_CreatorHomeBatchUpdater.m_strFirstErrMsg = data.eresult;
 			}
-			
+
 			if( bDoUpdateNow ) 			{
 				_CreatorHomeBatchUpdater.ProcessEditRequest( start, end, false, false );
 			}
@@ -72,7 +72,7 @@ class CreatorHomeBatchUpdater
 			{
 				_CreatorHomeBatchUpdater.m_strFirstErrMsg = data.eresult;
 			}
-			
+
 			if( bDoUpdateNow ) 			{
 				_CreatorHomeBatchUpdater.ProcessEditRequest( start, end, false, false );
 			}
@@ -95,7 +95,7 @@ class CreatorHomeBatchUpdater
 			var start = this.m_processedCount;
 			var end =  this.m_processedCount + this.m_batchSize;
 			this.m_processedCount += this.m_batchSize;
-			
+
 			this.ProcessEditRequest( start, end, this.m_bRemove, this.m_bUpdate );
 		}
 		else 		{
@@ -330,7 +330,7 @@ class CreatorHome {
 
 		UniqifyLinknameAndClan( clan_steamid, linkname )
 	{
-		return '' + clan_steamid + ':' + linkname;
+		return '' + clan_steamid + ':' +  linkname ;
 	}
 
 		SetLinkedSelectsToDefault( )
@@ -403,6 +403,7 @@ class CreatorHome {
 	{
 		var clanname = this.m_clanSteamIDToNameAndProfile[clan_steamid]['name'];
 		var clanurl = this.m_clanSteamIDToNameAndProfile[clan_steamid]['group_profile'];
+
 		var uniqueName = this.UniqifyLinknameAndClan( clan_steamid, linkname );
 		var appids = this.m_linkedUniqueNamesToAppID[ uniqueName ];
 
