@@ -415,6 +415,7 @@ $\nY8O
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
+*ZN18CSerializedSurfaceC4EvEUlvE_
 *ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
 *ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
 *pcubDecodedData
@@ -769,12 +770,14 @@ $\nY8O
 12CDynamicFuncIPFb10SDL_GLAttriEE
 12CDynamicFuncIPFbP10SDL_WindowP18SDL_GLContextStateEE
 12CDynamicFuncIPFbjEE
+12CDynamicFuncIPFfjEE
 12CDynamicFuncIPFiP9_XDisplayEE
 12CDynamicFuncIPFiP9_XDisplayPmPiEE
 12CDynamicFuncIPFiP9_XDisplaymPmS2_PS2_PjEE
 12CDynamicFuncIPFiP9_XDisplaymilP7_XEventEE
 12CDynamicFuncIPFiP9_XDisplaymmllimPmPiS2_S2_PPhEE
 12CDynamicFuncIPFiPvEE
+12CDynamicFuncIPFjPK8SDL_RectEE
 12CDynamicFuncIPFjvEE
 12CDynamicFuncIPFmP9_XDisplayPKciEE
 12CDynamicFuncIPFvP10SDL_WindowEE
@@ -2535,12 +2538,16 @@ SDL_GL_GetProcAddress
 SDL_GL_MakeCurrent
 SDL_GL_ResetAttributes
 SDL_GL_SetAttribute
+SDL_GetDisplayContentScale
+SDL_GetDisplayForRect
 SDL_GetDisplayName
 SDL_GetJoystickNameForID
 SDL_GetJoysticks
 SDL_GetPowerInfo
 SDL_GetPrimaryDisplay
+SDL_HasEvent
 SDL_InitSubSystem
+SDL_PumpEvents
 SDL_QuitSubSystem
 SDL_free
 SESSION_MANAGER
@@ -3198,7 +3205,6 @@ XlibMessage
 XsBI
 XwcLookupString
 XwcTextListToTextProperty
-YQH]F
 YYYY
 YbZ6[
 YearOrMore

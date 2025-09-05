@@ -101,6 +101,7 @@ Corrupt render stream: k_EDrawTexturedRect\n
 Corrupt render stream: k_EIMECommand\n
 Corrupt render stream: k_ELoadTexture 3\n
 Corrupt render stream: k_ELoadTexture\n
+Corrupt render stream: k_EOverlayForceDisplayScale\n
 Corrupt render stream: k_ESendTextToGame string\n
 Corrupt render stream: k_ESendTextToGame\n
 Corrupt render stream: k_ESetCursor\n

@@ -15714,7 +15714,7 @@ $steammessages_parental_objects.proto"
 ;83\v\nHBJ7
 ;;AwI*Q
 ;K+PW
-;MO42p
+;MO42
 ;WDxN
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
 ;\n7k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList
@@ -38850,6 +38850,7 @@ Zulu
 [AppID %u] YldWriteCacheDirectoryToFile failed to serialize KV to buffer
 [AppID %u] YldWriteCacheDirectoryToFile failed to write file to '%s'
 [AppID %u] missing content info for item %llu
+[AppID %u] removing erroneous DELETE that doesn't seem to apply to this platform for '%s'
 [AppID %u] skipping item %llu because item entry result = %s (%d)
 [AppID %u]\tSkipping un-modified file %s
 [Config]\n# Product information.\nProductName=cefwebhelper\nProductVersion=%u\n\n# Required to enable crash dump upload.\nServerURL=%s\n\n# Disable rate limiting so that all crashes are uploaded.\nRateLimitEnabled=true\nMaxUploadsPerDay=5\n\n[CrashKeys]\nVendor=small\nUserID=small\nBuildID=small\nPlatform=small\nSteamUniverse=small\n
@@ -50909,9 +50910,9 @@ loopback
 lost network device
 lost rgb to gray
 lost/gained channels
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1577
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1727
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1932
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1609
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1759
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1964
 low-pri yield - /data/src/clientdll/appdatacache.cpp:870
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:645
@@ -58200,7 +58201,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep  3 2025 23:21:23
+steam Sep  4 2025 23:59:58
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

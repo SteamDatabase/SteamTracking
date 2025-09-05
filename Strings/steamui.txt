@@ -4208,10 +4208,12 @@ ${LANGUAGE}
 *ZN18CX11WindowPropertyC4E10StringViewSt8functionIFvvEEmEUlmmE_
 *ZN19CFactoryResetHelper22ThreadedUpdateProgressEiEUlvE_
 *ZN19CSettingsController14UpdateSettingsEvEUlvE_
+*ZN19CSettingsController21OnProfileSlotsChangedEvEUlvE_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE0_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlfE2_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUljE1_
+*ZN19CSettingsController29SetForeignDefaultValueHandlerE10StringViewOSt8functionIFvP18CMsgSettingVariantEEEUlvE_
 *ZN19CStreamTransportSDR22BHandleTransportSignalERK19CTransportSignalMsgE33CStreamTransportSDR_SignalContext
 *ZN20CUserLoginController13GetLoginUsersE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN20CUserLoginController20ResumeSuspendedGamesEb9CSmartPtrI18CJSCallbackPromiseEEUlP19ResumeGamesResult_tbS2_E_
@@ -4421,7 +4423,6 @@ ${LANGUAGE}
 *ZN26CSteamUISharedJSController23OnBrowserOpenFileDialogERKN11IHTMLWindow23OpenFileDialogRequest_tEEUlvE_
 *ZN26CSteamUISharedJSController26DownloadCommunityItemAssetEyPKcS1_9CSmartPtrI18CJSCallbackPromiseEEUlP23CommunityItemDownload_tbS4_E_
 *ZN26CSteamUISharedJSController36GenerateLocalStartupMoviesThumbnailsEd9CSmartPtrI18CJSCallbackPromiseEEUlR13CJSMethodArgsRbE_
-*ZN26CSteamUISharedJSControllerC4EvEUlfE_
 *ZN29CSteamUICurrentUserController26RequestSupportSystemReportEPKc9CSmartPtrI18CJSCallbackPromiseEEUlP26SupportSystemReportReady_tbS4_E_
 *ZN30CSystemBluetoothControllerStub10InitializeEvE33CWebUIBluetoothManagerGetStateJob
 *ZN30CSystemBluetoothControllerStub10InitializeEvEUlRK34CBluetoothManager_GetState_RequestR35CBluetoothManager_GetState_ResponseE_
@@ -5211,7 +5212,6 @@ ${LANGUAGE}
 -applaunch
 -autoconfig
 -bigpicture
--borderless
 -buildid
 -chromeosdiskmanagement
 -chromeosnopreallocate
@@ -5221,7 +5221,6 @@ ${LANGUAGE}
 -dev
 -devsites
 -devsiteshost
--disablescaling
 -drop
 -dumpvideostream
 -enable-desktop-gl-fallback
@@ -5230,7 +5229,6 @@ ${LANGUAGE}
 -flushconfig
 -force-no-dbus-simulate-user-activity
 -forcecontrollerappid
--forcedesktopscaling
 -foreground
 -friendsui
 -fulldesktopres
@@ -5285,7 +5283,6 @@ ${LANGUAGE}
 -quicklogin
 -quit
 -rememberpassword
--restorewindowsize
 -showallbetas
 -shutdown
 -shutdown-restart-type
@@ -6584,6 +6581,9 @@ ${LANGUAGE}
 /data/src/steamUI/serverbrowsercontroller.cpp
 /data/src/steamUI/settinghandler.cpp
 /data/src/steamUI/settingscontroller.cpp
+/data/src/steamUI/settingscontroller.cpp:1477
+/data/src/steamUI/settingscontroller.cpp:1498
+/data/src/steamUI/settingscontroller.cpp:2511
 /data/src/steamUI/settingscontroller.h
 /data/src/steamUI/settingsprofilemanager.cpp
 /data/src/steamUI/sharedconnectioncontroller.cpp
@@ -17763,6 +17763,7 @@ D4tp
 D4y\t
 D96K
 D:9G
+D:Vo#
 D>B<HuUZv
 D?28D?/
 D?AdB?
@@ -19669,13 +19670,6 @@ Force Password Change
 Force Run Restriction
 Force a Specific AppID for Steam Controller Config - Prevents context/app switching from changing configuration
 Force canceled while pending
-Force scaling: Found env force scaling override: %s
-Force scaling: disabled via settings
-Force scaling: failed to determine primary SDL display: %s
-Force scaling: found GDK_SCALE fallback: %s
-Force scaling: found cli force scaling parameter: %s
-Force scaling: found scaling factor via SDL primary display: %f
-Force scaling: found text scaling factor setting: %f
 Force the use of the system browser composer
 ForceAcceptInvite
 ForceQuit
@@ -19864,7 +19858,6 @@ GCC: (Ubuntu/Linaro 4.6.3-1ubuntu5+srt4) 4.6.3
 GCC: (crosstool-NG 1.12.2) 4.5.3
 GCC: (crosstool-NG 1.17.0) 4.6.3
 GCash
-GDK_SCALE
 GENERALIZEDTIME
 GENERALSTRING
 GENERAL_NAME
@@ -23906,7 +23899,6 @@ N26CSteamUISharedJSController35CCallback_OnAppLifetimeNotificationE
 N26CSteamUISharedJSController48CCallbackInternal_OnFocusedOrFocusableGameUpdateE
 N26CSteamUISharedJSController48CCallbackInternal_OnOverlayGameWindowFocusChangeE
 N26CSystemBluetoothController37CCallbackInternal_OnDisconnectRequestE
-N27CDesktopUIForceScalingParam26m_settingTextScalingFactorMUlvE_E
 N27CGameBroadcastRecordSession33CCallback_OnBroadcastUploadConfigE
 N27CGameBroadcastRecordSession33CCallback_OnBroadcastUploadStatusE
 N27CGameBroadcastRecordSession35CCallback_OnBroadcastSettingsLoadedE
@@ -24966,6 +24958,7 @@ OnMouseFocusTicked
 OnNewFolder
 OnNotificationsRequested
 OnOpen
+OnProfileSlotsChanged
 OnRelease
 OnRequestAuthorization
 OnRequestConfirmation
@@ -26644,7 +26637,6 @@ SCT_set_log_entry_type
 SCT_set_signature_nid
 SCT_set_version
 SCsc
-SDL primary display content scale: %f
 SDL-
 SDL3_0.0.0
 SDL_APP_NAME
@@ -27032,7 +27024,6 @@ STEAM_CLIENT_LOG_FOLDER
 STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_ENABLE_STATUS_LED_BRIGHTNESS
 STEAM_ENABLE_VOLUME_HANDLER
-STEAM_FORCE_DESKTOPUI_SCALING
 STEAM_GAMESCOPE_DYNAMIC_REFRESH_IN_STEAM_SUPPORTED
 STEAM_GAMESCOPE_VRR_SUPPORTED
 STEAM_GAMES_RUNNING
@@ -27100,7 +27091,6 @@ Saving unknown chunk:
 SbEwd
 Sberbank
 Scale
-Scale the desktop UI
 ScaleARGBCols64_C
 ScaleARGBColsUp2_C
 ScaleARGBCols_C
@@ -27312,7 +27302,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep  3 2025 23:21:25
+Sep  5 2025 00:00:01
 September
 Serbian
 Serial
@@ -27433,6 +27423,7 @@ SetFloat
 SetFocus
 SetFont
 SetForceWPASupplicant
+SetForeignDefaultValueHandler
 SetHDRVisualization
 SetHostname
 SetInt32
@@ -27508,6 +27499,7 @@ Setting capture only gameID to %llu\n
 Setting target bitrate to %d Kbit/s, burst bitrate is %d Kbit/s
 Setting target framerate: %.2f [timing: game %.2f, capture %.2f, convert %.2f, encode %.2f, network %.2f, decode %.2f, display %.2f%s]
 Setting target property: type: '%s' name: '%s'
+SettingSideEffect: %s
 SettingValidation/DummyBool
 SettingValidation/DummyEnum
 SettingValidation/DummyFloat
@@ -29681,6 +29673,7 @@ Usage:\n\tfind <keyword>\n
 UsbOverCurrent
 Use Proxy
 Use local dev websites
+Use longest string for each localization token
 Use other funding source
 Use other payment method
 Use the OpenGL render for the UI
@@ -37634,11 +37627,6 @@ g_queuePacketsToDelete
 g_random_int_range
 g_return_if_fail_warning
 g_set_error
-g_settings_get_double
-g_settings_new
-g_settings_schema_source_get_default
-g_settings_schema_source_lookup
-g_settings_schema_unref
 g_shell_parse_argv
 g_shell_parse_argv %s failed: %s\n
 g_signal_accumulator_true_handled
@@ -44948,7 +44936,6 @@ org.freedesktop.portal.FileChooser
 org.freedesktop.portal.Request
 org.freedesktop.portal.ScreenCast
 org.freedesktop.portal.Session
-org.gnome.desktop.interface
 organization
 organizationIdentifier
 organizationName
@@ -48734,7 +48721,6 @@ text
 text chunk: out of memory
 text compression mode is out of range
 text format contains deprecated field "
-text-scaling-factor
 text/html
 text/html,*/*;q=0.9
 text/html; charset=UTF-8
@@ -50155,6 +50141,8 @@ vecDeckCompatTestResults
 vecDevices
 vecEntries
 vecHighlight
+vecKV.Count() == vecApps.Count()
+vecKVComputed.Count() == vecApps.Count()
 vecKVFilterPtrs.Count() == 0
 vecLanguages
 vecLegacyCDKeys
