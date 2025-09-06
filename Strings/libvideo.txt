@@ -1005,7 +1005,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1vb
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -2241,7 +2240,7 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:59:48
+23:52:03
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2463,6 +2462,7 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
+9HdC
 9IGv
 9IMemAlloc
 9PE,$
@@ -8546,7 +8546,7 @@ Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep  4 2025
+Sep  5 2025
 September
 Serbian
 Server
@@ -8760,6 +8760,7 @@ SteamCache
 SteamCallbacks
 SteamChina_SChinese
 SteamDeck
+SteamOSGeneric
 SteamRealPath
 Steamworks Access Invite
 SteamworksAccessInvites
@@ -13005,7 +13006,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenb
 givenName
 global constructors keyed to 
 global destructors keyed to 

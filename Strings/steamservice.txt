@@ -2226,7 +2226,7 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:59:48
+23:52:03
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -8022,7 +8022,7 @@ Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep  4 2025
+Sep  5 2025
 September
 Serbian
 Server
@@ -8224,6 +8224,7 @@ SteamCallbacks
 SteamChina_SChinese
 SteamClientService
 SteamDeck
+SteamOSGeneric
 SteamPID
 SteamRealPath
 SteamService: file missing %s\n
@@ -12195,7 +12196,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenVn
+ggen
 givenName
 global constructors keyed to 
 global destructors keyed to 

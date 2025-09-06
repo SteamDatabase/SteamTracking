@@ -2425,8 +2425,8 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:59:48
-23:59:54
+23:52:03
+23:52:11
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -8549,7 +8549,7 @@ Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep  4 2025
+Sep  5 2025
 September
 Serbian
 Server
@@ -8746,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Sep  4 2025 23:59:54
+Startup - updater built Sep  5 2025 23:52:11
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -8783,6 +8783,7 @@ SteamCallbacks
 SteamChina_SChinese
 SteamDeck
 SteamDllMainEx
+SteamOSGeneric
 SteamPID
 SteamRealm
 SteamUniverse
@@ -13013,7 +13014,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen:
+ggen
 givenName
 glBegin
 glBindTexture

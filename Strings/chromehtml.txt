@@ -3497,6 +3497,7 @@ SteamChrome_MasterStream
 SteamChrome_MasterStream_Event_uid%d_spid%u
 SteamChrome_MasterStream_uid%d_spid%u
 SteamDeck
+SteamOSGeneric
 SteamRealPath
 SteamRealm
 SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)

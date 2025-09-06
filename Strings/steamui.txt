@@ -17763,7 +17763,6 @@ D4tp
 D4y\t
 D96K
 D:9G
-D:Vo#
 D>B<HuUZv
 D?28D?/
 D?AdB?
@@ -27302,7 +27301,7 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep  5 2025 00:00:01
+Sep  5 2025 23:52:19
 September
 Serbian
 Serial
@@ -28020,6 +28019,7 @@ SteamOS/TDPLimitEnabled
 SteamOS/WakeOnResume
 SteamOS/WifiDebug
 SteamOS/WifiForceWPASupplicant
+SteamOSGeneric
 SteamOSLogSubmitterHelper
 SteamOSLogSubmitterHelperProxy
 SteamOSLogSubmitterManager
@@ -37937,7 +37937,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen:<n
 ghost_
 gidlist
 gidparentcomment
@@ -42591,6 +42591,7 @@ m_cbkAirplaneMode
 m_cbkBatteryState
 m_cbkBroadcastStatus
 m_cbkFormatProgress
+m_cbkKeyEventHandlers
 m_cbkPrePurchaseAppChanges
 m_cbkStateChangeHandlers
 m_cbkUpdateStateChanges
@@ -43442,7 +43443,6 @@ m_vecInstalledApps
 m_vecJSCallbackFuncs
 m_vecJSConsoleSpewCallbacks
 m_vecJumpWChars
-m_vecKeyEventHandlers
 m_vecLastAppIDsToInstall
 m_vecLastFocusableWindows
 m_vecLaunchOptions
