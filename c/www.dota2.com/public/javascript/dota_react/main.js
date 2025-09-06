@@ -23942,12 +23942,9 @@
             ),
             _ = _ ? `${_.wins} - ${_.losses}` : "",
             _ = _?.name?.match(/(\d)/g),
-            _ =
-              "" == _?.name
-                ? "0 - 0"
-                : _ && 2 == _.length
-                  ? `${_[0]} - ${_[1]}`
-                  : "",
+            _ = "" == _?.name,
+            _ = _.nNodeID >= 58 && _.nNodeID <= 62,
+            _ = _ ? "0 - 0" : _ && 2 == _.length ? `${_[0]} - ${_[1]}` : "",
             _ = _._.Get().GetTeamStanding(
               _?.nLeagueID,
               _.nNodeGroupID,
@@ -24056,6 +24053,7 @@
                     ),
                   _ &&
                     !_ &&
+                    !_ &&
                     _.createElement(
                       "div",
                       {
@@ -24137,6 +24135,7 @@
                       _,
                     ),
                   _ &&
+                    !_ &&
                     !_ &&
                     _.createElement(
                       "div",
@@ -26973,12 +26972,10 @@
                     ? "#dpc_ti_intro_title"
                     : "#dpc_main_event",
               },
-              _ !== _._.INTERNATIONAL_2025
-                ? {
-                    value: _._.RESULTS,
-                    strLabel: "#dpc_results",
-                  }
-                : void 0,
+              {
+                value: _._.RESULTS,
+                strLabel: "#dpc_results",
+              },
             ],
             _ = (0, _._)(_.strPhase);
           if (_._.Get().GetEventType(_) != _._.INTERNATIONAL) return null;
