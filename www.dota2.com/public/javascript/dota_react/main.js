@@ -21079,7 +21079,7 @@
                     s.createElement(
                       "div",
                       { className: qa().Title },
-                      21 == a?.event || 23 == a?.event
+                      21 == a?.event || 23 == a?.event || 24 == a?.event
                         ? (0, B.Wn)("#dpc_about_theinternational")
                         : (0, B.Wn)("#dpc_main_event"),
                     ),
@@ -23842,10 +23842,7 @@
           if ($t.E.Get().GetEventType(e) != Zt.J7.INTERNATIONAL) return null;
           if (!Zt.sI[n] || n == Zt.sI.INVALID)
             return s.createElement(S.rd, {
-              to: v.J.dpc_standings(
-                (0, Kt.p$)(e),
-                (0, Kt.w0)(Zt.sI.GROUP_STAGE),
-              ),
+              to: v.J.dpc_standings((0, Kt.p$)(e), (0, Kt.w0)(Zt.sI.PLAYOFF)),
             });
           const i = [
             {
@@ -40258,19 +40255,7 @@
                 c == u.sI.GROUP_C ||
                 c == u.sI.GROUP_D ||
                 c == u.sI.PLACEMENT ||
-                c == u.sI.ELIMINATION ||
-                41 == a ||
-                42 == a ||
-                43 == a ||
-                44 == a ||
-                33 == a ||
-                34 == a ||
-                35 == a ||
-                36 == a ||
-                45 == a ||
-                46 == a ||
-                47 == a ||
-                48 == a),
+                c == u.sI.ELIMINATION),
             _ = e == u.Dq.INTERNATIONAL_2025 && c == u.sI.GROUP_STAGE,
             p = this.GetRegionString(i.eRegion, r == u.LY.SHORT),
             g = this.GetDivisionString(i.eDivision, r == u.LY.SHORT),

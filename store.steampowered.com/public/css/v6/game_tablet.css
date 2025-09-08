@@ -1792,6 +1792,10 @@ html.tablet .game_area_purchase_game p.package_contents {
 	/*This was breaking on deck*/
 }
 
+html.tablet .game_area_purchase_game .package_contents_capsules_ctn {
+	margin-left: unset;
+}
+
 html.tablet .bundle_contents_preview {
 	margin: 8px 0px;
 	background: var(--gpBackground-DarkHard);

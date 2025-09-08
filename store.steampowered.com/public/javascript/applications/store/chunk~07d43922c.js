@@ -5487,33 +5487,34 @@
             d = 0,
             g = 0;
           for (let e = 0; d < a.length; e++) {
+            let r;
             for (let e = 0; (0 == t || e < t) && d < a.length; e++) {
-              const t = x(e, D),
-                r = ((P = _), "tall" === t ? P + 1 : P);
-              let s = Math.min(B[e % B.length], r);
+              (0 == e || p) && (r = x(e, D));
+              const t = ((P = _), "tall" === r ? P + 1 : P);
+              let s = Math.min(B[e % B.length], t);
               const i = Math.min(s, a.length - d);
               if (i < s && 0 === e) {
                 if (y) return { content: null, bAdditionalContent: !1 };
-                const e = "tall" === t ? 3 : 2;
+                const e = "tall" === r ? 3 : 2;
                 s = Math.max(e, i);
               }
               m.push(
                 n.createElement(
                   z,
                   { key: "Row_" + e, nMaxItems: s, nItems: i },
-                  w(a, d, d + i, s, t),
+                  w(a, d, d + i, s, r),
                 ),
               ),
                 (d += i);
             }
             if ((0 == g && (g = d), s)) break;
             if (d >= a.length && 0 === i.length) break;
-            const r = i.length || void 0;
+            const o = i.length || void 0;
             i.push(
               n.createElement(
                 "div",
                 { className: E().CarouselPage, key: `Page_${e}` },
-                n.createElement(S.Ay, { depth: r }, m),
+                n.createElement(S.Ay, { depth: o }, m),
               ),
             ),
               (m = []);

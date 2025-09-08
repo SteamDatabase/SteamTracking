@@ -4906,6 +4906,9 @@ span._1P__hyqsgd049GH0Bn007_ {
 .BasicUI .HlkukqE4fB5si76sBJzKX {
   min-width: unset;
 }
+.ScrollSnapCarousel .HlkukqE4fB5si76sBJzKX {
+  display: flex;
+}
 ._21-6tYOa1oCDYC9YCj1Vur {
   display: flex;
   flex-direction: row;
