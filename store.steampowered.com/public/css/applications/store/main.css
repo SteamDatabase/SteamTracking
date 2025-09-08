@@ -6042,9 +6042,9 @@ html.touch ._2RyPu-qJzs6novxZiGSDf- {
 }
 @media screen and (max-width: 730px) {
   html.responsive ._3b26-ybbQJNqGukiWkIUp8 {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "largebuttons smallbuttons" "links links";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "largebuttons" "smallbuttons" "links";
   }
 }
 ._3b26-ybbQJNqGukiWkIUp8 .JWPtoi9esADBpUUkODq1z {

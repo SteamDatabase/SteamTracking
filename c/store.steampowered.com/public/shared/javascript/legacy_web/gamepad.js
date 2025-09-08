@@ -544,7 +544,7 @@
               _.off(".vkbindings");
             })),
           _.focusable && void 0 === _.attr("tabIndex") && _.attr("tabIndex", 0),
-          _.focusable && _.FocusCallbackList.Register((_) => _(_, _)),
+          _.focusable && _.SubscribableHasFocus.Subscribe((_) => _(_, _)),
           _ &&
             ((_.m_FocusRing = _(_)),
             "static" == _.css("position") && _.css("position", "relative"));

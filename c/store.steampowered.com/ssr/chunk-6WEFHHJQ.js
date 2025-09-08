@@ -1,8 +1,8 @@
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -1620,18 +1620,18 @@ var _ = class {
 };
 function _(_, _, _, _ = 0.001) {
   return _ == "x"
-    ? _._ + _.width > _._ + _ && _._ + _ < _._ + _.width
+    ? _.right > _.left + _ && _.left + _ < _.right
     : _ == "y"
-      ? _._ + _.height > _._ + _ && _._ + _ < _._ + _.height
+      ? _.bottom > _.top + _ && _.top + _ < _.bottom
       : (_(!1, `Invalid axis ${_}`), !1);
 }
 function _(_, _, _) {
   let _;
   return (
     _ == "x"
-      ? (_ = Math.min(_._ + _.width, _._ + _.width) - Math.max(_._, _._))
+      ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
       : _ == "y"
-        ? (_ = Math.min(_._ + _.height, _._ + _.height) - Math.max(_._, _._))
+        ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
         : (_(!1, `Invalid axis ${_}`), (_ = 0)),
     _ < 0 ? 0 : _
   );
@@ -1639,12 +1639,12 @@ function _(_, _, _) {
 function _(_, _) {
   return _ == "x"
     ? {
-        min: _._,
-        max: _._ + _.width,
+        min: _.left,
+        max: _.right,
       }
     : {
-        min: _._,
-        max: _._ + _.height,
+        min: _.top,
+        max: _.bottom,
       };
 }
 function _(_, _, _) {
@@ -1654,8 +1654,8 @@ function _(_, _, _) {
 }
 function _(_) {
   return {
-    _: _._,
-    _: _._,
+    _: _.left,
+    _: _.top,
   };
 }
 var _ = {
@@ -1680,7 +1680,7 @@ function _(_) {
         return 3;
     }
   else {
-    if (_.display == "grid") return 5;
+    if (_.display == "grid") return _.gridTemplateAreas !== "none" ? 6 : 5;
     if (_.childElementCount > 0) {
       let _ = _.getComputedStyle(_.firstElementChild);
       if (_.float === "left") return 2;
@@ -1852,6 +1852,19 @@ function _(_, _, _) {
 }
 function _(_) {
   return _ != null && _.focus !== void 0;
+}
+function _(_, _) {
+  let _ = 0,
+    _ = 0;
+  return (
+    _.right < _.left
+      ? (_ = _.left - _.right)
+      : _.left > _.right && (_ = _.left - _.right),
+    _.bottom < _.top
+      ? (_ = _.top - _.bottom)
+      : _.top > _.bottom && (_ = _.top - _.bottom),
+    Math.sqrt(_ * _ + _ * _)
+  );
 }
 function _(_) {
   let _;
@@ -2411,7 +2424,8 @@ function _(_) {
         scrollTop: _.scrollTop,
       };
 }
-var _ = new _("FocusNavigationMovement").Debug,
+var _ = new _("FocusNavigationMovement"),
+  _ = _.Debug,
   _ = ((_) => (
     (_[(_.NONE = 0)] = "NONE"),
     (_[(_.COLUMN = 1)] = "COLUMN"),
@@ -2449,10 +2463,8 @@ var _ = ((_) => (
     m_bAutoFocusChild = !1;
     m_bMounted = !1;
     m_nDepth;
-    m_bFocused = !1;
-    m_FocusCallbackList = new _();
-    m_bFocusWithin = !1;
-    m_FocusWithinCallbackList = new _();
+    m_Focused = _(!1);
+    m_FocusWithin = _(!1);
     m_ActionDescriptionsChangedCallbackList = new _();
     m_RetainFocusParent = null;
     m_rgNavigationHandlers = [];
@@ -2513,31 +2525,27 @@ var _ = ((_) => (
       );
     }
     GetBoundingRect() {
-      return this.m_element && this.m_element.getBoundingClientRect();
+      return this.m_element?.getBoundingClientRect();
     }
     SetHasFocus(_) {
-      _ != this.m_bFocused &&
-        ((this.m_bFocused = _),
-        this.m_FocusCallbackList.Dispatch(this.m_bFocused));
+      this.m_Focused.Set(_);
     }
     SetFocusWithin(_) {
-      _ != this.m_bFocusWithin &&
-        ((this.m_bFocusWithin = _),
-        this.m_FocusWithinCallbackList.Dispatch(this.m_bFocusWithin),
+      this.m_FocusWithin.Set(_) &&
         this.m_Properties?.onFocusWithin &&
-          this.m_Properties.onFocusWithin(this.m_bFocusWithin));
+        this.m_Properties.onFocusWithin(_);
+    }
+    get SubscribableHasFocus() {
+      return this.m_Focused;
     }
     BHasFocus() {
-      return this.m_bFocused;
+      return this.m_Focused.Value;
+    }
+    get SubscribableFocusWithin() {
+      return this.m_FocusWithin;
     }
     BFocusWithin() {
-      return this.m_bFocusWithin;
-    }
-    get FocusCallbackList() {
-      return this.m_FocusCallbackList;
-    }
-    get FocusWithinCallbackList() {
-      return this.m_FocusWithinCallbackList;
+      return this.m_FocusWithin.Value;
     }
     ForceMeasureFocusRing() {
       this.m_FocusRing?.OnForceMeasureFocusRing();
@@ -2607,7 +2615,7 @@ var _ = ((_) => (
         _ != -1 &&
           (this.SetActiveChild(_),
           _(
-            this.m_bFocusWithin,
+            this.BFocusWithin(),
             "Child has focus, we should be m_bFocusWithin",
           ));
       }
@@ -2618,14 +2626,14 @@ var _ = ((_) => (
         this.PropagateRetainFocusParentToChildren(this.m_RetainFocusParent),
         (this.m_bMounted = !1);
       let _ = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
-      (this.m_bFocused || _) &&
+      (this.BHasFocus() || _) &&
         (_(
           `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
         ),
         _ && this.Tree.DeferredFocus.RequestFocus(null),
         this.m_RetainFocusParent
           ? this.m_RetainFocusParent.OnFocusedDecendantRemoved(this)
-          : this.m_bFocused && this.m_Tree.TransferFocus(2, null)),
+          : this.BHasFocus() && this.m_Tree.TransferFocus(2, null)),
         this.UnregisterDOMEvents(),
         this.m_Parent
           ? this.m_Parent.RemoveChild(this)
@@ -2721,7 +2729,7 @@ var _ = ((_) => (
       return _ ? _.GetLastFocusElement() : this.m_element;
     }
     OnDOMFocus(_) {
-      if (!this.m_bFocused) {
+      if (!this.BHasFocus()) {
         if (this.GetFocusable() == "children") {
           let _ = this.FindFocusableDescendant();
           if (_ && _ !== this) {
@@ -2738,7 +2746,7 @@ var _ = ((_) => (
       }
     }
     OnDOMBlur(_) {
-      this.m_bFocused &&
+      this.BHasFocus() &&
         this.m_element?.ownerDocument.hasFocus() &&
         this.m_Tree.TransferFocus(3, null);
     }
@@ -2802,38 +2810,33 @@ var _ = ((_) => (
         let { navEntryPreferPosition: _, resetNavOnEntry: _ } =
             this.m_Properties ?? {},
           _ = this.GetActiveChildIndex();
-        if ((_ && _ !== void 0 && (_ = -1), !this.IsValidChildIndex(_))) {
-          let _ = this.GetLayout();
-          _ >= this.m_rgChildren.length || _ == 4 || _ == 3 || _ == 1
+        _ && _ !== void 0 && (_ = -1);
+        let _ = this.GetLayout();
+        this.IsValidChildIndex(_) ||
+          (_ >= this.m_rgChildren.length || _ == 4 || _ == 3 || _ == 1
             ? (_ = this.m_rgChildren.length - 1)
-            : (_ = 0);
-        }
-        let _;
-        if ((_ == 2 || _ == 3 || _) && _) {
-          let _;
-          _ == 2 ? (_ = "x") : _ == 3 && (_ = "y");
-          let _;
-          _ == _[_] &&
-            (_ =
-              this.m_Tree.GetLastFocusedMovementRect(_[_]) ??
-              this.m_Tree.GetLastFocusedNode()?.GetBoundingRect()),
+            : (_ = 0));
+        let _, _;
+        if (
+          (_ == 2 ? (_ = "x") : _ == 3 ? (_ = "y") : _ == 6 && _ && (_ = _[_]),
+          (_ || _) && _)
+        ) {
+          let _ = this.m_Tree.GetLastFocusedNode();
+          if (_ || (_ && _ == _[_])) {
+            let _ =
+              _ ||
+              this.AdjustRectForLastMovementOnTangentAxis(
+                _.GetBoundingRect(),
+                _,
+              );
             _(
               `Taking focus while preserving ${_ && _[_]} preserved: ${_} movement: ${_}, node:`,
-              _ || _,
-            );
-          let _ = this.ComputeRelativeDirection(_, 5);
-          if (_ || _) {
-            let _ = _ == 2 ? this.m_rgChildren.length - 1 : 0;
-            _ = this.FindClosestChildInNextAxiallyAlignedSet(
-              _ || _[_],
               _,
-              _,
-              _ || _,
-              _,
-              this.m_rgChildren[_].GetBoundingRect(),
-            );
+            ),
+              (_ = this.FindClosestFocusableNodeToRect(_, _));
           } else if (_ != _[_]) {
-            let _ = _ == 2 ? this.m_rgChildren.length : -1;
+            let _ = this.ComputeRelativeDirection(_, 5),
+              _ = _ == 2 ? this.m_rgChildren.length : -1;
             _ = this.FindNextFocusableChildInDirection(_, _, _);
           }
         } else if (_ == 4) {
@@ -2916,12 +2919,13 @@ var _ = ((_) => (
         _ == 0)
       )
         return !1;
-      if (this.m_Properties?.focusable && this.m_bFocused)
+      if (this.m_Properties?.focusable && this.BHasFocus())
         return _("Skipping navigation within focused element"), !1;
       this.EnsureChildrenSorted(!0);
       let _;
       if (_ == 5)
         _ = this.FindNextFocusableChildInGrid(this.GetActiveChildIndex(), _, _);
+      else if (_ == 6) _ = this.FindNextFocusableChildGeometric(_, _);
       else {
         let _ = this.GetActiveChildIndex();
         this.IsValidChildIndex(_) ||
@@ -2992,6 +2996,7 @@ var _ = ((_) => (
               return 0;
           }
         case 5:
+        case 6:
           switch (_) {
             case 11:
             case 9:
@@ -3038,13 +3043,11 @@ var _ = ((_) => (
           this.FindFocusableDescendant(_)
         );
       let _ = this.GetActiveDescendant().GetBoundingRect();
-      if (_ == 9 || _ == 10) {
-        let _ =
-          this.m_Tree.GetLastFocusedMovementRect("x") ??
-          this.m_Tree.GetLastFocusedNode()?.GetBoundingRect();
-        _ && ((_._ = _._), (_.width = _.width));
-      }
-      if (_) {
+      if (
+        ((_ == 9 || _ == 10) &&
+          (_ = this.AdjustRectForLastMovementOnTangentAxis(_, "y")),
+        _)
+      ) {
         let _ = _;
         for (; _ != -1; ) {
           let _ = this.ScanChildren(
@@ -3078,6 +3081,116 @@ var _ = ((_) => (
           let _ = _.FindFocusableNode(_);
           if (_) return _;
         }
+      }
+      return null;
+    }
+    FindNextFocusableChildGeometric(_, _) {
+      let _ = this.GetLastFocusElement();
+      if (!_ || _ == this.m_element)
+        return (
+          _(
+            !1,
+            "No active child for geometric navigation",
+            this.m_iLastActiveChildIndex,
+            this.m_rgChildren.length,
+            _,
+          ),
+          this.FindFocusableDescendant(_)
+        );
+      let _ = _(_);
+      if (!_) return null;
+      let _ = this.AdjustRectForLastMovementOnTangentAxis(
+        this.GetActiveDescendant().GetBoundingRect(),
+        _,
+      );
+      return this.FindClosetChildInDirection(_, _, _, _);
+    }
+    AdjustRectForLastMovementOnTangentAxis(_, _) {
+      let _ = this.m_Tree.GetLastFocusedMovementRect(_[_]);
+      return _
+        ? _ == "x"
+          ? {
+              left: _.left,
+              right: _.right,
+              top: _.top,
+              bottom: _.bottom,
+            }
+          : {
+              left: _.left,
+              right: _.right,
+              top: _.top,
+              bottom: _.bottom,
+            }
+        : _;
+    }
+    FindClosestFocusableNodeToRect(_, _) {
+      let _ = _(_),
+        _ = _ && _[_];
+      console.log(_, _);
+      let _ = [];
+      for (let _ of this.m_rgChildren) {
+        let _ = _.GetBoundingRect();
+        if (_) {
+          let _ = _(_, _),
+            _ = _ ? _(_, _, _) : 0;
+          _.push({
+            child: _,
+            overlap: _,
+            dist: _,
+          });
+        }
+      }
+      _.sort((_, _) =>
+        _.dist != _.dist ? _.dist - _.dist : _.overlap - _.overlap,
+      ),
+        _.forEach(({ child: _, dist: _, overlap: _ }) =>
+          console.log(`dist ${_} overlap ${_}`, _.Element),
+        );
+      for (let { child: _ } of _) {
+        let _ = _.FindFocusableNode(_, _);
+        if (_) return _;
+      }
+      return null;
+    }
+    FindClosetChildInDirection(_, _, _, _) {
+      _(
+        `Find child closest to rect, rect is at left ${_.left} top ${_.top} right ${_.right} bottom ${_.bottom}`,
+      );
+      let _ = _(_, _),
+        _ = [];
+      for (let _ of this.m_rgChildren) {
+        let _ = _.GetBoundingRect();
+        if (_) {
+          let _ = _(_, _),
+            _;
+          _ == 1 ? (_ = _.min - _.max) : (_ = _.min - _.max),
+            _ >= 0 &&
+              _.push({
+                child: _,
+                overlap: _(_[_], _, _),
+                dist: _,
+              });
+        }
+      }
+      if (
+        (_.sort((_, _) => {
+          if (_.overlap) {
+            if (!_.overlap) return -1;
+          } else if (_.overlap) return 1;
+          let _ = _.dist - _.dist;
+          return _ || _.overlap - _.overlap;
+        }),
+        _.IsDebugEnabled())
+      ) {
+        let _ = _.slice(0, 3).map(
+          ({ dist: _, overlap: _, child: _ }) =>
+            `[ node: ${_.m_element?.className} dist: ${_} overlap: ${_} ]`,
+        );
+        _(`Found nodes on axis, top 3 (of ${_.length}: ${_.join(", ")}`);
+      }
+      for (let { child: _ } of _) {
+        let _ = _.FindFocusableNode(_, _);
+        if (_) return _;
       }
       return null;
     }
@@ -3406,6 +3519,7 @@ function _(_, _, _ = !1) {
   }, [_, _, _]);
 }
 function _(_) {
+  if (!_) return 0;
   switch (_) {
     case "column":
       return 1;
@@ -3417,8 +3531,10 @@ function _(_) {
       return 4;
     case "grid":
       return 5;
+    case "geometric":
+      return 6;
     default:
-      return 0;
+      return _(_, `Unhandled flow-children: ${_}`), 0;
   }
 }
 var _ = _(_(), 1);
@@ -3698,16 +3814,14 @@ function _(_) {
         ..._
       } = _,
       _ = _(),
-      _ = _(),
-      _ = _.BHasFocus() && _,
-      _ = _.BFocusWithin() && _,
+      _ = _(_.SubscribableHasFocus) && _,
+      _ = _(_.SubscribableFocusWithin) && _,
       {
         bActiveTree: _,
         bActiveTreeWithinContext: _,
         bDisableFocusClasses: _,
-      } = _();
-    _(_.FocusCallbackList, _), _(_.FocusWithinCallbackList, _);
-    let _ = _ && !_,
+      } = _(),
+      _ = _ && !_,
       _ = !_ && (_ !== void 0 || _);
     return _.createElement(
       _,
