@@ -37850,25 +37850,22 @@
           ? _(_) + " - " + _(_)
           : _(_, _);
       }
-      function _(_, _) {
+      function _(_, _, _) {
         let _ = new Date(1e3 * _),
           _ = new Date(1e3 * _);
         const _ = new Date();
         if (
-          __webpack_require__.getFullYear() != _.getFullYear() ||
-          _.getFullYear() == __webpack_require__.getFullYear()
+          _.getFullYear() != _.getFullYear() ||
+          _.getFullYear() != _.getFullYear() ||
+          _
         )
           return `${_(_)} - ${_(_)}`;
         const _ = {
             month: "short",
             day: "numeric",
           },
-          _ =
-            __webpack_require__.toLocaleDateString(
-              _._.GetPreferredLocales(),
-              _,
-            ) + " - ";
-        if (__webpack_require__.getMonth() == _.getMonth()) {
+          _ = _.toLocaleDateString(_._.GetPreferredLocales(), _) + " - ";
+        if (_.getMonth() == _.getMonth()) {
           const _ = {
             day: "numeric",
           };

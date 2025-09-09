@@ -44172,27 +44172,25 @@
         s = a(14771),
         l = a(12080);
       function o(e) {
-        const t =
-            !e.rtStartDate ||
-            !e.rtEndDate ||
+        const { rtStartDate: t, rtEndDate: a, bForceShowYear: o } = e,
+          c =
+            t &&
+            a &&
             (0, s.Ct)(
               new Date(1e3 * e.rtStartDate),
               new Date(1e3 * e.rtEndDate),
             ),
-          a =
-            e.rtStartDate &&
-            e.rtEndDate &&
-            (0, s.Ct)(new Date(1e3 * e.rtStartDate), new Date()),
-          o = !t && !a;
+          m = t && a && (0, s.Ct)(new Date(1e3 * e.rtStartDate), new Date()),
+          d = o || !c || !m;
         if (e.rtStartDate && e.rtEndDate)
           return n.createElement(
             "div",
             { className: e.className },
-            (0, i.nR)(e.rtStartDate, e.rtEndDate),
+            (0, i.nR)(t, a, o),
           );
         {
-          const t = e.rtStartDate ? (0, r.TW)(e.rtStartDate, o) : "unset",
-            a = e.rtEndDate ? (0, r.TW)(e.rtEndDate, o) : "unset";
+          const t = e.rtStartDate ? (0, r.TW)(e.rtStartDate, !d) : "unset",
+            a = e.rtEndDate ? (0, r.TW)(e.rtEndDate, !d) : "unset";
           return n.createElement(
             "div",
             { className: e.className },
@@ -57653,25 +57651,25 @@
         mt = a(32703),
         dt = a(30470);
       function ut(e) {
-        const { marketingMessageID: t } = e,
-          a = (0, d.W6)(),
-          n = (0, me.dr)(t),
-          { bReady: r } = (0, mt._p)(t, null);
-        if (!n) return c.createElement(L.t, { string: t, size: "small" });
-        const i = Se.HD.GetTimeNowWithOverride(),
-          s = n.start_date > i,
-          l = n.start_date < i && 1 == n.visibility,
-          o = Boolean(2 == n.visibility),
-          m = Boolean(3 == n.visibility);
+        const { marketingMessageID: t, bForceShowYear: a } = e,
+          n = (0, d.W6)(),
+          r = (0, me.dr)(t),
+          { bReady: i } = (0, mt._p)(t, null);
+        if (!r) return c.createElement(L.t, { string: t, size: "small" });
+        const s = Se.HD.GetTimeNowWithOverride(),
+          l = r.start_date > s,
+          o = r.start_date < s && 1 == r.visibility,
+          m = Boolean(2 == r.visibility),
+          u = Boolean(3 == r.visibility);
         return c.createElement(
           "div",
           {
             className: (0, x.A)({
               [ct.RowCtn]: !0,
-              [ct.Public]: o,
-              [ct.Future]: s,
-              [ct.Approved]: !o && m,
-              [ct.Ready]: !o && r && !m,
+              [ct.Public]: m,
+              [ct.Future]: l,
+              [ct.Approved]: !m && u,
+              [ct.Ready]: !m && i && !u,
             }),
             onClick: (e) => {
               e.ctrlKey || e.metaKey
@@ -57679,7 +57677,7 @@
                     `${dt.TS.PARTNER_BASE_URL}/promotion/${Ss.MarketingMessageEditor(t)}`,
                     "_blank",
                   )
-                : a.push(Ss.MarketingMessageEditor(t));
+                : n.push(Ss.MarketingMessageEditor(t));
             },
           },
           c.createElement(
@@ -57688,13 +57686,13 @@
             c.createElement(
               "div",
               { className: (0, x.A)(ct.Col, ct.ItemName) },
-              n.title,
-              Boolean(s && 2 == n.visibility) &&
+              r.title,
+              Boolean(l && 2 == r.visibility) &&
                 c.createElement(
                   "span",
                   { className: ct.WillBecomeVisible },
                   "Will automatically become visible on ",
-                  (0, z.TW)(n.start_date, !0),
+                  (0, z.TW)(r.start_date, !0),
                 ),
             ),
             c.createElement(
@@ -57704,63 +57702,64 @@
                   [ct.Col]: !0,
                   [ct.Type]: !0,
                   [ct.Deal]: Boolean(
-                    2 == n.type || 14 == n.type || 11 == n.type || 12 == n.type,
+                    2 == r.type || 14 == r.type || 11 == r.type || 12 == r.type,
                   ),
                 }),
               },
-              c.createElement("span", null, (0, ce.Rw)(n.type)),
+              c.createElement("span", null, (0, ce.Rw)(r.type)),
             ),
             c.createElement(
               "div",
               { className: (0, x.A)(ct.Col, ct.Date) },
               c.createElement(
                 "span",
-                { className: (0, x.A)({ [ct.MissedRelease]: l }) },
+                { className: (0, x.A)({ [ct.MissedRelease]: o }) },
                 c.createElement(ot.y, {
-                  rtStartDate: n.start_date,
-                  rtEndDate: n.end_date,
+                  rtStartDate: r.start_date,
+                  rtEndDate: r.end_date,
+                  bForceShowYear: a,
                 }),
               ),
             ),
             c.createElement(
               "div",
               { className: (0, x.A)(ct.Col, ct.Creator) },
-              n.creator_name,
+              r.creator_name,
             ),
           ),
           c.createElement(
             "div",
             { className: ct.Row },
-            o &&
+            m &&
               c.createElement(
                 "div",
                 { className: ct.LiveStatsCtn },
-                c.createElement(pt, { gid: n.gid }),
+                c.createElement(pt, { gid: r.gid }),
               ),
-            c.createElement(ht, { flags: n.flags }),
+            c.createElement(ht, { flags: r.flags }),
             c.createElement(Et, {
-              strCountries: n.country_allow || n.country_deny,
-              bAllowList: n.country_allow?.length > 0,
+              strCountries: r.country_allow || r.country_deny,
+              bAllowList: r.country_allow?.length > 0,
             }),
             c.createElement(St, {
               strPrefix: "only owners of",
-              storeItemID: { id: n.must_own_appid, item_type: "app" },
+              storeItemID: { id: r.must_own_appid, item_type: "app" },
             }),
             c.createElement(St, {
               strPrefix: "except owners of",
-              storeItemID: { id: n.must_not_own_appid, item_type: "app" },
+              storeItemID: { id: r.must_not_own_appid, item_type: "app" },
             }),
             c.createElement(St, {
               strPrefix: "only owners of",
-              storeItemID: { id: n.must_not_own_packageid, item_type: "sub" },
+              storeItemID: { id: r.must_not_own_packageid, item_type: "sub" },
             }),
             c.createElement(St, {
               strPrefix: "except owners of",
-              storeItemID: { id: n.must_not_own_packageid, item_type: "sub" },
+              storeItemID: { id: r.must_not_own_packageid, item_type: "sub" },
             }),
             c.createElement(St, {
               strPrefix: "only users who have launched",
-              storeItemID: { id: n.must_have_launched_appid, item_type: "app" },
+              storeItemID: { id: r.must_have_launched_appid, item_type: "app" },
             }),
           ),
         );
@@ -58152,7 +58151,7 @@
         );
       }
       function Tt(e) {
-        const { rows: t } = e;
+        const { rows: t, bForceShowYear: a } = e;
         return null == t
           ? c.createElement(L.t, {
               string: (0, z.we)("#Loading"),
@@ -58168,6 +58167,7 @@
                   c.createElement(ut, {
                     key: e.gid,
                     marketingMessageID: e.gid,
+                    bForceShowYear: a,
                   }),
                 ),
               );
@@ -58228,7 +58228,8 @@
               size: "medium",
             }),
           Boolean(0 == l?.length) && c.createElement("div", null, "No Results"),
-          Boolean(l?.length > 1) && c.createElement(Tt, { rows: l }),
+          Boolean(l?.length > 1) &&
+            c.createElement(Tt, { rows: l, bForceShowYear: !0 }),
         );
       }
       function At(e) {

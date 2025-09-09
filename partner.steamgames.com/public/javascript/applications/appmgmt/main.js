@@ -34458,22 +34458,23 @@
           ? p(e) + " - " + p(t)
           : u(e, t);
       }
-      function u(e, t) {
-        let r = new Date(1e3 * e),
-          n = new Date(1e3 * t);
-        const i = new Date();
+      function u(e, t, r) {
+        let n = new Date(1e3 * e),
+          i = new Date(1e3 * t);
+        const a = new Date();
         if (
-          r.getFullYear() != n.getFullYear() ||
-          i.getFullYear() == r.getFullYear()
+          n.getFullYear() != i.getFullYear() ||
+          a.getFullYear() != n.getFullYear() ||
+          r
         )
           return `${m(e)} - ${m(t)}`;
-        const a = { month: "short", day: "numeric" },
-          o = r.toLocaleDateString(s.pf.GetPreferredLocales(), a) + " - ";
-        if (r.getMonth() == n.getMonth()) {
+        const o = { month: "short", day: "numeric" },
+          l = n.toLocaleDateString(s.pf.GetPreferredLocales(), o) + " - ";
+        if (n.getMonth() == i.getMonth()) {
           const e = { day: "numeric" };
-          return o + n.toLocaleDateString(s.pf.GetPreferredLocales(), e);
+          return l + i.toLocaleDateString(s.pf.GetPreferredLocales(), e);
         }
-        return o + n.toLocaleDateString(s.pf.GetPreferredLocales(), a);
+        return l + i.toLocaleDateString(s.pf.GetPreferredLocales(), o);
       }
       function m(e, t) {
         const r = { year: "numeric", month: "short", day: "numeric", ...t };
