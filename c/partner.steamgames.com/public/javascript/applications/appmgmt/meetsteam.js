@@ -76,12 +76,44 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const [_] = _.useState(() =>
-          (0, _._)("events_list", "application_config"),
-        );
-        return _;
+            (0, _._)("events_list", "application_config"),
+          ),
+          [_] = (0, _._)("filter"),
+          _ = (0, _._)(),
+          [_, _] = _.useMemo(() => {
+            let _ = new Array(),
+              _ = new Array();
+            return (
+              _.forEach((_) => {
+                _.endtime &&
+                (function (_, _ = !1) {
+                  const [_, _ = "00:00:00"] = _.trim().split(/\s+/),
+                    [_, _, _] = __webpack_require__.split("-").map(Number),
+                    [_, _, _] = _.split(":").map(Number),
+                    _ = _
+                      ? Date.UTC(_, _ - 1, _, _, _, _ ?? 0)
+                      : new Date(_, _ - 1, _, _, _, _ ?? 0).getTime();
+                  return Math.floor(_ / 1e3);
+                })(_.endtime) < _
+                  ? _.push(_)
+                  : _.push(_);
+              }),
+              [_, _]
+            );
+          }, [_, _]);
+        return {
+          rgOldEvents: _,
+          rgEvents: _,
+          selectConference: (0, _.useMemo)(
+            () => _.find((_) => _._ === _?.toLocaleLowerCase()),
+            [_, _],
+          ),
+        };
       }
       function _(_) {
         return ["usePartnerRevAndBestAppSlow", _];
@@ -1476,7 +1508,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = _._.InitFromClanID((0, _._)()),
@@ -2131,7 +2162,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = _(),
+        const { rgEvents: _ } = _(),
           _ = (function () {
             const [_] = (0, _.useState)(() =>
               (0, _._)("interest_results", "application_config"),
@@ -3091,7 +3122,7 @@
       }
       function _(_) {
         const { oRegistration: _, fnSetRegistration: __webpack_require__ } = _,
-          _ = _();
+          { rgEvents: _, rgOldEvents: _, selectConference: _ } = _();
         return _.createElement(
           _.Fragment,
           null,
@@ -3114,82 +3145,29 @@
             " ",
             (0, _._)("#MeetSteam_Events_desc"),
           ),
-          _.createElement(
-            "table",
-            null,
+          Boolean(_) &&
             _.createElement(
-              "thead",
+              _.Fragment,
               null,
+              _.createElement("hr", null),
+              _.createElement("p", null, (0, _._)("#MeetSteam_ConferenceOrg")),
+              _.createElement(_, {
+                ..._,
+                rgConference: [_],
+              }),
+              _.createElement("br", null),
+              _.createElement("br", null),
+              _.createElement("hr", null),
               _.createElement(
-                "tr",
+                "h2",
                 null,
-                _.createElement("th", null),
-                _.createElement("th", null),
-                _.createElement("th", null),
-                _.createElement("th", null),
+                (0, _._)("#MeetSteam_OtherConference"),
               ),
             ),
-            _.createElement(
-              "tbody",
-              null,
-              _.map((_) =>
-                _.createElement(
-                  "tr",
-                  {
-                    key: _._,
-                  },
-                  _.createElement(
-                    "td",
-                    null,
-                    _.attending
-                      ? _.createElement(
-                          "span",
-                          {
-                            className: _().Indicator,
-                          },
-                          "*",
-                        )
-                      : "",
-                  ),
-                  _.createElement(
-                    "td",
-                    null,
-                    _.createElement("div", null, _.name),
-                    _.createElement("div", null, _.place),
-                  ),
-                  _.createElement(
-                    "td",
-                    null,
-                    _.createElement("div", null, _.time),
-                  ),
-                  _.createElement(
-                    "td",
-                    null,
-                    _.createElement(_._, {
-                      checked: _.attending?.includes(_._),
-                      onChange: (_) => {
-                        let _ = _.attending ? [..._.attending] : [];
-                        _ && !_.includes(_._)
-                          ? (_.push(_._),
-                            __webpack_require__({
-                              ..._,
-                              attending: _,
-                            }))
-                          : !_ &&
-                            _.includes(_._) &&
-                            (_.splice(_.indexOf(_._), 1),
-                            __webpack_require__({
-                              ..._,
-                              attending: _,
-                            }));
-                      },
-                      tooltip: (0, _._)("#MeetSteam_attend_ttip"),
-                    }),
-                  ),
-                ),
-              ),
-            ),
-          ),
+          _.createElement(_, {
+            ..._,
+            rgConference: _,
+          }),
           _.createElement("br", null),
           _.createElement(_._, {
             type: "text",
@@ -3201,7 +3179,109 @@
               }),
             label: (0, _._)("#MeetSteam_others"),
           }),
+          Boolean(_?.length > 0) &&
+            _.createElement(
+              _._,
+              {
+                bStartMinimized: !0,
+                title: (0, _._)("#MeetSteam_PastEvents", _.length),
+              },
+              _.createElement(_, {
+                ..._,
+                rgConference: _,
+              }),
+            ),
         );
+      }
+      function _(_) {
+        const { rgConference: _ } = _;
+        return _.createElement(
+          "table",
+          null,
+          _.createElement(
+            "thead",
+            null,
+            _.createElement(
+              "tr",
+              null,
+              _.createElement("th", null),
+              _.createElement("th", null),
+              _.createElement("th", null),
+              _.createElement("th", null),
+            ),
+          ),
+          _.createElement(
+            "tbody",
+            null,
+            _.map((_) =>
+              _.createElement(
+                "tr",
+                {
+                  key: _._,
+                },
+                _.createElement(
+                  "td",
+                  null,
+                  _.attending
+                    ? _.createElement(
+                        "span",
+                        {
+                          className: _().Indicator,
+                        },
+                        "*",
+                      )
+                    : "",
+                ),
+                _.createElement(
+                  "td",
+                  null,
+                  _.createElement("div", null, _.name),
+                  _.createElement("div", null, _.place),
+                ),
+                _.createElement(
+                  "td",
+                  null,
+                  _.createElement("div", null, _.time),
+                ),
+                _.createElement(
+                  "td",
+                  null,
+                  _.createElement(_, {
+                    ..._,
+                    conf: _,
+                  }),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+          oRegistration: _,
+          fnSetRegistration: __webpack_require__,
+          conf: _,
+        } = _;
+        return _.createElement(_._, {
+          checked: _.attending?.includes(_._),
+          onChange: (_) => {
+            let _ = _.attending ? [..._.attending] : [];
+            _ && !_.includes(_._)
+              ? (_.push(_._),
+                __webpack_require__({
+                  ..._,
+                  attending: _,
+                }))
+              : !_ &&
+                _.includes(_._) &&
+                (_.splice(_.indexOf(_._), 1),
+                __webpack_require__({
+                  ..._,
+                  attending: _,
+                }));
+          },
+          tooltip: (0, _._)("#MeetSteam_attend_ttip"),
+        });
       }
       function _(_) {
         const { oRegistration: _, fnSetRegistration: __webpack_require__ } = _,
