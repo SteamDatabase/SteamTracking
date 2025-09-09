@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10034861";
+var CLSTAMP = "10051842";
 (() => {
   "use strict";
   var a,
@@ -22,22 +22,22 @@ var CLSTAMP = "10034861";
     (s.O = (e, n, c, o) => {
       if (!n) {
         var i = 1 / 0;
-        for (f = 0; f < a.length; f++) {
-          for (var [n, c, o] = a[f], d = !0, l = 0; l < n.length; l++)
+        for (t = 0; t < a.length; t++) {
+          for (var [n, c, o] = a[t], d = !0, l = 0; l < n.length; l++)
             (!1 & o || i >= o) && Object.keys(s.O).every((a) => s.O[a](n[l]))
               ? n.splice(l--, 1)
               : ((d = !1), o < i && (i = o));
           if (d) {
-            a.splice(f--, 1);
-            var t = c();
-            void 0 !== t && (e = t);
+            a.splice(t--, 1);
+            var f = c();
+            void 0 !== f && (e = f);
           }
         }
         return e;
       }
       o = o || 0;
-      for (var f = a.length; f > 0 && a[f - 1][2] > o; f--) a[f] = a[f - 1];
-      a[f] = [n, c, o];
+      for (var t = a.length; t > 0 && a[t - 1][2] > o; t--) a[t] = a[t - 1];
+      a[t] = [n, c, o];
     }),
     (s.n = (a) => {
       var e = a && a.__esModule ? () => a.default : () => a;
@@ -295,7 +295,7 @@ var CLSTAMP = "10034861";
         4922: "953a0f2e92fa7c404c03",
         4952: "30434d9b96da55ecebfc",
         5043: "445cbb7f84e9897c7848",
-        5052: "e1ab193b0e0ffab88046",
+        5052: "06624332b9bf04e14739",
         5082: "357cb563ddc1e95612d8",
         5103: "27b62fc86a628faa9228",
         5184: "4ce7b09a872e9d627190",
@@ -367,7 +367,7 @@ var CLSTAMP = "10034861";
         8724: "54f0efaa1341bff2624f",
         8732: "d91d5d41490a3efd5220",
         8749: "73d298ecdcabd0edeb5e",
-        8780: "4e20a00127e26ef31aa9",
+        8780: "2b3c1ef6b2b15f610cdf",
         8872: "d7f137ab8b69e2059a36",
         9053: "0698480abddb193f9f90",
         9118: "763fe260ecb1ee700a64",
@@ -457,7 +457,7 @@ var CLSTAMP = "10034861";
         8138: "fc73abfe79a665f196e8",
         8396: "e53dd7f5e3feba02531b",
         8521: "c3bd3df95f41619e69ad",
-        8780: "08697b829cff99eb4469",
+        8780: "1e5a493e4d41979e0ac4",
         9118: "d1baf8ee58b71d71c419",
         9129: "a8eba3f2971cf6f666e3",
         9505: "6604fceaad5ea13cdf9f",
@@ -481,11 +481,11 @@ var CLSTAMP = "10034861";
         var d, l;
         if (void 0 !== n)
           for (
-            var t = document.getElementsByTagName("script"), f = 0;
-            f < t.length;
-            f++
+            var f = document.getElementsByTagName("script"), t = 0;
+            t < f.length;
+            t++
           ) {
-            var b = t[f];
+            var b = f[t];
             if (
               b.getAttribute("src") == a ||
               b.getAttribute("data-webpack") == o + n
@@ -685,14 +685,14 @@ var CLSTAMP = "10034861";
           var c,
             o,
             [i, d, l] = n,
-            t = 0;
+            f = 0;
           if (i.some((e) => 0 !== a[e])) {
             for (c in d) s.o(d, c) && (s.m[c] = d[c]);
-            if (l) var f = l(s);
+            if (l) var t = l(s);
           }
-          for (e && e(n); t < i.length; t++)
-            (o = i[t]), s.o(a, o) && a[o] && a[o][0](), (a[o] = 0);
-          return s.O(f);
+          for (e && e(n); f < i.length; f++)
+            (o = i[f]), s.o(a, o) && a[o] && a[o][0](), (a[o] = 0);
+          return s.O(t);
         },
         n = (self.webpackChunkcommunity = self.webpackChunkcommunity || []);
       n.forEach(e.bind(null, 0)), (n.push = e.bind(null, n.push.bind(n)));

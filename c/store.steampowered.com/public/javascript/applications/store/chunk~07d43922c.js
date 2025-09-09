@@ -14764,6 +14764,7 @@
               appID: _,
               autoAdvanceMsec: _.trailer_carousel_auto_advance_msec,
               bPreferDemoStorePage: _.prefer_demo_store_page,
+              showDemoInfo: _.show_as_demos,
               bStartVideoWhenHidden: !_,
               fnNavigate: _,
               introVideo: _,
@@ -14779,6 +14780,7 @@
             appID: _,
             autoAdvanceMsec: __webpack_require__,
             bPreferDemoStorePage: _,
+            showDemoInfo: _,
             fnNavigate: _,
             introVideo: _,
             bStartVideoWhenHidden: _,
@@ -14975,6 +14977,7 @@
                       key: _,
                       appID: _,
                       preferDemoStorePage: _.bPreferDemoStorePage,
+                      showDemoInfo: _,
                       introVideo: _,
                     }),
                   ),
@@ -15012,6 +15015,7 @@
         const {
             appID: _,
             preferDemoStorePage: __webpack_require__,
+            showDemoInfo: _,
             introVideo: _,
           } = _,
           _ = (0, _._)(),
@@ -15103,6 +15107,7 @@
                   className: _().ButtonsRowWrap,
                 },
                 !_ &&
+                  _ &&
                   !_ &&
                   (_.BHasDemo() || 1 == _.GetAppType()) &&
                   _.createElement(_._, {
@@ -15234,6 +15239,7 @@
               wrapAround: _,
               arrows: !_,
               arrowFill: __webpack_require__,
+              showDemoInfo: !0,
             }),
             (_ || (0, _._)() || _) &&
               _.createElement(_._, {
