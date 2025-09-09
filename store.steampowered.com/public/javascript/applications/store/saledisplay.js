@@ -5224,7 +5224,7 @@
         return a.createElement(
           l.Z,
           {
-            focusableIfNoChildren: !0,
+            focusableIfEmpty: !0,
             autoFocus: e.autoFocus,
             navKey: "cat_panel" + t.name,
           },

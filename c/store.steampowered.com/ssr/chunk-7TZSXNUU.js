@@ -26,7 +26,7 @@ var _ = _.default.forwardRef(function (_, _) {
     _ && ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
     _.onOKButton &&
       _.focusable === void 0 &&
-      _.focusableIfNoChildren === void 0 &&
+      _.focusableIfEmpty === void 0 &&
       (_.focusable = !0),
     _ && (_.onCancelButton = _.onCancelButton || _);
   let { ref: _, node: _ } = _({
@@ -37,7 +37,7 @@ var _ = _.default.forwardRef(function (_, _) {
   (_.className = (0, _.default)(_.className, "Panel", _ && "Focusable")),
     _(_, _);
   let _ = _(_, _);
-  (_.focusable || _.focusableIfNoChildren) &&
+  (_.focusable || _.focusableIfEmpty) &&
     (!_ || !_.Tree.BUseVirtualFocus()) &&
     (_.tabIndex = _.tabIndex || 0),
     _.focusable && (_ || _.onOKButton) && (_.role ??= "button");

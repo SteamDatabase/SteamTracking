@@ -4905,7 +4905,7 @@
         P = 4,
         M = 20,
         H = 45559995,
-        V = 9e4,
+        V = 99999,
         F = [12, 34];
       function N(e) {
         return !F.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
@@ -5881,20 +5881,20 @@
               i.push({
                 ...r,
                 section_type: "footer_self_creator_home",
-                unique_id: 90010,
+                unique_id: 100009,
                 curator_clan_id: this.clanSteamID.GetAccountID(),
               }),
             a &&
               i.push({
                 ...r,
                 section_type: "footer_browse_more",
-                unique_id: 90012,
+                unique_id: 100011,
               }),
             n &&
               i.push({
                 ...r,
                 section_type: "footer_default_social_share",
-                unique_id: 90013,
+                unique_id: 100012,
               }),
             i
           );
@@ -14653,7 +14653,7 @@
             s.Z,
             {
               autoFocus: m,
-              focusableIfNoChildren: m,
+              focusableIfEmpty: m,
               noFocusRing: !0,
               className: w().CompatibilityDetailsContainer,
               ...h,
@@ -14774,11 +14774,7 @@
               },
               n.createElement(
                 s.Z,
-                {
-                  autoFocus: i,
-                  focusableIfNoChildren: i || p(),
-                  noFocusRing: !0,
-                },
+                { autoFocus: i, focusableIfEmpty: i || p(), noFocusRing: !0 },
                 d,
               ),
             ),
@@ -17212,46 +17208,47 @@
             bUseSubscriptionLayout: m,
             strExtraParams: c,
             nCreatorAccountID: u,
-            bShowDeckCompatibilityDialog: p,
-            bShowWishlistButton: h = !0,
-            ...f
+            nWidthMultiplier: p,
+            bShowDeckCompatibilityDialog: h,
+            bShowWishlistButton: f = !0,
+            ...S
           } = e,
-          [S] = (0, g.G6)(t.id, (0, _.SW)(t.type), {}),
-          C = (0, O.n9)(),
-          v = (0, d.L3)(C),
-          y = (0, R.Qn)(),
-          w = (0, z.w)();
-        if (!S && !a) return null;
-        if (y) return r.createElement(r.Fragment, null, e.children);
-        let b = { id: t.id, type: t.type };
-        1 == S?.GetStoreItemType() &&
-          1 == S?.GetIncludedAppIDs().length &&
-          (b = { id: S.GetIncludedAppIDs()[0], type: "game" });
-        const E = "hiding" == Z(),
-          I =
-            n || !S
+          [C] = (0, g.G6)(t.id, (0, _.SW)(t.type), {}),
+          v = (0, O.n9)(),
+          y = (0, d.L3)(v),
+          w = (0, R.Qn)(),
+          b = (0, z.w)();
+        if (!C && !a) return null;
+        if (w) return r.createElement(r.Fragment, null, e.children);
+        let E = { id: t.id, type: t.type };
+        1 == C?.GetStoreItemType() &&
+          1 == C?.GetIncludedAppIDs().length &&
+          (E = { id: C.GetIncludedAppIDs()[0], type: "game" });
+        const I = "hiding" == Z(),
+          D =
+            n || !C
               ? null
-              : (0, d.It)(`${S?.GetStorePageURL(o)}${c ? `?${c}` : ""}`, C, w),
-          D = r.createElement(ie, {
+              : (0, d.It)(`${C?.GetStorePageURL(o)}${c ? `?${c}` : ""}`, v, b),
+          T = r.createElement(ie, {
             info: t,
-            displayInfo: b,
+            displayInfo: E,
             name: a,
             bPreventNavigation: n,
-            strStoreUrl: I,
+            strStoreUrl: D,
             elElementToAppend: i,
             bShowDemoButton: s,
             bPreferDemoStorePage: o,
-            bShowDeckCompatibilityDialog: p,
-            bHideBottomHalf: E,
+            bShowDeckCompatibilityDialog: h,
+            bHideBottomHalf: I,
             bHidePrice: l,
             bUseSubscriptionLayout: m,
-            strSNR: v,
+            strSNR: y,
             nCreatorAccountID: u,
-            bShowWishlistButton: h,
+            bShowWishlistButton: f,
           });
         return r.createElement(
           le,
-          { hoverContent: D, strClickUrl: I, ...f },
+          { hoverContent: T, strClickUrl: D, nWidthMultiplier: p, ...S },
           e.children,
         );
       }
@@ -17288,105 +17285,113 @@
             hoverProps: a,
             nDelayShowMs: n,
             strClickUrl: i,
-            children: s,
-            className: o,
-            ...l
+            nWidthMultiplier: s,
+            children: o,
+            className: l,
+            ...m
           } = e,
-          m = (0, R.Qn)(),
-          d = (0, W.zI)(),
-          c = !m && !d,
-          [u, p] = r.useState(!1),
-          [h, _] = r.useState(void 0);
+          d = (0, R.Qn)(),
+          c = (0, W.zI)(),
+          u = !d && !c,
+          [p, h] = r.useState(!1),
+          [_, g] = r.useState(void 0);
         return r.createElement(
           "div",
           {
             "data-key": "hover div",
-            className: (0, k.A)(H().ItemHoverSource, i && H().Selectable, o),
-            ...l,
+            className: (0, k.A)(H().ItemHoverSource, i && H().Selectable, l),
+            ...m,
             onMouseEnter: (e) => {
-              p(!0), _(e.currentTarget);
+              h(!0), g(e.currentTarget);
             },
-            onMouseLeave: () => p(!1),
+            onMouseLeave: () => h(!1),
             onClick: i
               ? (e) => {
-                  p(!1),
+                  h(!1),
                     (window.location.href = i),
                     e.preventDefault(),
                     e.stopPropagation();
                 }
               : void 0,
-            onTouchStart: () => p(!1),
+            onTouchStart: () => h(!1),
             onKeyDown: (e) => {
               27 == e.keyCode &&
-                (p(!1), e.preventDefault(), e.stopPropagation());
+                (h(!1), e.preventDefault(), e.stopPropagation());
             },
           },
-          c &&
+          u &&
             r.createElement(
               me,
-              { visible: u, target: h, nDelayShowMs: n, hoverProps: a },
+              {
+                visible: p,
+                target: _,
+                nDelayShowMs: n,
+                nWidthMultiplier: s,
+                hoverProps: a,
+              },
               t,
             ),
-          r.createElement(S.tH, null, s),
+          r.createElement(S.tH, null, o),
         );
       }
       function me(e) {
         const {
             hoverProps: t,
             nDelayShowMs: a = re,
-            target: n,
-            visible: i,
-            children: o,
+            nWidthMultiplier: n = 1.15,
+            target: i,
+            visible: o,
+            children: l,
           } = e,
-          [l, m] = r.useState(i);
+          [m, d] = r.useState(o);
         if (
           (r.useEffect(() => {
-            if (i) {
+            if (o) {
               if (a) {
-                const e = window.setTimeout(() => m(!0), a);
+                const e = window.setTimeout(() => d(!0), a);
                 return () => window.clearTimeout(e);
               }
-              m(!0);
-            } else m(!1);
-          }, [i]),
+              d(!0);
+            } else d(!1);
+          }, [o]),
           r.useEffect(() => {
-            if (!l) return;
-            const e = n.ownerDocument.defaultView,
+            if (!m) return;
+            const e = i.ownerDocument.defaultView,
               t = e.scrollY,
               a = () => {
-                Math.abs(e.scrollY - t) > 50 && m(!1);
+                Math.abs(e.scrollY - t) > 50 && d(!1);
               };
             return (
               window.addEventListener("scroll", a),
               () => window.removeEventListener("scroll", a)
             );
-          }, [l, n?.ownerDocument.defaultView]),
-          !n || !o || !l)
+          }, [m, i?.ownerDocument.defaultView]),
+          !i || !l || !m)
         )
           return null;
-        const d = n.clientWidth < 200 ? "8px" : "10px",
-          c = {
+        const c = i.clientWidth < 200 ? "8px" : "10px",
+          u = {
             direction: "overlay-center",
             bEnablePointerEvents: !0,
             ...t,
             style: {
               zIndex: 98,
-              width: 1.15 * n.clientWidth,
-              fontSize: d,
+              width: i.clientWidth * n,
+              fontSize: c,
               minHeight: "hiding" == Z() ? void 0 : 300,
               height:
-                "hiding" == Z() ? 1.15 * n.clientWidth * (125 / 184) : void 0,
+                "hiding" == Z() ? 1.15 * i.clientWidth * (125 / 184) : void 0,
               ...t?.style,
             },
-            target: n,
+            target: i,
           };
         return s.createPortal(
           r.createElement(
             oe,
-            { hoverProps: c },
-            r.createElement(S.tH, null, o),
+            { hoverProps: u },
+            r.createElement(S.tH, null, l),
           ),
-          n.ownerDocument.body,
+          i.ownerDocument.body,
         );
       }
     },
@@ -18124,11 +18129,12 @@
             e.link.localized_link_capsule,
             e.language,
           ),
-          a = q.z.GenerateURLFromHashAndExt(e.clanAccountID, t);
+          a = q.z.GenerateURLFromHashAndExt(e.clanAccountID, t),
+          n = (0, R.Y2)();
         return i.createElement(
           D.q,
           {
-            url: e.link.url,
+            url: n ? e.link.sc_url : e.link.url,
             className: e.strClassName ? e.strClassName : void 0,
             bSkipForcingStoreLink: !1,
           },

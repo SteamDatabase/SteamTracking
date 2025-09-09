@@ -525,6 +525,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  invite_id: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
                 },
               }),
             _.sm_m

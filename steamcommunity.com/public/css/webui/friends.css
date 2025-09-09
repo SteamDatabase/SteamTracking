@@ -17012,6 +17012,9 @@ html:not(.touch)
     visibility: collapse;
   }
 }
+.contentmoderationreportdialog_ContentReportDialog_1nRyg.DialogContent {
+  min-width: 350px;
+}
 .contentmoderationreportdialog_ContentReportDialog_1nRyg p {
   margin-top: 0;
 }
@@ -17026,6 +17029,14 @@ html:not(.touch)
   background-color: #777;
   color: #fff;
   padding: 4px 12px;
+  cursor: pointer;
+}
+.contentmoderationreportdialog_BlockListItem_2tqpD a {
+  text-decoration: none;
+}
+.contentmoderationreportdialog_BlockListItem_2tqpD:hover {
+  background: rgba(119, 119, 119, 0.6);
+  transition: background-color 150ms ease-in;
 }
 .contentmoderationreportdialog_BottomButtons_2g3Wv {
   display: flex;
@@ -17042,27 +17053,34 @@ html:not(.touch)
 }
 .contentmoderationreportdialog_DetailedReasonTextArea_1PUlL {
   margin-top: 12px;
-  width: 93%;
+  width: 98%;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  height: 80px;
+  height: 100px;
+  box-sizing: border-box;
 }
-.contentmoderationreportdialog_ChatReportSubmittedBody_22q2A {
+.contentmoderationreportdialog_ChatReportSubmittedDialog_2cJjG
+  .contentmoderationreportdialog_ChatReportSubmittedBody_22q2A {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.contentmoderationreportdialog_ChatReportCallToAction_31M5a {
+.contentmoderationreportdialog_ChatReportSubmittedDialog_2cJjG
+  .contentmoderationreportdialog_ChatReportCallToAction_31M5a {
   color: #8b929a;
 }
-.DialogContent .contentmoderationreportdialog_ChatReportCallToAction_31M5a ul {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  list-style-position: outside;
-  margin-top: .5rem;
-  margin-bottom: 0;
+.contentmoderationreportdialog_ChatReportSubmittedDialog_2cJjG
+  .contentmoderationreportdialog_ChatReportCallToAction_31M5a
+  a {
+  font-size: 14px;
+  color: #8b929a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.contentmoderationreportdialog_ChatReportSubmittedDialog_2cJjG
+  .contentmoderationreportdialog_ButtonPlaceholder_2tOAu {
+  width: 30%;
 }
 .contentmoderationreportdialog_LandingDescriptionCtn_2rXtB {
   margin-top: 10px;
@@ -36312,7 +36330,7 @@ div:hover > .BBCodeCollapseControl {
   margin: 0 calc(var(--bar-item-padding-px) * -1);
   transition: background-color 2s cubic-bezier(0.17, 0.45, 0.14, 0.83);
 }
-.VRDashboardBarItem:not(:hover)
+.VRDashboardBarSmallButton:not(:hover)
   .voicechatheadersteamdeck_VoiceChatHeader_18snG.VRDashboardBar
   .voicechatheadersteamdeck_VoiceChatStatusBackground_1zp0Z {
   transition: opacity .15s ease-out, background-color 2s

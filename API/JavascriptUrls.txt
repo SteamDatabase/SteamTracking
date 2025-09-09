@@ -354,6 +354,7 @@ ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${published_file_id}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
+${COMMUNITY_BASE_URL}sharedfiles/reportitem
 ${COMMUNITY_BASE_URL}stats/${appid}/achievements/
 ${COMMUNITY_BASE_URL}stats/${appid}/leaderboards/
 ${COMMUNITY_BASE_URL}tempcloud/beginfileupload/
@@ -420,6 +421,7 @@ ${HELP_BASE_URL}
 ${HELP_BASE_URL}${strISOCode}/
 ${HELP_BASE_URL}${strISOCode}/faqs/view/0CAD-3B4D-B874-A065
 ${HELP_BASE_URL}${}/
+${HELP_BASE_URL}/wizard/HelpChangePassword
 ${HELP_BASE_URL}en/ticketmaster/ticket/${}
 ${HELP_BASE_URL}en/wizard/HelpRequest/${_ ? _ : _}
 ${HELP_BASE_URL}en/wizard/HelpRequest/${}
@@ -1561,6 +1563,7 @@ ${STORE_BASE_URL}notification/ajaxusersettings
 ${STORE_BASE_URL}online_conduct/
 ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
+${STORE_BASE_URL}personalcalendar/getrecommendations
 ${STORE_BASE_URL}phone/add
 ${STORE_BASE_URL}phone/manage
 ${STORE_BASE_URL}points/
@@ -2039,6 +2042,7 @@ ${profileUrl}/ajaxlevelup/
 ${profileUrl}/ajaxsetnickname/
 ${rateURL}${gid}
 ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
+${sc_url}${}
 ${serverUrl}${}?platform=android&hash=${hash}
 ${short_url}/${invite_token}
 ${strBaseURL}${_ ? '' : '/'}${m_bIsMobile ? 'mobilelogin' : 'login'}/

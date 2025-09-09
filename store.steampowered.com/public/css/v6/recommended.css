@@ -132,21 +132,9 @@
 	left: 308px;
 }
 
-.recommendation_highlight.morelikethis_border {
-	margin-bottom: 0px;
-
-	padding-bottom: 22px;
-}
 .page_header_ctn.more_like {
     padding-bottom: 46px;
 
-}
-
-.more_like_arrow {
-    background-image: url( /public/images/v6/recommended/morelikethis_borderbottom.png );
-    background-position: top left;
-    background-repeat: no-repeat;
-    height: 19px;
 }
 
 .recommendation_carousel {
@@ -1311,8 +1299,15 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommendation_area_ctn.similar_grid_ctn {
 	padding-right: 0px;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+@media screen and ( max-width: 740px ) {
+	html.responsive .recommendation_area_ctn.similar_grid_ctn {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 .similar_grid_item {
@@ -1320,13 +1315,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
     background: rgba( 0, 0, 0, 0.2 );
     margin-right: 2px;
     margin-bottom: 2px;
-    height: 185px;
 }
 
 .similar_grid_item .similar_grid_capsule {
 	display: block;
 	position: relative;
-	width: 292px;
 	border: 1px solid transparent;
 	margin-bottom: 5px;
 }
@@ -2679,15 +2672,6 @@ html.tablet .friend_reviews .review_box .leftcol {
 	padding: 0;
 }
 
-.recommendation_highlight.morelikethis_border {
-	margin-bottom: 0px;
-	background-image: url( /public/images//v6/recommended/morelikethis_borderbottom.png );
-	background-position: bottom left;
-	background-repeat: no-repeat;
-	padding-bottom: 22px;
-}
-
-
 body.recommendgame #review_create {
 background: -webkit-linear-gradient( 30deg, #313b46 5%,#566573 95%);
 	background: linear-gradient( 60deg, #313b46 5%,#566573 95%);
@@ -3219,24 +3203,12 @@ body.v6 h2.morelike_section_divider
 	line-height: 24px;
 }
 
-.similar_grid_flex
-{
-	margin-right: -2px;
-	margin-bottom: -2px;
-	display: flex;
-}
-
-.similar_grid_flex .similar_grid_item
-{
-	float: none;
-	flex: 1;
-}
-
 .recommendation_highlight.recommendation_highlightv2
 {
 	display: flex;
 	min-height: 0;
 	padding: 3%;
+	margin-top: 24px;
 }
 
 .recommendation_highlightv2 .highlight_description
@@ -3262,6 +3234,28 @@ body.v6 h2.morelike_section_divider
 	height: auto;
 }
 
+.morelikethis_border {
+	position: relative;
+	border-top: 1px solid #66c0f4;
+	height: 1px;
+	width: 100%;
+}
+
+.morelikethis_border:after {
+	bottom: 100%;
+	left: 15%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #66c0f4;
+	border-width: 15px;
+	margin-left: -15px;
+}
+
 .review_summary
 {
 	margin-bottom: 14px;
@@ -3277,36 +3271,6 @@ body.v6 h2.morelike_section_divider
 	html.responsive .recommendation_highlightv2 .header_image
 	{
 		height: auto;
-	}
-
-	html.responsive .similar_grid_flex .similar_grid_item
-	{
-		box-sizing: border-box;
-		min-width: 213px;
-		max-width: calc( 50% - 2px );
-		height: auto;
-		flex: 1;
-	}
-
-	html.responsive .similar_grid_flex .similar_grid_item .similar_grid_capsule
-	{
-		width: 100%;
-		height: auto;
-	}
-
-	html.responsive .similar_grid_flex .similar_grid_item .similar_grid_capsule img
-	{
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-}
-
-@media screen and ( max-width: 500px )
-{
-	html.responsive .similar_grid_flex .similar_grid_item
-	{
-		min-width: 48%;
 	}
 }
 
@@ -3629,28 +3593,6 @@ p.outliers_options {
 {
 	body.v6.widestore .recommendation_highlightv2 .header_image
 	{
-		height: auto;
-	}
-
-	body.v6.widestore .similar_grid_flex .similar_grid_item
-	{
-		box-sizing: border-box;
-		min-width: 213px;
-		max-width: calc( 50% - 2px );
-		height: auto;
-		flex: 1;
-	}
-
-	body.v6.widestore .similar_grid_flex .similar_grid_item .similar_grid_capsule
-	{
-		width: 100%;
-		height: auto;
-	}
-
-	body.v6.widestore .similar_grid_flex .similar_grid_item .similar_grid_capsule img
-	{
-		display: block;
-		width: 100%;
 		height: auto;
 	}
 

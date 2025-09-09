@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Oyun Kaydı",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Bu oyun oturumunu kaydet)",
     "QuickAccess_Tab_GameRecording": "Oyun Kaydı",
+    "Settings_GameRecording_InstantClip_Label": "Klip süresi (saniye)",
     "AccessibilityFeatures": "Erişilebilirlik Özellikleri",
     "AccessibilityFeaturesWithCount": "Erişilebilirlik Özellikleri (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Ayarlanabilir Zorluk",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "Takas Koruması",
     "SteamNotifications_TradeReversal_Body": "Bir takas iptal edildi",
     "SteamNotifications_TradeReversal_Body_Short": "Bir takas iptal edildi",
-    "SteamNotifications_TradeReversal_Description": "Son takaslarınızdan biri takas yaptığınız kişi tarafından iptal edildi."
+    "SteamNotifications_TradeReversal_Description": "Son takaslarınızdan biri takas yaptığınız kişi tarafından iptal edildi.",
+    "AddonPicker_Search": "Ara...",
+    "ReorderableList_ReorderInstructions": "Sıralamak için seçin ve yukarı veya aşağı hareket ettirin.",
+    "ControllerButton_8BitDo": "8BitDo Butonu"
 }

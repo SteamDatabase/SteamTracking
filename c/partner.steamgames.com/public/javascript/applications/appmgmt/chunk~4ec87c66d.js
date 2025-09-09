@@ -61351,6 +61351,7 @@
                 "Marketing Message: Store item missing at least 3 screenshots safe for all ages, required asset for auto-render.",
               ),
             0 == _.GetAllTrailers().GetHighlightTrailers(!0).length &&
+              4 != _.GetAppType() &&
               __webpack_require__.push(
                 "Marketing Message: Store item missing highlight trailers, required asset for auto-render.",
               );
@@ -61365,9 +61366,23 @@
             _.GetModel(),
           ]),
           [_] = (0, _._)(__webpack_require__, _, _),
-          _ = _(_, _);
+          _ = _(_, _),
+          _ = (function (_, _) {
+            const _ = [];
+            if (!_ || !_) return _;
+            const _ = (0, _._)(_.template_vars_json);
+            "mm_auto_render" == _?.custom_display &&
+              (_.GetAssets(),
+              4 == _.GetAppType() &&
+                0 == _.GetAllTrailers().GetHighlightTrailers(!0).length &&
+                __webpack_require__.push(
+                  "Marketing Message: DLC missing highlight trailers; will render without it.",
+                ));
+            return _;
+          })(_, _);
         return _.createElement(_._, {
           rgWarnings: _,
+          rgInfos: _,
         });
       }
     },
@@ -79832,33 +79847,64 @@
         );
       }
       function _(_) {
-        const { rgWarnings: _ } = _;
-        return _ && 0 != _.length
+        const { rgWarnings: _, rgInfos: __webpack_require__ } = _;
+        return (_ && 0 != _.length) ||
+          (__webpack_require__ && 0 != __webpack_require__.length)
           ? _.createElement(
               "div",
               {
                 className: _.WarningsContainer,
               },
-              _.createElement(_._, null, "Setup warnings:"),
-              _.createElement(
-                "div",
-                null,
-                _.map((_) =>
+              _?.length > 0 &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_._, null, "Setup warnings:"),
                   _.createElement(
                     "div",
-                    {
-                      key: _,
-                      className: (0, _._)(
-                        _.PreviewLinkCtn,
-                        _.Incomplete,
-                        _.WarningStylesWithIcon,
-                        _.WarningItem,
+                    null,
+                    _.map((_) =>
+                      _.createElement(
+                        "div",
+                        {
+                          key: _,
+                          className: (0, _._)(
+                            _.PreviewLinkCtn,
+                            _.Incomplete,
+                            _.WarningStylesWithIcon,
+                            _.WarningItem,
+                          ),
+                        },
+                        _,
                       ),
-                    },
-                    _,
+                    ),
                   ),
                 ),
-              ),
+              __webpack_require__?.length > 0 &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_._, null, "Information (non blockers):"),
+                  _.createElement(
+                    "div",
+                    null,
+                    __webpack_require__.map((_) =>
+                      _.createElement(
+                        "div",
+                        {
+                          key: _,
+                          className: (0, _._)(
+                            _.PreviewLinkCtn,
+                            _.Incomplete,
+                            _.InfoStylesWithIcon,
+                            _.WarningItem,
+                          ),
+                        },
+                        _,
+                      ),
+                    ),
+                  ),
+                ),
             )
           : null;
       }

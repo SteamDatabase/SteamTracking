@@ -218,7 +218,7 @@ function _(_, _, _, _) {
       let _;
       if (_.bUsePartnerAPI) {
         let _ = _.Init(_);
-        _.Body().set_request(_.Body()), (_ = await _.GetItems(_, _));
+        _.Body().set_getitems_request(_.Body()), (_ = await _.GetItems(_, _));
       } else _ = await _.GetItems(_, _);
       let _ = new Map();
       return (

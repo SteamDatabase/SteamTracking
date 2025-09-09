@@ -551,13 +551,7 @@
             c && this.props.children,
           );
           return (
-            i &&
-              (_ = n.createElement(
-                l.Z,
-                { focusableIfNoChildren: !0, retainFocus: !0 },
-                _,
-              )),
-            _
+            i && (_ = n.createElement(l.Z, { focusableIfEmpty: !0 }, _)), _
           );
         }
       }

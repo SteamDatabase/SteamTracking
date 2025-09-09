@@ -23,14 +23,14 @@
       "use strict";
       a.d(n, {
         mt: () => o,
-        Qs: () => N,
-        o0: () => f.o0,
-        eV: () => v.eV,
-        KG: () => f.KG,
-        Ee: () => f.Ee,
+        Qs: () => f,
+        o0: () => v.o0,
+        eV: () => N.eV,
+        KG: () => v.KG,
+        Ee: () => v.Ee,
         x_: () => r.x_,
         of: () => m,
-        pY: () => f.pY,
+        pY: () => v.pY,
         EN: () => l.E,
       });
       var t = a(90626),
@@ -96,7 +96,7 @@
         u = a(7445),
         E = a(76217),
         p = a(88843);
-      function N(e) {
+      function f(e) {
         const { children: n, navID: a, closeModal: s } = e,
           l = t.createRef(),
           r = (e) => (e.stopPropagation(), e.preventDefault(), !0);
@@ -117,7 +117,7 @@
                   {
                     className: p.GamepadOnlyPanelWrapper,
                     onGamepadDirection: r,
-                    focusableIfNoChildren: !0,
+                    focusableIfEmpty: !0,
                   },
                   n,
                 ),
@@ -125,8 +125,8 @@
             )
           : t.createElement(t.Fragment, null, n);
       }
-      var f = a(78395),
-        v = a(10411);
+      var v = a(78395),
+        N = a(10411);
       a(76222);
     },
     40917: (e, n, a) => {
@@ -144,14 +144,14 @@
         u = a(56545),
         E = a(37403),
         p = a(30470),
-        N = a(22837);
-      let f;
-      const v = 864e5;
+        f = a(22837);
+      let v;
+      const N = 864e5;
       function h(e) {
         return `appinfo_${e}_${p.TS.LANGUAGE}`;
       }
       function S(e) {
-        return Boolean(e && Date.now() - e.timeCached < v);
+        return Boolean(e && Date.now() - e.timeCached < N);
       }
       function _(e) {
         const n = (0, i.KV)(),
@@ -161,8 +161,8 @@
           queryFn: async () =>
             (function (e, n) {
               return (
-                f ||
-                  (f = new (m())(
+                v ||
+                  (v = new (m())(
                     async (a) => {
                       const t = new Map();
                       (await Promise.all(a.map((e) => n.GetObject(h(e)))))
@@ -171,7 +171,7 @@
                       const s = a.slice().filter((e) => !t.has(e));
                       if (s.length) {
                         const a = u.w.Init(E._z);
-                        a.Body().set_language((0, N.sf)(p.TS.LANGUAGE)),
+                        a.Body().set_language((0, f.sf)(p.TS.LANGUAGE)),
                           a.Body().set_appids(s);
                         const l = await E.BE.GetApps(e, a);
                         if (1 != l.GetEResult()) throw l.GetErrorMessage();
@@ -189,10 +189,10 @@
                     },
                     { cache: !1 },
                   )),
-                f
+                v
               );
             })(n, a).load(e),
-          staleTime: v,
+          staleTime: N,
           enabled: !!e,
         }).data;
       }

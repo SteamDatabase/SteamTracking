@@ -4811,21 +4811,6 @@ select.gray_bevel {
 	font-size: 14px;
 }
 
-.breadcrumbs {
-    color: #56707f;
-    font-size: 12px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
-
-		}
-.breadcrumbs a {
-    color: #8f98a0;
-}
-.breadcrumbs a:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
-
 .apphub_HomeHeaderContent .apphub_HeaderStandardTop {
     background-image: none;
     padding-top: 0px;

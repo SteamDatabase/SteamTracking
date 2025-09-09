@@ -239,8 +239,16 @@
         EditorPanel: "_2SgPxDudv7oRkzlHsNm4_O",
         AboutTheGameArea: "_3EAE8BxFPnb_g0Ct5b4QzW",
         Awards: "_26nsky_SK1122q1xYQ0VZu",
-        StoreAppPageHeader: "_1aQY7Yz23XDN0N4IVctriG",
+        PreviewDesktop: "_3bpOE-B9MDag6KQR0eBkuM",
+        PreviewMobile: "_2WpGoEdbqT778yiAcOF1LI",
         GradientRule: "_1dK_q5EmTZgebmJeCzHq1s",
+        PreviewGamepad: "_2m49NX6vFS6SVkkvgmwGY0",
+        StoreAppPageHeader: "_1aQY7Yz23XDN0N4IVctriG",
+        PreviewModeCtn: "_3j8IamPUv5fQG3BCS5x5g5",
+        PreviewModeTitle: "_1xyaZdEQi0iZWRnsgSmNsE",
+        PreviewItem: "uX4wgaxy3MACLqRDZkAQT",
+        SelectedPreview: "_3GPQSHrcPD7sKpOP2Ne8E3",
+        PreviewInfo: "_2SAasZGqd4LlNB-qPiE38o",
         GameDescriptionEditorToolbar: "_14dow-GSmyLacYWBXCNV1l",
         Sticky: "_2YccUEt5UoKig0cAk4W6DK",
       };
@@ -2150,17 +2158,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_bLockedToSpecificAsset;
         m_fnGetImageOptions;
+        m_nMaxFileSize;
         m_rgCurrentImageOptionKey = void 0;
-        constructor(_, _, _, _, _, _) {
+        constructor(_, _, _, _, _, _, _) {
           const _ = (0, _._)(_);
           super(_, _, _, _.src, _),
             (0, _._)(this),
             (this.m_bLockedToSpecificAsset = _),
-            (this.m_fnGetImageOptions = _);
+            (this.m_fnGetImageOptions = _),
+            (this.m_nMaxFileSize = _);
         }
         IsValidAssetType(_, _) {
           const _ = this.GetCurrentImageOption(),
@@ -2177,8 +2188,13 @@
           _
             ? _
               ? (_ = (0, _._)("#ImageUpload_InvalidFormat", (0, _._)(_) ?? ""))
-              : _?.groupName.trim().length > 0 ||
-                (_ = (0, _._)("#ImageUpload_EmptyBaseName"))
+              : _?.groupName.trim().length > 0
+                ? this.file.size > this.m_nMaxFileSize &&
+                  (_ = (0, _._)(
+                    "#ImageUpload_ExceedsMaxFileSize",
+                    (0, _._)(this.m_nMaxFileSize),
+                  ))
+                : (_ = (0, _._)("#ImageUpload_EmptyBaseName"))
             : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected"));
           const _ = [],
             _ = [];
@@ -2293,22 +2309,16 @@
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_cancel = void 0;
-        m_strGetExtraAssetsUrl;
-        m_strBeginUploadUrl;
-        m_strCheckStatusUrl;
-        m_strCompleteUploadUrl;
+        m_urls;
         m_regexInvalidFilenameCharacters;
         m_filesToUpload = _._.array();
         m_onlyAssetGroup = void 0;
         m_rgExistingAssetGroups = void 0;
         m_rgImageSizes = void 0;
-        constructor(_, _, _, _, _) {
+        constructor(_, _) {
           super(),
             (0, _._)(this),
-            (this.m_strGetExtraAssetsUrl = _),
-            (this.m_strBeginUploadUrl = _),
-            (this.m_strCheckStatusUrl = _),
-            (this.m_strCompleteUploadUrl = _),
+            (this.m_urls = _),
             (this.m_regexInvalidFilenameCharacters = _);
         }
         GetErrorsFromErrorResponse(_) {
@@ -2378,6 +2388,7 @@
                   _,
                   _,
                   _,
+                  104857600,
                 );
               return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
             }
@@ -2515,111 +2526,149 @@
         }
         async StartImageUpload(_, _, _) {
           let _;
+          if (_.file.size > 6291456) {
+            const _ = new FormData();
+            _.append("sessionid", _._.SESSIONID),
+              _.append("name", _),
+              _.append("file_size", "" + _.file.size);
+            const _ = await this.MakePost(
+              this.m_urls.strGetUploadUrlForAsset,
+              _,
+              {
+                "Content-Type": "multipart/form-data",
+              },
+              "GetUploadUrl",
+              _,
+            );
+            if (!_.bSuccess)
+              return {
+                bSuccess: !1,
+              };
+            _ = _.data;
+            const _ = await _()
+              .put(_.upload_url, _.file, {
+                headers: {
+                  "Content-Type": "application/octet-stream",
+                },
+                cancelToken: _,
+              })
+              .then((_) => 200 == _.status)
+              .catch(() => !1);
+            if (!_)
+              return (
+                console.warn(
+                  "CExtraAssetsImageUploader put to CDNStorage url failed",
+                  _.upload_url,
+                ),
+                {
+                  bSuccess: !1,
+                }
+              );
+          }
           {
             const _ = new FormData();
             _.append("sessionid", _._.SESSIONID),
               _.append("asset_type", "extra_asset_v2"),
-              _.append("file", _.file),
-              _.append("name", _);
-            try {
-              const _ = await _().post(this.m_strBeginUploadUrl, _, {
-                withCredentials: !0,
-                headers: {
-                  "Content-Type": "multipart/form-data",
-                },
-                cancelToken: _,
-              });
-              if (!(200 == _.status && _.data.request_id > 0))
-                return (
-                  console.warn(
-                    "CExtraAssetsImageUploader.UploadSingleImage failed",
-                    this.m_strBeginUploadUrl,
-                  ),
-                  {
-                    bSuccess: !1,
-                    elErrorMessage: null,
-                  }
-                );
-              (_ = _.data.request_id), (_.status = "processing");
-            } catch (_) {
-              const _ = this.GetErrorsFromErrorResponse(_);
-              return (
-                console.warn(
-                  "CExtraAssetsImageUploader.UploadSingleImage failed",
-                  this.m_strBeginUploadUrl,
-                  _,
-                ),
-                {
-                  bSuccess: !1,
-                  elErrorMessage: _,
-                }
-              );
-            }
-          }
-          return {
-            bSuccess: !0,
-            nRequestId: _,
-          };
-        }
-        async CheckUploadStatus(_, _) {
-          const _ = new FormData();
-          let _;
-          __webpack_require__.append("sessionid", _._.SESSIONID),
-            __webpack_require__.append("request_ids", _.join(","));
-          try {
-            const _ = await _().post(this.m_strCheckStatusUrl, _, {
-              withCredentials: !0,
-              cancelToken: _,
-            });
-            if (200 != _.status || "object" != typeof _.data)
-              return (
-                console.warn(
-                  "CExtraAssetsImageUploader.CheckUploadStatus failed",
-                  this.m_strCheckStatusUrl,
-                ),
-                {
-                  bSuccess: !1,
-                }
-              );
-            _ = _.data;
-          } catch (_) {
-            const _ = this.GetErrorsFromErrorResponse(_);
-            return (
-              console.warn(
-                "CExtraAssetsImageUploader.CheckUploadStatus failed",
-                this.m_strCheckStatusUrl,
-                _,
-              ),
+              _.append("name", _),
+              _
+                ? (_.append("download_url", _.download_url),
+                  _.append("file_path", _.file_path))
+                : _.append("file", _.file);
+            const _ = await this.MakePost(
+              this.m_urls.strBeginConvert,
+              _,
               {
+                "Content-Type": "multipart/form-data",
+              },
+              "BeginUploadUrl",
+              _,
+            );
+            if (!_.bSuccess)
+              return {
                 bSuccess: !1,
-                elErrorMessage: _,
+              };
+            const _ = _.data.request_id;
+            return (
+              (_.status = "processing"),
+              {
+                bSuccess: !0,
+                nRequestId: _,
               }
             );
           }
-          return {
-            bSuccess: !0,
-            rgStatus: _.status,
-          };
+        }
+        async CheckUploadStatus(_, _) {
+          const _ = new FormData();
+          __webpack_require__.append("sessionid", _._.SESSIONID),
+            __webpack_require__.append("request_ids", _.join(","));
+          const _ = await this.MakePost(
+            this.m_urls.strCheckConvertStatus,
+            _,
+            void 0,
+            "CheckUploadStatus",
+            _,
+          );
+          return _.bSuccess
+            ? {
+                bSuccess: !0,
+                rgStatus: _.data.status,
+              }
+            : {
+                bSuccess: !1,
+              };
         }
         async CompleteUpload(_, _, _, _) {
           const _ = new FormData();
-          let _;
           _.append("sessionid", _._.SESSIONID),
             _.append("request_id", _.toString()),
             _.append("name", _),
             _.append("asset_type", "extra_asset_v2"),
             -1 != _ && _.append("language", (0, _._)(_));
+          const _ = await this.MakePost(
+            this.m_urls.strCompleteConvert,
+            _,
+            void 0,
+            "CompleteUpload",
+            _,
+          );
+          return _.bSuccess
+            ? ((0, _._)(
+                _.data?.complete,
+                "CompleteUpload shouldn't be run until all uploads are complete",
+              ),
+              {
+                bSuccess: !0,
+              })
+            : _;
+        }
+        async GetExtraAssets(_) {
+          const _ = new FormData();
+          _.append("sessionid", _._.SESSIONID);
+          const _ = await this.MakePost(
+            this.m_urls.strGetExtraAssets,
+            _,
+            void 0,
+            "GetExtraAssets",
+            _,
+          );
+          return _.bSuccess
+            ? {
+                bSuccess: !0,
+                rgExtraAssets: _.data?.rgExtraAssets,
+              }
+            : _;
+        }
+        async MakePost(_, _, _, _, _) {
+          let _;
           try {
-            const _ = await _().post(this.m_strCompleteUploadUrl, _, {
+            const _ = await _().post(_, _, {
               withCredentials: !0,
+              headers: _,
               cancelToken: _,
             });
             if (200 != _.status || "object" != typeof _.data)
               return (
-                console.warn(
-                  "CExtraAssetsImageUploader.CompleteUpload failed",
-                  this.m_strCompleteUploadUrl,
-                ),
+                console.warn(`CExtraAssetsImageUploader ${_} failed`, _),
                 {
                   bSuccess: !1,
                 }
@@ -2628,70 +2677,23 @@
           } catch (_) {
             const _ = this.GetErrorsFromErrorResponse(_);
             return (
-              console.warn(
-                "CExtraAssetsImageUploader.CompleteUpload failed",
-                this.m_strCompleteUploadUrl,
-                _,
-              ),
+              console.warn(`CExtraAssetsImageUploader ${_} failed`, _, _),
               {
                 bSuccess: !1,
                 elErrorMessage: _,
               }
             );
           }
-          return (
-            (0, _._)(
-              _.complete,
-              "CompleteUpload shouldn't be run until all uploads are complete",
-            ),
-            {
-              bSuccess: !0,
-            }
-          );
-        }
-        async GetExtraAssets(_) {
-          const _ = new FormData();
-          let _;
-          _.append("sessionid", _._.SESSIONID);
-          try {
-            const _ = await _().post(this.m_strGetExtraAssetsUrl, _, {
-              withCredentials: !0,
-              cancelToken: _,
-            });
-            if (200 != _.status || "object" != typeof _.data)
-              return (
-                console.warn(
-                  "CExtraAssetsImageUploader.GetExtraAssets failed",
-                  this.m_strGetExtraAssetsUrl,
-                ),
-                {
-                  bSuccess: !1,
-                }
-              );
-            _ = _.data;
-          } catch (_) {
-            const _ = this.GetErrorsFromErrorResponse(_);
-            return (
-              console.warn(
-                "CExtraAssetsImageUploader.GetExtraAssets failed",
-                this.m_strGetExtraAssetsUrl,
-                _,
-              ),
-              {
-                bSuccess: !1,
-              }
-            );
-          }
           return {
             bSuccess: !0,
-            rgExtraAssets: _.rgExtraAssets,
+            data: _,
           };
         }
         CancelAllUploads() {
           this.m_cancel?.cancel((0, _._)("#ImageUpload_CancelRequest"));
         }
         GetImageOptions() {
-          const _ = (_, _, _, _, _) => ({
+          const _ = (_, _, _, _, _, _) => ({
               baseFilename: _,
               language: _,
               bNew: _,
@@ -2699,6 +2701,7 @@
                 width: _,
                 height: _,
               },
+              fileSize: _,
             }),
             _ = [];
           for (const _ of this.m_filesToUpload.filter(
@@ -2712,13 +2715,14 @@
                   !0,
                   _.width,
                   _.height,
+                  _.file.size,
                 ),
               );
             else {
               const _ = (0, _._)(_.filename).baseFilename,
                 _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
-              _.push(_(_, _.language ?? 0, !0, _.width, _.height)),
-                _ != _ && _.push(_(_, -1, !0, _.width, _.height));
+              _.push(_(_, _.language ?? 0, !0, _.width, _.height, _.file.size)),
+                _ != _ && _.push(_(_, -1, !0, _.width, _.height, _.file.size));
             }
           let _ = this.m_rgExistingAssetGroups ?? [],
             _ = this.m_rgImageSizes ?? [];
@@ -2736,7 +2740,7 @@
           const _ = _._(_, _).flatMap(([_, _]) =>
               ((_, _) =>
                 _.languages.map((_) =>
-                  _(_.baseFilename, _, !1, _?.width ?? 0, _?.height ?? 0),
+                  _(_.baseFilename, _, !1, _?.width ?? 0, _?.height ?? 0, 0),
                 ))(_, _),
             ),
             _ = _.concat(_).reduce((_, _) => {
@@ -2784,11 +2788,22 @@
       }
       function _() {
         const _ = (0, _._)("ajaxgetextraassets"),
-          _ = (0, _._)("ajaxbeginuploadassetasync"),
-          _ = (0, _._)("ajaxcheckuploadassetsstatus"),
-          _ = (0, _._)("ajaxtrytocompleteuploadasset"),
+          _ = (0, _._)("ajaxgetuploadurlforasset"),
+          _ = (0, _._)("ajaxbeginconvertassetasync"),
+          _ = (0, _._)("ajaxcheckconvertassetsstatus"),
+          _ = (0, _._)("ajaxtrytocompleteconvertasset"),
+          _ = _.useMemo(
+            () => ({
+              strGetExtraAssets: _,
+              strGetUploadUrlForAsset: _,
+              strBeginConvert: _,
+              strCheckConvertStatus: _,
+              strCompleteConvert: _,
+            }),
+            [_, _, _, _, _],
+          ),
           { regexInvalidFilenameCharacters: _ } = (0, _._)();
-        return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
+        return _.useMemo(() => new _(_, _), [_, _]);
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "m_onlyAssetGroup", void 0),
@@ -5441,7 +5456,18 @@
             _.current && _.current();
           }, [_, _]);
         const _ = (0, _._)(_),
-          _ = "awards" != _;
+          _ = "awards" != _,
+          _ = _.useCallback(
+            (_) =>
+              (function (_, _, _, _) {
+                _?.CommitChanges();
+                for (const [_, _] of _) {
+                  const _ = _.get(_);
+                  _ && _.Value != _ && (__webpack_require__(_), _.Set(_));
+                }
+              })(_, _, _, _),
+            [_, _, _],
+          );
         return _.createElement(
           _,
           {
@@ -5476,14 +5502,7 @@
                 activeLanguage: _,
                 mapValues: _,
                 allowAnimations: _,
-                updateDocument: (_) =>
-                  (function (_, _, _, _) {
-                    _?.CommitChanges();
-                    for (const [_, _] of _) {
-                      const _ = _.get(_);
-                      _ && _.Value != _ && (__webpack_require__(_), _.Set(_));
-                    }
-                  })(_, _, _, _),
+                updateDocument: _,
               }),
             ),
           ),
@@ -5537,6 +5556,7 @@
           _.createElement("div", null, "\t", _),
         );
       }
+      var _;
       function _(_) {
         const {
             editorType: _,
@@ -5548,13 +5568,15 @@
             rctAboveEditor: _,
           } = _,
           [_, _] = _.useState(!1),
+          [_, _] = _.useState(_.k_PreviewDesktop),
           _ = _.useCallback(
             (_) =>
               _.borderBoxSize.length > 0 &&
               _(_.borderBoxSize[0].blockSize > 300),
             [],
           ),
-          _ = (0, _._)(_);
+          _ = (0, _._)(_),
+          _ = "awards" === _ && _ === _.k_PreviewGamepad;
         return _.createElement(
           _.Fragment,
           null,
@@ -5564,17 +5586,32 @@
             sticky: _,
             rctToolbarControls: _,
             schema: _,
+            ePreviewMode: _,
+            setPreviewMode: _,
           }),
           _.createElement(
             "div",
             {
-              className: (0, _._)(
-                _.AboutTheGameArea,
-                "awards" == _ && _.Awards,
-              ),
+              className: (0, _._)({
+                [_.AboutTheGameArea]: !0,
+                [_.PreviewDesktop]: _ === _.k_PreviewDesktop,
+                [_.PreviewMobile]: _ === _.k_PreviewMobile,
+                [_.PreviewGamepad]: _ === _.k_PreviewGamepad,
+                [_.Awards]: "awards" === _,
+              }),
               ref: _,
             },
             _,
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.PreviewInfo,
+                },
+                (0, _._)(
+                  "#StoreAdmin_GameDescription_Awards_Gamepad_Unsupported",
+                ),
+              ),
             _,
           ),
         );
@@ -5598,6 +5635,8 @@
           rctToolbarControls: _,
           schema: _,
           sticky: _,
+          ePreviewMode: _,
+          setPreviewMode: _,
         } = _;
         return _.createElement(
           _._,
@@ -5646,7 +5685,58 @@
               schema: _,
             }),
             _.createElement(_._, null),
+            _.createElement(_._, null),
             _,
+          ),
+          _.createElement(_, {
+            ePreviewMode: _,
+            setPreviewMode: _,
+          }),
+        );
+      }
+      function _(_) {
+        const { ePreviewMode: _, setPreviewMode: __webpack_require__ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.PreviewModeCtn,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.PreviewModeTitle,
+            },
+            (0, _._)("#StoreAdmin_GameDescription_PreviewMode"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.PreviewItem, {
+                [_.SelectedPreview]: _ === _.k_PreviewDesktop,
+              }),
+              onClick: () => __webpack_require__(_.k_PreviewDesktop),
+            },
+            (0, _._)("#StoreAdmin_GameDescription_PreviewMode_Deskop"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.PreviewItem, {
+                [_.SelectedPreview]: _ === _.k_PreviewMobile,
+              }),
+              onClick: () => __webpack_require__(_.k_PreviewMobile),
+            },
+            (0, _._)("#StoreAdmin_GameDescription_PreviewMode_Mobile"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.PreviewItem, {
+                [_.SelectedPreview]: _ === _.k_PreviewGamepad,
+              }),
+              onClick: () => __webpack_require__(_.k_PreviewGamepad),
+            },
+            (0, _._)("#StoreAdmin_GameDescription_PreviewMode_Gamepad"),
           ),
         );
       }
@@ -5686,6 +5776,11 @@
           }),
         );
       }
+      !(function (_) {
+        (_[(_.k_PreviewDesktop = 1)] = "k_PreviewDesktop"),
+          (_[(_.k_PreviewMobile = 2)] = "k_PreviewMobile"),
+          (_[(_.k_PreviewGamepad = 3)] = "k_PreviewGamepad");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5916,7 +6011,12 @@
             failedMutate: _,
             showCaptionColumn: _,
           } = _,
-          [_, _] = _.useState(_);
+          [_, _] = _.useState(_),
+          _ = "#decorative-only" === _,
+          [_, _] = _.useState(_ ? "" : _),
+          _ = (_, _) => {
+            _(_), _(_), _ || _(_);
+          };
         return _.createElement(
           "tr",
           {
@@ -5952,15 +6052,21 @@
             },
             _.createElement(_._, {
               type: "text",
-              placeholder: (0, _._)(
-                "#StoreAdmin_EditAltText_Placeholder",
-                (0, _._)(`#Language_${(0, _._)(_)}`),
-              ),
-              value: _,
-              onChange: (_) => {
-                return (_ = _.target.value), _(_), void _(_);
-                var _;
-              },
+              placeholder: _
+                ? (0, _._)("#StoreAdmin_EditAltText_PlaceholderDecorative")
+                : (0, _._)(
+                    "#StoreAdmin_EditAltText_Placeholder",
+                    (0, _._)(`#Language_${(0, _._)(_)}`),
+                  ),
+              value: _ ? "" : _,
+              onChange: (_) => _(_.target.value, !1),
+              disabled: _,
+            }),
+            _.createElement(_._, {
+              checked: _,
+              onChange: (_) => _(_ ? "#decorative-only" : _, !0),
+              label: (0, _._)("#StoreAdmin_EditAltText_Presentational"),
+              tooltip: (0, _._)("#StoreAdmin_EditAltText_Presentational_ttip"),
             }),
           ),
         );
@@ -8143,6 +8249,7 @@
                     bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
+                    nWidthMultiplier: _.nWidthMultiplier,
                   },
                   _,
                 ),

@@ -3277,7 +3277,7 @@
               },
               c.createElement(x.pd, {
                 type: "text",
-                label: "Search",
+                label: (0, I.we)("#EventCalendar_UniversalSearch"),
                 value: i,
                 onChange: (e) => o(e.target.value),
               }),
@@ -10584,7 +10584,7 @@
         (0, L.Cg)([U.oI], ni.prototype, "OnOpenGradientOuterColor", null),
         (ni = (0, L.Cg)([s.PA], ni));
       var ui = a(79821),
-        _i = a(70238),
+        _i = a(33494),
         Ei = a(81047),
         pi = a(55263),
         gi = a(9239),
@@ -14358,6 +14358,7 @@
         const { editModel: t } = e,
           a = P.KN.Get().GetPartnerEventPermissions(t.GetClanSteamID());
         let n = c.useRef(void 0);
+        const l = t.BHasSaleEnabled();
         if (!a.valve_admin) return null;
         return c.createElement(
           c.Fragment,
@@ -14413,6 +14414,20 @@
                 description:
                   "Allows the partner to upload a store spotlight artwork to be shown on the product page for upto a week from the event start.",
               }),
+            Boolean(!G.UF.IS_OGG && l) &&
+              c.createElement(
+                c.Fragment,
+                null,
+                c.createElement(x.RF, {
+                  onChange: (e) => t.SetTag("hide_from_events_and_discount", e),
+                  label: "(VO) Hide Sale From Events and Discount Page",
+                  checked: t
+                    .GetEventModel()
+                    .BHasTag("hide_from_events_and_discount"),
+                  description:
+                    "By default we show sale pages on the events and discount store hub. Turning this on, we will not show this sale page there.",
+                }),
+              ),
             c.createElement(x.RF, {
               onChange: (e) => t.SetLibraryHomeSpotlight(e),
               label: "(VO) Force Spotlight on Library Home",

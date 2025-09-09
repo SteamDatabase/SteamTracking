@@ -1,53 +1,52 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -65,19 +64,20 @@ import {
   _,
   _,
 } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -112,10 +112,9 @@ var _ = _(_(), 1);
 function _(_) {
   let { gamepadUiTabs: _ } = _;
   if (_.length === 0) return null;
-  let _ = _(),
-    _ = [..._]
-      .sort((_, _) => _.href.length - _.href.length)
-      .find((_) => _.startsWith(_.href));
+  let _ = [..._]
+    .sort((_, _) => _.href.length - _.href.length)
+    .find((_) => location.href.startsWith(_.href));
   return (0, _.jsx)("div", {
     className: _.HeaderContainer,
     children: (0, _.jsx)("div", {
@@ -3644,10 +3643,11 @@ function _(_) {
 var _ = _(_(), 1),
   _ = _(_(), 1);
 var _ = "b-HJJEhQMU8-";
+var _ = "YqoW5i8-5Qg-";
 var _ = "mI7yDdWRs7s-";
 var _ = "bz3JO4um03s-";
 var _ = "_5ugSucgZfms-";
-var _ = "-vs6zKlfDOQ-";
+var _ = "_3-hhSxMDvY0-";
 var _ = "lXuAiu-iXVg-";
 var _ = "NNdAu3V92ks-";
 var _ = "ZB189Gu3K08-";
@@ -3853,8 +3853,8 @@ function _() {
 var _ = _(_(), 1);
 function _() {
   return (0, _.jsx)(_, {
-    children: (0, _.jsx)(_, {
-      children: (0, _.jsx)(_, {}),
+    children: (0, _.jsxs)(_, {
+      children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
     }),
   });
 }
@@ -3862,9 +3862,10 @@ var _ = {
   include_assets: !0,
 };
 function _() {
-  return _()
+  let _ = _(),
+    _ = _();
+  return _ || _
     ? (0, _.jsxs)(_, {
-        className: _,
         children: [
           (0, _.jsx)(_, {
             href: `${_.STORE_BASE_URL}charts/`,
@@ -3949,8 +3950,10 @@ var _ = _.GenerateRandomSeed();
 function _() {
   let { data: _ } = _(),
     _ = _?.get("freetoplay"),
-    _ = _?.get("demos");
-  return _()
+    _ = _?.get("demos"),
+    _ = _(),
+    _ = _();
+  return _
     ? (0, _.jsxs)(_, {
         className: _,
         children: [
@@ -3989,56 +3992,105 @@ function _() {
               (0, _.jsxs)(_, {
                 children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
               }),
-              (0, _.jsx)(_, {}),
             ],
           }),
         ],
       })
-    : (0, _.jsxs)(_, {
-        className: _,
-        children: [
-          (0, _.jsx)(_, {
-            children: _("#Menu_Section_Browse_BrowseTop"),
-          }),
-          (0, _.jsxs)(_, {
-            className: _,
-            children: [
-              (0, _.jsxs)(_, {
-                children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-              }),
-              (0, _.jsxs)(_, {
-                children: [
-                  (0, _.jsx)(_, {
-                    href: "explore/new/",
-                    children: (0, _.jsx)("div", {
-                      className: _,
-                      children: _("#Menu_Section_Browse_NewReleases"),
-                    }),
-                  }),
-                  (0, _.jsx)(_, {}),
-                  _ &&
+    : _
+      ? (0, _.jsxs)(_, {
+          className: _,
+          children: [
+            (0, _.jsx)(_, {
+              children: _("#Menu_Section_Browse_BrowseTop"),
+            }),
+            (0, _.jsxs)(_, {
+              className: _,
+              children: [
+                (0, _.jsxs)(_, {
+                  children: [
                     (0, _.jsx)(_, {
-                      href: _.url_path,
+                      href: "",
                       children: (0, _.jsx)("div", {
                         className: _,
-                        children: _("#Menu_Section_Browse_FreeToPlay"),
+                        children: _("#Menu_Popover_StoreHome"),
                       }),
                     }),
-                  _ &&
                     (0, _.jsx)(_, {
-                      href: _.url_path,
+                      href: "explore/new/",
                       children: (0, _.jsx)("div", {
                         className: _,
-                        children: _.display_name,
+                        children: _("#Menu_Section_Browse_NewReleases"),
                       }),
                     }),
-                ],
-              }),
-              (0, _.jsx)(_, {}),
-            ],
-          }),
-        ],
-      });
+                    _ &&
+                      (0, _.jsx)(_, {
+                        href: _.url_path,
+                        children: (0, _.jsx)("div", {
+                          className: _,
+                          children: _("#Menu_Section_Browse_FreeToPlay"),
+                        }),
+                      }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        href: _.url_path,
+                        children: (0, _.jsx)("div", {
+                          className: _,
+                          children: _.display_name,
+                        }),
+                      }),
+                  ],
+                }),
+                (0, _.jsxs)(_, {
+                  children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                }),
+              ],
+            }),
+          ],
+        })
+      : (0, _.jsxs)(_, {
+          className: _,
+          children: [
+            (0, _.jsx)(_, {
+              children: _("#Menu_Section_Browse_BrowseTop"),
+            }),
+            (0, _.jsxs)(_, {
+              className: _,
+              children: [
+                (0, _.jsxs)(_, {
+                  children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+                }),
+                (0, _.jsxs)(_, {
+                  children: [
+                    (0, _.jsx)(_, {
+                      href: "explore/new/",
+                      children: (0, _.jsx)("div", {
+                        className: _,
+                        children: _("#Menu_Section_Browse_NewReleases"),
+                      }),
+                    }),
+                    (0, _.jsx)(_, {}),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        href: _.url_path,
+                        children: (0, _.jsx)("div", {
+                          className: _,
+                          children: _("#Menu_Section_Browse_FreeToPlay"),
+                        }),
+                      }),
+                    _ &&
+                      (0, _.jsx)(_, {
+                        href: _.url_path,
+                        children: (0, _.jsx)("div", {
+                          className: _,
+                          children: _.display_name,
+                        }),
+                      }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
 }
 var _ = 3,
   _ = 3;
@@ -4162,7 +4214,7 @@ function _(_) {
   return (0, _.jsx)(_, {
     "flow-children": "grid",
     navEntryPreferPosition: 3,
-    className: (0, _.default)(_, _),
+    className: (0, _.default)(_, _, _),
     children: _,
   });
 }
@@ -5277,10 +5329,14 @@ _(_, {
   MoreMenuAccordion: () => _,
   MoreSectionTransitionContent: () => _,
   SectionTransition: () => _,
+  SuppressScrollOnBody: () => _,
   TransitionContainer: () => _,
   _: () => _,
   default: () => _,
+  storeMenuResponsiveModeWidth: () => _,
 });
+var _ = "730px";
+var _ = "IwLkFP079Gg-";
 var _ = "QIXgBSHq6cY-";
 var _ = "e6ZIu2birzY-";
 var _ = "dtuuezlV-7Y-";
@@ -5302,6 +5358,8 @@ var _ = "GQOJ5K5pn6U-";
 var _ = "_7FKZUleWBlc-";
 var _ = "BRZpkU5-R-o-";
 var _ = {
+  storeMenuResponsiveModeWidth: "730px",
+  SuppressScrollOnBody: "IwLkFP079Gg-",
   DynamicMenu: "QIXgBSHq6cY-",
   MenuOptions: "e6ZIu2birzY-",
   MenuSection: "dtuuezlV-7Y-",
@@ -6296,6 +6354,7 @@ function _({ children: _ }) {
       bVirtualizedScrolling: _,
       bUseV7Menu: _,
       ePreferredHWCompat: _,
+      bRenderFooter: _,
     } = _.useLoaderData(),
     _ = (0, _.useRef)(null),
     _ = _.length > 0,
@@ -6328,6 +6387,7 @@ function _({ children: _ }) {
                   children: (0, _.jsxs)(_, {
                     children: [
                       _ &&
+                        _ &&
                         (0, _.jsx)(_.Suspense, {
                           children: (0, _.jsx)(_, {
                             navContent: _.navContent,
@@ -6372,7 +6432,7 @@ function _({ children: _ }) {
                           }),
                         ],
                       }),
-                      !_.IN_GAMEPADUI &&
+                      _ &&
                         (0, _.jsx)(_, {
                           className: _.Footer,
                         }),

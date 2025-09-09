@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1757118053"
+	"version"		"1757456916"
 	"ostype"		"macos1015"
 	"steamcmd_public_all"
 	{
@@ -10,11 +10,11 @@
 	}
 	"steamcmd_bins_osx"
 	{
-		"file"		"steamcmd_bins_osx.zip.cba48d372a523223a091bf5d7eb16f891ccba6e4"
-		"size"		"19482760"
-		"sha2"		"7e8cf4f55d93223cec70842e2e12df039c4af8c8283b10040045684e36a2f14e"
-		"zipvz"		"steamcmd_bins_osx.zip.vz.944a19aa4330ed8409965e7777348099fd753f2a_12552866"
-		"sha2vz"		"5070d648d18e05bee991d6422ec64aa5fe6b92821d6f9e30aa073a3e0314b50c"
+		"file"		"steamcmd_bins_osx.zip.a4e60cf408e817be3799b1bb956517b420488145"
+		"size"		"19482901"
+		"sha2"		"7537c55cdb2ce433080f3fd302e31beaf7375eb1da5be5ab1fd8f2226c1c6008"
+		"zipvz"		"steamcmd_bins_osx.zip.vz.0d8578441d32fc5d8c200037f412546edbc28134_12551698"
+		"sha2vz"		"c9d0d1dffd5d654f2c24ff7d421a4e06d71bd9ede720c8d0774c9ab9ff077610"
 	}
 	"steamcmd_breakpad_osx"
 	{
@@ -26,19 +26,19 @@
 	}
 	"steamcmd_osx"
 	{
-		"file"		"steamcmd_osx.zip.6e23785d22202294c8c1edef86a4c87b401c914c"
-		"size"		"3983398"
-		"sha2"		"f4c41d3bb8de77acb7707e060feda0cbc88c93e354c80de03528a6cd1f84fff9"
-		"zipvz"		"steamcmd_osx.zip.vz.4ffaf2186d8bf0b462a5f8a15610c03ef8ecc991_2937419"
-		"sha2vz"		"59ab2a22e3527762701e847faacf91b4c9a7d79ddfcf26e36ffb558e5930f3c5"
+		"file"		"steamcmd_osx.zip.aa25a71d323a0fedb18155cbd481cad9529ad694"
+		"size"		"3983401"
+		"sha2"		"e692f0b70df85f60cce86a6974db3e9b246d0c28678aebd7dad326769e0e916a"
+		"zipvz"		"steamcmd_osx.zip.vz.20cee306ea34d29e72386cad1be4d1feae9f1f1d_2936332"
+		"sha2vz"		"cb5cd53705c52e793da489ad2493969cb0e2f838682dce81b1b11f813fe1a801"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsign2"
 {
-	"osx"		"ef1a0c583564eba94e146b1648068c000a15113574e28c92462f23ab3d36cff77c3333449bb241e8633e42708322722b3dd152ca5d5f86bd05c608d9611f9f0c"
+	"osx"		"4c71cf20c7e97e9f053576cf486e02a06d1c1d57e9790d40c04d79c7db6369160951b0987f86dc8bc7e12e9e4cd6a5a33866d6de9ae5cee83bb2131467969c0b"
 }
 "kvsignatures"
 {
-	"osx"		"5ad3241259b97b66bdce276aa5acac61ad325f2a40b6d428fb43e3a950cd1f4d251de5d93103667d7be98c8390df64433804f36c7aaa55484a9cddd782d88b80f47ec053f90da76e99191677383338f2c9a3572cc8e3f9c092528557cb659fea4f6c26c9298875149007037b36df1ca1aead35bf75ffe906432be4bd7098a5d1"
+	"osx"		"cbceb5d1b2f78bc79148ad59ed7bfd5ce2b2bf9182213b0f12f063d72c31fa84116b385fc955c85f9b09f6544a9a099277ab350d06179dc869fe1d1c42044ab171eb4d48a8842046d032b0d783239c0dab3587a72535625fa4c61bb1667a7206fa61f6025a47ec56bfeb4c51a2d723752b638b667a0451aaad1a1cd370cae99c"
 }

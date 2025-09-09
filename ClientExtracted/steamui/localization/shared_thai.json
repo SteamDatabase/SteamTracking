@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "การบันทึกเกม",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(บันทึกเซสชันเกมนี้)",
     "QuickAccess_Tab_GameRecording": "การบันทึกเกม",
+    "Settings_GameRecording_InstantClip_Label": "ความยาวคลิปเป็นวินาที",
     "AccessibilityFeatures": "คุณสมบัติการช่วยการเข้าถึง",
     "AccessibilityFeaturesWithCount": "คุณสมบัติการช่วยการเข้าถึง (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "ปรับระดับความยากได้",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "การป้องกันการแลกเปลี่ยน",
     "SteamNotifications_TradeReversal_Body": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
     "SteamNotifications_TradeReversal_Body_Short": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
-    "SteamNotifications_TradeReversal_Description": "คู่แลกเปลี่ยนของคุณได้คืนค่าให้หนึ่งในการแลกเปลี่ยนล่าสุดของคุณแล้ว"
+    "SteamNotifications_TradeReversal_Description": "คู่แลกเปลี่ยนของคุณได้คืนค่าให้หนึ่งในการแลกเปลี่ยนล่าสุดของคุณแล้ว",
+    "AddonPicker_Search": "ค้นหา...",
+    "ReorderableList_ReorderInstructions": "เลือกแล้วเคลื่อนขึ้นหรือลงเพื่อจัดเรียงลำดับใหม่",
+    "ControllerButton_8BitDo": "ปุ่ม 8BitDo"
 }

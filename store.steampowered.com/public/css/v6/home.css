@@ -847,19 +847,18 @@ a.home_headercap:hover {
 
 .discovery_queue_overlay_position {
 	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	top: 59px;
 	right: 0;
-	left: 5%;
+	left: 0;
 }
 
 .discovery_queue_overlay_bg {
-	position: absolute;
-	right: 0;
-	top: 0;
 	width: 810px;
 	max-width: 100%;
 	background: url( '/public/images/v6/discovery_queue_arrow.png?v=1' ) no-repeat top right;
-
 	height: 92px;
 }
 

@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Spillopptak",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Ta opp denne spilløkten)",
     "QuickAccess_Tab_GameRecording": "Spillopptak",
+    "Settings_GameRecording_InstantClip_Label": "Klippvarighet i sekunder",
     "AccessibilityFeatures": "Tilgjengelighetsfunksjoner",
     "AccessibilityFeaturesWithCount": "Tilgjengelighetsfunksjoner (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Justerbar vanskelighetsgrad",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "Byttebeskyttelse",
     "SteamNotifications_TradeReversal_Body": "En byttehandel ble omgjort",
     "SteamNotifications_TradeReversal_Body_Short": "En byttehandel ble omgjort",
-    "SteamNotifications_TradeReversal_Description": "En nylig byttehandel ble omgjort av den andre parten."
+    "SteamNotifications_TradeReversal_Description": "En nylig byttehandel ble omgjort av den andre parten.",
+    "AddonPicker_Search": "Søk …",
+    "ReorderableList_ReorderInstructions": "Velg og flytt opp eller ned for å endre rekkefølge",
+    "ControllerButton_8BitDo": "8BitDo-knapp"
 }

@@ -599,8 +599,7 @@
               (_ = _.createElement(
                 _._,
                 {
-                  focusableIfNoChildren: !0,
-                  retainFocus: !0,
+                  focusableIfEmpty: !0,
                 },
                 _,
               )),

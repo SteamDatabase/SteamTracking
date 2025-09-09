@@ -72,8 +72,8 @@
         E = n(27666),
         _ = n(86355),
         g = n(68255),
-        h = n(2805),
-        v = n(36509),
+        v = n(2805),
+        h = n(36509),
         f = n(83882),
         b = n(71696),
         C = n(61859),
@@ -245,17 +245,17 @@
             );
           }, [n, a, t]),
           g = m.useCallback((e) => i((0, r.M)(e)), [i]),
-          h = "true" === t.attrs.autoadvance,
-          [v, f] = Q(g, {
-            autoAdvance: h,
+          v = "true" === t.attrs.autoadvance,
+          [h, f] = Q(g, {
+            autoAdvance: v,
             clanSteamID: E,
             imageNodeType: n,
             videoNodeType: a,
             carouselNodeType: t.type,
           }),
           b = m.useCallback(() => {
-            v(_);
-          }, [v, _]);
+            h(_);
+          }, [h, _]);
         return m.createElement(
           m.Fragment,
           null,
@@ -365,7 +365,7 @@
             e.destination &&
               c((t) => H.yY(t.slice(), e.source.index, e.destination.index));
           }, []),
-          { showInsertImageModal: h, imageModal: v } = le({
+          { showInsertImageModal: v, imageModal: h } = le({
             clanSteamID: l,
             imageNodeType: r,
             videoNodeType: s,
@@ -374,7 +374,7 @@
         return m.createElement(
           m.Fragment,
           null,
-          v,
+          h,
           m.createElement(
             V.mt,
             { active: !0, onDismiss: n },
@@ -435,7 +435,7 @@
                     "#EventEditor_CarouselEditor_AddAnotherItem",
                   ),
                   className: F.AddButton,
-                  onClick: h,
+                  onClick: v,
                 },
                 m.createElement(D.OMN, { className: F.PlusIcon }),
               ),
@@ -504,12 +504,12 @@
             update: p,
           } = e,
           [E, _, g] = (0, k.uD)(),
-          h = te(n);
-        let v = m.createElement(ae, {
+          v = te(n);
+        let h = m.createElement(ae, {
           schemaConfig: t,
           event: a.GetEventModel(),
           node: n,
-          nodeAttrs: h,
+          nodeAttrs: v,
         });
         const f = m.useCallback(() => {
             d(), g();
@@ -524,14 +524,14 @@
           I = m.useCallback(() => {
             C([n]);
           }, [n, C]),
-          M = { createCarousel: s ? I : void 0, src: ne(h) };
+          M = { createCarousel: s ? I : void 0, src: ne(v) };
         return m.createElement(
           m.Fragment,
           null,
           E &&
             m.createElement(re, {
               bIsEdit: !0,
-              nodeAttrs: h,
+              nodeAttrs: v,
               hideModal: f,
               imageNodeType: o,
               videoNodeType: l,
@@ -549,7 +549,7 @@
                 contextMenuProps: M,
               }),
             },
-            v,
+            h,
           ),
         );
       }
@@ -708,13 +708,13 @@
               ? "uploaded"
               : "hotlink",
           ),
-          h = m.useCallback(
+          v = m.useCallback(
             (e) => {
               l({ src: e }, r), a();
             },
             [l, a, r],
           ),
-          v = m.useCallback(
+          h = m.useCallback(
             (e) => {
               l({ ...u, ...e }, s), a();
             },
@@ -728,7 +728,7 @@
             active: "hotlink" == E,
             bIsEdit: t,
             hideModal: a,
-            onImageSelected: h,
+            onImageSelected: v,
             src: u.src,
           })),
             (w = t
@@ -763,8 +763,8 @@
             m.createElement(ce, {
               bIsEdit: t,
               hideModal: a,
-              onImageSelected: h,
-              onVideoSelected: s && v,
+              onImageSelected: v,
+              onVideoSelected: s && h,
               clanSteamID: o,
               selectedImage: p,
             }),
@@ -829,10 +829,10 @@
           [i, c] = m.useState(o.webm),
           [d, u] = m.useState(o.poster),
           [p, E] = m.useState(!!o.autoplay),
-          [_, h] = m.useState(!!o.controls),
-          v = m.useRef(void 0);
+          [_, v] = m.useState(!!o.controls),
+          h = m.useRef(void 0);
         m.useEffect(() => {
-          t && v.current.Focus();
+          t && h.current.Focus();
         }, [t]);
         return m.createElement(
           g.lV,
@@ -853,7 +853,7 @@
             g.nB,
             null,
             m.createElement(g.pd, {
-              ref: v,
+              ref: h,
               value: r,
               onChange: (e) => s(e.currentTarget.value),
               label: (0, C.we)("#EventEditor_InsertVideo_InputMP4"),
@@ -875,7 +875,7 @@
             }),
             m.createElement(g.Yh, {
               checked: _,
-              onChange: h,
+              onChange: v,
               label: (0, C.we)("#EventEditor_InsertVideo_InputShowControls"),
             }),
           ),
@@ -926,11 +926,11 @@
           m.createElement(
             g.lV,
             { onSubmit: () => i && p(i), className: S.ClanImageGridForm },
-            m.createElement(v.g, { fnSetImageSearch: s }),
+            m.createElement(h.g, { fnSetImageSearch: s }),
             m.createElement(
               "div",
               { className: S.ClanImageGridContainer },
-              m.createElement(h.ge, {
+              m.createElement(v.ge, {
                 clanAccountID: l.GetAccountID(),
                 fileNameSearch: r,
                 onImageSelected: E,
@@ -1004,8 +1004,8 @@
       var Ee = n(70995),
         _e = n(74410),
         ge = n(72421),
-        he = n(52038),
-        ve = n(63226);
+        ve = n(52038),
+        he = n(63226);
       function fe(e) {
         const {
             videoID: t,
@@ -1038,13 +1038,13 @@
             }),
           m.createElement(
             G,
-            { className: (0, he.A)(ve.PreviewYoutubeEditor, o && ve.Selected) },
+            { className: (0, ve.A)(he.PreviewYoutubeEditor, o && he.Selected) },
             m.createElement(B, {
               onEditClick: i,
               onDeleteClick: e.removeNode,
               bStrongShadows: !0,
             }),
-            o && m.createElement("div", { className: ve.SelectionOverlay }),
+            o && m.createElement("div", { className: he.SelectionOverlay }),
             m.createElement(M.Bm, {
               event: a.GetEventModel(),
               strTag: "previewyoutube",
@@ -1087,7 +1087,7 @@
                 : (0, C.we)("#EventEditor_InsertYouTube"),
               onOK: p,
             },
-            d && m.createElement("div", { className: ve.Error }, d),
+            d && m.createElement("div", { className: he.Error }, d),
             m.createElement(g.pd, {
               label: (0, C.we)("#EventEditor_InsertYouTube_URL"),
               placeholder: (0, C.we)("#EventEditor_InsertYouTube_Placholder"),
@@ -1251,7 +1251,7 @@
             (0, C.we)("#MeetSteam_edit_session_desc"),
           ),
           m.createElement("textarea", {
-            className: (0, he.A)(
+            className: (0, ve.A)(
               "DialogTextInputBase",
               De().EventDescriptionField,
             ),
@@ -1293,7 +1293,7 @@
             }),
           ),
           m.createElement("textarea", {
-            className: (0, he.A)(
+            className: (0, ve.A)(
               "DialogTextInputBase",
               De().EventDescriptionField,
             ),
@@ -1408,6 +1408,7 @@
           m.Fragment,
           null,
           m.createElement($e, {
+            startTime: t.rtime_start,
             location_type: s,
             fnUpdateLocationAndTZ: (e, a) =>
               n({ ...t, location_type: e, in_person_time_zone: a }),
@@ -1497,52 +1498,53 @@
       }
       function $e(e) {
         const {
-            location_type: t,
-            fnUpdateLocationAndTZ: n,
-            in_person_time_zone: a,
+            startTime: t,
+            location_type: n,
+            fnUpdateLocationAndTZ: a,
+            in_person_time_zone: o,
           } = e,
-          o = (function () {
-            const e = (0, Re.I)({
-              queryKey: ["timezone"],
+          l = (function (e) {
+            const t = (0, Re.I)({
+              queryKey: ["timezone", e],
               queryFn: async () => {
-                const e = `${Le.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
-                  t = {},
-                  n = await Pe().get(e, { params: t });
-                return null == n ? void 0 : n.data.timezones;
+                const t = `${Le.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
+                  n = { reference_time: e },
+                  a = await Pe().get(t, { params: n });
+                return null == a ? void 0 : a.data.timezones;
               },
             });
-            return e.isSuccess ? e.data : [];
-          })(),
-          l = m.useMemo(
-            () => o.reduce((e, t) => e.set(t.name, t.friendly_name), new Map()),
-            [o],
+            return t.isSuccess ? t.data : [];
+          })(t),
+          r = m.useMemo(
+            () => l.reduce((e, t) => e.set(t.name, t.friendly_name), new Map()),
+            [l],
           ),
-          r = (e) => {
+          s = (e) => {
             var t;
-            return null !== (t = l.get(e)) && void 0 !== t ? t : e;
+            return null !== (t = r.get(e)) && void 0 !== t ? t : e;
           },
-          s = m.useId(),
-          i = m.useId();
+          i = m.useId(),
+          c = m.useId();
         return m.createElement(
           m.Fragment,
           null,
           m.createElement(
             "div",
-            { id: s, className: xe.EventEditorTextTitle },
+            { id: i, className: xe.EventEditorTextTitle },
             (0, C.we)("#MeetSteam_edit_date_display_title"),
           ),
           m.createElement(
             "div",
-            { id: i, className: xe.EventEditorTextSubTitle },
+            { id: c, className: xe.EventEditorTextSubTitle },
             (0, C.we)("#MeetSteam_edit_date_display_desc"),
           ),
           m.createElement(
             g.zW,
             {
-              labelId: s,
-              descriptionId: i,
-              value: t,
-              onChange: (e) => n(e, a),
+              labelId: i,
+              descriptionId: c,
+              value: n,
+              onChange: (e) => a(e, o),
             },
             m.createElement(
               g.a,
@@ -1555,20 +1557,20 @@
               (0, C.we)("#MeetSteam_edit_date_display_virtual"),
             ),
           ),
-          "in_person" === t &&
+          "in_person" === n &&
             m.createElement(Oe.Ay, {
               styles: { option: (e) => ({ ...e, color: "#444444" }) },
               isSearchable: !0,
               isMulti: !1,
-              options: o.map((e) => ({
+              options: l.map((e) => ({
                 label: e.friendly_name,
                 value: e.name,
               })),
               defaultMenuIsOpen: !1,
-              value: a
-                ? { label: r(a), value: a }
-                : { label: r(Se.hh), value: Se.hh },
-              onChange: (e) => n(t, e.value),
+              value: o
+                ? { label: s(o), value: o }
+                : { label: s(Se.hh), value: Se.hh },
+              onChange: (e) => a(n, e.value),
             }),
         );
       }
@@ -2092,7 +2094,7 @@
             ),
             null);
       }
-      function ht(e) {
+      function vt(e) {
         const { hideModal: t, fnUpdateSession: n, inputScheduleModel: a } = e,
           o = (0, Ge.f1)(),
           l = (0, nt.LU)(),
@@ -2124,12 +2126,13 @@
               "div",
               { className: _t().DialogCtn },
               m.createElement($e, {
+                startTime: l.GetEventStartTime(),
                 location_type: i,
                 in_person_time_zone: c,
                 fnUpdateLocationAndTZ: (e, t) =>
                   s({ ...r, location_type: e, in_person_time_zone: t }),
               }),
-              m.createElement(vt, {
+              m.createElement(ht, {
                 inputScheduleModel: r,
                 fnUpdateSession: (e) => s(e),
                 rtBreakStartingTime: u,
@@ -2138,7 +2141,7 @@
           ),
         );
       }
-      function vt(e) {
+      function ht(e) {
         const {
             fnUpdateSession: t,
             inputScheduleModel: n,
@@ -2299,7 +2302,7 @@
                 ),
               ),
               Boolean(r) &&
-                m.createElement(ht, {
+                m.createElement(vt, {
                   hideModal: c,
                   inputScheduleModel: l,
                   fnUpdateSession: (e) => {
@@ -2590,7 +2593,7 @@
             m.Fragment,
             null,
             l &&
-              m.createElement(ht, {
+              m.createElement(vt, {
                 hideModal: i,
                 inputScheduleModel: null,
                 fnUpdateSession: c,
@@ -2789,9 +2792,9 @@
             })(d, t, r, g),
           );
         }, [d, g, t, r]);
-        const h = m.useRef(void 0);
+        const v = m.useRef(void 0);
         (0, o.i)(p, { msAutosaveTimeout: 1e3 });
-        const { nodes: v, marks: f } = d.pm_schema;
+        const { nodes: h, marks: f } = d.pm_schema;
         return (
           (function (e, t, n, a, o) {
             m.useEffect(() => {
@@ -2831,17 +2834,17 @@
                 }
               );
             }, [e, t, n, a, o]);
-          })(n, v.image, v.video, f.link, s),
+          })(n, h.image, h.video, f.link, s),
           m.createElement(
             de,
-            { editModel: t, imageNode: v.image, videoNode: v.video },
+            { editModel: t, imageNode: h.image, videoNode: h.video },
             m.createElement(
               "div",
               { className: Ut().EventDescriptionContainer },
               m.createElement(Tt, {
                 view: s,
                 schema: d.pm_schema,
-                refUpdateToolbar: h,
+                refUpdateToolbar: v,
                 className: Ut().ToolBar,
                 clanSteamID: t.GetClanSteamID(),
               }),
@@ -2852,11 +2855,11 @@
                   zt.l,
                   {
                     pmState: p,
-                    className: (0, he.A)(
+                    className: (0, ve.A)(
                       Ut().EventDescriptionRichField,
                       Ut().EventDetailsBody,
                     ),
-                    refOnUpdate: h,
+                    refOnUpdate: v,
                     refView: c,
                     panelProps: { onBlur: () => p.CommitChanges() },
                   },

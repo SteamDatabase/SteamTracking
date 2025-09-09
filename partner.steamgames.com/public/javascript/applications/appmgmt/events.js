@@ -697,8 +697,8 @@
         }
       }
       (0, _.Cg)([v.sH], Z.prototype, "m_mapClanReposted", void 0);
-      var X = n(95695),
-        Y = n.n(X),
+      var Y = n(95695),
+        X = n.n(Y),
         J = n(82477),
         Q = n(738),
         $ = n(56011),
@@ -1036,8 +1036,8 @@
                   {
                     focusable: !0,
                     className: (0, G.A)(
-                      Y().Button,
-                      Y().Icon,
+                      X().Button,
+                      X().Icon,
                       re().DiscussionButton,
                       "up" == this.state.myVote ? re().VoteButtonSelected : "",
                     ),
@@ -1060,8 +1060,8 @@
                   {
                     focusable: !0,
                     className: (0, G.A)(
-                      Y().Button,
-                      Y().Icon,
+                      X().Button,
+                      X().Icon,
                       re().DiscussionButton,
                       "down" == this.state.myVote
                         ? re().VoteButtonSelected
@@ -1093,8 +1093,8 @@
                     {
                       focusable: !0,
                       className: (0, G.A)(
-                        Y().Button,
-                        Y().Icon,
+                        X().Button,
+                        X().Icon,
                         re().DiscussionButton,
                         "down" == this.state.myVote
                           ? re().VoteButtonSelected
@@ -1147,7 +1147,7 @@
             C.Z,
             {
               focusable: !0,
-              className: (0, G.A)(Y().Button, Y().Icon, re().DiscussionButton),
+              className: (0, G.A)(X().Button, X().Icon, re().DiscussionButton),
               onActivate: s,
             },
             r.createElement(y.SYj, { className: re().ShareIcon }),
@@ -1178,8 +1178,8 @@
                 "div",
                 {
                   className: (0, G.A)(
-                    Y().Button,
-                    Y().Icon,
+                    X().Button,
+                    X().Icon,
                     re().DiscussionButton,
                   ),
                 },
@@ -1198,8 +1198,8 @@
                 focusable: !0,
                 onActivate: a,
                 className: (0, G.A)(
-                  Y().Button,
-                  Y().Icon,
+                  X().Button,
+                  X().Icon,
                   re().DiscussionButton,
                 ),
               },
@@ -1312,7 +1312,7 @@
           "div",
           {
             style: p,
-            className: (0, G.A)(Ce().SteamAwardContainer, Y().PartnerEventFont),
+            className: (0, G.A)(Ce().SteamAwardContainer, X().PartnerEventFont),
           },
           r.createElement(
             "div",
@@ -1779,7 +1779,7 @@
                 style: e,
                 className: (0, G.A)(
                   Ce().SteamAwardContainer,
-                  Y().PartnerEventFont,
+                  X().PartnerEventFont,
                 ),
               },
               r.createElement(
@@ -1909,13 +1909,13 @@
         return (0, h.Qn)() && !h.TS.IN_STEAMUI
           ? r.createElement(
               He.Qg,
-              { className: X.GamepadOnlyScrollPanel },
+              { className: Y.GamepadOnlyScrollPanel },
               r.createElement(
                 C.Z,
                 {
                   focusable: !0,
                   noFocusRing: !0,
-                  className: X.GamepadOnlyPanel,
+                  className: Y.GamepadOnlyPanel,
                 },
                 t,
               ),
@@ -1931,10 +1931,10 @@
         return r.createElement(
           "div",
           { className: qe().AppSocialLinksCtn },
-          r.createElement(Xe, { appid: t }),
+          r.createElement(Ye, { appid: t }),
         );
       }
-      function Xe(e) {
+      function Ye(e) {
         const { appid: t } = e,
           [n] = (0, N.t7)(t, { include_basic_info: !0, include_links: !0 });
         if (!n) return null;
@@ -1947,17 +1947,17 @@
                 "div",
                 {
                   className: (0, G.A)(
-                    Y().EventEditorTextTitle,
+                    X().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
                 },
                 (0, L.we)("#EventDisplay_SocialTitle"),
               ),
-              r.createElement(Ye, { id: "" + t, rgSocialMedia: a }),
+              r.createElement(Xe, { id: "" + t, rgSocialMedia: a }),
             )
           : null;
       }
-      function Ye(e) {
+      function Xe(e) {
         const { id: t, rgSocialMedia: n, className: a } = e;
         return r.createElement(
           "div",
@@ -2060,6 +2060,8 @@
           case 22:
             return r.createElement(y.emH, { ...n });
           case 24:
+            return r.createElement(y.Yoo, { ...n });
+          case 25:
           case 0:
             return "invalid social media type";
         }
@@ -2661,7 +2663,7 @@
                     partnerEventStore: n,
                     event: e,
                   }),
-                  r.createElement("span", { className: Y().Clear }),
+                  r.createElement("span", { className: X().Clear }),
                 ),
                 r.createElement(Ue, { event: this.props.event }),
                 Boolean(e.jsondata.read_more_link) &&
@@ -2671,7 +2673,7 @@
                     r.createElement(
                       k.uU,
                       {
-                        className: (0, G.A)(Y().Button),
+                        className: (0, G.A)(X().Button),
                         href: e.jsondata.read_more_link,
                       },
                       (0, L.we)("#EventEmail_Button_ClickForMoreDetails"),
@@ -2685,7 +2687,7 @@
                     r.createElement(
                       "a",
                       {
-                        className: (0, G.A)(Y().Button, "LinkButton"),
+                        className: (0, G.A)(X().Button, "LinkButton"),
                         href: (0, P.k2)(e.GetSaleURL()),
                       },
                       (0, L.we)("#Event_Button_VisitSalePage"),

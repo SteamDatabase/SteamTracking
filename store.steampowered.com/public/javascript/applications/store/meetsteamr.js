@@ -49,6 +49,8 @@
         SessionTime: "_2vYmHfXJIHj2eCv8NsiqZv",
         RegisteredUsers: "HLiipgmnfEQ2O-9WritfU",
         CheckedIn: "_17S0ayInAou4_ptPoMguR0",
+        GuestTitle: "_2fMFlfbH8xUEtW28kSLf5-",
+        GuestEmail: "Tm-tj9XNHRPGqdqqNiTEp",
         DescriptionWrapper: "_17o_wRtaDyujn3Bx4gGiu5",
       };
     },
@@ -80,7 +82,7 @@
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => h, KM: () => _, KT: () => y });
+      n.d(t, { B3: () => h, KM: () => S, KT: () => y });
       var a = n(41735),
         s = n.n(a),
         r = n(58632),
@@ -89,19 +91,19 @@
         l = n(20194),
         c = n(75233),
         u = n(17720),
-        d = n(68797),
-        m = n(78327),
+        m = n(68797),
+        d = n(78327),
         p = n(56545),
         g = n(37735),
         E = n(23809);
-      const S = "nicknames";
-      function _(e) {
+      const _ = "nicknames";
+      function S(e) {
         const t = (0, E.KV)(),
           { data: n, isLoading: a } = (0, l.I)({
-            queryKey: [S],
+            queryKey: [_],
             queryFn: async () => {
               const e = new Map();
-              if (m.iA.logged_in) {
+              if (d.iA.logged_in) {
                 const n = p.w.Init(g.dN),
                   a = (await g.xt.GetNicknameList(t, n)).Body().toObject();
                 a?.nicknames &&
@@ -120,9 +122,9 @@
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, m.yK)()
-                  ? m.TS.COMMUNITY_BASE_URL
-                  : m.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
                   a = await s().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -134,7 +136,7 @@
                   1 != a.data?.success ||
                   !a.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
                 return [a.data.userinfo];
               }
               {
@@ -148,7 +150,7 @@
                   1 != a.data?.success ||
                   !a.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
                 const r = new Map();
                 return (
                   a.data.userinfos.forEach((e) =>
@@ -208,8 +210,8 @@
         const { accountID: t, bHideWhenNotAvailable: n, bHideName: l } = e,
           [c] = (0, r.KT)(t),
           u = (0, r.KM)(t),
-          d = a.useMemo(() => s.b.InitFromAccountID(t), [t]),
-          m = `${o.TS.COMMUNITY_BASE_URL}profiles/${d.ConvertTo64BitString()}`;
+          m = a.useMemo(() => s.b.InitFromAccountID(t), [t]),
+          d = `${o.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`;
         return a.createElement(
           a.Fragment,
           null,
@@ -221,11 +223,11 @@
               )
             : a.createElement(
                 "a",
-                { href: m },
+                { href: d },
                 a.createElement("img", {
                   className: i.SmallAvatar,
                   src: c.avatar_url,
-                  "data-miniprofile": "s" + d.ConvertTo64BitString(),
+                  "data-miniprofile": "s" + m.ConvertTo64BitString(),
                 }),
                 Boolean(!l) &&
                   a.createElement(
@@ -248,8 +250,8 @@
         l = n(95695),
         c = n(84811),
         u = n(64734),
-        d = n(65946),
-        m = n(26408);
+        m = n(65946),
+        d = n(26408);
       function p(e) {
         const {
             title: t,
@@ -260,7 +262,7 @@
             children: p,
             elAdditionalButtons: g,
           } = e,
-          S = (0, d.q3)(() => a());
+          _ = (0, m.q3)(() => a());
         return i.createElement(
           i.Fragment,
           null,
@@ -283,16 +285,16 @@
                 ),
               },
               t,
-              Boolean(n) && i.createElement(m.o, { tooltip: n }),
+              Boolean(n) && i.createElement(d.o, { tooltip: n }),
             ),
             i.createElement(
               "div",
               { className: u.SectionTitleButtons },
               g,
-              i.createElement(E, { bIsMinimized: S, fnToggleMinimize: s }),
+              i.createElement(E, { bIsMinimized: _, fnToggleMinimize: s }),
             ),
           ),
-          !S && i.createElement(c.tH, null, p),
+          !_ && i.createElement(c.tH, null, p),
         );
       }
       function g(e) {
@@ -317,7 +319,7 @@
     },
     57912: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => de, default: () => me });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => me, default: () => de });
       var a = n(90626),
         s = n(43527),
         r = n(92757),
@@ -326,19 +328,19 @@
         l = n(2160),
         c = n(8527),
         u = n(60746),
-        d = n(6379),
-        m = n(30756),
+        m = n(6379),
+        d = n(30756),
         p = n(92557),
         g = n(22797),
         E = n(61859),
-        S = n(43068);
-      function _(e) {
+        _ = n(43068);
+      function S(e) {
         const { gid: t } = (0, r.g)(),
           [n, s] = (0, a.useState)(!0);
         if (
           (a.useEffect(() => {
             n &&
-              (d.O3.Init(), Promise.all([u.KN.InitGlobal()]).then(() => s(!1)));
+              (m.O3.Init(), Promise.all([u.KN.InitGlobal()]).then(() => s(!1)));
           }, [n]),
           n)
         )
@@ -346,12 +348,12 @@
             string: (0, E.we)("#Loading"),
             position: "center",
           });
-        const _ = d.O3.GetClanEventModel(t);
-        return _
+        const S = m.O3.GetClanEventModel(t);
+        return S
           ? a.createElement(
               i.tH,
               null,
-              !_.BIsUnlistedEvent() &&
+              !S.BIsUnlistedEvent() &&
                 a.createElement(
                   "div",
                   null,
@@ -359,12 +361,12 @@
                 ),
               a.createElement(p.jA, {
                 lang: (0, o.sf)(c.TS.LANGUAGE),
-                event: _,
+                event: S,
                 adminPanel:
                   c.TS.EREALM === l.TU.k_ESteamRealmChina
-                    ? a.createElement(S.P, { eventModel: _ })
-                    : a.createElement(m.g, {
-                        eventModel: _,
+                    ? a.createElement(_.P, { eventModel: S })
+                    : a.createElement(d.g, {
+                        eventModel: S,
                         bSupportsSticky: !0,
                       }),
               }),
@@ -378,7 +380,7 @@
         M = n(44165),
         T = n(30470),
         w = n(24484);
-      function C(e, t, n) {
+      function N(e, t, n) {
         for (const a of e)
           if (a.group_id === t) {
             const e = a.sessions.find((e) => e.id === n);
@@ -386,25 +388,25 @@
           }
         return { group: null, session: null };
       }
-      function N(e, t) {
+      function C(e, t) {
         const n = (0, M.f1)(),
           [s] = (0, a.useState)(() =>
             (0, w.Tc)("registrations", "application_config")
               .map((e) => ((e.userReg = JSON.parse(e.jsondata)), e))
               .sort((t, n) => {
-                const a = C(
+                const a = N(
                     e.jsondata.meet_steam_groups,
                     t.group_id,
                     t.session_id,
                   ),
-                  s = C(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
+                  s = N(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
                 return (
                   (s?.session?.rtime_start || 0) -
                   (a?.session?.rtime_start || 0)
                 );
               })
               .map((t) => {
-                const a = C(
+                const a = N(
                   e.jsondata.meet_steam_groups,
                   t.group_id,
                   t.session_id,
@@ -463,19 +465,19 @@
         );
       }
       var A = n(38390),
-        b = n(27144),
-        k = n(10981),
+        k = n(27144),
+        b = n(10981),
         R = n(71298),
         L = n(95034),
         I = n(8905),
         B = n(78395),
         U = n(21869),
         G = n(48479),
-        x = n(52038),
-        $ = n(91675),
+        F = n(52038),
+        x = n(91675),
         H = n(84933),
-        z = n(15588),
-        F = n.n(z),
+        $ = n(15588),
+        z = n.n($),
         j = n(29233);
       function O(e) {
         const [t] = (0, L.QD)("gid"),
@@ -484,10 +486,10 @@
         return n
           ? a.createElement(
               "div",
-              { className: F().Ctn },
+              { className: z().Ctn },
               a.createElement(
                 "div",
-                { className: F().EventName },
+                { className: z().EventName },
                 a.createElement("h2", null, n.GetNameWithFallback(s)),
                 a.createElement(
                   "a",
@@ -504,7 +506,7 @@
       }
       function K(e) {
         const { eventModel: t } = e,
-          n = D(N(t)),
+          n = D(C(t)),
           [s] = (0, L.QD)("accountid"),
           r = (0, M.f1)();
         return a.createElement(
@@ -512,13 +514,13 @@
           null,
           a.createElement(
             "div",
-            { className: F().User },
+            { className: z().User },
             a.createElement(I.p, { accountID: s }),
           ),
           a.createElement(q, {
             eventModel: t,
             rgUserRegs: n.today,
-            strTitle: "Today " + (0, $.$z)(r),
+            strTitle: "Today " + (0, x.$z)(r),
           }),
           a.createElement(q, {
             eventModel: t,
@@ -570,9 +572,9 @@
         return a.createElement(
           "div",
           {
-            className: (0, x.A)({
-              [F().DescriptionWrapper]: !0,
-              [F().Expanded]: n,
+            className: (0, F.A)({
+              [z().DescriptionWrapper]: !0,
+              [z().Expanded]: n,
             }),
             onClick: r,
             onMouseEnter: () => s(!0),
@@ -584,21 +586,21 @@
       function Q(e) {
         const { reg: t, eventModel: n } = e,
           s = new j.b2(t.steamid).GetAccountID(),
-          [r] = (0, b.KT)(t.userReg.accountid),
+          [r] = (0, k.KT)(t.userReg.accountid),
           [o, l] = (0, a.useState)(!0),
           [c, u] = (0, a.useState)([]),
-          [d, m] = (0, a.useState)(!1),
+          [m, d] = (0, a.useState)(!1),
           p = t.userReg,
-          { group: g, session: E } = C(
+          { group: g, session: E } = N(
             n.jsondata.meet_steam_groups,
             t.group_id,
             t.session_id,
           ),
-          [S, _, v] = (0, H.uD)(),
+          [_, S, v] = (0, H.uD)(),
           h =
             ((M = n.GID),
             (w = s),
-            (N = t.group_id),
+            (C = t.group_id),
             (D = t.session_id),
             (0, f.n)({
               mutationFn: async ({ bIncludeSelf: e, rgGuests: t }) => {
@@ -606,7 +608,7 @@
                 n.append("sessionid", T.TS.SESSIONID),
                   n.append("gid", M),
                   n.append("accountid", "" + w),
-                  n.append("meetsteam_group_id", "" + N),
+                  n.append("meetsteam_group_id", "" + C),
                   n.append("meetsteam_session_id", "" + D),
                   n.append("include_self", "" + (e ? 1 : 0)),
                   t?.length && n.append("guests", t.join("|"));
@@ -615,22 +617,74 @@
                 return 1 == s?.data?.success;
               },
             }));
-        var M, w, N, D;
+        var M, w, C, D;
+        const A = new Set(
+            t.guests_attendance?.length > 0
+              ? t.guests_attendance.split("|")
+              : [],
+          ),
+          R = t.attendance_count > A.size,
+          L = (e, t, n, s) =>
+            a.createElement(
+              a.Fragment,
+              null,
+              a.createElement(
+                "span",
+                { className: z().GuestTitle },
+                e,
+                ":",
+                " ",
+              ),
+              t,
+              n &&
+                a.createElement(
+                  a.Fragment,
+                  null,
+                  " ",
+                  a.createElement(
+                    "span",
+                    { className: z().GuestEmail },
+                    "(",
+                    n,
+                    ")",
+                  ),
+                ),
+              a.createElement(
+                a.Fragment,
+                null,
+                " ",
+                "-",
+                a.createElement(
+                  "span",
+                  null,
+                  s ? "✅ checked in" : "☐ not checked in",
+                ),
+              ),
+            );
         return a.createElement(
           "div",
           null,
           a.createElement(V, { group: g, session: E }),
-          Boolean(d)
+          Boolean(m)
             ? a.createElement(
                 "div",
-                { className: F().CheckedIn },
+                { className: z().CheckedIn },
                 "Attendee has been checked in",
               )
             : a.createElement(
                 "div",
-                { className: F().RegisteredUsers },
-                a.createElement(k.Yh, {
-                  label: "Attendee: " + p.name || 0,
+                { className: z().RegisteredUsers },
+                a.createElement(b.Yh, {
+                  label: a.createElement(
+                    a.Fragment,
+                    null,
+                    L(
+                      "Attendee",
+                      p.name || r.persona_name,
+                      p.email_override,
+                      R,
+                    ),
+                  ),
                   checked: o,
                   onChange: l,
                 }),
@@ -639,9 +693,13 @@
                     a.Fragment,
                     null,
                     p.guest_names.map((e) =>
-                      a.createElement(k.Yh, {
+                      a.createElement(b.Yh, {
                         key: t.group_id + "_" + t.session_id + "_" + e,
-                        label: "Guest Name: " + e,
+                        label: a.createElement(
+                          a.Fragment,
+                          null,
+                          L("Guest", e, void 0, A.has(e)),
+                        ),
                         checked: c.includes(e),
                         onChange: (t) => {
                           u((n) =>
@@ -656,14 +714,14 @@
                     ),
                   ),
                 a.createElement(
-                  k.jn,
-                  { onClick: _ },
+                  b.jn,
+                  { onClick: S },
                   "Check in selected people",
                 ),
               ),
           a.createElement(
             U.E,
-            { active: S },
+            { active: _ },
             a.createElement(
               i.tH,
               null,
@@ -672,7 +730,7 @@
                 bIncludeSelf: o,
                 rgGuestsAttending: c,
                 fnMarkAttendance: h,
-                fnOnSuccess: () => m(!0),
+                fnOnSuccess: () => d(!0),
               }),
             ),
           ),
@@ -735,15 +793,15 @@
         return t && n
           ? a.createElement(
               "div",
-              { className: F().SessionInfo },
+              { className: z().SessionInfo },
               a.createElement(
                 "div",
-                { className: F().SessionName },
+                { className: z().SessionName },
                 n.localized_session_title[0],
               ),
               a.createElement(
                 "div",
-                { className: F().SessionTime },
+                { className: z().SessionTime },
                 o,
                 " @ ",
                 a.createElement("b", null, l),
@@ -765,9 +823,9 @@
             )
           : a.createElement("div", null, "Session Infomrmation Missing");
       }
-      var Y = n(97058),
-        W = n(29645),
-        Z = n.n(W),
+      var W = n(97058),
+        Y = n(29645),
+        Z = n.n(Y),
         X = n(12155),
         ee = n(14771),
         te = n(78327);
@@ -801,7 +859,7 @@
               a.createElement(
                 "div",
                 { className: Z().AtendeeSearchRow },
-                a.createElement(k.pd, {
+                a.createElement(b.pd, {
                   type: "text",
                   label: "Search for an attendee",
                   value: r,
@@ -819,7 +877,7 @@
       }
       function se(e) {
         const { eventModel: t, strSearch: n } = e,
-          s = N(t, n),
+          s = C(t, n),
           [r, i] = (0, a.useState)(null),
           [o, l] = (0, a.useMemo)(() => {
             const e = new Map();
@@ -860,12 +918,8 @@
                         "div",
                         { key: e, className: Z().AttendeeRow },
                         a.createElement(
-                          k.$n,
-                          {
-                            onClick: () => {
-                              i(o.get(e.toLowerCase()));
-                            },
-                          },
+                          b.$n,
+                          { onClick: () => i(o.get(e.toLowerCase())) },
                           e,
                         ),
                       ),
@@ -890,7 +944,7 @@
             "div",
             { className: Z().AtendeeListButtonRow },
             a.createElement(
-              k.$n,
+              b.$n,
               { onClick: r },
               a.createElement(X.uMb, { className: Z().BackToListIcon }),
               "Back to full list",
@@ -964,7 +1018,7 @@
           "div",
           { className: Z().DisplayAllDaysCtn },
           o &&
-            a.createElement(k.Yh, {
+            a.createElement(b.Yh, {
               label: "Show past events",
               checked: s,
               onChange: r,
@@ -998,7 +1052,7 @@
         } = e;
         return a.createElement(
           "div",
-          { className: (0, x.A)(Z().DisplayDaySessions, !i && Z().NotToday) },
+          { className: (0, F.A)(Z().DisplayDaySessions, !i && Z().NotToday) },
           a.createElement("div", { className: Z().DateName }, (0, E.$w)(n)),
           a.createElement(
             "div",
@@ -1027,8 +1081,8 @@
           } = e,
           c = (0, o.sf)(T.TS.LANGUAGE),
           u = (0, M.s4)(),
-          { sDisplayTimeZone: d, rtime_start: m } = (0, h._t)(r),
-          p = (0, h.us)(m, d),
+          { sDisplayTimeZone: m, rtime_start: d } = (0, h._t)(r),
+          p = (0, h.us)(d, m),
           g = l.reduce((e, t) => e + (t.guests_registered ?? 0), 0),
           E = l.reduce(
             (e, t) =>
@@ -1038,17 +1092,17 @@
                 : 0),
             0,
           ),
-          [S, _, v] = (0, H.uD)(),
+          [_, S, v] = (0, H.uD)(),
           w =
-            ((C = t.GID),
-            (N = s.group_id),
+            ((N = t.GID),
+            (C = s.group_id),
             (D = r.id),
             (0, f.n)({
               mutationFn: async ({ nCapacity: e }) => {
                 const t = new FormData();
                 t.append("sessionid", T.TS.SESSIONID),
-                  t.append("gid", C),
-                  t.append("meetsteam_group_id", "" + N),
+                  t.append("gid", N),
+                  t.append("meetsteam_group_id", "" + C),
                   t.append("meetsteam_session_id", "" + D),
                   t.append("capacity", "" + e);
                 const n = `${T.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
@@ -1056,7 +1110,7 @@
                 return 1 == a?.data?.success;
               },
             }));
-        var C, N, D;
+        var N, C, D;
         return a.createElement(
           "div",
           { className: Z().DisplaySession },
@@ -1085,13 +1139,13 @@
               a.Fragment,
               null,
               a.createElement(
-                k.$n,
-                { className: (0, x.A)(Z().SetCapacityButton), onClick: _ },
+                b.$n,
+                { className: (0, F.A)(Z().SetCapacityButton), onClick: S },
                 "Update capacity...",
               ),
               a.createElement(
                 U.E,
-                { active: S },
+                { active: _ },
                 a.createElement(
                   i.tH,
                   null,
@@ -1147,7 +1201,7 @@
                     );
                 },
               },
-              a.createElement(k.pd, {
+              a.createElement(b.pd, {
                 className: Z().SetCapacityInput,
                 label: "New capacity",
                 type: "text",
@@ -1170,34 +1224,34 @@
             "div",
             { className: Z().CapacityBarMax },
             a.createElement("div", {
-              className: (0, x.A)(Z().CapacityBarCurrent, r ? Z().Full : ""),
+              className: (0, F.A)(Z().CapacityBarCurrent, r ? Z().Full : ""),
               style: { width: o },
             }),
           ),
         );
       }
-      const de = {
+      const me = {
         MeetSteamAttendance: () => `${s.B.MeetSteamRoute()}attendance`,
         MeetSteamEvent: () => `${s.B.MeetSteamRoute()}:gid(\\d+)`,
         MeetSteamAttendeeList: () => `${s.B.MeetSteamRoute()}attendeelist`,
       };
-      function me(e) {
+      function de(e) {
         return a.createElement(
           r.dO,
           null,
           a.createElement(r.qh, {
-            path: de.MeetSteamAttendance(),
+            path: me.MeetSteamAttendance(),
             render: (e) => a.createElement(O, { ...e }),
           }),
           a.createElement(r.qh, {
-            path: de.MeetSteamAttendeeList(),
+            path: me.MeetSteamAttendeeList(),
             render: (e) => a.createElement(ae, { ...e }),
           }),
           a.createElement(r.qh, {
-            path: de.MeetSteamEvent(),
-            render: (e) => a.createElement(_, { ...e }),
+            path: me.MeetSteamEvent(),
+            render: (e) => a.createElement(S, { ...e }),
           }),
-          a.createElement(r.qh, null, a.createElement(Y.a, null)),
+          a.createElement(r.qh, null, a.createElement(W.a, null)),
         );
       }
     },

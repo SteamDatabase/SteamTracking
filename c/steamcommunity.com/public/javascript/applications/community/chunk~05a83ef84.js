@@ -1398,6 +1398,18 @@
                 _.doc,
               ));
         }
+        ReplaceDocument(_) {
+          this.m_bbcode != _ &&
+            this.UpdateState((_) => {
+              this.m_bbcode = _;
+              const _ = this.m_bbcodeParser.ParseBBCode(_);
+              return this.m_state._.replaceWith(
+                0,
+                this.m_state.doc.content.size,
+                _,
+              ).scrollIntoView();
+            });
+        }
       }
       function _(_, _) {
         (0, _._)(null == _ ? void 0 : _.OnStateChangedCallbacks, _);
@@ -2948,7 +2960,7 @@
           {
             className: _.TooltipWithShortcut,
           },
-          _.createElement("div", null, (0, _._)(_)),
+          _.createElement("div", null, "string" == typeof _ ? (0, _._)(_) : _),
           _.createElement(
             "div",
             null,

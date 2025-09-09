@@ -4,7 +4,7 @@
   [9063],
   {
     61738: (e, s, t) => {
-      var n = {
+      var r = {
         "./af": 30911,
         "./af.js": 30911,
         "./ar": 63595,
@@ -280,36 +280,36 @@
         "./zh-tw": 34518,
         "./zh-tw.js": 34518,
       };
-      function r(e) {
+      function n(e) {
         var s = a(e);
         return t(s);
       }
       function a(e) {
-        if (!t.o(n, e)) {
+        if (!t.o(r, e)) {
           var s = new Error("Cannot find module '" + e + "'");
           throw ((s.code = "MODULE_NOT_FOUND"), s);
         }
-        return n[e];
+        return r[e];
       }
-      (r.keys = function () {
-        return Object.keys(n);
+      (n.keys = function () {
+        return Object.keys(r);
       }),
-        (r.resolve = a),
-        (e.exports = r),
-        (r.id = 61738);
+        (n.resolve = a),
+        (e.exports = n),
+        (n.id = 61738);
     },
     44165: (e, s, t) => {
       "use strict";
       t.d(s, { HD: () => c, f1: () => v, s4: () => h, sB: () => m });
-      var n = t(34629),
-        r = t(14947),
+      var r = t(34629),
+        n = t(14947),
         a = t(19367),
         j = t.n(a),
-        o = t(90626),
-        l = (t(4434), t(78327));
+        l = t(90626),
+        o = (t(4434), t(78327));
       class i {
         constructor() {
-          (0, r.Gn)(this);
+          (0, n.Gn)(this);
         }
         bOpenEventLandingPage = !1;
         bIncludeFeaturedAsGameSource = !0;
@@ -318,10 +318,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return !(0, l.Y2)();
+          return !(0, o.Y2)();
         }
         get bIsCuratorsEnabled() {
-          return !(0, l.Y2)();
+          return !(0, o.Y2)();
         }
         get bIncludeCurators() {
           return !0;
@@ -344,7 +344,7 @@
           const s = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             s.has("t") &&
-            ("dev" == l.TS.WEB_UNIVERSE || "beta" == l.TS.WEB_UNIVERSE)
+            ("dev" == o.TS.WEB_UNIVERSE || "beta" == o.TS.WEB_UNIVERSE)
           ) {
             const e = s.get("t");
             let t = /^\d+$/.test(e) ? j().unix(Number.parseInt(e)) : j()(e);
@@ -358,7 +358,7 @@
           }
         }
       }
-      (0, n.Cg)([r.sH], i.prototype, "nOverrideDateNow", void 0);
+      (0, r.Cg)([n.sH], i.prototype, "nOverrideDateNow", void 0);
       const c = new i();
       window.g_EventCalendarDevFeatures = c;
       const u = new Date(),
@@ -367,10 +367,10 @@
         return c.nOverrideDateNow ?? d;
       }
       function v() {
-        return o.useMemo(() => m(), []);
+        return l.useMemo(() => m(), []);
       }
       function h() {
-        return o.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
+        return l.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
       }
     },
     51706: (e, s, t) => {
@@ -387,11 +387,11 @@
         pY: () => b.pY,
         EN: () => a.E,
       });
-      var n = t(90626),
-        r = t(10981),
+      var r = t(90626),
+        n = t(10981),
         a = t(21869),
         j = t(2654),
-        o =
+        l =
           (t(72739),
           t(48902),
           t(60155),
@@ -401,36 +401,36 @@
           t(13871),
           t(78327));
       t(28460);
-      function l(e) {
+      function o(e) {
         const { labelledBy: s } = e || {},
-          [t, r] = n.useState(null);
+          [t, n] = r.useState(null);
         return {
           headerId: s || t,
-          context: n.useMemo(() => ({ setHeaderId: r }), []),
+          context: r.useMemo(() => ({ setHeaderId: n }), []),
         };
       }
       function i(e) {
         const {
             active: s,
             onDismiss: t,
-            className: o,
+            className: l,
             modalClassName: i,
             children: c,
             ...u
           } = e,
-          { headerId: d, context: m } = l({ labelledBy: e["aria-labelledby"] });
-        return n.createElement(
-          r.t6.Provider,
+          { headerId: d, context: m } = o({ labelledBy: e["aria-labelledby"] });
+        return r.createElement(
+          n.t6.Provider,
           { value: m },
-          n.createElement(
+          r.createElement(
             a.E,
             { active: s },
-            n.createElement(
+            r.createElement(
               j.x_,
               { onEscKeypress: t, className: i },
-              n.createElement(
-                r.UC,
-                { role: "dialog", "aria-labelledby": d, className: o, ...u },
+              r.createElement(
+                n.UC,
+                { role: "dialog", "aria-labelledby": d, className: l, ...u },
                 c,
               ),
             ),
@@ -439,10 +439,10 @@
       }
       function c(e) {
         const { className: s, children: t } = e;
-        return n.createElement(
+        return r.createElement(
           a.E,
           { active: !0 },
-          n.createElement("div", { className: s }, t),
+          r.createElement("div", { className: s }, t),
         );
       }
       t(81194);
@@ -451,54 +451,37 @@
         m = t(76217),
         v = t(88843);
       function h(e) {
-        const { children: s, navID: t, closeModal: r } = e,
-          a = n.createRef(),
+        const { children: s, navID: t, closeModal: n } = e,
+          a = r.createRef(),
           j = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return (0, o.Qn)() && !o.TS.IN_STEAMUI
-          ? n.createElement(
+        return (0, l.Qn)() && !l.TS.IN_STEAMUI
+          ? r.createElement(
               u.B2,
               {
                 navID: t,
                 navTreeRef: a,
-                onCancelButton: r,
+                onCancelButton: n,
                 className: v.GamepadOnlyModalWrapper,
               },
-              n.createElement(
+              r.createElement(
                 d.q,
                 null,
-                n.createElement(
+                r.createElement(
                   m.Z,
                   {
                     className: v.GamepadOnlyPanelWrapper,
                     onGamepadDirection: j,
-                    focusableIfNoChildren: !0,
+                    focusableIfEmpty: !0,
                   },
                   s,
                 ),
               ),
             )
-          : n.createElement(n.Fragment, null, s);
+          : r.createElement(r.Fragment, null, s);
       }
       var b = t(78395),
         f = t(10411);
       t(76222);
-    },
-    4434: (e, s, t) => {
-      "use strict";
-      t.d(s, { m: () => j });
-      var n = t(41735),
-        r = t.n(n),
-        a = t(90626);
-      function j(e) {
-        const s = a.useRef(r().CancelToken.source());
-        return (
-          a.useEffect(() => {
-            const t = s.current;
-            return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          s.current
-        );
-      }
     },
   },
 ]);

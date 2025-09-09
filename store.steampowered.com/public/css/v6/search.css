@@ -190,7 +190,7 @@
 	background: rgba( 0, 0, 0, 0.2 );
 
 	margin-bottom: 5px;
-	display: block;
+	display: flex;
 	text-decoration: none;
 	color: #c6d4df;
 			font-family: "Motiva Sans", Sans-serif;
@@ -222,7 +222,7 @@
 }
 
 #search_result_container {
-	max-width: 686px;
+	max-width: 100%;
 }
 
 /* wait until dynamicstore is ready to show results */
@@ -232,8 +232,11 @@
 
 .search_result_row {
 	height: 45px;
+	width: 100%;
 	overflow: hidden;
 	transition: height 0.25s, margin 0.25s;
+	display: flex;
+	flex-direction: row;
 }
 
 .search_results.hide_owned    .ds_owned,
@@ -341,8 +344,10 @@
 }
 
 .responsive_search_name_combined {
-	display: inline-block;
-	vertical-align: top;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .responsive_search_name_combined .includes_games_results {
@@ -449,7 +454,7 @@
 	text-align: right;
 }
 .search_result_row .col.search_name {
-	width: 275px;
+	flex-grow: 1;
 	margin-left: 5px;
 }
 .search_result_row.ds_flagged:not(.ds_wishlist) .col.search_name {
@@ -482,12 +487,15 @@
 
 .col.search_discount_and_price .discount_block {
 	width: 150px;
+	padding-right: 8px;
+	box-sizing: border-box;
 	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 	align-items: center;
 }
 .col.search_discount_and_price .discount_block .discount_prices {
-	flex: 100px;
-	align-items: flex-end;
 	background-color: inherit;
 }
 .col.search_discount_and_price .discount_block.no_discount .discount_prices .discount_final_price {

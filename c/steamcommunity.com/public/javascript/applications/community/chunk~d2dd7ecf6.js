@@ -21,26 +21,26 @@
     },
     chunkid: (module) => {
       module.exports = {
-        LightboxDialog: "_3ZlRVLZBBJ5AlqcTXgH39I",
-        LightboxImageContainer: "_2Q0i393KuCPDvhYcQE_8hn",
-        LightboxMainImage: "_1QaLXa9BqcHtuXQn-WeKKB",
-        LightboxPrevImage: "_3CBDhewhtAYADfOEKQ088x",
-        LightboxNextImage: "_1bAQfVTEag1iry95f9aB5b",
-        LightboxToolbar: "_1peagr4kB_Df9EaBgyqNw_",
-        LightboxImageTitle: "_1SOhddmKueqNM0bBsPezHq",
-        LightboxToolbarButtons: "hK1C_5FvGkWxVfYm1K5O-",
-        LightboxCloseButton: "_3Yti5xlO0MO1IRLD4owQ3n",
-        LightboxLeftButton: "WtITgXcX98FEtm06NIQNY",
-        LightboxRightButton: "KKIxD3K9xRk6zlGyP2kmI",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SavedImage: "_1y3QVgsz4daj3E3S5wzwt-",
         SaveButton: "_2hloqzkRkAWkw50l4XPN-N",
         HaventSavedInAShortTime: "_3xoBR2gVk2F0Bmejh20Yhl",
         HaventSavedInALongTime: "_1bg505mDp3agK0eHP0NoxI",
         Pulse: "_3oWE-wt1PQ7Rv2IJ0vCmO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        LightboxDialog: "jdJJwFEyHc1BcauL8BGi8",
+        LightboxImageContainer: "_2AfDMWU1r2BkWWOuPJBEG4",
+        LightboxMainImage: "_3lke7Ru5iG92hZgusH_6mW",
+        LightboxPrevImage: "_12Q6eXlxa7az2UzSkyoVZi",
+        LightboxNextImage: "_1-u-acR7PtZy8y0uwVsHpe",
+        LightboxToolbar: "_1nvyoL-4JdDLMQAb0G0qbB",
+        LightboxImageTitle: "_12w2ThvzUOKOyHZoctVBYy",
+        LightboxToolbarButtons: "_2EbKH8e98l6jfPsQZbpF5d",
+        LightboxCloseButton: "_3V6J1j2mWeEq42tDXjdlyT",
+        LightboxLeftButton: "_1Pkq-IzPmH3SL1Ch4rxT7E",
+        LightboxRightButton: "_3hJAw5_2ezz8JlA8lniMOV",
       };
     },
     chunkid: (module) => {
@@ -764,18 +764,9 @@
           null != _ &&
             _.createElement(_, {
               mainSrc: _[_].url,
-              mainSrcThumbnail: _[_].thumb_url,
               imageTitle: _[_].file_name,
               nextSrc: _ < _.length - 1 ? _[_ + 1].url : void 0,
-              nextSrcThumbnail: _ < _.length - 1 ? _[_ + 1].thumb_url : void 0,
-              nextLabel: (0, _._)("#ClanImage_Next"),
-              prevLabel: (0, _._)("#ClanImage_Prev"),
-              closeLabel: (0, _._)("#ClanImage_Close"),
-              zoomInLabel: (0, _._)("#ClanImage_ZoomIn"),
-              zoomOutLabel: (0, _._)("#ClanImage_ZoomOut"),
-              imageLoadErrorMessage: (0, _._)("#ClanImage_ImageLoadFailure"),
               prevSrc: _ > 0 ? _[_ - 1].url : void 0,
-              prevSrcThumbnail: _ > 0 ? _[_ - 1].thumb_url : void 0,
               onMoveNextRequest: () => _(_ + 1),
               onMovePrevRequest: () => _(_ - 1),
               onCloseRequest: _,

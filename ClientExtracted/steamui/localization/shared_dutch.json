@@ -1114,9 +1114,9 @@
     "PartnerEvent_Other": "Ander evenement",
     "PartnerEvent_SteamAwardNominations": "Aanvraag voor een Steam Award-nominatie",
     "PartnerEvent_SteamAwardVoteRequest": "Verzoek om stemmen voor de Steam Awards",
-    "PartnerEvent_SteamGameFestival_ArtistState": "Next Festival van Steam: statement van de maker(s)",
-    "PartnerEvent_SteamGameFestival_Broadcast": "Next Festival van Steam: livestream",
-    "PartnerEvent_SteamGameFestival_OfficeHour": "Next Festival van Steam: kantooruren",
+    "PartnerEvent_SteamGameFestival_ArtistState": "Steam Next Festival: statement van de maker(s)",
+    "PartnerEvent_SteamGameFestival_Broadcast": "Steam Next Festival: livestream",
+    "PartnerEvent_SteamGameFestival_OfficeHour": "Steam Next Festival: kantooruren",
     "PartnerEvent_Curator_Group_Members": "Groepsaankondiging voor curators",
     "PartnerEvent_Curator_Public": "Openbaar nieuwsbericht van curator",
     "ClanMembershipList": "Ledenlijst weergeven",
@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Spelopname",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Deze spelsessie opnemen)",
     "QuickAccess_Tab_GameRecording": "Spelopname",
+    "Settings_GameRecording_InstantClip_Label": "Clipduur in seconden",
     "AccessibilityFeatures": "Toegankelijkheidsfuncties",
     "AccessibilityFeaturesWithCount": "Toegankelijkheidsfuncties (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Aanpasbare moeilijkheidsgraad",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "Ruilbescherming",
     "SteamNotifications_TradeReversal_Body": "Er is een ruilactie teruggedraaid",
     "SteamNotifications_TradeReversal_Body_Short": "Er is een ruilactie teruggedraaid",
-    "SteamNotifications_TradeReversal_Description": "Een van je recente ruilacties is teruggedraaid door je ruilpartner."
+    "SteamNotifications_TradeReversal_Description": "Een van je recente ruilacties is teruggedraaid door je ruilpartner.",
+    "AddonPicker_Search": "Zoeken ...",
+    "ReorderableList_ReorderInstructions": "Selecteer en verplaats naar boven of beneden",
+    "ControllerButton_8BitDo": "8BitDo-knop"
 }

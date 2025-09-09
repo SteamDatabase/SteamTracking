@@ -429,7 +429,7 @@
     },
     19560: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MarketBaseUIRoot: () => E, default: () => y });
+      n.r(t), n.d(t, { MarketBaseUIRoot: () => S, default: () => y });
       var a = n(90626),
         r = n(21869),
         o = n(55147),
@@ -542,10 +542,10 @@
           r.E,
           { active: t },
           a.createElement(
-            S,
+            E,
             { onRequestClose: n },
             a.createElement(
-              E,
+              S,
               { zoo: !0 },
               a.createElement(o.nk, {
                 ...c,
@@ -557,7 +557,7 @@
           ),
         );
       }
-      function S(e) {
+      function E(e) {
         const { onRequestClose: t, children: n } = e,
           r = (0, v.Qn)();
         return a.createElement(
@@ -573,7 +573,7 @@
           ),
         );
       }
-      function E(e) {
+      function S(e) {
         return a.createElement(f, { ...e });
       }
     },
@@ -1069,7 +1069,7 @@
             prop: "justify",
             responsive: !0,
             className: h.Justify,
-            cssProperty: (e) => ["--justify", S(e)],
+            cssProperty: (e) => ["--justify", E(e)],
           },
           {
             prop: "align",
@@ -1103,21 +1103,21 @@
           },
           { prop: "inline", responsive: !0, className: h.Inline },
         ];
-      function S(e) {
+      function E(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
-      var E = n(8833);
+      var S = n(8833);
       function x(e) {
         const { orientation: t = "horizontal", size: n = "1", ...r } = e;
         return a.createElement("div", {
           role: "separator",
           "aria-orientation": t,
-          ...(0, l.mz)({ ...r, size: n, className: E.Separator }, w),
+          ...(0, l.mz)({ ...r, size: n, className: S.Separator }, w),
         });
       }
       const w = [
         ...i.L,
-        { prop: "size", className: (e) => E[`Size-${e}`], responsive: !0 },
+        { prop: "size", className: (e) => S[`Size-${e}`], responsive: !0 },
         {
           prop: "color",
           cssProperty: (e) => ["--separator-color", (0, l.Fd)(e)],
@@ -1356,14 +1356,14 @@
           C = (0, M.It)(m.context, { role: s }),
           {
             getFloatingProps: b,
-            getReferenceProps: S,
-            getItemProps: E,
+            getReferenceProps: E,
+            getItemProps: S,
           } = (0, M.bv)([C, u, d, f, _, y]);
         return {
           floating: m,
           getFloatingProps: b,
-          getReferenceProps: S,
-          getItemProps: E,
+          getReferenceProps: E,
+          getItemProps: S,
           open: p,
           activeIndex: r,
           selectedIndex: c,
@@ -1980,7 +1980,7 @@
           filterPlaceholder: r,
         };
       }
-      const Se = {
+      const Ee = {
         Root: function (e) {
           const { children: t, state: n, clearable: r = !0, ...o } = e,
             [c, i] = (0, a.useState)(void 0);
@@ -2092,8 +2092,8 @@
               popoverPlacement: C,
               ...b
             } = ke("<ComboboxTrigger>"),
-            S = { tabIndex: 0, children: t },
-            E =
+            E = { tabIndex: 0, children: t },
+            S =
               s && h
                 ? a.createElement(X, {
                     onClick: (e) => {
@@ -2107,13 +2107,13 @@
               r,
               a.createElement(R, {
                 beforeContent: n,
-                afterContent: E,
+                afterContent: S,
                 hasValue: !!s,
                 cursor: "pointer",
                 tabIndex: 0,
                 ...b,
               }),
-              S,
+              E,
               void 0,
             );
           return a.createElement(K.Anchor, null, x);
@@ -2131,7 +2131,7 @@
           });
         },
       };
-      function Ee(e) {
+      function Se(e) {
         return e
           ? "string" == typeof e
             ? e
@@ -2152,7 +2152,7 @@
               filter: o,
               filterPlaceholder: c,
               placeholder: i,
-              getOptionLabel: l = Ee,
+              getOptionLabel: l = Se,
               ...s
             } = e,
             p = be({
@@ -2180,7 +2180,7 @@
               ),
             ),
           );
-        }, Se),
+        }, Ee),
         we = (0, a.createContext)(null);
       function ke(e) {
         const t = (0, a.useContext)(we);
@@ -2331,7 +2331,7 @@
                     hitSlop: !0,
                   })
                 : a.createElement(fe, null),
-            S = W(
+            E = W(
               n,
               a.createElement(R, {
                 afterContent: b,
@@ -2345,7 +2345,7 @@
               C,
               void 0,
             );
-          return a.createElement(K.Anchor, null, S);
+          return a.createElement(K.Anchor, null, E);
         },
         Value: Ae,
         Placeholder: ze,
@@ -2872,7 +2872,7 @@
           bt,
           { ...e },
           a.createElement(
-            Et,
+            St,
             null,
             a.createElement(xt, { start: t[0], end: t[1] }),
           ),
@@ -2911,7 +2911,7 @@
                 ) {
                   const t = m.current.getBoundingClientRect(),
                     n = kt(e.clientX - t.left, [0, t.width], [o, c]);
-                  u.current = St(l, n);
+                  u.current = Et(l, n);
                 }
               },
               onPointerUp: (e) => {
@@ -2940,7 +2940,7 @@
                 const t = m.current.getBoundingClientRect(),
                   n = kt(e.clientX - t.left, [0, t.width], [o, c]),
                   a = Tt({ value: n, min: o, max: c, step: s }),
-                  r = St(l, n),
+                  r = Et(l, n),
                   p = [...l];
                 (p[r] = a), i(p);
               },
@@ -2949,7 +2949,7 @@
           ),
         );
       }
-      function St(e, t) {
+      function Et(e, t) {
         if (e.length <= 1) return e.length - 1;
         let n = 0,
           a = Math.abs(t - e[0]);
@@ -2959,7 +2959,7 @@
         }
         return n;
       }
-      function Et(e) {
+      function St(e) {
         return a.createElement("div", { className: vt.SliderTrack, ...e });
       }
       function xt(e) {
@@ -3303,9 +3303,9 @@
           "images/applications/community/g3sg1.png?v=valveisgoodatcaching",
         bn =
           n.p + "images/applications/community/awp.png?v=valveisgoodatcaching",
-        Sn =
-          n.p + "images/applications/community/mag7.png?v=valveisgoodatcaching",
         En =
+          n.p + "images/applications/community/mag7.png?v=valveisgoodatcaching",
+        Sn =
           n.p + "images/applications/community/nova.png?v=valveisgoodatcaching",
         xn =
           n.p +
@@ -3416,8 +3416,8 @@
           scar20: (0, r.YJ)(yn),
           g3sg1: (0, r.YJ)(Cn),
           awp: (0, r.YJ)(bn),
-          mag7: (0, r.YJ)(Sn),
-          nova: (0, r.YJ)(En),
+          mag7: (0, r.YJ)(En),
+          nova: (0, r.YJ)(Sn),
           sawedoff: (0, r.YJ)(xn),
           xm1014: (0, r.YJ)(wn),
           negev: (0, r.YJ)(kn),
@@ -4409,8 +4409,8 @@
         ya = `${_a}_item_class`,
         Ca = `${_a}_Event`,
         ba = ["item_class_10", "item_class_6"],
-        Sa = "4",
-        Ea = (0, a.createContext)({});
+        Ea = "4",
+        Sa = (0, a.createContext)({});
       function xa(e) {
         const {
             filter: t,
@@ -4430,7 +4430,7 @@
             Pt.Provider,
             { value: r },
             a.createElement(
-              Ea.Provider,
+              Sa.Provider,
               { value: o },
               a.createElement(
                 c.a,
@@ -4450,9 +4450,9 @@
                   a.createElement(
                     C,
                     {
-                      gap: Sa,
+                      gap: Ea,
                       align: { initial: "stretch", sm: "center" },
-                      marginY: Sa,
+                      marginY: Ea,
                       direction: { initial: "column", sm: "row" },
                     },
                     a.createElement(Pa, {
@@ -4562,7 +4562,7 @@
           C,
           {
             justify: u ? "between" : void 0,
-            marginTop: Sa,
+            marginTop: Ea,
             direction: u ? "row" : "column",
             gap: "2",
           },
@@ -4598,7 +4598,7 @@
           u &&
             a.createElement(
               C,
-              { gap: Sa, justify: "end" },
+              { gap: Ea, justify: "end" },
               u &&
                 a.createElement(
                   T,
@@ -4884,7 +4884,7 @@
         delete y[ya];
         const b = !i.facets.Event || 0 === Object.keys(i.facets).length;
         !i.app || delete y[Ca];
-        const S = ja(_a, y);
+        const E = ja(_a, y);
         if (
           ((0, a.useEffect)(() => {
             !m && v && (u(!0), s && v[s.appid] && l({ ...i, app: s }));
@@ -4902,7 +4902,7 @@
               (0, Re.we)("#AdvancedSearch_FacetLoadError"),
             ),
           );
-        const E = (
+        const S = (
           null === (t = f.data) || void 0 === t
             ? void 0
             : t.rgPlaytime.length
@@ -4926,7 +4926,7 @@
             d &&
             a.createElement(za, {
               loading: f.isLoading,
-              apps: E,
+              apps: S,
               filterBy: v,
               onSelect: (e) =>
                 l({
@@ -4936,7 +4936,7 @@
                 }),
             }),
           a.createElement(Aa, { facet: C, state: i, onStateChange: l }),
-          a.createElement(Fa, { facets: S, state: i, onStateChange: l }),
+          a.createElement(Fa, { facets: E, state: i, onStateChange: l }),
         );
       }
       const Na = {
@@ -5042,7 +5042,7 @@
           s = o.facets[n] || {};
         return a.createElement(
           c.a,
-          { marginTop: Sa },
+          { marginTop: Ea },
           a.createElement(p, { weight: "medium", size: "3" }, t),
           a.createElement(
             pe,
@@ -5235,7 +5235,7 @@
                   color: "dull-6",
                   key: `sep_${o}`,
                   size: "4",
-                  marginTop: Sa,
+                  marginTop: Ea,
                 })
               : null,
           ]),
@@ -5255,22 +5255,22 @@
           },
           a.createElement(
             p,
-            { align: "center", secondary: !0, as: "div", marginTop: Sa },
+            { align: "center", secondary: !0, as: "div", marginTop: Ea },
             e.children,
           ),
         );
       }
       function Wa(e) {
         const { appid: t, ...n } = e,
-          r = (function (e) {
+          c = (function (e) {
             return (0, o.I)({
               queryKey: ["marketfilters", e],
               queryFn: () => Ya(e),
               enabled: !!e,
             });
           })(t);
-        if (r.isLoading) return a.createElement($a, null);
-        if (r.isError || !r.data)
+        if (c.isLoading) return a.createElement($a, null);
+        if (c.isError || !c.data)
           return a.createElement(
             Ga,
             null,
@@ -5280,11 +5280,10 @@
               (0, Re.we)("#AdvancedSearch_FacetLoadError"),
             ),
           );
-        const c = (function (e) {
-          if (e === ha) return ia;
-          return Va;
+        const i = (function (e) {
+          return e === ha && 1 === r.TS.EUNIVERSE ? ia : Va;
         })(t);
-        return a.createElement(c, { appid: t, facets: r.data, ...n });
+        return a.createElement(i, { appid: t, facets: c.data, ...n });
       }
       function Va(e) {
         const { appid: t, facets: n, ...r } = e,
@@ -5302,7 +5301,7 @@
                     align: "center",
                     secondary: !0,
                     as: "div",
-                    marginTop: Sa,
+                    marginTop: Ea,
                     size: "6",
                     weight: "heavy",
                   },
@@ -5314,7 +5313,7 @@
                     align: "center",
                     secondary: !0,
                     as: "div",
-                    marginTop: Sa,
+                    marginTop: Ea,
                     size: "4",
                   },
                   (0, Re.we)("#AdvancedSearch_NoFacets"),
@@ -5335,7 +5334,7 @@
         return n.facets;
       }
       function Ha(e = !0) {
-        const { suggestedApps: t } = (0, a.useContext)(Ea);
+        const { suggestedApps: t } = (0, a.useContext)(Sa);
         return (0, o.I)({
           queryKey: ["marketsuggestedapps"],
           queryFn: async () => {

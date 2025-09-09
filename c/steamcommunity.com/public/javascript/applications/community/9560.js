@@ -6653,8 +6653,7 @@
             ),
           );
         const _ = (function (_) {
-          if (_ === _) return _;
-          return _;
+          return _ === _ && 1 === _._.EUNIVERSE ? _ : _;
         })(_);
         return _.createElement(_, {
           appid: _,

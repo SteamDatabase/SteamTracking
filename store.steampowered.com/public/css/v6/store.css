@@ -343,13 +343,16 @@ body.v6.explore .page_header_ctn {
     color: #ffffff;
     text-decoration: none;
 }
+.v7menu .breadcrumbs {
+	padding-top: 20px;
+}
 
 div.leftcol {
 	width: 616px;
 	float: left;
 }
 div.leftcol.large {
-    width: 686px;
+    width: 73%;
 }
 div.leftcol.small {
 	width: 458px;
@@ -361,7 +364,8 @@ div.rightcol {
 	float: right;
 }
 div.rightcol.small {
-	width: 238px;
+	min-width: 220px;
+	width: calc(27% - 14px);
 }
 div.rightcol.large {
 	width: 466px;
@@ -6398,6 +6402,13 @@ html.mobile_client body.v7menu .home_page_body_ctn:not(.has_takeover) .v7menu_sp
 }
 
 /* 2025 Game Page Widening */
+
+/* TODO: remove !important when the .widestore class is removed */
+body.v6.narrowstore .page_content {
+	max-width: unset !important;
+	width: 940px !important;
+	margin: 0 auto !important;
+}
 
 body.v6.widestore .page_content {
 	max-width: 1200px;

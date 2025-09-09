@@ -2345,7 +2345,7 @@
             _._,
             {
               autoFocus: _,
-              focusableIfNoChildren: _,
+              focusableIfEmpty: _,
               noFocusRing: !0,
               className: _().CompatibilityDetailsContainer,
               ..._,
@@ -2509,7 +2509,7 @@
                 _._,
                 {
                   autoFocus: _,
-                  focusableIfNoChildren: _ || _(),
+                  focusableIfEmpty: _ || _(),
                   noFocusRing: !0,
                 },
                 _,

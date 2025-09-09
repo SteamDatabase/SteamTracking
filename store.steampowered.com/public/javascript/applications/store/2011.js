@@ -51,8 +51,8 @@
       a.d(t, { mK: () => C, DW: () => E, js: () => _, tb: () => v });
       var n = a(90626),
         r = a(20194),
-        o = a(54806),
-        l = a(23809),
+        l = a(54806),
+        o = a(23809),
         s = a(44654),
         i = a(10622),
         c = a(17720),
@@ -80,14 +80,14 @@
         );
       }
       function _(e) {
-        const t = (0, l.KV)(),
+        const t = (0, o.KV)(),
           a = n.useContext(b);
         return (0, r.I)(C(a, t, e));
       }
       function E(e) {
-        const t = (0, l.KV)(),
+        const t = (0, o.KV)(),
           a = n.useContext(b);
-        return (0, o.E)({ queries: e.map((e) => C(a, t, e)) });
+        return (0, l.E)({ queries: e.map((e) => C(a, t, e)) });
       }
       const b = n.createContext({
         loadPersonaState: async (e, t) => {
@@ -136,8 +136,8 @@
       a.d(t, { LG: () => f, hA: () => S });
       var n = a(90626),
         r = a(76217),
-        o = a(67165),
-        l = a(30894),
+        l = a(67165),
+        o = a(30894),
         s = a(55263),
         i = a(17289),
         c = a(52038),
@@ -161,8 +161,8 @@
             bAddLinkToMemberList: g,
             bMinimalDisplay: D,
           } = e,
-          y = (0, o.FV)(t.clan_account_id),
-          [A] = (0, l.L2)();
+          y = (0, l.FV)(t.clan_account_id),
+          [A] = (0, o.L2)();
         if (A || !y)
           return n.createElement(
             "div",
@@ -317,14 +317,14 @@
             { className: v.DevSummaryWidgetCtn },
             n.createElement(b.t, null),
           );
-        let o;
-        const l = r.GetAllDeveloperCreatorClans();
-        if (l?.length > 0)
-          o = { appid: t, name: "", clan_account_id: l[0], type: "developer" };
+        let l;
+        const o = r.GetAllDeveloperCreatorClans();
+        if (o?.length > 0)
+          l = { appid: t, name: "", clan_account_id: o[0], type: "developer" };
         else {
           const e = r.GetAllPublisherCreatorClans();
           if (e?.length > 0)
-            o = {
+            l = {
               appid: t,
               name: "",
               clan_account_id: e[0],
@@ -333,7 +333,7 @@
           else {
             const e = r.GetAllFranchiseCreatorClans();
             e?.length > 0 &&
-              (o = {
+              (l = {
                 appid: t,
                 name: "",
                 clan_account_id: e[0],
@@ -341,11 +341,11 @@
               });
           }
         }
-        return o
+        return l
           ? n.createElement(
               _.tH,
               null,
-              n.createElement(S, { creatorID: o, bSmallFormat: a }),
+              n.createElement(S, { creatorID: l, bSmallFormat: a }),
             )
           : null;
       }
@@ -355,8 +355,8 @@
       a.d(t, { J: () => G, W: () => x });
       var n = a(90626),
         r = a(57876),
-        o = a(45699),
-        l = a(76217),
+        l = a(45699),
+        o = a(76217),
         s = a(23310),
         i = a(55963),
         c = a(30894),
@@ -388,7 +388,7 @@
         const {
             capsule: t,
             bShowParentApp: a,
-            elElementToAppendToHover: o,
+            elElementToAppendToHover: l,
             index: i,
             navKey: c,
             bHideStoreHover: p,
@@ -400,7 +400,7 @@
           [f] = (0, u.t7)(a && h?.GetParentAppID(), r.Xh);
         if (!h) return null;
         const g = Boolean(f),
-          D = n.createElement(k, {
+          D = n.createElement(W, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
@@ -409,7 +409,7 @@
             onlyOneDiscountPct: _,
           });
         return n.createElement(
-          l.Z,
+          o.Z,
           {
             className: (0, A.A)({
               [b().OuterCapsuleContainer]: !0,
@@ -441,10 +441,11 @@
                     bUseSubscriptionLayout: e.bUseSubscriptionLayout,
                     strExtraParams: e.strExtraParams,
                     nCreatorAccountID: e.creatorAccountID,
+                    nWidthMultiplier: e.nWidthMultiplier,
                   },
                   D,
                 ),
-            Boolean(o) && n.createElement(n.Fragment, null, o),
+            Boolean(l) && n.createElement(n.Fragment, null, l),
           ),
           g &&
             n.createElement(L, {
@@ -459,13 +460,13 @@
         const {
             strExtraParams: t,
             parentStoreItem: a,
-            childAppType: l,
+            childAppType: o,
             bPreferDemoStorePage: s,
           } = e,
           i = (0, y.n9)(),
           c = (0, w.Qn)();
         return n.createElement(
-          o.ml,
+          l.ml,
           { className: b().CapsuleParentInfo, ...(0, h.S)(a, i, c, s, t) },
           n.createElement(
             S.oj,
@@ -474,7 +475,7 @@
               "div",
               { className: b().ParentType },
               (0, I.we)(
-                11 == l
+                11 == o
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
               ),
@@ -493,11 +494,11 @@
           ),
         );
       }
-      function k(e) {
+      function W(e) {
         const {
             info: t,
             bHideStatusBanners: a,
-            strExtraParams: l,
+            strExtraParams: o,
             index: s,
             imageType: c,
             bHasParentAppToDisplay: p,
@@ -511,7 +512,7 @@
           I = (0, n.useMemo)(() => S?.GetIncludedAppIDsOrSelf(), [S]);
         if (!S) return null;
         const w = (0, P.NT)(
-          (0, i.It)(`${S.GetStorePageURL(h)}${l ? `?${l}` : ""}`, f, g),
+          (0, i.It)(`${S.GetStorePageURL(h)}${o ? `?${o}` : ""}`, f, g),
         );
         let N;
         "overrideNavigation" in t &&
@@ -529,7 +530,7 @@
               "div",
               { className: (0, A.A)({ [T().TwoWidthCtn]: G }) },
               n.createElement(
-                o.Ii,
+                l.Ii,
                 {
                   href: N ? null : w,
                   style: { display: "block", cursor: "pointer" },
@@ -564,15 +565,15 @@
                 ),
             ),
           ),
-          n.createElement(B, { ...e }),
+          n.createElement(k, { ...e }),
         );
       }
-      function B(e) {
+      function k(e) {
         const {
             info: t,
             bHidePriceIfOwned: a,
-            bHideStatusBanners: o,
-            bUseSubscriptionLayout: l,
+            bHideStatusBanners: l,
+            bUseSubscriptionLayout: o,
             elElementToAppendToHover: s,
             bHidePrice: i,
             bHidePlatforms: p,
@@ -586,8 +587,8 @@
             C &&
             C?.GetIncludedAppIDsOrSelf().length > 0 &&
             C?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
-          S = h && !o;
-        if (l && 0 == C?.GetStoreItemType())
+          S = h && !l;
+        if (o && 0 == C?.GetStoreItemType())
           return n.createElement(f.E, { appid: C.GetAppID(), bIsMuted: E });
         if (s) return null;
         const g = h && a,
@@ -607,15 +608,15 @@
     },
     17289: (e, t, a) => {
       "use strict";
-      a.d(t, { m: () => l });
+      a.d(t, { m: () => o });
       var n = a(45699),
         r = a(90626),
-        o = a(78327);
-      function l(e) {
-        const { href: t, children: a, bAllowFocuseableAnchor: l, ...s } = e;
-        return (0, o.Y2)()
+        l = a(78327);
+      function o(e) {
+        const { href: t, children: a, bAllowFocuseableAnchor: o, ...s } = e;
+        return (0, l.Y2)()
           ? r.createElement("div", { ...s }, a)
-          : l
+          : o
             ? r.createElement(n.Ii, { href: t, ...s }, a)
             : r.createElement("a", { href: t, ...s }, a);
       }

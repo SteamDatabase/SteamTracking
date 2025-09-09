@@ -4,8 +4,7 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_());
 var _ = _(_());
-var _ = _(_()),
-  _ = _(_());
+var _ = _(_());
 function _(_) {
   return _(
     (_) => {

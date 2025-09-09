@@ -3662,6 +3662,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Enregistrement de parties",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(enregistre cette partie)",
     "QuickAccess_Tab_GameRecording": "Enreg. de parties",
+    "Settings_GameRecording_InstantClip_Label": "Durée de l'extrait (en secondes)",
     "AccessibilityFeatures": "Fonctionnalités d'accessibilité",
     "AccessibilityFeaturesWithCount": "Fonctionnalités d'accessibilité (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Difficulté ajustable",
@@ -3687,5 +3688,8 @@
     "SteamNotifications_TradeReversal_Title": "Protection contre les échanges",
     "SteamNotifications_TradeReversal_Body": "Un échange a été annulé",
     "SteamNotifications_TradeReversal_Body_Short": "Un échange a été annulé",
-    "SteamNotifications_TradeReversal_Description": "Un de vos échanges récents a été annulé par l'autre partie."
+    "SteamNotifications_TradeReversal_Description": "Un de vos échanges récents a été annulé par l'autre partie.",
+    "AddonPicker_Search": "Rechercher…",
+    "ReorderableList_ReorderInstructions": "Sélectionnez un élément et déplacez-le vers le haut ou le bas pour réordonner la liste",
+    "ControllerButton_8BitDo": "Bouton 8BitDo"
 }

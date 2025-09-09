@@ -275,6 +275,8 @@
             return 15;
           case "linkedin":
             return 16;
+          case "rednote":
+            return 24;
         }
         return 0;
       }
@@ -525,6 +527,10 @@
               ...__webpack_require__,
             });
           case 24:
+            return _.createElement(_.Yoo, {
+              ...__webpack_require__,
+            });
+          case 25:
           case 0:
             return "invalid social media type";
         }

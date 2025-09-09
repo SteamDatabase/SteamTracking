@@ -401,7 +401,7 @@
                 return (
                   (_.Root.m_FocusRing = _),
                   _.Root.SetProperties({
-                    focusableIfNoChildren: !0,
+                    focusableIfEmpty: !0,
                   }),
                   __webpack_require__.SetModal(!0),
                   _()(_).data("navTreeModal", _),

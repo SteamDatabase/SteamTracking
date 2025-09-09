@@ -2488,22 +2488,5 @@
       }
       const Oe = be;
     },
-    4434: (e, t, n) => {
-      "use strict";
-      n.d(t, { m: () => r });
-      var i = n(41735),
-        a = n.n(i),
-        o = n(90626);
-      function r(e) {
-        const t = o.useRef(a().CancelToken.source());
-        return (
-          o.useEffect(() => {
-            const n = t.current;
-            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
-    },
   },
 ]);

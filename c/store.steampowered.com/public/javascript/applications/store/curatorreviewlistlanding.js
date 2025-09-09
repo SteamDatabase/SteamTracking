@@ -772,6 +772,7 @@
                     bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
+                    nWidthMultiplier: _.nWidthMultiplier,
                   },
                   _,
                 ),

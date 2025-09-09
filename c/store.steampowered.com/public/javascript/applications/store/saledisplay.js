@@ -5961,7 +5961,7 @@
         return _.createElement(
           _._,
           {
-            focusableIfNoChildren: !0,
+            focusableIfEmpty: !0,
             autoFocus: _.autoFocus,
             navKey: "cat_panel" + _.name,
           },

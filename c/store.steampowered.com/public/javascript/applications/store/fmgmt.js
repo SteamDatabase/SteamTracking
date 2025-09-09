@@ -115,6 +115,9 @@
         IncomingInviteGone: "_2spwHF-2Z9jxpKmreqhL3_",
         ThrobberContainer: "_2gVuBqs4SNVBbo83R8fc23",
         DialogText: "kRsD9njPy9CclBtipmAzj",
+        DialogWarning: "_2qS0rCuMQ43B6InDgKODss",
+        TwoFactorCodeBox: "_3-gKfctqYjcg0lvG4G_N3V",
+        DialogButtons: "U6nihCNIspsVrDb7fjYhK",
       };
     },
     chunkid: (module) => {
@@ -792,12 +795,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return new URLSearchParams(_.search).get(_);
       }
-      const _ = "invitation",
-        _ = "nonce";
+      const _ = "invitation";
       function _(_) {
         const { cooldownSecondsRemaining: _ } = _,
           _ = {
@@ -822,14 +825,16 @@
             inviterSteamID: _,
             familyGroupID: __webpack_require__,
             role: _,
-            setCooldownModalActive: _,
+            inviteID: _,
           } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(__webpack_require__, _.nonce || null),
+          _ = (0, _._)(__webpack_require__),
           _ = (0, _._)(__webpack_require__, _),
           _ = (0, _._)(_),
+          _ = (0, _._)(__webpack_require__, _),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(""),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(_, "#FamilyManagement_ErrorLoadFamilyInviteGeneric");
         const _ = (0, _._)(),
@@ -918,7 +923,7 @@
                   _.createElement("b", null),
                 ),
               ),
-            ("awaitmobile2fa" === _ || "awaitemail2fa" === _) &&
+            "awaitmobile2fa" === _ &&
               _.createElement(
                 _._,
                 {
@@ -957,6 +962,91 @@
                     onClick: _,
                   },
                   (0, _._)("#FamilyManagement_Close"),
+                ),
+              ),
+            "awaitemail2fa" === _ &&
+              _.createElement(
+                _._,
+                {
+                  title: (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
+                  closeModal: _,
+                },
+                2 === _ &&
+                  _.createElement(
+                    _._,
+                    {
+                      className: _.DialogWarning,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        className: _.DialogText,
+                      },
+                      (0, _._)(
+                        "#FamilyManagement_Await2FAForJoin_ChildWarning_1",
+                      ),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        className: _.DialogText,
+                      },
+                      (0, _._)(
+                        "#FamilyManagement_Await2FAForJoin_ChildWarning_2",
+                        _.createElement("a", {
+                          href: `${_._.HELP_BASE_URL}/wizard/HelpChangePassword`,
+                        }),
+                      ),
+                    ),
+                  ),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.DialogText,
+                  },
+                  (0, _._)(
+                    "#FamilyManagement_Await2FAForJoin_Description_Email",
+                  ),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.TwoFactorCodeBox,
+                  },
+                  _.createElement(_._, {
+                    className: _.EditNameInput,
+                    type: "text",
+                    onChange: (_) => {
+                      _(_.target.value), _(null);
+                    },
+                    value: _,
+                    placeholder: (0, _._)(
+                      "#FamilyManagement_Await2FAForJoin_InputPlaceholder",
+                    ),
+                    maxLength: 128,
+                  }),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.DialogButtons,
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: async () => {
+                        _.mutateAsync(_).then(_);
+                      },
+                    },
+                    (0, _._)("#FamilyManagement_AwaitCodeFromEmail_Confirm"),
+                  ),
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: _,
+                    },
+                    (0, _._)("#FamilyManagement_AwaitCodeFromEmail_Cancel"),
+                  ),
                 ),
               ),
             "alreadyaccepted" == _ &&
@@ -1206,34 +1296,12 @@
           ),
         );
       }
-      const _ = "familyid",
-        _ = "invite";
       function _() {
         const _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _(_, _),
-          _ = _(_, _),
-          _ = _(_, _),
-          { isLoading: _, data: _ } = (0, _._)(),
-          { mutate: _ } = (0, _._)(_, _, _);
-        return (
-          (0, _.useEffect)(() => {
-            _ ||
-              (_.is_not_member_of_any_group()
-                ? _(null, {
-                    onSuccess: () => _.push("/account/familymanagement"),
-                  })
-                : _.push("/account/familymanagement"));
-          }, [_, _, _, _]),
-          _.createElement(_._, null)
-        );
-      }
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _(_, _),
-          _ = _(_, _),
-          _ = _(_, _);
+          _ = _(_, "familyid"),
+          _ = _(_, "invite"),
+          _ = _(_, "nonce");
         return (
           (0, _._)(_, _, _).mutate(null, {
             onSuccess: () => _.push("/account/familymanagement"),
@@ -1242,7 +1310,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6869,10 +6936,6 @@
                         component: _,
                       }),
                       _.createElement(_._, {
-                        path: `${_.path}/confirm_join`,
-                        component: _,
-                      }),
-                      _.createElement(_._, {
                         path: `${_.path}/confirm_invite`,
                         component: _,
                       }),
@@ -7182,10 +7245,8 @@
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(),
-          _ = _(_, _),
-          _ = _(_, _),
-          _ = (0, _._)(_, null);
+          _ = _((0, _._)(), _),
+          _ = (0, _._)(_);
         if (_.data && !_.data?.is_not_member_of_any_group() && !_)
           return _
             ? _.createElement(_._, {
@@ -7243,10 +7304,10 @@
                     ),
                     _.createElement(_, {
                       key: _,
+                      inviteID: _.invite_id(),
                       inviterSteamID: _.inviter_steamid(),
                       familyGroupID: _.family_groupid(),
                       role: _.role(),
-                      nonce: _,
                       setCooldownModalActive: _,
                     }),
                     _.length > 0 &&
@@ -7302,6 +7363,7 @@
                           _.map((_) =>
                             _.createElement(_, {
                               inviterSteamID: _.inviter_steamid(),
+                              inviteID: _.invite_id(),
                               familyGroupID: _.family_groupid(),
                               role: _.role(),
                               key: _.family_groupid(),
@@ -7363,6 +7425,7 @@
                         _.data?.pending_group_invites().map((_) =>
                           _.createElement(_, {
                             key: _.family_groupid(),
+                            inviteID: _.invite_id(),
                             inviterSteamID: _.inviter_steamid(),
                             familyGroupID: _.family_groupid(),
                             role: _.role(),

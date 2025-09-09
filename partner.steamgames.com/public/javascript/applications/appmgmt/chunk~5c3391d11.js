@@ -2244,7 +2244,7 @@
             o.Z,
             {
               autoFocus: C,
-              focusableIfNoChildren: C,
+              focusableIfEmpty: C,
               noFocusRing: !0,
               className: c().CompatibilityDetailsContainer,
               ...L,
@@ -2365,11 +2365,7 @@
               },
               r.createElement(
                 o.Z,
-                {
-                  autoFocus: a,
-                  focusableIfNoChildren: a || H(),
-                  noFocusRing: !0,
-                },
+                { autoFocus: a, focusableIfEmpty: a || H(), noFocusRing: !0 },
                 p,
               ),
             ),

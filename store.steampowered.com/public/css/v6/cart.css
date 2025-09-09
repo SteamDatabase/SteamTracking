@@ -2205,6 +2205,8 @@ label.send_choice_txt {
 
 #purchase_bottom {
 	font-size: 14px;
+	display: flex;
+	flex-direction: column;
 }
 
 

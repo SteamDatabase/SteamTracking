@@ -4381,6 +4381,7 @@
                     bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
+                    nWidthMultiplier: _.nWidthMultiplier,
                   },
                   _,
                 ),
@@ -5348,7 +5349,7 @@
               eventModel: _,
             };
           })(_),
-          _ = _.GetTemplateVars().linkurl,
+          _ = _.associated_item.GetStorePageURL(),
           _ = _(_, _, 1),
           _ = _(_, _, 2);
         return _.createElement(
@@ -5442,7 +5443,10 @@
             ? (_ = `steam://open/library/event/${_.appid}|${_.GID}`)
             : ((_ = `${_._.STORE_BASE_URL}news/app/${_.appid}?emclan=${_.clanSteamID.ConvertTo64BitString()}&emgid=${_.GID}`),
               _._.IN_CLIENT && (_ = `steam://openurl/${_}`));
-        } else _ = _;
+        } else
+          (_ = _),
+            _ && (_ += `${_.includes("?") ? "&" : "?"}emgid=${_.GID}`),
+            _._.IN_CLIENT && (_ = `steam://openurl/${_}`);
         return (0, _._)(_, _, !0);
       }
       var _ = __webpack_require__("chunkid"),

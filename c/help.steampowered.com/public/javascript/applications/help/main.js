@@ -5656,7 +5656,8 @@
               _.bUsePartnerAPI)
             ) {
               const _ = _._.Init(_._);
-              _.Body().set_request(_.Body()), (_ = await _._.GetItems(_, _));
+              _.Body().set_getitems_request(_.Body()),
+                (_ = await _._.GetItems(_, _));
             } else _ = await _._.GetItems(_, _);
             const _ = new Map();
             return (
@@ -8193,7 +8194,7 @@
         );
       }
       function _(_) {
-        return "string" == typeof _ ? (0, _._)(_) : _;
+        return "string" == typeof _ ? _._.LocalizeIfToken(_, !0) : _;
       }
       function _(_) {
         return _.createElement("div", {
@@ -8795,15 +8796,21 @@
       );
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = _.customTooltip ? _ : _;
+        const {
+            customTooltip: _,
+            tooltip: __webpack_require__,
+            className: _,
+            icon: _,
+          } = _,
+          _ = _ ? _ : _;
         return _.createElement(
           _,
           {
-            toolTipContent: _.tooltip,
-            className: (0, _._)(_.HelperTooltip, "HelperTooltip", _.className),
+            toolTipContent: __webpack_require__,
+            className: (0, _._)(_.HelperTooltip, "HelperTooltip", _),
           },
           " ",
-          _.createElement(_._VW, null),
+          _ ?? _.createElement(_._VW, null),
         );
       }
       const _ = _.createContext({}),
@@ -12396,6 +12403,13 @@
         );
       });
       _.forwardRef(function (_, _) {
+        return _.createElement(_, {
+          ref: _,
+          accessibilityId: null,
+          ..._,
+        });
+      });
+      _.forwardRef(function (_, _) {
         const {
             label: __webpack_require__,
             description: _,
@@ -13820,6 +13834,8 @@
             "DisplayMaxAnalogGain_Float"),
           (_[(_.DashboardLinkSupport_Int32 = 2097)] =
             "DashboardLinkSupport_Int32"),
+          (_[(_.DisplayMinUIAnalogGain_Float = 2098)] =
+            "DisplayMinUIAnalogGain_Float"),
           (_[(_.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
           (_[(_.IpdUIRangeMinMeters_Float = 2100)] =
             "IpdUIRangeMinMeters_Float"),
@@ -14041,6 +14057,9 @@
         get step() {
           return Math.abs(this.props.step ?? _);
         }
+        get stepSound() {
+          return this.props.stepSound ?? true;
+        }
         get normalizedStep() {
           return this.step / this.range;
         }
@@ -14225,6 +14244,7 @@
               _ = 0 == this.step;
             if (
               ((this.m_eDragMode == _.None || !_) &&
+                this.props.stepSound &&
                 _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
               this.m_eDragMode == _.MouseDragging ||
                 this.m_eDragMode == _.TouchDragging)
@@ -14316,7 +14336,11 @@
               ),
             this.SetDragMode(_.None);
           const _ = 0 == this.step;
-          if (this.m_fLatestUserValue != this.m_fStartValue && _ && _) {
+          if (
+            this.m_fLatestUserValue != this.m_fStartValue &&
+            (_ || !this.props.stepSound) &&
+            _
+          ) {
             const _ = this.m_fLatestUserValue > this.m_fStartValue;
             _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown);
           }
@@ -19718,7 +19742,7 @@
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const _ = 39049601,
         _ = 45559995,
-        _ = 9e4;
+        _ = 99999;
       var _;
       !(function (_) {
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
@@ -20589,20 +20613,20 @@
               _.push({
                 ..._,
                 section_type: "footer_self_creator_home",
-                unique_id: 90010,
+                unique_id: 100009,
                 curator_clan_id: this.clanSteamID.GetAccountID(),
               }),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_browse_more",
-                unique_id: 90012,
+                unique_id: 100011,
               }),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_default_social_share",
-                unique_id: 90013,
+                unique_id: 100012,
               }),
             _
           );
@@ -36555,12 +36579,11 @@
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
-            retainFocus: _,
+            focusableIfEmpty: _,
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
             focusable: _,
-            focusableIfNoChildren: _,
             navRef: _,
             actionDescriptionMap: _,
             onMoveUp: _,
@@ -36583,12 +36606,11 @@
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
-            retainFocus: _,
+            focusableIfEmpty: _,
             onFocusWithin: _,
             navKey: _,
             noFocusRing: _,
             focusable: _,
-            focusableIfNoChildren: _,
             navRef: _,
             onMoveUp: _,
             onMoveRight: _,
@@ -36621,17 +36643,14 @@
               ..._
             } = _,
             _ = (0, _._)(),
-            _ = (0, _._)(),
-            _ = _.BHasFocus() && _,
-            _ = _.BFocusWithin() && _,
+            _ = (0, _._)(_.SubscribableHasFocus) && _,
+            _ = (0, _._)(_.SubscribableFocusWithin) && _,
             {
               bActiveTree: _,
               bActiveTreeWithinContext: _,
               bDisableFocusClasses: _,
-            } = (0, _._)();
-          (0, _._)(_.FocusCallbackList, _),
-            (0, _._)(_.FocusWithinCallbackList, _);
-          const _ = _ && !_,
+            } = (0, _._)(),
+            _ = _ && !_,
             _ = !_ && (void 0 !== _ || _);
           return _.createElement(
             _,
@@ -36887,7 +36906,7 @@
             ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
           _.onOKButton &&
             void 0 === _.focusable &&
-            void 0 === _.focusableIfNoChildren &&
+            void 0 === _.focusableIfEmpty &&
             (_.focusable = !0),
           _ && (_.onCancelButton = _.onCancelButton || _);
         const { ref: _, node: _ } = (0, _._)({
@@ -36898,7 +36917,7 @@
         (_.className = _()(_.className, "Panel", _ && "Focusable")),
           (0, _._)(_, _);
         const _ = (0, _._)(_, _);
-        (!_.focusable && !_.focusableIfNoChildren) ||
+        (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
           _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
@@ -37065,6 +37084,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -37254,42 +37274,42 @@
       }
       function _(_, _, _, _ = 0.001) {
         return "x" == _
-          ? _._ + _.width > _._ + _ && _._ + _ < _._ + _.width
+          ? _.right > _.left + _ && _.left + _ < _.right
           : "y" == _
-            ? _._ + _.height > _._ + _ && _._ + _ < _._ + _.height
+            ? _.bottom > _.top + _ && _.top + _ < _.bottom
             : ((0, _._)(!1, `Invalid axis ${_}`), !1);
       }
       function _(_, _, _) {
         let _;
         return (
           "x" == _
-            ? (_ = Math.min(_._ + _.width, _._ + _.width) - Math.max(_._, _._))
+            ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
             : "y" == _
-              ? (_ =
-                  Math.min(_._ + _.height, _._ + _.height) - Math.max(_._, _._))
+              ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
               : ((0, _._)(!1, `Invalid axis ${_}`), (_ = 0)),
           _ < 0 ? 0 : _
         );
       }
+      function _(_, _) {
+        return "x" == _
+          ? {
+              min: _.left,
+              max: _.right,
+            }
+          : {
+              min: _.top,
+              max: _.bottom,
+            };
+      }
       function _(_, _, _) {
         const _ = _[_],
-          _ = (function (_, _) {
-            return "x" == _
-              ? {
-                  min: _._,
-                  max: _._ + _.width,
-                }
-              : {
-                  min: _._,
-                  max: _._ + _.height,
-                };
-          })(_, _);
+          _ = _(_, _);
         return _ < _.min ? _.min - _ : _ > _.max ? _ - _.max : 0;
       }
       function _(_) {
         return {
-          _: _._,
-          _: _._,
+          _: _.left,
+          _: _.top,
         };
       }
       const _ = {
@@ -37314,7 +37334,8 @@
               return _._.COLUMN_REVERSE;
           }
         else {
-          if ("grid" == _.display) return _._.GRID;
+          if ("grid" == _.display)
+            return "none" !== _.gridTemplateAreas ? _._.GEOMETRIC : _._.GRID;
           if (_.childElementCount > 0) {
             const _ = _.getComputedStyle(_.firstElementChild);
             if ("left" === _.float) return _._.ROW;
@@ -37347,6 +37368,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -37504,6 +37526,19 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         return null != _ && void 0 !== _.focus;
+      }
+      function _(_, _) {
+        let _ = 0,
+          _ = 0;
+        return (
+          _.right < _.left
+            ? (_ = _.left - _.right)
+            : _.left > _.right && (_ = _.left - _.right),
+          _.bottom < _.top
+            ? (_ = _.top - _.bottom)
+            : _.top > _.bottom && (_ = _.top - _.bottom),
+          Math.sqrt(_ * _ + _ * _)
+        );
       }
       function _(_) {
         let _;
@@ -37989,7 +38024,8 @@
               scrollTop: _.scrollTop,
             };
       }
-      const _ = new _._("FocusNavigationMovement").Debug;
+      const _ = new _._("FocusNavigationMovement"),
+        _ = _.Debug;
       var _, _, _, _;
       !(function (_) {
         (_[(_.NONE = 0)] = "NONE"),
@@ -38030,12 +38066,10 @@
         m_bAutoFocusChild = !1;
         m_bMounted = !1;
         m_nDepth;
-        m_bFocused = !1;
-        m_FocusCallbackList = new _._();
-        m_bFocusWithin = !1;
-        m_FocusWithinCallbackList = new _._();
+        m_Focused = (0, _._)(!1);
+        m_FocusWithin = (0, _._)(!1);
         m_ActionDescriptionsChangedCallbackList = new _._();
-        m_RetainFocusParent = null;
+        m_FocusableIfEmptyAncestor = null;
         m_rgNavigationHandlers = [];
         m_rgFocusHandlers = [];
         constructor(_, _, _) {
@@ -38073,16 +38107,16 @@
                   (_) => _.hasOwnProperty(_) && __webpack_require__[_] === _[_],
                 )));
           var _, _;
-          const _ = this.m_Properties?.retainFocus,
+          const _ = this.m_Properties?.focusableIfEmpty,
             _ = this.m_Properties?.noFocusRing;
           (this.m_Properties = _ || {}),
             _ && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
-            this.m_Properties.retainFocus && !_
-              ? this.PropagateRetainFocusParentToChildren(this)
-              : !this.m_Properties.retainFocus &&
+            this.m_Properties.focusableIfEmpty && !_
+              ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
+              : !this.m_Properties.focusableIfEmpty &&
                 _ &&
-                this.PropagateRetainFocusParentToChildren(
-                  this.m_RetainFocusParent,
+                this.PropagateFocusableIfEmptyAncestorToDescendants(
+                  this.m_FocusableIfEmptyAncestor,
                 ),
             this.m_Properties.noFocusRing && !_ && this.BHasFocus()
               ? this.m_FocusRing?.OnBlur(_._.APPLICATION, this, this)
@@ -38105,31 +38139,27 @@
           );
         }
         GetBoundingRect() {
-          return this.m_element && this.m_element.getBoundingClientRect();
+          return this.m_element?.getBoundingClientRect();
         }
         SetHasFocus(_) {
-          _ != this.m_bFocused &&
-            ((this.m_bFocused = _),
-            this.m_FocusCallbackList.Dispatch(this.m_bFocused));
+          this.m_Focused.Set(_);
         }
         SetFocusWithin(_) {
-          _ != this.m_bFocusWithin &&
-            ((this.m_bFocusWithin = _),
-            this.m_FocusWithinCallbackList.Dispatch(this.m_bFocusWithin),
+          this.m_FocusWithin.Set(_) &&
             this.m_Properties?.onFocusWithin &&
-              this.m_Properties.onFocusWithin(this.m_bFocusWithin));
+            this.m_Properties.onFocusWithin(_);
+        }
+        get SubscribableHasFocus() {
+          return this.m_Focused;
         }
         BHasFocus() {
-          return this.m_bFocused;
+          return this.m_Focused.Value;
+        }
+        get SubscribableFocusWithin() {
+          return this.m_FocusWithin;
         }
         BFocusWithin() {
-          return this.m_bFocusWithin;
-        }
-        get FocusCallbackList() {
-          return this.m_FocusCallbackList;
-        }
-        get FocusWithinCallbackList() {
-          return this.m_FocusWithinCallbackList;
+          return this.m_FocusWithin.Value;
         }
         ForceMeasureFocusRing() {
           this.m_FocusRing?.OnForceMeasureFocusRing();
@@ -38155,10 +38185,10 @@
           this.m_rgChildren.push(_),
             (this.m_bChildrenSorted = !1),
             this.m_element && this.RegisterDOMEvents(),
-            this.m_Properties?.retainFocus
-              ? _.SetRetainFocusParent(this)
-              : this.m_RetainFocusParent &&
-                _.SetRetainFocusParent(this.m_RetainFocusParent),
+            this.m_Properties?.focusableIfEmpty
+              ? _.SetFocusableIfEmptyAncestor(this)
+              : this.m_FocusableIfEmptyAncestor &&
+                _.SetFocusableIfEmptyAncestor(this.m_FocusableIfEmptyAncestor),
             this.m_bMounted &&
               _.BFocusWithin() &&
               ((0, _._)(
@@ -38178,7 +38208,8 @@
             (this.m_bMounted = !0),
             this.RegisterDOMEvents();
           const _ =
-              this.m_RetainFocusParent && this.m_RetainFocusParent.BHasFocus(),
+              this.m_FocusableIfEmptyAncestor &&
+              this.m_FocusableIfEmptyAncestor.BHasFocus(),
             _ = this.m_Properties?.autoFocus || _;
           if (this.BWantsAutoFocus() || _) {
             let _ = -1;
@@ -38191,7 +38222,7 @@
                   ? _
                     ? this.m_Tree.DeferredFocus.BHasQueuedFocusNode() ||
                       this.m_Tree.DeferredFocus.RequestFocus(
-                        this.m_RetainFocusParent,
+                        this.m_FocusableIfEmptyAncestor,
                         {
                           bFocusDescendant: !0,
                         },
@@ -38203,25 +38234,27 @@
             -1 != _ &&
               (this.SetActiveChild(_),
               (0, _._)(
-                this.m_bFocusWithin,
+                this.BFocusWithin(),
                 "Child has focus, we should be m_bFocusWithin",
               ));
           }
         }
         DEV_SetDebugPropsOnElement() {}
         OnUnmount() {
-          this.m_Properties?.retainFocus &&
-            this.PropagateRetainFocusParentToChildren(this.m_RetainFocusParent),
+          this.m_Properties?.focusableIfEmpty &&
+            this.PropagateFocusableIfEmptyAncestorToDescendants(
+              this.m_FocusableIfEmptyAncestor,
+            ),
             (this.m_bMounted = !1);
           const _ = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
-          (this.m_bFocused || _) &&
+          (this.BHasFocus() || _) &&
             (_(
-              `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
+              `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? "will transfer to retain focus ancestor" : "will blur"}.`,
             ),
             _ && this.Tree.DeferredFocus.RequestFocus(null),
-            this.m_RetainFocusParent
-              ? this.m_RetainFocusParent.OnFocusedDecendantRemoved(this)
-              : this.m_bFocused &&
+            this.m_FocusableIfEmptyAncestor
+              ? this.m_FocusableIfEmptyAncestor.OnFocusedDecendantRemoved(this)
+              : this.BHasFocus() &&
                 this.m_Tree.TransferFocus(_._.APPLICATION, null)),
             this.UnregisterDOMEvents(),
             this.m_Parent
@@ -38244,7 +38277,7 @@
               (0, _._)(this.m_element, this.OnNavigationEvent),
             ),
             (this.m_Properties?.focusable ||
-              this.m_Properties?.focusableIfNoChildren ||
+              this.m_Properties?.focusableIfEmpty ||
               0 == this.m_rgChildren.length) &&
               (this.m_rgFocusHandlers.length ||
                 (this.m_element?.addEventListener("focus", this.OnDOMFocus),
@@ -38321,13 +38354,13 @@
           return _ ? _.GetLastFocusElement() : this.m_element;
         }
         OnDOMFocus(_) {
-          if (!this.m_bFocused) {
+          if (!this.BHasFocus()) {
             if ("children" == this.GetFocusable()) {
               const _ = this.FindFocusableDescendant();
               if (_ && _ !== this)
                 return (
                   _(
-                    "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
+                    "Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.",
                     this.m_element,
                     _.m_element,
                   ),
@@ -38338,7 +38371,7 @@
           }
         }
         OnDOMBlur(_) {
-          this.m_bFocused &&
+          this.BHasFocus() &&
             this.m_element?.ownerDocument.hasFocus() &&
             this.m_Tree.TransferFocus(_._.BROWSER, null);
         }
@@ -38350,7 +38383,7 @@
         GetFocusable() {
           const {
             focusable: _,
-            focusableIfNoChildren: _,
+            focusableIfEmpty: _,
             childFocusDisabled: __webpack_require__,
             fnCanTakeFocus: _,
           } = this.m_Properties;
@@ -38401,49 +38434,49 @@
         }
         FindFocusableDescendant(_, _) {
           const _ = (0, _._)(_),
-            { focusableIfNoChildren: _, childFocusDisabled: _ } =
+            { focusableIfEmpty: _, childFocusDisabled: _ } =
               this.m_Properties ?? {};
           if (_) return null;
           if (this.m_rgChildren.length) {
             this.EnsureChildrenSorted();
             const { navEntryPreferPosition: _, resetNavOnEntry: _ } =
               this.m_Properties ?? {};
-            let _,
-              _ = this.GetActiveChildIndex();
-            if ((_ && void 0 !== _ && (_ = -1), !this.IsValidChildIndex(_))) {
-              const _ = this.GetLayout();
-              _ =
-                _ >= this.m_rgChildren.length ||
-                _ == _.ROW_REVERSE ||
-                _ == _.COLUMN_REVERSE ||
-                _ == _.LAST
-                  ? this.m_rgChildren.length - 1
-                  : 0;
-            }
-            if ((_ == _.MAINTAIN_X || _ == _.MAINTAIN_Y || _) && _) {
-              let _, _;
-              _ == _.MAINTAIN_X ? (_ = "x") : _ == _.MAINTAIN_Y && (_ = "y"),
-                _ == _._[_] &&
-                  (_ =
-                    this.m_Tree.GetLastFocusedMovementRect(_._[_]) ??
-                    this.m_Tree.GetLastFocusedNode()?.GetBoundingRect()),
+            let _ = this.GetActiveChildIndex();
+            _ && void 0 !== _ && (_ = -1);
+            const _ = this.GetLayout();
+            let _, _;
+            if (
+              (this.IsValidChildIndex(_) ||
+                (_ =
+                  _ >= this.m_rgChildren.length ||
+                  _ == _.ROW_REVERSE ||
+                  _ == _.COLUMN_REVERSE ||
+                  _ == _.LAST
+                    ? this.m_rgChildren.length - 1
+                    : 0),
+              _ == _.MAINTAIN_X
+                ? (_ = "x")
+                : _ == _.MAINTAIN_Y
+                  ? (_ = "y")
+                  : _ == _.GEOMETRIC && _ && (_ = _._[_]),
+              (_ || _) && _)
+            ) {
+              const _ = this.m_Tree.GetLastFocusedNode();
+              if (_ || (_ && _ == _._[_])) {
+                const _ =
+                  _ ||
+                  this.AdjustRectForLastMovementOnTangentAxis(
+                    _.GetBoundingRect(),
+                    _,
+                  );
                 _(
                   `Taking focus while preserving ${_ && _[_]} preserved: ${_} movement: ${_}, node:`,
-                  _ || _,
-                );
-              const _ = this.ComputeRelativeDirection(_, _.GRID);
-              if (_ || _) {
-                const _ = _ == _.BACKWARD ? this.m_rgChildren.length - 1 : 0;
-                _ = this.FindClosestChildInNextAxiallyAlignedSet(
-                  _ || _._[_],
                   _,
-                  _,
-                  _ || _,
-                  _,
-                  this.m_rgChildren[_].GetBoundingRect(),
-                );
+                ),
+                  (_ = this.FindClosestFocusableNodeToRect(_, _));
               } else if (_ != _._[_]) {
-                const _ = _ == _.BACKWARD ? this.m_rgChildren.length : -1;
+                const _ = this.ComputeRelativeDirection(_, _.GRID),
+                  _ = _ == _.BACKWARD ? this.m_rgChildren.length : -1;
                 _ = this.FindNextFocusableChildInDirection(_, _, _);
               }
             } else if (_ == _.PREFERRED_CHILD) {
@@ -38537,7 +38570,7 @@
             _ == _.INVALID)
           )
             return !1;
-          if (this.m_Properties?.focusable && this.m_bFocused)
+          if (this.m_Properties?.focusable && this.BHasFocus())
             return _("Skipping navigation within focused element"), !1;
           if ((this.EnsureChildrenSorted(!0), _ == _.GRID))
             _ = this.FindNextFocusableChildInGrid(
@@ -38545,6 +38578,8 @@
               _,
               _,
             );
+          else if (_ == _.GEOMETRIC)
+            _ = this.FindNextFocusableChildGeometric(_, _);
           else {
             let _ = this.GetActiveChildIndex();
             this.IsValidChildIndex(_) ||
@@ -38619,6 +38654,7 @@
                   return _.INVALID;
               }
             case _.GRID:
+            case _.GEOMETRIC:
               switch (_) {
                 case _._.DIR_LEFT:
                 case _._.DIR_UP:
@@ -38664,14 +38700,12 @@
               ),
               this.FindFocusableDescendant(_)
             );
-          const _ = this.GetActiveDescendant().GetBoundingRect();
-          if (_ == _._.DIR_UP || _ == _._.DIR_DOWN) {
-            const _ =
-              this.m_Tree.GetLastFocusedMovementRect("x") ??
-              this.m_Tree.GetLastFocusedNode()?.GetBoundingRect();
-            _ && ((_._ = _._), (_.width = _.width));
-          }
-          if (_) {
+          let _ = this.GetActiveDescendant().GetBoundingRect();
+          if (
+            ((_ != _._.DIR_UP && _ != _._.DIR_DOWN) ||
+              (_ = this.AdjustRectForLastMovementOnTangentAxis(_, "y")),
+            _)
+          ) {
             let _ = _;
             for (; -1 != _; ) {
               const _ = this.ScanChildren(
@@ -38705,6 +38739,116 @@
               let _ = _.FindFocusableNode(_);
               if (_) return _;
             }
+          }
+          return null;
+        }
+        FindNextFocusableChildGeometric(_, _) {
+          const _ = this.GetLastFocusElement();
+          if (!_ || _ == this.m_element)
+            return (
+              (0, _._)(
+                !1,
+                "No active child for geometric navigation",
+                this.m_iLastActiveChildIndex,
+                this.m_rgChildren.length,
+                _,
+              ),
+              this.FindFocusableDescendant(_)
+            );
+          const _ = (0, _._)(_);
+          if (!_) return null;
+          const _ = this.AdjustRectForLastMovementOnTangentAxis(
+            this.GetActiveDescendant().GetBoundingRect(),
+            _,
+          );
+          return this.FindClosetChildInDirection(_, _, _, _);
+        }
+        AdjustRectForLastMovementOnTangentAxis(_, _) {
+          const _ = this.m_Tree.GetLastFocusedMovementRect(_._[_]);
+          return _
+            ? "x" == _
+              ? {
+                  left: _.left,
+                  right: _.right,
+                  top: _.top,
+                  bottom: _.bottom,
+                }
+              : {
+                  left: _.left,
+                  right: _.right,
+                  top: _.top,
+                  bottom: _.bottom,
+                }
+            : _;
+        }
+        FindClosestFocusableNodeToRect(_, _) {
+          const _ = (0, _._)(_),
+            _ = _ && _._[_];
+          console.log(_, _);
+          const _ = [];
+          for (const _ of this.m_rgChildren) {
+            const _ = _.GetBoundingRect();
+            if (_) {
+              const _ = _(_, _),
+                _ = _ ? (0, _._)(_, _, _) : 0;
+              _.push({
+                child: _,
+                overlap: _,
+                dist: _,
+              });
+            }
+          }
+          _.sort((_, _) =>
+            _.dist != _.dist ? _.dist - _.dist : _.overlap - _.overlap,
+          ),
+            _.forEach(({ child: _, dist: _, overlap: _ }) =>
+              console.log(`dist ${_} overlap ${_}`, _.Element),
+            );
+          for (const { child: _ } of _) {
+            const _ = __webpack_require__.FindFocusableNode(_, _);
+            if (_) return _;
+          }
+          return null;
+        }
+        FindClosetChildInDirection(_, _, _, _) {
+          _(
+            `Find child closest to rect, rect is at left ${_.left} top ${_.top} right ${_.right} bottom ${_.bottom}`,
+          );
+          const _ = (0, _._)(_, _),
+            _ = [];
+          for (const _ of this.m_rgChildren) {
+            const _ = _.GetBoundingRect();
+            if (_) {
+              const _ = (0, _._)(_, _);
+              let _;
+              (_ = _ == _.FORWARD ? _.min - _.max : _.min - _.max),
+                _ >= 0 &&
+                  _.push({
+                    child: _,
+                    overlap: (0, _._)(_._[_], _, _),
+                    dist: _,
+                  });
+            }
+          }
+          if (
+            (_.sort((_, _) => {
+              if (_.overlap) {
+                if (!_.overlap) return -1;
+              } else if (_.overlap) return 1;
+              const _ = _.dist - _.dist;
+              return _ || _.overlap - _.overlap;
+            }),
+            _.IsDebugEnabled())
+          ) {
+            const _ = _.slice(0, 3).map(
+              ({ dist: _, overlap: _, child: _ }) =>
+                `[ node: ${_.m_element?.className} dist: ${_} overlap: ${_} ]`,
+            );
+            _(`Found nodes on axis, top 3 (of ${_.length}: ${_.join(", ")}`);
+          }
+          for (const { child: _ } of _) {
+            const _ = _.FindFocusableNode(_, _);
+            if (_) return _;
           }
           return null;
         }
@@ -38755,14 +38899,14 @@
         GetDepth() {
           return this.m_nDepth;
         }
-        SetRetainFocusParent(_) {
-          (this.m_RetainFocusParent = _),
-            this.m_Properties?.retainFocus ||
-              this.PropagateRetainFocusParentToChildren(_);
+        SetFocusableIfEmptyAncestor(_) {
+          (this.m_FocusableIfEmptyAncestor = _),
+            this.m_Properties?.focusableIfEmpty ||
+              this.PropagateFocusableIfEmptyAncestorToDescendants(_);
         }
-        PropagateRetainFocusParentToChildren(_) {
+        PropagateFocusableIfEmptyAncestorToDescendants(_) {
           for (let _ = 0; _ < this.m_rgChildren.length; _++)
-            this.m_rgChildren[_].SetRetainFocusParent(_);
+            this.m_rgChildren[_].SetFocusableIfEmptyAncestor(_);
         }
         OnFocusedDecendantRemoved(_) {
           this.m_Tree.DeferredFocus.RequestFocus(this, {
@@ -38867,8 +39011,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
+        if (!_) return _._.NONE;
         switch (_) {
           case "column":
             return _._.COLUMN;
@@ -38880,8 +39026,10 @@
             return _._.ROW_REVERSE;
           case "grid":
             return _._.GRID;
+          case "geometric":
+            return _._.GEOMETRIC;
           default:
-            return _._.NONE;
+            return (0, _._)(_, `Unhandled flow-children: ${_}`), _._.NONE;
         }
       }
     },
@@ -45104,7 +45252,7 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.request || _._(_._()),
+            _.prototype.getitems_request || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
         static sm_m;
@@ -45115,7 +45263,7 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  request: {
+                  getitems_request: {
                     _: 1,
                     _: _._,
                   },
@@ -71049,7 +71197,7 @@
               if ((_.push(_), this.m_bUsePartnerAPI)) {
                 const _ = _._.Init(_._);
                 _.Body().set_include_unpublished(!1);
-                const _ = _.Body().request(!0);
+                const _ = _.Body().getitems_request(!0);
                 _.set_context(_(this.m_bUsePartnerAPI)),
                   _.set_data_request(_._.fromObject(_)),
                   _.set_ids(_),
@@ -73982,6 +74130,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
         _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
@@ -73998,6 +74147,38 @@
       }
       (0, _._)([_._], _.prototype, "SyncStore", null),
         (0, _._)([_._], _.prototype, "GetValue", null);
+      class _ extends _ {}
+      class _ extends _ {
+        m_callbacks;
+        m_currentValue;
+        m_fnEquals;
+        constructor(_, _) {
+          super(),
+            (this.m_callbacks = new _._()),
+            (this.m_currentValue = _),
+            (this.m_fnEquals = _);
+        }
+        Set(_) {
+          if (this.m_fnEquals) {
+            if (this.m_fnEquals(this.m_currentValue, _)) return !1;
+          } else if (this.m_currentValue === _) return !1;
+          return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
+        }
+        get Value() {
+          return this.m_currentValue;
+        }
+        Subscribe(_) {
+          return {
+            Unsubscribe: this.m_callbacks.Register(_).Unregister,
+          };
+        }
+        get SubscriberCount() {
+          return this.m_callbacks.CountRegistered();
+        }
+      }
+      function _(_, _) {
+        return new _(_, _);
+      }
       class _ {
         m_schTimer;
         m_fnCallback;

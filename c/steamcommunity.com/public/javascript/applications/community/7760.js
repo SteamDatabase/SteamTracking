@@ -1648,6 +1648,7 @@
           _.Fragment,
           null,
           _.createElement(_, {
+            startTime: _.rtime_start,
             location_type: _,
             fnUpdateLocationAndTZ: (_, _) =>
               __webpack_require__({
@@ -1758,16 +1759,19 @@
       }
       function _(_) {
         const {
-            location_type: _,
-            fnUpdateLocationAndTZ: __webpack_require__,
+            startTime: _,
+            location_type: __webpack_require__,
+            fnUpdateLocationAndTZ: _,
             in_person_time_zone: _,
           } = _,
-          _ = (function () {
+          _ = (function (_) {
             const _ = (0, _._)({
-              queryKey: ["timezone"],
+              queryKey: ["timezone", _],
               queryFn: async () => {
                 const _ = `${_._.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
-                  _ = {},
+                  _ = {
+                    reference_time: _,
+                  },
                   _ = await _().get(_, {
                     params: _,
                   });
@@ -1775,7 +1779,7 @@
               },
             });
             return _.isSuccess ? _.data : [];
-          })(),
+          })(_),
           _ = _.useMemo(
             () => _.reduce((_, _) => _.set(_.name, _.friendly_name), new Map()),
             [_],
@@ -1810,8 +1814,8 @@
             {
               labelId: _,
               descriptionId: _,
-              value: _,
-              onChange: (_) => __webpack_require__(_, _),
+              value: __webpack_require__,
+              onChange: (_) => _(_, _),
             },
             _.createElement(
               _._,
@@ -1828,7 +1832,7 @@
               (0, _._)("#MeetSteam_edit_date_display_virtual"),
             ),
           ),
-          "in_person" === _ &&
+          "in_person" === __webpack_require__ &&
             _.createElement(_._, {
               styles: {
                 option: (_) => ({
@@ -1852,7 +1856,7 @@
                     label: _(_._),
                     value: _._,
                   },
-              onChange: (_) => __webpack_require__(_, _.value),
+              onChange: (_) => _(__webpack_require__, _.value),
             }),
         );
       }
@@ -2486,6 +2490,7 @@
                 className: _().DialogCtn,
               },
               _.createElement(_, {
+                startTime: _.GetEventStartTime(),
                 location_type: _,
                 in_person_time_zone: _,
                 fnUpdateLocationAndTZ: (_, _) =>

@@ -21,17 +21,17 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -4699,6 +4699,13 @@ function _(_, _) {
     onOptionsActionDescription: _,
   };
 }
+var _ = _.forwardRef(function (_, _) {
+  return (0, _.jsx)(_, {
+    ref: _,
+    accessibilityId: null,
+    ..._,
+  });
+});
 function _(_, _, _ = ["label", "button"]) {
   let _ = _.useId(),
     _ = _(_, _),
@@ -6024,6 +6031,7 @@ var _ = {
 var _ = _(_()),
   _ = 10,
   _ = 1,
+  _ = !0,
   _ = 0.01,
   _ = 0.05,
   _ = _(_["error-shake-duration"]);
@@ -6066,6 +6074,9 @@ var _ = class extends _.Component {
   }
   get step() {
     return Math.abs(this.props.step ?? _);
+  }
+  get stepSound() {
+    return this.props.stepSound ?? _;
   }
   get normalizedStep() {
     return this.step / this.range;
@@ -6246,7 +6257,9 @@ var _ = class extends _.Component {
       let _ = _ > this.props.value,
         _ = this.step == 0;
       if (
-        ((this.m_eDragMode == 0 || !_) && _.PlayNavSound(_ ? 18 : 19),
+        ((this.m_eDragMode == 0 || !_) &&
+          this.props.stepSound &&
+          _.PlayNavSound(_ ? 18 : 19),
         this.m_eDragMode == 1 || this.m_eDragMode == 3)
       ) {
         let _ = !1;
@@ -6332,7 +6345,11 @@ var _ = class extends _.Component {
         ),
       this.SetDragMode(0);
     let _ = this.step == 0;
-    if (this.m_fLatestUserValue != this.m_fStartValue && _ && _) {
+    if (
+      this.m_fLatestUserValue != this.m_fStartValue &&
+      (_ || !this.props.stepSound) &&
+      _
+    ) {
       let _ = this.m_fLatestUserValue > this.m_fStartValue;
       _.PlayNavSound(_ ? 18 : 19);
     }

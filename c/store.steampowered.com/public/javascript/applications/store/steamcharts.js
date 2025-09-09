@@ -9009,7 +9009,7 @@
                 },
                 _.createElement("img", {
                   className: _().Capsule,
-                  src: _.GetAssets().GetHeaderURL(),
+                  src: _.GetAssets().GetMainCapsuleURL(),
                 }),
               ),
               _.createElement(_, {
@@ -9070,7 +9070,7 @@
                 },
                 _.createElement("img", {
                   className: _().Capsule,
-                  src: _.Item.GetAssets().GetHeaderURL(),
+                  src: _.Item.GetAssets().GetMainCapsuleURL(),
                 }),
               ),
               _.createElement(_, {

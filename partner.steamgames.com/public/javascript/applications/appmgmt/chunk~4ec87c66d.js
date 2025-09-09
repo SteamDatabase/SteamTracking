@@ -54976,7 +54976,7 @@
     },
     96468: (e, t, a) => {
       "use strict";
-      a.d(t, { M: () => d, p: () => m });
+      a.d(t, { MS: () => d, pQ: () => m });
       var n = a(65946),
         r = a(90626),
         i = a(62792),
@@ -55016,6 +55016,7 @@
                 "Marketing Message: Store item missing at least 3 screenshots safe for all ages, required asset for auto-render.",
               ),
             0 == t.GetAllTrailers().GetHighlightTrailers(!0).length &&
+              4 != t.GetAppType() &&
               a.push(
                 "Marketing Message: Store item missing highlight trailers, required asset for auto-render.",
               );
@@ -55024,14 +55025,27 @@
       }
       function d(e) {
         const { oEditableMessage: t } = e,
-          [a, o, d] = (0, n.q3)(() => [
+          [a, d, u] = (0, n.q3)(() => [
             t.GetStoreItemKey()?.id,
             (0, i.JK)(t.GetStoreItemKey()?.item_type),
             t.GetModel(),
           ]),
-          [u] = (0, s.G6)(a, o, c),
-          p = m(d, u);
-        return r.createElement(l.f, { rgWarnings: p });
+          [p] = (0, s.G6)(a, d, c),
+          _ = m(u, p),
+          g = (function (e, t) {
+            const a = [];
+            if (!e || !t) return a;
+            const n = (0, o.c2)(e.template_vars_json);
+            "mm_auto_render" == n?.custom_display &&
+              (t.GetAssets(),
+              4 == t.GetAppType() &&
+                0 == t.GetAllTrailers().GetHighlightTrailers(!0).length &&
+                a.push(
+                  "Marketing Message: DLC missing highlight trailers; will render without it.",
+                ));
+            return a;
+          })(u, p);
+        return r.createElement(l.f, { rgWarnings: _, rgInfos: g });
       }
     },
     41720: (e, t, a) => {
@@ -60570,7 +60584,7 @@
                     { className: I().LeftCol },
                     c.createElement(Ha, { oEditableMessage: a }),
                     c.createElement(Va, { oEditableMessage: a }),
-                    c.createElement(za.M, { oEditableMessage: a }),
+                    c.createElement(za.MS, { oEditableMessage: a }),
                     c.createElement(Nt.f, { oEditableMessage: a }),
                     c.createElement(Kt, { oEditableMessage: a }),
                     c.createElement(Jt, { oEditableMessage: a }),
@@ -70949,37 +70963,67 @@
             H.push(
               "Marketing Message 2 featured item doesn't match the promotion plans featured item.",
             ),
-          H.push(...(0, _.p)(K, W)),
-          H.push(...(0, _.p)(Y, W)),
+          H.push(...(0, _.pQ)(K, W)),
+          H.push(...(0, _.pQ)(Y, W)),
           r.createElement(f, { rgWarnings: H })
         );
       }
       function f(e) {
-        const { rgWarnings: t } = e;
-        return t && 0 != t.length
+        const { rgWarnings: t, rgInfos: a } = e;
+        return (t && 0 != t.length) || (a && 0 != a.length)
           ? r.createElement(
               "div",
               { className: i.WarningsContainer },
-              r.createElement(o.JU, null, "Setup warnings:"),
-              r.createElement(
-                "div",
-                null,
-                t.map((e) =>
+              t?.length > 0 &&
+                r.createElement(
+                  r.Fragment,
+                  null,
+                  r.createElement(o.JU, null, "Setup warnings:"),
                   r.createElement(
                     "div",
-                    {
-                      key: e,
-                      className: (0, l.A)(
-                        i.PreviewLinkCtn,
-                        i.Incomplete,
-                        s.WarningStylesWithIcon,
-                        i.WarningItem,
+                    null,
+                    t.map((e) =>
+                      r.createElement(
+                        "div",
+                        {
+                          key: e,
+                          className: (0, l.A)(
+                            i.PreviewLinkCtn,
+                            i.Incomplete,
+                            s.WarningStylesWithIcon,
+                            i.WarningItem,
+                          ),
+                        },
+                        e,
                       ),
-                    },
-                    e,
+                    ),
                   ),
                 ),
-              ),
+              a?.length > 0 &&
+                r.createElement(
+                  r.Fragment,
+                  null,
+                  r.createElement(o.JU, null, "Information (non blockers):"),
+                  r.createElement(
+                    "div",
+                    null,
+                    a.map((e) =>
+                      r.createElement(
+                        "div",
+                        {
+                          key: e,
+                          className: (0, l.A)(
+                            i.PreviewLinkCtn,
+                            i.Incomplete,
+                            s.InfoStylesWithIcon,
+                            i.WarningItem,
+                          ),
+                        },
+                        e,
+                      ),
+                    ),
+                  ),
+                ),
             )
           : null;
       }

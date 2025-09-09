@@ -17650,13 +17650,7 @@
             m && this.props.children,
           );
           return (
-            r &&
-              (p = n.createElement(
-                o.Z,
-                { focusableIfNoChildren: !0, retainFocus: !0 },
-                p,
-              )),
-            p
+            r && (p = n.createElement(o.Z, { focusableIfEmpty: !0 }, p)), p
           );
         }
       }

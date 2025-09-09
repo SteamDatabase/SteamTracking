@@ -29621,7 +29621,9 @@
           _owner: _.current,
         };
       }
-      module_exports.jsx = _;
+      (module_exports.Fragment = _),
+        (module_exports.jsx = _),
+        (module_exports.jsxs = _);
     },
     chunkid: (_, _) => {
       "use strict";

@@ -1739,7 +1739,7 @@
     "Sale_default_label_208": "Seurapeli",
     "Sale_default_label_209": "Sanapulma ja visailu",
     "Sale_default_label_210": "Toiminta ja arcade",
-    "Sale_default_label_211": "Tulevat huippujulkaisut",
+    "Sale_default_label_211": "Odotetuimmat tulevat julkaisut",
     "Sale_default_label_212": "Suositut tulokkaat",
     "Sale_default_label_213": "Suositut pelit, joista on demo",
     "Sale_default_label_214": "Hauska",
@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Pelin tallennus",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "Tallenna tämä pelisessio",
     "QuickAccess_Tab_GameRecording": "Pelin tallennus",
+    "Settings_GameRecording_InstantClip_Label": "Leikkeen pituus sekunneissa",
     "AccessibilityFeatures": "Helppokäyttötoiminnot",
     "AccessibilityFeaturesWithCount": "Helppokäyttötoiminnot (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Säädettävä vaikeustaso",
@@ -3690,5 +3691,8 @@
     "SteamNotifications_TradeReversal_Body": "Vaihto peruttiin",
     "SteamNotifications_TradeReversal_Body_Short": "Vaihto peruttiin",
     "SteamNotifications_TradeReversal_Description": "Toinen osapuoli perui yhden viimeaikaisista vaihtokaupoistasi.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "AddonPicker_Search": "Hae",
+    "ReorderableList_ReorderInstructions": "Valitse ja järjestä uudelleen siirtämällä kohteita ylös- tai alaspäin",
+    "ControllerButton_8BitDo": "8BitDo-painike"
 }

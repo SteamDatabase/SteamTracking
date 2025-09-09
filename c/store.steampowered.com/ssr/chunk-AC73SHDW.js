@@ -2466,7 +2466,7 @@ var _ = ((_) => (
     m_Focused = _(!1);
     m_FocusWithin = _(!1);
     m_ActionDescriptionsChangedCallbackList = new _();
-    m_RetainFocusParent = null;
+    m_FocusableIfEmptyAncestor = null;
     m_rgNavigationHandlers = [];
     m_rgFocusHandlers = [];
     constructor(_, _, _) {
@@ -2495,15 +2495,17 @@ var _ = ((_) => (
           this.m_Properties?.actionDescriptionMap,
           _?.actionDescriptionMap,
         ),
-        _ = this.m_Properties?.retainFocus,
+        _ = this.m_Properties?.focusableIfEmpty,
         _ = this.m_Properties?.noFocusRing;
       (this.m_Properties = _ || {}),
         _ && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
-        this.m_Properties.retainFocus && !_
-          ? this.PropagateRetainFocusParentToChildren(this)
-          : !this.m_Properties.retainFocus &&
+        this.m_Properties.focusableIfEmpty && !_
+          ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
+          : !this.m_Properties.focusableIfEmpty &&
             _ &&
-            this.PropagateRetainFocusParentToChildren(this.m_RetainFocusParent),
+            this.PropagateFocusableIfEmptyAncestorToDescendants(
+              this.m_FocusableIfEmptyAncestor,
+            ),
         this.m_Properties.noFocusRing && !_ && this.BHasFocus()
           ? this.m_FocusRing?.OnBlur(2, this, this)
           : !this.m_Properties.noFocusRing &&
@@ -2571,10 +2573,10 @@ var _ = ((_) => (
       this.m_rgChildren.push(_),
         (this.m_bChildrenSorted = !1),
         this.m_element && this.RegisterDOMEvents(),
-        this.m_Properties?.retainFocus
-          ? _.SetRetainFocusParent(this)
-          : this.m_RetainFocusParent &&
-            _.SetRetainFocusParent(this.m_RetainFocusParent),
+        this.m_Properties?.focusableIfEmpty
+          ? _.SetFocusableIfEmptyAncestor(this)
+          : this.m_FocusableIfEmptyAncestor &&
+            _.SetFocusableIfEmptyAncestor(this.m_FocusableIfEmptyAncestor),
         this.m_bMounted &&
           _.BFocusWithin() &&
           (_(
@@ -2590,7 +2592,9 @@ var _ = ((_) => (
           : _(this == this.m_Tree.Root, "Only root should have no parent"),
         (this.m_bMounted = !0),
         this.RegisterDOMEvents();
-      let _ = this.m_RetainFocusParent && this.m_RetainFocusParent.BHasFocus(),
+      let _ =
+          this.m_FocusableIfEmptyAncestor &&
+          this.m_FocusableIfEmptyAncestor.BHasFocus(),
         _ = this.m_Properties?.autoFocus || _;
       if (this.BWantsAutoFocus() || _) {
         let _ = -1;
@@ -2603,7 +2607,7 @@ var _ = ((_) => (
               ? _
                 ? this.m_Tree.DeferredFocus.BHasQueuedFocusNode() ||
                   this.m_Tree.DeferredFocus.RequestFocus(
-                    this.m_RetainFocusParent,
+                    this.m_FocusableIfEmptyAncestor,
                     {
                       bFocusDescendant: !0,
                     },
@@ -2622,17 +2626,19 @@ var _ = ((_) => (
     }
     DEV_SetDebugPropsOnElement() {}
     OnUnmount() {
-      this.m_Properties?.retainFocus &&
-        this.PropagateRetainFocusParentToChildren(this.m_RetainFocusParent),
+      this.m_Properties?.focusableIfEmpty &&
+        this.PropagateFocusableIfEmptyAncestorToDescendants(
+          this.m_FocusableIfEmptyAncestor,
+        ),
         (this.m_bMounted = !1);
       let _ = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
       (this.BHasFocus() || _) &&
         (_(
-          `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
+          `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? "will transfer to retain focus ancestor" : "will blur"}.`,
         ),
         _ && this.Tree.DeferredFocus.RequestFocus(null),
-        this.m_RetainFocusParent
-          ? this.m_RetainFocusParent.OnFocusedDecendantRemoved(this)
+        this.m_FocusableIfEmptyAncestor
+          ? this.m_FocusableIfEmptyAncestor.OnFocusedDecendantRemoved(this)
           : this.BHasFocus() && this.m_Tree.TransferFocus(2, null)),
         this.UnregisterDOMEvents(),
         this.m_Parent
@@ -2652,7 +2658,7 @@ var _ = ((_) => (
           _(this.m_element, this.OnNavigationEvent),
         ),
         (this.m_Properties?.focusable ||
-          this.m_Properties?.focusableIfNoChildren ||
+          this.m_Properties?.focusableIfEmpty ||
           this.m_rgChildren.length == 0) &&
           (this.m_rgFocusHandlers.length ||
             (this.m_element?.addEventListener("focus", this.OnDOMFocus),
@@ -2734,7 +2740,7 @@ var _ = ((_) => (
           let _ = this.FindFocusableDescendant();
           if (_ && _ !== this) {
             _(
-              "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
+              "Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.",
               this.m_element,
               _.m_element,
             ),
@@ -2758,7 +2764,7 @@ var _ = ((_) => (
     GetFocusable() {
       let {
         focusable: _,
-        focusableIfNoChildren: _,
+        focusableIfEmpty: _,
         childFocusDisabled: _,
         fnCanTakeFocus: _,
       } = this.m_Properties;
@@ -2802,7 +2808,7 @@ var _ = ((_) => (
     }
     FindFocusableDescendant(_, _) {
       let _ = _(_),
-        { focusableIfNoChildren: _, childFocusDisabled: _ } =
+        { focusableIfEmpty: _, childFocusDisabled: _ } =
           this.m_Properties ?? {};
       if (_) return null;
       if (this.m_rgChildren.length) {
@@ -3241,14 +3247,14 @@ var _ = ((_) => (
     GetDepth() {
       return this.m_nDepth;
     }
-    SetRetainFocusParent(_) {
-      (this.m_RetainFocusParent = _),
-        this.m_Properties?.retainFocus ||
-          this.PropagateRetainFocusParentToChildren(_);
+    SetFocusableIfEmptyAncestor(_) {
+      (this.m_FocusableIfEmptyAncestor = _),
+        this.m_Properties?.focusableIfEmpty ||
+          this.PropagateFocusableIfEmptyAncestorToDescendants(_);
     }
-    PropagateRetainFocusParentToChildren(_) {
+    PropagateFocusableIfEmptyAncestorToDescendants(_) {
       for (let _ = 0; _ < this.m_rgChildren.length; _++)
-        this.m_rgChildren[_].SetRetainFocusParent(_);
+        this.m_rgChildren[_].SetFocusableIfEmptyAncestor(_);
     }
     OnFocusedDecendantRemoved(_) {
       this.m_Tree.DeferredFocus.RequestFocus(this, {
@@ -3747,12 +3753,11 @@ function _(_) {
       disableNavSounds: _,
       fnCanTakeFocus: _,
       childFocusDisabled: _,
-      retainFocus: _,
+      focusableIfEmpty: _,
       onFocusWithin: _,
       navKey: _,
       noFocusRing: _,
       focusable: _,
-      focusableIfNoChildren: _,
       navRef: _,
       actionDescriptionMap: _,
       onMoveUp: _,
@@ -3773,12 +3778,11 @@ function _(_) {
       disableNavSounds: _,
       fnCanTakeFocus: _,
       childFocusDisabled: _,
-      retainFocus: _,
+      focusableIfEmpty: _,
       onFocusWithin: _,
       navKey: _,
       noFocusRing: _,
       focusable: _,
-      focusableIfNoChildren: _,
       navRef: _,
       onMoveUp: _,
       onMoveRight: _,

@@ -538,6 +538,11 @@
                     bw: g.gp.writeFixed64String,
                   },
                   awaiting_2fa: { n: 4, br: g.qM.readBool, bw: g.gp.writeBool },
+                  invite_id: {
+                    n: 5,
+                    br: g.qM.readUint64String,
+                    bw: g.gp.writeUint64String,
+                  },
                 },
               }),
             F.sm_m
@@ -4575,21 +4580,21 @@
           },
         });
       }
-      function er(e, r = null) {
-        const t = (0, y.KV)(),
-          a = (0, c.LH)(),
-          s = (0, o.jE)();
+      function er(e) {
+        const r = (0, y.KV)(),
+          t = (0, c.LH)(),
+          a = (0, o.jE)();
         return (0, u.n)({
           mutationFn: async () => {
-            const a = n.w.Init(T);
-            a.Body().set_family_groupid(e), null !== r && a.Body().set_nonce(r);
-            const s = await i.JoinFamilyGroup(t, a);
-            return Le(s.GetEResult()), s.Body();
+            const t = n.w.Init(T);
+            t.Body().set_family_groupid(e);
+            const a = await i.JoinFamilyGroup(r, t);
+            return Le(a.GetEResult()), a.Body();
           },
           onSuccess: () => {
-            s.invalidateQueries({ queryKey: xe(a) }),
-              s.invalidateQueries({ queryKey: Ne(e) }),
-              s.invalidateQueries({ queryKey: ke(e) });
+            a.invalidateQueries({ queryKey: xe(t) }),
+              a.invalidateQueries({ queryKey: Ne(e) }),
+              a.invalidateQueries({ queryKey: ke(e) });
           },
         });
       }
@@ -4962,23 +4967,23 @@
           );
         return (0, s.useMemo)(() => a.slice().sort(n), [a, n]);
       }
-      function Sr(e, r, t) {
-        const a = (0, y.KV)(),
-          s = (0, o.jE)(),
-          l = (0, c.LH)();
+      function Sr(e, r) {
+        const t = (0, y.KV)(),
+          a = (0, o.jE)(),
+          s = (0, c.LH)();
         return (0, u.n)({
-          mutationFn: async () => {
+          mutationFn: async (a) => {
             const s = n.w.Init(ye);
             s.Body().set_family_groupid(e),
               s.Body().set_invite_id(r),
-              s.Body().set_nonce(t);
-            const l = await i.ConfirmJoinFamilyGroup(a, s);
+              s.Body().set_nonce(a);
+            const l = await i.ConfirmJoinFamilyGroup(t, s);
             return Le(l.GetEResult()), l.Body();
           },
           onSuccess: () => {
-            s.invalidateQueries({ queryKey: xe(l) }),
-              s.invalidateQueries({ queryKey: Ne(e) }),
-              s.invalidateQueries({ queryKey: ke(e) });
+            a.invalidateQueries({ queryKey: xe(s) }),
+              a.invalidateQueries({ queryKey: Ne(e) }),
+              a.invalidateQueries({ queryKey: ke(e) });
           },
         });
       }

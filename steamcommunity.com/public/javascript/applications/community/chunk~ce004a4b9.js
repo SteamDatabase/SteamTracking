@@ -482,6 +482,11 @@
                     bw: u.gp.writeFixed64String,
                   },
                   awaiting_2fa: { n: 4, br: u.qM.readBool, bw: u.gp.writeBool },
+                  invite_id: {
+                    n: 5,
+                    br: u.qM.readUint64String,
+                    bw: u.gp.writeUint64String,
+                  },
                 },
               }),
             M.sm_m

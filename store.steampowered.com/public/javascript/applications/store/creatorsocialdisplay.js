@@ -270,6 +270,8 @@
             return 15;
           case "linkedin":
             return 16;
+          case "rednote":
+            return 24;
         }
         return 0;
       }
@@ -445,6 +447,8 @@
           case 22:
             return r.createElement(s.emH, { ...n });
           case 24:
+            return r.createElement(s.Yoo, { ...n });
+          case 25:
           case 0:
             return "invalid social media type";
         }

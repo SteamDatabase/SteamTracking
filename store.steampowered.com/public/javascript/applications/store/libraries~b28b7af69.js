@@ -28856,7 +28856,7 @@
           _owner: a.current,
         };
       }
-      t.jsx = l;
+      (t.Fragment = i), (t.jsx = l), (t.jsxs = l);
     },
     69069: (e, t) => {
       "use strict";

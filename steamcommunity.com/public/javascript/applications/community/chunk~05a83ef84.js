@@ -1119,6 +1119,16 @@
                 e.doc,
               ));
         }
+        ReplaceDocument(e) {
+          this.m_bbcode != e &&
+            this.UpdateState((t) => {
+              this.m_bbcode = e;
+              const o = this.m_bbcodeParser.ParseBBCode(e);
+              return this.m_state.tr
+                .replaceWith(0, this.m_state.doc.content.size, o)
+                .scrollIntoView();
+            });
+        }
       }
       function v(e, t) {
         (0, n.hL)(null == e ? void 0 : e.OnStateChangedCallbacks, t);
@@ -1648,7 +1658,7 @@
         const y = l
             ? (0, i.we)("#FormattingToolbar_EditLink")
             : (0, i.we)("#FormattingToolbar_InsertLink"),
-          A = l
+          S = l
             ? (0, i.we)("#Button_Save")
             : (0, i.we)("#FormattingToolbar_InsertLink");
         return a.createElement(
@@ -1716,7 +1726,7 @@
             },
             closeModal: g,
             strTitle: y,
-            strOKText: A,
+            strOKText: S,
             bOKDisabled: 0 == _.length,
           },
           a.createElement(s.pd, {
@@ -1825,8 +1835,8 @@
           (0, k.D5)(d, B);
         const {
             refDiv: y,
-            onActivate: A,
-            onGamepadDirection: S,
+            onActivate: S,
+            onGamepadDirection: A,
           } = (function (e) {
             const t = u.useRef(void 0),
               o = (0, a.FN)(),
@@ -1864,9 +1874,9 @@
             ref: M,
             spellCheck: m,
             focusable: !0,
-            onActivate: A,
+            onActivate: S,
             onOKActionDescription: (0, _.we)("#UserGameNotes_Edit"),
-            onGamepadDirection: S,
+            onGamepadDirection: A,
             ...g,
           }),
           u.createElement(l.KF, {
@@ -2417,15 +2427,15 @@
         return s.createElement(
           "div",
           { className: g.TooltipWithShortcut },
-          s.createElement("div", null, (0, u.we)(t)),
+          s.createElement("div", null, "string" == typeof t ? (0, u.we)(t) : t),
           s.createElement(
             "div",
             null,
-            s.createElement(A, { keyboardShortcut: o }),
+            s.createElement(S, { keyboardShortcut: o }),
           ),
         );
       }
-      function A(e) {
+      function S(e) {
         const { keyboardShortcut: t } = e,
           o = t.split("-"),
           r = o.pop();
@@ -2436,14 +2446,14 @@
             s.createElement(
               s.Fragment,
               { key: t },
-              s.createElement(S, null, s.createElement(M, { modifier: e })),
+              s.createElement(A, null, s.createElement(M, { modifier: e })),
               " + ",
             ),
           ),
-          s.createElement(S, null, r.toUpperCase()),
+          s.createElement(A, null, r.toUpperCase()),
         );
       }
-      function S(e) {
+      function A(e) {
         return s.createElement("span", { className: g.KeyCap }, e.children);
       }
       function M(e) {

@@ -1,6 +1,6 @@
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -379,7 +379,7 @@ function _(_) {
   );
 }
 function _(_) {
-  return typeof _ == "string" ? _(_) : _;
+  return typeof _ == "string" ? _.LocalizeIfToken(_, !0) : _;
 }
 function _(_) {
   return (0, _.jsx)("div", {
@@ -428,11 +428,11 @@ function _(_) {
 var _ = "me1BHzZX9A0-";
 var _ = _(_());
 function _(_) {
-  let _ = _.customTooltip ? _ : _;
-  return (0, _.jsxs)(_, {
-    toolTipContent: _.tooltip,
-    className: _(_, "HelperTooltip", _.className),
-    children: [" ", (0, _.jsx)(_, {})],
+  let { customTooltip: _, tooltip: _, className: _, icon: _ } = _;
+  return (0, _.jsxs)(_ ? _ : _, {
+    toolTipContent: _,
+    className: _(_, "HelperTooltip", _),
+    children: [" ", _ ?? (0, _.jsx)(_, {})],
   });
 }
 var _ = _(_()),

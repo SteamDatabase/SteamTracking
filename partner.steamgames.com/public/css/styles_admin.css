@@ -2820,6 +2820,13 @@ html, body { height:100%; }
     line-height: 20px;
 	display: block;
 }
+
+.input_area {
+	background: -webkit-linear-gradient(180deg, hsl(227 8% 11% / 1) 0%, rgb(114 118 133 / 9%) 5%);
+	background: linear-gradient(180deg, hsl(227 8% 11% / 1) 0%, rgb(114 118 133 / 9%) 5%);
+	padding: 24px 16px 16px 16px;
+}
+
 #page_background {
     max-width: 100%;
 }

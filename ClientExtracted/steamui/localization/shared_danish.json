@@ -395,7 +395,7 @@
     "EventDisplay_CallToAction_InLibrary": "I bibliotek",
     "EventDisplay_CallToAction_PlayNow": "Spil nu",
     "EventDisplay_CallToAction_ComingSoon": "Kommer snart",
-    "EventDisplay_CallToAction_ComingSoon_Date": "Tilgængelig: %1$s",
+    "EventDisplay_CallToAction_ComingSoon_Date": "Tilgængeligt: %1$s",
     "EventDisplay_CallToAction_Prepurchase_Short": "Forudkøb",
     "EventDisplay_CallToAction_ShowPurchaseOptions_Button": "Købsmuligheder",
     "EventDisplay_CallToAction_FreeToPlay": "Gratis at spille",
@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Spiloptagelse",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Optag denne spilsession)",
     "QuickAccess_Tab_GameRecording": "Spiloptagelse",
+    "Settings_GameRecording_InstantClip_Label": "Kliplængde i sekunder",
     "AccessibilityFeatures": "Tilgængelighedsfunktioner",
     "AccessibilityFeaturesWithCount": "Tilgængelighedsfunktioner (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Justerbar sværhedsgrad",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "Byttebeskyttelse",
     "SteamNotifications_TradeReversal_Body": "En byttehandel blev tilbageført",
     "SteamNotifications_TradeReversal_Body_Short": "En byttehandel blev tilbageført",
-    "SteamNotifications_TradeReversal_Description": "En af dine seneste byttehandler blev tilbageført af din byttepartner."
+    "SteamNotifications_TradeReversal_Description": "En af dine seneste byttehandler blev tilbageført af din byttepartner.",
+    "AddonPicker_Search": "Søg...",
+    "ReorderableList_ReorderInstructions": "Vælg og flyt op eller ned for at ændre rækkefølgen",
+    "ControllerButton_8BitDo": "8BitDo-knap"
 }

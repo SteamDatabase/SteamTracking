@@ -3403,7 +3403,7 @@
               },
               _.createElement(_._, {
                 type: "text",
-                label: "Search",
+                label: (0, _._)("#EventCalendar_UniversalSearch"),
                 value: _,
                 onChange: (_) => _(_.target.value),
               }),
@@ -16071,6 +16071,7 @@
         const { editModel: _ } = _,
           _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
         let _ = _.useRef(void 0);
+        const _ = _.BHasSaleEnabled();
         if (!_.valve_admin) return null;
         return _.createElement(
           _.Fragment,
@@ -16128,6 +16129,20 @@
                 description:
                   "Allows the partner to upload a store spotlight artwork to be shown on the product page for upto a week from the event start.",
               }),
+            Boolean(!_._.IS_OGG && _) &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_._, {
+                  onChange: (_) => _.SetTag("hide_from_events_and_discount", _),
+                  label: "(VO) Hide Sale From Events and Discount Page",
+                  checked: _.GetEventModel().BHasTag(
+                    "hide_from_events_and_discount",
+                  ),
+                  description:
+                    "By default we show sale pages on the events and discount store hub. Turning this on, we will not show this sale page there.",
+                }),
+              ),
             _.createElement(_._, {
               onChange: (_) => _.SetLibraryHomeSpotlight(_),
               label: "(VO) Force Spotlight on Library Home",

@@ -162,15 +162,24 @@
               last_update_event: null,
             });
           const _ = (0, _._)("EventWebRowEmbed");
-          this.ValidateStoreDefault(_) &&
-            ((this.state.bPreLoaded = _.bPreLoaded),
-            (this.state.announcementGIDList = _.announcementGIDList),
-            (this.state.last_update_event = _.last_update_event),
-            (this.state.events = []),
-            this.state.announcementGIDList.forEach((_) => {
-              const _ = _._.GetClanEventFromAnnouncementGID(_);
-              _ && this.state.events.push(_);
-            }));
+          if (this.ValidateStoreDefault(_)) {
+            (this.state.bPreLoaded = _.bPreLoaded),
+              (this.state.announcementGIDList = _.announcementGIDList),
+              (this.state.last_update_event = _.last_update_event),
+              (this.state.events = []),
+              this.state.announcementGIDList.forEach((_) => {
+                const _ = _._.GetClanEventFromAnnouncementGID(_);
+                _ && this.state.events.push(_);
+              });
+            const _ = new URLSearchParams(window.location.search),
+              _ = null == _ ? void 0 : _.get("emgid");
+            if (_) {
+              const _ = this.state.events.find((_) => _.GID === _);
+              _ &&
+                ((this.state.modalInitialEvent = _),
+                (this.state.bShowModal = !0));
+            }
+          }
         }
         async componentDidMount() {
           const {

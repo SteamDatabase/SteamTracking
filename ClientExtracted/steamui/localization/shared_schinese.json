@@ -3665,6 +3665,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "游戏录制",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "（录制此游戏会话）",
     "QuickAccess_Tab_GameRecording": "游戏录制",
+    "Settings_GameRecording_InstantClip_Label": "剪辑时长（以秒为单位）",
     "AccessibilityFeatures": "辅助功能",
     "AccessibilityFeaturesWithCount": "辅助功能（%1$s）",
     "Accessibility_Feature_AdjustableDifficulty": "可调整难度",
@@ -3690,5 +3691,8 @@
     "SteamNotifications_TradeReversal_Title": "交易保护",
     "SteamNotifications_TradeReversal_Body": "一笔交易已撤销",
     "SteamNotifications_TradeReversal_Body_Short": "一笔交易已撤销",
-    "SteamNotifications_TradeReversal_Description": "您近期的一笔交易被交易对象撤销了。"
+    "SteamNotifications_TradeReversal_Description": "您近期的一笔交易被交易对象撤销了。",
+    "AddonPicker_Search": "搜索…",
+    "ReorderableList_ReorderInstructions": "选择并上移或下移即可重新排序",
+    "ControllerButton_8BitDo": "八位堂 home 键"
 }

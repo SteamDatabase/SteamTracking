@@ -2,17 +2,17 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9214],
+  [6535],
   {
     17690: (e, t, i) => {
-      i.d(t, { IU: () => _, by: () => c, sc: () => u });
-      var s = i(78327),
-        n = i(85044),
+      i.d(t, { IU: () => l, by: () => _, sc: () => u });
+      var n = i(78327),
+        s = i(85044),
         r = i(81393);
       const u = 0,
-        l = "061818254b2c99ac49e6626adb128ed1282a392f",
-        _ = 120;
-      class c {
+        c = "061818254b2c99ac49e6626adb128ed1282a392f",
+        l = 120;
+      class _ {
         m_unAppID;
         m_bInitialized = !1;
         m_strName;
@@ -35,10 +35,10 @@
           return this.m_strName;
         }
         get icon_url_no_default() {
-          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, l);
+          return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, c);
         }
         get icon_url() {
-          return this.BuildAppURL(this.m_strIconURL, l);
+          return this.BuildAppURL(this.m_strIconURL, c);
         }
         get time_updated_from_server() {
           return this.m_dtUpdatedFromServer;
@@ -51,13 +51,13 @@
         }
         BuildAppURL(e, t) {
           return e
-            ? s.TS.MEDIA_CDN_COMMUNITY_URL +
+            ? n.TS.MEDIA_CDN_COMMUNITY_URL +
                 "images/apps/" +
                 this.appid +
                 "/" +
                 e +
                 ".jpg"
-            : (0, n.t)(t);
+            : (0, s.t)(t);
         }
         DeserializeFromMessage(e) {
           (this.m_bInitialized = !0),
@@ -103,17 +103,17 @@
       }
     },
     85044: (e, t, i) => {
-      i.d(t, { d: () => n, t: () => r });
-      var s = i(78327);
-      const n = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      i.d(t, { d: () => s, t: () => r });
+      var n = i(78327);
+      const s = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
       function r(e, t) {
         let i = ".jpg";
-        (e && "0000000000000000000000000000000000000000" !== e) || (e = n),
+        (e && "0000000000000000000000000000000000000000" !== e) || (e = s),
           44 == e.length && ((i = e.substr(-4)), (e = e.substr(0, 40)));
-        let r = s.TS.AVATAR_BASE_URL;
+        let r = n.TS.AVATAR_BASE_URL;
         return (
           r ||
-            ((r = s.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            ((r = n.TS.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
             (r += e.substr(0, 2) + "/")),
           (r += e),
           t && "small" != t && (r += "_" + t),
@@ -124,24 +124,24 @@
     },
     55263: (e, t, i) => {
       i.d(t, {
-        G6: () => _,
+        G6: () => l,
         Gg: () => d,
         Ow: () => a,
         YM: () => h,
         mZ: () => o,
-        t7: () => c,
+        t7: () => _,
         zX: () => m,
       });
-      var s = i(41735),
-        n = i.n(s),
+      var n = i(41735),
+        s = i.n(n),
         r = i(90626),
         u = i(84933),
-        l = i(82097);
-      function _(e, t, i, s) {
-        const _ = (0, r.useRef)(void 0),
-          c = (0, r.useRef)(void 0),
+        c = i(82097);
+      function l(e, t, i, n) {
+        const l = (0, r.useRef)(void 0),
+          _ = (0, r.useRef)(void 0),
           a = (0, u.CH)();
-        _.current = e;
+        l.current = e;
         const [d, o] = (0, r.useState)(void 0),
           {
             include_assets: p,
@@ -185,50 +185,50 @@
             return (
               !e ||
                 e < 0 ||
-                l.A.Get().BHasStoreItem(e, t, i) ||
-                (void 0 !== d && s && s == c.current) ||
-                (s !== c.current && (o(void 0), (c.current = s)),
-                (r = n().CancelToken.source()),
-                l.A.Get()
+                c.A.Get().BHasStoreItem(e, t, i) ||
+                (void 0 !== d && n && n == _.current) ||
+                (n !== _.current && (o(void 0), (_.current = n)),
+                (r = s().CancelToken.source()),
+                c.A.Get()
                   .QueueStoreItemRequest(e, t, i)
                   .then((t) => {
-                    r?.token.reason || _.current !== e || o(1 == t), a();
+                    r?.token.reason || l.current !== e || o(1 == t), a();
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, d, p, m, h, f, I, g, A, v, b, S, U, y, R, G, T, L, a]),
+          }, [e, t, n, d, p, m, h, f, I, g, A, v, b, S, U, y, R, G, T, L, a]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
-        if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!l.A.Get().BHasStoreItem(e, t, i)) return [void 0, 1];
-        const z = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        if (c.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!c.A.Get().BHasStoreItem(e, t, i)) return [void 0, 1];
+        const z = c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
         return z ? [z, 3] : [null, 2];
       }
-      function c(e, t, i) {
-        return _(e, 0, t, i);
+      function _(e, t, i) {
+        return l(e, 0, t, i);
       }
       function a(e, t, i) {
-        return _(e, 2, t, i);
+        return l(e, 2, t, i);
       }
       function d(e, t, i) {
-        return _(e, 1, t, i);
+        return l(e, 1, t, i);
       }
       function o(e, t, i) {
-        const [s, n] = _(e, t, i);
+        const [n, s] = l(e, t, i);
         let r;
-        1 != s?.GetStoreItemType() ||
-          s.GetAssets()?.GetHeaderURL() ||
-          1 != s?.GetIncludedAppIDs().length ||
-          (r = s.GetIncludedAppIDs()[0]);
-        const [u, l] = c(r, i);
-        return r && u?.BIsVisible() ? [u, l] : [s, n];
+        1 != n?.GetStoreItemType() ||
+          n.GetAssets()?.GetHeaderURL() ||
+          1 != n?.GetIncludedAppIDs().length ||
+          (r = n.GetIncludedAppIDs()[0]);
+        const [u, c] = _(r, i);
+        return r && u?.BIsVisible() ? [u, c] : [n, s];
       }
-      function p(e, t, i, s) {
-        const _ = (0, u.CH)(),
+      function p(e, t, i, n) {
+        const l = (0, u.CH)(),
           {
-            include_assets: c,
+            include_assets: _,
             include_release: a,
             include_platforms: d,
             include_all_purchase_options: o,
@@ -249,7 +249,7 @@
           ((0, r.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const i = {
-                include_assets: c,
+                include_assets: _,
                 include_release: a,
                 include_platforms: d,
                 include_all_purchase_options: o,
@@ -266,36 +266,36 @@
                 apply_user_filters: U,
                 include_links: y,
               },
-              s = e.filter(
+              n = e.filter(
                 (e) =>
                   !(
-                    l.A.Get().BHasStoreItem(e, t, i) ||
-                    l.A.Get().BIsStoreItemMissing(e, t)
+                    c.A.Get().BHasStoreItem(e, t, i) ||
+                    c.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == s.length) return;
-            const r = n().CancelToken.source(),
-              u = s.map((e) => l.A.Get().QueueStoreItemRequest(e, t, i));
+            if (0 == n.length) return;
+            const r = s().CancelToken.source(),
+              u = n.map((e) => c.A.Get().QueueStoreItemRequest(e, t, i));
             return (
               Promise.all(u).then(() => {
-                r.token.reason || _();
+                r.token.reason || l();
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, _, c, a, d, o, p, m, h, f, I, g, A, v, b, S, U, y]),
+          }, [e, t, n, l, _, a, d, o, p, m, h, f, I, g, A, v, b, S, U, y]),
           !e)
         )
           return 2;
         if (
           !e.every(
             (e) =>
-              l.A.Get().BHasStoreItem(e, t, i) ||
-              l.A.Get().BIsStoreItemMissing(e, t),
+              c.A.Get().BHasStoreItem(e, t, i) ||
+              c.A.Get().BIsStoreItemMissing(e, t),
           )
         )
           return 1;
         return e.every((e) =>
-          l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          c.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
           ? 3
           : 2;
@@ -306,10 +306,26 @@
       function h() {
         r.useEffect(
           () => (
-            l.A.Get().SetReturnUnavailableItems(!0),
-            () => l.A.Get().SetReturnUnavailableItems(!1)
+            c.A.Get().SetReturnUnavailableItems(!0),
+            () => c.A.Get().SetReturnUnavailableItems(!1)
           ),
           [],
+        );
+      }
+    },
+    4434: (e, t, i) => {
+      i.d(t, { m: () => u });
+      var n = i(41735),
+        s = i.n(n),
+        r = i(90626);
+      function u(e) {
+        const t = r.useRef(s().CancelToken.source());
+        return (
+          r.useEffect(() => {
+            const i = t.current;
+            return () => i.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
         );
       }
     },

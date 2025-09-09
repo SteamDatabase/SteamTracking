@@ -3786,16 +3786,18 @@
           let _ = this.GetTabSaleSection();
           return _ && _.tabs.forEach((_) => _.capsules.forEach(_)), _;
         }
+        GenerateRandomID() {
+          return Math.floor(_._ + Math.random() * (_._ - _._ + 1));
+        }
         GenerateBackgroundImageGroupUniqueID() {
-          let _ = Math.floor(1e4 + Math.random() * _._);
+          let _ = this.GenerateRandomID();
           for (; this.GetBackgroundImageGroupByID(_); )
-            _ = Math.floor(1e4 + Math.random() * _._);
+            _ = this.GenerateRandomID();
           return _;
         }
         GenerateSaleSectionUniqueID() {
-          let _ = Math.floor(1e4 + Math.random() * _._);
-          for (; this.GetSaleSectionByID(_); )
-            _ = Math.floor(1e4 + Math.random() * _._);
+          let _ = this.GenerateRandomID();
+          for (; this.GetSaleSectionByID(_); ) _ = this.GenerateRandomID();
           return _;
         }
         GetFacetByID(_, _) {
@@ -9407,7 +9409,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { capsule: _, capsuleContainer: __webpack_require__ } = _,
+        const {
+            capsule: _,
+            capsuleContainer: __webpack_require__,
+            warning: _,
+          } = _,
           _ = _.useCallback(() => {
             if (!_ || !__webpack_require__) return !1;
             for (const _ of __webpack_require__.capsules)
@@ -9457,6 +9463,7 @@
             _,
             ")",
           ),
+          _,
           !_ &&
             _.createElement(
               "div",
@@ -10526,11 +10533,17 @@
                   onDelete: this.RemoveCapsule,
                   onReorder: () =>
                     this.props.editModel.SetDirty(_._.jsondata_sales),
-                  render: (_) =>
-                    _.createElement(_._, {
+                  render: (_) => {
+                    var _, _;
+                    return _.createElement(_._, {
                       capsule: _,
                       capsuleContainer: _,
-                    }),
+                      warning:
+                        null === (_ = (_ = this.props).warning) || void 0 === _
+                          ? void 0
+                          : _.call(_, _),
+                    });
+                  },
                 }),
                 _.length > 1 &&
                   _.createElement(_._, {
@@ -23168,49 +23181,101 @@
           [_, _] = (0, _.useState)(() =>
             null == __webpack_require__ ? void 0 : __webpack_require__.url,
           ),
+          [_, _] = (0, _.useState)(() =>
+            null == __webpack_require__ ? void 0 : __webpack_require__.sc_url,
+          ),
           _ = (0, _._)(() =>
             null == __webpack_require__ ? void 0 : __webpack_require__.url,
+          ),
+          [_, _] = (0, _._)(() => [
+            _.BHasTag("enable_steam_china"),
+            _.BHasTag("disable_steam_global"),
+          ]),
+          _ = Boolean(
+            ((null == _ ? void 0 : _.length) > 8 &&
+              (null == _ ? void 0 : _.startsWith(_._.STORE_BASE_URL))) ||
+              (null == _ ? void 0 : _.startsWith(_._.COMMUNITY_BASE_URL)),
+          ),
+          _ = Boolean(
+            (null == _ ? void 0 : _.length) > 8 &&
+              (null == _
+                ? void 0
+                : _.startsWith("https://store.steamchina.com/")),
           );
         return _.createElement(
           _._,
           {
             className: _.DialogSize,
             strTitle: (0, _._)(_ ? "#Sale_EditLinkURL" : "#Sale_AddLinkURL"),
-            bOKDisabled:
-              !_ || 0 == _.trim().length || !_.startsWith(_._.STORE_BASE_URL),
+            bOKDisabled: !(_ || _) || !(!_ || _),
             closeModal: _,
             onOK: () => {
-              (__webpack_require__.url = _), _.SetDirty(_._.jsondata_sales);
+              __webpack_require__.url != _ &&
+                ((__webpack_require__.url = _), _.SetDirty(_._.jsondata_sales)),
+                __webpack_require__.sc_url != _ &&
+                  ((__webpack_require__.sc_url = _),
+                  _.SetDirty(_._.jsondata_sales));
             },
             bAllowFullSize: !0,
           },
-          _.createElement(_._, {
-            type: "text",
-            value: _,
-            label: (0, _._)("#Sale_LinkURL"),
-            onChange: (_) => {
-              var _;
-              return _(
-                (null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                void 0 === _
-                  ? void 0
-                  : _.value) || "",
-              );
-            },
-            placeholder: (0, _._)("#Sale_AddLink_Placeholder"),
-          }),
-          Boolean(
-            (null == _ ? void 0 : _.length) > 8 &&
-              !(null == _ ? void 0 : _.startsWith(_._.STORE_BASE_URL)),
-          ) &&
+          Boolean(!_) &&
             _.createElement(
-              "div",
-              {
-                className: _.ErrorStylesWithIcon,
-              },
-              (0, _._)("#Sale_LinkImageUrl_warn"),
+              _.Fragment,
+              null,
+              _.createElement(_._, {
+                type: "text",
+                value: _,
+                label: (0, _._)("#Sale_LinkURL"),
+                onChange: (_) => {
+                  var _;
+                  return _(
+                    (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                    void 0 === _
+                      ? void 0
+                      : _.value) || "",
+                  );
+                },
+                placeholder: (0, _._)("#Sale_AddLink_Placeholder"),
+              }),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ErrorStylesWithIcon,
+                  },
+                  (0, _._)("#Sale_LinkImageUrl_warn"),
+                ),
+              _.createElement("p", null, (0, _._)("#Sale_LinkImageUrl")),
             ),
-          _.createElement("p", null, (0, _._)("#Sale_LinkImageUrl")),
+          Boolean(_) &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_._, {
+                type: "text",
+                value: _,
+                label: (0, _._)("#Sale_LinkURL_SC"),
+                onChange: (_) => {
+                  var _;
+                  return _(
+                    (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                    void 0 === _
+                      ? void 0
+                      : _.value) || "",
+                  );
+                },
+                placeholder: (0, _._)("#Sale_AddLink_Placeholder_SC"),
+              }),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ErrorStylesWithIcon,
+                  },
+                  (0, _._)("#Sale_LinkImageUrl_SC_warn"),
+                ),
+              _.createElement("p", null, (0, _._)("#Sale_LinkImageUrl_SC")),
+            ),
         );
       }
       function _(_) {
@@ -29601,7 +29666,8 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           [_, _, _, _] = (0, _._)(() => [
@@ -29667,8 +29733,29 @@
               uniqueKey: "Section" + _,
               capsuleContainer: _,
               editModel: __webpack_require__,
+              warning: (_) =>
+                _.createElement(_, {
+                  capsule: _,
+                }),
             }),
         );
+      }
+      function _(_) {
+        const { capsule: _ } = _,
+          [__webpack_require__] = (0, _._)(_._, (0, _._)(_.type), {
+            include_trailers: !0,
+          });
+        if (!__webpack_require__ || __webpack_require__.BHasTrailers(!1))
+          return;
+        const _ = __webpack_require__.BHasTrailers(!0)
+          ? (0, _._)("#Sale_TrailerCarouselType_TrailerMissingWarningAO")
+          : (0, _._)("#Sale_TrailerCarouselType_TrailerMissingWarningAllAges");
+        return _.createElement(_._, {
+          tooltip: _,
+          icon: _.createElement(_.eTF, {
+            color: "yellow",
+          }),
+        });
       }
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
@@ -54272,9 +54359,10 @@
             _ = 0,
             _ = 0;
           for (let _ = 0; _ < _.length; _++) {
+            let _;
             for (let _ = 0; (0 == _ || _ < _) && _ < _.length; _++) {
-              const _ = _(_, _),
-                _ = ((_ = _), "tall" === _ ? _ + 1 : _);
+              (0 == _ || _) && (_ = _(_, _));
+              const _ = ((_ = _), "tall" === _ ? _ + 1 : _);
               let _ = Math.min(_[_ % _.length], _);
               const _ = Math.min(_, _.length - _);
               if (_ < _ && 0 === _) {
@@ -63170,6 +63258,8 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -63705,9 +63795,16 @@
                 [_.CarouselDisplay]: !0,
                 [_.SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
+                [_().Blur]: "coverBlur" == _.background_repeat,
               }),
-              style: (0, _._)(_, _, _),
             },
+            _.createElement("div", {
+              className: (0, _._)(
+                _().BackgroundImage,
+                "coverBlur" == _.background_repeat ? _().Blur : "",
+              ),
+              style: (0, _._)(_, _, _),
+            }),
             _.createElement(
               "div",
               {
@@ -63764,9 +63861,16 @@
                   [_.CarouselDisplay]: !0,
                   [_.SaleSectionCtn]: !0,
                   SaleSectionForCustomCSS: !0,
+                  [_().Blur]: "coverBlur" == _.background_repeat,
                 }),
-                style: (0, _._)(_, _, _),
               },
+              _.createElement("div", {
+                className: (0, _._)(
+                  _().BackgroundImage,
+                  "coverBlur" == _.background_repeat ? _().Blur : "",
+                ),
+                style: (0, _._)(_, _, _),
+              }),
               _.createElement(
                 "div",
                 {
@@ -63784,7 +63888,10 @@
         return _.createElement(
           "div",
           {
-            className: _.SpotlightsColumn,
+            className: (0, _._)(
+              _.SpotlightsColumn,
+              "SaleSectionCarouselPadding",
+            ),
           },
           _.map((_) =>
             _.createElement(
@@ -69767,8 +69874,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -79856,6 +79961,7 @@
                     bUseSubscriptionLayout: _.bUseSubscriptionLayout,
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
+                    nWidthMultiplier: _.nWidthMultiplier,
                   },
                   _,
                 ),

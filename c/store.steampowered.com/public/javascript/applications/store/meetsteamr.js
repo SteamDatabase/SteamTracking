@@ -49,6 +49,8 @@
         SessionTime: "_2vYmHfXJIHj2eCv8NsiqZv",
         RegisteredUsers: "HLiipgmnfEQ2O-9WritfU",
         CheckedIn: "_17S0ayInAou4_ptPoMguR0",
+        GuestTitle: "_2fMFlfbH8xUEtW28kSLf5-",
+        GuestEmail: "Tm-tj9XNHRPGqdqqNiTEp",
         DescriptionWrapper: "_17o_wRtaDyujn3Bx4gGiu5",
       };
     },
@@ -695,6 +697,53 @@
               },
             }));
         var _, _, _, _;
+        const _ = new Set(
+            _.guests_attendance?.length > 0
+              ? _.guests_attendance.split("|")
+              : [],
+          ),
+          _ = _.attendance_count > _.size,
+          _ = (_, _, _, _) =>
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "span",
+                {
+                  className: _().GuestTitle,
+                },
+                _,
+                ":",
+                " ",
+              ),
+              _,
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  " ",
+                  _.createElement(
+                    "span",
+                    {
+                      className: _().GuestEmail,
+                    },
+                    "(",
+                    _,
+                    ")",
+                  ),
+                ),
+              _.createElement(
+                _.Fragment,
+                null,
+                " ",
+                "-",
+                _.createElement(
+                  "span",
+                  null,
+                  _ ? "✅ checked in" : "☐ not checked in",
+                ),
+              ),
+            );
         return _.createElement(
           "div",
           null,
@@ -716,7 +765,16 @@
                   className: _().RegisteredUsers,
                 },
                 _.createElement(_._, {
-                  label: "Attendee: " + _.name || 0,
+                  label: _.createElement(
+                    _.Fragment,
+                    null,
+                    _(
+                      "Attendee",
+                      _.name || _.persona_name,
+                      _.email_override,
+                      _,
+                    ),
+                  ),
                   checked: _,
                   onChange: _,
                 }),
@@ -727,7 +785,11 @@
                     _.guest_names.map((_) =>
                       _.createElement(_._, {
                         key: _.group_id + "_" + _.session_id + "_" + _,
-                        label: "Guest Name: " + _,
+                        label: _.createElement(
+                          _.Fragment,
+                          null,
+                          _("Guest", _, void 0, _.has(_)),
+                        ),
                         checked: _.includes(_),
                         onChange: (_) => {
                           _((_) =>
@@ -978,9 +1040,7 @@
                       _.createElement(
                         _._,
                         {
-                          onClick: () => {
-                            _(_.get(_.toLowerCase()));
-                          },
+                          onClick: () => _(_.get(_.toLowerCase())),
                         },
                         _,
                       ),

@@ -1618,7 +1618,7 @@
               if ((_.push(_), this.m_bUsePartnerAPI)) {
                 const _ = _._.Init(_._);
                 _.Body().set_include_unpublished(!1);
-                const _ = _.Body().request(!0);
+                const _ = _.Body().getitems_request(!0);
                 _.set_context((0, _._)(this.m_bUsePartnerAPI)),
                   _.set_data_request(_._.fromObject(_)),
                   _.set_ids(_),

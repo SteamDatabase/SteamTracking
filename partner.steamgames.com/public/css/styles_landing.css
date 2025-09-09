@@ -2726,6 +2726,7 @@ div#appHeaderFindSuggestions
 
 .landingTable.discountHistory .discount_links.hover_link {
 	display: none;
+	gap: 4px;
 }
 .landingTable.discountHistory tr:hover .discount_links.hover_link {
 	display: flex;
@@ -2737,11 +2738,19 @@ div#appHeaderFindSuggestions
 .landingTable.discountHistory .discount_links {
 	position: absolute;
 	right: 4px;
-	bottom: calc((100% - 44px) / 2);
+	top: 0;
+	bottom: 0;
 	flex-direction: column;
 	justify-content: center;
 }
 
+.landingTable.discountHistory .discount_occurrence {
+	background: #747474;
+	padding: 1px 4px;
+	border-radius: 3px;
+	color: black;
+	font-size: 11px;
+}
 
 .landingTable.releaseActions td {
     font-size: 14px;

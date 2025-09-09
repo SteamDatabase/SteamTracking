@@ -81,16 +81,17 @@ function _(_) {
     _ = (0, _.useMemo)(() => {
       if (_.current) return _(_.current);
     }, [_.current]);
-  (0, _.useEffect)(() => {
-    if (_)
-      return (
-        _.current?.showPopover(),
-        _?.addEventListener("scroll", _),
-        () => _?.removeEventListener("scroll", _)
-      );
-    window.sessionStorage.getItem("DEBUG_StickyContextMenus") != "true" &&
-      _.current?.hidePopover();
-  }, [_, _, _]);
+  (0, _.useEffect)(
+    () =>
+      _
+        ? (_.current?.showPopover(),
+          _?.addEventListener("scroll", _),
+          () => _?.removeEventListener("scroll", _))
+        : (window.sessionStorage.getItem("DEBUG_StickyContextMenus") !=
+            "true" && _.current?.hidePopover(),
+          () => {}),
+    [_, _, _],
+  );
   let _ = (0, _.useCallback)(() => {
       _(), _(!0), (_.current = !0);
     }, [_]),

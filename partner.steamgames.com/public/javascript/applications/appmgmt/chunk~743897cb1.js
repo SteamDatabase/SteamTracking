@@ -15350,6 +15350,11 @@
                     bw: h.gp.writeFixed64String,
                   },
                   awaiting_2fa: { n: 4, br: h.qM.readBool, bw: h.gp.writeBool },
+                  invite_id: {
+                    n: 5,
+                    br: h.qM.readUint64String,
+                    bw: h.gp.writeUint64String,
+                  },
                 },
               }),
             U.sm_m

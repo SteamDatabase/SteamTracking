@@ -3662,6 +3662,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Spelinspelning",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Spela in denna spelsession)",
     "QuickAccess_Tab_GameRecording": "Spelinspelning",
+    "Settings_GameRecording_InstantClip_Label": "Klippets längd i sekunder",
     "AccessibilityFeatures": "Hjälpmedelsfunktioner",
     "AccessibilityFeaturesWithCount": "Hjälpmedelsfunktioner (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Justerbar svårighetsgrad",
@@ -3688,5 +3689,8 @@
     "SteamNotifications_TradeReversal_Body": "Ett byte återställdes",
     "SteamNotifications_TradeReversal_Body_Short": "Ett byte återställdes",
     "SteamNotifications_TradeReversal_Description": "Ett av dina senaste byten ångrades av bytespartnern.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "AddonPicker_Search": "Sök ...",
+    "ReorderableList_ReorderInstructions": "Välj och flytta upp eller ner för att ändra ordning",
+    "ControllerButton_8BitDo": "8BitDo-knapp"
 }

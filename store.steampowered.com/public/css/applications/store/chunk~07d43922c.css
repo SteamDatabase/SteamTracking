@@ -2033,7 +2033,7 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   visibility: unset;
 }
 ._2cFtCV85TXR2hWfKk_kTIR {
-  max-width: 1100px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 36px;
@@ -4681,11 +4681,7 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 .wPH456btD8aZAHroV4YPk {
   position: relative;
   background: linear-gradient(140deg, rgba(0, 0, 0, 0) 1.25%, black 97.55%),
-    linear-gradient(
-      119.08deg,
-      rgba(91, 121, 167, 0.5) 1.25%,
-      rgba(9, 27, 39, 0.4) 97.55%
-    );
+    linear-gradient(119.08deg, #5b79a780 1.25%, #9e4daa 97.55%);
   margin-bottom: 20px;
   box-shadow: 0 0 10px #000;
 }

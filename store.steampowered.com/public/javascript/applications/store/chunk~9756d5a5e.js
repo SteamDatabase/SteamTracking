@@ -2167,7 +2167,7 @@
           r.e(2797),
           r.e(7436),
           r.e(7403),
-          r.e(9214),
+          r.e(6535),
           r.e(3270),
           r.e(4796),
           r.e(9063),
@@ -4762,6 +4762,8 @@
             return 15;
           case "linkedin":
             return 16;
+          case "rednote":
+            return 24;
         }
         return 0;
       }
@@ -4937,6 +4939,8 @@
           case 22:
             return n.createElement(o.emH, { ...r });
           case 24:
+            return n.createElement(o.Yoo, { ...r });
+          case 25:
           case 0:
             return "invalid social media type";
         }

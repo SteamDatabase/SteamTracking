@@ -5088,7 +5088,7 @@
         _ = 4,
         _ = 20,
         _ = 45559995,
-        _ = 9e4,
+        _ = 99999,
         _ = [12, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
@@ -6078,20 +6078,20 @@
               _.push({
                 ..._,
                 section_type: "footer_self_creator_home",
-                unique_id: 90010,
+                unique_id: 100009,
                 curator_clan_id: this.clanSteamID.GetAccountID(),
               }),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_browse_more",
-                unique_id: 90012,
+                unique_id: 100011,
               }),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_default_social_share",
-                unique_id: 90013,
+                unique_id: 100012,
               }),
             _
           );
@@ -15247,7 +15247,7 @@
             _._,
             {
               autoFocus: _,
-              focusableIfNoChildren: _,
+              focusableIfEmpty: _,
               noFocusRing: !0,
               className: _().CompatibilityDetailsContainer,
               ..._,
@@ -15411,7 +15411,7 @@
                 _._,
                 {
                   autoFocus: _,
-                  focusableIfNoChildren: _ || _(),
+                  focusableIfEmpty: _ || _(),
                   noFocusRing: !0,
                 },
                 _,
@@ -18187,6 +18187,7 @@
             bUseSubscriptionLayout: _,
             strExtraParams: _,
             nCreatorAccountID: _,
+            nWidthMultiplier: _,
             bShowDeckCompatibilityDialog: _,
             bShowWishlistButton: _ = !0,
             ..._
@@ -18235,6 +18236,7 @@
           {
             hoverContent: _,
             strClickUrl: _,
+            nWidthMultiplier: _,
             ..._,
           },
           _.children,
@@ -18278,6 +18280,7 @@
             hoverProps: __webpack_require__,
             nDelayShowMs: _,
             strClickUrl: _,
+            nWidthMultiplier: _,
             children: _,
             className: _,
             ..._
@@ -18318,6 +18321,7 @@
                 visible: _,
                 target: _,
                 nDelayShowMs: _,
+                nWidthMultiplier: _,
                 hoverProps: __webpack_require__,
               },
               _,
@@ -18329,6 +18333,7 @@
         const {
             hoverProps: _,
             nDelayShowMs: __webpack_require__ = _,
+            nWidthMultiplier: _ = 1.15,
             target: _,
             visible: _,
             children: _,
@@ -18366,7 +18371,7 @@
             ..._,
             style: {
               zIndex: 98,
-              width: 1.15 * _.clientWidth,
+              width: _.clientWidth * _,
               fontSize: _,
               minHeight: "hiding" == _() ? void 0 : 300,
               height:
@@ -19244,11 +19249,12 @@
             _.link.localized_link_capsule,
             _.language,
           ),
-          _ = _._.GenerateURLFromHashAndExt(_.clanAccountID, _);
+          _ = _._.GenerateURLFromHashAndExt(_.clanAccountID, _),
+          _ = (0, _._)();
         return _.createElement(
           _._,
           {
-            url: _.link.url,
+            url: _ ? _.link.sc_url : _.link.url,
             className: _.strClassName ? _.strClassName : void 0,
             bSkipForcingStoreLink: !1,
           },

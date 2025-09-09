@@ -177,6 +177,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           exit: _().FullscreenExitStart,
@@ -874,244 +875,156 @@
           });
         }
         OnMouseMove(_, _) {
-          if (void 0 !== this.state.EdgeDown) {
-            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
-              case _.left:
-                this.setState({
-                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                }),
-                  this.CheckLeftEdge();
-                break;
-              case _.right:
-                this.setState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                }),
-                  this.CheckRightEdge();
-                break;
-              case _.top:
-                this.setState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                }),
-                  this.CheckTopEdge();
-                break;
-              case _.bottom:
-                this.setState({
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                }),
-                  this.CheckBottomEdge();
-                break;
-              case _.topleft:
-                this.setState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                }),
-                  this.setState({
-                    curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                  }),
-                  this.CheckTopEdge(),
-                  this.CheckLeftEdge();
-                break;
-              case _.topright:
-                this.setState({
-                  curTopPosPct: this.CalcTopEdge(_.clientY),
-                }),
-                  this.setState({
-                    curRightPosPct: this.CalcRightEdge(_.clientX),
-                  }),
-                  this.CheckTopEdge(),
-                  this.CheckRightEdge();
-                break;
-              case _.bottomleft:
-                this.setState({
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                }),
-                  this.setState({
-                    curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                  }),
-                  this.CheckBottomEdge(),
-                  this.CheckLeftEdge();
-                break;
-              case _.bottomright:
-                this.setState({
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                }),
-                  this.setState({
-                    curRightPosPct: this.CalcRightEdge(_.clientX),
-                  }),
-                  this.CheckBottomEdge(),
-                  this.CheckRightEdge();
-                break;
-              case _.middle:
-                this.setState({
-                  curRightPosPct: this.CalcRightEdge(_.clientX),
-                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
-                }),
-                  "CenterCenter" != this.state.pinType &&
-                    this.setState({
-                      curTopPosPct: this.CalcTopEdge(_.clientY),
-                    }),
-                  "CenterCenter" != this.state.pinType &&
-                    "BottomCenter" != this.state.pinType &&
-                    "UpperCenter" != this.state.pinType &&
-                    this.setState({
-                      curLeftPosPct: this.CalcLeftEdge(_.clientX),
-                    }),
-                  this.CheckTopEdge(),
-                  this.CheckBottomEdge(),
-                  this.CheckLeftEdge(),
-                  this.CheckRightEdge();
-            }
-            this.state.curTopPosPct > 98
-              ? this.setState({
-                  curTopPosPct: 98,
-                })
-              : this.state.curBottomPosPct > 98 &&
-                this.setState({
-                  curBottomPosPct: 98,
-                }),
-              this.state.curLeftPosPct > 99
-                ? this.setState({
-                    curLeftPosPct: 99,
-                  })
-                : this.state.curRightPosPct > 99 &&
-                  this.setState({
-                    curRightPosPct: 99,
-                  }),
-              this.state.curRightPosPct < 0
-                ? this.setState({
-                    curRightPosPct: 0,
-                  })
-                : this.state.curLeftPosPct < 0 &&
-                  this.setState({
-                    curLeftPosPct: 0,
-                  }),
-              this.state.curBottomPosPct < 0
-                ? this.setState({
-                    curBottomPosPct: 0,
-                  })
-                : this.state.curTopPosPct < 0 &&
-                  this.setState({
-                    curTopPosPct: 0,
-                  }),
-              _.preventDefault(),
-              _.stopPropagation();
+          if (void 0 === this.state.EdgeDown) return;
+          _.shiftKey && this.m_fnMouseUp();
+          let {
+            curTopPosPct: __webpack_require__,
+            curRightPosPct: _,
+            curBottomPosPct: _,
+            curLeftPosPct: _,
+          } = this.state;
+          const _ = (_) => {
+              let _ =
+                ((_ - this.m_rectLinkRegion.left) /
+                  (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                  100 -
+                this.m_nLocalOffsetXPct;
+              if (
+                "UpperLeft" == this.props.pinType ||
+                "BottomLeft" == this.props.pinType
+              )
+                return 0;
+              if (
+                "CenterCenter" == this.props.pinType ||
+                "BottomCenter" == this.props.pinType ||
+                "UpperCenter" == this.props.pinType
+              ) {
+                let _ = Math.min(Math.max(_, 0), 45);
+                return (_ = _), _;
+              }
+              return _;
+            },
+            _ = (_) => {
+              let _ =
+                100 -
+                (((_ - this.m_rectLinkRegion.left) /
+                  (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                  100 +
+                  (this.state.curWidthPct - this.m_nLocalOffsetXPct));
+              if (
+                "CenterCenter" == this.props.pinType ||
+                "BottomCenter" == this.props.pinType ||
+                "UpperCenter" == this.props.pinType
+              ) {
+                let _ = Math.min(Math.max(_, 0), 45);
+                return (_ = _), _;
+              }
+              return _;
+            },
+            _ = (_) => {
+              let _ =
+                ((_ - this.m_rectLinkRegion.top) /
+                  (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                  100 -
+                this.m_nLocalOffsetYPct;
+              if (
+                "UpperCenter" == this.props.pinType ||
+                "UpperLeft" == this.props.pinType
+              )
+                return 0;
+              if ("CenterCenter" == this.props.pinType) {
+                let _ = Math.min(Math.max(_, 0), 45);
+                return (_ = _), _;
+              }
+              return _;
+            },
+            _ = (_) => {
+              let _ =
+                100 -
+                (((_ - this.m_rectLinkRegion.top) /
+                  (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                  100 +
+                  (this.state.curHeightPct - this.m_nLocalOffsetYPct));
+              if (
+                "BottomLeft" == this.props.pinType ||
+                "BottomCenter" == this.props.pinType
+              )
+                return 0;
+              if ("CenterCenter" == this.props.pinType) {
+                let _ = Math.min(Math.max(_, 0), 45);
+                return (__webpack_require__ = _), _;
+              }
+              return _;
+            };
+          function _() {
+            _ = Math.min(_, 98 - __webpack_require__);
           }
-        }
-        CheckBottomEdge() {
-          this.state.curBottomPosPct > 98 - this.state.curTopPosPct &&
+          function _() {
+            _ = Math.min(_, 99 - _);
+          }
+          function _() {
+            __webpack_require__ = Math.min(__webpack_require__, 98 - _);
+          }
+          function _() {
+            _ = Math.min(_, 99 - _);
+          }
+          switch (_) {
+            case _.left:
+              (_ = _(_.clientX)), _();
+              break;
+            case _.right:
+              (_ = _(_.clientX)), _();
+              break;
+            case _.top:
+              (__webpack_require__ = _(_.clientY)), _();
+              break;
+            case _.bottom:
+              (_ = _(_.clientY)), _();
+              break;
+            case _.topleft:
+              (__webpack_require__ = _(_.clientY)),
+                (_ = _(_.clientX)),
+                _(),
+                _();
+              break;
+            case _.topright:
+              (__webpack_require__ = _(_.clientY)),
+                (_ = _(_.clientX)),
+                _(),
+                _();
+              break;
+            case _.bottomleft:
+              (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
+              break;
+            case _.bottomright:
+              (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
+              break;
+            case _.middle:
+              (_ = _(_.clientX)),
+                (_ = _(_.clientY)),
+                "CenterCenter" != this.state.pinType &&
+                  (__webpack_require__ = _(_.clientY)),
+                "CenterCenter" != this.state.pinType &&
+                  "BottomCenter" != this.state.pinType &&
+                  "UpperCenter" != this.state.pinType &&
+                  (_ = _(_.clientX)),
+                _(),
+                _(),
+                _(),
+                _();
+          }
+          (__webpack_require__ = (0, _._)(__webpack_require__, 0, 98)),
+            (_ = (0, _._)(_, 0, 98)),
+            (_ = (0, _._)(_, 0, 99)),
+            (_ = (0, _._)(_, 0, 99)),
             this.setState({
-              curBottomPosPct: 98 - this.state.curTopPosPct,
-            });
-        }
-        CheckRightEdge() {
-          this.state.curRightPosPct > 99 - this.state.curLeftPosPct &&
-            this.setState({
-              curRightPosPct: 99 - this.state.curLeftPosPct,
-            });
-        }
-        CheckTopEdge() {
-          this.state.curTopPosPct > 98 - this.state.curBottomPosPct &&
-            this.setState({
-              curTopPosPct: 98 - this.state.curBottomPosPct,
-            });
-        }
-        CheckLeftEdge() {
-          this.state.curLeftPosPct > 99 - this.state.curRightPosPct &&
-            this.setState({
-              curLeftPosPct: 99 - this.state.curRightPosPct,
-            });
-        }
-        CalcLeftEdge(_) {
-          let _ =
-            ((_ - this.m_rectLinkRegion.left) /
-              (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-              100 -
-            this.m_nLocalOffsetXPct;
-          if (
-            "UpperLeft" == this.props.pinType ||
-            "BottomLeft" == this.props.pinType
-          )
-            return 0;
-          if (
-            "CenterCenter" == this.props.pinType ||
-            "BottomCenter" == this.props.pinType ||
-            "UpperCenter" == this.props.pinType
-          ) {
-            let _ = Math.min(Math.max(_, 0), 45);
-            return (
-              this.setState({
-                curRightPosPct: _,
-              }),
-              _
-            );
-          }
-          return _;
-        }
-        CalcRightEdge(_) {
-          let _ =
-            100 -
-            (((_ - this.m_rectLinkRegion.left) /
-              (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
-              100 +
-              (this.state.curWidthPct - this.m_nLocalOffsetXPct));
-          if (
-            "CenterCenter" == this.props.pinType ||
-            "BottomCenter" == this.props.pinType ||
-            "UpperCenter" == this.props.pinType
-          ) {
-            let _ = Math.min(Math.max(_, 0), 45);
-            return (
-              this.setState({
-                curLeftPosPct: _,
-              }),
-              _
-            );
-          }
-          return _;
-        }
-        CalcTopEdge(_) {
-          let _ =
-            ((_ - this.m_rectLinkRegion.top) /
-              (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-              100 -
-            this.m_nLocalOffsetYPct;
-          if (
-            "UpperCenter" == this.props.pinType ||
-            "UpperLeft" == this.props.pinType
-          )
-            return 0;
-          if ("CenterCenter" == this.props.pinType) {
-            let _ = Math.min(Math.max(_, 0), 45);
-            return (
-              this.setState({
-                curBottomPosPct: _,
-              }),
-              _
-            );
-          }
-          return _;
-        }
-        CalcBottomEdge(_) {
-          let _ =
-            100 -
-            (((_ - this.m_rectLinkRegion.top) /
-              (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
-              100 +
-              (this.state.curHeightPct - this.m_nLocalOffsetYPct));
-          if (
-            "BottomLeft" == this.props.pinType ||
-            "BottomCenter" == this.props.pinType
-          )
-            return 0;
-          if ("CenterCenter" == this.props.pinType) {
-            let _ = Math.min(Math.max(_, 0), 45);
-            return (
-              this.setState({
-                curTopPosPct: _,
-              }),
-              _
-            );
-          }
-          return _;
+              curTopPosPct: __webpack_require__,
+              curRightPosPct: _,
+              curBottomPosPct: _,
+              curLeftPosPct: _,
+            }),
+            _.preventDefault(),
+            _.stopPropagation();
         }
         OnMouseUp(_, _) {
           this.setState(
@@ -1242,14 +1155,6 @@
         (0, _._)([_._], _.prototype, "OnMouseDown", null),
         (0, _._)([_._], _.prototype, "UpdateBoxPosition", null),
         (0, _._)([_._], _.prototype, "OnMouseMove", null),
-        (0, _._)([_._], _.prototype, "CheckBottomEdge", null),
-        (0, _._)([_._], _.prototype, "CheckRightEdge", null),
-        (0, _._)([_._], _.prototype, "CheckTopEdge", null),
-        (0, _._)([_._], _.prototype, "CheckLeftEdge", null),
-        (0, _._)([_._], _.prototype, "CalcLeftEdge", null),
-        (0, _._)([_._], _.prototype, "CalcRightEdge", null),
-        (0, _._)([_._], _.prototype, "CalcTopEdge", null),
-        (0, _._)([_._], _.prototype, "CalcBottomEdge", null),
         (0, _._)([_._], _.prototype, "OnMouseUp", null),
         (0, _._)([_._], _.prototype, "OnResizeComplete", null);
       const _ = (_) => {

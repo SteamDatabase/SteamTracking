@@ -3078,7 +3078,7 @@
     "FamilyHistory_ParentalSettingsDisabled": "%1$s hat die Kindersicherung für den Account von %2$s deaktiviert.",
     "FamilyHistory_ParentalSettingsEnabled": "%1$s hat die Kindersicherung für den Account von %2$s aktiviert.",
     "FamilyHistory_ParentalSettingsChanged": "%1$s hat die Kindersicherung für den Account von %2$s geändert.",
-    "FamilyHistory_FamilyCooldownOverridesChanged": "%1$s hat die Warteperiode für die Familie außer Kraft gesetzt (neuer Wert: %2$s).",
+    "FamilyHistory_FamilyCooldownOverridesChanged": "%1$s hat die Wartezeit für die Familie außer Kraft gesetzt (neuer Wert: %2$s).",
     "FamilyHistory_SteamSupport": "Steam-Support",
     "FamilyHistory_PurchaseRequestCanceled": "%1$s hat ihren/seinen Kaufwunsch storniert.",
     "FamilyHistory_PurchaseRequestApproved": "%1$s hat den Kaufwunsch von %2$s genehmigt.",
@@ -3473,7 +3473,7 @@
     "Settings_GameRecording_VideoEnableH265": "HEVC-Videocodec (H.265) aktivieren",
     "Settings_GameRecording_Shortcut_Title": "Tastenkombinationen",
     "Settings_GameRecording_RequiresGPUAcceleration": "Erfordert GPU-Hardwarebeschleunigung für den Steam-Client",
-    "Settings_GameRecording_InstantClipDropdown_Label": "Dauer des Clips",
+    "Settings_GameRecording_InstantClipDropdown_Label": "Länge des Clips",
     "Settings_GameRecording_InstantClipDropdown_Option": "%1$s Sekunden",
     "Settings_GameRecording_Length_Modal_Title": "Aufnahmedauer",
     "Settings_GameRecording_Length_Modal_Minutes": "Minuten",
@@ -3663,6 +3663,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Spielaufnahme",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Diese Spielsitzung aufnehmen)",
     "QuickAccess_Tab_GameRecording": "Spielaufnahme",
+    "Settings_GameRecording_InstantClip_Label": "Länge des Clips in Sekunden",
     "AccessibilityFeatures": "Funktionen zur Barrierefreiheit",
     "AccessibilityFeaturesWithCount": "Funktionen zur Barrierefreiheit (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Einstellbarer Schwierigkeitsgrad",
@@ -3688,5 +3689,8 @@
     "SteamNotifications_TradeReversal_Title": "Handelsgeschützt",
     "SteamNotifications_TradeReversal_Body": "Ein Handel wurde rückgängig gemacht",
     "SteamNotifications_TradeReversal_Body_Short": "Ein Handel wurde rückgängig gemacht",
-    "SteamNotifications_TradeReversal_Description": "Einer Ihrer letzten Handel wurde von Ihrem Handelspartner rückgängig gemacht."
+    "SteamNotifications_TradeReversal_Description": "Einer Ihrer letzten Handel wurde von Ihrem Handelspartner rückgängig gemacht.",
+    "AddonPicker_Search": "Suchen …",
+    "ReorderableList_ReorderInstructions": "Wählen Sie einen Inhalt aus und verschieben Sie ihn nach oben oder unten, um die Reihenfolge auf der Liste zu ändern.",
+    "ControllerButton_8BitDo": "8BitDo-Taste"
 }

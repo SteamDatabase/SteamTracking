@@ -2290,7 +2290,7 @@
     "FacetedBrowse_Reset": "Скинути",
     "FacetedBrowse_ReturnToTop": "Повернутися вгору",
     "FacetedBrowse_SelectedFacetValues": "Застосовані фільтри",
-    "FacetedBrowse_SearchFacetValues": "Шукати за позначкою або параметром",
+    "FacetedBrowse_SearchFacetValues": "Пошук за позначкою/параметром",
     "Platform": "Платформа",
     "Platform_Windows": "Windows",
     "Platform_Linux": "Linux / SteamOS",
@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Запис гри",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Запис поточного ігрового сеансу)",
     "QuickAccess_Tab_GameRecording": "Запис ігор",
+    "Settings_GameRecording_InstantClip_Label": "Тривалість кліпу в секундах",
     "AccessibilityFeatures": "Функції доступності",
     "AccessibilityFeaturesWithCount": "Функції доступності (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Регульована складність",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "Захищений обмін",
     "SteamNotifications_TradeReversal_Body": "Обмін було скасовано",
     "SteamNotifications_TradeReversal_Body_Short": "Обмін було скасовано",
-    "SteamNotifications_TradeReversal_Description": "Ваш партнер по обміну скасував один із нещодавніх обмінів."
+    "SteamNotifications_TradeReversal_Description": "Ваш партнер по обміну скасував один із нещодавніх обмінів.",
+    "AddonPicker_Search": "Знайти…",
+    "ReorderableList_ReorderInstructions": "Виберіть і посуньте вгору чи вниз для зміни порядку",
+    "ControllerButton_8BitDo": "Кнопка 8BitDo"
 }

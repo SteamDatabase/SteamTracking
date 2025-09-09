@@ -585,7 +585,7 @@
     "EventEditor_SaleValveApproval_Request_Approval": "Solicitar análise",
     "EventEditor_SaleValveApproval_Request_Approval_ttip": "Esta ação irá enviar a solicitação de uma análise da aprovação da publicação da página de promoção. Solicite a análise quando a sua página promocional tiver os recursos gráficos finais e incluir todos os jogos que pretende destacar.",
     "EventEditor_SaleValveApproval_Request_Desc": "Esta ação irá enviar um pedido à equipa de apoio do Steamworks a solicitar uma análise da sua página de promoção por parte da Valve. Recomendamos que apenas solicite a análise quando os recursos gráficos, as mensagens e a lista de jogos estiverem finalizados.",
-    "EventEditor_SaleValveApproval_Request_Desc2": "Certifique-se de que o título e a finalidade do seu evento são descritos com clareza perto do topo da página. Caso se trate de destaques (Showcase), pode precisar de uma secção de texto no topo da sua página para descrever o evento e como funciona.",
+    "EventEditor_SaleValveApproval_Request_Desc2": "Certifique-se de que o título e a finalidade do seu evento são descritos com clareza perto do topo da página. Caso se trate de uma apresentação (Showcase), pode precisar de uma secção de texto no topo da sua página para descrever o evento e como funciona.",
     "EventEditor_SaleValveApproval_Request_Desc3": "A página de promoção será bloqueada assim que for analisada. Se pretende efetuar alterações após a análise ou assim que o evento começar, comente essas alterações e por que motivo não puderam ser efetuadas antes da análise.",
     "EventEditor_SaleValveApproval_Request_InputText": "Opcional: informações que pretende incluir para a equipa de análise",
     "EventEditor_SaleValveApproval_Request_Partner": "Escolha os parceiros cujos membros também podem aceder à solicitação",
@@ -1087,7 +1087,7 @@
     "PartnerEvent_17": "Transmissão de torneio de e-sport",
     "PartnerEvent_18": "Transmissão dos developers",
     "PartnerEvent_19": "Transmissão de celebridade",
-    "PartnerEvent_20": "Jogo com desconto",
+    "PartnerEvent_20": "Desconto",
     "PartnerEvent_20_editor": "Desconto neste jogo",
     "PartnerEvent_21": "Item ou DLC com desconto",
     "PartnerEvent_21_editor": "Desconto em itens do jogo ou DLC",
@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Gravação de jogos",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Gravar esta sessão de jogo)",
     "QuickAccess_Tab_GameRecording": "Gravação de jogos",
+    "Settings_GameRecording_InstantClip_Label": "Duração do clipe (em segundos)",
     "AccessibilityFeatures": "Opções de acessibilidade",
     "AccessibilityFeaturesWithCount": "Opções de acessibilidade (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Dificuldade ajustável",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "Proteção contra troca",
     "SteamNotifications_TradeReversal_Body": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Body_Short": "Uma troca foi revertida",
-    "SteamNotifications_TradeReversal_Description": "Uma das tuas trocas recentes foi revertida pela pessoa com quem trocaste."
+    "SteamNotifications_TradeReversal_Description": "Uma das tuas trocas recentes foi revertida pela pessoa com quem trocaste.",
+    "AddonPicker_Search": "Procurar...",
+    "ReorderableList_ReorderInstructions": "Seleciona e move para cima ou para baixo para reordenar",
+    "ControllerButton_8BitDo": "Botão 8BitDo"
 }

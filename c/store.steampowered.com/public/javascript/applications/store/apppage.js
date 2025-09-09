@@ -304,6 +304,26 @@
     },
     chunkid: (module) => {
       module.exports = {
+        StripItems: "_2vXZddXTijrsX4werF5iUx",
+        Item: "_3JiRLywLUKhigtpRPP4hM5",
+        PlayIcon: "_1QE1-dYKtjDFlEHHng9DBR",
+        Active: "_3PCxbSW7FP6Si5iyRMfjXf",
+        StripScrollbar: "_2mfQrBJlf0k-fFsyMqr336",
+        Arrow: "_2iumtxtxpyL28srjgydgBO",
+        Track: "_3yIKswUZPhGbV0XpgiDW1a",
+        Thumb: "_1RLVzdeJ4SRMx0W6FEl5Dh",
+        ItemViewArea: "_3pPrsRd2hSQomwQOhG8vPO",
+        FullscreenArrow: "_1sXEHZtcDw9_OomIxpLeM",
+        Visible: "_27b6z3ARIQKiEh1_oPYpU-",
+        Next: "_35zEtUvi6jBvJq1oI53CuO",
+        Previous: "_23eSiUhl8ZBk6Mbtoh0rkR",
+        ViewedItem: "CkQfN_XCOjFhDB9NlYYHo",
+        Screenshot: "Nl29d0vJtIpVVQwwM5kd",
+        Controls: "_3ryyT6Ji-0bkC36N8AqIYg",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         GamepadCarousel: "_3ADDqqKx55ugBLEOJm6pqJ",
         Fullscreen: "_1ZiAH8gp-JZJAodTjQipQP",
         CarouselItem: "_2jIJye_-HmWo1Thf6yuIpF",
@@ -1394,15 +1414,24 @@
         constructor(_) {
           super(_);
           const _ = (0, _._)("EventWebRowEmbed");
-          this.ValidateStoreDefault(_) &&
-            ((this.state.bPreLoaded = _.bPreLoaded),
-            (this.state.announcementGIDList = _.announcementGIDList),
-            (this.state.last_update_event = _.last_update_event),
-            (this.state.events = []),
-            this.state.announcementGIDList.forEach((_) => {
-              const _ = _._.GetClanEventFromAnnouncementGID(_);
-              _ && this.state.events.push(_);
-            }));
+          if (this.ValidateStoreDefault(_)) {
+            (this.state.bPreLoaded = _.bPreLoaded),
+              (this.state.announcementGIDList = _.announcementGIDList),
+              (this.state.last_update_event = _.last_update_event),
+              (this.state.events = []),
+              this.state.announcementGIDList.forEach((_) => {
+                const _ = _._.GetClanEventFromAnnouncementGID(_);
+                _ && this.state.events.push(_);
+              });
+            const _ = new URLSearchParams(window.location.search),
+              _ = _?.get("emgid");
+            if (_) {
+              const _ = this.state.events.find((_) => _.GID === _);
+              _ &&
+                ((this.state.modalInitialEvent = _),
+                (this.state.bShowModal = !0));
+            }
+          }
         }
         async componentDidMount() {
           const {
@@ -2613,11 +2642,74 @@
         (0, _._)([_._], _.prototype, "UserInputReceived", null),
         (0, _._)([_._], _.prototype, "SendStats", null);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      function _(_ = !1) {
+        let [_, __webpack_require__] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(null),
+          _ = (0, _._)(
+            (_) => {
+              if (((_.current = _), !_)) return void __webpack_require__(!1);
+              let _ = () => {
+                __webpack_require__((0, _._)(_));
+              };
+              return (
+                _.addEventListener("fullscreenchange", _),
+                () => {
+                  _.removeEventListener("fullscreenchange", _);
+                }
+              );
+            },
+            [__webpack_require__],
+          ),
+          _ = (0, _.useCallback)(() => {
+            if (!_.current) return;
+            let _ = _.current;
+            if ((0, _._)(_)) return void (0, _._)(_);
+            if ((0, _._)(_)) return;
+            if (!_) return;
+            let _ = _.getElementsByTagName("video");
+            if (0 == _.length) return;
+            let _ = _[0];
+            _.webkitSetPresentationMode &&
+              _.webkitSetPresentationMode("fullscreen");
+          }, [_, _]);
+        return [
+          _,
+          (0, _.useMemo)(
+            () => ({
+              bFullscreen: _,
+              fnToggleFullscreen: _,
+            }),
+            [_, _],
+          ),
+        ];
+      }
+      const _ = (0, _.createContext)(void 0);
+      function _(_) {
+        let { iosVideoFallback: _, children: __webpack_require__ } = _,
+          [_, _] = _(!!_),
+          _ = (0, _.useMemo)(
+            () => ({
+              refFullscreenElement: _,
+              data: _,
+            }),
+            [_, _],
+          );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          __webpack_require__,
+        );
+      }
+      function _() {
+        return (0, _.useContext)(_).data;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = (0, _.forwardRef)(function (_, _) {
           let { children: __webpack_require__, ..._ } = _,
             _ = (0, _._)((_) => {
@@ -2667,7 +2759,8 @@
         );
       }
       function _() {
-        return _().m_bMenuVisible;
+        let _ = _();
+        return !!_ && _.m_bMenuVisible;
       }
       function _(_, _) {
         let [__webpack_require__, _] = (function (_) {
@@ -3497,11 +3590,7 @@
               );
             return _;
           })(_, __webpack_require__),
-          _ = (0, _._)(
-            _().PlayerControls,
-            __webpack_require__.bFullscreen && _().Fullscreen,
-            _ && _().ShowControls,
-          );
+          _ = (0, _._)(_().PlayerControls, _ && _().ShowControls);
         return _.createElement(
           _.Provider,
           {
@@ -4205,9 +4294,13 @@
           title: _,
           category: _,
           statsURL: _,
+          fullscreenContext: _,
         } = _;
         (_ = _ || ""), (_ = _ || 0);
-        let [_, _] = (0, _._)(!0),
+        let [_, _] = (function (_) {
+            let [_, __webpack_require__] = _(!0);
+            return _ ? [null, _] : [_, __webpack_require__];
+          })(_),
           [_, _] = (function (_, _, _, _) {
             let _ = _(),
               _ = _.useRef(void 0);
@@ -6515,6 +6608,38 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _.useMemo)(() => {
+          let _ = [],
+            _ = new Map();
+          for (let _ of _)
+            if (
+              (_.featured &&
+                (__webpack_require__.push({
+                  type: "trailer",
+                  key: `t_${_._}`,
+                  data: _,
+                }),
+                _.set(_._, !0)),
+              _.length >= 2)
+            )
+              break;
+          for (let _ of _)
+            __webpack_require__.push({
+              type: "screenshot",
+              key: `s_${_.name}`,
+              data: _,
+            });
+          for (let _ of _)
+            _.has(_._) ||
+              __webpack_require__.push({
+                type: "trailer",
+                key: `t_${_._}`,
+                data: _,
+              });
+          return _;
+        }, [_, _]);
+      }
       function _(_) {
         let { trailers: _, screenshots: __webpack_require__ } = _,
           [_, _, _] = (function () {
@@ -6533,37 +6658,21 @@
               _ = (0, _.useCallback)((_) => !!_, [_]);
             return [_, _];
           })(_, _),
-          _ = [],
-          _ = new Map();
-        for (let _ of _)
-          if (
-            (_.featured &&
-              (_.push(
-                _.createElement(_, {
-                  key: _._,
-                  trailer: _,
-                }),
-              ),
-              _.set(_._, !0)),
-            _.length >= 2)
-          )
-            break;
-        let _ = __webpack_require__.map((_) =>
-            _.createElement(_, {
-              key: _.name,
-              screenshot: _,
-            }),
+          _ = _(_, __webpack_require__);
+        if (0 == _.length) return null;
+        let _ = _.map((_) =>
+            "screenshot" == _.type
+              ? _.createElement(_, {
+                  key: _.key,
+                  screenshot: _.data,
+                })
+              : "trailer" == _.type
+                ? _.createElement(_, {
+                    key: _.key,
+                    trailer: _.data,
+                  })
+                : null,
           ),
-          _ = [];
-        for (let _ of _)
-          _.has(_._) ||
-            _.push(
-              _.createElement(_, {
-                key: _._,
-                trailer: _,
-              }),
-            );
-        let _ = [..._, ..._, ..._],
           _ = _ ? "" : "#TrailerPlayer_FullScreen_Tooltip",
           _ = (0, _._)(_.GamepadCarousel, _ && _.Fullscreen);
         return _.createElement(
@@ -6626,7 +6735,7 @@
             onOKActionDescription: "",
           },
           _.createElement("img", {
-            src: _.url,
+            src: _.full,
             alt: _.altText,
           }),
         );
@@ -6816,6 +6925,624 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        let _ = document.cookie.match(
+          /(^|; )bGameHighlightAutoplayDisabled=([^;]*)/,
+        );
+        return !(_ && "true" == _[2]);
+      }
+      function _() {
+        let _ = document.cookie.match(
+            /(^|; )flGameHighlightPlayerVolume=([^;]*)/,
+          ),
+          _ = _ && _[2] ? parseFloat(_[2]) : 80;
+        return _ < 0 ? 0 : _ > 100 ? 100 : _;
+      }
+      function _() {
+        let _ = document.cookie.match(
+          /(^|; )bGameHighlightAudioEnabled=([^;]*)/,
+        );
+        return _ && "true" == _[2];
+      }
+      function _(_) {
+        let { children: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(_),
+          _ = (0, _.useCallback)((_) => {
+            !(function (_) {
+              let _ = new Date();
+              _.setTime(_.getTime() + 31536e7);
+              let _ = _ ? "false" : "true";
+              document.cookie = `bGameHighlightAutoplayDisabled=${_}; expires=${_.toUTCString()};path=/`;
+            })(_),
+              _(_);
+          }, []),
+          [_, _] = (0, _.useState)(_),
+          _ = (0, _.useCallback)((_) => {
+            (function (_) {
+              let _ = new Date();
+              _.setTime(_.getTime() + 31536e7),
+                (document.cookie = `flGameHighlightPlayerVolume=${_}; expires=${_.toUTCString()};path=/`);
+            })((_ *= 100)),
+              _(_);
+          }, []),
+          [_, _] = (0, _.useState)(_),
+          _ = (0, _.useCallback)((_) => {
+            !(function (_) {
+              let _ = new Date();
+              _.setTime(_.getTime() + 31536e7);
+              let _ = _ ? "true" : "false";
+              document.cookie = `bGameHighlightAudioEnabled=${_}; expires=${_.toUTCString()};path=/`;
+            })(!_),
+              _(!_);
+          }, []);
+        return _.createElement(
+          _,
+          {
+            autoplayEnabled: __webpack_require__,
+            setAutoplayEnabled: _,
+            playerVolume: _ / 100,
+            setPlayerVolume: _,
+            audioMuted: !_,
+            setAudioMuted: _,
+          },
+          _,
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = 5e3;
+      function _(_) {
+        let { trailers: _, screenshots: __webpack_require__ } = _,
+          _ = _(_, __webpack_require__);
+        return 0 == _.length
+          ? null
+          : _.createElement(
+              _,
+              null,
+              _.createElement(
+                _,
+                null,
+                _.createElement(
+                  _,
+                  {
+                    orderedItems: _,
+                  },
+                  _.createElement(
+                    _,
+                    null,
+                    _.createElement(_, {
+                      items: _,
+                    }),
+                    _.createElement(_, {
+                      items: _,
+                    }),
+                  ),
+                ),
+              ),
+            );
+      }
+      function _(_) {
+        let { children: _ } = _,
+          { refRoot: __webpack_require__ } = (function () {
+            let _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(0),
+              _ = (0, _.useRef)(!1),
+              _ = _(),
+              _ = (0, _.useRef)(_);
+            _.current = _;
+            let _ = _(),
+              _ = (0, _.useRef)(_.bFullscreen);
+            _.current = _.bFullscreen;
+            let _ = (0, _.useCallback)(() => {
+                if (
+                  !_.current ||
+                  "screenshot" != _.current.strActiveType ||
+                  _.current ||
+                  _.current ||
+                  _.current
+                )
+                  return;
+                let _ = () => {
+                  (_.current = 0), _.current.fnSetActive(_.current.strNextID);
+                };
+                _.current = window.setTimeout(_, _);
+              }, []),
+              _ = (0, _.useCallback)(() => {
+                _.current && (window.clearTimeout(_.current), (_.current = 0));
+              }, []),
+              _ = _.strActiveID;
+            (0, _.useEffect)(() => {
+              _();
+            }, [_]);
+            let _ = _.current;
+            return (
+              (0, _.useEffect)(() => {
+                _ ? _() : _();
+              }, [_]),
+              (0, _.useEffect)(() => {
+                let _ = _.current,
+                  _ = () => {
+                    "visible" == document.visibilityState ? _() : _();
+                  },
+                  _ = () => {
+                    (_.current = !0), _();
+                  },
+                  _ = () => {
+                    (_.current = !1), _();
+                  };
+                return (
+                  _.addEventListener("pointerenter", _),
+                  _.addEventListener("pointerleave", _),
+                  document.addEventListener("visibilitychange", _),
+                  () => {
+                    _.removeEventListener("pointerenter", _),
+                      _.removeEventListener("pointerleave", _),
+                      document.addEventListener("visibilitychange", _);
+                  }
+                );
+              }, []),
+              {
+                refRoot: _,
+              }
+            );
+          })();
+        return _.createElement(
+          "div",
+          {
+            ref: __webpack_require__,
+          },
+          _,
+        );
+      }
+      const _ = (0, _.createContext)(void 0);
+      function _(_) {
+        let { orderedItems: _, children: __webpack_require__ } = _,
+          _ = _().m_bAutoplayEnabled,
+          [_, _] = (0, _.useState)(() =>
+            (function (_, _) {
+              return (
+                (0, _._)(_.length > 0, "Unexpected length"),
+                "trailer" != _[0].type || _ ? _[0].key : _("next", _, 0, _)
+              );
+            })(_, _),
+          ),
+          _ = (0, _.useMemo)(() => {
+            if (0 == _.length)
+              return {
+                strActiveID: "",
+                strActiveType: "",
+                strPreviousID: "",
+                strNextID: "",
+                fnSetActive: _,
+              };
+            let _ = _.findIndex((_) => _.key == _);
+            _ = _ || 0;
+            let _ = _[_].type,
+              _ = _("previous", _, _, _),
+              _ = _("next", _, _, _);
+            return {
+              strActiveID: _,
+              strActiveType: _,
+              strPreviousID: _,
+              strNextID: _,
+              fnSetActive: _,
+            };
+          }, [_, _, _, _]);
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          __webpack_require__,
+        );
+      }
+      function _() {
+        return (0, _.useContext)(_);
+      }
+      function _(_) {
+        return _ == _().strActiveID;
+      }
+      function _(_, _, _, _) {
+        (0, _._)(_.length > 0, "Unexpected length");
+        let _ = _;
+        do {
+          if (
+            ((_ =
+              "next" == _ ? (_ + 1) % _.length : (_ - 1 + _.length) % _.length),
+            "trailer" != _[_].type || _)
+          )
+            break;
+        } while (_ != _);
+        return _[_].key;
+      }
+      function _(_) {
+        let { items: _ } = _,
+          _ = _(),
+          _ = (0, _.useContext)(_).refFullscreenElement,
+          _ = _().bFullscreen,
+          _ = _.map((_) =>
+            "screenshot" == _.type
+              ? _.createElement(_, {
+                  key: _.key,
+                  _: _.key,
+                  screenshot: _.data,
+                })
+              : "trailer" == _.type
+                ? _.createElement(_, {
+                    key: _.key,
+                    _: _.key,
+                    trailer: _.data,
+                  })
+                : null,
+          ),
+          _ = _.strPreviousID
+            ? () => __webpack_require__.fnSetActive(_.strPreviousID)
+            : null,
+          _ = _.strNextID
+            ? () => __webpack_require__.fnSetActive(_.strNextID)
+            : null;
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _.ItemViewArea,
+          },
+          _,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FullscreenArrow,
+                _ && _.Visible,
+                _.Previous,
+              ),
+              onClick: _,
+            },
+            _.createElement(_, {
+              direction: "left",
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FullscreenArrow, _ && _.Visible, _.Next),
+              onClick: _,
+            },
+            _.createElement(_, {
+              direction: "right",
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        let { direction: _ } = _;
+        return "right" == _
+          ? _.createElement(
+              "svg",
+              {
+                viewBox: "0 0 49 79",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+              },
+              _.createElement("path", {
+                _: "M8.81647 0L48 39.5005L8.81647 79L0 70.1124L30.3671 39.4995L0 8.88756L8.81647 0Z",
+                fill: "currentColor",
+              }),
+            )
+          : _.createElement(
+              "svg",
+              {
+                viewBox: "0 0 49 80",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+              },
+              _.createElement("path", {
+                _: "M39.3427 79.6279L0.159182 40.1274L39.3427 0.627931L48.1592 9.51549L17.7921 40.1284L48.1592 70.7404L39.3427 79.6279Z",
+                fill: "currentColor",
+              }),
+            );
+      }
+      function _(_) {
+        let { items: _ } = _,
+          {
+            refStrip: __webpack_require__,
+            refTrack: _,
+            refThumb: _,
+            fnRegisterItemElement: _,
+          } = (function () {
+            let _ = _(),
+              _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)();
+            _.current || (_.current = new Map());
+            (0, _.useEffect)(() => {
+              let _ = _.current,
+                _ = _.current,
+                _ = _.current,
+                _ = () => {
+                  _.current ||
+                    (_.current = requestAnimationFrame(() => {
+                      _.current = null;
+                      let _ = _.getBoundingClientRect(),
+                        _ = _.getBoundingClientRect(),
+                        _ = _.width - _.width,
+                        _ = _.scrollWidth - _.clientWidth,
+                        _ = (0, _._)(_.scrollLeft, 0, _, 0, _);
+                      _.style.transform = `translateX( ${_}px )`;
+                    }));
+                };
+              return (
+                _.addEventListener("scroll", _, {
+                  passive: !0,
+                }),
+                () => {
+                  _.removeEventListener("scroll", _),
+                    _.current && cancelAnimationFrame(_.current);
+                }
+              );
+            }, []),
+              (0, _.useEffect)(() => {
+                let _ = _.current,
+                  _ = _.current,
+                  _ = _.current,
+                  _ = null,
+                  _ = (_) => {
+                    if (!_) return;
+                    let _ = _.clientX - _.nInitialClientX,
+                      _ = (0, _._)(_.nInitialPosition + _, 0, _.nTrackWidth),
+                      _ = (0, _._)(_, 0, _.nTrackWidth, 0, _.nScrollWidth);
+                    _.scrollTo({
+                      left: _,
+                      behavior: "auto",
+                    });
+                  },
+                  _ = (_) => {
+                    _.setPointerCapture(_.pointerId);
+                    let _ = _.getBoundingClientRect(),
+                      _ = _.getBoundingClientRect(),
+                      _ = _.width - _.width,
+                      _ = _.scrollWidth - _.clientWidth,
+                      _ = Math.max(_.left - _.left, 0),
+                      _ = _.clientX;
+                    _.target != _ &&
+                      ((_ = _.clientX - _.left),
+                      (_ -= Math.floor(_.width / 2)),
+                      (_ = (0, _._)(_, 0, _))),
+                      (_ = {
+                        nInitialPosition: _,
+                        nInitialClientX: _,
+                        nTrackWidth: _,
+                        nScrollWidth: _,
+                      }),
+                      (document.body.style.userSelect = "none"),
+                      _(_);
+                  },
+                  _ = (_) => {
+                    (_ = null),
+                      (document.body.style.userSelect = ""),
+                      _.releasePointerCapture(_.pointerId);
+                  };
+                return (
+                  _.addEventListener("pointerdown", _),
+                  _.addEventListener("pointermove", _),
+                  _.addEventListener("pointerup", _),
+                  () => {
+                    _.removeEventListener("pointerdown", _),
+                      _.removeEventListener("pointermove", _),
+                      _.removeEventListener("pointerup", _);
+                  }
+                );
+              }, []);
+            let _ = _.strActiveID;
+            (0, _.useEffect)(() => {
+              let _ = _.current.get(_);
+              if (!_) return;
+              let _ = _.current,
+                _ = __webpack_require__.getBoundingClientRect(),
+                _ = _.getBoundingClientRect();
+              if (_.left < _.left || _.right > _.right) {
+                let _ = _.left - _.left + _.scrollLeft;
+                __webpack_require__.scrollTo({
+                  left: _,
+                  behavior: "smooth",
+                });
+              }
+            }, [_]);
+            let _ = (0, _.useCallback)(
+              (_, _) => {
+                _ ? _.current.set(_, _) : _.current.delete(_);
+              },
+              [_],
+            );
+            return {
+              refStrip: _,
+              refTrack: _,
+              refThumb: _,
+              fnRegisterItemElement: _,
+            };
+          })();
+        return _.createElement(
+          "div",
+          {
+            className: _.Strip,
+          },
+          _.createElement(_, {
+            refStrip: __webpack_require__,
+            items: _,
+            registerItemElement: _,
+          }),
+          _.createElement(_, {
+            refTrack: _,
+            refThumb: _,
+          }),
+        );
+      }
+      function _(_) {
+        let {
+            refStrip: _,
+            items: __webpack_require__,
+            registerItemElement: _,
+          } = _,
+          _ = __webpack_require__.map((_) =>
+            _.createElement(_, {
+              key: _.key,
+              item: _,
+              registerItemElement: _,
+            }),
+          );
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _.StripItems,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        let { item: _, registerItemElement: __webpack_require__ } = _,
+          _ = _(),
+          _ = _.key == _.strActiveID,
+          _ = _.key,
+          _ = (0, _.useCallback)(
+            (_) => __webpack_require__(_, _),
+            [_, __webpack_require__],
+          ),
+          _ = _.data.thumbnail ? _.data.thumbnail : "",
+          _ = (0, _._)(_.Item, _ && _.Active);
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+            onClick: () => _.fnSetActive(_.key),
+          },
+          Boolean(_) &&
+            _.createElement("img", {
+              src: _,
+            }),
+          "trailer" == _.type &&
+            _.createElement(
+              "div",
+              {
+                className: _.PlayIcon,
+              },
+              _.createElement(_, null),
+            ),
+        );
+      }
+      function _(_) {
+        let { refTrack: _, refThumb: __webpack_require__ } = _,
+          _ = _(),
+          _ = _.strPreviousID ? () => _.fnSetActive(_.strPreviousID) : null,
+          _ = _.strNextID ? () => _.fnSetActive(_.strNextID) : null;
+        return _.createElement(
+          "div",
+          {
+            className: _.StripScrollbar,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Arrow,
+              onClick: _,
+            },
+            _.createElement(_, {
+              character: "<",
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              ref: _,
+              className: _.Track,
+            },
+            _.createElement("div", {
+              ref: __webpack_require__,
+              className: _.Thumb,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Arrow,
+              onClick: _,
+            },
+            _.createElement(_, {
+              character: ">",
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        return _.createElement("span", null, _.character);
+      }
+      function _(_) {
+        let { _: _, screenshot: __webpack_require__ } = _,
+          _ = _(_),
+          _ = _ == _().strNextID;
+        let _ = _(_ || _),
+          _ = _();
+        _.bFullscreen;
+        if (!_) return null;
+        let _ = (0, _._)(_.ViewedItem, _ && _.Active, _.Screenshot),
+          _ = __webpack_require__.full;
+        return _.createElement(
+          "div",
+          {
+            className: _,
+          },
+          _.createElement("img", {
+            src: _,
+            alt: __webpack_require__.altText,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Controls,
+            },
+            _.createElement(_, {
+              fullscreen: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        let { _: _, trailer: __webpack_require__ } = _,
+          _ = _(_),
+          _ = _(_),
+          [_, _] = (0, _._)(),
+          _ = _(),
+          _ = _(),
+          _ = (0, _.useCallback)(() => _.fnSetActive(_.strNextID), [_]);
+        if (!_) return null;
+        let _ = (0, _._)(_.ViewedItem, _ && _.Active, _.Trailer);
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+          },
+          _.createElement(_, {
+            dashManifests: __webpack_require__.dashManifests,
+            hlsManifest: __webpack_require__.hlsManifest,
+            screenshot: __webpack_require__.poster,
+            altText: __webpack_require__.title,
+            forcePause: !_ || !_,
+            onPlaybackEnd: _,
+            title: __webpack_require__.title,
+            category: __webpack_require__.category,
+            statsURL: __webpack_require__.statsURL,
+            fullscreenContext: _,
+          }),
+        );
+      }
+      function _(_) {
+        let _ = (0, _.useRef)(!1);
+        return _ && (_.current = !0), _.current;
+      }
       const _ = _.lazy(() =>
           __webpack_require__
             ._("chunkid")
@@ -6951,6 +7678,10 @@
                   ..._,
                 }),
               "gamehighlight-gamepadcarousel": (_) =>
+                _.createElement(_, {
+                  ..._,
+                }),
+              "gamehighlight-desktopcarousel": (_) =>
                 _.createElement(_, {
                   ..._,
                 }),

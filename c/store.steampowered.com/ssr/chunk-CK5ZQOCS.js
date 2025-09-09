@@ -6,7 +6,7 @@ var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
-        _.prototype.request || _(_._()),
+        _.prototype.getitems_request || _(_._()),
         _.Message.initialize(this, _, 0, -1, void 0, null);
     }
     static sm_m;
@@ -17,7 +17,7 @@ var _ = class _ extends _.Message {
           (_.sm_m = {
             proto: _,
             fields: {
-              request: {
+              getitems_request: {
                 _: 1,
                 _: _,
               },

@@ -3664,6 +3664,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "ゲームレコーディング",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "（このゲームセッションを録画）",
     "QuickAccess_Tab_GameRecording": "ゲームレコーディング",
+    "Settings_GameRecording_InstantClip_Label": "クリップの長さ（秒）",
     "AccessibilityFeatures": "アクセシビリティ機能",
     "AccessibilityFeaturesWithCount": "アクセシビリティ機能（%1$s）",
     "Accessibility_Feature_AdjustableDifficulty": "難易度の調整",
@@ -3689,5 +3690,8 @@
     "SteamNotifications_TradeReversal_Title": "トレード保護",
     "SteamNotifications_TradeReversal_Body": "トレードが取り消されました",
     "SteamNotifications_TradeReversal_Body_Short": "トレードが取り消されました",
-    "SteamNotifications_TradeReversal_Description": "最近のトレードの1つがトレード相手によって取り消されました。"
+    "SteamNotifications_TradeReversal_Description": "最近のトレードの1つがトレード相手によって取り消されました。",
+    "AddonPicker_Search": "検索...",
+    "ReorderableList_ReorderInstructions": "順序を変更するには、選択して上下に移動してください",
+    "ControllerButton_8BitDo": "8BitDoボタン"
 }

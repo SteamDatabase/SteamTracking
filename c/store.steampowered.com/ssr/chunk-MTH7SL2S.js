@@ -16,6 +16,7 @@ _(_, {
   ArrayEquals: () => _,
   ArrayEqualsUnsorted: () => _,
   ArrayWithoutElement: () => _,
+  ArrayWithoutFalsyValues: () => _,
   BInsertBeforeElement: () => _,
   CountMatches: () => _,
   FilterInPlace: () => _,
@@ -99,6 +100,9 @@ function _(_, _) {
 }
 function _(_, _) {
   return _.filter((_) => _ !== _);
+}
+function _(_) {
+  return (_ ?? []).filter(Boolean);
 }
 function _(_, _) {
   if (_.length != _.length) return !1;
@@ -1959,7 +1963,7 @@ var _ = class extends _ {
       throw new Error(
         "Expected enabled to be a boolean or a callback that returns a boolean",
       );
-    this.#S(),
+    this.#R(),
       this.#t.setOptions(this.options),
       _._defaulted &&
         !_(this.options, _) &&
@@ -2031,7 +2035,7 @@ var _ = class extends _ {
     }).then(() => (this.updateResult(), this.#r));
   }
   #p(_) {
-    this.#S();
+    this.#R();
     let _ = this.#t.fetch(this.options, _);
     return _?.throwOnError || (_ = _.catch(_)), _;
   }
@@ -2217,12 +2221,12 @@ var _ = class extends _ {
         );
       };
     _?.listeners !== !1 && _() && (_.listeners = !0),
-      this.#R({
+      this.#S({
         ..._,
         ..._,
       });
   }
-  #S() {
+  #R() {
     let _ = this.#e.getQueryCache().build(this.#e, this.options);
     if (_ === this.#t) return;
     let _ = this.#t;
@@ -2233,7 +2237,7 @@ var _ = class extends _ {
   onQueryUpdate() {
     this.updateResult(), this.hasListeners() && this.#v();
   }
-  #R(_) {
+  #S(_) {
     _.batch(() => {
       _.listeners &&
         this.listeners.forEach((_) => {

@@ -11023,6 +11023,8 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -11218,9 +11220,16 @@
                 [_.CarouselDisplay]: !0,
                 [_.SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
+                [_().Blur]: "coverBlur" == _.background_repeat,
               }),
-              style: (0, _._)(_, _, _),
             },
+            _.createElement("div", {
+              className: (0, _._)(
+                _().BackgroundImage,
+                "coverBlur" == _.background_repeat ? _().Blur : "",
+              ),
+              style: (0, _._)(_, _, _),
+            }),
             _.createElement(
               "div",
               {
@@ -11274,9 +11283,16 @@
                   [_.CarouselDisplay]: !0,
                   [_.SaleSectionCtn]: !0,
                   SaleSectionForCustomCSS: !0,
+                  [_().Blur]: "coverBlur" == _.background_repeat,
                 }),
-                style: (0, _._)(_, _, _),
               },
+              _.createElement("div", {
+                className: (0, _._)(
+                  _().BackgroundImage,
+                  "coverBlur" == _.background_repeat ? _().Blur : "",
+                ),
+                style: (0, _._)(_, _, _),
+              }),
               _.createElement(
                 "div",
                 {
@@ -11294,7 +11310,10 @@
         return _.createElement(
           "div",
           {
-            className: _.SpotlightsColumn,
+            className: (0, _._)(
+              _.SpotlightsColumn,
+              "SaleSectionCarouselPadding",
+            ),
           },
           _.map((_) =>
             _.createElement(
@@ -17023,8 +17042,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {

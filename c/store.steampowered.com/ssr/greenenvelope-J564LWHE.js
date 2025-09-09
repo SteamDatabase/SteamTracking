@@ -3,6 +3,7 @@ import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -10,7 +11,6 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
@@ -37,9 +37,9 @@ import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
@@ -66,9 +66,9 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -11838,7 +11838,7 @@ var _ = class _ {
         if ((_.push(_), this.m_bUsePartnerAPI)) {
           let _ = _.Init(_);
           _.Body().set_include_unpublished(!1);
-          let _ = _.Body().request(!0);
+          let _ = _.Body().getitems_request(!0);
           _.set_context(_(this.m_bUsePartnerAPI)),
             _.set_data_request(_.fromObject(_)),
             _.set_ids(_),
@@ -12674,6 +12674,11 @@ var _ = class _ extends _.Message {
                 _: 4,
                 _: _.readBool,
                 _: _.writeBool,
+              },
+              invite_id: {
+                _: 5,
+                _: _.readUint64String,
+                _: _.writeUint64String,
               },
             },
           }),

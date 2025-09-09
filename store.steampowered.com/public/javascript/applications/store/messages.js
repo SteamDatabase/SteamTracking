@@ -4031,6 +4031,7 @@
                     bUseSubscriptionLayout: e.bUseSubscriptionLayout,
                     strExtraParams: e.strExtraParams,
                     nCreatorAccountID: e.creatorAccountID,
+                    nWidthMultiplier: e.nWidthMultiplier,
                   },
                   S,
                 ),
@@ -4800,7 +4801,7 @@
             } = (0, g.B9)(r, a, e);
             return { message: t, eventModel: s };
           })(t),
-          n = a.GetTemplateVars().linkurl,
+          n = a.associated_item.GetStorePageURL(),
           l = H(i, n, 1),
           o = H(i, n, 2);
         return s.createElement(
@@ -4871,7 +4872,10 @@
             ? (t = `steam://open/library/event/${e.appid}|${e.GID}`)
             : ((t = `${M.TS.STORE_BASE_URL}news/app/${e.appid}?emclan=${e.clanSteamID.ConvertTo64BitString()}&emgid=${e.GID}`),
               M.TS.IN_CLIENT && (t = `steam://openurl/${t}`));
-        } else t = s;
+        } else
+          (t = s),
+            e && (t += `${s.includes("?") ? "&" : "?"}emgid=${e.GID}`),
+            M.TS.IN_CLIENT && (t = `steam://openurl/${t}`);
         return (0, m.WN)(t, r, !0);
       }
       var K = r(41735),

@@ -459,7 +459,7 @@
                   {
                     className: g.GamepadOnlyPanelWrapper,
                     onGamepadDirection: o,
-                    focusableIfNoChildren: !0,
+                    focusableIfEmpty: !0,
                   },
                   t,
                 ),

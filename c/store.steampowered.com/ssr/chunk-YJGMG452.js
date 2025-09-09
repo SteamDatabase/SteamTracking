@@ -5,16 +5,18 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 function _() {
   let _ = _(),
-    _ = _.accountid;
-  return _(_(_, _));
+    _ = _.accountid,
+    _ = _.country_code;
+  return _(_(_, _, _));
 }
-function _(_, _) {
+function _(_, _, _) {
   return {
     queryKey: _(_),
     queryFn: async () => {
       if (!_) return _();
-      let _ = _.Init(_),
-        _ = await _.GetStorePreferences(_, _);
+      let _ = _.Init(_);
+      _.Body().set_country_code(_);
+      let _ = await _.GetStorePreferences(_, _);
       if (!_.BSuccess())
         throw `Error loading store preferences: ${_.GetErrorMessage()}`;
       return _.Body().toObject();
@@ -29,8 +31,9 @@ function _() {
 }
 var _ = [4, 3];
 function _(_, _) {
+  let _ = _.country_code;
   return {
-    ..._(_, _),
+    ..._(_, _, _),
     select: _,
   };
 }

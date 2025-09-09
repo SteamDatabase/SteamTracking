@@ -2322,6 +2322,10 @@
               ...__webpack_require__,
             });
           case 24:
+            return _.createElement(_.Yoo, {
+              ...__webpack_require__,
+            });
+          case 25:
           case 0:
             return "invalid social media type";
         }

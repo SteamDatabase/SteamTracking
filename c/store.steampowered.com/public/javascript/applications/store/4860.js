@@ -579,6 +579,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  invite_id: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
                 },
               }),
             _.sm_m
@@ -4899,14 +4904,14 @@
           },
         });
       }
-      function _(_, _ = null) {
+      function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: async () => {
             const _ = _._.Init(_);
-            _.Body().set_family_groupid(_), null !== _ && _.Body().set_nonce(_);
+            __webpack_require__.Body().set_family_groupid(_);
             const _ = await _.JoinFamilyGroup(_, _);
             return _(_.GetEResult()), _.Body();
           },
@@ -5312,12 +5317,12 @@
           );
         return (0, _.useMemo)(() => _.slice().sort(_), [_, _]);
       }
-      function _(_, _, _) {
+      function _(_, _) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
-          mutationFn: async () => {
+          mutationFn: async (_) => {
             const _ = _._.Init(_);
             _.Body().set_family_groupid(_),
               _.Body().set_invite_id(_),

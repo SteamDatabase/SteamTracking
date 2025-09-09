@@ -3,8 +3,8 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [4268],
   {
-    34418: (e) => {
-      e.exports = {
+    34418: (t) => {
+      t.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
         StoreHeaderAdjust: "_3YyCpH32HRhZtt4BOM5wM5",
@@ -16,16 +16,16 @@
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
       };
     },
-    16053: (e, t, n) => {
+    16053: (t, e, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => F });
+      n.r(e), n.d(e, { default: () => R });
       var a = n(43527),
         o = n(90626),
         s = n(6503);
-      const i = (e) =>
+      const i = (t) =>
         o.createElement(s.Io, {
-          ...e,
-          key: e.match.params.oldAnnouncementGID,
+          ...t,
+          key: t.match.params.oldAnnouncementGID,
           bClearDirty: !0,
           bPreview: !1,
           bPreventRedirect: !0,
@@ -36,13 +36,13 @@
         d = n(60746),
         p = n(91254),
         m = n(3919),
-        u = (n(64641), n(97058)),
-        h = n(78327),
+        h = (n(64641), n(97058)),
+        u = n(78327),
         v = n(34629),
         E = n(75844),
         _ = n(73745),
-        S = n(8107),
-        w = n(22797),
+        w = n(8107),
+        S = n(22797),
         I = n(4796),
         D = n(61859),
         L = n(14947);
@@ -57,20 +57,20 @@
         componentDidMount() {
           this.props.bPreventDismiss
             ? this.LoadAppAndFirstEvent()
-            : (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
-                this.setState({ bShowModal: !0, appid: e, announcementGID: t });
+            : (window.fnPartnerEvent_ShowInfiniteScroll = (t, e) => {
+                this.setState({ bShowModal: !0, appid: t, announcementGID: e });
               });
         }
         async LoadAppAndFirstEvent() {
-          var e;
-          const t = (0, h.Tc)(
+          var t;
+          const e = (0, u.Tc)(
             "eventinfinitescrolllanding",
             "application_config",
           );
           let n;
-          t && "string" == typeof t && (n = t);
+          e && "string" == typeof e && (n = e);
           const a = window.location.href.startsWith(
-              h.TS.COMMUNITY_BASE_URL + "groups",
+              u.TS.COMMUNITY_BASE_URL + "groups",
             ),
             o = a
               ? await I.ac.LoadOGGClanInfoForGroupVanity(
@@ -81,7 +81,7 @@
                 );
           if ((console.log("output: ", (0, L.HO)(o), a), o))
             if (o.partner_events_enabled) {
-              const t = await p.O3.LoadAdjacentPartnerEventsByAnnouncement(
+              const e = await p.O3.LoadAdjacentPartnerEventsByAnnouncement(
                 n,
                 o.clanSteamID,
                 o.appid,
@@ -94,9 +94,9 @@
                 appid: o.appid,
                 clanSteamID: o.clanSteamID,
                 announcementGID:
-                  null === (e = null == t ? void 0 : t[0]) || void 0 === e
+                  null === (t = null == e ? void 0 : e[0]) || void 0 === t
                     ? void 0
-                    : e.AnnouncementGID,
+                    : t.AnnouncementGID,
               });
             } else this.setState({ bLoadedLandingState: !1 });
           else
@@ -110,9 +110,9 @@
           this.props.bPreventDismiss || this.setState({ bShowModal: !1 });
         }
         render() {
-          const { bPreventDismiss: e } = this.props;
+          const { bPreventDismiss: t } = this.props;
           return this.state.bShowModal
-            ? o.createElement(S.N, {
+            ? o.createElement(w.N, {
                 appid: this.state.appid,
                 announcementGID: this.state.announcementGID,
                 clanSteamID: this.state.clanSteamID,
@@ -120,25 +120,25 @@
                 partnerEventStore: p.O3,
                 trackingLocation: this.props.trackingLocation,
                 showAppHeader: !0,
-                bPrimaryPageFeature: e,
+                bPrimaryPageFeature: t,
               })
             : this.state.bLoadedLandingState
-              ? o.createElement(w.t, { string: (0, D.we)("#Loading") })
+              ? o.createElement(S.t, { string: (0, D.we)("#Loading") })
               : o.createElement("div", null);
         }
       };
       (0, v.Cg)([_.oI], g.prototype, "HideModal", null),
         (g = (0, v.Cg)([E.PA], g));
-      var b = n(45699),
-        G = n(76217),
-        M = n(84143),
-        f = n(55563),
+      var f = n(45699),
+        b = n(76217),
+        G = n(84143),
+        M = n(55563),
         C = n(35685),
         k = n(12155),
         B = n(34418);
-      class A extends o.Component {
-        constructor(e) {
-          super(e),
+      class P extends o.Component {
+        constructor(t) {
+          super(t),
             (this.state = {
               events: null,
               bShowModal: !1,
@@ -147,102 +147,111 @@
               announcementGIDList: [],
               last_update_event: null,
             });
-          const t = (0, f.v)("EventWebRowEmbed");
-          this.ValidateStoreDefault(t) &&
-            ((this.state.bPreLoaded = t.bPreLoaded),
-            (this.state.announcementGIDList = t.announcementGIDList),
-            (this.state.last_update_event = t.last_update_event),
-            (this.state.events = []),
-            this.state.announcementGIDList.forEach((e) => {
-              const t = p.O3.GetClanEventFromAnnouncementGID(e);
-              t && this.state.events.push(t);
-            }));
+          const e = (0, M.v)("EventWebRowEmbed");
+          if (this.ValidateStoreDefault(e)) {
+            (this.state.bPreLoaded = e.bPreLoaded),
+              (this.state.announcementGIDList = e.announcementGIDList),
+              (this.state.last_update_event = e.last_update_event),
+              (this.state.events = []),
+              this.state.announcementGIDList.forEach((t) => {
+                const e = p.O3.GetClanEventFromAnnouncementGID(t);
+                e && this.state.events.push(e);
+              });
+            const t = new URLSearchParams(window.location.search),
+              n = null == t ? void 0 : t.get("emgid");
+            if (n) {
+              const t = this.state.events.find((t) => t.GID === n);
+              t &&
+                ((this.state.modalInitialEvent = t),
+                (this.state.bShowModal = !0));
+            }
+          }
         }
         async componentDidMount() {
           const {
-            appid: e,
-            event_customization: t,
+            appid: t,
+            event_customization: e,
             partnerEventStore: n,
             trackingLocation: a,
           } = this.props;
           if (!this.state.bPreLoaded) {
-            const o = await n.LoadAdjacentPartnerEvents(null, null, e, 0, 2, t);
+            const o = await n.LoadAdjacentPartnerEvents(null, null, t, 0, 2, e);
             if ((this.setState({ events: o }), a && o && o.length > 0)) {
-              const e = d.KN.Get().GetTracker();
+              const t = d.KN.Get().GetTracker();
               this.state.events
-                .filter((e) => e.BIsPartnerEvent())
-                .forEach((t) =>
-                  e.MarkEventShown(t.GID, t.clanSteamID.GetAccountID(), a),
+                .filter((t) => t.BIsPartnerEvent())
+                .forEach((e) =>
+                  t.MarkEventShown(e.GID, e.clanSteamID.GetAccountID(), a),
                 ),
-                e.Flush();
+                t.Flush();
             }
           }
-          window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
+          window.fnPartnerEvent_ShowInfiniteScroll = (t, e) => {
             this.setState({
               bShowModal: !0,
-              announcementGID: t,
+              announcementGID: e,
               modalInitialEvent: void 0,
             });
           };
         }
-        ValidateStoreDefault(e) {
-          const t = e;
+        ValidateStoreDefault(t) {
+          const e = t;
           return (
-            !(!t || "object" != typeof t) &&
-            void 0 !== t.bPreLoaded && "boolean" == typeof t.bPreLoaded &&
-            Array.isArray(t.announcementGIDList)
+            !(!e || "object" != typeof e) &&
+            void 0 !== e.bPreLoaded && "boolean" == typeof e.bPreLoaded &&
+            Array.isArray(e.announcementGIDList)
           );
         }
-        ShowModal(e) {
-          const { trackingLocation: t } = this.props;
+        ShowModal(t) {
+          const { trackingLocation: e } = this.props;
           this.setState({
             bShowModal: !0,
-            modalInitialEvent: e,
+            modalInitialEvent: t,
             announcementGID: void 0,
           });
           const n = d.KN.Get().GetTracker();
-          e &&
-            e.BIsPartnerEvent() &&
-            n.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
+          t &&
+            t.BIsPartnerEvent() &&
+            n.MarkEventRead(t.GID, t.clanSteamID.GetAccountID(), e) &&
             n.Flush();
         }
         ShowLatestUpdateModal() {
           const {
-              event_gid: e,
-              announcement_gid: t,
+              event_gid: t,
+              announcement_gid: e,
               clan_account_id: n,
             } = this.state.last_update_event,
             { trackingLocation: a } = this.props;
           this.setState({
             bShowModal: !0,
             modalInitialEvent: void 0,
-            announcementGID: t,
+            announcementGID: e,
           });
           const o = d.KN.Get().GetTracker();
-          e && o.MarkEventRead(e, n, a) && o.Flush();
+          t && o.MarkEventRead(t, n, a) && o.Flush();
         }
         CloseModal() {
           this.setState({ bShowModal: !1, modalInitialEvent: null });
         }
         BHasLastUpdateEvent() {
-          var e;
+          var t;
           return Boolean(
-            null === (e = this.state.last_update_event) || void 0 === e
+            null === (t = this.state.last_update_event) || void 0 === t
               ? void 0
-              : e.rtime,
+              : t.rtime,
           );
         }
         BShouldShowLastUpdateEvent() {
-          const { last_update_event: e, events: t } = this.state;
+          const { last_update_event: t, events: e } = this.state;
           return (
             !(
               !this.BHasLastUpdateEvent() ||
-              !(null == e ? void 0 : e.announcement_gid)
-            ) && !(null == t ? void 0 : t.length)
+              !(null == t ? void 0 : t.announcement_gid)
+            ) && !(null == e ? void 0 : e.length)
           );
         }
         render() {
-          var e, t, n;
+          var t, e, n;
           const a = this.state.events,
             s = window.screen.width <= 500 ? 1 : 2,
             i = Boolean(null == a ? void 0 : a.length),
@@ -252,16 +261,16 @@
               : void 0,
             { strClassName: c } = this.props;
           return o.createElement(
-            b.ml,
+            f.ml,
             { className: c },
             this.state.bShowModal &&
-              o.createElement(P, {
+              o.createElement(A, {
                 ...this.props,
                 announcementGID:
                   this.state.announcementGID ||
-                  (null === (e = this.state.modalInitialEvent) || void 0 === e
+                  (null === (t = this.state.modalInitialEvent) || void 0 === t
                     ? void 0
-                    : e.AnnouncementGID),
+                    : t.AnnouncementGID),
                 eventModel: this.state.modalInitialEvent,
                 closeModal: this.CloseModal,
               }),
@@ -274,15 +283,15 @@
                   null,
                   (0, D.we)("#EventBrowse_RecentEvents"),
                 ),
-                !(null === (t = this.context) || void 0 === t
+                !(null === (e = this.context) || void 0 === e
                   ? void 0
-                  : t.IN_GAMEPADUI) &&
+                  : e.IN_GAMEPADUI) &&
                   o.createElement(
                     "div",
                     { className: B.SectionButtonCtn },
                     this.props.bViewAllShowInfiniteScroll
                       ? o.createElement(
-                          b.ml,
+                          f.ml,
                           {
                             className: B.SectionButton,
                             onClick: () => this.ShowModal(a[0]),
@@ -302,16 +311,16 @@
                 o.createElement(
                   "div",
                   { className: B.EventsSummariesCtn },
-                  a.slice(0, s).map((e) => {
-                    const t =
+                  a.slice(0, s).map((t) => {
+                    const e =
                       1 === a.length && window.screen.width > 500 ? C.kH : C.uY;
-                    return o.createElement(t, {
-                      key: e.GID,
-                      event: e,
-                      onClick: (t) => {
-                        this.ShowModal(e),
-                          t.stopPropagation(),
-                          t.preventDefault();
+                    return o.createElement(e, {
+                      key: t.GID,
+                      event: t,
+                      onClick: (e) => {
+                        this.ShowModal(t),
+                          e.stopPropagation(),
+                          e.preventDefault();
                       },
                     });
                   }),
@@ -337,20 +346,20 @@
           );
         }
       }
-      function P(e) {
+      function A(t) {
         const {
-            appid: t,
+            appid: e,
             partnerEventStore: n,
             trackingLocation: a,
             announcementGID: s,
             eventModel: i,
             closeModal: r,
-          } = e,
-          l = (0, h.Qn)();
-        return o.createElement(S.N, {
+          } = t,
+          l = (0, u.Qn)();
+        return o.createElement(w.N, {
           className: l ? void 0 : B.StoreHeaderAdjust,
           eventClassName: l ? B.GamePadUIWidthAdjust : void 0,
-          appid: t,
+          appid: e,
           trackingLocation: a,
           announcementGID: s,
           partnerEventStore: n,
@@ -358,7 +367,7 @@
           closeModal: r,
         });
       }
-      function y(e) {
+      function y(t) {
         return o.createElement(
           "div",
           { className: B.LatestUpdateButtonCtn },
@@ -368,20 +377,20 @@
             o.createElement(k.UTF, { role: "presentation" }),
           ),
           o.createElement(
-            b.ml,
-            { className: B.LatestUpdateButton, onClick: e.onClick },
+            f.ml,
+            { className: B.LatestUpdateButton, onClick: t.onClick },
             (0, D.we)(
               "#EventBrowse_LatestUpdateTime_Button",
-              (0, D._l)(e.nUpdateTime),
+              (0, D._l)(t.nUpdateTime),
             ),
           ),
         );
       }
-      function U(e) {
-        const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
+      function U(t) {
+        const { nUpdateTime: e, announcementGID: n, onClick: a } = t,
           s = n ? p.O3.GetClanEventFromAnnouncementGID(n) : null,
-          i = (e) => {
-            null == a || a(), e.stopPropagation(), e.preventDefault();
+          i = (t) => {
+            null == a || a(), t.stopPropagation(), t.preventDefault();
           },
           r = window.screen.width > 500 ? C.kH : C.uY;
         return o.createElement(
@@ -390,7 +399,7 @@
           o.createElement(
             "h2",
             null,
-            (0, D.we)("#EventBrowse_LastUpdateDate", (0, D._l)(t)),
+            (0, D.we)("#EventBrowse_LastUpdateDate", (0, D._l)(e)),
           ),
           o.createElement(
             "div",
@@ -403,27 +412,27 @@
           ),
           Boolean(s) &&
             o.createElement(
-              G.Z,
+              b.Z,
               {
                 className: B.EventsSummariesCtn,
                 "flow-children": "column",
-                navEntryPreferPosition: M.iU.PREFERRED_CHILD,
+                navEntryPreferPosition: G.iU.PREFERRED_CHILD,
               },
               o.createElement(r, { event: s, onClick: i }),
             ),
         );
       }
-      (A.contextType = h.QO),
-        (0, v.Cg)([_.oI], A.prototype, "ShowModal", null),
-        (0, v.Cg)([_.oI], A.prototype, "ShowLatestUpdateModal", null),
-        (0, v.Cg)([_.oI], A.prototype, "CloseModal", null);
+      (P.contextType = u.QO),
+        (0, v.Cg)([_.oI], P.prototype, "ShowModal", null),
+        (0, v.Cg)([_.oI], P.prototype, "ShowLatestUpdateModal", null),
+        (0, v.Cg)([_.oI], P.prototype, "CloseModal", null);
       var N = n(25918),
         H = n(44165);
       class T extends o.Component {
         render() {
-          const { appid: e } = this.props;
-          let t = H.HD.GetTimeNowWithOverrideAsDate(),
-            n = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
+          const { appid: t } = this.props;
+          let e = H.HD.GetTimeNowWithOverrideAsDate(),
+            n = new Date(e.setUTCHours(0, 0, 0, 0) - 15552e6),
             a = Math.floor(n.getTime() / 1e3);
           return o.createElement(
             "div",
@@ -431,8 +440,8 @@
               className:
                 "detailBox altFooter greenlight_home_box section announcements_row",
             },
-            o.createElement(A, {
-              appid: e,
+            o.createElement(P, {
+              appid: t,
               partnerEventStore: N.mh,
               event_customization: {
                 require_tags: ["workshop"],
@@ -445,15 +454,15 @@
           );
         }
       }
-      function F(e) {
-        const [t, n] = o.useState(!0);
+      function R(t) {
+        const [e, n] = o.useState(!0);
         return (
           o.useEffect(() => {
-            c.Vw.Init(new l.D(h.TS.WEBAPI_BASE_URL)),
+            c.Vw.Init(new l.D(u.TS.WEBAPI_BASE_URL)),
               p.O3.Init(),
               Promise.all([d.KN.InitGlobal()]).then(() => n(!1));
           }, []),
-          t
+          e
             ? null
             : o.createElement(
                 m.IQ.Provider,
@@ -467,15 +476,15 @@
                       ":appid_or_vanity_str",
                       ":oldAnnouncementGID(\\d+)",
                     ),
-                    render: (e) => o.createElement(i, { ...e }),
+                    render: (t) => o.createElement(i, { ...t }),
                   }),
                   o.createElement(r.qh, {
                     exact: !0,
                     path: a.g5.Listing(":appid_or_vanity_str"),
-                    render: (e) =>
+                    render: (t) =>
                       o.createElement(g, {
-                        key: "InfScroll_NoDismissApp_" + e.match.params.appid,
-                        ...e,
+                        key: "InfScroll_NoDismissApp_" + t.match.params.appid,
+                        ...t,
                         bPreventDismiss: !0,
                         trackingLocation: 6,
                       }),
@@ -483,32 +492,32 @@
                   o.createElement(r.qh, {
                     exact: !0,
                     path: a.g5.WorkshopHub(":appid(\\d+)"),
-                    render: (e) =>
+                    render: (t) =>
                       o.createElement(T, {
-                        ...e,
-                        appid: +e.match.params.appid,
-                        key: "Workshop" + e.match.params.appid,
+                        ...t,
+                        appid: +t.match.params.appid,
+                        key: "Workshop" + t.match.params.appid,
                       }),
                   }),
                   o.createElement(r.qh, {
                     path: a.g5.AppHub(":appid"),
-                    render: (e) =>
+                    render: (t) =>
                       o.createElement(g, {
-                        ...e,
-                        key: "InfScroll_App_" + e.match.params.appid,
+                        ...t,
+                        key: "InfScroll_App_" + t.match.params.appid,
                         trackingLocation: 6,
                       }),
                   }),
                   o.createElement(r.qh, {
                     path: a.g5.GroupHub(":group_vanity"),
-                    render: (e) =>
+                    render: (t) =>
                       o.createElement(g, {
-                        ...e,
-                        key: "InfScroll_App_" + e.match.params.group_vanity,
+                        ...t,
+                        key: "InfScroll_App_" + t.match.params.group_vanity,
                         trackingLocation: 6,
                       }),
                   }),
-                  o.createElement(r.qh, { component: u.a }),
+                  o.createElement(r.qh, { component: h.a }),
                 ),
               )
         );

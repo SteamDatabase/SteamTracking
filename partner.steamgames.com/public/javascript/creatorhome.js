@@ -113,17 +113,6 @@ class CreatorHomeBatchUpdater
 		}
 	}
 
-		escapeHtml(text)
-	{
-		var map = {
-			'&': '&amp;',
-			'<': '&lt;',
-			'>': '&gt;',
-		};
-
-		return text.replace(/[&<>]/g, function(m) { return map[m]; });
-	}
-
 		ExtractDevLinksToChange( bDoUpdateNow, from = 0, to = Number.MAX_VALUE )
 	{
 		var devLinks = [];
@@ -133,11 +122,12 @@ class CreatorHomeBatchUpdater
 						if( count >= to)
 				return;
 
-			var uniqueName = _CreatorHomeBatchUpdater.escapeHtml( $J( this )[0].hasAttribute('uniquename') ?
-				$J( this ).attr( 'uniquename' ) : $J( this ).parent().attr( 'uniquename' ) );
+						var uniqueName = $J( this )[0].hasAttribute('uniquename') ?
+				$J( this ).attr( 'uniquename' ) : $J( this ).parent().attr( 'uniquename' );
 			var clanSteamID = $J( this ).val();
 			var appids = [];
 			var appIDsToCopy = [];
+
 			if( uniqueName in _CreatorHomeBatchUpdater.m_createrHome.m_unlinkedUniqueNamesToAppID )
 			{
 				appIDsToCopy = _CreatorHomeBatchUpdater.m_createrHome.m_unlinkedUniqueNamesToAppID[uniqueName];

@@ -509,7 +509,7 @@
         Sz: () => I,
         Tu: () => R,
         UT: () => V,
-        W4: () => T,
+        W4: () => N,
         ZS: () => L,
         Zb: () => A,
         _J: () => O,
@@ -534,11 +534,11 @@
         _ = n(32754),
         f = n(52038),
         v = n(61859),
-        C = n(61336),
-        S = n(30470),
+        S = n(61336),
+        C = n(30470),
         y = n(12611),
-        N = n(90622);
-      const T = new Map([
+        T = n(90622);
+      const N = new Map([
         [
           "b",
           {
@@ -692,12 +692,12 @@
           "url",
           {
             Constructor: function (e) {
-              let t = (0, N.J)(D(e.args));
+              let t = (0, T.J)(D(e.args));
               if (!t) {
                 const n = e.children;
                 "string" == typeof n &&
                   (n.startsWith("http://") || n.startsWith("https://")) &&
-                  (t = (0, N.J)(n));
+                  (t = (0, T.J)(n));
               }
               const n = "button" == D(e.args, "style") ? r().LinkButton : null,
                 a = n && D(e.args, "buttoncolor");
@@ -920,7 +920,7 @@
               if (a)
                 return c.createElement(h.y, { eventGID: a, bPreviewMode: n });
               if (t) {
-                const e = (0, o.sf)(S.TS.LANGUAGE);
+                const e = (0, o.sf)(C.TS.LANGUAGE);
                 return c.createElement(h.j, { eventModel: t, lang: e });
               }
               return null;
@@ -947,18 +947,18 @@
                 E = `${m}${u}${p}T${h}${g}00Z`,
                 _ = new Date(a),
                 v = _.getUTCFullYear(),
-                C = ("0" + (_.getUTCMonth() + 1)).slice(-2),
-                S = ("0" + _.getUTCDate()).slice(-2),
+                S = ("0" + (_.getUTCMonth() + 1)).slice(-2),
+                C = ("0" + _.getUTCDate()).slice(-2),
                 y = ("0" + _.getUTCHours()).slice(-2),
-                N = ("0" + _.getUTCMinutes()).slice(-2),
-                T = `${v}${C}${S}T${y}${N}00Z`;
+                T = ("0" + _.getUTCMinutes()).slice(-2),
+                N = `${v}${S}${C}T${y}${T}00Z`;
               let b;
               try {
                 let e = "BEGIN:VCALENDAR\r\n";
                 (e += "VERSION:2.0\r\n"),
                   (e += "BEGIN:VEVENT\r\n"),
                   (e += `DTSTART:${E}\r\n`),
-                  (e += `DTEND:${T}\r\n`),
+                  (e += `DTEND:${N}\r\n`),
                   (e += `SUMMARY:${t.replace("\n", "\\n")}\r\n`),
                   o && (e += `DESCRIPTION:${o.replace("\n", "\\n")}\r\n`),
                   s && (e += `LOCATION:${s.replace("\n", "\\n")}\r\n`),
@@ -972,7 +972,7 @@
                 "https://calendar.google.com/calendar/render?action=TEMPLATE";
               (w += `&text=${encodeURI(t)}`),
                 (w += `&details=${encodeURI(o)}`),
-                (w += `&dates=${encodeURI(E + "/" + T)}`);
+                (w += `&dates=${encodeURI(E + "/" + N)}`);
               const R = (e) => {
                 if ("ReactNativeWebView" in window) {
                   const n = window.ReactNativeWebView,
@@ -1052,7 +1052,7 @@
                 {
                   className: n,
                   style: { backgroundColor: a },
-                  href: `${S.TS.PARTNER_BASE_URL}doc/${t}`,
+                  href: `${C.TS.PARTNER_BASE_URL}doc/${t}`,
                 },
                 e.children,
               );
@@ -1173,16 +1173,16 @@
           r = (0, m.OZ)(t);
         (0, d.p)(r)
           ? ((r =
-              (S.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+              (C.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
               (0, d.E)(r)),
             (a = "noopener nofollow"))
-          : (r = (0, C.NT)(r));
+          : (r = (0, S.NT)(r));
         const o =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, C.Qz)(t)
+            ? (0, S.Qz)(t)
             : void 0;
         return c.createElement(
           _.Gq,
@@ -1264,22 +1264,22 @@
       }
       function U(e) {
         let t = D(e, "poster");
-        t && (t = (0, C.L$)(t));
+        t && (t = (0, S.L$)(t));
         const n = new Array();
         {
           const t = D(e, "mp4");
-          t && n.push({ sURL: (0, C.L$)(t), sFormat: "video/mp4" });
+          t && n.push({ sURL: (0, S.L$)(t), sFormat: "video/mp4" });
           const a = D(e, "webm");
-          a && n.push({ sURL: (0, C.L$)(a), sFormat: "video/webm" });
+          a && n.push({ sURL: (0, S.L$)(a), sFormat: "video/webm" });
         }
-        const a = (0, o.sf)(S.TS.LANGUAGE),
+        const a = (0, o.sf)(C.TS.LANGUAGE),
           r = 0 != a,
           s = new Array();
         for (let t = 0; t < 31; t++) {
           const n = D(e, "sub_" + (0, o.ww)(t));
           n &&
             s.push({
-              sURL: (0, C.L$)(n),
+              sURL: (0, S.L$)(n),
               eLanguage: t,
               sKind: "subtitles",
               bDefault: r && t == a,
@@ -1287,7 +1287,7 @@
           const i = D(e, "cap_" + (0, o.ww)(t));
           i &&
             s.push({
-              sURL: (0, C.L$)(i),
+              sURL: (0, S.L$)(i),
               eLanguage: t,
               sKind: "captions",
               bDefault: r && t == a,
@@ -1309,7 +1309,7 @@
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, C.L$)(n), sFormat: "video/webm" });
+          t.rgVideoSources.push({ sURL: (0, S.L$)(n), sFormat: "video/webm" });
         const a = D(e.args, "autoplay"),
           r = "0" !== a && "off" !== a && "false" !== a,
           o = D(e.args, "controls"),
@@ -1644,9 +1644,9 @@
             classNameAlign: _,
           } = e,
           [f, v] = (0, a.useState)(!n),
-          [C, S] = (0, a.useState)(!1),
+          [S, C] = (0, a.useState)(!1),
           y = (0, s.m)("YouTubeInlineSnippet"),
-          [N, T] = (0, a.useState)({
+          [T, N] = (0, a.useState)({
             title: (0, c.we)("#Loading"),
             description: "",
             videoid: t,
@@ -1656,7 +1656,7 @@
           f &&
             r.R.LoadYouTubeDynamicData([t], y)
               .then((e) => {
-                !y.token.reason && e.length > 0 && (T(e[0]), S(!0));
+                !y.token.reason && e.length > 0 && (N(e[0]), C(!0));
               })
               .catch((e) =>
                 console.error(
@@ -1665,9 +1665,9 @@
               );
         }, [f, y, t]);
         if (((0, u.VC)(n && !0), f)) {
-          const e = N.title,
-            n = N.views,
-            r = N.description;
+          const e = T.title,
+            n = T.views,
+            r = T.description;
           return a.createElement(
             "div",
             { className: h().DynamicLinkBox, onClick: () => v(!1) },
@@ -1694,8 +1694,8 @@
               a.createElement(
                 "div",
                 { className: h().Dynamiclink_Content },
-                C && r,
-                !C && a.createElement(o.t, { size: "medium" }),
+                S && r,
+                !S && a.createElement(o.t, { size: "medium" }),
               ),
             ),
           );
@@ -1927,11 +1927,11 @@
       }
       (0, a.Cg)([g.sH], v.prototype, "m_bValidatedEmail", void 0),
         (0, a.Cg)([g.sH], v.prototype, "m_nMobileDeviceCount", void 0);
-      let C = new v();
-      var S = n(40650),
+      let S = new v();
+      var C = n(40650),
         y = n(10981),
-        N = n(76684),
-        T = n(51706),
+        T = n(76684),
+        N = n(51706),
         b = n(738),
         w = n(12155),
         D = n(22797),
@@ -1953,10 +1953,10 @@
         m_iMenuInstance;
         m_elDropDownRef = s.createRef();
         m_bLoadWasCancelled = !1;
-        state = { bIsOpen: !1, bIsLoadingNotificationSettings: !C.BIsLoaded() };
+        state = { bIsOpen: !1, bIsLoadingNotificationSettings: !S.BIsLoaded() };
         componentDidMount() {
           this.state.bIsLoadingNotificationSettings &&
-            C.HintLoad()
+            S.HintLoad()
               .catch(
                 (e) => (
                   console.error(
@@ -1991,7 +1991,7 @@
               e.stopPropagation(),
               e.preventDefault())
             : (0, b.pg)(
-                s.createElement(T.o0, {
+                s.createElement(N.o0, {
                   strTitle: (0, I.we)("#EventDisplay_Share_NotLoggedIn"),
                   strDescription: (0, I.we)(
                     "#EventDisplay_Share_NotLoggedIn_Description",
@@ -2016,7 +2016,7 @@
               strClassName: (0, A.A)(
                 H.ReminderDialog,
                 H.ReminderOptions,
-                S.contextMenu,
+                C.contextMenu,
               ),
             };
           (this.m_iMenuInstance = (0, l.lX)(
@@ -2038,13 +2038,13 @@
         BHasSomeNotificationSetting(e) {
           const t = e.GID;
           return (
-            (C.BHasValidatedEmail() &&
+            (S.BHasValidatedEmail() &&
               h.KN.Get().BFollowsEventAndNotifiedBy(
                 e.clanSteamID,
                 t,
                 h.Nh.k_ENotifyFlagByEmail,
               )) ||
-            (C.BHasPushNotification() &&
+            (S.BHasPushNotification() &&
               h.KN.Get().BFollowsEventAndNotifiedBy(
                 e.clanSteamID,
                 t,
@@ -2138,7 +2138,7 @@
             } catch (e) {
               (0, b.HT)(
                 s.createElement(
-                  T.KG,
+                  N.KG,
                   {
                     strTitle: (0, I.we)(
                       t
@@ -2216,8 +2216,8 @@
               fnHasReminderSet: r,
               fnHidePanel: o,
             } = this.props,
-            i = C.BHasValidatedEmail(),
-            l = C.BHasPushNotification(),
+            i = S.BHasValidatedEmail(),
+            l = S.BHasPushNotification(),
             c = t && e.GetStartTimeAndDateUnixSeconds();
           return s.createElement(
             "div",
@@ -2279,7 +2279,7 @@
                         p.HD.GetTimeNowWithOverrideAsDate(),
                       ),
                     ),
-                    (0, N.yi)(c, !0),
+                    (0, T.yi)(c, !0),
                   ),
                 ),
               s.createElement(
@@ -2661,9 +2661,9 @@
             (e.rgVideoTracks && e.rgVideoTracks.some((e) => !(0, l.ZF)(e.sURL)))
           );
         })(n);
-        let C;
-        (!v || (E && "public" == c.TS.WEB_UNIVERSE)) && (C = "anonymous");
-        const S = i || (a && m.Get().BVolumePreferenceMuted()),
+        let S;
+        (!v || (E && "public" == c.TS.WEB_UNIVERSE)) && (S = "anonymous");
+        const C = i || (a && m.Get().BVolumePreferenceMuted()),
           y = n.sPoster ? p(n.sPoster) : "";
         return r.createElement(
           "video",
@@ -2671,12 +2671,12 @@
             width: "100%",
             height: "auto",
             autoPlay: a,
-            muted: S,
+            muted: C,
             playsInline: !0,
             controls: o,
             poster: y,
             loop: s,
-            crossOrigin: C,
+            crossOrigin: S,
             onVolumeChange: (e) => {
               const t = e.target,
                 n = t.muted ? 0 : t.volume;
@@ -2824,13 +2824,7 @@
             d && this.props.children,
           );
           return (
-            n &&
-              (p = r.createElement(
-                i.Z,
-                { focusableIfNoChildren: !0, retainFocus: !0 },
-                p,
-              )),
-            p
+            n && (p = r.createElement(i.Z, { focusableIfEmpty: !0 }, p)), p
           );
         }
       }

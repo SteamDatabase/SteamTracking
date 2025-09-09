@@ -1902,9 +1902,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-04:07:12
-04:07:20
-04:07:21
 08bX
 0?0L
 0A/8
@@ -2351,6 +2348,8 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
+19:31:13
+19:31:21
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -8747,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Sep  9 2025 04:07:20
+Startup - updater built Sep  9 2025 19:31:21
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -16732,7 +16731,6 @@ pJobType->m_pchName && *pJobType->m_pchName
 pKeyCallback
 pKeyValuesTextParser
 pKp\nZ
-pK}m
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 pLock
 pLock->BIsLocked()

@@ -3663,6 +3663,7 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Játékfelvétel",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(E játékmenet felvétele)",
     "QuickAccess_Tab_GameRecording": "Játékfelvétel",
+    "Settings_GameRecording_InstantClip_Label": "Kliphossz másodpercben",
     "AccessibilityFeatures": "Kisegítő lehetőségek",
     "AccessibilityFeaturesWithCount": "Kisegítő lehetőségek (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Állítható nehézség",
@@ -3688,5 +3689,8 @@
     "SteamNotifications_TradeReversal_Title": "Cserevédelem",
     "SteamNotifications_TradeReversal_Body": "Egy csere vissza lett vonva.",
     "SteamNotifications_TradeReversal_Body_Short": "Egy csere vissza lett vonva.",
-    "SteamNotifications_TradeReversal_Description": "A cserepartnered visszavonta egy közelmúltbeli cserédet."
+    "SteamNotifications_TradeReversal_Description": "A cserepartnered visszavonta egy közelmúltbeli cserédet.",
+    "AddonPicker_Search": "Keresés...",
+    "ReorderableList_ReorderInstructions": "Átrendezéshez válaszd ki, és mozgasd fel vagy le.",
+    "ControllerButton_8BitDo": "8BitDo gomb"
 }

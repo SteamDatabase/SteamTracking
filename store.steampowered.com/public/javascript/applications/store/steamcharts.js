@@ -7929,7 +7929,7 @@
                 { item: o },
                 h.createElement("img", {
                   className: Be().Capsule,
-                  src: o.GetAssets().GetHeaderURL(),
+                  src: o.GetAssets().GetMainCapsuleURL(),
                 }),
               ),
               h.createElement(xt, { rank: 1, item: o, itemDesc: n }),
@@ -7973,7 +7973,7 @@
                 { item: o.Item },
                 h.createElement("img", {
                   className: Be().Capsule,
-                  src: o.Item.GetAssets().GetHeaderURL(),
+                  src: o.Item.GetAssets().GetMainCapsuleURL(),
                 }),
               ),
               h.createElement(xt, {
@@ -9498,7 +9498,7 @@
           a.e(2797),
           a.e(7436),
           a.e(7403),
-          a.e(9214),
+          a.e(6535),
           a.e(3270),
           a.e(4796),
           a.e(9063),
