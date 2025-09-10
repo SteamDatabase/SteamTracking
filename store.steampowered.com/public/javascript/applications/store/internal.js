@@ -4806,47 +4806,50 @@
         return r.createElement("div", { className: Se.DayOfWeekHeader }, t);
       }
       function ye(e) {
+        const [t, a] = r.useState(3);
         return e.todayTimestamp > Math.max(...e.dayTimestamps)
           ? null
           : r.createElement(
               "div",
               { className: Se.Week },
-              e.dayTimestamps.map((t) =>
+              e.dayTimestamps.map((s) =>
                 r.createElement(Ce, {
-                  key: t,
-                  timestamp: t,
-                  appsToday: e.appReleasesByDay[t],
+                  key: s,
+                  timestamp: s,
+                  appsToday: e.appReleasesByDay[s],
                   firstTimestamp: e.todayTimestamp,
+                  maxGames: t,
+                  setMaxGames: a,
                 }),
               ),
             );
       }
       function Ce(e) {
-        const [t, a] = r.useState(!1),
-          s = new Date(1e3 * e.timestamp).toLocaleDateString(void 0, {
+        const t = new Date(1e3 * e.timestamp).toLocaleDateString(void 0, {
             month: "long",
             day: "numeric",
           }),
-          n = new Date();
-        n.setHours(0, 0, 0, 0);
-        const i = Math.floor(n.getTime() / 1e3) == e.timestamp,
-          o = e.appsToday?.filter((e) => e.wishlisted).length,
-          l = Math.max(t ? 99999 : 3, o);
+          a = new Date();
+        a.setHours(0, 0, 0, 0);
+        const s = Math.floor(a.getTime() / 1e3) == e.timestamp,
+          n = e.appsToday?.filter((e) => e.wishlisted).length,
+          i = Math.max(e.maxGames, n),
+          o = i == e.appsToday?.length;
         return r.createElement(
           "div",
           {
             className: (0, _e.A)(
               Se.Day,
-              i && Se.Today,
+              s && Se.Today,
               e.timestamp < e.firstTimestamp && Se.Blank,
             ),
           },
-          r.createElement("div", { className: Se.DateHeader }, s),
+          r.createElement("div", { className: Se.DateHeader }, t),
           r.createElement(
             "div",
             { className: Se.GameList },
             e.appsToday
-              ?.slice(0, l)
+              ?.slice(0, i)
               .map((e) =>
                 r.createElement(
                   "div",
@@ -4859,12 +4862,15 @@
                 ),
               ),
           ),
-          !t &&
-            l < e.appsToday?.length &&
+          !o &&
+            i < e.appsToday?.length &&
             r.createElement(
               "div",
-              { className: Se.ShowMoreTextButton, onClick: () => a(!0) },
-              (0, ge.we)("#PersonalCalendar_ShowMore", e.appsToday.length - l),
+              {
+                className: Se.ShowMoreTextButton,
+                onClick: () => e.setMaxGames(e.appsToday.length),
+              },
+              (0, ge.we)("#PersonalCalendar_ShowMore", e.appsToday.length - i),
             ),
         );
       }
@@ -4876,7 +4882,15 @@
           [l, c] = r.useState(""),
           [m, p] = r.useState(""),
           [d, u] = r.useState(void 0),
-          h = a?.flat() ?? [];
+          [h, _] = r.useState([]),
+          g = a?.flat() ?? [],
+          S = r.useMemo(
+            () =>
+              Object.entries(n ?? {})
+                .map(([e, t]) => ({ tagID: Number(e), tagName: t }))
+                .sort((e, t) => h.indexOf(t.tagID) - h.indexOf(e.tagID)),
+            [n, h],
+          );
         if (
           (r.useEffect(() => {
             (async () => {
@@ -4890,7 +4904,8 @@
                 );
                 t(e.data.appReleasesByDay),
                   s(e.data.dayWeekTimestamps),
-                  u(e.data.resultCount);
+                  u(e.data.resultCount),
+                  _(e.data.userTags);
               } catch (e) {
                 console.error("Error fetching data", e);
               }
@@ -4899,20 +4914,20 @@
           !e)
         )
           return null;
-        const _ = new Date();
-        _.setHours(0, 0, 0, 0);
-        const g = Math.floor(_.getTime() / 1e3),
-          S = new Date();
-        S.setDate(S.getDate() - 7);
-        const E = Math.floor(S.getTime() / 1e3);
-        let y = [],
-          C = [];
-        for (const t of h)
-          t <= g &&
-            (t < E ? y.push(...(e?.[t] ?? [])) : C.push(...(e?.[t] ?? [])));
+        const E = new Date();
+        E.setHours(0, 0, 0, 0);
+        const y = Math.floor(E.getTime() / 1e3),
+          C = new Date();
+        C.setDate(C.getDate() - 7);
+        const v = Math.floor(C.getTime() / 1e3);
+        let b = [],
+          I = [];
+        for (const t of g)
+          t <= y &&
+            (t < v ? b.push(...(e?.[t] ?? [])) : I.push(...(e?.[t] ?? [])));
         if (
-          (y.sort((e, t) => e.rank - t.rank),
-          C.sort((e, t) => e.rank - t.rank),
+          (b.sort((e, t) => e.rank - t.rank),
+          I.sort((e, t) => e.rank - t.rank),
           !fe.iA.logged_in)
         )
           return r.createElement(
@@ -4939,15 +4954,17 @@
               ),
             ),
           );
-        let v = [],
-          b = new Map();
+        let w = [],
+          N = new Map();
         if (n) {
-          v.push(
-            ...Object.values(n)
-              .filter((e) => e.toLowerCase().startsWith(l.toLowerCase()))
+          w.push(
+            ...S.filter((e) =>
+              e.tagName.toLowerCase().startsWith(l.toLowerCase()),
+            )
+              .map((e) => e.tagName)
               .slice(0, 20),
           );
-          for (const [e, t] of Object.entries(n)) b.set(t, parseInt(e));
+          for (const [e, t] of Object.entries(n)) N.set(t, parseInt(e));
         }
         return r.createElement(
           he.Ay,
@@ -4991,10 +5008,10 @@
                       (0, ge.we)("#PersonalCalendar_TagSelector"),
                     ),
                     r.createElement(ie, {
-                      suggestions: v,
+                      suggestions: w,
                       onSuggestionSelected: (e) =>
                         ((e) => {
-                          o(b.get(e) ?? 0);
+                          o(N.get(e) ?? 0);
                         })(e),
                       value: l,
                       onTextChange: (e) =>
@@ -5032,7 +5049,7 @@
                   r.createElement(
                     "div",
                     { className: (0, _e.A)(Se.GameList, Se.Month) },
-                    y
+                    b
                       .slice(0, 16)
                       .map((e) =>
                         r.createElement(
@@ -5057,7 +5074,7 @@
                   r.createElement(
                     "div",
                     { className: (0, _e.A)(Se.GameList, Se.Week) },
-                    C.slice(0, 10).map((e) =>
+                    I.slice(0, 10).map((e) =>
                       r.createElement(
                         "div",
                         { key: e.appid, className: Se.AppEntry },
@@ -5097,7 +5114,7 @@
                       key: `Week_${a}`,
                       dayTimestamps: t,
                       appReleasesByDay: e,
-                      todayTimestamp: g,
+                      todayTimestamp: y,
                     }),
                   ),
                 ),

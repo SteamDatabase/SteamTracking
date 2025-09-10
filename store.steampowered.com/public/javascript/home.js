@@ -1356,7 +1356,12 @@ GHomepage = {
 							var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 							var reviewSummary = pref != 1 ? rgData['review_summary_filtered'] : rgData['review_summary'];
 							var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-html": reviewSummary['sReviewScoreTooltip'] } );
-							$elReviewData.append( $J('<div>', {'class': 'title'}).text( rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall user reviews:') );
+							var reviewSummaryText = rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall user reviews:';
+							if ( reviewSummary['bLanguageOutlier'] && pref != 0 )
+							{
+								reviewSummaryText = 'English Reviews:';
+							}
+							$elReviewData.append( $J('<div>', {'class': 'title'}).text( reviewSummaryText ) );
 							$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
 							if ( reviewSummary['reviewScore'] > 0 )
 							{

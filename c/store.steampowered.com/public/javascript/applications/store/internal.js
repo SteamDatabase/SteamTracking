@@ -5577,6 +5577,7 @@
         );
       }
       function _(_) {
+        const [_, __webpack_require__] = _.useState(3);
         return _.todayTimestamp > Math.max(..._.dayTimestamps)
           ? null
           : _.createElement(
@@ -5590,21 +5591,24 @@
                   timestamp: _,
                   appsToday: _.appReleasesByDay[_],
                   firstTimestamp: _.todayTimestamp,
+                  maxGames: _,
+                  setMaxGames: __webpack_require__,
                 }),
               ),
             );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
-          _ = new Date(1e3 * _.timestamp).toLocaleDateString(void 0, {
+        const _ = new Date(1e3 * _.timestamp).toLocaleDateString(void 0, {
             month: "long",
             day: "numeric",
           }),
           _ = new Date();
-        _.setHours(0, 0, 0, 0);
-        const _ = Math.floor(_.getTime() / 1e3) == _.timestamp,
+        __webpack_require__.setHours(0, 0, 0, 0);
+        const _ =
+            Math.floor(__webpack_require__.getTime() / 1e3) == _.timestamp,
           _ = _.appsToday?.filter((_) => _.wishlisted).length,
-          _ = Math.max(_ ? 99999 : 3, _);
+          _ = Math.max(_.maxGames, _),
+          _ = _ == _.appsToday?.length;
         return _.createElement(
           "div",
           {
@@ -5649,7 +5653,7 @@
               "div",
               {
                 className: _.ShowMoreTextButton,
-                onClick: () => __webpack_require__(!0),
+                onClick: () => _.setMaxGames(_.appsToday.length),
               },
               (0, _._)("#PersonalCalendar_ShowMore", _.appsToday.length - _),
             ),
@@ -5663,7 +5667,18 @@
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(void 0),
-          _ = __webpack_require__?.flat() ?? [];
+          [_, _] = _.useState([]),
+          _ = __webpack_require__?.flat() ?? [],
+          _ = _.useMemo(
+            () =>
+              Object.entries(_ ?? {})
+                .map(([_, _]) => ({
+                  tagID: Number(_),
+                  tagName: _,
+                }))
+                .sort((_, _) => _.indexOf(_.tagID) - _.indexOf(_.tagID)),
+            [_, _],
+          );
         if (
           (_.useEffect(() => {
             (async () => {
@@ -5684,7 +5699,8 @@
                 );
                 _(_.data.appReleasesByDay),
                   _(_.data.dayWeekTimestamps),
-                  _(_.data.resultCount);
+                  _(_.data.resultCount),
+                  _(_.data.userTags);
               } catch (_) {
                 console.error("Error fetching data", _);
               }
@@ -5743,8 +5759,10 @@
           _ = new Map();
         if (_) {
           _.push(
-            ...Object.values(_)
-              .filter((_) => _.toLowerCase().startsWith(_.toLowerCase()))
+            ..._.filter((_) =>
+              _.tagName.toLowerCase().startsWith(_.toLowerCase()),
+            )
+              .map((_) => _.tagName)
               .slice(0, 20),
           );
           for (const [_, _] of Object.entries(_)) _.set(_, parseInt(_));

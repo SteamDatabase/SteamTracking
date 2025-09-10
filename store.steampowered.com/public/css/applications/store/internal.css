@@ -2058,7 +2058,7 @@ a:link {
   flex-grow: 1;
   flex-basis: 1px;
   margin-bottom: 8px;
-  align-items: center;
+  min-height: 240px;
   background-color: #101a27;
 }
 ._14ZKl5pFBqLi_U0LVFjkz4._3UiDT-YpyntdDox1_Ccld6 {
@@ -2071,6 +2071,7 @@ a:link {
 ._14ZKl5pFBqLi_U0LVFjkz4.rChGJxkm3sNTTmDYe7KMW ._1i3Li2VsTuM5vu7R9eWJ2F {
   background: #bfdef7;
   color: #000;
+  font-weight: bold;
 }
 ._14ZKl5pFBqLi_U0LVFjkz4 ._1i3Li2VsTuM5vu7R9eWJ2F {
   background: linear-gradient(90deg, #000000, #151f2f);
