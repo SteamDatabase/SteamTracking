@@ -170,6 +170,8 @@
         ExtraAssetImgTag: "_2JQ4QGd4mIBR58A-9bDHdq",
         ExtraAssetError: "_4aB4b9buM8DFxojRymZ_5",
         ExtraAssetImg: "_1W2-3_i4cuGzBmocT-ZAk5",
+        Selected: "QRTy6qng-IEOMiXMxwVtY",
+        "extra-asset-blink": "_2D6wlj_wFTjjLOi2f7N1tq",
         InDeprecatedLink: "sakeS4kMEd2FGp4Da4Xrt",
         ExtraAssetControlsContainer: "_3-tWPanUj6QJND7dPTlrgc",
         ExtraAssetControls: "_3LTnCSzSad_SJbC1nruDT8",
@@ -188,7 +190,6 @@
         ExtraAssetsPageList: "_39FaN2oioTXV-lkAOG0jfE",
         ExtraAssetsChooser: "_12hVxV1z_asvDHFqo9ScMk",
         ExtraAssetChoice: "_13xCWTST4J-cgOyz6kwfIJ",
-        Selected: "QRTy6qng-IEOMiXMxwVtY",
         ExtraAssetStack: "doWjXy-F7LwBxlzCUBAGC",
         AltTextBtn: "_1JdiJTPLBYcAxWzLqjYV5P",
         StackedImageCtn: "_3gElE6VZJ9uU4-RaFC8Ra8",
@@ -1085,58 +1086,60 @@
             allowAnimations: p,
             mapValues: _,
             fnUpdateDocument: g,
+            selected: E,
           } = e,
-          [E, C] = (0, o.OP)(),
-          [f, S, k] = (0, l.uD)(),
-          y = (0, u.FD)(),
-          w = d.useCallback(() => {
-            r(), k();
-          }, [r, k]),
-          P = d.useMemo(
-            () => y.find((e) => (0, c.q3)(e).toLowerCase() === t.toLowerCase()),
-            [t, y],
+          [C, f] = (0, o.OP)(),
+          [S, k, y] = (0, l.uD)(),
+          w = (0, u.FD)(),
+          P = d.useCallback(() => {
+            r(), y();
+          }, [r, y]),
+          T = d.useMemo(
+            () => w.find((e) => (0, c.q3)(e).toLowerCase() === t.toLowerCase()),
+            [t, w],
           ),
-          T = P ? (0, c.q3)(P) : null,
-          { elLocalizedImageGroupDialog: N, elLocalizedImageGroupControl: x } =
-            B(P, m, r),
-          L = (0, i.Un)(),
-          R = (e) => {
+          N = T ? (0, c.q3)(T) : null,
+          { elLocalizedImageGroupDialog: x, elLocalizedImageGroupControl: L } =
+            B(T, m, r),
+          R = (0, i.Un)(),
+          O = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           };
-        let O;
-        if (P) {
-          const e = (0, c.IP)(P, p, m);
+        let G;
+        if (T) {
+          const e = (0, c.IP)(T, p, m);
           if (e) {
-            const t = (0, c.Bv)(P, m);
-            O =
+            const t = (0, c.Bv)(T, m),
+              n = (0, v.A)(I.ExtraAssetImg, E && I.Selected);
+            G =
               1 == e.usage
                 ? d.createElement("video", {
-                    key: T,
-                    className: I.ExtraAssetImg,
-                    src: (0, i.cn)(e.url, L),
-                    title: T,
+                    key: N,
+                    className: n,
+                    src: (0, i.cn)(e.url, R),
+                    title: N,
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
                     autoPlay: !0,
-                    onClick: R,
+                    onClick: O,
                   })
                 : d.createElement("img", {
-                    key: T,
-                    className: I.ExtraAssetImg,
-                    src: (0, i.cn)(e.url, L),
+                    key: N,
+                    className: n,
+                    src: (0, i.cn)(e.url, R),
                     alt: t,
-                    title: T,
+                    title: N,
                   });
           } else
-            O = d.createElement(
+            G = d.createElement(
               "span",
               { className: I.ExtraAssetError },
               (0, D.we)("#StoreAdmin_GameDescription_MissingImageLanguage", t),
             );
         } else
-          O = d.createElement(
+          G = d.createElement(
             "span",
             { className: I.ExtraAssetError },
             (0, D.we)("#StoreAdmin_GameDescription_MissingImage", t),
@@ -1144,45 +1147,45 @@
         return d.createElement(
           d.Fragment,
           null,
-          f &&
+          S &&
             d.createElement(F, {
-              editAsset: T,
+              editAsset: N,
               bReplace: !0,
               onAssetSelected: (e, t) => {
                 if (t) {
                   const t = new Map();
                   for (const [n, a] of _) {
-                    const r = new RegExp(`${T}(?!\\w)`, "g"),
+                    const r = new RegExp(`${N}(?!\\w)`, "g"),
                       o = a.Value.replace(r, `${e}`);
                     t.set(n, o);
                   }
                   g(t);
                 } else a({ src: e });
               },
-              hideModal: w,
+              hideModal: P,
             }),
-          N,
+          x,
           d.createElement(
             "span",
             {
               className: (0, v.A)(
                 I.ExtraAssetImgTag,
                 I.ExtraAssetControlsContainer,
-                E && I.Hovered,
+                C && I.Hovered,
                 n && I.InDeprecatedLink,
               ),
-              ...C,
+              ...f,
               title: "",
             },
             n && d.createElement(M, null),
             d.createElement(
               "span",
               { className: I.ExtraAssetControls },
-              x,
+              L,
               d.createElement(
                 b.ff,
                 {
-                  onClick: S,
+                  onClick: k,
                   tooltip: (0, D.we)(
                     "#StoreAdmin_GameDescription_ReplaceImage",
                   ),
@@ -1198,7 +1201,7 @@
                 d.createElement(A.X, null),
               ),
             ),
-            O,
+            G,
           ),
         );
       }

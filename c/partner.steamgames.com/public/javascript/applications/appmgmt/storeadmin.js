@@ -170,6 +170,8 @@
         ExtraAssetImgTag: "_2JQ4QGd4mIBR58A-9bDHdq",
         ExtraAssetError: "_4aB4b9buM8DFxojRymZ_5",
         ExtraAssetImg: "_1W2-3_i4cuGzBmocT-ZAk5",
+        Selected: "QRTy6qng-IEOMiXMxwVtY",
+        "extra-asset-blink": "_2D6wlj_wFTjjLOi2f7N1tq",
         InDeprecatedLink: "sakeS4kMEd2FGp4Da4Xrt",
         ExtraAssetControlsContainer: "_3-tWPanUj6QJND7dPTlrgc",
         ExtraAssetControls: "_3LTnCSzSad_SJbC1nruDT8",
@@ -188,7 +190,6 @@
         ExtraAssetsPageList: "_39FaN2oioTXV-lkAOG0jfE",
         ExtraAssetsChooser: "_12hVxV1z_asvDHFqo9ScMk",
         ExtraAssetChoice: "_13xCWTST4J-cgOyz6kwfIJ",
-        Selected: "QRTy6qng-IEOMiXMxwVtY",
         ExtraAssetStack: "doWjXy-F7LwBxlzCUBAGC",
         AltTextBtn: "_1JdiJTPLBYcAxWzLqjYV5P",
         StackedImageCtn: "_3gElE6VZJ9uU4-RaFC8Ra8",
@@ -1160,6 +1161,7 @@
             allowAnimations: _,
             mapValues: _,
             fnUpdateDocument: _,
+            selected: _,
           } = _,
           [_, _] = (0, _._)(),
           [_, _, _] = (0, _._)(),
@@ -1183,12 +1185,13 @@
         if (_) {
           const _ = (0, _._)(_, _, _);
           if (_) {
-            const _ = (0, _._)(_, _);
+            const _ = (0, _._)(_, _),
+              _ = (0, _._)(_.ExtraAssetImg, _ && _.Selected);
             _ =
               1 == _.usage
                 ? _.createElement("video", {
                     key: _,
-                    className: _.ExtraAssetImg,
+                    className: _,
                     src: (0, _._)(_.url, _),
                     title: _,
                     muted: !0,
@@ -1199,7 +1202,7 @@
                   })
                 : _.createElement("img", {
                     key: _,
-                    className: _.ExtraAssetImg,
+                    className: _,
                     src: (0, _._)(_.url, _),
                     alt: _,
                     title: _,
@@ -1230,10 +1233,10 @@
               onAssetSelected: (_, _) => {
                 if (_) {
                   const _ = new Map();
-                  for (const [__webpack_require__, _] of _) {
+                  for (const [_, _] of _) {
                     const _ = new RegExp(`${_}(?!\\w)`, "g"),
                       _ = _.Value.replace(_, `${_}`);
-                    _.set(__webpack_require__, _);
+                    _.set(_, _);
                   }
                   _(_);
                 } else
@@ -1251,12 +1254,12 @@
                 _.ExtraAssetImgTag,
                 _.ExtraAssetControlsContainer,
                 _ && _.Hovered,
-                __webpack_require__ && _.InDeprecatedLink,
+                _ && _.InDeprecatedLink,
               ),
               ..._,
               title: "",
             },
-            __webpack_require__ && _.createElement(_, null),
+            _ && _.createElement(_, null),
             _.createElement(
               "span",
               {
