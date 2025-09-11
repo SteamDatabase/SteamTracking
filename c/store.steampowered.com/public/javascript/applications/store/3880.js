@@ -102,7 +102,7 @@
 	"ItemFlag_OnWishlist": "찜 목록에 있음",
 	"ItemFlag_InCart": "장바구니에 있음",
 	"ItemFlag_Ignored": "제외로 지정함",
-	"ItemFlag_ExcludedByPreferences": "환경 설정에 따라 제외"
+	"ItemFlag_ExcludedByPreferences": "환경 설정에 따라 제외함"
 }`);
     },
   },

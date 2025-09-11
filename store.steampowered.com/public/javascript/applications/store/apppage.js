@@ -3573,33 +3573,42 @@
           g = (0, r.useCallback)(() => {
             h(), o();
           }, [h, o]),
-          _ = (0, r.useRef)(void 0),
-          [E, v] = (0, r.useState)(!1),
-          y = Oe(E, v, _),
-          C = m
+          _ = (0, r.useCallback)(
+            (e) => {
+              t.IsPaused() ||
+                e.currentTarget != e.target ||
+                t.TogglePlayPause();
+            },
+            [t],
+          ),
+          E = (0, r.useRef)(void 0),
+          [v, y] = (0, r.useState)(!1),
+          C = Oe(v, y, E),
+          w = m
             ? "#TrailerPlayer_Unmute_Tooltip"
             : "#TrailerPlayer_Mute_Tooltip",
-          w = i
+          b = i
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
-          b = (0, U.A)(Wt().ControlGroup, l && Wt().ShowControls);
+          S = (0, U.A)(Wt().ControlGroup, l && Wt().ShowControls);
         return r.createElement(
           Ve.Provider,
-          { value: y },
+          { value: C },
           r.createElement(
             s.Z,
             {
               className: Wt().PlayerControls,
               focusable: !0,
-              onActivate: u,
-              onOKActionDescription: (0, f.we)(w),
+              onClick: _,
+              onOKActionDescription: (0, f.we)(b),
+              onOKButton: u,
               onSecondaryButton: g,
-              onSecondaryActionDescription: (0, f.we)(C),
+              onSecondaryActionDescription: (0, f.we)(w),
               onButtonDown: c,
             },
             r.createElement(
               "div",
-              { className: b },
+              { className: S },
               r.createElement(Kt, null),
               r.createElement(
                 "div",
@@ -3628,7 +3637,7 @@
               category: n,
               title: a,
             }),
-            r.createElement("div", { ref: _, className: Wt().MenuLayer }),
+            r.createElement("div", { ref: E, className: Wt().MenuLayer }),
           ),
         );
       }

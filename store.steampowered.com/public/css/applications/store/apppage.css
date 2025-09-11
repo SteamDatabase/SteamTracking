@@ -1109,6 +1109,7 @@
   left: 0;
   opacity: 0;
   transition: opacity 250ms ease-in-out;
+  pointer-events: none;
 }
 ._3rbHwY_FOcAwhfb8gTwQET._3ysE_txkWJmWE_dMgvhGEs {
   opacity: 1;
@@ -1116,7 +1117,7 @@
 ._3rbHwY_FOcAwhfb8gTwQET * {
   pointer-events: none;
 }
-._3rbHwY_FOcAwhfb8gTwQET._3ysE_txkWJmWE_dMgvhGEs {
+._3rbHwY_FOcAwhfb8gTwQET._3ysE_txkWJmWE_dMgvhGEs * {
   pointer-events: auto;
 }
 ._3-16p-ITDbqTqIQ-NkXk0q {

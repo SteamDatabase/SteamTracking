@@ -4157,6 +4157,14 @@
           _ = (0, _.useCallback)(() => {
             _(), _();
           }, [_, _]),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.IsPaused() ||
+                _.currentTarget != _.target ||
+                _.TogglePlayPause();
+            },
+            [_],
+          ),
           _ = (0, _.useRef)(void 0),
           [_, _] = (0, _.useState)(!1),
           _ = _(_, _, _),
@@ -4177,8 +4185,9 @@
             {
               className: _().PlayerControls,
               focusable: !0,
-              onActivate: _,
+              onClick: _,
               onOKActionDescription: (0, _._)(_),
+              onOKButton: _,
               onSecondaryButton: _,
               onSecondaryActionDescription: (0, _._)(_),
               onButtonDown: _,
