@@ -2733,6 +2733,7 @@ html.tablet ._3ADDqqKx55ugBLEOJm6pqJ {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 5;
   width: 30px;
   cursor: pointer;
   user-select: none;
