@@ -3268,7 +3268,8 @@
               _ = _.useCallback(
                 (_) => {
                   (_.current = _.currentTarget),
-                    _.current.setPointerCapture(_.pointerId);
+                    _.current.setPointerCapture(_.pointerId),
+                    (document.body.style.userSelect = "none");
                   let _ = _.current.getBoundingClientRect(),
                     _ = _(_, _, _.clientX);
                   _(_),
@@ -3283,17 +3284,10 @@
               _ = _.useCallback(
                 (_) => {
                   _.current &&
-                    (_.current.releasePointerCapture(_.pointerId),
-                    (_.current = null),
+                    ((_.current = null),
+                    (document.body.style.userSelect = ""),
                     _.current || _(null),
                     _ && _(null));
-                },
-                [_, _, _, _],
-              ),
-              _ = _.useCallback(
-                (_) => {
-                  _.current &&
-                    ((_.current = null), _.current || _(null), _ && _(null));
                 },
                 [_, _, _, _],
               );
@@ -3303,7 +3297,6 @@
                 onPointerMove: _,
                 onPointerLeave: _,
                 onPointerDown: _,
-                onPointerUp: _,
                 onLostPointerCapture: _,
               },
               __webpack_require__,
@@ -3345,7 +3338,6 @@
             onPointerMove: _.onPointerMove,
             onPointerLeave: _.onPointerLeave,
             onPointerDown: _.onPointerDown,
-            onPointerUp: _.onPointerUp,
             onLostPointerCapture: _.onLostPointerCapture,
           },
           _.createElement(
@@ -7320,18 +7312,16 @@
                       _(_);
                   },
                   _ = (_) => {
-                    (_ = null),
-                      (document.body.style.userSelect = ""),
-                      _.releasePointerCapture(_.pointerId);
+                    (_ = null), (document.body.style.userSelect = "");
                   };
                 return (
                   _.addEventListener("pointerdown", _),
                   _.addEventListener("pointermove", _),
-                  _.addEventListener("pointerup", _),
+                  _.addEventListener("lostpointercapture", _),
                   () => {
                     _.removeEventListener("pointerdown", _),
                       _.removeEventListener("pointermove", _),
-                      _.removeEventListener("pointerup", _);
+                      _.removeEventListener("lostpointercapture", _);
                   }
                 );
               }, []);

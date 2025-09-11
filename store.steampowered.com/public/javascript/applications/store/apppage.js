@@ -2897,7 +2897,8 @@
               u = r.useCallback(
                 (n) => {
                   (o.current = n.currentTarget),
-                    o.current.setPointerCapture(n.pointerId);
+                    o.current.setPointerCapture(n.pointerId),
+                    (document.body.style.userSelect = "none");
                   let r = o.current.getBoundingClientRect(),
                     l = vt(e, r, n.clientX);
                   a(l),
@@ -2912,17 +2913,10 @@
               m = r.useCallback(
                 (e) => {
                   o.current &&
-                    (o.current.releasePointerCapture(e.pointerId),
-                    (o.current = null),
+                    ((o.current = null),
+                    (document.body.style.userSelect = ""),
                     l.current || a(null),
                     t && t(null));
-                },
-                [o, l, t, a],
-              ),
-              d = r.useCallback(
-                (e) => {
-                  o.current &&
-                    ((o.current = null), l.current || a(null), t && t(null));
                 },
                 [o, l, t, a],
               );
@@ -2932,8 +2926,7 @@
                 onPointerMove: s,
                 onPointerLeave: c,
                 onPointerDown: u,
-                onPointerUp: m,
-                onLostPointerCapture: d,
+                onLostPointerCapture: m,
               },
               n,
             ];
@@ -2968,7 +2961,6 @@
             onPointerMove: c.onPointerMove,
             onPointerLeave: c.onPointerLeave,
             onPointerDown: c.onPointerDown,
-            onPointerUp: c.onPointerUp,
             onLostPointerCapture: c.onLostPointerCapture,
           },
           r.createElement(
@@ -6024,18 +6016,16 @@
                       i(t);
                   },
                   c = (e) => {
-                    (o = null),
-                      (document.body.style.userSelect = ""),
-                      r.releasePointerCapture(e.pointerId);
+                    (o = null), (document.body.style.userSelect = "");
                   };
                 return (
                   r.addEventListener("pointerdown", s),
                   r.addEventListener("pointermove", i),
-                  r.addEventListener("pointerup", c),
+                  r.addEventListener("lostpointercapture", c),
                   () => {
                     r.removeEventListener("pointerdown", s),
                       r.removeEventListener("pointermove", i),
-                      r.removeEventListener("pointerup", c);
+                      r.removeEventListener("lostpointercapture", c);
                   }
                 );
               }, []);
