@@ -24235,7 +24235,8 @@
               _ = _?.tourney.dire_team_id;
           }
           const _ = _._.Get().GetTeamNames(_),
-            _ = _ ? _()(1e3 * _.start_time).format("LT") : "";
+            _ = _ ? _()(1e3 * _.start_time).format("LT") : "",
+            _ = _ && _.duration > 3600 ? "h:mm:ss" : "mm:ss";
           return _.createElement(
             "div",
             {
@@ -24360,10 +24361,9 @@
                     className: _().Duration,
                   },
                   _ &&
-                    _.createElement(_(), {
-                      date: 1e3 * _.duration,
-                      format: "mm:ss",
-                    }),
+                    _()
+                      .utc(_().duration(_.duration, "seconds").asMilliseconds())
+                      .format(_),
                 ),
             ),
             _.createElement(
@@ -46595,7 +46595,13 @@
               if (16 === _) _ = _ < _._.length ? _._[_].strLabel : "";
               break;
             case _._.BRACKET_DOUBLE_ALL_WINNER:
-              if (4 === _) _ = _ < _._.length ? _._[_].strLabel : "";
+              switch (_) {
+                case 4:
+                  _ = _ < _._.length ? _._[_].strLabel : "";
+                  break;
+                case 8:
+                  _ = _ < _._.length ? _._[_].strLabel : "";
+              }
           }
           return _ && (_ += "_abbrev"), _;
         }
