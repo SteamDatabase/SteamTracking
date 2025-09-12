@@ -216,7 +216,7 @@
     "OptIn_EmailSection_cancel_Title": "Change of plans?",
     "OptIn_EmailSection_cancel_Body": "You can cancel your registration for %1$s right up until %2$s. See the registration link below to modify or cancel your registration.",
     "OptIn_EmailSection_notreadydemo_Title": "Demo not ready?",
-    "OptIn_EmailSection_notreadydemo_Body": "If you need to opt-out, please cancel your registration by %1$s so your game remains eligible to participate in a future edition. Details for the %2$s edition will be announced soon.",
+    "OptIn_EmailSection_notreadydemo_Body": "If you need to opt-out, please cancel your registration by %1$s so your game remains eligible to participate in a future edition. The next edition will be %2$s.",
     "OptIn_EmailSection_reviewcategories_Title": "Review your game's categorization",
     "OptIn_EmailSection_reviewcategories_Desc": "The %1$s for this event is now available. This preview is accessible only to Steam accounts with management permission for one or more games that are registered for the event.",
     "OptIn_EmailSection_reviewcategories_DescLinkText": "developer preview page",

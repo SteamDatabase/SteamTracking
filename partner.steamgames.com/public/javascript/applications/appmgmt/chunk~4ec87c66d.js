@@ -29950,7 +29950,7 @@
                   n.createElement(
                     "div",
                     { className: Fn().SectionBody },
-                    "Your game’s trailer is among the finalists that we are selecting from to build the official Steam Next Fest June Edition trailer. Our goal is to select a variety of trailers that represent the diverse genres, themes, and scopes of games present within Next Fest, so we’re still fine-tuning the selection of games for the final trailer.",
+                    "Your game’s trailer is among the finalists that we are selecting from to build the official Steam Next Fest trailer. Our goal is to select a variety of trailers that represent the diverse genres, themes, and scopes of games present within Next Fest, so we’re still fine-tuning the selection of games for the final trailer.",
                   ),
                   n.createElement(
                     "div",
