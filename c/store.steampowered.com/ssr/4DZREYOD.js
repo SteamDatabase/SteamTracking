@@ -1,59 +1,59 @@
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -8222,7 +8222,7 @@ function _(_) {
     _;
   if (_?.review_count)
     if (_.summary_language_specific) {
-      let _ = _("#Language_" + _.LANGUAGE);
+      let _ = _.Localize(`#Language_${_.LANGUAGE}`);
       _ = _.Localize(
         "#review_summary_reviewrate_language_specific",
         _.percent_positive,
@@ -8304,7 +8304,7 @@ function _(_) {
       _.data?.preferences?.review_score_preference == 2) &&
     _.summary_language_specific
   ) {
-    let _ = _("#Language_" + _.LANGUAGE);
+    let _ = _.Localize(`#Language_${_.LANGUAGE}`);
     _ = _.Localize("#wishlist_item_languagespecific_reviews", _);
   } else _ = _.Localize("#wishlist_item_overallreviews");
   return (0, _.jsxs)(_.Fragment, {

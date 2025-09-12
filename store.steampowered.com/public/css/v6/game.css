@@ -6674,14 +6674,20 @@ a.open_in_steam_body:hover {
 }
 
 .widestore #game_highlights .rightcol {
-    width: 375px;
-    margin-left: 0px;
+	width: 375px;
+	margin-left: 0px;
 	float: unset;
+	flex-grow: 0;
+	flex-shrink: 0;
 }
 
 .widestore #game_highlights .leftcol {
-	width: 824px;
+	max-width: 824px;
+	min-width: 0;
+	width: auto;
 	float: unset;
+	flex-grow: 1;
+	flex-shrink: 1;
 }
 
 .widestore .glance_ctn {

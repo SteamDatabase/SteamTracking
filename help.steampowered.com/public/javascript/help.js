@@ -3349,6 +3349,28 @@ HelpRequestPage = {
 		).done( function() {
 		HelpRequestPage.CloseHelpRequest( reference_code );
 	});
+	},
+
+	ShowReopenHelp: function()
+	{
+		$J('#reopen_hint').hide();
+		$J('#reopen_container').show();
+	},
+
+	RequestReopen: function( reference_code )
+	{
+		$J.ajax( {
+			url: 'https://help.steampowered.com/wizard/AjaxReopenHelpRequest/' + reference_code,
+			type: 'POST',
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+				reference_code: reference_code,
+				help_request_page: 1
+			} )
+		} ).fail( function( jqxhr ) {
+			ShowAlertDialog( 'There was a problem reopening your help request.', 'Please try again. If this error persists, create a new help request so we can assist you.' );
+		} ).done( function( data ) {
+			window.location.reload();
+		} );
 	}
 };
 

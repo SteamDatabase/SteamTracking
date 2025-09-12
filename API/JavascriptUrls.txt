@@ -2621,6 +2621,7 @@ https://help.steampowered.com/wizard/AjaxMarkGiftRefundable/
 https://help.steampowered.com/wizard/AjaxPackagePurchaseReceipt/
 https://help.steampowered.com/wizard/AjaxRefundRequestConfirmation
 https://help.steampowered.com/wizard/AjaxRefundRequestForm
+https://help.steampowered.com/wizard/AjaxReopenHelpRequest/${reference_code}
 https://help.steampowered.com/wizard/AjaxSearchResults/
 https://help.steampowered.com/wizard/AjaxSendAccountRecoveryCode
 https://help.steampowered.com/wizard/AjaxSubmitRefundRequest/
