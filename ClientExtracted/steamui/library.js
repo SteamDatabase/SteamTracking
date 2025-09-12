@@ -1,4 +1,4 @@
-var CLSTAMP = "10053847";
+var CLSTAMP = "10062881";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11137,9 +11137,9 @@ var CLSTAMP = "10053847";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 9 2025 : 12:28:25",
-                BUILD_TIME_UTC: "Sep 9 2025 : 19:28:25",
-                BUILD_RTIME_UTC: 1757446105,
+                BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
+                BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
+                BUILD_RTIME_UTC: 1757634428,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -22683,6 +22683,7 @@ var CLSTAMP = "10053847";
           m_mapFallbackTokens = new Map();
           m_cbkTokensChanged = new l.lu();
           m_rgLocalesToUse;
+          m_bReportIndividualMissingTokens = !0;
           static sm_ErrorReportingStore;
           static InstallErrorReportingStore(e) {
             this.sm_ErrorReportingStore = e;
@@ -22709,11 +22710,12 @@ var CLSTAMP = "10053847";
                 }
             return t;
           }
-          InitFromObjects(e, t, n, r, i) {
-            i || this.m_mapTokens.clear();
-            const s = { ...(n || {}), ...e },
-              o = { ...(r || {}), ...(t || {}) };
-            this.AddTokens(s, o), this.m_cbkTokensChanged.Dispatch();
+          InitFromObjects(e, t, n, r, i, s) {
+            s && (this.m_bReportIndividualMissingTokens = !1),
+              i || this.m_mapTokens.clear();
+            const o = { ...(n || {}), ...e },
+              a = { ...(r || {}), ...(t || {}) };
+            this.AddTokens(o, a), this.m_cbkTokensChanged.Dispatch();
           }
           InitDirect(e, t) {
             this.m_mapTokens.clear(),
@@ -22777,9 +22779,10 @@ var CLSTAMP = "10053847";
               return;
             let r = this.m_mapTokens.get(e.substring(1));
             if (void 0 !== r) return r;
-            t ||
-              !m.sm_ErrorReportingStore ||
-              n ||
+            !t &&
+              m.sm_ErrorReportingStore &&
+              !n &&
+              this.m_bReportIndividualMissingTokens &&
               m.sm_ErrorReportingStore.ReportError(
                 new Error(
                   `Unable to find localization token '${e}' for language '${o.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
@@ -24637,9 +24640,9 @@ var CLSTAMP = "10053847";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 9 2025 : 12:28:25",
-                    BUILD_TIME_UTC: "Sep 9 2025 : 19:28:25",
-                    BUILD_RTIME_UTC: 1757446105,
+                    BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
+                    BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
+                    BUILD_RTIME_UTC: 1757634428,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25305,7 +25308,7 @@ var CLSTAMP = "10053847";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "851e8f317a5766ed655b",
+        9858: "e8dd7f8ab1ab23219782",
         9869: "8f4b26192400ffd85271",
         9887: "bed5ff195159170db38b",
       }[e]),

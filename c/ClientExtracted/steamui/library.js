@@ -12562,9 +12562,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 9 2025 : 12:28:25",
-                BUILD_TIME_UTC: "Sep 9 2025 : 19:28:25",
-                BUILD_RTIME_UTC: 1757446105,
+                BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
+                BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
+                BUILD_RTIME_UTC: 1757634428,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -24811,6 +24811,7 @@ var CLSTAMP = "steamdb";
           m_mapFallbackTokens = new Map();
           m_cbkTokensChanged = new _._();
           m_rgLocalesToUse;
+          m_bReportIndividualMissingTokens = !0;
           static sm_ErrorReportingStore;
           static InstallErrorReportingStore(_) {
             this.sm_ErrorReportingStore = _;
@@ -24837,8 +24838,9 @@ var CLSTAMP = "steamdb";
                 }
             return _;
           }
-          InitFromObjects(_, _, _, _, _) {
-            _ || this.m_mapTokens.clear();
+          InitFromObjects(_, _, _, _, _, _) {
+            _ && (this.m_bReportIndividualMissingTokens = !1),
+              _ || this.m_mapTokens.clear();
             const _ = {
                 ...(_ || {}),
                 ..._,
@@ -24911,9 +24913,10 @@ var CLSTAMP = "steamdb";
               return;
             let _ = this.m_mapTokens.get(_.substring(1));
             if (void 0 !== _) return _;
-            _ ||
-              !_.sm_ErrorReportingStore ||
-              _ ||
+            !_ &&
+              _.sm_ErrorReportingStore &&
+              !_ &&
+              this.m_bReportIndividualMissingTokens &&
               _.sm_ErrorReportingStore.ReportError(
                 new Error(
                   `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
@@ -26866,9 +26869,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 9 2025 : 12:28:25",
-                    BUILD_TIME_UTC: "Sep 9 2025 : 19:28:25",
-                    BUILD_RTIME_UTC: 1757446105,
+                    BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
+                    BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
+                    BUILD_RTIME_UTC: 1757634428,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27616,7 +27619,7 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9462: "77a210af3f848de941d1",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "851e8f317a5766ed655b",
+        9858: "e8dd7f8ab1ab23219782",
         9869: "8f4b26192400ffd85271",
         9887: "bed5ff195159170db38b",
       }[_]),

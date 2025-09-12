@@ -1902,6 +1902,8 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+03:55:42
+03:55:50
 08bX
 0?0L
 0A/8
@@ -2348,8 +2350,6 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
-19:31:13
-19:31:21
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -8549,7 +8549,7 @@ Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep  9 2025
+Sep 12 2025
 September
 Serbian
 Server
@@ -8746,7 +8746,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Sep  9 2025 19:31:21
+Startup - updater built Sep 12 2025 03:55:50
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
