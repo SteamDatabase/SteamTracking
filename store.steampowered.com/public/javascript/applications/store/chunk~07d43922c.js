@@ -11912,6 +11912,7 @@
               tabfilter: a?.store_filter || void 0,
               sectionid: t?.unique_id || void 0,
               sectionfilter: t?.store_filter || void 0,
+              origin: self.origin,
             };
             this.m_mapPromises.set(
               n,

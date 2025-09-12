@@ -13403,6 +13403,7 @@
               tabfilter: _?.store_filter || void 0,
               sectionid: _?.unique_id || void 0,
               sectionfilter: _?.store_filter || void 0,
+              origin: self.origin,
             };
             this.m_mapPromises.set(
               _,
