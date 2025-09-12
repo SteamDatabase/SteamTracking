@@ -530,10 +530,25 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const { rgApps: _, rgAppData: __webpack_require__, ..._ } = _,
+          _ = (0, _.useMemo)(
+            () =>
+              (0, _._)(_ || [], (_) => {
+                var _;
+                return null === (_ = (__webpack_require__ || {})[_]) ||
+                  void 0 === _
+                  ? void 0
+                  : _.name;
+              }),
+            [_, __webpack_require__],
+          );
         return _.createElement(_, {
           ..._,
+          rgApps: _,
+          rgAppData: __webpack_require__,
         });
       }
       function _(_) {
@@ -1088,6 +1103,130 @@
       function _(_) {
         const _ = _();
         return _[_] >= _[_];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = new Set([
+        "sc_schinese",
+        "schinese",
+        "tchinese",
+        "japanese",
+        "koreana",
+        "thai",
+        "arabic",
+        "bulgarian",
+        "czech",
+        "danish",
+        "german",
+        "english",
+        "spanish",
+        "latam",
+        "greek",
+        "french",
+        "italian",
+        "indonesian",
+        "hungarian",
+        "dutch",
+        "norwegian",
+        "polish",
+        "portuguese",
+        "brazilian",
+        "romanian",
+        "russian",
+        "finnish",
+        "swedish",
+        "turkish",
+        "vietnamese",
+        "ukrainian",
+      ]);
+      const _ = new Map([
+        ["en", "english"],
+        ["de", "german"],
+        ["fr", "french"],
+        ["it", "italian"],
+        ["ko", "koreana"],
+        ["es-419", "latam"],
+        ["es", "spanish"],
+        ["zh", "schinese"],
+        ["zh-cn", "schinese"],
+        ["zh-tw", "tchinese"],
+        ["ru", "russian"],
+        ["ar", "arabic"],
+        ["th", "thai"],
+        ["ja", "japanese"],
+        ["pt-br", "brazilian"],
+        ["pt", "portuguese"],
+        ["pl", "polish"],
+        ["da", "danish"],
+        ["nl", "dutch"],
+        ["fi", "finnish"],
+        ["nb", "norwegian"],
+        ["no", "norwegian"],
+        ["sv", "swedish"],
+        ["hu", "hungarian"],
+        ["cs", "czech"],
+        ["ro", "romanian"],
+        ["tr", "turkish"],
+        ["bg", "bulgarian"],
+        ["el", "greek"],
+        ["uk", "ukrainian"],
+        ["vn", "vietnamese"],
+        ["id", "indonesian"],
+      ]);
+      const _ = new Map();
+      for (const [module, module_exports] of _.entries())
+        _.set(module_exports, module);
+      _.set("sc_schinese", _.get("schinese")),
+        _.set("korean", _.get("koreana"));
+      function _() {
+        var _;
+        if (((_ = _._.LANGUAGE), !_.has(_)))
+          throw `unknown language ${_._.LANGUAGE}`;
+        return {
+          languages: [
+            {
+              strLanguage: _._.LANGUAGE,
+              strISOCode: _.get(_._.LANGUAGE),
+              eSource: 5,
+            },
+          ],
+        };
+      }
+      function _() {
+        return _().languages.map((_) => {
+          return 2 == (_ = _.strISOCode).length
+            ? `${_}-${_._.country_code}`
+            : _;
+          var _;
+        });
+      }
+      function _(_, _) {
+        const _ = _.map((_) => {
+            return {
+              item: _,
+              strSort:
+                ((_ = _ ? _(_) : _),
+                __webpack_require__
+                  .toLowerCase()
+                  .replace(/[^\p{L}\p{N}\p{Z}]/gu, "")
+                  .replace(/^(the |a |an )/, "")
+                  .trim()),
+            };
+            var _;
+          }),
+          _ = new Intl.Collator(_(), {
+            numeric: !0,
+          });
+        return (
+          __webpack_require__.sort((_, _) => _.compare(_.strSort, _.strSort)),
+          __webpack_require__.map(({ item: _ }) => _)
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3143,7 +3282,8 @@
           ..._,
         };
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = 10;
       function _(_) {
         return _.rgOptions.length >= _
@@ -3555,12 +3695,8 @@
         }
       }
       function _(_, _, _) {
-        const _ = Object.keys(_.tags || {}).map((_) => _(_.name, _, _.tags[_]));
-        if (_) _.sort(_);
-        else {
-          const _ = new Intl.Collator();
-          _.sort((_, _) => _.compare(_.strLabel, _.strLabel));
-        }
+        let _ = Object.keys(_.tags || {}).map((_) => _(_.name, _, _.tags[_]));
+        _ ? _.sort(_) : (_ = (0, _._)(_, (_) => _.strLabel));
         return {
           strLabel: _.localized_name,
           rgOptions: _,
@@ -4597,6 +4733,13 @@
           },
           {
             facet: "StickerCategory",
+            trigger: {
+              facet: "Type",
+              tag: "CSGO_Tool_Sticker",
+            },
+          },
+          {
+            facet: "TournamentTeam",
             trigger: {
               facet: "Type",
               tag: "CSGO_Tool_Sticker",
@@ -6149,15 +6292,11 @@
                     link: "",
                   }));
               }
-              const _ = new Intl.Collator();
-              return (
-                _.sort((_, _) => _.compare(_.name, _.name)),
-                {
-                  rgApps: _,
-                  mapAppIDs: _,
-                  facets: _,
-                }
-              );
+              return {
+                rgApps: (0, _._)(_, (_) => _.name),
+                mapAppIDs: _,
+                facets: _,
+              };
             },
           }),
           { facets: _ = {}, rgApps: _, mapAppIDs: _ } = _.data || {},
