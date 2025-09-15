@@ -80,6 +80,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = ["app_header_capsule", "app_main_capsule"],
         _ = [
@@ -105,8 +107,15 @@
           "marketingmessage_art_2_eventcapsule",
         ],
         _ = ["spotlight_art"],
-        _ = [..._, ..._, ..._, ..._, ..._, ..._, ..._],
-        _ = [1, 3, 2],
+        _ = [..._, ..._, ..._, ..._, ..._, ..._, ..._];
+      function _(_) {
+        return Array.isArray(_) ? _[0] : _;
+      }
+      function _(_) {
+        const _ = Array.isArray(_) ? _ : [_];
+        return Math.min(..._);
+      }
+      const _ = [1, 3, 2],
         _ = [1, 3],
         _ = [5, 4],
         _ = [7, 6],
@@ -220,8 +229,8 @@
             rgAcceptableTypes: _,
           },
           product_banner: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: _,
           },
           product_mobile_banner: {
@@ -230,8 +239,8 @@
             rgAcceptableTypes: _,
           },
           product_banner_override: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: _,
           },
           product_mobile_banner_override: {
@@ -393,18 +402,34 @@
             rgAcceptableTypes: _,
           },
         };
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         const _ = _[_];
-        return (
-          !!_ && !_.bDisableEnforceDimensions && _ === _.width && _ === _.height
-        );
+        if (!_) return !1;
+        if (_.bDisableEnforceDimensions) return _;
+        if (_ !== _.width || _ !== _.height) return !1;
+        let _ = null;
+        if (Array.isArray(_.width)) {
+          if (((_ = _.width.findIndex((_) => _ === _)), _ < 0)) return !1;
+        } else if (_ !== _.width) return !1;
+        if (Array.isArray(_.height)) {
+          let _ = _.height.findIndex((_) => _ === _);
+          if (_ < 0) return !1;
+          if (null !== _ && _ !== _) return !1;
+        } else if (_ !== _.height) return !1;
+        return !0;
       }
       function _(_, _, _) {
         const _ = _[_];
-        return (
-          !!_ &&
-          (!!_.bDisableEnforceDimensions || !(_ < _.width || _ < _.height))
-        );
+        if (!_) return !1;
+        if (_.bDisableEnforceDimensions) return !0;
+        if (Array.isArray(_.width)) {
+          if (_.width.filter((_) => _ < _).length == _.width.length) return !1;
+        } else if (_ < _.width) return !1;
+        if (Array.isArray(_.height)) {
+          if (_.height.filter((_) => _ < _).length == _.height.length)
+            return !1;
+        } else if (_ < _.height) return !1;
+        return !0;
       }
       function _(_) {
         const _ = _[_];
@@ -514,7 +539,7 @@
               (_ = _.height),
               (_ = !_.bDisableEnforceDimensions));
           }
-          const _ = this.width >= _ && this.height >= _,
+          const _ = this.width >= (0, _._)(_) && this.height >= (0, _._)(_),
             _ = _ ? this.width === _ && this.height === _ : _,
             _ = _ && _ != this.fileType,
             _ =
@@ -525,7 +550,8 @@
                   this.m_rgImageOptions?.map((_) => _.artworkType) || [],
                 ).length,
             _ = Boolean((0, _._)(this.fileType));
-          let _ = "",
+          let _,
+            _ = "",
             _ = !1;
           return (
             _
@@ -538,15 +564,36 @@
                     ))
                   : _ || _
                     ? _
-                      ? !_ &&
-                        _ &&
-                        ((_ = (0, _._)("#ImageUpload_InvalidDimensions", _, _)),
-                        (_ = !0))
-                      : (_ = (0, _._)("#ImageUpload_TooSmall", _, _))
-                    : (_ = (0, _._)("#ImageUpload_InvalidResolution", _, _))
+                      ? !_ && _
+                        ? ((_ = (0, _._)(
+                            "#ImageUpload_InvalidDimensions",
+                            (0, _._)(_),
+                            (0, _._)(_),
+                          )),
+                          (_ = !0))
+                        : ((Array.isArray(_) && this.width != (0, _._)(_)) ||
+                            (Array.isArray(_) && this.height != (0, _._)(_))) &&
+                          _.push(
+                            (0, _._)(
+                              "#ImageUpload_PreferredDimension",
+                              (0, _._)(_),
+                              (0, _._)(_),
+                            ),
+                          )
+                      : (_ = (0, _._)(
+                          "#ImageUpload_TooSmall",
+                          (0, _._)(_),
+                          (0, _._)(_),
+                        ))
+                    : (_ = (0, _._)(
+                        "#ImageUpload_InvalidResolution",
+                        (0, _._)(_),
+                        (0, _._)(_),
+                      ))
               : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
             {
               error: _,
+              warnings: _,
               needsCrop: _,
               match: this.GetCurrentImageOption(),
             }
@@ -671,15 +718,15 @@
             if ("capsule" === _)
               return [
                 {
-                  width: _._[_].width / 2,
-                  height: _._[_].height / 2,
+                  width: (0, _._)(_._[_].width) / 2,
+                  height: (0, _._)(_._[_].height) / 2,
                 },
               ];
             if ("spotlight" === _)
               return [
                 {
-                  width: _._[_].width / 2,
-                  height: _._[_].height / 2,
+                  width: (0, _._)(_._[_].width) / 2,
+                  height: (0, _._)(_._[_].height) / 2,
                 },
               ];
             return;
@@ -1795,14 +1842,16 @@
         GetDestWidth() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption();
-          return _ ? _._[_.artworkType].width : 0;
+          const _ = _.GetCurrentImageOption(),
+            _ = _._[_.artworkType].width;
+          return _ ? (0, _._)(_) : 0;
         }
         GetDestHeight() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption();
-          return _ ? _._[_.artworkType].height : 0;
+          const _ = _.GetCurrentImageOption(),
+            _ = _._[_.artworkType].height;
+          return _ ? (0, _._)(_) : 0;
         }
         GetLargestBoxThatFits(_, _, _, _) {
           let _ = _,

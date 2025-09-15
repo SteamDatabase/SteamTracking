@@ -2742,6 +2742,7 @@
     "ImageUpload_Invalid": "Invalid",
     "ImageUpload_NeedsCrop": "Incorrect size",
     "ImageUpload_InvalidDimensions": "Click below to crop and resize your image to %1$sx%2$s",
+    "ImageUpload_PreferredDimension": "While image is acceptable to previous size, the preferred width x height is %1$sx%2$s",
     "ImageUpload_TooSmall": "The image you have selected is too small for this image type. It must be at least %1$sx%2$s",
     "ImageUpload_EditHeroImage": "Edit Hero Image",
     "ImageUpload_CropModalTitle": "Crop Image",

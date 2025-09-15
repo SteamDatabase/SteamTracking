@@ -7485,8 +7485,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7506,8 +7506,8 @@
           (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`);
           return {
             sKey: _,
-            width: _.width,
-            height: _.height,
+            width: Array.isArray(_.width) ? _.width[0] : _.width,
+            height: Array.isArray(_.height) ? _.height[0] : _.height,
             bEnforceDimensions: !_.bDisableEnforceDimensions,
             artworkType: _,
             bHiddenFromDropdown: "hero" === _,

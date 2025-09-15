@@ -64,21 +64,23 @@
       "use strict";
       i.d(t, {
         FZ: () => n,
-        Fj: () => m,
-        Hj: () => r,
-        Ho: () => d,
-        N_: () => P,
+        Fj: () => f,
+        Hj: () => o,
+        Ho: () => m,
+        N_: () => k,
         PL: () => l,
-        XY: () => f,
+        XY: () => P,
         Yw: () => s,
         _d: () => a,
         cV: () => h,
+        dM: () => g,
         on: () => c,
-        s4: () => w,
-        tW: () => o,
-        vz: () => b,
-        x: () => u,
-        yu: () => _,
+        qj: () => p,
+        s4: () => b,
+        tW: () => r,
+        vz: () => y,
+        x: () => _,
+        yu: () => w,
       });
       const s = ["app_header_capsule", "app_main_capsule"],
         n = [
@@ -89,8 +91,8 @@
           "product_mobile_banner",
           "localized_title_image",
         ],
-        o = ["takeunder_art", "takeunder_mobile_art"],
-        r = [
+        r = ["takeunder_art", "takeunder_mobile_art"],
+        o = [
           "takeover_art",
           "takeover_mobile_art",
           "takeover_webm_art",
@@ -104,120 +106,131 @@
           "marketingmessage_art_2_eventcapsule",
         ],
         l = ["spotlight_art"],
-        h = [...s, ...n, ...o, ...r, ...a, ...c, ...l],
-        p = [1, 3, 2],
-        g = [1, 3],
-        d = [5, 4],
-        u = [7, 6],
-        m = {
-          capsule: { width: 800, height: 450, rgAcceptableTypes: g },
+        h = [...s, ...n, ...r, ...o, ...a, ...c, ...l];
+      function p(e) {
+        return Array.isArray(e) ? e[0] : e;
+      }
+      function g(e) {
+        const t = Array.isArray(e) ? e : [e];
+        return Math.min(...t);
+      }
+      const d = [1, 3, 2],
+        u = [1, 3],
+        m = [5, 4],
+        _ = [7, 6],
+        f = {
+          capsule: { width: 800, height: 450, rgAcceptableTypes: u },
           marketingmessage_art_2_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           marketingmessage_art_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
-          spotlight: { width: 2108, height: 460, rgAcceptableTypes: g },
+          spotlight: { width: 2108, height: 460, rgAcceptableTypes: u },
           localized_store_app_spotlight: {
             width: 1100,
             height: 240,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           localized_store_app_spotlight_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           localized_title_image: {
             width: 1920,
             height: 622,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
-          background: { width: 1920, height: 622, rgAcceptableTypes: g },
+          background: { width: 1920, height: 622, rgAcceptableTypes: u },
           hero: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
-          email_full: { width: 800, height: 300, rgAcceptableTypes: g },
-          email_centered: { width: 644, height: 300, rgAcceptableTypes: g },
-          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: g },
-          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: g },
+          email_full: { width: 800, height: 300, rgAcceptableTypes: u },
+          email_centered: { width: 644, height: 300, rgAcceptableTypes: u },
+          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: u },
+          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: u },
           sale_header: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
           sale_overlay: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
           localized_image_group: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           localized_background_art: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           sale_section_background: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
           sale_section_title: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
           link_capsule: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
-          product_banner: { width: 1100, height: 160, rgAcceptableTypes: g },
+          product_banner: {
+            width: [1200, 1100],
+            height: [175, 160],
+            rgAcceptableTypes: u,
+          },
           product_mobile_banner: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           product_banner_override: {
-            width: 1100,
-            height: 160,
-            rgAcceptableTypes: g,
+            width: [1200, 1100],
+            height: [175, 160],
+            rgAcceptableTypes: u,
           },
           product_mobile_banner_override: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
-          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: g },
+          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: u },
           tab_bar_background: {
             width: 1500,
             height: 100,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
-          sale_logo: { width: 940, height: 460, rgAcceptableTypes: g },
-          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: p },
+          sale_logo: { width: 940, height: 460, rgAcceptableTypes: u },
+          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: d },
           bestofyear_banner_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
           localized_marketing_message: {
             width: 570,
@@ -227,7 +240,7 @@
           localized_optin_banner: {
             width: 1e3,
             height: 150,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           localized_marketingmessage_webm: {
             width: 570,
@@ -263,13 +276,13 @@
           localized_marketingmessage_background: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           localized_email_image: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: g,
+            rgAcceptableTypes: u,
           },
           template_asset: {
             width: 0,
@@ -277,19 +290,19 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
-          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: p },
-          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: p },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: d },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: d },
           marketingmessage_art: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
           marketingmessage_art_2: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
-          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: p },
+          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: d },
           takeover_webm_art: {
             width: 1850,
             height: 450,
@@ -303,7 +316,7 @@
           takeover_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
           takeover_webm_mobile_art: {
             width: 500,
@@ -315,48 +328,64 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: p },
+          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: d },
           takeunder_mobile_art: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: p,
+            rgAcceptableTypes: d,
           },
-          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: g },
-          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: g },
+          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: u },
+          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: u },
         };
-      function _(e, t, i) {
-        const s = m[i];
-        return (
-          !!s && !s.bDisableEnforceDimensions && e === s.width && t === s.height
-        );
+      function w(e, t, i, s) {
+        const n = f[i];
+        if (!n) return !1;
+        if (n.bDisableEnforceDimensions) return s;
+        if (e !== n.width || t !== n.height) return !1;
+        let r = null;
+        if (Array.isArray(n.width)) {
+          if (((r = n.width.findIndex((t) => e === t)), r < 0)) return !1;
+        } else if (e !== n.width) return !1;
+        if (Array.isArray(n.height)) {
+          let e = n.height.findIndex((e) => t === e);
+          if (e < 0) return !1;
+          if (null !== r && e !== r) return !1;
+        } else if (t !== n.height) return !1;
+        return !0;
       }
-      function w(e, t, i) {
-        const s = m[i];
-        return (
-          !!s &&
-          (!!s.bDisableEnforceDimensions || !(e < s.width || t < s.height))
-        );
+      function b(e, t, i) {
+        const s = f[i];
+        if (!s) return !1;
+        if (s.bDisableEnforceDimensions) return !0;
+        if (Array.isArray(s.width)) {
+          if (s.width.filter((t) => e < t).length == s.width.length) return !1;
+        } else if (e < s.width) return !1;
+        if (Array.isArray(s.height)) {
+          if (s.height.filter((e) => t < e).length == s.height.length)
+            return !1;
+        } else if (t < s.height) return !1;
+        return !0;
       }
-      function f(e) {
-        const t = m[e];
+      function P(e) {
+        const t = f[e];
         return (
           t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
         );
       }
-      function b(e, t) {
-        return t.filter((t) => P(e, t));
+      function y(e, t) {
+        return t.filter((t) => k(e, t));
       }
-      function P(e, t) {
-        return m[t].rgAcceptableTypes.includes(e);
+      function k(e, t) {
+        return f[t].rgAcceptableTypes.includes(e);
       }
     },
     78511: (e, t, i) => {
       "use strict";
-      i.d(t, { o: () => r, q: () => a });
+      i.d(t, { o: () => o, q: () => a });
       var s = i(34629),
         n = i(14947),
-        o = i(82705);
-      function r(e) {
+        r = i(82705);
+      function o(e) {
         return "waiting" == e || "uploading" == e || "processing" == e;
       }
       class a {
@@ -372,17 +401,17 @@
         filename;
         uploadTime;
         fileType;
-        constructor(e, t, i, s, r) {
+        constructor(e, t, i, s, o) {
           (0, n.Gn)(this),
             (this.file = e),
             (this.filename = t),
-            (this.fileType = (0, o.yh)(t) ?? 0),
+            (this.fileType = (0, r.yh)(t) ?? 0),
             (this.language = i),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
-            (this.m_originalSize = r),
-            (this.height = r.height),
-            (this.width = r.width),
+            (this.m_originalSize = o),
+            (this.height = o.height),
+            (this.width = o.width),
             (this.m_originalDataUrl = s),
             (this.dataUrl = s);
         }
@@ -405,8 +434,8 @@
       i.d(t, { IS: () => p, M7: () => d, T2: () => g });
       var s = i(34629),
         n = i(14947),
-        o = i(73744),
-        r = i(61859),
+        r = i(73744),
+        o = i(61859),
         a = i(78511),
         c = i(66331),
         l = i(82817);
@@ -414,8 +443,8 @@
         m_rgImageOptions;
         m_currentImageOption = void 0;
         m_currentImageOptionKey = void 0;
-        constructor(e, t, i, s, o, r) {
-          super(e, t, i, o, r), (0, n.Gn)(this), (this.m_rgImageOptions = s);
+        constructor(e, t, i, s, r, o) {
+          super(e, t, i, r, o), (0, n.Gn)(this), (this.m_rgImageOptions = s);
         }
         IsValidAssetType(e, t) {
           let i = 0,
@@ -429,48 +458,71 @@
               );
           if (e) (i = e.width), (s = e.height), (n = !0);
           else if (this.GetCurrentImageOption()) {
-            const e = o.Fj[this.GetCurrentImageOption().artworkType];
+            const e = r.Fj[this.GetCurrentImageOption().artworkType];
             e &&
               ((i = e.width),
               (s = e.height),
               (n = !e.bDisableEnforceDimensions));
           }
-          const h = this.width >= i && this.height >= s,
+          const h = this.width >= (0, r.dM)(i) && this.height >= (0, r.dM)(s),
             p = n ? this.width === i && this.height === s : h,
             g = t && t != this.fileType,
             d =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
               0 ==
-                (0, o.vz)(
+                (0, r.vz)(
                   this.fileType,
                   this.m_rgImageOptions?.map((e) => e.artworkType) || [],
                 ).length,
             u = Boolean((0, c.t)(this.fileType));
-          let m = "",
-            _ = !1;
+          let m,
+            _ = "",
+            f = !1;
           return (
             a
               ? d
-                ? (m = (0, r.we)("#ImageUpload_InvalidFileType"))
+                ? (_ = (0, o.we)("#ImageUpload_InvalidFileType"))
                 : g
-                  ? (m = (0, r.we)(
+                  ? (_ = (0, o.we)(
                       "#ImageUpload_InvalidFormat",
                       (0, l.EG)(t) ?? "",
                     ))
                   : p || u
                     ? h
-                      ? !p &&
-                        u &&
-                        ((m = (0, r.we)(
-                          "#ImageUpload_InvalidDimensions",
-                          i,
-                          s,
-                        )),
-                        (_ = !0))
-                      : (m = (0, r.we)("#ImageUpload_TooSmall", i, s))
-                    : (m = (0, r.we)("#ImageUpload_InvalidResolution", i, s))
-              : (m = (0, r.we)("#ImageUpload_InvalidFormatSelected")),
-            { error: m, needsCrop: _, match: this.GetCurrentImageOption() }
+                      ? !p && u
+                        ? ((_ = (0, o.we)(
+                            "#ImageUpload_InvalidDimensions",
+                            (0, r.qj)(i),
+                            (0, r.qj)(s),
+                          )),
+                          (f = !0))
+                        : ((Array.isArray(i) && this.width != (0, r.qj)(i)) ||
+                            (Array.isArray(s) &&
+                              this.height != (0, r.qj)(s))) &&
+                          m.push(
+                            (0, o.we)(
+                              "#ImageUpload_PreferredDimension",
+                              (0, r.qj)(i),
+                              (0, r.qj)(s),
+                            ),
+                          )
+                      : (_ = (0, o.we)(
+                          "#ImageUpload_TooSmall",
+                          (0, r.qj)(i),
+                          (0, r.qj)(s),
+                        ))
+                    : (_ = (0, o.we)(
+                        "#ImageUpload_InvalidResolution",
+                        (0, r.qj)(i),
+                        (0, r.qj)(s),
+                      ))
+              : (_ = (0, o.we)("#ImageUpload_InvalidFormatSelected")),
+            {
+              error: _,
+              warnings: m,
+              needsCrop: f,
+              match: this.GetCurrentImageOption(),
+            }
           );
         }
         BSupportsLanguages() {
@@ -479,7 +531,7 @@
         ComputeDefaultImageOption() {
           if (!this.m_rgImageOptions || 0 == this.m_rgImageOptions.length)
             return;
-          const e = (0, o.vz)(
+          const e = (0, r.vz)(
             this.fileType,
             this.m_rgImageOptions?.map((e) => e.artworkType),
           );
@@ -508,21 +560,21 @@
         (0, s.Cg)([n.sH], h.prototype, "m_currentImageOptionKey", void 0);
       class p extends h {
         video;
-        constructor(e, t, i, s, n, o, r) {
-          super(e, t, i, s, n, o), (this.video = r);
+        constructor(e, t, i, s, n, r, o) {
+          super(e, t, i, s, n, r), (this.video = o);
         }
         BIsOriginalMinimumDimensions(e) {
-          return (0, o.s4)(
+          return (0, r.s4)(
             this.video.videoWidth,
             this.video.videoHeight,
             e.artworkType,
           );
         }
         FileTypeMatchesImageTypes(e) {
-          return (0, o.N_)(this.fileType, e.artworkType);
+          return (0, r.N_)(this.fileType, e.artworkType);
         }
         BIsVideo() {
-          return o.Ho.includes(this.fileType);
+          return r.Ho.includes(this.fileType);
         }
         GetResizeDimension() {}
       }
@@ -531,13 +583,13 @@
           super(e, t, i, s, URL.createObjectURL(e), { width: 0, height: 0 });
         }
         BIsOriginalMinimumDimensions(e) {
-          return (0, o.XY)(e.artworkType);
+          return (0, r.XY)(e.artworkType);
         }
         FileTypeMatchesImageTypes(e) {
-          return (0, o.N_)(this.fileType, e.artworkType);
+          return (0, r.N_)(this.fileType, e.artworkType);
         }
         BIsVideo() {
-          return o.Ho.includes(this.fileType);
+          return r.Ho.includes(this.fileType);
         }
         GetResizeDimension() {}
       }
@@ -545,8 +597,8 @@
         bCropped = !1;
         localizedImageGroupPrimaryImage;
         media;
-        constructor(e, t, i, s, o, r, a, c) {
-          super(e, t, i, s, o, r),
+        constructor(e, t, i, s, r, o, a, c) {
+          super(e, t, i, s, r, o),
             (0, n.Gn)(this),
             (this.media = a),
             (this.localizedImageGroupPrimaryImage = c);
@@ -561,17 +613,17 @@
           return this.media;
         }
         BIsOriginalMinimumDimensions(e) {
-          return (0, o.s4)(
+          return (0, r.s4)(
             this.media?.width ?? 0,
             this.media?.height ?? 0,
             e.artworkType,
           );
         }
         FileTypeMatchesImageTypes(e) {
-          return (0, o.N_)(this.fileType, e.artworkType);
+          return (0, r.N_)(this.fileType, e.artworkType);
         }
         BIsVideo() {
-          return o.Ho.includes(this.fileType);
+          return r.Ho.includes(this.fileType);
         }
         GetResizeDimension() {
           return (function (e) {
@@ -581,9 +633,19 @@
                 { width: 480, height: 156 },
               ];
             if ("capsule" === e)
-              return [{ width: o.Fj[e].width / 2, height: o.Fj[e].height / 2 }];
+              return [
+                {
+                  width: (0, r.qj)(r.Fj[e].width) / 2,
+                  height: (0, r.qj)(r.Fj[e].height) / 2,
+                },
+              ];
             if ("spotlight" === e)
-              return [{ width: o.Fj[e].width / 2, height: o.Fj[e].height / 2 }];
+              return [
+                {
+                  width: (0, r.qj)(r.Fj[e].width) / 2,
+                  height: (0, r.qj)(r.Fj[e].height) / 2,
+                },
+              ];
             return;
           })(this.GetCurrentImageOption()?.artworkType);
         }
@@ -591,7 +653,7 @@
       function u(e, t, i, s = !1) {
         if (i)
           for (let n of i) {
-            if (s ? (0, o.s4)(e, t, n) : (0, o.yu)(e, t, n)) return n;
+            if (s ? (0, r.s4)(e, t, n) : (0, r.yu)(e, t, n)) return n;
           }
       }
       (0, s.Cg)([n.sH], d.prototype, "bCropped", void 0);
@@ -607,9 +669,9 @@
       });
       var s = i(2160),
         n = i(22837),
-        o = i(61859),
-        r = i(41735),
-        a = i.n(r);
+        r = i(61859),
+        o = i(41735),
+        a = i.n(o);
       class c {}
       function l(e, t, i) {
         const s = e.filter((e) => {
@@ -623,17 +685,17 @@
           s
         );
       }
-      async function h(e, t, i, s, n, o) {
-        const r = l(e, s, n),
+      async function h(e, t, i, s, n, r) {
+        const o = l(e, s, n),
           a = [];
         let c = 0;
         const h = Array.from({ length: Math.floor(t) }, () =>
           (async () => {
-            for (; c < r.length; ) {
+            for (; c < o.length; ) {
               const e = c++,
-                t = r[e];
+                t = o[e];
               t.status = "uploading";
-              const s = await i(t, t.filename, t.language ?? -1, o);
+              const s = await i(t, t.filename, t.language ?? -1, r);
               (t.status = s.bSuccess ? "success" : "failed"),
                 (t.message =
                   !s.bSuccess && s.elErrorMessage ? s.elErrorMessage : ""),
@@ -669,9 +731,9 @@
                     this.m_cancel.token,
                   )
                 : await (async function (e, t, i, s, n) {
-                    const o = l(e, i, s),
-                      r = [];
-                    for (const e of o) {
+                    const r = l(e, i, s),
+                      o = [];
+                    for (const e of r) {
                       e.status = "uploading";
                       const i = await t(e, e.filename, e.language ?? -1, n);
                       (e.status = i.bSuccess ? "success" : "failed"),
@@ -679,52 +741,52 @@
                           !i.bSuccess && i.elErrorMessage
                             ? i.elErrorMessage
                             : ""),
-                        r.push({
+                        o.push({
                           bSuccess: i.bSuccess,
                           image: e,
                           uploadResult: i.result,
                         });
                     }
-                    return r;
+                    return o;
                   })(this.GetUploadImages(), n, e, t, this.m_cancel.token)),
             s
           );
         }
         CancelAllUploads() {
-          this.m_cancel?.cancel((0, o.we)("#ImageUpload_CancelRequest"));
+          this.m_cancel?.cancel((0, r.we)("#ImageUpload_CancelRequest"));
         }
       }
       function g(e, t, i) {
         if (((null != e && null != e) || (e = t), !i || 0 === i.length))
           return e;
-        for (const t of i) if (o.A0.IsELanguageValidInRealm(e, t)) return e;
-        for (const e of i) if (o.A0.IsELanguageValidInRealm(t, e)) return t;
+        for (const t of i) if (r.A0.IsELanguageValidInRealm(e, t)) return e;
+        for (const e of i) if (r.A0.IsELanguageValidInRealm(t, e)) return t;
         return i.includes(s.TU.k_ESteamRealmGlobal) ? 0 : 29;
       }
       function d(e, t = 0) {
         let i = e.lastIndexOf(".");
         -1 != i && (e = e.slice(0, i).toLowerCase());
         let s = null,
-          o = 0;
-        e.endsWith("korean") && ((s = 4), (o = 6));
+          r = 0;
+        e.endsWith("korean") && ((s = 4), (r = 6));
         for (let t = 0; t < 31; ++t) {
           const i = (0, n.ww)(t);
-          if (i.length <= o) continue;
+          if (i.length <= r) continue;
           if (e.endsWith(i) && e.length > i.length + 2) {
             const n = e[e.length - i.length - 1];
-            /\p{Alphabetic}|\p{Number}/u.test(n) || ((s = t), (o = i.length));
+            /\p{Alphabetic}|\p{Number}/u.test(n) || ((s = t), (r = i.length));
           }
-          const r = (0, n.Lg)(t);
-          r.length <= o || (e.endsWith(r) && ((s = t), (o = r.length)));
+          const o = (0, n.Lg)(t);
+          o.length <= r || (e.endsWith(o) && ((s = t), (r = o.length)));
         }
         return {
           language: s ?? t,
           baseFilename:
-            o > 0
-              ? ((r = e.substring(0, e.length - o)), r.replace(/[\s_-]+$/g, ""))
+            r > 0
+              ? ((o = e.substring(0, e.length - r)), o.replace(/[\s_-]+$/g, ""))
               : e,
         };
-        var r;
+        var o;
       }
     },
     82705: (e, t, i) => {
@@ -768,69 +830,69 @@
       });
       var s = i(41735),
         n = i.n(s),
-        o = i(90626),
-        r = i(73745),
+        r = i(90626),
+        o = i(73745),
         a = i(82097);
       function c(e, t, i, s) {
-        const c = (0, o.useRef)(void 0),
-          l = (0, o.useRef)(void 0),
-          h = (0, r.CH)();
+        const c = (0, r.useRef)(void 0),
+          l = (0, r.useRef)(void 0),
+          h = (0, o.CH)();
         c.current = e;
-        const [p, g] = (0, o.useState)(void 0),
+        const [p, g] = (0, r.useState)(void 0),
           {
             include_assets: d,
             include_release: u,
             include_platforms: m,
             include_all_purchase_options: _,
-            include_screenshots: w,
-            include_trailers: f,
+            include_screenshots: f,
+            include_trailers: w,
             include_ratings: b,
             include_tag_count: P,
-            include_reviews: k,
-            include_basic_info: y,
+            include_reviews: y,
+            include_basic_info: k,
             include_supported_languages: v,
-            include_full_description: L,
-            include_included_items: I,
+            include_full_description: I,
+            include_included_items: L,
             include_assets_without_overrides: T,
             apply_user_filters: E,
             include_links: D,
           } = i;
         if (
-          ((0, o.useEffect)(() => {
+          ((0, r.useEffect)(() => {
             const i = {
               include_assets: d,
               include_release: u,
               include_platforms: m,
               include_all_purchase_options: _,
-              include_screenshots: w,
-              include_trailers: f,
+              include_screenshots: f,
+              include_trailers: w,
               include_ratings: b,
               include_tag_count: P,
-              include_reviews: k,
-              include_basic_info: y,
+              include_reviews: y,
+              include_basic_info: k,
               include_supported_languages: v,
-              include_full_description: L,
-              include_included_items: I,
+              include_full_description: I,
+              include_included_items: L,
               include_assets_without_overrides: T,
               apply_user_filters: E,
               include_links: D,
             };
-            let o = null;
+            let r = null;
             return (
               !e ||
                 e < 0 ||
                 a.A.Get().BHasStoreItem(e, t, i) ||
                 (void 0 !== p && s && s == l.current) ||
                 (s !== l.current && (g(void 0), (l.current = s)),
-                (o = n().CancelToken.source()),
+                (r = n().CancelToken.source()),
                 a.A.Get()
                   .QueueStoreItemRequest(e, t, i)
                   .then((t) => {
-                    o?.token.reason || c.current !== e || g(1 == t), h();
+                    r?.token.reason || c.current !== e || g(1 == t), h();
                   })),
-              () => o?.cancel("useStoreItemCache: unmounting")
+              () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, p, d, u, m, _, w, f, b, P, k, y, v, L, I, T, E, D, h]),
+          }, [e, t, s, p, d, u, m, _, f, w, b, P, y, k, v, I, L, T, E, D, h]),
           !e)
         )
           return [null, 2];
@@ -851,16 +913,16 @@
       }
       function g(e, t, i) {
         const [s, n] = c(e, t, i);
-        let o;
+        let r;
         1 != s?.GetStoreItemType() ||
           s.GetAssets()?.GetHeaderURL() ||
           1 != s?.GetIncludedAppIDs().length ||
-          (o = s.GetIncludedAppIDs()[0]);
-        const [r, a] = l(o, i);
-        return o && r?.BIsVisible() ? [r, a] : [s, n];
+          (r = s.GetIncludedAppIDs()[0]);
+        const [o, a] = l(r, i);
+        return r && o?.BIsVisible() ? [o, a] : [s, n];
       }
       function d(e, t, i, s) {
-        const c = (0, r.CH)(),
+        const c = (0, o.CH)(),
           {
             include_assets: l,
             include_release: h,
@@ -870,17 +932,17 @@
             include_trailers: u,
             include_ratings: m,
             include_tag_count: _,
-            include_reviews: w,
-            include_basic_info: f,
+            include_reviews: f,
+            include_basic_info: w,
             include_supported_languages: b,
             include_full_description: P,
-            include_included_items: k,
-            include_assets_without_overrides: y,
+            include_included_items: y,
+            include_assets_without_overrides: k,
             apply_user_filters: v,
-            include_links: L,
+            include_links: I,
           } = i;
         if (
-          ((0, o.useEffect)(() => {
+          ((0, r.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const i = {
                 include_assets: l,
@@ -891,14 +953,14 @@
                 include_trailers: u,
                 include_ratings: m,
                 include_tag_count: _,
-                include_reviews: w,
-                include_basic_info: f,
+                include_reviews: f,
+                include_basic_info: w,
                 include_supported_languages: b,
                 include_full_description: P,
-                include_included_items: k,
-                include_assets_without_overrides: y,
+                include_included_items: y,
+                include_assets_without_overrides: k,
                 apply_user_filters: v,
-                include_links: L,
+                include_links: I,
               },
               s = e.filter(
                 (e) =>
@@ -908,15 +970,15 @@
                   ),
               );
             if (0 == s.length) return;
-            const o = n().CancelToken.source(),
-              r = s.map((e) => a.A.Get().QueueStoreItemRequest(e, t, i));
+            const r = n().CancelToken.source(),
+              o = s.map((e) => a.A.Get().QueueStoreItemRequest(e, t, i));
             return (
-              Promise.all(r).then(() => {
-                o.token.reason || c();
+              Promise.all(o).then(() => {
+                r.token.reason || c();
               }),
-              () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, c, l, h, p, g, d, u, m, _, w, f, b, P, k, y, v, L]),
+          }, [e, t, s, c, l, h, p, g, d, u, m, _, f, w, b, P, y, k, v, I]),
           !e)
         )
           return 2;
@@ -947,13 +1009,13 @@
     82817: (e, t, i) => {
       "use strict";
       i.d(t, {
-        EG: () => r,
+        EG: () => o,
         II: () => d,
         S2: () => p,
         Uz: () => h,
         aL: () => l,
         ab: () => n,
-        qR: () => o,
+        qR: () => r,
         zB: () => g,
       });
       var s = i(3577);
@@ -977,7 +1039,7 @@
                         ? "image/webp"
                         : void 0;
       }
-      function o(e) {
+      function r(e) {
         switch (e) {
           case "image/jpeg":
             return ".jpg";
@@ -1001,7 +1063,7 @@
           ".jpg"
         );
       }
-      function r(e) {
+      function o(e) {
         switch (e) {
           case 1:
             return ".jpg";
@@ -1089,8 +1151,8 @@
       i.d(t, { I: () => m });
       var s,
         n = i(34629),
-        o = i(90626),
-        r = i(73745),
+        r = i(90626),
+        o = i(73745),
         a = i(75844),
         c = i(6144),
         l = i(61859),
@@ -1110,7 +1172,7 @@
           (e.bottom = "bottom"),
           (e.bottomright = "bottomright");
       })(s || (s = {}));
-      let m = class extends o.Component {
+      let m = class extends r.Component {
         m_rectLinkRegion;
         m_elLinkRegionBox;
         m_nLocalOffsetXPct;
@@ -1273,24 +1335,24 @@
               void 0 !== e.curRightPosPct
                 ? e.curRightPosPct
                 : this.state.curRightPosPct,
-            o = (0, u.OQ)(
+            r = (0, u.OQ)(
               100 - n - s,
               this.props.widthMinPct || 0,
               this.props.widthMaxPct || 100,
             ),
-            r = (0, u.OQ)(
+            o = (0, u.OQ)(
               100 - i - t,
               this.props.heightMinPct || 0,
               this.props.heightMaxPct || 100,
             );
           this.props.bLockAspectRatio &&
             (void 0 !== e.curLeftPosPct || void 0 !== e.curRightPosPct
-              ? (r = o / this.m_aspectRatio)
-              : (o = r * this.m_aspectRatio)),
+              ? (o = r / this.m_aspectRatio)
+              : (r = o * this.m_aspectRatio)),
             void 0 !== e.curLeftPosPct
-              ? (s = 100 - n - o)
-              : (n = 100 - (s + o)),
-            void 0 !== e.curTopPosPct ? (t = 100 - i - r) : (i = 100 - (t + r));
+              ? (s = 100 - n - r)
+              : (n = 100 - (s + r)),
+            void 0 !== e.curTopPosPct ? (t = 100 - i - o) : (i = 100 - (t + o));
           const a = 100 - n - s,
             c = 100 - i - t;
           this.IsValidPct(s) &&
@@ -1408,7 +1470,7 @@
           return (
             null != this.state.EdgeDown &&
               (t += ` ${d().EdgeDown} ` + d()[this.state.EdgeDown]),
-            o.createElement(
+            r.createElement(
               "div",
               {
                 className: t,
@@ -1416,37 +1478,37 @@
                 ref: this.LinkRegionBoxRef,
                 draggable: !1,
               },
-              o.createElement(
+              r.createElement(
                 "div",
                 { className: d().LinkRegionGridBox },
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().TopLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.topleft);
                   },
                   draggable: !1,
                 }),
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().Top}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.top);
                   },
                 }),
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().TopRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.topright);
                   },
                   draggable: !1,
                 }),
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().Left}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.left);
                   },
                   draggable: !1,
                 }),
-                o.createElement(
+                r.createElement(
                   "div",
                   {
                     className: `${d().LinkRegionEdge} ${d().Middle}`,
@@ -1456,24 +1518,24 @@
                     draggable: !1,
                   },
                   this.props.deleteFn &&
-                    o.createElement(
+                    r.createElement(
                       "div",
                       {
                         className: d().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
-                      o.createElement(p.sED, null),
+                      r.createElement(p.sED, null),
                     ),
                   !this.props.bDisableLink &&
-                    o.createElement(
+                    r.createElement(
                       "div",
                       {
                         className: d().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
-                      o.createElement(p.xv8, null),
+                      r.createElement(p.xv8, null),
                     ),
-                  o.createElement(
+                  r.createElement(
                     "div",
                     { className: d().LinkText },
                     " ",
@@ -1481,28 +1543,28 @@
                     " ",
                   ),
                 ),
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().Right}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.right);
                   },
                   draggable: !1,
                 }),
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().BottomLeft}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.bottomleft);
                   },
                   draggable: !1,
                 }),
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().Bottom}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.bottom);
                   },
                   draggable: !1,
                 }),
-                o.createElement("div", {
+                r.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().BottomRight}`,
                   onMouseDown: (e) => {
                     this.OnMouseDown(e, s.bottomright);
@@ -1511,10 +1573,10 @@
                 }),
               ),
               this.state.bEditingLink &&
-                o.createElement(
+                r.createElement(
                   "div",
                   { className: d().LinkRegionInfo },
-                  o.createElement(h.pd, {
+                  r.createElement(h.pd, {
                     className: d().LinkRegionInput,
                     type: "text",
                     name: "link_url",
@@ -1524,7 +1586,7 @@
                     onChange: this.OnSetLinkURLChange,
                     mustBeURL: !0,
                   }),
-                  o.createElement(h.pd, {
+                  r.createElement(h.pd, {
                     className: d().LinkRegionInput,
                     type: "text",
                     name: "link_description",
@@ -1535,10 +1597,10 @@
                     ),
                     onChange: this.OnSetLinkDescriptionChange,
                   }),
-                  o.createElement(
+                  r.createElement(
                     "div",
                     { className: d().LinkRegionButtonContainer },
-                    o.createElement(
+                    r.createElement(
                       h.$n,
                       {
                         disabled: !this.state.valid_link,
@@ -1548,7 +1610,7 @@
                       (0, l.we)("#Button_OK"),
                       " ",
                     ),
-                    o.createElement(
+                    r.createElement(
                       h.$n,
                       { onClick: this.OnEditLink },
                       " ",
@@ -1560,15 +1622,15 @@
           );
         }
       };
-      (0, n.Cg)([r.oI], m.prototype, "LinkRegionBoxRef", null),
-        (0, n.Cg)([r.oI], m.prototype, "OnMouseDown", null),
-        (0, n.Cg)([r.oI], m.prototype, "OnMouseMove", null),
-        (0, n.Cg)([r.oI], m.prototype, "OnMouseUp", null),
-        (0, n.Cg)([r.oI], m.prototype, "HandleDelete", null),
-        (0, n.Cg)([r.oI], m.prototype, "OnSetLinkURLChange", null),
-        (0, n.Cg)([r.oI], m.prototype, "OnSetLinkDescriptionChange", null),
-        (0, n.Cg)([r.oI], m.prototype, "OnSaveLink", null),
-        (0, n.Cg)([r.oI], m.prototype, "OnEditLink", null),
+      (0, n.Cg)([o.oI], m.prototype, "LinkRegionBoxRef", null),
+        (0, n.Cg)([o.oI], m.prototype, "OnMouseDown", null),
+        (0, n.Cg)([o.oI], m.prototype, "OnMouseMove", null),
+        (0, n.Cg)([o.oI], m.prototype, "OnMouseUp", null),
+        (0, n.Cg)([o.oI], m.prototype, "HandleDelete", null),
+        (0, n.Cg)([o.oI], m.prototype, "OnSetLinkURLChange", null),
+        (0, n.Cg)([o.oI], m.prototype, "OnSetLinkDescriptionChange", null),
+        (0, n.Cg)([o.oI], m.prototype, "OnSaveLink", null),
+        (0, n.Cg)([o.oI], m.prototype, "OnEditLink", null),
         (m = (0, n.Cg)([a.PA], m));
     },
     66331: (e, t, i) => {
@@ -1576,8 +1638,8 @@
       i.d(t, { q: () => u, t: () => m });
       var s = i(34629),
         n = i(90626),
-        o = i(73744),
-        r = i(16676),
+        r = i(73744),
+        o = i(16676),
         a = i(81416),
         c = i(9154),
         l = i(52038),
@@ -1598,23 +1660,23 @@
         async OnCrop() {
           const e = this.props.uploadFile.GetCanvasImageSource();
           e &&
-            (await (async function (e, t, i, s, n, o, r, a, c) {
+            (await (async function (e, t, i, s, n, r, o, a, c) {
               return new Promise((l, h) => {
                 const p = m(c);
                 if (!p) return void h("Invalid format provided");
                 const g = document.createElement("canvas");
-                (g.width = r), (g.height = a);
+                (g.width = o), (g.height = a);
                 const u = 0,
                   _ = 0,
-                  w = g.getContext("2d");
-                w?.drawImage(t, i, s, n, o, u, _, r, a),
+                  f = g.getContext("2d");
+                f?.drawImage(t, i, s, n, r, u, _, o, a),
                   g.toBlob((t) => {
                     const i = g.toDataURL(p);
                     3 !== c && i.startsWith("data:image/png")
                       ? h("Unable to encode into the requested file format")
                       : t
                         ? ((e.file = (0, d.pE)(t, e.filename)),
-                          (e.width = r),
+                          (e.width = o),
                           (e.height = a),
                           (e.dataUrl = i),
                           (e.uploadTime = Date.now()),
@@ -1643,21 +1705,23 @@
         GetDestWidth() {
           const { uploadFile: e, forceResolution: t } = this.props;
           if (t) return t.width;
-          const i = e.GetCurrentImageOption();
-          return i ? o.Fj[i.artworkType].width : 0;
+          const i = e.GetCurrentImageOption(),
+            s = r.Fj[i.artworkType].width;
+          return i ? (0, r.qj)(s) : 0;
         }
         GetDestHeight() {
           const { uploadFile: e, forceResolution: t } = this.props;
           if (t) return t.width;
-          const i = e.GetCurrentImageOption();
-          return i ? o.Fj[i.artworkType].height : 0;
+          const i = e.GetCurrentImageOption(),
+            s = r.Fj[i.artworkType].height;
+          return i ? (0, r.qj)(s) : 0;
         }
         GetLargestBoxThatFits(e, t, i, s) {
           let n = i,
-            o = (n * t) / Math.max(e, 1);
+            r = (n * t) / Math.max(e, 1);
           return (
-            o > s && ((o = s), (n = (o * e) / Math.max(t, 1))),
-            { width: n, height: o }
+            r > s && ((r = s), (n = (r * e) / Math.max(t, 1))),
+            { width: n, height: r }
           );
         }
         GetPreviewWindowStyle() {
@@ -1671,14 +1735,14 @@
             i = t.width,
             s = t.height,
             n = 1 / Math.max(e.widthPct / 100, 1e-4),
-            o = 1 / Math.max(e.heightPct / 100, 1e-4),
-            r = (this.props.uploadFile.width * e.xPosPct) / 100,
+            r = 1 / Math.max(e.heightPct / 100, 1e-4),
+            o = (this.props.uploadFile.width * e.xPosPct) / 100,
             a = (this.props.uploadFile.height * e.yPosPct) / 100;
           return {
             width: i,
             height: s,
-            backgroundPosition: `${-r * ((i * n) / this.props.uploadFile.width)}px ${-a * ((s * o) / this.props.uploadFile.height)}px`,
-            backgroundSize: `${100 * n}% ${100 * o}%`,
+            backgroundPosition: `${-o * ((i * n) / this.props.uploadFile.width)}px ${-a * ((s * r) / this.props.uploadFile.height)}px`,
+            backgroundSize: `${100 * n}% ${100 * r}%`,
             backgroundImage: `url(${this.props.uploadFile.dataUrl})`,
           };
         }
@@ -1703,7 +1767,7 @@
                 className: (0, l.A)("DialogContent", "_DialogCenterVertically"),
               },
               n.createElement(
-                r.iK,
+                o.iK,
                 null,
                 (0, h.we)(
                   "#ImageUpload_CropModalTitleDims",
@@ -1754,7 +1818,7 @@
                 n.createElement("div", { style: this.GetPreviewWindowStyle() }),
               ),
               n.createElement(
-                r.jn,
+                o.jn,
                 { onClick: this.OnCrop },
                 (0, h.we)("#ImageUpload_CropAndContinue"),
               ),
