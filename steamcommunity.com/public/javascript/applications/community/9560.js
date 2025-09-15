@@ -1057,9 +1057,7 @@
       }
       function l() {
         return i().languages.map((e) => {
-          return 2 == (t = e.strISOCode).length
-            ? `${t}-${a.iA.country_code}`
-            : t;
+          return 2 == (t = e.strISOCode).length ? `${t}-${a.TS.COUNTRY}` : t;
           var t;
         });
       }
@@ -1400,8 +1398,8 @@
         }),
         D = Object.assign(Y, { Option: H });
       var j = n(94621);
-      const J = (0, a.createContext)(null);
-      function U(e) {
+      const U = (0, a.createContext)(null);
+      function J(e) {
         const { gutter: t = 0 } = e;
         return [
           (0, j.UU)(),
@@ -1424,7 +1422,7 @@
       }
       (0, a.forwardRef)(function (e, t) {
         const { children: n, className: r } = e,
-          o = (0, a.useContext)(J),
+          o = (0, a.useContext)(U),
           c = (0, M.SV)([t, null == o ? void 0 : o.floating.refs.setFloating]);
         if (!o)
           return (
@@ -1458,7 +1456,7 @@
         const u = (0, M.we)({
             open: p,
             onOpenChange: n,
-            middleware: U(e),
+            middleware: J(e),
             whileElementsMounted: G.ll,
           }),
           m = (0, M.kp)(u.context, { enabled: !!l.click }),
@@ -2547,7 +2545,7 @@
       const De = (0, a.forwardRef)(function (e, t) {
         const { checked: n, onChange: r, disabled: o, children: c, ...i } = e,
           l = "indeterminate" === n,
-          s = l ? Je : He,
+          s = l ? Ue : He,
           p = () => r(!!l || !n);
         return a.createElement(
           C,
@@ -2575,7 +2573,7 @@
       function je(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function Je(e) {
+      function Ue(e) {
         return a.createElement(
           "svg",
           {
@@ -2589,7 +2587,7 @@
           }),
         );
       }
-      const Ue = (0, a.createContext)(null),
+      const Je = (0, a.createContext)(null),
         Be = Object.assign(
           function (e) {
             const {
@@ -2613,7 +2611,7 @@
               },
               s = "row" === c;
             return a.createElement(
-              Ue.Provider,
+              Je.Provider,
               { value: l },
               a.createElement(C, {
                 direction: c,
@@ -2627,7 +2625,7 @@
           {
             Item: function (e) {
               const { value: t, children: n } = e,
-                r = (0, a.useContext)(Ue);
+                r = (0, a.useContext)(Je);
               if (!r)
                 return (
                   console.error(
@@ -3346,10 +3344,10 @@
         jt =
           n.p +
           "images/applications/community/rifle.png?v=valveisgoodatcaching",
-        Jt =
+        Ut =
           n.p +
           "images/applications/community/shotgun.png?v=valveisgoodatcaching",
-        Ut =
+        Jt =
           n.p + "images/applications/community/smg.png?v=valveisgoodatcaching",
         Bt =
           n.p +
@@ -3492,10 +3490,10 @@
         jn =
           n.p +
           "images/applications/community/knife_widowmaker.png?v=valveisgoodatcaching",
-        Jn =
+        Un =
           n.p +
           "images/applications/community/knife_butterfly.png?v=valveisgoodatcaching",
-        Un =
+        Jn =
           n.p +
           "images/applications/community/knife_m9_bayonet.png?v=valveisgoodatcaching",
         Bn =
@@ -3509,8 +3507,8 @@
           MG: (0, r.YJ)(Ht),
           Pistol: (0, r.YJ)(Dt),
           Rifle: (0, r.YJ)(jt),
-          Shotgun: (0, r.YJ)(Jt),
-          SMG: (0, r.YJ)(Ut),
+          Shotgun: (0, r.YJ)(Ut),
+          SMG: (0, r.YJ)(Jt),
           Sniper: (0, r.YJ)(Bt),
         },
         qn = {
@@ -3564,8 +3562,8 @@
           knife_skeleton: (0, r.YJ)(Hn),
           knife_stiletto: (0, r.YJ)(Dn),
           knife_widowmaker: (0, r.YJ)(jn),
-          knife_butterfly: (0, r.YJ)(Jn),
-          knife_m9_bayonet: (0, r.YJ)(Un),
+          knife_butterfly: (0, r.YJ)(Un),
+          knife_m9_bayonet: (0, r.YJ)(Jn),
           knife_karambit: (0, r.YJ)(Bn),
           bayonet: (0, r.YJ)(Zn),
         };
@@ -5014,7 +5012,7 @@
         delete y[Ca];
         const b = !i.facets.Event || 0 === Object.keys(i.facets).length;
         !i.app || delete y[ba];
-        const S = Ja(ha, y);
+        const S = Ua(ha, y);
         if (
           ((0, a.useEffect)(() => {
             !u && v && (m(!0), s && v[s.appid] && l({ ...i, app: s }));
@@ -5417,7 +5415,7 @@
       }
       function Ya(e) {
         const { appid: t, facets: n, ...r } = e,
-          o = Ja(t, n);
+          o = Ua(t, n);
         return 0 === o.length
           ? a.createElement(
               a.Fragment,
@@ -5481,14 +5479,14 @@
         });
       }
       const ja = 2;
-      function Ja(e, t) {
+      function Ua(e, t) {
         return (0, a.useMemo)(() => {
           if (!t) return [];
-          const n = Ua[e];
+          const n = Ja[e];
           return n ? n(t) : Ba(t);
         }, [t, e]);
       }
-      const Ua = { [ha]: (e) => Ba(e, 3) };
+      const Ja = { [ha]: (e) => Ba(e, 3) };
       function Ba(e, t) {
         const n = "number" == typeof t ? t : ja,
           a = [],

@@ -1200,9 +1200,7 @@
       }
       function _() {
         return _().languages.map((_) => {
-          return 2 == (_ = _.strISOCode).length
-            ? `${_}-${_._.country_code}`
-            : _;
+          return 2 == (_ = _.strISOCode).length ? `${_}-${_._.COUNTRY}` : _;
           var _;
         });
       }
