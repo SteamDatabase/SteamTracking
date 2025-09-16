@@ -199,19 +199,15 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: u,
           },
-          product_banner: {
-            width: [1200, 1100],
-            height: [175, 160],
-            rgAcceptableTypes: u,
-          },
+          product_banner: { width: 1100, height: 160, rgAcceptableTypes: u },
           product_mobile_banner: {
             width: 500,
             height: 160,
             rgAcceptableTypes: u,
           },
           product_banner_override: {
-            width: [1200, 1100],
-            height: [175, 160],
+            width: 1100,
+            height: 160,
             rgAcceptableTypes: u,
           },
           product_mobile_banner_override: {

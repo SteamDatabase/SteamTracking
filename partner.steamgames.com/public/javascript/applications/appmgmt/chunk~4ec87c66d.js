@@ -41964,7 +41964,7 @@
     },
     21257: (e, t, a) => {
       "use strict";
-      a.d(t, { OL: () => Se, Vi: () => pe, sw: () => me });
+      a.d(t, { OL: () => ve, Vi: () => _e, sw: () => de });
       var n = a(16811),
         r = a(65946),
         i = a(90626),
@@ -42129,7 +42129,7 @@
               i.createElement(
                 "div",
                 { className: c().AssetSpecs },
-                i.createElement(Se, {
+                i.createElement(ve, {
                   strTemplateURL:
                     "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                   strDocURL:
@@ -42496,7 +42496,7 @@
                   i.createElement(
                     "div",
                     { className: c().AssetSpecs },
-                    i.createElement(Se, {
+                    i.createElement(ve, {
                       strTemplateURL:
                         "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                       strDocURL:
@@ -42635,7 +42635,7 @@
                 i.createElement(
                   "div",
                   { className: c().AssetSpecs },
-                  i.createElement(Se, {
+                  i.createElement(ve, {
                     strTemplateURL:
                       "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                     strDocURL:
@@ -42764,7 +42764,7 @@
                 i.createElement(
                   "div",
                   { className: c().AssetSpecs },
-                  i.createElement(Se, {
+                  i.createElement(ve, {
                     strTemplateURL:
                       "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                     strDocURL:
@@ -42851,7 +42851,8 @@
           }),
         );
       }
-      function ie(e) {
+      var ie = a(73744);
+      function se(e) {
         const { planIdentify: t } = e,
           a = (0, n.bE)(),
           [s, l, o, m, d, u, p] = (0, r.q3)(() => [
@@ -42886,7 +42887,7 @@
                 i.createElement(
                   "div",
                   { className: c().AssetSpecs },
-                  i.createElement(Se, {
+                  i.createElement(ve, {
                     strTemplateURL:
                       "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                     strDocURL:
@@ -42970,7 +42971,11 @@
                     i.createElement(
                       "div",
                       null,
-                      (0, h.we)("#AssetRequest_General_Size", 940, 460),
+                      (0, h.we)(
+                        "#AssetRequest_General_Size",
+                        (0, ie.qj)(ie.Fj.sale_logo.width),
+                        (0, ie.qj)(ie.Fj.sale_logo.height),
+                      ),
                     ),
                     i.createElement(
                       "div",
@@ -43018,7 +43023,11 @@
                     i.createElement(
                       "div",
                       null,
-                      (0, h.we)("#AssetRequest_General_Size", 800, 450),
+                      (0, h.we)(
+                        "#AssetRequest_General_Size",
+                        (0, ie.qj)(ie.Fj.capsule.width),
+                        (0, ie.qj)(ie.Fj.capsule.height),
+                      ),
                     ),
                     i.createElement(
                       "div",
@@ -43066,7 +43075,11 @@
                     i.createElement(
                       "div",
                       null,
-                      (0, h.we)("#AssetRequest_General_Size", 1920, 622),
+                      (0, h.we)(
+                        "#AssetRequest_General_Size",
+                        (0, ie.qj)(ie.Fj.localized_title_image.width),
+                        (0, ie.qj)(ie.Fj.localized_title_image.height),
+                      ),
                     ),
                     i.createElement(
                       "div",
@@ -43114,7 +43127,11 @@
                     i.createElement(
                       "div",
                       null,
-                      (0, h.we)("#AssetRequest_General_Size", 1100, 160),
+                      (0, h.we)(
+                        "#AssetRequest_General_Size",
+                        (0, ie.qj)(ie.Fj.product_banner.width),
+                        (0, ie.qj)(ie.Fj.product_banner.height),
+                      ),
                     ),
                     i.createElement(
                       "div",
@@ -43164,7 +43181,11 @@
                     i.createElement(
                       "div",
                       null,
-                      (0, h.we)("#AssetRequest_General_Size", 500, 160),
+                      (0, h.we)(
+                        "#AssetRequest_General_Size",
+                        (0, ie.qj)(ie.Fj.product_mobile_banner.width),
+                        (0, ie.qj)(ie.Fj.product_mobile_banner.height),
+                      ),
                     ),
                     i.createElement(
                       "div",
@@ -43204,7 +43225,7 @@
           )
         );
       }
-      function se(e) {
+      function le(e) {
         const { planIdentify: t } = e,
           a = (0, n.bE)(),
           [s, l, o, m] = (0, r.q3)(() => [
@@ -43333,10 +43354,10 @@
           i.createElement("br", null),
         );
       }
-      var le = a(24440),
-        oe = a.n(le),
-        ce = a(13549);
-      function me(e) {
+      var oe = a(24440),
+        ce = a.n(oe),
+        me = a(13549);
+      function de(e) {
         const { planIdentify: t, bAdminView: a } = e,
           s = (0, n.bE)(),
           [o, d, u] = (0, r.q3)(() => [
@@ -43359,7 +43380,7 @@
             i.createElement(
               i.Fragment,
               null,
-              i.createElement(ue, null),
+              i.createElement(pe, null),
               i.createElement("br", null),
               i.createElement("br", null),
             ),
@@ -43375,7 +43396,7 @@
                 i.createElement(
                   i.Fragment,
                   null,
-                  i.createElement(de, {
+                  i.createElement(ue, {
                     oInput: s,
                     partnerID: t.permitted_partner_id,
                   }),
@@ -43386,8 +43407,8 @@
                 ? i.createElement(
                     i.Fragment,
                     null,
-                    i.createElement(_e, null),
-                    i.createElement(he, {
+                    i.createElement(ge, null),
+                    i.createElement(Ee, {
                       planIdentify: t,
                       fnSetShowDetails: _,
                     }),
@@ -43419,12 +43440,12 @@
               i.createElement(Y, { planIdentify: t }),
               i.createElement(T, { planIdentify: t, index: 0 }),
               i.createElement(T, { planIdentify: t, index: 1 }),
-              i.createElement(ie, { planIdentify: t }),
               i.createElement(se, { planIdentify: t }),
+              i.createElement(le, { planIdentify: t }),
             ),
         );
       }
-      function de(e) {
+      function ue(e) {
         const { oInput: t, partnerID: a } = e,
           n = (0, Q.sk)(t.GetDiscountEventID()),
           r = (0, Z.vV)(t.GetDiscountEventID()),
@@ -43454,7 +43475,7 @@
           i.createElement(ee.Lc, { rgPackagesDiscounts: n, oDiscountEvent: r }),
         );
       }
-      function ue(e) {
+      function pe(e) {
         return i.createElement(
           "div",
           { className: c().AssetRequestDoneCtn },
@@ -43475,7 +43496,7 @@
           ),
         );
       }
-      function pe(e) {
+      function _e(e) {
         const [t] = (0, i.useState)(() =>
             (0, X.Tc)("promotion_plan_identity", "application_config"),
           ),
@@ -43489,10 +43510,10 @@
               null,
               "Warning: Promotion is over. No further access is granted.",
             ),
-          i.createElement(me, { planIdentify: t, bAdminView: !1 }),
+          i.createElement(de, { planIdentify: t, bAdminView: !1 }),
         );
       }
-      function _e(e) {
+      function ge(e) {
         const t = (0, n.bE)();
         return i.createElement(
           "div",
@@ -43575,7 +43596,7 @@
             ),
         );
       }
-      function ge(e) {
+      function he(e) {
         const {
           bCompleted: t,
           bRequired: a,
@@ -43627,7 +43648,7 @@
           ),
         );
       }
-      function he(e) {
+      function Ee(e) {
         const { fnSetShowDetails: t } = e,
           a = (0, n.bE)(),
           [
@@ -43713,7 +43734,7 @@
           i.createElement("h2", null, (0, h.we)("#AssetRequest_CheckList")),
           Boolean(D) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: I,
                 title: (0, h.we)("#AssetRequest_Check_Takeover"),
@@ -43723,7 +43744,7 @@
             ),
           Boolean(C) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: T,
                 title: (0, h.we)("#AssetRequest_Check_Takeunder"),
@@ -43733,7 +43754,7 @@
             ),
           Boolean(B) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: A,
                 title: (0, h.we)("#AssetRequest_Check_SalePage"),
@@ -43743,7 +43764,7 @@
             ),
           Boolean(s) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: u,
                 title: (0, h.we)("#AssetRequest_Check_Spotlight"),
@@ -43753,7 +43774,7 @@
             ),
           Boolean(U) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: !0,
                 title: (0, h.we)("#AssetRequest_Check_AutoRenderMM"),
@@ -43764,7 +43785,7 @@
             ),
           Boolean(o) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: E,
                 title: (0, h.we)("#AssetRequest_Check_MM"),
@@ -43774,7 +43795,7 @@
             ),
           Boolean(d) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: S,
                 title: (0, h.we)("#AssetRequest_Check_MM") + " #2",
@@ -43784,7 +43805,7 @@
             ),
           Boolean(L) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: F,
                 title: (0, h.we)("#AssetRequest_Check_PromoApp"),
@@ -43792,10 +43813,10 @@
               },
               (0, h.we)("#AssetRequest_Check_PromoApp_desc"),
             ),
-          i.createElement(Ee, null),
+          i.createElement(Se, null),
           Boolean(R) &&
             i.createElement(
-              ge,
+              he,
               {
                 bCompleted: Boolean(N),
                 title: (0, h.we)("#AssetRequest_UpdateAnnouncement"),
@@ -43814,19 +43835,19 @@
                   "a",
                   {
                     target: "_blank",
-                    className: oe().Link,
+                    className: ce().Link,
                     href: `${J.TS.COMMUNITY_BASE_URL}ogg/${O}/partnerevents/create`,
                   },
                   (0, h.we)("#AssetRequest_UpdateAnnouncement_create"),
                 ),
-              i.createElement(ce.q, {
+              i.createElement(me.q, {
                 appid: O,
                 selectedEventGID: N,
                 fnSetUpdateEvent: a.SetUpdateEvent,
               }),
             ),
           i.createElement(
-            ge,
+            he,
             {
               bCompleted: w.trim().length > 0,
               title: (0, h.we)("#AssetRequest_Check_ContactInfo"),
@@ -43852,7 +43873,7 @@
             ),
           ),
           i.createElement(
-            ge,
+            he,
             {
               bCompleted: v,
               title: (0, h.we)("#AssetRequest_Check_Special"),
@@ -43894,7 +43915,7 @@
                 className: c().SubmitButton,
                 onClick: (e) =>
                   (0, p.pg)(
-                    i.createElement(ve, { strURL: b, fnSetShowDetails: t }),
+                    i.createElement(ye, { strURL: b, fnSetShowDetails: t }),
                     (0, g.uX)(e),
                   ),
               },
@@ -43907,11 +43928,11 @@
           ),
         );
       }
-      function Ee(e) {
+      function Se(e) {
         const t = (0, n.bE)(),
           [a] = (0, r.q3)(() => [t.GetArtInputLink()]);
         return i.createElement(
-          ge,
+          he,
           {
             bCompleted: a?.length > 0 && m.pd.validateUrl(a),
             title: (0, h.we)("#AssetRequest_Link_Title"),
@@ -43930,7 +43951,7 @@
           }),
         );
       }
-      function Se(e) {
+      function ve(e) {
         const { strTemplateURL: t, strDocURL: a, strTemplateName: n } = e;
         return i.createElement(
           i.Fragment,
@@ -43959,7 +43980,7 @@
           ),
         );
       }
-      function ve(e) {
+      function ye(e) {
         const { closeModal: t, strURL: a, fnSetShowDetails: r } = e,
           { fnUpdatePipelineInputAsPartner: s } = ((0, n.bE)(), (0, n.NY)()),
           [l] = (0, D.QD)("inputaccesskey", void 0),
@@ -50007,8 +50028,8 @@
                 case "image/jpeg":
                 case "image/png":
                   j.gM.forEach((e) => {
-                    const t = Q.Fj[(0, j.mF)(e)];
-                    s == t.width && (o = e);
+                    const t = (0, j.mF)(e);
+                    (0, Q.yu)(s, l, t) && (o = e);
                   }),
                     o || (o = "localized_sale_header");
               }
@@ -50050,9 +50071,9 @@
                       l.createElement(
                         "span",
                         null,
-                        a.width,
+                        (0, Q.qj)(a.width),
                         "px by ",
-                        a.height,
+                        (0, Q.qj)(a.height),
                         "px",
                       ),
                       " (.jpg,.png,.gif)",
@@ -51076,20 +51097,19 @@
                 case "image/gif":
                 case "image/jpeg":
                 case "image/png":
-                  o =
-                    s == Q.Fj.takeover_art.width ? "page_bg" : "page_bg_mobile";
+                  o = (0, Q.yu)(s, l, "takeover_art")
+                    ? "page_bg"
+                    : "page_bg_mobile";
                   break;
                 case "video/mp4":
-                  o =
-                    s == Q.Fj.takeover_mp4_art.width
-                      ? "mp4_page_bg"
-                      : "mp4_page_bg_mobile";
+                  o = (0, Q.yu)(s, l, "takeover_mp4_art")
+                    ? "mp4_page_bg"
+                    : "mp4_page_bg_mobile";
                   break;
                 case "video/webm":
-                  o =
-                    s == Q.Fj.takeover_webm_art.width
-                      ? "webm_page_bg"
-                      : "webm_page_bg_mobile";
+                  o = (0, Q.yu)(s, l, "takeover_webm_art")
+                    ? "webm_page_bg"
+                    : "webm_page_bg_mobile";
                   break;
                 default:
                   console.log(
@@ -53377,12 +53397,11 @@
                 case "image/jpeg":
                 case "image/png":
                 case "image/webp":
-                  m =
-                    s == o.Fj.localized_marketingmessage_poster.width
-                      ? "poster"
-                      : "localized_marketingmessage_background" === i
-                        ? "background"
-                        : "ll_image";
+                  m = (0, o.yu)(s, l, "localized_marketingmessage_poster")
+                    ? "poster"
+                    : "localized_marketingmessage_background" === i
+                      ? "background"
+                      : "ll_image";
                   break;
                 case "video/mp4":
                   m = "mp4";

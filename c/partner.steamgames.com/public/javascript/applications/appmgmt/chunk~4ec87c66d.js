@@ -47222,6 +47222,7 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { planIdentify: _ } = _,
           _ = (0, _._)(),
@@ -47367,7 +47368,11 @@
                     _.createElement(
                       "div",
                       null,
-                      (0, _._)("#AssetRequest_General_Size", 940, 460),
+                      (0, _._)(
+                        "#AssetRequest_General_Size",
+                        (0, _._)(_._.sale_logo.width),
+                        (0, _._)(_._.sale_logo.height),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -47427,7 +47432,11 @@
                     _.createElement(
                       "div",
                       null,
-                      (0, _._)("#AssetRequest_General_Size", 800, 450),
+                      (0, _._)(
+                        "#AssetRequest_General_Size",
+                        (0, _._)(_._.capsule.width),
+                        (0, _._)(_._.capsule.height),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -47487,7 +47496,11 @@
                     _.createElement(
                       "div",
                       null,
-                      (0, _._)("#AssetRequest_General_Size", 1920, 622),
+                      (0, _._)(
+                        "#AssetRequest_General_Size",
+                        (0, _._)(_._.localized_title_image.width),
+                        (0, _._)(_._.localized_title_image.height),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -47547,7 +47560,11 @@
                     _.createElement(
                       "div",
                       null,
-                      (0, _._)("#AssetRequest_General_Size", 1100, 160),
+                      (0, _._)(
+                        "#AssetRequest_General_Size",
+                        (0, _._)(_._.product_banner.width),
+                        (0, _._)(_._.product_banner.height),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -47609,7 +47626,11 @@
                     _.createElement(
                       "div",
                       null,
-                      (0, _._)("#AssetRequest_General_Size", 500, 160),
+                      (0, _._)(
+                        "#AssetRequest_General_Size",
+                        (0, _._)(_._.product_mobile_banner.width),
+                        (0, _._)(_._.product_mobile_banner.height),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -55739,8 +55760,8 @@
                 case "image/jpeg":
                 case "image/png":
                   _._.forEach((_) => {
-                    const _ = _._[(0, _._)(_)];
-                    _ == _.width && (_ = _);
+                    const _ = (0, _._)(_);
+                    (0, _._)(_, _, _) && (_ = _);
                   }),
                     _ || (_ = "localized_sale_header");
               }
@@ -55794,9 +55815,9 @@
                     _.createElement(
                       "span",
                       null,
-                      _.width,
+                      (0, _._)(_.width),
                       "px by ",
-                      _.height,
+                      (0, _._)(_.height),
                       "px",
                     ),
                     " (.jpg,.png,.gif)",
@@ -56895,20 +56916,19 @@
                 case "image/gif":
                 case "image/jpeg":
                 case "image/png":
-                  _ =
-                    _ == _._.takeover_art.width ? "page_bg" : "page_bg_mobile";
+                  _ = (0, _._)(_, _, "takeover_art")
+                    ? "page_bg"
+                    : "page_bg_mobile";
                   break;
                 case "video/mp4":
-                  _ =
-                    _ == _._.takeover_mp4_art.width
-                      ? "mp4_page_bg"
-                      : "mp4_page_bg_mobile";
+                  _ = (0, _._)(_, _, "takeover_mp4_art")
+                    ? "mp4_page_bg"
+                    : "mp4_page_bg_mobile";
                   break;
                 case "video/webm":
-                  _ =
-                    _ == _._.takeover_webm_art.width
-                      ? "webm_page_bg"
-                      : "webm_page_bg_mobile";
+                  _ = (0, _._)(_, _, "takeover_webm_art")
+                    ? "webm_page_bg"
+                    : "webm_page_bg_mobile";
                   break;
                 default:
                   console.log(
@@ -59440,12 +59460,11 @@
                 case "image/jpeg":
                 case "image/png":
                 case "image/webp":
-                  _ =
-                    _ == _._.localized_marketingmessage_poster.width
-                      ? "poster"
-                      : "localized_marketingmessage_background" === _
-                        ? "background"
-                        : "ll_image";
+                  _ = (0, _._)(_, _, "localized_marketingmessage_poster")
+                    ? "poster"
+                    : "localized_marketingmessage_background" === _
+                      ? "background"
+                      : "ll_image";
                   break;
                 case "video/mp4":
                   _ = "mp4";

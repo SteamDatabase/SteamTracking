@@ -229,8 +229,8 @@
             rgAcceptableTypes: _,
           },
           product_banner: {
-            width: [1200, 1100],
-            height: [175, 160],
+            width: 1100,
+            height: 160,
             rgAcceptableTypes: _,
           },
           product_mobile_banner: {
@@ -239,8 +239,8 @@
             rgAcceptableTypes: _,
           },
           product_banner_override: {
-            width: [1200, 1100],
-            height: [175, 160],
+            width: 1100,
+            height: 160,
             rgAcceptableTypes: _,
           },
           product_mobile_banner_override: {

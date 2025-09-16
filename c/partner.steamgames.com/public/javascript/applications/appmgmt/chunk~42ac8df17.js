@@ -7506,8 +7506,8 @@
           (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`);
           return {
             sKey: _,
-            width: Array.isArray(_.width) ? _.width[0] : _.width,
-            height: Array.isArray(_.height) ? _.height[0] : _.height,
+            width: (0, _._)(_.width),
+            height: (0, _._)(_.height),
             bEnforceDimensions: !_.bDisableEnforceDimensions,
             artworkType: _,
             bHiddenFromDropdown: "hero" === _,
