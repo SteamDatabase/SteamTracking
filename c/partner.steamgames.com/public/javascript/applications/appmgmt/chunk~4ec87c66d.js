@@ -58636,6 +58636,7 @@
             _.createElement(_._, {
               tabs: _,
               bDisableRouting: _,
+              startingTab: _,
             }),
             _.createElement("div", {
               className: _().ClearThings,

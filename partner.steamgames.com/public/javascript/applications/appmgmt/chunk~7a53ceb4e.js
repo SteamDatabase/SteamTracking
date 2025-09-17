@@ -353,10 +353,7 @@
       function b(e, t, i, s) {
         const n = f[i];
         return (
-          !!n &&
-          (n.bDisableEnforceDimensions
-            ? s
-            : e === n.width && t === n.height && w(e, t, n.width, n.height))
+          !!n && (n.bDisableEnforceDimensions ? s : w(e, t, n.width, n.height))
         );
       }
       function P(e, t, i) {

@@ -419,10 +419,7 @@
       function _(_, _, _, _) {
         const _ = _[_];
         return (
-          !!_ &&
-          (_.bDisableEnforceDimensions
-            ? _
-            : _ === _.width && _ === _.height && _(_, _, _.width, _.height))
+          !!_ && (_.bDisableEnforceDimensions ? _ : _(_, _, _.width, _.height))
         );
       }
       function _(_, _, _) {

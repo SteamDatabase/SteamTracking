@@ -52683,7 +52683,11 @@
                 l.createElement("h1", null, o),
                 l.createElement("hr", null),
               ),
-            l.createElement(h.V, { tabs: S, bDisableRouting: s }),
+            l.createElement(h.V, {
+              tabs: S,
+              bDisableRouting: s,
+              startingTab: c,
+            }),
             l.createElement("div", { className: _().ClearThings }),
           )
         );
