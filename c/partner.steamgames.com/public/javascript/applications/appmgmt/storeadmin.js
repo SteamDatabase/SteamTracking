@@ -2339,11 +2339,16 @@
                       _,
                     ),
                   ),
-                  _?.length > 0 ? _.createElement("br") : void 0,
+                  _?.length > 0
+                    ? _.createElement("br", {
+                        key: "br",
+                      })
+                    : void 0,
                   _.createElement(
                     "a",
                     {
                       href: "https://partner.steamgames.com/doc/store/page/assets#error",
+                      key: "a",
                     },
                     (0, _._)(
                       "#StoreAdmin_ExtraAssetUpload_UnknownUploadFailure",
@@ -2543,10 +2548,7 @@
               "GetUploadUrl",
               _,
             );
-            if (!_.bSuccess)
-              return {
-                bSuccess: !1,
-              };
+            if (!_.bSuccess) return _;
             _ = _.data;
             const _ = await _()
               .put(_.upload_url, _.file, {
@@ -2586,10 +2588,7 @@
               "BeginUploadUrl",
               _,
             );
-            if (!_.bSuccess)
-              return {
-                bSuccess: !1,
-              };
+            if (!_.bSuccess) return _;
             const _ = _.data.request_id;
             return (
               (_.status = "processing"),
@@ -2616,9 +2615,7 @@
                 bSuccess: !0,
                 rgStatus: _.data.status,
               }
-            : {
-                bSuccess: !1,
-              };
+            : _;
         }
         async CompleteUpload(_, _, _, _) {
           const _ = new FormData();

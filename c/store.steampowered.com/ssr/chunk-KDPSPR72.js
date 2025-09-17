@@ -8,6 +8,18 @@ import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_(), 1);
+function _() {
+  let { data: _ } = _();
+  return _.useMemo(() => {
+    if (_ !== void 0) return _(_);
+  }, [_]);
+}
+function _(_) {
+  return {
+    content_descriptors_excluded: _,
+  };
+}
+var _ = _(_(), 1);
 function _(_, _) {
   return {
     ..._,
@@ -71,18 +83,6 @@ async function _(_, _, _, _, _, _ = {}) {
       metadata: _.Body().metadata().toObject(),
     }
   );
-}
-var _ = _(_(), 1);
-function _() {
-  let { data: _ } = _();
-  return _.useMemo(() => {
-    if (_ !== void 0) return _(_);
-  }, [_]);
-}
-function _(_) {
-  return {
-    content_descriptors_excluded: _,
-  };
 }
 var _ = _(_());
 var _ = _(_());

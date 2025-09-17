@@ -429,7 +429,7 @@
         (0, s.Cg)([n.sH], a.prototype, "width", void 0),
         (0, s.Cg)([n.sH], a.prototype, "height", void 0),
         (0, s.Cg)([n.sH], a.prototype, "status", void 0),
-        (0, s.Cg)([n.sH], a.prototype, "message", void 0),
+        (0, s.Cg)([n.sH.ref], a.prototype, "message", void 0),
         (0, s.Cg)([n.sH], a.prototype, "language", void 0);
     },
     64953: (e, t, i) => {

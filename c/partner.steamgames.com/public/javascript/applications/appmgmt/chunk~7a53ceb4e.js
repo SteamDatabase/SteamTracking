@@ -501,7 +501,7 @@
         (0, _._)([_._], _.prototype, "width", void 0),
         (0, _._)([_._], _.prototype, "height", void 0),
         (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0),
+        (0, _._)([_._.ref], _.prototype, "message", void 0),
         (0, _._)([_._], _.prototype, "language", void 0);
     },
     chunkid: (module, module_exports, __webpack_require__) => {

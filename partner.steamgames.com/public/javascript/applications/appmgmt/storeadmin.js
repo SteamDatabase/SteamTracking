@@ -2152,11 +2152,12 @@
                   ...n.map((e, t) =>
                     r.createElement("span", { key: `error${t}` }, e),
                   ),
-                  n?.length > 0 ? r.createElement("br") : void 0,
+                  n?.length > 0 ? r.createElement("br", { key: "br" }) : void 0,
                   r.createElement(
                     "a",
                     {
                       href: "https://partner.steamgames.com/doc/store/page/assets#error",
+                      key: "a",
                     },
                     (0, d.we)(
                       "#StoreAdmin_ExtraAssetUpload_UnknownUploadFailure",
@@ -2341,7 +2342,7 @@
               "GetUploadUrl",
               n,
             );
-            if (!o.bSuccess) return { bSuccess: !1 };
+            if (!o.bSuccess) return o;
             a = o.data;
             const l = await h()
               .put(a.upload_url, e.file, {
@@ -2375,7 +2376,7 @@
               "BeginUploadUrl",
               n,
             );
-            if (!o.bSuccess) return { bSuccess: !1 };
+            if (!o.bSuccess) return o;
             const l = o.data.request_id;
             return (e.status = "processing"), { bSuccess: !0, nRequestId: l };
           }
@@ -2391,9 +2392,7 @@
             "CheckUploadStatus",
             t,
           );
-          return a.bSuccess
-            ? { bSuccess: !0, rgStatus: a.data.status }
-            : { bSuccess: !1 };
+          return a.bSuccess ? { bSuccess: !0, rgStatus: a.data.status } : a;
         }
         async CompleteUpload(e, t, n, a) {
           const r = new FormData();
