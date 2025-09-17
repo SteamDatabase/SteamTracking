@@ -551,16 +551,17 @@
     73744: (e, t, n) => {
       "use strict";
       n.d(t, {
+        Ek: () => c,
         Fj: () => d,
         Ho: () => r,
-        N_: () => p,
-        XY: () => u,
+        N_: () => _,
+        XY: () => h,
         dM: () => s,
         qj: () => i,
-        s4: () => m,
-        vz: () => h,
+        s4: () => u,
+        vz: () => p,
         x: () => l,
-        yu: () => c,
+        yu: () => m,
       });
       function i(e) {
         return Array.isArray(e) ? e[0] : e;
@@ -654,15 +655,19 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: o,
           },
-          product_banner: { width: 1100, height: 160, rgAcceptableTypes: o },
+          product_banner: {
+            width: [1200, 1100],
+            height: [175, 160],
+            rgAcceptableTypes: o,
+          },
           product_mobile_banner: {
             width: 500,
             height: 160,
             rgAcceptableTypes: o,
           },
           product_banner_override: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: o,
           },
           product_mobile_banner_override: {
@@ -789,22 +794,24 @@
           app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: o },
         };
       function c(e, t, n, i) {
-        const s = d[n];
-        if (!s) return !1;
-        if (s.bDisableEnforceDimensions) return i;
-        if (e !== s.width || t !== s.height) return !1;
-        let a = null;
-        if (Array.isArray(s.width)) {
-          if (((a = s.width.findIndex((t) => e === t)), a < 0)) return !1;
-        } else if (e !== s.width) return !1;
-        if (Array.isArray(s.height)) {
-          let e = s.height.findIndex((e) => t === e);
+        let s = null;
+        if (Array.isArray(n)) {
+          if (((s = n.findIndex((t) => e === t)), s < 0)) return !1;
+        } else if (e !== n) return !1;
+        if (Array.isArray(i)) {
+          let e = i.findIndex((e) => t === e);
           if (e < 0) return !1;
-          if (null !== a && e !== a) return !1;
-        } else if (t !== s.height) return !1;
+          if (null !== s && e !== s) return !1;
+        } else if (t !== i) return !1;
         return !0;
       }
-      function m(e, t, n) {
+      function m(e, t, n, i) {
+        const s = d[n];
+        return (
+          !!s && (s.bDisableEnforceDimensions ? i : c(e, t, s.width, s.height))
+        );
+      }
+      function u(e, t, n) {
         const i = d[n];
         if (!i) return !1;
         if (i.bDisableEnforceDimensions) return !0;
@@ -817,16 +824,16 @@
         } else if (t < i.height) return !1;
         return !0;
       }
-      function u(e) {
+      function h(e) {
         const t = d[e];
         return (
           t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
         );
       }
-      function h(e, t) {
-        return t.filter((t) => p(e, t));
-      }
       function p(e, t) {
+        return t.filter((t) => _(e, t));
+      }
+      function _(e, t) {
         return d[t].rgAcceptableTypes.includes(e);
       }
     },
@@ -3387,7 +3394,7 @@
               (c = !e.bDisableEnforceDimensions));
           }
           const u = this.width >= (0, a.dM)(s) && this.height >= (0, a.dM)(r),
-            h = c ? this.width === s && this.height === r : u,
+            h = c ? (0, a.Ek)(this.width, this.height, s, r) : u,
             p = t && t != this.fileType,
             _ =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
@@ -3423,13 +3430,14 @@
                         : ((Array.isArray(s) && this.width != (0, a.qj)(s)) ||
                             (Array.isArray(r) &&
                               this.height != (0, a.qj)(r))) &&
+                          ((v = null != v ? v : []),
                           v.push(
                             (0, o.we)(
                               "#ImageUpload_PreferredDimension",
                               (0, a.qj)(s),
                               (0, a.qj)(r),
                             ),
-                          )
+                          ))
                       : (E = (0, o.we)(
                           "#ImageUpload_TooSmall",
                           (0, a.qj)(s),

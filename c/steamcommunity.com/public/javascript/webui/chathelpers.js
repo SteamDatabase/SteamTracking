@@ -2101,7 +2101,7 @@ var CLSTAMP = "steamdb";
         1449: "9aa86b28046319e58b7a",
         1499: "a2054d6572ec7a62f1cd",
         1973: "d6d68819f021d446ec8a",
-        2256: "c091060fd4bf18926f18",
+        2256: "0e06225cb6efd3cdea15",
         2320: "39d313434f943336d019",
         2435: "1bd747cd17d30cd7c573",
         2632: "4a3cd4fc2b4aa9fcc873",
@@ -2301,6 +2301,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(57792));
+  var _ = _._(void 0, [1068], () => _(57670));
   _ = _._(_);
 })();
