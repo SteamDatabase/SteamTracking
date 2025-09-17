@@ -19,6 +19,9 @@
     },
     21134: (e) => {
       e.exports = {
+        ClanImageContainer: "_1TEbObXeFqUF-IRZKx0Qg5",
+        Selected: "_3VVyv-d-F-7paQgn90RTr0",
+        "extra-asset-blink": "_3AFR3dAEjYGOiz7dgTms8Y",
         ClanImageModalContent: "SsgHukHcE1jf7p3W6Ta8g",
         ClanImageModalMode: "_1RAzAQViGO8A_wCFzSUStH",
         Active: "_1qsUls0lc9uJ_RarLA3dcG",
@@ -207,8 +210,8 @@
       }
       var O = n(12155),
         R = n(88997),
-        L = n(60155),
-        F = n(5068),
+        F = n(60155),
+        L = n(5068),
         P = n(64753),
         V = n(9154),
         H = n(62490),
@@ -401,7 +404,7 @@
                     m.createElement(
                       "div",
                       {
-                        className: F.CarouselList,
+                        className: L.CarouselList,
                         ...e.droppableProps,
                         ref: e.innerRef,
                       },
@@ -434,10 +437,10 @@
                   label: (0, C.we)(
                     "#EventEditor_CarouselEditor_AddAnotherItem",
                   ),
-                  className: F.AddButton,
+                  className: L.AddButton,
                   onClick: v,
                 },
-                m.createElement(D.OMN, { className: F.PlusIcon }),
+                m.createElement(D.OMN, { className: L.PlusIcon }),
               ),
             ),
             m.createElement(
@@ -462,26 +465,26 @@
         return m.createElement(
           "div",
           {
-            className: d()(F.ListItem, F.DraggableItem),
+            className: d()(L.ListItem, L.DraggableItem),
             ref: t.innerRef,
             ...t.draggableProps,
             ...t.dragHandleProps,
           },
           m.createElement(
             "div",
-            { className: F.ImagePreview },
+            { className: L.ImagePreview },
             m.createElement("img", {
               src: E.z.ReplacementTokenToClanImageURL(n.node.attrs.src),
             }),
             m.createElement(
               "div",
-              { className: F.Controls },
+              { className: L.Controls },
               m.createElement(
                 "div",
-                { className: F.Control },
+                { className: L.Control },
                 m.createElement(
                   y.ff,
-                  { onClick: r, className: F.Button },
+                  { onClick: r, className: L.Button },
                   m.createElement(D.sED, null),
                 ),
               ),
@@ -489,7 +492,7 @@
           ),
         );
       }
-      function J(e) {
+      function Z(e) {
         const {
             schemaConfig: t,
             node: n,
@@ -499,61 +502,63 @@
             carouselNodeType: s,
             clanSteamID: i,
             setAttrs: c,
-            focusView: d,
-            removeNode: u,
-            update: p,
+            focusView: u,
+            removeNode: p,
+            update: E,
+            selected: _,
           } = e,
-          [E, _, g] = (0, k.uD)(),
-          v = te(n);
-        let h = m.createElement(ae, {
+          [g, v, h] = (0, k.uD)(),
+          f = te(n);
+        let b = m.createElement(ae, {
           schemaConfig: t,
           event: a.GetEventModel(),
           node: n,
-          nodeAttrs: v,
+          nodeAttrs: f,
         });
-        const f = m.useCallback(() => {
-            d(), g();
-          }, [d, g]),
-          b = m.useCallback((e) => p((0, r.M)(e)), [p]),
-          [C, w] = Q(b, {
+        const C = m.useCallback(() => {
+            u(), h();
+          }, [u, h]),
+          w = m.useCallback((e) => E((0, r.M)(e)), [E]),
+          [I, M] = Q(w, {
             clanSteamID: i,
             imageNodeType: o,
             videoNodeType: l,
             carouselNodeType: s,
           }),
-          I = m.useCallback(() => {
-            C([n]);
-          }, [n, C]),
-          M = { createCarousel: s ? I : void 0, src: ne(v) };
+          T = m.useCallback(() => {
+            I([n]);
+          }, [n, I]),
+          y = { createCarousel: s ? T : void 0, src: ne(f) };
+        let D = d()(S.ClanImageContainer, _ && S.Selected);
         return m.createElement(
           m.Fragment,
           null,
-          E &&
+          g &&
             m.createElement(re, {
               bIsEdit: !0,
-              nodeAttrs: v,
-              hideModal: f,
+              nodeAttrs: f,
+              hideModal: C,
               imageNodeType: o,
               videoNodeType: l,
               clanSteamID: i,
               onItemSelected: c,
             }),
-          w,
+          M,
           m.createElement(
             A,
             {
-              className: S.ClanImageContainer,
-              toolbar: m.createElement(Z, {
-                showModal: _,
-                removeNode: u,
-                contextMenuProps: M,
+              className: D,
+              toolbar: m.createElement(J, {
+                showModal: v,
+                removeNode: p,
+                contextMenuProps: y,
               }),
             },
-            h,
+            b,
           ),
         );
       }
-      function Z(e) {
+      function J(e) {
         const { showModal: t, removeNode: n, contextMenuProps: a } = e,
           o = m.useCallback(
             (e) => {
@@ -583,16 +588,16 @@
             window.open(n);
           }, [n]);
         return m.createElement(
-          L.tz,
+          F.tz,
           null,
           t &&
             m.createElement(
-              L.kt,
+              F.kt,
               { onSelected: t },
               (0, C.we)("#EventEditor_CarouselEditor_CreateACarousel"),
             ),
           m.createElement(
-            L.kt,
+            F.kt,
             { onSelected: a },
             (0, C.we)("#EventEditor_ImageEdit_PreviewImage"),
           ),
@@ -1121,7 +1126,7 @@
         we = n(25918),
         ke = n(65946),
         Ie = n(26161),
-        Se = n(87010),
+        Se = n(74718),
         Me = n(78395),
         Te = n(21869),
         ye = n(1397),
@@ -1135,14 +1140,14 @@
         ze = n(87937),
         Oe = n(61819),
         Re = n(88942),
-        Le = n(78327),
-        Fe = n(41735),
-        Pe = n.n(Fe),
+        Fe = n(78327),
+        Le = n(41735),
+        Pe = n.n(Le),
         Ve = n(26408);
       function He(e) {
         const { hideModal: t, fnUpdateSession: n } = e,
           [a, o] = (0, m.useState)(() => Xe(!0, null)),
-          [l, r] = (0, m.useState)(() => Je(!0, null)),
+          [l, r] = (0, m.useState)(() => Ze(!0, null)),
           [s] = (0, ke.q3)(() => [l.location_type]);
         return m.createElement(
           Te.E,
@@ -1153,7 +1158,7 @@
               strTitle: (0, C.we)("#MeetSteam_create_title"),
               onOK: () => n(a, l),
               closeModal: () => {
-                r(Je(!0, null)), o(Xe(!0, null)), t();
+                r(Ze(!0, null)), o(Xe(!0, null)), t();
               },
               bOKDisabled: null == !s,
             },
@@ -1198,7 +1203,7 @@
             sessionInput: a,
             fnUpdateSession: o,
           } = e,
-          [l, r] = (0, m.useState)(() => Je(t, a)),
+          [l, r] = (0, m.useState)(() => Ze(t, a)),
           [s] = (0, ke.q3)(() => [l.location_type]);
         return m.createElement(
           Te.E,
@@ -1213,7 +1218,7 @@
                 o(l), n();
               },
               onCancel: () => {
-                r(Je(t, a)), n();
+                r(Ze(t, a)), n();
               },
               bOKDisabled: !s,
             },
@@ -1507,7 +1512,7 @@
             const t = (0, Re.I)({
               queryKey: ["timezone", e],
               queryFn: async () => {
-                const t = `${Le.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
+                const t = `${Fe.TS.COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones`,
                   n = { reference_time: e },
                   a = await Pe().get(t, { params: n });
                 return null == a ? void 0 : a.data.timezones;
@@ -1613,7 +1618,7 @@
             ),
             null);
       }
-      function Je(e, t) {
+      function Ze(e, t) {
         if (e) {
           const e = Ge.HD.GetTimeNowWithOverride(),
             t = we.mh.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
@@ -1640,7 +1645,7 @@
             ),
             null);
       }
-      function Ze(e) {
+      function Je(e) {
         const t = we.mh.GetEditModel();
         for (
           let n = 0;
@@ -1829,7 +1834,7 @@
         const { sessionID: t, bShowOR: n, focusView: a } = e,
           [o, l] = (0, k.OP)(),
           r = (0, ke.q3)(() => {
-            const { groupIndex: e, sessionIndex: n } = Ze(t);
+            const { groupIndex: e, sessionIndex: n } = Je(t);
             return we.mh.GetEditModel().GetEventModel().jsondata
               .meet_steam_groups[e].sessions[n];
           }),
@@ -1870,7 +1875,7 @@
                 sessionInput: r,
                 fnUpdateSession: (e) => {
                   const n = we.mh.GetEditModel(),
-                    { groupIndex: a, sessionIndex: o } = Ze(t),
+                    { groupIndex: a, sessionIndex: o } = Je(t),
                     l = [
                       ...n.GetEventModel().jsondata.meet_steam_groups[a]
                         .sessions,
@@ -1891,7 +1896,7 @@
                   strDescription: (0, C.we)("#Dialog_AreYouSure"),
                   onOK: () => {
                     const e = we.mh.GetEditModel(),
-                      { groupIndex: n, sessionIndex: a } = Ze(t),
+                      { groupIndex: n, sessionIndex: a } = Je(t),
                       o = [
                         ...e.GetEventModel().jsondata.meet_steam_groups[n]
                           .sessions,
@@ -2620,7 +2625,7 @@
         (0, kt.k3)(n),
           (0, l.c$)(
             m.useMemo(
-              () => (0, pe.sM)({ rules: [Ft(/:([a-zA-Z0-9_]+):$/, a, n)] }),
+              () => (0, pe.sM)({ rules: [Lt(/:([a-zA-Z0-9_]+):$/, a, n)] }),
               [a, n],
             ),
           );
@@ -2628,7 +2633,7 @@
           () => [
             {
               type: a,
-              component: Lt,
+              component: Ft,
               readProps: (e) => ({ emoticonStore: n, emoticon: e.textContent }),
             },
           ],
@@ -2636,7 +2641,7 @@
         );
         return m.createElement(r.U, { specs: o });
       }
-      function Lt(e) {
+      function Ft(e) {
         const { selected: t, emoticonStore: n, emoticon: a } = e;
         (0, kt.k3)(n);
         if (n.BHasEmoticon(a)) {
@@ -2651,7 +2656,7 @@
         }
         return `:${a}:`;
       }
-      function Ft(e, t, n) {
+      function Lt(e, t, n) {
         return new pe.fV(e, (e, a, o, l) => {
           const r = a[1];
           if (!n.BHasEmoticon(r)) return null;
@@ -2932,8 +2937,8 @@
                   editModel: n,
                 }),
               },
-              c && { type: c, component: J, readProps: (e) => p("image", e) },
-              d && { type: d, component: J, readProps: (e) => p("video", e) },
+              c && { type: c, component: Z, readProps: (e) => p("image", e) },
+              d && { type: d, component: Z, readProps: (e) => p("video", e) },
               i.meetsteamsessiongroup && {
                 type: i.meetsteamsessiongroup,
                 component: at,

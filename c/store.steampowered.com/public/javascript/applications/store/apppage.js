@@ -304,32 +304,37 @@
     },
     chunkid: (module) => {
       module.exports = {
-        StripItems: "_2vXZddXTijrsX4werF5iUx",
-        Item: "_3JiRLywLUKhigtpRPP4hM5",
-        PlayIcon: "_1QE1-dYKtjDFlEHHng9DBR",
-        Active: "_3PCxbSW7FP6Si5iyRMfjXf",
-        StripScrollbar: "_2mfQrBJlf0k-fFsyMqr336",
-        Arrow: "_2iumtxtxpyL28srjgydgBO",
-        Track: "_3yIKswUZPhGbV0XpgiDW1a",
-        Thumb: "_1RLVzdeJ4SRMx0W6FEl5Dh",
-        ItemViewArea: "_3pPrsRd2hSQomwQOhG8vPO",
-        FullscreenArrow: "_1sXEHZtcDw9_OomIxpLeM",
-        Visible: "_27b6z3ARIQKiEh1_oPYpU-",
-        Next: "_35zEtUvi6jBvJq1oI53CuO",
-        Previous: "_23eSiUhl8ZBk6Mbtoh0rkR",
-        ViewedItem: "CkQfN_XCOjFhDB9NlYYHo",
-        Screenshot: "Nl29d0vJtIpVVQwwM5kd",
-        Controls: "_3ryyT6Ji-0bkC36N8AqIYg",
+        ItemViewArea: "_7uoIsggaW3jDWxwMtlOy8",
+        FullscreenArrow: "KkkFLdIE4YTPfdeoIQoo2",
+        Visible: "_3q0hI5sbgcmpVuwBKatnhv",
+        Next: "_2XmwxD18W2cEXHlvhYbcyJ",
+        Previous: "_1EBlS2FQmejekYhQDC-Kmh",
+        ViewedItem: "_29RD-6nVM1ZsiWWlkICHj_",
+        Active: "_12fD6HsYoCTsLA50fqBiX9",
+        Screenshot: "_3R7Y3WNTdNhOgbZ21bs9xD",
+        Controls: "_1-KK-_5TKZfLdri4MpeGD8",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        GamepadCarousel: "_3ADDqqKx55ugBLEOJm6pqJ",
-        Fullscreen: "_1ZiAH8gp-JZJAodTjQipQP",
-        CarouselItem: "_2jIJye_-HmWo1Thf6yuIpF",
-        SingleFileTrailer: "_2YInI0ugDsx_gBvN3MAaBI",
-        Screenshot: "_21tCdmh0lupqHu_ExgZBQH",
-        DashTrailer: "_1ngERp6euJZMT7stXO2D9n",
+        StripItems: "_21pEuTVe17EOUzkHK8ZGnJ",
+        Item: "deMuRscIE7upszCfACmbK",
+        PlayIcon: "_3p2KFN7o1Z8EV4_sbV5b25",
+        Active: "_3VIimult0z05qCgQN1CfPg",
+        StripScrollbar: "_1DvsO7ezbpz3pIVBWOLOzF",
+        Arrow: "_2LR-6h1uKQt4bj21r14zy5",
+        Track: "IJs3gGlk7XiekF90xqQtx",
+        Thumb: "_2kGps6wpqMKuwW2LinnWW6",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        GamepadCarousel: "_37QdQ9pnGu3WgatTPnOP1D",
+        Fullscreen: "_2_ZDORN00rF5dsEzd-tfpO",
+        CarouselItem: "_3eFhSH3a_Uh0AF_AWuqHjR",
+        SingleFileTrailer: "_3pzTJNRx9UoRhXeeA2IisY",
+        Screenshot: "_3MyKwsurcFxFwiLabbudSk",
+        DashTrailer: "_1Aoum4NTlVVCFiiAiXQbkQ",
       };
     },
     chunkid: (module) => {
@@ -2774,15 +2779,7 @@
             _ = (0, _.useCallback)(
               (_) => {
                 if (_.target == _.current.element) return;
-                let _ = (function (_) {
-                  let _ = _.target,
-                    _ = _.currentTarget;
-                  for (; _ && _ != _; ) {
-                    if ("true" == _.dataset?.keepcontrols) return !0;
-                    _ = _.parentElement;
-                  }
-                  return !1;
-                })(_);
+                let _ = _(_);
                 _.current = {
                   element: _.target,
                   bKeepControls: _,
@@ -2844,7 +2841,7 @@
                     element: void 0,
                     bKeepControls: !1,
                   }),
-                  _(_));
+                  _(_()));
               },
               [_, _],
             ),
@@ -2883,6 +2880,18 @@
       }
       function _(_) {
         return "touch" == _.pointerType ? _ : _;
+      }
+      function _() {
+        return _;
+      }
+      function _(_) {
+        let _ = _.target,
+          _ = _.currentTarget;
+        for (; _ && _ != _; ) {
+          if ("true" == _.dataset?.keepcontrols) return !0;
+          _ = _.parentElement;
+        }
+        return !1;
       }
       function _(_) {
         let _ = (0, _.useRef)(null);
@@ -6926,7 +6935,8 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _() {
         let _ = document.cookie.match(
           /(^|; )bGameHighlightAutoplayDisabled=([^;]*)/,
@@ -6986,111 +6996,6 @@
             setPlayerVolume: _,
             audioMuted: !_,
             setAudioMuted: _,
-          },
-          _,
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = 5e3;
-      function _(_) {
-        let { trailers: _, screenshots: __webpack_require__ } = _,
-          _ = _(_, __webpack_require__);
-        return 0 == _.length
-          ? null
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                null,
-                _.createElement(
-                  _,
-                  {
-                    orderedItems: _,
-                  },
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(_, {
-                      items: _,
-                    }),
-                    _.createElement(_, {
-                      items: _,
-                    }),
-                  ),
-                ),
-              ),
-            );
-      }
-      function _(_) {
-        let { children: _ } = _,
-          { refRoot: __webpack_require__ } = (function () {
-            let _ = (0, _.useRef)(null),
-              _ = (0, _.useRef)(0),
-              _ = (0, _.useRef)(!1),
-              _ = _(),
-              _ = (0, _.useRef)(_);
-            _.current = _;
-            let _ = _(),
-              _ = (0, _.useRef)(_.bFullscreen);
-            _.current = _.bFullscreen;
-            let _ = (0, _.useCallback)(() => {
-                if (
-                  !_.current ||
-                  "screenshot" != _.current.strActiveType ||
-                  _.current ||
-                  _.current ||
-                  _.current
-                )
-                  return;
-                let _ = () => {
-                  (_.current = 0), _.current.fnSetActive(_.current.strNextID);
-                };
-                _.current = window.setTimeout(_, _);
-              }, []),
-              _ = (0, _.useCallback)(() => {
-                _.current && (window.clearTimeout(_.current), (_.current = 0));
-              }, []),
-              _ = _.strActiveID;
-            (0, _.useEffect)(() => {
-              _();
-            }, [_]);
-            let _ = _.current;
-            return (
-              (0, _.useEffect)(() => {
-                _ ? _() : _();
-              }, [_]),
-              (0, _.useEffect)(() => {
-                let _ = _.current,
-                  _ = () => {
-                    "visible" == document.visibilityState ? _() : _();
-                  },
-                  _ = () => {
-                    (_.current = !0), _();
-                  },
-                  _ = () => {
-                    (_.current = !1), _();
-                  };
-                return (
-                  _.addEventListener("pointerenter", _),
-                  _.addEventListener("pointerleave", _),
-                  document.addEventListener("visibilitychange", _),
-                  () => {
-                    _.removeEventListener("pointerenter", _),
-                      _.removeEventListener("pointerleave", _),
-                      document.addEventListener("visibilitychange", _);
-                  }
-                );
-              }, []),
-              {
-                refRoot: _,
-              }
-            );
-          })();
-        return _.createElement(
-          "div",
-          {
-            ref: __webpack_require__,
           },
           _,
         );
@@ -7156,93 +7061,7 @@
         } while (_ != _);
         return _[_].key;
       }
-      function _(_) {
-        let { items: _ } = _,
-          _ = _(),
-          _ = (0, _.useContext)(_).refFullscreenElement,
-          _ = _().bFullscreen,
-          _ = _.map((_) =>
-            "screenshot" == _.type
-              ? _.createElement(_, {
-                  key: _.key,
-                  _: _.key,
-                  screenshot: _.data,
-                })
-              : "trailer" == _.type
-                ? _.createElement(_, {
-                    key: _.key,
-                    _: _.key,
-                    trailer: _.data,
-                  })
-                : null,
-          ),
-          _ = _.strPreviousID
-            ? () => __webpack_require__.fnSetActive(_.strPreviousID)
-            : null,
-          _ = _.strNextID
-            ? () => __webpack_require__.fnSetActive(_.strNextID)
-            : null;
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            className: _.ItemViewArea,
-          },
-          _,
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _.FullscreenArrow,
-                _ && _.Visible,
-                _.Previous,
-              ),
-              onClick: _,
-            },
-            _.createElement(_, {
-              direction: "left",
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FullscreenArrow, _ && _.Visible, _.Next),
-              onClick: _,
-            },
-            _.createElement(_, {
-              direction: "right",
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        let { direction: _ } = _;
-        return "right" == _
-          ? _.createElement(
-              "svg",
-              {
-                viewBox: "0 0 49 79",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-              },
-              _.createElement("path", {
-                _: "M8.81647 0L48 39.5005L8.81647 79L0 70.1124L30.3671 39.4995L0 8.88756L8.81647 0Z",
-                fill: "currentColor",
-              }),
-            )
-          : _.createElement(
-              "svg",
-              {
-                viewBox: "0 0 49 80",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-              },
-              _.createElement("path", {
-                _: "M39.3427 79.6279L0.159182 40.1274L39.3427 0.627931L48.1592 9.51549L17.7921 40.1284L48.1592 70.7404L39.3427 79.6279Z",
-                fill: "currentColor",
-              }),
-            );
-      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         let { items: _ } = _,
           {
@@ -7256,7 +7075,7 @@
               _ = (0, _.useRef)(null),
               _ = (0, _.useRef)(null),
               _ = (0, _.useRef)(null),
-              _ = (0, _.useRef)();
+              _ = (0, _.useRef)(void 0);
             _.current || (_.current = new Map());
             (0, _.useEffect)(() => {
               let _ = _.current,
@@ -7384,6 +7203,22 @@
             items: __webpack_require__,
             registerItemElement: _,
           } = _,
+          _ = (function () {
+            let _ = _(),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  _.repeat ||
+                    ("ArrowLeft" == _.code
+                      ? (_.strPreviousID && _.fnSetActive(_.strPreviousID),
+                        _.preventDefault())
+                      : "ArrowRight" == _.code &&
+                        (_.strNextID && _.fnSetActive(_.strNextID),
+                        _.preventDefault()));
+                },
+                [_],
+              );
+            return _;
+          })(),
           _ = __webpack_require__.map((_) =>
             _.createElement(_, {
               key: _.key,
@@ -7396,6 +7231,8 @@
           {
             ref: _,
             className: _.StripItems,
+            onKeyDown: _,
+            tabIndex: 0,
           },
           _,
         );
@@ -7449,7 +7286,7 @@
               onClick: _,
             },
             _.createElement(_, {
-              character: "<",
+              direction: "left",
             }),
           ),
           _.createElement(
@@ -7470,13 +7307,267 @@
               onClick: _,
             },
             _.createElement(_, {
-              character: ">",
+              direction: "right",
             }),
           ),
         );
       }
       function _(_) {
-        return _.createElement("span", null, _.character);
+        let { direction: _ } = _;
+        return "right" == _
+          ? _.createElement(
+              "svg",
+              {
+                viewBox: "0 0 49 79",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+              },
+              _.createElement("path", {
+                _: "M8.81647 0L48 39.5005L8.81647 79L0 70.1124L30.3671 39.4995L0 8.88756L8.81647 0Z",
+                fill: "currentColor",
+              }),
+            )
+          : _.createElement(
+              "svg",
+              {
+                viewBox: "0 0 49 80",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+              },
+              _.createElement("path", {
+                _: "M39.3427 79.6279L0.159182 40.1274L39.3427 0.627931L48.1592 9.51549L17.7921 40.1284L48.1592 70.7404L39.3427 79.6279Z",
+                fill: "currentColor",
+              }),
+            );
+      }
+      const _ = 5e3;
+      function _(_) {
+        let { trailers: _, screenshots: __webpack_require__ } = _,
+          _ = _(_, __webpack_require__);
+        return 0 == _.length
+          ? null
+          : _.createElement(
+              _,
+              null,
+              _.createElement(
+                _,
+                null,
+                _.createElement(
+                  _,
+                  {
+                    orderedItems: _,
+                  },
+                  _.createElement(
+                    _,
+                    null,
+                    _.createElement(_, {
+                      items: _,
+                    }),
+                    _.createElement(_, {
+                      items: _,
+                    }),
+                  ),
+                ),
+              ),
+            );
+      }
+      function _(_) {
+        let { children: _ } = _,
+          { refRoot: __webpack_require__ } = (function () {
+            let _ = (0, _.useRef)(null),
+              _ = (0, _.useRef)(0),
+              _ = (0, _.useRef)(!1),
+              _ = _(),
+              _ = (0, _.useRef)(_);
+            _.current = _;
+            let _ = _(),
+              _ = (0, _.useRef)(_.bFullscreen);
+            _.current = _.bFullscreen;
+            let _ = (0, _.useCallback)(() => {
+                if (
+                  !_.current ||
+                  "screenshot" != _.current.strActiveType ||
+                  _.current ||
+                  _.current ||
+                  _.current
+                )
+                  return;
+                let _ = () => {
+                  (_.current = 0), _.current.fnSetActive(_.current.strNextID);
+                };
+                _.current = window.setTimeout(_, _);
+              }, []),
+              _ = (0, _.useCallback)(() => {
+                _.current && (window.clearTimeout(_.current), (_.current = 0));
+              }, []),
+              _ = _.strActiveID;
+            (0, _.useEffect)(() => {
+              _();
+            }, [_]);
+            let _ = _.current;
+            return (
+              (0, _.useEffect)(() => {
+                _ ? _() : _();
+              }, [_]),
+              (0, _.useEffect)(() => {
+                let _ = _.current,
+                  _ = () => {
+                    "visible" == document.visibilityState ? _() : _();
+                  },
+                  _ = () => {
+                    (_.current = !0), _();
+                  },
+                  _ = () => {
+                    (_.current = !1), _();
+                  };
+                return (
+                  _.addEventListener("pointerenter", _),
+                  _.addEventListener("pointerleave", _),
+                  document.addEventListener("visibilitychange", _),
+                  () => {
+                    _.removeEventListener("pointerenter", _),
+                      _.removeEventListener("pointerleave", _),
+                      document.addEventListener("visibilitychange", _);
+                  }
+                );
+              }, []),
+              {
+                refRoot: _,
+              }
+            );
+          })();
+        return _.createElement(
+          "div",
+          {
+            ref: __webpack_require__,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        let { items: _ } = _,
+          _ = _(),
+          _ = (0, _.useContext)(_).refFullscreenElement,
+          _ = _().bFullscreen,
+          [_, _] = (function () {
+            let [_, _] = _(),
+              _ = (0, _.useRef)({
+                element: void 0,
+                bKeepControls: !1,
+              }),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  if (_.target == _.current.element) return;
+                  let _ = _(_);
+                  _.current = {
+                    element: _.target,
+                    bKeepControls: _,
+                  };
+                },
+                [_],
+              ),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  _.current.bKeepControls ? _(!0, 0) : _(!0, _);
+                },
+                [_, _],
+              ),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  "touch" != _.pointerType && (_(_), _(_(_)));
+                },
+                [_, _],
+              ),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  "touch" != _.pointerType && (_(_), _(_(_)));
+                },
+                [_, _],
+              ),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  "touch" != _.pointerType &&
+                    ((_.current = {
+                      element: void 0,
+                      bKeepControls: !1,
+                    }),
+                    _(_()));
+                },
+                [_, _],
+              ),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  _(_(_));
+                },
+                [_],
+              );
+            return [
+              _,
+              {
+                onPointerEnter: _,
+                onPointerMove: _,
+                onPointerLeave: _,
+                onPointerDown: _,
+              },
+            ];
+          })();
+        _ = !!_ && _;
+        let _ = _.map((_) =>
+            "screenshot" == _.type
+              ? _.createElement(_, {
+                  key: _.key,
+                  _: _.key,
+                  screenshot: _.data,
+                })
+              : "trailer" == _.type
+                ? _.createElement(_, {
+                    key: _.key,
+                    _: _.key,
+                    trailer: _.data,
+                  })
+                : null,
+          ),
+          _ = _.strPreviousID
+            ? () => __webpack_require__.fnSetActive(_.strPreviousID)
+            : null,
+          _ = _.strNextID
+            ? () => __webpack_require__.fnSetActive(_.strNextID)
+            : null;
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _.ItemViewArea,
+            ..._,
+          },
+          _,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FullscreenArrow,
+                _ && _.Visible,
+                _.Previous,
+              ),
+              onClick: _,
+              "data-keepcontrols": !0,
+            },
+            _.createElement(_, {
+              direction: "left",
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FullscreenArrow, _ && _.Visible, _.Next),
+              onClick: _,
+              "data-keepcontrols": !0,
+            },
+            _.createElement(_, {
+              direction: "right",
+            }),
+          ),
+        );
       }
       function _(_) {
         let { _: _, screenshot: __webpack_require__ } = _,
@@ -7572,12 +7663,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

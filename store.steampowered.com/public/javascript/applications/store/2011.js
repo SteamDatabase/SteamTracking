@@ -279,9 +279,16 @@
                           n.createElement(
                             "div",
                             { className: (0, c.A)({ [v.Followers]: !0 }) },
-                            n.createElement("span", null, (0, u.Dq)(N)),
-                            n.createElement("br", null),
-                            (0, m.we)("#CreatorHome_JustFollowers"),
+                            n.createElement(
+                              "span",
+                              null,
+                              (0, m.we)("#CreatorHome_JustFollowers"),
+                            ),
+                            n.createElement(
+                              "span",
+                              { className: v.FollowerCount },
+                              (0, u.Dq)(N),
+                            ),
                           ),
                         ),
                       ),
@@ -539,7 +546,7 @@
                   onClick: N,
                 },
                 n.createElement(C.V, { appids: I, hide_status_banners: a }),
-                n.createElement(_.aU, { imageType: c, info: t }),
+                "none" != c && n.createElement(_.aU, { imageType: c, info: t }),
                 n.createElement(D.J, { storeItem: S }),
                 Boolean(d) && n.createElement(v.m, { appInfo: t }),
               ),

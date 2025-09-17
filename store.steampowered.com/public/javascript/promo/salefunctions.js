@@ -217,7 +217,7 @@ function fnRenderHeroCapsule( oItem )
 	}
 
 	var Screenshots = $J( '<div/>', {'class': 'hover_screenshots' } );
-	var VideoCtn = $J( '<div/>', {'class': 'hover_video_container hero_screenshot_load', 'data-background': 'url(' + ( rgItemData.screenshots.length > 0 ? GetScreenshotURL( rgItemData.screenshots[0].appid, rgItemData.screenshots[0].filename, '.600x338' ) : rgItemData.main_capsule ) + ')' } );
+	var VideoCtn = $J( '<div/>', {'class': 'hover_video_container hero_screenshot_load', 'data-background': 'url(' + (  rgItemData.screenshots && rgItemData.screenshots.length > 0 ? GetScreenshotURL( rgItemData.screenshots[0].appid, rgItemData.screenshots[0].filename, '.600x338' ) : rgItemData.main_capsule ) + ')' } );
 
 	if ( rgItemData.microtrailer )
 	{
@@ -318,7 +318,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 			$J(this).find('video.hero_video')[0].pause();
 	} );
 
-	$HeroItemCtn.show();
+	$Parent.show();
 	$HeroItemCtn.css('minHeight', '' );
 }
 
@@ -413,30 +413,6 @@ function HomeRenderSpecialDealsCarousel( rgSpecialDealItems )
 	}
 }
 
-function HomeRenderSteamDeckSection( rgFeaturedSteamDeckGames )
-{
-	if ( !rgFeaturedSteamDeckGames )
-		return;
-
-	let $SteamDeckCarousel = $J( '#featured_steam_deck_games' );
-
-	if ( !$SteamDeckCarousel || !$SteamDeckCarousel.length )
-		return;
-
-	let rgSteamDeckGames = GHomepage.FilterItemsForDisplay(
-		rgFeaturedSteamDeckGames, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false, has_discount: true }
-	);
-
-	if ( rgSteamDeckGames.length >= 3 )
-	{
-		GHomepage.FillPagedCapsuleCarousel( rgSteamDeckGames, $SteamDeckCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
-			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false, true );
-		}, 'sale_deck_mostplayed', 3 );
-
-		GDynamicStore.MarkAppDisplayed( rgSteamDeckGames );
-	}
-}
-
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgSteamAwardDefs )
 {
 	var k_nTier1ItemsMin = 16;
@@ -477,26 +453,6 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	GDynamicStore.MarkAppDisplayed( rgTier1 );
 
-	var $UserArea = $J('#home_sale_account_ctn');
-	if ( $UserArea.length )
-	{
-		if ( g_AccountID )
-		{
-			new CScrollOffsetWatcher( $UserArea, function() {
-				$J.get( 'https://store.steampowered.com/default/home_sale_data', {u: g_AccountID } ).done( function( data ) {
-					GStoreItemData.AddStoreItemDataSet( data.StoreItemData );
-					RenderWishlistAndDLCArea( $UserArea, data.rgWishlistOnSale, data.rgDLCOnSale );
-				}).fail( function() {
-					$UserArea.hide();
-				});
-			});
-		}
-		else
-		{
-			$UserArea.hide();
-		}
-	}
-
 	let rgPriorityTier2Items = SortItemListByPriorityList( rgDisplayLists.sale_tier2.slice( 0, 50 ), 'tier2' );
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
 		rgPriorityTier2Items, 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
@@ -506,24 +462,8 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	HomeSaleBlock( rgTier1, $J('#tier1_target' ), 'sale_dailydeals_priority' );
 
-	var $Under10Area = $J('#sale_under10_area');
-	new CScrollOffsetWatcher( $Under10Area, function() {
-		SaleRenderUnder10Section( $Under10Area, rgDisplayLists.under10 );
-	} );
-
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
-
-	// filter dupes from tab lists
-	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#popular_new_releases_content .tab_content_items' ).children('.sale_capsule'), $J( '#popular_new_releases_content' ), { only_current_platform: true, games_already_in_library: false, localized: true, enforce_minimum: true } );
-	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#tab_upcoming_content .tab_content_items' ).children('.sale_capsule'), $J( '#tab_upcoming_content' ), { prepurchase: true, games_already_in_library: true, localized: true, enforce_minimum: true } );
-	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#tab_trendingfree_content .tab_content_items' ).children('.sale_capsule'), $J( '#tab_trendingfree_content' ), { games_already_in_library: true, localized: true, enforce_minimum: true } );
-	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#topsellers_tier' ).children('.sale_capsule'), $J( '#topsellers_tier' ), {dlc_for_you: true, games_already_in_library: true, localized: true, enforce_minimum: true } );
-
-	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
-	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
-
-	HomeRenderSteamDeckSection( rgDisplayLists.most_played_deck );
 
 	$J( '.home_morefeatured_ctn' ).show();
 

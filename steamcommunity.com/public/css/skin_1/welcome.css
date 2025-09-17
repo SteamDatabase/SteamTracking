@@ -192,3 +192,45 @@ a.Underline:hover {
 	padding: 0 16px;
 	margin: 0 auto;
 }
+
+@media screen and (max-width: 910px) {
+	.welcome_header_ctn {
+		height: unset;
+	}
+
+	.welcome_header {
+		display: flex;
+		flex-direction: column;
+		width: unset;
+		height: unset;
+		padding-bottom: 10px;
+	}
+
+	.full {
+		display:flex;
+		flex-direction: column-reverse;
+		width: unset;
+		height: unset;
+		padding-left: 16px;
+	}
+
+	#rightTextContainer {
+		width: unset;
+		height: unset;
+	}
+
+	#info {
+		margin-top: unset;
+	}
+
+	#description {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		width: auto;
+		padding: 0px 12px;
+		background: unset;
+		box-shadow: unset;
+		margin-top: 10px;
+	}
+}

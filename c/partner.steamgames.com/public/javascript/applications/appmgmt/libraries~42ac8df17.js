@@ -1095,30 +1095,17 @@
               _.forEach((_) => {
                 const _ = this.#t.defaultQueryOptions(_),
                   _ = _.get(_.queryHash);
-                if (_)
-                  __webpack_require__.push({
-                    defaultedQueryOptions: _,
-                    observer: _,
-                  });
-                else {
-                  const _ = this.#r.find(
-                    (_) => _.options.queryHash === _.queryHash,
-                  );
-                  __webpack_require__.push({
-                    defaultedQueryOptions: _,
-                    observer: _ ?? new _._(this.#t, _),
-                  });
-                }
+                _
+                  ? __webpack_require__.push({
+                      defaultedQueryOptions: _,
+                      observer: _,
+                    })
+                  : __webpack_require__.push({
+                      defaultedQueryOptions: _,
+                      observer: new _._(this.#t, _),
+                    });
               }),
-              __webpack_require__.sort(
-                (_, _) =>
-                  _.findIndex(
-                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
-                  ) -
-                  _.findIndex(
-                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
-                  ),
-              )
+              _
             );
           }
           #a(_, _) {

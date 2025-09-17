@@ -58,7 +58,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_bOnSteamDeck = !1;
+        m_eGamingDeviceType = 0;
         m_mapRichPresence = s.sH.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -80,7 +80,7 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_bOnSteamDeck = !1);
+            (this.m_eGamingDeviceType = 0);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -133,9 +133,6 @@
         }
         get is_golden() {
           return this.HasStateFlag(4);
-        }
-        IsOnSteamDeck() {
-          return this.m_bOnSteamDeck;
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -306,7 +303,7 @@
         (0, r.Cg)([s.sH], p.prototype, "m_broadcastViewerCount", void 0),
         (0, r.Cg)([s.sH], p.prototype, "m_strBroadcastTitle", void 0),
         (0, r.Cg)([s.sH], p.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([s.sH], p.prototype, "m_bOnSteamDeck", void 0),
+        (0, r.Cg)([s.sH], p.prototype, "m_eGamingDeviceType", void 0),
         (0, r.Cg)([s.sH], p.prototype, "m_bNameInitialized", void 0);
     },
     1035: (e, t, a) => {

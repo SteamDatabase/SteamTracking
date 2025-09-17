@@ -1225,30 +1225,17 @@
             _.forEach((_) => {
               const _ = (0, _._)(this, _).defaultQueryOptions(_),
                 _ = _.get(_.queryHash);
-              if (_)
-                __webpack_require__.push({
-                  defaultedQueryOptions: _,
-                  observer: _,
-                });
-              else {
-                const _ = (0, _._)(this, _).find(
-                  (_) => _.options.queryHash === _.queryHash,
-                );
-                __webpack_require__.push({
-                  defaultedQueryOptions: _,
-                  observer: _ ?? new _._((0, _._)(this, _), _),
-                });
-              }
+              _
+                ? __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: _,
+                  })
+                : __webpack_require__.push({
+                    defaultedQueryOptions: _,
+                    observer: new _._((0, _._)(this, _), _),
+                  });
             }),
-            __webpack_require__.sort(
-              (_, _) =>
-                _.findIndex(
-                  (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
-                ) -
-                _.findIndex(
-                  (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
-                ),
-            )
+            _
           );
         }),
         (_ = new WeakSet()),

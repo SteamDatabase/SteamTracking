@@ -346,16 +346,13 @@
             const h = { ...c, transition: `${t} ${n}ms` };
             return { style: h, active: u, refDiv: s };
           })(s, a, c);
-        if (!s && !m && !l) return null;
-        const p = {};
-        return (
-          s || (p.inert = "inert"),
-          o.createElement(
-            "div",
-            { id: t, role: n, className: i, ref: h, style: u, ...p },
-            d,
-          )
-        );
+        return s || m || l
+          ? o.createElement(
+              "div",
+              { id: t, role: n, className: i, ref: h, style: u, inert: !s },
+              d,
+            )
+          : null;
       }
     },
     71696: (e, t, n) => {

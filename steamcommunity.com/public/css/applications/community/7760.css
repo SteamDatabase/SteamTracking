@@ -11,6 +11,25 @@
   font-size: 10px;
   font-weight: italic;
 }
+._1TEbObXeFqUF-IRZKx0Qg5 img,
+._1TEbObXeFqUF-IRZKx0Qg5 video {
+  position: relative;
+  z-index: -1;
+}
+._1TEbObXeFqUF-IRZKx0Qg5._3VVyv-d-F-7paQgn90RTr0 img,
+._1TEbObXeFqUF-IRZKx0Qg5 video {
+  outline: 1px solid #fff;
+  animation: _3AFR3dAEjYGOiz7dgTms8Y 1.5s ease-in-out infinite alternate;
+  z-index: 1;
+}
+@keyframes _3AFR3dAEjYGOiz7dgTms8Y {
+  0% {
+    outline-color: #fff;
+  }
+  100% {
+    outline-color: rgba(255, 255, 255, 0.1);
+  }
+}
 .SsgHukHcE1jf7p3W6Ta8g {
   width: 600px;
 }

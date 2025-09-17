@@ -997,6 +997,7 @@ var CLSTAMP = "steamdb";
           m_mapFallbackTokens = new Map();
           m_cbkTokensChanged = new _();
           m_rgLocalesToUse;
+          m_bReportIndividualMissingTokens = !0;
           static sm_ErrorReportingStore;
           static InstallErrorReportingStore(_) {
             this.sm_ErrorReportingStore = _;
@@ -1022,8 +1023,9 @@ var CLSTAMP = "steamdb";
                 }
             return _;
           }
-          InitFromObjects(_, _, _, _, _) {
-            _ || this.m_mapTokens.clear();
+          InitFromObjects(_, _, _, _, _, _) {
+            _ && (this.m_bReportIndividualMissingTokens = !1),
+              _ || this.m_mapTokens.clear();
             const _ = {
                 ...(_ || {}),
                 ..._,
@@ -1096,9 +1098,10 @@ var CLSTAMP = "steamdb";
               return;
             let _ = this.m_mapTokens.get(_.substring(1));
             if (void 0 !== _) return _;
-            _ ||
-              !_.sm_ErrorReportingStore ||
-              _ ||
+            !_ &&
+              _.sm_ErrorReportingStore &&
+              !_ &&
+              this.m_bReportIndividualMissingTokens &&
               _.sm_ErrorReportingStore.ReportError(
                 new Error(
                   `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
@@ -1790,7 +1793,7 @@ var CLSTAMP = "steamdb";
           } catch (_) {}
           _.sm_rtTimeCur = _.rtTimeCur;
           let _ = new _(_);
-          _._(_).render(
+          _.createRoot(_).render(
             _.createElement(_, {
               controller: _,
             }),
@@ -2093,64 +2096,64 @@ var CLSTAMP = "steamdb";
       {
         43: "2d1569711644a97b27c9",
         762: "ff6118255b5f7e7423dd",
-        976: "d09edcdc9a311b835f30",
-        1225: "37a6d197d8e0772e4148",
-        1449: "1d317e4b73a6938d50d5",
+        976: "da39d58d7c621017289d",
+        1225: "5c659a360102a87aef48",
+        1449: "9aa86b28046319e58b7a",
         1499: "a2054d6572ec7a62f1cd",
-        1973: "47de55f29b3fe5112484",
-        2256: "8cc31d04ddd8993bebab",
-        2320: "16ef2f673e351bd1a1c1",
-        2435: "aa6dae61f32e045ea451",
-        2632: "0f2d56ccaf3d96af9327",
-        2749: "97f4a9802f0dc9c7c206",
+        1973: "d6d68819f021d446ec8a",
+        2256: "c091060fd4bf18926f18",
+        2320: "39d313434f943336d019",
+        2435: "1bd747cd17d30cd7c573",
+        2632: "4a3cd4fc2b4aa9fcc873",
+        2749: "8ea826188de1034547b1",
         2945: "db445535507df48fa135",
-        2954: "b71c8d04790f5f128a3a",
+        2954: "2da80c27cbd5401ed113",
         3e3: "5b555c0c05b301add971",
         3016: "c414855465bbfd19fbba",
         3232: "c3d6e44c6417468b92d2",
         3415: "c9854a34b708331c1573",
         3485: "b933e3068fa261a2a3b1",
-        3710: "bf34b35a425aca7efe53",
+        3710: "bf458a764be0c4d76c12",
         3789: "21549fa1d62f80c141f3",
-        3912: "898803ced8a1000fa678",
+        3912: "d5a46fe57a2b099ffb25",
         4154: "ec8c6bcf4638aeea3cb3",
         4302: "1de4d48abe50fe4b2687",
         4434: "a3659f88d009d600108b",
         4488: "f0354b32bcc501ec0e40",
         4776: "c38649533b4dc22e0289",
         4787: "742066037c6438542f59",
-        5018: "7b8894bf75d19436ce71",
-        5110: "d1e7223d5ffd50349f27",
-        5241: "6096c9ba1c9a07fe8b0f",
+        5018: "1a06e769f58bf32b7460",
+        5110: "1d12883b1a2c6060dfdc",
+        5241: "6ff149e7a2ee4c6c5aa0",
         5341: "7b7fb0a5aee24ec88e52",
         5480: "5534726475cacbc94422",
-        6031: "4b5de9a436a7494f4d90",
+        6031: "ba6010e740b6eec49296",
         6127: "fd86634c2d182293494a",
-        6149: "2933a365eb4da1465d5f",
-        6165: "4458fa8ebe26b91c8f16",
-        6208: "b1af7b5d98c824e27798",
-        6239: "e112399d749beb2d4df0",
+        6149: "9957389302aec5fbb48a",
+        6165: "b6af3064c6bb5cf325c7",
+        6208: "b77da010361d8d86f45e",
+        6239: "904fae6ba3d81897e104",
         6385: "8043996faaaa3d17e1b5",
         6518: "7fe5f05b9fed4ee70450",
-        6523: "4caff0c0fb2a2a023e51",
-        6562: "37bf93cad2ad0d288f15",
+        6523: "9cde23674f03f90f18de",
+        6562: "3784e7da005e68668961",
         6609: "4d517069a17302bf634a",
         6888: "6667c7d69309518eba8a",
         6971: "a9288eefaffeae91f95e",
         7487: "75f19a6adf32f92e1244",
-        7539: "33762cd8a4182262fabe",
-        7591: "03db2f65c257961dd3fe",
-        7786: "5dfa806d5cac37218b2a",
+        7539: "171c66d4e77b05ed3755",
+        7591: "dfd03060f50ba859a91b",
+        7786: "f226e9fc228c126649f0",
         7861: "ca94ddabe4465fa5f758",
-        8025: "05df9308c0cb35844f33",
+        8025: "e49d0c53b744518062cf",
         8194: "b526a194ac39dcc6155c",
-        8306: "cbe752c01bd176a149c1",
+        8306: "e3a31660fc3390c5a600",
         8759: "ceaaadf5c0770e3251aa",
         8766: "11d27577bb0814242f1d",
-        8967: "635f9caef04df894f8ff",
+        8967: "e842f7f3119a2fc756df",
         9027: "ea9c7d7754fa995b186c",
-        9152: "8e67f896e2d573ad3226",
-        9712: "8cb793ee561ec509714a",
+        9152: "3a4b1bc2ef82cf43d80a",
+        9712: "f70a6a1a2df4ca0b4b53",
         9746: "03cb523723efd4635590",
         9808: "489f51e725d2d72990f6",
       }[_]),
@@ -2298,6 +2301,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(30343));
+  var _ = _._(void 0, [1068], () => _(57792));
   _ = _._(_);
 })();

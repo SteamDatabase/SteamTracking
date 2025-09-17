@@ -812,7 +812,7 @@
                   onClick: N,
                 },
                 n.createElement(g.V, { appids: A, hide_status_banners: a }),
-                n.createElement(_.aU, { imageType: c, info: t }),
+                "none" != c && n.createElement(_.aU, { imageType: c, info: t }),
                 n.createElement(S.J, { storeItem: b }),
                 Boolean(p) && n.createElement(E.m, { appInfo: t }),
               ),

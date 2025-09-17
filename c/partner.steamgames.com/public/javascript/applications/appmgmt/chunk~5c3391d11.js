@@ -137,204 +137,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        switch (_) {
-          case _._._:
-            return _._;
-          case _._.CANCEL:
-            return _._;
-          case _._.SECONDARY:
-            return _._;
-          case _._.OPTIONS:
-            return _._;
-          case _._.DIR_LEFT:
-            return _.Left;
-          case _._.DIR_RIGHT:
-            return _.Right;
-          case _._.DIR_UP:
-            return _._;
-          case _._.DIR_DOWN:
-            return _.Down;
-          case _._.STEAM_GUIDE:
-            return _.HomeMenu;
-          case _._.STEAM_QUICK_MENU:
-            return _.QuickMenu;
-          case _._.SELECT:
-            return _.Select;
-          case _._.START:
-            return _.Start;
-          case _._.BUMPER_LEFT:
-            return _.LeftBumper;
-          case _._.BUMPER_RIGHT:
-            return _.RightBumper;
-          case _._.TRIGGER_LEFT:
-            return _.LeftTrigger;
-          case _._.TRIGGER_RIGHT:
-            return _.RightTrigger;
-          default:
-            return null;
-        }
-      }
-      !(function (_) {
-        (_[(_._ = 0)] = "A"),
-          (_[(_._ = 1)] = "B"),
-          (_[(_._ = 2)] = "X"),
-          (_[(_._ = 3)] = "Y"),
-          (_[(_.Left = 4)] = "Left"),
-          (_[(_.Right = 5)] = "Right"),
-          (_[(_._ = 6)] = "Up"),
-          (_[(_.Down = 7)] = "Down"),
-          (_[(_.HomeMenu = 8)] = "HomeMenu"),
-          (_[(_.QuickMenu = 9)] = "QuickMenu"),
-          (_[(_.Select = 10)] = "Select"),
-          (_[(_.Start = 11)] = "Start"),
-          (_[(_.LeftBumper = 12)] = "LeftBumper"),
-          (_[(_.RightBumper = 13)] = "RightBumper"),
-          (_[(_.LeftTrigger = 14)] = "LeftTrigger"),
-          (_[(_.RightTrigger = 15)] = "RightTrigger"),
-          (_[(_.LeftStick = 16)] = "LeftStick"),
-          (_[(_.LeftStickClick = 17)] = "LeftStickClick"),
-          (_[(_.RightStick = 18)] = "RightStick"),
-          (_[(_.RightStickClick = 19)] = "RightStickClick"),
-          (_[(_.LeftTrackpad = 20)] = "LeftTrackpad"),
-          (_[(_.LeftTrackpadClick = 21)] = "LeftTrackpadClick"),
-          (_[(_.RightTrackpad = 22)] = "RightTrackpad"),
-          (_[(_.RightTrackpadClick = 23)] = "RightTrackpadClick"),
-          (_[(_.RearLeftUpper = 24)] = "RearLeftUpper"),
-          (_[(_.RearLeftLower = 25)] = "RearLeftLower"),
-          (_[(_.RearRightUpper = 26)] = "RearRightUpper"),
-          (_[(_.RearRightLower = 27)] = "RearRightLower");
-      })(_ || (_ = {}));
-      class _ {
-        m_boundActions = new Map();
-        m_defaultActions = new Map();
-        m_actionSubscriptions = new Map();
-        m_actionDescriptionChangedCallbackRegistrations = [];
-        static Log = new _._("ActionDescription").Debug;
-        InitContext(_) {
-          return _.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
-            .Unregister;
-        }
-        BFromActiveNavTree(_, _) {
-          let _ = _?.Tree;
-          return _ || (_ = _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
-        }
-        OnFocusNavigationChanged(_, _, _) {
-          if (this.BFromActiveNavTree(_, _))
-            if (
-              (this.m_actionDescriptionChangedCallbackRegistrations.forEach(
-                (_) => _.Unregister(),
-              ),
-              (this.m_actionDescriptionChangedCallbackRegistrations = []),
-              _)
-            ) {
-              const _ = () =>
-                this.SetActionDescriptionsFromMap(
-                  __webpack_require__.GetActiveActionDescriptions() ?? {},
-                );
-              _();
-              for (let _ = _; null != _; _ = _.Parent)
-                this.m_actionDescriptionChangedCallbackRegistrations.push(
-                  _.ActionDescriptionChangedCallbackList.Register(() => _()),
-                );
-            } else
-              this.SetActionDescriptionsFromMap({
-                [_._._]: null,
-              });
-        }
-        GetActionDescription(_) {
-          let _;
-          return (
-            this.m_boundActions.has(_)
-              ? (_ = this.m_boundActions.get(_))
-              : this.m_defaultActions.has(_) &&
-                (_ = this.m_defaultActions.get(_)),
-            _.Log("GetActionDescription", _),
-            _
-          );
-        }
-        NotifyUpdate(_) {
-          if (this.m_actionSubscriptions.has(_)) {
-            const _ = this.GetActionDescription(_);
-            this.m_actionSubscriptions.get(_).forEach((_) => _(_));
-          }
-        }
-        NotifyAll() {
-          Array.from(this.m_actionSubscriptions.keys()).forEach((_) => {
-            this.NotifyUpdate(_);
-          });
-        }
-        IsDefaultAction(_) {
-          return this.GetActionDescription(_) === this.m_defaultActions.get(_);
-        }
-        SetDefaultAction(_, _) {
-          void 0 === _
-            ? this.m_defaultActions.delete(_)
-            : this.m_defaultActions.set(_, _),
-            this.m_boundActions.has(_) || this.NotifyUpdate(_);
-        }
-        ClearActions() {
-          _.Log("ClearActionDescriptions"),
-            this.m_boundActions.clear(),
-            this.NotifyAll();
-        }
-        SetActionsFromMap(_) {
-          const _ = Array.from(this.m_boundActions.keys());
-          for (let _ of _) _[_] || this.SetAction(_, void 0);
-          for (let _ in _) {
-            const _ = parseInt(_);
-            this.SetAction(_, _[_]);
-          }
-        }
-        SetActionDescriptionsFromMap(_) {
-          const _ = {};
-          for (const _ in _) {
-            const _ = parseInt(_);
-            _[_(_)] = _[_];
-          }
-          this.SetActionsFromMap(_);
-        }
-        SetAction(_, _) {
-          if ((_.Log("SetActionDescription", _, _), void 0 === _)) {
-            if (!this.m_boundActions.has(_)) return;
-            this.m_boundActions.delete(_);
-          } else {
-            if (this.m_boundActions.get(_) === _) return;
-            this.m_boundActions.set(_, _);
-          }
-          this.NotifyUpdate(_);
-        }
-        SubscribeToActionFunction(_, _) {
-          this.m_actionSubscriptions.has(_) ||
-            this.m_actionSubscriptions.set(_, []),
-            this.m_actionSubscriptions.get(_).push(_),
-            this.m_boundActions.has(_)
-              ? _(this.m_boundActions.get(_))
-              : this.m_defaultActions.has(_) && _(this.m_defaultActions.get(_));
-          return () => {
-            const _ = this.m_actionSubscriptions.get(_),
-              _ = __webpack_require__.indexOf(_);
-            _ >= 0
-              ? __webpack_require__.splice(_, 1)
-              : console.error(
-                  "Unsubscribing an action that was already unsubscribed",
-                );
-          };
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnFocusNavigationChanged", null),
-        (0, _._)([_._], _.prototype, "SetActionDescriptionsFromMap", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -749,17 +551,214 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          default: () => _,
+        });
       var _,
-        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        switch (_) {
+          case _._._:
+            return _._;
+          case _._.CANCEL:
+            return _._;
+          case _._.SECONDARY:
+            return _._;
+          case _._.OPTIONS:
+            return _._;
+          case _._.DIR_LEFT:
+            return _.Left;
+          case _._.DIR_RIGHT:
+            return _.Right;
+          case _._.DIR_UP:
+            return _._;
+          case _._.DIR_DOWN:
+            return _.Down;
+          case _._.STEAM_GUIDE:
+            return _.HomeMenu;
+          case _._.STEAM_QUICK_MENU:
+            return _.QuickMenu;
+          case _._.SELECT:
+            return _.Select;
+          case _._.START:
+            return _.Start;
+          case _._.BUMPER_LEFT:
+            return _.LeftBumper;
+          case _._.BUMPER_RIGHT:
+            return _.RightBumper;
+          case _._.TRIGGER_LEFT:
+            return _.LeftTrigger;
+          case _._.TRIGGER_RIGHT:
+            return _.RightTrigger;
+          default:
+            return null;
+        }
+      }
+      !(function (_) {
+        (_[(_._ = 0)] = "A"),
+          (_[(_._ = 1)] = "B"),
+          (_[(_._ = 2)] = "X"),
+          (_[(_._ = 3)] = "Y"),
+          (_[(_.Left = 4)] = "Left"),
+          (_[(_.Right = 5)] = "Right"),
+          (_[(_._ = 6)] = "Up"),
+          (_[(_.Down = 7)] = "Down"),
+          (_[(_.HomeMenu = 8)] = "HomeMenu"),
+          (_[(_.QuickMenu = 9)] = "QuickMenu"),
+          (_[(_.Select = 10)] = "Select"),
+          (_[(_.Start = 11)] = "Start"),
+          (_[(_.LeftBumper = 12)] = "LeftBumper"),
+          (_[(_.RightBumper = 13)] = "RightBumper"),
+          (_[(_.LeftTrigger = 14)] = "LeftTrigger"),
+          (_[(_.RightTrigger = 15)] = "RightTrigger"),
+          (_[(_.LeftStick = 16)] = "LeftStick"),
+          (_[(_.LeftStickClick = 17)] = "LeftStickClick"),
+          (_[(_.RightStick = 18)] = "RightStick"),
+          (_[(_.RightStickClick = 19)] = "RightStickClick"),
+          (_[(_.LeftTrackpad = 20)] = "LeftTrackpad"),
+          (_[(_.LeftTrackpadClick = 21)] = "LeftTrackpadClick"),
+          (_[(_.RightTrackpad = 22)] = "RightTrackpad"),
+          (_[(_.RightTrackpadClick = 23)] = "RightTrackpadClick"),
+          (_[(_.RearLeftUpper = 24)] = "RearLeftUpper"),
+          (_[(_.RearLeftLower = 25)] = "RearLeftLower"),
+          (_[(_.RearRightUpper = 26)] = "RearRightUpper"),
+          (_[(_.RearRightLower = 27)] = "RearRightLower");
+      })(_ || (_ = {}));
+      class _ {
+        m_boundActions = new Map();
+        m_defaultActions = new Map();
+        m_actionSubscriptions = new Map();
+        m_actionDescriptionChangedCallbackRegistrations = [];
+        static Log = new _._("ActionDescription").Debug;
+        InitContext(_) {
+          return _.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
+            .Unregister;
+        }
+        BFromActiveNavTree(_, _) {
+          let _ = _?.Tree;
+          return _ || (_ = _?.Tree), _ && _.Controller.IsActiveFocusNavTree(_);
+        }
+        OnFocusNavigationChanged(_, _, _) {
+          if (this.BFromActiveNavTree(_, _))
+            if (
+              (this.m_actionDescriptionChangedCallbackRegistrations.forEach(
+                (_) => _.Unregister(),
+              ),
+              (this.m_actionDescriptionChangedCallbackRegistrations = []),
+              _)
+            ) {
+              const _ = () =>
+                this.SetActionDescriptionsFromMap(
+                  __webpack_require__.GetActiveActionDescriptions() ?? {},
+                );
+              _();
+              for (let _ = _; null != _; _ = _.Parent)
+                this.m_actionDescriptionChangedCallbackRegistrations.push(
+                  _.ActionDescriptionChangedCallbackList.Register(() => _()),
+                );
+            } else
+              this.SetActionDescriptionsFromMap({
+                [_._._]: null,
+              });
+        }
+        GetActionDescription(_) {
+          let _;
+          return (
+            this.m_boundActions.has(_)
+              ? (_ = this.m_boundActions.get(_))
+              : this.m_defaultActions.has(_) &&
+                (_ = this.m_defaultActions.get(_)),
+            _.Log("GetActionDescription", _),
+            _
+          );
+        }
+        NotifyUpdate(_) {
+          if (this.m_actionSubscriptions.has(_)) {
+            const _ = this.GetActionDescription(_);
+            this.m_actionSubscriptions.get(_).forEach((_) => _(_));
+          }
+        }
+        NotifyAll() {
+          Array.from(this.m_actionSubscriptions.keys()).forEach((_) => {
+            this.NotifyUpdate(_);
+          });
+        }
+        IsDefaultAction(_) {
+          return this.GetActionDescription(_) === this.m_defaultActions.get(_);
+        }
+        SetDefaultAction(_, _) {
+          void 0 === _
+            ? this.m_defaultActions.delete(_)
+            : this.m_defaultActions.set(_, _),
+            this.m_boundActions.has(_) || this.NotifyUpdate(_);
+        }
+        ClearActions() {
+          _.Log("ClearActionDescriptions"),
+            this.m_boundActions.clear(),
+            this.NotifyAll();
+        }
+        SetActionsFromMap(_) {
+          const _ = Array.from(this.m_boundActions.keys());
+          for (let _ of _) _[_] || this.SetAction(_, void 0);
+          for (let _ in _) {
+            const _ = parseInt(_);
+            this.SetAction(_, _[_]);
+          }
+        }
+        SetActionDescriptionsFromMap(_) {
+          const _ = {};
+          for (const _ in _) {
+            const _ = parseInt(_);
+            _[_(_)] = _[_];
+          }
+          this.SetActionsFromMap(_);
+        }
+        SetAction(_, _) {
+          if ((_.Log("SetActionDescription", _, _), void 0 === _)) {
+            if (!this.m_boundActions.has(_)) return;
+            this.m_boundActions.delete(_);
+          } else {
+            if (this.m_boundActions.get(_) === _) return;
+            this.m_boundActions.set(_, _);
+          }
+          this.NotifyUpdate(_);
+        }
+        SubscribeToActionFunction(_, _) {
+          this.m_actionSubscriptions.has(_) ||
+            this.m_actionSubscriptions.set(_, []),
+            this.m_actionSubscriptions.get(_).push(_),
+            this.m_boundActions.has(_)
+              ? _(this.m_boundActions.get(_))
+              : this.m_defaultActions.has(_) && _(this.m_defaultActions.get(_));
+          return () => {
+            const _ = this.m_actionSubscriptions.get(_),
+              _ = __webpack_require__.indexOf(_);
+            _ >= 0
+              ? __webpack_require__.splice(_, 1)
+              : console.error(
+                  "Unsubscribing an action that was already unsubscribed",
+                );
+          };
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnFocusNavigationChanged", null),
+        (0, _._)([_._], _.prototype, "SetActionDescriptionsFromMap", null);
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
@@ -793,169 +792,169 @@
           ),
           _ = _.type == _.Knockout;
         switch (_.button) {
-          case _._._:
+          case _._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_A"),
             });
-          case _._._:
+          case _._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_B"),
             });
-          case _._._:
+          case _._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_X"),
             });
-          case _._._:
+          case _._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_Y"),
             });
-          case _._.Left:
+          case _.Left:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_DpadLeft"),
             });
-          case _._.Right:
+          case _.Right:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_DpadRight"),
             });
-          case _._._:
+          case _._:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_DpadUp"),
             });
-          case _._.Down:
+          case _.Down:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_DpadDown"),
             });
-          case _._.HomeMenu:
+          case _.HomeMenu:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_Steam"),
             });
-          case _._.QuickMenu:
+          case _.QuickMenu:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_QAM"),
             });
-          case _._.Select:
+          case _.Select:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_View"),
             });
-          case _._.Start:
+          case _.Start:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_Menu"),
             });
-          case _._.LeftBumper:
+          case _.LeftBumper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_L1"),
             });
-          case _._.RightBumper:
+          case _.RightBumper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_R1"),
             });
-          case _._.LeftTrigger:
+          case _.LeftTrigger:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_L2"),
             });
-          case _._.RightTrigger:
+          case _.RightTrigger:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_R2"),
             });
-          case _._.LeftStick:
+          case _.LeftStick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_LS"),
             });
-          case _._.RightStick:
+          case _.RightStick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_RS"),
             });
-          case _._.LeftStickClick:
+          case _.LeftStickClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_L3"),
             });
-          case _._.RightStickClick:
+          case _.RightStickClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_R3"),
             });
-          case _._.LeftTrackpad:
+          case _.LeftTrackpad:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_LPad"),
             });
-          case _._.RightTrackpad:
+          case _.RightTrackpad:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_RPad"),
             });
-          case _._.LeftTrackpadClick:
+          case _.LeftTrackpadClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_LPad_Click"),
             });
-          case _._.RightTrackpadClick:
+          case _.RightTrackpadClick:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_RPad_Click"),
             });
-          case _._.RearLeftUpper:
+          case _.RearLeftUpper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_L4"),
             });
-          case _._.RearRightUpper:
+          case _.RearRightUpper:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_R4"),
             });
-          case _._.RearLeftLower:
+          case _.RearLeftLower:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
               "aria-label": (0, _._)("#ControllerButton_L5"),
             });
-          case _._.RearRightLower:
+          case _.RearRightLower:
             return _.createElement(_, {
               bIsKnockout: _,
               className: _,
@@ -2268,24 +2267,7 @@
             (_[(_.Medium = 1)] = "Medium"),
             (_[(_.Large = 2)] = "Large");
         })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports),
-        __webpack_require__._(module_exports, {
-          default: () => _,
-        });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -2688,9 +2670,9 @@
               {
                 className: _().DeveloperBlogYButton,
               },
-              _.createElement(_._, {
-                button: _._._,
-                type: _._.Knockout,
+              _.createElement(_, {
+                button: _._,
+                type: _.Knockout,
               }),
             ),
           );

@@ -1135,6 +1135,11 @@
                     br: g.qM.readBool,
                     bw: g.gp.writeBool,
                   },
+                  cooldown_seconds_remaining: {
+                    n: 5,
+                    br: g.qM.readUint32,
+                    bw: g.gp.writeUint32,
+                  },
                 },
               }),
             O.sm_m
@@ -1240,55 +1245,55 @@
           return "CFamilyGroups_RemoveFromFamilyGroup_Request";
         }
       }
-      class G extends d.Message {
+      class U extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return G.toObject(e, this);
+          return U.toObject(e, this);
         }
         static toObject(e, r) {
           return e ? { $jspbMessageInstance: r } : {};
         }
         static fromObject(e) {
-          return new G();
+          return new U();
         }
         static deserializeBinary(e) {
           let r = new (B().BinaryReader)(e),
-            t = new G();
-          return G.deserializeBinaryFromReader(t, r);
+            t = new U();
+          return U.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
           return e;
         }
         serializeBinary() {
           var e = new (B().BinaryWriter)();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {}
         serializeBase64String() {
           var e = new (B().BinaryWriter)();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFamilyGroups_RemoveFromFamilyGroup_Response";
         }
       }
-      class U extends d.Message {
+      class G extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            U.prototype.family_groupid || g.Sg(U.M()),
+            G.prototype.family_groupid || g.Sg(G.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            U.sm_m ||
-              (U.sm_m = {
-                proto: U,
+            G.sm_m ||
+              (G.sm_m = {
+                proto: G,
                 fields: {
                   family_groupid: {
                     n: 1,
@@ -1302,39 +1307,39 @@
                   },
                 },
               }),
-            U.sm_m
+            G.sm_m
           );
         }
         static MBF() {
-          return U.sm_mbf || (U.sm_mbf = g.w0(U.M())), U.sm_mbf;
+          return G.sm_mbf || (G.sm_mbf = g.w0(G.M())), G.sm_mbf;
         }
         toObject(e = !1) {
-          return U.toObject(e, this);
+          return G.toObject(e, this);
         }
         static toObject(e, r) {
-          return g.BT(U.M(), e, r);
+          return g.BT(G.M(), e, r);
         }
         static fromObject(e) {
-          return g.Uq(U.M(), e);
+          return g.Uq(G.M(), e);
         }
         static deserializeBinary(e) {
           let r = new (B().BinaryReader)(e),
-            t = new U();
-          return U.deserializeBinaryFromReader(t, r);
+            t = new G();
+          return G.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return g.zj(U.MBF(), e, r);
+          return g.zj(G.MBF(), e, r);
         }
         serializeBinary() {
           var e = new (B().BinaryWriter)();
-          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {
-          g.i0(U.M(), e, r);
+          g.i0(G.M(), e, r);
         }
         serializeBase64String() {
           var e = new (B().BinaryWriter)();
-          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFamilyGroups_CancelFamilyGroupInvite_Request";
@@ -4288,14 +4293,14 @@
             return e.SendMsg(
               "FamilyGroups.RemoveFromFamilyGroup#1",
               (0, n.I8)(I, r),
-              G,
+              U,
               { ePrivilege: 1 },
             );
           }),
           (e.CancelFamilyGroupInvite = function (e, r) {
             return e.SendMsg(
               "FamilyGroups.CancelFamilyGroupInvite#1",
-              (0, n.I8)(U, r),
+              (0, n.I8)(G, r),
               C,
               { ePrivilege: 1 },
             );
@@ -4446,8 +4451,8 @@
       var Te = t(37735),
         Oe = t(61859),
         Ie = (t(71430), t(30470)),
-        Ge = t(2627),
-        Ue = t(15419),
+        Ue = t(2627),
+        Ge = t(15419),
         Ce = t(41338),
         Ee = t(29233);
       const xe = (e, r) =>
@@ -4603,7 +4608,7 @@
           a = (0, o.jE)();
         return (0, u.n)({
           mutationFn: async () => {
-            const a = n.w.Init(U);
+            const a = n.w.Init(G);
             a.Body().set_family_groupid(e), a.Body().set_steamid_to_cancel(r);
             const s = await i.CancelFamilyGroupInvite(t, a);
             return Le(s.GetEResult()), s.Body();
@@ -4637,7 +4642,7 @@
         return (0, l.I)({
           queryKey: Pe(e),
           queryFn: async () => {
-            const t = (0, Ge.VY)("clientsessionid"),
+            const t = (0, Ue.VY)("clientsessionid"),
               a = t && BigInt("0x" + t).toString(),
               s = n.w.Init(N);
             s.Body().set_family_groupid(e),
@@ -4865,8 +4870,8 @@
       }
       function Mr(e, r) {
         const t = (0, c.LH)(),
-          { settings: a, mapAppsAllowed: s } = (0, Ue.S0)(t).data,
-          o = (0, Ue.BM)(),
+          { settings: a, mapAppsAllowed: s } = (0, Ge.S0)(t).data,
+          o = (0, Ge.BM)(),
           u = (0, y.KV)(),
           {
             bIncludeOwn: d,
@@ -4876,7 +4881,7 @@
           } = r ?? {},
           p = void 0 === r?.enabled || r.enabled,
           b = br(e, r, a, o),
-          M = (e) => !(0, Ue.or)(e.appid(), o, a, s);
+          M = (e) => !(0, Ge.or)(e.appid(), o, a, s);
         return (0, l.I)({
           queryKey: b,
           queryFn: async () => {
@@ -4910,8 +4915,8 @@
       function fr(e, r) {
         const t = (0, o.jE)(),
           i = (0, c.LH)(),
-          { settings: a } = (0, Ue.S0)(i).data ?? {},
-          n = br(e, r, a, (0, Ue.BM)());
+          { settings: a } = (0, Ge.S0)(i).data ?? {},
+          n = br(e, r, a, (0, Ge.BM)());
         return (0, s.useCallback)(() => {
           t.invalidateQueries({ queryKey: n });
         }, [t, n]);

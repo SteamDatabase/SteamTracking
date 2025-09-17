@@ -750,7 +750,7 @@ body:not(.v7menu) div#global_header .content {
     margin-right: 0;
     width: unset;
     overflow-x: scroll;
-    height: 50px;
+    height: 36px;
     display: flex;
     flex-direction: row;
     background: #25282e;
@@ -805,6 +805,20 @@ body:not(.v7menu) div#global_header .content {
   a._3kEWJGuSEOp09T1ZND24zk {
   background-color: #414653;
 }
+@media all and (max-width: 910px) {
+  .KSZ9hmL_XbHI_tlSUQylO
+    ._2X7eT07iC6SQRu_uj4Web3
+    .Lj-O1sumeRPMtyePxydGf
+    a._3kEWJGuSEOp09T1ZND24zk {
+    background: linear-gradient(
+      180deg,
+      #ecf0f500 94%,
+      #ecf0f5 95%,
+      #ecf0f5 100%
+    );
+    color: #ecf0f5;
+  }
+}
 .KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a svg {
   width: 26px;
   height: 26px;
@@ -817,6 +831,9 @@ body:not(.v7menu) div#global_header .content {
   }
   .KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a {
     white-space: nowrap;
+    padding: 8px 4px;
+    margin: 0px 8px;
+    font-size: 14px;
   }
   .KSZ9hmL_XbHI_tlSUQylO
     ._2X7eT07iC6SQRu_uj4Web3
@@ -826,9 +843,7 @@ body:not(.v7menu) div#global_header .content {
     display: flex;
   }
   .KSZ9hmL_XbHI_tlSUQylO ._2X7eT07iC6SQRu_uj4Web3 .Lj-O1sumeRPMtyePxydGf a svg {
-    width: 19px;
-    height: 19px;
-    margin-right: 7px;
+    display: none;
   }
 }
 .wLFBOAfa7yijnxFGxj9xs {
@@ -1462,6 +1477,7 @@ html.responsive.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   width: 16px;
   height: 16px;
   cursor: pointer;
+  z-index: 13;
 }
 .wUyDKp6qikfxWISsHWYI5 {
   margin: 8px;

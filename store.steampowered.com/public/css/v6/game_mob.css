@@ -962,6 +962,7 @@
 
 	/* use smaller player avatar image in the review details */
 	html.responsive .review_box .playerAvatar,
+	html.responsive .review_box .avatar,
 	html.responsive .review_box .playerAvatar img {
 		height: 24px;
 		width: 24px;

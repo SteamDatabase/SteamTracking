@@ -389,19 +389,6 @@
         ShellScrollParent: "_2jHWHZSCVN5I-kvjJMGCIH",
         ShellHeader: "_1axcMtI8AS5qyJtuEnlgVO",
         ShellHeaderFlex: "r0SidOgHx_GpPvZhV3oRG",
-        ShellHeaderBrandLink: "_1i4HJJ0howiGLQte4mw7Ev",
-        Sparkles: "_3B_cn_sui0vES4yYJocgyJ",
-        PointsContainer: "_N-ADJ88OVVFmrTxUQOSl",
-        AppFilterContainer: "_2kksRqR-kVf-18oe5RqkfN",
-        SearchTermContainer: "_1xpZQjVx3e07MkgbjGpnmR",
-        AppFilterLabel: "_1RJzickIHfpYaqHcuh6az7",
-        SearchTerm: "_3XI3T5sdRpli-4Fi51yqn7",
-        SearchIconContainer: "_3r56r4xDrxXdgkc2Hmd9qJ",
-        SearchIcon: "_1Y8cp77d2gLJQJf_HeVyk5",
-        SearchTermClearButton: "_11DW7egiXAMqKttWRQHQzK",
-        SearchTermClearIcon: "_36CFpwDxsEPuDWAfLlibzO",
-        RewardsPointsIcon: "_1z6UzQKlSbavGlGT1_aAG1",
-        YourBalanceLabel: "RvCZ5jI4Ft54weFWt9Kso",
         RewardsPointsCount: "YYMbHfzBxwkJLY2ThEnZy",
         ShellHeaderBrandName: "_3f3HdDfdqTMhXNm0SLEMe4",
         SvgOverrideColor: "_1Ej_H-izS8STL-ECIU6wzF",
@@ -453,19 +440,6 @@
         ShellScrollParent: "_20ZyN6yrC25dIXvq_eU6xI",
         ShellHeader: "_2COASJIa2LKJBLulgp9vp9",
         ShellHeaderFlex: "_3bKks23jvLCjgcG6RCntvo",
-        ShellHeaderBrandLink: "yT9B-IOxp2J9iCSzhjiaZ",
-        Sparkles: "lDkCoHAGRT0_FDeohqgKE",
-        PointsContainer: "MhyV00poFtT9n1EzlSynP",
-        AppFilterContainer: "_1nV0ZYsJR02txzfRKkscH9",
-        SearchTermContainer: "_1yPidmF9psrR_Vl9Rq1A0t",
-        AppFilterLabel: "_1BE1h6B0lfiPM76CYB1wPo",
-        SearchTerm: "_2GtUyzVfVeJLfWYx5AsdlY",
-        SearchIconContainer: "_1L0T0V8mrPuJX39EWDdwDJ",
-        SearchIcon: "hzMMl5ERjv-29FasPOH8z",
-        SearchTermClearButton: "W7yfXF9cyuv3s6zl0o0r5",
-        SearchTermClearIcon: "_3lsnAR3zRFF75MvnoCyKfC",
-        RewardsPointsIcon: "_2EpW1mxOXxELhHGuGUM9pz",
-        YourBalanceLabel: "GYATY1CF02GU9EB8xHJYM",
         RewardsPointsCount: "_127j9usN_MV5nNXj-x9WiQ",
         ShellHeaderBrandName: "_1O_ww6LlGy5b6c81mVf4eO",
         SvgOverrideColor: "_1c6vEVMR5JNnAD5fYgxWBL",
@@ -486,19 +460,6 @@
         ShellScrollParent: "S-9dlryW5YPQXPYVGjbK0",
         ShellHeader: "_1Ke_2MpDDUm9GWFwf-joXf",
         ShellHeaderFlex: "_24yvKF4IKaWBHM4SCZcNwd",
-        ShellHeaderBrandLink: "_6uDU6rKwl8oCvQP01aopm",
-        Sparkles: "_2jpInoHQp-lhdlFX-8I5EO",
-        PointsContainer: "LUEoCBVHxK6ZOV9v5twN6",
-        AppFilterContainer: "sVAn7EAgoqfpV3IuQpUCk",
-        SearchTermContainer: "_320t8IVEAL6_lbAQioaI8O",
-        AppFilterLabel: "gERoLxahR56VxB_fX0IGb",
-        SearchTerm: "_2GY5FLBIiMsXh_AYvAXSSD",
-        SearchIconContainer: "_1VM1fcczRUeLx6ixGL7NoF",
-        SearchIcon: "rZ-ASDoFaiXewsY9aTYbQ",
-        SearchTermClearButton: "_1Zp7ns5K3e1HthBmve3Wy7",
-        SearchTermClearIcon: "_1Uy8Uf7jK-lSfb7wXWTlGX",
-        RewardsPointsIcon: "_3DwKyek8SaKIN8UB1M3BHm",
-        YourBalanceLabel: "l_2GDhGtZuIbJjP_CM04A",
         RewardsPointsCount: "_23uvl57JoLcAV0rfGGLxkT",
         ShellHeaderBrandName: "_2w1GISS5RmliBowCpjM7d",
         SvgOverrideColor: "_3_3SlzLqo0jyLIqAggBG__",
@@ -506,6 +467,7 @@
         ActionButton: "_2SB-61nNPBj-a76Pz-p8nW",
         Icon: "_25aGTFYMHvZUPVShWtE94w",
         Container: "go6jLpmJlgzmvSwdeqLFv",
+        TitleContainer: "_11iS8oUB4IrfVg7UEBjWEX",
         Title: "y7h7uY1EfA5wfjcywdtWU",
         Description: "_20hSz29Uoq1of7cRa2XKEr",
         TitleSkeleton: "_3yIAMsf2PHWGCe9Ud6qpPh",
@@ -518,19 +480,6 @@
         ShellScrollParent: "_2Wz7wtTv1rPfz79sa-nBJq",
         ShellHeader: "_1B30PmQiH9-AgO2RRb7ucK",
         ShellHeaderFlex: "_1_NDbBMn8SdEKsMR5mmNE_",
-        ShellHeaderBrandLink: "_3_mdTNhhEJHxIqMzVJtxVv",
-        Sparkles: "_2igV7hbJX7Ud60AqAAHfu3",
-        PointsContainer: "_2NiRQ3ej5f5sOuyiZNLU99",
-        AppFilterContainer: "_1DdJCOCQjlWEzDutcMAdPG",
-        SearchTermContainer: "_1Ryf6Q9wbb8YjrR_3NvYwn",
-        AppFilterLabel: "_3UAcTOkb6_9deInHHuIvBX",
-        SearchTerm: "_2MSk3z8iZxGC7bJcIcnfJr",
-        SearchIconContainer: "_1UOy0gBBmLOJuPjoWIanQl",
-        SearchIcon: "_1uUCD51nWnw9nmMDEa4T5L",
-        SearchTermClearButton: "_2vqwMm3GLaC88Umw3BcD2D",
-        SearchTermClearIcon: "_1kf9MXbKOiM19MH0oHuW3j",
-        RewardsPointsIcon: "_2j8wEvHhHIsj8QtH-h4M1h",
-        YourBalanceLabel: "_1dThNQhKTJCRGPTts6Aqoe",
         RewardsPointsCount: "_3zRBb2YNN0UgOv5-WXtOAg",
         ShellHeaderBrandName: "_22xBc1p4ti6pdtPZdZffMq",
         SvgOverrideColor: "GPmfcLimFbXcTeQRcLfQP",
@@ -556,19 +505,6 @@
         ShellScrollParent: "_3V1twQM3UkSuCDEq2hz6Qb",
         ShellHeader: "_3JsJ9h2iMZYToSqbZdQ3Pz",
         ShellHeaderFlex: "_35y-E6qmgD4SqPk4b3i-Za",
-        ShellHeaderBrandLink: "_2PoNlB_czf42uHliJfJy1u",
-        Sparkles: "_1JsXHB_dS-t_2EwwOX9FiX",
-        PointsContainer: "_2tFNEB5CPaxAmuNduSK94t",
-        AppFilterContainer: "_3MeGWQ7LXbC0R8VGPhIQCL",
-        SearchTermContainer: "_20Hq0Y986rO5-APnL5myZs",
-        AppFilterLabel: "wDj13AQAM2St3vVRFRnzY",
-        SearchTerm: "_1uF8VKVh2SwMO2uPrTEFqp",
-        SearchIconContainer: "_386Cqbg6vaMPq8Ed0K9UMO",
-        SearchIcon: "j6QDDJ_zGMhEiwJrHmU-z",
-        SearchTermClearButton: "_1G59ivcFhxxDcKeh-2OHQY",
-        SearchTermClearIcon: "_8ixLpUVGPkSipsOppZcx4",
-        RewardsPointsIcon: "_2AjCL0JUk3ivAhTMkBQVvC",
-        YourBalanceLabel: "_2D5qhVf78R24hORcYciMXM",
         RewardsPointsCount: "_3O3RBIFdM3Uh0zVOdS4UEa",
         ShellHeaderBrandName: "iSMJpfWIyx2lk2t8DlXnr",
         SvgOverrideColor: "_3cW4OiJKDLtlOm-ne6Zu93",
@@ -586,19 +522,6 @@
         ShellScrollParent: "_2PfVsc07-5aT9ib58geOue",
         ShellHeader: "_2VMecB5khhOudhwMAjuU8W",
         ShellHeaderFlex: "_3bUT9Izxar-wbcRwThieaW",
-        ShellHeaderBrandLink: "_2Lq63sC__ymk9ZN0qjsVYz",
-        Sparkles: "_3spMuAF0axEFdSAAp6DaXG",
-        PointsContainer: "_3F5iu5eLMKJWPO589tdk9p",
-        AppFilterContainer: "_5SId0-1uJQIPDh1W5jDsl",
-        SearchTermContainer: "nNfIqrE3gYu9tzwyGZ4sR",
-        AppFilterLabel: "_1T8oZmWb_sU-pVfsBvdAbh",
-        SearchTerm: "_3Z1tDAQlBBsKIeUtUQxCFS",
-        SearchIconContainer: "_12qnBXX0LTbS-mGMhv2IBi",
-        SearchIcon: "_5Ffhq-Vro0Kf1AH5TeXVA",
-        SearchTermClearButton: "_2Apt1SUd2GbxofU8HXUGan",
-        SearchTermClearIcon: "_1-93xdxU8yzZHGQ1iLexXK",
-        RewardsPointsIcon: "_1Sm-XRJI4bnKl_Lp4l8aV1",
-        YourBalanceLabel: "_2ZMLACWCW1yy3-vWDavbX",
         RewardsPointsCount: "_1jPXBraslE2zYlFqNNrpgL",
         ShellHeaderBrandName: "_3KB6U7cdarhiXPM_sPvcH0",
         SvgOverrideColor: "_19bvxTGTZyrufQrDmg4YlL",
@@ -615,6 +538,18 @@
         ScrollableTabs: "pLIhF-mXFUwUKWoXhU44H",
         ScrollableTabItem: "_3jxyN-ONOSE1WwcNgvfxjY",
         Focused: "tLuQZ_E7xObnKtviYPVxt",
+        NavItemPadding: "_170hjEwvBFSJiDh_A-J-_d",
+        SearchSection: "_7USMmQFB_UFVJvabg_dwY",
+        SearchTermContainer: "nNfIqrE3gYu9tzwyGZ4sR",
+        AppFilterLabel: "_1T8oZmWb_sU-pVfsBvdAbh",
+        SearchTerm: "_3Z1tDAQlBBsKIeUtUQxCFS",
+        SearchIconContainer: "_12qnBXX0LTbS-mGMhv2IBi",
+        SearchIcon: "_5Ffhq-Vro0Kf1AH5TeXVA",
+        SearchTermClearButton: "_2Apt1SUd2GbxofU8HXUGan",
+        SearchTermClearIcon: "_1-93xdxU8yzZHGQ1iLexXK",
+        PointsContainer: "_3F5iu5eLMKJWPO589tdk9p",
+        RewardsPointsIcon: "_1Sm-XRJI4bnKl_Lp4l8aV1",
+        YourBalanceLabel: "_2ZMLACWCW1yy3-vWDavbX",
       };
     },
     chunkid: (module) => {
@@ -624,19 +559,6 @@
         ShellScrollParent: "ek93B8_YbmAmks5nDovZk",
         ShellHeader: "_2zzZmoCqrkdnqY8X7SNX1",
         ShellHeaderFlex: "_3rPufCSpulZhDMp_BrTJAD",
-        ShellHeaderBrandLink: "_2XSRqtA8HZ98nc_pH4F_i2",
-        Sparkles: "_2ZLa-Df9mvncsnPKKjxOr3",
-        PointsContainer: "egZw6U3Zd9roelSvqLBvJ",
-        AppFilterContainer: "trIsuTJfp57B5OsJeEN8r",
-        SearchTermContainer: "_1L4NYW6hbspgbCrqP9_-wj",
-        AppFilterLabel: "gANH12e2LzMxLvAK9Fk_i",
-        SearchTerm: "_3AsNyn7Bx3zsyOkHzgea0s",
-        SearchIconContainer: "_3PfDsiaOmgUq1iw5ph4WNG",
-        SearchIcon: "_2kIDKoBlw1aZmPGeN4aTb9",
-        SearchTermClearButton: "_2C01BZ5HTLnUGmTqRPQmp0",
-        SearchTermClearIcon: "XfueiQ-AlhXXNx6FCAQMk",
-        RewardsPointsIcon: "_1mOzF-gNXk76UE__tQjWIm",
-        YourBalanceLabel: "_1Mbxv5rEtVNnIKF0PZPMJS",
         RewardsPointsCount: "_2DgvLWXT3qNVaNcQKBDDch",
         ShellHeaderBrandName: "_16asncIOysS_LXVBJy0w0y",
         SvgOverrideColor: "_16JKq8xkHVFT1Mk1dBnL5s",
@@ -657,6 +579,7 @@
         PageHeaderImage: "_1mTFVE0IjP7KAfmDpbz9XV",
         PageTitle: "_2g7YPY3A5uZVqbtFiYwK7J",
         PageSubtitle: "_1j9rPjdq4_IWNkY49opKvj",
+        PagePointShopTitle: "SdoN2zN2sE_mZXWRcgWCp",
       };
     },
     chunkid: (module) => {
@@ -666,19 +589,6 @@
         ShellScrollParent: "_2Vguk6DMjI4elIyCE3fJk9",
         ShellHeader: "_3Bsg9oslbtjjgZMJmCyojG",
         ShellHeaderFlex: "_1fd-frf_m69gjh4B84DBML",
-        ShellHeaderBrandLink: "_1EmD5V7enGt3lYHox-9Gc6",
-        Sparkles: "_3q4NEA7is157rt2Ep5A0KK",
-        PointsContainer: "_15-3mCet7uMNbgIb5LXrUJ",
-        AppFilterContainer: "cmv-rzWFsf-hYZMhjaDEx",
-        SearchTermContainer: "_3mc9hYEJq-JE7QhKPP1JOr",
-        AppFilterLabel: "_1XMIxukQNpTiVvUex2ngBb",
-        SearchTerm: "_2lZlW5WVIg09Sc2xw5NGKz",
-        SearchIconContainer: "ZDKDKV0R6m9tc0ElSmeHu",
-        SearchIcon: "_109STH-tQ8KtdEC_OqaM_N",
-        SearchTermClearButton: "_3XgqTGsqvEqWbR-53fFb76",
-        SearchTermClearIcon: "_2Q0loAxFIGN1HLI8htk4Cf",
-        RewardsPointsIcon: "_1NwE1ztxVskVGOelXuhuih",
-        YourBalanceLabel: "_3NphQUVBHwL3MkgNMQV4yi",
         RewardsPointsCount: "_33f1lOOjcCr9Nm5zBhSKUA",
         ShellHeaderBrandName: "_2YwwT-cAEShx6Aib5QrN4l",
         SvgOverrideColor: "_1aaW9aBwiNNKUP_ba8peDl",
@@ -715,19 +625,6 @@
         ShellScrollParent: "_1rhSZxCRBAnHhGeWKsTxHr",
         ShellHeader: "_2I8Eu-ZTZ185IPYWWxnCR0",
         ShellHeaderFlex: "_3FEKim_gKmFp1TDudqF1Qc",
-        ShellHeaderBrandLink: "_3ugLAJRo1fKNgO22W_WGX5",
-        Sparkles: "_2LhhQz92wZTWTJZySdvRi2",
-        PointsContainer: "_2XpLSXFc72yehg-j-eVDue",
-        AppFilterContainer: "xEgIPmWT7-1eueF9hfdqE",
-        SearchTermContainer: "_3GwWV5VIFesYQXWHgYlrE3",
-        AppFilterLabel: "_2kgDwWVCmqwG2IGaZ7FtdL",
-        SearchTerm: "_3v4Vtcd0AC_2fAWL5GalSv",
-        SearchIconContainer: "_3JNETintHUQZb1NQdqE1bG",
-        SearchIcon: "_15jMVv7xUjAiNqsL1H2UHH",
-        SearchTermClearButton: "_10hCspzfVOBqJS5JAWlDKL",
-        SearchTermClearIcon: "_150Znd5l_H5EUB9XmN9AYD",
-        RewardsPointsIcon: "_33e-L0yNpghTESfEzE9Llg",
-        YourBalanceLabel: "_3f6bahArSv68PNR_H5ZYT-",
         RewardsPointsCount: "_35Qs6-NchS4CXE1SOBjvRB",
         ShellHeaderBrandName: "_37D8VCXZiAGHU904hRYAnu",
         SvgOverrideColor: "_1AdMam3_3nvlGILS1FPSBi",
@@ -748,6 +645,7 @@
         SubHeader: "_2JbfaQk8IDP59Da39sF8eu",
         SubHeaderAppContainer: "_2MH_iOeDea5EVdpaXFL3lL",
         AppIcon: "NOcYg9hpsSQNfxAJg4rLf",
+        PointsContainer: "_2XpLSXFc72yehg-j-eVDue",
         Balance: "_3v4FXxFrfsaZHli8OwS4GQ",
         CurrentPoints: "ML1Ck7yq53Puk6wrqUXNA",
         EquippedDesc: "e2luC3B0kZv3cHmpQ-yBu",
@@ -850,19 +748,6 @@
         ShellScrollParent: "_3pX0fpr3EedcQOYsdg0NmC",
         ShellHeader: "_3Pva473WMrEz8MMnzIcIMM",
         ShellHeaderFlex: "_1S-Q4pMNcHBPoiIxJcqvIE",
-        ShellHeaderBrandLink: "TkSn4kf_zG6jJmLdhxZip",
-        Sparkles: "_36xAndWrxrDikFtHbWBSvN",
-        PointsContainer: "_1Pq0el72uK7SZ91uchlo4_",
-        AppFilterContainer: "_3P7pLmbPamm-xhemc8AE13",
-        SearchTermContainer: "_1dkCdKJELcpbiqwkyQoBtb",
-        AppFilterLabel: "_19hDQlf8obKTwKXOgZ-EMy",
-        SearchTerm: "_2BhNbs8d8h3g_zvpuDKWih",
-        SearchIconContainer: "_22onft7ReRSJtQ0jOiKs5h",
-        SearchIcon: "_2UE4d0PlRkwttWjpmDoAKL",
-        SearchTermClearButton: "_2b_WsY_ElFqNemsIiSTlZi",
-        SearchTermClearIcon: "_3GDWYtapfMau5Jj4fFNtdS",
-        RewardsPointsIcon: "_2n_589pwKVtaQZkVBh1BJt",
-        YourBalanceLabel: "PCKp4stEiA8AaDOkzDVHO",
         RewardsPointsCount: "_3050zT7eiZmCmA2ogD9Qru",
         ShellHeaderBrandName: "_2AC6FW9RaXQp2kO_tYY3TE",
         SvgOverrideColor: "_106IeTCV02Hcu8JT61EjNZ",
@@ -931,19 +816,6 @@
         ShellScrollParent: "KL8ER7IEHoUt2NKJc-CM",
         ShellHeader: "_1rWvB8CTWbvYFqxwrR3OMv",
         ShellHeaderFlex: "_2KmXa0P1JjRki__5wLhi3X",
-        ShellHeaderBrandLink: "_2Mt9XWQrGnzYVpzjTXaXvP",
-        Sparkles: "_1kz7Ma15WxnALwdeOWdAG5",
-        PointsContainer: "_CbnbUcjd7pFn3Mt23mmX",
-        AppFilterContainer: "_1pCqF9LsNtpmGq8uzj9RwP",
-        SearchTermContainer: "oDQ6_4HBBFS8yTk36HBbt",
-        AppFilterLabel: "xcyDrUT76YSecTVr3etUF",
-        SearchTerm: "_2WGOzugw6hwi2eXo_gYCr4",
-        SearchIconContainer: "_1k9XrWr52fDoakS7Gse6gL",
-        SearchIcon: "_1ng9B8KrFPypP2VVn1owqv",
-        SearchTermClearButton: "_1jjw9ld8R8keTaFH6BU48m",
-        SearchTermClearIcon: "_5r_p7fAv9AD87OUnDux6E",
-        RewardsPointsIcon: "_2Fnewef7Jawl-qe88h5Kh5",
-        YourBalanceLabel: "_1EzganIvDmwilIYzuxLS9A",
         RewardsPointsCount: "FMNz07Zxxdva2Byhuh3uz",
         ShellHeaderBrandName: "_5pV-fLqEiGhjLx8O3yAPX",
         SvgOverrideColor: "_3Qlmf2_rwzyfbLrbkU6AsM",
@@ -969,19 +841,6 @@
         ShellScrollParent: "_2yu0NjVR2h_oAeY7RJwssu",
         ShellHeader: "_3yEbXBLFqAIH5fG2NVlFxR",
         ShellHeaderFlex: "_2aQIlV0z8u3KQZ10b-02g8",
-        ShellHeaderBrandLink: "_3EPt-mJdTBQowWtquBs1po",
-        Sparkles: "_1N-g8INOuXZeZh-1BwPxhg",
-        PointsContainer: "_1MYbvqEiK6tNl68NSiOPFg",
-        AppFilterContainer: "_31WPbGVtlItHd3HgQ9iuLy",
-        SearchTermContainer: "_1IpoU9-WRQoA4urbp_Qdej",
-        AppFilterLabel: "_1tbK6EQAmCCsFOcY6IUM1t",
-        SearchTerm: "_1FLOSoY4KX7laVtyO62Btv",
-        SearchIconContainer: "_2RSWzmzF2MlwJEv25r1LWN",
-        SearchIcon: "_2cLf24-3eR--LmZrWXqk0Z",
-        SearchTermClearButton: "_2qUXJvr0vEVEf2rtYc5dLD",
-        SearchTermClearIcon: "_3rz-LaE3Jff8zsKtXN0Xap",
-        RewardsPointsIcon: "GncW3zO3rlf0356Traq3X",
-        YourBalanceLabel: "_1tnic1pll3_64nF3mHLPbm",
         RewardsPointsCount: "_289LsR9Ay5ms8rg4cLju99",
         ShellHeaderBrandName: "_30kf5aTMlAYoH2zYM-BGk",
         SvgOverrideColor: "_2Z0xCykARLXhoJ7LviRJvo",
@@ -1016,19 +875,6 @@
         ShellScrollParent: "_1TznBfOuD_2xPpXIWUDeW6",
         ShellHeader: "_3M7bfuSoa6JGmxA1QmgvE-",
         ShellHeaderFlex: "_4eFAqSzIMV3tIKywzF5Wb",
-        ShellHeaderBrandLink: "_2i53fZCafDX4QIIzuq_pi5",
-        Sparkles: "gSex3IxU3IBY0kL5zZVl3",
-        PointsContainer: "_3C7A8Q_M6ai522YvsjLGJp",
-        AppFilterContainer: "_3G7_ByX0F3B1xS5njWf-qK",
-        SearchTermContainer: "_2WAs5EVmJtJlEl-Y4Yiw5h",
-        AppFilterLabel: "IXSgcbn4_JrpAk9pY6JzA",
-        SearchTerm: "_2mYVCfUFCM7pJS8ltMgq0x",
-        SearchIconContainer: "_3yyRxMiG6O5KiKowrSt_4d",
-        SearchIcon: "_39qXCuGASZAonrfrSf1pHj",
-        SearchTermClearButton: "_3vuPvmD-IS3-XqWajIUiHn",
-        SearchTermClearIcon: "_1OIw16euVjlbcqBtFR1GYw",
-        RewardsPointsIcon: "_1k2fj8LoypcsWTFOg1Rc9i",
-        YourBalanceLabel: "_1DA621MdnSeE97mDV9Xo6N",
         RewardsPointsCount: "_3U0OMqu4rjQDjuwd0A-h_5",
         ShellHeaderBrandName: "MS1bpqXxHn39LgX1xC7SW",
         SvgOverrideColor: "_2sxsfE_-6E5BOkZYm6fxW2",
@@ -1050,19 +896,6 @@
         ShellScrollParent: "_6qJSXX_Mb21jD3XaJUtks",
         ShellHeader: "k366j1SeaNNI_qBCzJNwz",
         ShellHeaderFlex: "_2mQTxqyxJVLNgz9mUQmCYo",
-        ShellHeaderBrandLink: "_15Zh1rYXbiQPAVwl3ZwoCH",
-        Sparkles: "_1qXNzBfUgy_G9vSrtHul9f",
-        PointsContainer: "_1rvnu5uqEFMxYcWOj0phNb",
-        AppFilterContainer: "_1Dh9OectdfQ5KYOw8cbtxK",
-        SearchTermContainer: "_1A4pk9hzhDEq8PGzSwA0XH",
-        AppFilterLabel: "_2bm85kIk1pIs_63FyzjXbe",
-        SearchTerm: "_2WsGBdug-DYkN-Yes0bEyU",
-        SearchIconContainer: "_3fEgbVC4S26C5hID1fBiWk",
-        SearchIcon: "_1v8L6qJIODx6UQMBhgwJLj",
-        SearchTermClearButton: "_35md8zuze8sIbxmYCZKQVa",
-        SearchTermClearIcon: "_1IzbwTWSpJ0tUMKq0mo6mv",
-        RewardsPointsIcon: "r6WHsD9PZLxbgsUM3_-ac",
-        YourBalanceLabel: "_3LSEdnjXXNADAx6vkT6-pG",
         RewardsPointsCount: "_2WS1A7b3rPt4gc-G9zTfhC",
         ShellHeaderBrandName: "_39jeNS8jOq4Z4htKxyI693",
         SvgOverrideColor: "_26o5CjPYm4bARQpdvmSgdq",
@@ -1082,19 +915,6 @@
         ShellScrollParent: "_2FLKmhVzLujkvO6ThYHWpV",
         ShellHeader: "_1iZtnTI1grVfcT_EwImQ7H",
         ShellHeaderFlex: "_1ZIXKlmQuHcbaji-0WEvgH",
-        ShellHeaderBrandLink: "_35pye9TJLOTD7OmaVZuNZW",
-        Sparkles: "_2VjOczv2Ny7KbZvLBad0LE",
-        PointsContainer: "_3OuXvHokfD0RFn7kwgbNZY",
-        AppFilterContainer: "_26hNvm2GmI6nL2Z5xLvwPt",
-        SearchTermContainer: "x535yKBgfgYz7sQOt9PvV",
-        AppFilterLabel: "_3vYbCe0dPtI41BnRyQuui5",
-        SearchTerm: "_3FMy7YV2pgoVmWM0F6Y59M",
-        SearchIconContainer: "_3_lO3bxyTLQru-7sHZGTBL",
-        SearchIcon: "_2CBUM5c4OsRMFeFxYOHWlS",
-        SearchTermClearButton: "_2xbByzvFh_pdWqU0TbwsaK",
-        SearchTermClearIcon: "WMLXKJLIYmuMv4NaswKeA",
-        RewardsPointsIcon: "o2WOQSCctYDGWlcA1Ayvt",
-        YourBalanceLabel: "_2h1vwRoD_7EGT2FfDVOx9o",
         RewardsPointsCount: "_1mnC0dHuYt_HGtyYe7TE-E",
         ShellHeaderBrandName: "lU9dGqkDAV7GQ2abdpm5K",
         SvgOverrideColor: "_1FzprAsttTsXhThKZUfv5W",
@@ -1190,19 +1010,6 @@
         ShellScrollParent: "_1oCLnPiFfFZx02l7q7zkmi",
         ShellHeader: "yV5UzPGa63ml8ZAPotCIG",
         ShellHeaderFlex: "kNGqa9t8eNBm53qFOBrLH",
-        ShellHeaderBrandLink: "_1-c2a5Ckr-C1P5OSzNm8oy",
-        Sparkles: "KPIYngr2rf79w0bvpX86E",
-        PointsContainer: "_3BmcHEsDMpZZxJ3ZZoC5nb",
-        AppFilterContainer: "_3FDv4dBpTs4LZYP7_kSUXf",
-        SearchTermContainer: "_3f6LgOLSjPYc6c27sWsGeS",
-        AppFilterLabel: "_3EY-RLKOmyhVpIw0iu6dzJ",
-        SearchTerm: "_2bDOXVHjSLRJRVYaaJGHMz",
-        SearchIconContainer: "_2sHSZqamv9isiIT154SV5V",
-        SearchIcon: "_2nhTcqUFjwtqKDhmAvz-PF",
-        SearchTermClearButton: "B8B9AbZK784z0PARiXNNP",
-        SearchTermClearIcon: "_8Rt8uouM87WaY89F7cF8j",
-        RewardsPointsIcon: "OeByMUCSt-fOJ6xxF-FfC",
-        YourBalanceLabel: "_1BWEYVY5I4uSebE_oeUbOY",
         RewardsPointsCount: "FDOzDBFhONi9dX8pOCiQ8",
         ShellHeaderBrandName: "GrkDn5PnLObytzhVQ3I5x",
         SvgOverrideColor: "mgi6kv7ib0cXGnG-o8GpO",
@@ -1211,6 +1018,9 @@
         Icon: "_1qMU66wZX82qGHgMSVxFzl",
         PageHomeTop: "nmZGbyIJS9Khyye40Xqec",
         PageHomeTitleContainer: "_1gjQLNTlec3cPDJhWPr52h",
+        Sparkles: "KPIYngr2rf79w0bvpX86E",
+        PageHomeBranding: "_2e0XTZxizBd-mziX3oL3ox",
+        PageBrandingTopPadding: "_3AI7TnB4VgwVpolFz7ql6n",
         PageHomeTopTitle: "_3DDggsGtqw9MsoLcQRBUGH",
         PageHomeTopSubTitle: "rSOhtifNE28jCExajTVS4",
         PageHomeTopLink: "_1JlZbyLaXUjEM6_BR1pcN_",
@@ -1231,6 +1041,7 @@
         SecondaryNavigationContainer: "_1viLBoL1YH9HK3kSZXmJQW",
         SecondaryNavigation: "_3Q9UO0nDzHTfhrfTQmMGw3",
         RewardsPointsContainer: "_3bglimcfnZHXQ2qzlxiXmx",
+        RewardsPointsIcon: "OeByMUCSt-fOJ6xxF-FfC",
         RewardsPointstext: "_1aK9NBaJBwU-4nw2FXZfmh",
         SecondaryBtnContainer: "_2HCytw_09I9MV4Xy7EW4Jb",
         SecondaryBtnIcon: "_3jGTO8-7r117sb31IMezoM",
@@ -7454,6 +7265,783 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "none";
+      function _(_, _, __webpack_require__ = {}) {
+        const {
+            cInitialItems: _,
+            cOverscanCount: _,
+            fnRenderItemSkeleton: _,
+            ..._
+          } = __webpack_require__,
+          _ = _ || 10,
+          _ = _ || 10,
+          [_, _] = (0, _.useState)(_ + _);
+        let _ = _(0, _).map((_) => _(_));
+        const _ = 0 === _.length;
+        if (_) for (let _ = 0; _ < _; _++) _.push(_());
+        const _ = (function (_, _ = {}, __webpack_require__ = !1) {
+          const _ = _.length,
+            [_, _] = (0, _.useState)(0),
+            [_, _] = _(),
+            [_, _] = _(),
+            _ = (0, _._)("padding-right", _),
+            _ = (0, _._)().spacing[_];
+          let _ = 1;
+          _.width &&
+            void 0 !== _.width &&
+            (_ = Math.floor((_.width + _) / _.width));
+          const _ = !__webpack_require__ && _ + _ < _,
+            _ = () => _ && _(_ + _),
+            _ = _ > 0,
+            _ = () => _ && _(Math.max(0, _ - _)),
+            _ = _,
+            _ = _ + _,
+            _ = _.slice(_, _).map((_, _) =>
+              _.createElement(
+                "div",
+                {
+                  key: _ + _,
+                  ref: 0 === _ ? _ : void 0,
+                  className: (0, _._)(
+                    0 === _ || _ < _ - 1 ? _ : void 0,
+                    _.itemClassName,
+                  ),
+                },
+                _,
+              ),
+            );
+          return {
+            containerRef: _,
+            rgVisibleItems: _,
+            bAllowNext: _,
+            bAllowPrev: _,
+            fnNext: _,
+            fnPrev: _,
+            iPosition: _,
+          };
+        })(_, _, _);
+        return {
+          ..._,
+          fnNext: () => {
+            _.iPosition + _.rgVisibleItems.length > _ - _ &&
+              _(_ + _.rgVisibleItems.length),
+              _.fnNext();
+          },
+        };
+      }
+      const _ = (_) => {
+          const {
+            className: _,
+            containerRef: __webpack_require__,
+            rgVisibleItems: _,
+            bAllowNext: _,
+            bAllowPrev: _,
+            fnNext: _,
+            fnPrev: _,
+            iPosition: _,
+            ..._
+          } = _;
+          return _.createElement(
+            _._,
+            {
+              className: (0, _._)(_.Container, _),
+              ref: __webpack_require__,
+              "flow-children": "row",
+              ..._,
+            },
+            _,
+          );
+        },
+        _ = (_) => {
+          const {
+            bAllowNext: _,
+            bAllowPrev: __webpack_require__,
+            fnNext: _,
+            fnPrev: _,
+          } = _;
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_, {
+              className: (0, _._)(
+                _.LeftArrow,
+                !__webpack_require__ && _.Disabled,
+              ),
+              onClick: _,
+            }),
+            _.createElement(_, {
+              className: (0, _._)(_.RightArrow, !_ && _.Disabled),
+              onClick: _,
+            }),
+          );
+        },
+        _ = () => (window.ResizeObserver ? _() : _()),
+        _ = () => {
+          const [_, _] = (0, _.useState)({}),
+            [__webpack_require__, _] = (0, _.useState)(null),
+            _ = (0, _.useCallback)((_) => _(_), []);
+          return (
+            (0, _.useLayoutEffect)(() => {
+              if (__webpack_require__) {
+                const _ = new ResizeObserver(() =>
+                  window.requestAnimationFrame(() =>
+                    _(__webpack_require__.getBoundingClientRect()),
+                  ),
+                );
+                return _.observe(__webpack_require__), () => _.disconnect();
+              }
+              return () => {};
+            }, [__webpack_require__]),
+            [_, _]
+          );
+        },
+        _ = () => {
+          const [_, _] = (0, _.useState)({}),
+            [__webpack_require__, _] = (0, _.useState)(null),
+            _ = (0, _.useCallback)((_) => _(_), []);
+          return (
+            (0, _.useLayoutEffect)(() => {
+              if (__webpack_require__) {
+                const _ = () =>
+                  window.requestAnimationFrame(() =>
+                    _(__webpack_require__.getBoundingClientRect()),
+                  );
+                return (
+                  _(),
+                  window.addEventListener("resize", _),
+                  window.addEventListener("scroll", _),
+                  () => {
+                    window.removeEventListener("resize", _),
+                      window.removeEventListener("scroll", _);
+                  }
+                );
+              }
+              return () => {};
+            }, [__webpack_require__]),
+            [_, _]
+          );
+        },
+        _ = (_) =>
+          _.createElement(
+            "svg",
+            {
+              ..._,
+              viewBox: "0 0 23 36",
+            },
+            _.createElement(
+              "g",
+              null,
+              _.createElement("path", {
+                _: "M6 1.5L21 18L6 34.5",
+                stroke: "#EAEAEA",
+                fill: "none",
+                strokeWidth: "4",
+              }),
+            ),
+          ),
+        _ = (_) => {
+          const { style: _, ...__webpack_require__ } = _,
+            _ = {
+              transform: "scaleX(-1)",
+              ...(_ || {}),
+            };
+          return _.createElement(_, {
+            style: _,
+            ...__webpack_require__,
+          });
+        };
+      function _(_) {
+        const {
+          items: _,
+          renderItem: __webpack_require__,
+          loadMore: _,
+          bLoadingMore: _,
+          style: _,
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.MobileContainer,
+          },
+          _.createElement(
+            _._,
+            {
+              "flow-children": "row",
+              className: (0, _._)(_.Container, _.Mobile),
+              style: _._.IN_GAMEPADUI ? null : _,
+            },
+            _.map(__webpack_require__),
+            _.createElement(_._, {
+              trigger: "repeated",
+              rootMargin: "0px 100% 0px 100%",
+              horizontal: !0,
+              onVisibilityChange: (_) => _ && _(),
+            }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.Loading,
+                },
+                _.createElement(_._, null),
+              ),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+          const {
+              title: _,
+              description: __webpack_require__,
+              actions: _,
+              children: _,
+              className: _,
+              itemClassName: _,
+              imgSrc: _,
+              fullbleed: _,
+              style: _,
+              ..._
+            } = _,
+            _ = `url(${_})`,
+            _ = "mobile" === (0, _._)();
+          return _.createElement(
+            _._,
+            {
+              padding: ["small", "large"],
+              flexGrow: 1,
+              display: "flex",
+              flexDirection: "column",
+              className: (0, _._)(_.Container, _),
+              style: _
+                ? {
+                    backgroundImage: _,
+                    ..._,
+                  }
+                : _,
+              ..._,
+            },
+            !_ &&
+              _.createElement(_._, {
+                src: _,
+              }),
+            _.createElement(
+              _._,
+              {
+                marginBottom: "medium",
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                flexGrow: 1,
+                style: {
+                  zIndex: 1,
+                },
+              },
+              _.createElement(
+                _._,
+                {
+                  display: "flex",
+                  flexDirection: "column",
+                  flexGrow: 1,
+                  className: _.TitleContainer,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    display: "flex",
+                    flexGrow: 1,
+                    alignItems: "center",
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      style: {
+                        transform: "translatey( -1px )",
+                      },
+                      className: _.Title,
+                    },
+                    _,
+                    " ",
+                  ),
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.Description,
+                  },
+                  __webpack_require__,
+                ),
+              ),
+            ),
+            _.createElement(
+              _._,
+              {
+                spacing: ["xsmall", "small"],
+                style: {
+                  alignSelf: _ ? "flex-start" : "flex-end",
+                },
+                itemClassName: _,
+              },
+              _,
+            ),
+          );
+        },
+        _ = (_) => {
+          const { theme: _, style: __webpack_require__, ..._ } = _;
+          return _.createElement(_._, {
+            ..._,
+            style: {
+              ...__webpack_require__,
+            },
+          });
+        };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return Math.max(0, _.cTotalMatchingUnfiltered - _.cTotalMatching);
+      }
+      function _(_) {
+        const _ = _(_);
+        return 0 === _
+          ? null
+          : (0, _._)("#HiddenWithCountButton", _.toLocaleString());
+      }
+      function _(_) {
+        const _ = _(_);
+        return 0 === _
+          ? null
+          : _.createElement(
+              _._,
+              {
+                key: "HiddenCallout",
+                title: (0, _._)(
+                  "#HiddenItems_Explanation",
+                  _,
+                  _.toLocaleString(),
+                ),
+              },
+              _(_),
+            );
+      }
+      const _ = (_) => {
+        switch (_.descriptor.type) {
+          case 1:
+            const _ = _.createElement(_, {
+              ..._,
+            });
+            return _.descriptor.bHomogeneous
+              ? _.createElement(_._, null, _)
+              : _;
+          case 0:
+            const _ = _.createElement(_, {
+              ..._,
+            });
+            return _.descriptor.bHomogeneous
+              ? _.createElement(_._, null, _)
+              : _;
+          case 2:
+            return _.createElement(_._, null, (_) =>
+              "desktop" !== _
+                ? _.createElement(_, {
+                    ..._,
+                  })
+                : _.createElement(_, {
+                    ..._,
+                  }),
+            );
+          default:
+            return (
+              console.error(`Unknown cluster display: ${_.descriptor.type}`),
+              null
+            );
+        }
+      };
+      let _ = class extends _.Component {
+        render() {
+          if (1 != this.props.descriptor.type) return null;
+          const {
+              descriptor: {
+                cluster: {
+                  _: _,
+                  title: _,
+                  subtitle: __webpack_require__,
+                  GetRewards: _,
+                },
+                title: _,
+                subtitle: _,
+                bHideHiddenItemCount: _,
+              },
+              linkedPage: _,
+              additionalFilter: _,
+            } = this.props,
+            _ = {
+              getItems: (_, _) => _(_, _, _),
+              title: _ || _,
+              subtitle: _ || __webpack_require__,
+              route: _ ? (0, _._)(_) : void 0,
+              bHideHiddenItemCount: !!_,
+            };
+          return _.createElement(_._, null, (_) =>
+            "desktop" !== _
+              ? _.createElement(_, {
+                  ..._,
+                })
+              : _.createElement(_, {
+                  ..._,
+                }),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)((_) => {
+          const {
+              title: _,
+              subtitle: __webpack_require__,
+              route: _,
+              getItems: _,
+              bHideHiddenItemCount: _,
+            } = _,
+            _ = (0, _._)(),
+            [_, _] = _.useState(10),
+            _ = _(0, _),
+            { rewards: _, bLoadingMore: _, cTotalMatching: _ } = _,
+            _ = (0, _._)();
+          if (0 === _) return null;
+          const _ = !_ && !_ && _(_);
+          return _.createElement(
+            _._,
+            {
+              title: _,
+              subtitle: _ || void 0,
+              rightActions: _
+                ? _.createElement(
+                    _._,
+                    {
+                      _: _,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: () => _.push(_),
+                      },
+                      (0, _._)("#SeeAllButton"),
+                    ),
+                  )
+                : void 0,
+            },
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                items: _,
+                loadMore: () => _(_ + 10),
+                bLoadingMore: _,
+                renderItem: (_) =>
+                  _.createElement(_, {
+                    definition: _,
+                    key: _.defid,
+                  }),
+                style: _,
+              }),
+            ),
+          );
+        }),
+        _ = (0, _._)((_) => {
+          const {
+            title: _,
+            subtitle: __webpack_require__,
+            route: _,
+            getItems: _,
+            bHideHiddenItemCount: _,
+          } = _;
+          let _ = _(0, 0);
+          const _ = _(
+              (_, _) => _(_, _).rewards,
+              (_) =>
+                _.createElement(_, {
+                  definition: _,
+                  key: _.defid,
+                }),
+              {
+                itemClassName: _.ItemHover,
+                fnRenderItemSkeleton: () => _.createElement(_._, null),
+              },
+            ),
+            _ = _.bAllowNext || _.bAllowPrev;
+          let _ = "";
+          if (
+            ((_ =
+              _.cMaxToReturn > 0
+                ? (0, _._)("#SeeAllButton")
+                : _.cTotalMatching > 0
+                  ? (0, _._)(
+                      "#SeeAllWithCountButton",
+                      _.cTotalMatching.toLocaleString(),
+                    )
+                  : (0, _._)("#SeeAllButton")),
+            0 === _.cTotalMatching && !_.bLoadingMore)
+          )
+            return null;
+          const _ = !_ || !_,
+            _ = !_ && _ && _(_);
+          let _ = [],
+            _ = [];
+          return (
+            !_ &&
+              _.push(
+                _.createElement(
+                  _._,
+                  {
+                    _: _,
+                    key: "SeeAll",
+                  },
+                  _.createElement(_._, null, _),
+                ),
+              ),
+            _ &&
+              _.push(
+                _.createElement(_, {
+                  key: "CarouselControls",
+                  ..._,
+                }),
+              ),
+            _ && (0 == _.length ? _.push(_) : 0 == _.length && _.push(_)),
+            _.createElement(
+              _._,
+              {
+                title: _,
+                subtitle: __webpack_require__,
+                leftActions: _,
+                rightActions: _,
+              },
+              _.createElement(_, {
+                style: {
+                  width: "100%",
+                  flexWrap: "wrap",
+                },
+                ..._,
+              }),
+            )
+          );
+        }),
+        _ = (0, _._)((_) => {
+          const {
+            descriptor: {
+              title: _,
+              subtitle: __webpack_require__,
+              cluster: { _: _, title: _, subtitle: _, GetRewards: _ },
+            },
+            additionalFilter: _,
+          } = _;
+          let _ = (_, _) => _(_, _, _);
+          const _ = _(_(0, 0));
+          return _.createElement(
+            _._,
+            {
+              title: _ || _,
+              subtitle: __webpack_require__ || _,
+              rightActions: _ || void 0,
+            },
+            _.createElement(_._, {
+              style: {
+                width: "100%",
+              },
+              itemClassName: _.ItemHover,
+              getItems: _,
+              renderItem: (_) =>
+                _.createElement(_, {
+                  definition: _,
+                  key: _.defid,
+                }),
+              renderItemSkeleton: () => _.createElement(_._, null),
+              key: `${_}||${JSON.stringify(_)}`,
+            }),
+          );
+        }),
+        _ = (0, _._)((_) => {
+          const {
+              descriptor: _,
+              additionalFilter: __webpack_require__,
+              linkedPage: _,
+            } = _,
+            _ = (0, _._)("(min-width: 1070px)");
+          if (2 !== _.type)
+            return (
+              console.error(
+                `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
+              ),
+              null
+            );
+          const {
+              strImage: _,
+              bFullBleedImage: _,
+              theme: _,
+              title: _,
+              subtitle: _,
+              cluster: { title: _, subtitle: _, GetRewards: _ },
+            } = _,
+            _ = _ ? (0, _._)(_) : void 0,
+            _ = _(0, _ ? 4 : 3, __webpack_require__),
+            _ =
+              _.bLoadingMore && 0 === _.rewards.length
+                ? [
+                    _.createElement(_._, {
+                      key: "0",
+                    }),
+                    _.createElement(_._, {
+                      key: "1",
+                    }),
+                    _.createElement(_._, {
+                      key: "2",
+                    }),
+                  ]
+                : _.rewards.map((_) =>
+                    _.createElement(_, {
+                      definition: _,
+                      key: _.defid,
+                      theme: _,
+                    }),
+                  );
+          return _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _,
+              {
+                title: _ || _,
+                description: _ || _,
+                imgSrc: _,
+                fullbleed: _,
+                style: {
+                  width: "100%",
+                },
+                itemClassName: _.ItemHover,
+                actions: _.createElement(
+                  _._,
+                  {
+                    _: _,
+                  },
+                  _.createElement(
+                    _,
+                    {
+                      theme: _,
+                    },
+                    (0, _._)("#SeeAllButton"),
+                  ),
+                ),
+              },
+              _,
+            ),
+          );
+        }),
+        _ = (0, _._)((_) => {
+          const {
+              descriptor: _,
+              additionalFilter: __webpack_require__,
+              linkedPage: _,
+            } = _,
+            _ = (0, _._)();
+          if (2 !== _.type)
+            return (
+              console.error(
+                `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
+              ),
+              null
+            );
+          const {
+              strImage: _,
+              bFullBleedImage: _,
+              theme: _,
+              title: _,
+              subtitle: _,
+              cluster: { title: _, subtitle: _, GetRewards: _ },
+            } = _,
+            _ = _ ? (0, _._)(_) : void 0;
+          return _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _,
+              {
+                title: _ || _,
+                description: "",
+                imgSrc: _,
+                fullbleed: _,
+                style: {
+                  width: "100%",
+                },
+                itemClassName: _.ItemHover,
+                actions: _.createElement(
+                  _._,
+                  {
+                    _: _,
+                  },
+                  _.createElement(
+                    _,
+                    {
+                      onClick: () => _.push(_),
+                      theme: _,
+                      className: _.MobileHeroAction,
+                    },
+                    (0, _._)("#SeeAllButton"),
+                  ),
+                ),
+              },
+              _.createElement(_, {
+                items: _(0, 6, __webpack_require__).rewards,
+                loadMore: () => {},
+                renderItem: (_) =>
+                  _.createElement(_, {
+                    definition: _,
+                    key: _.defid,
+                    theme: _,
+                  }),
+              }),
+            ),
+          );
+        }),
+        _ = (_) => {
+          const { definition: _, theme: __webpack_require__ } = _,
+            _ = (0, _._)();
+          return _.createElement(_._, {
+            definition: _,
+            onClick: (_) => {
+              5 === _.type || 6 === _.type
+                ? _.push(_._.LoyaltyItemBundle(_.defid))
+                : (0, _._)(_, _);
+            },
+            theme: __webpack_require__,
+          });
+        };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ({ src: _ }) =>
           _.createElement(
@@ -7819,6 +8407,20 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { size: _ } = _;
+        return _.createElement(_._, {
+          size: _,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7860,568 +8462,74 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      let _ = "",
-        _ = null,
-        _ = null,
-        _ = null;
-      function _() {
-        (_ = ""),
-          null !== _ && _.disconnect(),
-          null !== _ && (window.clearTimeout(_), (_ = null));
-      }
-      function _() {
-        const _ = document.getElementById(_);
-        return null !== _ && (_(_), _(), !0);
-      }
       function _(_) {
-        return _.forwardRef((_, _) => {
-          const { scroll: _, smooth: _, ..._ } = _;
-          return _.createElement(
-            _,
-            {
-              ..._,
-              onClick: (_) => {
-                _(),
-                  _.onClick && _.onClick(_),
-                  "string" == typeof _._
-                    ? (_ = _._.split("#").slice(1).join("#"))
-                    : "object" == typeof _._ &&
-                      "string" == typeof _._.hash &&
-                      (_ = _._.hash.replace("#", "")),
-                  "" !== _ &&
-                    ((_ =
-                      _.scroll ||
-                      ((_) =>
-                        _.smooth
-                          ? _.scrollIntoView({
-                              behavior: "smooth",
-                            })
-                          : _.scrollIntoView())),
-                    window.setTimeout(() => {
-                      !1 === _() &&
-                        (null === _ && (_ = new MutationObserver(_)),
-                        _.observe(document, {
-                          attributes: !0,
-                          childList: !0,
-                          subtree: !0,
-                        }),
-                        (_ = window.setTimeout(() => {
-                          _();
-                        }, 1e4)));
-                    }, 0));
-              },
-              ref: _,
-            },
-            _.children,
-          );
-        });
-      }
-      _(_._);
-      const _ = _(_._);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext(() => {}),
-        _ = ({ children: _, className: _, ...__webpack_require__ }) => {
-          const [_, _] = _.useState(null),
-            [_, _] = _.useState(0),
-            [_, _] = (function (
-              _,
-              _ = {
-                msDuration: 200,
-                msInterval: 10,
-              },
-            ) {
-              const [__webpack_require__, _] = _.useState(null),
-                _ = _.useCallback((_) => _(_), []),
-                { msDuration: _, msInterval: _ } = _;
-              return (
-                _.useLayoutEffect(() => {
-                  if (!__webpack_require__) return;
-                  const _ =
-                      (Math.abs(_ - __webpack_require__.scrollLeft) / (_ / _)) *
-                      (_ < __webpack_require__.scrollLeft ? -1 : 1),
-                    _ = window.setInterval(() => {
-                      Math.abs(_) < Math.abs(__webpack_require__.scrollLeft - _)
-                        ? ((__webpack_require__.scrollLeft = _),
-                          clearInterval(_))
-                        : (__webpack_require__.scrollLeft += _);
-                    }, _);
-                  return () => clearInterval(_);
-                }, [_, __webpack_require__, _, _]),
-                [_, __webpack_require__]
-              );
-            })(_),
-            _ = _
-              ? {
-                  width: `${_.width}px`,
-                  transform: `translateX(${_._}px)`,
-                }
-              : void 0,
-            _ = _.useCallback(
-              (_) => {
-                if (
-                  (_ ? _._ !== _._ && _.width !== _.width && _(_) : _(_), _)
-                ) {
-                  const _ = Math.max(
-                    0,
-                    Math.min(
-                      _._ - _.clientWidth / 2 + _.width / 2,
-                      _.scrollWidth - _.clientWidth,
-                    ),
-                  );
-                  _(_);
-                }
-              },
-              [_, _],
-            ),
-            [_, _] = _.useState(0);
-          return (
-            _.useEffect(() => {
-              if (_) {
-                const _ = setInterval(() => _((_) => _ + _), 50);
-                return () => clearInterval(_);
-              }
-            }, [_]),
+        const { children: _ } = _,
+          _ = _.useRef(void 0);
+        return (
+          _.useEffect(() => _.current?.Activate(!0), []),
+          _.createElement(
+            _._,
+            null,
             _.createElement(
-              _.Provider,
+              _._,
               {
-                value: _,
+                navID: "LoyaltyShell",
+                navTreeRef: _,
+                className: (0, _._)(_.Shell),
               },
               _.createElement(
                 _._,
                 {
-                  "flow-children": "row",
-                  ...__webpack_require__,
-                  className: (0, _._)(_.ItemContainer, _),
-                  ref: _,
-                  fnScrollIntoViewHandler: () => !0,
+                  className: (0, _._)(_.Shell),
                 },
-                _,
-                _.createElement("div", {
-                  className: _.Accent,
-                  style: _,
-                }),
-              ),
-            )
-          );
-        },
-        _ = ({
-          children: _,
-          active: _,
-          className: __webpack_require__,
-          ..._
-        }) => {
-          const _ = _.useContext(_),
-            [_, _] = _.useState(null),
-            _ = _.useCallback((_) => _(_), []);
-          return (
-            _.useLayoutEffect(() => {
-              _ &&
-                _ &&
-                _({
-                  _: _.offsetLeft,
-                  width: _.clientWidth,
-                });
-            }, [_, _, _]),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Item, _ && _.Active, __webpack_require__),
-                ref: _,
-                ..._,
-              },
-              _,
-            )
-          );
-        };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "#CommunityAwards",
-        _ = (_) => (_, _) => {
-          if (!_) return !1;
-          return (_.hash === _) === _;
-        },
-        _ = () => {
-          const _ = [
-              {
-                label: (0, _._)("#FeaturedLabel"),
-                items: [
-                  {
-                    props: {
-                      iconComponent: _._,
-                      children: (0, _._)("#ShopNav_Featured"),
-                      _: _._.LoyaltyStore(),
-                      exact: !0,
-                    },
-                  },
-                  {
-                    props: {
-                      iconComponent: _._,
-                      children: (0, _._)("#ShopNav_ByGame"),
-                      _: _._.LoyaltyByGame(),
-                    },
-                  },
-                  {
-                    props: {
-                      iconComponent: _._,
-                      children: (0, _._)("#ShopNav_ByEvent"),
-                      _: _._.LoyaltyByEvent(),
-                    },
-                  },
-                  {
-                    props: {
-                      iconComponent: _._,
-                      children: (0, _._)("#ShopNav_ItemBundlesLink"),
-                      _: {
-                        pathname: _._.LoyaltyItemBundles(),
-                      },
-                    },
-                  },
-                ],
-              },
-              {
-                label: (0, _._)("#InterfaceLabel"),
-                items: [
-                  {
-                    props: {
-                      iconComponent: _.oEi,
-                      children: (0, _._)("#ShopNav_Keyboards"),
-                      _: {
-                        pathname: _._.LoyaltyKeyboard(),
-                      },
-                    },
-                  },
-                  {
-                    props: {
-                      iconComponent: _.oEi,
-                      children: (0, _._)("#ShopNav_StartupMovies"),
-                      _: {
-                        pathname: _._.LoyaltyStartupMovie(),
-                      },
-                    },
-                  },
-                ],
-              },
-              {
-                label: (0, _._)("#ProfileItems"),
-                items: [
-                  {
-                    props: {
-                      iconComponent: _._,
-                      children: (0, _._)("#ShopNav_AvatarLink"),
-                      _: _._.LoyaltyAvatar(),
-                    },
-                  },
-                  {
-                    props: {
-                      iconComponent: _.yHA,
-                      children: (0, _._)("#ShopNav_BackgroundsLink"),
-                      _: _._.LoyaltyBackgrounds(),
-                    },
-                  },
-                ],
-              },
-              {
-                label: (0, _._)("#ChatItems"),
-                items: [
-                  {
-                    props: {
-                      iconComponent: _.EEf,
-                      children: (0, _._)("#ShopNav_StickersLink"),
-                      _: _._.LoyaltyStickers(),
-                    },
-                  },
-                  {
-                    props: {
-                      iconComponent: _.oY9,
-                      children: (0, _._)("#ShopNav_ChatEffectsLink"),
-                      _: _._.LoyaltyChatEffects(),
-                    },
-                  },
-                  {
-                    props: {
-                      iconComponent: _.ZTc,
-                      children: (0, _._)("#ShopNav_EmoticonsLink"),
-                      _: _._.LoyaltyEmoticons(),
-                    },
-                  },
-                ],
-              },
-              {
-                label: " ",
-                items: [
-                  {
-                    props: {
-                      iconComponent: _._,
-                      children: (0, _._)("#HowItWorksLink"),
-                      _: {
-                        pathname: _._.LoyaltyHowItWorks(),
-                        hash: "#Title",
-                      },
-                      isActive: _(!1),
-                    },
-                  },
-                ],
-              },
-            ],
-            _ = (0, _._)(_._.EREALM);
-          return (
-            _ ||
-              _._.IN_GAMEPADUI ||
-              _[2].items.push({
-                props: {
-                  iconComponent: _._,
-                  children: (0, _._)("#ShopNav_AwardsLink"),
-                  _: {
-                    pathname: _._.LoyaltyHowItWorks(),
-                    hash: `${_}`,
-                  },
-                  isActive: _(!0),
-                },
-              }),
-            _ ||
-              (_[2].items.push({
-                props: {
-                  iconComponent: _.Exy,
-                  children: (0, _._)("#ShopNav_SeasonalBadgeLink"),
-                  iconCallout: _._,
-                  _: _._.LoyaltySteamBadge(),
-                },
-              }),
-              _[2].items.push({
-                props: {
-                  iconComponent: _._,
-                  children: (0, _._)("#ShopNav_ProfileBundlesLink"),
-                  _: _._.LoyaltyProfileBundles(),
-                },
-              })),
-            _ ||
-              _[2].items.push({
-                props: {
-                  iconComponent: _._,
-                  children: (0, _._)("#ShopNav_ProfileShowcasesLink"),
-                  _: {
-                    pathname: _._.LoyaltyProfileCustomizations(),
-                  },
-                },
-              }),
-            _._.Get().BIsLoggedIn() &&
-              (_[4].items.push({
-                external: !0,
-                props: {
-                  iconComponent: _._,
-                  children: (0, _._)("#RewardsPointsHistoryLink"),
-                  href: _._.STORE_BASE_URL + "pointssummary/",
-                },
-              }),
-              _[4].items.push({
-                props: {
-                  iconComponent: _._,
-                  children: (0, _._)("#MyEquippedProfileItems"),
-                  _: {
-                    pathname: _._.LoyaltyEquippedProfile(_._.steamid),
-                  },
-                },
-              })),
-            _
-          );
-        },
-        _ = () => {
-          const _ = _();
-          return _.createElement(
-            _._,
-            {
-              className: _.PrimaryNav,
-              "flow-children": "column",
-            },
-            _.createElement(
-              _._,
-              {
-                spacing: "none",
-              },
-              _.map((_, _) =>
                 _.createElement(
-                  _.Fragment,
+                  _._,
                   {
-                    key: _,
+                    domain: "store.steampowered.com",
+                    feature: "pointsshop",
                   },
-                  _.label &&
+                  _.createElement(
+                    _._,
+                    {
+                      display: "flex",
+                      flexDirection: "row",
+                      className: _.ShellScrollParent,
+                    },
                     _.createElement(
-                      "div",
+                      _._,
                       {
-                        className: _.NavItem,
+                        flex: "1",
+                        className: _.ShellScroll,
+                        "flow-children": "column",
                       },
-                      _.label,
+                      _,
                     ),
-                  _.items.map((_) =>
-                    _.external
-                      ? _.createElement(_, {
-                          ..._.props,
-                          key: _.props.href,
-                        })
-                      : _.createElement(_, {
-                          ..._.props,
-                          key: JSON.stringify(_.props._),
-                        }),
                   ),
                 ),
               ),
             ),
-          );
-        },
-        _ = (_) => {
-          const {
-              iconComponent: _,
-              className: __webpack_require__,
-              children: _,
-              iconCallout: _,
-              ..._
-            } = _,
-            _ = _,
-            _ = "object" == typeof _._ && _._.hash ? _ : _._;
-          return _.createElement(
-            _,
-            {
-              className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
-              activeClassName: _.Selected,
-              ..._,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Label,
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(_, {
-                className: _.Callout,
-              }),
-          );
-        },
-        _ = (_) => {
-          const {
-              iconComponent: _,
-              className: __webpack_require__,
-              children: _,
-              iconCallout: _,
-              ..._
-            } = _,
-            _ = _;
-          return _.createElement(
-            "a",
-            {
-              className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
-              ..._,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Label,
-              },
-              _,
-            ),
-            _ &&
-              _.createElement(_, {
-                className: _.Callout,
-              }),
-          );
-        };
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = "string" == typeof _._ ? _._ : _._.pathname,
-          _ = (0, _._)(_),
-          _ = !!_ && (!_.exact || _.isExact),
-          _ = _ && _.isActive ? _.isActive(_, _) : _;
-        return _.createElement(
-          _,
-          {
-            active: _,
-            className: _.ScrollableTabItem,
-          },
-          _.children,
-        );
-      }
-      const _ = () => {
-        const _ = _(),
-          _ = [];
-        return (
-          _.forEach((_) => {
-            _.items.forEach((_) => {
-              if (_.external) {
-                const {
-                  iconComponent: __webpack_require__,
-                  iconCallout: _,
-                  ..._
-                } = _.props;
-                _.push(
-                  _.createElement(
-                    _._,
-                    {
-                      ..._,
-                      key: _.props.href,
-                      focusClassName: _.Focused,
-                      noFocusRing: !0,
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        className: _.ScrollableTabItem,
-                      },
-                      _.props.children,
-                    ),
-                  ),
-                );
-              } else {
-                const _ = _.props,
-                  { iconComponent: _, iconCallout: _, ..._ } = _,
-                  _ = "string" == typeof _._ ? _._ : JSON.stringify(_._);
-                _.push(
-                  _.createElement(
-                    _._,
-                    {
-                      ..._,
-                      key: _,
-                      focusClassName: _.Focused,
-                      noFocusRing: !0,
-                    },
-                    _.createElement(
-                      _,
-                      {
-                        ..._,
-                      },
-                      _.children,
-                    ),
-                  ),
-                );
-              }
-            });
-          }),
-          _.createElement(
-            _,
-            {
-              className: _.ScrollableTabs,
-            },
-            _,
           )
         );
-      };
+      }
+      function _(_) {
+        (0, _.useEffect)(
+          () => (
+            _._.Get().SetCurrentSearchPlaceholder(_),
+            () => _._.Get().SetCurrentSearchPlaceholder("")
+          ),
+          [_],
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -9110,25 +9218,6 @@
         );
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
-        return _.createElement(
-          "svg",
-          {
-            className: _,
-            height: 100,
-            width: 100,
-            fill: "currentColor",
-            stroke: "currentColor",
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 69 69",
-          },
-          _.createElement("path", {
-            _: "M47.9849 0.487061L62.9734 29.8571L95.5377 35.0362L72.2368 58.367L77.3741 90.9379L47.9849 75.9871L18.5956 90.9379L23.7329 58.367L0.432037 35.0362L32.9963 29.8571L47.9849 0.487061Z",
-          }),
-          "  ",
-        );
-      }
-      function _(_) {
         return _.createElement(
           "svg",
           {
@@ -9226,8 +9315,662 @@
       const _ = (0, _._)(_);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      let _ = "",
+        _ = null,
+        _ = null,
+        _ = null;
+      function _() {
+        (_ = ""),
+          null !== _ && _.disconnect(),
+          null !== _ && (window.clearTimeout(_), (_ = null));
+      }
+      function _() {
+        const _ = document.getElementById(_);
+        return null !== _ && (_(_), _(), !0);
+      }
+      function _(_) {
+        return _.forwardRef((_, _) => {
+          const { scroll: _, smooth: _, ..._ } = _;
+          return _.createElement(
+            _,
+            {
+              ..._,
+              onClick: (_) => {
+                _(),
+                  _.onClick && _.onClick(_),
+                  "string" == typeof _._
+                    ? (_ = _._.split("#").slice(1).join("#"))
+                    : "object" == typeof _._ &&
+                      "string" == typeof _._.hash &&
+                      (_ = _._.hash.replace("#", "")),
+                  "" !== _ &&
+                    ((_ =
+                      _.scroll ||
+                      ((_) =>
+                        _.smooth
+                          ? _.scrollIntoView({
+                              behavior: "smooth",
+                            })
+                          : _.scrollIntoView())),
+                    window.setTimeout(() => {
+                      !1 === _() &&
+                        (null === _ && (_ = new MutationObserver(_)),
+                        _.observe(document, {
+                          attributes: !0,
+                          childList: !0,
+                          subtree: !0,
+                        }),
+                        (_ = window.setTimeout(() => {
+                          _();
+                        }, 1e4)));
+                    }, 0));
+              },
+              ref: _,
+            },
+            _.children,
+          );
+        });
+      }
+      _(_._);
+      const _ = _(_._);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = _.createContext(() => {}),
+        _ = ({ children: _, className: _, ...__webpack_require__ }) => {
+          const [_, _] = _.useState(null),
+            [_, _] = _.useState(0),
+            [_, _] = (function (
+              _,
+              _ = {
+                msDuration: 200,
+                msInterval: 10,
+              },
+            ) {
+              const [__webpack_require__, _] = _.useState(null),
+                _ = _.useCallback((_) => _(_), []),
+                { msDuration: _, msInterval: _ } = _;
+              return (
+                _.useLayoutEffect(() => {
+                  if (!__webpack_require__) return;
+                  const _ =
+                      (Math.abs(_ - __webpack_require__.scrollLeft) / (_ / _)) *
+                      (_ < __webpack_require__.scrollLeft ? -1 : 1),
+                    _ = window.setInterval(() => {
+                      Math.abs(_) < Math.abs(__webpack_require__.scrollLeft - _)
+                        ? ((__webpack_require__.scrollLeft = _),
+                          clearInterval(_))
+                        : (__webpack_require__.scrollLeft += _);
+                    }, _);
+                  return () => clearInterval(_);
+                }, [_, __webpack_require__, _, _]),
+                [_, __webpack_require__]
+              );
+            })(_),
+            _ = _
+              ? {
+                  width: `${_.width}px`,
+                  transform: `translateX(${_._}px)`,
+                }
+              : void 0,
+            _ = _.useCallback(
+              (_) => {
+                if (
+                  (_ ? _._ !== _._ && _.width !== _.width && _(_) : _(_), _)
+                ) {
+                  const _ = Math.max(
+                    0,
+                    Math.min(
+                      _._ - _.clientWidth / 2 + _.width / 2,
+                      _.scrollWidth - _.clientWidth,
+                    ),
+                  );
+                  _(_);
+                }
+              },
+              [_, _],
+            ),
+            [_, _] = _.useState(0);
+          return (
+            _.useEffect(() => {
+              if (_) {
+                const _ = setInterval(() => _((_) => _ + _), 50);
+                return () => clearInterval(_);
+              }
+            }, [_]),
+            _.createElement(
+              _.Provider,
+              {
+                value: _,
+              },
+              _.createElement(
+                _._,
+                {
+                  "flow-children": "row",
+                  ...__webpack_require__,
+                  className: (0, _._)(_.ItemContainer, _),
+                  ref: _,
+                  fnScrollIntoViewHandler: () => !0,
+                },
+                _,
+                _.createElement("div", {
+                  className: _.Accent,
+                  style: _,
+                }),
+              ),
+            )
+          );
+        },
+        _ = ({
+          children: _,
+          active: _,
+          className: __webpack_require__,
+          ..._
+        }) => {
+          const _ = _.useContext(_),
+            [_, _] = _.useState(null),
+            _ = _.useCallback((_) => _(_), []);
+          return (
+            _.useLayoutEffect(() => {
+              _ &&
+                _ &&
+                _({
+                  _: _.offsetLeft,
+                  width: _.clientWidth,
+                });
+            }, [_, _, _]),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.Item, _ && _.Active, __webpack_require__),
+                ref: _,
+                ..._,
+              },
+              _,
+            )
+          );
+        };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "#CommunityAwards",
+        _ = (_) => (_, _) => {
+          if (!_) return !1;
+          return (_.hash === _) === _;
+        },
+        _ = () => {
+          const _ = [
+              {
+                label: (0, _._)("#FeaturedLabel"),
+                items: [
+                  {
+                    props: {
+                      iconComponent: _._,
+                      children: (0, _._)("#ShopNav_Featured"),
+                      _: _._.LoyaltyStore(),
+                      exact: !0,
+                    },
+                  },
+                  {
+                    props: {
+                      iconComponent: _._,
+                      children: (0, _._)("#ShopNav_ByGame"),
+                      _: _._.LoyaltyByGame(),
+                    },
+                  },
+                  {
+                    props: {
+                      iconComponent: _._,
+                      children: (0, _._)("#ShopNav_ByEvent"),
+                      _: _._.LoyaltyByEvent(),
+                    },
+                  },
+                  {
+                    props: {
+                      iconComponent: _._,
+                      children: (0, _._)("#ShopNav_ItemBundlesLink"),
+                      _: {
+                        pathname: _._.LoyaltyItemBundles(),
+                      },
+                    },
+                  },
+                ],
+              },
+              {
+                label: (0, _._)("#InterfaceLabel"),
+                items: [
+                  {
+                    props: {
+                      iconComponent: _.oEi,
+                      children: (0, _._)("#ShopNav_Keyboards"),
+                      _: {
+                        pathname: _._.LoyaltyKeyboard(),
+                      },
+                    },
+                  },
+                  {
+                    props: {
+                      iconComponent: _.oEi,
+                      children: (0, _._)("#ShopNav_StartupMovies"),
+                      _: {
+                        pathname: _._.LoyaltyStartupMovie(),
+                      },
+                    },
+                  },
+                ],
+              },
+              {
+                label: (0, _._)("#ProfileItems"),
+                items: [
+                  {
+                    props: {
+                      iconComponent: _._,
+                      children: (0, _._)("#ShopNav_AvatarLink"),
+                      _: _._.LoyaltyAvatar(),
+                    },
+                  },
+                  {
+                    props: {
+                      iconComponent: _.yHA,
+                      children: (0, _._)("#ShopNav_BackgroundsLink"),
+                      _: _._.LoyaltyBackgrounds(),
+                    },
+                  },
+                ],
+              },
+              {
+                label: (0, _._)("#ChatItems"),
+                items: [
+                  {
+                    props: {
+                      iconComponent: _.EEf,
+                      children: (0, _._)("#ShopNav_StickersLink"),
+                      _: _._.LoyaltyStickers(),
+                    },
+                  },
+                  {
+                    props: {
+                      iconComponent: _.oY9,
+                      children: (0, _._)("#ShopNav_ChatEffectsLink"),
+                      _: _._.LoyaltyChatEffects(),
+                    },
+                  },
+                  {
+                    props: {
+                      iconComponent: _.ZTc,
+                      children: (0, _._)("#ShopNav_EmoticonsLink"),
+                      _: _._.LoyaltyEmoticons(),
+                    },
+                  },
+                ],
+              },
+              {
+                label: " ",
+                items: [
+                  {
+                    props: {
+                      iconComponent: _._,
+                      children: (0, _._)("#HowItWorksLink"),
+                      _: {
+                        pathname: _._.LoyaltyHowItWorks(),
+                        hash: "#Title",
+                      },
+                      isActive: _(!1),
+                    },
+                  },
+                ],
+              },
+            ],
+            _ = (0, _._)(_._.EREALM);
+          return (
+            _ ||
+              _._.IN_GAMEPADUI ||
+              _[2].items.push({
+                props: {
+                  iconComponent: _._,
+                  children: (0, _._)("#ShopNav_AwardsLink"),
+                  _: {
+                    pathname: _._.LoyaltyHowItWorks(),
+                    hash: `${_}`,
+                  },
+                  isActive: _(!0),
+                },
+              }),
+            _ ||
+              (_[2].items.push({
+                props: {
+                  iconComponent: _.Exy,
+                  children: (0, _._)("#ShopNav_SeasonalBadgeLink"),
+                  iconCallout: null,
+                  _: _._.LoyaltySteamBadge(),
+                },
+              }),
+              _[2].items.push({
+                props: {
+                  iconComponent: _._,
+                  children: (0, _._)("#ShopNav_ProfileBundlesLink"),
+                  _: _._.LoyaltyProfileBundles(),
+                },
+              })),
+            _ ||
+              _[2].items.push({
+                props: {
+                  iconComponent: _._,
+                  children: (0, _._)("#ShopNav_ProfileShowcasesLink"),
+                  _: {
+                    pathname: _._.LoyaltyProfileCustomizations(),
+                  },
+                },
+              }),
+            _._.Get().BIsLoggedIn() &&
+              (_[4].items.push({
+                external: !0,
+                props: {
+                  iconComponent: _._,
+                  children: (0, _._)("#RewardsPointsHistoryLink"),
+                  href: _._.STORE_BASE_URL + "pointssummary/",
+                },
+              }),
+              _[4].items.push({
+                props: {
+                  iconComponent: _._,
+                  children: (0, _._)("#MyEquippedProfileItems"),
+                  _: {
+                    pathname: _._.LoyaltyEquippedProfile(_._.steamid),
+                  },
+                },
+              })),
+            _
+          );
+        },
+        _ = (0, _._)(() => {
+          const [_, _] = (0, _.useState)(_._.Get().GetCurrentSearchTerm()),
+            [__webpack_require__, _] = (0, _.useState)(0),
+            _ = _._.Get().GetCurrentSearchPlaceholder();
+          return _.createElement(
+            _._,
+            {
+              className: (0, _._)(_.SearchSection, _.NavItemPadding),
+            },
+            _.createElement(
+              _._,
+              {
+                className: _.SearchTermContainer,
+              },
+              _.createElement(_._, {
+                className: _.SearchTerm,
+                type: "text",
+                _: "point_search",
+                onChange: (_) => {
+                  let _ = _.target.value.toLowerCase();
+                  __webpack_require__ && clearTimeout(__webpack_require__),
+                    _(
+                      window.setTimeout(() => {
+                        _._.Get().SetCurrentSearchTerm(_);
+                      }, 300),
+                    ),
+                    _(_);
+                },
+                value: _,
+                placeholder: _,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.SearchIconContainer,
+                },
+                _.createElement(_.eSy, {
+                  className: (0, _._)(_.SearchIcon),
+                }),
+              ),
+              _.length > 0 &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SearchTermClearButton,
+                    onClick: () => {
+                      _(""), _._.Get().SetCurrentSearchTerm("");
+                    },
+                  },
+                  _.createElement(_._, {
+                    className: _.SearchTermClearIcon,
+                  }),
+                ),
+            ),
+          );
+        });
+      function _() {
+        return _._.Get().BIsLoggedIn()
+          ? _.createElement(
+              _._,
+              {
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                className: (0, _._)(_.PointsContainer, _.NavItemPadding),
+              },
+              _.createElement(_.vrn, {
+                className: _.Icon,
+              }),
+              _.createElement(
+                _._,
+                {
+                  display: "flex",
+                  flexDirection: "column",
+                  flex: "1",
+                  paddingLeft: "xsmall",
+                },
+                _.createElement(
+                  "a",
+                  {
+                    className: _.YourBalanceLabel,
+                    href: _._.STORE_BASE_URL + "pointssummary/",
+                  },
+                  (0, _._)("#YourBalance"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.RewardsPointsCount,
+                  },
+                  (0, _._)(_._.Get().GetPointsAvailable().getLowBits()),
+                ),
+              ),
+            )
+          : null;
+      }
+      const _ = () => {
+          const _ = _(),
+            _ = _._.Get().BIsLoggedIn() && _._.Get().GetIsUsingAppIDFilters();
+          return _.createElement(
+            _._,
+            {
+              className: _.PrimaryNav,
+              "flow-children": "column",
+            },
+            _.createElement(
+              _._,
+              {
+                spacing: "none",
+              },
+              _.createElement(_, null),
+              _ && _.createElement(_, null),
+              _.map((_, _) =>
+                _.createElement(
+                  _.Fragment,
+                  {
+                    key: _,
+                  },
+                  _.label &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.NavItem,
+                      },
+                      _.label,
+                    ),
+                  _.items.map((_) =>
+                    _.external
+                      ? _.createElement(_, {
+                          ..._.props,
+                          key: _.props.href,
+                        })
+                      : _.createElement(_, {
+                          ..._.props,
+                          key: JSON.stringify(_.props._),
+                        }),
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const {
+              iconComponent: _,
+              className: __webpack_require__,
+              children: _,
+              iconCallout: _,
+              ..._
+            } = _,
+            _ = _,
+            _ = "object" == typeof _._ && _._.hash ? _ : _._;
+          return _.createElement(
+            _,
+            {
+              className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
+              activeClassName: _.Selected,
+              ..._,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.Label,
+              },
+              _,
+            ),
+            _ &&
+              _.createElement(_, {
+                className: _.Callout,
+              }),
+          );
+        },
+        _ = (_) => {
+          const {
+              iconComponent: _,
+              className: __webpack_require__,
+              children: _,
+              iconCallout: _,
+              ..._
+            } = _,
+            _ = _;
+          return _.createElement(
+            "a",
+            {
+              className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
+              ..._,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.Label,
+              },
+              _,
+            ),
+            _ &&
+              _.createElement(_, {
+                className: _.Callout,
+              }),
+          );
+        };
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = "string" == typeof _._ ? _._ : _._.pathname,
+          _ = (0, _._)(_),
+          _ = !!_ && (!_.exact || _.isExact),
+          _ = _ && _.isActive ? _.isActive(_, _) : _;
+        return _.createElement(
+          _,
+          {
+            active: _,
+            className: _.ScrollableTabItem,
+          },
+          _.children,
+        );
+      }
+      const _ = () => {
+        const _ = _(),
+          _ = [];
+        return (
+          _.forEach((_) => {
+            _.items.forEach((_) => {
+              if (_.external) {
+                const {
+                  iconComponent: __webpack_require__,
+                  iconCallout: _,
+                  ..._
+                } = _.props;
+                _.push(
+                  _.createElement(
+                    _._,
+                    {
+                      ..._,
+                      key: _.props.href,
+                      focusClassName: _.Focused,
+                      noFocusRing: !0,
+                    },
+                    _.createElement(
+                      _,
+                      {
+                        className: _.ScrollableTabItem,
+                      },
+                      _.props.children,
+                    ),
+                  ),
+                );
+              } else {
+                const _ = _.props,
+                  { iconComponent: _, iconCallout: _, ..._ } = _,
+                  _ = "string" == typeof _._ ? _._ : JSON.stringify(_._);
+                _.push(
+                  _.createElement(
+                    _._,
+                    {
+                      ..._,
+                      key: _,
+                      focusClassName: _.Focused,
+                      noFocusRing: !0,
+                    },
+                    _.createElement(
+                      _,
+                      {
+                        ..._,
+                      },
+                      _.children,
+                    ),
+                  ),
+                );
+              }
+            });
+          }),
+          _.createElement(
+            _,
+            {
+              className: _.ScrollableTabs,
+            },
+            _,
+          )
+        );
+      };
+      var _ = __webpack_require__("chunkid");
       const _ =
           __webpack_require__._ +
           "images/applications/store/diamonds_tile.png?v=valveisgoodatcaching",
@@ -9279,9 +10022,12 @@
               },
             }),
           );
+      function _() {
+        return (0, _._)("(max-width: 965px)") || _._.IN_GAMEPADUI;
+      }
       function _(_) {
         const _ = (0, _._)(["xxsmall", "small", "xxlarge"]),
-          _ = (0, _._)("(max-width: 965px)") || _._.IN_GAMEPADUI,
+          _ = _(),
           _ = (0, _._)(_);
         return _.createElement(
           _._,
@@ -9298,13 +10044,14 @@
               paddingBottom: "xlarge",
               className: _.StandardLayout,
             },
-            !_ && _.createElement(_._, null),
+            !_ && _.createElement(_, null),
             _.createElement(
               _._,
               {
                 itemClassName: _.PageItem,
                 className: _.ItemContainer,
               },
+              _ && _.createElement(_, null),
               _.children,
             ),
           ),
@@ -9411,14 +10158,24 @@
           ),
         );
       }
-      const _ = ({ title: _, subtitle: _, headerImage: __webpack_require__ }) =>
-        _.createElement(
+      function _(_) {
+        const { title: _, subtitle: __webpack_require__, headerImage: _ } = _,
+          _ = _();
+        return _.createElement(
           _.Fragment,
           null,
-          __webpack_require__ &&
+          _.createElement(
+            "div",
+            {
+              className: _.PagePointShopTitle,
+            },
+            _.createElement(_._, null),
+          ),
+          _ && _.createElement(_, null),
+          _ &&
             _.createElement("img", {
               className: _.PageHeaderImage,
-              src: __webpack_require__,
+              src: _,
             }),
           _ &&
             _.createElement(
@@ -9428,15 +10185,16 @@
               },
               _,
             ),
-          _ &&
+          __webpack_require__ &&
             _.createElement(
               "div",
               {
                 className: _.PageSubtitle,
               },
-              _,
+              __webpack_require__,
             ),
         );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -10740,6 +11498,7 @@
         _ = _(_.BlueButton),
         _ = _(_.GreenButton);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12346,6 +13105,7 @@
         }
       }
       class _ extends _.Component {
+        m_rtMinClientVersion = 1757452101;
         GetDescription() {
           return "equip" == this.props.step
             ? (0, _._)("#Redeem_Equip_SteamDeckStartupMovie")
@@ -12357,6 +13117,15 @@
               closeModal: this.props.closeModal,
               equipItem: this.props.equipItem,
             });
+        }
+        BShowClientMinVersionWarning() {
+          const _ = (0, _._)();
+          return (
+            Boolean(!_ || _ < this.m_rtMinClientVersion) &&
+            "redeem" == this.props.step &&
+            this.props.definition.rewardDefinition.timestamp_created >
+              this.m_rtMinClientVersion
+          );
         }
         render() {
           const _ = this.props.definition.rewardDefinition;
@@ -12397,11 +13166,25 @@
                 }),
               ),
             ),
-            _.createElement(_, {
-              definition: this.props.definition,
-              step: this.props.step,
-              description: this.GetDescription(),
-            }),
+            _.createElement(
+              _,
+              {
+                definition: this.props.definition,
+                step: this.props.step,
+                description: this.GetDescription(),
+              },
+              this.BShowClientMinVersionWarning() &&
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Bold, _.NeedAppOwnership),
+                  },
+                  (0, _._)(
+                    "#Redeem_Warning_LatestClient",
+                    (0, _._)(this.m_rtMinClientVersion, !1, !0),
+                  ),
+                ),
+            ),
             _.createElement(
               _,
               {
@@ -14904,2005 +15687,29 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { size: _ } = _;
-        return _.createElement(_._, {
-          size: _,
-        });
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "none";
-      function _(_, _, __webpack_require__ = {}) {
-        const {
-            cInitialItems: _,
-            cOverscanCount: _,
-            fnRenderItemSkeleton: _,
-            ..._
-          } = __webpack_require__,
-          _ = _ || 10,
-          _ = _ || 10,
-          [_, _] = (0, _.useState)(_ + _);
-        let _ = _(0, _).map((_) => _(_));
-        const _ = 0 === _.length;
-        if (_) for (let _ = 0; _ < _; _++) _.push(_());
-        const _ = (function (_, _ = {}, __webpack_require__ = !1) {
-          const _ = _.length,
-            [_, _] = (0, _.useState)(0),
-            [_, _] = _(),
-            [_, _] = _(),
-            _ = (0, _._)("padding-right", _),
-            _ = (0, _._)().spacing[_];
-          let _ = 1;
-          _.width &&
-            void 0 !== _.width &&
-            (_ = Math.floor((_.width + _) / _.width));
-          const _ = !__webpack_require__ && _ + _ < _,
-            _ = () => _ && _(_ + _),
-            _ = _ > 0,
-            _ = () => _ && _(Math.max(0, _ - _)),
-            _ = _,
-            _ = _ + _,
-            _ = _.slice(_, _).map((_, _) =>
-              _.createElement(
-                "div",
-                {
-                  key: _ + _,
-                  ref: 0 === _ ? _ : void 0,
-                  className: (0, _._)(
-                    0 === _ || _ < _ - 1 ? _ : void 0,
-                    _.itemClassName,
-                  ),
-                },
-                _,
-              ),
-            );
-          return {
-            containerRef: _,
-            rgVisibleItems: _,
-            bAllowNext: _,
-            bAllowPrev: _,
-            fnNext: _,
-            fnPrev: _,
-            iPosition: _,
-          };
-        })(_, _, _);
-        return {
-          ..._,
-          fnNext: () => {
-            _.iPosition + _.rgVisibleItems.length > _ - _ &&
-              _(_ + _.rgVisibleItems.length),
-              _.fnNext();
-          },
-        };
-      }
-      const _ = (_) => {
-          const {
-            className: _,
-            containerRef: __webpack_require__,
-            rgVisibleItems: _,
-            bAllowNext: _,
-            bAllowPrev: _,
-            fnNext: _,
-            fnPrev: _,
-            iPosition: _,
-            ..._
-          } = _;
-          return _.createElement(
-            _._,
-            {
-              className: (0, _._)(_.Container, _),
-              ref: __webpack_require__,
-              "flow-children": "row",
-              ..._,
-            },
-            _,
-          );
-        },
-        _ = (_) => {
-          const {
-            bAllowNext: _,
-            bAllowPrev: __webpack_require__,
-            fnNext: _,
-            fnPrev: _,
-          } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, {
-              className: (0, _._)(
-                _.LeftArrow,
-                !__webpack_require__ && _.Disabled,
-              ),
-              onClick: _,
-            }),
-            _.createElement(_, {
-              className: (0, _._)(_.RightArrow, !_ && _.Disabled),
-              onClick: _,
-            }),
-          );
-        },
-        _ = () => (window.ResizeObserver ? _() : _()),
-        _ = () => {
-          const [_, _] = (0, _.useState)({}),
-            [__webpack_require__, _] = (0, _.useState)(null),
-            _ = (0, _.useCallback)((_) => _(_), []);
-          return (
-            (0, _.useLayoutEffect)(() => {
-              if (__webpack_require__) {
-                const _ = new ResizeObserver(() =>
-                  window.requestAnimationFrame(() =>
-                    _(__webpack_require__.getBoundingClientRect()),
-                  ),
-                );
-                return _.observe(__webpack_require__), () => _.disconnect();
-              }
-              return () => {};
-            }, [__webpack_require__]),
-            [_, _]
-          );
-        },
-        _ = () => {
-          const [_, _] = (0, _.useState)({}),
-            [__webpack_require__, _] = (0, _.useState)(null),
-            _ = (0, _.useCallback)((_) => _(_), []);
-          return (
-            (0, _.useLayoutEffect)(() => {
-              if (__webpack_require__) {
-                const _ = () =>
-                  window.requestAnimationFrame(() =>
-                    _(__webpack_require__.getBoundingClientRect()),
-                  );
-                return (
-                  _(),
-                  window.addEventListener("resize", _),
-                  window.addEventListener("scroll", _),
-                  () => {
-                    window.removeEventListener("resize", _),
-                      window.removeEventListener("scroll", _);
-                  }
-                );
-              }
-              return () => {};
-            }, [__webpack_require__]),
-            [_, _]
-          );
-        },
-        _ = (_) =>
-          _.createElement(
-            "svg",
-            {
-              ..._,
-              viewBox: "0 0 23 36",
-            },
-            _.createElement(
-              "g",
-              null,
-              _.createElement("path", {
-                _: "M6 1.5L21 18L6 34.5",
-                stroke: "#EAEAEA",
-                fill: "none",
-                strokeWidth: "4",
-              }),
-            ),
-          ),
-        _ = (_) => {
-          const { style: _, ...__webpack_require__ } = _,
-            _ = {
-              transform: "scaleX(-1)",
-              ...(_ || {}),
-            };
-          return _.createElement(_, {
-            style: _,
-            ...__webpack_require__,
-          });
-        };
-      function _(_) {
-        const {
-          items: _,
-          renderItem: __webpack_require__,
-          loadMore: _,
-          bLoadingMore: _,
-          style: _,
-        } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _.MobileContainer,
-          },
-          _.createElement(
-            _._,
-            {
-              "flow-children": "row",
-              className: (0, _._)(_.Container, _.Mobile),
-              style: _._.IN_GAMEPADUI ? null : _,
-            },
-            _.map(__webpack_require__),
-            _.createElement(_._, {
-              trigger: "repeated",
-              rootMargin: "0px 100% 0px 100%",
-              horizontal: !0,
-              onVisibilityChange: (_) => _ && _(),
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _.Loading,
-                },
-                _.createElement(_, null),
-              ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const {
-              title: _,
-              description: __webpack_require__,
-              actions: _,
-              children: _,
-              className: _,
-              itemClassName: _,
-              imgSrc: _,
-              fullbleed: _,
-              style: _,
-              ..._
-            } = _,
-            _ = `url(${_})`,
-            _ = "mobile" === (0, _._)();
-          return _.createElement(
-            _._,
-            {
-              padding: ["small", "large"],
-              flexGrow: 1,
-              display: "flex",
-              flexDirection: "column",
-              className: (0, _._)(_.Container, _),
-              style: _
-                ? {
-                    backgroundImage: _,
-                    ..._,
-                  }
-                : _,
-              ..._,
-            },
-            !_ &&
-              _.createElement(_._, {
-                src: _,
-              }),
-            _.createElement(
-              _._,
-              {
-                marginBottom: "medium",
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                flexGrow: 1,
-                style: {
-                  zIndex: 1,
-                },
-              },
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  flexGrow: 1,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    display: "flex",
-                    flexDirection: _ ? "column" : "row",
-                    alignItems: _ ? "flex-start" : "center",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      style: {
-                        transform: "translatey( -1px )",
-                      },
-                      className: _.Title,
-                    },
-                    _,
-                    " ",
-                  ),
-                  _,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Description,
-                  },
-                  __webpack_require__,
-                ),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                spacing: ["xsmall", "small"],
-                style: {
-                  alignSelf: _ ? "flex-start" : "flex-end",
-                },
-                itemClassName: _,
-              },
-              _,
-            ),
-          );
-        },
-        _ = (_) => {
-          const { theme: _, style: __webpack_require__, ..._ } = _;
-          return _.createElement(_._, {
-            ..._,
-            style: {
-              ...__webpack_require__,
-            },
-          });
-        };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return Math.max(0, _.cTotalMatchingUnfiltered - _.cTotalMatching);
-      }
-      function _(_) {
-        const _ = _(_);
-        return 0 === _
-          ? null
-          : (0, _._)("#HiddenWithCountButton", _.toLocaleString());
-      }
-      function _(_) {
-        const _ = _(_);
-        return 0 === _
-          ? null
-          : _.createElement(
-              _._,
-              {
-                key: "HiddenCallout",
-                title: (0, _._)(
-                  "#HiddenItems_Explanation",
-                  _,
-                  _.toLocaleString(),
-                ),
-              },
-              _(_),
-            );
-      }
-      const _ = (_) => {
-        switch (_.descriptor.type) {
-          case 1:
-            const _ = _.createElement(_, {
-              ..._,
-            });
-            return _.descriptor.bHomogeneous
-              ? _.createElement(_._, null, _)
-              : _;
-          case 0:
-            const _ = _.createElement(_, {
-              ..._,
-            });
-            return _.descriptor.bHomogeneous
-              ? _.createElement(_._, null, _)
-              : _;
-          case 2:
-            return _.createElement(_._, null, (_) =>
-              "desktop" !== _
-                ? _.createElement(_, {
-                    ..._,
-                  })
-                : _.createElement(_, {
-                    ..._,
-                  }),
-            );
-          default:
-            return (
-              console.error(`Unknown cluster display: ${_.descriptor.type}`),
-              null
-            );
-        }
-      };
-      let _ = class extends _.Component {
-        render() {
-          if (1 != this.props.descriptor.type) return null;
-          const {
-              descriptor: {
-                cluster: {
-                  _: _,
-                  title: _,
-                  subtitle: __webpack_require__,
-                  GetRewards: _,
-                },
-                title: _,
-                subtitle: _,
-                bHideHiddenItemCount: _,
-              },
-              linkedPage: _,
-              additionalFilter: _,
-            } = this.props,
-            _ = {
-              getItems: (_, _) => _(_, _, _),
-              title: _ || _,
-              subtitle: _ || __webpack_require__,
-              route: _ ? (0, _._)(_) : void 0,
-              bHideHiddenItemCount: !!_,
-            };
-          return _.createElement(_._, null, (_) =>
-            "desktop" !== _
-              ? _.createElement(_, {
-                  ..._,
-                })
-              : _.createElement(_, {
-                  ..._,
-                }),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)((_) => {
-          const {
-              title: _,
-              subtitle: __webpack_require__,
-              route: _,
-              getItems: _,
-              bHideHiddenItemCount: _,
-            } = _,
-            _ = (0, _._)(),
-            [_, _] = _.useState(10),
-            _ = _(0, _),
-            { rewards: _, bLoadingMore: _, cTotalMatching: _ } = _,
-            _ = (0, _._)();
-          if (0 === _) return null;
-          const _ = !_ && !_ && _(_);
-          return _.createElement(
-            _._,
-            {
-              title: _,
-              subtitle: _ || void 0,
-              rightActions: _
-                ? _.createElement(
-                    _._,
-                    {
-                      _: _,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: () => _.push(_),
-                      },
-                      (0, _._)("#SeeAllButton"),
-                    ),
-                  )
-                : void 0,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                items: _,
-                loadMore: () => _(_ + 10),
-                bLoadingMore: _,
-                renderItem: (_) =>
-                  _.createElement(_, {
-                    definition: _,
-                    key: _.defid,
-                  }),
-                style: _,
-              }),
-            ),
-          );
-        }),
-        _ = (0, _._)((_) => {
-          const {
-            title: _,
-            subtitle: __webpack_require__,
-            route: _,
-            getItems: _,
-            bHideHiddenItemCount: _,
-          } = _;
-          let _ = _(0, 0);
-          const _ = _(
-              (_, _) => _(_, _).rewards,
-              (_) =>
-                _.createElement(_, {
-                  definition: _,
-                  key: _.defid,
-                }),
-              {
-                itemClassName: _.ItemHover,
-                fnRenderItemSkeleton: () => _.createElement(_._, null),
-              },
-            ),
-            _ = _.bAllowNext || _.bAllowPrev;
-          let _ = "";
-          if (
-            ((_ =
-              _.cMaxToReturn > 0
-                ? (0, _._)("#SeeAllButton")
-                : _.cTotalMatching > 0
-                  ? (0, _._)(
-                      "#SeeAllWithCountButton",
-                      _.cTotalMatching.toLocaleString(),
-                    )
-                  : (0, _._)("#SeeAllButton")),
-            0 === _.cTotalMatching && !_.bLoadingMore)
-          )
-            return null;
-          const _ = !_ || !_,
-            _ = !_ && _ && _(_);
-          let _ = [],
-            _ = [];
-          return (
-            !_ &&
-              _.push(
-                _.createElement(
-                  _._,
-                  {
-                    _: _,
-                    key: "SeeAll",
-                  },
-                  _.createElement(_._, null, _),
-                ),
-              ),
-            _ &&
-              _.push(
-                _.createElement(_, {
-                  key: "CarouselControls",
-                  ..._,
-                }),
-              ),
-            _ && (0 == _.length ? _.push(_) : 0 == _.length && _.push(_)),
-            _.createElement(
-              _._,
-              {
-                title: _,
-                subtitle: __webpack_require__,
-                leftActions: _,
-                rightActions: _,
-              },
-              _.createElement(_, {
-                style: {
-                  width: "100%",
-                  flexWrap: "wrap",
-                },
-                ..._,
-              }),
-            )
-          );
-        }),
-        _ = (0, _._)((_) => {
-          const {
-            descriptor: {
-              title: _,
-              subtitle: __webpack_require__,
-              cluster: { _: _, title: _, subtitle: _, GetRewards: _ },
-            },
-            additionalFilter: _,
-          } = _;
-          let _ = (_, _) => _(_, _, _);
-          const _ = _(_(0, 0));
-          return _.createElement(
-            _._,
-            {
-              title: _ || _,
-              subtitle: __webpack_require__ || _,
-              rightActions: _ || void 0,
-            },
-            _.createElement(_._, {
-              style: {
-                width: "100%",
-              },
-              itemClassName: _.ItemHover,
-              getItems: _,
-              renderItem: (_) =>
-                _.createElement(_, {
-                  definition: _,
-                  key: _.defid,
-                }),
-              renderItemSkeleton: () => _.createElement(_._, null),
-              key: `${_}||${JSON.stringify(_)}`,
-            }),
-          );
-        }),
-        _ = (0, _._)((_) => {
-          const {
-              descriptor: _,
-              additionalFilter: __webpack_require__,
-              linkedPage: _,
-            } = _,
-            _ = (0, _._)("(min-width: 1070px)");
-          if (2 !== _.type)
-            return (
-              console.error(
-                `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
-              ),
-              null
-            );
-          const {
-              strImage: _,
-              bFullBleedImage: _,
-              theme: _,
-              title: _,
-              subtitle: _,
-              cluster: { title: _, subtitle: _, GetRewards: _ },
-            } = _,
-            _ = _ ? (0, _._)(_) : void 0,
-            _ = _(0, _ ? 4 : 3, __webpack_require__),
-            _ =
-              _.bLoadingMore && 0 === _.rewards.length
-                ? [
-                    _.createElement(_._, {
-                      key: "0",
-                    }),
-                    _.createElement(_._, {
-                      key: "1",
-                    }),
-                    _.createElement(_._, {
-                      key: "2",
-                    }),
-                  ]
-                : _.rewards.map((_) =>
-                    _.createElement(_, {
-                      definition: _,
-                      key: _.defid,
-                      theme: _,
-                    }),
-                  );
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              {
-                title: _ || _,
-                description: _ || _,
-                imgSrc: _,
-                fullbleed: _,
-                style: {
-                  width: "100%",
-                },
-                itemClassName: _.ItemHover,
-                actions: _.createElement(
-                  _._,
-                  {
-                    _: _,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      theme: _,
-                    },
-                    (0, _._)("#SeeAllButton"),
-                  ),
-                ),
-              },
-              _,
-            ),
-          );
-        }),
-        _ = (0, _._)((_) => {
-          const {
-              descriptor: _,
-              additionalFilter: __webpack_require__,
-              linkedPage: _,
-            } = _,
-            _ = (0, _._)();
-          if (2 !== _.type)
-            return (
-              console.error(
-                `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
-              ),
-              null
-            );
-          const {
-              strImage: _,
-              bFullBleedImage: _,
-              theme: _,
-              title: _,
-              subtitle: _,
-              cluster: { title: _, subtitle: _, GetRewards: _ },
-            } = _,
-            _ = _ ? (0, _._)(_) : void 0;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _,
-              {
-                title: _ || _,
-                description: "",
-                imgSrc: _,
-                fullbleed: _,
-                style: {
-                  width: "100%",
-                },
-                itemClassName: _.ItemHover,
-                actions: _.createElement(
-                  _._,
-                  {
-                    _: _,
-                  },
-                  _.createElement(
-                    _,
-                    {
-                      onClick: () => _.push(_),
-                      theme: _,
-                      className: _.MobileHeroAction,
-                    },
-                    (0, _._)("#SeeAllButton"),
-                  ),
-                ),
-              },
-              _.createElement(_, {
-                items: _(0, 6, __webpack_require__).rewards,
-                loadMore: () => {},
-                renderItem: (_) =>
-                  _.createElement(_, {
-                    definition: _,
-                    key: _.defid,
-                    theme: _,
-                  }),
-              }),
-            ),
-          );
-        }),
-        _ = (_) => {
-          const { definition: _, theme: __webpack_require__ } = _,
-            _ = (0, _._)();
-          return _.createElement(_._, {
-            definition: _,
-            onClick: (_) => {
-              5 === _.type || 6 === _.type
-                ? _.push(_._.LoyaltyItemBundle(_.defid))
-                : (0, _._)(_, _);
-            },
-            theme: __webpack_require__,
-          });
-        };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            title: _,
-            description: __webpack_require__,
-            image: _,
-            iconComponent: _,
-            linked_page: _,
-            link_text: _,
-          } = _,
-          _ = _,
-          _ = "string" == typeof _ ? _ : (0, _._)(_);
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.Banner,
-            },
-            _ &&
-              _.createElement("img", {
-                className: _.Image,
-                src: _,
-              }),
-            _ &&
-              _.createElement(_, {
-                className: _.Image,
-              }),
-            _.createElement(
-              "div",
-              {
-                className: _.Content,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Title,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Description,
-                },
-                __webpack_require__,
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.Link,
-                _: _,
-              },
-              _,
-            ),
-          ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _ } = _,
-          _ = _.useRef(void 0);
-        _.useEffect(() => _.current?.Activate(!0), []);
-        const _ = (0, _._)("(max-width: 965px)") || _._.IN_GAMEPADUI;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            {
-              navID: "LoyaltyShell",
-              navTreeRef: _,
-              className: (0, _._)(_.Shell),
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(_.Shell),
-              },
-              _.createElement(
-                _._,
-                {
-                  domain: "store.steampowered.com",
-                  feature: "pointsshop",
-                },
-                _.createElement(_, null),
-                _ && _.createElement(_._, null),
-                _.createElement(
-                  _._,
-                  {
-                    display: "flex",
-                    flexDirection: "row",
-                    className: _.ShellScrollParent,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      flex: "1",
-                      className: _.ShellScroll,
-                      "flow-children": "column",
-                    },
-                    _,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      const _ = (0, _._)(() => {
-          const [_, _] = (0, _.useState)(_._.Get().GetCurrentSearchTerm()),
-            [__webpack_require__, _] = (0, _.useState)(0),
-            _ = _._.Get().GetCurrentSearchPlaceholder();
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_._, {
-              className: _.SearchTerm,
-              type: "text",
-              onChange: (_) => {
-                let _ = _.target.value.toLowerCase();
-                __webpack_require__ && clearTimeout(__webpack_require__),
-                  _(
-                    window.setTimeout(() => {
-                      _._.Get().SetCurrentSearchTerm(_);
-                    }, 300),
-                  ),
-                  _(_);
-              },
-              value: _,
-              placeholder: _,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _.SearchIconContainer,
-              },
-              _.createElement(_.eSy, {
-                className: (0, _._)(_.SearchIcon),
-              }),
-            ),
-            _.length > 0 &&
-              _.createElement(
-                "div",
-                {
-                  className: _.SearchTermClearButton,
-                  onClick: () => {
-                    _(""), _._.Get().SetCurrentSearchTerm("");
-                  },
-                },
-                _.createElement(_._, {
-                  className: _.SearchTermClearIcon,
-                }),
-              ),
-          );
-        }),
-        _ = (0, _._)(() => {
-          let _ = null;
-          _._.Get().BIsLoggedIn() &&
-            (_ = _.createElement(
-              _._,
-              {
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                className: _.PointsContainer,
-              },
-              _.createElement(_.vrn, {
-                className: _.Icon,
-              }),
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  flex: "1",
-                  paddingLeft: "xsmall",
-                },
-                _.createElement(
-                  "a",
-                  {
-                    className: _.YourBalanceLabel,
-                    href: _._.STORE_BASE_URL + "pointssummary/",
-                  },
-                  (0, _._)("#YourBalance"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RewardsPointsCount,
-                  },
-                  (0, _._)(_._.Get().GetPointsAvailable().getLowBits()),
-                ),
-              ),
-            ));
-          let _ = null;
-          if (_._.Get().BIsLoggedIn() && _._.Get().GetIsUsingAppIDFilters()) {
-            _._.Get().GetAppIDFilters().size;
-            _ = _.createElement(
-              _._,
-              {
-                display: "flex",
-                flexDirection: "row",
-                className: _.AppFilterContainer,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: _.SearchTermContainer,
-                },
-                _.createElement(_, null),
-              ),
-            );
-          }
-          return _.createElement(
-            "div",
-            {
-              className: _.ShellHeader,
-            },
-            _.createElement(
-              _._,
-              {
-                paddingY: "small",
-                paddingX: ["xsmall", "medium"],
-                display: "flex",
-                flexDirection: "row",
-                className: _.ShellHeaderFlex,
-              },
-              _.createElement(
-                _._,
-                {
-                  _: _._.LoyaltyStore(),
-                  className: _.ShellHeaderBrandLink,
-                },
-                _.createElement(_._, {
-                  className: _.Sparkles,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ShellHeaderBrandName,
-                  },
-                  " ",
-                  (0, _._)("#ShopLink"),
-                  " ",
-                ),
-              ),
-              _.createElement(_._, null, (_) => "mobile" !== _ && _),
-              _,
-            ),
-          );
-        }),
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/coin_single.png?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid");
-      const _ =
-          __webpack_require__._ +
-          "images/applications/store/bored.png?v=valveisgoodatcaching",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/happy.png?v=valveisgoodatcaching",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/boombox.png?v=valveisgoodatcaching",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/csgoChat_128_chickendance.png?v=valveisgoodatcaching",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/csgoChat_128_hugs.png?v=valveisgoodatcaching",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/dance.png?v=valveisgoodatcaching",
-        _ =
-          __webpack_require__._ +
-          "images/applications/store/icons_floor.png?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid");
       const _ =
         __webpack_require__._ +
-        "images/applications/store/MysterySticker.png?v=valveisgoodatcaching";
+        "images/applications/store/game_tiles.png?v=valveisgoodatcaching";
+      __webpack_require__._, __webpack_require__._;
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-          const _ = {
-              item_name: "Free Item",
-              item_title: (0, _._)("#SummerSale_ItemTitle"),
-              animated: !0,
-            },
-            _ = {
-              defid: void 0,
-              appid: _._.Get().GetCurrentSaleRewardAppID(),
-              type: 1,
-              community_item_class: 11,
-              point_cost: "0",
-              quantity: "1",
-              active: !0,
-              community_item_data: _,
-            };
-          let _ = null,
-            _ = null,
-            _ = (_) => (0, _._)(_, _, null, !0),
-            _ = _,
-            _ = (0, _._)("#SummerSale_ItemName");
-          const _ = _._.Get().BCanClaimFreeSaleReward();
-          if (!_) {
-            (_ = _.createElement(
-              "div",
-              {
-                className: _.ClaimedText,
-              },
-              (0, _._)("#Rewards_Claimed"),
-            )),
-              (_ = (0, _._)(_.SaleRewardItemOwned, _.OwnedItem)),
-              (_ = null);
-            const _ = _._.Get().GetClaimedSaleRewardItemDef();
-            _ &&
-              ((_ = _.community_item_data.item_title),
-              (_ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_item_data.item_image_small}`));
-          }
-          return _.createElement(
-            _._,
-            {
-              display: "flex",
-              flexDirection: "column",
-              className: _.SaleRewardContainer,
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.SaleRewardContainerFlex,
-              },
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  className: _.LeftColumn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SaleRewardLogoContainerFlex,
-                  },
-                  _.createElement("img", {
-                    className: _.SaleRewardLogo,
-                    alt: "Sale",
-                    src: _._.Get().GetFreeItemHeaderSource(),
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SaleRewardTextContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.SaleRewardSubHeader,
-                    },
-                    (0, _._)("#SummerSale_FreeDesc_2"),
-                  ),
-                  !_ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SummerNextStop,
-                      },
-                      _.createElement(_, null),
-                    ),
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.RulesLink,
-                      _: _._.LoyaltyGiveawayRules(),
-                    },
-                    (0, _._)("#SummerSale_Redeem_Rules"),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.FreeItemContainer,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    name: _,
-                    cost: 0,
-                    attributes: [
-                      _.createElement(_._, {
-                        className: _.IconAnimated,
-                        key: "animated",
-                      }),
-                    ],
-                    iconComponent: _.EEf,
-                    styleOverride: _,
-                    desc: (0, _._)("#CommunityItemClass_Sticker"),
-                    strPriceOverride: _,
-                    onClick: _,
-                  },
-                  _.createElement("img", {
-                    className: _.ImageMedium,
-                    src: _,
-                  }),
-                ),
-              ),
-            ),
-          );
-        }),
-        _ = (0, _._)(() => {
-          const _ = _._.Get().GetNextClaimTime();
-          return _
-            ? _.createElement(
-                "span",
-                {
-                  className: _.NextStop,
-                },
-                _.createElement(
-                  "span",
-                  {
-                    className: _.Title,
-                  },
-                  (0, _._)("#SummerSale_NextStop"),
-                ),
-                _.createElement(_, {
-                  className: _.Timer,
-                  time: _.getTime(),
-                }),
-              )
-            : null;
-        }),
-        _ = (0, _._)((_) => {
-          const { time: _, ...__webpack_require__ } = _,
-            _ = Math.floor(Math.max(0, _ - _._()) / 1e3),
-            _ = Math.floor(_ / _._.PerHour),
-            _ = Math.floor((_ - _ * _._.PerHour) / _._.PerMinute),
-            _ = Math.floor(_ - (_ * _._.PerHour + _ * _._.PerMinute));
-          return _.createElement(
-            "span",
-            {
-              style: {
-                fontFamily: "monospace",
-              },
-              ...__webpack_require__,
-            },
-            _(_),
-            ":",
-            _(_),
-            ":",
-            _(_),
-          );
-        }),
-        _ = (_) => _.toString().padStart(2, "0");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.lazy(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        );
-      let _ = class extends _.Component {
-        render() {
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_, null),
-            _.createElement(_, null),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)(() => {
-        const _ = (0, _._)("*/reward/:definitionid"),
-          _ = _ && _.params && _.params.definitionid,
-          _ = parseInt(_);
-        return (
-          _.useEffect(() => {
-            _ && !isNaN(_) && (0, _._)(null, _);
-          }, [_]),
-          null
-        );
-      });
-      let _ = class extends _.Component {
-        GetCoupon() {
-          const _ = _._.Get().GetCouponPromosForUser();
-          let _ = _._.Get().GetPointsAvailable(),
-            _ = 0,
-            _ = 0,
-            _ = 0,
-            _ = 0;
-          return (
-            _.forEach((_) => {
-              const _ = _._.Get().GetCouponDefinition(_.loyalty_reward_id);
-              if (_) {
-                (_ += _.max_use_count * parseInt(_.discount_amount)),
-                  (_ += _.available_use_count);
-                for (let _ = 0; _ < _.available_use_count; _++) {
-                  _ + parseInt(_.point_cost) <= _.getLowBits() &&
-                    ((_ += parseInt(_.discount_amount)),
-                    (_ += parseInt(_.point_cost))),
-                    (_ = Math.max(_, parseInt(_.discount_amount))),
-                    _ || (_ = parseInt(_.point_cost));
-                }
-              }
-            }),
-            null
-          );
-        }
-        render() {
-          const _ = [];
-          _._.Get()
-            .getLoyaltyRewardDefMap()
-            .forEach((_) => {
-              _.length < 3 && 1 == _.type && _.push(_);
-            });
-          const _ = _._.Get().GetPageDescriptor({
-              type: "custom",
-              pageid: _._,
-            }),
-            _ = _.createElement(
-              "div",
-              {
-                className: _.PageHomeTop,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.PageHomeBanner,
-                },
-                _.createElement("img", {
-                  className: _.HomeRewardsPointsIcon,
-                  src: _,
-                }),
-                _.createElement("img", {
-                  className: _.PageHomeBannerFloor,
-                  src: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageHomeBannerIcons,
-                  },
-                  _.createElement("img", {
-                    className: _.PageHomeBannerChicken,
-                    src: _,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerBored,
-                    src: _,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerHugs,
-                    src: _,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerHappy,
-                    src: _,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerBoombox,
-                    src: _,
-                  }),
-                  _.createElement("img", {
-                    className: _.PageHomeBannerDance,
-                    src: _,
-                  }),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.PageHomeTitleContainer,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageHomeTopTitle,
-                  },
-                  (0, _._)("#ShopHome_UseRewardPoints"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageHomeTopSubTitle,
-                  },
-                  (0, _._)("#ShopHome_UseRewardPoints_Subtitle"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.PageHomeTopLink,
-                    _: _._.LoyaltyHowItWorks(),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.PageHomeHowItWorks,
-                    },
-                    " ",
-                    (0, _._)("#ShopHome_HowLinkBtn"),
-                  ),
-                ),
-              ),
-            );
-          return _.createElement(
-            _._,
-            null,
-            _ &&
-              _.createElement(
-                _,
-                {
-                  header: _,
-                  descriptor: _,
-                },
-                _._.Get().BIsSaleActive() &&
-                  _.createElement(_._, null, _.createElement(_, null)),
-              ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = () =>
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                path: _._.LoyaltySteamBadge(),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _._,
-              {
-                path: _._.LoyaltyByGame(),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              _._,
-              {
-                path: _._.LoyaltyByEvent(),
-              },
-              _.createElement(_, null),
-            ),
-            !1,
-            _.createElement(
-              _._,
-              {
-                path: _._.LoyaltyProfileCustomizations(),
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(_._, {
-              path: _._.LoyaltyItemBundle(":bundleid"),
-              render: (_) =>
-                _.createElement(_, {
-                  ..._,
-                }),
-            }),
-            _.createElement(_._, {
-              path: _._.LoyaltyEvents(":eventname"),
-              render: (_) =>
-                _.createElement(_, {
-                  eventname: _.match.params.eventname,
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/app/:appid/cluster/:clusterindex`,
-              render: (_) =>
-                _.createElement(_, {
-                  ..._,
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/app/:appid`,
-              render: (_) =>
-                _.createElement(_, {
-                  appid: parseInt(_.match.params.appid),
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/c/:pageid/cluster/:clusterindex`,
-              render: (_) =>
-                _.createElement(_, {
-                  ..._,
-                }),
-            }),
-            _.createElement(_._, {
-              path: `${_._.LoyaltyStore()}/c/:pageid`,
-              render: (_) =>
-                _.createElement(_, {
-                  pageid: _.match.params.pageid,
-                }),
-            }),
-            _.createElement(_._, null, _.createElement(_, null)),
-          ),
-        _ = () => _.createElement(_._, null),
-        _ = () => _.createElement(_, null);
-      let _ = class extends _.Component {
-        componentDidMount() {
-          _._.Get().SetIsUsingAppIDFilters(!0);
-        }
-        componentWillUnmount() {
-          _._.Get().SetIsUsingAppIDFilters(!1);
-        }
-        render() {
-          const { pageid: _ } = this.props,
-            _ = _._.Get().GetAppIDFilters(),
-            _ = Array.from(_.keys()),
-            _ = _._.Get().GetCurrentSearchTerm(),
-            _ = {
-              appid: _.length ? _ : void 0,
-              searchLanguage: _.length ? _._.LANGUAGE : void 0,
-              searchTerm: _.length ? _ : void 0,
-            },
-            _ = _._.Get().GetPageDescriptor({
-              type: "custom",
-              pageid: _,
-            });
-          return _.createElement(
-            _._,
-            null,
-            _
-              ? _.createElement(_, {
-                  descriptor: _,
-                  additionalFilter: _,
-                })
-              : _.createElement(_, null),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)((_) => {
-        const {
-            descriptor: {
-              items: _,
-              title: __webpack_require__,
-              subtitle: _,
-              searchPlaceholder: _,
-              headerImage: _,
-              params: _,
-            },
-            header: _,
-            additionalFilter: _,
-          } = _,
-          _ =
-            _ ||
-            _.createElement(_._, {
-              title: __webpack_require__,
-              subtitle: _,
-              headerImage: _,
-            });
-        var _;
-        return (
-          (_ = _),
-          (0, _.useEffect)(
-            () => (
-              _._.Get().SetCurrentSearchPlaceholder(_),
-              () => _._.Get().SetCurrentSearchPlaceholder("")
-            ),
-            [_],
-          ),
-          _.createElement(
-            _._,
-            {
-              paddingX: "none",
-            },
-            _.createElement(
-              _._,
-              {
-                className: _.PageItemsContainer,
-                itemClassName: _.PageItemsContainerChildren,
-                spacing: "xlarge",
-              },
-              _,
-              _.children,
-              _.filter(Boolean).map((_, _) => {
-                switch (_.type) {
-                  case "banner":
-                    const { type: __webpack_require__, ..._ } = _;
-                    return _.createElement(_, {
-                      ..._,
-                      key: `${_.title}_${_}`,
-                    });
-                  case "clusterview":
-                    return _.createElement(_, {
-                      key: `${_.view.cluster._}_${_}`,
-                      descriptor: _.view,
-                      additionalFilter: _,
-                      linkedPage:
-                        null === _.view.linkedPage
-                          ? void 0
-                          : _.view.linkedPage || {
-                              ..._,
-                              clusterindex: _,
-                            },
-                    });
-                }
-              }),
-            ),
-          )
-        );
-      });
-      let _ = class extends _.Component {
-        componentDidMount() {
-          _._.Get().SetIsUsingAppIDFilters(!0);
-        }
-        componentWillUnmount() {
-          _._.Get().SetIsUsingAppIDFilters(!1);
-        }
-        DeriveClusterView() {
-          const {
-              match: {
-                params: {
-                  pageid: _,
-                  appid: _,
-                  clusterindex: __webpack_require__,
-                },
-              },
-            } = this.props,
-            _ = parseInt(__webpack_require__);
-          if (isNaN(_)) return null;
-          let _;
-          if (_)
-            _ = {
-              type: "custom",
-              pageid: _,
-            };
-          else {
-            if (!_)
-              return (
-                console.error("Could not determine owning page for cluster"),
-                null
-              );
-            {
-              const _ = parseInt(_);
-              if (isNaN(_)) return null;
-              _ = {
-                type: "app",
-                appid: _,
-              };
-            }
-          }
-          const _ = _._.Get().GetPageDescriptor(_);
-          if (!_) return null;
-          const _ = _.items[_];
-          return _ && "clusterview" === _.type
-            ? {
-                ..._.view,
-                type: 0,
-              }
-            : null;
-        }
-        render() {
-          const _ = this.DeriveClusterView();
-          if (!_) return null;
-          const _ = _._.Get().GetAppIDFilters(),
-            _ = Array.from(_.keys()),
-            _ = _._.Get().GetCurrentSearchTerm(),
-            _ = {
-              appid: _.length ? _ : void 0,
-              searchLanguage: _.length ? _._.LANGUAGE : void 0,
-              searchTerm: _.length ? _ : void 0,
-            };
-          return _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                paddingY: "xlarge",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              },
-              _.createElement(_, {
-                descriptor: _,
-                additionalFilter: _,
-              }),
-            ),
-          );
-        }
-      };
-      function _(_) {
-        const { appid: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(() =>
-            _._.Get().GetPageDescriptor({
-              type: "app",
-              appid: _,
-            }),
-          ),
-          _ = (0, _._)(() => _._.GetAppInfo(_));
-        return _
-          ? _.createElement(
-              _._,
-              {
-                appid: _,
-              },
-              _.createElement(_, {
-                header: _.createElement(_._, {
-                  title: _.createElement(
-                    "a",
-                    {
-                      href: (0, _._)(`${_._.STORE_BASE_URL}app/${_.appid}`, _),
-                    },
-                    _.name,
-                  ),
-                  subtitle: _.subtitle,
-                }),
-                descriptor: _,
-              }),
-            )
-          : null;
-      }
-      function _(_) {
-        const { eventname: _ } = _,
-          _ = (0, _._)(),
-          [_, _] = _.useState(5),
-          _ = (0, _._)({
-            queryKey: ["EventDetails", _],
-            queryFn: async () =>
-              (
-                await _().get(
-                  _._.STORE_BASE_URL +
-                    "points/ajaxgeteventdetails?event_name=" +
-                    _,
-                )
-              ).data,
-            staleTime: 1 / 0,
-          }),
-          _ = (0, _._)(() =>
-            _._.Get().GetPageDescriptor({
-              type: "event",
-              eventname: _,
-              rgIncludedAppIDs: _.data?.details?.included_apps,
-              rgPriorityAppIDs: _.data?.details?.priority_apps,
-              cAppClusters: _,
-            }),
-          ),
-          _ = _.data?.details?.radial_color_override,
-          _ = _.data?.details?.radial_edge_color_override,
-          _ = _.data?.details?.rtime_event_end,
-          _ = (0, _._)();
-        if (
-          ((0, _.useEffect)(() => {
-            const _ = document.documentElement.style.getPropertyValue(
-              "--standard-root-background",
-            );
-            return (
-              (_ || _) &&
-                document.documentElement.style.setProperty(
-                  "--standard-root-background",
-                  `radial-gradient(63.94% 1024px at 50% 200px, ${_ || "#244372"} 0%, ${_ || "#161A1F"} 100%)`,
-                ),
-              () =>
-                document.documentElement.style.setProperty(
-                  "--standard-root-background",
-                  _,
-                )
-            );
-          }, [_, _]),
-          !_.data)
-        )
-          return null;
-        if (!_ || !_.isSuccess || 1 != _.data.success)
-          return console.error(`Failed to get event page for ${_}`), null;
-        const _ = _.data?.details?.included_apps?.concat(
-            _.data?.details?.priority_apps,
-          ),
-          _ = _.createElement(
-            "span",
-            {
-              className: _.DescriptorDrivenEventPageTitle,
-            },
-            _.data?.details?.title ?? _,
-          );
-        let _ = _.createElement(_._, {
-          title: _,
-          subtitle: _ > _ ? (0, _._)("#PointShop_Event_Over") : void 0,
-        });
-        return (
-          _.data?.details?.strPageHeader &&
-            (_ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("img", {
-                className: _.EventPageHeaderImg,
-                src: _.data.details.strPageHeader,
-              }),
-              Boolean(_ > _) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.PageSubtitle,
-                  },
-                  (0, _._)("#PointShop_Event_Over"),
-                ),
-            )),
-          _.createElement(
-            _._,
-            {
-              background: _.data?.details?.strPageBackground,
-            },
-            _.createElement(_, {
-              header: _.createElement(
-                "a",
-                {
-                  href: (0, _._)(_._.STORE_BASE_URL + _.data?.details?.url, _),
-                },
-                _,
-              ),
-              descriptor: _,
-            }),
-            _.createElement(_._, {
-              trigger: "repeated",
-              onVisibilityChange: (_) => _ && _ < _.length && _(_ + 10),
-              rootMargin: "0px 0px 100px 0px",
-            }),
-          )
-        );
-      }
-      _ = (0, _._)([_._], _);
-      class _ extends _.Component {
-        render() {
-          return _._.Get().BIsLoggedIn()
-            ? this.props.children
-            : _.createElement(
-                _._,
-                null,
-                _.createElement(_, {
-                  descriptor: this.props.descriptor,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    style: {
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    },
-                  },
-                  _.createElement("div", null, (0, _._)("#RequiresLogin_Desc")),
-                  _.createElement(
-                    "div",
-                    {
-                      style: {
-                        paddingTop: "10px",
-                      },
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        className: (0, _._)(
-                          "btn_green_white_innerfade",
-                          " btn_medium",
-                        ),
-                        onClick: () => _._.Get().ShowLoginDialog(),
-                      },
-                      _.createElement(
-                        "span",
-                        null,
-                        (0, _._)("#RequiresLogin_Button"),
-                      ),
-                    ),
-                  ),
-                ),
-              );
-        }
-      }
-      let _ = class extends _.Component {
-        state = {
-          cVisible: 5,
-        };
-        componentDidMount() {}
-        componentWillUnmount() {}
-        render() {
-          const { cVisible: _ } = this.state,
-            _ = _._.Get().GetAppIDFilters();
-          let _ = _._.Get().GetSortedMyGamesWithRewards();
-          const _ = _._.Get().GetCurrentSearchTerm(),
-            _ = {
-              searchLanguage: _.length ? _._.LANGUAGE : void 0,
-              searchTerm: _.length ? _ : void 0,
-            };
-          0 != _.size && (_ = __webpack_require__.filter((_) => _.has(_)));
-          const _ = {
-            title: (0, _._)("#ShopPageTitle_ByGame"),
-            subtitle: (0, _._)("#ShopPageTitle_ByGame_Subtitle"),
-            searchPlaceholder: (0, _._)("#SearchPlaceholder_ByGame"),
-            items: __webpack_require__.slice(0, _).map((_) => ({
-              type: "clusterview",
-              view: {
-                type: 1,
-                linkedPage: {
-                  type: "app",
-                  appid: _,
-                },
-                cluster: new _._(_, "", _),
-              },
-            })),
-            params: {
-              type: "custom",
-              pageid: "bygame",
-            },
-          };
-          return _.createElement(
-            _,
-            {
-              descriptor: _,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                descriptor: _,
-              }),
-              _.createElement(_._, {
-                trigger: "repeated",
-                onVisibilityChange: (_) =>
-                  _ &&
-                  _ < _.length &&
-                  this.setState({
-                    cVisible: _ + 10,
-                  }),
-                rootMargin: "0px 0px 100px 0px",
-              }),
-            ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      let _ = class extends _.Component {
-        state = {
-          cVisible: 5,
-        };
-        render() {
-          const { cVisible: _ } = this.state,
-            _ = _._.Get().GetSortedEventAppsWithRewards(),
-            _ = {
-              title: (0, _._)("#ShopPageTitle_ByEvent"),
-              subtitle: (0, _._)("#ShopPageTitle_ByEvent_Subtitle"),
-              searchPlaceholder: (0, _._)("#SearchPlaceholder_ByGame"),
-              items: _.slice(0, _).map((_) => ({
-                type: "clusterview",
-                view: {
-                  type: 1,
-                  linkedPage: {
-                    type: "app",
-                    appid: _,
-                  },
-                  cluster: new _._(_, ""),
-                },
-              })),
-              params: {
-                type: "custom",
-                pageid: "byevent",
-              },
-            };
-          return _.createElement(
-            _,
-            {
-              descriptor: _,
-            },
-            _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                descriptor: _,
-              }),
-              _.createElement(_._, {
-                trigger: "repeated",
-                onVisibilityChange: (_) =>
-                  _ &&
-                  _ < _.length &&
-                  this.setState({
-                    cVisible: _ + 10,
-                  }),
-                rootMargin: "0px 0px 100px 0px",
-              }),
-            ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      var _ = __webpack_require__("chunkid");
       const _ =
           __webpack_require__._ +
-          "images/applications/store/game_tiles.png?v=valveisgoodatcaching",
-        _ =
-          (__webpack_require__._,
-          __webpack_require__._,
-          __webpack_require__._ +
-            "images/applications/store/float.png?v=valveisgoodatcaching"),
+          "images/applications/store/float.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/Entering_vr.gif?v=6f6a584a1c1c96e77356456f93404674",
-        _ =
-          (__webpack_require__._,
-          __webpack_require__._,
+          "images/applications/store/Entering_vr.gif?v=6f6a584a1c1c96e77356456f93404674";
+      __webpack_require__._;
+      __webpack_require__("chunkid");
+      __webpack_require__._;
+      const _ =
           __webpack_require__._ +
-            "images/applications/store/bonemetal_224px.png?v=valveisgoodatcaching"),
+          "images/applications/store/bonemetal_224px.png?v=valveisgoodatcaching",
         _ =
           (__webpack_require__._,
           __webpack_require__._,
@@ -16946,7 +15753,9 @@
         _ =
           __webpack_require__._ +
           "images/applications/store/patron_badge.png?v=valveisgoodatcaching";
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const {
               children: _,
@@ -17169,7 +15978,7 @@
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingTop: "xxlarge",
+                paddingTop: "large",
                 className: _.PageContainer,
               },
               _.createElement(
@@ -17221,7 +16030,7 @@
                 }),
                 _.createElement("img", {
                   className: _.ItemLeftMid,
-                  src: _,
+                  src: _._,
                 }),
                 _.createElement(
                   "div",
@@ -17239,11 +16048,11 @@
                 ),
                 _.createElement("img", {
                   className: _.ItemRightMid,
-                  src: _,
+                  src: _._,
                 }),
                 _.createElement("img", {
                   className: _.ItemRight,
-                  src: _,
+                  src: _._,
                 }),
               ),
             ),
@@ -17319,7 +16128,6 @@
           return _.createElement(
             _._,
             {
-              _: "CommunityAwards",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -17419,10 +16227,11 @@
             _.createElement(
               _._,
               {
+                _: "CommunityAwards",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingTop: "xxlarge",
+                paddingTop: "large",
                 className: _.PageContainer,
                 focusable: !0,
                 noFocusRing: !0,
@@ -17581,7 +16390,7 @@
               {
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
+                alignItems: "flex-start",
                 justifyContent: "center",
                 paddingTop: "xlarge",
                 className: _.PageContainer,
@@ -17713,7 +16522,7 @@
               display: "flex",
               flexDirection: "row",
               justifyContent: "center",
-              paddingTop: "xxxlarge",
+              paddingTop: "xxlarge",
               className: _.FaqContainer,
             },
             _.createElement(
@@ -17823,6 +16632,7 @@
           );
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor(_) {
@@ -18202,6 +17012,15 @@
       };
       _ = (0, _._)([_._], _);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -18337,7 +17156,7 @@
                   }),
                   itemClassName: _.ItemHoverZIndex,
                   renderItem: (_) =>
-                    _.createElement(_, {
+                    _.createElement(_._, {
                       definition: _,
                       key: _.defid,
                     }),
@@ -18373,13 +17192,14 @@
                 }),
               ),
             _?.length > 0 &&
-              _.createElement(_, {
+              _.createElement(_._, {
                 descriptor: _,
               }),
           ),
         );
       }
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -19609,7 +18429,9 @@
       }
       (0, _._)([_._], _.prototype, "m_rgCurrentUserBids", void 0),
         (0, _._)([_._], _.prototype, "m_mapAuctionItems", void 0);
+      var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -19625,7 +18447,7 @@
         render() {
           return this.state.bReady
             ? _.createElement(
-                _,
+                _._,
                 null,
                 _.createElement(
                   _._,
@@ -19642,7 +18464,7 @@
                     {
                       path: _._.LoyaltyStore(),
                     },
-                    _.createElement(_, null),
+                    _.createElement(_._, null),
                   ),
                   _.createElement(
                     _._,
@@ -19667,7 +18489,7 @@
                   ),
                 ),
               )
-            : _.createElement(_, null);
+            : _.createElement(_._, null);
         }
       }
       const _ = (async function () {
@@ -19710,6 +18532,1053 @@
             return (0, _._)(_.appid, _.community_item_data.item_image_large);
         }
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            title: _,
+            description: __webpack_require__,
+            image: _,
+            iconComponent: _,
+            linked_page: _,
+            link_text: _,
+          } = _,
+          _ = _,
+          _ = "string" == typeof _ ? _ : (0, _._)(_);
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _.Banner,
+            },
+            _ &&
+              _.createElement("img", {
+                className: _.Image,
+                src: _,
+              }),
+            _ &&
+              _.createElement(_, {
+                className: _.Image,
+              }),
+            _.createElement(
+              "div",
+              {
+                className: _.Content,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.Title,
+                },
+                _,
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Description,
+                },
+                __webpack_require__,
+              ),
+            ),
+            _.createElement(
+              _._,
+              {
+                className: _.Link,
+                _: _,
+              },
+              _,
+            ),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ =
+        __webpack_require__._ +
+        "images/applications/store/coin_single.png?v=valveisgoodatcaching";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ =
+          __webpack_require__._ +
+          "images/applications/store/csgoChat_128_hugs.png?v=valveisgoodatcaching",
+        _ =
+          __webpack_require__._ +
+          "images/applications/store/dance.png?v=valveisgoodatcaching",
+        _ =
+          __webpack_require__._ +
+          "images/applications/store/icons_floor.png?v=valveisgoodatcaching";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ =
+        __webpack_require__._ +
+        "images/applications/store/MysterySticker.png?v=valveisgoodatcaching";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+          const _ = {
+              item_name: "Free Item",
+              item_title: (0, _._)("#SummerSale_ItemTitle"),
+              animated: !0,
+            },
+            _ = {
+              defid: void 0,
+              appid: _._.Get().GetCurrentSaleRewardAppID(),
+              type: 1,
+              community_item_class: 11,
+              point_cost: "0",
+              quantity: "1",
+              active: !0,
+              community_item_data: _,
+            };
+          let _ = null,
+            _ = null,
+            _ = (_) => (0, _._)(_, _, null, !0),
+            _ = _,
+            _ = (0, _._)("#SummerSale_ItemName");
+          const _ = _._.Get().BCanClaimFreeSaleReward();
+          if (!_) {
+            (_ = _.createElement(
+              "div",
+              {
+                className: _.ClaimedText,
+              },
+              (0, _._)("#Rewards_Claimed"),
+            )),
+              (_ = (0, _._)(_.SaleRewardItemOwned, _.OwnedItem)),
+              (_ = null);
+            const _ = _._.Get().GetClaimedSaleRewardItemDef();
+            _ &&
+              ((_ = _.community_item_data.item_title),
+              (_ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_item_data.item_image_small}`));
+          }
+          return _.createElement(
+            _._,
+            {
+              display: "flex",
+              flexDirection: "column",
+              className: _.SaleRewardContainer,
+            },
+            _.createElement(
+              _._,
+              {
+                className: _.SaleRewardContainerFlex,
+              },
+              _.createElement(
+                _._,
+                {
+                  display: "flex",
+                  flexDirection: "column",
+                  className: _.LeftColumn,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SaleRewardLogoContainerFlex,
+                  },
+                  _.createElement("img", {
+                    className: _.SaleRewardLogo,
+                    alt: "Sale",
+                    src: _._.Get().GetFreeItemHeaderSource(),
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SaleRewardTextContainer,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.SaleRewardSubHeader,
+                    },
+                    (0, _._)("#SummerSale_FreeDesc_2"),
+                  ),
+                  !_ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.SummerNextStop,
+                      },
+                      _.createElement(_, null),
+                    ),
+                  _.createElement(
+                    _._,
+                    {
+                      className: _.RulesLink,
+                      _: _._.LoyaltyGiveawayRules(),
+                    },
+                    (0, _._)("#SummerSale_Redeem_Rules"),
+                  ),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.FreeItemContainer,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    name: _,
+                    cost: 0,
+                    attributes: [
+                      _.createElement(_._, {
+                        className: _.IconAnimated,
+                        key: "animated",
+                      }),
+                    ],
+                    iconComponent: _.EEf,
+                    styleOverride: _,
+                    desc: (0, _._)("#CommunityItemClass_Sticker"),
+                    strPriceOverride: _,
+                    onClick: _,
+                  },
+                  _.createElement("img", {
+                    className: _.ImageMedium,
+                    src: _,
+                  }),
+                ),
+              ),
+            ),
+          );
+        }),
+        _ = (0, _._)(() => {
+          const _ = _._.Get().GetNextClaimTime();
+          return _
+            ? _.createElement(
+                "span",
+                {
+                  className: _.NextStop,
+                },
+                _.createElement(
+                  "span",
+                  {
+                    className: _.Title,
+                  },
+                  (0, _._)("#SummerSale_NextStop"),
+                ),
+                _.createElement(_, {
+                  className: _.Timer,
+                  time: _.getTime(),
+                }),
+              )
+            : null;
+        }),
+        _ = (0, _._)((_) => {
+          const { time: _, ...__webpack_require__ } = _,
+            _ = Math.floor(Math.max(0, _ - _._()) / 1e3),
+            _ = Math.floor(_ / _._.PerHour),
+            _ = Math.floor((_ - _ * _._.PerHour) / _._.PerMinute),
+            _ = Math.floor(_ - (_ * _._.PerHour + _ * _._.PerMinute));
+          return _.createElement(
+            "span",
+            {
+              style: {
+                fontFamily: "monospace",
+              },
+              ...__webpack_require__,
+            },
+            _(_),
+            ":",
+            _(_),
+            ":",
+            _(_),
+          );
+        }),
+        _ = (_) => _.toString().padStart(2, "0");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        );
+      let _ = class extends _.Component {
+        render() {
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_, null),
+            _.createElement(_, null),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)(() => {
+        const _ = (0, _._)("*/reward/:definitionid"),
+          _ = _ && _.params && _.params.definitionid,
+          _ = parseInt(_);
+        return (
+          _.useEffect(() => {
+            _ && !isNaN(_) && (0, _._)(null, _);
+          }, [_]),
+          null
+        );
+      });
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.PageHomeTopTitle,
+          },
+          _.createElement(_._, {
+            className: _.Sparkles,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.PageHomeBranding,
+            },
+            " ",
+            (0, _._)("#ShopLink"),
+            " ",
+          ),
+        );
+      }
+      let _ = class extends _.Component {
+        GetCoupon() {
+          const _ = _._.Get().GetCouponPromosForUser();
+          let _ = _._.Get().GetPointsAvailable(),
+            _ = 0,
+            _ = 0,
+            _ = 0,
+            _ = 0;
+          return (
+            _.forEach((_) => {
+              const _ = _._.Get().GetCouponDefinition(_.loyalty_reward_id);
+              if (_) {
+                (_ += _.max_use_count * parseInt(_.discount_amount)),
+                  (_ += _.available_use_count);
+                for (let _ = 0; _ < _.available_use_count; _++) {
+                  _ + parseInt(_.point_cost) <= _.getLowBits() &&
+                    ((_ += parseInt(_.discount_amount)),
+                    (_ += parseInt(_.point_cost))),
+                    (_ = Math.max(_, parseInt(_.discount_amount))),
+                    _ || (_ = parseInt(_.point_cost));
+                }
+              }
+            }),
+            null
+          );
+        }
+        render() {
+          const _ = [];
+          _._.Get()
+            .getLoyaltyRewardDefMap()
+            .forEach((_) => {
+              _.length < 3 && 1 == _.type && _.push(_);
+            });
+          const _ = _._.Get().GetPageDescriptor({
+              type: "custom",
+              pageid: _._,
+            }),
+            _ = _.createElement(
+              "div",
+              {
+                className: _.PageHomeTop,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.PageHomeBanner,
+                },
+                _.createElement("img", {
+                  className: _.HomeRewardsPointsIcon,
+                  src: _,
+                }),
+                _.createElement("img", {
+                  className: _.PageHomeBannerFloor,
+                  src: _,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PageHomeBannerIcons,
+                  },
+                  _.createElement("img", {
+                    className: _.PageHomeBannerChicken,
+                    src: _._,
+                  }),
+                  _.createElement("img", {
+                    className: _.PageHomeBannerBored,
+                    src: _._,
+                  }),
+                  _.createElement("img", {
+                    className: _.PageHomeBannerHugs,
+                    src: _,
+                  }),
+                  _.createElement("img", {
+                    className: _.PageHomeBannerHappy,
+                    src: _._,
+                  }),
+                  _.createElement("img", {
+                    className: _.PageHomeBannerBoombox,
+                    src: _._,
+                  }),
+                  _.createElement("img", {
+                    className: _.PageHomeBannerDance,
+                    src: _,
+                  }),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.PageHomeTitleContainer,
+                },
+                _.createElement(_, null),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PageHomeTopSubTitle,
+                  },
+                  (0, _._)("#ShopHome_UseRewardPoints"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PageHomeTopSubTitle,
+                  },
+                  (0, _._)("#ShopHome_UseRewardPoints_Subtitle"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.PageHomeTopLink,
+                    _: _._.LoyaltyHowItWorks(),
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      className: _.PageHomeHowItWorks,
+                    },
+                    " ",
+                    (0, _._)("#ShopHome_HowLinkBtn"),
+                  ),
+                ),
+              ),
+            );
+          return _.createElement(
+            _._,
+            null,
+            _ &&
+              _.createElement(
+                _,
+                {
+                  header: _,
+                  descriptor: _,
+                },
+                _._.Get().BIsSaleActive() &&
+                  _.createElement(_._, null, _.createElement(_, null)),
+              ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = () =>
+          _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _._,
+              {
+                path: _._.LoyaltySteamBadge(),
+              },
+              _.createElement(_, null),
+            ),
+            _.createElement(
+              _._,
+              {
+                path: _._.LoyaltyByGame(),
+              },
+              _.createElement(_, null),
+            ),
+            _.createElement(
+              _._,
+              {
+                path: _._.LoyaltyByEvent(),
+              },
+              _.createElement(_, null),
+            ),
+            !1,
+            _.createElement(
+              _._,
+              {
+                path: _._.LoyaltyProfileCustomizations(),
+              },
+              _.createElement(_, null),
+            ),
+            _.createElement(_._, {
+              path: _._.LoyaltyItemBundle(":bundleid"),
+              render: (_) =>
+                _.createElement(_, {
+                  ..._,
+                }),
+            }),
+            _.createElement(_._, {
+              path: _._.LoyaltyEvents(":eventname"),
+              render: (_) =>
+                _.createElement(_, {
+                  eventname: _.match.params.eventname,
+                }),
+            }),
+            _.createElement(_._, {
+              path: `${_._.LoyaltyStore()}/app/:appid/cluster/:clusterindex`,
+              render: (_) =>
+                _.createElement(_, {
+                  ..._,
+                }),
+            }),
+            _.createElement(_._, {
+              path: `${_._.LoyaltyStore()}/app/:appid`,
+              render: (_) =>
+                _.createElement(_, {
+                  appid: parseInt(_.match.params.appid),
+                }),
+            }),
+            _.createElement(_._, {
+              path: `${_._.LoyaltyStore()}/c/:pageid/cluster/:clusterindex`,
+              render: (_) =>
+                _.createElement(_, {
+                  ..._,
+                }),
+            }),
+            _.createElement(_._, {
+              path: `${_._.LoyaltyStore()}/c/:pageid`,
+              render: (_) =>
+                _.createElement(_, {
+                  pageid: _.match.params.pageid,
+                }),
+            }),
+            _.createElement(_._, null, _.createElement(_, null)),
+          ),
+        _ = () => _.createElement(_._, null),
+        _ = () => _.createElement(_, null);
+      let _ = class extends _.Component {
+        componentDidMount() {
+          _._.Get().SetIsUsingAppIDFilters(!0);
+        }
+        componentWillUnmount() {
+          _._.Get().SetIsUsingAppIDFilters(!1);
+        }
+        render() {
+          const { pageid: _ } = this.props,
+            _ = _._.Get().GetAppIDFilters(),
+            _ = Array.from(_.keys()),
+            _ = _._.Get().GetCurrentSearchTerm(),
+            _ = {
+              appid: _.length ? _ : void 0,
+              searchLanguage: _.length ? _._.LANGUAGE : void 0,
+              searchTerm: _.length ? _ : void 0,
+            },
+            _ = _._.Get().GetPageDescriptor({
+              type: "custom",
+              pageid: _,
+            });
+          return _.createElement(
+            _._,
+            null,
+            _
+              ? _.createElement(_, {
+                  descriptor: _,
+                  additionalFilter: _,
+                })
+              : _.createElement(_._, null),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)((_) => {
+        const {
+            descriptor: {
+              items: _,
+              title: __webpack_require__,
+              subtitle: _,
+              searchPlaceholder: _,
+              headerImage: _,
+              params: _,
+            },
+            header: _,
+            additionalFilter: _,
+          } = _,
+          _ =
+            _ ||
+            _.createElement(_._, {
+              title: __webpack_require__,
+              subtitle: _,
+              headerImage: _,
+            });
+        (0, _._)(_);
+        const _ = "mobile" === (0, _._)();
+        return _.createElement(
+          _._,
+          {
+            paddingX: "none",
+          },
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(
+                _.PageItemsContainer,
+                _.PageBrandingTopPadding,
+              ),
+              itemClassName: _.PageItemsContainerChildren,
+              spacing: _ ? "medium" : "xlarge",
+            },
+            _,
+            _.children,
+            _.filter(Boolean).map((_, _) => {
+              switch (_.type) {
+                case "banner":
+                  const { type: __webpack_require__, ..._ } = _;
+                  return _.createElement(_, {
+                    ..._,
+                    key: `${_.title}_${_}`,
+                  });
+                case "clusterview":
+                  return _.createElement(_._, {
+                    key: `${_.view.cluster._}_${_}`,
+                    descriptor: _.view,
+                    additionalFilter: _,
+                    linkedPage:
+                      null === _.view.linkedPage
+                        ? void 0
+                        : _.view.linkedPage || {
+                            ..._,
+                            clusterindex: _,
+                          },
+                  });
+              }
+            }),
+          ),
+        );
+      });
+      let _ = class extends _.Component {
+        componentDidMount() {
+          _._.Get().SetIsUsingAppIDFilters(!0);
+        }
+        componentWillUnmount() {
+          _._.Get().SetIsUsingAppIDFilters(!1);
+        }
+        DeriveClusterView() {
+          const {
+              match: {
+                params: {
+                  pageid: _,
+                  appid: _,
+                  clusterindex: __webpack_require__,
+                },
+              },
+            } = this.props,
+            _ = parseInt(__webpack_require__);
+          if (isNaN(_)) return null;
+          let _;
+          if (_)
+            _ = {
+              type: "custom",
+              pageid: _,
+            };
+          else {
+            if (!_)
+              return (
+                console.error("Could not determine owning page for cluster"),
+                null
+              );
+            {
+              const _ = parseInt(_);
+              if (isNaN(_)) return null;
+              _ = {
+                type: "app",
+                appid: _,
+              };
+            }
+          }
+          const _ = _._.Get().GetPageDescriptor(_);
+          if (!_) return null;
+          const _ = _.items[_];
+          return _ && "clusterview" === _.type
+            ? {
+                ..._.view,
+                type: 0,
+              }
+            : null;
+        }
+        render() {
+          const _ = this.DeriveClusterView();
+          if (!_) return null;
+          const _ = _._.Get().GetAppIDFilters(),
+            _ = Array.from(_.keys()),
+            _ = _._.Get().GetCurrentSearchTerm(),
+            _ = {
+              appid: _.length ? _ : void 0,
+              searchLanguage: _.length ? _._.LANGUAGE : void 0,
+              searchTerm: _.length ? _ : void 0,
+            };
+          return _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _._,
+              {
+                paddingY: "xlarge",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              },
+              _.createElement(_._, {
+                descriptor: _,
+                additionalFilter: _,
+              }),
+            ),
+          );
+        }
+      };
+      function _(_) {
+        const { appid: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(() =>
+            _._.Get().GetPageDescriptor({
+              type: "app",
+              appid: _,
+            }),
+          ),
+          _ = (0, _._)(() => _._.GetAppInfo(_));
+        return _
+          ? _.createElement(
+              _._,
+              {
+                appid: _,
+              },
+              _.createElement(_, {
+                header: _.createElement(_._, {
+                  title: _.createElement(
+                    "a",
+                    {
+                      href: (0, _._)(`${_._.STORE_BASE_URL}app/${_.appid}`, _),
+                    },
+                    _.name,
+                  ),
+                  subtitle: _.subtitle,
+                }),
+                descriptor: _,
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const { eventname: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = _.useState(5),
+          _ = (0, _._)({
+            queryKey: ["EventDetails", _],
+            queryFn: async () =>
+              (
+                await _().get(
+                  _._.STORE_BASE_URL +
+                    "points/ajaxgeteventdetails?event_name=" +
+                    _,
+                )
+              ).data,
+            staleTime: 1 / 0,
+          }),
+          _ = (0, _._)(() =>
+            _._.Get().GetPageDescriptor({
+              type: "event",
+              eventname: _,
+              rgIncludedAppIDs: _.data?.details?.included_apps,
+              rgPriorityAppIDs: _.data?.details?.priority_apps,
+              cAppClusters: _,
+            }),
+          ),
+          _ = _.data?.details?.radial_color_override,
+          _ = _.data?.details?.radial_edge_color_override,
+          _ = _.data?.details?.rtime_event_end,
+          _ = (0, _._)();
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = document.documentElement.style.getPropertyValue(
+              "--standard-root-background",
+            );
+            return (
+              (_ || _) &&
+                document.documentElement.style.setProperty(
+                  "--standard-root-background",
+                  `radial-gradient(63.94% 1024px at 50% 200px, ${_ || "#244372"} 0%, ${_ || "#161A1F"} 100%)`,
+                ),
+              () =>
+                document.documentElement.style.setProperty(
+                  "--standard-root-background",
+                  _,
+                )
+            );
+          }, [_, _]),
+          !_.data)
+        )
+          return null;
+        if (!_ || !_.isSuccess || 1 != _.data.success)
+          return console.error(`Failed to get event page for ${_}`), null;
+        const _ = _.data?.details?.included_apps?.concat(
+            _.data?.details?.priority_apps,
+          ),
+          _ = _.createElement(
+            "span",
+            {
+              className: _.DescriptorDrivenEventPageTitle,
+            },
+            _.data?.details?.title ?? _,
+          );
+        let _ = _.createElement(_._, {
+          title: _,
+          subtitle: _ > _ ? (0, _._)("#PointShop_Event_Over") : void 0,
+        });
+        return (
+          _.data?.details?.strPageHeader &&
+            (_ = _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("img", {
+                className: _.EventPageHeaderImg,
+                src: _.data.details.strPageHeader,
+              }),
+              Boolean(_ > _) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PageSubtitle,
+                  },
+                  (0, _._)("#PointShop_Event_Over"),
+                ),
+            )),
+          _.createElement(
+            _._,
+            {
+              background: _.data?.details?.strPageBackground,
+            },
+            _.createElement(_, {
+              header: _.createElement(
+                "a",
+                {
+                  href: (0, _._)(_._.STORE_BASE_URL + _.data?.details?.url, _),
+                },
+                _,
+              ),
+              descriptor: _,
+            }),
+            _.createElement(_._, {
+              trigger: "repeated",
+              onVisibilityChange: (_) => _ && _ < _.length && _(_ + 10),
+              rootMargin: "0px 0px 100px 0px",
+            }),
+          )
+        );
+      }
+      _ = (0, _._)([_._], _);
+      class _ extends _.Component {
+        render() {
+          return _._.Get().BIsLoggedIn()
+            ? this.props.children
+            : _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  descriptor: this.props.descriptor,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    style: {
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    },
+                  },
+                  _.createElement("div", null, (0, _._)("#RequiresLogin_Desc")),
+                  _.createElement(
+                    "div",
+                    {
+                      style: {
+                        paddingTop: "10px",
+                      },
+                    },
+                    _.createElement(
+                      "span",
+                      {
+                        className: (0, _._)(
+                          "btn_green_white_innerfade",
+                          " btn_medium",
+                        ),
+                        onClick: () => _._.Get().ShowLoginDialog(),
+                      },
+                      _.createElement(
+                        "span",
+                        null,
+                        (0, _._)("#RequiresLogin_Button"),
+                      ),
+                    ),
+                  ),
+                ),
+              );
+        }
+      }
+      let _ = class extends _.Component {
+        state = {
+          cVisible: 5,
+        };
+        componentDidMount() {}
+        componentWillUnmount() {}
+        render() {
+          const { cVisible: _ } = this.state,
+            _ = _._.Get().GetAppIDFilters();
+          let _ = _._.Get().GetSortedMyGamesWithRewards();
+          const _ = _._.Get().GetCurrentSearchTerm(),
+            _ = {
+              searchLanguage: _.length ? _._.LANGUAGE : void 0,
+              searchTerm: _.length ? _ : void 0,
+            };
+          0 != _.size && (_ = __webpack_require__.filter((_) => _.has(_)));
+          const _ = {
+            title: (0, _._)("#ShopPageTitle_ByGame"),
+            subtitle: (0, _._)("#ShopPageTitle_ByGame_Subtitle"),
+            searchPlaceholder: (0, _._)("#SearchPlaceholder_ByGame"),
+            items: __webpack_require__.slice(0, _).map((_) => ({
+              type: "clusterview",
+              view: {
+                type: 1,
+                linkedPage: {
+                  type: "app",
+                  appid: _,
+                },
+                cluster: new _._(_, "", _),
+              },
+            })),
+            params: {
+              type: "custom",
+              pageid: "bygame",
+            },
+          };
+          return _.createElement(
+            _,
+            {
+              descriptor: _,
+            },
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                descriptor: _,
+              }),
+              _.createElement(_._, {
+                trigger: "repeated",
+                onVisibilityChange: (_) =>
+                  _ &&
+                  _ < _.length &&
+                  this.setState({
+                    cVisible: _ + 10,
+                  }),
+                rootMargin: "0px 0px 100px 0px",
+              }),
+            ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      let _ = class extends _.Component {
+        state = {
+          cVisible: 5,
+        };
+        render() {
+          const { cVisible: _ } = this.state,
+            _ = _._.Get().GetSortedEventAppsWithRewards(),
+            _ = {
+              title: (0, _._)("#ShopPageTitle_ByEvent"),
+              subtitle: (0, _._)("#ShopPageTitle_ByEvent_Subtitle"),
+              searchPlaceholder: (0, _._)("#SearchPlaceholder_ByGame"),
+              items: _.slice(0, _).map((_) => ({
+                type: "clusterview",
+                view: {
+                  type: 1,
+                  linkedPage: {
+                    type: "app",
+                    appid: _,
+                  },
+                  cluster: new _._(_, ""),
+                },
+              })),
+              params: {
+                type: "custom",
+                pageid: "byevent",
+              },
+            };
+          return _.createElement(
+            _,
+            {
+              descriptor: _,
+            },
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                descriptor: _,
+              }),
+              _.createElement(_._, {
+                trigger: "repeated",
+                onVisibilityChange: (_) =>
+                  _ &&
+                  _ < _.length &&
+                  this.setState({
+                    cVisible: _ + 10,
+                  }),
+                rootMargin: "0px 0px 100px 0px",
+              }),
+            ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -19907,6 +19776,42 @@
           ..._,
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        __webpack_require__._ +
+        "images/applications/store/boombox.png?v=valveisgoodatcaching";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        __webpack_require__._ +
+        "images/applications/store/bored.png?v=valveisgoodatcaching";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        __webpack_require__._ +
+        "images/applications/store/csgoChat_128_chickendance.png?v=valveisgoodatcaching";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        __webpack_require__._ +
+        "images/applications/store/happy.png?v=valveisgoodatcaching";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -20161,7 +20066,7 @@
         "./loyalty_danish.json": [12676, 1216],
         "./loyalty_dutch.json": [87729, 8639],
         "./loyalty_english.json": [48903, 5961],
-        "./loyalty_finnish.json": [62142, 3730],
+        "./loyalty_finnish.json": [84523, 3730],
         "./loyalty_french.json": [99565, 3449],
         "./loyalty_german.json": [77228, 5831],
         "./loyalty_greek.json": [24175, 3397],
@@ -20209,7 +20114,7 @@
         "./loyalty_danish.json": [12676, 1216],
         "./loyalty_dutch.json": [87729, 8639],
         "./loyalty_english.json": [48903, 5961],
-        "./loyalty_finnish.json": [62142, 3730],
+        "./loyalty_finnish.json": [84523, 3730],
         "./loyalty_french.json": [99565, 3449],
         "./loyalty_german.json": [77228, 5831],
         "./loyalty_greek.json": [24175, 3397],

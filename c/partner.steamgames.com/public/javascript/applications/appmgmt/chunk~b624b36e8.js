@@ -1502,6 +1502,7 @@
         m_nPlayerHeightForAuto = 0;
         m_bFirstPlay = !0;
         m_bPlaybackStarted = !1;
+        m_bPlaybackEnded = !1;
         m_nLastPlaytimeLoaders = 0;
         m_nTimedText = 0;
         m_schReportPlayerTrigger = new _._();
@@ -1713,14 +1714,14 @@
             (this.m_elVideo.src = this.m_strHLS);
         }
         OnEndedForHLS() {
-          this.m_bUseHLSManifest &&
-            (this.m_watchedIntervals.OnEnded(this.m_elVideo),
-            this.DispatchEvent("valve-ended"));
+          this.m_bUseHLSManifest && this.EndPlayback();
         }
         EndPlayback() {
           this.Pause(),
-            this.m_watchedIntervals.OnEnded(this.m_elVideo),
-            this.DispatchEvent("valve-ended");
+            this.m_bPlaybackEnded ||
+              ((this.m_bPlaybackEnded = !0),
+              this.m_watchedIntervals.OnEnded(this.m_elVideo),
+              this.DispatchEvent("valve-ended"));
         }
         Close() {
           if (
@@ -1757,6 +1758,7 @@
             (this.m_stats = null),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
+            (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
             this.m_watchedIntervals.Clear();
         }
@@ -2168,13 +2170,15 @@
               .StartTracking(() =>
                 this.m_stats.ExtractFrameInfo(this.m_elVideo),
               )),
-            this.m_watchedIntervals.OnPlay(this.m_elVideo);
+            this.m_watchedIntervals.OnPlay(this.m_elVideo),
+            (this.m_bPlaybackEnded = !1);
         }
         OnVideoSeeking() {
           this.m_watchedIntervals.OnSeeking(this.m_elVideo);
         }
         OnVideoSeeked() {
-          this.m_watchedIntervals.OnSeeked(this.m_elVideo);
+          this.m_watchedIntervals.OnSeeked(this.m_elVideo),
+            (this.m_bPlaybackEnded = !1);
         }
         BIsPlayerBufferedBetween(_, _) {
           return (

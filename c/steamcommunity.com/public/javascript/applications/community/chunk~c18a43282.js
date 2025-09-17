@@ -569,7 +569,16 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
+      function _(_) {
+        return Array.isArray(_) ? _[0] : _;
+      }
+      function _(_) {
+        const _ = Array.isArray(_) ? _ : [_];
+        return Math.min(..._);
+      }
       const _ = [1, 3, 2],
         _ = [1, 3],
         _ = [5, 4],
@@ -857,18 +866,34 @@
             rgAcceptableTypes: _,
           },
         };
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         const _ = _[_];
-        return (
-          !!_ && !_.bDisableEnforceDimensions && _ === _.width && _ === _.height
-        );
+        if (!_) return !1;
+        if (_.bDisableEnforceDimensions) return _;
+        if (_ !== _.width || _ !== _.height) return !1;
+        let _ = null;
+        if (Array.isArray(_.width)) {
+          if (((_ = _.width.findIndex((_) => _ === _)), _ < 0)) return !1;
+        } else if (_ !== _.width) return !1;
+        if (Array.isArray(_.height)) {
+          let _ = _.height.findIndex((_) => _ === _);
+          if (_ < 0) return !1;
+          if (null !== _ && _ !== _) return !1;
+        } else if (_ !== _.height) return !1;
+        return !0;
       }
       function _(_, _, _) {
         const _ = _[_];
-        return (
-          !!_ &&
-          (!!_.bDisableEnforceDimensions || !(_ < _.width || _ < _.height))
-        );
+        if (!_) return !1;
+        if (_.bDisableEnforceDimensions) return !0;
+        if (Array.isArray(_.width)) {
+          if (_.width.filter((_) => _ < _).length == _.width.length) return !1;
+        } else if (_ < _.width) return !1;
+        if (Array.isArray(_.height)) {
+          if (_.height.filter((_) => _ < _).length == _.height.length)
+            return !1;
+        } else if (_ < _.height) return !1;
+        return !0;
       }
       function _(_) {
         const _ = _[_];
@@ -1277,6 +1302,10 @@
           (_.valve_access_log = []),
           (_.bInvisibleGameOptIn = void 0),
           (_.rt_migrated_time = void 0),
+          (_.optin_tagid || _.sale_opt_in_page_name) &&
+            ((_.tagged_items = void 0),
+            (_.tagged_item_filter = void 0),
+            (_.auto_item_tags = void 0)),
           (_.optin_prune_tagid = void 0),
           (_.optin_tagid = void 0),
           (_.sale_opt_in_page_name = void 0),
@@ -3013,8 +3042,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3036,8 +3065,8 @@
               (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`);
               return {
                 sKey: _,
-                width: _.width,
-                height: _.height,
+                width: (0, _._)(_.width),
+                height: (0, _._)(_.height),
                 bEnforceDimensions: !_.bDisableEnforceDimensions,
                 artworkType: _,
                 bHiddenFromDropdown: "hero" === _,
@@ -3529,7 +3558,7 @@
               (_ = _.height),
               (_ = !_.bDisableEnforceDimensions));
           }
-          const _ = this.width >= _ && this.height >= _,
+          const _ = this.width >= (0, _._)(_) && this.height >= (0, _._)(_),
             _ = _ ? this.width === _ && this.height === _ : _,
             _ = _ && _ != this.fileType,
             _ =
@@ -3542,7 +3571,8 @@
                     : __webpack_require__.map((_) => _.artworkType)) || [],
                 ).length,
             _ = Boolean((0, _._)(this.fileType));
-          let _ = "",
+          let _,
+            _ = "",
             _ = !1;
           return (
             _
@@ -3555,15 +3585,36 @@
                     ))
                   : _ || _
                     ? _
-                      ? !_ &&
-                        _ &&
-                        ((_ = (0, _._)("#ImageUpload_InvalidDimensions", _, _)),
-                        (_ = !0))
-                      : (_ = (0, _._)("#ImageUpload_TooSmall", _, _))
-                    : (_ = (0, _._)("#ImageUpload_InvalidResolution", _, _))
+                      ? !_ && _
+                        ? ((_ = (0, _._)(
+                            "#ImageUpload_InvalidDimensions",
+                            (0, _._)(_),
+                            (0, _._)(_),
+                          )),
+                          (_ = !0))
+                        : ((Array.isArray(_) && this.width != (0, _._)(_)) ||
+                            (Array.isArray(_) && this.height != (0, _._)(_))) &&
+                          _.push(
+                            (0, _._)(
+                              "#ImageUpload_PreferredDimension",
+                              (0, _._)(_),
+                              (0, _._)(_),
+                            ),
+                          )
+                      : (_ = (0, _._)(
+                          "#ImageUpload_TooSmall",
+                          (0, _._)(_),
+                          (0, _._)(_),
+                        ))
+                    : (_ = (0, _._)(
+                        "#ImageUpload_InvalidResolution",
+                        (0, _._)(_),
+                        (0, _._)(_),
+                      ))
               : (_ = (0, _._)("#ImageUpload_InvalidFormatSelected")),
             {
               error: _,
+              warnings: _,
               needsCrop: _,
               match: this.GetCurrentImageOption(),
             }
@@ -3711,15 +3762,15 @@
             if ("capsule" === _)
               return [
                 {
-                  width: _._[_].width / 2,
-                  height: _._[_].height / 2,
+                  width: (0, _._)(_._[_].width) / 2,
+                  height: (0, _._)(_._[_].height) / 2,
                 },
               ];
             if ("spotlight" === _)
               return [
                 {
-                  width: _._[_].width / 2,
-                  height: _._[_].height / 2,
+                  width: (0, _._)(_._[_].width) / 2,
+                  height: (0, _._)(_._[_].height) / 2,
                 },
               ];
             return;
@@ -7826,14 +7877,16 @@
         GetDestWidth() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption();
-          return _ ? _._[_.artworkType].width : 0;
+          const _ = _.GetCurrentImageOption(),
+            _ = _._[_.artworkType].width;
+          return _ ? (0, _._)(_) : 0;
         }
         GetDestHeight() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption();
-          return _ ? _._[_.artworkType].height : 0;
+          const _ = _.GetCurrentImageOption(),
+            _ = _._[_.artworkType].height;
+          return _ ? (0, _._)(_) : 0;
         }
         GetLargestBoxThatFits(_, _, _, _) {
           let _ = _,

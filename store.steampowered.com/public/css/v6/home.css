@@ -5413,6 +5413,12 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		background-color: inherit;
 	}
 
+	html.responsive body.v6 .home_page_content h2 .header_inline {
+		display: block;
+		font-size: 13px;
+		color: #9ea9b3;
+	}
+
 	html.responsive body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
 		display: none;
 	}

@@ -1402,8 +1402,8 @@
         const { packageData: _ } = _,
           [__webpack_require__, _] = _.useState(!1),
           [_, _] = (0, _._)("filter_below_min_price", !1),
-          [_, _] = _.useState("released"),
-          _ = _.useRef(null);
+          _ = _.useRef(null),
+          [_, _] = (0, _._)("filter", "released");
         "dev" == _._.WEB_UNIVERSE && (window.g_PricingGridTableRef = _);
         const _ = new URLSearchParams(window.location.search),
           _ = _.has(_._) ? decodeURIComponent(_.get(_._)) : "",
@@ -2922,30 +2922,17 @@
               _.forEach((_) => {
                 const _ = this.#e.defaultQueryOptions(_),
                   _ = _.get(_.queryHash);
-                if (_)
-                  __webpack_require__.push({
-                    defaultedQueryOptions: _,
-                    observer: _,
-                  });
-                else {
-                  const _ = this.#a.find(
-                    (_) => _.options.queryHash === _.queryHash,
-                  );
-                  __webpack_require__.push({
-                    defaultedQueryOptions: _,
-                    observer: _ ?? new _._(this.#e, _),
-                  });
-                }
+                _
+                  ? __webpack_require__.push({
+                      defaultedQueryOptions: _,
+                      observer: _,
+                    })
+                  : __webpack_require__.push({
+                      defaultedQueryOptions: _,
+                      observer: new _._(this.#e, _),
+                    });
               }),
-              __webpack_require__.sort(
-                (_, _) =>
-                  _.findIndex(
-                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
-                  ) -
-                  _.findIndex(
-                    (_) => _.queryHash === _.defaultedQueryOptions.queryHash,
-                  ),
-              )
+              _
             );
           }
           #l(_, _) {

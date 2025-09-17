@@ -5,7 +5,7 @@
   [8567],
   {
     28567: (e, t, r) => {
-      r.d(t, { DT: () => S, Uy: () => R, Pt: () => h, bD: () => j });
+      r.d(t, { DT: () => I, Uy: () => j, Pt: () => R, bD: () => S });
       var i,
         a,
         s = r(56545),
@@ -339,27 +339,36 @@
         g = r(75233),
         f = r(51614),
         b = r(23809),
-        z = r(30470);
-      function M() {
-        return "PrivateApps_" + z.iA.accountid;
-      }
+        z = r(8812),
+        M = r(30470);
       function v() {
-        return z.TS.IN_STEAMUI;
+        return "PrivateApps_" + M.iA.accountid;
+      }
+      function w() {
+        return M.TS.IN_STEAMUI;
       }
       async function _(e, t) {
-        const r = M();
-        await e.StoreObject(r, t);
+        try {
+          const r = v();
+          await e.StoreObject(r, t);
+        } catch (e) {
+          const t = new Error(
+            `WritePrivateAppsToLocalCache failed with result ${e?.result}, ${e?.message}`,
+          );
+          (0, z.aj)().ReportError(t, { bIncludeMessageInIdentifier: !0 }),
+            console.warn(t);
+        }
       }
-      const w = ["AccountPrivateApps"];
-      function A(e) {
+      const A = ["AccountPrivateApps"];
+      function h(e) {
         const { transport: t, storage: r, bUseLocalCache: a, bEnabled: n } = e;
         return {
-          queryKey: w,
+          queryKey: A,
           queryFn: async () => {
             let e;
             a &&
               (e = await (async function (e) {
-                const t = M();
+                const t = v();
                 return await e.GetObject(t);
               })(r));
             const n = s.w.Init(m),
@@ -376,37 +385,37 @@
           enabled: n,
         };
       }
-      function h() {
+      function R() {
         const e = (0, b.KV)(),
           t = (0, b.rX)(),
-          r = v();
+          r = w();
         return (0, y.I)(
-          A({
+          h({
             transport: e,
             storage: t,
             bUseLocalCache: r,
-            bEnabled: !!z.iA.accountid,
+            bEnabled: !!M.iA.accountid,
           }),
         );
       }
-      function R(e) {
-        const { data: t } = h();
-        return !!z.iA.accountid && !!e && (t ? t.has(e) : void 0);
-      }
       function j(e) {
+        const { data: t } = R();
+        return !!M.iA.accountid && !!e && (t ? t.has(e) : void 0);
+      }
+      function S(e) {
         const t = (0, b.KV)(),
           r = (0, g.jE)(),
-          i = v(),
+          i = w(),
           a = (0, b.rX)();
         return (0, f.n)({
           mutationFn: async (r) => P(t, [e], r),
           onSuccess: (t, s) => T(r, [e], s, i ? a : null),
         });
       }
-      function S() {
+      function I() {
         const e = (0, b.KV)(),
           t = (0, g.jE)(),
-          r = v(),
+          r = w(),
           i = (0, b.rX)();
         return (0, f.n)({
           mutationFn: async (t) => {
@@ -426,7 +435,7 @@
         if (!n.BSuccess()) throw n.GetErrorMessage();
       }
       function T(e, t, r, i) {
-        e.setQueryData(w, (e) => {
+        e.setQueryData(A, (e) => {
           if (!e) return;
           const a = new Set(e);
           return (

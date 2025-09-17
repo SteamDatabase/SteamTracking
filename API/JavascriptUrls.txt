@@ -964,7 +964,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/items/${}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/1658760/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
-${MEDIA_CDN_URL}${asset_url}
 ${MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png
 ${MEDIA_CDN_URL}steam/
 ${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
@@ -1157,6 +1156,7 @@ ${PARTNER_BASE_URL}optin/appeal/${pageid}/${}
 ${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=${_ ? "review" : "appeal"}
 ${PARTNER_BASE_URL}optin/appreview/${pageid}?tab=appeal
 ${PARTNER_BASE_URL}optin/appreview/${}
+${PARTNER_BASE_URL}optin/appreview_dashboard
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${appid}
 ${PARTNER_BASE_URL}optin/sale/${pageid}/${}
 ${PARTNER_BASE_URL}optin/sale/${}
@@ -1488,6 +1488,7 @@ ${STORE_BASE_URL}events_admin/ajaxupdatetags
 ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
+${STORE_BASE_URL}explore/next/${}
 ${STORE_BASE_URL}explore/next/0
 ${STORE_BASE_URL}explore/next/3
 ${STORE_BASE_URL}explore/upcoming
@@ -2796,6 +2797,7 @@ https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
 https://policies.google.com/privacy
 https://rd.playstation.com/controller/fwupdater/
+https://react.dev/errors/${}
 https://reactflow.dev
 https://reactjs.org/docs/error-decoder.html?invariant=${}
 https://s.team/chat/${}
@@ -2907,7 +2909,6 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
-https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke
@@ -3123,7 +3124,6 @@ https://store.steampowered.com/curators/ajaxfollow
 https://store.steampowered.com/curators/ajaxgetcurators/
 https://store.steampowered.com/curators/ajaxignore
 https://store.steampowered.com/default/home_additional/
-https://store.steampowered.com/default/home_sale_data
 https://store.steampowered.com/default/usabilitytracking/
 https://store.steampowered.com/dev/${vanity_url}
 https://store.steampowered.com/developer/${vanity_url}

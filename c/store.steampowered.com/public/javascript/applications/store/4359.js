@@ -71,14 +71,11 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -86,9 +83,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -176,43 +174,6 @@
         );
       }
       function _(_) {
-        const { spotlight: _ } = _,
-          _ = _.associated_item,
-          _ = {
-            is_weeklong_deals: "weeklong_deals" == _.spotlight_template,
-            url: _.spotlight_link_url,
-            image_url: _._.MEDIA_CDN_URL + _.asset_url,
-            title: _.spotlight_title,
-            body: _.spotlight_body,
-            ..._(_),
-          };
-        if (
-          (!_.url && _ && (_.url = _._.STORE_BASE_URL + _.store_url_path),
-          -1 !== _.spotlight_body?.indexOf("%1$s"))
-        ) {
-          let _;
-          _?.best_purchase_option?.active_discounts?.length
-            ? (_ = new Date(
-                1e3 *
-                  _.best_purchase_option.active_discounts[0].discount_end_date,
-              ))
-            : _.end_date && (_ = new Date(1e3 * _.end_date)),
-            _ &&
-              (_.body = _.spotlight_body?.replace(
-                "%1$s",
-                _.toLocaleTimeString(_._.GetPreferredLocales(), {
-                  hour: "numeric",
-                  minute: "2-digit",
-                  month: "short",
-                  day: "numeric",
-                }),
-              ));
-        }
-        return _.createElement(_, {
-          spotlight: _,
-        });
-      }
-      function _(_) {
         const { dailyDeal: _ } = _,
           _ = (0, _._)(_.target, "daily-deal"),
           _ = (0, _._)(_.item?.type ?? "application"),
@@ -271,21 +232,6 @@
             ),
           ),
         );
-      }
-      function _(_) {
-        const {
-            dailyDeal: { item: _ },
-          } = _,
-          _ = {
-            end_date:
-              _?.best_purchase_option?.active_discounts?.[0]?.discount_end_date,
-            target: _._.STORE_BASE_URL + _?.store_url_path,
-            image: (0, _._)(_?.assets, "header"),
-            ..._(_),
-          };
-        return _.createElement(_, {
-          dailyDeal: _,
-        });
       }
       const _ = (_) => {
         const { discountBlock: _, bIsSalePage: __webpack_require__ } = _;
@@ -455,23 +401,6 @@
                     ),
                   );
       };
-      function _(_) {
-        return _
-          ? {
-              item: {
-                type: (0, _._)(_.item_type),
-                _: _._,
-              },
-              discount_block: {
-                orig_price: _.best_purchase_option?.formatted_original_price,
-                final_price: _.best_purchase_option?.formatted_final_price,
-                discount_percent: _.best_purchase_option?.discount_pct,
-                hide_discount_percent_for_compliance:
-                  _.best_purchase_option?.hide_discount_pct_for_compliance,
-              },
-            }
-          : {};
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

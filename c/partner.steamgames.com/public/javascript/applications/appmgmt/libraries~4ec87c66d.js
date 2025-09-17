@@ -302,17 +302,18 @@
               null === _)
             )
               return this;
-            var _ = Math.abs(_) <= 16 ? 60 * _ : _,
-              _ = this;
-            if (_) return (_.$offset = _), (_._ = 0 === _), _;
-            if (0 !== _) {
-              var _ = this._
-                ? this.toDate().getTimezoneOffset()
-                : -1 * this.utcOffset();
+            var _ = Math.abs(_) <= 16 ? 60 * _ : _;
+            if (0 === _) return this.utc(_);
+            var _ = this.clone();
+            if (_) return (_.$offset = _), (_._ = !1), _;
+            var _ = this._
+              ? this.toDate().getTimezoneOffset()
+              : -1 * this.utcOffset();
+            return (
               ((_ = this.local().add(_ + _, _)).$offset = _),
-                (_._.$localOffset = _);
-            } else _ = this.utc();
-            return _;
+              (_._.$localOffset = _),
+              _
+            );
           };
           var _ = _.format;
           (_.format = function (_) {

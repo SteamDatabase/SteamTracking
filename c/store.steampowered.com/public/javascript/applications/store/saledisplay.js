@@ -2025,14 +2025,13 @@
               "div",
               {
                 className: _().PreviewImgCtn,
-                onClick: (_) => {
+                onClick: (_) =>
                   (0, _._)(
                     _.createElement(_, {
                       asset: _,
                     }),
                     (0, _._)(_),
-                  );
-                },
+                  ),
               },
               _.createElement(
                 "span",
@@ -2083,6 +2082,7 @@
           {
             bAlertDialog: !0,
             closeModal: __webpack_require__,
+            bAllowFullSize: !0,
           },
           _.createElement(
             "video",
@@ -3474,7 +3474,7 @@
                     (0, _._)("#selectimage_tip_dimensions_title"),
                   ),
                   ": ",
-                  (0, _._)("#selectimage_tip1", _, _),
+                  (0, _._)("#selectimage_tip1", (0, _._)(_), (0, _._)(_)),
                 ),
               Boolean(_.strWarning) &&
                 _.createElement(
@@ -3512,9 +3512,7 @@
             _.createElement(_, {
               clanSteamID: _.clanSteamID,
               title: _.title,
-              imageWidth: _,
               eventModel: _,
-              imageHeight: _,
               artworkType: _.artworkType,
               realms: _,
               appid: _,

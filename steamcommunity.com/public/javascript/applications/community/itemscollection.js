@@ -598,7 +598,7 @@
         }, [_, d]);
         const g = (0, r.BL)(p),
           I = t && (!d || (d.appID != t && d.snr != c)),
-          f = (0, o.Ue)(l.ref, I ? g : void 0);
+          f = (0, o.Ue)(l.props.ref, I ? g : void 0);
         return i.cloneElement(l, { ref: f });
       }
     },

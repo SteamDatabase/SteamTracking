@@ -5033,7 +5033,9 @@
               type: "text",
               maxLength: 1,
               key: e,
-              ref: (t) => (d.current[e] = t),
+              ref: (t) => {
+                d.current[e] = t;
+              },
               onChange: B,
               onFocus: b,
               onClick: (e) => e.stopPropagation(),

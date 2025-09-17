@@ -2062,19 +2062,23 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	color: red;
 }
 
-.review_box .leftcol {
+.review_box .review_leftcol {
 	width: 184px;
-	float: left;
+	display: flex;
+	flex-direction: row;
+
+	flex-shrink: 0;
 	padding: 8px;
 	opacity: 0.6;
 }
-.review_box:hover .leftcol {
+
+.review_box:hover .review_leftcol {
 	opacity: 1;
 }
 
-.review_box .rightcol {
+.review_box .review_rightcol {
 	float: left;
-	width: 400px;
+	flex-grow: 1;
 	position: relative;
 }
 
@@ -2159,9 +2163,6 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	white-space: nowrap;
 	width: 140px;
 	overflow: hidden;
-	margin-top: 0px;
-	margin-top: -2px;
-	margin-bottom: -1px;
 	display: inline-block;
 }
 .review_box .persona_name a, .recommendation_row .persona_name a {
@@ -2172,18 +2173,15 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 
 		}
 
-.review_box .num_owned_games, .recommendation_row .posted_date {
+.review_box .num_owned_games,
+.recommendation_row .posted_date,
+.review_box .num_reviews {
 	font-size: 11px;
 	color: #626366;
 	display: block;
 	line-height: 17px;
 }
 
-.review_box .num_reviews {
-	font-size: 11px;
-	color: #626366;
-	display: block;
-}
 .review_box .num_reviews a,
 .review_box .num_owned_games a {
 	color: #c1dbf4;
@@ -2378,19 +2376,33 @@ html.tablet .review_box .avatar {
 	height: unset;
 }
 
-.friend_reviews .review_box a.vote_header {
-	margin-left: -206px;
+.ReviewContentCtn {
+	display: flex;
+	flex-direction: row;
 }
 
-html.tablet .friend_reviews .review_box a.vote_header {
-	margin-left: unset;
+@media screen and (max-width: 650px)
+{
+	html.responsive .ReviewContentCtn .review_leftcol {
+		width: 100%;
+	}
+
+	html.responsive .ReviewContentCtn {
+		flex-direction: column;
+	}
+
+	html.responsive .ReviewContentCtn .author_counts {
+		display: flex;
+		flex-direction: row;
+		gap: 18px;
+	}
 }
 
-.friend_reviews .review_box .leftcol {
-	margin-top: 54px;
+div.rightcol .ReviewContentCtn {
+	flex-direction: column;
 }
 
-html.tablet .friend_reviews .review_box .leftcol {
+html.tablet .friend_reviews .review_box .review_leftcol {
 	margin-top: unset;
 }
 
@@ -2427,7 +2439,7 @@ html.tablet .friend_reviews .review_box .leftcol {
 	margin-right: 4px;
 }
 
-#Reviewssummary0 .recent_reviews .review_box .rightcol {
+#Reviewssummary0 .recent_reviews .review_box .review_rightcol {
 	width: 294px;
 }
 
@@ -3150,13 +3162,7 @@ html.tablet #review_create .content {
 		width: calc( 100% - 24px );
 	}
 
-	html.responsive .review_box .leftcol {
-		float: left;
-		width: 184px;
-        margin-top: 0px;
-	}
-
-    html.responsive .friend_reviews .review_box .leftcol {
+    html.responsive .friend_reviews .review_box .review_leftcol {
         width: auto;
     }
     .friend_reviews .review_box a.vote_header {
@@ -3164,15 +3170,15 @@ html.tablet #review_create .content {
         width: 100%;
     }
 
-	html.responsive .review_box .leftcol .review_box .persona_name {
+	html.responsive .review_box .review_leftcol .review_box .persona_name {
 		width: auto;
 	}
 
-	html.responsive .review_box .rightcol {
+	html.responsive .review_box .review_rightcol {
 		padding: 8px;
 	}
 
-	html.responsive .review_box .rightcol .vote_header {
+	html.responsive .review_box .review_rightcol .vote_header {
 		overflow: hidden;
 	}
 
@@ -3189,7 +3195,7 @@ html.tablet #review_create .content {
 
 @media screen and (max-width: 360px)
 {
-	html.responsive .review_box .leftcol {
+	html.responsive .review_box .review_leftcol {
 		float: none;
 		width: auto;
 	}
@@ -3520,14 +3526,6 @@ p.outliers_options {
 
 
 /* 2025 Game Page Widening */
-.widestore .review_box .rightcol {
-	width: 566px;
-}
-
-.widestore .review_box .leftcol {
-	width: 184px;
-}
-
 .widestore #review_histogram_rollup_section {
 	width: 765px;
 }
@@ -3606,13 +3604,7 @@ p.outliers_options {
 		width: calc( 100% - 24px );
 	} */
 
-	body.v6.widestore .review_box .leftcol {
-		float: left;
-		width: 184px;
-		margin-top: 0px;
-	}
-
-	body.v6.widestore .friend_reviews .review_box .leftcol {
+	body.v6.widestore .friend_reviews .review_box .review_leftcol {
 		width: auto;
 	}
 
@@ -3621,17 +3613,11 @@ p.outliers_options {
 		width: 100%;
 	}
 
-	body.v6.widestore .review_box .leftcol .review_box .persona_name {
+	body.v6.widestore .review_box .review_leftcol .review_box .persona_name {
 		width: auto;
 	}
 
-	body.v6.widestore .review_box .rightcol {
-		padding: 8px;
-		width: auto;
-		float: none;
-	}
-
-	body.v6.widestore .review_box .rightcol .vote_header {
+	body.v6.widestore .review_box .review_rightcol .vote_header {
 		overflow: hidden;
 	}
 

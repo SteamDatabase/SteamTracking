@@ -551,128 +551,137 @@
     73744: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Fj: () => r,
-        Ho: () => a,
-        N_: () => u,
-        XY: () => c,
-        s4: () => d,
-        vz: () => m,
-        x: () => o,
-        yu: () => l,
+        Fj: () => d,
+        Ho: () => r,
+        N_: () => p,
+        XY: () => u,
+        dM: () => s,
+        qj: () => i,
+        s4: () => m,
+        vz: () => h,
+        x: () => l,
+        yu: () => c,
       });
-      const i = [1, 3, 2],
-        s = [1, 3],
-        a = [5, 4],
-        o = [7, 6],
-        r = {
-          capsule: { width: 800, height: 450, rgAcceptableTypes: s },
+      function i(e) {
+        return Array.isArray(e) ? e[0] : e;
+      }
+      function s(e) {
+        const t = Array.isArray(e) ? e : [e];
+        return Math.min(...t);
+      }
+      const a = [1, 3, 2],
+        o = [1, 3],
+        r = [5, 4],
+        l = [7, 6],
+        d = {
+          capsule: { width: 800, height: 450, rgAcceptableTypes: o },
           marketingmessage_art_2_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           marketingmessage_art_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
-          spotlight: { width: 2108, height: 460, rgAcceptableTypes: s },
+          spotlight: { width: 2108, height: 460, rgAcceptableTypes: o },
           localized_store_app_spotlight: {
             width: 1100,
             height: 240,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           localized_store_app_spotlight_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           localized_title_image: {
             width: 1920,
             height: 622,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
-          background: { width: 1920, height: 622, rgAcceptableTypes: s },
+          background: { width: 1920, height: 622, rgAcceptableTypes: o },
           hero: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
-          email_full: { width: 800, height: 300, rgAcceptableTypes: s },
-          email_centered: { width: 644, height: 300, rgAcceptableTypes: s },
-          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: s },
-          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: s },
+          email_full: { width: 800, height: 300, rgAcceptableTypes: o },
+          email_centered: { width: 644, height: 300, rgAcceptableTypes: o },
+          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: o },
+          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: o },
           sale_header: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
           sale_overlay: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
           localized_image_group: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           localized_background_art: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           sale_section_background: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
           sale_section_title: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
           link_capsule: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
-          product_banner: { width: 1100, height: 160, rgAcceptableTypes: s },
+          product_banner: { width: 1100, height: 160, rgAcceptableTypes: o },
           product_mobile_banner: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           product_banner_override: {
             width: 1100,
             height: 160,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           product_mobile_banner_override: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
-          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: s },
+          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: o },
           tab_bar_background: {
             width: 1500,
             height: 100,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
-          sale_logo: { width: 940, height: 460, rgAcceptableTypes: s },
-          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: i },
+          sale_logo: { width: 940, height: 460, rgAcceptableTypes: o },
+          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: a },
           bestofyear_banner_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
           localized_marketing_message: {
             width: 570,
@@ -682,7 +691,7 @@
           localized_optin_banner: {
             width: 1e3,
             height: 150,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           localized_marketingmessage_webm: {
             width: 570,
@@ -718,13 +727,13 @@
           localized_marketingmessage_background: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           localized_email_image: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: s,
+            rgAcceptableTypes: o,
           },
           template_asset: {
             width: 0,
@@ -732,19 +741,19 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
-          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: i },
-          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: i },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: a },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: a },
           marketingmessage_art: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
           marketingmessage_art_2: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
-          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: i },
+          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: a },
           takeover_webm_art: {
             width: 1850,
             height: 450,
@@ -758,7 +767,7 @@
           takeover_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
           takeover_webm_mobile_art: {
             width: 500,
@@ -770,39 +779,55 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: i },
+          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: a },
           takeunder_mobile_art: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: i,
+            rgAcceptableTypes: a,
           },
-          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: s },
-          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: s },
+          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: o },
+          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: o },
         };
-      function l(e, t, n) {
-        const i = r[n];
-        return (
-          !!i && !i.bDisableEnforceDimensions && e === i.width && t === i.height
-        );
+      function c(e, t, n, i) {
+        const s = d[n];
+        if (!s) return !1;
+        if (s.bDisableEnforceDimensions) return i;
+        if (e !== s.width || t !== s.height) return !1;
+        let a = null;
+        if (Array.isArray(s.width)) {
+          if (((a = s.width.findIndex((t) => e === t)), a < 0)) return !1;
+        } else if (e !== s.width) return !1;
+        if (Array.isArray(s.height)) {
+          let e = s.height.findIndex((e) => t === e);
+          if (e < 0) return !1;
+          if (null !== a && e !== a) return !1;
+        } else if (t !== s.height) return !1;
+        return !0;
       }
-      function d(e, t, n) {
-        const i = r[n];
-        return (
-          !!i &&
-          (!!i.bDisableEnforceDimensions || !(e < i.width || t < i.height))
-        );
+      function m(e, t, n) {
+        const i = d[n];
+        if (!i) return !1;
+        if (i.bDisableEnforceDimensions) return !0;
+        if (Array.isArray(i.width)) {
+          if (i.width.filter((t) => e < t).length == i.width.length) return !1;
+        } else if (e < i.width) return !1;
+        if (Array.isArray(i.height)) {
+          if (i.height.filter((e) => t < e).length == i.height.length)
+            return !1;
+        } else if (t < i.height) return !1;
+        return !0;
       }
-      function c(e) {
-        const t = r[e];
+      function u(e) {
+        const t = d[e];
         return (
           t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
         );
       }
-      function m(e, t) {
-        return t.filter((t) => u(e, t));
+      function h(e, t) {
+        return t.filter((t) => p(e, t));
       }
-      function u(e, t) {
-        return r[t].rgAcceptableTypes.includes(e);
+      function p(e, t) {
+        return d[t].rgAcceptableTypes.includes(e);
       }
     },
     47822: (e, t, n) => {
@@ -912,7 +937,7 @@
       "use strict";
       n.d(t, {
         A4: () => D,
-        iy: () => A,
+        iy: () => T,
         ZA: () => V,
         g8: () => L,
         Dn: () => W,
@@ -939,7 +964,7 @@
         qR: () => se,
         _B: () => $,
         sj: () => ue,
-        j3: () => Ge,
+        j3: () => Ae,
         Yw: () => Y,
         zK: () => R,
         WN: () => H,
@@ -997,11 +1022,11 @@
         "GetEventStartTime",
         null,
       );
-      var G = n(61336);
-      const T = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
-      function A(e) {
+      var A = n(61336);
+      const G = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
+      function T(e) {
         return (
-          T.some((t) => t == e.GetEventType()) &&
+          G.some((t) => t == e.GetEventType()) &&
           !e.BHasTag("steam_award_nomination_request") &&
           !e.BHasTag("curator")
         );
@@ -1181,6 +1206,10 @@
           (e.valve_access_log = []),
           (e.bInvisibleGameOptIn = void 0),
           (e.rt_migrated_time = void 0),
+          (e.optin_tagid || e.sale_opt_in_page_name) &&
+            ((e.tagged_items = void 0),
+            (e.tagged_item_filter = void 0),
+            (e.auto_item_tags = void 0)),
           (e.optin_prune_tagid = void 0),
           (e.optin_tagid = void 0),
           (e.sale_opt_in_page_name = void 0),
@@ -1658,7 +1687,7 @@
               t,
               Number.MAX_VALUE,
             );
-            if (e && (i || (0, G.ZF)(e))) return e;
+            if (e && (i || (0, A.ZF)(e))) return e;
             let n = this.appid;
             if (!n && d && ((d.is_creator_home && !d.is_ogg) || d.is_curator)) {
               if (
@@ -2430,7 +2459,7 @@
         const t = (0, I.K)(e.appid);
         return e.appid ? t : b.UF.IS_ALLOWED_SC;
       };
-      function Ge(e) {
+      function Ae(e) {
         return null == e ? void 0 : e.replace(/[()]/g, "\\$&");
       }
     },
@@ -2885,53 +2914,53 @@
     },
     28954: (e, t, n) => {
       "use strict";
-      n.d(t, { M0: () => y, VE: () => b, vN: () => S, zO: () => G });
+      n.d(t, { M0: () => y, VE: () => b, vN: () => S, zO: () => A });
       var i = n(34629),
-        s = n(90626),
-        a = n(41735),
-        o = n.n(a),
-        r = n(14947),
-        l = n(73744),
-        d = n(68797),
-        c = n(6419),
-        m = n(56011),
-        u = n(61859),
-        h = n(78327),
-        p = n(86355),
-        _ = n(64953),
-        g = n(69343),
-        v = n(81393),
-        E = n(64753),
-        f = n(82817),
-        I = n(27666);
+        s = n(81393),
+        a = n(64753),
+        o = n(41735),
+        r = n.n(o),
+        l = n(14947),
+        d = n(90626),
+        c = n(73744),
+        m = n(68797),
+        u = n(6419),
+        h = n(56011),
+        p = n(61859),
+        _ = n(78327),
+        g = n(86355),
+        v = n(82817),
+        E = n(27666),
+        f = n(64953),
+        I = n(69343);
       function y(e) {
         return null == e
           ? void 0
           : e.map((e) => {
-              const t = l.Fj[e];
-              (0, v.wT)(Boolean(t), `Artwork Type not in Map ${e}`);
+              const t = c.Fj[e];
+              (0, s.wT)(Boolean(t), `Artwork Type not in Map ${e}`);
               return {
                 sKey: e,
-                width: t.width,
-                height: t.height,
+                width: (0, c.qj)(t.width),
+                height: (0, c.qj)(t.height),
                 bEnforceDimensions: !t.bDisableEnforceDimensions,
                 artworkType: e,
                 bHiddenFromDropdown: "hero" === e,
                 fnGetLabelText() {
                   return "spotlight" == this.artworkType
-                    ? (0, u.we)("#EventEditor_ArtworkType_store_spotlight")
-                    : (0, u.we)("#EventEditor_ArtworkType_" + this.artworkType);
+                    ? (0, p.we)("#EventEditor_ArtworkType_store_spotlight")
+                    : (0, p.we)("#EventEditor_ArtworkType_" + this.artworkType);
                 },
               };
             });
       }
-      class w extends g.Vr {
+      class w extends I.Vr {
         constructor(e, t, n, i) {
           super(),
-            (this.m_filesToUpload = r.sH.array()),
-            (this.m_filesCompleted = r.sH.array()),
+            (this.m_filesToUpload = l.sH.array()),
+            (this.m_filesCompleted = l.sH.array()),
             (this.m_lastError = void 0),
-            (0, r.Gn)(this),
+            (0, l.Gn)(this),
             (this.m_clanSteamID = e),
             (this.m_rgImageOptions = y(t)),
             (this.m_localizedImageGroupPrimaryImage = n),
@@ -2941,35 +2970,35 @@
           return this.m_clanSteamID;
         }
         async AddImage(e, t = 0) {
-          const { language: n } = (0, g.jj)(e.name, t);
+          const { language: n } = (0, I.jj)(e.name, t);
           return this.AddImageForLanguage(e, n);
         }
         async AddImageForLanguage(e, t) {
-          if (!((0, f.aL)(e.type) || (h.iA.is_support && (0, f.Uz)(e.type))))
+          if (!((0, v.aL)(e.type) || (_.iA.is_support && (0, v.Uz)(e.type))))
             return !1;
-          const n = await (0, f.zB)(e, (0, f.Uz)(e.type));
+          const n = await (0, v.zB)(e, (0, v.Uz)(e.type));
           if (!n) return !1;
-          const i = new _.M7(
+          const i = new f.M7(
             e,
             e.name,
             t,
             this.m_rgImageOptions,
             n.src,
-            (0, f.II)(n),
+            (0, v.II)(n),
             n,
             this.m_localizedImageGroupPrimaryImage,
           );
           return (this.m_filesToUpload = [...this.m_filesToUpload, i]), !0;
         }
         async AddExistingClanImage(e, t = 0) {
-          const n = I.z.GetHashAndExt(e);
+          const n = E.z.GetHashAndExt(e);
           if (!n) return !1;
-          const i = I.z.GenerateEditableURLFromHashAndExt(
+          const i = E.z.GenerateEditableURLFromHashAndExt(
               this.m_clanSteamID,
               n,
             ),
-            s = await o()({ url: i, method: "GET", responseType: "blob" }),
-            a = (0, m.pE)(s.data, e.file_name);
+            s = await r()({ url: i, method: "GET", responseType: "blob" }),
+            a = (0, h.pE)(s.data, e.file_name);
           return await this.AddImage(a, t);
         }
         DeleteUploadImageByIndex(e) {
@@ -2983,7 +3012,7 @@
           t >= 0 && this.DeleteUploadImageByIndex(t);
         }
         ClearImages() {
-          this.m_filesToUpload = r.sH.array();
+          this.m_filesToUpload = l.sH.array();
         }
         GetFilesUploaded() {
           return this.m_filesCompleted;
@@ -3019,7 +3048,7 @@
           this.CancelAllUploads(), this.UploadAllImages();
         }
         async handleUploadRefresh(e) {
-          await p.pU.LoadClanImages(this.m_clanSteamID, !0, e);
+          await g.pU.LoadClanImages(this.m_clanSteamID, !0, e);
         }
         BGetUploadsAreInSerial() {
           return !1;
@@ -3027,70 +3056,70 @@
         async UploadSingleImage(e, t, n, i) {
           var s;
           const a = e.file,
-            r = e.GetCurrentImageOption(),
+            o = e.GetCurrentImageOption(),
             l = e.GetResizeDimension(),
-            c = new FormData();
-          c.append("clanimage", a, t),
-            c.append("sessionid", h.TS.SESSIONID),
-            this.m_clanImagesV2 && c.append("clan_images_v2", "1"),
-            (null == r ? void 0 : r.artworkType) &&
-              c.append("arttype", r.artworkType),
+            d = new FormData();
+          d.append("clanimage", a, t),
+            d.append("sessionid", _.TS.SESSIONID),
+            this.m_clanImagesV2 && d.append("clan_images_v2", "1"),
+            (null == o ? void 0 : o.artworkType) &&
+              d.append("arttype", o.artworkType),
             l &&
               l.length > 0 &&
-              c.append(
+              d.append(
                 "resize",
                 l.map((e) => e.width + "x" + e.height).join(","),
               );
-          let m = "/uploadimage/";
+          let c = "/uploadimage/";
           const u = this.m_localizedImageGroupPrimaryImage;
           u &&
-            ((m = "/ajaxuploadlocalizedimage/"),
-            c.append("origimagehash", u.image_hash),
-            u.thumbnail_hash && c.append("thumbhash", u.thumbnail_hash),
-            c.append("extension", "" + u.file_type),
-            c.append("language", "" + n));
-          const p =
+            ((c = "/ajaxuploadlocalizedimage/"),
+            d.append("origimagehash", u.image_hash),
+            u.thumbnail_hash && d.append("thumbhash", u.thumbnail_hash),
+            d.append("extension", "" + u.file_type),
+            d.append("language", "" + n));
+          const h =
             null === (s = t.split(".").pop()) || void 0 === s
               ? void 0
               : s.toLocaleLowerCase();
-          ("webm" != p && "mp4" != p) ||
-            (c.append("video_width", "" + e.width),
-            c.append("video_height", "" + e.height));
-          let _,
+          ("webm" != h && "mp4" != h) ||
+            (d.append("video_width", "" + e.width),
+            d.append("video_height", "" + e.height));
+          let p,
             g =
-              h.TS.COMMUNITY_BASE_URL +
+              _.TS.COMMUNITY_BASE_URL +
               "/gid/" +
               this.m_clanSteamID.ConvertTo64BitString() +
-              m,
+              c,
             v = {
               cancelToken: i,
               withCredentials: !0,
               headers: { "Content-Type": "multipart/form-data" },
             };
           try {
-            (_ = await o().post(g, c, v)), this.m_filesCompleted.push(a);
+            (p = await r().post(g, d, v)), this.m_filesCompleted.push(a);
           } catch (e) {
             (this.m_lastError = {
               file: a,
               status: e.response ? e.response.status : 500,
-              message: (0, d.H)(e).strErrorMsg,
+              message: (0, m.H)(e).strErrorMsg,
             }),
-              (_ = e.response);
+              (p = e.response);
           }
           return (
             u || (await this.handleUploadRefresh(i)),
-            { bSuccess: !0, result: _.data }
+            { bSuccess: !0, result: p.data }
           );
         }
       }
-      (0, i.Cg)([r.sH], w.prototype, "m_filesToUpload", void 0),
-        (0, i.Cg)([r.sH], w.prototype, "m_filesCompleted", void 0),
-        (0, i.Cg)([r.sH], w.prototype, "m_lastError", void 0),
-        (0, i.Cg)([c.o], w.prototype, "AddImage", null),
-        (0, i.Cg)([c.o], w.prototype, "AddExistingClanImage", null),
-        (0, i.Cg)([c.o], w.prototype, "DeleteUploadImageByIndex", null),
-        (0, i.Cg)([c.o], w.prototype, "DeleteUploadImage", null),
-        (0, i.Cg)([c.o], w.prototype, "ClearImages", null);
+      (0, i.Cg)([l.sH], w.prototype, "m_filesToUpload", void 0),
+        (0, i.Cg)([l.sH], w.prototype, "m_filesCompleted", void 0),
+        (0, i.Cg)([l.sH], w.prototype, "m_lastError", void 0),
+        (0, i.Cg)([u.o], w.prototype, "AddImage", null),
+        (0, i.Cg)([u.o], w.prototype, "AddExistingClanImage", null),
+        (0, i.Cg)([u.o], w.prototype, "DeleteUploadImageByIndex", null),
+        (0, i.Cg)([u.o], w.prototype, "DeleteUploadImage", null),
+        (0, i.Cg)([u.o], w.prototype, "ClearImages", null);
       class b extends w {
         constructor(e, t, n) {
           super(e, t, n, !1);
@@ -3101,10 +3130,10 @@
           super(e, t, n, !0);
         }
       }
-      function G(e, t, n) {
-        const i = (0, E.wm)(t instanceof Array ? t : [t]),
-          a = e.ConvertTo64BitString();
-        return s.useMemo(() => new b(e, i, n), [a, i]);
+      function A(e, t, n) {
+        const i = (0, a.wm)(t instanceof Array ? t : [t]),
+          s = e.ConvertTo64BitString();
+        return d.useMemo(() => new b(e, i, n), [s, i]);
       }
     },
     27666: (e, t, n) => {
@@ -3357,7 +3386,7 @@
               (r = e.height),
               (c = !e.bDisableEnforceDimensions));
           }
-          const u = this.width >= s && this.height >= r,
+          const u = this.width >= (0, a.dM)(s) && this.height >= (0, a.dM)(r),
             h = c ? this.width === s && this.height === r : u,
             p = t && t != this.fileType,
             _ =
@@ -3370,31 +3399,54 @@
                     : n.map((e) => e.artworkType)) || [],
                 ).length,
             g = Boolean((0, l.t)(this.fileType));
-          let v = "",
-            E = !1;
+          let v,
+            E = "",
+            f = !1;
           return (
             m
               ? _
-                ? (v = (0, o.we)("#ImageUpload_InvalidFileType"))
+                ? (E = (0, o.we)("#ImageUpload_InvalidFileType"))
                 : p
-                  ? (v = (0, o.we)(
+                  ? (E = (0, o.we)(
                       "#ImageUpload_InvalidFormat",
                       null !== (i = (0, d.EG)(t)) && void 0 !== i ? i : "",
                     ))
                   : h || g
                     ? u
-                      ? !h &&
-                        g &&
-                        ((v = (0, o.we)(
-                          "#ImageUpload_InvalidDimensions",
-                          s,
-                          r,
-                        )),
-                        (E = !0))
-                      : (v = (0, o.we)("#ImageUpload_TooSmall", s, r))
-                    : (v = (0, o.we)("#ImageUpload_InvalidResolution", s, r))
-              : (v = (0, o.we)("#ImageUpload_InvalidFormatSelected")),
-            { error: v, needsCrop: E, match: this.GetCurrentImageOption() }
+                      ? !h && g
+                        ? ((E = (0, o.we)(
+                            "#ImageUpload_InvalidDimensions",
+                            (0, a.qj)(s),
+                            (0, a.qj)(r),
+                          )),
+                          (f = !0))
+                        : ((Array.isArray(s) && this.width != (0, a.qj)(s)) ||
+                            (Array.isArray(r) &&
+                              this.height != (0, a.qj)(r))) &&
+                          v.push(
+                            (0, o.we)(
+                              "#ImageUpload_PreferredDimension",
+                              (0, a.qj)(s),
+                              (0, a.qj)(r),
+                            ),
+                          )
+                      : (E = (0, o.we)(
+                          "#ImageUpload_TooSmall",
+                          (0, a.qj)(s),
+                          (0, a.qj)(r),
+                        ))
+                    : (E = (0, o.we)(
+                        "#ImageUpload_InvalidResolution",
+                        (0, a.qj)(s),
+                        (0, a.qj)(r),
+                      ))
+              : (E = (0, o.we)("#ImageUpload_InvalidFormatSelected")),
+            {
+              error: E,
+              warnings: v,
+              needsCrop: f,
+              match: this.GetCurrentImageOption(),
+            }
           );
         }
         BSupportsLanguages() {
@@ -3528,9 +3580,19 @@
                 { width: 480, height: 156 },
               ];
             if ("capsule" === e)
-              return [{ width: a.Fj[e].width / 2, height: a.Fj[e].height / 2 }];
+              return [
+                {
+                  width: (0, a.qj)(a.Fj[e].width) / 2,
+                  height: (0, a.qj)(a.Fj[e].height) / 2,
+                },
+              ];
             if ("spotlight" === e)
-              return [{ width: a.Fj[e].width / 2, height: a.Fj[e].height / 2 }];
+              return [
+                {
+                  width: (0, a.qj)(a.Fj[e].width) / 2,
+                  height: (0, a.qj)(a.Fj[e].height) / 2,
+                },
+              ];
             return;
           })(
             null === (e = this.GetCurrentImageOption()) || void 0 === e
@@ -6541,15 +6603,15 @@
       n.d(t, {
         PH: () => c,
         _: () => m,
-        tj: () => A,
+        tj: () => T,
         IQ: () => d,
         qT: () => S,
-        Hx: () => T,
+        Hx: () => G,
         LJ: () => w,
         Bd: () => E,
         cq: () => I,
         nD: () => f,
-        OG: () => G,
+        OG: () => A,
       });
       var i = n(90626),
         s = n(92757),
@@ -6748,18 +6810,18 @@
           "forceAbsolute" === n || !v(t, e) ? "absolute" : "relative",
         );
       }
-      function G(e, t) {
+      function A(e, t) {
         const n = v(t, e),
           a = b(e, t, n ? "relative" : "absolute");
         return n
           ? i.createElement(s.rd, { push: !0, to: a })
           : (window.open(a), null);
       }
-      function T(e, t, n) {
+      function G(e, t, n) {
         const i = y(e, t, !1);
         return "admin" === n ? i + "partnerevents" : "";
       }
-      function A(e) {
+      function T(e) {
         const { preferredFocus: t } = e,
           { bCanUseLink: n } = i.useContext(d),
           a = (0, p.n9)(),
@@ -7435,14 +7497,16 @@
         GetDestWidth() {
           const { uploadFile: e, forceResolution: t } = this.props;
           if (t) return t.width;
-          const n = e.GetCurrentImageOption();
-          return n ? a.Fj[n.artworkType].width : 0;
+          const n = e.GetCurrentImageOption(),
+            i = a.Fj[n.artworkType].width;
+          return n ? (0, a.qj)(i) : 0;
         }
         GetDestHeight() {
           const { uploadFile: e, forceResolution: t } = this.props;
           if (t) return t.width;
-          const n = e.GetCurrentImageOption();
-          return n ? a.Fj[n.artworkType].height : 0;
+          const n = e.GetCurrentImageOption(),
+            i = a.Fj[n.artworkType].height;
+          return n ? (0, a.qj)(i) : 0;
         }
         GetLargestBoxThatFits(e, t, n, i) {
           let s = n,

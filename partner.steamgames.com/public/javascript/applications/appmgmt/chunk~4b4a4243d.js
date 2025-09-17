@@ -513,8 +513,8 @@
             bFilterOutDrafts: D,
           } = e,
           b = (0, d.f1)(),
-          { clanInfo: S, bLoadingClanInfo: P } = (0, o.vF)(t),
-          w = (function (e, t) {
+          { clanInfo: S, bLoadingClanInfo: w } = (0, o.vF)(t),
+          P = (function (e, t) {
             const a = (0, c.a)(),
               n = (0, s.useMemo)(() => l.b.InitFromClanID(e), [e]),
               r = (0, u.I)({
@@ -553,8 +553,8 @@
             );
           })(S?.clanAccountID, b - 2592e3),
           y = (0, s.useMemo)(
-            () => (D ? w?.filter((e) => !e.hidden) : w),
-            [w, D],
+            () => (D ? P?.filter((e) => !e.hidden) : P),
+            [P, D],
           ),
           C = (0, s.useMemo)(
             () =>
@@ -586,7 +586,7 @@
               L,
               L?.gid,
             ),
-          y || (!P && !S?.appid)
+          y || (!w && !S?.appid)
             ? y && 0 != y.length
               ? s.createElement(
                   s.Fragment,
@@ -667,8 +667,8 @@
             rgParentAppIDs: A,
           } = e,
           [D, b] = s.useState(""),
-          [S, P] = s.useState(!1),
-          [w, y] = s.useState(!1),
+          [S, w] = s.useState(!1),
+          [P, y] = s.useState(!1),
           [C] = s.useState(new i.LU()),
           [L, k] = s.useState(new Array()),
           [T, M] = s.useState(new Array()),
@@ -714,7 +714,7 @@
           ),
           G = (0, s.useCallback)(
             (e) => {
-              P(e), U(B.current?.value, e);
+              w(e), U(B.current?.value, e);
             },
             [U, B],
           ),
@@ -774,7 +774,7 @@
           s.createElement(
             "div",
             { className: d.Results },
-            w &&
+            P &&
               s.createElement(
                 "div",
                 { className: d.LoadingContainer },
@@ -1100,7 +1100,7 @@
         return o.Ho.includes(n)
           ? s.createElement(S, { ...e })
           : o.x.includes(n)
-            ? s.createElement(P, {
+            ? s.createElement(w, {
                 className: a || _().ArtPreview,
                 strTextURL: t,
               })
@@ -1130,7 +1130,7 @@
           )
         );
       }
-      function P(e) {
+      function w(e) {
         const { strTextURL: t, className: a } = e,
           [n, l] = s.useState("");
         return (
@@ -1220,8 +1220,8 @@
             bMinimalDisplay: b,
           } = e,
           S = (0, s.FV)(t.clan_account_id),
-          [P] = (0, l.L2)();
-        if (P || !S)
+          [w] = (0, l.L2)();
+        if (w || !S)
           return n.createElement(
             "div",
             { className: E.DevSummaryWidgetCtn },
@@ -1231,14 +1231,14 @@
               position: "center",
             }),
           );
-        const w = t.type,
+        const P = t.type,
           y =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          C = S.GetCreatorHomeURL(w),
+          C = S.GetCreatorHomeURL(P),
           L = S.GetNumFollowers();
         return n.createElement(
           _.tH,
@@ -1337,9 +1337,16 @@
                           n.createElement(
                             "div",
                             { className: (0, u.A)({ [E.Followers]: !0 }) },
-                            n.createElement("span", null, (0, p.Dq)(L)),
-                            n.createElement("br", null),
-                            (0, d.we)("#CreatorHome_JustFollowers"),
+                            n.createElement(
+                              "span",
+                              null,
+                              (0, d.we)("#CreatorHome_JustFollowers"),
+                            ),
+                            n.createElement(
+                              "span",
+                              { className: E.FollowerCount },
+                              (0, p.Dq)(L),
+                            ),
                           ),
                         ),
                       ),

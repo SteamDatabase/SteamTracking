@@ -1006,6 +1006,7 @@
     "PersonalCalendar_Title": "Your Personal Calendar",
     "PersonalCalendar_Description": "A personalized-for-you list of %1$s games that have released recently, or are coming soon",
     "PersonalCalendar_TagSelector": "Tag Selector",
+    "PersonalCalendar_CompactMode": "Compact Calendar",
     "PersonalCalendar_AccountPlaceholder": "Optional Override",
     "PersonalCalendar_Account": "Account ID",
     "PersonalCalendar_ShowMore": "Show %1$s More",

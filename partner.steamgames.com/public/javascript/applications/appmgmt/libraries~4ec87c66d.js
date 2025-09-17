@@ -298,17 +298,18 @@
               null === r)
             )
               return this;
-            var a = Math.abs(r) <= 16 ? 60 * r : r,
-              s = this;
-            if (o) return (s.$offset = a), (s.$u = 0 === r), s;
-            if (0 !== r) {
-              var c = this.$u
-                ? this.toDate().getTimezoneOffset()
-                : -1 * this.utcOffset();
+            var a = Math.abs(r) <= 16 ? 60 * r : r;
+            if (0 === a) return this.utc(o);
+            var s = this.clone();
+            if (o) return (s.$offset = a), (s.$u = !1), s;
+            var c = this.$u
+              ? this.toDate().getTimezoneOffset()
+              : -1 * this.utcOffset();
+            return (
               ((s = this.local().add(a + c, e)).$offset = a),
-                (s.$x.$localOffset = c);
-            } else s = this.utc();
-            return s;
+              (s.$x.$localOffset = c),
+              s
+            );
           };
           var u = a.format;
           (a.format = function (e) {

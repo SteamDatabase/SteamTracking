@@ -80,6 +80,7 @@
       module.exports = {
         CartCreatorCtn: "_2HG7VOroS8aHSg-W3fPyTt",
         Title: "_307GrwtjhKkXh5dUC5KjUv",
+        Description: "_3YGQuryhG_j0UPSIaC_7ul",
       };
     },
     chunkid: (module) => {
@@ -174,7 +175,6 @@
         ShoppingCartCtn: "_1jqUY_WcPgZnIOE-d9x7wc",
         ShoppingCartLeftCol: "_17GFdSD2pc0BquZk5cejg8",
         ShoppingCartRightCol: "_3HIve50RR17shqpJqmrUps",
-        SmallCart: "_31YlKoxrUknOG_d7armP5n",
         LoadingThrobber: "eDdFpOTz0O9U7xBshZJUx",
         CartRightColStickyCtn: "_1bCdGv5zX6cYDovFfcBfdg",
         CartSummaryCtn: "_2bIzQo07mxubFvscA8RIA8",
@@ -1499,11 +1499,11 @@
                       strClassName: _().LineItemPlatforms,
                     }),
                   ),
+                  _.createElement(_, {
+                    purchaseOption: _,
+                    validatedItem: _,
+                  }),
                 ),
-                _.createElement(_, {
-                  purchaseOption: _,
-                  validatedItem: _,
-                }),
                 _.createElement(_, {
                   lineItem: _,
                   storeItem: _,
@@ -2327,7 +2327,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, name: __webpack_require__ = "GamepadWebRoot" } = _;
@@ -2496,8 +2495,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2588,7 +2586,9 @@
               ),
               _.createElement(
                 "div",
-                null,
+                {
+                  className: _().Description,
+                },
                 (0, _._)("#Cart_FollowCreator_desc"),
               ),
               _.createElement("br", null),
@@ -2661,9 +2661,8 @@
         if (_.isError) return null;
         const _ = _.reduce((_, _) => ((_[_] = !0), _), {}),
           _ = _(_, _.data?.purchase_recommendations),
-          _ = _(_, _.data?.specials),
-          _ = _(_, _.data?.daily_deals),
-          _ = _(_, _.data?.spotlights);
+          _ = _(_, _.data?.specials);
+        _(_, _.data?.daily_deals), _(_, _.data?.spotlights);
         return _.createElement(
           "div",
           {
@@ -2687,14 +2686,6 @@
                 data: _,
                 isLoaded: !_.isLoading,
               }),
-          _.createElement(_, {
-            data: _,
-            isLoaded: !_.isLoading,
-          }),
-          _.createElement(_, {
-            data: _,
-            isLoaded: !_.isLoading,
-          }),
           _.createElement(_, {
             cart: _,
             bMinimalDisplay: !1,
@@ -2735,54 +2726,6 @@
           imageType: "header",
           onlyOneDiscountPct: !0,
         });
-      }
-      function _(_) {
-        const { data: _, isLoaded: __webpack_require__ } = _;
-        return !_ && __webpack_require__
-          ? null
-          : _.createElement(
-              _,
-              {
-                className: (0, _._)(
-                  _.DailyDeals,
-                  !__webpack_require__ && _.Loading,
-                ),
-              },
-              _?.slice(0, 2).map((_) =>
-                _.createElement(_._, {
-                  key: (0, _._)(_.item_id),
-                  dailyDeal: _,
-                }),
-              ),
-            );
-      }
-      function _(_) {
-        const { data: _, isLoaded: __webpack_require__ } = _,
-          _ = _.useMemo(
-            () =>
-              _?.filter((_) => "weeklong_deals" != _.spotlight_template).slice(
-                0,
-                2,
-              ),
-            [_],
-          );
-        return !_ && __webpack_require__
-          ? null
-          : _.createElement(
-              _,
-              {
-                className: (0, _._)(
-                  _.Spotlights,
-                  !__webpack_require__ && _.Loading,
-                ),
-              },
-              _.map((_) =>
-                _.createElement(_._, {
-                  key: _.item_id ? (0, _._)(_.item_id) : _.spotlight_title,
-                  spotlight: _,
-                }),
-              ),
-            );
       }
       function _(_) {
         const { className: _, children: __webpack_require__ } = _;
@@ -4121,6 +4064,7 @@
               _.createElement(
                 _._,
                 null,
+                _?.length > 1 ? (0, _._)("#Cart_ItemCount", _?.length) : null,
                 _.createElement(_._, {
                   lineItems: _,
                   cartValidation: _,
@@ -4139,6 +4083,7 @@
                     strEstimatedTotal:
                       _?.estimated_totals?.subtotal.formatted_amount,
                   }),
+                  _.createElement(_, null),
                 ),
               _ &&
                 _({
@@ -4354,24 +4299,28 @@
           }),
           _.createElement(
             "div",
-            {
-              className: _().LicenseTitle,
-            },
-            (0, _._)("#Cart_LicenseContextTitle"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().LicenseLink,
-            },
-            (0, _._)(
-              "#Cart_LicenseContextLink",
-              _.createElement(
-                "a",
-                {
-                  href: _,
-                },
-                (0, _._)("#Cart_LicenseContextSSA"),
+            null,
+            _.createElement(
+              "div",
+              {
+                className: _().LicenseTitle,
+              },
+              (0, _._)("#Cart_LicenseContextTitle"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().LicenseLink,
+              },
+              (0, _._)(
+                "#Cart_LicenseContextLink",
+                _.createElement(
+                  "a",
+                  {
+                    href: _,
+                  },
+                  (0, _._)("#Cart_LicenseContextSSA"),
+                ),
               ),
             ),
           ),
@@ -4699,7 +4648,6 @@
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, null),
           !_ &&
             _.createElement(_, {
               cart: __webpack_require__,
@@ -4735,82 +4683,6 @@
           },
           (0, _._)("#Cart_RemoveAll"),
         );
-      }
-      function _() {
-        return _._.IN_MOBILE_WEBVIEW
-          ? _.createElement(
-              _,
-              {
-                className: _().BetaNotice,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Icon,
-                },
-                _.createElement(
-                  "svg",
-                  {
-                    width: "31",
-                    height: "34",
-                    viewBox: "0 0 31 34",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                  },
-                  _.createElement("path", {
-                    _: "M25.3961 12.8759L22.738 22.5112C22.6109 22.9968 22.3261 23.4263 21.9284 23.7325C21.5307 24.0386 21.0426 24.204 20.5407 24.2027H11.1395C10.6503 24.2032 10.1741 24.0453 9.78207 23.7526C9.39006 23.46 9.10332 23.0483 8.96472 22.5792L5.71017 12.8759H1.51172V9.85547H6.25385C6.7284 9.85636 7.1907 10.0063 7.57548 10.284C7.96026 10.5618 8.24811 10.9533 8.39838 11.4035L8.89676 12.9137L25.3961 12.8759ZM11.3282 27.2232C10.9549 27.2232 10.5899 27.3339 10.2794 27.5413C9.96899 27.7487 9.72703 28.0436 9.58414 28.3885C9.44126 28.7335 9.40388 29.113 9.47672 29.4792C9.54956 29.8454 9.72935 30.1818 9.99336 30.4458C10.2574 30.7098 10.5937 30.8896 10.9599 30.9625C11.3261 31.0353 11.7057 30.9979 12.0507 30.855C12.3956 30.7122 12.6904 30.4702 12.8979 30.1597C13.1053 29.8493 13.216 29.4843 13.216 29.1109C13.216 28.6103 13.0171 28.1301 12.6631 27.7761C12.3091 27.422 11.8289 27.2232 11.3282 27.2232ZM20.3896 27.2232C20.0163 27.2232 19.6513 27.3339 19.3408 27.5413C19.0304 27.7487 18.7884 28.0436 18.6455 28.3885C18.5027 28.7335 18.4653 29.113 18.5381 29.4792C18.611 29.8454 18.7908 30.1818 19.0548 30.4458C19.3188 30.7098 19.6551 30.8896 20.0213 30.9625C20.3875 31.0353 20.7671 30.9979 21.1121 30.855C21.457 30.7122 21.7518 30.4702 21.9593 30.1597C22.1667 29.8493 22.2774 29.4843 22.2774 29.1109C22.2774 28.6103 22.0785 28.1301 21.7245 27.7761C21.3705 27.422 20.8903 27.2232 20.3896 27.2232Z",
-                    fill: "white",
-                  }),
-                  _.createElement("path", {
-                    _: "M16.9883 17.8628L18.599 18.3772C18.8242 18.4457 18.9974 18.6172 19.0666 18.8401L19.5862 20.4346L20.1058 18.8401C20.1751 18.6172 20.3483 18.4457 20.5735 18.3772L22.1842 17.8628L20.5735 17.3484C20.3483 17.2799 20.1751 17.1084 20.1058 16.8855L19.5862 15.291L19.0666 16.8855C18.9974 17.1084 18.8242 17.2799 18.599 17.3484L16.9883 17.8628Z",
-                    fill: "#1A9FFF",
-                  }),
-                  _.createElement("path", {
-                    _: "M13.5938 14.8777L14.4078 15.1349C14.5117 15.1692 14.5983 15.2549 14.6329 15.3578L14.8927 16.1636L15.1525 15.3578C15.1872 15.2549 15.2738 15.1692 15.3777 15.1349L16.1917 14.8777L15.3777 14.6205C15.2738 14.5862 15.1872 14.5005 15.1525 14.3976L14.8927 13.5918L14.6329 14.3976C14.5983 14.5005 14.5117 14.5862 14.4078 14.6205L13.5938 14.8777Z",
-                    fill: "#1A9FFF",
-                  }),
-                  _.createElement(
-                    "g",
-                    {
-                      opacity: "0.8",
-                    },
-                    _.createElement("path", {
-                      _: "M14.5352 6.07357L17.6444 7.07657C18.0707 7.20194 18.3967 7.55299 18.5471 7.97926L19.5501 11.0885L20.5531 7.97926C20.6785 7.55299 21.0296 7.22702 21.4558 7.07657L24.5651 6.07357L21.4558 5.07057C21.0296 4.9452 20.7036 4.59415 20.5531 4.16788L19.5501 1.05859L18.5471 4.16788C18.4218 4.59415 18.0707 4.92013 17.6444 5.07058L14.5352 6.07357Z",
-                      fill: "#1A9FFF",
-                    }),
-                    _.createElement("path", {
-                      _: "M25.1016 2.57178L26.7123 3.08614C26.9375 3.15472 27.1106 3.32617 27.1799 3.54906L27.6995 5.14357L28.2191 3.54906C28.2884 3.32617 28.4616 3.15472 28.6867 3.08614L30.2975 2.57178L28.6867 2.05743C28.4616 1.98885 28.2884 1.81739 28.2191 1.59451L27.6995 -3.613e-07L27.1799 1.59451C27.1106 1.81739 26.9375 1.98885 26.7123 2.05743L25.1016 2.57178Z",
-                      fill: "#1A9FFF",
-                    }),
-                    _.createElement("path", {
-                      _: "M28.4023 9.14038L29.2164 9.39756C29.3203 9.43185 29.4069 9.51758 29.4415 9.62045L29.7013 10.4263L29.9611 9.62045C29.9958 9.51758 30.0824 9.43185 30.1863 9.39756L31.0003 9.14038L30.1863 8.88321C30.0824 8.84891 29.9958 8.76319 29.9611 8.66032L29.7013 7.85449L29.4415 8.66032C29.4069 8.76319 29.3203 8.84891 29.2164 8.88321L28.4023 9.14038Z",
-                      fill: "#1A9FFF",
-                    }),
-                    _.createElement("path", {
-                      _: "M22.4609 10.4617L23.275 10.7189C23.3789 10.7531 23.4655 10.8389 23.5001 10.9417L23.7599 11.7476L24.0197 10.9417C24.0543 10.8389 24.1409 10.7531 24.2449 10.7189L25.0589 10.4617L24.2449 10.2045C24.1409 10.1702 24.0543 10.0845 24.0197 9.98161L23.7599 9.17578L23.5001 9.98161C23.4655 10.0845 23.3789 10.1702 23.275 10.2045L22.4609 10.4617Z",
-                      fill: "#1A9FFF",
-                    }),
-                    _.createElement("path", {
-                      _: "M11.8945 9.14038L12.7086 9.39756C12.8125 9.43185 12.8991 9.51758 12.9337 9.62045L13.1935 10.4263L13.4533 9.62045C13.4879 9.51758 13.5745 9.43185 13.6785 9.39756L14.4925 9.14038L13.6785 8.8832C13.5745 8.84891 13.4879 8.76319 13.4533 8.66032L13.1935 7.85449L12.9337 8.66032C12.8991 8.76319 12.8125 8.84891 12.7086 8.8832L11.8945 9.14038Z",
-                      fill: "#1A9FFF",
-                    }),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Text,
-                },
-                (0, _._)(
-                  "#Cart_GenericBetaNotice",
-                  _.createElement(_._, {
-                    href: "https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/",
-                  }),
-                ),
-              ),
-            )
-          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -3,9 +3,9 @@
   {
     chunkid: (module) => {
       module.exports = {
-        GreenButton: "H-pBUvurpI9IphFm7eTHt",
-        GreyButton: "_3ISWI3AWulUR7R4RdUYmVh",
-        BlueButton: "_1g4l95V_TTLLrQ2u-hYASr",
+        GreenButton: "_23fSnYfnMQqkgm3ROkJhrO",
+        GreyButton: "_15dbpkIdbzeDJlZYQEhn1d",
+        BlueButton: "_14GZWzJgooP0mbfTvEQnjA",
       };
     },
     chunkid: (module) => {
@@ -89,6 +89,7 @@
         CreatorTagline: "NX5WeT2qHbZGaVykMxMA2",
         Title: "_37vyVYzsOKNDlPWnQ5zcMF",
         Followers: "_2ZpFi_vScMetinFMtGp2WE",
+        FollowerCount: "_3cARehxbzcQp_dC3sKo3QH",
         SocialFollowersCtn: "BT3Bjo-dSXZV11Cqy_Awo",
         FollowBtnCtn: "_2artmqqQS2Rl8YMsi1nV-U",
         FollowButton: "_1HwWXjF06mJ9sG_9KXlgA-",
@@ -251,7 +252,6 @@
         StoreSaleItemDev: "_3tIbO7JWeYXTD8fDol5_-f",
         StoreSaleItemReview: "Kx5NfQxifS6Xw2JxtcV31",
         StoreSaleWidgetLeft: "_3DkfNrtTOLjNYd3yZliMzy",
-        TitleCtn: "_3rrH9dPdtHVRMzAEw82AId",
         StoreSaleWidgetCrossCenterRight: "oW0H1sBVE8K8u0qbq_Tm5",
         CapsuleBottomBar: "_3lmdEmwrmqe-kicNCZ9v-I",
         PlayNowButton: "_38ePadMVKPpN2BnpideoQw",
@@ -263,6 +263,7 @@
         FallbackBackground: "_3chRZTd1smybX8C-swWcAm",
         SaleTagBlockCtn: "_1ZqQL1ugqx5VZZK7e7nZuc",
         StoreSaleWidgetCenter: "_2asUTzZuAkj9cDRKsLvwRE",
+        StoreSaleLibraryAssetWidgetRight: "_1gLxXYZKQJSLc5MKYXEesv",
         StoreSaleWidgetReleaseAndTags: "_3wryhCRrTuMULeq_YjNk-s",
         Bundle: "_2GbhLyknhFLhpEOlbBXC3z",
         WidgetReleaseDateAndPlatformCtn: "_3a6HRK-P6LK0-pxRKXYgyP",
@@ -279,7 +280,9 @@
         SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
         Category: "_2lQNYB6g6C7aiw0GDPe9fq",
         CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
+        TitleCtn: "_3rrH9dPdtHVRMzAEw82AId",
         BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
+        ReviewScores: "_3MxPBWjpjU_Gm8SIgi5g8A",
         StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
         StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
         Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
@@ -338,6 +341,7 @@
         PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
         PreviewItem: "_2yhQb4aKtskchqwmpCVbMq",
         DeckCompatIcon: "_1Nju8xukRGXgeu2mN0nVjT",
+        BundleTag: "_1qR-LifiFC4bCiow5xRIy0",
         PreviewImg: "_1jx70oYOJWzNj7A5gNRxhg",
         DemoLayoutPopup: "_2tmp27YgSoUCJSBJA4t5yt",
         FreeWeekendBar: "_2SCofLY66uBY_jjrTzNjBN",
@@ -5647,7 +5651,7 @@
         }, [_, _]);
         const _ = (0, _._)(_),
           _ = _ && (!_ || (_.appID != _ && _.snr != _)),
-          _ = (0, _._)(_.ref, _ ? _ : void 0);
+          _ = (0, _._)(_.props.ref, _ ? _ : void 0);
         return _.cloneElement(_, {
           ref: _,
         });
@@ -11561,6 +11565,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.AnyController = 0)] = "AnyController"),
@@ -11845,7 +11850,15 @@
               });
           } catch (_) {
             let _ = (0, _._)(_);
-            console.error("CDynamicStore.InternalLoad", _.strErrorMsg, _);
+            console.warn("CDynamicStore.InternalLoad", _.strErrorMsg, _),
+              (0, _._)().ReportError(
+                new Error(
+                  `CDynamicStore.InternalLoad ${_.strErrorMsg}, ${JSON.stringify(_)}`,
+                ),
+                {
+                  bIncludeMessageInIdentifier: !0,
+                },
+              );
           }
           return this;
         }
@@ -15945,6 +15958,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  quantity: {
+                    _: 14,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -17896,8 +17914,20 @@
             {
               include_reviews: !0,
             },
+          ),
+          [_] = (0, _._)(
+            null == _ ? void 0 : _.GetParentAppID(),
+            null == _ ? void 0 : _.GetStoreItemType(),
+            {
+              include_basic_info: !0,
+            },
           );
         if (!_) return null;
+        if (
+          1 == _.GetAppType() &&
+          !(null == _ ? void 0 : _.HasDemoStandaloneStorePage())
+        )
+          return;
         let _ = _.GetUnfilteredReviewSummary(),
           _ = "#ReviewScore_UserReviewScoreAria",
           _ = !1;
@@ -17925,14 +17955,6 @@
             {
               className: (0, _._)(_().ReviewScoreValue, _),
             },
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ReviewScoreLanguage,
-                },
-                (0, _._)("#ReviewScore_UserReviewScore_LanguageSpecific", _),
-              ),
             _.createElement(
               "div",
               {
@@ -17952,10 +17974,16 @@
               },
               __webpack_require__
                 ? "(" + _.review_count.toLocaleString() + ")"
-                : (0, _._)(
-                    "#GameHover_UserReviewCount",
-                    _.review_count.toLocaleString(),
-                  ),
+                : _
+                  ? (0, _._)(
+                      "#GameHover_UserReviewCount_Lang",
+                      _.review_count.toLocaleString(),
+                      _,
+                    )
+                  : (0, _._)(
+                      "#GameHover_UserReviewCount",
+                      _.review_count.toLocaleString(),
+                    ),
             ),
             !__webpack_require__ &&
               _.createElement(
@@ -18845,6 +18873,8 @@
               baseGameStoreItem: _,
               displayInfo: _,
               fallbackStoreItem: _,
+              hoverType: _,
+              nHoverId: _,
             } = (0, _._)(_),
             {
               bShowDemoButton: _,
@@ -18891,6 +18921,10 @@
             _ = _ && _ ? _.GetID() : _._,
             _ = (0, _._)(_, _, _),
             _ = (0, _._)(),
+            _ =
+              _ && _.HasDemoStandaloneStorePage()
+                ? _.GetDemoStandaloneStorePageAppIDs()[0]
+                : _,
             _ =
               (null === (_ = _.GetName()) || void 0 === _ ? void 0 : _.length) >
               0
@@ -18953,31 +18987,39 @@
                     className: (0, _._)(_().StoreSaleWidgetHalfLeft),
                   },
                   _.createElement(
-                    "a",
+                    _._,
                     {
-                      href: _ ? void 0 : _,
-                      target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-                      onClick: _,
+                      type: _,
+                      _: _,
+                      fnHoverState: _,
                     },
                     _.createElement(
-                      "div",
+                      "a",
                       {
-                        className: _().StoreSaleWidgetImage,
+                        href: _ ? void 0 : _,
+                        target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+                        onClick: _,
                       },
-                      _.createElement(_._, {
-                        appids: _,
-                      }),
-                      _.createElement(_, {
-                        info: _,
-                        imageType: "header",
-                      }),
-                      _.createElement(_._, {
-                        storeItem: _,
-                      }),
-                      Boolean(_ && _) &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StoreSaleWidgetImage,
+                        },
                         _.createElement(_._, {
-                          appInfo: _,
+                          appids: _,
                         }),
+                        _.createElement(_, {
+                          info: _,
+                          imageType: "header",
+                        }),
+                        _.createElement(_._, {
+                          storeItem: _,
+                        }),
+                        Boolean(_ && _) &&
+                          _.createElement(_._, {
+                            appInfo: _,
+                          }),
+                      ),
                     ),
                   ),
                 ),
@@ -19022,65 +19064,64 @@
                       ),
                     ),
                   ),
+                  _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().StoreSaleWidgetTags,
+                      },
+                      _.map((_) =>
+                        _.createElement(_._, {
+                          key: "tag_" + _,
+                          tagid: _,
+                          className: _().AppTag,
+                        }),
+                      ),
+                    ),
                   _.createElement(
                     "div",
                     {
-                      className: _().StoreSaleWidgetReleaseAndTags,
+                      className: _().WidgetReleaseDateAndPlatformCtn,
+                      ref: _,
                     },
                     _ &&
                       _.createElement(
                         "div",
                         {
-                          className: _().StoreSaleWidgetTags,
+                          className: _().StoreSaleWidgetRelease,
                         },
-                        _.map((_) =>
-                          _.createElement(_._, {
-                            key: "tag_" + _,
-                            tagid: _,
-                            className: _().AppTag,
-                          }),
-                        ),
+                        _,
                       ),
+                    !_ &&
+                      _.createElement(
+                        _.Fragment,
+                        null,
+                        _.createElement(_._, {
+                          item: _,
+                          bMinimizePlatforms: _,
+                        }),
+                        Boolean(
+                          _ &&
+                            0 == (null == _ ? void 0 : _.GetStoreItemType()) &&
+                            _.GetPlatforms(),
+                        ) &&
+                          _.createElement(_._, {
+                            className: _().DeckCompatIcon,
+                            category:
+                              _.GetPlatforms().steam_deck_compat_category,
+                          }),
+                      ),
+                  ),
+                  _ &&
                     _.createElement(
                       "div",
                       {
-                        className: _().WidgetReleaseDateAndPlatformCtn,
-                        ref: _,
+                        className: _().ReviewScores,
                       },
-                      _ &&
-                        _.createElement(
-                          "div",
-                          {
-                            className: _().StoreSaleWidgetRelease,
-                          },
-                          _,
-                        ),
-                      !_ &&
-                        _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(_._, {
-                            item: _,
-                            bMinimizePlatforms: _,
-                          }),
-                          Boolean(
-                            _ &&
-                              0 ==
-                                (null == _ ? void 0 : _.GetStoreItemType()) &&
-                              _.GetPlatforms(),
-                          ) &&
-                            _.createElement(_._, {
-                              className: _().DeckCompatIcon,
-                              category:
-                                _.GetPlatforms().steam_deck_compat_category,
-                            }),
-                        ),
-                    ),
-                    _ &&
                       _.createElement(_._, {
                         appInfo: _,
                       }),
-                  ),
+                    ),
                   _ &&
                     _.createElement(_, {
                       info: _,
@@ -19170,7 +19211,8 @@
       function _(_) {
         const { info: _ } = _,
           [__webpack_require__] = (0, _._)(_._, (0, _._)(_.type), {}),
-          [_, _] = _.useState(null);
+          [_, _] = _.useState(null),
+          _ = 2 == __webpack_require__.GetStoreItemType();
         return (
           _.useEffect(() => {
             __webpack_require__ &&
@@ -19198,6 +19240,14 @@
                   {
                     className: _().ContentsCount,
                   },
+                  _ &&
+                    _.createElement(
+                      "span",
+                      {
+                        className: _().BundleTag,
+                      },
+                      (0, _._)("#AppType_bundle"),
+                    ),
                   (0, _._)("#Sale_ContentPreview", _.length),
                 ),
                 _.createElement(
@@ -19268,13 +19318,15 @@
                   : _.GetName())
               );
             }, [_, _._]);
-          return (
-            (0, _.useEffect)(() => {
-              _.current && _(_.current.offsetWidth < 370);
-            }, [_]),
-            _.createElement(
-              _.Fragment,
-              null,
+          (0, _.useEffect)(() => {
+            _.current && _(_.current.offsetWidth < 370);
+          }, [_]);
+          const _ = Boolean(_ && "sub" != _.type && "bundle" != _.type),
+            _ = !_ && !_ && !_ && _ && _;
+          return _.createElement(
+            _.Fragment,
+            null,
+            !_ &&
               _.createElement(
                 "div",
                 {
@@ -19299,7 +19351,7 @@
                       _().AddToCartButton,
                     ),
                   }),
-                Boolean(_ && "sub" != _.type && "bundle" != _.type) &&
+                _ &&
                   _.createElement(_._, {
                     appid: _._,
                     className: (0, _._)(
@@ -19325,15 +19377,14 @@
                     }),
                   ),
               ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CapsuleName,
-                  },
-                  _,
-                ),
-            )
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().CapsuleName,
+                },
+                _,
+              ),
           );
         },
         _ = (_) => {
@@ -20051,6 +20102,8 @@
             storeItem: _,
             onlyOneDiscountPct: _,
             bHidePrePurchase: _,
+            bHideReleaseDate: _,
+            bHideIfDemo: _,
           } = _,
           _ = (0, _._)();
         if (!_) return null;
@@ -20082,6 +20135,7 @@
             ? void 0
             : _.packageid)
         ) {
+          if (_) return;
           const _ = _.BIsCustomComingSoonDisplay()
             ? _.GetFormattedSteamReleaseDate()
             : (0, _._)(
@@ -20103,50 +20157,53 @@
           );
         }
         if (_.BIsFree()) {
-          if (!_.BIsFreeTemporary())
-            return 0 == _.GetStoreItemType() && 1 == _.GetAppType()
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _,
-                  },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().StoreSaleNewItem,
-                      },
-                      (0, _._)("#Flag_New"),
-                    ),
+          if (!_.BIsFreeTemporary()) {
+            if (0 == _.GetStoreItemType() && 1 == _.GetAppType()) {
+              if (_) return;
+              return _.createElement(
+                "div",
+                {
+                  className: _,
+                },
+                _ &&
                   _.createElement(
                     "div",
                     {
-                      className: _().StoreSalePriceBox,
+                      className: _().StoreSaleNewItem,
                     },
-                    (0, _._)("#EventDisplay_CallToAction_FreeDemo"),
+                    (0, _._)("#Flag_New"),
                   ),
-                )
-              : _.createElement(
+                _.createElement(
                   "div",
                   {
-                    className: _,
+                    className: _().StoreSalePriceBox,
                   },
-                  _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().StoreSaleNewItem,
-                      },
-                      (0, _._)("#Flag_New"),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreSalePriceBox,
-                    },
-                    (0, _._)("#EventDisplay_CallToAction_FreeToPlay"),
-                  ),
-                );
+                  (0, _._)("#EventDisplay_CallToAction_FreeDemo"),
+                ),
+              );
+            }
+            return _.createElement(
+              "div",
+              {
+                className: _,
+              },
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSaleNewItem,
+                  },
+                  (0, _._)("#Flag_New"),
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: _().StoreSalePriceBox,
+                },
+                (0, _._)("#EventDisplay_CallToAction_FreeToPlay"),
+              ),
+            );
+          }
           if (
             (null === (_ = _.GetBestPurchaseOption()) || void 0 === _
               ? void 0
@@ -20881,9 +20938,21 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        _.useEffect(() => {
+          const _ = (_) => {
+            _.key === _ &&
+              (_(_), _ && _.preventDefault(), _ && _.stopPropagation());
+          };
+          return (
+            document.addEventListener("keydown", _),
+            () => document.removeEventListener("keydown", _)
+          );
+        }, [_, _, _, _]);
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _() {
@@ -20949,12 +21018,12 @@
           fnClose: _,
           bCircular: _,
         } = _;
-        (0, _._)("ArrowLeft", _, !0, !0),
-          (0, _._)("Left", _, !0, !0),
-          (0, _._)("ArrowRight", _, !0, !0),
-          (0, _._)("Right", _, !0, !0),
-          (0, _._)("Escape", () => _ && _(), !0, !0),
-          (0, _._)("Esc", () => _ && _(), !0, !0);
+        _("ArrowLeft", _, !0, !0),
+          _("Left", _, !0, !0),
+          _("ArrowRight", _, !0, !0),
+          _("Right", _, !0, !0),
+          _("Escape", () => _ && _(), !0, !0),
+          _("Esc", () => _ && _(), !0, !0);
         let _ = __webpack_require__ > 1;
         return _.createElement(
           "div",
@@ -23152,26 +23221,6 @@
           ),
           window.innerWidth < parseInt(_().strMaxMobileWidth)
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        _.useEffect(() => {
-          const _ = (_) => {
-            _.key === _ &&
-              (_(_), _ && _.preventDefault(), _ && _.stopPropagation());
-          };
-          return (
-            document.addEventListener("keydown", _),
-            () => document.removeEventListener("keydown", _)
-          );
-        }, [_, _, _, _]);
       }
     },
   },

@@ -242,13 +242,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
-        ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
-        SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         countdownCtn: "GWWacIf04lQysYMFJma0A",
         Closed: "ATX_xEE69rX8wVxQvONEx",
         CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
@@ -12195,153 +12188,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        var _, _;
-        const { editModel: _ } = _,
-          [_, _] = _.useState(1),
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(!1),
-          [_, _] = _.useState(null),
-          _ = _.GetClanSteamID(),
-          _ = _.GetGID(),
-          _ = (0, _._)(_, _),
-          [, _] = _.useReducer((_) => _ + 1, 0),
-          _ =
-            _.isSuccess &&
-            (null === (_ = _.data) || void 0 === _
-              ? void 0
-              : _.crowdin_project_id) &&
-            (null === (_ = _.data) || void 0 === _ ? void 0 : _.crowdin_file_id)
-              ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
-              : null,
-          _ = (0, _._)(_.ConvertTo64BitString(), _, _);
-        if (_.isLoading) return null;
-        let _ = Array.from(_.entries());
-        _.sort((_, _) => _[1].localeCompare(_[1]));
-        const _ = _.map(([_, _]) =>
-          "english" !== _
-            ? _.createElement(
-                "option",
-                {
-                  key: _,
-                  value: _,
-                },
-                _,
-              )
-            : "",
-        );
-        return _.createElement(
-          _._,
-          {
-            clanSteamID: _.editModel.GetClanSteamID(),
-          },
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(_._, null),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().ValveCrowdInSyncCtn,
-            },
-            _.createElement(_._, {
-              value: _.BPushUpdatesToCrowdInAutomatically(),
-              onChange: (_) => {
-                _.SetPushSourceToCrowdInAutomatically(_), _();
-              },
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().ValveCrowdInSyncLabel,
-              },
-              (0, _._)(
-                "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
-              ),
-              " (",
-              _
-                ? _.createElement(
-                    "a",
-                    {
-                      href: _,
-                    },
-                    _,
-                  )
-                : (0, _._)("#EventEditor_Localization_NotMappedToCrowdIn"),
-              ")",
-              _.createElement(_._, {
-                tooltip: (0, _._)("#EventEditor_Localization_Tooltip"),
-                className: _.tooltip_Ctn,
-              }),
-              _.createElement("br", null),
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#EventEditor_Localization_RememberToSave"),
-              ),
-            ),
-            _.createElement(
-              "select",
-              {
-                onChange: (_) => {
-                  const _ = _.target.value;
-                  if ("all" === _) _(-1);
-                  else {
-                    const _ = (0, _._)(_);
-                    _(_);
-                  }
-                },
-              },
-              _,
-              _.createElement(
-                "option",
-                {
-                  value: "all",
-                },
-                (0, _._)("#EventEditor_Localization_AllLanguages"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().EditPreviewButton,
-                onClick: () => {
-                  _(!0),
-                    _.mutateAsync()
-                      .then(() => window.location.reload())
-                      .catch((_) => {
-                        _(_.toString()), _(!1);
-                      })
-                      .then(() => {
-                        _(null);
-                      });
-                },
-              },
-              (0, _._)("#EventEditor_Localization_FetchLocalization"),
-            ),
-          ),
-          _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().SyncPanelError,
-                },
-                _.createElement(_._, null),
-                " ",
-                _,
-              ),
-            ),
-        );
-      }
       function _(_) {
         const _ = _.useRef(void 0),
           { editModel: __webpack_require__, bCanManuallyTagAssociatedApps: _ } =
@@ -12383,7 +12230,7 @@
                   }),
                 ),
                 _ &&
-                  _.createElement(_, {
+                  _.createElement(_._, {
                     editModel: _.editModel,
                   }),
               ),
@@ -13442,8 +13289,8 @@
                 className: _.FullImageCtn,
               },
               _.createElement("img", {
-                width: _ ? _.width : void 0,
-                height: _ ? _.height : void 0,
+                width: _ ? (0, _._)(_.width) : void 0,
+                height: _ ? (0, _._)(_.height) : void 0,
                 src: _,
               }),
               Boolean(_) &&
@@ -13551,7 +13398,11 @@
             _.createElement(
               "span",
               null,
-              (0, _._)("#EventEmail_ImageDimension", _.width, _.height),
+              (0, _._)(
+                "#EventEmail_ImageDimension",
+                (0, _._)(_.width),
+                (0, _._)(_.height),
+              ),
             ),
           );
         }
@@ -14381,8 +14232,6 @@
         (0, _._)([_._], _.prototype, "ClearTargets", null),
         (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
@@ -14433,6 +14282,8 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const { editModel: _ } = _;
           _.useEffect(() => {

@@ -2752,6 +2752,15 @@ div#appHeaderFindSuggestions
 	font-size: 11px;
 }
 
+.landingTable.discountHistory .old_discount {
+	opacity: 0.5;
+	cursor: default;
+}
+
+.landingTable.discountHistory .upcoming .old_discount {
+	display: none;
+}
+
 .landingTable.releaseActions td {
     font-size: 14px;
 }

@@ -13,11 +13,189 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
+        ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
+        SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Label: "_1LhItwhLHspVcQdfcbd2Sg",
         ImportLocSampleButtonCtn: "D-1dlROLVuva-sb6tFgwU",
         SampleTitle: "_9189ilzQ3YES-a-6DyBhR",
         ImportButton: "WyfyxbGrKQq8cKMK5kfxE",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _, _;
+        const { editModel: _ } = _,
+          [_, _] = _.useState(1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(null),
+          _ = _.GetClanSteamID(),
+          _ = _.GetGID(),
+          _ = (0, _._)(_, _),
+          [, _] = _.useReducer((_) => _ + 1, 0),
+          _ =
+            _.isSuccess &&
+            (null === (_ = _.data) || void 0 === _
+              ? void 0
+              : _.crowdin_project_id) &&
+            (null === (_ = _.data) || void 0 === _ ? void 0 : _.crowdin_file_id)
+              ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
+              : null,
+          _ = (0, _._)(_.ConvertTo64BitString(), _, _);
+        return _.isLoading
+          ? null
+          : _.createElement(
+              _._,
+              {
+                clanSteamID: _.editModel.GetClanSteamID(),
+              },
+              _.createElement(
+                _._,
+                {
+                  active: _,
+                },
+                _.createElement(_._, null),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ValveCrowdInSyncCtn,
+                },
+                _.createElement(_._, {
+                  value: _.BPushUpdatesToCrowdInAutomatically(),
+                  onChange: (_) => {
+                    _.SetPushSourceToCrowdInAutomatically(_), _();
+                  },
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ValveCrowdInSyncLabel,
+                  },
+                  (0, _._)(
+                    "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
+                  ),
+                  " (",
+                  _
+                    ? _.createElement(
+                        "a",
+                        {
+                          href: _,
+                        },
+                        _,
+                      )
+                    : (0, _._)("#EventEditor_Localization_NotMappedToCrowdIn"),
+                  ")",
+                  _.createElement(_._, {
+                    tooltip: (0, _._)("#EventEditor_Localization_Tooltip"),
+                    className: _.tooltip_Ctn,
+                  }),
+                  _.createElement("br", null),
+                  _.createElement(
+                    "span",
+                    null,
+                    (0, _._)("#EventEditor_Localization_RememberToSave"),
+                  ),
+                ),
+                _.createElement(_, {
+                  onChange: (_) => {
+                    const _ = _.target.value;
+                    if ("all" === _) _(-1);
+                    else {
+                      const _ = (0, _._)(_);
+                      _(_);
+                    }
+                  },
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().EditPreviewButton,
+                    onClick: () => {
+                      _(!0),
+                        _.mutateAsync()
+                          .then(() => window.location.reload())
+                          .catch((_) => {
+                            _(_.toString()), _(!1);
+                          })
+                          .then(() => {
+                            _(null);
+                          });
+                    },
+                  },
+                  (0, _._)("#EventEditor_Localization_FetchLocalization"),
+                ),
+              ),
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SyncPanelError,
+                    },
+                    _.createElement(_._, null),
+                    " ",
+                    _,
+                  ),
+                ),
+            );
+      }
+      function _(_) {
+        const _ = (0, _._)(!1);
+        let _ = Array.from(_.entries());
+        __webpack_require__.sort((_, _) => _[1].localeCompare(_[1]));
+        const _ = __webpack_require__.map(([_, _]) =>
+          "english" !== _
+            ? _.createElement(
+                "option",
+                {
+                  key: _,
+                  value: _,
+                },
+                _,
+              )
+            : "",
+        );
+        return _.createElement(
+          "select",
+          {
+            onChange: _.onChange,
+          },
+          _,
+          _.createElement(
+            "option",
+            {
+              value: "all",
+            },
+            (0, _._)("#EventEditor_Localization_AllLanguages"),
+          ),
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

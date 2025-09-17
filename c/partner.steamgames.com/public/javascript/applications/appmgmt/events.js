@@ -277,6 +277,14 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Link: "-HlDBB290kjpl61uUmRed",
+        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
+        Big: "sGy-bB7uqEt4Hoe7U5iA1",
+        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         AppSocialLinksCtn: "_1wKUEA0cYqeUELXMe3Tp6T",
         AppSocialLinks: "YMmXzjieZthpAehitId4M",
         AppSocialLinkIcon: "OlwlyAPTdpJ7OieZmqzhc",
@@ -2333,10 +2341,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
-        Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const [_, __webpack_require__] = (0, _._)(_.appid, {
@@ -3941,6 +3948,64 @@
             }),
           ),
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { gidEvent: _ } = _,
+          _ = (0, _._)(_),
+          [_, _] = (0, _.useMemo)(() => {
+            if (
+              _?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              _?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+            ) {
+              const _ = (0, _._)(_._.LANGUAGE),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_banner,
+                  _,
+                ),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_mobile_banner,
+                  _,
+                );
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
+            }
+            return [null, null];
+          }, [_]);
+        return _?.length > 0 && _?.length > 0
+          ? _.createElement(
+              "a",
+              {
+                href: (0, _._)(__webpack_require__.GetSaleURL()),
+                className: _.Link,
+              },
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Big),
+              }),
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Mobile),
+              }),
+            )
+          : null;
       }
     },
   },

@@ -1055,7 +1055,7 @@
         (0, n.Cg)([m.oI], x.prototype, "OnMouseMove", null),
         (0, n.Cg)([m.oI], x.prototype, "OnMouseUp", null),
         (0, n.Cg)([m.oI], x.prototype, "OnResizeComplete", null);
-      const H = (e) => {
+      const D = (e) => {
         const { title: t, className: o } = e;
         let n = 26;
         t.length > 8 && (n = Math.max(n - (t.length - 5) / 2, 5.8));
@@ -1098,7 +1098,7 @@
           ),
         );
       };
-      function D(e) {
+      function H(e) {
         const { title: t, children: o } = e,
           n = s.useContext(O),
           r = s.useRef(null);
@@ -1120,7 +1120,7 @@
             s.createElement(
               "div",
               { className: f().TextNameSpace },
-              !!t && s.createElement(H, { title: t }),
+              !!t && s.createElement(D, { title: t }),
             ),
             s.createElement("div", { className: f().Features }, o),
           ),
@@ -1358,7 +1358,9 @@
       function oe(e, t) {
         const o = (0, $.Tc)("editorconfig", t);
         let n = new w(o);
-        r.H(t).render(s.createElement(e ? ne : se, { LogoEditorStore: n }));
+        r.createRoot(t).render(
+          s.createElement(e ? ne : se, { LogoEditorStore: n }),
+        );
       }
       class ne extends s.Component {
         constructor(e) {
@@ -1523,7 +1525,7 @@
                     fnOnPositionChanged: this.OnPositionChanged,
                     logoPosition: e.GetLogoPosition(),
                   },
-                  s.createElement(D, {
+                  s.createElement(H, {
                     title: e.GetLogoURL() ? "" : e.GetAppName(),
                   }),
                 ),

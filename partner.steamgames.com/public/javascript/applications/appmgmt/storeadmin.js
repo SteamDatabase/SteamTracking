@@ -1429,7 +1429,7 @@
             onChooseAsset: a,
             selected: r,
           } = e,
-          o = d.useRef(),
+          o = d.useRef(null),
           l = (0, c.q3)(t);
         return (
           d.useLayoutEffect(() => {
@@ -2926,33 +2926,60 @@
           );
         }
         TryCreateNode(e, t, n) {
-          let a = i.FK.from(t);
-          if (!e.node.validContent(a))
-            if (e.acceptNode) {
-              let n = t.filter((t) => t.type == e.acceptNode);
-              if (!n.length) {
-                let a = t;
-                e.acceptNode.isBlock &&
-                  a.length > 1 &&
-                  a[a.length - 1].type == this.schema.nodes.hard_break &&
-                  (a = a.slice(0, -1));
-                const r = this.m_mapPMBBNodes.get(e.acceptNode.name);
-                (0, c.wT)(
-                  r,
-                  `Indicated acceptNode type ${e.acceptNode.name} for ${e.node.name} missing`,
+          let a,
+            r = i.FK.from(t);
+          if (
+            !e.node.validContent(r) &&
+            (e.node.isInline ||
+              (r = i.FK.from(
+                t.filter(
+                  (t) =>
+                    (!t.isText || !t.text.match(/^\s*$/)) &&
+                    !(
+                      t.type == this.schema.nodes.hard_break &&
+                      !e.node.validContent(i.FK.from(t))
+                    ),
                 ),
-                  (n = r
-                    ? this.TryCreateNode(r, a, void 0)
-                    : e.acceptNode.create(void 0, a));
+              )),
+            !e.node.validContent(r))
+          ) {
+            const t = e.acceptNode;
+            a = [];
+            let n = [],
+              o = !1,
+              l = !1;
+            for (let s = 0; s < r.childCount; s++) {
+              const c = r.child(s),
+                u = i.FK.from(c),
+                d = e.node.validContent(u);
+              l || (!d && !t?.validContent(u))
+                ? ((l = !0), a.push(c))
+                : (d || (o = !0), n.push(c));
+            }
+            if ((console.assert(!o || t), o && t)) {
+              t.isBlock &&
+                n.length > 1 &&
+                n[n.length - 1].type == this.schema.nodes.hard_break &&
+                (n = n.slice(0, -1));
+              const o = this.m_mapPMBBNodes.get(t.name);
+              let l;
+              (0, c.wT)(
+                o,
+                `Indicated acceptNode type ${t.name} for ${e.node.name} missing`,
+              );
+              try {
+                l = o
+                  ? this.TryCreateNode(o, n, void 0)
+                  : t.createChecked(void 0, n);
+              } catch (e) {
+                console.error(e), (l = []), (a = [...n, ...a]);
               }
-              a = i.FK.from(n);
-            } else
-              e.node.isInline ||
-                (a = i.FK.from(
-                  t.filter((e) => !e.isText || !e.text.match(/^\s*$/)),
-                ));
+              r = i.FK.from(l);
+            } else r = i.FK.from(n);
+          }
           try {
-            return e.node.createAndFill(n, a) || e.node.createChecked(n, a);
+            const t = e.node.createAndFill(n, r) || e.node.createChecked(n, r);
+            return a ? [t, ...a] : t;
           } catch (n) {
             return (
               (0, c.wT)(
@@ -7329,7 +7356,8 @@
                   onClick: h,
                 },
                 a.createElement(Re.V, { appids: g, hide_status_banners: n }),
-                a.createElement(Ne.aU, { imageType: l, info: t }),
+                "none" != l &&
+                  a.createElement(Ne.aU, { imageType: l, info: t }),
                 a.createElement(Ge.J, { storeItem: m }),
                 Boolean(c) && a.createElement(Le.m, { appInfo: t }),
               ),

@@ -468,7 +468,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -1897,266 +1896,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "span",
-            {
-              className: _().partyBeaconJoin,
-            },
-            (0, _._)("#User_WantsToPlay"),
-          ),
-          " – ",
-          _.persona.GetCurrentGameName(),
-        );
-      }
-      let _ = class extends _.Component {
-        render() {
-          const {
-            className: _,
-            onContextMenu: _,
-            persona: __webpack_require__,
-            eFriendRelationship: _,
-            bIsSelf: _,
-            bParenthesizeNicknames: _,
-            strNickname: _,
-            bCompactView: _,
-            bHideGameName: _,
-            bHideEnhancedRichPresenceLabel: _,
-            bHideSnooze: _,
-            bHideStatus: _,
-            renderStatus: _,
-            renderRichPresence: _,
-            bHidePersona: _,
-            bDNDSet: _,
-            bHasPartyBeacon: _,
-            bHasGamePrivacy: _,
-            bNoMask: _,
-            ..._
-          } = this.props;
-          let _ = null,
-            _ = null,
-            _ = null,
-            _ = [
-              _,
-              _().personaNameAndStatusLabel,
-              (0, _._)(__webpack_require__),
-              _ && _().compactView,
-              _ && _().NoMask,
-            ];
-          _ || __webpack_require__.has_public_party_beacon
-            ? (_ = _.createElement(_, {
-                persona: __webpack_require__,
-              }))
-            : (0, _._)(_)
-              ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
-              : __webpack_require__.is_ingame
-                ? ((_ =
-                    !__webpack_require__.is_in_nonsteam_game || _ || (0, _._)(_)
-                      ? __webpack_require__.GetCurrentGameName()
-                      : (0, _._)("#PersonaStateInNonSteamGame")),
-                  _ || _
-                    ? _ &&
-                      __webpack_require__.is_awayOrSnooze &&
-                      (_ = (0, _._)("#PersonaStateAway"))
-                    : (_ = __webpack_require__.GetCurrentGameRichPresence()))
-                : __webpack_require__.m_broadcastAccountId &&
-                  (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
-            _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
-            _ && (_ = _());
-          let _ = !_ && !_;
-          !1 === _ && (_ = !0),
-            __webpack_require__.is_awayOrSnooze &&
-              _ &&
-              (_ = _.createElement(_._, {
-                persona: __webpack_require__,
-              }));
-          let _ = null;
-          _
-            ? (_ = _.createElement(
-                "div",
-                {
-                  className: "ContextMenuButton",
-                  onClick: _,
-                },
-                _.createElement(_.GB9, null),
-              ))
-            : _.push(_().noContextMenu),
-            _ && _.push(_().hidePersona),
-            _ && (_ = _()),
-            (!_ && _) || _.push(_().twoLine);
-          const _ = !__webpack_require__.is_ingame && !_,
-            _ = !_ && _,
-            _ = _ && (!_ || !_),
-            _ = (0, _._)(_._.LAUNCHER_TYPE);
-          let _ = _ && !_,
-            _ = _ ? _ : __webpack_require__.m_strPlayerName,
-            _ = !_ && (_ || _) && _;
-          return _.createElement(
-            "div",
-            {
-              ..._,
-              className: (0, _._)(..._),
-              onContextMenu: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().statusAndName, _ && _().threeLines),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().playerName,
-                },
-                _ || " ",
-                _ &&
-                  _ &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().playerNickname,
-                    },
-                    "(",
-                    _,
-                    ")",
-                  ),
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DNDContainer,
-                    title: (0, _._)("#User_ToggleDoNotDisturb"),
-                  },
-                  _.createElement(_.Aj0, null),
-                ),
-              _ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _().playerNicknameBracket,
-                    title: (0, _._)("#isNickname"),
-                  },
-                  " *",
-                ),
-              _.createElement(_._, {
-                persona: __webpack_require__,
-              }),
-              _,
-              (__webpack_require__.m_bPlayerNamePending ||
-                __webpack_require__.m_bAvatarPending) &&
-                _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PendingPersona,
-                    title: (0, _._)("#SteamChina_PendingPersonaName"),
-                  },
-                  _.createElement(_.zD7, null),
-                ),
-              _,
-            ),
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().richPresenceContainer,
-                },
-                (_ || _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().gameName,
-                        _ && _().threeLines,
-                        _().richPresenceLabel,
-                        "no-drag",
-                      ),
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().gameIsPrivateIcon,
-                          title: (0, _._)("#User_GameInfoHidden"),
-                        },
-                        _.createElement(_.jZl, null),
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().richPresenceLabel, "no-drag"),
-                    },
-                    _,
-                    " ",
-                  ),
-              ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      (0, _._)((_) => {
-        const {
-          persona: _,
-          bParenthesizeNicknames: __webpack_require__,
-          strNickname: _,
-          bIgnorePersonaStatus: _,
-          bDisableColoring: _,
-          className: _,
-          ..._
-        } = _;
-        let _ = _ && !__webpack_require__ ? _ : _.m_strPlayerName;
-        return _.createElement(
-          "span",
-          {
-            ..._,
-            className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
-          },
-          _.createElement(
-            "span",
-            {
-              className: _().playerName,
-            },
-            _ || " ",
-            __webpack_require__ &&
-              _ &&
-              _.createElement(
-                "span",
-                {
-                  className: _().playerNickname,
-                },
-                "(",
-                _,
-                ")",
-              ),
-          ),
-        );
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -2362,7 +2101,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _,
@@ -3000,8 +2738,7 @@
             request: _,
           };
         })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)(),
           _ = (0, _._)();
@@ -3033,25 +2770,6 @@
                   .map((_) => _.ulfriendid());
           },
         };
-      }
-      async function _(_, _) {
-        const _ = _._.Init(_._);
-        __webpack_require__.Body().set_appid(_);
-        const _ = await _._.GetFriendsGameplayInfo(_, _);
-        return (
-          _.BSuccess() ||
-            console.warn(`Failed to get gameplay info: ${_.GetEResult()}`),
-          _.Body().toObject()
-        );
-      }
-      function _(_, _ = {}) {
-        const _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`GameplayInfo_${_}_${_}`],
-          queryFn: async () => await _(_, _),
-          ..._,
-        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3403,7 +3121,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3724,23 +3441,6 @@
                 _.Body().set_language(_),
                 _.Body().set_include_community_item_def(_),
                 (await _._.GetCurrentDefinition(_, _)).Body().toObject()
-              );
-            })(_, _, _, _),
-          staleTime: 1 / 0,
-        });
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`GetClaimedSaleRewards_${_}_${_}_${_}_${_}`],
-          queryFn: async () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_sale_def_type(_),
-                _.Body().set_language(_),
-                _.Body().set_include_community_item_def(_),
-                (await _._.GetClaimedSaleRewards(_, _)).Body().toObject()
               );
             })(_, _, _, _),
           staleTime: 1 / 0,
@@ -7402,8 +7102,256 @@
           (__webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "span",
+            {
+              className: _().partyBeaconJoin,
+            },
+            (0, _._)("#User_WantsToPlay"),
+          ),
+          " – ",
+          _.persona.GetCurrentGameName(),
+        );
+      }
+      let _ = class extends _.Component {
+        render() {
+          const {
+            className: _,
+            onContextMenu: _,
+            persona: __webpack_require__,
+            eFriendRelationship: _,
+            bIsSelf: _,
+            bParenthesizeNicknames: _,
+            strNickname: _,
+            bCompactView: _,
+            bHideGameName: _,
+            bHideEnhancedRichPresenceLabel: _,
+            bHideSnooze: _,
+            bHideStatus: _,
+            renderStatus: _,
+            renderRichPresence: _,
+            bHidePersona: _,
+            bDNDSet: _,
+            bHasPartyBeacon: _,
+            bHasGamePrivacy: _,
+            bNoMask: _,
+            ..._
+          } = this.props;
+          let _ = null,
+            _ = null,
+            _ = null,
+            _ = [
+              _,
+              _().personaNameAndStatusLabel,
+              (0, _._)(__webpack_require__),
+              _ && _().compactView,
+              _ && _().NoMask,
+            ];
+          _ || __webpack_require__.has_public_party_beacon
+            ? (_ = _.createElement(_, {
+                persona: __webpack_require__,
+              }))
+            : (0, _._)(_)
+              ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
+              : __webpack_require__.is_ingame
+                ? ((_ =
+                    !__webpack_require__.is_in_nonsteam_game || _ || (0, _._)(_)
+                      ? __webpack_require__.GetCurrentGameName()
+                      : (0, _._)("#PersonaStateInNonSteamGame")),
+                  _ || _
+                    ? _ &&
+                      __webpack_require__.is_awayOrSnooze &&
+                      (_ = (0, _._)("#PersonaStateAway"))
+                    : (_ = __webpack_require__.GetCurrentGameRichPresence()))
+                : __webpack_require__.m_broadcastAccountId &&
+                  (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
+            _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
+            _ && (_ = _());
+          let _ = !_ && !_;
+          !1 === _ && (_ = !0),
+            __webpack_require__.is_awayOrSnooze &&
+              _ &&
+              (_ = _.createElement(_._, {
+                persona: __webpack_require__,
+              }));
+          let _ = null;
+          _
+            ? (_ = _.createElement(
+                "div",
+                {
+                  className: "ContextMenuButton",
+                  onClick: _,
+                },
+                _.createElement(_.GB9, null),
+              ))
+            : _.push(_().noContextMenu),
+            _ && _.push(_().hidePersona),
+            _ && (_ = _()),
+            (!_ && _) || _.push(_().twoLine);
+          const _ = !__webpack_require__.is_ingame && !_,
+            _ = !_ && _,
+            _ = _ && (!_ || !_),
+            _ = (0, _._)(_._.LAUNCHER_TYPE);
+          let _ = _ && !_,
+            _ = _ ? _ : __webpack_require__.m_strPlayerName,
+            _ = !_ && (_ || _) && _;
+          return _.createElement(
+            "div",
+            {
+              ..._,
+              className: (0, _._)(..._),
+              onContextMenu: _,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().statusAndName, _ && _().threeLines),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().playerName,
+                },
+                _ || " ",
+                _ &&
+                  _ &&
+                  _.createElement(
+                    "span",
+                    {
+                      className: _().playerNickname,
+                    },
+                    "(",
+                    _,
+                    ")",
+                  ),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DNDContainer,
+                    title: (0, _._)("#User_ToggleDoNotDisturb"),
+                  },
+                  _.createElement(_.Aj0, null),
+                ),
+              _ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _().playerNicknameBracket,
+                    title: (0, _._)("#isNickname"),
+                  },
+                  " *",
+                ),
+              _.createElement(_._, {
+                persona: __webpack_require__,
+              }),
+              _,
+              (__webpack_require__.m_bPlayerNamePending ||
+                __webpack_require__.m_bAvatarPending) &&
+                _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().PendingPersona,
+                    title: (0, _._)("#SteamChina_PendingPersonaName"),
+                  },
+                  _.createElement(_.zD7, null),
+                ),
+              _,
+            ),
+            !_ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().richPresenceContainer,
+                },
+                (_ || _) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _().gameName,
+                        _ && _().threeLines,
+                        _().richPresenceLabel,
+                        "no-drag",
+                      ),
+                    },
+                    _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().gameIsPrivateIcon,
+                          title: (0, _._)("#User_GameInfoHidden"),
+                        },
+                        _.createElement(_.jZl, null),
+                      ),
+                    _,
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().richPresenceLabel, "no-drag"),
+                    },
+                    _,
+                    " ",
+                  ),
+              ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      (0, _._)((_) => {
+        const {
+          persona: _,
+          bParenthesizeNicknames: __webpack_require__,
+          strNickname: _,
+          bIgnorePersonaStatus: _,
+          bDisableColoring: _,
+          className: _,
+          ..._
+        } = _;
+        let _ = _ && !__webpack_require__ ? _ : _.m_strPlayerName;
+        return _.createElement(
+          "span",
+          {
+            ..._,
+            className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
+          },
+          _.createElement(
+            "span",
+            {
+              className: _().playerName,
+            },
+            _ || " ",
+            __webpack_require__ &&
+              _ &&
+              _.createElement(
+                "span",
+                {
+                  className: _().playerNickname,
+                },
+                "(",
+                _,
+                ")",
+              ),
+          ),
+        );
+      });
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_) {
         const { bExpanded: _, setExpanded: __webpack_require__ } = _;
@@ -12675,8 +12623,7 @@
           (0, _._)(_ + 60 * _, _ + 60 * _, !0) + (_ ? "" : " " + _.format("z"))
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;

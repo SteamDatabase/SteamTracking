@@ -416,6 +416,28 @@ button._22iwdea7XXbiuZrrLZUU11._22iwdea7XXbiuZrrLZUU11:disabled:hover {
 .pCBfTw19y3z1htRCTD7Sk td {
   padding: 5px 8px;
 }
+._8MIrt7rQXkA0xE5sAjOee {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 4px;
+}
+._8MIrt7rQXkA0xE5sAjOee > * {
+  flex-grow: 0;
+}
+._8MIrt7rQXkA0xE5sAjOee > ._22b0C1Xi03QNdTFKsYypHR {
+  flex-grow: 1;
+}
+.yn_yu2EaUigYFm9QQAD7o {
+  border: 2px solid red;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  margin: 8px;
+}
+.yn_yu2EaUigYFm9QQAD7o svg {
+  height: 10px;
+  width: 10px;
+}
 ._3TzVFi3VdHXUk1AerBpZc- {
   padding-right: 10px;
 }

@@ -916,6 +916,114 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: [
+            "crowdin_metadata_for_clan_event",
+            _.ConvertTo64BitString(),
+            _,
+          ],
+          queryFn: async () => {
+            const _ = _._.Init(_._);
+            _.Body().set_steamid(_.ConvertTo64BitString()),
+              _.Body().set_itemid(_);
+            const _ = await _._.GetClanEventCrowdInMetadata(_, _);
+            return 1 != _.GetEResult() ? null : _.Body().toObject();
+          },
+        });
+      }
+      async function _(_, _) {
+        const _ = _._.Init(_._);
+        __webpack_require__.Body().set_steamid(_);
+        const _ = await _._.GetClanCrowdInMetadata(_, _);
+        if (42 === _.GetEResult())
+          return {
+            crowdin_project_id: null,
+            crowdin_directory_id: null,
+            push_by_default: !1,
+          };
+        if (1 !== _.GetEResult()) throw _.GetEResult();
+        return _.Body().toObject();
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          queryKey: ["clan_crowdin_mapping", _],
+          queryFn: async () => await _(_, _),
+        });
+      }
+      function _(_) {
+        return (function (_) {
+          const _ = (0, _._)(),
+            _ = (0, _._)({
+              queryKey: _.queryKey,
+              queryFn: async () => _.queryFn(_, _.args),
+            });
+          return _.children(_);
+        })({
+          queryKey: ["clan_crowdin_mapping", _.clanSteamId],
+          queryFn: _,
+          args: [_.clanSteamId],
+          children: _.children,
+        });
+      }
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const _ = _(_.clanInfo.clanSteamID.ConvertTo64BitString());
+        let _ = !1;
+        return (
+          _.isSuccess && (_ = _.data.push_by_default),
+          _.createElement(
+            _.Provider,
+            {
+              value: {
+                clanSteamId: _.clanInfo.clanSteamID,
+                bPushToCrowdInByDefault: _,
+              },
+            },
+            _.children,
+          )
+        );
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)();
+        return (0, _._)({
+          mutationKey: ["fetch_translation_for_clan_event", _, _, _],
+          mutationFn: async function () {
+            return await (async function (_, _, _, _) {
+              const _ = _._.Init(_._);
+              _.Body().set_language(_),
+                _.Body().set_steamid(_),
+                _.Body().set_itemid(_);
+              const _ = await _._.FetchTranslationFromCrowdIn(_, _);
+              if (1 != _.GetEResult())
+                throw new Error(
+                  `Error from FetchLocalizationForClanEventFromCrowdIn: ${_.GetErrorMessage()} (${_.GetEResult()})`,
+                );
+              return _.Body().toObject();
+            })(_, _, _, _);
+          },
+          retry: !1,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -2565,14 +2673,13 @@
               "div",
               {
                 className: _().PreviewImgCtn,
-                onClick: (_) => {
+                onClick: (_) =>
                   (0, _._)(
                     _.createElement(_, {
                       asset: _,
                     }),
                     (0, _._)(_),
-                  );
-                },
+                  ),
               },
               _.createElement(
                 "span",
@@ -2623,6 +2730,7 @@
           {
             bAlertDialog: !0,
             closeModal: __webpack_require__,
+            bAllowFullSize: !0,
           },
           _.createElement(
             "video",
@@ -2647,6 +2755,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2813,7 +2922,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3273,7 +3381,7 @@
                     (0, _._)("#selectimage_tip_dimensions_title"),
                   ),
                   ": ",
-                  (0, _._)("#selectimage_tip1", _, _),
+                  (0, _._)("#selectimage_tip1", (0, _._)(_), (0, _._)(_)),
                 ),
               Boolean(_.strWarning) &&
                 _.createElement(
@@ -3311,9 +3419,7 @@
             _.createElement(_, {
               clanSteamID: _.clanSteamID,
               title: _.title,
-              imageWidth: _,
               eventModel: _,
-              imageHeight: _,
               artworkType: _.artworkType,
               realms: _,
               appid: _,
@@ -4393,6 +4499,40 @@
                   ),
               ),
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (!_ || !_.BIsClanAccount()) return !1;
+        const _ = _._.Get().GetPartnerEventPermissions(_);
+        return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
+      }
+      function _(_) {
+        const { clanSteamID: _, _: __webpack_require__ } = _;
+        return _(_, _.requireAdmin)
+          ? _.createElement(
+              "div",
+              {
+                _: __webpack_require__,
+                className: (0, _._)(
+                  _.className,
+                  _.requireAdmin
+                    ? _.ValveOnlyAdminBackground
+                    : _.ValveOnlyBackground,
+                ),
+              },
+              _.children,
+            )
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

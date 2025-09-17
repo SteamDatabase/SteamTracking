@@ -54,8 +54,8 @@
       "use strict";
       a.d(t, { Gr: () => F, O9: () => O });
       var n = a(65946),
-        r = a(75844),
-        l = a(90626),
+        l = a(75844),
+        r = a(90626),
         i = a(22837),
         o = a(2160),
         s = a(64953),
@@ -72,14 +72,14 @@
             onDropFiles: t,
             renderDesciption: a,
             elAdditonalButtons: n,
-            elOverrideDragAndDropText: r,
+            elOverrideDragAndDropText: l,
           } = e,
           [i, o] = (0, p.hk)(t),
           [s, m] = (0, p.Ss)(t, {
             accept: "image/png, image/jpeg, image/gif, image/webp",
             multiple: !0,
           });
-        return l.createElement(
+        return r.createElement(
           "div",
           {
             ...i,
@@ -89,25 +89,25 @@
             ),
           },
           Boolean(a) && a(),
-          l.createElement(
+          r.createElement(
             "div",
             null,
-            r || (0, g.we)("#ImagePicker_DragAndDrop"),
+            l || (0, g.we)("#ImagePicker_DragAndDrop"),
           ),
-          l.createElement(
+          r.createElement(
             "div",
             { className: E().ImageUploadBar },
             s,
-            l.createElement(
+            r.createElement(
               "label",
               { onClick: m },
-              l.createElement(
+              r.createElement(
                 "span",
                 null,
                 (0, g.we)("#ImagePicker_OrBrowse"),
                 " ",
               ),
-              l.createElement(
+              r.createElement(
                 "span",
                 { className: E().SelectImageButton },
                 (0, g.we)("#selectimage_select_file"),
@@ -126,8 +126,8 @@
         C = a.n(A),
         h = a(12155),
         U = a(22797),
-        P = a(68797),
-        b = a(56011),
+        b = a(68797),
+        P = a(56011),
         y = a(66331),
         _ = a(27344),
         k = a.n(_),
@@ -136,7 +136,7 @@
         const {
             imageUploader: t,
             fnUploadComplete: a,
-            elOverrideDragAndDropText: r,
+            elOverrideDragAndDropText: l,
             forceResolution: i,
             elAdditonalButtons: o,
             rgRealmList: s,
@@ -145,40 +145,40 @@
             t.GetUploadImages(),
             c.O.Get().GetCurEditLanguage(),
           ]),
-          p = l.useCallback(
+          p = r.useCallback(
             async (e) => {
               let a = Array.from(e),
                 n = !0;
               for (let e = 0; e < a.length; e++) {
-                const r = a[e],
-                  { language: i } = (0, m.jj)(r?.name, u);
+                const l = a[e],
+                  { language: i } = (0, m.jj)(l?.name, u);
                 try {
                   const a = (0, m.PD)(i, u, s);
-                  (n = await t.AddImageForLanguage(r, a)),
+                  (n = await t.AddImageForLanguage(l, a)),
                     n ||
                       (console.error(
                         "ImageUploaderPanel.OnDropFiles: failed on i=" +
                           e +
                           " file=" +
-                          r.name,
+                          l.name,
                       ),
                       (0, T.pg)(
-                        l.createElement(D.KG, {
+                        r.createElement(D.KG, {
                           strDescription: (0, g.we)(
                             "#ImagePicker_Error",
-                            r.name,
+                            l.name,
                           ),
                         }),
                         window,
                       ));
                 } catch (e) {
-                  let t = (0, P.H)(e);
+                  let t = (0, b.H)(e);
                   console.error(
                     "ImageUploaderPanel.OnDropFiles: " + t.strErrorMsg,
                     t,
                   ),
                     (0, T.pg)(
-                      l.createElement(D.KG, {
+                      r.createElement(D.KG, {
                         strDescription: (0, g.we)(
                           "#EventError_Code",
                           t.strErrorMsg ?? "",
@@ -192,13 +192,13 @@
             },
             [u, t, s],
           ),
-          f = l.useMemo(
+          f = r.useMemo(
             () =>
               o instanceof Array
                 ? o
                 : [
-                    l.createElement(
-                      l.Fragment,
+                    r.createElement(
+                      r.Fragment,
                       { key: "elAdditonalButtons" },
                       o,
                     ),
@@ -208,21 +208,21 @@
         (0, n.q3)(() =>
           d.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
         );
-        return l.createElement(
+        return r.createElement(
           w,
           {
             onDropFiles: p,
             elAdditonalButtons: f,
-            elOverrideDragAndDropText: r,
+            elOverrideDragAndDropText: l,
           },
-          l.createElement(
-            l.Fragment,
+          r.createElement(
+            r.Fragment,
             null,
-            l.createElement(
+            r.createElement(
               "div",
               { className: k().UploadPreviewCtn },
               d.map((e) =>
-                l.createElement(B, {
+                r.createElement(S, {
                   key: "arttabupload_" + e.filename + "_" + e.uploadTime,
                   asset: e,
                   forceResolution: i,
@@ -232,7 +232,7 @@
               ),
             ),
           ),
-          l.createElement(N, {
+          r.createElement(N, {
             imageUploader: t,
             fnOnUploadImageRequested: async () => {
               const e = await t.UploadAllImages(i);
@@ -243,37 +243,37 @@
       }
       function N(e) {
         const { imageUploader: t, fnOnUploadImageRequested: a } = e,
-          [r] = (0, n.q3)(() => [t.GetUploadImages()]),
-          i = r.some((e) => "pending" == e.status),
-          o = r.some(
+          [l] = (0, n.q3)(() => [t.GetUploadImages()]),
+          i = l.some((e) => "pending" == e.status),
+          o = l.some(
             (e) =>
               "waiting" == e.status ||
               "uploading" == e.status ||
               "processing" == e.status,
           );
-        return l.createElement(
+        return r.createElement(
           "div",
           {
             style: { display: "flex" },
             className: k().UploadPreviewButtonsCtn,
           },
-          Boolean(r.length) &&
-            l.createElement(
+          Boolean(l.length) &&
+            r.createElement(
               d.$n,
               { style: { margin: "8px" }, onClick: a, disabled: !i },
               (0, g.we)("#ImageUpload_Upload"),
             ),
-          Boolean(r.length) &&
-            l.createElement(
+          Boolean(l.length) &&
+            r.createElement(
               d.$n,
               { style: { margin: "8px" }, onClick: t.ClearImages, disabled: o },
               (0, g.we)("#ImageUpload_Clear"),
             ),
         );
       }
-      const B = (0, r.PA)(function (e) {
+      const S = (0, l.PA)(function (e) {
         const { asset: t, fnOnRemove: a, languageRealms: n } = e,
-          r = t.ImageOptions?.map((e) => {
+          l = t.ImageOptions?.map((e) => {
             let a,
               n = e?.fnGetLabelText();
             e.bEnforceDimensions && (n += ` - ${e.width}x${e.height}`),
@@ -302,37 +302,37 @@
             : c.error && (f = (0, g.we)("#ImageUpload_Invalid")));
         let E;
         const w = t.GetCurrentImageOption();
-        w && (E = r?.find((e) => e.data.sKey == w.sKey)?.data);
-        E || (E = r?.[0]?.data);
-        return l.createElement(
+        w && (E = l?.find((e) => e.data.sKey == w.sKey)?.data);
+        E || (E = l?.[0]?.data);
+        return r.createElement(
           "div",
           { className: k().UploadPreview },
-          l.createElement(
+          r.createElement(
             "div",
             { className: k().UploadPreviewDelete, onClick: () => a(t) },
-            l.createElement(h.sED, null),
+            r.createElement(h.sED, null),
           ),
-          l.createElement(S, { asset: t }),
+          r.createElement(B, { asset: t }),
           m &&
-            l.createElement(d.m, {
+            r.createElement(d.m, {
               strDropDownClassName: I().DropDownScroll,
               rgOptions: m,
               selectedOption: t.language,
               onChange: (e) => (t.language = e.data),
               disabled: !p,
             }),
-          r &&
-            r?.length > 1 &&
-            l.createElement(d.m, {
+          l &&
+            l?.length > 1 &&
+            r.createElement(d.m, {
               label: t.GetImageOptionLabel(),
-              rgOptions: r,
+              rgOptions: l,
               selectedOption: E,
               onChange: (e) => t.SetCurrentImageOption(e.data),
               disabled: !p,
             }),
           p &&
             c.warnings?.map((e, t) =>
-              l.createElement(
+              r.createElement(
                 "div",
                 { key: `warning${t}`, className: k().UploadPreviewWarning },
                 e,
@@ -340,13 +340,13 @@
             ),
           p &&
             c.messages?.map((e, t) =>
-              l.createElement(
+              r.createElement(
                 "div",
                 { key: `message${t}`, className: k().UploadPreviewMessage },
                 e,
               ),
             ),
-          l.createElement(
+          r.createElement(
             "div",
             {
               className: (0, u.A)({
@@ -356,27 +356,27 @@
             },
             f,
             (0, x.o)(t.status) &&
-              l.createElement(
+              r.createElement(
                 "div",
                 { className: C().FlexCenter },
-                l.createElement(U.t, { size: "small" }),
+                r.createElement(U.t, { size: "small" }),
               ),
           ),
-          l.createElement(
+          r.createElement(
             "div",
             { className: k().UploadPreviewError },
             t.message,
           ),
           p &&
             c.error &&
-            l.createElement(
+            r.createElement(
               "div",
               { className: k().UploadPreviewError },
               c.error,
             ),
           p &&
             c.needsCrop &&
-            l.createElement(
+            r.createElement(
               d.jn,
               {
                 onClick: () =>
@@ -384,7 +384,7 @@
                     if (t instanceof s.M7) {
                       t.ResetImage();
                       const a = window,
-                        n = l.createElement(y.q, {
+                        n = r.createElement(y.q, {
                           ownerWin: a,
                           uploadFile: t,
                           forceResolution: e.forceResolution,
@@ -405,25 +405,24 @@
             ),
         );
       });
-      function S(e) {
+      function B(e) {
         const { asset: t } = e;
         return t.BIsVideo()
-          ? l.createElement(
+          ? r.createElement(
               "div",
               {
                 className: k().PreviewImgCtn,
-                onClick: (e) => {
-                  (0, T.pg)(l.createElement(G, { asset: t }), (0, b.uX)(e));
-                },
+                onClick: (e) =>
+                  (0, T.pg)(r.createElement(G, { asset: t }), (0, P.uX)(e)),
               },
-              l.createElement(
+              r.createElement(
                 "span",
                 { className: k().PreviewImgInfo },
                 t.width,
                 " x ",
                 t.height,
               ),
-              l.createElement(
+              r.createElement(
                 "video",
                 {
                   height: 120,
@@ -432,16 +431,16 @@
                   loop: !0,
                   muted: !0,
                 },
-                l.createElement("source", { src: t.dataUrl }),
+                r.createElement("source", { src: t.dataUrl }),
               ),
             )
-          : l.createElement(
+          : r.createElement(
               "div",
               {
                 className: k().PreviewImgCtn,
                 style: { backgroundImage: `url(${t.dataUrl})` },
               },
-              l.createElement(
+              r.createElement(
                 "span",
                 { className: k().PreviewImgInfo },
                 t.width,
@@ -452,13 +451,13 @@
       }
       function G(e) {
         const { asset: t, closeModal: a } = e;
-        return l.createElement(
+        return r.createElement(
           D.o0,
-          { bAlertDialog: !0, closeModal: a },
-          l.createElement(
+          { bAlertDialog: !0, closeModal: a, bAllowFullSize: !0 },
+          r.createElement(
             "video",
             { controls: !0, autoPlay: !0, loop: !0, muted: !0 },
-            l.createElement("source", { src: t.dataUrl }),
+            r.createElement("source", { src: t.dataUrl }),
           ),
         );
       }
@@ -481,8 +480,8 @@
       "use strict";
       a.d(t, { K: () => I });
       var n = a(90626),
-        r = a(92298),
-        l = a.n(r),
+        l = a(92298),
+        r = a.n(l),
         i = a(44894),
         o = a(44165),
         s = a(95695),
@@ -500,7 +499,7 @@
         const {
           nLatestTime: t,
           nEarliestTime: a,
-          fnGetTimeToUpdate: r,
+          fnGetTimeToUpdate: l,
           onError: s,
           strAlsoShowTimeZone: g,
           disabled: f,
@@ -508,8 +507,8 @@
           className: C,
           strDescToolTip: h,
           strDescription: U,
-          bShowTimeZone: P,
-          strInvalidDateTimeLocalizedMsg: b,
+          bShowTimeZone: b,
+          strInvalidDateTimeLocalizedMsg: P,
           fnIsValidDateTime: y,
           bWeekdaysOnly: _,
           fnSetTimeToUpdate: k,
@@ -522,12 +521,12 @@
           })() || x
             ? v
             : w;
-        const N = r(),
-          [B, S] = n.useState(N > 0 ? E()(1e3 * N) : null),
+        const N = l(),
+          [S, B] = n.useState(N > 0 ? E()(1e3 * N) : null),
           [G, F] = n.useState(),
           [R, L] = n.useState(),
-          W = (function (e, t, a, r, l) {
-            const i = r && r(),
+          W = (function (e, t, a, l, r) {
+            const i = l && l(),
               o = t && !T(t).isValid(),
               s = e && !A(e).isValid();
             let m = null;
@@ -542,11 +541,11 @@
                   : "string" == typeof i && (m = i));
             return (
               n.useEffect(() => {
-                l && l(m);
-              }, [m, l]),
+                r && r(m);
+              }, [m, r]),
               m
             );
-          })(G, R, b, y, s),
+          })(G, R, P, y, s),
           M = !s && W;
         let V, Y;
         if (t && a && t == a && a > o.HD.GetTimeNowWithOverride()) {
@@ -572,13 +571,13 @@
             (e) => {
               if (f) return;
               L(null);
-              const t = r(),
+              const t = l(),
                 a = E().unix(t || o.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(a.hour()),
                 e.minute(a.minute()),
                 e.second(0),
                 k(e.unix()),
-                S(e);
+                B(e);
             },
             L,
           ),
@@ -591,7 +590,7 @@
             (e) => {
               if (f) return;
               F(null);
-              let t = r(),
+              let t = l(),
                 n = 0;
               if (t) {
                 const a = E().unix(t);
@@ -605,7 +604,7 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              k(n), S(E().unix(n));
+              k(n), B(E().unix(n));
             },
             F,
           );
@@ -634,23 +633,23 @@
             n.createElement(
               "div",
               { className: (0, c.A)(m().InputBorder, p().TimeBlock) },
-              n.createElement(l(), {
+              n.createElement(r(), {
                 onChange: J,
                 timeFormat: !1,
-                value: null != R ? R : B,
+                value: null != R ? R : S,
                 isValidDate: (e) =>
                   !f &&
                   (function (e, t, a, n) {
-                    const r = E().unix(e).hour(0).seconds(0).minute(0);
-                    let l = n.unix() >= r.unix();
-                    if (l && t && t >= e) {
+                    const l = E().unix(e).hour(0).seconds(0).minute(0);
+                    let r = n.unix() >= l.unix();
+                    if (r && t && t >= e) {
                       const e = E().unix(t).hour(23).minute(59).seconds(59);
-                      l = n.unix() <= e.unix();
+                      r = n.unix() <= e.unix();
                     }
-                    l &&
+                    r &&
                       a &&
-                      ((0 != n.weekday() && 6 != n.weekday()) || (l = !1));
-                    return l;
+                      ((0 != n.weekday() && 6 != n.weekday()) || (r = !1));
+                    return r;
                   })(a, t, _, e),
                 initialValue: Y,
                 inputProps: {
@@ -675,12 +674,12 @@
             n.createElement(
               "div",
               { className: (0, c.A)(m().InputBorder, p().TimeBlock) },
-              n.createElement(l(), {
+              n.createElement(r(), {
                 onChange: X,
                 dateFormat: !1,
                 timeFormat: O,
                 timeConstraints: V,
-                value: null != G ? G : B,
+                value: null != G ? G : S,
                 inputProps: {
                   placeholder: (0, d.we)("#DateTimePicker_Enter_Time"),
                   className: (0, c.A)(
@@ -700,7 +699,7 @@
                   H.format("LT"),
                 ),
             ),
-            P &&
+            b &&
               n.createElement(
                 "div",
                 null,
@@ -726,20 +725,20 @@
         );
       }
       function D(e, t, a) {
-        const [r, l] = n.useState(!1);
+        const [l, r] = n.useState(!1);
         return {
           fnOnInput: (e) => {
-            a(e), l(!0);
+            a(e), r(!0);
           },
           fnOnInputBlur: (a) => {
-            if (r) {
+            if (l) {
               const n = e(a);
               n.isValid() && t(n);
             }
-            l(!1);
+            r(!1);
           },
           fnOnChange: (a) => {
-            if (!r)
+            if (!l)
               if ("string" == typeof a) {
                 const n = e(a);
                 n.isValid() && t(n);
@@ -768,11 +767,11 @@
       "use strict";
       a.d(t, { Ss: () => i, hk: () => o });
       var n = a(90626),
-        r = a(72739),
-        l = a(56011);
+        l = a(72739),
+        r = a(56011);
       function i(e, t) {
         const a = n.useRef(void 0),
-          l = n.useCallback(
+          r = n.useCallback(
             (t) => {
               t.currentTarget.files.length > 0 &&
                 (e(t.currentTarget.files), (t.currentTarget.value = ""));
@@ -781,7 +780,7 @@
           ),
           i = n.useCallback(() => a.current.click(), []);
         return [
-          r.createPortal(
+          l.createPortal(
             n.createElement(
               "form",
               { onSubmit: s, style: { display: "none" } },
@@ -789,7 +788,7 @@
                 ...t,
                 type: "file",
                 ref: a,
-                onChange: l,
+                onChange: r,
               }),
             ),
             window.document.body,
@@ -807,7 +806,7 @@
                 a(!0);
             }, []),
             onDragLeave: n.useCallback((e) => {
-              l.NO(e) && a(!1);
+              r.NO(e) && a(!1);
             }, []),
             onDragEnd: n.useCallback(() => a(!1), []),
             onDragOver: t ? s : void 0,

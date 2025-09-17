@@ -1622,7 +1622,7 @@
         ),
         ie = u.lazy(() => r.e(4262).then(r.bind(r, 30899))),
         se = u.lazy(() =>
-          Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 78116)),
+          Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 23539)),
         ),
         ae = u.lazy(() =>
           Promise.all([r.e(4298), r.e(4226)]).then(r.bind(r, 34044)),
@@ -1672,7 +1672,6 @@
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(1747),
             r.e(7352),
             r.e(8758),
             r.e(8350),
@@ -1708,7 +1707,6 @@
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(1747),
             r.e(7352),
             r.e(8758),
             r.e(8350),
@@ -1744,7 +1742,6 @@
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(1747),
             r.e(7352),
             r.e(8758),
             r.e(8350),
@@ -1780,12 +1777,11 @@
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(1747),
             r.e(7352),
             r.e(8758),
             r.e(8350),
             r.e(4268),
-          ]).then(r.bind(r, 63554)),
+          ]).then(r.bind(r, 90365)),
         ),
         de = u.lazy(() =>
           Promise.all([r.e(5344), r.e(5193), r.e(5933)]).then(r.bind(r, 94256)),
@@ -1863,7 +1859,6 @@
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(1747),
             r.e(7352),
             r.e(8758),
             r.e(8350),
@@ -1908,7 +1903,6 @@
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(1747),
             r.e(7352),
             r.e(8758),
             r.e(8350),
@@ -1973,7 +1967,6 @@
             r.e(6700),
             r.e(9352),
             r.e(8995),
-            r.e(1747),
             r.e(7352),
             r.e(8758),
             r.e(8350),
@@ -2377,7 +2370,7 @@
                 new B.D(g.TS.WEBAPI_BASE_URL).GetServiceTransport(),
               ),
               await Fe(g.TS.LANGUAGE),
-              Le.H(document.getElementById("application_root")).render(
+              Le.createRoot(document.getElementById("application_root")).render(
                 u.createElement(Re, {}),
               ))
             : ((0, g.XJ)(),
@@ -3073,7 +3066,7 @@
             const e = (0, o.O)(S);
             I.Root.SetProperties({ ...B, layout: e });
           });
-        const T = (0, i.Ue)(R, f.ref);
+        const T = (0, i.Ue)(R, f.props.ref);
         return s.createElement(
           p,
           { tree: M ? null : I, disableFocusClasses: w || M },
@@ -3716,50 +3709,50 @@
         u = r(21109),
         m = r(74882);
       const d = a.createContext({ Component: o.D0 });
-      const p = a.forwardRef(function (e, t) {
+      function p(e) {
         const {
-            "flow-children": r,
-            onActivate: i,
-            onCancel: p,
-            focusClassName: h,
-            focusWithinClassName: g,
-            ..._
+            "flow-children": t,
+            onActivate: r,
+            onCancel: i,
+            focusClassName: p,
+            focusWithinClassName: h,
+            ...g
           } = e,
-          { elemProps: f, navOptions: b, gamepadEvents: C } = (0, o.sl)(_);
-        let w = {};
-        const M = (0, c.O)(r);
-        M != l.xj.NONE && (w.layout = M),
-          i &&
-            ((f.onClick = f.onClick || i), (C.onOKButton = C.onOKButton || i)),
-          C.onOKButton &&
-            void 0 === b.focusable &&
-            void 0 === b.focusableIfEmpty &&
-            (b.focusable = !0),
-          p && (C.onCancelButton = C.onCancelButton || p);
-        const { ref: S, node: v } = (0, o.qp)({ ...w, ...b }),
-          y = (0, u.bJ)();
-        (f.className = s()(f.className, "Panel", y && "Focusable")),
-          (0, m.Ui)(C, S);
-        const B = (0, n.Ue)(S, t);
-        (!b.focusable && !b.focusableIfEmpty) ||
-          (v && v.Tree.BUseVirtualFocus()) ||
-          (f.tabIndex = f.tabIndex || 0),
-          b.focusable && (i || C.onOKButton) && (f.role ??= "button");
-        const E = (0, a.useContext)(d).Component;
+          { elemProps: _, navOptions: f, gamepadEvents: b } = (0, o.sl)(g);
+        let C = {};
+        const w = (0, c.O)(t);
+        w != l.xj.NONE && (C.layout = w),
+          r &&
+            ((_.onClick = _.onClick || r), (b.onOKButton = b.onOKButton || r)),
+          b.onOKButton &&
+            void 0 === f.focusable &&
+            void 0 === f.focusableIfEmpty &&
+            (f.focusable = !0),
+          i && (b.onCancelButton = b.onCancelButton || i);
+        const { ref: M, node: S } = (0, o.qp)({ ...C, ...f }),
+          v = (0, u.bJ)();
+        (_.className = s()(_.className, "Panel", v && "Focusable")),
+          (0, m.Ui)(b, M);
+        const y = (0, n.Ue)(M, e.ref);
+        (!f.focusable && !f.focusableIfEmpty) ||
+          (S && S.Tree.BUseVirtualFocus()) ||
+          (_.tabIndex = _.tabIndex || 0),
+          f.focusable && (r || b.onOKButton) && (_.role ??= "button");
+        const B = (0, a.useContext)(d).Component;
         return a.createElement(
           o.TJ.Provider,
-          { value: v },
-          v
-            ? a.createElement(E, {
-                ...f,
-                divRef: B,
-                node: v,
-                focusClassName: s()(h, "gpfocus"),
-                focusWithinClassName: s()(g, "gpfocuswithin"),
+          { value: S },
+          S
+            ? a.createElement(B, {
+                ..._,
+                divRef: y,
+                node: S,
+                focusClassName: s()(p, "gpfocus"),
+                focusWithinClassName: s()(h, "gpfocuswithin"),
               })
-            : a.createElement("div", { ...f, ref: B }),
+            : a.createElement("div", { ..._, ref: y }),
         );
-      });
+      }
     },
     75204: (e, t, r) => {
       "use strict";
@@ -3906,6 +3899,7 @@
       });
       var n,
         i = r(88006);
+      r(90626);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -18335,7 +18329,8 @@
             ((this.m_container =
               this.m_parent.ownerDocument.createElement("div")),
             this.m_parent.appendChild(this.m_container)),
-            this.m_reactRoot || (this.m_reactRoot = n.H(this.m_container)),
+            this.m_reactRoot ||
+              (this.m_reactRoot = n.createRoot(this.m_container)),
             this.m_reactRoot.render(e);
         }
         Hide(e) {
@@ -19993,11 +19988,18 @@
       })(n || (n = {}));
       const s = new (class {
         m_fnCallbackOnPlaySound = new i.lu();
+        m_fnCallbackOnSuppressSound = new i.lu();
         RegisterCallbackOnPlaySound(e) {
           return this.m_fnCallbackOnPlaySound.Register(e);
         }
         PlayNavSound(e, t) {
           this.m_fnCallbackOnPlaySound.Dispatch(e, t);
+        }
+        RegisterCallbackOnSuppressNavImminentSound(e) {
+          return this.m_fnCallbackOnSuppressSound.Register(e);
+        }
+        SuppressImminentNavSound() {
+          this.m_fnCallbackOnSuppressSound.Dispatch();
         }
       })();
     },
@@ -24138,11 +24140,15 @@
               n = (0, d.xA)("scroll", t),
               i = (0, d.xA)("scroll", r),
               a = s.useCallback(
-                (t) => (e.m_flPageListScrollTop = t?.scrollTop ?? 0),
+                (t) => {
+                  e.m_flPageListScrollTop = t?.scrollTop ?? 0;
+                },
                 [e],
               ),
               o = s.useCallback(
-                (t) => (e.m_flPageScrollTop = t?.scrollTop ?? 0),
+                (t) => {
+                  e.m_flPageScrollTop = t?.scrollTop ?? 0;
+                },
                 [e],
               ),
               l = (0, d.Ue)(n, a),
@@ -34204,6 +34210,7 @@
         m_mapFallbackTokens = new Map();
         m_cbkTokensChanged = new c.lu();
         m_rgLocalesToUse;
+        m_bReportIndividualMissingTokens = !0;
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
@@ -34230,11 +34237,12 @@
               }
           return t;
         }
-        InitFromObjects(e, t, r, n, i) {
-          i || this.m_mapTokens.clear();
-          const s = { ...(r || {}), ...e },
-            a = { ...(n || {}), ...(t || {}) };
-          this.AddTokens(s, a), this.m_cbkTokensChanged.Dispatch();
+        InitFromObjects(e, t, r, n, i, s) {
+          s && (this.m_bReportIndividualMissingTokens = !1),
+            i || this.m_mapTokens.clear();
+          const a = { ...(r || {}), ...e },
+            o = { ...(n || {}), ...(t || {}) };
+          this.AddTokens(a, o), this.m_cbkTokensChanged.Dispatch();
         }
         InitDirect(e, t) {
           this.m_mapTokens.clear(),
@@ -34298,9 +34306,10 @@
             return;
           let n = this.m_mapTokens.get(e.substring(1));
           if (void 0 !== n) return n;
-          t ||
-            !m.sm_ErrorReportingStore ||
-            r ||
+          !t &&
+            m.sm_ErrorReportingStore &&
+            !r &&
+            this.m_bReportIndividualMissingTokens &&
             m.sm_ErrorReportingStore.ReportError(
               new Error(
                 `Unable to find localization token '${e}' for language '${a.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,

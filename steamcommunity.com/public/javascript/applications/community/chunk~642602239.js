@@ -3217,8 +3217,9 @@
         if (!t.is_online) return null;
         const c = t.HasStateFlag(512),
           d = t.HasStateFlag(2048),
-          p = t.IsOnSteamDeck() && !d,
-          h = !p && !d && t.HasStateFlag(1024);
+          p = 544 == t.m_eGamingDeviceType,
+          h = 545 == t.m_eGamingDeviceType,
+          g = !p && !h && !d && t.HasStateFlag(1024);
         return n.createElement(
           n.Fragment,
           null,
@@ -3252,7 +3253,7 @@
               },
               n.createElement(l.MUh, null),
             ),
-          h &&
+          g &&
             n.createElement(
               "div",
               {
@@ -3278,6 +3279,21 @@
                   (0, s.rO)(t),
                 ),
                 title: (0, a.we)("#Platform_Hint_SteamDeck"),
+                ...i,
+              },
+              n.createElement(l.DQe, null),
+            ),
+          h &&
+            n.createElement(
+              "div",
+              {
+                className: (0, o.A)(
+                  r,
+                  m().PersonaStatusIcon,
+                  m().SteamDeckIcon,
+                  (0, s.rO)(t),
+                ),
+                title: (0, a.we)("#Platform_Hint_LegionGoS"),
                 ...i,
               },
               n.createElement(l.DQe, null),

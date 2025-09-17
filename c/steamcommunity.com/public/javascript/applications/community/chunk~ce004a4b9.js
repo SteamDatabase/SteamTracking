@@ -1139,6 +1139,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  cooldown_seconds_remaining: {
+                    _: 5,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m

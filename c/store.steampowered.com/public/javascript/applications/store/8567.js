@@ -375,6 +375,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return "PrivateApps_" + _._.accountid;
@@ -383,8 +384,18 @@
         return _._.IN_STEAMUI;
       }
       async function _(_, _) {
-        const _ = _();
-        await _.StoreObject(_, _);
+        try {
+          const _ = _();
+          await _.StoreObject(_, _);
+        } catch (_) {
+          const _ = new Error(
+            `WritePrivateAppsToLocalCache failed with result ${_?.result}, ${_?.message}`,
+          );
+          (0, _._)().ReportError(_, {
+            bIncludeMessageInIdentifier: !0,
+          }),
+            console.warn(_);
+        }
       }
       const _ = ["AccountPrivateApps"];
       function _(_) {

@@ -11,19 +11,19 @@
       function r(t, e, s) {
         const r = s || i,
           o = (r.__SENTRY__ = r.__SENTRY__ || {}),
-          a = (o[n] = o[n] || {});
-        return a[t] || (a[t] = e());
+          c = (o[n] = o[n] || {});
+        return c[t] || (c[t] = e());
       }
       function o() {
-        return a(i), i;
+        return c(i), i;
       }
-      function a(t) {
+      function c(t) {
         const e = (t.__SENTRY__ = t.__SENTRY__ || {});
         return (e.version = e.version || n), (e[n] = e[n] || {});
       }
-      const c = Object.prototype.toString;
+      const a = Object.prototype.toString;
       function h(t, e) {
-        return c.call(t) === `[object ${e}]`;
+        return a.call(t) === `[object ${e}]`;
       }
       function u(t) {
         return h(t, "Object");
@@ -75,10 +75,10 @@
           n = Date.now(),
           r = t.timeOrigin ? Math.abs(t.timeOrigin + s - n) : e,
           o = r < e,
-          a = t.timing && t.timing.navigationStart,
-          c = "number" == typeof a ? Math.abs(a + s - n) : e;
-        o || c < e
-          ? r <= c
+          c = t.timing && t.timing.navigationStart,
+          a = "number" == typeof c ? Math.abs(c + s - n) : e;
+        o || a < e
+          ? r <= a
             ? ((m = "timeOrigin"), t.timeOrigin)
             : (m = "navigationStart")
           : (m = "dateNow");
@@ -326,17 +326,17 @@
               tags: i,
               extra: r,
               user: o,
-              contexts: a,
-              level: c,
+              contexts: c,
+              level: a,
               fingerprint: h = [],
               propagationContext: p,
             } = s || {};
           return (
             (this._tags = { ...this._tags, ...i }),
             (this._extra = { ...this._extra, ...r }),
-            (this._contexts = { ...this._contexts, ...a }),
+            (this._contexts = { ...this._contexts, ...c }),
             o && Object.keys(o).length && (this._user = o),
-            c && (this._level = c),
+            a && (this._level = a),
             h.length && (this._fingerprint = h),
             p && (this._propagationContext = p),
             n && (this._requestSession = n),
@@ -536,7 +536,7 @@
         }
       }
       function $() {
-        const t = a(o());
+        const t = c(o());
         return (t.stack =
           t.stack ||
           new R(
@@ -555,7 +555,7 @@
         return $().withScope(() => t($().getIsolationScope()));
       }
       function M(t) {
-        const e = a(t);
+        const e = c(t);
         return e.acs
           ? e.acs
           : {
@@ -567,22 +567,22 @@
               getIsolationScope: () => $().getIsolationScope(),
             };
       }
-      function q() {
+      function N() {
         return M(o()).getCurrentScope();
       }
       new WeakMap();
-      function N(t) {
+      function V(t) {
         if (t)
           return (function (t) {
             return t instanceof P || "function" == typeof t;
           })(t) ||
             (function (t) {
-              return Object.keys(t).some((t) => V.includes(t));
+              return Object.keys(t).some((t) => q.includes(t));
             })(t)
             ? { captureContext: t }
             : t;
       }
-      const V = [
+      const q = [
         "user",
         "level",
         "extra",
@@ -608,7 +608,7 @@
           projectId: t.projectId,
         };
       }
-      function Q(t) {
+      function B(t) {
         const e =
           "string" == typeof t
             ? (function (t) {
@@ -617,13 +617,13 @@
                   return void y(() => {
                     console.error(`Invalid Sentry Dsn: ${t}`);
                   });
-                const [s, n, i = "", r = "", o = "", a = ""] = e.slice(1);
-                let c = "",
-                  h = a;
+                const [s, n, i = "", r = "", o = "", c = ""] = e.slice(1);
+                let a = "",
+                  h = c;
                 const u = h.split("/");
                 if (
                   (u.length > 1 &&
-                    ((c = u.slice(0, -1).join("/")), (h = u.pop())),
+                    ((a = u.slice(0, -1).join("/")), (h = u.pop())),
                   h)
                 ) {
                   const t = h.match(/^\d+/);
@@ -632,7 +632,7 @@
                 return T({
                   host: r,
                   pass: i,
-                  path: c,
+                  path: a,
                   projectId: h,
                   port: o,
                   protocol: s,
@@ -664,36 +664,36 @@
         )
           return e;
       }
-      function B(t) {
+      function W(t) {
         const e = t.protocol ? `${t.protocol}:` : "",
           s = t.port ? `:${t.port}` : "";
         return `${e}//${t.host}${s}${t.path ? `/${t.path}` : ""}/api/`;
       }
-      const H = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__,
-        W = i;
-      function A(t = {}) {
-        if (!W.document)
+      const Q = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__,
+        A = i;
+      function F(t = {}) {
+        if (!A.document)
           return void (
-            H && E.error("Global document not defined in showReportDialog call")
+            Q && E.error("Global document not defined in showReportDialog call")
           );
-        const e = q(),
+        const e = N(),
           s = e.getClient(),
           n = s && s.getDsn();
         if (!n)
           return void (
-            H && E.error("DSN not configured for showReportDialog call")
+            Q && E.error("DSN not configured for showReportDialog call")
           );
         if ((e && (t.user = { ...e.getUser(), ...t.user }), !t.eventId)) {
           const e = U();
           e && (t.eventId = e);
         }
-        const i = W.document.createElement("script");
+        const i = A.document.createElement("script");
         (i.async = !0),
           (i.crossOrigin = "anonymous"),
           (i.src = (function (t, e) {
-            const s = Q(t);
+            const s = B(t);
             if (!s) return "";
-            const n = `${B(s)}embed/error-page/`;
+            const n = `${W(s)}embed/error-page/`;
             let i = `dsn=${(function (t, e = !1) {
               const {
                 host: s,
@@ -701,10 +701,10 @@
                 pass: i,
                 port: r,
                 projectId: o,
-                protocol: a,
-                publicKey: c,
+                protocol: c,
+                publicKey: a,
               } = t;
-              return `${a}://${c}${e && i ? `:${i}` : ""}@${s}${r ? `:${r}` : ""}/${n ? `${n}/` : n}${o}`;
+              return `${c}://${a}${e && i ? `:${i}` : ""}@${s}${r ? `:${r}` : ""}/${n ? `${n}/` : n}${o}`;
             })(s)}`;
             for (const t in e)
               if ("dsn" !== t && "onClose" !== t)
@@ -725,30 +725,30 @@
               try {
                 r();
               } finally {
-                W.removeEventListener("message", t);
+                A.removeEventListener("message", t);
               }
           };
-          W.addEventListener("message", t);
+          A.addEventListener("message", t);
         }
-        const o = W.document.head || W.document.body;
+        const o = A.document.head || A.document.body;
         o
           ? o.appendChild(i)
-          : H &&
+          : Q &&
             E.error(
               "Not injecting report dialog. No injection point found in HTML",
             );
       }
       s(904);
-      var F = s(90626);
+      var H = s(90626);
       const Y = "undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
       function G(t, { componentStack: e }, s) {
         if (
           (function (t) {
             const e = t.match(/^([^.]+)/);
             return null !== e && parseInt(e[0]) >= 17;
-          })(F.version) &&
+          })(H.version) &&
           (function (t) {
-            switch (c.call(t)) {
+            switch (a.call(t)) {
               case "[object Error]":
               case "[object Exception]":
               case "[object DOMException]":
@@ -773,20 +773,20 @@
             })(t, s);
         }
         return (function (t, e) {
-          return q().captureException(t, N(e));
+          return N().captureException(t, V(e));
         })(t, {
           ...s,
           captureContext: { contexts: { react: { componentStack: e } } },
         });
       }
       const z = { componentStack: null, error: null, eventId: null };
-      class J extends F.Component {
+      class J extends H.Component {
         constructor(t) {
           super(t),
             J.prototype.__init.call(this),
             (this.state = z),
             (this._openFallbackReportDialog = !0);
-          const e = q().getClient();
+          const e = N().getClient();
           e &&
             t.showDialog &&
             ((this._openFallbackReportDialog = !1),
@@ -794,7 +794,7 @@
               !e.type &&
                 this._lastEventId &&
                 e.event_id === this._lastEventId &&
-                A({ ...t.dialogOptions, eventId: this._lastEventId });
+                F({ ...t.dialogOptions, eventId: this._lastEventId });
             })));
         }
         componentDidCatch(t, e) {
@@ -803,8 +803,8 @@
             {
               beforeCapture: i,
               onError: r,
-              showDialog: a,
-              dialogOptions: c,
+              showDialog: c,
+              dialogOptions: a,
             } = this.props;
           !(function (...t) {
             const e = M(o());
@@ -819,9 +819,9 @@
               mechanism: { handled: !!this.props.fallback },
             });
             r && r(t, n, h),
-              a &&
+              c &&
                 ((this._lastEventId = h),
-                this._openFallbackReportDialog && A({ ...c, eventId: h })),
+                this._openFallbackReportDialog && F({ ...a, eventId: h })),
               this.setState({ error: t, componentStack: s, eventId: h });
           });
         }
@@ -851,14 +851,14 @@
             return (
               (e =
                 "function" == typeof t
-                  ? F.createElement(t, {
+                  ? H.createElement(t, {
                       error: s.error,
                       componentStack: s.componentStack,
                       resetError: this.resetErrorBoundary,
                       eventId: s.eventId,
                     })
                   : t),
-              F.isValidElement(e)
+              H.isValidElement(e)
                 ? e
                 : (t &&
                     Y &&
@@ -871,7 +871,7 @@
       }
     },
     30724: (t, e, s) => {
-      s.d(e, { q: () => a });
+      s.d(e, { q: () => c });
       var n = s(48767),
         i = s(45995),
         r = class extends n.$ {
@@ -906,8 +906,8 @@
             const { state: r } = t,
               o = super.createResult(t, e),
               {
-                isFetching: a,
-                isRefetching: c,
+                isFetching: c,
+                isRefetching: a,
                 isError: h,
                 isRefetchError: u,
               } = o,
@@ -916,9 +916,9 @@
                   ? void 0
                   : n.direction,
               l = h && "forward" === p,
-              d = a && "forward" === p,
+              d = c && "forward" === p,
               _ = h && "backward" === p,
-              f = a && "backward" === p;
+              f = c && "backward" === p;
             return {
               ...o,
               fetchNextPage: this.fetchNextPage,
@@ -930,12 +930,12 @@
               isFetchPreviousPageError: _,
               isFetchingPreviousPage: f,
               isRefetchError: u && !l && !_,
-              isRefetching: c && !d && !f,
+              isRefetching: a && !d && !f,
             };
           }
         },
         o = s(25081);
-      function a(t, e) {
+      function c(t, e) {
         return (0, o.t)(t, r, e);
       }
     },
@@ -945,8 +945,8 @@
         i,
         r,
         o,
-        a,
         c,
+        a,
         h,
         u,
         p,
@@ -980,20 +980,20 @@
             (0, E.VK)(this, i, void 0),
             (0, E.VK)(this, r, void 0),
             (0, E.VK)(this, o, void 0),
-            (0, E.VK)(this, a, void 0),
             (0, E.VK)(this, c, void 0),
+            (0, E.VK)(this, a, void 0),
             (0, E.VK)(this, h, void 0),
             (0, E.VK)(this, u, void 0),
             (0, E.OV)(this, n, t),
             (0, E.OV)(this, o, s),
             (0, E.OV)(this, r, []),
-            (0, E.OV)(this, a, []),
+            (0, E.OV)(this, c, []),
             (0, E.OV)(this, i, []),
             this.setQueries(e);
         }
         onSubscribe() {
           1 === this.listeners.size &&
-            (0, E.S7)(this, a).forEach((t) => {
+            (0, E.S7)(this, c).forEach((t) => {
               t.subscribe((e) => {
                 (0, E.jq)(this, m, S).call(this, t, e);
               });
@@ -1004,7 +1004,7 @@
         }
         destroy() {
           (this.listeners = new Set()),
-            (0, E.S7)(this, a).forEach((t) => {
+            (0, E.S7)(this, c).forEach((t) => {
               t.destroy();
             });
         }
@@ -1012,16 +1012,16 @@
           (0, E.OV)(this, r, t),
             (0, E.OV)(this, o, e),
             w.j.batch(() => {
-              const t = (0, E.S7)(this, a),
+              const t = (0, E.S7)(this, c),
                 e = (0, E.jq)(this, f, g).call(this, (0, E.S7)(this, r));
               e.forEach((t) =>
                 t.observer.setOptions(t.defaultedQueryOptions, s),
               );
               const n = e.map((t) => t.observer),
                 o = n.map((t) => t.getCurrentResult()),
-                c = n.some((e, s) => e !== t[s]);
-              (t.length !== n.length || c) &&
-                ((0, E.OV)(this, a, n),
+                a = n.some((e, s) => e !== t[s]);
+              (t.length !== n.length || a) &&
+                ((0, E.OV)(this, c, n),
                 (0, E.OV)(this, i, o),
                 this.hasListeners() &&
                   (O(t, n).forEach((t) => {
@@ -1039,10 +1039,10 @@
           return (0, E.S7)(this, i);
         }
         getQueries() {
-          return (0, E.S7)(this, a).map((t) => t.getCurrentQuery());
+          return (0, E.S7)(this, c).map((t) => t.getCurrentQuery());
         }
         getObservers() {
-          return (0, E.S7)(this, a);
+          return (0, E.S7)(this, c);
         }
         getOptimisticResult(t, e) {
           const s = (0, E.jq)(this, f, g)
@@ -1061,8 +1061,8 @@
         (i = new WeakMap()),
         (r = new WeakMap()),
         (o = new WeakMap()),
-        (a = new WeakMap()),
         (c = new WeakMap()),
+        (a = new WeakMap()),
         (h = new WeakMap()),
         (u = new WeakMap()),
         (p = new WeakSet()),
@@ -1082,50 +1082,38 @@
         (d = new WeakSet()),
         (_ = function (t, e) {
           return e
-            ? (((0, E.S7)(this, c) &&
+            ? (((0, E.S7)(this, a) &&
                 (0, E.S7)(this, i) === (0, E.S7)(this, u) &&
                 e === (0, E.S7)(this, h)) ||
                 ((0, E.OV)(this, h, e),
                 (0, E.OV)(this, u, (0, E.S7)(this, i)),
-                (0, E.OV)(this, c, (0, I.BH)((0, E.S7)(this, c), e(t)))),
-              (0, E.S7)(this, c))
+                (0, E.OV)(this, a, (0, I.BH)((0, E.S7)(this, a), e(t)))),
+              (0, E.S7)(this, a))
             : t;
         }),
         (f = new WeakSet()),
         (g = function (t) {
           const e = new Map(
-              (0, E.S7)(this, a).map((t) => [t.options.queryHash, t]),
+              (0, E.S7)(this, c).map((t) => [t.options.queryHash, t]),
             ),
             s = [];
           return (
             t.forEach((t) => {
               const i = (0, E.S7)(this, n).defaultQueryOptions(t),
                 r = e.get(i.queryHash);
-              if (r) s.push({ defaultedQueryOptions: i, observer: r });
-              else {
-                const t = (0, E.S7)(this, a).find(
-                  (t) => t.options.queryHash === i.queryHash,
-                );
-                s.push({
-                  defaultedQueryOptions: i,
-                  observer: t ?? new x.$((0, E.S7)(this, n), i),
-                });
-              }
+              r
+                ? s.push({ defaultedQueryOptions: i, observer: r })
+                : s.push({
+                    defaultedQueryOptions: i,
+                    observer: new x.$((0, E.S7)(this, n), i),
+                  });
             }),
-            s.sort(
-              (e, s) =>
-                t.findIndex(
-                  (t) => t.queryHash === e.defaultedQueryOptions.queryHash,
-                ) -
-                t.findIndex(
-                  (t) => t.queryHash === s.defaultedQueryOptions.queryHash,
-                ),
-            )
+            s
           );
         }),
         (m = new WeakSet()),
         (S = function (t, e) {
-          const s = (0, E.S7)(this, a).indexOf(t);
+          const s = (0, E.S7)(this, c).indexOf(t);
           -1 !== s &&
             ((0, E.OV)(
               this,
@@ -1141,7 +1129,7 @@
         (b = function () {
           var t;
           if (this.hasListeners()) {
-            (0, E.S7)(this, c) !==
+            (0, E.S7)(this, a) !==
               (0, E.jq)(this, d, _).call(
                 this,
                 (0, E.jq)(this, p, l).call(
@@ -1182,21 +1170,21 @@
           (0, j.jv)(t), (0, L.LJ)(t, r);
         }),
           (0, L.wZ)(r);
-        const [a] = y.useState(() => new C(n, o, e)),
-          [c, h, u] = a.getOptimisticResult(o, e.combine);
+        const [c] = y.useState(() => new C(n, o, e)),
+          [a, h, u] = c.getOptimisticResult(o, e.combine);
         y.useSyncExternalStore(
           y.useCallback(
-            (t) => (i ? D.l : a.subscribe(w.j.batchCalls(t))),
-            [a, i],
+            (t) => (i ? D.l : c.subscribe(w.j.batchCalls(t))),
+            [c, i],
           ),
-          () => a.getCurrentResult(),
-          () => a.getCurrentResult(),
+          () => c.getCurrentResult(),
+          () => c.getCurrentResult(),
         ),
           y.useEffect(() => {
-            a.setQueries(o, e, { listeners: !1 });
-          }, [o, e, a]);
-        const p = c.some((t, e) => (0, j.EU)(o[e], t))
-          ? c.flatMap((t, e) => {
+            c.setQueries(o, e, { listeners: !1 });
+          }, [o, e, c]);
+        const p = a.some((t, e) => (0, j.EU)(o[e], t))
+          ? a.flatMap((t, e) => {
               const s = o[e];
               if (s) {
                 const e = new x.$(n, s);
@@ -1207,7 +1195,7 @@
             })
           : [];
         if (p.length > 0) throw Promise.all(p);
-        const l = c.find((t, e) => {
+        const l = a.find((t, e) => {
           const s = o[e];
           return (
             s &&

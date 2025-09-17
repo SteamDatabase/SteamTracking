@@ -1569,7 +1569,7 @@
       function _(_, _) {
         const _ = (0, _._)("editorconfig", _);
         let _ = new _(_);
-        _._(_).render(
+        _.createRoot(_).render(
           _.createElement(_ ? _ : _, {
             LogoEditorStore: _,
           }),

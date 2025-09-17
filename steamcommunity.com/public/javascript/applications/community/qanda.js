@@ -293,7 +293,7 @@
         "./zh-tw": 34518,
         "./zh-tw.js": 34518,
       };
-      function i(e) {
+      function a(e) {
         var t = r(e);
         return s(t);
       }
@@ -304,82 +304,82 @@
         }
         return n[e];
       }
-      (i.keys = function () {
+      (a.keys = function () {
         return Object.keys(n);
       }),
-        (i.resolve = r),
-        (e.exports = i),
-        (i.id = 61738);
+        (a.resolve = r),
+        (e.exports = a),
+        (a.id = 61738);
     },
     45048: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { QAndARoutes: () => o, default: () => c });
+      s.r(t), s.d(t, { QAndARoutes: () => o, default: () => m });
       var n = s(28579),
-        i = s(90626),
+        a = s(90626),
         r = s(92757),
-        a = s(6813),
+        i = s(6813),
         l = s(97058);
       const o = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
         FullPageView: (e, t) => `/questions/${e}/view/${t}`,
       };
-      const c = function (e) {
-        return i.createElement(
+      const m = function (e) {
+        return a.createElement(
           r.dO,
           null,
-          i.createElement(r.qh, {
+          a.createElement(r.qh, {
             path: o.Dashboard(":vanity_str"),
             render: (e) =>
-              i.createElement(a.X, {
+              a.createElement(i.X, {
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: t } = e.match.params;
-                    return i.createElement(n.xh, { vanity_str: t });
+                    return a.createElement(n.xh, { vanity_str: t });
                   },
                 },
               }),
           }),
-          i.createElement(r.qh, {
+          a.createElement(r.qh, {
             path: o.FullPageView(":vanity_str", ":session_gid"),
             render: (e) =>
-              i.createElement(a.X, {
+              a.createElement(i.X, {
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: t, session_gid: s } = e.match.params;
-                    return i.createElement(n.AC, { gidSession: s });
+                    return a.createElement(n.AC, { gidSession: s });
                   },
                 },
               }),
           }),
-          i.createElement(r.qh, { component: l.a }),
+          a.createElement(r.qh, { component: l.a }),
         );
       };
     },
     44165: (e, t, s) => {
       "use strict";
-      s.d(t, { HD: () => u, P_: () => d, f1: () => E, sB: () => p });
+      s.d(t, { HD: () => d, P_: () => u, f1: () => g, sB: () => D });
       var n = s(34629),
-        i = s(14947),
+        a = s(14947),
         r = s(19367),
-        a = s.n(r),
+        i = s.n(r),
         l = s(90626),
         o = s(4434),
-        c = s(78327);
-      class m {
+        m = s(78327);
+      class c {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
             (this.nOverrideDateNow = void 0),
-            (0, i.Gn)(this);
+            (0, a.Gn)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
         get bIsFollowingEnabled() {
-          return !(0, c.Y2)();
+          return !(0, m.Y2)();
         }
         get bIsCuratorsEnabled() {
-          return !(0, c.Y2)();
+          return !(0, m.Y2)();
         }
         get bIncludeCurators() {
           return !0;
@@ -402,10 +402,10 @@
           const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             t.has("t") &&
-            ("dev" == c.TS.WEB_UNIVERSE || "beta" == c.TS.WEB_UNIVERSE)
+            ("dev" == m.TS.WEB_UNIVERSE || "beta" == m.TS.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let s = /^\d+$/.test(e) ? a().unix(Number.parseInt(e)) : a()(e);
+            let s = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
             (this.nOverrideDateNow = Math.floor(s.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -416,65 +416,65 @@
           }
         }
       }
-      (0, n.Cg)([i.sH], m.prototype, "nOverrideDateNow", void 0);
-      const u = new m();
-      function d(e = 1) {
-        const [t, s] = l.useState(() => v()),
+      (0, n.Cg)([a.sH], c.prototype, "nOverrideDateNow", void 0);
+      const d = new c();
+      function u(e = 1) {
+        const [t, s] = l.useState(() => E()),
           n = (0, o.m)("useTimeNowWithOverride"),
-          i = l.useCallback(() => {
-            n.token.reason || s(v());
+          a = l.useCallback(() => {
+            n.token.reason || s(E());
           }, []);
         return (
           l.useEffect(() => {
             const t = 1e3 * e,
               s = t - (Date.now() % t),
-              n = window.setTimeout(i, s);
+              n = window.setTimeout(a, s);
             return () => {
               window.clearTimeout(n);
             };
-          }, [t, e, i]),
+          }, [t, e, a]),
           t
         );
       }
-      window.g_EventCalendarDevFeatures = u;
-      const h = new Date(),
-        j = Math.floor(h.getTime() / 1e3);
-      function v() {
-        const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - j) : e;
-      }
-      function p() {
-        var e;
-        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : j;
-      }
+      window.g_EventCalendarDevFeatures = d;
+      const j = new Date(),
+        v = Math.floor(j.getTime() / 1e3);
       function E() {
-        return l.useMemo(() => p(), []);
+        const e = Math.floor(Date.now() / 1e3);
+        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - v) : e;
+      }
+      function D() {
+        var e;
+        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : v;
+      }
+      function g() {
+        return l.useMemo(() => D(), []);
       }
     },
     82477: (e, t, s) => {
       "use strict";
-      s.d(t, { vg: () => u });
+      s.d(t, { vg: () => d });
       var n = s(90626),
-        i = s(738),
+        a = s(738),
         r = s(61859),
-        a = s(78327),
+        i = s(78327),
         l = s(97436),
         o = s(96059),
-        c = s(28240);
+        m = s(28240);
       s(9154);
-      function m(e) {
+      function c(e) {
         return n.createElement(
-          i.x_,
+          a.x_,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          n.createElement(d, {
+          n.createElement(u, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
         );
       }
-      function u() {
-        (0, i.pg)(
-          n.createElement(m, {
+      function d() {
+        (0, a.pg)(
+          n.createElement(c, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -482,12 +482,12 @@
           { strTitle: (0, r.we)("#Login_SignInTitle") },
         );
       }
-      function d(e) {
+      function u(e) {
         const { redirectURL: t, guestOption: s } = e,
-          [i] = (0, n.useState)(
-            new o.D(a.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          [a] = (0, n.useState)(
+            new o.D(i.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [r, m] = (0, n.useState)(!1);
+          [r, c] = (0, n.useState)(!1);
         return n.createElement(
           "div",
           null,
@@ -497,11 +497,11 @@
                 l.YN,
                 {
                   autoFocus: !0,
-                  transport: i,
+                  transport: a,
                   platform: 2,
                   onComplete: (e) => {
-                    e == c.wI.k_PrimaryDomainFail
-                      ? m(!0)
+                    e == m.wI.k_PrimaryDomainFail
+                      ? c(!0)
                       : window.location.assign(t);
                   },
                   redirectUrl: t,
@@ -515,52 +515,52 @@
     76684: (e, t, s) => {
       "use strict";
       s.d(t, {
-        K4: () => p,
-        X0: () => w,
-        gS: () => E,
-        pg: () => j,
-        u1: () => D,
-        v9: () => g,
-        yi: () => v,
+        K4: () => D,
+        X0: () => T,
+        gS: () => g,
+        pg: () => v,
+        u1: () => p,
+        v9: () => h,
+        yi: () => E,
       });
       var n = s(34629),
-        i = s(90626),
+        a = s(90626),
         r = s(32754),
-        a = s(61859),
+        i = s(61859),
         l = s(75844),
         o = s(52038),
-        c = s(14771),
-        m = s(55351),
-        u = s.n(m),
-        d = s(44165);
-      const h = s(87937);
-      function j(e) {
-        const t = h.tz.guess(),
-          s = h.unix(e).tz(t),
-          n = (0, a.l4)();
+        m = s(14771),
+        c = s(55351),
+        d = s.n(c),
+        u = s(44165);
+      const j = s(87937);
+      function v(e) {
+        const t = j.tz.guess(),
+          s = j.unix(e).tz(t),
+          n = (0, i.l4)();
         return n && s.locale(n), s.format("LT");
       }
-      function v(e, t) {
-        const s = h.tz.guess(),
-          n = h.unix(e).tz(s),
-          l = (0, a.l4)();
+      function E(e, t) {
+        const s = j.tz.guess(),
+          n = j.unix(e).tz(s),
+          l = (0, i.l4)();
         return (
           l && n.locale(l),
-          i.createElement(
-            i.Fragment,
+          a.createElement(
+            a.Fragment,
             null,
             n.format("LT"),
             t
-              ? i.createElement(
+              ? a.createElement(
                   r.Gq,
                   { toolTipContent: n.format("Z") + ", " + s },
-                  i.createElement("span", null, " ", n.zoneAbbr()),
+                  a.createElement("span", null, " ", n.zoneAbbr()),
                 )
               : null,
           )
         );
       }
-      const p = (0, l.PA)((e) => {
+      const D = (0, l.PA)((e) => {
           const {
               dateAndTime: t,
               bSingleLine: s,
@@ -569,49 +569,49 @@
             } = e,
             l = !n && Boolean(t),
             o = !r && Boolean(t),
-            c = l && (0, a.TW)(t),
-            m = e.stylesmodule ? { ...u(), ...e.stylesmodule } : u();
+            m = l && (0, i.TW)(t),
+            c = e.stylesmodule ? { ...d(), ...e.stylesmodule } : d();
           return s
-            ? i.createElement(
+            ? a.createElement(
                 "span",
-                { className: n || r ? m.DateAndTimeInline : m.DateAndTime },
-                l && c,
-                l && o ? i.createElement("span", null, " ") : void 0,
-                Boolean(t && o) && v(t, o),
+                { className: n || r ? c.DateAndTimeInline : c.DateAndTime },
+                l && m,
+                l && o ? a.createElement("span", null, " ") : void 0,
+                Boolean(t && o) && E(t, o),
               )
-            : i.createElement(
+            : a.createElement(
                 "div",
-                { className: m.DateAndTime },
+                { className: c.DateAndTime },
                 l &&
-                  i.createElement(
-                    i.Fragment,
+                  a.createElement(
+                    a.Fragment,
                     null,
-                    i.createElement("div", { className: m.LocalizedDate }, c),
+                    a.createElement("div", { className: c.LocalizedDate }, m),
                     " ",
-                    i.createElement(
+                    a.createElement(
                       "span",
-                      { className: m.At },
-                      (0, a.we)("#EventDisplay_DateAndTimeCombiner"),
+                      { className: c.At },
+                      (0, i.we)("#EventDisplay_DateAndTimeCombiner"),
                     ),
                   ),
-                i.createElement(
+                a.createElement(
                   "div",
-                  { className: m.LocalizedTime },
-                  Boolean(t && o) && v(t, o),
+                  { className: c.LocalizedTime },
+                  Boolean(t && o) && E(t, o),
                 ),
               );
         }),
-        E = (e) => {
-          const t = i.createElement(
+        g = (e) => {
+          const t = a.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
-            i.createElement(p, {
+            a.createElement(D, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
             }),
           );
-          return i.createElement(
+          return a.createElement(
             r.m9,
             {
               toolTipContent: t,
@@ -622,56 +622,56 @@
             e.children,
           );
         };
-      let g = class extends i.Component {
+      let h = class extends a.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             s = this.props.stylesmodule
-              ? { ...u(), ...this.props.stylesmodule }
-              : u();
+              ? { ...d(), ...this.props.stylesmodule }
+              : d();
           let n =
             this.props.bHideEndTime ||
             null == this.props.endDateAndTime ||
             this.props.endDateAndTime < 1;
           if (null == e || 0 == e)
-            return i.createElement(
+            return a.createElement(
               "div",
               { className: s.DateAndTime },
-              i.createElement(
+              a.createElement(
                 "span",
                 { className: s.RightSideTitles },
-                (0, a.we)("#EventDisplay_TimeRange"),
+                (0, i.we)("#EventDisplay_TimeRange"),
               ),
-              (0, a.we)("#EventDisplay_TimeDisplayNone"),
+              (0, i.we)("#EventDisplay_TimeDisplayNone"),
             );
-          let r = d.HD.GetTimeNowWithOverride();
+          let r = u.HD.GetTimeNowWithOverride();
           if (n)
-            return i.createElement(
+            return a.createElement(
               "div",
               { className: s.StartDate },
-              i.createElement(
+              a.createElement(
                 "div",
                 { className: s.RightSideTitles },
-                (0, a.we)(
+                (0, i.we)(
                   e < r
                     ? "#EventDisplay_TimeInPast"
                     : "#EventDisplay_TimeUpcoming",
                 ),
                 " ",
               ),
-              i.createElement(p, { stylesmodule: s, dateAndTime: e }),
+              a.createElement(D, { stylesmodule: s, dateAndTime: e }),
             );
           let l = e <= r && r <= t;
-          const m = (0, c.JD)(new Date(1e3 * e), new Date(1e3 * t));
-          return i.createElement(
+          const c = (0, m.JD)(new Date(1e3 * e), new Date(1e3 * t));
+          return a.createElement(
             "div",
             { className: s.MultiDateAndTime },
-            i.createElement(
+            a.createElement(
               "div",
               { className: s.StartDate },
-              i.createElement(
+              a.createElement(
                 "span",
                 { className: s.RightSideTitles },
-                (0, a.we)(
+                (0, i.we)(
                   e >= r
                     ? "#EventDisplay_TimeBeginsOn"
                     : t >= r
@@ -679,36 +679,36 @@
                       : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
-              i.createElement(p, {
+              a.createElement(D, {
                 stylesmodule: s,
                 bSingleLine: !0,
                 dateAndTime: e,
               }),
             ),
-            i.createElement(
+            a.createElement(
               "div",
               { className: s.EndDate },
-              i.createElement(
+              a.createElement(
                 "span",
                 { className: s.RightSideTitles },
-                (0, a.we)(
+                (0, i.we)(
                   t < r
                     ? "#EventDisplay_TimeEndsOn_Past"
                     : "#EventDisplay_TimeEndsOn",
                 ),
               ),
-              i.createElement(p, {
+              a.createElement(D, {
                 stylesmodule: s,
                 bSingleLine: !0,
-                bOnlyTime: m,
+                bOnlyTime: c,
                 dateAndTime: t,
               }),
             ),
             l &&
-              i.createElement(
+              a.createElement(
                 "span",
                 { className: s.ActiveEvent },
-                i.createElement(
+                a.createElement(
                   "span",
                   {
                     className: (0, o.A)(
@@ -716,14 +716,14 @@
                       s.ActiveEventCallOut,
                     ),
                   },
-                  (0, a.we)("#Time_Now"),
+                  (0, i.we)("#Time_Now"),
                 ),
               ),
           );
         }
       };
-      g = (0, n.Cg)([l.PA], g);
-      let D = class extends i.Component {
+      h = (0, n.Cg)([l.PA], h);
+      let p = class extends a.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -731,57 +731,57 @@
               bHideEndTime: s,
             } = this.props,
             n = this.props.stylesmodule
-              ? { ...u(), ...this.props.stylesmodule }
-              : u();
+              ? { ...d(), ...this.props.stylesmodule }
+              : d();
           if (null == e || 0 == e)
-            return i.createElement(
+            return a.createElement(
               "div",
               { className: n.DateAndTime },
-              i.createElement(
+              a.createElement(
                 "span",
                 { className: n.RightSideTitles },
-                (0, a.we)("#EventDisplay_TimeRange"),
+                (0, i.we)("#EventDisplay_TimeRange"),
               ),
-              (0, a.we)("#EventDisplay_TimeDisplayNone"),
+              (0, i.we)("#EventDisplay_TimeDisplayNone"),
             );
-          const r = d.HD.GetTimeNowWithOverrideAsDate(),
-            l = d.HD.GetTimeNowWithOverride(),
-            o = (0, c.Ct)(new Date(1e3 * e), r),
-            m = i.createElement(
+          const r = u.HD.GetTimeNowWithOverrideAsDate(),
+            l = u.HD.GetTimeNowWithOverride(),
+            o = (0, m.Ct)(new Date(1e3 * e), r),
+            c = a.createElement(
               "div",
               { className: n.ShortDateAndTime },
-              (0, a.TW)(e, o),
+              (0, i.TW)(e, o),
             );
-          let h = i.createElement(
-            E,
+          let j = a.createElement(
+            g,
             { rtFullDate: e, stylesmodule: n },
-            i.createElement(
+            a.createElement(
               "div",
               { className: n.RightSideTitles },
-              (0, a.we)(
+              (0, i.we)(
                 e < l
                   ? "#EventDisplay_TimeInPast"
                   : "#EventDisplay_TimeUpcoming",
               ),
             ),
-            m,
+            c,
           );
           if (
             (l < e &&
-              e < l + c.Kp.PerWeek &&
-              (h = i.createElement(
-                E,
+              e < l + m.Kp.PerWeek &&
+              (j = a.createElement(
+                g,
                 { rtFullDate: e, stylesmodule: n },
-                i.createElement(
+                a.createElement(
                   "div",
                   { className: n.RightSideTitles },
-                  (0, a.PP)(
+                  (0, i.PP)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    m,
-                    i.createElement(
+                    c,
+                    a.createElement(
                       "div",
                       { className: n.ShortDateAndTime },
-                      v(e),
+                      E(e),
                       " ",
                     ),
                   ),
@@ -789,39 +789,39 @@
               )),
             s || null == t || t < 1)
           )
-            return h;
-          const j = e <= l && l <= t;
-          j &&
-            (h = i.createElement(
-              E,
+            return j;
+          const v = e <= l && l <= t;
+          v &&
+            (j = a.createElement(
+              g,
               { rtFullDate: e, className: n.ActiveEvent, stylesmodule: n },
-              i.createElement(
+              a.createElement(
                 "span",
                 { className: n.ActiveEventCallOut },
-                (0, a.we)("#Time_Now"),
+                (0, i.we)("#Time_Now"),
               ),
             ));
-          let p = null;
-          const g = j ? t - l : t - e;
-          if (g <= c.Kp.PerDay) {
-            const e = i.createElement(
+          let D = null;
+          const h = v ? t - l : t - e;
+          if (h <= m.Kp.PerDay) {
+            const e = a.createElement(
               "div",
               { className: n.ShortDateAndTime },
-              (0, a.Hq)(g, !0),
+              (0, i.Hq)(h, !0),
             );
-            p =
+            D =
               t < l
-                ? i.createElement(
+                ? a.createElement(
                     "div",
                     { className: n.RightSideTitles },
-                    (0, a.we)("#EventDisplay_TimeEndsOn_Ran"),
+                    (0, i.we)("#EventDisplay_TimeEndsOn_Ran"),
                     e,
                   )
-                : i.createElement(
+                : a.createElement(
                     "div",
                     { className: n.RightSideTitles },
-                    (0, a.PP)(
-                      j
+                    (0, i.PP)(
+                      v
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e,
@@ -829,355 +829,70 @@
                   );
           } else {
             const e = r.getFullYear() == new Date(1e3 * t).getFullYear();
-            p = i.createElement(
-              i.Fragment,
+            D = a.createElement(
+              a.Fragment,
               null,
-              i.createElement(
+              a.createElement(
                 "div",
                 { className: n.RightSideTitles },
-                (0, a.we)(
+                (0, i.we)(
                   t < l
                     ? "#EventDisplay_TimeEndsOn_Past"
                     : "#EventDisplay_TimeEndsOn",
                 ),
               ),
-              i.createElement(
+              a.createElement(
                 "div",
                 { className: n.ShortDateAndTime },
-                (0, a.TW)(t, e),
+                (0, i.TW)(t, e),
               ),
             );
           }
-          const D = i.createElement(E, { rtFullDate: t, stylesmodule: n }, p);
-          return i.createElement("div", { className: n.ShortDateRange }, h, D);
+          const p = a.createElement(g, { rtFullDate: t, stylesmodule: n }, D);
+          return a.createElement("div", { className: n.ShortDateRange }, j, p);
         }
       };
-      function w(e) {
+      function T(e) {
         const {
           rtStartDate: t,
           rtEndDate: s,
           strMonthFormat: n,
           className: r,
         } = e;
-        return i.createElement(
+        return a.createElement(
           "div",
           { className: r },
           (function (e, t, s) {
-            const n = d.HD.GetTimeNowWithOverrideAsDate(),
-              i = new Date(1e3 * e),
+            const n = u.HD.GetTimeNowWithOverrideAsDate(),
+              a = new Date(1e3 * e),
               r = new Date(1e3 * t),
-              l = n.getFullYear() == i.getFullYear(),
+              l = n.getFullYear() == a.getFullYear(),
               o = n.getFullYear() == r.getFullYear(),
-              c = i.getFullYear() == r.getFullYear(),
-              m = c && i.getMonth() == r.getMonth(),
-              u = m && i.getDate() == r.getDate(),
-              h = {
+              m = a.getFullYear() == r.getFullYear(),
+              c = m && a.getMonth() == r.getMonth(),
+              d = c && a.getDate() == r.getDate(),
+              j = {
                 day: "numeric",
                 month: null != s ? s : "long",
                 year: l ? void 0 : "numeric",
               },
-              j = i.toLocaleDateString(a.pf.GetPreferredLocales(), h);
-            if (u) return j;
+              v = a.toLocaleDateString(i.pf.GetPreferredLocales(), j);
+            if (d) return v;
             {
               const e = {
                 day: "numeric",
-                month: m && o ? void 0 : null != s ? s : "long",
-                year: c ? void 0 : "numeric",
+                month: c && o ? void 0 : null != s ? s : "long",
+                year: m ? void 0 : "numeric",
               };
               return (
-                j + " - " + r.toLocaleDateString(a.pf.GetPreferredLocales(), e)
+                v + " - " + r.toLocaleDateString(i.pf.GetPreferredLocales(), e)
               );
             }
           })(t, s, n),
           " ",
         );
       }
-      D = (0, n.Cg)([l.PA], D);
-    },
-    33861: (e, t, s) => {
-      "use strict";
-      s.d(t, { E: () => C });
-      var n,
-        i,
-        r,
-        a,
-        l,
-        o,
-        c,
-        m,
-        u,
-        d,
-        h,
-        j,
-        v,
-        p,
-        E,
-        g,
-        D,
-        w,
-        f = s(90626),
-        y = s(86843),
-        T = s(6561),
-        b = s(48767),
-        S = s(57152),
-        O = s(57956);
-      function k(e, t) {
-        return e.filter((e) => !t.includes(e));
-      }
-      var N = class extends S.Q {
-        constructor(e, t, s) {
-          super(),
-            (0, y.VK)(this, u),
-            (0, y.VK)(this, h),
-            (0, y.VK)(this, v),
-            (0, y.VK)(this, E),
-            (0, y.VK)(this, D),
-            (0, y.VK)(this, n, void 0),
-            (0, y.VK)(this, i, void 0),
-            (0, y.VK)(this, r, void 0),
-            (0, y.VK)(this, a, void 0),
-            (0, y.VK)(this, l, void 0),
-            (0, y.VK)(this, o, void 0),
-            (0, y.VK)(this, c, void 0),
-            (0, y.VK)(this, m, void 0),
-            (0, y.OV)(this, n, e),
-            (0, y.OV)(this, a, s),
-            (0, y.OV)(this, r, []),
-            (0, y.OV)(this, l, []),
-            (0, y.OV)(this, i, []),
-            this.setQueries(t);
-        }
-        onSubscribe() {
-          1 === this.listeners.size &&
-            (0, y.S7)(this, l).forEach((e) => {
-              e.subscribe((t) => {
-                (0, y.jq)(this, E, g).call(this, e, t);
-              });
-            });
-        }
-        onUnsubscribe() {
-          this.listeners.size || this.destroy();
-        }
-        destroy() {
-          (this.listeners = new Set()),
-            (0, y.S7)(this, l).forEach((e) => {
-              e.destroy();
-            });
-        }
-        setQueries(e, t, s) {
-          (0, y.OV)(this, r, e),
-            (0, y.OV)(this, a, t),
-            T.j.batch(() => {
-              const e = (0, y.S7)(this, l),
-                t = (0, y.jq)(this, v, p).call(this, (0, y.S7)(this, r));
-              t.forEach((e) =>
-                e.observer.setOptions(e.defaultedQueryOptions, s),
-              );
-              const n = t.map((e) => e.observer),
-                a = n.map((e) => e.getCurrentResult()),
-                o = n.some((t, s) => t !== e[s]);
-              (e.length !== n.length || o) &&
-                ((0, y.OV)(this, l, n),
-                (0, y.OV)(this, i, a),
-                this.hasListeners() &&
-                  (k(e, n).forEach((e) => {
-                    e.destroy();
-                  }),
-                  k(n, e).forEach((e) => {
-                    e.subscribe((t) => {
-                      (0, y.jq)(this, E, g).call(this, e, t);
-                    });
-                  }),
-                  (0, y.jq)(this, D, w).call(this)));
-            });
-        }
-        getCurrentResult() {
-          return (0, y.S7)(this, i);
-        }
-        getQueries() {
-          return (0, y.S7)(this, l).map((e) => e.getCurrentQuery());
-        }
-        getObservers() {
-          return (0, y.S7)(this, l);
-        }
-        getOptimisticResult(e, t) {
-          const s = (0, y.jq)(this, v, p)
-            .call(this, e)
-            .map((e) =>
-              e.observer.getOptimisticResult(e.defaultedQueryOptions),
-            );
-          return [
-            s,
-            (e) => (0, y.jq)(this, h, j).call(this, e ?? s, t),
-            () => (0, y.jq)(this, u, d).call(this, s, e),
-          ];
-        }
-      };
-      (n = new WeakMap()),
-        (i = new WeakMap()),
-        (r = new WeakMap()),
-        (a = new WeakMap()),
-        (l = new WeakMap()),
-        (o = new WeakMap()),
-        (c = new WeakMap()),
-        (m = new WeakMap()),
-        (u = new WeakSet()),
-        (d = function (e, t) {
-          const s = (0, y.jq)(this, v, p).call(this, t);
-          return s.map((t, n) => {
-            const i = e[n];
-            return t.defaultedQueryOptions.notifyOnChangeProps
-              ? i
-              : t.observer.trackResult(i, (e) => {
-                  s.forEach((t) => {
-                    t.observer.trackProp(e);
-                  });
-                });
-          });
-        }),
-        (h = new WeakSet()),
-        (j = function (e, t) {
-          return t
-            ? (((0, y.S7)(this, o) &&
-                (0, y.S7)(this, i) === (0, y.S7)(this, m) &&
-                t === (0, y.S7)(this, c)) ||
-                ((0, y.OV)(this, c, t),
-                (0, y.OV)(this, m, (0, y.S7)(this, i)),
-                (0, y.OV)(this, o, (0, O.BH)((0, y.S7)(this, o), t(e)))),
-              (0, y.S7)(this, o))
-            : e;
-        }),
-        (v = new WeakSet()),
-        (p = function (e) {
-          const t = new Map(
-              (0, y.S7)(this, l).map((e) => [e.options.queryHash, e]),
-            ),
-            s = [];
-          return (
-            e.forEach((e) => {
-              const i = (0, y.S7)(this, n).defaultQueryOptions(e),
-                r = t.get(i.queryHash);
-              if (r) s.push({ defaultedQueryOptions: i, observer: r });
-              else {
-                const e = (0, y.S7)(this, l).find(
-                  (e) => e.options.queryHash === i.queryHash,
-                );
-                s.push({
-                  defaultedQueryOptions: i,
-                  observer: e ?? new b.$((0, y.S7)(this, n), i),
-                });
-              }
-            }),
-            s.sort(
-              (t, s) =>
-                e.findIndex(
-                  (e) => e.queryHash === t.defaultedQueryOptions.queryHash,
-                ) -
-                e.findIndex(
-                  (e) => e.queryHash === s.defaultedQueryOptions.queryHash,
-                ),
-            )
-          );
-        }),
-        (E = new WeakSet()),
-        (g = function (e, t) {
-          const s = (0, y.S7)(this, l).indexOf(e);
-          -1 !== s &&
-            ((0, y.OV)(
-              this,
-              i,
-              (function (e, t, s) {
-                const n = e.slice(0);
-                return (n[t] = s), n;
-              })((0, y.S7)(this, i), s, t),
-            ),
-            (0, y.jq)(this, D, w).call(this));
-        }),
-        (D = new WeakSet()),
-        (w = function () {
-          var e;
-          if (this.hasListeners()) {
-            (0, y.S7)(this, o) !==
-              (0, y.jq)(this, h, j).call(
-                this,
-                (0, y.jq)(this, u, d).call(
-                  this,
-                  (0, y.S7)(this, i),
-                  (0, y.S7)(this, r),
-                ),
-                null == (e = (0, y.S7)(this, a)) ? void 0 : e.combine,
-              ) &&
-              T.j.batch(() => {
-                this.listeners.forEach((e) => {
-                  e((0, y.S7)(this, i));
-                });
-              });
-          }
-        });
-      var _ = s(29385),
-        A = s(85010),
-        R = s(8184),
-        q = s(33478),
-        V = s(99583),
-        z = s(61314);
-      function C({ queries: e, ...t }, s) {
-        const n = (0, _.jE)(s),
-          i = (0, A.w)(),
-          r = (0, R.h)(),
-          a = f.useMemo(
-            () =>
-              e.map((e) => {
-                const t = n.defaultQueryOptions(e);
-                return (
-                  (t._optimisticResults = i ? "isRestoring" : "optimistic"), t
-                );
-              }),
-            [e, n, i],
-          );
-        a.forEach((e) => {
-          (0, V.jv)(e), (0, q.LJ)(e, r);
-        }),
-          (0, q.wZ)(r);
-        const [l] = f.useState(() => new N(n, a, t)),
-          [o, c, m] = l.getOptimisticResult(a, t.combine);
-        f.useSyncExternalStore(
-          f.useCallback(
-            (e) => (i ? z.l : l.subscribe(T.j.batchCalls(e))),
-            [l, i],
-          ),
-          () => l.getCurrentResult(),
-          () => l.getCurrentResult(),
-        ),
-          f.useEffect(() => {
-            l.setQueries(a, t, { listeners: !1 });
-          }, [a, t, l]);
-        const u = o.some((e, t) => (0, V.EU)(a[t], e))
-          ? o.flatMap((e, t) => {
-              const s = a[t];
-              if (s) {
-                const t = new b.$(n, s);
-                if ((0, V.EU)(s, e)) return (0, V.iL)(s, t, r);
-                (0, V.nE)(e, i) && (0, V.iL)(s, t, r);
-              }
-              return [];
-            })
-          : [];
-        if (u.length > 0) throw Promise.all(u);
-        const d = o.find((e, t) => {
-          const s = a[t];
-          return (
-            s &&
-            (0, q.$1)({
-              result: e,
-              errorResetBoundary: r,
-              throwOnError: s.throwOnError,
-              query: n.getQueryCache().get(s.queryHash),
-            })
-          );
-        });
-        if (null == d ? void 0 : d.error) throw d.error;
-        return c(m());
-      }
+      p = (0, n.Cg)([l.PA], p);
     },
   },
 ]);

@@ -604,10 +604,10 @@ button.DialogButton {
   margin-top: 8px;
 }
 .json-diff-viewer {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
-  width: 100%;
 }
 .json-diff-viewer tr {
   vertical-align: top;
@@ -624,7 +624,7 @@ button.DialogButton {
 .json-diff-viewer tr:hover td {
   position: relative;
 }
-.json-diff-viewer tr:hover td::before {
+.json-diff-viewer tr:hover td:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -633,6 +633,15 @@ button.DialogButton {
   background: rgba(0, 0, 0, 0.05);
   content: "";
   pointer-events: none;
+}
+.json-diff-viewer tr.message-line {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+.json-diff-viewer tr.message-line td {
+  padding: 4px 0;
+  font-size: 12px;
 }
 .json-diff-viewer tr.expand-line {
   text-align: center;
@@ -650,15 +659,14 @@ button.DialogButton {
   border-top: 1px solid;
 }
 .json-diff-viewer tr.expand-line button {
-  margin: 0 .5em;
   padding: 0;
-  color: #2196f3;
-  font-family: sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 12px;
   border: none;
+  margin: 0 .5em;
   background: transparent;
-  user-select: none;
+  color: #2196f3;
   cursor: pointer;
+  font-size: 12px;
+  user-select: none;
 }
 .json-diff-viewer tr.expand-line button:hover {
   text-decoration: underline;
@@ -668,19 +676,19 @@ button.DialogButton {
   font-size: 0;
 }
 .json-diff-viewer td.line-number {
-  border-right: 1px solid;
   box-sizing: content-box;
+  padding: 0 8px;
+  border-right: 1px solid;
   font-family: monospace;
   font-size: 14px;
-  padding: 0 8px;
   text-align: right;
   user-select: none;
 }
 .json-diff-viewer pre {
+  overflow: hidden;
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-  overflow: hidden;
   white-space: pre-wrap;
   word-break: break-all;
 }
@@ -695,8 +703,8 @@ button.DialogButton {
   word-break: break-all;
 }
 .json-diff-viewer-virtual pre {
-  white-space: pre;
   overflow-x: auto;
+  white-space: pre;
 }
 .json-diff-viewer-virtual pre::-webkit-scrollbar {
   display: none;

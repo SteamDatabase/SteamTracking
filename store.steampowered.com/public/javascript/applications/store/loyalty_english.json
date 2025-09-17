@@ -56,6 +56,7 @@
     "Redeem_Error_InsufficientFunds": "You do not have enough points to get this item.",
     "Redeem_Error_Revoked": "The items for this game are no longer available.",
     "Redeem_Error_PriceChange": "The cost of this item has changed.",
+    "Redeem_Warning_LatestClient": "This Startup Movie requires the latest Steam Client version (%1$s or newer).",
     "BonusPoints_Title": "Get Bonus Points",
     "BonusPoints_Description": "Buying these games gives you bonus points",
     "HowItWorks_Title": "How Points Work",

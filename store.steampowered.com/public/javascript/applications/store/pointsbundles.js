@@ -11,19 +11,6 @@
         ShellScrollParent: "_1Qkju8DkEDxfJrSRSvE60X",
         ShellHeader: "kOC36pdxn9Y3RbFW9Pe4k",
         ShellHeaderFlex: "_3Bs_x4ZJUDXcmcyBIijrY7",
-        ShellHeaderBrandLink: "O1wfr_dIdjA0EArihdbyn",
-        Sparkles: "_1HQdP65qORYG5rx4hx2j1m",
-        PointsContainer: "_3fuIWWim03452DHyaDdP0a",
-        AppFilterContainer: "_2h5QBrJVeUh4KtMZ-xE1yi",
-        SearchTermContainer: "_1vqtwC4BfRP50KXnACBa7t",
-        AppFilterLabel: "_14xpPmN_1R8YRheIU_LM0R",
-        SearchTerm: "u6k6EnkqP237vIZRzHfIZ",
-        SearchIconContainer: "OsLH8FDeg0Gu5lgcZAho",
-        SearchIcon: "H8YKMauMXqfao1zWQMPMR",
-        SearchTermClearButton: "_3BWU2EyFDdwd3j8sTorUAk",
-        SearchTermClearIcon: "LCByT8rBA3AXSOG1Hl60p",
-        RewardsPointsIcon: "_2fLKsupss_Tr-yX6vqskXQ",
-        YourBalanceLabel: "_3LsyiFl4MYAHc9pM67d-d6",
         RewardsPointsCount: "_1XPtbpsI-RZd1JlAozJWI0",
         ShellHeaderBrandName: "_2fDrebx2asA6sXZwEpyywx",
         SvgOverrideColor: "_29EuRXgJWKVF34WrLKbeKZ",
@@ -36,44 +23,44 @@
         AlreadyOwnedText: "_1E4uc1RzsRkpvfk6DwwdMp",
       };
     },
-    91855: (e, t, r) => {
+    91855: (e, t, n) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => C });
-      var n = r(90626),
-        a = r(92757),
-        l = r(43527),
-        c = r(75844),
-        o = r(22580),
-        s = r(48474),
-        i = r(59707),
-        d = r(99428),
-        m = r(61859),
-        u = r(63927),
-        _ = r(87873),
-        p = r(32150),
-        f = r(12711),
-        h = r(26590),
-        w = r(52038),
-        E = r(6519);
-      const C = (0, c.PA)((e) => {
+      n.r(t), n.d(t, { default: () => b });
+      var r = n(90626),
+        l = n(92757),
+        a = n(43527),
+        c = n(75844),
+        s = n(22580),
+        o = n(54279),
+        i = n(59707),
+        d = n(99428),
+        m = n(61859),
+        u = n(63927),
+        f = n(87873),
+        p = n(32150),
+        _ = n(12711),
+        w = n(26590),
+        E = n(52038),
+        k = n(6519);
+      const b = (0, c.PA)((e) => {
           const { bundleid: t } = e.match.params,
-            r = parseInt(t),
-            c = n.createElement(a.rd, { to: l.B.LoyaltyStore() });
-          if (isNaN(r)) return c;
-          const [s] = o.DZ.Get().GetRewardDefinitions(r);
-          return s
-            ? 5 !== s.type && 6 !== s.type
+            n = parseInt(t),
+            c = r.createElement(l.rd, { to: a.B.LoyaltyStore() });
+          if (isNaN(n)) return c;
+          const [o] = s.DZ.Get().GetRewardDefinitions(n);
+          return o
+            ? 5 !== o.type && 6 !== o.type
               ? c
-              : n.createElement(k, { bundle: s })
+              : r.createElement(g, { bundle: o })
             : null;
         }),
-        k = (0, c.PA)((e) => {
+        g = (0, c.PA)((e) => {
           const { bundle: t } = e,
-            r = o.DZ.Get().GetBundleOfferForUser(t);
-          return n.createElement(
-            s.jy,
+            n = s.DZ.Get().GetBundleOfferForUser(t);
+          return r.createElement(
+            o.jy,
             null,
-            n.createElement(
+            r.createElement(
               d.az,
               {
                 paddingY: "xlarge",
@@ -81,54 +68,54 @@
                 flexDirection: "column",
                 alignItems: "center",
               },
-              n.createElement(B, { bundle: t, offer: r }),
-              0 === r.point_cost
-                ? n.createElement(y, { className: h.PrimaryRedeemButton })
-                : n.createElement(i.gs, {
-                    cost: r.point_cost,
-                    discount: r.discount,
-                    originalCost: r.original_point_cost,
-                    className: h.PrimaryRedeemButton,
+              r.createElement(h, { bundle: t, offer: n }),
+              0 === n.point_cost
+                ? r.createElement(x, { className: w.PrimaryRedeemButton })
+                : r.createElement(i.gs, {
+                    cost: n.point_cost,
+                    discount: n.discount,
+                    originalCost: n.original_point_cost,
+                    className: w.PrimaryRedeemButton,
                     onClick: (e) => (0, i.U$)(e, t),
                   }),
-              n.createElement(A, { offer: r }),
+              r.createElement(y, { offer: n }),
             ),
           );
         }),
-        B = (0, c.PA)(({ bundle: e, offer: t }) => {
-          const r = (0, u.g)(e),
-            a = (0, m.we)("#RewardBundle_OfferDescription", t.discount);
-          return n.createElement(
+        h = (0, c.PA)(({ bundle: e, offer: t }) => {
+          const n = (0, u.g)(e),
+            l = (0, m.we)("#RewardBundle_OfferDescription", t.discount);
+          return r.createElement(
             d.az,
             { paddingBottom: "xlarge" },
-            n.createElement(s.Ch, { title: r, subtitle: a }),
+            r.createElement(o.Ch, { title: n, subtitle: l }),
           );
         }),
-        y = ({ className: e }) =>
-          n.createElement(
+        x = ({ className: e }) =>
+          r.createElement(
             "div",
-            { className: (0, w.A)(e, h.AlreadyOwned) },
-            n.createElement(E.wK, { className: h.CheckmarkCircle }),
-            n.createElement(
+            { className: (0, E.A)(e, w.AlreadyOwned) },
+            r.createElement(k.wK, { className: w.CheckmarkCircle }),
+            r.createElement(
               "span",
-              { className: h.AlreadyOwnedText },
+              { className: w.AlreadyOwnedText },
               (0, m.we)("#Redeem_BundleItemOwned"),
             ),
           ),
-        A = (0, c.PA)((e) => {
+        y = (0, c.PA)((e) => {
           const { offer: t } = e;
-          return n.createElement(
-            _.Gq,
+          return r.createElement(
+            f.Gq,
             { title: (0, m.we)("#RewardBundle_BundleContentsSection_Title") },
-            n.createElement(p.n, {
-              getItems: (e, r) => ({
-                rewards: t.items.slice(e, r),
+            r.createElement(p.n, {
+              getItems: (e, n) => ({
+                rewards: t.items.slice(e, n),
                 bLoadingMore: !1,
                 cTotalMatching: t.items.length,
                 cMaxToReturn: t.items.length,
               }),
               renderItem: (e) =>
-                n.createElement(f.Fo, {
+                r.createElement(_.Fo, {
                   key: e.defid,
                   definition: e,
                   purchaseable: !1,

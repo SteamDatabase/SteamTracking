@@ -1780,6 +1780,40 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -1816,48 +1850,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1979,7 +1975,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2024,7 +2019,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2058,7 +2052,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2520,7 +2513,7 @@
                 new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
               ),
               await _(_._.LANGUAGE),
-              _._(document.getElementById("application_root")).render(
+              _.createRoot(document.getElementById("application_root")).render(
                 _.createElement(_, {}),
               ))
             : ((0, _._)(),
@@ -3259,7 +3252,7 @@
               layout: _,
             });
           });
-        const _ = (0, _._)(_, _.ref);
+        const _ = (0, _._)(_, _.props.ref);
         return _.createElement(
           _,
           {
@@ -3993,10 +3986,10 @@
       const _ = _.createContext({
         Component: _._,
       });
-      const _ = _.forwardRef(function (_, _) {
+      function _(_) {
         const {
-            "flow-children": __webpack_require__,
-            onActivate: _,
+            "flow-children": _,
+            onActivate: __webpack_require__,
             onCancel: _,
             focusClassName: _,
             focusWithinClassName: _,
@@ -4004,10 +3997,11 @@
           } = _,
           { elemProps: _, navOptions: _, gamepadEvents: _ } = (0, _._)(_);
         let _ = {};
-        const _ = (0, _._)(__webpack_require__);
+        const _ = (0, _._)(_);
         _ != _._.NONE && (_.layout = _),
-          _ &&
-            ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
+          __webpack_require__ &&
+            ((_.onClick = _.onClick || __webpack_require__),
+            (_.onOKButton = _.onOKButton || __webpack_require__)),
           _.onOKButton &&
             void 0 === _.focusable &&
             void 0 === _.focusableIfEmpty &&
@@ -4020,11 +4014,13 @@
           _ = (0, _._)();
         (_.className = _()(_.className, "Panel", _ && "Focusable")),
           (0, _._)(_, _);
-        const _ = (0, _._)(_, _);
+        const _ = (0, _._)(_, _.ref);
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
-          _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
+          _.focusable &&
+            (__webpack_require__ || _.onOKButton) &&
+            (_.role ??= "button");
         const _ = (0, _.useContext)(_).Component;
         return _.createElement(
           _._.Provider,
@@ -4044,7 +4040,7 @@
                 ref: _,
               }),
         );
-      });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4240,6 +4236,7 @@
       });
       var _,
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
           (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
@@ -20219,7 +20216,8 @@
             ((this.m_container =
               this.m_parent.ownerDocument.createElement("div")),
             this.m_parent.appendChild(this.m_container)),
-            this.m_reactRoot || (this.m_reactRoot = _._(this.m_container)),
+            this.m_reactRoot ||
+              (this.m_reactRoot = _.createRoot(this.m_container)),
             this.m_reactRoot.render(_);
         }
         Hide(_) {
@@ -21994,11 +21992,18 @@
       })(_ || (_ = {}));
       const _ = new (class {
         m_fnCallbackOnPlaySound = new _._();
+        m_fnCallbackOnSuppressSound = new _._();
         RegisterCallbackOnPlaySound(_) {
           return this.m_fnCallbackOnPlaySound.Register(_);
         }
         PlayNavSound(_, _) {
           this.m_fnCallbackOnPlaySound.Dispatch(_, _);
+        }
+        RegisterCallbackOnSuppressNavImminentSound(_) {
+          return this.m_fnCallbackOnSuppressSound.Register(_);
+        }
+        SuppressImminentNavSound() {
+          this.m_fnCallbackOnSuppressSound.Dispatch();
         }
       })();
     },
@@ -26608,11 +26613,15 @@
               _ = (0, _._)("scroll", _),
               _ = (0, _._)("scroll", _),
               _ = _.useCallback(
-                (_) => (_.m_flPageListScrollTop = _?.scrollTop ?? 0),
+                (_) => {
+                  _.m_flPageListScrollTop = _?.scrollTop ?? 0;
+                },
                 [_],
               ),
               _ = _.useCallback(
-                (_) => (_.m_flPageScrollTop = _?.scrollTop ?? 0),
+                (_) => {
+                  _.m_flPageScrollTop = _?.scrollTop ?? 0;
+                },
                 [_],
               ),
               _ = (0, _._)(_, _),
@@ -37613,6 +37622,7 @@
         m_mapFallbackTokens = new Map();
         m_cbkTokensChanged = new _._();
         m_rgLocalesToUse;
+        m_bReportIndividualMissingTokens = !0;
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(_) {
           this.sm_ErrorReportingStore = _;
@@ -37638,8 +37648,9 @@
               }
           return _;
         }
-        InitFromObjects(_, _, _, _, _) {
-          _ || this.m_mapTokens.clear();
+        InitFromObjects(_, _, _, _, _, _) {
+          _ && (this.m_bReportIndividualMissingTokens = !1),
+            _ || this.m_mapTokens.clear();
           const _ = {
               ...(_ || {}),
               ..._,
@@ -37712,9 +37723,10 @@
             return;
           let _ = this.m_mapTokens.get(_.substring(1));
           if (void 0 !== _) return _;
-          _ ||
-            !_.sm_ErrorReportingStore ||
-            _ ||
+          !_ &&
+            _.sm_ErrorReportingStore &&
+            !_ &&
+            this.m_bReportIndividualMissingTokens &&
             _.sm_ErrorReportingStore.ReportError(
               new Error(
                 `Unable to find localization token '${_}' for language '${_._.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,

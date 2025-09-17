@@ -3,6 +3,21 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [7854],
   {
+    15830: (e) => {
+      e.exports = {
+        DiscoveryQueueWidgetCtn: "_3PAP1PfUymQrLEveRsxQxP",
+        WidgetHeaderCtn: "_3i8xWeKjrdNgEjml1PQRuq",
+        AppCarouselPosition: "_1DaxYFphX9KPH-YWeuNTvO",
+        Initialized: "gjxSD08f5aogKCSeys9k5",
+        Spinner: "_3QqziF_w5iNtHF8dOkfrD0",
+        AppCarouselCtn: "_2qPvUCeD7uiBSn261-Gg25",
+        FadeIn: "Qc0gimNJ0GLAPE87EH3Gp",
+        AppCapsuleCtn: "_3G65z75zOTQeHrXxszHO4b",
+        AppName: "r6OCNSBahfTSSDTqXDVqY",
+        LibraryImage: "_1QVat7gXKVzPNiStElIJCt",
+        CapsuleColumn: "_3OUOaqR0a3uYqsWOZbfSSh",
+      };
+    },
     23342: (e) => {
       e.exports = {
         fullscreen_bg: "-M0lUK3jDRg7ZCRU0lGVq",
@@ -53,7 +68,7 @@
     88336: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
-        strWidescreenWidth: "1600px",
+        strWidescreenWidth: "1700px",
         strMidscreenWidth: "940px",
         strPhoneWidth: "768px",
         FacetedBrowseInnerCtn: "_3vjDu6zylspBzUE7FmM6Yl",
@@ -438,6 +453,9 @@
         PriceDisplayCtn: "_3OVjwYGR60R4K6d5S_bIG3",
         AppDescriptionCtn: "pWPZMFCv8qyGFFjiRJ_3B",
         AppDescription: "GX4vW7Oj1QEzRUDi6wOnO",
+        AppReviewsAndReleaseDateCtn: "_2dHu5S4P1yYwxZtRpV-SdO",
+        ReleaseDate: "_37OQ1nyklU9f9WM_qY3S_f",
+        ReviewScore: "_1cQmCKxuEolvzcEwCr_T8l",
         AppActionJustButtonsCtn: "_3Q_tm9SkDIAKcbDOTExZnn",
         ButtonsRowWrap: "_1B3sMJ5v2o-sCS9CV-6kA3",
         QueueButton: "_3tZYNXnqaO3px3k5QRFOz-",
@@ -646,6 +664,167 @@
     },
     94581: () => {},
     17224: () => {},
+    61088: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
+        AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
+        AppVideo: "_3sG-J5T8SrzM0Hjkda7sgL",
+        Microtrailer: "_24GFDabY2zeyuzhvACpldO",
+        PlayFullTrailer: "_115ZF6m0XsEieocbL7zjo-",
+        "microtrailer-trans-out": "HMoi7fPFNjxiHeyrfkgmO",
+        PlayMicrotrailer: "_2edFDJ0B9YjtlfqugPTxw0",
+        "microtrailer-trans-in": "_3D_pgT8sxFP3ieDxVt_1zp",
+        NoTrailer: "WtSN6aaEz7vEnRjVrq2hS",
+        Trailer: "_1_z8vE2vYRzSyf1HQIcm5O",
+        "trailer-trans-in": "_3kp7PkbzSVQPFoobA3Xx7N",
+        AppMainCap: "_3cc6kgsSpd-DeLRDHEM_lD",
+        AppMainCapFadeIn: "_2tGHq2pbqmrGJVCXoN5f0r",
+        PlayButton: "_1y11BvPq_nL5EZFF8GLuD9",
+        PlayButtonCapFadeIn: "_3Nk6pNRuMCIddyuE9mWS55",
+        AutoplayCheckboxCtn: "_2HvO_RKtxiyyhZsELjYyq5",
+        AOWarning: "_19l-UjQZVVGNK5SKnOrmJB",
+        Text: "VoAJhMdtQTylTg3G03nJo",
+        "capsule-trans-out": "hckHU2LXCJNx0X37OqCsx",
+      };
+    },
+    71477: (e) => {
+      e.exports = {
+        WidgetHeaderCtn: "_2-tz2hqtOXPPtMnVPHNSdx",
+        LaunchAction: "xD8XE561L4OLHkp9K3UIV",
+        DiscoveryQueueWidget: "aKZCakHw7WVaUN3j36Nh",
+        WidgetHeaderText: "_1mKVZY4-l46AZiZvctCEmx",
+        WidgetHeaderSubText: "O2jA-VCFl9bmblncfI4k2",
+        LoginButton: "_3u1HeR7JRPiiuKIT78j2Cc",
+        Placeholder: "_3qFL88r7vVtG3lg2enLhfi",
+        SaleTopSection: "_3Xj9phC0S8zL6qrQ5T1sUJ",
+        StickerArrangement: "_1hvmhK7qgdrqLwH_Duphah",
+        SaleSticker: "_19psoPSyaHlg76v5Cd9H-n",
+        SaleTextCtn: "cwQNGPoPuJS67rykUgZdU",
+        BoldText: "_1LS-qczKUuqKzg56ll_C0A",
+      };
+    },
+    57834: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        DiscoveryQueueCarouselCtn: "_2u0N2gUX44_tavazJJb_QP",
+        TextLink: "_3ZdNCUMz9KZMkwPZlO8zmi",
+        DiscoveryQueueApp: "_1xJSMubUWBlahkrtb4IFTc",
+        DiscoveryQueueWrapper: "_2BYaxM7mBfooJbZYzhEv4D",
+        revealDiscoveryQueueWrapper: "brzQbY6Z8TH8Ww-rFL4E0",
+        DiscoveryQueueItemsCtn: "_3q6eNRFBrPSFSGEn8uRFZ3",
+        DiscoveryQueueItemPositioner: "_16tdfw6vxg9Hdy0KfCutXn",
+        Selected: "_2aeAhZ2Y99YIR2-zD6l27U",
+        InRange: "_1XPIeNMxObbkYolTEj0Bwh",
+        Dragging: "_3fTO0TgoWEAo4zdaHOCTh0",
+        FarLeft: "vkLp1smRjDnZg7XQcMqjk",
+        Left: "_3gBoKuhIxMBjlxU7FZ2L3a",
+        Current: "_2CgJDPFhM9rbjsq9n0c9I_",
+        Right: "_1AGP_wKeaN9phzlq_2K9H7",
+        FarRight: "hBGRzfrW2Obp7QpzYCi2L",
+        AppDetailsCtn: "_2Zwt2P5vy4W9Ha5ePOv54U",
+        AppDetailsCtnTop: "_3TkhdqIi1gqwMzexQDS8Ab",
+        CapsuleLink: "_2m8YEKXvKa2bcFNjqXdJu7",
+        AppLibraryHero: "_uGgOnTsOzgIVK9BHMTUV",
+        AppHeader: "Vwr5XZLr5tOEaVLYbj1mZ",
+        RightColumn: "VVNgZo2T-rubrTvNMPSoh",
+        AppName: "_3lk6f1XI_loCIhBevOddHP",
+        AppTagsCtn: "xXcRKEuacDG8kYtDXu6OH",
+        TagEntry: "xmqBa8sZa4Xhgktfr43Uh",
+        AppReviews: "_2alBMAZOarIyf-vIiNazRg",
+        RelevantCtn: "_3sfhS6SCV1q8dTaRIpWCHB",
+        RelevantColumn: "Ne2AhbYmPfTxwJVmj1FZP",
+        RelevantItem: "_2OUHZGUrr0FugrwCwIm6dF",
+        RelevantCheck: "_1BOH1zFTOxtlgKkeEANpYO",
+        IgnoreLink: "fir3UBZYT6EAmdYWAdr3a",
+        AppActionButtonsCtn: "_2IQHDn5ZvlB1ThhSb_lhX",
+        AppActionJustButtonsCtn: "duAyQ1rUX78lMmmZY1V0n",
+        QueueButton: "_22Bfzcdg2l-RQEn-qKSIol",
+        ButtonsRowWrap: "_1plvU4aLu4hq22gYwThZnH",
+        IgnoredCtn: "_3G1MYmgXVcweTUK5jtU_Ft",
+        Active: "_2D_EZlAEopCvqU0_w21FdH",
+        IgnoredInfo: "_2j-elz350f4ndxI9CBUbyW",
+        IgnoredTitle: "_18alvCecAAMAsyM_6zCY2T",
+        IgnoredDescription: "CmI-HxKbBH8PjoSk7IVPC",
+        UndoIgnoreButton: "_2E3PfDDIiiKoy4iDQV7Ewl",
+        AppDesc: "_3-6CubUJWYN2tbKvwS2N9n",
+        YGlyph: "_3ncywKLa2mgKgbsj-g2wJi",
+        SummaryContentCtn: "Tvu6zAI3kbdYjGQGbypuQ",
+        SummaryTitle: "_2o4_HDWD3bRMkoJT4RfiMv",
+        YourStats: "_3-iD7yn2dCmqp9AL5xuwLX",
+        SummaryGrid: "_3vRcTzxpTSFxcxVm9BKrlQ",
+        GridItem: "_2w3xjuBZIgZJPO9HAa5Hb0",
+        GridTitle: "_7HEa84jCz03LkGTjIZa7c",
+        GridNumber: "jM11lU9OD9-2Hlu3Akwtj",
+        GridSubTitle: "_2n8wa2hMCjKHhvMsS0v3_k",
+        SummaryActionButtonsCtn: "nqmYD9sGBA3BEmNjp6qYF",
+        TopBarCtn: "_1ewUwegRciiNydBWSQRCX-",
+        LearnMoreLink: "CiFk6OuYAQSbv_DGXoBSX",
+        ControlsCtn: "_2Gy72TJcKqY9gqP5-TAmSk",
+        Disabled: "_2xsPifNspMLcbkoUSA5Ujl",
+        Primary: "_3o2jhEGrGiVndMjUbNpOw-",
+        Launch: "_3SOZx68qVakLwDvAYBOPMG",
+        Wide: "_1tFfTbcTKjlfSGsMOJvdf_",
+        QueueNavArrow: "_2sZ7DAljYV5Xd-nbhtlmyM",
+        Enable: "_2CTzbHZ-C-FfnXEtLZPv9q",
+        RightArrow: "_30_0NBq3DkV-qL7Eyqva-t",
+        LeftArrow: "_36Cln2gIYtwR3sPPcOi9bT",
+        ReleventSimilarAppsCtn: "_2akaWEht7jMXdxPJFmf3WN",
+        RecommendingCuratorsCtn: "_RZQ6JnUY6lQGmRcgHFNA",
+        AppRelevanceCtn: "_367qBdIRU4xAYHt5cqhPVa",
+        WhyRelevant: "_29ReJunMtLbnxbnixF6VdE",
+        SimilarAppCtn: "_2fNR47HGs7tI_v1HC2-N1h",
+        SimilarAppImg: "_1q8mEyt8Rp7JweHMRGm6hq",
+        SimilarAppText: "YWLoeGgBPsjUtXywol3_O",
+        FriendAvatarsCtn: "_2hxko0SvUWCZ30U4JH4TNn",
+        RelevantTextBold: "_1Z_ek2XNBZbkZqyR-QSwlo",
+        AppDescription: "_2mksBeuafFs1CMp0t5Z9gX",
+        TradingCardCtn: "_13ZcoCKc8H09LSHp4C197Z",
+        TradingCardImage: "_2ZB_x5Jq7JGDapJVPsCZTo",
+        Bold: "_2P6WAN13LnRVRmRb-VNu_L",
+        FriendBlockCtn: "_34aoCP80lDRK3cq6_V0YQ_",
+        PersonaStatus: "_1AYnL3n86EbaOCKf18KKV8",
+        ProgressHidden: "UdYhfFDOguxduU7c3PVpv",
+        DiscoveryQueueName: "D7yeVCEwaFr6qNo_bPGCr",
+        SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
+        RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
+        SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
+      };
+    },
+    25599: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        ProgressCtn: "_3ed1Al-hFnjq4HQeLo6cIT",
+        ProgressDot: "_2R187sMx7MTX5XQ2KN3Xnx",
+        ProgressDotActive: "_3z2pS3DFn3MEl5ZPw6lsa9",
+        ProgressDotSelected: "_1qJVCZsv51RtfBGao-PV8V",
+        ProgressDotClickable: "jKfeFH4S6YhaeZ7RCZ8BN",
+      };
+    },
+    34418: (e) => {
+      e.exports = {
+        "duration-app-launch": "800ms",
+        AppVideoCtn: "_5T6C7ESpj4ynwbH8LS101",
+        WishlistBadge: "_1H947zVMI4eix33y6Vyrm0",
+        Active: "QO_OlPouxqbJBf7_YhDcB",
+        DeckVerifiedLogo: "_32nCthjo6y3PW8ly04ygbU",
+        VideoArea: "_1dktHf2Jq2wDCCvlx1tpMJ",
+        IgnoredCtn: "_1fmpWkA3raMRNRb2988jsO",
+        IgnoredInfo: "_12r_HcaLl4JO7AfMLMEZqE",
+        IgnoredTitle: "_2NLzxMudKrBejIZmxYz-Wu",
+        IgnoredDescription: "_3ViR4YrtH0a-mK6EiPgOSB",
+        UndoIgnoreButton: "_177VX9-0Tj1sNozNrm8bN1",
+        UndoButton: "_3HOpXzFuRFY1WwrPL-fxOi",
+        Disabled: "_3xyNp4rGNpDJtxvww4ZCOR",
+      };
+    },
+    828: (e) => {
+      e.exports = {
+        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
+        Category: "_2YhOhoyYNbue9fEPMYPiq2",
+        Visible: "_2cpBClyttSkWAsgMArc0BM",
+      };
+    },
     21659: (e, t, a) => {
       "use strict";
       a.d(t, {
@@ -1786,6 +1965,63 @@
             );
           });
       })(n || (n = {}));
+    },
+    92834: (e, t, a) => {
+      "use strict";
+      function n(...e) {
+        return e.join(" ");
+      }
+      a.d(t, { q: () => n });
+    },
+    79359: (e, t, a) => {
+      "use strict";
+      a.d(t, { M: () => o });
+      var n = a(90626),
+        r = a(6144),
+        s = a(84933);
+      const i = (e) => null != e;
+      function o(e, t) {
+        const [a, r] = n.useState(window.localStorage.getItem(e)),
+          o = n.useRef(e);
+        n.useEffect(() => {
+          e != o.current &&
+            (r(window.localStorage.getItem(e)), (o.current = e));
+        }, [e]);
+        const c = e == o.current ? a : window.localStorage.getItem(e);
+        let m = t;
+        return (
+          i(c) &&
+            (m = i(t)
+              ? "boolean" == typeof t
+                ? t.constructor("false" !== c)
+                : t.constructor(c)
+              : c),
+          (0, s.hL)(l.Get().GetLocalStoreChangeCallback(e), r),
+          [
+            m,
+            (t) => {
+              const a = i(t) ? String(t) : null;
+              window.localStorage.setItem(e, a),
+                r(a),
+                l.Get().GetLocalStoreChangeCallback(e).Dispatch(a);
+            },
+          ]
+        );
+      }
+      class l {
+        m_mapChangeCallback = new Map();
+        GetLocalStoreChangeCallback(e) {
+          return (
+            this.m_mapChangeCallback.has(e) ||
+              this.m_mapChangeCallback.set(e, new r.lu()),
+            this.m_mapChangeCallback.get(e)
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return l.s_Singleton || (l.s_Singleton = new l()), l.s_Singleton;
+        }
+      }
     },
     89686: (e, t, a) => {
       "use strict";
@@ -3059,6 +3295,239 @@
       }
       (0, n.Cg)([c.oI], u.prototype, "LoadCompatabilityAppList", null);
     },
+    39199: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        Bk: () => h,
+        IH: () => y,
+        Uf: () => v,
+        WX: () => b,
+        aI: () => f,
+        bz: () => S,
+      });
+      var n = a(34629),
+        r = a(90626),
+        s = a(14947),
+        i = a(56545),
+        o = a(75487),
+        l = a(6144),
+        c = a(84933),
+        m = a(41338),
+        u = a(78327),
+        d = a(64753),
+        _ = a(83561),
+        p = a(7860);
+      function g(e, t) {
+        const a = t?.nSaleTagID,
+          n = t?.strContentHubType,
+          r = t?.strContentHubCategory,
+          s = t?.nContentHubTagID,
+          i = t?.bDiscountsOnly,
+          o = t?.bPrioritizeDiscounts,
+          l = t?.strOptInName,
+          c = t?.nOptInTagID,
+          m = t?.nPruneTagID;
+        let u = e.toString();
+        return (
+          a
+            ? (u += "_" + a)
+            : n &&
+              ((u += "_" + n),
+              "category" === n && r
+                ? (u += "_" + r)
+                : "tags" === n && s && (u += "_" + s),
+              i ? (u += "_d") : o && (u += "_p"),
+              l && c && m && (u += "_" + l)),
+          u
+        );
+      }
+      function h(e) {
+        return (0, m.bt)(JSON.stringify(e));
+      }
+      function S(e) {
+        return JSON.parse((0, m.he)(e));
+      }
+      class f {
+        m_transport;
+        m_mapDiscoveryQueues = new Map();
+        m_mapSkippedApps = new Map();
+        m_mapSkippedAppCount = new Map();
+        m_mapInClientCompleted = new Map();
+        m_mapInClientCompletedCallback = new Map();
+        m_setExhuasted = new Set();
+        m_mapExhuastedCallback = new Map();
+        GetTotalSkippedAppsForDiscoveryQueue(e, t) {
+          const a = g(e, t);
+          return this.m_mapDiscoveryQueues.get(a)?.skipped ?? 0;
+        }
+        GetNumAppsSeenForDiscoveryQueue(e, t) {
+          const a = g(e, t);
+          return this.m_mapSkippedAppCount.get(a) || 0;
+        }
+        GetSkippedAppKey(e, t, a) {
+          return `${e}_${g(t, a)}`;
+        }
+        GetInClientCompletedQueues(e, t) {
+          const a = g(e, t);
+          return this.m_mapInClientCompleted.get(a) || 0;
+        }
+        GetInClientCompletedQueuesCallback(e, t) {
+          const a = g(e, t);
+          return (
+            this.m_mapInClientCompletedCallback.has(a) ||
+              this.m_mapInClientCompletedCallback.set(a, new l.lu()),
+            this.m_mapInClientCompletedCallback.get(a)
+          );
+        }
+        GetExhaustedCallback(e, t) {
+          const a = g(e, t);
+          return (
+            this.m_mapExhuastedCallback.has(a) ||
+              this.m_mapExhuastedCallback.set(a, (0, l.Jc)(!1)),
+            this.m_mapExhuastedCallback.get(a)
+          );
+        }
+        BIsExhausted(e, t) {
+          const a = g(e, t);
+          return this.m_setExhuasted.has(a);
+        }
+        async LoadDiscoveryQueue(e, t, a) {
+          const n = g(e, a);
+          try {
+            const r = (0, _.cw)(this.m_transport, e, t, a);
+            t && (await p.L.invalidateQueries({ queryKey: r.queryKey }));
+            const s = await p.L.fetchQuery(r);
+            return (
+              this.m_mapDiscoveryQueues.set(n, s),
+              s.exhausted
+                ? (this.m_setExhuasted.add(n),
+                  this.GetExhaustedCallback(e, a).Set(!0))
+                : (this.m_setExhuasted.delete(n),
+                  this.GetExhaustedCallback(e, a).Set(!1)),
+              this.m_mapSkippedAppCount.set(n, s.skipped || 0),
+              1
+            );
+          } catch (t) {
+            return (
+              console.warn(
+                "Error",
+                t,
+                "failed to get discovery queue type",
+                e,
+                "key",
+                n,
+              ),
+              2
+            );
+          }
+        }
+        async GetDiscoveryQueueAppsOfType(e, t, a) {
+          const n = g(e, a);
+          return (
+            (!t && this.m_mapDiscoveryQueues.has(n)) ||
+              (await this.LoadDiscoveryQueue(e, t, a)),
+            {
+              appids: this.m_mapDiscoveryQueues.get(n).appids,
+              exhausted: this.m_mapDiscoveryQueues.get(n).exhausted,
+            }
+          );
+        }
+        async SkipDiscoveryQueueItem(e, t, a) {
+          g(t, a);
+          const n = this.GetSkippedAppKey(e, t, a);
+          if (!this.m_mapSkippedApps.has(n)) {
+            const r = g(t, a),
+              s = this.m_mapDiscoveryQueues.get(r).appids,
+              l = s[s.length - 1] == e;
+            this.m_mapSkippedApps.set(n, !0),
+              this.m_mapSkippedAppCount.set(
+                r,
+                (this.m_mapSkippedAppCount.get(r) || 0) + 1,
+              );
+            const c = i.w.Init(o.fe);
+            c.Body().set_appid(e),
+              c.Body().set_queue_type(t),
+              (Boolean(a?.nSaleTagID) || Boolean(a?.strContentHubType)) &&
+                c.Body().set_store_page_filter((0, _.Jy)(a));
+            const m = (
+              await o.nd.SkipDiscoveryQueueItem(this.m_transport, c)
+            ).GetEResult();
+            1 != m && 29 != m
+              ? (console.warn("Error", m, "failed to skip appid ", e),
+                this.m_mapSkippedApps.delete(n))
+              : l && this.MarkDiscoveryQueueCompleted(t, a);
+          }
+          return Promise.resolve();
+        }
+        MarkDiscoveryQueueCompleted(e, t) {
+          const a = g(e, t);
+          if (this.m_mapInClientCompleted.has(a)) {
+            const n = this.m_mapInClientCompleted.get(a) + 1;
+            this.m_mapInClientCompleted.set(a, n),
+              this.GetInClientCompletedQueuesCallback(e, t).Dispatch(n);
+          } else
+            this.m_mapInClientCompleted.set(a, 0),
+              this.GetInClientCompletedQueuesCallback(e, t).Dispatch(0);
+        }
+        async LoadSkippedApps(e, t) {
+          g(e, t);
+          const a = i.w.Init(o.pS);
+          a.Body().set_steamid(u.iA.steamid),
+            a.Body().set_queue_type(e),
+            (Boolean(t?.nSaleTagID) || Boolean(t?.strContentHubType)) &&
+              a.Body().set_store_page_filter((0, _.Jy)(t));
+          const n = await o.nd.GetDiscoveryQueueSkippedApps(
+            this.m_transport,
+            a,
+          );
+          return 1 === n.GetEResult()
+            ? n.Body().appids() || []
+            : (console.warn(
+                "Failed to retrieve skipped apps for discovery queue.",
+                e,
+                t,
+                n.GetEResult(),
+              ),
+              []);
+        }
+        static s_DiscoveryQueueStore = null;
+        static Init(e) {
+          f.Get().m_transport = e;
+        }
+        static BHasTransport() {
+          return Boolean(f.Get().m_transport);
+        }
+        static Get() {
+          return (
+            this.s_DiscoveryQueueStore ||
+              (this.s_DiscoveryQueueStore = new f()),
+            this.s_DiscoveryQueueStore
+          );
+        }
+        constructor() {
+          (0, s.Gn)(this);
+        }
+      }
+      function v(e, t) {
+        const [a, n] = (0, r.useState)(
+          f.Get().GetInClientCompletedQueues(e, t),
+        );
+        return (
+          (0, c.hL)(f.Get().GetInClientCompletedQueuesCallback(e, t), n), a
+        );
+      }
+      function y(e, t) {
+        return (0, d.gc)(f.Get().GetExhaustedCallback(e, t));
+      }
+      function b(e, t) {
+        const a = r.useMemo(
+          () => (0, u.Tc)("discovery_queue_name", "application_config"),
+          [],
+        );
+        return "string" == typeof a && a.length > 0 ? a : "";
+      }
+      (0, n.Cg)([s.sH], f.prototype, "m_mapDiscoveryQueues", void 0);
+    },
     19267: (e, t, a) => {
       "use strict";
       a.d(t, { BB: () => v, DR: () => f, PL: () => S, oo: () => n });
@@ -4174,6 +4643,100 @@
       }
       (0, n.Cg)([i.sH], _.prototype, "m_mapLoadedData", void 0);
     },
+    3734: (e, t, a) => {
+      "use strict";
+      a.d(t, { E2: () => _, PG: () => g });
+      var n = a(90626),
+        r = a(20194),
+        s = a(56545),
+        i = a(94601),
+        o = a(72839),
+        l = a(82097),
+        c = a(81393),
+        m = a(23809);
+      const u = n.createContext({}),
+        d = () => n.useContext(u);
+      function _(e) {
+        let { defaultOptions: t, children: a } = e,
+          r = n.useMemo(() => ({ defaultOptions: t || {} }), [t]);
+        return n.createElement(u.Provider, { value: r }, a);
+      }
+      const p = "StoreQueryStore";
+      function g(e, t, a, l) {
+        let u = d();
+        const _ = (0, m.KV)();
+        u ||
+          (0, c.wT)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
+        let g = u.defaultOptions;
+        const S = n.useMemo(() => {
+          let e = [];
+          return (
+            l?.content_descriptors_excluded
+              ? (e = l.content_descriptors_excluded)
+              : g?.content_descriptors_excluded &&
+                (e = g.content_descriptors_excluded),
+            { ...t, filters: { content_descriptors_excluded: e, ...t.filters } }
+          );
+        }, [t, l, g]);
+        let f;
+        void 0 !== l?.override_country_code
+          ? (f = l.override_country_code)
+          : void 0 !== g?.override_country_code &&
+            (f = g.override_country_code);
+        let v = { staleTime: 36e5 };
+        l?.reactQuery && (v = { ...v, ...l.reactQuery });
+        const y = [p, S, a, l];
+        return (0, r.I)({
+          queryKey: y,
+          queryFn: () =>
+            (async function (e, t, a, n, r) {
+              const l = s.w.Init(i.iU);
+              (0, o.rV)(l), n && (0, o.Bn)(l, n);
+              r && l.Body().set_override_country_code(r);
+              l.Body().set_query(i.nu.fromObject(a)),
+                l.Body().set_query_name(t);
+              const c = await i.Fs.Query(e, l);
+              if (1 != c.GetEResult())
+                throw `Error executing StoreQuery "${t}", EResult: ${c.GetEResult()}`;
+              return new h(c, n);
+            })(_, e, S, a, f),
+          ...v,
+        });
+      }
+      class h {
+        m_Items;
+        m_rgItemIDs;
+        m_metadata;
+        constructor(e, t) {
+          this.ReadResults(e, t);
+        }
+        GetItems() {
+          return this.m_Items;
+        }
+        GetItemIDs() {
+          return this.m_rgItemIDs;
+        }
+        GetMetadata() {
+          return this.m_metadata;
+        }
+        ReadResults(e, t) {
+          this.m_Items ||
+            ((0, c.wT)(
+              0 == e.Body().metadata().start(),
+              "Empty item list - expected to start at 0",
+            ),
+            (this.m_Items = []));
+          const a = e.Body().ids() || [];
+          if (
+            ((this.m_rgItemIDs = a.map((e) => e.toObject())),
+            e.Body().store_items())
+          )
+            for (const a of e.Body().store_items())
+              this.m_Items.push(l.A.Get().ReadItem(a, t));
+          this.m_metadata = e.Body().metadata().toObject();
+        }
+      }
+    },
     81301: (e, t, a) => {
       "use strict";
       a.d(t, { H: () => h, Y: () => g });
@@ -5012,7 +5575,6 @@
           Promise.all([
             a.e(8970),
             a.e(6597),
-            a.e(2715),
             a.e(7937),
             a.e(2797),
             a.e(7436),
@@ -5025,6 +5587,7 @@
             a.e(6883),
             a.e(3846),
             a.e(9105),
+            a.e(8105),
             a.e(283),
             a.e(177),
             a.e(8396),
@@ -7785,15 +8348,14 @@
         const x = (0, m.L3)(M),
           H =
             ((0, c.tB)(r.GetStorePageURL(k)),
-            r.GetName()?.length > 0 && r.GetName()),
-          U =
+            r.GetName()?.length > 0 && r.GetName(),
             k && r.HasDemoStandaloneStorePage()
               ? r.GetDemoStandaloneStorePageAppIDs()[0]
-              : o,
-          z = 0 == r.GetStoreItemType();
+              : o),
+          U = 0 == r.GetStoreItemType();
         return n.createElement(
           S.oj,
-          { appid: z && r.GetAppID() },
+          { appid: U && r.GetAppID() },
           n.createElement(
             "div",
             {
@@ -7811,7 +8373,7 @@
                 { className: (0, v.A)(A().StoreSaleWidgetLeft) },
                 n.createElement(
                   T.u,
-                  { type: s, id: U, fnHoverState: a },
+                  { type: s, id: H, fnHoverState: a },
                   n.createElement(
                     "div",
                     { className: A().StoreSaleWidgetImage },
@@ -7825,7 +8387,7 @@
                 "div",
                 { className: A().StoreSaleWidgetCrossCenterRight },
                 n.createElement(b.EP, {
-                  appID: z && r.GetAppID(),
+                  appID: U && r.GetAppID(),
                   classOverride: (0, v.A)(
                     d().WishlistButtonNotTop,
                     "WishlistButton",
@@ -7838,20 +8400,6 @@
                   n.createElement(
                     "div",
                     { className: A().StoreSaleWidgetCenter },
-                    n.createElement(
-                      T.u,
-                      { type: s, id: U, fnHoverState: a },
-                      n.createElement(
-                        "div",
-                        {
-                          className: (0, v.A)(
-                            A().StoreSaleWidgetTitle,
-                            "StoreSaleWidgetTitle",
-                          ),
-                        },
-                        H,
-                      ),
-                    ),
                     r.GetShortDescription()?.length > 0 &&
                       n.createElement(
                         "div",
@@ -7908,7 +8456,7 @@
                   ),
                   n.createElement(
                     "div",
-                    { className: A().StoreSaleWidgetRight },
+                    { className: A().StoreSaleLibraryAssetWidgetRight },
                     n.createElement(C.Y, {
                       info: l,
                       bPopOutTrailerPlayback: !0,
@@ -7923,7 +8471,7 @@
                 n.createElement(
                   "div",
                   { className: A().CapsuleBottomBar },
-                  Boolean(N && z)
+                  Boolean(N && U)
                     ? n.createElement(E.E, {
                         appid: r.GetAppID(),
                         bIsMuted: !1,
@@ -8041,7 +8589,7 @@
           case "compactlist":
             return n.createElement(o.p, { ...e });
           default:
-            return n.createElement(i.pb, { ...e });
+            return n.createElement(i.pb, { ...e, bShowReviewSummary: !0 });
         }
       };
     },
@@ -11234,7 +11782,7 @@
         ut = a(30600),
         dt = a(41338),
         _t = a(79613),
-        pt = a(30786),
+        pt = a(47453),
         gt = a(96971),
         ht = a(51428),
         St = a.n(ht),
@@ -13426,34 +13974,40 @@
             showDemoInfo: r,
             introVideo: o,
           } = e,
-          l = (0, V.n9)(),
-          c = (0, s.L3)(l),
-          [m] = (0, i.t7)(t, lt.Gy),
-          u = Ta(m, a),
-          d = (0, v.Qn)(),
-          _ = m.GetAssets().GetMainCapsuleURL() ?? m.GetAssets().GetHeaderURL(),
-          p = m.GetAssets().GetLibraryCapsuleURL();
+          l = (0, v.Qn)(),
+          c = (0, V.n9)(),
+          m = (0, s.L3)(c),
+          [u] = (0, i.t7)(t, lt.Gy),
+          [d] = (0, i.t7)(u.GetParentAppID(), lt.Gy),
+          _ = Ta(u, a),
+          p = u.GetAssets().GetMainCapsuleURL() ?? u.GetAssets().GetHeaderURL(),
+          g = u.GetAssets().GetLibraryCapsuleURL(),
+          h = (d ?? u)?.GetFormattedSteamReleaseDate(),
+          S =
+            1 != u.GetAppType() || d?.HasDemoStandaloneStorePage()
+              ? { id: t, type: (0, nt.U)(u.GetAppType()) }
+              : void 0;
         return n.createElement(
           Y.Z,
           { className: Sa().AppDetailsCtn },
           n.createElement(
             "div",
             { className: (0, f.A)(Sa().AppCapsuleCtn) },
-            _ &&
+            p &&
               n.createElement(
                 K.Ii,
-                { href: o ? null : u, className: Sa().AppLink },
-                n.createElement("img", { className: Sa().AppCapsule, src: _ }),
+                { href: o ? null : _, className: Sa().AppLink },
+                n.createElement("img", { className: Sa().AppCapsule, src: p }),
                 n.createElement("img", {
                   className: Sa().AppCapsuleLibrary,
-                  src: p,
+                  src: g,
                 }),
               ),
             !o &&
               n.createElement(ze.EP, {
                 classOverride: (0, f.A)(Sa().AppCapsuleWishListBtn),
                 appID: t,
-                snr: c,
+                snr: m,
               }),
           ),
           n.createElement(
@@ -13462,19 +14016,37 @@
             !o &&
               n.createElement(
                 K.Ii,
-                { href: u, className: (0, f.A)(Sa().AppName) },
-                m.GetName(),
+                { href: _, className: (0, f.A)(Sa().AppName) },
+                u.GetName(),
               ),
-            !o && n.createElement(Ba, { rgTagIDs: m?.GetTagIDs() || [] }),
-            !d &&
+            !o && n.createElement(Ba, { rgTagIDs: u?.GetTagIDs() || [] }),
+            !l &&
               n.createElement(
                 "div",
                 { className: (0, f.A)(Sa().AppDescriptionCtn) },
                 n.createElement(
                   "div",
                   { className: (0, f.A)(Sa().AppDescription) },
-                  m.GetShortDescription(),
+                  u.GetShortDescription(),
                 ),
+              ),
+            !l &&
+              !o &&
+              n.createElement(
+                "div",
+                { className: (0, f.A)(Sa().AppReviewsAndReleaseDateCtn) },
+                h &&
+                  n.createElement(
+                    "div",
+                    { className: Sa().ReleaseDate },
+                    (0, T.we)("#Sale_ReleaseDate", h),
+                  ),
+                S &&
+                  n.createElement(
+                    "div",
+                    { className: Sa().ReviewScore },
+                    n.createElement(ze.Jz, { appInfo: S }),
+                  ),
               ),
           ),
           n.createElement(
@@ -13486,14 +14058,14 @@
               n.createElement(
                 "div",
                 { className: Sa().ButtonsRowWrap },
-                !d &&
+                !l &&
                   r &&
                   !o &&
-                  (m.BHasDemo() || 1 == m.GetAppType()) &&
+                  (u.BHasDemo() || 1 == u.GetAppType()) &&
                   n.createElement(pt.j, {
                     info: {
-                      id: m.GetAppID(),
-                      type: (0, A._4)(m.GetStoreItemType(), m.GetAppType()),
+                      id: u.GetAppID(),
+                      type: (0, A._4)(u.GetStoreItemType(), u.GetAppType()),
                     },
                     className: (0, f.A)(Sa().QueueButton, Sa().Demo),
                   }),
@@ -13503,14 +14075,16 @@
                   !o &&
                     n.createElement(Wt.wc, {
                       bSingleLineMode: !1,
-                      info: { id: t, type: (0, nt.U)(m.GetAppType()) },
+                      info: { id: t, type: (0, nt.U)(u.GetAppType()) },
+                      bHideReleaseDate: !0,
+                      bHideIfDemo: !0,
                     }),
                 ),
                 !o &&
                   n.createElement(ze.EP, {
                     classOverride: (0, f.A)(Sa().AppCapsuleWishListBtnMobile),
                     appID: t,
-                    snr: c,
+                    snr: m,
                   }),
               ),
             ),
@@ -19809,7 +20383,8 @@
           const _ = async (e) => {
               (l && l != e) || d(!0), l || (await o(e));
             },
-            p = n.useId();
+            p = n.useId(),
+            g = n.useRef(null);
           return n.createElement(
             Zt.eV,
             {
@@ -19821,6 +20396,7 @@
             n.createElement(
               fi.A,
               {
+                nodeRef: g,
                 timeout: 500,
                 in: !0,
                 appear: !0,
@@ -19829,75 +20405,68 @@
                   enterDone: bi().Open,
                 },
               },
-              (e) =>
+              n.createElement(
+                "div",
+                {
+                  ref: g,
+                  className: (0, f.A)(
+                    bi().StoryPage,
+                    bi().PageOne,
+                    u && bi().OnPageTwo,
+                  ),
+                },
                 n.createElement(
                   "div",
-                  {
-                    ref: e,
-                    className: (0, f.A)(
-                      bi().StoryPage,
-                      bi().PageOne,
-                      u && bi().OnPageTwo,
-                    ),
-                  },
+                  { className: bi().StoryHeader },
                   n.createElement(
                     "div",
-                    { className: bi().StoryHeader },
-                    n.createElement(
-                      "div",
-                      { className: bi().PageNumber },
-                      (0, T.we)(s.strPageNumber),
-                    ),
-                    n.createElement(
-                      "div",
-                      { id: p, className: bi().PageTitle },
-                      (0, T.we)(s.strPageTitle),
-                    ),
+                    { className: bi().PageNumber },
+                    (0, T.we)(s.strPageNumber),
                   ),
                   n.createElement(
                     "div",
-                    { className: bi().PageText },
-                    (0, T.we)(s.strPageText),
-                  ),
-                  n.createElement(
-                    "div",
-                    { className: bi().PageFooter },
-                    n.createElement(
-                      "div",
-                      { className: bi().NoticeBox },
-                      n.createElement(
-                        "a",
-                        {
-                          className: bi().OptionTextNotice,
-                          href: v.TS.STORE_BASE_URL + "forgeyourfate",
-                        },
-                        (0, T.we)("#Summer_21_Story_Decide_Notice"),
-                      ),
-                    ),
-                    n.createElement(
-                      "div",
-                      {
-                        className: (0, f.A)(
-                          bi().OptionText,
-                          m && bi().Disabled,
-                        ),
-                        onClick: () => _(1),
-                      },
-                      (0, T.we)(s.strOptionA),
-                    ),
-                    n.createElement(
-                      "div",
-                      {
-                        className: (0, f.A)(
-                          bi().OptionText,
-                          c && bi().Disabled,
-                        ),
-                        onClick: () => _(2),
-                      },
-                      (0, T.we)(s.strOptionB),
-                    ),
+                    { id: p, className: bi().PageTitle },
+                    (0, T.we)(s.strPageTitle),
                   ),
                 ),
+                n.createElement(
+                  "div",
+                  { className: bi().PageText },
+                  (0, T.we)(s.strPageText),
+                ),
+                n.createElement(
+                  "div",
+                  { className: bi().PageFooter },
+                  n.createElement(
+                    "div",
+                    { className: bi().NoticeBox },
+                    n.createElement(
+                      "a",
+                      {
+                        className: bi().OptionTextNotice,
+                        href: v.TS.STORE_BASE_URL + "forgeyourfate",
+                      },
+                      (0, T.we)("#Summer_21_Story_Decide_Notice"),
+                    ),
+                  ),
+                  n.createElement(
+                    "div",
+                    {
+                      className: (0, f.A)(bi().OptionText, m && bi().Disabled),
+                      onClick: () => _(1),
+                    },
+                    (0, T.we)(s.strOptionA),
+                  ),
+                  n.createElement(
+                    "div",
+                    {
+                      className: (0, f.A)(bi().OptionText, c && bi().Disabled),
+                      onClick: () => _(2),
+                    },
+                    (0, T.we)(s.strOptionB),
+                  ),
+                ),
+              ),
             ),
             u &&
               n.createElement(
@@ -21907,7 +22476,29 @@
       }
       function Go(e) {
         const { event: t, section: a, language: r, row: s } = e,
-          i = (0, fe.q3)(() => s.media_columns?.length || 0);
+          i = (0, fe.q3)(() => s.media_columns?.length || 0),
+          [o, l] = n.useState(void 0),
+          [c, m] = n.useState(void 0),
+          u = (0, es.YR)(() => []),
+          d = s.media_columns.length,
+          _ = n.useCallback(
+            (e, t, a) => {
+              (u[t] = { bMediaFirst: e, nHeight: a }),
+                l(
+                  u
+                    .slice(0, d)
+                    .filter((e) => e.bMediaFirst)
+                    .reduce((e, t) => Math.max(e, t.nHeight), 0),
+                ),
+                m(
+                  u
+                    .slice(0, d)
+                    .filter((e) => !e.bMediaFirst)
+                    .reduce((e, t) => Math.max(e, t.nHeight), 0),
+                );
+            },
+            [u, d],
+          );
         return n.createElement(
           "div",
           {
@@ -21919,18 +22510,31 @@
               [Io().RowSize4]: 4 == i,
             }),
           },
-          s.media_columns?.map((t) =>
+          s.media_columns?.map((t, r) =>
             n.createElement(ko, {
               key: "mc_" + a.unique_id + "_" + t.unique_id,
               ...e,
               content: t,
+              mediaIndex: r,
+              mediaFirstHeight: o,
+              textFirstHeight: c,
+              mediaHeightChanged: _,
             }),
           ),
         );
       }
       function ko(e) {
-        const { event: t, section: a, language: r, content: s } = e,
-          [i, o, l, c, m, u, d, _, p, g, h, S, f, v, y, b] = (0, fe.q3)(() => {
+        const {
+            event: t,
+            section: a,
+            language: r,
+            content: s,
+            mediaIndex: i,
+            mediaFirstHeight: o,
+            textFirstHeight: l,
+            mediaHeightChanged: c,
+          } = e,
+          [m, u, d, _, p, g, h, S, f, v, y, b, E, C, w, A] = (0, fe.q3)(() => {
             const e = T.A0.GetELanguageFallback(r);
             return [
               s.display_order || so.k_HorizontalMediaFirst,
@@ -21974,34 +22578,46 @@
             ];
           });
         return n.createElement(Po, {
-          displayOrder: i,
+          displayOrder: m,
           event: t,
           section: a,
-          title: c,
-          subtitle: m,
-          description: u,
-          media: l,
-          mediaType: o,
+          title: _,
+          subtitle: p,
+          description: g,
+          media: d,
+          mediaType: u,
           language: r,
           content: s,
-          eTitleDisplaySize: d,
-          titleAlign: _,
-          subtitleAlign: p,
-          descAlign: g,
-          mediaHAlign: h,
-          mediaVAlign: S,
-          titleMedia: f,
-          titleMediaType: v,
-          titleVAlign: y,
-          titleHAlign: b,
+          eTitleDisplaySize: h,
+          titleAlign: S,
+          subtitleAlign: f,
+          descAlign: v,
+          mediaHAlign: y,
+          mediaVAlign: b,
+          titleMedia: E,
+          titleMediaType: C,
+          titleVAlign: w,
+          titleHAlign: A,
+          mediaIndex: i,
+          mediaFirstHeight: o,
+          textFirstHeight: l,
+          mediaHeightChanged: c,
         });
       }
       function Po(e) {
-        const { displayOrder: t, content: a, section: r } = e,
-          s = (0, v.Qn)(),
-          i = n.useRef(void 0),
-          o = (0, To.BZ)(i),
-          { bHighlighted: l } = (function (e, t, a) {
+        const {
+            displayOrder: t,
+            content: a,
+            section: r,
+            mediaIndex: s,
+            mediaHeightChanged: i,
+            mediaFirstHeight: o,
+            textFirstHeight: l,
+          } = e,
+          m = (0, v.Qn)(),
+          u = n.useRef(void 0),
+          d = (0, To.BZ)(u),
+          { bHighlighted: _ } = (function (e, t, a) {
             n.useEffect(() => {
               xr.TU.Get().SetMouseOverSubsection(t, a);
             }, [t, a]);
@@ -22010,37 +22626,50 @@
               xr.TU.Get().GetMouseOverSubsectionID(),
             ]);
             return { bHighlighted: r == e && s == t };
-          })(r.unique_id, a.unique_id, o),
-          [m, u] = n.useState(!1);
+          })(r.unique_id, a.unique_id, d),
+          [p, g] = n.useState(!1);
+        (0, xr.PM)(
+          (e, t) =>
+            r.unique_id == e &&
+            a.unique_id == t &&
+            (u.current?.scrollIntoView(), g(!0), !0),
+        );
+        const h =
+            !t || t == so.k_HorizontalMediaFirst || t == so.k_MediaTitleDesc,
+          S = n.useRef(void 0),
+          y = n.useCallback(
+            (e) => {
+              const a =
+                !t || t == so.k_TitleMediaDesc || so.k_TitleDescMedia
+                  ? e.blockSize
+                  : e.inlineSize;
+              (S.current = a), i?.(h, s, a);
+            },
+            [h, t, i, s],
+          );
         return (
-          (0, xr.PM)(
-            (e, t) =>
-              r.unique_id == e &&
-              a.unique_id == t &&
-              (i.current?.scrollIntoView(), u(!0), !0),
-          ),
+          n.useEffect(() => {
+            null != S.current && i(h, s, S.current);
+          }, [h, i, s]),
           n.createElement(
             "div",
             {
-              ref: i,
+              ref: u,
               className: (0, f.A)({
                 [Io().MediaCtn]: !0,
-                [Io().LivePreview]: l,
-                [Io().JumpedTo]: m,
+                [Io().LivePreview]: _,
+                [Io().JumpedTo]: p,
                 [Io().HorizontalMediaFirst]:
                   !t || t == so.k_HorizontalMediaFirst,
                 [Io().HorizontalTextFirst]: t == so.k_HorizontalTextFirst,
                 [Io().VerticalMediaFirst]: t == so.k_MediaTitleDesc,
                 [Io().VerticalTextFirst]: t == so.k_TitleDescMedia,
               }),
-              style: (0, c.vU)(a, s),
+              style: (0, c.vU)(a, m),
             },
-            Boolean(
-              !t || t == so.k_HorizontalMediaFirst || t == so.k_MediaTitleDesc,
-            ) && n.createElement(No, { ...e }),
-            Boolean(
-              t == so.k_HorizontalTextFirst || t == so.k_TitleDescMedia,
-            ) && n.createElement(Lo, { ...e }),
+            h && n.createElement(No, { ...e, mediaHeight: o, setImageSize: y }),
+            !h &&
+              n.createElement(Lo, { ...e, mediaHeight: l, setImageSize: y }),
           )
         );
       }
@@ -22051,6 +22680,8 @@
           mediaHAlign: r,
           mediaVAlign: s,
           event: i,
+          mediaHeight: o,
+          setImageSize: l,
         } = e;
         return n.createElement(
           n.Fragment,
@@ -22067,6 +22698,7 @@
                 [Io().VertCenter]: !s || s == oo.k_Center,
                 [Io().VertBottom]: s == oo.k_Bottom,
               }),
+              style: { height: o },
             },
             n.createElement(Mo, {
               media: t,
@@ -22074,6 +22706,7 @@
               mediaHAlign: r,
               mediaVAlign: s,
               clanAccountID: i.clanSteamID.GetAccountID(),
+              setImageSize: l,
             }),
           ),
           n.createElement(Fo, { ...e }),
@@ -22086,6 +22719,8 @@
           mediaHAlign: r,
           mediaVAlign: s,
           event: i,
+          mediaHeight: o,
+          setImageSize: l,
         } = e;
         return n.createElement(
           n.Fragment,
@@ -22103,6 +22738,7 @@
                 [Io().VertCenter]: !s || s == oo.k_Center,
                 [Io().VertBottom]: s == oo.k_Bottom,
               }),
+              style: { height: o },
             },
             n.createElement(Mo, {
               media: t,
@@ -22110,6 +22746,7 @@
               mediaHAlign: r,
               mediaVAlign: s,
               clanAccountID: i.clanSteamID.GetAccountID(),
+              setImageSize: l,
             }),
           ),
         );
@@ -22191,31 +22828,41 @@
             mediaVAlign: s,
             clanAccountID: i,
             mediaScale: o,
+            setImageSize: l,
           } = e,
-          l = (0, n.useRef)(null),
-          [c, m] = (0, n.useState)(null),
-          u = o && o >= 1 && o <= 100 ? o / 100 : 1;
-        (0, n.useEffect)(() => {
-          if (l.current && l.current.complete) {
-            const { naturalWidth: e, naturalHeight: t } = l.current;
-            m({ width: e, height: t });
-          }
-        }, []);
-        const d = () => {
-          if (l.current) {
-            const { naturalWidth: e, naturalHeight: t } = l.current;
-            m({ width: e, height: t });
-          }
-        };
+          c = (0, n.useRef)(null),
+          [m, u] = (0, n.useState)(null),
+          d = o && o >= 1 && o <= 100 ? o / 100 : 1,
+          _ = n.useCallback(() => {
+            if (c.current && c.current.complete) {
+              const { naturalWidth: e, naturalHeight: t } = c.current;
+              u({ width: e, height: t });
+            }
+          }, []);
+        (0, n.useEffect)(_, [_]);
+        const p = n.useCallback(
+            (e) => {
+              if (l) {
+                const t = Array.isArray(e.borderBoxSize)
+                  ? e.borderBoxSize[0]
+                  : e.borderBoxSize;
+                l({ inlineSize: t.inlineSize, blockSize: t.blockSize });
+              }
+            },
+            [l],
+          ),
+          g = (0, ft.wY)(p),
+          h = (0, ft.wY)(p),
+          S = (0, ft.Ue)(c, g);
         if (!t.video_webm_src) {
           if (!t.image || 0 === t.image.trim().length) return null;
-          const e = c ? c.width * u : "auto";
+          const e = m ? m.width * d : "auto";
           return n.createElement(
             "div",
             { style: { display: "inline-block" } },
             n.createElement("img", {
-              ref: l,
-              onLoad: d,
+              ref: S,
+              onLoad: _,
               src: Bo(i, t.image),
               alt: "",
               style: {
@@ -22226,17 +22873,18 @@
             }),
           );
         }
-        const _ = [];
+        const f = [];
         return (!t.video_webm_src && !t.video_mp4_src) ||
           (0 === t.video_webm_src?.trim().length &&
             0 === t.video_mp4_src?.trim().length)
           ? null
           : (t.video_webm_src &&
-              _.push({ sURL: Bo(i, t.video_webm_src), sFormat: "video/webm" }),
+              f.push({ sURL: Bo(i, t.video_webm_src), sFormat: "video/webm" }),
             t.video_mp4_src &&
-              _.push({ sURL: Bo(i, t.video_mp4_src), sFormat: "video/mp4" }),
+              f.push({ sURL: Bo(i, t.video_mp4_src), sFormat: "video/mp4" }),
             n.createElement(Xt.L, {
-              video: { sPoster: Bo(i, t.image), rgVideoSources: _ },
+              ref: h,
+              video: { sPoster: Bo(i, t.image), rgVideoSources: f },
               bAutoPlay: !0,
               bControls: !1,
               bLoop: !0,
@@ -23126,6 +23774,1053 @@
             ? `tabid${this.GetActiveTabUniqueID()}`
             : "";
         }
+      }
+    },
+    38405: (e, t, a) => {
+      "use strict";
+      a.d(t, { g: () => B });
+      var n = a(65946),
+        r = a(90626),
+        s = a(30894),
+        i = a(82097),
+        o = a(3734),
+        l = a(26749),
+        c = a(52038),
+        m = a(61859),
+        u = a(78327),
+        d = a(39199),
+        _ = a(71477),
+        p = a.n(_),
+        g = a(93973),
+        h = a(62490),
+        S = a(20194),
+        f = a(76217),
+        v = a(60383),
+        y = a(39777),
+        b = a(42834),
+        E = a(15830);
+      function C(e) {
+        const {
+            arrDiscoveryApps: t,
+            onClick: a,
+            className: n,
+            bDisableAnimation: s = !1,
+            children: i,
+            ...o
+          } = e,
+          l = (0, u.Qn)(),
+          [d, _] = (0, r.useState)(!l),
+          p = r.useCallback(
+            (e) => {
+              l || _(e);
+            },
+            [l],
+          );
+        return r.createElement(
+          v.J,
+          { trigger: "repeated", onVisibilityChange: p },
+          r.createElement(
+            f.Z,
+            {
+              focusable: !0,
+              onGamepadFocus: () => _(!0),
+              onMouseEnter: () => l && _(!0),
+              onGamepadBlur: () => _(!1),
+              onMouseLeave: () => l && _(!1),
+              onActivate: a,
+              onOKActionDescription: (0, m.we)("#DiscoveryQueue_OpenWizard"),
+              className: (0, c.A)(
+                E.DiscoveryQueueWidgetCtn,
+                n,
+                void 0 !== t && E.Initialized,
+              ),
+              ...o,
+            },
+            r.createElement(A, { rgAppIDs: t, bAnimationEnabled: !s && d }),
+            i,
+          ),
+        );
+      }
+      let w;
+      function A(e) {
+        const {
+            rgAppIDs: t,
+            bAnimationEnabled: a = !0,
+            nCapsuleWidth: n = 320,
+          } = e,
+          [s, i] = r.useState(null);
+        return (
+          r.useEffect(() => {
+            if (!a || !s) return;
+            let e;
+            w || (w = performance.now());
+            const t = () => {
+              const a =
+                (((performance.now() - w) / 40) %
+                  (s.offsetWidth - 3 * n - 16)) +
+                n;
+              (s.style.transform = `translateX( -${a}px )`),
+                (e = requestAnimationFrame(t));
+            };
+            return (
+              (e = requestAnimationFrame(t)), () => cancelAnimationFrame(e)
+            );
+          }, [s, a, n]),
+          t && t.length
+            ? r.createElement(
+                "div",
+                {
+                  className: E.AppCarouselPosition,
+                  style: { "--capsule-width": `${n}px` },
+                },
+                r.createElement(
+                  "div",
+                  {
+                    ref: i,
+                    className: (0, c.A)(E.AppCarouselCtn, "vt-scrollable"),
+                    style: { transform: `translateX( -${n}px )` },
+                  },
+                  t.map((e) =>
+                    r.createElement(I, { key: "Capsule_" + e, appID: e }),
+                  ),
+                  [...t, ...t]
+                    .slice(0, 3)
+                    .map((e, t) =>
+                      r.createElement(I, {
+                        key: `Capsule2_${t}_${e}`,
+                        appID: e,
+                      }),
+                    ),
+                ),
+              )
+            : null
+        );
+      }
+      function I(e) {
+        const { appID: t } = e,
+          a = { appid: t },
+          { data: n } = (0, y.J$)(a),
+          s = (0, b.pd)(t),
+          i = (0, b.DT)(a) || [],
+          { data: o } = (0, y.lv)(a);
+        if (!s) return null;
+        let l = i.length
+          ? (0, b.bu)(i[0], "600x338")
+          : o && (0, b.b0)(o, "main_capsule");
+        const m = {
+          backgroundImage:
+            "radial-gradient(135% 125% at 100% 0%, rgba(0, 0, 0, 0) 22.5%, rgba(0, 0, 0, 1) 92.5%)" +
+            (l ? `, url('${l}')` : ""),
+        };
+        return r.createElement(
+          "div",
+          { className: E.AppCapsuleCtn, style: m },
+          r.createElement(
+            "div",
+            { className: (0, c.A)(E.CapsuleColumn, E.LibraryImage) },
+            r.createElement("img", { src: s, alt: n?.name }),
+          ),
+          r.createElement(
+            "div",
+            { className: E.CapsuleColumn },
+            r.createElement("div", { className: E.AppName }, n?.name),
+          ),
+        );
+      }
+      var T = a(90511);
+      function B(e) {
+        return (0, l.G)()
+          ? r.createElement(
+              D,
+              null,
+              r.createElement(N, null),
+              u.iA.logged_in
+                ? r.createElement(G, { ...e })
+                : r.createElement(P, { ...e }),
+            )
+          : null;
+      }
+      function D(e) {
+        const [t, a] = (0, s.L2)();
+        let i = (0, n.q3)(() => a.ExcludedContentDescriptor),
+          l = r.useMemo(() => ({ content_descriptors_excluded: i }), [i]);
+        return t
+          ? null
+          : r.createElement(o.E2, { defaultOptions: l }, e.children);
+      }
+      function G(e) {
+        const {
+            eStoreDiscoveryQueueType: t,
+            strQueueDescriptionOverride: a,
+            ...n
+          } = e,
+          { showDiscoveryQueue: s, bQueueVisible: o } = (0, T.GV)(t, n),
+          [l, c] = (function (e, t) {
+            const { data: a } = (0, S.I)({
+              queryKey: ["DiscoveryQueueLoader", e, t],
+              queryFn: async () => {
+                const { appids: a, exhausted: n } = await d.aI
+                  .Get()
+                  .GetDiscoveryQueueAppsOfType(e, !1, t);
+                let r = { ...T.LB, include_screenshots: !0 };
+                return (
+                  await i.A.Get().QueueMultipleAppRequests(a, r),
+                  { rgDiscoveryApps: a, exhausted: n }
+                );
+              },
+              enabled: u.iA.logged_in,
+            });
+            return [a?.rgDiscoveryApps, a?.exhausted];
+          })(t, n.storePageFilter),
+          m = r.useCallback(() => {
+            !c && s();
+          }, [c, s]),
+          _ = r.useId();
+        return r.createElement(
+          r.Fragment,
+          null,
+          r.createElement(
+            C,
+            {
+              "aria-labelledby": _,
+              onClick: m,
+              arrDiscoveryApps: l,
+              bDisableAnimation: o,
+              className: p().DiscoveryQueueWidget,
+            },
+            !c && r.createElement(k, { id: _, strQueueDescriptionOverride: a }),
+          ),
+        );
+      }
+      function k(e) {
+        const { strQueueDescriptionOverride: t, id: a } = e,
+          n = t ?? (0, m.we)("#DiscoveryQueue_WidgetHeader");
+        return r.createElement(
+          "div",
+          {
+            id: a,
+            className: (0, c.A)(p().WidgetHeaderCtn, "WidgetHeaderCtn"),
+          },
+          r.createElement(
+            "div",
+            { className: p().WidgetHeaderText },
+            (0, m.we)("#DiscoveryQueue_WidgetHeader_Yours"),
+          ),
+          r.createElement("div", { className: p().WidgetHeaderSubText }, n),
+        );
+      }
+      function P(e) {
+        const t = (function (e) {
+            let { data: t } = (0, o.PG)(
+              "DiscoveryQueueWidget",
+              {
+                sort: 11,
+                start: 0,
+                count: 12,
+                filters: { type_filters: { include_games: !0 } },
+              },
+              { ...T.LB, include_screenshots: !0 },
+              { reactQuery: { enabled: e, staleTime: 1 / 0 } },
+            );
+            return (0, r.useMemo)(
+              () => t && t.GetItemIDs().map((e) => e.appid),
+              [t],
+            );
+          })(!0),
+          a = r.useCallback(() => {
+            window.location.href = `${u.TS.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
+          }, []);
+        return r.createElement(
+          C,
+          { onClick: a, arrDiscoveryApps: t },
+          r.createElement(
+            "div",
+            { className: (0, c.A)(p().WidgetHeaderCtn, "WidgetHeaderCtn") },
+            r.createElement(
+              "div",
+              { className: p().WidgetHeaderText },
+              (0, m.we)("#DiscoveryQueue_WidgetHeader_Yours"),
+            ),
+            r.createElement(
+              "div",
+              { className: p().WidgetHeaderSubText },
+              (0, m.we)("#DiscoveryQueue_WidgetHeader_LoggedOut"),
+            ),
+            r.createElement(
+              "div",
+              { className: p().LoginButton },
+              (0, m.we)("#DiscoveryQueue_Error_Login_Title"),
+            ),
+          ),
+        );
+      }
+      function N() {
+        const e = (0, g.Qt)(2, u.TS.LANGUAGE, !0),
+          t = (0, u.Qn)();
+        if (!e.data?.definition || !e.data?.reward_items.length) return null;
+        const a = e?.data.reward_items;
+        (0, h.fW)(a);
+        const n = a.slice(0, 3);
+        let s = null;
+        return (
+          u.iA.logged_in &&
+            !t &&
+            (s = r.createElement(
+              r.Fragment,
+              null,
+              " - ",
+              r.createElement(
+                "a",
+                { href: u.TS.COMMUNITY_BASE_URL + "my/itemcollection" },
+                (0, m.we)("#DiscoveryQueue_SaleStatus_Link"),
+              ),
+            )),
+          r.createElement(
+            "div",
+            { className: p().SaleTopSection },
+            r.createElement(L, { rgRewardItems: n }),
+            r.createElement(
+              "div",
+              { className: p().SaleTextCtn },
+              r.createElement(
+                "div",
+                { className: p().BoldText },
+                (0, m.we)("#DiscoveryQueue_Widget_SaleDesc"),
+              ),
+              r.createElement(
+                "div",
+                null,
+                (0, m.we)(
+                  "#DiscoveryQueue_Widget_SaleTitle",
+                  (0, m._l)(e.data.definition.rtime_end_time, !1, !1, !1, !1),
+                ),
+                s,
+              ),
+            ),
+          )
+        );
+      }
+      function L(e) {
+        const { rgRewardItems: t } = e,
+          a = t.map((e) => {
+            const t = `${u.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
+            return r.createElement(
+              "div",
+              {
+                key: e.community_definition.item_name.toString(),
+                className: p().SaleSticker,
+              },
+              r.createElement("img", { src: t }),
+            );
+          });
+        return r.createElement("div", { className: p().StickerArrangement }, a);
+      }
+    },
+    26749: (e, t, a) => {
+      "use strict";
+      a.d(t, { G: () => l });
+      var n = a(90626),
+        r = a(23809),
+        s = a(39199),
+        i = a(30894),
+        o = a(30470);
+      function l() {
+        const [e, t] = (0, n.useState)(!o.iA.logged_in),
+          [a] = (0, i.L2)(),
+          l = (0, r.KV)();
+        return (
+          (0, n.useEffect)(() => {
+            e || (s.aI.Init(l), t(!0));
+          }, [e, l]),
+          e && !a
+        );
+      }
+    },
+    60884: (e, t, a) => {
+      "use strict";
+      a.d(t, { A: () => l });
+      var n = a(90626),
+        r = a(25599),
+        s = a.n(r),
+        i = a(76217),
+        o = a(52038);
+      function l(e) {
+        const {
+          className: t,
+          showPriorAsActive: a,
+          count: r,
+          selectedIndex: l,
+          fnNavigate: c,
+        } = e;
+        return n.createElement(
+          i.Z,
+          { "flow-children": "row", className: (0, o.A)(s().ProgressCtn, t) },
+          Array.from({ length: r }).map((e, t) =>
+            n.createElement("div", {
+              key: "dot_" + t,
+              className: (0, o.A)({
+                [s().ProgressDot]: !0,
+                [s().ProgressDotActive]: a && t < l,
+                [s().ProgressDotSelected]: t == l,
+                [s().ProgressDotClickable]: !!c,
+              }),
+              onClick: c ? () => c(t) : void 0,
+            }),
+          ),
+        );
+      }
+    },
+    43188: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        y3: () => O,
+        Gy: () => M,
+        W3: () => z,
+        TK: () => x,
+        u4: () => U,
+      });
+      var n = a(90626),
+        r = a(34418),
+        s = a.n(r),
+        i = a(52038),
+        o = a(61859),
+        l = a(76217),
+        c = a(65946),
+        m = a(91822),
+        u = a(61088),
+        d = a.n(u),
+        _ = a(12155),
+        p = a(2627),
+        g = a(10981),
+        h = a(79359),
+        S = a(78327),
+        f = a(60778),
+        v = a(72224),
+        y = a(14947),
+        b = a(46253),
+        E = a(38535);
+      const C = new f.wd("TrailerAppVideo"),
+        w = "bGameHighlightAutoplayDisabled",
+        A = "discovery-queue-volume";
+      function I(e) {
+        const {
+            storeItem: t,
+            bCurrentlyActive: a,
+            autoPlayCookieName: r,
+            bPlayWithBroadcastPlayer: s,
+            showScreenshotInsteadOfMainCap: c,
+            autoplayCheckboxPosition: m,
+            refTogglePlayPause: u,
+            bShowAOAutoPlayWarning: _,
+            ...g
+          } = e,
+          [h, S] = n.useState(!1),
+          [f, v] = n.useState(!1),
+          y = (0, E.$9)(),
+          C = (function (e, t) {
+            const a = e?.GetAllTrailers().GetAllTrailers("blocked" == t);
+            return a && a.length > 0 ? a[0] : void 0;
+          })(t, y),
+          A = (_ ?? !0) && C && !C.BIsAllAges() && "masked" == y,
+          I = (0, E.AS)(),
+          [B, D] = n.useState(!1),
+          [k, P] = n.useState(0),
+          N = n.useRef(void 0),
+          L = n.useRef(void 0),
+          [R, F] = n.useState(),
+          { bCookieLoaded: M } = (function (e, t, a) {
+            const r = n.useCallback(() => {
+              const t = (0, p.VY)(e ?? w),
+                n = !(!t || "true" !== t.toLowerCase());
+              a(!n);
+            }, [e, a]);
+            return (function (e, t) {
+              const [a, r] = n.useState(!1);
+              return (
+                n.useEffect(() => (e && (t(), r(!0)), () => r(!1)), [e, t]),
+                { bCookieLoaded: a }
+              );
+            })(t, r);
+          })(r, a, S),
+          O = M;
+        n.useEffect(() => {
+          a && O && (h || s) && !A && v(!0);
+        }, [h, O, a, s, A]),
+          n.useEffect(() => {
+            A && f && h && I();
+          }, [f, A, h, I]);
+        const x = (function (e, t, a, r, s) {
+          return n.useCallback(() => {
+            0 == e
+              ? t(!0)
+              : 1 == e && a.current
+                ? a.current.paused
+                  ? a.current.play()
+                  : a.current.pause()
+                : 2 == e && r.current
+                  ? r.current.paused
+                    ? r.current.play()
+                    : r.current.pause()
+                  : 2 == e && s && s.TogglePlayPause();
+          }, [s, e, r, a, t]);
+        })(k, v, N, L, R);
+        n.useEffect(() => {
+          u && (u.current = x);
+        }, [x, u]);
+        const H = t.GetScreenshots("allowed" != y),
+          U = c && H.length > 0 ? H[0] : t.GetAssets().GetMainCapsuleURL();
+        return n.createElement(
+          l.Z,
+          {
+            className: d().AppCarouselTrailerCtn,
+            onMouseEnter: () => D(!0),
+            onMouseLeave: () => D(!1),
+          },
+          n.createElement("img", {
+            className: (0, i.A)(d().AppMainCap, 0 != k && d().Hidden),
+            src: U,
+            onClick: x,
+          }),
+          !s &&
+            n.createElement(G, {
+              storeItem: t,
+              bAutoplayVideos: h,
+              autoplayCheckboxPosition: m,
+              fnSetAutoPlayVideos: (e) => {
+                (0, p.lc)(r ?? w, String(!e), 3650), S(e), v(e);
+              },
+            }),
+          n.createElement(b.h, {
+            name: t.GetName(),
+            trailerCategory: C?.GetTrailerCategory(),
+            trailerDisplay: k,
+            mouseOver: B,
+          }),
+          n.createElement(T, {
+            eTrailerDisplay: k,
+            setTrailerDisplay: P,
+            featuredTrailer: C,
+            refMicroTrailer: N,
+            refMainTrailer: L,
+            loadedAndActive: O && a,
+            setVideoShouldStart: v,
+            bMouseOverVideo: B,
+            storeItem: t,
+            broadcastVideo: R,
+            fnSetBroadcastVideo: F,
+            fnTogglePlayPause: x,
+            bAutoplayVideos: h,
+            bVideoShouldStart: f,
+            bPlayWithBroadcastPlayer: s,
+            ...g,
+          }),
+          A &&
+            h &&
+            n.createElement(
+              "div",
+              { className: d().AOWarning },
+              n.createElement(
+                "div",
+                { className: d().Text },
+                (0, o.we)("#StoreTrailer_AOWarning_1"),
+              ),
+              n.createElement(
+                "div",
+                { className: d().Text },
+                (0, o.we)("#StoreTrailer_AOWarning_2"),
+              ),
+            ),
+        );
+      }
+      function T(e) {
+        const {
+            storeItem: t,
+            featuredTrailer: a,
+            bPlayWithBroadcastPlayer: r,
+            bSkipMicroTrailer: s,
+            nFadeRatio: i,
+            fnPlayPause: o,
+            bRequestPause: c,
+            fnComplete: m,
+            bLoopVideo: u,
+            nDefaultVolume: p,
+            eTrailerDisplay: g,
+            setTrailerDisplay: f,
+            refMainTrailer: b,
+            refMicroTrailer: w,
+            loadedAndActive: I,
+            setVideoShouldStart: T,
+            broadcastVideo: G,
+            fnSetBroadcastVideo: P,
+            fnTogglePlayPause: N,
+            bAutoplayVideos: L,
+            bVideoShouldStart: R,
+          } = e,
+          [F, M] = n.useState(!1),
+          [O, x] = n.useState(!1),
+          [H, U] = n.useState(!1),
+          [z, W] = (0, h.M)(A),
+          [q, V] = n.useState(!1),
+          [j, Q] = n.useState(!1),
+          [K, Y] = n.useState(!1),
+          Z = (0, E.$9)();
+        n.useEffect(() => {
+          if (b.current) {
+            const e = p ?? 0.8;
+            (b.current.volume = (z ?? e) * (i ?? 1)),
+              (b.current.muted = null == z || z <= 0 || q);
+          }
+        }, [z, i, q, p, b]);
+        const J = t?.GetMicroTrailer("blocked" == Z),
+          X = !!J || !!a;
+        n.useEffect(() => {
+          let e = !1;
+          I && H && X && (e = 0 === g || (1 === g && !j) || (2 === g && !K)),
+            M(e),
+            o?.(L && e);
+        }, [o, g, K, j, I, L, H, X]),
+          k(w, Q),
+          k(b, Y),
+          n.useEffect(() => {
+            R ||
+              (f(0),
+              M(!1),
+              U(!1),
+              w.current && (w.current.pause(), (w.current.currentTime = 0)),
+              b.current && (b.current.pause(), (b.current.currentTime = 0)));
+          }, [R, b, w, f]),
+          n.useEffect(() => {
+            b.current && (b.current.onended = m);
+          }, [m, b]);
+        const $ = n.useRef(!1);
+        n.useEffect(() => {
+          if (I && 0 === g)
+            if ((U(!0), R))
+              if (b.current) {
+                C.Debug("Starting microtrailer"), f(1);
+                const e = () =>
+                  (function (e, t, a, n) {
+                    if (e.current) return;
+                    (e.current = !0),
+                      C.Debug("Starting main trailer"),
+                      t(2),
+                      a(!1),
+                      B(n, "main trailer", (e) => {
+                        e && a(!0);
+                      });
+                  })($, f, V, b.current);
+                s || !w.current
+                  ? e()
+                  : (Q(!0),
+                    (w.current.onended = e),
+                    B(w.current, "microtrailer", () => Q(!1)));
+              } else
+                G &&
+                  (C.Debug("Starting broadcast player"), f(2), V(!1), G.Play());
+            else C.Debug("Showing image");
+        }, [I, g, s, R, m, G, f, b, w]),
+          (function (e, t) {
+            n.useEffect(() => {
+              if (!t.current || !t.current.onended) return;
+              if (!e) return;
+              let a = t.current.onended,
+                n = setTimeout(() => {
+                  a();
+                }, 6e3);
+              return () => clearTimeout(n);
+            }, [e, t]);
+          })(j, w),
+          n.useEffect(() => {
+            I || T(!1);
+          }, [I, T]),
+          n.useEffect(() => {
+            const e = (0, y.fm)(() => {
+              x(G?.GetUserInputNeeded()), Y(!G?.IsPaused());
+            });
+            return () => e();
+          }, [G]);
+        if (
+          ((function (e, t, a, r, s, i, o) {
+            const [l, c] = n.useState(!1);
+            n.useEffect(() => {
+              e && !l
+                ? 1 == t && a && r
+                  ? (a.pause(), c(!0))
+                  : 2 == t && s && i
+                    ? (s.pause(), c(!0))
+                    : 2 == t && o && !o.IsPaused() && (o.Pause(), c(!0))
+                : !e &&
+                  l &&
+                  (1 == t && a
+                    ? a.play()
+                    : 2 == t && s
+                      ? s.play()
+                      : 2 == t && o && o.IsPaused() && o.Play(),
+                  c(!1));
+            }, [o, t, e, l, r, i, a, s]);
+          })(c, g, w.current, j, b.current, K, G),
+          !t || !t.BIsVisible())
+        )
+          return null;
+        const ee = (u ?? !0) && !m;
+        return (
+          (a || r) &&
+          n.createElement(
+            n.Fragment,
+            null,
+            F &&
+              !O &&
+              n.createElement(
+                l.Z,
+                { focusable: !0, onClick: N, className: d().PlayButton },
+                n.createElement(_.IOc, null),
+              ),
+            J &&
+              n.createElement(
+                "video",
+                {
+                  className: D(!0, g),
+                  ref: w,
+                  preload: "auto",
+                  playsInline: !0,
+                  muted: !0,
+                  onClick: N,
+                },
+                n.createElement("source", {
+                  src: J.strWebMURL,
+                  type: "video/webm",
+                }),
+                Boolean(!S.TS.IN_CLIENT) &&
+                  n.createElement("source", {
+                    src: J.strMP4URL,
+                    type: "video/mp4",
+                  }),
+              ),
+            a &&
+              !r &&
+              n.createElement(
+                "video",
+                {
+                  className: D(!1, g),
+                  ref: b,
+                  onVolumeChange: (e) => {
+                    if (i && i < 1) return;
+                    if (q) return;
+                    const t = e.target,
+                      a = t.muted ? 0 : t.volume;
+                    (void 0 === z || Math.abs(z - a) > Number.EPSILON) &&
+                      (C.Debug("Saving volume to storage", a), W(a));
+                  },
+                  muted: !(z > 0),
+                  preload: "auto",
+                  playsInline: !0,
+                  loop: ee,
+                  controls: !0,
+                },
+                n.createElement("source", {
+                  src: a.GetTrailer480p().strWebMURL,
+                  type: "video/webm",
+                }),
+                Boolean(!S.TS.IN_CLIENT) &&
+                  n.createElement("source", {
+                    src: a.GetTrailer480p().strMP4URL,
+                    type: "video/mp4",
+                  }),
+              ),
+            r &&
+              n.createElement(v.default, {
+                classes: D(!1, g),
+                nAppIDVOD: t.GetAppID(),
+                watchLocation: 15,
+                fnOnVideoEnd: m,
+                fnVideoClick: N,
+                fnSetBroadcastVideo: P,
+                bStartWithSubtitles: !0,
+                bStartMuted: !0,
+              }),
+          )
+        );
+      }
+      function B(e, t, a) {
+        e.play().catch((n) => {
+          const r = "NotAllowedError" === n.name;
+          a(r),
+            "NotAllowedError" === n.name
+              ? (C.Debug(`Failed to play ${t}, trying again muted`),
+                (e.muted = !0),
+                e.play().catch((e) => {
+                  C.Warning(`Failed to play ${t}: `, e);
+                }))
+              : C.Warning(`Failed to play ${t}: `, n);
+        });
+      }
+      function D(e, t) {
+        return (0, i.A)({
+          [d().AppVideo]: !0,
+          [d().PlayFullTrailer]: 2 == t,
+          [d().PlayMicrotrailer]: 1 == t,
+          [d().NoTrailer]: 0 == t,
+          [d().Microtrailer]: e,
+          [d().Trailer]: !e,
+        });
+      }
+      function G(e) {
+        const {
+            storeItem: t,
+            bAutoplayVideos: a,
+            fnSetAutoPlayVideos: r,
+            autoplayCheckboxPosition: s,
+          } = e,
+          i = { [s || "top"]: 0 };
+        return n.createElement(
+          "div",
+          {
+            onClick: (e) => {
+              e.preventDefault(), e.stopPropagation();
+            },
+            className: d().AutoplayCheckboxCtn,
+          },
+          n.createElement(g.Yh, {
+            controlled: !0,
+            checked: a,
+            key: t.GetAppID(),
+            className: d().AutoplayCheckbox,
+            style: i,
+            label: (0, o.we)("#StoreTrailer_AutoPlayVideos"),
+            onChange: r,
+          }),
+        );
+      }
+      function k(e, t) {
+        n.useEffect(() => {
+          const a = e.current;
+          if (!a) return;
+          const n = () => t(!0),
+            r = () => t(!1);
+          return (
+            a.addEventListener("play", n),
+            a.addEventListener("pause", r),
+            () => {
+              a.removeEventListener("play", n),
+                a.removeEventListener("pause", r);
+            }
+          );
+        }, [t, e]);
+      }
+      var P = a(30894),
+        N = a(55263),
+        L = a(44986),
+        R = a(20713),
+        F = a(60014);
+      const M = {
+        include_assets: !0,
+        include_trailers: !0,
+        include_basic_info: !0,
+        include_tag_count: 20,
+        include_release: !0,
+        include_platforms: !0,
+        include_screenshots: !0,
+        include_reviews: !0,
+      };
+      function O(e) {
+        const {
+            appID: t,
+            focused: a,
+            skipMicroTrailer: r,
+            playWithBroadcastPlayer: c,
+            autoPlayCookieName: u,
+            showAOAutoPlayWarning: d,
+            showScreenshotInsteadOfMainCap: _,
+            fadeRatio: p,
+            fnPlayPause: g,
+            refTogglePlayPause: h,
+            bRequestPause: S,
+            fnComplete: f,
+            loopVideo: v,
+            defaultVolume: y,
+          } = e,
+          [b] = (0, N.t7)(t, M),
+          { bIsIgnored: E } = x(t),
+          { bIsWishlisted: C } = U(t),
+          [w, A] = (0, m.FD)();
+        return n.createElement(
+          l.Z,
+          { className: (0, i.A)(s().AppVideoCtn, "AppVideoCtn") },
+          n.createElement(
+            "div",
+            { className: (0, i.A)(s().WishlistBadge, C && s().Active) },
+            (0, o.we)("#Sale_OnWishlist"),
+          ),
+          w &&
+            n.createElement(m.Ff, {
+              eDisplay: A,
+              className: s().DeckVerifiedLogo,
+              storeItem: b,
+            }),
+          n.createElement(
+            "div",
+            { className: s().VideoArea },
+            n.createElement(H, { appID: t }),
+            n.createElement(I, {
+              key: t,
+              storeItem: b,
+              bCurrentlyActive: a && !E,
+              autoplayCheckboxPosition: "top",
+              autoPlayCookieName: u,
+              bShowAOAutoPlayWarning: d,
+              bSkipMicroTrailer: r,
+              bPlayWithBroadcastPlayer: c,
+              nFadeRatio: p,
+              showScreenshotInsteadOfMainCap: _,
+              fnPlayPause: g,
+              refTogglePlayPause: h,
+              bRequestPause: S,
+              fnComplete: f,
+              bLoopVideo: v,
+              nDefaultVolume: y,
+            }),
+          ),
+        );
+      }
+      function x(e) {
+        const t = (0, c.q3)(() => P.Fm.Get().BIsGameIgnored(e)),
+          a = (0, F.ru)(),
+          r = n.useCallback(() => {
+            P.Fm.Get().UpdateAppIgnore(e, !t, a);
+          }, [e, a, t]);
+        return { bIsIgnored: t, fnUpdateIgnored: r };
+      }
+      function H(e) {
+        const { appID: t } = e,
+          a = (0, S.Qn)(),
+          { bIsIgnored: r, fnUpdateIgnored: c } = x(t);
+        return n.createElement(
+          "div",
+          { className: (0, i.A)(s().IgnoredCtn, r && s().Active) },
+          n.createElement(
+            "div",
+            { className: (0, i.A)(s().IgnoredInfo, r && s().Active) },
+            n.createElement(
+              "div",
+              { className: s().IgnoredTitle },
+              (0, o.we)("#SaleTrailerCarousel_Ignored"),
+            ),
+            n.createElement(
+              "div",
+              { className: s().IgnoredDescription },
+              (0, o.we)("#SaleTrailerCarousel_IgnoredConfirmation"),
+            ),
+            n.createElement(
+              l.Z,
+              {
+                className: (0, i.A)(s().UndoButton, s().UndoIgnoreButton),
+                onClick: c,
+              },
+              a &&
+                n.createElement(L.$m, {
+                  button: R.g4.X,
+                  type: L.wt.Light,
+                  size: L.xY.Medium,
+                }),
+              (0, o.we)("#SaleTrailerCarousel_Undo"),
+            ),
+          ),
+        );
+      }
+      function U(e) {
+        const t = (0, c.q3)(() => P.Fm.Get().BIsGameWishlisted(e)),
+          a = (0, F.ru)(),
+          r = n.useCallback(() => {
+            P.Fm.Get().UpdateGameWishlist(e, !t, a);
+          }, [e, t, a]);
+        return { bIsWishlisted: t, fnUpdateWishlist: r };
+      }
+      function z(e) {
+        const t = P.Fm.Get().GetRecommendedTags(),
+          a = n.useMemo(() => new Map(t.map((e, t) => [e, t])), [t]),
+          r = n.useMemo(() => new Map(e.map((e, t) => [e, t])), [e]);
+        return n.useMemo(
+          () =>
+            e
+              .slice()
+              .sort((e, t) =>
+                a.has(e) && !a.has(t)
+                  ? -1
+                  : !a.has(e) && a.has(t)
+                    ? 1
+                    : a.has(e)
+                      ? a.get(e) - a.get(t)
+                      : r.get(e) - r.get(t),
+              ),
+          [r, a, e],
+        );
+      }
+    },
+    46253: (e, t, a) => {
+      "use strict";
+      a.d(t, { h: () => c });
+      var n = a(90626),
+        r = a(52038),
+        s = a(61859),
+        i = a(828),
+        o = a.n(i),
+        l = a(33917);
+      function c(e) {
+        const {
+            name: t,
+            trailerCategory: a,
+            trailerDisplay: i,
+            mouseOver: c,
+          } = e,
+          [m, u] = n.useState(!1);
+        if (
+          (n.useEffect(() => {
+            0 != i && u(!0);
+          }, [i]),
+          n.useEffect(() => {
+            if (c) return void u(!0);
+            if (!m) return;
+            const e = setTimeout(() => u(!1), 3e3);
+            return () => clearTimeout(e);
+          }, [m, c]),
+          null == a || 0 == i)
+        )
+          return;
+        const d =
+          1 == i
+            ? (0, s.we)("#StoreTrailer_Title_TrailerPreview")
+            : (0, l.e)(a);
+        return n.createElement(
+          "div",
+          { className: (0, r.A)({ [o().TrailerTitle]: !0, [o().Visible]: m }) },
+          (0, s.PP)(
+            "#StoreTrailer_Title_Combiner",
+            n.createElement("span", { className: o().Category }, d),
+            t,
+          ),
+        );
+      }
+    },
+    33917: (e, t, a) => {
+      "use strict";
+      a.d(t, { e: () => r });
+      var n = a(61859);
+      function r(e) {
+        switch (e) {
+          case 1:
+            return (0, n.we)("#StoreTrailer_Title_Category_Gameplay");
+          case 2:
+            return (0, n.we)("#StoreTrailer_Title_Category_Teaser");
+          case 3:
+            return (0, n.we)("#StoreTrailer_Title_Category_Cinematic");
+          case 4:
+            return (0, n.we)("#StoreTrailer_Title_Category_Update");
+          case 5:
+            return (0, n.we)("#StoreTrailer_Title_Category_Accolades");
+          case 6:
+            return (0, n.we)("#StoreTrailer_Title_Category_Interview");
+        }
+        return (0, n.we)("#StoreTrailer_Title_Category_Unknown");
       }
     },
     25809: (e, t, a) => {

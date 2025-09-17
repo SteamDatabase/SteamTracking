@@ -1519,9 +1519,18 @@
                                 [_.Followers]: !0,
                               }),
                             },
-                            _.createElement("span", null, (0, _._)(_)),
-                            _.createElement("br", null),
-                            (0, _._)("#CreatorHome_JustFollowers"),
+                            _.createElement(
+                              "span",
+                              null,
+                              (0, _._)("#CreatorHome_JustFollowers"),
+                            ),
+                            _.createElement(
+                              "span",
+                              {
+                                className: _.FollowerCount,
+                              },
+                              (0, _._)(_),
+                            ),
                           ),
                         ),
                       ),

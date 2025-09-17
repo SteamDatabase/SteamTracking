@@ -1059,33 +1059,60 @@
           );
         }
         TryCreateNode(_, _, _) {
-          let _ = _._.from(_);
-          if (!_.node.validContent(_))
-            if (_.acceptNode) {
-              let _ = _.filter((_) => _.type == _.acceptNode);
-              if (!_.length) {
-                let _ = _;
-                _.acceptNode.isBlock &&
-                  _.length > 1 &&
-                  _[_.length - 1].type == this.schema.nodes.hard_break &&
-                  (_ = _.slice(0, -1));
-                const _ = this.m_mapPMBBNodes.get(_.acceptNode.name);
-                (0, _._)(
-                  _,
-                  `Indicated acceptNode type ${_.acceptNode.name} for ${_.node.name} missing`,
+          let _,
+            _ = _._.from(_);
+          if (
+            !_.node.validContent(_) &&
+            (_.node.isInline ||
+              (_ = _._.from(
+                _.filter(
+                  (_) =>
+                    (!_.isText || !_.text.match(/^\s*$/)) &&
+                    !(
+                      _.type == this.schema.nodes.hard_break &&
+                      !_.node.validContent(_._.from(_))
+                    ),
                 ),
-                  (_ = _
-                    ? this.TryCreateNode(_, _, void 0)
-                    : _.acceptNode.create(void 0, _));
+              )),
+            !_.node.validContent(_))
+          ) {
+            const _ = _.acceptNode;
+            _ = [];
+            let _ = [],
+              _ = !1,
+              _ = !1;
+            for (let _ = 0; _ < _.childCount; _++) {
+              const _ = _.child(_),
+                _ = _._.from(_),
+                _ = _.node.validContent(_);
+              _ || (!_ && !(null == _ ? void 0 : _.validContent(_)))
+                ? ((_ = !0), _.push(_))
+                : (_ || (_ = !0), __webpack_require__.push(_));
+            }
+            if ((console.assert(!_ || _), _ && _)) {
+              _.isBlock &&
+                _.length > 1 &&
+                _[_.length - 1].type == this.schema.nodes.hard_break &&
+                (_ = __webpack_require__.slice(0, -1));
+              const _ = this.m_mapPMBBNodes.get(_.name);
+              let _;
+              (0, _._)(
+                _,
+                `Indicated acceptNode type ${_.name} for ${_.node.name} missing`,
+              );
+              try {
+                _ = _
+                  ? this.TryCreateNode(_, _, void 0)
+                  : _.createChecked(void 0, _);
+              } catch (_) {
+                console.error(_), (_ = []), (_ = [..._, ..._]);
               }
               _ = _._.from(_);
-            } else
-              _.node.isInline ||
-                (_ = _._.from(
-                  _.filter((_) => !_.isText || !_.text.match(/^\s*$/)),
-                ));
+            } else _ = _._.from(_);
+          }
           try {
-            return _.node.createAndFill(_, _) || _.node.createChecked(_, _);
+            const _ = _.node.createAndFill(_, _) || _.node.createChecked(_, _);
+            return _ ? [_, ..._] : _;
           } catch (_) {
             return (
               (0, _._)(

@@ -1878,9 +1878,8 @@
               "div",
               {
                 className: Ne().PreviewImgCtn,
-                onClick: (e) => {
-                  (0, X.pg)(r.createElement(Pe, { asset: t }), (0, J.uX)(e));
-                },
+                onClick: (e) =>
+                  (0, X.pg)(r.createElement(Pe, { asset: t }), (0, J.uX)(e)),
               },
               r.createElement(
                 "span",
@@ -1920,7 +1919,7 @@
         const { asset: t, closeModal: a } = e;
         return r.createElement(
           Z.o0,
-          { bAlertDialog: !0, closeModal: a },
+          { bAlertDialog: !0, closeModal: a, bAllowFullSize: !0 },
           r.createElement(
             "video",
             { controls: !0, autoPlay: !0, loop: !0, muted: !0 },
@@ -3171,7 +3170,7 @@
                     (0, p.we)("#selectimage_tip_dimensions_title"),
                   ),
                   ": ",
-                  (0, p.PP)("#selectimage_tip1", E, h),
+                  (0, p.PP)("#selectimage_tip1", (0, $e.qj)(E), (0, $e.qj)(h)),
                 ),
               Boolean(e.strWarning) &&
                 r.createElement(
@@ -3207,9 +3206,7 @@
             r.createElement(Nt, {
               clanSteamID: e.clanSteamID,
               title: e.title,
-              imageWidth: E,
               eventModel: s,
-              imageHeight: h,
               artworkType: e.artworkType,
               realms: o,
               appid: n,
@@ -9490,7 +9487,6 @@
         Promise.all([
           a.e(8970),
           a.e(6597),
-          a.e(2715),
           a.e(7937),
           a.e(5500),
           a.e(7276),
@@ -9515,7 +9511,7 @@
           a.e(6850),
           a.e(4359),
           a.e(7911),
-          a.e(5603),
+          a.e(8105),
           a.e(6866),
           a.e(7854),
           a.e(1240),

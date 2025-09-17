@@ -472,14 +472,13 @@
               "div",
               {
                 className: _().PreviewImgCtn,
-                onClick: (_) => {
+                onClick: (_) =>
                   (0, _._)(
                     _.createElement(_, {
                       asset: _,
                     }),
                     (0, _._)(_),
-                  );
-                },
+                  ),
               },
               _.createElement(
                 "span",
@@ -530,6 +529,7 @@
           {
             bAlertDialog: !0,
             closeModal: __webpack_require__,
+            bAllowFullSize: !0,
           },
           _.createElement(
             "video",

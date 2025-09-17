@@ -174,12 +174,12 @@
             E.log(`Failed to add non-enumerable property "${e}" to object`, t);
         }
       }
-      const I = "_sentrySpan";
-      function k(t, e) {
-        e ? x(t, I, e) : delete t[I];
+      const k = "_sentrySpan";
+      function I(t, e) {
+        e ? x(t, k, e) : delete t[k];
       }
       function R(t) {
-        return t[I];
+        return t[k];
       }
       class C {
         constructor() {
@@ -214,7 +214,7 @@
             (t._propagationContext = { ...this._propagationContext }),
             (t._client = this._client),
             (t._lastEventId = this._lastEventId),
-            k(t, R(this)),
+            I(t, R(this)),
             t
           );
         }
@@ -356,7 +356,7 @@
             (this._fingerprint = void 0),
             (this._requestSession = void 0),
             (this._session = void 0),
-            k(this, void 0),
+            I(this, void 0),
             (this._attachments = []),
             (this._propagationContext = d()),
             this._notifyScopeListeners(),
@@ -487,7 +487,7 @@
         }
       }
       const $ = C;
-      class O {
+      class L {
         constructor(t, e) {
           let s, n;
           (s = t || new $()),
@@ -536,43 +536,43 @@
           return !(this._stack.length <= 1) && !!this._stack.pop();
         }
       }
-      function L() {
+      function O() {
         const t = c(o());
         return (t.stack =
           t.stack ||
-          new O(
+          new L(
             i("defaultCurrentScope", () => new $()),
             i("defaultIsolationScope", () => new $()),
           ));
       }
       function D(t) {
-        return L().withScope(t);
+        return O().withScope(t);
       }
-      function q(t, e) {
-        const s = L();
+      function j(t, e) {
+        const s = O();
         return s.withScope(() => ((s.getStackTop().scope = t), e(t)));
       }
-      function j(t) {
-        return L().withScope(() => t(L().getIsolationScope()));
-      }
       function N(t) {
+        return O().withScope(() => t(O().getIsolationScope()));
+      }
+      function U(t) {
         const e = c(t);
         return e.acs
           ? e.acs
           : {
-              withIsolationScope: j,
+              withIsolationScope: N,
               withScope: D,
-              withSetScope: q,
-              withSetIsolationScope: (t, e) => j(e),
-              getCurrentScope: () => L().getScope(),
-              getIsolationScope: () => L().getIsolationScope(),
+              withSetScope: j,
+              withSetIsolationScope: (t, e) => N(e),
+              getCurrentScope: () => O().getScope(),
+              getIsolationScope: () => O().getIsolationScope(),
             };
       }
-      function U() {
-        return N(o()).getCurrentScope();
+      function M() {
+        return U(o()).getCurrentScope();
       }
       new WeakMap();
-      function M(t) {
+      function q(t) {
         if (t)
           return (function (t) {
             return t instanceof $ || "function" == typeof t;
@@ -594,9 +594,9 @@
         "propagationContext",
       ];
       function T() {
-        return N(o()).getIsolationScope().lastEventId();
+        return U(o()).getIsolationScope().lastEventId();
       }
-      const H =
+      const B =
         /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
       function Q(t) {
         return {
@@ -609,11 +609,11 @@
           projectId: t.projectId,
         };
       }
-      function B(t) {
+      function A(t) {
         const e =
           "string" == typeof t
             ? (function (t) {
-                const e = H.exec(t);
+                const e = B.exec(t);
                 if (!e)
                   return void y(() => {
                     console.error(`Invalid Sentry Dsn: ${t}`);
@@ -665,7 +665,7 @@
         )
           return e;
       }
-      function A(t) {
+      function H(t) {
         const e = t.protocol ? `${t.protocol}:` : "",
           s = t.port ? `:${t.port}` : "";
         return `${e}//${t.host}${s}${t.path ? `/${t.path}` : ""}/api/`;
@@ -677,7 +677,7 @@
           return void (
             Y && E.error("Global document not defined in showReportDialog call")
           );
-        const e = U(),
+        const e = M(),
           s = e.getClient(),
           n = s && s.getDsn();
         if (!n)
@@ -692,9 +692,9 @@
         (r.async = !0),
           (r.crossOrigin = "anonymous"),
           (r.src = (function (t, e) {
-            const s = B(t);
+            const s = A(t);
             if (!s) return "";
-            const n = `${A(s)}embed/error-page/`;
+            const n = `${H(s)}embed/error-page/`;
             let r = `dsn=${(function (t, e = !1) {
               const {
                 host: s,
@@ -774,7 +774,7 @@
             })(t, s);
         }
         return (function (t, e) {
-          return U().captureException(t, M(e));
+          return M().captureException(t, q(e));
         })(t, {
           ...s,
           captureContext: { contexts: { react: { componentStack: e } } },
@@ -787,7 +787,7 @@
             J.prototype.__init.call(this),
             (this.state = z),
             (this._openFallbackReportDialog = !0);
-          const e = U().getClient();
+          const e = M().getClient();
           e &&
             t.showDialog &&
             ((this._openFallbackReportDialog = !1),
@@ -808,7 +808,7 @@
               dialogOptions: a,
             } = this.props;
           !(function (...t) {
-            const e = N(o());
+            const e = U(o());
             if (2 === t.length) {
               const [s, n] = t;
               return s ? e.withSetScope(s, n) : e.withScope(n);
@@ -987,26 +987,14 @@
               t.forEach((t) => {
                 const n = this.#t.defaultQueryOptions(t),
                   r = e.get(n.queryHash);
-                if (r) s.push({ defaultedQueryOptions: n, observer: r });
-                else {
-                  const t = this.#r.find(
-                    (t) => t.options.queryHash === n.queryHash,
-                  );
-                  s.push({
-                    defaultedQueryOptions: n,
-                    observer: t ?? new i.$(this.#t, n),
-                  });
-                }
+                r
+                  ? s.push({ defaultedQueryOptions: n, observer: r })
+                  : s.push({
+                      defaultedQueryOptions: n,
+                      observer: new i.$(this.#t, n),
+                    });
               }),
-              s.sort(
-                (e, s) =>
-                  t.findIndex(
-                    (t) => t.queryHash === e.defaultedQueryOptions.queryHash,
-                  ) -
-                  t.findIndex(
-                    (t) => t.queryHash === s.defaultedQueryOptions.queryHash,
-                  ),
-              )
+              s
             );
           }
           #a(t, e) {

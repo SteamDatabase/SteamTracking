@@ -50,7 +50,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
-        m_bOnSteamDeck = !1;
+        m_eGamingDeviceType = 0;
         m_mapRichPresence = n.sH.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -72,7 +72,7 @@
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
-            (this.m_bOnSteamDeck = !1);
+            (this.m_eGamingDeviceType = 0);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -125,9 +125,6 @@
         }
         get is_golden() {
           return this.HasStateFlag(4);
-        }
-        IsOnSteamDeck() {
-          return this.m_bOnSteamDeck;
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -298,11 +295,11 @@
         (0, r.Cg)([n.sH], c.prototype, "m_broadcastViewerCount", void 0),
         (0, r.Cg)([n.sH], c.prototype, "m_strBroadcastTitle", void 0),
         (0, r.Cg)([n.sH], c.prototype, "m_bCommunityBanned", void 0),
-        (0, r.Cg)([n.sH], c.prototype, "m_bOnSteamDeck", void 0),
+        (0, r.Cg)([n.sH], c.prototype, "m_eGamingDeviceType", void 0),
         (0, r.Cg)([n.sH], c.prototype, "m_bNameInitialized", void 0);
     },
     14336: (e, t, a) => {
-      a.d(t, { z0: () => y, DW: () => S, js: () => h, hW: () => g });
+      a.d(t, { z0: () => S, DW: () => y, js: () => h, hW: () => g });
       var r = a(90626),
         n = a(20194),
         s = a(54806),
@@ -350,19 +347,19 @@
               )),
             { ...a, data: t.current });
       }
-      function S(e) {
+      function y(e) {
         const t = (0, i.KV)(),
           a = r.useContext(P);
         return (0, s.E)({ queries: e.map((e) => f(a, t, e)) });
       }
-      function y(e) {
+      function S(e) {
         return u.L.getQueryData(["PlayerSummary", e]);
       }
       const P = r.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
-            return (b ??= d(e));
+            return (v ??= d(e));
           })(t).load(m.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
             let a = new _.Z(e);
@@ -395,7 +392,7 @@
           enabled: !!r,
         };
       }
-      let b;
+      let v;
     },
     11577: (e, t, a) => {
       a.d(t, { m: () => m });

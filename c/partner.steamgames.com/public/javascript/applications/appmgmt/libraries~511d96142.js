@@ -3,6 +3,7 @@
   [5193],
   {
     chunkid: () => {},
+    chunkid: () => {},
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -12695,9 +12696,26 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
-      const _ = (_, _, __webpack_require__ = !1) => {
+      const _ = (_) => {
+          if (
+            null == _ ||
+            "bigint" == typeof _ ||
+            Number.isNaN(_) ||
+            _ === 1 / 0 ||
+            _ === -1 / 0
+          )
+            return;
+          if (["string", "number", "boolean"].includes(typeof _)) return _;
+          if (Array.isArray(_)) return _.map(_).filter((_) => void 0 !== _);
+          const _ = {};
+          for (const [__webpack_require__, _] of Object.entries(_)) {
+            const _ = _(_);
+            void 0 !== _ && (_[__webpack_require__] = _);
+          }
+          return _;
+        },
+        _ = (_, _, __webpack_require__ = !1) => {
           if (!Array.isArray(_) || !Array.isArray(_))
             throw new Error("Both arguments should be arrays.");
           const _ = _.length,
@@ -12722,24 +12740,59 @@
           for (const _ in _) if (_(_[_], _)) return !0;
           return !1;
         },
-        _ = (_, _, _, _ = 1 / 0) => {
-          if (!_ || "object" != typeof _) return JSON.stringify(_, _, _);
+        _ = (_, _, _, _ = 1 / 0, _) => {
+          if (!_ || "object" != typeof _) {
+            let _;
+            if (
+              (Number.isNaN(_) ||
+                _ === 1 / 0 ||
+                _ === -1 / 0 ||
+                "bigint" == typeof _ ||
+                (_ = JSON.stringify(_, _, _)),
+              void 0 === _)
+            )
+              switch (_) {
+                case _.throw:
+                  throw new Error(
+                    `Value is not valid in JSON, got ${String(_)}`,
+                  );
+                case _.stringify:
+                  return _(_);
+                default:
+                  throw new Error(
+                    "Should not reach here, please report this bug.",
+                  );
+              }
+            return _;
+          }
           const _ =
             _ < 1
               ? '"..."'
               : Array.isArray(_)
-                ? `[${_.map((_) => _(_, _, _, _ - 1)).join(",")}]`
+                ? `[${_.map((_) => _(_, _, _, _ - 1, _)).join(",")}]`
                 : `{${Object.keys(_)
-                    .map((_) => `"${_}": ${_(_[_], _, _, _ - 1)}`)
+                    .map((_) => `"${_}": ${_(_[_], _, _, _ - 1, _)}`)
                     .join(", ")}}`;
           return JSON.stringify(JSON.parse(_), _, _);
         },
-        _ = (_, _ = 1 / 0, __webpack_require__ = !1) =>
-          Number.isNaN(_) || null === _
+        _ = (_) =>
+          void 0 === _
+            ? "undefined"
+            : _ === 1 / 0
+              ? "Infinity"
+              : _ === -1 / 0
+                ? "-Infinity"
+                : Number.isNaN(_)
+                  ? "NaN"
+                  : "bigint" == typeof _
+                    ? `${_}n`
+                    : String(_),
+        _ = (_, _ = 1 / 0, __webpack_require__ = !1, _ = _.stringify) =>
+          null === _
             ? "null"
             : Array.isArray(_) || "object" == typeof _
-              ? _(_, void 0, __webpack_require__ ? 1 : void 0, _)
-              : _(_),
+              ? _(_, void 0, __webpack_require__ ? 1 : void 0, _, _)
+              : _(_, void 0, void 0, void 0, _),
         _ = (_) =>
           "boolean" == typeof _
             ? 0
@@ -12753,8 +12806,17 @@
                     ? 4
                     : "object" == typeof _
                       ? 5
-                      : -1,
+                      : "symbol" == typeof _
+                        ? 6
+                        : "function" == typeof _
+                          ? 7
+                          : "bigint" == typeof _
+                            ? 8
+                            : -1,
         _ = (_, _, _) => {
+          const _ = _.keyOrdersMap?.get(_),
+            _ = _.keyOrdersMap?.get(_);
+          if (void 0 !== _ && void 0 !== _) return _ - _;
           const _ = _(_),
             _ = _(_);
           if (_ !== _) return _ - _;
@@ -12766,17 +12828,27 @@
             return 0;
           switch (typeof _) {
             case "number":
-              return _ - _;
+              return (Number.isNaN(_) && Number.isNaN(_)) ||
+                (_ === 1 / 0 && _ === 1 / 0) ||
+                (_ === -1 / 0 && _ === -1 / 0)
+                ? 0
+                : _ - _;
             case "string":
               return (
-                (null == _ ? void 0 : _.ignoreCase) &&
-                  ((_ = _.toLowerCase()), (_ = _.toLowerCase())),
+                _.ignoreCase && ((_ = _.toLowerCase()), (_ = _.toLowerCase())),
                 _ < _ ? -1 : _ > _ ? 1 : 0
               );
             case "boolean":
               return +_ - +_;
+            case "symbol":
+            case "function":
+              return String(_).localeCompare(String(_));
           }
-          return 0;
+          if ("bigint" == typeof _ && "bigint" == typeof _) {
+            const _ = BigInt(_) - BigInt(_);
+            return _ < 0 ? -1 : _ > 0 ? 1 : 0;
+          }
+          return String(_).localeCompare(String(_));
         },
         _ = (_) =>
           Array.isArray(_) ? "array" : null === _ ? "null" : typeof _,
@@ -12784,8 +12856,8 @@
           const _ = {
               ignoreCase: _.ignoreCase,
             },
-            _ = _(_, _.maxDepth, !0).split("\n"),
-            _ = _(_, _.maxDepth, !0).split("\n");
+            _ = _(_, _.maxDepth, !0, _.undefinedBehavior).split("\n"),
+            _ = _(_, _.maxDepth, !0, _.undefinedBehavior).split("\n");
           if (0 !== _(_, _, _))
             if (_.showModifications) {
               const _ = Math.max(_.length, _.length);
@@ -12796,18 +12868,12 @@
                 type: "modify",
                 text: _ ? `"${_}": ${_[0]}` : _[0],
               });
-              for (let _ = 1; _ < _.length; _++) {
-                var _, _;
+              for (let _ = 1; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "modify",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
-              }
               for (let _ = _.length; _ < _; _++)
                 _.push({
                   level: _,
@@ -12819,18 +12885,12 @@
                 type: "modify",
                 text: _ ? `"${_}": ${_[0]}` : _[0],
               });
-              for (let _ = 1; _ < _.length; _++) {
-                var _, _;
+              for (let _ = 1; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "modify",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
-              }
               for (let _ = _.length; _ < _; _++)
                 _.push({
                   level: _,
@@ -12843,18 +12903,12 @@
                 type: "remove",
                 text: _ ? `"${_}": ${_[0]}` : _[0],
               });
-              for (let _ = 1; _ < _.length; _++) {
-                var _, _;
+              for (let _ = 1; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "remove",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
-              }
               for (let _ = 0; _ < _.length; _++)
                 _.push({
                   level: _,
@@ -12872,18 +12926,12 @@
                 type: "add",
                 text: _ ? `"${_}": ${_[0]}` : _[0],
               });
-              for (let _ = 1; _ < _.length; _++) {
-                var _, _;
+              for (let _ = 1; _ < _.length; _++)
                 _.push({
-                  level:
-                    _ +
-                    ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                      ? void 0
-                      : _.length) || 0),
+                  level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "add",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
-              }
             }
           else {
             const _ = Math.max(_.length, _.length);
@@ -12894,35 +12942,23 @@
               type: "equal",
               text: _ ? `"${_}": ${_[0]}` : _[0],
             });
-            for (let _ = 1; _ < _.length; _++) {
-              var _, _;
+            for (let _ = 1; _ < _.length; _++)
               _.push({
-                level:
-                  _ +
-                  ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                    ? void 0
-                    : _.length) || 0),
+                level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                 type: "equal",
                 text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
               });
-            }
             _.push({
               level: _,
               type: "equal",
               text: _ ? `"${_}": ${_[0]}` : _[0],
             });
-            for (let _ = 1; _ < _.length; _++) {
-              var _, _;
+            for (let _ = 1; _ < _.length; _++)
               _.push({
-                level:
-                  _ +
-                  ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                    ? void 0
-                    : _.length) || 0),
+                level: _ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                 type: "equal",
                 text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
               });
-            }
           }
         },
         _ = (_, _) =>
@@ -12954,9 +12990,8 @@
           if ((null === _ && null === _) || (void 0 === _ && void 0 === _))
             return [_, _];
           if (null == _) {
-            const _ = _(_, void 0, 1).split("\n");
-            for (let _ = 0; _ < _.length; _++) {
-              var _, _;
+            const _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split("\n");
+            for (let _ = 0; _ < _.length; _++)
               _.push({
                 level: __webpack_require__,
                 type: "equal",
@@ -12965,25 +13000,18 @@
                 _.push({
                   level:
                     __webpack_require__ +
-                    ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                      ? void 0
-                      : _.length) || 0),
+                    (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "add",
                   text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                 });
-            }
             return [_, _];
           }
           if (null == _) {
-            const _ = _(_, void 0, 1).split("\n");
-            for (let _ = 0; _ < _.length; _++) {
-              var _, _;
+            const _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split("\n");
+            for (let _ = 0; _ < _.length; _++)
               _.push({
                 level:
-                  __webpack_require__ +
-                  ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                    ? void 0
-                    : _.length) || 0),
+                  __webpack_require__ + (_[_].match(/^\s+/)?.[0]?.length || 0),
                 type: "remove",
                 text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
               }),
@@ -12992,16 +13020,29 @@
                   type: "equal",
                   text: "",
                 });
-            }
             return [_, _];
           }
           const _ = Object.keys(_),
-            _ = Object.keys(_);
-          _(_, _), _(_, _);
+            _ = Object.keys(_),
+            _ = new Map();
+          if (_.preserveKeyOrder) {
+            if ("before" === _.preserveKeyOrder) {
+              for (let _ = 0; _ < _.length; _++) _.set(_[_], _);
+              for (let _ = 0; _ < _.length; _++)
+                _.has(_[_]) || _.set(_[_], _.length + _);
+              _.sort((_, _) => _.get(_) - _.get(_));
+            } else if ("after" === _.preserveKeyOrder) {
+              for (let _ = 0; _ < _.length; _++) _.set(_[_], _);
+              for (let _ = 0; _ < _.length; _++)
+                _.has(_[_]) || _.set(_[_], _.length + _);
+              _.sort((_, _) => _.get(_) - _.get(_));
+            }
+          } else _(_, _), _(_, _);
           const _ = {
             ignoreCase: _.ignoreCaseForKey,
+            keyOrdersMap: _,
           };
-          for (_.ignoreCase; _.length || _.length; ) {
+          for (; _.length || _.length; ) {
             const _ = _[0],
               _ = _[0],
               _ = _(_, _, _);
@@ -13050,17 +13091,16 @@
                   });
               } else _(_, _, _, _, _[_], _[_], __webpack_require__, _);
             else if (_.length && _.length)
-              if (_ < _) {
-                const _ = _(_[_], void 0, 1).split("\n");
+              if (_ < 0) {
+                const _ = _(_[_], void 0, 1, void 0, _.undefinedBehavior).split(
+                  "\n",
+                );
                 for (let _ = 0; _ < _.length; _++) {
-                  var _, _;
                   const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                   _.push({
                     level:
                       __webpack_require__ +
-                      ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                        ? void 0
-                        : _.length) || 0),
+                      (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "remove",
                     text: _ ? _ : `"${_}": ${_}`,
                   }),
@@ -13071,9 +13111,10 @@
                     });
                 }
               } else {
-                const _ = _(_[_], void 0, 1).split("\n");
+                const _ = _(_[_], void 0, 1, void 0, _.undefinedBehavior).split(
+                  "\n",
+                );
                 for (let _ = 0; _ < _.length; _++) {
-                  var _, _;
                   const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                   _.push({
                     level: __webpack_require__,
@@ -13083,25 +13124,22 @@
                     _.push({
                       level:
                         __webpack_require__ +
-                        ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                          ? void 0
-                          : _.length) || 0),
+                        (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "add",
                       text: _ ? _ : `"${_}": ${_}`,
                     });
                 }
               }
             else if (_.length) {
-              const _ = _(_[_], void 0, 1).split("\n");
+              const _ = _(_[_], void 0, 1, void 0, _.undefinedBehavior).split(
+                "\n",
+              );
               for (let _ = 0; _ < _.length; _++) {
-                var _, _;
                 const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                 _.push({
                   level:
                     __webpack_require__ +
-                    ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                      ? void 0
-                      : _.length) || 0),
+                    (_[_].match(/^\s+/)?.[0]?.length || 0),
                   type: "remove",
                   text: _ ? _ : `"${_}": ${_}`,
                 }),
@@ -13112,9 +13150,10 @@
                   });
               }
             } else if (_.length) {
-              const _ = _(_[_], void 0, 1).split("\n");
+              const _ = _(_[_], void 0, 1, void 0, _.undefinedBehavior).split(
+                "\n",
+              );
               for (let _ = 0; _ < _.length; _++) {
-                var _, _;
                 const _ = _[_].replace(/^\s+/, "").replace(/,$/g, "");
                 _.push({
                   level: __webpack_require__,
@@ -13124,9 +13163,7 @@
                   _.push({
                     level:
                       __webpack_require__ +
-                      ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                        ? void 0
-                        : _.length) || 0),
+                      (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "add",
                     text: _ ? _ : `"${_}": ${_}`,
                   });
@@ -13941,66 +13978,76 @@
             ? "string" == typeof _ &&
               "string" == typeof _ &&
               _.toLowerCase() === _.toLowerCase()
-            : _.recursiveEqual
-              ? _(_, _, (_, _) =>
-                  _.ignoreCase && "string" == typeof _ && "string" == typeof _
-                    ? _.toLowerCase() === _.toLowerCase()
-                    : void 0,
-                )
-              : _ === _,
+            : "symbol" == typeof _ && "symbol" == typeof _
+              ? _.toString() === _.toString()
+              : _.recursiveEqual
+                ? _(_, _, (_, _) =>
+                    _.ignoreCase && "string" == typeof _ && "string" == typeof _
+                      ? _.toLowerCase() === _.toLowerCase()
+                      : void 0,
+                  )
+                : _ === _,
         _ = (_, _) => {
           if (_ === _) return 1;
           if (null === _ || null === _) return 0;
           if ("object" != typeof _ || "object" != typeof _) return 0;
-          const _ = Object.keys(_),
-            _ = Object.keys(_),
-            _ = _.length,
-            _ = _.length;
-          if (0 === _ || 0 === _) return 0;
-          const _ = new Set(_),
-            _ = new Set(_),
-            _ = new Set([..._].filter((_) => _.has(_)));
-          return 0 === _.size
-            ? 0
-            : 1 !== _.size || (1 !== _ && 1 !== _) || _[_[0]] === _[_[0]]
-              ? Math.max(_.size / _, _.size / _)
-              : 0;
+          let _ = 0;
+          for (const _ in _)
+            Object.prototype.hasOwnProperty.call(_, _) &&
+              Object.prototype.hasOwnProperty.call(_, _) &&
+              _[_] === _[_] &&
+              _++;
+          return Math.max(_ / Object.keys(_).length, _ / Object.keys(_).length);
         },
-        _ = (_, _, _, _, _, _, _ = [], _ = []) => {
-          if (
-            (_ && _
-              ? (_.push({
-                  level: _,
-                  type: "equal",
-                  text: `"${_}": [`,
-                }),
-                _.push({
-                  level: _,
-                  type: "equal",
-                  text: `"${_}": [`,
-                }))
-              : (_.push({
-                  level: _,
-                  type: "equal",
-                  text: "[",
-                }),
-                _.push({
-                  level: _,
-                  type: "equal",
-                  text: "[",
-                })),
-            _ >= (_.maxDepth || 1 / 0))
-          )
+        _ = (_, _, _, _, _) => {
+          _ && _
+            ? (_.push({
+                level: _,
+                type: "equal",
+                text: `"${_}": [`,
+              }),
+              _.push({
+                level: _,
+                type: "equal",
+                text: `"${_}": [`,
+              }))
+            : (_.push({
+                level: _,
+                type: "equal",
+                text: "[",
+              }),
+              _.push({
+                level: _,
+                type: "equal",
+                text: "[",
+              }));
+        },
+        _ = (_, _, _) => {
+          _.push({
+            level: _,
+            type: "equal",
+            text: "]",
+          }),
+            _.push({
+              level: _,
+              type: "equal",
+              text: "]",
+            });
+        },
+        _ = (_, _, _) => {
+          _.push({
+            level: _ + 1,
+            type: "equal",
+            text: "...",
+          }),
             _.push({
               level: _ + 1,
               type: "equal",
               text: "...",
-            }),
-              _.push({
-                level: _ + 1,
-                type: "equal",
-                text: "...",
-              });
+            });
+        },
+        _ = (_, _, _, _, _, _, _ = [], _ = []) => {
+          if ((_(_, _, _, _, _), _ >= (_.maxDepth || 1 / 0))) _(_, _, _);
           else {
             const [_, _] = ((_, _, _, _, _, _) => {
               const _ = Array(_.length + 1)
@@ -14116,12 +14163,22 @@
                         _.unshift({
                           level: _ + 1,
                           type: "modify",
-                          text: _(_[_ - 1]),
+                          text: _(
+                            _[_ - 1],
+                            void 0,
+                            void 0,
+                            _.undefinedBehavior,
+                          ),
                         }),
                           _.unshift({
                             level: _ + 1,
                             type: "modify",
-                            text: _(_[_ - 1]),
+                            text: _(
+                              _[_ - 1],
+                              void 0,
+                              void 0,
+                              _.undefinedBehavior,
+                            ),
                           });
                     else {
                       const _ = [],
@@ -14132,17 +14189,16 @@
                     }
                     _--, _--;
                   } else {
-                    const _ = _(_[_ - 1], void 0, 1).split("\n");
-                    for (let _ = _.length - 1; _ >= 0; _--) {
-                      var _, _;
+                    const _ = _(
+                      _[_ - 1],
+                      void 0,
+                      1,
+                      void 0,
+                      _.undefinedBehavior,
+                    ).split("\n");
+                    for (let _ = _.length - 1; _ >= 0; _--)
                       _.unshift({
-                        level:
-                          _ +
-                          1 +
-                          ((null == (_ = _[_].match(/^\s+/)) ||
-                          null == (_ = _[0])
-                            ? void 0
-                            : _.length) || 0),
+                        level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                         type: "remove",
                         text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                       }),
@@ -14151,87 +14207,253 @@
                           type: "equal",
                           text: "",
                         });
-                    }
                     _--;
                   }
                 else {
-                  const _ = _(_[_ - 1], void 0, 1).split("\n");
-                  for (let _ = _.length - 1; _ >= 0; _--) {
-                    var _, _;
+                  const _ = _(
+                    _[_ - 1],
+                    void 0,
+                    1,
+                    void 0,
+                    _.undefinedBehavior,
+                  ).split("\n");
+                  for (let _ = _.length - 1; _ >= 0; _--)
                     _.unshift({
                       level: _ + 1,
                       type: "equal",
                       text: "",
                     }),
                       _.unshift({
-                        level:
-                          _ +
-                          1 +
-                          ((null == (_ = _[_].match(/^\s+/)) ||
-                          null == (_ = _[0])
-                            ? void 0
-                            : _.length) || 0),
+                        level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                         type: "add",
                         text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                       });
-                  }
                   _--;
                 }
               return [_, _];
             })(_, _, _, _, _, _);
             (_ = _(_, _)), (_ = _(_, _));
           }
-          return (
-            _.push({
-              level: _,
-              type: "equal",
-              text: "]",
-            }),
-            _.push({
-              level: _,
-              type: "equal",
-              text: "]",
-            }),
-            [_, _]
-          );
-        },
-        _ = (_, _, _, _, _, _, _ = [], _ = []) => {
-          if (
-            ((_ = [..._]),
-            (_ = [..._]),
-            _ && _
-              ? (_.push({
-                  level: _,
-                  type: "equal",
-                  text: `"${_}": [`,
-                }),
+          return _(_, _, _), [_, _];
+        };
+      function _(_, _) {
+        for (const _ of _) {
+          if ("object" === _(_)) {
+            if (!(_ in _)) return !1;
+            for (const _ of Object.values(_))
+              if (Array.isArray(_) && !_(_, _)) return !1;
+          } else if (Array.isArray(_) && !_(_, _)) return !1;
+        }
+        return !0;
+      }
+      const _ = function _(_, _, _, _, _, _, _ = [], _ = []) {
+        if (!_.compareKey) return _(_, _, _, _, _, _, _, _);
+        const _ = (_) => _.every((_) => "object" === _(_));
+        if (!(_(_) && _(_) && _(_, _.compareKey) && _(_, _.compareKey)))
+          return _(_, _, _, _, _, _, _, _);
+        if ((_(_, _, _, _, _), _ >= (_.maxDepth || 1 / 0))) _(_, _, _);
+        else {
+          const _ = new Set(),
+            _ = new Set();
+          for (let _ = 0; _ < _.length; _++) {
+            const _ = _[_];
+            if (_.has(_)) continue;
+            if ("object" !== _(_) || !(_.compareKey in _)) continue;
+            const _ = _[_.compareKey];
+            let _ = -1;
+            for (let _ = 0; _ < _.length; _++) {
+              if (_.has(_)) continue;
+              const _ = _[_];
+              if ("object" !== _(_) || !(_.compareKey in _)) continue;
+              const _ = _[_.compareKey];
+              if (_(_, _, _)) {
+                _ = _;
+                break;
+              }
+            }
+            if (-1 !== _) {
+              const _ = _[_],
+                _ = _(_);
+              if (_ !== _(_)) _(_, _, "", "", _, _, _ + 1, _);
+              else if ("object" === _) {
                 _.push({
-                  level: _,
+                  level: _ + 1,
                   type: "equal",
-                  text: `"${_}": [`,
-                }))
-              : (_.push({
-                  level: _,
-                  type: "equal",
-                  text: "[",
+                  text: "{",
                 }),
+                  _.push({
+                    level: _ + 1,
+                    type: "equal",
+                    text: "{",
+                  });
+                const _ = Array.from(
+                  new Set([...Object.keys(_), ...Object.keys(_)]),
+                );
+                for (const _ of _) {
+                  const _ = _[_],
+                    _ = _[_];
+                  if (Array.isArray(_) && Array.isArray(_)) {
+                    const [_, _] = _(_, _, _, _, _ + 2, _, [], []);
+                    (_ = _(_, _)), (_ = _(_, _));
+                  } else if (Array.isArray(_) || Array.isArray(_))
+                    _(_, _, _, _, _, _, _ + 2, _);
+                  else {
+                    const [_, _] = _(
+                      {
+                        [_]: _,
+                      },
+                      {
+                        [_]: _,
+                      },
+                      _ + 2,
+                      _,
+                      _,
+                    );
+                    (_ = _(_, _)), (_ = _(_, _));
+                  }
+                }
                 _.push({
-                  level: _,
+                  level: _ + 1,
                   type: "equal",
-                  text: "[",
-                })),
-            _ >= (_.maxDepth || 1 / 0))
-          )
-            _.push({
-              level: _ + 1,
-              type: "equal",
-              text: "...",
-            }),
+                  text: "}",
+                }),
+                  _.push({
+                    level: _ + 1,
+                    type: "equal",
+                    text: "}",
+                  });
+              } else if ("array" === _) {
+                const [_, _] = _(_, _, "", "", _ + 1, _, [], []);
+                (_ = _(_, _)), (_ = _(_, _));
+              } else
+                _(_, _, _)
+                  ? (_.push({
+                      level: _ + 1,
+                      type: "equal",
+                      text: _(_, void 0, void 0, _.undefinedBehavior),
+                    }),
+                    _.push({
+                      level: _ + 1,
+                      type: "equal",
+                      text: _(_, void 0, void 0, _.undefinedBehavior),
+                    }))
+                  : _.showModifications
+                    ? (_.push({
+                        level: _ + 1,
+                        type: "modify",
+                        text: _(_, void 0, void 0, _.undefinedBehavior),
+                      }),
+                      _.push({
+                        level: _ + 1,
+                        type: "modify",
+                        text: _(_, void 0, void 0, _.undefinedBehavior),
+                      }))
+                    : (_.push({
+                        level: _ + 1,
+                        type: "remove",
+                        text: _(_, void 0, void 0, _.undefinedBehavior),
+                      }),
+                      _.push({
+                        level: _ + 1,
+                        type: "equal",
+                        text: "",
+                      }),
+                      _.push({
+                        level: _ + 1,
+                        type: "equal",
+                        text: "",
+                      }),
+                      _.push({
+                        level: _ + 1,
+                        type: "add",
+                        text: _(_, void 0, void 0, _.undefinedBehavior),
+                      }));
+              _.add(_), _.add(_);
+            }
+          }
+          for (let _ = 0; _ < _.length; _++) {
+            if (_.has(_)) continue;
+            const _ = _[_],
+              _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split("\n");
+            for (let _ = 0; _ < _.length; _++)
+              _.push({
+                level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
+                type: "remove",
+                text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
+              }),
+                _.push({
+                  level: _ + 1,
+                  type: "equal",
+                  text: "",
+                });
+          }
+          for (let _ = 0; _ < _.length; _++) {
+            if (_.has(_)) continue;
+            const _ = _[_],
+              _ = _(_, void 0, 1, void 0, _.undefinedBehavior).split("\n");
+            for (let _ = 0; _ < _.length; _++)
               _.push({
                 level: _ + 1,
                 type: "equal",
-                text: "...",
-              });
+                text: "",
+              }),
+                _.push({
+                  level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
+                  type: "add",
+                  text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
+                });
+          }
+        }
+        return _(_, _, _), [_, _];
+      };
+      function _(_, _, _, _, _, _, _) {
+        let _ = [],
+          _ = [];
+        const _ = Array.from(
+          new Set([...Object.keys(_ || {}), ...Object.keys(_ || {})]),
+        );
+        for (const _ of _) {
+          const _ = _ ? _[_] : void 0,
+            _ = _ ? _[_] : void 0;
+          if (
+            Array.isArray(_) &&
+            Array.isArray(_) &&
+            _.compareKey &&
+            _(_, _.compareKey) &&
+            _(_, _.compareKey)
+          ) {
+            const [_, _] = _(_, _, "", "", _ + 2, _, [], []);
+            (_ = _(_, _)), (_ = _(_, _));
+          } else if (Array.isArray(_) && Array.isArray(_)) {
+            const [_, _] = _(_, _, "", "", _ + 2, _, [], []);
+            (_ = _(_, _)), (_ = _(_, _));
+          } else if (Array.isArray(_) || Array.isArray(_))
+            _(_, _, _, _, _, _, _ + 2, _);
+          else {
+            const [_, _] = _(
+              {
+                [_]: _,
+              },
+              {
+                [_]: _,
+              },
+              _ + 2,
+              _,
+              _,
+            );
+            (_ = _(_, _)), (_ = _(_, _));
+          }
+        }
+        return [_, _];
+      }
+      const _ = (_, _, _, _, _, _, _ = [], _ = []) => {
+          if (
+            ((_ = [..._]),
+            (_ = [..._]),
+            _(_, _, _, _, _),
+            _ >= (_.maxDepth || 1 / 0))
+          )
+            _(_, _, _);
           else
             for (; _.length || _.length; ) {
               const _ = _[0],
@@ -14247,6 +14469,7 @@
                 )
                   _(_, _, "", "", _, _, _ + 1, _);
                 else if ("object" === _) {
+                  let _, _;
                   _.push({
                     level: _ + 1,
                     type: "equal",
@@ -14256,9 +14479,11 @@
                       level: _ + 1,
                       type: "equal",
                       text: "{",
-                    });
-                  const [_, _] = _(_, _, _ + 2, _, _);
-                  (_ = _(_, _)),
+                    }),
+                    "compare-key" === _.arrayDiffMethod
+                      ? ([_, _] = _(_, _, _, _, _, _, _))
+                      : ([_, _] = _(_, _, _ + 2, _, _)),
+                    (_ = _(_, _)),
                     (_ = _(_, _)),
                     _.push({
                       level: _ + 1,
@@ -14270,36 +14495,48 @@
                       type: "equal",
                       text: "}",
                     });
-                } else if ("array" === _) {
-                  const [_, _] = _(_, _, "", "", _ + 1, _, [], []);
-                  (_ = _(_, _)), (_ = _(_, _));
-                } else
-                  _ === _
+                } else if ("array" === _)
+                  if (
+                    _.compareKey &&
+                    _(_, _.compareKey) &&
+                    _(_, _.compareKey)
+                  ) {
+                    const [_, _] = _(_, _, "", "", _ + 1, _, [], []);
+                    (_ = _(_, _)), (_ = _(_, _));
+                  } else {
+                    const [_, _] = _(_, _, "", "", _ + 1, _, [], []);
+                    (_ = _(_, _)), (_ = _(_, _));
+                  }
+                else
+                  0 ===
+                  _(_, _, {
+                    ignoreCase: _.ignoreCase,
+                  })
                     ? (_.push({
                         level: _ + 1,
                         type: "equal",
-                        text: _(_),
+                        text: _(_, void 0, void 0, _.undefinedBehavior),
                       }),
                       _.push({
                         level: _ + 1,
                         type: "equal",
-                        text: _(_),
+                        text: _(_, void 0, void 0, _.undefinedBehavior),
                       }))
                     : _.showModifications
                       ? (_.push({
                           level: _ + 1,
                           type: "modify",
-                          text: _(_),
+                          text: _(_, void 0, void 0, _.undefinedBehavior),
                         }),
                         _.push({
                           level: _ + 1,
                           type: "modify",
-                          text: _(_),
+                          text: _(_, void 0, void 0, _.undefinedBehavior),
                         }))
                       : (_.push({
                           level: _ + 1,
                           type: "remove",
-                          text: _(_),
+                          text: _(_, void 0, void 0, _.undefinedBehavior),
                         }),
                         _.push({
                           level: _ + 1,
@@ -14314,20 +14551,14 @@
                         _.push({
                           level: _ + 1,
                           type: "add",
-                          text: _(_),
+                          text: _(_, void 0, void 0, _.undefinedBehavior),
                         }));
                 _.shift(), _.shift();
               } else if (_.length) {
-                const _ = _(_, void 0, !0).split("\n");
-                for (let _ = 0; _ < _.length; _++) {
-                  var _, _;
+                const _ = _(_, void 0, !0, _.undefinedBehavior).split("\n");
+                for (let _ = 0; _ < _.length; _++)
                   _.push({
-                    level:
-                      _ +
-                      1 +
-                      ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                        ? void 0
-                        : _.length) || 0),
+                    level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                     type: "remove",
                     text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                   }),
@@ -14336,92 +14567,52 @@
                       type: "equal",
                       text: "",
                     });
-                }
                 _.shift();
               } else if (_.length) {
-                const _ = _(_, void 0, !0).split("\n");
-                for (let _ = 0; _ < _.length; _++) {
-                  var _, _;
+                const _ = _(_, void 0, !0, _.undefinedBehavior).split("\n");
+                for (let _ = 0; _ < _.length; _++)
                   _.push({
                     level: _ + 1,
                     type: "equal",
                     text: "",
                   }),
                     _.push({
-                      level:
-                        _ +
-                        1 +
-                        ((null == (_ = _[_].match(/^\s+/)) || null == (_ = _[0])
-                          ? void 0
-                          : _.length) || 0),
+                      level: _ + 1 + (_[_].match(/^\s+/)?.[0]?.length || 0),
                       type: "add",
                       text: _[_].replace(/^\s+/, "").replace(/,$/g, ""),
                     });
-                }
                 _.shift();
               }
             }
-          return (
-            _.push({
-              level: _,
-              type: "equal",
-              text: "]",
-            }),
-            _.push({
-              level: _,
-              type: "equal",
-              text: "]",
-            }),
-            [_, _]
-          );
+          return _(_, _, _), [_, _];
+        },
+        _ = (_, _) => {
+          if (!_ || "object" != typeof _) return _;
+          if (Array.isArray(_)) {
+            const _ = [..._];
+            return (
+              __webpack_require__.sort((_, _) =>
+                _(_, _, {
+                  ignoreCase: _?.ignoreCase,
+                }),
+              ),
+              __webpack_require__.map((_) => _(_, _))
+            );
+          }
+          const _ = {
+            ..._,
+          };
+          for (const _ in _) _[_] = _(_[_], _);
+          return _;
         };
-      function _() {
+      var _ = (function (_) {
         return (
-          (_ =
-            Object.assign ||
-            function (_) {
-              for (var _ = 1; _ < arguments.length; _++) {
-                var _ = arguments[_];
-                for (var _ in _)
-                  Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-              }
-              return _;
-            }),
-          _.apply(this, arguments)
+          (_.stringify = "stringify"),
+          (_.ignore = "ignore"),
+          (_.throw = "throw"),
+          _
         );
-      }
-      const _ = (_, _) => {
-        if (!_ || "object" != typeof _) return _;
-        if (Array.isArray(_)) {
-          const _ = [..._];
-          return (
-            __webpack_require__.sort((_, _) =>
-              _(_, _, {
-                ignoreCase: null == _ ? void 0 : _.ignoreCase,
-              }),
-            ),
-            __webpack_require__.map((_) => _(_, _))
-          );
-        }
-        const _ = _({}, _);
-        for (const _ in _) _[_] = _(_[_], _);
-        return _;
-      };
-      function _() {
-        return (
-          (_ =
-            Object.assign ||
-            function (_) {
-              for (var _ = 1; _ < arguments.length; _++) {
-                var _ = arguments[_];
-                for (var _ in _)
-                  Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-              }
-              return _;
-            }),
-          _.apply(this, arguments)
-        );
-      }
+      })({});
       const _ = {
           level: 0,
           type: "equal",
@@ -14485,61 +14676,75 @@
             this.detectCircular(_),
             ("unorder-normal" !== this.options.arrayDiffMethod &&
               "unorder-lcs" !== this.options.arrayDiffMethod) ||
-              ((_ = _(_, this.options)), (_ = _(_, this.options)));
+              ((_ = _(_, this.options)), (_ = _(_, this.options))),
+            "ignore" === this.options.undefinedBehavior &&
+              ((_ = _(_) ?? null), (_ = _(_) ?? null));
           let _ = [],
             _ = [];
           const _ = _(_);
           if (_ !== _(_)) {
-            (_ = _(_, void 0, 1, this.options.maxDepth)
+            _ = _(
+              _,
+              void 0,
+              1,
+              this.options.maxDepth,
+              this.options.undefinedBehavior,
+            )
               .split("\n")
-              .map((_) => {
-                var _, _;
-                return {
-                  level:
-                    (null == (_ = _.match(/^\s+/)) || null == (_ = _[0])
-                      ? void 0
-                      : _.length) || 0,
-                  type: "remove",
-                  text: _.replace(/^\s+/, "").replace(/,$/g, ""),
-                  comma: _.endsWith(","),
-                };
-              })),
-              (_ = _(_, void 0, 1, this.options.maxDepth)
-                .split("\n")
-                .map((_) => {
-                  var _, _;
-                  return {
-                    level:
-                      (null == (_ = _.match(/^\s+/)) || null == (_ = _[0])
-                        ? void 0
-                        : _.length) || 0,
-                    type: "add",
-                    text: _.replace(/^\s+/, "").replace(/,$/g, ""),
-                    comma: _.endsWith(","),
-                  };
-                }));
+              .map((_) => ({
+                level: _.match(/^\s+/)?.[0]?.length || 0,
+                type: "remove",
+                text: _.replace(/^\s+/, "").replace(/,$/g, ""),
+                comma: _.endsWith(","),
+              }));
+            _ = _(
+              _,
+              void 0,
+              1,
+              this.options.maxDepth,
+              this.options.undefinedBehavior,
+            )
+              .split("\n")
+              .map((_) => ({
+                level: _.match(/^\s+/)?.[0]?.length || 0,
+                type: "add",
+                text: _.replace(/^\s+/, "").replace(/,$/g, ""),
+                comma: _.endsWith(","),
+              }));
             const _ = _.length,
               _ = _.length;
             (_ = _(
               _,
               Array(_)
                 .fill(0)
-                .map(() => _({}, _)),
+                .map(() => ({
+                  ..._,
+                })),
             )),
               (_ = _(
                 _,
                 Array(_)
                   .fill(0)
-                  .map(() => _({}, _)),
+                  .map(() => ({
+                    ..._,
+                  })),
                 !0,
               ));
           } else
             "object" === _
               ? (([_, _] = _(_, _, 1, this.options, this.arrayDiffFunc)),
-                __webpack_require__.unshift(_({}, _)),
-                __webpack_require__.push(_({}, _)),
-                _.unshift(_({}, _)),
-                _.push(_({}, _)))
+                __webpack_require__.unshift({
+                  ..._,
+                }),
+                __webpack_require__.push({
+                  ..._,
+                }),
+                _.unshift({
+                  ..._,
+                }),
+                _.push({
+                  ..._,
+                }))
               : "array" === _
                 ? ([_, _] = this.arrayDiffFunc(_, _, "", "", 0, this.options))
                 : _ !== _
@@ -14566,44 +14771,84 @@
                           {
                             level: 0,
                             type: "modify",
-                            text: _(_, void 0, void 0, this.options.maxDepth),
+                            text: _(
+                              _,
+                              void 0,
+                              void 0,
+                              this.options.maxDepth,
+                              this.options.undefinedBehavior,
+                            ),
                           },
                         ]),
                         (_ = [
                           {
                             level: 0,
                             type: "modify",
-                            text: _(_, void 0, void 0, this.options.maxDepth),
+                            text: _(
+                              _,
+                              void 0,
+                              void 0,
+                              this.options.maxDepth,
+                              this.options.undefinedBehavior,
+                            ),
                           },
                         ]))
                       : ((_ = [
                           {
                             level: 0,
                             type: "remove",
-                            text: _(_, void 0, void 0, this.options.maxDepth),
+                            text: _(
+                              _,
+                              void 0,
+                              void 0,
+                              this.options.maxDepth,
+                              this.options.undefinedBehavior,
+                            ),
                           },
-                          _({}, _),
+                          {
+                            ..._,
+                          },
                         ]),
                         (_ = [
-                          _({}, _),
+                          {
+                            ..._,
+                          },
                           {
                             level: 0,
                             type: "add",
-                            text: _(_, void 0, void 0, this.options.maxDepth),
+                            text: _(
+                              _,
+                              void 0,
+                              void 0,
+                              this.options.maxDepth,
+                              this.options.undefinedBehavior,
+                            ),
                           },
                         ]))
                   : ((_ = [
                       {
                         level: 0,
                         type: "equal",
-                        text: _(_, void 0, void 0, this.options.maxDepth),
+                        text: _(
+                          _,
+                          void 0,
+                          void 0,
+                          this.options.maxDepth,
+                          this.options.undefinedBehavior,
+                        ),
                       },
                     ]),
                     (_ = [
                       {
                         level: 0,
                         type: "equal",
-                        text: _(_, void 0, void 0, this.options.maxDepth),
+                        text: _(
+                          _,
+                          void 0,
+                          void 0,
+                          this.options.maxDepth,
+                          this.options.undefinedBehavior,
+                        ),
                       },
                     ]));
           return (
@@ -14623,6 +14868,9 @@
           ignoreCase: _ = !1,
           ignoreCaseForKey: _ = !1,
           recursiveEqual: _ = !1,
+          preserveKeyOrder: _,
+          compareKey: _,
+          undefinedBehavior: _ = "stringify",
         } = {}) {
           (this.options = {
             detectCircular: _,
@@ -14632,26 +14880,25 @@
             ignoreCase: _,
             ignoreCaseForKey: _,
             recursiveEqual: _,
+            preserveKeyOrder: _,
+            compareKey: _,
+            undefinedBehavior: _,
           }),
-            (this.arrayDiffFunc = "lcs" === _ || "unorder-lcs" === _ ? _ : _);
+            (this.arrayDiffFunc =
+              "compare-key" === _
+                ? _
+                : "lcs" === _ || "unorder-lcs" === _
+                  ? _
+                  : _);
         }
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid");
-      function _() {
-        return (
-          (_ =
-            Object.assign ||
-            function (_) {
-              for (var _ = 1; _ < arguments.length; _++) {
-                var _ = arguments[_];
-                for (var _ in _)
-                  Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-              }
-              return _;
-            }),
-          _.apply(this, arguments)
-        );
-      }
       const _ = (_) => "hasLinesBefore" in _ || "hasLinesAfter" in _,
         _ = (_, _, _) => (_(_) ? _ : _ * (_.end - _.start + 1)),
         _ = (_, _) => {
@@ -14661,47 +14908,56 @@
             for (
               _ = [..._],
                 _ = [..._],
-                _ = _({}, _.shift()),
-                _ = _({}, _.shift());
+                _ = {
+                  ..._.shift(),
+                },
+                _ = {
+                  ..._.shift(),
+                };
               ;
             ) {
               if (_.start === _.start) {
                 const _ = Math.min(_.end, _.end);
-                __webpack_require__.push(
-                  _({}, _, _, {
-                    end: _,
-                  }),
-                ),
+                __webpack_require__.push({
+                  ..._,
+                  ..._,
+                  end: _,
+                }),
                   (_.start = _.start = _);
               } else if (_.start < _.start) {
                 const _ = Math.min(_.end, _.start);
-                __webpack_require__.push(
-                  _({}, _, _, {
-                    end: _,
-                  }),
-                ),
+                __webpack_require__.push({
+                  ..._,
+                  ..._,
+                  end: _,
+                }),
                   (_.start = _);
               } else {
                 const _ = Math.min(_.start, _.end);
-                __webpack_require__.push(
-                  _({}, _, _, {
-                    end: _,
-                  }),
-                ),
+                __webpack_require__.push({
+                  ..._,
+                  ..._,
+                  end: _,
+                }),
                   (_.start = _);
               }
               if (!_.length || !_.length) break;
-              _.start === _.end && (_ = _({}, _.shift())),
-                _.start === _.end && (_ = _({}, _.shift()));
+              _.start === _.end &&
+                (_ = {
+                  ..._.shift(),
+                }),
+                _.start === _.end &&
+                  (_ = {
+                    ..._.shift(),
+                  });
             }
           return (
             _.length ||
               __webpack_require__.push(
-                ..._.map((_) =>
-                  _({}, _, {
-                    token: _.token || "plain",
-                  }),
-                ),
+                ..._.map((_) => ({
+                  ..._,
+                  token: _.token || "plain",
+                })),
               ),
             _.length || __webpack_require__.push(..._),
             _
@@ -14982,6 +15238,23 @@
                 end: _.length + _,
               },
             ];
+          if (
+            "undefined" === _ ||
+            "Infinity" === _ ||
+            "-Infinity" === _ ||
+            "NaN" === _ ||
+            /^\d+n$/i.test(_) ||
+            _.startsWith("Symbol(") ||
+            _.startsWith("function") ||
+            _.startsWith("(")
+          )
+            return [
+              {
+                token: "invalid",
+                start: _,
+                end: _.length + _,
+              },
+            ];
           if (!Number.isNaN(Number(_)))
             return [
               {
@@ -15079,8 +15352,8 @@
           threshold: 8,
           margin: 3,
         },
-        _ = (_, _, _) => {
-          if (!_)
+        _ = (_, _, _, _) => {
+          if (!_ || _)
             return [
               {
                 start: 0,
@@ -15105,7 +15378,13 @@
                     end: _ + 1,
                     isEqual: !1,
                   });
-          const _ = !0 === _ ? _ : _,
+          const _ =
+              !0 === _
+                ? _
+                : {
+                    ..._,
+                    ..._,
+                  },
             { threshold: _, margin: _ } = _;
           _ < 2 * _ + 1 &&
             console.warn(
@@ -15161,554 +15440,464 @@
                   }));
           }
           return _;
-        };
-      function _() {
-        return (
-          (_ =
-            Object.assign ||
-            function (_) {
-              for (var _ = 1; _ < arguments.length; _++) {
-                var _ = arguments[_];
-                for (var _ in _)
-                  Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-              }
-              return _;
-            }),
-          _.apply(this, arguments)
-        );
-      }
-      const _ = (_) => {
-        var _, _;
-        const [_, _] = _.diff,
-          _ = _.lineNumbers ? `calc(${String(_.length).length}ch + 16px)` : 0;
-        var _;
-        const _ = null != (_ = _.indent) ? _ : 2,
-          _ = "tab" === _ ? "\t" : " ",
-          _ = "tab" === _ ? 1 : _,
-          _ = {
-            mode:
-              (null == (_ = _.inlineDiffOptions) ? void 0 : _.mode) || "char",
-            wordSeparator:
-              (null == (_ = _.inlineDiffOptions) ? void 0 : _.wordSeparator) ||
-              "",
-          };
-        var _;
-        const _ = null != (_ = _.hideUnchangedLines) && _,
-          {
-            scrollContainer: _ = "body",
-            itemHeight: _ = 18,
-            expandLineHeight: _ = 26,
-          } = _.virtual && !0 !== _.virtual ? _.virtual : {},
-          _ = "body" === _ ? document.body : document.querySelector(_),
-          _ = _.useRef(_),
-          _ = _.useRef(_),
-          _ = _.useRef(_(_, _, _)),
-          _ = _.useRef([]),
-          _ = _.useRef(0),
-          _ = _.useRef(null),
-          [, _] = _.useState({}),
-          _ = () => {
-            if (((_.current = []), _.virtual)) {
-              let _ = 0;
-              for (const _ of _.current)
-                _(_)
-                  ? (_.current.push(_), (_ += _))
-                  : (_.current.push(_), (_ += _ * (_.end - _.start)));
-              _.current = _.current.reduce(
-                (_, _) => (_(_) ? _ + _ : _ + (_.end - _.start) * _),
-                0,
-              );
-            }
-            _({});
-          };
-        _.useEffect(() => {
-          (_.current = _), (_.current = _), (_.current = _(_, _, _)), _();
-        }, [_, _, _]),
-          _.useEffect(() => {
-            if (!_.virtual || !_) return;
-            const _ = () => _({});
-            return (
-              _.addEventListener("scroll", _),
-              () => {
-                _.removeEventListener("scroll", _);
-              }
-            );
-          }, [_.virtual, _]);
-        const _ = (_) => (_) => {
-            const _ = [..._.current],
-              _ = _[_];
-            (_[_] = _({}, _, {
-              end: Math.max(_.end - _, _.start),
-            })),
-              _ + 1 < _.current.length - 1 &&
-                (_[_ + 1] = _({}, _[_ + 1], {
-                  start: Math.max(_.end - _, _.start),
-                })),
-              (_.current = _),
-              _();
-          },
-          _ = (_) => (_) => {
-            const _ = [..._.current],
-              _ = _[_];
-            (_[_] = _({}, _, {
-              start: Math.min(_.start + _, _.end),
-            })),
-              _ > 1 &&
-                (_[_ - 1] = _({}, _[_ - 1], {
-                  end: Math.min(_.start + _, _.end),
-                })),
-              (_.current = _),
-              _();
-          },
-          _ = (_) => () => {
-            const _ = [..._.current],
-              _ = _[_];
-            (_[_] = _({}, _, {
-              start: _.start,
-              end: _.start,
-            })),
-              _ + 1 < _.current.length - 1
-                ? (_[_ + 1] = _({}, _[_ + 1], {
-                    start: _.start,
-                  }))
-                : (_[_ - 1] = _({}, _[_ - 1], {
-                    end: _.end,
-                  })),
-              (_.current = _),
-              _();
-          },
-          _ = (_, _ = [], _ = !1, _ = !1) =>
-            _.createElement(
-              _.Fragment,
-              null,
-              _.map((_, _) => {
-                const _ = _.slice(_.start, _.end);
-                if (!_.type && !_.token) return _;
-                const _ = [
-                  _.type ? `inline-diff-${_.type}` : "",
-                  _.token ? `token ${_.token}` : "",
-                ]
-                  .filter(Boolean)
-                  .join(" ");
-                return _.createElement(
-                  "span",
-                  {
-                    key: `${_}-${_.type}-${_}`,
-                    className: _,
-                  },
-                  _,
-                );
-              }),
-              _ &&
-                (_
-                  ? _.createElement(
-                      "span",
-                      {
-                        className: "token punctuation",
-                      },
-                      ",",
-                    )
-                  : ","),
+        },
+        _ = {
+          noChangeDetected: "No change detected",
+          showLinesBefore: "⭡ Show %d lines before",
+          showLinesAfter: "⭣ Show %d lines after",
+          showAll: "⭥ Show all unchanged lines",
+        },
+        _ = (_) => {
+          const [_, __webpack_require__] = _.diff,
+            _ = _.useMemo(
+              () =>
+                _.length === __webpack_require__.length &&
+                _.every((_) => "equal" === _.type) &&
+                __webpack_require__.every((_) => "equal" === _.type),
+              [_, __webpack_require__],
             ),
-          _ = (_, _) => {
-            var _, _;
-            const _ = _.current[_],
-              _ = _.current[_],
-              [_, _] =
-                _.highlightInlineDiff &&
-                "modify" === _.type &&
-                "modify" === _.type
-                  ? ((_, _, _) => {
-                      let _ = [],
-                        _ = [],
-                        _ = 0,
-                        _ = 0;
-                      if ("word" === _.mode) {
-                        const _ = _.wordSeparator || " ",
-                          _ = _.split(_),
-                          _ = _.split(_),
-                          _ = [..._(_, _)],
-                          _ = _.length,
-                          _ = _(_, _),
-                          _ = _(_, _);
+            _ = {
+              ..._,
+              ..._.texts,
+            },
+            _ = _.lineNumbers ? `calc(${String(_.length).length}ch + 16px)` : 0,
+            _ = _.indent ?? 2,
+            _ = "tab" === _ ? "\t" : " ",
+            _ = "tab" === _ ? 1 : _,
+            _ = {
+              mode: _.inlineDiffOptions?.mode || "char",
+              wordSeparator: _.inlineDiffOptions?.wordSeparator || "",
+            },
+            _ = _.hideUnchangedLines ?? !1,
+            {
+              scrollContainer: _ = "body",
+              itemHeight: _ = 18,
+              expandLineHeight: _ = 26,
+            } = _.virtual && !0 !== _.virtual ? _.virtual : {},
+            _ = "body" === _ ? document.body : document.querySelector(_),
+            _ = _.useRef(_),
+            _ = _.useRef(__webpack_require__),
+            _ = _.useRef(_(_, __webpack_require__, _, _)),
+            _ = _.useRef([]),
+            _ = _.useRef(0),
+            _ = _.useRef(null),
+            [, _] = _.useState({}),
+            _ = () => {
+              if (((_.current = []), _.virtual)) {
+                let _ = 0;
+                for (const _ of _.current)
+                  _(_)
+                    ? (_.current.push(_), (_ += _))
+                    : (_.current.push(_), (_ += _ * (_.end - _.start)));
+                _.current = _.current.reduce(
+                  (_, _) => (_(_) ? _ + _ : _ + (_.end - _.start) * _),
+                  0,
+                );
+              }
+              _({});
+            };
+          _.useEffect(() => {
+            (_.current = _),
+              (_.current = __webpack_require__),
+              (_.current = _(_, __webpack_require__, _, _)),
+              _();
+          }, [_, _, __webpack_require__]),
+            _.useEffect(() => {
+              if (!_.virtual || !_) return;
+              const _ = () => _({});
+              return (
+                _.addEventListener("scroll", _),
+                () => {
+                  _.removeEventListener("scroll", _);
+                }
+              );
+            }, [_.virtual, _]);
+          const _ = (_) => (_) => {
+              const _ = [..._.current],
+                _ = _[_];
+              (_[_] = {
+                ..._,
+                end: Math.max(_.end - _, _.start),
+              }),
+                _ + 1 < _.current.length - 1 &&
+                  (_[_ + 1] = {
+                    ..._[_ + 1],
+                    start: Math.max(_.end - _, _.start),
+                  }),
+                (_.current = _),
+                _();
+            },
+            _ = (_) => (_) => {
+              const _ = [..._.current],
+                _ = _[_];
+              (_[_] = {
+                ..._,
+                start: Math.min(_.start + _, _.end),
+              }),
+                _ > 1 &&
+                  (_[_ - 1] = {
+                    ..._[_ - 1],
+                    end: Math.min(_.start + _, _.end),
+                  }),
+                (_.current = _),
+                _();
+            },
+            _ = (_) => () => {
+              const _ = [..._.current],
+                _ = _[_];
+              (_[_] = {
+                ..._,
+                start: _.start,
+                end: _.start,
+              }),
+                _ + 1 < _.current.length - 1
+                  ? (_[_ + 1] = {
+                      ..._[_ + 1],
+                      start: _.start,
+                    })
+                  : (_[_ - 1] = {
+                      ..._[_ - 1],
+                      end: _.end,
+                    }),
+                (_.current = _),
+                _();
+            },
+            _ = (_, _ = [], __webpack_require__ = !1, _ = !1) =>
+              _.createElement(
+                _.Fragment,
+                null,
+                _.map((_, _) => {
+                  const _ = _.slice(_.start, _.end);
+                  if (!_.type && !_.token) return _;
+                  const _ = [
+                    _.type ? `inline-diff-${_.type}` : "",
+                    _.token ? `token ${_.token}` : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ");
+                  return _.createElement(
+                    "span",
+                    {
+                      key: `${_}-${_.type}-${_}`,
+                      className: _,
+                    },
+                    _,
+                  );
+                }),
+                __webpack_require__ &&
+                  (_
+                    ? _.createElement(
+                        "span",
+                        {
+                          className: "token punctuation",
+                        },
+                        ",",
+                      )
+                    : ","),
+              ),
+            _ = (_, _) => {
+              const _ = _.current[_],
+                _ = _.current[_],
+                [_, _] =
+                  _.highlightInlineDiff &&
+                  "modify" === _.type &&
+                  "modify" === _.type
+                    ? ((_, _, _) => {
+                        let _ = [],
+                          _ = [],
+                          _ = 0,
+                          _ = 0;
+                        if ("word" === _.mode) {
+                          const _ = _.wordSeparator || " ",
+                            _ = _.split(_),
+                            _ = _.split(_),
+                            _ = [..._(_, _)],
+                            _ = _.length,
+                            _ = _(_, _),
+                            _ = _(_, _);
+                          for (const [_, _, _] of _)
+                            _ > _ &&
+                              _.push({
+                                type: "remove",
+                                start: _[_],
+                                end: _[_],
+                              }),
+                              _ > _ &&
+                                _.push({
+                                  type: "add",
+                                  start: _[_],
+                                  end: _[_],
+                                }),
+                              (_ = _ + _),
+                              (_ = _ + _),
+                              _.push({
+                                start: _[_],
+                                end: _[_],
+                              }),
+                              _.push({
+                                start: _[_],
+                                end: _[_],
+                              });
+                          return (
+                            _.length > _ &&
+                              _.push({
+                                type: "remove",
+                                start: _[_],
+                                end: _.length,
+                              }),
+                            _.length > _ &&
+                              _.push({
+                                type: "add",
+                                start: _[_],
+                                end: _.length,
+                              }),
+                            (_ = _(_)),
+                            (_ = _(_)),
+                            [_, _]
+                          );
+                        }
+                        const _ = _(_, _);
                         for (const [_, _, _] of _)
                           _ > _ &&
                             _.push({
                               type: "remove",
-                              start: _[_],
-                              end: _[_],
+                              start: _,
+                              end: _,
                             }),
                             _ > _ &&
                               _.push({
                                 type: "add",
-                                start: _[_],
-                                end: _[_],
+                                start: _,
+                                end: _,
                               }),
                             (_ = _ + _),
                             (_ = _ + _),
                             _.push({
-                              start: _[_],
-                              end: _[_],
+                              start: _,
+                              end: _,
                             }),
                             _.push({
-                              start: _[_],
-                              end: _[_],
+                              start: _,
+                              end: _,
                             });
                         return (
                           _.length > _ &&
                             _.push({
                               type: "remove",
-                              start: _[_],
+                              start: _,
                               end: _.length,
                             }),
                           _.length > _ &&
                             _.push({
                               type: "add",
-                              start: _[_],
+                              start: _,
                               end: _.length,
                             }),
                           (_ = _(_)),
                           (_ = _(_)),
                           [_, _]
                         );
-                      }
-                      const _ = _(_, _);
-                      for (const [_, _, _] of _)
-                        _ > _ &&
-                          _.push({
-                            type: "remove",
-                            start: _,
-                            end: _,
-                          }),
-                          _ > _ &&
-                            _.push({
-                              type: "add",
-                              start: _,
-                              end: _,
-                            }),
-                          (_ = _ + _),
-                          (_ = _ + _),
-                          _.push({
-                            start: _,
-                            end: _,
-                          }),
-                          _.push({
-                            start: _,
-                            end: _,
-                          });
-                      return (
-                        _.length > _ &&
-                          _.push({
-                            type: "remove",
-                            start: _,
-                            end: _.length,
-                          }),
-                        _.length > _ &&
-                          _.push({
-                            type: "add",
-                            start: _,
-                            end: _.length,
-                          }),
-                        (_ = _(_)),
-                        (_ = _(_)),
-                        [_, _]
-                      );
-                    })(_.text, _.text, _)
-                  : [[], []],
-              _ = _(_, _.text, 0),
-              _ = _(_, _.text, 0),
-              _ = _(_, _),
-              _ = _(_, _);
-            var _;
-            const _ =
-              "equal" !== _.type &&
-              null != (_ = null == (_ = _.bgColour) ? void 0 : _[_.type])
-                ? _
-                : "";
-            var _;
-            const _ =
-              "equal" !== _.type &&
-              null != (_ = null == (_ = _.bgColour) ? void 0 : _[_.type])
-                ? _
-                : "";
-            return _.createElement(
-              "tr",
-              {
-                key: _,
-              },
-              _.lineNumbers &&
-                _.createElement(
-                  "td",
-                  {
-                    className: `line-${_.type} line-number`,
-                    style: {
-                      backgroundColor: _,
-                    },
-                  },
-                  _.lineNumber,
-                ),
-              _.createElement(
-                "td",
-                {
-                  className: `line-${_.type}`,
-                  style: {
-                    backgroundColor: _,
-                  },
-                },
-                _.createElement(
-                  "pre",
-                  null,
-                  _.text && _.repeat(_.level * _),
-                  _(_.text, _, _.comma, _),
-                ),
-              ),
-              _.lineNumbers &&
-                _.createElement(
-                  "td",
-                  {
-                    className: `line-${_.type} line-number`,
-                    style: {
-                      backgroundColor: _,
-                    },
-                  },
-                  _.lineNumber,
-                ),
-              _.createElement(
-                "td",
-                {
-                  className: `line-${_.type}`,
-                  style: {
-                    backgroundColor: _,
-                  },
-                },
-                _.createElement(
-                  "pre",
-                  null,
-                  _.text && _.repeat(_.level * _),
-                  _(_.text, _, _.comma, _),
-                ),
-              ),
-            );
-          },
-          _ = (_, _, _, _) =>
-            _.createElement(
-              _.Fragment,
-              null,
-              _ &&
-                _.createElement(
-                  "button",
-                  {
-                    onClick: () => _(_)(_),
-                  },
-                  "⬆️ Show ",
-                  _,
-                  " lines before",
-                ),
-              _.createElement(
-                "button",
-                {
-                  onClick: () => _(_)(),
-                },
-                "↕️ Show all unchanged lines",
-              ),
-              _ &&
-                _.createElement(
-                  "button",
-                  {
-                    onClick: () => _(_)(_),
-                  },
-                  "⬇️ Show ",
-                  _,
-                  " lines after",
-                ),
-            ),
-          _ = (_, _, _, _, _) => {
-            let { start: _, end: _ } = _;
-            if (((_ = Math.max(_, _)), (_ = Math.min(_, _)), _ === _))
-              return null;
-            if (!_(_))
-              return Array(_ - _)
-                .fill(0)
-                .map((_, _) => _(_ + _, _));
-            const { hasLinesBefore: _, hasLinesAfter: _ } = _,
-              _ = "boolean" == typeof _ ? 20 : _.expandMoreLinesLimit || 20;
-            return [
-              _.createElement(
+                      })(_.text, _.text, _)
+                    : [[], []],
+                _ = _(_, _.text, 0),
+                _ = _(_, _.text, 0),
+                _ = _(_, _),
+                _ = _(_, _),
+                _ = "equal" !== _.type ? (_.bgColour?.[_.type] ?? "") : "",
+                _ = "equal" !== _.type ? (_.bgColour?.[_.type] ?? "") : "";
+              return _.createElement(
                 "tr",
                 {
-                  key: `expand-line-${_}`,
-                  className: "expand-line",
+                  key: _,
                 },
+                _.lineNumbers &&
+                  _.createElement(
+                    "td",
+                    {
+                      className: `line-${_.type} line-number`,
+                      style: {
+                        backgroundColor: _,
+                      },
+                    },
+                    _.lineNumber,
+                  ),
                 _.createElement(
                   "td",
                   {
-                    colSpan: 4,
-                    className: `${_ ? "has-lines-before" : ""} ${_ ? "has-lines-after" : ""}`,
-                  },
-                  "boolean" != typeof _ && _.expandLineRenderer
-                    ? _.expandLineRenderer({
-                        hasLinesBefore: _,
-                        hasLinesAfter: _,
-                        onExpandBefore: _(_),
-                        onExpandAfter: _(_),
-                        onExpandAll: _(_),
-                      })
-                    : _(_, _, _, _),
-                ),
-              ),
-            ];
-          },
-          _ = [
-            "json-diff-viewer",
-            _.virtual && "json-diff-viewer-virtual",
-            _.syntaxHighlight &&
-              `json-diff-viewer-theme-${_.syntaxHighlight.theme || "monokai"}`,
-            _.className,
-          ]
-            .filter(Boolean)
-            .join(" "),
-          _ = !!_.syntaxHighlight;
-        return _.createElement(
-          "table",
-          {
-            className: _,
-            style: _.style,
-          },
-          _.createElement(
-            "colgroup",
-            {
-              className: "measure-line",
-            },
-            _.lineNumbers &&
-              _.createElement("col", {
-                style: {
-                  width: _,
-                },
-              }),
-            _.createElement("col", null),
-            _.lineNumbers &&
-              _.createElement("col", {
-                style: {
-                  width: _,
-                },
-              }),
-            _.createElement("col", null),
-          ),
-          _.createElement(
-            "tbody",
-            {
-              ref: _,
-            },
-            ((_) => {
-              if (!_.virtual)
-                return _.current.map((_, _) => _(_, _, 0, _.current.length, _));
-              var _;
-              const _ =
-                null != (_ = null == _ ? void 0 : _.clientHeight) ? _ : 0;
-              var _;
-              const _ = null != (_ = null == _ ? void 0 : _.scrollTop) ? _ : 0,
-                _ = _ + _;
-              let _ = _.current;
-              var _;
-              let _ = null != (_ = null == _ ? void 0 : _.offsetTop) ? _ : 0;
-              for (
-                ;
-                (null == _ ? void 0 : _.offsetParent) &&
-                (null == _ ? void 0 : _.offsetParent) !== _;
-              )
-                (_ = _.offsetParent), (_ += _.offsetTop);
-              if (_ > _ || _ + _.current < _)
-                return _.createElement(
-                  "tr",
-                  null,
-                  _.createElement("td", {
-                    colSpan: 4,
+                    className: `line-${_.type}`,
                     style: {
-                      height: `${_.current}px`,
+                      backgroundColor: _,
                     },
-                  }),
-                );
-              const _ = _ - _,
-                _ = _ - _,
-                [_, _, _, _] = ((_, _, _, _, _, _) => {
-                  if (!_.length) return [0, 0, 0, 0];
-                  let _ = 0,
-                    _ = 0,
-                    _ = 0,
-                    _ = 0,
-                    _ = 0,
-                    _ = _.length - 1;
-                  for (;;) {
-                    let _ = Math.floor((_ + _) / 2);
-                    if (
-                      (_[_] + _(_[_], _, _) <= _ ? (_ = _ + 1) : (_ = _),
-                      _ === _)
-                    ) {
-                      _ = _;
-                      break;
-                    }
-                  }
-                  const _ = _[_];
-                  for (
-                    _ = _(_) ? _.start : _.start + Math.floor((_ - _[_]) / _),
-                      _ = 0,
-                      _ = _.length - 1;
-                    ;
-                  ) {
-                    let _ = Math.floor((_ + _ + 1) / 2);
-                    if ((_[_] >= _ ? (_ = _ - 1) : (_ = _), _ === _)) {
-                      _ = _;
-                      break;
-                    }
-                  }
-                  const _ = _[_];
-                  return (
-                    (_ = _(_) ? _.end : _.start + Math.ceil((_ - _[_]) / _)),
-                    [_, _, _, _]
-                  );
-                })(_.current, _.current, _, _, _, _),
-                [_, _] = ((_, _, _, _, _, _, _, _, _) => {
-                  if (!_.length) return [0, 0];
-                  let _ = 0,
-                    _ = 0;
-                  const _ = _[_];
-                  _ = _(_) ? _[_] : _[_] + (_ - _.start) * _;
-                  const _ = _[_];
-                  return (
-                    (_ = _(_) ? _ - _[_] - _ : _ - _[_] - (_ - _.start) * _),
-                    [_, _]
-                  );
-                })(_.current, _.current, _, _, _, _, _, _, _.current),
-                _ = _.current.slice(_, _ + 1);
-              return _.length
-                ? _.createElement(
-                    _.Fragment,
+                  },
+                  _.createElement(
+                    "pre",
                     null,
+                    _.text && _.repeat(_.level * _),
+                    _(_.text, _, _.comma, _),
+                  ),
+                ),
+                _.lineNumbers &&
+                  _.createElement(
+                    "td",
+                    {
+                      className: `line-${_.type} line-number`,
+                      style: {
+                        backgroundColor: _,
+                      },
+                    },
+                    _.lineNumber,
+                  ),
+                _.createElement(
+                  "td",
+                  {
+                    className: `line-${_.type}`,
+                    style: {
+                      backgroundColor: _,
+                    },
+                  },
+                  _.createElement(
+                    "pre",
+                    null,
+                    _.text && _.repeat(_.level * _),
+                    _(_.text, _, _.comma, _),
+                  ),
+                ),
+              );
+            },
+            _ = (_, _, _, _) =>
+              _.createElement(
+                _.Fragment,
+                null,
+                _ &&
+                  _.createElement(
+                    "button",
+                    {
+                      onClick: () => _(_)(_),
+                    },
+                    _.showLinesBefore.replaceAll("%d", String(_)),
+                  ),
+                _.createElement(
+                  "button",
+                  {
+                    onClick: () => _(_)(),
+                  },
+                  _.showAll,
+                ),
+                _ &&
+                  _.createElement(
+                    "button",
+                    {
+                      onClick: () => _(_)(_),
+                    },
+                    _.showLinesAfter.replaceAll("%d", String(_)),
+                  ),
+              ),
+            _ = (_, _, _, _, _) => {
+              let { start: _, end: _ } = _;
+              if (((_ = Math.max(_, _)), (_ = Math.min(_, _)), _ === _))
+                return null;
+              if (!_(_))
+                return Array(_ - _)
+                  .fill(0)
+                  .map((_, _) => _(_ + _, _));
+              const { hasLinesBefore: _, hasLinesAfter: _ } = _,
+                _ = "boolean" == typeof _ ? 20 : _.expandMoreLinesLimit || 20;
+              return [
+                _.createElement(
+                  "tr",
+                  {
+                    key: `expand-line-${_}`,
+                    className: "expand-line",
+                  },
+                  _.createElement(
+                    "td",
+                    {
+                      colSpan: 4,
+                      className: `${_ ? "has-lines-before" : ""} ${_ ? "has-lines-after" : ""}`,
+                    },
+                    "boolean" != typeof _ && _.expandLineRenderer
+                      ? _.expandLineRenderer({
+                          hasLinesBefore: _,
+                          hasLinesAfter: _,
+                          onExpandBefore: _(_),
+                          onExpandAfter: _(_),
+                          onExpandAll: _(_),
+                        })
+                      : _(_, _, _, _),
+                  ),
+                ),
+              ];
+            },
+            _ = [
+              "json-diff-viewer",
+              _.virtual && "json-diff-viewer-virtual",
+              _.syntaxHighlight &&
+                `json-diff-viewer-theme-${_.syntaxHighlight.theme || "monokai"}`,
+              _.className,
+            ]
+              .filter(Boolean)
+              .join(" "),
+            _ = !!_.syntaxHighlight;
+          return _.createElement(
+            "table",
+            {
+              className: _,
+              style: _.style,
+            },
+            _.createElement(
+              "colgroup",
+              {
+                className: "measure-line",
+              },
+              _.lineNumbers &&
+                _.createElement("col", {
+                  style: {
+                    width: _,
+                  },
+                }),
+              _.createElement("col", null),
+              _.lineNumbers &&
+                _.createElement("col", {
+                  style: {
+                    width: _,
+                  },
+                }),
+              _.createElement("col", null),
+            ),
+            _.createElement(
+              "tbody",
+              {
+                ref: _,
+              },
+              ((_) => {
+                if (_ && _)
+                  return _.createElement(
+                    "tr",
+                    {
+                      key: "message-line",
+                      className: "message-line",
+                    },
                     _.createElement(
-                      "tr",
-                      null,
-                      _.createElement("td", {
+                      "td",
+                      {
                         colSpan: 4,
-                        style: {
-                          height: _,
-                          padding: 0,
-                        },
-                      }),
+                      },
+                      _.noChangeDetected,
                     ),
-                    _.map((_, _) => _(_, _, _, _, _)),
-                    _.createElement(
-                      "tr",
-                      null,
-                      _.createElement("td", {
-                        colSpan: 4,
-                        style: {
-                          height: _,
-                          padding: 0,
-                        },
-                      }),
-                    ),
-                  )
-                : _.createElement(
+                  );
+                if (!_.virtual)
+                  return _.current.map((_, _) =>
+                    _(_, _, 0, _.current.length, _),
+                  );
+                const _ = _?.clientHeight ?? 0,
+                  _ = _?.scrollTop ?? 0,
+                  _ = _ + _;
+                let _ = _.current,
+                  _ = _?.offsetTop ?? 0;
+                for (; _?.offsetParent && _?.offsetParent !== _; )
+                  (_ = _.offsetParent), (_ += _.offsetTop);
+                if (_ > _ || _ + _.current < _)
+                  return _.createElement(
                     "tr",
                     null,
                     _.createElement("td", {
@@ -15718,10 +15907,100 @@
                       },
                     }),
                   );
-            })(_),
-          ),
-        );
-      };
+                const _ = _ - _,
+                  _ = _ - _,
+                  [_, _, _, _] = ((_, _, _, _, _, _) => {
+                    if (!_.length) return [0, 0, 0, 0];
+                    let _ = 0,
+                      _ = 0,
+                      _ = 0,
+                      _ = 0,
+                      _ = 0,
+                      _ = _.length - 1;
+                    for (;;) {
+                      const _ = Math.floor((_ + _) / 2);
+                      if (
+                        (_[_] + _(_[_], _, _) <= _ ? (_ = _ + 1) : (_ = _),
+                        _ === _)
+                      ) {
+                        _ = _;
+                        break;
+                      }
+                    }
+                    const _ = _[_];
+                    for (
+                      _ = _(_) ? _.start : _.start + Math.floor((_ - _[_]) / _),
+                        _ = 0,
+                        _ = _.length - 1;
+                      ;
+                    ) {
+                      const _ = Math.floor((_ + _ + 1) / 2);
+                      if ((_[_] >= _ ? (_ = _ - 1) : (_ = _), _ === _)) {
+                        _ = _;
+                        break;
+                      }
+                    }
+                    const _ = _[_];
+                    return (
+                      (_ = _(_) ? _.end : _.start + Math.ceil((_ - _[_]) / _)),
+                      [_, _, _, _]
+                    );
+                  })(_.current, _.current, _, _, _, _),
+                  [_, _] = ((_, _, _, _, _, _, _, _, _) => {
+                    if (!_.length) return [0, 0];
+                    let _ = 0,
+                      _ = 0;
+                    const _ = _[_];
+                    _ = _(_) ? _[_] : _[_] + (_ - _.start) * _;
+                    const _ = _[_];
+                    return (
+                      (_ = _(_) ? _ - _[_] - _ : _ - _[_] - (_ - _.start) * _),
+                      [_, _]
+                    );
+                  })(_.current, _.current, _, _, _, _, _, _, _.current),
+                  _ = _.current.slice(_, _ + 1);
+                return _.length
+                  ? _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(
+                        "tr",
+                        null,
+                        _.createElement("td", {
+                          colSpan: 4,
+                          style: {
+                            height: _,
+                            padding: 0,
+                          },
+                        }),
+                      ),
+                      _.map((_, _) => _(_, _, _, _, _)),
+                      _.createElement(
+                        "tr",
+                        null,
+                        _.createElement("td", {
+                          colSpan: 4,
+                          style: {
+                            height: _,
+                            padding: 0,
+                          },
+                        }),
+                      ),
+                    )
+                  : _.createElement(
+                      "tr",
+                      null,
+                      _.createElement("td", {
+                        colSpan: 4,
+                        style: {
+                          height: `${_.current}px`,
+                        },
+                      }),
+                    );
+              })(_),
+            ),
+          );
+        };
       _.displayName = "Viewer";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -15796,7 +16075,9 @@
               }
               if (((_ = _), _(_, _))) return _;
               var _ = _(_);
-              return void 0 !== _ && _(_, _) ? _ : ((_ = _), (_ = _));
+              return void 0 !== _ && _(_, _)
+                ? ((_ = _), _)
+                : ((_ = _), (_ = _));
             }
             var _,
               _,

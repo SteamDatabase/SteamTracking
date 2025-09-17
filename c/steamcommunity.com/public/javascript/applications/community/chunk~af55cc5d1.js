@@ -357,154 +357,6 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor(_) {
-          (this.m_appidList = new Array()),
-            (this.m_strName = ""),
-            (this.m_strAvatarURLFullSize = ""),
-            (this.m_strTagLineLoc = ""),
-            (this.m_nFollowers = 0),
-            (this.m_strVanity = ""),
-            (this.m_webLink = void 0),
-            (this.m_bIsLoaded = !1),
-            (this.m_bIsHidden = !1),
-            (this.m_clanAccountFlags = 0),
-            (0, _._)(this),
-            (this.m_clanSteamID = _);
-        }
-        Initialize(_) {
-          var _;
-          (this.m_strName = _.name || ""),
-            (this.m_strAvatarURLFullSize =
-              _.avatar_url_full_size ||
-              "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"),
-            (this.m_strTagLineLoc = _.tag_line_localized || ""),
-            (this.m_nFollowers = _.followers || 0),
-            (this.m_strVanity = _.vanity || void 0),
-            (this.m_webLink = _.weblink),
-            (this.m_bIsHidden = _.hidden || !1),
-            (this.m_clanAccountFlags =
-              null !== (_ = _.clan_account_flags) && void 0 !== _ ? _ : 0),
-            _.appids && _.appids.forEach((_) => this.m_appidList.push(_)),
-            (this.m_bIsLoaded = !0);
-        }
-        GetCreatorHomeIdentifier() {
-          return {
-            name: this.m_strName,
-            clan_account_id: this.m_clanSteamID.GetAccountID(),
-            type: "developer",
-            hidden: this.m_bIsHidden,
-          };
-        }
-        BIsPartnerEventEditorEnabled() {
-          return Boolean(8 & this.m_clanAccountFlags);
-        }
-        BHasClanAccountFlagSet(_) {
-          return Boolean(this.m_clanAccountFlags & _);
-        }
-        BIsLoaded() {
-          return this.m_bIsLoaded;
-        }
-        GetClanSteamID() {
-          return this.m_clanSteamID;
-        }
-        GetClanAccountID() {
-          return this.m_clanSteamID.GetAccountID();
-        }
-        GetAppIDList() {
-          return this.m_appidList;
-        }
-        GetName() {
-          return this.m_strName;
-        }
-        GetAvatarURLFullSize() {
-          return this.m_strAvatarURLFullSize;
-        }
-        GetTagLine() {
-          return this.m_strTagLineLoc;
-        }
-        GetNumFollowers() {
-          return this.m_nFollowers;
-        }
-        BIsHidden() {
-          return this.m_bIsHidden;
-        }
-        GetCreatorHomeURL(_) {
-          if (this.m_strVanity) {
-            switch (_) {
-              case "publisher":
-                return (
-                  _._.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
-                );
-              case "franchise":
-                return (
-                  _._.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
-                );
-            }
-            return _._.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
-          }
-          return (
-            _._.STORE_BASE_URL +
-            "curator/" +
-            this.m_clanSteamID.GetAccountID() +
-            "/"
-          );
-        }
-        BHasWebLink() {
-          return void 0 !== this.m_webLink;
-        }
-        GetWebLink() {
-          return this.m_webLink;
-        }
-        GetVanityString() {
-          return this.m_strVanity;
-        }
-        AdjustFollower(_) {
-          this.m_nFollowers += _;
-        }
-        async EnablePartnerEventEditorFlag() {
-          this.BIsPartnerEventEditorEnabled() ||
-            (await this.UpdateGroupFlagsFeature([2, 8], !0));
-        }
-        async UpdateGroupFlagsFeature(_, _) {
-          let _ = _._.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
-            _ = this.m_clanAccountFlags;
-          if (
-            (_.forEach((_) => {
-              _ ? (_ |= _) : (_ &= ~_);
-            }),
-            _ == this.m_clanAccountFlags)
-          )
-            return;
-          let _ = new Array();
-          1 & _ && _.push(1),
-            8 & _ && _.push(8),
-            2 & _ && _.push(2),
-            4 & _ && _.push(4),
-            16 & _ && _.push(16),
-            32 & _ && _.push(32),
-            64 & _ && _.push(64);
-          let _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
-            _.append("clan_account_id", this.GetClanAccountID().toString()),
-            _.append("accountflags", JSON.stringify(_));
-          let _ = await _().post(_, _);
-          _ &&
-            200 == _.status &&
-            1 == _.data.success &&
-            (this.m_clanAccountFlags = _);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_appidList", void 0),
-        (0, _._)([_._], _.prototype, "m_nFollowers", void 0),
-        (0, _._)([_._], _.prototype, "m_clanAccountFlags", void 0);
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -977,7 +829,7 @@
                 fields: {
                   results: {
                     _: 1,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -1244,6 +1096,154 @@
             );
           });
       })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor(_) {
+          (this.m_appidList = new Array()),
+            (this.m_strName = ""),
+            (this.m_strAvatarURLFullSize = ""),
+            (this.m_strTagLineLoc = ""),
+            (this.m_nFollowers = 0),
+            (this.m_strVanity = ""),
+            (this.m_webLink = void 0),
+            (this.m_bIsLoaded = !1),
+            (this.m_bIsHidden = !1),
+            (this.m_clanAccountFlags = 0),
+            (0, _._)(this),
+            (this.m_clanSteamID = _);
+        }
+        Initialize(_) {
+          var _;
+          (this.m_strName = _.name || ""),
+            (this.m_strAvatarURLFullSize =
+              _.avatar_url_full_size ||
+              "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"),
+            (this.m_strTagLineLoc = _.tag_line_localized || ""),
+            (this.m_nFollowers = _.followers || 0),
+            (this.m_strVanity = _.vanity || void 0),
+            (this.m_webLink = _.weblink),
+            (this.m_bIsHidden = _.hidden || !1),
+            (this.m_clanAccountFlags =
+              null !== (_ = _.clan_account_flags) && void 0 !== _ ? _ : 0),
+            _.appids && _.appids.forEach((_) => this.m_appidList.push(_)),
+            (this.m_bIsLoaded = !0);
+        }
+        GetCreatorHomeIdentifier() {
+          return {
+            name: this.m_strName,
+            clan_account_id: this.m_clanSteamID.GetAccountID(),
+            type: "developer",
+            hidden: this.m_bIsHidden,
+          };
+        }
+        BIsPartnerEventEditorEnabled() {
+          return Boolean(8 & this.m_clanAccountFlags);
+        }
+        BHasClanAccountFlagSet(_) {
+          return Boolean(this.m_clanAccountFlags & _);
+        }
+        BIsLoaded() {
+          return this.m_bIsLoaded;
+        }
+        GetClanSteamID() {
+          return this.m_clanSteamID;
+        }
+        GetClanAccountID() {
+          return this.m_clanSteamID.GetAccountID();
+        }
+        GetAppIDList() {
+          return this.m_appidList;
+        }
+        GetName() {
+          return this.m_strName;
+        }
+        GetAvatarURLFullSize() {
+          return this.m_strAvatarURLFullSize;
+        }
+        GetTagLine() {
+          return this.m_strTagLineLoc;
+        }
+        GetNumFollowers() {
+          return this.m_nFollowers;
+        }
+        BIsHidden() {
+          return this.m_bIsHidden;
+        }
+        GetCreatorHomeURL(_) {
+          if (this.m_strVanity) {
+            switch (_) {
+              case "publisher":
+                return (
+                  _._.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
+                );
+              case "franchise":
+                return (
+                  _._.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
+                );
+            }
+            return _._.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
+          }
+          return (
+            _._.STORE_BASE_URL +
+            "curator/" +
+            this.m_clanSteamID.GetAccountID() +
+            "/"
+          );
+        }
+        BHasWebLink() {
+          return void 0 !== this.m_webLink;
+        }
+        GetWebLink() {
+          return this.m_webLink;
+        }
+        GetVanityString() {
+          return this.m_strVanity;
+        }
+        AdjustFollower(_) {
+          this.m_nFollowers += _;
+        }
+        async EnablePartnerEventEditorFlag() {
+          this.BIsPartnerEventEditorEnabled() ||
+            (await this.UpdateGroupFlagsFeature([2, 8], !0));
+        }
+        async UpdateGroupFlagsFeature(_, _) {
+          let _ = _._.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
+            _ = this.m_clanAccountFlags;
+          if (
+            (_.forEach((_) => {
+              _ ? (_ |= _) : (_ &= ~_);
+            }),
+            _ == this.m_clanAccountFlags)
+          )
+            return;
+          let _ = new Array();
+          1 & _ && _.push(1),
+            8 & _ && _.push(8),
+            2 & _ && _.push(2),
+            4 & _ && _.push(4),
+            16 & _ && _.push(16),
+            32 & _ && _.push(32),
+            64 & _ && _.push(64);
+          let _ = new FormData();
+          _.append("sessionid", _._.SESSIONID),
+            _.append("clan_account_id", this.GetClanAccountID().toString()),
+            _.append("accountflags", JSON.stringify(_));
+          let _ = await _().post(_, _);
+          _ &&
+            200 == _.status &&
+            1 == _.data.success &&
+            (this.m_clanAccountFlags = _);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_appidList", void 0),
+        (0, _._)([_._], _.prototype, "m_nFollowers", void 0),
+        (0, _._)([_._], _.prototype, "m_clanAccountFlags", void 0);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),

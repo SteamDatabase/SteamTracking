@@ -681,7 +681,7 @@
         }, [_, _]);
         const _ = (0, _._)(_),
           _ = _ && (!_ || (_.appID != _ && _.snr != _)),
-          _ = (0, _._)(_.ref, _ ? _ : void 0);
+          _ = (0, _._)(_.props.ref, _ ? _ : void 0);
         return _.cloneElement(_, {
           ref: _,
         });

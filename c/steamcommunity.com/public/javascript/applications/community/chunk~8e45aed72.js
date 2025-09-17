@@ -15,147 +15,9 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = new Map([
-          ...Array.from(_._.entries()),
-          ...Array.from(_._.entries()),
-          [
-            "section",
-            {
-              Constructor: function (_) {
-                let _ = (0, _._)(_.args, "id");
-                _ &&
-                  "string" == typeof _ &&
-                  _.length > 0 &&
-                  "#" === _[0] &&
-                  (_ = _.substring(1));
-                const _ = (0, _._)(_.args, "style"),
-                  _ = (0, _._)(
-                    _().Section,
-                    "note" == _ && _().Note,
-                    "important" == _ && _().Important,
-                    "warning" == _ && _().Warning,
-                  );
-                return _.createElement(
-                  "div",
-                  {
-                    _: _ || void 0,
-                    className: _,
-                  },
-                  _.children,
-                );
-              },
-              autocloses: !1,
-            },
-          ],
-          [
-            "img",
-            {
-              Constructor: function (_) {
-                var _, _, _;
-                const { showErrorInfo: _ } = _.context;
-                let _ =
-                  null === (_ = null == _ ? void 0 : _.children) || void 0 === _
-                    ? void 0
-                    : _.toString();
-                (null != _ && null != _ && 0 != _.length) ||
-                  (_ =
-                    null === (_ = null == _ ? void 0 : _.args) || void 0 === _
-                      ? void 0
-                      : _[""]);
-                const _ =
-                    null === (_ = null == _ ? void 0 : _.args) || void 0 === _
-                      ? void 0
-                      : _.alt,
-                  _ = (0, _._)(_, _.language);
-                return null == _
-                  ? null
-                  : "string" == typeof _
-                    ? ((_ = _),
-                      _
-                        ? _.createElement(_._, {
-                            className: _().FAQImage,
-                            src: _,
-                            alt: _,
-                          })
-                        : ((_ = _.replace("http://", "https://")),
-                          _.createElement("img", {
-                            className: _().FAQImage,
-                            src: _,
-                            alt: _,
-                          })))
-                    : _.createElement(_._, {
-                        className: _().FAQImage,
-                        rgSources: _,
-                        alt: _,
-                      });
-              },
-              autocloses: !1,
-            },
-          ],
-          [
-            "exclude_realm",
-            {
-              Constructor: function (_) {
-                const _ = (0, _._)(_.args);
-                return ("global" == _ &&
-                  _._.EREALM == _._.k_ESteamRealmGlobal) ||
-                  ("china" == _ && (0, _._)())
-                  ? null
-                  : _.createElement(_.Fragment, null, _.children);
-              },
-              autocloses: !1,
-            },
-          ],
-        ]),
-        _ = (_) => {
-          const { text: _, bShowErrorInfo: __webpack_require__ } = _,
-            _ = _.useCallback(
-              (_) =>
-                new _._(
-                  new _._(
-                    new _._(new _._(), 0),
-                    _,
-                    [
-                      {
-                        urlRegExp: /youtu.be|youtube.com/i,
-                        fnBBComponent: _._,
-                      },
-                    ],
-                    {},
-                  ),
-                  _,
-                ),
-              [],
-            ),
-            _ = _.useRef(new _._(_, _, _._.LANGUAGE));
-          return _.createElement(
-            "div",
-            {
-              className: _().FAQContainer,
-            },
-            _.current.ParseBBCode(_, {
-              showErrorInfo: __webpack_require__,
-            }),
-          );
-        };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -165,259 +27,10 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        constructor(_, _) {
-          (this.m_mapLocalUpdates = new Map()),
-            (0, _._)(this),
-            (this.m_summary = _),
-            (this.m_mapStoredDrafts = _),
-            (this.m_mapLocalUpdates = new Map());
-          for (let _ = 0; _ < 31; _++) this.m_mapLocalUpdates.set(_, {});
-        }
-        BNeedsSaving(_) {
-          if (void 0 !== _) {
-            const _ = this.m_mapLocalUpdates.get(_);
-            return !!_.strTitle || !!_.strContent;
-          }
-          return Array.from(this.m_mapLocalUpdates.values()).some(
-            (_) => !!_.strTitle || !!_.strContent,
-          );
-        }
-        async SaveDrafts() {
-          var _, _, _, _;
-          (0, _._)(
-            Boolean(
-              null === (_ = this.m_summary) || void 0 === _ ? void 0 : _.faq_id,
-            ),
-            "Attempting to save when we lack a FaqID in the summary object",
-          );
-          let _ = 1,
-            _ = new Array();
-          for (let _ = 0; _ < 31; ++_)
-            if (
-              (this.m_mapLocalUpdates.get(_).strTitle &&
-                this.m_mapLocalUpdates.get(_).strTitle !==
-                  (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-                    ? void 0
-                    : _.title)) ||
-              (this.m_mapLocalUpdates.get(_).strContent &&
-                this.m_mapLocalUpdates.get(_).strContent !==
-                  (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-                    ? void 0
-                    : _.content))
-            ) {
-              const _ = this.GetDraftTitle(_),
-                _ = this.GetDraftContent(_),
-                _ = _.Get().UpdateDraft(
-                  null === (_ = this.m_summary) || void 0 === _
-                    ? void 0
-                    : _.faq_id,
-                  _,
-                  _,
-                  _,
-                );
-              _.then((_) => {
-                1 == _.eResult
-                  ? (0, _._)(() => {
-                      this.m_mapStoredDrafts.has(_) ||
-                        this.m_mapStoredDrafts.set(_, {}),
-                        (this.m_mapStoredDrafts.get(_).title = _),
-                        (this.m_mapStoredDrafts.get(_).content = _),
-                        (this.m_mapStoredDrafts.get(_).timestamp =
-                          _.rtUpdateTime),
-                        (this.m_mapStoredDrafts.get(_).author_account_id =
-                          _._.accountid.toString()),
-                        (this.m_mapLocalUpdates.get(_).strTitle = null),
-                        (this.m_mapLocalUpdates.get(_).strContent = null);
-                      let _ = !1;
-                      this.m_summary.per_language_info.forEach((_) => {
-                        _ == _.language &&
-                          ((_ = !0),
-                          (_.last_update_timestamp = Math.max(
-                            _.last_update_timestamp,
-                            _.rtUpdateTime,
-                          )));
-                      }),
-                        _ ||
-                          this.m_summary.per_language_info.push({
-                            language: _,
-                            last_update_timestamp: _.rtUpdateTime,
-                          });
-                    })
-                  : 1 == _ &&
-                    (console.error(
-                      "FAQModel.SaveDraft: Response not ok " + _.eResult,
-                      _,
-                    ),
-                    (_ = _.eResult));
-              }).catch((_) => {
-                console.error(
-                  "FAQModel.SaveDrafts: Hit error " + (0, _._)(_).strErrorMsg,
-                ),
-                  1 == _ && (_ = 2);
-              }),
-                _.push(_);
-            }
-          return await Promise.all(_), _;
-        }
-        GetFAQInternalName() {
-          var _;
-          return null === (_ = this.m_summary) || void 0 === _
-            ? void 0
-            : _.internal_name;
-        }
-        GetDraftTitle(_) {
-          var _;
-          return null !== this.m_mapLocalUpdates.get(_).strTitle &&
-            void 0 !== this.m_mapLocalUpdates.get(_).strTitle
-            ? this.m_mapLocalUpdates.get(_).strTitle
-            : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-              ? void 0
-              : _.title;
-        }
-        GetDraftContent(_) {
-          var _;
-          return null !== this.m_mapLocalUpdates.get(_).strContent &&
-            void 0 !== this.m_mapLocalUpdates.get(_).strContent
-            ? this.m_mapLocalUpdates.get(_).strContent
-            : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-              ? void 0
-              : _.content;
-        }
-        GetDraftTitleWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
-          var _, _, _, _, _, _;
-          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
-          return null !==
-            (_ =
-              null !==
-                (_ =
-                  null !==
-                    (_ =
-                      null !== (_ = this.m_mapLocalUpdates.get(_).strTitle) &&
-                      void 0 !== _
-                        ? _
-                        : this.m_mapLocalUpdates.get(_).strTitle) &&
-                  void 0 !== _
-                    ? _
-                    : null === (_ = this.m_mapStoredDrafts.get(_)) ||
-                        void 0 === _
-                      ? void 0
-                      : _.title) && void 0 !== _
-                ? _
-                : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-                  ? void 0
-                  : _.title) && void 0 !== _
-            ? _
-            : "";
-        }
-        GetDraftContentWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
-          var _, _, _, _, _, _;
-          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
-          return null !==
-            (_ =
-              null !==
-                (_ =
-                  null !==
-                    (_ =
-                      null !== (_ = this.m_mapLocalUpdates.get(_).strContent) &&
-                      void 0 !== _
-                        ? _
-                        : this.m_mapLocalUpdates.get(_).strContent) &&
-                  void 0 !== _
-                    ? _
-                    : null === (_ = this.m_mapStoredDrafts.get(_)) ||
-                        void 0 === _
-                      ? void 0
-                      : _.content) && void 0 !== _
-                ? _
-                : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-                  ? void 0
-                  : _.content) && void 0 !== _
-            ? _
-            : "";
-        }
-        GetLastSavedDraftVersion(_) {
-          return this.m_mapStoredDrafts.get(_);
-        }
-        BHasSomeTextForLanguage(_) {
-          return Boolean(this.GetDraftContent(_) || this.GetDraftTitle(_));
-        }
-        SetDraftTitle(_, _) {
-          var _;
-          _ ===
-          (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-            ? void 0
-            : _.title)
-            ? (this.m_mapLocalUpdates.get(_).strTitle = null)
-            : (this.m_mapLocalUpdates.get(_).strTitle = _);
-        }
-        SetDraftContent(_, _) {
-          var _;
-          _ ===
-          (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
-            ? void 0
-            : _.content)
-            ? (this.m_mapLocalUpdates.get(_).strContent = null)
-            : (this.m_mapLocalUpdates.get(_).strContent = _);
-        }
-        GetIncludedRealmList() {
-          const _ = new Array();
-          return (
-            this.m_summary.visible_in_global_realm &&
-              _.push(_._.k_ESteamRealmGlobal),
-            this.m_summary.visible_in_global_realm &&
-              _.push(_._.k_ESteamRealmChina),
-            0 == _.length && _.push(_._.k_ESteamRealmGlobal),
-            (0, _._)(
-              _.length > 0,
-              `FAQ ${this.m_summary.faq_id} is currently configured so that no realms are valid for display.`,
-            ),
-            _
-          );
-        }
-        BHasPublished() {
-          return Boolean(
-            this.m_summary.per_language_info.some(
-              (_) => !!_.last_publish_timestamp,
-            ),
-          );
-        }
-        GetLastTimeLanguageUpdated(_) {
-          var _, _;
-          return null !==
-            (_ =
-              null === (_ = this.GetLastSavedDraftVersion(_)) || void 0 === _
-                ? void 0
-                : _.timestamp) && void 0 !== _
-            ? _
-            : 0;
-        }
-        GetFAQID() {
-          return this.m_summary.faq_id;
-        }
-        GetSummary() {
-          return this.m_summary;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapLocalUpdates", void 0),
-        (0, _._)([_._], _.prototype, "BHasSomeTextForLanguage", null),
-        (0, _._)([_._], _.prototype, "GetLastTimeLanguageUpdated", null);
       var _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -2569,6 +2182,229 @@
           return "CClanFAQS_SearchFAQs_Response_CFAQSearchResult";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.faq_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  faq_id: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  language: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQs_FetchLocalizationFromCrowdIn_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQs_FetchLocalizationFromCrowdIn_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.faq_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  faq_id: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQs_GetCrowdInMetadata_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.crowdin_project_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  crowdin_project_id: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  crowdin_file_id: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQs_GetCrowdInMetadata_Response";
+        }
+      }
       !(function (_) {
         (_.Create = function (_, _) {
           return _.SendMsg("ClanFAQS.Create#1", (0, _._)(_, _), _, {
@@ -2668,8 +2504,461 @@
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
+          }),
+          (_.FetchLocalizationFromCrowdIn = function (_, _) {
+            return _.SendMsg(
+              "ClanFAQS.FetchLocalizationFromCrowdIn#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetCrowdInMetadata = function (_, _) {
+            return _.SendMsg(
+              "ClanFAQS.GetCrowdInMetadata#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
           });
       })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = new Map([
+          ...Array.from(_._.entries()),
+          ...Array.from(_._.entries()),
+          [
+            "section",
+            {
+              Constructor: function (_) {
+                let _ = (0, _._)(_.args, "id");
+                _ &&
+                  "string" == typeof _ &&
+                  _.length > 0 &&
+                  "#" === _[0] &&
+                  (_ = _.substring(1));
+                const _ = (0, _._)(_.args, "style"),
+                  _ = (0, _._)(
+                    _().Section,
+                    "note" == _ && _().Note,
+                    "important" == _ && _().Important,
+                    "warning" == _ && _().Warning,
+                  );
+                return _.createElement(
+                  "div",
+                  {
+                    _: _ || void 0,
+                    className: _,
+                  },
+                  _.children,
+                );
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "img",
+            {
+              Constructor: function (_) {
+                var _, _, _;
+                const { showErrorInfo: _ } = _.context;
+                let _ =
+                  null === (_ = null == _ ? void 0 : _.children) || void 0 === _
+                    ? void 0
+                    : _.toString();
+                (null != _ && null != _ && 0 != _.length) ||
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.args) || void 0 === _
+                      ? void 0
+                      : _[""]);
+                const _ =
+                    null === (_ = null == _ ? void 0 : _.args) || void 0 === _
+                      ? void 0
+                      : _.alt,
+                  _ = (0, _._)(_, _.language);
+                return null == _
+                  ? null
+                  : "string" == typeof _
+                    ? ((_ = _),
+                      _
+                        ? _.createElement(_._, {
+                            className: _().FAQImage,
+                            src: _,
+                            alt: _,
+                          })
+                        : ((_ = _.replace("http://", "https://")),
+                          _.createElement("img", {
+                            className: _().FAQImage,
+                            src: _,
+                            alt: _,
+                          })))
+                    : _.createElement(_._, {
+                        className: _().FAQImage,
+                        rgSources: _,
+                        alt: _,
+                      });
+              },
+              autocloses: !1,
+            },
+          ],
+          [
+            "exclude_realm",
+            {
+              Constructor: function (_) {
+                const _ = (0, _._)(_.args);
+                return ("global" == _ &&
+                  _._.EREALM == _._.k_ESteamRealmGlobal) ||
+                  ("china" == _ && (0, _._)())
+                  ? null
+                  : _.createElement(_.Fragment, null, _.children);
+              },
+              autocloses: !1,
+            },
+          ],
+        ]),
+        _ = (_) => {
+          const { text: _, bShowErrorInfo: __webpack_require__ } = _,
+            _ = _.useCallback(
+              (_) =>
+                new _._(
+                  new _._(
+                    new _._(new _._(), 0),
+                    _,
+                    [
+                      {
+                        urlRegExp: /youtu.be|youtube.com/i,
+                        fnBBComponent: _._,
+                      },
+                    ],
+                    {},
+                  ),
+                  _,
+                ),
+              [],
+            ),
+            _ = _.useRef(new _._(_, _, _._.LANGUAGE));
+          return _.createElement(
+            "div",
+            {
+              className: _().FAQContainer,
+            },
+            _.current.ParseBBCode(_, {
+              showErrorInfo: __webpack_require__,
+            }),
+          );
+        };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor(_, _) {
+          (this.m_summary = void 0),
+            (this.m_mapLocalUpdates = new Map()),
+            (0, _._)(this),
+            (this.m_summary = _),
+            (this.m_mapStoredDrafts = _),
+            (this.m_mapLocalUpdates = new Map());
+          for (let _ = 0; _ < 31; _++) this.m_mapLocalUpdates.set(_, {});
+        }
+        BNeedsSaving(_) {
+          if (void 0 !== _) {
+            const _ = this.m_mapLocalUpdates.get(_);
+            return !!_.strTitle || !!_.strContent;
+          }
+          return Array.from(this.m_mapLocalUpdates.values()).some(
+            (_) => !!_.strTitle || !!_.strContent,
+          );
+        }
+        async SaveDrafts() {
+          var _, _, _, _;
+          (0, _._)(
+            Boolean(
+              null === (_ = this.m_summary) || void 0 === _ ? void 0 : _.faq_id,
+            ),
+            "Attempting to save when we lack a FaqID in the summary object",
+          );
+          let _ = 1,
+            _ = new Array();
+          for (let _ = 0; _ < 31; ++_)
+            if (
+              (this.m_mapLocalUpdates.get(_).strTitle &&
+                this.m_mapLocalUpdates.get(_).strTitle !==
+                  (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+                    ? void 0
+                    : _.title)) ||
+              (this.m_mapLocalUpdates.get(_).strContent &&
+                this.m_mapLocalUpdates.get(_).strContent !==
+                  (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+                    ? void 0
+                    : _.content))
+            ) {
+              const _ = this.GetDraftTitle(_),
+                _ = this.GetDraftContent(_),
+                _ = _.Get().UpdateDraft(
+                  null === (_ = this.m_summary) || void 0 === _
+                    ? void 0
+                    : _.faq_id,
+                  _,
+                  _,
+                  _,
+                );
+              _.then((_) => {
+                1 == _.eResult
+                  ? (0, _._)(() => {
+                      this.m_mapStoredDrafts.has(_) ||
+                        this.m_mapStoredDrafts.set(_, {}),
+                        (this.m_mapStoredDrafts.get(_).title = _),
+                        (this.m_mapStoredDrafts.get(_).content = _),
+                        (this.m_mapStoredDrafts.get(_).timestamp =
+                          _.rtUpdateTime),
+                        (this.m_mapStoredDrafts.get(_).author_account_id =
+                          _._.accountid.toString()),
+                        (this.m_mapLocalUpdates.get(_).strTitle = null),
+                        (this.m_mapLocalUpdates.get(_).strContent = null);
+                      let _ = !1;
+                      this.m_summary.per_language_info.forEach((_) => {
+                        _ == _.language &&
+                          ((_ = !0),
+                          (_.last_update_timestamp = Math.max(
+                            _.last_update_timestamp,
+                            _.rtUpdateTime,
+                          )));
+                      }),
+                        _ ||
+                          this.m_summary.per_language_info.push({
+                            language: _,
+                            last_update_timestamp: _.rtUpdateTime,
+                          });
+                    })
+                  : 1 == _ &&
+                    (console.error(
+                      "FAQModel.SaveDraft: Response not ok " + _.eResult,
+                      _,
+                    ),
+                    (_ = _.eResult));
+              }).catch((_) => {
+                console.error(
+                  "FAQModel.SaveDrafts: Hit error " + (0, _._)(_).strErrorMsg,
+                ),
+                  1 == _ && (_ = 2);
+              }),
+                _.push(_);
+            }
+          return await Promise.all(_), _;
+        }
+        GetFAQInternalName() {
+          var _;
+          return null === (_ = this.m_summary) || void 0 === _
+            ? void 0
+            : _.internal_name;
+        }
+        GetDraftTitle(_) {
+          var _;
+          return null !== this.m_mapLocalUpdates.get(_).strTitle &&
+            void 0 !== this.m_mapLocalUpdates.get(_).strTitle
+            ? this.m_mapLocalUpdates.get(_).strTitle
+            : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+              ? void 0
+              : _.title;
+        }
+        GetDraftContent(_) {
+          var _;
+          return null !== this.m_mapLocalUpdates.get(_).strContent &&
+            void 0 !== this.m_mapLocalUpdates.get(_).strContent
+            ? this.m_mapLocalUpdates.get(_).strContent
+            : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+              ? void 0
+              : _.content;
+        }
+        GetDraftTitleWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
+          var _, _, _, _, _, _;
+          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
+          return null !==
+            (_ =
+              null !==
+                (_ =
+                  null !==
+                    (_ =
+                      null !== (_ = this.m_mapLocalUpdates.get(_).strTitle) &&
+                      void 0 !== _
+                        ? _
+                        : this.m_mapLocalUpdates.get(_).strTitle) &&
+                  void 0 !== _
+                    ? _
+                    : null === (_ = this.m_mapStoredDrafts.get(_)) ||
+                        void 0 === _
+                      ? void 0
+                      : _.title) && void 0 !== _
+                ? _
+                : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+                  ? void 0
+                  : _.title) && void 0 !== _
+            ? _
+            : "";
+        }
+        GetDraftContentWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
+          var _, _, _, _, _, _;
+          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
+          return null !==
+            (_ =
+              null !==
+                (_ =
+                  null !==
+                    (_ =
+                      null !== (_ = this.m_mapLocalUpdates.get(_).strContent) &&
+                      void 0 !== _
+                        ? _
+                        : this.m_mapLocalUpdates.get(_).strContent) &&
+                  void 0 !== _
+                    ? _
+                    : null === (_ = this.m_mapStoredDrafts.get(_)) ||
+                        void 0 === _
+                      ? void 0
+                      : _.content) && void 0 !== _
+                ? _
+                : null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+                  ? void 0
+                  : _.content) && void 0 !== _
+            ? _
+            : "";
+        }
+        GetLastSavedDraftVersion(_) {
+          return this.m_mapStoredDrafts.get(_);
+        }
+        BHasSomeTextForLanguage(_) {
+          return Boolean(this.GetDraftContent(_) || this.GetDraftTitle(_));
+        }
+        SetDraftTitle(_, _) {
+          var _;
+          _ ===
+          (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+            ? void 0
+            : _.title)
+            ? (this.m_mapLocalUpdates.get(_).strTitle = null)
+            : (this.m_mapLocalUpdates.get(_).strTitle = _);
+        }
+        SetDraftContent(_, _) {
+          var _;
+          _ ===
+          (null === (_ = this.m_mapStoredDrafts.get(_)) || void 0 === _
+            ? void 0
+            : _.content)
+            ? (this.m_mapLocalUpdates.get(_).strContent = null)
+            : (this.m_mapLocalUpdates.get(_).strContent = _);
+        }
+        GetIncludedRealmList() {
+          const _ = new Array();
+          return (
+            this.m_summary.visible_in_global_realm &&
+              _.push(_._.k_ESteamRealmGlobal),
+            this.m_summary.visible_in_global_realm &&
+              _.push(_._.k_ESteamRealmChina),
+            0 == _.length && _.push(_._.k_ESteamRealmGlobal),
+            (0, _._)(
+              _.length > 0,
+              `FAQ ${this.m_summary.faq_id} is currently configured so that no realms are valid for display.`,
+            ),
+            _
+          );
+        }
+        BHasPublished() {
+          return Boolean(
+            this.m_summary.per_language_info.some(
+              (_) => !!_.last_publish_timestamp,
+            ),
+          );
+        }
+        GetLastTimeLanguageUpdated(_) {
+          var _, _;
+          return null !==
+            (_ =
+              null === (_ = this.GetLastSavedDraftVersion(_)) || void 0 === _
+                ? void 0
+                : _.timestamp) && void 0 !== _
+            ? _
+            : 0;
+        }
+        GetFAQID() {
+          return this.m_summary.faq_id;
+        }
+        GetSummary() {
+          return this.m_summary;
+        }
+        BLocalizeDraft() {
+          var _;
+          if (0 === this.m_summary.json_data.length) return !1;
+          return (
+            null !== (_ = JSON.parse(this.m_summary.json_data).localizeDraft) &&
+            void 0 !== _ &&
+            _
+          );
+        }
+        BPushToCrowdIn() {
+          var _;
+          if (0 === this.m_summary.json_data.length) return !1;
+          return (
+            null !== (_ = JSON.parse(this.m_summary.json_data).pushToCrowdIn) &&
+            void 0 !== _ &&
+            _
+          );
+        }
+        GetJsonData() {
+          return this.m_summary.json_data;
+        }
+        async UpdateJsonData(_) {
+          const _ = await _.Get().UpdateJsonData(this.GetFAQID(), _);
+          return 1 === _ && (this.m_summary.json_data = JSON.stringify(_)), _;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_summary", void 0),
+        (0, _._)([_._], _.prototype, "m_mapLocalUpdates", void 0),
+        (0, _._)([_._], _.prototype, "BHasSomeTextForLanguage", null),
+        (0, _._)([_._], _.prototype, "GetLastTimeLanguageUpdated", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
@@ -2740,12 +3029,12 @@
           );
         }
         async CreateFAQ(_) {
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_internal_name(_);
           let _,
             _ = 2;
           try {
-            const _ = await _.Create(
+            const _ = await _._.Create(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
@@ -2771,7 +3060,7 @@
           };
         }
         async UpdateDraft(_, _, _, _) {
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID),
             _.Body().set_faq_id(_),
             _.Body().set_language(_),
@@ -2780,7 +3069,7 @@
           let _ = 2,
             _ = 0;
           try {
-            const _ = await _.UpdateDraft(
+            const _ = await _._.UpdateDraft(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
@@ -2802,14 +3091,14 @@
         }
         async UpdateJsonData(_, _) {
           const _ = JSON.stringify(_),
-            _ = _._.Init(_);
+            _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID),
             _.Body().set_faq_id(_),
             _.Body().set_json_data(_);
           let _ = 2;
           try {
             (_ = (
-              await _.UpdateJsonData(
+              await _._.UpdateJsonData(
                 this.m_steamInterface.GetServiceTransport(),
                 _,
               )
@@ -2827,13 +3116,13 @@
           return _;
         }
         async GetFAQVersion(_, _, _) {
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID),
             _.Body().set_faq_id(_),
             _.Body().set_version(_),
             _.Body().set_language(_);
           try {
-            const _ = await _.GetFAQVersion(
+            const _ = await _._.GetFAQVersion(
                 this.m_steamInterface.GetServiceTransport(),
                 _,
               ),
@@ -2850,12 +3139,12 @@
           return null;
         }
         async DeleteFAQ(_) {
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_faq_id(_);
           let _ = 2;
           try {
             (_ = (
-              await _.Delete(this.m_steamInterface.GetServiceTransport(), _)
+              await _._.Delete(this.m_steamInterface.GetServiceTransport(), _)
             ).GetEResult()),
               1 != _
                 ? console.error("FAQStore.DeleteFAQ request failed:", _)
@@ -2897,11 +3186,11 @@
         }
         async LoadFAQDraftContent(_) {
           if (this.m_mapFAQDrafts.has(_)) return this.m_mapFAQDrafts.get(_);
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_faq_id(_);
           let _ = 2;
           try {
-            const _ = await _.GetAllDrafts(
+            const _ = await _._.GetAllDrafts(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
@@ -2935,7 +3224,7 @@
           return null;
         }
         async UpdateVisibility(_, _, _) {
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_steamid(_._.CLANSTEAMID),
             _.Body().set_faq_id(_),
             _.Body().set_visible_in_global_realm(_),
@@ -2944,7 +3233,7 @@
           try {
             if (
               ((_ = (
-                await _.SetVisibility(
+                await _._.SetVisibility(
                   this.m_steamInterface.GetServiceTransport(),
                   _,
                 )
@@ -2968,13 +3257,13 @@
         }
         async PublishDraftByLanguage(_, _) {
           if (!_ || 0 == _.length) return 1;
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           __webpack_require__.Body().set_steamid(_._.CLANSTEAMID),
             __webpack_require__.Body().set_faq_id(_),
             _.forEach((_) => __webpack_require__.Body().add_language(_));
           let _ = 2;
           try {
-            const _ = await _.PublishDraft(
+            const _ = await _._.PublishDraft(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
@@ -3013,14 +3302,14 @@
           return _;
         }
         async UpdateInternalName(_, _) {
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           __webpack_require__.Body().set_steamid(_._.CLANSTEAMID),
             __webpack_require__.Body().set_faq_id(_),
             __webpack_require__.Body().set_internal_name(_);
           let _ = 2;
           try {
             (_ = (
-              await _.UpdateInternalName(
+              await _._.UpdateInternalName(
                 this.m_steamInterface.GetServiceTransport(),
                 _,
               )

@@ -47,6 +47,7 @@
     "Cart_ContinueShopping": "Continue Shopping",
     "Cart_ComingSoon": "Available %1$s",
     "Cart_ViewMyCart": "View My Cart (%1$s)",
+    "Cart_ItemCount": "%1$s items",
     "Cart_RequestPurchase": "Request purchase",
     "Cart_RequestPurchaseExplanation": "The adults in your Steam Family will be notified of your purchase request",
     "Cart_RequestPurchaseNonGiftableItems": "Cannot request purchase because not all items in the cart are giftable",

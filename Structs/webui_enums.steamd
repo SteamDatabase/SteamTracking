@@ -312,6 +312,13 @@ enum EConnectivityTestSimulation
 	k_EConnectivityTestSimulation_Fail = 4;
 }
 
+enum EContentModerationAction
+{
+	k_EContentModerationAction_None = 1;
+	k_EContentModerationAction_LockThread = 2;
+	k_EContentModerationAction_UnlockThread = 3;
+}
+
 enum EControllerBindingType
 {
 	k_EControllerBindingType_None = 0;

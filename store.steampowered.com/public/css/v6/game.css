@@ -6443,13 +6443,11 @@ body.v6 .page_content.notes {
     margin-bottom: 0px;
     z-index: 100;
     transform: scale(1.00);
-    /*box-shadow: 0 0 10px #000;*/
-    filter: saturate(0.85);
-    transition: transform .21s ease-in-out, filter .21s ease-in-out;
+	box-shadow: 0 0 10px rgba(255,255,255,0);
+    transition: box-shadow .21s ease-in-out;
 }
 .saleEventBannerStyle:hover {
-    filter: saturate(1.0);
-    transform: scale(1.03);
+	box-shadow: 0 0 10px rgba(255,255,255,1);
 }
 .saleEventBannerMobile {
     display:none;
@@ -6465,6 +6463,21 @@ body.v6 .page_content.notes {
 .saleEventBannerLink {
     display: block;
     margin-bottom: 16px;
+	background: rgba(0,0,0,0.4);
+	padding: 12px;
+}
+
+.saleEventBannerLink .event_context {
+	background: #aeb8c2;
+	border-radius: 2px;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+	color: black;
+	display: block;
+	width: fit-content;
+	position: relative;
+	z-index: 101;
+	padding: 2px 6px;
+	margin: -9px auto -9px auto;
 }
 
 @media screen and ( max-width: 940px ) {

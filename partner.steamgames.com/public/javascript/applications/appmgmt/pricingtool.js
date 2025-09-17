@@ -455,8 +455,8 @@
         k = r(84811),
         S = r(32754),
         j = r(33299),
-        y = r(74267),
-        I = r(61051),
+        I = r(74267),
+        y = r(61051),
         T = r(12155),
         O = r(18715),
         B = r.n(O),
@@ -487,7 +487,7 @@
               c.$n,
               {
                 onClick: (e) =>
-                  (0, p.pg)(i.createElement(q, null), (0, _.uX)(e)),
+                  (0, p.pg)(i.createElement(X, null), (0, _.uX)(e)),
                 disabled: 0 == r,
                 className: (0, w.A)(B().Button, B().SaveButton),
               },
@@ -567,8 +567,8 @@
             o,
           ),
           E
-            ? i.createElement(I.T6, { packageID: r, strPriceKey: n })
-            : i.createElement(I.Gy, {
+            ? i.createElement(y.T6, { packageID: r, strPriceKey: n })
+            : i.createElement(y.Gy, {
                 nPriceInCents: a,
                 nSavedPriceInCents: s,
               }),
@@ -598,7 +598,7 @@
           .filter((e) => e.nPriceInCents > e.nOldPriceInCents)
           .map((e) => e.packageID);
       }
-      function q(e) {
+      function X(e) {
         const { closeModal: t, strContinueUrl: r } = e,
           n = (0, g.Ci)(),
           a = (0, g.NC)(),
@@ -695,7 +695,7 @@
                 window,
               ));
           };
-        let y = i.createElement(b.uU, {
+        let I = i.createElement(b.uU, {
           href: "https://partner.steamgames.com/doc/store/pricing",
         });
         return i.createElement(
@@ -725,7 +725,7 @@
                   "div",
                   { className: B().PricePreviewWarning },
                   " ",
-                  (0, E.oW)("#PricingDashboard_PreviewWarning", y),
+                  (0, E.oW)("#PricingDashboard_PreviewWarning", I),
                   " ",
                 ),
               f &&
@@ -737,7 +737,7 @@
                   " ",
                 ),
               i.createElement(K, { rgLocalPriceOverrides: n }),
-              i.createElement(X, { priceIncrease: w, nextDiscount: l.days }),
+              i.createElement(q, { priceIncrease: w, nextDiscount: l.days }),
               i.createElement(Q, {
                 value: s,
                 onChange: o,
@@ -770,7 +770,7 @@
           ),
         );
       }
-      function X(e) {
+      function q(e) {
         let t,
           { priceIncrease: r, nextDiscount: n } = e;
         return r
@@ -1106,7 +1106,7 @@
             ),
           ),
           a > 0 &&
-            i.createElement(y.O, {
+            i.createElement(I.O, {
               hoverKey: r,
               className: f().CurrencyMore,
               renderHover: () => i.createElement(me, { priceKey: r }),
@@ -1118,7 +1118,7 @@
           r = t.original.packageID,
           n = (0, g.XB)(r),
           a = (0, g.d$)(r),
-          s = a && (0, I.mK)(a.rtSubmitted),
+          s = a && (0, y.mK)(a.rtSubmitted),
           [o, l] = (0, ae.Hl)(a?.submitterID),
           u = l ? l.persona_name : a?.submitterID;
         let d = "PackageMore_" + r,
@@ -1195,7 +1195,7 @@
             P,
           ),
           b &&
-            i.createElement(y.O, {
+            i.createElement(I.O, {
               hoverKey: d,
               className: f().PackageMore,
               renderHover: () => i.createElement(ge, { packageID: r }),
@@ -1234,7 +1234,7 @@
               size: e ? 72 : 200,
               enableSorting: !1,
               header: oe,
-              cell: I.sh,
+              cell: y.sh,
             });
           return i;
         }, [t, r, n, a, s, o, l, e]);
@@ -1254,9 +1254,9 @@
         const { packageData: t } = e,
           [r, n] = i.useState(!1),
           [a, s] = (0, ie.QD)("filter_below_min_price", !1),
-          [o, l] = i.useState("released"),
-          u = i.useRef(null);
-        "dev" == D.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = u);
+          o = i.useRef(null),
+          [l, u] = (0, ie.QD)("filter", "released");
+        "dev" == D.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = o);
         const d = new URLSearchParams(window.location.search),
           P = d.has(m.xi) ? decodeURIComponent(d.get(m.xi)) : "",
           h = ce(r),
@@ -1303,30 +1303,30 @@
               }
               return a;
             }, [r, e, n, t]);
-          })(t, o, {
+          })(t, l, {
             bFilterToOnlyBelowMinimumPrice: a,
             strSearchStringFromURL: P,
           }),
           v = (0, m.pV)(),
-          C = () => v(u.current);
+          C = () => v(o.current);
         let N = i.useCallback(
           (e) => {
-            l(e.data);
+            u(e.data);
           },
-          [l],
+          [u],
         );
         const S = (0, g.Zz)(),
-          y = i.useCallback(
+          I = i.useCallback(
             (e, t) =>
               (0, p.pg)(
-                i.createElement(q, { strContinueUrl: t }),
+                i.createElement(X, { strContinueUrl: t }),
                 (0, _.uX)(e),
               ),
             [],
           );
         ("dev" != D.TS.WEB_UNIVERSE && "beta" != D.TS.WEB_UNIVERSE) ||
           console.log("Rendering grid", h);
-        const I = (0, i.useMemo)(
+        const y = (0, i.useMemo)(
             () => b.filter((e) => (0, g.Y5)(e.packageID)).length,
             [b],
           ),
@@ -1365,19 +1365,19 @@
             { className: f().GridHeaderButtons },
             i.createElement(c.ZU, {
               rgOptions: T,
-              selectedOption: o,
+              selectedOption: l,
               strDropDownClassName: f().Test,
               onChange: N,
               contextMenuPositionOptions: { bMatchWidth: !1 },
             }),
-            Boolean(I || a) &&
+            Boolean(y || a) &&
               i.createElement(
                 "div",
                 { className: (0, w.A)(f().OptionCtn, f().PriceLowOption) },
                 i.createElement(c.Yh, {
                   checked: a,
                   onChange: s,
-                  label: (0, E.we)("#PricingDashboard_FilterToLowPrice", I),
+                  label: (0, E.we)("#PricingDashboard_FilterToLowPrice", y),
                 }),
               ),
             i.createElement(
@@ -1403,9 +1403,9 @@
                 null,
                 i.createElement(
                   j.rK,
-                  { fnBLocalChangesExist: S, fnWarnUser: y },
+                  { fnBLocalChangesExist: S, fnWarnUser: I },
                   i.createElement(te.k, {
-                    ref: u,
+                    ref: o,
                     className: ne()(
                       f().PricingGridTable,
                       "noGlobalButtonStyle",
@@ -1721,7 +1721,7 @@
             bAlertDialog: !P,
             strOKButtonText: b,
             onOK: () => {
-              P && (0, p.pg)(i.createElement(q, null), window);
+              P && (0, p.pg)(i.createElement(X, null), window);
             },
             strCancelButtonText: (0, E.we)("#Button_OK"),
             closeModal: t,
@@ -2050,11 +2050,11 @@
           { strClassName: f } = k(o, c),
           N = "USD" == c,
           j = m ?? d,
-          I = u != j;
+          y = u != j;
         return i.createElement(
           "div",
           { ref: E, onKeyDown: a.nm, className: f },
-          I && i.createElement(S, { nPriceInCents: u, nSavedPriceInCents: j }),
+          y && i.createElement(S, { nPriceInCents: u, nSavedPriceInCents: j }),
           P && i.createElement("div", { className: v().PricePrefix }, P),
           i.createElement(
             "div",
@@ -2082,7 +2082,7 @@
                         bEnablePointerEvents: !0,
                         nBodyDistance: 0,
                       },
-                      i.createElement(y, {
+                      i.createElement(I, {
                         key: w,
                         packageID: o,
                         strPriceKey: c,
@@ -2169,7 +2169,7 @@
           k = f || C || D,
           S = !(h || !s || (a && s == a)),
           j = 4 == g?.eState,
-          y = (0, d.A)(
+          I = (0, d.A)(
             v().PriceCell,
             P && v().USD,
             h && v().ChangedLocally,
@@ -2182,12 +2182,12 @@
         return i.useMemo(
           () => ({
             strPriceWarning: w,
-            strClassName: y,
+            strClassName: I,
             bBadPrice: f,
             bShowSevereWarning: C,
             bShowWarningIcon: k,
           }),
-          [w, y, f, C, k],
+          [w, I, f, C, k],
         );
       }
       function S(e) {
@@ -2233,7 +2233,7 @@
           minute: "2-digit",
         });
       }
-      function y(e) {
+      function I(e) {
         const { packageID: t, strPriceKey: r } = e,
           {
             nPriceInCents: a,
@@ -2585,26 +2585,14 @@
               e.forEach((e) => {
                 const n = this.#e.defaultQueryOptions(e),
                   a = t.get(n.queryHash);
-                if (a) r.push({ defaultedQueryOptions: n, observer: a });
-                else {
-                  const e = this.#a.find(
-                    (e) => e.options.queryHash === n.queryHash,
-                  );
-                  r.push({
-                    defaultedQueryOptions: n,
-                    observer: e ?? new i.$(this.#e, n),
-                  });
-                }
+                a
+                  ? r.push({ defaultedQueryOptions: n, observer: a })
+                  : r.push({
+                      defaultedQueryOptions: n,
+                      observer: new i.$(this.#e, n),
+                    });
               }),
-              r.sort(
-                (t, r) =>
-                  e.findIndex(
-                    (e) => e.queryHash === t.defaultedQueryOptions.queryHash,
-                  ) -
-                  e.findIndex(
-                    (e) => e.queryHash === r.defaultedQueryOptions.queryHash,
-                  ),
-              )
+              r
             );
           }
           #l(e, t) {

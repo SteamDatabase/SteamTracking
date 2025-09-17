@@ -23686,6 +23686,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  quantity: {
+                    _: 14,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -30875,6 +30880,11 @@ var CLSTAMP = "steamdb";
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  gaming_device_type: {
+                    _: 83,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -86449,6 +86459,11 @@ var CLSTAMP = "steamdb";
                   },
                   sort_order: {
                     _: 14,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  special_identifier: {
+                    _: 16,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },

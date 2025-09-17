@@ -17,6 +17,9 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ClanImageContainer: "_1TEbObXeFqUF-IRZKx0Qg5",
+        Selected: "_3VVyv-d-F-7paQgn90RTr0",
+        "extra-asset-blink": "_3AFR3dAEjYGOiz7dgTms8Y",
         ClanImageModalContent: "SsgHukHcE1jf7p3W6Ta8g",
         ClanImageModalMode: "_1RAzAQViGO8A_wCFzSUStH",
         Active: "_1qsUls0lc9uJ_RarLA3dcG",
@@ -564,6 +567,7 @@
             focusView: _,
             removeNode: _,
             update: _,
+            selected: _,
           } = _,
           [_, _, _] = (0, _._)(),
           _ = _(__webpack_require__);
@@ -590,6 +594,7 @@
             createCarousel: _ ? _ : void 0,
             src: _(_),
           };
+        let _ = _()(_.ClanImageContainer, _ && _.Selected);
         return _.createElement(
           _.Fragment,
           null,
@@ -607,7 +612,7 @@
           _.createElement(
             _,
             {
-              className: _.ClanImageContainer,
+              className: _,
               toolbar: _.createElement(_, {
                 showModal: _,
                 removeNode: _,

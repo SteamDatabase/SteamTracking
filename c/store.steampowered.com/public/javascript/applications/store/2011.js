@@ -318,9 +318,18 @@
                                 [_.Followers]: !0,
                               }),
                             },
-                            _.createElement("span", null, (0, _._)(_)),
-                            _.createElement("br", null),
-                            (0, _._)("#CreatorHome_JustFollowers"),
+                            _.createElement(
+                              "span",
+                              null,
+                              (0, _._)("#CreatorHome_JustFollowers"),
+                            ),
+                            _.createElement(
+                              "span",
+                              {
+                                className: _.FollowerCount,
+                              },
+                              (0, _._)(_),
+                            ),
                           ),
                         ),
                       ),
@@ -623,10 +632,11 @@
                   appids: _,
                   hide_status_banners: __webpack_require__,
                 }),
-                _.createElement(_._, {
-                  imageType: _,
-                  info: _,
-                }),
+                "none" != _ &&
+                  _.createElement(_._, {
+                    imageType: _,
+                    info: _,
+                  }),
                 _.createElement(_._, {
                   storeItem: _,
                 }),

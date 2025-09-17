@@ -5628,7 +5628,9 @@
               type: "text",
               maxLength: 1,
               key: _,
-              ref: (_) => (_.current[_] = _),
+              ref: (_) => {
+                _.current[_] = _;
+              },
               onChange: _,
               onFocus: _,
               onClick: (_) => _.stopPropagation(),

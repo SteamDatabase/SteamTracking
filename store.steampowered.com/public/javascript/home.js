@@ -1443,11 +1443,40 @@ GHomepage = {
 				rgData, 'home', 4, 8, { games_already_in_library: false, localized: true, only_current_platform: true }
 			);
 		}
-
-
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
+				if ( $RecentlyUpdated.hasClass( 'v2' ) )
+				{
+					const fnFeatureRow = () =>
+					{
+						let $FriendsCtn = $J('<div class="friends_container" />');
+
+						var nAdditionalFriends = 0;
+
+						var $AvatarsCtn = $J('<div class="avatars" />');
+						$FriendsCtn.append($AvatarsCtn);
+
+						for( var i = 0; i < oItem.friends.length; i++ )
+						{
+							if( i > 4)
+							{
+								nAdditionalFriends = oItem.friends.length - i;
+								break;
+							}
+
+							var friend = GStoreItemData.GetAccountData( null, oItem.friends[i] );
+							var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, friend.url).replace(/\%2\$s/g, GetAvatarURL( friend.avatar ) ).replace(/\%3\$s/g, friend.accountid) );
+							$AvatarsCtn.append( $AvatarCap );
+						}
+
+						return $FriendsCtn;
+					}
+
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline', false, false, true, fnFeatureRow );
+				}
+
+
 				var nAppId = oItem.appid;
 				var $CapCtn = GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
 				var $FriendsCtn = $J('<div class="friends_container" />');
@@ -1473,9 +1502,6 @@ GHomepage = {
 				return $CapCtn;
 			},	'friends_trending', 4
 		);
-
-
-
 	},
 
 	RenderRecommendedCreatorApps: function()
@@ -1617,6 +1643,23 @@ GHomepage = {
 				var appid = oItem.appid;
 				var appKeyTags = appTags[appid];
 
+				if ( $DeepDive.hasClass( 'v2' ) )
+				{
+					const fnFeatureRow = () =>
+					{
+						for ( var i = 0; i < appKeyTags.length; i++ )
+						{
+							const tag = appKeyTags[i];
+							strKeyTags += "<div class='deep_dive_tag'>"+tag.name + "</div>";
+							if(i >= 3) break; //only show 4
+						}
+
+						return $J( '<div/>', { 'class': 'deep_dive_key_tags' } ).html( strKeyTags );
+					}
+
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline', false, false, true, fnFeatureRow );
+				}
+
 				//Build the tag block
 				for(var i = 0; i < appKeyTags.length; i++)
 				{
@@ -1627,7 +1670,6 @@ GHomepage = {
 
 				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, null, null, rgOptions, nDepth );
 				$CapCtn.append ( $J ( '<div/>', { 'class': 'deep_dive_key_tags' } ).html ( strKeyTags ) );
-
 				return $CapCtn;
 			},	snrCode, 4
 		);
@@ -1656,7 +1698,9 @@ GHomepage = {
                 localized: true,
                 not_wishlisted: false,
                 explicitly_included_tags: GHomepage.rgIRIncludedTags,
-                explicitly_excluded_tags: GHomepage.rgIRExcludedTags
+                explicitly_excluded_tags: GHomepage.rgIRExcludedTags,
+				has_discount: GHomepage.bIsSeasonalSale,
+				enforce_minimum: GHomepage.bIsSeasonalSale,
             }
         );
 
@@ -1668,7 +1712,11 @@ GHomepage = {
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecommendedBySteamLabs,
             function( oItem, strFeature, rgOptions, nDepth )
             {
-                var nAppId = oItem.appid;
+				if ( $RecommendedBySteamLabs.hasClass( 'v2' ) )
+				{
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline',  false, false, true );
+				}
+				var nAppId = oItem.appid;
                 return GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
             }, 'recommended_by_steam_labs', 4
         );
@@ -1892,6 +1940,11 @@ GHomepage = {
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $TopNewReleasesCarousel,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
+				if ( $TopNewReleasesCarousel.hasClass( 'v2' ) )
+				{
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline', false, false, true );
+				}
+
 				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 			},	'top_new_releases', 4
 		);
@@ -1961,6 +2014,10 @@ GHomepage = {
 
 		var iColor = 0;
 
+		let nCarouselItems = 4;
+		if ( $contentHubCarousel.hasClass( 'v2' ) )
+			nCarouselItems = 5;
+
 		GHomepage.FillPagedCapsuleCarousel( GHomepage.rgContentHubs, $contentHubCarousel,
 			function( item, strFeature, rgOptions, nDepth )
 			{
@@ -1993,7 +2050,7 @@ GHomepage = {
 
 				var $gradient = $J( '<div/>', {
 					"class": "gradient",
-					// "style": "background: linear-gradient(rgba(0,0,0,0), " + rgColors[iColor] + " 100%"
+					//"style": "background: linear-gradient(rgba(0,0,0,0), " + rgColors[iColor] + " 100%"
 				} );
 				$capsule.append( $gradient );
 
@@ -2012,7 +2069,7 @@ GHomepage = {
 				$label.append( item.strLocToken );
 
 				return $capsule;
-			}, 'content_hub_carousel', 4
+			}, 'content_hub_carousel', nCarouselItems
 		);
 	},
 
@@ -2487,7 +2544,7 @@ GHomepage = {
 		return $CapCtn;
 	},
 
-	BuildHomePageCapsule: function( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPreferHeaderImg, bDisableAutosizer )
+	BuildHomePageCapsule: function( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPreferHeaderImg, bDisableAutosizer, fnRenderFeatureRow )
 	{
 		var params = { 'class': 'sale_capsule add_microtrailer' };
 
@@ -2540,6 +2597,14 @@ GHomepage = {
 		$Img.attr( 'alt', rgItemData['name'] );
 
 		$CapCtn.append( $J('<div/>', {'class': 'capsule_image_ctn' } ).append( $J('<div/>', {'class': 'sale_capsule_image_hover'} ), $Img ) );
+
+		if ( fnRenderFeatureRow )
+		{
+			const $FeatureRow = fnRenderFeatureRow();
+			if ( $FeatureRow.length )
+				$CapCtn.append( $J('<div/>', {'class': 'capsule_row_ctn' } ).append( $FeatureRow ) );
+		}
+
 		$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : 'discount_block_inline' );
 
 		var rgAppInfo = GStoreItemData.rgAppData[ item.appid ];

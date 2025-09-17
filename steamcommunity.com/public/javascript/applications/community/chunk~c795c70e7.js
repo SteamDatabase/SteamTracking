@@ -93,13 +93,13 @@
           n
         );
       }
-      function w(e, t) {
+      function b(e, t) {
         let i = e.getAttribute(t);
         return i
           ? ((i = i.toLowerCase()), "true" == i || ("false" != i && null))
           : null;
       }
-      function b(e, t) {
+      function w(e, t) {
         let i = e.getAttribute(t);
         return i ? parseInt(i) : null;
       }
@@ -109,9 +109,9 @@
       }
       function v(e, t, i) {
         let n = {
-          nTimeScale: b(e, "timescale"),
-          nDuration: b(e, "duration"),
-          nStartNumber: b(e, "startNumber"),
+          nTimeScale: w(e, "timescale"),
+          nDuration: w(e, "duration"),
+          nStartNumber: w(e, "startNumber"),
           strMedia: B(e, "media"),
           strInitialization: B(e, "initialization"),
         };
@@ -329,7 +329,7 @@
             strID: B(e, "id"),
             strMimeType: B(e, "mimeType"),
             strCodecs: B(e, "codecs"),
-            nBandwidth: b(e, "bandwidth"),
+            nBandwidth: w(e, "bandwidth"),
             segmentTemplate: null,
           };
           !r.strMimeType && s && (r.strMimeType = s);
@@ -344,9 +344,9 @@
             );
           if (t.bContainsVideo) {
             if (
-              ((r.nWidth = b(e, "width")),
-              (r.nHeight = b(e, "height")),
-              (r.nFrameRate = b(e, "frameRate")),
+              ((r.nWidth = w(e, "width")),
+              (r.nHeight = w(e, "height")),
+              (r.nFrameRate = w(e, "frameRate")),
               (0, g.q_)(
                 `representation: ${r.nWidth}w x ${r.nHeight}h x ${r.nFrameRate} fps`,
               ),
@@ -354,10 +354,10 @@
             )
               return (0, g.q_)("MPD - Representation Video Data Missing"), null;
           } else if (t.bContainsAudio) {
-            r.nAudioSamplingRate = b(e, "audioSamplingRate");
+            r.nAudioSamplingRate = w(e, "audioSamplingRate");
             let t = D(e, "AudioChannelConfiguration");
             if (
-              (t && (r.nAudioChannels = b(t, "value")),
+              (t && (r.nAudioChannels = w(t, "value")),
               r.nAudioChannels || (r.nAudioChannels = 2),
               !(
                 r.strID &&
@@ -382,7 +382,7 @@
                 ),
                 null
               );
-            (r.nWidth = b(e, "width")), (r.nHeight = b(e, "height"));
+            (r.nWidth = w(e, "width")), (r.nHeight = w(e, "height"));
             let t = D(e, "EssentialProperty");
             if (!t)
               return (
@@ -423,7 +423,7 @@
             let i = n[t],
               s = {
                 strID: B(i, "id"),
-                nBandwidth: b(i, "bandwidth"),
+                nBandwidth: w(i, "bandwidth"),
                 strClosedCaptionFile: "",
               },
               r = D(i, "BaseURL"),
@@ -521,7 +521,7 @@
               i = B(t, "description"),
               n = B(t, "lang"),
               s = {
-                bSegmentAlignment: w(t, "segmentAlignment"),
+                bSegmentAlignment: b(t, "segmentAlignment"),
                 bIsTimedText: "text/vtt" == B(t, "mimeType"),
                 strLanguage: B(t, "lang"),
                 bContainsVideo: !1,
@@ -1437,6 +1437,7 @@
             (this.m_nPlayerHeightForAuto = 0),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
+            (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
             (this.m_nTimedText = 0),
             (this.m_schReportPlayerTrigger = new l.LU()),
@@ -1647,14 +1648,14 @@
             (this.m_elVideo.src = this.m_strHLS);
         }
         OnEndedForHLS() {
-          this.m_bUseHLSManifest &&
-            (this.m_watchedIntervals.OnEnded(this.m_elVideo),
-            this.DispatchEvent("valve-ended"));
+          this.m_bUseHLSManifest && this.EndPlayback();
         }
         EndPlayback() {
           this.Pause(),
-            this.m_watchedIntervals.OnEnded(this.m_elVideo),
-            this.DispatchEvent("valve-ended");
+            this.m_bPlaybackEnded ||
+              ((this.m_bPlaybackEnded = !0),
+              this.m_watchedIntervals.OnEnded(this.m_elVideo),
+              this.DispatchEvent("valve-ended"));
         }
         Close() {
           if (
@@ -1691,6 +1692,7 @@
             (this.m_stats = null),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
+            (this.m_bPlaybackEnded = !1),
             (this.m_nLastPlaytimeLoaders = 0),
             this.m_watchedIntervals.Clear();
         }
@@ -2100,13 +2102,15 @@
               .StartTracking(() =>
                 this.m_stats.ExtractFrameInfo(this.m_elVideo),
               )),
-            this.m_watchedIntervals.OnPlay(this.m_elVideo);
+            this.m_watchedIntervals.OnPlay(this.m_elVideo),
+            (this.m_bPlaybackEnded = !1);
         }
         OnVideoSeeking() {
           this.m_watchedIntervals.OnSeeking(this.m_elVideo);
         }
         OnVideoSeeked() {
-          this.m_watchedIntervals.OnSeeked(this.m_elVideo);
+          this.m_watchedIntervals.OnSeeked(this.m_elVideo),
+            (this.m_bPlaybackEnded = !1);
         }
         BIsPlayerBufferedBetween(e, t) {
           return (

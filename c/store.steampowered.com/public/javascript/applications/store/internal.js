@@ -3,6 +3,13 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Root: "_1kIuUssJvopWbHik1IKMG6",
+        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -271,6 +278,7 @@
         Background: "_1i6AhxSEgz1FAUyiEt1Xsk",
         Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
         ZIndex: "_3MdwIbGpGWeiE-O2owd3VF",
+        Display: "_1jz8vOMNXWjuOs8PNx6twM",
       };
     },
     chunkid: (module) => {
@@ -460,6 +468,8 @@
         StarSelector: "_1Df1bheVOTaymFvVr5Db23",
         Title: "_9umPLKYAgKsJMqw7ujTrY",
         TagSelector: "RMzOW5KaqQvzer-NgkySs",
+        CompactSelector: "_3CT9bs_UFM5kEslp4r8VHa",
+        Label: "_1wab7vr5SyV_lnbMlmFlfi",
         AccountIDSelector: "_3B8nn-G10WNv0OPeyn5qr3",
         AppEntry: "_3V92WeqSSAvVfpoO35PvX3",
         Week: "_1czh2W36HftecDpf7txuSp",
@@ -734,10 +744,11 @@
                   appids: _,
                   hide_status_banners: __webpack_require__,
                 }),
-                _.createElement(_._, {
-                  imageType: _,
-                  info: _,
-                }),
+                "none" != _ &&
+                  _.createElement(_._, {
+                    imageType: _,
+                    info: _,
+                  }),
                 _.createElement(_._, {
                   storeItem: _,
                 }),
@@ -4868,6 +4879,12 @@
             className: _.ZIndex,
             cssProperty: "--z-index",
           },
+          {
+            prop: "display",
+            responsive: !0,
+            className: _.Display,
+            cssProperty: "--display",
+          },
         ];
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
@@ -5185,19 +5202,17 @@
           const { children: _ } = _,
             _ = _.Children.only(_),
             _ = (0, _.useContext)(_);
-          if (!_) return null;
-          if (!_)
-            return (
-              console.error(
-                "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
-              ),
-              null
-            );
-          const _ = "object" == typeof _ && "props" in _ ? _.props : void 0;
-          return (0, _.cloneElement)(_, {
-            ref: _.floating.refs.setReference,
-            ..._.getReferenceProps(_),
-          });
+          return _
+            ? _
+              ? (0, _.cloneElement)(_, {
+                  ref: _.floating.refs.setReference,
+                  ..._.getReferenceProps(_.props),
+                })
+              : (console.error(
+                  "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
+                ),
+                null)
+            : null;
         },
         Positioner: (0, _.forwardRef)(function (_, _) {
           const { children: __webpack_require__, render: _ } = _,
@@ -5554,6 +5569,76 @@
         const _ = (0, _.useContext)(_);
         return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          _,
+          {
+            ..._,
+            viewBoxSize: 16,
+          },
+          _.createElement("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      const _ = (0, _.forwardRef)(function (_, _) {
+        const {
+            checked: __webpack_require__,
+            onChange: _,
+            disabled: _,
+            children: _,
+            ..._
+          } = _,
+          _ = "indeterminate" === __webpack_require__,
+          _ = _ ? _ : _,
+          _ = () => _(!!_ || !__webpack_require__);
+        return _.createElement(
+          _,
+          {
+            ref: _,
+            role: "checkbox",
+            "aria-checked": _ ? "mixed" : __webpack_require__,
+            "data-state": _(__webpack_require__),
+            className: _.Root,
+            onClick: _,
+            tabIndex: 0,
+            onKeyDown: (_) => {
+              " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
+            },
+            ..._,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Checkbox,
+            },
+            __webpack_require__ &&
+              _.createElement(_, {
+                className: _.Icon,
+              }),
+          ),
+          _,
+        );
+      });
+      function _(_) {
+        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 16 16",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -5591,8 +5676,9 @@
                   timestamp: _,
                   appsToday: _.appReleasesByDay[_],
                   firstTimestamp: _.todayTimestamp,
-                  maxGames: _,
+                  maxGames: _.compactMode ? 9999 : _,
                   setMaxGames: __webpack_require__,
+                  compactMode: _.compactMode,
                 }),
               ),
             );
@@ -5641,8 +5727,12 @@
                   capsule: {
                     _: _.appid,
                   },
-                  imageType: "library",
+                  imageType: _.compactMode ? "none" : "library",
                   nWidthMultiplier: 2,
+                  bShowName: _.compactMode,
+                  bHidePlatforms: !0,
+                  bHidePrice: !0,
+                  bHideStatusBanners: _.compactMode,
                 }),
               ),
             ),
@@ -5668,6 +5758,7 @@
           [_, _] = _.useState(""),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState([]),
+          [_, _] = _.useState(!1),
           _ = __webpack_require__?.flat() ?? [],
           _ = _.useMemo(
             () =>
@@ -5676,7 +5767,7 @@
                   tagID: Number(_),
                   tagName: _,
                 }))
-                .sort((_, _) => _.indexOf(_.tagID) - _.indexOf(_.tagID)),
+                .sort((_, _) => _?.indexOf(_.tagID) - _?.indexOf(_.tagID)),
             [_, _],
           );
         if (
@@ -5841,6 +5932,26 @@
                   _.createElement(
                     "div",
                     {
+                      className: _.CompactSelector,
+                    },
+                    _.createElement(
+                      _,
+                      {
+                        checked: _,
+                        onChange: _,
+                      },
+                      _.createElement(
+                        "span",
+                        {
+                          className: _.Label,
+                        },
+                        (0, _._)("#PersonalCalendar_CompactMode"),
+                      ),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
                       className: _.AccountIDSelector,
                     },
                     _.createElement(
@@ -5957,6 +6068,7 @@
                       dayTimestamps: _,
                       appReleasesByDay: _,
                       todayTimestamp: _,
+                      compactMode: _,
                     }),
                   ),
                 ),

@@ -1071,6 +1071,7 @@ img {
   width: 16px;
   height: 16px;
   cursor: pointer;
+  z-index: 13;
 }
 .wUyDKp6qikfxWISsHWYI5 {
   margin: 8px;

@@ -1063,6 +1063,11 @@
                     br: u.qM.readBool,
                     bw: u.gp.writeBool,
                   },
+                  cooldown_seconds_remaining: {
+                    n: 5,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
                 },
               }),
             h.sm_m
