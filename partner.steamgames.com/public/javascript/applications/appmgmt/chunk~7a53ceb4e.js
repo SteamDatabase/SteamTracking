@@ -63,24 +63,25 @@
     73744: (e, t, i) => {
       "use strict";
       i.d(t, {
+        Ek: () => w,
         FZ: () => n,
         Fj: () => f,
         Hj: () => o,
         Ho: () => m,
-        N_: () => k,
+        N_: () => v,
         PL: () => l,
-        XY: () => P,
+        XY: () => y,
         Yw: () => s,
         _d: () => a,
         cV: () => h,
         dM: () => g,
         on: () => c,
         qj: () => p,
-        s4: () => b,
+        s4: () => P,
         tW: () => r,
-        vz: () => y,
+        vz: () => k,
         x: () => _,
-        yu: () => w,
+        yu: () => b,
       });
       const s = ["app_header_capsule", "app_main_capsule"],
         n = [
@@ -199,15 +200,19 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: u,
           },
-          product_banner: { width: 1100, height: 160, rgAcceptableTypes: u },
+          product_banner: {
+            width: [1200, 1100],
+            height: [175, 160],
+            rgAcceptableTypes: u,
+          },
           product_mobile_banner: {
             width: 500,
             height: 160,
             rgAcceptableTypes: u,
           },
           product_banner_override: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: u,
           },
           product_mobile_banner_override: {
@@ -334,22 +339,27 @@
           app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: u },
         };
       function w(e, t, i, s) {
-        const n = f[i];
-        if (!n) return !1;
-        if (n.bDisableEnforceDimensions) return s;
-        if (e !== n.width || t !== n.height) return !1;
-        let r = null;
-        if (Array.isArray(n.width)) {
-          if (((r = n.width.findIndex((t) => e === t)), r < 0)) return !1;
-        } else if (e !== n.width) return !1;
-        if (Array.isArray(n.height)) {
-          let e = n.height.findIndex((e) => t === e);
+        let n = null;
+        if (Array.isArray(i)) {
+          if (((n = i.findIndex((t) => e === t)), n < 0)) return !1;
+        } else if (e !== i) return !1;
+        if (Array.isArray(s)) {
+          let e = s.findIndex((e) => t === e);
           if (e < 0) return !1;
-          if (null !== r && e !== r) return !1;
-        } else if (t !== n.height) return !1;
+          if (null !== n && e !== n) return !1;
+        } else if (t !== s) return !1;
         return !0;
       }
-      function b(e, t, i) {
+      function b(e, t, i, s) {
+        const n = f[i];
+        return (
+          !!n &&
+          (n.bDisableEnforceDimensions
+            ? s
+            : e === n.width && t === n.height && w(e, t, n.width, n.height))
+        );
+      }
+      function P(e, t, i) {
         const s = f[i];
         if (!s) return !1;
         if (s.bDisableEnforceDimensions) return !0;
@@ -362,16 +372,16 @@
         } else if (t < s.height) return !1;
         return !0;
       }
-      function P(e) {
+      function y(e) {
         const t = f[e];
         return (
           t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
         );
       }
-      function y(e, t) {
-        return t.filter((t) => k(e, t));
-      }
       function k(e, t) {
+        return t.filter((t) => v(e, t));
+      }
+      function v(e, t) {
         return f[t].rgAcceptableTypes.includes(e);
       }
     },
@@ -461,7 +471,7 @@
               (n = !e.bDisableEnforceDimensions));
           }
           const h = this.width >= (0, r.dM)(i) && this.height >= (0, r.dM)(s),
-            p = n ? this.width === i && this.height === s : h,
+            p = n ? (0, r.Ek)(this.width, this.height, i, s) : h,
             g = t && t != this.fileType,
             d =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
@@ -495,13 +505,14 @@
                         : ((Array.isArray(i) && this.width != (0, r.qj)(i)) ||
                             (Array.isArray(s) &&
                               this.height != (0, r.qj)(s))) &&
+                          ((m = m ?? []),
                           m.push(
                             (0, o.we)(
                               "#ImageUpload_PreferredDimension",
                               (0, r.qj)(i),
                               (0, r.qj)(s),
                             ),
-                          )
+                          ))
                       : (_ = (0, o.we)(
                           "#ImageUpload_TooSmall",
                           (0, r.qj)(i),

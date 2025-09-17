@@ -82,6 +82,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = ["app_header_capsule", "app_main_capsule"],
         _ = [
@@ -229,8 +230,8 @@
             rgAcceptableTypes: _,
           },
           product_banner: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: _,
           },
           product_mobile_banner: {
@@ -239,8 +240,8 @@
             rgAcceptableTypes: _,
           },
           product_banner_override: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: _,
           },
           product_mobile_banner_override: {
@@ -403,20 +404,26 @@
           },
         };
       function _(_, _, _, _) {
-        const _ = _[_];
-        if (!_) return !1;
-        if (_.bDisableEnforceDimensions) return _;
-        if (_ !== _.width || _ !== _.height) return !1;
         let _ = null;
-        if (Array.isArray(_.width)) {
-          if (((_ = _.width.findIndex((_) => _ === _)), _ < 0)) return !1;
-        } else if (_ !== _.width) return !1;
-        if (Array.isArray(_.height)) {
-          let _ = _.height.findIndex((_) => _ === _);
+        if (Array.isArray(_)) {
+          if (((_ = __webpack_require__.findIndex((_) => _ === _)), _ < 0))
+            return !1;
+        } else if (_ !== _) return !1;
+        if (Array.isArray(_)) {
+          let _ = _.findIndex((_) => _ === _);
           if (_ < 0) return !1;
           if (null !== _ && _ !== _) return !1;
-        } else if (_ !== _.height) return !1;
+        } else if (_ !== _) return !1;
         return !0;
+      }
+      function _(_, _, _, _) {
+        const _ = _[_];
+        return (
+          !!_ &&
+          (_.bDisableEnforceDimensions
+            ? _
+            : _ === _.width && _ === _.height && _(_, _, _.width, _.height))
+        );
       }
       function _(_, _, _) {
         const _ = _[_];
@@ -540,7 +547,7 @@
               (_ = !_.bDisableEnforceDimensions));
           }
           const _ = this.width >= (0, _._)(_) && this.height >= (0, _._)(_),
-            _ = _ ? this.width === _ && this.height === _ : _,
+            _ = _ ? (0, _._)(this.width, this.height, _, _) : _,
             _ = _ && _ != this.fileType,
             _ =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
@@ -573,13 +580,14 @@
                           (_ = !0))
                         : ((Array.isArray(_) && this.width != (0, _._)(_)) ||
                             (Array.isArray(_) && this.height != (0, _._)(_))) &&
+                          ((_ = _ ?? []),
                           _.push(
                             (0, _._)(
                               "#ImageUpload_PreferredDimension",
                               (0, _._)(_),
                               (0, _._)(_),
                             ),
-                          )
+                          ))
                       : (_ = (0, _._)(
                           "#ImageUpload_TooSmall",
                           (0, _._)(_),
