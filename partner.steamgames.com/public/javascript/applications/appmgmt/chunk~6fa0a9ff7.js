@@ -310,44 +310,45 @@
             nHeaderHeight: f,
             overscan: p = 6,
             stickyHeader: h,
-            initialSorting: v,
-            initialColumnFilters: w,
-            initialGrouping: b,
-            initialExpanded: C,
-            initialColumnPinning: x,
-            initialColumnVisibility: y,
-            onGroupingChange: H,
-            onVisibleRowsChange: F,
-            renderGroup: k,
-            virtualizeType: V = "element",
+            uniqueField: v,
+            initialSorting: w,
+            initialColumnFilters: b,
+            initialGrouping: C,
+            initialExpanded: x,
+            initialColumnPinning: y,
+            initialColumnVisibility: H,
+            onGroupingChange: F,
+            onVisibleRowsChange: k,
+            renderGroup: V,
+            virtualizeType: D = "element",
           } = e,
-          D = (0, u.useRef)(null),
-          [M, O] = (0, u.useState)({}),
-          [G, N] = (0, u.useState)({}),
-          P = r.map((e) =>
+          M = (0, u.useRef)(null),
+          [O, G] = (0, u.useState)({}),
+          [N, P] = (0, u.useState)({}),
+          L = r.map((e) =>
             "accessorKey" in e
-              ? { ...e, filterFn: M[e.accessorKey] ?? e.filterFn }
+              ? { ...e, filterFn: O[e.accessorKey] ?? e.filterFn }
               : e,
           ),
-          L = P.map((e) => {
-            let t = G[e.id];
+          B = L.map((e) => {
+            let t = N[e.id];
             return (
-              void 0 === t && "accessorKey" in e && (t = G[e.accessorKey]),
+              void 0 === t && "accessorKey" in e && (t = N[e.accessorKey]),
               (t ??= e.size),
               { ...e, size: t }
             );
           }),
-          B = (0, o.N4)({
+          $ = (0, o.N4)({
             data: n,
-            columns: L,
+            columns: B,
             defaultColumn: { minSize: 60, maxSize: 800 },
             initialState: {
-              sorting: v,
-              grouping: b ?? [],
-              expanded: C,
-              columnPinning: x ?? {},
-              columnFilters: w,
-              columnVisibility: y,
+              sorting: w,
+              grouping: C ?? [],
+              expanded: x,
+              columnPinning: y ?? {},
+              columnFilters: b,
+              columnVisibility: H,
             },
             getCoreRowModel: (0, i.HT)(),
             getSortedRowModel: (0, i.h5)(),
@@ -355,63 +356,68 @@
             getGroupedRowModel: (0, i.cU)(),
             columnResizeMode: "onChange",
           }),
-          { rows: _, flatRows: $ } = B.getRowModel(),
-          W = _.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
-          A = B.getState().grouping;
+          { rows: _, flatRows: W } = $.getRowModel(),
+          A = _.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
+          X = $.getState().grouping;
         (0, u.useEffect)(() => {
-          H?.(A);
-        }, [H, A]),
+          F?.(X);
+        }, [F, X]),
           (0, u.useEffect)(() => {
-            F?.(W);
-          }, [F, W.length]);
-        const X = (0, l.Te)({
-            count: W.length,
+            k?.(A);
+          }, [k, A.length]);
+        const U = (0, l.Te)({
+            count: A.length,
             scrollMargin: m,
             getScrollElement: u.useCallback(
-              () => ("element" === V ? j.current : window),
-              [V],
+              () => ("element" === D ? J.current : window),
+              [D],
             ),
             scrollToFn: (e, t, n) =>
-              "window" === V ? (0, a.e8)(e, t, n) : (0, a.Ox)(e, t, n),
+              "window" === D ? (0, a.e8)(e, t, n) : (0, a.Ox)(e, t, n),
             estimateSize: u.useCallback(() => g, [g]),
             overscan: p,
             initialRect: void 0,
             observeElementOffset: E,
-            observeElementRect: (e, t) => ("window" === V ? S(e, t) : z(e, t)),
+            observeElementRect: (e, t) => ("window" === D ? S(e, t) : z(e, t)),
+            getItemKey(e) {
+              const t = A[e];
+              let n = t.id;
+              return v && (n = `${t.original[v]}`), `${t.parentId ?? ""}${n}`;
+            },
           }),
-          U = (0, u.useRef)(0),
-          K = u.useMemo(() => {
-            const e = B.getFlatHeaders(),
+          K = (0, u.useRef)(0),
+          q = u.useMemo(() => {
+            const e = $.getFlatHeaders(),
               t = {};
             for (let n = 0; n < e.length; n++) {
               const r = e[n];
               (t[`--header-${r.id}-size`] = `${r.getSize()}px`),
                 (t[`--col-${r.column.id}-size`] = `${r.column.getSize()}px`);
             }
-            return (U.current += 1), t;
-          }, [B.getState().columnSizingInfo, B.getState().columnSizing, r]);
+            return (K.current += 1), t;
+          }, [$.getState().columnSizingInfo, $.getState().columnSizing, r]);
         u.useEffect(() => {
           (0, u.startTransition)(() => {
-            X.measure();
+            U.measure();
           });
-        }, [X, g]);
-        const Z = X.getVirtualItems(),
-          q = Z[0]?.start ?? 0,
-          Q = X.getTotalSize(),
-          Y = (0, l.Te)({
+        }, [U, g]);
+        const Z = U.getVirtualItems(),
+          Q = Z[0]?.start ?? 0,
+          Y = U.getTotalSize(),
+          j = (0, l.Te)({
             estimateSize: (e) =>
-              W[0]?.getVisibleCells()[e].column.getSize() ?? 0,
-            count: W[0]?.getVisibleCells().length ?? 0,
+              A[0]?.getVisibleCells()[e].column.getSize() ?? 0,
+            count: A[0]?.getVisibleCells().length ?? 0,
             overscan: 6,
             horizontal: !0,
             getScrollElement: u.useCallback(
-              () => ("element" === V ? j.current : window),
-              [V],
+              () => ("element" === D ? J.current : window),
+              [D],
             ),
             scrollToFn: (e, t, n) =>
-              "window" === V ? (0, a.e8)(e, t, n) : (0, a.Ox)(e, t, n),
+              "window" === D ? (0, a.e8)(e, t, n) : (0, a.Ox)(e, t, n),
             rangeExtractor(e) {
-              const t = W[0]?.getVisibleCells() ?? [],
+              const t = A[0]?.getVisibleCells() ?? [],
                 n = new Set((0, a.vp)(e));
               return (
                 t.forEach((e, t) => {
@@ -421,81 +427,81 @@
               );
             },
             observeElementOffset: E,
-            observeElementRect: (e, t) => ("window" === V ? S(e, t) : z(e, t)),
+            observeElementRect: (e, t) => ("window" === D ? S(e, t) : z(e, t)),
           });
         (0, u.useEffect)(() => {
-          Y.measure();
-        }, [U.current]),
+          j.measure();
+        }, [K.current]),
           (0, u.useImperativeHandle)(
             t,
             () => ({
-              getData: () => $.map((e) => e.original),
-              getVisibleRows: () => W,
-              getState: B.getState,
-              getColumns: B.getAllColumns,
-              getColumnDefs: () => P,
-              setColumnFilters: B.setColumnFilters,
-              resetColumnFilters: B.resetColumnFilters,
-              setColumnFilterFnOverride: O,
-              getColumnFilterFnOverride: () => M,
-              getContainerElement: () => j.current,
-              getTableElement: () => D.current,
+              getData: () => W.map((e) => e.original),
+              getVisibleRows: () => A,
+              getState: $.getState,
+              getColumns: $.getAllColumns,
+              getColumnDefs: () => L,
+              setColumnFilters: $.setColumnFilters,
+              resetColumnFilters: $.resetColumnFilters,
+              setColumnFilterFnOverride: G,
+              getColumnFilterFnOverride: () => O,
+              getContainerElement: () => J.current,
+              getTableElement: () => M.current,
               scrollToColumn(e, t) {
-                Y.scrollToIndex(e.getIndex(), t);
+                j.scrollToIndex(e.getIndex(), t);
               },
             }),
             [
-              $,
               W,
-              B.setColumnFilters,
-              B.resetColumnFilters,
-              B.getState,
-              B.getAllColumns,
-              M,
-              P,
-              Y,
+              A,
+              $.setColumnFilters,
+              $.resetColumnFilters,
+              $.getState,
+              $.getAllColumns,
+              O,
+              L,
+              j,
             ],
           );
-        const j = (0, u.useRef)(null),
-          J = h ? (f ?? 0) : 0;
-        let ee = 0;
-        const te = W[0]?.getVisibleCells(),
-          ne = Y.getVirtualItems(),
-          re = ne[ne.length - 1]?.end;
-        for (const e of ne) {
-          const t = te[e.index];
-          t?.column.getIsPinned() && (ee += e.size);
+        const J = (0, u.useRef)(null),
+          ee = h ? (f ?? 0) : 0;
+        let te = 0;
+        const ne = A[0]?.getVisibleCells(),
+          re = j.getVirtualItems(),
+          oe = re[re.length - 1]?.end;
+        for (const e of re) {
+          const t = ne[e.index];
+          t?.column.getIsPinned() && (te += e.size);
         }
         return u.createElement(
           R,
-          { table: B, setColumnSizeOverride: N },
+          { table: $, setColumnSizeOverride: P },
           u.createElement(
             "div",
             {
               className: s,
-              ref: j,
+              ref: J,
               style: {
                 width: c,
                 height: d,
-                overflow: "element" === V ? "auto" : void 0,
+                overflow: "element" === D ? "auto" : void 0,
                 maxWidth: "fit-content",
-                scrollPadding: `${J}px 0 0 ${ee}px`,
+                scrollPadding: `${ee}px 0 0 ${te}px`,
               },
             },
             u.createElement(
               "div",
               {
                 role: "table",
-                ref: D,
+                ref: M,
                 "aria-rowcount": n.length,
                 style: {
-                  minHeight: Q,
-                  width: B.getTotalSize(),
-                  "--virtualPos": `${q}px`,
-                  ...K,
+                  minHeight: Y,
+                  width: $.getTotalSize(),
+                  "--virtualPos": `${Q}px`,
+                  ...q,
                 },
               },
-              B.getHeaderGroups().map((e) =>
+              $.getHeaderGroups().map((e) =>
                 u.createElement(I, {
                   key: e.id,
                   group: e,
@@ -506,15 +512,15 @@
               Z.map((e) =>
                 u.createElement(T, {
                   key: e.key,
-                  row: W[e.index],
+                  row: A[e.index],
                   size: e.size,
-                  rowVirtualizer: Y,
+                  rowVirtualizer: j,
                   index: e.index,
-                  measureRef: X.measureElement,
-                  scrollContainerRef: j,
+                  measureRef: U.measureElement,
+                  scrollContainerRef: J,
                   nItemHeight: g,
-                  renderGroup: k,
-                  rowEnd: re,
+                  renderGroup: V,
+                  rowEnd: oe,
                 }),
               ),
             ),

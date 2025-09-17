@@ -371,6 +371,7 @@
             nHeaderHeight: _,
             overscan: _ = 6,
             stickyHeader: _,
+            uniqueField: _,
             initialSorting: _,
             initialColumnFilters: _,
             initialGrouping: _,
@@ -448,6 +449,11 @@
             initialRect: void 0,
             observeElementOffset: _,
             observeElementRect: (_, _) => ("window" === _ ? _(_, _) : _(_, _)),
+            getItemKey(_) {
+              const _ = _[_];
+              let _ = _._;
+              return _ && (_ = `${_.original[_]}`), `${_.parentId ?? ""}${_}`;
+            },
           }),
           _ = (0, _.useRef)(0),
           _ = _.useMemo(() => {

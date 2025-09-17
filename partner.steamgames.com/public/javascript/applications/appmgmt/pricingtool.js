@@ -1412,6 +1412,7 @@
                     ),
                     columns: h,
                     data: b,
+                    uniqueField: "packageID",
                     stickyHeader: !0,
                     nItemHeight: 43,
                     nHeaderHeight: 63,

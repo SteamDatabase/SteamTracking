@@ -1575,6 +1575,7 @@
                     className: _()(_().PricingGridTable, "noGlobalButtonStyle"),
                     columns: _,
                     data: _,
+                    uniqueField: "packageID",
                     stickyHeader: !0,
                     nItemHeight: 43,
                     nHeaderHeight: 63,
