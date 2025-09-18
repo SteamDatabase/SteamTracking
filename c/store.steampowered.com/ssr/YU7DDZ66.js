@@ -1,38 +1,43 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -55,19 +60,30 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -2772,10 +2788,10 @@ function _(_) {
     src: `${_(_)}creator/${_}?cc=${_.COUNTRY}&l=${_.LANGUAGE}`,
   });
 }
+var _ = _(_()),
+  _ = _(_());
 var _ = "730px";
 var _ = "Kc8PjnUaaz8-";
-var _ = _(_());
-var _ = _(_());
 var _ = _(_());
 function _() {
   return _(`(max-width: ${_})`) || _.IN_MOBILE_WEBVIEW;
@@ -2851,8 +2867,18 @@ function _(_) {
     _ = _(_);
   return (0, _.useMemo)(() => _(_, _), [_, _]);
 }
-function _(_ = !0) {
-  _(window.document?.documentElement, _ ? _ : void 0);
+function _(_, _ = !0) {
+  (0, _.useEffect)(() => {
+    let _ = _.current;
+    if (!_ || !_) return;
+    let _ = _(_, "y");
+    return (
+      _.length || _.push(_.ownerDocument.documentElement),
+      (_ = _.filter((_) => _.scrollHeight > _.getBoundingClientRect().height)),
+      _.forEach((_) => _.classList.add(_)),
+      () => _.forEach((_) => _.classList.remove(_))
+    );
+  }, [_, _]);
 }
 var _ = _(_(), 1),
   _ = {
@@ -3525,12 +3551,14 @@ function _() {
       },
       [_, _, _, _],
     );
+  _.useEffect(() => (_(_), () => _(void 0)), [_, _]);
+  let _ = _.useRef(null);
   return (
-    _.useEffect(() => (_(_), () => _(void 0)), [_, _]),
-    _(_),
+    _(_, _),
     (0, _.jsx)("div", {
       className: _,
       onBlur: _,
+      ref: _,
       children: (0, _.jsx)(_, {
         visible: _,
         className: _,
@@ -3613,7 +3641,7 @@ function _(_) {
       [_, _],
     );
   return (
-    _(_),
+    _(_, _),
     (0, _.jsx)(_, {
       className: _,
       visible: _,

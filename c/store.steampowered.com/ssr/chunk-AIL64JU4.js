@@ -87,22 +87,14 @@ async function _(_, _, _, _, _, _ = {}) {
 var _ = _(_());
 var _ = _(_());
 function _(_, ..._) {
-  let [_, _] = _.useState([]);
+  let [_, _] = _.useState([]),
+    _ = _.useRef(void 0);
   (0, _.useEffect)(() => {
-    _((_) =>
-      _.length > 0 && _.ArrayEquals(_[_.length - 1].args, _)
-        ? _
-        : [
-            ..._,
-            {
-              args: _,
-              query: _(..._),
-            },
-          ],
-    );
-  }, [_]);
+    (!_.current || !_.ArrayEquals(_.current, _)) &&
+      ((_.current = _), _((_) => [..._, _(..._)]));
+  });
   let [_, _] = _({
-    queries: _.map(({ query: _ }) => _),
+    queries: _,
     combine: (_) => {
       for (let _ = _.length - 1; _ >= 0; _--)
         if (!_[_].isLoading) return [_, _[_]];

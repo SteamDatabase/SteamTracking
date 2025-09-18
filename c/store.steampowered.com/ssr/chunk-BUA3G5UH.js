@@ -1899,6 +1899,12 @@ function _(_, _) {
   return _(_) ? _ : null;
 }
 function _(_, _) {
+  let _ = [],
+    _ = _;
+  for (; (_ = _(_, _)); ) _.push(_);
+  return _;
+}
+function _(_, _) {
   if (!("ownerDocument" in _)) return !0;
   let _ = _.ownerDocument.defaultView.getComputedStyle(_),
     _ = _ === "x" ? _.overflowX : _.overflowY;
@@ -4115,6 +4121,7 @@ function _() {
   return _.default.useContext(_);
 }
 export {
+  _,
   _,
   _,
   _,

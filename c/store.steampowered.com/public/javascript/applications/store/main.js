@@ -35022,6 +35022,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       function _(_, _) {
         let _ = _?.parentElement;
@@ -35051,6 +35052,12 @@
         return _(_) ? _ : null;
       }
       function _(_, _) {
+        const _ = [];
+        let _ = _;
+        for (; (_ = _(_, _)); ) __webpack_require__.push(_);
+        return _;
+      }
+      function _(_, _) {
         if (!("ownerDocument" in _)) return !0;
         const _ = _.ownerDocument.defaultView.getComputedStyle(_),
           _ = "x" === _ ? _.overflowX : _.overflowY;
@@ -35068,7 +35075,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -35106,11 +35112,6 @@
               _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
             );
         }, [_, _, _]);
-      }
-      function _(_, _) {
-        _.useLayoutEffect(() => {
-          if (_ && _) return _.classList.add(_), () => _.classList.remove(_);
-        }, [_, _]);
       }
       function _(_, _, _, _) {
         return _(
@@ -72100,6 +72101,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return (
@@ -72179,11 +72181,20 @@
         });
         return `${_._.STORE_BASE_URL}search/?${__webpack_require__.toString()}`;
       }
-      function _(_ = !0) {
-        (0, _._)(
-          window.document?.documentElement,
-          _ ? _.SuppressScrollOnBody : void 0,
-        );
+      function _(_, _ = !0) {
+        (0, _.useEffect)(() => {
+          const _ = _.current;
+          if (!_ || !_) return;
+          let _ = (0, _._)(_, "y");
+          return (
+            _.length || _.push(_.ownerDocument.documentElement),
+            (_ = _.filter(
+              (_) => _.scrollHeight > _.getBoundingClientRect().height,
+            )),
+            _.forEach((_) => _.classList.add(_.SuppressScrollOnBody)),
+            () => _.forEach((_) => _.classList.remove(_.SuppressScrollOnBody))
+          );
+        }, [_, _]);
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(_.IsReady());
@@ -74336,22 +74347,14 @@
             return _.useCallback((_) => _(_, _, _, _, _, _), [_, _, _, _, _]);
           })(_, 5, _),
           _ = (function (_, ..._) {
-            const [_, _] = _.useState([]);
+            const [_, _] = _.useState([]),
+              _ = _.useRef(void 0);
             (0, _.useEffect)(() => {
-              _((_) =>
-                _.length > 0 && _._(_[_.length - 1].args, _)
-                  ? _
-                  : [
-                      ..._,
-                      {
-                        args: _,
-                        query: _(..._),
-                      },
-                    ],
-              );
-            }, [_]);
+              (_.current && _._(_.current, _)) ||
+                ((_.current = _), _((_) => [..._, _(..._)]));
+            });
             const [_, _] = (0, _._)({
-              queries: __webpack_require__.map(({ query: _ }) => _),
+              queries: _,
               combine: (_) => {
                 for (let _ = _.length - 1; _ >= 0; _--)
                   if (!_[_].isLoading) return [_, _[_]];
@@ -75036,14 +75039,16 @@
             },
             [_, _, _, _],
           );
+        _.useEffect(() => (_(_), () => _(void 0)), [_, _]);
+        const _ = _.useRef(null);
         return (
-          _.useEffect(() => (_(_), () => _(void 0)), [_, _]),
-          _(_),
+          _(_, _),
           _.createElement(
             "div",
             {
               className: _.SuggestionsPosition,
               onBlur: _,
+              ref: _,
             },
             _.createElement(
               _,
@@ -75097,8 +75102,7 @@
             }),
           );
         });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             visible: _,
@@ -75136,7 +75140,7 @@
             [_, _],
           );
         return (
-          _(_),
+          _(_, _),
           _.createElement(
             _,
             {
