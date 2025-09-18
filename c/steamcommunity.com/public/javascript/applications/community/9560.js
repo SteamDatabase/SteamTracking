@@ -5122,7 +5122,7 @@
           _ = [
             ...Object.values(_.facets.Type || {}),
             ...Object.values(_.facets.Weapon || {}),
-            ...Object.values(_.facets.ItemSet),
+            ...Object.values(_.facets.ItemSet || {}),
           ].some((_) => _);
         return _.createElement(
           _.Fragment,

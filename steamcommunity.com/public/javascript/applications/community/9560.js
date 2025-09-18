@@ -4058,7 +4058,7 @@
           g = [
             ...Object.values(r.facets.Type || {}),
             ...Object.values(r.facets.Weapon || {}),
-            ...Object.values(r.facets.ItemSet),
+            ...Object.values(r.facets.ItemSet || {}),
           ].some((e) => e);
         return a.createElement(
           a.Fragment,
