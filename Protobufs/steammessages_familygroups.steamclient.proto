@@ -139,6 +139,15 @@ message FamilyGroupPendingInviteForUser {
 	optional .EFamilyGroupRole role = 2 [default = k_EFamilyGroupRole_None];
 	optional fixed64 inviter_steamid = 3;
 	optional bool awaiting_2fa = 4;
+	optional uint64 invite_id = 5;
+}
+
+message FamilyGroupMembership {
+	optional uint64 family_groupid = 1;
+	optional uint32 rtime_joined = 2;
+	optional uint32 rtime_left = 3;
+	optional uint32 role = 4;
+	optional bool participated = 5;
 }
 
 message CFamilyGroups_GetFamilyGroupForUser_Response {
@@ -151,6 +160,7 @@ message CFamilyGroups_GetFamilyGroupForUser_Response {
 	optional uint32 cooldown_seconds_remaining = 7;
 	optional .CFamilyGroups_GetFamilyGroup_Response family_group = 8;
 	optional bool can_undelete_last_joined_family = 9;
+	repeated .FamilyGroupMembership membership_history = 10;
 }
 
 message CFamilyGroups_ModifyFamilyGroupDetails_Request {
@@ -198,6 +208,7 @@ message CFamilyGroups_JoinFamilyGroup_Response {
 	optional .EFamilyGroupsTwoFactorMethod two_factor_method = 2 [default = k_EFamilyGroupsTwoFactorMethodNone];
 	optional bool cooldown_skip_granted = 3;
 	optional bool invite_already_accepted = 4;
+	optional uint32 cooldown_seconds_remaining = 5;
 }
 
 message CFamilyGroups_ConfirmJoinFamilyGroup_Request {
@@ -414,6 +425,14 @@ message CFamilyGroups_ClearCooldownSkip_Request {
 message CFamilyGroups_ClearCooldownSkip_Response {
 }
 
+message CFamilyGroups_RollbackFamilyGroup_Request {
+	optional uint64 family_groupid = 1;
+	optional uint32 rtime32_target = 2;
+}
+
+message CFamilyGroups_RollbackFamilyGroup_Response {
+}
+
 message CFamilyGroupsClient_NotifyRunningApps_Notification {
 	message PlayingMember {
 		optional fixed64 member_steamid = 1;
@@ -463,6 +482,7 @@ service FamilyGroups {
 	rpc ForceAcceptInvite (.CFamilyGroups_ForceAcceptInvite_Request) returns (.CFamilyGroups_ForceAcceptInvite_Response);
 	rpc GetInviteCheckResults (.CFamilyGroups_GetInviteCheckResults_Request) returns (.CFamilyGroups_GetInviteCheckResults_Response);
 	rpc ClearCooldownSkip (.CFamilyGroups_ClearCooldownSkip_Request) returns (.CFamilyGroups_ClearCooldownSkip_Response);
+	rpc RollbackFamilyGroup (.CFamilyGroups_RollbackFamilyGroup_Request) returns (.CFamilyGroups_RollbackFamilyGroup_Response);
 }
 
 service FamilyGroupsClient {

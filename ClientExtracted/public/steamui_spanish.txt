@@ -4219,7 +4219,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_subnav_wishlist"		"Lista de deseados"
 "steam_subnav_stats"		"Estadísticas"
 
-"steam_subnav_library"		"Página de inicio"
+"steam_subnav_library"		"Página principal"
 "steam_subnav_games"		"Juegos"
 "steam_subnav_software"		"Software"
 "steam_subnav_media"		"Multimedia"
@@ -4228,7 +4228,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_subnav_all_collections"	"Colecciones"
 
 
-"steam_subnav_community_home"	"Inicio"
+"steam_subnav_community_home"	"Página principal"
 "steam_subnav_discussions"	"Discusiones"
 "steam_subnav_workshop"		"Workshop"
 "steam_subnav_greenlight"	"Greenlight"
@@ -4325,7 +4325,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_AllowGameLaunch_Info"	"%game% está intentando iniciarse con los parámetros opcionales que se muestran a continuación."
 "Steam_AllowGameLaunch_Info_args"	"\"%arguments%\"\n"
-"Steam_AllowGameLaunch_Info_Prompt" "Si no has solicitado este inicio o no entiendes estos parámetros, selecciona Cancelar."
+"Steam_AllowGameLaunch_Info_Prompt" "Si no solicitaste este inicio o no entiendes estas opciones, selecciona «Cancelar»."
 "Steam_AllowGameLaunch_Title"	"¿Permitir inicio del juego?"
 
 "Steam_Parental_UnlockTitle"			"Modo familiar"
@@ -5036,6 +5036,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "DownloadRegion_reunion"        "Reunión"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucrania - Sebastopol"
+"DownloadRegion_lv_riga"		"Letonia"
 
 "SettingsController_AutosaveName"	"Configuración del mando"
 "ControllerBinding_Offline_Save"	"[Autoguardado sin conexión]"

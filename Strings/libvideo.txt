@@ -1522,6 +1522,7 @@ $ffn
 /data/src/common/job.cpp
 /data/src/common/job.h
 /data/src/common/jobfuture.cpp
+/data/src/common/jobfuture.h
 /data/src/common/jobmgr.cpp
 /data/src/common/keypair.cpp
 /data/src/common/language.cpp
@@ -1712,7 +1713,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-03:55:42
 08bX
 0?0L
 0A/8
@@ -2144,6 +2144,7 @@ $ffn
 18CAVFrameYUVWrapper
 18CAlignedBufferBase
 18CBaseFrameFunction
+18CFutureSharedStateIbE
 18CHTTPClientRequest
 18CHTTPRequestHandle
 18CLocalizationToken
@@ -2163,6 +2164,7 @@ $ffn
 18IDecodedVideoFrame
 18IUDPSocketCallback
 18IWorkThreadFactory
+19:44:28
 19CCuratorPreferences
 19CHTTPClientResponse
 19CMsgIPAddressBucket
@@ -2338,6 +2340,7 @@ $ffn
 4CJob
 4T9\n
 4\fZQ
+4\n/k_EMsgAISBroadcastSubordinateContentDescription
 4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
 4\n/k_EMsgClientChatGetFriendMessageHistoryResponse
 4\n/k_EMsgClientGetNumberOfCurrentPlayersDPResponse
@@ -2462,7 +2465,6 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9HdC
 9IGv
 9IMemAlloc
 9PE,$
@@ -3112,6 +3114,7 @@ AsyncSocketWriteTo
 AsyncWrite
 Attempt to create persistent logs with no end date!
 Attempt to schedule '%s' %lldusec in the past
+Attempted to change replicated CVar when you are not the GM\n
 Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
 AttribCapabilityGroup
@@ -3143,7 +3146,6 @@ Average %.2f fps, %.2f ms per frame\n
 Avg Job
 Away
 Azerbaijani
-A{cU
 A~Se
 B#B)B/BCBSBUB[BaBsB}B
 B*k@5
@@ -3943,6 +3945,8 @@ CMemcachedAccess
 CMemoryPool
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 CMemoryPool::Alloc: ran out of memory
+CMetrics::Aggregate_double
+CMetrics::Aggregate_int
 CMetrics::AsJson
 CMetrics::Increment_double
 CMetrics::Increment_int
@@ -5128,6 +5132,7 @@ ENUM
 ENUMERATED
 ENetFakeLocalSystemState
 ENetQOSLevel
+EOFP
 EOSType
 EParentalFeature
 EPassphrase
@@ -6191,6 +6196,7 @@ Inappropriate
 Incompatible
 IncompatibleCheat
 Incorrect Parameter
+Incorrect number of arguments.  %d arguments required, %d were given.\n
 IncrementAllSends called, there will never be a matching Decrement call
 Independent
 Index must be -1 for non-repeated fields
@@ -8547,7 +8553,7 @@ Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep 12 2025
+Sep 17 2025
 September
 Serbian
 Server
@@ -8817,6 +8823,7 @@ Swap
 SwapUVPlane
 SwapUVRow_C
 Swedish
+Swish
 Switch
 Switch from encoding '%s' to '%s' is not supported
 Switching Protocols
@@ -9177,6 +9184,7 @@ Too Early
 Too Far behind
 Too Many Requests
 Too many accounts access this resource
+Too many arguments. %d arguments at most.
 Too many bad activation code attempts in period
 Too many changes to this account
 Too many changes to this phone number
@@ -12904,7 +12912,6 @@ fstat
 fsync %s failed, errno = %d\n
 ftell
 ftello64
-ftruncate
 ftruncate64
 full
 fullname
@@ -13007,7 +13014,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenb
+ggen
 givenName
 global constructors keyed to 
 global destructors keyed to 
@@ -14255,6 +14262,8 @@ k_EMsgAMNewChallenge
 k_EMsgAMNodwinPayment
 k_EMsgAMNodwinPaymentResponse
 k_EMsgAMNotifyChatOfClanChange
+k_EMsgAMNuveiPayment
+k_EMsgAMNuveiPaymentResponse
 k_EMsgAMP2PIntroducerMessage
 k_EMsgAMPasswordHashUpgrade
 k_EMsgAMPerfectWorldPayment
@@ -14940,6 +14949,7 @@ k_EMsgGCHUpdateSession
 k_EMsgGCHVacVerificationChange
 k_EMsgGCInterAppMessage
 k_EMsgGMDRMSync
+k_EMsgGMDynamicRoutingUpdate
 k_EMsgGMGetModifiedConVars
 k_EMsgGMGetServiceMethodRouting
 k_EMsgGMLoadActivationCodes
@@ -15013,6 +15023,7 @@ k_EMsgMDSToCSFlushChunk
 k_EMsgMDSToCSFlushManifest
 k_EMsgMMSGetLobbyList
 k_EMsgMMSGetLobbyListResponse
+k_EMsgMMSRoutingOverride
 k_EMsgMPASBase
 k_EMsgMPASVacBanReset
 k_EMsgNonStdMsgBase
@@ -17956,8 +17967,6 @@ shake256
 shared info error
 shared resource
 shared resource high pri
-shm_open
-shm_unlink
 shmat
 shmdt
 shmget

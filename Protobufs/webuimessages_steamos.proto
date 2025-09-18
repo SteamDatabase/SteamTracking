@@ -38,6 +38,8 @@ message CSteamOSManagerState {
 	optional bool is_screen_reader_supported = 24;
 	repeated string screen_reader_locales_available = 25;
 	optional string screen_reader_locale_default = 26;
+	optional bool is_system_tracing_available = 27;
+	optional bool is_vrs_available = 28;
 }
 
 message CSteamOSManager_GetState_Request {

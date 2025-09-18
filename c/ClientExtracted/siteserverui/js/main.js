@@ -195,6 +195,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        COMMUNITY_ASSETS_BASE_URL: "",
         VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
@@ -407,7 +408,7 @@
             return _;
         }
       }
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
           "k_EConnectivityTestResult_Unknown"),
@@ -502,25 +503,6 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (_[(_.k_EGamingDeviceType_Console = 256)] =
-              "k_EGamingDeviceType_Console"),
-            (_[(_.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
-            (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (_[(_.k_EGamingDeviceType_Handheld = 512)] =
-              "k_EGamingDeviceType_Handheld"),
-            (_[(_.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -1617,60 +1599,6 @@
           return this.m_viewPacket.byteLength - this.m_iGet;
         }
       }
-      var _;
-      !(function (_) {
-        (_[(_.k_EAccountFlagNormalUser = 0)] = "k_EAccountFlagNormalUser"),
-          (_[(_.k_EAccountFlagPersonaNameSet = 1)] =
-            "k_EAccountFlagPersonaNameSet"),
-          (_[(_.k_EAccountFlagUnbannable = 2)] = "k_EAccountFlagUnbannable"),
-          (_[(_.k_EAccountFlagPasswordSet = 4)] = "k_EAccountFlagPasswordSet"),
-          (_[(_.k_EAccountFlagSupport = 8)] = "k_EAccountFlagSupport"),
-          (_[(_.k_EAccountFlagAdmin = 16)] = "k_EAccountFlagAdmin"),
-          (_[(_.k_EAccountFlagSupervisor = 32)] = "k_EAccountFlagSupervisor"),
-          (_[(_.k_EAccountFlagAppEditor = 64)] = "k_EAccountFlagAppEditor"),
-          (_[(_.k_EAccountFlagHWIDSet = 128)] = "k_EAccountFlagHWIDSet"),
-          (_[(_.k_EAccountFlagVacBeta = 512)] = "k_EAccountFlagVacBeta"),
-          (_[(_.k_EAccountFlagDebug = 1024)] = "k_EAccountFlagDebug"),
-          (_[(_.k_EAccountFlagDisabled = 2048)] = "k_EAccountFlagDisabled"),
-          (_[(_.k_EAccountFlagLimitedUser = 4096)] =
-            "k_EAccountFlagLimitedUser"),
-          (_[(_.k_EAccountFlagLimitedUserForce = 8192)] =
-            "k_EAccountFlagLimitedUserForce"),
-          (_[(_.k_EAccountFlagEmailValidated = 16384)] =
-            "k_EAccountFlagEmailValidated"),
-          (_[(_.k_EAccountFlagValveEmail = 32768)] =
-            "k_EAccountFlagValveEmail"),
-          (_[(_.k_EAccountFlagForcePasswordChange = 131072)] =
-            "k_EAccountFlagForcePasswordChange"),
-          (_[(_.k_EAccountFlagLogonExtraSecurity = 524288)] =
-            "k_EAccountFlagLogonExtraSecurity"),
-          (_[(_.k_EAccountFlagLogonExtraSecurityDisabled = 1048576)] =
-            "k_EAccountFlagLogonExtraSecurityDisabled"),
-          (_[(_.k_EAccountFlagSteam2MigrationComplete = 2097152)] =
-            "k_EAccountFlagSteam2MigrationComplete"),
-          (_[(_.k_EAccountFlagNeedLogs = 4194304)] = "k_EAccountFlagNeedLogs"),
-          (_[(_.k_EAccountFlagLockdown = 8388608)] = "k_EAccountFlagLockdown"),
-          (_[(_.k_EAccountFlagMasterAppEditor = 16777216)] =
-            "k_EAccountFlagMasterAppEditor"),
-          (_[(_.k_EAccountFlagBannedFromWebAPI = 33554432)] =
-            "k_EAccountFlagBannedFromWebAPI"),
-          (_[(_.k_EAccountFlagPartnerMember = 67108864)] =
-            "k_EAccountFlagPartnerMember"),
-          (_[(_.k_EAccountFlagGlobalModerator = 134217728)] =
-            "k_EAccountFlagGlobalModerator"),
-          (_[(_.k_EAccountFlagParentalSettings = 268435456)] =
-            "k_EAccountFlagParentalSettings"),
-          (_[(_.k_EAccountFlagThirdPartySupport = 536870912)] =
-            "k_EAccountFlagThirdPartySupport"),
-          (_[(_.k_EAccountFlagNeedsSSANextSteamLogon = 1073741824)] =
-            "k_EAccountFlagNeedsSSANextSteamLogon");
-      })(_ || (_ = {}));
-      _.k_EAccountFlagAdmin,
-        _.k_EAccountFlagSupervisor,
-        _.k_EAccountFlagSupport,
-        _.k_EAccountFlagAdmin,
-        _.k_EAccountFlagSupervisor;
-      __webpack_require__("chunkid");
       class _ {
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(_) {
@@ -3654,6 +3582,16 @@
           });
         }
       }
+      class _ {
+        SyncStore(_) {
+          return this.Subscribe(_).Unsubscribe;
+        }
+        GetValue() {
+          return this.Value;
+        }
+      }
+      (0, _._)([_], _.prototype, "SyncStore", null),
+        (0, _._)([_], _.prototype, "GetValue", null);
       (0, _._)(
         [_],
         class {
@@ -3715,6 +3653,7 @@
         m_mapFallbackTokens = new Map();
         m_cbkTokensChanged = new _();
         m_rgLocalesToUse;
+        m_bReportIndividualMissingTokens = !0;
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(_) {
           this.sm_ErrorReportingStore = _;
@@ -3740,8 +3679,9 @@
               }
           return _;
         }
-        InitFromObjects(_, _, _, _, _) {
-          _ || this.m_mapTokens.clear();
+        InitFromObjects(_, _, _, _, _, _) {
+          _ && (this.m_bReportIndividualMissingTokens = !1),
+            _ || this.m_mapTokens.clear();
           const _ = {
               ...(_ || {}),
               ..._,
@@ -3814,9 +3754,10 @@
             return;
           let _ = this.m_mapTokens.get(_.substring(1));
           if (void 0 !== _) return _;
-          _ ||
-            !_.sm_ErrorReportingStore ||
-            _ ||
+          !_ &&
+            _.sm_ErrorReportingStore &&
+            !_ &&
+            this.m_bReportIndividualMissingTokens &&
             _.sm_ErrorReportingStore.ReportError(
               new Error(
                 `Unable to find localization token '${_}' for language '${_.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
@@ -5118,13 +5059,17 @@
         componentDidCatch(_, _) {
           const _ = _.sm_ErrorReportingStore;
           _
-            ? __webpack_require__.ReportError(_).then(
-                (_) =>
-                  _ &&
-                  this.setState({
-                    identifierHash: _.identifierHash,
-                  }),
-              )
+            ? __webpack_require__
+                .ReportError(_, {
+                  strComponentStack: _.componentStack || void 0,
+                })
+                .then(
+                  (_) =>
+                    _ &&
+                    this.setState({
+                      identifierHash: _.identifierHash,
+                    }),
+                )
             : console.warn(
                 "No ErrorReportingStore - use ErrorReportingStore().Init() to configure error reporting to server",
               ),
@@ -5384,9 +5329,9 @@
               "a",
               {
                 className: "link blue",
-                href: "https://support.steampowered.com/kb_article.php?ref=8571-GLVN-8711",
+                href: "https://help.steampowered.com/faqs/view/2EA8-4D75-DA21-31EB",
               },
-              "support.steampowered.com",
+              "help.steampowered.com",
             );
             return _.createElement(
               "div",
@@ -6547,7 +6492,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 837), _((_._ = _));
+      return (_ = 8958), _((_._ = _));
       var _;
     });
     _._();

@@ -61,6 +61,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_GameRecordingInstantClip = 58;
 	k_EClientNotificationType_PlaytestInvite = 59;
 	k_EClientNotificationType_TradeReversal = 60;
+	k_EClientNotificationType_HardwareUpdateAvailable = 61;
 }
 
 enum ESystemUpdateNotificationType {
@@ -248,7 +249,8 @@ message CClientNotificationRemoteClientStartStream {
 message CClientNotificationStreamingClientConnection {
 	optional string hostname = 1;
 	optional string machine = 2;
-	optional bool connected = 3;
+	optional uint32 guest_id = 3;
+	optional bool connected = 4;
 }
 
 message CClientNotificationPlaytimeWarning {
@@ -279,4 +281,8 @@ message CClientNotificationGameRecordingInstantClip {
 	optional fixed64 game_id = 1;
 	optional string clip_id = 2;
 	optional float duration_secs = 3;
+}
+
+message CClientNotificationHardwareUpdateAvailable {
+	repeated uint32 etype = 1;
 }

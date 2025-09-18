@@ -5041,6 +5041,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ukraina – Sevastopol"
+"DownloadRegion_lv_riga"		"Latvia"
 
 "SettingsController_AutosaveName"	"Ohjainmääritykset"
 "ControllerBinding_Offline_Save"	"[Offline-tilan automaattitallennus]"

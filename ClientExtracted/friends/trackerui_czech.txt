@@ -170,7 +170,7 @@
 "Friends_InvitationBlocking"		"Blokujete veškerou komunikaci s tímto uživatelem. Pokud s ním chcete komunikovat, musíte jej nejdříve odblokovat na jeho profilu v komunitě služby Steam."
 
 "Friends_DontGiveOutPassword"			"Nikdy nikomu neříkejte své heslo.\n"
-"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478&l=czech/"
+"Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/"
 
 "Friends_ChatFilterBlockWarning"		"Z důvodu Vaší bezpečnosti byl z následující zprávy odstraněn odkaz."
 
@@ -692,7 +692,7 @@
 "Broadcast_FirstTime_PermissionHeader" "Věnujte chvíli nastavení svých předvoleb..."
 "Broadcast_FirstTime_DesktopOnly" "Ve výchozím nastavení lze sledovat pouze Vaši hru. Vaše plocha nebude vysílána."
 "Broadcast_FirstTime_FAQ" "Přečtěte si časté dotazy k přenosům ve službě Steam"
-"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=czech"
+"Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Přenosy ve službě Steam"
 "Broadcast_FirstTime_OK" "OK"
 "Broadcast_FirstTime_Cancel" "Zrušit"
@@ -743,7 +743,7 @@
 "Steam_Settings_Broadcast_StatusHeader" "Stav přenosu:"
 "Steam_Settings_Broadcast_HelpHeader" "Máte potíže?"
 "Steam_Settings_Broadcast_HelpURL_Desc" "Navštivte stránku s častými dotazy"
-"Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497&l=czech"
+"Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Steam_Settings_Broadcast_PermissionsHeader" "Nastavení soukromí:"
 "Steam_Settings_Broadcast_BitrateHeader" "Maximální přenosová rychlost:"
 "Steam_Settings_Broadcast_DimensionsHeader" "Rozlišení videa:"
@@ -761,7 +761,7 @@
 "Steam_Settings_Broadcast_Disabled_Overlay" "Pro vysílání živých přenosů musí být povoleno překrytí služby Steam."
 "Steam_Settings_Broadcast_Disabled_User" "Váš účet nemá dostatečná oprávnění k vysílání živých přenosů."
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Služba Steam nemůže na tomto zařízení zahájit vysílání přenosu.\n\nSlužba Steam je momentálně spuštěna v režimu kompatibility. To může bránit správnému fungování a vysílání přenosů. Pokud máte na tomto zařízení nainstalován systém Windows 7 nebo novější, postupujte podle pokynů na níže uvedené stránce a režim kompatibility vypněte."
-"Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256&l=czech"
+"Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_Settings_Broadcast_WindowsCompatSupportText" "Jak mám režim kompatibility vypnout?"
 "Steam_Settings_Broadcast_RequiresRestart" "* Vyžaduje restartování hry"
 
@@ -771,7 +771,7 @@
 "Broadcast_RecordingError_Title" "Přenos – zvuk není nahráván"
 "Broadcast_RecordingError_General" "Služba Steam má potíže s nahráváním zvuku tohoto přenosu. Pro více informací o tomto problému navštivte stránku uvedenou níže."
 "Broadcast_RecordingError_URL_Text" "Podpora služby Steam – zvuk není nahráván"
-"Broadcast_RecordingError_URL_General" "https://support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541&l=czech"
+"Broadcast_RecordingError_URL_General" "https://support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541"
 "Broadcast_RecordingError_Razer" "Služba Steam má potíže s nahráváním zvuku tohoto přenosu. Pro více informací o tomto problému se podívejte do sekce „Razer Audio Hardware“ na stránce uvedené níže."
 "Broadcast_RecordingError_URL_Razer" "https://support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541#2"
 

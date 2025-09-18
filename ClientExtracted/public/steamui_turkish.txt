@@ -5044,6 +5044,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuveyt"
 "DownloadRegion_ua_sevastopol"  "Ukrayna - Sivastopol"
+"DownloadRegion_lv_riga"		"Letonya"
 
 "SettingsController_AutosaveName"	"Kontrolcü Yapılandırması"
 "ControllerBinding_Offline_Save"	"[Çevrimdışı Otomatik Kayıt]"

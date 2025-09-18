@@ -2,6 +2,7 @@ ${AUDIO_URL}international2020/${}.wav
 ${AUDIO_URL}international2022/${}.wav
 ${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}/${}
+${BASE_URL_SHARED_CDN}community_assets/
 ${BASE_URL_SHARED_CDN}social_sharing/
 ${BASE_URL_SHARED_CDN}store_item_assets/
 ${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
@@ -2553,9 +2554,12 @@ https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
 https://help.steampowered.com/en/wizard/HelpWithPublishingEvent
 https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
+https://help.steampowered.com/faqs/view/17DA-EC4C-7D5B-8266
 https://help.steampowered.com/faqs/view/1E45-57ED-9153-7EF4
+https://help.steampowered.com/faqs/view/2EA8-4D75-DA21-31EB
 https://help.steampowered.com/faqs/view/3462-CD4C-36BD-5767
 https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8
+https://help.steampowered.com/faqs/view/5E0D-522A-4E62-B6EF
 https://help.steampowered.com/faqs/view/6639-EB3C-EC79-FF60
 https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B
 https://help.steampowered.com/login${}
@@ -3203,14 +3207,7 @@ https://store.steampowered.com/widget/${nAppId}/
 https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
-https://support.steampowered.com/kb_article.php?ref=1055-ISJM-8568
-https://support.steampowered.com/kb_article.php?ref=1266-OAFV-8478
-https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114
-https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900
-https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
-https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497
-https://support.steampowered.com/kb_article.php?ref=8571-GLVN-8711
 https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202

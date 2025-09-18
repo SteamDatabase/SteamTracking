@@ -1,4 +1,4 @@
-var CLSTAMP = "10062881";
+var CLSTAMP = "10078274";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -170,7 +170,7 @@ var CLSTAMP = "10062881";
           $6: () => P,
           DO: () => T,
           H2: () => $,
-          ID: () => I,
+          ID: () => R,
           IV: () => _,
           Iy: () => m,
           JP: () => g,
@@ -203,7 +203,7 @@ var CLSTAMP = "10062881";
           qx: () => u,
           rm: () => d,
           s5: () => w,
-          sf: () => R,
+          sf: () => I,
           tg: () => H,
           w1: () => a,
           wK: () => f,
@@ -375,7 +375,7 @@ var CLSTAMP = "10062881";
               return t;
           }
         }
-        function R(e, t = 0) {
+        function I(e, t = 0) {
           switch (e) {
             case "english":
               return 0;
@@ -444,7 +444,7 @@ var CLSTAMP = "10062881";
               return t;
           }
         }
-        function I(e) {
+        function R(e) {
           switch (e) {
             default:
               break;
@@ -1017,24 +1017,25 @@ var CLSTAMP = "10062881";
       },
       3524: (e, t, n) => {
         "use strict";
-        n.d(t, { b5: () => c, bJ: () => m, nN: () => u });
+        n.d(t, { b5: () => l, bJ: () => d, nN: () => m });
         var r = n(42898),
-          i = n(28864),
-          s = n(63696),
-          o = n(35560);
-        const a = s.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
-        function c(e) {
+          i = n(90606),
+          s = n(28864),
+          o = n(63696),
+          a = n(35560);
+        const c = o.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
+        function l(e) {
           const {
               ownerWindow: t,
               refFocusNavContext: n,
-              children: c,
-              suppressGamepadInput: u = !1,
+              children: i,
+              suppressGamepadInput: l = !1,
             } = e,
-            m = (0, o.Vu)(),
-            d = s.useContext(a),
-            [h] = s.useState(() => d.focusNavWindow || m.CreateContext(t, u)),
+            m = (0, a.Vu)(),
+            d = o.useContext(c),
+            [h] = o.useState(() => d.focusNavWindow || m.CreateContext(t, l)),
             p = (0, r.gc)(m.NavigationSourceSupportsFocus) ?? !1;
-          s.useEffect(
+          o.useEffect(
             () => (
               h.OnMount(t),
               t.document.hasFocus() && h.OnActivate(t),
@@ -1044,36 +1045,36 @@ var CLSTAMP = "10062881";
             ),
             [h, t],
           ),
-            (0, i.D5)(n, h);
-          const g = s.useMemo(
+            (0, s.D5)(n, h);
+          const g = o.useMemo(
             () => ({ focusNavWindow: h, bSupportsFocus: p }),
             [h, p],
           );
-          return s.createElement(
-            a.Provider,
+          return o.createElement(
+            c.Provider,
             { value: g },
-            s.createElement(l, { ownerWindow: t, context: h }),
-            c,
+            o.createElement(u, { ownerWindow: t, context: h }),
+            i,
           );
         }
-        function l(e) {
+        function u(e) {
           const { ownerWindow: t, context: n } = e,
-            i = s.useMemo(() => () => n.OnActivate(t), [n, t]),
-            o = s.useMemo(() => () => n.OnDeactivate(t), [n, t]);
+            r = o.useMemo(() => () => n.OnActivate(t), [n, t]),
+            s = o.useMemo(() => () => n.OnDeactivate(t), [n, t]);
           return (
-            (0, r.l6)(t, "touchstart", i, { capture: !0 }),
-            (0, r.l6)(t, "mousedown", i, { capture: !0 }),
-            (0, r.l6)(t, "focus", i),
-            (0, r.l6)(t.document, "focusin", i),
-            (0, r.l6)(t, "blur", o),
+            (0, i.l6)(t, "touchstart", r, { capture: !0 }),
+            (0, i.l6)(t, "mousedown", r, { capture: !0 }),
+            (0, i.l6)(t, "focus", r),
+            (0, i.l6)(t.document, "focusin", r),
+            (0, i.l6)(t, "blur", s),
             null
           );
         }
-        function u() {
-          return s.useContext(a)?.focusNavWindow;
+        function m() {
+          return o.useContext(c)?.focusNavWindow;
         }
-        function m(e = !0) {
-          return s.useContext(a)?.bSupportsFocus ?? e;
+        function d(e = !0) {
+          return o.useContext(c)?.bSupportsFocus ?? e;
         }
       },
       28869: (e, t, n) => {
@@ -1188,53 +1189,51 @@ var CLSTAMP = "10062881";
               disableNavSounds: r,
               fnCanTakeFocus: i,
               childFocusDisabled: s,
-              retainFocus: o,
+              focusableIfEmpty: o,
               onFocusWithin: a,
               navKey: c,
               noFocusRing: l,
               focusable: u,
-              focusableIfNoChildren: m,
-              navRef: d,
-              actionDescriptionMap: h,
-              onMoveUp: p,
-              onMoveRight: g,
-              onMoveDown: f,
-              onMoveLeft: _,
-              navEntryPreferPosition: w,
-              scrollIntoViewWhenChildFocused: b,
-              fnScrollIntoViewHandler: v,
-              scrollIntoViewType: M,
-              resetNavOnEntry: S,
-              ...y
+              navRef: m,
+              actionDescriptionMap: d,
+              onMoveUp: h,
+              onMoveRight: p,
+              onMoveDown: g,
+              onMoveLeft: f,
+              navEntryPreferPosition: _,
+              scrollIntoViewWhenChildFocused: w,
+              fnScrollIntoViewHandler: b,
+              scrollIntoViewType: v,
+              resetNavOnEntry: M,
+              ...S
             } = e,
-            { gamepadEvents: E, actionDescriptions: B, props: x } = C(y);
+            { gamepadEvents: y, actionDescriptions: E, props: B } = C(S);
           return {
-            elemProps: x,
+            elemProps: B,
             navOptions: {
               autoFocus: t,
               preferredFocus: n,
               disableNavSounds: r,
               fnCanTakeFocus: i,
               childFocusDisabled: s,
-              retainFocus: o,
+              focusableIfEmpty: o,
               onFocusWithin: a,
               navKey: c,
               noFocusRing: l,
               focusable: u,
-              focusableIfNoChildren: m,
-              navRef: d,
-              onMoveUp: p,
-              onMoveRight: g,
-              onMoveDown: f,
-              onMoveLeft: _,
-              navEntryPreferPosition: w,
-              scrollIntoViewWhenChildFocused: b,
-              fnScrollIntoViewHandler: v,
-              scrollIntoViewType: M,
-              resetNavOnEntry: S,
-              actionDescriptionMap: { ...h, ...B },
+              navRef: m,
+              onMoveUp: h,
+              onMoveRight: p,
+              onMoveDown: g,
+              onMoveLeft: f,
+              navEntryPreferPosition: _,
+              scrollIntoViewWhenChildFocused: w,
+              fnScrollIntoViewHandler: b,
+              scrollIntoViewType: v,
+              resetNavOnEntry: M,
+              actionDescriptionMap: { ...d, ...E },
             },
-            gamepadEvents: E,
+            gamepadEvents: y,
           };
         }
         function M(e) {
@@ -1250,25 +1249,22 @@ var CLSTAMP = "10062881";
                 children: h,
                 ...p
               } = t,
-              g = (0, r.CH)(),
-              _ = (0, u.bJ)(),
-              w = m.BHasFocus() && _,
-              b = m.BFocusWithin() && _,
+              g = (0, u.bJ)(),
+              _ = (0, r.gc)(m.SubscribableHasFocus) && g,
+              w = (0, r.gc)(m.SubscribableFocusWithin) && g,
               {
-                bActiveTree: C,
-                bActiveTreeWithinContext: v,
-                bDisableFocusClasses: M,
-              } = (0, f.qR)();
-            (0, r.hL)(m.FocusCallbackList, g),
-              (0, r.hL)(m.FocusWithinCallbackList, g);
-            const S = C && !M,
-              y = !v && (void 0 !== d || s);
+                bActiveTree: b,
+                bActiveTreeWithinContext: C,
+                bDisableFocusClasses: v,
+              } = (0, f.qR)(),
+              M = b && !v,
+              S = !C && (void 0 !== d || s);
             return a.createElement(
               e,
               {
                 ...p,
-                className: o()(c, w && S && n, b && S && i),
-                tabIndex: y ? -1 : d,
+                className: o()(c, _ && M && n, w && M && i),
+                tabIndex: S ? -1 : d,
                 ref: l,
               },
               h,
@@ -1499,7 +1495,7 @@ var CLSTAMP = "10062881";
               (b.onOKButton = b.onOKButton || i)),
             b.onOKButton &&
               void 0 === w.focusable &&
-              void 0 === w.focusableIfNoChildren &&
+              void 0 === w.focusableIfEmpty &&
               (w.focusable = !0),
             h && (b.onCancelButton = b.onCancelButton || h);
           const { ref: M, node: S } = (0, a.qp)({ ...C, ...w }),
@@ -1507,7 +1503,7 @@ var CLSTAMP = "10062881";
           (_.className = s()(_.className, "Panel", y && "Focusable")),
             (0, m.Ui)(b, M);
           const E = (0, r.Ue)(M, t);
-          (!w.focusable && !w.focusableIfNoChildren) ||
+          (!w.focusable && !w.focusableIfEmpty) ||
             (S && S.Tree.BUseVirtualFocus()) ||
             (_.tabIndex = _.tabIndex || 0),
             w.focusable && (i || b.onOKButton) && (_.role ??= "button");
@@ -1530,38 +1526,41 @@ var CLSTAMP = "10062881";
       20893: (e, t, n) => {
         "use strict";
         n.d(t, {
-          AE: () => _,
+          AE: () => w,
           D$: () => r,
-          G7: () => w,
-          IA: () => b,
-          Ro: () => d,
-          SZ: () => c,
-          VX: () => l,
-          W1: () => f,
-          Y3: () => v,
-          cR: () => h,
-          f: () => m,
-          hr: () => u,
-          nt: () => a,
-          tV: () => g,
-          u8: () => p,
+          G7: () => b,
+          IA: () => C,
+          Ro: () => h,
+          SZ: () => l,
+          VX: () => u,
+          W1: () => _,
+          Y3: () => M,
+          cC: () => S,
+          cR: () => p,
+          f: () => d,
+          hr: () => m,
+          nt: () => c,
+          tV: () => f,
+          u8: () => g,
         });
         var r,
-          i = n(61657);
+          i = n(28864),
+          s = n(61657);
+        n(63696);
         !(function (e) {
           (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
             (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
             (e[(e.APPLICATION = 2)] = "APPLICATION"),
             (e[(e.BROWSER = 3)] = "BROWSER");
         })(r || (r = {}));
-        let s = {
-          [i.pR.OK]: "vgp_onok",
-          [i.pR.CANCEL]: "vgp_oncancel",
-          [i.pR.SECONDARY]: "vgp_onsecondaryaction",
-          [i.pR.OPTIONS]: "vgp_onoptions",
-          [i.pR.START]: "vgp_onmenu",
+        let o = {
+          [s.pR.OK]: "vgp_onok",
+          [s.pR.CANCEL]: "vgp_oncancel",
+          [s.pR.SECONDARY]: "vgp_onsecondaryaction",
+          [s.pR.OPTIONS]: "vgp_onoptions",
+          [s.pR.START]: "vgp_onmenu",
         };
-        function o(e, t, n) {
+        function a(e, t, n) {
           return (
             e.addEventListener(t, n),
             () =>
@@ -1570,37 +1569,37 @@ var CLSTAMP = "10062881";
               })(e, t, n)
           );
         }
-        function a(e, t) {
-          return o(e, "vgp_onbuttondown", t);
-        }
         function c(e, t) {
-          return o(e, "vgp_onbuttonup", t);
+          return a(e, "vgp_onbuttondown", t);
         }
         function l(e, t) {
-          return o(e, "vgp_onok", C(t));
+          return a(e, "vgp_onbuttonup", t);
         }
         function u(e, t) {
-          return o(e, "vgp_oncancel", C(t));
+          return a(e, "vgp_onok", v(t));
         }
         function m(e, t) {
-          return o(e, "vgp_onsecondaryaction", C(t));
+          return a(e, "vgp_oncancel", v(t));
         }
         function d(e, t) {
-          return o(e, "vgp_onoptions", C(t));
+          return a(e, "vgp_onsecondaryaction", v(t));
         }
         function h(e, t) {
-          return o(e, "vgp_onmenu", C(t));
+          return a(e, "vgp_onoptions", v(t));
         }
         function p(e, t) {
-          return o(e, "vgp_ondirection", C(t));
+          return a(e, "vgp_onmenu", v(t));
         }
         function g(e, t) {
-          return o(e, "vgp_onfocus", t);
+          return a(e, "vgp_ondirection", v(t));
         }
         function f(e, t) {
-          return o(e, "vgp_onblur", t);
+          return a(e, "vgp_onfocus", t);
         }
-        function _(e, t, n) {
+        function _(e, t) {
+          return a(e, "vgp_onblur", t);
+        }
+        function w(e, t, n) {
           let r = e;
           if (!r || !r.ownerDocument || !r.ownerDocument.defaultView) return !0;
           let i = new r.ownerDocument.defaultView.CustomEvent(t, {
@@ -1610,45 +1609,53 @@ var CLSTAMP = "10062881";
           });
           return r.dispatchEvent(i);
         }
-        function w(e, t) {
-          const n = { button: t, source: i.Vz.GAMEPAD, is_repeat: !1 };
-          _(e, "vgp_onbuttondown", n), _(e, "vgp_onbuttonup", n);
+        function b(e, t) {
+          const n = { button: t, source: s.Vz.GAMEPAD, is_repeat: !1 };
+          w(e, "vgp_onbuttondown", n), w(e, "vgp_onbuttonup", n);
         }
-        function b(e) {
-          const t = [i.pR.DIR_UP, i.pR.DIR_DOWN, i.pR.DIR_LEFT, i.pR.DIR_RIGHT];
+        function C(e) {
+          const t = [s.pR.DIR_UP, s.pR.DIR_DOWN, s.pR.DIR_LEFT, s.pR.DIR_RIGHT];
           let n = !0,
             r = !1,
-            o = s[e.detail.button];
+            i = o[e.detail.button];
           return (
-            o
-              ? ((r = !0), (n = _(e.target, o, e.detail)))
+            i
+              ? ((r = !0), (n = w(e.target, i, e.detail)))
               : -1 !== t.indexOf(e.detail.button) &&
-                ((r = !0), (n = _(e.target, "vgp_ondirection", e.detail))),
+                ((r = !0), (n = w(e.target, "vgp_ondirection", e.detail))),
             { bUnhandled: n, bHadLogicalEventMapping: r }
           );
         }
-        function C(e) {
+        function v(e) {
           return (t) => {
             !1 !== e(t) && (t.stopPropagation(), t.preventDefault());
           };
         }
-        function v(e) {
+        function M(e) {
           const {
               onOKActionDescription: t,
               onCancelActionDescription: n,
               onSecondaryActionDescription: r,
-              onOptionsActionDescription: s,
+              onOptionsActionDescription: i,
               onMenuActionDescription: o,
               actionDescriptionMap: a,
             } = e,
             c = { ...a };
           return (
-            void 0 !== t && (c[i.pR.OK] = t),
-            void 0 !== n && (c[i.pR.CANCEL] = n),
-            void 0 !== r && (c[i.pR.SECONDARY] = r),
-            void 0 !== s && (c[i.pR.OPTIONS] = s),
-            void 0 !== o && (c[i.pR.START] = o),
+            void 0 !== t && (c[s.pR.OK] = t),
+            void 0 !== n && (c[s.pR.CANCEL] = n),
+            void 0 !== r && (c[s.pR.SECONDARY] = r),
+            void 0 !== i && (c[s.pR.OPTIONS] = i),
+            void 0 !== o && (c[s.pR.START] = o),
             c
+          );
+        }
+        function S(e, t, n) {
+          return (0, i.QS)(
+            (n) => {
+              if (n && t) return a(n, e, t);
+            },
+            [e, t],
           );
         }
       },
@@ -1877,101 +1884,116 @@ var CLSTAMP = "10062881";
       },
       54102: (e, t, n) => {
         "use strict";
-        n.d(t, { Gt: () => l, LU: () => a, Ze: () => o, nv: () => c });
+        n.d(t, { Gt: () => m, LU: () => l, Ze: () => c, nv: () => u });
         var r = n(85688),
           i = n(20893);
-        class s {
+        const s = new (n(83599).wd)("FocusHistory"),
+          o = s.Debug;
+        class a {
           m_root;
           constructor(e) {
             this.m_root = e;
           }
           static SerializeNavState(e, t = !0, n = !0) {
             return {
-              root: s.SerializeNavNode(e, t, n),
+              root: a.SerializeNavNode(e, t, n),
               bHadFocus: e.BFocusWithin(),
             };
           }
           static SerializeNavNode(e, t = !0, n = !0) {
             let r = null;
-            const [i, o] = e.GetChildren();
+            const [i, s] = e.GetChildren();
             return (
               i.length &&
-                -1 != o &&
+                -1 != s &&
                 t &&
-                (r = i.map((e, t) => s.SerializeNavNode(e, t == o || n, n))),
-              { sNavKey: e.NavKey, iActiveChild: o, rgChildren: r }
+                (r = i.map((e, t) => a.SerializeNavNode(e, t == s || n, n))),
+              { sNavKey: e.NavKey, iActiveChild: s, rgChildren: r }
             );
           }
           static RestoreSerializedNavState(e, t, n = 0) {
-            const { root: r, bHadFocus: o } = t;
+            const { root: r, bHadFocus: s } = t;
             e.Tree.Controller.RestoreHistoryTransaction(() => {
-              s.RestoreSerializedNavNode(e, r),
-                (1 == n || (0 == n && o)) && e.BTakeFocus(i.D$.APPLICATION);
+              a.RestoreSerializedNavNode(e, r),
+                (1 == n || (0 == n && s)) && e.BTakeFocus(i.D$.APPLICATION);
             });
           }
-          static RestoreSerializedNavNode(e, t) {
-            const { sNavKey: n, iActiveChild: i, rgChildren: o } = t;
-            if (
-              (n && (0, r.wT)(n == e.NavKey, "navkey mismatch"),
-              e.SetActiveChild(i),
-              o && o.length)
-            ) {
+          static RestoreSerializedNavNode(e, t, n = 0) {
+            const { sNavKey: i, iActiveChild: c, rgChildren: l } = t;
+            i && (0, r.wT)(i == e.NavKey, "navkey mismatch"),
+              e.SetActiveChild(c);
+            const u = s.IsDebugEnabled()
+              ? (function (e) {
+                  if (0 == e) return "";
+                  let t = "";
+                  for (let n = 0; n < e; n++) t += "*";
+                  return (t += " "), t;
+                })(n)
+              : "";
+            if (l && l.length) {
               const [t] = e.GetChildren();
-              let n = new Map();
+              -1 != c &&
+                o(
+                  `${u}Restoring node ${e.NavKey} which had active child ${c} of ${l.length} - now ${t.length} children.`,
+                );
+              let r = new Map();
               t.forEach((e) => {
-                e.NavKey && n.set(e.NavKey, e);
+                e.NavKey && r.set(e.NavKey, e);
               });
-              for (const e of o) {
+              for (const e of l) {
                 if (!e.sNavKey) continue;
-                const t = n.get(e.sNavKey);
-                t && s.RestoreSerializedNavNode(t, e);
+                const t = r.get(e.sNavKey);
+                t && a.RestoreSerializedNavNode(t, e, n + 1);
               }
-              if (-1 != i && o[i]?.sNavKey) {
-                const r = n.get(o[i].sNavKey);
-                r && e.SetActiveChild(t.indexOf(r));
+              if (-1 != c && l[c]?.sNavKey) {
+                const n = r.get(l[c].sNavKey);
+                o(
+                  `${u}Restoring node ${e.NavKey}, child with focus: ${l[c].sNavKey} ${void 0 === n ? "MISSING!!" : ""}`,
+                ),
+                  n && e.SetActiveChild(t.indexOf(n));
               }
-              let r = 0,
-                a = 0;
-              for (; r < t.length && a < o.length; ) {
-                for (; r < t.length && t[r].NavKey; ) r++;
-                for (; a < o.length && o[a].sNavKey; ) a++;
-                if (r >= t.length || a >= o.length) break;
-                s.RestoreSerializedNavNode(t[r], o[a]), r++, a++;
+              let i = 0,
+                s = 0;
+              for (; i < t.length && s < l.length; ) {
+                for (; i < t.length && t[i].NavKey; ) i++;
+                for (; s < l.length && l[s].sNavKey; ) s++;
+                if (i >= t.length || s >= l.length) break;
+                a.RestoreSerializedNavNode(t[i], l[s], n + 1), i++, s++;
               }
             }
           }
         }
-        function o(e) {
-          return s.SerializeNavState(e, !0, !1);
+        function c(e) {
+          return a.SerializeNavState(e, !0, !1);
         }
-        function a(e, t, n = 0) {
-          return s.RestoreSerializedNavState(e, t, n);
+        function l(e, t, n = 0) {
+          return a.RestoreSerializedNavState(e, t, n);
         }
-        class c extends s {
+        class u extends a {
           m_rgHistory = [];
           PushState() {
-            this.m_rgHistory.push(s.SerializeNavState(this.m_root));
+            this.m_rgHistory.push(a.SerializeNavState(this.m_root));
           }
           PopState(e = 0) {
             this.m_rgHistory.length &&
-              s.RestoreSerializedNavState(
+              a.RestoreSerializedNavState(
                 this.m_root,
                 this.m_rgHistory.pop(),
                 e,
               );
           }
         }
-        class l extends s {
+        class m extends a {
           m_mapHistory = new Map();
           SaveState(e) {
-            this.m_mapHistory.set(e, s.SerializeNavState(this.m_root));
+            this.m_mapHistory.set(e, a.SerializeNavState(this.m_root));
           }
           RestoreState(e, t = 0) {
             const n = this.m_mapHistory.get(e);
             return (
               !!n &&
               (console.log(`Restoring history for state ${e}`),
-              s.RestoreSerializedNavState(this.m_root, n, t),
+              a.RestoreSerializedNavState(this.m_root, n, t),
               !0)
             );
           }
@@ -1980,14 +2002,15 @@ var CLSTAMP = "10062881";
       61050: (e, t, n) => {
         "use strict";
         n.d(t, {
-          CZ: () => h,
-          G4: () => g,
+          CZ: () => p,
+          G4: () => f,
           UR: () => l,
-          _V: () => m,
+          _V: () => d,
           ix: () => u,
           kI: () => c,
-          ko: () => p,
-          xb: () => d,
+          ko: () => g,
+          lr: () => m,
+          xb: () => h,
         });
         var r = n(61657),
           i = n(85688),
@@ -2063,44 +2086,42 @@ var CLSTAMP = "10062881";
         }
         function l(e, t, n, r = 0.001) {
           return "x" == e
-            ? t.x + t.width > n.x + r && t.x + r < n.x + n.width
+            ? t.right > n.left + r && t.left + r < n.right
             : "y" == e
-              ? t.y + t.height > n.y + r && t.y + r < n.y + n.height
+              ? t.bottom > n.top + r && t.top + r < n.bottom
               : ((0, i.wT)(!1, `Invalid axis ${e}`), !1);
         }
         function u(e, t, n) {
           let r;
           return (
             "x" == e
-              ? (r =
-                  Math.min(t.x + t.width, n.x + n.width) - Math.max(t.x, n.x))
+              ? (r = Math.min(t.right, n.right) - Math.max(t.left, n.left))
               : "y" == e
-                ? (r =
-                    Math.min(t.y + t.height, n.y + n.height) -
-                    Math.max(t.y, n.y))
+                ? (r = Math.min(t.bottom, n.bottom) - Math.max(t.top, n.top))
                 : ((0, i.wT)(!1, `Invalid axis ${e}`), (r = 0)),
             r < 0 ? 0 : r
           );
         }
-        function m(e, t, n) {
+        function m(e, t) {
+          return "x" == e
+            ? { min: t.left, max: t.right }
+            : { min: t.top, max: t.bottom };
+        }
+        function d(e, t, n) {
           const r = t[e],
-            i = (function (e, t) {
-              return "x" == e
-                ? { min: t.x, max: t.x + t.width }
-                : { min: t.y, max: t.y + t.height };
-            })(e, n);
+            i = m(e, n);
           return r < i.min ? i.min - r : r > i.max ? r - i.max : 0;
         }
-        function d(e) {
-          return { x: e.x, y: e.y };
+        function h(e) {
+          return { x: e.left, y: e.top };
         }
-        const h = {
+        const p = {
           OnBlur: () => {},
           OnFocus: () => {},
           OnFocusChange: () => {},
           OnForceMeasureFocusRing: () => {},
         };
-        function p(e) {
+        function g(e) {
           if (!e) return a.xj.NONE;
           const t = e.ownerDocument.defaultView,
             n = t.getComputedStyle(e);
@@ -2116,7 +2137,10 @@ var CLSTAMP = "10062881";
                 return a.xj.COLUMN_REVERSE;
             }
           else {
-            if ("grid" == n.display) return a.xj.GRID;
+            if ("grid" == n.display)
+              return "none" !== n.gridTemplateAreas
+                ? a.xj.GEOMETRIC
+                : a.xj.GRID;
             if (e.childElementCount > 0) {
               const n = t.getComputedStyle(e.firstElementChild);
               if ("left" === n.float) return a.xj.ROW;
@@ -2127,7 +2151,7 @@ var CLSTAMP = "10062881";
           }
           return a.xj.COLUMN;
         }
-        function g(e) {
+        function f(e) {
           switch (e) {
             case r.pR.DIR_UP:
             case r.pR.DIR_DOWN:
@@ -2143,35 +2167,36 @@ var CLSTAMP = "10062881";
       4690: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Bp: () => y,
-          $C: () => S,
-          xj: () => C,
-          iU: () => v,
-          Yo: () => M,
+          Bp: () => x,
+          $C: () => B,
+          xj: () => S,
+          iU: () => y,
+          Yo: () => E,
         });
         var r = n(34629),
           i = n(61657),
           s = n(34742),
-          o = n(85688),
-          a = n(93960),
-          c = n(90039),
-          l = n(83599),
-          u = n(87197),
-          m = n(20893),
-          d = n(61050),
-          h = n(54644);
-        function p(e, t, n) {
+          o = n(90039),
+          a = n(85688),
+          c = n(93960),
+          l = n(79769),
+          u = n(83599),
+          m = n(87197),
+          d = n(20893),
+          h = n(61050),
+          p = n(54644);
+        function g(e, t, n) {
           const r = [],
             [i, s] = e.GetChildren(),
             o = e.GetActiveChild();
           let a;
           const c = o ? o.Element?.getBoundingClientRect() : null;
           if (o) {
-            const e = _(o, t, n);
+            const e = w(o, t, n);
             if (
               e &&
               !e.offScreen &&
-              ((a = g(o, e, e.overlap, n)), a && !a.visibility.offScreen)
+              ((a = f(o, e, e.overlap, n)), a && !a.visibility.offScreen)
             )
               return a;
             e && r.push({ child: o, visibility: e });
@@ -2180,33 +2205,33 @@ var CLSTAMP = "10062881";
           for (let e = 0; e < i.length; e++) {
             const n = i[e];
             if (n == o) continue;
-            const s = _(n, t, l ?? void 0);
+            const s = w(n, t, l ?? void 0);
             s && r.push({ child: n, visibility: s });
           }
           let u;
-          r.sort(f);
+          r.sort(_);
           for (const e of r) {
             const { child: n, visibility: r } = e;
             if (r.offScreen && u) {
               if (!u.visibility.offScreen) break;
               if (r.distance && r.distance > u.visibility.distance) break;
             }
-            const i = n == o ? a : g(n, r, r.overlap || t, l ?? void 0);
-            i && (!u || f(i, u) < 0) && (u = i);
+            const i = n == o ? a : f(n, r, r.overlap || t, l ?? void 0);
+            i && (!u || _(i, u) < 0) && (u = i);
           }
           return u;
         }
-        function g(e, t, n, r) {
+        function f(e, t, n, r) {
           switch (e.GetFocusable()) {
             case "none":
               return;
             case "children":
-              return p(e, t.overlap || n, r);
+              return g(e, t.overlap || n, r);
             case "self":
               return { child: e, visibility: t };
           }
         }
-        function f(e, t) {
+        function _(e, t) {
           const n = e.visibility,
             r = t.visibility;
           return n.offScreen
@@ -2217,7 +2242,7 @@ var CLSTAMP = "10062881";
               ? -1
               : n.distance - r.distance;
         }
-        function _(e, t, n) {
+        function w(e, t, n) {
           const r = e.Element?.getBoundingClientRect(),
             i = e.GetFocusable();
           let s;
@@ -2239,7 +2264,7 @@ var CLSTAMP = "10062881";
               if (n < t.left)
                 return { offScreen: "left", distance: t.left - n };
             }
-            n && (s = (0, h.bZ)(r, n));
+            n && (s = (0, p.bZ)(r, n));
           } else if ("children" == i) {
             const n = e.Element;
             if (!n) return null;
@@ -2267,9 +2292,11 @@ var CLSTAMP = "10062881";
             distance: s,
           };
         }
-        var w = n(77517);
-        const b = new l.wd("FocusNavigationMovement").Debug;
-        var C, v, M, S;
+        var b = n(77517),
+          C = n(13099);
+        const v = new u.wd("FocusNavigationMovement"),
+          M = v.Debug;
+        var S, y, E, B;
         !(function (e) {
           (e[(e.NONE = 0)] = "NONE"),
             (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -2278,26 +2305,26 @@ var CLSTAMP = "10062881";
             (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
             (e[(e.GRID = 5)] = "GRID"),
             (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-        })(C || (C = {})),
+        })(S || (S = {})),
           (function (e) {
             (e[(e.FIRST = 0)] = "FIRST"),
               (e[(e.LAST = 1)] = "LAST"),
               (e[(e.MAINTAIN_X = 2)] = "MAINTAIN_X"),
               (e[(e.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
               (e[(e.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
-          })(v || (v = {})),
+          })(y || (y = {})),
           (function (e) {
             (e[(e.Standard = 0)] = "Standard"),
               (e[(e.NoTransform = 1)] = "NoTransform"),
               (e[(e.NoTransformSparseContent = 2)] =
                 "NoTransformSparseContent");
-          })(M || (M = {})),
+          })(E || (E = {})),
           (function (e) {
             (e[(e.INVALID = 0)] = "INVALID"),
               (e[(e.FORWARD = 1)] = "FORWARD"),
               (e[(e.BACKWARD = 2)] = "BACKWARD");
-          })(S || (S = {}));
-        class y {
+          })(B || (B = {}));
+        class x {
           m_Tree;
           m_Parent;
           m_rgChildren = [];
@@ -2310,12 +2337,10 @@ var CLSTAMP = "10062881";
           m_bAutoFocusChild = !1;
           m_bMounted = !1;
           m_nDepth;
-          m_bFocused = !1;
-          m_FocusCallbackList = new c.l();
-          m_bFocusWithin = !1;
-          m_FocusWithinCallbackList = new c.l();
-          m_ActionDescriptionsChangedCallbackList = new c.l();
-          m_RetainFocusParent = null;
+          m_Focused = (0, l.Jc)(!1);
+          m_FocusWithin = (0, l.Jc)(!1);
+          m_ActionDescriptionsChangedCallbackList = new o.l();
+          m_FocusableIfEmptyAncestor = null;
           m_rgNavigationHandlers = [];
           m_rgFocusHandlers = [];
           constructor(e, t, n) {
@@ -2325,7 +2350,7 @@ var CLSTAMP = "10062881";
               (this.m_nDepth = t ? t.m_nDepth + 1 : 0);
           }
           CreateHandle() {
-            return new d.kI(this);
+            return new h.kI(this);
           }
           get Tree() {
             return this.m_Tree;
@@ -2342,27 +2367,27 @@ var CLSTAMP = "10062881";
             return this.m_Parent;
           }
           SetProperties(e) {
-            const t = !(0, u.e)(
+            const t = !(0, m.e)(
                 this.m_Properties?.actionDescriptionMap,
                 e?.actionDescriptionMap,
               ),
-              n = this.m_Properties?.retainFocus,
+              n = this.m_Properties?.focusableIfEmpty,
               r = this.m_Properties?.noFocusRing;
             (this.m_Properties = e || {}),
               t && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
-              this.m_Properties.retainFocus && !n
-                ? this.PropagateRetainFocusParentToChildren(this)
-                : !this.m_Properties.retainFocus &&
+              this.m_Properties.focusableIfEmpty && !n
+                ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
+                : !this.m_Properties.focusableIfEmpty &&
                   n &&
-                  this.PropagateRetainFocusParentToChildren(
-                    this.m_RetainFocusParent,
+                  this.PropagateFocusableIfEmptyAncestorToDescendants(
+                    this.m_FocusableIfEmptyAncestor,
                   ),
               this.m_Properties.noFocusRing && !r && this.BHasFocus()
-                ? this.m_FocusRing?.OnBlur(m.D$.APPLICATION, this, this)
+                ? this.m_FocusRing?.OnBlur(d.D$.APPLICATION, this, this)
                 : !this.m_Properties.noFocusRing &&
                   r &&
                   this.BHasFocus() &&
-                  this.m_FocusRing?.OnFocus(m.D$.APPLICATION, this, this),
+                  this.m_FocusRing?.OnFocus(d.D$.APPLICATION, this, this),
               this.m_element && this.RegisterDOMEvents();
           }
           BWantsAutoFocus() {
@@ -2378,31 +2403,27 @@ var CLSTAMP = "10062881";
             );
           }
           GetBoundingRect() {
-            return this.m_element && this.m_element.getBoundingClientRect();
+            return this.m_element?.getBoundingClientRect();
           }
           SetHasFocus(e) {
-            e != this.m_bFocused &&
-              ((this.m_bFocused = e),
-              this.m_FocusCallbackList.Dispatch(this.m_bFocused));
+            this.m_Focused.Set(e);
           }
           SetFocusWithin(e) {
-            e != this.m_bFocusWithin &&
-              ((this.m_bFocusWithin = e),
-              this.m_FocusWithinCallbackList.Dispatch(this.m_bFocusWithin),
+            this.m_FocusWithin.Set(e) &&
               this.m_Properties?.onFocusWithin &&
-                this.m_Properties.onFocusWithin(this.m_bFocusWithin));
+              this.m_Properties.onFocusWithin(e);
+          }
+          get SubscribableHasFocus() {
+            return this.m_Focused;
           }
           BHasFocus() {
-            return this.m_bFocused;
+            return this.m_Focused.Value;
+          }
+          get SubscribableFocusWithin() {
+            return this.m_FocusWithin;
           }
           BFocusWithin() {
-            return this.m_bFocusWithin;
-          }
-          get FocusCallbackList() {
-            return this.m_FocusCallbackList;
-          }
-          get FocusWithinCallbackList() {
-            return this.m_FocusWithinCallbackList;
+            return this.m_FocusWithin.Value;
           }
           ForceMeasureFocusRing() {
             this.m_FocusRing?.OnForceMeasureFocusRing();
@@ -2428,13 +2449,15 @@ var CLSTAMP = "10062881";
             this.m_rgChildren.push(e),
               (this.m_bChildrenSorted = !1),
               this.m_element && this.RegisterDOMEvents(),
-              this.m_Properties?.retainFocus
-                ? e.SetRetainFocusParent(this)
-                : this.m_RetainFocusParent &&
-                  e.SetRetainFocusParent(this.m_RetainFocusParent),
+              this.m_Properties?.focusableIfEmpty
+                ? e.SetFocusableIfEmptyAncestor(this)
+                : this.m_FocusableIfEmptyAncestor &&
+                  e.SetFocusableIfEmptyAncestor(
+                    this.m_FocusableIfEmptyAncestor,
+                  ),
               this.m_bMounted &&
                 e.BFocusWithin() &&
-                ((0, o.wT)(
+                ((0, a.wT)(
                   !this.m_ActiveChild && this.BFocusWithin(),
                   "Invalid focus state in AddChild",
                 ),
@@ -2444,15 +2467,15 @@ var CLSTAMP = "10062881";
             (this.m_element = e),
               this.m_Parent
                 ? this.m_Parent.AddChild(this)
-                : (0, o.wT)(
+                : (0, a.wT)(
                     this == this.m_Tree.Root,
                     "Only root should have no parent",
                   ),
               (this.m_bMounted = !0),
               this.RegisterDOMEvents();
             const t =
-                this.m_RetainFocusParent &&
-                this.m_RetainFocusParent.BHasFocus(),
+                this.m_FocusableIfEmptyAncestor &&
+                this.m_FocusableIfEmptyAncestor.BHasFocus(),
               n = this.m_Properties?.autoFocus || t;
             if (this.BWantsAutoFocus() || n) {
               let e = -1;
@@ -2465,7 +2488,7 @@ var CLSTAMP = "10062881";
                     ? t
                       ? this.m_Tree.DeferredFocus.BHasQueuedFocusNode() ||
                         this.m_Tree.DeferredFocus.RequestFocus(
-                          this.m_RetainFocusParent,
+                          this.m_FocusableIfEmptyAncestor,
                           { bFocusDescendant: !0 },
                         )
                       : this.Tree.DeferredFocus.RequestFocus(this)
@@ -2474,33 +2497,35 @@ var CLSTAMP = "10062881";
               const e = this.m_rgChildren.findIndex((e) => e.BFocusWithin());
               -1 != e &&
                 (this.SetActiveChild(e),
-                (0, o.wT)(
-                  this.m_bFocusWithin,
+                (0, a.wT)(
+                  this.BFocusWithin(),
                   "Child has focus, we should be m_bFocusWithin",
                 ));
             }
           }
           DEV_SetDebugPropsOnElement() {}
           OnUnmount() {
-            this.m_Properties?.retainFocus &&
-              this.PropagateRetainFocusParentToChildren(
-                this.m_RetainFocusParent,
+            this.m_Properties?.focusableIfEmpty &&
+              this.PropagateFocusableIfEmptyAncestorToDescendants(
+                this.m_FocusableIfEmptyAncestor,
               ),
               (this.m_bMounted = !1);
             const e = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
-            (this.m_bFocused || e) &&
-              (b(
-                `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
+            (this.BHasFocus() || e) &&
+              (M(
+                `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? "will transfer to retain focus ancestor" : "will blur"}.`,
               ),
               e && this.Tree.DeferredFocus.RequestFocus(null),
-              this.m_RetainFocusParent
-                ? this.m_RetainFocusParent.OnFocusedDecendantRemoved(this)
-                : this.m_bFocused &&
-                  this.m_Tree.TransferFocus(m.D$.APPLICATION, null)),
+              this.m_FocusableIfEmptyAncestor
+                ? this.m_FocusableIfEmptyAncestor.OnFocusedDecendantRemoved(
+                    this,
+                  )
+                : this.BHasFocus() &&
+                  this.m_Tree.TransferFocus(d.D$.APPLICATION, null)),
               this.UnregisterDOMEvents(),
               this.m_Parent
                 ? this.m_Parent.RemoveChild(this)
-                : (0, o.wT)(
+                : (0, a.wT)(
                     this == this.m_Tree.Root,
                     "Only root should have no parent",
                   );
@@ -2509,16 +2534,16 @@ var CLSTAMP = "10062881";
             !this.m_rgNavigationHandlers.length &&
               this.m_element &&
               (this.m_rgChildren.length >= 2 ||
-                this.m_Properties?.layout != C.NONE ||
+                this.m_Properties?.layout != S.NONE ||
                 this.m_Properties.onMoveUp ||
                 this.m_Properties.onMoveRight ||
                 this.m_Properties.onMoveDown ||
                 this.m_Properties.onMoveLeft) &&
               this.m_rgNavigationHandlers.push(
-                (0, m.u8)(this.m_element, this.OnNavigationEvent),
+                (0, d.u8)(this.m_element, this.OnNavigationEvent),
               ),
               (this.m_Properties?.focusable ||
-                this.m_Properties?.focusableIfNoChildren ||
+                this.m_Properties?.focusableIfEmpty ||
                 0 == this.m_rgChildren.length) &&
                 (this.m_rgFocusHandlers.length ||
                   (this.m_element?.addEventListener("focus", this.OnDOMFocus),
@@ -2536,7 +2561,7 @@ var CLSTAMP = "10062881";
           }
           RemoveChild(e) {
             let t = this.m_rgChildren.indexOf(e);
-            (0, o.wT)(-1 !== t, "Child was not found to remove"),
+            (0, a.wT)(-1 !== t, "Child was not found to remove"),
               -1 !== t &&
                 (this.m_ActiveChild == e && (this.m_ActiveChild = void 0),
                 this.m_rgChildren.splice(t, 1));
@@ -2601,26 +2626,26 @@ var CLSTAMP = "10062881";
             return e ? e.GetLastFocusElement() : this.m_element;
           }
           OnDOMFocus(e) {
-            if (!this.m_bFocused) {
+            if (!this.BHasFocus()) {
               if ("children" == this.GetFocusable()) {
                 const e = this.FindFocusableDescendant();
                 if (e && e !== this)
                   return (
-                    b(
-                      "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
+                    M(
+                      "Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.",
                       this.m_element,
                       e.m_element,
                     ),
-                    void this.m_Tree.TransferFocus(m.D$.BROWSER, e)
+                    void this.m_Tree.TransferFocus(d.D$.BROWSER, e)
                   );
               }
-              this.m_Tree.TransferFocus(m.D$.BROWSER, this);
+              this.m_Tree.TransferFocus(d.D$.BROWSER, this);
             }
           }
           OnDOMBlur(e) {
-            this.m_bFocused &&
+            this.BHasFocus() &&
               this.m_element?.ownerDocument.hasFocus() &&
-              this.m_Tree.TransferFocus(m.D$.BROWSER, null);
+              this.m_Tree.TransferFocus(d.D$.BROWSER, null);
           }
           UpdateParentActiveChild() {
             this.m_Parent &&
@@ -2630,7 +2655,7 @@ var CLSTAMP = "10062881";
           GetFocusable() {
             const {
               focusable: e,
-              focusableIfNoChildren: t,
+              focusableIfEmpty: t,
               childFocusDisabled: n,
               fnCanTakeFocus: r,
             } = this.m_Properties;
@@ -2665,7 +2690,7 @@ var CLSTAMP = "10062881";
           BFocusFirstChild(e) {
             const t = this.FindNextFocusableChildInDirection(
               -1,
-              S.FORWARD,
+              B.FORWARD,
               i.pR.INVALID,
             );
             return this.InternalFocusDescendant(t, e);
@@ -2673,102 +2698,102 @@ var CLSTAMP = "10062881";
           BFocusLastChild(e) {
             const t = this.FindNextFocusableChildInDirection(
               this.m_rgChildren.length,
-              S.BACKWARD,
+              B.BACKWARD,
               i.pR.INVALID,
             );
             return this.InternalFocusDescendant(t, e);
           }
           FindFocusableDescendant(e, t) {
-            const n = (0, d.G4)(e),
-              { focusableIfNoChildren: r, childFocusDisabled: i } =
+            const n = (0, h.G4)(e),
+              { focusableIfEmpty: r, childFocusDisabled: i } =
                 this.m_Properties ?? {};
             if (i) return null;
             if (this.m_rgChildren.length) {
               this.EnsureChildrenSorted();
               const { navEntryPreferPosition: i, resetNavOnEntry: o } =
                 this.m_Properties ?? {};
-              let a,
-                c = this.GetActiveChildIndex();
-              if ((o && void 0 !== e && (c = -1), !this.IsValidChildIndex(c))) {
-                const e = this.GetLayout();
-                c =
-                  c >= this.m_rgChildren.length ||
-                  e == C.ROW_REVERSE ||
-                  e == C.COLUMN_REVERSE ||
-                  i == v.LAST
-                    ? this.m_rgChildren.length - 1
-                    : 0;
-              }
-              if ((i == v.MAINTAIN_X || i == v.MAINTAIN_Y || t) && n) {
-                let r, o;
-                i == v.MAINTAIN_X ? (r = "x") : i == v.MAINTAIN_Y && (r = "y"),
-                  r == s.xr[n] &&
-                    (o =
-                      this.m_Tree.GetLastFocusedMovementRect(s.xr[n]) ??
-                      this.m_Tree.GetLastFocusedNode()?.GetBoundingRect()),
-                  b(
-                    `Taking focus while preserving ${i && v[i]} preserved: ${r} movement: ${n}, node:`,
-                    o || t,
-                  );
-                const c = this.ComputeRelativeDirection(e, C.GRID);
-                if (o || t) {
-                  const i = c == S.BACKWARD ? this.m_rgChildren.length - 1 : 0;
-                  a = this.FindClosestChildInNextAxiallyAlignedSet(
-                    r || s.xr[n],
-                    c,
-                    e,
-                    o || t,
-                    i,
-                    this.m_rgChildren[i].GetBoundingRect(),
-                  );
-                } else if (r != s.xr[n]) {
-                  const t = c == S.BACKWARD ? this.m_rgChildren.length : -1;
-                  a = this.FindNextFocusableChildInDirection(t, c, e);
+              let a = this.GetActiveChildIndex();
+              o && void 0 !== e && (a = -1);
+              const c = this.GetLayout();
+              let l, u;
+              if (
+                (this.IsValidChildIndex(a) ||
+                  (a =
+                    a >= this.m_rgChildren.length ||
+                    c == S.ROW_REVERSE ||
+                    c == S.COLUMN_REVERSE ||
+                    i == y.LAST
+                      ? this.m_rgChildren.length - 1
+                      : 0),
+                i == y.MAINTAIN_X
+                  ? (u = "x")
+                  : i == y.MAINTAIN_Y
+                    ? (u = "y")
+                    : c == S.GEOMETRIC && n && (u = s.xr[n]),
+                (u || t) && n)
+              ) {
+                const r = this.m_Tree.GetLastFocusedNode();
+                if (t || (r && u == s.xr[n])) {
+                  const s =
+                    t ||
+                    this.AdjustRectForLastMovementOnTangentAxis(
+                      r.GetBoundingRect(),
+                      n,
+                    );
+                  M(
+                    `Taking focus while preserving ${i && y[i]} preserved: ${u} movement: ${n}, node:`,
+                    s,
+                  ),
+                    (l = this.FindClosestFocusableNodeToRect(e, s));
+                } else if (u != s.xr[n]) {
+                  const t = this.ComputeRelativeDirection(e, S.GRID),
+                    n = t == B.BACKWARD ? this.m_rgChildren.length : -1;
+                  l = this.FindNextFocusableChildInDirection(n, t, e);
                 }
-              } else if (i == v.PREFERRED_CHILD) {
+              } else if (i == y.PREFERRED_CHILD) {
                 for (const t of this.m_rgChildren)
                   if (
-                    ((a = t.BWantsPreferredFocus()
+                    ((l = t.BWantsPreferredFocus()
                       ? t.FindFocusableNode(e)
                       : void 0),
-                    a)
+                    l)
                   )
-                    return a;
+                    return l;
               } else
-                i == v.LAST &&
-                  (a = this.FindNextFocusableChildInDirection(
-                    c + 1,
-                    S.BACKWARD,
+                i == y.LAST &&
+                  (l = this.FindNextFocusableChildInDirection(
+                    a + 1,
+                    B.BACKWARD,
                     e,
                   ));
               return (
-                a ||
-                  (a = this.FindNextFocusableChildInDirection(
-                    c - 1,
-                    S.FORWARD,
+                l ||
+                  (l = this.FindNextFocusableChildInDirection(
+                    a - 1,
+                    B.FORWARD,
                     e,
                   )),
-                a ||
-                  (a = this.FindNextFocusableChildInDirection(
-                    c,
-                    S.BACKWARD,
+                l ||
+                  (l = this.FindNextFocusableChildInDirection(
+                    a,
+                    B.BACKWARD,
                     e,
                   )),
-                a || (r ? this : null)
+                l || (r ? this : null)
               );
             }
             return null;
           }
           BVisibleChildTakeFocus(e) {
             const t = this.Element?.ownerDocument?.defaultView ?? window,
-              n = p(this, {
+              n = g(this, {
                 top: 0,
                 left: 0,
                 right: t.innerWidth,
                 bottom: t.innerHeight,
               });
             return (
-              b(
+              M(
                 `Focusing visible child, best child match is ${n?.child?.Element?.className} - ${JSON.stringify(n?.visibility)}`,
               ),
               !!n && n.child.BTakeFocus(e)
@@ -2776,8 +2801,8 @@ var CLSTAMP = "10062881";
           }
           GetLayout() {
             if (this.m_Properties?.layout) return this.m_Properties.layout;
-            if (this.m_rgChildren.length < 2) return C.NONE;
-            return (0, d.ko)(this.m_element);
+            if (this.m_rgChildren.length < 2) return S.NONE;
+            return (0, h.ko)(this.m_element);
           }
           OnNavigationEvent(e) {
             const t = e.detail.button;
@@ -2806,68 +2831,70 @@ var CLSTAMP = "10062881";
             return a;
           }
           InternalFocusDescendant(e, t, n) {
-            return !!e && (this.m_Tree.TransferFocus(t, e, (0, d.G4)(n)), !0);
+            return !!e && (this.m_Tree.TransferFocus(t, e, (0, h.G4)(n)), !0);
           }
           BTryInternalNavigation(e, t) {
             const n = this.GetLayout();
             let r,
               s = this.ComputeRelativeDirection(e, n);
             if (
-              (b(
-                `Handling navigation event ${i.pR[e]} - ${C[n]} - ${S[s]}`,
+              (M(
+                `Handling navigation event ${i.pR[e]} - ${S[n]} - ${B[s]}`,
                 this.m_element,
               ),
-              s == S.INVALID)
+              s == B.INVALID)
             )
               return !1;
-            if (this.m_Properties?.focusable && this.m_bFocused)
-              return b("Skipping navigation within focused element"), !1;
-            if ((this.EnsureChildrenSorted(!0), n == C.GRID))
+            if (this.m_Properties?.focusable && this.BHasFocus())
+              return M("Skipping navigation within focused element"), !1;
+            if ((this.EnsureChildrenSorted(!0), n == S.GRID))
               r = this.FindNextFocusableChildInGrid(
                 this.GetActiveChildIndex(),
                 s,
                 e,
               );
+            else if (n == S.GEOMETRIC)
+              r = this.FindNextFocusableChildGeometric(s, e);
             else {
               let t = this.GetActiveChildIndex();
               this.IsValidChildIndex(t) ||
-                (t = s == S.FORWARD ? -1 : this.m_rgChildren.length),
+                (t = s == B.FORWARD ? -1 : this.m_rgChildren.length),
                 (r = this.FindNextFocusableChildInDirection(t, s, e));
             }
             if (r) {
-              const n = (0, d.G4)(e);
-              if (this.GetScrollIntoViewType() == M.NoTransformSparseContent) {
+              const n = (0, h.G4)(e);
+              if (this.GetScrollIntoViewType() == E.NoTransformSparseContent) {
                 const e = r.Element?.ownerDocument.defaultView;
                 if (e) {
                   const i =
                       ("y" == n ? e.innerHeight : e.innerWidth) /
                       (t ? 4.5 : 3.33),
-                    o = (0, w.QE)(r.Element);
+                    o = (0, b.QE)(r.Element);
                   let a = !1;
                   if (
                     ("y" == n
-                      ? s == S.FORWARD
+                      ? s == B.FORWARD
                         ? (a =
                             o.top > e.innerHeight &&
                             o.bottom > e.innerHeight + i)
-                        : s == S.BACKWARD && (a = o.bottom < 0 && o.top < -i)
+                        : s == B.BACKWARD && (a = o.bottom < 0 && o.top < -i)
                       : "x" == n &&
-                        (s == S.FORWARD
+                        (s == B.FORWARD
                           ? (a =
                               o.left > e.innerWidth &&
                               o.right > e.innerWidth + i)
-                          : s == S.BACKWARD &&
+                          : s == B.BACKWARD &&
                             (a = o.right < 0 && o.left < -i)),
                     a)
                   )
                     return (
-                      b(`Element too far away, scrolling ${i} on ${n} axis `),
-                      (0, w.Pl)(r.Element, r.Element, "smooth", n, i),
+                      M(`Element too far away, scrolling ${i} on ${n} axis `),
+                      (0, b.Pl)(r.Element, r.Element, "smooth", n, i),
                       !0
                     );
                 }
               }
-              return this.m_Tree.TransferFocus(m.D$.GAMEPAD, r, n), !0;
+              return this.m_Tree.TransferFocus(d.D$.GAMEPAD, r, n), !0;
             }
             return !1;
           }
@@ -2876,54 +2903,55 @@ var CLSTAMP = "10062881";
               ? this.m_Properties.scrollIntoViewType
               : this.m_Parent
                 ? this.m_Parent.GetScrollIntoViewType()
-                : M.Standard;
+                : E.Standard;
           }
           GetRelativeDirection(e) {
             return this.ComputeRelativeDirection(e, this.GetLayout());
           }
           ComputeRelativeDirection(e, t) {
-            let n = t == C.ROW_REVERSE || t == C.COLUMN_REVERSE;
+            let n = t == S.ROW_REVERSE || t == S.COLUMN_REVERSE;
             switch (t) {
-              case C.ROW:
-              case C.ROW_REVERSE:
+              case S.ROW:
+              case S.ROW_REVERSE:
                 switch (e) {
                   case i.pR.DIR_LEFT:
-                    return n ? S.FORWARD : S.BACKWARD;
+                    return n ? B.FORWARD : B.BACKWARD;
                   case i.pR.DIR_RIGHT:
-                    return n ? S.BACKWARD : S.FORWARD;
+                    return n ? B.BACKWARD : B.FORWARD;
                   default:
-                    return S.INVALID;
+                    return B.INVALID;
                 }
-              case C.COLUMN:
-              case C.COLUMN_REVERSE:
+              case S.COLUMN:
+              case S.COLUMN_REVERSE:
                 switch (e) {
                   case i.pR.DIR_UP:
-                    return n ? S.FORWARD : S.BACKWARD;
+                    return n ? B.FORWARD : B.BACKWARD;
                   case i.pR.DIR_DOWN:
-                    return n ? S.BACKWARD : S.FORWARD;
+                    return n ? B.BACKWARD : B.FORWARD;
                   default:
-                    return S.INVALID;
+                    return B.INVALID;
                 }
-              case C.GRID:
+              case S.GRID:
+              case S.GEOMETRIC:
                 switch (e) {
                   case i.pR.DIR_LEFT:
                   case i.pR.DIR_UP:
-                    return n ? S.FORWARD : S.BACKWARD;
+                    return n ? B.FORWARD : B.BACKWARD;
                   case i.pR.DIR_RIGHT:
                   case i.pR.DIR_DOWN:
-                    return n ? S.BACKWARD : S.FORWARD;
+                    return n ? B.BACKWARD : B.FORWARD;
                   default:
-                    return S.INVALID;
+                    return B.INVALID;
                 }
               default:
-                return S.INVALID;
+                return B.INVALID;
             }
           }
           AdvanceIndex(e, t) {
-            return e + (t == S.FORWARD ? 1 : -1);
+            return e + (t == B.FORWARD ? 1 : -1);
           }
           FindNextFocusableChildInDirection(e, t, n) {
-            let r = t == S.FORWARD ? 1 : -1;
+            let r = t == B.FORWARD ? 1 : -1;
             for (
               let t = e + r;
               t >= 0 && t < this.m_rgChildren.length;
@@ -2935,7 +2963,7 @@ var CLSTAMP = "10062881";
             return null;
           }
           ScanChildren(e, t, n) {
-            let r = t == S.FORWARD ? 1 : -1;
+            let r = t == B.FORWARD ? 1 : -1;
             for (let t = e; t >= 0 && t < this.m_rgChildren.length; t += r)
               if (n(this.m_rgChildren[t], t)) return t;
             return -1;
@@ -2945,7 +2973,7 @@ var CLSTAMP = "10062881";
               s = this.GetLastFocusElement();
             if (!s || s == this.m_element)
               return (
-                (0, o.wT)(
+                (0, a.wT)(
                   !1,
                   "No active child for grid navigation",
                   this.m_iLastActiveChildIndex,
@@ -2954,20 +2982,18 @@ var CLSTAMP = "10062881";
                 ),
                 this.FindFocusableDescendant(n)
               );
-            const a = this.GetActiveDescendant().GetBoundingRect();
-            if (n == i.pR.DIR_UP || n == i.pR.DIR_DOWN) {
-              const e =
-                this.m_Tree.GetLastFocusedMovementRect("x") ??
-                this.m_Tree.GetLastFocusedNode()?.GetBoundingRect();
-              e && ((a.x = e.x), (a.width = e.width));
-            }
-            if (r) {
+            let o = this.GetActiveDescendant().GetBoundingRect();
+            if (
+              ((n != i.pR.DIR_UP && n != i.pR.DIR_DOWN) ||
+                (o = this.AdjustRectForLastMovementOnTangentAxis(o, "y")),
+              r)
+            ) {
               let r = e;
               for (; -1 != r; ) {
                 const e = this.ScanChildren(
                   this.AdvanceIndex(r, t),
                   t,
-                  (e) => !(0, d.UR)("y", a, e.GetBoundingRect()),
+                  (e) => !(0, h.UR)("y", o, e.GetBoundingRect()),
                 );
                 if (-1 != e) {
                   const r = this.m_rgChildren[e].GetBoundingRect(),
@@ -2975,7 +3001,7 @@ var CLSTAMP = "10062881";
                       "x",
                       t,
                       n,
-                      a,
+                      o,
                       e,
                       r,
                     );
@@ -2984,17 +3010,115 @@ var CLSTAMP = "10062881";
                 r = e;
               }
             } else {
-              let r = t == S.FORWARD ? 1 : -1;
+              let r = t == B.FORWARD ? 1 : -1;
               for (
                 let i = this.AdvanceIndex(e, t);
                 i >= 0 && i < this.m_rgChildren.length;
                 i += r
               ) {
                 const e = this.m_rgChildren[i];
-                if (!(0, d.UR)("y", a, e.GetBoundingRect())) return null;
+                if (!(0, h.UR)("y", o, e.GetBoundingRect())) return null;
                 let t = e.FindFocusableNode(n);
                 if (t) return t;
               }
+            }
+            return null;
+          }
+          FindNextFocusableChildGeometric(e, t) {
+            const n = this.GetLastFocusElement();
+            if (!n || n == this.m_element)
+              return (
+                (0, a.wT)(
+                  !1,
+                  "No active child for geometric navigation",
+                  this.m_iLastActiveChildIndex,
+                  this.m_rgChildren.length,
+                  n,
+                ),
+                this.FindFocusableDescendant(t)
+              );
+            const r = (0, h.G4)(t);
+            if (!r) return null;
+            const i = this.AdjustRectForLastMovementOnTangentAxis(
+              this.GetActiveDescendant().GetBoundingRect(),
+              r,
+            );
+            return this.FindClosetChildInDirection(r, i, e, t);
+          }
+          AdjustRectForLastMovementOnTangentAxis(e, t) {
+            const n = this.m_Tree.GetLastFocusedMovementRect(s.xr[t]);
+            return n
+              ? "x" == t
+                ? { left: e.left, right: e.right, top: n.top, bottom: n.bottom }
+                : { left: n.left, right: n.right, top: e.top, bottom: e.bottom }
+              : e;
+          }
+          FindClosestFocusableNodeToRect(e, t) {
+            const n = (0, h.G4)(e),
+              r = n && s.xr[n];
+            console.log(n, r);
+            const i = [];
+            for (const e of this.m_rgChildren) {
+              const n = e.GetBoundingRect();
+              if (n) {
+                const s = (0, C.bZ)(t, n),
+                  o = r ? (0, h.ix)(r, t, n) : 0;
+                i.push({ child: e, overlap: o, dist: s });
+              }
+            }
+            i.sort((e, t) =>
+              e.dist != t.dist ? e.dist - t.dist : t.overlap - e.overlap,
+            ),
+              i.forEach(({ child: e, dist: t, overlap: n }) =>
+                console.log(`dist ${t} overlap ${n}`, e.Element),
+              );
+            for (const { child: n } of i) {
+              const r = n.FindFocusableNode(e, t);
+              if (r) return r;
+            }
+            return null;
+          }
+          FindClosetChildInDirection(e, t, n, r) {
+            M(
+              `Find child closest to rect, rect is at left ${t.left} top ${t.top} right ${t.right} bottom ${t.bottom}`,
+            );
+            const i = (0, h.lr)(e, t),
+              o = [];
+            for (const r of this.m_rgChildren) {
+              const a = r.GetBoundingRect();
+              if (a) {
+                const c = (0, h.lr)(e, a);
+                let l;
+                (l = n == B.FORWARD ? c.min - i.max : i.min - c.max),
+                  l >= 0 &&
+                    o.push({
+                      child: r,
+                      overlap: (0, h.ix)(s.xr[e], t, a),
+                      dist: l,
+                    });
+              }
+            }
+            if (
+              (o.sort((e, t) => {
+                if (e.overlap) {
+                  if (!t.overlap) return -1;
+                } else if (t.overlap) return 1;
+                const n = e.dist - t.dist;
+                return n || t.overlap - e.overlap;
+              }),
+              v.IsDebugEnabled())
+            ) {
+              const e = o
+                .slice(0, 3)
+                .map(
+                  ({ dist: e, overlap: t, child: n }) =>
+                    `[ node: ${n.m_element?.className} dist: ${e} overlap: ${t} ]`,
+                );
+              M(`Found nodes on axis, top 3 (of ${o.length}: ${e.join(", ")}`);
+            }
+            for (const { child: e } of o) {
+              const n = e.FindFocusableNode(r, t);
+              if (n) return n;
             }
             return null;
           }
@@ -3002,21 +3126,21 @@ var CLSTAMP = "10062881";
             (!i || i < 0) && (i = 0);
             let a = [];
             if (!r) return null;
-            const c = (0, d.xb)(r);
+            const c = (0, h.xb)(r);
             this.ScanChildren(i, t, (t) => {
               const n = t.GetBoundingRect();
               return (
                 !!n &&
-                (!(!o || (0, d.UR)(s.xr[e], o, n)) ||
+                (!(!o || (0, h.UR)(s.xr[e], o, n)) ||
                   (a.push({
                     child: t,
-                    overlap: (0, d.ix)(e, r, n),
-                    dist: (0, d._V)(e, c, n),
+                    overlap: (0, h.ix)(e, r, n),
+                    dist: (0, h._V)(e, c, n),
                   }),
                   !1))
               );
             }),
-              t == S.BACKWARD && a.reverse(),
+              t == B.BACKWARD && a.reverse(),
               a.sort((e, t) => {
                 const n = t.overlap - e.overlap;
                 return 0 != n ? n : e.dist - t.dist;
@@ -3034,7 +3158,7 @@ var CLSTAMP = "10062881";
             );
           }
           SetActiveChild(e) {
-            e instanceof y
+            e instanceof x
               ? (this.EnsureChildrenSorted(),
                 (this.m_ActiveChild = e),
                 (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
@@ -3045,14 +3169,14 @@ var CLSTAMP = "10062881";
           GetDepth() {
             return this.m_nDepth;
           }
-          SetRetainFocusParent(e) {
-            (this.m_RetainFocusParent = e),
-              this.m_Properties?.retainFocus ||
-                this.PropagateRetainFocusParentToChildren(e);
+          SetFocusableIfEmptyAncestor(e) {
+            (this.m_FocusableIfEmptyAncestor = e),
+              this.m_Properties?.focusableIfEmpty ||
+                this.PropagateFocusableIfEmptyAncestorToDescendants(e);
           }
-          PropagateRetainFocusParentToChildren(e) {
+          PropagateFocusableIfEmptyAncestorToDescendants(e) {
             for (let t = 0; t < this.m_rgChildren.length; t++)
-              this.m_rgChildren[t].SetRetainFocusParent(e);
+              this.m_rgChildren[t].SetFocusableIfEmptyAncestor(e);
           }
           OnFocusedDecendantRemoved(e) {
             this.m_Tree.DeferredFocus.RequestFocus(this, {
@@ -3061,29 +3185,31 @@ var CLSTAMP = "10062881";
           }
           SetDOMFocusAndScroll(e, t) {
             this.UpdateParentActiveChild(),
+              this.m_Tree.OnChildActivated(e),
               this.m_Tree.BIsActiveFocus()
-                ? ((0, o.wT)(
+                ? ((0, a.wT)(
                     !this.m_Tree.BUseVirtualFocus(),
                     "Virtual focus tree should not have browser focus",
                   ),
                   this.m_element?.focus({ preventScroll: !0 }))
                 : this.m_Tree.BUseVirtualFocus() ||
-                  b(
+                  M(
                     `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                   ),
-              (0, w.ZQ)(this, t),
-              this.m_Tree.OnChildActivated(e);
+              (0, b.ZQ)(this, t);
           }
         }
-        (0, r.Cg)([a.o], y.prototype, "OnDOMFocus", null),
-          (0, r.Cg)([a.o], y.prototype, "OnDOMBlur", null),
-          (0, r.Cg)([a.o], y.prototype, "OnNavigationEvent", null);
+        (0, r.Cg)([c.o], x.prototype, "OnDOMFocus", null),
+          (0, r.Cg)([c.o], x.prototype, "OnDOMBlur", null),
+          (0, r.Cg)([c.o], x.prototype, "OnNavigationEvent", null);
       },
       79734: (e, t, n) => {
         "use strict";
-        n.d(t, { O: () => i });
-        var r = n(4690);
-        function i(e) {
+        n.d(t, { O: () => s });
+        var r = n(4690),
+          i = n(85688);
+        function s(e) {
+          if (!e) return r.xj.NONE;
           switch (e) {
             case "column":
               return r.xj.COLUMN;
@@ -3095,8 +3221,10 @@ var CLSTAMP = "10062881";
               return r.xj.ROW_REVERSE;
             case "grid":
               return r.xj.GRID;
+            case "geometric":
+              return r.xj.GEOMETRIC;
             default:
-              return r.xj.NONE;
+              return (0, i.z_)(e, `Unhandled flow-children: ${e}`), r.xj.NONE;
           }
         }
       },
@@ -3730,7 +3858,7 @@ var CLSTAMP = "10062881";
           );
         }
         function l(e) {
-          const t = i.useRef(),
+          const t = i.useRef(void 0),
             n = i.useContext(o);
           return t.current || (t.current = n(e || {})), t.current;
         }
@@ -3785,7 +3913,10 @@ var CLSTAMP = "10062881";
         function u(e, t) {
           return e.filter((e) => t !== e);
         }
-        function m(e, t) {
+        function m(e) {
+          return (e ?? []).filter(Boolean);
+        }
+        function d(e, t) {
           let n = 0,
             r = e.length - 1;
           for (; n <= r; ) {
@@ -3801,11 +3932,11 @@ var CLSTAMP = "10062881";
           }
           return r;
         }
-        function d(e, t, n) {
-          const r = m(e, (e) => n(t, e));
+        function h(e, t, n) {
+          const r = d(e, (e) => n(t, e));
           e.splice(r + 1, 0, t);
         }
-        function h(e, t) {
+        function p(e, t) {
           let n = 0,
             r = 0;
           for (; n < e.length; ) {
@@ -3814,7 +3945,7 @@ var CLSTAMP = "10062881";
           }
           return (e.length = r), e;
         }
-        function p(e, t, n) {
+        function g(e, t, n) {
           return (
             e ||
               console.error(
@@ -3823,20 +3954,21 @@ var CLSTAMP = "10062881";
             e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
           );
         }
-        function g(e) {
+        function f(e) {
           return Array.from(new Set(e));
         }
         n.d(t, {
           $D: () => l,
-          $Y: () => p,
-          Ew: () => g,
+          $Y: () => g,
+          Ew: () => f,
+          Le: () => m,
           R5: () => s,
           Wp: () => c,
-          Xr: () => d,
+          Xr: () => h,
           fW: () => r,
-          hT: () => h,
+          hT: () => p,
           il: () => u,
-          rJ: () => m,
+          rJ: () => d,
           x9: () => a,
           yY: () => i,
           zl: () => o,
@@ -3918,36 +4050,28 @@ var CLSTAMP = "10062881";
         function i(e, t, n) {
           return null == e || isNaN(e) ? e : Math.max(t, Math.min(n, e));
         }
-        function s(e, t, n) {
-          return null != e && !isNaN(e) && e >= t && e <= n;
-        }
-        function o(e, t) {
-          return null != e && !isNaN(e) && null != t && e >= 0 && e < t.length;
-        }
-        function a(e, t, n, r, i) {
+        function s(e, t, n, r, i) {
           return r + ((i - r) * (e - t)) / (n - t);
         }
-        function c(e, t, n, r, s) {
+        function o(e, t, n, r, s) {
           return i(
             r + ((s - r) * (e - t)) / (n - t),
             Math.min(r, s),
             Math.max(r, s),
           );
         }
-        function l(e) {
+        function a(e) {
           if (0 == e.length) return !1;
           for (let t = 0; t < e.length; t++)
             if (e[t] < "0" || e[t] > "9") return !1;
           return !0;
         }
         n.d(t, {
-          Fu: () => a,
-          LA: () => s,
+          Fu: () => s,
           OQ: () => i,
-          TG: () => l,
+          TG: () => a,
           Tg: () => r,
-          W: () => o,
-          bT: () => c,
+          bT: () => o,
         });
       },
       51396: (e, t, n) => {
@@ -3962,7 +4086,7 @@ var CLSTAMP = "10062881";
             reject: t,
           };
         }
-        n.d(t, { x: () => r });
+        n.d(t, { x0: () => r });
       },
       17372: (e, t, n) => {
         "use strict";
@@ -3980,7 +4104,6 @@ var CLSTAMP = "10062881";
         var r = n(58663),
           i = n(29218),
           s = n(16583);
-        n(36229);
         class o {
           static sm_ErrorReportingStore;
           static InstallErrorReportingStore(e) {
@@ -5972,6 +6095,11 @@ var CLSTAMP = "10062881";
                       bw: s.gp.writeBool,
                     },
                     other_game_data: { n: 82, c: p, r: !0, q: !0 },
+                    gaming_device_type: {
+                      n: 83,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
                   },
                 }),
               m.sm_m
@@ -9146,12 +9274,25 @@ var CLSTAMP = "10062881";
         function r(e) {
           return null != e && void 0 !== e.focus;
         }
-        function i(e) {
+        function i(e, t) {
+          let n = 0,
+            r = 0;
+          return (
+            t.right < e.left
+              ? (n = e.left - t.right)
+              : t.left > e.right && (n = t.left - e.right),
+            t.bottom < e.top
+              ? (r = e.top - t.bottom)
+              : t.top > e.bottom && (r = t.top - e.bottom),
+            Math.sqrt(n * n + r * r)
+          );
+        }
+        function s(e) {
           let t;
           return e && (t = e.ownerDocument.defaultView), t;
         }
-        n.d(t, { _f: () => s, aF: () => o, qf: () => i });
-        function s(e, t) {
+        n.d(t, { _f: () => o, aF: () => a, bZ: () => i, qf: () => s });
+        function o(e, t) {
           let n = e?.parentElement;
           for (; n; ) {
             if (r(n)) {
@@ -9178,52 +9319,180 @@ var CLSTAMP = "10062881";
           }
           return r(n) ? n : null;
         }
-        function o(e, t) {
+        function a(e, t) {
           if (!("ownerDocument" in e)) return !0;
           const n = e.ownerDocument.defaultView.getComputedStyle(e),
             r = "x" === t ? n.overflowX : n.overflowY;
           return "auto" === r || "scroll" === r;
         }
       },
+      90606: (e, t, n) => {
+        "use strict";
+        n.d(t, {
+          AX: () => u,
+          ML: () => s,
+          OP: () => m,
+          Qi: () => c,
+          aA: () => d,
+          l6: () => a,
+          o4: () => l,
+          xA: () => o,
+        });
+        var r = n(63696),
+          i = n(28864);
+        function s(e, t, n, i) {
+          r.useEffect(() => {
+            const r = e?.current;
+            if (r && n)
+              return (
+                r.addEventListener(t, n, i), () => r.removeEventListener(t, n)
+              );
+          }, [e, t, n]);
+        }
+        function o(e, t, n) {
+          return (0, i.QS)(
+            (r) => {
+              if (r && t)
+                return (
+                  r.addEventListener(e, t, n), () => r.removeEventListener(e, t)
+                );
+            },
+            [e, t],
+          );
+        }
+        function a(e, t, n, i) {
+          r.useEffect(() => {
+            if (e && n)
+              return (
+                e.addEventListener(t, n, i),
+                () => e.removeEventListener(t, n, i)
+              );
+          }, [e, t, n]);
+        }
+        function c(e, t, n, r) {
+          return a(
+            e,
+            "message",
+            function (e) {
+              t.includes(e.data) && n(this, e);
+            },
+            r,
+          );
+        }
+        function l(e, t) {
+          r.useEffect(() => {
+            if (!e || !t) return;
+            const n = () => t(e.visibilityState, e);
+            return (
+              n(),
+              e.addEventListener("visibilitychange", n),
+              () => e.removeEventListener("visibilitychange", n)
+            );
+          }, [e, t]);
+        }
+        function u(e) {
+          const t = r.useRef(e);
+          t.current = e;
+          const n = r.useRef(!1),
+            s = r.useCallback((e) => {
+              n.current || t.current?.(e), (n.current = !1);
+            }, []),
+            a = r.useCallback((e) => {
+              t.current?.(e), (n.current = !0);
+            }, []),
+            c = [o("mousedown", s), o("touchstart", a)];
+          return (0, i.Ue)(...c);
+        }
+        function m() {
+          const [e, t] = r.useState(!1);
+          return [
+            e,
+            {
+              onMouseEnter: r.useCallback(() => t(!0), []),
+              onMouseLeave: r.useCallback(() => t(!1), []),
+            },
+          ];
+        }
+        function d(e = "vertical") {
+          const t = "vertical" == e,
+            [n, s] = r.useState(),
+            [a, c] = r.useState(!0),
+            [l, u] = r.useState(!0),
+            m = r.useCallback(() => {
+              const e = (t ? n?.scrollTop : n?.scrollLeft) ?? 0,
+                r =
+                  ((t ? n?.scrollHeight : n?.scrollWidth) ?? 0) - e ==
+                  ((t ? n?.clientHeight : n?.clientWidth) ?? 0);
+              c(0 == e), u(r);
+            }, [t, n]),
+            d = r.useCallback((e) => s(e), []),
+            h = r.useCallback(
+              (e) => {
+                m();
+              },
+              [m],
+            );
+          r.useLayoutEffect(m, [m]);
+          const p = r.useCallback(() => m(), [m]),
+            g =
+              ((f = p),
+              (_ = { subtree: !0, childList: !0 }),
+              (0, i.QS)(
+                (e) => {
+                  if (!e || !f) return;
+                  const t = new MutationObserver(f);
+                  return t.observe(e, _), () => t.disconnect();
+                },
+                [f],
+              ));
+          var f, _;
+          const w = o("scroll", h);
+          return {
+            bScrolledToBeginning: a,
+            bScrolledToEnd: l,
+            ref: (0, i.Ue)(w, d, g),
+          };
+        }
+      },
       42898: (e, t, n) => {
         "use strict";
         n.d(t, {
           $$: () => l,
-          AX: () => F,
           CH: () => p,
-          DF: () => k,
+          DF: () => B,
           L$: () => m,
-          ML: () => _,
-          OP: () => O,
-          Qi: () => C,
+          ML: () => s.ML,
+          OP: () => s.OP,
+          Qi: () => s.Qi,
           SK: () => d,
-          Sz: () => x,
+          Sz: () => y,
+          YR: () => k,
           Z3: () => a,
           _g: () => f,
-          aA: () => D,
+          aA: () => s.aA,
           bB: () => u,
-          bs: () => I,
-          dh: () => S,
+          bs: () => L,
+          dh: () => w,
           eV: () => c,
-          gc: () => y,
-          hL: () => M,
-          l6: () => b,
-          o4: () => v,
-          ob: () => A,
-          uD: () => R,
-          uH: () => L,
-          uN: () => B,
+          gc: () => v,
+          hL: () => _,
+          l6: () => s.l6,
+          o4: () => s.o4,
+          ob: () => R,
+          uD: () => x,
+          uH: () => E,
+          uN: () => S,
           vJ: () => h,
-          wm: () => N,
-          x2: () => E,
-          xA: () => w,
+          wm: () => T,
+          x2: () => M,
+          xA: () => s.xA,
           xM: () => g,
           xP: () => o,
-          xx: () => T,
+          xx: () => I,
         });
         var r = n(63696),
-          i = n(28864),
-          s = n(51396);
+          i = n(51396),
+          s = n(90606);
         function o(e, t) {
           return (e, t, n) => n;
         }
@@ -9359,85 +9628,33 @@ var CLSTAMP = "10062881";
             )
           );
         }
-        function _(e, t, n, i) {
-          r.useEffect(() => {
-            const r = e?.current;
-            if (r && n)
-              return (
-                r.addEventListener(t, n, i), () => r.removeEventListener(t, n)
-              );
-          }, [e, t, n]);
-        }
-        function w(e, t, n) {
-          return (0, i.QS)(
-            (r) => {
-              if (r && t)
-                return (
-                  r.addEventListener(e, t, n), () => r.removeEventListener(e, t)
-                );
-            },
-            [e, t],
-          );
-        }
-        function b(e, t, n, i) {
-          r.useEffect(() => {
-            if (e && n)
-              return (
-                e.addEventListener(t, n, i),
-                () => e.removeEventListener(t, n, i)
-              );
-          }, [e, t, n]);
-        }
-        function C(e, t, n, r) {
-          return b(
-            e,
-            "message",
-            function (e) {
-              t.includes(e.data) && n(this, e);
-            },
-            r,
-          );
-        }
-        function v(e, t) {
-          r.useEffect(() => {
-            if (!e || !t) return;
-            const n = () => t(e.visibilityState, e);
-            return (
-              n(),
-              e.addEventListener("visibilitychange", n),
-              () => e.removeEventListener("visibilitychange", n)
-            );
-          }, [e, t]);
-        }
-        function M(e, t) {
+        function _(e, t) {
           r.useLayoutEffect(() => {
             if (!t || !e) return;
             const n = e.Register(t);
             return () => n.Unregister();
           }, [e, t]);
         }
-        function S(e) {
-          M(e, p());
+        function w(e) {
+          _(e, p());
         }
-        function y(e) {
-          const [t, n] = r.useState(e?.Value);
-          return (
-            r.useEffect(() => {
-              if (null == e) return;
-              const t = e.Subscribe(n);
-              return n(e.Value), t?.Unsubscribe;
-            }, [e]),
-            t
+        function b(e) {
+          return C;
+        }
+        function C() {}
+        function v(e) {
+          return r.useSyncExternalStore(
+            e ? e.SyncStore : b,
+            e ? e.GetValue : C,
+            e ? e.GetValue : C,
           );
         }
-        function E(e, t) {
+        function M(e, t) {
           r.useEffect(() => {
-            if (null == e) return;
-            const n = e.Subscribe(t);
-            return n?.Unsubscribe;
+            if (e && t) return e.Subscribe(t).Unsubscribe;
           }, [e, t]);
         }
-        function B(e, t, n = 1e3) {
+        function S(e, t, n = 1e3) {
           const i = r.useRef(t);
           i.current = t;
           const [s, o] = r.useState(e),
@@ -9454,7 +9671,7 @@ var CLSTAMP = "10062881";
             );
           return [a ? s : e, h, l];
         }
-        function x(e) {
+        function y(e) {
           const t = r.useRef(null);
           return (
             r.useEffect(() => {
@@ -9463,7 +9680,7 @@ var CLSTAMP = "10062881";
             t.current
           );
         }
-        function L(e, t) {
+        function E(e, t) {
           const [n, i] = r.useState(e);
           return (
             r.useEffect(() => {
@@ -9476,10 +9693,10 @@ var CLSTAMP = "10062881";
             n
           );
         }
-        function k(e, t) {
-          return L(e, t) || e;
+        function B(e, t) {
+          return E(e, t) || e;
         }
-        function R(e = !1) {
+        function x(e = !1) {
           const [t, n] = r.useState(e);
           return [
             t,
@@ -9487,8 +9704,8 @@ var CLSTAMP = "10062881";
             r.useCallback(() => n(!1), []),
           ];
         }
-        function I(e) {
-          const t = r.useRef();
+        function L(e) {
+          const t = r.useRef(void 0);
           return r.useCallback(
             () => (
               (t.current && t.current.factory == e) ||
@@ -9498,8 +9715,16 @@ var CLSTAMP = "10062881";
             [e],
           );
         }
-        function T(e, t) {
-          const n = r.useRef();
+        function k(e) {
+          const t = r.useRef({ value: void 0, bConstructed: !1 });
+          return (
+            t.current.bConstructed ||
+              (t.current = { value: e(), bConstructed: !0 }),
+            t.current.value
+          );
+        }
+        function I(e, t) {
+          const n = r.useRef(void 0);
           return null == e
             ? ((n.current = e), e)
             : ((null == n.current || isNaN(n.current)) && (n.current = e),
@@ -9507,91 +9732,17 @@ var CLSTAMP = "10062881";
               (n.current = Math.max(n.current, e - t)),
               n.current);
         }
-        function F(e) {
-          const t = r.useRef();
-          t.current = e;
-          const n = r.useRef(!1),
-            s = r.useCallback((e) => {
-              n.current || t.current?.(e), (n.current = !1);
-            }, []),
-            o = r.useCallback((e) => {
-              t.current?.(e), (n.current = !0);
-            }, []),
-            a = [w("mousedown", s), w("touchstart", o)];
-          return (0, i.Ue)(...a);
-        }
-        function O() {
-          const [e, t] = r.useState(!1);
-          return [
-            e,
-            {
-              onMouseEnter: r.useCallback(() => t(!0), []),
-              onMouseLeave: r.useCallback(() => t(!1), []),
-            },
-          ];
-        }
-        function D(e = "vertical") {
-          const t = "vertical" == e,
-            n = r.useRef(),
-            s = r.useRef(!0),
-            o = r.useRef(!0),
-            a = p(),
-            c = r.useCallback(() => {
-              const e = (t ? n.current?.scrollTop : n.current?.scrollLeft) ?? 0,
-                r = 0 == e,
-                i =
-                  ((t ? n.current?.scrollHeight : n.current?.scrollWidth) ??
-                    0) -
-                    e ==
-                  ((t ? n.current?.clientHeight : n.current?.clientWidth) ?? 0);
-              (s.current == r && o.current == i) ||
-                ((s.current = r), (o.current = i), a());
-            }, [a, t]),
-            l = r.useCallback(
-              (e) => {
-                (n.current = e), c();
-              },
-              [c],
-            ),
-            u = r.useCallback(
-              (e) => {
-                c();
-              },
-              [c],
-            );
-          r.useLayoutEffect(c, [c]);
-          const m = r.useCallback(() => c(), [c]),
-            d =
-              ((h = m),
-              (g = { subtree: !0, childList: !0 }),
-              (0, i.QS)(
-                (e) => {
-                  if (!e || !h) return;
-                  const t = new MutationObserver(h);
-                  return t.observe(e, g), () => t.disconnect();
-                },
-                [h],
-              ));
-          var h, g;
-          const f = w("scroll", u),
-            _ = (0, i.Ue)(f, l, d);
-          return {
-            bScrolledToBeginning: s.current,
-            bScrolledToEnd: o.current,
-            ref: _,
-          };
-        }
-        function A() {
-          const [e, t] = r.useState(() => (0, s.x)());
+        function R() {
+          const [e, t] = r.useState(() => (0, i.x0)());
           return {
             ...e,
             reset: r.useCallback(() => {
-              const e = (0, s.x)();
+              const e = (0, i.x0)();
               return t(e), e;
             }, []),
           };
         }
-        function N(e) {
+        function T(e) {
           const t = r.useRef(e);
           return (
             (t.current.length !== e.length ||
@@ -9631,7 +9782,7 @@ var CLSTAMP = "10062881";
                   });
         }
         function a(e, t) {
-          const n = r.useRef();
+          const n = r.useRef(void 0);
           return r.useCallback((t) => {
             n.current && n.current(), (n.current = e(t));
           }, t);
@@ -9765,7 +9916,7 @@ var CLSTAMP = "10062881";
           );
           return r.createElement(o, { value: c }, n);
         }
-        const l = () => a().useActiveSteamInterface().GetServiceTransport(),
+        const l = () => a().useActiveSteamInterface()?.GetServiceTransport(),
           u = () =>
             a().useActiveSteamInterface().GetAnonymousServiceTransport(),
           m = () => a().useStorage(),
@@ -10021,7 +10172,7 @@ var CLSTAMP = "10062881";
         n.d(t, { A: () => s });
         var r = n(17372);
         const i = JSON.parse(
-          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751}',
+          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751}',
         );
         class s {
           static InstrumentLink(e, t, n = null) {
@@ -10096,7 +10247,6 @@ var CLSTAMP = "10062881";
       92059: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Fh: () => h,
           aL: () => u,
           bV: () => d,
           n9: () => c,
@@ -10152,11 +10302,6 @@ var CLSTAMP = "10062881";
         function d(e, t, n, r) {
           const s = i.A.GetLinkParam({ ...e, feature: n || e.feature }, r);
           return i.A.AddNavParamToURL(t, s);
-        }
-        function h(e) {
-          const { href: t, ...n } = e,
-            i = u(t);
-          return r.createElement("a", { ...n, href: i });
         }
       },
       12368: (e, t, n) => {
@@ -10629,7 +10774,7 @@ var CLSTAMP = "10062881";
           Ad: () => L,
           Dr: () => i,
           K9: () => k,
-          Of: () => I,
+          Of: () => R,
           R7: () => B,
           VR: () => T,
           Wf: () => r,
@@ -10713,7 +10858,7 @@ var CLSTAMP = "10062881";
         }
         function S() {
           const { ownerWindow: e } = B(),
-            t = I.GetPopupForWindow(e);
+            t = R.GetPopupForWindow(e);
           return t?.browser_info || u.m;
         }
         function y() {
@@ -10838,14 +10983,14 @@ var CLSTAMP = "10062881";
             let n,
               i,
               s,
-              a = I.GetExistingPopup(this.m_strName);
+              a = R.GetExistingPopup(this.m_strName);
             (a && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               a
                 ? ((i = a.m_element),
                   (n = a.m_popup),
                   (s = a.m_renderWhenReady),
-                  I.RemoveTrackedPopup(a),
+                  R.RemoveTrackedPopup(a),
                   a.ReleasePopup(),
                   n?.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                   n?.removeEventListener("unload", a.OnUnload),
@@ -10855,7 +11000,7 @@ var CLSTAMP = "10062881";
                   n?.removeEventListener("drop", a.OnDrop),
                   n?.removeEventListener("dragover", a.OnDragOver),
                   n?.removeEventListener("message", this.OnMessage))
-                : (({ popup: n, element: i } = R.CreatePopup(this.m_strName, {
+                : (({ popup: n, element: i } = I.CreatePopup(this.m_strName, {
                     ...this.m_rgParams,
                     title: this.m_strTitle,
                   })),
@@ -10884,7 +11029,7 @@ var CLSTAMP = "10062881";
                     this.m_element &&
                     this.RenderInternal(this.m_popup, this.m_element, t);
                 })),
-              I.AddTrackedPopup(this),
+              R.AddTrackedPopup(this),
               a &&
                 (this.OnCreateInternal(),
                 t != o.iE.k_EWindowBringToFrontInvalid && this.Focus(t)));
@@ -10932,7 +11077,7 @@ var CLSTAMP = "10062881";
           }
           OnUnload(e) {
             this.RemoveEventListeners(),
-              I.RemoveTrackedPopup(this),
+              R.RemoveTrackedPopup(this),
               this.OnClose(),
               (this.m_popup = void 0);
           }
@@ -11070,14 +11215,14 @@ var CLSTAMP = "10062881";
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  I.SetRestoreDetails(
+                  R.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires,
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = I.GetRestoreDetails(
+                  (e.strRestoreDetails = R.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                   ))),
               e
@@ -11104,7 +11249,7 @@ var CLSTAMP = "10062881";
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !n &&
-                    (I.SetRestoreDetails(e, t, this.m_bExpires),
+                    (R.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -11117,12 +11262,12 @@ var CLSTAMP = "10062881";
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            I.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            R.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }
         (0, s.Cg)([w.o], k.prototype, "QueryAndStoreWindowPosition", null);
-        class R {
+        class I {
           m_bShuttingDown = !1;
           m_mapPopups = c.sH.map([], { deep: !1 });
           m_rgShutdownCallbacks = [];
@@ -11137,9 +11282,9 @@ var CLSTAMP = "10062881";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
-                BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
-                BUILD_RTIME_UTC: 1757634428,
+                BUILD_TIME_LOCAL: "Sep 17 2025 : 15:52:55",
+                BUILD_TIME_UTC: "Sep 17 2025 : 22:52:55",
+                BUILD_RTIME_UTC: 1758149575,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -11379,11 +11524,11 @@ var CLSTAMP = "10062881";
         }
         (0, s.Cg)(
           [w.o, (0, h.s)(100)],
-          R.prototype,
+          I.prototype,
           "DebouncedSaveSavedDimensionStore",
           null,
         );
-        const I = new R();
+        const R = new I();
         function T(e) {
           const [t] = l.useState(() => new WeakMap());
           (0, l.useEffect)(() => {
@@ -11395,17 +11540,17 @@ var CLSTAMP = "10062881";
                 const n = t.get(e);
                 n && (n(), t.delete(e));
               },
-              { Unregister: i } = I.AddPopupCreatedCallback(n),
-              { Unregister: s } = I.AddPopupDestroyedCallback(r);
+              { Unregister: i } = R.AddPopupCreatedCallback(n),
+              { Unregister: s } = R.AddPopupDestroyedCallback(r);
             return (
-              Array.from(I.GetPopups()).forEach(n),
+              Array.from(R.GetPopups()).forEach(n),
               () => {
-                i(), s(), Array.from(I.GetPopups()).forEach(r);
+                i(), s(), Array.from(R.GetPopups()).forEach(r);
               }
             );
           }, [t, e]);
         }
-        window.g_PopupManager = I;
+        window.g_PopupManager = R;
       },
       67808: (e, t, n) => {
         "use strict";
@@ -11580,7 +11725,7 @@ var CLSTAMP = "10062881";
             let e = new l.b2(t);
             i.Of.SetCurrentLoggedInAccountID(e.GetAccountID());
           }, [t]);
-          const n = r.useRef(),
+          const n = r.useRef(void 0),
             s = r.useCallback(
               (t) => (
                 t.bIgnoreSavedDimensions || t.strRestoreDetails
@@ -11669,224 +11814,194 @@ var CLSTAMP = "10062881";
       },
       92251: (e, t, n) => {
         "use strict";
-        n.d(t, { g: () => u });
-        var r = n(34629),
-          i = n(41230),
-          s = n(63696),
-          o = n(90765),
-          a = n(51115),
-          c = n(24793),
-          l = n.n(c);
-        let u = class extends s.Component {
-          m_elHover;
-          m_bNoSpace = !1;
-          static defaultProps = {
-            direction: "right",
-            nBodyAlignment: 0.5,
-            nAllowOffscreenPx: 10,
-            nBodyDistance: 8,
-            nMaxLateralMoveOnScreen: void 0,
-          };
-          state = { x: void 0, y: void 0, hoverPositionReady: !1 };
-          bindHover(e) {
-            (this.m_elHover = e || void 0), this.positionHover();
-          }
-          componentDidUpdate() {
-            this.positionHover();
-          }
-          render() {
-            const {
-              target: e,
-              visibilityObserver: t,
-              className: n,
-              style: r,
-              bEnablePointerEvents: i,
-              direction: a,
-              nBodyAlignment: c,
-              nBodyDistance: u,
-              nAllowOffscreenPx: m,
-              nMaxLateralMoveOnScreen: d,
-              children: h,
-              onNoSpace: p,
-              bTopmost: g,
-              ...f
-            } = this.props;
-            let _ = Object.assign({ left: this.state.x, top: this.state.y }, r),
-              w = !t || t.visible;
-            return s.createElement(
+        n.d(t, { g: () => a });
+        var r = n(63696),
+          i = n(90765),
+          s = n(24793),
+          o = n.n(s);
+        function a(e) {
+          const {
+              target: t,
+              visibilityObserver: n,
+              className: s,
+              style: a,
+              bEnablePointerEvents: l,
+              direction: u = "right",
+              nBodyAlignment: m = 0.5,
+              nBodyDistance: d = 8,
+              nAllowOffscreenPx: h = 10,
+              nMaxLateralMoveOnScreen: p,
+              onNoSpace: g,
+              bTopmost: f,
+              children: _,
+              ...w
+            } = e,
+            [b, C] = r.useState(void 0),
+            [v, M] = r.useState(void 0),
+            [S, y] = r.useState(!1),
+            [E, B] = r.useState(!1),
+            [x, L] = r.useState(null),
+            k = r.useCallback(() => {
+              let e = t;
+              if (!x || !e) return;
+              if (S && n && !n.visible) return;
+              let r = e.ownerDocument.defaultView;
+              if (!r || r.closed) return;
+              const i = x.querySelector(".hover_arrow.left"),
+                s = x.querySelector(".hover_arrow.right"),
+                o = x.querySelector(".hover_arrow.top"),
+                a = x.querySelector(".hover_arrow.bottom"),
+                l = e.getBoundingClientRect(),
+                f = x.getBoundingClientRect(),
+                _ = "overlay" == u || "overlay-center" == u;
+              i && i.setAttribute("style", "display: none;"),
+                s && s.setAttribute("style", "display: none;"),
+                o && o.setAttribute("style", "display: none;"),
+                a && a.setAttribute("style", "display: none;");
+              let w = u,
+                {
+                  nLeft: E,
+                  nTop: L,
+                  nOverflow: k,
+                  nLateralOverflow: I,
+                } = c(u, m, d, l, f, r.innerWidth, r.innerHeight);
+              if (k > (h ?? 10) && !_) {
+                const e = (function (e) {
+                    switch (e) {
+                      case "right":
+                        return "left";
+                      case "left":
+                        return "right";
+                      case "bottom":
+                        return "top";
+                      case "top":
+                        return "bottom";
+                      case "overlay":
+                        return "overlay";
+                      case "overlay-center":
+                        return "overlay-center";
+                    }
+                  })(u ?? "right"),
+                  {
+                    nLeft: t,
+                    nTop: n,
+                    nOverflow: i,
+                    nLateralOverflow: s,
+                  } = c(e, m, d, l, f, r.innerWidth, r.innerHeight);
+                if (
+                  (i < k && ((w = e), (E = t), (L = n), (k = i), (I = s)),
+                  k > (h ?? 10))
+                )
+                  return (
+                    console.log(
+                      "Not showing hover because it didn't fit in the main or alt direction",
+                    ),
+                    x.setAttribute("style", "display: none;"),
+                    B(!0),
+                    void g?.()
+                  );
+              }
+              0 === p ||
+                _ ||
+                ([L, E] = (function (e, t, n, r, i) {
+                  let s = Math.max(t[0], t[1]);
+                  void 0 !== e && (s = Math.min(e, s));
+                  s = Math.max(0, s);
+                  const o = t[0] > t[1] ? s : -s;
+                  "left" === n || "right" === n ? (r += o) : (i += o);
+                  return [r, i];
+                })(p, I, w ?? "right", L, E));
+              let R = null;
+              switch (w) {
+                case "left":
+                  R = s;
+                  break;
+                case "right":
+                  R = i;
+                  break;
+                case "top":
+                  R = a;
+                  break;
+                case "bottom":
+                  R = o;
+              }
+              R && R.setAttribute("style", ""),
+                E != b && C(E),
+                L != v && M(L),
+                S || y(!0);
+            }, [t, x, S, n, u, m, d, h, p, b, v, g]);
+          r.useEffect(() => k(), [k]);
+          let I = Object.assign({ left: b, top: v }, a),
+            R = !n || n.visible;
+          return r.createElement(
+            "div",
+            {
+              className: (0, i.A)(
+                o().HoverPositionOuter,
+                f && o().HoverAboveModal,
+              ),
+            },
+            r.createElement(
               "div",
               {
-                className: (0, o.A)(
-                  l().HoverPositionOuter,
-                  g && l().HoverAboveModal,
+                ...w,
+                className: (0, i.A)(
+                  o().HoverPosition,
+                  R && S && o().Ready,
+                  E && o().NoSpace,
+                  l && o().EnablePointerEvents,
+                  s,
                 ),
+                style: I,
+                ref: L,
               },
-              s.createElement(
-                "div",
-                {
-                  ...f,
-                  className: (0, o.A)(
-                    l().HoverPosition,
-                    w && this.state.hoverPositionReady && l().Ready,
-                    this.m_bNoSpace && l().NoSpace,
-                    i && l().EnablePointerEvents,
-                    n,
-                  ),
-                  style: _,
-                  ref: this.bindHover,
-                },
-                h,
-              ),
-            );
-          }
-          positionHover() {
-            let e = this.m_elHover,
-              t = this.props.target;
-            if (!e || !t) return;
-            if (
-              this.state.hoverPositionReady &&
-              this.props.visibilityObserver &&
-              !this.props.visibilityObserver.visible
-            )
-              return;
-            let n = t.ownerDocument.defaultView;
-            if (!n || n.closed) return;
-            const r = e.querySelector(".hover_arrow.left"),
-              i = e.querySelector(".hover_arrow.right"),
-              s = e.querySelector(".hover_arrow.top"),
-              o = e.querySelector(".hover_arrow.bottom"),
-              a = t.getBoundingClientRect(),
-              c = e.getBoundingClientRect(),
-              l =
-                "overlay" == this.props.direction ||
-                "overlay-center" == this.props.direction;
-            r && r.setAttribute("style", "display: none;"),
-              i && i.setAttribute("style", "display: none;"),
-              s && s.setAttribute("style", "display: none;"),
-              o && o.setAttribute("style", "display: none;");
-            let {
-                nBodyDistance: u = 8,
-                direction: d = "right",
-                nBodyAlignment: h = 0.5,
-              } = this.props,
-              {
-                nLeft: p,
-                nTop: g,
-                nOverflow: f,
-                nLateralOverflow: _,
-              } = m(d, h, u, a, c, n.innerWidth, n.innerHeight);
-            if (f > (this.props.nAllowOffscreenPx ?? 10) && !l) {
-              const t = (function (e) {
-                  switch (e) {
-                    case "right":
-                      return "left";
-                    case "left":
-                      return "right";
-                    case "bottom":
-                      return "top";
-                    case "top":
-                      return "bottom";
-                    case "overlay":
-                      return "overlay";
-                    case "overlay-center":
-                      return "overlay-center";
-                  }
-                })(this.props.direction ?? "right"),
-                {
-                  nLeft: r,
-                  nTop: i,
-                  nOverflow: s,
-                  nLateralOverflow: o,
-                } = m(t, h, u, a, c, n.innerWidth, n.innerHeight);
-              if (
-                (s < f && ((d = t), (p = r), (g = i), (f = s), (_ = o)),
-                f > (this.props.nAllowOffscreenPx ?? 10))
-              )
-                return (
-                  console.log(
-                    "Not showing hover because it didn't fit in the main or alt direction",
-                  ),
-                  e.setAttribute("style", "display: none;"),
-                  (this.m_bNoSpace = !0),
-                  void (this.props.onNoSpace && this.props.onNoSpace())
-                );
-            }
-            0 === this.props.nMaxLateralMoveOnScreen ||
-              l ||
-              ([g, p] = (function (e, t, n, r, i) {
-                let s = Math.max(t[0], t[1]);
-                void 0 !== e && (s = Math.min(e, s));
-                s = Math.max(0, s);
-                const o = t[0] > t[1] ? s : -s;
-                "left" === n || "right" === n ? (r += o) : (i += o);
-                return [r, i];
-              })(this.props.nMaxLateralMoveOnScreen, _, d ?? "right", g, p));
-            let w = null;
-            switch (d) {
-              case "left":
-                w = i;
-                break;
-              case "right":
-                w = r;
-                break;
-              case "top":
-                w = o;
-                break;
-              case "bottom":
-                w = s;
-            }
-            w && w.setAttribute("style", ""),
-              p != this.state.x && this.setState({ x: p }),
-              g != this.state.y && this.setState({ y: g }),
-              this.state.hoverPositionReady ||
-                this.setState({ hoverPositionReady: !0 });
-          }
-        };
-        function m(e, t, n, r, i, s, o) {
+              _,
+            ),
+          );
+        }
+        function c(e, t, n, r, i, s, o) {
           const a = s,
             c = o;
-          let l, u, m, h;
+          let u, m, d, h;
           switch (e) {
             case "right":
-              (l = r.right + n),
-                (u = d(r.top, r.height, i.height, t)),
-                (m = Math.max(0, l + i.width - a)),
-                (h = [Math.max(0, 0 - u), Math.max(0, u + i.height - c)]);
+              (u = r.right + n),
+                (m = l(r.top, r.height, i.height, t)),
+                (d = Math.max(0, u + i.width - a)),
+                (h = [Math.max(0, 0 - m), Math.max(0, m + i.height - c)]);
               break;
             case "left":
-              (l = r.left - n - i.width),
-                (u = d(r.top, r.height, i.height, t)),
-                (m = Math.max(0, 0 - l)),
-                (h = [Math.max(0, 0 - u), Math.max(0, u + i.height - c)]);
+              (u = r.left - n - i.width),
+                (m = l(r.top, r.height, i.height, t)),
+                (d = Math.max(0, 0 - u)),
+                (h = [Math.max(0, 0 - m), Math.max(0, m + i.height - c)]);
               break;
             case "bottom":
-              (l = d(r.left, r.width, i.width, t)),
-                (u = r.bottom + n),
-                (m = Math.max(0, u + i.height - c)),
-                (h = [Math.max(0, 0 - l), Math.max(0, l + i.width - a)]);
+              (u = l(r.left, r.width, i.width, t)),
+                (m = r.bottom + n),
+                (d = Math.max(0, m + i.height - c)),
+                (h = [Math.max(0, 0 - u), Math.max(0, u + i.width - a)]);
               break;
             case "top":
-              (l = d(r.left, r.width, i.width, t)),
-                (u = r.top - n - i.height),
-                (m = Math.max(0, 0 - u)),
-                (h = [Math.max(0, 0 - l), Math.max(0, l + i.width - a)]);
+              (u = l(r.left, r.width, i.width, t)),
+                (m = r.top - n - i.height),
+                (d = Math.max(0, 0 - m)),
+                (h = [Math.max(0, 0 - u), Math.max(0, u + i.width - a)]);
               break;
             case "overlay":
-              (l = r.left), (u = r.top), (m = 0), (h = [0, 0]);
+              (u = r.left), (m = r.top), (d = 0), (h = [0, 0]);
               break;
             case "overlay-center":
-              (l = r.left + 0.5 * r.width - 0.5 * i.width),
-                (u = r.top + 0.5 * r.height - 0.5 * i.height),
-                (m = 0),
+              (u = r.left + 0.5 * r.width - 0.5 * i.width),
+                (m = r.top + 0.5 * r.height - 0.5 * i.height),
+                (d = 0),
                 (h = [0, 0]);
           }
-          return { nLeft: l, nTop: u, nOverflow: m, nLateralOverflow: h };
+          return { nLeft: u, nTop: m, nOverflow: d, nLateralOverflow: h };
         }
-        function d(e, t, n, r) {
+        function l(e, t, n, r) {
           return Math.max(0, Math.min(1, r)) * (t - n) + e;
         }
-        (0, r.Cg)([a.oI], u.prototype, "bindHover", null),
-          (u = (0, r.Cg)([i.PA], u));
       },
       29285: (e, t, n) => {
         "use strict";
@@ -12206,7 +12321,7 @@ var CLSTAMP = "10062881";
       },
       73788: (e, t, n) => {
         "use strict";
-        n.d(t, { ij: () => v, pn: () => R });
+        n.d(t, { ij: () => v, pn: () => I });
         var r = n(34629),
           i = n(37322),
           s = n(72476),
@@ -13007,7 +13122,7 @@ var CLSTAMP = "10062881";
         function k(e) {
           return (e.msPing || 0) + (e.nCMLoad || 0);
         }
-        class R extends w {
+        class I extends w {
           m_Session = {
             m_bWaitingForLogonResponse: !1,
             m_nSessionID: 0,
@@ -13271,7 +13386,7 @@ var CLSTAMP = "10062881";
             }
           }
         }
-        (0, r.Cg)([u.XI], R.prototype, "DecodeAndDispatchMultiMsg", null);
+        (0, r.Cg)([u.XI], I.prototype, "DecodeAndDispatchMultiMsg", null);
       },
       25265: (e, t, n) => {
         "use strict";
@@ -13506,11 +13621,18 @@ var CLSTAMP = "10062881";
         })(r || (r = {}));
         const s = new (class {
           m_fnCallbackOnPlaySound = new i.lu();
+          m_fnCallbackOnSuppressSound = new i.lu();
           RegisterCallbackOnPlaySound(e) {
             return this.m_fnCallbackOnPlaySound.Register(e);
           }
           PlayNavSound(e, t) {
             this.m_fnCallbackOnPlaySound.Dispatch(e, t);
+          }
+          RegisterCallbackOnSuppressNavImminentSound(e) {
+            return this.m_fnCallbackOnSuppressSound.Register(e);
+          }
+          SuppressImminentNavSound() {
+            this.m_fnCallbackOnSuppressSound.Dispatch();
           }
         })();
       },
@@ -13526,7 +13648,7 @@ var CLSTAMP = "10062881";
           Vs: () => k,
           Y8: () => z,
           aE: () => F,
-          ai: () => I,
+          ai: () => R,
           fd: () => W,
           il: () => T,
           kt: () => E,
@@ -13801,9 +13923,9 @@ var CLSTAMP = "10062881";
         }
         const k = (e) => {
           const t = (0, b.Qn)();
-          return l.createElement(R, { ...e, bInGamepadUI: t });
+          return l.createElement(I, { ...e, bInGamepadUI: t });
         };
-        class R extends l.PureComponent {
+        class I extends l.PureComponent {
           static contextType = M;
           m_refItem = l.createRef();
           constructor(e) {
@@ -13887,13 +14009,13 @@ var CLSTAMP = "10062881";
             );
           }
         }
-        (0, r.Cg)([w.oI], R.prototype, "OnSubMenuMouseEnter", null),
-          (0, r.Cg)([w.oI], R.prototype, "OnSubMenuHidden", null),
-          (0, r.Cg)([w.oI], R.prototype, "ShowSubMenu", null),
-          (0, r.Cg)([w.oI], R.prototype, "RenderSubMenu", null),
-          (0, r.Cg)([w.oI], R.prototype, "OnMouseEnter", null),
-          (0, r.Cg)([w.oI], R.prototype, "OnClick", null);
-        let I = class extends l.Component {
+        (0, r.Cg)([w.oI], I.prototype, "OnSubMenuMouseEnter", null),
+          (0, r.Cg)([w.oI], I.prototype, "OnSubMenuHidden", null),
+          (0, r.Cg)([w.oI], I.prototype, "ShowSubMenu", null),
+          (0, r.Cg)([w.oI], I.prototype, "RenderSubMenu", null),
+          (0, r.Cg)([w.oI], I.prototype, "OnMouseEnter", null),
+          (0, r.Cg)([w.oI], I.prototype, "OnClick", null);
+        let R = class extends l.Component {
           m_elMenu = void 0;
           m_cReenteranceGuard = 1;
           m_mutationObserver;
@@ -14069,22 +14191,22 @@ var CLSTAMP = "10062881";
             let x = (t.bOverlapVertical ? E : y) - l - B,
               L = x > 0,
               k = l + m - (t.bOverlapVertical ? y : E) - B,
-              R = k > 0,
-              I = (t.bPreferPopTop || !R) && L && !t.bDisablePopTop;
-            if (!L && !R) {
+              I = k > 0,
+              R = (t.bPreferPopTop || !I) && L && !t.bDisablePopTop;
+            if (!L && !I) {
               const e =
                 void 0 !== t.bShiftToFitWindow
                   ? t.bShiftToFitWindow
                   : !!t.bFitToWindow && !t.bOverlapHorizontal;
-              (I = x > k && !t.bDisablePopTop),
-                e && (I ? (p.menuTop = 4) : (p.menuBottom = 4)),
+              (R = x > k && !t.bDisablePopTop),
+                e && (R ? (p.menuTop = 4) : (p.menuBottom = 4)),
                 t.bFitToWindow &&
-                  (e ? (B = Math.min(B, m - 8)) : (B += I ? x : k),
+                  (e ? (B = Math.min(B, m - 8)) : (B += R ? x : k),
                   (p.menuHeight = B - 8));
             }
             void 0 === p.menuBottom &&
               void 0 === p.menuTop &&
-              (I
+              (R
                 ? (p.menuBottom = m - (t.bOverlapVertical ? E : y))
                 : (p.menuTop = t.bOverlapVertical ? y : E)),
               i
@@ -14107,9 +14229,6 @@ var CLSTAMP = "10062881";
                   p.menuRight &&
                     (p.menuRight +=
                       s.document.body.clientWidth - s.scrollX - s.innerWidth)),
-              p.menuWidth &&
-                window.matchMedia("(prefers-contrast: more)").matches &&
-                (p.menuWidth += 1),
               (e ||
                 p.menuLeft !== this.state.menuLeft ||
                 p.menuRight !== this.state.menuRight ||
@@ -14194,6 +14313,9 @@ var CLSTAMP = "10062881";
               (this.props.options.bCreateHidden ||
                 (this.props.instance.visible && this.state.ready)) &&
                 (t += " visible"),
+              this.props.instance.visible &&
+                this.state.ready &&
+                (t += " ready"),
               (t += " " + v().ContextMenuPosition),
               this.props.options.bStandalone && (t += " " + v().Standalone),
               l.createElement(
@@ -14363,12 +14485,12 @@ var CLSTAMP = "10062881";
             e.preventDefault(), e.stopPropagation();
           }
         }
-        (0, r.Cg)([w.oI], I.prototype, "BindMenuElement", null),
-          (0, r.Cg)([w.oI, (0, g.s)(100)], I.prototype, "OnMenuMutation", null),
-          (0, r.Cg)([w.oI], I.prototype, "OnWindowResize", null),
-          (0, r.Cg)([w.oI], I.prototype, "OnBlur", null),
-          (0, r.Cg)([w.oI], I.prototype, "OnKeyDown", null),
-          (I = (0, r.Cg)([c.PA], I));
+        (0, r.Cg)([w.oI], R.prototype, "BindMenuElement", null),
+          (0, r.Cg)([w.oI, (0, g.s)(100)], R.prototype, "OnMenuMutation", null),
+          (0, r.Cg)([w.oI], R.prototype, "OnWindowResize", null),
+          (0, r.Cg)([w.oI], R.prototype, "OnBlur", null),
+          (0, r.Cg)([w.oI], R.prototype, "OnKeyDown", null),
+          (R = (0, r.Cg)([c.PA], R));
         const O = "EnableContextMenuBlurDelay3";
         function D() {
           return (
@@ -14427,7 +14549,7 @@ var CLSTAMP = "10062881";
             } = e,
             u = (0, o.R7)(),
             m = u?.ownerWindow || window,
-            d = r.useRef();
+            d = r.useRef(void 0);
           return (
             d.current || (d.current = new s.z()),
             r.useLayoutEffect(() => {
@@ -14450,7 +14572,7 @@ var CLSTAMP = "10062881";
       },
       88808: (e, t, n) => {
         "use strict";
-        n.d(t, { k: () => f });
+        n.d(t, { k: () => _ });
         var r = n(44846),
           i = n(63696),
           s = n(78325),
@@ -14462,15 +14584,16 @@ var CLSTAMP = "10062881";
           m = n(15123),
           d = n(42318),
           h = n(91435),
-          p = n(54644),
-          g = n(51115);
-        function f(e) {
+          p = n(90765),
+          g = n(54644),
+          f = n(51115);
+        function _(e) {
           const { managerOverride: t, bSuppressMouseOverlay: n } = e,
-            r = (0, g.CH)(),
+            r = (0, f.CH)(),
             s = (0, o.k5)(),
             a = (0, m.h)(),
             l = t ?? a;
-          (0, g.hL)(l.OnMenusChanged, r);
+          (0, f.hL)(l.OnMenusChanged, r);
           const u = !n && l.BShouldRenderMouseOverlay(),
             h = l.GetAllMenus();
           return i.createElement(
@@ -14481,12 +14604,12 @@ var CLSTAMP = "10062881";
               i.createElement(
                 d.tH,
                 { key: e.key },
-                i.createElement(_, { instance: e, browserInfo: s }),
+                i.createElement(w, { instance: e, browserInfo: s }),
               ),
             ),
           );
         }
-        function _(e) {
+        function w(e) {
           const { instance: t, browserInfo: n, children: r } = e,
             s = (0, h.yk)(),
             a = (0, o.R7)().ownerWindow,
@@ -14506,20 +14629,20 @@ var CLSTAMP = "10062881";
             c.P.Provider,
             { value: m },
             l.current
-              ? i.createElement(b, { instance: t, browserInfo: n, children: d })
-              : i.createElement(w, { instance: t, children: d }),
+              ? i.createElement(C, { instance: t, browserInfo: n, children: d })
+              : i.createElement(b, { instance: t, children: d }),
           );
         }
-        function w(e) {
+        function b(e) {
           const { instance: t, children: n } = e;
           return i.createElement(c.ai, { ...t.position }, n);
         }
-        function b(e) {
+        function C(e) {
           const { instance: t, browserInfo: n, children: l } = e,
             m = i.useRef(null),
             d = (0, o.R7)().ownerWindow,
-            g = d.SteamClient.Browser.GetBrowserID(),
-            f = i.useCallback(
+            f = d.SteamClient.Browser.GetBrowserID(),
+            _ = i.useCallback(
               (e) => {
                 const { options: n, position: r } = t,
                   i = r.element;
@@ -14531,7 +14654,7 @@ var CLSTAMP = "10062881";
                     height: 1,
                   };
                 else {
-                  let t = p.pd(d, i.getBoundingClientRect());
+                  let t = g.pd(d, i.getBoundingClientRect());
                   (e.dimensions = {
                     left: t.right,
                     top: t.top,
@@ -14545,28 +14668,36 @@ var CLSTAMP = "10062881";
               },
               [d, t],
             );
-          let _ = t.options.bStandalone
+          let w = t.options.bStandalone
             ? (0, o.yq)(o.Dr.StandaloneContextMenu)
             : (0, o.yq)(o.Dr.PopupContextMenu);
-          t.options.bCreateHidden && (_ |= o.Wf.Hidden),
-            t.options.bAlwaysOnTop && (_ |= o.Wf.AlwaysOnTop);
-          const { popupObj: w, element: b } = (0, a.OJ)(
+          t.options.bCreateHidden && (w |= o.Wf.Hidden),
+            t.options.bAlwaysOnTop && (w |= o.Wf.AlwaysOnTop);
+          const { popupObj: b, element: C } = (0, a.OJ)(
             "contextmenu_" + t.key,
             {
               title: t.options.title || "Menu",
-              html_class: u().ContextMenuPopup + " client_chat_frame",
-              body_class: "ContextMenuPopupBody",
+              html_class: (0, p.A)(
+                u().ContextMenuPopup,
+                "client_chat_frame",
+                t.options.bStandalone && u().Standalone,
+              ),
+              popup_class: u().PopupTarget,
+              body_class: (0, p.A)(
+                u().ContextMenuPopupBody,
+                "ContextMenuPopupBody",
+              ),
               replace_existing_popup: !1,
               target_browser: n,
-              window_opener_id: g,
+              window_opener_id: f,
               bHideOnClose: !0,
-              eCreationFlags: _,
+              eCreationFlags: w,
             },
-            { updateParamsBeforeShow: f },
+            { updateParamsBeforeShow: _ },
           );
           return (
             (0, i.useEffect)(() => {
-              if (w)
+              if (b)
                 if (t.visible) {
                   m.current && m.current.PositionMenu(),
                     m.current && m.current.PositionPopupWindow();
@@ -14577,21 +14708,21 @@ var CLSTAMP = "10062881";
                 } else
                   t.options.bRetainOnHide &&
                     window.setTimeout(() => {
-                      w.window?.SteamClient.Window.HideWindow();
+                      b.window?.SteamClient.Window.HideWindow();
                     }, 30);
-            }, [w, t, t.visible]),
-            (0, h.uH)(w.window),
+            }, [b, t, t.visible]),
+            (0, h.uH)(b.window),
             i.useEffect(() => {
-              t.SetPopup(w);
-            }, [t, w]),
-            b
+              t.SetPopup(b);
+            }, [t, b]),
+            C
               ? s.createPortal(
                   i.createElement(
                     c.ai,
-                    { ref: m, ...t.position, parentWin: d, popup: w },
+                    { ref: m, ...t.position, parentWin: d, popup: b },
                     l,
                   ),
-                  b,
+                  C,
                 )
               : null
           );
@@ -14806,7 +14937,7 @@ var CLSTAMP = "10062881";
         var s = n(11131),
           o = n(42318),
           a = n(78325),
-          c = n(42898),
+          c = n(90606),
           l = n(63439),
           u = n(88750),
           m = n(91435),
@@ -15075,7 +15206,7 @@ var CLSTAMP = "10062881";
                 _ && a,
               ),
               r.createElement(g, { ModalManager: t }),
-              r.createElement(R, { ModalManager: t }),
+              r.createElement(I, { ModalManager: t }),
             )
           );
         }
@@ -15171,7 +15302,7 @@ var CLSTAMP = "10062881";
             )
           );
         }
-        function R(e) {
+        function I(e) {
           const { ModalManager: t } = e,
             n = (0, b.CH)();
           return (
@@ -15278,7 +15409,7 @@ var CLSTAMP = "10062881";
                 bRegisterManagersWithWindow: v = !0,
                 ...M
               } = e,
-              S = i.useRef();
+              S = i.useRef(void 0);
             S.current || (S.current = new u.SZ());
             let y = i.createElement(l.L, {
               ...M,
@@ -15566,187 +15697,185 @@ var CLSTAMP = "10062881";
       50376: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $$j: () => at,
-          $4X: () => Pt,
-          $Qn: () => st,
+          $$j: () => st,
+          $4X: () => At,
+          $Qn: () => rt,
           $rC: () => w,
-          $vK: () => _n,
-          Aj0: () => Ie,
-          B1N: () => Nt,
-          BQz: () => fn,
+          $vK: () => pn,
+          Aj0: () => ke,
+          B1N: () => Dt,
+          BQz: () => hn,
           BeN: () => P,
-          Bir: () => on,
-          Bki: () => hn,
-          CE1: () => Lt,
-          CeX: () => me,
-          Cip: () => ft,
+          Bir: () => nn,
+          Bki: () => un,
+          CE1: () => Bt,
+          CeX: () => ue,
+          Cip: () => pt,
           Cv4: () => m,
           DK4: () => C,
-          DQe: () => mn,
-          Dp6: () => He,
+          DQe: () => cn,
+          Dp6: () => ze,
           EQ9: () => y,
-          ETd: () => Jt,
-          Em3: () => Re,
-          F2T: () => _e,
-          FWt: () => R,
+          ETd: () => Yt,
+          Em3: () => Le,
+          F2T: () => fe,
+          FWt: () => I,
           GB9: () => b,
-          GSe: () => ke,
-          Gkr: () => Wt,
+          GSe: () => xe,
+          Gkr: () => zt,
           Gq2: () => A,
-          GrD: () => Ct,
+          GrD: () => wt,
           Gv$: () => K,
-          IFd: () => sn,
-          IOc: () => ne,
-          IrQ: () => he,
-          Jlk: () => ae,
-          K7s: () => We,
-          KKS: () => Ke,
+          IFd: () => tn,
+          IrQ: () => de,
+          Jlk: () => oe,
+          K7s: () => Pe,
+          KKS: () => qe,
           KOs: () => B,
-          L0X: () => ge,
+          L0X: () => pe,
           LeN: () => z,
-          MFH: () => lt,
-          MUh: () => qe,
-          MbF: () => In,
-          MvQ: () => Se,
+          MFH: () => at,
+          MUh: () => Ge,
+          MbF: () => Ln,
+          MvQ: () => ve,
           MxO: () => $,
-          N8C: () => Qe,
-          NCC: () => Ht,
-          NtH: () => zt,
-          OSJ: () => En,
+          N8C: () => Ye,
+          NCC: () => Nt,
+          OSJ: () => Mn,
           OWN: () => D,
           OeC: () => te,
-          OiG: () => tt,
-          P7C: () => Fe,
-          P7r: () => Xe,
+          OiG: () => Je,
+          P7C: () => Re,
+          P7r: () => $e,
           PN3: () => T,
-          PRY: () => Ee,
-          PZP: () => I,
+          PRY: () => Se,
+          PZP: () => R,
           Q38: () => h,
-          QHH: () => oe,
-          QQ4: () => Ue,
-          QcV: () => dt,
-          Qte: () => Oe,
+          QHH: () => se,
+          QQ4: () => He,
+          QcV: () => ut,
+          Qte: () => Te,
           RO3: () => V,
-          ROZ: () => Ae,
+          ROZ: () => Oe,
           Rkk: () => p,
-          SYj: () => jt,
-          T4m: () => At,
-          UTF: () => kt,
-          U_V: () => ct,
-          V5W: () => Le,
-          VR: () => je,
-          VSd: () => Mn,
-          Vgk: () => gn,
-          Vt2: () => wn,
-          WOg: () => bt,
-          WX$: () => Qt,
-          Wy0: () => ht,
+          SYj: () => Ut,
+          T4m: () => Ot,
+          UTF: () => xt,
+          U_V: () => ot,
+          V5W: () => Be,
+          VR: () => Ve,
+          VSd: () => bn,
+          Vgk: () => dn,
+          Vt2: () => gn,
+          WOg: () => _t,
+          WX$: () => $t,
+          Wy0: () => mt,
           X: () => L,
-          X4B: () => ce,
-          XH_: () => nn,
+          X4B: () => ae,
+          XH_: () => Jt,
           XTb: () => E,
-          Xjb: () => ve,
-          Xz0: () => pt,
+          Xjb: () => be,
+          Xz0: () => dt,
           YJl: () => U,
           YNO: () => x,
-          Yb3: () => rn,
-          YuU: () => $e,
-          ZPc: () => Ot,
-          ZWw: () => Me,
-          ZjT: () => Zt,
-          ZnA: () => pn,
-          _2Q: () => Ze,
-          _V3: () => de,
-          _VW: () => vt,
-          _h6: () => St,
-          _r0: () => yt,
-          a3E: () => it,
+          Yb3: () => en,
+          Yoo: () => In,
+          YuU: () => Ze,
+          ZPc: () => Tt,
+          ZWw: () => Ce,
+          ZjT: () => Gt,
+          ZnA: () => mn,
+          _2Q: () => je,
+          _V3: () => me,
+          _VW: () => bt,
+          _h6: () => vt,
+          _r0: () => Mt,
+          a3E: () => nt,
           aPd: () => F,
-          aVR: () => Yt,
-          aeP: () => be,
-          agV: () => Ln,
-          apU: () => Pe,
-          b8_: () => cn,
-          bKN: () => kn,
-          bPr: () => Ve,
-          bcZ: () => Kt,
-          bfp: () => Et,
-          c_I: () => ue,
-          ccb: () => Cn,
-          d1w: () => an,
-          dI9: () => ln,
-          dJT: () => rt,
-          eJJ: () => gt,
-          eNX: () => nt,
+          aVR: () => Zt,
+          aeP: () => _e,
+          agV: () => En,
+          apU: () => Ne,
+          b8_: () => sn,
+          bKN: () => Bn,
+          bPr: () => We,
+          bcZ: () => jt,
+          bfp: () => St,
+          c_I: () => le,
+          ccb: () => _n,
+          d1w: () => rn,
+          dI9: () => on,
+          dJT: () => tt,
+          eJJ: () => ht,
+          eNX: () => et,
           eSy: () => v,
-          eTF: () => le,
-          emH: () => Tn,
-          f2R: () => Tt,
-          f5X: () => et,
+          eTF: () => ce,
+          emH: () => kn,
+          f2R: () => It,
+          f5X: () => Qe,
           f5w: () => q,
           fSs: () => Q,
-          faJ: () => _t,
-          ffu: () => ot,
+          faJ: () => gt,
+          ffu: () => it,
           fpT: () => W,
-          g$j: () => bn,
-          gxp: () => se,
-          gzV: () => Ut,
-          h20: () => ye,
-          h28: () => wt,
-          hz4: () => Ce,
-          i3G: () => pe,
-          i6V: () => ze,
+          g$j: () => fn,
+          gxp: () => ie,
+          gzV: () => Pt,
+          h20: () => Me,
+          h28: () => ft,
+          hz4: () => we,
+          i3G: () => he,
+          i6V: () => Ae,
           iSZ: () => d,
-          ilR: () => Mt,
-          jGG: () => re,
-          jIP: () => Xt,
-          jZW: () => It,
-          jZl: () => Je,
-          jdP: () => Bn,
-          jlt: () => tn,
-          kPc: () => mt,
-          l8x: () => we,
-          lMJ: () => Be,
-          lRD: () => qt,
+          ilR: () => Ct,
+          jGG: () => ne,
+          jIP: () => Kt,
+          jZW: () => kt,
+          jZl: () => Xe,
+          jdP: () => Sn,
+          jlt: () => Qt,
+          kPc: () => lt,
+          lMJ: () => ye,
+          lRD: () => Vt,
           m59: () => _,
           mrd: () => O,
           nGC: () => ee,
-          nm_: () => dn,
-          o5Q: () => $t,
-          ofN: () => Sn,
-          oy: () => yn,
+          nm_: () => ln,
+          o5Q: () => qt,
+          ofN: () => Cn,
+          oy: () => vn,
           pDR: () => X,
-          qcc: () => Ye,
-          qnF: () => Dt,
-          qzq: () => Ne,
-          rNt: () => vn,
-          rfv: () => Ge,
-          sDU: () => Rn,
+          qcc: () => Ke,
+          qnF: () => Ft,
+          qzq: () => De,
+          rNt: () => wn,
+          rfv: () => Ue,
+          sDU: () => xn,
           sED: () => k,
           sdo: () => Z,
           t$Q: () => H,
-          tID: () => Te,
-          tIO: () => xn,
+          tID: () => Ie,
+          tIO: () => yn,
           tcj: () => N,
           tmR: () => S,
-          twC: () => Bt,
+          twC: () => yt,
           u9R: () => J,
-          uMb: () => fe,
-          vRz: () => ie,
-          vdG: () => un,
-          vjL: () => ut,
-          vrn: () => Ft,
+          uMb: () => ge,
+          vRz: () => re,
+          vdG: () => an,
+          vjL: () => ct,
+          vrn: () => Rt,
           wB_: () => g,
-          wVV: () => Rt,
+          wVV: () => Lt,
           wbc: () => f,
-          xTY: () => en,
+          xTY: () => Xt,
           xv8: () => Y,
           yFA: () => G,
           yUp: () => j,
-          y_e: () => De,
-          ypD: () => xt,
+          y_e: () => Fe,
+          ypD: () => Et,
           zD7: () => M,
-          zHo: () => xe,
+          zHo: () => Ee,
         });
         var r = n(63696),
           i = n(90765),
@@ -16379,7 +16508,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function R(e) {
+        function I(e) {
           const { className: t } = e;
           return r.createElement(
             "svg",
@@ -16419,7 +16548,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function I(e) {
+        function R(e) {
           const { className: t } = e;
           return r.createElement(
             "svg",
@@ -17280,15 +17409,6 @@ var CLSTAMP = "10062881";
         function ne() {
           return r.createElement(
             "svg",
-            { width: "50px", height: "25px", viewBox: "0 0 50 25" },
-            r.createElement("path", {
-              d: "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
-            }),
-          );
-        }
-        function re() {
-          return r.createElement(
-            "svg",
             {
               version: "1.1",
               id: "Layer_1",
@@ -17306,7 +17426,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ie() {
+        function re() {
           return r.createElement(
             "svg",
             {
@@ -17328,7 +17448,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function se() {
+        function ie() {
           return r.createElement(
             "svg",
             {
@@ -17415,7 +17535,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function oe() {
+        function se() {
           return r.createElement(
             "svg",
             {
@@ -17450,7 +17570,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function ae(e) {
+        function oe(e) {
           const { color: t = "#fff", ...n } = e;
           return r.createElement(
             "svg",
@@ -17477,7 +17597,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ce(e) {
+        function ae(e) {
           let t = e.highlightColor || "#00ccff",
             n = e.color || "#2d73ff";
           const [i, s] = (0, l.l)(),
@@ -17552,7 +17672,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function le(e) {
+        function ce(e) {
           const { className: t, color: n = "#020202" } = e;
           return r.createElement(
             "svg",
@@ -17609,7 +17729,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function ue() {
+        function le() {
           return r.createElement(
             "svg",
             {
@@ -17637,7 +17757,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function me() {
+        function ue() {
           return r.createElement(
             "svg",
             {
@@ -17660,7 +17780,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function de() {
+        function me() {
           return r.createElement(
             "svg",
             {
@@ -17684,7 +17804,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function he(e) {
+        function de(e) {
           return (0, c.Qn)()
             ? r.createElement(
                 "svg",
@@ -17720,7 +17840,7 @@ var CLSTAMP = "10062881";
                 }),
               );
         }
-        function pe(e) {
+        function he(e) {
           return r.createElement(
             "svg",
             {
@@ -17755,7 +17875,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ge(e) {
+        function pe(e) {
           const { direction: t, ...n } = e;
           switch (t) {
             case "up":
@@ -17824,7 +17944,7 @@ var CLSTAMP = "10062881";
               );
           }
         }
-        function fe(e) {
+        function ge(e) {
           return r.createElement(
             "svg",
             {
@@ -17845,7 +17965,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function _e(e) {
+        function fe(e) {
           return r.createElement(
             "svg",
             {
@@ -17881,26 +18001,7 @@ var CLSTAMP = "10062881";
               }),
           );
         }
-        function we(e) {
-          const { angle: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              style: { transform: `rotate(${e.angle}deg)` },
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 32 32",
-              fill: "none",
-              ...n,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
-            }),
-          );
-        }
-        function be() {
+        function _e() {
           return r.createElement(
             "svg",
             {
@@ -17934,7 +18035,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ce() {
+        function we() {
           return r.createElement(
             "svg",
             {
@@ -17970,7 +18071,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ve() {
+        function be() {
           return r.createElement(
             "svg",
             {
@@ -17996,7 +18097,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Me() {
+        function Ce() {
           return r.createElement(
             "svg",
             {
@@ -18029,7 +18130,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Se() {
+        function ve() {
           return r.createElement(
             "svg",
             {
@@ -18056,7 +18157,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ye() {
+        function Me() {
           return r.createElement(
             "svg",
             {
@@ -18078,7 +18179,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ee(e) {
+        function Se(e) {
           return r.createElement(
             "svg",
             {
@@ -18093,7 +18194,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Be() {
+        function ye() {
           return r.createElement(
             "svg",
             {
@@ -18170,7 +18271,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function xe() {
+        function Ee() {
           return r.createElement(
             "svg",
             {
@@ -18247,7 +18348,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Le(e) {
+        function Be(e) {
           return r.createElement(
             "svg",
             {
@@ -18268,7 +18369,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ke(e) {
+        function xe(e) {
           let { bPending: t, bShowArm: n, className: s, ...o } = e;
           return (0, c.Qn)({ bSuppressAssert: !0 })
             ? r.createElement(
@@ -18369,7 +18470,7 @@ var CLSTAMP = "10062881";
                 ),
               );
         }
-        function Re(e) {
+        function Le(e) {
           return r.createElement(
             "svg",
             {
@@ -18385,7 +18486,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ie() {
+        function ke() {
           return r.createElement(
             "svg",
             {
@@ -18420,7 +18521,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Te(e) {
+        function Ie(e) {
           return r.createElement(
             "svg",
             {
@@ -18459,7 +18560,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Fe() {
+        function Re() {
           const [e, t] = (0, l.l)(),
             [n, i] = (0, l.l)();
           return r.createElement(
@@ -18570,7 +18671,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Oe(e) {
+        function Te(e) {
           const t = (0, i.A)(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
@@ -18603,7 +18704,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function De() {
+        function Fe() {
           return r.createElement(
             "svg",
             {
@@ -18629,7 +18730,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ae(e) {
+        function Oe(e) {
           return r.createElement(
             "svg",
             {
@@ -18651,7 +18752,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Ne() {
+        function De() {
           return r.createElement(
             "svg",
             {
@@ -18672,7 +18773,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function ze() {
+        function Ae() {
           return r.createElement(
             "svg",
             {
@@ -18692,7 +18793,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Pe() {
+        function Ne() {
           return r.createElement(
             "svg",
             {
@@ -18729,7 +18830,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function He() {
+        function ze() {
           return r.createElement(
             "svg",
             {
@@ -18757,7 +18858,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function We(e) {
+        function Pe(e) {
           return r.createElement(
             "svg",
             {
@@ -18870,7 +18971,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Ue() {
+        function He() {
           return r.createElement(
             "svg",
             {
@@ -18936,7 +19037,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ve() {
+        function We() {
           return r.createElement(
             "svg",
             {
@@ -18956,7 +19057,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ge(e) {
+        function Ue(e) {
           const { className: t } = e;
           return r.createElement(
             "svg",
@@ -18976,7 +19077,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function je(e) {
+        function Ve(e) {
           return r.createElement(
             "svg",
             {
@@ -18998,7 +19099,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function qe(e) {
+        function Ge(e) {
           const [t, n] = (0, l.l)();
           return r.createElement(
             "svg",
@@ -19037,7 +19138,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Ze(e) {
+        function je(e) {
           return r.createElement(
             "svg",
             {
@@ -19063,7 +19164,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ke() {
+        function qe() {
           return r.createElement(
             "svg",
             {
@@ -19082,7 +19183,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function $e() {
+        function Ze() {
           return r.createElement(
             "svg",
             {
@@ -19101,7 +19202,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ye() {
+        function Ke() {
           return r.createElement(
             "svg",
             {
@@ -19120,7 +19221,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Xe() {
+        function $e() {
           return r.createElement(
             "svg",
             {
@@ -19141,7 +19242,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Qe() {
+        function Ye() {
           return r.createElement(
             "svg",
             {
@@ -19172,7 +19273,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Je() {
+        function Xe() {
           return r.createElement(
             "svg",
             {
@@ -19238,7 +19339,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function et() {
+        function Qe() {
           return r.createElement(
             "svg",
             {
@@ -19264,7 +19365,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function tt(e) {
+        function Je(e) {
           const { fullcolor: t, ...n } = e,
             [i, s] = (0, l.l)(),
             [o, a] = (0, l.l)();
@@ -19351,7 +19452,7 @@ var CLSTAMP = "10062881";
                 }),
               );
         }
-        function nt() {
+        function et() {
           return r.createElement(
             "svg",
             {
@@ -19415,7 +19516,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function rt() {
+        function tt() {
           return r.createElement(
             "svg",
             {
@@ -19434,7 +19535,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function it(e) {
+        function nt(e) {
           const { percentComplete: t, startOffset: n } = e;
           let o = s.Fu(t, 0, 100, 800, 0),
             a = n ? n + 270 : 270;
@@ -19467,7 +19568,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function st() {
+        function rt() {
           return r.createElement(
             "svg",
             {
@@ -19494,7 +19595,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ot() {
+        function it() {
           return r.createElement(
             "svg",
             {
@@ -19532,7 +19633,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function at() {
+        function st() {
           return r.createElement(
             "svg",
             {
@@ -19568,7 +19669,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ct(e) {
+        function ot(e) {
           return r.createElement(
             "svg",
             {
@@ -19598,7 +19699,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function lt() {
+        function at() {
           return r.createElement(
             "svg",
             {
@@ -19633,7 +19734,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ut() {
+        function ct() {
           return r.createElement(
             "svg",
             {
@@ -19658,7 +19759,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function mt(e) {
+        function lt(e) {
           return r.createElement(
             "svg",
             {
@@ -19681,7 +19782,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function dt(e) {
+        function ut(e) {
           return r.createElement(
             "svg",
             {
@@ -19701,7 +19802,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ht() {
+        function mt() {
           return r.createElement(
             "svg",
             {
@@ -19723,7 +19824,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function pt(e) {
+        function dt(e) {
           return r.createElement(
             "svg",
             {
@@ -19764,7 +19865,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function gt(e) {
+        function ht(e) {
           return r.createElement(
             "svg",
             {
@@ -19779,7 +19880,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function ft() {
+        function pt() {
           return r.createElement(
             "svg",
             {
@@ -19799,7 +19900,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function _t() {
+        function gt() {
           return r.createElement(
             "svg",
             {
@@ -19815,7 +19916,7 @@ var CLSTAMP = "10062881";
             r.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
           );
         }
-        function wt() {
+        function ft() {
           return r.createElement(
             "svg",
             {
@@ -19846,7 +19947,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function bt() {
+        function _t() {
           return r.createElement(
             "svg",
             {
@@ -19865,7 +19966,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ct() {
+        function wt() {
           return r.createElement(
             "svg",
             {
@@ -19884,7 +19985,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function vt(e) {
+        function bt(e) {
           return r.createElement(
             "svg",
             {
@@ -19908,7 +20009,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Mt(e) {
+        function Ct(e) {
           return r.createElement(
             "svg",
             {
@@ -19925,7 +20026,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function St(e, t) {
+        function vt(e, t) {
           return (0, c.Qn)()
             ? r.createElement(
                 "svg",
@@ -19960,7 +20061,7 @@ var CLSTAMP = "10062881";
                 }),
               );
         }
-        function yt(e) {
+        function Mt(e) {
           return r.createElement(
             "svg",
             {
@@ -19979,7 +20080,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Et(e) {
+        function St(e) {
           return r.createElement(
             "svg",
             {
@@ -19998,7 +20099,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Bt(e) {
+        function yt(e) {
           return r.createElement(
             "svg",
             {
@@ -20018,7 +20119,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function xt(e) {
+        function Et(e) {
           return r.createElement(
             "svg",
             {
@@ -20041,7 +20142,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Lt(e) {
+        function Bt(e) {
           return r.createElement(
             "svg",
             {
@@ -20064,7 +20165,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function kt(e) {
+        function xt(e) {
           return r.createElement(
             "svg",
             {
@@ -20101,7 +20202,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Rt(e) {
+        function Lt(e) {
           return r.createElement(
             "svg",
             { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -20128,7 +20229,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function It(e) {
+        function kt(e) {
           return r.createElement(
             "svg",
             {
@@ -20145,7 +20246,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Tt(e) {
+        function It(e) {
           const { className: t, color: n } = e;
           return r.createElement(
             "svg",
@@ -20171,7 +20272,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ft(e) {
+        function Rt(e) {
           const { className: t, ...n } = e,
             [i, s] = (0, l.l)(),
             [o, a] = (0, l.l)(),
@@ -20348,7 +20449,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Ot() {
+        function Tt() {
           return r.createElement(
             "svg",
             {
@@ -20379,7 +20480,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Dt(e) {
+        function Ft(e) {
           return r.createElement(
             "svg",
             {
@@ -20397,7 +20498,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function At(e) {
+        function Ot(e) {
           return r.createElement(
             "svg",
             {
@@ -20415,7 +20516,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Nt(e) {
+        function Dt(e) {
           return r.createElement(
             "svg",
             {
@@ -20428,22 +20529,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function zt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 1200 1200",
-              ...e,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M600,96c-277.2,0-504,226.8-504,504s226.8,504,504,504,504-226.8,504-504S877.2,96,600,96ZM600,222c83.2,0,158.8,26.5,220.5,70.6L292.6,820.5c-44.1-61.7-70.6-137.3-70.6-220.5,0-209.2,168.8-378,378-378ZM907.4,379.5c44.1,61.7,70.6,137.3,70.6,220.5,0,209.2-168.8,378-378,378s-158.8-26.5-220.5-70.6L907.4,379.5Z",
-              strokeWidth: "0",
-            }),
-          );
-        }
-        function Pt() {
+        function At() {
           return r.createElement(
             "svg",
             {
@@ -20461,7 +20547,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ht() {
+        function Nt() {
           return r.createElement(
             "svg",
             {
@@ -20483,7 +20569,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Wt() {
+        function zt() {
           return r.createElement(
             "svg",
             {
@@ -20521,7 +20607,7 @@ var CLSTAMP = "10062881";
             ),
           );
         }
-        function Ut() {
+        function Pt() {
           return r.createElement(
             "svg",
             {
@@ -20542,7 +20628,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Vt(e) {
+        function Ht(e) {
           return r.createElement(
             "svg",
             {
@@ -20561,7 +20647,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Gt(e) {
+        function Wt(e) {
           return r.createElement(
             "svg",
             {
@@ -20581,12 +20667,12 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function jt(e) {
+        function Ut(e) {
           return (0, u.Ae)()
-            ? r.createElement(Gt, { ...e })
-            : r.createElement(Vt, { ...e });
+            ? r.createElement(Wt, { ...e })
+            : r.createElement(Ht, { ...e });
         }
-        function qt(e) {
+        function Vt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20606,7 +20692,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Zt(e) {
+        function Gt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20629,7 +20715,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Kt(e) {
+        function jt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20652,7 +20738,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function $t(e) {
+        function qt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20675,7 +20761,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Yt(e) {
+        function Zt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20698,7 +20784,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Xt(e) {
+        function Kt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20721,7 +20807,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Qt(e) {
+        function $t(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20744,7 +20830,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Jt(e) {
+        function Yt(e) {
           return r.createElement(
             "svg",
             {
@@ -20759,7 +20845,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function en(e) {
+        function Xt(e) {
           return r.createElement(
             "svg",
             {
@@ -20775,7 +20861,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function tn(e) {
+        function Qt(e) {
           const { className: t, ...n } = e;
           return r.createElement(
             "svg",
@@ -20796,7 +20882,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function nn(e) {
+        function Jt(e) {
           return r.createElement(
             "svg",
             {
@@ -20813,7 +20899,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function rn(e) {
+        function en(e) {
           return r.createElement(
             "svg",
             {
@@ -20835,7 +20921,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function sn(e) {
+        function tn(e) {
           return r.createElement(
             "svg",
             {
@@ -20850,7 +20936,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function on(e) {
+        function nn(e) {
           return r.createElement(
             "svg",
             {
@@ -20873,7 +20959,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function an(e) {
+        function rn(e) {
           return r.createElement(
             "svg",
             {
@@ -20896,7 +20982,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function cn(e) {
+        function sn(e) {
           const { direction: t, ...n } = e;
           switch (t) {
             case "up":
@@ -20957,7 +21043,7 @@ var CLSTAMP = "10062881";
               );
           }
         }
-        function ln(e) {
+        function on(e) {
           return r.createElement(
             "svg",
             {
@@ -20978,7 +21064,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function un(e) {
+        function an(e) {
           return r.createElement(
             "svg",
             {
@@ -20995,7 +21081,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function mn(e) {
+        function cn(e) {
           const { className: t } = e;
           return r.createElement(
             "svg",
@@ -21013,7 +21099,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function dn(e) {
+        function ln(e) {
           return r.createElement(
             "svg",
             {
@@ -21027,7 +21113,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function hn(e) {
+        function un(e) {
           return r.createElement(
             "svg",
             {
@@ -21041,7 +21127,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function pn(e) {
+        function mn(e) {
           return r.createElement(
             "svg",
             {
@@ -21055,7 +21141,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function gn(e) {
+        function dn(e) {
           return r.createElement(
             "svg",
             {
@@ -21069,7 +21155,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function fn(e) {
+        function hn(e) {
           return r.createElement(
             "svg",
             {
@@ -21083,7 +21169,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function _n(e) {
+        function pn(e) {
           return r.createElement(
             "svg",
             {
@@ -21097,7 +21183,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function wn(e) {
+        function gn(e) {
           return r.createElement(
             "svg",
             {
@@ -21111,7 +21197,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function bn(e) {
+        function fn(e) {
           return r.createElement(
             "svg",
             {
@@ -21125,7 +21211,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Cn(e) {
+        function _n(e) {
           return r.createElement(
             "svg",
             {
@@ -21145,7 +21231,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function vn(e) {
+        function wn(e) {
           return r.createElement(
             "svg",
             {
@@ -21159,7 +21245,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Mn(e) {
+        function bn(e) {
           return r.createElement(
             "svg",
             {
@@ -21173,7 +21259,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Sn(e) {
+        function Cn(e) {
           return r.createElement(
             "svg",
             {
@@ -21199,7 +21285,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function yn(e) {
+        function vn(e) {
           return r.createElement(
             "svg",
             {
@@ -21213,7 +21299,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function En(e) {
+        function Mn(e) {
           return r.createElement(
             "svg",
             {
@@ -21227,7 +21313,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Bn(e) {
+        function Sn(e) {
           return r.createElement(
             "svg",
             {
@@ -21244,7 +21330,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function xn(e) {
+        function yn(e) {
           return r.createElement(
             "svg",
             {
@@ -21258,7 +21344,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Ln(e) {
+        function En(e) {
           return r.createElement(
             "svg",
             {
@@ -21272,7 +21358,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function kn(e) {
+        function Bn(e) {
           return r.createElement(
             "svg",
             {
@@ -21286,7 +21372,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Rn(e) {
+        function xn(e) {
           return r.createElement(
             "svg",
             {
@@ -21300,7 +21386,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function In(e) {
+        function Ln(e) {
           return r.createElement(
             "svg",
             {
@@ -21314,7 +21400,7 @@ var CLSTAMP = "10062881";
             }),
           );
         }
-        function Tn(e) {
+        function kn(e) {
           return r.createElement(
             "svg",
             {
@@ -21326,6 +21412,53 @@ var CLSTAMP = "10062881";
             r.createElement("path", {
               d: "M518.9,959h-.3c-133.4-.9-235.9-44.9-304.9-130.7-61.2-76.4-92.9-182.7-94-315.9v-.6c1.1-133.3,32.7-239.5,94-315.9,68.8-85.9,171.5-129.9,304.8-130.8h.5c102.3.7,187.8,27,254.3,78.1,62.5,48.1,106.5,116.6,130.7,203.7l-76,21.2c-41.1-147.5-145.2-222.9-309.3-224-108.4.8-190.3,34.9-243.6,101.2-49.8,62.1-75.5,151.9-76.5,266.9,1,115,26.7,204.7,76.6,266.9,53.3,66.4,135.3,100.5,243.6,101.2,97.7-.7,162.4-23.5,216.1-76.2,61.3-60.1,60.3-133.8,40.6-178.7-11.5-26.5-32.5-48.5-60.9-65.2-7.2,50.3-23.2,91.1-47.8,121.9-33,41-79.7,63.5-138.9,66.7-44.8,2.4-88-8.1-121.4-29.9-39.6-25.7-62.8-64.8-65.3-110.4-2.4-44.3,15.2-85.1,49.5-114.8,32.8-28.3,78.9-45,133.5-48.1,40.1-2.2,77.8-.4,112.5,5.3-4.6-27.6-13.9-49.6-27.9-65.4-19.1-21.8-48.7-32.9-87.9-33.2h-1.1c-31.5,0-74.2,8.7-101.4,49.2l-65.4-43.9c36.5-54.2,95.7-84,166.8-84h1.6c119,.7,189.9,73.6,196.9,200.7,4,1.7,8,3.5,12,5.3,55.5,26.1,96.1,65.6,117.5,114.3,29.7,67.9,32.5,178.4-57.7,266.7-68.9,67.4-152.5,97.9-271.1,98.7h-.3ZM556.3,523.5c-9,0-18.1.3-27.5.8-68.4,3.8-111,35.2-108.6,79.8,2.5,46.8,54.1,68.5,103.7,65.8,45.6-2.4,105-20.2,115-138.2-25.2-5.5-52.8-8.2-82.5-8.2Z",
             }),
+          );
+        }
+        function In(e) {
+          return r.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              version: "1.1",
+              viewBox: "0 0 1024 1024",
+              ...e,
+            },
+            r.createElement(
+              "g",
+              null,
+              r.createElement(
+                "g",
+                { id: "Layer_1" },
+                r.createElement(
+                  "g",
+                  null,
+                  r.createElement("path", {
+                    d: "M236.8,355.7h-58.6c-.7,85.4-.3,170.9-.7,256.4.2.8.3,1.7.3,2.5-.2,5-4.4,8.8-9.4,8.6-10.3.6-20.6.3-30.9.3,6.9,17,14.4,33.8,22.1,50.4,19.5-.7,41.6,3.6,58.2-9.3,15.1-11.1,19.7-30.8,19.4-48.6,0-86.8.2-173.7-.4-260.5Z",
+                  }),
+                  r.createElement("path", {
+                    d: "M455.9,539.6c14.1-35.5,30.9-69.9,45.9-104.9-18.3-2.1-39,3.8-55.9-3.3,8.2-27.5,23-52.8,33.5-79.5-19.9,0-40.1-.3-60.2,0-14.6,33.4-29.6,66.8-44.8,100-4.3,9.9-9.5,23.1-.5,32.1,11.6,10.5,28.5,6.4,42.7,7.4-9.8,24.9-22.8,48.5-31.1,73.9-4.6,12.6,6.9,25.5,19.4,25.5,22.7,1.5,45.6.2,68.4.6,7.4-16.6,14.9-33.2,22.2-50-13.3,0-26.9.9-39.8-1.7Z",
+                  }),
+                  r.createElement("path", {
+                    d: "M959.8,585.9c-1.2-25.2,4.9-53.6-10.7-75.6-13.3-18.7-37.3-23.7-58.8-24.1-1.3-30,5.9-65.3-16.3-89.8-20.6-23.1-53.9-23.2-82.4-22.1v-22.4h-59.5l-.4,22.7h-39.5v59.9c13.2-.1,26.4,0,39.5.3.4,17.4.4,34.7,0,51.9-19.8.3-39.6.3-59.4.3v59.8h59.5v127.2h59.5c0-42.4,0-84.7,0-127.1,29,0,57.9-.4,86.9,0,10.1-.9,21.8,6.3,21.5,17.5.8,15.9.8,31.8,0,47.6.3,5.4-3.8,10-9.1,10.3-16.6,1.2-33.1,0-49.7.6,7.3,17.2,14.4,34.6,22.7,51.4,27.3-1.6,60.7,5.3,81.5-17.2,19.8-18.3,13.8-47.2,14.7-71.2ZM831.8,486.9h-40.2c-.3-17.5-.4-35-.4-52.5,12.9,1.8,30.1-5.2,39.9,5.2,1.6,15.8.6,31.6.6,47.3Z",
+                  }),
+                  r.createElement("path", {
+                    d: "M618.5,434.3h37.5v-59.9h-136.4c0,19.9,0,40,.1,60h37.4v179.5c-17.8.2-35.7.2-53.6.2-9.2,19.9-18.3,39.8-27.3,59.8h199.7v-59.8c-19.1-.2-38.3,0-57.4-.2v-179.6Z",
+                  }),
+                  r.createElement("path", {
+                    d: "M900.4,433.7c11.1,0,22.3.6,33.4-.4,17.9-1.6,31.3-22.5,24.2-39.3-5.6-18.4-30.6-26.5-45.7-14.1-16.7,12.5-11.2,35.8-12,53.8Z",
+                  }),
+                  r.createElement("path", {
+                    d: "M78.6,434.2c-3.1,39.2-6.2,78.6-8.9,117.5-.7,8.9-2.6,17.7-5.7,26.1,10.1,23.1,20.1,46.1,30.9,68.8,24.1-32.2,33-72.8,35.5-112.2,2.1-33.5,5.8-67,7.1-100.6-19.6.8-39.2.5-58.9.5Z",
+                  }),
+                  r.createElement("path", {
+                    d: "M345.2,551.5c-2.8-39.1-5.9-78.2-8.9-117.2h-59.5c2.9,36.4,5.3,73,8.4,109.3s12.6,73.5,34.8,103.2c10.6-22.8,20.8-45.8,30.8-68.8-3.2-8.5-5.1-17.4-5.7-26.4Z",
+                  }),
+                  r.createElement("path", {
+                    d: "M378.1,609.4c-9.3,19.9-18.4,39.9-27.5,60,30.4,9,62.7,2.8,93.9,4.5,9.2-19.9,18.4-39.9,27.3-59.9-31.3-1.2-63.1,3.3-93.7-4.6Z",
+                  }),
+                ),
+              ),
+            ),
           );
         }
       },
@@ -21369,7 +21502,7 @@ var CLSTAMP = "10062881";
         var r = n(63696);
         let i = 0;
         function s() {
-          const e = r.useRef();
+          const e = r.useRef(void 0);
           return (
             void 0 === e.current && (e.current = "svgid_" + i++),
             [e.current, `url(#${e.current})`]
@@ -22110,11 +22243,11 @@ var CLSTAMP = "10062881";
       79769: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Jc: () => c,
-          Ji: () => d,
-          LU: () => m,
-          YX: () => u,
-          e0: () => h,
+          Jc: () => u,
+          Ji: () => p,
+          LU: () => h,
+          YX: () => d,
+          e0: () => g,
           lu: () => o.l,
         });
         var r = n(34629),
@@ -22122,19 +22255,31 @@ var CLSTAMP = "10062881";
           s = n(93960),
           o = n(90039);
         class a {
+          SyncStore(e) {
+            return this.Subscribe(e).Unsubscribe;
+          }
+          GetValue() {
+            return this.Value;
+          }
+        }
+        (0, r.Cg)([s.o], a.prototype, "SyncStore", null),
+          (0, r.Cg)([s.o], a.prototype, "GetValue", null);
+        class c extends a {}
+        class l extends c {
           m_callbacks;
           m_currentValue;
           m_fnEquals;
           constructor(e, t) {
-            (this.m_callbacks = new o.l()),
+            super(),
+              (this.m_callbacks = new o.l()),
               (this.m_currentValue = e),
               (this.m_fnEquals = t);
           }
           Set(e) {
             if (this.m_fnEquals) {
-              if (this.m_fnEquals(this.m_currentValue, e)) return;
-            } else if (this.m_currentValue === e) return;
-            (this.m_currentValue = e), this.m_callbacks.Dispatch(e);
+              if (this.m_fnEquals(this.m_currentValue, e)) return !1;
+            } else if (this.m_currentValue === e) return !1;
+            return (this.m_currentValue = e), this.m_callbacks.Dispatch(e), !0;
           }
           get Value() {
             return this.m_currentValue;
@@ -22146,17 +22291,18 @@ var CLSTAMP = "10062881";
             return this.m_callbacks.CountRegistered();
           }
         }
-        function c(e, t) {
-          return new a(e, t);
+        function u(e, t) {
+          return new l(e, t);
         }
-        class l {
+        class m extends a {
           m_fnMap;
           m_originalSubscribableValue;
           m_mappedSubscribableValue;
           m_bMappedValueStale = !1;
           constructor(e, t, n) {
-            (this.m_originalSubscribableValue = e),
-              (this.m_mappedSubscribableValue = new a(t(e.Value), n)),
+            super(),
+              (this.m_originalSubscribableValue = e),
+              (this.m_mappedSubscribableValue = new l(t(e.Value), n)),
               (this.m_fnMap = t),
               this.m_originalSubscribableValue.Subscribe(() => {
                 this.m_mappedSubscribableValue.SubscriberCount > 0
@@ -22167,7 +22313,7 @@ var CLSTAMP = "10062881";
           get Value() {
             return (
               this.m_bMappedValueStale && this.UpdateMappedValue(),
-              this.m_mappedSubscribableValue?.Value
+              this.m_mappedSubscribableValue.Value
             );
           }
           Subscribe(e) {
@@ -22180,10 +22326,10 @@ var CLSTAMP = "10062881";
               (this.m_bMappedValueStale = !1);
           }
         }
-        function u(e, t, n) {
-          return new l(e, t, n);
+        function d(e, t, n) {
+          return new m(e, t, n);
         }
-        class m {
+        class h {
           m_schTimer;
           m_fnCallback;
           Schedule(e, t) {
@@ -22204,8 +22350,8 @@ var CLSTAMP = "10062881";
             (this.m_fnCallback = void 0), e?.();
           }
         }
-        (0, r.Cg)([s.o], m.prototype, "ScheduledInternal", null);
-        class d {
+        (0, r.Cg)([s.o], h.prototype, "ScheduledInternal", null);
+        class p {
           m_rgListeners = [];
           AddEventListener(e, t, n) {
             e.addEventListener(t, n),
@@ -22217,7 +22363,7 @@ var CLSTAMP = "10062881";
             this.m_rgListeners = [];
           }
         }
-        class h {
+        class g {
           m_vecCallbacks = [];
           Push(e) {
             this.m_vecCallbacks.push(e);
@@ -22233,7 +22379,7 @@ var CLSTAMP = "10062881";
             return this.Unregister;
           }
         }
-        (0, r.Cg)([s.o], h.prototype, "Unregister", null);
+        (0, r.Cg)([s.o], g.prototype, "Unregister", null);
       },
       90765: (e, t, n) => {
         "use strict";
@@ -22531,7 +22677,7 @@ var CLSTAMP = "10062881";
           NO: () => i,
           No: () => m,
           OG: () => _,
-          Oe: () => R,
+          Oe: () => I,
           SY: () => d,
           TN: () => o,
           TV: () => y,
@@ -22545,7 +22691,7 @@ var CLSTAMP = "10062881";
           gr: () => b,
           id: () => s,
           kD: () => r,
-          lc: () => I,
+          lc: () => R,
           pE: () => E,
           pd: () => u,
           qf: () => g,
@@ -22613,10 +22759,10 @@ var CLSTAMP = "10062881";
             );
           })(document);
         }
-        function R(e, t) {
-          I(e.document, t, !0);
+        function I(e, t) {
+          R(e.document, t, !0);
         }
-        function I(e, t, n) {
+        function R(e, t, n) {
           const r = Object.assign({}, t),
             i = e.getElementsByTagName("head")[0],
             s = i.getElementsByTagName("link"),
@@ -23010,8 +23156,8 @@ var CLSTAMP = "10062881";
           gR: () => b,
           lQ: () => w,
           qZ: () => A,
-          sq: () => R,
-          u6: () => I,
+          sq: () => I,
+          u6: () => R,
           vl: () => k,
         });
         var r,
@@ -23118,25 +23264,26 @@ var CLSTAMP = "10062881";
               r.getMonth() == i.getMonth() &&
               r.getDate() == i.getDate())
             ? p(e) + " - " + p(t)
-            : (function (e, t) {
-                let n = new Date(1e3 * e),
-                  r = new Date(1e3 * t);
-                const i = new Date();
+            : (function (e, t, n) {
+                let r = new Date(1e3 * e),
+                  i = new Date(1e3 * t);
+                const o = new Date();
                 if (
-                  n.getFullYear() != r.getFullYear() ||
-                  i.getFullYear() == n.getFullYear()
+                  r.getFullYear() != i.getFullYear() ||
+                  o.getFullYear() != r.getFullYear() ||
+                  n
                 )
                   return `${m(e)} - ${m(t)}`;
-                const o = { month: "short", day: "numeric" },
-                  a =
-                    n.toLocaleDateString(s.pf.GetPreferredLocales(), o) + " - ";
-                if (n.getMonth() == r.getMonth()) {
+                const a = { month: "short", day: "numeric" },
+                  c =
+                    r.toLocaleDateString(s.pf.GetPreferredLocales(), a) + " - ";
+                if (r.getMonth() == i.getMonth()) {
                   const e = { day: "numeric" };
                   return (
-                    a + r.toLocaleDateString(s.pf.GetPreferredLocales(), e)
+                    c + i.toLocaleDateString(s.pf.GetPreferredLocales(), e)
                   );
                 }
-                return a + r.toLocaleDateString(s.pf.GetPreferredLocales(), o);
+                return c + i.toLocaleDateString(s.pf.GetPreferredLocales(), a);
               })(e, t);
         }
         function m(e, t) {
@@ -23147,7 +23294,7 @@ var CLSTAMP = "10062881";
           );
         }
         function d(e) {
-          return R(new Date(1e3 * e));
+          return I(new Date(1e3 * e));
         }
         !(function (e) {
           (e[(e.None = 0)] = "None"),
@@ -23232,7 +23379,7 @@ var CLSTAMP = "10062881";
             if (!a.bGranularFutureTime)
               return (
                 i.tB(n.getTime() - r.getTime()),
-                n.getFullYear() == r.getFullYear() ? L(n) : R(n)
+                n.getFullYear() == r.getFullYear() ? L(n) : I(n)
               );
             i.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
             let e = new Date();
@@ -23288,7 +23435,7 @@ var CLSTAMP = "10062881";
               ? (0, s.we)("#TimeSince_1Week")
               : (0, s.we)("#TimeSince_XWeeks", e);
           }
-          return n.getFullYear() == r.getFullYear() ? L(n) : R(n);
+          return n.getFullYear() == r.getFullYear() ? L(n) : I(n);
         }
         function b(e) {
           const t = new Date(1e3 * e),
@@ -23303,7 +23450,7 @@ var CLSTAMP = "10062881";
               : t.getFullYear() == n.getFullYear()
                 ? L(t)
                 : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
-                  ? R(t)
+                  ? I(t)
                   : k(t)
           );
         }
@@ -23377,7 +23524,7 @@ var CLSTAMP = "10062881";
             t)
           );
         }
-        function R(e) {
+        function I(e) {
           const t = e.getMonth() + 12 * e.getFullYear();
           let n = S.get(t);
           return (
@@ -23390,7 +23537,7 @@ var CLSTAMP = "10062881";
             n)
           );
         }
-        function I(e, t) {
+        function R(e, t) {
           switch (e.getUTCMonth()) {
             case 0:
             case 1:
@@ -23814,19 +23961,18 @@ var CLSTAMP = "10062881";
           md: () => s.md,
           Fd: () => s.Fd,
           XB: () => i.XB,
-          oI: () => h.o,
+          oI: () => d.o,
           xP: () => r.xP,
           cZ: () => i.cZ,
           hL: () => r.hL,
           dh: () => r.dh,
           uN: () => r.uN,
           o4: () => r.o4,
-          w6: () => d,
+          w6: () => m,
           ML: () => r.ML,
           xA: () => r.xA,
           CH: () => r.CH,
           p1: () => s.p1,
-          Hr: () => u,
           l6: () => r.l6,
           Qi: () => r.Qi,
           SK: () => r.SK,
@@ -23836,9 +23982,8 @@ var CLSTAMP = "10062881";
           xM: () => r.xM,
           bs: () => r.bs,
           uD: () => r.uD,
-          AX: () => r.AX,
           Ue: () => i.Ue,
-          Pt: () => m,
+          Pt: () => u,
           X: () => c,
           Sz: () => r.Sz,
           vJ: () => r.vJ,
@@ -23849,6 +23994,7 @@ var CLSTAMP = "10062881";
           wY: () => s.wY,
           aA: () => r.aA,
           D5: () => i.D5,
+          YR: () => r.YR,
           gc: () => r.gc,
           x2: () => r.x2,
           _g: () => r._g,
@@ -23895,45 +24041,7 @@ var CLSTAMP = "10062881";
           };
         }
         var l = n(54644);
-        function u(e = !1) {
-          let [t, n] = (0, o.useState)(!1),
-            r = (0, o.useRef)(),
-            s = (0, i.QS)(
-              (e) => {
-                if (((r.current = e), !e)) return void n(!1);
-                let t = () => {
-                  n((0, l.ww)(e));
-                };
-                return (
-                  e.addEventListener("fullscreenchange", t),
-                  () => {
-                    e.removeEventListener("fullscreenchange", t);
-                  }
-                );
-              },
-              [n],
-            ),
-            a = (0, o.useCallback)(() => {
-              if (!r.current) return;
-              let t = r.current;
-              if ((0, l.ww)(t)) return void (0, l.MS)(t);
-              if ((0, l.tl)(t)) return;
-              if (!e) return;
-              let n = t.getElementsByTagName("video");
-              if (0 == n.length) return;
-              let i = n[0];
-              i.webkitSetPresentationMode &&
-                i.webkitSetPresentationMode("fullscreen");
-            }, [r, e]);
-          return [
-            s,
-            (0, o.useMemo)(
-              () => ({ bFullscreen: t, fnToggleFullscreen: a }),
-              [t, a],
-            ),
-          ];
-        }
-        function m(e) {
+        function u(e) {
           return (0, i.QS)(
             (t) => {
               if (!t || !e) return;
@@ -23946,13 +24054,13 @@ var CLSTAMP = "10062881";
             [e],
           );
         }
-        function d(e) {
+        function m(e) {
           const t = o.useRef(!0),
             n = o.useRef(void 0),
             r = o.useRef(void 0),
-            a = o.useRef();
+            a = o.useRef(e);
           a.current = e;
-          const c = o.useRef(),
+          const c = o.useRef(void 0),
             l = o.useCallback((e) => {
               c.current !== e && ((c.current = e), (t.current = !0));
             }, []),
@@ -23968,7 +24076,7 @@ var CLSTAMP = "10062881";
           const m = (0, s.wY)(u);
           return (0, i.Ue)(l, m);
         }
-        var h = n(93960);
+        var d = n(93960);
       },
       99251: (e, t, n) => {
         "use strict";
@@ -24350,6 +24458,7 @@ var CLSTAMP = "10062881";
           bf: () => c.bf,
           hf: () => h,
           iA: () => o.iA,
+          oS: () => c.oS,
           rP: () => u,
           rf: () => E,
           ss: () => m,
@@ -24501,6 +24610,7 @@ var CLSTAMP = "10062881";
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",
           CLAN_CDN_ASSET_URL: "",
+          COMMUNITY_ASSETS_BASE_URL: "",
           VIDEO_CDN_URL: "",
           COMMUNITY_CDN_URL: "",
           COMMUNITY_CDN_ASSET_URL: "",
@@ -24592,12 +24702,13 @@ var CLSTAMP = "10062881";
       9731: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Bu: () => _,
-          Fd: () => p,
+          Bu: () => w,
+          Fd: () => g,
           KC: () => c,
-          Tc: () => h,
+          Tc: () => p,
           bd: () => d,
           bf: () => l,
+          oS: () => h,
         });
         var r = n(49412),
           i = n(9626),
@@ -24626,13 +24737,16 @@ var CLSTAMP = "10062881";
                 u.add(e);
               });
         }
-        function h(e, t = o) {
-          return g(e, t, !0);
+        function h() {
+          m || ((m = !0), u.forEach((e) => e()));
         }
         function p(e, t = o) {
-          return g(e, t, !1);
+          return f(e, t, !0);
         }
-        function g(e, t = o, n) {
+        function g(e, t = o) {
+          return f(e, t, !1);
+        }
+        function f(e, t = o, n) {
           let r;
           if (
             ((r =
@@ -24640,9 +24754,9 @@ var CLSTAMP = "10062881";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
-                    BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
-                    BUILD_RTIME_UTC: 1757634428,
+                    BUILD_TIME_LOCAL: "Sep 17 2025 : 15:52:55",
+                    BUILD_TIME_UTC: "Sep 17 2025 : 22:52:55",
+                    BUILD_RTIME_UTC: 1758149575,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -24666,11 +24780,11 @@ var CLSTAMP = "10062881";
             }
           else n && console.error("Missing config element #", t);
         }
-        const f = "presentation_mode";
-        function _() {
+        const _ = "presentation_mode";
+        function w() {
           let e = null;
           return (
-            (0, i.kI)() && (e = (0, i.VY)(f)),
+            (0, i.kI)() && (e = (0, i.VY)(_)),
             Boolean(e && 1 === Number.parseInt(e))
           );
         }
@@ -24716,7 +24830,12 @@ var CLSTAMP = "10062881";
         }
         function p(e, t) {
           return (
-            !!window.location.href.match("[?&]" + t + "=") ||
+            !!(
+              window &&
+              window.location &&
+              window.location.href &&
+              window.location.href.match("[?&]" + t + "=")
+            ) ||
             !(
               "undefined" == typeof navigator ||
               !navigator.userAgent ||
@@ -24813,7 +24932,7 @@ var CLSTAMP = "10062881";
       },
       69823: (e, t, n) => {
         "use strict";
-        n.d(t, { Q: () => I });
+        n.d(t, { Q: () => R });
         var r = n(63696),
           i = n(7470),
           s = n(90095),
@@ -24849,9 +24968,9 @@ var CLSTAMP = "10062881";
               n.bind(n, 58616),
             ),
           ),
-          R = "is-first-client-load";
-        function I() {
-          return "false" !== sessionStorage.getItem(R);
+          I = "is-first-client-load";
+        function R() {
+          return "false" !== sessionStorage.getItem(I);
         }
         function T() {
           return r.createElement(
@@ -24970,11 +25089,11 @@ var CLSTAMP = "10062881";
             (u.TS.IN_STEAMUI = !0),
             (function () {
               let e = !0;
-              if (sessionStorage.getItem(R) && u.TS.CLIENT_SESSION > 0) {
+              if (sessionStorage.getItem(I) && u.TS.CLIENT_SESSION > 0) {
                 const t = 30;
                 Date.now() / 1e3 > u.TS.CLIENT_SESSION + t && (e = !1);
               }
-              sessionStorage.setItem(R, e ? "true" : "false");
+              sessionStorage.setItem(I, e ? "true" : "false");
             })();
           const e = document.getElementById("root");
           i.H(e).render(r.createElement(F, { cm: window.cm }));
@@ -25077,6 +25196,7 @@ var CLSTAMP = "10062881";
         2438: "localization/steamui_vietnamese-json",
         2448: "localization/steampops_latam-json",
         2481: "localization/shared_bulgarian-json",
+        2515: "localization/steampops_arabic-json",
         2611: "localization/friendsui_sc_schinese-json",
         2640: "localization/friendsui_greek-json",
         2646: "localization/steamui_japanese-json",
@@ -25098,6 +25218,7 @@ var CLSTAMP = "10062881";
         3583: "localization/steampops_indonesian-json",
         3594: "localization/shared_brazilian-json",
         3714: "sp",
+        3834: "chunk~1a96cdf59",
         3869: "localization/steamui_indonesian-json",
         4026: "localization/friendsui_ukrainian-json",
         4102: "localization/shared_arabic-json",
@@ -25178,144 +25299,147 @@ var CLSTAMP = "10062881";
       })[e] || e) +
       ".js?contenthash=" +
       {
-        48: "6c8b8d906ea798b78f78",
-        89: "518b89b708126afaf165",
-        106: "f4b45b329c5fe8c1c224",
-        129: "30ee17d1a215dcb70aa8",
-        139: "dda7c5a5d0ae5d406e99",
-        297: "7ace395d7bacf7fbc428",
-        674: "b07f5346f25e6f893118",
-        740: "9c1bb91dffc45f4f1b5e",
-        786: "45ea218a07e68e7300e5",
-        823: "fdf7c7fffca7c33e62f1",
-        901: "c109ab3dfa7b9dd074d7",
-        1005: "4c28b504900f76ae4e50",
-        1012: "cded7344104308eb77a6",
-        1093: "7bd044ddebc026b54f90",
-        1220: "267d5635590d2b12d141",
+        48: "c4d043f780399deb7573",
+        89: "93102e5dfed8c9db343c",
+        106: "2027421167eb4d0b96a8",
+        129: "9598b53734a013e2f4fb",
+        139: "f017b2153cafb0b81702",
+        297: "0ce42486336407748cdc",
+        674: "d462b8f28e333cbe1761",
+        740: "a07bd5914461b7dbd4bc",
+        786: "d10337a025a2aadefde5",
+        823: "b04620ee63a3af465b22",
+        901: "d43ec69560ef21a0c87c",
+        1005: "568b7fe8da2d4e60f10f",
+        1012: "ebbaa97b86764aacb98f",
+        1093: "ddef630a2b13c311735e",
+        1220: "98f29e1b9216fd6a62b6",
         1275: "11e4a8e286f3edd19d2b",
-        1389: "0f8f3dc5fe8c0b5a8667",
-        1423: "b3e9b45bfa9e4affd61d",
-        1463: "1a4fca79ed2c9db01d4c",
-        1478: "01335a8308cbf6e58d71",
-        1511: "3f37c1735b705e9e6b0e",
-        1573: "4d1ee92e3323b551a24e",
-        1648: "6f606ba2c6eae2600b53",
-        1822: "28e419798b6625a130b8",
+        1389: "1f4c22820b7aff686e03",
+        1423: "440cebcbe4573e593b5f",
+        1463: "fbdcc5bbe67ca9790f1a",
+        1478: "d33874435fd80dd16eb7",
+        1511: "fad89467b4526774c50b",
+        1573: "6da5e1ee5c976fdd5224",
+        1648: "38355f88c0b3c2e18409",
+        1822: "90284fd5ced12ad87353",
         1879: "62d6403013b08cb655c3",
-        2021: "7b3d8c3ecc4de18d3525",
-        2056: "acad628a1efe48c33d19",
-        2199: "e4901a16a5e24707b60b",
+        2021: "06f5ecda8a2fd1b6fa00",
+        2056: "275ccc15ef6b1429225f",
+        2199: "bd113b37b7ddddd3c0dd",
         2225: "dc3d09d21b6992daad2e",
-        2263: "f2cc7c82b41f284d4f94",
-        2266: "eea6d65831676709717e",
-        2320: "fb99b00c253d83a0a564",
-        2438: "7bb41555d889e19a293b",
+        2263: "b9f77636fecf3d6308c7",
+        2266: "25d97e5ddf5647d79bc7",
+        2320: "758d0659db65108469ac",
+        2438: "76ebab0b6198b81cc297",
         2448: "c1f0b015f00cac957233",
-        2481: "3a9e5a9413afd43a73b7",
+        2481: "9cc4028a91198ff13473",
+        2515: "9a062cc85cb096b00e67",
         2611: "a2afb4fc0dc2e7577bc2",
-        2640: "3076a4bb4fed859d9897",
-        2646: "fae48b494acb559b64dd",
-        2664: "118b4744b544f09daeae",
-        2761: "574d138ad545e12687f2",
-        2783: "a486f3c0fd2b77f5d286",
+        2640: "caaabeb32b6c6bf52ad7",
+        2646: "a1659687b5f71013aa44",
+        2664: "aac9a09e5ea642506cee",
+        2761: "5341d796b8b9662670c2",
+        2783: "96080a148ceb9ae884db",
         2862: "6d6dfd8b8af302f8846e",
-        2867: "e294d4ffc455b78a0201",
-        2880: "06e74e5b184d67df3f14",
-        2889: "b9abff4f1a3a1f07e514",
+        2867: "308bd607174e67bb65f5",
+        2880: "6455bb0d85dcdf2ca172",
+        2889: "b316aa1c352a343c5643",
         2952: "5cc53fdb04ed91186e12",
-        2959: "5740b8e4371d5e201d73",
+        2959: "fbe7d617a9b34f7f20d1",
         2984: "cdb6f5e43526a559784c",
-        3087: "4755ff0f369b07c40ea6",
+        3087: "8f9f01a6ee331b8a5d9d",
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
-        3366: "5854ad132884cbc8d12f",
-        3569: "898e3bea854cd5329a75",
+        3366: "e918a13ca146f6e8dec5",
+        3569: "aafea85f36c893ccb08a",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "8d10a1ce0789220acccb",
+        3594: "9eef22732ed51cbde0c0",
         3714: "ab7010eec823473536d8",
-        3869: "923407bae2d35a2fa1c5",
-        4026: "f3d756cb30a6f6fa6263",
-        4102: "f43aeb08951dc8b6d64b",
+        3834: "e7e252595ae5778f7604",
+        3869: "7b19dbd35f0ff1700658",
+        4026: "3a0ddd3d7097573836d7",
+        4102: "3bf4d6726bf0dba21c18",
         4139: "712b259cac8237357271",
         4175: "92d7ba0916b98d8e27c3",
-        4224: "eaf78917e2166a68b8bd",
-        4321: "78e58435867190f645b6",
-        4481: "40b6db2f9658e7e035b3",
+        4224: "770f6f5e319430ab3f84",
+        4321: "9d8a606a3b172d17b9dd",
+        4481: "46d30c981f0f93937630",
         4839: "b1ca14b72a083777a78d",
-        4842: "ad9e809fb763ba707c7a",
-        4952: "39d8def1629a21ce2ec4",
+        4842: "b53ed8a66dc1dd91c4b0",
+        4952: "4e8a4683126ebff431f8",
         5173: "976ad1b3dcd79bb87b9c",
-        5553: "ede3c546b7ec057f6036",
-        5592: "ef22f81651c9fea57782",
+        5553: "625ad2ed1390b8ac7c8e",
+        5592: "6a816a482f598e082d1a",
         5704: "379467b643925dea1061",
-        5716: "585d570458648f31bb4b",
-        5803: "80c0bd47489bc3b0a6b3",
-        5864: "de2019c5464d6635c276",
-        6120: "df193eabd2ad6b5731f2",
-        6197: "5712cb1ab1e8e119ef62",
-        6345: "fef99a42fdc175f05941",
-        6409: "f1900755a4cb0efb6332",
-        6430: "d885a0a9865d682185a4",
-        6472: "302c3a47a86e6c8940eb",
-        6577: "f4f6dda24397c550f243",
-        6752: "ac45487aca9060de795b",
+        5716: "827142ef1994da2e8bd8",
+        5803: "683932e4e51dbaa1caec",
+        5864: "952d8b6551eeef751eef",
+        6120: "f155c5b7a09563ce8613",
+        6197: "950c68efdfb0231bfe51",
+        6345: "b0efa420d4e8f087a805",
+        6409: "c7ecacc9aa4f639ad368",
+        6430: "6e8c136a6e334f20c725",
+        6472: "0feda94f2c6e8e04c97d",
+        6577: "66575847a1e3e58519a6",
+        6752: "284b2bcd8e04ef1be5ef",
         6785: "69a9f0b91f21affb7342",
-        6888: "132f86a98415da83183f",
-        6890: "2096d33e40f72338e7f0",
-        6896: "f18f04bfef098a57e289",
+        6888: "9345e6a916f5a948b01b",
+        6890: "353f5c3f8b69b1ce6636",
+        6896: "39be781840ecd6925e02",
         7151: "45f70eb6851f2ac45f0d",
-        7155: "cae46d97d5e5a0b6f700",
-        7314: "9549b4c2bbcd41c7dade",
+        7155: "4d52151afb368a1299ba",
+        7314: "70be31f842c91b2abbb3",
         7316: "18e5e6b118a1b52fddc2",
         7376: "1a70f0da1467e92dd08f",
-        7442: "28aee6341b432cd4ebb2",
+        7442: "ad075ad48bfe5761fbbe",
         7462: "52ace9199689821be1eb",
-        7533: "83301f6ee44ad980de4f",
+        7533: "1379d3efda75c5cbf850",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "aed4c0fda5b9b4db2dd3",
-        7696: "66e34ef687aaeb35eeae",
+        7653: "64860b4f6b9afea0e983",
+        7696: "7f1c75b2517eecb870e5",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
-        7836: "22ac7187323a97b7af56",
-        7993: "a291d22a2253ce481313",
+        7836: "6f22b219f7668ba7efde",
+        7993: "0c2ba53b15f34faad063",
         8054: "cffb972d0ae14c9266f8",
-        8159: "0fc0f44a1d6d685af0d5",
-        8263: "b24751f2ee6b3f9a1cfa",
-        8280: "3ac92a197517e25c86d4",
+        8159: "4e3da3273952356ae805",
+        8263: "1a5da4ebf0803b3d0ccb",
+        8280: "0c890370b858d4437152",
         8286: "1f5be36130bf4017cada",
-        8291: "9ce946f2121b106df5d9",
-        8396: "32e5eb4a4e5a546da28d",
+        8291: "9dd1164bd75dcaeb9895",
+        8396: "0a0987f39d31a3202727",
         8443: "14576c5b8a2b6ac79ecd",
-        8445: "ae709c6c6dcbaa934ce2",
-        8478: "6a43580d5abdab6866bc",
+        8445: "3cc85cfc77d01ded4ab6",
+        8478: "89707ac0ffb085fd89be",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "220fc4b6796abfdf04e1",
-        8534: "3435d2f40ca5662c303f",
+        8522: "34219c436a24e3a5c9a0",
+        8534: "185de194d0ebb763c5d7",
         8545: "1aa2273a0a3161924d55",
-        8674: "3377e2e2c5ddb3dcad2a",
-        8699: "43afd6e96d56692322f9",
-        8732: "55ec400e1359b70b1964",
-        8830: "885910107fa58bc88dfd",
-        8872: "a0bdc26eabd915bfd047",
-        9053: "4199cd02e2103e7ecb9b",
+        8674: "b4f0675395cb10ac6121",
+        8699: "ad450c888e553fa53e4b",
+        8732: "6c969dce545d230ee09f",
+        8830: "383ba2455a0392740f3c",
+        8872: "27a298843682ce53fb33",
+        9053: "5c9b8957e5b393d415cb",
         9063: "77f0c9977cc1aecd1944",
         9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
-        9171: "6d1897e631b2a8096aee",
-        9298: "d9eab83df9ae6967a1b7",
-        9368: "5a36fd753f60818e1ca3",
+        9171: "6d986de85f82dcf58ddf",
+        9298: "2bf8033bc9e95c857a41",
+        9368: "5d3173a9336a3ac456b5",
         9418: "29e9fa15a9fc8e62a893",
-        9462: "77a210af3f848de941d1",
+        9462: "5985248e201b7f99b9b6",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "e8dd7f8ab1ab23219782",
-        9869: "8f4b26192400ffd85271",
-        9887: "bed5ff195159170db38b",
+        9858: "85c4849ec40d8563bbae",
+        9869: "cd88c8d4263e81ca1643",
+        9887: "d2213752070154d47a89",
       }[e]),
     (a.miniCssF = (e) =>
       "css/" +
       ({
         1220: "gamenotes",
+        3834: "chunk~1a96cdf59",
         7462: "gamerecording",
         7653: "broadcastapp",
         8396: "broadcast",
@@ -25459,9 +25583,16 @@ var CLSTAMP = "10062881";
           t[n]
             ? r.push(t[n])
             : 0 !== t[n] &&
-              { 674: 1, 1220: 1, 7462: 1, 7653: 1, 8396: 1, 9129: 1, 9858: 1 }[
-                n
-              ] &&
+              {
+                674: 1,
+                1220: 1,
+                3834: 1,
+                7462: 1,
+                7653: 1,
+                8396: 1,
+                9129: 1,
+                9858: 1,
+              }[n] &&
               r.push(
                 (t[n] = e(n).then(
                   () => {

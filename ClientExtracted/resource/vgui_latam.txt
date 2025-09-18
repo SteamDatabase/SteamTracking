@@ -40,7 +40,7 @@
 "vgui_yes"			"Sí"
 "vgui_no"			"No"
 "vgui_CreateDirectoryFail_Title"	"Crear carpeta - Error"
-"vgui_CreateDirectoryFail_Info"		"No se ha podido crear la carpeta, esta unidad es de solo lectura."
+"vgui_CreateDirectoryFail_Info"		"No se pudo crear la carpeta, esta unidad es de solo lectura."
 "vgui_CreateDirectoryFail_AlreadyExists" "Esta carpeta ya existe."
 "vgui_ShuttingDown"		"Apagando..."
 

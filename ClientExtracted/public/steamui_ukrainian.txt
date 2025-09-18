@@ -5037,6 +5037,7 @@
 "DownloadRegion_reunion"        "Реюньйон"
 "DownloadRegion_kuwait"         "Кувейт"
 "DownloadRegion_ua_sevastopol"  "Україна — Севастополь"
+"DownloadRegion_lv_riga"		"Латвія"
 
 "SettingsController_AutosaveName"	"Конфігурація контролера"
 "ControllerBinding_Offline_Save"	"[Автономне автозбереження]"

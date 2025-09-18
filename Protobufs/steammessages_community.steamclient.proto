@@ -413,20 +413,6 @@ message CCommunity_SetRecommendationBotReviewStatus_Request {
 message CCommunity_SetRecommendationBotReviewStatus_Response {
 }
 
-message CCommunity_GetBotReviewScoreForRecommendation_Request {
-	repeated uint64 recommendation_ids = 1;
-	optional uint32 app_id = 2;
-}
-
-message CCommunity_GetBotReviewScoreForRecommendation_Response {
-	message BotReviewScoreEntry {
-		optional uint64 key = 1;
-		optional uint32 value = 2;
-	}
-
-	repeated .CCommunity_GetBotReviewScoreForRecommendation_Response.BotReviewScoreEntry bot_review_score = 1;
-}
-
 service Community {
 	rpc GetApps (.CCommunity_GetApps_Request) returns (.CCommunity_GetApps_Response);
 	rpc GetAppRichPresenceLocalization (.CCommunity_GetAppRichPresenceLocalization_Request) returns (.CCommunity_GetAppRichPresenceLocalization_Response);
@@ -453,5 +439,4 @@ service Community {
 	rpc GetUserPartnerEventsAppPriorities (.CCommunity_GetUserPartnerEventsAppPriorities_Request) returns (.CCommunity_GetUserPartnerEventsAppPriorities_Response);
 	rpc ClearSinglePartnerEventsAppPriority (.CCommunity_ClearSinglePartnerEventsAppPriority_Request) returns (.CCommunity_ClearSinglePartnerEventsAppPriority_Response);
 	rpc SetRecommendationBotReviewStatus (.CCommunity_SetRecommendationBotReviewStatus_Request) returns (.CCommunity_SetRecommendationBotReviewStatus_Response);
-	rpc GetBotReviewScoreForRecommendation (.CCommunity_GetBotReviewScoreForRecommendation_Request) returns (.CCommunity_GetBotReviewScoreForRecommendation_Response);
 }

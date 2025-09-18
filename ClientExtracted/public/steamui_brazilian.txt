@@ -4795,7 +4795,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_InstallSteamVR" "Instalar SteamVR"
 "SteamUI_LaunchSteamVR" "Iniciar SteamVR"
 
-"Steam_BLEControllerFirmware_Title" "Atualização de firwmare Bluetooth"
+"Steam_BLEControllerFirmware_Title" "Atualização de firmware Bluetooth"
 "Steam_BLEControllerFirmware_Header" "Aplicativo do Steam Link"
 "Steam_BLEControllerFirmware_Body" "Expanda a experiência de jogar no Steam para o seu telefone, tablet ou TV através da rede local.\n\nBaixe a nova atualização de firmware do Bluetooth para usar o Controle Steam com o aplicativo do Steam Link."
 "Steam_BLEControllerFirmware_LearnMore" "Saiba mais"
@@ -5036,6 +5036,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "DownloadRegion_reunion"        "Reunião (França)"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ucrânia — Sevastópol"
+"DownloadRegion_lv_riga"		"Letônia"
 
 "SettingsController_AutosaveName"	"Configuração de controle"
 "ControllerBinding_Offline_Save"	"[Salvo auto. no modo off-line]"

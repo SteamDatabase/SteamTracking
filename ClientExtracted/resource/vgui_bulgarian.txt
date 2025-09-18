@@ -46,7 +46,7 @@
 "vgui_ShuttingDown"		"Изключване…"
 
 "TextEntry_Language"		"Език"
-"TextEntry_ConversionMode"	"Режим на преобразуване"
+"TextEntry_ConversionMode"	"Режим на конверсия"
 "TextEntry_SentenceMode"	"Режим на предложения"
 
 "IME_English"			"Английски (English)"
@@ -59,9 +59,9 @@
 "IME_HalfWidthAlphanumeric"	"Непълно буквено и числено"
 
 "IME_General"			"Общи"
-"IME_BiasNames"			"Предпочитани имена"
-"IME_BiasSpeech"		"Предпочитание за реч"
-"IME_NoConversion"		"Без преобразуване"
+"IME_BiasNames"			"Предразположение за имена"
+"IME_BiasSpeech"		"Предразположение за реч"
+"IME_NoConversion"		"Без конверсия"
 
 "IME_0404"			"Chinese (Taiwan)"
 "IME_0804"			"Chinese (PRC)"

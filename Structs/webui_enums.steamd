@@ -29,6 +29,16 @@ enum by
 	by_play_wish = 3;
 }
 
+enum Calibrati
+{
+	CalibrationPrompt = 0;
+	CalibrationCountDown = 1;
+	CalibratingAccelerometerTolerances = 2;
+	CalibratingGyroDriftCorrection = 3;
+	CalibrationComplete_Success = 4;
+	CalibrationComplete_Failure = 5;
+}
+
 enum CM_EDITFLAG
 {
 	CM_EDITFLAG_NONE = 0;
@@ -1838,6 +1848,15 @@ enum UnnamedEnum21e1ba10d510cf3b
 	Vertical = 2;
 }
 
+enum UnnamedEnum2297b37d667f43d8
+{
+	k_eRuntimeCalibration = 0;
+	k_eCalibratingStationaryTolerances = 1;
+	k_eCalibratingAntidrift = 2;
+	k_eCalibrationComplete = 3;
+	k_eCalibrationFailed = 4;
+}
+
 enum UnnamedEnum22d3fe70562864f4
 {
 	INVALID = 0;
@@ -1964,6 +1983,15 @@ enum UnnamedEnum2c41fa064d91dbff
 	k_EOpenMic = 0;
 	k_EPushToTalk = 1;
 	k_EPushToMute = 2;
+}
+
+enum UnnamedEnum2c4894a4e2bdb633
+{
+	AwaitingHostWindow = 0;
+	PendingRequest = 1;
+	Shown = 2;
+	Closed = 3;
+	Failed = 4;
 }
 
 enum UnnamedEnum2c763df13954ae16
@@ -2695,14 +2723,6 @@ enum UnnamedEnum5e54375b174a402e
 	TransparentParentWindow = 4194304;
 	DisableDPIScale = 8388608;
 	ForceBrowserVisible = 16777216;
-}
-
-enum UnnamedEnum5f28b34f073d91c2
-{
-	DashboardBarPopup = 0;
-	Tooltip = 1;
-	MainPanelMenu = 2;
-	LoginQRCode = 3;
 }
 
 enum UnnamedEnum6010fbb978b95cf2

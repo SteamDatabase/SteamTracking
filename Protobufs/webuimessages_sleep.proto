@@ -1,0 +1,38 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CMsgSleepManagerState {
+}
+
+message CSleepManager_GetState_Request {
+}
+
+message CSleepManager_GetState_Response {
+	optional .CMsgSleepManagerState state = 1;
+}
+
+message CSleepManager_StateChanged_Notification {
+}
+
+message CSleepManager_RequestSuspend_Notification {
+}
+
+message CSleepManager_ResumeFromSuspend_Notification {
+}
+
+message CSleepManager_ShowPowerMenu_Notification {
+}
+
+service SleepManager {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetState (.CSleepManager_GetState_Request) returns (.CSleepManager_GetState_Response);
+	rpc NotifyStateChanged (.CSleepManager_StateChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyRequestSuspend (.CSleepManager_RequestSuspend_Notification) returns (.WebUINoResponse);
+	rpc NotifyResumeFromSuspend (.CSleepManager_ResumeFromSuspend_Notification) returns (.WebUINoResponse);
+	rpc NotifyShowPowerMenu (.CSleepManager_ShowPowerMenu_Notification) returns (.WebUINoResponse);
+}

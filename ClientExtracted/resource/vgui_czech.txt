@@ -224,8 +224,8 @@
 "vgui_HTMLSearchMatch" "%findactive% z %findcount%"
 "vgui_HTMLSearchThisPage" "Prohledat stránku"
 "vgui_choosedirectoryname"	"Vyberte název adresáře"
-"vgui_HTMLCloseDevTools"	"Zavřít vývojářské nástroje"
-"vgui_HTMLOpenDevTools"		"Otevřít vývojářské nástroje"
+"vgui_HTMLCloseDevTools"	"Zavřít nástroje pro vývojáře"
+"vgui_HTMLOpenDevTools"		"Otevřít nástroje pro vývojáře"
 "vgui_HTMLInspectElement"	"Prozkoumat prvek"
 }
 }

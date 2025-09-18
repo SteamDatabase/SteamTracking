@@ -5,6 +5,12 @@ import "webuimessages_base.proto";
 option optimize_for = SPEED;
 option cc_generic_services = true;
 
+enum EDisplayPowerState {
+	k_EDisplayPowerState_Invalid = 0;
+	k_EDisplayPowerState_Off = 1;
+	k_EDisplayPowerState_On = 2;
+}
+
 message CMsgDisplayInfo {
 	optional string make = 1;
 	optional string model = 2;
@@ -14,6 +20,7 @@ message CMsgDisplayInfo {
 	optional bool is_external = 6;
 	optional bool is_hdr_capable = 7;
 	optional bool is_vrr_capable = 8;
+	optional .EDisplayPowerState display_state = 9 [default = k_EDisplayPowerState_Invalid];
 }
 
 message CMsgGamescopeState {
@@ -30,6 +37,7 @@ message CMsgGamescopeState {
 	optional bool is_global_action_binding_supported = 11;
 	optional bool is_look_supported = 12;
 	repeated string look_names = 13;
+	optional bool is_display_state_management_supported = 14;
 }
 
 message CGamescope_GetState_Request {
@@ -57,6 +65,13 @@ message CGamescope_ReArmMuraCalibration_Request {
 message CGamescope_ReArmMuraCalibration_Response {
 }
 
+message CGamescope_SetDisplayPowerState_Request {
+	optional .EDisplayPowerState estate = 1 [default = k_EDisplayPowerState_Invalid];
+}
+
+message CGamescope_SetDisplayPowerState_Response {
+}
+
 service Gamescope {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
@@ -64,4 +79,5 @@ service Gamescope {
 	rpc NotifyStateChanged (.CGamescope_StateChanged_Notification) returns (.WebUINoResponse);
 	rpc SetBlurParams (.CGamescope_SetBlurParams_Request) returns (.CGamescope_SetBlurParams_Response);
 	rpc ReArmMuraCalibration (.CGamescope_ReArmMuraCalibration_Request) returns (.CGamescope_ReArmMuraCalibration_Response);
+	rpc SetDisplayPowerState (.CGamescope_SetDisplayPowerState_Request) returns (.CGamescope_SetDisplayPowerState_Response);
 }

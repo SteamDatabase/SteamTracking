@@ -359,7 +359,9 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
-$\n k_EContentReportReason_Terrorism
+$\n k_EContentReportReason_CSAMOther
+$\n k_EContentReportReason_Derailing
+$\n k_EContentReportReason_Reposting
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EGPUPerformanceLevel_Profiling
 $\n k_EGpuDriverId_GoogleSwiftshader
@@ -397,10 +399,8 @@ $\nY8O
 %\n!k_ECommunityItemClass_AvatarFrame
 %\n!k_ECommunityItemClass_BoosterPack
 %\n!k_ECompromiseDetectionType_Manual
-%\n!k_EContentModeratedReason_Invalid
-%\n!k_EContentModeratedReason_Unknown
-%\n!k_EContentReportReason_Commercial
-%\n!k_EContentReportReason_Prohibited
+%\n!k_EContentReportReason_Harassment
+%\n!k_EContentReportReason_OtherAbuse
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
@@ -498,7 +498,9 @@ $\nY8O
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_ECompromiseDetectionType_Move2FA
 &\n"k_EContentCheckProvider_SteamLearn
+&\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
+&\n"k_EContentReportSubjectType_Unused
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -552,7 +554,10 @@ $\nY8O
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
 (\n$k_EContentCheckProvider_GoogleGemini
-(\n$k_EContentModeratedReason_AnimalHarm
+(\n$k_EContentReportReason_Impersonation
+(\n$k_EContentReportReason_OtherOffTopic
+(\n$k_EContentReportReason_ReferralLinks
+(\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
@@ -630,7 +635,10 @@ $\nY8O
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentReportReason_Discrimination
+)\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
+)\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
@@ -641,6 +649,7 @@ $\nY8O
 )\n%k_EStorageBlockContentType_FileSystem
 )\n%k_EStorageBlockFileSystemType_Invalid
 )\n%k_EStorageBlockFileSystemType_Unknown
+)\n%k_EnhancedMarketAppearanceStatus_None
 )\n%k_PublishedFileQueryType_RankedByVote
 )\n\tcanvas_2d
 *N12_GLOBAL__N_115ScrollBarButtonE
@@ -663,7 +672,9 @@ $\nY8O
 *\n&k_EBrowserGPUStatus_DisabledCrashCount
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
-*\n&k_EContentReportSubjectType_UGCComment
+*\n&k_EContentReportReason_GenderedDoxxing
+*\n&k_EContentReportReason_OtherDisruptive
+*\n&k_EContentReportReason_OtherHarassment
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_ESystemDisplayCompatibilityMode_None
@@ -677,6 +688,9 @@ $\nY8O
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
 +\n'k_ECompromiseDetectionType_TicketAction
++\n'k_EContentReportReason_GenderedStalking
++\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EProfileCustomizationTypeAchievements
 +\n'k_EProfileCustomizationTypeFavoriteGame
 +\n'k_EProfileCustomizationTypeItemShowcase
@@ -707,6 +721,9 @@ $\nY8O
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
 ,\n(k_EBrowserFeatureStatus_UnavailableOffOk
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EContentReportReason_AttemptedScamming
+,\n(k_EContentReportReason_CSAMSexualContent
+,\n(k_EContentReportReason_InauthenticReview
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
@@ -718,6 +735,7 @@ $\nY8O
 ,\n(k_ESteamDeckCompatibilityTestResult_Fail
 ,\n(k_ESteamDeckCompatibilityTestResult_Pass
 ,\n(k_EWindowsUpdateInstallationImpact_Minor
+,\n(k_EnhancedMarketAppearanceStatus_Pending
 ,\n(k_PublishedFileQueryType_RankedByVotesUp
 ,\n\fvideo_decode
 ,\n\fvideo_encode
@@ -733,6 +751,10 @@ $\nY8O
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
 -\n)k_ECommentThreadTypeScreenshot_Deprecated
 -\n)k_EContentCheckProvider_Google_DEPRECATED
+-\n)k_EContentReportReason_EncouragingSuicide
+-\n)k_EContentReportReason_GenderedHarassment
+-\n)k_EContentReportReason_OtherScamsAndTheft
+-\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
@@ -744,6 +766,7 @@ $\nY8O
 -chromeosnopreallocate
 -chromeosverbose
 -clientbeta
+-debugoutputlogs
 -dev
 -devsites
 -devsiteshost
@@ -797,6 +820,9 @@ $\nY8O
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
 .\n*k_ECommentThreadTypeWorkshopAccount_Public
 .\n*k_ECompromiseDetectionType_MaliciousRefund
+.\n*k_EContentReportReason_EncouragingSelfHarm
+.\n*k_EContentReportReason_EncouragingViolence
+.\n*k_EContentReportReason_OrganizingTerrorism
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
@@ -805,6 +831,7 @@ $\nY8O
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
+.\n*k_EnhancedMarketAppearanceStatus_Completed
 .cpl
 .current.txt
 .dummy
@@ -836,8 +863,10 @@ $\nY8O
 /\n+k_ECommunityItemClass_MiniProfileBackground
 /\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
+/\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
+/\n+k_EnhancedMarketAppearanceStatus_InProgress
 /\n+k_PublishedFileQueryType_RankedByTextSearch
 /bin/lsof
 /data/src/common/../common/clientdirectories.h
@@ -985,11 +1014,13 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-03:55:56
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
+0\n,k_EContentReportReason_GenderedTargetedAbuse
+0\n,k_EContentReportReason_NonConsensualMaterial
+0\n,k_EContentReportReason_NudityOrSexualContent
 0\n,k_ENewSteamAnnouncementState_NewAnnouncement
 0\n,k_EPublishedFileInappropriateProvider_Amazon
 0\n,k_EPublishedFileInappropriateProvider_Google
@@ -1378,6 +1409,7 @@ $\nY8O
 18CMsgBlockedRequest
 18CMsgBrowserResized
 18CMsgBrowserSetName
+18CMsgCtrlTabPressed
 18CMsgExitFullScreen
 18CMsgFileLoadDialog
 18CMsgHistoryChanged
@@ -1387,6 +1419,7 @@ $\nY8O
 18CMsgSavePageToJPEG
 18CTextureIdProperty
 18CUtlCharConversion
+19:44:45
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CDirContentsWatcher
@@ -1405,6 +1438,8 @@ $\nY8O
 19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EE
 19CUtlQueueDeprecatedIiE
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentReportReason_CSAMFakedSexualContent
+1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1516,6 +1551,10 @@ $\nY8O
 28CMsgSetTouchGesturesToCancel
 2>/dev/null
 2\n.k_ECommentThreadTypePublishedFile_Announcement
+2\n.k_EContentReportReason_BullyingAndIntimidation
+2\n.k_EContentReportReason_GenderedOtherHarassment
+2\n.k_EContentReportReason_OtherCommercialActivity
+2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EWindowsUpdateRebootBehavior_MightNeedReboot
@@ -1532,6 +1571,7 @@ $\nY8O
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgZoomToElementAtPositionResponse
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
+3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 3pay
 41CMsgBrowserViewPostMessageToParentRequest
@@ -1542,6 +1582,7 @@ $\nY8O
 49fN
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
+4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
@@ -1551,6 +1592,7 @@ $\nY8O
 5000
 52F*
 5T&w&
+5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1560,6 +1602,8 @@ $\nY8O
 6 PQ
 6ConVar
 6\n2k_EBrowserGPUStatus_DisabledCompositingCommandLine
+6\n2k_EContentReportReason_GenderedEncouragingViolence
+6\n2k_EContentReportReason_RightToBeForgottenViolation
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
 6\n\fmessage_type
@@ -1597,6 +1641,7 @@ $\nY8O
 8CMsgCopy
 8CMsgFind
 8\foQS
+8\n4k_EContentReportReason_GenderedNonConsensualMaterial
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
@@ -1617,6 +1662,7 @@ $\nY8O
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9ZooDialog
+9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
 9a&g
@@ -1625,6 +1671,7 @@ $\nY8O
 : failed to parse contents
 ::g_pFileSystem
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
+:\n6k_EContentReportReason_GenderedBullyingAndIntimidation
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_ESteamOSCompatibilityResultDisplayType_Informational
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
@@ -1640,13 +1687,16 @@ $\nY8O
 <no url>
 <unnamed>
 = or is NULL
+=\n9k_EContentReportReason_FakedGenderedNonConsensualMaterial
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
 > or is NULL
 >/dev/null
 >= or is NULL
+>\n:k_EContentReportReason_NoncomplianceWithPricingRegulations
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
+?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 @bEnableLogTearOff
 @bEnableSpewThrottle
@@ -1682,6 +1732,7 @@ ASCII//TRANSLIT
 AUDIO
 AVGRATE
 AVS Failure
+A\n=k_EContentReportReason_OtherDataProtectionAndPrivacyViolation
 A\n\nannotation
 Abuse reporter's UGC Image
 Accel
@@ -2233,6 +2284,7 @@ CMsgClearHistory
 CMsgCloseDevTools
 CMsgComboNeedsPaint
 CMsgCopy
+CMsgCtrlTabPressed
 CMsgDisableBackgroundThrottling
 CMsgDraggableRegionsChanged
 CMsgExecuteJavaScript
@@ -2407,6 +2459,7 @@ CValidator::Pop()
 CValidator::Push(char const*, void*, char const*)
 CVariableBitStringBase
 C\n#direct_rendering_display_compositor
+C\n?k_EContentReportReason_MisleadingInformationAboutConsumerRights
 Cabal
 Cached credential is invalid
 Cafe Funded
@@ -2704,6 +2757,7 @@ DLSS
 DO NOT PARSE: fields may be stripped and missing.\n
 DOCUMENTS
 DOWNLOAD
+D\n@k_EContentReportReason_MisleadingInformationAboutGoodsOrServices
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
 D\vvf:
 Dana
@@ -2870,7 +2924,6 @@ EContentCheckProvider
 EContentCorruptionType
 EContentDownloadSourceType
 EContentDownloadType
-EContentModeratedReason
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
@@ -2883,6 +2936,7 @@ ECurrencyCode
 EDRMWrapLocation
 EDownloadSourceHTTPSSupport
 EDurationControlProgress
+EEnhancedMarketAppearanceStatus
 EExternalSaleEventType
 EFileIOError
 EForeignKeyAction
@@ -3345,6 +3399,7 @@ GPUVRam
 GPUVRamWarning
 GPUVRamWarningDesaturated
 GROUPACHIEVEMENTS
+G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 Galician
 Game
 Game Exit Event signaled.\n
@@ -5117,7 +5172,7 @@ Sending of an email failed
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 12 2025
+Sep 17 2025
 Seperator
 SeperatorBack
 SeperatorFront
@@ -5414,6 +5469,7 @@ Swahili
 Swap
 SwappingStreamBuffers
 Swedish
+Swish
 Switch
 SwitchToUser
 Switching Protocols
@@ -7482,17 +7538,21 @@ k_ECompromiseDetectionType_None
 k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
-k_EContentModeratedReason_MAX
-k_EContentModeratedReason_None
 k_EContentModeratorLevel_Any
 k_EContentModeratorLevel_MAX
 k_EContentModeratorLevel_Valve
-k_EContentReportReason_Abusive
-k_EContentReportReason_CSAM
+k_EContentReportReason_Baiting
+k_EContentReportReason_Begging
+k_EContentReportReason_Doxxing
+k_EContentReportReason_Gambling
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
-k_EContentReportReason_OffTopic
-k_EContentReportReason_Other
+k_EContentReportReason_None
+k_EContentReportReason_Raffles
+k_EContentReportReason_Spam
+k_EContentReportReason_Stalking
+k_EContentReportReason_Trolling
+k_EContentReportReason_Unknown
 k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
 k_EExportCodec_Default

@@ -36,8 +36,8 @@
 "Friends_Chat_Settings"		"Opciones de chat"
 "Friends_Chat_InviteToWatch"		"Invitar a ver"
 
-"Friends_Chat_CreateFailed_Title"		"No se ha podido crear el chat"
-"Friends_Chat_CreateFailed_Generic"		"No se ha podido crear la sala de chat"
+"Friends_Chat_CreateFailed_Title"		"No se pudo crear el chat"
+"Friends_Chat_CreateFailed_Generic"		"No se pudo crear la sala de chat"
 "Friends_Chat_CreateFailed_TooMany"		"Has creado demasiados chats. Debes vaciar algunos de esos chats para poder crear más."
 
 "Friends_Title_Online"	"Amigos"
@@ -82,7 +82,7 @@
 "Friends_HideFriend_Title"				"Amigos - Ignorar usuario"
 "Friends_HideFriend_Info"				"¿Estás seguro de que quieres ignorar y eliminar a %friend% de tu lista de amigos sugeridos?\n\n(Podrás agregarlo de nuevo más tarde mediante la opción 'Agregar un amigo...').\n"
 "Friends_HideFriend_Button"				"Ignorar a %friend%"
-"Friends_HideFriend_Failed"				"No se ha podido ignorar a %friend%"
+"Friends_HideFriend_Failed"				"No se pudo ignorar a %friend%"
 
 "Friends_Options"			"Opciones"
 
@@ -96,7 +96,7 @@
 "Friends_SearchingForFriend"				"Buscando a %search%..."
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% se ha agregado a tu lista de amigos con el nombre '%friend%'."
 "Friends_FriendHasBeenAddedToYourList"		"%friend% se ha agregado a tu lista de amigos."
-"Friends_UnableToFindFriendByThatName"		"No se ha podido encontrar a %search%. Pulsa 'Atrás' si quieres repetir la búsqueda."
+"Friends_UnableToFindFriendByThatName"		"No se pudo encontrar a %search%. Pulsa 'Atrás' si quieres repetir la búsqueda."
 "Friends_CannotAddSelfToList"				"¡No puedes agregarte a ti mismo a tu lista de amigos!"
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% ya se encuentra en tu lista de amigos con el nombre '%friend%'."
 
@@ -108,12 +108,12 @@
 "Friends_ConnectingToFriendsNetwork"			"Conectando con la red de Amigos..."
 "Friends_ScanningForFriends"					"Descargando lista de amigos..."
 
-"Friends_NotConnectedToFriendsNetwork"		"No se ha podido establecer la conexión con la red de Amigos. Steam seguirá intentando conectarse automáticamente hasta que el servicio esté disponible."
+"Friends_NotConnectedToFriendsNetwork"		"No se pudo establecer la conexión con la red de Amigos. Steam seguirá intentando conectarse automáticamente hasta que el servicio esté disponible."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Para utilizar Amigos tienes que volver a conectarte a Steam."
 "Friends_NotConnectedToFriendsNetwork_LoggedInElsewhere"	"Se ha interrumpido tu conexión con Amigos porque esta cuenta acaba de conectarse en otro equipo.\n"
 "Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Para conectarte con Amigos, tendrás que actualizar la versión de Steam. Reinicia Steam para obtener la última actualización."
 "Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Los servidores de Steam no se encuentran disponibles temporalmente por cuestiones de mantenimiento rutinario. Se restablecerá la conexión con Amigos tan pronto como esté disponible."
-"Friends_NotConnectedToFriendsNetwork_NoConnection"		"No se ha podido realizar ninguna conexión de red a los servidores de Steam. Steam seguirá intentando conectarse automáticamente hasta que el servicio esté disponible."
+"Friends_NotConnectedToFriendsNetwork_NoConnection"		"No se pudo realizar ninguna conexión de red a los servidores de Steam. Steam seguirá intentando conectarse automáticamente hasta que el servicio esté disponible."
 "Friends_NotAvailableInOfflineMode"			"La lista de amigos no está disponible en modo desconectado."
 
 
@@ -161,7 +161,7 @@
 "Friends_TooManyFriends"				"¡Tu lista de amigos está llena! Elimina algunos e inténtalo de nuevo."
 "Friends_TargetHasTooManyFriends"		"¡La lista de amigos de %search% está llena!"
 "Friends_DefaultAddError"	 			"Ha habido un problema al agregar a %search% a tu lista de amigos."
-"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se ha podido encontrar un usuario de Steam con el correo electrónico %search%.\n\nSi quieres invitar a %search% a que se una a Steam y agregarlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa 'Atrás' para repetir la búsqueda."
+"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se pudo encontrar un usuario de Steam con el correo electrónico %search%.\n\nSi quieres invitar a %search% a que se una a Steam y agregarlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa 'Atrás' para repetir la búsqueda."
 "Friends_InvitingFriend"				"Enviando invitación a %search%..."
 "Friends_InvitationPending"			"Se ha invitado a %search% a que se una a Steam recientemente; cuando responda, se agregará a tu lista de amigos.\n"
 "Friends_InvitationSent"				"Se ha enviado a %search% una invitación por email, y se agregará a tu lista de amigos cuando responda.\n"
@@ -177,7 +177,7 @@
 "Friends_invalidname_title"			"Amigos - Nombre reservado"
 "Friends_invalidname_info"			"El nombre de tu perfil no puede ser '[unknown]' ni contener 'Valve', 'Steam' o 'Support'. Por favor, elige otro nombre."
 
-"Friends_JoinGame_Dialog"				"No se ha podido encontrar una partida para %friend%"
+"Friends_JoinGame_Dialog"				"No se pudo encontrar una partida para %friend%"
 "Friends_Friendlist_Friends"			"AMIGOS"
 "Friends_Friendlist_OtherFriends"		"AMIGOS"
 "Friends_Friendlist_AllFriends"			"TODOS LOS AMIGOS"
@@ -231,7 +231,7 @@
 "Friends_Chat_ToggleBeeps"            "Emitir un sonido cuando los usuarios envíen mensajes"
 "Friends_Chat_ToggleTimestamp"        "Mostrar hora en cada mensaje"
 
-"Friends_Chat_ManageBanList"			"Gestionar lista de vetados"
+"Friends_Chat_ManageBanList"			"Administrar lista de vetados"
 "Friends_Chat_LockRoom"				"Bloquear esta sala (hacer privada)"
 "Friends_Chat_OpenRoom"               "Desbloquear esta sala (hacer pública)"
 
@@ -254,19 +254,19 @@
 "Friends_Chat_ActionResultUnlockChatSuccess"	"El chat está desbloqueado en este momento (disponible para todos los usuarios).\n"
 
 "Friends_Chat_ActionResultTitleFailed"    "Acción realizada de forma incorrecta"
-"Friends_Chat_ActionResultInviteFailed"   "No se ha podido invitar al usuario %user_name% al chat %chat%.\n%action_result%"
-"Friends_Chat_ActionResultKickFailed"     "No se ha podido expulsar al usuario %user_name% del chat %chat%.\n%action_result%"
-"Friends_Chat_ActionResultUnBanFailed"    "No se ha podido anular el veto al usuario %user_name% del chat %chat%.\n%action_result%"
-"Friends_Chat_ActionResultLockChatFailed"	"No se ha podido bloquear el chat %chat%\n%action_result%."
-"Friends_Chat_ActionResultUnlockChatFailed"	"No se ha podido desbloquear (abrir) el chat %chat%\n%action_result%."
-"Friends_Chat_ActionResultCloseFailed"	"No se ha podido cerrar el chat %chat%\n%action_result%."
+"Friends_Chat_ActionResultInviteFailed"   "No se pudo invitar al usuario %user_name% al chat %chat%.\n%action_result%"
+"Friends_Chat_ActionResultKickFailed"     "No se pudo expulsar al usuario %user_name% del chat %chat%.\n%action_result%"
+"Friends_Chat_ActionResultUnBanFailed"    "No se pudo anular el veto al usuario %user_name% del chat %chat%.\n%action_result%"
+"Friends_Chat_ActionResultLockChatFailed"	"No se pudo bloquear el chat %chat%\n%action_result%."
+"Friends_Chat_ActionResultUnlockChatFailed"	"No se pudo desbloquear (abrir) el chat %chat%\n%action_result%."
+"Friends_Chat_ActionResultCloseFailed"	"No se pudo cerrar el chat %chat%\n%action_result%."
 
 
 "Friends_Chat_ActionResultError"						"Error desconocido"
 "Friends_Chat_ActionResultNotPermitted"				"No dispones de los permisos necesarios para realizar esta acción."
 "Friends_Chat_ActionResultNotAllowedOnClanMember"     "No se permite realizar esta acción a un miembro del clan a menos que tengas un rango superior."
 "Friends_Chat_ActionResultNotAllowedOnBannedUser"     "No se permite realizar esta acción a un usuario vetado."
-"Friends_Chat_ActionResultManageBans"					"Gestionar lista de vetados de la sala de chat."
+"Friends_Chat_ActionResultManageBans"					"Administrar lista de vetados de la sala de chat."
 "Friends_Chat_ActionResultNotAllowedOnChatOwner"      "No se permite realizar esta acción al propietario del chat."
 "Friends_Chat_ActionResultNotAllowedOnSelf"           "No se te permite realizar esta acción."
 "Friends_Chat_ActionResultChatDoesntExist"			"Se ha cerrado el chat."

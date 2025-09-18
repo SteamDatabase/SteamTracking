@@ -19,7 +19,7 @@
 "Friends_TypingMessage"				"%friend% 님이 메시지를 입력하고 있습니다."
 "Friends_LastMessageReceived"		"마지막으로 수신한 메시지: %date% %time%"
 "Friends_FriendInfoDialog_Title"	"%friend% - 사용자 정보"
-"Friends_Chat_FriendNameChanged"		"%old_name% 님이 이름을 %friend% 님으로 변경하였습니다.\n"
+"Friends_Chat_FriendNameChanged"		"%old_name% 님이 이름을 %friend% 님으로 변경했습니다.\n"
 "Friends_Chat_FriendStateChanged"		"%friend% 님의 현재 상태는 %status%입니다.\n"
 "Friends_Chat_Send"					"보내기"
 "Friends_Chat_InviteToChat"			"채팅 초대"
@@ -38,7 +38,7 @@
 
 "Friends_Chat_CreateFailed_Title"		"채팅 생성 실패"
 "Friends_Chat_CreateFailed_Generic"		"채팅방 생성 실패"
-"Friends_Chat_CreateFailed_TooMany"		"너무 많은 채팅을 생성하였습니다. 다른 채팅을 생성하기 전에 일부 채팅을 비워야 합니다."
+"Friends_Chat_CreateFailed_TooMany"		"너무 많은 채팅을 생성했습니다. 다른 채팅을 생성하기 전에 일부 채팅을 비워야 합니다."
 
 "Friends_Title_Online"	"친구"
 "Friends_Title_Busy"	"친구"
@@ -73,14 +73,14 @@
 "Friends_LaunchGame"				"게임 시작"
 "Friends_ViewGameInfo"			"게임 정보 보기"
 "Friends_UserDetails"				"사용자 정보 보기"
-"Friends_RemoveUser"				"이 친구 삭제..."
+"Friends_RemoveUser"				"이 친구 제거..."
 
-"Friends_RemoveFriend_Title"			"친구 - 사용자 삭제"
-"Friends_RemoveFriend_Info"				"%friend% 님을 친구 목록에서 삭제할까요?\n\n(나중에 '친구 추가' 를 사용하여 삭제한 친구를 다시 추가할 수 있습니다.)"
-"Friends_RemoveFriend_Button"			"%friend% 삭제"
+"Friends_RemoveFriend_Title"			"친구 - 사용자 제거"
+"Friends_RemoveFriend_Info"				"%friend% 님을 친구 목록에서 제거할까요?\n\n(나중에 '친구 추가' 를 사용하여 제거한 친구를 다시 추가할 수 있습니다.)"
+"Friends_RemoveFriend_Button"			"%friend% 제거"
 
 "Friends_HideFriend_Title"				"친구 - 사용자 무시"
-"Friends_HideFriend_Info"				"정말 %friend% 님을 무시하고 제안된 친구 목록에서 삭제할까요?\n\n(나중에 다시 \"친구 추가\" 버튼을 이용해 추가할 수 있습니다.)\n"
+"Friends_HideFriend_Info"				"정말 %friend% 님을 무시하고 제안된 친구 목록에서 제거할까요?\n\n(나중에 다시 \"친구 추가\" 버튼을 이용해 추가할 수 있습니다.)\n"
 "Friends_HideFriend_Button"				"%friend% 님 무시"
 "Friends_HideFriend_Failed"				"%friend% 님을 무시할 수 없습니다"
 
@@ -137,7 +137,7 @@
 "Friends_PlaySoundWhenUserComesOnline"		"이 사용자가 온라인 상태가 항상 소리로 알림"
 "Friends_PlaySoundWhenUserJoinsGame"			"이 사용자가 게임을 플레이하면 항상 소리로 알림"
 
-"Friends_RemoveUserExplanation"	"이 친구를 목록에서 삭제하면 온라인 상태여도 알 수 없으며 메시지를 보낼 수 없습니다."
+"Friends_RemoveUserExplanation"	"이 친구를 목록에서 제거하면 온라인 상태여도 알 수 없으며 메시지를 보낼 수 없습니다."
 
 "Friends_FriendInvitedToGame_Title"	"초대 - %friend%"
 "Friends_FriendInvitedToGame_Info"	"%friend% 님을 게임에 초대했습니다."
@@ -158,7 +158,7 @@
 
 "Friends_TargetBlocked"				"이 사용자의 프로필 설정으로 인해 지금 메시지를 보낼 수 없습니다."
 "Friends_TargetIgnored"				"%search% 님께서 귀하를 차단 중입니다."
-"Friends_TooManyFriends"				"친구 목록이 다 찼습니다. 친구를 일부 삭제한 다음 다시 시도하세요."
+"Friends_TooManyFriends"				"친구 목록이 다 찼습니다. 친구를 일부 제거한 다음 다시 시도하세요."
 "Friends_TargetHasTooManyFriends"		"%search% 친구 목록이 다 찼습니다."
 "Friends_DefaultAddError"	 			"친구 목록에 %search% 님을 추가하는 도중에 문제가 발생했습니다."
 "Friends_UnableToFindFriendByThatNameInvitePrompt"		"%search% 전자 메일 주소로 Steam 사용자를 찾을 수 없습니다.\n\n%search% 님을 초대하여 Steam에 참가하도록 알림과 동시에 친구 목록에 추가하시려면 '다음'을 누르거나 '뒤로'를 눌러 다시 검색하세요."
@@ -477,7 +477,7 @@
 
 "Friends_ChatPasswordWarning_Title"		"경고: 계정 보안 위험"
 "Friends_ChatPasswordWarning_Info"			"경고: 비밀번호를 공유하려고 합니다."
-"Friends_ChatPasswordWarning_Info2"		"Steam 고객지원팀에서는 어떠한 경우에도 비밀번호를 요구하지 않습니다. 비밀번호를 공유하면 Steam 계정 및 모든 게임을 잃을 수 있습니다!\n\n이 정보를 공유할까요?"
+"Friends_ChatPasswordWarning_Info2"		"Steam 고객지원에서는 어떠한 경우에도 비밀번호를 요구하지 않습니다. 비밀번호를 공유하면 Steam 계정 및 모든 게임을 잃을 수 있습니다!\n\n이 정보를 공유할까요?"
 "Friends_ChatPasswordWarning_Continue"		"네, 채팅 메시지를 보냅니다."
 "Friends_ChatPasswordWarning_DontSend"		"아니요, 보내지 않습니다."
 
@@ -488,7 +488,7 @@
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"이 메시지를 다시 표시하지 않습니다."
 "Friends_BlockCommunicationWarning_Block"	"플레이어 차단"
 "Friends_BlockCommunicationWArning_Cancel"	"취소"
-"Friends_BlockCommunicationResult"	"%username%님을 차단하였습니다!\n\n해당 유저의 차단을 해제하기 위해서는 Steam 커뮤니티 내의 차단된 유저 목록을 보세요."
+"Friends_BlockCommunicationResult"	"%username%님을 차단했습니다!\n\n해당 유저의 차단을 해제하기 위해서는 Steam 커뮤니티 내의 차단된 유저 목록을 보세요."
 "Friends_BlockCommunicationResultUnblock"	"%username%님의 차단이 해제되었습니다!\n\nSteam 커뮤니티에서 차단 목록을 보실 수 있습니다."
 "Friends_BlockCommunicationResult_YourBlockedList"	"내 차단 목록 보기"
 "Friends_DefaultBlockCommunicationError" 			"%username%님을 차단하는 도중 오류가 발생했습니다."
@@ -504,7 +504,7 @@
 "Friends_ChatIntro_Request"	"이 채팅 요청을 수락할까요?"		
 "Friends_ChatIntro_DontShowCheckBox" "이 사용자의 채팅 요청을 항상 수락합니다."
 
-"Friends_ChatIntro_WarningInfo" "알림: Steam 고객지원팀에서는 어떠한 이유로도 비밀번호를 묻지 않습니다. 모든 비밀번호 요청을 무시하세요."
+"Friends_ChatIntro_WarningInfo" "알림: Steam 고객지원에서는 어떠한 이유로도 비밀번호를 묻지 않습니다. 모든 비밀번호 요청을 무시하세요."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"녹음(오디오 입력) 장치"
 "Friends_Voice_ChangeDevice"			"장치 변경..."
@@ -609,7 +609,7 @@
 "friends_trade_invite_sent_waiting"	"응답을 기다리고 있습니다..."
 
 "friends_trade_generic_failure"		"%friend%님과는 거래할 수 없습니다."
-"friends_trade_declined"		"%friend% 친구가 거래 요청을 거절하였습니다."
+"friends_trade_declined"		"%friend% 친구가 거래 요청을 거절했습니다."
 "friends_trade_you_are_banned"		"귀하는 현재 거래 차단 상태이므로 %friend% 친구와 거래하실 수 없습니다."
 "friends_trade_they_are_banned"		"%friend% 친구는 거래 차단 상태이므로 거래하실 수 없습니다."
 "friends_trade_you_are_cafe"	"현재 PC방 계정을 사용하고 있기 때문에 %friend%님과 거래할 수 없습니다."
@@ -621,7 +621,7 @@
 "friends_trade_you_have_steam_guard_disabled"	"거래에 참여하려면 먼저 Steam Guard를 활성화해야 합니다. 설정 창에서 Steam Guard를 활성화하세요."
 "friends_trade_you_havent_had_steam_guard_enabled_long_enough"	"거래에 참여하려면 최소 %days%일 전에 Steam Guard가 활성화된 상태여야 합니다."
 "friends_trade_you_are_using_new_device"	"귀하는 새로운 기기에서 접속하셨습니다. 보관함 항목 보호의 일환으로, 이 기기에서는 향후 %days%일간 거래하실 수 없습니다."
-"friends_trade_you_recently_reset_password"	"최근에 Steam 계정의 비밀번호를 초기화하셨습니다. 비밀번호 초기화 시점으로부터 최소 5일이 지나야 거래 기능을 사용할 수 있습니다."
+"friends_trade_you_recently_reset_password"	"최근에 Steam 계정의 비밀번호를 다시 설정했습니다. 비밀번호를 다시 설정한 시점으로부터 최소 5일이 지나야 거래 기능을 사용할 수 있습니다."
 "friends_trade_you_recently_reset_password_long" "최근 귀하께선 한동안 Steam 계정을 활용하지 않다가 비밀번호를 잊어서 새로 비밀번호를 설정하셨습니다. 보관함에 있는 아이템을 보호하기 위해, %days%일 동안 거래를 하실 수 없습니다."
 "friends_trade_you_recently_reset_password_short" "최근에 Steam 계정의 비밀번호가 변경되었습니다. 보관함의 아이템을 보호하기 위해 %days%일간 거래가 제한됩니다."
 "friends_trade_you_recently_reset_password_oneday" "최근 Steam 계정의 비밀번호가 변경되었습니다. 보관함의 아이템을 보호하기 위해 하루 더 거래가 제한됩니다."
@@ -645,7 +645,7 @@
 "friends_trade_you_are_already_requesting_trade" "미처리 거래 요청은 한 개까지입니다."
 "friends_trade_no_respond"			"%friend% 님이 거래 요청에 응답하지 않았습니다."
 
-"friends_trade_accepted"			"%friend% 친구가 거래 요청을 수락하였습니다."
+"friends_trade_accepted"			"%friend% 친구가 거래 요청을 수락했습니다."
 "friends_trade_you_accepted"		"%friend% 친구의 거래 요청을 수락하셨습니다."
 "friends_invite_to_trade"			"거래 요청하기"
 "Friends_TradeInvitation_Info"		"님이 거래 요청을 하셨습니다"
@@ -677,9 +677,9 @@
 "friends_newturns_info" "%turns% 개의 새로운 차례 대기 중"
 
 "Friends_FriendInvitedToBroadcast_Title" "초대 - %friend%"
-"Friends_FriendInvitedToBroadcast_Info" "%friend%님을 방송에 초대하였습니다."
-"Friends_BroadcastInvite" "%friend%님이 방송에 초대하였습니다"
-"Friends_BroadcastInviteNotification" "당신을 방송에 초대하였습니다"
+"Friends_FriendInvitedToBroadcast_Info" "%friend%님을 방송에 초대했습니다."
+"Friends_BroadcastInvite" "%friend%님이 방송에 초대했습니다"
+"Friends_BroadcastInviteNotification" "당신을 방송에 초대했습니다"
 "Friends_Chat_InviteToBroadcast" "방송에 초대"
 "Friends_BroadcastApproveNotification" "방송을 보길 원합니다"
 "Friends_BroadcastCantStart_Streaming" "홈 스트리밍 중에는 자신의 방송을 시청할 수 없습니다."
@@ -704,8 +704,8 @@
 "Broadcast_Chat_Show_Profile" "프로필 보기"
 "Broadcast_Chat_Mute_User" "채팅 차단"
 "Broadcast_Chat_Muted" "%s1 님의 채팅이 차단되었습니다."
-"Broadcast_Chat_Joined" "%s1 님이 입장하였습니다."
-"Broadcast_Chat_Left" "%s1 님이 퇴장하였습니다."
+"Broadcast_Chat_Joined" "%s1 님이 입장했습니다."
+"Broadcast_Chat_Left" "%s1 님이 퇴장했습니다."
 
 "Broadcast_Notification_Title" "방송"
 "Broadcast_Notification_Joined_Public" "사용자가 귀하의 공개 방송에 들어왔습니다"

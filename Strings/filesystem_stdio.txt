@@ -323,6 +323,7 @@ Plat_VirtualAccessFlags
 Plat_ctime
 Plat_localtime
 PrepareBuffer( nNewLength ) == pstrNew
+RZy6\n
 Requested non-existent write path %s!\n
 Saturday
 Seeking to a position not supported with async io

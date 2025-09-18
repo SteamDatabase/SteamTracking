@@ -5044,6 +5044,7 @@ Angi en kategori for dette spillet for å hjelpe deg med å finne det raskt og o
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ukraina – Sevastopol"
+"DownloadRegion_lv_riga"		"Latvia"
 
 "SettingsController_AutosaveName"	"Kontrollerkonfigurasjon"
 "ControllerBinding_Offline_Save"	"[Frakoblet autolagring]"

@@ -1,6 +1,7 @@
 import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "steammessages_clientserver_friends.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -755,6 +756,20 @@ message CChatRoom_GetMessageReactionReactors_Response {
 	repeated uint32 reactors = 1;
 }
 
+message CChatRoom_ReportMessage_Request {
+	optional uint64 chat_group_id = 1;
+	optional uint64 chat_id = 2;
+	optional fixed64 steamid_from = 3;
+	optional uint32 timestamp = 4;
+	optional uint32 ordinal = 5;
+	optional .EContentReportReason report_reason = 6 [default = k_EContentReportReason_Invalid];
+	optional string report_text = 7;
+	optional string language = 8;
+}
+
+message CChatRoom_ReportMessage_Response {
+}
+
 message CClanChatRooms_GetClanChatRoomInfo_Request {
 	optional fixed64 steamid = 1;
 	optional bool autocreate = 2 [default = true];
@@ -1032,6 +1047,7 @@ service ChatRoom {
 	rpc SearchMembers (.CChatRoom_SearchMembers_Request) returns (.CChatRoom_SearchMembers_Response);
 	rpc UpdateMessageReaction (.CChatRoom_UpdateMessageReaction_Request) returns (.CChatRoom_UpdateMessageReaction_Response);
 	rpc GetMessageReactionReactors (.CChatRoom_GetMessageReactionReactors_Request) returns (.CChatRoom_GetMessageReactionReactors_Response);
+	rpc ReportMessage (.CChatRoom_ReportMessage_Request) returns (.CChatRoom_ReportMessage_Response);
 }
 
 service ClanChatRooms {

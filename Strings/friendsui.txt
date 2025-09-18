@@ -147,6 +147,7 @@
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "2BRbr
 "3\n\rCRemoteHIDMsg
+";\n*CClientNotificationHardwareUpdateAvailable
 ";\n\vCSetIconMsg
 "????'????????????????????????????????????????????????????\????
 "A\n%CClientNotificationFriendInviteRollup
@@ -364,7 +365,9 @@ $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
 $\n k_ECommunityItemClass_SalienItem
-$\n k_EContentReportReason_Terrorism
+$\n k_EContentReportReason_CSAMOther
+$\n k_EContentReportReason_Derailing
+$\n k_EContentReportReason_Reposting
 $\n k_EExternalSaleEventType_Unknown
 $\n k_EFrameStatPacketLossPercentage
 $\n k_EGPUPerformanceLevel_Profiling
@@ -420,10 +423,8 @@ $\nY8O
 %\n!k_ECommunityItemClass_AvatarFrame
 %\n!k_ECommunityItemClass_BoosterPack
 %\n!k_ECompromiseDetectionType_Manual
-%\n!k_EContentModeratedReason_Invalid
-%\n!k_EContentModeratedReason_Unknown
-%\n!k_EContentReportReason_Commercial
-%\n!k_EContentReportReason_Prohibited
+%\n!k_EContentReportReason_Harassment
+%\n!k_EContentReportReason_OtherAbuse
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingErrorLowDiskSpace
 %\n!k_EGameRecordingType_NotRecording
@@ -491,7 +492,9 @@ $\nY8O
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_ECompromiseDetectionType_Move2FA
 &\n"k_EContentCheckProvider_SteamLearn
+&\n"k_EContentReportReason_Advertising
 &\n"k_EContentReportResolution_Removed
+&\n"k_EContentReportSubjectType_Unused
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EGpuDriverId_BroadcomProprietary
@@ -565,7 +568,10 @@ $\nY8O
 (\n$k_ECommentThreadTypeVideo_Deprecated
 (\n$k_ECommunityItemClass_AnimatedAvatar
 (\n$k_EContentCheckProvider_GoogleGemini
-(\n$k_EContentModeratedReason_AnimalHarm
+(\n$k_EContentReportReason_Impersonation
+(\n$k_EContentReportReason_OtherOffTopic
+(\n$k_EContentReportReason_ReferralLinks
+(\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
@@ -620,7 +626,7 @@ $\nY8O
 (\t"O\n)CClientNotificationRemoteClientConnection
 (\t"Y\n#CClientNotificationItemAnnouncement
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
-(\t"d\n,CClientNotificationStreamingClientConnection
+(\t"v\n,CClientNotificationStreamingClientConnection
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
 (\v2".CTransportSignalMsg.WebRTCMessage
@@ -681,7 +687,10 @@ $\nY8O
 )\n%k_ECommunityItemClass_ProfileModifier
 )\n%k_ECompromiseDetectionType_DeviceType
 )\n%k_ECompromiseDetectionType_TradeEvent
+)\n%k_EContentReportReason_Discrimination
+)\n%k_EContentReportReason_OtherTerrorism
 )\n%k_EContentReportResolution_Relabelled
+)\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
@@ -696,6 +705,7 @@ $\nY8O
 )\n%k_EStreamControlDisableHighResCapture
 )\n%k_EStreamControlSaveTouchConfigLayout
 )\n%k_EStreamFrameResultDroppedDecodeSlow
+)\n%k_EnhancedMarketAppearanceStatus_None
 )\n%k_PublishedFileQueryType_RankedByVote
 )\n\nmouse_down
 )\n\rdecoder_limit
@@ -738,7 +748,9 @@ $\nY8O
 *\n&k_EClientNotificationType_TimerExpired
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
-*\n&k_EContentReportSubjectType_UGCComment
+*\n&k_EContentReportReason_GenderedDoxxing
+*\n&k_EContentReportReason_OtherDisruptive
+*\n&k_EContentReportReason_OtherHarassment
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EStreamControlAuthenticationResponse
@@ -765,6 +777,9 @@ $\nY8O
 +\n'k_ECommentThreadTypeUserStatusPublished
 +\n'k_ECommunityItemClass_ProfileBackground
 +\n'k_ECompromiseDetectionType_TicketAction
++\n'k_EContentReportReason_GenderedStalking
++\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EProfileCustomizationTypeAchievements
 +\n'k_EProfileCustomizationTypeFavoriteGame
 +\n'k_EProfileCustomizationTypeItemShowcase
@@ -800,6 +815,9 @@ $\nY8O
 ,\n(k_EClientNotificationType_HardwareSurvey
 ,\n(k_EClientNotificationType_PlaytestInvite
 ,\n(k_ECommentThreadTypePublishedFile_Public
+,\n(k_EContentReportReason_AttemptedScamming
+,\n(k_EContentReportReason_CSAMSexualContent
+,\n(k_EContentReportReason_InauthenticReview
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
@@ -813,6 +831,7 @@ $\nY8O
 ,\n(k_EStreamControlSetStreamingClientConfig
 ,\n(k_EStreamFrameResultDroppedDecodeCorrupt
 ,\n(k_EWindowsUpdateInstallationImpact_Minor
+,\n(k_EnhancedMarketAppearanceStatus_Pending
 ,\n(k_PublishedFileQueryType_RankedByVotesUp
 ,\n\fvideo_decode
 ,\n\fvideo_encode
@@ -831,6 +850,10 @@ $\nY8O
 -\n)k_EClientNotificationType_PlaytimeWarning
 -\n)k_ECommentThreadTypeScreenshot_Deprecated
 -\n)k_EContentCheckProvider_Google_DEPRECATED
+-\n)k_EContentReportReason_EncouragingSuicide
+-\n)k_EContentReportReason_GenderedHarassment
+-\n)k_EContentReportReason_OtherScamsAndTheft
+-\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
@@ -949,6 +972,9 @@ $\nY8O
 .\n*k_EClientNotificationType_ItemAnnouncement
 .\n*k_ECommentThreadTypeWorkshopAccount_Public
 .\n*k_ECompromiseDetectionType_MaliciousRefund
+.\n*k_EContentReportReason_EncouragingSelfHarm
+.\n*k_EContentReportReason_EncouragingViolence
+.\n*k_EContentReportReason_OrganizingTerrorism
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
@@ -958,6 +984,7 @@ $\nY8O
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
 .\n*k_EStreamControlInputGamepadEvent_OBSOLETE
+.\n*k_EnhancedMarketAppearanceStatus_Completed
 .\n\tdirection
 .cpl
 .current.txt
@@ -999,10 +1026,12 @@ $\nY8O
 /\n+k_ECommunityItemClass_MiniProfileBackground
 /\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
+/\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EStreamControlTriggerHapticPulse_OBSOLETE
 /\n+k_EStreamControllerConfigMsg_ConfigResponse
+/\n+k_EnhancedMarketAppearanceStatus_InProgress
 /\n+k_PublishedFileQueryType_RankedByTextSearch
 /data/src/common/commonkeycode.cpp
 /data/src/common/crypto_digest_openssl.cpp
@@ -1115,6 +1144,9 @@ $\nY8O
 0\n,k_EClientNotificationType_GameRecordingError
 0\n,k_EClientNotificationType_GameRecordingStart
 0\n,k_EClientNotificationType_RequestedGameAdded
+0\n,k_EContentReportReason_GenderedTargetedAbuse
+0\n,k_EContentReportReason_NonConsensualMaterial
+0\n,k_EContentReportReason_NudityOrSexualContent
 0\n,k_ENewSteamAnnouncementState_NewAnnouncement
 0\n,k_EPublishedFileInappropriateProvider_Amazon
 0\n,k_EPublishedFileInappropriateProvider_Google
@@ -1133,10 +1165,8 @@ $\nY8O
 10CResumeMsg
 10CSetQoSMsg
 10CUtlMemoryI13ModuleCount_tE
-10CUtlMemoryI18RemotePlayPlayer_tE
 10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryI22PanelAnimationMapEntryE
-10CUtlMemoryI26RemotePlayControllerSlot_tE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
@@ -1167,6 +1197,8 @@ $\nY8O
 10CUtlMemoryIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapIjPN21CRemotePlayController25RemotePlayTogetherGroup_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIjPN21CRemotePlayController25RemotePlayTogetherGroup_tE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
@@ -1250,15 +1282,14 @@ $\nY8O
 10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlString
-10CUtlVectorI18RemotePlayPlayer_t10CUtlMemoryIS0_EE
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
-10CUtlVectorI26RemotePlayControllerSlot_t10CUtlMemoryIS0_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIPKci10CDefEqualsIS2_E11HashFunctorIS2_ES2_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlVectorIN11CUtlHashMapIjPN21CRemotePlayController25RemotePlayTogetherGroup_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS6_EE
 10CUtlVectorIN11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE12HashBucket_tE10CUtlMemoryIS6_EE
@@ -1328,6 +1359,7 @@ $\nY8O
 11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS0_19SpewThrottleEntry_tE10CDefEqualsIS1_ENS0_23SpewLocationHashFunctorES1_E
 11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_ES2_E
 11CUtlHashMapIPKci10CDefEqualsIS1_E11HashFunctorIS1_ES1_E
+11CUtlHashMapIjPN21CRemotePlayController25RemotePlayTogetherGroup_tE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjb10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtE
@@ -1361,7 +1393,7 @@ $\nY8O
 13CCallbackImplILi1EE
 13CCallbackImplILi20EE
 13CCallbackImplILi24584EE
-13CCallbackImplILi25EE
+13CCallbackImplILi24EE
 13CCallbackImplILi264EE
 13CCallbackImplILi28EE
 13CCallbackImplILi2EE
@@ -1370,6 +1402,7 @@ $\nY8O
 13CCallbackImplILi40EE
 13CCallbackImplILi4288EE
 13CCallbackImplILi44EE
+13CCallbackImplILi48EE
 13CCallbackImplILi4EE
 13CCallbackImplILi52EE
 13CCallbackImplILi8EE
@@ -1545,6 +1578,7 @@ $\nY8O
 18CMsgBlockedRequest
 18CMsgBrowserResized
 18CMsgBrowserSetName
+18CMsgCtrlTabPressed
 18CMsgExitFullScreen
 18CMsgFileLoadDialog
 18CMsgHistoryChanged
@@ -1586,6 +1620,8 @@ $\nY8O
 1\n-k_EClientNotificationType_OverlaySplashScreen
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentReportReason_CSAMFakedSexualContent
+1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1630,22 +1666,24 @@ $\nY8O
 20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjS2_9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJPKcjb9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJb9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbPKcEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJbjEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJi9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJiEE
-20CJSMethodCallHandlerI21CRemotePlayControllerJiiEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJjEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjPKc9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjPKcb9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjPKcj9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjPKcjb9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjb9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJji9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjiEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjiiEE
 20CJSMethodCallHandlerI24CSteamParentalControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI24CSteamParentalControllerJEE
 20CJSMethodCallHandlerI24CSteamParentalControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
@@ -1806,6 +1844,10 @@ $\nY8O
 29CStreamingServerHandshakeInfo
 2\n-k_EStreamControlRemotePlayTogetherGroupUpdate
 2\n.k_ECommentThreadTypePublishedFile_Announcement
+2\n.k_EContentReportReason_BullyingAndIntimidation
+2\n.k_EContentReportReason_GenderedOtherHarassment
+2\n.k_EContentReportReason_OtherCommercialActivity
+2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EStreamControlSetControllerSettings_OBSOLETE
@@ -1862,6 +1904,7 @@ $\nY8O
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EClientNotificationType_ClaimSteamDeckRewards
 3\n/k_EClientNotificationType_FamilyPurchaseRequest
+3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EStreamControllerConfigMsg_ActiveConfigChange
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 40CClientNotificationClaimSteamDeckRewards
@@ -1871,6 +1914,7 @@ $\nY8O
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgShowBrowserContextMenu_ContextCommand
 42CClientNotificationDockUnsupportedFirmware
+42CClientNotificationHardwareUpdateAvailable
 42CClientNotificationRemoteClientStartStream
 42CMsgDraggableRegionsChanged_DraggableRects
 43CClientNotificationFamilySharingStopPlaying
@@ -1891,6 +1935,7 @@ $\nY8O
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EClientNotificationType_ParentalFeatureRequest
 4\n0k_EClientNotificationType_RemoteClientConnection
+4\n0k_EContentReportReason_LinkingToMaliciousContent
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EStreamControlInputControllerAttached_OBSOLETE
@@ -1911,9 +1956,11 @@ $\nY8O
 58CClientNotificationFamilySharingDeviceAuthorizationChanged
 5T&w&
 5\n1k_EClientNotificationType_DockUnsupportedFirmware
+5\n1k_EClientNotificationType_HardwareUpdateAvailable
 5\n1k_EClientNotificationType_ParentalFeatureResponse
 5\n1k_EClientNotificationType_ParentalPlaytimeRequest
 5\n1k_EClientNotificationType_RemoteClientStartStream
+5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1927,6 +1974,8 @@ $\nY8O
 6\n2k_EClientNotificationType_FamilySharingStopPlaying
 6\n2k_EClientNotificationType_GameRecordingInstantClip
 6\n2k_EClientNotificationType_ParentalPlaytimeResponse
+6\n2k_EContentReportReason_GenderedEncouragingViolence
+6\n2k_EContentReportReason_RightToBeForgottenViolation
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n2k_ESteamOSCompatibilityResultDisplayType_Invisible
 6\n\fmessage_type
@@ -1967,6 +2016,7 @@ $\nY8O
 8CMsgFind
 8\foQS
 8\n4k_EClientNotificationType_SteamInputActionSetChanged
+8\n4k_EContentReportReason_GenderedNonConsensualMaterial
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
@@ -1997,6 +2047,7 @@ $\nY8O
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9IValidate
+9\n5k_EContentReportReason_MissingProcessingGroundForData
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
 9a&g
@@ -2005,6 +2056,7 @@ $\nY8O
 : failed to parse contents
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
+:\n6k_EContentReportReason_GenderedBullyingAndIntimidation
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_ESteamOSCompatibilityResultDisplayType_Informational
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
@@ -2019,10 +2071,13 @@ $\nY8O
 <no url>
 <unnamed>
 =\n9k_EClientNotificationType_CannotReadControllerGuideButton
+=\n9k_EContentReportReason_FakedGenderedNonConsensualMaterial
 =\n9k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions
 =\n9k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions
+>\n:k_EContentReportReason_NoncomplianceWithPricingRegulations
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
+?\n;k_EContentReportReason_NegativeEffectonDiscourseOrElections
 ?\n;k_PublishedFileQueryType_RankedByInappropriateContentRating
 ?\n\tp2p_scope
 @\n!ControllerPersonalizationResponse
@@ -2049,6 +2104,7 @@ ANDROID64
 ASCII
 ASCII conversion buffer too small
 ASCII//TRANSLIT
+A\n=k_EContentReportReason_OtherDataProtectionAndPrivacyViolation
 A\n\nannotation
 A\n\tcandidate
 Accel
@@ -2535,6 +2591,7 @@ CMsgClearHistory
 CMsgCloseDevTools
 CMsgComboNeedsPaint
 CMsgCopy
+CMsgCtrlTabPressed
 CMsgDisableBackgroundThrottling
 CMsgDraggableRegionsChanged
 CMsgExecuteJavaScript
@@ -2670,6 +2727,8 @@ CRemotePlayController::OnPostLogonState
 CRemotePlayController::OnRemoteClientAvailable
 CRemotePlayController::OnRemoteClientConnected
 CRemotePlayController::OnRemoteClientDisconnected
+CRemotePlayController::OnRemoteClientDongleConnected
+CRemotePlayController::OnRemoteClientDongleDisconnected
 CRemotePlayController::OnRemoteClientInputSettingsChange
 CRemotePlayController::OnRemoteClientLaunchFailed
 CRemotePlayController::OnRemoteClientOffline
@@ -2785,6 +2844,7 @@ CVirtualHereReadyMsg
 CVirtualHereRequestMsg
 CVirtualHereShareDeviceMsg
 C\n#direct_rendering_display_compositor
+C\n?k_EContentReportReason_MisleadingInformationAboutConsumerRights
 Call set methods to initialize MapKey.
 Call to NULL read function
 Call to NULL write function
@@ -2951,6 +3011,7 @@ DDDDUUUU
 DEADLINE_EXCEEDED
 DLOPEN Error:%s\n
 DO NOT PARSE: fields may be stripped and missing.\n
+D\n@k_EContentReportReason_MisleadingInformationAboutGoodsOrServices
 D\n@k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate
 D\vvf:
 Danish
@@ -3024,12 +3085,12 @@ ECommentThreadType
 ECommunityItemClass
 ECompromiseDetectionType
 EContentCheckProvider
-EContentModeratedReason
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
 EContentReportSubjectType
 EControlledLegalCategoryStatus
+EEnhancedMarketAppearanceStatus
 EExternalSaleEventType
 EFrameAccumulatedStat
 EGPUPerformanceLevel
@@ -3297,6 +3358,7 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+G\nCk_EContentReportReason_HiddenAdvertisementOrCommercialCommunication
 Galician
 GeneratedCodeInfo
 Georgian
@@ -3981,9 +4043,11 @@ N21CRemotePlayController44CCallbackInternal_OnStreamingClientConnectedE
 N21CRemotePlayController44CCallbackInternal_OnStreamingClientUsedInputE
 N21CRemotePlayController46CCallbackInternal_OnRemoteClientStreamLifetimeE
 N21CRemotePlayController47CCallbackInternal_OnCheckStreamingDriverSupportE
+N21CRemotePlayController47CCallbackInternal_OnRemoteClientDongleConnectedE
 N21CRemotePlayController47CCallbackInternal_OnStreamingClientDisconnectedE
 N21CRemotePlayController48CCallbackInternal_OnRemotePlayTogetherPlayerLeftE
 N21CRemotePlayController49CCallbackInternal_OnRemoteDevicePairingPINChangedE
+N21CRemotePlayController50CCallbackInternal_OnRemoteClientDongleDisconnectedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherPlayerJoinedE
 N21CRemotePlayController51CCallbackInternal_OnRemoteClientInputSettingsChangeE
@@ -4422,14 +4486,10 @@ Remote call failed
 RemotePlay.BCanAcceptInviteForGame
 RemotePlay.BCanCreateInviteForGame
 RemotePlay.BRemotePlayTogetherGuestOnPhoneOrTablet
-RemotePlay.BRemotePlayTogetherGuestSupported
 RemotePlay.CancelInviteAndSession
-RemotePlay.CancelInviteAndSessionWithGuestID
 RemotePlay.CancelRemoteClientPairing
 RemotePlay.CloseGroup
-RemotePlay.CreateGroup
 RemotePlay.CreateInviteAndSession
-RemotePlay.CreateInviteAndSessionWithGuestID
 RemotePlay.GetClientID
 RemotePlay.GetClientStreamingBitrate
 RemotePlay.GetClientStreamingQuality
@@ -4437,6 +4497,7 @@ RemotePlay.GetControllerType
 RemotePlay.GetGameSystemVolume
 RemotePlay.GetPerUserInputSettings
 RemotePlay.GetPerUserInputSettingsWithGuestID
+RemotePlay.GetRemotePlayTogetherGroupIDForOverlayPID
 RemotePlay.IdentifyController
 RemotePlay.InstallAudioDriver
 RemotePlay.InstallInputDriver
@@ -4963,7 +5024,6 @@ V_MakeAbsolutePath
 V_RemoveDotSlashes
 V_RemoveDotSlashes failed for "%s".
 V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
-V_StrSubstInPlace
 V_StrTrim
 V_StrTrimAsciiSpaceChar
 V_StripExtension
@@ -5590,6 +5650,7 @@ bBroadcastCapable
 bCanSteamVR
 bCanSuspend
 bChooseDirectory
+bConnectedViaWifiAP
 bControllerEnabled
 bDoNotDisturbMode
 bEnabled
@@ -5748,7 +5809,6 @@ cc_generic_services
 cchCharBlock <= m_TextStream.Count()
 cchEncodedData > 0
 cchEncodedData >= ( cubData * 2 ) + 1
-ceil
 cellcolor
 center
 certName
@@ -6010,6 +6070,7 @@ es_419
 es_ES
 estackingorder
 estonian
+etype
 event
 event_id
 events
@@ -6330,6 +6391,7 @@ greek
 greeting
 group
 guard variable for 
+guest_id
 guestid
 guestpass
 gujarati
@@ -6651,17 +6713,21 @@ k_ECompromiseDetectionType_None
 k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
-k_EContentModeratedReason_MAX
-k_EContentModeratedReason_None
 k_EContentModeratorLevel_Any
 k_EContentModeratorLevel_MAX
 k_EContentModeratorLevel_Valve
-k_EContentReportReason_Abusive
-k_EContentReportReason_CSAM
+k_EContentReportReason_Baiting
+k_EContentReportReason_Begging
+k_EContentReportReason_Doxxing
+k_EContentReportReason_Gambling
 k_EContentReportReason_Invalid
 k_EContentReportReason_MAX
-k_EContentReportReason_OffTopic
-k_EContentReportReason_Other
+k_EContentReportReason_None
+k_EContentReportReason_Raffles
+k_EContentReportReason_Spam
+k_EContentReportReason_Stalking
+k_EContentReportReason_Trolling
+k_EContentReportReason_Unknown
 k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
 k_EExportCodec_Default
@@ -7157,6 +7223,8 @@ m_fnPushToTalkStateChange
 m_fnReject
 m_fnResolve
 m_fnUIModeChangedCallback
+m_hashRemotePlayTogetherGroups
+m_hashRemotePlayTogetherGroups.Find( pCallback->m_unGroupID ) == m_hashRemotePlayTogetherGroups.InvalidIndex()
 m_iHTMLTextureID
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
@@ -7261,11 +7329,9 @@ m_unPID
 m_unused
 m_usType == k_EIPTypeV6
 m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
-m_vecActiveSessions
 m_vecCallbacks
 m_vecCallbacks.Count() == 0
 m_vecCallbacks.Count() == 0 || !callback
-m_vecControllerSlots
 m_vecControllers
 m_vecFuncs
 m_vecHCursor
@@ -7469,7 +7535,6 @@ pBuffer->TellPut() == 0
 pCAL
 pCAL: invalid keyword
 pCRF
-pCallback->m_gameID == m_ActiveGameID
 pChild
 pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
 pConv && pConv->GetDelimiterLength() > 0
@@ -7889,7 +7954,6 @@ spaceReleased
 span
 spanish
 sprintf
-sqrt
 sqrtf
 srvping
 sscanf

@@ -92,7 +92,8 @@ enum EStoreLinkType {
 	k_EStoreLinkType_Mastodon = 21;
 	k_EStoreLinkType_Threads = 22;
 	k_EStoreLinkType_QQChannel = 23;
-	k_EStoreLinkType_MAX = 24;
+	k_EStoreLinkType_RedNote = 24;
+	k_EStoreLinkType_MAX = 25;
 }
 
 enum EStoreCategoryType {
@@ -174,6 +175,7 @@ message StoreItem {
 
 		optional .StoreItem.Reviews.StoreReviewSummary summary_filtered = 1;
 		optional .StoreItem.Reviews.StoreReviewSummary summary_unfiltered = 2;
+		optional .StoreItem.Reviews.StoreReviewSummary summary_language_specific = 3;
 	}
 
 	message BasicInfo {

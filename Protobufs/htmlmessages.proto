@@ -361,6 +361,10 @@ message CMsgFavIconURLChanged {
 	repeated string urls = 2;
 }
 
+message CMsgCtrlTabPressed {
+	optional uint32 browser_handle = 1;
+}
+
 message CMsgPageSecurity {
 	optional uint32 browser_handle = 1;
 	optional string url = 2;

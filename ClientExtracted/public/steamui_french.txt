@@ -5042,6 +5042,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "DownloadRegion_reunion"        "La Réunion"
 "DownloadRegion_kuwait"         "Koweït"
 "DownloadRegion_ua_sevastopol"  "Ukraine – Sébastopol"
+"DownloadRegion_lv_riga"		"Lettonie"
 
 "SettingsController_AutosaveName"	"Configuration du contrôleur"
 "ControllerBinding_Offline_Save"	"[Sauvegarde automatique hors ligne]"

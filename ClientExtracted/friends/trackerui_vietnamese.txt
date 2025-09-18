@@ -559,7 +559,7 @@
 "Limited_OpenChat"	"Mở cuộc trò chuyện"
 "Friends_SteamCommunity"	"Cộng đồng Steam"
 "Limited_Explanation"	"Tài khoản của bạn không đạt đủ điều kiện để sử dụng tính năng này."
-"Limited_ForDetails"	"Thăm trang hỗ trợ Steam để biết thêm thông tin."
+"Limited_ForDetails"	"Ghé trang hỗ trợ Steam để biết thêm thông tin."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 
 "Friends_Chat_RoomModerated_Entry"		"Phòng trò chuyện đã được đặt ở chế độ chỉ dành cho ủy viên bởi %member_making_change%.\n"

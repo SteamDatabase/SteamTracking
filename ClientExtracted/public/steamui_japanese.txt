@@ -5042,6 +5042,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "DownloadRegion_reunion"        "リユニオン"
 "DownloadRegion_kuwait"         "クウェート"
 "DownloadRegion_ua_sevastopol"  "ウクライナ－セヴァストポリ"
+"DownloadRegion_lv_riga"		"ラトビア"
 
 "SettingsController_AutosaveName"	"コントローラ設定"
 "ControllerBinding_Offline_Save"	"[オフライン自動保存]"

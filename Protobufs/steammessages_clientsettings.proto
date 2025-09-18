@@ -270,6 +270,8 @@ message CMsgClientSettings {
 	optional bool steamos_charge_limit_enabled = 22011 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ChargeLimitEnabled", (setting_default_bool) = false];
 	optional int32 steamos_charge_limit = 22012 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ChargeLimit", (setting_default_int) = 80];
 	optional bool steamos_charge_limit_devmode = 22013 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ChargeLimitDevMode", (setting_default_bool) = false];
+	optional bool steamos_system_tracing_enabled = 22014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/SystemTracingEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
+	optional bool steamos_vrs_enabled = 22015 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/VRSEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional bool setting_validation_bool = 23001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyBool"];
 	optional .EHDRVisualization setting_validation_enum = 23002 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyEnum"];
 	optional int32 setting_validation_int32 = 23003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyInt32"];

@@ -160,6 +160,7 @@ message CMsgClientPersonaState {
 		optional bool avatar_pending_review = 80;
 		optional bool on_steam_deck = 81;
 		repeated .CMsgClientPersonaState.Friend.OtherGameData other_game_data = 82;
+		optional uint32 gaming_device_type = 83;
 	}
 
 	optional uint32 status_flags = 1;

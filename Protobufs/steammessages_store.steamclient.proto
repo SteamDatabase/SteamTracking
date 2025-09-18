@@ -272,6 +272,7 @@ message CStore_ReportApp_Response {
 }
 
 message CStore_GetStorePreferences_Request {
+	optional string country_code = 1;
 }
 
 message CStore_UserPreferences {

@@ -109,6 +109,9 @@ message CSteamInputService_GyroCalibration_Notification {
 	optional float acceleromter_noise = 3;
 	optional float gyroscope_noise = 4;
 	optional float calibration_progress = 5;
+	optional uint32 calibration_state = 6;
+	optional float gyroscope_noise_tolerance = 7;
+	optional float accelerometer_noise_tolerance = 8;
 }
 
 message CSteamInputService_ControllerStateFlow_Request {
@@ -117,6 +120,14 @@ message CSteamInputService_ControllerStateFlow_Request {
 }
 
 message CSteamInputService_ControllerStateFlow_Response {
+}
+
+message CSteamInputService_GyroSoftwareCalibration_Request {
+	optional uint32 controller_index = 1;
+	optional int32 side = 2;
+}
+
+message CSteamInputService_GyroSoftwareCalibration_Response {
 }
 
 message CControllerOriginKey {
@@ -150,4 +161,6 @@ service SteamInputManager {
 	rpc StartControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc EndControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc GetControllerAccessibilityStrings (.CSteamInputService_ControllerAccessibilityStrings_Request) returns (.CSteamInputService_ControllerAccessibilityStrings_Response);
+	rpc StartGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
+	rpc CancelGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
 }

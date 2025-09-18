@@ -5045,6 +5045,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Koeweit"
 "DownloadRegion_ua_sevastopol"  "Oekraïne – Sebastopol"
+"DownloadRegion_lv_riga"		"Letland"
 
 "SettingsController_AutosaveName"	"Controllerconfiguratie"
 "ControllerBinding_Offline_Save"	"[Offline automatisch opslaan]"

@@ -1094,6 +1094,7 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         const _ = _.createContext({
           focusNavWindow: null,
@@ -1285,12 +1286,11 @@ var CLSTAMP = "steamdb";
               disableNavSounds: _,
               fnCanTakeFocus: _,
               childFocusDisabled: _,
-              retainFocus: _,
+              focusableIfEmpty: _,
               onFocusWithin: _,
               navKey: _,
               noFocusRing: _,
               focusable: _,
-              focusableIfNoChildren: _,
               navRef: _,
               actionDescriptionMap: _,
               onMoveUp: _,
@@ -1313,12 +1313,11 @@ var CLSTAMP = "steamdb";
               disableNavSounds: _,
               fnCanTakeFocus: _,
               childFocusDisabled: _,
-              retainFocus: _,
+              focusableIfEmpty: _,
               onFocusWithin: _,
               navKey: _,
               noFocusRing: _,
               focusable: _,
-              focusableIfNoChildren: _,
               navRef: _,
               onMoveUp: _,
               onMoveRight: _,
@@ -1351,17 +1350,14 @@ var CLSTAMP = "steamdb";
                 ..._
               } = _,
               _ = (0, _._)(),
-              _ = (0, _._)(),
-              _ = _.BHasFocus() && _,
-              _ = _.BFocusWithin() && _,
+              _ = (0, _._)(_.SubscribableHasFocus) && _,
+              _ = (0, _._)(_.SubscribableFocusWithin) && _,
               {
                 bActiveTree: _,
                 bActiveTreeWithinContext: _,
                 bDisableFocusClasses: _,
-              } = (0, _._)();
-            (0, _._)(_.FocusCallbackList, _),
-              (0, _._)(_.FocusWithinCallbackList, _);
-            const _ = _ && !_,
+              } = (0, _._)(),
+              _ = _ && !_,
               _ = !_ && (void 0 !== _ || _);
             return _.createElement(
               _,
@@ -1636,7 +1632,7 @@ var CLSTAMP = "steamdb";
               (_.onOKButton = _.onOKButton || _)),
             _.onOKButton &&
               void 0 === _.focusable &&
-              void 0 === _.focusableIfNoChildren &&
+              void 0 === _.focusableIfEmpty &&
               (_.focusable = !0),
             _ && (_.onCancelButton = _.onCancelButton || _);
           const { ref: _, node: _ } = (0, _._)({
@@ -1647,7 +1643,7 @@ var CLSTAMP = "steamdb";
           (_.className = _()(_.className, "Panel", _ && "Focusable")),
             (0, _._)(_, _);
           const _ = (0, _._)(_, _);
-          (!_.focusable && !_.focusableIfNoChildren) ||
+          (!_.focusable && !_.focusableIfEmpty) ||
             (_ && _.Tree.BUseVirtualFocus()) ||
             (_.tabIndex = _.tabIndex || 0),
             _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
@@ -1690,9 +1686,12 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _,
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        __webpack_require__("chunkid");
         !(function (_) {
           (_[(_.GAMEPAD = 0)] = "GAMEPAD"),
             (_[(_.KEYBOARD = 1)] = "KEYBOARD"),
@@ -1803,6 +1802,14 @@ var CLSTAMP = "steamdb";
             void 0 !== _ && (_[_._.OPTIONS] = _),
             void 0 !== _ && (_[_._.START] = _),
             _
+          );
+        }
+        function _(_, _, _) {
+          return (0, _._)(
+            (_) => {
+              if (_ && _) return _(_, _, _);
+            },
+            [_, _],
           );
         }
       },
@@ -2043,6 +2050,8 @@ var CLSTAMP = "steamdb";
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
+        const _ = new (__webpack_require__("chunkid")._)("FocusHistory"),
+          _ = _.Debug;
         class _ {
           m_root;
           constructor(_) {
@@ -2076,26 +2085,39 @@ var CLSTAMP = "steamdb";
                 (1 == _ || (0 == _ && _)) && _.BTakeFocus(_._.APPLICATION);
             });
           }
-          static RestoreSerializedNavNode(_, _) {
+          static RestoreSerializedNavNode(_, _, _ = 0) {
             const { sNavKey: _, iActiveChild: _, rgChildren: _ } = _;
-            if (
-              (_ && (0, _._)(_ == _.NavKey, "navkey mismatch"),
-              _.SetActiveChild(_),
-              _ && _.length)
-            ) {
+            _ && (0, _._)(_ == _.NavKey, "navkey mismatch"),
+              _.SetActiveChild(_);
+            const _ = _.IsDebugEnabled()
+              ? (function (_) {
+                  if (0 == _) return "";
+                  let _ = "";
+                  for (let _ = 0; _ < _; _++) _ += "*";
+                  return (_ += " "), _;
+                })(_)
+              : "";
+            if (_ && _.length) {
               const [_] = _.GetChildren();
+              -1 != _ &&
+                _(
+                  `${_}Restoring node ${_.NavKey} which had active child ${_} of ${_.length} - now ${_.length} children.`,
+                );
               let _ = new Map();
               _.forEach((_) => {
-                _.NavKey && __webpack_require__.set(_.NavKey, _);
+                _.NavKey && _.set(_.NavKey, _);
               });
               for (const _ of _) {
                 if (!_.sNavKey) continue;
-                const _ = __webpack_require__.get(_.sNavKey);
-                _ && _.RestoreSerializedNavNode(_, _);
+                const _ = _.get(_.sNavKey);
+                _ && _.RestoreSerializedNavNode(_, _, _ + 1);
               }
               if (-1 != _ && _[_]?.sNavKey) {
-                const _ = __webpack_require__.get(_[_].sNavKey);
-                _ && _.SetActiveChild(_.indexOf(_));
+                const _ = _.get(_[_].sNavKey);
+                _(
+                  `${_}Restoring node ${_.NavKey}, child with focus: ${_[_].sNavKey} ${void 0 === _ ? "MISSING!!" : ""}`,
+                ),
+                  _ && _.SetActiveChild(_.indexOf(_));
               }
               let _ = 0,
                 _ = 0;
@@ -2103,7 +2125,7 @@ var CLSTAMP = "steamdb";
                 for (; _ < _.length && _[_].NavKey; ) _++;
                 for (; _ < _.length && _[_].sNavKey; ) _++;
                 if (_ >= _.length || _ >= _.length) break;
-                _.RestoreSerializedNavNode(_[_], _[_]), _++, _++;
+                _.RestoreSerializedNavNode(_[_], _[_], _ + 1), _++, _++;
               }
             }
           }
@@ -2147,6 +2169,7 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -2226,44 +2249,42 @@ var CLSTAMP = "steamdb";
         }
         function _(_, _, _, _ = 0.001) {
           return "x" == _
-            ? _._ + _.width > _._ + _ && _._ + _ < _._ + _.width
+            ? _.right > _.left + _ && _.left + _ < _.right
             : "y" == _
-              ? _._ + _.height > _._ + _ && _._ + _ < _._ + _.height
+              ? _.bottom > _.top + _ && _.top + _ < _.bottom
               : ((0, _._)(!1, `Invalid axis ${_}`), !1);
         }
         function _(_, _, _) {
           let _;
           return (
             "x" == _
-              ? (_ =
-                  Math.min(_._ + _.width, _._ + _.width) - Math.max(_._, _._))
+              ? (_ = Math.min(_.right, _.right) - Math.max(_.left, _.left))
               : "y" == _
-                ? (_ =
-                    Math.min(_._ + _.height, _._ + _.height) -
-                    Math.max(_._, _._))
+                ? (_ = Math.min(_.bottom, _.bottom) - Math.max(_.top, _.top))
                 : ((0, _._)(!1, `Invalid axis ${_}`), (_ = 0)),
             _ < 0 ? 0 : _
           );
         }
+        function _(_, _) {
+          return "x" == _
+            ? {
+                min: _.left,
+                max: _.right,
+              }
+            : {
+                min: _.top,
+                max: _.bottom,
+              };
+        }
         function _(_, _, _) {
           const _ = _[_],
-            _ = (function (_, _) {
-              return "x" == _
-                ? {
-                    min: _._,
-                    max: _._ + _.width,
-                  }
-                : {
-                    min: _._,
-                    max: _._ + _.height,
-                  };
-            })(_, _);
+            _ = _(_, _);
           return _ < _.min ? _.min - _ : _ > _.max ? _ - _.max : 0;
         }
         function _(_) {
           return {
-            _: _._,
-            _: _._,
+            _: _.left,
+            _: _.top,
           };
         }
         const _ = {
@@ -2288,7 +2309,8 @@ var CLSTAMP = "steamdb";
                 return _._.COLUMN_REVERSE;
             }
           else {
-            if ("grid" == _.display) return _._.GRID;
+            if ("grid" == _.display)
+              return "none" !== _.gridTemplateAreas ? _._.GEOMETRIC : _._.GRID;
             if (_.childElementCount > 0) {
               const _ = _.getComputedStyle(_.firstElementChild);
               if ("left" === _.float) return _._.ROW;
@@ -2322,6 +2344,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -2477,8 +2500,10 @@ var CLSTAMP = "steamdb";
             distance: _,
           };
         }
-        var _ = __webpack_require__("chunkid");
-        const _ = new _._("FocusNavigationMovement").Debug;
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        const _ = new _._("FocusNavigationMovement"),
+          _ = _.Debug;
         var _, _, _, _;
         !(function (_) {
           (_[(_.NONE = 0)] = "NONE"),
@@ -2520,12 +2545,10 @@ var CLSTAMP = "steamdb";
           m_bAutoFocusChild = !1;
           m_bMounted = !1;
           m_nDepth;
-          m_bFocused = !1;
-          m_FocusCallbackList = new _._();
-          m_bFocusWithin = !1;
-          m_FocusWithinCallbackList = new _._();
+          m_Focused = (0, _._)(!1);
+          m_FocusWithin = (0, _._)(!1);
           m_ActionDescriptionsChangedCallbackList = new _._();
-          m_RetainFocusParent = null;
+          m_FocusableIfEmptyAncestor = null;
           m_rgNavigationHandlers = [];
           m_rgFocusHandlers = [];
           constructor(_, _, _) {
@@ -2556,16 +2579,16 @@ var CLSTAMP = "steamdb";
                 this.m_Properties?.actionDescriptionMap,
                 _?.actionDescriptionMap,
               ),
-              _ = this.m_Properties?.retainFocus,
+              _ = this.m_Properties?.focusableIfEmpty,
               _ = this.m_Properties?.noFocusRing;
             (this.m_Properties = _ || {}),
               _ && this.m_ActionDescriptionsChangedCallbackList.Dispatch(),
-              this.m_Properties.retainFocus && !_
-                ? this.PropagateRetainFocusParentToChildren(this)
-                : !this.m_Properties.retainFocus &&
+              this.m_Properties.focusableIfEmpty && !_
+                ? this.PropagateFocusableIfEmptyAncestorToDescendants(this)
+                : !this.m_Properties.focusableIfEmpty &&
                   _ &&
-                  this.PropagateRetainFocusParentToChildren(
-                    this.m_RetainFocusParent,
+                  this.PropagateFocusableIfEmptyAncestorToDescendants(
+                    this.m_FocusableIfEmptyAncestor,
                   ),
               this.m_Properties.noFocusRing && !_ && this.BHasFocus()
                 ? this.m_FocusRing?.OnBlur(_._.APPLICATION, this, this)
@@ -2588,31 +2611,27 @@ var CLSTAMP = "steamdb";
             );
           }
           GetBoundingRect() {
-            return this.m_element && this.m_element.getBoundingClientRect();
+            return this.m_element?.getBoundingClientRect();
           }
           SetHasFocus(_) {
-            _ != this.m_bFocused &&
-              ((this.m_bFocused = _),
-              this.m_FocusCallbackList.Dispatch(this.m_bFocused));
+            this.m_Focused.Set(_);
           }
           SetFocusWithin(_) {
-            _ != this.m_bFocusWithin &&
-              ((this.m_bFocusWithin = _),
-              this.m_FocusWithinCallbackList.Dispatch(this.m_bFocusWithin),
+            this.m_FocusWithin.Set(_) &&
               this.m_Properties?.onFocusWithin &&
-                this.m_Properties.onFocusWithin(this.m_bFocusWithin));
+              this.m_Properties.onFocusWithin(_);
+          }
+          get SubscribableHasFocus() {
+            return this.m_Focused;
           }
           BHasFocus() {
-            return this.m_bFocused;
+            return this.m_Focused.Value;
+          }
+          get SubscribableFocusWithin() {
+            return this.m_FocusWithin;
           }
           BFocusWithin() {
-            return this.m_bFocusWithin;
-          }
-          get FocusCallbackList() {
-            return this.m_FocusCallbackList;
-          }
-          get FocusWithinCallbackList() {
-            return this.m_FocusWithinCallbackList;
+            return this.m_FocusWithin.Value;
           }
           ForceMeasureFocusRing() {
             this.m_FocusRing?.OnForceMeasureFocusRing();
@@ -2638,10 +2657,12 @@ var CLSTAMP = "steamdb";
             this.m_rgChildren.push(_),
               (this.m_bChildrenSorted = !1),
               this.m_element && this.RegisterDOMEvents(),
-              this.m_Properties?.retainFocus
-                ? _.SetRetainFocusParent(this)
-                : this.m_RetainFocusParent &&
-                  _.SetRetainFocusParent(this.m_RetainFocusParent),
+              this.m_Properties?.focusableIfEmpty
+                ? _.SetFocusableIfEmptyAncestor(this)
+                : this.m_FocusableIfEmptyAncestor &&
+                  _.SetFocusableIfEmptyAncestor(
+                    this.m_FocusableIfEmptyAncestor,
+                  ),
               this.m_bMounted &&
                 _.BFocusWithin() &&
                 ((0, _._)(
@@ -2661,8 +2682,8 @@ var CLSTAMP = "steamdb";
               (this.m_bMounted = !0),
               this.RegisterDOMEvents();
             const _ =
-                this.m_RetainFocusParent &&
-                this.m_RetainFocusParent.BHasFocus(),
+                this.m_FocusableIfEmptyAncestor &&
+                this.m_FocusableIfEmptyAncestor.BHasFocus(),
               _ = this.m_Properties?.autoFocus || _;
             if (this.BWantsAutoFocus() || _) {
               let _ = -1;
@@ -2675,7 +2696,7 @@ var CLSTAMP = "steamdb";
                     ? _
                       ? this.m_Tree.DeferredFocus.BHasQueuedFocusNode() ||
                         this.m_Tree.DeferredFocus.RequestFocus(
-                          this.m_RetainFocusParent,
+                          this.m_FocusableIfEmptyAncestor,
                           {
                             bFocusDescendant: !0,
                           },
@@ -2687,27 +2708,29 @@ var CLSTAMP = "steamdb";
               -1 != _ &&
                 (this.SetActiveChild(_),
                 (0, _._)(
-                  this.m_bFocusWithin,
+                  this.BFocusWithin(),
                   "Child has focus, we should be m_bFocusWithin",
                 ));
             }
           }
           DEV_SetDebugPropsOnElement() {}
           OnUnmount() {
-            this.m_Properties?.retainFocus &&
-              this.PropagateRetainFocusParentToChildren(
-                this.m_RetainFocusParent,
+            this.m_Properties?.focusableIfEmpty &&
+              this.PropagateFocusableIfEmptyAncestorToDescendants(
+                this.m_FocusableIfEmptyAncestor,
               ),
               (this.m_bMounted = !1);
             const _ = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
-            (this.m_bFocused || _) &&
+            (this.BHasFocus() || _) &&
               (_(
-                `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
+                `The focused node is unmounting, ${this.m_FocusableIfEmptyAncestor ? "will transfer to retain focus ancestor" : "will blur"}.`,
               ),
               _ && this.Tree.DeferredFocus.RequestFocus(null),
-              this.m_RetainFocusParent
-                ? this.m_RetainFocusParent.OnFocusedDecendantRemoved(this)
-                : this.m_bFocused &&
+              this.m_FocusableIfEmptyAncestor
+                ? this.m_FocusableIfEmptyAncestor.OnFocusedDecendantRemoved(
+                    this,
+                  )
+                : this.BHasFocus() &&
                   this.m_Tree.TransferFocus(_._.APPLICATION, null)),
               this.UnregisterDOMEvents(),
               this.m_Parent
@@ -2730,7 +2753,7 @@ var CLSTAMP = "steamdb";
                 (0, _._)(this.m_element, this.OnNavigationEvent),
               ),
               (this.m_Properties?.focusable ||
-                this.m_Properties?.focusableIfNoChildren ||
+                this.m_Properties?.focusableIfEmpty ||
                 0 == this.m_rgChildren.length) &&
                 (this.m_rgFocusHandlers.length ||
                   (this.m_element?.addEventListener("focus", this.OnDOMFocus),
@@ -2813,13 +2836,13 @@ var CLSTAMP = "steamdb";
             return _ ? _.GetLastFocusElement() : this.m_element;
           }
           OnDOMFocus(_) {
-            if (!this.m_bFocused) {
+            if (!this.BHasFocus()) {
               if ("children" == this.GetFocusable()) {
                 const _ = this.FindFocusableDescendant();
                 if (_ && _ !== this)
                   return (
                     _(
-                      "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
+                      "Browser gave node focus but we are marked focusableIfEmpty, transfering focus to descendant.",
                       this.m_element,
                       _.m_element,
                     ),
@@ -2830,7 +2853,7 @@ var CLSTAMP = "steamdb";
             }
           }
           OnDOMBlur(_) {
-            this.m_bFocused &&
+            this.BHasFocus() &&
               this.m_element?.ownerDocument.hasFocus() &&
               this.m_Tree.TransferFocus(_._.BROWSER, null);
           }
@@ -2842,7 +2865,7 @@ var CLSTAMP = "steamdb";
           GetFocusable() {
             const {
               focusable: _,
-              focusableIfNoChildren: _,
+              focusableIfEmpty: _,
               childFocusDisabled: _,
               fnCanTakeFocus: _,
             } = this.m_Properties;
@@ -2892,49 +2915,49 @@ var CLSTAMP = "steamdb";
           }
           FindFocusableDescendant(_, _) {
             const _ = (0, _._)(_),
-              { focusableIfNoChildren: _, childFocusDisabled: _ } =
+              { focusableIfEmpty: _, childFocusDisabled: _ } =
                 this.m_Properties ?? {};
             if (_) return null;
             if (this.m_rgChildren.length) {
               this.EnsureChildrenSorted();
               const { navEntryPreferPosition: _, resetNavOnEntry: _ } =
                 this.m_Properties ?? {};
-              let _,
-                _ = this.GetActiveChildIndex();
-              if ((_ && void 0 !== _ && (_ = -1), !this.IsValidChildIndex(_))) {
-                const _ = this.GetLayout();
-                _ =
-                  _ >= this.m_rgChildren.length ||
-                  _ == _.ROW_REVERSE ||
-                  _ == _.COLUMN_REVERSE ||
-                  _ == _.LAST
-                    ? this.m_rgChildren.length - 1
-                    : 0;
-              }
-              if ((_ == _.MAINTAIN_X || _ == _.MAINTAIN_Y || _) && _) {
-                let _, _;
-                _ == _.MAINTAIN_X ? (_ = "x") : _ == _.MAINTAIN_Y && (_ = "y"),
-                  _ == _._[_] &&
-                    (_ =
-                      this.m_Tree.GetLastFocusedMovementRect(_._[_]) ??
-                      this.m_Tree.GetLastFocusedNode()?.GetBoundingRect()),
+              let _ = this.GetActiveChildIndex();
+              _ && void 0 !== _ && (_ = -1);
+              const _ = this.GetLayout();
+              let _, _;
+              if (
+                (this.IsValidChildIndex(_) ||
+                  (_ =
+                    _ >= this.m_rgChildren.length ||
+                    _ == _.ROW_REVERSE ||
+                    _ == _.COLUMN_REVERSE ||
+                    _ == _.LAST
+                      ? this.m_rgChildren.length - 1
+                      : 0),
+                _ == _.MAINTAIN_X
+                  ? (_ = "x")
+                  : _ == _.MAINTAIN_Y
+                    ? (_ = "y")
+                    : _ == _.GEOMETRIC && _ && (_ = _._[_]),
+                (_ || _) && _)
+              ) {
+                const _ = this.m_Tree.GetLastFocusedNode();
+                if (_ || (_ && _ == _._[_])) {
+                  const _ =
+                    _ ||
+                    this.AdjustRectForLastMovementOnTangentAxis(
+                      _.GetBoundingRect(),
+                      _,
+                    );
                   _(
                     `Taking focus while preserving ${_ && _[_]} preserved: ${_} movement: ${_}, node:`,
-                    _ || _,
-                  );
-                const _ = this.ComputeRelativeDirection(_, _.GRID);
-                if (_ || _) {
-                  const _ = _ == _.BACKWARD ? this.m_rgChildren.length - 1 : 0;
-                  _ = this.FindClosestChildInNextAxiallyAlignedSet(
-                    _ || _._[_],
                     _,
-                    _,
-                    _ || _,
-                    _,
-                    this.m_rgChildren[_].GetBoundingRect(),
-                  );
+                  ),
+                    (_ = this.FindClosestFocusableNodeToRect(_, _));
                 } else if (_ != _._[_]) {
-                  const _ = _ == _.BACKWARD ? this.m_rgChildren.length : -1;
+                  const _ = this.ComputeRelativeDirection(_, _.GRID),
+                    _ = _ == _.BACKWARD ? this.m_rgChildren.length : -1;
                   _ = this.FindNextFocusableChildInDirection(_, _, _);
                 }
               } else if (_ == _.PREFERRED_CHILD) {
@@ -3032,7 +3055,7 @@ var CLSTAMP = "steamdb";
               _ == _.INVALID)
             )
               return !1;
-            if (this.m_Properties?.focusable && this.m_bFocused)
+            if (this.m_Properties?.focusable && this.BHasFocus())
               return _("Skipping navigation within focused element"), !1;
             if ((this.EnsureChildrenSorted(!0), _ == _.GRID))
               _ = this.FindNextFocusableChildInGrid(
@@ -3040,6 +3063,8 @@ var CLSTAMP = "steamdb";
                 _,
                 _,
               );
+            else if (_ == _.GEOMETRIC)
+              _ = this.FindNextFocusableChildGeometric(_, _);
             else {
               let _ = this.GetActiveChildIndex();
               this.IsValidChildIndex(_) ||
@@ -3117,6 +3142,7 @@ var CLSTAMP = "steamdb";
                     return _.INVALID;
                 }
               case _.GRID:
+              case _.GEOMETRIC:
                 switch (_) {
                   case _._.DIR_LEFT:
                   case _._.DIR_UP:
@@ -3166,14 +3192,12 @@ var CLSTAMP = "steamdb";
                 ),
                 this.FindFocusableDescendant(_)
               );
-            const _ = this.GetActiveDescendant().GetBoundingRect();
-            if (_ == _._.DIR_UP || _ == _._.DIR_DOWN) {
-              const _ =
-                this.m_Tree.GetLastFocusedMovementRect("x") ??
-                this.m_Tree.GetLastFocusedNode()?.GetBoundingRect();
-              _ && ((_._ = _._), (_.width = _.width));
-            }
-            if (_) {
+            let _ = this.GetActiveDescendant().GetBoundingRect();
+            if (
+              ((_ != _._.DIR_UP && _ != _._.DIR_DOWN) ||
+                (_ = this.AdjustRectForLastMovementOnTangentAxis(_, "y")),
+              _)
+            ) {
               let _ = _;
               for (; -1 != _; ) {
                 const _ = this.ScanChildren(
@@ -3207,6 +3231,116 @@ var CLSTAMP = "steamdb";
                 let _ = _.FindFocusableNode(_);
                 if (_) return _;
               }
+            }
+            return null;
+          }
+          FindNextFocusableChildGeometric(_, _) {
+            const _ = this.GetLastFocusElement();
+            if (!_ || _ == this.m_element)
+              return (
+                (0, _._)(
+                  !1,
+                  "No active child for geometric navigation",
+                  this.m_iLastActiveChildIndex,
+                  this.m_rgChildren.length,
+                  _,
+                ),
+                this.FindFocusableDescendant(_)
+              );
+            const _ = (0, _._)(_);
+            if (!_) return null;
+            const _ = this.AdjustRectForLastMovementOnTangentAxis(
+              this.GetActiveDescendant().GetBoundingRect(),
+              _,
+            );
+            return this.FindClosetChildInDirection(_, _, _, _);
+          }
+          AdjustRectForLastMovementOnTangentAxis(_, _) {
+            const _ = this.m_Tree.GetLastFocusedMovementRect(_._[_]);
+            return _
+              ? "x" == _
+                ? {
+                    left: _.left,
+                    right: _.right,
+                    top: _.top,
+                    bottom: _.bottom,
+                  }
+                : {
+                    left: _.left,
+                    right: _.right,
+                    top: _.top,
+                    bottom: _.bottom,
+                  }
+              : _;
+          }
+          FindClosestFocusableNodeToRect(_, _) {
+            const _ = (0, _._)(_),
+              _ = _ && _._[_];
+            console.log(_, _);
+            const _ = [];
+            for (const _ of this.m_rgChildren) {
+              const _ = _.GetBoundingRect();
+              if (_) {
+                const _ = (0, _._)(_, _),
+                  _ = _ ? (0, _._)(_, _, _) : 0;
+                _.push({
+                  child: _,
+                  overlap: _,
+                  dist: _,
+                });
+              }
+            }
+            _.sort((_, _) =>
+              _.dist != _.dist ? _.dist - _.dist : _.overlap - _.overlap,
+            ),
+              _.forEach(({ child: _, dist: _, overlap: _ }) =>
+                console.log(`dist ${_} overlap ${_}`, _.Element),
+              );
+            for (const { child: _ } of _) {
+              const _ = __webpack_require__.FindFocusableNode(_, _);
+              if (_) return _;
+            }
+            return null;
+          }
+          FindClosetChildInDirection(_, _, _, _) {
+            _(
+              `Find child closest to rect, rect is at left ${_.left} top ${_.top} right ${_.right} bottom ${_.bottom}`,
+            );
+            const _ = (0, _._)(_, _),
+              _ = [];
+            for (const _ of this.m_rgChildren) {
+              const _ = _.GetBoundingRect();
+              if (_) {
+                const _ = (0, _._)(_, _);
+                let _;
+                (_ = _ == _.FORWARD ? _.min - _.max : _.min - _.max),
+                  _ >= 0 &&
+                    _.push({
+                      child: _,
+                      overlap: (0, _._)(_._[_], _, _),
+                      dist: _,
+                    });
+              }
+            }
+            if (
+              (_.sort((_, _) => {
+                if (_.overlap) {
+                  if (!_.overlap) return -1;
+                } else if (_.overlap) return 1;
+                const _ = _.dist - _.dist;
+                return _ || _.overlap - _.overlap;
+              }),
+              _.IsDebugEnabled())
+            ) {
+              const _ = _.slice(0, 3).map(
+                ({ dist: _, overlap: _, child: _ }) =>
+                  `[ node: ${_.m_element?.className} dist: ${_} overlap: ${_} ]`,
+              );
+              _(`Found nodes on axis, top 3 (of ${_.length}: ${_.join(", ")}`);
+            }
+            for (const { child: _ } of _) {
+              const _ = _.FindFocusableNode(_, _);
+              if (_) return _;
             }
             return null;
           }
@@ -3257,14 +3391,14 @@ var CLSTAMP = "steamdb";
           GetDepth() {
             return this.m_nDepth;
           }
-          SetRetainFocusParent(_) {
-            (this.m_RetainFocusParent = _),
-              this.m_Properties?.retainFocus ||
-                this.PropagateRetainFocusParentToChildren(_);
+          SetFocusableIfEmptyAncestor(_) {
+            (this.m_FocusableIfEmptyAncestor = _),
+              this.m_Properties?.focusableIfEmpty ||
+                this.PropagateFocusableIfEmptyAncestorToDescendants(_);
           }
-          PropagateRetainFocusParentToChildren(_) {
+          PropagateFocusableIfEmptyAncestorToDescendants(_) {
             for (let _ = 0; _ < this.m_rgChildren.length; _++)
-              this.m_rgChildren[_].SetRetainFocusParent(_);
+              this.m_rgChildren[_].SetFocusableIfEmptyAncestor(_);
           }
           OnFocusedDecendantRemoved(_) {
             this.m_Tree.DeferredFocus.RequestFocus(this, {
@@ -3273,6 +3407,7 @@ var CLSTAMP = "steamdb";
           }
           SetDOMFocusAndScroll(_, _) {
             this.UpdateParentActiveChild(),
+              this.m_Tree.OnChildActivated(_),
               this.m_Tree.BIsActiveFocus()
                 ? ((0, _._)(
                     !this.m_Tree.BUseVirtualFocus(),
@@ -3285,8 +3420,7 @@ var CLSTAMP = "steamdb";
                   _(
                     `Didn't move focus to element as tree ${this.m_Tree._} is not active focus tree`,
                   ),
-              (0, _._)(this, _),
-              this.m_Tree.OnChildActivated(_);
+              (0, _._)(this, _);
           }
         }
         (0, _._)([_._], _.prototype, "OnDOMFocus", null),
@@ -3298,8 +3432,10 @@ var CLSTAMP = "steamdb";
         __webpack_require__._(_, {
           _: () => _,
         });
-        var _ = __webpack_require__("chunkid");
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
         function _(_) {
+          if (!_) return _._.NONE;
           switch (_) {
             case "column":
               return _._.COLUMN;
@@ -3311,8 +3447,10 @@ var CLSTAMP = "steamdb";
               return _._.ROW_REVERSE;
             case "grid":
               return _._.GRID;
+            case "geometric":
+              return _._.GEOMETRIC;
             default:
-              return _._.NONE;
+              return (0, _._)(_, `Unhandled flow-children: ${_}`), _._.NONE;
           }
         }
       },
@@ -4012,7 +4150,7 @@ var CLSTAMP = "steamdb";
           );
         }
         function _(_) {
-          const _ = _.useRef(),
+          const _ = _.useRef(void 0),
             _ = _.useContext(_);
           return (
             _.current || (_.current = __webpack_require__(_ || {})), _.current
@@ -4069,6 +4207,9 @@ var CLSTAMP = "steamdb";
         function _(_, _) {
           return _.filter((_) => _ !== _);
         }
+        function _(_) {
+          return (_ ?? []).filter(Boolean);
+        }
         function _(_, _) {
           let _ = 0,
             _ = _.length - 1;
@@ -4111,6 +4252,7 @@ var CLSTAMP = "steamdb";
           return Array.from(new Set(_));
         }
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -4211,12 +4353,6 @@ var CLSTAMP = "steamdb";
         function _(_, _, _) {
           return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
         }
-        function _(_, _, _) {
-          return null != _ && !isNaN(_) && _ >= _ && _ <= _;
-        }
-        function _(_, _) {
-          return null != _ && !isNaN(_) && null != _ && _ >= 0 && _ < _.length;
-        }
         function _(_, _, _, _, _) {
           return _ + ((_ - _) * (_ - _)) / (_ - _);
         }
@@ -4234,8 +4370,6 @@ var CLSTAMP = "steamdb";
           return !0;
         }
         __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -4282,7 +4416,6 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
-        __webpack_require__("chunkid");
         class _ {
           static sm_ErrorReportingStore;
           static InstallErrorReportingStore(_) {
@@ -6392,6 +6525,11 @@ var CLSTAMP = "steamdb";
                       _: _,
                       _: !0,
                       _: !0,
+                    },
+                    gaming_device_type: {
+                      _: 83,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
                     },
                   },
                 }),
@@ -9741,11 +9879,25 @@ var CLSTAMP = "steamdb";
         function _(_) {
           return null != _ && void 0 !== _.focus;
         }
+        function _(_, _) {
+          let _ = 0,
+            _ = 0;
+          return (
+            _.right < _.left
+              ? (_ = _.left - _.right)
+              : _.left > _.right && (_ = _.left - _.right),
+            _.bottom < _.top
+              ? (_ = _.top - _.bottom)
+              : _.top > _.bottom && (_ = _.top - _.bottom),
+            Math.sqrt(_ * _ + _ * _)
+          );
+        }
         function _(_) {
           let _;
           return _ && (_ = _.ownerDocument.defaultView), _;
         }
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -9795,6 +9947,150 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+        });
+        var _ = __webpack_require__("chunkid"),
+          _ = __webpack_require__("chunkid");
+        function _(_, _, _, _) {
+          _.useEffect(() => {
+            const _ = _?.current;
+            if (_ && _)
+              return (
+                _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
+              );
+          }, [_, _, _]);
+        }
+        function _(_, _, _) {
+          return (0, _._)(
+            (_) => {
+              if (_ && _)
+                return (
+                  _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
+                );
+            },
+            [_, _],
+          );
+        }
+        function _(_, _, _, _) {
+          _.useEffect(() => {
+            if (_ && _)
+              return (
+                _.addEventListener(_, _, _),
+                () => _.removeEventListener(_, _, _)
+              );
+          }, [_, _, _]);
+        }
+        function _(_, _, _, _) {
+          return _(
+            _,
+            "message",
+            function (_) {
+              _.includes(_.data) && __webpack_require__(this, _);
+            },
+            _,
+          );
+        }
+        function _(_, _) {
+          _.useEffect(() => {
+            if (!_ || !_) return;
+            const _ = () => _(_.visibilityState, _);
+            return (
+              __webpack_require__(),
+              _.addEventListener("visibilitychange", _),
+              () => _.removeEventListener("visibilitychange", _)
+            );
+          }, [_, _]);
+        }
+        function _(_) {
+          const _ = _.useRef(_);
+          _.current = _;
+          const _ = _.useRef(!1),
+            _ = _.useCallback((_) => {
+              _.current || _.current?.(_), (_.current = !1);
+            }, []),
+            _ = _.useCallback((_) => {
+              _.current?.(_), (_.current = !0);
+            }, []),
+            _ = [_("mousedown", _), _("touchstart", _)];
+          return (0, _._)(..._);
+        }
+        function _() {
+          const [_, _] = _.useState(!1);
+          return [
+            _,
+            {
+              onMouseEnter: _.useCallback(() => _(!0), []),
+              onMouseLeave: _.useCallback(() => _(!1), []),
+            },
+          ];
+        }
+        function _(_ = "vertical") {
+          const _ = "vertical" == _,
+            [_, _] = _.useState(),
+            [_, _] = _.useState(!0),
+            [_, _] = _.useState(!0),
+            _ = _.useCallback(() => {
+              const _ = (_ ? _?.scrollTop : _?.scrollLeft) ?? 0,
+                _ =
+                  ((_ ? _?.scrollHeight : _?.scrollWidth) ?? 0) - _ ==
+                  ((_ ? _?.clientHeight : _?.clientWidth) ?? 0);
+              _(0 == _), _(_);
+            }, [_, _]),
+            _ = _.useCallback((_) => _(_), []),
+            _ = _.useCallback(
+              (_) => {
+                _();
+              },
+              [_],
+            );
+          _.useLayoutEffect(_, [_]);
+          const _ = _.useCallback(() => _(), [_]),
+            _ =
+              ((_ = _),
+              (_ = {
+                subtree: !0,
+                childList: !0,
+              }),
+              (0, _._)(
+                (_) => {
+                  if (!_ || !_) return;
+                  const _ = new MutationObserver(_);
+                  return _.observe(_, _), () => _.disconnect();
+                },
+                [_],
+              ));
+          var _, _;
+          const _ = _("scroll", _);
+          return {
+            bScrolledToBeginning: _,
+            bScrolledToEnd: _,
+            ref: (0, _._)(_, _, _),
+          };
+        }
+      },
+      chunkid: (module, module_exports, __webpack_require__) => {
+        "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _._,
+          _: () => _._,
+          _: () => _._,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _._,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _._,
+          _: () => _._,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -9802,20 +10098,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
+          _: () => _._,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -9962,56 +10245,6 @@ var CLSTAMP = "steamdb";
             )
           );
         }
-        function _(_, _, _, _) {
-          _.useEffect(() => {
-            const _ = _?.current;
-            if (_ && _)
-              return (
-                _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
-              );
-          }, [_, _, _]);
-        }
-        function _(_, _, _) {
-          return (0, _._)(
-            (_) => {
-              if (_ && _)
-                return (
-                  _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
-                );
-            },
-            [_, _],
-          );
-        }
-        function _(_, _, _, _) {
-          _.useEffect(() => {
-            if (_ && _)
-              return (
-                _.addEventListener(_, _, _),
-                () => _.removeEventListener(_, _, _)
-              );
-          }, [_, _, _]);
-        }
-        function _(_, _, _, _) {
-          return _(
-            _,
-            "message",
-            function (_) {
-              _.includes(_.data) && __webpack_require__(this, _);
-            },
-            _,
-          );
-        }
-        function _(_, _) {
-          _.useEffect(() => {
-            if (!_ || !_) return;
-            const _ = () => _(_.visibilityState, _);
-            return (
-              __webpack_require__(),
-              _.addEventListener("visibilitychange", _),
-              () => _.removeEventListener("visibilitychange", _)
-            );
-          }, [_, _]);
-        }
         function _(_, _) {
           _.useLayoutEffect(() => {
             if (!_ || !_) return;
@@ -10023,21 +10256,19 @@ var CLSTAMP = "steamdb";
           _(_, _());
         }
         function _(_) {
-          const [_, _] = _.useState(_?.Value);
-          return (
-            _.useEffect(() => {
-              if (null == _) return;
-              const _ = _.Subscribe(_);
-              return __webpack_require__(_.Value), _?.Unsubscribe;
-            }, [_]),
-            _
+          return _;
+        }
+        function _() {}
+        function _(_) {
+          return _.useSyncExternalStore(
+            _ ? _.SyncStore : _,
+            _ ? _.GetValue : _,
+            _ ? _.GetValue : _,
           );
         }
         function _(_, _) {
           _.useEffect(() => {
-            if (null == _) return;
-            const _ = _.Subscribe(_);
-            return _?.Unsubscribe;
+            if (_ && _) return _.Subscribe(_).Unsubscribe;
           }, [_, _]);
         }
         function _(_, _, _ = 1e3) {
@@ -10091,7 +10322,7 @@ var CLSTAMP = "steamdb";
           ];
         }
         function _(_) {
-          const _ = _.useRef();
+          const _ = _.useRef(void 0);
           return _.useCallback(
             () => (
               (_.current && _.current.factory == _) ||
@@ -10104,91 +10335,28 @@ var CLSTAMP = "steamdb";
             [_],
           );
         }
+        function _(_) {
+          const _ = _.useRef({
+            value: void 0,
+            bConstructed: !1,
+          });
+          return (
+            _.current.bConstructed ||
+              (_.current = {
+                value: _(),
+                bConstructed: !0,
+              }),
+            _.current.value
+          );
+        }
         function _(_, _) {
-          const _ = _.useRef();
+          const _ = _.useRef(void 0);
           return null == _
             ? ((_.current = _), _)
             : ((null == _.current || isNaN(_.current)) && (_.current = _),
               (_.current = Math.min(_.current, _ + _)),
               (_.current = Math.max(_.current, _ - _)),
               _.current);
-        }
-        function _(_) {
-          const _ = _.useRef();
-          _.current = _;
-          const _ = _.useRef(!1),
-            _ = _.useCallback((_) => {
-              _.current || _.current?.(_), (_.current = !1);
-            }, []),
-            _ = _.useCallback((_) => {
-              _.current?.(_), (_.current = !0);
-            }, []),
-            _ = [_("mousedown", _), _("touchstart", _)];
-          return (0, _._)(..._);
-        }
-        function _() {
-          const [_, _] = _.useState(!1);
-          return [
-            _,
-            {
-              onMouseEnter: _.useCallback(() => _(!0), []),
-              onMouseLeave: _.useCallback(() => _(!1), []),
-            },
-          ];
-        }
-        function _(_ = "vertical") {
-          const _ = "vertical" == _,
-            _ = _.useRef(),
-            _ = _.useRef(!0),
-            _ = _.useRef(!0),
-            _ = _(),
-            _ = _.useCallback(() => {
-              const _ = (_ ? _.current?.scrollTop : _.current?.scrollLeft) ?? 0,
-                _ = 0 == _,
-                _ =
-                  ((_ ? _.current?.scrollHeight : _.current?.scrollWidth) ??
-                    0) -
-                    _ ==
-                  ((_ ? _.current?.clientHeight : _.current?.clientWidth) ?? 0);
-              (_.current == _ && _.current == _) ||
-                ((_.current = _), (_.current = _), _());
-            }, [_, _]),
-            _ = _.useCallback(
-              (_) => {
-                (_.current = _), _();
-              },
-              [_],
-            ),
-            _ = _.useCallback(
-              (_) => {
-                _();
-              },
-              [_],
-            );
-          _.useLayoutEffect(_, [_]);
-          const _ = _.useCallback(() => _(), [_]),
-            _ =
-              ((_ = _),
-              (_ = {
-                subtree: !0,
-                childList: !0,
-              }),
-              (0, _._)(
-                (_) => {
-                  if (!_ || !_) return;
-                  const _ = new MutationObserver(_);
-                  return _.observe(_, _), () => _.disconnect();
-                },
-                [_],
-              ));
-          var _, _;
-          const _ = _("scroll", _),
-            _ = (0, _._)(_, _, _);
-          return {
-            bScrolledToBeginning: _.current,
-            bScrolledToEnd: _.current,
-            ref: _,
-          };
         }
         function _() {
           const [_, _] = _.useState(() => (0, _._)());
@@ -10240,7 +10408,7 @@ var CLSTAMP = "steamdb";
                   });
         }
         function _(_, _) {
-          const _ = _.useRef();
+          const _ = _.useRef(void 0);
           return _.useCallback((_) => {
             _.current && __webpack_require__.current(), (_.current = _(_));
           }, _);
@@ -10408,7 +10576,7 @@ var CLSTAMP = "steamdb";
             _,
           );
         }
-        const _ = () => _().useActiveSteamInterface().GetServiceTransport(),
+        const _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
           _ = () =>
             _().useActiveSteamInterface().GetAnonymousServiceTransport(),
           _ = () => _().useStorage(),
@@ -10719,6 +10887,8 @@ var CLSTAMP = "steamdb";
 	"big-category-link": 76,
 	"small-category-link": 77,
 	"package-purchase-recommendations": 78,
+	"popular": 79,
+	"recent": 80,
 	"main-cluster": 100,
 	"featured-win-games": 101,
 	"featured-mac-games": 102,
@@ -11428,7 +11598,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -11500,14 +11669,6 @@ var CLSTAMP = "steamdb";
             _,
           );
           return _._.AddNavParamToURL(_, _);
-        }
-        function _(_) {
-          const { href: _, ..._ } = _,
-            _ = _(_);
-          return _.createElement("a", {
-            ..._,
-            href: _,
-          });
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -12562,9 +12723,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
-                BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
-                BUILD_RTIME_UTC: 1757634428,
+                BUILD_TIME_LOCAL: "Sep 17 2025 : 15:52:55",
+                BUILD_TIME_UTC: "Sep 17 2025 : 22:52:55",
+                BUILD_RTIME_UTC: 1758149575,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -13037,7 +13198,7 @@ var CLSTAMP = "steamdb";
             let _ = new _._(_);
             _._.SetCurrentLoggedInAccountID(_.GetAccountID());
           }, [_]);
-          const _ = _.useRef(),
+          const _ = _.useRef(void 0),
             _ = _.useCallback(
               (_) => (
                 _.bIgnoreSavedDimensions || _.strRestoreDetails
@@ -13138,193 +13299,153 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
-          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_);
-        let _ = class extends _.Component {
-          m_elHover;
-          m_bNoSpace = !1;
-          static defaultProps = {
-            direction: "right",
-            nBodyAlignment: 0.5,
-            nAllowOffscreenPx: 10,
-            nBodyDistance: 8,
-            nMaxLateralMoveOnScreen: void 0,
-          };
-          state = {
-            _: void 0,
-            _: void 0,
-            hoverPositionReady: !1,
-          };
-          bindHover(_) {
-            (this.m_elHover = _ || void 0), this.positionHover();
-          }
-          componentDidUpdate() {
-            this.positionHover();
-          }
-          render() {
-            const {
+        function _(_) {
+          const {
               target: _,
               visibilityObserver: _,
               className: _,
               style: _,
               bEnablePointerEvents: _,
-              direction: _,
-              nBodyAlignment: _,
-              nBodyDistance: _,
-              nAllowOffscreenPx: _,
+              direction: _ = "right",
+              nBodyAlignment: _ = 0.5,
+              nBodyDistance: _ = 8,
+              nAllowOffscreenPx: _ = 10,
               nMaxLateralMoveOnScreen: _,
-              children: _,
               onNoSpace: _,
               bTopmost: _,
+              children: _,
               ..._
-            } = this.props;
-            let _ = Object.assign(
-                {
-                  left: this.state._,
-                  top: this.state._,
-                },
-                _,
-              ),
-              _ = !_ || _.visible;
-            return _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().HoverPositionOuter,
-                  _ && _().HoverAboveModal,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  ..._,
-                  className: (0, _._)(
-                    _().HoverPosition,
-                    _ && this.state.hoverPositionReady && _().Ready,
-                    this.m_bNoSpace && _().NoSpace,
-                    _ && _().EnablePointerEvents,
-                    _,
-                  ),
-                  style: _,
-                  ref: this.bindHover,
-                },
-                _,
-              ),
-            );
-          }
-          positionHover() {
-            let _ = this.m_elHover,
-              _ = this.props.target;
-            if (!_ || !_) return;
-            if (
-              this.state.hoverPositionReady &&
-              this.props.visibilityObserver &&
-              !this.props.visibilityObserver.visible
-            )
-              return;
-            let _ = _.ownerDocument.defaultView;
-            if (!_ || _.closed) return;
-            const _ = _.querySelector(".hover_arrow.left"),
-              _ = _.querySelector(".hover_arrow.right"),
-              _ = _.querySelector(".hover_arrow.top"),
-              _ = _.querySelector(".hover_arrow.bottom"),
-              _ = _.getBoundingClientRect(),
-              _ = _.getBoundingClientRect(),
-              _ =
-                "overlay" == this.props.direction ||
-                "overlay-center" == this.props.direction;
-            _ && _.setAttribute("style", "display: none;"),
+            } = _,
+            [_, _] = _.useState(void 0),
+            [_, _] = _.useState(void 0),
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
+            [_, _] = _.useState(null),
+            _ = _.useCallback(() => {
+              let _ = _;
+              if (!_ || !_) return;
+              if (_ && _ && !_.visible) return;
+              let _ = _.ownerDocument.defaultView;
+              if (!_ || _.closed) return;
+              const _ = _.querySelector(".hover_arrow.left"),
+                _ = _.querySelector(".hover_arrow.right"),
+                _ = _.querySelector(".hover_arrow.top"),
+                _ = _.querySelector(".hover_arrow.bottom"),
+                _ = _.getBoundingClientRect(),
+                _ = _.getBoundingClientRect(),
+                _ = "overlay" == _ || "overlay-center" == _;
               _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;"),
-              _ && _.setAttribute("style", "display: none;");
-            let {
-                nBodyDistance: _ = 8,
-                direction: _ = "right",
-                nBodyAlignment: _ = 0.5,
-              } = this.props,
-              {
-                nLeft: _,
-                nTop: _,
-                nOverflow: _,
-                nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
-            if (_ > (this.props.nAllowOffscreenPx ?? 10) && !_) {
-              const _ = (function (_) {
-                  switch (_) {
-                    case "right":
-                      return "left";
-                    case "left":
-                      return "right";
-                    case "bottom":
-                      return "top";
-                    case "top":
-                      return "bottom";
-                    case "overlay":
-                      return "overlay";
-                    case "overlay-center":
-                      return "overlay-center";
-                  }
-                })(this.props.direction ?? "right"),
+                _ && _.setAttribute("style", "display: none;"),
+                _ && _.setAttribute("style", "display: none;"),
+                _ && _.setAttribute("style", "display: none;");
+              let _ = _,
                 {
                   nLeft: _,
                   nTop: _,
                   nOverflow: _,
                   nLateralOverflow: _,
                 } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
-              if (
-                (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
-                _ > (this.props.nAllowOffscreenPx ?? 10))
-              )
-                return (
-                  console.log(
-                    "Not showing hover because it didn't fit in the main or alt direction",
-                  ),
-                  _.setAttribute("style", "display: none;"),
-                  (this.m_bNoSpace = !0),
-                  void (this.props.onNoSpace && this.props.onNoSpace())
-                );
-            }
-            0 === this.props.nMaxLateralMoveOnScreen ||
-              _ ||
-              ([_, _] = (function (_, _, _, _, _) {
-                let _ = Math.max(_[0], _[1]);
-                void 0 !== _ && (_ = Math.min(_, _));
-                _ = Math.max(0, _);
-                const _ = _[0] > _[1] ? _ : -_;
-                "left" === _ || "right" === _ ? (_ += _) : (_ += _);
-                return [_, _];
-              })(this.props.nMaxLateralMoveOnScreen, _, _ ?? "right", _, _));
-            let _ = null;
-            switch (_) {
-              case "left":
-                _ = _;
-                break;
-              case "right":
-                _ = _;
-                break;
-              case "top":
-                _ = _;
-                break;
-              case "bottom":
-                _ = _;
-            }
-            _ && _.setAttribute("style", ""),
-              _ != this.state._ &&
-                this.setState({
-                  _: _,
-                }),
-              _ != this.state._ &&
-                this.setState({
-                  _: _,
-                }),
-              this.state.hoverPositionReady ||
-                this.setState({
-                  hoverPositionReady: !0,
-                });
-          }
-        };
+              if (_ > (_ ?? 10) && !_) {
+                const _ = (function (_) {
+                    switch (_) {
+                      case "right":
+                        return "left";
+                      case "left":
+                        return "right";
+                      case "bottom":
+                        return "top";
+                      case "top":
+                        return "bottom";
+                      case "overlay":
+                        return "overlay";
+                      case "overlay-center":
+                        return "overlay-center";
+                    }
+                  })(_ ?? "right"),
+                  {
+                    nLeft: _,
+                    nTop: _,
+                    nOverflow: _,
+                    nLateralOverflow: _,
+                  } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+                if (
+                  (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
+                  _ > (_ ?? 10))
+                )
+                  return (
+                    console.log(
+                      "Not showing hover because it didn't fit in the main or alt direction",
+                    ),
+                    _.setAttribute("style", "display: none;"),
+                    _(!0),
+                    void _?.()
+                  );
+              }
+              0 === _ ||
+                _ ||
+                ([_, _] = (function (_, _, _, _, _) {
+                  let _ = Math.max(_[0], _[1]);
+                  void 0 !== _ && (_ = Math.min(_, _));
+                  _ = Math.max(0, _);
+                  const _ = _[0] > _[1] ? _ : -_;
+                  "left" === _ || "right" === _ ? (_ += _) : (_ += _);
+                  return [_, _];
+                })(_, _, _ ?? "right", _, _));
+              let _ = null;
+              switch (_) {
+                case "left":
+                  _ = _;
+                  break;
+                case "right":
+                  _ = _;
+                  break;
+                case "top":
+                  _ = _;
+                  break;
+                case "bottom":
+                  _ = _;
+              }
+              _ && _.setAttribute("style", ""),
+                _ != _ && _(_),
+                _ != _ && _(_),
+                _ || _(!0);
+            }, [_, _, _, _, _, _, _, _, _, _, _, _]);
+          _.useEffect(() => _(), [_]);
+          let _ = Object.assign(
+              {
+                left: _,
+                top: _,
+              },
+              _,
+            ),
+            _ = !_ || _.visible;
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().HoverPositionOuter,
+                _ && _().HoverAboveModal,
+              ),
+            },
+            _.createElement(
+              "div",
+              {
+                ..._,
+                className: (0, _._)(
+                  _().HoverPosition,
+                  _ && _ && _().Ready,
+                  _ && _().NoSpace,
+                  _ && _().EnablePointerEvents,
+                  _,
+                ),
+                style: _,
+                ref: _,
+              },
+              _,
+            ),
+          );
+        }
         function _(_, _, _, _, _, _, _) {
           const _ = _,
             _ = _;
@@ -13373,8 +13494,6 @@ var CLSTAMP = "steamdb";
         function _(_, _, _, _) {
           return Math.max(0, Math.min(1, _)) * (_ - _) + _;
         }
-        (0, _._)([_._], _.prototype, "bindHover", null),
-          (_ = (0, _._)([_._], _));
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -15046,11 +15165,18 @@ var CLSTAMP = "steamdb";
         })(_ || (_ = {}));
         const _ = new (class {
           m_fnCallbackOnPlaySound = new _._();
+          m_fnCallbackOnSuppressSound = new _._();
           RegisterCallbackOnPlaySound(_) {
             return this.m_fnCallbackOnPlaySound.Register(_);
           }
           PlayNavSound(_, _) {
             this.m_fnCallbackOnPlaySound.Dispatch(_, _);
+          }
+          RegisterCallbackOnSuppressNavImminentSound(_) {
+            return this.m_fnCallbackOnSuppressSound.Register(_);
+          }
+          SuppressImminentNavSound() {
+            this.m_fnCallbackOnSuppressSound.Dispatch();
           }
         })();
       },
@@ -15696,9 +15822,6 @@ var CLSTAMP = "steamdb";
                   _.menuRight &&
                     (_.menuRight +=
                       _.document.body.clientWidth - _.scrollX - _.innerWidth)),
-              _.menuWidth &&
-                window.matchMedia("(prefers-contrast: more)").matches &&
-                (_.menuWidth += 1),
               (_ ||
                 _.menuLeft !== this.state.menuLeft ||
                 _.menuRight !== this.state.menuRight ||
@@ -15785,6 +15908,9 @@ var CLSTAMP = "steamdb";
               (this.props.options.bCreateHidden ||
                 (this.props.instance.visible && this.state.ready)) &&
                 (_ += " visible"),
+              this.props.instance.visible &&
+                this.state.ready &&
+                (_ += " ready"),
               (_ += " " + _().ContextMenuPosition),
               this.props.options.bStandalone && (_ += " " + _().Standalone),
               _.createElement(
@@ -16026,7 +16152,7 @@ var CLSTAMP = "steamdb";
             } = _,
             _ = (0, _._)(),
             _ = _?.ownerWindow || window,
-            _ = _.useRef();
+            _ = _.useRef(void 0);
           return (
             _.current || (_.current = new _._()),
             _.useLayoutEffect(() => {
@@ -16066,6 +16192,7 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
+          _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -16185,8 +16312,16 @@ var CLSTAMP = "steamdb";
             "contextmenu_" + _.key,
             {
               title: _.options.title || "Menu",
-              html_class: _().ContextMenuPopup + " client_chat_frame",
-              body_class: "ContextMenuPopupBody",
+              html_class: (0, _._)(
+                _().ContextMenuPopup,
+                "client_chat_frame",
+                _.options.bStandalone && _().Standalone,
+              ),
+              popup_class: _().PopupTarget,
+              body_class: (0, _._)(
+                _().ContextMenuPopupBody,
+                "ContextMenuPopupBody",
+              ),
               replace_existing_popup: !1,
               target_browser: _,
               window_opener_id: _,
@@ -17019,7 +17154,7 @@ var CLSTAMP = "steamdb";
                 bRegisterManagersWithWindow: _ = !0,
                 ..._
               } = _,
-              _ = _.useRef();
+              _ = _.useRef(void 0);
             _.current || (_.current = new _._());
             let _ = _.createElement(_._, {
               ..._,
@@ -17356,7 +17491,6 @@ var CLSTAMP = "steamdb";
           GrD: () => _,
           Gv$: () => _,
           IFd: () => _,
-          IOc: () => _,
           IrQ: () => _,
           Jlk: () => _,
           K7s: () => _,
@@ -17371,7 +17505,6 @@ var CLSTAMP = "steamdb";
           MxO: () => _,
           N8C: () => _,
           NCC: () => _,
-          NtH: () => _,
           OSJ: () => _,
           OWN: () => _,
           OeC: () => _,
@@ -17410,6 +17543,7 @@ var CLSTAMP = "steamdb";
           YJl: () => _,
           YNO: () => _,
           Yb3: () => _,
+          Yoo: () => _,
           YuU: () => _,
           ZPc: () => _,
           ZWw: () => _,
@@ -17465,7 +17599,6 @@ var CLSTAMP = "steamdb";
           jdP: () => _,
           jlt: () => _,
           kPc: () => _,
-          l8x: () => _,
           lMJ: () => _,
           lRD: () => _,
           m59: () => _,
@@ -19077,19 +19210,6 @@ var CLSTAMP = "steamdb";
           return _.createElement(
             "svg",
             {
-              width: "50px",
-              height: "25px",
-              viewBox: "0 0 50 25",
-            },
-            _.createElement("path", {
-              _: "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
-            }),
-          );
-        }
-        function _() {
-          return _.createElement(
-            "svg",
-            {
               version: "1.1",
               _: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
@@ -19716,27 +19836,6 @@ var CLSTAMP = "steamdb";
                 strokeMiterlimit: "10",
                 points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
               }),
-          );
-        }
-        function _(_) {
-          const { angle: _, ..._ } = _;
-          return _.createElement(
-            "svg",
-            {
-              style: {
-                transform: `rotate(${_.angle}deg)`,
-              },
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 32 32",
-              fill: "none",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
-            }),
           );
         }
         function _() {
@@ -22385,21 +22484,6 @@ var CLSTAMP = "steamdb";
             }),
           );
         }
-        function _(_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 1200 1200",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              _: "M600,96c-277.2,0-504,226.8-504,504s226.8,504,504,504,504-226.8,504-504S877.2,96,600,96ZM600,222c83.2,0,158.8,26.5,220.5,70.6L292.6,820.5c-44.1-61.7-70.6-137.3-70.6-220.5,0-209.2,168.8-378,378-378ZM907.4,379.5c44.1,61.7,70.6,137.3,70.6,220.5,0,209.2-168.8,378-378,378s-158.8-26.5-220.5-70.6L907.4,379.5Z",
-              strokeWidth: "0",
-            }),
-          );
-        }
         function _() {
           return _.createElement(
             "svg",
@@ -23289,6 +23373,55 @@ var CLSTAMP = "steamdb";
             }),
           );
         }
+        function _(_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              version: "1.1",
+              viewBox: "0 0 1024 1024",
+              ..._,
+            },
+            _.createElement(
+              "g",
+              null,
+              _.createElement(
+                "g",
+                {
+                  _: "Layer_1",
+                },
+                _.createElement(
+                  "g",
+                  null,
+                  _.createElement("path", {
+                    _: "M236.8,355.7h-58.6c-.7,85.4-.3,170.9-.7,256.4.2.8.3,1.7.3,2.5-.2,5-4.4,8.8-9.4,8.6-10.3.6-20.6.3-30.9.3,6.9,17,14.4,33.8,22.1,50.4,19.5-.7,41.6,3.6,58.2-9.3,15.1-11.1,19.7-30.8,19.4-48.6,0-86.8.2-173.7-.4-260.5Z",
+                  }),
+                  _.createElement("path", {
+                    _: "M455.9,539.6c14.1-35.5,30.9-69.9,45.9-104.9-18.3-2.1-39,3.8-55.9-3.3,8.2-27.5,23-52.8,33.5-79.5-19.9,0-40.1-.3-60.2,0-14.6,33.4-29.6,66.8-44.8,100-4.3,9.9-9.5,23.1-.5,32.1,11.6,10.5,28.5,6.4,42.7,7.4-9.8,24.9-22.8,48.5-31.1,73.9-4.6,12.6,6.9,25.5,19.4,25.5,22.7,1.5,45.6.2,68.4.6,7.4-16.6,14.9-33.2,22.2-50-13.3,0-26.9.9-39.8-1.7Z",
+                  }),
+                  _.createElement("path", {
+                    _: "M959.8,585.9c-1.2-25.2,4.9-53.6-10.7-75.6-13.3-18.7-37.3-23.7-58.8-24.1-1.3-30,5.9-65.3-16.3-89.8-20.6-23.1-53.9-23.2-82.4-22.1v-22.4h-59.5l-.4,22.7h-39.5v59.9c13.2-.1,26.4,0,39.5.3.4,17.4.4,34.7,0,51.9-19.8.3-39.6.3-59.4.3v59.8h59.5v127.2h59.5c0-42.4,0-84.7,0-127.1,29,0,57.9-.4,86.9,0,10.1-.9,21.8,6.3,21.5,17.5.8,15.9.8,31.8,0,47.6.3,5.4-3.8,10-9.1,10.3-16.6,1.2-33.1,0-49.7.6,7.3,17.2,14.4,34.6,22.7,51.4,27.3-1.6,60.7,5.3,81.5-17.2,19.8-18.3,13.8-47.2,14.7-71.2ZM831.8,486.9h-40.2c-.3-17.5-.4-35-.4-52.5,12.9,1.8,30.1-5.2,39.9,5.2,1.6,15.8.6,31.6.6,47.3Z",
+                  }),
+                  _.createElement("path", {
+                    _: "M618.5,434.3h37.5v-59.9h-136.4c0,19.9,0,40,.1,60h37.4v179.5c-17.8.2-35.7.2-53.6.2-9.2,19.9-18.3,39.8-27.3,59.8h199.7v-59.8c-19.1-.2-38.3,0-57.4-.2v-179.6Z",
+                  }),
+                  _.createElement("path", {
+                    _: "M900.4,433.7c11.1,0,22.3.6,33.4-.4,17.9-1.6,31.3-22.5,24.2-39.3-5.6-18.4-30.6-26.5-45.7-14.1-16.7,12.5-11.2,35.8-12,53.8Z",
+                  }),
+                  _.createElement("path", {
+                    _: "M78.6,434.2c-3.1,39.2-6.2,78.6-8.9,117.5-.7,8.9-2.6,17.7-5.7,26.1,10.1,23.1,20.1,46.1,30.9,68.8,24.1-32.2,33-72.8,35.5-112.2,2.1-33.5,5.8-67,7.1-100.6-19.6.8-39.2.5-58.9.5Z",
+                  }),
+                  _.createElement("path", {
+                    _: "M345.2,551.5c-2.8-39.1-5.9-78.2-8.9-117.2h-59.5c2.9,36.4,5.3,73,8.4,109.3s12.6,73.5,34.8,103.2c10.6-22.8,20.8-45.8,30.8-68.8-3.2-8.5-5.1-17.4-5.7-26.4Z",
+                  }),
+                  _.createElement("path", {
+                    _: "M378.1,609.4c-9.3,19.9-18.4,39.9-27.5,60,30.4,9,62.7,2.8,93.9,4.5,9.2-19.9,18.4-39.9,27.3-59.9-31.3-1.2-63.1,3.3-93.7-4.6Z",
+                  }),
+                ),
+              ),
+            ),
+          );
+        }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
@@ -23346,7 +23479,7 @@ var CLSTAMP = "steamdb";
         var _ = __webpack_require__("chunkid");
         let _ = 0;
         function _() {
-          const _ = _.useRef();
+          const _ = _.useRef(void 0);
           return (
             void 0 === _.current && (_.current = "svgid_" + _++),
             [_.current, `url(#${_.current})`]
@@ -24232,19 +24365,31 @@ var CLSTAMP = "steamdb";
           _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid");
         class _ {
+          SyncStore(_) {
+            return this.Subscribe(_).Unsubscribe;
+          }
+          GetValue() {
+            return this.Value;
+          }
+        }
+        (0, _._)([_._], _.prototype, "SyncStore", null),
+          (0, _._)([_._], _.prototype, "GetValue", null);
+        class _ extends _ {}
+        class _ extends _ {
           m_callbacks;
           m_currentValue;
           m_fnEquals;
           constructor(_, _) {
-            (this.m_callbacks = new _._()),
+            super(),
+              (this.m_callbacks = new _._()),
               (this.m_currentValue = _),
               (this.m_fnEquals = _);
           }
           Set(_) {
             if (this.m_fnEquals) {
-              if (this.m_fnEquals(this.m_currentValue, _)) return;
-            } else if (this.m_currentValue === _) return;
-            (this.m_currentValue = _), this.m_callbacks.Dispatch(_);
+              if (this.m_fnEquals(this.m_currentValue, _)) return !1;
+            } else if (this.m_currentValue === _) return !1;
+            return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
           }
           get Value() {
             return this.m_currentValue;
@@ -24261,13 +24406,14 @@ var CLSTAMP = "steamdb";
         function _(_, _) {
           return new _(_, _);
         }
-        class _ {
+        class _ extends _ {
           m_fnMap;
           m_originalSubscribableValue;
           m_mappedSubscribableValue;
           m_bMappedValueStale = !1;
           constructor(_, _, _) {
-            (this.m_originalSubscribableValue = _),
+            super(),
+              (this.m_originalSubscribableValue = _),
               (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
               (this.m_fnMap = _),
               this.m_originalSubscribableValue.Subscribe(() => {
@@ -24279,7 +24425,7 @@ var CLSTAMP = "steamdb";
           get Value() {
             return (
               this.m_bMappedValueStale && this.UpdateMappedValue(),
-              this.m_mappedSubscribableValue?.Value
+              this.m_mappedSubscribableValue.Value
             );
           }
           Subscribe(_) {
@@ -25259,13 +25405,14 @@ var CLSTAMP = "steamdb";
               _.getMonth() == _.getMonth() &&
               _.getDate() == _.getDate())
             ? _(_) + " - " + _(_)
-            : (function (_, _) {
+            : (function (_, _, _) {
                 let _ = new Date(1e3 * _),
                   _ = new Date(1e3 * _);
                 const _ = new Date();
                 if (
-                  __webpack_require__.getFullYear() != _.getFullYear() ||
-                  _.getFullYear() == __webpack_require__.getFullYear()
+                  _.getFullYear() != _.getFullYear() ||
+                  _.getFullYear() != _.getFullYear() ||
+                  _
                 )
                   return `${_(_)} - ${_(_)}`;
                 const _ = {
@@ -25273,11 +25420,8 @@ var CLSTAMP = "steamdb";
                     day: "numeric",
                   },
                   _ =
-                    __webpack_require__.toLocaleDateString(
-                      _._.GetPreferredLocales(),
-                      _,
-                    ) + " - ";
-                if (__webpack_require__.getMonth() == _.getMonth()) {
+                    _.toLocaleDateString(_._.GetPreferredLocales(), _) + " - ";
+                if (_.getMonth() == _.getMonth()) {
                   const _ = {
                     day: "numeric",
                   };
@@ -26024,8 +26168,6 @@ var CLSTAMP = "steamdb";
           _: () => _._,
           _: () => _._,
           _: () => _._,
-          _: () => _,
-          _: () => _._,
           _: () => _._,
           _: () => _._,
           _: () => _._,
@@ -26038,6 +26180,7 @@ var CLSTAMP = "steamdb";
           _: () => _._,
           _: () => _,
           _: () => _,
+          _: () => _._,
           _: () => _._,
           _: () => _._,
           _: () => _._,
@@ -26099,47 +26242,6 @@ var CLSTAMP = "steamdb";
           };
         }
         var _ = __webpack_require__("chunkid");
-        function _(_ = !1) {
-          let [_, _] = (0, _.useState)(!1),
-            _ = (0, _.useRef)(),
-            _ = (0, _._)(
-              (_) => {
-                if (((_.current = _), !_)) return void __webpack_require__(!1);
-                let _ = () => {
-                  __webpack_require__((0, _._)(_));
-                };
-                return (
-                  _.addEventListener("fullscreenchange", _),
-                  () => {
-                    _.removeEventListener("fullscreenchange", _);
-                  }
-                );
-              },
-              [_],
-            ),
-            _ = (0, _.useCallback)(() => {
-              if (!_.current) return;
-              let _ = _.current;
-              if ((0, _._)(_)) return void (0, _._)(_);
-              if ((0, _._)(_)) return;
-              if (!_) return;
-              let _ = _.getElementsByTagName("video");
-              if (0 == _.length) return;
-              let _ = _[0];
-              _.webkitSetPresentationMode &&
-                _.webkitSetPresentationMode("fullscreen");
-            }, [_, _]);
-          return [
-            _,
-            (0, _.useMemo)(
-              () => ({
-                bFullscreen: _,
-                fnToggleFullscreen: _,
-              }),
-              [_, _],
-            ),
-          ];
-        }
         function _(_) {
           return (0, _._)(
             (_) => {
@@ -26162,9 +26264,9 @@ var CLSTAMP = "steamdb";
           const _ = _.useRef(!0),
             _ = _.useRef(void 0),
             _ = _.useRef(void 0),
-            _ = _.useRef();
+            _ = _.useRef(_);
           _.current = _;
-          const _ = _.useRef(),
+          const _ = _.useRef(void 0),
             _ = _.useCallback((_) => {
               _.current !== _ && ((_.current = _), (_.current = !0));
             }, []),
@@ -26562,6 +26664,7 @@ var CLSTAMP = "steamdb";
           _: () => _._,
           _: () => _,
           _: () => _._,
+          _: () => _._,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -26726,6 +26829,7 @@ var CLSTAMP = "steamdb";
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",
           CLAN_CDN_ASSET_URL: "",
+          COMMUNITY_ASSETS_BASE_URL: "",
           VIDEO_CDN_URL: "",
           COMMUNITY_CDN_URL: "",
           COMMUNITY_CDN_ASSET_URL: "",
@@ -26827,6 +26931,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -26855,6 +26960,9 @@ var CLSTAMP = "steamdb";
                 _.add(_);
               });
         }
+        function _() {
+          _ || ((_ = !0), _.forEach((_) => _()));
+        }
         function _(_, _ = _) {
           return _(_, _, !0);
         }
@@ -26869,9 +26977,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 11 2025 : 16:47:08",
-                    BUILD_TIME_UTC: "Sep 11 2025 : 23:47:08",
-                    BUILD_RTIME_UTC: 1757634428,
+                    BUILD_TIME_LOCAL: "Sep 17 2025 : 15:52:55",
+                    BUILD_TIME_UTC: "Sep 17 2025 : 22:52:55",
+                    BUILD_RTIME_UTC: 1758149575,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -26945,7 +27053,12 @@ var CLSTAMP = "steamdb";
         }
         function _(_, _) {
           return (
-            !!window.location.href.match("[?&]" + _ + "=") ||
+            !!(
+              window &&
+              window.location &&
+              window.location.href &&
+              window.location.href.match("[?&]" + _ + "=")
+            ) ||
             !(
               "undefined" == typeof navigator ||
               !navigator.userAgent ||
@@ -27388,6 +27501,7 @@ var CLSTAMP = "steamdb";
         2438: "localization/steamui_vietnamese-json",
         2448: "localization/steampops_latam-json",
         2481: "localization/shared_bulgarian-json",
+        2515: "localization/steampops_arabic-json",
         2611: "localization/friendsui_sc_schinese-json",
         2640: "localization/friendsui_greek-json",
         2646: "localization/steamui_japanese-json",
@@ -27409,6 +27523,7 @@ var CLSTAMP = "steamdb";
         3583: "localization/steampops_indonesian-json",
         3594: "localization/shared_brazilian-json",
         3714: "sp",
+        3834: "chunk~1a96cdf59",
         3869: "localization/steamui_indonesian-json",
         4026: "localization/friendsui_ukrainian-json",
         4102: "localization/shared_arabic-json",
@@ -27489,144 +27604,147 @@ var CLSTAMP = "steamdb";
       })[_] || _) +
       ".js?contenthash=" +
       {
-        48: "6c8b8d906ea798b78f78",
-        89: "518b89b708126afaf165",
-        106: "f4b45b329c5fe8c1c224",
-        129: "30ee17d1a215dcb70aa8",
-        139: "dda7c5a5d0ae5d406e99",
-        297: "7ace395d7bacf7fbc428",
-        674: "b07f5346f25e6f893118",
-        740: "9c1bb91dffc45f4f1b5e",
-        786: "45ea218a07e68e7300e5",
-        823: "fdf7c7fffca7c33e62f1",
-        901: "c109ab3dfa7b9dd074d7",
-        1005: "4c28b504900f76ae4e50",
-        1012: "cded7344104308eb77a6",
-        1093: "7bd044ddebc026b54f90",
-        1220: "267d5635590d2b12d141",
+        48: "c4d043f780399deb7573",
+        89: "93102e5dfed8c9db343c",
+        106: "2027421167eb4d0b96a8",
+        129: "9598b53734a013e2f4fb",
+        139: "f017b2153cafb0b81702",
+        297: "0ce42486336407748cdc",
+        674: "d462b8f28e333cbe1761",
+        740: "a07bd5914461b7dbd4bc",
+        786: "d10337a025a2aadefde5",
+        823: "b04620ee63a3af465b22",
+        901: "d43ec69560ef21a0c87c",
+        1005: "568b7fe8da2d4e60f10f",
+        1012: "ebbaa97b86764aacb98f",
+        1093: "ddef630a2b13c311735e",
+        1220: "98f29e1b9216fd6a62b6",
         1275: "11e4a8e286f3edd19d2b",
-        1389: "0f8f3dc5fe8c0b5a8667",
-        1423: "b3e9b45bfa9e4affd61d",
-        1463: "1a4fca79ed2c9db01d4c",
-        1478: "01335a8308cbf6e58d71",
-        1511: "3f37c1735b705e9e6b0e",
-        1573: "4d1ee92e3323b551a24e",
-        1648: "6f606ba2c6eae2600b53",
-        1822: "28e419798b6625a130b8",
+        1389: "1f4c22820b7aff686e03",
+        1423: "440cebcbe4573e593b5f",
+        1463: "fbdcc5bbe67ca9790f1a",
+        1478: "d33874435fd80dd16eb7",
+        1511: "fad89467b4526774c50b",
+        1573: "6da5e1ee5c976fdd5224",
+        1648: "38355f88c0b3c2e18409",
+        1822: "90284fd5ced12ad87353",
         1879: "62d6403013b08cb655c3",
-        2021: "7b3d8c3ecc4de18d3525",
-        2056: "acad628a1efe48c33d19",
-        2199: "e4901a16a5e24707b60b",
+        2021: "06f5ecda8a2fd1b6fa00",
+        2056: "275ccc15ef6b1429225f",
+        2199: "bd113b37b7ddddd3c0dd",
         2225: "dc3d09d21b6992daad2e",
-        2263: "f2cc7c82b41f284d4f94",
-        2266: "eea6d65831676709717e",
-        2320: "fb99b00c253d83a0a564",
-        2438: "7bb41555d889e19a293b",
+        2263: "b9f77636fecf3d6308c7",
+        2266: "25d97e5ddf5647d79bc7",
+        2320: "758d0659db65108469ac",
+        2438: "76ebab0b6198b81cc297",
         2448: "c1f0b015f00cac957233",
-        2481: "3a9e5a9413afd43a73b7",
+        2481: "9cc4028a91198ff13473",
+        2515: "9a062cc85cb096b00e67",
         2611: "a2afb4fc0dc2e7577bc2",
-        2640: "3076a4bb4fed859d9897",
-        2646: "fae48b494acb559b64dd",
-        2664: "118b4744b544f09daeae",
-        2761: "574d138ad545e12687f2",
-        2783: "a486f3c0fd2b77f5d286",
+        2640: "caaabeb32b6c6bf52ad7",
+        2646: "a1659687b5f71013aa44",
+        2664: "aac9a09e5ea642506cee",
+        2761: "5341d796b8b9662670c2",
+        2783: "96080a148ceb9ae884db",
         2862: "6d6dfd8b8af302f8846e",
-        2867: "e294d4ffc455b78a0201",
-        2880: "06e74e5b184d67df3f14",
-        2889: "b9abff4f1a3a1f07e514",
+        2867: "308bd607174e67bb65f5",
+        2880: "6455bb0d85dcdf2ca172",
+        2889: "b316aa1c352a343c5643",
         2952: "5cc53fdb04ed91186e12",
-        2959: "5740b8e4371d5e201d73",
+        2959: "fbe7d617a9b34f7f20d1",
         2984: "cdb6f5e43526a559784c",
-        3087: "4755ff0f369b07c40ea6",
+        3087: "8f9f01a6ee331b8a5d9d",
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
-        3366: "5854ad132884cbc8d12f",
-        3569: "898e3bea854cd5329a75",
+        3366: "e918a13ca146f6e8dec5",
+        3569: "aafea85f36c893ccb08a",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "8d10a1ce0789220acccb",
+        3594: "9eef22732ed51cbde0c0",
         3714: "ab7010eec823473536d8",
-        3869: "923407bae2d35a2fa1c5",
-        4026: "f3d756cb30a6f6fa6263",
-        4102: "f43aeb08951dc8b6d64b",
+        3834: "e7e252595ae5778f7604",
+        3869: "7b19dbd35f0ff1700658",
+        4026: "3a0ddd3d7097573836d7",
+        4102: "3bf4d6726bf0dba21c18",
         4139: "712b259cac8237357271",
         4175: "92d7ba0916b98d8e27c3",
-        4224: "eaf78917e2166a68b8bd",
-        4321: "78e58435867190f645b6",
-        4481: "40b6db2f9658e7e035b3",
+        4224: "770f6f5e319430ab3f84",
+        4321: "9d8a606a3b172d17b9dd",
+        4481: "46d30c981f0f93937630",
         4839: "b1ca14b72a083777a78d",
-        4842: "ad9e809fb763ba707c7a",
-        4952: "39d8def1629a21ce2ec4",
+        4842: "b53ed8a66dc1dd91c4b0",
+        4952: "4e8a4683126ebff431f8",
         5173: "976ad1b3dcd79bb87b9c",
-        5553: "ede3c546b7ec057f6036",
-        5592: "ef22f81651c9fea57782",
+        5553: "625ad2ed1390b8ac7c8e",
+        5592: "6a816a482f598e082d1a",
         5704: "379467b643925dea1061",
-        5716: "585d570458648f31bb4b",
-        5803: "80c0bd47489bc3b0a6b3",
-        5864: "de2019c5464d6635c276",
-        6120: "df193eabd2ad6b5731f2",
-        6197: "5712cb1ab1e8e119ef62",
-        6345: "fef99a42fdc175f05941",
-        6409: "f1900755a4cb0efb6332",
-        6430: "d885a0a9865d682185a4",
-        6472: "302c3a47a86e6c8940eb",
-        6577: "f4f6dda24397c550f243",
-        6752: "ac45487aca9060de795b",
+        5716: "827142ef1994da2e8bd8",
+        5803: "683932e4e51dbaa1caec",
+        5864: "952d8b6551eeef751eef",
+        6120: "f155c5b7a09563ce8613",
+        6197: "950c68efdfb0231bfe51",
+        6345: "b0efa420d4e8f087a805",
+        6409: "c7ecacc9aa4f639ad368",
+        6430: "6e8c136a6e334f20c725",
+        6472: "0feda94f2c6e8e04c97d",
+        6577: "66575847a1e3e58519a6",
+        6752: "284b2bcd8e04ef1be5ef",
         6785: "69a9f0b91f21affb7342",
-        6888: "132f86a98415da83183f",
-        6890: "2096d33e40f72338e7f0",
-        6896: "f18f04bfef098a57e289",
+        6888: "9345e6a916f5a948b01b",
+        6890: "353f5c3f8b69b1ce6636",
+        6896: "39be781840ecd6925e02",
         7151: "45f70eb6851f2ac45f0d",
-        7155: "cae46d97d5e5a0b6f700",
-        7314: "9549b4c2bbcd41c7dade",
+        7155: "4d52151afb368a1299ba",
+        7314: "70be31f842c91b2abbb3",
         7316: "18e5e6b118a1b52fddc2",
         7376: "1a70f0da1467e92dd08f",
-        7442: "28aee6341b432cd4ebb2",
+        7442: "ad075ad48bfe5761fbbe",
         7462: "52ace9199689821be1eb",
-        7533: "83301f6ee44ad980de4f",
+        7533: "1379d3efda75c5cbf850",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "aed4c0fda5b9b4db2dd3",
-        7696: "66e34ef687aaeb35eeae",
+        7653: "64860b4f6b9afea0e983",
+        7696: "7f1c75b2517eecb870e5",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
-        7836: "22ac7187323a97b7af56",
-        7993: "a291d22a2253ce481313",
+        7836: "6f22b219f7668ba7efde",
+        7993: "0c2ba53b15f34faad063",
         8054: "cffb972d0ae14c9266f8",
-        8159: "0fc0f44a1d6d685af0d5",
-        8263: "b24751f2ee6b3f9a1cfa",
-        8280: "3ac92a197517e25c86d4",
+        8159: "4e3da3273952356ae805",
+        8263: "1a5da4ebf0803b3d0ccb",
+        8280: "0c890370b858d4437152",
         8286: "1f5be36130bf4017cada",
-        8291: "9ce946f2121b106df5d9",
-        8396: "32e5eb4a4e5a546da28d",
+        8291: "9dd1164bd75dcaeb9895",
+        8396: "0a0987f39d31a3202727",
         8443: "14576c5b8a2b6ac79ecd",
-        8445: "ae709c6c6dcbaa934ce2",
-        8478: "6a43580d5abdab6866bc",
+        8445: "3cc85cfc77d01ded4ab6",
+        8478: "89707ac0ffb085fd89be",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "220fc4b6796abfdf04e1",
-        8534: "3435d2f40ca5662c303f",
+        8522: "34219c436a24e3a5c9a0",
+        8534: "185de194d0ebb763c5d7",
         8545: "1aa2273a0a3161924d55",
-        8674: "3377e2e2c5ddb3dcad2a",
-        8699: "43afd6e96d56692322f9",
-        8732: "55ec400e1359b70b1964",
-        8830: "885910107fa58bc88dfd",
-        8872: "a0bdc26eabd915bfd047",
-        9053: "4199cd02e2103e7ecb9b",
+        8674: "b4f0675395cb10ac6121",
+        8699: "ad450c888e553fa53e4b",
+        8732: "6c969dce545d230ee09f",
+        8830: "383ba2455a0392740f3c",
+        8872: "27a298843682ce53fb33",
+        9053: "5c9b8957e5b393d415cb",
         9063: "77f0c9977cc1aecd1944",
         9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
-        9171: "6d1897e631b2a8096aee",
-        9298: "d9eab83df9ae6967a1b7",
-        9368: "5a36fd753f60818e1ca3",
+        9171: "6d986de85f82dcf58ddf",
+        9298: "2bf8033bc9e95c857a41",
+        9368: "5d3173a9336a3ac456b5",
         9418: "29e9fa15a9fc8e62a893",
-        9462: "77a210af3f848de941d1",
+        9462: "5985248e201b7f99b9b6",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "e8dd7f8ab1ab23219782",
-        9869: "8f4b26192400ffd85271",
-        9887: "bed5ff195159170db38b",
+        9858: "85c4849ec40d8563bbae",
+        9869: "cd88c8d4263e81ca1643",
+        9887: "d2213752070154d47a89",
       }[_]),
     (_.miniCssF = (_) =>
       "css/" +
       ({
         1220: "gamenotes",
+        3834: "chunk~1a96cdf59",
         7462: "gamerecording",
         7653: "broadcastapp",
         8396: "broadcast",
@@ -27782,6 +27900,7 @@ var CLSTAMP = "steamdb";
               {
                 674: 1,
                 1220: 1,
+                3834: 1,
                 7462: 1,
                 7653: 1,
                 8396: 1,

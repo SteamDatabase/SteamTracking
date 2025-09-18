@@ -455,7 +455,7 @@
 "Steam_UpdatingTitle"				"Steam"
 "Steam_CheckingForUpdates"			"Проверка за обновления…"
 "Steam_LaunchingSteam"				"Свързване със Steam акаунт: %AccountName%…"
-"Steam_UpdatingSteamInformation"	"Обновяване на информацията за Steam…"
+"Steam_UpdatingSteamInformation"	"Обновяване на инф. за Steam…"
 "Steam_UpdatingUserConfiguration"	"Обновяване на потребителската конфигурация…"
 "Steam_ExitingSteam"				"Излизане…"
 "SteamUI_GamePropertiesContent_RequiresUpdate"  "Изисква обновяване"
@@ -872,9 +872,9 @@
 
 "SteamUI_ValveSurvey_SummaryLabel"							"Това проучване събра информация за Вашия компютър, която може да видите по-долу.\n\n(Когато кликнете върху бутона „Следващ“, тази информация ще бъде предадена на Valve.)"
 
-"SteamUI_ValveSurvey_Summary_Computer"						"Информация за компютъра:"
-"SteamUI_ValveSurvey_Summary_Processor"						"Информация за процесора:"
-"SteamUI_ValveSurvey_Summary_IP"							"Информация за мрежата:"
+"SteamUI_ValveSurvey_Summary_Computer"						"Инф. за компютъра:"
+"SteamUI_ValveSurvey_Summary_Processor"						"Инф. за процесора:"
+"SteamUI_ValveSurvey_Summary_IP"							"Инф. за мрежата:"
 "SteamUI_ValveSurvey_Summary_OSVersion"						"Операционна система:"
 "SteamUI_ValveSurvey_Summary_VideoCard"						"Видеокарта:"
 "SteamUI_ValveSurvey_Summary_Memory"						"Памет:"
@@ -1857,7 +1857,7 @@
 "Steam_RightClick_DeleteLocalContent"		"Деинсталиране…"
 "Steam_RightClick_PausePreloading"		"Пауза на предварителното сваляне"
 "Steam_RightClick_ResumePreloading"		"Възобновяване на предварителното сваляне"
-"Steam_RightClick_ViewPreloadInfo"		"Преглед на информацията за предварителното сваляне…"
+"Steam_RightClick_ViewPreloadInfo"		"Преглед на инф. за предварителното сваляне…"
 "Steam_RightClick_ManageDownloads"	"Управление на свалянията…"
 
 "Steam_RightClick_OpenCloudFile"		"Отваряне на файла"
@@ -1965,7 +1965,7 @@
 "Steam_Game_UpdateNewsURL"		"Преглед на хронологията на обновленията за %game%"
 
 "steam_menu_PrivacyPolicy"		"Декларация за поверителност"
-"steam_menu_LegalInformation"		"Юридическа информация"
+"steam_menu_LegalInformation"		"Юридическа инф."
 "steam_menu_SteamSubscriberAgreement"	"Условия за ползване на Steam"
 
 "steam_menu_bandwidthmonitor"		"Трафик монитор"
@@ -2271,8 +2271,8 @@
 "Steam_NoLongerOwnsGame_Info"		"Тази игра вече е недостъпна за безплатно сваляне."
 
 "steam_menu_systemreport"		"Системен доклад"
-"steam_menu_systeminfo"			"Системна информация"
-"steam_systeminfo_title"			"Steam — Системна информация"
+"steam_menu_systeminfo"			"Системна инф."
+"steam_systeminfo_title"			"Steam — Системна инф."
 "steam_systeminfo_surveylink"	"Сравнете Вашия хардуер с този на други Steam потребители"
 
 "Steam_P2P"				"P2P"
@@ -2947,21 +2947,21 @@
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"Няма безжичен удължител."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Кабел и база на Steam контролера: %s1"
 
-"SteamUI_ValveSurvey_Linux_Runtime_Info" "Информация за изпълнимата среда на Steam под Linux:"
+"SteamUI_ValveSurvey_Linux_Runtime_Info" "Инф. за изпълнимата среда на Steam под Linux:"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Steam сървърът е недостъпен"
 "Steam_SubscriptionFailure_ServiceUnavailable" "Понастоящем компютърът Ви няма възможност да се свърже със Steam сървърите или услугата е временно преустановена. Моля, опитайте отново по-късно."
 
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал за проблем с адреса, свързан с Вашия %provider% акаунт. Опитайте се да оправите проблема с %provider% или кликнете върху бутона „Назад“, за да изберете различен платежен метод."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал за проблем с източника на финансите, свързан с Вашия %provider% акаунт. Може да поправите този проблем през %provider% или кликнете върху бутона „Назад“, за да изберете различен платежен метод."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал за неуспешно упълномощаване. Моля, кликнете върху бутона „Назад“, за да изберете друг разплащателен метод."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал за неуспешно упълномощаване. Моля, кликнете върху бутона „Назад“, за да изберете различен разплащателен метод."
 "Steam_PayPalDeclined_SupportLink"									"Посетете уебсайта на Steam поддръжката за още информация."
 
 "Steam_SubscriptionCancelled_RegionNotSupported_Headline" "Платежният метод не се поддържа"
 "Steam_SubscriptionCancelled_RegionNotSupported" "Покупката Ви на %subscription% не беше завършена.\n\nПонастоящем избраният от Вас платежен метод е недостъпен в държавата Ви. Моля, кликнете върху бутона „Назад“ и изберете друг разплащателен метод."
 
 "Steam_SubscriptionCancelled_PayPalDeclined_Headline" "Упълномощаването от %provider% е неуспешно."
-"Steam_SubscriptionCancelled_PayPalDeclined" "Покупката Ви на %subscription% не е завършена.\n\n%provider% е докладвал за неуспешно упълномощаване. Моля, кликнете върху бутона „Назад“, за да изберете друг разплащателен метод."
+"Steam_SubscriptionCancelled_PayPalDeclined" "Покупката Ви на %subscription% не е завършена.\n\n%provider% е докладвал за неуспешно упълномощаване. Моля, кликнете върху бутона „Назад“, за да изберете различен разплащателен метод."
 
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал за проблем с %provider% акаунта Ви. Моля, свържете се с поддръжката на %provider% или кликнете върху бутона „Назад“, за да изберете алтернативен платежен метод."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"Покупката Ви на %subscription% не беше завършена.\n\n%provider% е докладвал, че Вашият %provider% акаунт трябва да е проверен или финансиран, за да завършите покупката. Моля, свържете се с поддръжката на %provider% или кликнете върху бутона „Назад“, за да изберете алтернативен платежен метод."
@@ -3049,7 +3049,7 @@
 "Steam_P2PSwarmPeersValue"		"%swarmpeers%"
 "Steam_P2PSwarmSeedersLabel"		"Swarm сийдъри:"
 "Steam_P2PSwarmSeedersValue"		"%swarmseeders%"
-"SteamUI_P2P_Simple"			"Информация"
+"SteamUI_P2P_Simple"			"Инф."
 "SteamUI_P2P_Detail"			"Детайл"
 "SteamUI_P2P_Peers"			"Пиъри"
 "SteamUI_P2P_Files"			"Файлове"
@@ -3388,7 +3388,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_ModNeedsFullGame_Info"	"%game% е модификация и изисква да притежавате версия на основната игра."
 "Steam_ModNeedsFullGame_Button"	"Получете още информация"
 
-"Steam_AccountEmail_Title"		"Информация за Steam акаунта"
+"Steam_AccountEmail_Title"		"Инф. за Steam акаунта"
 "Steam_AccountEmail_Info"		"Препоръчително е да разпечатате тази информация и да я запазите на безопасно място. Steam акаунтът Ви и данните за вход са важни. Отсега нататък ще Ви бъдат нужни, за да имате достъп до игрите си и други Steam характеристики."
 "Steam_AccountEmail_AccountName" "Име на акаунта:"
 "Steam_AccountEmail_Password"	"Парола:"
@@ -3846,7 +3846,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "steam_filesincloudapplication"		"Имате %cloud_files% запазени файла в облака за това приложение"
 "steam_viewallcloud"		"Всички файлове в облака"
 "Steam_MoreCloud"		"Всички файлове"
-"Steam_Rental_Title"	"Информация за отдадено под наем"
+"Steam_Rental_Title"	"Инф. за отдадено под наем"
 "Steam_Rental_Body_Not_Activated"	"Разполагате с времето до %expiration%, за да започнете гледането на %gamename%. След като започнете, ще имате 48 часа да завършите гледането му."
 "Steam_Rental_Body_Activated"	"Периодът за гледане на отдаденото под наем %gamename% вече е активиран. Разполагате с времето до %expiration%, за да го изгледате."
 
@@ -4569,7 +4569,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_Settings_Compat_Info"			    "Steam Play автоматично ще инсталира инструментите за съвместимост, които Ви позволяват да пускате игри от библиотеката, които са създадени за други операционни системи."
 "Steam_Settings_Compat_Enable"			    "Включване на Steam Play за поддържани заглавия"
 "Steam_Settings_Compat_Advanced_Title"		"Разширени"
-"Steam_Settings_Compat_Forced_Info"		    "Можете да използвате Steam Play, така че да тествате игрите в своята библиотека, които не са потвърдени от поддържан инструмент за съвместимост."
+"Steam_Settings_Compat_Forced_Info"		    "Можете да използвате Steam Play, така че да изпитате игрите в своята библиотека, които не са потвърдени с поддържан инструмент за съвместимост."
 "Steam_Settings_Compat_Forced_Enable"		"Включване на Steam Play за всички други заглавия"
 "Steam_Settings_Compat_Advanced_Info"		"Възможно е да изберете инструмент за съвместимост, така че да го използвате с игри, които не са били тествани или потвърдени за работа на тази платформа.\n\nВъзможно е това да не работи според очакваното и може да причини проблеми с игрите Ви. Това може да включва сривове и повреждане на запазените игрални сесии."
 "Steam_Settings_Compat_Default_Tool"		"Пускане на други заглавия с:"
@@ -4579,7 +4579,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "Steam_Settings_Compat_Launch_Prefix"   "Работи на този компютър чрез"
 "Steam_Settings_Compat_Launch_Name"     "Steam Play"
 
-"Steam_Settings_Compat_Launch_Whitelisted"     "избрано чрез тестване от Valve"
+"Steam_Settings_Compat_Launch_Whitelisted"     "избрано чрез изпитване от Valve"
 "Steam_Settings_Compat_Launch_Wildcard"     "избрано от Вас за всички заглавия"
 "Steam_Settings_Compat_Launch_Forced"     "избрано от Вас за това заглавие"
 
@@ -4815,7 +4815,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 
 "Steam_Browser_Disabled" "Steam браузърът е преустановен."
 "Steam_Browser_Disabled_NoBrowser" "Steam браузърът е преустановен, защото в Steam командния ред е посочено „-no-browser“."
-"Steam_Browser_Disabled_KB" "Вижте тази статия от Steam поддръжката за още информация."
+"Steam_Browser_Disabled_KB" "Вижте тази статия от Steam поддръжката за още инф.."
 "Steam_Browser_Disabled_KB_URL" "https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"
 "Steam_ViewSSAInBrowser" "Трябва да прочетете и дадете съгласие с „Условията за ползване на Steam“.\n<a href=\"%url%\">Кликнете тук</a>, за да ги отворите в браузъра си. Върнете се към този прозорец, за да продължите."
 
@@ -5048,6 +5048,7 @@ Windows до Windows XP Service Pack 2 или по-нов."
 "DownloadRegion_reunion"        "Реюнион"
 "DownloadRegion_kuwait"         "Кувейт"
 "DownloadRegion_ua_sevastopol"  "Украйна — Севастопол"
+"DownloadRegion_lv_riga"		"Латвия"
 
 "SettingsController_AutosaveName"	"Конфигурация за контролер"
 "ControllerBinding_Offline_Save"	"[Авт. запазване извън линия]"

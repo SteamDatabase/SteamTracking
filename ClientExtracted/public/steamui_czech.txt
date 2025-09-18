@@ -838,7 +838,7 @@ Tato operace zabere jenom okamžik."
 "SteamUI_Selection_Hungarian"		"Magyar (Maďarština)"
 "SteamUI_Selection_Romanian"			"Română (Rumunština)"
 "SteamUI_Selection_Bulgarian"			"български (Bulharština)"
-"SteamUI_Selection_Turkish"			"Türkçe (Turecky)"
+"SteamUI_Selection_Turkish"			"Türkçe (Turečtina)"
 "SteamUI_Selection_Arabic"			"العربية (Arabština)"
 "SteamUI_Selection_Ukrainian"			"Українська (Ukrajinština)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Latin. španělština)"
@@ -1202,7 +1202,7 @@ Tato operace zabere jenom okamžik."
 "Steam_SubscriptionApprovalCode" "Ověření"
 "Steam_SubscriptionConfirmation" "Potvrzovací kód"
 
-"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538&l=czech/"
+"Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Aktivace byla úspěšná!"
 "Steam_SubscriptionSuccess_CDKey" "Váš kód produktu byl úspěšně aktivován. Produkty vypsané níže jsou nyní trvale propojeny s Vaším účtem služby Steam. Chcete-li k aktivovaným produktům získat přístup, musíte se přihlásit k tomuto účtu.\n\nPro případné budoucí užití si vytiskněte potvrzení této transakce."
@@ -1272,7 +1272,7 @@ Tato operace zabere jenom okamžik."
 "Steam_Subscription_HardwarePromo_Used_Headline" "Duplicitní registrace"
 "Steam_Subscription_HardwarePromo_Used" "Tato nabídka již byla využita jiným účtem služby Steam."
 "Steam_PurchaseError_HardwarePromoIneligible" "Omlouváme se, ale Váš počítač nesplňuje systémové požadavky nabídky hry %subscription%."
-"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098&l=czech/"
+"Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "Produkt již vlastníte"
 "Steam_Subscription_HardwarePromo_AlreadyPurchased" "Tento účet služby Steam již disponuje produkty obsaženými\nv této nabídce. Abyste je nalezli, přejděte do svojí knihovny."
@@ -1676,10 +1676,10 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_ConnectionFailureTitle"	"Chyba připojení"
 "Steam_ConnectionFailureDetail"	"Klient služby Steam se nemůže připojit k síti. Problém může být na straně Vašeho internetového připojení."
 "Steam_ConnectionSupportLink"	"Řešení problémů s připojením"
-"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493&l=czech/"
+"Steam_ConnectionSupportURL"	"https://support.steampowered.com/kb/1456-EUDN-2493/"
 
 "SteamUI_NetworkTroubleshootingTips"	"Tipy pro řešení problémů s připojením"
-"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493&l=czech"
+"SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
 "SteamUI_SSA_Agree"				"Přečtěte si pozorně celou smlouvu. Chcete-li pokračovat, musíte souhlasit s podmínkami Smlouvy o užívání služby Steam."
@@ -2484,16 +2484,16 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "Steam_RegionRestricted_Title"			"Steam – hra je nedostupná"
 "Steam_RegionRestrictedPurchase_Info"				"Hra byla aktivována kódem produktu, který je platný pouze v určité geografické oblasti. Protože se nenacházíte v dané oblasti, není možné hrát hru %game%."
 "Steam_RegionRestricted_SupportLink"		"Další informace naleznete na stránkách podpory služby Steam"
-"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
+"Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 "Steam_RegionRestricted_Info"				"Hra %game% není dostupná ve Vaší oblasti."
-"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
+"Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_CountryRestricted_Info"				"Tento produkt nelze zakoupit ve Vaší zemi."
-"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
+"Steam_CountryRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_RegionRestrictedCode_Title"		"Steam – produkt není dostupný"
 "Steam_RegionRestrictedCode_Info"			"Tento kód produktu nemůže být aktivován ve Vašem regionu."
-"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141&l=czech/"
+"Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam – varování fragmentace disku"
 "Steam_FragmentationBad_Info"				"Soubory hry vykazují vysokou úroveň fragmentace. Fragmentace způsobuje pomalé nahrávání a snižuje rychlost hry.  \n\nKlient služby Steam je však schopen tyto soubory optimalizovat.\n"
@@ -2865,7 +2865,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_GuestPassAccept_HeadlineServiceUnavailable$type=guestpass"	"Přijetí zkušební nabídky se nezdařilo"
 "Steam_GuestPassAccept_TextServiceUnavailable"	"Tato služba je dočasně nedostupná nebo se Váš počítač v tuto chvíli nemůže spojit se servery služby Steam. Zkuste to později znovu."
 "Steam_GuestPassAccept_LinkTextServiceUnavailable" 	"Pro pomoc s dárky navštivte tuto stránku podpory."
-"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=czech/"
+"Steam_GuestPassAccept_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassAccept_HeadlineRevoked$type=guestpass"	"Tato zkušební nabídka byla zrušena"
 "Steam_GuestPassAccept_TextRevoked$type=guestpass"	"Přítel, který Vám poslal tuto zkušební nabídku, se rozhodl ji zrušit a poslal nový aktivační kód. Pokud byla nová nabídka odeslána Vám, obdržíte nový e-mail s aktualizovaným kódem."
@@ -2884,7 +2884,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_GuestPassRedeemed_HeadlineServiceUnavailable$type=guestpass"	"Aktivace zkušební nabídky se nezdařila"
 "Steam_GuestPassRedeemed_TextServiceUnavailable"	"Tato služba je dočasně nedostupná nebo se Váš počítač v tuto chvíli nemůže spojit se servery služby Steam. Zkuste to později znovu."
 "Steam_GuestPassRedeemed_LinkTextServiceUnavailable"	"Pro pomoc se zkušebními nabídkami navštivte tuto stránku podpory."
-"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755&l=czech/"
+"Steam_GuestPassRedeemed_LinkURLServiceUnavailable"	"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_GuestPassRedeemed_HeadlineLimitExceeded"	"Již jste využili zkušební nabídku tohoto produktu"
 "Steam_GuestPassRedeemed_TextLimitExceeded"	"Protože jste již jednou využili zkušební nabídku titulu %package%, nemůžete přijmout další. Pokud chcete pokračovat v hraní této hry, zvažte její zakoupení."
@@ -2972,12 +2972,12 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_LaunchEULA_Text"			"Přečtěte si pozorně celou smlouvu. Chcete-li hrát hru %game%, musíte souhlasit s podmínkami Licenční smlouvy s koncovým uživatelem."
 
 "Steam_GuestPasses_LinkText"		"Další informace o dárcích a zkušebních nabídkách"
-"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755&l=czech/"
+"Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755/"
 
 "Steam_AlreadyRunningError_Title"			"Steam – nelze spustit"
 "Steam_AlreadyRunningError_Info"			"Klient služby Steam je na tomto počítači již spuštěn pod jiným uživatelským účtem. Chcete-li spustit klienta služby Steam, musíte se nejprve odhlásit z druhého účtu."
 "Steam_AlreadyRunningError_SupportLink"	"Další informace naleznete na stránkách podpory služby Steam"
-"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543&l=czech"
+"Steam_AlreadyRunningError_SupportLink_URL"	"http://support.steampowered.com/kb_article.php?ref=8787-WYIL-1543"
 "Steam_AlreadyRunningError_SupportTicket"	"Co nejdříve kontaktujte podporu služby Steam"
 
 "Steam_LoggedInElsewhere_Title"		"Steam – přihlášení na jiném místě"
@@ -3592,7 +3592,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_RecoverLocked_UseCode" "Obdržel jsem zprávu od podpory služby Steam a jsem připraven zadat svůj speciální přístupový kód."
 "Steam_RecoverLocked_MustRecover" "Jaká emailová zpráva? Žádnou nemám..."
 "Steam_RecoverLocked_WhyIsThisHappening" "Proč se toto děje?"
-"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519&l=czech"
+"Steam_RecoverLocked_WhyIsThisHappening_URL" "https://support.steampowered.com/kb_article.php?ref=4020-ALZM-5519"
 "Steam_RecoverLocked_EnterCode" "Můj speciální přístupový kód je:"
 "Steam_RecoverLocked_EnterCodeDetails" "Jakmile bude Váš kód ověřen, funkce Steam Guard přidá tento počítač na seznam zařízení, která se mohou přihlásit k Vašemu účtu služby Steam."
 "Steam_RecoverLocked_WrongCode" "Je nám líto, ale zadaný kód nesouhlasí."
@@ -3852,7 +3852,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "steam_community_files_info"		"Vytvářejte, procházejte a hrajte obsah vytvořený komunitou služby Steam."
 "steam_community_files_info_error"		"V tuto chvíli se nelze připojit k serverům workshopu služby Steam."
 "steam_community_files_view_all"		"Procházet workshop"
-"steam_paginationtext"	"Zobrazeno %start%-%end% z %total%"
+"steam_paginationtext"	"Zobrazuje se %start%–%end% z %total%"
 
 "steam_welcomemessage_basic" "%welcome_action%"
 
@@ -4688,7 +4688,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_Settings_Streaming_PIN_Text" "Nastavte numerický kód PIN, který musí být na zařízení / v aplikaci Steam Link zadán před každým streamováním z tohoto počítače:"
 
 "Steam_Settings_ShareIPNetworking_Label" "Síťové funkce služby Steam"
-"Steam_Settings_ShareIPNetworking_Info" "Povoluje hrám využívajícím síťové funkce služby Steam sdílet Vaši IP adresu pro zrychlení spojení"
+"Steam_Settings_ShareIPNetworking_Info" "Povoluje hrám využívajícím síťové funkce služby Steam sdílet Vaši IP adresu pro zrychlení spojení."
 "Steam_Settings_ShareIPNetworking_Default" "Výchozí"
 "Steam_Settings_ShareIPNetworking_Always" "Vždy"
 "Steam_Settings_ShareIPNetworking_FriendsOnly" "Pouze s přáteli"
@@ -5045,6 +5045,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "DownloadRegion_reunion"        "Réunion"
 "DownloadRegion_kuwait"         "Kuvajt"
 "DownloadRegion_ua_sevastopol"  "Ukrajina – Sevastopol"
+"DownloadRegion_lv_riga"		"Lotyšsko"
 
 "SettingsController_AutosaveName"	"Nastavení ovladače"
 "ControllerBinding_Offline_Save"	"[Auto. uložené offline nastavení]"

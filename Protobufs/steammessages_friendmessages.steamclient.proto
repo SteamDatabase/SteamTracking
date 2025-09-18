@@ -1,5 +1,6 @@
 import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -101,6 +102,31 @@ message CFriendMessages_UpdateMessageReaction_Response {
 	repeated uint32 reactors = 1;
 }
 
+message CFriendMessages_ReportMessage_Request {
+	optional fixed64 steamid_from = 1;
+	optional fixed64 steamid_to = 2;
+	optional uint32 timestamp = 3;
+	optional uint32 ordinal = 4;
+	optional .EContentReportReason report_reason = 5 [default = k_EContentReportReason_Invalid];
+	optional string report_text = 6;
+	optional string language = 7;
+}
+
+message CFriendMessages_ReportMessage_Response {
+}
+
+message CFriendMessages_ResolveReport_Request {
+	optional fixed64 steamid_from = 1;
+	optional fixed64 steamid_to = 2;
+	optional uint64 subject_group_id = 3;
+	optional uint64 subject_id = 4;
+	optional .EContentReportResolution resolution = 5 [default = k_EContentReportResolution_Unresolved];
+	optional .EContentReportReason reason = 6 [default = k_EContentReportReason_Invalid];
+}
+
+message CFriendMessages_ResolveReport_Response {
+}
+
 message CFriendMessages_IncomingMessage_Notification {
 	optional fixed64 steamid_friend = 1;
 	optional int32 chat_entry_type = 2;
@@ -130,6 +156,8 @@ service FriendMessages {
 	rpc AckMessage (.CFriendMessages_AckMessage_Notification) returns (.NoResponse);
 	rpc IsInFriendsUIBeta (.CFriendMessages_IsInFriendsUIBeta_Request) returns (.CFriendMessages_IsInFriendsUIBeta_Response);
 	rpc UpdateMessageReaction (.CFriendMessages_UpdateMessageReaction_Request) returns (.CFriendMessages_UpdateMessageReaction_Response);
+	rpc ReportMessage (.CFriendMessages_ReportMessage_Request) returns (.CFriendMessages_ReportMessage_Response);
+	rpc ResolveReport (.CFriendMessages_ResolveReport_Request) returns (.CFriendMessages_ResolveReport_Response);
 }
 
 service FriendMessagesClient {

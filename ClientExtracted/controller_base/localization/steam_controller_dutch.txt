@@ -100,4 +100,17 @@
 	"origin_legion_go_y1"							"Y1-knop"
 	"origin_legion_go_y2"							"Y2-knop"
 
-	}
+	"origin_generic_PL"							"Linker achtertoets"
+	"origin_generic_PR"							"Rechter achtertoets"
+	"origin_generic_C"							"C-knop"
+	"origin_generic_Z"							"Z-knop"
+	"origin_generic_MISC1"						"Overige knop 1"
+	"origin_generic_MISC2"						"Overige knop 2"
+	"origin_generic_MISC3"						"Overige knop 3"
+	"origin_generic_MISC4"						"Overige knop 4"
+	"origin_generic_MISC5"						"Overige knop 5"
+	"origin_generic_MISC6"						"Overige knop 6"
+	"origin_generic_MISC7"						"Overige knop 7"
+	"origin_generic_MISC8"						"Overige knop 8"
+
+}

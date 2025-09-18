@@ -258,7 +258,6 @@ message CMsgSystemPerfLimits {
 	optional int32 gpu_performance_manual_min_mhz = 5;
 	optional int32 gpu_performance_manual_max_mhz = 6;
 	optional bool perf_overlay_is_standalone = 7;
-	optional bool is_dynamic_vrs_available = 8;
 	optional bool is_manual_display_refresh_rate_available = 9;
 	repeated .EGPUPerformanceLevel gpu_performance_levels_available = 10;
 	optional int32 display_refresh_manual_hz_min = 11;
@@ -278,7 +277,6 @@ message CMsgSystemPerfLimits {
 
 message CMsgSystemPerfSettingsGlobal {
 	optional float diagnostic_update_rate = 1;
-	optional .ESystemServiceState system_trace_service_state = 2 [default = k_ESystemServiceState_Unavailable];
 	optional .ESystemServiceState graphics_profiling_service_state = 3 [default = k_ESystemServiceState_Unavailable];
 	optional .ESystemServiceState perf_overlay_service_state = 4 [default = k_ESystemServiceState_Unavailable];
 	optional .EGraphicsPerfOverlayLevel perf_overlay_level = 5 [default = k_EGraphicsPerfOverlayLevel_Hidden];
