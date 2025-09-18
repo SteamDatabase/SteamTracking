@@ -1,43 +1,39 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -60,6 +56,10 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import {
@@ -82,8 +82,8 @@ import {
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -1420,7 +1420,7 @@ var _ = "EMyT87c-1ws-";
 var _ = "IOoilFOfWUQ-";
 var _ = _(_()),
   _ = _(_());
-var _ = "350px";
+var _ = "380px";
 var _ = "_5de1w948geo-";
 var _ = "ljhXHoxtTZY-";
 var _ = "B6Smo5P5blM-";
@@ -2330,47 +2330,8 @@ function _() {
     strName: _(_.strLocToken),
   }));
 }
-var _ = _(_(), 1);
-var _ = _(_(), 1);
-var _ = _(_(), 1);
-function _(_) {
-  let {
-      storeItem: _,
-      feature: _,
-      depth: _,
-      children: _,
-      noImpressionTracking: _,
-      ..._
-    } = _,
-    _ = _?.appid,
-    _ = _(_);
-  if (!_) return _;
-  let _ = (0, _.jsx)(_, {
-    ..._,
-    href: _,
-    children: _,
-  });
-  return _ && !_
-    ? (0, _.jsx)(_, {
-        appID: _,
-        feature: _,
-        depth: _,
-        children: _,
-      })
-    : _;
-}
-function _(_, _, _) {
-  return _(_ ? `${_.STORE_BASE_URL}${_.store_url_path}` : void 0, _, _);
-}
-var _ = "w3okjvq794Q-";
-var _ = "qRybCqH-jtw-";
-var _ = "RsMQfu7puz8-";
-var _ = "UMEIAUzn8fQ-";
-var _ = "b3jIaejFEco-";
-var _ = "xfZcMLcNsgU-";
-var _ = "KdTm5UPqjB8-";
-var _ = "G-AxgYgeAPM-";
-var _ = "_10mrxtI-TKw-";
+var _ = _(_(), 1),
+  _ = _(_(), 1);
 var _ = "jFxjWAAnwh0-";
 var _ = "nrnKbyUwmmM-";
 var _ = "Y0bm1KMFrV0-";
@@ -2587,6 +2548,46 @@ function _() {
 }
 var _ = _(_(), 1);
 function _(_) {
+  let {
+      storeItem: _,
+      feature: _,
+      depth: _,
+      children: _,
+      noImpressionTracking: _,
+      ..._
+    } = _,
+    _ = _?.appid,
+    _ = _(_);
+  if (!_) return _;
+  let _ = (0, _.jsx)(_, {
+    ..._,
+    href: _,
+    children: _,
+  });
+  return _ && !_
+    ? (0, _.jsx)(_, {
+        appID: _,
+        feature: _,
+        depth: _,
+        children: _,
+      })
+    : _;
+}
+function _(_, _, _) {
+  return _(_ ? `${_.STORE_BASE_URL}${_.store_url_path}` : void 0, _, _);
+}
+var _ = "w3okjvq794Q-";
+var _ = "qRybCqH-jtw-";
+var _ = "RsMQfu7puz8-";
+var _ = "UMEIAUzn8fQ-";
+var _ = "b3jIaejFEco-";
+var _ = "xfZcMLcNsgU-";
+var _ = "KdTm5UPqjB8-";
+var _ = "G-AxgYgeAPM-";
+var _ = "_10mrxtI-TKw-";
+var _ = "b4ah41BBfz0-";
+var _ = _(_(), 1);
+function _(_) {
   let { rgItemIDs: _ } = _;
   return (0, _.jsx)(_, {
     "flow-children": "column",
@@ -2625,12 +2626,17 @@ var _ = _.memo(function (_) {
               className: _,
               children: _?.name,
             }),
-            (0, _.jsx)("div", {
+            (0, _.jsxs)("div", {
               className: _,
-              children: (0, _.jsx)(_, {
-                storeItem: _,
-                purchaseOption: _,
-              }),
+              children: [
+                (0, _.jsx)(_, {
+                  storeItem: _,
+                  purchaseOption: _,
+                }),
+                (0, _.jsx)(_, {
+                  purchaseOption: _,
+                }),
+              ],
             }),
           ],
         }),
@@ -2651,6 +2657,18 @@ function _(_) {
       : (0, _.jsx)(_.Fragment, {
           children: " ",
         });
+}
+function _(_) {
+  let { purchaseOption: _ } = _;
+  return !_ || !_.included_game_count || _.included_game_count <= 1
+    ? null
+    : (0, _.jsx)("div", {
+        className: _,
+        children: _(
+          "#Menu_IncludesXGames",
+          _.included_game_count.toLocaleString(),
+        ),
+      });
 }
 function _(_) {
   let { itemid: _ } = _,
@@ -6426,6 +6444,7 @@ var _ = {
   loadingBarAnim: "Sszr8hrC6Ks-",
   Root: "gQWgnAxVrOM-",
   StoreBody: "VuAIAiWhjcg-",
+  WideStore: "dMxvITnAeR0-",
   StoreBodyContainer: "khI3dKnN9c8-",
   Scrollable: "o5zcnn2HXfA-",
   StoreContent: "GHIW6-Wf1rQ-",
@@ -6448,6 +6467,7 @@ function _({ children: _ }) {
       bSpoofing: _,
       bVirtualizedScrolling: _,
       bUseV7Menu: _,
+      bWideStore: _,
       ePreferredHWCompat: _,
       bRenderFooter: _,
     } = _.useLoaderData(),
@@ -6469,7 +6489,11 @@ function _({ children: _ }) {
             children: (0, _.jsx)(_, {}),
           }),
           (0, _.jsx)("body", {
-            className: (0, _.default)(_.StoreBody, _ && "gamepadui"),
+            className: (0, _.default)(
+              _.StoreBody,
+              _ && "gamepadui",
+              _ && _.WideStore,
+            ),
             children: (0, _.jsx)(_, {
               navID: "StoreTemplate",
               disabledRoot: !_.IN_GAMEPADUI,

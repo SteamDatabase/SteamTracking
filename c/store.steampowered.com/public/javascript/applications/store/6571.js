@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s games",
 	"Menu_Search": "Search",
 	"Menu_Label": "Store menu",
+	"Menu_IncludesXGames": "Includes %1$s games",
 	"ItemFlag_InLibrary": "IN LIBRARY",
 	"ItemFlag_OnWishlist": "ON WISHLIST",
 	"ItemFlag_InCart": "IN CART",

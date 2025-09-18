@@ -6410,6 +6410,14 @@ body.v6.narrowstore .page_content {
 	margin: 0 auto !important;
 }
 
+body.v6 {
+	--store-page-width: 940px;
+}
+
+body.v6.widestore {
+	--store-page-width: 1200px;
+}
+
 body.v6.widestore .page_content {
 	max-width: 1200px;
 	width: 100%;
