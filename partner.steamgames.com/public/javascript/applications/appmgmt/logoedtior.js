@@ -1342,7 +1342,7 @@
                       K().GameListEntry,
                       o ? K().Selected : K().Uninstalled,
                     ),
-                    ref: o && this.OnHighlightRef,
+                    ref: o ? this.OnHighlightRef : void 0,
                   },
                   t,
                 );
