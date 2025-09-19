@@ -65300,7 +65300,7 @@
           if (!t || !r) return;
           let i = (0, Gt.$e)(r, "y");
           return (
-            i.length || i.push(r.ownerDocument.documentElement),
+            i.push(r.ownerDocument.documentElement),
             (i = i.filter(
               (e) => e.scrollHeight > e.getBoundingClientRect().height,
             )),

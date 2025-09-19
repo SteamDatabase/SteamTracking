@@ -72188,7 +72188,7 @@
           if (!_ || !_) return;
           let _ = (0, _._)(_, "y");
           return (
-            _.length || _.push(_.ownerDocument.documentElement),
+            _.push(_.ownerDocument.documentElement),
             (_ = _.filter(
               (_) => _.scrollHeight > _.getBoundingClientRect().height,
             )),
