@@ -1897,8 +1897,9 @@ $ffn
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:48:23
-00:48:32
+00:15:09
+00:15:55
+00:15:58
 01/01/00
 0123456789
 0123456789.
@@ -8555,7 +8556,7 @@ Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep 19 2025
+Sep 20 2025
 September
 Serbian
 Server
@@ -8752,7 +8753,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Sep 19 2025 00:48:32
+Startup - updater built Sep 20 2025 00:15:53
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -9997,6 +9998,7 @@ XrmGetStringDatabase
 XsBI
 Xutf8TextListToTextProperty
 Xw:vP
+Xxh*
 Y1qh
 Y77n
 YU=E

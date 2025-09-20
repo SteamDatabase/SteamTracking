@@ -314,7 +314,7 @@ $ORIGIN
 /tmp/dumps
 /ubuntu12_64/disk-free 
 /usr/bin/crosdisk %s
-00:48:23
+00:15:09
 0123456789
 0123456789ABCDEF
 0123456789abcdef
@@ -610,7 +610,7 @@ Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 SendCrashReport
 SendExistingMinidump
-Sep 19 2025
+Sep 20 2025
 September
 SetAppID
 SetComment

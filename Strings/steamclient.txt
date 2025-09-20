@@ -46080,7 +46080,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenR
+ggen2
 ghjkl
 gidlist
 gidparentcomment
@@ -57825,7 +57825,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 19 2025 00:50:20
+steam Sep 20 2025 00:17:09
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
