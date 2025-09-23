@@ -341,13 +341,13 @@
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
         ButtonFocus: "_1ixhfnnWgdzGwSwNhUAitD",
+        FlyoutButton: "_3wlHWKFbgRAZPFtWEr65YT",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         "safari-only": "_2OjfY6UbHsmJizW2Ky_2aL",
         WishlistButton: "_1tJxbjNzcWSdG2hBsklCTN",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
         SoloMenuButton: "_3qY2sJFFtNsrx_rBDIT7l1",
         MenuLabel: "vj9hwW9u0MpjH7MVjjNw0",
-        FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
         MenuUnderscoreCtn: "_1-hPfsxjynE3demuqGmqf0",
         MenuUnderscore: "_3gaaE-cRfFWJdZcC8XMi0x",
         Separator: "_1Vh8VTtQWJb-a1hx-0Vax2",
@@ -77616,6 +77616,7 @@
                         className: _.NoSearchBarSpacer,
                       }),
                   ),
+                  !_ && _.createElement(_, null),
                   _.createElement(_, null),
                   _.createElement(_, null),
                 ),
@@ -77933,7 +77934,7 @@
         return _.createElement(
           _._,
           {
-            className: _()(_.MenuButton, _ && _.Active, _),
+            className: _()(_.MenuButton, _.FlyoutButton, _ && _.Active, _),
             focusClassName: _.ButtonFocus,
             ref: _,
             onClick: _,
@@ -77965,6 +77966,19 @@
             _.createElement(_, {
               section: _,
             }),
+        );
+      }
+      function _() {
+        const _ = (0, _._)(`${_._.STORE_BASE_URL}search/`);
+        return _.createElement(
+          _._,
+          {
+            className: _()(_.MenuButton),
+            focusClassName: _.ButtonFocus,
+            href: _,
+          },
+          _.createElement(_, null),
+          _.Localize("#Menu_Search"),
         );
       }
       function _() {

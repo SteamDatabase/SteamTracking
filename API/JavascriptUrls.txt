@@ -1627,6 +1627,7 @@ ${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
 ${STORE_BASE_URL}search
+${STORE_BASE_URL}search/
 ${STORE_BASE_URL}search/?${}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}

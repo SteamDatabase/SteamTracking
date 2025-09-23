@@ -6366,13 +6366,14 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 
 html:not(.rn_mobile_app) .StoreMenuLoadingPlaceholder .PlaceholderInner {
 
-	border-bottom: 1px solid #ffffff13;
+	background: radial-gradient(107.95% 57.49% at 50% 100%, #18253533 0%, #18253585 5%, #182535d9 20%, #182535 60%, #192330 100%);
 
-	background: linear-gradient(0deg, #1825354d 10%, #192330);
-	background-size: 150% 800%;
+	background-size: 101% 250%;
 	background-position-y: bottom;
+	background-position-x: center;
 	background-repeat: no-repeat;
-	backdrop-filter: blur(100px);
+	background-clip: border-box;
+	backdrop-filter: blur(10px);
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 	height: 46px;
 
@@ -6395,6 +6396,12 @@ body.v7menu .v7menu_spacer {
 }
 body.v7menu .v7menu_spacer.cartonly {
 	height: 29px;
+}
+
+@media screen and (max-width: 910px) {
+	html.responsive body.v7menu .v7menu_spacer {
+		display: none;
+	}
 }
 
 html.mobile_client body.v7menu .home_page_body_ctn:not(.has_takeover) .v7menu_spacer {

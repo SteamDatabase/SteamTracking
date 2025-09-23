@@ -339,13 +339,13 @@
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
         ButtonFocus: "_1ixhfnnWgdzGwSwNhUAitD",
+        FlyoutButton: "_3wlHWKFbgRAZPFtWEr65YT",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
         "safari-only": "_2OjfY6UbHsmJizW2Ky_2aL",
         WishlistButton: "_1tJxbjNzcWSdG2hBsklCTN",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
         SoloMenuButton: "_3qY2sJFFtNsrx_rBDIT7l1",
         MenuLabel: "vj9hwW9u0MpjH7MVjjNw0",
-        FlyoutMenuButton: "_9igpad2T8Z7IfebQ2WnbC",
         MenuUnderscoreCtn: "_1-hPfsxjynE3demuqGmqf0",
         MenuUnderscore: "_3gaaE-cRfFWJdZcC8XMi0x",
         Separator: "_1Vh8VTtQWJb-a1hx-0Vax2",
@@ -69405,8 +69405,9 @@
                         className: dr.NoSearchBarSpacer,
                       }),
                   ),
-                  n.createElement(Ma, null),
-                  n.createElement(Sa, null),
+                  !o && n.createElement(Ma, null),
+                  n.createElement(Ca, null),
+                  n.createElement(va, null),
                 ),
             n.createElement(da, {
               activeSection: r,
@@ -69416,7 +69417,7 @@
               refActiveButton: f,
             }),
           ),
-          n.createElement(za, { openMoreSection: _ }),
+          n.createElement(Ia, { openMoreSection: _ }),
         );
       });
       function ba(e) {
@@ -69693,7 +69694,7 @@
         return n.createElement(
           Ce.fu,
           {
-            className: mr()(dr.MenuButton, s && dr.Active, c),
+            className: mr()(dr.MenuButton, dr.FlyoutButton, s && dr.Active, c),
             focusClassName: dr.ButtonFocus,
             ref: o,
             onClick: d,
@@ -69719,6 +69720,19 @@
         );
       }
       function Ma() {
+        const e = (0, U.aL)(`${Zt.TS.STORE_BASE_URL}search/`);
+        return n.createElement(
+          Ce.Ii,
+          {
+            className: mr()(dr.MenuButton),
+            focusClassName: dr.ButtonFocus,
+            href: e,
+          },
+          n.createElement(tn, null),
+          lr.Localize("#Menu_Search"),
+        );
+      }
+      function Ca() {
         const e = (0, Y.LH)(),
           { data: t } = (function (e) {
             const t = (0, x.KV)();
@@ -69733,18 +69747,18 @@
                 focusClassName: dr.ButtonFocus,
                 href: r,
               },
-              n.createElement(va, { role: "presentation" }),
+              n.createElement(Ra, { role: "presentation" }),
               lr.Localize("#Menu_Wishlist"),
               void 0 !== t &&
                 t > 0 &&
-                n.createElement(Ca, null, t.toLocaleString()),
+                n.createElement(Sa, null, t.toLocaleString()),
             )
           : null;
       }
-      function Ca(e) {
+      function Sa(e) {
         return n.createElement("span", { className: dr.ItemCount }, e.children);
       }
-      function Sa() {
+      function va() {
         const { data: e } = (0, zt.aU)(),
           t = (0, U.aL)(`${Zt.TS.STORE_BASE_URL}cart/`);
         return e
@@ -69755,13 +69769,13 @@
                 focusClassName: dr.ButtonFocus,
                 href: t,
               },
-              n.createElement(Ra, null),
+              n.createElement(za, null),
               lr.Localize("#Menu_Cart"),
-              e > 0 && n.createElement(Ca, null, e.toLocaleString()),
+              e > 0 && n.createElement(Sa, null, e.toLocaleString()),
             )
           : null;
       }
-      function va(e) {
+      function Ra(e) {
         return n.createElement(
           "svg",
           {
@@ -69794,7 +69808,7 @@
           ),
         );
       }
-      function Ra(e) {
+      function za(e) {
         return n.createElement(
           "svg",
           {
@@ -69809,7 +69823,7 @@
           }),
         );
       }
-      const za = n.memo(function (e) {
+      const Ia = n.memo(function (e) {
         const { openMoreSection: t } = e,
           { setTerm: r, openSearch: i, onActive: s, closeSearch: a } = rr(),
           o = (0, U.ru)("mobilesearch"),
@@ -69851,8 +69865,8 @@
           null
         );
       });
-      var Ia = r(12447);
-      function Ta() {
+      var Ta = r(12447);
+      function Ea() {
         const e = sr(lr),
           t = n.useRef(null),
           [r, i] = n.useState(null);
@@ -69874,7 +69888,7 @@
           ),
           e && r
             ? n.createElement(
-                Ia.u,
+                Ta.u,
                 {
                   navID: "StoreMenu",
                   ref: s,
@@ -69885,29 +69899,29 @@
             : null
         );
       }
-      var Ea = r(10034);
-      function Fa(e) {
-        return $t() ? n.createElement(Oa, null) : e.children;
+      var Fa = r(10034);
+      function Oa(e) {
+        return $t() ? n.createElement(La, null) : e.children;
       }
-      function Oa() {
+      function La() {
         const [e, t] = n.useState(null);
         return (
-          La(e?.parentElement?.parentElement, Ea.ResponsiveHeaderContent),
-          La(e?.parentElement?.parentElement, Ea.ElementTakeover),
+          Wa(e?.parentElement?.parentElement, Fa.ResponsiveHeaderContent),
+          Wa(e?.parentElement?.parentElement, Fa.ElementTakeover),
           n.createElement(
             "div",
-            { className: mr()(Ea.SearchContainer), ref: t },
+            { className: mr()(Fa.SearchContainer), ref: t },
             n.createElement(Ji, { bBackdropActive: !1 }),
           )
         );
       }
-      function La(e, t) {
+      function Wa(e, t) {
         n.useLayoutEffect(() => {
           if (e && t) return e.classList.add(t), () => e.classList.remove(t);
         }, [e, t]);
       }
-      var Wa = r(82715);
-      const xa = n.lazy(() =>
+      var xa = r(82715);
+      const ja = n.lazy(() =>
         Promise.all([
           r.e(8970),
           r.e(6597),
@@ -69928,7 +69942,7 @@
           r.e(9672),
         ]).then(r.bind(r, 5907)),
       );
-      function ja(e) {
+      function ka(e) {
         const { children: t } = e,
           [r, i] = n.useState(),
           s = n.useCallback(
@@ -69953,32 +69967,32 @@
               pe.E,
               { active: !0 },
               n.createElement(
-                Wa.tH,
+                xa.tH,
                 null,
                 n.createElement(
                   n.Suspense,
                   { fallback: null },
-                  n.createElement(xa, { ...r, fnCloseModal: a }),
+                  n.createElement(ja, { ...r, fnCloseModal: a }),
                 ),
               ),
             ),
           t,
         );
       }
-      var ka = r(31292);
-      function Da(e) {
+      var Da = r(31292);
+      function Pa(e) {
         return n.lazy(async function () {
           let t = performance.now();
           const r = await e();
           return (
-            (0, ka.D)() &&
-              ((0, ka.D)().m_stats.firstReactLazyLoad ??=
+            (0, Da.D)() &&
+              ((0, Da.D)().m_stats.firstReactLazyLoad ??=
                 performance.now() - t),
             r
           );
         });
       }
-      const Pa = Da(() =>
+      const Aa = Pa(() =>
           Promise.all([
             r.e(7403),
             r.e(6535),
@@ -69990,7 +70004,7 @@
             r.e(976),
           ]).then(r.bind(r, 98425)),
         ),
-        Aa = Da(() =>
+        Ua = Pa(() =>
           Promise.all([
             r.e(6597),
             r.e(5979),
@@ -70004,7 +70018,7 @@
             r.e(2634),
           ]).then(r.bind(r, 9555)),
         ),
-        Ua = Da(() =>
+        qa = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70038,7 +70052,7 @@
             r.e(7333),
           ]).then(r.bind(r, 17117)),
         ),
-        qa = Da(() =>
+        Na = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70060,7 +70074,7 @@
             r.e(8396),
           ]).then(r.bind(r, 74968)),
         ),
-        Na = Da(() =>
+        Ga = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70095,7 +70109,7 @@
             r.e(6855),
           ]).then(r.bind(r, 9678)),
         ),
-        Ga = Da(() =>
+        Ha = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70130,9 +70144,9 @@
             r.e(970),
           ]).then(r.bind(r, 34568)),
         ),
-        Ha = Da(() => Promise.all([r.e(2797), r.e(30)]).then(r.bind(r, 91648))),
-        Va = Da(() => r.e(1402).then(r.bind(r, 44899))),
-        Za = Da(() =>
+        Va = Pa(() => Promise.all([r.e(2797), r.e(30)]).then(r.bind(r, 91648))),
+        Za = Pa(() => r.e(1402).then(r.bind(r, 44899))),
+        Ka = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70149,7 +70163,7 @@
             r.e(716),
           ]).then(r.bind(r, 49271)),
         ),
-        Ka = Da(() =>
+        $a = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70170,7 +70184,7 @@
             r.e(9672),
           ]).then(r.bind(r, 25054)),
         ),
-        $a = Da(() =>
+        Qa = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70191,7 +70205,7 @@
             r.e(9672),
           ]).then(r.bind(r, 6804)),
         ),
-        Qa = Da(() =>
+        Ya = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70226,7 +70240,7 @@
             r.e(970),
           ]).then(r.bind(r, 58426)),
         ),
-        Ya = Da(() =>
+        Xa = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70262,7 +70276,7 @@
             r.e(4268),
           ]).then(r.bind(r, 86252)),
         ),
-        Xa = Da(() =>
+        Ja = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(9236),
@@ -70271,7 +70285,7 @@
             r.e(2516),
           ]).then(r.bind(r, 52069)),
         ),
-        Ja = Da(() =>
+        eo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(2797),
@@ -70281,12 +70295,12 @@
             r.e(5068),
           ]).then(r.bind(r, 40917)),
         ),
-        eo = Da(() =>
+        to = Pa(() =>
           Promise.all([r.e(8970), r.e(2797), r.e(7436), r.e(6966)]).then(
             r.bind(r, 8685),
           ),
         ),
-        to = Da(() =>
+        ro = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70302,7 +70316,7 @@
             r.e(6814),
           ]).then(r.bind(r, 51699)),
         ),
-        ro = Da(() =>
+        io = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70319,7 +70333,7 @@
             r.e(5871),
           ]).then(r.bind(r, 11417)),
         ),
-        io = Da(() =>
+        no = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70352,8 +70366,8 @@
             r.e(8620),
           ]).then(r.bind(r, 57912)),
         ),
-        no = Da(() => r.e(8843).then(r.bind(r, 71009))),
-        so = Da(() =>
+        so = Pa(() => r.e(8843).then(r.bind(r, 71009))),
+        ao = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70380,7 +70394,7 @@
             r.e(5894),
           ]).then(r.bind(r, 13164)),
         ),
-        ao = Da(() =>
+        oo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70407,7 +70421,7 @@
             r.e(8987),
           ]).then(r.bind(r, 35649)),
         ),
-        oo = Da(() =>
+        lo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70433,7 +70447,7 @@
             r.e(2965),
           ]).then(r.bind(r, 42976)),
         ),
-        lo = Da(() =>
+        co = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70460,7 +70474,7 @@
             r.e(3027),
           ]).then(r.bind(r, 54954)),
         ),
-        co = Da(() =>
+        uo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70497,7 +70511,7 @@
             r.e(2414),
           ]).then(r.bind(r, 23373)),
         ),
-        uo = Da(() =>
+        mo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70531,7 +70545,7 @@
             r.e(7333),
           ]).then(r.bind(r, 87669)),
         ),
-        mo = Da(() =>
+        po = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70566,8 +70580,8 @@
             r.e(6855),
           ]).then(r.bind(r, 84428)),
         ),
-        po = Da(() => r.e(7819).then(r.bind(r, 90428))),
-        go = Da(() =>
+        go = Pa(() => r.e(7819).then(r.bind(r, 90428))),
+        _o = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70599,7 +70613,7 @@
             r.e(9297),
           ]).then(r.bind(r, 13643)),
         ),
-        _o = Da(() =>
+        ho = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70618,7 +70632,7 @@
             r.e(9456),
           ]).then(r.bind(r, 21820)),
         ),
-        ho = Da(() =>
+        fo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70637,7 +70651,7 @@
             r.e(9456),
           ]).then(r.bind(r, 1593)),
         ),
-        fo = Da(() =>
+        bo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70656,7 +70670,7 @@
             r.e(9456),
           ]).then(r.bind(r, 9130)),
         ),
-        bo = Da(() =>
+        Bo = Pa(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -70675,10 +70689,10 @@
             r.e(9456),
           ]).then(r.bind(r, 84155)),
         );
-      const Bo = function (e) {
+      const wo = function (e) {
         return n.createElement(se.tH, null, n.createElement(Q.qh, { ...e }));
       };
-      function wo() {
+      function yo() {
         return (
           (0, n.useEffect)(
             () => (
@@ -70690,7 +70704,7 @@
           null
         );
       }
-      function yo(e) {
+      function Mo(e) {
         const [t, r] = n.useState(),
           [i, o] = n.useState(!1);
         return (
@@ -70733,16 +70747,16 @@
                   "div",
                   { className: $().App },
                   n.createElement(
-                    vo,
+                    Ro,
                     { storeUserConfig: t },
-                    n.createElement(Ro, null),
+                    n.createElement(zo, null),
                     n.createElement(
                       n.Suspense,
-                      { fallback: n.createElement(wo, null) },
+                      { fallback: n.createElement(yo, null) },
                       n.createElement(
                         Q.dO,
                         null,
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.DiagData(),
                           render: (e) =>
@@ -70753,32 +70767,32 @@
                             }),
                         }),
                         n.createElement(
-                          Bo,
+                          wo,
                           { exact: !0, path: q.B.Login() },
                           n.createElement(Ge.X, {
                             config: {
-                              login: (e) => n.createElement(eo, { ...e }),
+                              login: (e) => n.createElement(to, { ...e }),
                             },
                           }),
                         ),
                         n.createElement(
-                          Bo,
+                          wo,
                           { exact: !0, path: q.B.OAuthLogin() },
                           n.createElement(Ge.X, {
                             config: {
-                              login: (e) => n.createElement(eo, { ...e }),
+                              login: (e) => n.createElement(to, { ...e }),
                             },
                           }),
                         ),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.AppStorePage(),
                           render: (e) =>
-                            n.createElement(Ua, {
+                            n.createElement(qa, {
                               appid: parseInt(e.match.params.appid),
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.SaleLandingPage(),
                           render: (e) => {
@@ -70790,13 +70804,13 @@
                             return n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(mo, {
+                                  n.createElement(po, {
                                     key: `sale_${t}`,
                                     promotionName: `sale_${t}`,
                                     language: (0, l.sf)(s.TS.LANGUAGE),
                                   }),
                                 "broadcast-embed": () =>
-                                  n.createElement(qa, {
+                                  n.createElement(Na, {
                                     key: `broadcastsale_${t}`,
                                     ...e,
                                     promotionName: t,
@@ -70805,34 +70819,34 @@
                             });
                           },
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.CuratorAdminEditPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-social-media-edit": (e) =>
-                                  n.createElement(Ha, { ...e }),
+                                  n.createElement(Va, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.CuratorAdminPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "curator-admin-rss": () =>
-                                  n.createElement(Ga, null),
+                                  n.createElement(Ha, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.CreatorSaleLandingPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(mo, {
+                                  n.createElement(po, {
                                     key:
                                       "salecreator_" +
                                       e.match.params.creatorPageName +
@@ -70845,7 +70859,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: [
                             q.B.RemotePlay(),
                             q.B.RemotePlayTogether(),
@@ -70856,16 +70870,16 @@
                             q.B.SubscriptionPlanLandingPage(),
                             q.B.GameRecording(),
                           ],
-                          render: (e) => n.createElement(Mo, null),
+                          render: (e) => n.createElement(Co, null),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.CuratorHomePage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "broadcast-embed": () =>
-                                  n.createElement(qa, {
+                                  n.createElement(Na, {
                                     key:
                                       "curatorbroadcast_" +
                                       s.GP.clanid +
@@ -70876,43 +70890,43 @@
                                     listid: s.GP.listid,
                                   }),
                                 "creatorhome-social-media-display": (e) =>
-                                  n.createElement(Va, { ...e }),
+                                  n.createElement(Za, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.CuratorListPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "list-display": () =>
-                                  n.createElement(Za, {
+                                  n.createElement(Ka, {
                                     key: "curator_list",
                                     listid: e.match.params.listid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.CuratorAllOtherserPages(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-social-media-display": (e) =>
-                                  n.createElement(Va, { ...e }),
+                                  n.createElement(Za, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.PackageStorePage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "broadcast-embed": () =>
-                                  n.createElement(qa, {
+                                  n.createElement(Na, {
                                     key:
                                       "packagebroadcast_" +
                                       e.match.params.subid,
@@ -70924,19 +70938,19 @@
                                   n.createElement(
                                     He.Ay,
                                     { feature: "recommended" },
-                                    n.createElement(uo, { ...e }),
+                                    n.createElement(mo, { ...e }),
                                   ),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.BundleStorePage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "broadcast-embed": () =>
-                                  n.createElement(qa, {
+                                  n.createElement(Na, {
                                     key:
                                       "bundlebroadcast_" +
                                       e.match.params.bundleid,
@@ -70949,13 +70963,23 @@
                                   n.createElement(
                                     He.Ay,
                                     { feature: "recommended" },
-                                    n.createElement(uo, { ...e }),
+                                    n.createElement(mo, { ...e }),
                                   ),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.NewsHub(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "event-calendar": () =>
+                                  n.createElement(Xa, null),
+                              },
+                            }),
+                        }),
+                        n.createElement(wo, {
+                          path: q.B.EventAdmin(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
@@ -70964,82 +70988,72 @@
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
-                          path: q.B.EventAdmin(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "event-calendar": () =>
-                                  n.createElement(Qa, null),
-                              },
-                            }),
-                        }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.InteractiveRecommender(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
-                                recommender: () => n.createElement(Xa, null),
+                                recommender: () => n.createElement(Ja, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.GameMixer(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
-                                gamemixer: () => n.createElement(_o, null),
+                                gamemixer: () => n.createElement(ho, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.RecommenderDemos(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 recommenderdemos: () =>
-                                  n.createElement(ho, null),
+                                  n.createElement(fo, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.PersonalCalendar(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 personalcalendar: () =>
-                                  n.createElement(fo, null),
+                                  n.createElement(bo, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.LabsSandbox(),
-                          render: (e) => n.createElement(bo, null),
+                          render: (e) => n.createElement(Bo, null),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.SteamCharts(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
-                                  n.createElement(co, { ...e }),
+                                  n.createElement(uo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.Loyalty(),
                           render: () =>
                             n.createElement(Ge.X, {
                               config: {
-                                "points-shop": () => n.createElement(to, null),
+                                "points-shop": () => n.createElement(ro, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -71050,7 +71064,7 @@
                             return n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(mo, {
+                                  n.createElement(po, {
                                     key: "contenthub_" + t,
                                     promotionName: "contenthub_" + t,
                                     language: (0, l.sf)(s.TS.LANGUAGE),
@@ -71059,99 +71073,90 @@
                             });
                           },
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.Categories(),
                           render: () =>
                             n.createElement(Ge.X, {
                               config: {
-                                categories: () => n.createElement(Na, null),
+                                categories: () => n.createElement(Ga, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.AccountPreferences(),
-                          render: (e) => n.createElement(Aa, { ...e }),
+                          render: (e) => n.createElement(Ua, { ...e }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.SummerSale2021Story(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "forge-your-fate": () =>
-                                  n.createElement(po, null),
+                                  n.createElement(go, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           exact: !0,
                           path: q.B.LabsHome(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "discovery-queue-button": () =>
-                                  n.createElement(Ka, null),
+                                  n.createElement($a, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.MarketingMessages(),
-                          render: (e) => n.createElement(ro, { ...e }),
-                        }),
-                        n.createElement(Bo, {
-                          path: q.B.MeetSteamRoute(),
                           render: (e) => n.createElement(io, { ...e }),
                         }),
-                        n.createElement(Bo, {
-                          path: q.B.YearInReview(),
-                          render: (e) => n.createElement(go, { ...e }),
+                        n.createElement(wo, {
+                          path: q.B.MeetSteamRoute(),
+                          render: (e) => n.createElement(no, { ...e }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
+                          path: q.B.YearInReview(),
+                          render: (e) => n.createElement(_o, { ...e }),
+                        }),
+                        n.createElement(wo, {
                           path: q.B.ShoppingCartAccountCartPurchaseRequested(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "react-root": () =>
+                                  n.createElement(oo, {
+                                    familyGroupID: e.match.params.familygroupid,
+                                  }),
+                              },
+                            }),
+                        }),
+                        n.createElement(wo, {
+                          path: q.B.ShoppingCartPurchaseRequest(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
                                   n.createElement(ao, {
                                     familyGroupID: e.match.params.familygroupid,
-                                  }),
-                              },
-                            }),
-                        }),
-                        n.createElement(Bo, {
-                          path: q.B.ShoppingCartPurchaseRequest(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "react-root": () =>
-                                  n.createElement(so, {
-                                    familyGroupID: e.match.params.familygroupid,
                                     requestID: e.match.params.requestid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.ShoppingCartGifts(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
-                                  n.createElement(oo, { initialStep: "gifts" }),
+                                  n.createElement(lo, { initialStep: "gifts" }),
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
                           path: q.B.ShoppingCart(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "react-root": () => n.createElement(oo, null),
-                              },
-                            }),
-                        }),
-                        n.createElement(Bo, {
-                          path: q.B.SteamAwards(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
@@ -71159,21 +71164,30 @@
                               },
                             }),
                         }),
-                        n.createElement(Bo, {
-                          path: q.B.JoinMultiplayerSession(),
-                          render: (e) => n.createElement(Ja, null),
+                        n.createElement(wo, {
+                          path: q.B.SteamAwards(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "react-root": () => n.createElement(co, null),
+                              },
+                            }),
                         }),
-                        n.createElement(Bo, {
+                        n.createElement(wo, {
+                          path: q.B.JoinMultiplayerSession(),
+                          render: (e) => n.createElement(eo, null),
+                        }),
+                        n.createElement(wo, {
                           path: q.B.Home(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "discovery-queue-home": () =>
-                                  n.createElement($a, null),
+                                  n.createElement(Qa, null),
                               },
                             }),
                         }),
-                        n.createElement(Bo, null, n.createElement(Ve.a, null)),
+                        n.createElement(wo, null, n.createElement(Ve.a, null)),
                       ),
                     ),
                   ),
@@ -71182,13 +71196,13 @@
             : null
         );
       }
-      function Mo(e) {
+      function Co(e) {
         const t = (0, Q.zy)().pathname.split("/").filter(Boolean).pop(),
           r = "sale_" + (t?.split("?")[0] || "unknown");
         return n.createElement(Ge.X, {
           config: {
             "sale-display": () =>
-              n.createElement(mo, {
+              n.createElement(po, {
                 key: r,
                 promotionName: r,
                 language: (0, l.sf)(s.TS.LANGUAGE),
@@ -71196,7 +71210,7 @@
           },
         });
       }
-      function Co(e) {
+      function So(e) {
         const { children: t } = e,
           r = n.useCallback(() => (0, u.P)(), []),
           i = (0, _e.bs)(r),
@@ -71215,7 +71229,7 @@
           ),
         );
       }
-      function So(e) {
+      function vo(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useRef(void 0);
         i.current || (i.current = new Z());
@@ -71234,11 +71248,11 @@
           )
         );
       }
-      const vo = n.memo(function (e) {
+      const Ro = n.memo(function (e) {
           const { storeUserConfig: t, children: r } = e,
             i = (0, s.Tc)("hwinfo", "application_config");
           return n.createElement(
-            So,
+            vo,
             { storeUserConfig: t },
             n.createElement(
               ae.I.Provider,
@@ -71253,7 +71267,7 @@
                     bSteamDeck: i?.bSteamDeck ?? !1,
                   },
                   n.createElement(
-                    Co,
+                    So,
                     null,
                     n.createElement(
                       c.s,
@@ -71267,7 +71281,7 @@
                           n.createElement(
                             Oe,
                             null,
-                            n.createElement(ja, null, r),
+                            n.createElement(ka, null, r),
                           ),
                         ),
                       ),
@@ -71278,7 +71292,7 @@
             ),
           );
         }),
-        Ro = n.memo(function (e) {
+        zo = n.memo(function (e) {
           return n.createElement(
             n.Fragment,
             null,
@@ -71292,7 +71306,7 @@
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(Pa, {
+                      n.createElement(Aa, {
                         bResponsiveHeader: !1,
                         notifications: (0, s.Tc)(
                           "steam_notifications",
@@ -71304,7 +71318,7 @@
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(Pa, {
+                      n.createElement(Aa, {
                         bResponsiveHeader: !0,
                         notifications: (0, s.Tc)(
                           "steam_notifications",
@@ -71322,19 +71336,19 @@
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(no, null),
+                      n.createElement(so, null),
                     ),
                   "store-menu-v7": () =>
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(Ta, null),
+                      n.createElement(Ea, null),
                     ),
                   "store-menu-responsive-search": () =>
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(Fa, null),
+                      n.createElement(Oa, null),
                     ),
                 },
               }),
@@ -71351,27 +71365,27 @@
             }),
           );
         });
-      var zo = r(72034),
-        Io = r(8812);
+      var Io = r(72034),
+        To = r(8812);
       r(52244);
       new Map();
-      var To = r(14947),
-        Eo = r(29248);
+      var Eo = r(14947),
+        Fo = r(29248);
       r(64641);
-      (0, To.jK)({ enforceActions: "never" });
-      let Fo = performance.now();
-      let Oo,
-        Lo = !1;
-      function Wo() {
-        if (!Lo) {
+      (0, Eo.jK)({ enforceActions: "never" });
+      let Oo = performance.now();
+      let Lo,
+        Wo = !1;
+      function xo() {
+        if (!Wo) {
           (0, s.XJ)("application_config").config
-            ? (xo(), (Lo = !0))
+            ? (jo(), (Wo = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function xo() {
-        Oo ||
-          (Oo = (async function (e) {
+      async function jo() {
+        Lo ||
+          (Lo = (async function (e) {
             0;
             const t = a.A0.GetLanguageFallback(e),
               i = e === t,
@@ -71390,33 +71404,33 @@
               { ...u, ...c, ...m, ...d },
             );
           })(s.TS.LANGUAGE)),
-          await Oo;
+          await Lo;
       }
-      Wo(),
+      xo(),
         tt.oQ(async function () {
-          Wo();
-          const e = (0, Eo.zR)({ basename: (0, q.C)() });
-          (0, Io.aj)().Init(
+          xo();
+          const e = (0, Fo.zR)({ basename: (0, q.C)() });
+          (0, To.aj)().Init(
             "Store",
             CLSTAMP,
-            new zo.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+            new Io.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
           ),
-            await xo(),
+            await jo(),
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
-                  .render(n.createElement(yo, { history: e }))
+                  .render(n.createElement(Mo, { history: e }))
               : console.error('No "application_root" was found to target'),
-            (0, ka.D)() &&
-              ((0, ka.D)().IncrementStat(
+            (0, Da.D)() &&
+              ((0, Da.D)().IncrementStat(
                 "storeReactStartup",
-                Fo -
+                Oo -
                   (performance.getEntriesByType("navigation")?.[0]?.duration ??
                     0),
               ),
-              (0, ka.D)().IncrementStat(
+              (0, Da.D)().IncrementStat(
                 "storeReactLocalizationReady",
-                performance.now() - Fo,
+                performance.now() - Oo,
               ));
         });
     },

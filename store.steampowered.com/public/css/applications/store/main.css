@@ -5145,8 +5145,12 @@ button._175B12uOwmeGBNcSaQFe-Z {
   color: #000;
   transition: none;
 }
-.BasicUI a._175B12uOwmeGBNcSaQFe-Z._1ixhfnnWgdzGwSwNhUAitD svg,
-.BasicUI button._175B12uOwmeGBNcSaQFe-Z._1ixhfnnWgdzGwSwNhUAitD svg {
+.BasicUI
+  a._175B12uOwmeGBNcSaQFe-Z._3wlHWKFbgRAZPFtWEr65YT._1ixhfnnWgdzGwSwNhUAitD
+  svg,
+.BasicUI
+  button._175B12uOwmeGBNcSaQFe-Z._3wlHWKFbgRAZPFtWEr65YT._1ixhfnnWgdzGwSwNhUAitD
+  svg {
   transform: translateY(2px);
 }
 a._175B12uOwmeGBNcSaQFe-Z._234vIwVerIU5MqgZwrEcd8,
@@ -5188,10 +5192,6 @@ button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN svg {
     margin-bottom: 2px;
   }
 }
-a._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN:hover svg,
-button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN:hover svg {
-  transform: none;
-}
 .BasicUI
   a._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD,
 .BasicUI
@@ -5208,14 +5208,6 @@ button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN:hover svg {
   button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD
   .BReXgOZvJY6u4htWQn1aF {
   color: #000;
-}
-.BasicUI
-  a._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD
-  svg,
-.BasicUI
-  button._175B12uOwmeGBNcSaQFe-Z._1tJxbjNzcWSdG2hBsklCTN._1ixhfnnWgdzGwSwNhUAitD
-  svg {
-  transform: none;
 }
 a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5,
 button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5 {
@@ -5254,10 +5246,6 @@ button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover {
   text-shadow: 1px 1px 1px #0281bb;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
-a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover svg,
-button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover svg {
-  transform: none;
-}
 .BasicUI
   a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5._1ixhfnnWgdzGwSwNhUAitD,
 .BasicUI
@@ -5274,14 +5262,6 @@ button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5:hover svg {
   .BReXgOZvJY6u4htWQn1aF {
   color: #000;
 }
-.BasicUI
-  a._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5._1ixhfnnWgdzGwSwNhUAitD
-  svg,
-.BasicUI
-  button._175B12uOwmeGBNcSaQFe-Z.qqQDu9j0LIoK-w06-JxB5._1ixhfnnWgdzGwSwNhUAitD
-  svg {
-  transform: none;
-}
 a._175B12uOwmeGBNcSaQFe-Z._3qY2sJFFtNsrx_rBDIT7l1 .vj9hwW9u0MpjH7MVjjNw0,
 button._175B12uOwmeGBNcSaQFe-Z._3qY2sJFFtNsrx_rBDIT7l1 .vj9hwW9u0MpjH7MVjjNw0 {
   font-size: 14px;
@@ -5293,8 +5273,8 @@ button._175B12uOwmeGBNcSaQFe-Z._3qY2sJFFtNsrx_rBDIT7l1 .vj9hwW9u0MpjH7MVjjNw0 {
 .BasicUI button._175B12uOwmeGBNcSaQFe-Z:hover {
   text-shadow: none;
 }
-a._175B12uOwmeGBNcSaQFe-Z:hover svg,
-button._175B12uOwmeGBNcSaQFe-Z:hover svg {
+a._175B12uOwmeGBNcSaQFe-Z._3wlHWKFbgRAZPFtWEr65YT:hover svg,
+button._175B12uOwmeGBNcSaQFe-Z._3wlHWKFbgRAZPFtWEr65YT:hover svg {
   transform: translateY(2px);
 }
 a._175B12uOwmeGBNcSaQFe-Z._2IyR9WyPwYb15ILBjPvLR9,
@@ -5322,10 +5302,6 @@ button._175B12uOwmeGBNcSaQFe-Z svg {
   transition-property: transform;
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
-}
-a._175B12uOwmeGBNcSaQFe-Z._9igpad2T8Z7IfebQ2WnbC,
-button._175B12uOwmeGBNcSaQFe-Z._9igpad2T8Z7IfebQ2WnbC {
-  gap: 10px;
 }
 a._175B12uOwmeGBNcSaQFe-Z .vj9hwW9u0MpjH7MVjjNw0,
 button._175B12uOwmeGBNcSaQFe-Z .vj9hwW9u0MpjH7MVjjNw0 {

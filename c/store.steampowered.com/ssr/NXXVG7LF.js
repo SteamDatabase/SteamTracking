@@ -1,30 +1,31 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -61,7 +62,6 @@ import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -79,15 +79,15 @@ import {
   _,
   _,
 } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -1411,6 +1411,7 @@ var _ = "In8c5bkG5eM-";
 var _ = "yzn1exHts-g-";
 var _ = "_-4fVuiRLPho-";
 var _ = "txkpZ63Lcj4-";
+var _ = "Flf3IKPB4Tg-";
 var _ = "ntJcAB2O7Fk-";
 var _ = "ZfTk6ryId-Y-";
 var _ = "HIlJVl7G7A4-";
@@ -5911,6 +5912,7 @@ var _ = _(_()),
                           }),
                       ],
                     }),
+                    !_ && (0, _.jsx)(_, {}),
                     (0, _.jsx)(_, {}),
                     (0, _.jsx)(_, {}),
                   ],
@@ -6196,7 +6198,7 @@ function _(_) {
       [_, _, _],
     );
   return (0, _.jsxs)(_, {
-    className: (0, _.default)(_, _ && _, _),
+    className: (0, _.default)(_, _, _ && _, _),
     focusClassName: _,
     ref: _,
     onClick: _,
@@ -6225,6 +6227,15 @@ function _(_) {
           section: _,
         }),
     ],
+  });
+}
+function _() {
+  let _ = _(`${_.STORE_BASE_URL}search/`);
+  return (0, _.jsxs)(_, {
+    className: (0, _.default)(_),
+    focusClassName: _,
+    href: _,
+    children: [(0, _.jsx)(_, {}), _.Localize("#Menu_Search")],
   });
 }
 function _() {
