@@ -79824,7 +79824,12 @@
                 )
               : console.error('No "application_root" was found to target'),
             (0, _._)() &&
-              ((0, _._)().IncrementStat("storeReactStartup", _),
+              ((0, _._)().IncrementStat(
+                "storeReactStartup",
+                _ -
+                  (performance.getEntriesByType("navigation")?.[0]?.duration ??
+                    0),
+              ),
               (0, _._)().IncrementStat(
                 "storeReactLocalizationReady",
                 performance.now() - _,

@@ -71408,7 +71408,12 @@
                   .render(n.createElement(yo, { history: e }))
               : console.error('No "application_root" was found to target'),
             (0, ka.D)() &&
-              ((0, ka.D)().IncrementStat("storeReactStartup", Fo),
+              ((0, ka.D)().IncrementStat(
+                "storeReactStartup",
+                Fo -
+                  (performance.getEntriesByType("navigation")?.[0]?.duration ??
+                    0),
+              ),
               (0, ka.D)().IncrementStat(
                 "storeReactLocalizationReady",
                 performance.now() - Fo,
