@@ -886,6 +886,20 @@
   filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35)) brightness(125%);
   cursor: pointer;
 }
+._29CGQrIvjYllKwVQKe8d8R._3PolQ91t3Uohfvr4beUAM9 {
+  background: #3d4450;
+  color: #fff;
+  font: inherit;
+  text-align: center;
+  font-size: 24px;
+  border: none;
+}
+._29CGQrIvjYllKwVQKe8d8R._3PolQ91t3Uohfvr4beUAM9:hover {
+  background: #464d58;
+}
+._29CGQrIvjYllKwVQKe8d8R._3PolQ91t3Uohfvr4beUAM9:disabled {
+  cursor: default;
+}
 ._16w1DqxiJ7Hou6al4RGELE {
   cursor: pointer;
   width: 64px;

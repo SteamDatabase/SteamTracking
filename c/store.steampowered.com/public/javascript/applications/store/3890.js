@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s игри",
 	"Menu_Search": "Търсачка",
 	"Menu_Label": "Меню за магазина",
+	"Menu_IncludesXGames": "Включва %1$s игри",
 	"ItemFlag_InLibrary": "В БИБЛИОТЕКАТА",
 	"ItemFlag_OnWishlist": "В СПИСЪКА С ЖЕЛАНИЯ",
 	"ItemFlag_InCart": "В КОШНИЦАТА",

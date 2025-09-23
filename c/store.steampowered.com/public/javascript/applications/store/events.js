@@ -1520,8 +1520,7 @@
               console.error("StoreEventDetailView failed " + _.strErrorMsg, _),
                 _(!0);
             };
-          if (
-            ((0, _.useEffect)(_, []),
+          (0, _.useEffect)(_, []),
             (0, _.useEffect)(() => {
               const _ = _().CancelToken.source();
               return (
@@ -1557,9 +1556,9 @@
                   _.cancel("StoreEventDetailView: unmounting");
                 }
               );
-            }, [__webpack_require__, _, _, _, _]),
-            _ || !_ || (_?.appid && !_))
-          ) {
+            }, [__webpack_require__, _, _, _, _]);
+          const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative");
+          if (_ || !_ || (_?.appid && !_)) {
             const _ = "lang_" + (0, _._)((0, _._)(_._.LANGUAGE)),
               _ = "";
             return _.createElement(
@@ -1624,10 +1623,7 @@
                   partnerEventStore: _,
                   eventModel: _,
                   showAppHeader: !0,
-                  closeModal: () =>
-                    _.history.push(
-                      (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
-                    ),
+                  closeModal: () => _.history.push(_),
                 }),
               )
             : _.createElement(
@@ -3252,9 +3248,9 @@
             });
           }
         return (
+          __webpack_require__.push(_(_._.Dev_Sales, _)),
           _._.is_support &&
             (__webpack_require__.push(_(_._.Dev_All, _)),
-            __webpack_require__.push(_(_._.Dev_Sales, _)),
             __webpack_require__.push(_(_._.Dev_AssociatedPress, _))),
           _
         );
@@ -3374,9 +3370,7 @@
           );
         }
       };
-      (0, _._)([_._], _.prototype, "onExpandSearch", null),
-        (_ = (0, _._)([_._], _));
-      const _ = (_) => {
+      function _(_) {
         const {
           key: _,
           name: __webpack_require__,
@@ -3397,11 +3391,11 @@
               _.createElement(
                 "div",
                 {
-                  className: (0, _._)(
-                    _().NewsChannel,
-                    _ && _().NewsChannelOnPage,
-                    _ && _().ValveOnlyBackground,
-                  ),
+                  className: (0, _._)({
+                    [_().NewsChannel]: !0,
+                    [_().NewsChannelOnPage]: _,
+                    [_().ValveOnlyBackground]: _,
+                  }),
                 },
                 Boolean(_) &&
                   _.createElement("img", {
@@ -3440,7 +3434,9 @@
                   ),
               ),
             );
-      };
+      }
+      (0, _._)([_._], _.prototype, "onExpandSearch", null),
+        (_ = (0, _._)([_._], _));
       let _ = class extends _.Component {
         render() {
           const _ = _(this.props.bIsUpcoming),
@@ -3491,39 +3487,38 @@
           );
         }
       };
-      _ = (0, _._)([_._], _);
-      class _ extends _.Component {
-        render() {
-          const _ = _(this.props.bIsUpcoming, !1);
-          return _ && _.length > 0
-            ? _.createElement(
+      function _(_) {
+        const { bIsUpcoming: _ } = _,
+          _ = _(_, !1);
+        return _ && _.length > 0
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().NewsChannelGroup, _().DiscoverGroup),
+              },
+              _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_().NewsChannelGroup, _().DiscoverGroup),
+                  className: _().NewsChannelListTitle,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().NewsChannelListTitle,
-                  },
-                  (0, _._)("#EventCalendar_NewsChannels_Discover"),
+                (0, _._)("#EventCalendar_NewsChannels_Discover"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().NewsChannelList,
+                },
+                __webpack_require__.map((_) =>
+                  _.createElement(_, {
+                    key: _.key,
+                    element: _,
+                  }),
                 ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().NewsChannelList,
-                  },
-                  _.map((_) =>
-                    _.createElement(_, {
-                      key: _.key,
-                      element: _,
-                    }),
-                  ),
-                ),
-              )
-            : null;
-        }
+              ),
+            )
+          : null;
       }
+      _ = (0, _._)([_._], _);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3531,275 +3526,251 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      let _ = class extends _.Component {
-        OnMuteButton(_) {
-          const { calendarEvent: _ } = this.props;
-          let _ = _.GetEntityName();
-          (0, _._)(
-            _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#EventCalendar_MuteApp_Title", _),
-                strDescription: (0, _._)("#EventCalendar_MuteApp_details", _),
-                onOK: () => (0, _._)().UpdateEventBlockFromCalendarEvent(_, !1),
-              },
-              _.createElement(
-                "a",
-                {
-                  href: _._.STORE_BASE_URL + "account/emailoptout/app",
-                  target: _._.IN_CLIENT ? void 0 : "_blank",
-                },
-                (0, _._)("#EventCalendar_ManageMutedSources"),
-              ),
-            ),
-            (0, _._)(_),
-          );
-        }
-        OnUnMuteButton() {
-          const { calendarEvent: _ } = this.props;
-          (0, _._)().UpdateEventBlockFromCalendarEvent(_, !0);
-        }
-        HideAllEventsOfMyType() {
-          const { eventModel: _ } = this.props,
-            _ = this.GetVisibilityStore().MapClanEventTypeToGroup(
-              _.GetEventType(),
-            );
-          this.GetVisibilityStore().SetEventTypeGroupAllowed(_, !1);
-        }
-        GetVisibilityStore() {
-          return (0, _._)().m_visibilityStore;
-        }
-        AddContextMenuForSource(_, _, _, _ = !0) {
-          this.GetVisibilityStore().BIsGameSourceAllowed(_) &&
-            (_ &&
-              _.push(
+      const _ = (0, _._)((_) => {
+          const {
+              eventModel: _,
+              calendarEvent: __webpack_require__,
+              history: _,
+            } = _,
+            _ = (_) => {
+              let _ = __webpack_require__.GetEntityName();
+              (0, _._)(
                 _.createElement(
                   _._,
                   {
-                    key: `item-source-${_}-${_}`,
-                    disabled: !0,
-                    onSelected: () => {},
-                  },
-                  (0, _._)("#EventCalender_Reason_" + _),
-                ),
-              ),
-            _.push(
-              _.createElement(
-                _._,
-                {
-                  key: `item-hidesource-${_}-${_}`,
-                  onSelected: () => {
-                    this.GetVisibilityStore().SetGameSourceAllowed(_, !1);
-                  },
-                },
-                (0, _._)("#EventCalender_Hide_Reason_" + _),
-              ),
-            ));
-        }
-        GotoGameOrClanHub() {
-          const { eventModel: _ } = this.props,
-            _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative");
-          _.startsWith("http")
-            ? (window.location.href = _)
-            : this.props.history.push(_);
-        }
-        ToggleFollowCurator() {
-          (0, _._)(this.props.eventModel.clanSteamID.GetAccountID());
-        }
-        CreateContextMenu(_) {
-          const { eventModel: _, calendarEvent: __webpack_require__ } =
-            this.props;
-          let _ = [];
-          const _ = __webpack_require__.GetSource(),
-            _ = __webpack_require__.unique_id,
-            _ = (0, _._)(),
-            _ = (0, _._)();
-          if (
-            (_.BIsGlobalCalendar() &&
-              (_ &&
-                _ & _._.k_eLibrary &&
-                (this.GetVisibilityStore().BIsGameSourceAllowed(
-                  _._.k_ERecent,
-                ) && __webpack_require__.appInfo
-                  ? (_.push(
-                      _.createElement(
-                        _._,
-                        {
-                          key: `item-source-${_}-lastplayed`,
-                          disabled: !0,
-                          onSelected: () => {},
-                        },
-                        (0, _._)(
-                          "#EventCalender_LastPlayed",
-                          (0, _._)(
-                            _._.GetTimeNowWithOverride() -
-                              __webpack_require__.appInfo.last_played,
-                          ),
-                        ),
-                      ),
+                    strTitle: (0, _._)("#EventCalendar_MuteApp_Title", _),
+                    strDescription: (0, _._)(
+                      "#EventCalendar_MuteApp_details",
+                      _,
                     ),
-                    this.AddContextMenuForSource(_, _._.k_ERecent, _, !1))
-                  : this.AddContextMenuForSource(_, _._.k_ELibrary, _)),
-              _ &&
-                _ & _._.k_eWishlist &&
-                this.AddContextMenuForSource(_, _._.k_EWishlist, _),
-              _ &&
-                _ & _._.k_eFollowing &&
-                this.AddContextMenuForSource(_, _._.k_EFollowing, _),
-              !_ &&
-                _ &&
-                _ & _._.k_eCurator &&
-                this.AddContextMenuForSource(_, _._.k_ECurator, _),
-              _ &&
-                _ & _._.k_eRecommended &&
-                this.AddContextMenuForSource(_, _._.k_ERecommended, _),
-              _ &&
-                _ & _._.k_eSteam &&
-                this.AddContextMenuForSource(_, _._.k_ESteam, _),
-              _ &&
-                _ & _._.k_eFeatured &&
-                this.AddContextMenuForSource(_, _._.k_EFeatured, _)),
-            _.push(
-              _.createElement(
-                _._,
-                {
-                  key: _.GID + "hidetype",
-                  onSelected: this.HideAllEventsOfMyType,
-                },
-                (0, _._)(
-                  "#EVentCalendar_Hide_EventType",
-                  (0, _._)(
-                    "#EventCalendar_EventTypeGroup_" +
-                      this.GetVisibilityStore().MapClanEventTypeToGroup(
-                        _.GetEventType(),
+                    onOK: () =>
+                      (0, _._)().UpdateEventBlockFromCalendarEvent(
+                        __webpack_require__,
+                        !1,
                       ),
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: _._.STORE_BASE_URL + "account/emailoptout/app",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                    },
+                    (0, _._)("#EventCalendar_ManageMutedSources"),
                   ),
                 ),
-              ),
-            ),
-            _._.logged_in &&
-              (_._.Get().BIsEventBlocked(__webpack_require__)
-                ? _.push(
+                (0, _._)(_),
+              );
+            },
+            _ = () => {
+              (0, _._)().UpdateEventBlockFromCalendarEvent(
+                __webpack_require__,
+                !0,
+              );
+            },
+            _ = () => {
+              const _ = _().MapClanEventTypeToGroup(_.GetEventType());
+              _().SetEventTypeGroupAllowed(_, !1);
+            },
+            _ = () => (0, _._)().m_visibilityStore,
+            _ = (_, _, _, _ = !0) => {
+              _().BIsGameSourceAllowed(_) &&
+                (_ &&
+                  _.push(
                     _.createElement(
                       _._,
                       {
-                        key: _.GID + "unmuteapp",
-                        onSelected: this.OnUnMuteButton,
+                        key: `item-source-${_}-${_}`,
+                        disabled: !0,
+                        onSelected: () => {},
                       },
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent: (0, _._)(
-                            "#EventCalendar_UnMuteApp_ttip",
-                          ),
-                        },
-                        (0, _._)(
-                          "#EventCalendar_UnMuteApp_Title",
-                          this.props.calendarEvent.GetEntityName(),
-                        ),
-                      ),
+                      (0, _._)("#EventCalender_Reason_" + _),
                     ),
-                  )
-                : _.push(
-                    _.createElement(
-                      _._,
-                      {
-                        key: _.GID + "muteapp",
-                        onSelected: this.OnMuteButton,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          toolTipContent: (0, _._)(
-                            "#EventCalendar_MuteApp_ttip",
-                          ),
-                        },
-                        (0, _._)(
-                          "#EventCalendar_MuteApp_Title",
-                          this.props.calendarEvent.GetEntityName(),
-                        ),
-                      ),
-                    ),
-                  )),
-            !_.BIsOGGEvent() && !_)
-          ) {
-            const _ = _._.Get().BIsFollowingCurator(_.clanSteamID);
-            _.push(
-              _.createElement(
-                _._,
-                {
-                  key: _.GID + "followcurator",
-                  onSelected: this.ToggleFollowCurator,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)(
-                      _
-                        ? "#EventCalendar_UnFollowCurator_ttip"
-                        : "#EventCalendar_FollowCurator_ttip",
-                    ),
-                  },
-                  (0, _._)(
-                    _
-                      ? "#EventCalendar_UnFollowCurator"
-                      : "#EventCalendar_FollowCurator",
-                    this.props.calendarEvent.GetEntityName(),
                   ),
-                ),
-              ),
-            );
-          }
-          _.BIsSingleSourceCalendar() ||
-            _.push(
-              _.createElement(
-                _._,
-                {
-                  key: _.GID + "goto",
-                  onSelected: this.GotoGameOrClanHub,
-                },
-                (0, _._)(
-                  "#EventCalendar_Goto_SpecificCalendar",
-                  __webpack_require__.GetEntityName(),
-                ),
-              ),
-            ),
-            _.appid &&
-              _.push(
-                _.createElement(
-                  _._,
-                  {
-                    key: _.GID + "goto",
-                    onSelected: () =>
-                      (window.location.href = (0, _._)(
-                        _._.STORE_BASE_URL + "app/" + _.appid,
-                      )),
-                  },
-                  (0, _._)("#EventDisplay_ViewStorePage"),
-                ),
-              ),
-            (0, _._)(_.createElement(_._, null, _), _);
-        }
-        render() {
+                _.push(
+                  _.createElement(
+                    _._,
+                    {
+                      key: `item-hidesource-${_}-${_}`,
+                      onSelected: () => {
+                        _().SetGameSourceAllowed(_, !1);
+                      },
+                    },
+                    (0, _._)("#EventCalender_Hide_Reason_" + _),
+                  ),
+                ));
+            },
+            _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
+            _ = () => {
+              _.startsWith("http") ? (window.location.href = _) : _.push(_);
+            },
+            _ = () => {
+              (0, _._)(_.clanSteamID.GetAccountID());
+            };
           return _.createElement(
             "div",
             {
               className: (0, _._)(_().FooterStat, _().Options),
-              onClick: this.CreateContextMenu,
+              onClick: (_) => {
+                let _ = [];
+                const _ = __webpack_require__.GetSource(),
+                  _ = __webpack_require__.unique_id,
+                  _ = (0, _._)(),
+                  _ = (0, _._)();
+                if (
+                  (_.BIsGlobalCalendar() &&
+                    (_ &&
+                      _ & _._.k_eLibrary &&
+                      (_().BIsGameSourceAllowed(_._.k_ERecent) &&
+                      __webpack_require__.appInfo
+                        ? (_.push(
+                            _.createElement(
+                              _._,
+                              {
+                                key: `item-source-${_}-lastplayed`,
+                                disabled: !0,
+                                onSelected: () => {},
+                              },
+                              (0, _._)(
+                                "#EventCalender_LastPlayed",
+                                (0, _._)(
+                                  _._.GetTimeNowWithOverride() -
+                                    __webpack_require__.appInfo.last_played,
+                                ),
+                              ),
+                            ),
+                          ),
+                          _(_, _._.k_ERecent, _, !1))
+                        : _(_, _._.k_ELibrary, _)),
+                    _ && _ & _._.k_eWishlist && _(_, _._.k_EWishlist, _),
+                    _ && _ & _._.k_eFollowing && _(_, _._.k_EFollowing, _),
+                    !_ && _ && _ & _._.k_eCurator && _(_, _._.k_ECurator, _),
+                    _ && _ & _._.k_eRecommended && _(_, _._.k_ERecommended, _),
+                    _ && _ & _._.k_eSteam && _(_, _._.k_ESteam, _),
+                    _ && _ & _._.k_eFeatured && _(_, _._.k_EFeatured, _)),
+                  _.push(
+                    _.createElement(
+                      _._,
+                      {
+                        key: _.GID + "hidetype",
+                        onSelected: _,
+                      },
+                      (0, _._)(
+                        "#EVentCalendar_Hide_EventType",
+                        (0, _._)(
+                          "#EventCalendar_EventTypeGroup_" +
+                            _().MapClanEventTypeToGroup(_.GetEventType()),
+                        ),
+                      ),
+                    ),
+                  ),
+                  _._.logged_in &&
+                    (_._.Get().BIsEventBlocked(__webpack_require__)
+                      ? _.push(
+                          _.createElement(
+                            _._,
+                            {
+                              key: _.GID + "unmuteapp",
+                              onSelected: _,
+                            },
+                            _.createElement(
+                              _._,
+                              {
+                                toolTipContent: (0, _._)(
+                                  "#EventCalendar_UnMuteApp_ttip",
+                                ),
+                              },
+                              (0, _._)(
+                                "#EventCalendar_UnMuteApp_Title",
+                                __webpack_require__.GetEntityName(),
+                              ),
+                            ),
+                          ),
+                        )
+                      : _.push(
+                          _.createElement(
+                            _._,
+                            {
+                              key: _.GID + "muteapp",
+                              onSelected: _,
+                            },
+                            _.createElement(
+                              _._,
+                              {
+                                toolTipContent: (0, _._)(
+                                  "#EventCalendar_MuteApp_ttip",
+                                ),
+                              },
+                              (0, _._)(
+                                "#EventCalendar_MuteApp_Title",
+                                __webpack_require__.GetEntityName(),
+                              ),
+                            ),
+                          ),
+                        )),
+                  !_.BIsOGGEvent() && !_)
+                ) {
+                  const _ = _._.Get().BIsFollowingCurator(_.clanSteamID);
+                  _.push(
+                    _.createElement(
+                      _._,
+                      {
+                        key: _.GID + "followcurator",
+                        onSelected: _,
+                      },
+                      _.createElement(
+                        _._,
+                        {
+                          toolTipContent: (0, _._)(
+                            _
+                              ? "#EventCalendar_UnFollowCurator_ttip"
+                              : "#EventCalendar_FollowCurator_ttip",
+                          ),
+                        },
+                        (0, _._)(
+                          _
+                            ? "#EventCalendar_UnFollowCurator"
+                            : "#EventCalendar_FollowCurator",
+                          __webpack_require__.GetEntityName(),
+                        ),
+                      ),
+                    ),
+                  );
+                }
+                _.BIsSingleSourceCalendar() ||
+                  _.push(
+                    _.createElement(
+                      _._,
+                      {
+                        key: _.GID + "goto",
+                        onSelected: _,
+                      },
+                      (0, _._)(
+                        "#EventCalendar_Goto_SpecificCalendar",
+                        __webpack_require__.GetEntityName(),
+                      ),
+                    ),
+                  ),
+                  _.appid &&
+                    _.push(
+                      _.createElement(
+                        _._,
+                        {
+                          key: _.GID + "goto",
+                          onSelected: () =>
+                            (window.location.href = (0, _._)(
+                              _._.STORE_BASE_URL + "app/" + _.appid,
+                            )),
+                        },
+                        (0, _._)("#EventDisplay_ViewStorePage"),
+                      ),
+                    ),
+                  (0, _._)(_.createElement(_._, null, _), _);
+              },
             },
             _.createElement(_.faJ, null),
           );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnMuteButton", null),
-        (0, _._)([_._], _.prototype, "OnUnMuteButton", null),
-        (0, _._)([_._], _.prototype, "HideAllEventsOfMyType", null),
-        (0, _._)([_._], _.prototype, "AddContextMenuForSource", null),
-        (0, _._)([_._], _.prototype, "GotoGameOrClanHub", null),
-        (0, _._)([_._], _.prototype, "ToggleFollowCurator", null),
-        (0, _._)([_._], _.prototype, "CreateContextMenu", null),
-        (_ = (0, _._)([_._], _));
-      const _ = (0, _._)(_);
+        }),
+        _ = (0, _._)(_);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4196,27 +4167,19 @@
           )
         );
       }
-      let _ = class extends _.Component {
-        OnTitleClick(_) {
-          const { eventModel: _ } = this.props,
-            _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative");
-          __webpack_require__.startsWith("http")
-            ? (window.location.href = _)
-            : this.props.history.push(_),
-            _.stopPropagation(),
-            _.preventDefault();
-        }
-        render() {
+      const _ = (0, _._)((_) => {
           const {
               eventModel: _,
-              calendarEvent: _,
-              bSuppressHoverEffects: __webpack_require__,
-            } = this.props,
-            _ = _.GetEntityName(),
-            _ = _.GetGameIcon(),
+              calendarEvent: __webpack_require__,
+              bSuppressHoverEffects: _,
+              history: _,
+            } = _,
+            _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
+            _ = __webpack_require__.GetEntityName(),
+            _ = __webpack_require__.GetGameIcon(),
             _ = (0, _._)(
               _().GameTitleContainer,
-              __webpack_require__ ? _().DisableHovers : _().EnableHovers,
+              _ ? _().DisableHovers : _().EnableHovers,
             );
           return _.createElement(
             _._,
@@ -4230,7 +4193,13 @@
                 "div",
                 {
                   className: _,
-                  onClick: this.OnTitleClick,
+                  onClick: (_) => {
+                    _.startsWith("http")
+                      ? (window.location.href = _)
+                      : _.push(_),
+                      _.stopPropagation(),
+                      _.preventDefault();
+                  },
                 },
                 _.createElement("img", {
                   className: _().AppIcon,
@@ -4247,11 +4216,8 @@
               ),
             ),
           );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnTitleClick", null),
-        (_ = (0, _._)([_._], _));
-      const _ = (0, _._)(_),
+        }),
+        _ = (0, _._)(_),
         _ = (0, _._)((_) => {
           const {
               eventModel: _,
@@ -5552,7 +5518,7 @@
                   emgid: void 0,
                 });
         }
-        OnEventClicked(_) {
+        async OnEventClicked(_) {
           _._.Get().RecordEventRead(_, 8);
           const _ =
               this.state.nSteamNavHeaderHeight +
@@ -5563,7 +5529,14 @@
             (_ && (_.style.transform = `translateY(${-1 * _}px)`),
             _._.bOpenEventLandingPage)
           ) {
-            const _ = (0, _._)(_, _._.k_eStoreView, "allowRelative");
+            const _ =
+                _.appid &&
+                (await _._.Get().QueueAppRequest(_.appid, {
+                  include_basic_info: !0,
+                }))
+                  ? _._.Get().GetApp(_.appid)
+                  : void 0,
+              _ = (0, _._)(_, _, _._.k_eStoreView, "allowRelative");
             this.props.history.push(_);
           } else
             (0, _._)(this.props.history, {

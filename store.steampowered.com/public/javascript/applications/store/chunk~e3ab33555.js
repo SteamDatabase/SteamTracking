@@ -1120,10 +1120,10 @@
               include_release: !0,
             }),
             [g, S] = (0, _.TB)(p);
-          if (
-            (c.useEffect(() => window.scrollTo(0, 0), [u, p]),
-            !t.bLoaded || !S || (u && !E && 2 !== h))
-          )
+          c.useEffect(() => window.scrollTo(0, 0), [u, p]);
+          const w = (0, f.Bw)(t, f.PH.k_eStoreNewsHub, "allowRelative"),
+            D = (0, f.Bw)(t, f.PH.k_eStoreUsersNewsHub, "allowRelative");
+          if (!t.bLoaded || !S || (u && !E && 2 !== h))
             return c.createElement(
               "div",
               { className: pe().FlexCenter, style: { height: "400px" } },
@@ -1132,8 +1132,7 @@
                 string: (0, V.we)("#Loading"),
               }),
             );
-          let w = t.GetDescriptionWithFallback(a);
-          const D = (0, f.qT)(t, f.PH.k_eStoreNewsHub, "allowRelative");
+          let A = t.GetDescriptionWithFallback(a);
           return c.createElement(Ie, {
             event: t,
             lang: a,
@@ -1146,20 +1145,13 @@
                 { className: L().EventDetailTitleContainer },
                 c.createElement(b.r, {
                   crumbs: [
-                    {
-                      name: (0, V.we)("#BreadCrumbs_AllEvents"),
-                      url: (0, f.qT)(
-                        t,
-                        f.PH.k_eStoreUsersNewsHub,
-                        "allowRelative",
-                      ),
-                    },
+                    { name: (0, V.we)("#BreadCrumbs_AllEvents"), url: D },
                     {
                       name: (0, V.we)(
                         "#BreadCrumbs_GameEvents",
                         E?.GetName() || S.group_name,
                       ),
-                      url: D,
+                      url: w,
                     },
                   ],
                 }),
@@ -1223,7 +1215,7 @@
                         ),
                       },
                       c.createElement(N.fh, {
-                        text: w || "",
+                        text: A || "",
                         partnerEventStore: n,
                         showErrorInfo: v,
                         event: t,

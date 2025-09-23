@@ -33,6 +33,7 @@ body.v6.game_bg.grayscale.creatorhome .page_background.curator_recommendations {
 /* header */
 .list_header_area {
 	display: flex;
+	padding-top: 20px;
 }
 
 .list_header_area .curator_avatar_image img {

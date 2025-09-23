@@ -310,8 +310,12 @@
           } = _,
           _ = _.ImageOptions?.map((_) => {
             let _,
+              _,
               _ = _?.fnGetLabelText();
             _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
+              _.bDeprecated &&
+                ((_ += ` ${(0, _._)("#ImageUpload_Deprecated")}`),
+                (_ = (0, _._)("#ImageUpload_Deprecated_ttip"))),
               (_.BIsOriginalMinimumDimensions(_) &&
                 _.FileTypeMatchesImageTypes(_)) ||
                 (_ = _().ImageDimensionTooSmall);
@@ -319,6 +323,7 @@
               label: _,
               data: _,
               strOptionClass: _,
+              tooltip: _,
             };
           }).filter((_) => !_.data.bHiddenFromDropdown),
           _ = {

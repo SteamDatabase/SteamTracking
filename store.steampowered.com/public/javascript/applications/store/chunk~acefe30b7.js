@@ -68,8 +68,9 @@
           );
         }
         Test_SetBadgeInfo(e) {
-          this.m_mapBadgeInfo.set(e.badgeid, e),
-            this.GetBadgeInfoChangeCallback(e.badgeid).Dispatch(e);
+          e.badgeid &&
+            (this.m_mapBadgeInfo.set(e.badgeid, e),
+            this.GetBadgeInfoChangeCallback(e.badgeid).Dispatch(e));
         }
         async LoadBadgeInfo(e) {
           return this.m_mapBadgeInfo.has(e)
@@ -131,7 +132,7 @@
         constructor() {}
       }
       function m(e) {
-        const [t, n] = (0, a.useState)(d.Get().GetBadgeInfo(e));
+        const [t, n] = (0, a.useState)(e ? d.Get().GetBadgeInfo(e) : void 0);
         return (
           (0, a.useEffect)(() => {
             !t &&
@@ -141,7 +142,7 @@
                 .LoadBadgeInfo(e)
                 .then((e) => n(e));
           }, [e, t]),
-          (0, c.hL)(d.Get().GetBadgeInfoChangeCallback(e), n),
+          (0, c.hL)(e ? d.Get().GetBadgeInfoChangeCallback(e) : void 0, n),
           t
         );
       }
@@ -149,13 +150,15 @@
         d.Get().Test_SetBadgeInfo(e);
       }
       function _(e) {
-        const [t, n] = (0, a.useState)(d.Get().GetInitialBadgeInfo(e));
+        const [t, n] = (0, a.useState)(
+          e ? d.Get().GetInitialBadgeInfo(e) : void 0,
+        );
         return (
           (0, a.useEffect)(() => {
             !t && e && d.Get().LoadBadgeInfo(e);
           }, [e, t]),
-          (0, c.hL)(d.Get().GetBadgeInfoChangeCallback(e), () =>
-            n(d.Get().GetInitialBadgeInfo(e)),
+          (0, c.hL)(e ? d.Get().GetBadgeInfoChangeCallback(e) : void 0, () =>
+            n(e ? d.Get().GetInitialBadgeInfo(e) : void 0),
           ),
           t
         );
@@ -254,7 +257,7 @@
         Tn: () => C,
         W3: () => b,
         hH: () => g,
-        my: () => w,
+        my: () => v,
       });
       var o = n(34629),
         s = n(41735),
@@ -544,7 +547,7 @@
       function f(e) {
         g.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
-      function w(e, t) {
+      function v(e, t) {
         g.Get().SetInMemorySpecificDoorState(e, t);
       }
       (0, o.Cg)([r.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),

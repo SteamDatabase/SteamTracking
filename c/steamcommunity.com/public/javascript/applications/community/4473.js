@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Inhoud verwijderd",
 	"moderation_resolutionstatus_relabelled": "Inhoudslabels gewijzigd",
 	"moderation_resolutionstatus_suspicious": "Account vergrendeld vanwege verdachte inhoud",
+	"moderation_resolutionstatus_harassmentstrike": "Gebruiksrechten voor de Steam-community opgeschort",
 	"moderation_resolutionstatus_unknown": "Onbekend"
 }`);
     },

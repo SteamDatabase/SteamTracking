@@ -2562,6 +2562,11 @@ a.friend_block_holder:hover {
 	color: white;
 }
 
+.anticheat_section:has(> .anticheat_name:nth-of-type(2)) .anticheat_name {
+	margin-top: 4px;
+}
+
+
 .anticheat_uninstalls {
 	color: lightgrey;
 }
@@ -6468,7 +6473,11 @@ body.v6 .page_content.notes {
 }
 
 .saleEventBannerLink .event_context {
-	background: #aeb8c2;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			background: #d0d5d9;
+	letter-spacing: 1px;
 	border-radius: 2px;
 	box-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 	color: black;
@@ -6478,6 +6487,13 @@ body.v6 .page_content.notes {
 	z-index: 101;
 	padding: 2px 6px;
 	margin: -9px auto -9px auto;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.saleEventBannerLink:hover .event_context {
+	opacity: 1;
+	transform: translateY( -8px );
 }
 
 @media screen and ( max-width: 940px ) {

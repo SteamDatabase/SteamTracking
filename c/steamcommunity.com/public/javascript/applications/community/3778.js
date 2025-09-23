@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Conținut eliminat",
 	"moderation_resolutionstatus_relabelled": "Conținut reetichetat",
 	"moderation_resolutionstatus_suspicious": "Contul a fost blocat din cauza conținutului suspect",
+	"moderation_resolutionstatus_harassmentstrike": "Privilegiile din comunitatea Steam au fost suspendate",
 	"moderation_resolutionstatus_unknown": "Necunoscut"
 }`);
     },

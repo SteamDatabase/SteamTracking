@@ -1001,7 +1001,7 @@
     "RecommenderDemos_NewReleases": "Recommended New Releases",
     "RecommenderDemos_NewReleases_Desc": "Based on wishlists for games that have released in the last month (trained every Friday)",
     "PersonalCalendar_LastMonthGames": "Released in the Last Month",
-    "PersonalCalendar_LastWeekGames": "Released in the Last Week",
+    "PersonalCalendar_LastWeekGames": "Released in the Last 7 Days",
     "PersonalCalendar_Upcoming": "Upcoming",
     "PersonalCalendar_Title": "Your Personal Calendar",
     "PersonalCalendar_Description": "A personalized-for-you list of %1$s games that have released recently, or are coming soon",
@@ -1009,6 +1009,8 @@
     "PersonalCalendar_CompactMode": "Compact Calendar",
     "PersonalCalendar_AccountPlaceholder": "Optional Override",
     "PersonalCalendar_Account": "Account ID",
-    "PersonalCalendar_ShowMore": "Show %1$s More",
+    "PersonalCalendar_ShowMore": "See all %1$s",
+    "PersonalCalendar_LoginPrompt": "Sign in to view personalized suggestions.",
+    "PersonalCalendar_ShowAll": "Expand all",
     "dummy_for_end_of_file_convenience": "dummy"
 }

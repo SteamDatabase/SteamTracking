@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Sisältö poistettu",
 	"moderation_resolutionstatus_relabelled": "Sisältö luokiteltu uudelleen",
 	"moderation_resolutionstatus_suspicious": "Tili lukittu epäilyttävän sisällön vuoksi",
+	"moderation_resolutionstatus_harassmentstrike": "Steam-yhteisön käyttöoikeudet evätty",
 	"moderation_resolutionstatus_unknown": "Tuntematon"
 }`);
     },

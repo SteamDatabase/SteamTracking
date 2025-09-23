@@ -32,6 +32,7 @@
         AvatarRowSpacer: "_3g0nrYJivLhKmdWlHk1uhD",
         AvatarPreview: "_29CGQrIvjYllKwVQKe8d8R",
         Large: "_1aa4CwlUeZE1tRZGOsRPx9",
+        ExpandAvatarsButton: "_3PolQ91t3Uohfvr4beUAM9",
         FramePreview: "_16w1DqxiJ7Hou6al4RGELE",
         DefaultAvatarFrame: "Z3REHSppX48KICnAjjh90",
         DefaultAvatarFrameContent: "_2TBs_xzgkuwXPkgIBiITOJ",
@@ -991,7 +992,7 @@
                     });
                   }))
               : console.error(
-                  "Error when calling CommunityService.GetAvatarHistory: EResult=${msgResponse.GetEResult()}",
+                  `Error when calling CommunityService.GetAvatarHistory: EResult=${_.GetEResult()}`,
                 ),
             !!this.m_rgPreviousAvatars
           );
@@ -2542,6 +2543,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor() {
@@ -2912,8 +2915,32 @@
                 ),
               )
             : null,
-        _ = ({ game: _, onSelected: _ }) =>
-          _.createElement(
+        _ = function (_) {
+          const { game: _, onSelected: __webpack_require__ } = _,
+            [_, _] = _.useState(!1),
+            { isLoading: _, data: _ } =
+              ((_ = _.appid),
+              (_ = _),
+              (0, _._)({
+                queryKey: ["OGGAvatars", _],
+                queryFn: async () => {
+                  const _ = await fetch(
+                    `${_._.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${_}`,
+                  );
+                  return await _.json();
+                },
+                enabled: _,
+              }));
+          var _, _;
+          let _;
+          _ =
+            _ && _
+              ? _
+              : _.avatar_count == _.avatars.length
+                ? _.avatars
+                : _.avatars.slice(0, 5);
+          const _ = _.avatar_count - _.length;
+          return _.createElement(
             "div",
             {
               className: _.CollectionGroup,
@@ -2930,15 +2957,33 @@
               {
                 className: _.CollectionGroupAvatars,
               },
-              _.avatars.map((_) =>
+              _.map((_) =>
                 _.createElement(_, {
                   key: _.avatar_hash,
                   hash: _.avatar_hash,
-                  onSelected: _,
+                  onSelected: __webpack_require__,
                 }),
               ),
+              (!_ || _) &&
+                _ > 0 &&
+                _.createElement(
+                  "button",
+                  {
+                    type: "button",
+                    className: (0, _._)(
+                      _.AvatarPreview,
+                      _.ExpandAvatarsButton,
+                      _.Static,
+                    ),
+                    disabled: _,
+                    onClick: _ ? void 0 : () => _(!0),
+                  },
+                  "+",
+                  _.toLocaleString(),
+                ),
             ),
           );
+        };
       var _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -7353,6 +7398,7 @@
       (0, _._)([_._], _.prototype, "OnSubmit", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           ProfileEdit: () => "edit",
@@ -7400,6 +7446,14 @@
                 config: {
                   "profile-rewards": () =>
                     _.createElement(_, {
+                      ..._,
+                    }),
+                  "ugc-file-content-moderation-report-dialog": (_) =>
+                    _.createElement(_._, {
+                      ..._,
+                    }),
+                  "comment-content-moderation-report-dialog": (_) =>
+                    _.createElement(_._, {
                       ..._,
                     }),
                 },

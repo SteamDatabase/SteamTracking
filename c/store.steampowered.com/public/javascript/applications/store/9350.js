@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s jocuri",
 	"Menu_Search": "Căutare",
 	"Menu_Label": "Meniul de magazin",
+	"Menu_IncludesXGames": "Include %1$s jocuri",
 	"ItemFlag_InLibrary": "ÎN BIBLIOTECĂ",
 	"ItemFlag_OnWishlist": "ÎN LISTA DE DORINȚE",
 	"ItemFlag_InCart": "ÎN COȘ",

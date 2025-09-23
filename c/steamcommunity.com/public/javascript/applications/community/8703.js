@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Innhold fjernet",
 	"moderation_resolutionstatus_relabelled": "Innhold ommerket",
 	"moderation_resolutionstatus_suspicious": "Konto låst på grunn av mistenkelig innhold",
+	"moderation_resolutionstatus_harassmentstrike": "Rettigheter i Steam-samfunnet er suspenderte",
 	"moderation_resolutionstatus_unknown": "Ukjent"
 }`);
     },

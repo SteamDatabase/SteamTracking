@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Tartalom eltávolítva",
 	"moderation_resolutionstatus_relabelled": "Tartalom átcímkézve",
 	"moderation_resolutionstatus_suspicious": "Fiók gyanús tartalom miatt zárolva",
+	"moderation_resolutionstatus_harassmentstrike": "Steam közösségi jogosultságok felfüggesztve",
 	"moderation_resolutionstatus_unknown": "Ismeretlen"
 }`);
     },

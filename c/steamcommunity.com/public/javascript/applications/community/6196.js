@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Contenido eliminado",
 	"moderation_resolutionstatus_relabelled": "Contenido reclasificado",
 	"moderation_resolutionstatus_suspicious": "Cuenta bloqueada debido a contenido sospechoso",
+	"moderation_resolutionstatus_harassmentstrike": "Privilegios de la Comunidad de Steam suspendidos",
 	"moderation_resolutionstatus_unknown": "Desconocido"
 }`);
     },

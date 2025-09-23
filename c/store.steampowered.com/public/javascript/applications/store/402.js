@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s 款遊戲",
 	"Menu_Search": "搜尋",
 	"Menu_Label": "商店選單",
+	"Menu_IncludesXGames": "包含 %1$s 款遊戲",
 	"ItemFlag_InLibrary": "於收藏庫內",
 	"ItemFlag_OnWishlist": "於願望清單內",
 	"ItemFlag_InCart": "於購物車內",

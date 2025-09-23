@@ -3237,10 +3237,14 @@
           _ = _.GetEventModel().loadedAllLanguages,
           _ = _.GetCurEditLanguage();
         return _
-          ? _.createElement(_, {
-              ..._,
-              eCurrentEditLanguage: _,
-            })
+          ? _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                ..._,
+                eCurrentEditLanguage: _,
+              }),
+            )
           : null;
       });
       const _ = _.memo(function (_) {

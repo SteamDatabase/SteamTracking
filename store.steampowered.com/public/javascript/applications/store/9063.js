@@ -305,8 +305,8 @@
         n = t(14947),
         a = t(19367),
         j = t.n(a),
-        l = t(90626),
-        o = (t(4434), t(78327));
+        o = t(90626),
+        l = (t(4434), t(78327));
       class i {
         constructor() {
           (0, n.Gn)(this);
@@ -318,10 +318,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return !(0, o.Y2)();
+          return !(0, l.Y2)();
         }
         get bIsCuratorsEnabled() {
-          return !(0, o.Y2)();
+          return !(0, l.Y2)();
         }
         get bIncludeCurators() {
           return !0;
@@ -344,10 +344,12 @@
           const s = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
             s.has("t") &&
-            ("dev" == o.TS.WEB_UNIVERSE || "beta" == o.TS.WEB_UNIVERSE)
+            ("dev" == l.TS.WEB_UNIVERSE || "beta" == l.TS.WEB_UNIVERSE)
           ) {
             const e = s.get("t");
-            let t = /^\d+$/.test(e) ? j().unix(Number.parseInt(e)) : j()(e);
+            let t = /^\d+$/.test(e ?? "")
+              ? j().unix(Number.parseInt(e ?? "0"))
+              : j()(e);
             (this.nOverrideDateNow = Math.floor(t.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -361,16 +363,16 @@
       (0, r.Cg)([n.sH], i.prototype, "nOverrideDateNow", void 0);
       const c = new i();
       window.g_EventCalendarDevFeatures = c;
-      const u = new Date(),
-        d = Math.floor(u.getTime() / 1e3);
+      const d = new Date(),
+        u = Math.floor(d.getTime() / 1e3);
       function m() {
-        return c.nOverrideDateNow ?? d;
+        return c.nOverrideDateNow ?? u;
       }
       function v() {
-        return l.useMemo(() => m(), []);
+        return o.useMemo(() => m(), []);
       }
       function h() {
-        return l.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
+        return o.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
       }
     },
     51706: (e, s, t) => {
@@ -391,7 +393,7 @@
         n = t(10981),
         a = t(21869),
         j = t(2654),
-        l =
+        o =
           (t(72739),
           t(48902),
           t(60155),
@@ -401,9 +403,9 @@
           t(13871),
           t(78327));
       t(28460);
-      function o(e) {
+      function l(e) {
         const { labelledBy: s } = e || {},
-          [t, n] = r.useState(null);
+          [t, n] = r.useState(void 0);
         return {
           headerId: s || t,
           context: r.useMemo(() => ({ setHeaderId: n }), []),
@@ -413,12 +415,12 @@
         const {
             active: s,
             onDismiss: t,
-            className: l,
+            className: o,
             modalClassName: i,
             children: c,
-            ...u
+            ...d
           } = e,
-          { headerId: d, context: m } = o({ labelledBy: e["aria-labelledby"] });
+          { headerId: u, context: m } = l({ labelledBy: e["aria-labelledby"] });
         return r.createElement(
           n.t6.Provider,
           { value: m },
@@ -430,7 +432,7 @@
               { onEscKeypress: t, className: i },
               r.createElement(
                 n.UC,
-                { role: "dialog", "aria-labelledby": d, className: l, ...u },
+                { role: "dialog", "aria-labelledby": u, className: o, ...d },
                 c,
               ),
             ),
@@ -446,17 +448,17 @@
         );
       }
       t(81194);
-      var u = t(85585),
-        d = t(7445),
+      var d = t(85585),
+        u = t(7445),
         m = t(76217),
         v = t(88843);
       function h(e) {
         const { children: s, navID: t, closeModal: n } = e,
           a = r.createRef(),
           j = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-        return (0, l.Qn)() && !l.TS.IN_STEAMUI
+        return (0, o.Qn)() && !o.TS.IN_STEAMUI
           ? r.createElement(
-              u.B2,
+              d.B2,
               {
                 navID: t,
                 navTreeRef: a,
@@ -464,7 +466,7 @@
                 className: v.GamepadOnlyModalWrapper,
               },
               r.createElement(
-                d.q,
+                u.q,
                 null,
                 r.createElement(
                   m.Z,

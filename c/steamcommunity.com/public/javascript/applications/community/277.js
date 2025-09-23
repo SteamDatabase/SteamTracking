@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Konten dihapus",
 	"moderation_resolutionstatus_relabelled": "Konten dilabel ulang",
 	"moderation_resolutionstatus_suspicious": "Akun dikunci karena konten yang mencurigakan",
+	"moderation_resolutionstatus_harassmentstrike": "Hak istimewa Komunitas Steam-mu ditangguhkan",
 	"moderation_resolutionstatus_unknown": "Tidak Diketahui Kompatibilitasnya"
 }`);
     },

@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s trò chơi",
 	"Menu_Search": "Tìm kiếm",
 	"Menu_Label": "Menu cửa hàng",
+	"Menu_IncludesXGames": "Bao gồm %1$s trò chơi",
 	"ItemFlag_InLibrary": "TRONG THƯ VIỆN",
 	"ItemFlag_OnWishlist": "TRONG DANH SÁCH ƯỚC",
 	"ItemFlag_InCart": "TRONG GIỎ HÀNG",

@@ -832,6 +832,7 @@
                 _.createElement(_._, {
                   columns: _,
                   data: _,
+                  getRowKey: (_) => _,
                   stickyHeader: !0,
                   nItemHeight: 28,
                   overscan: _.length,
@@ -1432,6 +1433,7 @@
                     _.createElement(_._, {
                       columns: _,
                       data: _,
+                      getRowKey: (_) => _,
                       stickyHeader: !0,
                       nItemHeight: 28,
                       overscan: _.length,
@@ -3787,6 +3789,7 @@
                 _.createElement(_._, {
                   columns: _,
                   data: _,
+                  getRowKey: (_) => _,
                   stickyHeader: !0,
                   nItemHeight: 28,
                   overscan: _.length,

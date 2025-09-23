@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Contenu supprimé",
 	"moderation_resolutionstatus_relabelled": "Contenu reclassifié",
 	"moderation_resolutionstatus_suspicious": "Votre compte a été verrouillé pour cause de contenu suspect.",
+	"moderation_resolutionstatus_harassmentstrike": "Privilèges de participation à la communauté Steam suspendus",
 	"moderation_resolutionstatus_unknown": "Inconnu"
 }`);
     },

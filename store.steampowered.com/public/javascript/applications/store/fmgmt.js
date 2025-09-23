@@ -2885,7 +2885,7 @@
       function bt(e) {
         let t = [],
           a = Ct.get(e);
-        return null !== a && (t.push(a), t.push(...bt(a))), t;
+        return a && (t.push(a), t.push(...bt(a))), t;
       }
       function St(e) {
         let t = null;
@@ -4647,7 +4647,7 @@
           n.createElement(oa, { role: a.role(), steamid: a.steamid() }),
         );
       }
-      Ct.set(5, null), Ct.set(2, 5), Ct.set(1, 5), Ct.set(4, 1), Ct.set(3, 4);
+      Ct.set(2, 5), Ct.set(1, 5), Ct.set(4, 1), Ct.set(3, 4);
       var ua = a(91675);
       function pa(e) {
         const { familyGroupID: t, ...a } = e,

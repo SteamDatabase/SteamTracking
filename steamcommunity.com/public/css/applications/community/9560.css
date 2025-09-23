@@ -72,6 +72,15 @@
     rgba(163, 186, 211, 0.14) 100%
   );
 }
+._3mYz6ZF851JdnrGU3Lo-8 {
+  transition: width 200ms ease-in-out;
+  width: auto;
+  overflow: hidden;
+  interpolate-size: allow-keywords;
+}
+._3mYz6ZF851JdnrGU3Lo-8[data-visible="false"] {
+  width: 0px;
+}
 ._3NvasCX7YWBZpC8aibkm0E {
   margin-top: var(--spacing-0);
   margin-right: var(--spacing-0);
@@ -823,6 +832,34 @@
 ._20oF9tLSfptitLraDOp6X6:focus-visible {
   outline: none;
 }
+._3nHL7awgK1Qei1XivGvHMK {
+  box-sizing: border-box;
+  display: flex;
+}
+._3JCkAyd9cnB90tRcDLPp4W {
+  flex-direction: var(--direction);
+}
+._12ampOcrpRamy1y301kEaK {
+  justify-content: var(--justify);
+}
+._1SxQuUnaM-MXeF5UfssWve {
+  align-items: var(--align);
+}
+.ja5o2GZTopxfGJArsZgFh {
+  gap: var(--gap);
+}
+._3KiTPfFvdkPH6ixij56nVM {
+  column-gap: var(--gap-x);
+}
+._38cfDT7owcq-7PHlx-Bx2j {
+  row-gap: var(--gap-y);
+}
+.dB7ipW28YN-_GytLR4EuE {
+  flex-wrap: var(--wrap);
+}
+.LOeaKjPDMbdcAB54IFgyX {
+  display: inline-flex;
+}
 :where(._1fNVqPb5rhUOTSV5nEBHdl) {
   --bg-color: var(--color-dull-5);
   --bg-color-hover: var(--color-dull-6);
@@ -951,34 +988,6 @@
   --font-size: var(--text-size-4);
   --line-height: var(--line-height-4);
   --letter-spacing: var(--letter-spacing-4);
-}
-._3nHL7awgK1Qei1XivGvHMK {
-  box-sizing: border-box;
-  display: flex;
-}
-._3JCkAyd9cnB90tRcDLPp4W {
-  flex-direction: var(--direction);
-}
-._12ampOcrpRamy1y301kEaK {
-  justify-content: var(--justify);
-}
-._1SxQuUnaM-MXeF5UfssWve {
-  align-items: var(--align);
-}
-.ja5o2GZTopxfGJArsZgFh {
-  gap: var(--gap);
-}
-._3KiTPfFvdkPH6ixij56nVM {
-  column-gap: var(--gap-x);
-}
-._38cfDT7owcq-7PHlx-Bx2j {
-  row-gap: var(--gap-y);
-}
-.dB7ipW28YN-_GytLR4EuE {
-  flex-wrap: var(--wrap);
-}
-.LOeaKjPDMbdcAB54IFgyX {
-  display: inline-flex;
 }
 ._2Vc3a-PM4tOhJcD72NEq1U {
   color: var(--icon-color);
@@ -1781,6 +1790,12 @@
     var(--color-accent-8) 100%
   );
   color: var(--color-accent-contrast);
+}
+._NIZ2fYFBu6WSnEE1H6i3 {
+  object-fit: var(--object-fit);
+}
+._3OZ4rrlKzwAYOKP9HdqUrq {
+  object-position: var(--object-position);
 }
 ._3tuJ3SHrhBu16Q7GZBtKyt {
   padding-left: var(--spacing-1);

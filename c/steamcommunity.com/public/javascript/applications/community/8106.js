@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Conteúdo removido",
 	"moderation_resolutionstatus_relabelled": "Rótulo do conteúdo alterado",
 	"moderation_resolutionstatus_suspicious": "Conta trancada devido a conteúdos suspeitos",
+	"moderation_resolutionstatus_harassmentstrike": "Os seus privilégios na Comunidade Steam foram suspensos",
 	"moderation_resolutionstatus_unknown": "Desconhecido"
 }`);
     },

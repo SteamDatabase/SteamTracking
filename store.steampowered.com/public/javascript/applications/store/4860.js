@@ -24,7 +24,7 @@
         Xq: () => fr,
         HM: () => Ze,
         DD: () => Xe,
-        Qn: () => lr,
+        Qn: () => or,
         BO: () => nr,
         gv: () => dr,
         p8: () => Br,
@@ -32,7 +32,7 @@
         _K: () => tr,
         Yc: () => sr,
         $N: () => hr,
-        Ke: () => or,
+        Ke: () => lr,
         ll: () => ar,
         RC: () => yr,
         yM: () => Mr,
@@ -44,8 +44,8 @@
         a,
         s = t(90626),
         n = t(56545),
-        l = t(20194),
-        o = t(75233),
+        o = t(20194),
+        l = t(75233),
         u = t(51614),
         m = t(57168),
         c = t(68950),
@@ -2847,20 +2847,20 @@
           return "CFamilyGroups_SetFamilyCooldownOverrides_Response";
         }
       }
-      class le extends d.Message {
+      class oe extends d.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            le.prototype.family_groupid || g.Sg(le.M()),
+            oe.prototype.family_groupid || g.Sg(oe.M()),
             d.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            le.sm_m ||
-              (le.sm_m = {
-                proto: le,
+            oe.sm_m ||
+              (oe.sm_m = {
+                proto: oe,
                 fields: {
                   family_groupid: {
                     n: 1,
@@ -2882,67 +2882,6 @@
                   },
                   steamid: {
                     n: 8,
-                    br: g.qM.readFixed64String,
-                    bw: g.gp.writeFixed64String,
-                  },
-                },
-              }),
-            le.sm_m
-          );
-        }
-        static MBF() {
-          return le.sm_mbf || (le.sm_mbf = g.w0(le.M())), le.sm_mbf;
-        }
-        toObject(e = !1) {
-          return le.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return g.BT(le.M(), e, r);
-        }
-        static fromObject(e) {
-          return g.Uq(le.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (B().BinaryReader)(e),
-            t = new le();
-          return le.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return g.zj(le.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (B().BinaryWriter)();
-          return le.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          g.i0(le.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (B().BinaryWriter)();
-          return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CFamilyGroups_GetSharedLibraryApps_Request";
-        }
-      }
-      class oe extends d.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            oe.prototype.apps || g.Sg(oe.M()),
-            d.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            oe.sm_m ||
-              (oe.sm_m = {
-                proto: oe,
-                fields: {
-                  apps: { n: 1, c: ue, r: !0, q: !0 },
-                  owner_steamid: {
-                    n: 2,
                     br: g.qM.readFixed64String,
                     bw: g.gp.writeFixed64String,
                   },
@@ -2981,6 +2920,67 @@
         serializeBase64String() {
           var e = new (B().BinaryWriter)();
           return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CFamilyGroups_GetSharedLibraryApps_Request";
+        }
+      }
+      class le extends d.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            le.prototype.apps || g.Sg(le.M()),
+            d.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            le.sm_m ||
+              (le.sm_m = {
+                proto: le,
+                fields: {
+                  apps: { n: 1, c: ue, r: !0, q: !0 },
+                  owner_steamid: {
+                    n: 2,
+                    br: g.qM.readFixed64String,
+                    bw: g.gp.writeFixed64String,
+                  },
+                },
+              }),
+            le.sm_m
+          );
+        }
+        static MBF() {
+          return le.sm_mbf || (le.sm_mbf = g.w0(le.M())), le.sm_mbf;
+        }
+        toObject(e = !1) {
+          return le.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return g.BT(le.M(), e, r);
+        }
+        static fromObject(e) {
+          return g.Uq(le.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (B().BinaryReader)(e),
+            t = new le();
+          return le.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return g.zj(le.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (B().BinaryWriter)();
+          return le.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          g.i0(le.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (B().BinaryWriter)();
+          return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CFamilyGroups_GetSharedLibraryApps_Response";
@@ -4380,8 +4380,8 @@
           (e.GetSharedLibraryApps = function (e, r) {
             return e.SendMsg(
               "FamilyGroups.GetSharedLibraryApps#1",
-              (0, n.I8)(le, r),
-              oe,
+              (0, n.I8)(oe, r),
+              le,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -4485,7 +4485,7 @@
       function Je(e, r = !1) {
         const t = (0, y.KV)(),
           a = (0, s.useContext)(Ae).staleTimeMs;
-        return (0, l.I)({
+        return (0, o.I)({
           queryKey: xe(e, r),
           queryFn: async () => {
             const a = n.w.Init(S);
@@ -4502,7 +4502,7 @@
       function $e(e) {
         const r = (0, y.KV)(),
           t = (0, s.useContext)(Ae).staleTimeMs;
-        return (0, l.I)({
+        return (0, o.I)({
           queryKey: Ne(e),
           queryFn: async () => {
             if (e) {
@@ -4518,7 +4518,7 @@
       }
       function He() {
         const e = (0, y.KV)(),
-          r = (0, o.jE)(),
+          r = (0, l.jE)(),
           t = (0, c.LH)();
         return (0, u.n)({
           mutationFn: async (r) => {
@@ -4534,7 +4534,7 @@
       }
       function Ye(e) {
         const r = (0, y.KV)(),
-          t = (0, o.jE)(),
+          t = (0, l.jE)(),
           a = (0, c.LH)();
         return (0, u.n)({
           mutationFn: async () => {
@@ -4552,7 +4552,7 @@
       }
       function Xe(e) {
         const r = (0, y.KV)(),
-          t = (0, o.jE)();
+          t = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async (t) => {
             const a = n.w.Init(j);
@@ -4568,15 +4568,15 @@
       }
       function Ze(e, r, t) {
         const a = (0, y.KV)(),
-          s = (0, o.jE)();
+          s = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async () => {
             const s = n.w.Init(q);
             s.Body().set_family_groupid(e),
               s.Body().set_receiver_steamid(r),
               s.Body().set_receiver_role(t);
-            const l = await i.InviteToFamilyGroup(a, s);
-            return Le(l.GetEResult()), l.Body();
+            const o = await i.InviteToFamilyGroup(a, s);
+            return Le(o.GetEResult()), o.Body();
           },
           onSuccess: () => {
             s.invalidateQueries({ queryKey: xe(r) }),
@@ -4588,7 +4588,7 @@
       function er(e) {
         const r = (0, y.KV)(),
           t = (0, c.LH)(),
-          a = (0, o.jE)();
+          a = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async () => {
             const t = n.w.Init(T);
@@ -4605,7 +4605,7 @@
       }
       function rr(e, r) {
         const t = (0, y.KV)(),
-          a = (0, o.jE)();
+          a = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async () => {
             const a = n.w.Init(G);
@@ -4622,7 +4622,7 @@
       }
       function tr(e, r) {
         const t = (0, y.KV)(),
-          a = (0, o.jE)();
+          a = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async () => {
             const a = n.w.Init(I);
@@ -4639,7 +4639,7 @@
       }
       function ir(e) {
         const r = (0, y.KV)();
-        return (0, l.I)({
+        return (0, o.I)({
           queryKey: Pe(e),
           queryFn: async () => {
             const t = (0, Ue.VY)("clientsessionid"),
@@ -4647,8 +4647,8 @@
               s = n.w.Init(N);
             s.Body().set_family_groupid(e),
               s.Body().set_client_instance_id(a ?? void 0);
-            const l = await i.GetUsersSharingDevice(r, s);
-            return Le(l.GetEResult()), l.Body();
+            const o = await i.GetUsersSharingDevice(r, s);
+            return Le(o.GetEResult()), o.Body();
           },
         });
       }
@@ -4676,7 +4676,7 @@
       function nr(e, r) {
         const t = (0, y.KV)(),
           a = (0, c.LH)();
-        return (0, l.I)({
+        return (0, o.I)({
           queryKey: Ke(e, a),
           queryFn: async () => {
             const a = n.w.Init(K);
@@ -4687,10 +4687,10 @@
           },
         });
       }
-      function lr(e, r) {
+      function or(e, r) {
         const t = (0, y.KV)(),
           a = (0, c.LH)();
-        return (0, l.I)({
+        return (0, o.I)({
           queryKey: Ke(e, a, r),
           queryFn: async () => {
             const a = n.w.Init(K);
@@ -4702,17 +4702,17 @@
             e.toObject().requests?.find(({ request_id: e }) => e === r),
         });
       }
-      function or(e, r, t) {
+      function lr(e, r, t) {
         const a = (0, y.KV)(),
-          s = (0, o.jE)();
+          s = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async () => {
             const s = n.w.Init(D);
             s.Body().set_family_groupid(e),
               s.Body().set_request_id(r),
               s.Body().set_action(t);
-            const l = await i.RespondToRequestedPurchase(a, s);
-            return Le(l.GetEResult()), l.Body();
+            const o = await i.RespondToRequestedPurchase(a, s);
+            return Le(o.GetEResult()), o.Body();
           },
           onSuccess: () => {
             s.invalidateQueries({ queryKey: Ke(e) }),
@@ -4810,26 +4810,49 @@
         return { setErrorMessage: e };
       }
       function dr(e, r, t) {
-        const { setErrorMessage: i } = yr();
+        const { setErrorMessage: i } = yr(),
+          { isError: a, error: n } = e,
+          o = Ve();
         (0, s.useEffect)(() => {
-          if (e.isError) {
-            const a = e.error;
+          if (a) {
+            const e = n,
+              a = [];
+            if (25 === e || 96 === e) {
+              let e;
+              o.isSuccess &&
+                o.data &&
+                (e = o.data.cooldown_seconds_remaining()),
+                a.push(
+                  (function (e) {
+                    if (!e)
+                      return (0, Oe.we)("#FamilyManagement_LoadingPlaceholder");
+                    const r = {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                        weekday: void 0,
+                      },
+                      t = (0, Oe.TW)(Date.now() / 1e3 + e, r);
+                    return t;
+                  })(e),
+                );
+            }
             i(
-              (function (e, r, t) {
-                let i = "";
+              (function (e, r, t, i) {
+                let a = "";
                 if (e in cr) {
                   const r = cr[e];
-                  if ("string" == typeof r) i = (0, Oe.we)(r);
+                  if ("string" == typeof r) a = (0, Oe.we)(r, ...i);
                   else {
                     const e = r;
-                    t in e && (i = (0, Oe.we)(e[t]));
+                    t in e && (a = (0, Oe.we)(e[t], ...i));
                   }
                 }
-                return (0, Oe.we)(r, i);
-              })(a, r, t),
+                return (0, Oe.we)(r, a);
+              })(e, r, t, a),
             );
           }
-        }, [i, e.isError, e.error, r, t]);
+        }, [i, a, n, r, t, o.isSuccess, o.data]);
       }
       function Br(e, r) {
         const { setErrorMessage: t } = yr();
@@ -4839,7 +4862,7 @@
       }
       function gr(e) {
         const r = (0, y.KV)();
-        return (0, l.I)({
+        return (0, o.I)({
           queryKey: ke(e),
           queryFn: async () => {
             const t = n.w.Init(Z);
@@ -4871,7 +4894,7 @@
       function Mr(e, r) {
         const t = (0, c.LH)(),
           { settings: a, mapAppsAllowed: s } = (0, Ge.S0)(t).data,
-          o = (0, Ge.BM)(),
+          l = (0, Ge.BM)(),
           u = (0, y.KV)(),
           {
             bIncludeOwn: d,
@@ -4880,12 +4903,12 @@
             for_account_id: _,
           } = r ?? {},
           p = void 0 === r?.enabled || r.enabled,
-          b = br(e, r, a, o),
-          M = (e) => !(0, Ge.or)(e.appid(), o, a, s);
-        return (0, l.I)({
+          b = br(e, r, a, l),
+          M = (e) => !(0, Ge.or)(e.appid(), l, a, s);
+        return (0, o.I)({
           queryKey: b,
           queryFn: async () => {
-            const r = n.w.Init(le);
+            const r = n.w.Init(oe);
             if (
               (r.Body().set_family_groupid(e),
               r.Body().set_include_own(d),
@@ -4913,7 +4936,7 @@
         });
       }
       function fr(e, r) {
-        const t = (0, o.jE)(),
+        const t = (0, l.jE)(),
           i = (0, c.LH)(),
           { settings: a } = (0, Ge.S0)(i).data ?? {},
           n = br(e, r, a, (0, Ge.BM)());
@@ -4974,7 +4997,7 @@
       }
       function Sr(e, r) {
         const t = (0, y.KV)(),
-          a = (0, o.jE)(),
+          a = (0, l.jE)(),
           s = (0, c.LH)();
         return (0, u.n)({
           mutationFn: async (a) => {
@@ -4982,8 +5005,8 @@
             s.Body().set_family_groupid(e),
               s.Body().set_invite_id(r),
               s.Body().set_nonce(a);
-            const l = await i.ConfirmJoinFamilyGroup(t, s);
-            return Le(l.GetEResult()), l.Body();
+            const o = await i.ConfirmJoinFamilyGroup(t, s);
+            return Le(o.GetEResult()), o.Body();
           },
           onSuccess: () => {
             a.invalidateQueries({ queryKey: xe(s) }),
@@ -4994,15 +5017,15 @@
       }
       function Rr(e, r, t) {
         const a = (0, y.KV)(),
-          s = (0, o.jE)();
+          s = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async () => {
             const s = n.w.Init(me);
             s.Body().set_family_groupid(e),
               s.Body().set_invite_id(r),
               s.Body().set_nonce(t);
-            const l = await i.ConfirmInviteToFamilyGroup(a, s);
-            return Le(l.GetEResult()), l.Body();
+            const o = await i.ConfirmInviteToFamilyGroup(a, s);
+            return Le(o.GetEResult()), o.Body();
           },
           onSuccess: () => {
             s.invalidateQueries({ queryKey: Ne(e) }),
@@ -5023,7 +5046,7 @@
       }
       function jr(e) {
         const r = (0, y.KV)();
-        return (0, l.I)({
+        return (0, o.I)({
           queryKey: Qe(e),
           queryFn: async () => {
             const t = n.w.Init(Te.m8);
@@ -5052,7 +5075,7 @@
       function vr(e) {
         const r = (0, y.KV)(),
           t = (0, c.LH)(),
-          a = (0, o.jE)();
+          a = (0, l.jE)();
         return (0, u.n)({
           mutationFn: async () => {
             const t = n.w.Init(we);

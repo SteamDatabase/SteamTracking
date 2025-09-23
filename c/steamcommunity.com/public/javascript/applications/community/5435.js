@@ -13,7 +13,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, initialValue: __webpack_require__, debugMode: _ } = _,
+        const { app: _, initialValue: __webpack_require__, debugMode: _ } = _,
           [_, _] = (0, _.useState)(__webpack_require__),
           _ = (0, _.useRef)(null);
         return _.createElement(
@@ -37,7 +37,7 @@
               _.createElement(_._, {
                 value: _,
                 onTextChange: _,
-                appid: _,
+                app: _,
                 radius: "none",
                 variant: "default",
                 name: "q",

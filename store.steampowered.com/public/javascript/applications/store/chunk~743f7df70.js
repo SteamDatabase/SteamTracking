@@ -5885,10 +5885,10 @@
                 (this.m_claimedFreeItemDef = Boolean(
                   r.Body().reward_item()?.defid(),
                 )
-                  ? r.Body().reward_item().toObject()
+                  ? r.Body().reward_item()?.toObject()
                   : null),
                 (this.m_claimState = {
-                  bCanClaimNewItem: r.Body().can_claim(),
+                  bCanClaimNewItem: !!r.Body().can_claim(),
                   bAlreadyClaimedCurrentItem: Boolean(
                     this.m_claimedFreeItemDef,
                   ),
@@ -5898,7 +5898,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef?.community_item_class,
                   rtNextClaimTime:
-                    r.Body().next_claim_time() > 0
+                    (r.Body().next_claim_time() ?? 0) > 0
                       ? r.Body().next_claim_time()
                       : void 0,
                 }),
@@ -5958,7 +5958,8 @@
             );
             if (1 == r.GetEResult())
               return (
-                (this.m_claimedFreeItemDef = r.Body().reward_item().toObject()),
+                (this.m_claimedFreeItemDef =
+                  r.Body().reward_item()?.toObject() ?? {}),
                 (this.m_claimState = {
                   bCanClaimNewItem: !1,
                   bAlreadyClaimedCurrentItem: Boolean(
@@ -5970,7 +5971,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef.community_item_class,
                   rtNextClaimTime:
-                    r.Body().next_claim_time() > 0
+                    (r.Body().next_claim_time() ?? 0) > 0
                       ? r.Body().next_claim_time()
                       : void 0,
                 }),
@@ -10019,7 +10020,7 @@
         const { children: t, location: r } = e;
         return i.createElement(
           n.Provider,
-          { value: { ...a, eLocation: r } },
+          { value: { ...a, eLocation: r ?? 0 } },
           t,
         );
       }

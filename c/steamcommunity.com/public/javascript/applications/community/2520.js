@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Treści usunięte",
 	"moderation_resolutionstatus_relabelled": "Treści opatrzone nowym oznaczeniem",
 	"moderation_resolutionstatus_suspicious": "Konto zablokowane z powodu podejrzanych treści",
+	"moderation_resolutionstatus_harassmentstrike": "Dostęp do Społeczności Steam został zawieszony",
 	"moderation_resolutionstatus_unknown": "Nieznany"
 }`);
     },

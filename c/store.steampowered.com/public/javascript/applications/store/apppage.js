@@ -7448,6 +7448,23 @@
         let { items: _ } = _,
           _ = _(),
           _ = (0, _.useContext)(_).refFullscreenElement,
+          _ = (function () {
+            let _ = _(),
+              _ = (0, _.useCallback)(
+                (_) => {
+                  _.repeat ||
+                    "trailer" == _.strActiveType ||
+                    ("ArrowLeft" == _.code
+                      ? (_.strPreviousID && _.fnSetActive(_.strPreviousID),
+                        _.preventDefault())
+                      : "ArrowRight" == _.code &&
+                        (_.strNextID && _.fnSetActive(_.strNextID),
+                        _.preventDefault()));
+                },
+                [_],
+              );
+            return _;
+          })(),
           _ = _().bFullscreen,
           [_, _] = (function () {
             let [_, _] = _(),
@@ -7539,6 +7556,8 @@
             ref: _,
             className: _.ItemViewArea,
             ..._,
+            onKeyDown: _,
+            tabIndex: 0,
           },
           _,
           _.createElement(
@@ -7574,8 +7593,8 @@
           _ = _(_),
           _ = _ == _().strNextID;
         let _ = _(_ || _),
-          _ = _();
-        _.bFullscreen;
+          _ = _(),
+          _ = (_.bFullscreen, (0, _._)());
         if (!_) return null;
         let _ = (0, _._)(_.ViewedItem, _ && _.Active, _.Screenshot),
           _ = __webpack_require__.full;
@@ -7593,9 +7612,10 @@
             {
               className: _.Controls,
             },
-            _.createElement(_, {
-              fullscreen: _,
-            }),
+            _ &&
+              _.createElement(_, {
+                fullscreen: _,
+              }),
           ),
         );
       }
@@ -7604,8 +7624,9 @@
           _ = _(_),
           _ = _(_),
           [_, _] = (0, _._)(),
-          _ = _(),
-          _ = _(),
+          _ = _();
+        _ = (0, _._)() ? _ : null;
+        let _ = _(),
           _ = (0, _.useCallback)(() => _.fnSetActive(_.strNextID), [_]);
         if (!_) return null;
         let _ = (0, _._)(_.ViewedItem, _ && _.Active, _.Trailer);

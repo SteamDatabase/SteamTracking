@@ -4,44 +4,44 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [7055],
   {
-    65731: (e, t, i) => {
-      i.d(t, {
-        Ap: () => tt,
-        CC: () => be,
-        Yc: () => G,
-        Yw: () => j,
-        _X: () => oe,
-        cL: () => Ce,
-        gi: () => te,
-        q7: () => Xe,
+    65731: (e, t, n) => {
+      n.d(t, {
+        Ap: () => at,
+        CC: () => Te,
+        Yc: () => ee,
+        Yw: () => L,
+        _X: () => pe,
+        cL: () => Ne,
+        gi: () => se,
+        q7: () => Je,
       });
-      var n = i(90626);
+      var i = n(90626);
       function r(e, t) {
-        var i = Object.keys(e);
+        var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var n = Object.getOwnPropertySymbols(e);
+          var i = Object.getOwnPropertySymbols(e);
           t &&
-            (n = n.filter(function (t) {
+            (i = i.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            i.push.apply(i, n);
+            n.push.apply(n, i);
         }
-        return i;
+        return n;
       }
       function s(e) {
         for (var t = 1; t < arguments.length; t++) {
-          var i = null != arguments[t] ? arguments[t] : {};
+          var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? r(Object(i), !0).forEach(function (t) {
-                c(e, t, i[t]);
+            ? r(Object(n), !0).forEach(function (t) {
+                c(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : r(Object(i)).forEach(function (t) {
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : r(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(i, t),
+                    Object.getOwnPropertyDescriptor(n, t),
                   );
                 });
         }
@@ -51,33 +51,33 @@
         if (!(e instanceof t))
           throw new TypeError("Cannot call a class as a function");
       }
-      function l(e, t) {
-        for (var i = 0; i < t.length; i++) {
-          var n = t[i];
-          (n.enumerable = n.enumerable || !1),
-            (n.configurable = !0),
-            "value" in n && (n.writable = !0),
-            Object.defineProperty(e, n.key, n);
+      function o(e, t) {
+        for (var n = 0; n < t.length; n++) {
+          var i = t[n];
+          (i.enumerable = i.enumerable || !1),
+            (i.configurable = !0),
+            "value" in i && (i.writable = !0),
+            Object.defineProperty(e, i.key, i);
         }
       }
-      function o(e, t, i) {
+      function l(e, t, n) {
         return (
-          t && l(e.prototype, t),
-          i && l(e, i),
+          t && o(e.prototype, t),
+          n && o(e, n),
           Object.defineProperty(e, "prototype", { writable: !1 }),
           e
         );
       }
-      function c(e, t, i) {
+      function c(e, t, n) {
         return (
           t in e
             ? Object.defineProperty(e, t, {
-                value: i,
+                value: n,
                 enumerable: !0,
                 configurable: !0,
                 writable: !0,
               })
-            : (e[t] = i),
+            : (e[t] = n),
           e
         );
       }
@@ -86,9 +86,9 @@
           ? Object.assign.bind()
           : function (e) {
               for (var t = 1; t < arguments.length; t++) {
-                var i = arguments[t];
-                for (var n in i)
-                  Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
+                var n = arguments[t];
+                for (var i in n)
+                  Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
               }
               return e;
             }).apply(this, arguments);
@@ -120,25 +120,25 @@
       }
       function S(e, t) {
         if (null == e) return {};
-        var i,
-          n,
+        var n,
+          i,
           r = (function (e, t) {
             if (null == e) return {};
-            var i,
-              n,
+            var n,
+              i,
               r = {},
               s = Object.keys(e);
-            for (n = 0; n < s.length; n++)
-              (i = s[n]), t.indexOf(i) >= 0 || (r[i] = e[i]);
+            for (i = 0; i < s.length; i++)
+              (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
             return r;
           })(e, t);
         if (Object.getOwnPropertySymbols) {
           var s = Object.getOwnPropertySymbols(e);
-          for (n = 0; n < s.length; n++)
-            (i = s[n]),
-              t.indexOf(i) >= 0 ||
-                (Object.prototype.propertyIsEnumerable.call(e, i) &&
-                  (r[i] = e[i]));
+          for (i = 0; i < s.length; i++)
+            (n = s[i]),
+              t.indexOf(n) >= 0 ||
+                (Object.prototype.propertyIsEnumerable.call(e, n) &&
+                  (r[n] = e[n]));
         }
         return r;
       }
@@ -166,12 +166,12 @@
           }
         })();
         return function () {
-          var i,
-            n = h(e);
+          var n,
+            i = h(e);
           if (t) {
             var r = h(this).constructor;
-            i = Reflect.construct(n, arguments, r);
-          } else i = n.apply(this, arguments);
+            n = Reflect.construct(i, arguments, r);
+          } else n = i.apply(this, arguments);
           return (function (e, t) {
             if (t && ("object" == typeof t || "function" == typeof t)) return t;
             if (void 0 !== t)
@@ -179,13 +179,13 @@
                 "Derived constructors may only return object or undefined",
               );
             return b(e);
-          })(this, i);
+          })(this, n);
         };
       }
       function f(e) {
         return (
           (function (e) {
-            if (Array.isArray(e)) return v(e);
+            if (Array.isArray(e)) return g(e);
           })(e) ||
           (function (e) {
             if (
@@ -196,15 +196,15 @@
           })(e) ||
           (function (e, t) {
             if (e) {
-              if ("string" == typeof e) return v(e, t);
-              var i = Object.prototype.toString.call(e).slice(8, -1);
+              if ("string" == typeof e) return g(e, t);
+              var n = Object.prototype.toString.call(e).slice(8, -1);
               return (
-                "Object" === i && e.constructor && (i = e.constructor.name),
-                "Map" === i || "Set" === i
+                "Object" === n && e.constructor && (n = e.constructor.name),
+                "Map" === n || "Set" === n
                   ? Array.from(e)
-                  : "Arguments" === i ||
-                      /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)
-                    ? v(e, t)
+                  : "Arguments" === n ||
+                      /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+                    ? g(e, t)
                     : void 0
               );
             }
@@ -216,12 +216,12 @@
           })()
         );
       }
-      function v(e, t) {
-        (null == t || t > e.length) && (t = e.length);
-        for (var i = 0, n = new Array(t); i < t; i++) n[i] = e[i];
-        return n;
-      }
       function g(e, t) {
+        (null == t || t > e.length) && (t = e.length);
+        for (var n = 0, i = new Array(t); n < t; n++) i[n] = e[n];
+        return i;
+      }
+      function v(e, t) {
         return e((t = { exports: {} }), t.exports), t.exports;
       }
       function y() {}
@@ -241,26 +241,26 @@
       function w(e, t) {
         return (100 * e) / t;
       }
-      function C(e) {
+      function _(e) {
         return "".concat(e, "%");
       }
-      function _(e, t, i) {
+      function C(e, t, n) {
         if (e === t) return !0;
-        var n = U[W(e)],
-          r = U[W(t)];
-        return !(!n || n !== r) && n(e, t, i);
+        var i = X[Z(e)],
+          r = X[Z(t)];
+        return !(!i || i !== r) && i(e, t, n);
       }
       function M(e) {
-        return function (t, i, n) {
-          if (!n) return e(t, i, []);
-          for (var r, s = n.length; (r = n[--s]); )
-            if (r[0] === t && r[1] === i) return !0;
-          return e(t, i, n);
+        return function (t, n, i) {
+          if (!i) return e(t, n, []);
+          for (var r, s = i.length; (r = i[--s]); )
+            if (r[0] === t && r[1] === n) return !0;
+          return e(t, n, i);
         };
       }
       function E(e) {
         var t = [];
-        for (var i in e) "constructor" !== i && t.push(i);
+        for (var n in e) "constructor" !== n && t.push(n);
         return t;
       }
       function P(e) {
@@ -269,13 +269,13 @@
           "[object RegExp]" === t ||
           "[object Date]" === t ||
           (function (e) {
-            return e.$$typeof === Z;
+            return e.$$typeof === G;
           })(e)
         );
       }
       function N(e, t) {
         return !1 !== t.clone && t.isMergeableObject(e)
-          ? x(
+          ? R(
               (function (e) {
                 return Array.isArray(e) ? [] : {};
               })(e),
@@ -284,56 +284,89 @@
             )
           : e;
       }
-      function D(e, t, i) {
+      function D(e, t, n) {
         return e.concat(t).map(function (e) {
-          return N(e, i);
+          return N(e, n);
         });
       }
-      function x(e, t, i) {
-        ((i = i || {}).arrayMerge = i.arrayMerge || D),
-          (i.isMergeableObject = i.isMergeableObject || V);
-        var n = Array.isArray(t);
-        return n === Array.isArray(e)
-          ? n
-            ? i.arrayMerge(e, t, i)
-            : (function (e, t, i) {
-                var n = {};
-                return (
-                  i.isMergeableObject(e) &&
-                    Object.keys(e).forEach(function (t) {
-                      n[t] = N(e[t], i);
-                    }),
-                  Object.keys(t).forEach(function (r) {
-                    i.isMergeableObject(t[r]) && e[r]
-                      ? (n[r] = x(e[r], t[r], i))
-                      : (n[r] = N(t[r], i));
-                  }),
-                  n
-                );
-              })(e, t, i)
-          : N(t, i);
-      }
       function j(e) {
+        return Object.keys(e).concat(
+          (function (e) {
+            return Object.getOwnPropertySymbols
+              ? Object.getOwnPropertySymbols(e).filter(function (t) {
+                  return Object.propertyIsEnumerable.call(e, t);
+                })
+              : [];
+          })(e),
+        );
+      }
+      function x(e, t) {
+        try {
+          return t in e;
+        } catch (e) {
+          return !1;
+        }
+      }
+      function A(e, t, n) {
+        var i = {};
+        return (
+          n.isMergeableObject(e) &&
+            j(e).forEach(function (t) {
+              i[t] = N(e[t], n);
+            }),
+          j(t).forEach(function (r) {
+            (function (e, t) {
+              return (
+                x(e, t) &&
+                !(
+                  Object.hasOwnProperty.call(e, t) &&
+                  Object.propertyIsEnumerable.call(e, t)
+                )
+              );
+            })(e, r) ||
+              (x(e, r) && n.isMergeableObject(t[r])
+                ? (i[r] = (function (e, t) {
+                    if (!t.customMerge) return R;
+                    var n = t.customMerge(e);
+                    return "function" == typeof n ? n : R;
+                  })(r, n)(e[r], t[r], n))
+                : (i[r] = N(t[r], n)));
+          }),
+          i
+        );
+      }
+      function R(e, t, n) {
+        ((n = n || {}).arrayMerge = n.arrayMerge || D),
+          (n.isMergeableObject = n.isMergeableObject || $),
+          (n.cloneUnlessOtherwiseSpecified = N);
+        var i = Array.isArray(t);
+        return i === Array.isArray(e)
+          ? i
+            ? n.arrayMerge(e, t, n)
+            : A(e, t, n)
+          : N(t, n);
+      }
+      function L(e) {
         var t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : function () {
                   return {};
                 },
-          i = (function (i) {
-            function r(e, i) {
-              var n;
+          n = (function (n) {
+            function r(e, n) {
+              var i;
               return (
                 a(this, r),
-                ((n = l.call(this, e, i)).state = t(s({}, i.state))),
-                (n.updateStateProps = n.updateStateProps.bind(b(n))),
-                n
+                ((i = o.call(this, e, n)).state = t(s({}, n.state))),
+                (i.updateStateProps = i.updateStateProps.bind(b(i))),
+                i
               );
             }
-            d(r, i);
-            var l = m(r);
+            d(r, n);
+            var o = m(r);
             return (
-              o(r, [
+              l(r, [
                 {
                   key: "componentDidMount",
                   value: function () {
@@ -343,7 +376,7 @@
                 {
                   key: "shouldComponentUpdate",
                   value: function (e, t) {
-                    return !Y(t, this.state) || !Y(e, this.props);
+                    return !K(t, this.state) || !K(e, this.props);
                   },
                 },
                 {
@@ -362,8 +395,11 @@
                   key: "render",
                   value: function () {
                     var t = this,
-                      i = K(this.state, this.props);
-                    return n.createElement(
+                      n = this.props,
+                      r = n.children,
+                      s = S(n, he),
+                      a = J(this.state, s, W);
+                    return i.createElement(
                       e,
                       u(
                         {
@@ -371,7 +407,7 @@
                             t.instance = e;
                           },
                         },
-                        i,
+                        a,
                         {
                           carouselStore: {
                             getStoreState: this.context.getStoreState,
@@ -388,25 +424,25 @@
                           },
                         },
                       ),
-                      this.props.children,
+                      r,
                     );
                   },
                 },
               ]),
               r
             );
-          })(n.Component);
+          })(i.Component);
         return (
-          c(i, "contextType", G),
-          c(i, "propTypes", { children: q.children }),
-          c(i, "defaultProps", { children: null }),
-          i
+          c(n, "contextType", ee),
+          c(n, "propTypes", { children: B.children }),
+          c(n, "defaultProps", { children: null }),
+          n
         );
       }
       k.resetWarningCache = y;
-      var A = g(function (e) {
+      var I = v(function (e) {
           e.exports = (function () {
-            function e(e, t, i, n, r, s) {
+            function e(e, t, n, i, r, s) {
               if ("SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED" !== s) {
                 var a = new Error(
                   "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
@@ -418,7 +454,7 @@
               return e;
             }
             e.isRequired = e;
-            var i = {
+            var n = {
               array: e,
               bigint: e,
               bool: e,
@@ -441,19 +477,19 @@
               checkPropTypes: k,
               resetWarningCache: y,
             };
-            return (i.PropTypes = i), i;
+            return (n.PropTypes = n), n;
           })();
         }),
-        R = "loading",
-        I = "success",
-        L = "error",
-        q = {
-          children: A.oneOfType([A.arrayOf(A.node), A.node]),
-          direction: A.oneOf(["forward", "backward"]),
+        q = "loading",
+        z = "success",
+        H = "error",
+        B = {
+          children: I.oneOfType([I.arrayOf(I.node), I.node]),
+          direction: I.oneOf(["forward", "backward"]),
           height: function (e, t) {
-            var i = e[t];
+            var n = e[t];
             return "vertical" !== e.orientation ||
-              (null !== i && "number" == typeof i)
+              (null !== n && "number" == typeof n)
               ? null
               : new Error(
                   "Missing required property '".concat(
@@ -462,7 +498,7 @@
                   ),
                 );
           },
-          orientation: A.oneOf(["horizontal", "vertical"]),
+          orientation: I.oneOf(["horizontal", "vertical"]),
           isBgImage: function (e, t) {
             return !0 === e[t] && "img" === e.tag
               ? new Error(
@@ -474,14 +510,32 @@
               : null;
           },
         },
-        z = function (e) {
+        F = function (e) {
           var t = e.min,
-            i = e.max,
-            n = e.x;
-          return Math.min(i, Math.max(t, n));
+            n = e.max,
+            i = e.x;
+          return Math.min(n, Math.max(t, i));
         },
-        H = "buttonBack___1mlaL",
-        B = [
+        W = {
+          arrayMerge: function (e, t) {
+            return t;
+          },
+          clone: !1,
+          customMerge: function (e) {
+            if (
+              "$$typeof" === e ||
+              "_owner" === e ||
+              "_store" === e ||
+              "ref" === e ||
+              "key" === e
+            )
+              return function (e, t) {
+                return t;
+              };
+          },
+        },
+        U = "buttonBack___1mlaL",
+        Y = [
           "carouselStore",
           "className",
           "currentSlide",
@@ -492,37 +546,37 @@
           "visibleSlides",
           "infinite",
         ],
-        F = (function (e) {
+        V = (function (e) {
           function t(e) {
-            var n;
+            var i;
             return (
               a(this, t),
-              ((n = i.call(this, e)).handleOnClick = n.handleOnClick.bind(
-                b(n),
+              ((i = n.call(this, e)).handleOnClick = i.handleOnClick.bind(
+                b(i),
               )),
-              n
+              i
             );
           }
           d(t, e);
-          var i = m(t);
+          var n = m(t);
           return (
-            o(
+            l(
               t,
               [
                 {
                   key: "handleOnClick",
                   value: function (e) {
                     var t = this.props,
-                      i = t.carouselStore,
-                      n = t.currentSlide,
+                      n = t.carouselStore,
+                      i = t.currentSlide,
                       r = t.onClick,
                       s = t.step,
                       a = t.infinite,
-                      l = t.visibleSlides,
-                      o = t.totalSlides - l,
-                      c = Math.max(n - s, 0);
-                    a && (c = 0 === n ? o : c),
-                      i.setStoreState(
+                      o = t.visibleSlides,
+                      l = t.totalSlides - o,
+                      c = Math.max(i - s, 0);
+                    a && (c = 0 === i ? l : c),
+                      n.setStoreState(
                         { currentSlide: c, isPlaying: !1 },
                         null !== r && r.call(this, e),
                       );
@@ -532,7 +586,7 @@
                   key: "render",
                   value: function () {
                     var e = this.props,
-                      i = (e.carouselStore, e.className),
+                      n = (e.carouselStore, e.className),
                       r =
                         (e.currentSlide,
                         e.disabled,
@@ -541,14 +595,14 @@
                         e.totalSlides,
                         e.visibleSlides,
                         e.infinite),
-                      s = S(e, B),
-                      a = O([H, "carousel__back-button", i]),
-                      l = t.setDisabled(
+                      s = S(e, Y),
+                      a = O([U, "carousel__back-button", n]),
+                      o = t.setDisabled(
                         this.props.disabled,
                         this.props.currentSlide,
                         r,
                       );
-                    return n.createElement(
+                    return i.createElement(
                       "button",
                       u(
                         {
@@ -556,7 +610,7 @@
                           "aria-label": "previous",
                           className: a,
                           onClick: this.handleOnClick,
-                          disabled: l,
+                          disabled: o,
                         },
                         s,
                       ),
@@ -568,47 +622,47 @@
               [
                 {
                   key: "setDisabled",
-                  value: function (e, t, i) {
-                    return null !== e ? e : 0 === t && !i;
+                  value: function (e, t, n) {
+                    return null !== e ? e : 0 === t && !n;
                   },
                 },
               ],
             ),
             t
           );
-        })(n.Component);
-      c(F, "propTypes", {
-        carouselStore: A.object.isRequired,
-        children: q.children.isRequired,
-        className: A.string,
-        currentSlide: A.number.isRequired,
-        disabled: A.bool,
-        onClick: A.func,
-        step: A.number.isRequired,
-        totalSlides: A.number.isRequired,
-        visibleSlides: A.number.isRequired,
-        infinite: A.bool,
+        })(i.Component);
+      c(V, "propTypes", {
+        carouselStore: I.object.isRequired,
+        children: B.children.isRequired,
+        className: I.string,
+        currentSlide: I.number.isRequired,
+        disabled: I.bool,
+        onClick: I.func,
+        step: I.number.isRequired,
+        totalSlides: I.number.isRequired,
+        visibleSlides: I.number.isRequired,
+        infinite: I.bool,
       }),
-        c(F, "defaultProps", {
+        c(V, "defaultProps", {
           className: null,
           disabled: null,
           onClick: null,
           infinite: !1,
         });
-      var W = g(function (e, t) {
-          var i = {}.toString,
-            n = "undefined" != typeof window ? window.Node : Function;
+      var Z = v(function (e, t) {
+          var n = {}.toString,
+            i = "undefined" != typeof window ? window.Node : Function;
           e.exports = t = function (e) {
             var t = typeof e;
             if ("object" != t) return t;
-            if ("object" == (t = r[i.call(e)]))
+            if ("object" == (t = r[n.call(e)]))
               return e instanceof Map
                 ? "map"
                 : e instanceof Set
                   ? "set"
                   : "object";
             if (t) return t;
-            if (e instanceof n)
+            if (e instanceof i)
               switch (e.nodeType) {
                 case 1:
                   return "element";
@@ -647,17 +701,17 @@
             "[object Blob]": "blob",
           });
         }),
-        U =
-          (W.types,
+        X =
+          (Z.types,
           {
             number: function (e, t) {
               return e != e && t != t;
             },
-            function: function (e, t, i) {
+            function: function (e, t, n) {
               return (
                 e.toString() === t.toString() &&
-                U.object(e, t, i) &&
-                _(e.prototype, t.prototype)
+                X.object(e, t, n) &&
+                C(e.prototype, t.prototype)
               );
             },
             date: function (e, t) {
@@ -673,69 +727,69 @@
               return e.textContent === t.textContent;
             },
           });
-      (U.arguments =
-        U["bit-array"] =
-        U.array =
-          M(function (e, t, i) {
-            var n = e.length;
-            if (n !== t.length) return !1;
-            for (i.push([e, t]); n--; ) if (!_(e[n], t[n], i)) return !1;
+      (X.arguments =
+        X["bit-array"] =
+        X.array =
+          M(function (e, t, n) {
+            var i = e.length;
+            if (i !== t.length) return !1;
+            for (n.push([e, t]); i--; ) if (!C(e[i], t[i], n)) return !1;
             return !0;
           })),
-        (U.object = M(function (e, t, i) {
+        (X.object = M(function (e, t, n) {
           if ("function" == typeof e.equal)
-            return i.push([e, t]), e.equal(t, i);
-          var n = E(e),
+            return n.push([e, t]), e.equal(t, n);
+          var i = E(e),
             r = E(t),
-            s = n.length;
+            s = i.length;
           if (s !== r.length) return !1;
-          for (n.sort(), r.sort(); s--; ) if (n[s] !== r[s]) return !1;
-          for (i.push([e, t]), s = n.length; s--; ) {
-            var a = n[s];
-            if (!_(e[a], t[a], i)) return !1;
+          for (i.sort(), r.sort(); s--; ) if (i[s] !== r[s]) return !1;
+          for (n.push([e, t]), s = i.length; s--; ) {
+            var a = i[s];
+            if (!C(e[a], t[a], n)) return !1;
           }
           return !0;
         }));
-      var Y = _,
-        V = function (e) {
+      var K = C,
+        $ = function (e) {
           return (
             (function (e) {
               return !!e && "object" == typeof e;
             })(e) && !P(e)
           );
         },
-        Z =
+        G =
           "function" == typeof Symbol && Symbol.for
             ? Symbol.for("react.element")
             : 60103;
-      x.all = function (e, t) {
+      R.all = function (e, t) {
         if (!Array.isArray(e))
           throw new Error("first argument should be an array");
-        return e.reduce(function (e, i) {
-          return x(e, i, t);
+        return e.reduce(function (e, n) {
+          return R(e, n, t);
         }, {});
       };
-      var X,
-        K = x,
-        G = n.createContext(),
-        Q = function e(t) {
+      var Q,
+        J = R,
+        ee = i.createContext(),
+        te = function e(t) {
           return (
             Object.freeze(t),
-            Object.getOwnPropertyNames(t).forEach(function (i) {
-              !t.hasOwnProperty(i) ||
-                null === t[i] ||
-                ("object" != typeof t[i] && "function" != typeof t[i]) ||
-                Object.isFrozen(t[i]) ||
-                e(t[i]);
+            Object.getOwnPropertyNames(t).forEach(function (n) {
+              !t.hasOwnProperty(n) ||
+                null === t[n] ||
+                ("object" != typeof t[n] && "function" != typeof t[n]) ||
+                Object.isFrozen(t[n]) ||
+                e(t[n]);
             }),
             t
           );
         },
-        $ = { masterSpinnerFinished: !1 },
-        J = (function () {
+        ne = { masterSpinnerFinished: !1 },
+        ie = (function () {
           function e(t) {
             a(this, e),
-              (this.state = Q(K($, t))),
+              (this.state = te(J(ne, t, W))),
               (this.subscriptions = []),
               (this.masterSpinnerSubscriptions = {}),
               (this.setStoreState = this.setStoreState.bind(this)),
@@ -754,17 +808,18 @@
               (this.masterSpinnerError = this.masterSpinnerError.bind(this));
           }
           return (
-            o(e, [
+            l(e, [
               {
                 key: "setStoreState",
                 value: function (e, t) {
-                  (this.state = Q(K(this.state, e))), this.updateSubscribers(t);
+                  (this.state = te(J(this.state, e, W))),
+                    this.updateSubscribers(t);
                 },
               },
               {
                 key: "getStoreState",
                 value: function () {
-                  return K({}, this.state);
+                  return J({}, this.state, W);
                 },
               },
               {
@@ -861,7 +916,7 @@
             e
           );
         })(),
-        ee = [
+        re = [
           "children",
           "className",
           "currentSlide",
@@ -886,14 +941,14 @@
           "infinite",
           "isIntrinsicHeight",
         ],
-        te =
+        se =
           (c(
-            (X = (function (e) {
+            (Q = (function (e) {
               function t(e) {
-                var n;
+                var i;
                 if (
                   (a(this, t),
-                  (n = i.call(this, e)),
+                  (i = n.call(this, e)),
                   e.isIntrinsicHeight && "horizontal" !== e.orientation)
                 )
                   throw Error(
@@ -927,17 +982,17 @@
                   infinite: e.infinite,
                   isIntrinsicHeight: e.isIntrinsicHeight,
                 };
-                return (n.carouselStore = new J(r)), n;
+                return (i.carouselStore = new ie(r)), i;
               }
               d(t, e);
-              var i = m(t);
+              var n = m(t);
               return (
-                o(t, [
+                l(t, [
                   {
                     key: "componentDidUpdate",
                     value: function (e) {
                       var t = this,
-                        i = {};
+                        n = {};
                       [
                         "currentSlide",
                         "disableAnimation",
@@ -956,31 +1011,31 @@
                         "touchEnabled",
                         "dragEnabled",
                         "visibleSlides",
-                      ].forEach(function (n) {
-                        e[n] !== t.props[n] && (i[n] = t.props[n]);
+                      ].forEach(function (i) {
+                        e[i] !== t.props[i] && (n[i] = t.props[i]);
                       }),
                         this.props.currentSlide !== e.currentSlide &&
                           !this.props.disableAnimation &&
-                          ((i.disableAnimation = !0),
-                          (i.privateUnDisableAnimation = !0)),
+                          ((n.disableAnimation = !0),
+                          (n.privateUnDisableAnimation = !0)),
                         (this.props.totalSlides === e.totalSlides &&
                           this.props.visibleSlides === e.visibleSlides) ||
-                          ((i.slideSize = T(
+                          ((n.slideSize = T(
                             this.props.totalSlides,
                             this.props.visibleSlides,
                           )),
-                          (i.slideTraySize = w(
+                          (n.slideTraySize = w(
                             this.props.totalSlides,
                             this.props.visibleSlides,
                           ))),
                         this.carouselStore.state.currentSlide >=
                           this.props.totalSlides &&
-                          (i.currentSlide = Math.max(
+                          (n.currentSlide = Math.max(
                             this.props.totalSlides - 1,
                             0,
                           )),
-                        Object.keys(i).length > 0 &&
-                          this.carouselStore.setStoreState(i);
+                        Object.keys(n).length > 0 &&
+                          this.carouselStore.setStoreState(n);
                     },
                   },
                   {
@@ -1017,20 +1072,20 @@
                           e.step,
                           e.dragStep,
                           e.tag),
-                        i =
+                        n =
                           (e.totalSlides,
                           e.touchEnabled,
                           e.dragEnabled,
                           e.visibleSlides,
                           e.infinite,
                           e.isIntrinsicHeight,
-                          S(e, ee)),
+                          S(e, re)),
                         r = O(["carousel", this.props.className]);
-                      return n.createElement(
+                      return i.createElement(
                         t,
-                        u({ className: r }, i),
-                        n.createElement(
-                          G.Provider,
+                        u({ className: r }, n),
+                        i.createElement(
+                          ee.Provider,
                           { value: this.carouselStore },
                           this.props.children,
                         ),
@@ -1040,35 +1095,35 @@
                 ]),
                 t
               );
-            })(n.Component)),
+            })(i.Component)),
             "propTypes",
             {
-              children: q.children.isRequired,
-              className: A.string,
-              currentSlide: A.number,
-              disableAnimation: A.bool,
-              disableKeyboard: A.bool,
-              hasMasterSpinner: A.bool,
-              interval: A.number,
-              isPageScrollLocked: A.bool,
-              isPlaying: A.bool,
-              lockOnWindowScroll: A.bool,
-              naturalSlideHeight: A.number.isRequired,
-              naturalSlideWidth: A.number.isRequired,
-              orientation: q.orientation,
-              playDirection: q.direction,
-              step: A.number,
-              dragStep: A.number,
-              tag: A.string,
-              totalSlides: A.number.isRequired,
-              touchEnabled: A.bool,
-              dragEnabled: A.bool,
-              visibleSlides: A.number,
-              infinite: A.bool,
-              isIntrinsicHeight: A.bool,
+              children: B.children.isRequired,
+              className: I.string,
+              currentSlide: I.number,
+              disableAnimation: I.bool,
+              disableKeyboard: I.bool,
+              hasMasterSpinner: I.bool,
+              interval: I.number,
+              isPageScrollLocked: I.bool,
+              isPlaying: I.bool,
+              lockOnWindowScroll: I.bool,
+              naturalSlideHeight: I.number.isRequired,
+              naturalSlideWidth: I.number.isRequired,
+              orientation: B.orientation,
+              playDirection: B.direction,
+              step: I.number,
+              dragStep: I.number,
+              tag: I.string,
+              totalSlides: I.number.isRequired,
+              touchEnabled: I.bool,
+              dragEnabled: I.bool,
+              visibleSlides: I.number,
+              infinite: I.bool,
+              isIntrinsicHeight: I.bool,
             },
           ),
-          c(X, "defaultProps", {
+          c(Q, "defaultProps", {
             className: null,
             currentSlide: 0,
             disableAnimation: !1,
@@ -1089,15 +1144,16 @@
             infinite: !1,
             isIntrinsicHeight: !1,
           }),
-          X);
-      G.Consumer;
-      var ie,
-        ne,
-        re,
-        se,
-        ae,
+          Q);
+      ee.Consumer;
+      var ae,
+        oe,
         le,
-        oe = j(F, function (e) {
+        ce,
+        ue,
+        de,
+        he = ["children"],
+        pe = L(V, function (e) {
           return {
             currentSlide: e.currentSlide,
             step: e.step,
@@ -1106,8 +1162,8 @@
             infinite: e.infinite,
           };
         }),
-        ce = "buttonFirst___2rhFr",
-        ue = [
+        Se = "buttonFirst___2rhFr",
+        be = [
           "carouselStore",
           "className",
           "currentSlide",
@@ -1115,29 +1171,29 @@
           "onClick",
           "totalSlides",
         ],
-        de =
-          ((ie = (function (e) {
+        me =
+          ((ae = (function (e) {
             function t() {
               var e;
               return (
                 a(this, t),
-                ((e = i.call(this)).handleOnClick = e.handleOnClick.bind(b(e))),
+                ((e = n.call(this)).handleOnClick = e.handleOnClick.bind(b(e))),
                 e
               );
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(t, [
+              l(t, [
                 {
                   key: "handleOnClick",
                   value: function (e) {
                     var t = this.props,
-                      i = t.carouselStore,
-                      n = t.onClick;
-                    i.setStoreState(
+                      n = t.carouselStore,
+                      i = t.onClick;
+                    n.setStoreState(
                       { currentSlide: 0, isPlaying: !1 },
-                      null !== n && n.call(this, e),
+                      null !== i && i.call(this, e),
                     );
                   },
                 },
@@ -1146,12 +1202,12 @@
                   value: function () {
                     var e = this.props,
                       t = (e.carouselStore, e.className),
-                      i = e.currentSlide,
+                      n = e.currentSlide,
                       r = e.disabled,
-                      s = (e.onClick, e.totalSlides, S(e, ue)),
-                      a = O([ce, "carousel__first-button", t]),
-                      l = null !== r ? r : 0 === i;
-                    return n.createElement(
+                      s = (e.onClick, e.totalSlides, S(e, be)),
+                      a = O([Se, "carousel__first-button", t]),
+                      o = null !== r ? r : 0 === n;
+                    return i.createElement(
                       "button",
                       u(
                         {
@@ -1159,7 +1215,7 @@
                           "aria-label": "first",
                           className: a,
                           onClick: this.handleOnClick,
-                          disabled: l,
+                          disabled: o,
                         },
                         s,
                       ),
@@ -1170,28 +1226,122 @@
               ]),
               t
             );
-          })(n.Component)),
-          c(ie, "propTypes", {
-            carouselStore: A.object.isRequired,
-            children: q.children.isRequired,
-            className: A.string,
-            currentSlide: A.number.isRequired,
-            disabled: A.bool,
-            onClick: A.func,
-            totalSlides: A.number.isRequired,
+          })(i.Component)),
+          c(ae, "propTypes", {
+            carouselStore: I.object.isRequired,
+            children: B.children.isRequired,
+            className: I.string,
+            currentSlide: I.number.isRequired,
+            disabled: I.bool,
+            onClick: I.func,
+            totalSlides: I.number.isRequired,
           }),
-          c(ie, "defaultProps", {
+          c(ae, "defaultProps", {
             className: null,
             disabled: null,
             onClick: null,
           }),
-          ie),
-        he =
-          (j(de, function (e) {
+          ae),
+        fe =
+          (L(me, function (e) {
             return { currentSlide: e.currentSlide, totalSlides: e.totalSlides };
           }),
+          "buttonLast___2yuh0"),
+        ge = [
+          "carouselStore",
+          "className",
+          "currentSlide",
+          "disabled",
+          "onClick",
+          "totalSlides",
+          "visibleSlides",
+        ],
+        ve =
+          ((oe = (function (e) {
+            function t() {
+              var e;
+              return (
+                a(this, t),
+                ((e = n.call(this)).handleOnClick = e.handleOnClick.bind(b(e))),
+                e
+              );
+            }
+            d(t, e);
+            var n = m(t);
+            return (
+              l(t, [
+                {
+                  key: "handleOnClick",
+                  value: function (e) {
+                    var t = this.props,
+                      n = t.carouselStore,
+                      i = t.onClick,
+                      r = t.totalSlides,
+                      s = t.visibleSlides;
+                    n.setStoreState(
+                      { currentSlide: r - s, isPlaying: !1 },
+                      null !== i && i.call(this, e),
+                    );
+                  },
+                },
+                {
+                  key: "render",
+                  value: function () {
+                    var e = this.props,
+                      t = (e.carouselStore, e.className),
+                      n = e.currentSlide,
+                      r = e.disabled,
+                      s = (e.onClick, e.totalSlides),
+                      a = e.visibleSlides,
+                      o = S(e, ge),
+                      l = O([fe, "carousel__last-button", t]),
+                      c = null !== r ? r : n >= s - a;
+                    return i.createElement(
+                      "button",
+                      u(
+                        {
+                          type: "button",
+                          "aria-label": "last",
+                          className: l,
+                          onClick: this.handleOnClick,
+                          disabled: c,
+                        },
+                        o,
+                      ),
+                      this.props.children,
+                    );
+                  },
+                },
+              ]),
+              t
+            );
+          })(i.Component)),
+          c(oe, "propTypes", {
+            carouselStore: I.object.isRequired,
+            children: B.children.isRequired,
+            className: I.string,
+            currentSlide: I.number.isRequired,
+            disabled: I.bool,
+            onClick: I.func,
+            totalSlides: I.number.isRequired,
+            visibleSlides: I.number.isRequired,
+          }),
+          c(oe, "defaultProps", {
+            className: null,
+            disabled: null,
+            onClick: null,
+          }),
+          oe),
+        ye =
+          (L(ve, function (e) {
+            return {
+              currentSlide: e.currentSlide,
+              totalSlides: e.totalSlides,
+              visibleSlides: e.visibleSlides,
+            };
+          }),
           "buttonNext___2mOCa"),
-        pe = [
+        ke = [
           "carouselStore",
           "className",
           "currentSlide",
@@ -1202,40 +1352,40 @@
           "visibleSlides",
           "infinite",
         ],
-        Se =
-          ((ne = (function (e) {
+        Oe =
+          ((le = (function (e) {
             function t(e) {
-              var n;
+              var i;
               return (
                 a(this, t),
-                ((n = i.call(this, e)).handleOnClick = n.handleOnClick.bind(
-                  b(n),
+                ((i = n.call(this, e)).handleOnClick = i.handleOnClick.bind(
+                  b(i),
                 )),
-                n
+                i
               );
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(
+              l(
                 t,
                 [
                   {
                     key: "handleOnClick",
                     value: function (e) {
                       var t = this.props,
-                        i = t.currentSlide,
-                        n = t.onClick,
+                        n = t.currentSlide,
+                        i = t.onClick,
                         r = t.step,
                         s = t.carouselStore,
                         a = t.infinite,
-                        l = t.totalSlides - t.visibleSlides,
-                        o = r + i,
-                        c = Math.min(o, l);
-                      a && (c = l === i ? 0 : c),
+                        o = t.totalSlides - t.visibleSlides,
+                        l = r + n,
+                        c = Math.min(l, o);
+                      a && (c = o === n ? 0 : c),
                         s.setStoreState(
                           { currentSlide: c, isPlaying: !1 },
-                          null !== n && n.call(this, e),
+                          null !== i && i.call(this, e),
                         );
                     },
                   },
@@ -1243,16 +1393,16 @@
                     key: "render",
                     value: function () {
                       var e = this.props,
-                        i = (e.carouselStore, e.className),
+                        n = (e.carouselStore, e.className),
                         r = e.currentSlide,
                         s = e.disabled,
                         a = (e.onClick, e.step, e.totalSlides),
-                        l = e.visibleSlides,
-                        o = e.infinite,
-                        c = S(e, pe),
-                        d = O([he, "carousel__next-button", i]),
-                        h = t.setDisabled(s, r, l, a, o);
-                      return n.createElement(
+                        o = e.visibleSlides,
+                        l = e.infinite,
+                        c = S(e, ke),
+                        d = O([ye, "carousel__next-button", n]),
+                        h = t.setDisabled(s, r, o, a, l);
+                      return i.createElement(
                         "button",
                         u(
                           {
@@ -1272,35 +1422,35 @@
                 [
                   {
                     key: "setDisabled",
-                    value: function (e, t, i, n, r) {
-                      return null !== e ? e : t >= n - i && !r;
+                    value: function (e, t, n, i, r) {
+                      return null !== e ? e : t >= i - n && !r;
                     },
                   },
                 ],
               ),
               t
             );
-          })(n.PureComponent)),
-          c(ne, "propTypes", {
-            carouselStore: A.object.isRequired,
-            children: q.children.isRequired,
-            className: A.string,
-            currentSlide: A.number.isRequired,
-            disabled: A.bool,
-            onClick: A.func,
-            step: A.number.isRequired,
-            totalSlides: A.number.isRequired,
-            visibleSlides: A.number.isRequired,
-            infinite: A.bool,
+          })(i.PureComponent)),
+          c(le, "propTypes", {
+            carouselStore: I.object.isRequired,
+            children: B.children.isRequired,
+            className: I.string,
+            currentSlide: I.number.isRequired,
+            disabled: I.bool,
+            onClick: I.func,
+            step: I.number.isRequired,
+            totalSlides: I.number.isRequired,
+            visibleSlides: I.number.isRequired,
+            infinite: I.bool,
           }),
-          c(ne, "defaultProps", {
+          c(le, "defaultProps", {
             className: null,
             disabled: null,
             onClick: null,
             infinite: !1,
           }),
-          ne),
-        be = j(Se, function (e) {
+          le),
+        Te = L(Oe, function (e) {
           return {
             currentSlide: e.currentSlide,
             step: e.step,
@@ -1309,102 +1459,8 @@
             infinite: e.infinite,
           };
         }),
-        me = "buttonLast___2yuh0",
-        fe = [
-          "carouselStore",
-          "className",
-          "currentSlide",
-          "disabled",
-          "onClick",
-          "totalSlides",
-          "visibleSlides",
-        ],
-        ve =
-          ((re = (function (e) {
-            function t() {
-              var e;
-              return (
-                a(this, t),
-                ((e = i.call(this)).handleOnClick = e.handleOnClick.bind(b(e))),
-                e
-              );
-            }
-            d(t, e);
-            var i = m(t);
-            return (
-              o(t, [
-                {
-                  key: "handleOnClick",
-                  value: function (e) {
-                    var t = this.props,
-                      i = t.carouselStore,
-                      n = t.onClick,
-                      r = t.totalSlides,
-                      s = t.visibleSlides;
-                    i.setStoreState(
-                      { currentSlide: r - s, isPlaying: !1 },
-                      null !== n && n.call(this, e),
-                    );
-                  },
-                },
-                {
-                  key: "render",
-                  value: function () {
-                    var e = this.props,
-                      t = (e.carouselStore, e.className),
-                      i = e.currentSlide,
-                      r = e.disabled,
-                      s = (e.onClick, e.totalSlides),
-                      a = e.visibleSlides,
-                      l = S(e, fe),
-                      o = O([me, "carousel__last-button", t]),
-                      c = null !== r ? r : i >= s - a;
-                    return n.createElement(
-                      "button",
-                      u(
-                        {
-                          type: "button",
-                          "aria-label": "last",
-                          className: o,
-                          onClick: this.handleOnClick,
-                          disabled: c,
-                        },
-                        l,
-                      ),
-                      this.props.children,
-                    );
-                  },
-                },
-              ]),
-              t
-            );
-          })(n.Component)),
-          c(re, "propTypes", {
-            carouselStore: A.object.isRequired,
-            children: q.children.isRequired,
-            className: A.string,
-            currentSlide: A.number.isRequired,
-            disabled: A.bool,
-            onClick: A.func,
-            totalSlides: A.number.isRequired,
-            visibleSlides: A.number.isRequired,
-          }),
-          c(re, "defaultProps", {
-            className: null,
-            disabled: null,
-            onClick: null,
-          }),
-          re),
-        ge =
-          (j(ve, function (e) {
-            return {
-              currentSlide: e.currentSlide,
-              totalSlides: e.totalSlides,
-              visibleSlides: e.visibleSlides,
-            };
-          }),
-          "buttonNext___3Lm3s"),
-        ye = [
+        we = "buttonNext___3Lm3s",
+        _e = [
           "carouselStore",
           "children",
           "childrenPaused",
@@ -1413,22 +1469,22 @@
           "isPlaying",
           "onClick",
         ],
-        ke =
-          ((se = (function (e) {
+        Ce =
+          ((ce = (function (e) {
             function t(e) {
-              var n;
+              var i;
               return (
                 a(this, t),
-                ((n = i.call(this, e)).handleOnClick = n.handleOnClick.bind(
-                  b(n),
+                ((i = n.call(this, e)).handleOnClick = i.handleOnClick.bind(
+                  b(i),
                 )),
-                n
+                i
               );
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(t, [
+              l(t, [
                 {
                   key: "handleOnClick",
                   value: function (e) {
@@ -1444,23 +1500,23 @@
                   value: function () {
                     var e = this.props,
                       t = (e.carouselStore, e.children, e.childrenPaused),
-                      i = e.childrenPlaying,
+                      n = e.childrenPlaying,
                       r = e.className,
                       s = e.isPlaying,
-                      a = (e.onClick, S(e, ye)),
-                      l = O([ge, "carousel__play-button", r]);
-                    return n.createElement(
+                      a = (e.onClick, S(e, _e)),
+                      o = O([we, "carousel__play-button", r]);
+                    return i.createElement(
                       "button",
                       u(
                         {
                           type: "button",
                           "aria-label": "play",
-                          className: l,
+                          className: o,
                           onClick: this.handleOnClick,
                         },
                         a,
                       ),
-                      s && i,
+                      s && n,
                       !s && t,
                       this.props.children,
                     );
@@ -1469,30 +1525,30 @@
               ]),
               t
             );
-          })(n.PureComponent)),
-          c(se, "propTypes", {
-            carouselStore: A.object.isRequired,
-            children: A.node,
-            childrenPaused: A.node,
-            childrenPlaying: A.node,
-            className: A.string,
-            isPlaying: A.bool.isRequired,
-            onClick: A.func,
+          })(i.PureComponent)),
+          c(ce, "propTypes", {
+            carouselStore: I.object.isRequired,
+            children: I.node,
+            childrenPaused: I.node,
+            childrenPlaying: I.node,
+            className: I.string,
+            isPlaying: I.bool.isRequired,
+            onClick: I.func,
           }),
-          c(se, "defaultProps", {
+          c(ce, "defaultProps", {
             children: null,
             childrenPaused: null,
             childrenPlaying: null,
             className: null,
             onClick: null,
           }),
-          se),
-        Oe =
-          (j(ke, function (e) {
+          ce),
+        Me =
+          (L(Ce, function (e) {
             return { isPlaying: e.isPlaying };
           }),
           { dot: "dot___3c3SI" }),
-        Te = [
+        Ee = [
           "carouselStore",
           "children",
           "className",
@@ -1504,35 +1560,35 @@
           "totalSlides",
           "visibleSlides",
         ],
-        we =
-          ((ae = (function (e) {
+        Pe =
+          ((ue = (function (e) {
             function t(e) {
-              var n;
+              var i;
               return (
                 a(this, t),
-                ((n = i.call(this, e)).handleOnClick = n.handleOnClick.bind(
-                  b(n),
+                ((i = n.call(this, e)).handleOnClick = i.handleOnClick.bind(
+                  b(i),
                 )),
-                n
+                i
               );
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(t, [
+              l(t, [
                 {
                   key: "handleOnClick",
                   value: function (e) {
                     var t = this.props,
-                      i = t.carouselStore,
-                      n = t.onClick,
+                      n = t.carouselStore,
+                      i = t.onClick,
                       r = t.slide,
                       s = t.totalSlides,
                       a = t.visibleSlides,
-                      l = r >= s - a ? s - a : r;
-                    i.setStoreState(
-                      { currentSlide: l, isPlaying: !1 },
-                      null !== n && n.call(this, e),
+                      o = r >= s - a ? s - a : r;
+                    n.setStoreState(
+                      { currentSlide: o, isPlaying: !1 },
+                      null !== i && i.call(this, e),
                     );
                   },
                 },
@@ -1541,24 +1597,24 @@
                   value: function () {
                     var e = this.props,
                       t = (e.carouselStore, e.children, e.className),
-                      i = e.currentSlide,
+                      n = e.currentSlide,
                       r = e.disabled,
                       s = (e.onClick, e.selected),
                       a = e.slide,
-                      l = (e.totalSlides, e.visibleSlides),
-                      o = S(e, Te),
-                      c = a >= i && a < i + l,
+                      o = (e.totalSlides, e.visibleSlides),
+                      l = S(e, Ee),
+                      c = a >= n && a < n + o,
                       d = "boolean" == typeof s ? s : c,
                       h = "boolean" == typeof r ? r : !0 === c,
                       p = O([
-                        Oe.dot,
-                        d && Oe.dotSelected,
+                        Me.dot,
+                        d && Me.dotSelected,
                         "carousel__dot",
                         "carousel__dot--".concat(a),
                         d && "carousel__dot--selected",
                         t,
                       ]);
-                    return n.createElement(
+                    return i.createElement(
                       "button",
                       u(
                         {
@@ -1568,7 +1624,7 @@
                           className: p,
                           disabled: h,
                         },
-                        o,
+                        l,
                       ),
                       this.props.children,
                     );
@@ -1577,37 +1633,37 @@
               ]),
               t
             );
-          })(n.Component)),
-          c(ae, "propTypes", {
-            carouselStore: A.object.isRequired,
-            children: q.children,
-            className: A.string,
-            currentSlide: A.number.isRequired,
-            disabled: A.bool,
-            onClick: A.func,
-            selected: A.bool,
-            slide: A.number.isRequired,
-            totalSlides: A.number.isRequired,
-            visibleSlides: A.number.isRequired,
+          })(i.Component)),
+          c(ue, "propTypes", {
+            carouselStore: I.object.isRequired,
+            children: B.children,
+            className: I.string,
+            currentSlide: I.number.isRequired,
+            disabled: I.bool,
+            onClick: I.func,
+            selected: I.bool,
+            slide: I.number.isRequired,
+            totalSlides: I.number.isRequired,
+            visibleSlides: I.number.isRequired,
           }),
-          c(ae, "defaultProps", {
+          c(ue, "defaultProps", {
             children: null,
             className: null,
             disabled: null,
             onClick: null,
             selected: null,
           }),
-          ae),
-        Ce = j(we, function (e) {
+          ue),
+        Ne = L(Pe, function (e) {
           return {
             currentSlide: e.currentSlide,
             totalSlides: e.totalSlides,
             visibleSlides: e.visibleSlides,
           };
         }),
-        _e = {},
-        Me = ["renderDots"],
-        Ee = [
+        De = {},
+        je = ["renderDots"],
+        xe = [
           "carouselStore",
           "children",
           "className",
@@ -1619,37 +1675,37 @@
           "showAsSelectedForCurrentSlideOnly",
           "renderDots",
         ],
-        Pe =
-          ((le = (function (e) {
+        Ae =
+          ((de = (function (e) {
             function t() {
-              return a(this, t), i.apply(this, arguments);
+              return a(this, t), n.apply(this, arguments);
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(t, [
+              l(t, [
                 {
                   key: "renderDots",
                   value: function () {
                     var e = this.props,
                       t = e.currentSlide,
-                      i = e.totalSlides,
+                      n = e.totalSlides,
                       r = e.visibleSlides,
                       s = e.disableActiveDots,
                       a = e.showAsSelectedForCurrentSlideOnly,
-                      l = e.renderDots;
-                    if (l) {
-                      var o = this.props;
-                      return o.renderDots, l(S(o, Me));
+                      o = e.renderDots;
+                    if (o) {
+                      var l = this.props;
+                      return l.renderDots, o(S(l, je));
                     }
-                    for (var c = [], u = 0; u < i; u += 1) {
+                    for (var c = [], u = 0; u < n; u += 1) {
                       var d = a ? u === t : u >= t && u < t + r,
-                        h = u >= i - r ? i - r : u;
+                        h = u >= n - r ? n - r : u;
                       c.push(
-                        n.createElement(
-                          Ce,
+                        i.createElement(
+                          Ne,
                           { key: u, slide: h, selected: d, disabled: !!s && d },
-                          n.createElement(
+                          i.createElement(
                             "span",
                             { className: O["carousel__dot-group-dot"] },
                             this.props.dotNumbers && u + 1,
@@ -1665,7 +1721,7 @@
                   value: function () {
                     var e = this.props,
                       t = (e.carouselStore, e.children),
-                      i = e.className,
+                      n = e.className,
                       r =
                         (e.currentSlide,
                         e.dotNumbers,
@@ -1674,9 +1730,9 @@
                         e.disableActiveDots,
                         e.showAsSelectedForCurrentSlideOnly,
                         e.renderDots,
-                        S(e, Ee)),
-                      s = O([_e.DotGroup, "carousel__dot-group", i]);
-                    return n.createElement(
+                        S(e, xe)),
+                      s = O([De.DotGroup, "carousel__dot-group", n]);
+                    return i.createElement(
                       "div",
                       u({ className: s }, r),
                       this.renderDots(),
@@ -1687,20 +1743,20 @@
               ]),
               t
             );
-          })(n.Component)),
-          c(le, "propTypes", {
-            children: q.children,
-            className: A.string,
-            currentSlide: A.number.isRequired,
-            carouselStore: A.object.isRequired,
-            totalSlides: A.number.isRequired,
-            visibleSlides: A.number.isRequired,
-            dotNumbers: A.bool,
-            disableActiveDots: A.bool,
-            showAsSelectedForCurrentSlideOnly: A.bool,
-            renderDots: A.func,
+          })(i.Component)),
+          c(de, "propTypes", {
+            children: B.children,
+            className: I.string,
+            currentSlide: I.number.isRequired,
+            carouselStore: I.object.isRequired,
+            totalSlides: I.number.isRequired,
+            visibleSlides: I.number.isRequired,
+            dotNumbers: I.bool,
+            disableActiveDots: I.bool,
+            showAsSelectedForCurrentSlideOnly: I.bool,
+            renderDots: I.func,
           }),
-          c(le, "defaultProps", {
+          c(de, "defaultProps", {
             children: null,
             className: null,
             dotNumbers: !1,
@@ -1708,9 +1764,9 @@
             showAsSelectedForCurrentSlideOnly: !1,
             renderDots: null,
           }),
-          le),
-        Ne =
-          (j(Pe, function (e) {
+          de),
+        Re =
+          (L(Ae, function (e) {
             return {
               currentSlide: e.currentSlide,
               totalSlides: e.totalSlides,
@@ -1718,8 +1774,8 @@
             };
           }),
           { image: "image___xtQGH" }),
-        De = ["src", "alt"],
-        xe = [
+        Le = ["src", "alt"],
+        Ie = [
           "carouselStore",
           "children",
           "className",
@@ -1732,22 +1788,22 @@
           "style",
           "tag",
         ],
-        je = (function (e) {
+        qe = (function (e) {
           function t(e) {
-            var n;
+            var i;
             return (
               a(this, t),
-              ((n = i.call(this, e)).state = { imageStatus: R }),
-              (n.handleImageLoad = n.handleImageLoad.bind(b(n))),
-              (n.handleImageError = n.handleImageError.bind(b(n))),
-              (n.image = null),
-              n
+              ((i = n.call(this, e)).state = { imageStatus: q }),
+              (i.handleImageLoad = i.handleImageLoad.bind(b(i))),
+              (i.handleImageError = i.handleImageError.bind(b(i))),
+              (i.image = null),
+              i
             );
           }
           d(t, e);
-          var i = m(t);
+          var n = m(t);
           return (
-            o(
+            l(
               t,
               [
                 {
@@ -1784,7 +1840,7 @@
                   key: "initImage",
                   value: function () {
                     if (
-                      (this.setState({ imageStatus: R }),
+                      (this.setState({ imageStatus: q }),
                       (this.image = document.createElement("img")),
                       this.image.addEventListener(
                         "load",
@@ -1809,7 +1865,7 @@
                 {
                   key: "handleImageLoad",
                   value: function (e) {
-                    this.setState({ imageStatus: I }),
+                    this.setState({ imageStatus: z }),
                       this.props.hasMasterSpinner &&
                         this.props.carouselStore.masterSpinnerSuccess(
                           this.props.src,
@@ -1820,7 +1876,7 @@
                 {
                   key: "handleImageError",
                   value: function (e) {
-                    this.setState({ imageStatus: L }),
+                    this.setState({ imageStatus: H }),
                       this.props.hasMasterSpinner &&
                         this.props.carouselStore.masterSpinnerError(
                           this.props.src,
@@ -1846,18 +1902,18 @@
                   key: "renderLoading",
                   value: function (e) {
                     var t = this.tempTag(),
-                      i = O([
-                        Ne.image,
-                        Ne.imageLoading,
+                      n = O([
+                        Re.image,
+                        Re.imageLoading,
                         "carousel__image",
                         this.props.isBgImage &&
                           "carousel__image--with-background",
                         "carousel__image--loading",
                         this.props.className,
                       ]);
-                    return n.createElement(
+                    return i.createElement(
                       t,
-                      u({ className: i }, e),
+                      u({ className: n }, e),
                       this.customRender("renderLoading"),
                     );
                   },
@@ -1866,18 +1922,18 @@
                   key: "renderError",
                   value: function (e) {
                     var t = this.tempTag(),
-                      i = O([
-                        Ne.image,
-                        Ne.imageError,
+                      n = O([
+                        Re.image,
+                        Re.imageError,
                         "carousel__image",
                         this.props.isBgImage &&
                           "carousel__image--with-background",
                         "carousel__image--error",
                         this.props.className,
                       ]);
-                    return n.createElement(
+                    return i.createElement(
                       t,
-                      u({ className: i }, e),
+                      u({ className: n }, e),
                       this.customRender("renderError"),
                     );
                   },
@@ -1886,30 +1942,30 @@
                   key: "renderSuccess",
                   value: function (e) {
                     var t = this.props,
-                      i = t.style,
+                      n = t.style,
                       r = t.tag,
                       s = O([
-                        Ne.image,
+                        Re.image,
                         "carousel__image",
                         this.props.isBgImage &&
                           "carousel__image--with-background",
                         "carousel__image--success",
                         this.props.className,
                       ]),
-                      a = u({}, i),
-                      l = e;
+                      a = u({}, n),
+                      o = e;
                     if ("img" !== r) {
-                      var o = e.src;
+                      var l = e.src;
                       e.alt,
-                        (l = S(e, De)),
-                        (a = u({}, i, {
-                          backgroundImage: 'url("'.concat(o, '")'),
+                        (o = S(e, Le)),
+                        (a = u({}, n, {
+                          backgroundImage: 'url("'.concat(l, '")'),
                           backgroundSize: "cover",
                         }));
                     }
-                    return n.createElement(
+                    return i.createElement(
                       r,
-                      u({ className: s, style: a }, l),
+                      u({ className: s, style: a }, o),
                       this.props.children,
                     );
                   },
@@ -1930,13 +1986,13 @@
                         e.renderLoading,
                         e.style,
                         e.tag,
-                        S(e, xe));
+                        S(e, Ie));
                     switch (this.state.imageStatus) {
-                      case R:
+                      case q:
                         return this.renderLoading(t);
-                      case I:
+                      case z:
                         return this.renderSuccess(t);
-                      case L:
+                      case H:
                         return this.renderError(t);
                       default:
                         throw new Error(
@@ -1965,23 +2021,23 @@
             ),
             t
           );
-        })(n.Component);
-      c(je, "propTypes", {
-        alt: A.string,
-        carouselStore: A.object.isRequired,
-        children: q.children,
-        className: A.string,
-        hasMasterSpinner: A.bool.isRequired,
-        isBgImage: q.isBgImage,
-        onError: A.func,
-        onLoad: A.func,
-        renderError: A.func,
-        renderLoading: A.func,
-        src: A.string.isRequired,
-        style: A.object,
-        tag: A.string,
+        })(i.Component);
+      c(qe, "propTypes", {
+        alt: I.string,
+        carouselStore: I.object.isRequired,
+        children: B.children,
+        className: I.string,
+        hasMasterSpinner: I.bool.isRequired,
+        isBgImage: B.isBgImage,
+        onError: I.func,
+        onLoad: I.func,
+        renderError: I.func,
+        renderLoading: I.func,
+        src: I.string.isRequired,
+        style: I.object,
+        tag: I.string,
       }),
-        c(je, "defaultProps", {
+        c(qe, "defaultProps", {
           alt: "",
           children: null,
           className: null,
@@ -1993,48 +2049,48 @@
           style: null,
           tag: "img",
         });
-      var Ae,
-        Re,
-        Ie,
-        Le,
-        qe = j(je, function (e) {
+      var ze,
+        He,
+        Be,
+        Fe,
+        We = L(qe, function (e) {
           return {
             hasMasterSpinner: e.hasMasterSpinner,
             orientation: e.orientation,
           };
         }),
-        ze = "spinner___27VUp",
-        He = ["className"],
-        Be =
+        Ue = "spinner___27VUp",
+        Ye = ["className"],
+        Ve =
           (c(
-            (Ae = (function (e) {
+            (ze = (function (e) {
               function t() {
-                return a(this, t), i.apply(this, arguments);
+                return a(this, t), n.apply(this, arguments);
               }
               d(t, e);
-              var i = m(t);
+              var n = m(t);
               return (
-                o(t, [
+                l(t, [
                   {
                     key: "render",
                     value: function () {
                       var e = this.props,
                         t = e.className,
-                        i = S(e, He),
-                        r = O([ze, "carousel__spinner", t]);
-                      return n.createElement("div", u({ className: r }, i));
+                        n = S(e, Ye),
+                        r = O([Ue, "carousel__spinner", t]);
+                      return i.createElement("div", u({ className: r }, n));
                     },
                   },
                 ]),
                 t
               );
-            })(n.PureComponent)),
+            })(i.PureComponent)),
             "propTypes",
-            { className: A.string },
+            { className: I.string },
           ),
-          c(Ae, "defaultProps", { className: null }),
-          Ae),
-        Fe = {
+          c(ze, "defaultProps", { className: null }),
+          ze),
+        Ze = {
           container: "container___2O72F",
           overlay: "overlay___IV4qY",
           hover: "hover___MYy31",
@@ -2042,7 +2098,7 @@
           loading: "loading___1pvNI",
           imageLoadingSpinnerContainer: "imageLoadingSpinnerContainer___3UIPD",
         },
-        We = [
+        Xe = [
           "alt",
           "bgImageProps",
           "bgImageTag",
@@ -2056,35 +2112,37 @@
           "srcZoomed",
           "tag",
         ],
-        Ue =
-          ((Re = (function (e) {
+        Ke =
+          ((He = (function (e) {
             function t(e) {
-              var n;
+              var i;
               return (
                 a(this, t),
-                ((n = i.call(this, e)).state = {
+                ((i = n.call(this, e)).state = {
                   isImageLoading: !0,
+                  isImageLoadingError: !0,
                   isHovering: !1,
                   isZooming: !1,
                   x: null,
                   y: null,
                   scale: 1,
                 }),
-                (n.tpCache = {}),
-                (n.handleImageComplete = n.handleImageComplete.bind(b(n))),
-                (n.handleOnMouseMove = n.handleOnMouseMove.bind(b(n))),
-                (n.handleOnMouseOut = n.handleOnMouseOut.bind(b(n))),
-                (n.handleOnMouseOver = n.handleOnMouseOver.bind(b(n))),
-                (n.handleOnTouchEnd = n.handleOnTouchEnd.bind(b(n))),
-                (n.handleOnTouchMove = n.handleOnTouchMove.bind(b(n))),
-                (n.handleOnTouchStart = n.handleOnTouchStart.bind(b(n))),
-                n
+                (i.tpCache = {}),
+                (i.handleImageComplete = i.handleImageComplete.bind(b(i))),
+                (i.handleImageLoadError = i.handleImageLoadError.bind(b(i))),
+                (i.handleOnMouseMove = i.handleOnMouseMove.bind(b(i))),
+                (i.handleOnMouseOut = i.handleOnMouseOut.bind(b(i))),
+                (i.handleOnMouseOver = i.handleOnMouseOver.bind(b(i))),
+                (i.handleOnTouchEnd = i.handleOnTouchEnd.bind(b(i))),
+                (i.handleOnTouchMove = i.handleOnTouchMove.bind(b(i))),
+                (i.handleOnTouchStart = i.handleOnTouchStart.bind(b(i))),
+                i
               );
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(
+              l(
                 t,
                 [
                   {
@@ -2104,8 +2162,21 @@
                   },
                   {
                     key: "handleImageComplete",
-                    value: function () {
-                      this.setState({ isImageLoading: !1 });
+                    value: function (e) {
+                      this.setState({ isImageLoading: !1 }),
+                        this.props && this.props.onLoad && this.props.onLoad(e);
+                    },
+                  },
+                  {
+                    key: "handleImageLoadError",
+                    value: function (e) {
+                      this.setState({
+                        isImageLoadingError: !0,
+                        isImageLoading: !1,
+                      }),
+                        this.props &&
+                          this.props.onError &&
+                          this.props.onError(e);
                     },
                   },
                   {
@@ -2126,15 +2197,15 @@
                     key: "handleOnMouseMove",
                     value: function (e) {
                       if (!this.state.isZooming) {
-                        var t = C(
+                        var t = _(
                             (e.nativeEvent.offsetX / e.target.offsetWidth) *
                               100,
                           ),
-                          i = C(
+                          n = _(
                             (e.nativeEvent.offsetY / e.target.offsetHeight) *
                               100,
                           );
-                        this.setState({ x: t, y: i });
+                        this.setState({ x: t, y: n });
                       }
                     },
                   },
@@ -2160,56 +2231,56 @@
                   {
                     key: "handleOnTouchMove",
                     value: function (e) {
-                      var i = this;
+                      var n = this;
                       if (this.state.isZooming) {
                         e.persist();
-                        var n = f(e.targetTouches)
+                        var i = f(e.targetTouches)
                           .filter(function (e) {
-                            return i.tpCache[e.identifier];
+                            return n.tpCache[e.identifier];
                           })
                           .slice(0, 2);
-                        if (2 === n.length) {
+                        if (2 === i.length) {
                           e.stopPropagation();
                           var r = e.target.getBoundingClientRect(),
-                            a = n[0].identifier,
-                            l = n[1].identifier,
-                            o = {
+                            a = i[0].identifier,
+                            o = i[1].identifier,
+                            l = {
                               x1: this.tpCache[a].clientX,
                               y1: this.tpCache[a].clientY,
-                              x2: this.tpCache[l].clientX,
-                              y2: this.tpCache[l].clientY,
+                              x2: this.tpCache[o].clientX,
+                              y2: this.tpCache[o].clientY,
                             };
-                          o.distance = t.distanceBetweenTwoTouches(s({}, o));
-                          var c = t.midpointBetweenTwoTouches(s({}, o));
-                          (o.cx = c.x), (o.cy = c.y);
+                          l.distance = t.distanceBetweenTwoTouches(s({}, l));
+                          var c = t.midpointBetweenTwoTouches(s({}, l));
+                          (l.cx = c.x), (l.cy = c.y);
                           var u = {
-                            x1: n[0].clientX,
-                            y1: n[0].clientY,
-                            x2: n[1].clientX,
-                            y2: n[1].clientY,
+                            x1: i[0].clientX,
+                            y1: i[0].clientY,
+                            x2: i[1].clientX,
+                            y2: i[1].clientY,
                           };
                           u.distance = t.distanceBetweenTwoTouches(s({}, u));
                           var d = t.midpointBetweenTwoTouches(s({}, u));
                           (u.cx = d.x), (u.cy = d.y);
-                          var h = C(
-                              z({
+                          var h = _(
+                              F({
                                 min: 0,
                                 max: 100,
                                 x: ((u.cx - r.left) / r.width) * 100,
                               }),
                             ),
-                            p = C(
-                              z({
+                            p = _(
+                              F({
                                 min: 0,
                                 max: 100,
                                 x: ((u.cy - r.top) / r.height) * 100,
                               }),
                             ),
                             S = function (e) {
-                              return z({
+                              return F({
                                 min: 1,
                                 max: 3,
-                                x: e.scale + (u.distance - o.distance) / 100,
+                                x: e.scale + (u.distance - l.distance) / 100,
                               });
                             };
                           this.setState(function (e) {
@@ -2241,16 +2312,16 @@
                     value: function () {
                       if (this.state.isImageLoading) {
                         var e = this.props.spinner;
-                        return n.createElement(
+                        return i.createElement(
                           "div",
                           {
                             className: O([
-                              Fe.imageLoadingSpinnerContainer,
+                              Ze.imageLoadingSpinnerContainer,
                               "carousel__image-loading-spinner-container",
                             ]),
                           },
                           e && e(),
-                          !e && n.createElement(Be, null),
+                          !e && i.createElement(Ve, null),
                         );
                       }
                       return null;
@@ -2261,27 +2332,27 @@
                     value: function () {
                       var e = this.props,
                         t = e.alt,
-                        i = e.bgImageProps,
+                        n = e.bgImageProps,
                         r = e.bgImageTag,
                         s = (e.carouselStore, e.className),
                         a = e.imageClassName,
-                        l = e.overlayClassName,
-                        o = (e.isPinchZoomEnabled, e.spinner, e.src),
+                        o = e.overlayClassName,
+                        l = (e.isPinchZoomEnabled, e.spinner, e.src),
                         c = e.srcZoomed,
                         d = e.tag,
-                        h = S(e, We),
-                        p = O([Fe.container, s]),
-                        b = O([Fe.image, "carousel__zoom-image", a]),
+                        h = S(e, Xe),
+                        p = O([Ze.container, s]),
+                        b = O([Ze.image, "carousel__zoom-image", a]),
                         m = O([
-                          Fe.overlay,
+                          Ze.overlay,
                           "carousel__zoom-image-overlay",
-                          this.state.isHovering && Fe.hover,
-                          this.state.isZooming && Fe.zoom,
+                          this.state.isHovering && Ze.hover,
+                          this.state.isZooming && Ze.zoom,
                           this.state.isHovering &&
                             "carousel__zoom-image-overlay--hovering",
                           this.state.isZooming &&
                             "carousel__zoom-image-overlay--zooming",
-                          l,
+                          o,
                         ]),
                         f = {};
                       return (
@@ -2293,27 +2364,27 @@
                             this.state.scale,
                             ")",
                           ))),
-                        n.createElement(
+                        i.createElement(
                           d,
                           u({ className: p }, h),
-                          n.createElement(
-                            qe,
+                          i.createElement(
+                            We,
                             u(
                               {
                                 alt: t,
                                 className: b,
                                 tag: r,
-                                src: o,
+                                src: l,
                                 onLoad: this.handleImageComplete,
-                                onError: this.handleImageComplete,
+                                onError: this.handleImageLoadError,
                               },
-                              i,
+                              n,
                             ),
                           ),
-                          n.createElement(qe, {
+                          i.createElement(We, {
                             className: m,
                             tag: "div",
-                            src: c || o,
+                            src: c || l,
                             style: f,
                             isBgImage: !0,
                             onFocus: this.handleOnMouseOver,
@@ -2336,40 +2407,42 @@
                     key: "midpointBetweenTwoTouches",
                     value: function (e) {
                       var t = e.x1,
-                        i = e.y1;
-                      return { x: (t + e.x2) / 2, y: (i + e.y2) / 2 };
+                        n = e.y1;
+                      return { x: (t + e.x2) / 2, y: (n + e.y2) / 2 };
                     },
                   },
                   {
                     key: "distanceBetweenTwoTouches",
                     value: function (e) {
                       var t = e.x1,
-                        i = e.y1,
-                        n = e.x2,
+                        n = e.y1,
+                        i = e.x2,
                         r = e.y2;
-                      return Math.sqrt(Math.pow(n - t, 2) + Math.pow(r - i, 2));
+                      return Math.sqrt(Math.pow(i - t, 2) + Math.pow(r - n, 2));
                     },
                   },
                 ],
               ),
               t
             );
-          })(n.Component)),
-          c(Re, "propTypes", {
-            alt: A.string,
-            bgImageProps: A.object,
-            bgImageTag: A.string,
-            carouselStore: A.object.isRequired,
-            className: A.string,
-            imageClassName: A.string,
-            overlayClassName: A.string,
-            spinner: A.func,
-            src: A.string.isRequired,
-            srcZoomed: A.string,
-            tag: A.string,
-            isPinchZoomEnabled: A.bool,
+          })(i.Component)),
+          c(He, "propTypes", {
+            alt: I.string,
+            bgImageProps: I.object,
+            bgImageTag: I.string,
+            carouselStore: I.object.isRequired,
+            className: I.string,
+            imageClassName: I.string,
+            overlayClassName: I.string,
+            spinner: I.func,
+            onLoad: I.func,
+            onError: I.func,
+            src: I.string.isRequired,
+            srcZoomed: I.string,
+            tag: I.string,
+            isPinchZoomEnabled: I.bool,
           }),
-          c(Re, "defaultProps", {
+          c(He, "defaultProps", {
             alt: void 0,
             bgImageProps: {},
             bgImageTag: "div",
@@ -2378,12 +2451,14 @@
             overlayClassName: null,
             isPinchZoomEnabled: !0,
             spinner: null,
+            onLoad: null,
+            onError: null,
             srcZoomed: null,
             tag: "div",
           }),
-          Re),
-        Ye =
-          (j(Ue, function () {
+          He),
+        $e =
+          (L(Ke, function () {
             return {};
           }),
           {
@@ -2392,7 +2467,7 @@
             slideInner: "slideInner___2mfX9",
             focusRing: "focusRing___1airF",
           }),
-        Ve = [
+        Ge = [
           "ariaLabel",
           "carouselStore",
           "children",
@@ -2410,47 +2485,46 @@
           "orientation",
           "slideSize",
           "style",
-          "tabIndex",
           "tag",
           "totalSlides",
           "visibleSlides",
           "isIntrinsicHeight",
         ],
-        Ze =
-          ((Ie = (function (e) {
+        Qe =
+          ((Be = (function (e) {
             function t(e) {
-              var n;
+              var i;
               return (
                 a(this, t),
-                ((n = i.call(this, e)).handleOnFocus = n.handleOnFocus.bind(
-                  b(n),
+                ((i = n.call(this, e)).handleOnFocus = i.handleOnFocus.bind(
+                  b(i),
                 )),
-                (n.handleOnBlur = n.handleOnBlur.bind(b(n))),
-                (n.state = { focused: !1 }),
-                n
+                (i.handleOnBlur = i.handleOnBlur.bind(b(i))),
+                (i.state = { focused: !1 }),
+                i
               );
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(t, [
+              l(t, [
                 {
                   key: "isVisible",
                   value: function () {
                     var e = this.props,
                       t = e.currentSlide,
-                      i = e.index,
-                      n = e.visibleSlides;
-                    return i >= t && i < t + n;
+                      n = e.index,
+                      i = e.visibleSlides;
+                    return n >= t && n < t + i;
                   },
                 },
                 {
                   key: "handleOnFocus",
                   value: function (e) {
                     var t = this,
-                      i = this.props.onFocus;
+                      n = this.props.onFocus;
                     this.setState({ focused: !0 }, function () {
-                      null !== i && i.call(t, e);
+                      null !== n && n.call(t, e);
                     });
                   },
                 },
@@ -2458,9 +2532,9 @@
                   key: "handleOnBlur",
                   value: function (e) {
                     var t = this,
-                      i = this.props.onBlur;
+                      n = this.props.onBlur;
                     this.setState({ focused: !1 }, function () {
-                      null !== i && i.call(t, e);
+                      null !== n && n.call(t, e);
                     });
                   },
                 },
@@ -2468,9 +2542,9 @@
                   key: "renderFocusRing",
                   value: function () {
                     return this.state.focused
-                      ? n.createElement("div", {
+                      ? i.createElement("div", {
                           className: [
-                            Ye.focusRing,
+                            $e.focusRing,
                             "carousel__slide-focus-ring",
                           ].join(" "),
                         })
@@ -2482,77 +2556,73 @@
                   value: function () {
                     var e = this,
                       t = this.props,
-                      i = t.ariaLabel,
+                      n = t.ariaLabel,
                       r = (t.carouselStore, t.children, t.className),
                       s = t.classNameHidden,
                       a = t.classNameVisible,
-                      l = (t.currentSlide, t.index, t.innerClassName),
-                      o = t.innerTag,
+                      o = (t.currentSlide, t.index, t.innerClassName),
+                      l = t.innerTag,
                       c = t.naturalSlideHeight,
                       d = t.naturalSlideWidth,
                       h = (t.onBlur, t.onFocus, t.orientation),
                       p = t.slideSize,
                       b = t.style,
-                      m = t.tabIndex,
-                      f = t.tag,
-                      v = t.totalSlides,
+                      m = t.tag,
+                      f = t.totalSlides,
                       g = (t.visibleSlides, t.isIntrinsicHeight),
-                      y = S(t, Ve),
-                      k = {};
+                      v = S(t, Ge),
+                      y = {};
                     "horizontal" === h
-                      ? ((k.width = C(p)),
-                        (k.paddingBottom = C((100 * c) / (d * v))))
-                      : ((k.width = C(100)),
-                        (k.paddingBottom = C((100 * c) / d)));
-                    var T = {};
+                      ? ((y.width = _(p)),
+                        (y.paddingBottom = _((100 * c) / (d * f))))
+                      : ((y.width = _(100)),
+                        (y.paddingBottom = _((100 * c) / d)));
+                    var k = {};
                     g &&
                       ("horizontal" === h
-                        ? (k.height = "unset")
-                        : (k.width = "unset"),
-                      (k.paddingBottom = "unset"),
-                      (T.position = "unset"));
-                    var w = u({}, k, b),
-                      _ = this.isVisible(),
-                      M = O([
-                        Ye.slide,
-                        "horizontal" === h && Ye.slideHorizontal,
+                        ? (y.height = "unset")
+                        : (y.width = "unset"),
+                      (y.paddingBottom = "unset"),
+                      (k.position = "unset"));
+                    var T = u({}, y, b),
+                      w = this.isVisible(),
+                      C = O([
+                        $e.slide,
+                        "horizontal" === h && $e.slideHorizontal,
                         "carousel__slide",
                         this.state.focused && "carousel__slide--focused",
-                        _ && a,
-                        _ && "carousel__slide--visible",
-                        !_ && s,
-                        !_ && "carousel__slide--hidden",
+                        w && a,
+                        w && "carousel__slide--visible",
+                        !w && s,
+                        !w && "carousel__slide--hidden",
                         r,
                       ]),
-                      E = O([Ye.slideInner, "carousel__inner-slide", l]),
-                      P = this.isVisible() ? 0 : -1,
-                      N = "number" == typeof m ? m : P;
-                    return n.createElement(
-                      f,
+                      M = O([$e.slideInner, "carousel__inner-slide", o]);
+                    return i.createElement(
+                      m,
                       u(
                         {
                           ref: function (t) {
                             e.tagRef = t;
                           },
-                          tabIndex: N,
                           "aria-selected": this.isVisible(),
-                          "aria-label": i,
-                          role: "option",
+                          "aria-label": n,
+                          role: this.props.role,
                           onFocus: this.handleOnFocus,
                           onBlur: this.handleOnBlur,
-                          className: M,
-                          style: w,
+                          className: C,
+                          style: T,
                         },
-                        y,
+                        v,
                       ),
-                      n.createElement(
-                        o,
+                      i.createElement(
+                        l,
                         {
                           ref: function (t) {
                             e.innerTagRef = t;
                           },
-                          className: E,
-                          style: T,
+                          className: M,
+                          style: k,
                         },
                         this.props.children,
                         this.renderFocusRing(),
@@ -2563,32 +2633,32 @@
               ]),
               t
             );
-          })(n.PureComponent)),
-          c(Ie, "propTypes", {
-            ariaLabel: A.string,
-            carouselStore: A.object,
-            children: q.children,
-            className: A.string,
-            classNameHidden: A.string,
-            classNameVisible: A.string,
-            currentSlide: A.number.isRequired,
-            index: A.number.isRequired,
-            innerClassName: A.string,
-            innerTag: A.string,
-            naturalSlideHeight: A.number.isRequired,
-            naturalSlideWidth: A.number.isRequired,
-            onBlur: A.func,
-            onFocus: A.func,
-            orientation: q.orientation.isRequired,
-            slideSize: A.number.isRequired,
-            style: A.object,
-            tabIndex: A.number,
-            tag: A.string,
-            totalSlides: A.number.isRequired,
-            visibleSlides: A.number.isRequired,
-            isIntrinsicHeight: A.bool,
+          })(i.PureComponent)),
+          c(Be, "propTypes", {
+            ariaLabel: I.string,
+            carouselStore: I.object,
+            children: B.children,
+            className: I.string,
+            classNameHidden: I.string,
+            classNameVisible: I.string,
+            currentSlide: I.number.isRequired,
+            index: I.number.isRequired,
+            innerClassName: I.string,
+            innerTag: I.string,
+            naturalSlideHeight: I.number.isRequired,
+            naturalSlideWidth: I.number.isRequired,
+            onBlur: I.func,
+            onFocus: I.func,
+            orientation: B.orientation.isRequired,
+            slideSize: I.number.isRequired,
+            role: I.string,
+            style: I.object,
+            tag: I.string,
+            totalSlides: I.number.isRequired,
+            visibleSlides: I.number.isRequired,
+            isIntrinsicHeight: I.bool,
           }),
-          c(Ie, "defaultProps", {
+          c(Be, "defaultProps", {
             ariaLabel: "slide",
             carouselStore: null,
             children: null,
@@ -2599,13 +2669,13 @@
             innerTag: "div",
             onBlur: null,
             onFocus: null,
+            role: "option",
             style: {},
-            tabIndex: null,
             tag: "div",
             isIntrinsicHeight: !1,
           }),
-          Ie),
-        Xe = j(Ze, function (e) {
+          Be),
+        Je = L(Qe, function (e) {
           return {
             currentSlide: e.currentSlide,
             naturalSlideHeight: e.naturalSlideHeight,
@@ -2617,12 +2687,12 @@
             isIntrinsicHeight: e.isIntrinsicHeight,
           };
         }),
-        Ke = (function () {
+        et = (function () {
           function e() {
             a(this, e);
           }
           return (
-            o(
+            l(
               e,
               [
                 {
@@ -2637,11 +2707,11 @@
                   key: "scrollParent",
                   value: function (t) {
                     for (
-                      var i = this.parents(t.parentNode, []), n = 0;
-                      n < i.length;
-                      n += 1
+                      var n = this.parents(t.parentNode, []), i = 0;
+                      i < n.length;
+                      i += 1
                     )
-                      if (e.scroll(i[n])) return i[n];
+                      if (e.scroll(n[i])) return n[i];
                     return (
                       document.scrollingElement || document.documentElement
                     );
@@ -2688,8 +2758,9 @@
             e
           );
         })(),
-        Ge = {
+        tt = {
           horizontalSlider: "horizontalSlider___281Ls",
+          touchDisabled: "touchDisabled___2qs4y",
           horizontalSliderTray: "horizontalSliderTray___1L-0W",
           verticalSlider: "verticalSlider___34ZFD",
           verticalSliderTray: "verticalSliderTray___267D8",
@@ -2699,7 +2770,7 @@
           sliderAnimation: "sliderAnimation___300FY",
           masterSpinnerContainer: "masterSpinnerContainer___1Z6hB",
         },
-        Qe = [
+        nt = [
           "ariaLabel",
           "carouselStore",
           "children",
@@ -2728,7 +2799,6 @@
           "slideTraySize",
           "spinner",
           "style",
-          "tabIndex",
           "totalSlides",
           "touchEnabled",
           "trayProps",
@@ -2736,7 +2806,7 @@
           "visibleSlides",
           "isIntrinsicHeight",
         ],
-        $e = [
+        it = [
           "dragStep",
           "step",
           "infinite",
@@ -2745,7 +2815,7 @@
           "horizontalPixelThreshold",
           "verticalPixelThreshold",
         ],
-        Je = [
+        rt = [
           "className",
           "onClickCapture",
           "onMouseDown",
@@ -2756,30 +2826,30 @@
           "ref",
           "style",
         ],
-        et =
-          ((Le = (function (e) {
+        st =
+          ((Fe = (function (e) {
             function t(e) {
-              var n;
+              var i;
               return (
                 a(this, t),
-                ((n = i.call(this, e)).getSliderRef = n.getSliderRef.bind(
-                  b(n),
+                ((i = n.call(this, e)).getSliderRef = i.getSliderRef.bind(
+                  b(i),
                 )),
-                (n.handleDocumentScroll = n.handleDocumentScroll.bind(b(n))),
-                (n.handleOnClickCapture = n.handleOnClickCapture.bind(b(n))),
-                (n.handleOnKeyDown = n.handleOnKeyDown.bind(b(n))),
-                (n.handleOnMouseDown = n.handleOnMouseDown.bind(b(n))),
-                (n.handleOnMouseMove = n.handleOnMouseMove.bind(b(n))),
-                (n.handleOnMouseUp = n.handleOnMouseUp.bind(b(n))),
-                (n.handleOnTouchCancel = n.handleOnTouchCancel.bind(b(n))),
-                (n.handleOnTouchEnd = n.handleOnTouchEnd.bind(b(n))),
-                (n.handleOnTouchMove = n.handleOnTouchMove.bind(b(n))),
-                (n.handleOnTouchStart = n.handleOnTouchStart.bind(b(n))),
-                (n.playBackward = n.playBackward.bind(b(n))),
-                (n.playForward = n.playForward.bind(b(n))),
-                (n.callCallback = n.callCallback.bind(b(n))),
-                (n.blockWindowScroll = n.blockWindowScroll.bind(b(n))),
-                (n.state = {
+                (i.handleDocumentScroll = i.handleDocumentScroll.bind(b(i))),
+                (i.handleOnClickCapture = i.handleOnClickCapture.bind(b(i))),
+                (i.handleOnKeyDown = i.handleOnKeyDown.bind(b(i))),
+                (i.handleOnMouseDown = i.handleOnMouseDown.bind(b(i))),
+                (i.handleOnMouseMove = i.handleOnMouseMove.bind(b(i))),
+                (i.handleOnMouseUp = i.handleOnMouseUp.bind(b(i))),
+                (i.handleOnTouchCancel = i.handleOnTouchCancel.bind(b(i))),
+                (i.handleOnTouchEnd = i.handleOnTouchEnd.bind(b(i))),
+                (i.handleOnTouchMove = i.handleOnTouchMove.bind(b(i))),
+                (i.handleOnTouchStart = i.handleOnTouchStart.bind(b(i))),
+                (i.playBackward = i.playBackward.bind(b(i))),
+                (i.playForward = i.playForward.bind(b(i))),
+                (i.callCallback = i.callCallback.bind(b(i))),
+                (i.blockWindowScroll = i.blockWindowScroll.bind(b(i))),
+                (i.state = {
                   cancelNextClick: !1,
                   deltaX: 0,
                   deltaY: 0,
@@ -2789,19 +2859,19 @@
                   startX: 0,
                   startY: 0,
                 }),
-                (n.interval = null),
-                (n.isDocumentScrolling = null),
-                (n.moveTimer = null),
-                (n.originalOverflow = null),
-                (n.scrollParent = null),
-                (n.scrollStopTimer = null),
-                n
+                (i.interval = null),
+                (i.isDocumentScrolling = null),
+                (i.moveTimer = null),
+                (i.originalOverflow = null),
+                (i.scrollParent = null),
+                (i.scrollStopTimer = null),
+                i
               );
             }
             d(t, e);
-            var i = m(t);
+            var n = m(t);
             return (
-              o(
+              l(
                 t,
                 [
                   {
@@ -2899,16 +2969,24 @@
                   {
                     key: "getSliderRef",
                     value: function (e) {
-                      this.sliderTrayElement = e;
+                      if (((this.sliderTrayElement = e), e && window)) {
+                        var t = e.closest(".carousel");
+                        t &&
+                          (this.rtl =
+                            "rtl" ===
+                            window
+                              .getComputedStyle(t, null)
+                              .getPropertyValue("direction"));
+                      }
                     },
                   },
                   {
                     key: "fakeOnDragStart",
                     value: function (e) {
                       var t = e.screenX,
-                        i = e.screenY,
-                        n = e.touchDrag,
-                        r = void 0 !== n && n,
+                        n = e.screenY,
+                        i = e.touchDrag,
+                        r = void 0 !== i && i,
                         s = e.mouseDrag,
                         a = void 0 !== s && s;
                       this.props.carouselStore.setStoreState({ isPlaying: !1 }),
@@ -2924,30 +3002,31 @@
                           isBeingTouchDragged: r,
                           isBeingMouseDragged: a,
                           startX: t,
-                          startY: i,
+                          startY: n,
                         });
                     },
                   },
                   {
                     key: "fakeOnDragMove",
                     value: function (e, t) {
-                      var i = this;
-                      this.moveTimer = window.requestAnimationFrame.call(
-                        window,
-                        function () {
-                          i.setState(function (n) {
-                            return {
-                              deltaX: e - n.startX,
-                              deltaY: t - n.startY,
-                              preventingVerticalScroll:
-                                Math.abs(t - n.startY) <=
-                                  i.props.verticalPixelThreshold &&
-                                Math.abs(e - n.startX) >=
-                                  i.props.horizontalPixelThreshold,
-                            };
-                          });
-                        },
-                      );
+                      var n = this;
+                      window.cancelAnimationFrame.call(window, this.moveTimer),
+                        (this.moveTimer = window.requestAnimationFrame.call(
+                          window,
+                          function () {
+                            n.setState(function (i) {
+                              return {
+                                deltaX: (e - i.startX) * (n.rtl ? -1 : 1),
+                                deltaY: t - i.startY,
+                                preventingVerticalScroll:
+                                  Math.abs(t - i.startY) <=
+                                    n.props.verticalPixelThreshold &&
+                                  Math.abs(e - i.startX) >=
+                                    n.props.horizontalPixelThreshold,
+                              };
+                            });
+                          },
+                        ));
                     },
                   },
                   {
@@ -2972,8 +3051,8 @@
                   {
                     key: "callCallback",
                     value: function (e, t) {
-                      var i = this.props.trayProps;
-                      i && "function" == typeof i[e] && (t.persist(), i[e](t));
+                      var n = this.props.trayProps;
+                      n && "function" == typeof n[e] && (t.persist(), n[e](t));
                     },
                   },
                   {
@@ -3054,10 +3133,6 @@
                       )
                         this.callCallback("onTouchMove", e);
                       else {
-                        window.cancelAnimationFrame.call(
-                          window,
-                          this.moveTimer,
-                        );
                         var t = e.targetTouches[0];
                         t &&
                           (this.fakeOnDragMove(t.screenX, t.screenY),
@@ -3070,10 +3145,10 @@
                     value: function () {
                       var e = this.props,
                         t = e.currentSlide,
-                        i = e.step,
-                        n = e.totalSlides,
+                        n = e.step,
+                        i = e.totalSlides,
                         r = e.visibleSlides;
-                      return Math.min(t + i, n - r);
+                      return Math.min(t + n, i - r);
                     },
                   },
                   {
@@ -3081,34 +3156,34 @@
                     value: function () {
                       var e = this.props,
                         t = e.currentSlide,
-                        i = e.step;
-                      return Math.max(t - i, 0);
+                        n = e.step;
+                      return Math.max(t - n, 0);
                     },
                   },
                   {
                     key: "handleOnKeyDown",
                     value: function (e) {
                       var t = e.keyCode,
-                        i = this.props,
-                        n = i.carouselStore,
-                        r = i.currentSlide,
-                        s = i.disableKeyboard,
-                        a = i.totalSlides,
-                        l = i.visibleSlides,
-                        o = {};
+                        n = this.props,
+                        i = n.carouselStore,
+                        r = n.currentSlide,
+                        s = n.disableKeyboard,
+                        a = n.totalSlides,
+                        o = n.visibleSlides,
+                        l = {};
                       !0 === s ||
-                        a <= l ||
+                        a <= o ||
                         (37 === t &&
                           (e.preventDefault(),
                           this.focus(),
-                          (o.currentSlide = Math.max(0, r - 1)),
-                          (o.isPlaying = !1)),
+                          (l.currentSlide = Math.max(0, r - 1)),
+                          (l.isPlaying = !1)),
                         39 === t &&
                           (e.preventDefault(),
                           this.focus(),
-                          (o.currentSlide = Math.min(a - l, r + 1)),
-                          (o.isPlaying = !1)),
-                        n.setStoreState(o));
+                          (l.currentSlide = Math.min(a - o, r + 1)),
+                          (l.isPlaying = !1)),
+                        i.setStoreState(l));
                     },
                   },
                   {
@@ -3116,9 +3191,9 @@
                     value: function () {
                       var e = this.props,
                         t = e.carouselStore,
-                        i = e.currentSlide;
+                        n = e.currentSlide;
                       t.setStoreState({
-                        currentSlide: this.forward() === i ? 0 : this.forward(),
+                        currentSlide: this.forward() === n ? 0 : this.forward(),
                       });
                     },
                   },
@@ -3127,12 +3202,12 @@
                     value: function () {
                       var e = this.props,
                         t = e.carouselStore,
-                        i = e.currentSlide,
-                        n = e.totalSlides,
+                        n = e.currentSlide,
+                        i = e.totalSlides,
                         r = e.visibleSlides;
                       t.setStoreState({
                         currentSlide:
-                          this.backward() === i ? n - r : this.backward(),
+                          this.backward() === n ? i - r : this.backward(),
                       });
                     },
                   },
@@ -3156,7 +3231,7 @@
                   {
                     key: "lockScroll",
                     value: function () {
-                      var e = new Ke();
+                      var e = new et();
                       (this.scrollParent = e.getScrollParent(
                         this.sliderTrayElement,
                       )),
@@ -3193,7 +3268,7 @@
                           this.sliderTrayElement.clientHeight,
                           this.props.totalSlides,
                         ),
-                        i = t.slidesMoved(
+                        n = t.slidesMoved(
                           this.props.moveThreshold,
                           this.props.orientation,
                           this.state.deltaX,
@@ -3201,20 +3276,20 @@
                           e,
                           this.props.dragStep,
                         ),
-                        n =
+                        i =
                           this.props.totalSlides -
                           Math.min(
                             this.props.totalSlides,
                             this.props.visibleSlides,
                           ),
-                        r = z({
+                        r = F({
                           min: 0,
-                          max: n,
-                          x: this.props.currentSlide + i,
+                          max: i,
+                          x: this.props.currentSlide + n,
                         });
                       this.props.infinite &&
-                        (this.props.currentSlide >= n && i > 0 && (r = 0),
-                        0 === this.props.currentSlide && i < 0 && (r = n)),
+                        (this.props.currentSlide >= i && n > 0 && (r = 0),
+                        0 === this.props.currentSlide && n < 0 && (r = i)),
                         this.props.carouselStore.setStoreState({
                           currentSlide: r,
                         });
@@ -3250,21 +3325,21 @@
                     value: function () {
                       var e = this.props,
                         t = e.hasMasterSpinner,
-                        i = e.masterSpinnerFinished,
+                        n = e.masterSpinnerFinished,
                         r = e.spinner;
-                      return t && !i
+                      return t && !n
                         ? ("function" == typeof this.props.onMasterSpinner &&
                             this.props.onMasterSpinner(),
-                          n.createElement(
+                          i.createElement(
                             "div",
                             {
                               className: O([
-                                Ge.masterSpinnerContainer,
+                                tt.masterSpinnerContainer,
                                 "carousel__master-spinner-container",
                               ]),
                             },
                             r && r(),
-                            !r && n.createElement(Be, null),
+                            !r && i.createElement(Ve, null),
                           ))
                         : null;
                     },
@@ -3274,12 +3349,12 @@
                     value: function () {
                       var e = this,
                         t = this.props,
-                        i = t.ariaLabel,
+                        n = t.ariaLabel,
                         r = (t.carouselStore, t.children),
                         s = t.className,
                         a = t.classNameAnimation,
-                        l = t.classNameTray,
-                        o = t.classNameTrayWrap,
+                        o = t.classNameTray,
+                        l = t.classNameTrayWrap,
                         c = t.currentSlide,
                         d = t.disableAnimation,
                         h =
@@ -3300,21 +3375,21 @@
                           t.privateUnDisableAnimation,
                           t.slideSize),
                         f = t.slideTraySize,
-                        v = (t.spinner, t.style),
-                        g = t.tabIndex,
-                        y = (t.totalSlides, t.touchEnabled, t.trayProps),
+                        g = (t.spinner, t.style),
+                        v = (t.totalSlides, t.touchEnabled),
+                        y = t.trayProps,
                         k = t.trayTag,
                         T = t.visibleSlides,
                         w = t.isIntrinsicHeight,
-                        _ = S(t, Qe),
-                        M = u({}, v),
+                        C = S(t, nt),
+                        M = u({}, g),
                         E = {};
                       "vertical" === b &&
                         ((E.height = 0),
-                        (E.paddingBottom = C((100 * h * T) / p)),
-                        (E.width = C(100)));
+                        (E.paddingBottom = _((100 * h * T) / p)),
+                        (E.width = _(100)));
                       var P = {},
-                        N = C(m * c * -1);
+                        N = _(m * c * -1);
                       (this.state.isBeingTouchDragged ||
                         this.state.isBeingMouseDragged ||
                         d) &&
@@ -3324,57 +3399,57 @@
                           ? ((P.transform = "translateY("
                               .concat(N, ") translateY(")
                               .concat(this.state.deltaY, "px)")),
-                            (P.width = C(100)),
+                            (P.width = _(100)),
                             (P.flexDirection = "column"))
-                          : ((P.width = C(f)),
+                          : ((P.width = _(f)),
                             (P.transform = "translateX("
                               .concat(N, ") translateX(")
                               .concat(this.state.deltaX, "px)")),
                             (P.flexDirection = "row"));
                       var D = O([
                           "vertical" === b
-                            ? Ge.verticalSlider
-                            : Ge.horizontalSlider,
+                            ? tt.verticalSlider
+                            : tt.horizontalSlider,
+                          !v && tt.touchDisabled,
                           "carousel__slider",
                           "vertical" === b
                             ? "carousel__slider--vertical"
                             : "carousel__slider--horizontal",
                           s,
                         ]),
-                        x = O([
-                          Ge.sliderTrayWrap,
+                        j = O([
+                          tt.sliderTrayWrap,
                           "carousel__slider-tray-wrapper",
                           "vertical" === b
-                            ? Ge.verticalSlideTrayWrap
-                            : Ge.horizontalTrayWrap,
+                            ? tt.verticalSlideTrayWrap
+                            : tt.horizontalTrayWrap,
                           "vertical" === b
                             ? "carousel__slider-tray-wrap--vertical"
                             : "carousel__slider-tray-wrap--horizontal",
-                          o,
+                          l,
                         ]),
-                        j = O([
-                          Ge.sliderTray,
-                          a || Ge.sliderAnimation,
+                        x = O([
+                          tt.sliderTray,
+                          a || tt.sliderAnimation,
                           "carousel__slider-tray",
                           "vertical" === b
-                            ? Ge.verticalTray
-                            : Ge.horizontalTray,
+                            ? tt.verticalTray
+                            : tt.horizontalTray,
                           "vertical" === b
                             ? "carousel__slider-tray--vertical"
                             : "carousel__slider-tray--horizontal",
-                          l,
+                          o,
                         ]),
-                        A = null !== g ? g : 0,
+                        A =
+                          (C.dragStep,
+                          C.step,
+                          C.infinite,
+                          C.preventVerticalScrollOnTouch,
+                          C.preventingVerticalScroll,
+                          C.horizontalPixelThreshold,
+                          C.verticalPixelThreshold,
+                          S(C, it)),
                         R =
-                          (_.dragStep,
-                          _.step,
-                          _.infinite,
-                          _.preventVerticalScrollOnTouch,
-                          _.preventingVerticalScroll,
-                          _.horizontalPixelThreshold,
-                          _.verticalPixelThreshold,
-                          S(_, $e)),
-                        I =
                           (y.className,
                           y.onClickCapture,
                           y.onMouseDown,
@@ -3384,8 +3459,8 @@
                           y.onTouchStart,
                           y.ref,
                           y.style,
-                          S(y, Je));
-                      return n.createElement(
+                          S(y, rt));
+                      return i.createElement(
                         "div",
                         u(
                           {
@@ -3394,23 +3469,22 @@
                             },
                             className: D,
                             "aria-live": "polite",
-                            "aria-label": i,
+                            "aria-label": n,
+                            role: this.props.role,
                             style: M,
-                            tabIndex: A,
                             onKeyDown: this.handleOnKeyDown,
-                            role: "listbox",
                           },
-                          R,
+                          A,
                         ),
-                        n.createElement(
+                        i.createElement(
                           "div",
-                          { className: x, style: E },
-                          n.createElement(
+                          { className: j, style: E },
+                          i.createElement(
                             k,
                             u(
                               {
                                 ref: this.getSliderRef,
-                                className: j,
+                                className: x,
                                 style: P,
                                 onTouchStart: this.handleOnTouchStart,
                                 onTouchMove: this.handleOnTouchMove,
@@ -3419,7 +3493,7 @@
                                 onMouseDown: this.handleOnMouseDown,
                                 onClickCapture: this.handleOnClickCapture,
                               },
-                              I,
+                              R,
                             ),
                             r,
                           ),
@@ -3432,17 +3506,17 @@
                 [
                   {
                     key: "slideSizeInPx",
-                    value: function (e, t, i, n) {
-                      return ("horizontal" === e ? t : i) / n;
+                    value: function (e, t, n, i) {
+                      return ("horizontal" === e ? t : n) / i;
                     },
                   },
                   {
                     key: "slidesMoved",
-                    value: function (e, t, i, n, r, s) {
-                      var a = "horizontal" === t ? i : n,
-                        l = Math.abs(Math.round(a / r)),
-                        o = Math.abs(a) >= r * e ? s : 0,
-                        c = Math.max(o, l);
+                    value: function (e, t, n, i, r, s) {
+                      var a = "horizontal" === t ? n : i,
+                        o = Math.abs(Math.round(a / r)),
+                        l = Math.abs(a) >= r * e ? s : 0,
+                        c = Math.max(l, o);
                       if (a < 0) return c;
                       var u = -c;
                       return 0 === u ? 0 : u;
@@ -3452,61 +3526,61 @@
               ),
               t
             );
-          })(n.Component)),
-          c(Le, "propTypes", {
-            ariaLabel: A.string,
-            carouselStore: A.object.isRequired,
-            children: A.node.isRequired,
-            className: A.string,
-            classNameAnimation: A.string,
-            classNameTray: A.string,
-            classNameTrayWrap: A.string,
-            currentSlide: A.number.isRequired,
-            disableAnimation: A.bool,
-            disableKeyboard: A.bool,
-            dragEnabled: A.bool.isRequired,
-            dragStep: A.number,
-            hasMasterSpinner: A.bool.isRequired,
-            infinite: A.bool,
-            interval: A.number.isRequired,
-            isPageScrollLocked: A.bool.isRequired,
-            isPlaying: A.bool.isRequired,
-            lockOnWindowScroll: A.bool.isRequired,
-            preventVerticalScrollOnTouch: A.bool,
-            horizontalPixelThreshold: A.number,
-            verticalPixelThreshold: A.number,
-            masterSpinnerFinished: A.bool.isRequired,
-            moveThreshold: A.number,
-            naturalSlideHeight: A.number.isRequired,
-            naturalSlideWidth: A.number.isRequired,
-            onMasterSpinner: A.func,
-            orientation: q.orientation.isRequired,
-            playDirection: q.direction.isRequired,
-            privateUnDisableAnimation: A.bool,
-            slideSize: A.number.isRequired,
-            slideTraySize: A.number.isRequired,
-            spinner: A.func,
-            step: A.number.isRequired,
-            style: A.object,
-            tabIndex: A.number,
-            totalSlides: A.number.isRequired,
-            touchEnabled: A.bool.isRequired,
-            trayProps: A.shape({
-              className: A.string,
-              onClickCapture: A.func,
-              onMouseDown: A.func,
-              onTouchCancel: A.func,
-              onTouchEnd: A.func,
-              onTouchMove: A.func,
-              onTouchStart: A.func,
-              ref: A.shape({}),
-              style: A.string,
+          })(i.Component)),
+          c(Fe, "propTypes", {
+            ariaLabel: I.string,
+            carouselStore: I.object.isRequired,
+            children: I.node.isRequired,
+            className: I.string,
+            classNameAnimation: I.string,
+            classNameTray: I.string,
+            classNameTrayWrap: I.string,
+            currentSlide: I.number.isRequired,
+            disableAnimation: I.bool,
+            disableKeyboard: I.bool,
+            dragEnabled: I.bool.isRequired,
+            dragStep: I.number,
+            hasMasterSpinner: I.bool.isRequired,
+            infinite: I.bool,
+            interval: I.number.isRequired,
+            isPageScrollLocked: I.bool.isRequired,
+            isPlaying: I.bool.isRequired,
+            lockOnWindowScroll: I.bool.isRequired,
+            preventVerticalScrollOnTouch: I.bool,
+            horizontalPixelThreshold: I.number,
+            verticalPixelThreshold: I.number,
+            masterSpinnerFinished: I.bool.isRequired,
+            moveThreshold: I.number,
+            naturalSlideHeight: I.number.isRequired,
+            naturalSlideWidth: I.number.isRequired,
+            onMasterSpinner: I.func,
+            orientation: B.orientation.isRequired,
+            playDirection: B.direction.isRequired,
+            privateUnDisableAnimation: I.bool,
+            role: I.string,
+            slideSize: I.number.isRequired,
+            slideTraySize: I.number.isRequired,
+            spinner: I.func,
+            step: I.number.isRequired,
+            style: I.object,
+            totalSlides: I.number.isRequired,
+            touchEnabled: I.bool.isRequired,
+            trayProps: I.shape({
+              className: I.string,
+              onClickCapture: I.func,
+              onMouseDown: I.func,
+              onTouchCancel: I.func,
+              onTouchEnd: I.func,
+              onTouchMove: I.func,
+              onTouchStart: I.func,
+              ref: I.shape({}),
+              style: I.string,
             }),
-            trayTag: A.string,
-            visibleSlides: A.number,
-            isIntrinsicHeight: A.bool,
+            trayTag: I.string,
+            visibleSlides: I.number,
+            isIntrinsicHeight: I.bool,
           }),
-          c(Le, "defaultProps", {
+          c(Fe, "defaultProps", {
             ariaLabel: "slider",
             className: null,
             classNameAnimation: null,
@@ -3522,16 +3596,16 @@
             moveThreshold: 0.1,
             onMasterSpinner: null,
             privateUnDisableAnimation: !1,
+            role: "listbox",
             spinner: null,
             style: {},
-            tabIndex: null,
             trayProps: {},
             trayTag: "div",
             visibleSlides: 1,
             isIntrinsicHeight: !1,
           }),
-          Le),
-        tt = j(et, function (e) {
+          Fe),
+        at = L(st, function (e) {
           return {
             currentSlide: e.currentSlide,
             disableAnimation: e.disableAnimation,

@@ -16,6 +16,7 @@
     },
     14610: (e) => {
       e.exports = {
+        SteamLearnApp: "_1nCX88GAT85mzVjqf741fI",
         Warning: "_5z9Gpqrnb8MyrexjHrJ8k",
         Separator: "mmbGkd5SfnY_qb3LLlZuQ",
         TextButton: "_2USoM1FPK0rrGH1iDQgPr4",
@@ -62,6 +63,7 @@
     },
     97580: (e) => {
       e.exports = {
+        SteamLearnApp: "_1AMRyl-qqTZawQW0o88zz_",
         Warning: "_1RQjS8VTUhHRwMvvgdCkN1",
         Separator: "_19swQsjM6VByYd7UVT9fuC",
         TextButton: "_3-M_z3aGjMV57M9Fx5Gwkp",
@@ -93,6 +95,7 @@
     16282: (e) => {
       e.exports = {
         nodeWidth: "240px",
+        SteamLearnApp: "_3NA66JeuDif6s30azt5InT",
         Warning: "_2zXmpgnS9JepoO7QQkwjn2",
         Separator: "_12clBCXKUWiZjCwae7kpQ7",
         TextButton: "s0iVyD0qpYxZv4Cj-ePgU",
@@ -149,6 +152,7 @@
     },
     90627: (e) => {
       e.exports = {
+        SteamLearnApp: "-nvkfVXhBcD7S0I4eqkPF",
         Warning: "_4AL0jpd9caKhawb-nzaw9",
         Separator: "_3UsNd3BjHd2j49GG7tVHIb",
         TextButton: "_2wwVAlgdlJP2Cht9_AZw-9",
@@ -174,6 +178,7 @@
     },
     87495: (e) => {
       e.exports = {
+        SteamLearnApp: "_38Q02mmN93e7QDKbvVAGBG",
         Warning: "_34i0Gjnp0N1EcZIcc56WAO",
         Separator: "_29kZXmJc7oPg1mWxnCH2O2",
         TextButton: "_2yO-1Bqk-k0s4ySXRbfsrf",
@@ -230,6 +235,7 @@
     },
     98649: (e) => {
       e.exports = {
+        SteamLearnApp: "_3ITV7NYnrvpUsUMYbkBKxc",
         Warning: "_2kVss8dBqwn8P7j96pmOLL",
         Separator: "_2czS-JpsbUTKXItaZQrkQR",
         TextButton: "_1TP61Uz0WjmMODFOOqmcNe",
@@ -255,6 +261,7 @@
     },
     44828: (e) => {
       e.exports = {
+        SteamLearnApp: "_3wShryZzyuCpP-ojAXyw39",
         Warning: "MBuZncepwggxiAkaC_Nck",
         Separator: "_3b4C1MTzxQyEmaGjxPfT0_",
         TextButton: "x7w6XbC6T5a66JhS_6W0y",
@@ -293,6 +300,7 @@
     },
     60748: (e) => {
       e.exports = {
+        SteamLearnApp: "_1R-6xVUxYbZzfQhpIlma4y",
         Warning: "JlgVPomXmIV3L7OIALYsa",
         Separator: "_3Fimt0WfvJW7GpAarLLIBq",
         TextButton: "_3hSDT9jv-uUX6CPMUDaxG_",
@@ -332,6 +340,7 @@
     },
     63858: (e) => {
       e.exports = {
+        SteamLearnApp: "_3H7lE6gXa0bwoAGe36-K0F",
         Warning: "ojjJ9SRkE-ckl-_-CcEOU",
         Separator: "_2olXnAjavAadNt2NwPtf7o",
         TextButton: "_2wUMtuFQwXFi5z0gEDjX9Y",
@@ -369,6 +378,7 @@
     },
     35153: (e) => {
       e.exports = {
+        SteamLearnApp: "_4r3T2gwYNWmJGYqpH_x2l",
         Warning: "_2prrBLfFQLoAypDu32so-b",
         Separator: "_1bgGe8fmFS4SV4dBaVi1FR",
         TextButton: "_3dxVs8B1Ol_8QHeBBTLduP",
@@ -399,6 +409,7 @@
     },
     38455: (e) => {
       e.exports = {
+        SteamLearnApp: "_19Csk6Bf7vVa6ngf7go8bu",
         Warning: "WZW8JJzipPn0JVDWAdi21",
         Separator: "_1RDaZz4hfTn9PPFJLKNheJ",
         TextButton: "_2lXjnKQiPwqAiK6yTDrdzm",
@@ -420,6 +431,7 @@
     },
     78914: (e) => {
       e.exports = {
+        SteamLearnApp: "_1pkOay0KR8iM1KAVjvPLXB",
         Warning: "_392FnVqDhOeyrFXlAu-LcR",
         Separator: "_14Ln1otrzxB8JpUNx7vAn6",
         TextButton: "_2_0va9zuNj7B5Fh11Zxtl4",
@@ -439,6 +451,7 @@
     },
     86493: (e) => {
       e.exports = {
+        SteamLearnApp: "LO6PJ4AwDupbxvOqmvFvt",
         Warning: "_3pURNSEK8qv4tg6kJf67yn",
         Separator: "_2BerNMZKXchOAZqQ7UGd06",
         TextButton: "_3JVbF5s0F7SI1INa_ky0W1",
@@ -510,6 +523,7 @@
     },
     92285: (e) => {
       e.exports = {
+        SteamLearnApp: "_1Q7MNDqSHoOR0k_RrdmlaS",
         Warning: "_29_7253uEsK-MI8_gNRnd",
         Separator: "_2k1-q14BNHaFdaQFxiP87w",
         TextButton: "asdUZsV3WgERMVX3vXjqG",
@@ -523,7 +537,6 @@
         Medium: "_1mg8LE0vIPhG5Zxh6Eu72F",
         Blue: "naj_vJtxdIhHjqk6G2SsL",
         Red: "_2fLZdDv-OOv37B0jDDZQxW",
-        SteamLearnApp: "_1Q7MNDqSHoOR0k_RrdmlaS",
         MainAppContainer: "_1oyJJ86SB6-JkSd6NyaPAy",
         ProjectTabContainer: "_1NMSBccwO5Cu5ny71e3aeE",
         TabAndSpacer: "-ib5B3TS_O8YpuRfQ3_iP",

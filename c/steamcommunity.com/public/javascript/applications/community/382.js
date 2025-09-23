@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "內容已移除",
 	"moderation_resolutionstatus_relabelled": "內容已重新標記",
 	"moderation_resolutionstatus_suspicious": "帳戶因可疑內容而遭到鎖定",
+	"moderation_resolutionstatus_harassmentstrike": "Steam 社群權限已暫停",
 	"moderation_resolutionstatus_unknown": "不明"
 }`);
     },

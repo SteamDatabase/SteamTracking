@@ -162,6 +162,7 @@
 	"moderation_resolutionstatus_removed": "Innehåll borttaget",
 	"moderation_resolutionstatus_relabelled": "Innehåll ommärkt",
 	"moderation_resolutionstatus_suspicious": "Kontot har låsts på grund av misstänkt innehåll",
+	"moderation_resolutionstatus_harassmentstrike": "Dina rättigheter inom Steams gemenskap har tagits bort",
 	"moderation_resolutionstatus_unknown": "Okänt"
 }`);
     },

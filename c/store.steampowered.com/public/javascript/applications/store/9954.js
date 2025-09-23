@@ -96,6 +96,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s spel",
 	"Menu_Search": "Sök",
 	"Menu_Label": "Butiksmeny",
+	"Menu_IncludesXGames": "Innehåller %1$s spel",
 	"ItemFlag_InLibrary": "I BIBLIOTEKET",
 	"ItemFlag_OnWishlist": "PÅ ÖNSKELISTAN",
 	"ItemFlag_InCart": "I KUNDVAGNEN",

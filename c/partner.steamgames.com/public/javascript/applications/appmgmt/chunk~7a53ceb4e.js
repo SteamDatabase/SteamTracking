@@ -83,6 +83,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = ["app_header_capsule", "app_main_capsule"],
         _ = [
@@ -116,6 +117,9 @@
         const _ = Array.isArray(_) ? _ : [_];
         return Math.min(..._);
       }
+      function _(_, _) {
+        return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
+      }
       const _ = [1, 3, 2],
         _ = [1, 3],
         _ = [5, 4],
@@ -142,8 +146,8 @@
             rgAcceptableTypes: _,
           },
           localized_store_app_spotlight: {
-            width: 1100,
-            height: 240,
+            width: 1200,
+            height: 260,
             rgAcceptableTypes: _,
           },
           localized_store_app_spotlight_mobile: {
@@ -260,8 +264,8 @@
             rgAcceptableTypes: _,
           },
           sale_logo: {
-            width: 940,
-            height: 460,
+            width: [1200, 940],
+            height: [460, 460],
             rgAcceptableTypes: _,
           },
           bestofyear_banner: {
@@ -406,20 +410,28 @@
       function _(_, _, _, _) {
         let _ = null;
         if (Array.isArray(_)) {
-          if (((_ = __webpack_require__.findIndex((_) => _ === _)), _ < 0))
+          if (
+            ((_ = __webpack_require__
+              .map((_, _) => (_ === _ ? _ : void 0))
+              .filter((_) => void 0 !== _)),
+            _.length <= 0)
+          )
             return !1;
         } else if (_ !== _) return !1;
         if (Array.isArray(_)) {
-          let _ = _.findIndex((_) => _ === _);
-          if (_ < 0) return !1;
-          if (null !== _ && _ !== _) return !1;
+          const _ = _.map((_, _) => (_ === _ ? _ : void 0)).filter(
+            (_) => void 0 !== _,
+          );
+          if (_.length <= 0) return !1;
+          if (_?.length && !_.some((_) => _.includes(_))) return !1;
         } else if (_ !== _) return !1;
         return !0;
       }
       function _(_, _, _, _) {
         const _ = _[_];
         return (
-          !!_ && (_.bDisableEnforceDimensions ? _ : _(_, _, _.width, _.height))
+          !!_ &&
+          (_.bDisableEnforceDimensions ? !!_ : _(_, _, _.width, _.height))
         );
       }
       function _(_, _, _) {
@@ -616,7 +628,12 @@
           );
           let _ = _(this.width, this.height, _, !1);
           if ((void 0 === _ && (_ = _(this.width, this.height, _, !0)), _)) {
-            const _ = this.m_rgImageOptions.find((_) => _.artworkType == _);
+            const _ = this.m_rgImageOptions.find(
+              (_) =>
+                _.artworkType == _ &&
+                (!_.bEnforceDimensions ||
+                  (_.width == this.width && _.height == this.height)),
+            );
             if (_) return _;
           }
           return this.m_rgImageOptions[0];
@@ -1847,15 +1864,17 @@
         GetDestWidth() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption(),
-            _ = _._[_.artworkType].width;
+          const _ = _.GetCurrentImageOption();
+          if (!_) return 0;
+          const _ = _._[_.artworkType].width;
           return _ ? (0, _._)(_) : 0;
         }
         GetDestHeight() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption(),
-            _ = _._[_.artworkType].height;
+          const _ = _.GetCurrentImageOption();
+          if (!_) return 0;
+          const _ = _._[_.artworkType].height;
           return _ ? (0, _._)(_) : 0;
         }
         GetLargestBoxThatFits(_, _, _, _) {

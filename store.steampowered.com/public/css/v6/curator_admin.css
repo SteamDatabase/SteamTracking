@@ -2,6 +2,7 @@
 .admin_container {
 	display: flex;
 	margin-top: 16px;
+	grid-area: merch;
 }
 
 .admin_container blockquote {

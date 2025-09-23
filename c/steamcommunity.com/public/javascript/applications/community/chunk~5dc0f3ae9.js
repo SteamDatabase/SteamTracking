@@ -11746,6 +11746,7 @@
             _ &&
               200 == _.status &&
               (0, _._)(() => {
+                var _;
                 if (((this.m_bIsLoaded = !0), _.data.rgCurators)) {
                   this.m_setCuratorsFollowed = new Set();
                   for (const _ in _.data.rgCurators)
@@ -11796,9 +11797,10 @@
                   _.BConfirmedAdultContentAgeGate()
                     ? (this.m_setExcludedContentDescriptors = new Set())
                     : (this.m_setExcludedContentDescriptors = new Set(
-                        _.data.rgExcludedContentDescriptorIDs.map((_) =>
-                          Number(_),
-                        ),
+                        null === (_ = _.data.rgExcludedContentDescriptorIDs) ||
+                          void 0 === _
+                          ? void 0
+                          : _.map((_) => Number(_)),
                       )),
                   _.data.rgRecommendedApps &&
                     ((this.m_recAppInOrder = _.data.rgRecommendedApps.map((_) =>
@@ -12176,9 +12178,9 @@
           (_.Press = "press"),
           (_.Steam = "steam"),
           (_.Halloween = "halloween"),
+          (_.Dev_Sales = "sales"),
           (_.Dev_All = "all"),
-          (_.Dev_AssociatedPress = "associated_press"),
-          (_.Dev_Sales = "associated_sales");
+          (_.Dev_AssociatedPress = "associated_press");
       })(_ || (_ = {}));
       new Map();
       var _ = __webpack_require__("chunkid"),
@@ -18994,32 +18996,24 @@
                       fnHoverState: _,
                     },
                     _.createElement(
-                      "a",
+                      "div",
                       {
-                        href: _ ? void 0 : _,
-                        target: _._.IN_CLIENT || _ ? void 0 : "_blank",
-                        onClick: _,
+                        className: _().StoreSaleWidgetImage,
                       },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StoreSaleWidgetImage,
-                        },
+                      _.createElement(_._, {
+                        appids: _,
+                      }),
+                      _.createElement(_, {
+                        info: _,
+                        imageType: "header",
+                      }),
+                      _.createElement(_._, {
+                        storeItem: _,
+                      }),
+                      Boolean(_ && _) &&
                         _.createElement(_._, {
-                          appids: _,
+                          appInfo: _,
                         }),
-                        _.createElement(_, {
-                          info: _,
-                          imageType: "header",
-                        }),
-                        _.createElement(_._, {
-                          storeItem: _,
-                        }),
-                        Boolean(_ && _) &&
-                          _.createElement(_._, {
-                            appInfo: _,
-                          }),
-                      ),
                     ),
                   ),
                 ),
@@ -20719,7 +20713,9 @@
           } = _,
           _ = _
             ? __webpack_require__
-            : (0, _._)(__webpack_require__, _._.STORE_BASE_URL),
+            : __webpack_require__
+              ? (0, _._)(__webpack_require__, _._.STORE_BASE_URL)
+              : void 0,
           _ = (0, _._)(_);
         return _
           ? _.createElement(
@@ -21138,11 +21134,18 @@
         );
       }
       function _(_) {
-        const { _: _, type: __webpack_require__, strExtraParams: _ } = _,
+        const {
+            _: _,
+            type: __webpack_require__,
+            strExtraParams: _,
+            fnOnClickOverride: _,
+            strOverrideURL: _,
+          } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ =
-            "clan" == __webpack_require__
+            _ ||
+            ("clan" == __webpack_require__
               ? (0, _._)(
                   `${_._.STORE_BASE_URL}curator/${_}${_ ? `?${_}` : ""}`,
                   _,
@@ -21152,7 +21155,7 @@
                   `${_._.STORE_BASE_URL}${__webpack_require__}/${_}${_ ? `?${_}` : ""}`,
                   _,
                   _,
-                );
+                ));
         return _.createElement(
           _,
           {
@@ -21162,9 +21165,10 @@
             _._,
             {
               className: _.className,
-              href: _,
-              target: _._.IN_CLIENT ? void 0 : "_blank",
+              href: _ ? void 0 : _,
+              target: _._.IN_CLIENT || _ ? void 0 : "_blank",
               rel: "noopener noreferrer",
+              onClick: _,
             },
             _.children,
           ),

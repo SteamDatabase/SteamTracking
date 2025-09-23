@@ -4138,7 +4138,8 @@
             partnerEventStore: _,
           } = _,
           [_, _, _] = (0, _._)(),
-          _ = _.useCallback((_) => (0, _._)(_, _), [_]);
+          _ = (0, _._)(_),
+          _ = (0, _._)(_);
         return _.createElement(
           _.Fragment,
           null,
@@ -4155,8 +4156,8 @@
                 },
                 _.createElement(_, {
                   closeModal: _,
-                  eventLink: (0, _._)(_),
-                  fnGetSharePageUrl: _,
+                  eventLink: _,
+                  sharePageUrls: _,
                   appid: _.appid,
                   emoticonStore: __webpack_require__,
                   partnerEventStore: _,

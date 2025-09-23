@@ -30,6 +30,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ObjectFit: "_NIZ2fYFBu6WSnEE1H6i3",
+        ObjectPosition: "_3OZ4rrlKzwAYOKP9HdqUrq",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -422,6 +428,7 @@
         Compact: "_2-ehABIcetU1glyLdFi0tY",
         NoFilters: "_3g3vv3kHTPCWqMi7peBikQ",
         SearchSuggestion: "_2gmdvGWIS321h7LVeTHB4w",
+        Collapse: "_3mYz6ZF851JdnrGU3Lo-8",
       };
     },
     chunkid: (module) => {
@@ -663,20 +670,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-          const _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, _.className),
-            },
-            _,
-          );
-          return _.createElement("div", {
-            ref: _,
+      function _(_) {
+        const _ = (0, _._)(
+          {
             ..._,
-          });
-        }),
-        _ = _._;
+            className: _()(_.Box, _.className),
+          },
+          _,
+        );
+        return _.createElement("div", {
+          ..._,
+        });
+      }
+      const _ = _._;
       function _(_) {
         return (0, _._)(_, _._);
       }
@@ -937,13 +943,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
-      function _(_, _) {
-        if ("object" != typeof _) return _;
-        for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
-        return _.initial;
-      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = {
         0: !0,
         1: !0,
@@ -980,7 +981,9 @@
             if (!(_.prop in _)) continue;
             let _ = _[_.prop];
             if (void 0 !== _) {
-              if ((_.responsive && (_ = _(_, _.formFactor)), _.className)) {
+              if (
+                (_.responsive && (_ = (0, _._)(_, _.formFactor)), _.className)
+              ) {
                 if (
                   !_.cssProperty &&
                   !_.dataProperty &&
@@ -1116,6 +1119,23 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
+      function _(_, _) {
+        if ("object" != typeof _) return _;
+        for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
+        return _.initial;
+      }
+      function _(_) {
+        return _(_, (0, _._)());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1162,21 +1182,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-          const { _: __webpack_require__ = "span", ..._ } = _,
-            _ = __webpack_require__;
-          return _.createElement(_, {
-            ref: _,
-            ...(0, _._)(
-              {
-                ..._,
-                className: _.Text,
-              },
-              _,
-            ),
-          });
-        }),
-        _ = [
+      function _(_) {
+        const { _: _ = "span", ref: __webpack_require__, ..._ } = _,
+          _ = _;
+        return _.createElement(_, {
+          ref: __webpack_require__,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _.Text,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
           {
             prop: "weight",
             responsive: !0,
@@ -1221,127 +1241,110 @@
           },
         ];
       var _ = __webpack_require__("chunkid");
-      _.forwardRef(function (_, _) {
-        const { depth: __webpack_require__ } = (0, _.useContext)(_);
-        return _.createElement(
-          _.Provider,
-          {
-            value: {
-              depth: __webpack_require__ + 1,
-            },
-          },
-          _.createElement(_._, {
-            ..._,
-            ref: _,
-          }),
-        );
-      });
       const _ = _.createContext({
         depth: 0,
       });
-      const _ = _.forwardRef(function (_, _) {
-          const { level: __webpack_require__ = "auto" } = _,
-            _ = (function (_, _) {
-              if ("auto" === _ && 0 === _) return "h1";
-              const _ = "auto" === _ ? _.toString() : _;
-              if (!/^[1-6]$/.test(_))
-                return "auto" === _
-                  ? (console.error(
-                      '<Section> nesting has exceeded "h6" for headings.',
-                    ),
-                    "h6")
-                  : (console.error(
-                      `Attempt to render invalid heading level, "${_}".`,
-                    ),
-                    "h1");
-              return "h" + _;
-            })(__webpack_require__, (0, _.useContext)(_).depth);
-          return _.createElement(_, {
-            ref: _,
-            ...(0, _._)(
-              {
-                ..._,
-                className: _.Heading,
-              },
-              _,
-            ),
-          });
-        }),
-        _ = [
-          ..._,
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`HeadingSize-${_}`],
-          },
-        ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.forwardRef(function (_, _) {
-          const _ = (0, _._)(
+      function _(_) {
+        const { level: _ = "auto" } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
+        return _.createElement(_, {
+          ...(0, _._)(
             {
               ..._,
-              className: _()(_.className, _.Flex),
+              className: _.Heading,
             },
             _,
-          );
-          return _.createElement("div", {
-            ref: _,
+          ),
+        });
+      }
+      const _ = [
+        ..._,
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
+        },
+      ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(
+          {
             ..._,
-          });
-        }),
-        _ = [
-          ..._._,
-          {
-            prop: "direction",
-            responsive: !0,
-            className: _.Direction,
-            cssProperty: "--direction",
+            className: _()(_.className, _.Flex),
           },
-          {
-            prop: "justify",
-            responsive: !0,
-            className: _.Justify,
-            cssProperty: (_) => ["--justify", _(_)],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.Align,
-            cssProperty: "--align",
-          },
-          {
-            prop: "gap",
-            responsive: !0,
-            className: _.Gap,
-            cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
-          },
-          {
-            prop: "gapX",
-            responsive: !0,
-            className: _.GapX,
-            cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
-          },
-          {
-            prop: "gapY",
-            responsive: !0,
-            className: _.GapY,
-            cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
-          },
-          {
-            prop: "wrap",
-            responsive: !0,
-            className: _.Wrap,
-            cssProperty: "--wrap",
-          },
-          {
-            prop: "inline",
-            responsive: !0,
-            className: _.Inline,
-          },
-        ];
+          _,
+        );
+        return _.createElement("div", {
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "direction",
+          responsive: !0,
+          className: _.Direction,
+          cssProperty: "--direction",
+        },
+        {
+          prop: "justify",
+          responsive: !0,
+          className: _.Justify,
+          cssProperty: (_) => ["--justify", _(_)],
+        },
+        {
+          prop: "align",
+          responsive: !0,
+          className: _.Align,
+          cssProperty: "--align",
+        },
+        {
+          prop: "gap",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapX",
+          responsive: !0,
+          className: _.GapX,
+          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapY",
+          responsive: !0,
+          className: _.GapY,
+          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
+        },
+        {
+          prop: "wrap",
+          responsive: !0,
+          className: _.Wrap,
+          cssProperty: "--wrap",
+        },
+        {
+          prop: "inline",
+          responsive: !0,
+          className: _.Inline,
+        },
+      ];
       function _(_) {
         return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
       }
@@ -1378,47 +1381,47 @@
         },
       ];
       var _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-          const {
-            variant: __webpack_require__ = "default",
-            size: _ = "2",
-            ..._
-          } = _;
-          return _.createElement("button", {
-            type: "button",
-            ...(0, _._)(
-              {
-                ..._,
-                variant: __webpack_require__,
-                size: _,
-                className: _.Button,
-              },
-              _,
-            ),
-          });
-        }),
-        _ = [
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`Size-${_}`],
-          },
-          {
-            prop: "variant",
-            className: (_) => _[`Variant-${_}`],
-          },
-          {
-            prop: "color",
-            dataProperty: (_) => ["accent-color", `${_}`],
-          },
-        ];
-      var _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
-      const _ = (0, _.forwardRef)(function (_, _) {
+      function _(_) {
         const {
-            variant: __webpack_require__ = "default",
-            size: _ = "2",
+          variant: _ = "default",
+          size: __webpack_require__ = "2",
+          ..._
+        } = _;
+        return _.createElement("button", {
+          type: "button",
+          ...(0, _._)(
+            {
+              ..._,
+              variant: _,
+              size: __webpack_require__,
+              className: _.Button,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`Size-${_}`],
+        },
+        {
+          prop: "variant",
+          className: (_) => _[`Variant-${_}`],
+        },
+        {
+          prop: "color",
+          dataProperty: (_) => ["accent-color", `${_}`],
+        },
+      ];
+      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            variant: _ = "default",
+            size: __webpack_require__ = "2",
             radius: _,
             focusable: _ = !0,
             hoverable: _ = !0,
@@ -1430,11 +1433,10 @@
             hasValue: _,
             ..._
           } = _,
-          _ = "underline" === __webpack_require__ ? "none" : _;
+          _ = "underline" === _ ? "none" : _;
         return _.createElement(
           _,
           {
-            ref: _,
             ..._,
             radius: _,
             className: _()(
@@ -1442,8 +1444,8 @@
               _ && _.Focusable,
               _ && _.Hoverable,
               _ && _.Clickable,
-              _[`Variant-${__webpack_require__}`],
-              _[`Size-${_}`],
+              _[`Variant-${_}`],
+              _[`Size-${__webpack_require__}`],
               _,
             ),
             align: "center",
@@ -1474,54 +1476,56 @@
               _,
             ),
         );
-      });
+      }
       var _ = __webpack_require__("chunkid");
-      const _ = (0, _.forwardRef)(function (_, _) {
-          const { extracted: __webpack_require__, remaining: _ } = (0, _._)(_),
-            {
-              variant: _,
-              size: _,
-              beforeContent: _,
-              afterContent: _,
-              inputRef: _,
-              ..._
-            } = _;
-          return _.createElement(
-            _,
-            {
-              ref: _,
-              ...__webpack_require__,
-              variant: _,
-              size: _,
-              beforeContent: _,
-              afterContent: _,
-              cursor: "text",
-            },
-            _.createElement(_, {
-              ref: _,
-              ..._,
-            }),
-          );
-        }),
-        _ = (0, _.forwardRef)(function (_, _) {
-          const {
-            value: __webpack_require__,
-            onTextChange: _,
-            onChange: _,
-            className: _,
-            ..._
-          } = _;
-          return _.createElement("input", {
+      function _(_) {
+        const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
+          {
+            variant: _,
+            size: _,
+            beforeContent: _,
+            afterContent: _,
+            inputRef: _,
             ref: _,
-            type: "text",
+            ..._
+          } = __webpack_require__;
+        return _.createElement(
+          _,
+          {
+            ref: _,
             ..._,
-            className: _()(_.Reset, _.TextInput, _),
-            value: __webpack_require__ || "",
-            onChange: (_) => {
-              _(_.target.value), _ && _(_);
-            },
-          });
+            variant: _,
+            size: _,
+            beforeContent: _,
+            afterContent: _,
+            cursor: "text",
+          },
+          _.createElement(_, {
+            ref: _,
+            ..._,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+          value: _,
+          onTextChange: __webpack_require__,
+          onChange: _,
+          className: _,
+          ref: _,
+          ..._
+        } = _;
+        return _.createElement("input", {
+          ref: _,
+          type: "text",
+          ..._,
+          className: _()(_.Reset, _.TextInput, _),
+          value: _ || "",
+          onChange: (_) => {
+            __webpack_require__(_.target.value), _ && _(_);
+          },
         });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1532,57 +1536,56 @@
         return _(_ || _, _, _);
       }
       var _ = __webpack_require__("chunkid");
-      const _ = (0, _.forwardRef)(function (_, _) {
-          const { render: __webpack_require__, ..._ } = _;
+      const _ = Object.assign(
+        function (_) {
+          const { render: _, ...__webpack_require__ } = _;
           return _(
-            __webpack_require__,
+            _,
             _.createElement(_._, {
               radius: "sm",
               background: "dull-5",
               className: _.ListBox,
             }),
             {
-              ref: _,
               role: "listbox",
-              ..._,
+              ...__webpack_require__,
             },
           );
-        }),
-        _ = (0, _.forwardRef)(function (_, _) {
-          const {
-              selected: __webpack_require__,
-              focused: _,
-              label: _ = null,
-              render: _,
-              ..._
-            } = _,
-            _ = __webpack_require__ ? "true" : "false",
-            _ = _ ? "true" : void 0;
-          return _(
-            _,
-            _.createElement(_._, {
-              "data-selected": _,
-              "data-focused": _,
-              className: _.ListBoxOption,
-              paddingY: "2",
-              paddingX: "3",
-            }),
-            {
-              ref: _,
-              role: "option",
-              ..._,
-            },
-            {
-              selected: __webpack_require__,
-              focused: _,
-            },
-          );
-        }),
-        _ = Object.assign(_, {
-          Option: _,
-        });
+        },
+        {
+          Option: function (_) {
+            const {
+                selected: _,
+                focused: __webpack_require__,
+                label: _ = null,
+                render: _,
+                ..._
+              } = _,
+              _ = _ ? "true" : "false",
+              _ = __webpack_require__ ? "true" : void 0;
+            return _(
+              _,
+              _.createElement(_._, {
+                "data-selected": _,
+                "data-focused": _,
+                className: _.ListBoxOption,
+                paddingY: "2",
+                paddingX: "3",
+              }),
+              {
+                role: "option",
+                ..._,
+              },
+              {
+                selected: _,
+                focused: __webpack_require__,
+              },
+            );
+          },
+        },
+      );
       var _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(null);
+      (0, _.createContext)(null);
       function _(_) {
         const { gutter: _ = 0 } = _;
         return [
@@ -1608,26 +1611,6 @@
           }),
         ];
       }
-      (0, _.forwardRef)(function (_, _) {
-        const { children: __webpack_require__, className: _ } = _,
-          _ = (0, _.useContext)(_),
-          _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
-        if (!_)
-          return (
-            console.error(
-              "<PopoverPositioner> must be a child of <PopoverRoot>.",
-            ),
-            null
-          );
-        if (!_.open) return null;
-        const _ = _.Children.only(__webpack_require__);
-        return (0, _.cloneElement)(_, {
-          ref: _,
-          style: _.floating.floatingStyles,
-          className: _,
-          ..._.getFloatingProps(),
-        });
-      });
       const _ = (0, _.createContext)(null);
       function _(_) {
         const {
@@ -1711,21 +1694,27 @@
         Anchor: function (_) {
           const { children: _ } = _,
             _ = _.Children.only(_),
-            _ = (0, _.useContext)(_);
-          return _
-            ? _
-              ? (0, _.cloneElement)(_, {
-                  ref: _.floating.refs.setReference,
-                  ..._.getReferenceProps(_.props),
-                })
-              : (console.error(
-                  "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
-                ),
-                null)
-            : null;
+            _ = (0, _.useContext)(_),
+            _ = (0, _._)([
+              null == _ ? void 0 : _.floating.refs.setReference,
+              null == _ ? void 0 : _.props.ref,
+            ]);
+          if (!_) return null;
+          if (!_)
+            return (
+              console.error(
+                "<PopoverListAnchor> must be a child of <PopoverListRoot>.",
+              ),
+              null
+            );
+          const { ref: _, ..._ } = _.props;
+          return (0, _.cloneElement)(_, {
+            ref: _,
+            ..._.getReferenceProps(_),
+          });
         },
-        Positioner: (0, _.forwardRef)(function (_, _) {
-          const { children: __webpack_require__, render: _ } = _,
+        Positioner: function (_) {
+          const { children: _, render: __webpack_require__, ref: _ } = _,
             _ = (0, _.useContext)(_),
             _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
           return _
@@ -1742,7 +1731,7 @@
                       ref: _,
                       style: _.floating.floatingStyles,
                       ..._.getFloatingProps(),
-                      render: _,
+                      render: __webpack_require__,
                     },
                     _.createElement(
                       _._,
@@ -1750,7 +1739,7 @@
                         elementsRef: _.elementsRef,
                         labelsRef: _.labelsRef,
                       },
-                      __webpack_require__,
+                      _,
                     ),
                   ),
                 )
@@ -1759,17 +1748,18 @@
                 "<PopoverListPositioner> must be a child of <PopoverListRoot>.",
               ),
               null);
-        }),
-        Item: (0, _.forwardRef)(function (_, _) {
+        },
+        Item: function (_) {
           const {
-              children: __webpack_require__,
-              label: _,
+              children: _,
+              label: __webpack_require__,
               onSelect: _,
+              ref: _,
               ..._
             } = _,
             _ = (0, _.useContext)(_),
             { ref: _, index: _ } = (0, _._)({
-              label: _,
+              label: __webpack_require__,
             }),
             _ = (0, _._)([_, _]);
           if (!_)
@@ -1801,9 +1791,9 @@
                 ..._,
               }),
             },
-            __webpack_require__,
+            _,
           );
-        }),
+        },
       };
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -2014,6 +2004,32 @@
         return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
       }
       var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(
+          {
+            ..._,
+            className: _.className,
+          },
+          _,
+        );
+        return _.createElement("img", {
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "objectFit",
+          className: _.ObjectFit,
+          cssProperty: "--object-fit",
+        },
+        {
+          prop: "objectPosition",
+          className: _.ObjectPosition,
+          cssProperty: "--object-position",
+        },
+      ];
+      var _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
         const { options: _, ...__webpack_require__ } = _;
@@ -2161,94 +2177,93 @@
           );
         });
       var _ = __webpack_require__("chunkid");
-      const _ = _.forwardRef(function (_, _) {
-          const _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Grid, _.className),
-            },
-            _,
-          );
-          return _.createElement("div", {
-            ref: _,
+      function _(_) {
+        const _ = (0, _._)(
+          {
             ..._,
-          });
-        }),
-        _ = [
-          ..._._,
-          {
-            prop: "display",
-            responsive: !0,
-            className: _.Display,
-            cssProperty: "--grid-display",
+            className: _()(_.Grid, _.className),
           },
-          {
-            prop: "columns",
-            responsive: !0,
-            className: _.Columns,
-            cssProperty: "--grid-columns",
-          },
-          {
-            prop: "rows",
-            responsive: !0,
-            className: _.Rows,
-            cssProperty: "--grid-rows",
-          },
-          {
-            prop: "autoColumns",
-            responsive: !0,
-            className: _.AutoColumns,
-            cssProperty: "--grid-auto-columns",
-          },
-          {
-            prop: "autoRows",
-            responsive: !0,
-            className: _.AutoRows,
-            cssProperty: "--grid-auto-rows",
-          },
-          {
-            prop: "areas",
-            responsive: !0,
-            className: _.Areas,
-            cssProperty: "--grid-areas",
-          },
-          {
-            prop: "flow",
-            responsive: !0,
-            className: _.Flow,
-            cssProperty: "--grid-flow",
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.Align,
-            cssProperty: "--grid-align",
-          },
-          {
-            prop: "justify",
-            responsive: !0,
-            className: _.Justify,
-            cssProperty: "--grid-justify",
-          },
-          {
-            prop: "gap",
-            responsive: !0,
-            className: _.Gap,
-            cssProperty: (_) => ["--grid-gap", `var(--spacing-${_})`],
-          },
-          {
-            prop: "gapX",
-            responsive: !0,
-            className: _.Gap,
-            cssProperty: (_) => ["--grid-gap-x", `var(--spacing-${_})`],
-          },
-          {
-            prop: "gapY",
-            responsive: !0,
-            className: _.Gap,
-            cssProperty: (_) => ["--grid-gap-y", `var(--spacing-${_})`],
-          },
-        ];
+          _,
+        );
+        return _.createElement("div", {
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "display",
+          responsive: !0,
+          className: _.Display,
+          cssProperty: "--grid-display",
+        },
+        {
+          prop: "columns",
+          responsive: !0,
+          className: _.Columns,
+          cssProperty: "--grid-columns",
+        },
+        {
+          prop: "rows",
+          responsive: !0,
+          className: _.Rows,
+          cssProperty: "--grid-rows",
+        },
+        {
+          prop: "autoColumns",
+          responsive: !0,
+          className: _.AutoColumns,
+          cssProperty: "--grid-auto-columns",
+        },
+        {
+          prop: "autoRows",
+          responsive: !0,
+          className: _.AutoRows,
+          cssProperty: "--grid-auto-rows",
+        },
+        {
+          prop: "areas",
+          responsive: !0,
+          className: _.Areas,
+          cssProperty: "--grid-areas",
+        },
+        {
+          prop: "flow",
+          responsive: !0,
+          className: _.Flow,
+          cssProperty: "--grid-flow",
+        },
+        {
+          prop: "align",
+          responsive: !0,
+          className: _.Align,
+          cssProperty: "--grid-align",
+        },
+        {
+          prop: "justify",
+          responsive: !0,
+          className: _.Justify,
+          cssProperty: "--grid-justify",
+        },
+        {
+          prop: "gap",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapX",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap-x", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapY",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--grid-gap-y", `var(--spacing-${_})`],
+        },
+      ];
       var _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(_._, {
@@ -2679,7 +2694,8 @@
         const _ = (0, _.useContext)(_);
         return _ || console.error(`${_} must be used within a <Combobox>!`), _;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
           size: _ = "3",
@@ -2737,7 +2753,6 @@
           className: (_) => _[`Size-${_}`],
         },
       ];
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { value: _, children: __webpack_require__ } = _,
           { onSelectionChange: _ } = _("<SelectTrigger>"),
@@ -2973,7 +2988,6 @@
         const _ = (0, _.useContext)(_);
         return _ || console.error(`${_} must be used within a <Select>!`), _;
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
           _,
@@ -2987,24 +3001,26 @@
           }),
         );
       }
-      const _ = (0, _.forwardRef)(function (_, _) {
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
         const {
-            checked: __webpack_require__,
-            onChange: _,
+            checked: _,
+            onChange: __webpack_require__,
             disabled: _,
             children: _,
+            ref: _,
             ..._
           } = _,
-          _ = "indeterminate" === __webpack_require__,
+          _ = "indeterminate" === _,
           _ = _ ? _ : _,
-          _ = () => _(!!_ || !__webpack_require__);
+          _ = () => __webpack_require__(!!_ || !_);
         return _.createElement(
           _,
           {
             ref: _,
             role: "checkbox",
-            "aria-checked": _ ? "mixed" : __webpack_require__,
-            "data-state": _(__webpack_require__),
+            "aria-checked": _ ? "mixed" : _,
+            "data-state": _(_),
             className: _.Root,
             onClick: _,
             tabIndex: 0,
@@ -3018,14 +3034,14 @@
             {
               className: _.Checkbox,
             },
-            __webpack_require__ &&
+            _ &&
               _.createElement(_, {
                 className: _.Icon,
               }),
           ),
           _,
         );
-      });
+      }
       function _(_) {
         return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
       }
@@ -3111,54 +3127,7 @@
           },
         );
       var _ = __webpack_require__("chunkid");
-      const _ = (0, _.forwardRef)(function (_, _) {
-          const {
-            value: __webpack_require__,
-            onChange: _,
-            size: _ = "2",
-            color: _,
-          } = _;
-          return _.createElement(
-            "div",
-            {
-              ref: _,
-              role: "switch",
-              "aria-checked": !!__webpack_require__,
-              onClick: () => _(!__webpack_require__),
-              onKeyDown: (_) => {
-                (" " !== _.key && "Enter" !== _.key) ||
-                  (_(!__webpack_require__),
-                  _.preventDefault(),
-                  _.stopPropagation());
-              },
-              tabIndex: 0,
-              "data-accent-color": _,
-              ...(0, _._)(
-                {
-                  size: _,
-                  className: _.Root,
-                },
-                _,
-              ),
-            },
-            _.children,
-          );
-        }),
-        _ = (0, _.forwardRef)(function (_, _) {
-          return _.createElement("div", {
-            ref: _,
-            ..._,
-            className: _.Track,
-          });
-        }),
-        _ = (0, _.forwardRef)(function (_, _) {
-          return _.createElement("div", {
-            className: _.Handle,
-            ..._,
-            ref: _,
-          });
-        }),
-        _ = Object.assign(
+      const _ = Object.assign(
           function (_) {
             return _.createElement(
               _.Root,
@@ -3170,9 +3139,52 @@
             );
           },
           {
-            Root: _,
-            Track: _,
-            Handle: _,
+            Root: function (_) {
+              const {
+                value: _,
+                onChange: __webpack_require__,
+                size: _ = "2",
+                color: _,
+                ref: _,
+              } = _;
+              return _.createElement(
+                "div",
+                {
+                  ref: _,
+                  role: "switch",
+                  "aria-checked": !!_,
+                  onClick: () => __webpack_require__(!_),
+                  onKeyDown: (_) => {
+                    (" " !== _.key && "Enter" !== _.key) ||
+                      (__webpack_require__(!_),
+                      _.preventDefault(),
+                      _.stopPropagation());
+                  },
+                  tabIndex: 0,
+                  "data-accent-color": _,
+                  ...(0, _._)(
+                    {
+                      size: _,
+                      className: _.Root,
+                    },
+                    _,
+                  ),
+                },
+                _.children,
+              );
+            },
+            Track: function (_) {
+              return _.createElement("div", {
+                className: _.Track,
+                ..._,
+              });
+            },
+            Handle: function (_) {
+              return _.createElement("div", {
+                className: _.Handle,
+                ..._,
+              });
+            },
           },
         ),
         _ = [
@@ -3201,6 +3213,17 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {};
+      _.english = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 92395, 19));
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
+      (_.Localize = _._), (_.LocalizeReact = _._), (_.LocalizePlural = _._);
+      var _ = __webpack_require__("chunkid");
       const _ = 10;
       function _(_) {
         return _.rgOptions.length >= _
@@ -3299,7 +3322,7 @@
             rgOptions: _,
             selectedValue: _,
             onSelectionChange: (_) => _(_, _),
-            filterPlaceholder: (0, _._)(
+            filterPlaceholder: _.Localize(
               "#AdvancedSearch_FilterGeneric_Placeholder",
             ),
           });
@@ -3859,7 +3882,18 @@
       }
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const { state: _, onStateChange: __webpack_require__ } = _;
+        const {
+            state: _,
+            onStateChange: __webpack_require__,
+            onStateSettled: _,
+          } = _,
+          _ = _
+            ? (_) =>
+                _({
+                  ..._,
+                  price: _,
+                })
+            : void 0;
         return _.createElement(_, {
           price: _.price,
           onPriceChange: (_) =>
@@ -3867,10 +3901,15 @@
               ..._,
               price: _,
             }),
+          onPriceSettled: _,
         });
       }
       function _(_) {
-        const { price: _, onPriceChange: __webpack_require__ } = _,
+        const {
+            price: _,
+            onPriceChange: __webpack_require__,
+            onPriceSettled: _,
+          } = _,
           { maxPrice: _, currency: _ } = (function () {
             const _ = (0, _.useContext)(_);
             return (0, _._)(_, "No filter config provider found!"), _;
@@ -3879,7 +3918,10 @@
           _ = [0, _],
           _ = (_) => (_) => {
             const _ = [..._];
-            (_[_] = _._(_, _[0], _[1])), __webpack_require__(_), _(!0);
+            (_[_] = _._(_, _[0], _[1])),
+              __webpack_require__(_),
+              _ && _(_),
+              _(!0);
           },
           {
             checkMin: _,
@@ -3921,6 +3963,7 @@
             onValueChange: (_) => {
               _(!0), __webpack_require__(_);
             },
+            onValueSettled: _,
           }),
           _ = _(_[0]),
           _ = _(_[1]),
@@ -3947,7 +3990,7 @@
                     currency: _,
                     value: _,
                     onChange: _(0),
-                    placeholder: (0, _._)(
+                    placeholder: _.Localize(
                       "#AdvancedSearch_MinPricePlaceholder",
                     ),
                   }),
@@ -3963,7 +4006,7 @@
                     currency: _,
                     value: _,
                     onChange: _(1),
-                    placeholder: (0, _._)(
+                    placeholder: _.Localize(
                       "#AdvancedSearch_MaxPricePlaceholder",
                     ),
                     defaultValue: _[1],
@@ -4826,7 +4869,7 @@
           );
       }
       function _(_, _) {
-        if ("string" == typeof _) return (0, _._)(_);
+        if ("string" == typeof _) return _.Localize(_);
         const _ = _[_.facet];
         return (
           (0, _._)(
@@ -4933,7 +4976,7 @@
                 const _ = {
                     fieldType: "select",
                     rgOptions: [],
-                    strLabel: (0, _._)("#AdvancedSearch_CustomFilter_Other"),
+                    strLabel: _.Localize("#AdvancedSearch_CustomFilter_Other"),
                   },
                   _ = {
                     ..._,
@@ -5176,7 +5219,7 @@
                   muted: _ && !(_.facets[_.facet] && _.facets[_.facet][_.tag]),
                   title:
                     "CSGO_Type_WeaponCase" === _.tag
-                      ? (0, _._)("#AdvancedSearch_CSContainers_Tooltip")
+                      ? _.Localize("#AdvancedSearch_CSContainers_Tooltip")
                       : void 0,
                 },
                 _.strLabel,
@@ -5490,7 +5533,7 @@
                         gap: "1",
                       },
                       _.createElement(_, null),
-                      (0, _._)("#AdvancedSearch_AppSelect_Clear"),
+                      _.Localize("#AdvancedSearch_AppSelect_Clear"),
                     ),
               ),
             ),
@@ -5591,7 +5634,7 @@
                         gap: "1",
                       },
                       _.createElement(_, null),
-                      (0, _._)("#AdvancedSearch_AppSelect_Clear"),
+                      _.Localize("#AdvancedSearch_AppSelect_Clear"),
                     ),
               ),
             ),
@@ -5601,6 +5644,29 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        Home: (_) => _("", _),
+        AppHome: (_, _) => _(`app/${_}`, _),
+        AdvancedSearch: (_) => _("advancedsearch", _),
+        Search: (_) => _("search", _),
+        Item: (_, _, _) => _(`listings/${_}/${encodeURIComponent(_)}`, _),
+      };
+      function _(_, _ = {}) {
+        const _ = (function (_) {
+          const { pref: _ = "infer", bNewOnly: _ } = _;
+          return (
+            !!_ ||
+            "new" === _ ||
+            ("old" !== _ && location.pathname.includes("/newmarket"))
+          );
+        })(_);
+        let _ = "";
+        (null == _ ? void 0 : _.search) &&
+          (_ = "string" == typeof _.search ? _.search : _.search.toString());
+        const _ = _ ? "newmarket/" : "market/";
+        return `${_._.COMMUNITY_BASE_URL}${_}${_}${_ ? "?" + _ : ""}`;
+      }
+      var _ = __webpack_require__("chunkid");
       const _ = 753,
         _ = 730,
         _ = `${_}_Game`,
@@ -5615,12 +5681,12 @@
             onFilterChange: __webpack_require__,
             config: _,
             preload: _ = {},
-            searchPath: _,
             debugMode: _,
             ..._
           } = _,
           _ = _.bSteamItems,
-          _ = (0, _._)("sm");
+          _ = (0, _._)("sm"),
+          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app;
         return _.createElement(
           _._.Provider,
           {
@@ -5651,14 +5717,15 @@
                       _.preventDefault(), _.stopPropagation();
                     },
                   },
-                  _.createElement(
-                    _,
-                    {
-                      size: "6",
-                      weight: "heavy",
-                    },
-                    (0, _._)("#AdvancedSearch_Heading"),
-                  ),
+                  !_.bNewMarket &&
+                    _.createElement(
+                      _,
+                      {
+                        size: "6",
+                        weight: "heavy",
+                      },
+                      _.Localize("#AdvancedSearch_Heading"),
+                    ),
                   _.createElement(
                     _,
                     {
@@ -5693,8 +5760,13 @@
                         flexGrow: "1",
                       },
                       _.createElement(_, {
-                        filter: _,
-                        onFilterChange: __webpack_require__,
+                        app: _ || void 0,
+                        value: _.strSearch || "",
+                        onTextChange: (_) =>
+                          __webpack_require__({
+                            ..._,
+                            strSearch: _,
+                          }),
                       }),
                     ),
                   ),
@@ -5728,7 +5800,6 @@
                     filter: _,
                     onFilterChange: __webpack_require__,
                     config: _,
-                    searchPath: _,
                   }),
                 ),
               ),
@@ -5737,12 +5808,7 @@
         );
       }
       function _(_) {
-        const {
-            filter: _,
-            onFilterChange: __webpack_require__,
-            config: _,
-            searchPath: _,
-          } = _,
+        const { filter: _, onFilterChange: __webpack_require__, config: _ } = _,
           _ = _.bSteamItems,
           [_, _] = (0, _.useState)(!1),
           _ = _ ? _.filterSteam : _.filterInGame,
@@ -5757,13 +5823,9 @@
               type: "submit",
               onClick: () => {
                 _(!0),
-                  (window.location.href = (function (
-                    _,
-                    _,
-                    __webpack_require__ = "market/search",
-                  ) {
+                  (window.location.href = (function (_, _) {
                     const {
-                      strSearch: _,
+                      strSearch: __webpack_require__,
                       bSteamItems: _,
                       filterInGame: _,
                       filterSteam: _,
@@ -5784,7 +5846,6 @@
                         appid: _,
                         name: "",
                         icon: "",
-                        link: "",
                       }));
                     const {
                         app: _,
@@ -5793,7 +5854,7 @@
                       } = _,
                       _ = new FormData();
                     _ && _.set("appid", _.appid.toString());
-                    _ && _.set("q", _);
+                    __webpack_require__ && _.set("q", __webpack_require__);
                     for (const _ of Object.keys(_))
                       if (_[_])
                         for (const _ of Object.keys(_[_]))
@@ -5803,12 +5864,14 @@
                     _ > _ &&
                       _ < _.maxPrice &&
                       _.append("price_max", _.toString());
-                    return `${_._.COMMUNITY_BASE_URL}${__webpack_require__}?${new URLSearchParams(_).toString()}`;
-                  })(_, _, _));
+                    return _.Search({
+                      search: new URLSearchParams(_),
+                    });
+                  })(_, _));
               },
               disabled: _,
             },
-            (0, _._)("#AdvancedSearch_Search"),
+            _.Localize("#AdvancedSearch_Search"),
           );
         return _.createElement(
           _,
@@ -5818,39 +5881,41 @@
             direction: _ ? "row" : "column",
             gap: "2",
           },
-          _.createElement(
-            _,
-            {
-              gap: "2",
-              align: "center",
-              justify: "between",
-            },
-            _.createElement(
-              "a",
-              {
-                href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
-                className: _.BetaLink,
-              },
-              (0, _._)("#AdvancedSearch_BetaTag"),
-            ),
-            _ &&
-              _.createElement(_, {
-                size: "1",
-                orientation: "vertical",
-                color: "dull-6",
-              }),
-            _.createElement(
-              "span",
-              {
-                onClick: () => {
-                  (0, _._)("marketFiltersBeta", "0", 30),
-                    window.location.reload();
+          _.bNewMarket
+            ? _.createElement("div", null)
+            : _.createElement(
+                _,
+                {
+                  gap: "2",
+                  align: "center",
+                  justify: "between",
                 },
-                className: _.BetaLink,
-              },
-              (0, _._)("#AdvancedSearch_Beta_OptOut"),
-            ),
-          ),
+                _.createElement(
+                  "a",
+                  {
+                    href: `${_._.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
+                    className: _.BetaLink,
+                  },
+                  _.Localize("#AdvancedSearch_BetaTag"),
+                ),
+                _ &&
+                  _.createElement(_, {
+                    size: "1",
+                    orientation: "vertical",
+                    color: "dull-6",
+                  }),
+                _.createElement(
+                  "span",
+                  {
+                    onClick: () => {
+                      (0, _._)("marketFiltersBeta", "0", 30),
+                        window.location.reload();
+                    },
+                    className: _.BetaLink,
+                  },
+                  _.Localize("#AdvancedSearch_Beta_OptOut"),
+                ),
+              ),
           _ &&
             _.createElement(
               _,
@@ -5889,7 +5954,7 @@
                     },
                     disabled: !_,
                   },
-                  (0, _._)("#AdvancedSearch_Reset"),
+                  _.Localize("#AdvancedSearch_Reset"),
                 ),
               _,
             ),
@@ -5897,30 +5962,22 @@
         );
       }
       function _(_) {
-        var _;
-        const { filter: __webpack_require__, onFilterChange: _ } = _,
-          _ = __webpack_require__.bSteamItems
-            ? _
-            : null === (_ = __webpack_require__.filterInGame.app) ||
-                void 0 === _
-              ? void 0
-              : _.appid;
+        const { value: _, onTextChange: __webpack_require__, app: _ } = _;
         return _.createElement(_, {
           radius: "full",
           variant: "inset",
-          appid: _,
-          value: __webpack_require__.strSearch || "",
-          onTextChange: (_) =>
-            _({
-              ...__webpack_require__,
-              strSearch: _,
-            }),
+          app: _,
+          value: _,
+          onTextChange: __webpack_require__,
         });
       }
       function _(_) {
         var _, _;
-        const { value: _, onTextChange: _, appid: _, ..._ } = _,
+        const { value: _, onTextChange: _, app: _, ..._ } = _,
           _ = (0, _._)(),
+          _ = null == _ ? void 0 : _.appid,
+          [_, _] = (0, _.useState)(!0),
+          _ = _ ? _ : void 0,
           _ = (0, _._)({
             queryKey: ["market_search_suggestions", _, _],
             queryFn: async () => {
@@ -5945,16 +6002,62 @@
             onSuggestionSelected: (_) => {
               const _ = _.find((_) => _.market_hash_name === _);
               _ &&
-                (window.location.href =
-                  _._.COMMUNITY_BASE_URL +
-                  `market/listings/${_.app_id}/${encodeURIComponent(_.market_hash_name)}`);
+                (window.location.href = _.Item(_.app_id, _.market_hash_name));
             },
           }),
           _ = _
             ? _.createElement(_, {
                 onClick: () => _.onTextChange(""),
               })
-            : void 0;
+            : void 0,
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          _ = _ || !_,
+          _ = (0, _._)(
+            (0, _.useCallback)((_) => {
+              const _ = _.contentRect.width < 300;
+              _(_);
+            }, []),
+          ),
+          _ =
+            _ && _
+              ? _.createElement(
+                  _,
+                  {
+                    cursor: "pointer",
+                    radius: _.radius || "sm",
+                    background: "dull-4",
+                    paddingY: "1",
+                    paddingX: "2",
+                    align: "center",
+                    gap: "1",
+                    role: "button",
+                    onClick: () => _(!1),
+                    maxWidth: "24ch",
+                  },
+                  _.createElement(_, {
+                    height: "20px",
+                    objectFit: "contain",
+                    src: _.icon,
+                    alt: "",
+                  }),
+                  _.createElement(
+                    _,
+                    {
+                      visible: !_,
+                    },
+                    _.name,
+                  ),
+                  _.createElement(_, null),
+                )
+              : null,
+          _ =
+            _ && _ && !_
+              ? _.Localize(
+                  "#AdvancedSearch_TextSearch_PlaceholderWithApp",
+                  _.name,
+                )
+              : _.Localize("#AdvancedSearch_TextSearch_Placeholder");
         return _.createElement(
           _.Root,
           {
@@ -5962,10 +6065,14 @@
           },
           _.createElement(_.TextInput, {
             value: _,
-            placeholder: (0, _._)("#AdvancedSearch_TextSearch_Placeholder"),
+            placeholder: _,
             ..._,
             afterContent: _,
-            title: (0, _._)("#AdvancedSearch_TextSearch_Tooltip"),
+            title: _.Localize("#AdvancedSearch_TextSearch_Tooltip"),
+            beforeContent: _,
+            ref: _,
+            onFocus: () => _(!0),
+            onBlur: () => _(!1),
           }),
           _.createElement(
             _.Suggestions,
@@ -5983,6 +6090,24 @@
                 searchScore: _.search_score,
               }),
             ),
+          ),
+        );
+      }
+      function _(_) {
+        const { visible: _, children: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.Collapse,
+            "data-visible": !!_,
+          },
+          _.createElement(
+            _,
+            {
+              secondary: !0,
+              truncate: !0,
+            },
+            __webpack_require__,
           ),
         );
       }
@@ -6107,14 +6232,14 @@
               {
                 value: "off",
               },
-              (0, _._)("#AdvancedSearch_TypeSwitch_InGame"),
+              _.Localize("#AdvancedSearch_TypeSwitch_InGame"),
             ),
             _.createElement(
               _.Item,
               {
                 value: "on",
               },
-              (0, _._)("#AdvancedSearch_TypeSwitch_SteamItems"),
+              _.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
             ),
           ),
         );
@@ -6206,7 +6331,6 @@
                     appid: _,
                     name: _.localized_name,
                     icon: `${_._.COMMUNITY_BASE_URL}market/steamitemfiltersicon/${_}`,
-                    link: "",
                   }));
               }
               return {
@@ -6249,7 +6373,7 @@
               {
                 size: "4",
               },
-              (0, _._)("#AdvancedSearch_FacetLoadError"),
+              _.Localize("#AdvancedSearch_FacetLoadError"),
             ),
           );
         const _ = (
@@ -6493,8 +6617,8 @@
               size: "3",
             },
             _
-              ? (0, _._)("#AdvancedSearch_AppSelect_YourGames")
-              : (0, _._)("#AdvancedSearch_AppSelect_PopularGames"),
+              ? _.Localize("#AdvancedSearch_AppSelect_YourGames")
+              : _.Localize("#AdvancedSearch_AppSelect_PopularGames"),
           ),
           _.createElement(
             "div",
@@ -6615,7 +6739,6 @@
                   appid: _,
                   name: _.localized_name,
                   icon: "",
-                  link: "",
                 }),
                 delete _.facets.Game);
             }
@@ -6705,7 +6828,7 @@
               {
                 size: "4",
               },
-              (0, _._)("#AdvancedSearch_FacetLoadError"),
+              _.Localize("#AdvancedSearch_FacetLoadError"),
             ),
           );
         const _ = (function (_) {
@@ -6737,7 +6860,7 @@
                     size: "6",
                     weight: "heavy",
                   },
-                  (0, _._)("#AdvancedSearch_NoFacetsSearch"),
+                  _.Localize("#AdvancedSearch_NoFacetsSearch"),
                 ),
                 _.createElement(
                   _,
@@ -6748,7 +6871,7 @@
                     marginTop: _,
                     size: "4",
                   },
-                  (0, _._)("#AdvancedSearch_NoFacets"),
+                  _.Localize("#AdvancedSearch_NoFacets"),
                 ),
               ),
             )
@@ -6815,6 +6938,7 @@
             selectedApp: _,
             apps: __webpack_require__,
             onSelectionChange: _,
+            size: _ = "3",
           } = _,
           _ = _({
             rgOptions: __webpack_require__,
@@ -6822,7 +6946,7 @@
             onSelectionChange: _,
             filter: (_, _) =>
               _.name.toLocaleLowerCase().includes(_.toLocaleLowerCase()),
-            filterPlaceholder: (0, _._)(
+            filterPlaceholder: _.Localize(
               "#AdvancedSearch_AppSelect_FilterPlaceholder",
             ),
           });
@@ -6830,7 +6954,7 @@
           _.Root,
           {
             state: _,
-            size: "3",
+            size: _,
             radius: "sm",
           },
           _.createElement(
@@ -6839,6 +6963,7 @@
             _ &&
               _.createElement(_, {
                 app: _,
+                size: _,
               }),
             !_ &&
               _.createElement(
@@ -6846,7 +6971,7 @@
                 {
                   weight: "medium",
                 },
-                (0, _._)("#AdvancedSearch_AppSelect_Placeholder"),
+                _.Localize("#AdvancedSearch_AppSelect_Placeholder"),
               ),
           ),
           _.createElement(_.VirtualizedOptions, {
@@ -6863,6 +6988,7 @@
                 _.createElement(_, {
                   app: _,
                   active: _ === _,
+                  size: _,
                 }),
               ),
           }),
@@ -6872,6 +6998,7 @@
         const {
           app: { icon: _, name: __webpack_require__ },
           active: _,
+          size: _,
         } = _;
         return _.createElement(
           _,
@@ -6882,6 +7009,7 @@
           _ &&
             _.createElement(_, {
               icon: _,
+              size: _,
             }),
           _.createElement(
             _,
@@ -6895,31 +7023,31 @@
       }
       const _ = {};
       function _(_) {
-        const { icon: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!!_[_]);
-        return (
-          (0, _.useEffect)(() => {
-            let _ = !0;
-            return (
-              setTimeout(() => {
-                _ && _(!0);
-              }, 100),
-              () => {
-                _ = !1;
-              }
-            );
-          }, []),
-          __webpack_require__ && (_[_] = !0),
-          _.createElement("img", {
-            src: __webpack_require__ ? _ : "",
-            style: {
-              width: "var(--spacing-6)",
-              height: "var(--spacing-6)",
-              visibility: __webpack_require__ ? void 0 : "hidden",
-            },
-            alt: "",
-          })
-        );
+        const { icon: _, size: __webpack_require__ } = _,
+          [_, _] = (0, _.useState)(!!_[_]);
+        (0, _.useEffect)(() => {
+          let _ = !0;
+          return (
+            setTimeout(() => {
+              _ && _(!0);
+            }, 100),
+            () => {
+              _ = !1;
+            }
+          );
+        }, []),
+          _ && (_[_] = !0);
+        const _ = (0, _._)(__webpack_require__),
+          _ = parseInt(_) + 3;
+        return _.createElement("img", {
+          src: _ ? _ : "",
+          style: {
+            width: `var(--spacing-${_})`,
+            height: `var(--spacing-${_})`,
+            visibility: _ ? void 0 : "hidden",
+          },
+          alt: "",
+        });
       }
       function _() {
         return _.createElement(
@@ -6974,6 +7102,68 @@
       }
       function _() {
         return null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (0, _._)(
+          (_) => {
+            if (!_) return;
+            const _ = _(_.ownerDocument.defaultView, (_) => {
+              _(_[0]);
+            });
+            return _.observe(_), () => _.unobserve(_);
+          },
+          [_, _],
+        );
+      }
+      function _(_) {
+        return _(
+          _,
+          _.useCallback(
+            (_, _) =>
+              _.ResizeObserver
+                ? new _.ResizeObserver(_)
+                : ((0, _._)(!1, "ResizeObserver is not available"),
+                  {
+                    observe: () => {},
+                    unobserve: () => {},
+                    disconnect: () => {},
+                  }),
+            [],
+          ),
+        );
+      }
+      function _(_, _) {
+        return _(
+          _,
+          _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
+        );
+      }
+      function _(_, _) {
+        const _ = _.useRef(void 0);
+        return _((_) => {
+          var _, _, _;
+          !_.current &&
+            _.isIntersecting &&
+            (null === (_ = _.onEnter) || void 0 === _ || _.call(_, _)),
+            _.current &&
+              !_.isIntersecting &&
+              (null === (_ = _.onLeave) || void 0 === _ || _.call(_, _)),
+            null === (_ = _.onIntersectionChange) ||
+              void 0 === _ ||
+              _.call(_, _),
+            (_.current = _.isIntersecting);
+        }, _);
       }
     },
   },

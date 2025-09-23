@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "İçerik kaldırıldı",
 	"moderation_resolutionstatus_relabelled": "İçerik yeniden etiketlendi",
 	"moderation_resolutionstatus_suspicious": "Hesap şüpheli içerik nedeniyle kilitlendi.",
+	"moderation_resolutionstatus_harassmentstrike": "Steam Topluluğu ayrıcalıkları askıya alındı",
 	"moderation_resolutionstatus_unknown": "Bilinmiyor"
 }`);
     },

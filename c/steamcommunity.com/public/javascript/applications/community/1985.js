@@ -104,7 +104,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -357,7 +356,7 @@
         render() {
           const {
             eventLink: _,
-            fnGetSharePageUrl: _,
+            sharePageUrls: _,
             appid: __webpack_require__,
             closeModal: _,
             emoticonStore: _,
@@ -393,7 +392,7 @@
                   },
                   _.createElement(_, {
                     eventLink: _,
-                    fnGetSharePageUrl: _,
+                    sharePageUrls: _,
                     fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
                   }),
                 );
@@ -403,7 +402,7 @@
       const _ = (_) => {
         const {
             eventLink: _,
-            fnGetSharePageUrl: __webpack_require__,
+            sharePageUrls: __webpack_require__,
             fnShareOnSteamActivityFeed: _,
           } = _,
           _ = (0, _._)(),
@@ -494,7 +493,7 @@
                   _.createElement(
                     _._,
                     {
-                      href: __webpack_require__(_._.k_eFacebook),
+                      href: __webpack_require__.strFacebookUrl,
                       className: _().ShareBtn,
                     },
                     _.createElement("img", {
@@ -511,7 +510,7 @@
                   _.createElement(
                     _._,
                     {
-                      href: __webpack_require__(_._.k_eTwitter),
+                      href: __webpack_require__.strTwitterUrl,
                       className: _().ShareBtn,
                     },
                     _.createElement("img", {
@@ -528,7 +527,7 @@
                   _.createElement(
                     _._,
                     {
-                      href: __webpack_require__(_._.k_eReddit),
+                      href: __webpack_require__.strRedditUrl,
                       className: _().ShareBtn,
                     },
                     _.createElement("img", {

@@ -163,15 +163,6 @@
         SelectImageContainerBottomRow: "_3Mstp8zLfqhPc0yqJGve2N",
         TextTitle: "_1b_OxtjP85MZc-IlQfnnHR",
         TextSubTitle: "EqzVNygGbzsiBalSQOtWy",
-        ExampleSectionTitle: "_2AePWUSM2FTvZMktTEaX-X",
-        DetailPageExample: "_392ONkyGLvYAILmrlrnvpW",
-        DetailExample: "uCqc1bF2AGYNJFBx59-Hr",
-        DetailExample2: "GgO-cRDrIDxhC9mzlUA9A",
-        MainImageCtn: "_3VYOHJvHihqQTfP1-kMBap",
-        ExampleBodyPosition: "_22lmznAIoce0crmqLa7pEy",
-        ExampleContentCtn: "_3p_W9DK9PwoiZD6BEweFwC",
-        TextBody: "_232HvNzrbXUHJCdNDolSM9",
-        SpotlightExample: "_2m41926NXpqJxJB2dEchHw",
         SelectImageEqualColumns: "Qz0mmjcnBMcs99N6fgVCv",
         SelectImageBlock: "X_wtWeV0nNEF-9Rz0wZRL",
         MainPreviewBlock: "_3kAV8hXf4G70C4tDE8HDjI",
@@ -182,18 +173,34 @@
         SelectImageTitle: "lJEQ6yKHtjwXClD4NVqUY",
         ArtworkSelectorContainer: "_2dxWXru9IFUHuJgzC9_WwQ",
         Title: "_2HiqsrLG8k4zf4raXVygUP",
-        BroadcastPreviewContainer: "_3myaExQMpilWMgxWk6AufV",
-        SaleHeaderPreviewContainer: "_1p6D8VoQJUTyY1LiTsqaQf",
         SaleHeaderExampleCtn: "_2Nwi2WWTWdc4JkMEiHDFFK",
         SaleHeaderExampleCol: "_2s4zAjRHJabF47kK9uxCY6",
         BroadcastPreview: "_3NxzN3dNq98rjVdkyQ9QIH",
-        ExampleSpacer: "_1UuTcQvO7lyRrxjs-QPMdh",
-        MultipleExampleContainer: "_34yXhyKRnXlCQ1XA_DLGAW",
         AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
         BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
         OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
         BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
         UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
+        HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        MultipleExampleContainer: "_3HrpHSdcqC7wp8s07bOS2l",
+        ExampleSectionTitle: "MxxIR01BbdH_tAWmTbjoz",
+        DetailPageExample: "_3Mi3a8sT7hZn6-L_TPm3gr",
+        DetailExample: "TYQJH_hhcEuSRvl75g6GA",
+        DetailExample2: "HQAziOChjZK2M_cKTNA8",
+        MainImageCtn: "_1mRJSs13tWFRJ55fG6WrK8",
+        ExampleBodyPosition: "_2wNW_eWECTcvaYU7AYXXY2",
+        ExampleContentCtn: "_2bAs9Bkh1K8PYVhcLLerfA",
+        TextTitle: "_3fulSVNkgCeQyqxT0FjHOp",
+        TextSubTitle: "_3ThX6fPp7MJY_TrTP_RCRY",
+        TextBody: "_2nG13rbAd05OnozWt7nQWL",
+        SpotlightExample: "_3KsBV1q-e0ZnxgK9GdUiON",
+        ExampleSpacer: "oAEZygc5smKi6PjD-981",
+        BroadcastPreviewContainer: "_3aLcrZxS4I4KVtUF0BdHds",
+        SaleHeaderPreviewContainer: "GORXZE3lrdjE-QiVxXceW",
       };
     },
     chunkid: (module) => {
@@ -1583,6 +1590,17 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        if (!_) return _;
+        const _ = _.lastIndexOf(".");
+        return -1 === _ ? _ : _.substring(0, _);
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -1615,10 +1633,14 @@
           [_, _] = _.useState(!1),
           _ = _.useCallback(
             async (_, _) => {
+              var _, _;
               if (!_) {
                 _(!0);
                 try {
-                  const { language: _ } = (0, _._)(_.file_name, _),
+                  const { language: _ } = (0, _._)(
+                      null !== (_ = _.file_name) && void 0 !== _ ? _ : "",
+                      _,
+                    ),
                     _ = (0, _._)(_, _, _);
                   await _.AddExistingClanImage(_, _);
                 } catch (_) {
@@ -1628,7 +1650,7 @@
                       _.createElement(_._, {
                         strDescription: (0, _._)(
                           "#EventError_Code",
-                          _.strErrorMsg,
+                          null !== (_ = _.strErrorMsg) && void 0 !== _ ? _ : "",
                         ),
                       }),
                       window,
@@ -1669,16 +1691,24 @@
               ]
             : _,
           fnUploadComplete: (_) => {
+            var _;
             for (const _ of _) {
               const _ = _.uploadResult;
-              if (_.origimagehash) {
+              if (null == _ ? void 0 : _.origimagehash) {
                 const _ = (0, _._)(_.language, _, _);
                 _._.AddLocalizeImageUploaded(_.origimagehash, _);
               } else {
-                const _ = _._.GetClanImageByImageHash(_, _.image_hash);
-                if (_) {
+                const _ = _._.GetClanImageByImageHash(
+                    _,
+                    null !== (_ = null == _ ? void 0 : _.image_hash) &&
+                      void 0 !== _
+                      ? _
+                      : "",
+                  ),
+                  _ = _.image.GetCurrentImageOption();
+                if (_ && _) {
                   const _ = (0, _._)(_.image.language, _, _);
-                  _(_.image.GetCurrentImageOption().artworkType, _, _);
+                  _(_.artworkType, _, _);
                 }
               }
             }
@@ -1751,10 +1781,7 @@
             children: _,
           } = _,
           _ = (0, _._)(_),
-          _ =
-            (null == __webpack_require__
-              ? void 0
-              : __webpack_require__.trim().toLowerCase()) || "",
+          _ = __webpack_require__.trim().toLowerCase() || "",
           _ = _._.GetFilteredClanImagesList(_, _);
         if (0 == _.length) {
           const _ = _._.InitFromClanID(_);
@@ -1886,15 +1913,17 @@
                 },
                 draggable: !0,
                 onDragStart: (_) => {
-                  _.dataTransfer.setData("text", _.url),
+                  _.url &&
+                    (_.dataTransfer.setData("text", _.url),
                     _._.GetClanImageDragListener().forEach((_) => {
                       _(_._.InitFromClanID(_.clanAccountID), !0);
-                    });
+                    }));
                 },
                 onDragEnd: (_) => {
-                  _._.GetClanImageDragListener().forEach((_) => {
-                    _(_._.InitFromClanID(_.clanAccountID), !1);
-                  });
+                  _.url &&
+                    _._.GetClanImageDragListener().forEach((_) => {
+                      _(_._.InitFromClanID(_.clanAccountID), !1);
+                    });
                 },
                 onDoubleClick: _,
                 onClick: () => {
@@ -1951,6 +1980,7 @@
                 {
                   className: _().Delete,
                   onClick: (_) => {
+                    var _, _;
                     (0, _._)(
                       _.createElement(
                         _._,
@@ -1969,7 +1999,9 @@
                             null,
                             (0, _._)(
                               "#ImagePicker_DeleteAreYouSure",
-                              _.file_name,
+                              null !== (_ = _.file_name) && void 0 !== _
+                                ? _
+                                : "",
                             ),
                           ),
                           _.createElement("br", null),
@@ -1981,7 +2013,7 @@
                           ),
                         ),
                       ),
-                      (0, _._)(_),
+                      null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
                     );
                   },
                 },
@@ -2011,7 +2043,8 @@
               "span",
               {
                 className: (0, _._)(_().Localized, _().ValveOnlyBackground),
-                onClick: () => __webpack_require__(_),
+                onClick: () =>
+                  null == __webpack_require__ ? void 0 : __webpack_require__(_),
               },
               "(VO) " + (0, _._)("#ImagePicker_Localized"),
             );
@@ -2079,11 +2112,12 @@
           } = _,
           _ = _.useCallback(
             (_, _) => {
-              _(_, _), __webpack_require__();
+              null == _ || _(_, _),
+                null == __webpack_require__ || __webpack_require__();
             },
             [_, __webpack_require__],
           ),
-          [_, _] = _.useState(null);
+          [_, _] = _.useState("");
         return _.createElement(
           _._,
           {
@@ -2137,12 +2171,13 @@
             _: "clanimagedialog",
             type: "button",
             onClick: (_) => {
+              var _;
               (0, _._)(
                 _.createElement(_, {
                   clanSteamID: _,
                   OnClanImageSelected: __webpack_require__,
                 }),
-                (0, _._)(_),
+                null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
               );
             },
           }),
@@ -2470,8 +2505,12 @@
               ? void 0
               : _.map((_) => {
                   let _,
+                    _,
                     _ = null == _ ? void 0 : _.fnGetLabelText();
                   _.bEnforceDimensions && (_ += ` - ${_.width}x${_.height}`),
+                    _.bDeprecated &&
+                      ((_ += ` ${(0, _._)("#ImageUpload_Deprecated")}`),
+                      (_ = (0, _._)("#ImageUpload_Deprecated_ttip"))),
                     (_.BIsOriginalMinimumDimensions(_) &&
                       _.FileTypeMatchesImageTypes(_)) ||
                       (_ = _().ImageDimensionTooSmall);
@@ -2479,6 +2518,7 @@
                     label: _,
                     data: _,
                     strOptionClass: _,
+                    tooltip: _,
                   };
                 }).filter((_) => !_.data.bHiddenFromDropdown),
           _ = {
@@ -2752,7 +2792,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2765,11 +2804,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2778,7 +2813,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2922,19 +2969,481 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
+      function _(_) {
+        var _;
+        const {
+            langOverride: __webpack_require__,
+            artworkType: _,
+            fnOnLanguagePreviewChange: _,
+            clanSteamID: _,
+            eventModel: _,
+            partnerEventStore: _,
+            fnOnRemoveImage: _,
+            fnOnArtworkLangChange: _,
+            realms: _,
+            fnLangHasData: _,
+            fnGetImageHashAndExt: _,
+          } = _,
+          _ = _(_, __webpack_require__),
+          _ = _
+            ? _._.GenerateURLFromHashAndExtAndLang(
+                _,
+                _,
+                _._.full,
+                __webpack_require__,
+              )
+            : "",
+          [_] = (0, _._)(() => [_(_, _)]);
+        return 0 == _
+          ? _.createElement(
+              "div",
+              {
+                className: _().ImagePreviewContainer,
+              },
+              "capsule" === _ &&
+                _.createElement(_, {
+                  imgURL: _._.IMG_URL + "events/defaults/default_img_cover.jpg",
+                  eventModel: _,
+                }),
+              "background" === _ &&
+                _.createElement(_, {
+                  imgURL:
+                    _._.IMG_URL + "events/defaults/default_img_header.jpg",
+                  lang: __webpack_require__,
+                  eventModel: _,
+                  partnerEventStore: _,
+                }),
+              Boolean(
+                [
+                  "spotlight",
+                  "localized_store_app_spotlight",
+                  "localized_store_app_spotlight_mobile",
+                ].includes(_),
+              ) &&
+                _.createElement(_, {
+                  langOverride: __webpack_require__,
+                  artworkType: _,
+                  eventModel: _,
+                }),
+              _.createElement(
+                "div",
+                null,
+                (0, _._)("#EventEditor_ArtworkMissing"),
+              ),
+            )
+          : _.createElement(
+              "div",
+              {
+                className: _().ImagePreviewContainer,
+              },
+              "capsule" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                  eventModel: _,
+                  langOverride: __webpack_require__,
+                }),
+              "background" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                  lang: __webpack_require__,
+                  eventModel: _,
+                  partnerEventStore: _,
+                }),
+              "spotlight" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                  event: _,
+                  lang: __webpack_require__,
+                }),
+              "localized_store_app_spotlight" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                  event: _,
+                  lang: __webpack_require__,
+                }),
+              "localized_store_app_spotlight_mobile" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                  event: _,
+                  lang: __webpack_require__,
+                }),
+              ("broadcast_left" === _ || "broadcast_right" === _) &&
+                _.createElement(_, {
+                  imgURL: _,
+                  side: "broadcast_right" === _ ? "right" : "left",
+                }),
+              "sale_header" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                }),
+              "sale_overlay" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                }),
+              _._.includes(_) &&
+                _.createElement("img", {
+                  className: _.PreviewImg,
+                  src:
+                    null !==
+                      (_ = _._.GetLocalizedImageGroupForEditAsURL(
+                        _,
+                        __webpack_require__,
+                      )) && void 0 !== _
+                      ? _
+                      : void 0,
+                }),
+              "product_banner" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                }),
+              "product_mobile_banner" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                }),
+              "sale_logo" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                }),
+              "bestofyear_banner" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                }),
+              "bestofyear_banner_mobile" === _ &&
+                _.createElement(_, {
+                  imgURL: _,
+                }),
+              _.createElement(_._, {
+                langOverride: __webpack_require__,
+                clanSteamID: _,
+                fnOnLanguagePreviewChange: _,
+                fnOnRemoveImage: _,
+                fnOnArtworkLangChange: _,
+                realms: _,
+                fnLangHasData: _,
+                fnGetImageHash: (_) => {
+                  var _;
+                  return (0, _._)(
+                    null !== (_ = _(_, _)) && void 0 !== _ ? _ : "",
+                  );
+                },
+              }),
+            );
+      }
+      function _(_) {
+        const {
+            artworkType: _,
+            langOverride: __webpack_require__,
+            eventModel: _,
+          } = _,
+          _ = _._[_],
+          _ = _.useMemo(
+            () =>
+              (function (_, _) {
+                const _ = 780,
+                  _ = 200,
+                  _ = document.createElement("canvas");
+                (_.width = _), (_.height = _);
+                const _ = _.getContext("2d"),
+                  _ = 20;
+                for (let _ = 0; _ < _; _ += _)
+                  for (let _ = 0; _ < _; _ += _)
+                    (_.fillStyle =
+                      (_ / _ + _ / _) % 2 == 0 ? "#a405e3ff" : "#000000"),
+                      _.fillRect(_, _, _, _);
+                const _ = _.createLinearGradient(0, 0, _, 0);
+                _.addColorStop(0, "rgba(32,32,32,0.8)"),
+                  _.addColorStop(1, "rgba(60,60,60,0.8)"),
+                  (_.fillStyle = _),
+                  _.fillRect(0, 0, _, _);
+                const _ = _.createRadialGradient(
+                  _ / 2,
+                  _ / 2,
+                  0,
+                  _ / 2,
+                  _ / 2,
+                  Math.max(_, _) / 1.2,
+                );
+                _.addColorStop(0, "rgba(0,0,0,0)"),
+                  _.addColorStop(1, "rgba(0,0,0,0.6)"),
+                  (_.fillStyle = _),
+                  _.fillRect(0, 0, _, _),
+                  (_.fillStyle = "#fff"),
+                  (_.font = "32px Arial"),
+                  (_.textAlign = "center"),
+                  (_.textBaseline = "middle"),
+                  _.fillText(_, _ / 2, _ / 2 - 20),
+                  _ &&
+                    ((_.font = "18px Arial"), _.fillText(_, _ / 2, _ / 2 + 25));
+                return _.toDataURL("image/png");
+              })(
+                (0, _._)("#EventEditor_ArtworkType_" + _),
+                `${_.width} X ${_.height}`,
+              ),
+            [_],
+          );
+        return _.createElement(_, {
+          lang: __webpack_require__,
+          imgURL: _,
+          event: _,
+        });
+      }
+      function _(_) {
+        const {
+            imgURL: _,
+            eventModel: __webpack_require__,
+            langOverride: _,
+          } = _,
+          _ = (0, _._)();
+        return _.createElement(
+          "div",
+          {
+            style: {
+              display: "flex",
+              width: "304px",
+            },
+          },
+          _.createElement(_._, {
+            event: __webpack_require__,
+            imageURLOverride: _,
+            langOverride: null != _ ? _ : _,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            lang: _,
+            eventModel: __webpack_require__,
+            partnerEventStore: _,
+          } = _,
+          [_, _, _, _, _] = (0, _._)(() => [
+            __webpack_require__.GetNameWithFallback(_),
+            __webpack_require__.GetDescriptionWithFallback(_),
+            __webpack_require__.GetSubTitleWithLanguageFallback(_),
+            __webpack_require__.type,
+            __webpack_require__.AnnouncementGID,
+          ]);
+        let _ = _
+          ? _.createElement(_._, {
+              text: _ || "",
+              partnerEventStore: _,
+              showErrorInfo: !1,
+              event: __webpack_require__,
+              languageOverride: _._.Get().GetCurEditLanguage(),
+            })
+          : (0, _._)("#selectimage_display_event_body");
+        return _.createElement(
+          "div",
+          {
+            className: _().MultipleExampleContainer,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().ExampleSectionTitle,
+            },
+            (0, _._)("#selectimage_preview_title_1"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().DetailPageExample, "DetailPageExample"),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().DetailExample,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().MainImageCtn,
+                },
+                _.createElement("img", {
+                  src: _.imgURL,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ExampleBodyPosition,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ExampleContentCtn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().TextTitle,
+                    },
+                    _ || (0, _._)("#selectimage_display_event_title"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().TextSubTitle,
+                    },
+                    _ || (0, _._)("#selectimage_display_event_subtitle"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().TextBody,
+                    },
+                    _,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          12 != _ &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("div", {
+                className: _().ExampleSpacer,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().ExampleSectionTitle,
+                },
+                (0, _._)("#selectimage_preview_title_2"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().DetailPageExample,
+                    "DetailPageExample",
+                  ),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DetailExample2,
+                  },
+                  _.createElement(_._, {
+                    key: _,
+                    event: __webpack_require__,
+                    emoticonStore: _._,
+                    partnerEventStore: _,
+                    headerClassnames: "editor",
+                    langOverride: _,
+                    bDisableBroadcastPlayer: !0,
+                  }),
+                ),
+              ),
+            ),
+        );
+      }
+      const _ = (_) => {
+          var _;
+          const [__webpack_require__] = (0, _._)(_.event.appid, {
+            include_assets: !0,
+          });
+          if (!__webpack_require__) return null;
+          const _ = __webpack_require__.GetName(),
+            _ =
+              null === (_ = __webpack_require__.GetAssets()) || void 0 === _
+                ? void 0
+                : _.GetCommunityIconURL();
+          return _.createElement(
+            "div",
+            {
+              className: _().SpotlightExample,
+            },
+            _.createElement(_, {
+              event: _.event,
+              strDisplayName: null != _ ? _ : "",
+              gameIconUrl: _,
+              spotlightURLOverride: _.imgURL,
+              langOverride: _.lang,
+            }),
+          );
+        },
+        _ = (_) => {
+          const _ = [
+            _.createElement("img", {
+              key: "img",
+              src: _.imgURL,
+            }),
+            _.createElement("div", {
+              key: "video",
+              className: _().BroadcastPreview,
+            }),
+          ];
+          return (
+            "right" === _.side && _.reverse(),
+            _.createElement(
+              "div",
+              {
+                className: _().BroadcastPreviewContainer,
+              },
+              _,
+            )
+          );
+        },
+        _ = (_) =>
+          _.createElement(
+            "div",
+            {
+              className: _().SaleHeaderPreviewContainer,
+            },
+            _.createElement("img", {
+              style: {
+                width: "100%",
+              },
+              src: _.imgURL,
+            }),
+          ),
+        _ = (_) =>
+          _.createElement(
+            "div",
+            {
+              className: _().SaleHeaderPreviewContainer,
+            },
+            _.createElement("img", {
+              style: {
+                width: "100%",
+              },
+              src: _.imgURL,
+            }),
+          ),
+        _ = (_) =>
+          _.createElement(
+            "div",
+            {
+              className: _().SaleHeaderPreviewContainer,
+            },
+            _.createElement("img", {
+              style: {
+                width: "100%",
+              },
+              src: _.imgURL,
+            }),
+          );
+      function _(_, _) {
+        var _, _;
+        let _ = 0;
+        for (let _ = 0; _ < 31; ++_)
+          (null !==
+            (_ = null === (_ = _(_, _)) || void 0 === _ ? void 0 : _.length) &&
+          void 0 !== _
+            ? _
+            : 0) > 0 && (_ += 1);
+        return _;
+      }
       const _ =
         "https://partner.steamgames.com/doc/store/localization#supported_languages";
       var _;
       function _(_) {
+        var _, _;
         const {
             artworkType: _,
-            headerHint: __webpack_require__,
+            headerHint: _,
             appid: _,
             fnToggleMinimize: _,
             realms: _,
@@ -2947,8 +3456,9 @@
           [_] = (0, _._)(_, {
             include_assets: !0,
           });
+        (0, _._)(() => _.BHasTag("vo_marketing_message"));
         let _ = null;
-        __webpack_require__ === _.k_Required
+        _ === _.k_Required
           ? (_ = _.createElement(
               "span",
               {
@@ -2958,7 +3468,7 @@
               },
               (0, _._)("#EventEditor_Required"),
             ))
-          : __webpack_require__ === _.k_Suggested
+          : _ === _.k_Suggested
             ? (_ = _.createElement(
                 "span",
                 {
@@ -2968,7 +3478,7 @@
                 },
                 (0, _._)("#EventEditor_Suggested"),
               ))
-            : __webpack_require__ === _.k_Requested &&
+            : _ === _.k_Requested &&
               (_ = _.createElement(
                 "span",
                 {
@@ -2983,6 +3493,7 @@
           ? (_ = _.createElement(
               _.Fragment,
               null,
+              _.createElement(_, null),
               _.createElement(
                 "p",
                 null,
@@ -3131,7 +3642,11 @@
                             null,
                             (0, _._)("#selectimage_tip_hero_1"),
                           ),
-                          !Boolean(_.GetAssets().GetLibraryHeroURL()) &&
+                          !Boolean(
+                            null === (_ = _.GetAssets()) || void 0 === _
+                              ? void 0
+                              : _.GetLibraryHeroURL(),
+                          ) &&
                             _.createElement(
                               "p",
                               {
@@ -3404,11 +3919,12 @@
                   _._,
                   {
                     onClick: (_) => {
+                      var _;
                       (0, _._)(
                         _.createElement(_, {
                           fnRemoveAllArtwork: _.fnRemoveAllArtwork,
                         }),
-                        (0, _._)(_),
+                        null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
                       );
                     },
                   },
@@ -3418,7 +3934,7 @@
           !_.bIsMinimized &&
             _.createElement(_, {
               clanSteamID: _.clanSteamID,
-              title: _.title,
+              title: null !== (_ = _.title) && void 0 !== _ ? _ : "",
               eventModel: _,
               artworkType: _.artworkType,
               realms: _,
@@ -3436,15 +3952,11 @@
           strTitle: (0, _._)("#Sale_RemoveAll"),
           strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
           onOK: () => {
-            _(), __webpack_require__();
+            null == _ || _(),
+              null == __webpack_require__ || __webpack_require__();
           },
           onCancel: __webpack_require__,
         });
-      }
-      function _(_) {
-        if (!_) return _;
-        const _ = _.lastIndexOf(".");
-        return -1 === _ ? _ : _.substring(0, _);
       }
       function _(_) {
         const {
@@ -3463,7 +3975,7 @@
           [_, _] = _.useState(new Array()),
           _ = _.useCallback(
             (_, _, _) => {
-              let _;
+              let _ = [];
               _.find((_) => _.clanImage.imageid == _.imageid)
                 ? (_ = _.map((_) =>
                     _.clanImage.imageid == _.imageid
@@ -3485,7 +3997,9 @@
           _ = _.useCallback(
             (_, _, _) => {
               (0, _._)(() => {
-                _(_(_, _)) == _.image_hash && _(_, null, _),
+                var _;
+                (0, _._)(null !== (_ = _(_, _)) && void 0 !== _ ? _ : "") ==
+                  _.image_hash && _(_, null, _),
                   _(_, _, _),
                   _(_, _, !1);
               });
@@ -3583,7 +4097,8 @@
           const { list: _ } = this.props;
           return (
             _.forEach((_) => {
-              const { clanImage: __webpack_require__, lang: _ } = _;
+              var _;
+              const { clanImage: _, lang: _ } = _;
               let _ = (0, _._)("#Language_" + (0, _._)(_));
               _.push(
                 _.createElement(
@@ -3597,15 +4112,14 @@
                     null,
                     (0, _._)(
                       "#ImageUpload_Success_Mapping",
-                      __webpack_require__.file_name,
+                      null !== (_ = _.file_name) && void 0 !== _ ? _ : "",
                       _,
                     ),
                   ),
                   _.createElement(
                     "a",
                     {
-                      onClick: () =>
-                        this.ShowLangChangeDialog(__webpack_require__, _),
+                      onClick: () => this.ShowLangChangeDialog(_, _),
                     },
                     (0, _._)("#ImageUpload_Success_Mapping_Change"),
                   ),
@@ -3629,401 +4143,27 @@
         }
       };
       function _(_) {
-        const {
-            imgURL: _,
-            eventModel: __webpack_require__,
-            langOverride: _,
-          } = _,
-          _ = (0, _._)();
         return _.createElement(
           "div",
           {
-            style: {
-              display: "flex",
-              width: "304px",
-            },
+            className: _().HighlightBox,
           },
-          _.createElement(_._, {
-            event: __webpack_require__,
-            imageURLOverride: _,
-            langOverride: null != _ ? _ : _,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            lang: _,
-            eventModel: __webpack_require__,
-            partnerEventStore: _,
-          } = _,
-          [_, _, _, _, _] = (0, _._)(() => [
-            __webpack_require__.GetNameWithFallback(_),
-            __webpack_require__.GetDescriptionWithFallback(_),
-            __webpack_require__.GetSubTitleWithLanguageFallback(_),
-            __webpack_require__.type,
-            __webpack_require__.AnnouncementGID,
-          ]);
-        let _ = _
-          ? _.createElement(_._, {
-              text: _ || "",
-              partnerEventStore: _,
-              showErrorInfo: !1,
-              event: __webpack_require__,
-              languageOverride: _._.Get().GetCurEditLanguage(),
-            })
-          : (0, _._)("#selectimage_display_event_body");
-        return _.createElement(
-          "div",
-          {
-            className: _().MultipleExampleContainer,
-          },
+          _.createElement("p", null, (0, _._)("#PartnerEvent_MM_ArtworkTip")),
           _.createElement(
-            "div",
-            {
-              className: _().ExampleSectionTitle,
-            },
-            (0, _._)("#selectimage_preview_title_1"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().DetailPageExample, "DetailPageExample"),
-            },
+            "p",
+            null,
             _.createElement(
-              "div",
+              "a",
               {
-                className: _().DetailExample,
+                href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _().MainImageCtn,
-                },
-                _.createElement("img", {
-                  src: _.imgURL,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().ExampleBodyPosition,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ExampleContentCtn,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextTitle,
-                    },
-                    _ || (0, _._)("#selectimage_display_event_title"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextSubTitle,
-                    },
-                    _ || (0, _._)("#selectimage_display_event_subtitle"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().TextBody,
-                    },
-                    _,
-                  ),
-                ),
-              ),
+              (0, _._)("#PartnerEvent_MM_LearnMore"),
             ),
           ),
-          12 != _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement("div", {
-                className: _().ExampleSpacer,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().ExampleSectionTitle,
-                },
-                (0, _._)("#selectimage_preview_title_2"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().DetailPageExample,
-                    "DetailPageExample",
-                  ),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().DetailExample2,
-                  },
-                  _.createElement(_._, {
-                    key: _,
-                    event: __webpack_require__,
-                    emoticonStore: _._,
-                    partnerEventStore: _,
-                    headerClassnames: "editor",
-                    langOverride: _,
-                    bDisableBroadcastPlayer: !0,
-                  }),
-                ),
-              ),
-            ),
         );
       }
       (0, _._)([_._], _.prototype, "ShowLangChangeDialog", null),
         (_ = (0, _._)([_._], _));
-      const _ = (_) => {
-          const [_] = (0, _._)(_.event.appid, {
-            include_assets: !0,
-          });
-          if (!_) return null;
-          const _ = _.GetName(),
-            _ = _.GetAssets().GetCommunityIconURL();
-          return _.createElement(
-            "div",
-            {
-              className: _().SpotlightExample,
-            },
-            _.createElement(_, {
-              event: _.event,
-              strDisplayName: _,
-              gameIconUrl: _,
-              spotlightURLOverride: _.imgURL,
-              langOverride: _.lang,
-            }),
-          );
-        },
-        _ = (_) => {
-          const _ = [
-            _.createElement("img", {
-              key: "img",
-              src: _.imgURL,
-            }),
-            _.createElement("div", {
-              key: "video",
-              className: _().BroadcastPreview,
-            }),
-          ];
-          return (
-            "right" === _.side && _.reverse(),
-            _.createElement(
-              "div",
-              {
-                className: _().BroadcastPreviewContainer,
-              },
-              _,
-            )
-          );
-        },
-        _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
-              style: {
-                width: "100%",
-              },
-              src: _.imgURL,
-            }),
-          ),
-        _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
-              style: {
-                width: "100%",
-              },
-              src: _.imgURL,
-            }),
-          ),
-        _ = (_) =>
-          _.createElement(
-            "div",
-            {
-              className: _().SaleHeaderPreviewContainer,
-            },
-            _.createElement("img", {
-              style: {
-                width: "100%",
-              },
-              src: _.imgURL,
-            }),
-          );
-      function _(_, _) {
-        var _;
-        let _ = 0;
-        for (let _ = 0; _ < 31; ++_)
-          (null === (_ = _(_, _)) || void 0 === _ ? void 0 : _.length) > 0 &&
-            (_ += 1);
-        return _;
-      }
-      function _(_) {
-        const {
-            langOverride: _,
-            artworkType: __webpack_require__,
-            fnOnLanguagePreviewChange: _,
-            clanSteamID: _,
-            eventModel: _,
-            partnerEventStore: _,
-            fnOnRemoveImage: _,
-            fnOnArtworkLangChange: _,
-            realms: _,
-            fnLangHasData: _,
-            fnGetImageHashAndExt: _,
-          } = _,
-          _ = _(__webpack_require__, _),
-          _ = _ ? _._.GenerateURLFromHashAndExtAndLang(_, _, _._.full, _) : "",
-          [_] = (0, _._)(() => [_(__webpack_require__, _)]);
-        return 0 == _
-          ? _.createElement(
-              "div",
-              {
-                className: _().ImagePreviewContainer,
-              },
-              "capsule" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _._.IMG_URL + "events/defaults/default_img_cover.jpg",
-                  eventModel: _,
-                }),
-              "background" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL:
-                    _._.IMG_URL + "events/defaults/default_img_header.jpg",
-                  lang: _,
-                  eventModel: _,
-                  partnerEventStore: _,
-                }),
-              "spotlight" === __webpack_require__ &&
-                _.createElement(_, {
-                  lang: _,
-                  imgURL:
-                    _._.IMG_URL + "events/defaults/default_img_spotlight.jpg",
-                  event: _,
-                }),
-              "localized_store_app_spotlight" === __webpack_require__ &&
-                _.createElement(_, {
-                  lang: _,
-                  imgURL:
-                    _._.IMG_URL + "events/defaults/default_img_spotlight.jpg",
-                  event: _,
-                }),
-              "localized_store_app_spotlight_mobile" === __webpack_require__ &&
-                _.createElement(_, {
-                  lang: _,
-                  imgURL:
-                    _._.IMG_URL + "events/defaults/default_img_spotlight.jpg",
-                  event: _,
-                }),
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#EventEditor_ArtworkMissing"),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().ImagePreviewContainer,
-              },
-              "capsule" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  eventModel: _,
-                  langOverride: _,
-                }),
-              "background" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  lang: _,
-                  eventModel: _,
-                  partnerEventStore: _,
-                }),
-              "spotlight" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: _,
-                }),
-              "localized_store_app_spotlight" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: _,
-                }),
-              "localized_store_app_spotlight_mobile" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                  event: _,
-                  lang: _,
-                }),
-              ("broadcast_left" === __webpack_require__ ||
-                "broadcast_right" === __webpack_require__) &&
-                _.createElement(_, {
-                  imgURL: _,
-                  side:
-                    "broadcast_right" === __webpack_require__
-                      ? "right"
-                      : "left",
-                }),
-              "sale_header" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "sale_overlay" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              _._.includes(__webpack_require__) &&
-                _.createElement("img", {
-                  className: _.PreviewImg,
-                  src: _._.GetLocalizedImageGroupForEditAsURL(_, _),
-                }),
-              "product_banner" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "product_mobile_banner" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "sale_logo" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "bestofyear_banner" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              "bestofyear_banner_mobile" === __webpack_require__ &&
-                _.createElement(_, {
-                  imgURL: _,
-                }),
-              _.createElement(_._, {
-                langOverride: _,
-                clanSteamID: _,
-                fnOnLanguagePreviewChange: _,
-                fnOnRemoveImage: _,
-                fnOnArtworkLangChange: _,
-                realms: _,
-                fnLangHasData: _,
-                fnGetImageHash: (_) => _(_(__webpack_require__, _)),
-              }),
-            );
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4050,11 +4190,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          clanSteamID: _,
-          fnGetImageHash: __webpack_require__,
-          fnOnRemoveImage: _,
-        } = _;
+        const { clanSteamID: _, fnGetImageHash: __webpack_require__ } = _;
         (0, _._)(_.GetAccountID());
         const _ = _.useMemo(() => {
           let _ = new Array();
@@ -4103,7 +4239,6 @@
               _.createElement(_, {
                 key: "lang_select_" + _.GetAccountID() + " " + _.strLang,
                 langData: _,
-                fnOnRemoveImage: _,
                 ..._,
               }),
             ),
@@ -4183,7 +4318,6 @@
               ),
             _ &&
               _.createElement(_, {
-                langData: __webpack_require__,
                 ..._,
               }),
             _ &&
@@ -4204,49 +4338,49 @@
             realms: _,
           } = _,
           [_, _, _] = (0, _._)(),
-          [_] = (0, _._)(() => {
+          _ = (0, _._)(() => {
             const _ = _(__webpack_require__.lang);
             (0, _._)(
               !_ || !_.includes("."),
               "ChangeLanguageButton: Unexpected File Extension: " + _,
             );
-            return [_._.GetClanImageByImageHash(_, _)];
+            return _._.GetClanImageByImageHash(_, _);
           });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              toolTipContent: (0, _._)("#selectimage_reassign_image_ttip"),
-            },
-            _.createElement("img", {
-              "data-lang": __webpack_require__.lang,
-              src: _,
-              onClick: () => {
-                _ ? _() : console.error("image does not exists on server");
-              },
-            }),
-          ),
-          _.createElement(
-            _._,
+        if (_)
+          return _.createElement(
+            _.Fragment,
             null,
             _.createElement(
               _._,
               {
-                active: _,
+                toolTipContent: (0, _._)("#selectimage_reassign_image_ttip"),
               },
-              _.createElement(_._, {
-                clanImage: _,
-                lang: __webpack_require__.lang,
-                fnOnArtworkLangChange: _,
-                fnLangHasData: _,
-                realms: _,
-                closeModal: _,
+              _.createElement("img", {
+                "data-lang": __webpack_require__.lang,
+                src: _,
+                onClick: () => _(),
               }),
             ),
-          ),
-        );
+            _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _._,
+                {
+                  active: _,
+                },
+                _.createElement(_._, {
+                  clanImage: _,
+                  lang: __webpack_require__.lang,
+                  fnOnArtworkLangChange: _,
+                  fnLangHasData: _,
+                  realms: _,
+                  closeModal: _,
+                }),
+              ),
+            ),
+          );
+        console.error("image does not exists on server");
       }
       function _(_) {
         const { fnOnRemoveImage: _, langData: __webpack_require__ } = _,
@@ -4317,15 +4451,19 @@
           } = _,
           [_, _] = (0, _.useState)(_),
           _ = _._.InitFromClanID(_.clanAccountID),
-          _ = (0, _._)(() =>
-            _._.GenerateURLFromHashAndExt(_, _._.GetHashAndExt(_)),
-          );
+          _ = (0, _._)(() => {
+            var _;
+            return _._.GenerateURLFromHashAndExt(
+              _,
+              null !== (_ = _._.GetHashAndExt(_)) && void 0 !== _ ? _ : "",
+            );
+          });
         return _.createElement(
           _._,
           {
             strTitle: (0, _._)("#selectimage_change_artwork_lang_title"),
             strDescription: (0, _._)("#selectimage_change_artworl_lang_desc"),
-            onOK: () => _(_, _, _),
+            onOK: () => (null == _ ? void 0 : _(_, _, _)),
             onCancel: __webpack_require__,
             closeModal: __webpack_require__,
           },

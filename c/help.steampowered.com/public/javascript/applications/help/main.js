@@ -892,6 +892,8 @@
         LegionGoWiggleCursor: "_2H0WjqDEEycEgncxT0Awn-",
         LegionGoTriggerClick: "_2dKXeLBBRZz5zJ-A_be0YE",
         LegionGoScreenClick: "mX0CyLG2ckFSmF-E26ZSQ",
+        BatteryIcon: "_3xy45At7o_lkxcLoSTF6e0",
+        LegacySizing: "_35pkQMXbFQAF2v1VrIAsF7",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -14707,6 +14709,7 @@
               showBookendLabels: _,
               showHandle: _,
               step: _,
+              stepSound: _,
               strValueSuffix: _,
               trackStyleOverride: _,
               trackStyleBackground: _,
@@ -15800,6 +15803,9 @@
         const _ = Array.isArray(_) ? _ : [_];
         return Math.min(..._);
       }
+      function _(_, _) {
+        return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
+      }
       const _ = [1, 3, 2],
         _ = [1, 3],
         _ = [5, 4],
@@ -15825,8 +15831,8 @@
             rgAcceptableTypes: _,
           },
           localized_store_app_spotlight: {
-            width: 1100,
-            height: 240,
+            width: 1200,
+            height: 260,
             rgAcceptableTypes: _,
           },
           localized_store_app_spotlight_mobile: {
@@ -15913,8 +15919,8 @@
             rgAcceptableTypes: _,
           },
           product_banner: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: _,
           },
           product_mobile_banner: {
@@ -15923,8 +15929,8 @@
             rgAcceptableTypes: _,
           },
           product_banner_override: {
-            width: 1100,
-            height: 160,
+            width: [1200, 1100],
+            height: [175, 160],
             rgAcceptableTypes: _,
           },
           product_mobile_banner_override: {
@@ -15943,8 +15949,8 @@
             rgAcceptableTypes: _,
           },
           sale_logo: {
-            width: 940,
-            height: 460,
+            width: [1200, 940],
+            height: [460, 460],
             rgAcceptableTypes: _,
           },
           bestofyear_banner: {
@@ -16087,20 +16093,31 @@
           },
         };
       function _(_, _, _, _) {
-        const _ = _[_];
-        if (!_) return !1;
-        if (_.bDisableEnforceDimensions) return _;
-        if (_ !== _.width || _ !== _.height) return !1;
         let _ = null;
-        if (Array.isArray(_.width)) {
-          if (((_ = _.width.findIndex((_) => _ === _)), _ < 0)) return !1;
-        } else if (_ !== _.width) return !1;
-        if (Array.isArray(_.height)) {
-          let _ = _.height.findIndex((_) => _ === _);
-          if (_ < 0) return !1;
-          if (null !== _ && _ !== _) return !1;
-        } else if (_ !== _.height) return !1;
+        if (Array.isArray(_)) {
+          if (
+            ((_ = __webpack_require__
+              .map((_, _) => (_ === _ ? _ : void 0))
+              .filter((_) => void 0 !== _)),
+            _.length <= 0)
+          )
+            return !1;
+        } else if (_ !== _) return !1;
+        if (Array.isArray(_)) {
+          const _ = _.map((_, _) => (_ === _ ? _ : void 0)).filter(
+            (_) => void 0 !== _,
+          );
+          if (_.length <= 0) return !1;
+          if (_?.length && !_.some((_) => _.includes(_))) return !1;
+        } else if (_ !== _) return !1;
         return !0;
+      }
+      function _(_, _, _, _) {
+        const _ = _[_];
+        return (
+          !!_ &&
+          (_.bDisableEnforceDimensions ? !!_ : _(_, _, _.width, _.height))
+        );
       }
       function _(_, _, _) {
         const _ = _[_];
@@ -16428,7 +16445,7 @@
         (0, _._)([_._], _.prototype, "width", void 0),
         (0, _._)([_._], _.prototype, "height", void 0),
         (0, _._)([_._], _.prototype, "status", void 0),
-        (0, _._)([_._], _.prototype, "message", void 0),
+        (0, _._)([_._.ref], _.prototype, "message", void 0),
         (0, _._)([_._], _.prototype, "language", void 0);
       var _,
         _ = __webpack_require__("chunkid"),
@@ -16988,15 +17005,17 @@
         GetDestWidth() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption(),
-            _ = _[_.artworkType].width;
+          const _ = _.GetCurrentImageOption();
+          if (!_) return 0;
+          const _ = _[_.artworkType].width;
           return _ ? _(_) : 0;
         }
         GetDestHeight() {
           const { uploadFile: _, forceResolution: _ } = this.props;
           if (_) return _.width;
-          const _ = _.GetCurrentImageOption(),
-            _ = _[_.artworkType].height;
+          const _ = _.GetCurrentImageOption();
+          if (!_) return 0;
+          const _ = _[_.artworkType].height;
           return _ ? _(_) : 0;
         }
         GetLargestBoxThatFits(_, _, _, _) {
@@ -17161,7 +17180,7 @@
               (_ = !_.bDisableEnforceDimensions));
           }
           const _ = this.width >= _(_) && this.height >= _(_),
-            _ = _ ? this.width === _ && this.height === _ : _,
+            _ = _ ? _(this.width, this.height, _, _) : _,
             _ = _ && _ != this.fileType,
             _ =
               !!(this.m_rgImageOptions && this.m_rgImageOptions.length > 0) &&
@@ -17191,13 +17210,14 @@
                           (_ = !0))
                         : ((Array.isArray(_) && this.width != _(_)) ||
                             (Array.isArray(_) && this.height != _(_))) &&
+                          ((_ = _ ?? []),
                           _.push(
                             (0, _._)(
                               "#ImageUpload_PreferredDimension",
                               _(_),
                               _(_),
                             ),
-                          )
+                          ))
                       : (_ = (0, _._)("#ImageUpload_TooSmall", _(_), _(_)))
                     : (_ = (0, _._)(
                         "#ImageUpload_InvalidResolution",
@@ -17225,7 +17245,12 @@
           );
           let _ = _(this.width, this.height, _, !1);
           if ((void 0 === _ && (_ = _(this.width, this.height, _, !0)), _)) {
-            const _ = this.m_rgImageOptions.find((_) => _.artworkType == _);
+            const _ = this.m_rgImageOptions.find(
+              (_) =>
+                _.artworkType == _ &&
+                (!_.bEnforceDimensions ||
+                  (_.width == this.width && _.height == this.height)),
+            );
             if (_) return _;
           }
           return this.m_rgImageOptions[0];
@@ -17412,6 +17437,24 @@
           this.m_cancel?.cancel((0, _._)("#ImageUpload_CancelRequest"));
         }
       }
+      function _(_, _, _) {
+        const _ = _(_.width, _),
+          _ = _(_.height, _);
+        return {
+          sKey: `${_}_${_}x${_}`,
+          width: _,
+          height: _,
+          bEnforceDimensions: !_.bDisableEnforceDimensions,
+          artworkType: _,
+          bHiddenFromDropdown: "hero" === _,
+          bDeprecated: (_ ?? 0) >= 1,
+          fnGetLabelText() {
+            return "spotlight" == this.artworkType
+              ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
+              : (0, _._)("#EventEditor_ArtworkType_" + this.artworkType);
+          },
+        };
+      }
       class _ extends _ {
         m_filesToUpload = _._.array();
         m_filesCompleted = _._.array();
@@ -17427,26 +17470,25 @@
             (this.m_clanSteamID = _),
             (this.m_rgImageOptions =
               ((_ = _),
-              _?.map((_) => {
+              _?.flatMap((_) => {
                 const _ = _[_];
-                return (
-                  (0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
-                  {
-                    sKey: _,
-                    width: _(_.width),
-                    height: _(_.height),
-                    bEnforceDimensions: !_.bDisableEnforceDimensions,
-                    artworkType: _,
-                    bHiddenFromDropdown: "hero" === _,
-                    fnGetLabelText() {
-                      return "spotlight" == this.artworkType
-                        ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
-                        : (0, _._)(
-                            "#EventEditor_ArtworkType_" + this.artworkType,
-                          );
+                if (
+                  ((0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
+                  "number" == typeof _.width && "number" == typeof _.height)
+                )
+                  return [_(_, _)];
+                {
+                  let _ = Math.max(
+                    Array.isArray(_.width) ? _.width.length : 1,
+                    Array.isArray(_.height) ? _.height.length : 1,
+                  );
+                  return Array.from(
+                    {
+                      length: _,
                     },
-                  }
-                );
+                    (_, _) => _(_, _, _),
+                  );
+                }
               }))),
             (this.m_localizedImageGroupPrimaryImage = _),
             (this.m_clanImagesV2 = _ ?? !1);
@@ -17823,13 +17865,13 @@
           let _;
           try {
             _ = await Promise.race([_, _.promise]);
-          } catch {}
-          return (
-            _ ||
-              ((_.success = 16),
-              (_.err_msg = "We timed out processing images")),
-            _
-          );
+          } catch {
+            _ = {
+              success: 16,
+              err_msg: "We timed out processing images",
+            };
+          }
+          return _;
         },
         async OverlayClanImage(_, _, _, _, _, _) {
           let _,
@@ -19905,14 +19947,15 @@
             let _ = this.m_curLocImageGroup.primaryImage;
             return this.m_curLocImageGroup.localized_images[_]
               ? this.m_curLocImageGroup.localized_images[_]
-              : _.GenerateURLFromHashAndExt(_, _.GetHashAndExt(_));
+              : _.GenerateURLFromHashAndExt(_, _.GetHashAndExt(_) ?? "");
           }
           return null;
         }
         async DetermineAvailableLocalizationForGroup(_) {
+          if (!this.m_curLocImageGroup) return;
           const _ = this.m_curLocImageGroup.primaryImage,
             _ = _._.InitFromClanID(_.clanAccountID),
-            _ = _.GetHashAndExt(_),
+            _ = _.GetHashAndExt(_) ?? "",
             _ = [];
           for (let _ = 0; _ < 31; ++_)
             _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
@@ -19926,7 +19969,7 @@
                     _,
                     _.full,
                     _,
-                    this.m_curLocImageGroupType,
+                    this.m_curLocImageGroupType ?? void 0,
                   ));
           });
         }
@@ -19938,23 +19981,25 @@
                   _,
                   _.full,
                   _,
-                  this.m_curLocImageGroupType,
+                  this.m_curLocImageGroupType ?? void 0,
                 )
               : null);
         }
         AddLocalizeImageUploaded(_, _) {
+          if (!this.m_curLocImageGroup) return;
           let _ = this.m_curLocImageGroup.primaryImage;
-          if (_.image_hash == _) {
+          if (_?.image_hash == _) {
             const _ = _._.InitFromClanID(_.clanAccountID),
               _ = _.GetHashAndExt(_);
-            this.m_curLocImageGroup.localized_images[_] =
-              _.GenerateURLFromHashAndExtAndLang(
-                _,
-                _,
-                _.full,
-                _,
-                this.m_curLocImageGroupType,
-              );
+            _ &&
+              (this.m_curLocImageGroup.localized_images[_] =
+                _.GenerateURLFromHashAndExtAndLang(
+                  _,
+                  _,
+                  _.full,
+                  _,
+                  this.m_curLocImageGroupType ?? void 0,
+                ));
           }
         }
         GetAllLocalizedGroupImages() {
@@ -19965,9 +20010,9 @@
           );
         }
         GetAllLocalizedGroupImageHashAndExts() {
-          return this.GetAllLocalizedGroupImages().map((_) =>
-            _.GetHashAndExtFromURL(_),
-          );
+          return this.GetAllLocalizedGroupImages()
+            .filter(Boolean)
+            .map((_) => _.GetHashAndExtFromURL(_));
         }
       }
       (0, _._)([_._], _.prototype, "m_curLocImageGroup", void 0);
@@ -20013,7 +20058,9 @@
             ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
           ) {
             const _ = _.get("t");
-            let _ = /^\d+$/.test(_) ? _().unix(Number.parseInt(_)) : _()(_);
+            let _ = /^\d+$/.test(_ ?? "")
+              ? _().unix(Number.parseInt(_ ?? "0"))
+              : _()(_);
             (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -20044,8 +20091,8 @@
           GetEventStartTime() {
             return this.m_entry.rtime_start_specific
               ? this.m_entry.rtime_start_specific
-              : this.m_eventModel.startTime +
-                  this.m_entry.delta_from_event_start_seconds;
+              : (this.m_eventModel.startTime ?? 0) +
+                  (this.m_entry.delta_from_event_start_seconds ?? 0);
           }
         }.prototype,
         "GetEventStartTime",
@@ -20181,7 +20228,7 @@
         }
         GID = void 0;
         AnnouncementGID = void 0;
-        clanSteamID;
+        clanSteamID = new _._();
         forumTopicGID = void 0;
         type = 1;
         appid = 0;
@@ -20306,7 +20353,7 @@
             (_.bLoaded = this.bLoaded),
             (_.broadcaster = this.broadcaster
               ? new _._(this.broadcaster.ConvertTo64BitString())
-              : null),
+              : void 0),
             (_.jsondata = JSON.parse(JSON.stringify(this.jsondata))),
             (_.vecTags = new Array()),
             _
@@ -20341,13 +20388,13 @@
           let _;
           for (const _ of this.GetSaleSections())
             if ("tabs" === _.section_type) {
-              if (_.tabs?.length > 0)
-                for (const _ of _.tabs)
+              if ((_.tabs?.length ?? 0) > 0)
+                for (const _ of _.tabs ?? [])
                   _ = this.GetLastReferencedSaleDayFromCapsules(_.capsules, _);
             } else _ = this.GetLastReferencedSaleDayFromCapsules(_.capsules, _);
           return (
-            this.jsondata.sale_num_headers > 1 &&
-              (null == _ || _ < this.jsondata.sale_num_headers) &&
+            (this.jsondata.sale_num_headers ?? 0) > 1 &&
+              (null == _ || _ < (this.jsondata.sale_num_headers ?? 0)) &&
               (_ = this.jsondata.sale_num_headers),
             _
           );
@@ -20408,12 +20455,12 @@
           else if ("broadcast_right" === _)
             _ = this.jsondata.localized_broadcast_right_image;
           else if ("sale_header" === _)
-            if (this.jsondata.sale_num_headers > 1) {
+            if ((this.jsondata.sale_num_headers ?? 0) > 1) {
               const _ = Math.min(
-                this.jsondata.sale_num_headers - 1,
+                (this.jsondata.sale_num_headers ?? 0) - 1,
                 this.GetDayIndexFromEventStart(),
               );
-              _ = this.jsondata.localized_per_day_sales_header[_];
+              _ = this.jsondata.localized_per_day_sales_header?.[_];
             } else _ = this.jsondata.localized_sale_header;
           else
             "sale_logo" === _
@@ -20442,12 +20489,12 @@
         GetImageURL(_, _ = 0, __webpack_require__ = _.full) {
           const _ = this.GetImgArray(_),
             _ = _ && _.length > _ && null != _[_];
-          return _ && _[_].startsWith("http")
+          return _ && _[_]?.startsWith("http")
             ? _[_]
             : _
               ? _.GenerateURLFromHashAndExt(
                   this.clanSteamID,
-                  _[_],
+                  _[_] ?? "",
                   __webpack_require__,
                 )
               : void 0;
@@ -20464,11 +20511,11 @@
         }
         BHasSomeImage(_) {
           let _ = this.GetImgArray(_);
-          return _ && _.some((_) => null != _ && _.length > 0);
+          return !!_ && _.some((_) => null != _ && _.length > 0);
         }
         BHasImage(_, _) {
           let _ = this.GetImgArray(_);
-          return _ && _.length > _ && null != _[_];
+          return !!_ && _.length > _ && null != _[_];
         }
         BHasAnnouncementGID() {
           return (
@@ -20519,10 +20566,10 @@
           );
         }
         BIsEventInFuture() {
-          return _.GetTimeNowWithOverride() < this.startTime;
+          return _.GetTimeNowWithOverride() < (this.startTime ?? 0);
         }
         BHasEventEnded() {
-          return this.endTime < _.GetTimeNowWithOverride();
+          return (this.endTime ?? 0) < _.GetTimeNowWithOverride();
         }
         UpdateVoteCount(_, _) {
           "up" == _
@@ -20629,9 +20676,13 @@
         }
         GetImageForSizeAsArrayWithFallback(_, _, _, _) {
           let _ = new Array();
-          this.BImageNeedScreenshotFallback(_, _) ||
-            (_.push(this.GetImageURLWithFallback(_, _, _)),
-            _ != _.full && _.push(this.GetImageURLWithFallback(_, _, _.full)));
+          if (!this.BImageNeedScreenshotFallback(_, _)) {
+            const _ = this.GetImageURLWithFallback(_, _, _);
+            if ((_ && _.push(_), _ != _.full)) {
+              const _ = this.GetImageURLWithFallback(_, _, _.full);
+              _ && _.push(_);
+            }
+          }
           const _ = this.GetFallbackArtworkScreenshot();
           return _ && !_ && _.push(_), _;
         }
@@ -20659,8 +20710,9 @@
           return (
             this.visibility_state == _.k_EEventStateUnlisted ||
             (this.visibility_state == _.k_EEventStateVisible &&
-              _ > this.visibilityStartTime &&
-              (this.visibilityEndTime < 10 || _ < this.visibilityEndTime))
+              _ > (this.visibilityStartTime ?? 0) &&
+              ((this.visibilityEndTime ?? 0) < 10 ||
+                _ < (this.visibilityEndTime ?? 0)))
           );
         }
         BIsStagedEvent() {
@@ -20670,16 +20722,16 @@
           return this.visibility_state == _.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
-          return this.startTime;
+          return this.startTime ?? 0;
         }
         GetEndTimeAndDateUnixSeconds() {
-          return this.endTime;
+          return this.endTime ?? 0;
         }
         GetPostTimeAndDateUnixSeconds() {
-          return this.postTime;
+          return this.postTime ?? 0;
         }
         GetVisibilityStartTimeAndDateUnixSeconds() {
-          return this.visibilityStartTime;
+          return this.visibilityStartTime ?? 0;
         }
         BIsEventActionEnabled() {
           return (
@@ -20727,7 +20779,7 @@
           );
         }
         GetSummary(_) {
-          return _._.Get(this.jsondata?.localized_summary, _);
+          return _._.Get(this.jsondata?.localized_summary ?? [], _);
         }
         BHasSummary(_) {
           return Boolean(this.GetSummary(_));
@@ -20765,7 +20817,7 @@
           return -1 != this.vecTags.indexOf(_);
         }
         BHasTagStartingWith(_) {
-          return this.vecTags.some((_) => _.startsWith(_));
+          return this.vecTags.some((_) => _?.startsWith(_));
         }
         BIsOGGEvent() {
           return Boolean(this.appid) && this.appid > 0;
@@ -20784,7 +20836,7 @@
           return Boolean(this.jsondata.library_spotlight_text);
         }
         BHasBroadcastEnabled() {
-          return this.jsondata.bBroadcastEnabled;
+          return !!this.jsondata.bBroadcastEnabled;
         }
         BEventCanShowBroadcastWidget(_) {
           if (this.jsondata.bSaleEnabled) return this.BHasBroadcastEnabled();
@@ -20792,13 +20844,13 @@
             _ = this.endTime ? this.endTime : _ + 3600;
           return (
             this.BHasBroadcastEnabled() &&
-            this.jsondata.broadcast_whitelist &&
+            !!this.jsondata.broadcast_whitelist &&
             this.jsondata.broadcast_whitelist.length > 0 &&
-            (_ || (this.startTime - 600 <= _ && _ < _))
+            (_ || ((this.startTime ?? 0) - 600 <= _ && _ < _))
           );
         }
         BHasBroadcastForceBanner() {
-          return this.jsondata.broadcast_force_banner;
+          return !!this.jsondata.broadcast_force_banner;
         }
         BSaleShowBroadcastAtTopOfPage() {
           return !(
@@ -20829,29 +20881,46 @@
           );
         }
         GetBroadcastWhitelist() {
-          return this.jsondata.broadcast_whitelist;
+          return this.jsondata.broadcast_whitelist ?? [];
         }
         GetBroadcastWhitelistAsSteamIDs() {
-          return this.jsondata.broadcast_whitelist.map((_) =>
-            _._.InitFromAccountID(_).ConvertTo64BitString(),
+          return (
+            this.jsondata.broadcast_whitelist?.map((_) =>
+              _._.InitFromAccountID(_).ConvertTo64BitString(),
+            ) ?? []
           );
         }
         BIsBroadcastAccountIDWhiteListed(_) {
           return (this.jsondata.broadcast_whitelist || []).includes(Number(_));
         }
         BHasSaleEnabled() {
-          return this.jsondata.bSaleEnabled;
+          return !!this.jsondata.bSaleEnabled;
         }
         BHasSaleVanity() {
           return (
-            this.jsondata.bSaleEnabled && Boolean(this.jsondata.sale_vanity_id)
+            !!this.jsondata.bSaleEnabled &&
+            Boolean(this.jsondata.sale_vanity_id)
           );
         }
         GetSaleVanity() {
-          return this.jsondata.sale_vanity_id;
+          return this.jsondata.sale_vanity_id ?? "";
+        }
+        BHasSaleUpdateLandingPageVanity() {
+          return (
+            !this.jsondata.bSaleEnabled &&
+            Boolean(this.jsondata.sale_update_landing_page_vanity_id)
+          );
+        }
+        GetSaleUpdateLandingPageVanity() {
+          return this.jsondata.sale_update_landing_page_vanity_id ?? "";
         }
         GetSaleURL() {
           if (!this.jsondata.bSaleEnabled) return null;
+          if (this.jsondata.sale_update_landing_page_vanity_id)
+            return (
+              _._.STORE_BASE_URL +
+              `app${this.appid}/landing/${this.jsondata.sale_update_landing_page_vanity_id}`
+            );
           if (!Boolean(this.jsondata.sale_vanity_id))
             return (
               _._.STORE_BASE_URL +
@@ -20884,10 +20953,9 @@
           }
           if (!this.jsondata.sale_vanity_id_valve_approved_for_sale_subpath) {
             if (_._.BHasCreatorHomeLoaded(this.clanSteamID)) {
+              const _ = _._.GetCreatorHome(this.clanSteamID);
               return (
-                _._.GetCreatorHome(this.clanSteamID).GetCreatorHomeURL(
-                  "developer",
-                ) +
+                _?.GetCreatorHomeURL("developer") +
                 "sale/" +
                 this.jsondata.sale_vanity_id
               );
@@ -20904,21 +20972,21 @@
         }
         BHasEmailEnabled() {
           return (
-            this.jsondata.email_setting && this.jsondata.email_setting.bEnable
+            !!this.jsondata.email_setting && this.jsondata.email_setting.bEnable
           );
         }
         GetSaleSections() {
-          return this.jsondata.sale_sections;
+          return this.jsondata.sale_sections ?? [];
         }
         GenerateDynamicSaleSections(_, _, _, _) {
           const _ = [],
             _ = {
               section_type: "unselected_empty",
-              capsules: void 0,
-              events: void 0,
-              links: void 0,
-              localized_label: void 0,
-              default_label: void 0,
+              capsules: [],
+              events: [],
+              links: [],
+              localized_label: [],
+              default_label: "",
             };
           return (
             _ &&
@@ -20953,7 +21021,7 @@
           return _ || _ || _ || _
             ? [
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(_, _, _, _),
+                ...this.GenerateDynamicSaleSections(!!_, _, !!_, _),
               ]
             : this.GetSaleSections();
         }
@@ -20966,29 +21034,33 @@
           return this.jsondata.sale_sections?.find((_) => _.unique_id == _);
         }
         GetSaleSectionCount() {
-          return this.jsondata.sale_sections.length;
+          return this.jsondata.sale_sections?.length ?? 0;
         }
         GetSaleSectionsByType(_) {
-          return this.jsondata.sale_sections?.filter(
-            (_) => _.section_type == _,
+          return (
+            this.jsondata.sale_sections?.filter((_) => _.section_type == _) ??
+            []
           );
         }
         GetLastUpdateTime() {
-          return this.rtime32_last_modified;
+          return this.rtime32_last_modified ?? 0;
         }
         GetLastUpdaterSteamIDStr() {
-          return this.last_update_steamid;
+          return this.last_update_steamid ?? "";
         }
         GetSaleSectionFirstMatchByType(_) {
-          for (let _ = 0; _ < this.jsondata.sale_sections.length; ++_)
-            if (this.jsondata.sale_sections[_].section_type === _)
-              return this.jsondata.sale_sections[_];
+          const _ = this.jsondata.sale_sections?.length ?? 0;
+          if (0 != _)
+            for (let _ = 0; _ < _; ++_)
+              if (this.jsondata.sale_sections[_].section_type === _)
+                return this.jsondata.sale_sections[_];
         }
         static AccumulateCapsuleListIDs(_, _, _, _) {
           _ &&
             _.forEach((_) => {
               if (_) {
-                _.has(_.type) &&
+                _.type &&
+                  _.has(_.type) &&
                   ((_ && !_(_._)) || __webpack_require__.add(_._));
               }
             });
@@ -21089,7 +21161,9 @@
                       (this.BHasTagStartingWith("sale_nextfest_") &&
                         11 == this.type)
                     ? (0, _._)("#PartnerEvent_SteamGameFestival_Broadcast")
-                    : this.GetEventTypeAsString();
+                    : this.BHasTag("vo_marketing_message")
+                      ? (0, _._)("#PartnerEvent_MM_MajorUpdate")
+                      : this.GetEventTypeAsString();
         }
         GetAllTags() {
           return this.vecTags;
@@ -21111,16 +21185,16 @@
         }
         BHasSaleProductBanners() {
           return (
-            this.jsondata.bSaleEnabled &&
+            !!this.jsondata.bSaleEnabled &&
             (this.BHasSomeImage("product_banner") ||
               this.BHasSomeImage("product_banner_override"))
           );
         }
         GetSteamAwardCategory() {
-          return this.jsondata.steam_award_category_suggestion;
+          return this.jsondata.steam_award_category_suggestion ?? 0;
         }
         GetSteamAwardNomineeCategories() {
-          return this.jsondata.steam_award_category_voteids;
+          return this.jsondata.steam_award_category_voteids ?? [];
         }
         BIsLockedToGameOwners() {
           return Boolean(
@@ -21191,17 +21265,17 @@
             : this.jsondata.source_content_hub;
         }
         BContentHubDiscountedOnly() {
-          return this.jsondata.content_hub_discounted_only;
+          return !!this.jsondata.content_hub_discounted_only;
         }
         BIsBackgroundImageGroupingEnabled() {
-          return this.jsondata.sale_background_img_groups?.enabled;
+          return !!this.jsondata.sale_background_img_groups?.enabled;
         }
         GetSalePageGroupDefinition() {
           return this.jsondata.sale_background_img_groups;
         }
         GetSalePageBackgroundImageGroupCount() {
           return this.jsondata.sale_background_img_groups?.enabled
-            ? this.jsondata.sale_background_img_groups.groups.length
+            ? (this.jsondata.sale_background_img_groups.groups?.length ?? 0)
             : 0;
         }
         GetAllSalePageGroups() {
@@ -21211,8 +21285,8 @@
         }
         GetSalePageBackgroundGroup(_) {
           return this.jsondata.sale_background_img_groups?.enabled
-            ? this.jsondata.sale_background_img_groups.groups[_]
-            : null;
+            ? this.jsondata.sale_background_img_groups.groups?.[_]
+            : void 0;
         }
         GetIncludedRealmList() {
           const _ = new Array();
@@ -21281,12 +21355,12 @@
       function _(_) {
         return (
           (null == _.gid || null == _.gid || "0" == _.gid) &&
-          _.announcement_body &&
+          !!_.announcement_body &&
           "0" != _.announcement_body.gid
         );
       }
       function _(_, _) {
-        return _(_) ? _ + _.announcement_body.gid : _.gid + (_ ? _ : "");
+        return _(_) ? _ + _.announcement_body?.gid : _.gid + (_ ? _ : "");
       }
       class _ {
         appid;
@@ -21413,10 +21487,9 @@
           );
         }
         GetPartnerEventChangeCallback(_) {
+          let _ = this.m_mapEventUpdateCallback.get(_);
           return (
-            this.m_mapEventUpdateCallback.has(_) ||
-              this.m_mapEventUpdateCallback.set(_, new _._()),
-            this.m_mapEventUpdateCallback.get(_)
+            _ || ((_ = new _._()), this.m_mapEventUpdateCallback.set(_, _)), _
           );
         }
         GetClanEventGIDs(_) {
@@ -21435,8 +21508,8 @@
         }
         BHasClanAnnouncementGID(_) {
           if (this.m_mapAnnouncementBodyToEvent.has(_)) {
-            let _ = this.m_mapAnnouncementBodyToEvent.get(_);
-            return this.BHasClanEventModel(_);
+            const _ = this.m_mapAnnouncementBodyToEvent.get(_);
+            return !!_ && this.BHasClanEventModel(_);
           }
           return !1;
         }
@@ -21444,14 +21517,13 @@
           return this.m_mapAnnouncementBodyToEvent.get(_);
         }
         GetClanEventFromAnnouncementGID(_) {
-          return this.m_mapExistingEvents.get(
-            this.m_mapAnnouncementBodyToEvent.get(_),
-          );
+          const _ = this.m_mapAnnouncementBodyToEvent.get(_);
+          return _ ? this.m_mapExistingEvents.get(_) : void 0;
         }
         DefaultEventSortFunction(_, _) {
           return _.startTime == _.startTime
-            ? (0, _._)(_.GID, _.GID)
-            : _.startTime - _.startTime;
+            ? (0, _._)(_.GID ?? "", _.GID ?? "")
+            : (_.startTime ?? 0) - (_.startTime ?? 0);
         }
         RegisterClanEvents(_) {
           if (_)
@@ -21465,11 +21537,15 @@
         }
         GetRankedClanEvents(_, _) {
           let _ = [],
-            _ = _ ? this.GetClanEventGIDs(_) : this.GetClanEventGIDsForApp(_);
+            _ = _
+              ? this.GetClanEventGIDs(_)
+              : _
+                ? this.GetClanEventGIDsForApp(_)
+                : void 0;
           if (!_ || 0 == _.length) return _;
           for (let _ of _) {
             let _ = this.GetClanEventModel(_);
-            __webpack_require__.push(_);
+            _ && __webpack_require__.push(_);
           }
           return __webpack_require__.sort(this.DefaultEventSortFunction), _;
         }
@@ -21487,15 +21563,15 @@
               ),
               (_.GID = _(_, !1)),
               (_.bOldAnnouncement = _(_)),
-              (_.appid = _.appid),
+              (_.appid = _.appid ?? 0),
               (_.startTime = _.rtime32_start_time),
               (_.endTime = _.rtime32_end_time),
               (_.visibilityStartTime = _.rtime32_visibility_start),
               (_.visibilityEndTime = _.rtime32_visibility_end),
               (_.loadedAllLanguages = !1),
-              (_.type = _.event_type),
-              (_.nVotesUp = _.votes_up),
-              (_.nVotesDown = _.votes_down),
+              (_.type = _.event_type ?? 1),
+              (_.nVotesUp = _.votes_up ?? 0),
+              (_.nVotesDown = _.votes_down ?? 0),
               (_.comment_type = _.comment_type),
               (_.gidfeature = _.gidfeature),
               (_.gidfeature2 = _.gidfeature2),
@@ -21538,9 +21614,9 @@
                 _.description.clear(),
                 _.timestamp_loc_updated.clear(),
                 (_.postTime = _.rtime32_start_time),
-                (_.nCommentCount = _.comment_count),
-                _.name.set(0, _.event_name),
-                _.description.set(0, _.event_notes);
+                (_.nCommentCount = _.comment_count ?? 0),
+                _.name.set(0, _.event_name ?? ""),
+                _.description.set(0, _.event_notes ?? "");
             _.broadcaster_accountid &&
               (_.broadcaster = new _._(_.broadcaster_accountid));
             const _ = _;
@@ -21691,9 +21767,9 @@
           );
         }
         HelperInitializeNumSalesHeaderArray(_) {
-          if (_.jsondata.sale_num_headers > 1) {
+          if ((_.jsondata.sale_num_headers ?? 0) > 1) {
             _.jsondata.localized_per_day_sales_header = [];
-            for (let _ = 0; _ < _.jsondata.sale_num_headers; ++_)
+            for (let _ = 0; _ < (_.jsondata.sale_num_headers ?? 0); ++_)
               _.jsondata.localized_per_day_sales_header.push(
                 (0, _._)([], 31, null),
               );
@@ -21726,11 +21802,11 @@
                 _ = this.m_rgQueuedEventsClanIDs,
                 _ = this.m_rgQueuedEventsUniqueIDs,
                 _ = this.m_rgQueuedEventsForEditFlags;
-              (this.m_PendingInfoPromise = null),
+              (this.m_PendingInfoPromise = void 0),
                 (this.m_rgQueuedEventsClanIDs = new Array()),
                 (this.m_rgQueuedEventsUniqueIDs = new Array()),
                 (this.m_rgQueuedEventsForEditFlags = new Array()),
-                this.InternalLoadPartnerEventList(_, _, _).then(() => _());
+                this.InternalLoadPartnerEventList(_, _, _).then(() => _?.());
             };
           if (this.m_rgQueuedEventsClanIDs.length >= 30)
             this.m_QueuedEventTimeout.Cancel(), _();
@@ -21815,21 +21891,23 @@
         }
         async InternalLoadAdjacentPartnerEvents(_, _, _, _, _, _, _, _) {
           let _ = new Array();
-          if (this.m_mapAdjacentAnnouncementGIDs.has(_)) {
+          if (_ && this.m_mapAdjacentAnnouncementGIDs.has(_)) {
             let _ = this.m_mapAdjacentAnnouncementGIDs.get(_),
               _ = new Array();
             if (
-              (_.forEach((_) => {
+              (_?.forEach((_) => {
                 if (this.m_mapAnnouncementBodyToEvent.has(_)) {
                   let _ = this.m_mapAnnouncementBodyToEvent.get(_);
-                  _.push(this.m_mapExistingEvents.get(_));
+                  _ &&
+                    this.m_mapExistingEvents.get(_) &&
+                    _.push(this.m_mapExistingEvents.get(_));
                 } else __webpack_require__.push(_);
               }),
               _.length > 0)
             ) {
               (
                 await this.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
-                  null,
+                  void 0,
                   _,
                   _,
                 )
@@ -21878,12 +21956,14 @@
                     }
                     _.push(this.m_mapExistingEvents.get(_));
                   }
-                  0 == _.length &&
-                    (_ && this.BHasClanEventModel(_)
-                      ? _.push(this.m_mapExistingEvents.get(_))
-                      : _ &&
-                        this.BHasClanAnnouncementGID(_) &&
-                        _.push(this.GetClanEventFromAnnouncementGID(_)));
+                  if (0 == _.length)
+                    if (_ && this.BHasClanEventModel(_))
+                      this.m_mapExistingEvents.get(_) &&
+                        _.push(this.m_mapExistingEvents.get(_));
+                    else if (_ && this.BHasClanAnnouncementGID(_)) {
+                      const _ = this.GetClanEventFromAnnouncementGID(_);
+                      _ && _.push(_);
+                    }
                 });
               else {
                 let _ = (0, _._)(_?.data);
@@ -22030,34 +22110,28 @@
           );
         }
         InsertUniqueEventGID(_, _, _) {
-          this.m_mapClanToGIDs.has(_) ||
-            this.m_mapClanToGIDs.set(_, new Array()),
-            this.m_mapAppIDToGIDs.has(_) ||
-              this.m_mapAppIDToGIDs.set(_, new Array());
           let _ = this.m_mapClanToGIDs.get(_);
-          -1 == _.indexOf(_) &&
-            (_.push(_), this.m_mapAppIDToGIDs.get(_).push(_));
+          _ || ((_ = new Array()), this.m_mapClanToGIDs.set(_, _));
+          let _ = this.m_mapAppIDToGIDs.get(_);
+          _ || ((_ = new Array()), this.m_mapAppIDToGIDs.set(_, _)),
+            -1 == _.indexOf(_) && (_.push(_), _.push(_));
         }
         ResetModel() {}
         async DeleteClanEvent(_, _) {
           this.m_mapExistingEvents.has(_) &&
             (this.m_mapExistingEvents.get(_).deleteInProgress = !0);
-          let _ = null,
-            _ = new URLSearchParams();
-          return (
-            _.append("sessionid", _._.SESSIONID),
-            _.append("bDelete", "1"),
-            _.append("gid", _),
-            (_ = await _().post(
-              _._.COMMUNITY_BASE_URL +
-                "/gid/" +
-                _.ConvertTo64BitString() +
-                "/ajaxcreateupdatedeletepartnerevents/",
-              _,
-            )),
-            this.RemoveGIDFromList(_, _),
-            _.data
+          let _ = new URLSearchParams();
+          __webpack_require__.append("sessionid", _._.SESSIONID),
+            __webpack_require__.append("bDelete", "1"),
+            __webpack_require__.append("gid", _);
+          const _ = await _().post(
+            _._.COMMUNITY_BASE_URL +
+              "/gid/" +
+              _.ConvertTo64BitString() +
+              "/ajaxcreateupdatedeletepartnerevents/",
+            _,
           );
+          return this.RemoveGIDFromList(_, _), _.data;
         }
         RemoveGIDFromList(_, _) {
           if (
@@ -22083,7 +22157,8 @@
             this.m_mapAnnouncementBodyToEvent.has(_))
           ) {
             const _ = this.m_mapAnnouncementBodyToEvent.get(_);
-            this.m_mapExistingEvents.has(_) &&
+            _ &&
+              this.m_mapExistingEvents.has(_) &&
               this.m_mapExistingEvents.delete(_),
               this.m_mapAnnouncementBodyToEvent.delete(_);
           }
@@ -22133,13 +22208,13 @@
                 withCredentials: !1,
               });
           let _ = (await _().get(_, _)).data.event,
-            _ = _(_, _);
+            _ = _(_, !!_);
           if (
             !this.m_mapExistingEvents.has(_) ||
-            this.m_mapExistingEvents.get(_).rtime32_last_modified <
-              _.rtime32_last_modified ||
-            this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed <
-              _.rtime_mod_reviewed
+            (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
+              (_.rtime32_last_modified ?? 0) ||
+            (this.m_mapExistingEvents.get(_).rtime32_moderator_reviewed ?? 0) <
+              (_.rtime_mod_reviewed ?? 0)
           ) {
             (0, _._)(
               _.clan_steamid,
@@ -22165,7 +22240,7 @@
               return this.m_mapExistingEvents.get(_ + _);
             if (this.m_mapAnnouncementBodyToEvent.has(_)) {
               const _ = this.m_mapAnnouncementBodyToEvent.get(_);
-              if (this.m_mapExistingEvents.has(_))
+              if (_ && this.m_mapExistingEvents.has(_))
                 return this.m_mapExistingEvents.get(_);
             }
           }
@@ -22228,9 +22303,9 @@
         async LoadHiddenPartnerEvent(_, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
             _,
-            null,
+            void 0,
             _,
-            null,
+            void 0,
             0,
             !0,
           );
@@ -22238,8 +22313,8 @@
         async LoadHiddenPartnerEventByAnnouncementGID(_, _, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
             _,
-            null,
-            null,
+            void 0,
+            void 0,
             _,
             0,
             !0,
@@ -22263,7 +22338,7 @@
             _.data.apps &&
               _.data.apps.length > 0 &&
               (0, _._)(() => {
-                const _ = new Map(_.data.apps.map((_) => [_.appid, new _(_)]));
+                const _ = new Map(_.data.apps?.map((_) => [_.appid, new _(_)]));
                 this.m_mapUpdatedApps = _;
               });
           }
@@ -22307,12 +22382,16 @@
             _.forEach((_) => {
               if (
                 this.m_mapAnnouncementBodyToEvent.has(_) &&
+                this.m_mapAnnouncementBodyToEvent.get(_) &&
                 this.m_mapExistingEvents.has(
                   this.m_mapAnnouncementBodyToEvent.get(_),
                 )
               ) {
                 let _ = this.m_mapAnnouncementBodyToEvent.get(_);
-                _.push(this.m_mapExistingEvents.get(_));
+                if (_) {
+                  const _ = this.m_mapExistingEvents.get(_);
+                  _ && _.push(_);
+                }
               } else _.push(_);
             }),
               _.sort(),
@@ -22320,11 +22399,12 @@
           }
           if (!_ && !_) return _;
           const _ = new Array();
-          for (; _?.length > 0 || _?.length > 0; ) {
+          for (; (_?.length ?? 0) > 0 || (_?.length ?? 0) > 0; ) {
             let _ = {
-              event_gids: _?.length > 0 ? _?.splice(0, 100).join(",") : void 0,
+              event_gids:
+                (_?.length ?? 0) > 0 ? _?.splice(0, 100).join(",") : void 0,
               announcement_gids:
-                _?.length > 0 ? _?.splice(0, 100).join(",") : void 0,
+                (_?.length ?? 0) > 0 ? _?.splice(0, 100).join(",") : void 0,
               lang_list: _,
               origin: self.origin,
             };
@@ -22832,581 +22912,6 @@
       window.g_EventCalendarTrackingStore = _;
       var _ = __webpack_require__("chunkid");
       class _ {
-        m_CMInterface;
-        m_setShownEvents = new Set();
-        m_setReadEvents = new Set();
-        m_rgPendingUpload = [];
-        m_schUpload = new _._();
-        m_bUploading = !1;
-        constructor(_) {
-          this.m_CMInterface = _;
-        }
-        MarkEventShown(_, _, _) {
-          let _ = this.MakeKey(_, _);
-          if (this.m_setShownEvents.has(_)) return !1;
-          this.m_setShownEvents.add(_);
-          let _ = new _._();
-          return (
-            _.set_event_gid(_),
-            _.set_clanid(_),
-            _.set_display_location(_),
-            _.set_mark_shown(!0),
-            this.QueueForUpload(_),
-            !0
-          );
-        }
-        MarkEventRead(_, _, _) {
-          let _ = this.MakeKey(_, _);
-          if (this.m_setReadEvents.has(_)) return !1;
-          this.m_setReadEvents.add(_);
-          let _ = new _._();
-          return (
-            _.set_event_gid(_),
-            _.set_clanid(_),
-            _.set_display_location(_),
-            _.set_mark_read(!0),
-            this.QueueForUpload(_),
-            !0
-          );
-        }
-        MakeKey(_, _) {
-          return `${_}_${_}`;
-        }
-        QueueForUpload(_) {
-          this.m_rgPendingUpload.push(_), this.ScheduleUpload();
-        }
-        ScheduleUpload() {
-          this.m_bUploading ||
-            (this.m_rgPendingUpload.length >= 30
-              ? this.UploadPendingData()
-              : this.m_schUpload.IsScheduled() ||
-                this.m_schUpload.Schedule(6e4, this.UploadPendingData));
-        }
-        async Flush() {
-          if (!this.m_bUploading) return this.UploadPendingData();
-        }
-        async UploadPendingData() {
-          if (this.m_bUploading) return;
-          this.m_schUpload.Cancel();
-          let _ = this.m_rgPendingUpload.splice(0, 30);
-          if (0 == _.length) return;
-          let _ = !1;
-          if (this.m_CMInterface) {
-            let _ = _._.Init(_._);
-            for (let _ of _) __webpack_require__.Body().add_markings(_);
-            this.m_bUploading = !0;
-            let _ = await _._.MarkPartnerEventsForUser(
-              this.m_CMInterface.GetServiceTransport(),
-              _,
-            );
-            (this.m_bUploading = !1), (_ = 1 == _.GetEResult());
-          } else {
-            if (!_._.logged_in) return;
-            let _ = _.map((_) => _.toObject()),
-              _ = (0, _._)() + "actions/ajaxmarkpartnerevents";
-            const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
-              _.append("request", JSON.stringify(_));
-            try {
-              _ =
-                1 ==
-                (
-                  await _().post(_, _, {
-                    withCredentials: !0,
-                  })
-                ).data.success;
-            } catch (_) {
-              let _ = (0, _._)(_);
-              console.error(
-                "CPartnerEventUserTracking.UploadPendingData error " +
-                  _.strErrorMsg,
-                _,
-              );
-            }
-          }
-          _
-            ? this.m_rgPendingUpload.length > 0 && this.ScheduleUpload()
-            : (console.log(
-                "Saving news event state failed. Will try again soon!",
-              ),
-              (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(_)),
-              this.m_schUpload.Schedule(6e4, this.UploadPendingData));
-        }
-      }
-      (0, _._)([_._], _.prototype, "UploadPendingData", null);
-      const _ = () => (2 === _._.EUNIVERSE ? 2581 : 45267781);
-      class _ {
-        clanid = void 0;
-        appid = 0;
-        can_edit = !1;
-        owns_app = !1;
-        follows_app = !1;
-        support_user = !1;
-        valve_admin = !1;
-        limited_user = !1;
-        event_ignored = new Array();
-        event_followed = new Array();
-        event_followed_flags = new Array();
-        constructor(_) {
-          (0, _._)(this), (this.clanid = _);
-        }
-      }
-      var _;
-      (0, _._)([_._], _.prototype, "clanid", void 0),
-        (0, _._)([_._], _.prototype, "appid", void 0),
-        (0, _._)([_._], _.prototype, "can_edit", void 0),
-        (0, _._)([_._], _.prototype, "owns_app", void 0),
-        (0, _._)([_._], _.prototype, "follows_app", void 0),
-        (0, _._)([_._], _.prototype, "support_user", void 0),
-        (0, _._)([_._], _.prototype, "valve_admin", void 0),
-        (0, _._)([_._], _.prototype, "limited_user", void 0),
-        (0, _._)([_._], _.prototype, "event_ignored", void 0),
-        (0, _._)([_._], _.prototype, "event_followed", void 0),
-        (0, _._)([_._], _.prototype, "event_followed_flags", void 0),
-        (function (_) {
-          (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
-            (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
-            (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
-        })(_ || (_ = {}));
-      class _ {
-        constructor() {
-          (0, _._)(this);
-        }
-        m_mapClanToUserPermissions = new Map();
-        m_mapAnnounceGIDToVote = new Map();
-        m_setReadEventGIDs = new Set();
-        m_tracker;
-        m_cm = void 0;
-        static s_EventUserStore;
-        m_bIsPresentationMode = (0, _._)();
-        static Get() {
-          return (
-            (0, _._)(
-              !!_.s_EventUserStore,
-              "Have not yet initialized global EventUserStore",
-            ),
-            _.s_EventUserStore
-          );
-        }
-        static IsInitialized() {
-          return !!_.s_EventUserStore;
-        }
-        static async InitGlobal(_) {
-          if (!_.s_EventUserStore) {
-            const _ = new _();
-            await _.Init(_),
-              (_.s_EventUserStore = _),
-              "dev" == _._.WEB_UNIVERSE && (window.g_EventUserStore = _);
-          }
-        }
-        static BIsInited() {
-          return Boolean(_.s_EventUserStore);
-        }
-        async Init(_) {
-          (this.m_cm = _), (this.m_tracker = new _(_));
-          const _ = (0, _._)("partnereventpermissions", "application_config");
-          this.ValidateStoreDefault(_) &&
-            ((0, _._)(() => {
-              _.forEach((_) => {
-                let _ = new _(_.clanid),
-                  _ = {
-                    result: _,
-                    promise: _.RemapToPromise(_),
-                    bLoaded: !0,
-                  };
-                this.CopyFromResponseToTrack(_, _),
-                  this.m_mapClanToUserPermissions.set(_.clanid, _);
-              });
-            }),
-            ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-              console.log(
-                "CEventUserStore has loaded",
-                this.m_mapClanToUserPermissions.size,
-                this.m_mapClanToUserPermissions,
-              ));
-          let _ = (0, _._)("uservotes", "application_config");
-          _ &&
-            (0, _._)(() => {
-              __webpack_require__.forEach((_) => {
-                let _ = !!_.voted_up || (!_.voted_down && void 0);
-                this.m_mapAnnounceGIDToVote.set(_.clanAnnouncementGID, _);
-              });
-            });
-        }
-        GetTracker() {
-          return this.m_tracker;
-        }
-        ValidateStoreDefault(_) {
-          const _ = _;
-          return (
-            !!(
-              _ &&
-              Array.isArray(_) &&
-              _.length > 0 &&
-              "object" == typeof _[0]
-            ) &&
-            "number" == typeof _[0].clanid &&
-            "number" == typeof _[0].appid
-          );
-        }
-        RecordEventShown(_, _) {
-          _ &&
-            !_.bOldAnnouncement &&
-            this.m_tracker.MarkEventShown(
-              _.GID,
-              _.clanSteamID.GetAccountID(),
-              _,
-            );
-        }
-        RecordEventRead(_, _) {
-          _ &&
-            !_.bOldAnnouncement &&
-            (this.HasEventBeenRead(_.GID) ||
-              (this.SetEventAsRead(_.GID),
-              this.m_tracker.MarkEventRead(
-                _.GID,
-                _.clanSteamID.GetAccountID(),
-                _,
-              )));
-        }
-        SetEventAsRead(_) {
-          this.m_setReadEventGIDs.add(_);
-        }
-        HasEventBeenRead(_) {
-          return this.m_setReadEventGIDs.has(_);
-        }
-        static async RemapToPromise(_) {
-          return _;
-        }
-        BIsUserLoggedIn() {
-          return _._.logged_in;
-        }
-        BIsPartnerEventPermissionsLoaded(_) {
-          return (
-            this.m_mapClanToUserPermissions.has(_) &&
-            this.m_mapClanToUserPermissions.get(_).bLoaded
-          );
-        }
-        GetPartnerEventPermissions(_) {
-          if (!_ || !_.BIsValid()) return new _(0);
-          const _ = _.GetAccountID();
-          this.m_mapClanToUserPermissions.has(_) ||
-            this.LoadSingleAppEventPermissions(_);
-          return this.m_mapClanToUserPermissions.get(_).result;
-        }
-        BFollowsEvent(_, _) {
-          return (
-            -1 != this.GetPartnerEventPermissions(_).event_followed.indexOf(_)
-          );
-        }
-        BFollowsEventAndNotifiedBy(_, _, _) {
-          let _ = this.GetPartnerEventPermissions(_),
-            _ = _.event_followed.indexOf(_);
-          return -1 !== _ && (_.event_followed_flags[_] & _) == _;
-        }
-        BIgnoresEvent(_, _) {
-          return (
-            -1 != this.GetPartnerEventPermissions(_).event_ignored.indexOf(_)
-          );
-        }
-        async LoadSingleAppEventPermissions(_) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToUserPermissions.get(_);
-          return (
-            _ ||
-              ((_ = {
-                promise: this.InternalLoadSingleAppEventPermissions(_),
-                result: new _(_),
-                bLoaded: !1,
-              }),
-              this.m_mapClanToUserPermissions.set(_, _)),
-            _.promise
-          );
-        }
-        CopyFromResponseToTrack(_, _) {
-          (_.result.appid = _.appid),
-            (_.result.can_edit = _.can_edit),
-            (_.result.clanid = _.appid),
-            (_.result.event_followed = _.event_followed),
-            (_.result.event_ignored = _.event_ignored),
-            (_.result.event_followed_flags = _.event_followed_flags),
-            (_.result.follows_app = _.follows_app),
-            (_.result.owns_app = _.owns_app),
-            (_.result.limited_user = _.limited_user),
-            (_.support_user || _.valve_admin) && this.m_bIsPresentationMode
-              ? ((_.result.can_edit = !0),
-                (_.result.support_user = !1),
-                (_.result.valve_admin = !1))
-              : ((_.result.support_user = _.support_user),
-                (_.result.valve_admin = _.valve_admin)),
-            (_.bLoaded = !0);
-        }
-        async InternalLoadSingleAppEventPermissions(_) {
-          let _ = null,
-            _ = _.GetAccountID(),
-            _ = !Boolean(_._.logged_in);
-          if (!this.m_mapClanToUserPermissions.has(_)) {
-            let _ = new _(_.GetAccountID());
-            this.m_mapClanToUserPermissions.set(_, {
-              result: _,
-              promise: _.RemapToPromise(_),
-              bLoaded: !1,
-            });
-          }
-          try {
-            if (Boolean(_._.logged_in)) {
-              let _ =
-                  _._.COMMUNITY_BASE_URL +
-                  "gid/" +
-                  _.ConvertTo64BitString() +
-                  "/ajaxgetpartnereventpermissions/",
-                _ = {};
-              if (
-                ("partnerweb" == (0, _._)()
-                  ? ((_ =
-                      _._.PARTNER_BASE_URL +
-                      "partnerevents/ajaxgetpartnereventpermissions"),
-                    (_ = {
-                      clanaccountid: _.GetAccountID(),
-                    }))
-                  : "store" == (0, _._)() &&
-                    ((_ =
-                      _._.STORE_BASE_URL +
-                      "events/ajaxgetpartnereventpermissions"),
-                    (_ = {
-                      clanaccountid: _.GetAccountID(),
-                    })),
-                (_ = await _().get(_, {
-                  params: _,
-                  withCredentials: !0,
-                })),
-                1 != _.data.success)
-              )
-                console.error(
-                  "Partner Events Failed Load:" + (0, _._)(_.data).strErrorMsg,
-                ),
-                  (_ = !0);
-              else {
-                let _ = this.m_mapClanToUserPermissions.get(_);
-                this.CopyFromResponseToTrack(_, _.data);
-              }
-            }
-          } catch (_) {
-            if (
-              ((_ = _.response),
-              (_ = !0),
-              _ &&
-                void 0 !== _.response &&
-                void 0 !== _.response.data &&
-                void 0 !== _.response.data.success &&
-                21 == _.response.data.success)
-            );
-            else {
-              const _ = (0, _._)(_);
-              console.error(
-                "InternalLoadSingleAppEventPermissions account: " +
-                  _ +
-                  ": " +
-                  _.strErrorMsg,
-                _,
-              );
-            }
-          } finally {
-            _ &&
-              (0, _._)(() => {
-                let _ = this.m_mapClanToUserPermissions.get(_);
-                (_.result.appid = _ && _.data ? _.data.appid : 0),
-                  (_.result.can_edit = !1),
-                  (_.result.clanid = _ && _.data ? _.data.clanid : 0),
-                  (_.result.event_followed = new Array()),
-                  (_.result.event_ignored = new Array()),
-                  (_.result.event_followed_flags = new Array()),
-                  (_.result.follows_app = !1),
-                  (_.result.owns_app = !1),
-                  (_.result.support_user = !1),
-                  (_.result.valve_admin = !1),
-                  (_.result.limited_user = !1),
-                  (_.bLoaded = !0);
-              });
-          }
-          return this.m_mapClanToUserPermissions.get(_).result;
-        }
-        async SetFollowOrUnfollowEvent(_, _, _, _, _) {
-          let _ = this.GetPartnerEventPermissions(_),
-            _ = _.event_followed.indexOf(_),
-            _ = 0;
-          -1 !== _ &&
-            ((_ = _.event_followed_flags[_]), _ ? (_ = _ & ~_) : (_ |= _));
-          let _ = 0 == _,
-            _ =
-              ("store" === (0, _._)()
-                ? _._.STORE_BASE_URL + "events"
-                : _._.COMMUNITY_BASE_URL +
-                  "/gid/" +
-                  __webpack_require__.ConvertTo64BitString()) +
-              (_ ? "/unfolloworunignoreevent" : "/followorignoreevent"),
-            _ = new URLSearchParams();
-          _.append("sessionid", _._.SESSIONID),
-            _.append("ignore", "" + _),
-            _.append("gid", _),
-            _.append("notification_flag", "" + _),
-            _.append("clan_accountid", "" + __webpack_require__.GetAccountID());
-          await _().post(_, _, {
-            withCredentials: !0,
-          });
-          (0, _._)(() => {
-            let _ = this.m_mapClanToUserPermissions.get(
-                __webpack_require__.GetAccountID(),
-              ),
-              _ = null,
-              _ = null,
-              _ = null,
-              _ = null;
-            _
-              ? ((_ = _ ? _.result.event_ignored : _.result.event_followed),
-                (_ = _ ? null : _.result.event_followed_flags))
-              : _
-                ? ((_ = _.result.event_followed),
-                  (_ = _.result.event_followed_flags),
-                  (_ = _.result.event_ignored))
-                : ((_ = _.result.event_ignored),
-                  (_ = _.result.event_followed),
-                  (_ = _.result.event_followed_flags));
-            let _ = _.indexOf(_);
-            if ((_ > -1 && (_.splice(_, 1), _ && _.splice(_, 1)), _)) {
-              let _ = _.indexOf(_);
-              -1 == _ ? (_.push(_), _ && _.push(_)) : (_[_] = _);
-            }
-          });
-        }
-        async Vote(_, _, _) {
-          if (!_ || !_.AnnouncementGID) return !1;
-          const _ = this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
-          if (_ === _) return !0;
-          if (
-            (this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _),
-            (0, _._)(() => {
-              !0 === _ && _.UpdateVoteCount("up", -1),
-                !1 === _ && _.UpdateVoteCount("down", -1),
-                !0 === _ && _.UpdateVoteCount("up", 1),
-                !1 === _ && _.UpdateVoteCount("down", 1);
-            }),
-            this.m_cm)
-          ) {
-            let _ = _._.Init(_._);
-            return (
-              __webpack_require__.Body().set_announcementid(_.AnnouncementGID),
-              __webpack_require__.Body().set_vote_up(!!_),
-              __webpack_require__
-                .Body()
-                .set_clan_accountid(_.clanSteamID.GetAccountID()),
-              1 ==
-                (
-                  await _._.RateClanAnnouncement(
-                    this.m_cm.GetServiceTransport(),
-                    _,
-                  )
-                ).GetEResult()
-            );
-          }
-          {
-            const _ = (0, _._)(),
-              _ =
-                "community" == _ || "steamtv" == _
-                  ? _._.COMMUNITY_BASE_URL +
-                    "gid/" +
-                    _.clanSteamID.ConvertTo64BitString() +
-                    "/announcements/rate/" +
-                    _.AnnouncementGID
-                  : _._.STORE_BASE_URL +
-                    "updated/ajaxrateupdate/" +
-                    _.AnnouncementGID,
-              _ = new URLSearchParams();
-            _.append("sessionid", _._.SESSIONID),
-              _.append("voteup", _ ? "1" : "0"),
-              _.append("clanid", "" + _.clanSteamID.GetAccountID()),
-              _.append("ajax", "1");
-            const _ = {
-              withCredentials: !0,
-              cancelToken: _.token,
-            };
-            return 1 == (await _().post(_, _, _)).data.success;
-          }
-        }
-        async LoadMyVote(_, _) {
-          if (_?.AnnouncementGID) {
-            if (this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID))
-              return this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
-            let _;
-            if (this.m_cm) {
-              let _ = _._.Init(_._);
-              _.Body().set_announcementid(_.AnnouncementGID);
-              let _ = await _._.GetClanAnnouncementVoteForUser(
-                this.m_cm.GetServiceTransport(),
-                _,
-              );
-              1 == _.GetEResult() &&
-                (_ =
-                  !!_.Body().voted_up() || (!_.Body().voted_down() && void 0));
-            } else {
-              const _ = "store" == (0, _._)(),
-                _ = _
-                  ? _._.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
-                  : _._.COMMUNITY_BASE_URL +
-                    "gid/" +
-                    _.clanSteamID.ConvertTo64BitString() +
-                    "/announcements/ajaxgetmyvote/" +
-                    _.AnnouncementGID,
-                _ = {
-                  gid: _ ? _.AnnouncementGID : void 0,
-                },
-                _ = await _().get(_, {
-                  withCredentials: !0,
-                  cancelToken: _.token,
-                  params: _,
-                });
-              _ = !!_.data.voted_up || (!_.data.voted_down && void 0);
-            }
-            return this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _), _;
-          }
-        }
-        SetVote(_, _) {
-          this.m_mapAnnounceGIDToVote.set(_, _);
-        }
-        BHasMyVote(_) {
-          return (
-            !!_.AnnouncementGID &&
-            this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID)
-          );
-        }
-        GetPreviouslyLoadedVote(_) {
-          return _.AnnouncementGID
-            ? this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID)
-            : void 0;
-        }
-        BShowEmailEditorTab(_) {
-          if (_.BHasEmailEnabled()) return !0;
-          if (_.clanSteamID.GetAccountID() == _()) return !0;
-          let _ = this.GetPartnerEventPermissions(_.clanSteamID);
-          return (_._.IS_OGG || _._.IS_VALVE_GROUP) && _.valve_admin;
-        }
-        BShowSaleEditorTab(_) {
-          if (_.BHasSaleEnabled()) return !0;
-          if (_.clanSteamID.GetAccountID() == _()) return !1;
-          let _ = this.GetPartnerEventPermissions(_.clanSteamID);
-          return (
-            !_._.IS_OGG &&
-            (_.valve_admin ||
-              (_.jsondata.clone_from_event_gid &&
-                _.jsondata.clone_from_sale_enabled))
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapClanToUserPermissions", void 0),
-        (0, _._)([_._], _.prototype, "m_mapAnnounceGIDToVote", void 0),
-        (0, _._)([_._], _.prototype, "m_setReadEventGIDs", void 0),
-        (0, _._)([_._], _.prototype, "CopyFromResponseToTrack", null);
-      class _ {
         constructor() {
           (0, _._)(this);
         }
@@ -23894,7 +23399,9 @@
       _.createContext({
         bCanUseLink: !1,
       });
-      var _, _;
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_eView = "view"),
           (_.k_eViewWebSiteHub = "websitehub"),
@@ -23912,15 +23419,11 @@
           (_.k_eStoreOwnerPage = "store"),
           (_.k_eStoreSalePage = "sale"),
           (_.k_eStoreUsersNewsHub = "usernewshub");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_.k_eFacebook = "facebook"),
-            (_.k_eTwitter = "twitter"),
-            (_.k_eReddit = "reddit");
-        })(_ || (_ = {}));
+      })(_ || (_ = {}));
       const _ =
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
       function _(_, _) {
+        if (!_) return !1;
         const _ = "store" === (0, _._)(),
           _ = (function (_) {
             const _ = _.match(_);
@@ -23969,6 +23472,12 @@
         return _._.COMMUNITY_BASE_URL + _ + "/";
       }
       function _(_, _, _) {
+        const [_] = (0, _._)(_?.appid, {
+          include_basic_info: !0,
+        });
+        if (_) return _(_, _, _, _);
+      }
+      function _(_, _, _, _) {
         const _ = "relative" === _,
           _ = "community" === (0, _._)(),
           _ = _ ? "/" : _._.STORE_BASE_URL,
@@ -23978,7 +23487,12 @@
           : _ === _.k_eViewWebSiteHub &&
             (_ = _ ? _.k_eCommunityAnnouncementHub : _.k_eStoreNewsHub);
         const _ = _.GID ? _.GID : "",
-          _ = _.AnnouncementGID ? _.AnnouncementGID : "";
+          _ = _.AnnouncementGID ? _.AnnouncementGID : "",
+          _ =
+            _.BIsOGGEvent() &&
+            _.appid &&
+            _ &&
+            _.BHasSaleUpdateLandingPageVanity();
         switch (_) {
           case _.k_eCommunityPublish:
             return (
@@ -24033,17 +23547,21 @@
             return _.jsondata.bSaleEnabled
               ? _.clanSteamID.GetAccountID() == _
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : _ +
-                  (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                    ? "sale/"
-                    : "curator/" + _.clanSteamID.GetAccountID() + "/sale/") +
-                  _.jsondata.sale_vanity_id
+                : _
+                  ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                  : _ +
+                    (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                      ? "sale/"
+                      : "curator/" + _.clanSteamID.GetAccountID() + "/sale/") +
+                    _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;
           case _.k_eStoreView:
-            if (_.clanSteamID.GetAccountID() == _())
+            if (_.clanSteamID.GetAccountID() == (0, _._)())
               return `${_._.STORE_BASE_URL}meetsteam/${_}`;
+            if (_)
+              return `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`;
             return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
           case _.k_eStoreUsersNewsHub:
             return `${_}news/`;
@@ -32904,7 +32422,7 @@
           this.m_bLoadWasCancelled = !0;
         }
         ToggleMenu(_) {
-          const _ = _.Get().BIsUserLoggedIn();
+          const _ = _._.Get().BIsUserLoggedIn();
           _ || _._.IN_CLIENT
             ? (!_ &&
                 _._.IN_CLIENT &&
@@ -32974,16 +32492,16 @@
           const _ = _.GID;
           return (
             (_.BHasValidatedEmail() &&
-              _.Get().BFollowsEventAndNotifiedBy(
+              _._.Get().BFollowsEventAndNotifiedBy(
                 _.clanSteamID,
                 _,
-                _.k_ENotifyFlagByEmail,
+                _._.k_ENotifyFlagByEmail,
               )) ||
             (_.BHasPushNotification() &&
-              _.Get().BFollowsEventAndNotifiedBy(
+              _._.Get().BFollowsEventAndNotifiedBy(
                 _.clanSteamID,
                 _,
-                _.k_ENotifyFlagByPush,
+                _._.k_ENotifyFlagByPush,
               ))
           );
         }
@@ -33090,353 +32608,332 @@
         (0, _._)([_._], _.prototype, "ShowMenu", null),
         (0, _._)([_._], _.prototype, "HideMenu", null),
         (_ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        state = {
-          bIsRequestInFlight: !1,
-        };
-        async OnChangeFollowOrIgnore(_, _, _) {
-          const { eventModel: _ } = this.props,
-            _ = _?.GID;
-          if (_ && _ != _._) {
-            this.setState({
-              bIsRequestInFlight: !0,
-            });
-            try {
-              await _.Get().SetFollowOrUnfollowEvent(
-                !_,
-                _,
-                _.clanSteamID,
-                _,
-                _,
-              ),
-                _ &&
-                  (_ === _.k_ENotifyFlagByEmail
-                    ? this.TrackEventAction(_.k_eReminder_Email)
-                    : _ === _.k_ENotifyFlagByPush &&
-                      this.TrackEventAction(_.k_eReminder_MobilePush));
-            } catch (_) {
-              _(
-                _.createElement(
+      const _ = (0, _._)((_) => {
+        const {
+            eventModel: _,
+            bShowStartTime: __webpack_require__,
+            bExpandLeft: _,
+            bOnlyShowIcon: _,
+            fnHasReminderSet: _,
+            fnHidePanel: _,
+            lang: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = async (_, _, _) => {
+            const _ = _?.GID;
+            if (_ && _ != _._) {
+              _(!0);
+              try {
+                await _._.Get().SetFollowOrUnfollowEvent(
+                  !_,
                   _,
-                  {
-                    strTitle: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                        : "#EventDisplay_Reminder_FollowEvent_Error",
-                    ),
-                    strDescription: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                    ),
-                  },
-                  (0, _._)(_).strErrorMsg,
+                  _.clanSteamID,
+                  _,
+                  _,
                 ),
-                window,
-              );
+                  _ &&
+                    (_ === _._.k_ENotifyFlagByEmail
+                      ? _(_.k_eReminder_Email)
+                      : _ === _._.k_ENotifyFlagByPush &&
+                        _(_.k_eReminder_MobilePush));
+              } catch (_) {
+                _(
+                  _.createElement(
+                    _,
+                    {
+                      strTitle: (0, _._)(
+                        _
+                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                          : "#EventDisplay_Reminder_FollowEvent_Error",
+                      ),
+                      strDescription: (0, _._)(
+                        _
+                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                      ),
+                    },
+                    (0, _._)(_).strErrorMsg,
+                  ),
+                  window,
+                );
+              }
+              _(!1);
             }
-            this.setState({
-              bIsRequestInFlight: !1,
-            });
-          }
-        }
-        OnChangeFollowByEmail(_) {
-          this.OnChangeFollowOrIgnore(_, !1, _.k_ENotifyFlagByEmail);
-        }
-        OnChangeFollowByPush(_) {
-          this.OnChangeFollowOrIgnore(_, !1, _.k_ENotifyFlagByPush);
-        }
-        GetExternalCalendarEventTitle() {
-          const { eventModel: _, lang: _ } = this.props,
-            _ = _.GetNameWithFallback(_);
-          if (_.BHasEntityNameForID(_.appid, _.clanSteamID.GetAccountID())) {
-            return `${_.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-          }
-          return _;
-        }
-        TrackEventAction(_) {
-          const { eventModel: _ } = this.props;
-          _.RecordAppInteractionEvent(_.appid, _);
-        }
-        GetExternalCalendarEventBody() {
-          const { eventModel: _, lang: _ } = this.props;
-          let _ = _.GetSubTitleWithLanguageFallback(_);
-          _ = _ ? `${_}\n\n\n` : "";
-          const _ = _.GetSummaryWithFallback(_),
-            _ = (function (_, _, _) {
-              return _(
-                _,
-                _,
-                "forceAbsolute" !== _ && _(_, _) ? "relative" : "absolute",
-              );
-            })(
+          },
+          _ = (_) => {
+            _.RecordAppInteractionEvent(_.appid, _);
+          },
+          _ = _.jsondata.bSaleEnabled ? _.k_eStoreSalePage : _.k_eStoreView,
+          _ = (function (_, _, _) {
+            return _(
               _,
-              _.jsondata.bSaleEnabled ? _.k_eStoreSalePage : _.k_eStoreView,
-              "forceAbsolute",
+              _,
+              "forceAbsolute" !== _ && _(_, _) ? "relative" : "absolute",
             );
-          return `${_}${_}\n\n${_}`;
-        }
-        GetGoogleCalendarLink() {
-          const { eventModel: _ } = this.props,
-            _ = encodeURIComponent(this.GetExternalCalendarEventTitle()),
-            _ = encodeURIComponent(this.GetExternalCalendarEventBody()),
-            _ = _.GetStartTimeAndDateUnixSeconds(),
-            _ = _(_),
-            _ = _(_.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour),
-            _ =
-              (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
-              `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-          return (0, _._)(_);
-        }
-        GetICSDownloadLink(_) {
-          const { eventModel: _, lang: __webpack_require__ } = this.props,
-            _ = _.appid
-              ? "app/" + _.appid
-              : "group/" + _.clanSteamID.GetAccountID(),
-            _ = "l=" + (0, _._)(__webpack_require__);
-          return `${_._.STORE_BASE_URL}news/download/${_}/${_}/${_.GID}?${_}`;
-        }
-        render() {
-          const {
-              eventModel: _,
-              bShowStartTime: _,
-              bExpandLeft: __webpack_require__,
-              bOnlyShowIcon: _,
-              fnHasReminderSet: _,
-              fnHidePanel: _,
-            } = this.props,
-            _ = _.BHasValidatedEmail(),
-            _ = _.BHasPushNotification(),
-            _ = _ && _.GetStartTimeAndDateUnixSeconds();
-          return _.createElement(
+          })(_, _, "forceAbsolute"),
+          _ = (_) => {
+            const _ = _.appid
+                ? "app/" + _.appid
+                : "group/" + _.clanSteamID.GetAccountID(),
+              _ = "l=" + (0, _._)(_);
+            return `${_._.STORE_BASE_URL}news/download/${_}/${_}/${_.GID}?${_}`;
+          },
+          _ = _.BHasValidatedEmail(),
+          _ = _.BHasPushNotification(),
+          _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
             "div",
-            null,
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.ReminderCheckBox,
-                  _ ? _.IconMode : _.TextMode,
-                  "RemindMeWidget",
-                ),
-                onClick: _,
-              },
-              _(this.props.eventModel) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RemindCheck,
-                  },
-                  _.createElement(_.Jlk, null),
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RemindBell,
-                  },
-                  _.createElement(_.IrQ, null),
-                ),
+            {
+              className: (0, _._)(
+                _.ReminderCheckBox,
+                _ ? _.IconMode : _.TextMode,
+                "RemindMeWidget",
+              ),
+              onClick: _,
+            },
+            _(_) &&
               _.createElement(
                 "div",
                 {
-                  className: _.ReminderDefault,
+                  className: _.RemindCheck,
                 },
-                (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                _.createElement(_.Jlk, null),
               ),
-              _.createElement("div", {
-                className: _.ReminderOpennedOptions,
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.RemindBell,
+                },
+                _.createElement(_.IrQ, null),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _.ReminderDefault,
+              },
+              (0, _._)("#EventDisplay_Reminder_SetReminder"),
+            ),
+            _.createElement("div", {
+              className: _.ReminderOpennedOptions,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlexColumnContainer,
+                _.ReminderBackground,
+                _ && _.ReminderExpandsLeft,
+              ),
+            },
+            _ &&
+              _.createElement(_, {
+                className: _.RpcThrobber,
+                size: "xlarge",
+                position: "center",
               }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.FullStartTime,
+                },
+                (0, _._)(
+                  "#EventDisplay_EventUpcoming_WithDateAndTime",
+                  (0, _._)(
+                    _,
+                    (0, _._)(
+                      new Date(1e3 * _),
+                      _.GetTimeNowWithOverrideAsDate(),
+                    ),
+                  ),
+                  _(_, !0),
+                ),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _.ReminderOptionsHeader,
+              },
+              (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
             ),
             _.createElement(
               "div",
               {
-                className: (0, _._)(
-                  _.FlexColumnContainer,
-                  _.ReminderBackground,
-                  __webpack_require__ && _.ReminderExpandsLeft,
-                ),
+                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
               },
-              this.state.bIsRequestInFlight &&
+              _.createElement(
+                _,
+                {
+                  className: _.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, _._)(
+                    _
+                      ? "#EventReminder_NotifyByEmail_ttip"
+                      : "#EventReminder_NotifyByEmail_Missing",
+                  ),
+                },
                 _.createElement(_, {
-                  className: _.RpcThrobber,
-                  size: "xlarge",
-                  position: "center",
+                  label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                  disabled: !_,
+                  checked: _._.Get().BFollowsEventAndNotifiedBy(
+                    _.clanSteamID,
+                    _.GID,
+                    _._.k_ENotifyFlagByEmail,
+                  ),
+                  onChange: (_) => {
+                    _(_, !1, _._.k_ENotifyFlagByEmail);
+                  },
                 }),
-              _ &&
+              ),
+              !_ &&
                 _.createElement(
                   "div",
                   {
-                    className: _.FullStartTime,
+                    className: _.FlexColumnContainer,
                   },
-                  (0, _._)(
-                    "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    (0, _._)(
-                      _,
-                      (0, _._)(
-                        new Date(1e3 * _),
-                        _.GetTimeNowWithOverrideAsDate(),
-                      ),
-                    ),
-                    _(_, !0),
+                  _.createElement(
+                    "a",
+                    {
+                      href: _._.STORE_BASE_URL + "account/",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => _(_.k_eReminder_EmailUnverified),
+                    },
+                    (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
                   ),
                 ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+              },
+              _.createElement(
+                _,
+                {
+                  className: _.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, _._)(
+                    _
+                      ? "#EventReminder_NotifyByMobile_ttip"
+                      : "#EventReminder_NotifyByMobile_Missing",
+                  ),
+                },
+                _.createElement(_, {
+                  label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
+                  disabled: !_,
+                  checked: _._.Get().BFollowsEventAndNotifiedBy(
+                    _.clanSteamID,
+                    _.GID,
+                    _._.k_ENotifyFlagByPush,
+                  ),
+                  onChange: (_) => {
+                    _(_, !1, _._.k_ENotifyFlagByPush);
+                  },
+                }),
+              ),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.FlexColumnContainer,
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => _(_.k_eReminder_MobilePushMissing),
+                    },
+                    (0, _._)("#EventReminder_NotifyByMobile_Install"),
+                  ),
+                ),
+            ),
+            _.createElement(
+              _.Fragment,
+              null,
               _.createElement(
                 "div",
                 {
                   className: _.ReminderOptionsHeader,
                 },
-                (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
+                (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
               ),
               _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  className: _.ReminderCalendarOptions,
                 },
                 _.createElement(
-                  _,
+                  "a",
                   {
-                    className: _.CheckboxWrapper,
-                    bTopmost: !0,
-                    toolTipContent: (0, _._)(
-                      _
-                        ? "#EventReminder_NotifyByEmail_ttip"
-                        : "#EventReminder_NotifyByEmail_Missing",
-                    ),
+                    className: _.ReminderOption,
+                    href: _("ics"),
+                    onClick: () => _(_.k_eReminder_CalendarApple),
                   },
-                  _.createElement(_, {
-                    label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                    disabled: !_,
-                    checked: _.Get().BFollowsEventAndNotifiedBy(
-                      _.clanSteamID,
-                      _.GID,
-                      _.k_ENotifyFlagByEmail,
-                    ),
-                    onChange: this.OnChangeFollowByEmail,
-                  }),
-                ),
-                !_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.FlexColumnContainer,
-                    },
-                    _.createElement(
-                      "a",
-                      {
-                        href: _._.STORE_BASE_URL + "account/",
-                        target: _._.IN_CLIENT ? void 0 : "_blank",
-                        onClick: () =>
-                          this.TrackEventAction(_.k_eReminder_EmailUnverified),
-                      },
-                      (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                },
-                _.createElement(
-                  _,
-                  {
-                    className: _.CheckboxWrapper,
-                    bTopmost: !0,
-                    toolTipContent: (0, _._)(
-                      _
-                        ? "#EventReminder_NotifyByMobile_ttip"
-                        : "#EventReminder_NotifyByMobile_Missing",
-                    ),
-                  },
-                  _.createElement(_, {
-                    label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                    disabled: !_,
-                    checked: _.Get().BFollowsEventAndNotifiedBy(
-                      _.clanSteamID,
-                      _.GID,
-                      _.k_ENotifyFlagByPush,
-                    ),
-                    onChange: this.OnChangeFollowByPush,
-                  }),
-                ),
-                !_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.FlexColumnContainer,
-                    },
-                    _.createElement(
-                      "a",
-                      {
-                        href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                        target: _._.IN_CLIENT ? void 0 : "_blank",
-                        onClick: () =>
-                          this.TrackEventAction(
-                            _.k_eReminder_MobilePushMissing,
-                          ),
-                      },
-                      (0, _._)("#EventReminder_NotifyByMobile_Install"),
-                    ),
-                  ),
-              ),
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ReminderOptionsHeader,
-                  },
-                  (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
+                  (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
                 ),
                 _.createElement(
-                  "div",
+                  "a",
                   {
-                    className: _.ReminderCalendarOptions,
+                    className: _.ReminderOption,
+                    target: _._.IN_CLIENT ? void 0 : "_blank",
+                    href: (() => {
+                      const _ = encodeURIComponent(
+                          (() => {
+                            const _ = _.GetNameWithFallback(_);
+                            if (
+                              _.BHasEntityNameForID(
+                                _.appid,
+                                _.clanSteamID.GetAccountID(),
+                              )
+                            )
+                              return `${_.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
+                            return _;
+                          })(),
+                        ),
+                        _ = encodeURIComponent(
+                          (() => {
+                            let _ = _.GetSubTitleWithLanguageFallback(_);
+                            return (
+                              (_ = _ ? `${_}\n\n\n` : ""),
+                              `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                            );
+                          })(),
+                        ),
+                        _ = _.GetStartTimeAndDateUnixSeconds(),
+                        _ = _(_),
+                        _ = _(
+                          _.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour,
+                        ),
+                        _ =
+                          (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
+                          `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                      return (0, _._)(_);
+                    })(),
+                    onClick: () => _(_.k_eReminder_CalendarGoogle),
                   },
-                  _.createElement(
-                    "a",
-                    {
-                      className: _.ReminderOption,
-                      href: this.GetICSDownloadLink("ics"),
-                      onClick: () =>
-                        this.TrackEventAction(_.k_eReminder_CalendarApple),
-                    },
-                    (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      className: _.ReminderOption,
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      href: this.GetGoogleCalendarLink(),
-                      onClick: () =>
-                        this.TrackEventAction(_.k_eReminder_CalendarGoogle),
-                    },
-                    (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      className: _.ReminderOption,
-                      href: this.GetICSDownloadLink("outlook"),
-                      onClick: () =>
-                        this.TrackEventAction(_.k_eReminder_CalendarOutlook),
-                    },
-                    (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
-                  ),
+                  (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
+                ),
+                _.createElement(
+                  "a",
+                  {
+                    className: _.ReminderOption,
+                    href: _("outlook"),
+                    onClick: () => _(_.k_eReminder_CalendarOutlook),
+                  },
+                  (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
                 ),
               ),
-              !1,
             ),
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnChangeFollowByEmail", null),
-        (0, _._)([_._], _.prototype, "OnChangeFollowByPush", null),
-        (0, _._)([_._], _.prototype, "TrackEventAction", null),
-        (_ = (0, _._)([_._], _));
+            !1,
+          ),
+        );
+      });
       class _ {
         m_bUserHasVolumePreference = !1;
         m_flVolumePreference = 0;
@@ -60517,6 +60014,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  dlc_for_appid: {
+                    _: 19,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -61307,6 +60809,224 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.query_name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  query_name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  context: {
+                    _: 2,
+                    _: _._,
+                  },
+                  data_request: {
+                    _: 3,
+                    _: _._,
+                  },
+                  item_id: {
+                    _: 4,
+                    _: _._,
+                  },
+                  count: {
+                    _: 5,
+                    _: 20,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  filters: {
+                    _: 6,
+                    _: _,
+                  },
+                  options: {
+                    _: 7,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQuery_MoreLikeThis_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.tag_weight || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  tag_weight: {
+                    _: 1,
+                    _: 90,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQuery_MoreLikeThis_Request_MoreLikeThisOptions";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.metadata || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2, 3], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  metadata: {
+                    _: 1,
+                    _: _,
+                  },
+                  ids: {
+                    _: 2,
+                    _: _._,
+                    _: !0,
+                    _: !0,
+                  },
+                  store_items: {
+                    _: 3,
+                    _: _._,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreQuery_MoreLikeThis_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.filters || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [6], null);
         }
@@ -61773,6 +61493,13 @@
                 eWebAPIKeyRequirement: 1,
               },
             );
+          }),
+          (_.MoreLikeThis = function (_, _) {
+            return _.SendMsg("StoreQuery.MoreLikeThis#1", (0, _._)(_, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 1,
+              eWebAPIKeyRequirement: 1,
+            });
           }),
           (_.GetItemsByUserRecommendedTags = function (_, _) {
             return _.SendMsg(
@@ -62934,7 +62661,9 @@
 	"templatefaq": 100748,
 	"templatetechspec": 100749,
 	"topnewreleases": 100750,
-	"newreleases": 100751
+	"newreleases": 100751,
+	"salebrowsetrendingfree": 100752,
+	"trendingfree": 100753
 }`);
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
@@ -65190,13 +64919,17 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid"),
+        __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -67638,7 +67371,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.product || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
+            _.Message.initialize(this, _, 0, -1, [3, 4], null);
         }
         static sm_m;
         static sm_mbf;
@@ -67663,6 +67396,13 @@
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  tags: {
+                    _: 4,
+                    _: !0,
+                    _: !0,
+                    _: _._.readString,
+                    _: _._.writeRepeatedString,
                   },
                 },
               }),
@@ -69073,8 +68813,8 @@
                   },
                   gr_mode: {
                     _: 10,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -69546,6 +69286,7 @@
         m_bReportingPaused = !1;
         m_pauseTimer = void 0;
         m_fnGetReportingInterval = _;
+        m_fnGetReportTags = () => [];
         m_bEnabled = !0;
         m_bInitialized = !1;
         constructor(_ = !0) {
@@ -69581,6 +69322,7 @@
             (this.m_transport = _),
             _.fnGetReportingInterval &&
               (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
+            _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
             this.m_bEnabled ||
               (console.error(
                 "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -69792,8 +69534,9 @@
             });
           _.Body().set_product(this.m_strProduct),
             _.Body().set_version(this.m_strVersion),
-            _.Body().set_errors(_),
-            _.ReportClientError(this.m_transport, _);
+            _.Body().set_errors(_);
+          for (const _ of this.m_fnGetReportTags()) _.Body().add_tags(_);
+          _.ReportClientError(this.m_transport, _);
         }
         get version() {
           return this.m_strVersion;
@@ -69857,6 +69600,590 @@
       function _() {
         return 1e4;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_CMInterface;
+        m_setShownEvents = new Set();
+        m_setReadEvents = new Set();
+        m_rgPendingUpload = [];
+        m_schUpload = new _._();
+        m_bUploading = !1;
+        constructor(_) {
+          this.m_CMInterface = _;
+        }
+        MarkEventShown(_, _, _) {
+          let _ = this.MakeKey(_, _);
+          if (this.m_setShownEvents.has(_)) return !1;
+          this.m_setShownEvents.add(_);
+          let _ = new _._();
+          return (
+            _.set_event_gid(_),
+            _.set_clanid(_),
+            _.set_display_location(_),
+            _.set_mark_shown(!0),
+            this.QueueForUpload(_),
+            !0
+          );
+        }
+        MarkEventRead(_, _, _) {
+          let _ = this.MakeKey(_, _);
+          if (this.m_setReadEvents.has(_)) return !1;
+          this.m_setReadEvents.add(_);
+          let _ = new _._();
+          return (
+            _.set_event_gid(_),
+            _.set_clanid(_),
+            _.set_display_location(_),
+            _.set_mark_read(!0),
+            this.QueueForUpload(_),
+            !0
+          );
+        }
+        MakeKey(_, _) {
+          return `${_}_${_}`;
+        }
+        QueueForUpload(_) {
+          this.m_rgPendingUpload.push(_), this.ScheduleUpload();
+        }
+        ScheduleUpload() {
+          this.m_bUploading ||
+            (this.m_rgPendingUpload.length >= 30
+              ? this.UploadPendingData()
+              : this.m_schUpload.IsScheduled() ||
+                this.m_schUpload.Schedule(6e4, this.UploadPendingData));
+        }
+        async Flush() {
+          if (!this.m_bUploading) return this.UploadPendingData();
+        }
+        async UploadPendingData() {
+          if (this.m_bUploading) return;
+          this.m_schUpload.Cancel();
+          let _ = this.m_rgPendingUpload.splice(0, 30);
+          if (0 == _.length) return;
+          let _ = !1;
+          if (this.m_CMInterface) {
+            let _ = _._.Init(_._);
+            for (let _ of _) __webpack_require__.Body().add_markings(_);
+            this.m_bUploading = !0;
+            let _ = await _._.MarkPartnerEventsForUser(
+              this.m_CMInterface.GetServiceTransport(),
+              _,
+            );
+            (this.m_bUploading = !1), (_ = 1 == _.GetEResult());
+          } else {
+            if (!_._.logged_in) return;
+            let _ = _.map((_) => _.toObject()),
+              _ = (0, _._)() + "actions/ajaxmarkpartnerevents";
+            const _ = new FormData();
+            _.append("sessionid", _._.SESSIONID),
+              _.append("request", JSON.stringify(_));
+            try {
+              _ =
+                1 ==
+                (
+                  await _().post(_, _, {
+                    withCredentials: !0,
+                  })
+                ).data.success;
+            } catch (_) {
+              let _ = (0, _._)(_);
+              console.error(
+                "CPartnerEventUserTracking.UploadPendingData error " +
+                  _.strErrorMsg,
+                _,
+              );
+            }
+          }
+          _
+            ? this.m_rgPendingUpload.length > 0 && this.ScheduleUpload()
+            : (console.log(
+                "Saving news event state failed. Will try again soon!",
+              ),
+              (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(_)),
+              this.m_schUpload.Schedule(6e4, this.UploadPendingData));
+        }
+      }
+      (0, _._)([_._], _.prototype, "UploadPendingData", null);
+      __webpack_require__("chunkid");
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      class _ {
+        clanid = void 0;
+        appid = 0;
+        can_edit = !1;
+        owns_app = !1;
+        follows_app = !1;
+        support_user = !1;
+        valve_admin = !1;
+        limited_user = !1;
+        event_ignored = new Array();
+        event_followed = new Array();
+        event_followed_flags = new Array();
+        constructor(_) {
+          (0, _._)(this), (this.clanid = _);
+        }
+      }
+      (0, _._)([_._], _.prototype, "clanid", void 0),
+        (0, _._)([_._], _.prototype, "appid", void 0),
+        (0, _._)([_._], _.prototype, "can_edit", void 0),
+        (0, _._)([_._], _.prototype, "owns_app", void 0),
+        (0, _._)([_._], _.prototype, "follows_app", void 0),
+        (0, _._)([_._], _.prototype, "support_user", void 0),
+        (0, _._)([_._], _.prototype, "valve_admin", void 0),
+        (0, _._)([_._], _.prototype, "limited_user", void 0),
+        (0, _._)([_._], _.prototype, "event_ignored", void 0),
+        (0, _._)([_._], _.prototype, "event_followed", void 0),
+        (0, _._)([_._], _.prototype, "event_followed_flags", void 0),
+        (function (_) {
+          (_[(_.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
+            (_[(_.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
+            (_[(_.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
+        })(_ || (_ = {}));
+      class _ {
+        constructor() {
+          (0, _._)(this);
+        }
+        m_mapClanToUserPermissions = new Map();
+        m_mapAnnounceGIDToVote = new Map();
+        m_setReadEventGIDs = new Set();
+        m_tracker = void 0;
+        m_cm = void 0;
+        static s_EventUserStore;
+        m_bIsPresentationMode = (0, _._)();
+        static Get() {
+          return (
+            (0, _._)(
+              !!_.s_EventUserStore,
+              "Have not yet initialized global EventUserStore",
+            ),
+            _.s_EventUserStore
+          );
+        }
+        static IsInitialized() {
+          return !!_.s_EventUserStore;
+        }
+        static async InitGlobal(_) {
+          if (!_.s_EventUserStore) {
+            const _ = new _();
+            await _.Init(_),
+              (_.s_EventUserStore = _),
+              "dev" == _._.WEB_UNIVERSE && (window.g_EventUserStore = _);
+          }
+        }
+        static BIsInited() {
+          return Boolean(_.s_EventUserStore);
+        }
+        async Init(_) {
+          (this.m_cm = _), (this.m_tracker = new _(_));
+          const _ = (0, _._)("partnereventpermissions", "application_config");
+          this.ValidateStoreDefault(_) &&
+            ((0, _._)(() => {
+              _.forEach((_) => {
+                let _ = new _(_.clanid),
+                  _ = {
+                    result: _,
+                    promise: _.RemapToPromise(_),
+                    bLoaded: !0,
+                  };
+                this.CopyFromResponseToTrack(_, _),
+                  this.m_mapClanToUserPermissions.set(_.clanid, _);
+              });
+            }),
+            ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+              console.log(
+                "CEventUserStore has loaded",
+                this.m_mapClanToUserPermissions.size,
+                this.m_mapClanToUserPermissions,
+              ));
+          let _ = (0, _._)("uservotes", "application_config");
+          _ &&
+            (0, _._)(() => {
+              __webpack_require__.forEach((_) => {
+                let _ = !!_.voted_up || (!_.voted_down && void 0);
+                this.m_mapAnnounceGIDToVote.set(_.clanAnnouncementGID, _);
+              });
+            });
+        }
+        GetTracker() {
+          return this.m_tracker;
+        }
+        ValidateStoreDefault(_) {
+          const _ = _;
+          return (
+            !!(
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            ) &&
+            "number" == typeof _[0].clanid &&
+            "number" == typeof _[0].appid
+          );
+        }
+        RecordEventShown(_, _) {
+          _ &&
+            !_.bOldAnnouncement &&
+            _.GID &&
+            this.m_tracker.MarkEventShown(
+              _.GID,
+              _.clanSteamID.GetAccountID(),
+              _,
+            );
+        }
+        RecordEventRead(_, _) {
+          _ &&
+            !_.bOldAnnouncement &&
+            _.GID &&
+            (this.HasEventBeenRead(_.GID) ||
+              (this.SetEventAsRead(_.GID),
+              this.m_tracker.MarkEventRead(
+                _.GID,
+                _.clanSteamID.GetAccountID(),
+                _,
+              )));
+        }
+        SetEventAsRead(_) {
+          this.m_setReadEventGIDs.add(_);
+        }
+        HasEventBeenRead(_) {
+          return this.m_setReadEventGIDs.has(_);
+        }
+        static async RemapToPromise(_) {
+          return _;
+        }
+        BIsUserLoggedIn() {
+          return _._.logged_in;
+        }
+        BIsPartnerEventPermissionsLoaded(_) {
+          return (
+            this.m_mapClanToUserPermissions.has(_) &&
+            this.m_mapClanToUserPermissions.get(_).bLoaded
+          );
+        }
+        GetPartnerEventPermissions(_) {
+          if (!_ || !_.BIsValid()) return new _(0);
+          const _ = _.GetAccountID();
+          this.m_mapClanToUserPermissions.has(_) ||
+            this.LoadSingleAppEventPermissions(_);
+          return this.m_mapClanToUserPermissions.get(_).result;
+        }
+        BFollowsEvent(_, _) {
+          return (
+            -1 != this.GetPartnerEventPermissions(_).event_followed.indexOf(_)
+          );
+        }
+        BFollowsEventAndNotifiedBy(_, _, _) {
+          let _ = this.GetPartnerEventPermissions(_),
+            _ = _.event_followed.indexOf(_);
+          return -1 !== _ && (_.event_followed_flags[_] & _) == _;
+        }
+        BIgnoresEvent(_, _) {
+          return (
+            -1 != this.GetPartnerEventPermissions(_).event_ignored.indexOf(_)
+          );
+        }
+        async LoadSingleAppEventPermissions(_) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToUserPermissions.get(_);
+          return (
+            _ ||
+              ((_ = {
+                promise: this.InternalLoadSingleAppEventPermissions(_),
+                result: new _(_),
+                bLoaded: !1,
+              }),
+              this.m_mapClanToUserPermissions.set(_, _)),
+            _.promise
+          );
+        }
+        CopyFromResponseToTrack(_, _) {
+          (_.result.appid = _.appid ?? 0),
+            (_.result.can_edit = !!_.can_edit),
+            (_.result.clanid = _.appid),
+            (_.result.event_followed = _.event_followed ?? []),
+            (_.result.event_ignored = _.event_ignored ?? []),
+            (_.result.event_followed_flags = _.event_followed_flags ?? []),
+            (_.result.follows_app = !!_.follows_app),
+            (_.result.owns_app = !!_.owns_app),
+            (_.result.limited_user = !!_.limited_user),
+            (_.support_user || _.valve_admin) && this.m_bIsPresentationMode
+              ? ((_.result.can_edit = !0),
+                (_.result.support_user = !1),
+                (_.result.valve_admin = !1))
+              : ((_.result.support_user = !!_.support_user),
+                (_.result.valve_admin = !!_.valve_admin)),
+            (_.bLoaded = !0);
+        }
+        async InternalLoadSingleAppEventPermissions(_) {
+          let _ = null,
+            _ = _.GetAccountID(),
+            _ = !Boolean(_._.logged_in);
+          if (!this.m_mapClanToUserPermissions.has(_)) {
+            let _ = new _(_.GetAccountID());
+            this.m_mapClanToUserPermissions.set(_, {
+              result: _,
+              promise: _.RemapToPromise(_),
+              bLoaded: !1,
+            });
+          }
+          try {
+            if (Boolean(_._.logged_in)) {
+              let _ =
+                  _._.COMMUNITY_BASE_URL +
+                  "gid/" +
+                  _.ConvertTo64BitString() +
+                  "/ajaxgetpartnereventpermissions/",
+                _ = {};
+              if (
+                ("partnerweb" == (0, _._)()
+                  ? ((_ =
+                      _._.PARTNER_BASE_URL +
+                      "partnerevents/ajaxgetpartnereventpermissions"),
+                    (_ = {
+                      clanaccountid: _.GetAccountID(),
+                    }))
+                  : "store" == (0, _._)() &&
+                    ((_ =
+                      _._.STORE_BASE_URL +
+                      "events/ajaxgetpartnereventpermissions"),
+                    (_ = {
+                      clanaccountid: _.GetAccountID(),
+                    })),
+                (_ = await _().get(_, {
+                  params: _,
+                  withCredentials: !0,
+                })),
+                _ && 1 == _.data.success)
+              ) {
+                let _ = this.m_mapClanToUserPermissions.get(_);
+                _ && this.CopyFromResponseToTrack(_, _.data);
+              } else
+                console.error(
+                  "Partner Events Failed Load:" + (0, _._)(_?.data).strErrorMsg,
+                ),
+                  (_ = !0);
+            }
+          } catch (_) {
+            if (
+              ((_ = _.response),
+              (_ = !0),
+              _ &&
+                void 0 !== _.response &&
+                void 0 !== _.response.data &&
+                void 0 !== _.response.data.success &&
+                21 == _.response.data.success)
+            );
+            else {
+              const _ = (0, _._)(_);
+              console.error(
+                "InternalLoadSingleAppEventPermissions account: " +
+                  _ +
+                  ": " +
+                  _.strErrorMsg,
+                _,
+              );
+            }
+          } finally {
+            _ &&
+              (0, _._)(() => {
+                let _ = this.m_mapClanToUserPermissions.get(_);
+                (_.result.appid = _?.data.appid ?? 0),
+                  (_.result.can_edit = !1),
+                  (_.result.clanid = _ && _.data ? _.data.clanid : 0),
+                  (_.result.event_followed = new Array()),
+                  (_.result.event_ignored = new Array()),
+                  (_.result.event_followed_flags = new Array()),
+                  (_.result.follows_app = !1),
+                  (_.result.owns_app = !1),
+                  (_.result.support_user = !1),
+                  (_.result.valve_admin = !1),
+                  (_.result.limited_user = !1),
+                  (_.bLoaded = !0);
+              });
+          }
+          return this.m_mapClanToUserPermissions.get(_).result;
+        }
+        async SetFollowOrUnfollowEvent(_, _, _, _, _) {
+          let _ = this.GetPartnerEventPermissions(_),
+            _ = _.event_followed.indexOf(_),
+            _ = 0;
+          -1 !== _ &&
+            ((_ = _.event_followed_flags[_]), _ ? (_ = _ & ~_) : (_ |= _));
+          let _ = 0 == _,
+            _ =
+              ("store" === (0, _._)()
+                ? _._.STORE_BASE_URL + "events"
+                : _._.COMMUNITY_BASE_URL +
+                  "/gid/" +
+                  __webpack_require__.ConvertTo64BitString()) +
+              (_ ? "/unfolloworunignoreevent" : "/followorignoreevent"),
+            _ = new URLSearchParams();
+          _.append("sessionid", _._.SESSIONID),
+            _.append("ignore", "" + _),
+            _.append("gid", _),
+            _.append("notification_flag", "" + _),
+            _.append("clan_accountid", "" + __webpack_require__.GetAccountID());
+          await _().post(_, _, {
+            withCredentials: !0,
+          });
+          (0, _._)(() => {
+            let _ = this.m_mapClanToUserPermissions.get(
+                __webpack_require__.GetAccountID(),
+              ),
+              _ = null,
+              _ = null,
+              _ = null,
+              _ = null;
+            _
+              ? ((_ = _ ? _.result.event_ignored : _.result.event_followed),
+                (_ = _ ? null : _.result.event_followed_flags))
+              : _
+                ? ((_ = _.result.event_followed),
+                  (_ = _.result.event_followed_flags),
+                  (_ = _.result.event_ignored))
+                : ((_ = _.result.event_ignored),
+                  (_ = _.result.event_followed),
+                  (_ = _.result.event_followed_flags));
+            let _ = _.indexOf(_);
+            if ((_ > -1 && (_.splice(_, 1), _ && _.splice(_, 1)), _)) {
+              let _ = _.indexOf(_);
+              -1 == _ ? (_.push(_), _ && _.push(_)) : _ && (_[_] = _);
+            }
+          });
+        }
+        async Vote(_, _, _) {
+          if (!_ || !_.AnnouncementGID) return !1;
+          const _ = this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
+          if (_ === _) return !0;
+          if (
+            (this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _),
+            (0, _._)(() => {
+              !0 === _ && _.UpdateVoteCount("up", -1),
+                !1 === _ && _.UpdateVoteCount("down", -1),
+                !0 === _ && _.UpdateVoteCount("up", 1),
+                !1 === _ && _.UpdateVoteCount("down", 1);
+            }),
+            this.m_cm)
+          ) {
+            let _ = _._.Init(_._);
+            return (
+              __webpack_require__.Body().set_announcementid(_.AnnouncementGID),
+              __webpack_require__.Body().set_vote_up(!!_),
+              __webpack_require__
+                .Body()
+                .set_clan_accountid(_.clanSteamID.GetAccountID()),
+              1 ==
+                (
+                  await _._.RateClanAnnouncement(
+                    this.m_cm.GetServiceTransport(),
+                    _,
+                  )
+                ).GetEResult()
+            );
+          }
+          {
+            const _ = (0, _._)(),
+              _ =
+                "community" == _ || "steamtv" == _
+                  ? _._.COMMUNITY_BASE_URL +
+                    "gid/" +
+                    _.clanSteamID.ConvertTo64BitString() +
+                    "/announcements/rate/" +
+                    _.AnnouncementGID
+                  : _._.STORE_BASE_URL +
+                    "updated/ajaxrateupdate/" +
+                    _.AnnouncementGID,
+              _ = new URLSearchParams();
+            _.append("sessionid", _._.SESSIONID),
+              _.append("voteup", _ ? "1" : "0"),
+              _.append("clanid", "" + _.clanSteamID.GetAccountID()),
+              _.append("ajax", "1");
+            const _ = {
+              withCredentials: !0,
+              cancelToken: _.token,
+            };
+            return 1 == (await _().post(_, _, _)).data.success;
+          }
+        }
+        async LoadMyVote(_, _) {
+          if (_?.AnnouncementGID) {
+            if (this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID))
+              return !!this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
+            let _;
+            if (this.m_cm) {
+              let _ = _._.Init(_._);
+              _.Body().set_announcementid(_.AnnouncementGID);
+              let _ = await _._.GetClanAnnouncementVoteForUser(
+                this.m_cm.GetServiceTransport(),
+                _,
+              );
+              1 == _.GetEResult() &&
+                (_ =
+                  !!_.Body().voted_up() || (!_.Body().voted_down() && void 0));
+            } else {
+              const _ = "store" == (0, _._)(),
+                _ = _
+                  ? _._.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
+                  : _._.COMMUNITY_BASE_URL +
+                    "gid/" +
+                    _.clanSteamID.ConvertTo64BitString() +
+                    "/announcements/ajaxgetmyvote/" +
+                    _.AnnouncementGID,
+                _ = {
+                  gid: _ ? _.AnnouncementGID : void 0,
+                },
+                _ = await _().get(_, {
+                  withCredentials: !0,
+                  cancelToken: _.token,
+                  params: _,
+                });
+              _ = !!_.data.voted_up || (!_.data.voted_down && void 0);
+            }
+            return this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _), _;
+          }
+        }
+        SetVote(_, _) {
+          this.m_mapAnnounceGIDToVote.set(_, _);
+        }
+        BHasMyVote(_) {
+          return (
+            !!_.AnnouncementGID &&
+            this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID)
+          );
+        }
+        GetPreviouslyLoadedVote(_) {
+          return _.AnnouncementGID
+            ? this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID)
+            : void 0;
+        }
+        BShowEmailEditorTab(_) {
+          if (_.BHasEmailEnabled()) return !0;
+          if (_.clanSteamID.GetAccountID() == (0, _._)()) return !0;
+          let _ = this.GetPartnerEventPermissions(_.clanSteamID);
+          return (_._.IS_OGG || _._.IS_VALVE_GROUP) && _.valve_admin;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapClanToUserPermissions", void 0),
+        (0, _._)([_._], _.prototype, "m_mapAnnounceGIDToVote", void 0),
+        (0, _._)([_._], _.prototype, "m_setReadEventGIDs", void 0),
+        (0, _._)([_._], _.prototype, "CopyFromResponseToTrack", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -71806,6 +72133,10 @@
         ReadItem(_, _) {
           const _ = _.item_type();
           let _ = null;
+          if (void 0 === _)
+            return (
+              console.warn(`Failed to load item data: ${_.success()}`), null
+            );
           switch (_) {
             case 0:
               _ = this.m_mapApps;
@@ -71842,6 +72173,100 @@
         }
       }
       (0, _._)([_._], _.prototype, "ReadItem", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        const _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _._)();
+        _.current = _;
+        const [_, _] = (0, _.useState)(void 0),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = {
+              include_assets: _,
+              include_release: _,
+              include_platforms: _,
+              include_all_purchase_options: _,
+              include_screenshots: _,
+              include_trailers: _,
+              include_ratings: _,
+              include_tag_count: _,
+              include_reviews: _,
+              include_basic_info: _,
+              include_supported_languages: _,
+              include_full_description: _,
+              include_included_items: _,
+              include_assets_without_overrides: _,
+              apply_user_filters: _,
+              include_links: _,
+            };
+            let _ = null;
+            return (
+              !_ ||
+                _ < 0 ||
+                _._.Get().BHasStoreItem(_, _, _) ||
+                (void 0 !== _ && _ && _ == _.current) ||
+                (_ !== _.current && (_(void 0), (_.current = _)),
+                (_ = _().CancelToken.source()),
+                _._.Get()
+                  .QueueStoreItemRequest(_, _, _)
+                  .then((_) => {
+                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                  })),
+              () => _?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
+        return _ ? [_, 3] : [null, 2];
+      }
+      function _(_, _, _) {
+        return _(_, 0, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = _(_, _, _);
+        let _;
+        1 != _?.GetStoreItemType() ||
+          _.GetAssets()?.GetHeaderURL() ||
+          1 != _?.GetIncludedAppIDs().length ||
+          (_ = _.GetIncludedAppIDs()[0]);
+        const [_, _] = _(_, _);
+        return _ && _?.BIsVisible() ? [_, _] : [_, _];
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -72924,6 +73349,14 @@
             },
             _,
           );
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = () => (2 === _._.EUNIVERSE ? 2581 : 45267781);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -76191,7 +76624,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 5919), _((_._ = _));
+      return (_ = 157), _((_._ = _));
       var _;
     });
     _._();

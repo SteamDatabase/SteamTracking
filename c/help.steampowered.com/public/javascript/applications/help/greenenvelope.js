@@ -13052,81 +13052,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _, _) {
-        const _ = (0, _.useRef)(void 0),
-          _ = (0, _.useRef)(void 0),
-          _ = (0, _._)();
-        _.current = _;
-        const [_, _] = (0, _.useState)(void 0),
-          {
-            include_assets: _,
-            include_release: _,
-            include_platforms: _,
-            include_all_purchase_options: _,
-            include_screenshots: _,
-            include_trailers: _,
-            include_ratings: _,
-            include_tag_count: _,
-            include_reviews: _,
-            include_basic_info: _,
-            include_supported_languages: _,
-            include_full_description: _,
-            include_included_items: _,
-            include_assets_without_overrides: _,
-            apply_user_filters: _,
-            include_links: _,
-          } = _;
-        if (
-          ((0, _.useEffect)(() => {
-            const _ = {
-              include_assets: _,
-              include_release: _,
-              include_platforms: _,
-              include_all_purchase_options: _,
-              include_screenshots: _,
-              include_trailers: _,
-              include_ratings: _,
-              include_tag_count: _,
-              include_reviews: _,
-              include_basic_info: _,
-              include_supported_languages: _,
-              include_full_description: _,
-              include_included_items: _,
-              include_assets_without_overrides: _,
-              apply_user_filters: _,
-              include_links: _,
-            };
-            let _ = null;
-            return (
-              !_ ||
-                _ < 0 ||
-                _._.Get().BHasStoreItem(_, _, _) ||
-                (void 0 !== _ && _ && _ == _.current) ||
-                (_ !== _.current && (_(void 0), (_.current = _)),
-                (_ = _().CancelToken.source()),
-                _._.Get()
-                  .QueueStoreItemRequest(_, _, _)
-                  .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
-                  })),
-              () => _?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
-          !_)
-        )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
-        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
-      }
-      function _(_, _, _) {
-        return _(_, 0, _, _);
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15157,6 +15083,8 @@
       }
       var _,
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
@@ -16564,7 +16492,7 @@
             }, [_, _]));
         var _, _;
         const _ = "number" == typeof _?.image,
-          [_] = _(_ ? _.image : 0, {
+          [_] = (0, _._)(_ ? _.image : 0, {
             include_assets: !0,
           }),
           _ = ((_ = _.type), "unknown ESteamNotificationType ( " + _ + " )")
@@ -16729,7 +16657,7 @@
               ? _?.owner_steam_id?.GetAccountID()
               : null,
             { data: _ } = _(_),
-            [_] = _(_.json_data?.app_id, {
+            [_] = (0, _._)(_.json_data?.app_id, {
               include_assets: !0,
             }),
             [_, _] = _(),
@@ -16779,7 +16707,7 @@
               onHide: _,
             } = module,
             _ = _(_),
-            [_] = _(_.appid, {
+            [_] = (0, _._)(_.appid, {
               include_assets: !0,
             }),
             [_, _] = (0, _.useState)(""),
@@ -16969,7 +16897,7 @@
             } = module,
             _ = `${_._.COMMUNITY_BASE_URL}my/gamenotifications/`,
             _ = _(_),
-            [_] = _(_.appid, {
+            [_] = (0, _._)(_.appid, {
               include_assets: !0,
             });
           return _.createElement(
@@ -17006,16 +16934,7 @@
             { data: _ } = _(_.responder_steamid),
             _ = _.package_id > 0 ? _.package_id : _.bundle_id,
             _ = _.package_id > 0 ? 1 : 2,
-            [_] = (function (_, _, _) {
-              const [_, _] = _(_, _, _);
-              let _;
-              1 != _?.GetStoreItemType() ||
-                _.GetAssets()?.GetHeaderURL() ||
-                1 != _?.GetIncludedAppIDs().length ||
-                (_ = _.GetIncludedAppIDs()[0]);
-              const [_, _] = _(_, _);
-              return _ && _?.BIsVisible() ? [_, _] : [_, _];
-            })(_, _, {
+            [_] = (0, _._)(_, _, {
               include_basic_info: !0,
               include_assets: !0,
             }),
@@ -17082,7 +17001,8 @@
           );
         },
       };
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         static GetScrollableClassname() {
           return "vt-scrollable";

@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Contenuto rimosso",
 	"moderation_resolutionstatus_relabelled": "Contenuto rietichettato",
 	"moderation_resolutionstatus_suspicious": "Account sospeso per contenuti sospetti",
+	"moderation_resolutionstatus_harassmentstrike": "Privilegi della Comunità di Steam sospesi",
 	"moderation_resolutionstatus_unknown": "Sconosciuto"
 }`);
     },

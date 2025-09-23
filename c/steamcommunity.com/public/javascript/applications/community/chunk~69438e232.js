@@ -3192,7 +3192,7 @@
               this.m_canClaimPromise);
         }
         async InternalLoadCanUserClaimItem() {
-          var _, _, _, _;
+          var _, _, _, _, _, _;
           (0, _._)(
             _._.logged_in,
             "User must be logged to use CSaleItemClaimableRewardsStore",
@@ -3212,10 +3212,12 @@
                     ? void 0
                     : _.defid(),
                 )
-                  ? _.Body().reward_item().toObject()
+                  ? null === (_ = _.Body().reward_item()) || void 0 === _
+                    ? void 0
+                    : _.toObject()
                   : null),
                 (this.m_claimState = {
-                  bCanClaimNewItem: _.Body().can_claim(),
+                  bCanClaimNewItem: !!_.Body().can_claim(),
                   bAlreadyClaimedCurrentItem: Boolean(
                     this.m_claimedFreeItemDef,
                   ),
@@ -3232,7 +3234,9 @@
                       ? void 0
                       : _.community_item_class,
                   rtNextClaimTime:
-                    _.Body().next_claim_time() > 0
+                    (null !== (_ = _.Body().next_claim_time()) && void 0 !== _
+                      ? _
+                      : 0) > 0
                       ? _.Body().next_claim_time()
                       : void 0,
                 }),
@@ -3277,6 +3281,7 @@
           );
         }
         async InternalUserClaimItem() {
+          var _, _, _;
           (0, _._)(
             _._.logged_in,
             "User must be logged to use CSaleItemClaimableRewardsStore",
@@ -3293,12 +3298,16 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == __webpack_require__.GetEResult())
+            if (1 == _.GetEResult())
               return (
-                (this.m_claimedFreeItemDef = __webpack_require__
-                  .Body()
-                  .reward_item()
-                  .toObject()),
+                (this.m_claimedFreeItemDef =
+                  null !==
+                    (_ =
+                      null === (_ = _.Body().reward_item()) || void 0 === _
+                        ? void 0
+                        : _.toObject()) && void 0 !== _
+                    ? _
+                    : {}),
                 (this.m_claimState = {
                   bCanClaimNewItem: !1,
                   bAlreadyClaimedCurrentItem: Boolean(
@@ -3310,18 +3319,18 @@
                   community_item_class:
                     this.m_claimedFreeItemDef.community_item_class,
                   rtNextClaimTime:
-                    __webpack_require__.Body().next_claim_time() > 0
-                      ? __webpack_require__.Body().next_claim_time()
+                    (null !== (_ = _.Body().next_claim_time()) && void 0 !== _
+                      ? _
+                      : 0) > 0
+                      ? _.Body().next_claim_time()
                       : void 0,
                 }),
                 this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                (this.m_rtNextClaimTime = __webpack_require__
-                  .Body()
-                  .next_claim_time()),
+                (this.m_rtNextClaimTime = _.Body().next_claim_time()),
                 this.SetClaimTimer(),
                 this.m_claimState
               );
-            if (29 == __webpack_require__.GetEResult())
+            if (29 == _.GetEResult())
               return (
                 (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
                 this.m_canClaimPromise
@@ -15147,7 +15156,8 @@
             partnerEventStore: _,
           } = _,
           [_, _, _] = (0, _._)(),
-          _ = _.useCallback((_) => (0, _._)(_, _), [_]);
+          _ = (0, _._)(_),
+          _ = (0, _._)(_);
         return _.createElement(
           _.Fragment,
           null,
@@ -15164,8 +15174,8 @@
                 },
                 _.createElement(_, {
                   closeModal: _,
-                  eventLink: (0, _._)(_),
-                  fnGetSharePageUrl: _,
+                  eventLink: _,
+                  sharePageUrls: _,
                   appid: _.appid,
                   emoticonStore: __webpack_require__,
                   partnerEventStore: _,
@@ -18785,7 +18795,7 @@
           {
             value: {
               ..._,
-              eLocation: __webpack_require__,
+              eLocation: null != __webpack_require__ ? __webpack_require__ : 0,
             },
           },
           _,

@@ -6421,10 +6421,10 @@
                 (this.m_claimedFreeItemDef = Boolean(
                   __webpack_require__.Body().reward_item()?.defid(),
                 )
-                  ? __webpack_require__.Body().reward_item().toObject()
+                  ? __webpack_require__.Body().reward_item()?.toObject()
                   : null),
                 (this.m_claimState = {
-                  bCanClaimNewItem: __webpack_require__.Body().can_claim(),
+                  bCanClaimNewItem: !!__webpack_require__.Body().can_claim(),
                   bAlreadyClaimedCurrentItem: Boolean(
                     this.m_claimedFreeItemDef,
                   ),
@@ -6434,7 +6434,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef?.community_item_class,
                   rtNextClaimTime:
-                    __webpack_require__.Body().next_claim_time() > 0
+                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
                       ? __webpack_require__.Body().next_claim_time()
                       : void 0,
                 }),
@@ -6499,10 +6499,8 @@
             );
             if (1 == __webpack_require__.GetEResult())
               return (
-                (this.m_claimedFreeItemDef = __webpack_require__
-                  .Body()
-                  .reward_item()
-                  .toObject()),
+                (this.m_claimedFreeItemDef =
+                  __webpack_require__.Body().reward_item()?.toObject() ?? {}),
                 (this.m_claimState = {
                   bCanClaimNewItem: !1,
                   bAlreadyClaimedCurrentItem: Boolean(
@@ -6514,7 +6512,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef.community_item_class,
                   rtNextClaimTime:
-                    __webpack_require__.Body().next_claim_time() > 0
+                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
                       ? __webpack_require__.Body().next_claim_time()
                       : void 0,
                 }),
@@ -11264,7 +11262,7 @@
           {
             value: {
               ..._,
-              eLocation: __webpack_require__,
+              eLocation: __webpack_require__ ?? 0,
             },
           },
           _,

@@ -167,6 +167,11 @@ function _(_, _ = _, _) {
     }
   else _ && console.error("Missing config element #", _);
 }
+var _ = "presentation_mode";
+function _() {
+  let _ = null;
+  return _() && (_ = _(_)), !!(_ && Number.parseInt(_) === 1);
+}
 var _ = {
     EUNIVERSE: 0,
     WEB_UNIVERSE: "",
@@ -252,6 +257,18 @@ var _ = {
     country_code: "",
     excluded_content_descriptors: [3, 4, 1],
   };
+var _ = {
+  CLANSTEAMID: "",
+  CLANACCOUNTID: 0,
+  APPID: 0,
+  VANITY_ID: "",
+  IS_CREATOR_HOME: !1,
+  IS_CURATOR: !1,
+  IS_OGG: !1,
+  CAN_UPLOAD_IMAGES: !1,
+  IS_VALVE_GROUP: !1,
+  IS_ALLOWED_SC: !1,
+};
 var _ = window.Config ?? _,
   _ = window.UserConfig ?? _,
   _ = window.Config ? () => Promise.resolve() : _;
@@ -260,4 +277,4 @@ window.UserConfig && Object.assign(_, window.UserConfig);
 function _(_) {
   return "PUBLIC_PATH" in _ ? _.PUBLIC_PATH + _ : _;
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };
+export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

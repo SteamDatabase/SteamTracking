@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "게임 %1$s개",
 	"Menu_Search": "검색",
 	"Menu_Label": "상점 메뉴",
+	"Menu_IncludesXGames": "게임 %1$s개 포함",
 	"ItemFlag_InLibrary": "라이브러리에 있음",
 	"ItemFlag_OnWishlist": "찜 목록에 있음",
 	"ItemFlag_InCart": "장바구니에 있음",

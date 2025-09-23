@@ -5158,26 +5158,49 @@
         };
       }
       function _(_, _, _) {
-        const { setErrorMessage: _ } = _();
+        const { setErrorMessage: _ } = _(),
+          { isError: _, error: _ } = _,
+          _ = _();
         (0, _.useEffect)(() => {
-          if (_.isError) {
-            const _ = _.error;
+          if (_) {
+            const _ = _,
+              _ = [];
+            if (25 === _ || 96 === _) {
+              let _;
+              _.isSuccess &&
+                _.data &&
+                (_ = _.data.cooldown_seconds_remaining()),
+                _.push(
+                  (function (_) {
+                    if (!_)
+                      return (0, _._)("#FamilyManagement_LoadingPlaceholder");
+                    const _ = {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                        weekday: void 0,
+                      },
+                      _ = (0, _._)(Date.now() / 1e3 + _, _);
+                    return _;
+                  })(_),
+                );
+            }
             _(
-              (function (_, _, _) {
+              (function (_, _, _, _) {
                 let _ = "";
                 if (_ in _) {
                   const _ = _[_];
-                  if ("string" == typeof _) _ = (0, _._)(_);
+                  if ("string" == typeof _) _ = (0, _._)(_, ..._);
                   else {
                     const _ = _;
-                    _ in _ && (_ = (0, _._)(_[_]));
+                    _ in _ && (_ = (0, _._)(_[_], ..._));
                   }
                 }
                 return (0, _._)(_, _);
-              })(_, _, _),
+              })(_, _, _, _),
             );
           }
-        }, [_, _.isError, _.error, _, _]);
+        }, [_, _, _, _, _, _.isSuccess, _.data]);
       }
       function _(_, _) {
         const { setErrorMessage: __webpack_require__ } = _();

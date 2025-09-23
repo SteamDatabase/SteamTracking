@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Съдържанието е премахнато",
 	"moderation_resolutionstatus_relabelled": "Съдържанието е преетикетирано",
 	"moderation_resolutionstatus_suspicious": "Акаунтът е заключен за подозрително съдържание",
+	"moderation_resolutionstatus_harassmentstrike": "Привилегиите в Steam общността са преустановени",
 	"moderation_resolutionstatus_unknown": "Неизвестно"
 }`);
     },

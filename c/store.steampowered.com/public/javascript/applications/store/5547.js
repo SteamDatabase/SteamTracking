@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s spill",
 	"Menu_Search": "Søk",
 	"Menu_Label": "Butikkmeny",
+	"Menu_IncludesXGames": "Inneholder %1$s spill",
 	"ItemFlag_InLibrary": "I BIBLIOTEKET",
 	"ItemFlag_OnWishlist": "PÅ ØNSKELISTEN",
 	"ItemFlag_InCart": "I HANDLEVOGN",

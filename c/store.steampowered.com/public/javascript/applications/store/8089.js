@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s game",
 	"Menu_Search": "Cari",
 	"Menu_Label": "Menu Toko",
+	"Menu_IncludesXGames": "Termasuk %1$s game",
 	"ItemFlag_InLibrary": "DI PERPUSTAKAAN",
 	"ItemFlag_OnWishlist": "DALAM WISHLIST",
 	"ItemFlag_InCart": "DI KERANJANG",

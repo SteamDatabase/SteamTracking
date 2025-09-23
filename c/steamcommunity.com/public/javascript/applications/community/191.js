@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "เนื้อหาถูกลบ",
 	"moderation_resolutionstatus_relabelled": "เนื้อหาได้รับการติดป้ายกำกับใหม่",
 	"moderation_resolutionstatus_suspicious": "บัญชีถูกล็อกเนื่องจากเนื้อหาที่น่าสงสัย",
+	"moderation_resolutionstatus_harassmentstrike": "สิทธิ์ในการเข้าถึงชุมชน Steam ถูกระงับ",
 	"moderation_resolutionstatus_unknown": "ไม่รู้จัก"
 }`);
     },

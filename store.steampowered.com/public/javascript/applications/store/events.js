@@ -344,8 +344,8 @@
         i = n(90626),
         c = n(6419),
         u = n(6144),
-        d = n(84933),
-        m = n(78327);
+        m = n(84933),
+        d = n(78327);
       class p {
         constructor() {
           (0, l.Gn)(this);
@@ -419,7 +419,7 @@
         }
         async ReloadGiveaway(e, t) {
           if (!e) return null;
-          let n = m.TS.STORE_BASE_URL + "prizes/nextdraw/" + e,
+          let n = d.TS.STORE_BASE_URL + "prizes/nextdraw/" + e,
             a = null,
             r = { origin: self.origin };
           return (
@@ -455,14 +455,14 @@
             g.s_Singleton ||
               ((g.s_Singleton = new g()),
               g.s_Singleton.Init(),
-              "dev" == m.TS.WEB_UNIVERSE &&
+              "dev" == d.TS.WEB_UNIVERSE &&
                 (window.g_GiveawayStore = g.s_Singleton)),
             g.s_Singleton
           );
         }
         Init() {
           if (!this.m_bLoadedFromConfig) {
-            let e = (0, m.Tc)("giveawaynextdraw", "application_config");
+            let e = (0, d.Tc)("giveawaynextdraw", "application_config");
             if (e && e.giveaway_id) {
               let t = new p();
               this.CopyToGiveaway(e, t),
@@ -511,7 +511,7 @@
       }
       function h(e) {
         const [t] = (0, i.useState)(new _()),
-          n = (0, d.CH)();
+          n = (0, m.CH)();
         (0, i.useEffect)(
           () => (
             g
@@ -568,7 +568,7 @@
     },
     94743: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => p, r: () => m });
+      n.d(t, { l: () => p, r: () => d });
       var a = n(90626),
         r = n(26296),
         o = n(12155),
@@ -577,8 +577,8 @@
         i = n(61859),
         c = n(70758),
         u = n.n(c),
-        d = n(61949);
-      const m = (e) => {
+        m = n(61949);
+      const d = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
             [n, o] = a.useState(0);
           a.useEffect(() => o(0), [e.video]);
@@ -614,7 +614,7 @@
         p = (e) => {
           const [t, n] = a.useState(!1);
           (0, l.VC)(!!e.preloadYoutubeScripts);
-          const r = (0, d.Rp)("youtube");
+          const r = (0, m.Rp)("youtube");
           if (t && r)
             return a.createElement(l.N1, {
               ...e,
@@ -637,7 +637,7 @@
                 ),
                 onClick: r ? t : void 0,
               },
-              a.createElement(m, {
+              a.createElement(d, {
                 className: "YoutubePreviewImage",
                 altImgWithFallback: e.altImgWithFallback,
                 altImg: e.altImg,
@@ -673,9 +673,9 @@
         i = n(6379),
         c = n(61859),
         u = n(78327),
-        d = n(59952),
-        m = n(41735),
-        p = n.n(m),
+        m = n(59952),
+        d = n(41735),
+        p = n.n(d),
         g = n(68797);
       class _ {
         m_counts = null;
@@ -741,14 +741,14 @@
         C = n(28188),
         S = n(22797),
         w = n(6878),
-        I = n(94057),
-        f = n(29868);
+        f = n(94057),
+        I = n(29868);
       function b(e) {
         return e < 10 ? "0" + e : e;
       }
       function y(e) {
         const { giveawayid: t } = e,
-          n = (0, I.w)(t),
+          n = (0, f.w)(t),
           {
             bLoadingGiveawayInfo: a,
             winner_count: o,
@@ -759,11 +759,11 @@
           ? null
           : r.createElement(
               "div",
-              { className: f.countdownCtn },
+              { className: I.countdownCtn },
               Boolean(l) &&
                 r.createElement(
                   "div",
-                  { className: f.Closed },
+                  { className: I.Closed },
                   o > 0
                     ? (0, c.we)("#Giveaway_Closed", o.toLocaleString())
                     : (0, c.we)("#Giveaway_Closed_NoWinnerInfo"),
@@ -775,7 +775,7 @@
                   Boolean(s <= 0)
                     ? r.createElement(
                         "div",
-                        { className: f.Throbber },
+                        { className: I.Throbber },
                         r.createElement(S.t, { size: "small" }),
                         r.createElement(
                           "div",
@@ -785,15 +785,15 @@
                       )
                     : r.createElement(
                         "div",
-                        { className: f.CountDownCtn },
+                        { className: I.CountDownCtn },
                         r.createElement(
                           "div",
-                          { className: f.CountDownTime },
+                          { className: I.CountDownTime },
                           b(Math.floor(s / 60)) + ":" + b(s % 60),
                         ),
                         r.createElement(
                           "div",
-                          { className: f.CountDownText },
+                          { className: I.CountDownText },
                           (0, c.we)("#Giveaway_CountDown2"),
                           " ",
                           (0, c.we)("#Giveaway_KeepWatching"),
@@ -802,15 +802,15 @@
                   Boolean(o > 0) &&
                     r.createElement(
                       "div",
-                      { className: f.WinnerInfo },
+                      { className: I.WinnerInfo },
                       r.createElement(
                         "div",
-                        { className: f.WinnerCount },
+                        { className: I.WinnerCount },
                         o.toLocaleString(),
                       ),
                       r.createElement(
                         "div",
-                        { className: f.WinnerText },
+                        { className: I.WinnerText },
                         (0, c.we)("#Giveaway_Congratulation"),
                       ),
                     ),
@@ -825,11 +825,11 @@
         B = n(92757),
         A = n(39256),
         L = n(99487),
-        F = n(7193),
-        H = n(39199),
-        M = n(96971),
-        R = n(53677),
-        x = n(40353);
+        H = n(7193),
+        F = n(39199),
+        R = n(96971),
+        x = n(53677),
+        M = n(40353);
       function O(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
           a = (0, T.fy)(n);
@@ -866,10 +866,10 @@
             return e?.length > 0 ? e[0] : null;
           }, [t]),
           { storePageFilter: l, eStoreDiscoveryQueueType: s } = r.useMemo(
-            () => (0, F.lx)(t, o),
+            () => (0, H.lx)(t, o),
             [t, o],
           ),
-          i = (0, H.Uf)(s, l),
+          i = (0, F.Uf)(s, l),
           c = Math.min(n + i, a);
         return r.createElement(
           "span",
@@ -879,7 +879,7 @@
       }
       function U(e) {
         const { event: t } = e.context,
-          n = Number.parseInt((0, d.j$)(e.args, "eventid"));
+          n = Number.parseInt((0, m.j$)(e.args, "eventid"));
         return u.iA.logged_in && n
           ? r.createElement(O, { nEventBadgeID: n, eventModel: t })
           : null;
@@ -889,7 +889,7 @@
           a = (0, E.OM)(t),
           { fnOpenDoor: o } = (0, E.OC)(),
           [l, s] = r.useState(!1),
-          [i, d] = r.useState(!1);
+          [i, m] = r.useState(!1);
         return r.createElement(
           G.$n,
           {
@@ -900,10 +900,10 @@
                   ? (s(!0),
                     o(t, !0, null, !1)
                       .then((e) => {
-                        e || d(!0), s(!1);
+                        e || m(!0), s(!1);
                       })
                       .catch(() => {
-                        d(!0), s(!1);
+                        m(!0), s(!1);
                       }))
                   : (0, k.vg)());
             },
@@ -920,14 +920,14 @@
         );
       }
       function W(e) {
-        const t = Number.parseInt((0, d.j$)(e.args)) || 0;
+        const t = Number.parseInt((0, m.j$)(e.args)) || 0;
         return t >= 0 && t < 32
           ? r.createElement(V, { nDoorIndex: t }, e.children)
           : null;
       }
-      const q = (0, B.y)(R.H);
+      const q = (0, B.y)(x.H);
       function Y(e) {
-        const t = Number.parseInt((0, d.j$)(e.args)),
+        const t = Number.parseInt((0, m.j$)(e.args)),
           { event: n, showErrorInfo: a } = e.context;
         if (t) {
           const o = n?.jsondata?.sale_sections?.findIndex(
@@ -936,7 +936,7 @@
           if (o >= 0) {
             const t = n.GetDayIndexFromEventStart();
             return r.createElement(
-              M.Cs,
+              R.Cs,
               { location: a ? 2 : 0 },
               r.createElement(q, {
                 event: n,
@@ -947,8 +947,8 @@
                 promotionName: "",
                 appVisibilityTracker: null,
                 ePreviewMode: a
-                  ? x.S.EPreviewMode_Enabled
-                  : x.S.EPreviewMode_Disabled,
+                  ? M.S.EPreviewMode_Enabled
+                  : M.S.EPreviewMode_Disabled,
               }),
             );
           }
@@ -979,8 +979,8 @@
             strDeliveryOverride: i,
             bDeliveryOverrideOnlyIfOutOfStock: u,
           } = e,
-          d = (0, z.DR)(t),
-          m = (0, z.DR)(l),
+          m = (0, z.DR)(t),
+          d = (0, z.DR)(l),
           p = (0, r.useMemo)(
             () => [
               {
@@ -1004,13 +1004,13 @@
             ],
             [t, a, s, i, u, l],
           );
-        if (!d || (l && !m))
+        if (!m || (l && !d))
           return r.createElement(S.t, {
             string: (0, c.we)("#Loading"),
             size: "small",
             position: "center",
           });
-        const g = !J.iA.logged_in || !d.account_restricted_from_purchasing;
+        const g = !J.iA.logged_in || !m.account_restricted_from_purchasing;
         return r.createElement(
           K.tH,
           null,
@@ -1019,25 +1019,25 @@
             { fallback: null },
             r.createElement(Q, { bIsPreview: o, rgReservationDef: p }),
           ),
-          Boolean(d.allow_purchase_in_country) &&
+          Boolean(m.allow_purchase_in_country) &&
             r.createElement(
               "div",
               { className: p[0].unique_id },
               r.createElement(j.bk, {
                 reservationDef: p[0],
-                hardwareDetail: d,
+                hardwareDetail: m,
                 bPSULessModel: !1,
               }),
               g &&
                 r.createElement(j.pc, {
                   event: n,
                   reservationDef: p[0],
-                  hardwareDetail: d,
+                  hardwareDetail: m,
                 }),
-              Boolean(m?.allow_purchase_in_country) &&
+              Boolean(d?.allow_purchase_in_country) &&
                 r.createElement(j.bk, {
                   reservationDef: p[0],
-                  hardwareDetail: m,
+                  hardwareDetail: d,
                   bPSULessModel: !0,
                 }),
             ),
@@ -1065,10 +1065,10 @@
       let se = null;
       function ie(e) {
         const { event: t } = e.context,
-          n = Number.parseInt((0, d.j$)(e.args, "appid")),
-          a = Number.parseInt((0, d.j$)(e.args, "itemdefid")),
-          o = Number.parseInt((0, d.j$)(e.args, "maxquantity")),
-          l = (0, d.j$)(e.args, "calltoaction");
+          n = Number.parseInt((0, m.j$)(e.args, "appid")),
+          a = Number.parseInt((0, m.j$)(e.args, "itemdefid")),
+          o = Number.parseInt((0, m.j$)(e.args, "maxquantity")),
+          l = (0, m.j$)(e.args, "calltoaction");
         return (0, h.gS)(n, a)
           ? r.createElement(C.f, {
               language: e.language,
@@ -1093,7 +1093,7 @@
           );
         })();
         if (!t) return r.createElement(S.t, { size: "small" });
-        const n = Number.parseInt((0, d.j$)(e.args));
+        const n = Number.parseInt((0, m.j$)(e.args));
         let a = t.verified;
         switch (n) {
           case 2:
@@ -1107,7 +1107,7 @@
       function ue(e) {
         const t = (0, v.j)("library");
         if (!t) return r.createElement(S.t, { size: "small" });
-        const n = Number.parseInt((0, d.j$)(e.args));
+        const n = Number.parseInt((0, m.j$)(e.args));
         let a = t.verifiedList?.length || 0;
         switch (n) {
           case 2:
@@ -1121,16 +1121,16 @@
         }
         return r.createElement("span", null, Number(a).toLocaleString());
       }
-      function de(e) {
-        const t = Number.parseInt((0, d.j$)(e.args)),
+      function me(e) {
+        const t = Number.parseInt((0, m.j$)(e.args)),
           n =
             "hide" in e.args &&
-            Boolean(Number.parseInt((0, d.j$)(e.args, "hide")));
+            Boolean(Number.parseInt((0, m.j$)(e.args, "hide")));
         return t >= 0
-          ? r.createElement(me, { nDoorIndex: t, bHide: n }, e.children)
+          ? r.createElement(de, { nDoorIndex: t, bHide: n }, e.children)
           : null;
       }
-      function me(e) {
+      function de(e) {
         const { nDoorIndex: t, bHide: n, children: a } = e,
           o = (0, E.OM)(t);
         return null == o
@@ -1141,14 +1141,14 @@
       }
       function pe(e) {
         if (u.iA.logged_in) {
-          const t = Number.parseInt((0, d.j$)(e.args)),
-            n = Number.parseInt((0, d.j$)(e.args, "mod"));
+          const t = Number.parseInt((0, m.j$)(e.args)),
+            n = Number.parseInt((0, m.j$)(e.args, "mod"));
           if (n > 0 && t < n && u.iA.accountid % n == t) return e.children;
         }
         return null;
       }
       function ge(e) {
-        const t = (0, d.j$)(e.args);
+        const t = (0, m.j$)(e.args);
         return t?.trim().length > 0
           ? r.createElement("div", { className: t.trim() }, e.children)
           : r.createElement(r.Fragment, null, e.children);
@@ -1167,20 +1167,20 @@
         );
       }
       function ve(e) {
-        let t = (0, d.j$)(e.args);
+        let t = (0, m.j$)(e.args);
         return t
           ? r.createElement(y, { giveawayid: t })
           : r.createElement(r.Fragment, null);
       }
       function he(e) {
         const { event: t, showErrorInfo: n } = e.context,
-          a = Number.parseInt((0, d.j$)(e.args));
+          a = Number.parseInt((0, m.j$)(e.args));
         if (a) {
-          const n = Number.parseInt((0, d.j$)(e.args, "depositpackageid")),
-            o = Number.parseInt((0, d.j$)(e.args, "psulesspackageid")),
-            l = (0, d.j$)(e.args, "out_of_stock_override"),
-            s = (0, d.j$)(e.args, "delivery_override"),
-            i = (0, d.j$)(e.args, "delivery_override_out_of_stock");
+          const n = Number.parseInt((0, m.j$)(e.args, "depositpackageid")),
+            o = Number.parseInt((0, m.j$)(e.args, "psulesspackageid")),
+            l = (0, m.j$)(e.args, "out_of_stock_override"),
+            s = (0, m.j$)(e.args, "delivery_override"),
+            i = (0, m.j$)(e.args, "delivery_override_out_of_stock");
           return r.createElement(Z, {
             reservationPackageID: a,
             event: t,
@@ -1196,7 +1196,7 @@
       var Ee = n(92432);
       function Ce(e) {
         const { bSalePage: t } = e,
-          [n, d] = r.useState(s.KN.IsInitialized());
+          [n, m] = r.useState(s.KN.IsInitialized());
         return (
           r.useEffect(() => {
             l.Vw.Init(new o.D(u.TS.WEBAPI_BASE_URL)),
@@ -1225,7 +1225,7 @@
                       ["pricesavings", { Constructor: N.y7, autocloses: !1 }],
                       [
                         "eventdoorvisibility",
-                        { Constructor: de, autocloses: !1 },
+                        { Constructor: me, autocloses: !1 },
                       ],
                       ["chooseaccount", { Constructor: pe, autocloses: !1 }],
                       ["badgecurrentlevel", { Constructor: U, autocloses: !1 }],
@@ -1240,7 +1240,7 @@
                     ])),
                   se),
                 ),
-              s.KN.InitGlobal().then(() => d(!0));
+              s.KN.InitGlobal().then(() => m(!0));
           }, [t]),
           r.useEffect(() => {
             const e = (0, c.l4)();
@@ -1252,7 +1252,7 @@
     },
     86252: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => xn });
+      n.r(t), n.d(t, { default: () => Mn });
       var a = n(43527),
         r = n(90626),
         o = n(92757),
@@ -1261,8 +1261,8 @@
         i = n(41735),
         c = n.n(i),
         u = n(75844),
-        d = n(22837),
-        m = n(2160),
+        m = n(22837),
+        d = n(2160),
         p = n(4796),
         g = n(73964),
         _ = n(84811),
@@ -1272,9 +1272,9 @@
         C = n(35685),
         S = n(92557),
         w = n(90316),
-        I = n.n(w),
-        f = n(95695),
-        b = n.n(f),
+        f = n.n(w),
+        I = n(95695),
+        b = n.n(I),
         y = n(22797),
         N = n(52038),
         T = n(61859),
@@ -1284,13 +1284,13 @@
         B = n.n(k),
         A = n(43068),
         L = n(82097),
-        F = n(55263);
-      const H = g.$.Get();
-      function M() {
+        H = n(55263);
+      const F = g.$.Get();
+      function R() {
         document.body.classList.contains("events_hub") &&
           document.body.classList.remove("events_hub");
       }
-      const R = (0, u.PA)((e) => {
+      const x = (0, u.PA)((e) => {
           const {
               bInfiniteScroll: t,
               event_gid: n,
@@ -1298,15 +1298,15 @@
               clansteamid: o,
               appid: l,
             } = e,
-            [s, i] = (0, r.useState)(n ? H.GetClanEventModel(n) : void 0),
-            [u] = (0, F.t7)(s?.appid, {
+            [s, i] = (0, r.useState)(n ? F.GetClanEventModel(n) : void 0),
+            [u] = (0, H.t7)(s?.appid, {
               include_assets: !0,
               include_release: !0,
               include_platforms: !0,
               include_screenshots: !0,
             }),
             [g, w] = (0, r.useState)(!1),
-            f = (e, t) => {
+            I = (e, t) => {
               t.token.reason ||
                 (i(e),
                 (function (e) {
@@ -1319,7 +1319,7 @@
                     t = n && n.group_name;
                   }
                   const n =
-                    e && e.GetNameWithFallback((0, d.sf)(D.TS.LANGUAGE));
+                    e && e.GetNameWithFallback((0, m.sf)(D.TS.LANGUAGE));
                   if (e && t && n) {
                     const e = (0, T.we)(
                       "#EventCalendar_TabTitle_GroupNameAndEventDetail",
@@ -1335,43 +1335,42 @@
               console.error("StoreEventDetailView failed " + t.strErrorMsg, t),
                 w(!0);
             };
-          if (
-            ((0, r.useEffect)(M, []),
+          (0, r.useEffect)(R, []),
             (0, r.useEffect)(() => {
               const e = c().CancelToken.source();
               return (
                 s ||
-                  (n && !H.GetClanEventModel(n)
-                    ? H.LoadPartnerEventGeneric(o, l, n, void 0, 0)
-                        .then((t) => f(t, e))
+                  (n && !F.GetClanEventModel(n)
+                    ? F.LoadPartnerEventGeneric(o, l, n, void 0, 0)
+                        .then((t) => I(t, e))
                         .catch(() => {
                           e.token.reason ||
-                            H.LoadPartnerEventGeneric(o, l, void 0, n, 0)
-                              .then((t) => f(t, e))
+                            F.LoadPartnerEventGeneric(o, l, void 0, n, 0)
+                              .then((t) => I(t, e))
                               .catch(k);
                         })
                     : a &&
-                      !H.GetClanEventGIDFromAnnouncementGID(a) &&
-                      H.LoadPartnerEventGeneric(o, l, void 0, a, 0)
-                        .then((t) => f(t, e))
+                      !F.GetClanEventGIDFromAnnouncementGID(a) &&
+                      F.LoadPartnerEventGeneric(o, l, void 0, a, 0)
+                        .then((t) => I(t, e))
                         .catch(k)),
                 () => {
                   e.cancel("StoreEventDetailView: unmounting");
                 }
               );
-            }, [n, o, l, a, s]),
-            g || !s || (s?.appid && !u))
-          ) {
-            const e = "lang_" + (0, d.ww)((0, d.sf)(D.TS.LANGUAGE)),
+            }, [n, o, l, a, s]);
+          const x = (0, E.Bw)(s, E.PH.k_eStoreNewsHub, "allowRelative");
+          if (g || !s || (s?.appid && !u)) {
+            const e = "lang_" + (0, m.ww)((0, m.sf)(D.TS.LANGUAGE)),
               t = "";
             return r.createElement(
               "div",
               {
                 className: (0, N.A)(
-                  I().EventDetailsPageContainer,
+                  f().EventDetailsPageContainer,
                   e,
                   b().PartnerEventFont,
-                  I().NoTitleArtwork,
+                  f().NoTitleArtwork,
                 ),
               },
               r.createElement("div", { style: { height: "100px" } }),
@@ -1399,7 +1398,7 @@
                 postbody: Boolean(g && o)
                   ? r.createElement(C.rN, {
                       clanAccountID: o.GetAccountID(),
-                      partnerEventStore: H,
+                      partnerEventStore: F,
                     })
                   : void 0,
               }),
@@ -1413,38 +1412,35 @@
                   appid: s.appid,
                   trackingLocation: 7,
                   announcementGID: s.GetAnnouncementGID(),
-                  partnerEventStore: H,
+                  partnerEventStore: F,
                   eventModel: s,
                   showAppHeader: !0,
-                  closeModal: () =>
-                    e.history.push(
-                      (0, E.qT)(s, E.PH.k_eStoreNewsHub, "allowRelative"),
-                    ),
+                  closeModal: () => e.history.push(x),
                 }),
               )
             : r.createElement(
                 _.tH,
                 null,
                 r.createElement(S.jA, {
-                  lang: (0, d.sf)(D.TS.LANGUAGE),
-                  partnerEventStore: H,
+                  lang: (0, m.sf)(D.TS.LANGUAGE),
+                  partnerEventStore: F,
                   event: s,
                   adminPanel:
-                    D.TS.EREALM === m.TU.k_ESteamRealmChina
+                    D.TS.EREALM === d.TU.k_ESteamRealmChina
                       ? r.createElement(A.P, { eventModel: s })
                       : r.createElement(v.g, {
                           eventModel: s,
-                          partnerEventStore: H,
+                          partnerEventStore: F,
                         }),
                   otherEventRow: r.createElement(C.rN, {
                     clanAccountID: s.clanSteamID.GetAccountID(),
                     gidAnnouncement: s.AnnouncementGID,
-                    partnerEventStore: H,
+                    partnerEventStore: F,
                   }),
                 }),
               );
         }),
-        x = (0, o.y)(R);
+        M = (0, o.y)(x);
       var O = n(34629),
         P = n(14947),
         U = n(65946),
@@ -1537,8 +1533,8 @@
         (0, O.Cg)([P.sH], ue.prototype, "m_mapLangToNewsCurators", void 0),
         (0, O.Cg)([P.EW], ue.prototype, "allNewsCurators", null),
         (0, O.Cg)([P.XI], ue.prototype, "HandleCuratorResponse", null);
-      var de = n(6144),
-        me = n(41338),
+      var me = n(6144),
+        de = n(41338),
         pe = n(16345),
         ge = n.n(pe);
       function _e(e) {
@@ -1560,7 +1556,7 @@
           ["apps", 0],
           ["curators", 0],
         ]);
-        m_timerForChange = new de.LU();
+        m_timerForChange = new me.LU();
         componentWillUnmount() {
           this.m_timerForChange.Cancel();
         }
@@ -1624,7 +1620,7 @@
           const a = {
               cc: D.TS.COUNTRY,
               l: D.TS.LANGUAGE,
-              realm: m.TU.k_ESteamRealmGlobal,
+              realm: d.TU.k_ESteamRealmGlobal,
               origin: self.origin,
               f: "jsonfull",
               term: e.replace(" ", "+"),
@@ -1716,9 +1712,9 @@
             i = o?.length > 0,
             c = l?.length > 0,
             u = s?.length > 0,
-            d = _e(n).size > 1,
-            m =
-              d &&
+            m = _e(n).size > 1,
+            d =
+              m &&
               c &&
               (0, T.we)(
                 n.indexOf("dlc") >= 0
@@ -1749,11 +1745,11 @@
                   r.createElement(
                     "div",
                     { key: "game-suggestions" },
-                    d &&
+                    m &&
                       r.createElement(
                         "div",
                         { className: ge().ResultSectionHeader },
-                        m,
+                        d,
                       ),
                     l,
                   ),
@@ -1761,7 +1757,7 @@
                   r.createElement(
                     "div",
                     { key: "curator-suggestions" },
-                    d &&
+                    m &&
                       r.createElement(
                         "div",
                         { className: ge().ResultSectionHeader },
@@ -1799,7 +1795,7 @@
             "div",
             { className: ge().GameName },
             " ",
-            (0, me.EK)(e.suggestion.name),
+            (0, de.EK)(e.suggestion.name),
             " ",
           ),
           e.bShowFollowingLabel &&
@@ -1813,8 +1809,8 @@
         Ce = n(32541),
         Se = n(48838),
         we = n(63292),
-        Ie = n.n(we);
-      const fe = (e) =>
+        fe = n.n(we);
+      const Ie = (e) =>
           r.createElement(
             Ee.x_,
             { onEscKeypress: e.closeModal },
@@ -1872,7 +1868,7 @@
           let a = new Array();
           if (t) {
             T.pf
-              .GetELanguageFallbackOrder([m.TU.k_ESteamRealmGlobal])
+              .GetELanguageFallbackOrder([d.TU.k_ESteamRealmGlobal])
               .forEach((e) =>
                 a.push(r.createElement(Ne, { key: "curlang" + e, lang: e })),
               );
@@ -1909,10 +1905,10 @@
             null,
             r.createElement(
               "div",
-              { className: Ie().LanguageHeader },
+              { className: fe().LanguageHeader },
               (0, T.we)(
                 "#EventCurator_BrowseDialog_LangCurator",
-                (0, T.we)("#Language_" + (0, d.Lg)(e.lang)),
+                (0, T.we)("#Language_" + (0, m.Lg)(e.lang)),
               ),
             ),
             a,
@@ -1928,7 +1924,7 @@
             },
             a = r.createElement(
               "div",
-              { className: Ie().CuratorHoverContainer },
+              { className: fe().CuratorHoverContainer },
               r.createElement(Ce.hA, {
                 creatorID: n,
                 bSmallFormat: !0,
@@ -1955,7 +1951,7 @@
                 n(!1);
             },
             { clanInfo: o, layout: l } = e,
-            s = "row" === l ? Ie().CuratorInfoRow : Ie().CuratorInfoIcon,
+            s = "row" === l ? fe().CuratorInfoRow : fe().CuratorInfoIcon,
             i = r.createElement(
               Te,
               { clanid: o.clanSteamID.GetAccountID() },
@@ -1964,18 +1960,18 @@
                 {
                   className: (0, N.A)(
                     b().FlexRowContainer,
-                    Ie().CuratorInfoTitleCtn,
+                    fe().CuratorInfoTitleCtn,
                   ),
                   onClick: () => n(!0),
                 },
                 r.createElement("img", {
-                  className: Ie().CuratorInfoImg,
+                  className: fe().CuratorInfoImg,
                   src: o.avatar_full_url,
                   alt: o.group_name,
                 }),
                 r.createElement(
                   "div",
-                  { className: Ie().CuratorInfoName },
+                  { className: fe().CuratorInfoName },
                   o.group_name,
                 ),
               ),
@@ -2006,12 +2002,12 @@
               {
                 className: (0, N.A)(
                   b().FlexRowContainer,
-                  Ie().CuratorInfoActionCtn,
+                  fe().CuratorInfoActionCtn,
                 ),
               },
               r.createElement(Se.of, {
                 clanAccountID: o.clanAccountID,
-                className: Ie().CuratorInfoFollow,
+                className: fe().CuratorInfoFollow,
               }),
             ),
           );
@@ -2072,8 +2068,8 @@
           ].filter((e) => this.IsCurrentlyVisible(e));
         }
       }
-      const Fe = new Le();
-      class He extends r.Component {
+      const He = new Le();
+      class Fe extends r.Component {
         render() {
           const { specialEvent: e } = this.props,
             t = window.location.href === D.TS.STORE_BASE_URL + e.newshubUrl,
@@ -2102,9 +2098,9 @@
           );
         }
       }
-      class Me extends r.Component {
+      class Re extends r.Component {
         render() {
-          const e = Fe.GetVisibleSpecialEvents();
+          const e = He.GetVisibleSpecialEvents();
           return 0 === e.length
             ? null
             : r.createElement(
@@ -2119,15 +2115,15 @@
                   "div",
                   { className: ke().SpecialEventList },
                   e.map((e) =>
-                    r.createElement(He, { key: e.sLocToken, specialEvent: e }),
+                    r.createElement(Fe, { key: e.sLocToken, specialEvent: e }),
                   ),
                 ),
               );
         }
       }
-      var Re = n(91941),
-        xe = n(12088),
-        Oe = n.n(xe);
+      var xe = n(91941),
+        Me = n(12088),
+        Oe = n.n(Me);
       function Pe() {
         return (0, T.vl)(new Date());
       }
@@ -2303,7 +2299,7 @@
         ShowBrowseCurator(e) {
           wn()
             ? qe.Get().SetDisplay("browse_curator")
-            : (0, ie.pg)(r.createElement(fe, null), (0, le.uX)(e));
+            : (0, ie.pg)(r.createElement(Ie, null), (0, le.uX)(e));
         }
       }
       (0, O.Cg)([P.sH], qe.prototype, "m_curDisplay", void 0);
@@ -2655,8 +2651,8 @@
                     r.createElement(ne.i6V, null),
                   ),
                 ),
-            d = "desktop_navigation" != qe.Get().GetDisplay() ? u : c,
-            m = n ? null : { top: `${t}px` };
+            m = "desktop_navigation" != qe.Get().GetDisplay() ? u : c,
+            d = n ? null : { top: `${t}px` };
           (0, K.v0)();
           let p;
           switch (qe.Get().GetDisplay()) {
@@ -2685,15 +2681,15 @@
                   ke().SidebarContainer,
                   n && ke().SidebarCollapsed,
                 ),
-                style: m,
+                style: d,
               },
               n
-                ? d
+                ? m
                 : r.createElement(
                     "div",
                     { className: ke().Sidebar },
                     s,
-                    d,
+                    m,
                     r.createElement(
                       "div",
                       { className: ke().ControlPageContainer },
@@ -2725,7 +2721,7 @@
             (0, T.PP)("#EventCalendar_Title", r.createElement("br", null)),
           ),
           r.createElement(ut, { bIsUpcoming: n }),
-          r.createElement(Me, null),
+          r.createElement(Re, null),
           r.createElement(
             "div",
             { className: ke().SidePanelGameSearch },
@@ -2733,7 +2729,7 @@
               label: (0, T.we)("#EventCalendar_UniversalSearch"),
             }),
           ),
-          r.createElement(dt, { bIsUpcoming: n }),
+          r.createElement(mt, { bIsUpcoming: n }),
           r.createElement(
             "div",
             { className: ke().FilterSettingsCtn },
@@ -2845,7 +2841,7 @@
         (0, K.v0)().BIsCollectionCalendar(), (0, E.LJ)();
         const n = new Array();
         if ((J.HD.bIsCuratorsEnabled && n.push(at(z.g.Press, e)), t))
-          for (const e of Fe.GetVisibleSpecialEvents()) {
+          for (const e of He.GetVisibleSpecialEvents()) {
             const t = !1;
             n.push({
               name: (0, T.we)(e.sLocToken),
@@ -2855,9 +2851,9 @@
             });
           }
         return (
+          n.push(at(z.g.Dev_Sales, e)),
           D.iA.is_support &&
             (n.push(at(z.g.Dev_All, e)),
-            n.push(at(z.g.Dev_Sales, e)),
             n.push(at(z.g.Dev_AssociatedPress, e))),
           n
         );
@@ -2947,7 +2943,7 @@
                 ),
               ),
             r.createElement(
-              Re.Z,
+              xe.Z,
               { className: ke().MobileNavHScroll },
               r.createElement(
                 "div",
@@ -2958,9 +2954,7 @@
           );
         }
       };
-      (0, O.Cg)([se.oI], it.prototype, "onExpandSearch", null),
-        (it = (0, O.Cg)([u.PA], it));
-      const ct = (e) => {
+      function ct(e) {
         const {
           key: t,
           name: n,
@@ -2979,11 +2973,11 @@
               r.createElement(
                 "div",
                 {
-                  className: (0, N.A)(
-                    ke().NewsChannel,
-                    l && ke().NewsChannelOnPage,
-                    i && b().ValveOnlyBackground,
-                  ),
+                  className: (0, N.A)({
+                    [ke().NewsChannel]: !0,
+                    [ke().NewsChannelOnPage]: l,
+                    [b().ValveOnlyBackground]: i,
+                  }),
                 },
                 Boolean(c) &&
                   r.createElement("img", {
@@ -3014,7 +3008,9 @@
                   ),
               ),
             );
-      };
+      }
+      (0, O.Cg)([se.oI], it.prototype, "onExpandSearch", null),
+        (it = (0, O.Cg)([u.PA], it));
       let ut = class extends r.Component {
         render() {
           const e = rt(this.props.bIsUpcoming),
@@ -3045,306 +3041,260 @@
           );
         }
       };
-      ut = (0, O.Cg)([u.PA], ut);
-      class dt extends r.Component {
-        render() {
-          const e = lt(this.props.bIsUpcoming, !1);
-          return e && e.length > 0
-            ? r.createElement(
+      function mt(e) {
+        const { bIsUpcoming: t } = e,
+          n = lt(t, !1);
+        return n && n.length > 0
+          ? r.createElement(
+              "div",
+              {
+                className: (0, N.A)(ke().NewsChannelGroup, ke().DiscoverGroup),
+              },
+              r.createElement(
                 "div",
-                {
-                  className: (0, N.A)(
-                    ke().NewsChannelGroup,
-                    ke().DiscoverGroup,
-                  ),
-                },
-                r.createElement(
-                  "div",
-                  { className: ke().NewsChannelListTitle },
-                  (0, T.we)("#EventCalendar_NewsChannels_Discover"),
-                ),
-                r.createElement(
-                  "div",
-                  { className: ke().NewsChannelList },
-                  e.map((e) => r.createElement(ct, { key: e.key, element: e })),
-                ),
-              )
-            : null;
-        }
+                { className: ke().NewsChannelListTitle },
+                (0, T.we)("#EventCalendar_NewsChannels_Discover"),
+              ),
+              r.createElement(
+                "div",
+                { className: ke().NewsChannelList },
+                n.map((e) => r.createElement(ct, { key: e.key, element: e })),
+              ),
+            )
+          : null;
       }
-      var mt = n(81477),
+      ut = (0, O.Cg)([u.PA], ut);
+      var dt = n(81477),
         pt = n(42011),
         gt = n(88997),
         _t = n(60155),
         vt = n(61336),
         ht = n(72978),
         Et = n.n(ht);
-      let Ct = class extends r.Component {
-        OnMuteButton(e) {
-          const { calendarEvent: t } = this.props;
-          let n = t.GetEntityName();
-          (0, ie.pg)(
-            r.createElement(
-              Ee.o0,
-              {
-                strTitle: (0, T.we)("#EventCalendar_MuteApp_Title", n),
-                strDescription: (0, T.we)("#EventCalendar_MuteApp_details", n),
-                onOK: () =>
-                  (0, K.v0)().UpdateEventBlockFromCalendarEvent(t, !1),
-              },
-              r.createElement(
-                "a",
-                {
-                  href: D.TS.STORE_BASE_URL + "account/emailoptout/app",
-                  target: D.TS.IN_CLIENT ? void 0 : "_blank",
-                },
-                (0, T.we)("#EventCalendar_ManageMutedSources"),
-              ),
-            ),
-            (0, le.uX)(e),
-          );
-        }
-        OnUnMuteButton() {
-          const { calendarEvent: e } = this.props;
-          (0, K.v0)().UpdateEventBlockFromCalendarEvent(e, !0);
-        }
-        HideAllEventsOfMyType() {
-          const { eventModel: e } = this.props,
-            t = this.GetVisibilityStore().MapClanEventTypeToGroup(
-              e.GetEventType(),
-            );
-          this.GetVisibilityStore().SetEventTypeGroupAllowed(t, !1);
-        }
-        GetVisibilityStore() {
-          return (0, K.v0)().m_visibilityStore;
-        }
-        AddContextMenuForSource(e, t, n, a = !0) {
-          this.GetVisibilityStore().BIsGameSourceAllowed(t) &&
-            (a &&
-              e.push(
+      const Ct = (0, u.PA)((e) => {
+          const { eventModel: t, calendarEvent: n, history: a } = e,
+            o = (e) => {
+              let t = n.GetEntityName();
+              (0, ie.pg)(
                 r.createElement(
-                  _t.kt,
+                  Ee.o0,
                   {
-                    key: `item-source-${n}-${t}`,
-                    disabled: !0,
-                    onSelected: () => {},
-                  },
-                  (0, T.we)("#EventCalender_Reason_" + t),
-                ),
-              ),
-            e.push(
-              r.createElement(
-                _t.kt,
-                {
-                  key: `item-hidesource-${n}-${t}`,
-                  onSelected: () => {
-                    this.GetVisibilityStore().SetGameSourceAllowed(t, !1);
-                  },
-                },
-                (0, T.we)("#EventCalender_Hide_Reason_" + t),
-              ),
-            ));
-        }
-        GotoGameOrClanHub() {
-          const { eventModel: e } = this.props,
-            t = (0, E.qT)(e, E.PH.k_eStoreNewsHub, "allowRelative");
-          t.startsWith("http")
-            ? (window.location.href = t)
-            : this.props.history.push(t);
-        }
-        ToggleFollowCurator() {
-          (0, Se.cI)(this.props.eventModel.clanSteamID.GetAccountID());
-        }
-        CreateContextMenu(e) {
-          const { eventModel: t, calendarEvent: n } = this.props;
-          let a = [];
-          const o = n.GetSource(),
-            l = n.unique_id,
-            s = (0, D.Y2)(),
-            i = (0, K.v0)();
-          if (
-            (i.BIsGlobalCalendar() &&
-              (o &&
-                o & W.bK.k_eLibrary &&
-                (this.GetVisibilityStore().BIsGameSourceAllowed(
-                  j.FD.k_ERecent,
-                ) && n.appInfo
-                  ? (a.push(
-                      r.createElement(
-                        _t.kt,
-                        {
-                          key: `item-source-${l}-lastplayed`,
-                          disabled: !0,
-                          onSelected: () => {},
-                        },
-                        (0, T.we)(
-                          "#EventCalender_LastPlayed",
-                          (0, T.Hq)(
-                            J.HD.GetTimeNowWithOverride() -
-                              n.appInfo.last_played,
-                          ),
-                        ),
-                      ),
+                    strTitle: (0, T.we)("#EventCalendar_MuteApp_Title", t),
+                    strDescription: (0, T.we)(
+                      "#EventCalendar_MuteApp_details",
+                      t,
                     ),
-                    this.AddContextMenuForSource(a, j.FD.k_ERecent, l, !1))
-                  : this.AddContextMenuForSource(a, j.FD.k_ELibrary, l)),
-              o &&
-                o & W.bK.k_eWishlist &&
-                this.AddContextMenuForSource(a, j.FD.k_EWishlist, l),
-              o &&
-                o & W.bK.k_eFollowing &&
-                this.AddContextMenuForSource(a, j.FD.k_EFollowing, l),
-              !s &&
-                o &&
-                o & W.bK.k_eCurator &&
-                this.AddContextMenuForSource(a, j.FD.k_ECurator, l),
-              o &&
-                o & W.bK.k_eRecommended &&
-                this.AddContextMenuForSource(a, j.FD.k_ERecommended, l),
-              o &&
-                o & W.bK.k_eSteam &&
-                this.AddContextMenuForSource(a, j.FD.k_ESteam, l),
-              o &&
-                o & W.bK.k_eFeatured &&
-                this.AddContextMenuForSource(a, j.FD.k_EFeatured, l)),
-            a.push(
-              r.createElement(
-                _t.kt,
-                {
-                  key: t.GID + "hidetype",
-                  onSelected: this.HideAllEventsOfMyType,
-                },
-                (0, T.we)(
-                  "#EVentCalendar_Hide_EventType",
-                  (0, T.we)(
-                    "#EventCalendar_EventTypeGroup_" +
-                      this.GetVisibilityStore().MapClanEventTypeToGroup(
-                        t.GetEventType(),
-                      ),
+                    onOK: () =>
+                      (0, K.v0)().UpdateEventBlockFromCalendarEvent(n, !1),
+                  },
+                  r.createElement(
+                    "a",
+                    {
+                      href: D.TS.STORE_BASE_URL + "account/emailoptout/app",
+                      target: D.TS.IN_CLIENT ? void 0 : "_blank",
+                    },
+                    (0, T.we)("#EventCalendar_ManageMutedSources"),
                   ),
                 ),
-              ),
-            ),
-            D.iA.logged_in &&
-              (Q.S.Get().BIsEventBlocked(n)
-                ? a.push(
+                (0, le.uX)(e),
+              );
+            },
+            l = () => {
+              (0, K.v0)().UpdateEventBlockFromCalendarEvent(n, !0);
+            },
+            s = () => {
+              const e = i().MapClanEventTypeToGroup(t.GetEventType());
+              i().SetEventTypeGroupAllowed(e, !1);
+            },
+            i = () => (0, K.v0)().m_visibilityStore,
+            c = (e, t, n, a = !0) => {
+              i().BIsGameSourceAllowed(t) &&
+                (a &&
+                  e.push(
                     r.createElement(
                       _t.kt,
                       {
-                        key: t.GID + "unmuteapp",
-                        onSelected: this.OnUnMuteButton,
+                        key: `item-source-${n}-${t}`,
+                        disabled: !0,
+                        onSelected: () => {},
                       },
-                      r.createElement(
-                        ae.he,
-                        {
-                          toolTipContent: (0, T.we)(
-                            "#EventCalendar_UnMuteApp_ttip",
-                          ),
-                        },
-                        (0, T.we)(
-                          "#EventCalendar_UnMuteApp_Title",
-                          this.props.calendarEvent.GetEntityName(),
-                        ),
-                      ),
+                      (0, T.we)("#EventCalender_Reason_" + t),
                     ),
-                  )
-                : a.push(
-                    r.createElement(
-                      _t.kt,
-                      { key: t.GID + "muteapp", onSelected: this.OnMuteButton },
-                      r.createElement(
-                        ae.he,
-                        {
-                          toolTipContent: (0, T.we)(
-                            "#EventCalendar_MuteApp_ttip",
-                          ),
-                        },
-                        (0, T.we)(
-                          "#EventCalendar_MuteApp_Title",
-                          this.props.calendarEvent.GetEntityName(),
-                        ),
-                      ),
-                    ),
-                  )),
-            !t.BIsOGGEvent() && !s)
-          ) {
-            const e = ce.Fm.Get().BIsFollowingCurator(t.clanSteamID);
-            a.push(
-              r.createElement(
-                _t.kt,
-                {
-                  key: t.GID + "followcurator",
-                  onSelected: this.ToggleFollowCurator,
-                },
-                r.createElement(
-                  ae.he,
-                  {
-                    toolTipContent: (0, T.we)(
-                      e
-                        ? "#EventCalendar_UnFollowCurator_ttip"
-                        : "#EventCalendar_FollowCurator_ttip",
-                    ),
-                  },
-                  (0, T.we)(
-                    e
-                      ? "#EventCalendar_UnFollowCurator"
-                      : "#EventCalendar_FollowCurator",
-                    this.props.calendarEvent.GetEntityName(),
                   ),
-                ),
-              ),
-            );
-          }
-          i.BIsSingleSourceCalendar() ||
-            a.push(
-              r.createElement(
-                _t.kt,
-                { key: t.GID + "goto", onSelected: this.GotoGameOrClanHub },
-                (0, T.we)(
-                  "#EventCalendar_Goto_SpecificCalendar",
-                  n.GetEntityName(),
-                ),
-              ),
-            ),
-            t.appid &&
-              a.push(
-                r.createElement(
-                  _t.kt,
-                  {
-                    key: t.GID + "goto",
-                    onSelected: () =>
-                      (window.location.href = (0, vt.k2)(
-                        D.TS.STORE_BASE_URL + "app/" + t.appid,
-                      )),
-                  },
-                  (0, T.we)("#EventDisplay_ViewStorePage"),
-                ),
-              ),
-            (0, gt.lX)(r.createElement(_t.tz, null, a), e);
-        }
-        render() {
+                e.push(
+                  r.createElement(
+                    _t.kt,
+                    {
+                      key: `item-hidesource-${n}-${t}`,
+                      onSelected: () => {
+                        i().SetGameSourceAllowed(t, !1);
+                      },
+                    },
+                    (0, T.we)("#EventCalender_Hide_Reason_" + t),
+                  ),
+                ));
+            },
+            u = (0, E.Bw)(t, E.PH.k_eStoreNewsHub, "allowRelative"),
+            m = () => {
+              u.startsWith("http") ? (window.location.href = u) : a.push(u);
+            },
+            d = () => {
+              (0, Se.cI)(t.clanSteamID.GetAccountID());
+            };
           return r.createElement(
             "div",
             {
               className: (0, N.A)(Et().FooterStat, Et().Options),
-              onClick: this.CreateContextMenu,
+              onClick: (e) => {
+                let a = [];
+                const u = n.GetSource(),
+                  p = n.unique_id,
+                  g = (0, D.Y2)(),
+                  _ = (0, K.v0)();
+                if (
+                  (_.BIsGlobalCalendar() &&
+                    (u &&
+                      u & W.bK.k_eLibrary &&
+                      (i().BIsGameSourceAllowed(j.FD.k_ERecent) && n.appInfo
+                        ? (a.push(
+                            r.createElement(
+                              _t.kt,
+                              {
+                                key: `item-source-${p}-lastplayed`,
+                                disabled: !0,
+                                onSelected: () => {},
+                              },
+                              (0, T.we)(
+                                "#EventCalender_LastPlayed",
+                                (0, T.Hq)(
+                                  J.HD.GetTimeNowWithOverride() -
+                                    n.appInfo.last_played,
+                                ),
+                              ),
+                            ),
+                          ),
+                          c(a, j.FD.k_ERecent, p, !1))
+                        : c(a, j.FD.k_ELibrary, p)),
+                    u && u & W.bK.k_eWishlist && c(a, j.FD.k_EWishlist, p),
+                    u && u & W.bK.k_eFollowing && c(a, j.FD.k_EFollowing, p),
+                    !g && u && u & W.bK.k_eCurator && c(a, j.FD.k_ECurator, p),
+                    u &&
+                      u & W.bK.k_eRecommended &&
+                      c(a, j.FD.k_ERecommended, p),
+                    u && u & W.bK.k_eSteam && c(a, j.FD.k_ESteam, p),
+                    u && u & W.bK.k_eFeatured && c(a, j.FD.k_EFeatured, p)),
+                  a.push(
+                    r.createElement(
+                      _t.kt,
+                      { key: t.GID + "hidetype", onSelected: s },
+                      (0, T.we)(
+                        "#EVentCalendar_Hide_EventType",
+                        (0, T.we)(
+                          "#EventCalendar_EventTypeGroup_" +
+                            i().MapClanEventTypeToGroup(t.GetEventType()),
+                        ),
+                      ),
+                    ),
+                  ),
+                  D.iA.logged_in &&
+                    (Q.S.Get().BIsEventBlocked(n)
+                      ? a.push(
+                          r.createElement(
+                            _t.kt,
+                            { key: t.GID + "unmuteapp", onSelected: l },
+                            r.createElement(
+                              ae.he,
+                              {
+                                toolTipContent: (0, T.we)(
+                                  "#EventCalendar_UnMuteApp_ttip",
+                                ),
+                              },
+                              (0, T.we)(
+                                "#EventCalendar_UnMuteApp_Title",
+                                n.GetEntityName(),
+                              ),
+                            ),
+                          ),
+                        )
+                      : a.push(
+                          r.createElement(
+                            _t.kt,
+                            { key: t.GID + "muteapp", onSelected: o },
+                            r.createElement(
+                              ae.he,
+                              {
+                                toolTipContent: (0, T.we)(
+                                  "#EventCalendar_MuteApp_ttip",
+                                ),
+                              },
+                              (0, T.we)(
+                                "#EventCalendar_MuteApp_Title",
+                                n.GetEntityName(),
+                              ),
+                            ),
+                          ),
+                        )),
+                  !t.BIsOGGEvent() && !g)
+                ) {
+                  const e = ce.Fm.Get().BIsFollowingCurator(t.clanSteamID);
+                  a.push(
+                    r.createElement(
+                      _t.kt,
+                      { key: t.GID + "followcurator", onSelected: d },
+                      r.createElement(
+                        ae.he,
+                        {
+                          toolTipContent: (0, T.we)(
+                            e
+                              ? "#EventCalendar_UnFollowCurator_ttip"
+                              : "#EventCalendar_FollowCurator_ttip",
+                          ),
+                        },
+                        (0, T.we)(
+                          e
+                            ? "#EventCalendar_UnFollowCurator"
+                            : "#EventCalendar_FollowCurator",
+                          n.GetEntityName(),
+                        ),
+                      ),
+                    ),
+                  );
+                }
+                _.BIsSingleSourceCalendar() ||
+                  a.push(
+                    r.createElement(
+                      _t.kt,
+                      { key: t.GID + "goto", onSelected: m },
+                      (0, T.we)(
+                        "#EventCalendar_Goto_SpecificCalendar",
+                        n.GetEntityName(),
+                      ),
+                    ),
+                  ),
+                  t.appid &&
+                    a.push(
+                      r.createElement(
+                        _t.kt,
+                        {
+                          key: t.GID + "goto",
+                          onSelected: () =>
+                            (window.location.href = (0, vt.k2)(
+                              D.TS.STORE_BASE_URL + "app/" + t.appid,
+                            )),
+                        },
+                        (0, T.we)("#EventDisplay_ViewStorePage"),
+                      ),
+                    ),
+                  (0, gt.lX)(r.createElement(_t.tz, null, a), e);
+              },
             },
             r.createElement(ne.faJ, null),
           );
-        }
-      };
-      (0, O.Cg)([se.oI], Ct.prototype, "OnMuteButton", null),
-        (0, O.Cg)([se.oI], Ct.prototype, "OnUnMuteButton", null),
-        (0, O.Cg)([se.oI], Ct.prototype, "HideAllEventsOfMyType", null),
-        (0, O.Cg)([se.oI], Ct.prototype, "AddContextMenuForSource", null),
-        (0, O.Cg)([se.oI], Ct.prototype, "GotoGameOrClanHub", null),
-        (0, O.Cg)([se.oI], Ct.prototype, "ToggleFollowCurator", null),
-        (0, O.Cg)([se.oI], Ct.prototype, "CreateContextMenu", null),
-        (Ct = (0, O.Cg)([u.PA], Ct));
-      const St = (0, o.y)(Ct);
+        }),
+        St = (0, o.y)(Ct);
       var wt = n(74976),
-        It = n(43667),
-        ft = n(76684),
+        ft = n(43667),
+        It = n(76684),
         bt = n(10224),
         yt = n(94743),
         Nt = n(82227),
@@ -3361,17 +3311,17 @@
             fnOnClicked: i,
           } = e,
           [c, u] = r.useState(!1);
-        (0, F.t7)(t.GetAppIDOrReferenceAppID(), Dt),
+        (0, H.t7)(t.GetAppIDOrReferenceAppID(), Dt),
           r.useEffect(() => {
             if (n.clanInfo) {
               let e = l.b.InitFromClanID(n.clanInfo.clanid);
               p.ac.LoadClanInfoForClanSteamID(e);
             }
           }, [n.clanInfo]);
-        const m = X.KN.Get(),
-          g = (0, d.sf)(D.TS.LANGUAGE),
+        const d = X.KN.Get(),
+          g = (0, m.sf)(D.TS.LANGUAGE),
           _ = "capsule",
-          [v, h, C, S, w, I, f, b, y, T, G] = (0, U.q3)(() => [
+          [v, h, C, S, w, f, I, b, y, T, G] = (0, U.q3)(() => [
             t.has_live_stream,
             t.GetEventType(),
             t.GetAllTags(),
@@ -3389,11 +3339,11 @@
           ),
           A = (0, Gt.Ey)(),
           L = (0, U.q3)(() =>
-            Boolean(I && f)
+            Boolean(f && I)
               ? t.GetFallbackArtworkScreenshot()
               : t.GetImageURLWithFallback(_, g, k, A),
           ),
-          H =
+          F =
             "upcoming" !== o &&
             (function (e, t, n, a) {
               const { video_preview_type: o, video_preview_id: l, type: s } = e,
@@ -3401,7 +3351,7 @@
               if (!l) return null;
               if (12 === s) return null;
               if ("youtube" === o) {
-                const t = (0, d.sf)(D.TS.LANGUAGE),
+                const t = (0, m.sf)(D.TS.LANGUAGE),
                   o = (0, bt.c5)() && 14 == s ? Y.wI.full : Y.wI.capsule_main,
                   c = e.GetImageForSizeAsArrayWithFallback("capsule", t, o, !0);
                 if ("carousel" === a)
@@ -3411,7 +3361,7 @@
                     className: Et().YoutubePreviewImage,
                   });
                 const u = () => {
-                  mt.V.RecordAppInteractionEvent(i, mt.E.k_ePlayedVideo), n(!0);
+                  dt.V.RecordAppInteractionEvent(i, dt.E.k_ePlayedVideo), n(!0);
                 };
                 return r.createElement(yt.l, {
                   video: l,
@@ -3428,27 +3378,27 @@
               }
               return null;
             })(t, n, u, o),
-          M = Et()[`EventType${h}`],
-          R = C.map((e) => Et()[`Tag-${e}`]),
-          x = (0, N.A)(
+          R = Et()[`EventType${h}`],
+          x = C.map((e) => Et()[`Tag-${e}`]),
+          M = (0, N.A)(
             Et().TileContainer,
-            M,
+            R,
             v && Et().TileVideoIcon,
             a ? Et().DisableHovers : Et().EnableHovers,
             c && Et().VideoPlayerReady,
-            H && Et().HasVideo,
-            m.HasEventBeenRead(b) && Et().HasBeenRead,
+            F && Et().HasVideo,
+            d.HasEventBeenRead(b) && Et().HasBeenRead,
             "wide" === o && Et().WideMode,
             "carousel" === o && Et().CarouselMode,
             "upcoming" === o && Et().UpcomingMode,
-            ...R,
+            ...x,
           );
         let O = T,
           P = G;
         O === P && (P = void 0), O === w && (O = void 0);
         const V = (0, q.j3)(L),
           W = r.createElement(Bt, {
-            videoPreview: H,
+            videoPreview: F,
             calendarEvent: n,
             eventModel: t,
             mode: o,
@@ -3456,7 +3406,7 @@
             strCapsuleImgURLForBackground: V,
             fnSetCoverSize: B,
           }),
-          K = a && 14 != h && !(H && "carousel" !== o),
+          K = a && 14 != h && !(F && "carousel" !== o),
           j = K && W,
           z = !K && W,
           Q = "wide" !== o || a,
@@ -3469,7 +3419,7 @@
               {
                 className: (0, N.A)(Et().ReminderContainer, Q && Et().OnlyIcon),
               },
-              r.createElement(It.j, {
+              r.createElement(ft.j, {
                 eventModel: t,
                 lang: g,
                 bShowStartTime: !0,
@@ -3489,7 +3439,7 @@
           );
         return r.createElement(
           "div",
-          { className: x },
+          { className: M },
           r.createElement(wt.C, { event: t, recordNewsHubStats: !0 }),
           r.createElement(
             E.tj,
@@ -3499,7 +3449,7 @@
               {
                 className: Et().Tile,
                 onClick: (e) => {
-                  mt.V.RecordAppInteractionEvent(n.appid, mt.E.k_eClickThrough),
+                  dt.V.RecordAppInteractionEvent(n.appid, dt.E.k_eClickThrough),
                     i(t),
                     e.stopPropagation(),
                     e.preventDefault();
@@ -3509,7 +3459,7 @@
                 r.createElement("div", {
                   className: (0, N.A)(
                     Et().TileBackgroundImage,
-                    I && Et().FallbackImage,
+                    f && Et().FallbackImage,
                   ),
                   style: { backgroundImage: `url(${V})` },
                 }),
@@ -3534,7 +3484,7 @@
                         "div",
                         { className: Et().GameSource },
                         r.createElement(Lt, { ...e }),
-                        n && r.createElement(Ht, { calendarEvent: n }),
+                        n && r.createElement(Ft, { calendarEvent: n }),
                       ),
                     r.createElement("div", { className: Et().EventName }, w),
                     r.createElement(
@@ -3542,10 +3492,10 @@
                       { className: Et().EventTypeAndDateCtn },
                       r.createElement(
                         "div",
-                        { className: (0, N.A)(Et().TileTextCategoryType, M) },
+                        { className: (0, N.A)(Et().TileTextCategoryType, R) },
                         S,
                       ),
-                      r.createElement(Ft, {
+                      r.createElement(Ht, {
                         eventModel: t,
                         className: (0, N.A)(Q && Et().LeaveRoomForReminder),
                       }),
@@ -3575,7 +3525,7 @@
               ),
             ),
           ),
-          r.createElement(Rt, { ...e }),
+          r.createElement(xt, { ...e }),
         );
       }
       function Bt(e) {
@@ -3588,9 +3538,9 @@
             strCapsuleImgURLForBackground: s,
             fnSetCoverSize: i,
           } = e,
-          c = (0, d.sf)(D.TS.LANGUAGE),
+          c = (0, m.sf)(D.TS.LANGUAGE),
           u = !t && "upcoming" !== o,
-          [m, g, _, v, h, E] = (0, U.q3)(() => [
+          [d, g, _, v, h, E] = (0, U.q3)(() => [
             n.GetEventType(),
             n.has_live_stream,
             n.has_live_stream,
@@ -3618,7 +3568,7 @@
               r.createElement(
                 r.Fragment,
                 null,
-                12 === m &&
+                12 === d &&
                   r.createElement(
                     r.Fragment,
                     null,
@@ -3640,7 +3590,7 @@
                       w,
                     ),
                   ),
-                12 !== m &&
+                12 !== d &&
                   r.createElement(
                     "div",
                     {
@@ -3678,27 +3628,19 @@
           )
         );
       }
-      let At = class extends r.Component {
-        OnTitleClick(e) {
-          const { eventModel: t } = this.props,
-            n = (0, E.qT)(t, E.PH.k_eStoreNewsHub, "allowRelative");
-          n.startsWith("http")
-            ? (window.location.href = n)
-            : this.props.history.push(n),
-            e.stopPropagation(),
-            e.preventDefault();
-        }
-        render() {
+      const At = (0, u.PA)((e) => {
           const {
-              eventModel: e,
-              calendarEvent: t,
-              bSuppressHoverEffects: n,
-            } = this.props,
-            a = t.GetEntityName(),
-            o = t.GetGameIcon(),
-            l = (0, N.A)(
+              eventModel: t,
+              calendarEvent: n,
+              bSuppressHoverEffects: a,
+              history: o,
+            } = e,
+            l = (0, E.Bw)(t, E.PH.k_eStoreNewsHub, "allowRelative"),
+            s = n.GetEntityName(),
+            i = n.GetGameIcon(),
+            c = (0, N.A)(
               Et().GameTitleContainer,
-              n ? Et().DisableHovers : Et().EnableHovers,
+              a ? Et().DisableHovers : Et().EnableHovers,
             );
           return r.createElement(
             _.tH,
@@ -3708,23 +3650,29 @@
               { className: Et().TileTextHeader },
               r.createElement(
                 "div",
-                { className: l, onClick: this.OnTitleClick },
-                r.createElement("img", { className: Et().AppIcon, src: o }),
+                {
+                  className: c,
+                  onClick: (e) => {
+                    l.startsWith("http")
+                      ? (window.location.href = l)
+                      : o.push(l),
+                      e.stopPropagation(),
+                      e.preventDefault();
+                  },
+                },
+                r.createElement("img", { className: Et().AppIcon, src: i }),
                 r.createElement(
                   "div",
                   { className: Et().TileTextAppName },
-                  a,
+                  s,
                   " ",
                 ),
               ),
             ),
           );
-        }
-      };
-      (0, O.Cg)([se.oI], At.prototype, "OnTitleClick", null),
-        (At = (0, O.Cg)([u.PA], At));
-      const Lt = (0, o.y)(At),
-        Ft = (0, u.PA)((e) => {
+        }),
+        Lt = (0, o.y)(At),
+        Ht = (0, u.PA)((e) => {
           const { eventModel: t, calendarEvent: n, className: a } = e,
             o = (0, K.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
             l = t ? t.GetStartTimeAndDateUnixSeconds() : n.start_time,
@@ -3736,7 +3684,7 @@
               "div",
               { className: (0, N.A)(Et().LiveText, a) },
               r.createElement(
-                ft.gS,
+                It.gS,
                 { rtFullDate: l, stylesmodule: Et() },
                 r.createElement(
                   "div",
@@ -3745,7 +3693,7 @@
                 ),
               ),
               r.createElement(
-                ft.gS,
+                It.gS,
                 { rtFullDate: s, stylesmodule: Et() },
                 (0, T.we)("#EventCalendar_TimeLeft", t),
               ),
@@ -3755,7 +3703,7 @@
             const e = o - l,
               t = e < 86400 ? (0, T.Hq)(e, !1, !0) : (0, T._l)(l);
             return r.createElement(
-              ft.gS,
+              It.gS,
               { className: a, rtFullDate: l, stylesmodule: Et() },
               r.createElement("div", { className: Et().PastDateText }, t),
             );
@@ -3766,9 +3714,9 @@
             const t = e.getTime() / 1e3,
               n = Math.floor((l - t) / 86400),
               s = n > 1 && n <= 5 ? (0, T.cc)(new Date(1e3 * l)) : (0, T._l)(l),
-              i = (0, ft.pg)(l);
+              i = (0, It.pg)(l);
             return r.createElement(
-              ft.gS,
+              It.gS,
               { className: a, rtFullDate: l, stylesmodule: Et() },
               r.createElement(
                 "div",
@@ -3778,7 +3726,7 @@
             );
           }
         }),
-        Ht = (0, u.PA)((e) => {
+        Ft = (0, u.PA)((e) => {
           const t = e.calendarEvent.GetSource(),
             n = [],
             a = (0, K.v0)().m_visibilityStore;
@@ -3822,7 +3770,7 @@
               });
           const o = n.map((t, a) => {
             const r = e.calendarEvent.unique_id;
-            return Mt(
+            return Rt(
               `item-source-${r}-${t.id}`,
               t.name,
               t.ttip,
@@ -3832,7 +3780,7 @@
           });
           return r.createElement("div", { className: Et().SourceList }, o);
         }),
-        Mt = (e, t, n, a, o) =>
+        Rt = (e, t, n, a, o) =>
           r.createElement(
             ae.he,
             {
@@ -3842,18 +3790,18 @@
             },
             (0, T.we)(t) + (o ? ", " : ""),
           );
-      let Rt = class extends r.Component {
+      let xt = class extends r.Component {
         OnPerformVoteUp() {
           const { eventModel: e } = this.props,
             t = X.KN.Get();
           !0 !== t.GetPreviouslyLoadedVote(this.props.eventModel) &&
             (0, pt.W)(e, t) &&
             (t.Vote(e, !0, c().CancelToken.source()),
-            mt.V.RecordAppInteractionEvent(e.appid, mt.E.k_eThumbsUp));
+            dt.V.RecordAppInteractionEvent(e.appid, dt.E.k_eThumbsUp));
         }
         OnDiscussionClicked() {
           const { eventModel: e } = this.props;
-          mt.V.RecordAppInteractionEvent(e.appid, mt.E.k_eDiscussions);
+          dt.V.RecordAppInteractionEvent(e.appid, dt.E.k_eDiscussions);
         }
         render() {
           const e = X.KN.Get(),
@@ -3923,10 +3871,10 @@
           );
         }
       };
-      (0, O.Cg)([se.oI], Rt.prototype, "OnPerformVoteUp", null),
-        (0, O.Cg)([se.oI], Rt.prototype, "OnDiscussionClicked", null),
-        (Rt = (0, O.Cg)([u.PA], Rt));
-      var xt = n(40236);
+      (0, O.Cg)([se.oI], xt.prototype, "OnPerformVoteUp", null),
+        (0, O.Cg)([se.oI], xt.prototype, "OnDiscussionClicked", null),
+        (xt = (0, O.Cg)([u.PA], xt));
+      var Mt = n(40236);
       const Ot = {
         include_assets: !0,
         include_release: !0,
@@ -3943,7 +3891,7 @@
             s = Et()[`EventType${t.event_type}`],
             i = (0, N.A)(Et().TileContainer, s),
             c = "carousel" === a,
-            u = (0, xt.OO)(
+            u = (0, Mt.OO)(
               {
                 onEnter: () => {
                   !(function (e, t, n) {
@@ -4038,7 +3986,7 @@
           [s, i] = (0, r.useState)(null),
           c = (0, r.useRef)(void 0),
           u = (0, Kt.m)("CuratorFeedSuggestRow"),
-          d = (0, r.useCallback)(() => {
+          m = (0, r.useCallback)(() => {
             if (!u.token.reason)
               if (c.current) {
                 const e = 118,
@@ -4049,7 +3997,7 @@
               } else l(0);
           }, [u.token.reason]);
         if (
-          ((0, r.useEffect)(() => d(), [d]),
+          ((0, r.useEffect)(() => m(), [m]),
           (0, r.useEffect)(() => {
             if (null == s) {
               (async () => {
@@ -4057,14 +4005,14 @@
               })();
             }
             return (
-              window.addEventListener("resize", d),
-              () => window.removeEventListener("resize", d)
+              window.addEventListener("resize", m),
+              () => window.removeEventListener("resize", m)
             );
-          }, [u.token.reason, d, s]),
+          }, [u.token.reason, m, s]),
           n)
         )
           return null;
-        let m = s?.slice(0, o).map((e) => {
+        let d = s?.slice(0, o).map((e) => {
           const t = p.ac.GetClanInfoByClanAccountID(e.clanAccountID);
           return t
             ? r.createElement(
@@ -4117,7 +4065,7 @@
               r.createElement(
                 "div",
                 { className: Jt().RowContainer, ref: c },
-                m || r.createElement(y.t, null),
+                d || r.createElement(y.t, null),
                 r.createElement(
                   "div",
                   {
@@ -4272,7 +4220,7 @@
         }
       };
       un = (0, O.Cg)([u.PA], un);
-      let dn = (on = class extends r.Component {
+      let mn = (on = class extends r.Component {
         state = {
           bScreenIsWide: on.IsWideScreen(),
           nMaxCapsulesPerRow: this.GetMaxCapsulesPerRow(),
@@ -4351,10 +4299,10 @@
           );
         }
       });
-      (0, O.Cg)([se.oI], dn.prototype, "OnResize", null),
-        (dn = on = (0, O.Cg)([u.PA], dn));
-      var mn = n(29342),
-        pn = n.n(mn);
+      (0, O.Cg)([se.oI], mn.prototype, "OnResize", null),
+        (mn = on = (0, O.Cg)([u.PA], mn));
+      var dn = n(29342),
+        pn = n.n(dn);
       const gn = (e) => {
           let t = new Array();
           return (
@@ -4455,7 +4403,7 @@
         const e = Sn();
         return (e && e.id != Cn) || D.TS.IN_MOBILE_WEBVIEW;
       }
-      function In() {
+      function fn() {
         return (
           wn() ||
           window.innerWidth <
@@ -4463,7 +4411,7 @@
               parseInt(ke().strMaxMobileWidth)
         );
       }
-      let fn = class extends r.Component {
+      let In = class extends r.Component {
         static {
           vn = this;
         }
@@ -4471,7 +4419,7 @@
           bUserIsLoggedIn: D.iA.logged_in,
           nVisibleHeight: 0,
           nScrollTop: 0,
-          bControlBarIsCollapsed: In(),
+          bControlBarIsCollapsed: fn(),
           bControlBarWasOpenedByUser: !1,
           nDisappearingHeaderTop: 0,
           nSteamNavHeaderHeight: 0,
@@ -4708,7 +4656,7 @@
                   n = t && p.ac.GetClanInfoByClanAccountID(t);
                 e = n && n.group_name;
               }
-              t = a && a.GetNameWithFallback((0, d.sf)(D.TS.LANGUAGE));
+              t = a && a.GetNameWithFallback((0, m.sf)(D.TS.LANGUAGE));
             }
           }
           let a = (0, T.we)("#EventCalendar_TabTitle_Global");
@@ -4727,7 +4675,7 @@
         OnResize() {
           this.setState((e) => {
             const t = window.innerHeight,
-              n = !e.bControlBarWasOpenedByUser && In(),
+              n = !e.bControlBarWasOpenedByUser && fn(),
               a = this.GetCurrentHeaderHeights(this.state.nScrollTop <= 0);
             return (
               this.UpdateBodyScrollState(n),
@@ -4754,8 +4702,8 @@
               (s > 100 || a) && ((s = 0), (i = 0), (u = !1)),
               this.state.bControlBarIsCollapsed || (u = !1),
               t.modalEvent && (u = !0);
-            const d = t.nSteamNavHeaderHeight + r + t.nMobileNavBannerHeight;
-            if (((c = u ? -1 * d : 0), c !== t.nDisappearingHeaderTop)) {
+            const m = t.nSteamNavHeaderHeight + r + t.nMobileNavBannerHeight;
+            if (((c = u ? -1 * m : 0), c !== t.nDisappearingHeaderTop)) {
               const e = Sn();
               e && (e.style.transform = `translateY(${c}px)`);
             }
@@ -4871,7 +4819,7 @@
                   emgid: void 0,
                 });
         }
-        OnEventClicked(e) {
+        async OnEventClicked(e) {
           X.KN.Get().RecordEventRead(e, 8);
           const t =
               this.state.nSteamNavHeaderHeight +
@@ -4882,8 +4830,15 @@
             (n && (n.style.transform = `translateY(${-1 * t}px)`),
             J.HD.bOpenEventLandingPage)
           ) {
-            const t = (0, E.qT)(e, E.PH.k_eStoreView, "allowRelative");
-            this.props.history.push(t);
+            const t =
+                e.appid &&
+                (await L.A.Get().QueueAppRequest(e.appid, {
+                  include_basic_info: !0,
+                }))
+                  ? L.A.Get().GetApp(e.appid)
+                  : void 0,
+              n = (0, E.qT)(e, t, E.PH.k_eStoreView, "allowRelative");
+            this.props.history.push(n);
           } else
             (0, s.ip)(this.props.history, {
               emclan: e.clanSteamID.ConvertTo64BitString(),
@@ -5019,20 +4974,20 @@
           );
         }
       };
-      (0, O.Cg)([se.oI], fn.prototype, "OnResize", null),
-        (0, O.Cg)([se.oI], fn.prototype, "OnScroll", null),
-        (0, O.Cg)([se.oI], fn.prototype, "MobileNavOpenSettings", null),
-        (0, O.Cg)([se.oI], fn.prototype, "ToggleControlBarCollapsed", null),
-        (0, O.Cg)([se.oI], fn.prototype, "OnControlBarChange", null),
-        (0, O.Cg)([se.oI], fn.prototype, "CloseEventModal", null),
-        (0, O.Cg)([se.oI], fn.prototype, "OnEventClicked", null),
-        (0, O.Cg)([se.oI], fn.prototype, "ToggleFutureView", null),
-        (0, O.Cg)([se.oI], fn.prototype, "ResetAllFilters", null),
-        (fn = vn = (0, O.Cg)([u.PA], fn));
-      const bn = (0, o.y)(fn);
+      (0, O.Cg)([se.oI], In.prototype, "OnResize", null),
+        (0, O.Cg)([se.oI], In.prototype, "OnScroll", null),
+        (0, O.Cg)([se.oI], In.prototype, "MobileNavOpenSettings", null),
+        (0, O.Cg)([se.oI], In.prototype, "ToggleControlBarCollapsed", null),
+        (0, O.Cg)([se.oI], In.prototype, "OnControlBarChange", null),
+        (0, O.Cg)([se.oI], In.prototype, "CloseEventModal", null),
+        (0, O.Cg)([se.oI], In.prototype, "OnEventClicked", null),
+        (0, O.Cg)([se.oI], In.prototype, "ToggleFutureView", null),
+        (0, O.Cg)([se.oI], In.prototype, "ResetAllFilters", null),
+        (In = vn = (0, O.Cg)([u.PA], In));
+      const bn = (0, o.y)(In);
       function yn(e) {
         const t = (0, U.q3)(() => (0, K.v0)()),
-          [n, a, o, s, i, c, u, m] = (0, U.q3)(() => [
+          [n, a, o, s, i, c, u, d] = (0, U.q3)(() => [
             t.GetCollectionMetaData()?.clan_event_gid || void 0,
             t.GetCollectionID(),
             t.BHasCollectionMetaData(),
@@ -5043,7 +4998,7 @@
             t.BIsSingleGroupCalendar() ? t.GetSingleGroupID() : void 0,
           ]),
           [p, g] = r.useState(!1),
-          _ = (0, d.sf)(D.TS.LANGUAGE);
+          _ = (0, m.sf)(D.TS.LANGUAGE);
         if (
           (r.useEffect(() => {
             if (o && n && !Z.O3.GetClanEventModel(n)) {
@@ -5090,7 +5045,7 @@
             if (!e) return null;
             let n = Z.O3.GetClanEventModel(e);
             if (!n) return null;
-            let a = (0, d.sf)(D.TS.LANGUAGE);
+            let a = (0, m.sf)(D.TS.LANGUAGE);
             return r.createElement(tn, {
               largeHeader: t,
               titleToken: n.GetNameWithFallback(a),
@@ -5126,7 +5081,7 @@
               style: { transform: `translateY(${e.nTopOffset}px)` },
               className: t,
             },
-            r.createElement(Yt.W, { appId: u, clanId: m, bShowRSSFeed: !0 }),
+            r.createElement(Yt.W, { appId: u, clanId: d, bShowRSSFeed: !0 }),
           );
         }
         return null;
@@ -5188,12 +5143,12 @@
             c = e.GetCalendarSections(t);
           if (0 == c.length) return null;
           const u = (0, bt.c5)(),
-            d = e.m_visibilityStore.BAreAllEventsHidden(),
-            m = s;
+            m = e.m_visibilityStore.BAreAllEventsHidden(),
+            d = s;
           let p = !0;
           const g = this.GetCuratorSuggestionSettings(e);
           let _;
-          const v = d
+          const v = m
             ? []
             : this.GetCurrentSectionLayout().map(
                 ({ section: e, nTopOfSection: n }, l) => {
@@ -5201,11 +5156,11 @@
                       strId: s,
                       strSectionLabel: i,
                       rtSectionStart: c,
-                      rtSectionEnd: d,
+                      rtSectionEnd: m,
                       bIsFutureSection: v,
                       nRenderedHeight: h,
                     } = e,
-                    E = n < m,
+                    E = n < d,
                     C = (0, N.A)(ke().PastSection, p && ke().DarkerBackground);
                   h > 0 &&
                     ((p = !p),
@@ -5226,7 +5181,7 @@
                       bRenderStickyHeader: E,
                       strSectionLabel: i,
                       rtSectionStart: c,
-                      rtSectionEnd: d,
+                      rtSectionEnd: m,
                       strSectionClassname: C,
                       bUseHorizontalLayout: S,
                       fnOnSeeFutureClick: o,
@@ -5270,7 +5225,7 @@
                 },
                 (0, T.we)("#EventCalendar_ResetFiltersButton"),
               );
-          d && this.props.fnResetFilters
+          m && this.props.fnResetFilters
             ? (S = "#EventCalendar_EmptyCalendar")
             : t
               ? ((S =
@@ -5300,10 +5255,10 @@
                   (E.nCount
                     ? "#EventCalendar_NoMorePastUpdates"
                     : "#EventCalendar_NoPastUpdates"));
-          let I = null;
+          let f = null;
           return (
-            (d || e.BHitEventHorizon(t ? "forward" : "backward")) &&
-              (I = r.createElement(
+            (m || e.BHitEventHorizon(t ? "forward" : "backward")) &&
+              (f = r.createElement(
                 r.Fragment,
                 null,
                 r.createElement(
@@ -5343,7 +5298,7 @@
                     (0, T.we)("#EventCalendar_UpdatesViewHeader"),
                   ),
                 v,
-                I,
+                f,
               ),
             )
           );
@@ -5520,7 +5475,7 @@
             i = new Array(),
             c = "full" === a ? i : s,
             u = this.GetTimestampEvents(o);
-          let d = this.props.bShowEarliestFirst
+          let m = this.props.bShowEarliestFirst
             ? this.props.rtSectionStart
             : this.props.rtSectionEnd;
           for (const i of e) {
@@ -5548,7 +5503,7 @@
                       r.createElement(
                         "div",
                         { className: ke().CalendarEventListContainer },
-                        r.createElement(dn, {
+                        r.createElement(mn, {
                           key: i.unique_id,
                           rgCalendarItems: u,
                           bSuppressHoverEffects: n,
@@ -5566,11 +5521,11 @@
             e === s &&
               (this.AddTimestampEventsInInterval(
                 u,
-                Math.min(d, i.start_time),
-                Math.max(d, i.start_time),
+                Math.min(m, i.start_time),
+                Math.max(m, i.start_time),
                 s,
               ),
-              (d = i.start_time)),
+              (m = i.start_time)),
               e.push(
                 r.createElement(
                   "div",
@@ -5592,14 +5547,14 @@
             this.props.bShowEarliestFirst
               ? this.AddTimestampEventsInInterval(
                   u,
-                  d,
+                  m,
                   this.props.rtSectionEnd,
                   s,
                 )
               : this.AddTimestampEventsInInterval(
                   u,
                   this.props.rtSectionStart,
-                  d,
+                  m,
                   s,
                 ),
             s.push(...i),
@@ -5621,9 +5576,9 @@
           if (0 == c.length && u)
             return r.createElement("div", { ref: this.m_ref, className: n });
           c.length && l && (c = c.slice().reverse());
-          let d = null;
+          let m = null;
           c.length > 0 &&
-            (d = r.createElement(
+            (m = r.createElement(
               "div",
               {
                 className: (0, N.A)(
@@ -5651,12 +5606,12 @@
                   ),
               ),
             ));
-          let m = null;
+          let d = null;
           return (
             (!J.HD.bRequireAllEventsLoadedInTimeBlock ||
               u ||
               (a && c.length >= 3)) &&
-              (m = a
+              (d = a
                 ? r.createElement(Gn, {
                     rgCalendarItems: c.slice(0, 3),
                     fnOnEventClick: s,
@@ -5667,8 +5622,8 @@
             r.createElement(
               "div",
               { ref: this.m_ref, className: n },
-              d,
               m,
+              d,
               !u &&
                 !a &&
                 r.createElement(An, {
@@ -5742,21 +5697,21 @@
               ),
             ),
           );
-      var Fn = n(81881),
-        Hn = n(39020),
-        Mn = n(30470);
-      function Rn(e) {
+      var Hn = n(81881),
+        Fn = n(39020),
+        Rn = n(30470);
+      function xn(e) {
         if ("steam" === e) {
           if ("beta" !== new URLSearchParams().get("branch"))
             return { rgHiddenClans: [q.Ro] };
         }
       }
-      const xn = (e) => {
+      const Mn = (e) => {
         const [t] = (0, s.QD)("byday", !1),
           [n] = (0, s.QD)("upcoming", !1);
-        return (0, Hn.vb)(Mn.TS.LANGUAGE)
+        return (0, Fn.vb)(Rn.TS.LANGUAGE)
           ? r.createElement(
-              Fn.d,
+              Hn.d,
               { bSalePage: !0 },
               r.createElement(
                 o.dO,
@@ -5769,7 +5724,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(x, {
+                    r.createElement(M, {
                       key: "detailview_" + e.match.params.event_gid,
                       ...e,
                       appid:
@@ -5787,7 +5742,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(x, {
+                    r.createElement(M, {
                       key: "detailview_" + e.match.params.event_gid,
                       ...e,
                       clansteamid: new l.b(e.match.params.groupid),
@@ -5803,7 +5758,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(x, {
+                    r.createElement(M, {
                       key: "detailoldview_" + e.match.params.announcement_gid,
                       ...e,
                       appid:
@@ -5821,7 +5776,7 @@
                     ":vanity?",
                   ),
                   render: (e) =>
-                    r.createElement(x, {
+                    r.createElement(M, {
                       key: "detailoldview_" + e.match.params.announcement_gid,
                       ...e,
                       clansteamid: new l.b(e.match.params.groupid),
@@ -5857,7 +5812,7 @@
                   render: (e) =>
                     r.createElement(bn, {
                       key: e.match.params.collectionid,
-                      initialFilters: Rn(e.match.params.collectionid),
+                      initialFilters: xn(e.match.params.collectionid),
                       ...e,
                       filter_to_collection: e.match.params.collectionid,
                       section_by_day: t,

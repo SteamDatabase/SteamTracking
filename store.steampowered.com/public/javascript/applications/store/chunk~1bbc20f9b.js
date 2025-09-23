@@ -503,17 +503,17 @@
     59952: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $A: () => F,
+        $A: () => V,
         B8: () => P,
         Pk: () => B,
-        Sz: () => I,
+        Sz: () => L,
         Tu: () => R,
-        UT: () => V,
-        W4: () => N,
-        ZS: () => L,
+        UT: () => F,
+        W4: () => T,
+        ZS: () => x,
         Zb: () => A,
         _J: () => O,
-        ck: () => G,
+        ck: () => H,
         j$: () => D,
         z5: () => b,
       });
@@ -535,10 +535,10 @@
         f = n(52038),
         v = n(61859),
         S = n(61336),
-        C = n(30470),
-        y = n(12611),
-        T = n(90622);
-      const N = new Map([
+        y = n(30470),
+        C = n(12611),
+        N = n(90622);
+      const T = new Map([
         [
           "b",
           {
@@ -562,8 +562,8 @@
           },
         ],
         ["h1", { Constructor: A, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h2", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h3", { Constructor: L, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h2", { Constructor: L, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h3", { Constructor: x, autocloses: !1, skipFollowingNewline: !0 }],
         [
           "h4",
           {
@@ -692,12 +692,12 @@
           "url",
           {
             Constructor: function (e) {
-              let t = (0, T.J)(D(e.args));
+              let t = (0, N.J)(D(e.args));
               if (!t) {
                 const n = e.children;
                 "string" == typeof n &&
                   (n.startsWith("http://") || n.startsWith("https://")) &&
-                  (t = (0, T.J)(n));
+                  (t = (0, N.J)(n));
               }
               const n = "button" == D(e.args, "style") ? r().LinkButton : null,
                 a = n && D(e.args, "buttoncolor");
@@ -718,7 +718,7 @@
                   e.children,
                 );
               return c.createElement(
-                x,
+                I,
                 { className: n, href: t, id: o, style: { backgroundColor: a } },
                 e.children,
               );
@@ -768,7 +768,7 @@
         ],
         ["list", { Constructor: P, autocloses: !1, skipInternalNewline: !0 }],
         ["olist", { Constructor: O, autocloses: !1, skipInternalNewline: !0 }],
-        ["*", { Constructor: G, autocloses: !0, skipInternalNewline: !0 }],
+        ["*", { Constructor: H, autocloses: !0, skipInternalNewline: !0 }],
         [
           "table",
           {
@@ -792,7 +792,7 @@
                     null,
                     a
                       .split(",")
-                      .map((e, t) => c.createElement(H, { key: t, width: e })),
+                      .map((e, t) => c.createElement(G, { key: t, width: e })),
                   ),
                 c.createElement("tbody", null, e.children),
               );
@@ -920,7 +920,7 @@
               if (a)
                 return c.createElement(h.y, { eventGID: a, bPreviewMode: n });
               if (t) {
-                const e = (0, o.sf)(C.TS.LANGUAGE);
+                const e = (0, o.sf)(y.TS.LANGUAGE);
                 return c.createElement(h.j, { eventModel: t, lang: e });
               }
               return null;
@@ -948,17 +948,17 @@
                 _ = new Date(a),
                 v = _.getUTCFullYear(),
                 S = ("0" + (_.getUTCMonth() + 1)).slice(-2),
-                C = ("0" + _.getUTCDate()).slice(-2),
-                y = ("0" + _.getUTCHours()).slice(-2),
-                T = ("0" + _.getUTCMinutes()).slice(-2),
-                N = `${v}${S}${C}T${y}${T}00Z`;
+                y = ("0" + _.getUTCDate()).slice(-2),
+                C = ("0" + _.getUTCHours()).slice(-2),
+                N = ("0" + _.getUTCMinutes()).slice(-2),
+                T = `${v}${S}${y}T${C}${N}00Z`;
               let b;
               try {
                 let e = "BEGIN:VCALENDAR\r\n";
                 (e += "VERSION:2.0\r\n"),
                   (e += "BEGIN:VEVENT\r\n"),
                   (e += `DTSTART:${E}\r\n`),
-                  (e += `DTEND:${N}\r\n`),
+                  (e += `DTEND:${T}\r\n`),
                   (e += `SUMMARY:${t.replace("\n", "\\n")}\r\n`),
                   o && (e += `DESCRIPTION:${o.replace("\n", "\\n")}\r\n`),
                   s && (e += `LOCATION:${s.replace("\n", "\\n")}\r\n`),
@@ -972,7 +972,7 @@
                 "https://calendar.google.com/calendar/render?action=TEMPLATE";
               (w += `&text=${encodeURI(t)}`),
                 (w += `&details=${encodeURI(o)}`),
-                (w += `&dates=${encodeURI(E + "/" + N)}`);
+                (w += `&dates=${encodeURI(E + "/" + T)}`);
               const R = (e) => {
                 if ("ReactNativeWebView" in window) {
                   const n = window.ReactNativeWebView,
@@ -1048,11 +1048,11 @@
                 n = "button" == D(e.args, "style") ? r().LinkButton : null,
                 a = n && D(e.args, "buttoncolor");
               return c.createElement(
-                x,
+                I,
                 {
                   className: n,
                   style: { backgroundColor: a },
-                  href: `${C.TS.PARTNER_BASE_URL}doc/${t}`,
+                  href: `${y.TS.PARTNER_BASE_URL}doc/${t}`,
                 },
                 e.children,
               );
@@ -1105,8 +1105,8 @@
         ],
       ]);
       new Map([
-        ["looping_media", { Constructor: F, autocloses: !1 }],
-        ["video", { Constructor: V, autocloses: !1 }],
+        ["looping_media", { Constructor: V, autocloses: !1 }],
+        ["video", { Constructor: F, autocloses: !1 }],
         ["youtubeorvideo", { Constructor: p.Eo, autocloses: !1 }],
         ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
       ]);
@@ -1115,11 +1115,11 @@
       }
       function w(e, t, n = 0) {
         if (e && 0 != e.length) {
-          if (e?.startsWith(y.lw)) return u.z.ReplacementTokenToClanImageURL(e);
-          if (e?.startsWith(y.eg)) {
+          if (e?.startsWith(C.lw)) return u.z.ReplacementTokenToClanImageURL(e);
+          if (e?.startsWith(C.eg)) {
             const a = new Array(),
               r = u.z.GetBaseURL(),
-              s = e.substring(y.eg.length + 1),
+              s = e.substring(C.eg.length + 1),
               i = parseInt(s.substring(0, s.indexOf("/"))),
               l = s.substring(s.indexOf("/") + 1),
               c = u.z.GetHashFromHashAndExt(l),
@@ -1161,19 +1161,19 @@
       function A(e) {
         return k("h1", e, (0, f.A)(r().Header1, "BB_Header1"));
       }
-      function I(e) {
+      function L(e) {
         return k("h2", e, (0, f.A)(r().Header2, "BB_Header2"));
       }
-      function L(e) {
+      function x(e) {
         return k("h3", e, (0, f.A)(r().Header3, "BB_Header3"));
       }
-      const x = (e) => {
+      const I = (e) => {
         const { href: t, ...n } = e;
         let a,
           r = (0, m.OZ)(t);
         (0, d.p)(r)
           ? ((r =
-              (C.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+              (y.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
               (0, d.E)(r)),
             (a = "noopener nofollow"))
           : (r = (0, S.NT)(r));
@@ -1220,7 +1220,7 @@
           e.children,
         );
       }
-      function G(e) {
+      function H(e) {
         let t = D(e.args, "id");
         return (
           t &&
@@ -1235,7 +1235,7 @@
           )
         );
       }
-      function H(e) {
+      function G(e) {
         const { width: t } = e;
         let n;
         return (
@@ -1272,7 +1272,7 @@
           const a = D(e, "webm");
           a && n.push({ sURL: (0, S.L$)(a), sFormat: "video/webm" });
         }
-        const a = (0, o.sf)(C.TS.LANGUAGE),
+        const a = (0, o.sf)(y.TS.LANGUAGE),
           r = 0 != a,
           s = new Array();
         for (let t = 0; t < 31; t++) {
@@ -1295,7 +1295,7 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function F(e) {
+      function V(e) {
         const t = U(e.args);
         return c.createElement(g.L, {
           video: t,
@@ -1304,7 +1304,7 @@
           bLoop: !0,
         });
       }
-      function V(e) {
+      function F(e) {
         const t = U(e.args),
           n = e.children ? e.children.toString() : void 0;
         n &&
@@ -1644,9 +1644,9 @@
             classNameAlign: _,
           } = e,
           [f, v] = (0, a.useState)(!n),
-          [S, C] = (0, a.useState)(!1),
-          y = (0, s.m)("YouTubeInlineSnippet"),
-          [T, N] = (0, a.useState)({
+          [S, y] = (0, a.useState)(!1),
+          C = (0, s.m)("YouTubeInlineSnippet"),
+          [N, T] = (0, a.useState)({
             title: (0, c.we)("#Loading"),
             description: "",
             videoid: t,
@@ -1654,20 +1654,20 @@
           });
         (0, a.useEffect)(() => {
           f &&
-            r.R.LoadYouTubeDynamicData([t], y)
+            r.R.LoadYouTubeDynamicData([t], C)
               .then((e) => {
-                !y.token.reason && e.length > 0 && (N(e[0]), C(!0));
+                !C.token.reason && e.length > 0 && (T(e[0]), y(!0));
               })
               .catch((e) =>
                 console.error(
                   "YouTubeInlineSnippet: " + (0, i.H)(e).strErrorMsg,
                 ),
               );
-        }, [f, y, t]);
+        }, [f, C, t]);
         if (((0, u.VC)(n && !0), f)) {
-          const e = T.title,
-            n = T.views,
-            r = T.description;
+          const e = N.title,
+            n = N.views,
+            r = N.description;
           return a.createElement(
             "div",
             { className: h().DynamicLinkBox, onClick: () => v(!1) },
@@ -1846,7 +1846,7 @@
     },
     43667: (e, t, n) => {
       "use strict";
-      n.d(t, { y: () => W, j: () => V });
+      n.d(t, { y: () => W, j: () => F });
       var a = n(34629),
         r = n(75844),
         o = n(19367),
@@ -1928,28 +1928,28 @@
       (0, a.Cg)([g.sH], v.prototype, "m_bValidatedEmail", void 0),
         (0, a.Cg)([g.sH], v.prototype, "m_nMobileDeviceCount", void 0);
       let S = new v();
-      var C = n(40650),
-        y = n(10981),
-        T = n(76684),
-        N = n(51706),
+      var y = n(40650),
+        C = n(10981),
+        N = n(76684),
+        T = n(51706),
         b = n(738),
         w = n(12155),
         D = n(22797),
         R = n(32754),
         k = n(68797),
         A = n(52038),
-        I = n(61859),
-        L = n(84933),
-        x = n(14771),
+        L = n(61859),
+        x = n(84933),
+        I = n(14771),
         B = n(61336),
         P = n(6878),
         O = n.n(P),
-        G = n(75113),
-        H = n(78697),
+        H = n(75113),
+        G = n(78697),
         M = n(95695),
         U = n(82477),
-        F = n(39256);
-      let V = class extends s.Component {
+        V = n(39256);
+      let F = class extends s.Component {
         m_iMenuInstance;
         m_elDropDownRef = s.createRef();
         m_bLoadWasCancelled = !1;
@@ -1991,12 +1991,12 @@
               e.stopPropagation(),
               e.preventDefault())
             : (0, b.pg)(
-                s.createElement(N.o0, {
-                  strTitle: (0, I.we)("#EventDisplay_Share_NotLoggedIn"),
-                  strDescription: (0, I.we)(
+                s.createElement(T.o0, {
+                  strTitle: (0, L.we)("#EventDisplay_Share_NotLoggedIn"),
+                  strDescription: (0, L.we)(
                     "#EventDisplay_Share_NotLoggedIn_Description",
                   ),
-                  strOKButtonText: (0, I.we)("#MobileLogin_SignIn"),
+                  strOKButtonText: (0, L.we)("#MobileLogin_SignIn"),
                   onOK: () => (0, U.vg)(),
                 }),
                 window,
@@ -2014,9 +2014,9 @@
               bDisablePopTop: !0,
               bMatchWidth: !0,
               strClassName: (0, A.A)(
-                H.ReminderDialog,
-                H.ReminderOptions,
-                C.contextMenu,
+                G.ReminderDialog,
+                G.ReminderOptions,
+                y.contextMenu,
               ),
             };
           (this.m_iMenuInstance = (0, l.lX)(
@@ -2063,10 +2063,10 @@
                 "div",
                 {
                   className: (0, A.A)({
-                    [H.ReminderCheckBox]: !0,
+                    [G.ReminderCheckBox]: !0,
                     [O().ReminderCtn]: !0,
-                    [H.IconMode]: e,
-                    [H.TextMode]: !e,
+                    [G.IconMode]: e,
+                    [G.TextMode]: !e,
                     ReminderSet: t,
                     RemindMeWidget: !0,
                   }),
@@ -2076,21 +2076,21 @@
                 t &&
                   s.createElement(
                     "div",
-                    { className: H.RemindCheck },
+                    { className: G.RemindCheck },
                     s.createElement(w.Jlk, null),
                   ),
                 e &&
                   s.createElement(
                     "div",
-                    { className: H.RemindBell },
+                    { className: G.RemindBell },
                     s.createElement(w.IrQ, null),
                   ),
                 s.createElement(
                   "div",
-                  { className: H.ReminderDefault },
-                  (0, I.we)("#EventDisplay_Reminder_SetReminder"),
+                  { className: G.ReminderDefault },
+                  (0, L.we)("#EventDisplay_Reminder_SetReminder"),
                 ),
-                s.createElement("div", { className: H.ReminderOptions }),
+                s.createElement("div", { className: G.ReminderOptions }),
               );
         }
       };
@@ -2101,331 +2101,318 @@
           return t
             ? s.createElement(
                 "div",
-                { className: F.ErrorDiv },
-                (0, I.we)("#EventDidplay_Reminder_EventNotVisible", n),
+                { className: V.ErrorDiv },
+                (0, L.we)("#EventDidplay_Reminder_EventNotVisible", n),
               )
             : null;
         const o = (0, i.sf)(E.TS.LANGUAGE);
-        return s.createElement(V, { lang: o, ...a, eventModel: r });
+        return s.createElement(F, { lang: o, ...a, eventModel: r });
       }
       function Y(e) {
         return o.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      (0, a.Cg)([L.oI], V.prototype, "ToggleMenu", null),
-        (0, a.Cg)([L.oI], V.prototype, "ShowMenu", null),
-        (0, a.Cg)([L.oI], V.prototype, "HideMenu", null),
-        (V = (0, a.Cg)([r.PA], V));
-      let z = class extends s.Component {
-        state = { bIsRequestInFlight: !1 };
-        async OnChangeFollowOrIgnore(e, t, n) {
-          const { eventModel: a } = this.props,
-            r = a?.GID;
-          if (r && r != i.kF) {
-            this.setState({ bIsRequestInFlight: !0 });
-            try {
-              await h.KN.Get().SetFollowOrUnfollowEvent(
-                !e,
-                t,
-                a.clanSteamID,
-                r,
-                n,
-              ),
-                e &&
-                  (n === h.Nh.k_ENotifyFlagByEmail
-                    ? this.TrackEventAction(u.E.k_eReminder_Email)
-                    : n === h.Nh.k_ENotifyFlagByPush &&
-                      this.TrackEventAction(u.E.k_eReminder_MobilePush));
-            } catch (e) {
-              (0, b.HT)(
-                s.createElement(
-                  N.KG,
-                  {
-                    strTitle: (0, I.we)(
-                      t
-                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                        : "#EventDisplay_Reminder_FollowEvent_Error",
-                    ),
-                    strDescription: (0, I.we)(
-                      t
-                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                    ),
-                  },
-                  (0, k.H)(e).strErrorMsg,
+      (0, a.Cg)([x.oI], F.prototype, "ToggleMenu", null),
+        (0, a.Cg)([x.oI], F.prototype, "ShowMenu", null),
+        (0, a.Cg)([x.oI], F.prototype, "HideMenu", null),
+        (F = (0, a.Cg)([r.PA], F));
+      const z = (0, r.PA)((e) => {
+        const {
+            eventModel: t,
+            bShowStartTime: n,
+            bExpandLeft: a,
+            bOnlyShowIcon: r,
+            fnHasReminderSet: o,
+            fnHidePanel: l,
+            lang: d,
+          } = e,
+          [m, g] = s.useState(!1),
+          _ = async (e, n, a) => {
+            const r = t?.GID;
+            if (r && r != i.kF) {
+              g(!0);
+              try {
+                await h.KN.Get().SetFollowOrUnfollowEvent(
+                  !e,
+                  n,
+                  t.clanSteamID,
+                  r,
+                  a,
                 ),
-                window,
-              );
-            }
-            this.setState({ bIsRequestInFlight: !1 });
-          }
-        }
-        OnChangeFollowByEmail(e) {
-          this.OnChangeFollowOrIgnore(e, !1, h.Nh.k_ENotifyFlagByEmail);
-        }
-        OnChangeFollowByPush(e) {
-          this.OnChangeFollowOrIgnore(e, !1, h.Nh.k_ENotifyFlagByPush);
-        }
-        GetExternalCalendarEventTitle() {
-          const { eventModel: e, lang: t } = this.props,
-            n = e.GetNameWithFallback(t);
-          if (c.NK.BHasEntityNameForID(e.appid, e.clanSteamID.GetAccountID())) {
-            return `${c.NK.GetEntityNameForID(e.appid, e.clanSteamID.GetAccountID())}: ${n}`;
-          }
-          return n;
-        }
-        TrackEventAction(e) {
-          const { eventModel: t } = this.props;
-          u.V.RecordAppInteractionEvent(t.appid, e);
-        }
-        GetExternalCalendarEventBody() {
-          const { eventModel: e, lang: t } = this.props;
-          let n = e.GetSubTitleWithLanguageFallback(t);
-          n = n ? `${n}\n\n\n` : "";
-          const a = e.GetSummaryWithFallback(t),
-            r = e.jsondata.bSaleEnabled
-              ? G.PH.k_eStoreSalePage
-              : G.PH.k_eStoreView;
-          return `${n}${a}\n\n${(0, G.qT)(e, r, "forceAbsolute")}`;
-        }
-        GetGoogleCalendarLink() {
-          const { eventModel: e } = this.props,
-            t = encodeURIComponent(this.GetExternalCalendarEventTitle()),
-            n = encodeURIComponent(this.GetExternalCalendarEventBody()),
-            a = e.GetStartTimeAndDateUnixSeconds(),
-            r = Y(a),
-            o = Y(e.GetEndTimeAndDateUnixSeconds() || a + x.Kp.PerHour),
-            s =
-              (E.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
-              `https://calendar.google.com/calendar/r/eventedit?text=${t}&details=${n}&dates=${r}/${o}`;
-          return (0, B.k2)(s);
-        }
-        GetICSDownloadLink(e) {
-          const { eventModel: t, lang: n } = this.props,
-            a = t.appid
-              ? "app/" + t.appid
-              : "group/" + t.clanSteamID.GetAccountID(),
-            r = "l=" + (0, i.Lg)(n);
-          return `${E.TS.STORE_BASE_URL}${(0, G.LJ)()}/download/${a}/${e}/${t.GID}?${r}`;
-        }
-        render() {
-          const {
-              eventModel: e,
-              bShowStartTime: t,
-              bExpandLeft: n,
-              bOnlyShowIcon: a,
-              fnHasReminderSet: r,
-              fnHidePanel: o,
-            } = this.props,
-            i = S.BHasValidatedEmail(),
-            l = S.BHasPushNotification(),
-            c = t && e.GetStartTimeAndDateUnixSeconds();
-          return s.createElement(
-            "div",
-            null,
-            s.createElement(
-              "div",
-              {
-                className: (0, A.A)(
-                  H.ReminderCheckBox,
-                  a ? H.IconMode : H.TextMode,
-                  "RemindMeWidget",
-                ),
-                onClick: o,
-              },
-              r(this.props.eventModel) &&
-                s.createElement(
-                  "div",
-                  { className: H.RemindCheck },
-                  s.createElement(w.Jlk, null),
-                ),
-              a &&
-                s.createElement(
-                  "div",
-                  { className: H.RemindBell },
-                  s.createElement(w.IrQ, null),
-                ),
-              s.createElement(
-                "div",
-                { className: H.ReminderDefault },
-                (0, I.we)("#EventDisplay_Reminder_SetReminder"),
-              ),
-              s.createElement("div", { className: H.ReminderOpennedOptions }),
-            ),
-            s.createElement(
-              "div",
-              {
-                className: (0, A.A)(
-                  H.FlexColumnContainer,
-                  H.ReminderBackground,
-                  n && H.ReminderExpandsLeft,
-                ),
-              },
-              this.state.bIsRequestInFlight &&
-                s.createElement(D.t, {
-                  className: H.RpcThrobber,
-                  size: "xlarge",
-                  position: "center",
-                }),
-              c &&
-                s.createElement(
-                  "div",
-                  { className: H.FullStartTime },
-                  (0, I.PP)(
-                    "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    (0, I.TW)(
-                      c,
-                      (0, x.Ct)(
-                        new Date(1e3 * c),
-                        p.HD.GetTimeNowWithOverrideAsDate(),
+                  e &&
+                    (a === h.Nh.k_ENotifyFlagByEmail
+                      ? f(u.E.k_eReminder_Email)
+                      : a === h.Nh.k_ENotifyFlagByPush &&
+                        f(u.E.k_eReminder_MobilePush));
+              } catch (e) {
+                (0, b.HT)(
+                  s.createElement(
+                    T.KG,
+                    {
+                      strTitle: (0, L.we)(
+                        n
+                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                          : "#EventDisplay_Reminder_FollowEvent_Error",
                       ),
-                    ),
-                    (0, T.yi)(c, !0),
+                      strDescription: (0, L.we)(
+                        n
+                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                      ),
+                    },
+                    (0, k.H)(e).strErrorMsg,
                   ),
-                ),
+                  window,
+                );
+              }
+              g(!1);
+            }
+          },
+          f = (e) => {
+            u.V.RecordAppInteractionEvent(t.appid, e);
+          },
+          v = t.jsondata.bSaleEnabled
+            ? H.PH.k_eStoreSalePage
+            : H.PH.k_eStoreView,
+          y = (0, H.Bw)(t, v, "forceAbsolute"),
+          x = (e) => {
+            const n = t.appid
+                ? "app/" + t.appid
+                : "group/" + t.clanSteamID.GetAccountID(),
+              a = "l=" + (0, i.Lg)(d);
+            return `${E.TS.STORE_BASE_URL}${(0, H.LJ)()}/download/${n}/${e}/${t.GID}?${a}`;
+          },
+          P = S.BHasValidatedEmail(),
+          O = S.BHasPushNotification(),
+          U = n && t.GetStartTimeAndDateUnixSeconds();
+        return s.createElement(
+          "div",
+          null,
+          s.createElement(
+            "div",
+            {
+              className: (0, A.A)(
+                G.ReminderCheckBox,
+                r ? G.IconMode : G.TextMode,
+                "RemindMeWidget",
+              ),
+              onClick: l,
+            },
+            o(t) &&
               s.createElement(
                 "div",
-                { className: H.ReminderOptionsHeader },
-                (0, I.we)("#EventDisplay_Reminder_GetNotification_Via"),
+                { className: G.RemindCheck },
+                s.createElement(w.Jlk, null),
               ),
+            r &&
               s.createElement(
                 "div",
-                { className: (0, A.A)(H.ReminderOption, !i && H.Unverified) },
-                s.createElement(
-                  R.he,
-                  {
-                    className: H.CheckboxWrapper,
-                    bTopmost: !0,
-                    toolTipContent: (0, I.we)(
-                      i
-                        ? "#EventReminder_NotifyByEmail_ttip"
-                        : "#EventReminder_NotifyByEmail_Missing",
-                    ),
-                  },
-                  s.createElement(y.Yh, {
-                    label: (0, I.we)("#EventDisplay_Reminder_ViaEmail"),
-                    disabled: !i,
-                    checked: h.KN.Get().BFollowsEventAndNotifiedBy(
-                      e.clanSteamID,
-                      e.GID,
-                      h.Nh.k_ENotifyFlagByEmail,
-                    ),
-                    onChange: this.OnChangeFollowByEmail,
-                  }),
-                ),
-                !i &&
-                  s.createElement(
-                    "div",
-                    { className: M.FlexColumnContainer },
-                    s.createElement(
-                      "a",
-                      {
-                        href: E.TS.STORE_BASE_URL + "account/",
-                        target: E.TS.IN_CLIENT ? void 0 : "_blank",
-                        onClick: () =>
-                          this.TrackEventAction(
-                            u.E.k_eReminder_EmailUnverified,
-                          ),
-                      },
-                      (0, I.we)("#EventReminder_NotifyByEmail_Missing_Add"),
-                    ),
-                  ),
+                { className: G.RemindBell },
+                s.createElement(w.IrQ, null),
               ),
-              s.createElement(
-                "div",
-                { className: (0, A.A)(H.ReminderOption, !l && H.Unverified) },
-                s.createElement(
-                  R.he,
-                  {
-                    className: H.CheckboxWrapper,
-                    bTopmost: !0,
-                    toolTipContent: (0, I.we)(
-                      l
-                        ? "#EventReminder_NotifyByMobile_ttip"
-                        : "#EventReminder_NotifyByMobile_Missing",
-                    ),
-                  },
-                  s.createElement(y.Yh, {
-                    label: (0, I.we)("#EventDisplay_Reminder_ViaMobileApp"),
-                    disabled: !l,
-                    checked: h.KN.Get().BFollowsEventAndNotifiedBy(
-                      e.clanSteamID,
-                      e.GID,
-                      h.Nh.k_ENotifyFlagByPush,
-                    ),
-                    onChange: this.OnChangeFollowByPush,
-                  }),
-                ),
-                !l &&
-                  s.createElement(
-                    "div",
-                    { className: M.FlexColumnContainer },
-                    s.createElement(
-                      "a",
-                      {
-                        href: E.TS.STORE_BASE_URL + "mobile/?show=steamapp",
-                        target: E.TS.IN_CLIENT ? void 0 : "_blank",
-                        onClick: () =>
-                          this.TrackEventAction(
-                            u.E.k_eReminder_MobilePushMissing,
-                          ),
-                      },
-                      (0, I.we)("#EventReminder_NotifyByMobile_Install"),
-                    ),
-                  ),
-              ),
-              s.createElement(
-                s.Fragment,
-                null,
-                s.createElement(
-                  "div",
-                  { className: H.ReminderOptionsHeader },
-                  (0, I.we)("#EventDisplay_Reminder_AddToCalendar"),
-                ),
-                s.createElement(
-                  "div",
-                  { className: H.ReminderCalendarOptions },
-                  s.createElement(
-                    "a",
-                    {
-                      className: H.ReminderOption,
-                      href: this.GetICSDownloadLink("ics"),
-                      onClick: () =>
-                        this.TrackEventAction(u.E.k_eReminder_CalendarApple),
-                    },
-                    (0, I.we)("#EventDisplay_Reminder_AppleCalendar_Short"),
-                  ),
-                  s.createElement(
-                    "a",
-                    {
-                      className: H.ReminderOption,
-                      target: E.TS.IN_CLIENT ? void 0 : "_blank",
-                      href: this.GetGoogleCalendarLink(),
-                      onClick: () =>
-                        this.TrackEventAction(u.E.k_eReminder_CalendarGoogle),
-                    },
-                    (0, I.we)("#EventDisplay_Reminder_GoogleCalendar_Short"),
-                  ),
-                  s.createElement(
-                    "a",
-                    {
-                      className: H.ReminderOption,
-                      href: this.GetICSDownloadLink("outlook"),
-                      onClick: () =>
-                        this.TrackEventAction(u.E.k_eReminder_CalendarOutlook),
-                    },
-                    (0, I.we)("#EventDisplay_Reminder_OutlookCalendar_Short"),
-                  ),
-                ),
-              ),
-              !1,
+            s.createElement(
+              "div",
+              { className: G.ReminderDefault },
+              (0, L.we)("#EventDisplay_Reminder_SetReminder"),
             ),
-          );
-        }
-      };
-      (0, a.Cg)([L.oI], z.prototype, "OnChangeFollowByEmail", null),
-        (0, a.Cg)([L.oI], z.prototype, "OnChangeFollowByPush", null),
-        (0, a.Cg)([L.oI], z.prototype, "TrackEventAction", null),
-        (z = (0, a.Cg)([r.PA], z));
+            s.createElement("div", { className: G.ReminderOpennedOptions }),
+          ),
+          s.createElement(
+            "div",
+            {
+              className: (0, A.A)(
+                G.FlexColumnContainer,
+                G.ReminderBackground,
+                a && G.ReminderExpandsLeft,
+              ),
+            },
+            m &&
+              s.createElement(D.t, {
+                className: G.RpcThrobber,
+                size: "xlarge",
+                position: "center",
+              }),
+            U &&
+              s.createElement(
+                "div",
+                { className: G.FullStartTime },
+                (0, L.PP)(
+                  "#EventDisplay_EventUpcoming_WithDateAndTime",
+                  (0, L.TW)(
+                    U,
+                    (0, I.Ct)(
+                      new Date(1e3 * U),
+                      p.HD.GetTimeNowWithOverrideAsDate(),
+                    ),
+                  ),
+                  (0, N.yi)(U, !0),
+                ),
+              ),
+            s.createElement(
+              "div",
+              { className: G.ReminderOptionsHeader },
+              (0, L.we)("#EventDisplay_Reminder_GetNotification_Via"),
+            ),
+            s.createElement(
+              "div",
+              { className: (0, A.A)(G.ReminderOption, !P && G.Unverified) },
+              s.createElement(
+                R.he,
+                {
+                  className: G.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, L.we)(
+                    P
+                      ? "#EventReminder_NotifyByEmail_ttip"
+                      : "#EventReminder_NotifyByEmail_Missing",
+                  ),
+                },
+                s.createElement(C.Yh, {
+                  label: (0, L.we)("#EventDisplay_Reminder_ViaEmail"),
+                  disabled: !P,
+                  checked: h.KN.Get().BFollowsEventAndNotifiedBy(
+                    t.clanSteamID,
+                    t.GID,
+                    h.Nh.k_ENotifyFlagByEmail,
+                  ),
+                  onChange: (e) => {
+                    _(e, !1, h.Nh.k_ENotifyFlagByEmail);
+                  },
+                }),
+              ),
+              !P &&
+                s.createElement(
+                  "div",
+                  { className: M.FlexColumnContainer },
+                  s.createElement(
+                    "a",
+                    {
+                      href: E.TS.STORE_BASE_URL + "account/",
+                      target: E.TS.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => f(u.E.k_eReminder_EmailUnverified),
+                    },
+                    (0, L.we)("#EventReminder_NotifyByEmail_Missing_Add"),
+                  ),
+                ),
+            ),
+            s.createElement(
+              "div",
+              { className: (0, A.A)(G.ReminderOption, !O && G.Unverified) },
+              s.createElement(
+                R.he,
+                {
+                  className: G.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, L.we)(
+                    O
+                      ? "#EventReminder_NotifyByMobile_ttip"
+                      : "#EventReminder_NotifyByMobile_Missing",
+                  ),
+                },
+                s.createElement(C.Yh, {
+                  label: (0, L.we)("#EventDisplay_Reminder_ViaMobileApp"),
+                  disabled: !O,
+                  checked: h.KN.Get().BFollowsEventAndNotifiedBy(
+                    t.clanSteamID,
+                    t.GID,
+                    h.Nh.k_ENotifyFlagByPush,
+                  ),
+                  onChange: (e) => {
+                    _(e, !1, h.Nh.k_ENotifyFlagByPush);
+                  },
+                }),
+              ),
+              !O &&
+                s.createElement(
+                  "div",
+                  { className: M.FlexColumnContainer },
+                  s.createElement(
+                    "a",
+                    {
+                      href: E.TS.STORE_BASE_URL + "mobile/?show=steamapp",
+                      target: E.TS.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => f(u.E.k_eReminder_MobilePushMissing),
+                    },
+                    (0, L.we)("#EventReminder_NotifyByMobile_Install"),
+                  ),
+                ),
+            ),
+            s.createElement(
+              s.Fragment,
+              null,
+              s.createElement(
+                "div",
+                { className: G.ReminderOptionsHeader },
+                (0, L.we)("#EventDisplay_Reminder_AddToCalendar"),
+              ),
+              s.createElement(
+                "div",
+                { className: G.ReminderCalendarOptions },
+                s.createElement(
+                  "a",
+                  {
+                    className: G.ReminderOption,
+                    href: x("ics"),
+                    onClick: () => f(u.E.k_eReminder_CalendarApple),
+                  },
+                  (0, L.we)("#EventDisplay_Reminder_AppleCalendar_Short"),
+                ),
+                s.createElement(
+                  "a",
+                  {
+                    className: G.ReminderOption,
+                    target: E.TS.IN_CLIENT ? void 0 : "_blank",
+                    href: (() => {
+                      const e = encodeURIComponent(
+                          (() => {
+                            const e = t.GetNameWithFallback(d);
+                            if (
+                              c.NK.BHasEntityNameForID(
+                                t.appid,
+                                t.clanSteamID.GetAccountID(),
+                              )
+                            )
+                              return `${c.NK.GetEntityNameForID(t.appid, t.clanSteamID.GetAccountID())}: ${e}`;
+                            return e;
+                          })(),
+                        ),
+                        n = encodeURIComponent(
+                          (() => {
+                            let e = t.GetSubTitleWithLanguageFallback(d);
+                            return (
+                              (e = e ? `${e}\n\n\n` : ""),
+                              `${e}${t.GetSummaryWithFallback(d)}\n\n${y}`
+                            );
+                          })(),
+                        ),
+                        a = t.GetStartTimeAndDateUnixSeconds(),
+                        r = Y(a),
+                        o = Y(
+                          t.GetEndTimeAndDateUnixSeconds() || a + I.Kp.PerHour,
+                        ),
+                        s =
+                          (E.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+                          `https://calendar.google.com/calendar/r/eventedit?text=${e}&details=${n}&dates=${r}/${o}`;
+                      return (0, B.k2)(s);
+                    })(),
+                    onClick: () => f(u.E.k_eReminder_CalendarGoogle),
+                  },
+                  (0, L.we)("#EventDisplay_Reminder_GoogleCalendar_Short"),
+                ),
+                s.createElement(
+                  "a",
+                  {
+                    className: G.ReminderOption,
+                    href: x("outlook"),
+                    onClick: () => f(u.E.k_eReminder_CalendarOutlook),
+                  },
+                  (0, L.we)("#EventDisplay_Reminder_OutlookCalendar_Short"),
+                ),
+              ),
+            ),
+            !1,
+          ),
+        );
+      });
     },
     48079: (e, t, n) => {
       "use strict";
@@ -2663,18 +2650,18 @@
         })(n);
         let S;
         (!v || (E && "public" == c.TS.WEB_UNIVERSE)) && (S = "anonymous");
-        const C = i || (a && m.Get().BVolumePreferenceMuted()),
-          y = n.sPoster ? p(n.sPoster) : "";
+        const y = i || (a && m.Get().BVolumePreferenceMuted()),
+          C = n.sPoster ? p(n.sPoster) : "";
         return r.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: a,
-            muted: C,
+            muted: y,
             playsInline: !0,
             controls: o,
-            poster: y,
+            poster: C,
             loop: s,
             crossOrigin: S,
             onVolumeChange: (e) => {

@@ -789,6 +789,8 @@
 .horizontalSlider___281Ls {
   position: relative;
   overflow: hidden;
+}
+.horizontalSlider___281Ls:not(.touchDisabled___2qs4y) {
   touch-action: pan-y pinch-zoom;
 }
 [dir="rtl"] .horizontalSlider___281Ls {

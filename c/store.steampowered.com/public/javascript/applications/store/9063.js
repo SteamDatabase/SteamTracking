@@ -350,7 +350,9 @@
             ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE)
           ) {
             const _ = _.get("t");
-            let _ = /^\d+$/.test(_) ? _().unix(Number.parseInt(_)) : _()(_);
+            let _ = /^\d+$/.test(_ ?? "")
+              ? _().unix(Number.parseInt(_ ?? "0"))
+              : _()(_);
             (this.nOverrideDateNow = Math.floor(__webpack_require__.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -406,7 +408,7 @@
       __webpack_require__("chunkid");
       function _(_) {
         const { labelledBy: _ } = _ || {},
-          [__webpack_require__, _] = _.useState(null);
+          [__webpack_require__, _] = _.useState(void 0);
         return {
           headerId: _ || __webpack_require__,
           context: _.useMemo(

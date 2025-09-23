@@ -1902,22 +1902,10 @@ GStoreItemData = {
 			}
 		}
 
-		if ( rgItemData.vr_htcvive || rgItemData.vr_oculusrift || rgItemData.vr_windowsmr )
+		if ( rgItemData.virtual_reality )
 		{
-			strHTML += '<span class="platform_img hmd_separator"></span>';
-
-			if ( rgItemData.vr_htcvive )
-			{
-				strHTML += '<span class="platform_img htcvive"></span>';
-			}
-			if ( rgItemData.vr_oculusrift )
-			{
-				strHTML += '<span class="platform_img oculusrift"></span>';
-			}
-			if ( rgItemData.vr_windowsmr )
-			{
-				strHTML += '<span class="platform_img windowsmr"></span>';
-			}
+			strHTML += '<span class="platform_img group_separator"></span>';
+			strHTML += '<span class="vr_required">VR Only</span>';
 		}
 
 		return strHTML;

@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s παιχνίδια",
 	"Menu_Search": "Αναζήτηση",
 	"Menu_Label": "Μενού Καταστήματος",
+	"Menu_IncludesXGames": "Περιλαμβάνει %1$s παιχνίδια",
 	"ItemFlag_InLibrary": "ΣΤΗ ΣΥΛΛΟΓΗ",
 	"ItemFlag_OnWishlist": "ΣΤΗ ΛΙΣΤΑ ΕΠΙΘΥΜΙΩΝ",
 	"ItemFlag_InCart": "ΣΤΟ ΚΑΛΑΘΙ",

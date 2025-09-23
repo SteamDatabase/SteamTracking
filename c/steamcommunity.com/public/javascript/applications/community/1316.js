@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "콘텐츠 제거됨",
 	"moderation_resolutionstatus_relabelled": "콘텐츠 레이블 다시 지정됨",
 	"moderation_resolutionstatus_suspicious": "의심스러운 콘텐츠로 인해 잠김",
+	"moderation_resolutionstatus_harassmentstrike": "Steam 커뮤니티 이용이 일시 제한됨",
 	"moderation_resolutionstatus_unknown": "알 수 없음"
 }`);
     },

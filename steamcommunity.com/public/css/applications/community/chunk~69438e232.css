@@ -50,6 +50,121 @@
   display: inline-block;
   margin-right: 12px;
 }
+._2Sg7W8jsvFcXVuQ7fbhSLJ,
+.Lc2PK-Vkkvr2TUS0TfCqq {
+  color: #c44848;
+}
+._42__6kBR5lkICeFfkFnwz,
+.Lc2PK-Vkkvr2TUS0TfCqq,
+._3fVv6M5HyJXcQ6kNF1SvoH {
+  display: block;
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.fastly.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 6px;
+}
+._3fVv6M5HyJXcQ6kNF1SvoH {
+  background-color: #472025;
+}
+.Lc2PK-Vkkvr2TUS0TfCqq._2aKylEXoZKcXuXfFcmcuQc {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #682d2c;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
+}
+._2Sg7W8jsvFcXVuQ7fbhSLJ > div,
+.Lc2PK-Vkkvr2TUS0TfCqq > div {
+  display: inline;
+  color: #d78484;
+}
+._3gxgE6PMPecWZDBSlGjMX_,
+._1S_uSkD_E5ayHa48JzzE0E {
+  color: #b8860b;
+}
+._2jM80ZtA-oI5okavBZZqnF,
+._1S_uSkD_E5ayHa48JzzE0E,
+.UYrHsewdjj7dSkpWGgikw {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.fastly.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.UYrHsewdjj7dSkpWGgikw {
+  background-color: #b8860b;
+  color: #fff;
+}
+.UYrHsewdjj7dSkpWGgikw ._2b5wWgFg1yvry3TDzRUfFt {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+._1S_uSkD_E5ayHa48JzzE0E._3e0cNuLANduciMmeZz1dnk {
+  padding: 5px;
+  padding-left: 32px;
+  font-size: 14px;
+  position: absolute;
+  bottom: -5px;
+  background-color: #523d07;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
+}
+._2lreMbIjEILzP1Eomy1QZM,
+._1_-PibdcIVQzDZEP0_PeLV {
+  color: #556b2f;
+}
+._3kyPzolDIjhIh7zW0wA6fy,
+._1_-PibdcIVQzDZEP0_PeLV,
+._3gNTI5UYknHdJwDfou9Iih {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://community.fastly.steamstatic.com/public/images//sharedfiles/icons/icon_spoiler_tag.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+._3gNTI5UYknHdJwDfou9Iih {
+  background-color: #556b2f;
+  color: #fff;
+}
+._3gNTI5UYknHdJwDfou9Iih ._2b5wWgFg1yvry3TDzRUfFt {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+._36hmaGtzxNb1Pql2UhfM5Z {
+  padding-top: 10px;
+}
+.ModalPosition_Content .UfQcb76CCbHawnpQ9tbu3.DialogContent {
+  width: initial;
+}
+.ModalPosition_Content
+  .UfQcb76CCbHawnpQ9tbu3.DialogContent
+  .DialogContent_InnerWidth
+  > form {
+  padding-right: 8px;
+}
+.Pl7AIUjh5siFakQJbPFO9 .DialogFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.Pl7AIUjh5siFakQJbPFO9 .DialogFooter button.DialogButton {
+  margin-left: 8px;
+  width: fit-content;
+}
+._1wBO1L1tT0f1wtl3CpBWbn .DialogFooter .DialogTwoColLayout {
+  gap: 8px;
+}
 html:not(.client)
   .events_listing
   ._3CJsgSK-y815Zeoe6bz6dh
@@ -2414,6 +2529,8 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 .horizontalSlider___281Ls {
   position: relative;
   overflow: hidden;
+}
+.horizontalSlider___281Ls:not(.touchDisabled___2qs4y) {
   touch-action: pan-y pinch-zoom;
 }
 [dir="rtl"] .horizontalSlider___281Ls {
@@ -2635,121 +2752,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 ._3J8-bW87K3pb8EpRNYq0JG {
   transition: none;
-}
-._2Sg7W8jsvFcXVuQ7fbhSLJ,
-.Lc2PK-Vkkvr2TUS0TfCqq {
-  color: #c44848;
-}
-._42__6kBR5lkICeFfkFnwz,
-.Lc2PK-Vkkvr2TUS0TfCqq,
-._3fVv6M5HyJXcQ6kNF1SvoH {
-  display: block;
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.fastly.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 6px;
-}
-._3fVv6M5HyJXcQ6kNF1SvoH {
-  background-color: #472025;
-}
-.Lc2PK-Vkkvr2TUS0TfCqq._2aKylEXoZKcXuXfFcmcuQc {
-  padding: 5px;
-  padding-left: 32px;
-  font-size: 14px;
-  position: absolute;
-  bottom: -5px;
-  background-color: #682d2c;
-  z-index: 1;
-  box-shadow: 2px 2px 5px #000;
-  text-wrap: nowrap;
-}
-._2Sg7W8jsvFcXVuQ7fbhSLJ > div,
-.Lc2PK-Vkkvr2TUS0TfCqq > div {
-  display: inline;
-  color: #d78484;
-}
-._3gxgE6PMPecWZDBSlGjMX_,
-._1S_uSkD_E5ayHa48JzzE0E {
-  color: #b8860b;
-}
-._2jM80ZtA-oI5okavBZZqnF,
-._1S_uSkD_E5ayHa48JzzE0E,
-.UYrHsewdjj7dSkpWGgikw {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.fastly.steamstatic.com/public/images//sharedfiles/icons/icon_warning.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-.UYrHsewdjj7dSkpWGgikw {
-  background-color: #b8860b;
-  color: #fff;
-}
-.UYrHsewdjj7dSkpWGgikw ._2b5wWgFg1yvry3TDzRUfFt {
-  position: sticky;
-  top: 89px;
-  z-index: 1;
-}
-._1S_uSkD_E5ayHa48JzzE0E._3e0cNuLANduciMmeZz1dnk {
-  padding: 5px;
-  padding-left: 32px;
-  font-size: 14px;
-  position: absolute;
-  bottom: -5px;
-  background-color: #523d07;
-  z-index: 1;
-  box-shadow: 2px 2px 5px #000;
-  text-wrap: nowrap;
-}
-._2lreMbIjEILzP1Eomy1QZM,
-._1_-PibdcIVQzDZEP0_PeLV {
-  color: #556b2f;
-}
-._3kyPzolDIjhIh7zW0wA6fy,
-._1_-PibdcIVQzDZEP0_PeLV,
-._3gNTI5UYknHdJwDfou9Iih {
-  padding: 10px;
-  padding-left: 42px;
-  background-image: url("https://community.fastly.steamstatic.com/public/images//sharedfiles/icons/icon_spoiler_tag.png");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: 10px;
-}
-._3gNTI5UYknHdJwDfou9Iih {
-  background-color: #556b2f;
-  color: #fff;
-}
-._3gNTI5UYknHdJwDfou9Iih ._2b5wWgFg1yvry3TDzRUfFt {
-  position: sticky;
-  top: 89px;
-  z-index: 1;
-}
-._36hmaGtzxNb1Pql2UhfM5Z {
-  padding-top: 10px;
-}
-.ModalPosition_Content .UfQcb76CCbHawnpQ9tbu3.DialogContent {
-  width: initial;
-}
-.ModalPosition_Content
-  .UfQcb76CCbHawnpQ9tbu3.DialogContent
-  .DialogContent_InnerWidth
-  > form {
-  padding-right: 8px;
-}
-.Pl7AIUjh5siFakQJbPFO9 .DialogFooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-.Pl7AIUjh5siFakQJbPFO9 .DialogFooter button.DialogButton {
-  margin-left: 8px;
-  width: fit-content;
-}
-._1wBO1L1tT0f1wtl3CpBWbn .DialogFooter .DialogTwoColLayout {
-  gap: 8px;
 }
 ._1nUtBXgWizhgU1jv-8wVC7 {
   scroll-snap-type: x mandatory;

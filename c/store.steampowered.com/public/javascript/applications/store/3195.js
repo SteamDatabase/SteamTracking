@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s oyun",
 	"Menu_Search": "Ara",
 	"Menu_Label": "Mağaza menüsü",
+	"Menu_IncludesXGames": "%1$s oyun içerir",
 	"ItemFlag_InLibrary": "KÜTÜPHANEDE",
 	"ItemFlag_OnWishlist": "İSTEK LİSTESİNDE",
 	"ItemFlag_InCart": "SEPETTE",

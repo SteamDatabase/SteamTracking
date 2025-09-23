@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Το περιεχόμενο αφαιρέθηκε",
 	"moderation_resolutionstatus_relabelled": "Το περιεχόμενο άλλαξε κατηγορία",
 	"moderation_resolutionstatus_suspicious": "Ο λογαριασμός έχει κλειδωθεί για ύποπτο περιεχόμενο",
+	"moderation_resolutionstatus_harassmentstrike": "Τα δικαιώματα Κοινότητας Steam αναστάλθηκαν",
 	"moderation_resolutionstatus_unknown": "Άγνωστη"
 }`);
     },

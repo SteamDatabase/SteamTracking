@@ -2463,347 +2463,326 @@
         (0, _._)([_._], _.prototype, "ShowMenu", null),
         (0, _._)([_._], _.prototype, "HideMenu", null),
         (_ = (0, _._)([_._], _));
-      let _ = class extends _.Component {
-        state = {
-          bIsRequestInFlight: !1,
-        };
-        async OnChangeFollowOrIgnore(_, _, _) {
-          const { eventModel: _ } = this.props,
-            _ = _?.GID;
-          if (_ && _ != _._) {
-            this.setState({
-              bIsRequestInFlight: !0,
-            });
-            try {
-              await _._.Get().SetFollowOrUnfollowEvent(
-                !_,
-                _,
-                _.clanSteamID,
-                _,
-                _,
-              ),
-                _ &&
-                  (_ === _._.k_ENotifyFlagByEmail
-                    ? this.TrackEventAction(_._.k_eReminder_Email)
-                    : _ === _._.k_ENotifyFlagByPush &&
-                      this.TrackEventAction(_._.k_eReminder_MobilePush));
-            } catch (_) {
-              (0, _._)(
-                _.createElement(
-                  _._,
-                  {
-                    strTitle: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_Error"
-                        : "#EventDisplay_Reminder_FollowEvent_Error",
-                    ),
-                    strDescription: (0, _._)(
-                      _
-                        ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
-                        : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
-                    ),
-                  },
-                  (0, _._)(_).strErrorMsg,
+      const _ = (0, _._)((_) => {
+        const {
+            eventModel: _,
+            bShowStartTime: __webpack_require__,
+            bExpandLeft: _,
+            bOnlyShowIcon: _,
+            fnHasReminderSet: _,
+            fnHidePanel: _,
+            lang: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = async (_, _, _) => {
+            const _ = _?.GID;
+            if (_ && _ != _._) {
+              _(!0);
+              try {
+                await _._.Get().SetFollowOrUnfollowEvent(
+                  !_,
+                  _,
+                  _.clanSteamID,
+                  _,
+                  _,
                 ),
-                window,
-              );
+                  _ &&
+                    (_ === _._.k_ENotifyFlagByEmail
+                      ? _(_._.k_eReminder_Email)
+                      : _ === _._.k_ENotifyFlagByPush &&
+                        _(_._.k_eReminder_MobilePush));
+              } catch (_) {
+                (0, _._)(
+                  _.createElement(
+                    _._,
+                    {
+                      strTitle: (0, _._)(
+                        _
+                          ? "#EventDisplay_Reminder_IgnoreEvent_Error"
+                          : "#EventDisplay_Reminder_FollowEvent_Error",
+                      ),
+                      strDescription: (0, _._)(
+                        _
+                          ? "#EventDisplay_Reminder_IgnoreEvent_ErrorDesc"
+                          : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
+                      ),
+                    },
+                    (0, _._)(_).strErrorMsg,
+                  ),
+                  window,
+                );
+              }
+              _(!1);
             }
-            this.setState({
-              bIsRequestInFlight: !1,
-            });
-          }
-        }
-        OnChangeFollowByEmail(_) {
-          this.OnChangeFollowOrIgnore(_, !1, _._.k_ENotifyFlagByEmail);
-        }
-        OnChangeFollowByPush(_) {
-          this.OnChangeFollowOrIgnore(_, !1, _._.k_ENotifyFlagByPush);
-        }
-        GetExternalCalendarEventTitle() {
-          const { eventModel: _, lang: _ } = this.props,
-            _ = _.GetNameWithFallback(_);
-          if (_._.BHasEntityNameForID(_.appid, _.clanSteamID.GetAccountID())) {
-            return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
-          }
-          return _;
-        }
-        TrackEventAction(_) {
-          const { eventModel: _ } = this.props;
-          _._.RecordAppInteractionEvent(_.appid, _);
-        }
-        GetExternalCalendarEventBody() {
-          const { eventModel: _, lang: _ } = this.props;
-          let _ = _.GetSubTitleWithLanguageFallback(_);
-          _ = _ ? `${_}\n\n\n` : "";
-          const _ = _.GetSummaryWithFallback(_),
-            _ = _.jsondata.bSaleEnabled
-              ? _._.k_eStoreSalePage
-              : _._.k_eStoreView;
-          return `${_}${_}\n\n${(0, _._)(_, _, "forceAbsolute")}`;
-        }
-        GetGoogleCalendarLink() {
-          const { eventModel: _ } = this.props,
-            _ = encodeURIComponent(this.GetExternalCalendarEventTitle()),
-            _ = encodeURIComponent(this.GetExternalCalendarEventBody()),
-            _ = _.GetStartTimeAndDateUnixSeconds(),
-            _ = _(_),
-            _ = _(_.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour),
-            _ =
-              (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
-              `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
-          return (0, _._)(_);
-        }
-        GetICSDownloadLink(_) {
-          const { eventModel: _, lang: __webpack_require__ } = this.props,
-            _ = _.appid
-              ? "app/" + _.appid
-              : "group/" + _.clanSteamID.GetAccountID(),
-            _ = "l=" + (0, _._)(__webpack_require__);
-          return `${_._.STORE_BASE_URL}${(0, _._)()}/download/${_}/${_}/${_.GID}?${_}`;
-        }
-        render() {
-          const {
-              eventModel: _,
-              bShowStartTime: _,
-              bExpandLeft: __webpack_require__,
-              bOnlyShowIcon: _,
-              fnHasReminderSet: _,
-              fnHidePanel: _,
-            } = this.props,
-            _ = _.BHasValidatedEmail(),
-            _ = _.BHasPushNotification(),
-            _ = _ && _.GetStartTimeAndDateUnixSeconds();
-          return _.createElement(
+          },
+          _ = (_) => {
+            _._.RecordAppInteractionEvent(_.appid, _);
+          },
+          _ = _.jsondata.bSaleEnabled ? _._.k_eStoreSalePage : _._.k_eStoreView,
+          _ = (0, _._)(_, _, "forceAbsolute"),
+          _ = (_) => {
+            const _ = _.appid
+                ? "app/" + _.appid
+                : "group/" + _.clanSteamID.GetAccountID(),
+              _ = "l=" + (0, _._)(_);
+            return `${_._.STORE_BASE_URL}${(0, _._)()}/download/${_}/${_}/${_.GID}?${_}`;
+          },
+          _ = _.BHasValidatedEmail(),
+          _ = _.BHasPushNotification(),
+          _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
             "div",
-            null,
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _.ReminderCheckBox,
-                  _ ? _.IconMode : _.TextMode,
-                  "RemindMeWidget",
-                ),
-                onClick: _,
-              },
-              _(this.props.eventModel) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RemindCheck,
-                  },
-                  _.createElement(_.Jlk, null),
-                ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.RemindBell,
-                  },
-                  _.createElement(_.IrQ, null),
-                ),
+            {
+              className: (0, _._)(
+                _.ReminderCheckBox,
+                _ ? _.IconMode : _.TextMode,
+                "RemindMeWidget",
+              ),
+              onClick: _,
+            },
+            _(_) &&
               _.createElement(
                 "div",
                 {
-                  className: _.ReminderDefault,
+                  className: _.RemindCheck,
                 },
-                (0, _._)("#EventDisplay_Reminder_SetReminder"),
+                _.createElement(_.Jlk, null),
               ),
-              _.createElement("div", {
-                className: _.ReminderOpennedOptions,
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.RemindBell,
+                },
+                _.createElement(_.IrQ, null),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _.ReminderDefault,
+              },
+              (0, _._)("#EventDisplay_Reminder_SetReminder"),
+            ),
+            _.createElement("div", {
+              className: _.ReminderOpennedOptions,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.FlexColumnContainer,
+                _.ReminderBackground,
+                _ && _.ReminderExpandsLeft,
+              ),
+            },
+            _ &&
+              _.createElement(_._, {
+                className: _.RpcThrobber,
+                size: "xlarge",
+                position: "center",
               }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.FullStartTime,
+                },
+                (0, _._)(
+                  "#EventDisplay_EventUpcoming_WithDateAndTime",
+                  (0, _._)(
+                    _,
+                    (0, _._)(
+                      new Date(1e3 * _),
+                      _._.GetTimeNowWithOverrideAsDate(),
+                    ),
+                  ),
+                  (0, _._)(_, !0),
+                ),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _.ReminderOptionsHeader,
+              },
+              (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
             ),
             _.createElement(
               "div",
               {
-                className: (0, _._)(
-                  _.FlexColumnContainer,
-                  _.ReminderBackground,
-                  __webpack_require__ && _.ReminderExpandsLeft,
-                ),
+                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
               },
-              this.state.bIsRequestInFlight &&
+              _.createElement(
+                _._,
+                {
+                  className: _.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, _._)(
+                    _
+                      ? "#EventReminder_NotifyByEmail_ttip"
+                      : "#EventReminder_NotifyByEmail_Missing",
+                  ),
+                },
                 _.createElement(_._, {
-                  className: _.RpcThrobber,
-                  size: "xlarge",
-                  position: "center",
+                  label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
+                  disabled: !_,
+                  checked: _._.Get().BFollowsEventAndNotifiedBy(
+                    _.clanSteamID,
+                    _.GID,
+                    _._.k_ENotifyFlagByEmail,
+                  ),
+                  onChange: (_) => {
+                    _(_, !1, _._.k_ENotifyFlagByEmail);
+                  },
                 }),
-              _ &&
+              ),
+              !_ &&
                 _.createElement(
                   "div",
                   {
-                    className: _.FullStartTime,
+                    className: _.FlexColumnContainer,
                   },
-                  (0, _._)(
-                    "#EventDisplay_EventUpcoming_WithDateAndTime",
-                    (0, _._)(
-                      _,
-                      (0, _._)(
-                        new Date(1e3 * _),
-                        _._.GetTimeNowWithOverrideAsDate(),
-                      ),
-                    ),
-                    (0, _._)(_, !0),
+                  _.createElement(
+                    "a",
+                    {
+                      href: _._.STORE_BASE_URL + "account/",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => _(_._.k_eReminder_EmailUnverified),
+                    },
+                    (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
                   ),
                 ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+              },
+              _.createElement(
+                _._,
+                {
+                  className: _.CheckboxWrapper,
+                  bTopmost: !0,
+                  toolTipContent: (0, _._)(
+                    _
+                      ? "#EventReminder_NotifyByMobile_ttip"
+                      : "#EventReminder_NotifyByMobile_Missing",
+                  ),
+                },
+                _.createElement(_._, {
+                  label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
+                  disabled: !_,
+                  checked: _._.Get().BFollowsEventAndNotifiedBy(
+                    _.clanSteamID,
+                    _.GID,
+                    _._.k_ENotifyFlagByPush,
+                  ),
+                  onChange: (_) => {
+                    _(_, !1, _._.k_ENotifyFlagByPush);
+                  },
+                }),
+              ),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.FlexColumnContainer,
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
+                      target: _._.IN_CLIENT ? void 0 : "_blank",
+                      onClick: () => _(_._.k_eReminder_MobilePushMissing),
+                    },
+                    (0, _._)("#EventReminder_NotifyByMobile_Install"),
+                  ),
+                ),
+            ),
+            _.createElement(
+              _.Fragment,
+              null,
               _.createElement(
                 "div",
                 {
                   className: _.ReminderOptionsHeader,
                 },
-                (0, _._)("#EventDisplay_Reminder_GetNotification_Via"),
+                (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
               ),
               _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
+                  className: _.ReminderCalendarOptions,
                 },
                 _.createElement(
-                  _._,
+                  "a",
                   {
-                    className: _.CheckboxWrapper,
-                    bTopmost: !0,
-                    toolTipContent: (0, _._)(
-                      _
-                        ? "#EventReminder_NotifyByEmail_ttip"
-                        : "#EventReminder_NotifyByEmail_Missing",
-                    ),
+                    className: _.ReminderOption,
+                    href: _("ics"),
+                    onClick: () => _(_._.k_eReminder_CalendarApple),
                   },
-                  _.createElement(_._, {
-                    label: (0, _._)("#EventDisplay_Reminder_ViaEmail"),
-                    disabled: !_,
-                    checked: _._.Get().BFollowsEventAndNotifiedBy(
-                      _.clanSteamID,
-                      _.GID,
-                      _._.k_ENotifyFlagByEmail,
-                    ),
-                    onChange: this.OnChangeFollowByEmail,
-                  }),
-                ),
-                !_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.FlexColumnContainer,
-                    },
-                    _.createElement(
-                      "a",
-                      {
-                        href: _._.STORE_BASE_URL + "account/",
-                        target: _._.IN_CLIENT ? void 0 : "_blank",
-                        onClick: () =>
-                          this.TrackEventAction(
-                            _._.k_eReminder_EmailUnverified,
-                          ),
-                      },
-                      (0, _._)("#EventReminder_NotifyByEmail_Missing_Add"),
-                    ),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.ReminderOption, !_ && _.Unverified),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _.CheckboxWrapper,
-                    bTopmost: !0,
-                    toolTipContent: (0, _._)(
-                      _
-                        ? "#EventReminder_NotifyByMobile_ttip"
-                        : "#EventReminder_NotifyByMobile_Missing",
-                    ),
-                  },
-                  _.createElement(_._, {
-                    label: (0, _._)("#EventDisplay_Reminder_ViaMobileApp"),
-                    disabled: !_,
-                    checked: _._.Get().BFollowsEventAndNotifiedBy(
-                      _.clanSteamID,
-                      _.GID,
-                      _._.k_ENotifyFlagByPush,
-                    ),
-                    onChange: this.OnChangeFollowByPush,
-                  }),
-                ),
-                !_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.FlexColumnContainer,
-                    },
-                    _.createElement(
-                      "a",
-                      {
-                        href: _._.STORE_BASE_URL + "mobile/?show=steamapp",
-                        target: _._.IN_CLIENT ? void 0 : "_blank",
-                        onClick: () =>
-                          this.TrackEventAction(
-                            _._.k_eReminder_MobilePushMissing,
-                          ),
-                      },
-                      (0, _._)("#EventReminder_NotifyByMobile_Install"),
-                    ),
-                  ),
-              ),
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ReminderOptionsHeader,
-                  },
-                  (0, _._)("#EventDisplay_Reminder_AddToCalendar"),
+                  (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
                 ),
                 _.createElement(
-                  "div",
+                  "a",
                   {
-                    className: _.ReminderCalendarOptions,
+                    className: _.ReminderOption,
+                    target: _._.IN_CLIENT ? void 0 : "_blank",
+                    href: (() => {
+                      const _ = encodeURIComponent(
+                          (() => {
+                            const _ = _.GetNameWithFallback(_);
+                            if (
+                              _._.BHasEntityNameForID(
+                                _.appid,
+                                _.clanSteamID.GetAccountID(),
+                              )
+                            )
+                              return `${_._.GetEntityNameForID(_.appid, _.clanSteamID.GetAccountID())}: ${_}`;
+                            return _;
+                          })(),
+                        ),
+                        _ = encodeURIComponent(
+                          (() => {
+                            let _ = _.GetSubTitleWithLanguageFallback(_);
+                            return (
+                              (_ = _ ? `${_}\n\n\n` : ""),
+                              `${_}${_.GetSummaryWithFallback(_)}\n\n${_}`
+                            );
+                          })(),
+                        ),
+                        _ = _.GetStartTimeAndDateUnixSeconds(),
+                        _ = _(_),
+                        _ = _(
+                          _.GetEndTimeAndDateUnixSeconds() || _ + _._.PerHour,
+                        ),
+                        _ =
+                          (_._.IN_CLIENT ? "steam://openurl_external/" : "") +
+                          `https://calendar.google.com/calendar/r/eventedit?text=${_}&details=${_}&dates=${_}/${_}`;
+                      return (0, _._)(_);
+                    })(),
+                    onClick: () => _(_._.k_eReminder_CalendarGoogle),
                   },
-                  _.createElement(
-                    "a",
-                    {
-                      className: _.ReminderOption,
-                      href: this.GetICSDownloadLink("ics"),
-                      onClick: () =>
-                        this.TrackEventAction(_._.k_eReminder_CalendarApple),
-                    },
-                    (0, _._)("#EventDisplay_Reminder_AppleCalendar_Short"),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      className: _.ReminderOption,
-                      target: _._.IN_CLIENT ? void 0 : "_blank",
-                      href: this.GetGoogleCalendarLink(),
-                      onClick: () =>
-                        this.TrackEventAction(_._.k_eReminder_CalendarGoogle),
-                    },
-                    (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
-                  ),
-                  _.createElement(
-                    "a",
-                    {
-                      className: _.ReminderOption,
-                      href: this.GetICSDownloadLink("outlook"),
-                      onClick: () =>
-                        this.TrackEventAction(_._.k_eReminder_CalendarOutlook),
-                    },
-                    (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
-                  ),
+                  (0, _._)("#EventDisplay_Reminder_GoogleCalendar_Short"),
+                ),
+                _.createElement(
+                  "a",
+                  {
+                    className: _.ReminderOption,
+                    href: _("outlook"),
+                    onClick: () => _(_._.k_eReminder_CalendarOutlook),
+                  },
+                  (0, _._)("#EventDisplay_Reminder_OutlookCalendar_Short"),
                 ),
               ),
-              !1,
             ),
-          );
-        }
-      };
-      (0, _._)([_._], _.prototype, "OnChangeFollowByEmail", null),
-        (0, _._)([_._], _.prototype, "OnChangeFollowByPush", null),
-        (0, _._)([_._], _.prototype, "TrackEventAction", null),
-        (_ = (0, _._)([_._], _));
+            !1,
+          ),
+        );
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

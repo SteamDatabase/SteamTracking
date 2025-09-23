@@ -310,7 +310,7 @@
             nHeaderHeight: f,
             overscan: p = 6,
             stickyHeader: h,
-            uniqueField: v,
+            getRowKey: v,
             initialSorting: w,
             initialColumnFilters: b,
             initialGrouping: C,
@@ -338,7 +338,7 @@
               { ...e, size: t }
             );
           }),
-          $ = (0, o.N4)({
+          _ = (0, o.N4)({
             data: n,
             columns: B,
             defaultColumn: { minSize: 60, maxSize: 800 },
@@ -356,16 +356,16 @@
             getGroupedRowModel: (0, i.cU)(),
             columnResizeMode: "onChange",
           }),
-          { rows: _, flatRows: W } = $.getRowModel(),
-          A = _.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
-          X = $.getState().grouping;
+          { rows: $, flatRows: W } = _.getRowModel(),
+          A = $.flatMap((e) => (e.getIsExpanded() ? [e, ...e.subRows] : e)),
+          X = _.getState().grouping;
         (0, u.useEffect)(() => {
           F?.(X);
         }, [F, X]),
           (0, u.useEffect)(() => {
             k?.(A);
           }, [k, A.length]);
-        const U = (0, l.Te)({
+        const K = (0, l.Te)({
             count: A.length,
             scrollMargin: m,
             getScrollElement: u.useCallback(
@@ -381,29 +381,28 @@
             observeElementRect: (e, t) => ("window" === D ? S(e, t) : z(e, t)),
             getItemKey(e) {
               const t = A[e];
-              let n = t.id;
-              return v && (n = `${t.original[v]}`), `${t.parentId ?? ""}${n}`;
+              return v(e, t);
             },
           }),
-          K = (0, u.useRef)(0),
-          q = u.useMemo(() => {
-            const e = $.getFlatHeaders(),
+          U = (0, u.useRef)(0),
+          Z = u.useMemo(() => {
+            const e = _.getFlatHeaders(),
               t = {};
             for (let n = 0; n < e.length; n++) {
               const r = e[n];
               (t[`--header-${r.id}-size`] = `${r.getSize()}px`),
                 (t[`--col-${r.column.id}-size`] = `${r.column.getSize()}px`);
             }
-            return (K.current += 1), t;
-          }, [$.getState().columnSizingInfo, $.getState().columnSizing, r]);
+            return (U.current += 1), t;
+          }, [_.getState().columnSizingInfo, _.getState().columnSizing, r]);
         u.useEffect(() => {
           (0, u.startTransition)(() => {
-            U.measure();
+            K.measure();
           });
-        }, [U, g]);
-        const Z = U.getVirtualItems(),
-          Q = Z[0]?.start ?? 0,
-          Y = U.getTotalSize(),
+        }, [K, g]);
+        const q = K.getVirtualItems(),
+          Q = q[0]?.start ?? 0,
+          Y = K.getTotalSize(),
           j = (0, l.Te)({
             estimateSize: (e) =>
               A[0]?.getVisibleCells()[e].column.getSize() ?? 0,
@@ -431,17 +430,17 @@
           });
         (0, u.useEffect)(() => {
           j.measure();
-        }, [K.current]),
+        }, [U.current]),
           (0, u.useImperativeHandle)(
             t,
             () => ({
               getData: () => W.map((e) => e.original),
               getVisibleRows: () => A,
-              getState: $.getState,
-              getColumns: $.getAllColumns,
+              getState: _.getState,
+              getColumns: _.getAllColumns,
               getColumnDefs: () => L,
-              setColumnFilters: $.setColumnFilters,
-              resetColumnFilters: $.resetColumnFilters,
+              setColumnFilters: _.setColumnFilters,
+              resetColumnFilters: _.resetColumnFilters,
               setColumnFilterFnOverride: G,
               getColumnFilterFnOverride: () => O,
               getContainerElement: () => J.current,
@@ -453,10 +452,10 @@
             [
               W,
               A,
-              $.setColumnFilters,
-              $.resetColumnFilters,
-              $.getState,
-              $.getAllColumns,
+              _.setColumnFilters,
+              _.resetColumnFilters,
+              _.getState,
+              _.getAllColumns,
               O,
               L,
               j,
@@ -474,7 +473,7 @@
         }
         return u.createElement(
           R,
-          { table: $, setColumnSizeOverride: P },
+          { table: _, setColumnSizeOverride: P },
           u.createElement(
             "div",
             {
@@ -496,12 +495,12 @@
                 "aria-rowcount": n.length,
                 style: {
                   minHeight: Y,
-                  width: $.getTotalSize(),
+                  width: _.getTotalSize(),
                   "--virtualPos": `${Q}px`,
-                  ...q,
+                  ...Z,
                 },
               },
-              $.getHeaderGroups().map((e) =>
+              _.getHeaderGroups().map((e) =>
                 u.createElement(I, {
                   key: e.id,
                   group: e,
@@ -509,14 +508,14 @@
                   nHeaderHeight: f,
                 }),
               ),
-              Z.map((e) =>
+              q.map((e) =>
                 u.createElement(T, {
                   key: e.key,
                   row: A[e.index],
                   size: e.size,
                   rowVirtualizer: j,
                   index: e.index,
-                  measureRef: U.measureElement,
+                  measureRef: K.measureElement,
                   scrollContainerRef: J,
                   nItemHeight: g,
                   renderGroup: V,

@@ -1130,7 +1130,8 @@
       function _e(e) {
         const { eventModel: t, emoticonStore: n, partnerEventStore: a } = e,
           [o, s, i] = (0, ce.uD)(),
-          l = r.useCallback((e) => (0, M.Bd)(t, e), [t]);
+          l = (0, M.JP)(t),
+          c = (0, M.T7)(t);
         return r.createElement(
           r.Fragment,
           null,
@@ -1143,8 +1144,8 @@
                 { active: !0 },
                 r.createElement(me, {
                   closeModal: i,
-                  eventLink: (0, M.cq)(t),
-                  fnGetSharePageUrl: l,
+                  eventLink: c,
+                  sharePageUrls: l,
                   appid: t.appid,
                   emoticonStore: n,
                   partnerEventStore: a,

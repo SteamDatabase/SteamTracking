@@ -5170,7 +5170,9 @@
             ("dev" == m.TS.WEB_UNIVERSE || "beta" == m.TS.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let r = /^\d+$/.test(e) ? n().unix(Number.parseInt(e)) : n()(e);
+            let r = /^\d+$/.test(e ?? "")
+              ? n().unix(Number.parseInt(e ?? "0"))
+              : n()(e);
             (this.nOverrideDateNow = Math.floor(r.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +

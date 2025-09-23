@@ -276,6 +276,9 @@
         CheckboxLabel: "XRMda0yOh0NFnSf3EVLP1",
         CheckboxDescription: "_10omFg-YbEQjz9R0VzeuSC",
         LanguageSelector: "_2aIJUMbzwAYBpQHVa8E2Pg",
+        FormRowIndent: "_2NE-O2O0DHfvjzxSZ2fmDO",
+        FormRowHeader: "_2uZk1PvTdbBPuMfDFzAGNW",
+        FormRowDescription: "_3pHVbh8Pxwbpxlxeej0oG3",
       };
     },
     chunkid: (module) => {
@@ -9925,6 +9928,7 @@
           options: _,
           onChange: __webpack_require__,
           controlShouldRenderValue: !1,
+          noOptionsMessage: () => (0, _._)("#PinnedBundles_NoOptions"),
         });
       }
       function _(_) {
@@ -15202,6 +15206,7 @@
             rgAntiCheatData: _,
             rgSupportedAntiCheatOptions: __webpack_require__,
             rgLanguages: _,
+            rgSupportedAntiCheatBootProtections: _,
           } = _,
           _ = _.useMemo(() => new Map(_), [_]),
           _ = (0, _.useMemo)(
@@ -15215,6 +15220,7 @@
           [_, _] = (0, _.useState)(_.type),
           [_, _] = (0, _.useState)(_.kernel),
           [_, _] = (0, _.useState)(_.uninstall),
+          [_, _] = (0, _.useState)(_.bootprotect),
           _ = "none" !== _ && "unspecified" !== _;
         return _.createElement(
           "div",
@@ -15270,10 +15276,17 @@
               checked: _,
               onChange: _,
             }),
+          _ &&
+            _.createElement(_, {
+              supported: _,
+              currentValue: _,
+              onChange: _,
+            }),
           _.createElement(_, {
             selectedOption: "unspecified" !== _ ? _ : "",
             kernelMode: !!_ && _,
             uninstallsCompletely: !(!_ || !_) && _,
+            bootProtection: "none" != _ ? _ : "",
           }),
         );
       }
@@ -15312,6 +15325,26 @@
               __webpack_require__,
             ),
           ),
+        );
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.FormRowIndent,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.FormRowHeader,
+          },
+          _,
         );
       }
       function _(_) {
@@ -15410,13 +15443,75 @@
       }
       function _(_) {
         const {
+          supported: _,
+          currentValue: __webpack_require__,
+          onChange: _,
+        } = _;
+        if (0 == _.length) return null;
+        let _ = _.map((_) => {
+            return {
+              label:
+                ((_ = _),
+                "none" == _
+                  ? (0, _._)("#StoreAdmin_AntiCheat_BootProtection_None")
+                  : "secureboot_tpm2" == _
+                    ? (0, _._)(
+                        "#StoreAdmin_AntiCheat_BootProtection_SecureBootTPM2",
+                      )
+                    : _),
+              data: _,
+            };
+            var _;
+          }),
+          _ = _.find((_) => _ == __webpack_require__)
+            ? __webpack_require__
+            : _[0];
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _,
+            null,
+            _.createElement(
+              _,
+              null,
+              (0, _._)("#StoreAdmin_AntiCheat_BootProtectionLabel"),
+              " ",
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.FormRowDescription,
+              },
+              (0, _._)("#StoreAdmin_AntiCheat_BootProtectionDescription"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.AntiCheatDropDown,
+              },
+              _.createElement(_._, {
+                controlled: !0,
+                rgOptions: _,
+                onChange: (_) => {
+                  _.data && _(_.data);
+                },
+                selectedOption: _,
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
             selectedOption: _,
             kernelMode: __webpack_require__,
             uninstallsCompletely: _,
+            bootProtection: _,
           } = _,
           _ = _.useMemo(
             () =>
-              (function (_, _, _) {
+              (function (_, _, _, _) {
                 let _ = Array();
                 return (
                   _.push(
@@ -15447,10 +15542,17 @@
                       value: "",
                     }),
                   ),
+                  _.push(
+                    _.createElement("input", {
+                      type: "hidden",
+                      name: "app[game][3panticheat][bootprotect]",
+                      value: _,
+                    }),
+                  ),
                   _
                 );
-              })(_, __webpack_require__, _),
-            [_, __webpack_require__, _],
+              })(_, __webpack_require__, _, _),
+            [_, __webpack_require__, _, _],
           );
         return _.createElement(_.Fragment, null, ..._);
       }

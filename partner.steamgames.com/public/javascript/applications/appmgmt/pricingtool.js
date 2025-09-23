@@ -1412,7 +1412,7 @@
                     ),
                     columns: h,
                     data: b,
-                    uniqueField: "packageID",
+                    getRowKey: (e, t) => t.packageID,
                     stickyHeader: !0,
                     nItemHeight: 43,
                     nHeaderHeight: 63,
@@ -2407,7 +2407,9 @@
             ("dev" == c.TS.WEB_UNIVERSE || "beta" == c.TS.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let r = /^\d+$/.test(e) ? s().unix(Number.parseInt(e)) : s()(e);
+            let r = /^\d+$/.test(e ?? "")
+              ? s().unix(Number.parseInt(e ?? "0"))
+              : s()(e);
             (this.nOverrideDateNow = Math.floor(r.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +

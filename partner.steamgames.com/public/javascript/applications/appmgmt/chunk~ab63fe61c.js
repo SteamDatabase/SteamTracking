@@ -6,7 +6,7 @@
   [5859],
   {
     72839: (e, t, s) => {
-      s.d(t, { Bn: () => u, hS: () => o, rV: () => n });
+      s.d(t, { Bn: () => l, hS: () => o, rV: () => n });
       var r = s(15161),
         a = s(78327),
         i = s(2160);
@@ -24,7 +24,7 @@
           t
         );
       }
-      function u(e, t) {
+      function l(e, t) {
         e.Body().set_data_request(r.gn.fromObject(t));
       }
     },
@@ -35,8 +35,8 @@
         i = s(56545),
         n = s(96059),
         o = s(59411),
-        u = s(15161),
-        l = s(81393),
+        l = s(15161),
+        u = s(81393),
         c = s(68797),
         _ = s(78327),
         m = s(72839),
@@ -204,7 +204,7 @@
         }
         BCheckDataRequestIncluded(e) {
           ("dev" != _.TS.WEB_UNIVERSE && "beta" != _.TS.WEB_UNIVERSE) ||
-            (0, l.wT)(
+            (0, u.wT)(
               this.BContainDataRequest(e),
               `Requested data without for ${(0, d.Rz)(this.m_eItemType)} @ ${this.m_unID}`,
               e,
@@ -1041,7 +1041,7 @@
         static Initialize(e, t) {
           const s = B.Get();
           return (
-            (0, l.wT)(
+            (0, u.wT)(
               !s.m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once.",
             ),
@@ -1205,7 +1205,7 @@
         }
         async QueueStoreItemRequest(e, t, s) {
           if (
-            ((0, l.wT)(
+            ((0, u.wT)(
               B.ValidateDataRequest(s),
               "Invalid Data Request: " + JSON.stringify(s),
             ),
@@ -1220,7 +1220,7 @@
             );
           if (!e)
             return (
-              (0, l.wT)(
+              (0, u.wT)(
                 !e,
                 `unexpected id ${e} of zero or undefined for type ${t}`,
               ),
@@ -1259,7 +1259,7 @@
               this.m_setPendingHubCategoryInfo.add(e);
               break;
             default:
-              (0, l.wT)(!1, `Unexpected Type ${t}`);
+              (0, u.wT)(!1, `Unexpected Type ${t}`);
           }
           const a = this.m_PendingInfoPromise;
           return (
@@ -1332,20 +1332,20 @@
         }
         async HintLoadStoreItems(e, t, s, r, a, i, n) {
           let o = null;
-          const l = new Promise((e) => (o = e));
+          const u = new Promise((e) => (o = e));
           let c = [],
             _ = [];
           (e || []).forEach((e) => {
             const t = this.GetPreviousSupersetLoadPromise(e, 0, n);
             if (t) _.push(t);
             else {
-              c.push(u.O4.fromObject({ appid: e }));
+              c.push(l.O4.fromObject({ appid: e }));
               let t = k(this.GetStoreItemDataRequest(e, 0), n);
               const s = this.m_mapAppsInFlight.get(e);
               (t = k(s?.dataRequest, t)),
                 s && _.push(s.promise),
                 this.m_mapAppsInFlight.set(e, {
-                  promise: s ? T(s.promise, l) : l,
+                  promise: s ? T(s.promise, u) : u,
                   dataRequest: t,
                 });
             }
@@ -1354,13 +1354,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 1, n);
               if (t) _.push(t);
               else {
-                c.push(u.O4.fromObject({ packageid: e }));
+                c.push(l.O4.fromObject({ packageid: e }));
                 let t = k(this.GetStoreItemDataRequest(e, 1), n);
                 const s = this.m_mapPackageInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
                   s && _.push(s.promise),
                   this.m_mapPackageInFlight.set(e, {
-                    promise: s ? T(s.promise, l) : l,
+                    promise: s ? T(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -1369,13 +1369,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 2, n);
               if (t) _.push(t);
               else {
-                c.push(u.O4.fromObject({ bundleid: e }));
+                c.push(l.O4.fromObject({ bundleid: e }));
                 let t = k(this.GetStoreItemDataRequest(e, 2), n);
                 const s = this.m_mapBundleInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
                   s && _.push(s.promise),
                   this.m_mapBundleInFlight.set(e, {
-                    promise: s ? T(s.promise, l) : l,
+                    promise: s ? T(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -1384,13 +1384,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 4, n);
               if (t) _.push(t);
               else {
-                c.push(u.O4.fromObject({ tagid: e }));
+                c.push(l.O4.fromObject({ tagid: e }));
                 let t = k(this.GetStoreItemDataRequest(e, 4), n);
                 const s = this.m_mapTagsInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
                   s && _.push(s.promise),
                   this.m_mapTagsInFlight.set(e, {
-                    promise: s ? T(s.promise, l) : l,
+                    promise: s ? T(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -1399,13 +1399,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 5, n);
               if (t) _.push(t);
               else {
-                c.push(u.O4.fromObject({ creatorid: e }));
+                c.push(l.O4.fromObject({ creatorid: e }));
                 let t = k(this.GetStoreItemDataRequest(e, 5), n);
                 const s = this.m_mapCreatorsInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
                   s && _.push(s.promise),
                   this.m_mapCreatorsInFlight.set(e, {
-                    promise: s ? T(s.promise, l) : l,
+                    promise: s ? T(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -1414,13 +1414,13 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 6, n);
               if (t) _.push(t);
               else {
-                c.push(u.O4.fromObject({ hubcategoryid: e }));
+                c.push(l.O4.fromObject({ hubcategoryid: e }));
                 let t = k(this.GetStoreItemDataRequest(e, 6), n);
                 const s = this.m_mapHubCategoriesInFlight.get(e);
                 (t = k(s?.dataRequest, t)),
                   s && _.push(s.promise),
                   this.m_mapHubCategoriesInFlight.set(e, {
-                    promise: s ? T(s.promise, l) : l,
+                    promise: s ? T(s.promise, u) : u,
                     dataRequest: t,
                   });
               }
@@ -1482,9 +1482,9 @@
               let n = e.bundleid() ?? 0,
                 o = t.bundleid() ?? 0;
               if (n != o) return n - o;
-              let u = e.tagid() ?? 0,
-                l = t.tagid() ?? 0;
-              if (u != l) return u - l;
+              let l = e.tagid() ?? 0,
+                u = t.tagid() ?? 0;
+              if (l != u) return l - u;
               let c = e.creatorid() ?? 0,
                 _ = t.creatorid() ?? 0;
               if (c != _) return c - _;
@@ -1528,15 +1528,15 @@
                 e.Body().set_include_unpublished(!1);
                 const r = e.Body().getitems_request(!0);
                 r.set_context((0, m.hS)(this.m_bUsePartnerAPI)),
-                  r.set_data_request(u.gn.fromObject(t)),
+                  r.set_data_request(l.gn.fromObject(t)),
                   r.set_ids(s),
                   n.push(o.BT.GetItems(this.GetServiceTransport(), e));
               } else {
-                const e = i.w.Init(u.eE);
+                const e = i.w.Init(l.eE);
                 (0, m.rV)(e, this.m_bUsePartnerAPI),
                   (0, m.Bn)(e, t),
                   e.Body().set_ids(s),
-                  n.push(u.$4.GetItems(this.GetServiceTransport(), e));
+                  n.push(l.$4.GetItems(this.GetServiceTransport(), e));
               }
             }
             (await Promise.all(n)).forEach((i, n) => {
@@ -1549,8 +1549,8 @@
                         n = s.item_type();
                       let o =
                           this.m_bReturnUnavailableItems && 15 == s.success(),
-                        u = 1 == s.success() && !this.BIsStoreItemMissing(r, n);
-                      if (o || u) this.ReadItem(s, t);
+                        l = 1 == s.success() && !this.BIsStoreItemMissing(r, n);
+                      if (o || l) this.ReadItem(s, t);
                       else {
                         switch (
                           ("dev" == _.TS.WEB_UNIVERSE &&
@@ -1804,6 +1804,10 @@
         ReadItem(e, t) {
           const s = e.item_type();
           let r = null;
+          if (void 0 === s)
+            return (
+              console.warn(`Failed to load item data: ${e.success()}`), null
+            );
           switch (s) {
             case 0:
               r = this.m_mapApps;
@@ -1884,7 +1888,7 @@
             return 0;
         }
       }
-      function u(e) {
+      function l(e) {
         switch (e) {
           case 2:
             return "bundle";
@@ -1894,7 +1898,7 @@
             return "app";
         }
       }
-      function l(e, t, s) {
+      function u(e, t, s) {
         return e
           ? { id: e, item_type: "app" }
           : t
@@ -2056,7 +2060,7 @@
         Rz: () => n,
         SW: () => o,
         Si: () => y,
-        TM: () => u,
+        TM: () => l,
         TV: () => b,
         _P: () => I,
         cW: () => f,
@@ -2067,7 +2071,7 @@
         s9: () => C,
         vo: () => m,
         wD: () => h,
-        wR: () => l,
+        wR: () => u,
       }),
         (function (e) {
           (e[(e.k_NotRejected = -1)] = "k_NotRejected"),

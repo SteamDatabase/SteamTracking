@@ -2790,12 +2790,16 @@ img.category_icon {
  * platforms
  */
 
+.platform_img {
+	margin-left: 4px;
+}
 
 span.platform_img {
 	display: inline-block;
 	width: 20px;
 	height: 20px;
 	background-repeat: no-repeat;
+	fill: #FFFFFF;
 }
 
 span.platform_img.steamplay {
@@ -2805,15 +2809,15 @@ span.platform_img.steamplay {
 }
 
 span.platform_img.win {
-	background-image: url( '/public/images/v6/icon_platform_win.png?v=3' );
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/icon_platform_win.svg' );
 }
 
 span.platform_img.mac {
-	background-image: url( '/public/images/v6/icon_platform_mac.png' );
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/icon_platform_mac.svg' );
 }
 
 span.platform_img.linux {
-	background-image: url( '/public/images/v6/icon_platform_linux.png' );
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/icon_platform_steamos.svg?v=2' );
 }
 
 span.platform_img.streamingvideo {
@@ -3037,6 +3041,12 @@ div.game_hover {
 .game_hover_box .rule {
 }
 
+.game_hover span.platform_img {
+	width: 18px;
+	height: 18px;
+	margin: 0px 2px;
+}
+
 .game_hover .hover_arrow_left, .game_hover .hover_arrow_right {
 	width: 7px;
 	height: 15px;
@@ -3065,7 +3075,7 @@ div.game_hover {
 	display: block;
 	border-radius: 2px;
 	margin-right: 3px;
-	background-color: #96a3ae;
+	background-color: rgba( 38, 54, 69, 0.6);
 	padding: 4px;
 
 	line-height: 20px;
@@ -3094,7 +3104,7 @@ div.game_hover {
 }
 
 .hover_tag_row .app_tag {
-	background-color: #96a3ae;
+	background-color: rgba( 38, 54, 69, 0.6);
 	color: rgba(227,234,239,1);
 	box-shadow: none;
 	padding: 0 4px;

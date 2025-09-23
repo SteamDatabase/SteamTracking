@@ -1,39 +1,16 @@
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import {
@@ -57,20 +34,43 @@ import {
   _,
   _,
 } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+} from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 var _ = _((_, _) => {
@@ -12105,6 +12105,8 @@ var _ = class _ {
   ReadItem(_, _) {
     let _ = _.item_type(),
       _ = null;
+    if (_ === void 0)
+      return console.warn(`Failed to load item data: ${_.success()}`), null;
     switch (_) {
       case 0:
         _ = this.m_mapApps;
@@ -23486,7 +23488,8 @@ var _ = {
   focusAnimation: "BZcQYSdnpH0-",
   hoverAnimation: "_44i2N0J3GZw-",
 };
-var _ = _(_());
+var _ = _(_()),
+  _ = _(_());
 var _ = _(_());
 var _ = _(_());
 var _ = _(_(), 1);
@@ -25164,6 +25167,534 @@ _([_], _.prototype, "m_mapClanToCreatorHome", 2),
 var _ = _,
   _ = new _();
 window.g_CreatorHomeStore = _;
+var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781);
+var _ = _(_());
+var _ = _(_());
+var _ = 60,
+  _ = 30,
+  _ = class {
+    m_CMInterface;
+    m_setShownEvents = new Set();
+    m_setReadEvents = new Set();
+    m_rgPendingUpload = [];
+    m_schUpload = new _();
+    m_bUploading = !1;
+    constructor(_) {
+      this.m_CMInterface = _;
+    }
+    MarkEventShown(_, _, _) {
+      let _ = this.MakeKey(_, _);
+      if (this.m_setShownEvents.has(_)) return !1;
+      this.m_setShownEvents.add(_);
+      let _ = new _();
+      return (
+        _.set_event_gid(_),
+        _.set_clanid(_),
+        _.set_display_location(_),
+        _.set_mark_shown(!0),
+        this.QueueForUpload(_),
+        !0
+      );
+    }
+    MarkEventRead(_, _, _) {
+      let _ = this.MakeKey(_, _);
+      if (this.m_setReadEvents.has(_)) return !1;
+      this.m_setReadEvents.add(_);
+      let _ = new _();
+      return (
+        _.set_event_gid(_),
+        _.set_clanid(_),
+        _.set_display_location(_),
+        _.set_mark_read(!0),
+        this.QueueForUpload(_),
+        !0
+      );
+    }
+    MakeKey(_, _) {
+      return `${_}_${_}`;
+    }
+    QueueForUpload(_) {
+      this.m_rgPendingUpload.push(_), this.ScheduleUpload();
+    }
+    ScheduleUpload() {
+      if (!this.m_bUploading) {
+        if (this.m_rgPendingUpload.length >= _) {
+          this.UploadPendingData();
+          return;
+        }
+        this.m_schUpload.IsScheduled() ||
+          this.m_schUpload.Schedule(_ * 1e3, this.UploadPendingData);
+      }
+    }
+    async Flush() {
+      if (!this.m_bUploading) return this.UploadPendingData();
+    }
+    async UploadPendingData() {
+      if (this.m_bUploading) return;
+      this.m_schUpload.Cancel();
+      let _ = this.m_rgPendingUpload.splice(0, _);
+      if (_.length == 0) return;
+      let _ = !1;
+      if (this.m_CMInterface) {
+        let _ = _.Init(_);
+        for (let _ of _) _.Body().add_markings(_);
+        this.m_bUploading = !0;
+        let _ = await _.MarkPartnerEventsForUser(
+          this.m_CMInterface.GetServiceTransport(),
+          _,
+        );
+        (this.m_bUploading = !1), (_ = _.GetEResult() == 1);
+      } else {
+        if (!_.logged_in) return;
+        let _ = _.map((_) => _.toObject()),
+          _ = _() + "actions/ajaxmarkpartnerevents",
+          _ = new FormData();
+        _.append("sessionid", _.SESSIONID),
+          _.append("request", JSON.stringify(_));
+        try {
+          _ =
+            (
+              await _.default.post(_, _, {
+                withCredentials: !0,
+              })
+            ).data.success == 1;
+        } catch (_) {
+          let _ = _(_);
+          console.error(
+            "CPartnerEventUserTracking.UploadPendingData error " +
+              _.strErrorMsg,
+            _,
+          );
+        }
+      }
+      if (_) {
+        this.m_rgPendingUpload.length > 0 && this.ScheduleUpload();
+        return;
+      }
+      console.log("Saving news event state failed. Will try again soon!"),
+        (this.m_rgPendingUpload = this.m_rgPendingUpload.concat(_)),
+        this.m_schUpload.Schedule(_ * 1e3, this.UploadPendingData);
+    }
+  };
+_([_], _.prototype, "UploadPendingData", 1);
+var _ = _(_());
+var _ = class {
+  clanid = void 0;
+  appid = 0;
+  can_edit = !1;
+  owns_app = !1;
+  follows_app = !1;
+  support_user = !1;
+  valve_admin = !1;
+  limited_user = !1;
+  event_ignored = new Array();
+  event_followed = new Array();
+  event_followed_flags = new Array();
+  constructor(_) {
+    _(this), (this.clanid = _);
+  }
+};
+_([_], _.prototype, "clanid", 2),
+  _([_], _.prototype, "appid", 2),
+  _([_], _.prototype, "can_edit", 2),
+  _([_], _.prototype, "owns_app", 2),
+  _([_], _.prototype, "follows_app", 2),
+  _([_], _.prototype, "support_user", 2),
+  _([_], _.prototype, "valve_admin", 2),
+  _([_], _.prototype, "limited_user", 2),
+  _([_], _.prototype, "event_ignored", 2),
+  _([_], _.prototype, "event_followed", 2),
+  _([_], _.prototype, "event_followed_flags", 2);
+var _ = class _ {
+  constructor() {
+    _(this);
+  }
+  m_mapClanToUserPermissions = new Map();
+  m_mapAnnounceGIDToVote = new Map();
+  m_setReadEventGIDs = new Set();
+  m_tracker = void 0;
+  m_cm = void 0;
+  static s_EventUserStore;
+  m_bIsPresentationMode = _();
+  static Get() {
+    return (
+      _(!!_.s_EventUserStore, "Have not yet initialized global EventUserStore"),
+      _.s_EventUserStore
+    );
+  }
+  static IsInitialized() {
+    return !!_.s_EventUserStore;
+  }
+  static async InitGlobal(_) {
+    if (!_.s_EventUserStore) {
+      let _ = new _();
+      await _.Init(_),
+        (_.s_EventUserStore = _),
+        _.WEB_UNIVERSE == "dev" && (window.g_EventUserStore = _);
+    }
+  }
+  static BIsInited() {
+    return !!_.s_EventUserStore;
+  }
+  async Init(_) {
+    (this.m_cm = _), (this.m_tracker = new _(_));
+    let _ = _("partnereventpermissions", "application_config");
+    this.ValidateStoreDefault(_) &&
+      (_(() => {
+        _.forEach((_) => {
+          let _ = new _(_.clanid),
+            _ = {
+              result: _,
+              promise: _.RemapToPromise(_),
+              bLoaded: !0,
+            };
+          this.CopyFromResponseToTrack(_, _),
+            this.m_mapClanToUserPermissions.set(_.clanid, _);
+        });
+      }),
+      (_.WEB_UNIVERSE == "dev" || _.WEB_UNIVERSE == "beta") &&
+        console.log(
+          "CEventUserStore has loaded",
+          this.m_mapClanToUserPermissions.size,
+          this.m_mapClanToUserPermissions,
+        ));
+    let _ = _("uservotes", "application_config");
+    _ &&
+      _(() => {
+        _.forEach((_) => {
+          let _ = _.voted_up ? !0 : _.voted_down ? !1 : void 0;
+          this.m_mapAnnounceGIDToVote.set(_.clanAnnouncementGID, _);
+        });
+      });
+  }
+  GetTracker() {
+    return this.m_tracker;
+  }
+  ValidateStoreDefault(_) {
+    let _ = _;
+    return _ && Array.isArray(_) && _.length > 0 && typeof _[0] == "object"
+      ? typeof _[0].clanid == "number" && typeof _[0].appid == "number"
+      : !1;
+  }
+  RecordEventShown(_, _) {
+    !_ ||
+      _.bOldAnnouncement ||
+      !_.GID ||
+      this.m_tracker.MarkEventShown(_.GID, _.clanSteamID.GetAccountID(), _);
+  }
+  RecordEventRead(_, _) {
+    !_ ||
+      _.bOldAnnouncement ||
+      !_.GID ||
+      this.HasEventBeenRead(_.GID) ||
+      (this.SetEventAsRead(_.GID),
+      this.m_tracker.MarkEventRead(_.GID, _.clanSteamID.GetAccountID(), _));
+  }
+  SetEventAsRead(_) {
+    this.m_setReadEventGIDs.add(_);
+  }
+  HasEventBeenRead(_) {
+    return this.m_setReadEventGIDs.has(_);
+  }
+  static async RemapToPromise(_) {
+    return _;
+  }
+  BIsUserLoggedIn() {
+    return _.logged_in;
+  }
+  BIsPartnerEventPermissionsLoaded(_) {
+    return (
+      this.m_mapClanToUserPermissions.has(_) &&
+      this.m_mapClanToUserPermissions.get(_).bLoaded
+    );
+  }
+  GetPartnerEventPermissions(_) {
+    if (!_ || !_.BIsValid()) return new _(0);
+    let _ = _.GetAccountID();
+    return (
+      this.m_mapClanToUserPermissions.has(_) ||
+        this.LoadSingleAppEventPermissions(_),
+      this.m_mapClanToUserPermissions.get(_).result
+    );
+  }
+  BFollowsEvent(_, _) {
+    return this.GetPartnerEventPermissions(_).event_followed.indexOf(_) != -1;
+  }
+  BFollowsEventAndNotifiedBy(_, _, _) {
+    let _ = this.GetPartnerEventPermissions(_),
+      _ = _.event_followed.indexOf(_);
+    return _ !== -1 && (_.event_followed_flags[_] & _) == _;
+  }
+  BIgnoresEvent(_, _) {
+    return this.GetPartnerEventPermissions(_).event_ignored.indexOf(_) != -1;
+  }
+  async LoadSingleAppEventPermissions(_) {
+    let _ = _.GetAccountID(),
+      _ = this.m_mapClanToUserPermissions.get(_);
+    return (
+      _ ||
+        ((_ = {
+          promise: this.InternalLoadSingleAppEventPermissions(_),
+          result: new _(_),
+          bLoaded: !1,
+        }),
+        this.m_mapClanToUserPermissions.set(_, _)),
+      _.promise
+    );
+  }
+  CopyFromResponseToTrack(_, _) {
+    (_.result.appid = _.appid ?? 0),
+      (_.result.can_edit = !!_.can_edit),
+      (_.result.clanid = _.appid),
+      (_.result.event_followed = _.event_followed ?? []),
+      (_.result.event_ignored = _.event_ignored ?? []),
+      (_.result.event_followed_flags = _.event_followed_flags ?? []),
+      (_.result.follows_app = !!_.follows_app),
+      (_.result.owns_app = !!_.owns_app),
+      (_.result.limited_user = !!_.limited_user),
+      (_.support_user || _.valve_admin) && this.m_bIsPresentationMode
+        ? ((_.result.can_edit = !0),
+          (_.result.support_user = !1),
+          (_.result.valve_admin = !1))
+        : ((_.result.support_user = !!_.support_user),
+          (_.result.valve_admin = !!_.valve_admin)),
+      (_.bLoaded = !0);
+  }
+  async InternalLoadSingleAppEventPermissions(_) {
+    let _ = null,
+      _ = _.GetAccountID(),
+      _ = !_.logged_in;
+    if (!this.m_mapClanToUserPermissions.has(_)) {
+      let _ = new _(_.GetAccountID());
+      this.m_mapClanToUserPermissions.set(_, {
+        result: _,
+        promise: _.RemapToPromise(_),
+        bLoaded: !1,
+      });
+    }
+    try {
+      if (_.logged_in) {
+        let _ =
+            _.COMMUNITY_BASE_URL +
+            "gid/" +
+            _.ConvertTo64BitString() +
+            "/ajaxgetpartnereventpermissions/",
+          _ = {};
+        if (
+          (_() == "partnerweb"
+            ? ((_ =
+                _.PARTNER_BASE_URL +
+                "partnerevents/ajaxgetpartnereventpermissions"),
+              (_ = {
+                clanaccountid: _.GetAccountID(),
+              }))
+            : _() == "store" &&
+              ((_ = _.STORE_BASE_URL + "events/ajaxgetpartnereventpermissions"),
+              (_ = {
+                clanaccountid: _.GetAccountID(),
+              })),
+          (_ = await _.default.get(_, {
+            params: _,
+            withCredentials: !0,
+          })),
+          !_ || _.data.success != 1)
+        )
+          console.error("Partner Events Failed Load:" + _(_?.data).strErrorMsg),
+            (_ = !0);
+        else {
+          let _ = this.m_mapClanToUserPermissions.get(_);
+          _ && this.CopyFromResponseToTrack(_, _.data);
+        }
+      }
+    } catch (_) {
+      if (
+        ((_ = _.response),
+        (_ = !0),
+        !(
+          _ &&
+          typeof _.response < "u" &&
+          typeof _.response.data < "u" &&
+          typeof _.response.data.success < "u" &&
+          _.response.data.success == 21
+        ))
+      ) {
+        let _ = _(_);
+        console.error(
+          "InternalLoadSingleAppEventPermissions account: " +
+            _ +
+            ": " +
+            _.strErrorMsg,
+          _,
+        );
+      }
+    } finally {
+      _ &&
+        _(() => {
+          let _ = this.m_mapClanToUserPermissions.get(_);
+          (_.result.appid = _?.data.appid ?? 0),
+            (_.result.can_edit = !1),
+            (_.result.clanid = _ && _.data ? _.data.clanid : 0),
+            (_.result.event_followed = new Array()),
+            (_.result.event_ignored = new Array()),
+            (_.result.event_followed_flags = new Array()),
+            (_.result.follows_app = !1),
+            (_.result.owns_app = !1),
+            (_.result.support_user = !1),
+            (_.result.valve_admin = !1),
+            (_.result.limited_user = !1),
+            (_.bLoaded = !0);
+        });
+    }
+    return this.m_mapClanToUserPermissions.get(_).result;
+  }
+  async SetFollowOrUnfollowEvent(_, _, _, _, _) {
+    let _ = this.GetPartnerEventPermissions(_),
+      _ = _.event_followed.indexOf(_),
+      _ = 0;
+    _ !== -1 && ((_ = _.event_followed_flags[_]), _ ? (_ = _ & ~_) : (_ |= _));
+    let _ = _ == 0,
+      _ =
+        (_() === "store"
+          ? _.STORE_BASE_URL + "events"
+          : _.COMMUNITY_BASE_URL + "/gid/" + _.ConvertTo64BitString()) +
+        (_ ? "/unfolloworunignoreevent" : "/followorignoreevent"),
+      _ = new URLSearchParams();
+    _.append("sessionid", _.SESSIONID),
+      _.append("ignore", "" + _),
+      _.append("gid", _),
+      _.append("notification_flag", "" + _),
+      _.append("clan_accountid", "" + _.GetAccountID());
+    let _ = await _.default.post(_, _, {
+      withCredentials: !0,
+    });
+    _(() => {
+      let _ = this.m_mapClanToUserPermissions.get(_.GetAccountID()),
+        _ = null,
+        _ = null,
+        _ = null,
+        _ = null;
+      _
+        ? ((_ = _ ? _.result.event_ignored : _.result.event_followed),
+          (_ = _ ? null : _.result.event_followed_flags))
+        : _
+          ? ((_ = _.result.event_followed),
+            (_ = _.result.event_followed_flags),
+            (_ = _.result.event_ignored))
+          : ((_ = _.result.event_ignored),
+            (_ = _.result.event_followed),
+            (_ = _.result.event_followed_flags));
+      let _ = _.indexOf(_);
+      if ((_ > -1 && (_.splice(_, 1), _ && _.splice(_, 1)), _)) {
+        let _ = _.indexOf(_);
+        _ == -1 ? (_.push(_), _ && _.push(_)) : _ && (_[_] = _);
+      }
+    });
+  }
+  async Vote(_, _, _) {
+    if (!_ || !_.AnnouncementGID) return !1;
+    let _ = this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
+    if (_ === _) return !0;
+    if (
+      (this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _),
+      _(() => {
+        _ === !0 && _.UpdateVoteCount("up", -1),
+          _ === !1 && _.UpdateVoteCount("down", -1),
+          _ === !0 && _.UpdateVoteCount("up", 1),
+          _ === !1 && _.UpdateVoteCount("down", 1);
+      }),
+      this.m_cm)
+    ) {
+      let _ = _.Init(_);
+      return (
+        _.Body().set_announcementid(_.AnnouncementGID),
+        _.Body().set_vote_up(!!_),
+        _.Body().set_clan_accountid(_.clanSteamID.GetAccountID()),
+        (
+          await _.RateClanAnnouncement(this.m_cm.GetServiceTransport(), _)
+        ).GetEResult() == 1
+      );
+    } else {
+      let _ = _(),
+        _ =
+          _ == "community" || _ == "steamtv"
+            ? _.COMMUNITY_BASE_URL +
+              "gid/" +
+              _.clanSteamID.ConvertTo64BitString() +
+              "/announcements/rate/" +
+              _.AnnouncementGID
+            : _.STORE_BASE_URL + "updated/ajaxrateupdate/" + _.AnnouncementGID,
+        _ = new URLSearchParams();
+      _.append("sessionid", _.SESSIONID),
+        _.append("voteup", _ ? "1" : "0"),
+        _.append("clanid", "" + _.clanSteamID.GetAccountID()),
+        _.append("ajax", "1");
+      let _ = {
+        withCredentials: !0,
+        cancelToken: _.token,
+      };
+      return (await _.default.post(_, _, _)).data.success == 1;
+    }
+  }
+  async LoadMyVote(_, _) {
+    if (_?.AnnouncementGID) {
+      if (this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID))
+        return !!this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID);
+      let _;
+      if (this.m_cm) {
+        let _ = _.Init(_);
+        _.Body().set_announcementid(_.AnnouncementGID);
+        let _ = await _.GetClanAnnouncementVoteForUser(
+          this.m_cm.GetServiceTransport(),
+          _,
+        );
+        _.GetEResult() == 1 &&
+          (_ = _.Body().voted_up() ? !0 : _.Body().voted_down() ? !1 : void 0);
+      } else {
+        let _ = _() == "store",
+          _ = _
+            ? _.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
+            : _.COMMUNITY_BASE_URL +
+              "gid/" +
+              _.clanSteamID.ConvertTo64BitString() +
+              "/announcements/ajaxgetmyvote/" +
+              _.AnnouncementGID,
+          _ = {
+            gid: _ ? _.AnnouncementGID : void 0,
+          },
+          _ = await _.default.get(_, {
+            withCredentials: !0,
+            cancelToken: _.token,
+            params: _,
+          });
+        _ = _.data.voted_up ? !0 : _.data.voted_down ? !1 : void 0;
+      }
+      return this.m_mapAnnounceGIDToVote.set(_.AnnouncementGID, _), _;
+    }
+  }
+  SetVote(_, _) {
+    this.m_mapAnnounceGIDToVote.set(_, _);
+  }
+  BHasMyVote(_) {
+    return _.AnnouncementGID
+      ? this.m_mapAnnounceGIDToVote.has(_.AnnouncementGID)
+      : !1;
+  }
+  GetPreviouslyLoadedVote(_) {
+    return _.AnnouncementGID
+      ? this.m_mapAnnounceGIDToVote.get(_.AnnouncementGID)
+      : void 0;
+  }
+  BShowEmailEditorTab(_) {
+    if (_.BHasEmailEnabled() || _.clanSteamID.GetAccountID() == _()) return !0;
+    let _ = this.GetPartnerEventPermissions(_.clanSteamID);
+    return (_.IS_OGG || _.IS_VALVE_GROUP) && _.valve_admin;
+  }
+};
+_([_], _.prototype, "m_mapClanToUserPermissions", 2),
+  _([_], _.prototype, "m_mapAnnounceGIDToVote", 2),
+  _([_], _.prototype, "m_setReadEventGIDs", 2),
+  _([_], _.prototype, "CopyFromResponseToTrack", 1);
+var _ = _;
 var _ = class {
   constructor() {
     _(this);
@@ -27335,7 +27866,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       super(),
         _.prototype.product || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3], null);
+        _.Message.initialize(this, _, 0, -1, [3, 4], null);
     }
     static sm_m;
     static sm_mbf;
@@ -27360,6 +27891,13 @@ var _ = class _ extends _.Message {
                 _: _,
                 _: !0,
                 _: !0,
+              },
+              tags: {
+                _: 4,
+                _: !0,
+                _: !0,
+                _: _.readString,
+                _: _.writeRepeatedString,
               },
             },
           }),
@@ -28770,8 +29308,8 @@ var _ = class _ extends _.Message {
               },
               gr_mode: {
                 _: 10,
-                _: _.readInt32,
-                _: _.writeInt32,
+                _: _.readEnum,
+                _: _.writeEnum,
               },
             },
           }),
@@ -30167,6 +30705,7 @@ var _ = class {
   m_bReportingPaused = !1;
   m_pauseTimer = void 0;
   m_fnGetReportingInterval = _;
+  m_fnGetReportTags = () => [];
   m_bEnabled = !0;
   m_bInitialized = !1;
   constructor(_ = !0) {
@@ -30199,6 +30738,7 @@ var _ = class {
       (this.m_transport = _),
       _.fnGetReportingInterval &&
         (this.m_fnGetReportingInterval = _.fnGetReportingInterval),
+      _.fnGetReportTags && (this.m_fnGetReportTags = _.fnGetReportTags),
       this.m_bEnabled ||
         (console.error(
           "Error reporting was initialized after being disabled, possibly dropping errors.",
@@ -30309,8 +30849,9 @@ var _ = class {
       });
     _.Body().set_product(this.m_strProduct),
       _.Body().set_version(this.m_strVersion),
-      _.Body().set_errors(_),
-      _.ReportClientError(this.m_transport, _);
+      _.Body().set_errors(_);
+    for (let _ of this.m_fnGetReportTags()) _.Body().add_tags(_);
+    _.ReportClientError(this.m_transport, _);
   }
   get version() {
     return this.m_strVersion;

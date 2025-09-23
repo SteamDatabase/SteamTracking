@@ -273,8 +273,8 @@
         ed: () => te,
         jT: () => re,
         np: () => se,
-        Jo: () => Q,
-        cO: () => J,
+        Jo: () => J,
+        cO: () => Q,
         Vz: () => $,
         a8: () => ce,
         $d: () => ne,
@@ -1834,7 +1834,7 @@
         );
       }
       const Y = j.createContext(null);
-      function Q(e) {
+      function J(e) {
         const t = (0, L.KV)();
         return (0, O.I)({
           queryKey: [`SteamAwardDefs_${e}`],
@@ -1847,7 +1847,7 @@
           enabled: e > 0,
         });
       }
-      function J() {
+      function Q() {
         const e = (0, L.KV)();
         return (0, O.I)({
           queryKey: [`SteamAwardNominations_${U.iA.accountid}`],
@@ -1861,7 +1861,7 @@
         });
       }
       function $(e) {
-        const t = J();
+        const t = Q();
         return t.isLoading
           ? { bLoadingNominationForCategory: !0 }
           : {
@@ -2084,7 +2084,7 @@
               initialData: () => X()?.item_definitions,
             });
           })(e),
-          n = Q(e);
+          n = J(e);
         if (!r.data || !n.data) return null;
         const a = n.data.votes.find((e) => e.voteid == t);
         return r.data.item_definitions?.find((e) => e.item_type == a.item_type);
@@ -2095,7 +2095,7 @@
     },
     41550: (e, t, r) => {
       "use strict";
-      r.d(t, { AD: () => Y, vA: () => re, He: () => J });
+      r.d(t, { AD: () => Y, vA: () => re, He: () => Q });
       var n = r(34629),
         a = r(14947),
         i = r(75844),
@@ -2385,7 +2385,7 @@
             const t = e.GID == this.props.initialEvent.GID,
               r = t;
             a.push(
-              s.createElement(J, {
+              s.createElement(Q, {
                 ref: t ? this.m_refScrollAnchor : null,
                 key: e.GID,
                 event: e,
@@ -2498,7 +2498,7 @@
                         ),
                       ),
                       !t &&
-                        s.createElement(Q, {
+                        s.createElement(J, {
                           loader: this.m_loader,
                           location: "top",
                         }),
@@ -2514,7 +2514,7 @@
                         a,
                       ),
                       !t &&
-                        s.createElement(Q, {
+                        s.createElement(J, {
                           loader: this.m_loader,
                           location: "bottom",
                         }),
@@ -2541,7 +2541,7 @@
         (0, n.Cg)([G.oI], Y.prototype, "OnTouchMove", null),
         (0, n.Cg)([G.oI], Y.prototype, "OnWheel", null),
         (Y = (0, n.Cg)([i.PA], Y));
-      const Q = (0, i.PA)((e) => {
+      const J = (0, i.PA)((e) => {
           let t = e.loader.GetNewerState(),
             r = e.loader.GetOlderState();
           return t == ee.Loading && r == ee.Loading
@@ -2557,7 +2557,7 @@
                 )
               : null;
         }),
-        J = s.forwardRef(function (e, t) {
+        Q = s.forwardRef(function (e, t) {
           const r = (0, O.Qn)(),
             [n, a] = (0, x.t7)(e.event.appid, { include_assets: !0 }),
             i = (0, H.Zj)(e.event.appid);
@@ -3781,7 +3781,8 @@
       function j(e) {
         const { eventModel: t, emoticonStore: r, partnerEventStore: n } = e,
           [a, s, o] = (0, L.uD)(),
-          l = c.useCallback((e) => (0, R.Bd)(t, e), [t]);
+          l = (0, R.JP)(t),
+          m = (0, R.T7)(t);
         return c.createElement(
           c.Fragment,
           null,
@@ -3794,8 +3795,8 @@
                 { active: !0 },
                 c.createElement(U, {
                   closeModal: o,
-                  eventLink: (0, R.cq)(t),
-                  fnGetSharePageUrl: l,
+                  eventLink: m,
+                  sharePageUrls: l,
                   appid: t.appid,
                   emoticonStore: r,
                   partnerEventStore: n,

@@ -2270,6 +2270,24 @@ function SetupReviewFilterMenus()
 
 }
 
+function CheckClientBootProtection( strType )
+{
+	let element = document.querySelector( `[data-bootprotection="${ strType }"]` );
+	if ( !element )
+		return;
+
+	if ( typeof SteamClient === "undefined" || !SteamClient.Compat || !SteamClient.Compat.CheckBootProtectionEnabled )
+		return;
+
+	if ( strType != 'secureboot_tpm2' )
+		return;
+
+	SteamClient.Compat.CheckBootProtectionEnabled( '2', true ).then( ( bEnabled ) => {
+		if ( !bEnabled )
+			element.style.display = 'block';
+	} );
+}
+
 // Go through images on the store page and add:
 // - Click to play/pause for animated images.
 // - Magnifying glass to zoom in when an image has a bigger version available.

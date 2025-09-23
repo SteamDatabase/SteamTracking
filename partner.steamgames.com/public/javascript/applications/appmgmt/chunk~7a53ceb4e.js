@@ -63,25 +63,26 @@
     73744: (e, t, i) => {
       "use strict";
       i.d(t, {
-        Ek: () => w,
+        Ek: () => b,
         FZ: () => n,
-        Fj: () => f,
+        Fj: () => w,
         Hj: () => o,
-        Ho: () => m,
-        N_: () => v,
+        Ho: () => _,
+        Kf: () => d,
+        N_: () => L,
         PL: () => l,
-        XY: () => y,
+        XY: () => k,
         Yw: () => s,
         _d: () => a,
         cV: () => h,
         dM: () => g,
         on: () => c,
         qj: () => p,
-        s4: () => P,
+        s4: () => y,
         tW: () => r,
-        vz: () => k,
-        x: () => _,
-        yu: () => b,
+        vz: () => v,
+        x: () => f,
+        yu: () => P,
       });
       const s = ["app_header_capsule", "app_main_capsule"],
         n = [
@@ -115,123 +116,130 @@
         const t = Array.isArray(e) ? e : [e];
         return Math.min(...t);
       }
-      const d = [1, 3, 2],
-        u = [1, 3],
-        m = [5, 4],
-        _ = [7, 6],
-        f = {
-          capsule: { width: 800, height: 450, rgAcceptableTypes: u },
+      function d(e, t) {
+        return void 0 === t ? p(e) : Array.isArray(e) ? e[t] : e;
+      }
+      const u = [1, 3, 2],
+        m = [1, 3],
+        _ = [5, 4],
+        f = [7, 6],
+        w = {
+          capsule: { width: 800, height: 450, rgAcceptableTypes: m },
           marketingmessage_art_2_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           marketingmessage_art_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
-          spotlight: { width: 2108, height: 460, rgAcceptableTypes: u },
+          spotlight: { width: 2108, height: 460, rgAcceptableTypes: m },
           localized_store_app_spotlight: {
-            width: 1100,
-            height: 240,
-            rgAcceptableTypes: u,
+            width: 1200,
+            height: 260,
+            rgAcceptableTypes: m,
           },
           localized_store_app_spotlight_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           localized_title_image: {
             width: 1920,
             height: 622,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
-          background: { width: 1920, height: 622, rgAcceptableTypes: u },
+          background: { width: 1920, height: 622, rgAcceptableTypes: m },
           hero: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
-          email_full: { width: 800, height: 300, rgAcceptableTypes: u },
-          email_centered: { width: 644, height: 300, rgAcceptableTypes: u },
-          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: u },
-          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: u },
+          email_full: { width: 800, height: 300, rgAcceptableTypes: m },
+          email_centered: { width: 644, height: 300, rgAcceptableTypes: m },
+          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: m },
+          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: m },
           sale_header: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
           sale_overlay: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
           localized_image_group: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           localized_background_art: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           sale_section_background: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
           sale_section_title: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
           link_capsule: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           product_banner: {
             width: [1200, 1100],
             height: [175, 160],
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           product_mobile_banner: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           product_banner_override: {
             width: [1200, 1100],
             height: [175, 160],
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           product_mobile_banner_override: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
-          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: u },
+          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: m },
           tab_bar_background: {
             width: 1500,
             height: 100,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
-          sale_logo: { width: 940, height: 460, rgAcceptableTypes: u },
-          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: d },
+          sale_logo: {
+            width: [1200, 940],
+            height: [460, 460],
+            rgAcceptableTypes: m,
+          },
+          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: u },
           bestofyear_banner_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
           localized_marketing_message: {
             width: 570,
@@ -241,7 +249,7 @@
           localized_optin_banner: {
             width: 1e3,
             height: 150,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           localized_marketingmessage_webm: {
             width: 570,
@@ -277,13 +285,13 @@
           localized_marketingmessage_background: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           localized_email_image: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: u,
+            rgAcceptableTypes: m,
           },
           template_asset: {
             width: 0,
@@ -291,19 +299,19 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
-          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: d },
-          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: d },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: u },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: u },
           marketingmessage_art: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
           marketingmessage_art_2: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
-          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: d },
+          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: u },
           takeover_webm_art: {
             width: 1850,
             height: 450,
@@ -317,7 +325,7 @@
           takeover_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
           takeover_webm_mobile_art: {
             width: 500,
@@ -329,35 +337,44 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: d },
+          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: u },
           takeunder_mobile_art: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: u,
           },
-          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: u },
-          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: u },
+          app_header_capsule: { width: 920, height: 430, rgAcceptableTypes: m },
+          app_main_capsule: { width: 1232, height: 706, rgAcceptableTypes: m },
         };
-      function w(e, t, i, s) {
+      function b(e, t, i, s) {
         let n = null;
         if (Array.isArray(i)) {
-          if (((n = i.findIndex((t) => e === t)), n < 0)) return !1;
+          if (
+            ((n = i
+              .map((t, i) => (e === t ? i : void 0))
+              .filter((e) => void 0 !== e)),
+            n.length <= 0)
+          )
+            return !1;
         } else if (e !== i) return !1;
         if (Array.isArray(s)) {
-          let e = s.findIndex((e) => t === e);
-          if (e < 0) return !1;
-          if (null !== n && e !== n) return !1;
+          const e = s
+            .map((e, i) => (t === e ? i : void 0))
+            .filter((e) => void 0 !== e);
+          if (e.length <= 0) return !1;
+          if (n?.length && !e.some((e) => n.includes(e))) return !1;
         } else if (t !== s) return !1;
         return !0;
       }
-      function b(e, t, i, s) {
-        const n = f[i];
+      function P(e, t, i, s) {
+        const n = w[i];
         return (
-          !!n && (n.bDisableEnforceDimensions ? s : w(e, t, n.width, n.height))
+          !!n &&
+          (n.bDisableEnforceDimensions ? !!s : b(e, t, n.width, n.height))
         );
       }
-      function P(e, t, i) {
-        const s = f[i];
+      function y(e, t, i) {
+        const s = w[i];
         if (!s) return !1;
         if (s.bDisableEnforceDimensions) return !0;
         if (Array.isArray(s.width)) {
@@ -369,17 +386,17 @@
         } else if (t < s.height) return !1;
         return !0;
       }
-      function y(e) {
-        const t = f[e];
+      function k(e) {
+        const t = w[e];
         return (
           t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
         );
       }
-      function k(e, t) {
-        return t.filter((t) => v(e, t));
-      }
       function v(e, t) {
-        return f[t].rgAcceptableTypes.includes(e);
+        return t.filter((t) => L(e, t));
+      }
+      function L(e, t) {
+        return w[t].rgAcceptableTypes.includes(e);
       }
     },
     78511: (e, t, i) => {
@@ -541,7 +558,12 @@
           );
           let t = u(this.width, this.height, e, !1);
           if ((void 0 === t && (t = u(this.width, this.height, e, !0)), t)) {
-            const e = this.m_rgImageOptions.find((e) => e.artworkType == t);
+            const e = this.m_rgImageOptions.find(
+              (e) =>
+                e.artworkType == t &&
+                (!e.bEnforceDimensions ||
+                  (e.width == this.width && e.height == this.height)),
+            );
             if (e) return e;
           }
           return this.m_rgImageOptions[0];
@@ -855,8 +877,8 @@
             include_reviews: y,
             include_basic_info: k,
             include_supported_languages: v,
-            include_full_description: I,
-            include_included_items: L,
+            include_full_description: L,
+            include_included_items: I,
             include_assets_without_overrides: T,
             apply_user_filters: E,
             include_links: D,
@@ -875,8 +897,8 @@
               include_reviews: y,
               include_basic_info: k,
               include_supported_languages: v,
-              include_full_description: I,
-              include_included_items: L,
+              include_full_description: L,
+              include_included_items: I,
               include_assets_without_overrides: T,
               apply_user_filters: E,
               include_links: D,
@@ -896,15 +918,15 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, p, d, u, m, _, f, w, b, P, y, k, v, I, L, T, E, D, h]),
+          }, [e, t, s, p, d, u, m, _, f, w, b, P, y, k, v, L, I, T, E, D, h]),
           !e)
         )
           return [null, 2];
         if (!1 === p) return [void 0, 2];
         if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!a.A.Get().BHasStoreItem(e, t, i)) return [void 0, 1];
-        const R = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return R ? [R, 3] : [null, 2];
+        const A = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return A ? [A, 3] : [null, 2];
       }
       function l(e, t, i) {
         return c(e, 0, t, i);
@@ -943,7 +965,7 @@
             include_included_items: y,
             include_assets_without_overrides: k,
             apply_user_filters: v,
-            include_links: I,
+            include_links: L,
           } = i;
         if (
           ((0, r.useEffect)(() => {
@@ -964,7 +986,7 @@
                 include_included_items: y,
                 include_assets_without_overrides: k,
                 apply_user_filters: v,
-                include_links: I,
+                include_links: L,
               },
               s = e.filter(
                 (e) =>
@@ -982,7 +1004,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, c, l, h, p, g, d, u, m, _, f, w, b, P, y, k, v, I]),
+          }, [e, t, s, c, l, h, p, g, d, u, m, _, f, w, b, P, y, k, v, L]),
           !e)
         )
           return 2;
@@ -1709,15 +1731,17 @@
         GetDestWidth() {
           const { uploadFile: e, forceResolution: t } = this.props;
           if (t) return t.width;
-          const i = e.GetCurrentImageOption(),
-            s = r.Fj[i.artworkType].width;
+          const i = e.GetCurrentImageOption();
+          if (!i) return 0;
+          const s = r.Fj[i.artworkType].width;
           return i ? (0, r.qj)(s) : 0;
         }
         GetDestHeight() {
           const { uploadFile: e, forceResolution: t } = this.props;
           if (t) return t.width;
-          const i = e.GetCurrentImageOption(),
-            s = r.Fj[i.artworkType].height;
+          const i = e.GetCurrentImageOption();
+          if (!i) return 0;
+          const s = r.Fj[i.artworkType].height;
           return i ? (0, r.qj)(s) : 0;
         }
         GetLargestBoxThatFits(e, t, i, s) {

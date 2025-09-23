@@ -1259,10 +1259,10 @@
               include_release: !0,
             }),
             [_, _] = (0, _._)(_);
-          if (
-            (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
-            !_.bLoaded || !_ || (_ && !_ && 2 !== _))
-          )
+          _.useEffect(() => window.scrollTo(0, 0), [_, _]);
+          const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
+            _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
+          if (!_.bLoaded || !_ || (_ && !_ && 2 !== _))
             return _.createElement(
               "div",
               {
@@ -1277,7 +1277,6 @@
               }),
             );
           let _ = _.GetDescriptionWithFallback(__webpack_require__);
-          const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative");
           return _.createElement(_, {
             event: _,
             lang: __webpack_require__,
@@ -1294,11 +1293,7 @@
                   crumbs: [
                     {
                       name: (0, _._)("#BreadCrumbs_AllEvents"),
-                      url: (0, _._)(
-                        _,
-                        _._.k_eStoreUsersNewsHub,
-                        "allowRelative",
-                      ),
+                      url: _,
                     },
                     {
                       name: (0, _._)(

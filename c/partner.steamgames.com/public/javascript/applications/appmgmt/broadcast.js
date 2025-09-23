@@ -15531,7 +15531,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { steamid: _, closeModal: __webpack_require__ } = _;
@@ -15554,7 +15553,15 @@
         );
       }
       function _(_) {
-        const { steamid: _ } = _;
+        const { steamid: _ } = _,
+          _ = (function (_) {
+            const _ = _._.COMMUNITY_BASE_URL + "broadcast/share/" + _;
+            return {
+              strFacebookUrl: _ + "?site=facebook&t=" + Math.random(),
+              strTwitterUrl: _ + "?site=twitter",
+              strRedditUrl: _ + "?site=reddit",
+            };
+          })(_);
         return _.createElement(
           "div",
           {
@@ -15568,7 +15575,7 @@
             _.createElement(
               _._,
               {
-                href: _(_, _._.k_eFacebook),
+                href: _.strFacebookUrl,
                 className: _().ShareBtn,
               },
               _.createElement("img", {
@@ -15585,7 +15592,7 @@
             _.createElement(
               _._,
               {
-                href: _(_, _._.k_eTwitter),
+                href: _.strTwitterUrl,
                 className: _().ShareBtn,
               },
               _.createElement("img", {
@@ -15602,7 +15609,7 @@
             _.createElement(
               _._,
               {
-                href: _(_, _._.k_eReddit),
+                href: _.strRedditUrl,
                 className: _().ShareBtn,
               },
               _.createElement("img", {
@@ -15683,9 +15690,6 @@
             _,
           ),
         );
-      }
-      function _(_, _) {
-        return _._.COMMUNITY_BASE_URL + "broadcast/share/" + _ + "?site=" + _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

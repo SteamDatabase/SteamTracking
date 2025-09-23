@@ -1226,6 +1226,104 @@
               totalSlides: _.totalSlides,
             };
           }),
+          "buttonLast___2yuh0"),
+        _ = [
+          "carouselStore",
+          "className",
+          "currentSlide",
+          "disabled",
+          "onClick",
+          "totalSlides",
+          "visibleSlides",
+        ],
+        _ =
+          ((_ = (function (_) {
+            function _() {
+              var _;
+              return (
+                _(this, _),
+                ((_ = __webpack_require__.call(this)).handleOnClick =
+                  _.handleOnClick.bind(_(_))),
+                _
+              );
+            }
+            _(_, _);
+            var _ = _(_);
+            return (
+              _(_, [
+                {
+                  key: "handleOnClick",
+                  value: function (_) {
+                    var _ = this.props,
+                      _ = _.carouselStore,
+                      _ = _.onClick,
+                      _ = _.totalSlides,
+                      _ = _.visibleSlides;
+                    __webpack_require__.setStoreState(
+                      {
+                        currentSlide: _ - _,
+                        isPlaying: !1,
+                      },
+                      null !== _ && _.call(this, _),
+                    );
+                  },
+                },
+                {
+                  key: "render",
+                  value: function () {
+                    var _ = this.props,
+                      _ = (_.carouselStore, _.className),
+                      _ = _.currentSlide,
+                      _ = _.disabled,
+                      _ = (_.onClick, _.totalSlides),
+                      _ = _.visibleSlides,
+                      _ = _(_, _),
+                      _ = _([_, "carousel__last-button", _]),
+                      _ = null !== _ ? _ : _ >= _ - _;
+                    return _.createElement(
+                      "button",
+                      _(
+                        {
+                          type: "button",
+                          "aria-label": "last",
+                          className: _,
+                          onClick: this.handleOnClick,
+                          disabled: _,
+                        },
+                        _,
+                      ),
+                      this.props.children,
+                    );
+                  },
+                },
+              ]),
+              _
+            );
+          })(_.Component)),
+          _(_, "propTypes", {
+            carouselStore: _.object.isRequired,
+            children: _.children.isRequired,
+            className: _.string,
+            currentSlide: _.number.isRequired,
+            disabled: _.bool,
+            onClick: _.func,
+            totalSlides: _.number.isRequired,
+            visibleSlides: _.number.isRequired,
+          }),
+          _(_, "defaultProps", {
+            className: null,
+            disabled: null,
+            onClick: null,
+          }),
+          _),
+        _ =
+          (_(_, function (_) {
+            return {
+              currentSlide: _.currentSlide,
+              totalSlides: _.totalSlides,
+              visibleSlides: _.visibleSlides,
+            };
+          }),
           "buttonNext___2mOCa"),
         _ = [
           "carouselStore",
@@ -1347,105 +1445,7 @@
             infinite: _.infinite,
           };
         }),
-        _ = "buttonLast___2yuh0",
-        _ = [
-          "carouselStore",
-          "className",
-          "currentSlide",
-          "disabled",
-          "onClick",
-          "totalSlides",
-          "visibleSlides",
-        ],
-        _ =
-          ((_ = (function (_) {
-            function _() {
-              var _;
-              return (
-                _(this, _),
-                ((_ = __webpack_require__.call(this)).handleOnClick =
-                  _.handleOnClick.bind(_(_))),
-                _
-              );
-            }
-            _(_, _);
-            var _ = _(_);
-            return (
-              _(_, [
-                {
-                  key: "handleOnClick",
-                  value: function (_) {
-                    var _ = this.props,
-                      _ = _.carouselStore,
-                      _ = _.onClick,
-                      _ = _.totalSlides,
-                      _ = _.visibleSlides;
-                    __webpack_require__.setStoreState(
-                      {
-                        currentSlide: _ - _,
-                        isPlaying: !1,
-                      },
-                      null !== _ && _.call(this, _),
-                    );
-                  },
-                },
-                {
-                  key: "render",
-                  value: function () {
-                    var _ = this.props,
-                      _ = (_.carouselStore, _.className),
-                      _ = _.currentSlide,
-                      _ = _.disabled,
-                      _ = (_.onClick, _.totalSlides),
-                      _ = _.visibleSlides,
-                      _ = _(_, _),
-                      _ = _([_, "carousel__last-button", _]),
-                      _ = null !== _ ? _ : _ >= _ - _;
-                    return _.createElement(
-                      "button",
-                      _(
-                        {
-                          type: "button",
-                          "aria-label": "last",
-                          className: _,
-                          onClick: this.handleOnClick,
-                          disabled: _,
-                        },
-                        _,
-                      ),
-                      this.props.children,
-                    );
-                  },
-                },
-              ]),
-              _
-            );
-          })(_.Component)),
-          _(_, "propTypes", {
-            carouselStore: _.object.isRequired,
-            children: _.children.isRequired,
-            className: _.string,
-            currentSlide: _.number.isRequired,
-            disabled: _.bool,
-            onClick: _.func,
-            totalSlides: _.number.isRequired,
-            visibleSlides: _.number.isRequired,
-          }),
-          _(_, "defaultProps", {
-            className: null,
-            disabled: null,
-            onClick: null,
-          }),
-          _),
-        _ =
-          (_(_, function (_) {
-            return {
-              currentSlide: _.currentSlide,
-              totalSlides: _.totalSlides,
-              visibleSlides: _.visibleSlides,
-            };
-          }),
-          "buttonNext___3Lm3s"),
+        _ = "buttonNext___3Lm3s",
         _ = [
           "carouselStore",
           "children",
@@ -2163,6 +2163,7 @@
                 _(this, _),
                 ((_ = __webpack_require__.call(this, _)).state = {
                   isImageLoading: !0,
+                  isImageLoadingError: !0,
                   isHovering: !1,
                   isZooming: !1,
                   _: null,
@@ -2171,6 +2172,7 @@
                 }),
                 (_.tpCache = {}),
                 (_.handleImageComplete = _.handleImageComplete.bind(_(_))),
+                (_.handleImageLoadError = _.handleImageLoadError.bind(_(_))),
                 (_.handleOnMouseMove = _.handleOnMouseMove.bind(_(_))),
                 (_.handleOnMouseOut = _.handleOnMouseOut.bind(_(_))),
                 (_.handleOnMouseOver = _.handleOnMouseOver.bind(_(_))),
@@ -2203,10 +2205,23 @@
                   },
                   {
                     key: "handleImageComplete",
-                    value: function () {
+                    value: function (_) {
                       this.setState({
                         isImageLoading: !1,
-                      });
+                      }),
+                        this.props && this.props.onLoad && this.props.onLoad(_);
+                    },
+                  },
+                  {
+                    key: "handleImageLoadError",
+                    value: function (_) {
+                      this.setState({
+                        isImageLoadingError: !0,
+                        isImageLoading: !1,
+                      }),
+                        this.props &&
+                          this.props.onError &&
+                          this.props.onError(_);
                     },
                   },
                   {
@@ -2422,7 +2437,7 @@
                                 tag: _,
                                 src: _,
                                 onLoad: this.handleImageComplete,
-                                onError: this.handleImageComplete,
+                                onError: this.handleImageLoadError,
                               },
                               _,
                             ),
@@ -2484,6 +2499,8 @@
             imageClassName: _.string,
             overlayClassName: _.string,
             spinner: _.func,
+            onLoad: _.func,
+            onError: _.func,
             src: _.string.isRequired,
             srcZoomed: _.string,
             tag: _.string,
@@ -2498,6 +2515,8 @@
             overlayClassName: null,
             isPinchZoomEnabled: !0,
             spinner: null,
+            onLoad: null,
+            onError: null,
             srcZoomed: null,
             tag: "div",
           }),
@@ -2530,7 +2549,6 @@
           "orientation",
           "slideSize",
           "style",
-          "tabIndex",
           "tag",
           "totalSlides",
           "visibleSlides",
@@ -2624,7 +2642,6 @@
                       _ = (_.onBlur, _.onFocus, _.orientation),
                       _ = _.slideSize,
                       _ = _.style,
-                      _ = _.tabIndex,
                       _ = _.tag,
                       _ = _.totalSlides,
                       _ = (_.visibleSlides, _.isIntrinsicHeight),
@@ -2655,9 +2672,7 @@
                         !_ && "carousel__slide--hidden",
                         _,
                       ]),
-                      _ = _([_.slideInner, "carousel__inner-slide", _]),
-                      _ = this.isVisible() ? 0 : -1,
-                      _ = "number" == typeof _ ? _ : _;
+                      _ = _([_.slideInner, "carousel__inner-slide", _]);
                     return _.createElement(
                       _,
                       _(
@@ -2665,10 +2680,9 @@
                           ref: function (_) {
                             _.tagRef = _;
                           },
-                          tabIndex: _,
                           "aria-selected": this.isVisible(),
                           "aria-label": _,
-                          role: "option",
+                          role: this.props.role,
                           onFocus: this.handleOnFocus,
                           onBlur: this.handleOnBlur,
                           className: _,
@@ -2712,8 +2726,8 @@
             onFocus: _.func,
             orientation: _.orientation.isRequired,
             slideSize: _.number.isRequired,
+            role: _.string,
             style: _.object,
-            tabIndex: _.number,
             tag: _.string,
             totalSlides: _.number.isRequired,
             visibleSlides: _.number.isRequired,
@@ -2730,8 +2744,8 @@
             innerTag: "div",
             onBlur: null,
             onFocus: null,
+            role: "option",
             style: {},
-            tabIndex: null,
             tag: "div",
             isIntrinsicHeight: !1,
           }),
@@ -2821,6 +2835,7 @@
         })(),
         _ = {
           horizontalSlider: "horizontalSlider___281Ls",
+          touchDisabled: "touchDisabled___2qs4y",
           horizontalSliderTray: "horizontalSliderTray___1L-0W",
           verticalSlider: "verticalSlider___34ZFD",
           verticalSliderTray: "verticalSliderTray___267D8",
@@ -2859,7 +2874,6 @@
           "slideTraySize",
           "spinner",
           "style",
-          "tabIndex",
           "totalSlides",
           "touchEnabled",
           "trayProps",
@@ -3029,7 +3043,15 @@
                   {
                     key: "getSliderRef",
                     value: function (_) {
-                      this.sliderTrayElement = _;
+                      if (((this.sliderTrayElement = _), _ && window)) {
+                        var _ = _.closest(".carousel");
+                        _ &&
+                          (this.rtl =
+                            "rtl" ===
+                            window
+                              .getComputedStyle(_, null)
+                              .getPropertyValue("direction"));
+                      }
                     },
                   },
                   {
@@ -3064,22 +3086,23 @@
                     key: "fakeOnDragMove",
                     value: function (_, _) {
                       var _ = this;
-                      this.moveTimer = window.requestAnimationFrame.call(
-                        window,
-                        function () {
-                          __webpack_require__.setState(function (_) {
-                            return {
-                              deltaX: _ - _.startX,
-                              deltaY: _ - _.startY,
-                              preventingVerticalScroll:
-                                Math.abs(_ - _.startY) <=
-                                  _.props.verticalPixelThreshold &&
-                                Math.abs(_ - _.startX) >=
-                                  _.props.horizontalPixelThreshold,
-                            };
-                          });
-                        },
-                      );
+                      window.cancelAnimationFrame.call(window, this.moveTimer),
+                        (this.moveTimer = window.requestAnimationFrame.call(
+                          window,
+                          function () {
+                            __webpack_require__.setState(function (_) {
+                              return {
+                                deltaX: (_ - _.startX) * (_.rtl ? -1 : 1),
+                                deltaY: _ - _.startY,
+                                preventingVerticalScroll:
+                                  Math.abs(_ - _.startY) <=
+                                    _.props.verticalPixelThreshold &&
+                                  Math.abs(_ - _.startX) >=
+                                    _.props.horizontalPixelThreshold,
+                              };
+                            });
+                          },
+                        ));
                     },
                   },
                   {
@@ -3192,10 +3215,6 @@
                       )
                         this.callCallback("onTouchMove", _);
                       else {
-                        window.cancelAnimationFrame.call(
-                          window,
-                          this.moveTimer,
-                        );
                         var _ = _.targetTouches[0];
                         _ &&
                           (this.fakeOnDragMove(_.screenX, _.screenY),
@@ -3439,8 +3458,8 @@
                           _.slideSize),
                         _ = _.slideTraySize,
                         _ = (_.spinner, _.style),
-                        _ = _.tabIndex,
-                        _ = (_.totalSlides, _.touchEnabled, _.trayProps),
+                        _ = (_.totalSlides, _.touchEnabled),
+                        _ = _.trayProps,
                         _ = _.trayTag,
                         _ = _.visibleSlides,
                         _ = _.isIntrinsicHeight,
@@ -3473,6 +3492,7 @@
                           "vertical" === _
                             ? _.verticalSlider
                             : _.horizontalSlider,
+                          !_ && _.touchDisabled,
                           "carousel__slider",
                           "vertical" === _
                             ? "carousel__slider--vertical"
@@ -3500,7 +3520,6 @@
                             : "carousel__slider-tray--horizontal",
                           _,
                         ]),
-                        _ = null !== _ ? _ : 0,
                         _ =
                           (_.dragStep,
                           _.step,
@@ -3531,10 +3550,9 @@
                             className: _,
                             "aria-live": "polite",
                             "aria-label": _,
+                            role: this.props.role,
                             style: _,
-                            tabIndex: _,
                             onKeyDown: this.handleOnKeyDown,
-                            role: "listbox",
                           },
                           _,
                         ),
@@ -3622,12 +3640,12 @@
             orientation: _.orientation.isRequired,
             playDirection: _.direction.isRequired,
             privateUnDisableAnimation: _.bool,
+            role: _.string,
             slideSize: _.number.isRequired,
             slideTraySize: _.number.isRequired,
             spinner: _.func,
             step: _.number.isRequired,
             style: _.object,
-            tabIndex: _.number,
             totalSlides: _.number.isRequired,
             touchEnabled: _.bool.isRequired,
             trayProps: _.shape({
@@ -3661,9 +3679,9 @@
             moveThreshold: 0.1,
             onMasterSpinner: null,
             privateUnDisableAnimation: !1,
+            role: "listbox",
             spinner: null,
             style: {},
-            tabIndex: null,
             trayProps: {},
             trayTag: "div",
             visibleSlides: 1,

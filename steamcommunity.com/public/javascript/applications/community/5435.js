@@ -5,34 +5,34 @@
   [5435],
   {
     55435: (e, t, a) => {
-      a.r(t), a.d(t, { default: () => o });
+      a.r(t), a.d(t, { default: () => i });
       var n = a(83281),
-        u = a(55147),
+        u = a(13826),
         l = a(90626),
-        i = a(19560),
-        r = a(90534);
-      function o(e) {
-        const { appid: t, initialValue: a, debugMode: o } = e,
+        r = a(19560),
+        o = a(90534);
+      function i(e) {
+        const { app: t, initialValue: a, debugMode: i } = e,
           [s, c] = (0, l.useState)(a),
-          d = (0, l.useRef)(null);
+          m = (0, l.useRef)(null);
         return l.createElement(
           n.u.Provider,
-          { value: o },
+          { value: i },
           l.createElement(
-            i.MarketBaseUIRoot,
+            r.MarketBaseUIRoot,
             null,
             l.createElement(
-              r.a,
+              o.a,
               {
                 width: "259px",
-                ref: d,
+                ref: m,
                 position: "relative",
                 style: { zIndex: 402 },
               },
               l.createElement(u.xs, {
                 value: s,
                 onTextChange: c,
-                appid: t,
+                app: t,
                 radius: "none",
                 variant: "default",
                 name: "q",

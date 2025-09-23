@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Nội dung đã gỡ bỏ",
 	"moderation_resolutionstatus_relabelled": "Nội dung đã đổi nhãn",
 	"moderation_resolutionstatus_suspicious": "Tài khoản bị khóa vị nội dung đáng ngờ",
+	"moderation_resolutionstatus_harassmentstrike": "Đình chỉ quyền cộng đồng Steam",
 	"moderation_resolutionstatus_unknown": "Không xác định"
 }`);
     },

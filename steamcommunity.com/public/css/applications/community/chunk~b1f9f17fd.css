@@ -1687,6 +1687,12 @@ span._11TnLmbm2QkVVfCckvEXbJ {
 ._1GRf_aoHjxKYUmND9VwUlY > img {
   padding-left: 10px;
 }
+._2DdeTP--ciAzav0kRw3Irj {
+  pointer-events: none;
+}
+._2DdeTP--ciAzav0kRw3Irj:hover {
+  background: unset;
+}
 ._2UhUFnJsUzO7_DOyLB3-Wz {
   flex-grow: 1;
 }

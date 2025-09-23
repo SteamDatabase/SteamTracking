@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "Hry: %1$s",
 	"Menu_Search": "Vyhledávání",
 	"Menu_Label": "Nabídka obchodu",
+	"Menu_IncludesXGames": "Obsahuje %1$s her",
 	"ItemFlag_InLibrary": "V KNIHOVNĚ",
 	"ItemFlag_OnWishlist": "V SEZNAMU PŘÁNÍ",
 	"ItemFlag_InCart": "V KOŠÍKU",

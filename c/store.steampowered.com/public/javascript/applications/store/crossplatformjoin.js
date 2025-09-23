@@ -47,7 +47,7 @@
       __webpack_require__("chunkid");
       function _(_) {
         const { labelledBy: _ } = _ || {},
-          [__webpack_require__, _] = _.useState(null);
+          [__webpack_require__, _] = _.useState(void 0);
         return {
           headerId: _ || __webpack_require__,
           context: _.useMemo(

@@ -1943,12 +1943,15 @@ html.tablet .saleEventBannerLink {
 	display: flex !important;
 	margin-bottom: unset;
 	box-shadow: var(--gpShadow-Medium);
-}
-
-html.tablet .saleEventBannerLink {
 	margin-bottom: 12px;
+	margin-top: 10px;
+	padding: 0;
+	background: unset;
 }
 
+html.tablet .saleEventBannerLink .event_context {
+	display: none;
+}
 
 
 

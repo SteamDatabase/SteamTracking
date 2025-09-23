@@ -23,14 +23,14 @@
       "use strict";
       a.d(n, {
         mt: () => o,
-        Qs: () => f,
-        o0: () => v.o0,
+        Qs: () => v,
+        o0: () => f.o0,
         eV: () => N.eV,
-        KG: () => v.KG,
-        Ee: () => v.Ee,
+        KG: () => f.KG,
+        Ee: () => f.Ee,
         x_: () => r.x_,
         of: () => m,
-        pY: () => v.pY,
+        pY: () => f.pY,
         EN: () => l.E,
       });
       var t = a(90626),
@@ -49,7 +49,7 @@
       a(28460);
       function c(e) {
         const { labelledBy: n } = e || {},
-          [a, s] = t.useState(null);
+          [a, s] = t.useState(void 0);
         return {
           headerId: n || a,
           context: t.useMemo(() => ({ setHeaderId: s }), []),
@@ -96,7 +96,7 @@
         u = a(7445),
         E = a(76217),
         p = a(88843);
-      function f(e) {
+      function v(e) {
         const { children: n, navID: a, closeModal: s } = e,
           l = t.createRef(),
           r = (e) => (e.stopPropagation(), e.preventDefault(), !0);
@@ -125,7 +125,7 @@
             )
           : t.createElement(t.Fragment, null, n);
       }
-      var v = a(78395),
+      var f = a(78395),
         N = a(10411);
       a(76222);
     },
@@ -144,8 +144,8 @@
         u = a(56545),
         E = a(37403),
         p = a(30470),
-        f = a(22837);
-      let v;
+        v = a(22837);
+      let f;
       const N = 864e5;
       function h(e) {
         return `appinfo_${e}_${p.TS.LANGUAGE}`;
@@ -161,8 +161,8 @@
           queryFn: async () =>
             (function (e, n) {
               return (
-                v ||
-                  (v = new (m())(
+                f ||
+                  (f = new (m())(
                     async (a) => {
                       const t = new Map();
                       (await Promise.all(a.map((e) => n.GetObject(h(e)))))
@@ -171,7 +171,7 @@
                       const s = a.slice().filter((e) => !t.has(e));
                       if (s.length) {
                         const a = u.w.Init(E._z);
-                        a.Body().set_language((0, f.sf)(p.TS.LANGUAGE)),
+                        a.Body().set_language((0, v.sf)(p.TS.LANGUAGE)),
                           a.Body().set_appids(s);
                         const l = await E.BE.GetApps(e, a);
                         if (1 != l.GetEResult()) throw l.GetErrorMessage();
@@ -189,7 +189,7 @@
                     },
                     { cache: !1 },
                   )),
-                v
+                f
               );
             })(n, a).load(e),
           staleTime: N,

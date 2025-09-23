@@ -2721,7 +2721,11 @@
           n = t.GetEventModel().loadedAllLanguages,
           a = t.GetCurEditLanguage();
         return n
-          ? m.createElement(Yt, { ...e, eCurrentEditLanguage: a })
+          ? m.createElement(
+              j.tH,
+              null,
+              m.createElement(Yt, { ...e, eCurrentEditLanguage: a }),
+            )
           : null;
       });
       const Yt = m.memo(function (e) {

@@ -1526,41 +1526,121 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      class _ extends _.Component {
-        OnHighlightRef(_) {
-          _ &&
-            _.scrollIntoView({
-              block: "center",
-            });
-        }
-        render() {
-          const { highlightedName: _ } = this.props;
-          let _ = __webpack_require__("chunkid");
-          return (
-            -1 === _.indexOf(_) && (_.push(_), _.sort()),
-            _.createElement(
+      const _ = JSON.parse(`[
+	"Apex Legends™",
+	"Baldur's Gate 3",
+	"Battlefield™ 6",
+	"Black Desert",
+	"Black Myth: Wukong",
+	"Borderlands 4",
+	"Clair Obscur: Expedition 33",
+	"Counter-Strike 2",
+	"Cronos: The New Dawn",
+	"Crusader Kings III",
+	"Cyberpunk 2077",
+	"Dead by Daylight",
+	"Delta Force",
+	"Destiny 2",
+	"Dota 2",
+	"Dune: Awakening",
+	"Dying Light: The Beast",
+	"EA SPORTS FC™ 26",
+	"ELDEN RING",
+	"ELDEN RING NIGHTREIGN",
+	"Euro Truck Simulator 2",
+	"F1® 25",
+	"FINAL FANTASY XIV Online",
+	"Forza Horizon 5",
+	"Grand Theft Auto V Enhanced",
+	"Grounded 2",
+	"HELLDIVERS™ 2",
+	"Hollow Knight",
+	"Hollow Knight: Silksong",
+	"Killing Floor 3",
+	"Kingdom Come: Deliverance II",
+	"Limbus Company",
+	"Lost Ark",
+	"METAL GEAR SOLID Δ: SNAKE EATER",
+	"Madden NFL 26",
+	"Mafia: The Old Country",
+	"Mage Arena",
+	"Magic: The Gathering Arena",
+	"Marvel Rivals",
+	"NARAKA: BLADEPOINT",
+	"NBA 2K26",
+	"No Man's Sky",
+	"Once Human",
+	"Overwatch® 2",
+	"PEAK",
+	"PUBG: BATTLEGROUNDS",
+	"Path of Exile 2",
+	"R.E.P.O.",
+	"Ready or Not",
+	"Red Dead Redemption 2",
+	"RimWorld",
+	"Rust",
+	"Schedule I",
+	"Shape of Dreams",
+	"Split Fiction",
+	"Stardew Valley",
+	"Street Fighter™ 6",
+	"THE FINALS",
+	"THRONE AND LIBERTY",
+	"Team Fortress 2",
+	"The Elder Scrolls® Online",
+	"The First Descendant",
+	"The Sims™ 4",
+	"Titan Quest II",
+	"Tom Clancy's Rainbow Six® Siege X",
+	"Umamusume: Pretty Derby",
+	"WUCHANG: Fallen Feathers",
+	"Wallpaper Engine",
+	"War Thunder",
+	"Warframe",
+	"Warhammer 40,000: Dawn of War - Definitive Edition",
+	"Warhammer 40,000: Space Marine 2",
+	"Wuthering Waves",
+	"Yu-Gi-Oh! Master Duel",
+	"雀魂麻將(MahjongSoul)"
+]`);
+      function _(_) {
+        const { highlightedName: _ } = _,
+          _ = _.useCallback(
+            (_) =>
+              _ &&
+              _.scrollIntoView({
+                block: "center",
+              }),
+            [],
+          ),
+          _ = _.useMemo(() => {
+            if (-1 !== _.indexOf(_)) return _;
+            {
+              const _ = [..._, _];
+              return _.sort(), _;
+            }
+          }, [_]);
+        return _.createElement(
+          "div",
+          {
+            className: _().GameList,
+          },
+          _.map((_) => {
+            let _ = _ === _;
+            return _.createElement(
               "div",
               {
-                className: _().GameList,
+                key: _,
+                className: (0, _._)(
+                  _().GameListEntry,
+                  _ ? _().Selected : _().Uninstalled,
+                ),
+                ref: _ ? _ : void 0,
               },
-              _.map((_) => {
-                let _ = _ === _;
-                return _.createElement(
-                  "div",
-                  {
-                    key: _,
-                    className: (0, _._)(
-                      _().GameListEntry,
-                      _ ? _().Selected : _().Uninstalled,
-                    ),
-                    ref: _ ? this.OnHighlightRef : void 0,
-                  },
-                  _,
-                );
-              }),
-            )
-          );
-        }
+              _,
+            );
+          }),
+        );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1997,86 +2077,6 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnImageError", null);
-    },
-    chunkid: (module) => {
-      "use strict";
-      module.exports = JSON.parse(`[
-	"A Hat in Time",
-	"A Plague Tale: Innocence",
-	"ARK: Survival Evolved",
-	"Arma 3",
-	"Assassin's Creed® Odyssey",
-	"Black Desert Online",
-	"Borderlands 2",
-	"Borderlands Game of the Year",
-	"Borderlands: The Pre-Sequel",
-	"Cities: Skylines",
-	"Conan Exiles",
-	"Counter-Strike: Global Offensive",
-	"Crusader Kings II",
-	"DARK SOULS™ III",
-	"Dead by Daylight",
-	"Devil May Cry 5",
-	"Divinity: Original Sin 2 - Definitive Edition",
-	"Don't Starve Together",
-	"Dota 2",
-	"Dying Light",
-	"Euro Truck Simulator 2",
-	"FINAL FANTASY XIV Online",
-	"Factorio",
-	"Fallout 4",
-	"Far Cry® 5",
-	"Farming Simulator 19",
-	"Football Manager 2019",
-	"Forager",
-	"Grand Theft Auto V",
-	"Grim Dawn",
-	"Hearts of Iron IV",
-	"House Flipper",
-	"Human: Fall Flat",
-	"Imperator: Rome",
-	"MONSTER HUNTER: WORLD",
-	"MORDHAU",
-	"Mortal Kombat 11",
-	"NBA 2K19",
-	"No Man's Sky",
-	"Outward",
-	"PLAYERUNKNOWN'S BATTLEGROUNDS",
-	"Paladins®",
-	"Path of Exile",
-	"Planet Coaster",
-	"RAGE 2",
-	"RESIDENT EVIL 2 / BIOHAZARD RE:2",
-	"RimWorld",
-	"Risk of Rain 2",
-	"Rocket League®",
-	"Rust",
-	"SMITE®",
-	"Sekiro™: Shadows Die Twice",
-	"Sid Meier’s Civilization® VI",
-	"Stardew Valley",
-	"Stellaris",
-	"Surviving Mars",
-	"Team Fortress 2",
-	"The Elder Scrolls V: Skyrim Special Edition",
-	"The Elder Scrolls® Online",
-	"The Forest",
-	"The Witcher® 3: Wild Hunt",
-	"Tom Clancy's Ghost Recon® Wildlands",
-	"Tom Clancy's Rainbow Six® Siege",
-	"Total War: THREE KINGDOMS",
-	"Total War: WARHAMMER",
-	"Total War: WARHAMMER II",
-	"Totally Accurate Battle Simulator",
-	"Tropico 6",
-	"UBOAT",
-	"War Thunder",
-	"Warframe",
-	"Watch_Dogs® 2",
-	"World of Warships",
-	"XCOM® 2",
-	"Yu-Gi-Oh! Duel Links"
-]`);
     },
   },
 ]);

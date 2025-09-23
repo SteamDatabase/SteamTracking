@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "ігри: %1$s",
 	"Menu_Search": "Пошук",
 	"Menu_Label": "Меню крамниці",
+	"Menu_IncludesXGames": "Ігор: %1$s",
 	"ItemFlag_InLibrary": "У БІБЛІОТЕЦІ",
 	"ItemFlag_OnWishlist": "У СПИСКУ БАЖАНОГО",
 	"ItemFlag_InCart": "У КОШИКУ",

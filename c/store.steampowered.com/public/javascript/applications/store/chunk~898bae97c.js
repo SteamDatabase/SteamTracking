@@ -6014,7 +6014,11 @@
             );
           },
           _ = (0, _._)(() => _._.Get().BIsConnected());
-        if (_) return (0, _._)(_, _._.k_eCommunityAdminPage);
+        if (_)
+          return _.createElement(_._, {
+            eventModel: _,
+            route: _._.k_eCommunityAdminPage,
+          });
         const _ = _ == _._.k_EEventStateVisible,
           _ = _ == _._.k_EEventStateStaged;
         if ((_.can_edit || _.support_user) && !_ && !_) {

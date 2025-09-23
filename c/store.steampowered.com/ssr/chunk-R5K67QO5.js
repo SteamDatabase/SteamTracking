@@ -486,12 +486,21 @@ function _(_, _) {
 function _(_, _, _) {
   _(_, _, _, "apply_user_filters", "user_filter_failure");
 }
+function _(_) {
+  return _
+    ? "appid" in _ && !_.appid
+      ? (_(!1, "Invalid appid passed to useStoreItem"), !1)
+      : "bundleid" in _ && !_.bundleid
+        ? (_(!1, "Invalid bundleid passed to useStoreItem"), !1)
+        : !0
+    : !1;
+}
 function _(_, _, _, _) {
   return {
     queryKey: _(_, _),
     queryFn: async () => (await _(_, _, _))[_] || null,
     staleTime: 360 * 60 * 1e3,
-    enabled: !!_,
+    enabled: _(_),
   };
 }
 function _(_, _, _, _, _) {
@@ -502,7 +511,7 @@ function _(_, _) {
     queryKey: _(_, "default_info"),
     queryFn: async () => _(await _(_, _, "default_info")),
     staleTime: 360 * 60 * 1e3,
-    enabled: !!_,
+    enabled: _(_),
   };
 }
 function _(_, _) {

@@ -9,8 +9,6 @@
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -19,31 +17,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2ZfecHo99JCqJlsQwW-w_T,
-._1Qkju8DkEDxfJrSRSvE60X {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;

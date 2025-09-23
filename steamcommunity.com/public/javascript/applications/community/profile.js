@@ -34,6 +34,7 @@
         AvatarRowSpacer: "_3g0nrYJivLhKmdWlHk1uhD",
         AvatarPreview: "_29CGQrIvjYllKwVQKe8d8R",
         Large: "_1aa4CwlUeZE1tRZGOsRPx9",
+        ExpandAvatarsButton: "_3PolQ91t3Uohfvr4beUAM9",
         FramePreview: "_16w1DqxiJ7Hou6al4RGELE",
         DefaultAvatarFrame: "Z3REHSppX48KICnAjjh90",
         DefaultAvatarFrameContent: "_2TBs_xzgkuwXPkgIBiITOJ",
@@ -278,7 +279,7 @@
     },
     84524: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { ProfileEditRoutes: () => $a, default: () => Za });
+      a.r(t), a.d(t, { ProfileEditRoutes: () => er, default: () => ar });
       var r = a(39821),
         i = a(34629),
         s = a(41735),
@@ -859,7 +860,7 @@
                     });
                   }))
               : console.error(
-                  "Error when calling CommunityService.GetAvatarHistory: EResult=${msgResponse.GetEResult()}",
+                  `Error when calling CommunityService.GetAvatarHistory: EResult=${t.GetEResult()}`,
                 ),
             !!this.m_rgPreviousAvatars
           );
@@ -1230,10 +1231,10 @@
       function j(e) {
         return Z(e.image_small);
       }
-      function Q(e) {
+      function $(e) {
         return Z(e.image_large);
       }
-      function $(e) {
+      function Q(e) {
         return (function (e, t, a) {
           return e
             ? e.image_large
@@ -2414,8 +2415,10 @@
         pe = a(35471),
         ve = a(68255),
         _e = a(73745),
-        ge = a(45301);
-      let fe = class extends d.Component {
+        ge = a(8527),
+        fe = a(88942),
+        Pe = a(45301);
+      let Ee = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
         }
@@ -2481,13 +2484,13 @@
           if (e)
             return d.createElement(
               "div",
-              { className: ge.AvatarCollection },
+              { className: Pe.AvatarCollection },
               d.createElement(
-                Ee,
+                ye,
                 null,
                 (0, p.we)("#Profile_Edit_Avatar_YourAvatars"),
               ),
-              d.createElement(Se, {
+              d.createElement(we, {
                 rgAnimatedAvatars: this.m_rgAvatars,
                 OGGAvatars: a,
                 AvatarHistory: r,
@@ -2500,55 +2503,55 @@
             let e = this.GetTopAvatars();
             return d.createElement(
               "div",
-              { className: ge.AvatarCollection },
+              { className: Pe.AvatarCollection },
               d.createElement(
-                Ee,
+                ye,
                 null,
                 (0, p.we)("#Profile_Edit_Avatar_YourAvatars"),
               ),
               d.createElement(
                 "div",
-                { className: ge.AvatarCollectionSingleRowWrapper },
+                { className: Pe.AvatarCollectionSingleRowWrapper },
                 d.createElement(
                   "div",
-                  { className: ge.AvatarCollectionSingleRow },
+                  { className: Pe.AvatarCollectionSingleRow },
                   e.map((e) =>
                     "communityitemid" in e
                       ? d.createElement(
                           d.Fragment,
                           { key: e.communityitemid },
-                          d.createElement(Ce, {
+                          d.createElement(Se, {
                             avatar: e,
                             onSelected: this.SelectAnimatedAvatar,
                             large: !0,
                           }),
                           d.createElement("div", {
-                            className: ge.AvatarRowSpacer,
+                            className: Pe.AvatarRowSpacer,
                           }),
                         )
                       : "timestamp" in e
                         ? d.createElement(
                             d.Fragment,
                             { key: e.avatar_hash },
-                            d.createElement(ye, {
+                            d.createElement(Ae, {
                               hash: e.avatar_hash,
                               onSelected: this.SelectPreviousAvatar,
                               large: !0,
                             }),
                             d.createElement("div", {
-                              className: ge.AvatarRowSpacer,
+                              className: Pe.AvatarRowSpacer,
                             }),
                           )
                         : d.createElement(
                             d.Fragment,
                             { key: e.avatar_hash },
-                            d.createElement(ye, {
+                            d.createElement(Ae, {
                               hash: e.avatar_hash,
                               onSelected: this.SelectOGGAvatar,
                               large: !0,
                             }),
                             d.createElement("div", {
-                              className: ge.AvatarRowSpacer,
+                              className: Pe.AvatarRowSpacer,
                             }),
                           ),
                   ),
@@ -2556,7 +2559,7 @@
               ),
               d.createElement(
                 "div",
-                { className: ge.ExpandButtonContainer },
+                { className: Pe.ExpandButtonContainer },
                 d.createElement(
                   ve.$n,
                   { onClick: t },
@@ -2567,18 +2570,18 @@
           }
         }
       };
-      (0, i.Cg)([_e.oI], fe.prototype, "SelectAnimatedAvatar", null),
-        (0, i.Cg)([_e.oI], fe.prototype, "SelectOGGAvatar", null),
-        (0, i.Cg)([_e.oI], fe.prototype, "SelectPreviousAvatar", null),
-        (fe = (0, i.Cg)([c.PA], fe));
-      const Pe = fe,
-        Ee = ({ children: e }) =>
+      (0, i.Cg)([_e.oI], Ee.prototype, "SelectAnimatedAvatar", null),
+        (0, i.Cg)([_e.oI], Ee.prototype, "SelectOGGAvatar", null),
+        (0, i.Cg)([_e.oI], Ee.prototype, "SelectPreviousAvatar", null),
+        (Ee = (0, i.Cg)([c.PA], Ee));
+      const Ce = Ee,
+        ye = ({ children: e }) =>
           d.createElement(
             "div",
-            { className: ge.AvatarCollectionHeader },
-            d.createElement("div", { className: ge.AvatarCollectionName }, e),
+            { className: Pe.AvatarCollectionHeader },
+            d.createElement("div", { className: Pe.AvatarCollectionName }, e),
           );
-      class Ce extends d.Component {
+      class Se extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bHovered: !1 });
         }
@@ -2597,26 +2600,26 @@
           return d.createElement(
             "div",
             {
-              className: (0, u.A)(ge.AvatarPreview, ge.Animated, t && ge.Large),
+              className: (0, u.A)(Pe.AvatarPreview, Pe.Animated, t && Pe.Large),
               onMouseEnter: this.OnMouseEnter,
               onMouseLeave: this.OnMouseLeave,
               onClick: this.onSelected,
             },
             d.createElement("img", {
-              src: a || ze ? j(e) : Q(e),
+              src: a || Ve ? j(e) : $(e),
               loading: "lazy",
             }),
           );
         }
       }
-      (0, i.Cg)([_e.oI], Ce.prototype, "OnMouseEnter", null),
-        (0, i.Cg)([_e.oI], Ce.prototype, "OnMouseLeave", null),
-        (0, i.Cg)([_e.oI], Ce.prototype, "onSelected", null);
-      const ye = ({ hash: e, onSelected: t, large: a }) =>
+      (0, i.Cg)([_e.oI], Se.prototype, "OnMouseEnter", null),
+        (0, i.Cg)([_e.oI], Se.prototype, "OnMouseLeave", null),
+        (0, i.Cg)([_e.oI], Se.prototype, "onSelected", null);
+      const Ae = ({ hash: e, onSelected: t, large: a }) =>
           d.createElement(
             "div",
             {
-              className: (0, u.A)(ge.AvatarPreview, ge.Static, a && ge.Large),
+              className: (0, u.A)(Pe.AvatarPreview, Pe.Static, a && Pe.Large),
               onClick: () => t(e),
             },
             d.createElement("img", {
@@ -2624,7 +2627,7 @@
               loading: "lazy",
             }),
           ),
-        Se = (0, c.PA)(
+        we = (0, c.PA)(
           ({
             rgAnimatedAvatars: e,
             OGGAvatars: t,
@@ -2638,15 +2641,15 @@
             return d.createElement(
               d.Fragment,
               null,
-              d.createElement(Ae, { rgAnimatedAvatars: e, onSelected: r }),
-              d.createElement(we, { rgAvatars: n, onSelected: s }),
-              d.createElement(Ie, {
+              d.createElement(Ie, { rgAnimatedAvatars: e, onSelected: r }),
+              d.createElement(Ge, { rgAvatars: n, onSelected: s }),
+              d.createElement(Ne, {
                 rgAvatars: o,
                 onSelected: i,
                 title: (0, p.we)("#Profile_Edit_YourGameAvatars"),
               }),
               o.length < 20 &&
-                d.createElement(Ie, {
+                d.createElement(Ne, {
                   rgAvatars: t.GetOtherGameAvatars(),
                   onSelected: i,
                   title: (0, p.we)("#Profile_Edit_MoreGameAvatars"),
@@ -2654,21 +2657,21 @@
             );
           },
         ),
-        Ae = ({ rgAnimatedAvatars: e, onSelected: t }) =>
+        Ie = ({ rgAnimatedAvatars: e, onSelected: t }) =>
           e.length
             ? d.createElement(
                 "div",
-                { className: (0, u.A)(ge.CollectionGroup, ge.Primary) },
+                { className: (0, u.A)(Pe.CollectionGroup, Pe.Primary) },
                 d.createElement(
                   "div",
-                  { className: ge.Title },
+                  { className: Pe.Title },
                   (0, p.we)("#Profile_Edit_PurchasedFromRewardsStore"),
                 ),
                 d.createElement(
                   "div",
-                  { className: ge.CollectionGroupAvatars },
+                  { className: Pe.CollectionGroupAvatars },
                   e.map((e) =>
-                    d.createElement(Ce, {
+                    d.createElement(Se, {
                       key: e.communityitemid,
                       avatar: e,
                       onSelected: t,
@@ -2677,21 +2680,21 @@
                 ),
               )
             : null,
-        we = (0, c.PA)(({ rgAvatars: e, onSelected: t }) =>
+        Ge = (0, c.PA)(({ rgAvatars: e, onSelected: t }) =>
           e.length
             ? d.createElement(
                 "div",
-                { className: (0, u.A)(ge.CollectionGroup, ge.Primary) },
+                { className: (0, u.A)(Pe.CollectionGroup, Pe.Primary) },
                 d.createElement(
                   "div",
-                  { className: ge.Title },
+                  { className: Pe.Title },
                   (0, p.we)("#Profile_Edit_YourPreviousAvatars"),
                 ),
                 d.createElement(
                   "div",
-                  { className: ge.CollectionGroupAvatars },
+                  { className: Pe.CollectionGroupAvatars },
                   e.map((e) =>
-                    d.createElement(ye, {
+                    d.createElement(Ae, {
                       key: e.avatar_hash,
                       hash: e.avatar_hash,
                       onSelected: t,
@@ -2701,36 +2704,78 @@
               )
             : null,
         ),
-        Ie = ({ rgAvatars: e, onSelected: t, title: a }) =>
+        Ne = ({ rgAvatars: e, onSelected: t, title: a }) =>
           e.length
             ? d.createElement(
                 "div",
-                { className: (0, u.A)(ge.CollectionGroup, ge.Primary) },
-                d.createElement("div", { className: ge.Title }, a),
+                { className: (0, u.A)(Pe.CollectionGroup, Pe.Primary) },
+                d.createElement("div", { className: Pe.Title }, a),
                 e.map((e) =>
-                  d.createElement(Ge, { key: e.appid, game: e, onSelected: t }),
+                  d.createElement(Be, { key: e.appid, game: e, onSelected: t }),
                 ),
               )
             : null,
-        Ge = ({ game: e, onSelected: t }) =>
-          d.createElement(
+        Be = function (e) {
+          const { game: t, onSelected: a } = e,
+            [r, i] = d.useState(!1),
+            { isLoading: s, data: n } =
+              ((o = t.appid),
+              (l = r),
+              (0, fe.I)({
+                queryKey: ["OGGAvatars", o],
+                queryFn: async () => {
+                  const e = await fetch(
+                    `${ge.TS.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${o}`,
+                  );
+                  return await e.json();
+                },
+                enabled: l,
+              }));
+          var o, l;
+          let m;
+          m =
+            r && n
+              ? n
+              : t.avatar_count == t.avatars.length
+                ? t.avatars
+                : t.avatars.slice(0, 5);
+          const c = t.avatar_count - m.length;
+          return d.createElement(
             "div",
-            { className: ge.CollectionGroup },
-            d.createElement("div", { className: ge.Title }, e.name),
+            { className: Pe.CollectionGroup },
+            d.createElement("div", { className: Pe.Title }, t.name),
             d.createElement(
               "div",
-              { className: ge.CollectionGroupAvatars },
-              e.avatars.map((e) =>
-                d.createElement(ye, {
+              { className: Pe.CollectionGroupAvatars },
+              m.map((e) =>
+                d.createElement(Ae, {
                   key: e.avatar_hash,
                   hash: e.avatar_hash,
-                  onSelected: t,
+                  onSelected: a,
                 }),
               ),
+              (!r || s) &&
+                c > 0 &&
+                d.createElement(
+                  "button",
+                  {
+                    type: "button",
+                    className: (0, u.A)(
+                      Pe.AvatarPreview,
+                      Pe.ExpandAvatarsButton,
+                      Pe.Static,
+                    ),
+                    disabled: s,
+                    onClick: s ? void 0 : () => i(!0),
+                  },
+                  "+",
+                  c.toLocaleString(),
+                ),
             ),
           );
-      var Ne = a(84811);
-      class Be extends d.Component {
+        };
+      var be = a(84811);
+      class Le extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
         }
@@ -2754,16 +2799,16 @@
           if (e)
             return d.createElement(
               "div",
-              { className: ge.AvatarCollection },
+              { className: Pe.AvatarCollection },
               d.createElement(
-                Ee,
+                ye,
                 null,
                 (0, p.we)("#Profile_Edit_Avatar_YourFrames"),
               ),
               d.createElement(
-                Ne.tH,
+                be.tH,
                 null,
-                d.createElement(Re, {
+                d.createElement(Fe, {
                   rgFrames: this.m_rgFrames,
                   ProfileItems: t,
                   onSelected: this.SelectFrame,
@@ -2775,43 +2820,43 @@
               r = this.m_rgFrames.length > 2;
             return d.createElement(
               "div",
-              { className: ge.AvatarCollection },
+              { className: Pe.AvatarCollection },
               d.createElement(
-                Ee,
+                ye,
                 null,
                 (0, p.we)("#Profile_Edit_Avatar_YourFrames"),
               ),
               d.createElement(
                 "div",
-                { className: ge.AvatarCollectionSingleRowWrapper },
+                { className: Pe.AvatarCollectionSingleRowWrapper },
                 d.createElement(
                   "div",
                   {
                     className: (0, u.A)(
-                      ge.AvatarCollectionSingleRow,
-                      ge.ThreeColumns,
+                      Pe.AvatarCollectionSingleRow,
+                      Pe.ThreeColumns,
                     ),
                   },
-                  d.createElement(Le, {
+                  d.createElement(ke, {
                     onSelected: this.SelectFrame,
                     large: !0,
                     ProfileItems: t,
                   }),
-                  d.createElement("div", { className: ge.AvatarRowSpacer }),
+                  d.createElement("div", { className: Pe.AvatarRowSpacer }),
                   d.createElement(
-                    Ne.tH,
+                    be.tH,
                     null,
                     e.map((e) =>
                       d.createElement(
                         d.Fragment,
                         { key: e.communityitemid },
-                        d.createElement(be, {
+                        d.createElement(Re, {
                           frame: e,
                           onSelected: this.SelectFrame,
                           large: !0,
                         }),
                         d.createElement("div", {
-                          className: ge.AvatarRowSpacer,
+                          className: Pe.AvatarRowSpacer,
                         }),
                       ),
                     ),
@@ -2821,7 +2866,7 @@
               r &&
                 d.createElement(
                   "div",
-                  { className: ge.ExpandButtonContainer },
+                  { className: Pe.ExpandButtonContainer },
                   d.createElement(
                     ve.$n,
                     { onClick: a },
@@ -2832,8 +2877,8 @@
           }
         }
       }
-      (0, i.Cg)([_e.oI], Be.prototype, "SelectFrame", null);
-      class be extends d.Component {
+      (0, i.Cg)([_e.oI], Le.prototype, "SelectFrame", null);
+      class Re extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bHovered: !1 });
         }
@@ -2852,25 +2897,25 @@
           return d.createElement(
             "div",
             {
-              className: (0, u.A)(ge.FramePreview, t && ge.Large),
+              className: (0, u.A)(Pe.FramePreview, t && Pe.Large),
               onMouseEnter: this.OnMouseEnter,
               onMouseLeave: this.OnMouseLeave,
               onClick: this.onSelected,
             },
-            d.createElement("img", { src: a || ze ? j(e) : Q(e) }),
+            d.createElement("img", { src: a || Ve ? j(e) : $(e) }),
           );
         }
       }
-      (0, i.Cg)([_e.oI], be.prototype, "OnMouseEnter", null),
-        (0, i.Cg)([_e.oI], be.prototype, "OnMouseLeave", null),
-        (0, i.Cg)([_e.oI], be.prototype, "onSelected", null);
-      const Le = (0, c.PA)(({ onSelected: e, ProfileItems: t, large: a }) => {
+      (0, i.Cg)([_e.oI], Re.prototype, "OnMouseEnter", null),
+        (0, i.Cg)([_e.oI], Re.prototype, "OnMouseLeave", null),
+        (0, i.Cg)([_e.oI], Re.prototype, "onSelected", null);
+      const ke = (0, c.PA)(({ onSelected: e, ProfileItems: t, large: a }) => {
           let r = t.GetProfileModifierAvatarFrameURL();
           return r
             ? d.createElement(
                 "div",
                 {
-                  className: (0, u.A)(ge.FramePreview, a && ge.Large),
+                  className: (0, u.A)(Pe.FramePreview, a && Pe.Large),
                   onClick: () => e(null),
                 },
                 d.createElement("img", { src: r }),
@@ -2879,36 +2924,36 @@
                 "div",
                 {
                   className: (0, u.A)(
-                    ge.FramePreview,
-                    a && ge.Large,
-                    ge.DefaultAvatarFramePreview,
+                    Pe.FramePreview,
+                    a && Pe.Large,
+                    Pe.DefaultAvatarFramePreview,
                   ),
                   onClick: () => e(null),
                 },
                 d.createElement(
                   "div",
-                  { className: ge.DefaultAvatarFrame },
+                  { className: Pe.DefaultAvatarFrame },
                   d.createElement("div", {
-                    className: ge.DefaultAvatarFrameContent,
+                    className: Pe.DefaultAvatarFrameContent,
                   }),
                 ),
               );
         }),
-        Re = ({ rgFrames: e, ProfileItems: t, onSelected: a }) =>
+        Fe = ({ rgFrames: e, ProfileItems: t, onSelected: a }) =>
           d.createElement(
             "div",
-            { className: (0, u.A)(ge.CollectionGroup, ge.Primary) },
+            { className: (0, u.A)(Pe.CollectionGroup, Pe.Primary) },
             d.createElement(
               "div",
-              { className: ge.Title },
+              { className: Pe.Title },
               (0, p.we)("#Profile_Edit_PurchasedFromRewardsStore"),
             ),
             d.createElement(
               "div",
-              { className: ge.CollectionGroupAvatars },
-              d.createElement(Le, { onSelected: a, ProfileItems: t }),
+              { className: Pe.CollectionGroupAvatars },
+              d.createElement(ke, { onSelected: a, ProfileItems: t }),
               e.map((e) =>
-                d.createElement(be, {
+                d.createElement(Re, {
                   key: e.communityitemid,
                   frame: e,
                   onSelected: a,
@@ -2916,23 +2961,23 @@
               ),
             ),
           );
-      var ke = a(31270),
-        Fe = (a(9154), a(91675));
-      const Te = ({ title: e, className: t, children: a }) =>
+      var Te = a(31270),
+        Me = (a(9154), a(91675));
+      const Oe = ({ title: e, className: t, children: a }) =>
           d.createElement(
             "div",
-            { className: (0, u.A)(ke.ProfileBox, t) },
-            d.createElement("div", { className: ke.ProfileBoxTitle }, e),
+            { className: (0, u.A)(Te.ProfileBox, t) },
+            d.createElement("div", { className: Te.ProfileBoxTitle }, e),
             d.createElement(
               "div",
-              { className: ke.ProfileBoxContent },
-              d.createElement(Ne.tH, null, a),
+              { className: Te.ProfileBoxContent },
+              d.createElement(be.tH, null, a),
             ),
           ),
-        Me = ({ onSave: e, onCancel: t, disabled: a }) =>
+        De = ({ onSave: e, onCancel: t, disabled: a }) =>
           d.createElement(
             "div",
-            { className: ke.SaveCancelButtons },
+            { className: Te.SaveCancelButtons },
             d.createElement(
               ve.jn,
               { onClick: e, disabled: a },
@@ -2940,10 +2985,10 @@
             ),
             d.createElement(ve.$n, { onClick: t }, (0, p.we)("#Button_Cancel")),
           );
-      function Oe(e) {
+      function He(e) {
         return (0, p.we)(e).replace(/%s/g, "");
       }
-      class De extends d.Component {
+      class xe extends d.Component {
         constructor() {
           super(...arguments),
             (this.state = { activeItem: void 0, bSaving: !1 });
@@ -2976,34 +3021,34 @@
             { activeItem: s, bSaving: n } = this.state;
           return d.createElement(
             ve.nB,
-            { className: (0, u.A)(ke.PickerPreviewDialog, a) },
+            { className: (0, u.A)(Te.PickerPreviewDialog, a) },
             d.createElement(ce.XG, {
               when: !i.fnIsSameItem(s, this.props.ActiveItem),
               message: (0, p.we)("#Profile_Edit_UnsavedChangesWarning"),
             }),
             d.createElement(
               "div",
-              { className: ke.PickerPreviewBody },
+              { className: Te.PickerPreviewBody },
               d.createElement(
                 "div",
-                { className: ke.PickerPreview },
-                d.createElement(Ne.tH, null, r(s)),
+                { className: Te.PickerPreview },
+                d.createElement(be.tH, null, r(s)),
               ),
               e && d.createElement(ve.Y9, null, e),
               d.createElement(
                 "div",
-                { className: ke.PickerPreviewItems },
+                { className: Te.PickerPreviewItems },
                 d.createElement(
-                  Ne.tH,
+                  be.tH,
                   null,
-                  d.createElement(xe, {
+                  d.createElement(qe, {
                     ...i,
                     onItemSelected: this.OnItemSelected,
                     activeItem: s,
                   }),
                 ),
               ),
-              d.createElement(Me, {
+              d.createElement(De, {
                 onSave: this.CommitChanges,
                 onCancel: this.RevertChanges,
                 disabled: n,
@@ -3012,13 +3057,13 @@
           );
         }
       }
-      function He(e) {
+      function Ue(e) {
         return e ? e.toLocaleLowerCase().replace(/\W/g, "") : "";
       }
-      (0, i.Cg)([_e.oI], De.prototype, "CommitChanges", null),
-        (0, i.Cg)([_e.oI], De.prototype, "RevertChanges", null),
-        (0, i.Cg)([_e.oI], De.prototype, "OnItemSelected", null);
-      class xe extends d.Component {
+      (0, i.Cg)([_e.oI], xe.prototype, "CommitChanges", null),
+        (0, i.Cg)([_e.oI], xe.prototype, "RevertChanges", null),
+        (0, i.Cg)([_e.oI], xe.prototype, "OnItemSelected", null);
+      class qe extends d.Component {
         constructor() {
           super(...arguments),
             (this.state = { strSearch: "" }),
@@ -3036,7 +3081,7 @@
             this.m_fnSearchFieldsDisposer = (0, o.fm)(() => {
               (this.m_rgSearchableItems = r.map((e, r) => ({
                 key: "" + r,
-                normalized_search_strings: t && t(e).map(He),
+                normalized_search_strings: t && t(e).map(Ue),
                 OnSelected: () => {
                   a(e);
                 },
@@ -3113,14 +3158,14 @@
           return d.createElement(
             "div",
             {
-              className: (0, u.A)(ke.ItemPicker, s),
+              className: (0, u.A)(Te.ItemPicker, s),
               ref: this.m_refRootDiv,
               style: c,
             },
             a &&
               d.createElement(
                 "div",
-                { className: ke.ItemPickeFilter },
+                { className: Te.ItemPickeFilter },
                 d.createElement(ve.pd, {
                   value: n,
                   label: (0, p.we)("#ItemPicker_Filter"),
@@ -3130,16 +3175,16 @@
               ),
             d.createElement(
               "div",
-              { className: ke.ItemPickerCtn },
+              { className: Te.ItemPickerCtn },
               d.createElement(
                 "div",
-                { className: ke.ItemPickerList },
+                { className: Te.ItemPickerList },
                 this.m_rgSearchableItems.map((a) =>
                   m && !m(a)
                     ? null
                     : a.item
                       ? d.createElement(
-                          Ne.tH,
+                          be.tH,
                           { key: a.key },
                           d.createElement(e, {
                             Item: a.item,
@@ -3148,7 +3193,7 @@
                           }),
                         )
                       : d.createElement(
-                          Ne.tH,
+                          be.tH,
                           { key: a.key },
                           t({ onSelected: a.OnSelected, active: !r }),
                         ),
@@ -3158,12 +3203,12 @@
           );
         }
       }
-      (0, i.Cg)([_e.oI], xe.prototype, "OnSearchChange", null);
-      const Ue = ({ strHTMLError: e }) =>
+      (0, i.Cg)([_e.oI], qe.prototype, "OnSearchChange", null);
+      const We = ({ strHTMLError: e }) =>
           e
             ? d.createElement(
                 "div",
-                { className: ke.HTMLErrorBox },
+                { className: Te.HTMLErrorBox },
                 d.createElement(
                   "b",
                   null,
@@ -3171,12 +3216,12 @@
                   " ",
                 ),
                 d.createElement("span", {
-                  className: ke.HTMLError,
+                  className: Te.HTMLError,
                   dangerouslySetInnerHTML: { __html: e },
                 }),
               )
             : null,
-        qe = ({
+        ze = ({
           strCooldownLabel: e,
           rtCooldownEnd: t,
           strCooldownDescHTML: a,
@@ -3186,44 +3231,44 @@
           const i = Math.max(0, t - Date.now() / 1e3);
           return d.createElement(
             "div",
-            { className: ke.CooldownNotice },
+            { className: Te.CooldownNotice },
             d.createElement(
               "div",
-              { className: ke.HTMLErrorBox },
+              { className: Te.HTMLErrorBox },
               d.createElement(
                 "div",
-                { className: ke.ErrorMessage },
+                { className: Te.ErrorMessage },
                 e,
                 " ",
-                (0, p.Hq)(i, { eSuffix: Fe.a8.None, bForceSingleUnits: !0 }),
+                (0, p.Hq)(i, { eSuffix: Me.a8.None, bForceSingleUnits: !0 }),
                 " ",
               ),
               d.createElement("div", {
                 dangerouslySetInnerHTML: { __html: a },
               }),
             ),
-            d.createElement("div", { className: ke.DisabledInputCtn }, r),
+            d.createElement("div", { className: Te.DisabledInputCtn }, r),
           );
         },
-        We = d.lazy(() =>
+        Ye = d.lazy(() =>
           Promise.all([a.e(4922), a.e(5278)]).then(a.bind(a, 66884)),
         ),
-        ze = !0;
-      let Ye = class extends d.Component {
+        Ve = !0;
+      let Xe = class extends d.Component {
         render() {
-          return d.createElement(Ke, { ...this.props });
+          return d.createElement($e, { ...this.props });
         }
       };
-      Ye = (0, i.Cg)([c.PA], Ye);
-      const Ve = Ye;
-      class Xe extends d.Component {
+      Xe = (0, i.Cg)([c.PA], Xe);
+      const Ke = Xe;
+      class je extends d.Component {
         componentDidMount() {
           document
             .querySelector(".profile_small_header_avatar")
             .classList.add(pe.HideDefaultAvatar),
             (this.m_disposer = (0, o.fm)(() => {
               const { Profile: e, ProfileItems: t } = this.props,
-                a = Qe(
+                a = Je(
                   e.GetCommittedAvatarHash(),
                   t.GetCommittedEquippedAvatar(),
                   "small",
@@ -3243,12 +3288,12 @@
         render() {
           const { Profile: e, ProfileItems: t } = this.props;
           return ue.createPortal(
-            d.createElement(et, { Profile: e, ProfileItems: t }),
+            d.createElement(at, { Profile: e, ProfileItems: t }),
             document.querySelector(".profile_small_header_avatar"),
           );
         }
       }
-      class Ke extends d.Component {
+      class $e extends d.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -3379,22 +3424,22 @@
                 null,
                 (0, p.we)("#Profile_Edit_Avatar_Instructions"),
               ),
-              d.createElement(Ue, {
+              d.createElement(We, {
                 strHTMLError: this.state.bHTMLError
                   ? (0, p.we)("#ConnectionTrouble_FailedToConnect")
                   : "",
               }),
               d.createElement(
-                je,
+                Qe,
                 { Profile: e },
                 d.createElement(
                   "div",
                   { className: pe.AvatarDialogTop },
-                  d.createElement($e, { Profile: e, ProfileItems: t }),
+                  d.createElement(Ze, { Profile: e, ProfileItems: t }),
                   d.createElement(
                     "div",
                     { className: pe.AvatarDialogUploadArea },
-                    d.createElement(Ze, {
+                    d.createElement(tt, {
                       OnAvatarSelected: this.OnUploadSelected,
                       disabled: this.state.bSaving,
                       strError: this.state.strUploadError,
@@ -3410,25 +3455,25 @@
                   d.createElement(
                     d.Suspense,
                     { fallback: null },
-                    d.createElement(We, { imageData: i, ref: this.cropRef }),
+                    d.createElement(Ye, { imageData: i, ref: this.cropRef }),
                   ),
                 !i &&
                   !n &&
-                  d.createElement(Pe, {
+                  d.createElement(Ce, {
                     ...l,
                     bExpanded: s,
                     fnOnExpand: this.OnShowAllAvatarsClicked,
                   }),
                 !i &&
                   !s &&
-                  d.createElement(Be, {
+                  d.createElement(Le, {
                     ...l,
                     bExpanded: n,
                     fnOnExpand: this.OnShowAllFramesClicked,
                   }),
               ),
             ),
-            d.createElement(Me, {
+            d.createElement(De, {
               onSave: this.OnSave,
               onCancel: this.RevertChanges,
               disabled: o || e.BIsAvatarChangeOnCooldown(),
@@ -3436,18 +3481,18 @@
           );
         }
       }
-      (0, i.Cg)([_e.oI], Ke.prototype, "OnUploadSelected", null),
-        (0, i.Cg)([_e.oI], Ke.prototype, "OnShowAllAvatarsClicked", null),
-        (0, i.Cg)([_e.oI], Ke.prototype, "OnShowAllFramesClicked", null),
-        (0, i.Cg)([_e.oI], Ke.prototype, "Reset", null),
-        (0, i.Cg)([_e.oI], Ke.prototype, "RevertChanges", null),
-        (0, i.Cg)([_e.oI], Ke.prototype, "OnSave", null),
-        (0, i.Cg)([_e.oI], Ke.prototype, "SaveUpload", null),
-        (0, i.Cg)([_e.oI], Ke.prototype, "CommitChanges", null);
-      const je = ({ Profile: e, children: t }) =>
+      (0, i.Cg)([_e.oI], $e.prototype, "OnUploadSelected", null),
+        (0, i.Cg)([_e.oI], $e.prototype, "OnShowAllAvatarsClicked", null),
+        (0, i.Cg)([_e.oI], $e.prototype, "OnShowAllFramesClicked", null),
+        (0, i.Cg)([_e.oI], $e.prototype, "Reset", null),
+        (0, i.Cg)([_e.oI], $e.prototype, "RevertChanges", null),
+        (0, i.Cg)([_e.oI], $e.prototype, "OnSave", null),
+        (0, i.Cg)([_e.oI], $e.prototype, "SaveUpload", null),
+        (0, i.Cg)([_e.oI], $e.prototype, "CommitChanges", null);
+      const Qe = ({ Profile: e, children: t }) =>
         e.BIsAvatarChangeOnCooldown()
           ? d.createElement(
-              qe,
+              ze,
               {
                 rtCooldownEnd: e.GetAvatarChangeCooldownEndRTime(),
                 strCooldownLabel: (0, p.we)("#Profile_AvatarUploadingBanned"),
@@ -3459,14 +3504,14 @@
               t,
             )
           : d.createElement(d.Fragment, null, t);
-      function Qe(e, t, a, r) {
+      function Je(e, t, a, r) {
         return t
           ? (null == r ? void 0 : r.disableAnimation)
-            ? Q(t)
+            ? $(t)
             : j(t)
           : (0, ie.t)(e || ie.d, a);
       }
-      const $e = (0, c.PA)(({ Profile: e, ProfileItems: t }) => {
+      const Ze = (0, c.PA)(({ Profile: e, ProfileItems: t }) => {
           const a = e.GetAvatarHash(),
             r = t.GetEquippedAvatar(),
             i = t.GetEquippedAvatarFrame();
@@ -3478,31 +3523,31 @@
             d.createElement(
               "div",
               { className: pe.AvatarRow },
-              d.createElement(Je, {
+              d.createElement(et, {
                 sizeClassName: pe.Large,
                 sizePx: 184,
-                avatarURL: Qe(a, r, "full"),
+                avatarURL: Je(a, r, "full"),
                 frameURL: n,
                 isGolden: !!s,
               }),
-              d.createElement(Je, {
+              d.createElement(et, {
                 sizeClassName: pe.Medium,
                 sizePx: 64,
-                avatarURL: Qe(a, r, "medium"),
+                avatarURL: Je(a, r, "medium"),
                 frameURL: n,
                 isGolden: !!s,
               }),
-              d.createElement(Je, {
+              d.createElement(et, {
                 sizeClassName: pe.Small,
                 sizePx: 32,
-                avatarURL: Qe(a, r, "small"),
+                avatarURL: Je(a, r, "small"),
                 frameURL: n,
                 isGolden: !!s,
               }),
             )
           );
         }),
-        Je = ({
+        et = ({
           sizeClassName: e,
           sizePx: t,
           avatarURL: a,
@@ -3527,7 +3572,7 @@
             ),
             d.createElement("div", { className: pe.size }, t, "px"),
           );
-      function Ze(e) {
+      function tt(e) {
         const { OnAvatarSelected: t, disabled: a, strError: r } = e,
           i = d.useRef(void 0),
           s = d.useCallback(() => {
@@ -3556,8 +3601,8 @@
           ),
         );
       }
-      const et = (0, c.PA)(({ Profile: e, ProfileItems: t }) => {
-        const a = Qe(
+      const at = (0, c.PA)(({ Profile: e, ProfileItems: t }) => {
+        const a = Je(
             e.GetCommittedAvatarHash(),
             t.GetCommittedEquippedAvatar(),
             "full",
@@ -3585,29 +3630,29 @@
           )
         );
       });
-      var tt = a(23649),
-        at = a(27456),
-        rt = a(61819);
-      function it(e) {
+      var rt = a(23649),
+        it = a(27456),
+        st = a(61819);
+      function nt(e) {
         const {
           Profile: { Location: t },
         } = e;
         return d.createElement(
           d.Fragment,
           null,
-          d.createElement(nt, { LocationStore: t }),
-          d.createElement(ot, { LocationStore: t }),
           d.createElement(lt, { LocationStore: t }),
+          d.createElement(mt, { LocationStore: t }),
+          d.createElement(ct, { LocationStore: t }),
         );
       }
-      async function st(e, t) {
+      async function ot(e, t) {
         const a = await e();
         return [
           { label: (0, p.we)("#Profile_LocationDoNotDisplay"), value: null },
           ...a.map(t).sort((e, t) => e.label.localeCompare(t.label)),
         ];
       }
-      const nt = (0, c.PA)((e) => {
+      const lt = (0, c.PA)((e) => {
           const { LocationStore: t } = e,
             { CountryCode: a } = t,
             [r, i] = d.useState([]),
@@ -3615,7 +3660,7 @@
           d.useEffect(() => {
             (async () => {
               var e;
-              const a = await st(
+              const a = await ot(
                 () => t.GetCountryList(),
                 (e) => ({ label: e.countryname, value: e.countrycode }),
               );
@@ -3640,14 +3685,14 @@
             ve.mq,
             {
               label: (0, p.we)("#Profile_FieldCountry"),
-              tooltip: Oe("#Profile_DescriptionLocation"),
+              tooltip: He("#Profile_DescriptionLocation"),
             },
             d.createElement("input", {
               type: "hidden",
               name: "country",
               value: a || "",
             }),
-            d.createElement(rt.Ay, {
+            d.createElement(st.Ay, {
               isSearchable: !0,
               className: "react-select-container",
               classNamePrefix: "react-select",
@@ -3658,7 +3703,7 @@
             }),
           );
         }),
-        ot = (0, c.PA)((e) => {
+        mt = (0, c.PA)((e) => {
           const { LocationStore: t } = e,
             { StateCode: a } = t,
             [r, i] = d.useState([]),
@@ -3666,7 +3711,7 @@
           d.useEffect(() => {
             (async () => {
               var e;
-              const a = await st(
+              const a = await ot(
                 () => t.GetStateList(),
                 (e) => ({ label: e.statename, value: e.statecode }),
               );
@@ -3699,7 +3744,7 @@
               d.createElement(
                 ve.mq,
                 { label: (0, p.we)("#Profile_FieldState") },
-                d.createElement(rt.Ay, {
+                d.createElement(st.Ay, {
                   isSearchable: !0,
                   className: "react-select-container",
                   classNamePrefix: "react-select",
@@ -3711,7 +3756,7 @@
               ),
           );
         }),
-        lt = (0, c.PA)((e) => {
+        ct = (0, c.PA)((e) => {
           const { LocationStore: t } = e,
             { CityCode: a } = t,
             [r, i] = d.useState([]),
@@ -3719,7 +3764,7 @@
           d.useEffect(() => {
             (async () => {
               var e;
-              const a = await st(
+              const a = await ot(
                 () => t.GetCityList(),
                 (e) => ({ label: e.cityname, value: "" + e.cityid }),
               );
@@ -3752,7 +3797,7 @@
               d.createElement(
                 ve.mq,
                 { label: (0, p.we)("#Profile_FieldCity") },
-                d.createElement(rt.Ay, {
+                d.createElement(st.Ay, {
                   isSearchable: !0,
                   className: "react-select-container",
                   classNamePrefix: "react-select",
@@ -3764,9 +3809,9 @@
               ),
           );
         });
-      var mt = a(283),
-        ct = a(19838);
-      class dt extends d.Component {
+      var dt = a(283),
+        ht = a(19838);
+      class ut extends d.Component {
         constructor() {
           super(...arguments),
             (this.state = { strSummary: "" }),
@@ -3798,7 +3843,7 @@
           const { EmoticonStore: e, Profile: t } = this.props,
             { strSummary: a } = this.state;
           return d.createElement(
-            ht,
+            pt,
             { Profile: t },
             d.createElement(ve.Cl, {
               nMinHeight: 40,
@@ -3806,15 +3851,15 @@
               rows: 3,
               cols: 40,
               onChange: this.OnChange,
-              className: ct.summaryTextArea,
+              className: ht.summaryTextArea,
               value: a,
               ref: this.m_refTextInput,
             }),
             d.createElement(
               "div",
-              { className: ct.formattingButtons },
-              d.createElement(mt.A, {
-                className: ct.formattingButton,
+              { className: ht.formattingButtons },
+              d.createElement(dt.A, {
+                className: ht.formattingButton,
                 disabled: !1,
                 OnEmoticonSelected: this.InsertEmoticon,
                 emoticonStore: e,
@@ -3823,12 +3868,12 @@
           );
         }
       }
-      (0, i.Cg)([_e.oI], dt.prototype, "OnChange", null),
-        (0, i.Cg)([_e.oI], dt.prototype, "InsertEmoticon", null);
-      const ht = ({ Profile: e, children: t }) =>
+      (0, i.Cg)([_e.oI], ut.prototype, "OnChange", null),
+        (0, i.Cg)([_e.oI], ut.prototype, "InsertEmoticon", null);
+      const pt = ({ Profile: e, children: t }) =>
         e.BIsProfileSummaryChangeOnCooldown()
           ? d.createElement(
-              qe,
+              ze,
               {
                 rtCooldownEnd: e.GetProfileSummaryCooldownEndRTime(),
                 strCooldownLabel: (0, p.we)("#Profile_ProfileSummaryCooldown"),
@@ -3840,7 +3885,7 @@
               t,
             )
           : d.createElement(d.Fragment, null, t);
-      class ut extends d.Component {
+      class vt extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -3914,44 +3959,44 @@
               value: "",
             }),
             d.createElement(ve.Y9, null, (0, p.we)("#Profile_About")),
-            d.createElement(ve.a3, null, d.createElement(pt, null)),
-            d.createElement(Ue, { strHTMLError: i }),
+            d.createElement(ve.a3, null, d.createElement(_t, null)),
+            d.createElement(We, { strHTMLError: i }),
             d.createElement(
-              Te,
+              Oe,
               { title: (0, p.we)("#Profile_Edit_BasicInfo") },
-              d.createElement(vt, { Profile: e }),
-              !(0, de.nA)(y.TS.EREALM) && d.createElement(Et, { Profile: e }),
+              d.createElement(gt, { Profile: e }),
+              !(0, de.nA)(y.TS.EREALM) && d.createElement(yt, { Profile: e }),
             ),
             !(0, de.nA)(y.TS.EREALM) &&
               d.createElement(
-                Te,
+                Oe,
                 { title: (0, p.we)("#Profile_Edit_Location") },
-                d.createElement(it, { Profile: e }),
+                d.createElement(nt, { Profile: e }),
               ),
             !(0, de.nA)(y.TS.EREALM) &&
               d.createElement(
-                Te,
+                Oe,
                 { title: (0, p.we)("#Profile_FieldSummary") },
-                d.createElement(dt, { Profile: e, EmoticonStore: t }),
+                d.createElement(ut, { Profile: e, EmoticonStore: t }),
               ),
             !(0, de.nA)(y.TS.EREALM) &&
               d.createElement(
-                Te,
+                Oe,
                 { title: (0, p.we)("#Profile_Edit_Preferences") },
-                d.createElement(yt, { Profile: e }),
+                d.createElement(At, { Profile: e }),
               ),
-            d.createElement(Me, { onCancel: this.RevertChanges, disabled: a }),
+            d.createElement(De, { onCancel: this.RevertChanges, disabled: a }),
           );
         }
       }
-      (0, i.Cg)([_e.oI], ut.prototype, "OnSubmit", null),
-        (0, i.Cg)([_e.oI], ut.prototype, "RevertChanges", null);
-      class pt extends d.Component {
+      (0, i.Cg)([_e.oI], vt.prototype, "OnSubmit", null),
+        (0, i.Cg)([_e.oI], vt.prototype, "RevertChanges", null);
+      class _t extends d.Component {
         render() {
           return d.createElement(
             "div",
             { style: { display: "block" } },
-            d.createElement(tt.h, {
+            d.createElement(rt.h, {
               text: (0, p.we)(
                 (0, de.nA)(y.TS.EREALM)
                   ? "#Profile_Edit_About_Instructions_SteamChina"
@@ -3961,7 +4006,7 @@
           );
         }
       }
-      let vt = class extends d.Component {
+      let gt = class extends d.Component {
         OnPersonaNameChange(e) {
           this.props.Profile.SetPersonaName(e.target.value);
         }
@@ -3974,7 +4019,7 @@
             d.Fragment,
             null,
             d.createElement(
-              _t,
+              ft,
               { Profile: e },
               d.createElement(ve.pd, {
                 label: (0, p.we)("#Profile_FieldProfileName"),
@@ -3983,32 +4028,32 @@
                 value: e.GetPersonaName(),
                 onChange: this.OnPersonaNameChange,
               }),
-              d.createElement(gt, { Profile: e }),
+              d.createElement(Pt, { Profile: e }),
             ),
             !(0, de.nA)(y.TS.EREALM) &&
               d.createElement(
-                ft,
+                Et,
                 { Profile: e },
                 d.createElement(ve.pd, {
                   label: (0, p.we)("#Profile_FieldRealName"),
                   disabled: e.BIsProfileSummaryChangeOnCooldown(),
-                  tooltip: Oe("#Profile_DescriptionRealName"),
+                  tooltip: He("#Profile_DescriptionRealName"),
                   name: "real_name",
                   value: e.GetRealName(),
                   onChange: this.OnRealNameChange,
                 }),
-                d.createElement(Pt, { Profile: e }),
+                d.createElement(Ct, { Profile: e }),
               ),
           );
         }
       };
-      (0, i.Cg)([_e.oI], vt.prototype, "OnPersonaNameChange", null),
-        (0, i.Cg)([_e.oI], vt.prototype, "OnRealNameChange", null),
-        (vt = (0, i.Cg)([c.PA], vt));
-      const _t = ({ Profile: e, children: t }) =>
+      (0, i.Cg)([_e.oI], gt.prototype, "OnPersonaNameChange", null),
+        (0, i.Cg)([_e.oI], gt.prototype, "OnRealNameChange", null),
+        (gt = (0, i.Cg)([c.PA], gt));
+      const ft = ({ Profile: e, children: t }) =>
         e.BIsPersonaNameChangeOnCooldown()
           ? d.createElement(
-              qe,
+              ze,
               {
                 rtCooldownEnd: e.GetPersonaNameCooldownEndRTime(),
                 strCooldownLabel: (0, p.we)("#Profile_PersonaNameCooldown"),
@@ -4020,13 +4065,13 @@
               t,
             )
           : d.createElement(d.Fragment, null, t);
-      class gt extends d.Component {
+      class Pt extends d.Component {
         render() {
           const { Profile: e } = this.props;
           return e.HasFilteredPersonaName()
             ? d.createElement(
                 "div",
-                { className: at.FilteredNameWarning },
+                { className: it.FilteredNameWarning },
                 (0, p.oW)(
                   "#Profile_PersonaNameFiltered",
                   d.createElement("a", {
@@ -4037,10 +4082,10 @@
             : null;
         }
       }
-      const ft = ({ Profile: e, children: t }) =>
+      const Et = ({ Profile: e, children: t }) =>
         e.BIsProfileSummaryChangeOnCooldown()
           ? d.createElement(
-              qe,
+              ze,
               {
                 rtCooldownEnd: e.GetProfileSummaryCooldownEndRTime(),
                 strCooldownLabel: (0, p.we)("#Profile_RealNameCooldown"),
@@ -4052,13 +4097,13 @@
               t,
             )
           : d.createElement(d.Fragment, null, t);
-      class Pt extends d.Component {
+      class Ct extends d.Component {
         render() {
           const { Profile: e } = this.props;
           return e.HasFilteredRealName()
             ? d.createElement(
                 "div",
-                { className: at.FilteredNameWarning },
+                { className: it.FilteredNameWarning },
                 (0, p.oW)(
                   "#Profile_RealNameFiltered",
                   d.createElement("a", {
@@ -4069,7 +4114,7 @@
             : null;
         }
       }
-      let Et = class extends d.Component {
+      let yt = class extends d.Component {
         OnProfileURLChange(e) {
           this.props.Profile.SetCustomURL(e.target.value);
         }
@@ -4080,7 +4125,7 @@
             null,
             d.createElement(ve.pd, {
               label: (0, p.we)("#Profile_FieldCustomURL"),
-              tooltip: Oe("#Profile_DescriptionCustomURL"),
+              tooltip: He("#Profile_DescriptionCustomURL"),
               name: "customURL",
               value: e.GetCustomURL(),
               onChange: this.OnProfileURLChange,
@@ -4092,9 +4137,9 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], Et.prototype, "OnProfileURLChange", null),
-        (Et = (0, i.Cg)([c.PA], Et));
-      let Ct = class extends d.Component {
+      (0, i.Cg)([_e.oI], yt.prototype, "OnProfileURLChange", null),
+        (yt = (0, i.Cg)([c.PA], yt));
+      let St = class extends d.Component {
         componentDidMount() {
           this.m_disposer = (0, o.fm)(() => {
             const { Profile: e } = this.props;
@@ -4110,8 +4155,8 @@
           return null;
         }
       };
-      Ct = (0, i.Cg)([c.PA], Ct);
-      let yt = class extends d.Component {
+      St = (0, i.Cg)([c.PA], St);
+      let At = class extends d.Component {
         OnProfileAwardsCheckboxChecked(e) {
           let { Profile: t } = this.props,
             a = e,
@@ -4137,10 +4182,10 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], yt.prototype, "OnProfileAwardsCheckboxChecked", null),
-        (yt = (0, i.Cg)([c.PA], yt));
-      var St = a(90713);
-      let At = class extends d.Component {
+      (0, i.Cg)([_e.oI], At.prototype, "OnProfileAwardsCheckboxChecked", null),
+        (At = (0, i.Cg)([c.PA], At));
+      var wt = a(90713);
+      let It = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -4166,7 +4211,7 @@
             { bSaving: t, strHTMLError: a } = this.state;
           let r = e.FavoriteBadge;
           return d.createElement(
-            Ne.tH,
+            be.tH,
             null,
             d.createElement(ce.XG, {
               when: e.BFavoriteBadgeUncomitted(),
@@ -4182,18 +4227,18 @@
               null,
               (0, p.we)("#Profile_Edit_Badge_Instructions"),
             ),
-            d.createElement(Ue, { strHTMLError: a }),
-            r && d.createElement(It, { badge: r }),
-            !r && d.createElement(Gt, { count: e.Badges.length }),
-            d.createElement(xe, {
-              getSearchFields: Nt,
+            d.createElement(We, { strHTMLError: a }),
+            r && d.createElement(Nt, { badge: r }),
+            !r && d.createElement(Bt, { count: e.Badges.length }),
+            d.createElement(qe, {
+              getSearchFields: bt,
               getItems: async () => e.Badges,
               onItemSelected: (t) => {
                 e.SetFavoriteBadge(t);
               },
-              ItemComponent: Bt,
+              ItemComponent: Lt,
             }),
-            d.createElement(Me, {
+            d.createElement(De, {
               onSave: this.CommitFavoriteBadge,
               onCancel: this.RevertFavoriteBadge,
               disabled: t,
@@ -4201,77 +4246,77 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], At.prototype, "CommitFavoriteBadge", null),
-        (0, i.Cg)([_e.oI], At.prototype, "RevertFavoriteBadge", null),
-        (At = (0, i.Cg)([c.PA], At));
-      const wt = At,
-        It = ({ badge: e, children: t }) =>
+      (0, i.Cg)([_e.oI], It.prototype, "CommitFavoriteBadge", null),
+        (0, i.Cg)([_e.oI], It.prototype, "RevertFavoriteBadge", null),
+        (It = (0, i.Cg)([c.PA], It));
+      const Gt = It,
+        Nt = ({ badge: e, children: t }) =>
           d.createElement(
             "div",
-            { className: (0, u.A)(St.Badge, St.FavoriteBadge) },
+            { className: (0, u.A)(wt.Badge, wt.FavoriteBadge) },
             d.createElement("img", {
-              className: St.BadgeImage,
+              className: wt.BadgeImage,
               src: e.GetIconURL(),
             }),
             d.createElement(
               "div",
-              { className: St.BadgeDetails },
-              d.createElement("div", { className: St.BadgeName }, e.GetName()),
+              { className: wt.BadgeDetails },
+              d.createElement("div", { className: wt.BadgeName }, e.GetName()),
               d.createElement(
                 "div",
-                { className: St.GameName },
+                { className: wt.GameName },
                 e.GetGameName(),
               ),
             ),
           ),
-        Gt = ({ count: e, children: t }) =>
+        Bt = ({ count: e, children: t }) =>
           d.createElement(
             "div",
-            { className: (0, u.A)(St.Badge, St.FavoriteBadge) },
+            { className: (0, u.A)(wt.Badge, wt.FavoriteBadge) },
             d.createElement("img", {
-              className: St.BadgeImage,
+              className: wt.BadgeImage,
               src: `${y.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
             }),
             d.createElement(
               "div",
-              { className: St.BadgeDetails },
+              { className: wt.BadgeDetails },
               d.createElement(
                 "div",
-                { className: St.BadgeName },
+                { className: wt.BadgeName },
                 "None selected",
               ),
               d.createElement(
                 "div",
-                { className: St.GameName },
+                { className: wt.GameName },
                 `${e} badges available`,
               ),
             ),
           ),
-        Nt = (e) => [e.GetName(), e.GetGameName()],
-        Bt = ({ Item: e, onSelected: t }) => {
+        bt = (e) => [e.GetName(), e.GetGameName()],
+        Lt = ({ Item: e, onSelected: t }) => {
           const a = e;
           return d.createElement(
             "div",
-            { className: (0, u.A)(St.Badge, St.BadgeOption), onClick: t },
+            { className: (0, u.A)(wt.Badge, wt.BadgeOption), onClick: t },
             d.createElement("img", {
-              className: St.BadgeImage,
+              className: wt.BadgeImage,
               src: a.GetIconURL(),
               loading: "lazy",
             }),
             d.createElement(
               "div",
-              { className: St.BadgeDetails },
-              d.createElement("div", { className: St.BadgeName }, a.GetName()),
+              { className: wt.BadgeDetails },
+              d.createElement("div", { className: wt.BadgeName }, a.GetName()),
               d.createElement(
                 "div",
-                { className: St.GameName },
+                { className: wt.GameName },
                 a.GetGameName(),
               ),
             ),
           );
         };
-      var bt = a(53841);
-      let Lt = class extends d.Component {
+      var Rt = a(53841);
+      let kt = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -4313,19 +4358,19 @@
               null,
               (0, p.we)("#Profile_Edit_Group_Instructions"),
             ),
-            d.createElement(Ue, { strHTMLError: a }),
-            i && d.createElement(kt, { group: i }),
-            d.createElement(xe, {
-              getSearchFields: Ft,
+            d.createElement(We, { strHTMLError: a }),
+            i && d.createElement(Tt, { group: i }),
+            d.createElement(qe, {
+              getSearchFields: Mt,
               getItems: async () => (
                 await r.BWaitForUserGroups(), r.GetUserGroups()
               ),
               onItemSelected: (e) => {
                 r.SetPrimaryGroup(e);
               },
-              ItemComponent: Tt,
+              ItemComponent: Ot,
             }),
-            d.createElement(Me, {
+            d.createElement(De, {
               onSave: this.CommitFavoriteGroup,
               onCancel: this.RevertFavoriteGroup,
               disabled: t,
@@ -4333,44 +4378,44 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], Lt.prototype, "CommitFavoriteGroup", null),
-        (0, i.Cg)([_e.oI], Lt.prototype, "RevertFavoriteGroup", null),
-        (Lt = (0, i.Cg)([c.PA], Lt));
-      const Rt = Lt,
-        kt = ({ group: e, children: t }) =>
+      (0, i.Cg)([_e.oI], kt.prototype, "CommitFavoriteGroup", null),
+        (0, i.Cg)([_e.oI], kt.prototype, "RevertFavoriteGroup", null),
+        (kt = (0, i.Cg)([c.PA], kt));
+      const Ft = kt,
+        Tt = ({ group: e, children: t }) =>
           d.createElement(
             "div",
-            { className: (0, u.A)(bt.Group, bt.FavoriteGroup) },
+            { className: (0, u.A)(Rt.Group, Rt.FavoriteGroup) },
             d.createElement("img", {
-              className: bt.GroupAvatar,
+              className: Rt.GroupAvatar,
               src: e.GetAvatarURL("full"),
             }),
             d.createElement(
               "div",
-              { className: bt.GroupDetails },
-              d.createElement("div", { className: bt.GroupName }, e.GetName()),
+              { className: Rt.GroupDetails },
+              d.createElement("div", { className: Rt.GroupName }, e.GetName()),
             ),
           ),
-        Ft = (e) => [e.GetName()],
-        Tt = ({ Item: e, onSelected: t }) => {
+        Mt = (e) => [e.GetName()],
+        Ot = ({ Item: e, onSelected: t }) => {
           const a = e;
           return d.createElement(
             "div",
-            { className: (0, u.A)(bt.Group, bt.GroupOption), onClick: t },
+            { className: (0, u.A)(Rt.Group, Rt.GroupOption), onClick: t },
             d.createElement("img", {
-              className: bt.GroupAvatar,
+              className: Rt.GroupAvatar,
               src: a.GetAvatarURL("full"),
               loading: "lazy",
             }),
             d.createElement(
               "div",
-              { className: bt.GroupDetails },
-              d.createElement("div", { className: bt.GroupName }, a.GetName()),
+              { className: Rt.GroupDetails },
+              d.createElement("div", { className: Rt.GroupName }, a.GetName()),
             ),
           );
         };
-      var Mt = a(30082);
-      const Ot = ({ Item: e, small: t }) => {
+      var Dt = a(30082);
+      const Ht = ({ Item: e, small: t }) => {
           let a = J(e, t);
           return 0 == Object.keys(a).length
             ? null
@@ -4388,24 +4433,24 @@
                 ),
               );
         },
-        Dt = ({ Background: e, className: t, small: a }) =>
+        xt = ({ Background: e, className: t, small: a }) =>
           e
             ? d.createElement(
                 "div",
                 { className: t },
-                d.createElement(Ot, { Item: e, small: a }),
+                d.createElement(Ht, { Item: e, small: a }),
               )
             : null;
-      function Ht(e) {
+      function Ut(e) {
         e.currentTarget.querySelector("video").play();
       }
-      function xt(e) {
+      function qt(e) {
         return [e.item_title, e.app_name];
       }
-      function Ut(e, t) {
+      function Wt(e, t) {
         return e ? !!t && e.communityitemid === t.communityitemid : !t;
       }
-      let qt = class extends d.Component {
+      let zt = class extends d.Component {
         RevertChanges() {
           this.props.ProfileEdit.ProfileItems.RevertMiniProfileBackgroundChanges();
         }
@@ -4426,7 +4471,7 @@
               null,
               (0, p.we)("#Profile_Edit_MiniProfile_Instructions"),
             ),
-            d.createElement(zt, {
+            d.createElement(Vt, {
               ProfileItems: a,
               Profile: t,
               MiniProfileOverrideData: r,
@@ -4435,10 +4480,10 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], qt.prototype, "RevertChanges", null),
-        (qt = (0, i.Cg)([c.PA], qt));
-      const Wt = qt,
-        zt = (0, c.PA)(
+      (0, i.Cg)([_e.oI], zt.prototype, "RevertChanges", null),
+        (zt = (0, i.Cg)([c.PA], zt));
+      const Yt = zt,
+        Vt = (0, c.PA)(
           ({
             Profile: e,
             ProfileItems: t,
@@ -4448,25 +4493,25 @@
             let i = t.GetEquippedProfileModifier();
             return (
               i && !t.BIsLegacyGoldenProfile(i.appid) && (i = null),
-              d.createElement(De, {
+              d.createElement(xe, {
                 fnRevertChanges: r,
-                getSearchFields: xt,
+                getSearchFields: qt,
                 getItems: () => t.GetOwnedMiniProfileBackgrounds(),
                 fnCommitChanges: async (e) => (
                   t.SetEquippedMiniProfileBackground(e),
                   t.CommitMiniProfileChanges()
                 ),
-                ItemComponent: Vt,
+                ItemComponent: Kt,
                 RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                  d.createElement(Xt, {
+                  d.createElement(jt, {
                     onSelected: e,
                     active: t,
                     Modifier: i,
                   }),
                 ActiveItem: t.GetEquippedMiniProfileBackground(),
-                fnIsSameItem: Ut,
+                fnIsSameItem: Wt,
                 fnRenderPreview: (r) =>
-                  d.createElement(Yt, {
+                  d.createElement(Xt, {
                     MiniProfileBackground: r,
                     Profile: e,
                     ProfileItems: t,
@@ -4476,7 +4521,7 @@
             );
           },
         ),
-        Yt = ({
+        Xt = ({
           MiniProfileBackground: e,
           MiniProfileOverrideData: t,
           Profile: a,
@@ -4486,7 +4531,7 @@
           let n;
           if (e) {
             n = J(e);
-            let t = Q(e);
+            let t = $(e);
             t && (n.image = t);
           } else {
             n = r.GetProfileModifierMiniProfileBackgroundMovies();
@@ -4498,69 +4543,69 @@
             null,
             d.createElement(
               "div",
-              { className: Mt.MiniProfileDialogPreviewCtn },
+              { className: Dt.MiniProfileDialogPreviewCtn },
               d.createElement(b, {
                 persona: s,
-                className: Mt.MiniProfilePreview,
+                className: Dt.MiniProfilePreview,
                 data_loader: i,
                 community_data_override: { ...t, profile_background: n },
               }),
             ),
           );
         },
-        Vt = ({ Item: e, onSelected: t, children: a, active: r }) => {
+        Kt = ({ Item: e, onSelected: t, children: a, active: r }) => {
           let i = J(e),
             s = Object.keys(i).length > 0;
           return d.createElement(
             "div",
             {
               className: (0, u.A)(
-                Mt.MiniProfileBackgroundOption,
-                s && Mt.WithVideo,
-                r && Mt.Active,
+                Dt.MiniProfileBackgroundOption,
+                s && Dt.WithVideo,
+                r && Dt.Active,
               ),
               onClick: t,
-              onMouseEnter: s ? Ht : void 0,
+              onMouseEnter: s ? Ut : void 0,
             },
             d.createElement(
               "div",
-              { className: Mt.Preview },
-              d.createElement("img", { src: Q(e), loading: "lazy" }),
+              { className: Dt.Preview },
+              d.createElement("img", { src: $(e), loading: "lazy" }),
               s &&
                 d.createElement(
                   "div",
-                  { className: Mt.PreviewVideo },
-                  d.createElement(Ot, { Item: e }),
+                  { className: Dt.PreviewVideo },
+                  d.createElement(Ht, { Item: e }),
                 ),
             ),
             d.createElement(
               "div",
-              { className: Mt.Details },
+              { className: Dt.Details },
               d.createElement(
                 "div",
                 null,
-                d.createElement("div", { className: Mt.Title }, e.item_title),
-                d.createElement("div", { className: Mt.App }, e.app_name),
+                d.createElement("div", { className: Dt.Title }, e.item_title),
+                d.createElement("div", { className: Dt.App }, e.app_name),
               ),
               a,
             ),
           );
         },
-        Xt = ({ Modifier: e, onSelected: t, children: a, active: r }) =>
+        jt = ({ Modifier: e, onSelected: t, children: a, active: r }) =>
           e
-            ? d.createElement(Vt, { Item: e, onSelected: t, active: r })
+            ? d.createElement(Kt, { Item: e, onSelected: t, active: r })
             : d.createElement(
                 "div",
                 {
                   className: (0, u.A)(
-                    Mt.MiniProfileBackgroundOption,
-                    r && Mt.Active,
+                    Dt.MiniProfileBackgroundOption,
+                    r && Dt.Active,
                   ),
                   onClick: t,
                 },
                 d.createElement(
                   "div",
-                  { className: (0, u.A)(Mt.Preview, Mt.BlankBackground) },
+                  { className: (0, u.A)(Dt.Preview, Dt.BlankBackground) },
                   d.createElement("img", {
                     src: `${y.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
                     loading: "lazy",
@@ -4568,31 +4613,31 @@
                 ),
                 d.createElement(
                   "div",
-                  { className: Mt.Details },
+                  { className: Dt.Details },
                   d.createElement(
                     "div",
                     null,
                     d.createElement(
                       "div",
-                      { className: Mt.Title },
+                      { className: Dt.Title },
                       (0, p.we)("#Profile_Edit_DefaultBlankBackground"),
                     ),
-                    d.createElement("div", { className: Mt.App }),
+                    d.createElement("div", { className: Dt.App }),
                   ),
                   a,
                 ),
               );
-      var Kt = a(88997),
-        jt = a(60155),
-        Qt = a(65946);
-      let $t = class extends d.Component {
+      var $t = a(88997),
+        Qt = a(60155),
+        Jt = a(65946);
+      let Zt = class extends d.Component {
         render() {
           let e = this.props.PrivacyStore;
           return d.createElement(
             "div",
             { className: "ProfilePrivacyRoot" },
             d.createElement(
-              Jt,
+              ea,
               {
                 PrivacyStore: e,
                 strLabel: (0, p.we)("#ProfilePrivacy_BasicDetails"),
@@ -4602,7 +4647,7 @@
             ),
             d.createElement("div", { className: "ProfilePrivacyHR" }),
             d.createElement(
-              Jt,
+              ea,
               {
                 PrivacyStore: e,
                 strLabel: (0, p.we)("#ProfilePrivacy_Profile"),
@@ -4623,7 +4668,7 @@
               "div",
               { className: "ProfilePrivacyRoot_Indent" },
               d.createElement(
-                Jt,
+                ea,
                 {
                   PrivacyStore: e,
                   strLabel: (0, p.we)("#ProfilePrivacy_GameLibrary"),
@@ -4633,7 +4678,7 @@
                 (0, p.we)("#ProfilePrivacy_GameLibrary_Desc"),
                 1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                   d.createElement(
-                    ra,
+                    sa,
                     {
                       PrivacyStore: e,
                       PrivacyKey: "PrivacyPlaytime",
@@ -4644,7 +4689,7 @@
               ),
               d.createElement("div", { className: "ProfilePrivacyHR" }),
               d.createElement(
-                Jt,
+                ea,
                 {
                   PrivacyStore: e,
                   strLabel: (0, p.we)("#ProfilePrivacy_FriendsList"),
@@ -4655,7 +4700,7 @@
               ),
               d.createElement("div", { className: "ProfilePrivacyHR" }),
               d.createElement(
-                Jt,
+                ea,
                 {
                   PrivacyStore: e,
                   strLabel: (0, p.we)("#ProfilePrivacy_Inventory"),
@@ -4677,7 +4722,7 @@
                 ),
                 1 != e.GetPrivacySetting("PrivacyInventory") &&
                   d.createElement(
-                    ra,
+                    sa,
                     {
                       PrivacyStore: e,
                       PrivacyKey: "PrivacyInventoryGifts",
@@ -4688,17 +4733,17 @@
               ),
               d.createElement("div", { className: "ProfilePrivacyHR" }),
               d.createElement(
-                Zt,
+                ta,
                 null,
                 (0, p.we)("#ProfilePrivacy_Comments"),
                 ":",
-                d.createElement(ia, { PrivacyStore: e }),
+                d.createElement(na, { PrivacyStore: e }),
               ),
               !(0, de.nA)(y.TS.EREALM) &&
                 d.createElement("div", { className: "ProfilePrivacyHR" }),
               !(0, de.nA)(y.TS.EREALM) &&
                 d.createElement(
-                  Jt,
+                  ea,
                   {
                     PrivacyStore: e,
                     strLabel: (0, p.we)("#ProfilePrivacy_UGC"),
@@ -4722,12 +4767,12 @@
           );
         }
       };
-      function Jt(e) {
+      function ea(e) {
         let t;
         return (
           (t = e.strReadOnlySetting
-            ? d.createElement(sa, { strLabel: e.strReadOnlySetting })
-            : d.createElement(ta, {
+            ? d.createElement(oa, { strLabel: e.strReadOnlySetting })
+            : d.createElement(ra, {
                 PrivacyStore: e.PrivacyStore,
                 PrivacyKey: e.PrivacyKey,
                 LimitPrivacyKey: e.LimitPrivacyKey,
@@ -4735,27 +4780,27 @@
           d.createElement(
             d.Fragment,
             null,
-            d.createElement(Zt, null, e.strLabel, ":", t),
-            d.createElement(ea, null, e.children),
+            d.createElement(ta, null, e.strLabel, ":", t),
+            d.createElement(aa, null, e.children),
           )
         );
       }
-      function Zt(e) {
+      function ta(e) {
         return d.createElement(
           "div",
           { className: "ProfilePrivacyHeader" },
           e.children,
         );
       }
-      function ea(e) {
+      function aa(e) {
         return d.createElement(
           "div",
           { className: "ProfilePrivacyDesc" },
           e.children,
         );
       }
-      $t = (0, i.Cg)([c.PA], $t);
-      const ta = (0, c.PA)(function (e) {
+      Zt = (0, i.Cg)([c.PA], Zt);
+      const ra = (0, c.PA)(function (e) {
         const {
             PrivacyStore: t,
             PrivacyKey: a,
@@ -4774,8 +4819,8 @@
           o = d.useCallback(
             (e) => {
               let r = t.GetPrivacySetting(a);
-              (0, Kt.lX)(
-                d.createElement(na, {
+              (0, $t.lX)(
+                d.createElement(la, {
                   OnChange: n,
                   eCurrentPrivacy: r,
                   eMinPrivacy: s(),
@@ -4801,10 +4846,10 @@
                 "public/images/skin_1/actionArrowDnWhite.gif",
             }),
           ),
-          d.createElement(aa, { eSaveState: t.GetSaveState(a) }),
+          d.createElement(ia, { eSaveState: t.GetSaveState(a) }),
         );
       });
-      function aa(e) {
+      function ia(e) {
         switch (e.eSaveState) {
           case 1:
             return d.createElement(
@@ -4828,7 +4873,7 @@
             return null;
         }
       }
-      function ra(e) {
+      function sa(e) {
         const {
             PrivacyStore: t,
             PrivacyKey: a,
@@ -4842,7 +4887,7 @@
             },
             [t, a, r],
           );
-        let n = 1 == (0, Qt.q3)(() => t.GetPrivacySetting(a));
+        let n = 1 == (0, Jt.q3)(() => t.GetPrivacySetting(a));
         return d.createElement(
           "div",
           { className: "ProfilePrivacyCheckbox" },
@@ -4863,14 +4908,14 @@
           ),
         );
       }
-      let ia = class extends d.Component {
+      let na = class extends d.Component {
         constructor(e) {
           super(e), (this.state = { eSaveState: 0 });
         }
         OnClick(e) {
           let t = this.props.PrivacyStore.CommentPermission;
-          (0, Kt.lX)(
-            d.createElement(oa, {
+          (0, $t.lX)(
+            d.createElement(ma, {
               OnChange: this.OnSettingChanged,
               eCurrentPermission: t,
               eMinPrivacy:
@@ -4913,57 +4958,57 @@
                   "public/images/skin_1/actionArrowDnWhite.gif",
               }),
             ),
-            d.createElement(aa, {
+            d.createElement(ia, {
               eSaveState: this.props.PrivacyStore.GetCommentSaveState(),
             }),
           );
         }
       };
-      function sa(e) {
+      function oa(e) {
         return d.createElement(
           "div",
           { className: "ProfilePrivacyDropDown readonly" },
           e.strLabel,
         );
       }
-      (0, i.Cg)([_e.oI], ia.prototype, "OnClick", null),
-        (0, i.Cg)([_e.oI], ia.prototype, "OnSettingChanged", null),
-        (ia = (0, i.Cg)([c.PA], ia));
-      class na extends d.Component {
+      (0, i.Cg)([_e.oI], na.prototype, "OnClick", null),
+        (0, i.Cg)([_e.oI], na.prototype, "OnSettingChanged", null),
+        (na = (0, i.Cg)([c.PA], na));
+      class la extends d.Component {
         render() {
           let e = this.props.eMinPrivacy;
           return d.createElement(
-            jt.tz,
+            Qt.tz,
             null,
             (!e || e >= 3) &&
               d.createElement(
-                jt.kt,
+                Qt.kt,
                 { onSelected: () => this.props.OnChange(3) },
                 (0, p.we)("#Privacy_Public"),
               ),
             (!e || e >= 2) &&
               d.createElement(
-                jt.kt,
+                Qt.kt,
                 { onSelected: () => this.props.OnChange(2) },
                 (0, p.we)("#Privacy_FriendsOnly"),
               ),
             d.createElement(
-              jt.kt,
+              Qt.kt,
               { onSelected: () => this.props.OnChange(1) },
               (0, p.we)("#Privacy_Private"),
             ),
           );
         }
       }
-      class oa extends d.Component {
+      class ma extends d.Component {
         render() {
           let e = this.props.eMinPrivacy;
           return d.createElement(
-            jt.tz,
+            Qt.tz,
             null,
             (!e || e >= 3) &&
               d.createElement(
-                jt.kt,
+                Qt.kt,
                 {
                   onSelected: () => this.props.OnChange(1),
                   title: (0, p.we)("#Profile_CommentPermission_Public_Desc"),
@@ -4972,7 +5017,7 @@
               ),
             (!e || e >= 2) &&
               d.createElement(
-                jt.kt,
+                Qt.kt,
                 {
                   onSelected: () => this.props.OnChange(0),
                   title: (0, p.we)(
@@ -4982,7 +5027,7 @@
                 (0, p.we)("#Privacy_FriendsOnly"),
               ),
             d.createElement(
-              jt.kt,
+              Qt.kt,
               {
                 onSelected: () => this.props.OnChange(2),
                 title: (0, p.we)("#Profile_CommentPermission_Private_Desc"),
@@ -4992,14 +5037,14 @@
           );
         }
       }
-      var la = a(26075),
-        ma = a(38945),
-        ca = a(19939),
-        da = a(97875);
-      const ha = ({ className: e, width: t, height: a, theme: r }) => {
+      var ca = a(26075),
+        da = a(38945),
+        ha = a(19939),
+        ua = a(97875);
+      const pa = ({ className: e, width: t, height: a, theme: r }) => {
           r || (r = "Default"), (r += "Theme");
-          const [i, s] = (0, da.l)(),
-            [n, o] = (0, da.l)();
+          const [i, s] = (0, ua.l)(),
+            [n, o] = (0, ua.l)();
           return d.createElement(
             "svg",
             {
@@ -5008,7 +5053,7 @@
               viewBox: "0 0 401 399",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
-              className: (0, u.A)(e, ma.ProfilePreview, ca[r]),
+              className: (0, u.A)(e, da.ProfilePreview, ha[r]),
             },
             d.createElement("rect", {
               y: "13",
@@ -5309,21 +5354,21 @@
               height: "382",
               fill: "var(--gradient-background)",
               fillOpacity: "0.23",
-              className: ma.ThemeBackground,
+              className: da.ThemeBackground,
             }),
             d.createElement("rect", {
               y: "13",
               width: "401",
               height: "382",
               fill: s,
-              className: ma.PaintRadial0,
+              className: da.PaintRadial0,
             }),
             d.createElement("rect", {
               y: "13",
               width: "401",
               height: "382",
               fill: o,
-              className: ma.PaintRadial1,
+              className: da.PaintRadial1,
             }),
             d.createElement(
               "defs",
@@ -5370,11 +5415,11 @@
             ),
           );
         },
-        ua = (0, c.PA)(({ ProfileItems: e, Background: t, theme: a }) => {
+        va = (0, c.PA)(({ ProfileItems: e, Background: t, theme: a }) => {
           void 0 === t && (t = e.GetEquippedBackground());
           let r = t && t.movie_webm,
             i = t && t.tiled,
-            s = t ? Q(t) : $(null);
+            s = t ? $(t) : Q(null);
           const n = t && !i && 1 == e.GetEquippedBackgroundFlags();
           let o = null;
           return (
@@ -5386,25 +5431,25 @@
               }),
             d.createElement(
               "div",
-              { style: o, className: ma.ProfilePagePreviewCtn },
+              { style: o, className: da.ProfilePagePreviewCtn },
               d.createElement(
                 "div",
-                { className: ma.BackgroundPosition },
+                { className: da.BackgroundPosition },
                 d.createElement(
                   "div",
-                  { className: (0, u.A)(ma.Background, n && ma.FullScreen) },
+                  { className: (0, u.A)(da.Background, n && da.FullScreen) },
                   !r && !i && d.createElement("img", { src: s }),
-                  r && d.createElement(Dt, { Background: t, className: "" }),
+                  r && d.createElement(xt, { Background: t, className: "" }),
                 ),
               ),
               d.createElement(
                 "div",
-                { className: ma.ProfilePreviewPosition },
+                { className: da.ProfilePreviewPosition },
                 d.createElement(
                   "div",
-                  { className: ma.ProfilePreviewCtn },
-                  d.createElement(ha, {
-                    className: ma.ProfilePreview,
+                  { className: da.ProfilePreviewCtn },
+                  d.createElement(pa, {
+                    className: da.ProfilePreview,
                     width: "50%",
                     height: "auto",
                     theme: a,
@@ -5414,7 +5459,7 @@
             )
           );
         });
-      let pa = class extends d.Component {
+      let _a = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { equipFlags: 0 });
         }
@@ -5449,23 +5494,23 @@
                 null,
                 (0, p.we)("#Profile_Edit_Background_Instructions"),
               ),
-              d.createElement(De, {
-                className: la.BackgroundPickerPage,
-                getSearchFields: xt,
+              d.createElement(xe, {
+                className: ca.BackgroundPickerPage,
+                getSearchFields: qt,
                 getItems: () => e.GetOwnedBackgrounds(),
                 fnCommitChanges: this.CommitChanges,
                 fnRevertChanges: this.RevertChanges,
-                ItemComponent: Ea,
+                ItemComponent: ya,
                 RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                  d.createElement(Ca, {
+                  d.createElement(Sa, {
                     Modifier: a,
                     onSelected: e,
                     active: t,
                   }),
                 ActiveItem: e.GetEquippedBackground(),
-                fnIsSameItem: Ut,
+                fnIsSameItem: Wt,
                 fnRenderPreview: (a) =>
-                  d.createElement(fa, {
+                  d.createElement(Ea, {
                     Background: a,
                     ProfileItems: e,
                     theme: t.ActiveTheme.theme_id,
@@ -5475,14 +5520,14 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], pa.prototype, "CommitChanges", null),
-        (0, i.Cg)([_e.oI], pa.prototype, "RevertChanges", null),
-        (pa = (0, i.Cg)([c.PA], pa));
-      const va = pa,
-        _a = ({ label: e, currentFlag: t, flag: a, onSelect: r }) =>
+      (0, i.Cg)([_e.oI], _a.prototype, "CommitChanges", null),
+        (0, i.Cg)([_e.oI], _a.prototype, "RevertChanges", null),
+        (_a = (0, i.Cg)([c.PA], _a));
+      const ga = _a,
+        fa = ({ label: e, currentFlag: t, flag: a, onSelect: r }) =>
           d.createElement(
             "div",
-            { className: la.ProfileBackgroundEquipOption },
+            { className: ca.ProfileBackgroundEquipOption },
             d.createElement(ve.Od, {
               checked: t == a,
               disabled: t == a,
@@ -5492,7 +5537,7 @@
               label: e,
             }),
           );
-      let ga = class extends d.Component {
+      let Pa = class extends d.Component {
         OnChange(e) {
           this.props.ProfileItems.SetEquippedBackgroundFlags(e);
         }
@@ -5500,13 +5545,13 @@
           let { Background: e, ProfileItems: t } = this.props;
           const a = !e || (null == e ? void 0 : e.tiled),
             r = t.GetEquippedBackgroundFlags();
-          let i = d.createElement(_a, {
+          let i = d.createElement(fa, {
               flag: 1,
               currentFlag: r,
               onSelect: this.OnChange,
               label: (0, p.we)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
             }),
-            s = d.createElement(_a, {
+            s = d.createElement(fa, {
               flag: 0,
               currentFlag: r,
               onSelect: this.OnChange,
@@ -5518,8 +5563,8 @@
             "div",
             {
               className: (0, u.A)(
-                la.ProfileBackgroundEquipOptions,
-                a && la.HideEquipOptions,
+                ca.ProfileBackgroundEquipOptions,
+                a && ca.HideEquipOptions,
               ),
             },
             i,
@@ -5527,84 +5572,84 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], ga.prototype, "OnChange", null),
-        (ga = (0, i.Cg)([c.PA], ga));
-      const fa = (0, c.PA)(({ Background: e, ProfileItems: t, theme: a }) =>
+      (0, i.Cg)([_e.oI], Pa.prototype, "OnChange", null),
+        (Pa = (0, i.Cg)([c.PA], Pa));
+      const Ea = (0, c.PA)(({ Background: e, ProfileItems: t, theme: a }) =>
           d.createElement(
             "div",
             null,
-            d.createElement(ua, {
+            d.createElement(va, {
               Background: e,
               ProfileItems: t,
               key: e && e.communityitemid,
               theme: a,
             }),
-            d.createElement(ga, { ProfileItems: t, Background: e }),
+            d.createElement(Pa, { ProfileItems: t, Background: e }),
           ),
         ),
-        Pa = ({ Background: e, children: t }) =>
+        Ca = ({ Background: e, children: t }) =>
           d.createElement(
             "div",
-            { className: la.Details },
+            { className: ca.Details },
             d.createElement(
               "div",
               null,
               d.createElement(
                 "div",
-                { className: la.Title },
+                { className: ca.Title },
                 e
                   ? e.item_title
                   : (0, p.we)("#Profile_Edit_DefaultBlankBackground"),
               ),
-              d.createElement("div", { className: la.App }, e && e.app_name),
+              d.createElement("div", { className: ca.App }, e && e.app_name),
             ),
             t,
           ),
-        Ea = ({ Item: e, onSelected: t, active: a, children: r }) => {
+        ya = ({ Item: e, onSelected: t, active: a, children: r }) => {
           let i = !!e.movie_webm;
           return d.createElement(
             "div",
             {
               className: (0, u.A)(
-                la.BackgroundOption,
-                i && la.WithVideo,
-                a && la.Active,
+                ca.BackgroundOption,
+                i && ca.WithVideo,
+                a && ca.Active,
               ),
               onClick: t,
-              onMouseEnter: i ? Ht : void 0,
+              onMouseEnter: i ? Ut : void 0,
             },
             d.createElement(
               "div",
-              { className: la.Preview },
-              d.createElement("img", { src: $(e), loading: "lazy" }),
-              d.createElement(Dt, {
+              { className: ca.Preview },
+              d.createElement("img", { src: Q(e), loading: "lazy" }),
+              d.createElement(xt, {
                 Background: e,
-                className: la.PreviewVideo,
+                className: ca.PreviewVideo,
                 small: !0,
               }),
             ),
-            d.createElement(Pa, { Background: e }, r),
+            d.createElement(Ca, { Background: e }, r),
           );
         },
-        Ca = ({ onSelected: e, Modifier: t, active: a, children: r }) =>
+        Sa = ({ onSelected: e, Modifier: t, active: a, children: r }) =>
           t
-            ? d.createElement(Ea, { Item: t, onSelected: e, active: a })
+            ? d.createElement(ya, { Item: t, onSelected: e, active: a })
             : d.createElement(
                 "div",
                 {
-                  className: (0, u.A)(la.BackgroundOption, a && la.Active),
+                  className: (0, u.A)(ca.BackgroundOption, a && ca.Active),
                   onClick: e,
                 },
                 d.createElement(
                   "div",
-                  { className: la.Preview },
-                  d.createElement("img", { src: $(null) }),
+                  { className: ca.Preview },
+                  d.createElement("img", { src: Q(null) }),
                 ),
-                d.createElement(Pa, { Background: null }, r),
+                d.createElement(Ca, { Background: null }, r),
               );
-      var ya = a(17083),
-        Sa = a(78091);
-      class Aa extends d.Component {
+      var Aa = a(17083),
+        wa = a(78091);
+      class Ia extends d.Component {
         render() {
           const {
             root: e,
@@ -5617,7 +5662,7 @@
             null,
             d.createElement(
               "div",
-              { className: Sa.BackToProfileCtn },
+              { className: wa.BackToProfileCtn },
               d.createElement(
                 "a",
                 { href: r.s.ProfileURL },
@@ -5626,54 +5671,54 @@
             ),
             d.createElement(
               "div",
-              { className: Sa.Shell },
-              d.createElement(wa, {
+              { className: wa.Shell },
+              d.createElement(Ga, {
                 root: e,
                 currentPath: t,
                 linksAvailable: a,
               }),
               d.createElement(
                 "div",
-                { className: Sa.PageContent },
-                d.createElement(Ne.tH, null, i),
+                { className: wa.PageContent },
+                d.createElement(be.tH, null, i),
               ),
             ),
           );
         }
       }
-      const wa = ({ root: e, currentPath: t, linksAvailable: a }) => {
+      const Ga = ({ root: e, currentPath: t, linksAvailable: a }) => {
           const r = { root: e, currentPath: t },
-            i = $a;
+            i = er;
           return d.createElement(
             "div",
-            { className: Sa.Navigation },
+            { className: wa.Navigation },
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.Info() },
               (0, p.we)("#Profile_Edit_BasicInfo"),
             ),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.Avatar() },
               (0, p.we)("#Profile_FieldAvatar"),
             ),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.Background() },
               (0, p.we)("#Profile_FieldProfileBackground"),
             ),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.MiniProfile() },
               (0, p.we)("#Profile_Edit_MiniProfile"),
             ),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.Theme() },
               (0, p.we)("#Profile_Edit_Theme"),
             ),
             d.createElement(
-              Ia,
+              Na,
               {
                 ...r,
                 to: i.ProfileModifier(),
@@ -5682,33 +5727,33 @@
               (0, p.we)("#Profile_Edit_ProfileModifier"),
             ),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.FavoriteBadge(), fnVisible: a.BadgesAvailable },
               (0, p.we)("#Profile_Edit_FavoriteBadge"),
             ),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.FavoriteGroup(), fnVisible: a.GroupsAvailable },
               (0, p.we)("#Profile_Edit_FavoriteGroup"),
             ),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.Showcases(), fnVisible: a.ShowcasesAvailable },
               (0, p.we)("#Profile_Edit_FeaturedShowcase"),
             ),
-            d.createElement("div", { className: Sa.ProfileEditLine }),
+            d.createElement("div", { className: wa.ProfileEditLine }),
             d.createElement(
-              Ia,
+              Na,
               { ...r, to: i.Privacy() },
               (0, p.we)("#Profile_EditPrivacySettings"),
             ),
             d.createElement(
               "div",
-              { className: Sa.ProfileEditStoreLink },
+              { className: wa.ProfileEditStoreLink },
               d.createElement(
                 "a",
                 {
-                  className: (0, u.A)(Sa.ExternalLink),
+                  className: (0, u.A)(wa.ExternalLink),
                   href: `${y.TS.STORE_BASE_URL}points/`,
                 },
                 (0, p.we)("#SteamPointsShop"),
@@ -5716,7 +5761,7 @@
             ),
           );
         },
-        Ia = (0, c.PA)(
+        Na = (0, c.PA)(
           ({
             root: e,
             currentPath: t,
@@ -5734,12 +5779,12 @@
             return (
               l && (c = (e) => e.preventDefault()),
               d.createElement(
-                ya.k2,
+                Aa.k2,
                 {
                   className: (0, u.A)(
-                    Sa.NavLink,
-                    o && Sa.Active,
-                    m && Sa.Disabled,
+                    wa.NavLink,
+                    o && wa.Active,
+                    m && wa.Disabled,
                   ),
                   to: n,
                   onClick: c,
@@ -5750,8 +5795,8 @@
             );
           },
         );
-      var Ga = a(49622);
-      let Na = class extends d.Component {
+      var Ba = a(49622);
+      let ba = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bDialogActive: !1 });
         }
@@ -5764,7 +5809,7 @@
         render() {
           const { ProfileItems: e } = this.props;
           return e.BHasAnyProfileModifiers()
-            ? d.createElement(Ra, {
+            ? d.createElement(Fa, {
                 active: this.state.bDialogActive,
                 ProfileItems: e,
                 onDismiss: this.HideDialog,
@@ -5772,11 +5817,11 @@
             : null;
         }
       };
-      (0, i.Cg)([_e.oI], Na.prototype, "ShowDialog", null),
-        (0, i.Cg)([_e.oI], Na.prototype, "HideDialog", null),
-        (Na = (0, i.Cg)([c.PA], Na));
-      const Ba = Na,
-        ba = (0, c.PA)(({ ProfileItems: e }) => {
+      (0, i.Cg)([_e.oI], ba.prototype, "ShowDialog", null),
+        (0, i.Cg)([_e.oI], ba.prototype, "HideDialog", null),
+        (ba = (0, i.Cg)([c.PA], ba));
+      const La = ba,
+        Ra = (0, c.PA)(({ ProfileItems: e }) => {
           let t = e.GetProfileModifierCSSURL();
           return t
             ? d.createElement("link", {
@@ -5786,9 +5831,9 @@
               })
             : null;
         }),
-        La = ({ ProfileModifier: e }) => {
+        ka = ({ ProfileModifier: e }) => {
           const t = e
-              ? Q(e)
+              ? $(e)
               : `${y.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
             a = e
               ? e.item_title
@@ -5799,17 +5844,17 @@
             null,
             d.createElement(
               "div",
-              { className: Ga.ProfileModifierBody },
+              { className: Ba.ProfileModifierBody },
               d.createElement("img", {
-                className: Ga.GoldenProfileItemImage,
+                className: Ba.GoldenProfileItemImage,
                 src: t,
               }),
-              d.createElement("div", { className: Ga.GoldenProfileTitle }, a),
-              d.createElement("div", { className: Ga.GoldenProfileApp }, r),
+              d.createElement("div", { className: Ba.GoldenProfileTitle }, a),
+              d.createElement("div", { className: Ba.GoldenProfileApp }, r),
             ),
           );
         };
-      let Ra = class extends d.Component {
+      let Fa = class extends d.Component {
         OnDismiss() {
           this.props.ProfileItems.RevertProfileModifierChanges(),
             this.props.onDismiss();
@@ -5829,61 +5874,61 @@
               null,
               (0, p.we)("#Profile_Edit_ProfileModifier_Instructions"),
             ),
-            d.createElement(De, {
+            d.createElement(xe, {
               fnRevertChanges: this.OnDismiss,
-              getSearchFields: xt,
+              getSearchFields: qt,
               getItems: () => e.GetOwnedProfileModifiers(),
               fnCommitChanges: async (t) => (
                 e.SetEquippedProfileModifier(t),
                 e.CommitProfileModifierChanges()
               ),
-              ItemComponent: ka,
+              ItemComponent: Ta,
               RenderDefaultComponent: ({ onSelected: e, active: t }) =>
-                d.createElement(Fa, { onSelected: e, active: t }),
+                d.createElement(Ma, { onSelected: e, active: t }),
               ActiveItem: e.GetEquippedProfileModifier(),
-              fnIsSameItem: Ut,
+              fnIsSameItem: Wt,
               fnRenderPreview: (e) =>
-                d.createElement(La, { ProfileModifier: e }),
+                d.createElement(ka, { ProfileModifier: e }),
             }),
           );
         }
       };
-      (0, i.Cg)([_e.oI], Ra.prototype, "OnDismiss", null),
-        (Ra = (0, i.Cg)([c.PA], Ra));
-      const ka = ({ Item: e, onSelected: t, children: a, active: r }) =>
+      (0, i.Cg)([_e.oI], Fa.prototype, "OnDismiss", null),
+        (Fa = (0, i.Cg)([c.PA], Fa));
+      const Ta = ({ Item: e, onSelected: t, children: a, active: r }) =>
           d.createElement(
             "div",
             {
-              className: (0, u.A)(Ga.ProfileModifierOption, r && Ga.Active),
+              className: (0, u.A)(Ba.ProfileModifierOption, r && Ba.Active),
               onClick: t,
             },
             d.createElement(
               "div",
-              { className: Ga.Preview },
-              d.createElement("img", { src: Q(e), loading: "lazy" }),
+              { className: Ba.Preview },
+              d.createElement("img", { src: $(e), loading: "lazy" }),
             ),
             d.createElement(
               "div",
-              { className: Ga.Details },
+              { className: Ba.Details },
               d.createElement(
                 "div",
                 null,
-                d.createElement("div", { className: Ga.Title }, e.item_title),
-                d.createElement("div", { className: Ga.App }, e.app_name),
+                d.createElement("div", { className: Ba.Title }, e.item_title),
+                d.createElement("div", { className: Ba.App }, e.app_name),
               ),
               a,
             ),
           ),
-        Fa = ({ onSelected: e, children: t, active: a }) =>
+        Ma = ({ onSelected: e, children: t, active: a }) =>
           d.createElement(
             "div",
             {
-              className: (0, u.A)(Ga.ProfileModifierOption, a && Ga.Active),
+              className: (0, u.A)(Ba.ProfileModifierOption, a && Ba.Active),
               onClick: e,
             },
             d.createElement(
               "div",
-              { className: (0, u.A)(Ga.Preview, Ga.BlankBackground) },
+              { className: (0, u.A)(Ba.Preview, Ba.BlankBackground) },
               d.createElement("img", {
                 src: `${y.TS.COMMUNITY_CDN_URL}public/images/trans.gif`,
                 loading: "lazy",
@@ -5891,22 +5936,22 @@
             ),
             d.createElement(
               "div",
-              { className: Ga.Details },
+              { className: Ba.Details },
               d.createElement(
                 "div",
                 null,
                 d.createElement(
                   "div",
-                  { className: Ga.Title },
+                  { className: Ba.Title },
                   (0, p.we)("#ProfileModifier_DisabledTitle"),
                 ),
-                d.createElement("div", { className: Ga.App }),
+                d.createElement("div", { className: Ba.App }),
               ),
               t,
             ),
           );
-      var Ta = a(20644);
-      let Ma = class extends d.Component {
+      var Oa = a(20644);
+      let Da = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
         }
@@ -5940,67 +5985,67 @@
               null,
               (0, p.we)("#Profile_Edit_Theme_Instructions"),
             ),
-            d.createElement(Ue, { strHTMLError: this.state.strHTMLError }),
-            a && d.createElement(qa, null),
-            d.createElement(De, {
+            d.createElement(We, { strHTMLError: this.state.strHTMLError }),
+            a && d.createElement(za, null),
+            d.createElement(xe, {
               getSearchFields: null,
               ActiveItem: e.ActiveTheme,
               getItems: async () => e.AvailableThemes,
               fnCommitChanges: this.CommitChanges,
               fnRevertChanges: this.RevertChanges,
               fnRenderPreview: (e) =>
-                d.createElement(Ha, { Theme: e, ProfileItems: t }),
-              fnIsSameItem: xa,
-              ItemComponent: Ua,
-              classNameItemPicker: Ta.ProfileThemePicker,
-              className: (0, u.A)(a && Ta.ThemePickerDisabled),
+                d.createElement(Ua, { Theme: e, ProfileItems: t }),
+              fnIsSameItem: qa,
+              ItemComponent: Wa,
+              classNameItemPicker: Oa.ProfileThemePicker,
+              className: (0, u.A)(a && Oa.ThemePickerDisabled),
             }),
           );
         }
       };
-      (0, i.Cg)([_e.oI], Ma.prototype, "CommitChanges", null),
-        (0, i.Cg)([_e.oI], Ma.prototype, "RevertChanges", null),
-        (Ma = (0, i.Cg)([c.PA], Ma));
-      const Oa = Ma,
-        Da = ({ Theme: e, children: t }) => {
+      (0, i.Cg)([_e.oI], Da.prototype, "CommitChanges", null),
+        (0, i.Cg)([_e.oI], Da.prototype, "RevertChanges", null),
+        (Da = (0, i.Cg)([c.PA], Da));
+      const Ha = Da,
+        xa = ({ Theme: e, children: t }) => {
           let a;
           return (
             (a =
               "string" == typeof e
                 ? e + "Theme"
                 : ((null == e ? void 0 : e.theme_id) || "Default") + "Theme"),
-            d.createElement("div", { className: ca[a] }, t)
+            d.createElement("div", { className: ha[a] }, t)
           );
         },
-        Ha = (0, c.PA)(({ Theme: e, ProfileItems: t }) =>
+        Ua = (0, c.PA)(({ Theme: e, ProfileItems: t }) =>
           d.createElement(
             "div",
-            { className: Ta.ProfileThemePreviewCtn },
-            d.createElement(ua, { ProfileItems: t, theme: e.theme_id }),
+            { className: Oa.ProfileThemePreviewCtn },
+            d.createElement(va, { ProfileItems: t, theme: e.theme_id }),
           ),
         ),
-        xa = (e, t) => (e && e.theme_id) === (t && t.theme_id),
-        Ua = ({ Item: e, onSelected: t, active: a, children: r }) => {
+        qa = (e, t) => (e && e.theme_id) === (t && t.theme_id),
+        Wa = ({ Item: e, onSelected: t, active: a, children: r }) => {
           const i = e.theme_id + "Theme",
             s = `ThemeOption${i}`;
           return d.createElement(
             "div",
             {
               className: (0, u.A)(
-                Ta.ProfileTheme,
-                t && Ta.Option,
-                a && Ta.Active,
-                ca[i],
+                Oa.ProfileTheme,
+                t && Oa.Option,
+                a && Oa.Active,
+                ha[i],
               ),
               onClick: t,
             },
             d.createElement(
               "div",
-              { className: Ta.PreviewCtn },
+              { className: Oa.PreviewCtn },
               d.createElement(
                 "svg",
                 {
-                  className: (0, u.A)(Ta.Preview),
+                  className: (0, u.A)(Oa.Preview),
                   viewBox: "0 0 382 382",
                   width: "100%",
                   height: "100%",
@@ -6009,26 +6054,26 @@
                   width: "382",
                   height: "382",
                   fill: "var(--edit-background)",
-                  className: Ta.EditBackground,
+                  className: Oa.EditBackground,
                 }),
                 d.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: "var(--gradient-background)",
                   fillOpacity: "0.23",
-                  className: Ta.ThemeBackground,
+                  className: Oa.ThemeBackground,
                 }),
                 d.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: `url(#${s}paint0_radial)`,
-                  className: Ta.PaintRadial0,
+                  className: Oa.PaintRadial0,
                 }),
                 d.createElement("rect", {
                   width: "382",
                   height: "382",
                   fill: `url(#${s}paint1_radial)`,
-                  className: Ta.PaintRadial1,
+                  className: Oa.PaintRadial1,
                 }),
                 d.createElement(
                   "defs",
@@ -6079,23 +6124,23 @@
             ),
             d.createElement(
               "div",
-              { className: Ta.Details },
-              d.createElement("div", { className: Ta.Title }, e.title),
+              { className: Oa.Details },
+              d.createElement("div", { className: Oa.Title }, e.title),
               r,
             ),
           );
         },
-        qa = ({ children: e }) =>
+        za = ({ children: e }) =>
           d.createElement(
             "div",
-            { className: Ta.ThemesDisabledNotice },
+            { className: Oa.ThemesDisabledNotice },
             d.createElement(
               "div",
-              { className: Ta.Notice },
+              { className: Oa.Notice },
               (0, p.we)("#Profile_Edit_GoldenProfileOverridesTheme"),
             ),
           );
-      class Wa extends d.Component {
+      class Ya extends d.Component {
         constructor() {
           super(...arguments),
             (this.m_refDiv = d.createRef()),
@@ -6124,7 +6169,7 @@
           const { bSaving: e, strHTMLError: t } = this.state,
             { ProfileTheme: a } = this.props;
           return d.createElement(
-            Da,
+            xa,
             { Theme: a.ActiveTheme },
             d.createElement(
               "form",
@@ -6144,9 +6189,9 @@
                   }),
                 ),
               ),
-              d.createElement(Ue, { strHTMLError: t }),
+              d.createElement(We, { strHTMLError: t }),
               d.createElement("div", { ref: this.m_refDiv }),
-              d.createElement(Me, {
+              d.createElement(De, {
                 onCancel: this.RevertChanges,
                 disabled: e,
               }),
@@ -6154,26 +6199,26 @@
           );
         }
       }
-      let za, Ya, Va;
-      function Xa(e) {
+      let Va, Xa, Ka;
+      function ja(e) {
         const [t, a] = d.useState(!1),
           i = (0, he.TR)();
         if (
           (d.useEffect(() => {
-            Va ||
-              (Va = (async function (e) {
+            Ka ||
+              (Ka = (async function (e) {
                 let t = (0, y.Tc)("config", "profile_config");
                 t && Object.assign(r.s, t),
-                  (za = new le(
+                  (Va = new le(
                     (0, y.Tc)("profile-edit", "profile_edit_config"),
                     (0, y.Tc)("profile-badges", "profile_edit_config"),
                     e,
                   )),
                   (0, de.nA)(y.TS.EREALM) ||
-                    za.Profile.GroupList.GetUserGroups(),
-                  (Ya = document.getElementById("showcases"));
+                    Va.Profile.GroupList.GetUserGroups(),
+                  (Xa = document.getElementById("showcases"));
               })(i)),
-              Va.then(() => a(!0));
+              Ka.then(() => a(!0));
           }, [i]),
           d.useLayoutEffect(() => {
             if (t)
@@ -6189,14 +6234,14 @@
         )
           return null;
         const s = e.match.url,
-          n = za,
+          n = Va,
           {
             Profile: o,
             ProfileItems: l,
             ProfileTheme: m,
             EmoticonStore: c,
           } = n,
-          h = $a,
+          h = er,
           u = {
             ProfileModifierAvailable: () => l.BHasAnyProfileModifiers(),
             BadgesAvailable: () =>
@@ -6204,16 +6249,16 @@
             GroupsAvailable: () =>
               !(0, de.nA)(y.TS.EREALM) &&
               (!o.GroupList.BGroupsLoaded() || o.GroupList.BHasAnyGroups()),
-            ShowcasesAvailable: () => null != Ya,
+            ShowcasesAvailable: () => null != Xa,
           };
         return d.createElement(
           d.Fragment,
           null,
-          d.createElement(ba, { ProfileItems: l }),
-          d.createElement(Ct, { Profile: o }),
-          d.createElement(Xe, { Profile: o, ProfileItems: l }),
+          d.createElement(Ra, { ProfileItems: l }),
+          d.createElement(St, { Profile: o }),
+          d.createElement(je, { Profile: o, ProfileItems: l }),
           d.createElement(
-            Aa,
+            Ia,
             { root: s, currentPath: e.location.pathname, linksAvailable: u },
             d.createElement(
               ce.dO,
@@ -6221,12 +6266,12 @@
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.Info()}` },
-                d.createElement(ut, { Profile: o, EmoticonStore: c }),
+                d.createElement(vt, { Profile: o, EmoticonStore: c }),
               ),
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.Avatar()}` },
-                d.createElement(Ve, {
+                d.createElement(Ke, {
                   Profile: o,
                   ProfileItems: l,
                   OGGAvatars: n.OGGAvatarStore,
@@ -6236,44 +6281,44 @@
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.Background()}` },
-                d.createElement(va, { ProfileTheme: m, ProfileItems: l }),
+                d.createElement(ga, { ProfileTheme: m, ProfileItems: l }),
               ),
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.MiniProfile()}` },
-                d.createElement(Wt, { ProfileEdit: n }),
+                d.createElement(Yt, { ProfileEdit: n }),
               ),
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.Theme()}` },
-                d.createElement(Oa, { ProfileTheme: m, ProfileItems: l }),
+                d.createElement(Ha, { ProfileTheme: m, ProfileItems: l }),
               ),
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.ProfileModifier()}` },
-                d.createElement(Ba, { ProfileItems: l }),
+                d.createElement(La, { ProfileItems: l }),
               ),
               !(0, de.nA)(y.TS.EREALM) &&
                 d.createElement(
                   ce.qh,
                   { path: `${s}${h.FavoriteBadge()}` },
-                  d.createElement(wt, { Badges: n.ProfileBadges }),
+                  d.createElement(Gt, { Badges: n.ProfileBadges }),
                 ),
               !(0, de.nA)(y.TS.EREALM) &&
                 d.createElement(
                   ce.qh,
                   { path: `${s}${h.FavoriteGroup()}` },
-                  d.createElement(Rt, { Profile: o }),
+                  d.createElement(Ft, { Profile: o }),
                 ),
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.Privacy()}` },
-                d.createElement($t, { PrivacyStore: n.ProfilePrivacy }),
+                d.createElement(Zt, { PrivacyStore: n.ProfilePrivacy }),
               ),
               d.createElement(
                 ce.qh,
                 { path: `${s}${h.Showcases()}` },
-                d.createElement(Wa, { elShowcases: Ya, ProfileTheme: m }),
+                d.createElement(Ya, { elShowcases: Xa, ProfileTheme: m }),
               ),
               d.createElement(
                 ce.qh,
@@ -6284,17 +6329,18 @@
           ),
         );
       }
-      (0, i.Cg)([_e.oI], Wa.prototype, "OnSubmit", null),
-        (0, i.Cg)([_e.oI], Wa.prototype, "RevertChanges", null);
-      var Ka = a(50050),
-        ja = a(6813);
-      const Qa = {
+      (0, i.Cg)([_e.oI], Ya.prototype, "OnSubmit", null),
+        (0, i.Cg)([_e.oI], Ya.prototype, "RevertChanges", null);
+      var $a = a(50050),
+        Qa = a(6813),
+        Ja = a(47132);
+      const Za = {
           ProfileEdit: () => "edit",
           ProfilePrivacy: () => "edit/settings",
           Games: () => "games",
           ItemCollection: () => "itemcollection",
         },
-        $a = {
+        er = {
           Info: () => "/info",
           Avatar: () => "/avatar",
           Background: () => "/background",
@@ -6306,28 +6352,32 @@
           Privacy: () => "/settings",
           Showcases: () => "/showcases",
         };
-      function Ja(e) {
+      function tr(e) {
         return d.createElement(
           "div",
           null,
-          d.createElement(Ka.Ay, { targetType: 3 }),
+          d.createElement($a.Ay, { targetType: 3 }),
         );
       }
-      function Za(e) {
+      function ar(e) {
         const t = e.match.path;
         return d.createElement(
           ce.dO,
           null,
           d.createElement(ce.qh, {
-            path: `${t}/${Qa.ProfileEdit()}`,
-            render: (e) => d.createElement(Xa, { ...e }),
+            path: `${t}/${Za.ProfileEdit()}`,
+            render: (e) => d.createElement(ja, { ...e }),
           }),
           d.createElement(ce.qh, {
             path: `${t}`,
             render: (e) =>
-              d.createElement(ja.X, {
+              d.createElement(Qa.X, {
                 config: {
-                  "profile-rewards": () => d.createElement(Ja, { ...e }),
+                  "profile-rewards": () => d.createElement(tr, { ...e }),
+                  "ugc-file-content-moderation-report-dialog": (e) =>
+                    d.createElement(Ja.Xi, { ...e }),
+                  "comment-content-moderation-report-dialog": (e) =>
+                    d.createElement(Ja.b$, { ...e }),
                 },
               }),
           }),

@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s játék",
 	"Menu_Search": "Keresés",
 	"Menu_Label": "Áruházi menü",
+	"Menu_IncludesXGames": "%1$s játékot tartalmaz",
 	"ItemFlag_InLibrary": "KÖNYVTÁRBAN",
 	"ItemFlag_OnWishlist": "KÍVÁNSÁGLISTÁN",
 	"ItemFlag_InCart": "KOSÁRBAN",

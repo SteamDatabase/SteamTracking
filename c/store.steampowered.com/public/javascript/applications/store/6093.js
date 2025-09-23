@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s spellen",
 	"Menu_Search": "Zoeken",
 	"Menu_Label": "Winkelmenu",
+	"Menu_IncludesXGames": "Bevat %1$s spellen",
 	"ItemFlag_InLibrary": "IN BIBLIOTHEEK",
 	"ItemFlag_OnWishlist": "OP VERLANGLIJST",
 	"ItemFlag_InCart": "IN WINKELWAGEN",

@@ -320,17 +320,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const _ = _?.nSaleTagID,
-          _ = _?.strContentHubType,
-          _ = _?.strContentHubCategory,
-          _ = _?.nContentHubTagID,
-          _ = _?.bDiscountsOnly,
-          _ = _?.bPrioritizeDiscounts,
-          _ = _?.strOptInName,
-          _ = _?.nOptInTagID,
-          _ = _?.nPruneTagID;
         let _ = _.toString();
-        return (
+        if (
+          "newreleases" != _?.strContentHubType &&
+          "upcoming" != _?.strContentHubType
+        ) {
+          const _ = _?.nSaleTagID,
+            _ = _?.strContentHubType,
+            _ = _?.strContentHubCategory,
+            _ = _?.nContentHubTagID,
+            _ = _?.bDiscountsOnly,
+            _ = _?.bPrioritizeDiscounts,
+            _ = _?.strOptInName,
+            _ = _?.nOptInTagID,
+            _ = _?.nPruneTagID;
           _
             ? (_ += "_" + _)
             : _ &&
@@ -339,9 +342,9 @@
                 ? (_ += "_" + _)
                 : "tags" === _ && _ && (_ += "_" + _),
               _ ? (_ += "_d") : _ && (_ += "_p"),
-              _ && _ && _ && (_ += "_" + _)),
-          _
-        );
+              _ && _ && _ && (_ += "_" + _));
+        }
+        return _;
       }
       function _(_) {
         return (0, _._)(JSON.stringify(_));
@@ -395,6 +398,7 @@
         }
         async LoadDiscoveryQueue(_, _, _) {
           const _ = _(_, _);
+          if (!this.m_transport) return 2;
           try {
             const _ = (0, _._)(this.m_transport, _, _, _);
             _ &&
@@ -433,27 +437,38 @@
               (await this.LoadDiscoveryQueue(_, _, _)),
             {
               appids: this.m_mapDiscoveryQueues.get(_).appids,
-              exhausted: this.m_mapDiscoveryQueues.get(_).exhausted,
+              exhausted: !!this.m_mapDiscoveryQueues.get(_).exhausted,
             }
           );
         }
         async SkipDiscoveryQueueItem(_, _, _) {
-          _(_, _);
           const _ = this.GetSkippedAppKey(_, _, _);
           if (!this.m_mapSkippedApps.has(_)) {
             const _ = _(_, _),
-              _ = this.m_mapDiscoveryQueues.get(_).appids,
-              _ = _[_.length - 1] == _;
+              _ = this.m_mapDiscoveryQueues.get(_)?.appids,
+              _ = _?.[_.length - 1] == _;
             this.m_mapSkippedApps.set(_, !0),
               this.m_mapSkippedAppCount.set(
                 _,
                 (this.m_mapSkippedAppCount.get(_) || 0) + 1,
               );
             const _ = _._.Init(_._);
-            _.Body().set_appid(_),
+            if (
+              (_.Body().set_appid(_),
               _.Body().set_queue_type(_),
               (Boolean(_?.nSaleTagID) || Boolean(_?.strContentHubType)) &&
-                _.Body().set_store_page_filter((0, _._)(_));
+                _.Body().set_store_page_filter((0, _._)(_, !0)),
+              !this.m_transport)
+            )
+              return (
+                console.warn(
+                  "Error",
+                  "no transport",
+                  "failed to skip appid ",
+                  _,
+                ),
+                void this.m_mapSkippedApps.delete(_)
+              );
             const _ = (
               await _._.SkipDiscoveryQueueItem(this.m_transport, _)
             ).GetEResult();
@@ -462,7 +477,6 @@
                 this.m_mapSkippedApps.delete(_))
               : _ && this.MarkDiscoveryQueueCompleted(_, _);
           }
-          return Promise.resolve();
         }
         MarkDiscoveryQueueCompleted(_, _) {
           const _ = _(_, _);
@@ -477,10 +491,21 @@
         async LoadSkippedApps(_, _) {
           _(_, _);
           const _ = _._.Init(_._);
-          __webpack_require__.Body().set_steamid(_._.steamid),
+          if (
+            (__webpack_require__.Body().set_steamid(_._.steamid),
             __webpack_require__.Body().set_queue_type(_),
             (Boolean(_?.nSaleTagID) || Boolean(_?.strContentHubType)) &&
-              __webpack_require__.Body().set_store_page_filter((0, _._)(_));
+              __webpack_require__.Body().set_store_page_filter((0, _._)(_, !0)),
+            !this.m_transport)
+          )
+            return (
+              console.warn(
+                "Failed to retrieve skipped apps for discovery queue, no transport.",
+                _,
+                _,
+              ),
+              []
+            );
           const _ = await _._.GetDiscoveryQueueSkippedApps(this.m_transport, _);
           return 1 === _.GetEResult()
             ? _.Body().appids() || []
@@ -738,10 +763,10 @@
                 (this.m_claimedFreeItemDef = Boolean(
                   __webpack_require__.Body().reward_item()?.defid(),
                 )
-                  ? __webpack_require__.Body().reward_item().toObject()
+                  ? __webpack_require__.Body().reward_item()?.toObject()
                   : null),
                 (this.m_claimState = {
-                  bCanClaimNewItem: __webpack_require__.Body().can_claim(),
+                  bCanClaimNewItem: !!__webpack_require__.Body().can_claim(),
                   bAlreadyClaimedCurrentItem: Boolean(
                     this.m_claimedFreeItemDef,
                   ),
@@ -751,7 +776,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef?.community_item_class,
                   rtNextClaimTime:
-                    __webpack_require__.Body().next_claim_time() > 0
+                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
                       ? __webpack_require__.Body().next_claim_time()
                       : void 0,
                 }),
@@ -816,10 +841,8 @@
             );
             if (1 == __webpack_require__.GetEResult())
               return (
-                (this.m_claimedFreeItemDef = __webpack_require__
-                  .Body()
-                  .reward_item()
-                  .toObject()),
+                (this.m_claimedFreeItemDef =
+                  __webpack_require__.Body().reward_item()?.toObject() ?? {}),
                 (this.m_claimState = {
                   bCanClaimNewItem: !1,
                   bAlreadyClaimedCurrentItem: Boolean(
@@ -831,7 +854,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef.community_item_class,
                   rtNextClaimTime:
-                    __webpack_require__.Body().next_claim_time() > 0
+                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
                       ? __webpack_require__.Body().next_claim_time()
                       : void 0,
                 }),
@@ -1044,7 +1067,7 @@
             ..._,
             ..._.reactQuery,
           });
-        const _ = [_, _, _, _];
+        const _ = [_, _, _ ?? {}, _ ?? {}];
         return (0, _._)({
           queryKey: _,
           queryFn: () =>
@@ -1057,14 +1080,14 @@
               if (1 != _.GetEResult())
                 throw `Error executing StoreQuery "${_}", EResult: ${_.GetEResult()}`;
               return new _(_, _);
-            })(_, _, _, _, _),
+            })(_, _, _, _ ?? {}, _),
           ..._,
         });
       }
       class _ {
-        m_Items;
-        m_rgItemIDs;
-        m_metadata;
+        m_Items = void 0;
+        m_rgItemIDs = void 0;
+        m_metadata = void 0;
         constructor(_, _) {
           this.ReadResults(_, _);
         }
@@ -1089,8 +1112,10 @@
             ((this.m_rgItemIDs = __webpack_require__.map((_) => _.toObject())),
             _.Body().store_items())
           )
-            for (const _ of _.Body().store_items())
-              this.m_Items.push(_._.Get().ReadItem(_, _));
+            for (const _ of _.Body().store_items()) {
+              const _ = _._.Get().ReadItem(_, _);
+              _ && this.m_Items.push(_);
+            }
           this.m_metadata = _.Body().metadata().toObject();
         }
       }
@@ -1476,7 +1501,7 @@
                 };
                 return (
                   await _._.Get().QueueMultipleAppRequests(
-                    __webpack_require__,
+                    __webpack_require__ ?? [],
                     _,
                   ),
                   {
@@ -1578,7 +1603,7 @@
           _,
           {
             onClick: _,
-            arrDiscoveryApps: _,
+            arrDiscoveryApps: _ ? _._(_) : void 0,
           },
           _.createElement(
             "div",
@@ -1612,8 +1637,9 @@
       function _() {
         const _ = (0, _._)(2, _._.LANGUAGE, !0),
           _ = (0, _._)();
-        if (!_.data?.definition || !_.data?.reward_items.length) return null;
-        const _ = _?.data.reward_items;
+        if (!_.data?.definition || 0 == (_.data?.reward_items?.length ?? 0))
+          return null;
+        const _ = _?.data.reward_items ?? [];
         (0, _._)(_);
         const _ = __webpack_require__.slice(0, 3);
         let _ = null;
@@ -1657,7 +1683,13 @@
                 null,
                 (0, _._)(
                   "#DiscoveryQueue_Widget_SaleTitle",
-                  (0, _._)(_.data.definition.rtime_end_time, !1, !1, !1, !1),
+                  (0, _._)(
+                    _.data.definition.rtime_end_time ?? 0,
+                    !1,
+                    !1,
+                    !1,
+                    !1,
+                  ),
                 ),
                 _,
               ),
@@ -1668,6 +1700,8 @@
       function _(_) {
         const { rgRewardItems: _ } = _,
           _ = _.map((_) => {
+            if (!_.community_definition || !_.community_definition.item_name)
+              return null;
             const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
             return _.createElement(
               "div",
@@ -1685,7 +1719,7 @@
           {
             className: _().StickerArrangement,
           },
-          _,
+          _._(_),
         );
       }
     },

@@ -6117,8 +6117,25 @@
         let { items: t } = e,
           n = Nr(),
           a = (0, r.useContext)(Ae).refFullscreenElement,
-          l = ke().bFullscreen,
-          [o, i] = (function () {
+          l = (function () {
+            let e = Nr(),
+              t = (0, r.useCallback)(
+                (t) => {
+                  t.repeat ||
+                    "trailer" == e.strActiveType ||
+                    ("ArrowLeft" == t.code
+                      ? (e.strPreviousID && e.fnSetActive(e.strPreviousID),
+                        t.preventDefault())
+                      : "ArrowRight" == t.code &&
+                        (e.strNextID && e.fnSetActive(e.strNextID),
+                        t.preventDefault()));
+                },
+                [e],
+              );
+            return t;
+          })(),
+          o = ke().bFullscreen,
+          [i, s] = (function () {
             let [e, t] = Xe(),
               n = (0, r.useRef)({ element: void 0, bKeepControls: !1 }),
               a = (0, r.useCallback)(
@@ -6171,8 +6188,8 @@
               },
             ];
           })();
-        o = !!l && o;
-        let s = t.map((e) =>
+        i = !!o && i;
+        let c = t.map((e) =>
             "screenshot" == e.type
               ? r.createElement(Fr, {
                   key: e.key,
@@ -6187,21 +6204,27 @@
                   })
                 : null,
           ),
-          c = n.strPreviousID ? () => n.fnSetActive(n.strPreviousID) : null,
-          u = n.strNextID ? () => n.fnSetActive(n.strNextID) : null;
+          u = n.strPreviousID ? () => n.fnSetActive(n.strPreviousID) : null,
+          m = n.strNextID ? () => n.fnSetActive(n.strNextID) : null;
         return r.createElement(
           "div",
-          { ref: a, className: vr.ItemViewArea, ...i },
-          s,
+          {
+            ref: a,
+            className: vr.ItemViewArea,
+            ...s,
+            onKeyDown: l,
+            tabIndex: 0,
+          },
+          c,
           r.createElement(
             "div",
             {
               className: (0, U.A)(
                 vr.FullscreenArrow,
-                o && vr.Visible,
+                i && vr.Visible,
                 vr.Previous,
               ),
-              onClick: c,
+              onClick: u,
               "data-keepcontrols": !0,
             },
             r.createElement(Mr, { direction: "left" }),
@@ -6209,8 +6232,8 @@
           r.createElement(
             "div",
             {
-              className: (0, U.A)(vr.FullscreenArrow, o && vr.Visible, vr.Next),
-              onClick: u,
+              className: (0, U.A)(vr.FullscreenArrow, i && vr.Visible, vr.Next),
+              onClick: m,
               "data-keepcontrols": !0,
             },
             r.createElement(Mr, { direction: "right" }),
@@ -6222,19 +6245,19 @@
           a = Ar(t),
           l = t == Nr().strNextID;
         let o = Ur(a || l),
-          i = ke();
-        i.bFullscreen;
+          i = ke(),
+          s = (i.bFullscreen, (0, D.tg)());
         if (!o) return null;
-        let s = (0, U.A)(vr.ViewedItem, a && vr.Active, vr.Screenshot),
-          c = n.full;
+        let c = (0, U.A)(vr.ViewedItem, a && vr.Active, vr.Screenshot),
+          u = n.full;
         return r.createElement(
           "div",
-          { className: s },
-          r.createElement("img", { src: c, alt: n.altText }),
+          { className: c },
+          r.createElement("img", { src: u, alt: n.altText }),
           r.createElement(
             "div",
             { className: vr.Controls },
-            r.createElement(ht, { fullscreen: i }),
+            s && r.createElement(ht, { fullscreen: i }),
           ),
         );
       }
@@ -6243,8 +6266,9 @@
           a = Ar(t),
           l = Ur(a),
           [o, i] = (0, g.TP)(),
-          s = ke(),
-          c = Nr(),
+          s = ke();
+        s = (0, D.tg)() ? s : null;
+        let c = Nr(),
           u = (0, r.useCallback)(() => c.fnSetActive(c.strNextID), [c]);
         if (!l) return null;
         let m = (0, U.A)(vr.ViewedItem, a && vr.Active, vr.Trailer);

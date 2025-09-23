@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s เกม",
 	"Menu_Search": "ค้นหา",
 	"Menu_Label": "เมนูร้านค้า",
+	"Menu_IncludesXGames": "รวมถึง %1$s เกม",
 	"ItemFlag_InLibrary": "อยู่ในคลัง",
 	"ItemFlag_OnWishlist": "อยู่ในสิ่งที่อยากได้",
 	"ItemFlag_InCart": "อยู่ในรถเข็น",

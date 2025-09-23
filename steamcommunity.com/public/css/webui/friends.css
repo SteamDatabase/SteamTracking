@@ -472,6 +472,11 @@
     r: 25;
   }
 }
+.gamepadui_svg_library_BatteryIcon_3xy45.gamepadui_svg_library_LegacySizing_35pkQ {
+  min-width: 34px;
+  height: 24px;
+  display: flex;
+}
 .friendsnooze_SnoozeContainer_1Dsum {
   position: relative;
   overflow: hidden;
@@ -3955,6 +3960,12 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_CompactPadding_3hgIZ {
   padding: 8px 0;
+  margin-left: calc(
+    -1 *
+    var(--field-negative-horizontal-margin) +
+    var(--indent-level) *
+    30px
+  );
   --field-row-children-spacing: 8px;
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithDescription_3tB2l {
@@ -36156,6 +36167,9 @@ div:hover > .BBCodeCollapseControl {
 }
 .voicechatheadersteamdeck_PopupBody_1s0kV {
   -webkit-tap-highlight-color: transparent;
+}
+.voicechatheadersteamdeck_PopupBody_1s0kV.DesktopPreview {
+  background: repeating-conic-gradient(#aaa 0% 25%, #555 0% 50%) 50% / 20px 20px;
 }
 .voicechatheadersteamdeck_VoiceChatHeader_18snG.GamepadMode,
 .GamepadMode .voicechatheadersteamdeck_VoiceChatHeader_18snG {

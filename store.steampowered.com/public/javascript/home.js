@@ -341,6 +341,10 @@ GHomepage = {
 		GHomepage.oDisplayLists.top_vr = v_shuffle( GHomepage.oDisplayListsRaw.top_vr || [] );
 		GHomepage.oDisplayLists.top_new_releases = v_shuffle( GHomepage.oDisplayListsRaw.top_new_releases || [] );
 		GHomepage.oDisplayLists.top_played_deck = v_shuffle( GHomepage.oDisplayListsRaw.top_played_deck || [] );
+		GHomepage.oDisplayLists.sale_tier1 = GHomepage.oDisplayListsRaw.sale_tier1 || [];
+		GHomepage.oDisplayLists.sale_tier2 = GHomepage.oDisplayListsRaw.sale_tier2 || [];
+		GHomepage.oDisplayLists.heros = GHomepage.oDisplayListsRaw.heros || [];
+		GHomepage.oDisplayLists.special_deals = GHomepage.oDisplayListsRaw.special_deals || [];
 
 		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.oDisplayLists.popular_new || [];
 
@@ -357,6 +361,11 @@ GHomepage = {
 		// MAIN CLUSTER
 		try {
 			GHomepage.RenderMainClusterV2()
+		} catch( e ) { OnHomepageException(e); }
+
+		// Seasonal Sales
+		try {
+			GHomepage.RenderSeasonalSaleSections()
 		} catch( e ) { OnHomepageException(e); }
 
 		// Spotlight/specials section
@@ -402,11 +411,6 @@ GHomepage = {
 			GSteamCurators.Render();
 		} catch( e ) { OnHomepageException(e); }
 
-		// Logged in
-		try {
-			GHomepage.RenderTopVRApps();
-		} catch( e ) { OnHomepageException(e); }
-
 		// Tabs
 		try {
 			GHomepage.FilterTabs();
@@ -421,6 +425,11 @@ GHomepage = {
 
 		try {
 			GHomepage.RenderUnder10v2();
+		} catch( e ) { OnHomepageException(e); }
+
+		// Logged in
+		try {
+			GHomepage.RenderTopVRApps();
 		} catch( e ) { OnHomepageException(e); }
 
 		// Sidebar
@@ -526,6 +535,93 @@ GHomepage = {
 		}
 	},
 
+	RenderSeasonalSaleSections: function()
+	{
+		if ( !GHomepage.bIsSeasonalSale )
+			return;
+
+		var k_nTier1ItemsMin = 16;
+		var k_nTier1ItemsMax = 16;
+
+		var k_nTier2ItemsMin = 16;
+		var k_nTier2ItemsMax = 16;
+
+		if ( !GHomepage.oDisplayLists.sale_tier1 )
+			return;
+
+		if ( GHomepage.oDisplayLists.steam_award_winners )
+		{
+			HomeSaleSteamAwardWinners( $J( '.home_steamawards_ctn' ), rgDisplayLists.steam_award_winners, rgSteamAwardDefs );
+		}
+		else
+		{
+			HomeSaleFilterHeroes( $J('.hero_parent_ctn'), GHomepage.oDisplayLists.heros );
+		}
+
+		GHomepage.HomeRenderSpecialDealsCarousel();
+
+		let rgPriorityTier1Items = SortItemListByPriorityList( GHomepage.oDisplayLists.sale_tier1.slice( 0, 50 ), 'tier1' );
+		var rgTier1 = GHomepage.FilterItemsForDisplay(
+			rgPriorityTier1Items, 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+		);
+
+		GDynamicStore.MarkAppDisplayed( rgTier1 );
+
+		let rgPriorityTier2Items = SortItemListByPriorityList( GHomepage.oDisplayLists.sale_tier2.slice( 0, 50 ), 'tier2' );
+		var rgTier2 = GHomepage.FilterItemsForDisplay(
+			rgPriorityTier2Items, 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+		);
+
+		GDynamicStore.MarkAppDisplayed( rgTier2 );
+
+		GHomepage.RenderHomeCapsuleBlock( rgTier1, $J('#tier1_target' ), 'sale_dailydeals_priority' );
+
+		var $Tier2 = $J('#tier2_target' );
+		new CScrollOffsetWatcher( $Tier2, function() { GHomepage.RenderHomeCapsuleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
+
+		$J( '.home_morefeatured_ctn' ).css( 'minHeight', '' );
+	},
+
+	HomeRenderSpecialDealsCarousel: function()
+	{
+		if ( !GHomepage.oDisplayLists.special_deals )
+			return;
+
+		let $SpecialDealsCarousel = $J( '#featured_special_deals' );
+
+		if ( !$SpecialDealsCarousel || !$SpecialDealsCarousel.length )
+			return;
+
+		let rgSpecialDeals = GHomepage.FilterItemsForDisplay(
+			GHomepage.oDisplayLists.special_deals, 'home', 3, 24, { games_already_in_library: true, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
+		);
+
+		if ( rgSpecialDeals.length < 3 )
+		{
+			$SpecialDealsCarousel.hide();
+			return;
+		}
+
+		if ( g_AccountID )
+		{
+			rgSpecialDeals.sort( ( app1, app2 ) =>
+			{
+				const bApp1Owned = GDynamicStore.BIsAppOwned( app1.appid );
+				const bApp2Owned = GDynamicStore.BIsAppOwned( app2.appid );
+				if ( ( bApp1Owned && bApp2Owned ) || ( !bApp1Owned && !bApp2Owned ) )
+					return 0;
+
+				return !bApp1Owned && bApp2Owned ? -1 : 1;
+			}  );
+		}
+
+		GHomepage.FillPagedCapsuleCarousel( rgSpecialDeals, $SpecialDealsCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
+			return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true });
+		}, 'sale_deep_discounts', 3 );
+
+		GDynamicStore.MarkAppDisplayed( rgSpecialDeals );
+		$SpecialDealsCarousel.css( { minHeight: '' } );
+	},
 
 	RenderMainClusterV2: function()
 	{
@@ -618,7 +714,7 @@ GHomepage = {
 		GDynamicStore.DecorateDynamicItems( $CapTarget );
 
 		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5 );
-		$Parent.show();
+		$Parent.css( 'minHeight', '' );
 	},
 
 	GetRecommendationReasons: function( oItem )
@@ -1052,32 +1148,50 @@ GHomepage = {
 
 		var $RightColCtn = $J('<div/>').addClass('info');
 
-		var $AppName = $J('<div/>', { text: rgItemData['name'] } )
+		var $AppName = $J('<div/>', { html: rgItemData['name'] } );
 		var $AppNameCtn = $J('<div/>' ).addClass( 'app_name' );
 
 		$AppNameCtn.append( $AppName );
 		$RightColCtn.append( $AppNameCtn );
 
-		if ( rgItemData.review_summary && rgItemData.review_summary.reviewScore > 0 )
+		if ( rgItemData.review_summary)
 		{
-			const pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
-			let reviewSummary = pref != 1 ? rgItemData.review_summary_filtered : rgItemData.review_summary;
-			let $elReviewData = $J('<div>', {'class': 'review_summary'} );
-			$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary.sReviewSummaryClass }).text( reviewSummary.reviewSummaryDesc ) );
-			$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary.cReviews ) + ')') );
+			var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
+			var reviewSummary = pref != 1 ? rgItemData['review_summary_filtered'] : rgItemData['review_summary'];
+			var $elReviewData = $J('<div>', {'class': 'review_summary' } );
+			var reviewSummaryText = 'Overall user reviews:';
+			if ( reviewSummary['bLanguageOutlier'] && pref != 1 )
+			{
+				reviewSummaryText = 'English Reviews:';
+			}
+			$elReviewData.append( $J('<div>', {'class': 'review_summary_title'}).text( reviewSummaryText ) );
+			$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
+			if ( reviewSummary['reviewScore'] > 0 )
+			{
+				$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
+			}
+			if ( reviewSummary['review_anomaly'] )
+			{
+				$elReviewData.append( $J( '<span class="review_anomaly_icon">&nbsp;*</span>' ) );
+			}
 
 			$RightColCtn.append( $elReviewData );
 		}
 
 		if ( rgItemData.tags )
-		{
-			let $elTagContainer = $J('<div>',{'class': 'tags'});
-			for ( var i=0; i < rgItemData.tags.length && i < 10; i++ )
 			{
-				$elTagContainer.append($J('<div>').text( rgItemData.tags[i] ));
+				var tagsTitleText = 'User Tags';
+				let $elTagCtn = $J('<div>', { 'class': 'tags_ctn' });
+				let $elTagHeader = $J('<div>', { 'class': 'tags_title' }).text( tagsTitleText );
+				let $elTagContainer = $J('<div>',{'class': 'tags'});
+				for ( var i=0; i < rgItemData.tags.length && i < 10; i++ )
+				{
+					$elTagContainer.append($J('<div>').text( rgItemData.tags[i] ));
+				}
+				$elTagCtn.append( $elTagHeader );
+				$elTagCtn.append( $elTagContainer );
+				$RightColCtn.append( $elTagCtn );
 			}
-			$RightColCtn.append( $elTagContainer );
-		}
 
 		// Recommendation reason block
 		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( rgItem );
@@ -1357,7 +1471,7 @@ GHomepage = {
 							var reviewSummary = pref != 1 ? rgData['review_summary_filtered'] : rgData['review_summary'];
 							var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-html": reviewSummary['sReviewScoreTooltip'] } );
 							var reviewSummaryText = rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall user reviews:';
-							if ( reviewSummary['bLanguageOutlier'] && pref != 0 )
+							if ( reviewSummary['bLanguageOutlier'] && pref != 1 )
 							{
 								reviewSummaryText = 'English Reviews:';
 							}
@@ -1448,7 +1562,7 @@ GHomepage = {
 			{
 				if ( $RecentlyUpdated.hasClass( 'v2' ) )
 				{
-					const fnFeatureRow = () =>
+					const $elFriendsRow = () =>
 					{
 						let $FriendsCtn = $J('<div class="friends_container" />');
 
@@ -1473,7 +1587,7 @@ GHomepage = {
 						return $FriendsCtn;
 					}
 
-					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline', false, false, true, fnFeatureRow );
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true, 'html_before_price': $elFriendsRow } );
 				}
 
 
@@ -1559,7 +1673,7 @@ GHomepage = {
 				let $CapCtn = null;
 				if ( $RecommendedCreators.hasClass( 'v2' ) )
 				{
-					$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', 'discount_block_inline', false, false, true );
+					$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', { 'disable_autosizer': true });
 					GHomepage.AddCuratorToCapsule( $CapCtn, oItem.avatar_sha, oItem.name );
 				}
 				else
@@ -1645,19 +1759,19 @@ GHomepage = {
 
 				if ( $DeepDive.hasClass( 'v2' ) )
 				{
-					const fnFeatureRow = () =>
+					const $elTags = () =>
 					{
 						for ( var i = 0; i < appKeyTags.length; i++ )
 						{
 							const tag = appKeyTags[i];
 							strKeyTags += "<div class='deep_dive_tag'>"+tag.name + "</div>";
-							if(i >= 3) break; //only show 4
+							if(i >= 7) break; //only show 8
 						}
 
 						return $J( '<div/>', { 'class': 'deep_dive_key_tags' } ).html( strKeyTags );
 					}
 
-					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline', false, false, true, fnFeatureRow );
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true, 'html_before_price': $elTags } );
 				}
 
 				//Build the tag block
@@ -1690,19 +1804,21 @@ GHomepage = {
 		if ( !$RecommendedBySteamLabs.length )
 			return;
 
-        var rgCapsules = GHomepage.FilterItemsForDisplay(
-            GHomepage.rgRecommendedBySteamLabsApps, 'home', 4, 12,
-            {
-                games_already_in_library: false,
-                dlc: false,
-                localized: true,
-                not_wishlisted: false,
-                explicitly_included_tags: GHomepage.rgIRIncludedTags,
-                explicitly_excluded_tags: GHomepage.rgIRExcludedTags,
-				has_discount: GHomepage.bIsSeasonalSale,
-				enforce_minimum: GHomepage.bIsSeasonalSale,
-            }
-        );
+		let oFilterOptions = {
+			games_already_in_library: false,
+			dlc: false,
+			localized: true,
+			not_wishlisted: false,
+			explicitly_included_tags: GHomepage.rgIRIncludedTags,
+			explicitly_excluded_tags: GHomepage.rgIRExcludedTags,
+		};
+
+		if ( GHomepage.bIsSeasonalSale )
+		{
+			oFilterOptions = { ...oFilterOptions, has_discount: true, enforce_minimum: true };
+		}
+
+        const rgCapsules = GHomepage.FilterItemsForDisplay(GHomepage.rgRecommendedBySteamLabsApps, 'home', 4, 12, oFilterOptions );
 
         if ( rgCapsules.length < 4 )
         {
@@ -1714,7 +1830,7 @@ GHomepage = {
             {
 				if ( $RecommendedBySteamLabs.hasClass( 'v2' ) )
 				{
-					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline',  false, false, true );
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
 				}
 				var nAppId = oItem.appid;
                 return GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
@@ -1772,7 +1888,7 @@ GHomepage = {
 			return;
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.top_vr, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			GHomepage.oDisplayLists.top_vr, 'home', 4, 16, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 
 				if( GHomepage.oDisplayLists.top_vr.length > 0 && GStoreItemData.rgPackageData[ 354231 ])
@@ -1789,17 +1905,27 @@ GHomepage = {
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $TopVRTitles,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
+				if ( $TopVRTitles.hasClass( 'v2' ) )
+				{
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
+				}
 				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 			},	'best_selling_vr', 4
 		);
+
+		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
+
+		$TopVRTitles.show();
 	},
 
 
 	RenderSpotlightSection: function()
 	{
+		const $Parent = $J( '#module_special_offers' );
 		var $Spotlights = $J('#spotlight_carousel');
 		if ( $Spotlights.length == 0 )
 		{
+			$Parent.hide();
 			return;
 		}
 
@@ -1898,11 +2024,27 @@ GHomepage = {
 				}
 
 				var $Target = $J( '<div/>', {'class': 'specials_target' });
-				$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
-					'discount_class': 'daily_deal_discount discount_block_large',
-					'capsule_size': 'header',
-					lazy: true
-				}, iPage + 1 ) );
+				if ( $Spotlights.hasClass( 'v2' ) )
+				{
+					const $SpecialDealRow = $J( '<div/>', { 'class': 'special_deal_row' } );
+
+					$Target.append ( GHomepage.BuildHomePageCapsule( oItem, 'spotlight_specials', {
+						'discount_class': 'daily_deal_discount discount_block_large',
+						'capsule_size': 'header',
+						'disable_autosizer': true,
+						'html_before_price': $SpecialDealRow,
+						lazy: true
+					}, iPage + 1 ) );
+				}
+				else
+				{
+					$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
+						'discount_class': 'daily_deal_discount discount_block_large',
+						'capsule_size': 'header',
+						lazy: true
+					}, iPage + 1 ) );
+				}
+
 				rgItemsShown.push( oItem );
 
 				$Col.append( $Target );
@@ -1920,6 +2062,7 @@ GHomepage = {
 		}
 
 		CreateFadingCarousel( $Spotlights, 0);
+		$Parent.css( 'minHeight', '' );
 		$Spotlights.css( 'visibility', '' );
 	},
 
@@ -1942,7 +2085,7 @@ GHomepage = {
 			{
 				if ( $TopNewReleasesCarousel.hasClass( 'v2' ) )
 				{
-					return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline', false, false, true );
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
 				}
 
 				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
@@ -1987,7 +2130,7 @@ GHomepage = {
 		if ( rgSteamDeckGames.length >= k_nMinItemsInCarousel )
 		{
 			GHomepage.FillPagedCapsuleCarousel( rgSteamDeckGames, $SteamDeckCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
-				return GHomepage.BuildHomePageCapsule( oItem, strFeature, 'discount_block_inline', false, false, true );
+				return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
 			}, 'sale_deck_mostplayed', k_nMinItemsInCarousel );
 
 			GDynamicStore.MarkAppDisplayed( rgSteamDeckGames, k_nMinItemsInCarousel );
@@ -2186,20 +2329,20 @@ GHomepage = {
 		}
 
 		var bSingle = rgWishlistOnSaleFiltered.length < 4 || rgDLCOnSaleFiltered.length < 4;
-		if ( rgWishlistOnSaleFiltered.length )
+		if ( rgWishlistOnSaleFiltered.length === 4 )
 		{
 			if ( bSingle )
 				$J('#wishlist_tier').addClass( 'single_row' );
-			GHomepage.RenderHomeTwoByTwoSection( $J('#wishlist_tier' ), rgWishlistOnSaleFiltered, 'sale_fromyourwishlist', true );
+			GHomepage.RenderHomeTwoByTwoSection( $J('#wishlist_tier' ), rgWishlistOnSaleFiltered, 'sale_fromyourwishlist', { 'capsule_size': 'header' } );
 			GDynamicStore.MarkAppDisplayed( rgWishlistOnSaleFiltered );
 			$J('.wishlist_block').show();
 		}
 
-		if ( rgDLCOnSaleFiltered.length )
+		if ( rgDLCOnSaleFiltered.length === 4 )
 		{
 			if ( bSingle )
 				$J('#dlc_tier').addClass( 'single_row' );
-			GHomepage.RenderHomeTwoByTwoSection( $J('#dlc_tier' ), rgDLCOnSaleFiltered, 'sale_dlcforyou', true );
+			GHomepage.RenderHomeTwoByTwoSection( $J('#dlc_tier' ), rgDLCOnSaleFiltered, 'sale_dlcforyou', { 'capsule_size': 'header' } );
 			GDynamicStore.MarkAppDisplayed( rgDLCOnSaleFiltered );
 			$J('.dlc_block').show();
 		}
@@ -2361,19 +2504,29 @@ GHomepage = {
 		if ( !$Parent.length )
 			return;
 
-		var rgUnder10Filtered = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.under10, 'home', 4, 12, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, has_discount: GHomepage.bIsSeasonalSale }
-		);
+		let oFilterOptions = {
+			games_already_in_library: false,
+			localized: true,
+			displayed_elsewhere: false,
+			only_current_platform: true,
+		};
+
+		if ( GHomepage.bIsSeasonalSale )
+		{
+			oFilterOptions = { ...oFilterOptions, has_discount: true };
+		}
+
+		var rgUnder10Filtered = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.under10, 'home', 4, 12, oFilterOptions );
 
 		rgUnder10Filtered.splice( rgUnder10Filtered.length - ( rgUnder10Filtered.length % 4 ) );
 		if ( rgUnder10Filtered.length >= 4 )
 		{
 			GHomepage.FillPagedCapsuleCarousel( rgUnder10Filtered, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions, nDepth ) {
-				return GHomepage.BuildHomePageCapsule( oItem, 'under10', 'discount_block_inline', false, false, true );
+				return GHomepage.BuildHomePageCapsule( oItem, 'under10', { 'disable_autosizer': true } );
 			} , 'under10', 4 );
 
 			GDynamicStore.MarkAppDisplayed ( rgUnder10Filtered, 4 );
-			$Parent.css( 'visibility', '' );
+			$Parent.show();
 		}
 	},
 
@@ -2544,68 +2697,82 @@ GHomepage = {
 		return $CapCtn;
 	},
 
-	BuildHomePageCapsule: function( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPreferHeaderImg, bDisableAutosizer, fnRenderFeatureRow )
+	BuildHomePageCapsule: function( item, strFeatureContext, rgCapsuleOptions, nDepth )
 	{
-		var params = { 'class': 'sale_capsule add_microtrailer' };
+		const rgOptions = $J.extend({
+			'class': 'sale_capsule',
+			'include_title': false,
+			'discount_class': 'discount_block_inline',
+			'capsule_size': 'main_capsule',
+			'html_before_price': '',
+			'disable_autosizer': false,
+			'lazy': false,
+			'no_hover': false,
+		}, rgCapsuleOptions ? rgCapsuleOptions : {} );
+
+		var params = { 'class': rgOptions.class };
 
 		if( item && item.feature && item.feature.length > 0 )
 		{
 			strFeatureContext = item.feature;
 		}
-		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, item, params );
 
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, item, params, nDepth );
 		if ( !rgItemData )
 			return;
 
 		var $CapCtn = $J('<a/>', params );
-		GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
+		if ( !rgOptions.no_hover )
+			GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
 
-		var $Img;
-		if ( bDisableAutosizer )
+		const rgDefaultImageProperties = { 'alt': rgItemData.name, 'class': 'sale_capsule_image' };
+		let rgImageProperties = {};
+		if ( rgOptions.disable_autosizer )
 		{
-			$Img = $J('<img/>', {'class': 'sale_capsule_image', 'src': rgItemData['main_capsule']});
+			if ( rgOptions.lazy )
+				rgImageProperties['data-image-url'] = rgItemData[rgOptions.capsule_size];
+			else
+				rgImageProperties['src'] = rgItemData[rgOptions.capsule_size];
 		}
 		else
 		{
-			if ( bUseSmallCap )
+			if ( rgOptions.capsule_size === 'small_capsule' )
 			{
-				$Img = $J('<img/>', {'class': 'sale_capsule_image', 'src': rgItemData['small_capsule']});
+				rgImageProperties['src'] = rgItemData[rgOptions.capsule_size];
 			}
 			else
 			{
-				if ( bPreferHeaderImg && typeof rgItemData['header'] !== 'undefined' )
+				if ( rgOptions.capsule_size === 'header' && typeof rgItemData['header'] !== 'undefined' )
 				{
-					$Img = $J('<img/>', {
+					rgImageProperties = {
 						'class': 'sale_capsule_image autosize',
-						'src': 'https://store.fastly.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif'
-					});
-					$Img.data('src-header', rgItemData['header']);
+						'src': 'https://store.fastly.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif',
+						'data-src-header': rgItemData['header'],
+					};
 				}
 				else
 				{
-					$Img = $J('<img/>', {
+					rgImageProperties = {
 						'class': 'sale_capsule_image autosize',
-						'src': 'https://store.fastly.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif'
-					});
-					$Img.data('src-maincap', rgItemData['main_capsule']);
+						'src': 'https://store.fastly.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif',
+						'data-src-maincap': rgItemData['main_capsule'],
+					};
 				}
 
-				$Img.data('src-smallcap', rgItemData['small_capsule']);
+				rgImageProperties['data-src-smallcap'] = rgItemData['small_capsule'];
 			}
 		}
 
-		$Img.attr( 'alt', rgItemData['name'] );
+		const $Img = $J('<img/>', $J.extend( {}, rgDefaultImageProperties, rgImageProperties ) );
 
 		$CapCtn.append( $J('<div/>', {'class': 'capsule_image_ctn' } ).append( $J('<div/>', {'class': 'sale_capsule_image_hover'} ), $Img ) );
 
-		if ( fnRenderFeatureRow )
+		if ( rgOptions.html_before_price )
 		{
-			const $FeatureRow = fnRenderFeatureRow();
-			if ( $FeatureRow.length )
-				$CapCtn.append( $J('<div/>', {'class': 'capsule_row_ctn' } ).append( $FeatureRow ) );
+			$CapCtn.append( $J('<div/>', {'class': 'capsule_row_ctn' } ).append( rgOptions.html_before_price ) );
 		}
 
-		$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : 'discount_block_inline' );
+		$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( rgOptions.discount_class ) : '&nbsp;' );
 
 		var rgAppInfo = GStoreItemData.rgAppData[ item.appid ];
 		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
@@ -2613,7 +2780,11 @@ GHomepage = {
 			$CapCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
 		}
 
-		GHomepage.AddMicrotrailerToCapsule( $CapCtn, rgItemData.microtrailer );
+		if ( rgItemData.microtrailer )
+		{
+			$CapCtn.addClass( 'add_microtrailer' );
+			GHomepage.AddMicrotrailerToCapsule( $CapCtn, rgItemData.microtrailer );
+		}
 
 		return $CapCtn;
 	},
@@ -2688,6 +2859,28 @@ GHomepage = {
 		});
 	},
 
+	RenderHomeCapsuleBlock: function( rgItems, $Parent, strFeatureContext )
+	{
+		var rgRemainingItems = rgItems;
+
+		if ( !strFeatureContext )
+			strFeatureContext = 'sale_dailydeals';
+
+		var bFourRow = true;
+		while( rgRemainingItems.length )
+		{
+			if ( rgRemainingItems.length < 4 || rgRemainingItems.length == 6 || rgRemainingItems.length == 9 )
+				bFourRow = false;
+			else if ( rgRemainingItems.length == 4 )
+				bFourRow = true;
+			rgRemainingItems = GHomepage.RenderHomeCapsuleRow( rgRemainingItems, $Parent, 4, strFeatureContext, SaleCap );
+			bFourRow = !bFourRow;
+		}
+		GHomepage.BindHomeCapAutoSizeEvents( $Parent );
+		GDynamicStore.DecorateDynamicItems( $Parent );
+		$Parent.css('min-height', '');
+	},
+
 	RenderHomeCapsuleRow: function( rgItems, $Parent, nItems, strFeatureContext, fnRenderFunc )
 	{
 		var rgItemsThisRow = rgItems.slice( 0, nItems );
@@ -2699,9 +2892,9 @@ GHomepage = {
 			var $Row = $J('<div/>', {'class': 'salerow salerow3' } );
 
 			$Row.append(
-				rgItemsThisRow[0] && fnRenderFunc( rgItemsThisRow[0], strFeatureContext, 'discount_block_inline' ),
-				rgItemsThisRow[1] && fnRenderFunc( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
-				rgItemsThisRow[2] && fnRenderFunc( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
+				rgItemsThisRow[0] && fnRenderFunc( rgItemsThisRow[0], strFeatureContext ),
+				rgItemsThisRow[1] && fnRenderFunc( rgItemsThisRow[1], strFeatureContext ),
+				rgItemsThisRow[2] && fnRenderFunc( rgItemsThisRow[2], strFeatureContext )
 			);
 
 			$Parent.append( $Row );
@@ -2711,10 +2904,10 @@ GHomepage = {
 			var $Row = $J('<div/>', {'class': 'salerow salerow4' } );
 
 			$Row.append(
-				fnRenderFunc( rgItemsThisRow[0], strFeatureContext, 'discount_block_inline' ),
-				fnRenderFunc( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
-				fnRenderFunc( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' ),
-				fnRenderFunc( rgItemsThisRow[3], strFeatureContext, 'discount_block_inline' )
+				fnRenderFunc( rgItemsThisRow[0], strFeatureContext ),
+				fnRenderFunc( rgItemsThisRow[1], strFeatureContext ),
+				fnRenderFunc( rgItemsThisRow[2], strFeatureContext ),
+				fnRenderFunc( rgItemsThisRow[3], strFeatureContext )
 			);
 
 			$Parent.append( $Row );
@@ -2764,13 +2957,13 @@ GHomepage = {
 		} ).trigger('resize.' + id);
 	},
 
-	RenderHomeTwoByTwoSection: function( $Container, rgItems, strFeature, bPreferHeaderImg )
+	RenderHomeTwoByTwoSection: function( $Container, rgItems, strFeature, rgCapsuleOptions )
 	{
 		$Container.append(
-			rgItems[0] && GHomepage.BuildHomePageCapsule( rgItems[0], strFeature, 'discount_block_inline', false, bPreferHeaderImg ),
-			rgItems[1] && GHomepage.BuildHomePageCapsule( rgItems[1], strFeature, 'discount_block_inline', false, bPreferHeaderImg ),
-			rgItems[2] && GHomepage.BuildHomePageCapsule( rgItems[2], strFeature, 'discount_block_inline', false, bPreferHeaderImg ),
-			rgItems[3] && GHomepage.BuildHomePageCapsule( rgItems[3], strFeature, 'discount_block_inline', false, bPreferHeaderImg )
+			rgItems[0] && GHomepage.BuildHomePageCapsule( rgItems[0], strFeature, rgCapsuleOptions ),
+			rgItems[1] && GHomepage.BuildHomePageCapsule( rgItems[1], strFeature, rgCapsuleOptions ),
+			rgItems[2] && GHomepage.BuildHomePageCapsule( rgItems[2], strFeature, rgCapsuleOptions ),
+			rgItems[3] && GHomepage.BuildHomePageCapsule( rgItems[3], strFeature, rgCapsuleOptions )
 		);
 
 		GDynamicStore.DecorateDynamicItems( $Container );
@@ -3622,7 +3815,7 @@ GSteamCurators = {
 						let $CapCtn = null;
 						if ( bVersion2 )
 						{
-							$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', 'discount_block_inline', false, false, true );
+							$CapCtn = GHomepage.BuildHomePageCapsule( oItem, 'creator_recommendations', { 'disable_autosizer' : true } );
 
 							const curatorsCache = GSteamCurators.rgAppsRecommendedByCurators.curators;
 							const clanID = oItem.rgCurators[0];

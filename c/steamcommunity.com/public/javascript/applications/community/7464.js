@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Obsah byl smazán",
 	"moderation_resolutionstatus_relabelled": "Byla změněna značka obsahu",
 	"moderation_resolutionstatus_suspicious": "Účet byl uzamčen kvůli podezřelému obsahu",
+	"moderation_resolutionstatus_harassmentstrike": "Byla pozastavena oprávnění v komunitě služby Steam",
 	"moderation_resolutionstatus_unknown": "Neznámý stav"
 }`);
     },

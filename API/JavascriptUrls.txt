@@ -137,8 +137,8 @@ ${COMMUNITY_BASE_URL}${_ ? _ : _}/
 ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
+${COMMUNITY_BASE_URL}${}${}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}${}/
-${COMMUNITY_BASE_URL}${}?${}
 ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
@@ -162,6 +162,7 @@ ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
 ${COMMUNITY_BASE_URL}actions/FileUploader/
 ${COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${LANGUAGE}
+${COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${}
 ${COMMUNITY_BASE_URL}actions/SearchApps/${}
 ${COMMUNITY_BASE_URL}actions/ajaxcreateupdatediscountevent
 ${COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo
@@ -179,6 +180,7 @@ ${COMMUNITY_BASE_URL}broadcast/broadcastdebuginfo
 ${COMMUNITY_BASE_URL}broadcast/chatonly/${}
 ${COMMUNITY_BASE_URL}broadcast/report
 ${COMMUNITY_BASE_URL}broadcast/setbroadcastrestriction
+${COMMUNITY_BASE_URL}broadcast/share/${}
 ${COMMUNITY_BASE_URL}broadcast/share/${}?site=${}
 ${COMMUNITY_BASE_URL}broadcast/stopbroadcast
 ${COMMUNITY_BASE_URL}broadcast/unban
@@ -220,6 +222,7 @@ ${COMMUNITY_BASE_URL}gid/${}/ajaxrollbackevent
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetlocalization/${}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetmyvote/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/rate/${AnnouncementGID}
+${COMMUNITY_BASE_URL}gid/${}/announcements/share/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/share/${AnnouncementGID}?site=${}
 ${COMMUNITY_BASE_URL}gid/${}/edit 
 ${COMMUNITY_BASE_URL}gid/${}/eventcomments/${forumTopicGID}
@@ -248,6 +251,7 @@ ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
 ${COMMUNITY_BASE_URL}groups/community_market/discussions/
+${COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
@@ -256,7 +260,6 @@ ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/appfilters/${}
-${COMMUNITY_BASE_URL}market/listings/${app_id}/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
 ${COMMUNITY_BASE_URL}market/steamitemfiltersicon/${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
@@ -606,7 +609,6 @@ ${IMG_URL}enno/enno_build2.webm
 ${IMG_URL}error_artwork.png
 ${IMG_URL}events/defaults/default_img_cover.jpg
 ${IMG_URL}events/defaults/default_img_header.jpg
-${IMG_URL}events/defaults/default_img_spotlight.jpg
 ${IMG_URL}events/thumb_library_home.jpg
 ${IMG_URL}events/types/type_${_ ? "11" : "9"}.png
 ${IMG_URL}events/types/type_${icon ? _ : _}.png?v=4
@@ -976,6 +978,7 @@ ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" :
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/steamawards2023/trophy_2023.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
+${PARTNER_BASE_URL}${_ ? "doc/marketing/event_tools/updatelandingpages/tools" : "doc/marketing/event_tools/sales/tools"}
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
@@ -1084,7 +1087,6 @@ ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/sections#cross
 ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
 ${PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales
 ${PARTNER_BASE_URL}doc/marketing/wishlist
-${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/assets/promos
 ${PARTNER_BASE_URL}doc/store/assets/promos#popup_update
 ${PARTNER_BASE_URL}doc/store/assets/rules
@@ -1390,6 +1392,7 @@ ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,release_date,content_descriptors
+${STORE_BASE_URL}app${appid}/landing/${sale_update_landing_page_vanity_id}
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/
@@ -2724,6 +2727,7 @@ https://partner.steamgames.com/doc/${url_slug}?language=${}
 https://partner.steamgames.com/doc/marketing/event_tools
 https://partner.steamgames.com/doc/marketing/event_tools/event_examples
 https://partner.steamgames.com/doc/marketing/event_tools/import
+https://partner.steamgames.com/doc/marketing/event_tools/sales/tools
 https://partner.steamgames.com/doc/marketing/event_tools/visibility
 https://partner.steamgames.com/doc/marketing/pointsshopitems#gameprofile
 https://partner.steamgames.com/doc/marketing/upcoming_events
@@ -3209,6 +3213,7 @@ https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
+https://swarm.valve.org/changes/10091951
 https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202

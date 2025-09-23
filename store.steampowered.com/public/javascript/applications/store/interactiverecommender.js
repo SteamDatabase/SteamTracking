@@ -391,7 +391,7 @@
       a(28460);
       function r(e) {
         const { labelledBy: t } = e || {},
-          [a, i] = s.useState(null);
+          [a, i] = s.useState(void 0);
         return {
           headerId: t || a,
           context: s.useMemo(() => ({ setHeaderId: i }), []),

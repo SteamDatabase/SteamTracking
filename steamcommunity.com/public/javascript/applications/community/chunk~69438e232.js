@@ -2953,18 +2953,18 @@
               this.m_canClaimPromise);
         }
         async InternalLoadCanUserClaimItem() {
-          var e, t, r, i;
+          var e, t, r, i, a, c;
           (0, o.wT)(
             l.iA.logged_in,
             "User must be logged to use CSaleItemClaimableRewardsStore",
           );
-          const a = n.w.Init(s.c3);
-          a.Body().set_language(l.TS.LANGUAGE);
-          let c = null;
+          const d = n.w.Init(s.c3);
+          d.Body().set_language(l.TS.LANGUAGE);
+          let u = null;
           try {
             const n = await s.Qm.CanClaimItem(
               this.m_SteamInterface.GetServiceTransport(),
-              a,
+              d,
             );
             if (1 == n.GetEResult())
               return (
@@ -2973,27 +2973,31 @@
                     ? void 0
                     : e.defid(),
                 )
-                  ? n.Body().reward_item().toObject()
+                  ? null === (t = n.Body().reward_item()) || void 0 === t
+                    ? void 0
+                    : t.toObject()
                   : null),
                 (this.m_claimState = {
-                  bCanClaimNewItem: n.Body().can_claim(),
+                  bCanClaimNewItem: !!n.Body().can_claim(),
                   bAlreadyClaimedCurrentItem: Boolean(
                     this.m_claimedFreeItemDef,
                   ),
                   appid:
-                    null === (t = this.m_claimedFreeItemDef) || void 0 === t
-                      ? void 0
-                      : t.appid,
-                  community_item_type:
                     null === (r = this.m_claimedFreeItemDef) || void 0 === r
                       ? void 0
-                      : r.community_item_type,
-                  community_item_class:
+                      : r.appid,
+                  community_item_type:
                     null === (i = this.m_claimedFreeItemDef) || void 0 === i
                       ? void 0
-                      : i.community_item_class,
+                      : i.community_item_type,
+                  community_item_class:
+                    null === (a = this.m_claimedFreeItemDef) || void 0 === a
+                      ? void 0
+                      : a.community_item_class,
                   rtNextClaimTime:
-                    n.Body().next_claim_time() > 0
+                    (null !== (c = n.Body().next_claim_time()) && void 0 !== c
+                      ? c
+                      : 0) > 0
                       ? n.Body().next_claim_time()
                       : void 0,
                 }),
@@ -3002,15 +3006,15 @@
                 this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
                 this.m_claimState
               );
-            c = (0, m.H)(n);
+            u = (0, m.H)(n);
           } catch (e) {
-            c = (0, m.H)(e);
+            u = (0, m.H)(e);
           }
           return (
             console.error(
               "CSaleItemClaimableRewardsStore.InternalLoadCanUserClaimItem failed: error: " +
-                (null == c ? void 0 : c.strErrorMsg),
-              c,
+                (null == u ? void 0 : u.strErrorMsg),
+              u,
             ),
             { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 }
           );
@@ -3035,6 +3039,7 @@
           );
         }
         async InternalUserClaimItem() {
+          var e, t, r;
           (0, o.wT)(
             l.iA.logged_in,
             "User must be logged to use CSaleItemClaimableRewardsStore",
@@ -3043,17 +3048,24 @@
               this.m_claimState.bCanClaimNewItem,
               "Only should be called when we previously verified you can claim something. ",
             );
-          const e = n.w.Init(s.wt);
-          e.Body().set_language(l.TS.LANGUAGE);
-          let t = null;
+          const i = n.w.Init(s.wt);
+          i.Body().set_language(l.TS.LANGUAGE);
+          let a = null;
           try {
-            const r = await s.Qm.ClaimItem(
+            const n = await s.Qm.ClaimItem(
               this.m_SteamInterface.GetServiceTransport(),
-              e,
+              i,
             );
-            if (1 == r.GetEResult())
+            if (1 == n.GetEResult())
               return (
-                (this.m_claimedFreeItemDef = r.Body().reward_item().toObject()),
+                (this.m_claimedFreeItemDef =
+                  null !==
+                    (t =
+                      null === (e = n.Body().reward_item()) || void 0 === e
+                        ? void 0
+                        : e.toObject()) && void 0 !== t
+                    ? t
+                    : {}),
                 (this.m_claimState = {
                   bCanClaimNewItem: !1,
                   bAlreadyClaimedCurrentItem: Boolean(
@@ -3065,29 +3077,31 @@
                   community_item_class:
                     this.m_claimedFreeItemDef.community_item_class,
                   rtNextClaimTime:
-                    r.Body().next_claim_time() > 0
-                      ? r.Body().next_claim_time()
+                    (null !== (r = n.Body().next_claim_time()) && void 0 !== r
+                      ? r
+                      : 0) > 0
+                      ? n.Body().next_claim_time()
                       : void 0,
                 }),
                 this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                (this.m_rtNextClaimTime = r.Body().next_claim_time()),
+                (this.m_rtNextClaimTime = n.Body().next_claim_time()),
                 this.SetClaimTimer(),
                 this.m_claimState
               );
-            if (29 == r.GetEResult())
+            if (29 == n.GetEResult())
               return (
                 (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
                 this.m_canClaimPromise
               );
-            t = (0, m.H)(r);
+            a = (0, m.H)(n);
           } catch (e) {
-            t = (0, m.H)(e);
+            a = (0, m.H)(e);
           }
           return (
             console.error(
               "CSaleItemClaimableRewardsStore.InternalUserClaimItem failed: error: " +
-                (null == t ? void 0 : t.strErrorMsg),
-              t,
+                (null == a ? void 0 : a.strErrorMsg),
+              a,
             ),
             { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 }
           );
@@ -13717,7 +13731,8 @@
       function L(e) {
         const { eventModel: t, emoticonStore: r, partnerEventStore: i } = e,
           [n, s, o] = (0, j.uD)(),
-          l = c.useCallback((e) => (0, U.Bd)(t, e), [t]);
+          l = (0, U.JP)(t),
+          m = (0, U.T7)(t);
         return c.createElement(
           c.Fragment,
           null,
@@ -13730,8 +13745,8 @@
                 { active: !0 },
                 c.createElement(G, {
                   closeModal: o,
-                  eventLink: (0, U.cq)(t),
-                  fnGetSharePageUrl: l,
+                  eventLink: m,
+                  sharePageUrls: l,
                   appid: t.appid,
                   emoticonStore: r,
                   partnerEventStore: i,
@@ -16807,7 +16822,7 @@
         const { children: t, location: r } = e;
         return i.createElement(
           a.Provider,
-          { value: { ...n, eLocation: r } },
+          { value: { ...n, eLocation: null != r ? r : 0 } },
           t,
         );
       }

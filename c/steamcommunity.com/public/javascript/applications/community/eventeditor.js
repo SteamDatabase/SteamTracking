@@ -3,6 +3,11 @@
   {
     chunkid: (module) => {
       module.exports = {
+        HighlightBox: "_1C8qNhbbX8u5CxFNklZmlc",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SearchResults: "_26iJ3c5EI_arYCNqRvcLNX",
       };
     },
@@ -2486,11 +2491,20 @@
                   _: _._.Edit(__webpack_require__, ""),
                 });
               case "edit":
-                return (0, _._)(this.props.eventModel, _._.k_eCommunityEdit);
+                return _.createElement(_._, {
+                  eventModel: this.props.eventModel,
+                  route: _._.k_eCommunityEdit,
+                });
               case "view":
                 return _.BIsVisibleEvent()
-                  ? (0, _._)(this.props.eventModel, _._.k_eView)
-                  : (0, _._)(this.props.eventModel, _._.k_eCommunityPreview);
+                  ? _.createElement(_._, {
+                      eventModel: this.props.eventModel,
+                      route: _._.k_eView,
+                    })
+                  : _.createElement(_._, {
+                      eventModel: this.props.eventModel,
+                      route: _._.k_eCommunityPreview,
+                    });
               default:
                 console.log(
                   "EventDisplayTile - Unexpected Case - " +
@@ -3375,12 +3389,24 @@
               ),
               Boolean(_.GetAccountID() == _._) &&
                 _.createElement(
-                  "a",
-                  {
-                    href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
-                    target: "_blank",
-                  },
-                  "Content Hub Graphana Stats Page",
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "a",
+                    {
+                      href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
+                      target: "_blank",
+                    },
+                    "Content Hub Graphana Stats Page",
+                  ),
+                  _.createElement("br", null),
+                  _.createElement(
+                    "a",
+                    {
+                      href: `${_._.COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale`,
+                    },
+                    "Open 'Default Contnet Hub Sale Page Editor'",
+                  ),
                 ),
             ),
           ),
@@ -3691,8 +3717,6 @@
       _ = (0, _._)([_._], _);
       const _ = (0, _._)(_);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4015,7 +4039,7 @@
                     onClick: (_) =>
                       (0, _._)(
                         _,
-                        "https://partner.steamgames.com/doc/resources/Sales_Feature_Beta",
+                        "https://partner.steamgames.com/doc/marketing/event_tools/sales/tools",
                       ),
                   },
                   (0, _._)("#EventEditor_Learn_More"),
@@ -4025,6 +4049,7 @@
             : null;
         };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4053,6 +4078,9 @@
             () => _.jsondata.contenthub_override_item_browser_facets,
           ),
           _ = (0, _._)(() => _.jsondata.contenthub_disable_overrides),
+          _ = (0, _._)(
+            () => _.jsondata.contenthub_dlc_for_your_flavor_override,
+          ),
           [_, _] = (0, _.useState)(() => {
             var _;
             return (
@@ -4236,6 +4264,13 @@
               (_.jsondata.contenthub_disable_overrides = _),
                 _.SetDirty(_._.jsondata_sales);
             },
+          }),
+          _.createElement(_._, {
+            strFlavor: _ || "popular",
+            fnSetFlavor: (_) => {
+              _.jsondata.contenthub_dlc_for_your_flavor_override = _;
+            },
+            strLabelOverride: "Override DLC For You filter/sort",
           }),
           _.createElement(_, {
             ..._,
@@ -6355,8 +6390,10 @@
       function _(_) {
         const _ = _._.GetEditModel(),
           { bLoading: __webpack_require__, nAcceptingGuidelineAccount: _ } = (0,
-          _._)(_.GetClanAccountID(), _.GetGID());
+          _._)(_.GetClanAccountID(), _.GetGID()),
+          { bVisible: _ } = (0, _._)(_.GetEventModel());
         if (__webpack_require__) return null;
+        if (_) return null;
         if ((0, _._)(_.GetClanSteamID(), !0)) return _.createElement(_, null);
         return Boolean(_) ? _.createElement(_, null) : null;
       }
@@ -7066,108 +7103,122 @@
           },
         ]),
         (_.MapPubRights = _.ConstructPubRightsMap());
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.GetEditModel(),
           [__webpack_require__, _] = (0, _._)(() => [
             _.GetEventModel().jsondata.sale_opt_in_page_name,
             _.GetEventModel().jsondata.sale_show_creator,
-          ]);
-        return _.createElement(
-          "div",
-          {
-            className: _.Columns,
-          },
-          _.createElement(
+          ]),
+          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+          { bVisible: _ } = (0, _._)(_.GetEventModel());
+        if (_ || _)
+          return _.createElement(
             "div",
             {
-              className: _.LeftCol,
+              className: _.Columns,
             },
-            _.createElement(_, null),
-            _.createElement(_, null),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.RightCol,
-            },
-            _.createElement(_, null),
             _.createElement(
-              _._,
+              "div",
               {
-                clanSteamID: _.GetClanSteamID(),
-                className: _.EditPreviewButton,
+                className: _.LeftCol,
               },
-              _.createElement(_._, {
-                type: "text",
-                label: (0, _._)("#Sale_OptInPageName"),
-                tooltip: (0, _._)("#Sale_OptInPageName_ttip"),
-                value: __webpack_require__,
-                onChange: (_) => {
-                  (0, _._)(() => {
-                    (_.GetEventModel().jsondata.sale_opt_in_page_name =
-                      _.target.value),
-                      _.SetDirty(_._.jsondata_sales);
-                  });
-                },
-              }),
+              _ && _.createElement(_, null),
+              _ && _.createElement(_, null),
+              _ && _.createElement(_, null),
             ),
             _.createElement(
-              _._,
+              "div",
               {
-                toolTipContent: "#Sale_ShowCreatorHome_ttip",
-                direction: "top",
+                className: _.RightCol,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.InputBorder,
-                },
-                _.createElement(_._, {
-                  onChange: (_) => {
-                    (0, _._)(() => {
-                      (_.GetEventModel().jsondata.sale_show_creator = _),
-                        _.SetDirty(_._.jsondata_sales);
-                    });
-                  },
-                  label: (0, _._)("#Sale_ShowCreatorHome"),
-                  checked: _,
-                }),
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                clanSteamID: _.GetClanSteamID(),
-              },
-              _.createElement(_, null),
-              _.createElement(_._, {
-                editModel: _,
-              }),
-              _.createElement(
-                _._,
-                {
-                  toolTipContent:
-                    "Update what a partner is able to change after a sale page is reviewed by Valve",
-                },
+              _ && _.createElement(_, null),
+              _ &&
                 _.createElement(
                   _._,
                   {
-                    onClick: (_) =>
-                      (0, _._)(
-                        _.createElement(_, {
-                          clanSteamID: _.GetClanSteamID(),
-                          gidClanEvent: _.GetGID(),
-                        }),
-                        (0, _._)(_),
-                      ),
+                    clanSteamID: _.GetClanSteamID(),
+                    className: _.EditPreviewButton,
                   },
-                  "Update Sale Page Editability",
+                  _.createElement(_._, {
+                    type: "text",
+                    label: (0, _._)("#Sale_OptInPageName"),
+                    tooltip: (0, _._)("#Sale_OptInPageName_ttip"),
+                    value: __webpack_require__,
+                    onChange: (_) => {
+                      (0, _._)(() => {
+                        (_.GetEventModel().jsondata.sale_opt_in_page_name =
+                          _.target.value),
+                          _.SetDirty(_._.jsondata_sales);
+                      });
+                    },
+                  }),
                 ),
+              _ &&
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: "#Sale_ShowCreatorHome_ttip",
+                    direction: "top",
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.InputBorder,
+                    },
+                    _.createElement(_._, {
+                      onChange: (_) => {
+                        (0, _._)(() => {
+                          (_.GetEventModel().jsondata.sale_show_creator = _),
+                            _.SetDirty(_._.jsondata_sales);
+                        });
+                      },
+                      label: (0, _._)("#Sale_ShowCreatorHome"),
+                      checked: _,
+                    }),
+                  ),
+                ),
+              _ &&
+                _.createElement(
+                  _._,
+                  {
+                    clanSteamID: _.GetClanSteamID(),
+                  },
+                  _.createElement(_, null),
+                  _.createElement(
+                    _._,
+                    {
+                      toolTipContent:
+                        "Update what a partner is able to change after a sale page is reviewed by Valve",
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: (_) =>
+                          (0, _._)(
+                            _.createElement(_, {
+                              clanSteamID: _.GetClanSteamID(),
+                              gidClanEvent: _.GetGID(),
+                            }),
+                            (0, _._)(_),
+                          ),
+                      },
+                      "Update Sale Page Editability",
+                    ),
+                  ),
+                ),
+              _.createElement(
+                _._,
+                {
+                  clanSteamID: _.GetClanSteamID(),
+                },
+                _.createElement(_._, {
+                  editModel: _,
+                }),
               ),
             ),
-          ),
-        );
+          );
       }
       function _(_) {
         var _, _;
@@ -7641,7 +7692,7 @@
                   {
                     className: _.ErrorStylesWithIcon,
                   },
-                  (0, _._)("#EventEditor_SaleNotReady_ttip"),
+                  (0, _._)("#EventEditor_SaleNotReady_SaleVanity_ttip"),
                 ),
             _.createElement(
               _._,
@@ -7663,6 +7714,58 @@
               }),
             ),
           )
+        );
+      }
+      function _(_) {
+        const _ = _._.GetEditModel(),
+          _ = (0, _._)(
+            () => _.GetEventModel().jsondata.sale_update_landing_page_vanity_id,
+          ),
+          [_, _] = (0, _._)(_.GetClanAccountID()),
+          [_] = (0, _._)(_.appid, {
+            include_basic_info: !0,
+          });
+        if (_ || !_) return;
+        const _ = _.GetStorePageURL() + "/" + _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, {
+            type: "text",
+            label: (0, _._)("#Sale_VanityID"),
+            tooltip: (0, _._)("#Sale_VanityID_ttip"),
+            onChange: (_) => _.SetSaleUpdateLandingPageVanityID(_.target.value),
+            value: _,
+          }),
+          Boolean(_)
+            ? _.createElement(
+                "div",
+                null,
+                _.createElement(
+                  "span",
+                  {
+                    className: "DialogLabel",
+                  },
+                  (0, _._)("#Sale_VanityID_Link"),
+                ),
+                _.createElement("br", null),
+                _.createElement(
+                  "a",
+                  {
+                    href: _,
+                    className: "LongURL",
+                    target: _._.IN_CLIENT ? "" : "_blank",
+                  },
+                  _,
+                ),
+              )
+            : _.createElement(
+                "div",
+                {
+                  className: _.ErrorStylesWithIcon,
+                },
+                (0, _._)("#EventEditor_SaleNotReady_UpdateLandingPage_ttip"),
+              ),
         );
       }
       var _ = __webpack_require__("chunkid");
@@ -7890,174 +7993,263 @@
         });
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-        var _, _;
-        const { editModel: _, fnOnOKCallback: _ } = _,
-          _ = _.GetEventModel(),
-          {
-            fnSetStorePublishingRequiresValveApproval: _,
-            fnSetUserWhoEnabledSalePage: _,
-          } = (0, _._)(_.GetClanAccountID(), _.GetGID()),
-          [_, _] = _.useState(
-            null !== (_ = _.jsondata.sale_vanity_id) && void 0 !== _ ? _ : "",
-          ),
-          [_] = _.useState(new _._()),
-          _ =
-            !_._.is_support &&
-            !(null === (_ = _._.GetCreatorHome(_.GetClanSteamID())) ||
-            void 0 === _
-              ? void 0
-              : __webpack_require__.BHasClanAccountFlagSet("chunkid")),
-          _ = Math.floor(Date.now() / 1e3),
-          _ = new Date();
-        _.setHours(10), _.setMinutes(0), _.setSeconds(0);
-        const _ = new Date();
-        _.setDate(_.getDate() + 1),
-          _.setHours(10),
-          _.setMinutes(0),
-          _.setSeconds(0);
-        const [_, _] = _.useState(
-            _.startTime > _ ? _.startTime : Math.floor(_.getTime() / 1e3),
-          ),
-          _ = new Date();
-        _.setDate(_.getDate() + 1),
-          _.setHours(10),
-          _.setMinutes(0),
-          _.setSeconds(0);
-        const [_, _] = _.useState(
-            (null == _ ? void 0 : _.endTime) > Math.floor(_.getTime() / 1e3)
-              ? _.endTime
-              : Math.floor(_.getTime() / 1e3),
-          ),
-          _ = () => {
-            (0, _._)(() => {
-              (_.GetEventModel().jsondata.bSaleEnabled = !1),
-                _.SetDirty(_._.jsondata_sales);
-            }),
-              _.closeModal && _.closeModal();
-          },
-          _ = _.replace(/[^\w-]/g, "").length > 0 && _ && _;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
+          var _, _;
+          const { editModel: _, fnOnOKCallback: _ } = _,
+            _ = _.GetEventModel(),
             {
-              onEscKeypress: _,
+              fnSetStorePublishingRequiresValveApproval: _,
+              fnSetUserWhoEnabledSalePage: _,
+            } = (0, _._)(_.GetClanAccountID(), _.GetGID()),
+            [_, _] = _.useState(
+              null !== (_ = _.jsondata.sale_vanity_id) && void 0 !== _ ? _ : "",
+            ),
+            [_] = _.useState(new _._()),
+            _ =
+              !_._.is_support &&
+              !(null === (_ = _._.GetCreatorHome(_.GetClanSteamID())) ||
+              void 0 === _
+                ? void 0
+                : __webpack_require__.BHasClanAccountFlagSet("chunkid")),
+            _ = Math.floor(Date.now() / 1e3),
+            _ = new Date();
+          _.setHours(10), _.setMinutes(0), _.setSeconds(0);
+          const _ = new Date();
+          _.setDate(_.getDate() + 1),
+            _.setHours(10),
+            _.setMinutes(0),
+            _.setSeconds(0);
+          const [_, _] = _.useState(
+              _.startTime > _ ? _.startTime : Math.floor(_.getTime() / 1e3),
+            ),
+            _ = new Date();
+          _.setDate(_.getDate() + 1),
+            _.setHours(10),
+            _.setMinutes(0),
+            _.setSeconds(0);
+          const [_, _] = _.useState(
+              (null == _ ? void 0 : _.endTime) > Math.floor(_.getTime() / 1e3)
+                ? _.endTime
+                : Math.floor(_.getTime() / 1e3),
+            ),
+            _ = () => {
+              (0, _._)(() => {
+                (_.GetEventModel().jsondata.bSaleEnabled = !1),
+                  _.SetDirty(_._.jsondata_sales);
+              }),
+                _.closeModal && _.closeModal();
             },
+            _ = _.replace(/[^\w-]/g, "").length > 0 && _ && _;
+          return _.createElement(
+            _._,
+            null,
             _.createElement(
               _._,
-              null,
-              _.createElement(_._, null, (0, _._)("#Sale_EnableTitle")),
+              {
+                onEscKeypress: _,
+              },
+              _.createElement(
+                _._,
+                null,
+                _.createElement(_._, null, (0, _._)("#Sale_EnableTitle")),
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(
+                    _._,
+                    null,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.SetupCtn,
+                      },
+                      _.createElement(
+                        "span",
+                        null,
+                        (0, _._)("#Sale_EnableDesc"),
+                      ),
+                      _.createElement(
+                        "ol",
+                        null,
+                        _.createElement(
+                          "li",
+                          null,
+                          (0, _._)("#Sale_EnableDesc_1"),
+                        ),
+                        _.createElement(
+                          "li",
+                          null,
+                          (0, _._)("#Sale_EnableDesc_2"),
+                        ),
+                      ),
+                      _.createElement("br", null),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#Sale_VanityID"),
+                        tooltip: (0, _._)("#Sale_VanityID_ttip"),
+                        onChange: (_) => _(_.target.value),
+                        value: _,
+                      }),
+                      _.createElement(_._, {
+                        strDescription: (0, _._)("#Sale_New_Start"),
+                        nEarliestTime: 0,
+                        fnGetTimeToUpdate: () => _,
+                        fnSetTimeToUpdate: _,
+                        fnIsValidDateTime: () => !0,
+                        bShowTimeZone: !0,
+                      }),
+                      _.createElement(_._, {
+                        strDescription: (0, _._)("#Sale_New_End"),
+                        nEarliestTime: 0,
+                        fnGetTimeToUpdate: () => _,
+                        fnSetTimeToUpdate: _,
+                        fnIsValidDateTime: () => _ > _,
+                        bShowTimeZone: !0,
+                      }),
+                      _.createElement(
+                        _._,
+                        {
+                          clanSteamID: _.GetClanSteamID(),
+                          requireAdmin: !0,
+                        },
+                        _.createElement(_, {
+                          clanSteamID: _.GetClanSteamID(),
+                          gidClanEvent: _.GetGID(),
+                          fnOkCallbackList: _,
+                        }),
+                      ),
+                    ),
+                  ),
+                ),
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_._, {
+                    onCancel: _,
+                    bOKDisabled: !_,
+                    onOK: () => {
+                      (0, _._)(() => {
+                        _.SetSaleVanityID(_),
+                          _.SetEventStartTime(_),
+                          _.SetEventEndTime(_),
+                          _(_._.accountid),
+                          _ && _(!0),
+                          _.Dispatch(),
+                          _();
+                      }),
+                        _.closeModal && _.closeModal();
+                    },
+                  }),
+                ),
+              ),
+            ),
+          );
+        }),
+        _ = (0, _._)((_) => {
+          var _;
+          const { editModel: __webpack_require__, fnOnOKCallback: _ } = _,
+            _ = __webpack_require__.GetEventModel(),
+            [_, _] = _.useState(
+              null !== (_ = _.jsondata.sale_update_landing_page_vanity_id) &&
+                void 0 !== _
+                ? _
+                : "",
+            ),
+            _ = () => {
+              (0, _._)(() => {
+                (__webpack_require__.GetEventModel().jsondata.bSaleEnabled =
+                  !1),
+                  __webpack_require__.SetDirty(_._.jsondata_sales);
+              }),
+                _.closeModal && _.closeModal();
+            },
+            _ = _.replace(/[^\w-]/g, "").length > 0;
+          return _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _._,
+              {
+                onEscKeypress: _,
+              },
               _.createElement(
                 _._,
                 null,
                 _.createElement(
                   _._,
                   null,
+                  (0, _._)("#Sale_UpdateLandingPage_EnableTitle"),
+                ),
+                _.createElement(
+                  _._,
+                  null,
                   _.createElement(
-                    "div",
-                    {
-                      className: _.SetupCtn,
-                    },
-                    _.createElement("span", null, (0, _._)("#Sale_EanbleDesc")),
+                    _._,
+                    null,
                     _.createElement(
-                      "ol",
+                      "div",
                       null,
                       _.createElement(
-                        "li",
+                        "span",
                         null,
-                        (0, _._)("#Sale_EnableDesc_1"),
+                        (0, _._)("#Sale_UpdateLandingPage_EnableDesc"),
                       ),
-                      _.createElement(
-                        "li",
-                        null,
-                        (0, _._)("#Sale_EnableDesc_2"),
-                      ),
-                    ),
-                    _.createElement("br", null),
-                    _.createElement(_._, {
-                      type: "text",
-                      label: (0, _._)("#Sale_VanityID"),
-                      tooltip: (0, _._)("#Sale_VanityID_ttip"),
-                      onChange: (_) => _(_.target.value),
-                      value: _,
-                    }),
-                    _.createElement(_._, {
-                      strDescription: (0, _._)("#Sale_New_Start"),
-                      nEarliestTime: 0,
-                      fnGetTimeToUpdate: () => _,
-                      fnSetTimeToUpdate: _,
-                      fnIsValidDateTime: () => !0,
-                      bShowTimeZone: !0,
-                    }),
-                    _.createElement(_._, {
-                      strDescription: (0, _._)("#Sale_New_End"),
-                      nEarliestTime: 0,
-                      fnGetTimeToUpdate: () => _,
-                      fnSetTimeToUpdate: _,
-                      fnIsValidDateTime: () => _ > _,
-                      bShowTimeZone: !0,
-                    }),
-                    _.createElement(
-                      _._,
-                      {
-                        clanSteamID: _.GetClanSteamID(),
-                        requireAdmin: !0,
-                      },
-                      _.createElement(_, {
-                        clanSteamID: _.GetClanSteamID(),
-                        gidClanEvent: _.GetGID(),
-                        fnOkCallbackList: _,
+                      _.createElement("br", null),
+                      _.createElement("br", null),
+                      _.createElement(_._, {
+                        type: "text",
+                        label: (0, _._)("#Sale_UpdateLandingPageVanityID"),
+                        tooltip: (0, _._)(
+                          "#Sale_UpdateLandingPageVanityID_ttip",
+                        ),
+                        onChange: (_) => _(_.target.value),
+                        value: _,
                       }),
                     ),
                   ),
                 ),
-              ),
-              _.createElement(
-                _._,
-                null,
-                _.createElement(_._, {
-                  onCancel: _,
-                  bOKDisabled: !_,
-                  onOK: () => {
-                    (0, _._)(() => {
-                      _.SetSaleVanityID(_),
-                        _.SetEventStartTime(_),
-                        _.SetEventEndTime(_),
-                        _(_._.accountid),
-                        _ && _(!0),
-                        _.Dispatch(),
-                        _();
-                    }),
-                      _.closeModal && _.closeModal();
-                  },
-                }),
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_._, {
+                    onCancel: _,
+                    bOKDisabled: !_,
+                    onOK: () => {
+                      (0, _._)(() => {
+                        __webpack_require__.SetSaleUpdateLandingPageVanityID(_),
+                          _();
+                      }),
+                        _.closeModal && _.closeModal();
+                    },
+                  }),
+                ),
               ),
             ),
-          ),
-        );
-      });
+          );
+        });
       function _(_) {
-        const _ = _._.GetEditModel(),
-          [__webpack_require__, _] = _.useState(_.BHasSaleEnabled()),
-          _ = (0, _._)(_.GetEventModel().clanSteamID.GetAccountID()),
+        const { mode: _ } = _,
+          _ = _._.GetEditModel(),
+          [_, _] = _.useState(__webpack_require__.BHasSaleEnabled()),
+          _ = (0, _._)(
+            __webpack_require__.GetEventModel().clanSteamID.GetAccountID(),
+          ),
           _ = _.useRef(void 0),
           _ = (_) => {
             var _;
             _(_),
               null === (_ = null == _ ? void 0 : _.current) ||
                 void 0 === _ ||
-                __webpack_require__.setState({
+                _.setState({
                   checked: _,
                 }),
               (0, _._)(() => {
-                (_.GetEventModel().jsondata.bSaleEnabled = _),
-                  _.SetDirty(_._.jsondata_sales);
+                (__webpack_require__.GetEventModel().jsondata.bSaleEnabled = _),
+                  __webpack_require__.SetDirty(_._.jsondata_sales);
               });
           },
-          _ = (0, _._)(_.GetClanSteamID(), !0),
+          _ = (0, _._)(__webpack_require__.GetClanSteamID(), !0),
           _ = !(
-            _.BIsSourceEventSaleEnabled() ||
+            __webpack_require__.BIsSourceEventSaleEnabled() ||
             (_ && _.BHasClanAccountFlagSet(32)) ||
             _
           );
@@ -8073,22 +8265,31 @@
               _
                 ? (null === (_ = null == _ ? void 0 : _.current) ||
                     void 0 === _ ||
-                    __webpack_require__.setState({
+                    _.setState({
                       checked: !1,
                     }),
                   _(!1),
                   (0, _._)(
-                    _.createElement(_, {
-                      editModel: _,
-                      fnOnOKCallback: () => _(!0),
-                    }),
+                    "updatelandingpage" == _
+                      ? _.createElement(_, {
+                          editModel: _,
+                          fnOnOKCallback: () => _(!0),
+                        })
+                      : _.createElement(_, {
+                          editModel: _,
+                          fnOnOKCallback: () => _(!0),
+                        }),
                     window,
                   ))
                 : _(_);
             },
-            label: (0, _._)("#Sale_option"),
+            label: (0, _._)(
+              "updatelandingpage" == _
+                ? "#Sale_option_updatelandingpage"
+                : "#Sale_option",
+            ),
             disabled: _,
-            checked: __webpack_require__,
+            checked: _,
           }),
           _ &&
             _.createElement(
@@ -9570,7 +9771,7 @@
             _.GetName(_) || "",
             _.GetSummary(_) || "",
             _.GetDescription(_) || "",
-            _.GetImageURL("capsule", _) || "",
+            _.GetImageURL("capsule", _) || null,
             __webpack_require__.GetSaleSectionsByType("social_share") || [],
             _.jsondata.sale_default_social_media_disabled,
           ]),
@@ -9775,10 +9976,11 @@
             });
       }
       function _(_) {
-        const { editModel: _ } = _;
+        const { editModel: _, mode: __webpack_require__ } = _;
         return (0, _._)(() => _.GetGID())
           ? _.createElement(_, {
               editModel: _,
+              mode: __webpack_require__,
             })
           : _.createElement(
               "div",
@@ -9789,8 +9991,8 @@
             );
       }
       function _(_) {
-        const { editModel: _ } = _,
-          [__webpack_require__, _, _, _, _, _] = (0, _._)(() => {
+        const { editModel: _, mode: __webpack_require__ } = _,
+          [_, _, _, _, _, _] = (0, _._)(() => {
             var _;
             return [
               _.GetEventModel().jsondata.sale_presenters,
@@ -9825,7 +10027,9 @@
               {
                 className: (0, _._)(_.SaleContainer, "SaleContainer"),
               },
-              _.createElement(_, null),
+              _.createElement(_, {
+                mode: __webpack_require__,
+              }),
               _.createElement(
                 "div",
                 {
@@ -9836,13 +10040,20 @@
                   {
                     className: (0, _._)(_.EventEditorTextTitle, _.FlexGrow),
                   },
-                  (0, _._)("#Sale_title"),
+                  (0, _._)(
+                    "updatelandingpage" == __webpack_require__
+                      ? "#Sale_UpdateLandingPage_title"
+                      : "#Sale_title",
+                  ),
                 ),
                 _.createElement(
                   _._,
                   {
                     href:
-                      _._.PARTNER_BASE_URL + "doc/resources/Sales_Feature_Beta",
+                      _._.PARTNER_BASE_URL +
+                      ("updatelandingpage" == __webpack_require__
+                        ? "doc/marketing/event_tools/updatelandingpages/tools"
+                        : "doc/marketing/event_tools/sales/tools"),
                     className: (0, _._)(_.doclink),
                   },
                   _.createElement(
@@ -9859,7 +10070,7 @@
                   _.createElement(_, {
                     clanSteamID: _,
                     gidClanEvent: _,
-                    rgSalePresenters: __webpack_require__,
+                    rgSalePresenters: _,
                     bIsEventVisible: _,
                     fnCleanSaleEventPresenters: () => {
                       (_.GetEventModel().jsondata.sale_presenters = void 0),
@@ -9985,7 +10196,9 @@
                 },
                 (0, _._)("#Sale_CloneNotReady"),
               ),
-              _.createElement(_, null),
+              _.createElement(_, {
+                mode: __webpack_require__,
+              }),
             );
       }
       function _(_) {
@@ -11731,7 +11944,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
@@ -12188,7 +12400,66 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: _().HighlightBox,
+          },
+          (0, _._)("#PartnerEvent_MM_TitleTip", _.createElement("i", null)),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: _().HighlightBox,
+          },
+          _.createElement(
+            "p",
+            null,
+            (0, _._)("#PartnerEvent_MM_DescriptionTip1"),
+          ),
+          _.createElement(
+            "ul",
+            null,
+            _.createElement(
+              "li",
+              null,
+              (0, _._)("#PartnerEvent_MM_DescriptionTip2"),
+            ),
+            _.createElement(
+              "li",
+              null,
+              (0, _._)("#PartnerEvent_MM_DescriptionTip3"),
+            ),
+            _.createElement(
+              "li",
+              null,
+              (0, _._)("#PartnerEvent_MM_DescriptionTip4"),
+            ),
+          ),
+          _.createElement(
+            "p",
+            null,
+            (0, _._)("#PartnerEvent_MM_DescriptionTip5"),
+          ),
+          _.createElement(
+            "p",
+            null,
+            _.createElement(
+              "a",
+              {
+                href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+              },
+              (0, _._)("#PartnerEvent_MM_LearnMore"),
+            ),
+          ),
+        );
+      }
       function _(_) {
         const _ = _.useRef(void 0),
           { editModel: __webpack_require__, bCanManuallyTagAssociatedApps: _ } =
@@ -12197,7 +12468,10 @@
             _.current && _.current(_, _);
           }, []),
           _ = (0, _._)(_.editModel.GetClanSteamID().ConvertTo64BitString()),
-          _ = _.isSuccess && !!_.data.crowdin_project_id;
+          _ = _.isSuccess && !!_.data.crowdin_project_id,
+          _ = (0, _._)(() =>
+            __webpack_require__.BHasTag("vo_marketing_message"),
+          );
         return _.createElement(
           _.Fragment,
           null,
@@ -12255,6 +12529,7 @@
           _.createElement(_, {
             editModel: __webpack_require__,
           }),
+          _ && _.createElement(_, null),
           _.createElement(
             "div",
             {
@@ -12277,10 +12552,12 @@
             _.GetName(_.GetCurEditLanguage()) || "",
             _.GetEventType(),
           ]),
-          _ = Boolean(__webpack_require__.length >= _._);
+          _ = Boolean(__webpack_require__.length >= _._),
+          _ = (0, _._)(() => _.BHasTag("vo_marketing_message"));
         return _.createElement(
           _.Fragment,
           null,
+          _ && _.createElement(_, null),
           _.createElement(
             "div",
             {
@@ -16050,13 +16327,14 @@
                 description:
                   "Add the 'seasonal_sale_featuring' tag to this post. This will push the event to appear on the front page during a seasonal sale. This assume the content is specific to in-game items on sale for the underlying game",
               }),
-            _.createElement(_._, {
-              onChange: (_) => _.SetTag("contenthub", _),
-              checked: _.GetEventModel().BHasTag("contenthub"),
-              label: "(VO) Tag as Content Hub",
-              description:
-                "Add the 'contenthub' tag to this event. Removes certain publishing restrictions for this event.",
-            }),
+            Boolean(_.GetClanAccountID() == _._) &&
+              _.createElement(_._, {
+                onChange: (_) => _.SetTag("contenthub", _),
+                checked: _.GetEventModel().BHasTag("contenthub"),
+                label: "(VO) Tag as Content Hub",
+                description:
+                  "Add the 'contenthub' tag to this event. Removes certain publishing restrictions for this event.",
+              }),
             _.createElement(_._, {
               onChange: (_) => _.SetTag("patchnotes", _),
               checked: _.GetEventModel().BHasTag("patchnotes"),
@@ -16064,12 +16342,23 @@
               description:
                 "Add the 'patchnotes' tag to this event. Allows the event to show in certain contexts normally only showing Small Update/Patch Notes events such as Steam Client patch notes.",
             }),
+            Boolean(_._.IS_OGG) &&
+              _.createElement(_._, {
+                onChange: (_) => {
+                  _ && (_.setEventType(14), _.SetSteamStoreSpotlight(_)),
+                    _.SetTag("vo_marketing_message", _);
+                },
+                label: "(VO) Marketing Message Major Update",
+                checked: _.GetEventModel().BHasTag("vo_marketing_message"),
+                description:
+                  "This will surface on the event editor the rules and requirements behind being featured in a marketing message to better align them with customer information",
+              }),
             _.createElement(_._, {
               onChange: (_) => _.SetTag("vo_prevent_delete", _),
               label: "(VO) Prevent this event from being deleted.",
               checked: _.GetEventModel().BHasTag("vo_prevent_delete"),
               description:
-                "Add the 'vo_prevent_delete' tag to this post. To prevent a partner or Valve from deleting this event because something is featuring it or depends on it.",
+                "To prevent a partner or Valve from deleting this event because something is featuring it or depends on it.",
             }),
             Boolean(
               _.GetClanAccountID() == _._ ||
@@ -16418,7 +16707,11 @@
             (0, _._)(_),
           );
         };
-        if (_) return (0, _._)(_.GetEventModel(), _._.k_eView);
+        if (_)
+          return _.createElement(_._, {
+            eventModel: _.GetEventModel(),
+            route: _._.k_eView,
+          });
         const _ = _.BHidden(),
           _ = _.BPublished(),
           _ = _.BUnlisted();
@@ -17482,6 +17775,7 @@
                 (0, _._)("#EventPublishing_Summary_ModerationNote"),
               ),
             );
+        const _ = (0, _._)(_.GetEventModel());
         return _.createElement(
           "div",
           {
@@ -17589,7 +17883,7 @@
                   className: _.LinkRow,
                 },
                 _.createElement(_._, {
-                  eventLink: (0, _._)(_.GetEventModel()),
+                  eventLink: _,
                   labelOverride: "#EventEditor_Status_FutureURL",
                 }),
               ),
@@ -17601,7 +17895,8 @@
         const { bInitiatePublishDialog: __webpack_require__, clanSteamID: _ } =
             _,
           _ = (0, _._)("EventInputPane"),
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = _.GetEventModel();
         (0, _.useEffect)(() => {
           _._.IS_CURATOR && _._.LoadCreatorHome(_, _);
         }, [_, _]);
@@ -17622,23 +17917,12 @@
             }
             return !1;
           }, [_]),
-          _ = (0, _.useCallback)(() => {
-            const _ = _.GetEventModel();
-            if (_.BHasSaleEnabled()) return !0;
-            if (
-              _.jsondata.clone_from_event_gid &&
-              _.jsondata.clone_from_sale_enabled
-            )
-              return !0;
-            const _ = _._.GetCreatorHome(_);
-            return !(!_ || !_.BHasClanAccountFlagSet(32));
-          }, [_, _]),
-          _ = _.GetEventModel(),
-          _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel());
-        let _ = !_._.Get().BShowSaleEditorTab(_.GetEventModel());
-        _._.IS_CREATOR_HOME && (_ = !1);
-        const _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID),
-          _ = (0, _._)();
+          _ = (0, _._)(_),
+          _ = (0, _._)(() => (0, _._)()),
+          _ = (0, _._)(_),
+          _ = (0, _._)(() => (0, _._)()),
+          _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel()),
+          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID);
         _._.LoadClanInfoForClanSteamID(_);
         const _ = Boolean(
             null === (_ = _._.GetClanInfoByClanAccountID(_.GetAccountID())) ||
@@ -17734,18 +18018,40 @@
               onClick: _,
             },
             {
-              name: (_() ? "" : "(VO) ") + (0, _._)("#Sale_TabTitle"),
+              name: (_.bValveOnly ? "(VO) " : "") + (0, _._)("#Sale_TabTitle"),
               key: "sale",
               status: _.createElement(_, {
-                fnGetStatus: _._,
+                fnGetStatus: () => _,
               }),
               statusToolTip: null == _ ? void 0 : _.ttip,
-              hidden: _,
+              hidden: !_.bVisible,
               vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
               contents: _.createElement(
                 _._,
                 null,
                 _.createElement(_, {
+                  mode: "sale",
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
+              name:
+                (_.bValveOnly ? "(VO) " : "") +
+                (0, _._)("#EventEditor_UpdateLandingPage_Title"),
+              key: "updatelandingpage",
+              status: _.createElement(_, {
+                fnGetStatus: () => _,
+              }),
+              statusToolTip: null == _ ? void 0 : _.ttip,
+              hidden: !_.bVisible,
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  mode: "updatelandingpage",
                   editModel: _,
                 }),
               ),
@@ -17834,173 +18140,146 @@
       }
       _ = (0, _._)([_._], _);
       const _ = (0, _._)(function (_) {
-        const _ = _.fnGetStatus();
-        if (!_) return null;
-        const { text: __webpack_require__, complete: _, total: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            statusType: _ >= _ ? "success" : "danger",
-          },
-          __webpack_require__,
-        );
-      });
-      let _ = class extends _.Component {
-        render() {
-          this.props.bAutoPreviewRefresh && (0, _._)(5e3);
-          let _ = _._.GetEditModel(),
-            _ = _.GetCurEditLanguage(),
-            _ = _.GetEventModel().GetDescriptionWithFallback(_);
+          const _ = _.fnGetStatus();
+          if (!_) return null;
+          const { text: __webpack_require__, complete: _, total: _ } = _;
           return _.createElement(
-            "div",
+            _._,
             {
-              className: _().InlinePreviewContainer,
+              statusType: _ >= _ ? "success" : "danger",
             },
-            _.createElement(
-              "div",
-              {
-                className: _().FlexRowWrapSpaceBetweenContainer,
-              },
-              _.createElement(
-                "h2",
-                {
-                  className: _().InlinePreviewHeader,
-                },
-                (0, _._)("#EventEditor_Preview_Title"),
-              ),
-            ),
-            _.createElement(
-              _._,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)("EventDetailsBody", _().EventDetailsBody),
-                },
-                _.createElement(_._, {
-                  text: _ || "",
-                  languageOverride: _.GetCurEditLanguage(),
-                  event: _.GetEventModel(),
-                }),
-              ),
-            ),
+            __webpack_require__,
           );
-        }
-      };
-      _ = (0, _._)([_._], _);
-      const _ = (0, _._)((_) => {
-        var _;
-        (0, _.useEffect)(() => {
-          _._.LoadOGGClanInfoForIdentifier(_.appid_or_vanity_str);
-        }, [_.appid_or_vanity_str]);
-        const {
-            clanSteamID: __webpack_require__,
-            gid: _,
-            appid: _,
-            bInitiatePublishDialog: _,
-            appid_or_vanity_str: _,
-          } = _,
-          _ = !(_._.IS_CREATOR_HOME || _._.IS_CURATOR)
-            ? null === (_ = _._.Get().GetApp(_)) || void 0 === _
-              ? void 0
-              : _.GetName()
-            : _._.VANITY_ID,
-          _ = _._.GetEditModel(),
-          _ = _.GetEventModel().bOldAnnouncement;
-        return _.createElement(
-          _._,
-          {
-            editModel: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().wrapper),
-            },
-            _.createElement(_, {
+        }),
+        _ = (0, _._)((_) => {
+          var _;
+          (0, _.useEffect)(() => {
+            _._.LoadOGGClanInfoForIdentifier(_.appid_or_vanity_str);
+          }, [_.appid_or_vanity_str]);
+          const {
               clanSteamID: __webpack_require__,
-              appid: _,
               gid: _,
+              appid: _,
+              bInitiatePublishDialog: _,
               appid_or_vanity_str: _,
-            }),
+            } = _,
+            _ = !(_._.IS_CREATOR_HOME || _._.IS_CURATOR)
+              ? null === (_ = _._.Get().GetApp(_)) || void 0 === _
+                ? void 0
+                : _.GetName()
+              : _._.VANITY_ID,
+            _ = _._.GetEditModel();
+          return _.createElement(
+            _._,
+            {
+              editModel: _,
+            },
             _.createElement(
               "div",
               {
-                className: (0, _._)(
-                  _().FlexColumnContainer,
-                  _().EventEditBelowTopBarContainer,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().EventEditBelowTopBarGameName,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().EventEditBelowTopBarRow,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().EventEditBelowTopBarCategoryChoice,
-                    _: _
-                      ? _._.MigrateCategory(
-                          _.GetStrVanityOrAppID(),
-                          _.GetAnnouncementGID(),
-                        )
-                      : _._.Category(
-                          _.GetStrVanityOrAppID(),
-                          _.BHasGid() ? _.GetGID() : "",
-                        ),
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#EventEditor_TypeTitle"),
-                    " ",
-                  ),
-                  _.GetCategoryAsString(),
-                  _.createElement("img", {
-                    src: _._,
-                  }),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: _.GetName(),
-                    direction: "bottom",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EventEditBelowTopBarEventName,
-                    },
-                    _.GetName(),
-                  ),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().maincontent,
+                className: (0, _._)(_().wrapper),
               },
               _.createElement(_, {
-                appid_or_vanity_str: _,
+                clanSteamID: __webpack_require__,
                 appid: _,
                 gid: _,
-                bInitiatePublishDialog: _,
-                clanSteamID: __webpack_require__,
+                appid_or_vanity_str: _,
               }),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().FlexColumnContainer,
+                    _().EventEditBelowTopBarContainer,
+                  ),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().EventEditBelowTopBarGameName,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().EventEditBelowTopBarRow,
+                  },
+                  _.createElement(_, {
+                    editModel: _,
+                  }),
+                  _.createElement(
+                    _._,
+                    {
+                      toolTipContent: _.GetName(),
+                      direction: "bottom",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().EventEditBelowTopBarEventName,
+                      },
+                      _.GetName(),
+                    ),
+                  ),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().maincontent,
+                },
+                _.createElement(_, {
+                  appid_or_vanity_str: _,
+                  appid: _,
+                  gid: _,
+                  bInitiatePublishDialog: _,
+                  clanSteamID: __webpack_require__,
+                }),
+              ),
+              _.createElement("div", null),
             ),
-            _.createElement("div", null),
+          );
+        });
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__, _, _, _, _, _] = (0, _._)(() => [
+            _.GetEventModel().bOldAnnouncement,
+            _.GetStrVanityOrAppID(),
+            _.GetCategoryAsString(),
+            _.GetAnnouncementGID(),
+            _.BHasGid() ? _.GetGID() : "",
+            _.BHasTag("vo_marketing_message"),
+          ]);
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)({
+              [_().EventEditBelowTopBarCategoryChoice]: !0,
+              [_().EventEditCategoryNotChangeable]: _,
+            }),
+            _: _
+              ? "#"
+              : __webpack_require__
+                ? _._.MigrateCategory(_, _)
+                : _._.Category(_, _),
+            onClick: (_) => {
+              _ && (_.preventDefault(), _.stopPropagation());
+            },
+          },
+          _.createElement(
+            "span",
+            null,
+            (0, _._)("#EventEditor_TypeTitle"),
+            " ",
           ),
+          _,
+          !_ &&
+            _.createElement("img", {
+              src: _._,
+            }),
         );
-      });
+      }
       let _ = class extends _.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new _._(_._.CLANSTEAMID));
@@ -18927,8 +19206,8 @@
         }
         return _.createElement(_.Fragment, null);
       }
-      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
       let _ = class extends _._ {
         constructor() {

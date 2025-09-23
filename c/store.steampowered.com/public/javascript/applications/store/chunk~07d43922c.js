@@ -2187,7 +2187,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = {
           ..._,
@@ -2200,7 +2201,7 @@
           if (!_.rgSubexpressions || 0 === _.rgSubexpressions.length)
             return null;
           if (
-            ((_.rgSubexpressions = _.rgSubexpressions.map((_) => _(_))),
+            ((_.rgSubexpressions = _._(_.rgSubexpressions.map((_) => _(_)))),
             !_.bNegated && 1 === _.rgSubexpressions.length)
           )
             return _.rgSubexpressions[0];
@@ -2209,7 +2210,7 @@
             for (const _ of _.rgSubexpressions)
               _.bNegated || _.type !== _.type
                 ? _.push(_)
-                : (_ = _.concat(_.rgSubexpressions));
+                : (_ = _.concat(_.rgSubexpressions ?? []));
             _.rgSubexpressions = _;
           }
         }
@@ -3549,17 +3550,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const _ = _?.nSaleTagID,
-          _ = _?.strContentHubType,
-          _ = _?.strContentHubCategory,
-          _ = _?.nContentHubTagID,
-          _ = _?.bDiscountsOnly,
-          _ = _?.bPrioritizeDiscounts,
-          _ = _?.strOptInName,
-          _ = _?.nOptInTagID,
-          _ = _?.nPruneTagID;
         let _ = _.toString();
-        return (
+        if (
+          "newreleases" != _?.strContentHubType &&
+          "upcoming" != _?.strContentHubType
+        ) {
+          const _ = _?.nSaleTagID,
+            _ = _?.strContentHubType,
+            _ = _?.strContentHubCategory,
+            _ = _?.nContentHubTagID,
+            _ = _?.bDiscountsOnly,
+            _ = _?.bPrioritizeDiscounts,
+            _ = _?.strOptInName,
+            _ = _?.nOptInTagID,
+            _ = _?.nPruneTagID;
           _
             ? (_ += "_" + _)
             : _ &&
@@ -3568,9 +3572,9 @@
                 ? (_ += "_" + _)
                 : "tags" === _ && _ && (_ += "_" + _),
               _ ? (_ += "_d") : _ && (_ += "_p"),
-              _ && _ && _ && (_ += "_" + _)),
-          _
-        );
+              _ && _ && _ && (_ += "_" + _));
+        }
+        return _;
       }
       function _(_) {
         return (0, _._)(JSON.stringify(_));
@@ -3624,6 +3628,7 @@
         }
         async LoadDiscoveryQueue(_, _, _) {
           const _ = _(_, _);
+          if (!this.m_transport) return 2;
           try {
             const _ = (0, _._)(this.m_transport, _, _, _);
             _ &&
@@ -3662,27 +3667,38 @@
               (await this.LoadDiscoveryQueue(_, _, _)),
             {
               appids: this.m_mapDiscoveryQueues.get(_).appids,
-              exhausted: this.m_mapDiscoveryQueues.get(_).exhausted,
+              exhausted: !!this.m_mapDiscoveryQueues.get(_).exhausted,
             }
           );
         }
         async SkipDiscoveryQueueItem(_, _, _) {
-          _(_, _);
           const _ = this.GetSkippedAppKey(_, _, _);
           if (!this.m_mapSkippedApps.has(_)) {
             const _ = _(_, _),
-              _ = this.m_mapDiscoveryQueues.get(_).appids,
-              _ = _[_.length - 1] == _;
+              _ = this.m_mapDiscoveryQueues.get(_)?.appids,
+              _ = _?.[_.length - 1] == _;
             this.m_mapSkippedApps.set(_, !0),
               this.m_mapSkippedAppCount.set(
                 _,
                 (this.m_mapSkippedAppCount.get(_) || 0) + 1,
               );
             const _ = _._.Init(_._);
-            _.Body().set_appid(_),
+            if (
+              (_.Body().set_appid(_),
               _.Body().set_queue_type(_),
               (Boolean(_?.nSaleTagID) || Boolean(_?.strContentHubType)) &&
-                _.Body().set_store_page_filter((0, _._)(_));
+                _.Body().set_store_page_filter((0, _._)(_, !0)),
+              !this.m_transport)
+            )
+              return (
+                console.warn(
+                  "Error",
+                  "no transport",
+                  "failed to skip appid ",
+                  _,
+                ),
+                void this.m_mapSkippedApps.delete(_)
+              );
             const _ = (
               await _._.SkipDiscoveryQueueItem(this.m_transport, _)
             ).GetEResult();
@@ -3691,7 +3707,6 @@
                 this.m_mapSkippedApps.delete(_))
               : _ && this.MarkDiscoveryQueueCompleted(_, _);
           }
-          return Promise.resolve();
         }
         MarkDiscoveryQueueCompleted(_, _) {
           const _ = _(_, _);
@@ -3706,10 +3721,21 @@
         async LoadSkippedApps(_, _) {
           _(_, _);
           const _ = _._.Init(_._);
-          __webpack_require__.Body().set_steamid(_._.steamid),
+          if (
+            (__webpack_require__.Body().set_steamid(_._.steamid),
             __webpack_require__.Body().set_queue_type(_),
             (Boolean(_?.nSaleTagID) || Boolean(_?.strContentHubType)) &&
-              __webpack_require__.Body().set_store_page_filter((0, _._)(_));
+              __webpack_require__.Body().set_store_page_filter((0, _._)(_, !0)),
+            !this.m_transport)
+          )
+            return (
+              console.warn(
+                "Failed to retrieve skipped apps for discovery queue, no transport.",
+                _,
+                _,
+              ),
+              []
+            );
           const _ = await _._.GetDiscoveryQueueSkippedApps(this.m_transport, _);
           return 1 === _.GetEResult()
             ? _.Body().appids() || []
@@ -4019,6 +4045,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppItemDefs = new Map();
@@ -4035,15 +4062,12 @@
         }
         GetAllItemDefForApp(_) {
           return this.m_mapAppItemDefs.has(_)
-            ? Array.from(this.m_mapAppItemDefs.get(_).values())
+            ? Array.from(this.m_mapAppItemDefs.get(_)?.values() ?? [])
             : [];
         }
         GetCallbackForAppList(_) {
-          return (
-            this.m_mapAppCallbackList.has(_) ||
-              this.m_mapAppCallbackList.set(_, new _._()),
-            this.m_mapAppCallbackList.get(_)
-          );
+          let _ = this.m_mapAppCallbackList.get(_);
+          return _ || ((_ = new _._()), this.m_mapAppCallbackList.set(_, _)), _;
         }
         async SearchItemDefs(_, _) {
           let _ = null;
@@ -4075,34 +4099,35 @@
           );
         }
         async LoadItemDef(_) {
+          if (!_.nAppID || !_.nItemDefID) return !1;
+          let _ = this.m_mapAppItemDefPromises.get(_.nAppID);
+          _ || ((_ = new Map()), this.m_mapAppItemDefPromises.set(_.nAppID, _));
+          let _ = _.get(_.nItemDefID);
           return (
-            this.m_mapAppItemDefPromises.has(_.nAppID) ||
-              this.m_mapAppItemDefPromises.set(_.nAppID, new Map()),
-            this.m_mapAppItemDefPromises.get(_.nAppID).has(_.nItemDefID) ||
-              this.m_mapAppItemDefPromises
-                .get(_.nAppID)
-                .set(_.nItemDefID, this.InternalLoadItemDef([_])),
-            this.m_mapAppItemDefPromises.get(_.nAppID).get(_.nItemDefID)
+            _ || ((_ = this.InternalLoadItemDef([_])), _.set(_.nItemDefID, _)),
+            _
           );
         }
         async LoadAllItemDefForSingleApp(_, _) {
           if (
             0 ==
-            (_ = _.filter((_) => !this.BHasItemDef(_, _.nItemDefID))).length
+            (_ = _.filter(
+              (_) => _.nItemDefID && !this.BHasItemDef(_, _.nItemDefID),
+            )).length
           )
             return !0;
           this.m_mapAppItemDefPromises.has(_) ||
             this.m_mapAppItemDefPromises.set(_, new Map());
           const _ = _.filter(
-              (_) => !this.m_mapAppItemDefPromises.get(_).get(_.nItemDefID),
+              (_) => !this.m_mapAppItemDefPromises.get(_)?.get(_.nItemDefID),
             ),
             _ = _.map((_) =>
-              this.m_mapAppItemDefPromises.get(_).get(_.nItemDefID),
+              this.m_mapAppItemDefPromises.get(_)?.get(_.nItemDefID),
             ).filter(Boolean);
           if (_.length > 0) {
             const _ = this.InternalLoadItemDef(_);
             __webpack_require__.forEach((_) =>
-              this.m_mapAppItemDefPromises.get(_).set(_.nItemDefID, _),
+              this.m_mapAppItemDefPromises.get(_)?.set(_.nItemDefID, _),
             ),
               _.push(_);
           }
@@ -4151,14 +4176,15 @@
         AddItemDefs(_) {
           const _ = new Set();
           _.forEach((_) => {
-            this.m_mapAppItemDefs.has(_.nAppID) ||
-              this.m_mapAppItemDefs.set(_.nAppID, new Map()),
-              this.m_mapAppItemDefs.get(_.nAppID).set(_.nItemDefID, _),
+            if (!_.nAppID || !_.nItemDefID) return;
+            let _ = this.m_mapAppItemDefs.get(_.nAppID);
+            _ || ((_ = new Map()), this.m_mapAppItemDefs.set(_.nAppID, _)),
+              __webpack_require__.set(_.nItemDefID, _),
               _.add(_.nAppID);
           }),
             _.forEach((_) =>
               this.GetCallbackForAppList(_).Dispatch(
-                Array.from(this.m_mapAppItemDefs.get(_).values()),
+                Array.from(this.m_mapAppItemDefs.get(_)?.values() ?? []),
               ),
             );
         }
@@ -4211,7 +4237,7 @@
             _(_.filter((_) => __webpack_require__.includes(_.nItemDefID)));
           }),
           _.useEffect(() => {
-            const _ = _.map((_) => _.nItemDefID);
+            const _ = _._(_.map((_) => _.nItemDefID));
             _.Get().BHasAllItemDef(_, _) ||
               _.Get()
                 .LoadAllItemDefForSingleApp(_, _)
@@ -4219,8 +4245,10 @@
                   _(
                     _.Get()
                       .GetAllItemDefForApp(_)
-                      .filter((_) =>
-                        __webpack_require__.includes(_.nItemDefID),
+                      .filter(
+                        (_) =>
+                          _.nItemDefID &&
+                          __webpack_require__.includes(_.nItemDefID),
                       ),
                   ),
                 );
@@ -4802,21 +4830,23 @@
           );
         }
         GetTagNameForSaleSection(_, _) {
-          const _ = _.GetSectionIndex(_, _),
-            _ = this.m_mapLoadedData.get(_.GID);
-          return _
-            ? _[_]?.sTagName
-            : (this.GetCapsulesForSaleSection(_, _), null);
+          const _ = _.GetSectionIndex(_, _);
+          if (!_.GID) return;
+          const _ = this.m_mapLoadedData.get(_.GID);
+          if (_) return _[_]?.sTagName;
+          this.GetCapsulesForSaleSection(_, _);
         }
         async GetCapsulesForSaleSection(_, _) {
           const _ = _.GetSectionIndex(_, _);
+          if (!_.GID) return;
           if (this.m_loadPromise.has(_.GID)) {
-            return (await this.m_loadPromise.get(_.GID))[_];
+            const _ = await this.m_loadPromise.get(_.GID);
+            return _?.[_];
           }
           const _ = this.LoadData(_);
           this.m_loadPromise.set(_.GID, _);
           const _ = await _;
-          return this.m_mapLoadedData.set(_.GID, _), _[_];
+          return _ && this.m_mapLoadedData.set(_.GID, _), _?.[_];
         }
         async LoadData(_) {
           const _ = _._.Init(_._),
@@ -4837,29 +4867,27 @@
             _ = (0, _._)(_, _);
           if (
             (_.Body().set_context((0, _._)(!1)),
-            _.Body().set_filters((0, _._)(_)),
+            _.Body().set_filters((0, _._)(_, !1)),
             _[0].store_filter)
           ) {
-            const _ = _.Body().filters().add_store_filters();
-            _.set_filter_json((0, _._)(_[0])),
-              _.set_cache_key(_[0].unique_id.toString());
+            const _ = _.Body().filters()?.add_store_filters();
+            _ &&
+              (_.set_filter_json((0, _._)(_[0])),
+              _.set_cache_key((_[0].unique_id ?? "").toString()));
           }
           const _ = await _._.GetItemsByUserRecommendedTags(
             this.m_serviceTransport,
             _,
           );
           if (1 != _.GetEResult())
-            return (
-              console.error(
-                "GetItemsByUserRecommendedTags failed with error" +
-                  _.GetEResult(),
-              ),
-              null
+            return void console.error(
+              "GetItemsByUserRecommendedTags failed with error" +
+                _.GetEResult(),
             );
           return _.Body()
             .sections()
             .map((_) => ({
-              sTagName: _.tag_name(),
+              sTagName: _.tag_name() ?? "",
               rgCapsules: _.store_item_ids().flatMap((_) => {
                 const _ = _.ConvertStoreItemIDToAppType(_);
                 return _ ? [_] : [];
@@ -4883,89 +4911,6 @@
                     type: "sub",
                   }
                 : void 0;
-        }
-        async LoadTestData() {
-          await new Promise((_) => setTimeout(_, 3e3));
-          const _ = [];
-          return (
-            _.push({
-              sTagName: "Foo",
-              rgCapsules: [
-                {
-                  type: "game",
-                  _: 1817230,
-                },
-                {
-                  type: "game",
-                  _: 977950,
-                },
-                {
-                  type: "game",
-                  _: 1585220,
-                },
-                {
-                  type: "game",
-                  _: 1122720,
-                },
-              ],
-            }),
-            _.push({
-              sTagName: "Bar",
-              rgCapsules: [
-                {
-                  type: "game",
-                  _: 268910,
-                },
-                {
-                  type: "game",
-                  _: 2321470,
-                },
-              ],
-            }),
-            _.push(void 0),
-            _.push({
-              sTagName: "Baz",
-              rgCapsules: [
-                {
-                  type: "game",
-                  _: 2066020,
-                },
-                {
-                  type: "game",
-                  _: 1778820,
-                },
-                {
-                  type: "game",
-                  _: 2138710,
-                },
-                {
-                  type: "game",
-                  _: 502500,
-                },
-                {
-                  type: "game",
-                  _: 630,
-                },
-                {
-                  type: "game",
-                  _: 692890,
-                },
-                {
-                  type: "game",
-                  _: 394510,
-                },
-                {
-                  type: "game",
-                  _: 1971870,
-                },
-                {
-                  type: "game",
-                  _: 1384160,
-                },
-              ],
-            }),
-            _
-          );
         }
         static s_Singleton;
         static Get() {
@@ -5047,7 +4992,7 @@
             ..._,
             ..._.reactQuery,
           });
-        const _ = [_, _, _, _];
+        const _ = [_, _, _ ?? {}, _ ?? {}];
         return (0, _._)({
           queryKey: _,
           queryFn: () =>
@@ -5060,14 +5005,14 @@
               if (1 != _.GetEResult())
                 throw `Error executing StoreQuery "${_}", EResult: ${_.GetEResult()}`;
               return new _(_, _);
-            })(_, _, _, _, _),
+            })(_, _, _, _ ?? {}, _),
           ..._,
         });
       }
       class _ {
-        m_Items;
-        m_rgItemIDs;
-        m_metadata;
+        m_Items = void 0;
+        m_rgItemIDs = void 0;
+        m_metadata = void 0;
         constructor(_, _) {
           this.ReadResults(_, _);
         }
@@ -5092,8 +5037,10 @@
             ((this.m_rgItemIDs = __webpack_require__.map((_) => _.toObject())),
             _.Body().store_items())
           )
-            for (const _ of _.Body().store_items())
-              this.m_Items.push(_._.Get().ReadItem(_, _));
+            for (const _ of _.Body().store_items()) {
+              const _ = _._.Get().ReadItem(_, _);
+              _ && this.m_Items.push(_);
+            }
           this.m_metadata = _.Body().metadata().toObject();
         }
       }
@@ -8252,11 +8199,13 @@
         const _ = _(_, _, _);
         if (null !== _) return _;
         if ("crosspromotesalepage" === _.section_type) {
-          const _ = _._.GetClanEventModel(_.sale_page_cross_promo_event_gid);
+          const _ = _.sale_page_cross_promo_event_gid
+            ? _._.GetClanEventModel(_.sale_page_cross_promo_event_gid)
+            : void 0;
           return _
             ? (0, _._)(
                 "#Sale_CrossPromoSale_SectionTitle",
-                _.GetNameWithFallback(_),
+                _.GetNameWithFallback(_) ?? "",
               )
             : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
         }
@@ -8266,7 +8215,7 @@
               ? ""
               : (0, _._)(_.default_label)),
           _ = _.internal_section_title?.trim();
-        if (_?.length > 0) {
+        if ((_?.length ?? 0) > 0) {
           if (3 == _ || 4 == _)
             return 0 == _?.trim().length
               ? _
@@ -8443,17 +8392,17 @@
             relativeQueueCompleted: __webpack_require__,
           } = _,
           { badge_progress: _ } = _,
-          _ = (0, _._)(_.event_badgeid);
+          _ = (0, _._)(_?.event_badgeid);
         if (!_._.logged_in) return null;
         const _ = (_?.level || 0) + __webpack_require__,
           _ = _?.levels?.filter((_) => _.level == _);
-        if (_.length > 0) {
+        if ((_?.length ?? 0) > 0) {
           (0, _._)(
             1 == _.length,
             "Expected only a single match BadgeRewardForDiscoveryQueue",
           );
           const _ = _[0],
-            _ = _.levels[_.levels.length - 1].level || 1;
+            _ = _?.levels?.[_.levels.length - 1].level || 1;
           return _.createElement(
             "div",
             {
@@ -8461,7 +8410,7 @@
             },
             _.createElement("img", {
               className: _().TradingCardImage,
-              src: (0, _._)(_.badge_icon_url),
+              src: _.badge_icon_url ? (0, _._)(_.badge_icon_url) : void 0,
             }),
             _.createElement(
               "div",
@@ -8486,7 +8435,9 @@
       }
       function _(_, _) {
         return {
-          nSaleTagID: !_.BUsesContentHubForItemSource() && _.featured_app_tagid,
+          nSaleTagID: _.BUsesContentHubForItemSource()
+            ? void 0
+            : _.featured_app_tagid,
           strContentHubType: _.GetContentHubType(),
           strContentHubCategory: _.GetContentHubCategory(),
           nContentHubTagID: _.GetContentHubTag(),
@@ -8517,12 +8468,12 @@
             __webpack_require__.discovery_queue_localized_desc?.[_] ||
             void 0,
           _ = _.useMemo(() => {
-            const _ = _.jsondata.sale_sections.filter(
+            const _ = _.jsondata.sale_sections?.filter(
               (_) =>
                 "badge_progress" == _.section_type &&
                 _.badge_progress?.granted_by_discovery_queue,
             );
-            return _?.length > 0 ? _[0] : null;
+            return (_?.length ?? 0) > 0 ? _[0] : null;
           }, [_.jsondata.sale_sections]),
           _ = (0, _._)(_, _),
           _ = "adultonly" != _.GetContentHubType();
@@ -8760,11 +8711,11 @@
           )
         ) {
           if (
-            (_.country_allow_list?.length > 0 &&
+            ((_.country_allow_list?.length ?? 0) > 0 &&
               _.country_allow_list
                 .toLowerCase()
                 .indexOf(_._.COUNTRY.toLowerCase()) < 0) ||
-            (_.country_deny_list?.length > 0 &&
+            ((_.country_deny_list?.length ?? 0) > 0 &&
               _.country_deny_list
                 .toLowerCase()
                 .indexOf(_._.COUNTRY.toLowerCase()) >= 0)
@@ -8779,8 +8730,11 @@
                   ),
                 })
               : void 0;
-          if (_.package_allow_list?.length > 0) {
-            if (!_.package_allow_list.some((_) => _._.Get().BOwnsPackage(_)))
+          if ((_.package_allow_list?.length ?? 0) > 0) {
+            const _ = _.package_allow_list?.some((_) =>
+              _._.Get().BOwnsPackage(_),
+            );
+            if (!_)
               return _ == _.EPreviewMode_EditBackground
                 ? _.createElement(_._, {
                     section: _,
@@ -8792,7 +8746,7 @@
                   })
                 : void 0;
           }
-          if (_.hardware_allow_list?.length > 0) {
+          if ((_.hardware_allow_list?.length ?? 0) > 0) {
             if (
               !_.hardware_allow_list.some((_) => _._.Get().BHasUsedHardware(_))
             )
@@ -9827,7 +9781,7 @@
           _?.GetSaleURL();
         let _ = null;
         return (
-          _?.length > 0 &&
+          (_?.length ?? 0) > 0 &&
             ((_ = _.createElement(
               _._,
               {
@@ -9911,25 +9865,29 @@
       });
       function _(_, _, _) {
         return {
-          fontFamily: _(_.jsondata.sale_font, _),
+          fontFamily: _.jsondata.sale_font
+            ? _(_.jsondata.sale_font, _)
+            : void 0,
           fontWeight: _.jsondata.sale_font_weight,
           fontSize: `${_.jsondata.sale_section_font_size}px`,
           textTransform: _.jsondata.sale_section_disable_capitalize
             ? "initial"
-            : null,
+            : void 0,
           color: _.label_color,
         };
       }
       function _(_, _, _) {
         return {
-          fontFamily: _(_.jsondata.sale_font, _),
+          fontFamily: _.jsondata.sale_font
+            ? _(_.jsondata.sale_font, _)
+            : void 0,
           fontWeight: 300,
           fontSize: `${_.jsondata.sale_section_font_size && _.jsondata.sale_section_font_size - 3}px`,
           letterSpacing: 0,
           lineHeight: `${_.jsondata.sale_section_font_size}px`,
           textTransform: _.jsondata.sale_section_disable_capitalize
             ? "initial"
-            : null,
+            : void 0,
           color: _.label_color,
           opacity: "50%",
         };
@@ -9965,7 +9923,7 @@
         const _ = (0, _._)("#Sale_Section_Header", _ + 1),
           _ = "#Sale_Section_Type_" + (_?.section_type || "unknowntype"),
           _ = (0, _._)(_);
-        return _ !== _ ? `${_} (${_})` : null;
+        return _ !== _ ? `${_} (${_})` : void 0;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -14297,6 +14255,11 @@
             tooltip: "#Sale_BrowserSortOption_All_ttip",
           },
           {
+            label: "#Sale_BrowserSortOption_TrendingFree",
+            flavor: "trendingfree",
+            tooltip: "#Sale_BrowserSortOption_TrendingFree_ttip",
+          },
+          {
             label: "#Sale_BrowserSortOption_ContentHub_NewAndTrending",
             flavor: "contenthub_newandtrending",
             tooltip: "#Sale_BrowserSortOption_ContentHub_NewAndTrending_ttip",
@@ -14325,6 +14288,11 @@
             label: "#Sale_BrowserSortOption_ContentHub_All",
             flavor: "contenthub_all",
             tooltip: "#Sale_BrowserSortOption_ContentHub_All_ttip",
+          },
+          {
+            label: "#Sale_BrowserSortOption_TrendingFree",
+            flavor: "contenthub_trendingfree",
+            tooltip: "#Sale_BrowserSortOption_TrendingFree_ttip",
           },
           {
             label: "#Sale_BrowserSortOption_MLWishlist",
@@ -14359,6 +14327,8 @@
           "all",
           "ml_wishlist_recommender",
           "ml_playtime_recommender",
+          "trendingfree",
+          "contenthub_trendingfree",
         ];
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
@@ -20011,7 +19981,7 @@
           {
             placeholderHeight: "100vh",
             rootMargin: _._,
-            mode: "LoadAndUnload",
+            mode: "JustLoad",
             className: (0, _._)(
               _().SaleSection,
               _().SaleSectionCtn,
@@ -20747,76 +20717,78 @@
       function _(_) {
         const { eventModel: _, titleOverride: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [_.GID, _.jsondata.sale_social_media_items]),
-          [_, _, _] = (0, _._)();
-        if (_.BHasTag("contenthub")) return null;
-        const _ = (0, _._)(_);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().ShareHeader,
-            },
-            __webpack_require__ ??
-              (0, _._)("#EventDisplay_Share_WithFriendsHeader"),
-          ),
-          _.createElement(
-            _._,
-            {
-              focusable: !0,
-              className: (0, _._)(
-                _().Button,
-                _().Icon,
-                _().ShareButton,
-                "SocialShareButton",
+          [_, _, _] = (0, _._)(),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_);
+        return _.BHasTag("contenthub")
+          ? null
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().ShareHeader,
+                },
+                __webpack_require__ ??
+                  (0, _._)("#EventDisplay_Share_WithFriendsHeader"),
               ),
-              onActivate: _,
-            },
-            _.createElement(_.SYj, {
-              className: (0, _._)(_().ShareIcon, "SocialShareIcon"),
-            }),
-            _.createElement(
-              "span",
-              {
-                className: (0, _._)(_().ShareText, "SocialShareText"),
-              },
-              (0, _._)("#Button_Share"),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().SalePageSocialLinks,
-            },
-            Boolean(_?.length > 0) &&
-              _.createElement(_._, {
-                gidClanEvent: _,
-                rgSocial: _,
-              }),
-          ),
-          _ &&
-            _.createElement(
-              _.Suspense,
-              {
-                fallback: null,
-              },
               _.createElement(
                 _._,
                 {
-                  active: !0,
+                  focusable: !0,
+                  className: (0, _._)(
+                    _().Button,
+                    _().Icon,
+                    _().ShareButton,
+                    "SocialShareButton",
+                  ),
+                  onActivate: _,
                 },
-                _.createElement(_, {
-                  closeModal: _,
-                  eventLink: _,
-                  fnGetSharePageUrl: (_) => (0, _._)(_, _),
-                  appid: _.appid,
-                  emoticonStore: _._,
-                  partnerEventStore: _._,
+                _.createElement(_.SYj, {
+                  className: (0, _._)(_().ShareIcon, "SocialShareIcon"),
                 }),
+                _.createElement(
+                  "span",
+                  {
+                    className: (0, _._)(_().ShareText, "SocialShareText"),
+                  },
+                  (0, _._)("#Button_Share"),
+                ),
               ),
-            ),
-        );
+              _.createElement(
+                "div",
+                {
+                  className: _().SalePageSocialLinks,
+                },
+                Boolean(_?.length > 0) &&
+                  _.createElement(_._, {
+                    gidClanEvent: _,
+                    rgSocial: _,
+                  }),
+              ),
+              _ &&
+                _.createElement(
+                  _.Suspense,
+                  {
+                    fallback: null,
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      active: !0,
+                    },
+                    _.createElement(_, {
+                      closeModal: _,
+                      eventLink: _,
+                      sharePageUrls: _,
+                      appid: _.appid,
+                      emoticonStore: _._,
+                      partnerEventStore: _._,
+                    }),
+                  ),
+                ),
+            );
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -23458,9 +23430,17 @@
             this.m_mapDLCPromise.get(_)
           );
         }
+        BPreferUsingDiscoveryQueue(_) {
+          return (
+            "popular" == _ ||
+            "discounted" == _ ||
+            "upcoming" == _ ||
+            "recently_released" == _
+          );
+        }
         async InternalLoadDLC(_) {
           if (
-            ("popular" === _.strFlavor || "discounted" === _.strFlavor) &&
+            this.BPreferUsingDiscoveryQueue(_.strFlavor) &&
             !Boolean((0, _._)("dlcforyou_forsteamid", "application_config"))
           )
             return this.InternalLoadDLCFromDiscoveryQueue(_);
@@ -23513,8 +23493,25 @@
           try {
             await _._.Get().HintLoad();
             const _ = _._.Init(_._);
+            let _ = null;
+            switch (_.strFlavor) {
+              case "discounted":
+                _ = 8;
+                break;
+              case "recently_released":
+                _ = 13;
+                break;
+              case "popular":
+                _ = 14;
+                break;
+              case "upcoming":
+                _ = 15;
+                break;
+              default:
+                _ = 7;
+            }
             if (
-              (_.Body().set_queue_type("discounted" === _.strFlavor ? 8 : 7),
+              (_.Body().set_queue_type(_),
               _.Body().set_country_code(_._.COUNTRY || "US"),
               _.Body().set_rebuild_queue_if_stale(!0),
               _.strHubType)
@@ -24260,7 +24257,8 @@
             () => _._.Get().GetApp(_)?.GetAssets().GetLibraryCapsuleURL(),
             [_],
           ),
-          _ = _.useMemo(() => _._.Get().GetApp(_)?.GetStorePageURL(_), [_, _]);
+          _ = _.useMemo(() => _._.Get().GetApp(_)?.GetStorePageURL(_), [_, _]),
+          _ = (0, _._)(__webpack_require__);
         if (_) return null;
         return !(_.visibility_state !== _._.k_EEventStateVisible) ||
           (_ && 0 !== _.length)
@@ -24392,6 +24390,7 @@
                             capsule: _,
                             imageType: "header",
                             bShowName: !0,
+                            bShowParentApp: _,
                           }),
                         ),
                     })) || [],
@@ -26770,7 +26769,10 @@
           return this.m_bDefaultTab;
         }
         BFilterRequiresFeatureDemo() {
-          return _.BFilterRequiresFeatureDemoStatic(this.m_activeTab);
+          return (
+            !!this.m_activeTab &&
+            _.BFilterRequiresFeatureDemoStatic(this.m_activeTab)
+          );
         }
         static BFilterRequiresFeatureDemoStatic(_) {
           if (1 == _?.sale_tag_filter?.clauses?.length) {
@@ -26784,8 +26786,9 @@
           return !1;
         }
         BFilterRequiresSteamDeckVerifiedOrPlayable() {
-          return _.BFilterRequiresSteamDeckVerifiedOrPlayableStatic(
-            this.m_activeTab,
+          return (
+            !!this.m_activeTab &&
+            _.BFilterRequiresSteamDeckVerifiedOrPlayableStatic(this.m_activeTab)
           );
         }
         static BFilterRequiresSteamDeckVerifiedOrPlayableStatic(_) {
@@ -26817,13 +26820,17 @@
           return Boolean(this.m_capsuleFilter);
         }
         GetTabAppIDs() {
-          return this.BIsTabFilteringEnabled()
+          return this.BIsTabFilteringEnabled() && this.m_capsuleFilter
             ? this.m_capsuleFilter
             : new Set();
         }
         GetStoreFilter() {
           return this.GetTab()?.store_filter
-            ? JSON.stringify((0, _._)(this.GetTab()?.store_filter))
+            ? JSON.stringify(
+                this.GetTab()?.store_filter
+                  ? (0, _._)(this.GetTab().store_filter)
+                  : {},
+              )
             : "";
         }
         GetActiveTabSNRPostFix() {
@@ -27070,7 +27077,7 @@
                 };
                 return (
                   await _._.Get().QueueMultipleAppRequests(
-                    __webpack_require__,
+                    __webpack_require__ ?? [],
                     _,
                   ),
                   {
@@ -27172,7 +27179,7 @@
           _,
           {
             onClick: _,
-            arrDiscoveryApps: _,
+            arrDiscoveryApps: _ ? _._(_) : void 0,
           },
           _.createElement(
             "div",
@@ -27206,8 +27213,9 @@
       function _() {
         const _ = (0, _._)(2, _._.LANGUAGE, !0),
           _ = (0, _._)();
-        if (!_.data?.definition || !_.data?.reward_items.length) return null;
-        const _ = _?.data.reward_items;
+        if (!_.data?.definition || 0 == (_.data?.reward_items?.length ?? 0))
+          return null;
+        const _ = _?.data.reward_items ?? [];
         (0, _._)(_);
         const _ = __webpack_require__.slice(0, 3);
         let _ = null;
@@ -27251,7 +27259,13 @@
                 null,
                 (0, _._)(
                   "#DiscoveryQueue_Widget_SaleTitle",
-                  (0, _._)(_.data.definition.rtime_end_time, !1, !1, !1, !1),
+                  (0, _._)(
+                    _.data.definition.rtime_end_time ?? 0,
+                    !1,
+                    !1,
+                    !1,
+                    !1,
+                  ),
                 ),
                 _,
               ),
@@ -27262,6 +27276,8 @@
       function _(_) {
         const { rgRewardItems: _ } = _,
           _ = _.map((_) => {
+            if (!_.community_definition || !_.community_definition.item_name)
+              return null;
             const _ = `${_._.MEDIA_CDN_COMMUNITY_URL}images/items/${_.appid}/${_.community_definition.item_image_small}`;
             return _.createElement(
               "div",
@@ -27279,7 +27295,7 @@
           {
             className: _().StickerArrangement,
           },
-          _,
+          _._(_),
         );
       }
     },

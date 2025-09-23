@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Inhalt entfernt",
 	"moderation_resolutionstatus_relabelled": "Inhalt umbenannt",
 	"moderation_resolutionstatus_suspicious": "Account gesperrt aufgrund verdächtiger Inhalte",
+	"moderation_resolutionstatus_harassmentstrike": "Steam-Communityprivilegien entzogen",
 	"moderation_resolutionstatus_unknown": "Unbekannt"
 }`);
     },

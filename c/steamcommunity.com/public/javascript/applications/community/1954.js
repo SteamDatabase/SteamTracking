@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "コンテンツが削除されました",
 	"moderation_resolutionstatus_relabelled": "コンテンツのラベルが変更されました",
 	"moderation_resolutionstatus_suspicious": "疑わしいコンテンツによりアカウントがロックされました",
+	"moderation_resolutionstatus_harassmentstrike": "Steamコミュニティ権限の一時停止",
 	"moderation_resolutionstatus_unknown": "不明"
 }`);
     },

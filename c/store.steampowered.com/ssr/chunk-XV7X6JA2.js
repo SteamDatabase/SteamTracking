@@ -2495,6 +2495,7 @@ _(_, {
   BInsertBeforeElement: () => _,
   CountMatches: () => _,
   FilterInPlace: () => _,
+  FilterNonNull: () => _,
   FindAndRemove: () => _,
   FindAndRemoveWhere: () => _,
   FindLast: () => _,
@@ -2668,6 +2669,9 @@ function _(_, _, _ = !0) {
             _ = _.toLowerCase();
           return _ == _ ? 0 : _ ? (_ < _ ? -1 : 1) : _ > _ ? -1 : 1;
         });
+}
+function _(_) {
+  return _.filter((_) => _ != null);
 }
 var _ = {};
 _(_, {
@@ -3565,6 +3569,8 @@ var _ = {
   templatetechspec: 100749,
   topnewreleases: 100750,
   newreleases: 100751,
+  salebrowsetrendingfree: 100752,
+  trendingfree: 100753,
 };
 var _ = _;
 function _(_) {

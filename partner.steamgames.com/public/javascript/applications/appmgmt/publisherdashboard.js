@@ -4229,9 +4229,7 @@
                 !0,
               ),
               s = r?.visibility_state == Nt.zv.k_EEventStateVisible,
-              i = r
-                ? (0, It.qT)(r, It.PH.k_eCommunityEdit, "allowRelative")
-                : void 0;
+              i = (0, It.Bw)(r, It.PH.k_eCommunityEdit, "allowRelative");
             if (!a) return;
             let l =
               r && r.BIsVisibleEvent()
@@ -4456,7 +4454,7 @@
                 "#Dashboard_UpcomingEvents_Events_MeetSteam_Invited_Title",
                 t.GetNameWithFallback(s),
               ),
-          l = (0, It.qT)(t, It.PH.k_eView, "allowRelative"),
+          l = (0, It.Bw)(t, It.PH.k_eView, "allowRelative"),
           c = t.GetImageURL("capsule", s, ge.wI.capsule_main);
         return n.createElement(
           ne.b1,

@@ -1901,6 +1901,10 @@
         ReadItem(_, _) {
           const _ = _.item_type();
           let _ = null;
+          if (void 0 === _)
+            return (
+              console.warn(`Failed to load item data: ${_.success()}`), null
+            );
           switch (_) {
             case 0:
               _ = this.m_mapApps;

@@ -5614,7 +5614,11 @@
             );
           },
           v = (0, l.q3)(() => Rt.TU.Get().BIsConnected());
-        if (u) return (0, st.OG)(t, st.PH.k_eCommunityAdminPage);
+        if (u)
+          return m.createElement(st.OG, {
+            eventModel: t,
+            route: st.PH.k_eCommunityAdminPage,
+          });
         const F = b == c.zv.k_EEventStateVisible,
           j = b == c.zv.k_EEventStateStaged;
         if ((w.can_edit || w.support_user) && !s && !v) {

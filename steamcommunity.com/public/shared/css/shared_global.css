@@ -1341,17 +1341,17 @@ div#global_header {
 div#global_header .content {
 	background: #171d25;
 	position: relative;
-	width: 940px;
+	width: auto;
+	min-width: 940px;
 	height: 104px;
 	margin: 0px auto;
 
+	max-width: var( --store-page-width, 940px );
 	z-index: 402;
 }
 
 body.v7menu div#global_header .content {
-	width: auto;
-	min-width: 940px;
-	max-width: 1100px;
+	max-width: max( var( --store-page-width, 940px ), 1100px );
 }
 
 div#global_actions {

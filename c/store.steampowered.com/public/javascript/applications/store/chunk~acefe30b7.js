@@ -75,8 +75,9 @@
           );
         }
         Test_SetBadgeInfo(_) {
-          this.m_mapBadgeInfo.set(_.badgeid, _),
-            this.GetBadgeInfoChangeCallback(_.badgeid).Dispatch(_);
+          _.badgeid &&
+            (this.m_mapBadgeInfo.set(_.badgeid, _),
+            this.GetBadgeInfoChangeCallback(_.badgeid).Dispatch(_));
         }
         async LoadBadgeInfo(_) {
           return this.m_mapBadgeInfo.has(_)
@@ -151,7 +152,7 @@
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(
-          _.Get().GetBadgeInfo(_),
+          _ ? _.Get().GetBadgeInfo(_) : void 0,
         );
         return (
           (0, _.useEffect)(() => {
@@ -161,7 +162,10 @@
                 .LoadBadgeInfo(_)
                 .then((_) => __webpack_require__(_));
           }, [_, _]),
-          (0, _._)(_.Get().GetBadgeInfoChangeCallback(_), __webpack_require__),
+          (0, _._)(
+            _ ? _.Get().GetBadgeInfoChangeCallback(_) : void 0,
+            __webpack_require__,
+          ),
           _
         );
       }
@@ -170,14 +174,14 @@
       }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(
-          _.Get().GetInitialBadgeInfo(_),
+          _ ? _.Get().GetInitialBadgeInfo(_) : void 0,
         );
         return (
           (0, _.useEffect)(() => {
             !_ && _ && _.Get().LoadBadgeInfo(_);
           }, [_, _]),
-          (0, _._)(_.Get().GetBadgeInfoChangeCallback(_), () =>
-            __webpack_require__(_.Get().GetInitialBadgeInfo(_)),
+          (0, _._)(_ ? _.Get().GetBadgeInfoChangeCallback(_) : void 0, () =>
+            __webpack_require__(_ ? _.Get().GetInitialBadgeInfo(_) : void 0),
           ),
           _
         );

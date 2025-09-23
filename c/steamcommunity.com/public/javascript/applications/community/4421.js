@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "内容已移除",
 	"moderation_resolutionstatus_relabelled": "内容已重新标识",
 	"moderation_resolutionstatus_suspicious": "由于内容可疑，已锁定帐户",
+	"moderation_resolutionstatus_harassmentstrike": "已禁用 Steam 社区权限",
 	"moderation_resolutionstatus_unknown": "未知"
 }`);
     },

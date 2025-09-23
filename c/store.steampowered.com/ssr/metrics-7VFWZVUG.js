@@ -803,16 +803,14 @@ function _(_, _) {
 }
 var _ = /.*\/valve\/www\/(?:.*?)\/(.*)/;
 function _(_) {
-  if (CLSTAMP) {
+  {
     let _ = _.match(_);
     if (_) {
       let _ = "https://swarm.valve.org/files/Steam/rel/storefront/web_src/",
         _ = _[1];
       if (_ && !_.startsWith("node_modules")) {
         let _ = _.match(/(.*?):(\d+:(\d+)?)/);
-        return _
-          ? `${_}${_[1]}?v=@${CLSTAMP}#L${_[2]}`
-          : `${_}${_}?v=@${CLSTAMP}`;
+        return _ ? `${_}${_[1]}?v=@10091951#L${_[2]}` : `${_}${_}?v=@10091951`;
       }
     }
   }
@@ -1079,22 +1077,21 @@ function _(_) {
                       }),
                     }),
                   }),
-                  !!CLSTAMP &&
-                    (0, _.jsxs)("tr", {
-                      children: [
-                        (0, _.jsx)("td", {
-                          children: "Changelist:",
+                  (0, _.jsxs)("tr", {
+                    children: [
+                      (0, _.jsx)("td", {
+                        children: "Changelist:",
+                      }),
+                      (0, _.jsx)("td", {
+                        children: (0, _.jsx)("a", {
+                          target: "_blank",
+                          rel: "noreferrer",
+                          href: "https://swarm.valve.org/changes/10091951",
+                          children: "10091951",
                         }),
-                        (0, _.jsx)("td", {
-                          children: (0, _.jsx)("a", {
-                            target: "_blank",
-                            rel: "noreferrer",
-                            href: `https://swarm.valve.org/changes/${CLSTAMP}`,
-                            children: CLSTAMP,
-                          }),
-                        }),
-                      ],
-                    }),
+                      }),
+                    ],
+                  }),
                   (0, _.jsxs)("tr", {
                     children: [
                       (0, _.jsx)("td", {

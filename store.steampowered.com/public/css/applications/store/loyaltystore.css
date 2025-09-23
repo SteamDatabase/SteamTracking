@@ -16,8 +16,6 @@
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -26,31 +24,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._3eCX1SnYbcN0Y9BIRVtJPj,
-._1oCLnPiFfFZx02l7q7zkmi {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -160,10 +135,8 @@ body.v7menu .responsive_page_template_content {
 }
 ._3DDggsGtqw9MsoLcQRBUGH,
 .rSOhtifNE28jCExajTVS4 {
-  font-size: 1.5rem;
-  letter-spacing: .1em;
-  line-height: 150%;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 800;
   text-shadow: 0px 0px 8px rgba(218, 216, 235, 0.3);
   text-transform: uppercase;
   max-width: 1024px;
@@ -195,7 +168,6 @@ body.v7menu .responsive_page_template_content {
 }
 .rSOhtifNE28jCExajTVS4 {
   font-size: 1rem;
-  font-weight: medium;
   text-transform: none;
 }
 @media screen and (max-width: 620px) {
@@ -928,8 +900,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -938,31 +908,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._3pxDW5zyrXwZNHcVX5tfz8,
-.KL8ER7IEHoUt2NKJc-CM {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -1089,10 +1036,10 @@ body.v7menu .responsive_page_template_content {
   max-width: 100%;
 }
 ._1U-QFj8ZqTxnWWbDXQjlm4 {
-  font-size: 1.05rem;
+  font-size: .85rem;
   color: #c5cbd8;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: .1rem;
   display: flex;
   align-items: center;
@@ -1135,8 +1082,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -1145,31 +1090,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._1Vw70kaS6zlBf9eBUwgcuG,
-._3V1twQM3UkSuCDEq2hz6Qb {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -1266,8 +1188,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -1276,31 +1196,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2sew-eeo1OBlE7rAdCa0zO,
-._3pX0fpr3EedcQOYsdg0NmC {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -1378,8 +1275,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -1388,31 +1283,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2sew-eeo1OBlE7rAdCa0zO,
-._3pX0fpr3EedcQOYsdg0NmC {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -1540,8 +1412,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -1550,31 +1420,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2sew-eeo1OBlE7rAdCa0zO,
-._3pX0fpr3EedcQOYsdg0NmC {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -2486,8 +2333,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -2496,31 +2341,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._3t2kC_UejF1zKSwH4DnOLo,
-._2Wz7wtTv1rPfz79sa-nBJq {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -2660,8 +2482,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -2670,31 +2490,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2Z10hTe0c_pSB1dYTGh6Gj,
-._2jHWHZSCVN5I-kvjJMGCIH {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -2858,8 +2655,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -2868,31 +2663,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2hbLIR_cRtWlFWxJY3qsCo,
-._2Vguk6DMjI4elIyCE3fJk9 {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -3062,8 +2834,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -3072,31 +2842,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-.aVov95ofav6GEjmqHvGLv,
-._20ZyN6yrC25dIXvq_eU6xI {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -3608,8 +3355,6 @@ body._2aDQKbd2fBPJ0D_2CiGhRT {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -3618,31 +3363,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._1DBDcgNH2L-3TzUoK8DNc_,
-.S-9dlryW5YPQXPYVGjbK0 {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -3731,9 +3453,9 @@ body.v7menu .responsive_page_template_content {
   }
 }
 .go6jLpmJlgzmvSwdeqLFv .y7h7uY1EfA5wfjcywdtWU {
-  font-size: 2.2em;
-  letter-spacing: .075em;
-  font-weight: 300;
+  font-size: 2.4em;
+  font-weight: 800;
+  padding-right: 10px;
 }
 @media screen and (max-width: 620px) {
   .go6jLpmJlgzmvSwdeqLFv .y7h7uY1EfA5wfjcywdtWU {
@@ -3755,8 +3477,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -3765,31 +3485,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2RbaB6lB2gGpQnFEPOddiG,
-._1rhSZxCRBAnHhGeWKsTxHr {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -4845,8 +4542,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -4855,31 +4550,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2xIVisWCzrZowqmEUUfvbg,
-.ek93B8_YbmAmks5nDovZk {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -4981,9 +4653,6 @@ body.v7menu .responsive_page_template_content {
   max-width: 100%;
   background: var(--standard-root-background);
   margin: 0 auto;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 100%;
 }
 ._2CTonoSYdvy-_HnTlaLzzy,
 ._1Zwjfp7uC-ucOlcO5hWzSq {
@@ -5067,17 +4736,15 @@ body.v7menu .responsive_page_template_content {
   max-width: 50%;
 }
 ._2g7YPY3A5uZVqbtFiYwK7J {
-  font-size: 2rem;
-  letter-spacing: .1em;
-  line-height: 150%;
+  font-size: 34px;
   font-style: normal;
   text-align: center;
-  font-weight: 500;
+  font-weight: 800;
   background: linear-gradient(130deg, #d7e9f1, #78a9e2);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-top: 30px;
+  padding-top: 15px;
 }
 @media screen and (max-width: 620px) {
   ._2g7YPY3A5uZVqbtFiYwK7J {
@@ -5087,8 +4754,7 @@ body.v7menu .responsive_page_template_content {
 }
 ._1j9rPjdq4_IWNkY49opKvj {
   font-size: 1rem;
-  letter-spacing: .1em;
-  max-width: 800px;
+  max-width: 700px;
   text-align: center;
 }
 @media screen and (max-width: 620px) {
@@ -5101,8 +4767,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -5111,31 +4775,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._2xt7oKJKW-mEmDsyFWC5_v,
-._2PfVsc07-5aT9ib58geOue {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -5216,7 +4857,11 @@ body.v7menu .responsive_page_template_content {
   min-width: 230px;
   background: #20232e;
   border-radius: 2px;
-  top: 10px;
+  top: calc(
+    var(--responsive-menu-floating-height, 0px) +
+    var(--store-menu-floating-height, 0px) +
+    10px
+  );
   position: sticky;
   z-index: 2;
   padding: 0 0 20px 0;
@@ -9331,8 +8976,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -9341,31 +8984,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-.Q9io3qOYf-_BjOexVsBpx,
-._1TznBfOuD_2xPpXIWUDeW6 {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -9443,8 +9063,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -9453,31 +9071,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._1GJKW8_OxquMIkFSQ1EeAO,
-._2yu0NjVR2h_oAeY7RJwssu {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -9636,8 +9231,6 @@ body.v7menu .responsive_page_template_content {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -9646,31 +9239,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-._3-cdkSC8JeHTR5dlFTC9dp,
-._2FLKmhVzLujkvO6ThYHWpV {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;
@@ -10203,8 +9773,6 @@ svg._10ulSv2Q-y1OfDwpIF1vg8 {
 }
 body.v6.rewards {
   background-color: #161a1f;
-  height: 100%;
-  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body.v6.rewards .ModalPosition {
@@ -10213,31 +9781,8 @@ body.v6.rewards .ModalPosition {
 body.v6.rewards .ModalPosition_Content {
   min-height: none;
 }
-.responsive_page_frame {
-  height: 100%;
-}
-.responsive_page_content {
-  max-height: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 .responsive_page_template_content {
   padding-bottom: 0 !important;
-}
-.responsive_page_template_content,
-.page_content_ctn,
-#points_shop_root,
-.Ke6j3kZi-GOd1kdAlmMET,
-._6qJSXX_Mb21jD3XaJUtks {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-body.v7menu .responsive_page_template_content {
-  display: flex;
 }
 .placeHolder_summerSale2020_promotionDetailsBar {
   overflow-x: hidden;

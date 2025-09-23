@@ -83,4 +83,20 @@ function _() {
                       ? "https://steamloopback.host"
                       : "";
 }
-export { _, _, _, _, _, _, _, _ };
+function _() {
+  let _ = window.location.href;
+  return _(_, _.STORE_BASE_URL) || _(_, _.STORE_CHECKOUT_BASE_URL)
+    ? "store"
+    : _(_, _.COMMUNITY_BASE_URL)
+      ? "community"
+      : _(_, _.PARTNER_BASE_URL)
+        ? "partnerweb"
+        : _(_, _.HELP_BASE_URL)
+          ? "help"
+          : _(_, _.STEAMTV_BASE_URL)
+            ? "steamtv"
+            : _(_, _.STATS_BASE_URL) || _(_, _.INTERNAL_STATS_BASE_URL)
+              ? "stats"
+              : "";
+}
+export { _, _, _, _, _, _, _, _, _ };

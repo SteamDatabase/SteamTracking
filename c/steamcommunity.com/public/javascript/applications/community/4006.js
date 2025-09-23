@@ -164,6 +164,7 @@
 	"moderation_resolutionstatus_removed": "Контент удалён",
 	"moderation_resolutionstatus_relabelled": "Изменены пометки",
 	"moderation_resolutionstatus_suspicious": "Аккаунт заблокирован из-за подозрительного контента",
+	"moderation_resolutionstatus_harassmentstrike": "Пользователь временно лишён прав в сообществе Steam",
 	"moderation_resolutionstatus_unknown": "Неизвестно"
 }`);
     },

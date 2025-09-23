@@ -1859,6 +1859,11 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
     r: 25;
   }
 }
+._3xy45At7o_lkxcLoSTF6e0._35pkQMXbFQAF2v1VrIAsF7 {
+  min-width: 34px;
+  height: 24px;
+  display: flex;
+}
 ._2sssIwe0duyIrFvat2oXzH {
   display: flex;
   flex-direction: row;
@@ -2702,6 +2707,12 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 }
 .eKmEXJCm_lgme24Fp_HWt._3hgIZByMuZIEiFspMRGFBw {
   padding: 8px 0;
+  margin-left: calc(
+    -1 *
+    var(--field-negative-horizontal-margin) +
+    var(--indent-level) *
+    30px
+  );
   --field-row-children-spacing: 8px;
 }
 .eKmEXJCm_lgme24Fp_HWt._3tB2lyT2Pfvfv-jyuVgUOg {

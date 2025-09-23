@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$s peliä",
 	"Menu_Search": "Haku",
 	"Menu_Label": "Kaupan valikko",
+	"Menu_IncludesXGames": "Sisältää %1$s peliä",
 	"ItemFlag_InLibrary": "KIRJASTOSSA",
 	"ItemFlag_OnWishlist": "TOIVELISTALLA",
 	"ItemFlag_InCart": "OSTOSKORISSA",

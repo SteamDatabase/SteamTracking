@@ -250,6 +250,7 @@ function ValidateCompanyInfo( bTransition, bRequireVATForEU, nextSection )
 	bHasRequiredFields &= IsValidOptionalField( "[name='partner_info[address2]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[city]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[state]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[country_code]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[postal_code]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidOptionalField( "[name='partner_info[fax]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= HasRequiredField( "[name='partner_info[finance_email]']" );

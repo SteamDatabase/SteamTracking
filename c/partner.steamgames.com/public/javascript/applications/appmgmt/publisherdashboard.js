@@ -4849,9 +4849,7 @@
                 !0,
               ),
               _ = _?.visibility_state == _._.k_EEventStateVisible,
-              _ = _
-                ? (0, _._)(_, _._.k_eCommunityEdit, "allowRelative")
-                : void 0;
+              _ = (0, _._)(_, _._.k_eCommunityEdit, "allowRelative");
             if (!_) return;
             let _ =
               _ && _.BIsVisibleEvent()

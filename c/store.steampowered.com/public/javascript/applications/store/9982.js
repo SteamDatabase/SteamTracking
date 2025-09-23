@@ -98,6 +98,7 @@
 	"Menu_SearchBar_CategoryGameCount": "%1$sゲーム",
 	"Menu_Search": "検索",
 	"Menu_Label": "ストアメニュー",
+	"Menu_IncludesXGames": "%1$s本のゲームが含まれます",
 	"ItemFlag_InLibrary": "ライブラリ内",
 	"ItemFlag_OnWishlist": "ウィッシュリストに追加済み",
 	"ItemFlag_InCart": "カート内",

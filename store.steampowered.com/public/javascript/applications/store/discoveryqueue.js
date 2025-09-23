@@ -313,28 +313,31 @@
         p = r(83561),
         _ = r(7860);
       function g(e, t) {
-        const r = t?.nSaleTagID,
-          a = t?.strContentHubType,
-          n = t?.strContentHubCategory,
-          i = t?.nContentHubTagID,
-          s = t?.bDiscountsOnly,
-          o = t?.bPrioritizeDiscounts,
-          l = t?.strOptInName,
-          c = t?.nOptInTagID,
-          u = t?.nPruneTagID;
-        let m = e.toString();
-        return (
-          r
-            ? (m += "_" + r)
+        let r = e.toString();
+        if (
+          "newreleases" != t?.strContentHubType &&
+          "upcoming" != t?.strContentHubType
+        ) {
+          const e = t?.nSaleTagID,
+            a = t?.strContentHubType,
+            n = t?.strContentHubCategory,
+            i = t?.nContentHubTagID,
+            s = t?.bDiscountsOnly,
+            o = t?.bPrioritizeDiscounts,
+            l = t?.strOptInName,
+            c = t?.nOptInTagID,
+            u = t?.nPruneTagID;
+          e
+            ? (r += "_" + e)
             : a &&
-              ((m += "_" + a),
+              ((r += "_" + a),
               "category" === a && n
-                ? (m += "_" + n)
-                : "tags" === a && i && (m += "_" + i),
-              s ? (m += "_d") : o && (m += "_p"),
-              l && c && u && (m += "_" + l)),
-          m
-        );
+                ? (r += "_" + n)
+                : "tags" === a && i && (r += "_" + i),
+              s ? (r += "_d") : o && (r += "_p"),
+              l && c && u && (r += "_" + l));
+        }
+        return r;
       }
       function y(e) {
         return (0, u.bt)(JSON.stringify(e));
@@ -388,6 +391,7 @@
         }
         async LoadDiscoveryQueue(e, t, r) {
           const a = g(e, r);
+          if (!this.m_transport) return 2;
           try {
             const n = (0, p.cw)(this.m_transport, e, t, r);
             t && (await _.L.invalidateQueries({ queryKey: n.queryKey }));
@@ -423,27 +427,38 @@
               (await this.LoadDiscoveryQueue(e, t, r)),
             {
               appids: this.m_mapDiscoveryQueues.get(a).appids,
-              exhausted: this.m_mapDiscoveryQueues.get(a).exhausted,
+              exhausted: !!this.m_mapDiscoveryQueues.get(a).exhausted,
             }
           );
         }
         async SkipDiscoveryQueueItem(e, t, r) {
-          g(t, r);
           const a = this.GetSkippedAppKey(e, t, r);
           if (!this.m_mapSkippedApps.has(a)) {
             const n = g(t, r),
-              i = this.m_mapDiscoveryQueues.get(n).appids,
-              l = i[i.length - 1] == e;
+              i = this.m_mapDiscoveryQueues.get(n)?.appids,
+              l = i?.[i.length - 1] == e;
             this.m_mapSkippedApps.set(a, !0),
               this.m_mapSkippedAppCount.set(
                 n,
                 (this.m_mapSkippedAppCount.get(n) || 0) + 1,
               );
             const c = s.w.Init(o.fe);
-            c.Body().set_appid(e),
+            if (
+              (c.Body().set_appid(e),
               c.Body().set_queue_type(t),
               (Boolean(r?.nSaleTagID) || Boolean(r?.strContentHubType)) &&
-                c.Body().set_store_page_filter((0, p.Jy)(r));
+                c.Body().set_store_page_filter((0, p.Jy)(r, !0)),
+              !this.m_transport)
+            )
+              return (
+                console.warn(
+                  "Error",
+                  "no transport",
+                  "failed to skip appid ",
+                  e,
+                ),
+                void this.m_mapSkippedApps.delete(a)
+              );
             const u = (
               await o.nd.SkipDiscoveryQueueItem(this.m_transport, c)
             ).GetEResult();
@@ -452,7 +467,6 @@
                 this.m_mapSkippedApps.delete(a))
               : l && this.MarkDiscoveryQueueCompleted(t, r);
           }
-          return Promise.resolve();
         }
         MarkDiscoveryQueueCompleted(e, t) {
           const r = g(e, t);
@@ -467,10 +481,21 @@
         async LoadSkippedApps(e, t) {
           g(e, t);
           const r = s.w.Init(o.pS);
-          r.Body().set_steamid(m.iA.steamid),
+          if (
+            (r.Body().set_steamid(m.iA.steamid),
             r.Body().set_queue_type(e),
             (Boolean(t?.nSaleTagID) || Boolean(t?.strContentHubType)) &&
-              r.Body().set_store_page_filter((0, p.Jy)(t));
+              r.Body().set_store_page_filter((0, p.Jy)(t, !0)),
+            !this.m_transport)
+          )
+            return (
+              console.warn(
+                "Failed to retrieve skipped apps for discovery queue, no transport.",
+                e,
+                t,
+              ),
+              []
+            );
           const a = await o.nd.GetDiscoveryQueueSkippedApps(
             this.m_transport,
             r,
@@ -715,10 +740,10 @@
                 (this.m_claimedFreeItemDef = Boolean(
                   r.Body().reward_item()?.defid(),
                 )
-                  ? r.Body().reward_item().toObject()
+                  ? r.Body().reward_item()?.toObject()
                   : null),
                 (this.m_claimState = {
-                  bCanClaimNewItem: r.Body().can_claim(),
+                  bCanClaimNewItem: !!r.Body().can_claim(),
                   bAlreadyClaimedCurrentItem: Boolean(
                     this.m_claimedFreeItemDef,
                   ),
@@ -728,7 +753,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef?.community_item_class,
                   rtNextClaimTime:
-                    r.Body().next_claim_time() > 0
+                    (r.Body().next_claim_time() ?? 0) > 0
                       ? r.Body().next_claim_time()
                       : void 0,
                 }),
@@ -788,7 +813,8 @@
             );
             if (1 == r.GetEResult())
               return (
-                (this.m_claimedFreeItemDef = r.Body().reward_item().toObject()),
+                (this.m_claimedFreeItemDef =
+                  r.Body().reward_item()?.toObject() ?? {}),
                 (this.m_claimState = {
                   bCanClaimNewItem: !1,
                   bAlreadyClaimedCurrentItem: Boolean(
@@ -800,7 +826,7 @@
                   community_item_class:
                     this.m_claimedFreeItemDef.community_item_class,
                   rtNextClaimTime:
-                    r.Body().next_claim_time() > 0
+                    (r.Body().next_claim_time() ?? 0) > 0
                       ? r.Body().next_claim_time()
                       : void 0,
                 }),
@@ -976,7 +1002,7 @@
             (h = g.override_country_code);
         let b = { staleTime: 36e5 };
         l?.reactQuery && (b = { ...b, ...l.reactQuery });
-        const C = [_, f, r, l];
+        const C = [_, f, r ?? {}, l ?? {}];
         return (0, n.I)({
           queryKey: C,
           queryFn: () =>
@@ -990,14 +1016,14 @@
               if (1 != c.GetEResult())
                 throw `Error executing StoreQuery "${t}", EResult: ${c.GetEResult()}`;
               return new y(c, a);
-            })(p, e, f, r, h),
+            })(p, e, f, r ?? {}, h),
           ...b,
         });
       }
       class y {
-        m_Items;
-        m_rgItemIDs;
-        m_metadata;
+        m_Items = void 0;
+        m_rgItemIDs = void 0;
+        m_metadata = void 0;
         constructor(e, t) {
           this.ReadResults(e, t);
         }
@@ -1022,8 +1048,10 @@
             ((this.m_rgItemIDs = r.map((e) => e.toObject())),
             e.Body().store_items())
           )
-            for (const r of e.Body().store_items())
-              this.m_Items.push(l.A.Get().ReadItem(r, t));
+            for (const r of e.Body().store_items()) {
+              const e = l.A.Get().ReadItem(r, t);
+              e && this.m_Items.push(e);
+            }
           this.m_metadata = e.Body().metadata().toObject();
         }
       }
@@ -1155,7 +1183,7 @@
     },
     38405: (e, t, r) => {
       "use strict";
-      r.d(t, { g: () => D });
+      r.d(t, { g: () => T });
       var a = r(65946),
         n = r(90626),
         i = r(30894),
@@ -1305,10 +1333,10 @@
         );
       }
       var B = r(90511);
-      function D(e) {
+      function T(e) {
         return (0, l.G)()
           ? n.createElement(
-              T,
+              D,
               null,
               n.createElement(P, null),
               m.iA.logged_in
@@ -1317,7 +1345,7 @@
             )
           : null;
       }
-      function T(e) {
+      function D(e) {
         const [t, r] = (0, i.L2)();
         let s = (0, a.q3)(() => r.ExcludedContentDescriptor),
           l = n.useMemo(() => ({ content_descriptors_excluded: s }), [s]);
@@ -1341,7 +1369,7 @@
                   .GetDiscoveryQueueAppsOfType(e, !1, t);
                 let n = { ...B.LB, include_screenshots: !0 };
                 return (
-                  await s.A.Get().QueueMultipleAppRequests(r, n),
+                  await s.A.Get().QueueMultipleAppRequests(r ?? [], n),
                   { rgDiscoveryApps: r, exhausted: a }
                 );
               },
@@ -1409,7 +1437,7 @@
           }, []);
         return n.createElement(
           v,
-          { onClick: r, arrDiscoveryApps: t },
+          { onClick: r, arrDiscoveryApps: t ? y.Nv(t) : void 0 },
           n.createElement(
             "div",
             { className: (0, c.A)(_().WidgetHeaderCtn, "WidgetHeaderCtn") },
@@ -1434,8 +1462,9 @@
       function P() {
         const e = (0, g.Qt)(2, m.TS.LANGUAGE, !0),
           t = (0, m.Qn)();
-        if (!e.data?.definition || !e.data?.reward_items.length) return null;
-        const r = e?.data.reward_items;
+        if (!e.data?.definition || 0 == (e.data?.reward_items?.length ?? 0))
+          return null;
+        const r = e?.data.reward_items ?? [];
         (0, y.fW)(r);
         const a = r.slice(0, 3);
         let i = null;
@@ -1469,7 +1498,13 @@
                 null,
                 (0, u.we)(
                   "#DiscoveryQueue_Widget_SaleTitle",
-                  (0, u._l)(e.data.definition.rtime_end_time, !1, !1, !1, !1),
+                  (0, u._l)(
+                    e.data.definition.rtime_end_time ?? 0,
+                    !1,
+                    !1,
+                    !1,
+                    !1,
+                  ),
                 ),
                 i,
               ),
@@ -1480,6 +1515,8 @@
       function G(e) {
         const { rgRewardItems: t } = e,
           r = t.map((e) => {
+            if (!e.community_definition || !e.community_definition.item_name)
+              return null;
             const t = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${e.appid}/${e.community_definition.item_image_small}`;
             return n.createElement(
               "div",
@@ -1490,7 +1527,11 @@
               n.createElement("img", { src: t }),
             );
           });
-        return n.createElement("div", { className: _().StickerArrangement }, r);
+        return n.createElement(
+          "div",
+          { className: _().StickerArrangement },
+          y.Nv(r),
+        );
       }
     },
     5907: (e, t, r) => {
@@ -1553,8 +1594,8 @@
           ),
         );
       };
-      var D,
-        T = r(22797),
+      var T,
+        D = r(22797),
         R = r(10224),
         M = r(20019),
         N = r(62792),
@@ -2365,7 +2406,7 @@
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           });
-      })(D || (D = {}));
+      })(T || (T = {}));
       var ne = r(41735),
         ie = r.n(ne),
         se = r(3734);
@@ -2373,7 +2414,7 @@
         static async LoadFriendsRecommendedApp(e, t) {
           const r = V.w.Init($);
           r.Body().set_appid(t);
-          const a = await D.GetFriendsRecommendedApp(e, r),
+          const a = await T.GetFriendsRecommendedApp(e, r),
             n = a.GetEResult();
           if (1 == n) return a.Body().toObject();
           throw `Error ${n} failed to call GetFriendsRecommendedApp ${t}`;
@@ -2539,7 +2580,7 @@
           h.isLoading ||
           w.isLoading
         )
-          return u.createElement(T.t, { size: "medium", position: "center" });
+          return u.createElement(D.t, { size: "medium", position: "center" });
         let S = [];
         m.isSuccess &&
           m.data.arrSimilarPlayedApps &&
@@ -2559,12 +2600,12 @@
           E = m.data?.bRecommendedByIR,
           A = S.length > 0,
           B = l.data?.owns?.length,
-          D = l.data?.in_wishlist?.length,
+          T = l.data?.in_wishlist?.length,
           R = c.data?.accountids_recommended?.length;
         let M = 0;
         return (
           B > 0 && M++,
-          D > 0 && M++,
+          T > 0 && M++,
           R > 0 && M++,
           E && M++,
           v >= 0 && M++,
@@ -2575,7 +2616,7 @@
             "FriendsOwned: ",
             B,
             " FriendsWishlisted: ",
-            D,
+            T,
             "cRecommended: ",
             R,
           ),
@@ -2880,15 +2921,15 @@
           S = Be(y, o, l, c),
           { bIsIgnored: v, fnUpdateIgnored: E } = (0, Se.TK)(t),
           { bIsWishlisted: A, fnUpdateWishlist: B } = (0, Se.u4)(t),
-          D = u.useRef(void 0);
+          T = u.useRef(void 0);
         if (
           (u.useEffect(() => {
-            i && D.current && D.current.focus({ preventScroll: !0 });
+            i && T.current && T.current.focus({ preventScroll: !0 });
           }, [i]),
           !y)
         )
           return console.warn("Error: missing store item for appid ", t), null;
-        const T = { width: a || void 0, height: r || void 0 };
+        const D = { width: a || void 0, height: r || void 0 };
         return u.createElement(
           n.Z,
           {
@@ -2899,8 +2940,8 @@
               _.relevanceId,
               _.buttonsId,
             ),
-            ref: D,
-            style: T,
+            ref: T,
+            style: D,
             className: (0, b.A)(ce().DiscoveryQueueApp, i && ce().Selected),
             onOptionsActionDescription: A
               ? (0, C.we)("#DiscoveryQueue_RemoveFromWishlist")
@@ -2962,7 +3003,7 @@
           return (0, Ie.NT)(o);
         }, [a, t, n, e, r]);
       }
-      function De(e) {
+      function Te(e) {
         const {
             appID: t,
             bShowMinimizedDisplay: r,
@@ -3010,7 +3051,7 @@
                 info: { id: t, type: (0, M.U)(l.GetAppType()) },
               }),
             ),
-            u.createElement(Te, {
+            u.createElement(De, {
               rgTagIDs: l.GetTagIDs(),
               ariaLabelID: o.tagsId,
             }),
@@ -3124,7 +3165,7 @@
             ),
         );
       }
-      function Te(e) {
+      function De(e) {
         const { rgTagIDs: t, ariaLabelID: r } = e,
           a = [...(0, Se.W3)(t)].slice(0, 8);
         return u.createElement(
@@ -3182,7 +3223,7 @@
           } = e,
           [g, w] = u.useState(0),
           [A, B] = u.useState(void 0),
-          [D, T] = u.useState(0),
+          [T, D] = u.useState(0),
           M = (0, m.R7)(),
           N = M?.ownerWindow || window,
           P = (0, c.ru)(ke),
@@ -3234,9 +3275,9 @@
               .then(() => k((e) => e - 1)));
         }, [t, g, q, o]),
           u.useEffect(() => {
-            q.length != D &&
-              (T(q.length), q.length > D && q[g] == Pe && w(g + 1));
-          }, [D, g, q]);
+            q.length != T &&
+              (D(q.length), q.length > T && q[g] == Pe && w(g + 1));
+          }, [T, g, q]);
         const [L] = u.useState(new Map()),
           W = (0, E.WX)(t, o),
           O = !(0, R.c5)() && g > 0,
@@ -3525,7 +3566,7 @@
             focused: w,
             showAOAutoPlayWarning: _,
           }),
-          elDetails: u.createElement(De, {
+          elDetails: u.createElement(Te, {
             appID: a[n],
             bShowMinimizedDisplay: i,
             eStoreDiscoveryQueueType: t,
@@ -3553,8 +3594,8 @@
           [w, S] = u.useState(!1),
           v = (0, I.Qn)(),
           A = (0, p.Qt)(2, I.TS.LANGUAGE, !1),
-          [B, D] = u.useState(0),
-          [T, R] = u.useState(0);
+          [B, T] = u.useState(0),
+          [D, R] = u.useState(0);
         u.useEffect(() => {
           s &&
             !w &&
@@ -3565,7 +3606,7 @@
                   .Get()
                   .LoadSkippedApps(t, l)
                   .then((e) => {
-                    D(
+                    T(
                       e.reduce(
                         (e, t) => (d.Fm.Get().BIsGameWishlisted(t) ? e + 1 : e),
                         0,
@@ -3671,7 +3712,7 @@
                 u.createElement(
                   "div",
                   { className: ce().GridNumber },
-                  T.toLocaleString(),
+                  D.toLocaleString(),
                 ),
                 u.createElement(
                   c.Fh,
@@ -3760,7 +3801,7 @@
             },
             o
               ? t
-              : u.createElement(T.t, {
+              : u.createElement(D.t, {
                   className: ce().DiscoveryQueueThrobber,
                   msDelayAppear: 200,
                   size: "large",
@@ -3773,7 +3814,7 @@
         return u.createElement(
           n.Z,
           { className: ce().SaleRewardsCtn },
-          u.createElement(T.t, { size: "large", position: "center" }),
+          u.createElement(D.t, { size: "large", position: "center" }),
         );
       }
       function Oe(e) {
@@ -3940,7 +3981,7 @@
           })(t, C),
           E = (p ?? !0) && v && !v.BIsAllAges() && "masked" == C,
           A = (0, S.AS)(),
-          [D, T] = a.useState(!1),
+          [T, D] = a.useState(!1),
           [M, N] = a.useState(0),
           P = a.useRef(void 0),
           G = a.useRef(void 0),
@@ -3990,8 +4031,8 @@
           l.Z,
           {
             className: d().AppCarouselTrailerCtn,
-            onMouseEnter: () => T(!0),
-            onMouseLeave: () => T(!1),
+            onMouseEnter: () => D(!0),
+            onMouseLeave: () => D(!1),
           },
           a.createElement("img", {
             className: (0, s.A)(d().AppMainCap, 0 != M && d().Hidden),
@@ -4011,7 +4052,7 @@
             name: t.GetName(),
             trailerCategory: v?.GetTrailerCategory(),
             trailerDisplay: M,
-            mouseOver: D,
+            mouseOver: T,
           }),
           a.createElement(B, {
             eTrailerDisplay: M,
@@ -4021,7 +4062,7 @@
             refMainTrailer: G,
             loadedAndActive: Q && r,
             setVideoShouldStart: b,
-            bMouseOverVideo: D,
+            bMouseOverVideo: T,
             storeItem: t,
             broadcastVideo: k,
             fnSetBroadcastVideo: F,
@@ -4122,7 +4163,7 @@
                       v.Debug("Starting main trailer"),
                       t(2),
                       r(!1),
-                      D(a, "main trailer", (e) => {
+                      T(a, "main trailer", (e) => {
                         e && r(!0);
                       });
                   })($, h, V, w.current);
@@ -4130,7 +4171,7 @@
                   ? e()
                   : (j(!0),
                     (I.current.onended = e),
-                    D(I.current, "microtrailer", () => j(!1)));
+                    T(I.current, "microtrailer", () => j(!1)));
               } else
                 R &&
                   (v.Debug("Starting broadcast player"), h(2), V(!1), R.Play());
@@ -4196,7 +4237,7 @@
               a.createElement(
                 "video",
                 {
-                  className: T(!0, g),
+                  className: D(!0, g),
                   ref: I,
                   preload: "auto",
                   playsInline: !0,
@@ -4218,7 +4259,7 @@
               a.createElement(
                 "video",
                 {
-                  className: T(!1, g),
+                  className: D(!1, g),
                   ref: w,
                   onVolumeChange: (e) => {
                     if (s && s < 1) return;
@@ -4246,7 +4287,7 @@
               ),
             n &&
               a.createElement(b.default, {
-                classes: T(!1, g),
+                classes: D(!1, g),
                 nAppIDVOD: t.GetAppID(),
                 watchLocation: 15,
                 fnOnVideoEnd: u,
@@ -4258,7 +4299,7 @@
           )
         );
       }
-      function D(e, t, r) {
+      function T(e, t, r) {
         e.play().catch((a) => {
           const n = "NotAllowedError" === a.name;
           r(n),
@@ -4271,7 +4312,7 @@
               : v.Warning(`Failed to play ${t}: `, a);
         });
       }
-      function T(e, t) {
+      function D(e, t) {
         return (0, s.A)({
           [d().AppVideo]: !0,
           [d().PlayFullTrailer]: 2 == t,

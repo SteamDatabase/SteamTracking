@@ -10855,6 +10855,7 @@
             e &&
               200 == e.status &&
               (0, o.h5)(() => {
+                var t;
                 if (((this.m_bIsLoaded = !0), e.data.rgCurators)) {
                   this.m_setCuratorsFollowed = new Set();
                   for (const t in e.data.rgCurators)
@@ -10905,9 +10906,10 @@
                   B.BConfirmedAdultContentAgeGate()
                     ? (this.m_setExcludedContentDescriptors = new Set())
                     : (this.m_setExcludedContentDescriptors = new Set(
-                        e.data.rgExcludedContentDescriptorIDs.map((e) =>
-                          Number(e),
-                        ),
+                        null === (t = e.data.rgExcludedContentDescriptorIDs) ||
+                          void 0 === t
+                          ? void 0
+                          : t.map((e) => Number(e)),
                       )),
                   e.data.rgRecommendedApps &&
                     ((this.m_recAppInOrder = e.data.rgRecommendedApps.map((e) =>
@@ -11276,9 +11278,9 @@
           (e.Press = "press"),
           (e.Steam = "steam"),
           (e.Halloween = "halloween"),
+          (e.Dev_Sales = "sales"),
           (e.Dev_All = "all"),
-          (e.Dev_AssociatedPress = "associated_press"),
-          (e.Dev_Sales = "associated_sales");
+          (e.Dev_AssociatedPress = "associated_press");
       })(i || (i = {}));
       new Map();
       var M = r(44165),
@@ -17510,20 +17512,12 @@
                     L.u,
                     { type: h, id: he, fnHoverState: c },
                     a.createElement(
-                      "a",
-                      {
-                        href: K ? void 0 : ge,
-                        target: D.TS.IN_CLIENT || K ? void 0 : "_blank",
-                        onClick: K,
-                      },
-                      a.createElement(
-                        "div",
-                        { className: G().StoreSaleWidgetImage },
-                        a.createElement(w.V, { appids: ee }),
-                        a.createElement($, { info: g, imageType: "header" }),
-                        a.createElement(E.J, { storeItem: u }),
-                        Boolean(g && i) && a.createElement(b.m, { appInfo: g }),
-                      ),
+                      "div",
+                      { className: G().StoreSaleWidgetImage },
+                      a.createElement(w.V, { appids: ee }),
+                      a.createElement($, { info: g, imageType: "header" }),
+                      a.createElement(E.J, { storeItem: u }),
+                      Boolean(g && i) && a.createElement(b.m, { appInfo: g }),
                     ),
                   ),
                 ),
@@ -18905,7 +18899,7 @@
             children: o,
             bSkipForcingStoreLink: l,
           } = e,
-          m = l ? r : (0, c.Ps)(r, d.TS.STORE_BASE_URL),
+          m = l ? r : r ? (0, c.Ps)(r, d.TS.STORE_BASE_URL) : void 0,
           u = (0, a.aL)(m);
         return u
           ? n.createElement(
@@ -19275,21 +19269,28 @@
         );
       }
       function m(e) {
-        const { id: t, type: r, strExtraParams: o } = e,
-          m = (0, s.n9)(),
-          u = (0, c.w)(),
-          p =
-            "clan" == r
+        const {
+            id: t,
+            type: r,
+            strExtraParams: o,
+            fnOnClickOverride: m,
+            strOverrideURL: u,
+          } = e,
+          p = (0, s.n9)(),
+          g = (0, c.w)(),
+          _ =
+            u ||
+            ("clan" == r
               ? (0, n.It)(
                   `${l.TS.STORE_BASE_URL}curator/${t}${o ? `?${o}` : ""}`,
-                  m,
-                  u,
+                  p,
+                  g,
                 )
               : (0, n.It)(
                   `${l.TS.STORE_BASE_URL}${r}/${t}${o ? `?${o}` : ""}`,
-                  m,
-                  u,
-                );
+                  p,
+                  g,
+                ));
         return i.createElement(
           d,
           { ...e },
@@ -19297,9 +19298,10 @@
             a.Ii,
             {
               className: e.className,
-              href: p,
-              target: l.TS.IN_CLIENT ? void 0 : "_blank",
+              href: m ? void 0 : _,
+              target: l.TS.IN_CLIENT || m ? void 0 : "_blank",
               rel: "noopener noreferrer",
+              onClick: m,
             },
             e.children,
           ),
