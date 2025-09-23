@@ -72199,9 +72199,6 @@
           let _ = (0, _._)(_, "y");
           return (
             _.push(_.ownerDocument.documentElement),
-            (_ = _.filter(
-              (_) => _.scrollHeight > _.getBoundingClientRect().height,
-            )),
             _.forEach((_) => _.classList.add(_.SuppressScrollOnBody)),
             () => _.forEach((_) => _.classList.remove(_.SuppressScrollOnBody))
           );
