@@ -12723,9 +12723,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 19 2025 : 17:14:54",
-                BUILD_TIME_UTC: "Sep 20 2025 : 00:14:54",
-                BUILD_RTIME_UTC: 1758327294,
+                BUILD_TIME_LOCAL: "Sep 22 2025 : 15:33:30",
+                BUILD_TIME_UTC: "Sep 22 2025 : 22:33:30",
+                BUILD_RTIME_UTC: 1758580410,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -24943,6 +24943,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _._,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -25092,6 +25093,10 @@ var CLSTAMP = "steamdb";
         }
         function _(_) {
           return null != _.LocalizeString(_, !0);
+        }
+        function _(_, ..._) {
+          let _ = _.LocalizeString(_, !0);
+          return void 0 === _ ? _ : _(_, ..._);
         }
         function _(_, ..._) {
           let _ = _.LocalizeString(_);
@@ -26977,9 +26982,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 19 2025 : 17:14:54",
-                    BUILD_TIME_UTC: "Sep 20 2025 : 00:14:54",
-                    BUILD_RTIME_UTC: 1758327294,
+                    BUILD_TIME_LOCAL: "Sep 22 2025 : 15:33:30",
+                    BUILD_TIME_UTC: "Sep 22 2025 : 22:33:30",
+                    BUILD_RTIME_UTC: 1758580410,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27736,7 +27741,7 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9462: "5985248e201b7f99b9b6",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "ca1e0fd67e39978e82ee",
+        9858: "5274ab084f1bb82e316c",
         9869: "cd88c8d4263e81ca1643",
         9887: "d2213752070154d47a89",
       }[_]),

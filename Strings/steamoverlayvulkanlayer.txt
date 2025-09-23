@@ -10,6 +10,7 @@
  volatile
 %s: __pos (which is %zu) > this->size() (which is %zu)
 (anonymous namespace)
+,thW[\fR
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 -0123456789

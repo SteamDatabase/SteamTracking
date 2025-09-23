@@ -1,4 +1,4 @@
-var CLSTAMP = "10085796";
+var CLSTAMP = "10089048";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11282,9 +11282,9 @@ var CLSTAMP = "10085796";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 19 2025 : 17:14:54",
-                BUILD_TIME_UTC: "Sep 20 2025 : 00:14:54",
-                BUILD_RTIME_UTC: 1758327294,
+                BUILD_TIME_LOCAL: "Sep 22 2025 : 15:33:30",
+                BUILD_TIME_UTC: "Sep 22 2025 : 22:33:30",
+                BUILD_RTIME_UTC: 1758580410,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -22796,25 +22796,26 @@ var CLSTAMP = "10085796";
           $z: () => u.$z,
           A0: () => m,
           Hq: () => u.Hq,
-          NT: () => v,
+          NT: () => M,
           Nm: () => u.Nm,
-          PP: () => p,
-          TG: () => g,
+          PP: () => g,
+          TG: () => f,
           TW: () => u.TW,
-          Yp: () => b,
+          Yp: () => C,
           _l: () => u._l,
-          bi: () => S,
+          bi: () => y,
           c9: () => d,
           cc: () => u.cc,
           gR: () => u.gR,
-          l4: () => y,
+          l4: () => E,
           lQ: () => u.lQ,
-          oW: () => f,
-          pN: () => E,
-          pf: () => B,
-          um: () => _,
+          oW: () => _,
+          pN: () => B,
+          pf: () => x,
+          um: () => w,
           vl: () => u.vl,
-          we: () => h,
+          wW: () => h,
+          we: () => p,
         });
         var r = n(63696),
           i = n(44846),
@@ -22955,14 +22956,18 @@ var CLSTAMP = "10085796";
           }
         }
         function d(e) {
-          return null != B.LocalizeString(e, !0);
+          return null != x.LocalizeString(e, !0);
         }
         function h(e, ...t) {
-          let n = B.LocalizeString(e);
-          return void 0 === n ? e : C(n, ...t);
+          let n = x.LocalizeString(e, !0);
+          return void 0 === n ? e : v(n, ...t);
         }
         function p(e, ...t) {
-          let n = B.LocalizeString(e);
+          let n = x.LocalizeString(e);
+          return void 0 === n ? e : v(n, ...t);
+        }
+        function g(e, ...t) {
+          let n = x.LocalizeString(e);
           if (void 0 === n) return e;
           let i,
             s = [],
@@ -22975,23 +22980,23 @@ var CLSTAMP = "10085796";
           }
           return s.push(n.substr(a)), r.createElement(r.Fragment, null, ...s);
         }
-        function g(e, t, ...n) {
+        function f(e, t, ...n) {
           return 1 === t || "1" === t
-            ? p(e, t, ...n)
-            : p(e + "_Plural", t.toLocaleString(), ...n);
+            ? g(e, t, ...n)
+            : g(e + "_Plural", t.toLocaleString(), ...n);
         }
-        function f(e, ...t) {
-          let n = B.LocalizeIfToken(e);
-          return void 0 === n ? e : w(n, ...t);
+        function _(e, ...t) {
+          let n = x.LocalizeIfToken(e);
+          return void 0 === n ? e : b(n, ...t);
         }
-        function _(e, t, ...n) {
+        function w(e, t, ...n) {
           let r;
           return (
-            (r = h(1 === t || "1" === t ? e : e + "_Plural", t)),
-            void 0 === r ? e : w(r, ...n)
+            (r = p(1 === t || "1" === t ? e : e + "_Plural", t)),
+            void 0 === r ? e : b(r, ...n)
           );
         }
-        function w(e, ...t) {
+        function b(e, ...t) {
           let n,
             i = [],
             s = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs"),
@@ -23000,7 +23005,7 @@ var CLSTAMP = "10085796";
             (o += n[0].length), i.push(n[1]);
             let e = parseInt(n[2]),
               s = n[3] || "",
-              a = w(s, ...t),
+              a = b(s, ...t),
               c = (e >= 1 && e <= t.length ? t[e - 1] : null)
                 ? r.cloneElement(t[e - 1], {}, s ? a : null)
                 : s;
@@ -23008,12 +23013,12 @@ var CLSTAMP = "10085796";
           }
           return i.push(e.substr(o)), r.createElement(r.Fragment, null, ...i);
         }
-        function b(e, t, ...n) {
+        function C(e, t, ...n) {
           return 1 === t || "1" === t
-            ? h(e, t, ...n)
-            : h(e + "_Plural", t, ...n);
+            ? p(e, t, ...n)
+            : p(e + "_Plural", t, ...n);
         }
-        function C(e, ...t) {
+        function v(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -23024,7 +23029,7 @@ var CLSTAMP = "10085796";
                 return e;
               }));
         }
-        class v {
+        class M {
           static Set(e, t, n) {
             if ((e || (e = (0, a.$Y)([], 31, null)), e.length <= t)) {
               if (t >= 31) return e;
@@ -23037,12 +23042,12 @@ var CLSTAMP = "10085796";
           }
           static GetWithFallback(e, t) {
             if (e) {
-              return v.Get(e, t) || v.Get(e, m.GetELanguageFallback(t));
+              return M.Get(e, t) || M.Get(e, m.GetELanguageFallback(t));
             }
             return null;
           }
         }
-        const M = {
+        const S = {
             english: "en",
             german: "de",
             french: "fr",
@@ -23076,7 +23081,7 @@ var CLSTAMP = "10085796";
             sc_schinese: "zh-cn",
             koreana: "ko",
           },
-          S = {
+          y = {
             "en-US": 0,
             "de-DE": 1,
             "fr-FR": 2,
@@ -23108,10 +23113,10 @@ var CLSTAMP = "10085796";
             "vi-VN": 28,
             "id-ID": 30,
           };
-        function y() {
-          return M[o.TS.LANGUAGE] || null;
+        function E() {
+          return S[o.TS.LANGUAGE] || null;
         }
-        function E(e) {
+        function B(e) {
           let t,
             n = new Promise((e) => (t = e)),
             r = Array(e.length),
@@ -23132,8 +23137,8 @@ var CLSTAMP = "10085796";
             n
           );
         }
-        const B = new m();
-        window.LocalizationManager = B;
+        const x = new m();
+        window.LocalizationManager = x;
       },
       11010: (e, t, n) => {
         "use strict";
@@ -24754,9 +24759,9 @@ var CLSTAMP = "10085796";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 19 2025 : 17:14:54",
-                    BUILD_TIME_UTC: "Sep 20 2025 : 00:14:54",
-                    BUILD_RTIME_UTC: 1758327294,
+                    BUILD_TIME_LOCAL: "Sep 22 2025 : 15:33:30",
+                    BUILD_TIME_UTC: "Sep 22 2025 : 22:33:30",
+                    BUILD_RTIME_UTC: 1758580410,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25431,7 +25436,7 @@ var CLSTAMP = "10085796";
         9418: "29e9fa15a9fc8e62a893",
         9462: "5985248e201b7f99b9b6",
         9711: "2ed989ee7251a5d19c6f",
-        9858: "ca1e0fd67e39978e82ee",
+        9858: "5274ab084f1bb82e316c",
         9869: "cd88c8d4263e81ca1643",
         9887: "d2213752070154d47a89",
       }[e]),

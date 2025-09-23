@@ -117,6 +117,7 @@ message CClientMetrics_ReportClientError_Notification {
 	optional string product = 1;
 	optional string version = 2;
 	repeated .CClientMetrics_ReportClientError_Notification.Error errors = 3;
+	repeated string tags = 4;
 }
 
 message CClientMetrics_ClientBootstrap_Notification {
