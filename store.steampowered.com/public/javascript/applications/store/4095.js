@@ -6480,14 +6480,6 @@
         );
       };
     },
-    31292: (e, t, a) => {
-      "use strict";
-      function n() {
-        let e = window.GetUsabilityTracker;
-        if (e) return e();
-      }
-      a.d(t, { D: () => n });
-    },
     34010: (e, t, a) => {
       "use strict";
       a.d(t, {
