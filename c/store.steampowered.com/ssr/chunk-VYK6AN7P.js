@@ -85,6 +85,9 @@ _.set("korean", _.get("koreana"));
 function _(_) {
   return _.get(_);
 }
+function _(_) {
+  if (_ !== "english") return _ === "sc_schinese" ? "schinese" : "english";
+}
 function _(_, ..._) {
   return (
     _.length == 0 ||
@@ -103,9 +106,12 @@ function _(_) {
   async function _() {
     await _();
     let _ = _(),
-      _ = new Set(["english"]);
-    for (let _ of _.languages)
-      _.add(_.strLanguage), _.strFallback && _.add(_.strFallback);
+      _ = new Set([]);
+    for (let _ of _.languages) {
+      _.add(_.strLanguage);
+      let _ = _(_.strLanguage);
+      _ && _.add(_);
+    }
     return Promise.all(
       Array.from(_).map((_) =>
         _(_).then((_) => {
@@ -124,7 +130,7 @@ function _(_) {
     let [_, ..._] = _,
       _ =
         _.get(_.strLanguage)?.get(_) ??
-        _.get(_.strFallback ?? "english")?.get(_);
+        _.get(_(_.strLanguage) ?? "english")?.get(_);
     return (
       _ ||
       (_.length === 0

@@ -8170,18 +8170,7 @@
         );
       }
       function m() {
-        const e = n.mh.GetEditModel(),
-          t = [];
-        return (
-          e.BHasSaleEnabled() &&
-            t.push({
-              bCompleted: e.GetEventModel().BHasSaleUpdateLandingPageVanity(),
-              strMessage: (0, r.we)(
-                "#EventEditor_SaleNotReady_UpdateLandingPage_ttip",
-              ),
-            }),
-          t.length ? o(t) : null
-        );
+        return null;
       }
     },
     84140: (e, t, a) => {

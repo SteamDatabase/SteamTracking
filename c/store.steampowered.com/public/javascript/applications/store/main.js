@@ -6125,6 +6125,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = new Set([
         "sc_schinese",
@@ -6202,6 +6203,10 @@
       function _(_) {
         return _.get(_);
       }
+      function _(_) {
+        if ("english" !== _)
+          return "sc_schinese" === _ ? "schinese" : "english";
+      }
       _.set("sc_schinese", _.get("schinese")),
         _.set("korean", _.get("koreana"));
     },
@@ -6231,9 +6236,12 @@
         const _ = (async function () {
           await (0, _._)();
           const _ = _(),
-            _ = new Set(["english"]);
-          for (const _ of _.languages)
-            _.add(_.strLanguage), _.strFallback && _.add(_.strFallback);
+            _ = new Set([]);
+          for (const _ of _.languages) {
+            _.add(_.strLanguage);
+            const _ = (0, _._)(_.strLanguage);
+            _ && _.add(_);
+          }
           return Promise.all(
             Array.from(_).map((_) =>
               _(_).then((_) => {
@@ -6251,7 +6259,7 @@
           const [_, ..._] = _,
             _ =
               _.get(_.strLanguage)?.get(_) ??
-              _.get(_.strFallback ?? "english")?.get(_);
+              _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
           return (
             _ ||
             (0 === _.length

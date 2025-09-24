@@ -5623,7 +5623,7 @@
     },
     96762: (e, t, r) => {
       "use strict";
-      r.d(t, { VD: () => n, ut: () => o, yc: () => a });
+      r.d(t, { VD: () => n, mR: () => l, ut: () => o, yc: () => a });
       const i = new Set([
         "sc_schinese",
         "schinese",
@@ -5699,6 +5699,10 @@
       function o(e) {
         return a.get(e);
       }
+      function l(e) {
+        if ("english" !== e)
+          return "sc_schinese" === e ? "schinese" : "english";
+      }
       a.set("sc_schinese", a.get("schinese")),
         a.set("korean", a.get("koreana"));
     },
@@ -5726,9 +5730,12 @@
         const r = (async function () {
           await (0, i.Ki)();
           const r = c(),
-            n = new Set(["english"]);
-          for (const e of r.languages)
-            n.add(e.strLanguage), e.strFallback && n.add(e.strFallback);
+            n = new Set([]);
+          for (const e of r.languages) {
+            n.add(e.strLanguage);
+            const t = (0, s.mR)(e.strLanguage);
+            t && n.add(t);
+          }
           return Promise.all(
             Array.from(n).map((r) =>
               e(r).then((e) => {
@@ -5740,30 +5747,30 @@
             ),
           );
         })();
-        let s = !1;
-        var l;
-        function u(e, r) {
+        let l = !1;
+        var u;
+        function m(e, r) {
           const [i, ...n] = r,
-            s =
+            a =
               t.get(i.strLanguage)?.get(e) ??
-              t.get(i.strFallback ?? "english")?.get(e);
+              t.get((0, s.mR)(i.strLanguage) ?? "english")?.get(e);
           return (
-            s ||
+            a ||
             (0 === n.length
               ? (console.error("Couldn't find localization key", e), e)
-              : u(e, n))
+              : m(e, n))
           );
         }
-        function m(e, ...t) {
-          return a(u(e, c().languages), ...t);
+        function d(e, ...t) {
+          return a(m(e, c().languages), ...t);
         }
         return (
-          r.then(() => (s = !0)),
-          (l = r),
+          r.then(() => (l = !0)),
+          (u = r),
           (o ??= new Set()),
-          o.add(l),
+          o.add(u),
           {
-            Localize: (e, ...t) => m(e, ...t),
+            Localize: (e, ...t) => d(e, ...t),
             LocalizeReact(e, ...t) {
               const r = this.Localize(e);
               if (r === e) return r;
@@ -5781,10 +5788,10 @@
               );
             },
             LocalizePlural: (e, t, ...r) =>
-              1 === t || "1" === t ? m(e, t, ...r) : m(e + "_Plural", t, ...r),
-            LocalizeInSpecificLang: (e, t, ...r) => a(u(t, [e]), ...r),
+              1 === t || "1" === t ? d(e, t, ...r) : d(e + "_Plural", t, ...r),
+            LocalizeInSpecificLang: (e, t, ...r) => a(m(t, [e]), ...r),
             Ready: () => r,
-            IsReady: () => s,
+            IsReady: () => l,
           }
         );
       }
