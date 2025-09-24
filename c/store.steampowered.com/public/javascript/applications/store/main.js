@@ -78543,13 +78543,19 @@
         );
       }
       var _ = __webpack_require__("chunkid");
+      let _ = 0;
       function _(_) {
         return _.lazy(async function () {
-          let _ = performance.now();
+          let _ = _++,
+            _ = performance.now();
+          performance.mark(`reactLazyLoad${_}`);
           const _ = await _();
           return (
             (0, _._)() &&
               ((0, _._)().m_stats.firstReactLazyLoad ??= performance.now() - _),
+            performance.measure(`reactLazyLoad${_}`, {
+              start: `reactLazyLoad${_}`,
+            }),
             _
           );
         });
@@ -80051,6 +80057,27 @@
       __webpack_require__("chunkid");
       (0, _._)({
         enforceActions: "never",
+      }),
+        performance.mark("storeReactStartup");
+      new PerformanceObserver((_) => {
+        const _ = _.getEntriesByType("navigation")[0];
+        if (
+          _ &&
+          "responseEnd" in _ &&
+          "number" == typeof _.responseEnd &&
+          _.responseEnd &&
+          (0, _._)()
+        ) {
+          const _ = _ - _.responseEnd;
+          (0, _._)().IncrementStat("storeReactStartup", _),
+            performance.measure("storeReactStartup", {
+              start: _.responseEnd,
+              duration: _,
+            });
+        }
+      }).observe({
+        type: "navigation",
+        buffered: !0,
       });
       let _ = performance.now();
       let _,
@@ -80119,16 +80146,13 @@
                 )
               : console.error('No "application_root" was found to target'),
             (0, _._)() &&
-              ((0, _._)().IncrementStat(
-                "storeReactStartup",
-                _ -
-                  (performance.getEntriesByType("navigation")?.[0]?.duration ??
-                    0),
-              ),
               (0, _._)().IncrementStat(
                 "storeReactLocalizationReady",
                 performance.now() - _,
-              ));
+              ),
+            performance.measure("storeReactLocalizationReady", {
+              start: "storeReactStartup",
+            });
         });
     },
     chunkid: (module, module_exports, __webpack_require__) => {

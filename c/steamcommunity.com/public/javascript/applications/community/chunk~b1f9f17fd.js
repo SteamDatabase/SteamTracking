@@ -39170,7 +39170,12 @@
         }
         GetCallbackForAppList(_) {
           let _ = this.m_mapAppCallbackList.get(_);
-          return _ || ((_ = new _._()), this.m_mapAppCallbackList.set(_, _)), _;
+          return (
+            _ ||
+              (this.m_mapAppCallbackList.set(_, new _._()),
+              (_ = this.m_mapAppCallbackList.get(_))),
+            _
+          );
         }
         async SearchItemDefs(_, _) {
           var _, _;
@@ -39211,7 +39216,9 @@
         async LoadItemDef(_) {
           if (!_.nAppID || !_.nItemDefID) return !1;
           let _ = this.m_mapAppItemDefPromises.get(_.nAppID);
-          _ || ((_ = new Map()), this.m_mapAppItemDefPromises.set(_.nAppID, _));
+          _ ||
+            (this.m_mapAppItemDefPromises.set(_.nAppID, new Map()),
+            (_ = this.m_mapAppItemDefPromises.get(_.nAppID)));
           let _ = _.get(_.nItemDefID);
           return (
             _ || ((_ = this.InternalLoadItemDef([_])), _.set(_.nItemDefID, _)),
@@ -39306,7 +39313,9 @@
           _.forEach((_) => {
             if (!_.nAppID || !_.nItemDefID) return;
             let _ = this.m_mapAppItemDefs.get(_.nAppID);
-            _ || ((_ = new Map()), this.m_mapAppItemDefs.set(_.nAppID, _)),
+            _ ||
+              (this.m_mapAppItemDefs.set(_.nAppID, new Map()),
+              (_ = this.m_mapAppItemDefs.get(_.nAppID))),
               __webpack_require__.set(_.nItemDefID, _),
               _.add(_.nAppID);
           }),
@@ -52245,7 +52254,12 @@
         }
         EnsureOwnerSetExists(_) {
           let _ = this.m_mapOwners.get(_);
-          return _ || ((_ = new Set()), this.m_mapOwners.set(_, _)), _;
+          return (
+            _ ||
+              (this.m_mapOwners.set(_, new Set()),
+              (_ = this.m_mapOwners.get(_))),
+            _
+          );
         }
         DecrementAppVisibility(_) {
           var _;

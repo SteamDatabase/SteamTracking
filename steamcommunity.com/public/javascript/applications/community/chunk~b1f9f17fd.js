@@ -35227,7 +35227,10 @@
         GetCallbackForAppList(e) {
           let t = this.m_mapAppCallbackList.get(e);
           return (
-            t || ((t = new s.lu()), this.m_mapAppCallbackList.set(e, t)), t
+            t ||
+              (this.m_mapAppCallbackList.set(e, new s.lu()),
+              (t = this.m_mapAppCallbackList.get(e))),
+            t
           );
         }
         async SearchItemDefs(e, t) {
@@ -35266,7 +35269,9 @@
         async LoadItemDef(e) {
           if (!e.nAppID || !e.nItemDefID) return !1;
           let t = this.m_mapAppItemDefPromises.get(e.nAppID);
-          t || ((t = new Map()), this.m_mapAppItemDefPromises.set(e.nAppID, t));
+          t ||
+            (this.m_mapAppItemDefPromises.set(e.nAppID, new Map()),
+            (t = this.m_mapAppItemDefPromises.get(e.nAppID)));
           let a = t.get(e.nItemDefID);
           return (
             a || ((a = this.InternalLoadItemDef([e])), t.set(e.nItemDefID, a)),
@@ -35360,7 +35365,9 @@
           e.forEach((e) => {
             if (!e.nAppID || !e.nItemDefID) return;
             let a = this.m_mapAppItemDefs.get(e.nAppID);
-            a || ((a = new Map()), this.m_mapAppItemDefs.set(e.nAppID, a)),
+            a ||
+              (this.m_mapAppItemDefs.set(e.nAppID, new Map()),
+              (a = this.m_mapAppItemDefs.get(e.nAppID))),
               a.set(e.nItemDefID, e),
               t.add(e.nAppID);
           }),
@@ -47254,7 +47261,12 @@
         }
         EnsureOwnerSetExists(e) {
           let t = this.m_mapOwners.get(e);
-          return t || ((t = new Set()), this.m_mapOwners.set(e, t)), t;
+          return (
+            t ||
+              (this.m_mapOwners.set(e, new Set()),
+              (t = this.m_mapOwners.get(e))),
+            t
+          );
         }
         DecrementAppVisibility(e) {
           var t;

@@ -5525,7 +5525,10 @@
         GetPartnerEventChangeCallback(_) {
           let _ = this.m_mapEventUpdateCallback.get(_);
           return (
-            _ || ((_ = new _._()), this.m_mapEventUpdateCallback.set(_, _)), _
+            _ ||
+              (this.m_mapEventUpdateCallback.set(_, new _._()),
+              (_ = this.m_mapEventUpdateCallback.get(_))),
+            _
           );
         }
         GetClanEventGIDs(_) {
@@ -5971,9 +5974,13 @@
         }
         InsertUniqueEventGID(_, _, _) {
           let _ = this.m_mapClanToGIDs.get(_);
-          _ || ((_ = new Array()), this.m_mapClanToGIDs.set(_, _));
+          _ ||
+            (this.m_mapClanToGIDs.set(_, new Array()),
+            (_ = this.m_mapClanToGIDs.get(_)));
           let _ = this.m_mapAppIDToGIDs.get(_);
-          _ || ((_ = new Array()), this.m_mapAppIDToGIDs.set(_, _)),
+          _ ||
+            (this.m_mapAppIDToGIDs.set(_, new Array()),
+            (_ = this.m_mapAppIDToGIDs.get(_))),
             -1 == _.indexOf(_) && (_.push(_), _.push(_));
         }
         ResetModel() {}
