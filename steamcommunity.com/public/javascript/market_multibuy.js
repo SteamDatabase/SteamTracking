@@ -37,6 +37,8 @@ function CBuyOrder( iName, price_total, qty )
 	this.m_timePollStart = 0;
 	this.m_bOrderCanceling = false;
 	this.m_bPollComplete = false;
+	this.m_confirmation = 0;
+	this.m_confirmationTries = 0;
 }
 
 CBuyOrder.prototype.PlaceOrder = function()
@@ -83,6 +85,7 @@ CBuyOrder.prototype.PlaceOrder = function()
 			billing_city: billing_city,
 			billing_state: billing_state,
 			billing_postal_code: billing_postal_code,
+			confirmation: this.m_confirmation,
 			save_my_address: save_my_address ? '1' : '0'
 		},
 		crossDomain: true,
@@ -91,6 +94,14 @@ CBuyOrder.prototype.PlaceOrder = function()
 
 	ajax.done( function( data ) {
 		thisOrder.m_bOrderAjaxComplete = true;
+
+		if ( thisOrder.m_confirmation )
+		{
+			new Effect.BlindDown('multibuy_ctn', {duration: 0.25});
+			$J('#market_buy_confirmation_required').hide();
+			$J('#market_buy_commodity_throbber').show();
+      thisOrder.m_confirmation = 0;
+		}
 
 		if ( data.success == 1 )
 		{
@@ -109,15 +120,59 @@ CBuyOrder.prototype.PlaceOrder = function()
 			thisOrder.m_bOrderSuccess = false;
 			PurchaseError( thisOrder.m_llNameId, 'Sorry! We had trouble hearing back from the Steam servers about your order. Double check whether or not your order has actually been created or filled. If not, then please try again later.' );
 		}
+
+		PurchaseNextItem();
+
 	}).fail( function( jqxhr ) {
 		var data = $J.parseJSON( jqxhr.responseText );
-		thisOrder.m_bOrderSuccess = false;
-		thisOrder.m_bOrderAjaxComplete = true;
+		if ( data.need_confirmation )
+		{
+			if ( thisOrder.m_confirmation === 0 )
+			{
+				new Effect.BlindUp('multibuy_ctn', {duration: 0.25});
+				$J('#market_buy_confirmation_required').show();
+				$J('#market_buy_commodity_throbber').hide();
+			}
+			thisOrder.m_confirmation = data.confirmation.confirmation_id;
+			if ( thisOrder.m_confirmation )
+			{
+				window.m_confirmationTimeout = setTimeout(function () { thisOrder.GetConfirmationState(); }, 1500);
+			}
+		}
+		else if ( thisOrder.m_confirmation )
+		{
+			thisOrder.CancelConfirmation();
+		}
+		else
+		{
+			thisOrder.m_bOrderSuccess = false;
+			thisOrder.m_bOrderAjaxComplete = true;
 
-		PurchaseError( thisOrder.m_llNameId, 'Sorry! We had trouble hearing back from the Steam servers about your order. Double check whether or not your order has actually been created or filled. If not, then please try again later.' );
+			PurchaseError( thisOrder.m_llNameId, 'Sorry! We had trouble hearing back from the Steam servers about your order. Double check whether or not your order has actually been created or filled. If not, then please try again later.' );
+			PurchaseNextItem();
+		}
 	});
 
 	return ajax;
+};
+
+CBuyOrder.prototype.CancelConfirmation = function()
+{
+	this.m_confirmationTries = 0;
+	if (window.m_confirmationTimeout) {
+		clearTimeout(window.m_confirmationTimeout);
+	}
+	window.m_confirmationTimeout = 0;
+	if (!this.m_bPurchaseSuccess) {
+		BuyItemDialog.OnFailure({responseJSON: {message: "There was a problem purchasing your item. Something went wrong while waiting for you to confirm this action. Refresh the page and try again."}});
+		this.m_confirmation = 0;
+	}
+};
+
+CBuyOrder.prototype.GetConfirmationState = function()
+{
+	this.m_confirmationTries++;
+	PurchaseNextItem();
 };
 
 CBuyOrder.prototype.Poll = function()
@@ -439,6 +494,10 @@ function PurchaseNextItem()
 	{
 		g_iNamePurchase++;
 	}
+	if ( g_rgOrders[g_iNamePurchase].m_bOrderAjaxComplete )
+	{
+		g_iNamePurchase++;
+	}
 
 	if ( g_iNamePurchase >= g_rgItemNameIds.length )
 	{
@@ -447,15 +506,7 @@ function PurchaseNextItem()
 	}
 
 	var ajax = g_rgOrders[g_iNamePurchase].PlaceOrder();
-	if ( ajax )
-	{
-		ajax.always( function ()
-		{
-			g_iNamePurchase++;
-			PurchaseNextItem();
-		} );
-	}
-	else
+	if ( !ajax )
 	{
 		g_iNamePurchase++;
 		PurchaseNextItem();
@@ -468,7 +519,7 @@ function MultiBuyStartPurchase()
 	{
 		return;
 	}
-	
+
 		if ( !$J('#market_multi_accept_ssa') || !$J('#market_multi_accept_ssa').prop('checked') )
 	{
 		ShowAlertDialog( 'Cannot place order', 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.', 'OK' );
@@ -477,7 +528,7 @@ function MultiBuyStartPurchase()
 
 		if ( g_bRequiresBillingInfo )
 	{
-		var rgBadFields = { 
+		var rgBadFields = {
 			first_name : false,
 			last_name : false,
 			billing_address : false,
