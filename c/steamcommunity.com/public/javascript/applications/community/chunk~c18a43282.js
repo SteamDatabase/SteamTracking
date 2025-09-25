@@ -1339,6 +1339,7 @@
           (_.optin_only = void 0),
           (_.child_demo_appid_for_repost = void 0),
           (_.sale_vanity_id = void 0),
+          (_.sale_update_landing_page_vanity_id = void 0),
           (_.automatically_push_updated_source = void 0);
       }
       !(function (_) {
@@ -2197,7 +2198,7 @@
         }
         BHasSaleUpdateLandingPageVanity() {
           return (
-            !this.jsondata.bSaleEnabled &&
+            !!this.jsondata.bSaleEnabled &&
             Boolean(this.jsondata.sale_update_landing_page_vanity_id)
           );
         }

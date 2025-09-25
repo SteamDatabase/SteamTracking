@@ -5889,7 +5889,7 @@
             t.GetClanAccountID(),
             t.GetGID(),
           ),
-          { bVisible: i } = (0, E.DF)(t.GetEventModel());
+          { bVisible: i } = (0, E._5)(t.GetEventModel());
         if (a) return null;
         if (i) return null;
         if ((0, ot.m)(t.GetClanSteamID(), !0)) return c.createElement(cn, null);
@@ -6483,8 +6483,8 @@
             t.GetEventModel().jsondata.sale_opt_in_page_name,
             t.GetEventModel().jsondata.sale_show_creator,
           ]),
-          { bVisible: i } = (0, E.Vy)(t.GetEventModel()),
-          { bVisible: o } = (0, E.DF)(t.GetEventModel());
+          { bVisible: i } = (0, E.Yp)(t.GetEventModel()),
+          { bVisible: o } = (0, E._5)(t.GetEventModel());
         if (i || o)
           return c.createElement(
             "div",
@@ -7040,7 +7040,9 @@
           [n, i] = (0, E.TB)(t.GetClanAccountID()),
           [o] = (0, hn.t7)(i.appid, { include_basic_info: !0 });
         if (n || !o) return;
-        const r = o.GetStorePageURL() + "/" + a;
+        const r = (null == a ? void 0 : a.length)
+          ? o.GetStorePageURL() + "/" + a
+          : void 0;
         return c.createElement(
           c.Fragment,
           null,
@@ -15987,9 +15989,9 @@
             }
             return !1;
           }, [n]),
-          s = (0, E.Vy)(o),
+          s = (0, E.Yp)(o),
           d = (0, Ut.q3)(() => (0, zt.C7)()),
-          m = (0, E.DF)(o),
+          m = (0, E._5)(o),
           u = (0, Ut.q3)(() => (0, zt.cA)()),
           _ = !P.KN.Get().BShowEmailEditorTab(i.GetEventModel()),
           p = P.KN.Get().GetPartnerEventPermissions(o.clanSteamID);

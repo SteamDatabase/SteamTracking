@@ -7726,7 +7726,9 @@
             include_basic_info: !0,
           });
         if (_ || !_) return;
-        const _ = _.GetStorePageURL() + "/" + _;
+        const _ = (null == _ ? void 0 : _.length)
+          ? _.GetStorePageURL() + "/" + _
+          : void 0;
         return _.createElement(
           _.Fragment,
           null,

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10093568";
+var CLSTAMP = "10095086";
 (() => {
   "use strict";
   var a,
@@ -325,7 +325,7 @@ var CLSTAMP = "10093568";
         5836: "1bd7be1a8b30a9d1e4ca",
         5876: "395836110bf8d36b556f",
         5893: "df66896a6433a05464ff",
-        5955: "ba2ce02806229fa79d08",
+        5955: "92afa8a7a0818aed994b",
         6120: "b8b6608165e80c91451a",
         6196: "16122a429d4177f076dd",
         6200: "c21427f594ddb5f80738",
@@ -339,7 +339,7 @@ var CLSTAMP = "10093568";
         6528: "29542f61947d0478b771",
         6577: "097a9b93a7b1931aa1d4",
         6635: "35646073492d7f814a47",
-        6662: "36cbd8cb1d2330aefbe3",
+        6662: "ca1e1cc5a3e8eed7fe44",
         6688: "dc30e077d1ff0a9d7e36",
         6752: "341c891ba6ebff128ed5",
         6888: "63a4760a15409d8a3662",
@@ -390,7 +390,7 @@ var CLSTAMP = "10093568";
         8724: "8f2d3ae086bd1224a7b8",
         8732: "d91d5d41490a3efd5220",
         8749: "793dcd8bbc7304b00a1b",
-        8780: "c67981fa79db9c21029d",
+        8780: "750b4d42d90161ddeb30",
         8855: "3558a41fe6ae0c2d02cf",
         8871: "60ac94d3ed39ce1898e3",
         8872: "12a0b005f8be57b90058",
@@ -410,7 +410,7 @@ var CLSTAMP = "10093568";
         9517: "ecd64a345cd390eb671a",
         9560: "ab574eeaf2b40ff61924",
         9617: "3e5cb211c045c9e969c2",
-        9638: "94d95520e0a231898d08",
+        9638: "96c6c4215c2b056fb9b1",
         9743: "b2d9587e4009a994b616",
         9746: "4dc8360d70d97106c33c",
         9774: "1201ce7b0bce7a7b43d7",

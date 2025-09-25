@@ -4045,24 +4045,25 @@
             (this.m_curModel.description = e.m_curModel.description),
             (this.m_curModel.m_nBuildID = e.m_curModel.m_nBuildID),
             (this.m_curModel.m_strBuildBranch = e.m_curModel.m_strBuildBranch),
-            (this.m_curModel.broadcaster = e.m_curModel.broadcaster),
             (this.m_curModel.broadcaster = e.m_curModel.broadcaster);
           const t = this.m_curModel.jsondata.sale_vanity_id,
             a =
               this.m_curModel.jsondata
                 .sale_vanity_id_valve_approved_for_sale_subpath,
-            n = this.m_curModel.jsondata.valve_access_log,
-            i = this.m_curModel.jsondata.clone_from_event_gid,
-            r = this.m_curModel.jsondata.rt_migrated_time;
+            n = this.m_curModel.jsondata.sale_update_landing_page_vanity_id,
+            i = this.m_curModel.jsondata.valve_access_log,
+            r = this.m_curModel.jsondata.clone_from_event_gid,
+            o = this.m_curModel.jsondata.rt_migrated_time;
           (this.m_curModel.jsondata = JSON.parse(
             JSON.stringify(e.m_curModel.jsondata),
           )),
             (this.m_curModel.jsondata.sale_vanity_id = t),
             (this.m_curModel.jsondata.sale_vanity_id_valve_approved_for_sale_subpath =
               a),
-            (this.m_curModel.jsondata.valve_access_log = n),
-            (this.m_curModel.jsondata.clone_from_event_gid = i),
-            (this.m_curModel.jsondata.rt_migrated_time = r);
+            (this.m_curModel.jsondata.sale_update_landing_page_vanity_id = n),
+            (this.m_curModel.jsondata.valve_access_log = i),
+            (this.m_curModel.jsondata.clone_from_event_gid = r),
+            (this.m_curModel.jsondata.rt_migrated_time = o);
         }
       }
       (0, l.Cg)([d.sH], N.prototype, "m_curModel", void 0),
@@ -8051,17 +8052,18 @@
     17297: (e, t, a) => {
       "use strict";
       a.d(t, {
-        C7: () => u,
-        ER: () => c,
-        _P: () => l,
-        cA: () => m,
-        e5: () => d,
-        uu: () => s,
+        C7: () => m,
+        ER: () => d,
+        _P: () => s,
+        cA: () => _,
+        e5: () => u,
+        uu: () => c,
       });
       var n = a(25918),
-        i = a(63556),
-        r = a(61859);
-      function o(e) {
+        i = a(4796),
+        r = a(63556),
+        o = a(61859);
+      function l(e) {
         var t;
         const a = e.filter((e) => e.bCompleted),
           n = a.length >= e.length,
@@ -8070,7 +8072,7 @@
               ? void 0
               : t.strMessage;
         return {
-          text: (0, r.we)(
+          text: (0, o.we)(
             n ? "#EventEditor_CompleteStatus" : "#EventEditor_IncompleteStatus",
             a.length,
             e.length,
@@ -8080,26 +8082,26 @@
           ttip: n ? void 0 : i,
         };
       }
-      function l() {
+      function s() {
         const e = n.mh.GetEditModel(),
-          t = i.O.Get().GetCurEditLanguage(),
+          t = r.O.Get().GetCurEditLanguage(),
           a = [];
         return (
           a.push({ bCompleted: !!e.GetName(t) }),
           a.push({ bCompleted: !!e.GetDescription(t) }),
-          o(a)
+          l(a)
         );
       }
-      function s() {
+      function c() {
         const e = n.mh.GetEditModel();
         if (12 === e.GetEventType()) return null;
         if (e.BHasTag("curator")) return null;
-        const t = i.O.Get().GetCurEditLanguage(),
+        const t = r.O.Get().GetCurEditLanguage(),
           a = [];
-        return a.push({ bCompleted: !!e.GetImageURL("capsule", t) }), o(a);
+        return a.push({ bCompleted: !!e.GetImageURL("capsule", t) }), l(a);
       }
-      function c() {
-        var e, t, a, i, r, l, s;
+      function d() {
+        var e, t, a, i, r, o, s;
         const c = n.mh.GetEditModel(),
           d = [],
           u = "Enable email and at least enter a location";
@@ -8130,21 +8132,21 @@
             bCompleted: !!(null ===
               (s =
                 null ===
-                  (l =
+                  (o =
                     null === (r = c.GetEventModel().jsondata.email_setting) ||
                     void 0 === r
                       ? void 0
-                      : r.sections) || void 0 === l
+                      : r.sections) || void 0 === o
                   ? void 0
-                  : l[0].localized_body) || void 0 === s
+                  : o[0].localized_body) || void 0 === s
               ? void 0
               : s[0]),
             strMessage: u,
           }),
-          o(d)
+          l(d)
         );
       }
-      function d() {
+      function u() {
         const e = n.mh.GetEditModel(),
           t = [];
         return (
@@ -8152,25 +8154,40 @@
             t.push({ bCompleted: !!e.GetSteamAwardCategory() }),
           e.BIsEventForOGGWithoutVisibleStorePage() &&
             t.push({ bCompleted: !!e.BOptedInForOGGWithoutVisibleStorePage() }),
-          t.length ? o(t) : null
-        );
-      }
-      function u() {
-        const e = n.mh.GetEditModel(),
-          t = [];
-        return (
-          e.BHasSaleEnabled() &&
-            t.push({
-              bCompleted: e.GetEventModel().BHasSaleVanity(),
-              strMessage: (0, r.we)(
-                "#EventEditor_SaleNotReady_SaleVanity_ttip",
-              ),
-            }),
-          t.length ? o(t) : null
+          t.length ? l(t) : null
         );
       }
       function m() {
-        return null;
+        const e = n.mh.GetEditModel(),
+          { bVisible: t } = (0, i.Yp)(e.GetEventModel());
+        if (!t) return null;
+        const a = [];
+        return (
+          e.BHasSaleEnabled() &&
+            a.push({
+              bCompleted: e.GetEventModel().BHasSaleVanity(),
+              strMessage: (0, o.we)(
+                "#EventEditor_SaleNotReady_SaleVanity_ttip",
+              ),
+            }),
+          a.length ? l(a) : null
+        );
+      }
+      function _() {
+        const e = n.mh.GetEditModel(),
+          { bVisible: t } = (0, i._5)(e.GetEventModel());
+        if (!t) return null;
+        const a = [];
+        return (
+          e.BHasSaleEnabled() &&
+            a.push({
+              bCompleted: e.GetEventModel().BHasSaleUpdateLandingPageVanity(),
+              strMessage: (0, o.we)(
+                "#EventEditor_SaleNotReady_UpdateLandingPage_ttip",
+              ),
+            }),
+          a.length ? l(a) : null
+        );
       }
     },
     84140: (e, t, a) => {

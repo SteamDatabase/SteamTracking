@@ -4121,12 +4121,12 @@
             (this.m_curModel.description = _.m_curModel.description),
             (this.m_curModel.m_nBuildID = _.m_curModel.m_nBuildID),
             (this.m_curModel.m_strBuildBranch = _.m_curModel.m_strBuildBranch),
-            (this.m_curModel.broadcaster = _.m_curModel.broadcaster),
             (this.m_curModel.broadcaster = _.m_curModel.broadcaster);
           const _ = this.m_curModel.jsondata.sale_vanity_id,
             _ =
               this.m_curModel.jsondata
                 .sale_vanity_id_valve_approved_for_sale_subpath,
+            _ = this.m_curModel.jsondata.sale_update_landing_page_vanity_id,
             _ = this.m_curModel.jsondata.valve_access_log,
             _ = this.m_curModel.jsondata.clone_from_event_gid,
             _ = this.m_curModel.jsondata.rt_migrated_time;
@@ -4136,6 +4136,7 @@
             (this.m_curModel.jsondata.sale_vanity_id = _),
             (this.m_curModel.jsondata.sale_vanity_id_valve_approved_for_sale_subpath =
               _),
+            (this.m_curModel.jsondata.sale_update_landing_page_vanity_id = _),
             (this.m_curModel.jsondata.valve_access_log = _),
             (this.m_curModel.jsondata.clone_from_event_gid = _),
             (this.m_curModel.jsondata.rt_migrated_time = _);
@@ -8644,6 +8645,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -8754,10 +8756,12 @@
       }
       function _() {
         const _ = _._.GetEditModel(),
-          _ = [];
+          { bVisible: _ } = (0, _._)(_.GetEventModel());
+        if (!_) return null;
+        const _ = [];
         return (
           _.BHasSaleEnabled() &&
-            _.push({
+            __webpack_require__.push({
               bCompleted: _.GetEventModel().BHasSaleVanity(),
               strMessage: (0, _._)("#EventEditor_SaleNotReady_SaleVanity_ttip"),
             }),
@@ -8765,7 +8769,20 @@
         );
       }
       function _() {
-        return null;
+        const _ = _._.GetEditModel(),
+          { bVisible: _ } = (0, _._)(_.GetEventModel());
+        if (!_) return null;
+        const _ = [];
+        return (
+          _.BHasSaleEnabled() &&
+            __webpack_require__.push({
+              bCompleted: _.GetEventModel().BHasSaleUpdateLandingPageVanity(),
+              strMessage: (0, _._)(
+                "#EventEditor_SaleNotReady_UpdateLandingPage_ttip",
+              ),
+            }),
+          _.length ? _(_) : null
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

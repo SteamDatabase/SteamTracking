@@ -12,9 +12,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -357,75 +355,64 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _(_.clanSteamID.GetAccountID()),
-          _ =
-            !_ &&
-            (null == __webpack_require__ ? void 0 : __webpack_require__.is_ogg),
+        const _ = _.BIsOGGEvent(),
           _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
-        return _.useMemo(() => {
-          if (_)
-            return {
-              bVisible: !1,
-            };
-          if (_.BHasSaleEnabled())
-            return {
+        if (_)
+          return {
+            bVisible: !1,
+          };
+        if (_.BHasSaleEnabled())
+          return {
+            bVisible: !0,
+          };
+        if (
+          _.jsondata.clone_from_event_gid &&
+          _.jsondata.clone_from_sale_enabled
+        )
+          return {
+            bVisible: !0,
+          };
+        if (_.clanSteamID.GetAccountID() == (0, _._)())
+          return {
+            bVisible: !1,
+          };
+        const _ = _._.GetCreatorHome(_.clanSteamID);
+        return _ && _.BHasClanAccountFlagSet(32)
+          ? {
               bVisible: !0,
-            };
-          if (
-            _.jsondata.clone_from_event_gid &&
-            _.jsondata.clone_from_sale_enabled
-          )
-            return {
-              bVisible: !0,
-            };
-          if (_.clanSteamID.GetAccountID() == (0, _._)())
-            return {
-              bVisible: !1,
-            };
-          const _ = _._.GetCreatorHome(_.clanSteamID);
-          return _ && _.BHasClanAccountFlagSet(32)
+            }
+          : _
             ? {
                 bVisible: !0,
+                bValveOnly: !0,
               }
-            : _
-              ? {
-                  bVisible: !0,
-                  bValveOnly: !0,
-                }
-              : {
-                  bVisible: !1,
-                };
-        }, [_, _, _]);
+            : {
+                bVisible: !1,
+              };
       }
       function _(_) {
         const _ = _.BIsOGGEvent(),
-          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin,
-          [_] = (0, _._)(_.appid, _._.k_DataRequest_BasicInfo),
-          _ = _ && !_.GetParentAppID();
-        return _.useMemo(
-          () =>
-            _ && _
-              ? _.BHasSaleEnabled()
+          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
+        return _
+          ? _.BHasSaleEnabled()
+            ? {
+                bVisible: !0,
+              }
+            : 1 == _._.EUNIVERSE
+              ? {
+                  bVisible: !1,
+                }
+              : _ && 14 == _.GetEventType()
                 ? {
                     bVisible: !0,
+                    bValveOnly: !0,
                   }
-                : 1 == _._.EUNIVERSE
-                  ? {
-                      bVisible: !1,
-                    }
-                  : _ && 14 == _.GetEventType()
-                    ? {
-                        bVisible: !0,
-                        bValveOnly: !0,
-                      }
-                    : {
-                        bVisible: !1,
-                      }
-              : {
-                  bVisible: !1,
-                },
-          [_, _, _, _],
-        );
+                : {
+                    bVisible: !1,
+                  }
+          : {
+              bVisible: !1,
+            };
       }
       window.g_ClanStore = _;
     },
