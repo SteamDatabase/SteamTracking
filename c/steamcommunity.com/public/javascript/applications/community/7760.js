@@ -1043,7 +1043,7 @@
             onVideoSelected: _,
             clanSteamID: _,
           } = _,
-          [_, _] = _.useState(null),
+          [_, _] = _.useState(""),
           [_, _] = _.useState(_.selectedImage),
           _ = _
             ? (0, _._)("#EventEditor_ReplaceImage_Title")
