@@ -236,7 +236,7 @@ function fnRenderHeroCapsule( oItem )
 	{
 		var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 		var reviewSummary = pref !== 1 ? rgItemData.review_summary_filtered : rgItemData.review_summary;
-		var $elReviewData = $J('<div>', {'class': 'hero_stat', "data-tooltip-text": reviewSummary['sReviewScoreTooltip'] } );
+		var $elReviewData = $J('<div>', {'class': 'hero_stat', "data-tooltip-html": reviewSummary['sReviewScoreTooltip'] } );
 		$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
 		if ( reviewSummary['reviewScore'] > 0 )
 		{
@@ -262,7 +262,7 @@ function fnRenderHeroCapsule( oItem )
 	HeroData.append( HeroContent );
 
 	var AddToCartCtn = $J( '<div/>', {'class': 'hero_add_to_cart' } );
-	AddToCartCtn.append( $J( '<button/>', {'class': 'btn_green_white_innerfade btn_medium', } ).click( function( e ){ eval( purchaseAction ); } ).append( $J( '<span/>' ).text( 'Add to Cart' )  ) );
+	AddToCartCtn.append( $J( '<button/>', {'class': 'btn_green_steamui btn_medium', } ).click( function( e ){ eval( purchaseAction ); } ).append( $J( '<span/>' ).text( 'Add to Cart' )  ) );
 	HeroData.append( AddToCartCtn );
 
 	$Cap.append( HeroData );
@@ -319,7 +319,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	} );
 
 	$Parent.show();
-	$HeroItemCtn.css('minHeight', '' );
+	$Parent.css('minHeight', '' );
 }
 
 function HomeSaleSteamAwardWinners( $Parent, rgSteamAwardWinners, rgSteamAwardDefs )
@@ -409,7 +409,7 @@ function HomeRenderSpecialDealsCarousel( rgSpecialDealItems )
 			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false, true );
 		}, 'sale_deep_discounts', 3 );
 
-		GDynamicStore.MarkAppDisplayed( rgSpecialDeals );
+			GDynamicStore.MarkAppDisplayed( rgSpecialDeals );
 	}
 }
 
@@ -504,7 +504,7 @@ function HomeSaleBlock( rgItems, $Parent, strFeatureContext )
 		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, 4, strFeatureContext, SaleCap );
 		bFourRow = !bFourRow;
 	}
-	BindSaleCapAutoSizeEvents( $Parent );
+	GHomepage.BindSaleCapAutoSizeEvents( $Parent );
 	GDynamicStore.DecorateDynamicItems( $Parent );
 	$Parent.css('height','');
 }
@@ -857,7 +857,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 		}
 	}
 
-	BindSaleCapAutoSizeEvents( $FocusCtn );
+	GHomepage.BindSaleCapAutoSizeEvents( $FocusCtn );
 
 	var $Games = $J('<div/>', {'class': 'home_category_games_ctn' } );
 	var $Row = $J('<div/>', {'class': 'salerow salerow3 multiline' } );
@@ -873,7 +873,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 
 	$Games.append( $Row );
 
-	BindSaleCapAutoSizeEvents( $Games );
+	GHomepage.BindSaleCapAutoSizeEvents( $Games );
 
 	$Ctn.append( $Games );
 

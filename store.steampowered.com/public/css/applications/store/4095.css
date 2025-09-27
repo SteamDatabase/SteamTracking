@@ -1365,7 +1365,7 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
   flex-direction: column;
   flex-basis: 50%;
 }
-@media screen and (max-width: 910px) {
+@container widget-container (width < 850px) {
   ._2asUTzZuAkj9cDRKsLvwRE {
     flex-basis: 100%;
   }

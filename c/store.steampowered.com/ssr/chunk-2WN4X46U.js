@@ -15,7 +15,6 @@ function _(_) {
 }
 var _ = class _ extends _.Component {
   state = {};
-  reactErrorHandler = void 0;
   constructor(_) {
     super(_), (this.state.lastErrorKey = _.errorKey);
   }

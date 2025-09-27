@@ -1,7 +1,7 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -18,7 +18,7 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -38,23 +38,7 @@ import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-} from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -1410,6 +1394,7 @@ var _ = "wARh8VsFUg8-";
 var _ = "AlTDVvmjvUU-";
 var _ = "In8c5bkG5eM-";
 var _ = "yzn1exHts-g-";
+var _ = "ny5zKM3-7ec-";
 var _ = "_-4fVuiRLPho-";
 var _ = "txkpZ63Lcj4-";
 var _ = "Flf3IKPB4Tg-";
@@ -2064,20 +2049,19 @@ function _(_ = !0) {
     _ = _(),
     _ = _(),
     _ = _(),
-    _ = _(),
-    _ = _(_, _, _, _, _);
+    _ = _(_, _, _, _);
   return _({
     ..._,
     enabled: _.enabled && _,
   });
 }
-function _(_, _, _, _, _) {
+function _(_, _, _, _) {
   return {
     queryKey: ["StoreFrequentlyVisitedHubs", _],
     queryFn: async () => {
       let [_, _] = await Promise.all([
         _.fetchQuery(_(_, _)),
-        _.fetchQuery(_(_, _, _)),
+        _.fetchQuery(_(_, _, _, _.excluded_content_descriptors)),
       ]);
       return (_.frequent_hubs || [])
         .map((_) =>
@@ -3622,65 +3606,6 @@ var _ = _(_());
 var _ = _(_(), 1);
 var _ = _(_(), 1),
   _ = _(_(), 1);
-var _ = "_8jYEPRQ-5m4-";
-var _ = "DkDkgW5s5IY-";
-var _ = "_7xtK0r5UTx8-";
-var _ = "Siv8zLtpkBw-";
-var _ = _(_(), 1);
-function _(_) {
-  let {
-      visible: _,
-      closePopover: _,
-      children: _,
-      refPopover: _,
-      refActiveButton: _,
-    } = _,
-    _ = _.useCallback(
-      (_) => {
-        if (
-          !(!_.current || !_.current || !document.activeElement) &&
-          _.key === "Tab"
-        ) {
-          let _ = _(_.current),
-            _ = _.indexOf(document.activeElement);
-          if (_ === -1) return;
-          if (
-            (_ === 0 && _.shiftKey && (_.current.focus(), _.preventDefault()),
-            _ === _.length - 1 && !_.shiftKey && _.current.parentElement)
-          ) {
-            let _ = _(_.current.parentElement),
-              _ = _.indexOf(_.current);
-            if (_ !== -1) {
-              let _ = _[_ + 1];
-              _ && (_.focus(), _.preventDefault());
-            }
-          }
-        }
-      },
-      [_, _],
-    );
-  return (
-    _(_, _),
-    (0, _.jsx)(_, {
-      className: _,
-      visible: _,
-      msAnimationDuration: 100,
-      children: (0, _.jsx)("div", {
-        className: (0, _.default)(_, _.IN_MOBILE_WEBVIEW && _),
-        children: (0, _.jsx)(_, {
-          "flow-children": "row",
-          className: _,
-          onCancelButton: _,
-          ref: _,
-          onKeyDown: _,
-          children: _,
-        }),
-      }),
-    })
-  );
-}
-var _ = _(_(), 1),
-  _ = _(_(), 1);
 var _ = "b-HJJEhQMU8-";
 var _ = "YqoW5i8-5Qg-";
 var _ = "mI7yDdWRs7s-";
@@ -3770,13 +3695,15 @@ function _(_) {
 }
 function _(_) {
   let _ = _(_.href);
-  return (0, _.jsx)(_, {
-    href: _,
-    className: _,
-    onClick: _.onClick,
-    onOKButton: _.onClick,
-    children: _.children,
-  });
+  return _.globalOnly && _.EREALM == 2
+    ? null
+    : (0, _.jsx)(_, {
+        href: _,
+        className: _,
+        onClick: _.onClick,
+        onOKButton: _.onClick,
+        children: _.children,
+      });
 }
 function _(_) {
   let { storeItem: _, feature: _, depth: _, name: _ } = _;
@@ -3904,70 +3831,46 @@ var _ = {
 };
 function _() {
   let _ = _(),
-    _ = _();
-  return _ || _
-    ? (0, _.jsxs)(_, {
-        className: _,
-        children: [
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}charts/`,
-            children: _("#Menu_Popover_SteamCharts"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}explore/upcoming`,
-            children: _("#Menu_Popover_Upcoming"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}points/`,
-            children: _("#Menu_Popover_PointsShop"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}digitalgiftcards/`,
-            children: _("#Menu_Popover_GiftCards"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}news/`,
-            children: _("#Menu_Popover_NewsAndUpdates"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}account/preferences/`,
-            children: _("#Menu_Popover_Preferences"),
-          }),
-        ],
-      })
-    : (0, _.jsxs)(_, {
-        className: _,
-        children: [
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}/`,
-            children: _("#Menu_Popover_StoreHome"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}charts/`,
-            children: _("#Menu_Popover_SteamCharts"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}explore/upcoming`,
-            children: _("#Menu_Popover_Upcoming"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}points/`,
-            children: _("#Menu_Popover_PointsShop"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}digitalgiftcards/`,
-            children: _("#Menu_Popover_GiftCards"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}news/`,
-            children: _("#Menu_Popover_NewsAndUpdates"),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}account/preferences/`,
-            children: _("#Menu_Popover_Preferences"),
-          }),
-        ],
-      });
+    _ = _(),
+    _ = !_ && !_,
+    _ = _.EREALM == 2;
+  return (0, _.jsxs)(_, {
+    className: _,
+    children: [
+      _ &&
+        (0, _.jsx)(_, {
+          href: `${_.STORE_BASE_URL}/`,
+          children: _("#Menu_Popover_StoreHome"),
+        }),
+      (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}charts/`,
+        globalOnly: !0,
+        children: _("#Menu_Popover_SteamCharts"),
+      }),
+      (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}explore/upcoming`,
+        children: _("#Menu_Popover_Upcoming"),
+      }),
+      (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}points/`,
+        globalOnly: !0,
+        children: _("#Menu_Popover_PointsShop"),
+      }),
+      (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}digitalgiftcards/`,
+        globalOnly: !0,
+        children: _("#Menu_Popover_GiftCards"),
+      }),
+      (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}news/`,
+        children: _("#Menu_Popover_NewsAndUpdates"),
+      }),
+      (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}account/preferences/`,
+        children: _("#Menu_Popover_Preferences"),
+      }),
+    ],
+  });
 }
 function _() {
   return (
@@ -4186,20 +4089,24 @@ function _(_) {
 }
 function _() {
   let { data: _ } = _(
-    {
-      count: 10,
-    },
-    _,
+      {
+        count: 10,
+      },
+      _,
+    ),
+    _ = "charts/topselling";
+  return (
+    _.EREALM == 2 && (_ = "search/?filter=topsellers"),
+    (0, _.jsx)(_, {
+      label: _("#Menu_Section_Browse_TopSellers"),
+      href: _,
+      children:
+        _ &&
+        (0, _.jsx)(_, {
+          rgItemIDs: _.rgItemIDs,
+        }),
+    })
   );
-  return (0, _.jsx)(_, {
-    label: _("#Menu_Section_Browse_TopSellers"),
-    href: "charts/topselling",
-    children:
-      _ &&
-      (0, _.jsx)(_, {
-        rgItemIDs: _.rgItemIDs,
-      }),
-  });
 }
 function _() {
   let { data: _ } = _(
@@ -4368,6 +4275,759 @@ var _ = _.memo(function (_) {
       ],
     });
   });
+var _ = _(_(), 1);
+function _() {
+  let _ = _(),
+    _ = _(),
+    _ = _();
+  return _({
+    ..._(_, _),
+    enabled: !!_,
+    initialData: _ ? void 0 : [],
+  });
+}
+function _(_, _) {
+  return {
+    queryKey: ["RecommendedTagsForUser", _.country, _.language],
+    queryFn: () => _(_, _),
+    staleTime: 1e3 * 60 * 60 * 24,
+  };
+}
+async function _(_, _) {
+  let _ = _.Init(_);
+  _.Body().set_language(_.language),
+    _.Body().set_country_code(_.country),
+    _.Body().set_favor_rarer_tags(!0);
+  let _ = await _.GetRecommendedTagsForUser(_, _);
+  if (!_.BSuccess())
+    throw `Error loading recommended tags: ${_.GetErrorMessage()}`;
+  return _.Body().toObject().tags || [];
+}
+var _ = _(_(), 1);
+function _(_) {
+  let { tagid: _, language: _ = _.LANGUAGE } = _;
+  return _(_, _) || String(_);
+}
+function _(_, _ = _.LANGUAGE) {
+  let _ = _(_, _);
+  return `${_.STORE_BASE_URL}tags/${_(_)}/${_}`;
+}
+var _ = "KS3VoNPGZ8c-";
+var _ = "Fn8mFRDdRio-";
+var _ = "FNE-mPeXzQA-";
+var _ = "pWS9WkhTQxE-";
+var _ = "MjVgWd26-Ks-";
+var _ = "i0CnQqTCYIQ-";
+var _ = "jLuOSBgXneI-";
+var _ = "O-5tWVDApEQ-";
+var _ = "pFyqFohCcGg-";
+var _ = _(_(), 1);
+function _() {
+  return (0, _.jsxs)(_, {
+    children: [
+      (0, _.jsx)(_, {
+        title: _("#Menu_Section_Categories_YourTopGenres"),
+        children: (0, _.jsx)(_, {
+          href: `${_.STORE_BASE_URL}sitemap/#genres`,
+          label: _("#Menu_Section_Categories_ViewAll"),
+        }),
+      }),
+      (0, _.jsx)(_, {
+        children: (0, _.jsx)(_, {}),
+      }),
+    ],
+  });
+}
+function _() {
+  return _(_.LANGUAGE), _(_.logged_in), _(), null;
+}
+var _ = _.default.memo(function () {
+    let [_, _] = _();
+    return _ === null || _ === null
+      ? null
+      : (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              "flow-children": "row",
+              className: _,
+              children: _.map((_) =>
+                _.type === "hub"
+                  ? (0, _.jsx)(
+                      _,
+                      {
+                        featuredCategory: _,
+                      },
+                      _.strHandle,
+                    )
+                  : (0, _.jsx)(
+                      _,
+                      {
+                        featuredTag: _,
+                      },
+                      _.unTagID,
+                    ),
+              ),
+            }),
+            (0, _.jsxs)(_, {
+              "flow-children": "row",
+              className: _,
+              children: [
+                (0, _.jsx)(_, {
+                  "flow-children": "row",
+                  className: _,
+                  children: _.map((_) =>
+                    _.type === "hub"
+                      ? (0, _.jsx)(
+                          _,
+                          {
+                            featuredLink: _,
+                          },
+                          _.strHandle,
+                        )
+                      : (0, _.jsx)(
+                          _,
+                          {
+                            featuredLink: _,
+                          },
+                          _.unTagID,
+                        ),
+                  ),
+                }),
+                (0, _.jsx)(_, {
+                  href: `${_.STORE_BASE_URL}tag/browse/`,
+                  label: _("#Menu_Section_Categories_ViewAllTags"),
+                }),
+              ],
+            }),
+          ],
+        });
+  }),
+  _ = _.GenerateRandomSeed();
+function _() {
+  let { data: _ } = _(),
+    { data: _ } = _(),
+    _ = _(_),
+    { data: _ } = _(_.LANGUAGE),
+    _ = _.default.useMemo(
+      () => _.ShuffleArray(_().slice(), 0, _.SeededRandom(_)),
+      [],
+    ),
+    _ = _(),
+    _ = _ ? 6 : 4,
+    _ = _ ? 12 : 8;
+  return _.default.useMemo(() => {
+    if (_ == null || _ == null || !_ || !_) return [null, null];
+    let _ = new Set(),
+      _ = new Set(),
+      _ = [],
+      _ = [],
+      _ =
+        _.excluded_content_descriptors.includes(3) &&
+        _.excluded_content_descriptors.includes(4);
+    for (let _ of _(_, _, _)) {
+      let _;
+      if (_.length < _) _ = _;
+      else if (_.length < _) _ = _;
+      else break;
+      _.type == "tag" && (!_ || !_.includes(_.unTagID))
+        ? !_.has(_.unTagID) && _.unTagID in _ && (_.add(_.unTagID), _.push(_))
+        : _.type == "hub" &&
+          (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
+    }
+    return [_, _];
+  }, [_, _, _, _, _, _, _]);
+}
+function* _(_, _, _) {
+  let _ = _.slice(),
+    _ = _.slice(),
+    _ = _.slice();
+  for (; _.length || _.length; ) {
+    if (_.length) {
+      let _ = _.shift();
+      "hubconfig" in _
+        ? yield {
+            type: "hub",
+            strHandle: _.hubconfig.handle,
+            strName: _.hubconfig.display_name,
+            strURLPath: _.hubconfig.url_path,
+          }
+        : yield {
+            type: "tag",
+            unTagID: _.tagid,
+          };
+    }
+    _.length &&
+      (yield {
+        type: "tag",
+        unTagID: _.shift().tagid,
+      });
+  }
+  for (; _.length; ) {
+    let _ = _.shift();
+    yield {
+      type: "hub",
+      strHandle: _._,
+      strName: _.Localize(_.strLocToken),
+      strURLPath: _.strSalePageURL,
+    };
+  }
+}
+function _(_) {
+  let { featuredCategory: _ } = _,
+    { strHandle: _, strURLPath: _, strName: _ } = _,
+    _ = _(`${_.STORE_BASE_URL}${_}`, "big-category-link");
+  return (0, _.jsx)(_, {
+    title: _,
+    href: _,
+    children: (0, _.jsx)(_, {
+      category: _,
+      className: _,
+    }),
+  });
+}
+function _(_) {
+  let { featuredTag: _ } = _,
+    { unTagID: _ } = _,
+    _ = _(_(_), "big-category-link");
+  return (0, _.jsx)(_, {
+    title: (0, _.jsx)(_, {
+      tagid: _,
+    }),
+    href: _,
+    children: (0, _.jsx)(_, {
+      tagid: _,
+      className: _,
+    }),
+  });
+}
+function _(_) {
+  let { children: _, title: _, href: _ } = _;
+  return (0, _.jsxs)(_, {
+    className: _,
+    href: _,
+    children: [
+      _,
+      (0, _.jsx)("div", {
+        className: _,
+      }),
+      (0, _.jsx)("div", {
+        className: _,
+        children: (0, _.jsx)("div", {
+          className: _,
+          children: _,
+        }),
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { featuredLink: _ } = _,
+    _ = _(_(_.unTagID), "small-category-link");
+  return (0, _.jsx)(_, {
+    className: _,
+    href: _,
+    fnCanTakeFocus: _,
+    children: (0, _.jsx)(_, {
+      tagid: _.unTagID,
+    }),
+  });
+}
+function _(_) {
+  let { featuredLink: _ } = _,
+    _ = _(`${_.STORE_BASE_URL}${_.strURLPath}`, "small-category-link");
+  return (0, _.jsx)(_, {
+    className: _,
+    href: _,
+    fnCanTakeFocus: _,
+    children: _.strName,
+  });
+}
+var _ = "BUi42fzAwGY-";
+var _ = "HWTMAITMowM-";
+var _ = "MFaLtBAVIAM-";
+var _ = "Vg3QiTRTamw-";
+var _ = "eLjOKgMe1Sk-";
+var _ = "_2JoNBzwPL3Y-";
+var _ = "hbIROan00j4-";
+var _ = "/2KRULVAA.png";
+var _ = "/A7QSO6BA.png";
+var _ = _(_(), 1),
+  _ = {
+    appid: 1675200,
+  },
+  _ = {
+    appid: 1696780,
+  },
+  _ = {
+    packageid: 354231,
+  },
+  _ = [
+    "AT",
+    "BE",
+    "BG",
+    "CY",
+    "CZ",
+    "DE",
+    "DK",
+    "EE",
+    "ES",
+    "FI",
+    "FR",
+    "GB",
+    "GR",
+    "HR",
+    "HU",
+    "IE",
+    "IT",
+    "LT",
+    "LU",
+    "LV",
+    "MT",
+    "NL",
+    "PL",
+    "PT",
+    "RO",
+    "SE",
+    "SI",
+    "SK",
+    "US",
+    "CA",
+  ],
+  _ = ["JP", "TW", "HK", "KR"];
+function _(_) {
+  return _.includes(_) || _.includes(_);
+}
+function _() {
+  let { data: _ } = _(_);
+  return !!_ || _.includes(_.country_code);
+}
+function _() {
+  let _ = _();
+  return (0, _.jsxs)(_, {
+    children: [
+      !_ &&
+        (0, _.jsx)(_, {
+          children: _("#Menu_Section_Hardware"),
+        }),
+      _ &&
+        (0, _.jsx)("div", {
+          className: _,
+        }),
+      (0, _.jsxs)(_, {
+        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+      }),
+    ],
+  });
+}
+function _() {
+  return _(_), _(_), _(_), _(), null;
+}
+function _() {
+  let { data: _ } = _(_),
+    { data: _ } = _(_),
+    { data: _ } = _(_),
+    _ = _(),
+    _ = [
+      {
+        storeItem: _ ? _ : void 0,
+        image: _(_),
+      },
+      {
+        storeItem: _ ? _ : void 0,
+        image: _(_),
+        name: _("#Menu_Section_Hardware_SteamDeckDock"),
+      },
+      {
+        storeItem: _,
+      },
+    ]
+      .filter(({ storeItem: _ }) => _ && _.visible)
+      .slice(0, 2);
+  return (0, _.jsxs)(_, {
+    className: _,
+    children: [
+      _.length >= 1 &&
+        (0, _.jsx)(_, {
+          ..._[0],
+        }),
+      _.length >= 2 &&
+        (0, _.jsx)(_, {
+          ..._[1],
+        }),
+    ],
+  });
+}
+function _(_) {
+  let { storeItem: _, image: _, name: _ = _.name } = _;
+  return (0, _.jsxs)(_, {
+    className: _,
+    storeItem: _,
+    children: [
+      _ &&
+        (0, _.jsx)("img", {
+          className: _,
+          src: _,
+          alt: _,
+        }),
+      (0, _.jsx)("div", {
+        className: _,
+        children: (0, _.jsx)("div", {
+          className: _,
+          children: _,
+        }),
+      }),
+    ],
+  });
+}
+function _() {
+  let { data: _ } = _(_),
+    { data: _ } = _(_),
+    { data: _ } = _(_),
+    _ = _();
+  return (0, _.jsxs)(_, {
+    className: _,
+    children: [
+      _ &&
+        (0, _.jsx)(_, {
+          storeItem: _,
+        }),
+      _ &&
+        (0, _.jsx)(_, {
+          storeItem: _,
+        }),
+      (0, _.jsx)(_, {
+        storeItem: _,
+        name: _("#Menu_Section_Hardware_VRHardware"),
+      }),
+      (0, _.jsx)(_, {}),
+      _ &&
+        (0, _.jsx)(_, {
+          handle: "greatondeck",
+        }),
+      (0, _.jsx)(_, {
+        handle: "vr",
+      }),
+      (0, _.jsx)(_, {
+        handle: "controller",
+      }),
+    ],
+  });
+}
+var _ = {};
+_(_, {
+  AccordionSection: () => _,
+  AccordionSectionHeader: () => _,
+  Active: () => _,
+  Chevron: () => _,
+  ChevronSpacer: () => _,
+  Down: () => _,
+  DynamicMenu: () => _,
+  Enter: () => _,
+  EnterActive: () => _,
+  Exit: () => _,
+  ExitActive: () => _,
+  Label: () => _,
+  MenuItem: () => _,
+  MenuOptions: () => _,
+  MenuSection: () => _,
+  MoreMenuAccordion: () => _,
+  MoreSectionTransitionContent: () => _,
+  SectionTransition: () => _,
+  SuppressScrollOnBody: () => _,
+  TransitionContainer: () => _,
+  _: () => _,
+  default: () => _,
+  storeMenuResponsiveModeWidth: () => _,
+});
+var _ = "730px";
+var _ = "IwLkFP079Gg-";
+var _ = "QIXgBSHq6cY-";
+var _ = "e6ZIu2birzY-";
+var _ = "dtuuezlV-7Y-";
+var _ = "_-5GwwXIMjIQ-";
+var _ = "qshuHK34Txs-";
+var _ = "oVv8PgvP5Mc-";
+var _ = "-kwbmHXqu1A-";
+var _ = "eXY7k03iDSA-";
+var _ = "oC2LWRiGXFo-";
+var _ = "Y8Nr5U1xl3M-";
+var _ = "oXoyg-fBkHk-";
+var _ = "JjjLEZhMaK4-";
+var _ = "ggTx88t3rD8-";
+var _ = "hLyW92JUQIM-";
+var _ = "eu8omg7gpxU-";
+var _ = "_0QZf4yyfpD8-";
+var _ = "mWR-5YJlyMA-";
+var _ = "GQOJ5K5pn6U-";
+var _ = "_7FKZUleWBlc-";
+var _ = "BRZpkU5-R-o-";
+var _ = {
+  storeMenuResponsiveModeWidth: "730px",
+  SuppressScrollOnBody: "IwLkFP079Gg-",
+  DynamicMenu: "QIXgBSHq6cY-",
+  MenuOptions: "e6ZIu2birzY-",
+  MenuSection: "dtuuezlV-7Y-",
+  MenuItem: "_-5GwwXIMjIQ-",
+  ChevronSpacer: "qshuHK34Txs-",
+  Chevron: "oVv8PgvP5Mc-",
+  Active: "-kwbmHXqu1A-",
+  MoreMenuAccordion: "eXY7k03iDSA-",
+  AccordionSection: "oC2LWRiGXFo-",
+  AccordionSectionHeader: "Y8Nr5U1xl3M-",
+  Label: "oXoyg-fBkHk-",
+  TransitionContainer: "JjjLEZhMaK4-",
+  _: "ggTx88t3rD8-",
+  SectionTransition: "hLyW92JUQIM-",
+  Enter: "eu8omg7gpxU-",
+  EnterActive: "_0QZf4yyfpD8-",
+  Exit: "mWR-5YJlyMA-",
+  ExitActive: "GQOJ5K5pn6U-",
+  Down: "_7FKZUleWBlc-",
+  MoreSectionTransitionContent: "BRZpkU5-R-o-",
+};
+var _ = _(_(), 1),
+  _ = _(_(), 1);
+var _ = _(_(), 1);
+var _ = _(_(), 1);
+function _(_) {
+  let [_] = _.useState(_.excludedSections),
+    _ = _(_),
+    _ = _(),
+    [_, _] = _.useState();
+  return _
+    ? (0, _.jsx)(_, {
+        rgSections: _,
+        activeSection: _,
+        setActiveSection: _,
+      })
+    : (0, _.jsx)(_, {
+        rgSections: _,
+        activeSection: _ ?? _[0][0],
+        setActiveSection: _,
+      });
+}
+function _(_) {
+  let { rgSections: _, activeSection: _, setActiveSection: _ } = _,
+    { onMouseLeaveContainer: _, onMouseEnterItem: _ } = _(_, _),
+    _ = _(`${_.STORE_BASE_URL}sitemap`);
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsxs)(_, {
+        "flow-children": "row",
+        navEntryPreferPosition: 3,
+        className: _,
+        children: [
+          (0, _.jsxs)(_, {
+            "flow-children": "column",
+            className: _,
+            onMouseLeave: _,
+            children: [
+              _.map(([_, _]) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    active: _ == _,
+                    setSection: _,
+                    onMouseEnterItem: _,
+                    section: _,
+                    children: _,
+                  },
+                  _,
+                ),
+              ),
+              (0, _.jsx)(_, {
+                className: _,
+                href: _,
+                children: _("#Menu_Popover_ViewAll"),
+              }),
+            ],
+          }),
+          (0, _.jsx)(_, {
+            children: (0, _.jsx)(_, {
+              rgSections: _,
+              section: _,
+            }),
+          }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        rgSections: _,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { rgSections: _, activeSection: _, setActiveSection: _ } = _;
+  return (0, _.jsx)("div", {
+    className: _,
+    children: _.map((_) =>
+      (0, _.jsx)(
+        _,
+        {
+          rgSection: _,
+          active: _[0] === _,
+          setActiveSection: _,
+        },
+        _[0],
+      ),
+    ),
+  });
+}
+function _(_) {
+  let { rgSection: _, active: _, setActiveSection: _ } = _,
+    [_, _] = _,
+    _ = _.useCallback(() => _((_) => (_ === _ ? void 0 : _)), [_, _]);
+  return (0, _.jsxs)("div", {
+    className: (0, _.default)(_, _ && _),
+    children: [
+      (0, _.jsxs)("div", {
+        className: (0, _.default)(_, _ && _),
+        onClick: _,
+        children: [
+          (0, _.jsx)("div", {
+            role: "heading",
+            "aria-level": 3,
+            className: _,
+            children: _,
+          }),
+          (0, _.jsx)(_, {
+            className: _,
+          }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        visible: _,
+        keepMounted: !0,
+        children: (0, _.jsx)(_, {
+          children: (0, _.jsx)(_, {
+            section: _,
+          }),
+        }),
+      }),
+    ],
+  });
+}
+var _ = _.memo(function (_) {
+  let { rgSections: _ } = _;
+  return _.map((_) =>
+    (0, _.jsx)(
+      _,
+      {
+        section: _[0],
+      },
+      _[0],
+    ),
+  );
+});
+function _(_) {
+  let _ = _();
+  return _.useMemo(
+    () => _.filter((_) => _[0] !== "more" && (!_ || !_.has(_[0]))),
+    [_, _],
+  );
+}
+var _ = _.memo(function (_) {
+    let { rgSections: _, section: _ } = _,
+      [_, _] = _.useState(_),
+      [_, _] = _.useState(void 0);
+    return (
+      (0, _.useEffect)(() => {
+        let _ = _.findIndex((_) => _[0] == _) || 0,
+          _ = _.findIndex((_) => _[0] == _) || 0;
+        _ < _ ? _(_) : _ > _ ? _(_) : _(void 0), _(_);
+      }, [_, _]),
+      (0, _.jsx)("div", {
+        className: _,
+        children: (0, _.jsx)(_, {
+          childrenKey: _,
+          childrenClasses: _(_, _),
+          directionClass: _,
+          animate: !!_,
+          sizeClass: _,
+          children: (0, _.jsx)(_, {
+            section: _,
+          }),
+        }),
+      })
+    );
+  }),
+  _ = 0.25;
+function _(_, _) {
+  let _ = _.useRef(void 0);
+  (0, _.useEffect)(() => {
+    _.current?.section != _ && (_.current = void 0);
+  }, [_]);
+  let _ = _.useCallback(() => (_.current = void 0), []),
+    _ = _.useCallback(
+      (_, _) => {
+        if (_.current) {
+          let { _: _, _: _, section: _ } = _.current,
+            _ = _.clientX - _,
+            _ = _.clientY - _;
+          if (_ == _) {
+            _ < 0 &&
+              (_.current = {
+                _: _.clientX,
+                _: _.clientY,
+                section: _,
+              });
+            return;
+          }
+          if (_ > 0 && (_ != 0 ? Math.abs(_) / _ : 0) < _) return;
+        }
+        _(_),
+          (_.current = {
+            _: _.clientX,
+            _: _.clientY,
+            section: _,
+          });
+      },
+      [_],
+    );
+  return {
+    onMouseLeaveContainer: _,
+    onMouseEnterItem: _,
+  };
+}
+function _(_) {
+  let {
+      setSection: _,
+      onMouseEnterItem: _,
+      active: _,
+      section: _,
+      children: _,
+    } = _,
+    _ = _.useCallback(() => _(_), [_, _]),
+    _ = _.useCallback((_) => _(_, _), [_, _]);
+  return (0, _.jsxs)(_, {
+    className: (0, _.default)(_, _ && _),
+    onClick: _,
+    onMouseMove: _,
+    onGamepadFocus: _,
+    children: [_, " ", (0, _.jsx)(_, {})],
+  });
+}
+function _() {
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)("div", {
+        className: _,
+      }),
+      (0, _.jsx)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 12 13",
+        fill: "none",
+        className: _,
+        children: (0, _.jsx)("path", {
+          fill: "currentColor",
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          _: "M6.36084 6.68974L3.66211 3.99101L4.84062 2.8125L8.71786 6.68974L4.84062 10.567L3.66211 9.38847L6.36084 6.68974Z",
+        }),
+      }),
+    ],
+  });
+}
 var _ = _(_(), 1),
   _ = _(_(), 1);
 var _ = _(_());
@@ -4754,294 +5414,18 @@ function _() {
   });
 }
 var _ = _(_(), 1);
-function _() {
-  let _ = _(),
-    _ = _(),
-    _ = _();
-  return _({
-    ..._(_, _),
-    enabled: !!_,
-    initialData: _ ? void 0 : [],
-  });
-}
-function _(_, _) {
-  return {
-    queryKey: ["RecommendedTagsForUser", _.country, _.language],
-    queryFn: () => _(_, _),
-    staleTime: 1e3 * 60 * 60 * 24,
-  };
-}
-async function _(_, _) {
-  let _ = _.Init(_);
-  _.Body().set_language(_.language),
-    _.Body().set_country_code(_.country),
-    _.Body().set_favor_rarer_tags(!0);
-  let _ = await _.GetRecommendedTagsForUser(_, _);
-  if (!_.BSuccess())
-    throw `Error loading recommended tags: ${_.GetErrorMessage()}`;
-  return _.Body().toObject().tags || [];
-}
-function _(_) {
-  let { tagid: _, language: _ = _.LANGUAGE } = _;
-  return _(_, _) || String(_);
-}
-function _(_, _ = _.LANGUAGE) {
-  let _ = _(_, _);
-  return `${_.STORE_BASE_URL}tags/${_(_)}/${_}`;
-}
-var _ = "KS3VoNPGZ8c-";
-var _ = "Fn8mFRDdRio-";
-var _ = "FNE-mPeXzQA-";
-var _ = "pWS9WkhTQxE-";
-var _ = "MjVgWd26-Ks-";
-var _ = "i0CnQqTCYIQ-";
-var _ = "jLuOSBgXneI-";
-var _ = "O-5tWVDApEQ-";
-var _ = "pFyqFohCcGg-";
+var _ = "pvTdLzd4rFc-";
+var _ = "H9c8pnUofuA-";
+var _ = "_13-NoNwiVDo-";
+var _ = "cMs7E2qe1Rk-";
 var _ = _(_(), 1);
-function _() {
-  return (0, _.jsxs)(_, {
-    children: [
-      (0, _.jsx)(_, {
-        title: _("#Menu_Section_Categories_YourTopGenres"),
-        children: (0, _.jsx)(_, {
-          href: `${_.STORE_BASE_URL}sitemap/#genres`,
-          label: _("#Menu_Section_Categories_ViewAll"),
-        }),
-      }),
-      (0, _.jsx)(_, {
-        children: (0, _.jsx)(_, {}),
-      }),
-    ],
-  });
-}
-function _() {
-  return _(_.LANGUAGE), _(_.logged_in), _(), null;
-}
-var _ = _.default.memo(function () {
-    let [_, _] = _();
-    return _ === null || _ === null
-      ? null
-      : (0, _.jsxs)(_.Fragment, {
-          children: [
-            (0, _.jsx)(_, {
-              "flow-children": "row",
-              className: _,
-              children: _.map((_) =>
-                _.type === "hub"
-                  ? (0, _.jsx)(
-                      _,
-                      {
-                        featuredCategory: _,
-                      },
-                      _.strHandle,
-                    )
-                  : (0, _.jsx)(
-                      _,
-                      {
-                        featuredTag: _,
-                      },
-                      _.unTagID,
-                    ),
-              ),
-            }),
-            (0, _.jsxs)(_, {
-              "flow-children": "row",
-              className: _,
-              children: [
-                (0, _.jsx)(_, {
-                  "flow-children": "row",
-                  className: _,
-                  children: _.map((_) =>
-                    _.type === "hub"
-                      ? (0, _.jsx)(
-                          _,
-                          {
-                            featuredLink: _,
-                          },
-                          _.strHandle,
-                        )
-                      : (0, _.jsx)(
-                          _,
-                          {
-                            featuredLink: _,
-                          },
-                          _.unTagID,
-                        ),
-                  ),
-                }),
-                (0, _.jsx)(_, {
-                  href: `${_.STORE_BASE_URL}tag/browse/`,
-                  label: _("#Menu_Section_Categories_ViewAllTags"),
-                }),
-              ],
-            }),
-          ],
-        });
-  }),
-  _ = _.GenerateRandomSeed();
-function _() {
-  let { data: _ } = _(),
-    { data: _ } = _(),
-    _ = _(_),
-    { data: _ } = _(_.LANGUAGE),
-    _ = _.default.useMemo(
-      () => _.ShuffleArray(_().slice(), 0, _.SeededRandom(_)),
-      [],
-    ),
-    _ = _(),
-    _ = _ ? 6 : 4,
-    _ = _ ? 12 : 8;
-  return _.default.useMemo(() => {
-    if (_ == null || _ == null || !_ || !_) return [null, null];
-    let _ = new Set(),
-      _ = new Set(),
-      _ = [],
-      _ = [];
-    for (let _ of _(_, _, _)) {
-      let _;
-      if (_.length < _) _ = _;
-      else if (_.length < _) _ = _;
-      else break;
-      _.type == "tag"
-        ? !_.has(_.unTagID) && _.unTagID in _ && (_.add(_.unTagID), _.push(_))
-        : _.type == "hub" &&
-          (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
-    }
-    return [_, _];
-  }, [_, _, _, _, _, _, _]);
-}
-function* _(_, _, _) {
-  let _ = _.slice(),
-    _ = _.slice(),
-    _ = _.slice();
-  for (; _.length || _.length; ) {
-    if (_.length) {
-      let _ = _.shift();
-      "hubconfig" in _
-        ? yield {
-            type: "hub",
-            strHandle: _.hubconfig.handle,
-            strName: _.hubconfig.display_name,
-            strURLPath: _.hubconfig.url_path,
-          }
-        : yield {
-            type: "tag",
-            unTagID: _.tagid,
-          };
-    }
-    _.length &&
-      (yield {
-        type: "tag",
-        unTagID: _.shift().tagid,
-      });
-  }
-  for (; _.length; ) {
-    let _ = _.shift();
-    yield {
-      type: "hub",
-      strHandle: _._,
-      strName: _.Localize(_.strLocToken),
-      strURLPath: _.strSalePageURL,
-    };
-  }
-}
-function _(_) {
-  let { featuredCategory: _ } = _,
-    { strHandle: _, strURLPath: _, strName: _ } = _,
-    _ = _(`${_.STORE_BASE_URL}${_}`, "big-category-link");
-  return (0, _.jsx)(_, {
-    title: _,
-    href: _,
-    children: (0, _.jsx)(_, {
-      category: _,
-      className: _,
-    }),
-  });
-}
-function _(_) {
-  let { featuredTag: _ } = _,
-    { unTagID: _ } = _,
-    _ = _(_(_), "big-category-link");
-  return (0, _.jsx)(_, {
-    title: (0, _.jsx)(_, {
-      tagid: _,
-    }),
-    href: _,
-    children: (0, _.jsx)(_, {
-      tagid: _,
-      className: _,
-    }),
-  });
-}
-function _(_) {
-  let { children: _, title: _, href: _ } = _;
-  return (0, _.jsxs)(_, {
-    className: _,
-    href: _,
-    children: [
-      _,
-      (0, _.jsx)("div", {
-        className: _,
-      }),
-      (0, _.jsx)("div", {
-        className: _,
-        children: (0, _.jsx)("div", {
-          className: _,
-          children: _,
-        }),
-      }),
-    ],
-  });
-}
-function _(_) {
-  let { featuredLink: _ } = _,
-    _ = _(_(_.unTagID), "small-category-link");
-  return (0, _.jsx)(_, {
-    className: _,
-    href: _,
-    fnCanTakeFocus: _,
-    children: (0, _.jsx)(_, {
-      tagid: _.unTagID,
-    }),
-  });
-}
-function _(_) {
-  let { featuredLink: _ } = _,
-    _ = _(`${_.STORE_BASE_URL}${_.strURLPath}`, "small-category-link");
-  return (0, _.jsx)(_, {
-    className: _,
-    href: _,
-    fnCanTakeFocus: _,
-    children: _.strName,
-  });
-}
-var _ = "BUi42fzAwGY-";
-var _ = "HWTMAITMowM-";
-var _ = "MFaLtBAVIAM-";
-var _ = "Vg3QiTRTamw-";
-var _ = "eLjOKgMe1Sk-";
-var _ = "_2JoNBzwPL3Y-";
-var _ = "hbIROan00j4-";
-var _ = "/2KRULVAA.png";
-var _ = "/A7QSO6BA.png";
-var _ = _(_(), 1),
-  _ = {
-    appid: 1675200,
-  },
-  _ = {
-    appid: 1696780,
-  },
-  _ = {
-    packageid: 354231,
-  };
 function _() {
   let _ = _();
   return (0, _.jsxs)(_, {
     children: [
       !_ &&
         (0, _.jsx)(_, {
-          children: _("#Menu_Section_Hardware"),
+          children: _("#Menu_Section_SpecialSections"),
         }),
       _ &&
         (0, _.jsx)("div", {
@@ -5054,98 +5438,185 @@ function _() {
   });
 }
 function _() {
-  return _(_), _(_), _(_), _(), null;
-}
-function _() {
-  let { data: _ } = _(_),
-    { data: _ } = _(_),
-    { data: _ } = _(_),
-    _ = [
-      {
-        storeItem: _,
-        image: _(_),
-      },
-      {
-        storeItem: _,
-        image: _(_),
-        name: _("#Menu_Section_Hardware_SteamDeckDock"),
-      },
-      {
-        storeItem: _,
-      },
-    ]
-      .filter(({ storeItem: _ }) => _ && _.visible)
-      .slice(0, 2);
-  return (0, _.jsxs)(_, {
-    className: _,
-    children: [
-      _.length >= 1 &&
-        (0, _.jsx)(_, {
-          ..._[0],
-        }),
-      _.length >= 2 &&
-        (0, _.jsx)(_, {
-          ..._[1],
-        }),
-    ],
-  });
-}
-function _(_) {
-  let { storeItem: _, image: _, name: _ = _.name } = _;
-  return (0, _.jsxs)(_, {
-    className: _,
-    storeItem: _,
-    children: [
-      _ &&
-        (0, _.jsx)("img", {
-          className: _,
-          src: _,
-          alt: _,
-        }),
-      (0, _.jsx)("div", {
+  return _()
+    ? (0, _.jsxs)(_, {
         className: _,
-        children: (0, _.jsx)("div", {
-          className: _,
-          children: _,
-        }),
-      }),
-    ],
-  });
+        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+      })
+    : (0, _.jsxs)(_.Fragment, {
+        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
+      });
 }
 function _() {
-  let { data: _ } = _(_),
-    { data: _ } = _(_),
-    { data: _ } = _(_);
   return (0, _.jsxs)(_, {
     className: _,
     children: [
       (0, _.jsx)(_, {
-        storeItem: _,
+        handle: "software",
       }),
       (0, _.jsx)(_, {
-        storeItem: _,
+        handle: "soundtracks",
       }),
       (0, _.jsx)(_, {
-        storeItem: _,
-        name: _("#Menu_Section_Hardware_VRHardware"),
+        handle: "earlyaccess",
       }),
       (0, _.jsx)(_, {}),
       (0, _.jsx)(_, {
-        handle: "greatondeck",
+        handle: "pccafe",
       }),
       (0, _.jsx)(_, {
-        handle: "vr",
+        handle: "macos",
       }),
       (0, _.jsx)(_, {
-        handle: "controller",
+        handle: "linux",
       }),
     ],
   });
 }
-var _ = "pvTdLzd4rFc-";
-var _ = "H9c8pnUofuA-";
-var _ = "_13-NoNwiVDo-";
-var _ = "cMs7E2qe1Rk-";
+function _() {
+  return _.EREALM == 2
+    ? null
+    : (0, _.jsxs)(_, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}sale/nextfest/`,
+            children: _("#Menu_Section_SpecialSections_NextFest"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}steamawards/`,
+            children: _("#Menu_Section_SpecialSections_SteamAwards"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}yearinreview/`,
+            children: _("#Menu_Section_SpecialSections_SteamReplay"),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}labs/`,
+            children: _("#Menu_Section_SpecialSections_SteamLabs"),
+          }),
+        ],
+      });
+}
+function _() {
+  return (0, _.jsxs)(_, {
+    children: [
+      (0, _.jsxs)(_, {
+        children: [
+          (0, _.jsx)(_, {
+            handle: "demos",
+            icon: (0, _.jsx)(_, {}),
+          }),
+          (0, _.jsx)(_, {
+            href: `${_.STORE_BASE_URL}dlcforyou/`,
+            name: _("#Menu_Section_SpecialSections_DLCForYou"),
+            icon: (0, _.jsx)(_, {}),
+          }),
+        ],
+      }),
+      (0, _.jsx)(_, {
+        children: (0, _.jsx)(_, {
+          href: `${_.STORE_BASE_URL}news/collection/sales/`,
+          name: _("#Menu_Section_SpecialSections_SaleEvents"),
+          icon: (0, _.jsx)(_, {}),
+        }),
+      }),
+    ],
+  });
+}
+var _ = _.memo(function (_) {
+    return (0, _.jsx)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 36 36",
+      fill: "none",
+      ..._,
+      preserveAspectRatio: "xMidYMid meet",
+      children: (0, _.jsx)("path", {
+        fill: "currentColor",
+        _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
+      }),
+    });
+  }),
+  _ = _.memo(function (_) {
+    return (0, _.jsx)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 36 36",
+      fill: "none",
+      ..._,
+      children: (0, _.jsx)("path", {
+        fill: "currentColor",
+        _: "M10.8344 3.69379C18.7351 -0.263479 28.3486 2.93369 32.306 10.8344C36.2633 18.7352 33.0661 28.3486 25.1654 32.3061C17.2646 36.2633 7.65117 33.0662 3.69373 25.1655C-0.263515 17.2647 2.93364 7.65123 10.8344 3.69379ZM20.3236 23.5307C19.7603 23.768 19.1784 23.9101 18.5961 23.9682L19.2933 30.9379C20.667 30.8009 22.0391 30.4411 23.3597 29.8422L20.3236 23.5307ZM23.4447 20.5131C22.9403 21.6077 22.1064 22.5573 20.9945 23.1967L24.0336 29.5121C26.671 28.1311 28.6404 25.9659 29.8011 23.4467L23.4447 20.5131ZM20.682 16.6567C20.0778 15.4504 18.7708 14.8291 17.5062 15.0405L17.5052 15.0395C17.2171 15.0877 16.9315 15.1802 16.6566 15.3178C15.3964 15.9491 14.7773 17.3469 15.0765 18.6625C15.0888 18.7162 15.1016 18.7701 15.1166 18.8227H15.1146C15.1651 18.9991 15.2326 19.1732 15.3177 19.3432C15.5654 19.8377 15.933 20.2313 16.3656 20.5121C16.46 20.5738 16.5583 20.6292 16.6595 20.6801C17.4756 21.0874 18.4649 21.1219 19.3431 20.6821C20.0538 20.3261 20.5589 19.7252 20.8129 19.0336C20.8344 18.9756 20.8535 18.9165 20.8715 18.8569C20.8841 18.8145 20.8958 18.7719 20.9066 18.7289C20.9133 18.7026 20.9211 18.6765 20.9271 18.6498C21.0718 17.9999 21.0034 17.2984 20.682 16.6567ZM12.0912 6.42133C9.68701 7.64774 7.82707 9.52186 6.6156 11.7241L12.7455 15.103C13.28 14.1315 14.0879 13.2978 15.1273 12.7319L12.0912 6.42133ZM15.8588 5.17426C14.8144 5.34895 13.7774 5.65575 12.7689 6.10004L15.808 12.4174C16.2033 12.2617 16.6062 12.1503 17.0121 12.0825L15.8588 5.17426Z",
+      }),
+    });
+  }),
+  _ = _.memo(function (_) {
+    return (0, _.jsx)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 30 30",
+      fill: "none",
+      ..._,
+      children: (0, _.jsx)("path", {
+        fill: "currentColor",
+        fillRule: "evenodd",
+        clipRule: "evenodd",
+        _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
+      }),
+    });
+  }),
+  _ = _.memo(function (_) {
+    return (0, _.jsxs)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 36 36",
+      fill: "none",
+      ..._,
+      children: [
+        (0, _.jsx)("path", {
+          fill: "currentColor",
+          _: "M14 3C10.6863 3 8 5.68629 8 9V23C8 28.5228 12.4772 33 18 33C23.5228 33 28 28.5228 28 23V9C28 5.68629 25.3137 3 22 3H21V14C21 15.6569 19.6569 17 18 17C16.3431 17 15 15.6569 15 14V3H14Z",
+        }),
+        (0, _.jsx)("path", {
+          fill: "currentColor",
+          _: "M17 5H19V11H17V5Z",
+        }),
+      ],
+    });
+  }),
+  _ = _.memo(function (_) {
+    return (0, _.jsx)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 36 36",
+      fill: "none",
+      ..._,
+      children: (0, _.jsx)("path", {
+        fill: "currentColor",
+        fillRule: "evenodd",
+        clipRule: "evenodd",
+        _: "M31.3191 25.8753C27.1777 33.0485 18.0054 35.5062 10.8322 31.3647C3.65899 27.2233 1.20128 18.051 5.34272 10.8778C9.48417 3.70459 18.6565 1.24687 25.8297 5.38831C33.0029 9.52976 35.4606 18.7021 31.3191 25.8753ZM13.1684 23.2918C12.8141 23.2033 12.4599 23.2033 12.0171 23.2033C10.2458 23.2033 9.19736 24.1772 9.19736 25.417C9.19736 26.6569 10.2461 27.7196 12.0173 27.7196C13.8771 27.7196 15.3825 26.6569 15.3825 25.417V15.9411L22.9101 13.8157V20.5464C22.5558 20.4578 22.2016 20.3693 21.7588 20.3693C19.9875 20.3693 18.9388 21.432 18.9388 22.6718C18.9388 23.9117 19.9875 24.9744 21.7588 24.9744C23.6185 24.9744 25.124 23.9117 25.124 22.6718V9.03351C22.2545 9.94658 19.2887 10.7156 16.333 11.482C15.2752 11.7562 14.2187 12.0302 13.1684 12.3103V23.2918Z",
+      }),
+    });
+  }),
+  _ = _.memo(function (_) {
+    return (0, _.jsxs)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 36 36",
+      fill: "none",
+      ..._,
+      children: [
+        (0, _.jsx)("path", {
+          fill: "currentColor",
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          _: "M24 14.25C26.0711 14.25 27.75 15.9289 27.75 18C27.75 20.0711 26.0711 21.75 24 21.75C21.9289 21.75 20.25 20.0711 20.25 18C20.25 15.9289 21.9289 14.25 24 14.25ZM23 15.5V18.4922L24.9932 20.375L26 19.4219L24.4258 17.9346V15.5H23Z",
+        }),
+        (0, _.jsx)("path", {
+          fill: "currentColor",
+          fillRule: "evenodd",
+          clipRule: "evenodd",
+          _: "M10 11H13V7H34V29H13V25H10V29H2V21C3.65685 21 5 19.6569 5 18C5 16.3431 3.65685 15 2 15V7H10V11ZM24 12C20.6863 12 18 14.6863 18 18C18 21.3137 20.6863 24 24 24C27.3137 24 30 21.3137 30 18C30 14.6863 27.3137 12 24 12ZM10 23H13V19H10V23ZM10 17H13V13H10V17Z",
+        }),
+      ],
+    });
+  });
 var _ = _(_(), 1);
 function _() {
   let _ = _();
@@ -5281,478 +5752,80 @@ function _() {
     }),
   });
 }
-var _ = _(_(), 1);
-var _ = _(_(), 1);
-function _() {
-  let _ = _();
-  return (0, _.jsxs)(_, {
-    children: [
-      !_ &&
-        (0, _.jsx)(_, {
-          children: _("#Menu_Section_SpecialSections"),
-        }),
-      _ &&
-        (0, _.jsx)("div", {
-          className: _,
-        }),
-      (0, _.jsxs)(_, {
-        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-      }),
-    ],
-  });
-}
-function _() {
-  return _()
-    ? (0, _.jsxs)(_, {
-        className: _,
-        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-      })
-    : (0, _.jsxs)(_.Fragment, {
-        children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-      });
-}
-function _() {
-  return (0, _.jsxs)(_, {
-    className: _,
-    children: [
-      (0, _.jsx)(_, {
-        handle: "software",
-      }),
-      (0, _.jsx)(_, {
-        handle: "soundtracks",
-      }),
-      (0, _.jsx)(_, {
-        handle: "earlyaccess",
-      }),
-      (0, _.jsx)(_, {
-        handle: "TODO",
-      }),
-      (0, _.jsx)(_, {}),
-      (0, _.jsx)(_, {
-        handle: "pccafe",
-      }),
-      (0, _.jsx)(_, {
-        handle: "macos",
-      }),
-      (0, _.jsx)(_, {
-        handle: "linux",
-      }),
-    ],
-  });
-}
-function _() {
-  return (0, _.jsxs)(_, {
-    className: _,
-    children: [
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}sale/nextfest/`,
-        children: _("#Menu_Section_SpecialSections_NextFest"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}steamawards/`,
-        children: _("#Menu_Section_SpecialSections_SteamAwards"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}yearinreview/`,
-        children: _("#Menu_Section_SpecialSections_SteamReplay"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}labs/`,
-        children: _("#Menu_Section_SpecialSections_SteamLabs"),
-      }),
-    ],
-  });
-}
-function _() {
-  return (0, _.jsxs)(_, {
-    children: [
-      (0, _.jsxs)(_, {
-        children: [
-          (0, _.jsx)(_, {
-            handle: "demos",
-            icon: (0, _.jsx)(_, {}),
-          }),
-          (0, _.jsx)(_, {
-            href: `${_.STORE_BASE_URL}dlcforyou/`,
-            name: _("#Menu_Section_SpecialSections_DLCForYou"),
-            icon: (0, _.jsx)(_, {}),
-          }),
-        ],
-      }),
-      (0, _.jsx)(_, {
-        children: (0, _.jsx)(_, {
-          href: `${_.STORE_BASE_URL}news/collection/sales/`,
-          name: _("#Menu_Section_SpecialSections_SaleEvents"),
-          icon: (0, _.jsx)(_, {}),
-        }),
-      }),
-    ],
-  });
-}
-var _ = _.memo(function (_) {
-    return (0, _.jsx)("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 36 36",
-      fill: "none",
-      ..._,
-      preserveAspectRatio: "xMidYMid meet",
-      children: (0, _.jsx)("path", {
-        fill: "currentColor",
-        _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
-      }),
-    });
-  }),
-  _ = _.memo(function (_) {
-    return (0, _.jsx)("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 36 36",
-      fill: "none",
-      ..._,
-      children: (0, _.jsx)("path", {
-        fill: "currentColor",
-        _: "M10.8344 3.69379C18.7351 -0.263479 28.3486 2.93369 32.306 10.8344C36.2633 18.7352 33.0661 28.3486 25.1654 32.3061C17.2646 36.2633 7.65117 33.0662 3.69373 25.1655C-0.263515 17.2647 2.93364 7.65123 10.8344 3.69379ZM20.3236 23.5307C19.7603 23.768 19.1784 23.9101 18.5961 23.9682L19.2933 30.9379C20.667 30.8009 22.0391 30.4411 23.3597 29.8422L20.3236 23.5307ZM23.4447 20.5131C22.9403 21.6077 22.1064 22.5573 20.9945 23.1967L24.0336 29.5121C26.671 28.1311 28.6404 25.9659 29.8011 23.4467L23.4447 20.5131ZM20.682 16.6567C20.0778 15.4504 18.7708 14.8291 17.5062 15.0405L17.5052 15.0395C17.2171 15.0877 16.9315 15.1802 16.6566 15.3178C15.3964 15.9491 14.7773 17.3469 15.0765 18.6625C15.0888 18.7162 15.1016 18.7701 15.1166 18.8227H15.1146C15.1651 18.9991 15.2326 19.1732 15.3177 19.3432C15.5654 19.8377 15.933 20.2313 16.3656 20.5121C16.46 20.5738 16.5583 20.6292 16.6595 20.6801C17.4756 21.0874 18.4649 21.1219 19.3431 20.6821C20.0538 20.3261 20.5589 19.7252 20.8129 19.0336C20.8344 18.9756 20.8535 18.9165 20.8715 18.8569C20.8841 18.8145 20.8958 18.7719 20.9066 18.7289C20.9133 18.7026 20.9211 18.6765 20.9271 18.6498C21.0718 17.9999 21.0034 17.2984 20.682 16.6567ZM12.0912 6.42133C9.68701 7.64774 7.82707 9.52186 6.6156 11.7241L12.7455 15.103C13.28 14.1315 14.0879 13.2978 15.1273 12.7319L12.0912 6.42133ZM15.8588 5.17426C14.8144 5.34895 13.7774 5.65575 12.7689 6.10004L15.808 12.4174C16.2033 12.2617 16.6062 12.1503 17.0121 12.0825L15.8588 5.17426Z",
-      }),
-    });
-  }),
-  _ = _.memo(function (_) {
-    return (0, _.jsx)("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 30 30",
-      fill: "none",
-      ..._,
-      children: (0, _.jsx)("path", {
-        fill: "currentColor",
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-        _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
-      }),
-    });
-  });
-var _ = {};
-_(_, {
-  AccordionSection: () => _,
-  AccordionSectionHeader: () => _,
-  Active: () => _,
-  Chevron: () => _,
-  ChevronSpacer: () => _,
-  Down: () => _,
-  DynamicMenu: () => _,
-  Enter: () => _,
-  EnterActive: () => _,
-  Exit: () => _,
-  ExitActive: () => _,
-  Label: () => _,
-  MenuItem: () => _,
-  MenuOptions: () => _,
-  MenuSection: () => _,
-  MoreMenuAccordion: () => _,
-  MoreSectionTransitionContent: () => _,
-  SectionTransition: () => _,
-  SuppressScrollOnBody: () => _,
-  TransitionContainer: () => _,
-  _: () => _,
-  default: () => _,
-  storeMenuResponsiveModeWidth: () => _,
-});
-var _ = "730px";
-var _ = "IwLkFP079Gg-";
-var _ = "QIXgBSHq6cY-";
-var _ = "e6ZIu2birzY-";
-var _ = "dtuuezlV-7Y-";
-var _ = "_-5GwwXIMjIQ-";
-var _ = "qshuHK34Txs-";
-var _ = "oVv8PgvP5Mc-";
-var _ = "-kwbmHXqu1A-";
-var _ = "eXY7k03iDSA-";
-var _ = "oC2LWRiGXFo-";
-var _ = "Y8Nr5U1xl3M-";
-var _ = "oXoyg-fBkHk-";
-var _ = "JjjLEZhMaK4-";
-var _ = "ggTx88t3rD8-";
-var _ = "hLyW92JUQIM-";
-var _ = "eu8omg7gpxU-";
-var _ = "_0QZf4yyfpD8-";
-var _ = "mWR-5YJlyMA-";
-var _ = "GQOJ5K5pn6U-";
-var _ = "_7FKZUleWBlc-";
-var _ = "BRZpkU5-R-o-";
-var _ = {
-  storeMenuResponsiveModeWidth: "730px",
-  SuppressScrollOnBody: "IwLkFP079Gg-",
-  DynamicMenu: "QIXgBSHq6cY-",
-  MenuOptions: "e6ZIu2birzY-",
-  MenuSection: "dtuuezlV-7Y-",
-  MenuItem: "_-5GwwXIMjIQ-",
-  ChevronSpacer: "qshuHK34Txs-",
-  Chevron: "oVv8PgvP5Mc-",
-  Active: "-kwbmHXqu1A-",
-  MoreMenuAccordion: "eXY7k03iDSA-",
-  AccordionSection: "oC2LWRiGXFo-",
-  AccordionSectionHeader: "Y8Nr5U1xl3M-",
-  Label: "oXoyg-fBkHk-",
-  TransitionContainer: "JjjLEZhMaK4-",
-  _: "ggTx88t3rD8-",
-  SectionTransition: "hLyW92JUQIM-",
-  Enter: "eu8omg7gpxU-",
-  EnterActive: "_0QZf4yyfpD8-",
-  Exit: "mWR-5YJlyMA-",
-  ExitActive: "GQOJ5K5pn6U-",
-  Down: "_7FKZUleWBlc-",
-  MoreSectionTransitionContent: "BRZpkU5-R-o-",
-};
 var _ = _(_(), 1),
   _ = _(_(), 1);
+var _ = "_8jYEPRQ-5m4-";
+var _ = "DkDkgW5s5IY-";
+var _ = "_7xtK0r5UTx8-";
+var _ = "Siv8zLtpkBw-";
 var _ = _(_(), 1);
-var _ = _(_(), 1);
-function _(_) {
-  let [_] = _.useState(_.excludedSections),
-    _ = _(_),
-    _ = _(),
-    [_, _] = _.useState();
-  return _
-    ? (0, _.jsx)(_, {
-        rgSections: _,
-        activeSection: _,
-        setActiveSection: _,
-      })
-    : (0, _.jsx)(_, {
-        rgSections: _,
-        activeSection: _ ?? _[0][0],
-        setActiveSection: _,
-      });
-}
-function _(_) {
-  let { rgSections: _, activeSection: _, setActiveSection: _ } = _,
-    { onMouseLeaveContainer: _, onMouseEnterItem: _ } = _(_, _),
-    _ = _(`${_.STORE_BASE_URL}sitemap`);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsxs)(_, {
-        "flow-children": "row",
-        navEntryPreferPosition: 3,
-        className: _,
-        children: [
-          (0, _.jsxs)(_, {
-            "flow-children": "column",
-            className: _,
-            onMouseLeave: _,
-            children: [
-              _.map(([_, _]) =>
-                (0, _.jsx)(
-                  _,
-                  {
-                    active: _ == _,
-                    setSection: _,
-                    onMouseEnterItem: _,
-                    section: _,
-                    children: _,
-                  },
-                  _,
-                ),
-              ),
-              (0, _.jsx)(_, {
-                className: _,
-                href: _,
-                children: _("#Menu_Popover_ViewAll"),
-              }),
-            ],
-          }),
-          (0, _.jsx)(_, {
-            children: (0, _.jsx)(_, {
-              rgSections: _,
-              section: _,
-            }),
-          }),
-        ],
-      }),
-      (0, _.jsx)(_, {
-        rgSections: _,
-      }),
-    ],
-  });
-}
-function _(_) {
-  let { rgSections: _, activeSection: _, setActiveSection: _ } = _;
-  return (0, _.jsx)("div", {
-    className: _,
-    children: _.map((_) =>
-      (0, _.jsx)(
-        _,
-        {
-          rgSection: _,
-          active: _[0] === _,
-          setActiveSection: _,
-        },
-        _[0],
-      ),
-    ),
-  });
-}
-function _(_) {
-  let { rgSection: _, active: _, setActiveSection: _ } = _,
-    [_, _] = _,
-    _ = _.useCallback(() => _((_) => (_ === _ ? void 0 : _)), [_, _]);
-  return (0, _.jsxs)("div", {
-    className: (0, _.default)(_, _ && _),
-    children: [
-      (0, _.jsxs)("div", {
-        className: (0, _.default)(_, _ && _),
-        onClick: _,
-        children: [
-          (0, _.jsx)("div", {
-            role: "heading",
-            "aria-level": 3,
-            className: _,
-            children: _,
-          }),
-          (0, _.jsx)(_, {
-            className: _,
-          }),
-        ],
-      }),
-      (0, _.jsx)(_, {
-        visible: _,
-        keepMounted: !0,
-        children: (0, _.jsx)(_, {
-          children: (0, _.jsx)(_, {
-            section: _,
-          }),
-        }),
-      }),
-    ],
-  });
-}
-var _ = _.memo(function (_) {
-  let { rgSections: _ } = _;
-  return _.map((_) =>
-    (0, _.jsx)(
-      _,
-      {
-        section: _[0],
-      },
-      _[0],
-    ),
-  );
-});
-function _(_) {
-  return _.useMemo(
-    () => _().filter((_) => _[0] !== "more" && (!_ || !_.has(_[0]))),
-    [_],
-  );
-}
-var _ = _.memo(function (_) {
-    let { rgSections: _, section: _ } = _,
-      [_, _] = _.useState(_),
-      [_, _] = _.useState(void 0);
-    return (
-      (0, _.useEffect)(() => {
-        let _ = _.findIndex((_) => _[0] == _) || 0,
-          _ = _.findIndex((_) => _[0] == _) || 0;
-        _ < _ ? _(_) : _ > _ ? _(_) : _(void 0), _(_);
-      }, [_, _]),
-      (0, _.jsx)("div", {
-        className: _,
-        children: (0, _.jsx)(_, {
-          childrenKey: _,
-          childrenClasses: _(_, _),
-          directionClass: _,
-          animate: !!_,
-          sizeClass: _,
-          children: (0, _.jsx)(_, {
-            section: _,
-          }),
-        }),
-      })
-    );
-  }),
-  _ = 0.25;
-function _(_, _) {
-  let _ = _.useRef(void 0);
-  (0, _.useEffect)(() => {
-    _.current?.section != _ && (_.current = void 0);
-  }, [_]);
-  let _ = _.useCallback(() => (_.current = void 0), []),
-    _ = _.useCallback(
-      (_, _) => {
-        if (_.current) {
-          let { _: _, _: _, section: _ } = _.current,
-            _ = _.clientX - _,
-            _ = _.clientY - _;
-          if (_ == _) {
-            _ < 0 &&
-              (_.current = {
-                _: _.clientX,
-                _: _.clientY,
-                section: _,
-              });
-            return;
-          }
-          if (_ > 0 && (_ != 0 ? Math.abs(_) / _ : 0) < _) return;
-        }
-        _(_),
-          (_.current = {
-            _: _.clientX,
-            _: _.clientY,
-            section: _,
-          });
-      },
-      [_],
-    );
-  return {
-    onMouseLeaveContainer: _,
-    onMouseEnterItem: _,
-  };
-}
 function _(_) {
   let {
-      setSection: _,
-      onMouseEnterItem: _,
-      active: _,
-      section: _,
+      visible: _,
+      closePopover: _,
       children: _,
+      refPopover: _,
+      refActiveButton: _,
     } = _,
-    _ = _.useCallback(() => _(_), [_, _]),
-    _ = _.useCallback((_) => _(_, _), [_, _]);
-  return (0, _.jsxs)(_, {
-    className: (0, _.default)(_, _ && _),
-    onClick: _,
-    onMouseMove: _,
-    onGamepadFocus: _,
-    children: [_, " ", (0, _.jsx)(_, {})],
-  });
-}
-function _() {
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsx)("div", {
-        className: _,
-      }),
-      (0, _.jsx)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 12 13",
-        fill: "none",
-        className: _,
-        children: (0, _.jsx)("path", {
-          fill: "currentColor",
-          fillRule: "evenodd",
-          clipRule: "evenodd",
-          _: "M6.36084 6.68974L3.66211 3.99101L4.84062 2.8125L8.71786 6.68974L4.84062 10.567L3.66211 9.38847L6.36084 6.68974Z",
+    _ = _.useCallback(
+      (_) => {
+        if (
+          !(!_.current || !_.current || !document.activeElement) &&
+          _.key === "Tab"
+        ) {
+          let _ = _(_.current),
+            _ = _.indexOf(document.activeElement);
+          if (_ === -1) return;
+          if (
+            (_ === 0 && _.shiftKey && (_.current.focus(), _.preventDefault()),
+            _ === _.length - 1 && !_.shiftKey && _.current.parentElement)
+          ) {
+            let _ = _(_.current.parentElement),
+              _ = _.indexOf(_.current);
+            if (_ !== -1) {
+              let _ = _[_ + 1];
+              _ && (_.focus(), _.preventDefault());
+            }
+          }
+        }
+      },
+      [_, _],
+    );
+  return (
+    _(_, _),
+    (0, _.jsx)(_, {
+      className: _,
+      visible: _,
+      msAnimationDuration: 100,
+      children: (0, _.jsx)("div", {
+        className: (0, _.default)(_, _.IN_MOBILE_WEBVIEW && _),
+        children: (0, _.jsx)(_, {
+          "flow-children": "row",
+          className: _,
+          onCancelButton: _,
+          ref: _,
+          onKeyDown: _,
+          children: _,
         }),
       }),
-    ],
-  });
+    })
+  );
 }
 var _ = _(_(), 1);
 function _() {
-  return [
-    ["browse", _("#Menu_Popover_Browse")],
-    ["recommendations", _("#Menu_Popover_Recommendations")],
-    ["categories", _("#Menu_Popover_Categories")],
-    ["hardware", _("#Menu_Popover_Hardware")],
-    ["waystoplay", _("#Menu_Popover_WaysToPlay")],
-    ["specialsections", _("#Menu_Popover_SpecialSections")],
-    ["more", _("#Menu_Popover_More")],
-  ];
+  return _.useMemo(() => {
+    let _ = _.EREALM == 2,
+      _ = _(_.country_code);
+    return [
+      ["browse", _("#Menu_Popover_Browse")],
+      !_ && ["recommendations", _("#Menu_Popover_Recommendations")],
+      ["categories", _("#Menu_Popover_Categories")],
+      !_ && _ && ["hardware", _("#Menu_Popover_Hardware")],
+      !_ && ["waystoplay", _("#Menu_Popover_WaysToPlay")],
+      ["specialsections", _("#Menu_Popover_SpecialSections")],
+      ["more", _("#Menu_Popover_More")],
+    ].filter(Boolean);
+  }, []);
 }
 function _(_) {
   let {
@@ -5918,9 +5991,14 @@ var _ = _(_()),
                           }),
                       ],
                     }),
-                    !_ && (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {}),
+                    (0, _.jsxs)("div", {
+                      className: _,
+                      children: [
+                        !_ && (0, _.jsx)(_, {}),
+                        (0, _.jsx)(_, {}),
+                        (0, _.jsx)(_, {}),
+                      ],
+                    }),
                   ],
                 }),
             (0, _.jsx)(_, {
@@ -6079,7 +6157,7 @@ function _(_) {
       children: _,
     } = _,
     _ = _.useRef([]),
-    _ = _.useMemo(() => _(), []);
+    _ = _();
   _.current.length != _.length && (_.current = _.map(() => _.createRef()));
   let {
       rgButtonWidths: _,
@@ -6487,6 +6565,7 @@ function _({ children: _ }) {
       bWideStore: _,
       ePreferredHWCompat: _,
       bRenderFooter: _,
+      htmlAttributes: _,
     } = _.useLoaderData(),
     _ = (0, _.useRef)(null),
     _ = _.length > 0,
@@ -6501,6 +6580,7 @@ function _({ children: _ }) {
       children: (0, _.jsxs)("html", {
         lang: _().strISOCode,
         className: (0, _.default)(_.Root, _()),
+        ..._,
         children: [
           (0, _.jsx)("head", {
             children: (0, _.jsx)(_, {}),

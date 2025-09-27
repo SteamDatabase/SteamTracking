@@ -5,7 +5,12 @@
   {
     40323: function (e, t) {
       var n, i, r;
-      (i = []),
+      /* @license
+Papa Parse
+v5.5.3
+https://github.com/mholt/PapaParse
+License: MIT
+*/ (i = []),
         (n = function e() {
           var t,
             n =

@@ -108,6 +108,8 @@ GHomepage = {
 
 		InitHorizontalAutoSliders();
 
+		InitTabListView();
+
 		if ( $J( '#load_addtl_scroll_target' ).length )
 			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
 
@@ -1147,35 +1149,38 @@ GHomepage = {
 		}
 
 		var $RightColCtn = $J('<div/>').addClass('info');
-
+		var $InfoCtn = $J('<div/>', { 'class': 'info_ctn' });
 		var $AppName = $J('<div/>', { html: rgItemData['name'] } );
 		var $AppNameCtn = $J('<div/>' ).addClass( 'app_name' );
+		var $DataCtn = $J('<div/>', { 'class': 'data_ctn' });
 
 		$AppNameCtn.append( $AppName );
-		$RightColCtn.append( $AppNameCtn );
+		$InfoCtn.append( $AppNameCtn );
+		$InfoCtn.append( $DataCtn );
+		$RightColCtn.append( $InfoCtn );
 
 		if ( rgItemData.review_summary)
 		{
 			var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 			var reviewSummary = pref != 1 ? rgItemData['review_summary_filtered'] : rgItemData['review_summary'];
 			var $elReviewData = $J('<div>', {'class': 'review_summary' } );
-			var reviewSummaryText = 'Overall user reviews:';
+			var $stack = $J('<div>', { 'class': 'review_summary_stack' });
+			var $summaryRow = $J('<div>', { 'class': 'review_summary_row' });
+			var reviewSummaryText = 'Overall User Reviews';
 			if ( reviewSummary['bLanguageOutlier'] && pref != 1 )
 			{
-				reviewSummaryText = 'English Reviews:';
+				reviewSummaryText = 'English Reviews';
 			}
-			$elReviewData.append( $J('<div>', {'class': 'review_summary_title'}).text( reviewSummaryText ) );
-			$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
-			if ( reviewSummary['reviewScore'] > 0 )
-			{
-				$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
+			$stack.append( $J('<div>', {'class': 'review_summary_title'}).text( reviewSummaryText ) );
+			$summaryRow.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']));
+			if ( reviewSummary['reviewScore'] > 0 ) {$summaryRow.append( $J('<span>', { 'class': 'review_count' }).html('&nbsp;(' + v_numberformat(reviewSummary['cReviews']) + ')') );
 			}
-			if ( reviewSummary['review_anomaly'] )
-			{
-				$elReviewData.append( $J( '<span class="review_anomaly_icon">&nbsp;*</span>' ) );
+			  if ( reviewSummary['review_anomaly'] ) {
+				$summaryRow.append($J('<span>', { 'class': 'review_anomaly_icon' }).html('&nbsp;*'));
 			}
-
-			$RightColCtn.append( $elReviewData );
+			$stack.append($summaryRow);
+			$elReviewData.append($stack);
+			$DataCtn.append($elReviewData);
 		}
 
 		if ( rgItemData.tags )
@@ -1190,7 +1195,7 @@ GHomepage = {
 				}
 				$elTagCtn.append( $elTagHeader );
 				$elTagCtn.append( $elTagContainer );
-				$RightColCtn.append( $elTagCtn );
+				$DataCtn.append( $elTagCtn );
 			}
 
 		// Recommendation reason block
@@ -1404,7 +1409,7 @@ GHomepage = {
 			$RecommendedReason.append($ReasonAdditional);
 		}
 
-		$RightColCtn.append($RecommendedReason);
+		$DataCtn.append($RecommendedReason);
 
 
 		let $PlatformsAndPriceCtn = $J( '<div/>' ).addClass('info_bottom_ctn');
@@ -1470,10 +1475,10 @@ GHomepage = {
 							var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 							var reviewSummary = pref != 1 ? rgData['review_summary_filtered'] : rgData['review_summary'];
 							var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-html": reviewSummary['sReviewScoreTooltip'] } );
-							var reviewSummaryText = rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall user reviews:';
+							var reviewSummaryText = rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall User Reviews';
 							if ( reviewSummary['bLanguageOutlier'] && pref != 1 )
 							{
-								reviewSummaryText = 'English Reviews:';
+								reviewSummaryText = 'English Reviews';
 							}
 							$elReviewData.append( $J('<div>', {'class': 'title'}).text( reviewSummaryText ) );
 							$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
@@ -1837,6 +1842,7 @@ GHomepage = {
             }, 'recommended_by_steam_labs', 4
         );
 
+		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
 		$RecommendedBySteamLabs.show();
     },
 
@@ -1878,6 +1884,7 @@ GHomepage = {
 			elemPrefLastUpdated.text( 'Using preferences saved on %1$s'.replace( "%1$s", GHomepage.strCommunityRecommendationsPrefLastSaved ) );
 		}
 
+		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
 		$Ctn.show();
 	},
 
@@ -2019,7 +2026,7 @@ GHomepage = {
 
 				if ( !$Col )
 				{
-					$Col = $J('<div/>', {'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
+					$Col = $J('<div/>', { 'class': 'spotlight_col responsive_scroll_snap_start', 'data-panel': '{"maintainY":true,"flow-children":"column"}' } );
 					$Page.append( $Col );
 				}
 
@@ -2156,9 +2163,10 @@ GHomepage = {
 		];
 
 		var iColor = 0;
+		const bVersion2 = $contentHubCarousel.hasClass( 'v2' );
 
 		let nCarouselItems = 4;
-		if ( $contentHubCarousel.hasClass( 'v2' ) )
+		if ( bVersion2 )
 			nCarouselItems = 5;
 
 		GHomepage.FillPagedCapsuleCarousel( GHomepage.rgContentHubs, $contentHubCarousel,
@@ -2167,8 +2175,12 @@ GHomepage = {
 				var cc = "us";
 				var l = "english";
 
+				let strCapsuleClass = "content_hub_capsule_ctn responsive_scroll_snap_start";
+				if ( bVersion2 )
+					strCapsuleClass = "content_hub_capsule_ctn";
+
 				var $capsule = $J( '<a/>', {
-					"class": "content_hub_capsule_ctn responsive_scroll_snap_start",
+					"class": strCapsuleClass,
 					"href": GStoreItemData.AddNavEventParamsToURL( "https://store.steampowered.com/" + item.strSalePageURL, strFeature, nDepth, null )
 				} );
 
@@ -2381,13 +2393,7 @@ GHomepage = {
 		{
 			$elTabItems = $elTabSection.children('.tab_row_item');
 			bVersion2 = true;
-		}
-
-		if ( $elTabSection.children('.sale_capsule').length )
-		{
-			nItems = 16;
-			$elTabItems = $elTabSection.children('.sale_capsule');
-			bVersion2 = true;
+			nItems = 12;
 		}
 
 		GDynamicStorePage.FilterCapsules( nItems, nItems, $elTabItems, $elTabSection, Settings );
@@ -3304,7 +3310,7 @@ GHomepage = {
 		{
 			if ( !nActivityTimeoutID )
 			{
-								nBlurTimeoutId = window.setTimeout( fnPauseVideo, k_msActivityTimeout );
+								nActivityTimeoutID = window.setTimeout( fnPauseVideo, k_msActivityTimeout );
 			}
 		}
 
@@ -4391,7 +4397,8 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 	var $Checkbox = $Controls.find('#top_sellers_library_check');
 	var $CheckboxHideF2P = $Controls.find( '#top_sellers_f2p_check' );
 
-	var $TabItems = $Controls.parents( '.tab_content' ).children('.tab_content_items');
+	var $TabItems = $J( '#tab_topsellers_content' ).children( '.tab_content_items' );
+
 	var TopSellersCache = {};
 	var bAJAXInFlight = false;
 	var bFirstRender = true;
@@ -4424,9 +4431,9 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 		}).fail( function() {
 			TopSellersCache[ fnTopSellersKey( time, bHideF2P ) ] = '<div>Error</div>';
 		} ).always( function() {
-			$TabItems.removeClass('loading');
 			bAJAXInFlight = false;
 			fnRenderTopGrossing();
+			$TabItems.removeClass('loading');
 		});
 	};
 
@@ -4456,6 +4463,9 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 			var strTargetSeeMore = bHideF2P ? 'hidef2p' : 'default';
 			var $SeeMoreLinks = $J('#tab_topsellers_content').children('.tab_see_more').children('.topsellers_see_more');
 			$SeeMoreLinks.hide().filter('[data-searchid=' + strTargetSeeMore + ']').show();
+
+			if ( bVersion2 )
+				InitTabListView();
 
 			// lazy load images when switching back
 			if ( !bFirstRender )
@@ -4494,4 +4504,77 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 		fnRenderTopGrossing();
 	});
 
+}
+
+function InitTabListView()
+{
+	let $TabControlsCtn = $J(  '.tab_controls_view' );
+	let $TabSections = $J( '.home_tabs_sections' );
+
+	const fnSetTabListView = function( strViewType )
+	{
+		if ( strViewType === 'grid'  )
+		{
+			$TabSections.find( '.tab_row_item' ).addClass( 'sale_capsule' );
+			$TabSections.removeClass( 'row_list_view' );
+			$TabSections.addClass( 'grid_list_view' );
+		}
+		else if ( strViewType === 'list' )
+		{
+			$TabSections.find( '.tab_row_item' ).removeClass( 'sale_capsule' );
+			$TabSections.removeClass( 'grid_list_view' );
+			$TabSections.addClass( 'row_list_view' );
+		}
+		else
+		{
+			console.error( `Invalid view requested.` );
+		}
+	}
+
+	if ( ( window.UseSmallScreenMode && window.UseSmallScreenMode() ) || ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) )
+	{
+		$TabControlsCtn.hide();
+		fnSetTabListView( 'grid' );
+		return;
+	}
+
+	$J( '.tab_view_control' ).click( function() {
+		let $Control = $J( this );
+		$J( '.tab_view_control' ).removeClass( 'selected' );
+
+		const strView = $Control.data( 'view' );
+		fnSetTabListView( strView );
+
+		$Control.addClass( 'selected' );
+	} );
+}
+
+function HomeTabOnClick( elem, strTabSelectTarget, strDelayedImageGroup )
+{
+	if ( strDelayedImageGroup )
+		LoadDelayedImages( strDelayedImageGroup );
+
+	let elTopSellersControls = $J( '#topsellers_controls' );
+	elTopSellersControls.hide();
+	if ( strTabSelectTarget === 'tab_topsellers_content' )
+		elTopSellersControls.show();
+
+	TabSelect( elem, strTabSelectTarget );
+}
+
+function ToggleTabItemsDisplay()
+{
+	let $TabItemsCtn = $J( '.tab_content_items' );
+	if ( $TabItemsCtn.hasClass( 'capsule_list_view' ) )
+	{
+		$TabItemsCtn.find( '.tab_row_item' ).removeClass( 'sale_capsule' );
+		$TabItemsCtn.addClass( 'tab_list_view' )
+		$TabItemsCtn.removeClass( 'capsule_list_view' );
+	}
+	else
+	{
+		$TabItemsCtn.find( '.tab_row_item' ).addClass( 'sale_capsule' );
+		$TabItemsCtn.removeClass( 'tab_list_view' );
+		$TabItemsCtn.addClass( 'capsule_list_view' );
+	}
 }

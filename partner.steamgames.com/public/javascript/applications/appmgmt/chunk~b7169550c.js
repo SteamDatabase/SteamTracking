@@ -63,15 +63,15 @@
       "use strict";
       n.d(t, { YA: () => l, p: () => c, qh: () => i });
       var a = n(20194),
-        o = n(41735),
-        r = n.n(o),
+        r = n(41735),
+        o = n.n(r),
         s = n(78327);
       function i() {
         const e = (0, a.I)({
           queryKey: ["useValveAccounts"],
           queryFn: async () => {
             const e = `${s.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
-              t = await r().get(e);
+              t = await o().get(e);
             return 200 == t?.status && 1 == t.data?.success
               ? t.data.admins
               : (console.error("ValveAccounts:", t?.status), []);
@@ -99,8 +99,8 @@
         vh: () => d,
       });
       var a = n(34629),
-        o = n(41735),
-        r = n.n(o),
+        r = n(41735),
+        o = n.n(r),
         s = n(90626),
         i = n(68797),
         c = n(78327),
@@ -133,9 +133,9 @@
                 searchtext: e,
                 origin: self.origin,
               },
-              o = await r().get(n, { params: a });
-            200 == o?.status && 1 == o?.data?.success
-              ? o.data.publishers.forEach((e) => {
+              r = await o().get(n, { params: a });
+            200 == r?.status && 1 == r?.data?.success
+              ? r.data.publishers.forEach((e) => {
                   const n = {
                     partnerid: e.publisherid,
                     name: e.publishername,
@@ -146,7 +146,7 @@
                   this.m_mapOptInToPartners.set(e.publisherid, n), t.push(n);
                 })
               : console.log(
-                  `CPartnerInfoStore.FindPartnerByName failed with status ${o?.status} eresult ${o?.data?.success} and msg ${o?.data?.msg}`,
+                  `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
                 );
           } catch (e) {
             const t = (0, i.H)(e);
@@ -252,7 +252,7 @@
     },
     49693: (e, t, n) => {
       "use strict";
-      n.d(t, { op: () => i, CS: () => r, vE: () => c, Al: () => o });
+      n.d(t, { op: () => i, CS: () => o, vE: () => c, Al: () => r });
       class a {
         type = 0;
         text = "";
@@ -265,93 +265,93 @@
             (this.type = 1);
         }
       }
-      class o {
+      class r {
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(e, t) {
           (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !1) {
-          const o = (function (e, t) {
+          const r = (function (e, t) {
             const n = [];
-            let o = new a(),
-              r = !1,
+            let r = new a(),
+              o = !1,
               s = !1,
               i = !1;
             for (let a = 0; a < e.length; a++) {
               const c = e[a];
-              switch (o.type) {
+              switch (r.type) {
                 case 0:
                   "[" == c
-                    ? ((o.type = 2), (s = !0))
-                    : ((o.type = 1), "\\" == c && t ? (r = !r) : (o.text += c));
+                    ? ((r.type = 2), (s = !0))
+                    : ((r.type = 1), "\\" == c && t ? (o = !o) : (r.text += c));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == c && s) (o.type = 3), (o.text = ""), (s = !1);
-                  else if ("[" != c || r)
-                    if ("]" != c || r)
+                  if ("/" == c && s) (r.type = 3), (r.text = ""), (s = !1);
+                  else if ("[" != c || o)
+                    if ("]" != c || o)
                       "\\" == c && t
-                        ? ((o.text += c), (r = !r), (s = !1))
-                        : ((o.text += c), (r = !1), (s = !1));
+                        ? ((r.text += c), (o = !o), (s = !1))
+                        : ((r.text += c), (o = !1), (s = !1));
                     else {
                       const e =
-                          2 == o.type &&
-                          "noparse" == o.text.toLocaleLowerCase(),
+                          2 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase(),
                         t =
-                          3 == o.type &&
-                          "noparse" == o.text.toLocaleLowerCase();
+                          3 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase();
                       s || (i && !t)
-                        ? (o.ConvertMalformedNodeToText(), (o.text += c))
+                        ? (r.ConvertMalformedNodeToText(), (r.text += c))
                         : e
                           ? (i = !0)
                           : t && (i = !1),
-                        (o = l(n, o)),
+                        (r = l(n, r)),
                         (s = !1);
                     }
                   else
-                    o.ConvertMalformedNodeToText(), (o = l(n, o, 2)), (s = !0);
+                    r.ConvertMalformedNodeToText(), (r = l(n, r, 2)), (s = !0);
                   break;
                 case 1:
-                  "[" != c || r
+                  "[" != c || o
                     ? "\\" == c && t
-                      ? (r && (o.text += c), (r = !r))
-                      : ((o.text += c), (r = !1))
-                    : ((o = l(n, o, 2)), (s = !0));
+                      ? (o && (r.text += c), (o = !o))
+                      : ((r.text += c), (o = !1))
+                    : ((r = l(n, r, 2)), (s = !0));
               }
             }
-            0 != o.type &&
-              ((2 != o.type && 3 != o.type) || o.ConvertMalformedNodeToText(),
-              n.push(o));
+            0 != r.type &&
+              ((2 != r.type && 3 != r.type) || r.ConvertMalformedNodeToText(),
+              n.push(r));
             return n;
           })(e || "", n);
-          return this.Parse_BuildElements(o, t);
+          return this.Parse_BuildElements(r, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0);
           const a = [],
-            o = () => (a.length < 1 ? void 0 : a[a.length - 1]),
-            r = this.m_dictComponents,
-            s = (e) => !(!e.tag || !r.get(e.tag)?.autocloses);
+            r = () => (a.length < 1 ? void 0 : a[a.length - 1]),
+            o = this.m_dictComponents,
+            s = (e) => !(!e.tag || !o.get(e.tag)?.autocloses);
           let i = !1,
             c = !0;
-          const l = (e, o) => {
-            if (e && e.node.tag === o.text && r.get(e.node.tag)) {
-              const o = r.get(e.node.tag),
+          const l = (e, r) => {
+            if (e && e.node.tag === r.text && o.get(e.node.tag)) {
+              const r = o.get(e.node.tag),
                 s = a.map((e) => e.node.tag),
                 l = { parentTags: s, tagname: e.node.tag, args: e.node.args },
-                u = t(o.Constructor, l, ...n.GetElements());
+                u = t(r.Constructor, l, ...n.GetElements());
               (n = e.accumulator),
                 Array.isArray(u)
                   ? u.forEach((e) => n.AppendNode(e))
                   : n.AppendNode(u),
-                (i = !!o.skipFollowingNewline),
+                (i = !!r.skipFollowingNewline),
                 (c = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 n.GetElements().forEach((e) => t.AppendNode(e)),
-                t.AppendText("[/" + o.text + "]", !1),
+                t.AppendText("[/" + r.text + "]", !1),
                 (n = t),
                 (c = e.bWrapTextForCopying);
             }
@@ -362,11 +362,11 @@
                 const t = i ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
                 n.AppendText(t, c), (i = !1);
               } else if (2 == e.type) {
-                const t = r.get(e.tag);
+                const t = o.get(e.tag);
                 if (t) {
-                  const s = o();
+                  const s = r();
                   if (void 0 !== s) {
-                    const t = r.get(s.node.tag);
+                    const t = o.get(s.node.tag);
                     t &&
                       t.autocloses &&
                       e.tag === s.node.tag &&
@@ -378,11 +378,11 @@
                     (c = t.allowWrapTextForCopying ?? !1);
                 } else n.AppendText("[" + e.text + "]", 0 == a.length);
               } else if (3 == e.type) {
-                for (; o() && o().node.tag !== e.text && s(o().node); ) {
+                for (; r() && r().node.tag !== e.text && s(r().node); ) {
                   const e = a.pop();
                   l(e, e.node);
                 }
-                if (o()?.node.tag == e.text) {
+                if (r()?.node.tag == e.text) {
                   const t = a.pop();
                   l(t, e);
                 } else n.AppendText("[/" + e.text + "]", 0 == a.length);
@@ -396,7 +396,7 @@
           return n.GetElements();
         }
       }
-      function r(e, t) {
+      function o(e, t) {
         let n = "[" + e;
         t?.[""] && (n += `=${s("" + t[""])}`);
         for (const e in t)
@@ -426,67 +426,117 @@
               const t = {};
               let n = "",
                 a = "",
-                o = 0,
-                r = 0;
-              "=" == e[0] && (o = 2);
+                r = 0,
+                o = 0;
+              "=" == e[0] && (r = 2);
               let s = !1;
-              for (r++; r < e.length; r++) {
-                const i = e[r];
+              for (o++; o < e.length; o++) {
+                const i = e[o];
                 let c = !0,
                   l = !1;
-                switch (o) {
+                switch (r) {
                   case 0:
                     if ("=" == i) return {};
                     if (" " == i) continue;
-                    o = 1;
+                    r = 1;
                     break;
                   case 1:
                     ("=" != i && " " != i) ||
                       s ||
-                      (" " == i ? ((o = 0), (l = !0)) : (o = 2), (c = !1));
+                      (" " == i ? ((r = 0), (l = !0)) : (r = 2), (c = !1));
                     break;
                   case 2:
                     " " == i
-                      ? ((o = 0), (c = !1), (l = !0))
+                      ? ((r = 0), (c = !1), (l = !0))
                       : '"' == i
-                        ? ((o = 4), (c = !1))
-                        : (o = 3);
+                        ? ((r = 4), (c = !1))
+                        : (r = 3);
                     break;
                   case 3:
                   case 4:
-                    ((" " == i && 4 != o && !s) ||
-                      ('"' == i && 4 == o && !s)) &&
-                      ((o = 0), (c = !1), (l = !0));
+                    ((" " == i && 4 != r && !s) ||
+                      ('"' == i && 4 == r && !s)) &&
+                      ((r = 0), (c = !1), (l = !0));
                 }
                 if (c)
                   if ("\\" != i || s)
-                    if (((s = !1), 1 == o)) n += i;
+                    if (((s = !1), 1 == r)) n += i;
                     else {
-                      if (3 != o && 4 != o)
+                      if (3 != r && 4 != r)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + o,
+                          "Not expecting to accumulate buffer in state " + r,
                         );
                       a += i;
                     }
                   else s = !0;
                 l && ((t[n] = a), (n = ""), (a = ""));
               }
-              0 != o && (t[n] = a);
+              0 != r && (t[n] = a);
               return t;
             })(n);
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        const o = new a();
-        return (o.type = n), o;
+        const r = new a();
+        return (r.type = n), r;
+      }
+    },
+    40236: (e, t, n) => {
+      "use strict";
+      n.d(t, { OO: () => c, wY: () => i });
+      var a = n(90626),
+        r = n(8871),
+        o = n(81393);
+      function s(e, t) {
+        return (0, r.QS)(
+          (n) => {
+            if (!n) return;
+            const a = t(n.ownerDocument.defaultView, (t) => {
+              e(t[0]);
+            });
+            return a.observe(n), () => a.unobserve(n);
+          },
+          [e, t],
+        );
+      }
+      function i(e) {
+        return s(
+          e,
+          a.useCallback(
+            (e, t) =>
+              e.ResizeObserver
+                ? new e.ResizeObserver(t)
+                : ((0, o.wT)(!1, "ResizeObserver is not available"),
+                  {
+                    observe: () => {},
+                    unobserve: () => {},
+                    disconnect: () => {},
+                  }),
+            [],
+          ),
+        );
+      }
+      function c(e, t) {
+        const n = a.useRef(void 0);
+        return (function (e, t) {
+          return s(
+            e,
+            a.useCallback((e, n) => new e.IntersectionObserver(n, t), [t]),
+          );
+        })((t) => {
+          !n.current && t.isIntersecting && e.onEnter?.(t),
+            n.current && !t.isIntersecting && e.onLeave?.(t),
+            e.onIntersectionChange?.(t),
+            (n.current = t.isIntersecting);
+        }, t);
       }
     },
     63556: (e, t, n) => {
       "use strict";
       n.d(t, { E: () => d, O: () => p });
       var a = n(34629),
-        o = n(14947),
-        r = n(65946),
+        r = n(14947),
+        o = n(65946),
         s = n(22837),
         i = n(62490),
         c = n(6419),
@@ -535,26 +585,26 @@
           );
         }
         constructor() {
-          (0, o.Gn)(this);
+          (0, r.Gn)(this);
         }
       }
       function d() {
-        return (0, r.q3)(() => p.Get().GetCurEditLanguage());
+        return (0, o.q3)(() => p.Get().GetCurEditLanguage());
       }
-      (0, a.Cg)([o.sH], p.prototype, "m_eCurLang", void 0),
-        (0, a.Cg)([o.sH], p.prototype, "m_rgHasData", void 0),
-        (0, a.Cg)([o.sH], p.prototype, "m_bHasLocalizationContext", void 0),
+      (0, a.Cg)([r.sH], p.prototype, "m_eCurLang", void 0),
+        (0, a.Cg)([r.sH], p.prototype, "m_rgHasData", void 0),
+        (0, a.Cg)([r.sH], p.prototype, "m_bHasLocalizationContext", void 0),
         (0, a.Cg)([c.o], p.prototype, "GetCurEditLanguage", null),
         (0, a.Cg)([c.o], p.prototype, "SetCurEditLanguage", null),
-        (0, a.Cg)([o.XI.bound], p.prototype, "SetHasLanguage", null),
+        (0, a.Cg)([r.XI.bound], p.prototype, "SetHasLanguage", null),
         (0, a.Cg)([c.o], p.prototype, "BHasLanguageData", null);
     },
     96001: (e, t, n) => {
       "use strict";
       n.d(t, { a: () => c, z: () => i });
       var a = n(81393),
-        o = n(96059),
-        r = n(30470),
+        r = n(96059),
+        o = n(30470),
         s = n(24484);
       class i {
         m_steamInterface;
@@ -574,7 +624,7 @@
             "application_config",
           );
           (0, a.wT)(Boolean(e), "require promotion_operation_token"),
-            (this.m_steamInterface = new o.D(r.TS.WEBAPI_BASE_URL, e));
+            (this.m_steamInterface = new r.D(o.TS.WEBAPI_BASE_URL, e));
         }
       }
       function c() {
@@ -585,9 +635,9 @@
       "use strict";
       n.d(t, { B3: () => C, CF: () => T, KM: () => L, KT: () => y });
       var a = n(41735),
-        o = n.n(a),
-        r = n(58632),
-        s = n.n(r),
+        r = n.n(a),
+        o = n(58632),
+        s = n.n(o),
         i = n(90626),
         c = n(20194),
         l = n(75233),
@@ -629,7 +679,7 @@
                   : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
-                  a = await o().get(`${t}actions/ajaxgetavatarpersona`, {
+                  a = await r().get(`${t}actions/ajaxgetavatarpersona`, {
                     params: n,
                   });
                 if (
@@ -643,7 +693,7 @@
               }
               {
                 const n = { accountids: e.join(","), origin: self.origin },
-                  a = await o().get(`${t}actions/ajaxgetmultiavatarpersona`, {
+                  a = await r().get(`${t}actions/ajaxgetmultiavatarpersona`, {
                     params: n,
                   });
                 if (
@@ -653,12 +703,12 @@
                   !a.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, p.H))(a).strErrorMsg}`;
-                const r = new Map();
+                const o = new Map();
                 return (
                   a.data.userinfos.forEach((e) =>
-                    r.set(new u.b(e.steamid).GetAccountID(), e),
+                    o.set(new u.b(e.steamid).GetAccountID(), e),
                   ),
-                  e.map((e) => r.get(e))
+                  e.map((e) => o.get(e))
                 );
               }
             })(e),
@@ -688,7 +738,7 @@
             },
             enabled: e?.length > 0,
           }),
-          o = (0, i.useMemo)(() => {
+          r = (0, i.useMemo)(() => {
             const e = new Array();
             return (
               n?.forEach((t) => {
@@ -697,7 +747,7 @@
               e
             );
           }, [n]);
-        return a ? null : o;
+        return a ? null : r;
       }
       function T(e) {
         return _.L.getQueryData([E, e]);
@@ -707,8 +757,8 @@
       "use strict";
       n.d(t, { Ng: () => h, iN: () => L, yk: () => S });
       var a = n(34629),
-        o = n(75844),
-        r = n(65946),
+        r = n(75844),
+        o = n(65946),
         s = n(90626),
         i = n(22837),
         c = n(2160),
@@ -727,7 +777,7 @@
             fnFilterLanguage: t,
             fnLangHasData: n,
             fnLastUpdateRTime: a,
-            fnIsLangSupported: o,
+            fnIsLangSupported: r,
           } = this.props;
           this.props.bAllowUnsetOption &&
             e.push(
@@ -737,16 +787,16 @@
                 (0, g.we)("#language_selection_none"),
               ),
             );
-          let r = new Array();
+          let o = new Array();
           const l = this.props.realms || [c.TU.k_ESteamRealmGlobal];
           for (const e of g.A0.GetLanguageListForRealms(l)) {
             if (t && !t(e)) continue;
             const n = (0, i.Lg)(e),
               a = (0, g.we)("#Language_" + n),
-              s = Boolean(o) && o(e);
-            r.push({ eLang: e, sLocName: a, bSupported: s });
+              s = Boolean(r) && r(e);
+            o.push({ eLang: e, sLocName: a, bSupported: s });
           }
-          r.sort((e, t) =>
+          o.sort((e, t) =>
             e.bSupported != t.bSupported
               ? e.bSupported
                 ? -1
@@ -754,7 +804,7 @@
               : e.sLocName.localeCompare(t.sLocName),
           );
           let u = !1;
-          for (const t of r) {
+          for (const t of o) {
             t.bSupported != u &&
               (e.push(
                 s.createElement(
@@ -772,24 +822,24 @@
                 ),
               ),
               (u = t.bSupported));
-            const o = n && n(t.eLang),
-              r = a && a(t.eLang);
+            const r = n && n(t.eLang),
+              o = a && a(t.eLang);
             let i = t.sLocName;
-            r &&
-              0 !== r &&
+            o &&
+              0 !== o &&
               ((i += " "),
               (i += (0, g.we)(
                 "#Language_Last_Update",
-                (0, g.$z)(r) + " @ " + (0, m.KC)(r, { bForce24HourClock: !1 }),
+                (0, g.$z)(o) + " @ " + (0, m.KC)(o, { bForce24HourClock: !1 }),
               ))),
               e.push(
                 s.createElement(
                   "option",
                   {
-                    key: "langpicker" + t.eLang + (o ? "_hasdata" : ""),
+                    key: "langpicker" + t.eLang + (r ? "_hasdata" : ""),
                     value: t.eLang,
                     className: (0, d.A)(
-                      { [p().LanguageWithContent]: o },
+                      { [p().LanguageWithContent]: r },
                       t.bSupported
                         ? p().SupportedLanguage
                         : p().UnsupportedLanguage,
@@ -821,7 +871,7 @@
         }
       };
       function L(e) {
-        const [t, n] = (0, r.q3)(() => [
+        const [t, n] = (0, o.q3)(() => [
           l.O.Get().GetHasLocalizationContext(),
           l.O.Get().GetCurEditLanguage(),
         ]);
@@ -842,7 +892,7 @@
           ),
           [],
         );
-        const n = (0, r.q3)(() => {
+        const n = (0, o.q3)(() => {
           const e = [];
           for (let n = 0; n < 31; ++n) e[n] = t && t(n);
           return e;
@@ -853,14 +903,14 @@
         );
       }
       (0, a.Cg)([f.oI], h.prototype, "OnLanguageChange", null),
-        (h = (0, a.Cg)([o.PA], h));
+        (h = (0, a.Cg)([r.PA], h));
     },
     48479: (e, t, n) => {
       "use strict";
       n.d(t, { AQ: () => g, pn: () => f, qx: () => m });
       var a = n(16676),
-        o = n(61859),
-        r = n(12155),
+        r = n(61859),
+        o = n(12155),
         s = n(90626),
         i = n(52038),
         c = n(95695),
@@ -873,8 +923,8 @@
             title: t,
             tooltip: n,
             getMinimized: a,
-            toggleMinimized: o,
-            className: r,
+            toggleMinimized: r,
+            className: o,
             children: g,
             elAdditionalButtons: m,
           } = e,
@@ -886,7 +936,7 @@
             "div",
             {
               className: (0, i.A)(
-                r,
+                o,
                 u.SectionTitleHeader,
                 u.required_title,
                 "SectionTitleHeader",
@@ -907,7 +957,7 @@
               "div",
               { className: u.SectionTitleButtons },
               m,
-              s.createElement(f, { bIsMinimized: _, fnToggleMinimize: o }),
+              s.createElement(f, { bIsMinimized: _, fnToggleMinimize: r }),
             ),
           ),
           !_ && s.createElement(l.tH, null, g),
@@ -926,10 +976,10 @@
           i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return s.createElement(
           a.$n,
-          { "data-tooltip-text": (0, o.we)(i), onClick: n },
+          { "data-tooltip-text": (0, r.we)(i), onClick: n },
           e.bIsMinimized
-            ? s.createElement(r.hz4, null)
-            : s.createElement(r.Xjb, null),
+            ? s.createElement(o.hz4, null)
+            : s.createElement(o.Xjb, null),
         );
       }
     },

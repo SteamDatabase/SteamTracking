@@ -4739,3 +4739,10 @@ enum VRInitError
 	VRInitError_LastError = 2001;
 }
 
+enum VRMouseButton
+{
+	VRMouseButton_Left = 1;
+	VRMouseButton_Right = 2;
+	VRMouseButton_Middle = 4;
+}
+

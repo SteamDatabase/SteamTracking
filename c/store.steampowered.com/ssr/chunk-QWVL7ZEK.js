@@ -2314,8 +2314,73 @@ var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
+        _.prototype.cdn_path || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        _.sm_m ||
+          (_.sm_m = {
+            proto: _,
+            fields: {
+              cdn_path: {
+                _: 1,
+                _: _.readString,
+                _: _.writeString,
+              },
+              encoding: {
+                _: 2,
+                _: _.readString,
+                _: _.writeString,
+              },
+            },
+          }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "StoreItem_Trailers_AdaptiveTrailer";
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
         _.prototype.trailer_name || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
+        _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6], null);
     }
     static sm_m;
     static sm_mbf;
@@ -2354,6 +2419,12 @@ var _ = class _ extends _.Message {
               },
               microtrailer: {
                 _: 5,
+                _: _,
+                _: !0,
+                _: !0,
+              },
+              adaptive_trailers: {
+                _: 6,
                 _: _,
                 _: !0,
                 _: !0,
@@ -3301,7 +3372,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       super(),
         _.prototype.context || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, [2], null);
     }
     static sm_m;
     static sm_mbf;
@@ -3314,6 +3385,14 @@ var _ = class _ extends _.Message {
               context: {
                 _: 1,
                 _: _,
+              },
+              excluded_content_descriptorids: {
+                _: 2,
+                _: !0,
+                _: !0,
+                _: _.readEnum,
+                pbr: _.readPackedEnum,
+                _: _.writeRepeatedEnum,
               },
             },
           }),

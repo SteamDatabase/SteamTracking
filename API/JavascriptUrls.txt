@@ -3213,7 +3213,7 @@ https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
-https://swarm.valve.org/changes/10100528
+https://swarm.valve.org/changes/10102351
 https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202

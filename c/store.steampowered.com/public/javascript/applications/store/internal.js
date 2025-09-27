@@ -5170,8 +5170,7 @@
         ];
       }
       const _ = (0, _.createContext)(null);
-      const _ = {
-        Root: function (_) {
+      const _ = function (_) {
           const { children: _, state: __webpack_require__ } = _;
           return _.createElement(
             _.Provider,
@@ -5181,7 +5180,7 @@
             _,
           );
         },
-        Anchor: function (_) {
+        _ = function (_) {
           const { children: _ } = _,
             _ = _.Children.only(_),
             _ = (0, _.useContext)(_),
@@ -5200,7 +5199,7 @@
             ..._.getReferenceProps(_),
           });
         },
-        Positioner: function (_) {
+        _ = function (_) {
           const { children: _, render: __webpack_require__, ref: _ } = _,
             _ = (0, _.useContext)(_),
             _ = (0, _._)([_, _?.floating.refs.setFloating]);
@@ -5211,6 +5210,7 @@
                   {
                     context: _.floating.context,
                     initialFocus: _.initialFocus,
+                    returnFocus: !1,
                   },
                   _.createElement(
                     _,
@@ -5236,7 +5236,7 @@
               ),
               null);
         },
-        Item: function (_) {
+        _ = function (_) {
           const {
               children: _,
               label: __webpack_require__,
@@ -5280,8 +5280,7 @@
             },
             _,
           );
-        },
-      };
+        };
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
@@ -5487,7 +5486,7 @@
                   value: __webpack_require__,
                 },
                 _.createElement(
-                  _.Root,
+                  _,
                   {
                     state: _,
                   },
@@ -5507,7 +5506,7 @@
                 },
               } = _("<Autocomplete.TextInput>");
               return _.createElement(
-                _.Anchor,
+                _,
                 null,
                 _.createElement(_, {
                   ..._,
@@ -5527,7 +5526,12 @@
                 }),
               );
             },
-            Suggestions: _.Positioner,
+            Suggestions: function (_) {
+              return _.createElement(_, {
+                ..._,
+                returnFocus: !1,
+              });
+            },
             Suggestion: function (_) {
               const { value: _, children: __webpack_require__, ..._ } = _,
                 {
@@ -5539,7 +5543,7 @@
                   },
                 } = _("<Autocomplete.TextInput>");
               return _.createElement(
-                _.Item,
+                _,
                 {
                   onSelect: () => {
                     _(_), _ && _(_), _(null), _(!1);

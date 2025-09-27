@@ -339,6 +339,7 @@
         MenuButtonContainer: "_315CcpqsgdwaAwR3WiSlOq",
         DynamicMenuButtons: "_3CtcPWgZYR05CldoJ0Jkrx",
         NoSearchBarSpacer: "WCx9Nllc5_tUanujudMvO",
+        RightButtons: "_1wn1lBlAzl3HMRqS1llwie",
         MenuButton: "_175B12uOwmeGBNcSaQFe-Z",
         ButtonFocus: "_1ixhfnnWgdzGwSwNhUAitD",
         FlyoutButton: "_3wlHWKFbgRAZPFtWEr65YT",
@@ -31009,8 +31010,73 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.cdn_path || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  cdn_path: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  encoding: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Trailers_AdaptiveTrailer";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.trailer_name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
+            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -31049,6 +31115,12 @@
                   },
                   microtrailer: {
                     _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  adaptive_trailers: {
+                    _: 6,
                     _: _,
                     _: !0,
                     _: !0,
@@ -31996,7 +32068,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.context || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -32009,6 +32081,14 @@
                   context: {
                     _: 1,
                     _: _,
+                  },
+                  excluded_content_descriptorids: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                 },
               }),
@@ -37556,8 +37636,12 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -37567,6 +37651,21 @@
       function _(_, _ = _._.LANGUAGE) {
         const _ = (0, _._)(_, _);
         return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
+      }
+      function _(_) {
+        const { tagID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_(_));
+        return _.createElement(
+          _._,
+          {
+            className: __webpack_require__,
+            href: _,
+            role: "listitem",
+          },
+          _.createElement(_, {
+            tagid: _,
+          }),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -37997,6 +38096,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38044,6 +38144,7 @@
         const { data: _ } = _(_);
         return !!_;
       }
+      const _ = [24904, 9130, 5611, 6650, 12095];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -49270,6 +49371,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_eItemType;
@@ -50131,6 +50233,8 @@
         m_Trailer480p;
         m_TrailerMax;
         m_MicroTrailer;
+        m_rgDashTrailers;
+        m_rgHlsTrailer;
         m_strScreenshotMedium;
         m_strScreenshotFull;
         m_bIsAllAges;
@@ -50139,33 +50243,43 @@
             (this.m_nBaseID = _.trailer_base_id()),
             (this.m_eTrailerCategory = _.trailer_category());
           const _ = _.trailer_url_format();
-          _ &&
-            (_.trailer_480p() &&
-              (this.m_Trailer480p = this.ExtractTrailerFormats(
-                _,
-                _.trailer_480p(),
-              )),
-            _.trailer_max() &&
-              (this.m_TrailerMax = this.ExtractTrailerFormats(
-                _,
-                _.trailer_max(),
-              )),
-            _.microtrailer() &&
-              (this.m_MicroTrailer = this.ExtractTrailerFormats(
-                _,
-                _.microtrailer(),
-              )),
-            _.screenshot_medium() &&
-              (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_medium(),
-              )),
-            _.screenshot_full() &&
-              (this.m_strScreenshotFull = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_full(),
-              ))),
-            (this.m_bIsAllAges = _.all_ages() ?? !0);
+          if (
+            (_ &&
+              (_.trailer_480p() &&
+                (this.m_Trailer480p = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_480p(),
+                )),
+              _.trailer_max() &&
+                (this.m_TrailerMax = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_max(),
+                )),
+              _.microtrailer() &&
+                (this.m_MicroTrailer = this.ExtractTrailerFormats(
+                  _,
+                  _.microtrailer(),
+                )),
+              _.screenshot_medium() &&
+                (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_medium(),
+                )),
+              _.screenshot_full() &&
+                (this.m_strScreenshotFull = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_full(),
+                ))),
+            _.adaptive_trailers())
+          ) {
+            this.m_rgDashTrailers = this.ExtractAdaptiveTrailers(
+              _.adaptive_trailers(),
+              "dash",
+            );
+            let _ = this.ExtractAdaptiveTrailers(_.adaptive_trailers(), "hls");
+            _.length > 0 && (this.m_rgHlsTrailer = _[0]);
+          }
+          this.m_bIsAllAges = _.all_ages() ?? !0;
         }
         GetName() {
           return this.m_strTrailerName;
@@ -50181,6 +50295,12 @@
         }
         GetTrailerMax() {
           return this.m_TrailerMax;
+        }
+        GetTrailersDash() {
+          return this.m_rgDashTrailers;
+        }
+        GetTrailerHls() {
+          return this.m_rgHlsTrailer;
         }
         GetMicroTrailer() {
           return this.m_MicroTrailer;
@@ -50203,6 +50323,17 @@
                   (_.strWebMURL = this.ConstructAssetURL(_, _.filename()));
             }),
             _
+          );
+        }
+        ExtractAdaptiveTrailers(_, _) {
+          let _ = `${_}_`,
+            _ = _.filter(
+              (_) => _.encoding() && _.cdn_path() && _.encoding().startsWith(_),
+            ),
+            _ = _.findIndex((_) => _.encoding().endsWith("_av1"));
+          return (
+            _ > 0 && _._(_, _, 0),
+            _.map((_) => this.ConstructAssetURL(_.cdn_path(), ""))
           );
         }
         ConstructScreenshotURL(_, _) {
@@ -56139,6 +56270,7 @@
         _,
         _,
         _,
+        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -56516,6 +56648,11 @@
             (_[(_.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
             (_[(_.Standby = 3)] = "Standby"),
             (_[(_.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
+            (_[(_.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
+            (_[(_.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Notification_Shown = 600)] = "Notification_Shown"),
@@ -57436,7 +57573,6 @@
       }
       class _ extends _.Component {
         state = {};
-        reactErrorHandler = void 0;
         constructor(_) {
           super(_), (this.state.lastErrorKey = _.errorKey);
         }
@@ -59143,6 +59279,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -59833,6 +59970,7 @@
       class _ {
         key;
         static sm_lastKey = 0;
+        ModalClosedCallback = new _._();
         constructor() {
           this.key = "Modal_" + _.sm_lastKey++;
         }
@@ -60252,6 +60390,7 @@
         RemoveModal(_) {
           let _ = this.m_rgModals.indexOf(_);
           -1 != _ && this.m_rgModals.splice(_, 1),
+            _.ModalClosedCallback.Dispatch(),
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(_) {
@@ -60268,6 +60407,11 @@
             Update: (_) => {
               _.UpdateModal(_);
             },
+            ClosedPromise: new Promise((_) => {
+              const _ = _.ModalClosedCallback.Register(() => {
+                _(), __webpack_require__.Unregister();
+              });
+            }),
           };
           return this.OnModalCountChanged("show"), _;
         }
@@ -60332,6 +60476,7 @@
                 this.m_OnLegacyPopupModalCountChanged.Dispatch(
                   this.m_rgLegacyPopupModals.length,
                 ),
+                _.ModalClosedCallback.Dispatch(),
                 _.fnOnClose && __webpack_require__.fnOnClose();
             },
             _ = new _._(
@@ -60356,6 +60501,11 @@
               Update: (_) => {
                 _.UpdateModal(_);
               },
+              ClosedPromise: new Promise((_) => {
+                const _ = _.ModalClosedCallback.Register(() => {
+                  _(), _.Unregister();
+                });
+              }),
             }
           );
         }
@@ -73355,82 +73505,81 @@
           _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)(
-          (function (_, _, _) {
+          (function (_, _, _, _) {
             return {
               queryKey: ["CategoryHubDefinitions", _.language, "MapByHandle"],
               queryFn: async () => {
-                const _ = await _.fetchQuery(_(_, _));
+                const _ = await _.fetchQuery(_(_, _, _));
                 return new Map(_.map((_) => [_.handle, _]));
               },
               staleTime: _,
             };
-          })(_, _, _),
+          })(_, _, _, _._.excluded_content_descriptors),
         );
       }
-      function _(_, _) {
+      function _(_, _, _) {
         return {
-          queryKey: ["CategoryHubDefinitions", _.language],
+          queryKey: ["CategoryHubDefinitions", _.language, _],
           queryFn: () =>
-            (async function (_, _) {
+            (async function (_, _, _) {
               const _ = _._.Init(_._);
-              (0, _._)(_, _);
+              (0, _._)(_, _),
+                _.Body().set_excluded_content_descriptorids(
+                  __webpack_require__.slice(),
+                );
               const _ = await _._.GetContentHubConfig(_, _);
               if (!_.BSuccess())
                 throw `Error loading category hub definitions: ${_.GetErrorMessage()}`;
               return _.Body().toObject().hubconfigs || [];
-            })(_, _),
+            })(_, _, _),
           staleTime: _,
         };
       }
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         return {
           queryKey: ["CategoryHubDefinitions", _.language, "MapByID"],
           queryFn: async () => {
-            const _ = await _.fetchQuery(_(_, _));
+            const _ = await _.fetchQuery(_(_, _, _));
             return new Map(_.map((_) => [_.hubcategoryid, _]));
           },
           staleTime: _,
         };
       }
       function _(_ = !0) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ =
-            ((0, _._)(),
-            (function (_, _, _, _, _) {
-              return {
-                queryKey: ["StoreFrequentlyVisitedHubs", _],
-                queryFn: async () => {
-                  const [_, _] = await Promise.all([
-                    _.fetchQuery(_(_, _)),
-                    _.fetchQuery(_(_, _, _)),
-                  ]);
-                  return (_.frequent_hubs || [])
-                    .map((_) =>
-                      _.item_id.hubcategoryid
-                        ? {
-                            ..._,
-                            hubconfig: _.get(_.item_id.hubcategoryid),
-                          }
-                        : _.item_id.tagid
-                          ? {
-                              ..._,
-                              tagid: _.item_id.tagid,
-                            }
-                          : null,
-                    )
-                    .filter(
-                      (_) =>
-                        _ &&
-                        (("hubconfig" in _ && _.hubconfig) ||
-                          ("tagid" in _ && _.tagid)),
-                    );
-                },
-                enabled: !!_,
-                initialData: _ ? void 0 : [],
-                staleTime: 6e5,
-              };
-            })(_, _, 0, (0, _._)(), (0, _._)()));
+        const _ = (function (_, _, _, _) {
+          return {
+            queryKey: ["StoreFrequentlyVisitedHubs", _],
+            queryFn: async () => {
+              const [_, _] = await Promise.all([
+                _.fetchQuery(_(_, _)),
+                _.fetchQuery(_(_, _, _, _._.excluded_content_descriptors)),
+              ]);
+              return (_.frequent_hubs || [])
+                .map((_) =>
+                  _.item_id.hubcategoryid
+                    ? {
+                        ..._,
+                        hubconfig: _.get(_.item_id.hubcategoryid),
+                      }
+                    : _.item_id.tagid
+                      ? {
+                          ..._,
+                          tagid: _.item_id.tagid,
+                        }
+                      : null,
+                )
+                .filter(
+                  (_) =>
+                    _ &&
+                    (("hubconfig" in _ && _.hubconfig) ||
+                      ("tagid" in _ && _.tagid)),
+                );
+            },
+            enabled: !!_,
+            initialData: _ ? void 0 : [],
+            staleTime: 6e5,
+          };
+        })((0, _._)(), (0, _._)(), (0, _._)(), (0, _._)());
         return (0, _._)({
           ..._,
           enabled: _.enabled && _,
@@ -74394,7 +74543,7 @@
             const _ = (0, _._)(),
               _ = (0, _._)(),
               _ = (0, _._)();
-            return (0, _._)(_(_, _, _));
+            return (0, _._)(_(_, _, _, _._.excluded_content_descriptors));
           })(),
           _ = _?.get(_);
         if (_)
@@ -75417,76 +75566,8 @@
             }),
           );
         });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            visible: _,
-            closePopover: __webpack_require__,
-            children: _,
-            refPopover: _,
-            refActiveButton: _,
-          } = _,
-          _ = _.useCallback(
-            (_) => {
-              if (
-                _.current &&
-                _.current &&
-                document.activeElement &&
-                "Tab" === _.key
-              ) {
-                const _ = (0, _._)(_.current),
-                  _ = _.indexOf(document.activeElement);
-                if (-1 === _) return;
-                if (
-                  (0 === _ &&
-                    _.shiftKey &&
-                    (_.current.focus(), _.preventDefault()),
-                  _ === _.length - 1 && !_.shiftKey && _.current.parentElement)
-                ) {
-                  const _ = (0, _._)(_.current.parentElement),
-                    _ = _.indexOf(_.current);
-                  if (-1 !== _) {
-                    const _ = _[_ + 1];
-                    _ && (_.focus(), _.preventDefault());
-                  }
-                }
-              }
-            },
-            [_, _],
-          );
-        return (
-          _(_, _),
-          _.createElement(
-            _,
-            {
-              className: _.PopoverContainer,
-              visible: _,
-              msAnimationDuration: 100,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _()(
-                  _.Popover,
-                  _._.IN_MOBILE_WEBVIEW && _.MobileWebview,
-                ),
-              },
-              _.createElement(
-                _._,
-                {
-                  "flow-children": "row",
-                  className: _.PopoverContent,
-                  onCancelButton: __webpack_require__,
-                  ref: _,
-                  onKeyDown: _,
-                },
-                _,
-              ),
-            ),
-          )
-        );
-      }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         return {
           queryKey: ["StoreQuery", _],
@@ -75686,16 +75767,18 @@
       }
       function _(_) {
         const _ = (0, _._)(_.href);
-        return _.createElement(
-          _._,
-          {
-            href: _,
-            className: _.Link,
-            onClick: _.onClick,
-            onOKButton: _.onClick,
-          },
-          _.children,
-        );
+        return _.globalOnly && _._.EREALM == _._.k_ESteamRealmChina
+          ? null
+          : _.createElement(
+              _._,
+              {
+                href: _,
+                className: _.Link,
+                onClick: _.onClick,
+                onOKButton: _.onClick,
+              },
+              _.children,
+            );
       }
       function _(_) {
         const {
@@ -75864,111 +75947,68 @@
       };
       function _() {
         const _ = (0, _._)(),
-          _ = _();
-        return _ || _
-          ? _.createElement(
+          _ = _(),
+          _ = !_ && !_;
+        _._.EREALM, _._.k_ESteamRealmChina;
+        return _.createElement(
+          _,
+          {
+            className: _.BrowseLinkMargin,
+          },
+          _ &&
+            _.createElement(
               _,
               {
-                className: _.BrowseLinkMargin,
+                href: `${_._.STORE_BASE_URL}/`,
               },
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}charts/`,
-                },
-                _("#Menu_Popover_SteamCharts"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}explore/upcoming`,
-                },
-                _("#Menu_Popover_Upcoming"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}points/`,
-                },
-                _("#Menu_Popover_PointsShop"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
-                },
-                _("#Menu_Popover_GiftCards"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}news/`,
-                },
-                _("#Menu_Popover_NewsAndUpdates"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}account/preferences/`,
-                },
-                _("#Menu_Popover_Preferences"),
-              ),
-            )
-          : _.createElement(
-              _,
-              {
-                className: _.BrowseLinkMargin,
-              },
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}/`,
-                },
-                _("#Menu_Popover_StoreHome"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}charts/`,
-                },
-                _("#Menu_Popover_SteamCharts"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}explore/upcoming`,
-                },
-                _("#Menu_Popover_Upcoming"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}points/`,
-                },
-                _("#Menu_Popover_PointsShop"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
-                },
-                _("#Menu_Popover_GiftCards"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}news/`,
-                },
-                _("#Menu_Popover_NewsAndUpdates"),
-              ),
-              _.createElement(
-                _,
-                {
-                  href: `${_._.STORE_BASE_URL}account/preferences/`,
-                },
-                _("#Menu_Popover_Preferences"),
-              ),
-            );
+              _("#Menu_Popover_StoreHome"),
+            ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}charts/`,
+              globalOnly: !0,
+            },
+            _("#Menu_Popover_SteamCharts"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}explore/upcoming`,
+            },
+            _("#Menu_Popover_Upcoming"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}points/`,
+              globalOnly: !0,
+            },
+            _("#Menu_Popover_PointsShop"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
+              globalOnly: !0,
+            },
+            _("#Menu_Popover_GiftCards"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}news/`,
+            },
+            _("#Menu_Popover_NewsAndUpdates"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}account/preferences/`,
+            },
+            _("#Menu_Popover_Preferences"),
+          ),
+        );
       }
       function _() {
         return (
@@ -76264,16 +76304,21 @@
           },
           _,
         );
-        return _.createElement(
-          _,
-          {
-            label: _("#Menu_Section_Browse_TopSellers"),
-            href: "charts/topselling",
-          },
-          _ &&
-            _.createElement(_, {
-              rgItemIDs: _.rgItemIDs,
-            }),
+        let _ = "charts/topselling";
+        return (
+          _._.EREALM == _._.k_ESteamRealmChina &&
+            (_ = "search/?filter=topsellers"),
+          _.createElement(
+            _,
+            {
+              label: _("#Menu_Section_Browse_TopSellers"),
+              href: _,
+            },
+            _ &&
+              _.createElement(_, {
+                rgItemIDs: _.rgItemIDs,
+              }),
+          )
         );
       }
       function _() {
@@ -76484,253 +76529,6 @@
           );
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(
-              _,
-              {
-                className: _.RecommendationTwoCol,
-              },
-              _._.logged_in
-                ? _.createElement(_, null)
-                : _.createElement(_, null),
-              _.createElement(_, null),
-            ),
-            _.createElement(_, null),
-          ),
-        );
-      }
-      function _() {
-        return (0, _._)(_), (0, _._)(), null;
-      }
-      function _() {
-        const _ = _();
-        return _.createElement(
-          _,
-          null,
-          !_ &&
-            _.createElement(
-              _,
-              {
-                eStoreDiscoveryQueueType: 0,
-              },
-              _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
-            ),
-          _.createElement(
-            _,
-            {
-              eStoreDiscoveryQueueType: 3,
-            },
-            _("#Menu_Section_Recommendations_NewReleasesQueue"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}communityrecommendations/`,
-            },
-            _("#Menu_Section_Recommendations_CommunityRecommendations"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}recommender/`,
-            },
-            _("#Menu_Section_Recommendations_InteractiveRecommender"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}recommended/friendactivity/`,
-            },
-            _("#Menu_Section_Recommendations_PopularAmongFriends"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}curators/`,
-            },
-            _("#Menu_Section_Recommendations_SteamCurators"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}dlcforyou/`,
-            },
-            _("#Menu_Section_Recommendations_DLCForYou"),
-          ),
-        );
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          { showDiscoveryQueue: __webpack_require__ } = (0, _._)(_),
-          _ = _.useCallback(
-            (_) => {
-              __webpack_require__(), _.preventDefault();
-            },
-            [__webpack_require__],
-          );
-        return _ ? _ : void 0;
-      }
-      function _(_) {
-        const { eStoreDiscoveryQueueType: _, children: __webpack_require__ } =
-            _,
-          _ = _(_);
-        return _.createElement(
-          _,
-          {
-            href: `${_._.STORE_BASE_URL}explore/next/${_}`,
-            onClick: _,
-          },
-          __webpack_require__,
-        );
-      }
-      function _() {
-        const _ = _(0);
-        return _()
-          ? _.createElement(
-              _._,
-              {
-                className: _.DiscoveryQueue,
-                href: `${_._.STORE_BASE_URL}explore/next/0`,
-                onClick: _,
-                onOKButton: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.Background,
-                },
-                _.createElement("div", {
-                  className: _.BackgroundImage,
-                  style: {
-                    backgroundImage:
-                      "url('https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg')",
-                  },
-                }),
-                _.createElement("div", {
-                  className: _.BackgroundOverlay,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.Content,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Title,
-                  },
-                  _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Description,
-                  },
-                  _("#Menu_Section_Recommendations_DiscoveryQueue_Description"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ActionButton,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ButtonText,
-                    },
-                    _(
-                      "#Menu_Section_Recommendations_DiscoveryQueue_ActionButton",
-                    ),
-                  ),
-                  _.createElement(_, null),
-                ),
-              ),
-            )
-          : null;
-      }
-      const _ = {
-          include_assets: !0,
-          apply_user_filters: !0,
-        },
-        _ = Math.floor(Date.now() / 6e5);
-      function _(_) {
-        const { rgRecentApps: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
-          _ = _.useMemo(() => {
-            if (!__webpack_require__) return [];
-            const _ = new Set(_?.map(_._) || []),
-              _ = __webpack_require__
-                .slice(0, 10)
-                .filter((_) => !_.has((0, _._)(_)));
-            return _._(_, 0, _._(_)).slice(0, 3);
-          }, [__webpack_require__, _]);
-        return _.createElement(
-          _._,
-          {
-            feature: "package-purchase-recommendations",
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.RecommendationCapsules,
-            },
-            _.createElement(_, null, _("#Menu_Section_Browse_Recommended")),
-            _.createElement(_, {
-              rgItemIDs: _,
-            }),
-          ),
-        );
-      }
-      function _() {
-        const { data: _ } = _(
-          {
-            count: 3,
-            name: "Store Menu Top Grossing",
-          },
-          _,
-        );
-        return _.createElement(
-          _._,
-          {
-            feature: "topsellers",
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.RecommendationCapsules,
-            },
-            _.createElement(_, null, _("#Menu_TopSellers")),
-            _.createElement(_, {
-              rgItemIDs: _?.rgItemIDs || [],
-            }),
-          ),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 18 16",
-            fill: "none",
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M11.0941 6.30047L7.19722 2.40354L9.60075 -3.86836e-07L17.6008 8L9.60075 16L7.19722 13.5965L11.0941 9.69958L0.750976 9.69958L0.750976 6.30047L11.0941 6.30047Z",
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)(),
@@ -76796,7 +76594,10 @@
               const _ = new Set(),
                 _ = new Set(),
                 _ = [],
-                _ = [];
+                _ = [],
+                _ =
+                  _._.excluded_content_descriptors.includes(3) &&
+                  _._.excluded_content_descriptors.includes(4);
               for (const _ of (function* (_, _, _) {
                 const _ = _.slice(),
                   _ = _.slice(),
@@ -76840,12 +76641,12 @@
                   if (!(_.length < _)) break;
                   _ = _;
                 }
-                "tag" == _.type
-                  ? !_.has(_.unTagID) &&
+                "tag" != _.type || (_ && _._.includes(_.unTagID))
+                  ? "hub" == _.type &&
+                    (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)))
+                  : !_.has(_.unTagID) &&
                     _.unTagID in _ &&
-                    (_.add(_.unTagID), _.push(_))
-                  : "hub" == _.type &&
-                    (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
+                    (_.add(_.unTagID), _.push(_));
               }
               return [_, _];
             }, [_, _, _, _, _, _, _]);
@@ -77012,7 +76813,44 @@
         },
         _ = {
           packageid: 354231,
-        };
+        },
+        _ = [
+          "AT",
+          "BE",
+          "BG",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK",
+          "US",
+          "CA",
+        ],
+        _ = ["JP", "TW", "HK", "KR"];
+      function _() {
+        const { data: _ } = (0, _._)(_);
+        return !!_ || _.includes(_._.country_code);
+      }
       function _() {
         const _ = _();
         return _.createElement(
@@ -77038,13 +76876,14 @@
         const { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: __webpack_require__ } = (0, _._)(_),
+          _ = _(),
           _ = [
             {
-              storeItem: _,
+              storeItem: _ ? _ : void 0,
               image: (0, _._)(_),
             },
             {
-              storeItem: _,
+              storeItem: _ ? _ : void 0,
               image: (0, _._)(_),
               name: _("#Menu_Section_Hardware_SteamDeckDock"),
             },
@@ -77105,26 +76944,30 @@
       function _() {
         const { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          { data: __webpack_require__ } = (0, _._)(_);
+          { data: __webpack_require__ } = (0, _._)(_),
+          _ = _();
         return _.createElement(
           _,
           {
             className: _.HardwareLinkMargin,
           },
-          _.createElement(_, {
-            storeItem: _,
-          }),
-          _.createElement(_, {
-            storeItem: _,
-          }),
+          _ &&
+            _.createElement(_, {
+              storeItem: _,
+            }),
+          _ &&
+            _.createElement(_, {
+              storeItem: _,
+            }),
           _.createElement(_, {
             storeItem: __webpack_require__,
             name: _("#Menu_Section_Hardware_VRHardware"),
           }),
           _.createElement(_, null),
-          _.createElement(_, {
-            handle: "greatondeck",
-          }),
+          _ &&
+            _.createElement(_, {
+              handle: "greatondeck",
+            }),
           _.createElement(_, {
             handle: "vr",
           }),
@@ -77133,341 +76976,15 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = _();
-        return _.createElement(
-          _,
-          null,
-          !_ && _.createElement(_, null, _("#Menu_Section_WaysToPlay")),
-          _ &&
-            _.createElement("div", {
-              className: _.NoSectionTitleSpacer,
-            }),
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, null),
-            _.createElement(_, null),
-          ),
-        );
-      }
-      function _() {
-        return _.createElement(
-          _,
-          null,
-          _.createElement(_, {
-            handle: "multiplayer_lan",
-          }),
-          _.createElement(_, {
-            handle: "multiplayer_local_party",
-          }),
-          _.createElement(_, {
-            handle: "multiplayer_mmo",
-          }),
-          _.createElement(_, {
-            handle: "multiplayer",
-          }),
-          _.createElement(_, {
-            handle: "multiplayer_online_competitive",
-          }),
-          _.createElement(_, {
-            handle: "singleplayer",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              handle: "greatondeck",
-              icon: _.createElement(_, null),
-            }),
-            _.createElement(_, {
-              handle: "remoteplay_hub",
-              icon: _.createElement(_, null),
-            }),
-            _.createElement(_, {
-              handle: "vr",
-              icon: _.createElement(_, null),
-            }),
-          ),
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              handle: "controller",
-              icon: _.createElement(_, null),
-            }),
-            _.createElement(_, {
-              handle: "multiplayer_coop",
-              icon: _.createElement(_, null),
-            }),
-          ),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 46 47",
-            fill: "none",
-          },
-          _.createElement("path", {
-            stroke: "currentColor",
-            fill: "currentColor",
-            _: "M23 7.38892C29.6405 7.38892 34.242 8.69779 37.1699 9.99146C38.6345 10.6386 39.6828 11.2832 40.3604 11.761C40.6989 11.9998 40.9454 12.197 41.1045 12.3323C41.1603 12.3797 41.2056 12.4201 41.2402 12.4514C41.2433 12.4618 41.2466 12.4731 41.25 12.4846C41.2814 12.5922 41.327 12.7511 41.3857 12.9553C41.5034 13.3645 41.6721 13.9564 41.874 14.6848C42.278 16.1422 42.8171 18.1467 43.3555 20.3352C44.4379 24.7353 45.5 29.807 45.5 32.7004C45.4998 34.6845 44.063 36.4077 42.4902 37.6848C41.7174 38.3123 40.942 38.8073 40.3584 39.1458C40.0962 39.2978 39.8734 39.4168 39.709 39.5022L32.1514 31.9446H13.8486L13.7021 32.0911L6.29004 39.5022C6.12571 39.4168 5.90342 39.2976 5.6416 39.1458C5.05803 38.8073 4.28256 38.3123 3.50977 37.6848C1.93696 36.4077 0.500199 34.6845 0.5 32.7004C0.5 29.807 1.56212 24.7353 2.64453 20.3352C3.18289 18.1467 3.72199 16.1422 4.12598 14.6848C4.3279 13.9564 4.49657 13.3645 4.61426 12.9553C4.67299 12.7511 4.71857 12.5922 4.75 12.4846C4.75335 12.4731 4.75578 12.4617 4.75879 12.4514C4.79351 12.42 4.83937 12.38 4.89551 12.3323C5.05464 12.197 5.30107 11.9998 5.63965 11.761C6.31717 11.2832 7.36553 10.6386 8.83008 9.99146C11.758 8.69779 16.3595 7.38892 23 7.38892ZM11 17.8889H7.16699V22.7219H11V26.5559H15.833V22.7219H19.667V17.8889H15.833V14.0559H11V17.8889ZM28.8857 19.4475C28.2109 19.1681 27.4683 19.0952 26.752 19.2375C26.125 19.3623 25.5424 19.6475 25.0605 20.0627L24.8594 20.2483C24.4074 20.7003 24.082 21.2612 23.9121 21.8743L23.8486 22.1409C23.724 22.7678 23.7645 23.4147 23.9639 24.0188L24.0586 24.2747C24.3033 24.8653 24.6968 25.3811 25.1982 25.7727L25.4199 25.9329C26.0274 26.3388 26.742 26.5559 27.4727 26.5559C27.8971 26.5559 28.318 26.4827 28.7168 26.3401L28.8857 26.2747C29.278 26.1122 29.6392 25.8833 29.9531 25.5989L30.085 25.4739C30.3852 25.1736 30.6304 24.8237 30.8115 24.4407L30.8857 24.2747C31.0713 23.8267 31.1669 23.3465 31.167 22.8616C31.167 22.2222 31.0009 21.595 30.6875 21.0413L30.5439 20.8088C30.1888 20.2773 29.7029 19.848 29.1348 19.5618L28.8857 19.4475ZM36.5527 14.3372C35.9619 14.0924 35.3192 14.0055 34.6875 14.0833L34.418 14.1262C33.791 14.251 33.2085 14.536 32.7266 14.9514L32.5264 15.1379C32.0742 15.5901 31.748 16.1506 31.5781 16.7639L31.5156 17.0295C31.391 17.6565 31.4315 18.3033 31.6309 18.9075L31.7256 19.1643C31.9703 19.7548 32.3639 20.2698 32.8652 20.6614L33.0859 20.8215C33.6934 21.2274 34.4081 21.4445 35.1387 21.4446C36.0572 21.4446 36.9405 21.1021 37.6182 20.4885L37.751 20.3625C38.4438 19.6698 38.833 18.73 38.833 17.7502C38.833 17.1109 38.6679 16.4836 38.3545 15.9299L38.2109 15.6975C37.8557 15.1658 37.3692 14.7367 36.8008 14.4504L36.5527 14.3372Z",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 47 47",
-            fill: "none",
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M44.1111 8.16675V38.8334H22.3888V33.7223H38.9999V13.2779H8.33328V19.6667H3.22217V8.16675H44.1111ZM3.22217 23.5001V28.6112C5.93327 28.6112 8.53333 29.6882 10.4504 31.6052C12.3674 33.5223 13.4444 36.1223 13.4444 38.8334H18.5555C18.5555 34.7668 16.94 30.8667 14.0645 27.9911C11.1889 25.1156 7.28882 23.5001 3.22217 23.5001ZM3.22217 32.4445V38.8334H9.61106C9.61106 37.9944 9.4458 37.1636 9.12473 36.3885C8.80366 35.6134 8.33306 34.9091 7.73979 34.3158C7.14653 33.7225 6.44223 33.2519 5.66709 32.9309C4.89195 32.6098 4.06117 32.4445 3.22217 32.4445Z",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 47 28",
-            fill: "none",
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M42.5002 8.49432C42.5147 7.1735 42.1195 5.88065 41.3689 4.79371C40.6184 3.70677 39.5494 2.87919 38.3091 2.42488C33.4448 1.02283 28.394 0.376401 23.3335 0.508213C18.2729 0.376401 13.2222 1.02283 8.35794 2.42488C7.11763 2.87919 6.04862 3.70677 5.29806 4.79371C4.5475 5.88065 4.15229 7.1735 4.16683 8.49432L0.333496 9.45266V17.1193L4.16683 18.0904C4.27554 19.7299 4.82745 21.3091 5.76364 22.6594C6.69984 24.0096 7.98516 25.0803 9.48238 25.7571L13.3157 27.3799C14.0945 27.6992 14.9581 27.7467 15.7672 27.5149C16.5763 27.283 17.2837 26.7853 17.7752 26.1021C18.3811 25.2081 19.2178 24.4949 20.1964 24.0382C21.1751 23.5815 22.2591 23.3984 23.3335 23.5082C24.4131 23.4088 25.4994 23.6048 26.4762 24.0752C27.4531 24.5456 28.2836 25.2727 28.8791 26.1788C29.3705 26.862 30.0779 27.3597 30.887 27.5915C31.6961 27.8234 32.5597 27.7758 33.3385 27.4565L37.1718 25.8338C38.6691 25.157 39.9544 24.0863 40.8906 22.736C41.8268 21.3858 42.3787 19.8066 42.4874 18.1671L46.3207 17.196V9.52932L42.5002 8.49432ZM28.6491 8.11099C27.0968 7.75874 25.5127 7.56607 23.9213 7.53599C21.9373 7.4828 19.9544 7.67594 18.0179 8.11099L17.1491 4.37988C19.4044 3.87493 21.713 3.64751 24.0235 3.70266C25.8737 3.73511 27.7153 3.9621 29.5179 4.37988L28.6491 8.11099Z",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 46 47",
-            fill: "none",
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M0 14.5556C0 13.1442 1.14416 12 2.55556 12H43.4444C44.8558 12 46 13.1442 46 14.5556V31.1667C46 33.2838 44.2838 35 42.1667 35H3.83333C1.71624 35 0 33.2838 0 31.1667V14.5556ZM42.1667 20.9444C42.1667 21.6501 41.5946 22.2222 40.8889 22.2222C40.1832 22.2222 39.6111 21.6501 39.6111 20.9444C39.6111 20.2387 40.1832 19.6667 40.8889 19.6667C41.5946 19.6667 42.1667 20.2387 42.1667 20.9444ZM40.8889 17.1111C41.5946 17.1111 42.1667 16.539 42.1667 15.8333C42.1667 15.1276 41.5946 14.5556 40.8889 14.5556C40.1832 14.5556 39.6111 15.1276 39.6111 15.8333C39.6111 16.539 40.1832 17.1111 40.8889 17.1111ZM44.7222 18.3889C44.7222 19.0946 44.1501 19.6667 43.4444 19.6667C42.7387 19.6667 42.1667 19.0946 42.1667 18.3889C42.1667 17.6832 42.7387 17.1111 43.4444 17.1111C44.1501 17.1111 44.7222 17.6832 44.7222 18.3889ZM38.3333 19.6667C39.039 19.6667 39.6111 19.0946 39.6111 18.3889C39.6111 17.6832 39.039 17.1111 38.3333 17.1111C37.6276 17.1111 37.0556 17.6832 37.0556 18.3889C37.0556 19.0946 37.6276 19.6667 38.3333 19.6667ZM7.66667 18.3889C7.66667 19.8003 6.52251 20.9444 5.11111 20.9444C3.69972 20.9444 2.55556 19.8003 2.55556 18.3889C2.55556 16.9775 3.69972 15.8333 5.11111 15.8333C6.52251 15.8333 7.66667 16.9775 7.66667 18.3889ZM3.05556 27.3333C2.77941 27.3333 2.55556 27.5572 2.55556 27.8333V31.9444C2.55556 32.2206 2.77941 32.4444 3.05556 32.4444H7.16667C7.44281 32.4444 7.66667 32.2206 7.66667 31.9444V27.8333C7.66667 27.5572 7.44281 27.3333 7.16667 27.3333H3.05556ZM38.3333 27.8333C38.3333 27.5572 38.5572 27.3333 38.8333 27.3333H42.9444C43.2206 27.3333 43.4444 27.5572 43.4444 27.8333V31.9444C43.4444 32.2206 43.2206 32.4444 42.9444 32.4444H38.8333C38.5572 32.4444 38.3333 32.2206 38.3333 31.9444V27.8333ZM35.7778 14.5556H10.2222V32.4444H35.7778V14.5556Z",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 40 41",
-            fill: "none",
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M19.9999 29.3888V34.9443H2.22217V29.3888C2.22217 27.0313 3.15867 24.7704 4.82566 23.1034C6.49265 21.4364 8.75358 20.4999 11.1111 20.4999C13.4685 20.4999 15.7295 21.4364 17.3965 23.1034C19.0634 24.7704 19.9999 27.0313 19.9999 29.3888ZM11.1111 17.1666C12.1 17.1666 13.0667 16.8733 13.8889 16.3239C14.7112 15.7745 15.352 14.9936 15.7305 14.08C16.1089 13.1663 16.2079 12.161 16.015 11.1911C15.8221 10.2212 15.3459 9.33029 14.6466 8.63103C13.9473 7.93176 13.0564 7.45556 12.0865 7.26263C11.1166 7.06971 10.1113 7.16872 9.19764 7.54716C8.28401 7.9256 7.50312 8.56646 6.95371 9.38871C6.4043 10.211 6.11106 11.1777 6.11106 12.1666C6.10959 12.8236 6.23792 13.4744 6.48868 14.0817C6.73943 14.689 7.10767 15.2408 7.57226 15.7054C8.03684 16.1699 8.58862 16.5382 9.19591 16.7889C9.8032 17.0397 10.454 17.168 11.1111 17.1666ZM35.1777 20.8777C34.2936 19.9926 33.2327 19.3041 32.0642 18.8572C30.8957 18.4103 29.6461 18.2151 28.397 18.2843C27.1479 18.3535 25.9275 18.6856 24.8156 19.2589C23.7037 19.8321 22.7253 20.6337 21.9444 21.611C23.5779 23.8747 24.453 26.5973 24.4444 29.3888V32.7221H37.7777V27.1666C37.7786 25.9989 37.5495 24.8425 37.1034 23.7635C36.6573 22.6844 36.0029 21.7038 35.1777 20.8777ZM28.8888 14.9443C29.8777 14.9443 30.8444 14.6511 31.6667 14.1017C32.4889 13.5523 33.1298 12.7714 33.5082 11.8578C33.8867 10.9441 33.9857 9.93879 33.7928 8.96889C33.5998 7.99898 33.1236 7.10807 32.4244 6.4088C31.7251 5.70954 30.8342 5.23334 29.8643 5.04041C28.8944 4.84749 27.889 4.9465 26.9754 5.32494C26.0618 5.70338 25.2809 6.34424 24.7315 7.16649C24.1821 7.98873 23.8888 8.95543 23.8888 9.94434C23.8874 10.6014 24.0157 11.2522 24.2665 11.8595C24.5172 12.4668 24.8855 13.0186 25.35 13.4831C25.8146 13.9477 26.3664 14.316 26.9737 14.5667C27.581 14.8175 28.2318 14.9458 28.8888 14.9443Z",
-          }),
-        );
-      }
-      function _() {
-        const _ = _();
-        return _.createElement(
-          _,
-          null,
-          !_ && _.createElement(_, null, _("#Menu_Section_SpecialSections")),
-          _ &&
-            _.createElement("div", {
-              className: _.NoSectionTitleSpacer,
-            }),
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, null),
-            _.createElement(_, null),
-          ),
-        );
-      }
-      function _() {
-        return _()
-          ? _.createElement(
-              _,
-              {
-                className: _.SpecialSectionsGrid,
-              },
-              _.createElement(_, null),
-              _.createElement(_, null),
-            )
-          : _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_, null),
-              _.createElement(_, null),
-            );
-      }
-      function _() {
-        return _.createElement(
-          _,
-          {
-            className: _.SpecialSectionsLeft,
-          },
-          _.createElement(_, {
-            handle: "software",
-          }),
-          _.createElement(_, {
-            handle: "soundtracks",
-          }),
-          _.createElement(_, {
-            handle: "earlyaccess",
-          }),
-          _.createElement(_, {
-            handle: "TODO",
-          }),
-          _.createElement(_, null),
-          _.createElement(_, {
-            handle: "pccafe",
-          }),
-          _.createElement(_, {
-            handle: "macos",
-          }),
-          _.createElement(_, {
-            handle: "linux",
-          }),
-        );
-      }
-      function _() {
-        return _.createElement(
-          _,
-          {
-            className: _.SpecialSectionsRight,
-          },
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}sale/nextfest/`,
-            },
-            _("#Menu_Section_SpecialSections_NextFest"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}steamawards/`,
-            },
-            _("#Menu_Section_SpecialSections_SteamAwards"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}yearinreview/`,
-            },
-            _("#Menu_Section_SpecialSections_SteamReplay"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}labs/`,
-            },
-            _("#Menu_Section_SpecialSections_SteamLabs"),
-          ),
-        );
-      }
-      function _() {
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              handle: "demos",
-              icon: _.createElement(_, null),
-            }),
-            _.createElement(_, {
-              href: `${_._.STORE_BASE_URL}dlcforyou/`,
-              name: _("#Menu_Section_SpecialSections_DLCForYou"),
-              icon: _.createElement(_, null),
-            }),
-          ),
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, {
-              href: `${_._.STORE_BASE_URL}news/collection/sales/`,
-              name: _("#Menu_Section_SpecialSections_SaleEvents"),
-              icon: _.createElement(_, null),
-            }),
-          ),
-        );
-      }
-      const _ = _.memo(function (_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-              preserveAspectRatio: "xMidYMid meet",
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
-            }),
-          );
-        }),
-        _ = _.memo(function (_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              _: "M10.8344 3.69379C18.7351 -0.263479 28.3486 2.93369 32.306 10.8344C36.2633 18.7352 33.0661 28.3486 25.1654 32.3061C17.2646 36.2633 7.65117 33.0662 3.69373 25.1655C-0.263515 17.2647 2.93364 7.65123 10.8344 3.69379ZM20.3236 23.5307C19.7603 23.768 19.1784 23.9101 18.5961 23.9682L19.2933 30.9379C20.667 30.8009 22.0391 30.4411 23.3597 29.8422L20.3236 23.5307ZM23.4447 20.5131C22.9403 21.6077 22.1064 22.5573 20.9945 23.1967L24.0336 29.5121C26.671 28.1311 28.6404 25.9659 29.8011 23.4467L23.4447 20.5131ZM20.682 16.6567C20.0778 15.4504 18.7708 14.8291 17.5062 15.0405L17.5052 15.0395C17.2171 15.0877 16.9315 15.1802 16.6566 15.3178C15.3964 15.9491 14.7773 17.3469 15.0765 18.6625C15.0888 18.7162 15.1016 18.7701 15.1166 18.8227H15.1146C15.1651 18.9991 15.2326 19.1732 15.3177 19.3432C15.5654 19.8377 15.933 20.2313 16.3656 20.5121C16.46 20.5738 16.5583 20.6292 16.6595 20.6801C17.4756 21.0874 18.4649 21.1219 19.3431 20.6821C20.0538 20.3261 20.5589 19.7252 20.8129 19.0336C20.8344 18.9756 20.8535 18.9165 20.8715 18.8569C20.8841 18.8145 20.8958 18.7719 20.9066 18.7289C20.9133 18.7026 20.9211 18.6765 20.9271 18.6498C21.0718 17.9999 21.0034 17.2984 20.682 16.6567ZM12.0912 6.42133C9.68701 7.64774 7.82707 9.52186 6.6156 11.7241L12.7455 15.103C13.28 14.1315 14.0879 13.2978 15.1273 12.7319L12.0912 6.42133ZM15.8588 5.17426C14.8144 5.34895 13.7774 5.65575 12.7689 6.10004L15.808 12.4174C16.2033 12.2617 16.6062 12.1503 17.0121 12.0825L15.8588 5.17426Z",
-            }),
-          );
-        }),
-        _ = _.memo(function (_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 30 30",
-              fill: "none",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
-            }),
-          );
-        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const [_] = _.useState(_.excludedSections),
           _ = (function (_) {
+            const _ = _();
             return _.useMemo(
-              () => _().filter((_) => !("more" === _[0] || (_ && _.has(_[0])))),
-              [_],
+              () => _.filter((_) => !("more" === _[0] || (_ && _.has(_[0])))),
+              [_, _],
             );
           })(_),
           _ = _(),
@@ -77746,16 +77263,725 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _() {
-        return [
-          ["browse", _("#Menu_Popover_Browse")],
-          ["recommendations", _("#Menu_Popover_Recommendations")],
-          ["categories", _("#Menu_Popover_Categories")],
-          ["hardware", _("#Menu_Popover_Hardware")],
-          ["waystoplay", _("#Menu_Popover_WaysToPlay")],
-          ["specialsections", _("#Menu_Popover_SpecialSections")],
-          ["more", _("#Menu_Popover_More")],
-        ];
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _,
+            null,
+            _.createElement(
+              _,
+              {
+                className: _.RecommendationTwoCol,
+              },
+              _._.logged_in
+                ? _.createElement(_, null)
+                : _.createElement(_, null),
+              _.createElement(_, null),
+            ),
+            _.createElement(_, null),
+          ),
+        );
+      }
+      function _() {
+        return (0, _._)(_), (0, _._)(), null;
+      }
+      function _() {
+        const _ = _();
+        return _.createElement(
+          _,
+          null,
+          !_ &&
+            _.createElement(
+              _,
+              {
+                eStoreDiscoveryQueueType: 0,
+              },
+              _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+            ),
+          _.createElement(
+            _,
+            {
+              eStoreDiscoveryQueueType: 3,
+            },
+            _("#Menu_Section_Recommendations_NewReleasesQueue"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}communityrecommendations/`,
+            },
+            _("#Menu_Section_Recommendations_CommunityRecommendations"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}recommender/`,
+            },
+            _("#Menu_Section_Recommendations_InteractiveRecommender"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}recommended/friendactivity/`,
+            },
+            _("#Menu_Section_Recommendations_PopularAmongFriends"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}curators/`,
+            },
+            _("#Menu_Section_Recommendations_SteamCurators"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}dlcforyou/`,
+            },
+            _("#Menu_Section_Recommendations_DLCForYou"),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          { showDiscoveryQueue: __webpack_require__ } = (0, _._)(_),
+          _ = _.useCallback(
+            (_) => {
+              __webpack_require__(), _.preventDefault();
+            },
+            [__webpack_require__],
+          );
+        return _ ? _ : void 0;
+      }
+      function _(_) {
+        const { eStoreDiscoveryQueueType: _, children: __webpack_require__ } =
+            _,
+          _ = _(_);
+        return _.createElement(
+          _,
+          {
+            href: `${_._.STORE_BASE_URL}explore/next/${_}`,
+            onClick: _,
+          },
+          __webpack_require__,
+        );
+      }
+      function _() {
+        const _ = _(0);
+        return _()
+          ? _.createElement(
+              _._,
+              {
+                className: _.DiscoveryQueue,
+                href: `${_._.STORE_BASE_URL}explore/next/0`,
+                onClick: _,
+                onOKButton: _,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.Background,
+                },
+                _.createElement("div", {
+                  className: _.BackgroundImage,
+                  style: {
+                    backgroundImage:
+                      "url('https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg')",
+                  },
+                }),
+                _.createElement("div", {
+                  className: _.BackgroundOverlay,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Content,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.Title,
+                  },
+                  _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.Description,
+                  },
+                  _("#Menu_Section_Recommendations_DiscoveryQueue_Description"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ActionButton,
+                  },
+                  _.createElement(
+                    "span",
+                    {
+                      className: _.ButtonText,
+                    },
+                    _(
+                      "#Menu_Section_Recommendations_DiscoveryQueue_ActionButton",
+                    ),
+                  ),
+                  _.createElement(_, null),
+                ),
+              ),
+            )
+          : null;
+      }
+      const _ = {
+          include_assets: !0,
+          apply_user_filters: !0,
+        },
+        _ = Math.floor(Date.now() / 6e5);
+      function _(_) {
+        const { rgRecentApps: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_),
+          _ = _.useMemo(() => {
+            if (!__webpack_require__) return [];
+            const _ = new Set(_?.map(_._) || []),
+              _ = __webpack_require__
+                .slice(0, 10)
+                .filter((_) => !_.has((0, _._)(_)));
+            return _._(_, 0, _._(_)).slice(0, 3);
+          }, [__webpack_require__, _]);
+        return _.createElement(
+          _._,
+          {
+            feature: "package-purchase-recommendations",
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.RecommendationCapsules,
+            },
+            _.createElement(_, null, _("#Menu_Section_Browse_Recommended")),
+            _.createElement(_, {
+              rgItemIDs: _,
+            }),
+          ),
+        );
+      }
+      function _() {
+        const { data: _ } = _(
+          {
+            count: 3,
+            name: "Store Menu Top Grossing",
+          },
+          _,
+        );
+        return _.createElement(
+          _._,
+          {
+            feature: "topsellers",
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.RecommendationCapsules,
+            },
+            _.createElement(_, null, _("#Menu_TopSellers")),
+            _.createElement(_, {
+              rgItemIDs: _?.rgItemIDs || [],
+            }),
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 18 16",
+            fill: "none",
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M11.0941 6.30047L7.19722 2.40354L9.60075 -3.86836e-07L17.6008 8L9.60075 16L7.19722 13.5965L11.0941 9.69958L0.750976 9.69958L0.750976 6.30047L11.0941 6.30047Z",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = _();
+        return _.createElement(
+          _,
+          null,
+          !_ && _.createElement(_, null, _("#Menu_Section_SpecialSections")),
+          _ &&
+            _.createElement("div", {
+              className: _.NoSectionTitleSpacer,
+            }),
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, null),
+            _.createElement(_, null),
+          ),
+        );
+      }
+      function _() {
+        return _()
+          ? _.createElement(
+              _,
+              {
+                className: _.SpecialSectionsGrid,
+              },
+              _.createElement(_, null),
+              _.createElement(_, null),
+            )
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, null),
+              _.createElement(_, null),
+            );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          {
+            className: _.SpecialSectionsLeft,
+          },
+          _.createElement(_, {
+            handle: "software",
+          }),
+          _.createElement(_, {
+            handle: "soundtracks",
+          }),
+          _.createElement(_, {
+            handle: "earlyaccess",
+          }),
+          _.createElement(_, null),
+          _.createElement(_, {
+            handle: "pccafe",
+          }),
+          _.createElement(_, {
+            handle: "macos",
+          }),
+          _.createElement(_, {
+            handle: "linux",
+          }),
+        );
+      }
+      function _() {
+        return _._.EREALM == _._.k_ESteamRealmChina
+          ? null
+          : _.createElement(
+              _,
+              {
+                className: _.SpecialSectionsRight,
+              },
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}sale/nextfest/`,
+                },
+                _("#Menu_Section_SpecialSections_NextFest"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}steamawards/`,
+                },
+                _("#Menu_Section_SpecialSections_SteamAwards"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}yearinreview/`,
+                },
+                _("#Menu_Section_SpecialSections_SteamReplay"),
+              ),
+              _.createElement(
+                _,
+                {
+                  href: `${_._.STORE_BASE_URL}labs/`,
+                },
+                _("#Menu_Section_SpecialSections_SteamLabs"),
+              ),
+            );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, {
+              handle: "demos",
+              icon: _.createElement(_, null),
+            }),
+            _.createElement(_, {
+              href: `${_._.STORE_BASE_URL}dlcforyou/`,
+              name: _("#Menu_Section_SpecialSections_DLCForYou"),
+              icon: _.createElement(_, null),
+            }),
+          ),
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, {
+              href: `${_._.STORE_BASE_URL}news/collection/sales/`,
+              name: _("#Menu_Section_SpecialSections_SaleEvents"),
+              icon: _.createElement(_, null),
+            }),
+          ),
+        );
+      }
+      const _ = _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+              preserveAspectRatio: "xMidYMid meet",
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              _: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
+            }),
+          );
+        }),
+        _ = _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              _: "M10.8344 3.69379C18.7351 -0.263479 28.3486 2.93369 32.306 10.8344C36.2633 18.7352 33.0661 28.3486 25.1654 32.3061C17.2646 36.2633 7.65117 33.0662 3.69373 25.1655C-0.263515 17.2647 2.93364 7.65123 10.8344 3.69379ZM20.3236 23.5307C19.7603 23.768 19.1784 23.9101 18.5961 23.9682L19.2933 30.9379C20.667 30.8009 22.0391 30.4411 23.3597 29.8422L20.3236 23.5307ZM23.4447 20.5131C22.9403 21.6077 22.1064 22.5573 20.9945 23.1967L24.0336 29.5121C26.671 28.1311 28.6404 25.9659 29.8011 23.4467L23.4447 20.5131ZM20.682 16.6567C20.0778 15.4504 18.7708 14.8291 17.5062 15.0405L17.5052 15.0395C17.2171 15.0877 16.9315 15.1802 16.6566 15.3178C15.3964 15.9491 14.7773 17.3469 15.0765 18.6625C15.0888 18.7162 15.1016 18.7701 15.1166 18.8227H15.1146C15.1651 18.9991 15.2326 19.1732 15.3177 19.3432C15.5654 19.8377 15.933 20.2313 16.3656 20.5121C16.46 20.5738 16.5583 20.6292 16.6595 20.6801C17.4756 21.0874 18.4649 21.1219 19.3431 20.6821C20.0538 20.3261 20.5589 19.7252 20.8129 19.0336C20.8344 18.9756 20.8535 18.9165 20.8715 18.8569C20.8841 18.8145 20.8958 18.7719 20.9066 18.7289C20.9133 18.7026 20.9211 18.6765 20.9271 18.6498C21.0718 17.9999 21.0034 17.2984 20.682 16.6567ZM12.0912 6.42133C9.68701 7.64774 7.82707 9.52186 6.6156 11.7241L12.7455 15.103C13.28 14.1315 14.0879 13.2978 15.1273 12.7319L12.0912 6.42133ZM15.8588 5.17426C14.8144 5.34895 13.7774 5.65575 12.7689 6.10004L15.808 12.4174C16.2033 12.2617 16.6062 12.1503 17.0121 12.0825L15.8588 5.17426Z",
+            }),
+          );
+        }),
+        _ = _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 30 30",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
+            }),
+          );
+        });
+      _.memo(function (_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M14 3C10.6863 3 8 5.68629 8 9V23C8 28.5228 12.4772 33 18 33C23.5228 33 28 28.5228 28 23V9C28 5.68629 25.3137 3 22 3H21V14C21 15.6569 19.6569 17 18 17C16.3431 17 15 15.6569 15 14V3H14Z",
+          }),
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M17 5H19V11H17V5Z",
+          }),
+        );
+      }),
+        _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M31.3191 25.8753C27.1777 33.0485 18.0054 35.5062 10.8322 31.3647C3.65899 27.2233 1.20128 18.051 5.34272 10.8778C9.48417 3.70459 18.6565 1.24687 25.8297 5.38831C33.0029 9.52976 35.4606 18.7021 31.3191 25.8753ZM13.1684 23.2918C12.8141 23.2033 12.4599 23.2033 12.0171 23.2033C10.2458 23.2033 9.19736 24.1772 9.19736 25.417C9.19736 26.6569 10.2461 27.7196 12.0173 27.7196C13.8771 27.7196 15.3825 26.6569 15.3825 25.417V15.9411L22.9101 13.8157V20.5464C22.5558 20.4578 22.2016 20.3693 21.7588 20.3693C19.9875 20.3693 18.9388 21.432 18.9388 22.6718C18.9388 23.9117 19.9875 24.9744 21.7588 24.9744C23.6185 24.9744 25.124 23.9117 25.124 22.6718V9.03351C22.2545 9.94658 19.2887 10.7156 16.333 11.482C15.2752 11.7562 14.2187 12.0302 13.1684 12.3103V23.2918Z",
+            }),
+          );
+        }),
+        _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M24 14.25C26.0711 14.25 27.75 15.9289 27.75 18C27.75 20.0711 26.0711 21.75 24 21.75C21.9289 21.75 20.25 20.0711 20.25 18C20.25 15.9289 21.9289 14.25 24 14.25ZM23 15.5V18.4922L24.9932 20.375L26 19.4219L24.4258 17.9346V15.5H23Z",
+            }),
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M10 11H13V7H34V29H13V25H10V29H2V21C3.65685 21 5 19.6569 5 18C5 16.3431 3.65685 15 2 15V7H10V11ZM24 12C20.6863 12 18 14.6863 18 18C18 21.3137 20.6863 24 24 24C27.3137 24 30 21.3137 30 18C30 14.6863 27.3137 12 24 12ZM10 23H13V19H10V23ZM10 17H13V13H10V17Z",
+            }),
+          );
+        });
+      function _() {
+        const _ = _();
+        return _.createElement(
+          _,
+          null,
+          !_ && _.createElement(_, null, _("#Menu_Section_WaysToPlay")),
+          _ &&
+            _.createElement("div", {
+              className: _.NoSectionTitleSpacer,
+            }),
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, null),
+            _.createElement(_, null),
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          null,
+          _.createElement(_, {
+            handle: "multiplayer_lan",
+          }),
+          _.createElement(_, {
+            handle: "multiplayer_local_party",
+          }),
+          _.createElement(_, {
+            handle: "multiplayer_mmo",
+          }),
+          _.createElement(_, {
+            handle: "multiplayer",
+          }),
+          _.createElement(_, {
+            handle: "multiplayer_online_competitive",
+          }),
+          _.createElement(_, {
+            handle: "singleplayer",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, {
+              handle: "greatondeck",
+              icon: _.createElement(_, null),
+            }),
+            _.createElement(_, {
+              handle: "remoteplay_hub",
+              icon: _.createElement(_, null),
+            }),
+            _.createElement(_, {
+              handle: "vr",
+              icon: _.createElement(_, null),
+            }),
+          ),
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, {
+              handle: "controller",
+              icon: _.createElement(_, null),
+            }),
+            _.createElement(_, {
+              handle: "multiplayer_coop",
+              icon: _.createElement(_, null),
+            }),
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 46 47",
+            fill: "none",
+          },
+          _.createElement("path", {
+            stroke: "currentColor",
+            fill: "currentColor",
+            _: "M23 7.38892C29.6405 7.38892 34.242 8.69779 37.1699 9.99146C38.6345 10.6386 39.6828 11.2832 40.3604 11.761C40.6989 11.9998 40.9454 12.197 41.1045 12.3323C41.1603 12.3797 41.2056 12.4201 41.2402 12.4514C41.2433 12.4618 41.2466 12.4731 41.25 12.4846C41.2814 12.5922 41.327 12.7511 41.3857 12.9553C41.5034 13.3645 41.6721 13.9564 41.874 14.6848C42.278 16.1422 42.8171 18.1467 43.3555 20.3352C44.4379 24.7353 45.5 29.807 45.5 32.7004C45.4998 34.6845 44.063 36.4077 42.4902 37.6848C41.7174 38.3123 40.942 38.8073 40.3584 39.1458C40.0962 39.2978 39.8734 39.4168 39.709 39.5022L32.1514 31.9446H13.8486L13.7021 32.0911L6.29004 39.5022C6.12571 39.4168 5.90342 39.2976 5.6416 39.1458C5.05803 38.8073 4.28256 38.3123 3.50977 37.6848C1.93696 36.4077 0.500199 34.6845 0.5 32.7004C0.5 29.807 1.56212 24.7353 2.64453 20.3352C3.18289 18.1467 3.72199 16.1422 4.12598 14.6848C4.3279 13.9564 4.49657 13.3645 4.61426 12.9553C4.67299 12.7511 4.71857 12.5922 4.75 12.4846C4.75335 12.4731 4.75578 12.4617 4.75879 12.4514C4.79351 12.42 4.83937 12.38 4.89551 12.3323C5.05464 12.197 5.30107 11.9998 5.63965 11.761C6.31717 11.2832 7.36553 10.6386 8.83008 9.99146C11.758 8.69779 16.3595 7.38892 23 7.38892ZM11 17.8889H7.16699V22.7219H11V26.5559H15.833V22.7219H19.667V17.8889H15.833V14.0559H11V17.8889ZM28.8857 19.4475C28.2109 19.1681 27.4683 19.0952 26.752 19.2375C26.125 19.3623 25.5424 19.6475 25.0605 20.0627L24.8594 20.2483C24.4074 20.7003 24.082 21.2612 23.9121 21.8743L23.8486 22.1409C23.724 22.7678 23.7645 23.4147 23.9639 24.0188L24.0586 24.2747C24.3033 24.8653 24.6968 25.3811 25.1982 25.7727L25.4199 25.9329C26.0274 26.3388 26.742 26.5559 27.4727 26.5559C27.8971 26.5559 28.318 26.4827 28.7168 26.3401L28.8857 26.2747C29.278 26.1122 29.6392 25.8833 29.9531 25.5989L30.085 25.4739C30.3852 25.1736 30.6304 24.8237 30.8115 24.4407L30.8857 24.2747C31.0713 23.8267 31.1669 23.3465 31.167 22.8616C31.167 22.2222 31.0009 21.595 30.6875 21.0413L30.5439 20.8088C30.1888 20.2773 29.7029 19.848 29.1348 19.5618L28.8857 19.4475ZM36.5527 14.3372C35.9619 14.0924 35.3192 14.0055 34.6875 14.0833L34.418 14.1262C33.791 14.251 33.2085 14.536 32.7266 14.9514L32.5264 15.1379C32.0742 15.5901 31.748 16.1506 31.5781 16.7639L31.5156 17.0295C31.391 17.6565 31.4315 18.3033 31.6309 18.9075L31.7256 19.1643C31.9703 19.7548 32.3639 20.2698 32.8652 20.6614L33.0859 20.8215C33.6934 21.2274 34.4081 21.4445 35.1387 21.4446C36.0572 21.4446 36.9405 21.1021 37.6182 20.4885L37.751 20.3625C38.4438 19.6698 38.833 18.73 38.833 17.7502C38.833 17.1109 38.6679 16.4836 38.3545 15.9299L38.2109 15.6975C37.8557 15.1658 37.3692 14.7367 36.8008 14.4504L36.5527 14.3372Z",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 47 47",
+            fill: "none",
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M44.1111 8.16675V38.8334H22.3888V33.7223H38.9999V13.2779H8.33328V19.6667H3.22217V8.16675H44.1111ZM3.22217 23.5001V28.6112C5.93327 28.6112 8.53333 29.6882 10.4504 31.6052C12.3674 33.5223 13.4444 36.1223 13.4444 38.8334H18.5555C18.5555 34.7668 16.94 30.8667 14.0645 27.9911C11.1889 25.1156 7.28882 23.5001 3.22217 23.5001ZM3.22217 32.4445V38.8334H9.61106C9.61106 37.9944 9.4458 37.1636 9.12473 36.3885C8.80366 35.6134 8.33306 34.9091 7.73979 34.3158C7.14653 33.7225 6.44223 33.2519 5.66709 32.9309C4.89195 32.6098 4.06117 32.4445 3.22217 32.4445Z",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 47 28",
+            fill: "none",
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M42.5002 8.49432C42.5147 7.1735 42.1195 5.88065 41.3689 4.79371C40.6184 3.70677 39.5494 2.87919 38.3091 2.42488C33.4448 1.02283 28.394 0.376401 23.3335 0.508213C18.2729 0.376401 13.2222 1.02283 8.35794 2.42488C7.11763 2.87919 6.04862 3.70677 5.29806 4.79371C4.5475 5.88065 4.15229 7.1735 4.16683 8.49432L0.333496 9.45266V17.1193L4.16683 18.0904C4.27554 19.7299 4.82745 21.3091 5.76364 22.6594C6.69984 24.0096 7.98516 25.0803 9.48238 25.7571L13.3157 27.3799C14.0945 27.6992 14.9581 27.7467 15.7672 27.5149C16.5763 27.283 17.2837 26.7853 17.7752 26.1021C18.3811 25.2081 19.2178 24.4949 20.1964 24.0382C21.1751 23.5815 22.2591 23.3984 23.3335 23.5082C24.4131 23.4088 25.4994 23.6048 26.4762 24.0752C27.4531 24.5456 28.2836 25.2727 28.8791 26.1788C29.3705 26.862 30.0779 27.3597 30.887 27.5915C31.6961 27.8234 32.5597 27.7758 33.3385 27.4565L37.1718 25.8338C38.6691 25.157 39.9544 24.0863 40.8906 22.736C41.8268 21.3858 42.3787 19.8066 42.4874 18.1671L46.3207 17.196V9.52932L42.5002 8.49432ZM28.6491 8.11099C27.0968 7.75874 25.5127 7.56607 23.9213 7.53599C21.9373 7.4828 19.9544 7.67594 18.0179 8.11099L17.1491 4.37988C19.4044 3.87493 21.713 3.64751 24.0235 3.70266C25.8737 3.73511 27.7153 3.9621 29.5179 4.37988L28.6491 8.11099Z",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 46 47",
+            fill: "none",
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M0 14.5556C0 13.1442 1.14416 12 2.55556 12H43.4444C44.8558 12 46 13.1442 46 14.5556V31.1667C46 33.2838 44.2838 35 42.1667 35H3.83333C1.71624 35 0 33.2838 0 31.1667V14.5556ZM42.1667 20.9444C42.1667 21.6501 41.5946 22.2222 40.8889 22.2222C40.1832 22.2222 39.6111 21.6501 39.6111 20.9444C39.6111 20.2387 40.1832 19.6667 40.8889 19.6667C41.5946 19.6667 42.1667 20.2387 42.1667 20.9444ZM40.8889 17.1111C41.5946 17.1111 42.1667 16.539 42.1667 15.8333C42.1667 15.1276 41.5946 14.5556 40.8889 14.5556C40.1832 14.5556 39.6111 15.1276 39.6111 15.8333C39.6111 16.539 40.1832 17.1111 40.8889 17.1111ZM44.7222 18.3889C44.7222 19.0946 44.1501 19.6667 43.4444 19.6667C42.7387 19.6667 42.1667 19.0946 42.1667 18.3889C42.1667 17.6832 42.7387 17.1111 43.4444 17.1111C44.1501 17.1111 44.7222 17.6832 44.7222 18.3889ZM38.3333 19.6667C39.039 19.6667 39.6111 19.0946 39.6111 18.3889C39.6111 17.6832 39.039 17.1111 38.3333 17.1111C37.6276 17.1111 37.0556 17.6832 37.0556 18.3889C37.0556 19.0946 37.6276 19.6667 38.3333 19.6667ZM7.66667 18.3889C7.66667 19.8003 6.52251 20.9444 5.11111 20.9444C3.69972 20.9444 2.55556 19.8003 2.55556 18.3889C2.55556 16.9775 3.69972 15.8333 5.11111 15.8333C6.52251 15.8333 7.66667 16.9775 7.66667 18.3889ZM3.05556 27.3333C2.77941 27.3333 2.55556 27.5572 2.55556 27.8333V31.9444C2.55556 32.2206 2.77941 32.4444 3.05556 32.4444H7.16667C7.44281 32.4444 7.66667 32.2206 7.66667 31.9444V27.8333C7.66667 27.5572 7.44281 27.3333 7.16667 27.3333H3.05556ZM38.3333 27.8333C38.3333 27.5572 38.5572 27.3333 38.8333 27.3333H42.9444C43.2206 27.3333 43.4444 27.5572 43.4444 27.8333V31.9444C43.4444 32.2206 43.2206 32.4444 42.9444 32.4444H38.8333C38.5572 32.4444 38.3333 32.2206 38.3333 31.9444V27.8333ZM35.7778 14.5556H10.2222V32.4444H35.7778V14.5556Z",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 40 41",
+            fill: "none",
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M19.9999 29.3888V34.9443H2.22217V29.3888C2.22217 27.0313 3.15867 24.7704 4.82566 23.1034C6.49265 21.4364 8.75358 20.4999 11.1111 20.4999C13.4685 20.4999 15.7295 21.4364 17.3965 23.1034C19.0634 24.7704 19.9999 27.0313 19.9999 29.3888ZM11.1111 17.1666C12.1 17.1666 13.0667 16.8733 13.8889 16.3239C14.7112 15.7745 15.352 14.9936 15.7305 14.08C16.1089 13.1663 16.2079 12.161 16.015 11.1911C15.8221 10.2212 15.3459 9.33029 14.6466 8.63103C13.9473 7.93176 13.0564 7.45556 12.0865 7.26263C11.1166 7.06971 10.1113 7.16872 9.19764 7.54716C8.28401 7.9256 7.50312 8.56646 6.95371 9.38871C6.4043 10.211 6.11106 11.1777 6.11106 12.1666C6.10959 12.8236 6.23792 13.4744 6.48868 14.0817C6.73943 14.689 7.10767 15.2408 7.57226 15.7054C8.03684 16.1699 8.58862 16.5382 9.19591 16.7889C9.8032 17.0397 10.454 17.168 11.1111 17.1666ZM35.1777 20.8777C34.2936 19.9926 33.2327 19.3041 32.0642 18.8572C30.8957 18.4103 29.6461 18.2151 28.397 18.2843C27.1479 18.3535 25.9275 18.6856 24.8156 19.2589C23.7037 19.8321 22.7253 20.6337 21.9444 21.611C23.5779 23.8747 24.453 26.5973 24.4444 29.3888V32.7221H37.7777V27.1666C37.7786 25.9989 37.5495 24.8425 37.1034 23.7635C36.6573 22.6844 36.0029 21.7038 35.1777 20.8777ZM28.8888 14.9443C29.8777 14.9443 30.8444 14.6511 31.6667 14.1017C32.4889 13.5523 33.1298 12.7714 33.5082 11.8578C33.8867 10.9441 33.9857 9.93879 33.7928 8.96889C33.5998 7.99898 33.1236 7.10807 32.4244 6.4088C31.7251 5.70954 30.8342 5.23334 29.8643 5.04041C28.8944 4.84749 27.889 4.9465 26.9754 5.32494C26.0618 5.70338 25.2809 6.34424 24.7315 7.16649C24.1821 7.98873 23.8888 8.95543 23.8888 9.94434C23.8874 10.6014 24.0157 11.2522 24.2665 11.8595C24.5172 12.4668 24.8855 13.0186 25.35 13.4831C25.8146 13.9477 26.3664 14.316 26.9737 14.5667C27.581 14.8175 28.2318 14.9458 28.8888 14.9443Z",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            visible: _,
+            closePopover: __webpack_require__,
+            children: _,
+            refPopover: _,
+            refActiveButton: _,
+          } = _,
+          _ = _.useCallback(
+            (_) => {
+              if (
+                _.current &&
+                _.current &&
+                document.activeElement &&
+                "Tab" === _.key
+              ) {
+                const _ = (0, _._)(_.current),
+                  _ = _.indexOf(document.activeElement);
+                if (-1 === _) return;
+                if (
+                  (0 === _ &&
+                    _.shiftKey &&
+                    (_.current.focus(), _.preventDefault()),
+                  _ === _.length - 1 && !_.shiftKey && _.current.parentElement)
+                ) {
+                  const _ = (0, _._)(_.current.parentElement),
+                    _ = _.indexOf(_.current);
+                  if (-1 !== _) {
+                    const _ = _[_ + 1];
+                    _ && (_.focus(), _.preventDefault());
+                  }
+                }
+              }
+            },
+            [_, _],
+          );
+        return (
+          _(_, _),
+          _.createElement(
+            _,
+            {
+              className: _.PopoverContainer,
+              visible: _,
+              msAnimationDuration: 100,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _()(
+                  _.Popover,
+                  _._.IN_MOBILE_WEBVIEW && _.MobileWebview,
+                ),
+              },
+              _.createElement(
+                _._,
+                {
+                  "flow-children": "row",
+                  className: _.PopoverContent,
+                  onCancelButton: __webpack_require__,
+                  ref: _,
+                  onKeyDown: _,
+                },
+                _,
+              ),
+            ),
+          )
+        );
+      }
+      function _() {
+        return _.useMemo(() => {
+          const _ = _._.EREALM == _._.k_ESteamRealmChina,
+            _ =
+              ((__webpack_require__ = _._.country_code),
+              _.includes(__webpack_require__) ||
+                _.includes(__webpack_require__));
+          var _;
+          return [
+            ["browse", _("#Menu_Popover_Browse")],
+            !_ && ["recommendations", _("#Menu_Popover_Recommendations")],
+            ["categories", _("#Menu_Popover_Categories")],
+            !_ && _ && ["hardware", _("#Menu_Popover_Hardware")],
+            !_ && ["waystoplay", _("#Menu_Popover_WaysToPlay")],
+            ["specialsections", _("#Menu_Popover_SpecialSections")],
+            ["more", _("#Menu_Popover_More")],
+          ].filter(Boolean);
+        }, []);
       }
       function _(_) {
         const {
@@ -77905,9 +78131,15 @@
                         className: _.NoSearchBarSpacer,
                       }),
                   ),
-                  !_ && _.createElement(_, null),
-                  _.createElement(_, null),
-                  _.createElement(_, null),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.RightButtons,
+                    },
+                    !_ && _.createElement(_, null),
+                    _.createElement(_, null),
+                    _.createElement(_, null),
+                  ),
                 ),
             _.createElement(_, {
               activeSection: __webpack_require__,
@@ -78087,7 +78319,7 @@
             children: _,
           } = _,
           _ = _.useRef([]),
-          _ = _.useMemo(() => _(), []);
+          _ = _();
         _.current.length != _.length &&
           (_.current = _.map(() => _.createRef()));
         const {
@@ -78478,9 +78710,9 @@
           if (_ && _) return _.classList.add(_), () => _.classList.remove(_);
         }, [_, _]);
       }
-      var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
+          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
@@ -78626,125 +78858,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -78772,26 +78885,6 @@
         _ = _(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -78863,93 +78956,6 @@
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -78974,6 +78980,18 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79006,11 +79024,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -79024,23 +79037,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79110,6 +79106,216 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79139,6 +79345,42 @@
         ),
         _ = _(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79285,7 +79527,7 @@
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         );
-      const _ = function (_) {
+      function _(_) {
         return _.createElement(
           _._,
           null,
@@ -79293,7 +79535,7 @@
             ..._,
           }),
         );
-      };
+      }
       function _() {
         return (
           (0, _.useEffect)(

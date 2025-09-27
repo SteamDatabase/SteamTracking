@@ -4,31 +4,6 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [6866],
   {
-    20019: (e, t, n) => {
-      function o(e) {
-        switch (e) {
-          case 0:
-            return "game";
-          case 6:
-            return "software";
-          case 1:
-            return "demo";
-          case 4:
-            return "dlc";
-          case 7:
-          case 3:
-            return "video";
-          case 11:
-            return "music";
-          case 12:
-            return "beta";
-          case 2:
-            return "mod";
-        }
-        return "invalid";
-      }
-      n.d(t, { U: () => o });
-    },
     56055: (e, t, n) => {
       n.d(t, { b2: () => o, nx: () => s });
       const o = "terminal";

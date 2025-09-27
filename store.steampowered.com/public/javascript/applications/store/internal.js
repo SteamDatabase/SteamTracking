@@ -3862,7 +3862,7 @@
     },
     84523: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => be });
+      a.r(t), a.d(t, { default: () => we });
       var r = a(90626),
         s = a(45237);
       const n = ["initial", "sm", "md", "lg"],
@@ -4477,12 +4477,11 @@
         ];
       }
       const Q = (0, r.createContext)(null);
-      const X = {
-        Root: function (e) {
+      const X = function (e) {
           const { children: t, state: a } = e;
           return r.createElement(Q.Provider, { value: a }, t);
         },
-        Anchor: function (e) {
+        $ = function (e) {
           const { children: t } = e,
             a = r.Children.only(t),
             s = (0, r.useContext)(Q),
@@ -4498,7 +4497,7 @@
           const { ref: i, ...o } = a.props;
           return (0, r.cloneElement)(a, { ref: n, ...s.getReferenceProps(o) });
         },
-        Positioner: function (e) {
+        ee = function (e) {
           const { children: t, render: a, ref: s } = e,
             n = (0, r.useContext)(Q),
             i = (0, W.SV)([s, n?.floating.refs.setFloating]);
@@ -4506,7 +4505,11 @@
             ? n.open
               ? r.createElement(
                   W.s3,
-                  { context: n.floating.context, initialFocus: n.initialFocus },
+                  {
+                    context: n.floating.context,
+                    initialFocus: n.initialFocus,
+                    returnFocus: !1,
+                  },
                   r.createElement(
                     K,
                     {
@@ -4528,7 +4531,7 @@
               ),
               null);
         },
-        Item: function (e) {
+        te = function (e) {
           const { children: t, label: a, onSelect: s, ref: n, ...i } = e,
             o = (0, r.useContext)(Q),
             { ref: l, index: c } = (0, W.rm)({ label: a }),
@@ -4564,28 +4567,27 @@
             },
             t,
           );
-        },
-      };
-      var $ = a(16619);
-      function ee(e) {
+        };
+      var ae = a(16619);
+      function re(e) {
         const { viewBoxSize: t = 20, ...a } = e,
-          s = a.size ? void 0 : $.IconSizeDefault;
+          s = a.size ? void 0 : ae.IconSizeDefault;
         return r.createElement("svg", {
           viewBox: `0 0 ${t} ${t}`,
-          ...v({ className: s, ...a }, te),
+          ...v({ className: s, ...a }, se),
         });
       }
-      const te = [
+      const se = [
         ...A,
-        { prop: "size", responsive: !0, className: (e) => $[`IconSize-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => ae[`IconSize-${e}`] },
         {
           prop: "color",
-          className: $.Color,
+          className: ae.Color,
           cssProperty: (e) => ["--icon-color", N(e)],
         },
         {
           prop: "hitSlop",
-          className: $.HitSlop,
+          className: ae.HitSlop,
           cssProperty: (e) => [
             "--hit-slop-custom",
             "string" == typeof e ? e : "",
@@ -4593,9 +4595,9 @@
         },
         P.find(({ prop: e }) => "cursor" === e),
       ];
-      function ae(e) {
+      function ne(e) {
         return r.createElement(
-          ee,
+          re,
           { ...e, viewBoxSize: 12 },
           r.createElement("path", {
             d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
@@ -4603,7 +4605,7 @@
           }),
         );
       }
-      const re = Object.assign(
+      const ie = Object.assign(
           function (e) {
             const {
                 suggestions: t,
@@ -4636,21 +4638,21 @@
                 };
               })({ onTextChange: a, suggestions: t, onSuggestionSelected: s }),
               o = n.value
-                ? r.createElement(ae, {
+                ? r.createElement(ne, {
                     onClick: () => i.onTextChange(""),
                     cursor: "pointer",
                     hitSlop: !0,
                   })
                 : void 0;
             return r.createElement(
-              re.Root,
+              ie.Root,
               { state: i },
-              r.createElement(re.TextInput, { ...n, afterContent: o }),
+              r.createElement(ie.TextInput, { ...n, afterContent: o }),
               r.createElement(
-                re.Suggestions,
+                ie.Suggestions,
                 null,
                 t.map((e, t) =>
-                  r.createElement(re.Suggestion, { key: e + t, value: e }, e),
+                  r.createElement(ie.Suggestion, { key: e + t, value: e }, e),
                 ),
               ),
             );
@@ -4728,9 +4730,9 @@
                   scroll: !0,
                 });
               return r.createElement(
-                se.Provider,
+                oe.Provider,
                 { value: a },
-                r.createElement(X.Root, { state: s }, t),
+                r.createElement(X, { state: s }, t),
               );
             },
             TextInput: function (e) {
@@ -4743,9 +4745,9 @@
                   suggestions: i,
                   onSuggestionSelected: o,
                 },
-              } = ne("<Autocomplete.TextInput>");
+              } = le("<Autocomplete.TextInput>");
               return r.createElement(
-                X.Anchor,
+                $,
                 null,
                 r.createElement(H, {
                   ...e,
@@ -4765,7 +4767,9 @@
                 }),
               );
             },
-            Suggestions: X.Positioner,
+            Suggestions: function (e) {
+              return r.createElement(ee, { ...e, returnFocus: !1 });
+            },
             Suggestion: function (e) {
               const { value: t, children: a, ...s } = e,
                 {
@@ -4775,9 +4779,9 @@
                     setActiveIndex: o,
                     onSuggestionSelected: l,
                   },
-                } = ne("<Autocomplete.TextInput>");
+                } = le("<Autocomplete.TextInput>");
               return r.createElement(
-                X.Item,
+                te,
                 {
                   onSelect: () => {
                     n(t), l && l(t), o(null), i(!1);
@@ -4789,30 +4793,30 @@
             },
           },
         ),
-        se = (0, r.createContext)(null);
-      function ne(e) {
-        const t = (0, r.useContext)(se);
+        oe = (0, r.createContext)(null);
+      function le(e) {
+        const t = (0, r.useContext)(oe);
         return (0, U.wT)(t, `${e} must be used within an <Autocomplete>!`), t;
       }
-      var ie = a(39020),
-        oe = a(41735),
-        le = a.n(oe),
-        ce = a(82477),
-        me = a(46416),
-        pe = a(32630),
-        de = a(52038),
-        ue = a(61859),
-        he = a(78327),
-        _e = a(12241),
-        ge = a(76217);
-      function fe(e) {
+      var ce = a(39020),
+        me = a(41735),
+        pe = a.n(me),
+        de = a(82477),
+        ue = a(46416),
+        he = a(32630),
+        _e = a(52038),
+        ge = a(61859),
+        fe = a(78327),
+        ye = a(12241),
+        Se = a(76217);
+      function Ee(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
-          ue.pf.GetPreferredLocales(),
+          ge.pf.GetPreferredLocales(),
           { weekday: "long" },
         );
-        return r.createElement(ge.Z, { className: _e.DayOfWeekHeader }, t);
+        return r.createElement(Se.Z, { className: ye.DayOfWeekHeader }, t);
       }
-      function ye(e) {
+      function Ce(e) {
         const [t, a] = r.useState(e.maxGames);
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
         const s = e.dayTimestamps
@@ -4827,10 +4831,10 @@
             )
           : 0;
         return r.createElement(
-          ge.Z,
-          { className: _e.Week },
+          Se.Z,
+          { className: ye.Week },
           e.dayTimestamps.map((n) =>
-            r.createElement(Ee, {
+            r.createElement(Ie, {
               key: n,
               timestamp: n,
               appsToday: e.appReleasesByDay[n],
@@ -4842,26 +4846,26 @@
           ),
         );
       }
-      function Se(e) {
+      function be(e) {
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
         const t = { month: "long", day: "numeric" },
           a = new Date(1e3 * e.dayTimestamps[0]).toLocaleDateString(
-            ue.pf.GetPreferredLocales(),
+            ge.pf.GetPreferredLocales(),
             t,
           ),
           s = new Date(1e3 * (e.dayTimestamps[0] + 518400)).toLocaleDateString(
-            ue.pf.GetPreferredLocales(),
+            ge.pf.GetPreferredLocales(),
             t,
           );
         return r.createElement(
-          ge.Z,
-          { className: _e.WeekLinear },
-          r.createElement(ge.Z, { className: _e.LinearHeader }, a, " - ", s),
+          Se.Z,
+          { className: ye.WeekLinear },
+          r.createElement(Se.Z, { className: ye.LinearHeader }, a, " - ", s),
           r.createElement(
-            ge.Z,
-            { className: _e.LinearDayList },
+            Se.Z,
+            { className: ye.LinearDayList },
             e.dayTimestamps?.map((t) =>
-              r.createElement(Ce, {
+              r.createElement(ve, {
                 key: t,
                 timestamp: t,
                 appsToday: e.appReleasesByDay[t],
@@ -4874,9 +4878,9 @@
           ),
         );
       }
-      function Ee(e) {
+      function Ie(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
-            ue.pf.GetPreferredLocales(),
+            ge.pf.GetPreferredLocales(),
             { month: "long", day: "numeric" },
           ),
           a = new Date();
@@ -4892,23 +4896,23 @@
               ? "library"
               : "main";
         return r.createElement(
-          ge.Z,
+          Se.Z,
           {
-            className: (0, de.A)(
-              _e.Day,
-              s && _e.Today,
-              e.timestamp < e.firstTimestamp && _e.Blank,
+            className: (0, _e.A)(
+              ye.Day,
+              s && ye.Today,
+              e.timestamp < e.firstTimestamp && ye.Blank,
             ),
           },
-          r.createElement(ge.Z, { className: _e.DateHeader }, t),
+          r.createElement(Se.Z, { className: ye.DateHeader }, t),
           r.createElement(
-            ge.Z,
-            { className: _e.GameList },
+            Se.Z,
+            { className: ye.GameList },
             l?.map((e, t) =>
               r.createElement(
-                ge.Z,
-                { key: e.appid, className: _e.CalendarAppEntry },
-                r.createElement(me.W, {
+                Se.Z,
+                { key: e.appid, className: ye.CalendarAppEntry },
+                r.createElement(ue.W, {
                   capsule: { id: e.appid },
                   imageType: c,
                   nWidthMultiplier: 2,
@@ -4921,19 +4925,19 @@
             !o &&
               i < e.appsToday?.length &&
               r.createElement(
-                ge.Z,
+                Se.Z,
                 {
-                  className: _e.ShowMoreButton,
+                  className: ye.ShowMoreButton,
                   onClick: () => e.setMaxGames(e.appsToday.length),
                 },
-                (0, ue.we)("#PersonalCalendar_ShowMore", e.appsToday.length),
+                (0, ge.we)("#PersonalCalendar_ShowMore", e.appsToday.length),
               ),
           ),
         );
       }
-      function Ce(e) {
+      function ve(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
-            ue.pf.GetPreferredLocales(),
+            ge.pf.GetPreferredLocales(),
             { weekday: "long" },
           ),
           a = new Date();
@@ -4943,24 +4947,24 @@
         return e.timestamp < s
           ? null
           : r.createElement(
-              ge.Z,
+              Se.Z,
               {
-                className: (0, de.A)(
-                  _e.DayLinear,
-                  n && _e.Today,
-                  !e.appsToday?.length && _e.Empty,
+                className: (0, _e.A)(
+                  ye.DayLinear,
+                  n && ye.Today,
+                  !e.appsToday?.length && ye.Empty,
                 ),
               },
-              r.createElement(ge.Z, { className: _e.DayTitle }, t),
+              r.createElement(Se.Z, { className: ye.DayTitle }, t),
               e.appsToday?.length &&
                 r.createElement(
-                  ge.Z,
-                  { className: _e.LinearDayAppList },
+                  Se.Z,
+                  { className: ye.LinearDayAppList },
                   e.appsToday?.map((e) =>
                     r.createElement(
-                      ge.Z,
-                      { key: e.appid, className: _e.LinearCalendarAppEntry },
-                      r.createElement(me.W, {
+                      Se.Z,
+                      { key: e.appid, className: ye.LinearCalendarAppEntry },
+                      r.createElement(ue.W, {
                         capsule: { id: e.appid },
                         imageType: "library",
                         nWidthMultiplier: 2,
@@ -4974,10 +4978,10 @@
                 ),
             );
       }
-      const be = () => {
+      const we = () => {
         const [e, t] = r.useState(void 0),
           [a, s] = r.useState([]),
-          { data: n } = (0, ie.Fv)(he.TS.LANGUAGE),
+          { data: n } = (0, ce.Fv)(fe.TS.LANGUAGE),
           [i, o] = r.useState(0),
           [l, c] = r.useState(""),
           [m, p] = r.useState(void 0),
@@ -4993,10 +4997,10 @@
           );
         r.useEffect(() => {
           (async () => {
-            const e = { tag: i, sessionid: he.TS.SESSIONID };
+            const e = { tag: i, sessionid: fe.TS.SESSIONID };
             try {
-              const a = await le().get(
-                `${he.TS.STORE_BASE_URL}personalcalendar/getrecommendations`,
+              const a = await pe().get(
+                `${fe.TS.STORE_BASE_URL}personalcalendar/getrecommendations`,
                 { params: e, timeout: 1e4 },
               );
               t(a.data.appReleasesByDay),
@@ -5025,29 +5029,29 @@
           if (
             (C.sort((e, t) => e.rank - t.rank),
             b.sort((e, t) => e.rank - t.rank),
-            !he.iA.logged_in)
+            !fe.iA.logged_in)
           )
             return r.createElement(
-              ge.Z,
-              { className: _e.App },
+              Se.Z,
+              { className: ye.App },
               r.createElement(
-                ge.Z,
-                { className: _e.Login },
+                Se.Z,
+                { className: ye.Login },
                 r.createElement(
-                  ge.Z,
-                  { className: _e.Text },
-                  (0, ue.we)("#LoginText"),
+                  Se.Z,
+                  { className: ye.Text },
+                  (0, ge.we)("#LoginText"),
                 ),
                 r.createElement(
-                  ge.Z,
+                  Se.Z,
                   {
-                    className: (0, de.A)(
+                    className: (0, _e.A)(
                       "btn_green_white_innerfade",
                       " btn_medium",
                     ),
-                    onClick: ce.vg,
+                    onClick: de.vg,
                   },
-                  r.createElement("span", null, (0, ue.we)("#LoginButton")),
+                  r.createElement("span", null, (0, ge.we)("#LoginButton")),
                 ),
               ),
             );
@@ -5064,7 +5068,7 @@
           }
         }
         return r.createElement(
-          pe.Ay,
+          he.Ay,
           {
             controller: "personalcalendar",
             method: "default",
@@ -5074,34 +5078,34 @@
             f,
             null,
             r.createElement(
-              ge.Z,
-              { className: _e.PersonalCalendarApp },
+              Se.Z,
+              { className: ye.PersonalCalendarApp },
               r.createElement(
-                ge.Z,
-                { className: _e.PersonalCalendarContainer },
+                Se.Z,
+                { className: ye.PersonalCalendarContainer },
                 r.createElement(
-                  ge.Z,
-                  { className: _e.PersonalCalendarHeader },
+                  Se.Z,
+                  { className: ye.PersonalCalendarHeader },
                   r.createElement(
-                    ge.Z,
-                    { className: _e.PersonalCalendarTitle },
-                    (0, ue.we)("#PersonalCalendar_Title"),
+                    Se.Z,
+                    { className: ye.PersonalCalendarTitle },
+                    (0, ge.we)("#PersonalCalendar_Title"),
                   ),
                   r.createElement(
-                    ge.Z,
-                    { className: _e.PersonalCalendarDescription },
-                    (0, ue.we)("#PersonalCalendar_Description", m),
+                    Se.Z,
+                    { className: ye.PersonalCalendarDescription },
+                    (0, ge.we)("#PersonalCalendar_Description", m),
                   ),
                 ),
-                !he.iA.steamid &&
+                !fe.iA.steamid &&
                   r.createElement(
-                    ge.Z,
-                    { className: _e.PersonalCalendarLoginPrompt },
-                    (0, ue.we)("#PersonalCalendar_LoginPrompt"),
+                    Se.Z,
+                    { className: ye.PersonalCalendarLoginPrompt },
+                    (0, ge.we)("#PersonalCalendar_LoginPrompt"),
                     r.createElement(
                       "button",
-                      { onClick: ce.vg, className: _e.LoginButton },
-                      (0, ue.we)("#Login_SignIn"),
+                      { onClick: de.vg, className: ye.LoginButton },
+                      (0, ge.we)("#Login_SignIn"),
                     ),
                   ),
                 e &&
@@ -5109,17 +5113,17 @@
                     r.Fragment,
                     null,
                     r.createElement(
-                      ge.Z,
-                      { className: _e.Options },
+                      Se.Z,
+                      { className: ye.Options },
                       r.createElement(
-                        ge.Z,
-                        { className: _e.TagSelector },
+                        Se.Z,
+                        { className: ye.TagSelector },
                         r.createElement(
-                          ge.Z,
-                          { className: _e.Title },
-                          (0, ue.we)("#PersonalCalendar_TagSelector"),
+                          Se.Z,
+                          { className: ye.Title },
+                          (0, ge.we)("#PersonalCalendar_TagSelector"),
                         ),
-                        r.createElement(re, {
+                        r.createElement(ie, {
                           suggestions: S,
                           onSuggestionSelected: (e) =>
                             ((e) => {
@@ -5136,21 +5140,21 @@
                     ),
                     C.length > 0 &&
                       r.createElement(
-                        ge.Z,
-                        { className: _e.PersonalCalendarSection },
+                        Se.Z,
+                        { className: ye.PersonalCalendarSection },
                         r.createElement(
-                          ge.Z,
-                          { className: _e.SectionHeader },
-                          (0, ue.we)("#PersonalCalendar_LastMonthGames"),
+                          Se.Z,
+                          { className: ye.SectionHeader },
+                          (0, ge.we)("#PersonalCalendar_LastMonthGames"),
                         ),
                         r.createElement(
-                          ge.Z,
-                          { className: (0, de.A)(_e.GameList, _e.Month) },
+                          Se.Z,
+                          { className: (0, _e.A)(ye.GameList, ye.Month) },
                           C.slice(0, 16).map((e) =>
                             r.createElement(
-                              ge.Z,
-                              { key: e.appid, className: _e.AppEntry },
-                              r.createElement(me.W, {
+                              Se.Z,
+                              { key: e.appid, className: ye.AppEntry },
+                              r.createElement(ue.W, {
                                 capsule: { id: e.appid },
                                 imageType: "header",
                               }),
@@ -5160,23 +5164,23 @@
                       ),
                     b.length > 0 &&
                       r.createElement(
-                        ge.Z,
-                        { className: _e.PersonalCalendarSection },
+                        Se.Z,
+                        { className: ye.PersonalCalendarSection },
                         r.createElement(
-                          ge.Z,
-                          { className: _e.SectionHeader },
-                          (0, ue.we)("#PersonalCalendar_LastWeekGames"),
+                          Se.Z,
+                          { className: ye.SectionHeader },
+                          (0, ge.we)("#PersonalCalendar_LastWeekGames"),
                         ),
                         r.createElement(
-                          ge.Z,
-                          { className: (0, de.A)(_e.GameList, _e.Week) },
+                          Se.Z,
+                          { className: (0, _e.A)(ye.GameList, ye.Week) },
                           b
                             .slice(0, 10)
                             .map((e) =>
                               r.createElement(
-                                ge.Z,
-                                { key: e.appid, className: _e.AppEntry },
-                                r.createElement(me.W, {
+                                Se.Z,
+                                { key: e.appid, className: ye.AppEntry },
+                                r.createElement(ue.W, {
                                   capsule: { id: e.appid },
                                   imageType: "header",
                                 }),
@@ -5185,30 +5189,30 @@
                         ),
                       ),
                     r.createElement(
-                      ge.Z,
+                      Se.Z,
                       {
-                        className: (0, de.A)(
-                          _e.PersonalCalendarSection,
-                          _e.Calendar,
+                        className: (0, _e.A)(
+                          ye.PersonalCalendarSection,
+                          ye.Calendar,
                         ),
                       },
                       r.createElement(
-                        ge.Z,
-                        { className: _e.SectionHeader },
-                        (0, ue.we)("#PersonalCalendar_Upcoming"),
+                        Se.Z,
+                        { className: ye.SectionHeader },
+                        (0, ge.we)("#PersonalCalendar_Upcoming"),
                       ),
                       r.createElement(
-                        ge.Z,
-                        { className: _e.Week },
+                        Se.Z,
+                        { className: ye.Week },
                         a[0].map((e) =>
-                          r.createElement(fe, {
+                          r.createElement(Ee, {
                             key: `WeekHeader_${e}`,
                             timestamp: e,
                           }),
                         ),
                       ),
                       a.map((t, a) =>
-                        r.createElement(ye, {
+                        r.createElement(Ce, {
                           key: `Week_${a}`,
                           dayTimestamps: t,
                           appReleasesByDay: e,
@@ -5218,29 +5222,29 @@
                       ),
                       9999 != h &&
                         r.createElement(
-                          ge.Z,
+                          Se.Z,
                           {
-                            className: _e.ShowAllButton,
+                            className: ye.ShowAllButton,
                             onClick: () => _(9999),
                           },
-                          (0, ue.we)("#PersonalCalendar_ShowAll"),
+                          (0, ge.we)("#PersonalCalendar_ShowAll"),
                         ),
                     ),
                     r.createElement(
-                      ge.Z,
+                      Se.Z,
                       {
-                        className: (0, de.A)(
-                          _e.PersonalCalendarSection,
-                          _e.LinearCalendar,
+                        className: (0, _e.A)(
+                          ye.PersonalCalendarSection,
+                          ye.LinearCalendar,
                         ),
                       },
                       r.createElement(
-                        ge.Z,
-                        { className: _e.SectionHeader },
-                        (0, ue.we)("#PersonalCalendar_Upcoming"),
+                        Se.Z,
+                        { className: ye.SectionHeader },
+                        (0, ge.we)("#PersonalCalendar_Upcoming"),
                       ),
                       a.map((t, a) =>
-                        r.createElement(Se, {
+                        r.createElement(be, {
                           key: `WeekLinear_${a}`,
                           dayTimestamps: t,
                           appReleasesByDay: e,

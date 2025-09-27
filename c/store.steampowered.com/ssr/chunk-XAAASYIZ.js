@@ -104,181 +104,6 @@ function _(_) {
     }),
   });
 }
-var _ = _(_(), 1),
-  _ = _(_(), 1);
-var _ = _(_(), 1);
-var _ = "FbRIoYoNi9g-";
-var _ = "vnGo6vvKWMk-";
-var _ = "kCO5XYi3veo-";
-var _ = "Ca4SW9HC3ME-";
-var _ = "P0JO-Sl0erw-";
-var _ = _(_(), 1);
-async function _(_, _) {
-  let _ = new FormData();
-  _.set("language", _);
-  let _ = await fetch(_, {
-    method: "POST",
-    credentials: "same-origin",
-    body: _,
-  });
-  if (!_._) throw _;
-}
-function _(_) {
-  let {
-      open: _,
-      menuAction: _,
-      changeLanguagePath: _,
-      bLoggedIn: _,
-      bSkipLanguagePrefs: _,
-      onDismiss: _,
-    } = _,
-    [_, _] = (0, _.useState)(!1),
-    _ = (0, _.useRef)(null);
-  (0, _.useEffect)(() => {
-    _ ? _.current?.showModal() : _.current?.close();
-  }, [_]);
-  async function _(_) {
-    _(!0);
-    try {
-      await _(_, _);
-    } catch (_) {
-      console.error(_), _(!1);
-      return;
-    }
-    _ && !_
-      ? (location.href = _.STORE_BASE_URL + "account/languagepreferences/")
-      : _.href
-        ? (location.href = _.href)
-        : location.reload();
-  }
-  return (0, _.jsx)("dialog", {
-    ref: _,
-    className: _,
-    onMouseDown: (_) => _.target === _.current && _(),
-    children: (0, _.jsxs)("div", {
-      children: [
-        (0, _.jsx)("hr", {
-          className: _,
-        }),
-        (0, _.jsxs)("form", {
-          method: "dialog",
-          className: _,
-          onSubmit: (_) => _(_.target.elements.namedItem("language")?.value),
-          children: [
-            (0, _.jsx)("select", {
-              disabled: _,
-              name: "language",
-              onChange: (_) => _(_.target.value),
-              defaultValue: _().strLanguage,
-              children: _.menuAction.children?.map((_) =>
-                (0, _.jsx)(
-                  "option",
-                  {
-                    value: _.action_parameters?.language,
-                    children: _.label,
-                  },
-                  _.label,
-                ),
-              ),
-            }),
-            (0, _.jsx)("div", {
-              className: _,
-              children: (0, _.jsx)("input", {
-                type: "submit",
-                value: "OK",
-                className: _,
-              }),
-            }),
-          ],
-        }),
-      ],
-    }),
-  });
-}
-var _ = "h3Jy-1Il1os-";
-var _ = "HOrB6lehQpg-";
-var _ = "_7iCcob-JJ4g-";
-var _ = "QYT54GHN-rI-";
-var _ = "_79DIT7RUQ5g-";
-var _ = "Hxi-pnf9Xlw-";
-var _ = "TwsehSqoph8-";
-var _ = "cQPGTl-Lp-0-";
-var _ = "rzUmQa-ty1I-";
-var _ = "_2CYMhC951F4-";
-var _ = "h8dQ-Uyh4L0-";
-var _ = "NzGUCXVXDcA-";
-var _ = "L09rGTMfR9c-";
-var _ = "./global_header_arabic-XXXXXXXX.json";
-var _ = "./global_header_brazilian-XXXXXXXX.json";
-var _ = "./global_header_bulgarian-XXXXXXXX.json";
-var _ = "./global_header_czech-XXXXXXXX.json";
-var _ = "./global_header_danish-XXXXXXXX.json";
-var _ = "./global_header_dutch-XXXXXXXX.json";
-var _ = "./global_header_english-XXXXXXXX.json";
-var _ = "./global_header_finnish-XXXXXXXX.json";
-var _ = "./global_header_french-XXXXXXXX.json";
-var _ = "./global_header_german-XXXXXXXX.json";
-var _ = "./global_header_greek-XXXXXXXX.json";
-var _ = "./global_header_hungarian-XXXXXXXX.json";
-var _ = "./global_header_indonesian-XXXXXXXX.json";
-var _ = "./global_header_italian-XXXXXXXX.json";
-var _ = "./global_header_japanese-XXXXXXXX.json";
-var _ = "./global_header_koreana-XXXXXXXX.json";
-var _ = "./global_header_latam-XXXXXXXX.json";
-var _ = "./global_header_norwegian-XXXXXXXX.json";
-var _ = "./global_header_polish-XXXXXXXX.json";
-var _ = "./global_header_portuguese-XXXXXXXX.json";
-var _ = "./global_header_romanian-XXXXXXXX.json";
-var _ = "./global_header_russian-XXXXXXXX.json";
-var _ = "./global_header_sc_schinese-XXXXXXXX.json";
-var _ = "./global_header_schinese-XXXXXXXX.json";
-var _ = "./global_header_spanish-XXXXXXXX.json";
-var _ = "./global_header_swedish-XXXXXXXX.json";
-var _ = "./global_header_tchinese-XXXXXXXX.json";
-var _ = "./global_header_thai-XXXXXXXX.json";
-var _ = "./global_header_turkish-XXXXXXXX.json";
-var _ = "./global_header_ukrainian-XXXXXXXX.json";
-var _ = "./global_header_vietnamese-XXXXXXXX.json";
-var _ = {};
-_.arabic = _;
-_.brazilian = _;
-_.bulgarian = _;
-_.czech = _;
-_.danish = _;
-_.dutch = _;
-_.english = _;
-_.finnish = _;
-_.french = _;
-_.german = _;
-_.greek = _;
-_.hungarian = _;
-_.indonesian = _;
-_.italian = _;
-_.japanese = _;
-_.koreana = _;
-_.latam = _;
-_.norwegian = _;
-_.polish = _;
-_.portuguese = _;
-_.romanian = _;
-_.russian = _;
-_.sc_schinese = _;
-_.schinese = _;
-_.spanish = _;
-_.swedish = _;
-_.tchinese = _;
-_.thai = _;
-_.turkish = _;
-_.ukrainian = _;
-_.vietnamese = _;
-async function _(_) {
-  if (_[_]) return (await fetch(new URL(_[_], import.meta.url))).json();
-}
-var _ = _(_);
-function _(_ = "/logout/") {
-  let _ = document.createElement("form");
-  (_.action = _), (_.method = "POST"), document.body.appendChild(_), _.submit();
-}
 var _ = _(_());
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
@@ -2069,6 +1894,181 @@ function _() {
   let _ = _();
   return _(_(_));
 }
+var _ = _(_(), 1),
+  _ = _(_(), 1);
+var _ = _(_(), 1);
+var _ = "FbRIoYoNi9g-";
+var _ = "vnGo6vvKWMk-";
+var _ = "kCO5XYi3veo-";
+var _ = "Ca4SW9HC3ME-";
+var _ = "P0JO-Sl0erw-";
+var _ = _(_(), 1);
+async function _(_, _) {
+  let _ = new FormData();
+  _.set("language", _);
+  let _ = await fetch(_, {
+    method: "POST",
+    credentials: "same-origin",
+    body: _,
+  });
+  if (!_._) throw _;
+}
+function _(_) {
+  let {
+      open: _,
+      menuAction: _,
+      changeLanguagePath: _,
+      bLoggedIn: _,
+      bSkipLanguagePrefs: _,
+      onDismiss: _,
+    } = _,
+    [_, _] = (0, _.useState)(!1),
+    _ = (0, _.useRef)(null);
+  (0, _.useEffect)(() => {
+    _ ? _.current?.showModal() : _.current?.close();
+  }, [_]);
+  async function _(_) {
+    _(!0);
+    try {
+      await _(_, _);
+    } catch (_) {
+      console.error(_), _(!1);
+      return;
+    }
+    _ && !_
+      ? (location.href = _.STORE_BASE_URL + "account/languagepreferences/")
+      : _.href
+        ? (location.href = _.href)
+        : location.reload();
+  }
+  return (0, _.jsx)("dialog", {
+    ref: _,
+    className: _,
+    onMouseDown: (_) => _.target === _.current && _(),
+    children: (0, _.jsxs)("div", {
+      children: [
+        (0, _.jsx)("hr", {
+          className: _,
+        }),
+        (0, _.jsxs)("form", {
+          method: "dialog",
+          className: _,
+          onSubmit: (_) => _(_.target.elements.namedItem("language")?.value),
+          children: [
+            (0, _.jsx)("select", {
+              disabled: _,
+              name: "language",
+              onChange: (_) => _(_.target.value),
+              defaultValue: _().strLanguage,
+              children: _.menuAction.children?.map((_) =>
+                (0, _.jsx)(
+                  "option",
+                  {
+                    value: _.action_parameters?.language,
+                    children: _.label,
+                  },
+                  _.label,
+                ),
+              ),
+            }),
+            (0, _.jsx)("div", {
+              className: _,
+              children: (0, _.jsx)("input", {
+                type: "submit",
+                value: "OK",
+                className: _,
+              }),
+            }),
+          ],
+        }),
+      ],
+    }),
+  });
+}
+var _ = "h3Jy-1Il1os-";
+var _ = "HOrB6lehQpg-";
+var _ = "_7iCcob-JJ4g-";
+var _ = "QYT54GHN-rI-";
+var _ = "_79DIT7RUQ5g-";
+var _ = "Hxi-pnf9Xlw-";
+var _ = "TwsehSqoph8-";
+var _ = "cQPGTl-Lp-0-";
+var _ = "rzUmQa-ty1I-";
+var _ = "_2CYMhC951F4-";
+var _ = "h8dQ-Uyh4L0-";
+var _ = "NzGUCXVXDcA-";
+var _ = "L09rGTMfR9c-";
+var _ = "./global_header_arabic-XXXXXXXX.json";
+var _ = "./global_header_brazilian-XXXXXXXX.json";
+var _ = "./global_header_bulgarian-XXXXXXXX.json";
+var _ = "./global_header_czech-XXXXXXXX.json";
+var _ = "./global_header_danish-XXXXXXXX.json";
+var _ = "./global_header_dutch-XXXXXXXX.json";
+var _ = "./global_header_english-XXXXXXXX.json";
+var _ = "./global_header_finnish-XXXXXXXX.json";
+var _ = "./global_header_french-XXXXXXXX.json";
+var _ = "./global_header_german-XXXXXXXX.json";
+var _ = "./global_header_greek-XXXXXXXX.json";
+var _ = "./global_header_hungarian-XXXXXXXX.json";
+var _ = "./global_header_indonesian-XXXXXXXX.json";
+var _ = "./global_header_italian-XXXXXXXX.json";
+var _ = "./global_header_japanese-XXXXXXXX.json";
+var _ = "./global_header_koreana-XXXXXXXX.json";
+var _ = "./global_header_latam-XXXXXXXX.json";
+var _ = "./global_header_norwegian-XXXXXXXX.json";
+var _ = "./global_header_polish-XXXXXXXX.json";
+var _ = "./global_header_portuguese-XXXXXXXX.json";
+var _ = "./global_header_romanian-XXXXXXXX.json";
+var _ = "./global_header_russian-XXXXXXXX.json";
+var _ = "./global_header_sc_schinese-XXXXXXXX.json";
+var _ = "./global_header_schinese-XXXXXXXX.json";
+var _ = "./global_header_spanish-XXXXXXXX.json";
+var _ = "./global_header_swedish-XXXXXXXX.json";
+var _ = "./global_header_tchinese-XXXXXXXX.json";
+var _ = "./global_header_thai-XXXXXXXX.json";
+var _ = "./global_header_turkish-XXXXXXXX.json";
+var _ = "./global_header_ukrainian-XXXXXXXX.json";
+var _ = "./global_header_vietnamese-XXXXXXXX.json";
+var _ = {};
+_.arabic = _;
+_.brazilian = _;
+_.bulgarian = _;
+_.czech = _;
+_.danish = _;
+_.dutch = _;
+_.english = _;
+_.finnish = _;
+_.french = _;
+_.german = _;
+_.greek = _;
+_.hungarian = _;
+_.indonesian = _;
+_.italian = _;
+_.japanese = _;
+_.koreana = _;
+_.latam = _;
+_.norwegian = _;
+_.polish = _;
+_.portuguese = _;
+_.romanian = _;
+_.russian = _;
+_.sc_schinese = _;
+_.schinese = _;
+_.spanish = _;
+_.swedish = _;
+_.tchinese = _;
+_.thai = _;
+_.turkish = _;
+_.ukrainian = _;
+_.vietnamese = _;
+async function _(_) {
+  if (_[_]) return (await fetch(new URL(_[_], import.meta.url))).json();
+}
+var _ = _(_);
+function _(_ = "/logout/") {
+  let _ = document.createElement("form");
+  (_.action = _), (_.method = "POST"), document.body.appendChild(_), _.submit();
+}
 var _ = _(_(), 1);
 function _(_) {
   let { action: _ } = _,
@@ -2759,7 +2759,7 @@ function _(_) {
           _.current?.cancel(),
           (_.current = _.current.animate(
             {
-              transform: ["translateX(-280px)", "translateX(0)"],
+              transform: ["translateX(var(--closedX))", "translateX(0)"],
             },
             {
               duration: 250,
@@ -2771,7 +2771,7 @@ function _(_) {
           (_.current?.cancel(),
           (_.current = _.current.animate(
             {
-              transform: ["translateX(0)", "translateX(-280px)"],
+              transform: ["translateX(0)", "translateX(var(--closedX))"],
             },
             {
               duration: 250,
@@ -4342,6 +4342,7 @@ async function _(_, _) {
 var _ = class _ {
     key;
     static sm_lastKey = 0;
+    ModalClosedCallback = new _();
     constructor() {
       this.key = `Modal_${_.sm_lastKey++}`;
     }
@@ -4468,7 +4469,9 @@ var _ = class {
     }
     RemoveModal(_) {
       let _ = this.m_rgModals.indexOf(_);
-      _ != -1 && this.m_rgModals.splice(_, 1), this.OnModalCountChanged("hide");
+      _ != -1 && this.m_rgModals.splice(_, 1),
+        _.ModalClosedCallback.Dispatch(),
+        this.OnModalCountChanged("hide");
     }
     ShowModalInternal(_) {
       _(
@@ -4484,6 +4487,11 @@ var _ = class {
         Update: (_) => {
           _.UpdateModal(_);
         },
+        ClosedPromise: new Promise((_) => {
+          let _ = _.ModalClosedCallback.Register(() => {
+            _(), _.Unregister();
+          });
+        }),
       };
       return this.OnModalCountChanged("show"), _;
     }
@@ -4548,6 +4556,7 @@ var _ = class {
             this.m_OnLegacyPopupModalCountChanged.Dispatch(
               this.m_rgLegacyPopupModals.length,
             ),
+            _.ModalClosedCallback.Dispatch(),
             _.fnOnClose && _.fnOnClose();
         },
         _ = new _(
@@ -4572,6 +4581,11 @@ var _ = class {
           Update: (_) => {
             _.UpdateModal(_);
           },
+          ClosedPromise: new Promise((_) => {
+            let _ = _.ModalClosedCallback.Register(() => {
+              _(), _.Unregister();
+            });
+          }),
         }
       );
     }

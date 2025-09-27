@@ -10540,35 +10540,10 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return (0, _._)(
-          (_) => {
-            if (!_) return;
-            const _ = _(_.ownerDocument.defaultView, (_) => {
-              _(_[0]);
-            });
-            return _.observe(_), () => _.unobserve(_);
-          },
-          [_, _],
-        );
-      }
-      function _(_, _) {
-        const _ = _.useRef(void 0);
-        return (function (_, _) {
-          return _(
-            _,
-            _.useCallback((_, _) => new _.IntersectionObserver(_, _), [_]),
-          );
-        })((_) => {
-          !_.current && _.isIntersecting && _.onEnter?.(_),
-            _.current && !_.isIntersecting && _.onLeave?.(_),
-            _.onIntersectionChange?.(_),
-            (_.current = _.isIntersecting);
-        }, _);
-      }
       function _(_) {
-        const _ = _(_, _.options);
+        const _ = (0, _._)(_, _.options);
         return _.createElement("span", {
           ref: _,
           style: {
@@ -10583,7 +10558,7 @@
             options: _,
             ..._
           } = _,
-          _ = _(_, _.options),
+          _ = (0, _._)(_, _.options),
           _ = (0, _._)(_, _);
         return _.createElement("div", {
           ref: _,

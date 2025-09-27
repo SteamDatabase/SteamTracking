@@ -2616,7 +2616,9 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 
 .tab_item_details span.platform_img {
 	vertical-align: bottom;
-	opacity: 0.3;
+	opacity: 0.5;
+	width: 16px;
+	height: 16px;
 }
 
 
@@ -2789,10 +2791,6 @@ img.category_icon {
 /*
  * platforms
  */
-
-.platform_img {
-	margin-left: 4px;
-}
 
 span.platform_img {
 	display: inline-block;

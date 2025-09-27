@@ -4,7 +4,7 @@
   [9790],
   {
     14469: function (t, e, r) {
-      var n;
+      var n; /*! decimal.js-light v2.5.1 https://github.com/MikeMcl/decimal.js-light/LICENCE */
       !(function (o) {
         "use strict";
         var i,
@@ -1899,7 +1899,15 @@
         y = Symbol.for("react.memo"),
         d = Symbol.for("react.lazy"),
         v = Symbol.for("react.offscreen");
-      function m(t) {
+      /**
+       * @license React
+       * react-is.production.min.js
+       *
+       * Copyright (c) Facebook, Inc. and its affiliates.
+       *
+       * This source code is licensed under the MIT license found in the
+       * LICENSE file in the root directory of this source tree.
+       */ function m(t) {
         if ("object" == typeof t && null !== t) {
           var e = t.$$typeof;
           switch (e) {

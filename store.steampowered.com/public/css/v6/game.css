@@ -996,6 +996,9 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 
 .game_area_purchase_game .game_area_purchase_platform {
 	float: right;
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
 }
 
 .game_area_purchase_game h1,
@@ -2106,9 +2109,8 @@ body.v6 .game_area_description h2.bb_tag strong {
 }
 
 div.communitylink_achievement, a.communitylink_achievement {
-	width: 64px;
+	width: calc( 20% - 4px );
 	aspect-ratio: 1/1;
-	flex: 1;
 }
 
 img.communitylink_achievement {
@@ -2116,7 +2118,8 @@ img.communitylink_achievement {
 	width: 100%;
 }
 
-a.communitylink_achievement.communitylink_achivement_plusmore {
+a.communitylink_achievement.communitylink_achivement_plusmore,
+a.communitylink_points_shop_item.communitylink_achivement_plusmore {
     background-color: rgba( 103, 193, 245, 0.2 );
     border-radius: 1px;
 
@@ -2134,7 +2137,8 @@ a.communitylink_achievement.communitylink_achivement_plusmore {
     line-height: 14px;
 }
 
-a.communitylink_achievement.communitylink_achivement_plusmore:hover {
+a.communitylink_achievement.communitylink_achivement_plusmore:hover,
+a.communitylink_points_shop_item.communitylink_achivement_plusmore:hover {
     color: #ffffff;
     text-decoration: none;
     background: #67c1f5; /* Old browsers */
@@ -2148,22 +2152,25 @@ a.communitylink_achievement.communitylink_achivement_plusmore:hover {
 }
 
 .communitylink_points_shop_images {
+	padding: 4px 0;
 	display: flex;
-	padding: 4px 0px 4px 0px;
+	gap: 4px;
+	justify-content: space-between;
 	overflow: hidden;
 	margin-bottom: 5px;
 }
 
 .communitylink_points_shop_item {
-	width: 64px;
-	height: 64px;
+	display: flex;
+	width: calc( 20% - 4px );
+	aspect-ratio: 1/1;
 	background-color: #000;
-	margin-right: 4px;
 }
-.communitylink_points_shop_item > a > img {
-	width: 64px;
+.communitylink_points_shop_item img {
+	width: 100%;
+	aspect-ratio: 1/1;
 }
-.communitylink_points_shop_item > a > img.profile_background {
+.communitylink_points_shop_item img.profile_background {
 	padding-top: 12px;
 }
 
@@ -2498,6 +2505,12 @@ a.friend_block_holder:hover {
 	{
 		float: none;
 		width: auto;
+	}
+
+	html.responsive div.communitylink_achievement,
+	html.responsive .communitylink_points_shop_item
+	{
+		width: calc( 20% - 4px );
 	}
 }
 

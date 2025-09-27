@@ -16192,13 +16192,18 @@
           n,
         );
       }
-      function l() {
-        const [e, t] = n.useState(!1);
+      function l(e) {
+        const [t, r] = n.useState(!1),
+          i = n.useRef(void 0);
         return [
-          e,
+          t,
           {
-            onMouseEnter: n.useCallback(() => t(!0), []),
-            onMouseLeave: n.useCallback(() => t(!1), []),
+            onMouseEnter: n.useCallback(() => {
+              r(!0), clearTimeout(i.current);
+            }, []),
+            onMouseLeave: n.useCallback(() => {
+              e ? (i.current = setTimeout(() => r(!1), e)) : r(!1);
+            }, [e]),
           },
         ];
       }

@@ -175,6 +175,7 @@
         InDeprecatedLink: "sakeS4kMEd2FGp4Da4Xrt",
         ExtraAssetControlsContainer: "_3-tWPanUj6QJND7dPTlrgc",
         ExtraAssetControls: "_3LTnCSzSad_SJbC1nruDT8",
+        SmallImage: "_3AYhN4DOm37hwrJw5_EKNa",
         ImageLinkDisabledWarning: "_2oUv4hHSs2-8LXtBPcyRRy",
         TopBar: "_1WOD0JTMh8GPXMSA_p8BNb",
         TopBarContent: "_1nOxfVQISFWWwmO7v_u77O",
@@ -1046,7 +1047,7 @@
     },
     36225: (e, t, n) => {
       "use strict";
-      n.d(t, { AS: () => R, KZ: () => O, c$: () => K });
+      n.d(t, { AS: () => M, KZ: () => G, c$: () => W });
       var a = n(22837),
         r = n(62490),
         o = n(86927),
@@ -1077,8 +1078,10 @@
         N = n(56520),
         I = n(43104),
         x = n(53930),
-        L = n(83247);
-      function R(e) {
+        L = n(83247),
+        R = n(40236),
+        B = n(8871);
+      function M(e) {
         const {
             src: t,
             inLink: n,
@@ -1091,104 +1094,121 @@
             fnUpdateDocument: g,
             selected: E,
           } = e,
-          [C, f] = (0, o.OP)(),
-          [S, k, w] = (0, l.uD)(),
-          y = (0, u.FD)(),
-          P = d.useCallback(() => {
-            r(), w();
-          }, [r, w]),
-          T = d.useMemo(
-            () => y.find((e) => (0, c.q3)(e).toLowerCase() === t.toLowerCase()),
-            [t, y],
+          [C, f] = (0, o.OP)(250),
+          [S, k] = (0, o.OP)(250),
+          [w, y, P] = (0, l.uD)(),
+          T = (0, u.FD)(),
+          N = d.useCallback(() => {
+            r(), P();
+          }, [r, P]),
+          x = d.useMemo(
+            () => T.find((e) => (0, c.q3)(e).toLowerCase() === t.toLowerCase()),
+            [t, T],
           ),
-          N = T ? (0, c.q3)(T) : null,
-          { elLocalizedImageGroupDialog: x, elLocalizedImageGroupControl: L } =
-            B(T, m, r),
-          R = (0, i.Un)(),
-          O = (e) => {
+          L = x ? (0, c.q3)(x) : null,
+          { elLocalizedImageGroupDialog: M, elLocalizedImageGroupControl: G } =
+            O(x, m, r),
+          H = (0, i.Un)(),
+          K = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           };
-        let G;
-        if (T) {
-          const e = (0, c.IP)(T, p, m);
+        let z;
+        if (x) {
+          const e = (0, c.IP)(x, p, m);
           if (e) {
-            const t = (0, c.Bv)(T, m),
+            const t = (0, c.Bv)(x, m),
               n = (0, v.A)(I.ExtraAssetImg, E && I.Selected);
-            G =
+            z =
               1 == e.usage
                 ? d.createElement("video", {
-                    key: N,
+                    key: L,
                     className: n,
-                    src: (0, i.cn)(e.url, R),
-                    title: N,
+                    src: (0, i.cn)(e.url, H),
+                    title: L,
                     muted: !0,
                     loop: !0,
                     playsInline: !0,
                     autoPlay: !0,
-                    onClick: O,
+                    onClick: K,
                   })
                 : d.createElement("img", {
-                    key: N,
+                    key: L,
                     className: n,
-                    src: (0, i.cn)(e.url, R),
+                    src: (0, i.cn)(e.url, H),
                     alt: t,
-                    title: N,
+                    title: L,
                   });
           } else
-            G = d.createElement(
+            z = d.createElement(
               "span",
               { className: I.ExtraAssetError },
               (0, D.we)("#StoreAdmin_GameDescription_MissingImageLanguage", t),
             );
         } else
-          G = d.createElement(
+          z = d.createElement(
             "span",
             { className: I.ExtraAssetError },
             (0, D.we)("#StoreAdmin_GameDescription_MissingImage", t),
           );
+        const [W, V] = d.useState(0),
+          [$, j] = d.useState(0),
+          q = d.useRef(void 0),
+          Y = (0, R.wY)((e) =>
+            V(q.current.offsetLeft + e.borderBoxSize[0].inlineSize),
+          ),
+          X = (0, B.Ue)(q, Y),
+          Q = (0, R.wY)((e) => j(e.borderBoxSize[0].inlineSize)),
+          Z = $ + 16 >= W,
+          J = Z ? W : void 0;
         return d.createElement(
           d.Fragment,
           null,
-          S &&
-            d.createElement(F, {
-              editAsset: N,
+          w &&
+            d.createElement(U, {
+              editAsset: L,
               bReplace: !0,
               onAssetSelected: (e, t) => {
                 if (t) {
                   const t = new Map();
                   for (const [n, a] of _) {
-                    const r = new RegExp(`${N}(?!\\w)`, "g"),
+                    const r = new RegExp(`${L}(?!\\w)`, "g"),
                       o = a.Value.replace(r, `${e}`);
                     t.set(n, o);
                   }
                   g(t);
                 } else a({ src: e });
               },
-              hideModal: P,
+              hideModal: N,
             }),
-          x,
+          M,
           d.createElement(
-            "span",
+            "div",
             {
-              className: (0, v.A)(
-                I.ExtraAssetImgTag,
-                I.ExtraAssetControlsContainer,
-                C && I.Hovered,
-                n && I.InDeprecatedLink,
-              ),
-              ...f,
+              ref: X,
+              className: (0, v.A)({
+                [I.ExtraAssetImgTag]: !0,
+                [I.ExtraAssetControlsContainer]: !0,
+                [I.Hovered]: C || S,
+                [I.InDeprecatedLink]: n,
+              }),
               title: "",
+              ...f,
             },
-            n && d.createElement(M, null),
+            n && d.createElement(F, null),
             d.createElement(
-              "span",
-              { className: I.ExtraAssetControls },
-              L,
+              "div",
+              {
+                ref: Q,
+                className: (0, v.A)(I.ExtraAssetControls, Z && I.SmallImage),
+                style: { left: J },
+                ...k,
+              },
+              G,
               d.createElement(
                 b.ff,
                 {
-                  onClick: k,
+                  onClick: y,
                   tooltip: (0, D.we)(
                     "#StoreAdmin_GameDescription_ReplaceImage",
                   ),
@@ -1204,11 +1224,11 @@
                 d.createElement(A.X, null),
               ),
             ),
-            G,
+            z,
           ),
         );
       }
-      function B(e, t, n) {
+      function O(e, t, n) {
         const [a, r, o] = (0, l.uD)(),
           s = d.useCallback(() => {
             n?.(), o();
@@ -1218,7 +1238,7 @@
           (0, c.pN)(e)
             ? ((i =
                 a &&
-                d.createElement(U, {
+                d.createElement(K, {
                   selectedAsset: e,
                   hideModal: s,
                   activeLanguage: t,
@@ -1247,7 +1267,7 @@
           { elLocalizedImageGroupDialog: i, elLocalizedImageGroupControl: u }
         );
       }
-      function M() {
+      function F() {
         return d.createElement(
           "span",
           { className: I.ImageLinkDisabledWarning },
@@ -1270,7 +1290,7 @@
           ),
         );
       }
-      function O(e) {
+      function G(e) {
         const { nodeType: t } = e,
           { view: n } = (0, b.wU)(),
           [a, r, o] = (0, l.uD)(),
@@ -1292,7 +1312,7 @@
         return d.createElement(
           d.Fragment,
           null,
-          a && d.createElement(F, { onAssetSelected: i, hideModal: s }),
+          a && d.createElement(U, { onAssetSelected: i, hideModal: s }),
           d.createElement(
             b.ff,
             {
@@ -1304,7 +1324,7 @@
           ),
         );
       }
-      function F(e) {
+      function U(e) {
         const {
             editAsset: t,
             bReplace: n,
@@ -1387,7 +1407,7 @@
                   o
                     .filter((e) => (0, c.q3)(e).includes(E))
                     .map((e) =>
-                      d.createElement(G, {
+                      d.createElement(H, {
                         key: (0, c.q3)(e),
                         extraAsset: e,
                         onSelectAsset: s,
@@ -1425,7 +1445,7 @@
           ),
         );
       }
-      function G(e) {
+      function H(e) {
         const {
             extraAsset: t,
             onSelectAsset: n,
@@ -1451,11 +1471,11 @@
               onClick: (e) => n(l),
               onDoubleClick: (e) => a(l),
             },
-            d.createElement(V, { extraAsset: t, controls: !1 }),
+            d.createElement(j, { extraAsset: t, controls: !1 }),
           )
         );
       }
-      function U(e) {
+      function K(e) {
         const { selectedAsset: t, activeLanguage: n, hideModal: a } = e;
         var r, o;
         if (
@@ -1494,11 +1514,11 @@
                 d.createElement(
                   _.nB,
                   null,
-                  d.createElement(z, { onlyExtraAsset: t }),
+                  d.createElement(V, { onlyExtraAsset: t }),
                   d.createElement(
                     g.tH,
                     null,
-                    d.createElement(H, { extraAsset: t, activeLanguage: n }),
+                    d.createElement(z, { extraAsset: t, activeLanguage: n }),
                   ),
                 ),
                 d.createElement(
@@ -1514,7 +1534,7 @@
             ),
           );
       }
-      function H(e) {
+      function z(e) {
         const { extraAsset: t, activeLanguage: n } = e,
           a = (0, c.wN)(t),
           r = (0, i.Un)(),
@@ -1529,7 +1549,7 @@
               "div",
               null,
               m &&
-                d.createElement($, {
+                d.createElement(q, {
                   extraAsset: t,
                   deleteLang: s,
                   hideModal: g,
@@ -1550,7 +1570,7 @@
             )
           : null;
       }
-      function K(e) {
+      function W(e) {
         const { asset_mtime: t, assets_list: n } = e,
           a = new Map(n),
           o = (0, u.FD)(),
@@ -1617,7 +1637,7 @@
                 !1 !== (await f({ strExtraAssetFileName: e, mapAltText: t })),
               isMutatePending: S,
               fnGetImage: (e, t) =>
-                d.createElement(V, {
+                d.createElement(j, {
                   extraAsset: m.get(e),
                   caption: !1,
                   controls: !1,
@@ -1647,7 +1667,7 @@
               "div",
               { className: I.ExtraAssetsGrid },
               o.map((e) =>
-                d.createElement(V, {
+                d.createElement(j, {
                   key: (0, c.q3)(e),
                   extraAsset: e,
                   primaryLanguage: g,
@@ -1656,16 +1676,16 @@
               ),
             ),
           ),
-          d.createElement(z, null),
+          d.createElement(V, null),
         );
       }
-      function z(e) {
+      function V(e) {
         const { onlyExtraAsset: t } = e,
           n = (0, u.Y7)(),
           a = (0, x.L)(),
           r = (0, u.FD)(),
           o = d.useMemo(() => r.filter(c.pN), [r]),
-          l = W(o);
+          l = $(o);
         d.useEffect(() => {
           const e = (e) => ({
             baseFilename: (0, c.K7)(e),
@@ -1676,7 +1696,7 @@
         }, [a, o, t, l]);
         const s = (function (e) {
             const t = d.useMemo(() => (e ? [e] : []), [e]),
-              n = W(t);
+              n = $(t);
             return n?.length > 0 ? n[0] : void 0;
           })(t),
           { rgRealmList: i } = (0, u.aJ)();
@@ -1720,7 +1740,7 @@
           )
         );
       }
-      function W(e) {
+      function $(e) {
         const [t, n] = d.useState(void 0),
           a = (0, i.Un)();
         return (
@@ -1737,7 +1757,7 @@
           t
         );
       }
-      function V(e) {
+      function j(e) {
         const {
             extraAsset: t,
             caption: n = !0,
@@ -1775,7 +1795,7 @@
             window.open((0, i.cn)(f[0]?.url, E));
           },
           { elLocalizedImageGroupDialog: k, elLocalizedImageGroupControl: w } =
-            B(t, null, null),
+            O(t, null, null),
           y = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
@@ -1816,7 +1836,7 @@
               ),
               title: C,
             },
-            p && d.createElement($, { extraAsset: t, hideModal: g }),
+            p && d.createElement(q, { extraAsset: t, hideModal: g }),
             a &&
               d.createElement(
                 "div",
@@ -1906,7 +1926,7 @@
           ),
         );
       }
-      function $(e) {
+      function q(e) {
         const { extraAsset: t, deleteLang: n, hideModal: r } = e,
           {
             mutate: o,

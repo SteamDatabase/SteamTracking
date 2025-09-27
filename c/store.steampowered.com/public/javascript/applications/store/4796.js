@@ -9,17 +9,14 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -99,6 +96,8 @@
             avatar_medium_url: _.avatar_medium_url,
             group_name: _.group_name,
             creator_page_bg_url: _.creator_page_bg_url,
+            curator_title: _.curator_title,
+            curator_description: _.curator_description,
             partner_events_enabled: _.partner_events_enabled,
           };
           0 != _.appid && this.m_mapAppIDToClanInfo.set(_.appid, _),

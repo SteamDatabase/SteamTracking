@@ -2174,7 +2174,6 @@
           r.e(6883),
           r.e(3846),
           r.e(9105),
-          r.e(8105),
           r.e(283),
           r.e(177),
           r.e(8396),
@@ -3177,7 +3176,7 @@
               a.createElement(
                 "div",
                 { className: y().AppBannerLinks },
-                Boolean(!u) &&
+                Boolean(!u && t) &&
                   a.createElement(
                     "div",
                     { className: y().HeaderWishlistButton },

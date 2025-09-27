@@ -9595,45 +9595,20 @@
           });
       })(i || (i = {}));
     },
-    75612: (e, t, r) => {
+    23338: (e, t, r) => {
       "use strict";
-      r.d(t, { Y: () => o, j: () => l });
+      r.d(t, { Y: () => n, j: () => o });
       var i = r(90626),
-        a = r(8871);
-      function s(e, t) {
-        return (0, a.QS)(
-          (r) => {
-            if (!r) return;
-            const i = t(r.ownerDocument.defaultView, (t) => {
-              e(t[0]);
-            });
-            return i.observe(r), () => i.unobserve(r);
-          },
-          [e, t],
-        );
-      }
-      function n(e, t) {
-        const r = i.useRef(void 0);
-        return (function (e, t) {
-          return s(
-            e,
-            i.useCallback((e, r) => new e.IntersectionObserver(r, t), [t]),
-          );
-        })((t) => {
-          !r.current && t.isIntersecting && e.onEnter?.(t),
-            r.current && !t.isIntersecting && e.onLeave?.(t),
-            e.onIntersectionChange?.(t),
-            (r.current = t.isIntersecting);
-        }, t);
-      }
-      function o(e) {
-        const t = n(e, e.options);
+        a = r(40236),
+        s = r(8871);
+      function n(e) {
+        const t = (0, a.OO)(e, e.options);
         return i.createElement("span", { ref: t, style: { fontSize: 0 } });
       }
-      const l = i.forwardRef(function (e, t) {
-        const { onLeave: r, onEnter: s, options: o, ...l } = e,
-          m = n(e, e.options),
-          c = (0, a.Ue)(m, t);
+      const o = i.forwardRef(function (e, t) {
+        const { onLeave: r, onEnter: n, options: o, ...l } = e,
+          m = (0, a.OO)(e, e.options),
+          c = (0, s.Ue)(m, t);
         return i.createElement("div", { ref: c, ...l });
       });
     },
@@ -13877,7 +13852,7 @@
         p = r(62490),
         B = r(73745),
         _ = r(61949),
-        y = r(75612);
+        y = r(23338);
       !(function (e) {
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),

@@ -39,8 +39,11 @@ function _(_) {
     [_, _] = (0, _.useMemo)(() => _(_), [_]),
     _ = (0, _.useCallback)(() => {
       if (!_.current || !_.current) return;
-      let _ = _.current.getBoundingClientRect();
-      _.current.style.setProperty("--parentWidth", `${_.width}px`),
+      let _ = _.current.getBoundingClientRect(),
+        _ = _,
+        _ = _.current.matches(":dir(rtl)");
+      _ && (_ === "left" ? (_ = "right") : _ === "right" && (_ = "left")),
+        _.current.style.setProperty("--parentWidth", `${_.width}px`),
         _.current.style.setProperty("--parentHeight", `${_.height}px`),
         _ ||
           (_ === "left"
@@ -56,8 +59,11 @@ function _(_) {
                 : ((_.current.style.left = `${_.right}px`),
                   (_.current.style.right = "unset"))
               : _ === void 0 &&
-                ((_.current.style.left = `${_.left}px`),
-                (_.current.style.right = "unset"))),
+                (_
+                  ? ((_.current.style.left = "unset"),
+                    (_.current.style.right = `${document.documentElement.clientWidth - _.right}px`))
+                  : ((_.current.style.left = `${_.left}px`),
+                    (_.current.style.right = "unset")))),
         _ ||
           (_ === "down"
             ? ((_.current.style.top = `${_.bottom}px`),

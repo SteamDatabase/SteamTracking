@@ -4689,18 +4689,6 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	background-image: url( '/public/images/v6/icon_steamplay_dark.png' );
 }
 
-.tab_item.focus .tab_item_details span.platform_img.win {
-	background-image: url( '/public/images/v6/icon_platform_win_dark.png?v=3' );
-}
-
-.tab_item.focus .tab_item_details span.platform_img.mac {
-	background-image: url( '/public/images/v6/icon_platform_mac_dark.png' );
-}
-
-.tab_item.focus .tab_item_details span.platform_img.linux {
-	background-image: url( '/public/images/v6/icon_platform_linux_dark.png' );
-}
-
 .tab_item.focus .tab_item_details span.platform_img.streamingvideo {
 	background-image: url( '/public/images/v6/icon_streamingvideo_v6_dark.png' );
 }
@@ -5853,6 +5841,7 @@ html.gpnav_active .maincap:focus-within
 	top: 0;
 	left: 0;
 	right: 0;
+	overflow: hidden;
 }
 
 .menu_takeover_background img {

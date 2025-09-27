@@ -116,7 +116,7 @@ function InitTabPreview()
 			{
 				var reviewSummary = rgData['review_summary'];
 				var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-html": reviewSummary['sReviewScoreTooltip'] } );
-				$elReviewData.append( $J('<div>', {'class': 'title'}).text('Overall user reviews:') );
+				$elReviewData.append( $J('<div>', {'class': 'title'}).text('Overall User Reviews') );
 				$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
 				if ( reviewSummary['reviewScore'] > 0 )
 				{

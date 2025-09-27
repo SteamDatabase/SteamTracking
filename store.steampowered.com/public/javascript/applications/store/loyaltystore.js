@@ -4447,6 +4447,8 @@
                               case 17:
                                 i =
                                   !t.item_image_large &&
+                                  //!data.item_movie_mp4 &&
+                                  //!data.item_movie_mp4_small &&
                                   !t.item_movie_webm &&
                                   !t.item_movie_webm_small;
                             }

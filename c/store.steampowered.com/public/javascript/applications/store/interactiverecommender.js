@@ -1669,12 +1669,14 @@
               document
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
-                ? _.shouldUseMicrotrailers() && _.microtrailer_webm
-                  ? ((_ = _.microtrailer_webm), (_ = !0), (_ = !1))
-                  : (_ = _.video_webm)
-                : _.shouldUseMicrotrailers() && _.microtrailer_mp4
-                  ? ((_ = _.microtrailer_mp4), (_ = !0), (_ = !1))
-                  : (_ = _.video_mp4),
+                ? ((_ = _.video_webm || ""),
+                  ((_.shouldUseMicrotrailers() && _.microtrailer_webm) ||
+                    0 == _.length) &&
+                    ((_ = _.microtrailer_webm || ""), (_ = !0), (_ = !1)))
+                : ((_ = _.video_mp4 || ""),
+                  ((_.shouldUseMicrotrailers() && _.microtrailer_mp4) ||
+                    0 == _.length) &&
+                    ((_ = _.microtrailer_mp4 || ""), (_ = !0), (_ = !1))),
               (_ = `-${_.discount_pct}%`),
               (_ = _.base_price),
               (_ = _ ? (0, _._)("#FreeToPlay") : _.discount_price),

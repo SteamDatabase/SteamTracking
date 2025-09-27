@@ -14578,7 +14578,7 @@
       }
       var Ta = r(56011),
         Ra = r(738),
-        Ia = r(75612);
+        Ia = r(23338);
       const Fa = {
         list: [
           { appid: 444090, url: "https://steam.tv/paladins" },

@@ -72,13 +72,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
-        Category: "_2YhOhoyYNbue9fEPMYPiq2",
-        Visible: "_2cpBClyttSkWAsgMArc0BM",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         MarketingMessagePage: "_1HVoKfdcaouK3kHKX2kH5t",
         MessageListPage: "_1N7O3VXbkpN2z55HsSDZsi",
         MessageListScroll: "_2RW7G8Bi-8k-29anQh8Ie8",
@@ -175,15 +168,6 @@
         TextBottom: "_3-KPIEC01O5ncvCQdfuTum",
         ButtonContainer: "_10sC9pDV-gUZWLDMtbWFpZ",
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      function _(..._) {
-        return _.join(" ");
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3714,7 +3698,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -3797,6 +3780,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3953,7 +3937,6 @@
                 ref: _,
                 name: __webpack_require__.GetName(),
                 trailer: _,
-                bUseMicroTrailer: !0,
                 bControls: !1,
                 bPlayVideo: !0,
                 startTime: _,
@@ -3962,8 +3945,8 @@
             ));
         }
         const _ = __webpack_require__.GetScreenshots(_);
-        return (
-          _.forEach((_, _) => {
+        if (
+          (_.forEach((_, _) => {
             if ((_ || _ > 0) && _.length < 3) {
               const _ = _(_, ".600x338").replace("http://", "https://"),
                 _ = _(_, ".800x600").replace("http://", "https://"),
@@ -4005,110 +3988,113 @@
                 );
             }
           }),
+          !(_ || (_ && 0 != _.length)))
+        )
+          return null;
+        const _ = _.slice(0, 3),
+          _ = Array.from({
+            length: Math.max(0, 3 - _.length),
+          });
+        return _.createElement(
+          _.Fragment,
+          null,
+          _,
           _.createElement(
-            _.Fragment,
-            null,
-            _,
+            "div",
+            {
+              className: _ || _().MainMediaCtn,
+            },
+            Boolean(_ && (-1 === _ || void 0 === _))
+              ? _.createElement(_.Fragment, null, _)
+              : _.createElement(_.Fragment, null, _[_]),
+          ),
+          Boolean(_.length > 0) &&
             _.createElement(
               "div",
               {
-                className: _ || _().MainMediaCtn,
+                className: _().ScreenshotThumbnailRow,
+                onMouseLeave: () => _(-1),
               },
-              Boolean(_ && (-1 === _ || void 0 === _))
-                ? _.createElement(_.Fragment, null, _)
-                : _.createElement(_.Fragment, null, _[_]),
-            ),
-            Boolean(_.length > 0) &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ScreenshotThumbnailRow,
-                  onMouseLeave: () => _(-1),
-                },
-                _,
+              _,
+              _.map((_, _) =>
+                _.createElement("div", {
+                  key: `app_${__webpack_require__?.GetAppID()}_${_}`,
+                  className: _().ThumbnailCtn,
+                }),
               ),
-          )
+            ),
         );
       }
-      const _ = (0, _.forwardRef)(
-        (
-          {
-            name: _,
-            trailer: _,
-            bControls: __webpack_require__,
-            bPlayVideo: _,
-            fnTogglePlayTrailer: _,
-            bUseMicroTrailer: _,
-            startTime: _,
-          },
-          _,
-        ) => {
-          const _ = (0, _._)();
-          let _ = _.GetTrailerMax();
-          return (
-            _ ? (_ = _.GetMicroTrailer()) : _ && (_ = _.GetTrailer480p()),
-            (0, _.useEffect)(() => {
-              const _ = _?.current;
-              if (_ > 0 && _) {
-                const _ = () => {
-                  _.currentTime = _;
-                };
-                return (
-                  _.addEventListener("loadedmetadata", _),
-                  () => {
-                    _.removeEventListener("loadedmetadata", _);
-                  }
-                );
+      function _(_) {
+        const {
+          ref: _,
+          name: __webpack_require__,
+          trailer: _,
+          bControls: _,
+          bPlayVideo: _,
+          fnTogglePlayTrailer: _,
+          startTime: _,
+        } = _;
+        let _ = _.GetMicroTrailer();
+        (0, _.useEffect)(() => {
+          const _ = _?.current;
+          if (_ > 0 && _) {
+            const _ = () => {
+              _.currentTime = _;
+            };
+            return (
+              _.addEventListener("loadedmetadata", _),
+              () => {
+                _.removeEventListener("loadedmetadata", _);
               }
-            }, [_, _]),
+            );
+          }
+        }, [_, _]);
+        let _ = (0, _._)(_().VideoLargeContainer, _ && _().videoPlaying);
+        return _.createElement(
+          "div",
+          {
+            className: _,
+            onClick: _,
+          },
+          _.createElement(_._, {
+            name: __webpack_require__,
+            trailerCategory: _.GetTrailerCategory(),
+            trailerDisplay: 1,
+            mouseOver: !1,
+          }),
+          Boolean(_) &&
+            _.createElement(
+              "video",
+              {
+                className: _().VideoLarge,
+                ref: _,
+                controls: _,
+                autoPlay: !0,
+                loop: !0,
+                muted: !0,
+                poster: _ > 0 ? void 0 : _.GetScreenshot(),
+              },
+              _.createElement("source", {
+                src: _.strWebMURL,
+                type: "video/webm",
+              }),
+              Boolean(!_._.IN_CLIENT) &&
+                _.createElement("source", {
+                  src: _.strMP4URL,
+                  type: "video/mp4",
+                }),
+            ),
+          _ &&
             _.createElement(
               "div",
               {
-                className: (0, _._)({
-                  [_().VideoLargeContainer]: !0,
-                  [_().videoPlaying]: _,
-                }),
                 onClick: _,
               },
-              _.createElement(_._, {
-                name: _,
-                trailerCategory: _.GetTrailerCategory(),
-                trailerDisplay: 1,
-                mouseOver: !1,
-              }),
-              Boolean(_) &&
-                _.createElement(
-                  "video",
-                  {
-                    className: _().VideoLarge,
-                    ref: _,
-                    controls: __webpack_require__,
-                    autoPlay: !0,
-                    loop: !0,
-                    poster: _ > 0 ? void 0 : _.GetScreenshot(),
-                  },
-                  _.createElement("source", {
-                    src: _.strWebMURL,
-                    type: "video/webm",
-                  }),
-                  Boolean(!_._.IN_CLIENT) &&
-                    _.createElement("source", {
-                      src: _.strMP4URL,
-                      type: "video/mp4",
-                    }),
-                ),
-              __webpack_require__ &&
-                _.createElement(
-                  "div",
-                  {
-                    onClick: _,
-                  },
-                  _.createElement(_.sED, null),
-                ),
-            )
-          );
-        },
-      );
+              _.createElement(_.sED, null),
+            ),
+        );
+      }
       function _(_, _) {
         const _ = _.replace(/\.[^\.]+$/g, "");
         return _ + _ + _.slice(_.length);
@@ -4120,77 +4106,63 @@
             hideModal: _,
           } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(),
           _ = _?.GetAllTrailers().GetHighlightTrailers(_),
           _ = _?.length > 0 && _[0],
           _ = _.useId(),
           _ = _.useId();
         if (!_) return null;
-        const _ = (
-            _ ? _.GetTrailer480p().strWebMURL : _.GetTrailerMax().strWebMURL
-          )?.replace("http://", "https://"),
-          _ = (
-            _ ? _.GetTrailer480p().strMP4URL : _.GetTrailerMax().strMP4URL
-          )?.replace("http://", "https://");
-        return _.createElement(
-          _._,
-          {
-            active: __webpack_require__,
-          },
-          _.createElement(
-            _._,
-            {
-              "aria-labelledby": (0, _._)(_, _),
-              bAllowFullSize: !0,
-              bOKDisabled: !0,
-              closeModal: _,
-            },
-            _.createElement(
-              "div",
+        const _ = _.GetTrailersDash(),
+          _ = _.GetTrailerHls();
+        return 0 == _.length
+          ? null
+          : _.createElement(
+              _._,
               {
-                className: _().VideoPopupContainers,
+                active: __webpack_require__,
               },
               _.createElement(
-                "video",
+                _._,
                 {
-                  className: _().VideoLarge,
-                  controls: !0,
-                  autoPlay: !0,
-                  poster: _.GetScreenshot(),
+                  "aria-labelledby": (0, _._)(_, _),
+                  bAllowFullSize: !0,
+                  bOKDisabled: !0,
+                  closeModal: _,
                 },
-                _.createElement("source", {
-                  src: _,
-                  type: "video/webm",
-                }),
-                Boolean(!_._.IN_CLIENT) &&
-                  _.createElement("source", {
-                    src: _,
-                    type: "video/mp4",
+                _.createElement(
+                  "div",
+                  {
+                    className: _().VideoPopupContainers,
+                  },
+                  _.createElement(_._, {
+                    dashManifests: _,
+                    hlsManifest: _,
+                    screenshot: "",
+                    altText: "",
+                    muteWhenAutoplayBlocked: !0,
                   }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    _: _,
+                    style: {
+                      display: "none",
+                    },
+                  },
+                  _.GetName(),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    _: _,
+                    style: {
+                      display: "none",
+                    },
+                  },
+                  _.GetName(),
+                ),
               ),
-            ),
-            _.createElement(
-              "div",
-              {
-                _: _,
-                style: {
-                  display: "none",
-                },
-              },
-              _.GetName(),
-            ),
-            _.createElement(
-              "div",
-              {
-                _: _,
-                style: {
-                  display: "none",
-                },
-              },
-              _.GetName(),
-            ),
-          ),
-        );
+            );
       }
       function _(_) {
         const {
@@ -4280,7 +4252,6 @@
           ),
         );
       }
-      _.displayName = "InlineTrailer";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4660,88 +4631,6 @@
           ),
           null
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            name: _,
-            trailerCategory: __webpack_require__,
-            trailerDisplay: _,
-            mouseOver: _,
-          } = _,
-          [_, _] = _.useState(!1);
-        if (
-          (_.useEffect(() => {
-            0 != _ && _(!0);
-          }, [_]),
-          _.useEffect(() => {
-            if (_) return void _(!0);
-            if (!_) return;
-            const _ = setTimeout(() => _(!1), 3e3);
-            return () => clearTimeout(_);
-          }, [_, _]),
-          null == __webpack_require__ || 0 == _)
-        )
-          return;
-        const _ =
-          1 == _
-            ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
-            : (0, _._)(__webpack_require__);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().TrailerTitle]: !0,
-              [_().Visible]: _,
-            }),
-          },
-          (0, _._)(
-            "#StoreTrailer_Title_Combiner",
-            _.createElement(
-              "span",
-              {
-                className: _().Category,
-              },
-              _,
-            ),
-            _,
-          ),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        switch (_) {
-          case 1:
-            return (0, _._)("#StoreTrailer_Title_Category_Gameplay");
-          case 2:
-            return (0, _._)("#StoreTrailer_Title_Category_Teaser");
-          case 3:
-            return (0, _._)("#StoreTrailer_Title_Category_Cinematic");
-          case 4:
-            return (0, _._)("#StoreTrailer_Title_Category_Update");
-          case 5:
-            return (0, _._)("#StoreTrailer_Title_Category_Accolades");
-          case 6:
-            return (0, _._)("#StoreTrailer_Title_Category_Interview");
-        }
-        return (0, _._)("#StoreTrailer_Title_Category_Unknown");
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

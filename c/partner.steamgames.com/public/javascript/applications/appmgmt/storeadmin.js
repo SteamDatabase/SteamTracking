@@ -175,6 +175,7 @@
         InDeprecatedLink: "sakeS4kMEd2FGp4Da4Xrt",
         ExtraAssetControlsContainer: "_3-tWPanUj6QJND7dPTlrgc",
         ExtraAssetControls: "_3LTnCSzSad_SJbC1nruDT8",
+        SmallImage: "_3AYhN4DOm37hwrJw5_EKNa",
         ImageLinkDisabledWarning: "_2oUv4hHSs2-8LXtBPcyRRy",
         TopBar: "_1WOD0JTMh8GPXMSA_p8BNb",
         TopBarContent: "_1nOxfVQISFWWwmO7v_u77O",
@@ -1152,6 +1153,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1166,7 +1169,8 @@
             fnUpdateDocument: _,
             selected: _,
           } = _,
-          [_, _] = (0, _._)(),
+          [_, _] = (0, _._)(250),
+          [_, _] = (0, _._)(250),
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(),
           _ = _.useCallback(() => {
@@ -1226,6 +1230,16 @@
             },
             (0, _._)("#StoreAdmin_GameDescription_MissingImage", _),
           );
+        const [_, _] = _.useState(0),
+          [_, _] = _.useState(0),
+          _ = _.useRef(void 0),
+          _ = (0, _._)((_) =>
+            _(_.current.offsetLeft + _.borderBoxSize[0].inlineSize),
+          ),
+          _ = (0, _._)(_, _),
+          _ = (0, _._)((_) => _(_.borderBoxSize[0].inlineSize)),
+          _ = _ + 16 >= _,
+          _ = _ ? _ : void 0;
         return _.createElement(
           _.Fragment,
           null,
@@ -1251,22 +1265,28 @@
             }),
           _,
           _.createElement(
-            "span",
+            "div",
             {
-              className: (0, _._)(
-                _.ExtraAssetImgTag,
-                _.ExtraAssetControlsContainer,
-                _ && _.Hovered,
-                _ && _.InDeprecatedLink,
-              ),
-              ..._,
+              ref: _,
+              className: (0, _._)({
+                [_.ExtraAssetImgTag]: !0,
+                [_.ExtraAssetControlsContainer]: !0,
+                [_.Hovered]: _ || _,
+                [_.InDeprecatedLink]: _,
+              }),
               title: "",
+              ..._,
             },
             _ && _.createElement(_, null),
             _.createElement(
-              "span",
+              "div",
               {
-                className: _.ExtraAssetControls,
+                ref: _,
+                className: (0, _._)(_.ExtraAssetControls, _ && _.SmallImage),
+                style: {
+                  left: _,
+                },
+                ..._,
               },
               _,
               _.createElement(
