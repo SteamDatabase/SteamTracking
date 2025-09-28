@@ -364,7 +364,7 @@
 .responsive_search_name_combined {
 	width: 100%;
 	display: grid;
-	grid-template-columns: minmax(72px, 13%) minmax(85px, 62%) minmax(30px, 4%) minmax(125px, 21%);
+	grid-template-columns: minmax(72px, 13%) minmax(85px, 62%) minmax(30px, 4%) minmax(100px, 21%);
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas:
 			"title title title price"
