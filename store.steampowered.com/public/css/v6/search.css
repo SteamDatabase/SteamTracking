@@ -240,6 +240,7 @@
 	color: #62696e;
 	position: relative;
 	left: 2px;
+	white-space: nowrap;
 }
 
 #search_result_container {
@@ -364,7 +365,7 @@
 .responsive_search_name_combined {
 	width: 100%;
 	display: grid;
-	grid-template-columns: minmax(72px, 13%) minmax(85px, 62%) minmax(30px, 4%) minmax(100px, 21%);
+	grid-template-columns: minmax(200px, 43%) minmax(85px, 32%) minmax(30px, 4%) minmax(100px, 21%);
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas:
 			"title title title price"
@@ -378,6 +379,7 @@
 	line-height: 21px;
 	position: relative;
 	left: 6px;
+	white-space: nowrap;
 }
 
 .responsive_search_name_combined .search_name {
@@ -402,9 +404,40 @@
 	margin-inline-end: 8px;
 }
 
+@media screen and (max-width: 750px)
+{
+	html.responsive .responsive_search_name_combined {
+		grid-template-columns: 24px auto auto auto;
+		grid-template-areas:
+			"title title title price"
+			"reviews platforms platforms price";
+		justify-content: unset;
+	}
+
+	html.responsive .responsive_search_name_combined .search_platforms {
+		justify-self: start;
+	}
+
+	html.responsive .responsive_search_name_combined .search_released {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 550px)
+{
+	html.responsive .responsive_search_name_combined .includes_games_results {
+		display: none;
+	}
+}
+
 .responsive_search_name_combined .search_reviewscore {
 	grid-area: reviews;
 	align-self: center;
+}
+
+.discount_block.no_discount .bundle_base_discount {
+	font-size: 18px;
+	min-width: 50px;
 }
 
 .responsive_search_name_combined .search_price_discount_combined {
@@ -429,7 +462,7 @@
 
 .search_result_row .search_reviewscore {
 	width: 30px;
-	height: 16px;
+	height: 20px;
 }
 
 .search_reviewscore .search_review_summary {
@@ -519,12 +552,15 @@
 	text-align: right;
 	color: #c6d4df;
 	padding-right: 0;
+	white-space: nowrap;
 }
 .search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_original_price {
 	color: #888888;
+	white-space: nowrap;
 }
 .search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_final_price {
 	font-size: 13px;
+	white-space: nowrap;
 }
 .search_discount_icon_ctn {
     height: 100%;
