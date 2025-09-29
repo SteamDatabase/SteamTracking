@@ -2522,6 +2522,7 @@ html.touch
 }
 .gASJ2lL_xmVNuZkWGvrWg {
   margin-bottom: 4px;
+  position: relative;
 }
 .gASJ2lL_xmVNuZkWGvrWg:hover {
   z-index: 1;
@@ -3118,6 +3119,7 @@ html.touch
 .jQ5GanUKBEe7hhgCh6b5z ._1NM531LjOd5QmDktUetCOm {
   position: relative;
   height: calc(100% - 16px);
+  max-width: fit-content;
   overflow: hidden;
   white-space: nowrap;
   display: flex;

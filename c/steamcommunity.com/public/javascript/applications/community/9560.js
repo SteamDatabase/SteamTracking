@@ -6032,7 +6032,7 @@
                     align: "center",
                     gap: "1",
                     role: "button",
-                    onClick: () => _(!1),
+                    onMouseDown: () => _(!1),
                     maxWidth: "24ch",
                   },
                   _.createElement(_, {

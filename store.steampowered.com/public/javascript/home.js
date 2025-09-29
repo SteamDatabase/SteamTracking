@@ -259,6 +259,7 @@ GHomepage = {
 						hwsos: Number( GHomepage.bSteamOS ),
 						hwvar: GHomepage.eHWVariant,
 						hwtype: GHomepage.eGamingDeviceType,
+						seasonal_sale: GHomepage.bIsSeasonalSale,
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -1553,9 +1554,20 @@ GHomepage = {
 
 		var rgData = GHomepage.oAdditionalData.rgUserNewsFriendsPurchased;
 
-		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			rgData, 'home', 4, 8, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
-		);
+		let oFilterOptions = {
+			games_already_in_library: false,
+			dlc: false,
+			localized: true,
+			displayed_elsewhere: false,
+			only_current_platform: true,
+		};
+
+		if ( GHomepage.bIsSeasonalSale )
+		{
+			oFilterOptions = { ...oFilterOptions, has_discount: true, enforce_minimum: true };
+		}
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay( rgData, 'home', 4, 8, oFilterOptions );
 		if( rgCapsules.length < 4 )
 		{
 			rgCapsules = GHomepage.FilterItemsForDisplay(
@@ -2130,9 +2142,11 @@ GHomepage = {
 		if ( !$SteamDeckCarousel.length || !GHomepage.oDisplayLists.top_played_deck.length )
 			return;
 
-		let rgSteamDeckGames = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.top_played_deck, 'home', k_nMinItemsInCarousel, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
-		);
+		let oFilterOptions = { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true };
+		if ( GHomepage.bIsSeasonalSale )
+			oFilterOptions = $J.extend( { on_discount: true,  enforce_minimum: true }, oFilterOptions );
+
+		const rgSteamDeckGames = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.top_played_deck, 'home', k_nMinItemsInCarousel, 24, oFilterOptions );
 
 		if ( rgSteamDeckGames.length >= k_nMinItemsInCarousel )
 		{
@@ -4088,6 +4102,7 @@ var g_bDisableAutoloader = false;
 							hwsos: Number( GHomepage.bSteamOS ),
 							hwvar: GHomepage.eHWVariant,
 							hwtype: GHomepage.eGamingDeviceType,
+							seasonal_sale: GHomepage.bIsSeasonalSale,
 						},
 						//dataType: 'json',
 						type: 'GET'
@@ -4413,7 +4428,7 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 
 		bAJAXInFlight = true;
 		$TabItems.addClass('loading');
-		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', { time: time, hide_f2p: bHideF2P, v2: bVersion2 } ).done( function( data ) {
+		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', { time: time, hide_f2p: bHideF2P, v2: bVersion2, seasonal_sale: GHomepage.bIsSeasonalSale } ).done( function( data ) {
 			if ( data.storeitemdata && data.html )
 			{
 				GStoreItemData.AddStoreItemDataSet( data.storeitemdata );
@@ -4562,19 +4577,3 @@ function HomeTabOnClick( elem, strTabSelectTarget, strDelayedImageGroup )
 	TabSelect( elem, strTabSelectTarget );
 }
 
-function ToggleTabItemsDisplay()
-{
-	let $TabItemsCtn = $J( '.tab_content_items' );
-	if ( $TabItemsCtn.hasClass( 'capsule_list_view' ) )
-	{
-		$TabItemsCtn.find( '.tab_row_item' ).removeClass( 'sale_capsule' );
-		$TabItemsCtn.addClass( 'tab_list_view' )
-		$TabItemsCtn.removeClass( 'capsule_list_view' );
-	}
-	else
-	{
-		$TabItemsCtn.find( '.tab_row_item' ).addClass( 'sale_capsule' );
-		$TabItemsCtn.removeClass( 'tab_list_view' );
-		$TabItemsCtn.addClass( 'capsule_list_view' );
-	}
-}

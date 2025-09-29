@@ -35470,13 +35470,20 @@
           ),
         ];
       }
-      function _() {
-        const [_, _] = _.useState(!1);
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1),
+          _ = _.useRef(void 0);
         return [
           _,
           {
-            onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
+            onMouseEnter: _.useCallback(() => {
+              __webpack_require__(!0), clearTimeout(_.current);
+            }, []),
+            onMouseLeave: _.useCallback(() => {
+              _
+                ? (_.current = setTimeout(() => __webpack_require__(!1), _))
+                : __webpack_require__(!1);
+            }, [_]),
           },
         ];
       }

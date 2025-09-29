@@ -4817,7 +4817,7 @@
                     align: "center",
                     gap: "1",
                     role: "button",
-                    onClick: () => m(!1),
+                    onMouseDown: () => m(!1),
                     maxWidth: "24ch",
                   },
                   a.createElement(ne, {

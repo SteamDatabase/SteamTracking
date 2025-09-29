@@ -1305,6 +1305,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	color: #738895;
 	font-size: 11px;
     line-height: 12px;
+	white-space: nowrap;
 }
 
 .discount_original_price:before {
@@ -1356,6 +1357,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	padding-left: 4px;
 	font-size: 11px;
     line-height: 12px;
+	white-space: nowrap;
 }
 
 .discount_block_inline .discount_pct,

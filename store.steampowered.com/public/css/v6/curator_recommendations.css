@@ -173,8 +173,7 @@ body.v6 a:hover h2 {
 }
 body.v6 .section_title_ctn {
 	color: #8f98a0;
-	margin-bottom: 8px;
-
+	margin-bottom: 12px;
 }
 body.v6 .page_section>.section_title_ctn,
 body.v6 .carousel_container>.section_title_ctn {
@@ -214,7 +213,7 @@ body.v6 .section_title_ctn p {
 }
 
 .light_container.bezel {
-	background: 	linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%  ),
+	background: 	linear-gradient( to bottom, rgba(39, 61, 82, 1) 25%, rgba(39, 61, 82, 0) 100%  ),
 	linear-gradient( to right, rgba(27, 40, 53, 0) 10%, rgba(27, 40, 53, 0.95) 25%, rgba(27, 40, 53, 0.95) 75%, rgba(27, 40, 53, 0) 90%  ) 1800px 90%;
 	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
 	background-repeat: no-repeat;
@@ -654,7 +653,21 @@ background: -webkit-linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 9
 }
 
 .app_platforms {
-	margin-right: 4px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 4px;
+	opacity: 0.6;
+
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.app_platforms .platform_img {
+	width: 16px;
+	height: 16px;
 }
 
 
@@ -919,10 +932,7 @@ body.v6 .page_content.browse_reviews {
 	width: 100%;
 background: -webkit-linear-gradient( 270deg, rgba(43, 64, 90, 0) 10px,rgba(43, 64, 90, 1) 76px,rgba(43, 64, 90, 0) 178px);
 	background: linear-gradient( 180deg, rgba(43, 64, 90, 0) 10px,rgba(43, 64, 90, 1) 76px,rgba(43, 64, 90, 0) 178px);
-}
-
-body.v6 .page_content.browse_reviews {
-	background: #2e3138;
+	background: #ffffff14;
 }
 
 .browse_sorts {
@@ -1058,6 +1068,9 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 }
 .browse_content .recommendation .recommendation_link {
     flex-grow: 0;
+}
+.browse_content .recommendation .recommendation_midcol .recommendation_link {
+	flex-grow: 1;
 }
 
 .browse_content .recommendation .recommendation_midcol {
@@ -1487,8 +1500,9 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);
 	left: 0;
 	opacity: 0;
 	width: 100%;
-	height: auto;
+	height: 100%;
 	transition: opacity 0.5s;
+	background: black;
 }
 
 .curator_featured:hover .microtrailer_video {
@@ -1590,7 +1604,6 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);
 }
 .header_right_button {
 	float: right;
-	margin-top: 6px;
 }
 
 .featured_list h2 {

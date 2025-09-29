@@ -1501,26 +1501,12 @@ function OnGetFinalPriceSuccess( result )
 				}
 				else if ( method.value == 'sofort' )
 				{
-					if ( result.storeCountryCode == 'GB' || result.storeCountryCode == 'BE' )
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Klarna transactions are authorized through the Klarna website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Klarna';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 					{
-						$('purchase_bottom_note_paypalgc').innerHTML = 'DIRECTebanking transactions are authorized through the DIRECTebanking.com website.  Click the button below to open a new web browser to initiate the transaction.';
-						$('purchase_button_bottom_text').innerHTML = 'Continue to DIRECTebanking.com';
-
-						if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
-						{
-							$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for DIRECTebanking customers';
-							$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the DIRECTebanking website. When using DIRECTebanking as your payment method, make sure that you hit the "NEXT" button after you have finished filling in your TAN/PIN number. You will be automatically re-routed back to the Steam client which will confirm your purchase.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the DIRECTebanking window before the process is complete.';
-						}
-					}
-					else
-					{
-						$('purchase_bottom_note_paypalgc').innerHTML = 'Sofortüberweisung transactions are authorized through the sofortüberweisung.de website.  Click the button below to open a new web browser to initiate the transaction.';
-						$('purchase_button_bottom_text').innerHTML = 'Continue to sofortüberweisung.de';
-						if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
-						{
-							$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Sofortüberweisung customers';
-							$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the sofortüberweisung.de website.  When using Sofortüberweisung as your payment method, make sure that you hit the "NEXT" button after you have finished filling in your TAN/PIN number. You will be automatically re-routed back to the Steam client which will confirm your purchase.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the Sofortüberweisung window before the process is complete.';
-						}
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Klarna customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the Klarna website.  When using Klarna as your payment method, make sure that you hit the "NEXT" button after you have finished filling in your TAN/PIN number. You will be automatically re-routed back to the Steam client which will confirm your purchase.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the Klarna window before the process is complete.';
 					}
 				}
 				else if ( method.value == 'webmoney' )
@@ -4461,15 +4447,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'sofort' && providerPaymentMethod == 7 )
 			{
-								if ( price_data.storeCountryCode == 'GB' || price_data.storeCountryCode == 'BE' )
-				{
-					$('payment_method_review_text').innerHTML = 'DIRECTebanking.com';
-				}
-				else
-				{
-					$('payment_method_review_text').innerHTML = 'Sofortüberweisung';
-				}
-
+				$('payment_method_review_text').innerHTML = 'Klarna';
 			}
 			else if ( method.value == 'webmoney' && providerPaymentMethod == 9 )
 			{

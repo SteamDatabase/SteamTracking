@@ -32249,13 +32249,18 @@
           ),
         ];
       }
-      function u() {
-        const [e, t] = i.useState(!1);
+      function u(e) {
+        const [t, r] = i.useState(!1),
+          n = i.useRef(void 0);
         return [
-          e,
+          t,
           {
-            onMouseEnter: i.useCallback(() => t(!0), []),
-            onMouseLeave: i.useCallback(() => t(!1), []),
+            onMouseEnter: i.useCallback(() => {
+              r(!0), clearTimeout(n.current);
+            }, []),
+            onMouseLeave: i.useCallback(() => {
+              e ? (n.current = setTimeout(() => r(!1), e)) : r(!1);
+            }, [e]),
           },
         ];
       }
