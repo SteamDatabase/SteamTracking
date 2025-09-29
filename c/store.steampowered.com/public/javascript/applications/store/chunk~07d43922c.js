@@ -5591,7 +5591,7 @@
                 },
               },
               _.createElement("img", {
-                className: _().AppCapsuleImage,
+                className: (0, _._)(_().AppCapsuleImage, _().CapsuleShadow),
                 src: _.GetAssets().GetSmallCapsuleURL(),
                 alt: _.GetName(),
               }),
@@ -24168,7 +24168,6 @@
                           _.createElement(_._, {
                             capsule: _,
                             imageType: "header",
-                            bShowName: !0,
                             bShowParentApp: _,
                           }),
                         ),

@@ -5171,7 +5171,7 @@
                 },
               },
               l.createElement("img", {
-                className: L().AppCapsuleImage,
+                className: (0, B.A)(L().AppCapsuleImage, L().CapsuleShadow),
                 src: n.GetAssets().GetSmallCapsuleURL(),
                 alt: n.GetName(),
               }),
@@ -21521,7 +21521,6 @@
                           n.createElement(se.W, {
                             capsule: e,
                             imageType: "header",
-                            bShowName: !0,
                             bShowParentApp: D,
                           }),
                         ),
