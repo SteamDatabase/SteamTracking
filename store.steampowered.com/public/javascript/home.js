@@ -3948,7 +3948,7 @@ var g_bDisableAutoloader = false;
 					if ( nLastViewCalc < scrollTop )
 					{
 						bLoggedView = true;
-						$J.post( 'https://store.steampowered.com/explore/logfeedview/')
+						$J.post( 'https://store.steampowered.com/explore/logfeedview/?snr=' + GStoreItemData.GetCurrentPageNavParams() )
 					}
 				}
 			}

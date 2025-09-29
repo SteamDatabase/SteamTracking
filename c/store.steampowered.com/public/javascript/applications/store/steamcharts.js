@@ -3,6 +3,11 @@
   {
     chunkid: (module) => {
       module.exports = {
+        MenuBackgroundReflection: "_1vclHrINn0CO_nGkxoDkKy",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
         EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
       };
@@ -1257,7 +1262,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { strURL: _ } = _;
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _.MenuBackgroundReflection,
+              },
+              _.createElement("img", {
+                src: _,
+              }),
+            )
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1375,37 +1395,44 @@
             (_.jsondata.sale_vanity_id.includes("contenthubsalepage_") || _),
           _ = _ ? `url(${_})` : null;
         return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              SaleBackgroundCtn: !0,
-              ContentHubSalePage: _,
-            }),
-          },
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            strURL: _,
+          }),
           _.createElement(
             "div",
             {
-              className: (0, _._)(
-                _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
-                "SaleCustomCSS",
-                _().SaleBackground,
-                "SaleBackground",
-              ),
-              style: {
-                display: "flex",
-                position: "relative",
-                flexDirection: "column",
-                backgroundImage: _,
-                backgroundColor: _.jsondata.sale_background_color,
-                backgroundRepeat: _.jsondata.sale_background_repeat,
-              },
-              ref: _,
+              className: (0, _._)({
+                SaleBackgroundCtn: !0,
+                ContentHubSalePage: _,
+              }),
             },
-            _.createElement(_, {
-              event: _,
-              bIsPreview: _,
-            }),
-            _.createElement(_.Fragment, null, _),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
+                  "SaleCustomCSS",
+                  _().SaleBackground,
+                  "SaleBackground",
+                ),
+                style: {
+                  display: "flex",
+                  position: "relative",
+                  flexDirection: "column",
+                  backgroundImage: _,
+                  backgroundColor: _.jsondata.sale_background_color,
+                  backgroundRepeat: _.jsondata.sale_background_repeat,
+                },
+                ref: _,
+              },
+              _.createElement(_, {
+                event: _,
+                bIsPreview: _,
+              }),
+              _.createElement(_.Fragment, null, _),
+            ),
           ),
         );
       }

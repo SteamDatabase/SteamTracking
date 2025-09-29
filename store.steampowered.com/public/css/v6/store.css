@@ -6397,7 +6397,7 @@ body.v7menu .responsive_page_template_content {
 	display: flow-root; /* create a block formatting context so margins don't extend outside of this element */
 }
 
-html:not(.rn_mobile_app) body.v7menu:not(.menu_background_overlap):not(.sale_page_background) .responsive_page_template_content {
+html:not(.rn_mobile_app) body.v7menu:not(.menu_background_overlap) .responsive_page_template_content {
 	padding-top: var( --store-menu-overlap-height, 46px );
 }
 

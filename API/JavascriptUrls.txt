@@ -3143,7 +3143,7 @@ https://store.steampowered.com/explore/discoveryqueuesettings/
 https://store.steampowered.com/explore/followgame/
 https://store.steampowered.com/explore/generatenewdiscoveryqueue
 https://store.steampowered.com/explore/howitworks/
-https://store.steampowered.com/explore/logfeedview/
+https://store.steampowered.com/explore/logfeedview/?snr=${}
 https://store.steampowered.com/explore/more
 https://store.steampowered.com/explore/next
 https://store.steampowered.com/explore/next/
@@ -3213,7 +3213,7 @@ https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
-https://swarm.valve.org/changes/10105727
+https://swarm.valve.org/changes/10106275
 https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202

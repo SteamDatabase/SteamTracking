@@ -1278,6 +1278,23 @@ body:not(.v7menu) div#global_header .content {
   grid-column: span 2;
   grid-row: span 2;
 }
+._1vclHrINn0CO_nGkxoDkKy {
+  position: absolute;
+  height: var(--store-menu-overlap-height, 0px);
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+._1vclHrINn0CO_nGkxoDkKy img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center top;
+  object-fit: none;
+  transform: scaleY(-1);
+}
 ._1Un6hCqh2IuOm0WLmrrA7w {
   max-width: 940px;
   margin: 0 auto;
