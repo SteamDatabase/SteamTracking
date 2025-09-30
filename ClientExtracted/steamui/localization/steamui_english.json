@@ -4880,6 +4880,7 @@
     "ControllerChord_GuideButtonShortcuts": "Steam Button Shortcuts",
     "ControllerSource_ModeShift_Header": "Mode Shift - %1$s",
     "ControllerSource_ModeShift_Subheader": "Using: %1$s",
+    "ControllerSource_ModeShift_Subheader_Plural": "Using One Of: %1$s",
     "ControllerBinding_Binding_FriendlyName": "%1$s (%2$s)",
     "ControllerBinding_Binding_FriendlyNameMultiple": "(%1$s)",
     "ControllerBinding_MousePosition": "Move to Position",

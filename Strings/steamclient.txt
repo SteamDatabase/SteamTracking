@@ -27973,7 +27973,6 @@ Lithuanian
 Live Broadcast
 Lj&&lZ66~A??
 Lkh9Fgc^A
-Ll)N
 Lo-Fi
 Load certs from files in a directory
 Load failed: %s.
@@ -57827,7 +57826,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 23 2025 23:00:22
+steam Sep 30 2025 22:25:43
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

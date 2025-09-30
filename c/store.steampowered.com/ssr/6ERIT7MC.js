@@ -7,12 +7,6 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -24,6 +18,13 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -42,7 +43,6 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -1382,6 +1382,7 @@ var _ = "Hc7u2E44swk-";
 var _ = "sfBlGJThi-w-";
 var _ = "_6hfP8ufnkvg-";
 var _ = "WcMLzycTyxU-";
+var _ = "nRbdAz7CPfE-";
 var _ = "qxuaSNtrNvE-";
 var _ = "_238VL7NqEqk-";
 var _ = "v2uRRqcZpzM-";
@@ -2878,6 +2879,7 @@ function _(_, _ = !0) {
     let _ = _(_, "y");
     return (
       _.push(_.ownerDocument.documentElement),
+      (_ = _.filter((_) => _.scrollHeight > _.getBoundingClientRect().height)),
       _.forEach((_) => _.classList.add(_)),
       () => _.forEach((_) => _.classList.remove(_))
     );
@@ -3436,8 +3438,10 @@ var _ = _(_(), 1),
 function _(_) {
   return _.useCallback(
     (_) => {
-      let _ = (_) => _.classList.contains(_) || _.classList.contains(_);
-      !_(_.currentTarget, _.relatedTarget) && !_(_.relatedTarget, _) && _();
+      let _ = (_) => _.classList.contains(_) || _.classList.contains(_),
+        _ = _.currentTarget,
+        _ = (_) => _(_, _) || _(_, _);
+      (!_.relatedTarget || !_(_.relatedTarget)) && _();
     },
     [_],
   );
@@ -6028,6 +6032,7 @@ function _(_) {
     [_, _] = _.useState(),
     [_, _] = _.useState(_),
     [_, _] = _.useState(!1),
+    [_, _] = _.useState(!1),
     _ = _.useRef(void 0);
   _.current || (_.current = new WeakMap()),
     (0, _.useLayoutEffect)(() => {
@@ -6038,7 +6043,7 @@ function _(_) {
       let _ = _.current,
         _ = _.get(_),
         _ = "scrollTop" in _ ? _.scrollTop : _.scrollY;
-      if (_ !== void 0) {
+      if ((_(_ > 0), _ !== void 0)) {
         let _ = _ - _;
         if (_ > 90 && _ > 400) _((_) => (_ != "hidden" ? "hide" : _));
         else if (_ < -30) _((_) => (_ != "visible" ? "show" : _));
@@ -6096,7 +6101,7 @@ function _(_) {
     className: (0, _.default)(_, !_ && _, (_ || _) && _, _ && _),
     ref: _,
     children: (0, _.jsxs)("div", {
-      className: (0, _.default)(_, (_ || _) && _),
+      className: (0, _.default)(_, _ && _, (_ || _) && _),
       children: [
         (0, _.jsx)(_, {
           className: _,
@@ -6542,6 +6547,7 @@ var _ = {
   WideStore: "dMxvITnAeR0-",
   StoreBodyContainer: "khI3dKnN9c8-",
   Scrollable: "o5zcnn2HXfA-",
+  WithHeader: "_8DtxCZWrOkc-",
   StoreContent: "GHIW6-Wf1rQ-",
   InternalOptions: "r4HLvRr97Ps-",
   Text: "_75hRa6m6-oI-",
@@ -6597,6 +6603,7 @@ function _({ children: _ }) {
               children: (0, _.jsx)("div", {
                 className: (0, _.default)(
                   _.StoreBodyContainer,
+                  _ && _ && _.WithHeader,
                   _ && _.Scrollable,
                 ),
                 children: (0, _.jsx)(_, {

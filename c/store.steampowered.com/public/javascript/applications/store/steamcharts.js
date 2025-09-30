@@ -1272,6 +1272,7 @@
                 className: _.MenuBackgroundReflection,
               },
               _.createElement("img", {
+                alt: "",
                 src: _,
               }),
             )

@@ -326,6 +326,7 @@
         StoreMenuBackdropContainer: "h2B3SGR_w4RWdrnsRZEcD",
         Backdrop: "_19o1GB7ysfrWKLYpqZ6aXu",
         Active: "_2IyR9WyPwYb15ILBjPvLR9",
+        ContainerScrolled: "_2Gea0gfAOnmMbDqkgAk_go",
         StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
         BackdropClosed: "_1Zsv2NkXHxE5LTvs92Jqvd",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
@@ -2234,6 +2235,7 @@
         }),
         _ = (0, _._)("a", {
           bActivateByDefault: !0,
+          bDOMElementFocusByDefault: !1,
         }),
         _ = _.forwardRef(function (_, _) {
           const { href: __webpack_require__ = "#", ..._ } = _;
@@ -72648,6 +72650,9 @@
           let _ = (0, _._)(_, "y");
           return (
             _.push(_.ownerDocument.documentElement),
+            (_ = _.filter(
+              (_) => _.scrollHeight > _.getBoundingClientRect().height,
+            )),
             _.forEach((_) => _.classList.add(_.SuppressScrollOnBody)),
             () => _.forEach((_) => _.classList.remove(_.SuppressScrollOnBody))
           );
@@ -75378,13 +75383,13 @@
       function _(_) {
         return _.useCallback(
           (_) => {
-            _._(_.currentTarget, _.relatedTarget) ||
-              _._(
-                _.relatedTarget,
-                (_) =>
-                  _.classList.contains(_.SuggestionsPosition) ||
-                  _.classList.contains(_.SearchForm),
-              ) ||
+            const _ = (_) =>
+                _.classList.contains(_.SuggestionsPosition) ||
+                _.classList.contains(_.SearchForm),
+              _ = _.currentTarget;
+            var _;
+            (_.relatedTarget &&
+              ((_ = _.relatedTarget), _._(_, _) || _._(_, _))) ||
               _();
           },
           [_],
@@ -78173,6 +78178,7 @@
           [_, _] = _.useState(),
           [_, _] = _.useState(_),
           [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           _ = _.useRef(void 0);
         _.current || (_.current = new WeakMap()),
           (0, _.useLayoutEffect)(() => {
@@ -78183,7 +78189,7 @@
             const _ = _.current,
               _ = _.get(_),
               _ = "scrollTop" in _ ? _.scrollTop : _.scrollY;
-            if (void 0 !== _) {
+            if ((_(_ > 0), void 0 !== _)) {
               const _ = _ - _;
               if (_ > 90 && _ > 400) _((_) => ("hidden" != _ ? "hide" : _));
               else {
@@ -78284,6 +78290,7 @@
             {
               className: _()(
                 _.StoreMenuBackdropContainer,
+                _ && _.ContainerScrolled,
                 (_ || _) && _.BackdropVisible,
               ),
             },

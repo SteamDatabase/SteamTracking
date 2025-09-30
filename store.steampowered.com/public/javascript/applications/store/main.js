@@ -324,6 +324,7 @@
         StoreMenuBackdropContainer: "h2B3SGR_w4RWdrnsRZEcD",
         Backdrop: "_19o1GB7ysfrWKLYpqZ6aXu",
         Active: "_2IyR9WyPwYb15ILBjPvLR9",
+        ContainerScrolled: "_2Gea0gfAOnmMbDqkgAk_go",
         StoreMenu: "_16jZ3HEbtaJTl80pQINN2Y",
         BackdropClosed: "_1Zsv2NkXHxE5LTvs92Jqvd",
         Content: "_7FiqKP7fZJGltkwRxPG6s",
@@ -2117,7 +2118,10 @@
         o = (0, n.HR)("button", {
           bActivateByDefault: (e) => "submit" === e.type,
         }),
-        l = (0, n.HR)("a", { bActivateByDefault: !0 }),
+        l = (0, n.HR)("a", {
+          bActivateByDefault: !0,
+          bDOMElementFocusByDefault: !1,
+        }),
         c = i.forwardRef(function (e, t) {
           const { href: r = "#", ...n } = e;
           return i.createElement(l, { ref: t, href: r, ...n });
@@ -65708,6 +65712,9 @@
           let i = (0, Gt.$e)(r, "y");
           return (
             i.push(r.ownerDocument.documentElement),
+            (i = i.filter(
+              (e) => e.scrollHeight > e.getBoundingClientRect().height,
+            )),
             i.forEach((e) => e.classList.add(Kt.SuppressScrollOnBody)),
             () => i.forEach((e) => e.classList.remove(Kt.SuppressScrollOnBody))
           );
@@ -67678,13 +67685,13 @@
       function Xi(e) {
         return n.useCallback(
           (t) => {
-            tt.id(t.currentTarget, t.relatedTarget) ||
-              tt.Kf(
-                t.relatedTarget,
-                (e) =>
-                  e.classList.contains(pr.SuggestionsPosition) ||
-                  e.classList.contains(pr.SearchForm),
-              ) ||
+            const r = (e) =>
+                e.classList.contains(pr.SuggestionsPosition) ||
+                e.classList.contains(pr.SearchForm),
+              i = t.currentTarget;
+            var n;
+            (t.relatedTarget &&
+              ((n = t.relatedTarget), tt.id(i, n) || tt.Kf(n, r))) ||
               e();
           },
           [e],
@@ -69912,17 +69919,18 @@
           [u, m] = n.useState(),
           [d, p] = n.useState(t),
           [g, _] = n.useState(!1),
-          h = n.useRef(void 0);
-        h.current || (h.current = new WeakMap()),
+          [h, f] = n.useState(!1),
+          b = n.useRef(void 0);
+        b.current || (b.current = new WeakMap()),
           (0, n.useLayoutEffect)(() => {
-            (h.current = new WeakMap()), c("visible");
+            (b.current = new WeakMap()), c("visible");
           }, [t]);
-        const f = n.useCallback(() => p(t), [t]),
-          b = n.useCallback((e) => {
-            const t = h.current,
+        const B = n.useCallback(() => p(t), [t]),
+          w = n.useCallback((e) => {
+            const t = b.current,
               r = t.get(e),
               i = "scrollTop" in e ? e.scrollTop : e.scrollY;
-            if (void 0 !== r) {
+            if ((f(i > 0), void 0 !== r)) {
               const e = i - r;
               if (e > 90 && i > 400) c((e) => ("hidden" != e ? "hide" : e));
               else {
@@ -69935,24 +69943,24 @@
         (0, wt.l6)(
           window,
           "scroll",
-          n.useCallback((e) => b(window), [b]),
+          n.useCallback((e) => w(window), [w]),
         );
-        const B = (0, wa.P)(
+        const y = (0, wa.P)(
             n.useCallback(
               (e) => {
                 const t = e.currentTarget;
-                (0, Gt.kD)(t) && b(t);
+                (0, Gt.kD)(t) && w(t);
               },
-              [b],
+              [w],
             ),
           ),
-          w = n.useCallback((e) => _(e), []);
+          M = n.useCallback((e) => _(e), []);
         (0, n.useEffect)(() => {
           if (!o || g || !t) return;
           const e = window.setTimeout(() => r(), 1);
           return () => window.clearTimeout(e);
         }, [o, g, t, r]);
-        const y = (function (e, t) {
+        const C = (function (e, t) {
             const [r, i] = n.useState(),
               s = n.useCallback((e) => {
                 i(
@@ -69982,25 +69990,25 @@
               (0, Ba.wY)(s)
             );
           })(i, o),
-          M = (0, Ba.wY)(
+          S = (0, Ba.wY)(
             n.useCallback((e) => {
               m(e.contentBoxSize[0].blockSize);
             }, []),
           ),
-          C = "visible" != l && !t,
-          S = mr()(
+          v = "visible" != l && !t,
+          R = mr()(
             dr.StoreMenu,
-            C && dr.HideTransition,
+            v && dr.HideTransition,
             Zt.TS.IN_MOBILE_WEBVIEW && dr.MobileWebview,
             "hide" == l && dr.Hide,
             "hidden" == l && dr.Hidden,
             "show" == l && dr.Show,
           );
-        let v;
+        let z;
         "hide" == l
-          ? (v = () => c((e) => ("hide" == e ? "hidden" : e)))
-          : "show" == l && (v = () => c((e) => ("show" == e ? "visible" : e)));
-        const R = n.useMemo(
+          ? (z = () => c((e) => ("hide" == e ? "hidden" : e)))
+          : "show" == l && (z = () => c((e) => ("show" == e ? "visible" : e)));
+        const I = n.useMemo(
           () => ({ nBackdropHeight: u, bBackdropActive: t }),
           [u, t],
         );
@@ -70013,25 +70021,26 @@
               (d || t) && dr.BackdropVisible,
               o && dr.GamepadUI,
             ),
-            ref: B,
+            ref: y,
           },
           n.createElement(
             "div",
             {
               className: mr()(
                 dr.StoreMenuBackdropContainer,
+                h && dr.ContainerScrolled,
                 (d || t) && dr.BackdropVisible,
               ),
             },
             n.createElement(
               ce.Z,
-              { className: S, ref: y, onAnimationEnd: v, onFocusWithin: w },
-              n.createElement(Yt.Provider, { value: R }, a),
+              { className: R, ref: C, onAnimationEnd: z, onFocusWithin: M },
+              n.createElement(Yt.Provider, { value: I }, a),
             ),
             n.createElement("div", {
               className: mr()(dr.Backdrop, t && dr.Active),
-              onTransitionEnd: f,
-              ref: M,
+              onTransitionEnd: B,
+              ref: S,
               onClick: r,
             }),
           ),

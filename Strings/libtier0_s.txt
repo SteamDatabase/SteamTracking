@@ -97,7 +97,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-23:00:15
+22:25:33
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -402,7 +402,7 @@ SDL_GetError
 SDL_SetCurrentThreadPriority
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
-Sep 23 2025
+Sep 30 2025
 ServerMain
 SetAssertDumpStack
 SetAssertFailedNotifyFunc

@@ -1186,7 +1186,7 @@
           ? r.createElement(
               "div",
               { className: N.MenuBackgroundReflection },
-              r.createElement("img", { src: t }),
+              r.createElement("img", { alt: "", src: t }),
             )
           : null;
       }

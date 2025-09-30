@@ -3494,6 +3494,7 @@ var _ = _("div", {
   }),
   _ = _("a", {
     bActivateByDefault: !0,
+    bDOMElementFocusByDefault: !1,
   }),
   _ = _.default.forwardRef(function (_, _) {
     let { href: _ = "#", ..._ } = _;

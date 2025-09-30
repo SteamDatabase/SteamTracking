@@ -4991,6 +4991,13 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   z-index: 1;
 }
 .h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo {
+  height: calc(
+    100vh -
+    var(--responsive-menu-floating-height, 0px) -
+    var(--global-header-height, 0px)
+  );
+}
+.h2B3SGR_w4RWdrnsRZEcD._1TqaEZH4pd8k4LJDCTVmBo._2Gea0gfAOnmMbDqkgAk_go {
   height: calc(100vh - var(--responsive-menu-floating-height, 0px));
 }
 ._16jZ3HEbtaJTl80pQINN2Y {
