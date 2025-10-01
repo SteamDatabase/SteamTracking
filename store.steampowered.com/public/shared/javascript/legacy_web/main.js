@@ -1,17 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10109662";
+var CLSTAMP = "10112048";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      992: (e, t, n) => {
+      343: (e, t, n) => {
         n.d(t, { pR: () => r, Vz: () => i, nh: () => l });
         var a,
           r,
           i,
-          o = n(657);
+          o = n(960);
         class s {
           m_ActiveInputId;
           m_ActiveInputTimeout;
@@ -228,7 +228,7 @@ var CLSTAMP = "10109662";
           }
         }
       },
-      747: (e, t, n) => {
+      848: (e, t, n) => {
         function a(e, t) {
           return (function (e, t) {
             const n = e.findIndex(t);
@@ -237,7 +237,7 @@ var CLSTAMP = "10109662";
         }
         n.d(t, { x9: () => a });
       },
-      898: (e, t, n) => {
+      337: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -252,9 +252,9 @@ var CLSTAMP = "10109662";
         }
         n.d(t, { o: () => a });
       },
-      657: (e, t, n) => {
+      960: (e, t, n) => {
         n.d(t, { l: () => r });
-        var a = n(747);
+        var a = n(848);
         class r {
           m_vecCallbacks = [];
           Register(e) {
@@ -285,7 +285,7 @@ var CLSTAMP = "10109662";
           }
         }
       },
-      12: (e, t, n) => {
+      33: (e, t, n) => {
         function a(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
@@ -298,7 +298,7 @@ var CLSTAMP = "10109662";
         }
         n.d(t, { Dp: () => r });
       },
-      325: (e, t, n) => {
+      902: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -363,9 +363,9 @@ var CLSTAMP = "10109662";
       ({ 97: "desktop", 616: "gamepad" }[e] || e) +
       ".js?contenthash=" +
       {
-        97: "c78d6896ec1b2f764437",
-        616: "c3e1433046f2c62827bb",
-        967: "ca82280c7b26909256e9",
+        97: "6dfafdd2cfc46642d14c",
+        616: "4e27580420624bf715a7",
+        987: "eed04a4f6309adbfe434",
       }[e]),
     (r.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=8f8038e8f8c48763e2ca"),
@@ -576,12 +576,12 @@ var CLSTAMP = "10109662";
         n = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  r(325);
+  r(902);
   var i = r(669),
     o = r.n(i),
     s = r(629),
-    c = r(992),
-    l = r(898);
+    c = r(343),
+    l = r(337);
   let p = [
     { index: 0, type: c.pR.OK, category: "action" },
     { index: 1, type: c.pR.CANCEL, category: "action" },
@@ -636,12 +636,12 @@ var CLSTAMP = "10109662";
     }
   }
   (0, s.Cg)([l.o], u.prototype, "PollGamepads", null);
-  var d = r(12);
+  var d = r(33);
   async function _(e) {
     const { InitializeGamepadNavigation: t } = await Promise.all([
-      r.e(967),
+      r.e(987),
       r.e(616),
-    ]).then(r.bind(r, 715));
+    ]).then(r.bind(r, 698));
     t(e);
   }
   r.p.endsWith("shared/") || (r.p = r.p + "shared/"),
@@ -655,7 +655,7 @@ var CLSTAMP = "10109662";
             ? (async function () {
                 const { InitializeForDesktop: e } = await r
                   .e(97)
-                  .then(r.bind(r, 24));
+                  .then(r.bind(r, 511));
                 e();
               })()
             : e.RegisterForGamepadDetected(() => _(e));

@@ -673,7 +673,8 @@ CreateBuyOrderDialog = {
 	OnAddFunds: function() {
 		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
-		var price = Math.round( currency * quantity );
+		var tradefee_tax = GetPriceValueAsInt( $J('#market_buy_commodity_input_localtax').val() );
+		var price = Math.round( ( currency * quantity ) + tradefee_tax );
 
 		if ( !window.g_rgWalletInfo || isNaN(price) || g_rgWalletInfo['wallet_balance'] >= price )
 		{

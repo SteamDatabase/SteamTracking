@@ -2144,7 +2144,7 @@ GHomepage = {
 
 		let oFilterOptions = { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true };
 		if ( GHomepage.bIsSeasonalSale )
-			oFilterOptions = $J.extend( { on_discount: true,  enforce_minimum: true }, oFilterOptions );
+			oFilterOptions = $J.extend( { has_discount: true,  enforce_minimum: true }, oFilterOptions );
 
 		const rgSteamDeckGames = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.top_played_deck, 'home', k_nMinItemsInCarousel, 24, oFilterOptions );
 
