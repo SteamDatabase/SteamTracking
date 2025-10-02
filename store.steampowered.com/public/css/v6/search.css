@@ -196,7 +196,7 @@
 	display: block;
 }
 
-.search_result_row img {
+.search_result_row .search_capsule img {
 	display: block;
 	height: 6vw;
 	max-height: 70px;
