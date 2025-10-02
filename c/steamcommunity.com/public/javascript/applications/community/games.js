@@ -3508,6 +3508,11 @@
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
                   },
+                  accountid: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -3738,6 +3743,11 @@
                     _: 7,
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
+                  },
+                  accountid: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),

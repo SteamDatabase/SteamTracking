@@ -96,7 +96,7 @@
 }
 @media screen and (min-aspect-ratio: 10 / 6) {
   ._2BYaxM7mBfooJbZYzhEv4D {
-    grid-template-columns: 1fr 160vh 1fr;
+    grid-template-columns: 1fr min(100vw - 150px, 160vh) 1fr;
   }
 }
 .BasicUI ._2BYaxM7mBfooJbZYzhEv4D {

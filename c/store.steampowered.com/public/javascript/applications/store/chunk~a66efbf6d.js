@@ -1052,9 +1052,6 @@
               );
             return [_, _];
           })(_),
-          _ = _.useCallback((_) => {
-            _.stopPropagation(), _.preventDefault();
-          }, []),
           _ = (0, _._)(_().ControlGroup, _ && _().ShowControls),
           _ = (0, _._)(_().CenterControls, !!_ && _().Hide);
         return _.createElement(
@@ -1067,7 +1064,6 @@
             {
               className: _().PlayerControls,
               ..._,
-              onTouchStart: _,
             },
             _.createElement(
               "div",
@@ -1414,7 +1410,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 500;
+      const _ = 500,
+        _ = "responsive_menu_ignore_touch";
       function _(_) {
         return (0, _._)()
           ? _.createElement(_, {
@@ -1564,40 +1561,39 @@
           })(_, _);
         _ && (_ = null);
         let _ = {};
-        return (
-          _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _().TrailerPlayer,
-            },
-            _.createElement("video", {
-              ref: _,
-              style: _,
-              controls: !1,
-              playsInline: !0,
-              "aria-label": _,
-            }),
+        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+        let _ = (0, _._)(_().TrailerPlayer, _);
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+          },
+          _.createElement("video", {
+            ref: _,
+            style: _,
+            controls: !1,
+            playsInline: !0,
+            "aria-label": _,
+          }),
+          _.createElement(_, {
+            player: _,
+            uiMode: _,
+            category: _,
+            title: _,
+          }),
+          _.createElement(_, {
+            player: _,
+          }),
+          !_ &&
             _.createElement(_, {
               player: _,
-              uiMode: _,
-              category: _,
-              title: _,
+              screenshot: _,
             }),
-            _.createElement(_, {
+          !_ &&
+            _.createElement(_._, {
               player: _,
             }),
-            !_ &&
-              _.createElement(_, {
-                player: _,
-                screenshot: _,
-              }),
-            !_ &&
-              _.createElement(_._, {
-                player: _,
-              }),
-          )
         );
       }
       function _(_) {

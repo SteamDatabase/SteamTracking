@@ -3171,6 +3171,11 @@
                     br: u.qM.readFixed64String,
                     bw: u.gp.writeFixed64String,
                   },
+                  accountid: {
+                    n: 7,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
+                  },
                 },
               }),
             Z.sm_m
@@ -3380,6 +3385,11 @@
                     n: 7,
                     br: u.qM.readFixed64String,
                     bw: u.gp.writeFixed64String,
+                  },
+                  accountid: {
+                    n: 8,
+                    br: u.qM.readUint32,
+                    bw: u.gp.writeUint32,
                   },
                 },
               }),

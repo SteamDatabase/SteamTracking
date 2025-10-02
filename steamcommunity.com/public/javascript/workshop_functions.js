@@ -990,8 +990,11 @@ function ShowEnlargedImagePreviewFromHighlightPlayer( id, HighlightPlayer )
 	{
 		$ScreenshotCount.text( '%1$s of %2$s Images'.replace( /%1\$s/, iCurIndex + 1 ).replace( /%2\$s/, rgScreenshotURLs.length ) );
 	};
+
+	enlargedImage.click( fnNextScreenshot );
 	$BtnNext.click( fnNextScreenshot );
 	$BtnPrev.click( fnPrevScreenshot );
+
 
 	$Footer.append( $BtnPrev, $ScreenshotCount, $BtnNext );
 	content.append( $Footer );

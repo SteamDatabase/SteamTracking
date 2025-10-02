@@ -3210,8 +3210,8 @@ input.searchText
 .enlarged_image_viewer {
 	display: flex;
 	flex-direction: column;
-	width: 75vw;
-	height: 75vh;
+	min-width: 75vw;
+	min-height: 75vh;
 	align-items: center;
 }
 .enlarged_image_container {

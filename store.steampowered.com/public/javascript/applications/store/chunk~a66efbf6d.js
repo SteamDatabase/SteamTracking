@@ -289,7 +289,7 @@
     },
     54096: (e, t, n) => {
       "use strict";
-      n.d(t, { P: () => le });
+      n.d(t, { P: () => ae });
       var r = n(90626),
         l = n(52694),
         a = n(27283),
@@ -947,25 +947,22 @@
               );
             return [t, i];
           })(t),
-          p = r.useCallback((e) => {
-            e.stopPropagation(), e.preventDefault();
-          }, []),
-          h = (0, _.A)(G().ControlGroup, i && G().ShowControls),
-          y = (0, _.A)(G().CenterControls, !!d && G().Hide);
+          p = (0, _.A)(G().ControlGroup, i && G().ShowControls),
+          h = (0, _.A)(G().CenterControls, !!d && G().Hide);
         return r.createElement(
           k.F8.Provider,
           { value: m },
           r.createElement(
             "div",
-            { className: G().PlayerControls, ...o, onTouchStart: p },
+            { className: G().PlayerControls, ...o },
             r.createElement(
               "div",
-              { ref: a, className: h },
+              { ref: a, className: p },
               r.createElement(W, { thumbnail: d }),
               r.createElement(U, null),
               r.createElement(
                 "div",
-                { className: y },
+                { className: h },
                 r.createElement(Y, { player: t }),
               ),
               r.createElement(
@@ -1207,10 +1204,11 @@
       }
       var te = n(25489),
         ne = n(22797);
-      const re = 500;
-      function le(e) {
+      const re = 500,
+        le = "responsive_menu_ignore_touch";
+      function ae(e) {
         return (0, y.ri)()
-          ? r.createElement(ae, { ...e, localContext: !1 })
+          ? r.createElement(ie, { ...e, localContext: !1 })
           : r.createElement(
               y.QY,
               {
@@ -1218,10 +1216,10 @@
                 supportsTheater: !1,
                 supportsFullscreen: !0,
               },
-              r.createElement(ae, { ...e, localContext: !0 }),
+              r.createElement(ie, { ...e, localContext: !0 }),
             );
       }
-      function ae(e) {
+      function ie(e) {
         let {
           ref: t,
           dashManifests: n,
@@ -1233,13 +1231,13 @@
           uiMode: c,
           altText: f,
           title: h,
-          category: _,
-          statsURL: g,
-          muteWhenAutoplayBlocked: E,
-          localContext: v,
+          category: g,
+          statsURL: E,
+          muteWhenAutoplayBlocked: v,
+          localContext: C,
         } = e;
-        (h = h || ""), (_ = _ || 0);
-        let [C, b] = (function (e, t, n, l, a) {
+        (h = h || ""), (g = g || 0);
+        let [b, P] = (function (e, t, n, l, a) {
           let i = (0, d.F)(),
             o = r.useRef(void 0);
           o.current || (o.current = new p(i));
@@ -1261,7 +1259,7 @@
             }, [a]),
             [u, o.current]
           );
-        })(n, l, g, u, s);
+        })(n, l, E, u, s);
         !(function (e, t) {
           (0, r.useImperativeHandle)(
             e,
@@ -1283,14 +1281,14 @@
             }),
             [t],
           );
-        })(t, b),
+        })(t, P),
           (function (e, t) {
             (t = !!t),
               (0, r.useEffect)(() => {
                 e.SetMuteWhenAutoplayBlocked(t);
               }, [e, t]);
-          })(b, E);
-        let [P, T] = (function (e) {
+          })(P, v);
+        let [T, S] = (function (e) {
             let t = (0, r.useRef)(null),
               n = (0, r.useRef)(null),
               l = (0, r.useRef)(null),
@@ -1325,11 +1323,11 @@
               ),
               s = (0, m.wY)(u);
             return [s, l.current];
-          })(b),
-          S = (0, y.ri)(),
-          M = v ? S.refFullscreen : null,
-          I = (0, m.Ue)(P, M),
-          V = (function (e, t) {
+          })(P),
+          M = (0, y.ri)(),
+          I = C ? M.refFullscreen : null,
+          V = (0, m.Ue)(T, I),
+          R = (function (e, t) {
             let n = (0, r.useRef)(!1),
               l = (0, r.useRef)(!1),
               a = (0, r.useRef)(!1);
@@ -1344,34 +1342,28 @@
               t || (a.current = !0),
               !a.current
             );
-          })(b, o);
-        V && (C = null);
-        let R = {};
-        return (
-          T && ((R.width = `${T.nWidth}px`), (R.height = `${T.nHeight}px`)),
-          r.createElement(
-            "div",
-            { ref: I, className: i().TrailerPlayer },
-            r.createElement("video", {
-              ref: C,
-              style: R,
-              controls: !1,
-              playsInline: !0,
-              "aria-label": f,
-            }),
-            r.createElement(ie, {
-              player: b,
-              uiMode: c,
-              category: _,
-              title: h,
-            }),
-            r.createElement(oe, { player: b }),
-            !V && r.createElement(ue, { player: b, screenshot: a }),
-            !V && r.createElement(w.MT, { player: b }),
-          )
+          })(P, o);
+        R && (b = null);
+        let N = {};
+        S && ((N.width = `${S.nWidth}px`), (N.height = `${S.nHeight}px`));
+        let B = (0, _.A)(i().TrailerPlayer, le);
+        return r.createElement(
+          "div",
+          { ref: V, className: B },
+          r.createElement("video", {
+            ref: b,
+            style: N,
+            controls: !1,
+            playsInline: !0,
+            "aria-label": f,
+          }),
+          r.createElement(oe, { player: P, uiMode: c, category: g, title: h }),
+          r.createElement(ue, { player: P }),
+          !R && r.createElement(se, { player: P, screenshot: a }),
+          !R && r.createElement(w.MT, { player: P }),
         );
       }
-      function ie(e) {
+      function oe(e) {
         let { player: t, uiMode: n, category: l, title: a } = e,
           i = (0, q.Qn)();
         return (
@@ -1384,7 +1376,7 @@
               : r.createElement(V, { player: t, category: l, title: a })
         );
       }
-      function oe(e) {
+      function ue(e) {
         let { player: t } = e,
           [n, l] = (0, r.useState)("norender"),
           a = (0, h.q3)(() => t.IsBuffering());
@@ -1409,7 +1401,7 @@
           o && r.createElement(ne.t, { size: "large", position: "center" }),
         );
       }
-      function ue(e) {
+      function se(e) {
         let { player: t, screenshot: n } = e,
           a = (0, h.q3)(() => t.GetUserInputNeeded()),
           o = (0, m.DF)(a, re),
