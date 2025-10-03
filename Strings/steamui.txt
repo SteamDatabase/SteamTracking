@@ -2606,6 +2606,7 @@ ${LANGUAGE}
 'Software\Valve\Steam\NoSavePersonalInfo
 'SteamInput/Configurator/CombinedJoycons
 'SteamInput/Configurator/ErrorMsgEnabled
+'SteamInput/Configurator/SIAPIAuhtorMode
 '\n!k_EClientPersonaStateFlagWatching
 '\n"k_EClientPersonaStateFlagBroadcast
 '\n"k_EClientPersonaStateGameExtraInfo
@@ -4835,21 +4836,12 @@ ${LANGUAGE}
 +\n\vmouse_wheel
 +\n\vscreenshots
 +automatic
-+coReMode 1 
-+connect
-+connect_lobby
 +connect_lobby %s
-+coreMode 1
 +en+eo+
-+enterhub 1
-+enterlocal 1
-+enterlocalzombies 1
-+set switchFromMP 1 
 +steammessages_storebrowse.steamclient.proto
 +steammessages_storebrowse.steamclient.proto"`\n5CMarketingMessages_GetActiveMarketingMessages_Request
 +ulsX
 +w?FFv?
-+zombiesMode 1
 , "aud": [ %s ]
 , "exp": %u
 , "flags": %u
@@ -5314,7 +5306,6 @@ ${LANGUAGE}
 -mod=
 -name=%s
 -nexon -fromlauncher
--nexus 
 -no-hardware-updater
 -nobigpicture
 -noconsole
@@ -14245,6 +14236,7 @@ Blik
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Block-level external sequence producer returned an error code
 Blocked
+Blocked arguments
 Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
 Blocking global navigation to: %s\n
@@ -25076,6 +25068,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
+Oct  3 2025 02:27:21
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -27467,7 +27460,6 @@ Sent ping with MTU %d, increment = %d\n
 SentenceMode
 SentenceModeMenu
 Sentiment
-Sep 30 2025 22:25:44
 September
 Serbian
 Serial
@@ -31054,8 +31046,6 @@ Zulu
 \controller_base\
 \controller_base\empty.vdf
 \controller_base\templates\
-\dx11
-\dx9
 \f"ICEqn.s
 \f%\f/\f1\fA\f[\f_\fa\fm\fs\fw\f
 \f'>qhCZ
@@ -32978,7 +32968,6 @@ Zulu
 \vow5
 \vssh-ed25519
 \vugQC
-\win8
 \x%02x
 ] is an invalid data character in JavaScript compatibility mode
 ]Iua\r
@@ -34203,6 +34192,7 @@ bWireless
 bWorkshopVisible
 b\fLM%
 b\fzUkm
+b\n#controller_siapi_config_author_mode
 b\nS)7
 b\n\rReportMessage
 b\n\rResolveReport
@@ -35488,6 +35478,7 @@ controller_ps5
 controller_ps5_edge
 controller_ps_support
 controller_rog_ally
+controller_siapi_config_author_mode
 controller_slots
 controller_slots_obsolete
 controller_spew_level
@@ -38135,7 +38126,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenr
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -39753,7 +39744,6 @@ inventoryservicepricesheet
 inventoryvalvegcpricesheet
 invitation_code
 invitation_url
-invite
 invite_already_accepted
 invite_duration
 invited user

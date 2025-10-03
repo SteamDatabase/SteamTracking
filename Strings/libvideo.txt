@@ -1453,7 +1453,6 @@ $ffn
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
 .\n*k_ESteamReviewScore_OverwhelminglyNegative
 .\n*k_ESteamReviewScore_OverwhelminglyPositive
-.c47
 .cnf
 .conf
 .cpl
@@ -1714,6 +1713,7 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+02:26:07
 08bX
 0?0L
 0A/8
@@ -2234,7 +2234,6 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21VideoRepresentation_t
-22:25:30
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3356,6 +3355,7 @@ Blik
 Block size: %s\tAlloc'd: %d (peak: %d)\tNum blobs: %d (%s)\n
 Block-level external sequence producer returned an error code
 Blocked
+Blocked arguments
 Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
 Blocks
@@ -7316,6 +7316,7 @@ Object
 Object Signer
 Object Signing
 Object Signing CA
+Oct  3 2025
 October
 Odia
 Offensive Avatar
@@ -8553,7 +8554,6 @@ Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep 30 2025
 September
 Serbian
 Server

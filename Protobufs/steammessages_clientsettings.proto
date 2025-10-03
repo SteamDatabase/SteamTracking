@@ -202,6 +202,7 @@ message CMsgClientSettings {
 	optional bool controller_combine_nintendo_joycons = 14010 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamInput/Configurator/CombinedJoycons"];
 	optional bool controller_enable_chord = 140011 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_Enable_Chord", (setting_default_bool) = true];
 	optional bool controller_poll_rate = 140012 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_Poll_Rate", (setting_default_int) = 2];
+	optional bool controller_siapi_config_author_mode = 140013 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamInput/Configurator/SIAPIAuhtorMode", (setting_default_bool) = false];
 	optional uint64 startup_movie_id = 16000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/MovieID", (setting_pre_login) = true];
 	optional string startup_movie_local_path = 16001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/LocalPath", (setting_pre_login) = true];
 	optional bool startup_movie_shuffle = 16002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Customization/StartupMovie/Shuffle", (setting_pre_login) = true];

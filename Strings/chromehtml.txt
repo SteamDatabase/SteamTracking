@@ -1336,6 +1336,7 @@ Bitcoin
 Blik
 BlockPromptsIfIgnoredOften
 Blocked
+Blocked arguments
 Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
 BoaCompra Gold

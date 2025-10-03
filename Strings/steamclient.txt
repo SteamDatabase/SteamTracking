@@ -410,6 +410,7 @@
 !"failed to base64 encode value"
 !"unexpected split SRC packet"
 !( TLinkStatsTracker::m_recvPktNumberMask[ idxRecvBitmask ] & bit )
+!( bNewRight && bNewLeft )
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( m_pHTTPResponseHandler && m_pHTTPStreamingResponseHandler )
 !( msgStatsIn.flags() & msgStatsIn.ACK_REQUEST_E2E )
@@ -3317,6 +3318,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1fPQ
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -4798,7 +4800,6 @@ $steammessages_parental_objects.proto"
 *ZN16CSteamController12CHIDIOThread17ConnectControllerEj26EControllerConnectionStateEUlP22IControllerAbstractionE_
 *ZN16CSteamController12CHIDIOThread17TurnOffControllerEjEUlP22IControllerAbstractionE_
 *ZN16CSteamController12CHIDIOThread22DiscoverNewControllersER10CUtlVectorI14CHIDDeviceInfo10CUtlMemoryIS2_EEEUlPNS0_16ControllerData_tEE_
-*ZN16CSteamController12CHIDIOThread23CompleteConfigStoreSendEjEUlP22IControllerAbstractionE_
 *ZN16CSteamController15SetStickExtentsEjissssEUlP22IControllerAbstractionE_
 *ZN16CSteamController17SetGyroTolerancesEjiffEUlP22IControllerAbstractionE_
 *ZN16CSteamController18SetGyroCalibratingEjibEUlP22IControllerAbstractionE_
@@ -15715,7 +15716,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H4']
+9HT']
 9IClientVR
 9IGv
 9ISteamUGC
@@ -16793,6 +16794,7 @@ Allow to download updates to other drives then install folder is on
 Allow webhelper to create BrowserView underlays
 AllowDesktopConfig
 AllowDirectConnectToPeerString
+AllowExternalArguments
 AllowNoDHEKEX
 AllowOtherDownloadsWhileRunning
 AllowOverlay
@@ -16800,6 +16802,7 @@ AllowP2PPacketRelay
 AllowPurchaseFromRestrictedCountries
 AllowRunningMultipleInstances
 AllowSetForegroundThroughWebhelper
+AllowUnknown
 Allowed playtime exceeded
 Already Active
 Already Logged In Elsewhere
@@ -17757,6 +17760,7 @@ Block-level external sequence producer returned an error code
 BlockInhibited
 BlockPromptsIfIgnoredOften
 Blocked
+Blocked arguments
 Blocked because user is not a commercial partner
 Blocked by U.S. government regulations
 Bluegrass
@@ -23902,6 +23906,7 @@ External
 External Account is not linked to a Steam account
 External Account linked to another Steam account
 External sequences are not valid
+ExternalArguments
 ExternalStorageTransferReport
 ExternalValidation
 Extra compressed data
@@ -42051,6 +42056,7 @@ bitset::set
 bitset::test
 bitstr_cb
 bkt->ksl == ((void *)0) || nghttp2_ksl_len(bkt->ksl) == 0
+blacklisted
 blake2b512
 blake2s256
 blank
@@ -46081,7 +46087,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenr
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -57826,7 +57832,7 @@ stderr
 stdin
 stdout
 steam
-steam Sep 30 2025 22:25:43
+steam Oct  3 2025 02:28:05
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -60331,6 +60337,7 @@ whenEnded >= m_usecWhenSelected
 which lsof >/dev/null 2>&1
 while 
 whirlpool
+whitelisted
 wide
 width
 width=40\n

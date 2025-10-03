@@ -317,6 +317,7 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+02:26:07
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -343,7 +344,6 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
-22:25:30
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -580,6 +580,7 @@ No tracked allocs currently in use. Total %d\n
 November
 OUT OF MEMORY
 Object
+Oct  3 2025
 October
 Only thread can stop self: Use a higher-level protocol
 PKDd
@@ -610,7 +611,6 @@ Seeking to a position which is not sector aligned will break unbuffered io
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 SendCrashReport
 SendExistingMinidump
-Sep 30 2025
 September
 SetAppID
 SetComment
@@ -1048,7 +1048,6 @@ done with curl\n
 double
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
-e[XZ
 elf_header->e_ident[4] == ElfClass::kClass
 elf_mapped_base
 endmntent
