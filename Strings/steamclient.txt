@@ -17389,6 +17389,7 @@ BIsValidDirectory Yielding IO Job
 BIsWaitingForInstalledApps
 BIsWebBasedUIMode
 BK+O
+BK@Ac
 BKbhTb~XBK!;
 BKeyExists
 BKickOtherPlayingSession
@@ -57832,7 +57833,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct  3 2025 02:28:05
+steam Oct  3 2025 22:36:43
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

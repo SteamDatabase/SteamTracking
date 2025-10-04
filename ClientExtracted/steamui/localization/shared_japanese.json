@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "11月",
     "Sale_Reservation_MonthNoun_12": "12月",
     "Sale_Reservation_Fallback": "至急",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "人気の近日登場",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "近日登場ゲームが合計（累積総計）ウィッシュリスト追加数順に表示されます。Steamでまだリリースされていないゲームのみが含まれます。",
     "Sale_BrowserSortOption_TrendingWishlisted": "話題の近日登場",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "ゲームレコーディング",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "（このゲームセッションを録画）",
     "QuickAccess_Tab_GameRecording": "ゲームレコーディング",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "アクセシビリティ機能",
     "AccessibilityFeaturesWithCount": "アクセシビリティ機能（%1$s）",
     "Accessibility_Feature_AdjustableDifficulty": "難易度の調整",
@@ -3719,5 +3723,11 @@
     "SteamNotifications_TradeReversal_Title": "トレード保護",
     "SteamNotifications_TradeReversal_Body": "トレードが取り消されました",
     "SteamNotifications_TradeReversal_Body_Short": "トレードが取り消されました",
-    "SteamNotifications_TradeReversal_Description": "最近のトレードの1つがトレード相手によって取り消されました。"
+    "SteamNotifications_TradeReversal_Description": "最近のトレードの1つがトレード相手によって取り消されました。",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

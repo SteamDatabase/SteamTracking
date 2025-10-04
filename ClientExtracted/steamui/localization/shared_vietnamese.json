@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "tháng 11",
     "Sale_Reservation_MonthNoun_12": "tháng 12",
     "Sale_Reservation_Fallback": "Sớm nhất có thể",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Phổ biến & Sắp ra mắt",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Trò chơi sắp ra mắt, sắp xếp theo tổng số lượt thêm vào danh sách ước (từ trước đến nay). Chỉ bao gồm những trò chưa phát hành trên Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Sắp ra mắt thịnh hành",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Ghi hình trò chơi",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Ghi hình phiên chơi này)",
     "QuickAccess_Tab_GameRecording": "Ghi hình trò chơi",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Tính năng hỗ trợ tiếp cận",
     "AccessibilityFeaturesWithCount": "Tính năng hỗ trợ tiếp cận (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Độ khó có thể điều chỉnh",
@@ -3719,5 +3723,11 @@
     "SteamNotifications_TradeReversal_Title": "Bảo hộ trao đổi",
     "SteamNotifications_TradeReversal_Body": "Giao dịch đã hoàn tác",
     "SteamNotifications_TradeReversal_Body_Short": "Giao dịch đã hoàn tác",
-    "SteamNotifications_TradeReversal_Description": "Một trong những trao đổi gần đây của bạn đã được hoàn tác bởi đối tác trao đổi."
+    "SteamNotifications_TradeReversal_Description": "Một trong những trao đổi gần đây của bạn đã được hoàn tác bởi đối tác trao đổi.",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

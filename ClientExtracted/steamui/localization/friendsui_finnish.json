@@ -885,7 +885,7 @@
     "RemotePlay_ErrorInviteFailed_Failed": "Remote Play Together -kutsu epäonnistui, suoratoistoistuntoa ei voitu aloittaa.",
     "RemotePlay_ErrorInviteFailed_DriversNotInstalled": "Remote Play Together vaatii lisäajurien asentamista. Seuraa Steamin ohjeita asentaaksesi ajurit.",
     "RemotePlay_ErrorInviteFailed_Disabled": "Remote Play Together -kutsu epäonnistui, koska Remote Play on otettu pois päältä asetuksissa.",
-    "RemotePlay_ErrorInviteFailed_BroadcastingActive": "Remote Play Together -kutsu epäonnistui, koska lähetys on aktiivinen.",
+    "RemotePlay_ErrorInviteFailed_BroadcastingActive": "Remote Play Together -kutsu epäonnistui, koska striimi on aktiivinen.",
     "RemotePlay_ErrorInviteFailed_VRActive": "Remote Play Together -kutsu epäonnistui, koska VR on aktiivinen.",
     "RemotePlay_ErrorInviteFailed_TransportUnavailable": "Remote Play Together -kutsu epäonnistui, koska Remote Play ei ole juuri nyt saatavilla. Yritä myöhemmin uudelleen.",
     "RemotePlay_ErrorInviteFailed_Invisible": "Remote Play Together -kutsua ei voi lähettää, kun olet näkymätön.",

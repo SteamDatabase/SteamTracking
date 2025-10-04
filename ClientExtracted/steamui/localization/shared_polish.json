@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "w listopadzie",
     "Sale_Reservation_MonthNoun_12": "w grudniu",
     "Sale_Reservation_Fallback": "Jak najszybciej",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Popularne nadchodzące",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Nadchodzące gry posortowane według całkowitej liczby dodań do list życzeń. Zawiera tylko gry jeszcze niewydane na Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Popularne nadchodzące",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Nagrywanie gier",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "Nagraj tę sesję rozgrywki.",
     "QuickAccess_Tab_GameRecording": "Nagrywanie gier",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Funkcje ułatwień dostępu",
     "AccessibilityFeaturesWithCount": "Funkcje ułatwień dostępu (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Regulowany poziom trudności",
@@ -3719,5 +3723,11 @@
     "SteamNotifications_TradeReversal_Title": "Ochrona wymiany",
     "SteamNotifications_TradeReversal_Body": "Wymiana została cofnięta",
     "SteamNotifications_TradeReversal_Body_Short": "Wymiana została cofnięta",
-    "SteamNotifications_TradeReversal_Description": "Jedna z twoich ostatnich wymian została cofnięta przez twojego partnera wymiany."
+    "SteamNotifications_TradeReversal_Description": "Jedna z twoich ostatnich wymian została cofnięta przez twojego partnera wymiany.",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

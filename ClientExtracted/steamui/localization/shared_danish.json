@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "november",
     "Sale_Reservation_MonthNoun_12": "december",
     "Sale_Reservation_Fallback": "Snarest muligt",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Populære kommende spil",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Kommende spil sorteret efter samlet antal forekomster på ønskelister. Inkluderer kun spil, som endnu ikke er udgivet på Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Populære kommende spil",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Spiloptagelse",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Optag denne spilsession)",
     "QuickAccess_Tab_GameRecording": "Spiloptagelse",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Tilgængelighedsfunktioner",
     "AccessibilityFeaturesWithCount": "Tilgængelighedsfunktioner (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Justerbar sværhedsgrad",
@@ -3719,5 +3723,11 @@
     "SteamNotifications_TradeReversal_Title": "Byttebeskyttelse",
     "SteamNotifications_TradeReversal_Body": "En byttehandel blev tilbageført",
     "SteamNotifications_TradeReversal_Body_Short": "En byttehandel blev tilbageført",
-    "SteamNotifications_TradeReversal_Description": "En af dine seneste byttehandler blev tilbageført af din byttepartner."
+    "SteamNotifications_TradeReversal_Description": "En af dine seneste byttehandler blev tilbageført af din byttepartner.",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

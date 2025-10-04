@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "november",
     "Sale_Reservation_MonthNoun_12": "december",
     "Sale_Reservation_Fallback": "Amint lehet",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Népszerű közelgők",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Közelgő játékok összes (minden idők) kívánságlistázás-száma alapján rendezve. Csak a Steamen még meg nem jelent játékokat tartalmaz.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Felkapott közelgő",
@@ -3693,6 +3695,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Játékfelvétel",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(E játékmenet felvétele)",
     "QuickAccess_Tab_GameRecording": "Játékfelvétel",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Kisegítő lehetőségek",
     "AccessibilityFeaturesWithCount": "Kisegítő lehetőségek (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Állítható nehézség",
@@ -3718,5 +3722,12 @@
     "SteamNotifications_TradeReversal_Title": "Cserevédelem",
     "SteamNotifications_TradeReversal_Body": "Egy csere vissza lett vonva.",
     "SteamNotifications_TradeReversal_Body_Short": "Egy csere vissza lett vonva.",
-    "SteamNotifications_TradeReversal_Description": "A cserepartnered visszavonta egy közelmúltbeli cserédet."
+    "SteamNotifications_TradeReversal_Description": "A cserepartnered visszavonta egy közelmúltbeli cserédet.",
+    "Sale_BrowserSortOption_MLWishlist": "ML Wishlist Recommender",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

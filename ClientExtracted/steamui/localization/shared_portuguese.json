@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "Novembro",
     "Sale_Reservation_MonthNoun_12": "Dezembro",
     "Sale_Reservation_Fallback": "Assim que possível",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Mais antecipados",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Jogos com lançamento no futuro, ordenados pelo total de presenças em listas de desejos (desde o início). Apenas inclui jogos que ainda não foram lançados no Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Próximos lançamentos populares",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Gravação de jogos",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Gravar esta sessão de jogo)",
     "QuickAccess_Tab_GameRecording": "Gravação de jogos",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Opções de acessibilidade",
     "AccessibilityFeaturesWithCount": "Opções de acessibilidade (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Dificuldade ajustável",
@@ -3719,5 +3723,11 @@
     "SteamNotifications_TradeReversal_Title": "Proteção contra troca",
     "SteamNotifications_TradeReversal_Body": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Body_Short": "Uma troca foi revertida",
-    "SteamNotifications_TradeReversal_Description": "Uma das tuas trocas recentes foi revertida pela pessoa com quem trocaste."
+    "SteamNotifications_TradeReversal_Description": "Uma das tuas trocas recentes foi revertida pela pessoa com quem trocaste.",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "kasım",
     "Sale_Reservation_MonthNoun_12": "aralık",
     "Sale_Reservation_Fallback": "En kısa sürede",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Popüler ve Yakında",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "İstek listelerine (tüm zamanlarda) toplam eklenme sayısına göre sıralanmış, henüz çıkmamış oyunlar. Yalnızca gelecekte Steam'de çıkacak oyunları içerir.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Yeni Çıkacak Popüler Oyunlar",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Oyun Kaydı",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Bu oyun oturumunu kaydet)",
     "QuickAccess_Tab_GameRecording": "Oyun Kaydı",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Erişilebilirlik Özellikleri",
     "AccessibilityFeaturesWithCount": "Erişilebilirlik Özellikleri (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Ayarlanabilir Zorluk",
@@ -3719,5 +3723,11 @@
     "SteamNotifications_TradeReversal_Title": "Takas Koruması",
     "SteamNotifications_TradeReversal_Body": "Bir takas iptal edildi",
     "SteamNotifications_TradeReversal_Body_Short": "Bir takas iptal edildi",
-    "SteamNotifications_TradeReversal_Description": "Son takaslarınızdan biri takas yaptığınız kişi tarafından iptal edildi."
+    "SteamNotifications_TradeReversal_Description": "Son takaslarınızdan biri takas yaptığınız kişi tarafından iptal edildi.",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

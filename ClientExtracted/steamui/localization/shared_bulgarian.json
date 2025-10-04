@@ -1378,7 +1378,7 @@
     "Sale_BundleContents_Title": "Съдържа тези %1$s артикула:",
     "Sale_SeeAllUpcomingEvents": "Вижте всички предстоящи събития",
     "Sale_TypePackage": "Пакет с множество артикули",
-    "Sale_ReleaseDate": "Издадено на %1$s",
+    "Sale_ReleaseDate": "Дата на издаване: %1$s",
     "Sale_Released_Shorter": "Издадено на %1$s",
     "Sale_ShowMore": "Показване на още",
     "Sale_ShowLess": "Показване на по-малко",
@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "ноември",
     "Sale_Reservation_MonthNoun_12": "декември",
     "Sale_Reservation_Fallback": "Възможно най-скоро",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Популярни предстоящи",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Предстоящи игри, сортирани по общия им брой (за целия период) позиции в списъците с желания. Включва само игри, които все още не са издадени в Steam.",
     "Sale_BrowserSortOption_TrendingWishlisted": "Предстоящи тенденциозни",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Игрално записване",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Записване на тази игрална сесия)",
     "QuickAccess_Tab_GameRecording": "Игрално записване",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Характеристики за достъпност",
     "AccessibilityFeaturesWithCount": "Характеристики за достъпност (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Регулируема трудност",
@@ -3720,5 +3724,10 @@
     "SteamNotifications_TradeReversal_Body": "Дадена търговия беше върната обратно",
     "SteamNotifications_TradeReversal_Body_Short": "Дадена търговия беше върната обратно",
     "SteamNotifications_TradeReversal_Description": "Една от скорошните Ви търговии беше върната обратно от Вашия търговски партньор.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": ""
 }

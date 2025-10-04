@@ -1,7 +1,7 @@
 {
     "language": "schinese",
     "Steam_Platform": "蒸汽平台",
-    "CreatorHome_Follow_tooltip": "关注此创建者，以在他们发行新游戏时通过电子邮件并在您的蒸汽平台商店中收到通知。电子邮件通知可随时关闭。",
+    "CreatorHome_Follow_tooltip": "关注此创作者，以在其发行新游戏时通过电子邮件并在蒸汽平台商店中收到通知。电子邮件通知可随时关闭。",
     "EventCurator_BrowseDialog_Title": "来自蒸汽平台鉴赏家的新闻",
     "EventCurator_BrowseDialog_Desc": "关注您最喜爱的蒸汽平台鉴赏家，在您的蒸汽平台新闻中心即可获取游戏新闻！",
     "EventCurator_FeedCaption_Long": "关注以下部分蒸汽平台鉴赏家，在您的蒸汽平台新闻中心即可获取游戏新闻！",
@@ -55,7 +55,7 @@
     "RSSManager_CreateFeed_Permissions_v1": "本人同意已经过授权，可提供此 RSS 新闻通过蒸汽平台进行存储与再发行。",
     "RSSManager_CreateFeed_Conduct_v1": "我确认此通过蒸汽平台再发行的 RSS 新闻内容符合《蒸汽平台在线行为准则》。",
     "RSSManager_CreateFeed_Conduct_Link": "在此处参阅《蒸汽平台在线行为准则》。",
-    "Image_Error_suggestion": "您始终可以上传图片至蒸汽平台，免费进行内容托管。",
+    "Image_Error_suggestion": "请上传图片至蒸汽平台，免费进行内容托管。",
     "Hover_SteamLevel": "蒸汽平台等级",
     "PersonaStateInNonSteamGame": "非蒸汽平台游戏中",
     "PersonaStateOfflineModeDescriptor": "不连接至蒸汽平台服务器",
@@ -109,7 +109,7 @@
     "Sale_default_Tooltip_Free_Promo_Limitation": "送完即止。免费保留促销期间发放的游戏不会掉落蒸汽平台集换式卡牌。",
     "Sale_Reservation_Komodo": "Steam Deck 现可通过 Komodo 在日本、韩国、台湾和香港购买：<1>https://steamdeck.komodo.jp/product/蒸汽平台-deck/?lang=zh-hans</1>",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "按加入愿望单总数（迄今为止）排序的即将推出游戏。仅包括尚未在蒸汽平台上发行的游戏。",
-    "Sale_BrowserSortOption_TrendingWishlisted_ttip": "按热门程度或最近加入愿望单次数排序的的即将推出的游戏。仅包括尚未在蒸汽平台上发行的游戏。",
+    "Sale_BrowserSortOption_TrendingWishlisted_ttip": "按近期愿望单添加量排序的即将推出的游戏。仅包括尚未在蒸汽平台上发行的游戏。",
     "Sale_BrowserSortOption_PopularComingSoon_ttip": "愿望单热门游戏，按发行日期排序。仅包括尚未在蒸汽平台上发行的游戏。",
     "Sale_BrowserSortOption_RecentlyReleased_ttip": "最近发行的游戏；按蒸汽平台上发行日期的先后排序。",
     "SteamAwards_EventMainTitle": "蒸汽平台大奖",
@@ -194,5 +194,15 @@
     "Settings_GameRecording_Length_Modal_NeverExplainer": "蒸汽平台将永远不会录制此游戏。录制热键已禁用。",
     "Settings_VideoRecording_NvidiaDriverUpdate": "您的 NVIDIA 驱动程序已过期。要想用您的显卡来加速视频编码，请从 NVIDIA 网站更新至最新的驱动程序版本（%1$s 或更新），然后重启蒸汽平台。",
     "Settings_GameRecording_BitRate_Modal_Auto_Explainer": "蒸汽平台用游戏的视频分辨率来选择适合每个录像的比特率。选择更高的质量水平可以获得观感更好的录像，但会消耗更多磁盘空间。",
-    "MediaManager_AppHeader_NonSteamGame": "非蒸汽平台游戏"
+    "MediaManager_AppHeader_NonSteamGame": "非蒸汽平台游戏",
+    "Image_Error_msg1": "蒸汽平台活动与公告不再支持显示在蒸汽平台之外托管的图片。",
+    "Sale_SaleEventIsHidden_Reason_ProductHide": "“在我的蒸汽平台商店页面显示”设置已关闭。",
+    "Sale_SaleEventIsHidden_Reason_Mod": "“从蒸汽平台商店页面隐藏（仅限 Valve 使用）”设置已开启。",
+    "SteamOS_TestResult_GameOrLauncherDoesntExitCleanly": "此游戏不能彻底退出，可能需要您通过蒸汽平台叠加界面手动退出。",
+    "SteamOS_TestResult_MultiWindowAppAutomaticallySetsFocus": "此游戏使用多个窗口，可能需要您通过蒸汽平台叠加界面手动聚焦到正确窗口。",
+    "SteamOS_TestResult_CloudSavesNotEnabledByDefault": "此游戏需要使用游戏内设置手动为存档的游戏启用蒸汽平台云支持",
+    "Notification_PlaytestInviteBody": "有好友邀请您加入蒸汽平台游戏测试！",
+    "MeetSteam_Reg_Question_desc": "请告诉我们您想更多了解哪方面的信息，帮助蒸汽平台团队准备最富有成效的会议。",
+    "ControllerButton_Steam": "蒸汽平台键",
+    "Account_Safety_Notice": "Valve 或蒸汽平台的代表绝不会通过聊天联系您。在打开链接时请务必格外小心，尤其是那些要求您登录蒸汽平台的链接。如果链接看起来可疑、反常、带有紧急要求或给予过多好处，那很可能是骗局。"
 }

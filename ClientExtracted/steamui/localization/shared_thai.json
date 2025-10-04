@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "พฤศจิกายน",
     "Sale_Reservation_MonthNoun_12": "ธันวาคม",
     "Sale_Reservation_Fallback": "เร็วที่สุดเท่าที่จะเป็นไปได้",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "ใกล้วางจำหน่ายยอดนิยม",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "เกมใกล้วางจำหน่ายที่เรียงลำดับตามจำนวนสิ่งที่อยากได้ทั้งหมด (ตลอดกาล) รวมเฉพาะเกมที่ยังไม่วางจำหน่ายบน Steam เท่านั้น",
     "Sale_BrowserSortOption_TrendingWishlisted": "ใกล้วางจำหน่ายตามกระแสนิยม",
@@ -3694,6 +3696,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "การบันทึกเกม",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(บันทึกเซสชันเกมนี้)",
     "QuickAccess_Tab_GameRecording": "การบันทึกเกม",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "คุณสมบัติการช่วยการเข้าถึง",
     "AccessibilityFeaturesWithCount": "คุณสมบัติการช่วยการเข้าถึง (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "ปรับระดับความยากได้",
@@ -3719,5 +3723,11 @@
     "SteamNotifications_TradeReversal_Title": "การป้องกันการแลกเปลี่ยน",
     "SteamNotifications_TradeReversal_Body": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
     "SteamNotifications_TradeReversal_Body_Short": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
-    "SteamNotifications_TradeReversal_Description": "คู่แลกเปลี่ยนของคุณได้คืนค่าให้หนึ่งในการแลกเปลี่ยนล่าสุดของคุณแล้ว"
+    "SteamNotifications_TradeReversal_Description": "คู่แลกเปลี่ยนของคุณได้คืนค่าให้หนึ่งในการแลกเปลี่ยนล่าสุดของคุณแล้ว",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }

@@ -1921,6 +1921,8 @@
     "Sale_Reservation_MonthNoun_11": "November",
     "Sale_Reservation_MonthNoun_12": "Dezember",
     "Sale_Reservation_Fallback": "So schnell wie möglich",
+    "Sale_Reservation_Quarter_ThreeMonths": "%1$s (%2$s - %3$s) %4$s",
+    "Sale_Reservation_AfterQuarter_ThreeMonths": "After %1$s (%2$s %3$s or later)",
     "Sale_BrowserSortOption_TopWishlisted": "Beliebt und bald verfügbar",
     "Sale_BrowserSortOption_TopWishlisted_ttip": "Bevorstehende Steam-Titel sortiert nach der Gesamtzahl ihrer Wunschlisteneinträge. (Ohne zeitliche Einschränkung, nur unveröffentlichte Spiele)",
     "Sale_BrowserSortOption_TrendingWishlisted": "Angesagte bevorstehende Spiele",
@@ -3693,6 +3695,8 @@
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Spielaufnahme",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Diese Spielsitzung aufnehmen)",
     "QuickAccess_Tab_GameRecording": "Spielaufnahme",
+    "SendToPhone_LoadingPhone": "",
+    "GameRecording_Dummy_DO_NOT_USE": "",
     "AccessibilityFeatures": "Funktionen zur Barrierefreiheit",
     "AccessibilityFeaturesWithCount": "Funktionen zur Barrierefreiheit (%1$s)",
     "Accessibility_Feature_AdjustableDifficulty": "Einstellbarer Schwierigkeitsgrad",
@@ -3718,5 +3722,12 @@
     "SteamNotifications_TradeReversal_Title": "Handelsgeschützt",
     "SteamNotifications_TradeReversal_Body": "Ein Handel wurde rückgängig gemacht",
     "SteamNotifications_TradeReversal_Body_Short": "Ein Handel wurde rückgängig gemacht",
-    "SteamNotifications_TradeReversal_Description": "Einer Ihrer letzten Handel wurde von Ihrem Handelspartner rückgängig gemacht."
+    "SteamNotifications_TradeReversal_Description": "Einer Ihrer letzten Handel wurde von Ihrem Handelspartner rückgängig gemacht.",
+    "Sale_BrowserSortOption_MLWishlist_ttip": "Orders games by per-person recommendations based on wishlist behavior of people like them. Falls back to \"Trending Upcoming\" (wishlists) if not logged in or model not available.",
+    "Sale_BrowserSortOption_MLPlaytime": "ML Playtime Recommender",
+    "Sale_BrowserSortOption_MLPlaytime_ttip": "Orders games by per-person recommendations based on playtime behavior of people like them. Falls back to \"Popular based on sales rank\" if not logged in or model not available.",
+    "GameHover_UserReviewsHeader": "",
+    "SteamNotificationSection_1": "",
+    "FamilyManagement_ErrorFailed_NoAdditionalDetails": "",
+    "shared_dummy": "dont translate"
 }
