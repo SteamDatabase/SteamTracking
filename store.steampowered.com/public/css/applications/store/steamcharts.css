@@ -1296,7 +1296,13 @@ body:not(.v7menu) div#global_header .content {
   transform: scaleY(-1);
 }
 ._1Un6hCqh2IuOm0WLmrrA7w {
-  max-width: 940px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  aspect-ratio: 1200 / 460;
   margin: 0 auto;
   margin-bottom: 0px;
   margin-top: 67px;
@@ -1315,7 +1321,10 @@ html.responsive.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   }
 }
 ._1Un6hCqh2IuOm0WLmrrA7w img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
   display: block;
 }
 .BasicUI ._1Un6hCqh2IuOm0WLmrrA7w img {

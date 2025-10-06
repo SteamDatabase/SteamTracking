@@ -354,6 +354,7 @@
         SectionLabelCtn: "v7Xo47-E5cR6b-rvcmp-H",
         SectionLabelRight: "_3Vww38pO7uZXdih9MxhSkH",
         SectionLabelLinkButton: "_2DdLjM_1-DDJlVf9qhMXB3",
+        SectionLabelImage: "_1Q2-i1fYiu8X3t8fCAo1YJ",
         SectionTitleInnerCtn: "_2s_hQYvfnrZrKaBO-URg89",
       };
     },
@@ -9609,7 +9610,11 @@
           _.createElement(
             "div",
             {
-              className: (0, _._)(_.SectionLabelCtn, "SaleSectionLabelCtn"),
+              className: (0, _._)(
+                _.SectionLabelCtn,
+                "SaleSectionLabelCtn",
+                _?.BHasSomeImage("product_banner") ? _.SectionLabelImage : "",
+              ),
             },
             _.createElement(
               "div",
@@ -18631,6 +18636,7 @@
               className: (0, _._)({
                 [_().SaleSection]: !0,
                 [_().CarouselDisplay]: _.show_as_carousel,
+                [_().DisabledBackground]: _.disable_background,
                 [_().SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
                 [_().Blur]: "coverBlur" == _.background_repeat,
