@@ -1026,7 +1026,7 @@
   padding-right: 0;
 }
 ._2s_hQYvfnrZrKaBO-URg89 {
-  margin: 0 auto 10px auto;
+  margin-bottom: 10px;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -1753,7 +1753,7 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
 }
 .trailercarousel ._30Yfh62g3YeDgzOL-z9BnJ {
   max-width: 1200px;
-  width: calc(100vw - 140px);
+  width: calc(100vw - 114px);
 }
 @media screen and (max-width: 851px) {
   .trailercarousel ._30Yfh62g3YeDgzOL-z9BnJ {

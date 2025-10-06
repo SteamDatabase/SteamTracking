@@ -259,7 +259,7 @@ GHomepage = {
 						hwsos: Number( GHomepage.bSteamOS ),
 						hwvar: GHomepage.eHWVariant,
 						hwtype: GHomepage.eGamingDeviceType,
-						seasonal_sale: GHomepage.bIsSeasonalSale,
+						seasonal_sale: GHomepage.bIsSeasonalSale ? 1 : 0,
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -4102,7 +4102,7 @@ var g_bDisableAutoloader = false;
 							hwsos: Number( GHomepage.bSteamOS ),
 							hwvar: GHomepage.eHWVariant,
 							hwtype: GHomepage.eGamingDeviceType,
-							seasonal_sale: GHomepage.bIsSeasonalSale,
+							seasonal_sale: GHomepage.bIsSeasonalSale ? 1 : 0,
 						},
 						//dataType: 'json',
 						type: 'GET'
@@ -4428,7 +4428,7 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 
 		bAJAXInFlight = true;
 		$TabItems.addClass('loading');
-		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', { time: time, hide_f2p: bHideF2P, v2: bVersion2, seasonal_sale: GHomepage.bIsSeasonalSale } ).done( function( data ) {
+		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', { time: time, hide_f2p: bHideF2P, v2: bVersion2 ? 1 : 0, seasonal_sale: GHomepage.bIsSeasonalSale ? 1 : 0 } ).done( function( data ) {
 			if ( data.storeitemdata && data.html )
 			{
 				GStoreItemData.AddStoreItemDataSet( data.storeitemdata );
