@@ -5544,25 +5544,26 @@
               _
             );
           })(),
-          _ = _.useMemo(
-            () =>
-              _.concat(_, _, _, _, _, _, _, _, _ ? _ : []).filter((_) =>
-                (function (_, _, _, _, _, _, _) {
+          _ = _.useMemo(() => {
+            const _ = _.concat(_, _, _, _, _, _, _, _, _ ? _ : []).filter((_) =>
+                (function (_, _, _, _, _) {
                   return (
                     !(_.valveOnly && !_) &&
                     !(_?.length > 0 && !__webpack_require__.includes(_._)) &&
-                      !_.has(_._) &&
-                        !(_.dimmed && _ >= _.startDate) &&
-                          (3 == _) == _.has(_(_)) &&
+                      !_.has(_._) && !(_.dimmed && _ >= _.startDate) &&
                     !(
                       new Date(_.startDate.getTime() + 21 * _._.PerDay * 1e3) <
                       _
                     )
                   );
-                })(_, _, _, _, _, _, _),
+                })(_, _, _, _, _),
               ),
-            [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _],
-          );
+              _ = _.length;
+            return {
+              rgShownEvents: _.filter((_) => (3 == _) == _.has(_(_))),
+              nShouldBeShownCount: _,
+            };
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
         return _;
       }
       function _(_) {
@@ -5647,11 +5648,13 @@
             [_, _],
           ),
           [_, _] = _.useState(0),
-          _ = _.useCallback(() => {
-            _(0), _("");
-          }, []),
           _ = _(),
-          _ = _(_, _, _, __webpack_require__),
+          { rgShownEvents: _, nShouldBeShownCount: _ } = _(
+            _,
+            _,
+            _,
+            __webpack_require__,
+          ),
           _ = (function (_, _, _, _, _, _) {
             const _ = _();
             return (
@@ -5792,59 +5795,87 @@
           [_, _] = _.useState();
         _.useEffect(() => _(void 0), [_]);
         const _ = _.useMemo(
-          () =>
+            () =>
+              _.createElement(
+                "div",
+                {
+                  className: _.FilterHeader,
+                },
+                _.createElement(_, {
+                  filterType: _,
+                  setFilterType: _,
+                }),
+                _.createElement(_, {
+                  filterText: _,
+                  setFilterText: _,
+                }),
+              ),
+            [_, _, _],
+          ),
+          _ = _ > 0 || 0 != _,
+          _ = 0 == _ && null != _ && 0 == _?.length;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _ &&
             _.createElement(
-              "div",
+              _,
               {
-                className: _.FilterHeader,
-              },
-              _.createElement(_, {
-                filterType: _,
-                setFilterType: _,
-              }),
-              _.createElement(_, {
-                filterText: _,
-                setFilterText: _,
-              }),
-            ),
-          [_, _, _],
-        );
-        return (
-          (_?.length > 0 || 0 != _) &&
-          _.createElement(
-            _,
-            {
-              title: (0, _._)("#Dashboard_UpcomingEvents_Title"),
-              ref: _,
-              beta: !0,
-              headerElement: _,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.SectionContainer,
+                title: (0, _._)("#Dashboard_UpcomingEvents_Title"),
+                ref: _,
+                beta: !0,
+                headerElement: _,
               },
               _.createElement(
                 "div",
                 {
-                  className: _.ListArea,
+                  className: _.SectionContainer,
                 },
-                _.createElement(_, {
-                  events: _,
-                  filterVisibleEventIds: _,
-                  dayRefsToScrollTo: _,
-                  fnScrollToDay: _,
-                  isExpanded: _,
-                  fnSetExpanded: _,
-                  filterEnabled: _,
-                  filterType: _,
-                  clearAllFilters: _,
-                  hoverEvent: _,
-                  setHoverEvent: _,
-                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ListArea,
+                  },
+                  _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.AllEventsFiltered,
+                      },
+                      (0, _._)(
+                        "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed",
+                        _.createElement(
+                          "a",
+                          {
+                            onClick: () => {
+                              _(3), _("");
+                            },
+                          },
+                          (0, _._)(
+                            "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText",
+                          ),
+                        ),
+                      ),
+                    ),
+                  !_ &&
+                    _.createElement(_, {
+                      events: _,
+                      filterVisibleEventIds: _,
+                      dayRefsToScrollTo: _,
+                      fnScrollToDay: _,
+                      isExpanded: _,
+                      fnSetExpanded: _,
+                      filterEnabled: _,
+                      filterType: _,
+                      clearAllFilters: () => {
+                        _(0), _("");
+                      },
+                      hoverEvent: _,
+                      setHoverEvent: _,
+                    }),
+                ),
               ),
             ),
-          )
         );
       }
       function _(_, _) {
@@ -5957,10 +5988,10 @@
             }),
             [_, __webpack_require__, _, _],
           ),
-          _ = _(_, _, 0, _),
+          { rgShownEvents: _ } = _(_, _, 0, _),
           _ = _.useMemo(
             () =>
-              _.map((_, _) =>
+              _.map((_) =>
                 _.createElement(_, {
                   key: _._,
                   event: _,

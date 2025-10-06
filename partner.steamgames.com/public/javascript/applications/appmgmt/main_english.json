@@ -739,6 +739,8 @@
     "Dashboard_UpcomingEvents_Filter_NoEvents_LinkText": "See All Events",
     "Dashboard_UpcomingEvents_Filter_DismissedNoEvents": "You can dismiss individual items and they will only appear here. %1$s.",
     "Dashboard_UpcomingEvents_Filter_DismissedNoEvents_LinkText": "See All Events",
+    "Dashboard_UpcomingEvents_Filter_DismissedAllDismissed": "All events are dismissed. %1$s.",
+    "Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText": "See Dismissed Events",
     "Dashboard_UpcomingEvents_Filter_All": "All",
     "Dashboard_UpcomingEvents_Filter_Live": "Live (%1$s)",
     "Dashboard_UpcomingEvents_Filter_Recaps": "Recaps (%1$s)",

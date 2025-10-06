@@ -3045,8 +3045,16 @@ span._11TnLmbm2QkVVfCckvEXbJ {
   background: #7a5a6c;
   border-color: #fff;
 }
+.v7Xo47-E5cR6b-rvcmp-H._1Q2-i1fYiu8X3t8fCAo1YJ {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.v7Xo47-E5cR6b-rvcmp-H._1Q2-i1fYiu8X3t8fCAo1YJ ._2s_hQYvfnrZrKaBO-URg89 {
+  padding-left: 0;
+  padding-right: 0;
+}
 ._2s_hQYvfnrZrKaBO-URg89 {
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -6205,7 +6213,13 @@ textarea._3793xvP87t1rZYbAQDC1pG {
   text-decoration: none;
 }
 ._1Un6hCqh2IuOm0WLmrrA7w {
-  max-width: 940px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  aspect-ratio: 1200 / 460;
   margin: 0 auto;
   margin-bottom: 0px;
   margin-top: 67px;
@@ -6224,7 +6238,10 @@ html.responsive.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   }
 }
 ._1Un6hCqh2IuOm0WLmrrA7w img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
   display: block;
 }
 .BasicUI ._1Un6hCqh2IuOm0WLmrrA7w img {
@@ -6995,6 +7012,8 @@ html.responsive.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
 }
 @media only screen and (min-width: 940px) {
   ._3vjDu6zylspBzUE7FmM6Yl {
+    max-width: 96vw;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -9548,7 +9567,7 @@ html.responsive.touch
   right: 0px;
   margin-left: auto;
   margin-right: auto;
-  min-width: 1040px;
+  min-width: 1064px;
   width: fit-content;
   padding: 10px 18px 10px 18px;
   font-family: "Motiva Sans", sans-serif;

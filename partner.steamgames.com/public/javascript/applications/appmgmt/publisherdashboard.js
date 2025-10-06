@@ -4832,25 +4832,26 @@
               e
             );
           })(),
-          R = n.useMemo(
-            () =>
-              _.concat(u, p, g, v, E, D, w, f, s ? m : []).filter((e) =>
-                (function (e, t, a, n, r, s, i) {
+          R = n.useMemo(() => {
+            const e = _.concat(u, p, g, v, E, D, w, f, s ? m : []).filter((e) =>
+                (function (e, t, a, n, r) {
                   return (
-                    !(t.valveOnly && !i) &&
+                    !(t.valveOnly && !r) &&
                     !(a?.length > 0 && !a.includes(t.id)) &&
-                      !n.has(t.id) &&
-                        !(t.dimmed && e >= t.startDate) &&
-                          (3 == s) == r.has(Yt(t)) &&
+                      !n.has(t.id) && !(t.dimmed && e >= t.startDate) &&
                     !(
                       new Date(t.startDate.getTime() + 21 * Z.Kp.PerDay * 1e3) <
                       e
                     )
                   );
-                })(l, e, i, b, T, a, c),
+                })(l, e, i, b, c),
               ),
-            [_, u, p, g, v, E, D, w, f, s, m, l, i, b, T, a, c],
-          );
+              t = e.length;
+            return {
+              rgShownEvents: e.filter((e) => (3 == a) == T.has(Yt(e))),
+              nShouldBeShownCount: t,
+            };
+          }, [_, u, p, g, v, E, D, w, f, s, m, l, i, b, T, a, c]);
         return R;
       }
       function Yt(e) {
@@ -4928,11 +4929,8 @@
             [u, E],
           ),
           [y, f] = n.useState(0),
-          b = n.useCallback(() => {
-            f(0), h("");
-          }, []),
-          T = Kt(),
-          R = $t(T, t, y, a),
+          b = Kt(),
+          { rgShownEvents: T, nShouldBeShownCount: R } = $t(b, t, y, a),
           S = (function (e, t, a, r, s, i) {
             const l = Qt();
             return (
@@ -5007,7 +5005,7 @@
                 return c;
               }, [l, e, t, a, r, s, i])
             );
-          })(R, y, d, u, g, E),
+          })(T, y, d, u, g, E),
           C = n.useMemo(
             () =>
               S.filter((e) =>
@@ -5029,12 +5027,12 @@
                   )
                     return !1;
                   return !0;
-                })(T.now, e, D, y),
+                })(b.now, e, D, y),
               ),
-            [T.now, S, D, y],
+            [b.now, S, D, y],
           ),
           M =
-            ((A = R),
+            ((A = T),
             (B = C),
             n.useMemo(() => {
               const e = new Set(B.map((e) => e.id));
@@ -5063,57 +5061,83 @@
           })(i, l),
           P = n.useCallback(
             (e) => {
-              if ((0, _.xi)(e).getTime() == (0, _.xi)(T.now).getTime())
+              if ((0, _.xi)(e).getTime() == (0, _.xi)(b.now).getTime())
                 return void U.current.scrollIntoView();
               const t = I?.get((0, _.xi)(e).getTime() / 1e3);
               t && x(t.element);
             },
-            [T.now, I, x],
+            [b.now, I, x],
           ),
           [F, L] = n.useState();
-        n.useEffect(() => L(void 0), [R]);
+        n.useEffect(() => L(void 0), [T]);
         const G = n.useMemo(
-          () =>
-            n.createElement(
-              "div",
-              { className: s.FilterHeader },
-              n.createElement(sa, { filterType: y, setFilterType: f }),
-              n.createElement(ra, { filterText: D, setFilterText: w }),
-            ),
-          [D, y, w],
-        );
-        return (
-          (R?.length > 0 || 0 != y) &&
-          n.createElement(
-            m,
-            {
-              title: (0, o.we)("#Dashboard_UpcomingEvents_Title"),
-              ref: U,
-              beta: !0,
-              headerElement: G,
-            },
-            n.createElement(
-              "div",
-              { className: s.SectionContainer },
+            () =>
               n.createElement(
                 "div",
-                { className: s.ListArea },
-                n.createElement(la, {
-                  events: C,
-                  filterVisibleEventIds: M,
-                  dayRefsToScrollTo: I,
-                  fnScrollToDay: P,
-                  isExpanded: i,
-                  fnSetExpanded: c,
-                  filterEnabled: N,
-                  filterType: y,
-                  clearAllFilters: b,
-                  hoverEvent: F,
-                  setHoverEvent: L,
-                }),
+                { className: s.FilterHeader },
+                n.createElement(sa, { filterType: y, setFilterType: f }),
+                n.createElement(ra, { filterText: D, setFilterText: w }),
+              ),
+            [D, y, w],
+          ),
+          k = R > 0 || 0 != y,
+          z = 0 == y && null != C && 0 == C?.length;
+        return n.createElement(
+          n.Fragment,
+          null,
+          k &&
+            n.createElement(
+              m,
+              {
+                title: (0, o.we)("#Dashboard_UpcomingEvents_Title"),
+                ref: U,
+                beta: !0,
+                headerElement: G,
+              },
+              n.createElement(
+                "div",
+                { className: s.SectionContainer },
+                n.createElement(
+                  "div",
+                  { className: s.ListArea },
+                  z &&
+                    n.createElement(
+                      "div",
+                      { className: s.AllEventsFiltered },
+                      (0, o.PP)(
+                        "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed",
+                        n.createElement(
+                          "a",
+                          {
+                            onClick: () => {
+                              f(3), h("");
+                            },
+                          },
+                          (0, o.we)(
+                            "#Dashboard_UpcomingEvents_Filter_DismissedAllDismissed_LinkText",
+                          ),
+                        ),
+                      ),
+                    ),
+                  !z &&
+                    n.createElement(la, {
+                      events: C,
+                      filterVisibleEventIds: M,
+                      dayRefsToScrollTo: I,
+                      fnScrollToDay: P,
+                      isExpanded: i,
+                      fnSetExpanded: c,
+                      filterEnabled: N,
+                      filterType: y,
+                      clearAllFilters: () => {
+                        f(0), h("");
+                      },
+                      hoverEvent: F,
+                      setHoverEvent: L,
+                    }),
+                ),
               ),
             ),
-          )
         );
       }
       function aa(e, t) {
@@ -5209,10 +5233,10 @@
             }),
             [i, a, l, o],
           ),
-          m = $t(c, t, 0, r),
+          { rgShownEvents: m } = $t(c, t, 0, r),
           d = n.useMemo(
             () =>
-              m.map((e, t) =>
+              m.map((e) =>
                 n.createElement(_a, {
                   key: e.id,
                   event: e,
