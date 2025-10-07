@@ -9924,6 +9924,12 @@
     },
     74761: (e, t, n) => {
       "use strict";
+      /*!
+       * The buffer module from node.js, for the browser.
+       *
+       * @author   Feross Aboukhadijeh <https://feross.org>
+       * @license  MIT
+       */
       const o = n(71944),
         r = n(61621),
         i =
@@ -11334,6 +11340,7 @@
       }
     },
     61621: (e, t) => {
+      /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
       (t.read = function (e, t, n, o, r) {
         var i,
           s,
@@ -14124,7 +14131,15 @@
     },
     50104: (e, t, n) => {
       "use strict";
-      var o = n(90626),
+      /**
+       * @license React
+       * use-sync-external-store-shim/with-selector.production.js
+       *
+       * Copyright (c) Meta Platforms, Inc. and affiliates.
+       *
+       * This source code is licensed under the MIT license found in the
+       * LICENSE file in the root directory of this source tree.
+       */ var o = n(90626),
         r = n(61702);
       var i =
           "function" == typeof Object.is

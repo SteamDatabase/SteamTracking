@@ -704,7 +704,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	font-size: 12px;
 	font-weight: normal;
 	line-height: normal;
-	text-align: left;
+	text-align: inline-start;
 	cursor: pointer;
 }
 
@@ -1356,7 +1356,7 @@ body.v7menu div#global_header .content {
 
 div#global_actions {
 	position: absolute;
-	right: 0px;
+	inset-inline-end: 0px;
 	top: 6px;
 
 	height: 21px;
@@ -1406,9 +1406,9 @@ div#global_actions .user_avatar {
 }
 
 div#global_header div.logo {
-	float: left;
+	float: inline-start;
 	padding-top: 30px;
-	margin-right: 40px;
+	margin-inline-end: 40px;
 	width: 176px;
 	height: 44px;
 }
@@ -1679,14 +1679,18 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 
 #global_header .supernav_container {
 	position: absolute;
-	left: 200px
+	inset-inline-start: 200px;
 }
 
 .supernav_content {
 	background: #3D4450;
-	box-shadow: 3px 3px 5px -3px #000;
-	text-align: left;
+	--shadow-x: 3px;
+	box-shadow: var(--shadow-x) 3px 5px -3px #000;
+	text-align: inline-start;
 	z-index: 500;
+}
+.supernav_content:dir(rtl) {
+	--shadow-x: -3px;
 }
 
 .supernav_content a.submenuitem {

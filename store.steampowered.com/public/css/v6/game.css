@@ -6590,7 +6590,7 @@ a.open_in_steam_body:hover {
 }
 
 .banner_open_in_steam {
-	height: 50px;
+	min-height: 50px;
 }
 @media screen and (max-width: 910px )
 {

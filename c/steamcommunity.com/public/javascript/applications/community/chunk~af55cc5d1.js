@@ -9,6 +9,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -100,6 +101,8 @@
             avatar_medium_url: _.avatar_medium_url,
             group_name: _.group_name,
             creator_page_bg_url: _.creator_page_bg_url,
+            curator_title: _.curator_title,
+            curator_description: _.curator_description,
             partner_events_enabled: _.partner_events_enabled,
           };
           0 != _.appid && this.m_mapAppIDToClanInfo.set(_.appid, _),
@@ -361,6 +364,10 @@
           return {
             bVisible: !1,
           };
+        if (36 == _.GetEventType())
+          return {
+            bVisible: !1,
+          };
         if (_.BHasSaleEnabled())
           return {
             bVisible: !0,
@@ -413,6 +420,30 @@
           : {
               bVisible: !1,
             };
+      }
+      function _(_) {
+        const _ = _.BIsOGGEvent(),
+          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
+        return _ || 36 != _.GetEventType()
+          ? {
+              bVisible: !1,
+            }
+          : _.BHasSaleEnabled()
+            ? {
+                bVisible: !0,
+              }
+            : _.clanSteamID.GetAccountID() == (0, _._)()
+              ? {
+                  bVisible: !1,
+                }
+              : _
+                ? {
+                    bVisible: !0,
+                    bValveOnly: !0,
+                  }
+                : {
+                    bVisible: !1,
+                  };
       }
       window.g_ClanStore = _;
     },

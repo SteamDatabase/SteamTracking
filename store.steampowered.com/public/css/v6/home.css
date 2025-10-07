@@ -4878,36 +4878,6 @@ background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);
 	z-index: 3;
 }
 
-.carousel_container .arrow > div {
-	background-image: url(/public/images/v6/arrows.png);
-	width: 23px;
-	height: 36px;
-}
-
-.carousel_container .arrow.left {
-	left: -46px;
-background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
-	background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
-}
-.carousel_container .arrow.left:hover {
-background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
-	background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
-}
-
-.carousel_container .arrow.right {
-	right: -46px;
-background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
-	background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
-}
-.carousel_container .arrow.right:hover {
-background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
-	background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
-}
-
-.carousel_container .arrow.left > div {
-	background-position-x: 23px;
-}
-
 .best_selling_vr_ctn .carousel_container .arrow.left,
 .best_selling_vr_ctn .carousel_container .arrow.right {
 	transform: translateY(-28px);

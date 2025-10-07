@@ -19,6 +19,8 @@
     21895: (e) => {
       e.exports = {
         Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
       };
@@ -437,10 +439,10 @@
     },
     19560: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MarketBaseUIRoot: () => x, default: () => b });
+      n.r(t), n.d(t, { MarketBaseUIRoot: () => x, default: () => C });
       var a = n(90626),
         r = n(21869),
-        o = n(13826),
+        o = n(93889),
         c = n(10430);
       const i = (0, a.createContext)({}),
         l = (0, a.createContext)(() => {});
@@ -507,11 +509,11 @@
           { formFactorOverride: n } = p();
         return a.createElement(c.cr, { formFactor: n }, t);
       }
-      var _ = n(738),
-        h = n(69818),
+      var h = n(738),
+        _ = n(69818),
         v = n(78327),
         y = n(2168);
-      function b(e) {
+      function C(e) {
         const { rgApps: t, rgAppData: n, ...r } = e,
           o = (0, a.useMemo)(
             () =>
@@ -523,9 +525,9 @@
               }),
             [t, n],
           );
-        return a.createElement(C, { ...r, rgApps: o, rgAppData: n });
+        return a.createElement(b, { ...r, rgApps: o, rgAppData: n });
       }
-      function C(e) {
+      function b(e) {
         var t;
         const [n, r] = (0, a.useState)(
           !!(null === (t = history.state) || void 0 === t
@@ -581,10 +583,10 @@
         const { onRequestClose: t, children: n } = e,
           r = (0, v.Qn)();
         return a.createElement(
-          _.x_,
+          h.x_,
           { onEscKeypress: t },
           a.createElement(
-            h.UC,
+            _.UC,
             {
               bCenterVertically: !r,
               className: "DialogContentFullSize noOpinionatedGlobalStyles",
@@ -994,7 +996,7 @@
       "use strict";
       n.d(t, { Z: () => c });
       var a = n(8527),
-        r = n(93765);
+        r = n(42475);
       function o() {
         return (0, r.A)().languages.map((e) => {
           return 2 == (t = e.strISOCode).length ? `${t}-${a.TS.COUNTRY}` : t;
@@ -1022,9 +1024,9 @@
         );
       }
     },
-    13826: (e, t, n) => {
+    93889: (e, t, n) => {
       "use strict";
-      n.d(t, { nk: () => Oa, D: () => Ha, xs: () => Na });
+      n.d(t, { nk: () => Ma, D: () => Qa, xs: () => Ha });
       var a = n(90626),
         r = n(8527),
         o = n(88942),
@@ -1098,10 +1100,10 @@
             return "h" + n;
           })(t, (0, a.useContext)(f).depth);
         return a.createElement(n, {
-          ...(0, l.mz)({ ...e, className: d.Heading }, _),
+          ...(0, l.mz)({ ...e, className: d.Heading }, h),
         });
       }
-      const _ = [
+      const h = [
         ...u,
         ...i.L,
         {
@@ -1110,14 +1112,14 @@
           className: (e) => d[`HeadingSize-${e}`],
         },
       ];
-      var h = n(64238),
-        v = n.n(h),
+      var _ = n(64238),
+        v = n.n(_),
         y = n(68875);
-      function b(e) {
-        const t = (0, l.mz)({ ...e, className: v()(e.className, y.Flex) }, C);
+      function C(e) {
+        const t = (0, l.mz)({ ...e, className: v()(e.className, y.Flex) }, b);
         return a.createElement("div", { ...t });
       }
-      const C = [
+      const b = [
         ...i.h,
         {
           prop: "direction",
@@ -1183,23 +1185,116 @@
           cssProperty: (e) => ["--separator-color", (0, l.Fd)(e)],
         },
       ];
-      var k = n(29882);
-      function T(e) {
+      var k = n(16619);
+      function I(e) {
+        const { viewBoxSize: t = 20, ...n } = e,
+          r = n.size ? void 0 : k.IconSizeDefault;
+        return a.createElement("svg", {
+          viewBox: `0 0 ${t} ${t}`,
+          ...(0, l.mz)({ className: r, ...n }, T),
+        });
+      }
+      const T = [
+        ...i.L,
+        { prop: "size", responsive: !0, className: (e) => k[`IconSize-${e}`] },
+        {
+          prop: "color",
+          className: k.Color,
+          cssProperty: (e) => ["--icon-color", (0, l.Fd)(e)],
+        },
+        {
+          prop: "hitSlop",
+          className: k.HitSlop,
+          cssProperty: (e) => [
+            "--hit-slop-custom",
+            "string" == typeof e ? e : "",
+          ],
+        },
+        i.h.find(({ prop: e }) => "cursor" === e),
+      ];
+      function O(e) {
+        return a.createElement(
+          I,
+          { ...e, viewBoxSize: 16 },
+          a.createElement("path", {
+            d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      var P = n(21895);
+      function z(e) {
+        const {
+            checked: t,
+            onChange: n,
+            disabled: r,
+            children: o,
+            ref: c,
+            variant: i = "default",
+            ...l
+          } = e,
+          s = "indeterminate" === t,
+          p = s ? L : O,
+          u = () => {
+            n && n(!!s || !t);
+          };
+        return a.createElement(
+          C,
+          {
+            ref: c,
+            role: "checkbox",
+            "aria-checked": s ? "mixed" : t,
+            "data-state": A(t),
+            className: v()(P.Root, P[`Variant-${i}`]),
+            onClick: u,
+            tabIndex: 0,
+            onKeyDown: (e) => {
+              " " === e.key && (u(), e.preventDefault(), e.stopPropagation());
+            },
+            ...l,
+          },
+          a.createElement(
+            "div",
+            { className: P.Checkbox },
+            t && a.createElement(p, { className: P.Icon }),
+          ),
+          o,
+        );
+      }
+      function A(e) {
+        return "indeterminate" === e ? e : e ? "checked" : "unchecked";
+      }
+      function L(e) {
+        return a.createElement(
+          "svg",
+          {
+            viewBox: "0 0 16 16",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          a.createElement("path", {
+            d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      var N = n(29882);
+      function R(e) {
         const { variant: t = "default", size: n = "2", ...r } = e;
         return a.createElement("button", {
           type: "button",
-          ...(0, l.mz)({ ...r, variant: t, size: n, className: k.Button }, I),
+          ...(0, l.mz)({ ...r, variant: t, size: n, className: N.Button }, M),
         });
       }
-      const I = [
+      const M = [
         ...i.L,
-        { prop: "size", responsive: !0, className: (e) => k[`Size-${e}`] },
-        { prop: "variant", className: (e) => k[`Variant-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => N[`Size-${e}`] },
+        { prop: "variant", className: (e) => N[`Variant-${e}`] },
         { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
       ];
-      var O = n(91239);
-      var P = n(38878);
-      function z(e) {
+      var F = n(91239);
+      var V = n(38878);
+      function G(e) {
         const {
             variant: t = "default",
             size: n = "2",
@@ -1216,29 +1311,29 @@
           } = e,
           g = "underline" === t ? "none" : r;
         return a.createElement(
-          b,
+          C,
           {
             ...f,
             radius: g,
             className: v()(
-              P.ControlBox,
-              o && P.Focusable,
-              i && P.Hoverable,
-              l && P.Clickable,
-              P[`Variant-${t}`],
-              P[`Size-${n}`],
+              V.ControlBox,
+              o && V.Focusable,
+              i && V.Hoverable,
+              l && V.Clickable,
+              V[`Variant-${t}`],
+              V[`Size-${n}`],
               s,
             ),
             align: "center",
             "data-has-value": !!d,
           },
-          u && a.createElement(b, { paddingRight: "2" }, u),
+          u && a.createElement(C, { paddingRight: "2" }, u),
           a.createElement(c.a, { flexGrow: "1", minWidth: "0" }, p),
-          m && a.createElement(b, { paddingLeft: "2" }, m),
+          m && a.createElement(C, { paddingLeft: "2" }, m),
         );
       }
-      var N = n(88411);
-      function A(e) {
+      var W = n(88411);
+      function Y(e) {
         const { extracted: t, remaining: n } = (0, c.A)(e),
           {
             variant: r,
@@ -1250,7 +1345,7 @@
             ...u
           } = n;
         return a.createElement(
-          z,
+          G,
           {
             ref: p,
             ...t,
@@ -1260,10 +1355,10 @@
             afterContent: l,
             cursor: "text",
           },
-          a.createElement(R, { ref: s, ...u }),
+          a.createElement(H, { ref: s, ...u }),
         );
       }
-      function R(e) {
+      function H(e) {
         const {
           value: t,
           onTextChange: n,
@@ -1276,32 +1371,32 @@
           ref: c,
           type: "text",
           ...i,
-          className: v()(O.Reset, N.TextInput, o),
+          className: v()(F.Reset, W.TextInput, o),
           value: t || "",
           onChange: (e) => {
             n(e.target.value), r && r(e);
           },
         });
       }
-      var L = n(81393),
-        M = n(73788),
-        F = n(28505);
-      function G(e, t, n) {
+      var j = n(81393),
+        D = n(73788),
+        J = n(28505);
+      function B(e, t, n) {
         return "function" == typeof e ? e(t, n) : a.cloneElement(e, t);
       }
-      function W(e, t, n, a) {
-        return G(e || t, n, a);
+      function U(e, t, n, a) {
+        return B(e || t, n, a);
       }
-      var V = n(48093);
-      const Y = Object.assign(
+      var Z = n(48093);
+      const K = Object.assign(
         function (e) {
           const { render: t, ...n } = e;
-          return W(
+          return U(
             t,
             a.createElement(c.a, {
               radius: "sm",
               background: "dull-5",
-              className: V.ListBox,
+              className: Z.ListBox,
             }),
             { role: "listbox", ...n },
           );
@@ -1317,12 +1412,12 @@
               } = e,
               l = t ? "true" : "false",
               s = n ? "true" : void 0;
-            return W(
+            return U(
               o,
               a.createElement(c.a, {
                 "data-selected": l,
                 "data-focused": s,
-                className: V.ListBoxOption,
+                className: Z.ListBoxOption,
                 paddingY: "2",
                 paddingX: "3",
               }),
@@ -1332,14 +1427,14 @@
           },
         },
       );
-      var H = n(94621);
+      var q = n(94621);
       (0, a.createContext)(null);
-      function D(e) {
+      function $(e) {
         const { gutter: t = 0 } = e;
         return [
-          (0, H.UU)(),
-          (0, H.cY)(2),
-          (0, H.Ej)({
+          (0, q.UU)(),
+          (0, q.cY)(2),
+          (0, q.Ej)({
             apply: (n) => {
               const { rects: a, elements: r, availableHeight: o } = n,
                 c =
@@ -1355,8 +1450,8 @@
           }),
         ];
       }
-      const j = (0, a.createContext)(null);
-      function J(e) {
+      const Q = (0, a.createContext)(null);
+      function X(e) {
         const {
           open: t,
           onOpenChange: n,
@@ -1368,17 +1463,17 @@
           role: s,
         } = e;
         let p = t;
-        const u = (0, M.we)({
+        const u = (0, D.we)({
             open: p,
             onOpenChange: n,
-            middleware: D(e),
-            whileElementsMounted: F.ll,
+            middleware: $(e),
+            whileElementsMounted: J.ll,
           }),
-          m = (0, M.kp)(u.context, { enabled: !!l.click }),
-          d = (0, M.iQ)(u.context, { enabled: !!l.focus }),
-          f = (0, M.s9)(u.context),
+          m = (0, D.kp)(u.context, { enabled: !!l.click }),
+          d = (0, D.iQ)(u.context, { enabled: !!l.focus }),
+          f = (0, D.s9)(u.context),
           g = (0, a.useRef)([]),
-          _ = (0, M.C1)(u.context, {
+          h = (0, D.C1)(u.context, {
             listRef: g,
             activeIndex: r,
             selectedIndex: c,
@@ -1387,25 +1482,25 @@
             loop: !0,
             focusItemOnOpen: !1,
           }),
-          h = (0, a.useRef)([]),
+          _ = (0, a.useRef)([]),
           v = (0, a.useRef)(!1),
-          y = (0, M.lY)(u.context, {
+          y = (0, D.lY)(u.context, {
             enabled: !!l.typeahead,
-            listRef: h,
+            listRef: _,
             activeIndex: r,
             selectedIndex: c,
             onMatch: p ? o : i,
             onTypingChange: (e) => (v.current = e),
           }),
-          b = (0, M.It)(u.context, { role: s }),
+          C = (0, D.It)(u.context, { role: s }),
           {
-            getFloatingProps: C,
+            getFloatingProps: b,
             getReferenceProps: S,
             getItemProps: E,
-          } = (0, M.bv)([b, m, d, f, _, y]);
+          } = (0, D.bv)([C, m, d, f, h, y]);
         return {
           floating: u,
-          getFloatingProps: C,
+          getFloatingProps: b,
           getReferenceProps: S,
           getItemProps: E,
           open: p,
@@ -1413,21 +1508,21 @@
           selectedIndex: c,
           setSelectedIndex: i,
           elementsRef: g,
-          labelsRef: h,
+          labelsRef: _,
           typingRef: v,
           initialFocus: l.virtualItemFocus ? -1 : void 0,
         };
       }
-      const B = {
+      const ee = {
         Root: function (e) {
           const { children: t, state: n } = e;
-          return a.createElement(j.Provider, { value: n }, t);
+          return a.createElement(Q.Provider, { value: n }, t);
         },
         Anchor: function (e) {
           const { children: t } = e,
             n = a.Children.only(t),
-            r = (0, a.useContext)(j),
-            o = (0, M.SV)([
+            r = (0, a.useContext)(Q),
+            o = (0, D.SV)([
               null == r ? void 0 : r.floating.refs.setReference,
               null == n ? void 0 : n.props.ref,
             ]);
@@ -1444,18 +1539,22 @@
         },
         Positioner: function (e) {
           const { children: t, render: n, ref: r } = e,
-            o = (0, a.useContext)(j),
-            c = (0, M.SV)([
+            o = (0, a.useContext)(Q),
+            c = (0, D.SV)([
               r,
               null == o ? void 0 : o.floating.refs.setFloating,
             ]);
           return o
             ? o.open
               ? a.createElement(
-                  M.s3,
-                  { context: o.floating.context, initialFocus: o.initialFocus },
+                  D.s3,
+                  {
+                    context: o.floating.context,
+                    initialFocus: o.initialFocus,
+                    returnFocus: !1,
+                  },
                   a.createElement(
-                    Y,
+                    K,
                     {
                       ref: c,
                       style: o.floating.floatingStyles,
@@ -1463,7 +1562,7 @@
                       render: n,
                     },
                     a.createElement(
-                      M.ph,
+                      D.ph,
                       { elementsRef: o.elementsRef, labelsRef: o.labelsRef },
                       t,
                     ),
@@ -1476,73 +1575,53 @@
               null);
         },
         Item: function (e) {
-          const { children: t, label: n, onSelect: r, ref: o, ...c } = e,
-            i = (0, a.useContext)(j),
-            { ref: l, index: s } = (0, M.rm)({ label: n }),
-            p = (0, M.SV)([o, l]);
-          if (!i)
+          const {
+              children: t,
+              label: n,
+              onSelect: r,
+              ref: o,
+              selected: c,
+              ...i
+            } = e,
+            l = (0, a.useContext)(Q),
+            { ref: s, index: p } = (0, D.rm)({ label: n }),
+            u = (0, D.SV)([o, s]);
+          if (!l)
             return (
               console.error(
                 "<PopoverListItem> must be a child of <PopoverListRoot>.",
               ),
               null
             );
-          const u = s === i.activeIndex,
-            m = s === i.selectedIndex;
+          const m = p === l.activeIndex,
+            d = p === l.selectedIndex || !!c;
           return a.createElement(
-            Y.Option,
+            K.Option,
             {
-              ref: p,
-              selected: m,
-              focused: u,
+              ref: u,
+              selected: d,
+              focused: m,
               role: "option",
-              tabIndex: u ? 0 : -1,
-              ...i.getItemProps({
+              tabIndex: m ? 0 : -1,
+              ...l.getItemProps({
                 onClick: r,
                 onKeyDown: (e) => {
                   ("Enter" === e.key ||
-                    (" " === e.key && !i.typingRef.current)) &&
+                    (" " === e.key && !l.typingRef.current)) &&
                     (r(), e.preventDefault(), e.stopPropagation());
                 },
-                active: u,
-                selected: m,
-                ...c,
+                active: m,
+                selected: d,
+                ...i,
               }),
             },
             t,
           );
         },
       };
-      var U = n(16619);
-      function Z(e) {
-        const { viewBoxSize: t = 20, ...n } = e,
-          r = n.size ? void 0 : U.IconSizeDefault;
-        return a.createElement("svg", {
-          viewBox: `0 0 ${t} ${t}`,
-          ...(0, l.mz)({ className: r, ...n }, K),
-        });
-      }
-      const K = [
-        ...i.L,
-        { prop: "size", responsive: !0, className: (e) => U[`IconSize-${e}`] },
-        {
-          prop: "color",
-          className: U.Color,
-          cssProperty: (e) => ["--icon-color", (0, l.Fd)(e)],
-        },
-        {
-          prop: "hitSlop",
-          className: U.HitSlop,
-          cssProperty: (e) => [
-            "--hit-slop-custom",
-            "string" == typeof e ? e : "",
-          ],
-        },
-        i.h.find(({ prop: e }) => "cursor" === e),
-      ];
-      function q(e) {
+      function te(e) {
         return a.createElement(
-          Z,
+          I,
           { ...e, viewBoxSize: 12 },
           a.createElement("path", {
             d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
@@ -1550,7 +1629,7 @@
           }),
         );
       }
-      function $(e) {
+      function ne(e) {
         const { onTextChange: t, suggestions: n, onSuggestionSelected: r } = e,
           [o, c] = (0, a.useState)(null),
           [i, l] = (0, a.useState)(!1),
@@ -1570,7 +1649,7 @@
           onSuggestionSelected: r,
         };
       }
-      const Q = Object.assign(
+      const ae = Object.assign(
           function (e) {
             const {
                 suggestions: t,
@@ -1578,27 +1657,27 @@
                 onSuggestionSelected: r,
                 ...o
               } = e,
-              c = $({
+              c = ne({
                 onTextChange: n,
                 suggestions: t,
                 onSuggestionSelected: r,
               }),
               i = o.value
-                ? a.createElement(q, {
+                ? a.createElement(te, {
                     onClick: () => c.onTextChange(""),
                     cursor: "pointer",
                     hitSlop: !0,
                   })
                 : void 0;
             return a.createElement(
-              Q.Root,
+              ae.Root,
               { state: c },
-              a.createElement(Q.TextInput, { ...o, afterContent: i }),
+              a.createElement(ae.TextInput, { ...o, afterContent: i }),
               a.createElement(
-                Q.Suggestions,
+                ae.Suggestions,
                 null,
                 t.map((e, t) =>
-                  a.createElement(Q.Suggestion, { key: e + t, value: e }, e),
+                  a.createElement(ae.Suggestion, { key: e + t, value: e }, e),
                 ),
               ),
             );
@@ -1606,7 +1685,7 @@
           {
             Root: function (e) {
               const { children: t, ...n } = e,
-                r = J({
+                r = X({
                   ...n.state,
                   width: "target",
                   gutter: "4",
@@ -1615,9 +1694,9 @@
                   scroll: !0,
                 });
               return a.createElement(
-                X.Provider,
+                re.Provider,
                 { value: n },
-                a.createElement(B.Root, { state: r }, t),
+                a.createElement(ee.Root, { state: r }, t),
               );
             },
             TextInput: function (e) {
@@ -1630,11 +1709,11 @@
                   suggestions: c,
                   onSuggestionSelected: i,
                 },
-              } = ee("<Autocomplete.TextInput>");
+              } = oe("<Autocomplete.TextInput>");
               return a.createElement(
-                B.Anchor,
+                ee.Anchor,
                 null,
-                a.createElement(A, {
+                a.createElement(Y, {
                   ...e,
                   onTextChange: t,
                   "aria-autocomplete": "list",
@@ -1652,7 +1731,9 @@
                 }),
               );
             },
-            Suggestions: B.Positioner,
+            Suggestions: function (e) {
+              return a.createElement(ee.Positioner, { ...e, returnFocus: !1 });
+            },
             Suggestion: function (e) {
               const { value: t, children: n, ...r } = e,
                 {
@@ -1662,9 +1743,9 @@
                     setActiveIndex: i,
                     onSuggestionSelected: l,
                   },
-                } = ee("<Autocomplete.TextInput>");
+                } = oe("<Autocomplete.TextInput>");
               return a.createElement(
-                B.Item,
+                ee.Item,
                 {
                   onSelect: () => {
                     o(t), l && l(t), i(null), c(!1);
@@ -1676,46 +1757,46 @@
             },
           },
         ),
-        X = (0, a.createContext)(null);
-      function ee(e) {
-        const t = (0, a.useContext)(X);
-        return (0, L.wT)(t, `${e} must be used within an <Autocomplete>!`), t;
+        re = (0, a.createContext)(null);
+      function oe(e) {
+        const t = (0, a.useContext)(re);
+        return (0, j.wT)(t, `${e} must be used within an <Autocomplete>!`), t;
       }
-      var te = n(89611);
-      function ne(e) {
-        const t = (0, l.mz)({ ...e, className: e.className }, ae);
+      var ce = n(89611);
+      function ie(e) {
+        const t = (0, l.mz)({ ...e, className: e.className }, le);
         return a.createElement("img", { ...t });
       }
-      const ae = [
+      const le = [
         ...i.h,
         {
           prop: "objectFit",
-          className: te.ObjectFit,
+          className: ce.ObjectFit,
           cssProperty: "--object-fit",
         },
         {
           prop: "objectPosition",
-          className: te.ObjectPosition,
+          className: ce.ObjectPosition,
           cssProperty: "--object-position",
         },
       ];
-      var re = n(53011);
-      const oe = (0, a.createContext)(null);
-      function ce(e) {
+      var se = n(53011);
+      const pe = (0, a.createContext)(null);
+      function ue(e) {
         const { options: t, ...n } = e;
         return a.createElement(
-          ce.Root,
+          ue.Root,
           { ...n },
-          t.map((e) => a.createElement(ce.Item, { value: e, key: e })),
+          t.map((e) => a.createElement(ue.Item, { value: e, key: e })),
         );
       }
-      function ie(e) {
+      function me(e) {
         return a.createElement(c.a, {
-          className: re.Indicator,
+          className: se.Indicator,
           radius: e.radius,
         });
       }
-      function le(e, t) {
+      function de(e, t) {
         const n = e.compareDocumentPosition(t);
         return n & Node.DOCUMENT_POSITION_FOLLOWING
           ? -1
@@ -1723,9 +1804,9 @@
             ? 1
             : 0;
       }
-      (ce.Item = function (e) {
+      (ue.Item = function (e) {
         const { value: t, children: n } = e,
-          r = (0, a.useContext)(oe),
+          r = (0, a.useContext)(pe),
           [o, c] = (0, a.useState)(),
           { register: i, unregister: l } = r || {};
         if (
@@ -1746,12 +1827,12 @@
             ref: c,
             onClick: m,
             "data-selected": u ? "true" : "false",
-            className: re.Item,
+            className: se.Item,
           },
           d,
         );
       }),
-        (ce.Root = function (e) {
+        (ue.Root = function (e) {
           const {
               variant: t,
               radius: n,
@@ -1770,11 +1851,11 @@
               [],
             );
           return a.createElement(
-            z,
+            G,
             {
               variant: t,
               radius: n,
-              className: re.SegmentedControlBox,
+              className: se.SegmentedControlBox,
               tabIndex: 0,
               onKeyDown: (e) => {
                 let t = 0;
@@ -1789,9 +1870,9 @@
                 }
                 if (t) {
                   const e = i[o],
-                    n = Array.from(Object.values(i)).sort(le),
+                    n = Array.from(Object.values(i)).sort(de),
                     a = n.findIndex((t) => t === e);
-                  (0, L.wT)(
+                  (0, j.wT)(
                     "number" == typeof a,
                     "Could not find current segmented value position",
                   );
@@ -1805,7 +1886,7 @@
               },
             },
             a.createElement(
-              oe.Provider,
+              pe.Provider,
               {
                 value: (0, a.useMemo)(
                   () => ({
@@ -1819,100 +1900,100 @@
               },
               a.createElement(
                 "div",
-                { className: re.SegmentedControl },
+                { className: se.SegmentedControl },
                 r,
-                a.createElement(ie, { radius: n }),
+                a.createElement(me, { radius: n }),
               ),
             ),
           );
         });
-      var se = n(75180);
-      function pe(e) {
-        const t = (0, l.mz)({ ...e, className: v()(se.Grid, e.className) }, ue);
+      var fe = n(75180);
+      function ge(e) {
+        const t = (0, l.mz)({ ...e, className: v()(fe.Grid, e.className) }, he);
         return a.createElement("div", { ...t });
       }
-      const ue = [
+      const he = [
         ...i.h,
         {
           prop: "display",
           responsive: !0,
-          className: se.Display,
+          className: fe.Display,
           cssProperty: "--grid-display",
         },
         {
           prop: "columns",
           responsive: !0,
-          className: se.Columns,
+          className: fe.Columns,
           cssProperty: "--grid-columns",
         },
         {
           prop: "rows",
           responsive: !0,
-          className: se.Rows,
+          className: fe.Rows,
           cssProperty: "--grid-rows",
         },
         {
           prop: "autoColumns",
           responsive: !0,
-          className: se.AutoColumns,
+          className: fe.AutoColumns,
           cssProperty: "--grid-auto-columns",
         },
         {
           prop: "autoRows",
           responsive: !0,
-          className: se.AutoRows,
+          className: fe.AutoRows,
           cssProperty: "--grid-auto-rows",
         },
         {
           prop: "areas",
           responsive: !0,
-          className: se.Areas,
+          className: fe.Areas,
           cssProperty: "--grid-areas",
         },
         {
           prop: "flow",
           responsive: !0,
-          className: se.Flow,
+          className: fe.Flow,
           cssProperty: "--grid-flow",
         },
         {
           prop: "align",
           responsive: !0,
-          className: se.Align,
+          className: fe.Align,
           cssProperty: "--grid-align",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: se.Justify,
+          className: fe.Justify,
           cssProperty: "--grid-justify",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: se.Gap,
+          className: fe.Gap,
           cssProperty: (e) => ["--grid-gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: se.Gap,
+          className: fe.Gap,
           cssProperty: (e) => ["--grid-gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: se.Gap,
+          className: fe.Gap,
           cssProperty: (e) => ["--grid-gap-y", `var(--spacing-${e})`],
         },
       ];
-      var me = n(81122);
-      function de(e) {
-        return a.createElement(c.a, { ...e, className: me.Skeleton });
+      var _e = n(81122);
+      function ve(e) {
+        return a.createElement(c.a, { ...e, className: _e.Skeleton });
       }
-      function fe(e) {
+      function ye(e) {
         return a.createElement(
-          Z,
+          I,
           { ...e },
           a.createElement("path", {
             d: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
@@ -1920,67 +2001,94 @@
           }),
         );
       }
-      var ge = n(88268),
-        _e = n(52038),
-        he = n(82277);
-      function ve(e) {
+      var Ce = n(88268),
+        be = n(52038),
+        Se = n(42475);
+      function Ee() {
+        return (0, Se.A)().languages[0];
+      }
+      var xe = n(82277);
+      function we(e) {
         const {
             refPopover: t,
             inputValue: n,
             onInputChange: r,
             activeIndex: o,
             popoverPlacement: i,
-            setActiveIndex: l,
-            setOpen: s,
-            filterPlaceholder: p,
-            onIndexSelected: u,
-            refScrollElement: m,
-          } = ke("<Combobox.Options>"),
-          d = (e) => {
+            multiselect: l,
+            setActiveIndex: s,
+            setOpen: p,
+            filterPlaceholder: u,
+            onIndexSelected: m,
+            refScrollElement: d,
+          } = Me("<Combobox.Options>"),
+          f = (e) => {
             "Enter" === e.key &&
               null !== o &&
-              (u(o), l(null), s(!1), e.preventDefault(), e.stopPropagation());
+              (m(o),
+              l || (s(null), p(!1)),
+              e.preventDefault(),
+              e.stopPropagation());
           },
-          f = i.startsWith("top"),
-          g = a.createElement(c.a, { overflow: "auto", ref: m }, e.children);
+          g = i.startsWith("top"),
+          h = a.createElement(c.a, { overflow: "auto", ref: d }, e.children);
         return a.createElement(
-          B.Positioner,
+          ee.Positioner,
           { ref: t },
           a.createElement(
-            b,
+            C,
             { direction: "column", maxHeight: "var(--popover-max-height)" },
-            f && g,
+            g && h,
             a.createElement(
               c.a,
               {
                 flexShrink: "0",
-                className: (0, _e.A)(he.FilterBorder, f ? he.Top : he.Bottom),
+                className: (0, be.A)(xe.FilterBorder, g ? xe.Top : xe.Bottom),
               },
-              a.createElement(A, {
+              a.createElement(Y, {
                 margin: "3",
                 variant: "inset",
                 radius: "sm",
                 value: n,
                 onTextChange: r,
-                onKeyDown: d,
-                onKeyDownCapture: d,
-                placeholder: p,
+                onKeyDown: f,
+                onKeyDownCapture: f,
+                placeholder: u,
                 inputRef: (e) => {
                   e && e.focus({ preventScroll: !0 });
                 },
                 autoComplete: "off",
               }),
             ),
-            !f && g,
+            !g && h,
           ),
         );
       }
-      function ye(e) {
+      function ke(e) {
         const { value: t, children: n } = e,
-          { onSelectionChange: r } = ke("<ComboboxTrigger>");
-        return a.createElement(B.Item, { onSelect: () => r(t) }, n);
+          {
+            onItemSelectionChange: r,
+            selectedValue: o,
+            multiselect: c,
+          } = Me("<ComboboxTrigger>");
+        let i = !1;
+        return (
+          (i = c ? Array.isArray(o) && o.includes(t) : t === o),
+          a.createElement(
+            ee.Item,
+            { onSelect: () => r(t), selected: i },
+            c &&
+              a.createElement(
+                C,
+                { gap: "2", align: "center" },
+                a.createElement(z, { checked: i, variant: "dark" }),
+                n,
+              ),
+            !c && n,
+          )
+        );
       }
-      function be(e, t) {
+      function Ie(e, t) {
         if ("string" == typeof t)
           return t.toLocaleLowerCase().includes(e.toLocaleLowerCase());
         try {
@@ -1995,52 +2103,73 @@
           !1
         );
       }
-      function Ce(e) {
+      function Te(e) {
+        return Oe(e, !1);
+      }
+      function Oe(e, t) {
         const {
-            rgOptions: t,
-            filter: n = be,
-            filterPlaceholder: r,
-            selectedValue: o,
-            onSelectionChange: c,
+            rgOptions: n,
+            filter: r = Ie,
+            filterPlaceholder: o,
+            selectedValue: c,
+            onSelectionChange: i,
           } = e,
-          [i, l] = (0, a.useState)(""),
-          [s, p] = (0, a.useState)(!1),
-          [u, m] = (0, a.useState)(null),
-          d = (0, a.useMemo)(() => t.filter((e) => n(i, e)), [i, t, n]),
-          f = "number" == typeof u,
-          g = d.length > 0,
+          [l, s] = (0, a.useState)(""),
+          [p, u] = (0, a.useState)(!1),
+          [m, d] = (0, a.useState)(null),
+          f = (0, a.useMemo)(() => n.filter((e) => r(l, e)), [l, n, r]),
+          g = "number" == typeof m,
+          h = f.length > 0,
           _ = (0, a.useCallback)(
             (e) => {
-              e && !f && g && m(0), l(e);
+              e && !g && h && d(0), s(e);
             },
-            [f, g],
-          ),
-          h = (0, a.useCallback)(
-            (e) => {
-              e || _(""), p(e);
-            },
-            [_],
+            [g, h],
           ),
           v = (0, a.useCallback)(
             (e) => {
-              c(e), h(!1);
+              e || _(""), u(e);
             },
-            [h, c],
+            [_],
+          ),
+          y = (0, a.useCallback)(
+            (e) => {
+              i(e), t || v(!1);
+            },
+            [t, i, v],
+          ),
+          C = (0, a.useCallback)(
+            (e) => {
+              if (t)
+                if (c) {
+                  const t = c,
+                    n = t.indexOf(e);
+                  if (-1 !== n) return y(t.slice(0, n).concat(t.slice(n + 1)));
+                  y(t.concat(e));
+                } else y([e]);
+              else y(e);
+            },
+            [y, c, t],
           );
         return {
-          activeIndex: u,
-          setActiveIndex: m,
-          rgFilteredOptions: d,
-          selectedValue: o,
-          onSelectionChange: v,
-          inputValue: i,
+          activeIndex: m,
+          setActiveIndex: d,
+          rgFilteredOptions: f,
+          selectedValue: c,
+          onSelectionChange: y,
+          onItemSelectionChange: C,
+          onClear: (e) => {
+            y(t ? [] : null), e.stopPropagation(), e.preventDefault();
+          },
+          inputValue: l,
           onInputChange: _,
-          bOpen: s,
-          setOpen: h,
-          filterPlaceholder: r,
+          bOpen: p,
+          setOpen: v,
+          filterPlaceholder: o,
+          multiselect: t,
         };
       }
-      const Se = {
+      const Pe = {
         Root: function (e) {
           const { children: t, state: n, clearable: r = !0, ...o } = e,
             [c, i] = (0, a.useState)(void 0);
@@ -2051,7 +2180,7 @@
               () => n.rgFilteredOptions.findIndex((e) => e === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            u = J({
+            u = X({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: "target",
@@ -2060,7 +2189,7 @@
               setActiveIndex: n.setActiveIndex,
               selectedIndex: p,
               setSelectedIndex: (e) =>
-                n.onSelectionChange(n.rgFilteredOptions[e]),
+                n.onItemSelectionChange(n.rgFilteredOptions[e]),
               interactions: { click: !0, virtualItemFocus: !0 },
               role: "combobox",
               scroll: !1,
@@ -2074,7 +2203,17 @@
               refScrollElement: s,
               clearable: r,
               setOpen: (e) => {
-                e && (i(n.selectedValue), n.onInputChange("")), n.setOpen(e);
+                if (e) {
+                  let e = null;
+                  (e = n.multiselect
+                    ? Array.isArray(n.selectedValue)
+                      ? n.selectedValue[0]
+                      : null
+                    : n.selectedValue),
+                    i(e),
+                    n.onInputChange("");
+                }
+                n.setOpen(e);
               },
               onIndexSelected: (e) => {
                 const t = u.elementsRef.current;
@@ -2085,28 +2224,28 @@
               popoverPlacement: u.floating.placement,
             };
           return a.createElement(
-            we.Provider,
+            Re.Provider,
             { value: m },
-            a.createElement(B.Root, { state: u }, t),
+            a.createElement(ee.Root, { state: u }, t),
           );
         },
-        Option: ye,
-        Options: ve,
+        Option: ke,
+        Options: we,
         VirtualizedOptions: function (e) {
           const { items: t, renderItem: n, overscan: r = 5, ...o } = e,
             {
               bOpen: i,
               refPopover: l,
               refScrollElement: s,
-            } = ke("<ComboboxVirtualizedOptions>"),
-            p = (0, ge.Te)({
+            } = Me("<ComboboxVirtualizedOptions>"),
+            p = (0, Ce.Te)({
               count: i && l.current ? t.length : 0,
               getScrollElement: () => s.current,
               enabled: i,
               ...o,
             });
           return a.createElement(
-            ve,
+            we,
             null,
             a.createElement(
               c.a,
@@ -2128,7 +2267,7 @@
               width: "100%",
               style: { top: 0, left: 0, transform: `translateY(${t.start}px)` },
             },
-            a.createElement(ye, { ...n }),
+            a.createElement(ke, { ...n }),
           );
         },
         Trigger: function (e) {
@@ -2140,45 +2279,48 @@
               onInputChange: l,
               selectedValue: s,
               focusedValue: p,
-              activeIndex: u,
-              setActiveIndex: m,
-              onFocusChange: d,
-              rgFilteredOptions: f,
-              onSelectionChange: g,
-              refPopover: _,
-              clearable: h,
-              filterPlaceholder: v,
-              onIndexSelected: y,
-              popoverPlacement: b,
-              ...C
-            } = ke("<ComboboxTrigger>"),
-            S = { tabIndex: 0, children: t },
-            E =
-              s && h
-                ? a.createElement(q, {
-                    onClick: (e) => {
-                      g(null), e.stopPropagation(), e.preventDefault();
-                    },
+              refScrollElement: u,
+              onItemSelectionChange: m,
+              activeIndex: d,
+              setActiveIndex: f,
+              onFocusChange: g,
+              rgFilteredOptions: h,
+              onSelectionChange: _,
+              multiselect: v,
+              onClear: y,
+              refPopover: C,
+              clearable: b,
+              filterPlaceholder: S,
+              onIndexSelected: E,
+              popoverPlacement: x,
+              ...w
+            } = Me("<ComboboxTrigger>"),
+            k = { tabIndex: 0, children: t },
+            I = v ? Array.isArray(s) && s.length > 0 : !!s,
+            T =
+              I && b
+                ? a.createElement(te, {
+                    onClick: y,
                     cursor: "pointer",
                     hitSlop: !0,
                   })
-                : a.createElement(fe, null),
-            x = W(
+                : a.createElement(ye, null),
+            O = U(
               r,
-              a.createElement(z, {
+              a.createElement(G, {
                 beforeContent: n,
-                afterContent: E,
-                hasValue: !!s,
+                afterContent: T,
+                hasValue: I,
                 cursor: "pointer",
                 tabIndex: 0,
-                ...C,
+                ...w,
               }),
-              S,
+              k,
               void 0,
             );
-          return a.createElement(B.Anchor, null, x);
+          return a.createElement(ee.Anchor, null, O);
         },
-        DefaultOptionFilter: be,
+        DefaultOptionFilter: Ie,
         Value: function (e) {
           return a.createElement(p, { weight: "medium", truncate: !0, ...e });
         },
@@ -2191,7 +2333,7 @@
           });
         },
       };
-      function Ee(e) {
+      function ze(e) {
         return e
           ? "string" == typeof e
             ? e
@@ -2204,7 +2346,48 @@
                 "")
           : "";
       }
-      const xe = Object.assign(function (e) {
+      const Ae = Object.assign(function (e) {
+        const {
+            selectedValue: t,
+            onSelectionChange: n,
+            options: r,
+            filter: o,
+            filterPlaceholder: c,
+            placeholder: i,
+            getOptionLabel: l = ze,
+            ...s
+          } = e,
+          p = Te({
+            onSelectionChange: n,
+            selectedValue: t,
+            rgOptions: r,
+            filter: o,
+            filterPlaceholder: c,
+          }),
+          u = null != t,
+          m = l(t);
+        return a.createElement(
+          Ae.Root,
+          { state: p, ...s },
+          a.createElement(
+            Ae.Trigger,
+            null,
+            u && a.createElement(Ae.Value, null, m),
+            !u && a.createElement(Ae.Placeholder, null, i),
+          ),
+          a.createElement(
+            Ae.Options,
+            null,
+            p.rgFilteredOptions.map((e) =>
+              a.createElement(ke, { value: e, key: l(e) }, l(e)),
+            ),
+          ),
+        );
+      }, Pe);
+      function Le(e) {
+        return Oe(e, !0);
+      }
+      const Ne = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
@@ -2212,43 +2395,51 @@
               filter: o,
               filterPlaceholder: c,
               placeholder: i,
-              getOptionLabel: l = Ee,
+              getOptionLabel: l = ze,
               ...s
             } = e,
-            p = Ce({
+            p = Le({
               onSelectionChange: n,
               selectedValue: t,
               rgOptions: r,
               filter: o,
               filterPlaceholder: c,
             }),
-            u = null !== t;
+            u = Array.isArray(t) && t.length > 0;
+          let m = "";
+          if (u) {
+            const e = t.map((e) => l(e));
+            m =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat(Ee().strISOCode).format(e)
+                : e.join(", ");
+          }
           return a.createElement(
-            xe.Root,
+            Ae.Root,
             { state: p, ...s },
             a.createElement(
-              xe.Trigger,
+              Ae.Trigger,
               null,
-              u && a.createElement(xe.Value, null, l(t)),
-              !u && a.createElement(xe.Placeholder, null, i),
+              u && a.createElement(Ae.Value, null, m),
+              !u && a.createElement(Ae.Placeholder, null, i),
             ),
             a.createElement(
-              xe.Options,
+              Ae.Options,
               null,
               p.rgFilteredOptions.map((e) =>
-                a.createElement(ye, { value: e, key: l(e) }, l(e)),
+                a.createElement(Ae.Option, { value: e, key: l(e) }, l(e)),
               ),
             ),
           );
-        }, Se),
-        we = (0, a.createContext)(null);
-      function ke(e) {
-        const t = (0, a.useContext)(we);
+        }, Pe),
+        Re = (0, a.createContext)(null);
+      function Me(e) {
+        const t = (0, a.useContext)(Re);
         return t || console.error(`${e} must be used within a <Combobox>!`), t;
       }
-      var Te = n(55348),
-        Ie = n(73406);
-      function Oe(e) {
+      var Fe = n(55348),
+        Ve = n(73406);
+      function Ge(e) {
         const { size: t = "3", loading: n = !0, children: r, ...o } = e;
         return r || !n
           ? a.createElement(
@@ -2256,67 +2447,84 @@
               { position: "relative", ...o, width: "fit-content" },
               a.createElement(
                 "div",
-                { "data-visibility": !n, className: Ie.ChildContainer },
+                { "data-visibility": !n, className: Ve.ChildContainer },
                 r,
               ),
               n &&
                 a.createElement(
-                  b,
+                  C,
                   {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
                     align: "center",
                   },
-                  a.createElement(Pe, { size: t }),
+                  a.createElement(We, { size: t }),
                 ),
             )
-          : a.createElement(Pe, { size: t, ...o });
+          : a.createElement(We, { size: t, ...o });
       }
-      function Pe(e) {
-        const { className: t, ...n } = (0, l.mz)(e, ze);
-        return a.createElement("div", { className: v()(t, Ie.Spinner), ...n });
+      function We(e) {
+        const { className: t, ...n } = (0, l.mz)(e, Ye);
+        return a.createElement("div", { className: v()(t, Ve.Spinner), ...n });
       }
-      const ze = [
+      const Ye = [
         ...i.L,
-        { prop: "size", responsive: !0, className: (e) => Ie[`Size-${e}`] },
+        { prop: "size", responsive: !0, className: (e) => Ve[`Size-${e}`] },
       ];
-      function Ne(e) {
-        const { value: t, children: n } = e,
-          { onSelectionChange: r } = Ve("<SelectTrigger>"),
-          o = "string" == typeof t ? t : void 0;
-        return a.createElement(B.Item, { label: o, onSelect: () => r(t) }, n);
+      function He(e) {
+        return je(e, !1);
       }
-      function Ae(e) {
-        return a.createElement(
-          p,
-          { weight: "medium", truncate: !0 },
-          e.children,
-        );
-      }
-      function Re(e) {
-        return a.createElement(p, { secondary: !0, truncate: !0 }, e.children);
-      }
-      function Le(e) {
-        const { onSelectionChange: t, ...n } = e,
-          [r, o] = (0, a.useState)(!1);
+      function je(e, t) {
+        const { onSelectionChange: n, selectedValue: r, ...o } = e,
+          [c, i] = (0, a.useState)(!1),
+          l = (0, a.useCallback)(
+            (e) => {
+              n(e), t || i(!1);
+            },
+            [n, t],
+          ),
+          s = (0, a.useCallback)(
+            (e) => {
+              l(t ? [] : null), e.stopPropagation(), e.preventDefault();
+            },
+            [l, t],
+          ),
+          p = (0, a.useCallback)(
+            (e) => {
+              if (t) {
+                const t = r,
+                  n = t.indexOf(e);
+                if (-1 !== n) return l(t.slice(0, n).concat(t.slice(n + 1)));
+                l(t.concat(e));
+              } else l(e);
+            },
+            [l, r, t],
+          );
         return {
-          onSelectionChange: (e) => {
-            t(e), o(!1);
-          },
-          bOpen: r,
-          setOpen: o,
-          ...n,
+          onSelectionChange: l,
+          onItemSelectionChange: p,
+          onClear: s,
+          bOpen: c,
+          setOpen: i,
+          multiselect: t,
+          selectedValue: r,
+          ...o,
         };
       }
-      const Me = {
+      const De = {
         Root: function (e) {
           const { children: t, state: n, ...r } = e,
             [o, c] = (0, a.useState)(null),
             [i, l] = (0, a.useState)(null),
             s = (0, a.useMemo)(
-              () => n.rgOptions.findIndex((e) => e === n.selectedValue),
-              [n.selectedValue, n.rgOptions],
+              () =>
+                n.rgOptions.findIndex((e) =>
+                  n.multiselect
+                    ? n.selectedValue.includes(e)
+                    : e === n.selectedValue,
+                ),
+              [n.selectedValue, n.rgOptions, n.multiselect],
             ),
             p = (0, a.useRef)(null),
             u = {
@@ -2326,17 +2534,18 @@
               onFocusChange: c,
               refPopover: p,
               setOpen: (e) => {
-                e && c(n.selectedValue), n.setOpen(e);
+                e && c(n.multiselect ? n.selectedValue[0] : n.selectedValue),
+                  n.setOpen(e);
               },
               focusedIndex: i,
               onFocusedIndexChange: l,
             },
-            m = J({
+            m = X({
               open: n.bOpen,
               onOpenChange: n.setOpen,
               width: "target",
               selectedIndex: s,
-              setSelectedIndex: (e) => n.onSelectionChange(n.rgOptions[e]),
+              setSelectedIndex: (e) => n.onItemSelectionChange(n.rgOptions[e]),
               activeIndex: i,
               setActiveIndex: l,
               gutter: "4",
@@ -2345,15 +2554,36 @@
               scroll: !0,
             });
           return a.createElement(
-            We.Provider,
+            qe.Provider,
             { value: u },
-            a.createElement(B.Root, { state: m }, t),
+            a.createElement(ee.Root, { state: m }, t),
           );
         },
-        Option: Ne,
+        Option: function (e) {
+          const { value: t, children: n } = e,
+            {
+              onItemSelectionChange: r,
+              multiselect: o,
+              selectedValue: c,
+            } = $e("<SelectTrigger>"),
+            i = "string" == typeof t ? t : void 0,
+            l = o ? c.includes(t) : c === t;
+          return a.createElement(
+            ee.Item,
+            { label: i, onSelect: () => r(t), selected: l },
+            o &&
+              a.createElement(
+                C,
+                { gap: "2", align: "center" },
+                a.createElement(z, { checked: l, variant: "dark" }),
+                n,
+              ),
+            !o && n,
+          );
+        },
         Options: function (e) {
-          const { refPopover: t } = Ve("<Select.Options>");
-          return a.createElement(B.Positioner, { ref: t }, e.children);
+          const { refPopover: t } = $e("<Select.Options>");
+          return a.createElement(ee.Positioner, { ref: t }, e.children);
         },
         Trigger: function (e) {
           const { children: t, render: n } = e,
@@ -2365,52 +2595,66 @@
               size: l,
               radius: s,
               rgOptions: p,
-              focusedValue: u,
-              onFocusChange: m,
-              onSelectionChange: d,
-              clearable: f,
-              focusedIndex: g,
-              onFocusedIndexChange: _,
-              refPopover: h,
-              placeholder: v,
-              ...y
-            } = Ve("<SelectTrigger>"),
-            b = {
+              multiselect: u,
+              onClear: m,
+              focusedValue: d,
+              onFocusChange: f,
+              onSelectionChange: g,
+              clearable: h,
+              focusedIndex: _,
+              onItemSelectionChange: v,
+              onFocusedIndexChange: y,
+              refPopover: C,
+              placeholder: b,
+              ...S
+            } = $e("<SelectTrigger>"),
+            E = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => o(!r),
               children: t,
             },
-            C =
-              c && f
-                ? a.createElement(q, {
-                    onClick: (e) => {
-                      d(null), e.stopPropagation(), e.preventDefault();
-                    },
+            x = u ? Array.isArray(c) && c.length > 0 : !!c,
+            w =
+              x && h
+                ? a.createElement(te, {
+                    onClick: m,
                     cursor: "pointer",
                     hitSlop: !0,
                   })
-                : a.createElement(fe, null),
-            S = W(
+                : a.createElement(ye, null),
+            k = U(
               n,
-              a.createElement(z, {
-                afterContent: C,
+              a.createElement(G, {
+                afterContent: w,
                 variant: i,
                 size: l,
                 radius: s,
-                hasValue: !!c,
+                hasValue: x,
                 tabIndex: 0,
-                ...y,
+                ...S,
               }),
-              b,
+              E,
               void 0,
             );
-          return a.createElement(B.Anchor, null, S);
+          return a.createElement(ee.Anchor, null, k);
         },
-        Value: Ae,
-        Placeholder: Re,
+        Value: function (e) {
+          return a.createElement(
+            p,
+            { weight: "medium", truncate: !0 },
+            e.children,
+          );
+        },
+        Placeholder: function (e) {
+          return a.createElement(
+            p,
+            { secondary: !0, truncate: !0 },
+            e.children,
+          );
+        },
       };
-      function Fe(e) {
+      function Je(e) {
         return e
           ? "string" == typeof e
             ? e
@@ -2423,110 +2667,94 @@
                 "")
           : "";
       }
-      const Ge = Object.assign(function (e) {
+      const Be = Object.assign(function (e) {
+        const {
+            selectedValue: t,
+            onSelectionChange: n,
+            options: r,
+            placeholder: o,
+            getOptionLabel: c = Je,
+            ...i
+          } = e,
+          l = He({
+            onSelectionChange: n,
+            selectedValue: t,
+            rgOptions: r,
+            placeholder: o,
+          }),
+          s = null != t,
+          p = s ? c(t) : "";
+        return a.createElement(
+          Be.Root,
+          { state: l, ...i },
+          a.createElement(
+            Be.Trigger,
+            null,
+            s && a.createElement(Be.Value, null, p),
+            !s && a.createElement(Be.Placeholder, null, o),
+          ),
+          a.createElement(
+            Be.Options,
+            null,
+            l.rgOptions.map((e) =>
+              a.createElement(Be.Option, { value: e, key: c(e) }, c(e)),
+            ),
+          ),
+        );
+      }, De);
+      function Ue(e) {
+        return je(e, !0);
+      }
+      const Ze = De;
+      const Ke = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
               options: r,
               placeholder: o,
-              getOptionLabel: c = Fe,
+              getOptionLabel: c = Je,
               ...i
             } = e,
-            l = Le({
+            l = Ue({
               onSelectionChange: n,
               selectedValue: t,
               rgOptions: r,
               placeholder: o,
             }),
-            s = null != t;
+            s = Array.isArray(t) && t.length > 0;
+          let p = "";
+          if (s) {
+            const e = t.map((e) => c(e));
+            p =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat(Ee().strISOCode).format(e)
+                : e.join(", ");
+          }
           return a.createElement(
-            Ge.Root,
+            Ke.Root,
             { state: l, ...i },
             a.createElement(
-              Ge.Trigger,
+              Ke.Trigger,
               null,
-              s && a.createElement(Ae, null, c(t)),
-              !s && a.createElement(Re, null, o),
+              s && a.createElement(Ke.Value, null, p),
+              !s && a.createElement(Ke.Placeholder, null, o),
             ),
             a.createElement(
-              Ge.Options,
+              Ke.Options,
               null,
               l.rgOptions.map((e) =>
-                a.createElement(Ne, { value: e, key: c(e) }, c(e)),
+                a.createElement(Ke.Option, { value: e, key: c(e) }, c(e)),
               ),
             ),
           );
-        }, Me),
-        We = (0, a.createContext)(null);
-      function Ve(e) {
-        const t = (0, a.useContext)(We);
+        }, Ze),
+        qe = (0, a.createContext)(null);
+      function $e(e) {
+        const t = (0, a.useContext)(qe);
         return t || console.error(`${e} must be used within a <Select>!`), t;
       }
-      function Ye(e) {
-        return a.createElement(
-          Z,
-          { ...e, viewBoxSize: 16 },
-          a.createElement("path", {
-            d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      var He = n(21895);
-      function De(e) {
-        const {
-            checked: t,
-            onChange: n,
-            disabled: r,
-            children: o,
-            ref: c,
-            ...i
-          } = e,
-          l = "indeterminate" === t,
-          s = l ? Je : Ye,
-          p = () => n(!!l || !t);
-        return a.createElement(
-          b,
-          {
-            ref: c,
-            role: "checkbox",
-            "aria-checked": l ? "mixed" : t,
-            "data-state": je(t),
-            className: He.Root,
-            onClick: p,
-            tabIndex: 0,
-            onKeyDown: (e) => {
-              " " === e.key && (p(), e.preventDefault(), e.stopPropagation());
-            },
-            ...i,
-          },
-          a.createElement(
-            "div",
-            { className: He.Checkbox },
-            t && a.createElement(s, { className: He.Icon }),
-          ),
-          o,
-        );
-      }
-      function je(e) {
-        return "indeterminate" === e ? e : e ? "checked" : "unchecked";
-      }
-      function Je(e) {
-        return a.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          a.createElement("path", {
-            d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      const Be = (0, a.createContext)(null),
-        Ue = Object.assign(
+      const Qe = (0, a.createContext)(null),
+        Xe = Object.assign(
           function (e) {
             const {
                 selected: t,
@@ -2549,9 +2777,9 @@
               },
               s = "row" === c;
             return a.createElement(
-              Be.Provider,
+              Qe.Provider,
               { value: l },
-              a.createElement(b, {
+              a.createElement(C, {
                 direction: c,
                 wrap: s ? "wrap" : void 0,
                 gap: "column" === c ? "1" : "4",
@@ -2563,7 +2791,7 @@
           {
             Item: function (e) {
               const { value: t, children: n } = e,
-                r = (0, a.useContext)(Be);
+                r = (0, a.useContext)(Qe);
               if (!r)
                 return (
                   console.error(
@@ -2573,21 +2801,21 @@
                 );
               const { selected: o, onChange: c, disabled: i } = r;
               return a.createElement(
-                De,
+                z,
                 { checked: !!o[t], disabled: i, onChange: (e) => c(t, e) },
                 n,
               );
             },
           },
         );
-      var Ze = n(60394);
-      const Ke = Object.assign(
+      var et = n(60394);
+      const tt = Object.assign(
           function (e) {
             return a.createElement(
-              Ke.Root,
+              tt.Root,
               { ...e },
-              a.createElement(Ke.Track, null),
-              a.createElement(Ke.Handle, null),
+              a.createElement(tt.Track, null),
+              a.createElement(tt.Handle, null),
             );
           },
           {
@@ -2612,24 +2840,24 @@
                   },
                   tabIndex: 0,
                   "data-accent-color": o,
-                  ...(0, l.mz)({ size: r, className: Ze.Root }, qe),
+                  ...(0, l.mz)({ size: r, className: et.Root }, nt),
                 },
                 e.children,
               );
             },
             Track: function (e) {
-              return a.createElement("div", { className: Ze.Track, ...e });
+              return a.createElement("div", { className: et.Track, ...e });
             },
             Handle: function (e) {
-              return a.createElement("div", { className: Ze.Handle, ...e });
+              return a.createElement("div", { className: et.Handle, ...e });
             },
           },
         ),
-        qe = [
+        nt = [
           ...i.L,
-          { prop: "size", className: (e) => Ze[`Size-${e}`], responsive: !0 },
+          { prop: "size", className: (e) => et[`Size-${e}`], responsive: !0 },
         ];
-      function $e(e) {
+      function at(e) {
         const { bActive: t, onActiveChange: n, ...a } = e;
         return {
           role: "button",
@@ -2643,120 +2871,113 @@
           ...a,
         };
       }
-      var Qe = n(2168),
-        Xe = n(93765);
-      const et = {};
-      et.english = () => n.e(2395).then(n.t.bind(n, 92395, 19));
-      var tt = n(61859);
-      const nt = (0, Xe.l)(async function (e) {
-        if (et[e]) return et[e]();
+      var rt = n(2168);
+      const ot = {};
+      ot.english = () => n.e(2395).then(n.t.bind(n, 92395, 19));
+      var ct = n(61859);
+      const it = (0, Se.l)(async function (e) {
+        if (ot[e]) return ot[e]();
       });
-      (nt.Localize = tt.we),
-        (nt.LocalizeReact = tt.PP),
-        (nt.LocalizePlural = tt.Yp);
-      var at = n(44688);
-      const rt = 10;
-      function ot(e) {
-        return e.rgOptions.length >= rt
-          ? a.createElement(it, { ...e })
-          : a.createElement(ct, { ...e });
+      (it.Localize = ct.we),
+        (it.LocalizeReact = ct.PP),
+        (it.LocalizePlural = ct.Yp);
+      var lt = n(44688);
+      const st = 10;
+      function pt(e) {
+        return e.rgOptions.length >= st
+          ? a.createElement(mt, { ...e })
+          : a.createElement(ut, { ...e });
       }
-      function ct(e) {
+      function ut(e) {
         const { rgOptions: t, strLabel: n, value: r = {}, onChange: o } = e,
           c = (e) => `${e.facet}_${e.tag}`,
-          i = (0, a.useMemo)(() => {
-            const e = t.find((e) => r[e.facet] && r[e.facet][e.tag]);
-            if (e) return e;
-          }, [t, r]),
+          i = (0, a.useMemo)(
+            () => t.filter((e) => r[e.facet] && r[e.facet][e.tag]),
+            [t, r],
+          ),
+          l = Ue({
+            rgOptions: t,
+            selectedValue: i,
+            onSelectionChange: (e) => o(i, e),
+          }),
+          s = i.length > 0;
+        return a.createElement(
+          Ke.Root,
+          { state: l, variant: "highlight", radius: "sm", clearable: !0 },
+          a.createElement(
+            Ke.Trigger,
+            null,
+            !s && a.createElement(Ke.Value, null, n),
+            s &&
+              a.createElement(
+                Ke.Value,
+                null,
+                n,
+                ": ",
+                a.createElement(p, { color: "accent", secondary: !0 }, dt(i)),
+              ),
+          ),
+          a.createElement(
+            Ke.Options,
+            null,
+            t.map((e) =>
+              a.createElement(
+                Ke.Option,
+                { value: e, key: c(e) },
+                a.createElement(
+                  C,
+                  { gap: "2", align: "center" },
+                  e.color && a.createElement(ft, { color: e.color }),
+                  e.strLabel,
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      function mt(e) {
+        const { rgOptions: t, strLabel: n, value: r = {}, onChange: o } = e,
+          c = (e) => `${e.facet}_${e.tag}`,
+          i = (0, a.useMemo)(
+            () => t.filter((e) => r[e.facet] && r[e.facet][e.tag]),
+            [t, r],
+          ),
           l = Le({
             rgOptions: t,
             selectedValue: i,
             onSelectionChange: (e) => o(i, e),
-          });
-        return a.createElement(
-          Ge.Root,
-          { state: l, variant: "highlight", radius: "sm", clearable: !0 },
-          a.createElement(
-            Ge.Trigger,
-            null,
-            !i && a.createElement(Ge.Value, null, n),
-            !!i &&
-              a.createElement(
-                Ge.Value,
-                null,
-                n,
-                ": ",
-                a.createElement(
-                  p,
-                  { color: "accent", secondary: !0 },
-                  i.strLabel,
-                ),
-              ),
-          ),
-          a.createElement(
-            Ge.Options,
-            null,
-            t.map((e) =>
-              a.createElement(
-                Ge.Option,
-                { value: e, key: c(e) },
-                a.createElement(
-                  b,
-                  { gap: "2", align: "center" },
-                  e.color && a.createElement(lt, { color: e.color }),
-                  e.strLabel,
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      function it(e) {
-        const { rgOptions: t, strLabel: n, value: r = {}, onChange: o } = e,
-          c = (e) => `${e.facet}_${e.tag}`,
-          i = (0, a.useMemo)(
-            () => t.find((e) => r[e.facet] && r[e.facet][e.tag]),
-            [t, r],
-          ),
-          l = Ce({
-            rgOptions: t,
-            selectedValue: i,
-            onSelectionChange: (e) => o(i, e),
-            filterPlaceholder: nt.Localize(
+            filterPlaceholder: it.Localize(
               "#AdvancedSearch_FilterGeneric_Placeholder",
             ),
-          });
+          }),
+          s = i.length > 0;
         return a.createElement(
-          xe.Root,
+          Ne.Root,
           { state: l, variant: "highlight", radius: "sm" },
           a.createElement(
-            xe.Trigger,
+            Ne.Trigger,
             null,
-            !i && a.createElement(xe.Value, null, n),
-            !!i &&
+            !s && a.createElement(Ne.Value, null, n),
+            s &&
               a.createElement(
-                xe.Value,
+                Ne.Value,
                 null,
                 n,
                 ": ",
-                a.createElement(
-                  p,
-                  { color: "accent", secondary: !0 },
-                  i.strLabel,
-                ),
+                a.createElement(p, { color: "accent", secondary: !0 }, dt(i)),
               ),
           ),
           a.createElement(
-            xe.Options,
+            Ne.Options,
             null,
             l.rgFilteredOptions.map((e) =>
               a.createElement(
-                xe.Option,
+                Ne.Option,
                 { value: e, key: c(e) },
                 a.createElement(
-                  b,
+                  C,
                   { gap: "2", align: "center" },
-                  e.color && a.createElement(lt, { color: e.color }),
+                  e.color && a.createElement(ft, { color: e.color }),
                   e.strLabel,
                 ),
               ),
@@ -2764,7 +2985,10 @@
           ),
         );
       }
-      function lt(e) {
+      function dt(e) {
+        return e.map((e) => e.strLabel).join(", ");
+      }
+      function ft(e) {
         const { color: t } = e;
         return a.createElement(c.a, {
           width: "6px",
@@ -2773,7 +2997,7 @@
           style: { backgroundColor: t },
         });
       }
-      function st(e) {
+      function gt(e) {
         const { rgOptions: t, strLabel: n, value: r = {}, onChange: o } = e,
           i = (e) => `${e.facet}_${e.tag}`,
           l = t.filter((e) => r[e.facet] && r[e.facet][e.tag]).map(i);
@@ -2782,7 +3006,7 @@
           { marginBottom: "4" },
           a.createElement(p, { weight: "medium" }, n),
           a.createElement(
-            Ue,
+            Xe,
             {
               marginTop: "2",
               selected: l,
@@ -2794,7 +3018,7 @@
             },
             t.map((e) =>
               a.createElement(
-                pt,
+                ht,
                 {
                   key: i(e),
                   value: i(e),
@@ -2806,42 +3030,42 @@
           ),
         );
       }
-      function pt(e) {
+      function ht(e) {
         const { value: t, checked: n, children: r } = e;
         return a.createElement(
-          Ue.Item,
+          Xe.Item,
           { value: t },
           a.createElement(p, { color: n ? "accent" : void 0 }, r),
         );
       }
-      function ut(e) {
+      function _t(e) {
         const { label: t, active: n, onActiveChange: r } = e;
         return a.createElement(
-          b,
+          C,
           { gap: "4", align: "center", paddingX: "2", paddingY: "2" },
           a.createElement(p, { weight: "medium" }, t),
-          a.createElement(Ke, { value: n, onChange: r }),
+          a.createElement(tt, { value: n, onChange: r }),
         );
       }
-      function mt(e) {
+      function vt(e) {
         const { label: t, icon: n, active: r, onActiveChange: o } = e,
-          c = $e({ bActive: r, onActiveChange: o });
+          c = at({ bActive: r, onActiveChange: o });
         return a.createElement(
-          b,
+          C,
           {
             gap: "2",
             radius: "sm",
             paddingX: "5",
             paddingY: "4",
             align: "center",
-            className: at.TagButton,
+            className: lt.TagButton,
             ...c,
           },
-          n && a.createElement(n, { className: at.Icon }),
+          n && a.createElement(n, { className: lt.Icon }),
           a.createElement(p, { weight: "medium" }, t),
         );
       }
-      function dt(e) {
+      function yt(e) {
         const {
           rgToggles: t,
           onChange: n,
@@ -2849,17 +3073,17 @@
           computeNext: o = (e, t) => t,
         } = e;
         return a.createElement(
-          b,
+          C,
           { gap: "4", align: "center" },
           t
             .filter((e) => !e.condition || e.condition(r))
             .map((e) =>
-              a.createElement(ut, {
+              a.createElement(_t, {
                 key: `${e.facet}_${e.tag}`,
                 active: r.facets[e.facet] && r.facets[e.facet][e.tag],
                 onActiveChange: (t) =>
                   ((e, t, a) => {
-                    const c = gt(r, e, t, a);
+                    const c = bt(r, e, t, a);
                     n(o(r.facets, c.facets));
                   })(e.facet, e.tag, t),
                 label: e.strLabel,
@@ -2867,8 +3091,8 @@
             ),
         );
       }
-      function ft(e) {
-        return a.createElement(pe, {
+      function Ct(e) {
+        return a.createElement(ge, {
           gapY: "2",
           gapX: "2",
           marginTop: "4",
@@ -2879,7 +3103,7 @@
           ...e,
         });
       }
-      function gt(e, t, n, a) {
+      function bt(e, t, n, a) {
         const r = {
           ...e,
           facets: { ...e.facets, [t]: { ...e.facets[t], [n]: !0 } },
@@ -2892,33 +3116,37 @@
           r
         );
       }
-      function _t(e) {
+      function St(e) {
         const { facet: t, state: n, onStateChange: r } = e;
         switch (t.fieldType) {
           case "checkbox": {
-            const e = (e, t, a) => r(gt(n, e, t, a));
-            return a.createElement(st, { ...t, value: n.facets, onChange: e });
+            const e = (e, t, a) => r(bt(n, e, t, a));
+            return a.createElement(gt, { ...t, value: n.facets, onChange: e });
           }
           case "select": {
-            const e = (e, t) => {
-              let a = { ...n, facets: { ...n.facets } };
-              e && (a = gt(a, e.facet, e.tag, !1)),
-                t && (a = gt(a, t.facet, t.tag, !0)),
-                r(a);
+            const e = (e = [], t = []) => {
+              const a = {};
+              let o = { ...n, facets: { ...n.facets } };
+              for (const t of e) a[`${t.facet}_${t.tag}`] = t;
+              for (const e of t)
+                a[`${e.facet}_${e.tag}`] || (o = bt(o, e.facet, e.tag, !0)),
+                  delete a[`${e.facet}_${e.tag}`];
+              for (const e of Object.values(a)) o = bt(o, e.facet, e.tag, !1);
+              r(o);
             };
-            return a.createElement(ot, { ...t, value: n.facets, onChange: e });
+            return a.createElement(pt, { ...t, value: n.facets, onChange: e });
           }
           case "toggle":
           case "togglebutton": {
-            const e = (e) => r(gt(n, t.facet, t.tag, e)),
+            const e = (e) => r(bt(n, t.facet, t.tag, e)),
               o = n.facets[t.facet] && n.facets[t.facet][t.tag];
             return "toggle" === t.fieldType
-              ? a.createElement(ut, {
+              ? a.createElement(_t, {
                   active: o,
                   onActiveChange: e,
                   label: t.strLabel,
                 })
-              : a.createElement(mt, {
+              : a.createElement(vt, {
                   active: o,
                   onActiveChange: e,
                   label: t.strLabel,
@@ -2926,41 +3154,41 @@
           }
           case "togglegroup": {
             const e = (e) => r({ ...n, facets: e });
-            return a.createElement(dt, { ...t, onChange: e, state: n });
+            return a.createElement(yt, { ...t, onChange: e, state: n });
           }
           default:
             return (
-              (0, L.z_)(t, `Unhandled facet field type: "${t.fieldType}"`), null
+              (0, j.z_)(t, `Unhandled facet field type: "${t.fieldType}"`), null
             );
         }
       }
-      function ht(e, t, n) {
-        let a = Object.keys(e.tags || {}).map((t) => vt(e.name, t, e.tags[t]));
-        n ? a.sort(n) : (a = (0, Qe.Z)(a, (e) => e.strLabel));
+      function Et(e, t, n) {
+        let a = Object.keys(e.tags || {}).map((t) => xt(e.name, t, e.tags[t]));
+        n ? a.sort(n) : (a = (0, rt.Z)(a, (e) => e.strLabel));
         return { strLabel: e.localized_name, rgOptions: a, fieldType: t };
       }
-      function vt(e, t, n) {
+      function xt(e, t, n) {
         const a = { facet: e, tag: t, strLabel: n.localized_name };
         return n.color && (a.color = `#${n.color}`), a;
       }
-      var yt = n(25489),
-        bt = n(75);
-      function Ct(e) {
+      var wt = n(25489),
+        kt = n(75);
+      function It(e) {
         const { value: t } = e;
         return a.createElement(
-          Et,
+          Ot,
           { ...e },
           a.createElement(
-            wt,
+            zt,
             null,
-            a.createElement(kt, { start: t[0], end: t[1] }),
+            a.createElement(At, { start: t[0], end: t[1] }),
           ),
-          a.createElement(Tt, null),
-          a.createElement(Tt, null),
+          a.createElement(Lt, null),
+          a.createElement(Lt, null),
         );
       }
-      const St = (0, a.createContext)(null);
-      function Et(e) {
+      const Tt = (0, a.createContext)(null);
+      function Ot(e) {
         const { children: t, color: n, ...r } = e,
           {
             min: o,
@@ -2974,12 +3202,12 @@
           m = (0, a.useRef)(-1),
           [d] = (0, a.useState)(() => new Set());
         return a.createElement(
-          St.Provider,
+          Tt.Provider,
           { value: { ...r, handles: d } },
           a.createElement(
             "div",
             {
-              className: bt.SliderRoot,
+              className: kt.SliderRoot,
               "data-accent-color": n,
               ref: u,
               onPointerDown: (e) => {
@@ -2989,8 +3217,8 @@
                   "number" != typeof l)
                 ) {
                   const t = u.current.getBoundingClientRect(),
-                    n = It(e.clientX - t.left, [0, t.width], [o, c]);
-                  m.current = xt(l, n);
+                    n = Nt(e.clientX - t.left, [0, t.width], [o, c]);
+                  m.current = Pt(l, n);
                 }
               },
               onPointerUp: (e) => {
@@ -3001,8 +3229,8 @@
               onPointerMove: (e) => {
                 if (e.target.hasPointerCapture(e.pointerId) && u.current) {
                   const t = u.current.getBoundingClientRect(),
-                    n = Ot({
-                      value: It(e.clientX - t.left, [0, t.width], [o, c]),
+                    n = Rt({
+                      value: Nt(e.clientX - t.left, [0, t.width], [o, c]),
                       min: o,
                       max: c,
                       step: s,
@@ -3017,18 +3245,18 @@
               onClick: (e) => {
                 if (!u.current) return;
                 const t = u.current.getBoundingClientRect(),
-                  n = It(e.clientX - t.left, [0, t.width], [o, c]),
-                  a = Ot({ value: n, min: o, max: c, step: s }),
-                  r = xt(l, n),
+                  n = Nt(e.clientX - t.left, [0, t.width], [o, c]),
+                  a = Rt({ value: n, min: o, max: c, step: s }),
+                  r = Pt(l, n),
                   p = [...l];
                 (p[r] = a), i(p);
               },
             },
-            a.createElement("div", { className: bt.Inner }, t),
+            a.createElement("div", { className: kt.Inner }, t),
           ),
         );
       }
-      function xt(e, t) {
+      function Pt(e, t) {
         if (e.length <= 1) return e.length - 1;
         let n = 0,
           a = Math.abs(t - e[0]);
@@ -3038,24 +3266,24 @@
         }
         return n;
       }
-      function wt(e) {
-        return a.createElement("div", { className: bt.SliderTrack, ...e });
+      function zt(e) {
+        return a.createElement("div", { className: kt.SliderTrack, ...e });
       }
-      function kt(e) {
+      function At(e) {
         const { start: t, end: n } = e,
-          r = (0, a.useContext)(St);
-        (0, L.wT)(r, "SliderRange must be used within a SliderRoot!");
+          r = (0, a.useContext)(Tt);
+        (0, j.wT)(r, "SliderRange must be used within a SliderRoot!");
         const { min: o, max: c } = r,
-          i = Pt(t, o, c),
-          l = 100 - Pt(n, o, c);
+          i = Mt(t, o, c),
+          l = 100 - Mt(n, o, c);
         return a.createElement("div", {
-          className: bt.SliderRange,
+          className: kt.SliderRange,
           style: { "--pct-left": `${i}%`, "--pct-right": `${l}%` },
         });
       }
-      function Tt(e) {
-        const t = (0, a.useContext)(St);
-        (0, L.wT)(t, "SliderHandle must be used within a SliderRoot!");
+      function Lt(e) {
+        const t = (0, a.useContext)(Tt);
+        (0, j.wT)(t, "SliderHandle must be used within a SliderRoot!");
         const {
             min: n,
             max: r,
@@ -3072,12 +3300,12 @@
           [p, o],
         );
         const f = m > -1,
-          g = { "--handle-pct": `${Pt(f ? c[m] : n, n, r)}%` };
+          g = { "--handle-pct": `${Mt(f ? c[m] : n, n, r)}%` };
         return (
           f || (g.display = "none"),
           a.createElement("span", {
             ref: u,
-            className: bt.SliderHandle,
+            className: kt.SliderHandle,
             style: g,
             role: "slider",
             "aria-valuenow": c[m],
@@ -3092,7 +3320,7 @@
                 case "ArrowDown": {
                   const t = "ArrowRight" === e.key || "ArrowUp" === e.key,
                     a = i * (t ? 1 : -1),
-                    o = Ot({ value: c[m] + a, min: n, max: r, step: i }),
+                    o = Rt({ value: c[m] + a, min: n, max: r, step: i }),
                     p = [...c];
                   (p[m] = o),
                     l(p),
@@ -3105,7 +3333,7 @@
                 case "PageDown": {
                   const t = "PageUp" === e.key,
                     a = Math.round((r - n) / 10) * (t ? 1 : -1),
-                    o = Ot({ value: c[m] + a, min: n, max: r, step: i }),
+                    o = Rt({ value: c[m] + a, min: n, max: r, step: i }),
                     p = [...c];
                   (p[m] = o),
                     l(p),
@@ -3119,40 +3347,40 @@
           })
         );
       }
-      function It(e, t, n) {
+      function Nt(e, t, n) {
         if (t[0] === t[1] || n[0] === n[1]) return n[0];
         const a = ((n[1] - n[0]) / (t[1] - t[0])) * (e - t[0]) + n[0];
-        return yt.OQ(a, n[0], n[1]);
+        return wt.OQ(a, n[0], n[1]);
       }
-      function Ot(e) {
+      function Rt(e) {
         const { value: t, min: n, max: a, step: r } = e,
           o = Math.round((t - n) / r);
-        return yt.OQ(o * r + n, n, a);
+        return wt.OQ(o * r + n, n, a);
       }
-      function Pt(e, t, n) {
+      function Mt(e, t, n) {
         return ((e - t) / (n - t)) * 100;
       }
-      const zt = (0, a.createContext)(null);
-      function Nt(e) {
+      const Ft = (0, a.createContext)(null);
+      function Vt(e) {
         const { state: t, onStateChange: n, onStateSettled: r } = e,
           o = r ? (e) => r({ ...t, price: e }) : void 0;
-        return a.createElement(At, {
+        return a.createElement(Gt, {
           price: t.price,
           onPriceChange: (e) => n({ ...t, price: e }),
           onPriceSettled: o,
         });
       }
-      function At(e) {
+      function Gt(e) {
         const { price: t, onPriceChange: n, onPriceSettled: r } = e,
           { maxPrice: o, currency: c } = (function () {
-            const e = (0, a.useContext)(zt);
-            return (0, L.wT)(e, "No filter config provider found!"), e;
+            const e = (0, a.useContext)(Ft);
+            return (0, j.wT)(e, "No filter config provider found!"), e;
           })(),
           [i, l] = (0, a.useState)(!1),
           s = [0, o],
           u = (e) => (a) => {
             const o = [...t];
-            (o[e] = yt.OQ(a, s[0], s[1])), n(o), r && r(o), l(!0);
+            (o[e] = wt.OQ(a, s[0], s[1])), n(o), r && r(o), l(!0);
           },
           {
             checkMin: m,
@@ -3168,18 +3396,18 @@
                 step: i = 1,
                 ...l
               } = e,
-              s = Wt(t, Vt),
-              p = (0, a.useCallback)((e) => n(Wt(e, Yt)), [n]),
-              u = (0, a.useCallback)((e) => r && r(Wt(e, Yt)), [r]);
+              s = Jt(t, Bt),
+              p = (0, a.useCallback)((e) => n(Jt(e, Ut)), [n]),
+              u = (0, a.useCallback)((e) => r && r(Jt(e, Ut)), [r]);
             return {
-              checkMax: (e) => Math.abs(e - Yt(Vt(o))) < 0.001,
-              checkMin: (e) => Math.abs(e - Yt(Vt(c))) < 0.001,
+              checkMax: (e) => Math.abs(e - Ut(Bt(o))) < 0.001,
+              checkMin: (e) => Math.abs(e - Ut(Bt(c))) < 0.001,
               props: {
                 value: s,
                 onValueChange: p,
                 onValueSettled: u,
-                max: Vt(o),
-                min: Vt(c),
+                max: Bt(o),
+                min: Bt(c),
                 step: 0.01,
                 ...l,
               },
@@ -3194,44 +3422,44 @@
             onValueSettled: r,
           }),
           g = m(t[0]),
-          _ = d(t[1]),
-          h = g && _ && !i,
+          h = d(t[1]),
+          _ = g && h && !i,
           v = g && !i ? void 0 : t[0];
         let y = t[1];
         return (
-          _ && (y = i ? 1 / 0 : void 0),
+          h && (y = i ? 1 / 0 : void 0),
           o <= 0
             ? null
             : a.createElement(
-                b,
+                C,
                 { direction: "column", gap: "2" },
                 a.createElement(
-                  b,
+                  C,
                   { gap: "2", align: "center" },
-                  a.createElement(Rt, {
+                  a.createElement(Wt, {
                     currency: c,
                     value: v,
                     onChange: u(0),
-                    placeholder: nt.Localize(
+                    placeholder: it.Localize(
                       "#AdvancedSearch_MinPricePlaceholder",
                     ),
                   }),
                   a.createElement(p, { size: "4", weight: "medium" }, "-"),
-                  a.createElement(Rt, {
+                  a.createElement(Wt, {
                     currency: c,
                     value: y,
                     onChange: u(1),
-                    placeholder: nt.Localize(
+                    placeholder: it.Localize(
                       "#AdvancedSearch_MaxPricePlaceholder",
                     ),
                     defaultValue: s[1],
                   }),
                 ),
-                a.createElement(Ct, { ...f, color: h ? "dull" : void 0 }),
+                a.createElement(It, { ...f, color: _ ? "dull" : void 0 }),
               )
         );
       }
-      function Rt(e) {
+      function Wt(e) {
         const {
             value: t,
             onChange: n,
@@ -3240,293 +3468,293 @@
             defaultValue: i = 0,
           } = e,
           [l, s] = (0, a.useState)(null),
-          p = null != l ? l : Mt(t, o.bWholeUnitsOnly);
+          p = null != l ? l : Ht(t, o.bWholeUnitsOnly);
         return a.createElement(
           c.a,
           { flexGrow: "1" },
-          a.createElement(A, {
+          a.createElement(Y, {
             variant: "inset-focus",
             value: p,
             onTextChange: (e) => {
-              const t = Ft(e, o.bWholeUnitsOnly);
-              e === Mt(t, o.bWholeUnitsOnly)
+              const t = jt(e, o.bWholeUnitsOnly);
+              e === Ht(t, o.bWholeUnitsOnly)
                 ? (null !== l && s(null), n(t))
-                : ("" !== e && isNaN(Ft(e, o.bWholeUnitsOnly))) || s(e);
+                : ("" !== e && isNaN(jt(e, o.bWholeUnitsOnly))) || s(e);
             },
             onBlur: () => {
               l
-                ? (n(Ft(l, o.bWholeUnitsOnly)), s(null))
+                ? (n(jt(l, o.bWholeUnitsOnly)), s(null))
                 : "" === l && (n(i), s(null));
             },
-            beforeContent: o.bPrefixSymbol ? o.strSymbol : void 0,
-            afterContent: o.bPrefixSymbol ? void 0 : o.strSymbol,
+            beforeContent: o.bSuffixSymbol ? void 0 : o.strSymbol,
+            afterContent: o.bSuffixSymbol ? o.strSymbol : void 0,
             placeholder: r,
           }),
         );
       }
-      const Lt = "∞";
-      function Mt(e, t) {
+      const Yt = "∞";
+      function Ht(e, t) {
         return void 0 === e
           ? ""
           : e === 1 / 0
-            ? Lt
+            ? Yt
             : t
               ? Math.round(e / 100).toString()
               : (e / 100).toFixed(2);
       }
-      function Ft(e, t) {
-        return e === Lt
+      function jt(e, t) {
+        return e === Yt
           ? 1 / 0
           : t
             ? 100 * parseInt(e)
             : Math.round(100 * parseFloat(e));
       }
-      const Gt = 3;
-      function Wt(e, t) {
+      const Dt = 3;
+      function Jt(e, t) {
         return e.map(t);
       }
-      function Vt(e) {
-        return Math.pow(e, 1 / Gt);
+      function Bt(e) {
+        return Math.pow(e, 1 / Dt);
       }
-      function Yt(e) {
-        return Math.round(Math.pow(e, Gt));
+      function Ut(e) {
+        return Math.round(Math.pow(e, Dt));
       }
-      const Ht =
+      const Zt =
           n.p +
           "images/applications/community/knife.png?v=valveisgoodatcaching",
-        Dt =
+        Kt =
           n.p + "images/applications/community/mg.png?v=valveisgoodatcaching",
-        jt =
+        qt =
           n.p +
           "images/applications/community/pistol.png?v=valveisgoodatcaching",
-        Jt =
-          n.p +
-          "images/applications/community/rifle.png?v=valveisgoodatcaching",
-        Bt =
-          n.p +
-          "images/applications/community/shotgun.png?v=valveisgoodatcaching",
-        Ut =
-          n.p + "images/applications/community/smg.png?v=valveisgoodatcaching",
-        Zt =
-          n.p +
-          "images/applications/community/sniper.png?v=valveisgoodatcaching",
-        Kt =
-          n.p + "images/applications/community/aug.png?v=valveisgoodatcaching",
-        qt =
-          n.p + "images/applications/community/ak47.png?v=valveisgoodatcaching",
         $t =
           n.p +
-          "images/applications/community/sg556.png?v=valveisgoodatcaching",
+          "images/applications/community/rifle.png?v=valveisgoodatcaching",
         Qt =
           n.p +
-          "images/applications/community/m4a1_silencer.png?v=valveisgoodatcaching",
+          "images/applications/community/shotgun.png?v=valveisgoodatcaching",
         Xt =
-          n.p +
-          "images/applications/community/galilar.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/smg.png?v=valveisgoodatcaching",
         en =
           n.p +
-          "images/applications/community/famas.png?v=valveisgoodatcaching",
+          "images/applications/community/sniper.png?v=valveisgoodatcaching",
         tn =
-          n.p + "images/applications/community/m4a1.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/aug.png?v=valveisgoodatcaching",
         nn =
-          n.p +
-          "images/applications/community/bizon.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/ak47.png?v=valveisgoodatcaching",
         an =
           n.p +
-          "images/applications/community/mac10.png?v=valveisgoodatcaching",
+          "images/applications/community/sg556.png?v=valveisgoodatcaching",
         rn =
-          n.p + "images/applications/community/mp7.png?v=valveisgoodatcaching",
+          n.p +
+          "images/applications/community/m4a1_silencer.png?v=valveisgoodatcaching",
         on =
           n.p +
-          "images/applications/community/ump45.png?v=valveisgoodatcaching",
+          "images/applications/community/galilar.png?v=valveisgoodatcaching",
         cn =
-          n.p + "images/applications/community/mp9.png?v=valveisgoodatcaching",
-        ln =
           n.p +
-          "images/applications/community/mp5sd.png?v=valveisgoodatcaching",
+          "images/applications/community/famas.png?v=valveisgoodatcaching",
+        ln =
+          n.p + "images/applications/community/m4a1.png?v=valveisgoodatcaching",
         sn =
-          n.p + "images/applications/community/p90.png?v=valveisgoodatcaching",
+          n.p +
+          "images/applications/community/bizon.png?v=valveisgoodatcaching",
         pn =
-          n.p + "images/applications/community/p250.png?v=valveisgoodatcaching",
+          n.p +
+          "images/applications/community/mac10.png?v=valveisgoodatcaching",
         un =
-          n.p + "images/applications/community/tec9.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/mp7.png?v=valveisgoodatcaching",
         mn =
           n.p +
-          "images/applications/community/fiveseven.png?v=valveisgoodatcaching",
+          "images/applications/community/ump45.png?v=valveisgoodatcaching",
         dn =
-          n.p +
-          "images/applications/community/revolver.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/mp9.png?v=valveisgoodatcaching",
         fn =
           n.p +
-          "images/applications/community/deagle.png?v=valveisgoodatcaching",
+          "images/applications/community/mp5sd.png?v=valveisgoodatcaching",
         gn =
-          n.p +
-          "images/applications/community/glock.png?v=valveisgoodatcaching",
-        _n =
-          n.p +
-          "images/applications/community/usp_silencer.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/p90.png?v=valveisgoodatcaching",
         hn =
-          n.p +
-          "images/applications/community/elite.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/p250.png?v=valveisgoodatcaching",
+        _n =
+          n.p + "images/applications/community/tec9.png?v=valveisgoodatcaching",
         vn =
           n.p +
-          "images/applications/community/hkp2000.png?v=valveisgoodatcaching",
+          "images/applications/community/fiveseven.png?v=valveisgoodatcaching",
         yn =
           n.p +
-          "images/applications/community/cz75a.png?v=valveisgoodatcaching",
-        bn =
-          n.p +
-          "images/applications/community/ssg08.png?v=valveisgoodatcaching",
+          "images/applications/community/revolver.png?v=valveisgoodatcaching",
         Cn =
           n.p +
-          "images/applications/community/scar20.png?v=valveisgoodatcaching",
+          "images/applications/community/deagle.png?v=valveisgoodatcaching",
+        bn =
+          n.p +
+          "images/applications/community/glock.png?v=valveisgoodatcaching",
         Sn =
           n.p +
-          "images/applications/community/g3sg1.png?v=valveisgoodatcaching",
+          "images/applications/community/usp_silencer.png?v=valveisgoodatcaching",
         En =
-          n.p + "images/applications/community/awp.png?v=valveisgoodatcaching",
+          n.p +
+          "images/applications/community/elite.png?v=valveisgoodatcaching",
         xn =
-          n.p + "images/applications/community/mag7.png?v=valveisgoodatcaching",
+          n.p +
+          "images/applications/community/hkp2000.png?v=valveisgoodatcaching",
         wn =
-          n.p + "images/applications/community/nova.png?v=valveisgoodatcaching",
+          n.p +
+          "images/applications/community/cz75a.png?v=valveisgoodatcaching",
         kn =
           n.p +
-          "images/applications/community/sawedoff.png?v=valveisgoodatcaching",
-        Tn =
-          n.p +
-          "images/applications/community/xm1014.png?v=valveisgoodatcaching",
+          "images/applications/community/ssg08.png?v=valveisgoodatcaching",
         In =
           n.p +
-          "images/applications/community/negev.png?v=valveisgoodatcaching",
+          "images/applications/community/scar20.png?v=valveisgoodatcaching",
+        Tn =
+          n.p +
+          "images/applications/community/g3sg1.png?v=valveisgoodatcaching",
         On =
-          n.p + "images/applications/community/m249.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/awp.png?v=valveisgoodatcaching",
         Pn =
-          n.p +
-          "images/applications/community/knife_push.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/mag7.png?v=valveisgoodatcaching",
         zn =
-          n.p +
-          "images/applications/community/knife_survival_bowie.png?v=valveisgoodatcaching",
-        Nn =
-          n.p +
-          "images/applications/community/knife_gypsy_jackknife.png?v=valveisgoodatcaching",
+          n.p + "images/applications/community/nova.png?v=valveisgoodatcaching",
         An =
           n.p +
-          "images/applications/community/knife_falchion.png?v=valveisgoodatcaching",
-        Rn =
-          n.p +
-          "images/applications/community/knife_tactical.png?v=valveisgoodatcaching",
+          "images/applications/community/sawedoff.png?v=valveisgoodatcaching",
         Ln =
           n.p +
-          "images/applications/community/knife_gut.png?v=valveisgoodatcaching",
+          "images/applications/community/xm1014.png?v=valveisgoodatcaching",
+        Nn =
+          n.p +
+          "images/applications/community/negev.png?v=valveisgoodatcaching",
+        Rn =
+          n.p + "images/applications/community/m249.png?v=valveisgoodatcaching",
         Mn =
           n.p +
-          "images/applications/community/knife_kukri.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_push.png?v=valveisgoodatcaching",
         Fn =
           n.p +
-          "images/applications/community/knife_canis.png?v=valveisgoodatcaching",
-        Gn =
-          n.p +
-          "images/applications/community/knife_cord.png?v=valveisgoodatcaching",
-        Wn =
-          n.p +
-          "images/applications/community/knife_ursus.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_survival_bowie.png?v=valveisgoodatcaching",
         Vn =
           n.p +
-          "images/applications/community/knife_flip.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_gypsy_jackknife.png?v=valveisgoodatcaching",
+        Gn =
+          n.p +
+          "images/applications/community/knife_falchion.png?v=valveisgoodatcaching",
+        Wn =
+          n.p +
+          "images/applications/community/knife_tactical.png?v=valveisgoodatcaching",
         Yn =
           n.p +
-          "images/applications/community/knife_outdoor.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_gut.png?v=valveisgoodatcaching",
         Hn =
           n.p +
-          "images/applications/community/knife_css.png?v=valveisgoodatcaching",
-        Dn =
-          n.p +
-          "images/applications/community/knife_skeleton.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_kukri.png?v=valveisgoodatcaching",
         jn =
           n.p +
-          "images/applications/community/knife_stiletto.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_canis.png?v=valveisgoodatcaching",
+        Dn =
+          n.p +
+          "images/applications/community/knife_cord.png?v=valveisgoodatcaching",
         Jn =
           n.p +
-          "images/applications/community/knife_widowmaker.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_ursus.png?v=valveisgoodatcaching",
         Bn =
           n.p +
-          "images/applications/community/knife_butterfly.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_flip.png?v=valveisgoodatcaching",
         Un =
           n.p +
-          "images/applications/community/knife_m9_bayonet.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_outdoor.png?v=valveisgoodatcaching",
         Zn =
           n.p +
-          "images/applications/community/knife_karambit.png?v=valveisgoodatcaching",
+          "images/applications/community/knife_css.png?v=valveisgoodatcaching",
         Kn =
           n.p +
+          "images/applications/community/knife_skeleton.png?v=valveisgoodatcaching",
+        qn =
+          n.p +
+          "images/applications/community/knife_stiletto.png?v=valveisgoodatcaching",
+        $n =
+          n.p +
+          "images/applications/community/knife_widowmaker.png?v=valveisgoodatcaching",
+        Qn =
+          n.p +
+          "images/applications/community/knife_butterfly.png?v=valveisgoodatcaching",
+        Xn =
+          n.p +
+          "images/applications/community/knife_m9_bayonet.png?v=valveisgoodatcaching",
+        ea =
+          n.p +
+          "images/applications/community/knife_karambit.png?v=valveisgoodatcaching",
+        ta =
+          n.p +
           "images/applications/community/bayonet.png?v=valveisgoodatcaching",
-        qn = {
-          Knife: (0, r.YJ)(Ht),
-          MG: (0, r.YJ)(Dt),
-          Pistol: (0, r.YJ)(jt),
-          Rifle: (0, r.YJ)(Jt),
-          Shotgun: (0, r.YJ)(Bt),
-          SMG: (0, r.YJ)(Ut),
-          Sniper: (0, r.YJ)(Zt),
+        na = {
+          Knife: (0, r.YJ)(Zt),
+          MG: (0, r.YJ)(Kt),
+          Pistol: (0, r.YJ)(qt),
+          Rifle: (0, r.YJ)($t),
+          Shotgun: (0, r.YJ)(Qt),
+          SMG: (0, r.YJ)(Xt),
+          Sniper: (0, r.YJ)(en),
         },
-        $n = {
-          aug: (0, r.YJ)(Kt),
-          ak47: (0, r.YJ)(qt),
-          sg556: (0, r.YJ)($t),
-          m4a1_silencer: (0, r.YJ)(Qt),
-          galilar: (0, r.YJ)(Xt),
-          famas: (0, r.YJ)(en),
-          m4a1: (0, r.YJ)(tn),
-          bizon: (0, r.YJ)(nn),
-          mac10: (0, r.YJ)(an),
-          mp7: (0, r.YJ)(rn),
-          ump45: (0, r.YJ)(on),
-          mp9: (0, r.YJ)(cn),
-          mp5sd: (0, r.YJ)(ln),
-          p90: (0, r.YJ)(sn),
-          p250: (0, r.YJ)(pn),
-          tec9: (0, r.YJ)(un),
-          fiveseven: (0, r.YJ)(mn),
-          revolver: (0, r.YJ)(dn),
-          deagle: (0, r.YJ)(fn),
-          glock: (0, r.YJ)(gn),
-          usp_silencer: (0, r.YJ)(_n),
-          elite: (0, r.YJ)(hn),
-          hkp2000: (0, r.YJ)(vn),
-          cz75a: (0, r.YJ)(yn),
-          ssg08: (0, r.YJ)(bn),
-          scar20: (0, r.YJ)(Cn),
-          g3sg1: (0, r.YJ)(Sn),
-          awp: (0, r.YJ)(En),
-          mag7: (0, r.YJ)(xn),
-          nova: (0, r.YJ)(wn),
-          sawedoff: (0, r.YJ)(kn),
-          xm1014: (0, r.YJ)(Tn),
-          negev: (0, r.YJ)(In),
-          m249: (0, r.YJ)(On),
-          knife_push: (0, r.YJ)(Pn),
-          knife_survival_bowie: (0, r.YJ)(zn),
-          knife_gypsy_jackknife: (0, r.YJ)(Nn),
-          knife_falchion: (0, r.YJ)(An),
-          knife_tactical: (0, r.YJ)(Rn),
-          knife_gut: (0, r.YJ)(Ln),
-          knife_kukri: (0, r.YJ)(Mn),
-          knife_canis: (0, r.YJ)(Fn),
-          knife_cord: (0, r.YJ)(Gn),
-          knife_ursus: (0, r.YJ)(Wn),
-          knife_flip: (0, r.YJ)(Vn),
-          knife_outdoor: (0, r.YJ)(Yn),
-          knife_css: (0, r.YJ)(Hn),
-          knife_skeleton: (0, r.YJ)(Dn),
-          knife_stiletto: (0, r.YJ)(jn),
-          knife_widowmaker: (0, r.YJ)(Jn),
-          knife_butterfly: (0, r.YJ)(Bn),
-          knife_m9_bayonet: (0, r.YJ)(Un),
-          knife_karambit: (0, r.YJ)(Zn),
-          bayonet: (0, r.YJ)(Kn),
+        aa = {
+          aug: (0, r.YJ)(tn),
+          ak47: (0, r.YJ)(nn),
+          sg556: (0, r.YJ)(an),
+          m4a1_silencer: (0, r.YJ)(rn),
+          galilar: (0, r.YJ)(on),
+          famas: (0, r.YJ)(cn),
+          m4a1: (0, r.YJ)(ln),
+          bizon: (0, r.YJ)(sn),
+          mac10: (0, r.YJ)(pn),
+          mp7: (0, r.YJ)(un),
+          ump45: (0, r.YJ)(mn),
+          mp9: (0, r.YJ)(dn),
+          mp5sd: (0, r.YJ)(fn),
+          p90: (0, r.YJ)(gn),
+          p250: (0, r.YJ)(hn),
+          tec9: (0, r.YJ)(_n),
+          fiveseven: (0, r.YJ)(vn),
+          revolver: (0, r.YJ)(yn),
+          deagle: (0, r.YJ)(Cn),
+          glock: (0, r.YJ)(bn),
+          usp_silencer: (0, r.YJ)(Sn),
+          elite: (0, r.YJ)(En),
+          hkp2000: (0, r.YJ)(xn),
+          cz75a: (0, r.YJ)(wn),
+          ssg08: (0, r.YJ)(kn),
+          scar20: (0, r.YJ)(In),
+          g3sg1: (0, r.YJ)(Tn),
+          awp: (0, r.YJ)(On),
+          mag7: (0, r.YJ)(Pn),
+          nova: (0, r.YJ)(zn),
+          sawedoff: (0, r.YJ)(An),
+          xm1014: (0, r.YJ)(Ln),
+          negev: (0, r.YJ)(Nn),
+          m249: (0, r.YJ)(Rn),
+          knife_push: (0, r.YJ)(Mn),
+          knife_survival_bowie: (0, r.YJ)(Fn),
+          knife_gypsy_jackknife: (0, r.YJ)(Vn),
+          knife_falchion: (0, r.YJ)(Gn),
+          knife_tactical: (0, r.YJ)(Wn),
+          knife_gut: (0, r.YJ)(Yn),
+          knife_kukri: (0, r.YJ)(Hn),
+          knife_canis: (0, r.YJ)(jn),
+          knife_cord: (0, r.YJ)(Dn),
+          knife_ursus: (0, r.YJ)(Jn),
+          knife_flip: (0, r.YJ)(Bn),
+          knife_outdoor: (0, r.YJ)(Un),
+          knife_css: (0, r.YJ)(Zn),
+          knife_skeleton: (0, r.YJ)(Kn),
+          knife_stiletto: (0, r.YJ)(qn),
+          knife_widowmaker: (0, r.YJ)($n),
+          knife_butterfly: (0, r.YJ)(Qn),
+          knife_m9_bayonet: (0, r.YJ)(Xn),
+          knife_karambit: (0, r.YJ)(ea),
+          bayonet: (0, r.YJ)(ta),
         };
-      var Qn = n(99483);
-      const Xn = [
+      var ra = n(99483);
+      const oa = [
           "weapon_knife_push",
           "weapon_knife_survival_bowie",
           "weapon_knife_gypsy_jackknife",
@@ -3548,11 +3776,11 @@
           "weapon_knife_karambit",
           "weapon_bayonet",
         ],
-        ea = [
+        ca = [
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Pistol" },
-            img: qn.Pistol,
+            img: na.Pistol,
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -3574,7 +3802,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_SMG" },
-            img: qn.SMG,
+            img: na.SMG,
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -3593,7 +3821,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Rifle" },
-            img: qn.Rifle,
+            img: na.Rifle,
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -3612,7 +3840,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_SniperRifle" },
-            img: qn.Sniper,
+            img: na.Sniper,
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -3628,7 +3856,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Shotgun" },
-            img: qn.Shotgun,
+            img: na.Shotgun,
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -3644,7 +3872,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Machinegun" },
-            img: qn.MG,
+            img: na.MG,
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -3658,24 +3886,24 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Knife" },
-            img: qn.Knife,
+            img: na.Knife,
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
                 facet: "Type",
                 tag: "CSGO_Type_Knife",
               },
-              ...Xn.map((e) => ({ facet: "Weapon", tag: e })),
+              ...oa.map((e) => ({ facet: "Weapon", tag: e })),
             ],
           },
           { type: "facet", facet: "ItemSet" },
         ],
-        ta = [
+        ia = [
           { facet: "Type", tag: "CSGO_Type_WeaponCase" },
           { facet: "Type", tag: "CSGO_Tool_Sticker" },
           { facet: "Type", tag: "Type_Hands" },
         ],
-        na = [
+        la = [
           "CSGO_Type_Machinegun",
           "CSGO_Type_Pistol",
           "CSGO_Type_Rifle",
@@ -3683,13 +3911,13 @@
           "CSGO_Type_Shotgun",
           "CSGO_Type_SniperRifle",
         ],
-        aa = ["CSGO_Type_Knife", ...na],
-        ra = [
+        sa = ["CSGO_Type_Knife", ...la],
+        pa = [
           {
             facet: "Exterior",
             trigger: [
               { facet: "Weapon" },
-              { facet: "Type", tag: [...aa, "Type_Hands"] },
+              { facet: "Type", tag: [...sa, "Type_Hands"] },
               { facet: "ItemSet" },
             ],
           },
@@ -3736,7 +3964,7 @@
               {
                 facet: "Type",
                 tag: [
-                  ...aa,
+                  ...sa,
                   "CSGO_Tool_Keychain",
                   "CSGO_Tool_Sticker",
                   "Type_CustomPlayer",
@@ -3749,12 +3977,12 @@
             facet: "Quality",
             trigger: [
               { facet: "Weapon" },
-              { facet: "Type", tag: [...aa, "CSGO_Type_MusicKit"] },
+              { facet: "Type", tag: [...sa, "CSGO_Type_MusicKit"] },
               { facet: "ItemSet" },
             ],
           },
         ],
-        oa = {
+        ua = {
           Exterior: [
             "WearCategory0",
             "WearCategory1",
@@ -3764,11 +3992,11 @@
             "WearCategoryNA",
           ],
         },
-        ca = [
+        ma = [
           {
             items: [
-              { facet: "Weapon", exclude: Xn },
-              { facet: "Type", tag: na },
+              { facet: "Weapon", exclude: oa },
+              { facet: "Type", tag: la },
             ],
             rarities: [
               "Rarity_Common_Weapon",
@@ -3830,7 +4058,7 @@
             ],
           },
         ];
-      function ia(e) {
+      function da(e) {
         const t = Array.isArray(e) ? e : [e];
         return (e) =>
           t.some((t) =>
@@ -3856,11 +4084,11 @@
             })(t, e),
           );
       }
-      function la(e, t) {
-        if ("string" == typeof e) return nt.Localize(e);
+      function fa(e, t) {
+        if ("string" == typeof e) return it.Localize(e);
         const n = t[e.facet];
         return (
-          (0, L.wT)(
+          (0, j.wT)(
             n && n.tags && n.tags[e.tag],
             "Could not find tag for label!",
             e,
@@ -3868,7 +4096,7 @@
           n.tags[e.tag].localized_name
         );
       }
-      function sa(e) {
+      function ga(e) {
         const { facets: t, ...n } = e,
           { state: r, onStateChange: o } = n,
           {
@@ -3891,18 +4119,18 @@
                     n[e] || (n[e] = []), n[e].push(t);
                   },
                   r = [];
-                for (const e of ea)
+                for (const e of ca)
                   if ("select" === e.type) {
                     const n = {
                         fieldType: "select",
-                        strLabel: la(e.label, t),
+                        strLabel: fa(e.label, t),
                         rgOptions: e.options.map(
                           ({ facet: e, tag: n, label: r }) => (
                             a(e, n),
                             {
                               facet: e,
                               tag: n,
-                              strLabel: la(r || { facet: e, tag: n }, t),
+                              strLabel: fa(r || { facet: e, tag: n }, t),
                             }
                           ),
                         ),
@@ -3920,24 +4148,24 @@
                     r.push({ facet: n, img: e.img, toggle: i });
                   } else {
                     const n = t[e.facet];
-                    r.push({ facet: ht(n, "select"), img: "" });
+                    r.push({ facet: Et(n, "select"), img: "" });
                     for (const e of Object.keys(n.tags || {})) a(n.name, e);
                   }
                 const o = [];
-                for (const e of ta) {
+                for (const e of ia) {
                   const { facet: n, tag: r } = e;
                   a(n, r),
                     o.push({
                       fieldType: "togglebutton",
                       facet: n,
                       tag: r,
-                      strLabel: la({ facet: n, tag: r }, t),
+                      strLabel: fa({ facet: n, tag: r }, t),
                     });
                 }
                 const c = {
                     fieldType: "select",
                     rgOptions: [],
-                    strLabel: nt.Localize("#AdvancedSearch_CustomFilter_Other"),
+                    strLabel: it.Localize("#AdvancedSearch_CustomFilter_Other"),
                   },
                   i = { ...t };
                 for (const [e, a] of Object.entries(n)) {
@@ -3955,13 +4183,13 @@
                 return {
                   rgGroups: r,
                   rgToggles: o,
-                  rgConditional: ra.flatMap((e) => {
+                  rgConditional: pa.flatMap((e) => {
                     const t = i[e.facet];
                     if ("Quality" === t.name) {
                       const n = t.tags && t.tags.strange,
                         a = t.tags && t.tags.tournament;
-                      (0, L.wT)(n && a, "Could not find expected toggle tags");
-                      const r = ia(e.trigger);
+                      (0, j.wT)(n && a, "Could not find expected toggle tags");
+                      const r = da(e.trigger);
                       return {
                         facet: {
                           strLabel: t.localized_name,
@@ -3976,9 +4204,9 @@
                               facet: t.name,
                               tag: "tournament",
                               strLabel: a.localized_name,
-                              condition: ia([
-                                { facet: "Type", tag: na },
-                                { facet: "Weapon", exclude: Xn },
+                              condition: da([
+                                { facet: "Type", tag: la },
+                                { facet: "Weapon", exclude: oa },
                                 { facet: "ItemSet" },
                               ]),
                             },
@@ -4002,12 +4230,12 @@
                     }
                     if ("Rarity" === t.name && t.tags) {
                       const e = [];
-                      for (const n of ca) {
-                        const a = ia(n.items),
+                      for (const n of ma) {
+                        const a = da(n.items),
                           r = [];
                         for (const e of n.rarities) {
                           const n = t.tags[e];
-                          n && r.push(vt(t.name, e, n));
+                          n && r.push(xt(t.name, e, n));
                         }
                         e.push({
                           facet: {
@@ -4021,8 +4249,8 @@
                       return e;
                     }
                     let n;
-                    if (oa[t.name]) {
-                      const e = oa[t.name].reduce(
+                    if (ua[t.name]) {
+                      const e = ua[t.name].reduce(
                         (e, t, n) => ((e[t] = n), e),
                         {},
                       );
@@ -4039,8 +4267,8 @@
                       };
                     }
                     return {
-                      facet: ht(t, "select", n),
-                      condition: ia(e.trigger),
+                      facet: Et(t, "select", n),
+                      condition: da(e.trigger),
                     };
                   }),
                   otherFacet: c,
@@ -4053,44 +4281,52 @@
         (0, a.useEffect)(() => {
           let e = null;
           const t = l.filter((e) => e.condition(r)),
-            n = () =>
-              [
-                ...c.map((e) => e.facet),
-                ...i,
-                s,
-                ...t.map((e) => e.facet),
-              ].reduce((e, t) => {
-                const n = (function (e) {
-                  switch (e.fieldType) {
-                    case "checkbox":
-                    case "select":
-                      return e.rgOptions.map(({ facet: e, tag: t }) => [e, t]);
-                    case "toggle":
-                    case "togglebutton":
-                      return [[e.facet, e.tag]];
-                    case "togglegroup":
-                      return e.rgToggles.map(({ facet: e, tag: t }) => [e, t]);
-                    default:
-                      return (0, L.z_)(e, "Unhandled facet type"), [];
-                  }
-                })(t);
-                for (const [t, a] of n) e[t] || (e[t] = {}), (e[t][a] = !0);
-                return e;
-              }, {});
-          let a = null;
+            n = new Map(),
+            a = [];
+          for (const e of t) {
+            const t = e.facet;
+            n.has(t) || a.push(e), n.set(t, !0);
+          }
+          const p = () =>
+            [
+              ...c.map((e) => e.facet),
+              ...i,
+              s,
+              ...a.map((e) => e.facet),
+            ].reduce((e, t) => {
+              const n = (function (e) {
+                switch (e.fieldType) {
+                  case "checkbox":
+                  case "select":
+                    return e.rgOptions.map(({ facet: e, tag: t }) => [e, t]);
+                  case "toggle":
+                  case "togglebutton":
+                    return [[e.facet, e.tag]];
+                  case "togglegroup":
+                    return e.rgToggles.map(({ facet: e, tag: t }) => [e, t]);
+                  default:
+                    return (0, j.z_)(e, "Unhandled facet type"), [];
+                }
+              })(t);
+              for (const [t, a] of n) e[t] || (e[t] = {}), (e[t][a] = !0);
+              return e;
+            }, {});
+          let u = null;
           for (const t of Object.keys(r.facets))
-            for (const o of Object.keys(r.facets[t]))
-              a || (a = n()),
-                (a[t] && a[t][o]) ||
+            for (const n of Object.keys(r.facets[t]))
+              u || (u = p()),
+                (u[t] && u[t][n]) ||
                   (e || (e = { ...r, facets: { ...r.facets } }),
-                  (e = gt(e, t, o, !1)));
-          m(t), e && o(e);
+                  (e = bt(e, t, n, !1)));
+          m(a), e && o(e);
         }, [l, r, o, c, i, s]);
-        const d = (e) => {
+        const d = (e = []) => {
             const t = { ...r, facets: { ...r.facets } };
-            p.forEach((e) => delete t.facets[e]),
-              e && (t.facets[e.facet] = { ...t.facets[e.facet], [e.tag]: !0 }),
-              o(t);
+            p.forEach((e) => delete t.facets[e]);
+            for (const n of e)
+              t.facets[n.facet] || (t.facets[n.facet] = {}),
+                (t.facets[n.facet] = { ...t.facets[n.facet], [n.tag]: !0 });
+            o(t);
           },
           f = (e, t) => d(t),
           g = [
@@ -4102,10 +4338,10 @@
           a.Fragment,
           null,
           a.createElement(
-            ft,
+            Ct,
             null,
             c.map(({ facet: e, img: t, toggle: n }) =>
-              a.createElement(ma, {
+              a.createElement(va, {
                 key: e.strLabel,
                 ...e,
                 onChange: f,
@@ -4117,7 +4353,7 @@
             ),
           ),
           a.createElement(
-            pe,
+            ge,
             {
               gap: "2",
               marginTop: "2",
@@ -4125,7 +4361,7 @@
             },
             i.map((e) =>
               a.createElement(
-                pa,
+                ha,
                 {
                   key: e.strLabel,
                   active: r.facets[e.facet] && r.facets[e.facet][e.tag],
@@ -4133,20 +4369,20 @@
                     return (
                       (n = e.facet),
                       (a = e.tag),
-                      d(t ? { facet: n, tag: a } : void 0)
+                      d(t ? [{ facet: n, tag: a }] : void 0)
                     );
                     var n, a;
                   },
                   muted: g && !(r.facets[e.facet] && r.facets[e.facet][e.tag]),
                   title:
                     "CSGO_Type_WeaponCase" === e.tag
-                      ? nt.Localize("#AdvancedSearch_CSContainers_Tooltip")
+                      ? it.Localize("#AdvancedSearch_CSContainers_Tooltip")
                       : void 0,
                 },
                 e.strLabel,
               ),
             ),
-            a.createElement(ma, {
+            a.createElement(Ca, {
               ...s,
               onChange: f,
               value: r.facets,
@@ -4155,14 +4391,14 @@
           ),
           a.createElement(x, { size: "4", color: "dull-6", marginTop: "4" }),
           a.createElement(
-            ft,
+            Ct,
             { minHeight: "88px" },
-            a.createElement(Nt, { ...n }),
+            a.createElement(Vt, { ...n }),
             a.createElement(
-              b,
+              C,
               { gap: "2", direction: "column" },
               u.map((e) =>
-                a.createElement(_t, {
+                a.createElement(St, {
                   key: e.facet.strLabel,
                   facet: e.facet,
                   ...n,
@@ -4172,7 +4408,7 @@
           ),
         );
       }
-      function pa(e) {
+      function ha(e) {
         const {
             active: t,
             muted: n,
@@ -4180,9 +4416,9 @@
             children: o,
             title: c,
           } = e,
-          i = $e({ bActive: t, onActiveChange: r, title: c });
+          i = at({ bActive: t, onActiveChange: r, title: c });
         return a.createElement(
-          b,
+          C,
           {
             flexGrow: "1",
             background: "dull-5 50%",
@@ -4192,7 +4428,7 @@
             ...i,
             "data-active": !!t,
             "data-muted": !!n,
-            className: Qn.ToggleButton,
+            className: ra.ToggleButton,
           },
           a.createElement(
             p,
@@ -4201,7 +4437,7 @@
           ),
         );
       }
-      const ua = a.forwardRef(function (e, t) {
+      const _a = a.forwardRef(function (e, t) {
         const {
             img: n,
             active: r,
@@ -4215,14 +4451,9 @@
             ? (e) => {
                 e.stopPropagation(), e.preventDefault(), l();
               }
-            : void 0,
-          m = s
-            ? (e) => {
-                e.stopPropagation(), e.preventDefault(), s();
-              }
             : void 0;
-        let d = a.createElement(
-          b,
+        let m = a.createElement(
+          C,
           {
             background: "dull-5 50%",
             flexGrow: "1",
@@ -4230,20 +4461,25 @@
             paddingX: "3",
             paddingY: "2",
             gap: "2",
-            className: Qn.NoToggleTrigger,
+            className: ra.NoToggleTrigger,
+            overflow: "hidden",
           },
-          a.createElement(c.a, { flexGrow: "1" }, o),
-          r && m
-            ? a.createElement(q, { onClick: m })
-            : a.createElement(fe, null),
+          a.createElement(c.a, { flexGrow: "1", minWidth: "0" }, o),
+          r && s
+            ? a.createElement(
+                C,
+                { align: "center", justify: "center" },
+                a.createElement(te, { onClick: s }),
+              )
+            : a.createElement(ye, null),
         );
         return (
           u &&
-            (d = a.createElement(
+            (m = a.createElement(
               a.Fragment,
               null,
               a.createElement(
-                b,
+                C,
                 {
                   align: "center",
                   background: "dull-5 50%",
@@ -4251,18 +4487,19 @@
                   paddingY: "1",
                   paddingX: "3",
                   flexGrow: "1",
-                  className: Qn.TriggerToggle,
+                  className: ra.TriggerToggle,
                   onClick: u,
                   position: "relative",
                   "data-active": !!r,
                   "data-muted": !!i,
+                  overflow: "hidden",
                 },
                 a.createElement(
                   c.a,
                   { overflow: "hidden", position: "absolute", inset: "0" },
                   n &&
                     a.createElement("div", {
-                      className: Qn.ImgBlur,
+                      className: ra.ImgBlur,
                       style: {
                         backgroundImage: `url("${n}")`,
                         pointerEvents: "none",
@@ -4280,10 +4517,14 @@
                     },
                     alt: "",
                   }),
-                a.createElement(c.a, { flexGrow: "1", zIndex: "1" }, o),
+                a.createElement(
+                  c.a,
+                  { flexGrow: "1", zIndex: "1", overflow: "hidden" },
+                  o,
+                ),
               ),
               a.createElement(
-                b,
+                C,
                 {
                   background: "dull-5 50%",
                   align: "center",
@@ -4291,34 +4532,139 @@
                   padding: "5",
                   "data-active": !!r,
                   "data-muted": !!i,
-                  className: Qn.TriggerSelect,
+                  className: ra.TriggerSelect,
                 },
-                a.createElement(fe, null),
+                a.createElement(ye, null),
               ),
             )),
           a.createElement(
-            b,
+            C,
             {
               ...p,
               gap: "1",
               flexGrow: "1",
               ref: t,
               radius: "md",
-              className: Qn.Trigger,
+              className: ra.Trigger,
               position: "relative",
               "data-active": !!r,
               "data-muted": !!i,
             },
-            d,
+            m,
           )
         );
       });
-      function ma(e) {
+      function va(e) {
+        const { toggle: t, onChange: n, ...r } = e,
+          o = (e, a) => {
+            if (a && t && a.length > 1) {
+              const r = a.findIndex(
+                (e) => e.facet === t.facet && e.tag === t.tag,
+              );
+              if (r > -1) {
+                return !e ||
+                  !e.some((e) => e.facet === t.facet && e.tag === t.tag)
+                  ? void n(e, [t])
+                  : void n(e, a.slice(0, r).concat(a.slice(r + 1)));
+              }
+            }
+            n(e, a);
+          };
         return e.rgOptions.length > 15
-          ? a.createElement(fa, { ...e })
-          : a.createElement(da, { ...e });
+          ? a.createElement(ba, { toggle: t, onChange: o, ...r })
+          : a.createElement(ya, { toggle: t, onChange: o, ...r });
       }
-      function da(e) {
+      function ya(e) {
+        const {
+            rgOptions: t,
+            strLabel: n,
+            value: r = {},
+            onChange: o,
+            img: c,
+            toggle: i,
+            hasTypeSelected: l,
+          } = e,
+          s = (e) => (e ? `${e.facet}_${e.tag}` : "clear"),
+          u = (0, a.useMemo)(
+            () => t.filter((e) => r[e.facet] && r[e.facet][e.tag]),
+            [t, r],
+          );
+        let m = c;
+        const d = u[0];
+        if ((null == d ? void 0 : d.tag) && d.tag.startsWith("weapon_")) {
+          const e = d.tag.slice(7);
+          e in aa && (m = aa[e]);
+        }
+        const f = Ue({
+            rgOptions: t,
+            selectedValue: u,
+            onSelectionChange: (e) => o(u, e),
+          }),
+          g = u.length > 0,
+          h = i ? () => o(u, g ? [] : [i]) : void 0;
+        let _ = "";
+        if (g) {
+          const e = u.map((e) => e.strLabel);
+          _ =
+            "ListFormat" in Intl
+              ? new Intl.ListFormat(Ee().strISOCode).format(e)
+              : e.join(", ");
+        }
+        return a.createElement(
+          Ke.Root,
+          { state: f, variant: "highlight", radius: "sm" },
+          a.createElement(
+            Ke.Trigger,
+            {
+              render: a.createElement(_a, {
+                img: m,
+                active: g,
+                muted: l && !g,
+                onToggle: h,
+                onClear: f.onClear,
+              }),
+            },
+            !g && a.createElement(Ke.Value, null, n),
+            g &&
+              a.createElement(
+                C,
+                { align: "center", gap: "2" },
+                a.createElement(
+                  Ke.Value,
+                  null,
+                  n,
+                  ": ",
+                  a.createElement(p, { color: "accent", secondary: !0 }, _),
+                ),
+                h &&
+                  a.createElement(
+                    C,
+                    { align: "center", justify: "center" },
+                    a.createElement(te, null),
+                  ),
+              ),
+          ),
+          a.createElement(
+            Ke.Options,
+            null,
+            t.map((e) =>
+              a.createElement(
+                Ke.Option,
+                { value: e, key: s(e) },
+                e
+                  ? e.strLabel
+                  : a.createElement(
+                      C,
+                      { align: "center", gap: "1" },
+                      a.createElement(te, null),
+                      it.Localize("#AdvancedSearch_AppSelect_Clear"),
+                    ),
+              ),
+            ),
+          ),
+        );
+      }
+      function Ca(e) {
         const {
             rgOptions: t,
             strLabel: n,
@@ -4337,25 +4683,25 @@
         const d = u ? [void 0, ...t] : t;
         if ((null == u ? void 0 : u.tag) && u.tag.startsWith("weapon_")) {
           const e = u.tag.slice(7);
-          e in $n && (m = $n[e]);
+          e in aa && (m = aa[e]);
         }
-        const f = Le({
+        const f = He({
             rgOptions: d,
             selectedValue: u,
-            onSelectionChange: (e) => o(u, e),
+            onSelectionChange: (e) => o(u ? [u] : [], e ? [e] : []),
           }),
           g = i
             ? () => {
-                o(u, u ? void 0 : i);
+                o(u ? [u] : [], u ? [] : [i]);
               }
             : void 0;
         return a.createElement(
-          Ge.Root,
+          Be.Root,
           { state: f, variant: "highlight", radius: "sm" },
           a.createElement(
-            Ge.Trigger,
+            Be.Trigger,
             {
-              render: a.createElement(ua, {
+              render: a.createElement(_a, {
                 img: m,
                 active: !!u,
                 muted: l && !u,
@@ -4363,10 +4709,10 @@
                 onClear: () => f.onSelectionChange(void 0),
               }),
             },
-            !u && a.createElement(Ge.Value, null, n),
+            !u && a.createElement(Be.Value, null, n),
             !!u &&
               a.createElement(
-                Ge.Value,
+                Be.Value,
                 null,
                 n,
                 ": ",
@@ -4374,35 +4720,35 @@
                   p,
                   { color: "accent", secondary: !0 },
                   a.createElement(
-                    b,
+                    C,
                     { inline: !0, align: "center", gap: "2" },
                     u.strLabel,
-                    g && a.createElement(q, null),
+                    g && a.createElement(te, null),
                   ),
                 ),
               ),
           ),
           a.createElement(
-            Ge.Options,
+            Be.Options,
             null,
             d.map((e) =>
               a.createElement(
-                Ge.Option,
+                Be.Option,
                 { value: e, key: s(e) },
                 e
                   ? e.strLabel
                   : a.createElement(
-                      b,
+                      C,
                       { align: "center", gap: "1" },
-                      a.createElement(q, null),
-                      nt.Localize("#AdvancedSearch_AppSelect_Clear"),
+                      a.createElement(te, null),
+                      it.Localize("#AdvancedSearch_AppSelect_Clear"),
                     ),
               ),
             ),
           ),
         );
       }
-      function fa(e) {
+      function ba(e) {
         const {
             rgOptions: t,
             strLabel: n,
@@ -4413,90 +4759,97 @@
             hasTypeSelected: l,
           } = e,
           s = (e) => (e ? `${e.facet}_${e.tag}` : "clear"),
-          u = (0, a.useMemo)(() => {
-            const e = t.find((e) => r[e.facet] && r[e.facet][e.tag]);
-            if (e) return e;
-          }, [t, r]);
+          u = (0, a.useMemo)(
+            () => t.filter((e) => r[e.facet] && r[e.facet][e.tag]),
+            [t, r],
+          );
         let m = c;
-        if ((null == u ? void 0 : u.tag) && u.tag.startsWith("weapon_")) {
-          const e = u.tag.slice(7);
-          e in $n && (m = $n[e]);
+        const d = u[0];
+        if ((null == d ? void 0 : d.tag) && d.tag.startsWith("weapon_")) {
+          const e = d.tag.slice(7);
+          e in aa && (m = aa[e]);
         }
-        const d = Ce({
+        const f = Le({
             rgOptions: t,
             selectedValue: u,
             onSelectionChange: (e) => o(u, e),
             filterPlaceholder: "Filter...",
           }),
-          f = i
-            ? () => {
-                o(u, u ? void 0 : i);
-              }
-            : void 0;
+          g = u.length > 0,
+          h = i ? () => o(u, g ? [] : [i]) : void 0;
+        let _ = "";
+        if (g) {
+          const e = u.map((e) => e.strLabel);
+          _ =
+            "ListFormat" in Intl
+              ? new Intl.ListFormat(Ee().strISOCode).format(e)
+              : e.join(", ");
+        }
         return a.createElement(
-          xe.Root,
-          { state: d, variant: "highlight", radius: "sm" },
+          Ne.Root,
+          { state: f, variant: "highlight", radius: "sm" },
           a.createElement(
-            xe.Trigger,
+            Ne.Trigger,
             {
-              render: a.createElement(ua, {
+              render: a.createElement(_a, {
                 img: m,
-                active: !!u,
-                muted: l && !u,
-                onToggle: f,
-                onClear: () => d.onSelectionChange(void 0),
+                active: g,
+                muted: l && !g,
+                onToggle: h,
+                onClear: f.onClear,
               }),
             },
-            !u && a.createElement(xe.Value, null, n),
-            !!u &&
+            !g && a.createElement(Ne.Value, null, n),
+            g &&
               a.createElement(
-                xe.Value,
-                null,
-                n,
-                ": ",
+                C,
+                { align: "center", gap: "2" },
                 a.createElement(
-                  p,
-                  { color: "accent", secondary: !0 },
-                  a.createElement(
-                    b,
-                    { inline: !0, align: "center", gap: "2" },
-                    u.strLabel,
-                    f && a.createElement(q, null),
-                  ),
+                  Ke.Value,
+                  null,
+                  n,
+                  ": ",
+                  a.createElement(p, { color: "accent", secondary: !0 }, _),
                 ),
+                h &&
+                  a.createElement(
+                    C,
+                    { align: "center", justify: "center" },
+                    a.createElement(te, null),
+                  ),
               ),
           ),
           a.createElement(
-            xe.Options,
+            Ne.Options,
             null,
-            d.rgFilteredOptions.map((e) =>
+            f.rgFilteredOptions.map((e) =>
               a.createElement(
-                xe.Option,
+                Ne.Option,
                 { value: e, key: s(e) },
                 e
                   ? e.strLabel
                   : a.createElement(
-                      b,
+                      C,
                       { align: "center", gap: "1" },
-                      a.createElement(q, null),
-                      nt.Localize("#AdvancedSearch_AppSelect_Clear"),
+                      a.createElement(te, null),
+                      it.Localize("#AdvancedSearch_AppSelect_Clear"),
                     ),
               ),
             ),
           ),
         );
       }
-      var ga = n(83281),
-        _a = n(2627),
-        ha = n(10430);
-      const va = {
-        Home: (e) => ya("", e),
-        AppHome: (e, t) => ya(`app/${e}`, t),
-        AdvancedSearch: (e) => ya("advancedsearch", e),
-        Search: (e) => ya("search", e),
-        Item: (e, t, n) => ya(`listings/${e}/${encodeURIComponent(t)}`, n),
+      var Sa = n(83281),
+        Ea = n(2627),
+        xa = n(10430);
+      const wa = {
+        Home: (e) => ka("", e),
+        AppHome: (e, t) => ka(`app/${e}`, t),
+        AdvancedSearch: (e) => ka("advancedsearch", e),
+        Search: (e) => ka("search", e),
+        Item: (e, t, n) => ka(`listings/${e}/${encodeURIComponent(t)}`, n),
       };
-      function ya(e, t = {}) {
+      function ka(e, t = {}) {
         const n = (function (e) {
           const { pref: t = "infer", bNewOnly: n } = e;
           return (
@@ -4511,16 +4864,16 @@
         const o = n ? "newmarket/" : "market/";
         return `${r.TS.COMMUNITY_BASE_URL}${o}${e}${a ? "?" + a : ""}`;
       }
-      var ba = n(40236);
-      const Ca = 753,
-        Sa = 730,
-        Ea = `${Ca}_Game`,
-        xa = `${Ca}_item_class`,
-        wa = `${Ca}_Event`,
-        ka = ["item_class_10", "item_class_6"],
-        Ta = "4",
-        Ia = (0, a.createContext)({});
-      function Oa(e) {
+      var Ia = n(40236);
+      const Ta = 753,
+        Oa = 730,
+        Pa = `${Ta}_Game`,
+        za = `${Ta}_item_class`,
+        Aa = `${Ta}_Event`,
+        La = ["item_class_10", "item_class_6"],
+        Na = "4",
+        Ra = (0, a.createContext)({});
+      function Ma(e) {
         const {
             filter: t,
             onFilterChange: n,
@@ -4530,16 +4883,17 @@
             ...l
           } = e,
           s = t.bSteamItems,
-          p = (0, ha.LT)("sm"),
-          u = s ? l.rgAppData && l.rgAppData[Ca] : t.filterInGame.app;
+          p = (0, xa.LT)("sm"),
+          u = s ? l.rgAppData && l.rgAppData[Ta] : t.filterInGame.app,
+          m = Ga(u);
         return a.createElement(
-          ga.u.Provider,
+          Sa.u.Provider,
           { value: i },
           a.createElement(
-            zt.Provider,
+            Ft.Provider,
             { value: r },
             a.createElement(
-              Ia.Provider,
+              Ra.Provider,
               { value: o },
               a.createElement(
                 c.a,
@@ -4555,56 +4909,74 @@
                     a.createElement(
                       g,
                       { size: "6", weight: "heavy" },
-                      nt.Localize("#AdvancedSearch_Heading"),
+                      it.Localize("#AdvancedSearch_Heading"),
                     ),
                   a.createElement(
-                    b,
+                    C,
                     {
-                      gap: Ta,
-                      align: { initial: "stretch", sm: "center" },
-                      marginY: Ta,
+                      gap: Na,
+                      align: { initial: "stretch", sm: "start" },
+                      marginY: Na,
                       direction: { initial: "column", sm: "row" },
                     },
-                    a.createElement(La, {
+                    a.createElement(Ja, {
                       showSteamItems: s,
                       onShowSteamItemsChange: (e) =>
                         n({ ...t, bSteamItems: e }),
                     }),
                     p &&
-                      a.createElement(x, {
-                        size: "1",
-                        orientation: "vertical",
-                        color: "dull-6",
-                      }),
+                      a.createElement(
+                        c.a,
+                        { style: { marginTop: "10px" } },
+                        a.createElement(x, {
+                          size: "1",
+                          orientation: "vertical",
+                          color: "dull-6",
+                        }),
+                      ),
                     a.createElement(
-                      c.a,
-                      { flexGrow: "1" },
-                      a.createElement(za, {
+                      C,
+                      { direction: "column", flexGrow: "1", gap: "2" },
+                      a.createElement(Ya, {
                         app: u || void 0,
                         value: t.strSearch || "",
                         onTextChange: (e) => n({ ...t, strSearch: e }),
                       }),
+                      m &&
+                        a.createElement(
+                          z,
+                          {
+                            marginLeft: "4",
+                            checked: !!t.bSearchDescriptions,
+                            onChange: (e) =>
+                              n({ ...t, bSearchDescriptions: e }),
+                            title: it.Localize(
+                              "#AdvancedSearch_IncludeDescriptions_Tooltip",
+                            ),
+                          },
+                          it.Localize("#AdvancedSearch_IncludeDescriptions"),
+                        ),
                     ),
                   ),
                   a.createElement(
-                    Ya,
+                    $a,
                     null,
                     !s &&
-                      a.createElement(Ma, {
+                      a.createElement(Ba, {
                         ...l,
                         filter: t.filterInGame,
                         onFilterChange: (e) => n({ ...t, filterInGame: e }),
                         suggestedInitialApp: t.filterSteam.app,
                       }),
                     s &&
-                      a.createElement(Fa, {
+                      a.createElement(Ua, {
                         ...l,
                         filter: t.filterSteam,
                         onFilterChange: (e) => n({ ...t, filterSteam: e }),
                         suggestedInitialApp: t.filterInGame.app,
                       }),
                   ),
-                  a.createElement(Pa, {
+                  a.createElement(Wa, {
                     filter: t,
                     onFilterChange: n,
                     config: r,
@@ -4615,7 +4987,14 @@
           ),
         );
       }
-      function Pa(e) {
+      const Fa = 440,
+        Va = 570;
+      function Ga(e) {
+        if (!e) return !1;
+        const t = e.appid;
+        return t === Fa || t === Va;
+      }
+      function Wa(e) {
         const { filter: t, onFilterChange: n, config: o } = e,
           c = t.bSteamItems,
           [i, l] = (0, a.useState)(!1),
@@ -4624,9 +5003,9 @@
             0 !== s.price[0] ||
             s.price[1] !== o.maxPrice ||
             Object.keys(s.facets).length > 0,
-          u = (0, ha.LT)("sm"),
+          u = (0, xa.LT)("sm"),
           m = a.createElement(
-            T,
+            R,
             {
               type: "submit",
               onClick: () => {
@@ -4634,59 +5013,61 @@
                   (window.location.href = (function (e, t) {
                     const {
                       strSearch: n,
-                      bSteamItems: a,
-                      filterInGame: r,
-                      filterSteam: o,
+                      bSearchDescriptions: a,
+                      bSteamItems: r,
+                      filterInGame: o,
+                      filterSteam: c,
                     } = e;
-                    let c = r;
-                    a &&
-                      ((c = { ...o, facets: { ...o.facets } }),
-                      o.app && (c.facets.Game = { [`app_${o.app.appid}`]: !0 }),
-                      (c.app = { appid: Ca, name: "", icon: "" }));
+                    let i = o;
+                    r &&
+                      ((i = { ...c, facets: { ...c.facets } }),
+                      c.app && (i.facets.Game = { [`app_${c.app.appid}`]: !0 }),
+                      (i.app = { appid: Ta, name: "", icon: "" }));
                     const {
-                        app: i,
-                        facets: l,
-                        price: [s, p],
-                      } = c,
-                      u = new FormData();
-                    i && u.set("appid", i.appid.toString());
-                    n && u.set("q", n);
-                    for (const e of Object.keys(l))
-                      if (l[e])
-                        for (const t of Object.keys(l[e]))
-                          l[e][t] &&
-                            u.append(`category_${i.appid}_${e}[]`, `tag_${t}`);
-                    s > 0 && u.append("price_min", s.toString());
-                    p > s &&
-                      p < t.maxPrice &&
-                      u.append("price_max", p.toString());
-                    return va.Search({ search: new URLSearchParams(u) });
+                        app: l,
+                        facets: s,
+                        price: [p, u],
+                      } = i,
+                      m = new FormData();
+                    l && m.set("appid", l.appid.toString());
+                    n && m.set("q", n);
+                    n && a && Ga(i.app) && m.set("descriptions", "1");
+                    for (const e of Object.keys(s))
+                      if (s[e])
+                        for (const t of Object.keys(s[e]))
+                          s[e][t] &&
+                            m.append(`category_${l.appid}_${e}[]`, `tag_${t}`);
+                    p > 0 && m.append("price_min", p.toString());
+                    u > p &&
+                      u < t.maxPrice &&
+                      m.append("price_max", u.toString());
+                    return wa.Search({ search: new URLSearchParams(m) });
                   })(t, o));
               },
               disabled: i,
             },
-            nt.Localize("#AdvancedSearch_Search"),
+            it.Localize("#AdvancedSearch_Search"),
           );
         return a.createElement(
-          b,
+          C,
           {
             justify: u ? "between" : void 0,
-            marginTop: Ta,
+            marginTop: Na,
             direction: u ? "row" : "column",
             gap: "2",
           },
           o.bNewMarket
             ? a.createElement("div", null)
             : a.createElement(
-                b,
+                C,
                 { gap: "2", align: "center", justify: "between" },
                 a.createElement(
                   "a",
                   {
                     href: `${r.TS.COMMUNITY_BASE_URL}groups/community_market/discussions/`,
-                    className: at.BetaLink,
+                    className: lt.BetaLink,
                   },
-                  nt.Localize("#AdvancedSearch_BetaTag"),
+                  it.Localize("#AdvancedSearch_BetaTag"),
                 ),
                 u &&
                   a.createElement(x, {
@@ -4698,21 +5079,21 @@
                   "span",
                   {
                     onClick: () => {
-                      (0, _a.lc)("marketFiltersBeta", "0", 30),
+                      (0, Ea.lc)("marketFiltersBeta", "0", 30),
                         window.location.reload();
                     },
-                    className: at.BetaLink,
+                    className: lt.BetaLink,
                   },
-                  nt.Localize("#AdvancedSearch_Beta_OptOut"),
+                  it.Localize("#AdvancedSearch_Beta_OptOut"),
                 ),
               ),
           u &&
             a.createElement(
-              b,
-              { gap: Ta, justify: "end" },
+              C,
+              { gap: Na, justify: "end" },
               u &&
                 a.createElement(
-                  T,
+                  R,
                   {
                     color: "dull",
                     variant: "ghost",
@@ -4741,121 +5122,120 @@
                     },
                     disabled: !p,
                   },
-                  nt.Localize("#AdvancedSearch_Reset"),
+                  it.Localize("#AdvancedSearch_Reset"),
                 ),
               m,
             ),
           !u && m,
         );
       }
-      function za(e) {
-        const { value: t, onTextChange: n, app: r } = e;
-        return a.createElement(Na, {
+      function Ya(e) {
+        const { value: t, onTextChange: n, app: r } = e,
+          [o, c] = (0, a.useState)(!0);
+        return a.createElement(Ha, {
           radius: "full",
           variant: "inset",
-          app: r,
+          app: o ? r : void 0,
+          onClearApp: () => c(!1),
           value: t,
           onTextChange: n,
         });
       }
-      function Na(e) {
+      function Ha(e) {
         var t, n;
-        const { value: r, onTextChange: c, app: i, ...l } = e,
-          s = (0, ga.b)(),
-          p = null == i ? void 0 : i.appid,
-          [u, m] = (0, a.useState)(!0),
-          d = u ? p : void 0,
-          f = (0, o.I)({
-            queryKey: ["market_search_suggestions", r, d],
+        const { value: r, onTextChange: c, app: i, onClearApp: l, ...s } = e,
+          p = (0, Sa.b)(),
+          u = null == i ? void 0 : i.appid,
+          m = (0, o.I)({
+            queryKey: ["market_search_suggestions", r, u],
             queryFn: async () => {
               const e = await fetch(
-                `/market/searchsuggestionsresults?q=${r}${d ? `&appid=${d}` : ""}${s ? "&debug=1" : ""}`,
+                `/market/searchsuggestionsresults?q=${r}${u ? `&appid=${u}` : ""}${p ? "&debug=1" : ""}`,
               );
               return await e.json();
             },
             placeholderData: (e) => e,
             enabled: !!r && r.length >= 2,
-            staleTime: s ? 0 : 1 / 0,
+            staleTime: p ? 0 : 1 / 0,
           }),
-          g = (
-            (null === (t = f.data) || void 0 === t ? void 0 : t.results) || []
+          d = (
+            (null === (t = m.data) || void 0 === t ? void 0 : t.results) || []
           ).map((e) => e.market_hash_name),
-          _ = (
-            (null === (n = f.data) || void 0 === n ? void 0 : n.results) || []
+          f = (
+            (null === (n = m.data) || void 0 === n ? void 0 : n.results) || []
           ).slice(0, 10),
-          h = $({
+          g = ne({
             onTextChange: c,
-            suggestions: g,
+            suggestions: d,
             onSuggestionSelected: (e) => {
-              const t = _.find((t) => t.market_hash_name === e);
+              const t = f.find((t) => t.market_hash_name === e);
               t &&
-                (window.location.href = va.Item(t.app_id, t.market_hash_name));
+                (window.location.href = wa.Item(t.app_id, t.market_hash_name));
             },
           }),
-          v = r
-            ? a.createElement(q, { onClick: () => h.onTextChange("") })
+          h = r
+            ? a.createElement(te, { onClick: () => g.onTextChange("") })
             : void 0,
-          [y, C] = (0, a.useState)(!1),
-          [S, E] = (0, a.useState)(!1),
-          x = y || !S,
-          w = (0, ba.wY)(
+          [_, v] = (0, a.useState)(!1),
+          [y, b] = (0, a.useState)(!1),
+          S = _ || !y,
+          E = (0, Ia.wY)(
             (0, a.useCallback)((e) => {
               const t = e.contentRect.width < 300;
-              C(t);
+              v(t);
             }, []),
           ),
-          k =
-            i && u
-              ? a.createElement(
-                  b,
-                  {
-                    cursor: "pointer",
-                    radius: l.radius || "sm",
-                    background: "dull-4",
-                    paddingY: "1",
-                    paddingX: "2",
-                    align: "center",
-                    gap: "1",
-                    role: "button",
-                    onMouseDown: () => m(!1),
-                    maxWidth: "24ch",
-                  },
-                  a.createElement(ne, {
-                    height: "20px",
-                    objectFit: "contain",
-                    src: i.icon,
-                    alt: "",
-                  }),
-                  a.createElement(Aa, { visible: !x }, i.name),
-                  a.createElement(q, null),
-                )
-              : null,
-          T =
-            i && u && !x
-              ? nt.Localize(
+          x = i
+            ? a.createElement(
+                C,
+                {
+                  cursor: "pointer",
+                  radius: s.radius || "sm",
+                  background: "dull-4",
+                  paddingY: "1",
+                  paddingX: "2",
+                  align: "center",
+                  gap: "1",
+                  role: "button",
+                  maxWidth: "24ch",
+                  onMouseDown: l,
+                },
+                a.createElement(ie, {
+                  height: "20px",
+                  objectFit: "contain",
+                  src: i.icon,
+                  alt: "",
+                }),
+                a.createElement(ja, { visible: !S }, i.name),
+                a.createElement(te, null),
+              )
+            : null,
+          w =
+            i && !S
+              ? it.Localize(
                   "#AdvancedSearch_TextSearch_PlaceholderWithApp",
                   i.name,
                 )
-              : nt.Localize("#AdvancedSearch_TextSearch_Placeholder");
+              : it.Localize("#AdvancedSearch_TextSearch_Placeholder");
         return a.createElement(
-          Q.Root,
-          { state: h },
-          a.createElement(Q.TextInput, {
+          ae.Root,
+          { state: g },
+          a.createElement(ae.TextInput, {
             value: r,
-            placeholder: T,
-            ...l,
-            afterContent: v,
-            title: nt.Localize("#AdvancedSearch_TextSearch_Tooltip"),
-            beforeContent: k,
-            ref: w,
-            onFocus: () => E(!0),
-            onBlur: () => E(!1),
+            placeholder: w,
+            ...s,
+            afterContent: h,
+            title: it.Localize("#AdvancedSearch_TextSearch_Tooltip"),
+            beforeContent: x,
+            ref: E,
+            onFocus: () => b(!0),
+            onBlur: () => b(!1),
           }),
           a.createElement(
-            Q.Suggestions,
+            ae.Suggestions,
             null,
-            _.map((e, t) =>
-              a.createElement(Ra, {
+            f.map((e, t) =>
+              a.createElement(Da, {
                 key: e.market_hash_name + t,
                 name: e.market_name,
                 hashName: e.market_hash_name,
@@ -4870,15 +5250,15 @@
           ),
         );
       }
-      function Aa(e) {
+      function ja(e) {
         const { visible: t, children: n } = e;
         return a.createElement(
           c.a,
-          { className: at.Collapse, "data-visible": !!t },
+          { className: lt.Collapse, "data-visible": !!t },
           a.createElement(p, { secondary: !0, truncate: !0 }, n),
         );
       }
-      function Ra(e) {
+      function Da(e) {
         const {
             name: t,
             hashName: n,
@@ -4888,16 +5268,16 @@
             listingCount: i,
             searchScore: l,
           } = e,
-          s = (0, ga.b)();
+          s = (0, Sa.b)();
         return a.createElement(
-          Q.Suggestion,
+          ae.Suggestion,
           {
             value: n,
             render: (e, t) =>
-              a.createElement(b, {
+              a.createElement(C, {
                 align: "center",
                 gap: "2",
-                className: at.SearchSuggestion,
+                className: lt.SearchSuggestion,
                 radius: "sm",
                 margin: "2",
                 "data-focused": t.focused,
@@ -4917,7 +5297,7 @@
             alt: "",
           }),
           a.createElement(
-            b,
+            C,
             { direction: "column", gap: "1", minWidth: "0" },
             a.createElement(
               p,
@@ -4936,13 +5316,13 @@
             ),
         );
       }
-      function La(e) {
+      function Ja(e) {
         const { showSteamItems: t, onShowSteamItemsChange: n } = e;
         return a.createElement(
           c.a,
           { flexGrow: "0" },
           a.createElement(
-            ce.Root,
+            ue.Root,
             {
               value: t ? "on" : "off",
               onValueChange: (e) => n("on" === e),
@@ -4950,19 +5330,19 @@
               radius: "full",
             },
             a.createElement(
-              ce.Item,
+              ue.Item,
               { value: "off" },
-              nt.Localize("#AdvancedSearch_TypeSwitch_InGame"),
+              it.Localize("#AdvancedSearch_TypeSwitch_InGame"),
             ),
             a.createElement(
-              ce.Item,
+              ue.Item,
               { value: "on" },
-              nt.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
+              it.Localize("#AdvancedSearch_TypeSwitch_SteamItems"),
             ),
           ),
         );
       }
-      function Ma(e) {
+      function Ba(e) {
         var t;
         const {
             rgApps: n = [],
@@ -4976,46 +5356,46 @@
           l || (s(!0), i && r[i.appid] && c({ ...o, app: r[i.appid] }));
         }, [c, o, i, r, l]);
         const p = !o.app && l,
-          u = Za(p),
+          u = rr(p),
           m = (0, a.useMemo)(
-            () => n.filter((e) => e !== Ca).map((e) => r[e]),
+            () => n.filter((e) => e !== Ta).map((e) => r[e]),
             [n, r],
           );
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(Xa, {
+          a.createElement(sr, {
             apps: m,
             selectedApp: o.app,
             onSelectionChange: (e) => c({ ...o, app: e, facets: {} }),
           }),
           p &&
-            a.createElement(Va, {
+            a.createElement(qa, {
               loading: u.isLoading,
               apps: null === (t = u.data) || void 0 === t ? void 0 : t.rgInGame,
               filterBy: n,
               onSelect: (e) => c({ ...o, app: r[e] || null, facets: {} }),
             }),
           !!o.app &&
-            a.createElement(Ja, {
+            a.createElement(tr, {
               appid: o.app.appid,
               state: o,
               onStateChange: c,
             }),
         );
       }
-      function Fa(e) {
+      function Ua(e) {
         var t, n, c;
         const { filter: i, onFilterChange: l, suggestedInitialApp: s } = e,
           [u, m] = (0, a.useState)(!1),
           d = !i.app && u,
-          f = Za(d),
+          f = rr(d),
           g = (0, o.I)({
-            queryKey: ["marketfilters", Ca],
+            queryKey: ["marketfilters", Ta],
             queryFn: async () => {
-              const e = await Ua(Ca),
-                t = e[Ea];
-              if ((delete e[Ea], !t.tags))
+              const e = await ar(Ta),
+                t = e[Pa];
+              if ((delete e[Pa], !t.tags))
                 return { rgApps: [], facets: {}, mapAppIDs: {} };
               const n = {},
                 a = [];
@@ -5031,34 +5411,34 @@
                   }));
               }
               return {
-                rgApps: (0, Qe.Z)(a, (e) => e.name),
+                rgApps: (0, rt.Z)(a, (e) => e.name),
                 mapAppIDs: n,
                 facets: e,
               };
             },
           }),
-          { facets: _ = {}, rgApps: h, mapAppIDs: v } = g.data || {},
-          y = { ..._ },
-          b = y[xa];
-        delete y[xa];
-        const C = !i.facets.Event || 0 === Object.keys(i.facets).length;
-        !i.app || delete y[wa];
-        const S = qa(Ca, y);
+          { facets: h = {}, rgApps: _, mapAppIDs: v } = g.data || {},
+          y = { ...h },
+          C = y[za];
+        delete y[za];
+        const b = !i.facets.Event || 0 === Object.keys(i.facets).length;
+        !i.app || delete y[Aa];
+        const S = cr(Ta, y);
         if (
           ((0, a.useEffect)(() => {
             !u && v && (m(!0), s && v[s.appid] && l({ ...i, app: s }));
           }, [u, s, v, l, i]),
           g.isLoading)
         )
-          return a.createElement(ar, null);
-        if (g.isError || !g.data || !h || !_)
+          return a.createElement(dr, null);
+        if (g.isError || !g.data || !_ || !h)
           return a.createElement(
-            ja,
+            er,
             null,
             a.createElement(
               p,
               { size: "4" },
-              nt.Localize("#AdvancedSearch_FacetLoadError"),
+              it.Localize("#AdvancedSearch_FacetLoadError"),
             ),
           );
         const E = (
@@ -5075,30 +5455,30 @@
         return a.createElement(
           a.Fragment,
           null,
-          C &&
-            a.createElement(Xa, {
-              apps: h,
+          b &&
+            a.createElement(sr, {
+              apps: _,
               selectedApp: i.app,
               onSelectionChange: (e) => l({ ...i, app: e, facets: {} }),
             }),
-          C &&
+          b &&
             d &&
-            a.createElement(Va, {
+            a.createElement(qa, {
               loading: f.isLoading,
               apps: E,
               filterBy: v,
               onSelect: (e) =>
                 l({
                   ...i,
-                  app: h.find((t) => t.appid === e) || null,
+                  app: _.find((t) => t.appid === e) || null,
                   facets: {},
                 }),
             }),
-          a.createElement(Wa, { facet: b, state: i, onStateChange: l }),
-          a.createElement(Da, { facets: S, state: i, onStateChange: l }),
+          a.createElement(Ka, { facet: C, state: i, onStateChange: l }),
+          a.createElement(Xa, { facets: S, state: i, onStateChange: l }),
         );
       }
-      const Ga = {
+      const Za = {
         item_class_2: function (e) {
           return a.createElement(
             "svg",
@@ -5191,47 +5571,47 @@
           );
         },
       };
-      function Wa(e) {
+      function Ka(e) {
         const {
             facet: { localized_name: t, name: n, tags: r = {} },
             state: o,
             onStateChange: i,
           } = e,
-          l = Object.keys(r).filter((e) => ka.indexOf(e) < 1),
+          l = Object.keys(r).filter((e) => La.indexOf(e) < 1),
           s = o.facets[n] || {};
         return a.createElement(
           c.a,
-          { marginTop: Ta },
+          { marginTop: Na },
           a.createElement(p, { weight: "medium", size: "3" }, t),
           a.createElement(
-            pe,
+            ge,
             {
               columns: "repeat( auto-fit, minmax( 230px, 1fr ) )",
               gap: "2",
               marginTop: "2",
             },
             l.map((e) =>
-              a.createElement(mt, {
+              a.createElement(vt, {
                 key: e,
                 active: s[e],
                 onActiveChange: (t) =>
                   ((e, t) => {
-                    if (ka.includes(e)) {
+                    if (La.includes(e)) {
                       let e = o;
-                      for (const a of ka) e = gt(e, n, a, t);
+                      for (const a of La) e = bt(e, n, a, t);
                       i(e);
-                    } else i(gt(o, n, e, t));
+                    } else i(bt(o, n, e, t));
                   })(e, t),
                 label: r[e].localized_name,
-                icon: Ga[e],
+                icon: Za[e],
               }),
             ),
           ),
         );
       }
-      function Va(e) {
+      function qa(e) {
         const { apps: t = [], filterBy: n = {}, onSelect: o, loading: i } = e,
-          l = !(0, ha.LT)("sm"),
+          l = !(0, xa.LT)("sm"),
           s = (0, a.useMemo)(
             () =>
               Array.isArray(n)
@@ -5244,22 +5624,22 @@
         if (i)
           for (let e = 0; e < 20; e++)
             m.push(
-              a.createElement(de, { key: e, width: "92px", height: "138px" }),
+              a.createElement(ve, { key: e, width: "92px", height: "138px" }),
             );
         const d = r.iA.logged_in;
         return a.createElement(
-          b,
+          C,
           { direction: "column", marginTop: "2", marginBottom: "2" },
           a.createElement(
             p,
             { weight: "medium", size: "3" },
             d
-              ? nt.Localize("#AdvancedSearch_AppSelect_YourGames")
-              : nt.Localize("#AdvancedSearch_AppSelect_PopularGames"),
+              ? it.Localize("#AdvancedSearch_AppSelect_YourGames")
+              : it.Localize("#AdvancedSearch_AppSelect_PopularGames"),
           ),
           a.createElement(
             "div",
-            { className: (0, _e.A)(at.TruncatingPortraitRow, l && at.Compact) },
+            { className: (0, be.A)(lt.TruncatingPortraitRow, l && lt.Compact) },
             !i &&
               u.map((e) =>
                 a.createElement(
@@ -5293,16 +5673,17 @@
           ),
         );
       }
-      function Ya(e) {
+      function $a(e) {
         return a.createElement(
-          b,
+          C,
           { minHeight: "min(400px, 30vh)", direction: "column" },
           e.children,
         );
       }
-      function Ha(e) {
+      function Qa(e) {
         const t = {
           strSearch: "",
+          bSearchDescriptions: e.bSearchDescriptions,
           filterInGame: {
             app: null,
             facets: {},
@@ -5320,7 +5701,7 @@
         } = e;
         "number" == typeof r &&
           c[r] &&
-          (r === Ca
+          (r === Ta
             ? ((t.bSteamItems = !0), (n = t.filterSteam))
             : (n.app = c[r])),
           "string" == typeof a && (t.strSearch = a);
@@ -5348,10 +5729,10 @@
           "number" == typeof e.unFilterMaxPrice &&
             e.unFilterMaxPrice < e.config.maxPrice &&
             (n.price[1] = e.unFilterMaxPrice),
-          t.bSteamItems && o && o[Ea] && n.facets.Game)
+          t.bSteamItems && o && o[Pa] && n.facets.Game)
         ) {
           const e = Object.keys(n.facets.Game)[0],
-            t = o[Ea].tags;
+            t = o[Pa].tags;
           if (t && e) {
             const a = t[e];
             if (a) {
@@ -5364,17 +5745,17 @@
         }
         return { state: t, config: e.config };
       }
-      function Da(e) {
+      function Xa(e) {
         const { facets: t, state: n, onStateChange: r } = e;
         return a.createElement(
           a.Fragment,
           null,
           t.flatMap((e, o) => [
             a.createElement(
-              ft,
+              Ct,
               { key: `facets_${o}` },
               e.map((e) =>
-                a.createElement(_t, {
+                a.createElement(St, {
                   key: e.strLabel,
                   facet: e,
                   state: n,
@@ -5382,22 +5763,22 @@
                 }),
               ),
               o === t.length - 1 &&
-                a.createElement(Nt, { state: n, onStateChange: r }),
+                a.createElement(Vt, { state: n, onStateChange: r }),
             ),
             o < t.length - 1
               ? a.createElement(x, {
                   color: "dull-6",
                   key: `sep_${o}`,
                   size: "4",
-                  marginTop: Ta,
+                  marginTop: Na,
                 })
               : null,
           ]),
         );
       }
-      function ja(e) {
+      function er(e) {
         return a.createElement(
-          b,
+          C,
           {
             flexGrow: "1",
             radius: "sm",
@@ -5405,49 +5786,49 @@
             align: "center",
             justify: "center",
             marginTop: "2",
-            className: at.NoFilters,
+            className: lt.NoFilters,
           },
           a.createElement(
             p,
-            { align: "center", secondary: !0, as: "div", marginTop: Ta },
+            { align: "center", secondary: !0, as: "div", marginTop: Na },
             e.children,
           ),
         );
       }
-      function Ja(e) {
+      function tr(e) {
         const { appid: t, ...n } = e,
           c = (function (e) {
             return (0, o.I)({
               queryKey: ["marketfilters", e],
-              queryFn: () => Ua(e),
+              queryFn: () => ar(e),
               enabled: !!e,
             });
           })(t);
-        if (c.isLoading) return a.createElement(ar, null);
+        if (c.isLoading) return a.createElement(dr, null);
         if (c.isError || !c.data)
           return a.createElement(
-            ja,
+            er,
             null,
             a.createElement(
               p,
               { size: "4" },
-              nt.Localize("#AdvancedSearch_FacetLoadError"),
+              it.Localize("#AdvancedSearch_FacetLoadError"),
             ),
           );
         const i = (function (e) {
-          return e === Sa && 1 === r.TS.EUNIVERSE ? sa : Ba;
+          return e === Oa && 1 === r.TS.EUNIVERSE ? ga : nr;
         })(t);
         return a.createElement(i, { appid: t, facets: c.data, ...n });
       }
-      function Ba(e) {
+      function nr(e) {
         const { appid: t, facets: n, ...r } = e,
-          o = qa(t, n);
+          o = cr(t, n);
         return 0 === o.length
           ? a.createElement(
               a.Fragment,
               null,
               a.createElement(
-                ja,
+                er,
                 null,
                 a.createElement(
                   p,
@@ -5455,11 +5836,11 @@
                     align: "center",
                     secondary: !0,
                     as: "div",
-                    marginTop: Ta,
+                    marginTop: Na,
                     size: "6",
                     weight: "heavy",
                   },
-                  nt.Localize("#AdvancedSearch_NoFacetsSearch"),
+                  it.Localize("#AdvancedSearch_NoFacetsSearch"),
                 ),
                 a.createElement(
                   p,
@@ -5467,16 +5848,16 @@
                     align: "center",
                     secondary: !0,
                     as: "div",
-                    marginTop: Ta,
+                    marginTop: Na,
                     size: "4",
                   },
-                  nt.Localize("#AdvancedSearch_NoFacets"),
+                  it.Localize("#AdvancedSearch_NoFacets"),
                 ),
               ),
             )
-          : a.createElement(Da, { facets: o, ...r });
+          : a.createElement(Xa, { facets: o, ...r });
       }
-      async function Ua(e) {
+      async function ar(e) {
         const t = await fetch(
           `${r.TS.COMMUNITY_BASE_URL}market/appfilters/${e}`,
         );
@@ -5487,8 +5868,8 @@
           throw new Error(`Loaded malformed market filters for app ${e}`);
         return n.facets;
       }
-      function Za(e = !0) {
-        const { suggestedApps: t } = (0, a.useContext)(Ia);
+      function rr(e = !0) {
+        const { suggestedApps: t } = (0, a.useContext)(Ra);
         return (0, o.I)({
           queryKey: ["marketsuggestedapps"],
           queryFn: async () => {
@@ -5504,17 +5885,17 @@
           initialData: t,
         });
       }
-      const Ka = 2;
-      function qa(e, t) {
+      const or = 2;
+      function cr(e, t) {
         return (0, a.useMemo)(() => {
           if (!t) return [];
-          const n = $a[e];
-          return n ? n(t) : Qa(t);
+          const n = ir[e];
+          return n ? n(t) : lr(t);
         }, [t, e]);
       }
-      const $a = { [Ca]: (e) => Qa(e, 3) };
-      function Qa(e, t) {
-        const n = "number" == typeof t ? t : Ka,
+      const ir = { [Ta]: (e) => lr(e, 3) };
+      function lr(e, t) {
+        const n = "number" == typeof t ? t : or,
           a = [],
           r = [];
         if (!e) return [];
@@ -5522,71 +5903,71 @@
           const o = e[t];
           if (!o.tags) continue;
           const c = Object.keys(o.tags).length < n,
-            i = ht(o, c ? "checkbox" : "select");
+            i = Et(o, c ? "checkbox" : "select");
           c ? r.push(i) : a.push(i);
         }
         return [a, r].filter((e) => e.length > 0);
       }
-      function Xa(e) {
+      function sr(e) {
         const {
             selectedApp: t,
             apps: n,
             onSelectionChange: r,
             size: o = "3",
           } = e,
-          c = Ce({
+          c = Te({
             rgOptions: n,
             selectedValue: t || null,
             onSelectionChange: r,
             filter: (e, t) =>
               t.name.toLocaleLowerCase().includes(e.toLocaleLowerCase()),
-            filterPlaceholder: nt.Localize(
+            filterPlaceholder: it.Localize(
               "#AdvancedSearch_AppSelect_FilterPlaceholder",
             ),
           });
         return a.createElement(
-          xe.Root,
+          Ae.Root,
           { state: c, size: o, radius: "sm" },
           a.createElement(
-            xe.Trigger,
+            Ae.Trigger,
             null,
-            t && a.createElement(er, { app: t, size: o }),
+            t && a.createElement(pr, { app: t, size: o }),
             !t &&
               a.createElement(
-                xe.Placeholder,
+                Ae.Placeholder,
                 { weight: "medium" },
-                nt.Localize("#AdvancedSearch_AppSelect_Placeholder"),
+                it.Localize("#AdvancedSearch_AppSelect_Placeholder"),
               ),
           ),
-          a.createElement(xe.VirtualizedOptions, {
+          a.createElement(Ae.VirtualizedOptions, {
             estimateSize: () => 48,
             items: c.rgFilteredOptions,
             renderItem: (e, n) =>
               a.createElement(
-                xe.VirtualizedOption,
+                Ae.VirtualizedOption,
                 { value: e, key: e.appid, virtualItem: n },
-                a.createElement(er, { app: e, active: e === t, size: o }),
+                a.createElement(pr, { app: e, active: e === t, size: o }),
               ),
           }),
         );
       }
-      function er(e) {
+      function pr(e) {
         const {
           app: { icon: t, name: n },
           active: r,
           size: o,
         } = e;
         return a.createElement(
-          b,
+          C,
           { align: "center", gap: "2" },
-          t && a.createElement(nr, { icon: t, size: o }),
+          t && a.createElement(mr, { icon: t, size: o }),
           a.createElement(p, { color: r ? "accent" : void 0, secondary: r }, n),
         );
       }
-      const tr = {};
-      function nr(e) {
+      const ur = {};
+      function mr(e) {
         const { icon: t, size: n } = e,
-          [r, o] = (0, a.useState)(!!tr[t]);
+          [r, o] = (0, a.useState)(!!ur[t]);
         (0, a.useEffect)(() => {
           let e = !0;
           return (
@@ -5598,8 +5979,8 @@
             }
           );
         }, []),
-          r && (tr[t] = !0);
-        const c = (0, Te.n)(n),
+          r && (ur[t] = !0);
+        const c = (0, Fe.n)(n),
           i = parseInt(c) + 3;
         return a.createElement("img", {
           src: r ? t : "",
@@ -5611,11 +5992,11 @@
           alt: "",
         });
       }
-      function ar() {
+      function dr() {
         return a.createElement(
-          b,
+          C,
           { justify: "center", align: "center", marginTop: "6" },
-          a.createElement(Oe, { size: "4" }),
+          a.createElement(Ge, { size: "4" }),
         );
       }
     },

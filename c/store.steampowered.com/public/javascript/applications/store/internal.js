@@ -5243,6 +5243,7 @@
               label: __webpack_require__,
               onSelect: _,
               ref: _,
+              selected: _,
               ..._
             } = _,
             _ = (0, _.useContext)(_),
@@ -5258,7 +5259,7 @@
               null
             );
           const _ = _ === _.activeIndex,
-            _ = _ === _.selectedIndex;
+            _ = _ === _.selectedIndex || !!_;
           return _.createElement(
             _.Option,
             {

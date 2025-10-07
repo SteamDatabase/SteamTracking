@@ -2696,8 +2696,14 @@
         _ = __webpack_require__("chunkid");
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanSteamID: _, fnGetImageHash: __webpack_require__ } = _;
+        const {
+          clanSteamID: _,
+          fnGetImageHash: __webpack_require__,
+          fnLangHasData: _,
+          fnOnRemoveImage: _,
+        } = _;
         (0, _._)(_.GetAccountID());
         const _ = _.useMemo(() => {
           let _ = new Array();
@@ -2749,6 +2755,18 @@
                 ..._,
               }),
             ),
+          ),
+          _.createElement(
+            _._,
+            {
+              onClick: () => {
+                for (let _ = 0; _ < 31; _++) _(_) && _(_);
+              },
+            },
+            (0, _._)("#Sale_RemoveAll"),
+            _.createElement(_._, {
+              tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
+            }),
           ),
         );
       }
@@ -3529,7 +3547,11 @@
           [_] = (0, _._)(_, {
             include_assets: !0,
           }),
-          _ = 36 == (0, _._)(() => _.GetEventType());
+          [_, _] = (0, _._)(() => [
+            _.GetEventType(),
+            _.BHasTag("vo_marketing_message"),
+          ]),
+          _ = 36 == _;
         let _ = null;
         __webpack_require__ === _.k_Required
           ? (_ = _.createElement(
@@ -3593,28 +3615,29 @@
               : _.createElement(
                   _.Fragment,
                   null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().HighlightBox,
-                    },
+                  Boolean(_) &&
                     _.createElement(
-                      "p",
-                      null,
-                      (0, _._)("#PartnerEvent_MM_ArtworkTip"),
-                    ),
-                    _.createElement(
-                      "p",
-                      null,
+                      "div",
+                      {
+                        className: _().HighlightBox,
+                      },
                       _.createElement(
-                        "a",
-                        {
-                          href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
-                        },
-                        (0, _._)("#PartnerEvent_MM_LearnMore"),
+                        "p",
+                        null,
+                        (0, _._)("#PartnerEvent_MM_ArtworkTip"),
+                      ),
+                      _.createElement(
+                        "p",
+                        null,
+                        _.createElement(
+                          "a",
+                          {
+                            href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+                          },
+                          (0, _._)("#PartnerEvent_MM_LearnMore"),
+                        ),
                       ),
                     ),
-                  ),
                   _.createElement(
                     "p",
                     null,

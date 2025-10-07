@@ -819,19 +819,19 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  inset-inline-end: 0;
   width: 2px;
 }
 ._3xUpb5DWXPFNcHHIcv-9pe.right.GamepadMode,
 .GamepadMode ._3xUpb5DWXPFNcHHIcv-9pe.right {
   width: 3px;
-  right: -3px;
+  inset-inline-end: -3px;
 }
 ._3xUpb5DWXPFNcHHIcv-9pe.bottom {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   height: 2px;
 }
 ._3xUpb5DWXPFNcHHIcv-9pe.bottom.GamepadMode,

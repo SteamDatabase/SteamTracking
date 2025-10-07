@@ -507,13 +507,16 @@ select.gray_bevel {
 	margin-bottom: 18px;
 }
 
-.ProfilePrivacyDropDown
+.ProfilePrivacyHeader .ProfilePrivacyDropDown
 {
-	display: inline-block;
+	display: inline-flex;
+	padding: 0px;
+	width: unset;
 	color: #c6d4df;
 	text-decoration: underline;
 	margin-left: 8px;
 	cursor: pointer;
+
 }
 
 .ProfilePrivacyDropDown:not(.readonly):hover

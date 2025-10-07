@@ -1002,6 +1002,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        HasHorizontalDirection: "vnlCrJZjobtJHaugGSLqP",
         EmoticonBow: "_2LlztGU9T4SNsTD6znahfe",
         EmoticonBow_st0: "Fw2WGmXjh2zUxYfuy3xDn",
         EmoticonBow_st1: "luj0tT8JHriKkK3r7pzqP",
@@ -6361,9 +6362,78 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-      var _,
-        _,
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      new Set([
+        "sc_schinese",
+        "schinese",
+        "tchinese",
+        "japanese",
+        "koreana",
+        "thai",
+        "arabic",
+        "bulgarian",
+        "czech",
+        "danish",
+        "german",
+        "english",
+        "spanish",
+        "latam",
+        "greek",
+        "french",
+        "italian",
+        "indonesian",
+        "hungarian",
+        "dutch",
+        "norwegian",
+        "polish",
+        "portuguese",
+        "brazilian",
+        "romanian",
+        "russian",
+        "finnish",
+        "swedish",
+        "turkish",
+        "vietnamese",
+        "ukrainian",
+      ]);
+      const _ = new Map([
+        ["en", "english"],
+        ["de", "german"],
+        ["fr", "french"],
+        ["it", "italian"],
+        ["ko", "koreana"],
+        ["es-419", "latam"],
+        ["es", "spanish"],
+        ["zh", "schinese"],
+        ["zh-cn", "schinese"],
+        ["zh-tw", "tchinese"],
+        ["ru", "russian"],
+        ["ar", "arabic"],
+        ["th", "thai"],
+        ["ja", "japanese"],
+        ["pt-br", "brazilian"],
+        ["pt", "portuguese"],
+        ["pl", "polish"],
+        ["da", "danish"],
+        ["nl", "dutch"],
+        ["fi", "finnish"],
+        ["nb", "norwegian"],
+        ["no", "norwegian"],
+        ["sv", "swedish"],
+        ["hu", "hungarian"],
+        ["cs", "czech"],
+        ["ro", "romanian"],
+        ["tr", "turkish"],
+        ["bg", "bulgarian"],
+        ["el", "greek"],
+        ["uk", "ukrainian"],
+        ["vn", "vietnamese"],
+        ["id", "indonesian"],
+      ]);
+      const _ = new Map();
+      for (const [module, module_exports] of _.entries())
+        _.set(module_exports, module);
+      var _, _;
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -6418,37 +6488,39 @@
             );
         }
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Minimized = 1)] = "Minimized"),
-          (_[(_.Hidden = 2)] = "Hidden"),
-          (_[(_.TooltipHint = 4)] = "TooltipHint"),
-          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-          (_[(_.Resizable = 16)] = "Resizable"),
-          (_[(_.ScalePosition = 32)] = "ScalePosition"),
-          (_[(_.ScaleSize = 64)] = "ScaleSize"),
-          (_[(_.Maximized = 128)] = "Maximized"),
-          (_[(_.Composited = 256)] = "Composited"),
-          (_[(_.NotFocusable = 512)] = "NotFocusable"),
-          (_[(_.FullScreen = 1024)] = "FullScreen"),
-          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-            "ApplyBrowserScaleToDimensions"),
-          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale"),
-          (_[(_.TransparentParentWindow = 4194304)] =
-            "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-      })(_ || (_ = {})),
+      _.set("sc_schinese", _.get("schinese")),
+        _.set("korean", _.get("koreana")),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Minimized = 1)] = "Minimized"),
+            (_[(_.Hidden = 2)] = "Hidden"),
+            (_[(_.TooltipHint = 4)] = "TooltipHint"),
+            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+            (_[(_.Resizable = 16)] = "Resizable"),
+            (_[(_.ScalePosition = 32)] = "ScalePosition"),
+            (_[(_.ScaleSize = 64)] = "ScaleSize"),
+            (_[(_.Maximized = 128)] = "Maximized"),
+            (_[(_.Composited = 256)] = "Composited"),
+            (_[(_.NotFocusable = 512)] = "NotFocusable"),
+            (_[(_.FullScreen = 1024)] = "FullScreen"),
+            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+              "ApplyBrowserScaleToDimensions"),
+            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+              "IgnoreSteamDisplayScale"),
+            (_[(_.TransparentParentWindow = 4194304)] =
+              "TransparentParentWindow"),
+            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+            (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -6603,10 +6675,12 @@
               __webpack_require__.addEventListener("dragover", this.OnDragOver),
               __webpack_require__.addEventListener("message", this.OnMessage),
               _._.LANGUAGE &&
-                _.document.documentElement.setAttribute(
+                (_.document.documentElement.setAttribute(
                   "lang",
                   (0, _._)() ?? "",
                 ),
+                "arabic" === _._.LANGUAGE &&
+                  _.document.documentElement.setAttribute("dir", "rtl")),
               (this.m_popup = _),
               (this.m_element = _),
               (this.m_renderWhenReady = _),
@@ -7838,6 +7912,7 @@
       class _ {
         key;
         static sm_lastKey = 0;
+        ModalClosedCallback = new _._();
         constructor() {
           this.key = "Modal_" + _.sm_lastKey++;
         }
@@ -7968,6 +8043,7 @@
         RemoveModal(_) {
           let _ = this.m_rgModals.indexOf(_);
           -1 != _ && this.m_rgModals.splice(_, 1),
+            _.ModalClosedCallback.Dispatch(),
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(_) {
@@ -7984,6 +8060,11 @@
             Update: (_) => {
               _.UpdateModal(_);
             },
+            ClosedPromise: new Promise((_) => {
+              const _ = _.ModalClosedCallback.Register(() => {
+                _(), __webpack_require__.Unregister();
+              });
+            }),
           };
           return this.OnModalCountChanged("show"), _;
         }
@@ -8048,6 +8129,7 @@
                 this.m_OnLegacyPopupModalCountChanged.Dispatch(
                   this.m_rgLegacyPopupModals.length,
                 ),
+                _.ModalClosedCallback.Dispatch(),
                 _.fnOnClose && __webpack_require__.fnOnClose();
             },
             _ = new _(
@@ -8072,6 +8154,11 @@
               Update: (_) => {
                 _.UpdateModal(_);
               },
+              ClosedPromise: new Promise((_) => {
+                const _ = _.ModalClosedCallback.Register(() => {
+                  _(), _.Unregister();
+                });
+              }),
             }
           );
         }
@@ -8157,13 +8244,15 @@
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;");
-            let _ = _,
-              {
-                nLeft: _,
-                nTop: _,
-                nOverflow: _,
-                nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+            let _ = _;
+            _.matches(":dir(rtl)") &&
+              ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
+            let {
+              nLeft: _,
+              nTop: _,
+              nOverflow: _,
+              nLateralOverflow: _,
+            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
             if (_ > (_ ?? 10) && !_) {
               const _ = (function (_) {
                   switch (_) {
@@ -8180,7 +8269,7 @@
                     case "overlay-center":
                       return "overlay-center";
                   }
-                })(_ ?? "right"),
+                })(_),
                 {
                   nLeft: _,
                   nTop: __webpack_require__,
@@ -8214,7 +8303,7 @@
                 const _ = _[0] > _[1] ? _ : -_;
                 "left" === _ || "right" === _ ? (_ += _) : (_ += _);
                 return [_, _];
-              })(_, _, _ ?? "right", _, _));
+              })(_, _, _, _, _));
             let _ = null;
             switch (_) {
               case "left":
@@ -13892,7 +13981,7 @@
       function _(_, _) {
         return _.ChildTakeFocus(_);
       }
-      var _, _, _, _, _, _;
+      var _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.TrackingSystemName_String = 1e3)] =
@@ -14266,6 +14355,11 @@
             (_[(_.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
             (_[(_.Standby = 3)] = "Standby"),
             (_[(_.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
+            (_[(_.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
+            (_[(_.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Notification_Shown = 600)] = "Notification_Shown"),
@@ -15530,18 +15624,6 @@
         }
       }
       class _ {
-        type = 0;
-        text = "";
-        tag;
-        args;
-        ConvertMalformedNodeToText() {
-          3 == this.type
-            ? (this.text = "[/" + this.text)
-            : 2 == this.type && (this.text = "[" + this.text),
-            (this.type = 1);
-        }
-      }
-      class _ {
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(_, _) {
@@ -15550,7 +15632,10 @@
         Parse(_, _, __webpack_require__ = !1) {
           const _ = (function (_, _) {
             const _ = [];
-            let _ = new _(),
+            let _ = {
+                type: 0,
+                text: "",
+              },
               _ = !1,
               _ = !1,
               _ = !1;
@@ -15573,20 +15658,19 @@
                     else {
                       const _ =
                           2 == _.type &&
-                          "noparse" == _.text.toLocaleLowerCase(),
+                          "noparse" == _.text?.toLocaleLowerCase(),
                         _ =
                           3 == _.type &&
-                          "noparse" == _.text.toLocaleLowerCase();
+                          "noparse" == _.text?.toLocaleLowerCase();
                       _ || (_ && !_)
-                        ? (_.ConvertMalformedNodeToText(), (_.text += _))
+                        ? ((_ = _(_)), (_.text += _))
                         : _
                           ? (_ = !0)
                           : _ && (_ = !1),
                         (_ = _(_, _)),
                         (_ = !1);
                     }
-                  else
-                    _.ConvertMalformedNodeToText(), (_ = _(_, _, 2)), (_ = !0);
+                  else (_ = _(_, _(_), 2)), (_ = !0);
                   break;
                 case 1:
                   "[" != _ || _
@@ -15597,8 +15681,12 @@
               }
             }
             0 != _.type &&
-              ((2 != _.type && 3 != _.type) || _.ConvertMalformedNodeToText(),
-              __webpack_require__.push(_));
+              (2 == _.type || 3 == _.type
+                ? __webpack_require__.push(_(_))
+                : __webpack_require__.push({
+                    type: _.type,
+                    text: _.text ?? "",
+                  }));
             return _;
           })(_ || "", __webpack_require__);
           return this.Parse_BuildElements(_, _);
@@ -15614,9 +15702,7 @@
           const _ = (_, _) => {
             if (_ && _.node.tag === _.text && _.get(_.node.tag)) {
               const _ = _.get(_.node.tag),
-                _ = _.map((_) => _.node.tag),
                 _ = {
-                  parentTags: _,
                   tagname: _.node.tag,
                   args: _.node.args,
                 },
@@ -15691,13 +15777,14 @@
         }
       }
       function _(_, _, __webpack_require__ = 0) {
-        if (2 == _.type) {
-          let _ = _.text.indexOf("=");
-          const _ = _.text.indexOf(" ");
+        const { type: _, text: _ = "" } = _;
+        if (2 == _) {
+          let _ = _.indexOf("=");
+          const _ = _.indexOf(" ");
+          let _, _;
           if ((-1 != _ && (-1 == _ || _ < _) && (_ = _), _ > 0)) {
-            _.tag = _.text.substr(0, _).toLocaleLowerCase();
-            const _ = _.text.substr(_);
-            _.args = (function (_) {
+            _ = _.substr(0, _).toLocaleLowerCase();
+            _ = (function (_) {
               if (!_ || _.length < 1) return {};
               const _ = {};
               let _ = "",
@@ -15749,12 +15836,34 @@
               }
               0 != _ && (_[_] = _);
               return _;
-            })(_);
-          } else (_.args = {}), (_.tag = _.text.toLocaleLowerCase());
-        }
-        _.push(_);
-        const _ = new _();
-        return (_.type = _), _;
+            })(_.substr(_));
+          } else (_ = {}), (_ = _.toLocaleLowerCase());
+          _.push({
+            type: _,
+            text: _,
+            tag: _,
+            args: _,
+          });
+        } else
+          0 != _ &&
+            _.push({
+              type: _,
+              text: _,
+            });
+        return {
+          type: _,
+          text: "",
+        };
+      }
+      function _(_) {
+        let _ = "";
+        return (
+          3 == _.type ? (_ = "[/") : 2 == _.type && (_ = "["),
+          {
+            type: 1,
+            text: _ + (_.text ?? ""),
+          }
+        );
       }
       class _ extends _ {
         m_renderingLanguage;
@@ -19861,6 +19970,13 @@
           "docimg",
           "meetsteamsessiongroup",
           "meetsteamscheduleview",
+          "center",
+          "c",
+          "expand",
+          "remindme",
+          "calendarevent",
+          "color",
+          "bgcolor",
         ],
         _ = [
           "img",
@@ -19880,6 +19996,10 @@
         return _
           ? _.map((_) => ("*" == _ ? "\\*" : _)).join("|")
           : (_ || (_ = _(_)), _);
+      }
+      function _(_, _ = null, __webpack_require__ = "") {
+        const _ = "\\[\\/?(?:" + _(_) + "){1,}.*?]";
+        return _.replace(new RegExp(_, "gi"), __webpack_require__);
       }
       const _ = {
         bBroadcastEnabled: !1,
@@ -20786,10 +20906,7 @@
         }
         static GenerateSummaryFromText(_, _) {
           return _ && 0 != _.trim().length
-            ? ((_ = (function (_, _ = null, __webpack_require__ = "") {
-                const _ = "\\[\\/?(?:" + _(_) + "){1,}.*?]";
-                return _.replace(new RegExp(_, "gi"), __webpack_require__);
-              })(
+            ? ((_ = _(
                 (_ = (function (_, _ = null, __webpack_require__ = " ") {
                   const _ = new RegExp(
                     "\\[(" + _(_) + ")\\b[^\\]]*\\].*?\\[/\\1\\]",
@@ -20808,7 +20925,10 @@
                   "roomeffect",
                   "sticker",
                 ])),
+                ["p"],
+                " ",
               )),
+              (_ = _(_)),
               (_ = (0, _._)(_)),
               (0, _._)(_, _ || 180))
             : "";
@@ -20907,7 +21027,7 @@
         }
         BHasSaleUpdateLandingPageVanity() {
           return (
-            !this.jsondata.bSaleEnabled &&
+            !!this.jsondata.bSaleEnabled &&
             Boolean(this.jsondata.sale_update_landing_page_vanity_id)
           );
         }
@@ -21489,7 +21609,10 @@
         GetPartnerEventChangeCallback(_) {
           let _ = this.m_mapEventUpdateCallback.get(_);
           return (
-            _ || ((_ = new _._()), this.m_mapEventUpdateCallback.set(_, _)), _
+            _ ||
+              (this.m_mapEventUpdateCallback.set(_, new _._()),
+              (_ = this.m_mapEventUpdateCallback.get(_))),
+            _
           );
         }
         GetClanEventGIDs(_) {
@@ -22111,9 +22234,13 @@
         }
         InsertUniqueEventGID(_, _, _) {
           let _ = this.m_mapClanToGIDs.get(_);
-          _ || ((_ = new Array()), this.m_mapClanToGIDs.set(_, _));
+          _ ||
+            (this.m_mapClanToGIDs.set(_, new Array()),
+            (_ = this.m_mapClanToGIDs.get(_)));
           let _ = this.m_mapAppIDToGIDs.get(_);
-          _ || ((_ = new Array()), this.m_mapAppIDToGIDs.set(_, _)),
+          _ ||
+            (this.m_mapAppIDToGIDs.set(_, new Array()),
+            (_ = this.m_mapAppIDToGIDs.get(_))),
             -1 == _.indexOf(_) && (_.push(_), _.push(_));
         }
         ResetModel() {}
@@ -35925,6 +36052,7 @@
         }),
         _ = (0, _._)("a", {
           bActivateByDefault: !0,
+          bDOMElementFocusByDefault: !1,
         }),
         _ = _.forwardRef(function (_, _) {
           const { href: __webpack_require__ = "#", ..._ } = _;
@@ -38850,6 +38978,13 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_, _, _) {
+        if (_ >= 0 || _ >= 0) {
+          const _ = _.splice(_, 1)[0];
+          _ >= _.length ? (_[_] = _) : _.splice(_, 0, _);
+        }
+        return _;
+      }
       function _(_, _) {
         return _(_, (_) => _ == _);
       }
@@ -38867,6 +39002,7 @@
         );
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -57443,8 +57579,73 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.cdn_path || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  cdn_path: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  encoding: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Trailers_AdaptiveTrailer";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.trailer_name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
+            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -57483,6 +57684,12 @@
                   },
                   microtrailer: {
                     _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  adaptive_trailers: {
+                    _: 6,
                     _: _,
                     _: !0,
                     _: !0,
@@ -58430,7 +58637,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.context || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -58443,6 +58650,14 @@
                   context: {
                     _: 1,
                     _: _,
+                  },
+                  excluded_content_descriptorids: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                 },
               }),
@@ -64919,17 +65134,14 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -65009,6 +65221,8 @@
             avatar_medium_url: _.avatar_medium_url,
             group_name: _.group_name,
             creator_page_bg_url: _.creator_page_bg_url,
+            curator_title: _.curator_title,
+            curator_description: _.curator_description,
             partner_events_enabled: _.partner_events_enabled,
           };
           0 != _.appid && this.m_mapAppIDToClanInfo.set(_.appid, _),
@@ -69355,12 +69569,18 @@
                           cCallsitesToIgnore: _,
                           bIncludeMessageInIdentifier: _,
                         } = _,
-                        _ = _.stack?.split("\n") ?? [];
+                        { message: _, stack: _ } = _,
+                        _ = _?.split("\n") ?? [];
                       let _ = _(_.filter((_) => !!_.match(_))[_]);
-                      _ && (_ = `${_} ${_.message}`);
+                      _ && (_ = `${_} ${_}`);
                       const _ = _.map((_) => {
-                        const _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
-                        if (!_) return _;
+                        let _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
+                        if (
+                          ((_ && 5 == _.length) ||
+                            (_ = _.match(/(.*at )(http.*):(\d+):(\d+)/)),
+                          !_)
+                        )
+                          return _;
                         if (5 === _.length) {
                           const [_, _, _, _, _] = _,
                             _ = parseInt(_),
@@ -70268,6 +70488,7 @@
           _.custom_release_date_message,
         );
       }
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_eItemType;
         m_unID;
@@ -71140,6 +71361,8 @@
         m_Trailer480p;
         m_TrailerMax;
         m_MicroTrailer;
+        m_rgDashTrailers;
+        m_rgHlsTrailer;
         m_strScreenshotMedium;
         m_strScreenshotFull;
         m_bIsAllAges;
@@ -71148,33 +71371,43 @@
             (this.m_nBaseID = _.trailer_base_id()),
             (this.m_eTrailerCategory = _.trailer_category());
           const _ = _.trailer_url_format();
-          _ &&
-            (_.trailer_480p() &&
-              (this.m_Trailer480p = this.ExtractTrailerFormats(
-                _,
-                _.trailer_480p(),
-              )),
-            _.trailer_max() &&
-              (this.m_TrailerMax = this.ExtractTrailerFormats(
-                _,
-                _.trailer_max(),
-              )),
-            _.microtrailer() &&
-              (this.m_MicroTrailer = this.ExtractTrailerFormats(
-                _,
-                _.microtrailer(),
-              )),
-            _.screenshot_medium() &&
-              (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_medium(),
-              )),
-            _.screenshot_full() &&
-              (this.m_strScreenshotFull = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_full(),
-              ))),
-            (this.m_bIsAllAges = _.all_ages() ?? !0);
+          if (
+            (_ &&
+              (_.trailer_480p() &&
+                (this.m_Trailer480p = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_480p(),
+                )),
+              _.trailer_max() &&
+                (this.m_TrailerMax = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_max(),
+                )),
+              _.microtrailer() &&
+                (this.m_MicroTrailer = this.ExtractTrailerFormats(
+                  _,
+                  _.microtrailer(),
+                )),
+              _.screenshot_medium() &&
+                (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_medium(),
+                )),
+              _.screenshot_full() &&
+                (this.m_strScreenshotFull = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_full(),
+                ))),
+            _.adaptive_trailers())
+          ) {
+            this.m_rgDashTrailers = this.ExtractAdaptiveTrailers(
+              _.adaptive_trailers(),
+              "dash",
+            );
+            let _ = this.ExtractAdaptiveTrailers(_.adaptive_trailers(), "hls");
+            _.length > 0 && (this.m_rgHlsTrailer = _[0]);
+          }
+          this.m_bIsAllAges = _.all_ages() ?? !0;
         }
         GetName() {
           return this.m_strTrailerName;
@@ -71190,6 +71423,12 @@
         }
         GetTrailerMax() {
           return this.m_TrailerMax;
+        }
+        GetTrailersDash() {
+          return this.m_rgDashTrailers;
+        }
+        GetTrailerHls() {
+          return this.m_rgHlsTrailer;
         }
         GetMicroTrailer() {
           return this.m_MicroTrailer;
@@ -71212,6 +71451,17 @@
                   (_.strWebMURL = this.ConstructAssetURL(_, _.filename()));
             }),
             _
+          );
+        }
+        ExtractAdaptiveTrailers(_, _) {
+          let _ = `${_}_`,
+            _ = _.filter(
+              (_) => _.encoding() && _.cdn_path() && _.encoding().startsWith(_),
+            ),
+            _ = _.findIndex((_) => _.encoding().endsWith("_av1"));
+          return (
+            _ > 0 && _._(_, _, 0),
+            _.map((_) => this.ConstructAssetURL(_.cdn_path(), ""))
           );
         }
         ConstructScreenshotURL(_, _) {
@@ -72836,7 +73086,9 @@
             _ = _ > 0,
             _ = _ + _ - (_.bOverlapHorizontal ? _ : _) - _,
             _ = _ > 0,
-            _ = (_.bPreferPopLeft || !_) && _;
+            _ = _.bPreferPopLeft;
+          _?.matches(":dir(rtl)") && (_ = !_);
+          let _ = (_ || !_) && _;
           _ ||
             _ ||
             ((_ = _ > _),
@@ -73185,7 +73437,6 @@
       }
       class _ extends _.Component {
         state = {};
-        reactErrorHandler = void 0;
         constructor(_) {
           super(_), (this.state.lastErrorKey = _.errorKey);
         }
@@ -76624,7 +76875,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 157), _((_._ = _));
+      return (_ = 6707), _((_._ = _));
       var _;
     });
     _._();

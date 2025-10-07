@@ -310,79 +310,78 @@
         }
       }
     },
-    49693: (e, t, r) => {
+    95742: (e, t, r) => {
       "use strict";
-      r.d(t, { op: () => o, CS: () => a, vE: () => l, Al: () => i });
+      r.d(t, { Al: () => n, CS: () => i, op: () => s, vE: () => o });
       class n {
-        constructor() {
-          (this.type = 0), (this.text = "");
-        }
-        ConvertMalformedNodeToText() {
-          3 == this.type
-            ? (this.text = "[/" + this.text)
-            : 2 == this.type && (this.text = "[" + this.text),
-            (this.type = 1);
-        }
-      }
-      class i {
         constructor(e, t) {
           (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, r = !1) {
-          const i = (function (e, t) {
-            const r = [];
-            let i = new n(),
-              a = !1,
-              s = !1,
-              o = !1;
-            for (let n = 0; n < e.length; n++) {
-              const l = e[n];
-              switch (i.type) {
+          const n = (function (e, t) {
+            var r, n, i;
+            const a = [];
+            let s = { type: 0, text: "" },
+              o = !1,
+              m = !1,
+              u = !1;
+            for (let i = 0; i < e.length; i++) {
+              const d = e[i];
+              switch (s.type) {
                 case 0:
-                  "[" == l
-                    ? ((i.type = 2), (s = !0))
-                    : ((i.type = 1), "\\" == l && t ? (a = !a) : (i.text += l));
+                  "[" == d
+                    ? ((s.type = 2), (m = !0))
+                    : ((s.type = 1), "\\" == d && t ? (o = !o) : (s.text += d));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == l && s) (i.type = 3), (i.text = ""), (s = !1);
-                  else if ("[" != l || a)
-                    if ("]" != l || a)
-                      "\\" == l && t
-                        ? ((i.text += l), (a = !a), (s = !1))
-                        : ((i.text += l), (a = !1), (s = !1));
+                  if ("/" == d && m) (s.type = 3), (s.text = ""), (m = !1);
+                  else if ("[" != d || o)
+                    if ("]" != d || o)
+                      "\\" == d && t
+                        ? ((s.text += d), (o = !o), (m = !1))
+                        : ((s.text += d), (o = !1), (m = !1));
                     else {
                       const e =
-                          2 == i.type &&
-                          "noparse" == i.text.toLocaleLowerCase(),
+                          2 == s.type &&
+                          "noparse" ==
+                            (null === (r = s.text) || void 0 === r
+                              ? void 0
+                              : r.toLocaleLowerCase()),
                         t =
-                          3 == i.type &&
-                          "noparse" == i.text.toLocaleLowerCase();
-                      s || (o && !t)
-                        ? (i.ConvertMalformedNodeToText(), (i.text += l))
+                          3 == s.type &&
+                          "noparse" ==
+                            (null === (n = s.text) || void 0 === n
+                              ? void 0
+                              : n.toLocaleLowerCase());
+                      m || (u && !t)
+                        ? ((s = c(s)), (s.text += d))
                         : e
-                          ? (o = !0)
-                          : t && (o = !1),
-                        (i = c(r, i)),
-                        (s = !1);
+                          ? (u = !0)
+                          : t && (u = !1),
+                        (s = l(a, s)),
+                        (m = !1);
                     }
-                  else
-                    i.ConvertMalformedNodeToText(), (i = c(r, i, 2)), (s = !0);
+                  else (s = l(a, c(s), 2)), (m = !0);
                   break;
                 case 1:
-                  "[" != l || a
-                    ? "\\" == l && t
-                      ? (a && (i.text += l), (a = !a))
-                      : ((i.text += l), (a = !1))
-                    : ((i = c(r, i, 2)), (s = !0));
+                  "[" != d || o
+                    ? "\\" == d && t
+                      ? (o && (s.text += d), (o = !o))
+                      : ((s.text += d), (o = !1))
+                    : ((s = l(a, s, 2)), (m = !0));
               }
             }
-            0 != i.type &&
-              ((2 != i.type && 3 != i.type) || i.ConvertMalformedNodeToText(),
-              r.push(i));
-            return r;
+            0 != s.type &&
+              (2 == s.type || 3 == s.type
+                ? a.push(c(s))
+                : a.push({
+                    type: s.type,
+                    text: null !== (i = s.text) && void 0 !== i ? i : "",
+                  }));
+            return a;
           })(e || "", r);
-          return this.Parse_BuildElements(i, t);
+          return this.Parse_BuildElements(n, t);
         }
         Parse_BuildElements(e, t) {
           let r = this.m_fnAccumulatorFactory(void 0);
@@ -400,23 +399,22 @@
             };
           let o = !1,
             l = !0;
-          const c = (e, i) => {
-            if (e && e.node.tag === i.text && a.get(e.node.tag)) {
-              const i = a.get(e.node.tag),
-                s = n.map((e) => e.node.tag),
-                c = { parentTags: s, tagname: e.node.tag, args: e.node.args },
-                m = t(i.Constructor, c, ...r.GetElements());
+          const c = (e, n) => {
+            if (e && e.node.tag === n.text && a.get(e.node.tag)) {
+              const n = a.get(e.node.tag),
+                i = { tagname: e.node.tag, args: e.node.args },
+                s = t(n.Constructor, i, ...r.GetElements());
               (r = e.accumulator),
-                Array.isArray(m)
-                  ? m.forEach((e) => r.AppendNode(e))
-                  : r.AppendNode(m),
-                (o = !!i.skipFollowingNewline),
+                Array.isArray(s)
+                  ? s.forEach((e) => r.AppendNode(e))
+                  : r.AppendNode(s),
+                (o = !!n.skipFollowingNewline),
                 (l = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 r.GetElements().forEach((e) => t.AppendNode(e)),
-                t.AppendText("[/" + i.text + "]", !1),
+                t.AppendText("[/" + n.text + "]", !1),
                 (r = t),
                 (l = e.bWrapTextForCopying);
             }
@@ -468,32 +466,33 @@
           return r.GetElements();
         }
       }
-      function a(e, t) {
+      function i(e, t) {
         let r = "[" + e;
-        (null == t ? void 0 : t[""]) && (r += `=${s("" + t[""])}`);
+        (null == t ? void 0 : t[""]) && (r += `=${a("" + t[""])}`);
         for (const e in t)
           "" !== e &&
-            (r += ` ${((n = e), n.replace(/(\\| |\])/g, "\\$1"))}=${s("" + t[e])}`);
+            (r += ` ${((n = e), n.replace(/(\\| |\])/g, "\\$1"))}=${a("" + t[e])}`);
         var n;
         return (r += "]"), r;
       }
-      function s(e) {
+      function a(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
       }
-      function o(e) {
+      function s(e) {
         return `[/${e}]`;
       }
-      function l(e) {
+      function o(e) {
         return e.replace(/(\\|\[)/g, "\\$1");
       }
-      function c(e, t, r = 0) {
-        if (2 == t.type) {
-          let e = t.text.indexOf("=");
-          const r = t.text.indexOf(" ");
-          if ((-1 != r && (-1 == e || r < e) && (e = r), e > 0)) {
-            t.tag = t.text.substr(0, e).toLocaleLowerCase();
-            const r = t.text.substr(e);
-            t.args = (function (e) {
+      function l(e, t, r = 0) {
+        const { type: n, text: i = "" } = t;
+        if (2 == n) {
+          let t = i.indexOf("=");
+          const r = i.indexOf(" ");
+          let a, s;
+          if ((-1 != r && (-1 == t || r < t) && (t = r), t > 0)) {
+            a = i.substr(0, t).toLocaleLowerCase();
+            s = (function (e) {
               if (!e || e.length < 1) return {};
               const t = {};
               let r = "",
@@ -545,12 +544,22 @@
               }
               0 != i && (t[r] = n);
               return t;
-            })(r);
-          } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
-        }
-        e.push(t);
-        const i = new n();
-        return (i.type = r), i;
+            })(i.substr(t));
+          } else (s = {}), (a = i.toLocaleLowerCase());
+          e.push({ type: n, text: i, tag: a, args: s });
+        } else 0 != n && e.push({ type: n, text: i });
+        return { type: r, text: "" };
+      }
+      function c(e) {
+        var t;
+        let r = "";
+        return (
+          3 == e.type ? (r = "[/") : 2 == e.type && (r = "["),
+          {
+            type: 1,
+            text: r + (null !== (t = e.text) && void 0 !== t ? t : ""),
+          }
+        );
       }
     },
     52967: (e, t, r) => {
@@ -559,7 +568,7 @@
       var n = r(22837),
         i = r(90626),
         a = r(42780),
-        s = r(49693);
+        s = r(95742);
       class o extends s.Al {
         constructor(e, t, r) {
           super(e, null != t ? t : () => new a.R8()),
@@ -597,7 +606,7 @@
     58222: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $P: () => w,
+        $P: () => A,
         Fw: () => l,
         cU: () => u,
         fp: () => E,
@@ -1584,75 +1593,38 @@
           return "CQuest_VirtualItemRewardDefinition_Response";
         }
       }
-      class w extends i.Message {
+      class A extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            w.prototype.eventid || s.Sg(w.M()),
+            A.prototype.eventid || s.Sg(A.M()),
             i.Message.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   eventid: { n: 1, br: s.qM.readEnum, bw: s.gp.writeEnum },
                   itemsdefs: { n: 2, c: B, r: !0, q: !0 },
                   action: { n: 3, br: s.qM.readEnum, bw: s.gp.writeEnum },
                 },
               }),
-            w.sm_m
+            A.sm_m
           );
         }
         static MBF() {
-          return w.sm_mbf || (w.sm_mbf = s.w0(w.M())), w.sm_mbf;
-        }
-        toObject(e = !1) {
-          return w.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.BT(w.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.Uq(w.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (a().BinaryReader)(e),
-            r = new w();
-          return w.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.zj(w.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.i0(w.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CQuest_SetVirtualItemRewardDefinition_Request";
-        }
-      }
-      class A extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), i.Message.initialize(this, e, 0, -1, void 0, null);
+          return A.sm_mbf || (A.sm_mbf = s.w0(A.M())), A.sm_mbf;
         }
         toObject(e = !1) {
           return A.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return s.BT(A.M(), e, t);
         }
         static fromObject(e) {
-          return new A();
+          return s.Uq(A.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
@@ -1660,16 +1632,53 @@
           return A.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return s.zj(A.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
           return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          s.i0(A.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CQuest_SetVirtualItemRewardDefinition_Request";
+        }
+      }
+      class w extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return w.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new w();
+        }
+        static deserializeBinary(e) {
+          let t = new (a().BinaryReader)(e),
+            r = new w();
+          return w.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CQuest_SetVirtualItemRewardDefinition_Response";
@@ -1719,8 +1728,8 @@
           (e.SetVirtualItemRewardDefinition = function (e, t) {
             return e.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, o.I8)(w, t),
-              A,
+              (0, o.I8)(A, t),
+              w,
               { ePrivilege: 4 },
             );
           });
@@ -1745,7 +1754,7 @@
     },
     61949: (e, t, r) => {
       "use strict";
-      r.d(t, { Ey: () => v, Rp: () => A });
+      r.d(t, { Ey: () => v, Rp: () => w });
       var n,
         i = r(80613),
         a = r.n(i),
@@ -2170,7 +2179,7 @@
       }
       var B = r(88942),
         b = r(23809);
-      function w() {
+      function A() {
         const e = (0, b.KV)();
         return (0, B.I)(
           (function (e) {
@@ -2178,8 +2187,8 @@
           })(e),
         );
       }
-      function A(e) {
-        const { data: t } = w();
+      function w(e) {
+        const { data: t } = A();
         return t
           ? (function (e, t) {
               var r, n, i;
@@ -2214,7 +2223,7 @@
           : void 0;
       }
       function v() {
-        const { data: e } = w();
+        const { data: e } = A();
         return e
           ? !(function (e) {
               switch (e.preference_state) {
@@ -2239,7 +2248,7 @@
         Sz: () => D,
         Tu: () => N,
         UT: () => V,
-        W4: () => A,
+        W4: () => w,
         ZS: () => P,
         Zb: () => k,
         _J: () => U,
@@ -2267,8 +2276,8 @@
         S = r(61336),
         B = r(30470),
         b = r(12611),
-        w = r(90622);
-      const A = new Map([
+        A = r(90622);
+      const w = new Map([
           [
             "b",
             {
@@ -2426,12 +2435,12 @@
             "url",
             {
               Constructor: function (e) {
-                let t = (0, w.J)(I(e.args));
+                let t = (0, A.J)(I(e.args));
                 if (!t) {
                   const r = e.children;
                   "string" == typeof r &&
                     (r.startsWith("http://") || r.startsWith("https://")) &&
-                    (t = (0, w.J)(r));
+                    (t = (0, A.J)(r));
                 }
                 const r =
                     "button" == I(e.args, "style") ? i().LinkButton : null,
@@ -2705,13 +2714,13 @@
                   S = ("0" + h.getUTCHours()).slice(-2),
                   B = ("0" + h.getUTCMinutes()).slice(-2),
                   b = `${E}${f}${y}T${S}${B}00Z`,
-                  w = new Date(u),
-                  A = w.getUTCFullYear(),
-                  v = ("0" + (w.getUTCMonth() + 1)).slice(-2),
-                  C = ("0" + w.getUTCDate()).slice(-2),
-                  M = ("0" + w.getUTCHours()).slice(-2),
-                  T = ("0" + w.getUTCMinutes()).slice(-2),
-                  N = `${A}${v}${C}T${M}${T}00Z`;
+                  A = new Date(u),
+                  w = A.getUTCFullYear(),
+                  v = ("0" + (A.getUTCMonth() + 1)).slice(-2),
+                  C = ("0" + A.getUTCDate()).slice(-2),
+                  M = ("0" + A.getUTCHours()).slice(-2),
+                  T = ("0" + A.getUTCMinutes()).slice(-2),
+                  N = `${w}${v}${C}T${M}${T}00Z`;
                 let R;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
@@ -2739,7 +2748,7 @@
                       r = {
                         event_name: "addcalendarevent",
                         tsStart: h.getTime(),
-                        tsEnd: w.getTime(),
+                        tsEnd: A.getTime(),
                         strTitle: o,
                         strNotes: d,
                         strLocation: p,
@@ -2904,7 +2913,7 @@
         return void 0 === t ? e[""] : e[t];
       }
       function N(e, t) {
-        return (r) => e({ ...r, className: (0, _.A)(r.className, t) });
+        return (r) => e({ ...r, className: t });
       }
       function R(e, t, r) {
         let n = I(t.args, "id");
@@ -3778,7 +3787,7 @@
           [_, y] = (0, n.useState)(!r),
           [S, B] = (0, n.useState)(!1),
           b = (0, s.m)("YouTubeInlineSnippet"),
-          [w, A] = (0, n.useState)({
+          [A, w] = (0, n.useState)({
             title: (0, c.we)("#Loading"),
             description: "",
             videoid: t,
@@ -3788,7 +3797,7 @@
           _ &&
             i.R.LoadYouTubeDynamicData([t], b)
               .then((e) => {
-                !b.token.reason && e.length > 0 && (A(e[0]), B(!0));
+                !b.token.reason && e.length > 0 && (w(e[0]), B(!0));
               })
               .catch((e) =>
                 console.error(
@@ -3797,9 +3806,9 @@
               );
         }, [_, b, t]);
         if (((0, d.VC)(r && !0), _)) {
-          const e = w.title,
-            r = w.views,
-            i = w.description;
+          const e = A.title,
+            r = A.views,
+            i = A.description;
           return n.createElement(
             "div",
             { className: g().DynamicLinkBox, onClick: () => y(!1) },
@@ -4120,7 +4129,7 @@
           )
         );
       }
-      function w(e) {
+      function A(e) {
         const { title: t, onFilterChange: r, filter: n, onSubmit: i, ...a } = e;
         return s.createElement(
           s.Fragment,
@@ -4133,7 +4142,7 @@
           s.createElement(C, { value: n, onChange: r, onSubmit: i }),
         );
       }
-      function A(e) {
+      function w(e) {
         const { onFilterChange: t, filter: r, sections: n, title: i } = e;
         return s.createElement(
           s.Fragment,
@@ -4538,7 +4547,7 @@
                         ),
                   ),
               }),
-            s.createElement(A, {
+            s.createElement(w, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: i,
@@ -4555,7 +4564,7 @@
             { filter: n } = this.state,
             i = !n && r ? e.GetFlairListByGroupID(r) : e.emoticon_list,
             a = o.pN.FilterEmoticons(i, n).slice(0, 1e3);
-          return s.createElement(w, {
+          return s.createElement(A, {
             title: (0, u.we)("#AddonPicker_Emoticons"),
             items: a,
             onItemSelect: t,
@@ -4610,7 +4619,7 @@
           const { store: e, onItemSelect: t } = this.props,
             { filter: r } = this.state,
             n = o.pN.FilterStickers(e.GetStickerList(), r);
-          return s.createElement(w, {
+          return s.createElement(A, {
             title: (0, u.we)("#EmoticonPicker_StickerHeading"),
             items: n,
             onItemSelect: t,
@@ -4659,7 +4668,7 @@
           const { store: e, effectSettings: t, onItemSelect: r } = this.props,
             { filter: n } = this.state,
             i = e.GetEffectList().filter(({ name: e }) => e.indexOf(n) > -1);
-          return s.createElement(w, {
+          return s.createElement(A, {
             title: (0, u.we)("#EmoticonPicker_EffectHeading"),
             items: i,
             onItemSelect: r,
@@ -4729,7 +4738,7 @@
                         ),
                   ),
               }),
-            s.createElement(A, {
+            s.createElement(w, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: [
@@ -4762,7 +4771,7 @@
         render() {
           const { store: e, onItemSelect: t, flairGroupID: r } = this.props,
             { filter: n } = this.state;
-          return s.createElement(A, {
+          return s.createElement(w, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
             sections: [
@@ -5146,8 +5155,8 @@
         S = r(738),
         B = r(12155),
         b = r(22797),
-        w = r(32754),
-        A = r(68797),
+        A = r(32754),
+        w = r(68797),
         v = r(52038),
         C = r(61859),
         M = r(73745),
@@ -5177,7 +5186,7 @@
               .catch(
                 (e) => (
                   console.error(
-                    "EventReminderWidget load fail: " + (0, A.H)(e).strErrorMsg,
+                    "EventReminderWidget load fail: " + (0, w.H)(e).strErrorMsg,
                   ),
                   2
                 ),
@@ -5376,7 +5385,7 @@
                           : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
                       ),
                     },
-                    (0, A.H)(e).strErrorMsg,
+                    (0, w.H)(e).strErrorMsg,
                   ),
                   window,
                 );
@@ -5473,7 +5482,7 @@
               "div",
               { className: (0, v.A)(P.ReminderOption, !U && P.Unverified) },
               s.createElement(
-                w.he,
+                A.he,
                 {
                   className: P.CheckboxWrapper,
                   bTopmost: !0,
@@ -5515,7 +5524,7 @@
               "div",
               { className: (0, v.A)(P.ReminderOption, !O && P.Unverified) },
               s.createElement(
-                w.he,
+                A.he,
                 {
                   className: P.CheckboxWrapper,
                   bTopmost: !0,

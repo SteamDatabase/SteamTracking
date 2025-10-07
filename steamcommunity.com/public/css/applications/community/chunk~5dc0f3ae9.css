@@ -2075,7 +2075,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   flex-direction: column;
   flex-basis: 50%;
 }
-@media screen and (max-width: 910px) {
+@container widget-container (width < 850px) {
   ._2asUTzZuAkj9cDRKsLvwRE {
     flex-basis: 100%;
   }
@@ -2351,7 +2351,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   border-bottom-right-radius: unset;
 }
 ._2s-O5T3qJJYR2AUq4b9jIN ._2_KY_e11FV0ftXR2_7TMmP {
-  height: -webkit-fill-available;
+  height: min-content;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -2470,7 +2470,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   font-weight: 500;
   line-height: 30px;
   padding: 4px 8px;
-  height: -webkit-fill-available;
+  height: min-content;
   box-sizing: border-box;
   color: #beee11;
   display: flex;
@@ -2875,11 +2875,23 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #000;
-  padding: 0px 5px 0px 12px;
+  background: radial-gradient(ellipse at top left, #6b707b99, #444a5566);
+  padding: 0px 0px 0px 12px;
+}
+._2erfWpFrn1tZTPEbq97SuW .ImpressionTrackedElement a {
+  display: block;
+  margin: 2px;
+}
+._2erfWpFrn1tZTPEbq97SuW .ImpressionTrackedElement img {
+  display: block;
+  box-shadow: unset;
 }
 ._2erfWpFrn1tZTPEbq97SuW .ImpressionTrackedElement ._3FCPPT5eoSXF0nNcICVdP6 {
   margin-right: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 11px;
 }
 ._2zssEuiPfY5YdQlnihDfVD {
   background-image: radial-gradient(
@@ -3232,6 +3244,7 @@ html.touch
 }
 .gASJ2lL_xmVNuZkWGvrWg {
   margin-bottom: 4px;
+  position: relative;
 }
 .gASJ2lL_xmVNuZkWGvrWg:hover {
   z-index: 1;
@@ -3828,6 +3841,7 @@ html.touch
 .jQ5GanUKBEe7hhgCh6b5z ._1NM531LjOd5QmDktUetCOm {
   position: relative;
   height: calc(100% - 16px);
+  max-width: fit-content;
   overflow: hidden;
   white-space: nowrap;
   display: flex;
@@ -4122,6 +4136,7 @@ html.touch
 }
 ._3Qt9S4lxTBuJqoY2PidC5h svg {
   height: 100%;
+  width: 26px;
 }
 ._3Qt9S4lxTBuJqoY2PidC5h svg path {
   fill: #beee11;

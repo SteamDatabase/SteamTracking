@@ -4760,6 +4760,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = -1;
@@ -4848,6 +4849,7 @@
                 _.update_event_gid,
                 !0,
               ),
+              _ = (0, _._)(_.update_event_clan_accountid, _.update_event_gid),
               _ = _?.visibility_state == _._.k_EEventStateVisible,
               _ = (0, _._)(_, _._.k_eCommunityEdit, "allowRelative");
             if (!_) return;
@@ -4859,17 +4861,48 @@
                 : (0, _._)(
                     "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_StatusNotLive",
                   );
-            return _.createElement(_._, {
-              complete: _,
-              label: (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
-              ),
-              status: _,
-              actionStatus: (0, _._)(
-                "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
-              ),
-              actionUrl: _,
-            });
+            const _ =
+                _?.oPrivateData?.jsonData
+                  ?.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
+              _ = Boolean(_);
+            let _ = _
+              ? (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_Created",
+                )
+              : (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ReviewNotSubmitted",
+                );
+            return _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_._, {
+                complete: _,
+                label: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status",
+                ),
+                status: _,
+                actionStatus: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Event_ViewButton",
+                ),
+                actionUrl: _,
+              }),
+              _.createElement(_._, {
+                complete: _,
+                label: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_Status",
+                ),
+                tooltip: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ttip",
+                ),
+                status: _,
+                actionStatus: (0, _._)(
+                  "#Dashboard_UpcomingEvents_Events_MarketingMessage_Ticket_ViewButton",
+                ),
+                actionUrl: _
+                  ? `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${_}`
+                  : void 0,
+              }),
+            );
           })(_);
         return _.createElement(
           _._,

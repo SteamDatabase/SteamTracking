@@ -2796,9 +2796,9 @@
             _.onClick && _.onClick(_);
         }
         render() {
-          const _ =
-            this.props.tabs.find((_) => _.key === this.state.activeTab) ||
-            this.props.tabs[0];
+          const _ = this.props.tabs.filter((_) => !_.hidden);
+          if (!_.length) return null;
+          const _ = _.find((_) => _.key === this.state.activeTab) || _[0];
           return _.createElement(
             _.Fragment,
             null,
@@ -2810,7 +2810,7 @@
                   this.props.classNameCtn,
                 ),
               },
-              this.props.tabs.map((_) =>
+              _.map((_) =>
                 _.createElement(_, {
                   key: _.key,
                   tab: _,
@@ -2854,50 +2854,48 @@
             classNameTab: _,
             active: _,
           } = _;
-          return _.hidden
-            ? null
-            : _.createElement(
-                _._,
-                {
-                  condition: Boolean(_.statusToolTip || _.tooltip),
-                  wrap: (_) =>
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: _.statusToolTip || _.tooltip,
-                      },
-                      _,
-                    ),
-                },
+          return _.createElement(
+            _._,
+            {
+              condition: Boolean(_.statusToolTip || _.tooltip),
+              wrap: (_) =>
                 _.createElement(
                   _._,
                   {
-                    className: (0, _._)(
-                      _().GraphicalAssetsTab,
-                      _ && _().Active,
-                      _ && "ActiveTab",
-                      _,
-                    ),
-                    onActivate: () => __webpack_require__(_),
+                    toolTipContent: _.statusToolTip || _.tooltip,
                   },
-                  Boolean(_.vo_warning) &&
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: _.vo_warning,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().VOWarning,
-                        },
-                        (0, _._)("#EventEditor_VOWarning"),
-                      ),
-                    ),
-                  _.status,
-                  _.name,
+                  _,
                 ),
-              );
+            },
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(
+                  _().GraphicalAssetsTab,
+                  _ && _().Active,
+                  _ && "ActiveTab",
+                  _,
+                ),
+                onActivate: () => __webpack_require__(_),
+              },
+              Boolean(_.vo_warning) &&
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: _.vo_warning,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().VOWarning,
+                    },
+                    (0, _._)("#EventEditor_VOWarning"),
+                  ),
+                ),
+              _.status,
+              _.name,
+            ),
+          );
         }),
         _ = (0, _._)(_);
     },

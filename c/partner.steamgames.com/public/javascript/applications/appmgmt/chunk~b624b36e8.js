@@ -1484,6 +1484,7 @@
         m_strCDNAuthURLParameters = null;
         m_bTimeoutAfterFailedDownload = !0;
         m_bAlwaysStartWithSubtitles = !1;
+        m_bMuteOnAutoplayBlocked = !1;
         m_schUpdateMPD = new _._();
         m_xhrUpdateMPD;
         m_mpd;
@@ -1544,6 +1545,9 @@
         }
         SetAlwaysStartWithSubtitles(_) {
           this.m_bAlwaysStartWithSubtitles = _;
+        }
+        SetMuteOnAutoplayBlocked(_) {
+          this.m_bMuteOnAutoplayBlocked = _;
         }
         async PlayMPD(_, _, _) {
           (_ = Array.isArray(_) ? _ : [_]),
@@ -2075,6 +2079,7 @@
           this.m_stats.LogVideoOnCanPlay();
         }
         GetCurrentPlayTime() {
+          if (!this.m_elVideo) return 0;
           if (this.m_seekingToTime) {
             if (
               !this.m_bPlaybackStarted &&
@@ -2234,7 +2239,8 @@
             this.DispatchEvent("valve-userpausechange");
         }
         Play() {
-          this.SetUserPlayChoice(!0), this.Seek(this.GetCurrentPlayTime());
+          this.m_elVideo &&
+            (this.SetUserPlayChoice(!0), this.Seek(this.GetCurrentPlayTime()));
         }
         Pause() {
           (this.m_bUserLiveEdgeChoice = !1),
@@ -2271,12 +2277,8 @@
           } catch (_) {
             (_ = _), (0, _._)("Failed to play video", _);
           }
-          if (
-            _ &&
-            "NotAllowedError" == _.name &&
-            !this.m_elVideo.muted &&
-            this.BHasTimedText()
-          ) {
+          let _ = this.BHasTimedText() || this.m_bMuteOnAutoplayBlocked;
+          if (_ && "NotAllowedError" == _.name && !this.m_elVideo.muted && _) {
             (0, _._)("Trying to play again, this time muted with subtitles"),
               (_ = void 0),
               (this.m_elVideo.muted = !0),

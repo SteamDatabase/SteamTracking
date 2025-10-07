@@ -468,6 +468,7 @@
         HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
         HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
@@ -10133,6 +10134,103 @@
           fnAcceptProposal: _.Get().AcceptProposal,
         };
       }
+      (0, _._)([_._], _.prototype, "LoadMoreProposal", null),
+        (0, _._)([_._], _.prototype, "RejectProposal", null),
+        (0, _._)([_._], _.prototype, "AcceptProposal", null),
+        (function (_) {
+          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
+            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
+            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
+            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
+            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
+            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
+            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
+            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
+            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
+            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
+            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
+            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
+            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
+            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
+            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
+            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
+            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
+            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
+            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
+            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
+            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
+            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
+            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
+            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
+            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
+            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
+            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
+            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
+            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
+            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
+            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
+            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
+            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
+            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
+            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
+            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
+            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
+            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
+            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
+            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
+            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
+            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
+            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
+            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
+            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
+            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
+            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
+            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
+            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
+        })(_ || (_ = {}));
+      const _ = [_.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS];
+      function _() {
+        return [
+          _.k_ECurrencyCodeUSD,
+          _.k_ECurrencyCodeGBP,
+          _.k_ECurrencyCodeEUR,
+          _.k_ECurrencyCodeCHF,
+          _.k_ECurrencyCodeRUB,
+          _.k_ECurrencyCodePLN,
+          _.k_ECurrencyCodeBRL,
+          _.k_ECurrencyCodeJPY,
+          _.k_ECurrencyCodeNOK,
+          _.k_ECurrencyCodeIDR,
+          _.k_ECurrencyCodeMYR,
+          _.k_ECurrencyCodePHP,
+          _.k_ECurrencyCodeSGD,
+          _.k_ECurrencyCodeTHB,
+          _.k_ECurrencyCodeVND,
+          _.k_ECurrencyCodeKRW,
+          _.k_ECurrencyCodeUAH,
+          _.k_ECurrencyCodeMXN,
+          _.k_ECurrencyCodeCAD,
+          _.k_ECurrencyCodeAUD,
+          _.k_ECurrencyCodeNZD,
+          _.k_ECurrencyCodeCNY,
+          _.k_ECurrencyCodeINR,
+          _.k_ECurrencyCodeCLP,
+          _.k_ECurrencyCodePEN,
+          _.k_ECurrencyCodeCOP,
+          _.k_ECurrencyCodeZAR,
+          _.k_ECurrencyCodeHKD,
+          _.k_ECurrencyCodeTWD,
+          _.k_ECurrencyCodeSAR,
+          _.k_ECurrencyCodeAED,
+          _.k_ECurrencyCodeILS,
+          _.k_ECurrencyCodeKZT,
+          _.k_ECurrencyCodeKWD,
+          _.k_ECurrencyCodeQAR,
+          _.k_ECurrencyCodeCRC,
+          _.k_ECurrencyCodeUYU,
+        ];
+      }
+      var _;
       function _(_) {
         switch (_) {
           case _.k_ECurrencyCodeGBP:
@@ -10541,124 +10639,6 @@
           })(_.toUpperCase()),
         )} (${_})`;
       }
-      (0, _._)([_._], _.prototype, "LoadMoreProposal", null),
-        (0, _._)([_._], _.prototype, "RejectProposal", null),
-        (0, _._)([_._], _.prototype, "AcceptProposal", null),
-        (function (_) {
-          (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
-            (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
-            (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
-            (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
-            (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
-            (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
-            (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
-            (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
-            (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
-            (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
-            (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
-            (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
-            (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
-            (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
-            (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
-            (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
-            (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
-            (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
-            (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
-            (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
-            (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
-            (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
-            (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
-            (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
-            (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
-            (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
-            (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
-            (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
-            (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
-            (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
-            (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
-            (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
-            (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
-            (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
-            (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
-            (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
-            (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
-            (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
-            (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
-            (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
-            (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
-            (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
-            (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
-            (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
-            (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
-            (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
-            (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
-            (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
-            (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
-        })(_ || (_ = {}));
-      const _ = [_.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS],
-        _ = [
-          _.k_ECurrencyCodeUSD,
-          _.k_ECurrencyCodeGBP,
-          _.k_ECurrencyCodeEUR,
-          _.k_ECurrencyCodeCHF,
-          _.k_ECurrencyCodeRUB,
-          _.k_ECurrencyCodePLN,
-          _.k_ECurrencyCodeBRL,
-          _.k_ECurrencyCodeJPY,
-          _.k_ECurrencyCodeNOK,
-          _.k_ECurrencyCodeIDR,
-          _.k_ECurrencyCodeMYR,
-          _.k_ECurrencyCodePHP,
-          _.k_ECurrencyCodeSGD,
-          _.k_ECurrencyCodeTHB,
-          _.k_ECurrencyCodeVND,
-          _.k_ECurrencyCodeKRW,
-          _.k_ECurrencyCodeUAH,
-          _.k_ECurrencyCodeMXN,
-          _.k_ECurrencyCodeCAD,
-          _.k_ECurrencyCodeAUD,
-          _.k_ECurrencyCodeNZD,
-          _.k_ECurrencyCodeCNY,
-          _.k_ECurrencyCodeINR,
-          _.k_ECurrencyCodeCLP,
-          _.k_ECurrencyCodePEN,
-          _.k_ECurrencyCodeCOP,
-          _.k_ECurrencyCodeZAR,
-          _.k_ECurrencyCodeHKD,
-          _.k_ECurrencyCodeTWD,
-          _.k_ECurrencyCodeSAR,
-          _.k_ECurrencyCodeAED,
-          _.k_ECurrencyCodeILS,
-          _.k_ECurrencyCodeKZT,
-          _.k_ECurrencyCodeKWD,
-          _.k_ECurrencyCodeQAR,
-          _.k_ECurrencyCodeCRC,
-          _.k_ECurrencyCodeUYU,
-        ],
-        _ = new Set(_);
-      _.k_ECurrencyCodeSEK,
-        _.k_ECurrencyCodeBGN,
-        _.k_ECurrencyCodeHRK,
-        _.k_ECurrencyCodeCZK,
-        _.k_ECurrencyCodeDKK,
-        _.k_ECurrencyCodeHUF,
-        _.k_ECurrencyCodeRON;
-      var _;
-      !(function (_) {
-        (_[(_.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
-          (_[(_.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
-          (_[(_.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
-          (_[(_.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
-          (_[(_.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
-          (_[(_.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
-      })(_ || (_ = {}));
-      const _ = [
-          _.k_ERegionCodeCIS,
-          _.k_ERegionCodeSAsia,
-          _.k_ERegionCodeLATAM,
-          _.k_ERegionCodeMENA,
-        ],
-        _ = new Set(_);
       function _(_) {
         switch (_) {
           case _.k_ERegionCodeCIS:
@@ -10715,6 +10695,30 @@
             return "Invalid Region";
         }
       }
+      !(function (_) {
+        (_[(_.k_ERegionCodeInvalid = 0)] = "k_ERegionCodeInvalid"),
+          (_[(_.k_ERegionCodeCIS = 1)] = "k_ERegionCodeCIS"),
+          (_[(_.k_ERegionCodeSAsia = 2)] = "k_ERegionCodeSAsia"),
+          (_[(_.k_ERegionCodeLATAM = 3)] = "k_ERegionCodeLATAM"),
+          (_[(_.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
+          (_[(_.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
+      })(_ || (_ = {}));
+      const _ = _(),
+        _ =
+          (_(),
+          _.k_ECurrencyCodeSEK,
+          _.k_ECurrencyCodeBGN,
+          _.k_ECurrencyCodeHRK,
+          _.k_ECurrencyCodeCZK,
+          _.k_ECurrencyCodeDKK,
+          _.k_ECurrencyCodeHUF,
+          _.k_ECurrencyCodeRON,
+          [
+            _.k_ERegionCodeCIS,
+            _.k_ERegionCodeSAsia,
+            _.k_ERegionCodeLATAM,
+            _.k_ERegionCodeMENA,
+          ]);
       class _ {
         m_mapUSDPrice = new Map();
         m_mapKeyToGuidePrice = new Map();
@@ -11985,7 +11989,7 @@
                 const _ = new Array();
                 return (
                   _.proposed_prices.base_amounts.forEach((_) => {
-                    _.has(_.amount.currency_code) ||
+                    _.includes(_.amount.currency_code) ||
                       (console.log(
                         "Unexpected currency code: " + _.amount.currency_code,
                         _,
@@ -11995,7 +11999,7 @@
                       ));
                   }),
                   _.proposed_prices.region_amounts.forEach((_) => {
-                    _.has(_(_.name.toUpperCase())) ||
+                    _.includes(_(_.name.toUpperCase())) ||
                       (console.log(
                         `Unexpected region code: ${_.name} and currency code ${_.amount.currency_code} with price in cents ${_.amount.amount}`,
                       ),

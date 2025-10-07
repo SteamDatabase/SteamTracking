@@ -93,6 +93,8 @@
 	"Menu_SearchBar_SearchResults": "Sökresultat",
 	"Menu_SearchBar_YourTopGenres": "Genrer för dig",
 	"Menu_SearchBar_BrowseBy": "Sök per ...",
+	"Menu_SearchBar_NoMatches": "Inga matchande träffar.",
+	"Menu_SearchBar_AdvancedSearch": "Avancerad sökning",
 	"Menu_SearchBar_CategoryGameCount": "%1$s spel",
 	"Menu_Search": "Sök",
 	"Menu_Label": "Butiksmeny",

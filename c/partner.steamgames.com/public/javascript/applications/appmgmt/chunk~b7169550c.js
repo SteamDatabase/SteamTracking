@@ -265,18 +265,6 @@
         _: () => _,
       });
       class _ {
-        type = 0;
-        text = "";
-        tag;
-        args;
-        ConvertMalformedNodeToText() {
-          3 == this.type
-            ? (this.text = "[/" + this.text)
-            : 2 == this.type && (this.text = "[" + this.text),
-            (this.type = 1);
-        }
-      }
-      class _ {
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(_, _) {
@@ -285,7 +273,10 @@
         Parse(_, _, __webpack_require__ = !1) {
           const _ = (function (_, _) {
             const _ = [];
-            let _ = new _(),
+            let _ = {
+                type: 0,
+                text: "",
+              },
               _ = !1,
               _ = !1,
               _ = !1;
@@ -308,20 +299,19 @@
                     else {
                       const _ =
                           2 == _.type &&
-                          "noparse" == _.text.toLocaleLowerCase(),
+                          "noparse" == _.text?.toLocaleLowerCase(),
                         _ =
                           3 == _.type &&
-                          "noparse" == _.text.toLocaleLowerCase();
+                          "noparse" == _.text?.toLocaleLowerCase();
                       _ || (_ && !_)
-                        ? (_.ConvertMalformedNodeToText(), (_.text += _))
+                        ? ((_ = _(_)), (_.text += _))
                         : _
                           ? (_ = !0)
                           : _ && (_ = !1),
                         (_ = _(_, _)),
                         (_ = !1);
                     }
-                  else
-                    _.ConvertMalformedNodeToText(), (_ = _(_, _, 2)), (_ = !0);
+                  else (_ = _(_, _(_), 2)), (_ = !0);
                   break;
                 case 1:
                   "[" != _ || _
@@ -332,8 +322,12 @@
               }
             }
             0 != _.type &&
-              ((2 != _.type && 3 != _.type) || _.ConvertMalformedNodeToText(),
-              __webpack_require__.push(_));
+              (2 == _.type || 3 == _.type
+                ? __webpack_require__.push(_(_))
+                : __webpack_require__.push({
+                    type: _.type,
+                    text: _.text ?? "",
+                  }));
             return _;
           })(_ || "", __webpack_require__);
           return this.Parse_BuildElements(_, _);
@@ -349,9 +343,7 @@
           const _ = (_, _) => {
             if (_ && _.node.tag === _.text && _.get(_.node.tag)) {
               const _ = _.get(_.node.tag),
-                _ = _.map((_) => _.node.tag),
                 _ = {
-                  parentTags: _,
                   tagname: _.node.tag,
                   args: _.node.args,
                 },
@@ -444,13 +436,14 @@
         return _.replace(/(\\|\[)/g, "\\$1");
       }
       function _(_, _, __webpack_require__ = 0) {
-        if (2 == _.type) {
-          let _ = _.text.indexOf("=");
-          const _ = _.text.indexOf(" ");
+        const { type: _, text: _ = "" } = _;
+        if (2 == _) {
+          let _ = _.indexOf("=");
+          const _ = _.indexOf(" ");
+          let _, _;
           if ((-1 != _ && (-1 == _ || _ < _) && (_ = _), _ > 0)) {
-            _.tag = _.text.substr(0, _).toLocaleLowerCase();
-            const _ = _.text.substr(_);
-            _.args = (function (_) {
+            _ = _.substr(0, _).toLocaleLowerCase();
+            _ = (function (_) {
               if (!_ || _.length < 1) return {};
               const _ = {};
               let _ = "",
@@ -502,12 +495,34 @@
               }
               0 != _ && (_[_] = _);
               return _;
-            })(_);
-          } else (_.args = {}), (_.tag = _.text.toLocaleLowerCase());
-        }
-        _.push(_);
-        const _ = new _();
-        return (_.type = _), _;
+            })(_.substr(_));
+          } else (_ = {}), (_ = _.toLocaleLowerCase());
+          _.push({
+            type: _,
+            text: _,
+            tag: _,
+            args: _,
+          });
+        } else
+          0 != _ &&
+            _.push({
+              type: _,
+              text: _,
+            });
+        return {
+          type: _,
+          text: "",
+        };
+      }
+      function _(_) {
+        let _ = "";
+        return (
+          3 == _.type ? (_ = "[/") : 2 == _.type && (_ = "["),
+          {
+            type: 1,
+            text: _ + (_.text ?? ""),
+          }
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

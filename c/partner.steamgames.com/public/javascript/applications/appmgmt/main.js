@@ -680,6 +680,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        HasHorizontalDirection: "vnlCrJZjobtJHaugGSLqP",
         EmoticonBow: "_2LlztGU9T4SNsTD6znahfe",
         EmoticonBow_st0: "Fw2WGmXjh2zUxYfuy3xDn",
         EmoticonBow_st1: "luj0tT8JHriKkK3r7pzqP",
@@ -1747,40 +1748,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -1894,6 +1861,41 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -1913,7 +1915,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3070,6 +3071,7 @@
         }),
         _ = (0, _._)("a", {
           bActivateByDefault: !0,
+          bDOMElementFocusByDefault: !1,
         }),
         _ = _.forwardRef(function (_, _) {
           const { href: __webpack_require__ = "#", ..._ } = _;
@@ -13577,8 +13579,73 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.cdn_path || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  cdn_path: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  encoding: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Trailers_AdaptiveTrailer";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.trailer_name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
+            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13617,6 +13684,12 @@
                   },
                   microtrailer: {
                     _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  adaptive_trailers: {
+                    _: 6,
                     _: _,
                     _: !0,
                     _: !0,
@@ -14564,7 +14637,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.context || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -14577,6 +14650,14 @@
                   context: {
                     _: 1,
                     _: _,
+                  },
+                  excluded_content_descriptorids: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                 },
               }),
@@ -20639,9 +20720,78 @@
         }
       }
       (0, _._)([_._], _.prototype, "OnLinkLoad", null);
-      var _,
-        _,
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      new Set([
+        "sc_schinese",
+        "schinese",
+        "tchinese",
+        "japanese",
+        "koreana",
+        "thai",
+        "arabic",
+        "bulgarian",
+        "czech",
+        "danish",
+        "german",
+        "english",
+        "spanish",
+        "latam",
+        "greek",
+        "french",
+        "italian",
+        "indonesian",
+        "hungarian",
+        "dutch",
+        "norwegian",
+        "polish",
+        "portuguese",
+        "brazilian",
+        "romanian",
+        "russian",
+        "finnish",
+        "swedish",
+        "turkish",
+        "vietnamese",
+        "ukrainian",
+      ]);
+      const _ = new Map([
+        ["en", "english"],
+        ["de", "german"],
+        ["fr", "french"],
+        ["it", "italian"],
+        ["ko", "koreana"],
+        ["es-419", "latam"],
+        ["es", "spanish"],
+        ["zh", "schinese"],
+        ["zh-cn", "schinese"],
+        ["zh-tw", "tchinese"],
+        ["ru", "russian"],
+        ["ar", "arabic"],
+        ["th", "thai"],
+        ["ja", "japanese"],
+        ["pt-br", "brazilian"],
+        ["pt", "portuguese"],
+        ["pl", "polish"],
+        ["da", "danish"],
+        ["nl", "dutch"],
+        ["fi", "finnish"],
+        ["nb", "norwegian"],
+        ["no", "norwegian"],
+        ["sv", "swedish"],
+        ["hu", "hungarian"],
+        ["cs", "czech"],
+        ["ro", "romanian"],
+        ["tr", "turkish"],
+        ["bg", "bulgarian"],
+        ["el", "greek"],
+        ["uk", "ukrainian"],
+        ["vn", "vietnamese"],
+        ["id", "indonesian"],
+      ]);
+      const _ = new Map();
+      for (const [module, module_exports] of _.entries())
+        _.set(module_exports, module);
+      var _, _;
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -20701,37 +20851,39 @@
           _ = _.GetPopupForWindow(_);
         return _?.browser_info || _;
       }
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Minimized = 1)] = "Minimized"),
-          (_[(_.Hidden = 2)] = "Hidden"),
-          (_[(_.TooltipHint = 4)] = "TooltipHint"),
-          (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-          (_[(_.Resizable = 16)] = "Resizable"),
-          (_[(_.ScalePosition = 32)] = "ScalePosition"),
-          (_[(_.ScaleSize = 64)] = "ScaleSize"),
-          (_[(_.Maximized = 128)] = "Maximized"),
-          (_[(_.Composited = 256)] = "Composited"),
-          (_[(_.NotFocusable = 512)] = "NotFocusable"),
-          (_[(_.FullScreen = 1024)] = "FullScreen"),
-          (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-          (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
-            "ApplyBrowserScaleToDimensions"),
-          (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-          (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
-          (_[(_.NoMinimize = 32768)] = "NoMinimize"),
-          (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-          (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-          (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-          (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-          (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-          (_[(_.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale"),
-          (_[(_.TransparentParentWindow = 4194304)] =
-            "TransparentParentWindow"),
-          (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-          (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-      })(_ || (_ = {})),
+      _.set("sc_schinese", _.get("schinese")),
+        _.set("korean", _.get("koreana")),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Minimized = 1)] = "Minimized"),
+            (_[(_.Hidden = 2)] = "Hidden"),
+            (_[(_.TooltipHint = 4)] = "TooltipHint"),
+            (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+            (_[(_.Resizable = 16)] = "Resizable"),
+            (_[(_.ScalePosition = 32)] = "ScalePosition"),
+            (_[(_.ScaleSize = 64)] = "ScaleSize"),
+            (_[(_.Maximized = 128)] = "Maximized"),
+            (_[(_.Composited = 256)] = "Composited"),
+            (_[(_.NotFocusable = 512)] = "NotFocusable"),
+            (_[(_.FullScreen = 1024)] = "FullScreen"),
+            (_[(_.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+            (_[(_.ApplyBrowserScaleToDimensions = 4096)] =
+              "ApplyBrowserScaleToDimensions"),
+            (_[(_.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+            (_[(_.NoWindowShadow = 16384)] = "NoWindowShadow"),
+            (_[(_.NoMinimize = 32768)] = "NoMinimize"),
+            (_[(_.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+            (_[(_.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+            (_[(_.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+            (_[(_.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+            (_[(_.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+            (_[(_.IgnoreSteamDisplayScale = 2097152)] =
+              "IgnoreSteamDisplayScale"),
+            (_[(_.TransparentParentWindow = 4194304)] =
+              "TransparentParentWindow"),
+            (_[(_.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+            (_[(_.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.Overlay = 0)] = "Overlay"),
             (_[(_.Notification = 1)] = "Notification"),
@@ -20886,10 +21038,12 @@
               __webpack_require__.addEventListener("dragover", this.OnDragOver),
               __webpack_require__.addEventListener("message", this.OnMessage),
               _._.LANGUAGE &&
-                _.document.documentElement.setAttribute(
+                (_.document.documentElement.setAttribute(
                   "lang",
                   (0, _._)() ?? "",
                 ),
+                "arabic" === _._.LANGUAGE &&
+                  _.document.documentElement.setAttribute("dir", "rtl")),
               (this.m_popup = _),
               (this.m_element = _),
               (this.m_renderWhenReady = _),
@@ -21811,13 +21965,15 @@
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;");
-            let _ = _,
-              {
-                nLeft: _,
-                nTop: _,
-                nOverflow: _,
-                nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+            let _ = _;
+            _.matches(":dir(rtl)") &&
+              ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
+            let {
+              nLeft: _,
+              nTop: _,
+              nOverflow: _,
+              nLateralOverflow: _,
+            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
             if (_ > (_ ?? 10) && !_) {
               const _ = (function (_) {
                   switch (_) {
@@ -21834,7 +21990,7 @@
                     case "overlay-center":
                       return "overlay-center";
                   }
-                })(_ ?? "right"),
+                })(_),
                 {
                   nLeft: _,
                   nTop: __webpack_require__,
@@ -21868,7 +22024,7 @@
                 const _ = _[0] > _[1] ? _ : -_;
                 "left" === _ || "right" === _ ? (_ += _) : (_ += _);
                 return [_, _];
-              })(_, _, _ ?? "right", _, _));
+              })(_, _, _, _, _));
             let _ = null;
             switch (_) {
               case "left":
@@ -22452,12 +22608,18 @@
                           cCallsitesToIgnore: _,
                           bIncludeMessageInIdentifier: _,
                         } = _,
-                        _ = _.stack?.split("\n") ?? [];
+                        { message: _, stack: _ } = _,
+                        _ = _?.split("\n") ?? [];
                       let _ = _(_.filter((_) => !!_.match(_))[_]);
-                      _ && (_ = `${_} ${_.message}`);
+                      _ && (_ = `${_} ${_}`);
                       const _ = _.map((_) => {
-                        const _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
-                        if (!_) return _;
+                        let _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
+                        if (
+                          ((_ && 5 == _.length) ||
+                            (_ = _.match(/(.*at )(http.*):(\d+):(\d+)/)),
+                          !_)
+                        )
+                          return _;
                         if (5 === _.length) {
                           const [_, _, _, _, _] = _,
                             _ = parseInt(_),
@@ -23703,7 +23865,9 @@
             _ = _ > 0,
             _ = _ + _ - (_.bOverlapHorizontal ? _ : _) - _,
             _ = _ > 0,
-            _ = (_.bPreferPopLeft || !_) && _;
+            _ = _.bPreferPopLeft;
+          _?.matches(":dir(rtl)") && (_ = !_);
+          let _ = (_ || !_) && _;
           _ ||
             _ ||
             ((_ = _ > _),
@@ -28034,6 +28198,7 @@
         _,
         _,
         _,
+        _,
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
@@ -28408,6 +28573,11 @@
             (_[(_.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
             (_[(_.Standby = 3)] = "Standby"),
             (_[(_.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
+            (_[(_.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
+            (_[(_.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Notification_Shown = 600)] = "Notification_Shown"),
@@ -29274,9 +29444,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _() {
-        const [_, _] = (0, _.useState)(!1),
-          [__webpack_require__, _] = (0, _.useState)(!1),
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(() => Boolean(_)),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(null),
@@ -29285,14 +29455,14 @@
           [_, _] = (0, _.useState)(null);
         return {
           bLoading: _,
-          bError: __webpack_require__,
+          bError: _,
           bSuccess: _,
           strError: _,
           strSuccess: _,
           elSuccess: _,
           elError: _,
           strThrobber: _,
-          fnSetLoading: _,
+          fnSetLoading: __webpack_require__,
           fnSetError: _,
           fnSetSuccess: _,
           fnSetStrError: _,
@@ -29427,7 +29597,6 @@
       }
       class _ extends _.Component {
         state = {};
-        reactErrorHandler = void 0;
         constructor(_) {
           super(_), (this.state.lastErrorKey = _.errorKey);
         }
@@ -32372,6 +32541,7 @@
       class _ {
         key;
         static sm_lastKey = 0;
+        ModalClosedCallback = new _._();
         constructor() {
           this.key = "Modal_" + _.sm_lastKey++;
         }
@@ -32824,6 +32994,7 @@
         RemoveModal(_) {
           let _ = this.m_rgModals.indexOf(_);
           -1 != _ && this.m_rgModals.splice(_, 1),
+            _.ModalClosedCallback.Dispatch(),
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(_) {
@@ -32840,6 +33011,11 @@
             Update: (_) => {
               _.UpdateModal(_);
             },
+            ClosedPromise: new Promise((_) => {
+              const _ = _.ModalClosedCallback.Register(() => {
+                _(), __webpack_require__.Unregister();
+              });
+            }),
           };
           return this.OnModalCountChanged("show"), _;
         }
@@ -32904,6 +33080,7 @@
                 this.m_OnLegacyPopupModalCountChanged.Dispatch(
                   this.m_rgLegacyPopupModals.length,
                 ),
+                _.ModalClosedCallback.Dispatch(),
                 _.fnOnClose && __webpack_require__.fnOnClose();
             },
             _ = new _._(
@@ -32928,6 +33105,11 @@
               Update: (_) => {
                 _.UpdateModal(_);
               },
+              ClosedPromise: new Promise((_) => {
+                const _ = _.ModalClosedCallback.Register(() => {
+                  _(), _.Unregister();
+                });
+              }),
             }
           );
         }
@@ -34167,6 +34349,7 @@
             version: "1.1",
             _: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
+            className: _().HasHorizontalDirection,
             _: "0px",
             _: "0px",
             width: "50px",
@@ -36992,28 +37175,27 @@
           getPIDFromEvent: _,
           ..._
         } = _;
-        return (
-          _ || __webpack_require__ || (__webpack_require__ = _),
+        _ || __webpack_require__ || (__webpack_require__ = _),
           _ && _ && (_ = (0, _._)(_)),
-          _ || (_ = () => 0),
-          _.createElement(
-            "a",
-            {
-              ..._,
-              href: _,
-              onClick: (_) => {
-                _.preventDefault(),
+          _ || (_ = () => 0);
+        return _.createElement(
+          "a",
+          {
+            ..._,
+            href: _,
+            onClick: (_) => {
+              _.preventDefault(),
+                _ &&
                   _(window, _, {
                     bForceExternal: !!_,
                     bUseLinkFilter: !!_,
                     unPID: _(_),
                   });
-              },
-              onContextMenu: __webpack_require__,
-              rel: _ ? "noopener noreferrer" : void 0,
             },
-            _.children,
-          )
+            onContextMenu: __webpack_require__,
+            rel: _ ? "noopener noreferrer" : void 0,
+          },
+          _.children,
         );
       }
       function _(_) {
@@ -38221,6 +38403,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -38428,6 +38611,23 @@
           ((_ = _.toLocaleDateString(_._.GetPreferredLocales(), _)),
           _.set(_, _),
           _)
+        );
+      }
+      function _(_, _, _, _) {
+        return (
+          _(new Date(1e3 * _), !1, !1) +
+          " " +
+          _(
+            _,
+            {
+              bForce24HourClock: _,
+            },
+            {
+              timeZone: _,
+            },
+          ) +
+          " " +
+          _
         );
       }
       function _(_, _) {

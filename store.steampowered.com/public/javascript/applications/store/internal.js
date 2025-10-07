@@ -4533,37 +4533,44 @@
               null);
         },
         te = function (e) {
-          const { children: t, label: a, onSelect: s, ref: n, ...i } = e,
-            o = (0, r.useContext)(Q),
-            { ref: l, index: c } = (0, W.rm)({ label: a }),
-            m = (0, W.SV)([n, l]);
-          if (!o)
+          const {
+              children: t,
+              label: a,
+              onSelect: s,
+              ref: n,
+              selected: i,
+              ...o
+            } = e,
+            l = (0, r.useContext)(Q),
+            { ref: c, index: m } = (0, W.rm)({ label: a }),
+            p = (0, W.SV)([n, c]);
+          if (!l)
             return (
               console.error(
                 "<PopoverListItem> must be a child of <PopoverListRoot>.",
               ),
               null
             );
-          const p = c === o.activeIndex,
-            d = c === o.selectedIndex;
+          const d = m === l.activeIndex,
+            u = m === l.selectedIndex || !!i;
           return r.createElement(
             K.Option,
             {
-              ref: m,
-              selected: d,
-              focused: p,
+              ref: p,
+              selected: u,
+              focused: d,
               role: "option",
-              tabIndex: p ? 0 : -1,
-              ...o.getItemProps({
+              tabIndex: d ? 0 : -1,
+              ...l.getItemProps({
                 onClick: s,
                 onKeyDown: (e) => {
                   ("Enter" === e.key ||
-                    (" " === e.key && !o.typingRef.current)) &&
+                    (" " === e.key && !l.typingRef.current)) &&
                     (s(), e.preventDefault(), e.stopPropagation());
                 },
-                active: p,
-                selected: d,
-                ...i,
+                active: d,
+                selected: u,
+                ...o,
               }),
             },
             t,

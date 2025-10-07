@@ -176,8 +176,8 @@
           n.nStartNumber &&
           n.strMedia &&
           (t.bContainsThumbnails || n.strInitialization)
-            ? ((n.strMedia = R(n.strMedia, i)),
-              (n.strInitialization = R(n.strInitialization, i)),
+            ? ((n.strMedia = A(n.strMedia, i)),
+              (n.strInitialization = A(n.strInitialization, i)),
               n)
             : null
         );
@@ -203,10 +203,10 @@
         let n = t.startsWith("/") ? 1 : 0;
         return i + t.substring(n);
       }
-      function R(e, t) {
+      function A(e, t) {
         return e && !M(e) && M(t) ? P(t, e) : e;
       }
-      function A(e) {
+      function R(e) {
         return (
           0 == e.rgRoles.length || e.rgRoles.findIndex((e) => "main" == e) >= 0
         );
@@ -287,13 +287,13 @@
         GetMainVideoAdaption() {
           let e = this.m_rgPeriods[0];
           for (let t of e.rgAdaptationSets)
-            if (A(t) && t.bContainsVideo) return t;
+            if (R(t) && t.bContainsVideo) return t;
           return null;
         }
         GetMainAudioAdaption() {
           let e = this.m_rgPeriods[0];
           for (let t of e.rgAdaptationSets)
-            if (A(t) && t.bContainsAudio) return t;
+            if (R(t) && t.bContainsAudio) return t;
           return null;
         }
         GetThumbnailAdaptation() {
@@ -1470,6 +1470,7 @@
         m_strCDNAuthURLParameters = null;
         m_bTimeoutAfterFailedDownload = !0;
         m_bAlwaysStartWithSubtitles = !1;
+        m_bMuteOnAutoplayBlocked = !1;
         m_schUpdateMPD = new l.LU();
         m_xhrUpdateMPD;
         m_mpd;
@@ -1530,6 +1531,9 @@
         }
         SetAlwaysStartWithSubtitles(e) {
           this.m_bAlwaysStartWithSubtitles = e;
+        }
+        SetMuteOnAutoplayBlocked(e) {
+          this.m_bMuteOnAutoplayBlocked = e;
         }
         async PlayMPD(e, t, i) {
           (e = Array.isArray(e) ? e : [e]),
@@ -1839,11 +1843,11 @@
             if (
               (!this.m_strVideoAdaptationID &&
                 e.bContainsVideo &&
-                A(e) &&
+                R(e) &&
                 ((t = e), (this.m_strVideoAdaptationID = e.strID)),
               !this.m_strAudioAdaptationID &&
                 e.bContainsAudio &&
-                A(e) &&
+                R(e) &&
                 ((t = e), (this.m_strAudioAdaptationID = e.strID)),
               t)
             ) {
@@ -2059,6 +2063,7 @@
           this.m_stats.LogVideoOnCanPlay();
         }
         GetCurrentPlayTime() {
+          if (!this.m_elVideo) return 0;
           if (this.m_seekingToTime) {
             if (
               !this.m_bPlaybackStarted &&
@@ -2218,7 +2223,8 @@
             this.DispatchEvent("valve-userpausechange");
         }
         Play() {
-          this.SetUserPlayChoice(!0), this.Seek(this.GetCurrentPlayTime());
+          this.m_elVideo &&
+            (this.SetUserPlayChoice(!0), this.Seek(this.GetCurrentPlayTime()));
         }
         Pause() {
           (this.m_bUserLiveEdgeChoice = !1),
@@ -2255,12 +2261,8 @@
           } catch (e) {
             (t = e), (0, g.q_)("Failed to play video", e);
           }
-          if (
-            t &&
-            "NotAllowedError" == t.name &&
-            !this.m_elVideo.muted &&
-            this.BHasTimedText()
-          ) {
+          let i = this.BHasTimedText() || this.m_bMuteOnAutoplayBlocked;
+          if (t && "NotAllowedError" == t.name && !this.m_elVideo.muted && i) {
             (0, g.q_)("Trying to play again, this time muted with subtitles"),
               (t = void 0),
               (this.m_elVideo.muted = !0),

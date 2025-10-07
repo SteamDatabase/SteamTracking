@@ -76,6 +76,7 @@
         HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
         HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
@@ -287,8 +288,8 @@
         g = a(34010),
         B = a(4796),
         b = a(91254),
-        I = a(68255),
-        f = a(84811),
+        f = a(68255),
+        I = a(84811),
         w = a(35685),
         N = a(95034),
         A = a(95695),
@@ -296,8 +297,8 @@
         T = a(45359),
         G = a(9154),
         y = a(738),
-        O = a(52038),
-        k = a(56011),
+        k = a(52038),
+        O = a(56011),
         H = a(61859),
         R = a(14932),
         M = a(76684),
@@ -314,16 +315,16 @@
               [],
             ),
             n.createElement(
-              f.tH,
+              I.tH,
               null,
               n.createElement(
                 "div",
-                { className: (0, O.A)(P.Container) },
+                { className: (0, k.A)(P.Container) },
                 n.createElement(
                   "div",
                   { className: P.Controls },
                   n.createElement(
-                    I.$n,
+                    f.$n,
                     {
                       onClick: async () => {
                         t.current && t.current();
@@ -335,7 +336,7 @@
                     "(VO) Load Debug Info",
                   ),
                 ),
-                n.createElement(f.tH, null, n.createElement(F, { info: a })),
+                n.createElement(I.tH, null, n.createElement(F, { info: a })),
               ),
             )
           );
@@ -677,7 +678,7 @@
               n.createElement("div", null, "DASH MPEG Url: ", s.m_data.url),
               n.createElement("div", null, "HLS Url: ", s.m_data.hls_url),
             ),
-            n.createElement(I.$n, { onClick: () => l(!r) }, "Toggle Raw Data"),
+            n.createElement(f.$n, { onClick: () => l(!r) }, "Toggle Raw Data"),
             Boolean(r) &&
               n.createElement(
                 n.Fragment,
@@ -755,7 +756,7 @@
         let s = null == o ? void 0 : o.GetAssets().GetMainCapsuleURL(),
           c = s && s.length > 0;
         return n.createElement(
-          f.tH,
+          I.tH,
           null,
           n.createElement(
             "div",
@@ -832,13 +833,13 @@
               _.iA.steamid != e.broadcasterSteamID.ConvertTo64BitString(),
             ) &&
               n.createElement(
-                I.$n,
+                f.$n,
                 {
                   onClick: (e) => {
                     _.iA.logged_in
                       ? (0, y.pg)(
                           n.createElement(ne, { broadcasterSteamID: t }),
-                          (0, k.uX)(e),
+                          (0, O.uX)(e),
                         )
                       : (0, y.pg)(
                           n.createElement(G.o0, {
@@ -851,7 +852,7 @@
                             strOKButtonText: (0, H.we)("#MobileLogin_SignIn"),
                             onOK: () => (0, j.vg)(),
                           }),
-                          (0, k.uX)(e),
+                          (0, O.uX)(e),
                         );
                   },
                 },
@@ -862,7 +863,7 @@
                 ),
               ),
             n.createElement(
-              I.$n,
+              f.$n,
               {
                 onClick: (e) =>
                   (0, Q.EP)(
@@ -910,7 +911,7 @@
                   broadcastSteamID: e.broadcastSteamID,
                   strAction: a,
                 }),
-                (0, k.uX)(t),
+                (0, O.uX)(t),
               );
             },
             a =
@@ -918,32 +919,32 @@
               e.broadcastSteamID.ConvertTo64BitString();
           return n.createElement(
             "div",
-            { className: (0, O.A)(re.AdminControls, D().ValveOnlyBackground) },
+            { className: (0, k.A)(re.AdminControls, D().ValveOnlyBackground) },
             n.createElement("div", null, "(VO) Support Tools"),
             n.createElement(
-              I.$n,
+              f.$n,
               { onClick: (e) => t(e, "frontpage") },
               "Remove from Front Page",
             ),
             n.createElement(
-              I.$n,
+              f.$n,
               { onClick: (e) => t(e, "ban") },
               "Ban from Broadcasting",
             ),
             n.createElement(
-              I.$n,
+              f.$n,
               {
                 onClick: (t) => {
                   (0, y.pg)(
                     n.createElement(ce, { steamid: e.broadcastSteamID }),
-                    (0, k.uX)(t),
+                    (0, O.uX)(t),
                   );
                 },
               },
               "Make Unbannable",
             ),
             n.createElement(
-              I.$n,
+              f.$n,
               { onClick: (e) => (0, Q.EP)(e, a) },
               "Go to Support Page",
             ),
@@ -964,20 +965,20 @@
           );
           const v = () => e.closeModal && e.closeModal();
           return n.createElement(
-            f.tH,
+            I.tH,
             null,
             n.createElement(
               G.x_,
               { onEscKeypress: v },
               n.createElement(
-                I.UC,
+                f.UC,
                 null,
-                n.createElement(I.Y9, null, "Remove Broadcast From Front Page"),
+                n.createElement(f.Y9, null, "Remove Broadcast From Front Page"),
                 n.createElement(
-                  I.nB,
+                  f.nB,
                   null,
                   n.createElement(
-                    I.a3,
+                    f.a3,
                     null,
                     n.createElement(
                       "p",
@@ -989,7 +990,7 @@
                     n.createElement(
                       "div",
                       null,
-                      n.createElement(I.m, {
+                      n.createElement(f.m, {
                         rgOptions: [
                           { label: "1 Day", data: 1 },
                           { label: "1 Week", data: 7 },
@@ -1013,24 +1014,24 @@
                   ),
                 ),
                 n.createElement(
-                  I.wi,
+                  f.wi,
                   null,
                   i
                     ? n.createElement(
-                        I.jn,
+                        f.jn,
                         { onClick: v },
                         (0, H.we)("#Button_Dismiss"),
                       )
                     : n.createElement(
-                        I.dR,
+                        f.dR,
                         null,
                         n.createElement(
-                          I.$n,
+                          f.$n,
                           { onClick: v },
                           (0, H.we)("#Button_Cancel"),
                         ),
                         n.createElement(
-                          I.jn,
+                          f.jn,
                           {
                             onClick: async () => {
                               c(!0);
@@ -1071,20 +1072,20 @@
           );
           const m = () => e.closeModal && e.closeModal();
           return n.createElement(
-            f.tH,
+            I.tH,
             null,
             n.createElement(
               G.x_,
               { onEscKeypress: m },
               n.createElement(
-                I.UC,
+                f.UC,
                 null,
-                n.createElement(I.Y9, null, "Make Broadcast Unbannable"),
+                n.createElement(f.Y9, null, "Make Broadcast Unbannable"),
                 n.createElement(
-                  I.nB,
+                  f.nB,
                   null,
                   n.createElement(
-                    I.a3,
+                    f.a3,
                     null,
                     n.createElement(
                       "p",
@@ -1107,24 +1108,24 @@
                   ),
                 ),
                 n.createElement(
-                  I.wi,
+                  f.wi,
                   null,
                   r
                     ? n.createElement(
-                        I.jn,
+                        f.jn,
                         { onClick: m },
                         (0, H.we)("#Button_Dismiss"),
                       )
                     : n.createElement(
-                        I.dR,
+                        f.dR,
                         null,
                         n.createElement(
-                          I.$n,
+                          f.$n,
                           { onClick: m },
                           (0, H.we)("#Button_Cancel"),
                         ),
                         n.createElement(
-                          I.jn,
+                          f.jn,
                           {
                             onClick: async () => {
                               a(!0);
@@ -1166,21 +1167,21 @@
               null,
               n.createElement(
                 "div",
-                { className: (0, O.A)(x.BroadcastPage) },
+                { className: (0, k.A)(x.BroadcastPage) },
                 n.createElement(
                   "div",
-                  { className: (0, O.A)(C().BroadcastAndChat) },
+                  { className: (0, k.A)(C().BroadcastAndChat) },
                   Boolean(!E.Get().BShowOnlyChat()) &&
                     n.createElement(
-                      f.tH,
+                      I.tH,
                       null,
                       n.createElement(
                         "div",
-                        { className: (0, O.A)(C().wrapper) },
+                        { className: (0, k.A)(C().wrapper) },
                         n.createElement(
                           "div",
                           {
-                            className: (0, O.A)({
+                            className: (0, k.A)({
                               [C().video_placeholder]: !0,
                               video_placeholder_trgt: !0,
                               [C().NoChat]: E.Get().BShowOnlyVideo(),
@@ -1190,7 +1191,7 @@
                             "div",
                             { className: C().BroadcastPlayerContainer },
                             n.createElement(
-                              f.tH,
+                              I.tH,
                               null,
                               n.createElement(S.default, {
                                 steamIDBroadcast: a,
@@ -1210,7 +1211,7 @@
                         "div",
                         { className: C().ChatContainer },
                         n.createElement(
-                          f.tH,
+                          I.tH,
                           null,
                           n.createElement(p.I, {
                             emoticonStore: g.MX,
@@ -1259,7 +1260,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, O.A)(D().ValveOnlyBackground, x.DebugCtn),
+                      className: (0, k.A)(D().ValveOnlyBackground, x.DebugCtn),
                     },
                     n.createElement(L, null),
                   ),
@@ -1342,21 +1343,21 @@
               n.createElement(
                 "div",
                 { className: x.Options },
-                n.createElement(I.pd, {
+                n.createElement(f.pd, {
                   type: "text",
                   label: (0, H.we)("#Broadcast_title_title"),
                   onChange: (e) => l(e.currentTarget.value || ""),
                   placeholder: (0, H.we)("#Broadcast_title_placeholder"),
                   value: r,
                 }),
-                n.createElement(I.pd, {
+                n.createElement(f.pd, {
                   type: "text",
                   label: (0, H.we)("#Broadcast_Control_matchid"),
                   onChange: (e) => c(e.currentTarget.value || ""),
                   value: o,
                 }),
                 n.createElement(
-                  I.$n,
+                  f.$n,
                   {
                     onClick: async () => {
                       t.current && t.current();
@@ -1383,7 +1384,7 @@
                 "div",
                 { className: x.StopCtn },
                 n.createElement(
-                  I.$n,
+                  f.$n,
                   {
                     onClick: (e) => {
                       (0, y.pg)(
@@ -1409,7 +1410,7 @@
                               );
                           },
                         }),
-                        (0, k.uX)(e),
+                        (0, O.uX)(e),
                       );
                     },
                   },
@@ -1476,8 +1477,8 @@
         g = a(3919),
         B = a(95695),
         b = a.n(B),
-        I = a(72860),
-        f = a(76684),
+        f = a(72860),
+        I = a(76684),
         w = a(12155),
         N = a(60014),
         A = a(62490),
@@ -1485,9 +1486,9 @@
         T = a(61859),
         G = a(78327),
         y = a(84811),
-        O = a(22797),
-        k = a(33924),
-        H = a.n(k),
+        k = a(22797),
+        O = a(33924),
+        H = a.n(O),
         R = a(41751),
         M = a(18654),
         U = a.n(M),
@@ -1505,7 +1506,7 @@
             i = (0, c.useRef)(null),
             [u, E] = (0, c.useState)(null),
             [p, h] = (0, c.useState)(!0),
-            [B, I] = (0, c.useState)(!1);
+            [B, f] = (0, c.useState)(!1);
           if (
             ((0, c.useEffect)(
               () => (
@@ -1572,9 +1573,9 @@
             ),
             p)
           )
-            return c.createElement(O.t, { position: "center", size: "medium" });
+            return c.createElement(k.t, { position: "center", size: "medium" });
           if (0 == u.length) return c.createElement("div", null);
-          const f = v.ac.GetClanInfoByClanAccountID(t);
+          const I = v.ac.GetClanInfoByClanAccountID(t);
           return c.createElement(
             y.tH,
             null,
@@ -1592,7 +1593,7 @@
                       "EventSectionTitle",
                     ),
                   },
-                  (0, T.PP)("#EventBrowse_MoreEventsTitle", f.group_name),
+                  (0, T.PP)("#EventBrowse_MoreEventsTitle", I.group_name),
                   " ",
                 ),
                 c.createElement(
@@ -1605,7 +1606,7 @@
                       "div",
                       {
                         className: b().EventSectionMoreBtn,
-                        onClick: () => I(!0),
+                        onClick: () => f(!0),
                       },
                       (0, T.we)("#EventBrowse_MoreEventsBtn"),
                     )
@@ -1635,7 +1636,7 @@
                   appid: u[0].appid,
                   clanSteamID: s,
                   announcementGID: u[0].AnnouncementGID,
-                  closeModal: () => I(!1),
+                  closeModal: () => f(!1),
                   partnerEventStore: n,
                 }),
             ),
@@ -1670,10 +1671,10 @@
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [b, I] = (0, c.useState)(void 0),
+          [b, f] = (0, c.useState)(void 0),
           w =
             !b || (_ !== b && C !== b)
-              ? { src: _, onLoad: () => I(_), onError: () => I(C) }
+              ? { src: _, onLoad: () => f(_), onError: () => f(C) }
               : { src: b };
         if (!t)
           return c.createElement("div", {
@@ -1748,12 +1749,12 @@
                     ? c.createElement(
                         "div",
                         { className: (0, D.A)(H().UpcomingCtn, "UpcomingCtn") },
-                        c.createElement(f.K4, {
+                        c.createElement(I.K4, {
                           bSingleLine: !0,
                           dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
                         }),
                       )
-                    : c.createElement(f.K4, {
+                    : c.createElement(I.K4, {
                         bSingleLine: !0,
                         bOnlyDate: !0,
                         dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
@@ -1781,7 +1782,7 @@
             m.Z,
             {
               className: (0, D.A)(H().AppCapsuleCtn, "AppCapsuleCtn"),
-              ...(0, I.S)(n, r, l, !1),
+              ...(0, f.S)(n, r, l, !1),
             },
             c.createElement(
               R.Qf,
@@ -1793,7 +1794,7 @@
                 },
               },
               c.createElement("img", {
-                className: H().AppCapsuleImage,
+                className: (0, D.A)(H().AppCapsuleImage, H().CapsuleShadow),
                 src: n.GetAssets().GetSmallCapsuleURL(),
                 alt: n.GetName(),
               }),
@@ -1888,7 +1889,7 @@
                     { className: H().HorizontalDescription },
                     d,
                   ),
-                  c.createElement(f.K4, {
+                  c.createElement(I.K4, {
                     bSingleLine: !0,
                     dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
                   }),

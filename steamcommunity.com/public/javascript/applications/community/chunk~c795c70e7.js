@@ -46,7 +46,13 @@
       }
     },
     48333: (e, t, i) => {
-      i.d(t, { Zn: () => z, N_: () => q, lU: () => $, Br: () => O });
+      i.d(t, {
+        Zn: () => z,
+        N_: () => q,
+        lU: () => $,
+        n_: () => Q,
+        Br: () => O,
+      });
       var n,
         s = i(34629),
         r = i(41735),
@@ -1421,6 +1427,7 @@
             (this.m_strCDNAuthURLParameters = null),
             (this.m_bTimeoutAfterFailedDownload = !0),
             (this.m_bAlwaysStartWithSubtitles = !1),
+            (this.m_bMuteOnAutoplayBlocked = !1),
             (this.m_schUpdateMPD = new l.LU()),
             (this.m_bUseHLSManifest = !1),
             (this.m_strVideoAdaptationID = ""),
@@ -1453,7 +1460,7 @@
             (this.m_schFirstFrameThrottler = new l.LU()),
             (this.m_bookMarkAdapter = null),
             (this.m_schBookmarkUpdater = new l.LU()),
-            (this.m_watchedIntervals = new j()),
+            (this.m_watchedIntervals = new J()),
             (0, a.Gn)(this),
             (this.m_elVideo = e),
             this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats);
@@ -1479,6 +1486,9 @@
         SetAlwaysStartWithSubtitles(e) {
           this.m_bAlwaysStartWithSubtitles = e;
         }
+        SetMuteOnAutoplayBlocked(e) {
+          this.m_bMuteOnAutoplayBlocked = e;
+        }
         async PlayMPD(e, t, i) {
           (e = Array.isArray(e) ? e : [e]),
             this.m_stats.StartingPlayback(),
@@ -1500,8 +1510,8 @@
                 "Failed to parse MPD file",
                 this.m_strMPD,
               );
-            let o = Q(r),
-              a = X(o);
+            let o = X(r),
+              a = j(o);
             if (
               ((n = {
                 strMPD: t,
@@ -2007,6 +2017,7 @@
           this.m_stats.LogVideoOnCanPlay();
         }
         GetCurrentPlayTime() {
+          if (!this.m_elVideo) return 0;
           if (this.m_seekingToTime) {
             if (
               !this.m_bPlaybackStarted &&
@@ -2166,7 +2177,8 @@
             this.DispatchEvent("valve-userpausechange");
         }
         Play() {
-          this.SetUserPlayChoice(!0), this.Seek(this.GetCurrentPlayTime());
+          this.m_elVideo &&
+            (this.SetUserPlayChoice(!0), this.Seek(this.GetCurrentPlayTime()));
         }
         Pause() {
           var e, t;
@@ -2206,12 +2218,8 @@
           } catch (e) {
             (t = e), (0, g.q_)("Failed to play video", e);
           }
-          if (
-            t &&
-            "NotAllowedError" == t.name &&
-            !this.m_elVideo.muted &&
-            this.BHasTimedText()
-          ) {
+          let i = this.BHasTimedText() || this.m_bMuteOnAutoplayBlocked;
+          if (t && "NotAllowedError" == t.name && !this.m_elVideo.muted && i) {
             (0, g.q_)("Trying to play again, this time muted with subtitles"),
               (t = void 0),
               (this.m_elVideo.muted = !0),
@@ -2624,6 +2632,9 @@
         }
       }
       function Q(e) {
+        return e.id == N;
+      }
+      function X(e) {
         let t = "",
           i = "",
           n = "",
@@ -2640,7 +2651,7 @@
           t && i ? (n ? `${t}; codecs="${i}, ${n}` : `${t}; codecs="${i}`) : ""
         );
       }
-      function X(e) {
+      function j(e) {
         let t = !1;
         try {
           t = MediaSource.isTypeSupported(e);
@@ -2694,7 +2705,7 @@
         ),
         (0, s.Cg)([_.o], z.prototype, "ReportPlayerStats", null),
         (0, s.Cg)([a.XI.bound], z.prototype, "CaptureStatsForDisplay", null);
-      class j {
+      class J {
         constructor() {
           (this.m_bEnabled = !1),
             (this.m_rgIntervals = []),

@@ -6,6 +6,12 @@
   {
     27548: (e, t, n) => {
       n.r(t), n.d(t, { conf: () => i, language: () => r });
+      /*!-----------------------------------------------------------------------------
+       * Copyright (c) Microsoft Corporation. All rights reserved.
+       * Version: 0.52.2(404545bded1df6ffa41ea0af4e8ddb219018c6c1)
+       * Released under the MIT license
+       * https://github.com/microsoft/monaco-editor/blob/main/LICENSE.txt
+       *-----------------------------------------------------------------------------*/
       var i = {
           wordPattern:
             /(#?-?\d*\.\d\w*%?)|((::|[@#.!:])?[\w-?]+%?)|::|[@#.!:]/g,

@@ -5049,7 +5049,7 @@
       const c =
         r.p +
         "images/applications/appmgmt/login_mobile_auth.png?v=valveisgoodatcaching";
-      var l = r(13871),
+      var l = r(30720),
         u = r(4717),
         m = r(42248),
         d = r(84811),

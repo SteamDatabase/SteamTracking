@@ -124,6 +124,7 @@
         SaleSectionCtn: "i2PTzRNXOK1OXvXb9-wzd",
         NoTopPadding: "_28qZDRJ1HAArkoQZjlLJ09",
         SaleHeaderContainer: "W4mvnnQ0uYKKoCfVm8QgX",
+        DisabledBackground: "OPH8r3-pnCjCM7T8GrpWo",
         SaleSectionTabs: "_1FPIVJTLsw1nvAN24BGGKg",
         SaleViewAll: "_1bsBzvGKJui5_QaWVRBFDo",
         SaleSectionLoginPrompt: "_2-dSBTJ6PQzCGvK48gjCCf",
@@ -210,6 +211,7 @@
         StoreSaleItemDev: "_3tIbO7JWeYXTD8fDol5_-f",
         StoreSaleItemReview: "Kx5NfQxifS6Xw2JxtcV31",
         StoreSaleWidgetLeft: "_3DkfNrtTOLjNYd3yZliMzy",
+        TitleCtn: "_3rrH9dPdtHVRMzAEw82AId",
         StoreSaleWidgetCrossCenterRight: "oW0H1sBVE8K8u0qbq_Tm5",
         CapsuleBottomBar: "_3lmdEmwrmqe-kicNCZ9v-I",
         PlayNowButton: "_38ePadMVKPpN2BnpideoQw",
@@ -238,7 +240,6 @@
         SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
         Category: "_2lQNYB6g6C7aiw0GDPe9fq",
         CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
-        TitleCtn: "_3rrH9dPdtHVRMzAEw82AId",
         BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
         ReviewScores: "_3MxPBWjpjU_Gm8SIgi5g8A",
         StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
@@ -439,6 +440,13 @@
           "docimg",
           "meetsteamsessiongroup",
           "meetsteamscheduleview",
+          "center",
+          "c",
+          "expand",
+          "remindme",
+          "calendarevent",
+          "color",
+          "bgcolor",
         ],
         _ = [
           "h1",
@@ -4123,6 +4131,7 @@
                 "roomeffect",
                 "sticker",
               ])),
+              (_ = (0, _._)(_, ["p"], " ")),
               (_ = (0, _._)(_)),
               (_ = (0, _._)(_)),
               (0, _._)(_, _ || 180))
@@ -4222,7 +4231,7 @@
         }
         BHasSaleUpdateLandingPageVanity() {
           return (
-            !this.jsondata.bSaleEnabled &&
+            !!this.jsondata.bSaleEnabled &&
             Boolean(this.jsondata.sale_update_landing_page_vanity_id)
           );
         }
@@ -8224,17 +8233,14 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -8314,6 +8320,8 @@
             avatar_medium_url: _.avatar_medium_url,
             group_name: _.group_name,
             creator_page_bg_url: _.creator_page_bg_url,
+            curator_title: _.curator_title,
+            curator_description: _.curator_description,
             partner_events_enabled: _.partner_events_enabled,
           };
           0 != _.appid && this.m_mapAppIDToClanInfo.set(_.appid, _),
@@ -11028,7 +11036,10 @@
         GetPartnerEventChangeCallback(_) {
           let _ = this.m_mapEventUpdateCallback.get(_);
           return (
-            _ || ((_ = new _._()), this.m_mapEventUpdateCallback.set(_, _)), _
+            _ ||
+              (this.m_mapEventUpdateCallback.set(_, new _._()),
+              (_ = this.m_mapEventUpdateCallback.get(_))),
+            _
           );
         }
         GetClanEventGIDs(_) {
@@ -11445,9 +11456,13 @@
         }
         InsertUniqueEventGID(_, _, _) {
           let _ = this.m_mapClanToGIDs.get(_);
-          _ || ((_ = new Array()), this.m_mapClanToGIDs.set(_, _));
+          _ ||
+            (this.m_mapClanToGIDs.set(_, new Array()),
+            (_ = this.m_mapClanToGIDs.get(_)));
           let _ = this.m_mapAppIDToGIDs.get(_);
-          _ || ((_ = new Array()), this.m_mapAppIDToGIDs.set(_, _)),
+          _ ||
+            (this.m_mapAppIDToGIDs.set(_, new Array()),
+            (_ = this.m_mapAppIDToGIDs.get(_))),
             -1 == _.indexOf(_) && (_.push(_), _.push(_));
         }
         ResetModel() {}
@@ -13197,7 +13212,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16648,7 +16662,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = {
         include_platforms: !0,
       };
@@ -18355,6 +18370,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { closeModal: _ } = _;
@@ -18420,15 +18436,25 @@
             bApplyingFollowing: _,
             bFollowing: _,
             onFollowClick: _,
+            followType: _,
           } = _;
-          return _._.bIsFollowingEnabled
+          if (!_._.bIsFollowingEnabled) return null;
+          let _ = null;
+          switch (_) {
+            case "app":
+              _ = (0, _._)("#text_store_follow_desc");
+              break;
+            case "creatorhome":
+              _ = (0, _._)("#CreatorHome_Follow_tooltip");
+              break;
+            case "steamcurator":
+              _ = (0, _._)("#steam_curator_follow_ttip");
+          }
+          return _
             ? _.createElement(
                 _._,
                 {
-                  toolTipContent:
-                    __webpack_require__ || _
-                      ? void 0
-                      : (0, _._)("#CreatorHome_Follow_tooltip"),
+                  toolTipContent: __webpack_require__ || _ ? void 0 : _,
                 },
                 _.createElement(
                   _._,
@@ -18463,12 +18489,13 @@
                   ),
                 ),
               )
-            : null;
+            : (console.error("CommonFollowButton unexpected type", _), null);
         },
         _ = (_) => {
           const [_, __webpack_require__] = _.useState(!1),
             { clanAccountID: _, className: _ } = _,
             _ = _._.InitFromClanID(_),
+            [_, _] = (0, _._)(_),
             _ = (0, _._)(() => _._.Get().BIsFollowingCurator(_)),
             _ = (0, _._)(() => !_ && _._.Get().BIsIgnoringCurator(_));
           return _.createElement(_, {
@@ -18508,6 +18535,7 @@
                     });
                 })());
             },
+            followType: _?.is_creator_home ? "creatorhome" : "steamcurator",
           });
         },
         _ = (_) => {
@@ -18542,6 +18570,7 @@
                     });
                 })());
             },
+            followType: "app",
           });
         };
     },

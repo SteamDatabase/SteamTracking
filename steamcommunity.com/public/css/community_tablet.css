@@ -74,7 +74,7 @@ html.tablet .profile_small_header_bg {
 }
 
 html.tablet .profile_small_header_texture {
-	background: none;
+	background: #31343c;
 	height: unset;
 	display: flex;
 	flex-direction: row;
@@ -141,11 +141,11 @@ html.tablet body.migrated_profile_page #BG_bottom.maincontent {
 }
 
 html.tablet .maincontent {
-    width: 100%;
+    width: auto;
 }
 
 html.tablet #mainContents {
-	width: 100%;
+	width: auto;
 	max-width: unset;
 }
 

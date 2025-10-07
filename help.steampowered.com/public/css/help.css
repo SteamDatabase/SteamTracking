@@ -190,6 +190,8 @@ input.custom_form_text.right_hint
 	background: #417A9B;
 
 	max-height: 300px;
+	min-width: fit-content;
+	max-width: 500px;
 }
 .dropdownhidden{
 	display: none;

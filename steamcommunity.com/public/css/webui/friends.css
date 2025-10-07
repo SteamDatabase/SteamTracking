@@ -26,6 +26,9 @@
   max-width: 320px;
   max-height: 320px;
 }
+.shared_svg_library_HasHorizontalDirection_vnlCr:dir(rtl) {
+  scale: -1 1;
+}
 .shared_svg_library_EmoticonBow_2Llzt {
   position: absolute;
   top: -15px;
@@ -482,7 +485,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: row-reverse;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   flex-shrink: 0;
 }
 .friendsnooze_SnoozeContainer_1Dsum .friendsnooze_SnoozeZ_2n0Ei {
@@ -1443,19 +1446,19 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  inset-inline-end: 0;
   width: 2px;
 }
 .steamavatar_avatarStatus_3xUpb.right.GamepadMode,
 .GamepadMode .steamavatar_avatarStatus_3xUpb.right {
   width: 3px;
-  right: -3px;
+  inset-inline-end: -3px;
 }
 .steamavatar_avatarStatus_3xUpb.bottom {
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
   height: 2px;
 }
 .steamavatar_avatarStatus_3xUpb.bottom.GamepadMode,
@@ -1737,11 +1740,11 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .contextmenu_contextMenuItem_1n7Wl .SVGIcon_Button {
   height: 15px;
   width: 15px;
-  margin-right: 6px;
+  margin-inline-end: 6px;
 }
 .contextmenu_contextMenuItem_1n7Wl.contextmenu_SubMenu_2RlEO {
   display: flex;
-  padding-right: 2px;
+  padding-inline-end: 2px;
 }
 .contextmenu_contextMenuItem_1n7Wl.contextmenu_SubMenu_2RlEO
   .contextmenu_Label_2qdHl {
@@ -1750,7 +1753,8 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .contextmenu_contextMenuItem_1n7Wl.contextmenu_SubMenu_2RlEO
   .contextmenu_Arrow_114nF {
   flex: 0 0 auto;
-  margin: 0px 0px 0px 4px;
+  margin: 0px;
+  margin-inline-start: 4px;
 }
 .contextmenu_contextMenuItem_1n7Wl.contextmenu_SubMenu_2RlEO
   .SVGIcon_DownArrowContextMenu {
@@ -1760,15 +1764,19 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   fill: #9ca4a7;
   margin: 0px 3px;
 }
+.contextmenu_contextMenuItem_1n7Wl.contextmenu_SubMenu_2RlEO
+  .SVGIcon_DownArrowContextMenu:dir(rtl) {
+  transform: rotateZ(90deg);
+}
 .contextmenu_contextMenuItem_1n7Wl svg {
   height: 12px;
   width: 12px;
-  margin-right: 6px;
+  margin-inline-end: 6px;
 }
 .contextmenu_contextMenuItem_1n7Wl .SVGIcon_PlusCircle {
   height: 16px;
   width: 16px;
-  margin-left: -3px;
+  margin-inline-start: -3px;
   margin-bottom: -3px;
 }
 .contextmenu_contextMenuItem_1n7Wl .SVGIcon_PlusCircle line {
@@ -1782,15 +1790,15 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .contextmenu_contextMenuItem_1n7Wl .contextmenu_IconContainer_38-c8 {
   width: 16px;
   height: 16px;
-  margin-left: -4px;
+  margin-inline-start: -4px;
   margin-top: -4px;
   margin-bottom: -4px;
-  margin-right: 6px;
+  margin-inline-end: 6px;
 }
 .contextmenu_contextMenuItem_1n7Wl .contextmenu_IconContainer_38-c8 svg {
   width: 16px;
   height: 16px;
-  margin-right: 0px;
+  margin-inline-end: 0px;
 }
 .contextmenu_ContextMenuHRSeparator_IjIBR {
   box-sizing: border-box;
@@ -1805,7 +1813,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   background-color: #6dcff6;
   min-height: 1px;
   position: absolute;
-  left: -4px;
+  inset-inline-start: -4px;
   margin-top: 0px;
   display: none;
 }
@@ -1869,7 +1877,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   position: absolute;
   width: 60%;
   height: fit-content;
-  left: 100%;
+  inset-inline-start: 100%;
   top: 0;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
@@ -8413,7 +8421,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -8433,7 +8441,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   color: inherit;
 }
 .personanameandstatus_playerNickname_2saJT {
-  padding-left: 5px;
+  padding-inline-start: 5px;
   color: #666;
 }
 .personanameandstatus_playerNickname_2saJT.GamepadMode,
@@ -8456,21 +8464,21 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
-  padding-right: 6px;
-  margin-right: -6px;
+  padding-inline-end: 6px;
+  margin-inline-end: -6px;
 }
 .personanameandstatus_playerName_nOdcT.GamepadMode,
 .GamepadMode .personanameandstatus_playerName_nOdcT {
   -webkit-mask: none;
   mask: none;
-  padding-right: 2px;
-  margin-right: 0px;
+  padding-inline-end: 2px;
+  margin-inline-end: 0px;
 }
 .personanameandstatus_playerNicknameBracket_3XEmW {
   color: #999;
   font-size: 18px;
   display: inline-block;
-  margin-left: 1px;
+  margin-inline-start: 1px;
   opacity: 0.5;
   line-height: 16px;
 }
@@ -8507,7 +8515,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
     black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
-  padding-right: 24px;
+  padding-inline-end: 24px;
 }
 .BasicUI .personanameandstatus_richPresenceLabel_2Ri00 {
   display: block;
@@ -8555,7 +8563,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   width: 12px;
   height: 12px;
   margin-top: -3px;
-  margin-left: 3px;
+  margin-inline-start: 3px;
 }
 .personanameandstatus_partyBeaconJoin_3BnDs {
   font-weight: 800;
@@ -8570,7 +8578,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -8652,7 +8660,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -9143,7 +9151,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   margin-bottom: 4px;
 }
 .singlewindow .currentUserContainer .personanameandstatus_statusAndName_4ZTzG {
-  margin-right: 4px;
+  margin-inline-end: 4px;
 }
 .singlewindow
   .currentUserContainer
@@ -9156,7 +9164,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   .currentUserContainer
   .personanameandstatus_twoLine_1BbOe
   .personanameandstatus_statusAndName_4ZTzG {
-  margin-right: 48px;
+  margin-inline-end: 48px;
 }
 .friendRequests .bright .moMutualFriends .personanameandstatus_playerName_nOdcT,
 .friendRequests .personanameandstatus_playerName_nOdcT {
@@ -9237,7 +9245,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   width: 28px;
   height: 20px;
   margin-top: -3px;
-  margin-left: 0px;
+  margin-inline-start: 0px;
   display: inline-block;
 }
 .personanameandstatus_gameIsPrivateIcon_2gBKQ svg {
@@ -9251,7 +9259,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .personanameandstatus_PendingPersona_2sxXn {
   margin-top: -6px;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   display: inline-block;
 }
 .personanameandstatus_PendingPersona_2sxXn svg {
@@ -21360,6 +21368,119 @@ html:not(.touch)
   background-color: #ff0;
   border-radius: 50%;
   overflow: hidden;
+}
+.chatnotice_ChatNoticeCtn_3MakJ {
+  width: 100%;
+  box-shadow: 0px 4px 8px #000;
+  z-index: 2;
+}
+.chatnotice_ChatNoticeBody_2sTqA {
+  display: flex;
+  flex-direction: row;
+  background-color: #261c1a;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Icon_2l_uD {
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  flex-grow: 2;
+  max-width: 64px;
+}
+.chatnotice_ChatNoticeBody_2sTqA
+  .chatnotice_Icon_2l_uD.chatnotice_Danger_2FDiq
+  .SVGIcon_Caution
+  .exclamation
+  path {
+  fill: #f34c2b;
+}
+.chatnotice_ChatNoticeBody_2sTqA
+  .chatnotice_Icon_2l_uD.chatnotice_Danger_2FDiq
+  svg
+  line,
+.chatnotice_ChatNoticeBody_2sTqA
+  .chatnotice_Icon_2l_uD.chatnotice_Danger_2FDiq
+  svg
+  path {
+  stroke: #f34c2b;
+  fill: rgba(243, 76, 43, 0.267);
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Explanation_3rhEC {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 12px 0px;
+  flex: 1;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Explanation_3rhEC div {
+  margin-bottom: 6px;
+  user-select: none;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_Buttons_1MuKX {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 30px;
+  margin-inline-end: 30px;
+  justify-content: center;
+}
+.chatnotice_ChatNoticeActionButton_3uFJX {
+  background: none;
+  border: 1px solid rgba(55, 71, 82, 0.5);
+  color: #686e73;
+  white-space: nowrap;
+  padding: 6px 8px;
+  transition-property: color, border;
+  transition-duration: .32s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  margin: 2px;
+}
+.chatnotice_ChatNoticeActionButton_3uFJX:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationHeader_17ZEb {
+  font-size: 14px;
+  color: #f34c2b;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationBody_1Z7xU {
+  font-size: 12px;
+  color: #bb887e;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a {
+  align-self: flex-start;
+  font-size: 10px;
+  color: #e0b3aa;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px dotted rgba(187, 136, 126, 0.5);
+}
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a:hover,
+.chatnotice_ChatNoticeBody_2sTqA .chatnotice_ExplanationLinkCtn_1dEmZ a:focus {
+  color: #f3dcd7;
+  border-bottom: 1px dotted #bb887e;
+}
+.chatnotice_DismissButton_2_0Bf {
+  width: 14px;
+  height: 14px;
+  margin-inline-start: 8px;
+  margin-inline-end: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.chatnotice_DismissButton_2_0Bf .SVGIcon_X_Line line {
+  stroke: #71767f;
+  stroke-width: 30px;
+}
+.chatnotice_DismissButton_2_0Bf:hover .SVGIcon_X_Line line,
+.chatnotice_DismissButton_2_0Bf:focus .SVGIcon_X_Line line {
+  stroke: #fff;
+  stroke-width: 30px;
 }
 @keyframes pagedcontent_BackgroundAnimation_1XVbj {
   from {
@@ -38841,7 +38962,7 @@ button.DialogButton::-moz-focus-inner {
 .DialogInnerBody {
   flex: 1;
   overflow: auto;
-  padding-right: 2px;
+  padding-inline-end: 2px;
   padding-bottom: 16px;
 }
 .ModalDialogPopup .ModalDialogBody {
@@ -38936,7 +39057,7 @@ div.ModalPosition_Dismiss {
   flex-grow: initial;
   flex-shrink: initial;
   position: absolute;
-  right: 4px;
+  inset-inline-end: 4px;
   top: 4px;
   z-index: 1;
 }
@@ -39066,7 +39187,7 @@ div.ModalPosition_TopBar {
   color: #fff;
   flex-shrink: 0;
   user-select: none;
-  margin-right: 26px;
+  margin-inline-end: 26px;
   margin-bottom: 4px;
 }
 .DesktopUI .DialogHeader,
@@ -39087,7 +39208,7 @@ div.ModalPosition_TopBar {
   text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
-  margin-right: 26px;
+  margin-inline-end: 26px;
 }
 .SettingsDialogSubHeader {
   color: #8b929a;
@@ -39097,10 +39218,10 @@ div.ModalPosition_TopBar {
   line-height: 36px;
   text-transform: uppercase;
   user-select: none;
-  margin-right: 26px;
+  margin-inline-end: 26px;
 }
 .DialogContent_InnerWidth .DialogBody .DialogHeader {
-  margin-right: 0px;
+  margin-inline-end: 0px;
 }
 .DialogHeaderSubtitle {
   color: #6e7985;
@@ -39183,7 +39304,7 @@ div.ModalPosition_TopBar {
   display: flex;
   flex-direction: row;
   padding: 4px;
-  padding-left: 12px;
+  padding-inline-start: 12px;
   margin-bottom: 6px;
   justify-content: space-between;
   flex-shrink: 0;
@@ -39218,7 +39339,7 @@ div.ModalPosition_TopBar {
 }
 .disabledNotice {
   color: rgba(184, 156, 80, 0.75);
-  margin-left: 4px;
+  margin-inline-start: 4px;
 }
 .DialogLabelExplainer {
   text-transform: none;
@@ -39235,11 +39356,11 @@ div.ModalPosition_TopBar {
   padding: 10px;
 }
 .DialogLabelExplainer.Left {
-  text-align: left;
+  text-align: start;
 }
 .DialogInputRequirementLabel {
   color: #c15755;
-  margin-left: 15px;
+  margin-inline-start: 15px;
 }
 .DialogRequirementLabel {
   color: #c15755;
@@ -39277,7 +39398,7 @@ div.ModalPosition_TopBar {
 .DialogTextInputBase:focus-within {
   background: rgba(67, 73, 83, 0.6);
   box-shadow: inset 1px 1px 8px #000a;
-  padding-left: 11px;
+  padding-inline-start: 11px;
 }
 .DialogTextInputBase:not(:disabled):hover {
   background: rgba(67, 73, 83, 0.6);
@@ -39286,7 +39407,7 @@ div.ModalPosition_TopBar {
 .DialogTextInputBase:focus-within {
   background: #23262e;
   box-shadow: inset 1px 1px 4px #000a;
-  padding-left: 11px;
+  padding-inline-start: 11px;
 }
 .DialogTextInputBase:disabled:hover {
   background: rgba(67, 73, 83, 0.3);
@@ -39303,7 +39424,7 @@ div.ModalPosition_TopBar {
   display: flex;
   justify-content: space-between;
   padding: 6px;
-  padding-left: 12px;
+  padding-inline-start: 12px;
 }
 .DialogToggleField.Disabled .DialogToggle_Label,
 .DialogToggleField.Disabled .DialogToggle_Description {
@@ -39315,7 +39436,7 @@ div.ModalPosition_TopBar {
 .DialogTextInputBase.inviteURLLink {
   padding: 0 12px;
   background: #30353b;
-  margin-right: 4px;
+  margin-inline-end: 4px;
   flex-grow: 4;
   box-shadow: inset 0px 0px 4px #0006;
   border: .5px solid rgba(139, 153, 170, 0.4);
@@ -39328,7 +39449,7 @@ div.ModalPosition_TopBar {
 .InviteLinksTable .DialogInput {
   padding: 5px;
   margin: 5px;
-  margin-right: 30px;
+  margin-inline-end: 30px;
 }
 .DialogInput_Wrapper {
   display: flex;
@@ -39347,12 +39468,11 @@ button.DialogButton:focus {
 }
 button.DialogButton.DialogInput_CopyAction {
   width: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-inline: 16px;
 }
 .DialogInput_ClearAction {
   position: absolute;
-  right: 12px;
+  inset-inline-end: 12px;
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -39488,7 +39608,7 @@ button.TextButton {
 }
 button.TextButton .SVGIcon_Button {
   transition: opacity .2s ease-in-out;
-  margin-right: 2px;
+  margin-inline-end: 2px;
 }
 button.TextButton:hover,
 button.TextButton.gpfocus {
@@ -39502,7 +39622,7 @@ button.TextButton.gpfocus {
   width: 24px;
   height: 24px;
   vertical-align: middle;
-  margin-right: 2px;
+  margin-inline-end: 2px;
 }
 .DialogButton:disabled .SVGIcon_Button,
 .DialogButton.Disabled .SVGIcon_Button {
@@ -39515,7 +39635,7 @@ button.TextButton.gpfocus {
   justify-content: center;
 }
 .DialogToggleField_Control {
-  float: right;
+  float: inline-end;
   position: relative;
   line-height: 30px;
   overflow: hidden;
@@ -39529,7 +39649,7 @@ button.TextButton.gpfocus {
   user-select: none;
   align-self: flex-start;
   flex-shrink: 0;
-  margin-left: 6px;
+  margin-inline-start: 6px;
 }
 .DialogToggleField_OptionPanel {
   display: flex;
@@ -39595,7 +39715,7 @@ button.TextButton.gpfocus {
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  text-align: left;
+  text-align: start;
   font-size: inherit;
   font-family: inherit;
   margin: 0;
@@ -39631,7 +39751,7 @@ button.TextButton.gpfocus {
   height: 1em;
   width: 1em;
   top: 14px;
-  right: 10px;
+  inset-inline-end: 10px;
 }
 .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
   padding-top: 2px;
@@ -39721,11 +39841,15 @@ button.TextButton.gpfocus {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+.DialogSlider_Value:dir(rtl) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .DialogSlider_Grabber {
   position: absolute;
   top: -1px;
   bottom: -3px;
-  margin-left: -6px;
+  margin-inline-start: -6px;
   width: 12px;
   height: 12px;
   background: linear-gradient(to bottom, #89e7ff 0%, #80aaff 80%);
@@ -39751,6 +39875,10 @@ button.TextButton.gpfocus {
   width: 0px;
   transition: width .2s linear;
 }
+.DialogProgressBar_Value:dir(rtl) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 .DialogListBuilderInput_List {
   display: flex;
   flex-wrap: wrap;
@@ -39773,7 +39901,7 @@ button.TextButton.gpfocus {
 }
 .DialogSpanningTable th {
   font-weight: normal;
-  text-align: left;
+  text-align: start;
   font-size: 12px;
   height: 20px;
   text-transform: uppercase;
@@ -39787,17 +39915,17 @@ button.TextButton.gpfocus {
   background-color: #393d46;
 }
 .DialogSpanningTable td.friendCell {
-  padding-left: 4px;
+  padding-inline-start: 4px;
   padding-top: 4px;
   padding-bottom: 4px;
 }
 .DialogSpanningTable td.dateCell {
-  text-align: left;
+  text-align: start;
   font-size: 14px;
 }
 .DialogSpanningTable td.buttonCell {
-  padding-left: 5px;
-  padding-right: 10px;
+  padding-inline-start: 5px;
+  padding-inline-end: 10px;
 }
 .BannedUsersTable th.friendColumn,
 .InvitedUsersTable th.friendColumn {
@@ -39822,7 +39950,7 @@ button.TextButton.gpfocus {
 }
 .DialogSpanningTable th.tableAlignRight,
 .DialogSpanningTable td.tableAlignRight {
-  text-align: right;
+  text-align: end;
 }
 .DialogCheckbox_Container {
   cursor: pointer;
@@ -39830,8 +39958,8 @@ button.TextButton.gpfocus {
   margin-bottom: 8px;
 }
 .DialogCheckbox_Container .DialogCheckbox {
-  float: left;
-  margin-right: 8px;
+  float: inline-start;
+  margin-inline-end: 8px;
 }
 .DialogCheckbox {
   width: 22px;
@@ -39848,7 +39976,7 @@ button.TextButton.gpfocus {
   width: 18px;
   height: 18px;
   margin-top: 9%;
-  margin-left: 12%;
+  margin-inline-start: 12%;
 }
 .DialogCheckbox .SVGIcon_DialogCheck path {
   stroke-width: 40px;
@@ -39938,7 +40066,7 @@ button.TextButton.gpfocus {
   margin-bottom: 8px;
 }
 .DialogRoundCheckboxField_Container.WithLabel .DialogRoundCheckboxField {
-  margin-right: 6px;
+  margin-inline-end: 6px;
 }
 .DialogRoundCheckboxField_Container .DialogToggle_Label {
   overflow: hidden;
@@ -40029,7 +40157,7 @@ body.in_global_drag .title-area {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-right: 2px;
+  margin-inline-end: 2px;
   max-height: 24px;
   -webkit-app-region: no-drag;
   pointer-events: auto;
@@ -40109,26 +40237,26 @@ body.in_global_drag .title-area {
   height: 100%;
 }
 .title-area-children {
-  text-align: right;
+  text-align: end;
   flex-grow: 1;
 }
 .title-area-icon .SVGIcon_Minimize {
   width: 14px;
   height: 14px;
   margin-top: -2px;
-  margin-left: 4px;
+  margin-inline-start: 4px;
 }
 .title-area-icon .SVGIcon_Maximize {
   width: 14px;
   height: 14px;
   margin-top: -2px;
-  margin-left: 4px;
+  margin-inline-start: 4px;
 }
 .title-area-icon .SVGIcon_X_Line {
   width: 14px;
   height: 14px;
   margin-top: -2px;
-  margin-left: 4px;
+  margin-inline-start: 4px;
 }
 .title-area-icon .SVGIcon_X_Line line {
   stroke: #788a92;
@@ -40152,7 +40280,7 @@ body.in_global_drag .title-area {
   height: 24px;
   opacity: 0.3;
   position: fixed;
-  right: 0px;
+  inset-inline-end: 0px;
   bottom: 0px;
   z-index: 1000;
 }
@@ -40168,8 +40296,8 @@ body.in_global_drag .title-area {
 .DialogBodyNotificationBar svg {
   height: 13px;
   width: 13px;
-  margin-left: 0px;
-  margin-right: 2px;
+  margin-inline-start: 0px;
+  margin-inline-end: 2px;
   margin-top: 2px;
 }
 .DialogBodyNotificationBar .SVGIcon_Lock .topLock {
@@ -40256,7 +40384,7 @@ body.in_global_drag .title-area {
   transform: translate(-50%, -50%);
 }
 .throbber > div {
-  float: left;
+  float: inline-start;
   width: 25%;
   height: 100%;
   background-color: #67c1f5;
@@ -40266,12 +40394,12 @@ body.in_global_drag .title-area {
   transform: scaleX(1) scaleY(0.6);
 }
 .throbber > div:nth-child(2) {
-  margin-left: 12%;
+  margin-inline-start: 12%;
   transform: scaleX(1) scaleY(0.6);
   animation-delay: .16s;
 }
 .throbber > div:nth-child(3) {
-  margin-left: 12%;
+  margin-inline-start: 12%;
   transform: scaleX(1) scaleY(0.6);
   animation-delay: .32s;
 }
@@ -40391,7 +40519,7 @@ body.in_global_drag .title-area {
 .DesktopUI .title-bar-actions,
 .friendsui-container .title-bar-actions {
   max-height: 32px;
-  right: 0;
+  inset-inline-end: 0;
   cursor: default;
 }
 .DesktopUI .title-area-icon .SVGIcon_Minimize,
@@ -40487,7 +40615,7 @@ body.in_global_drag .title-area {
 }
 .friendsui-container .OSX .title-bar-actions,
 .DesktopUI .OSX .title-bar-actions.window-controls {
-  margin-left: 8px;
+  margin-inline-start: 8px;
   order: 1;
   justify-content: flex-end;
 }
@@ -40498,22 +40626,22 @@ body.in_global_drag .title-area {
 .friendsui-container .OSX .title-bar-actions.extra-actions,
 .DesktopUI .OSX .title-bar-actions.extra-actions {
   order: 3;
-  margin-right: 8px;
+  margin-inline-end: 8px;
 }
 .DesktopUI .PopupFullWindow .OSX .title-bar-actions {
   padding: 0;
-  margin-left: 8px;
+  margin-inline-start: 8px;
 }
 .friendsui-container .title-area .title-bar-actions,
 .DesktopUI .title-area .title-bar-actions {
-  margin-right: 0px;
+  margin-inline-end: 0px;
 }
 #dota_react_root .ModalPosition_TopBar {
   height: 3px;
   background: #ff6046;
 }
 #dota_react_root .ModalPosition_Dismiss {
-  right: 20px;
+  inset-inline-end: 20px;
   top: 20px;
 }
 #dota_react_root .ModalPosition_Dismiss .closeButton {
@@ -45928,88 +46056,6 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .workshopItemControlCtn {
   z-index: 1;
 }
-.NotAFriendMessage {
-  width: 100%;
-  box-shadow: 0px 4px 8px #000;
-  z-index: 2;
-}
-.NotAFriendBody {
-  display: flex;
-  flex-direction: row;
-  background-color: #261c1a;
-}
-.NotAFriendBody .Exclamation {
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  flex-grow: 2;
-  max-width: 64px;
-}
-.NotAFriendBody .Exclamation .SVGIcon_Caution .exclamation path {
-  fill: #f34c2b;
-}
-.NotAFriendBody .Exclamation .SVGIcon_Caution line,
-.NotAFriendBody .Exclamation .SVGIcon_Caution path {
-  stroke: #f34c2b;
-  fill: rgba(243, 76, 43, 0.267);
-}
-.NotAFriendBody .Explanation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 12px 0px;
-  flex: 1;
-}
-.NotAFriendBody .Explanation div {
-  margin-bottom: 6px;
-  user-select: none;
-}
-.NotAFriendBody .ExplanationBody {
-  font-size: 13px;
-}
-.NotAFriendBody .Buttons {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-  margin-right: 30px;
-  justify-content: center;
-}
-.NotAFriendActionButton {
-  background: none;
-  border: 1px solid rgba(55, 71, 82, 0.5);
-  color: #686e73;
-  white-space: nowrap;
-  padding: 6px 8px;
-  transition-property: color, border;
-  transition-duration: .32s;
-  transition-timing-function: ease-in-out;
-  cursor: pointer;
-  margin: 2px;
-}
-.NotAFriendActionButton:hover {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.NotAFriendBody .ExplanationHeader {
-  font-size: 14px;
-  color: #f34c2b;
-}
-.NotAFriendBody .ExplanationBody {
-  font-size: 12px;
-  color: #bb887e;
-}
-.NotAFriendBody .ExplanationMoreInfo {
-  align-self: flex-start;
-  font-size: 10px;
-  color: #e0b3aa;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-bottom: 1px dotted rgba(187, 136, 126, 0.5);
-}
-.NotAFriendBody .ExplanationMoreInfo:hover {
-  color: #f3dcd7;
-  border-bottom: 1px dotted #bb887e;
-}
 .NotAFriendOrApproved .BBCodeYouTubeComponent,
 .NotAFriendOrApproved .chatImageContainer {
   overflow: hidden;
@@ -47514,7 +47560,8 @@ a.connectionStatus:visited {
 .errorDisconnected .inviteAnotherFriendButton {
   display: none;
 }
-.NotAFriendOrApproved .inviteAnotherFriendButton {
+.NotAFriendOrApproved .inviteAnotherFriendButton,
+.SuspiciousChat .inviteAnotherFriendButton {
   display: none;
 }
 .SingleUserChat.VoiceRequested .inviteAnotherFriendButton,

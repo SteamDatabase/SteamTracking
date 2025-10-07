@@ -473,12 +473,6 @@
         Asset: "wLZ--JfeYIRMVdNYM_o9S",
         Deadline: "LiOZUtVRwcRzYVm8YmxqK",
         CustomMessage: "_1GbC2xgFQmWT5i-ZjY1z-z",
-        ChecklistTitleCtn: "_2at5P6b_uN8GXPKkNX0-PC",
-        ChecklistTitle: "_1dnpjLV_MWr7i8W5iTlqUY",
-        Required: "_28FR7Dlej-1JMcWXCRAKaa",
-        Optional: "_24ZWqTDTI_Dh-S4NM5C-Na",
-        Completed: "_32heBTmctlIP57GpmXGOPM",
-        ChecklistDescription: "_1hBXnQ2KH1N571c49o1a-e",
         InstructionsTextInput: "_33qrxIXyEBGd_4SYlgINpa",
         OptionalToggle: "_35eGeoERKBtEL_ZdR4svDf",
         SubmitButton: "_1SeDTJwMXlTMLLf2zBlrG0",
@@ -495,7 +489,16 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Link: "xXdUXMPgihLl7s4kU295_",
+        ChecklistBlockCtn: "_3JIk1FIcjoEJFd3x3BAB7a",
+        ChecklistTitleCtn: "_3jLRmBRYM2zp0GBExgTe_b",
+        ChecklistTitle: "_5pukXOXKC559jHyOPAs2d",
+        Required: "_3xsT4cy7AixqFEWjNIHRr-",
+        Optional: "_20Zmbh1OJPC8Bb31QMs2nc",
+        Completed: "JODC0HFbZwDYnKmdsiTj-",
+        RequiredToggle: "_3pfZe-4JA-BV6hSnQylWp3",
+        OptionalToggle: "mwWQ_a1CqYddI-u33zPas",
+        ChecklistDescription: "_1QNiBtVNldxev09B4dguBm",
+        AgreementAcceptedBlock: "_7HWItfZUjFe6k7eclYsLi",
       };
     },
     chunkid: (module) => {
@@ -1383,6 +1386,7 @@
         SectionLabelCtn: "v7Xo47-E5cR6b-rvcmp-H",
         SectionLabelRight: "_3Vww38pO7uZXdih9MxhSkH",
         SectionLabelLinkButton: "_2DdLjM_1-DDJlVf9qhMXB3",
+        SectionLabelImage: "_1Q2-i1fYiu8X3t8fCAo1YJ",
         SectionTitleInnerCtn: "_2s_hQYvfnrZrKaBO-URg89",
       };
     },
@@ -1987,6 +1991,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           isInvalid: !1,
@@ -2438,6 +2443,20 @@
           return (
             _ < this.m_oTemplateVars.localized_alt_text?.length &&
             Boolean(this.m_oTemplateVars.localized_alt_text[_]?.length > 0)
+          );
+        }
+        GetAccountReviewMajorUpdate() {
+          return this.m_oAdditionalRestrictions
+            .major_update_ticket_reviewed_accountid;
+        }
+        GetTimeReviewMajorUpdate() {
+          return this.m_oAdditionalRestrictions
+            .major_update_ticket_reviewed_rtime;
+        }
+        BHasReviewedMajorUpdateAndMeetsBar() {
+          return Boolean(
+            this.m_oAdditionalRestrictions
+              .major_update_ticket_reviewed_and_meets_bar,
           );
         }
         BHasPlatformWindows() {
@@ -3106,6 +3125,22 @@
             (this.m_oTemplateVars.update_event_clan_accountid = void 0),
             this.Dispatch());
         }
+        SetUpdateEventReviewAndMeetsBar(_) {
+          _
+            ? ((this.m_oAdditionalRestrictions.major_update_ticket_reviewed_and_meets_bar =
+                !0),
+              (this.m_oAdditionalRestrictions.major_update_ticket_reviewed_accountid =
+                _._.accountid),
+              (this.m_oAdditionalRestrictions.major_update_ticket_reviewed_rtime =
+                Math.floor(new Date().getTime() / 1e3)))
+            : ((this.m_oAdditionalRestrictions.major_update_ticket_reviewed_and_meets_bar =
+                !1),
+              (this.m_oAdditionalRestrictions.major_update_ticket_reviewed_accountid =
+                void 0),
+              (this.m_oAdditionalRestrictions.major_update_ticket_reviewed_rtime =
+                void 0)),
+            this.Dispatch();
+        }
         RevertChanges() {
           this.Reset(JSON.parse(JSON.stringify(this.m_originalMessage))),
             this.m_callback.Dispatch(this);
@@ -3175,6 +3210,7 @@
         (0, _._)([_._], _.prototype, "SetAltText", null),
         (0, _._)([_._], _.prototype, "SetUpdateEvent", null),
         (0, _._)([_._], _.prototype, "ClearUpdateEvent", null),
+        (0, _._)([_._], _.prototype, "SetUpdateEventReviewAndMeetsBar", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null),
         (0, _._)([_._.bound], _.prototype, "Dispatch", null);
     },
@@ -4685,7 +4721,7 @@
           case "takeunder_desktop":
             return "Takeunder Banner";
           case "takeunder_mobile":
-            return "Takeunder Bannerr Mobile";
+            return "Takeunder Banner Mobile";
         }
       }
       function _(_) {
@@ -10563,7 +10599,7 @@
       const _ = {
         include_release: !0,
       };
-      function _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) {
+      function _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _) {
         const _ = (0, _._)(_, _),
           _ = (0, _._)(_),
           _ = Boolean(_?.startsWith("steam://open/"));
@@ -10600,6 +10636,7 @@
             bUpdateEventLive: _?.BIsVisibleEvent(),
             bRequireAltText: "mm_auto_render" != _ && !_?.startsWith("replay"),
             bAltTextEntered: _?.[0]?.trim().length > 0,
+            bReviewMajorUpdateMeetsBar: _,
           }
         );
       }
@@ -10620,36 +10657,56 @@
           bUpdateEventLive: !1,
           bRequireAltText: !1,
           bAltTextEntered: !1,
+          bReviewMajorUpdateMeetsBar: !1,
         };
       }
       function _(_) {
         const _ = (0, _._)(_),
-          [__webpack_require__, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] =
-            (0, _._)(() => [
-              _?.GetVisibilty(),
-              _?.GetStartRTime(),
-              _?.GetEndRTime(),
-              _?.GetStoreItemID(),
-              _?.GetUserMessageFilterCount(),
-              _?.BIsNoFilterRequired(),
-              _?.GetLinkURL(),
-              _?.GetRealm(),
-              _?.GetButtonToken(),
-              _?.BExplicitNoAssociationItem(),
-              _?.BHasLegalLinePartner() ||
-                _?.BExplicitNoLegalPartnerNeeded() ||
-                _?.BUseCustomLegalText(),
-              _?.GetType(),
-              _?.GetUpdateEventClanAccountID(),
-              _?.GetUpdateEventGID(),
-              _?.GetCustomTemplate(),
-              _?.GetAllAltLocalizedText(),
-            ]),
+          [
+            __webpack_require__,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ] = (0, _._)(() => [
+            _?.GetVisibilty(),
+            _?.GetStartRTime(),
+            _?.GetEndRTime(),
+            _?.GetStoreItemID(),
+            _?.GetUserMessageFilterCount(),
+            _?.BIsNoFilterRequired(),
+            _?.GetLinkURL(),
+            _?.GetRealm(),
+            _?.GetButtonToken(),
+            _?.BExplicitNoAssociationItem(),
+            _?.BHasLegalLinePartner() ||
+              _?.BExplicitNoLegalPartnerNeeded() ||
+              _?.BUseCustomLegalText(),
+            _?.GetType(),
+            _?.GetUpdateEventClanAccountID(),
+            _?.GetUpdateEventGID(),
+            _?.GetCustomTemplate(),
+            _?.GetAllAltLocalizedText(),
+            _?.BHasReviewedMajorUpdateAndMeetsBar(),
+          ]),
           { eventModel: _ } = (0, _._)(_, _, !0),
           [_, _] = (0, _._)((0, _._)(_), (0, _._)(_), _);
         return _?.GetGID() == _
           ? _(
               __webpack_require__,
+              _,
               _,
               _,
               _,
@@ -10684,7 +10741,7 @@
             _((0, _._)(_.template_vars_json)),
             _((0, _._)(_, _.additional_restrictions_json)));
         }, [_, _, _]);
-        const [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
+        const [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
             () => [
               _?.visibility,
               _?.start_date,
@@ -10704,12 +10761,13 @@
               _?.update_event_gid,
               _?.custom_display,
               _?.localized_alt_text,
+              _?.major_update_ticket_reviewed_and_meets_bar,
             ],
           ),
           [_, _] = (0, _._)((0, _._)(_), (0, _._)(_), _),
           { eventModel: _ } = (0, _._)(_, _);
         return origin
-          ? _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _)
+          ? _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _)
           : _();
       }
       function _(_) {
@@ -11402,6 +11460,12 @@
         GetStoreItemID() {
           return this.m_oInput.requested_store_item_id;
         }
+        GetEventCreateAccountID() {
+          return this.m_oInput.account_id_linked_event;
+        }
+        GetEventCreateRTime() {
+          return this.m_oInput.rtime_linked_event;
+        }
         GetPreviewArt() {
           return this.m_oInput.preview_art;
         }
@@ -11745,11 +11809,13 @@
           this.m_oInput.content_hub_takeover != _ &&
             ((this.m_oInput.content_hub_takeover = _), this.Dispatch());
         }
-        SetUpdateEvent(_, _) {
+        SetUpdateEvent(_, _, _, _) {
           (this.m_oInput.update_event_clan_account_id == _ &&
             this.m_oInput.update_event_gid == _) ||
             ((this.m_oInput.update_event_clan_account_id = _),
             (this.m_oInput.update_event_gid = _),
+            (this.m_oInput.account_id_linked_event = _),
+            (this.m_oInput.rtime_linked_event = _),
             this.Dispatch());
         }
         RevertChanges() {
@@ -12535,7 +12601,7 @@
             ? this.m_oPromotionPlan.marketing_message_ids[_]
             : null;
         }
-        GetAllMarketingMessageID(_) {
+        GetAllMarketingMessageID() {
           return this.m_oPromotionPlan.marketing_message_ids?.length > 0
             ? this.m_oPromotionPlan.marketing_message_ids
             : [];
@@ -31867,7 +31933,7 @@
                 ));
               break;
             case _._.k_MeasureResults:
-              (_ = "MEASURING YOUR RESULTS"),
+              (_ = "Measuring Your Results"),
                 (_ = _.createElement(
                   _.Fragment,
                   null,
@@ -31926,7 +31992,7 @@
                 ));
               break;
             case _._.k_MeasureResultsNextFest:
-              (_ = "MEASURING YOUR RESULTS"),
+              (_ = "Measuring Your Results"),
                 (_ = _.createElement(
                   _.Fragment,
                   null,
@@ -31940,7 +32006,7 @@
                 ));
               break;
             case _._.k_MeasureResultsFree:
-              (_ = "MEASURING YOUR RESULTS"),
+              (_ = "Measuring Your Results"),
                 (_ = _.createElement(
                   _.Fragment,
                   null,
@@ -32014,7 +32080,7 @@
                 ));
               break;
             case _._.k_EnterDiscount:
-              (_ = "DISCOUNT"),
+              (_ = "Discount"),
                 (_ = _.createElement(
                   "div",
                   null,
@@ -32055,7 +32121,7 @@
                 ));
               break;
             case _._.k_EnterDiscountReminder:
-              (_ = "DISCOUNT"),
+              (_ = "Discount"),
                 (_ = _.createElement(
                   "div",
                   null,
@@ -32365,7 +32431,7 @@
                 ));
               break;
             case _._.k_NextFestMediaUsageIntended:
-              (_ = "OFFICIAL TRAILER AND/OR LIVESTREAM"),
+              (_ = "Official Trailer and/or Livestream"),
                 (_ = _.createElement(
                   _.Fragment,
                   null,
@@ -32609,7 +32675,7 @@
                 ));
               break;
             case _._.k_NextFestMediaUsageIntendedLivestream:
-              (_ = "WE NEED TO KNOW IF YOU ARE STILL IN"),
+              (_ = "We Need To Know If You Are Still In"),
                 (_ = _.createElement(
                   _.Fragment,
                   null,
@@ -32719,7 +32785,7 @@
                 ));
               break;
             case _._.k_NextFestTopGameWrapUp:
-              (_ = "YOUR DEMO WAS ONE OF THE MOST PLAYED!"),
+              (_ = "Your Demo Was One of the Most Played!"),
                 (_ = _.createElement(
                   _.Fragment,
                   null,
@@ -41298,8 +41364,17 @@
         const { bShowPruningCriteria: _ } = _,
           _ = (0, _._)("optin_eligibility_criteria", "application_config"),
           [_, _] = (function (_, _) {
-            const [_, _] = _.useState(window.localStorage.getItem(_)),
-              _ = _.useRef(_);
+            const [_, _] = _.useState(() => window.localStorage.getItem(_)),
+              _ = _.useRef(_),
+              _ = _.useCallback(
+                (_) => {
+                  const _ = _(_) ? String(_) : null;
+                  window.localStorage.setItem(_, _),
+                    _(_),
+                    _.Get().GetLocalStoreChangeCallback(_).Dispatch(_);
+                },
+                [_, _],
+              );
             _.useEffect(() => {
               _ != _.current &&
                 (_(window.localStorage.getItem(_)), (_.current = _));
@@ -41314,15 +41389,7 @@
                     : _.constructor(_)
                   : _),
               (0, _._)(_.Get().GetLocalStoreChangeCallback(_), _),
-              [
-                _,
-                (_) => {
-                  const _ = _(_) ? String(_) : null;
-                  window.localStorage.setItem(_, _),
-                    _(_),
-                    _.Get().GetLocalStoreChangeCallback(_).Dispatch(_);
-                },
-              ]
+              [_, _]
             );
           })(_, !1);
         return _ && _?.length > 1
@@ -45105,12 +45172,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(() => _(_)),
           [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(null),
           _ = (0, _.useCallback)(
             (_) => {
               const _ = _.target.files?.[0];
@@ -45130,7 +45201,13 @@
                     }
                   });
                 } catch (_) {
-                  console.error("Failed to read or parse JSON:", _);
+                  const _ = (0, _._)(_);
+                  console.error(
+                    "Failed to read or parse JSON:",
+                    _,
+                    _.strErrorMsg,
+                  ),
+                    _(_.strErrorMsg);
                 } finally {
                   _(!1);
                 }
@@ -45189,6 +45266,23 @@
                     },
                   },
                   "Export JSON",
+                ),
+              ),
+              _.createElement(
+                _._,
+                {
+                  active: Boolean(_),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    strTitle: "Error Importing Localization JSON",
+                    strDescription: "Error from parsing JSON:",
+                    bAlertDialog: !0,
+                    closeModal: () => _(null),
+                  },
+                  _.createElement("hr", null),
+                  _.createElement("p", null, _),
                 ),
               ),
               _.createElement(_._, {
@@ -45918,6 +46012,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
@@ -45964,10 +46059,17 @@
                   "Marketing Message - Partner Asset Request",
                 ),
                 _.createElement("hr", null),
-                Boolean(__webpack_require__?.BHasPlanAssetRequestGID())
-                  ? _.createElement(_._, {
-                      bShowLinkToPromotionPlan: !0,
-                    })
+                Boolean(_)
+                  ? _.createElement(
+                      _._,
+                      {
+                        planid: _,
+                        bForceReload: !0,
+                      },
+                      _.createElement(_._, {
+                        bShowLinkToPromotionPlan: !0,
+                      }),
+                    )
                   : _.createElement(_, {
                       oEditableMessage: _,
                     }),
@@ -46650,7 +46752,8 @@
         const { planIdentify: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = (0, _._)(() => _?.GetPartnerID());
+          _ = (0, _._)(() => _?.GetPartnerID()),
+          _ = _.permitted_partner_id || _;
         return _.createElement(
           "div",
           {
@@ -46669,8 +46772,19 @@
               },
               "Promotion Plan Link",
             ),
+            _.createElement("br", null),
+            _?.GetAllMarketingMessageID().map((_, _) =>
+              _.createElement(
+                "a",
+                {
+                  key: `mm_${_}`,
+                  href: `${_._.PARTNER_BASE_URL}dashboard/${_}?eventids=${_}`,
+                },
+                "Open MM on Partner Dashboard",
+              ),
+            ),
             _.createElement(_._, {
-              nPartnerID: _.permitted_partner_id || _,
+              nPartnerID: _,
               showPartnerUnsetWarning: !0,
             }),
             Boolean(__webpack_require__.GetSubmittingAccount()) &&
@@ -47862,8 +47976,411 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          bCompleted: _,
+          bRequired: __webpack_require__,
+          title: _,
+          children: _,
+          bSkipOptional: _,
+        } = _;
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().ChecklistBlockCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().ChecklistTitleCtn,
+              },
+              _
+                ? _.createElement(
+                    "span",
+                    {
+                      className: _().Completed,
+                    },
+                    "✓ ",
+                  )
+                : __webpack_require__
+                  ? _.createElement("div", {
+                      className: _().RequiredToggle,
+                    })
+                  : _.createElement("div", {
+                      className: _().OptionalToggle,
+                    }),
+              _.createElement(
+                "span",
+                {
+                  className: _().ChecklistTitle,
+                },
+                _,
+              ),
+              !_ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: (0, _._)({
+                      [_().Required]: __webpack_require__,
+                      [_().Optional]: !__webpack_require__,
+                    }),
+                  },
+                  " ",
+                  (0, _._)(
+                    __webpack_require__
+                      ? "#AssetRequest_General_Upload_req"
+                      : "#AssetRequest_General_Upload_opt",
+                  ),
+                ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().ChecklistDescription,
+              },
+              _,
+            ),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          [__webpack_require__, _, _, _, _] = (0, _._)(() => [
+            _.GetUpdateEventGID(),
+            _.GetStoreItemType(),
+            _.GetStoreItemID(),
+            _.GetEventCreateAccountID(),
+            _.GetEventCreateRTime(),
+          ]);
+        return 0 != _
+          ? _.createElement(
+              "div",
+              null,
+              "Error wrong store item type assocatiated, please reach out to Steam Contact",
+            )
+          : _.createElement(
+              _,
+              {
+                bCompleted: Boolean(__webpack_require__),
+                title: (0, _._)("#AssetRequest_UpdateAnnouncement"),
+                bRequired: !0,
+              },
+              Boolean(__webpack_require__)
+                ? _.createElement(
+                    "div",
+                    null,
+                    _.createElement(
+                      "div",
+                      null,
+                      (0, _._)(
+                        "#AssetRequest_EventLinked_Desc",
+                        _.createElement("a", {
+                          target: "_blank",
+                          href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents/edit/${__webpack_require__}`,
+                        }),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().AgreementAcceptedBlock,
+                      },
+                      (0, _._)("#AssetRequest_EventRuleAccepted"),
+                      _.createElement(_._, {
+                        accountID: _,
+                      }),
+                      _.createElement(_._, {
+                        dateAndTime: _,
+                      }),
+                      _.createElement(_, null),
+                    ),
+                    _._.is_support && _.createElement(_, null),
+                  )
+                : _.createElement(
+                    "div",
+                    null,
+                    (0, _._)(
+                      "#AssetRequest_UpdateAnnouncement_desc",
+                      _.createElement("a", {
+                        href:
+                          _._.PARTNER_BASE_URL +
+                          "doc/store/assets/promos#popup_update",
+                      }),
+                    ),
+                    _.createElement(_, null),
+                  ),
+            );
+      }
+      function _(_) {
+        const [_, __webpack_require__, _] = (0, _._)();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              onClick: __webpack_require__,
+            },
+            (0, _._)("#AssetRequest_CreateEvent_ReadRules"),
+          ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(
+              _._,
+              {
+                bAlertDialog: !0,
+                closeModal: _,
+              },
+              _.createElement(_, null),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__, _] = (0, _._)();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              onClick: __webpack_require__,
+            },
+            (0, _._)("#AssetRequest_CreateEvent_Title"),
+          ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_, {
+              closeModal: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { closeModal: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(!1),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)();
+        return _.bLoading
+          ? _.createElement(_._, {
+              state: _,
+              strDialogTitle: (0, _._)("#AssetRequest_CreateEvent_Title"),
+              closeModal: _,
+            })
+          : _.createElement(
+              _._,
+              {
+                strTitle: (0, _._)("#AssetRequest_CreateEvent_Title"),
+                strDescription: (0, _._)("#AssetRequest_CreateEvent_Desc"),
+                strOKButtonText: (0, _._)("#Sale_New_CreateEvent"),
+                onCancel: _,
+                onOK: async () => {
+                  if ((_.fnSetLoading(!0), _))
+                    _.SetUpdateEvent(1, "fakegiddonnotsave", _._.accountid, _),
+                      _.fnSetSuccess(!0);
+                  else {
+                    const _ = await (async function (_, _) {
+                      const _ = new FormData();
+                      __webpack_require__.append("sessionid", _._.SESSIONID),
+                        __webpack_require__.append("gid_promotionplan", _);
+                      const _ =
+                        _._.PARTNER_BASE_URL +
+                        "partnerevents/ajaxcreatemarketingmessagemajorevent";
+                      try {
+                        const _ = await _().post(_, _, {
+                          withCredentials: !0,
+                        });
+                        if (1 == _?.data?.success) return _.data;
+                        console.error(
+                          "OnSubmitCreateMarketingMessageMajorUpdate error code  " +
+                            _?.data?.success +
+                            " msg: " +
+                            _?.data?.msg,
+                        ),
+                          _.fnSetStrError(_?.data?.msg),
+                          _.fnSetError(!0);
+                      } catch (_) {
+                        const _ = (0, _._)(_);
+                        console.error(
+                          "OnSubmitCreateMarketingMessageMajorUpdate " +
+                            _.strErrorMsg,
+                          _,
+                        ),
+                          _.fnSetStrError(_.strErrorMsg),
+                          _.fnSetError(!0);
+                      }
+                      return null;
+                    })(_.GetPlanID(), _);
+                    _ &&
+                      (_.SetUpdateEvent(
+                        _.clan_account_id,
+                        _.clan_event_gid,
+                        _._.accountid,
+                        _,
+                      ),
+                      _.fnSetSuccess(!0));
+                  }
+                },
+                bOKDisabled: !__webpack_require__,
+              },
+              _.createElement(_, null),
+              _.createElement("br", null),
+              Boolean(__webpack_require__)
+                ? _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().AgreementAcceptedBlock,
+                      },
+                      (0, _._)("#AssetRequest_EventRuleAccepted"),
+                      _.createElement(_._, {
+                        accountID: _._.accountid,
+                      }),
+                      _.createElement(_._, {
+                        dateAndTime: _,
+                      }),
+                    ),
+                    Boolean(_._.is_support) &&
+                      _.createElement(_._, {
+                        checked: _,
+                        className: _().ValveOnlyBackground,
+                        label: "Fake Event Creation",
+                        tooltip:
+                          "Internal Testing: Succeeds without creating event; do not save after using this.",
+                        onChange: _,
+                      }),
+                  )
+                : _.createElement(
+                    _._,
+                    {
+                      onClick: () => _(!0),
+                    },
+                    (0, _._)("#AssetRequest_AcceptRules"),
+                  ),
+            );
+      }
+      function _() {
+        return _.createElement(
+          "ul",
+          null,
+          _.createElement(
+            "li",
+            null,
+            (0, _._)("#AssetRequest_CreateEvent_Line1"),
+          ),
+          _.createElement(
+            "li",
+            null,
+            (0, _._)("#AssetRequest_CreateEvent_Line2"),
+          ),
+          _.createElement(
+            "li",
+            null,
+            (0, _._)("#AssetRequest_CreateEvent_Line3"),
+          ),
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__, _] = (0, _._)();
+        return _.createElement(
+          "div",
+          {
+            className: _().ValveOnlyBackground,
+          },
+          _.createElement(
+            _._,
+            {
+              onClick: __webpack_require__,
+            },
+            "(VO) Unlink Event",
+          ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_, {
+              closeModal: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { closeModal: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return _.bLoading
+          ? _.createElement(_._, {
+              state: _,
+              strDialogTitle: "Unlink Event",
+              closeModal: _,
+            })
+          : _.createElement(_._, {
+              strTitle: "Unlink Event",
+              strDescription: (0, _._)("#Dialog_AreYouSure"),
+              onCancel: _,
+              onOK: async () => {
+                _.fnSetLoading(!0);
+                const _ = await (async function (_, _) {
+                  const _ = new FormData();
+                  __webpack_require__.append("sessionid", _._.SESSIONID),
+                    __webpack_require__.append("gid_promotionplan", _);
+                  const _ =
+                    _._.PARTNER_BASE_URL +
+                    "partnerevents/ajaxremovemarketingmessagemajorevent";
+                  try {
+                    const _ = await _().post(_, _, {
+                      withCredentials: !0,
+                    });
+                    if (1 == _?.data?.success) return _.data;
+                    console.error(
+                      "OnSubmitRemoveUpdateFromInputPipeline error code  " +
+                        _?.data?.success +
+                        " msg: " +
+                        _?.data?.msg,
+                    ),
+                      _.fnSetStrError(_?.data?.msg),
+                      _.fnSetError(!0);
+                  } catch (_) {
+                    const _ = (0, _._)(_);
+                    console.error(
+                      "OnSubmitRemoveUpdateFromInputPipeline " + _.strErrorMsg,
+                      _,
+                    ),
+                      _.fnSetStrError(_.strErrorMsg),
+                      _.fnSetError(!0);
+                  }
+                  return null;
+                })(__webpack_require__.GetPlanID(), _);
+                _ &&
+                  (_.fnSetSuccess(!0),
+                  _.fnSetStrSuccess("Reload page to verify unlink succeeded"));
+              },
+            });
+      }
       function _(_) {
         const { planIdentify: _, bAdminView: __webpack_require__ } = _,
           _ = (0, _._)(),
@@ -48167,88 +48684,9 @@
         );
       }
       function _(_) {
-        const {
-          bCompleted: _,
-          bRequired: __webpack_require__,
-          title: _,
-          children: _,
-          bSkipOptional: _,
-        } = _;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _().ChecklistTitleCtn,
-              },
-              _
-                ? _.createElement(
-                    "span",
-                    {
-                      className: _().Completed,
-                    },
-                    "✓ ",
-                  )
-                : __webpack_require__
-                  ? _.createElement(
-                      "span",
-                      {
-                        className: _().RequiredToggle,
-                      },
-                      "🔲 ",
-                    )
-                  : _.createElement(
-                      "span",
-                      {
-                        className: _().OptionalToggle,
-                      },
-                      "🔳 ",
-                    ),
-              _.createElement(
-                "span",
-                {
-                  className: _().ChecklistTitle,
-                },
-                _,
-              ),
-              !_ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: (0, _._)({
-                      [_().Required]: __webpack_require__,
-                      [_().Optional]: !__webpack_require__,
-                    }),
-                  },
-                  " ",
-                  (0, _._)(
-                    __webpack_require__
-                      ? "#AssetRequest_General_Upload_req"
-                      : "#AssetRequest_General_Upload_opt",
-                  ),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ChecklistDescription,
-              },
-              _,
-            ),
-          ),
-        );
-      }
-      function _(_) {
         const { fnSetShowDetails: _ } = _,
           _ = (0, _._)(),
           [
-            _,
-            _,
-            _,
             _,
             _,
             _,
@@ -48313,9 +48751,6 @@
             __webpack_require__.BIsEventHeaderImageRequest(),
             __webpack_require__.BHasPreviewArtOfType("localized_title_image"),
             __webpack_require__.BRequireUpdateEvent(),
-            __webpack_require__.GetUpdateEventGID(),
-            __webpack_require__.GetStoreItemType(),
-            __webpack_require__.GetStoreItemID(),
             __webpack_require__.BIsAppMainCapsuleRequest() ||
               __webpack_require__.BIsAppHeaderCapsuleRequest(),
             __webpack_require__.BHasPreviewArtOfType("app_header_capsule") ||
@@ -48419,38 +48854,7 @@
               (0, _._)("#AssetRequest_Check_PromoApp_desc"),
             ),
           _.createElement(_, null),
-          Boolean(_) &&
-            _.createElement(
-              _,
-              {
-                bCompleted: Boolean(_),
-                title: (0, _._)("#AssetRequest_UpdateAnnouncement"),
-                bRequired: !0,
-              },
-              (0, _._)(
-                "#AssetRequest_UpdateAnnouncement_desc",
-                _.createElement("a", {
-                  href:
-                    _._.PARTNER_BASE_URL +
-                    "doc/store/assets/promos#popup_update",
-                }),
-              ),
-              Boolean(0 == _) &&
-                _.createElement(
-                  "a",
-                  {
-                    target: "_blank",
-                    className: _().Link,
-                    href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents/create`,
-                  },
-                  (0, _._)("#AssetRequest_UpdateAnnouncement_create"),
-                ),
-              _.createElement(_._, {
-                appid: _,
-                selectedEventGID: _,
-                fnSetUpdateEvent: _.SetUpdateEvent,
-              }),
-            ),
+          Boolean(_) && _.createElement(_, null),
           _.createElement(
             _,
             {
@@ -60011,7 +60415,8 @@
             label: _,
             strDropDownClassName: _().DropDownScroll,
             rgOptions: _,
-            selectedOption: __webpack_require__,
+            selectedOption:
+              0 == __webpack_require__ && _ ? null : __webpack_require__,
             onChange: (_) => _(_.data),
           }),
           5 == __webpack_require__ &&
@@ -60023,7 +60428,7 @@
                 {
                   className: _.WarningIconLayout,
                 },
-                "Note: Library already have a feature to show pre-purchaser the content is available for preload/play. Do we realy need this marketing message.",
+                "Note: Library already have a feature to show pre-purchaser the content is available for preload/play. Do we really need this marketing message.",
               ),
               _.createElement("div", {
                 className: _.PreLoadNowFeature,
@@ -64977,7 +65382,7 @@
         const { nFilterAccountID: _ } = _,
           [__webpack_require__, _] = (0, _.useState)(_.k_DisplayAll),
           [_, _] = (0, _.useState)(_.k_SortByStartDate),
-          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _._)("type", 0),
           [_, _] = (0, _.useState)(""),
           _ = _(__webpack_require__, _, _, !1, _, _);
         return _.createElement(
@@ -65004,7 +65409,7 @@
           [__webpack_require__, _] = (0, _._)("pastdays", 30),
           [_, _] = (0, _.useState)(_.k_DisplayAll),
           [_, _] = (0, _.useState)(_.k_SortByStartDate),
-          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _._)("type", 0),
           [_, _] = (0, _.useState)(""),
           _ = (function (_, _, _, _, _, _, _) {
             const _ = (0, _._)();
@@ -65199,7 +65604,7 @@
         const [_, __webpack_require__] = (0, _.useState)(_.k_DisplayAll),
           [_, _] = (0, _.useState)(_.k_SortByStartDate),
           [_, _] = (0, _.useState)(""),
-          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _._)("type", 0),
           _ = _(_, _, _, !0);
         return _.createElement(
           "div",
@@ -66404,6 +66809,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
@@ -66629,12 +67035,250 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = _.createContext({
+        loadPartnerEmailAndName: async (_, _, _) =>
+          await (function (_) {
+            _ ||
+              (_ = new (_())(
+                async (_) => {
+                  const _ = _._.Init(_._);
+                  _.forEach((_) => {
+                    const _ = __webpack_require__.Body().add_requested();
+                    _.set_gid(_.gid), _.set_type(_.type);
+                  });
+                  const _ = await _._.GetPlanByAssociationID(_, _);
+                  if (!_.BSuccess())
+                    throw `Failed to call GetPromoViaAssociationIDDataLoader with details: ${_.GetErrorMessage()}`;
+                  const _ = new Map();
+                  _.Body()
+                    .plans()
+                    .forEach((_) => _.set(_.promotion_id(), _.toObject()));
+                  const _ = new Map();
+                  return (
+                    _.Body()
+                      .matching()
+                      .forEach((_) => {
+                        const _ = _.gid() + "_" + _.type();
+                        _.has(_)
+                          ? _.get(_).push(_.get(_.promotion_planid()))
+                          : _.set(_, [_.get(_.promotion_planid())]);
+                      }),
+                    _.map((_) => _.get(_.gid + "_" + _.type) ?? null)
+                  );
+                },
+                {
+                  maxBatchSize: 100,
+                },
+              ));
+            return _;
+          })(_).load({
+            gid: _,
+            type: _,
+          }),
+      });
+      let _;
       var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { associatedID: _, associatedType: __webpack_require__ } = _,
+          _ = (function (_, _) {
+            const _ = (0, _._)(),
+              _ = _.useContext(_),
+              _ = (0, _._)(
+                (function (_, _, _, _) {
+                  return {
+                    queryKey: ["PromoPlanByAssociationIDQuery", _, _],
+                    queryFn: () => _.loadPartnerEmailAndName(_, _, _),
+                    enabled: !!_ || !!_,
+                  };
+                })(_, _, _, _),
+              );
+            return _.isLoading ? null : _.data;
+          })(_, __webpack_require__);
+        return _ && 0 != _.length
+          ? _.createElement(
+              "div",
+              {
+                className: _().SectionCtn,
+              },
+              _.createElement(_._, null, "Promotion Plan"),
+              _.map((_) =>
+                _.createElement(_, {
+                  key: _.promotion_id,
+                  plan: _,
+                  associatedID: _,
+                  associatedType: __webpack_require__,
+                }),
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        const {
+          plan: _,
+          associatedType: __webpack_require__,
+          associatedID: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "a",
+            {
+              href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${_.promotion_id}`,
+              target: "_blank",
+            },
+            "Edit Plan",
+          ),
+          2 == __webpack_require__ &&
+            _.createElement(_, {
+              plan: _,
+              gidMarketingMessage: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { plan: _, gidMarketingMessage: __webpack_require__ } = _,
+          _ = (0, _._)(__webpack_require__);
+        (0, _._)(() => _.partner_id);
+        return _.createElement(
+          _.Fragment,
+          null,
+          Boolean(_.partner_id) &&
+            _.createElement(
+              "div",
+              null,
+              _.createElement(
+                "a",
+                {
+                  href: `${_._.PARTNER_BASE_URL}dashboard/${_.partner_id}?eventids=${__webpack_require__}`,
+                  target: "_blank",
+                },
+                "Open MM on Partner Dashboard",
+              ),
+            ),
+          Boolean(10 == _.GetType()) &&
+            _.createElement(_, {
+              oEditableMessage: _,
+              plan: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { oEditableMessage: _, plan: __webpack_require__ } = _,
+          [_, _, _, _] = (0, _._)(() => [
+            _.GetUpdateEventGID(),
+            _.BHasReviewedMajorUpdateAndMeetsBar(),
+            _.GetAccountReviewMajorUpdate(),
+            _.GetTimeReviewMajorUpdate(),
+          ]),
+          _ = (0, _.useMemo)(
+            () => JSON.parse(__webpack_require__.input_jsondata),
+            [__webpack_require__],
+          ),
+          _ = (0, _._)(_.update_event_clan_account_id, _.update_event_gid, !0),
+          _ = (0, _._)(_.update_event_clan_account_id, _.update_event_gid),
+          _ = _._.InitFromClanID(_.update_event_clan_account_id);
+        return _.createElement(
+          _.Fragment,
+          null,
+          Boolean(_.update_event_gid)
+            ? _.createElement(
+                _.Fragment,
+                null,
+                _.createElement("br", null),
+                _.createElement(
+                  "a",
+                  {
+                    href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${_.update_event_gid}`,
+                    target: "_black",
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      toolTipContent: "Created during Asset Request Process",
+                    },
+                    "Edit Major Update",
+                  ),
+                ),
+                _.eventModel
+                  ? _.createElement(
+                      "div",
+                      null,
+                      _.createElement(
+                        "div",
+                        null,
+                        _.eventModel.BIsVisibleEvent()
+                          ? "Event State: Visible"
+                          : "Event State: Hidden",
+                      ),
+                      _ != _.update_event_gid &&
+                        _.createElement(
+                          _._,
+                          {
+                            onClick: () =>
+                              _.SetUpdateEvent(
+                                _.update_event_clan_account_id,
+                                _.update_event_gid,
+                              ),
+                          },
+                          "Associate Event to Marketing Message",
+                        ),
+                    )
+                  : _.createElement(_._, {
+                      string: "Loading Event: " + _.update_event_gid,
+                      size: "small",
+                      position: "center",
+                    }),
+                Boolean(
+                  _?.oPrivateData?.jsonData
+                    ?.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
+                )
+                  ? _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(
+                        "a",
+                        {
+                          href: `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${_.oPrivateData?.jsonData?.strMarketingMessageMajorUpdateHelpTicketReferenceCode}`,
+                          target: "_blank",
+                        },
+                        "View Ticket",
+                      ),
+                      _.createElement(_._, {
+                        checked: _,
+                        onChange: (_) => _.SetUpdateEventReviewAndMeetsBar(!0),
+                        tooltip:
+                          "Only click this if we have reviewed the message and ticket and the events meets the bar",
+                        label: "Does update meet our bar?",
+                      }),
+                      _ &&
+                        _.createElement(
+                          "div",
+                          null,
+                          "Reviewed by ",
+                          _.createElement(_._, {
+                            accountID: _,
+                          }),
+                          " at ",
+                          (0, _._)(_, !1, ""),
+                        ),
+                    )
+                  : _.createElement("div", null, "No Review Ticket Created"),
+              )
+            : _.createElement("div", null, "No Event Linked"),
+        );
+      }
       function _(_) {
         const { oEditableMessage: _ } = _,
           [__webpack_require__, _] = (0, _._)(() => [
             _.BIsAccountInWatchList(_._.accountid),
-            _.GetPlanAssetRequestGID(),
+            _.GetGID(),
           ]);
         return _.createElement(
           "div",
@@ -66677,6 +67321,10 @@
                 : "Add to Watch List",
             ),
           ),
+          _.createElement(_, {
+            associatedID: _,
+            associatedType: 2,
+          }),
           _.createElement(
             "div",
             {
@@ -66714,14 +67362,6 @@
               },
               "Filtering",
             ),
-            Boolean(_) &&
-              _.createElement(
-                _._,
-                {
-                  _: _.PromotionPlanEditor(_),
-                },
-                "Open Promotion Plan",
-              ),
           ),
         );
       }
@@ -66908,6 +67548,7 @@
             bUpdateEventLive: _,
             bRequireAltText: _,
             bAltTextEntered: _,
+            bReviewMajorUpdateMeetsBar: _,
           } = (0, _._)(_.GetGID()),
           { bReady: _, bReadyExceptLiveEvent: _ } = (0, _._)(_.GetGID()),
           [_, _] = (0, _.useState)(!1);
@@ -67056,6 +67697,10 @@
                 _.createElement(_._, {
                   bDone: _,
                   name: "Update Event Visible",
+                }),
+                _.createElement(_._, {
+                  bDone: _,
+                  name: "Major Update Ticket Review - Meets Bar",
                 }),
               ),
             Boolean(_) &&
@@ -68761,9 +69406,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
         const { gid: _ } = _,
           _ =
@@ -69808,9 +70451,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         loadAppPromoSaleFeaturing: async (_, _) =>
@@ -69875,7 +70515,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -70109,6 +70748,7 @@
           [_, _] = (0, _._)("requiretags", ""),
           [_, _] = (0, _._)("rt_feature_start", 0),
           [_, _] = (0, _._)("rt_feature_end", 0),
+          [_, _] = (0, _._)("deepdiscount", !1),
           _ = (_, _, _, _) => {
             const _ = __webpack_require__.split(","),
               _ = _.findIndex((_) => _ == _.toString());
@@ -70188,6 +70828,7 @@
           (_ ? "&excludetags=" + _ : "") +
           (_ ? "&requiretags=" + _ : "") +
           (_ ? "&bundleid=" + _ : "") +
+          (_ ? "&deepdiscount=true" : "") +
           (_ && _ ? "&rt_feature_start=" + _ + "&rt_feature_end=" + _ : "");
         return _.createElement(
           _._,
@@ -70278,6 +70919,16 @@
                 },
                 tooltip:
                   "Only shows games that do not have an active discount cooldown.",
+              }),
+              _.createElement(_._, {
+                label: "Deep Discount Eligible (beta)",
+                className: _().Filter,
+                checked: _,
+                onChange: (_) => {
+                  _(_), window.location.reload();
+                },
+                tooltip:
+                  "Only shows games eligible for running a deep discount.",
               }),
             ),
             _.createElement(
@@ -76394,6 +77045,8 @@
             bFiltersSetup: _,
             bValidLink: _,
             bLegalLineHandled: _,
+            bReviewMajorUpdateMeetsBar: _,
+            bRequiresPartnerEvent: _,
           } = _,
           {
             bMinimumAssetsSetup: _,
@@ -76459,7 +77112,7 @@
                 className: (0, _._)(_.Status, _ && _.Complete),
               },
               _ ? "🗹 " : "☐ ",
-              " ValidLink",
+              " Valid Link",
             ),
             _.createElement(
               "span",
@@ -76477,6 +77130,15 @@
                 },
                 _ ? "🗹 " : "☐ ",
                 " Animated Assets",
+              ),
+            Boolean(_) &&
+              _.createElement(
+                "span",
+                {
+                  className: (0, _._)(_.Status, _ && _.Complete),
+                },
+                _ ? "🗹 " : "☐ ",
+                " Update Meets Requirements",
               ),
           ),
         );
@@ -81521,418 +82183,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "new_event_gid";
-      class _ {
-        m_mapOriginalJSON = new Map();
-        m_mapPrivateData = new Map();
-        m_mapPrivateDataCallback = new Map();
-        m_inflightRequests = new Map();
-        m_gidDirty = null;
-        m_clanAccountIDDirty = null;
-        GetPrivateData(_, _) {
-          const _ = this.HandleNewEventGID(_);
-          return (
-            this.m_mapPrivateData.get(_) || {
-              jsonData: {},
-            }
-          );
-        }
-        GetPrivateDataCopy(_, _) {
-          const _ = this.HandleNewEventGID(_);
-          return JSON.parse(JSON.stringify(this.GetPrivateData(_, _)));
-        }
-        GetPrivateDataChangeCallback(_, _) {
-          const _ = this.HandleNewEventGID(_);
-          return (
-            this.m_mapPrivateDataCallback.has(_) ||
-              this.m_mapPrivateDataCallback.set(_, new _._()),
-            this.m_mapPrivateDataCallback.get(_)
-          );
-        }
-        UpdatePrivateData(_, _, _, _) {
-          const _ = this.HandleNewEventGID(_),
-            _ = this.GetPrivateData(_, _);
-          if (!this.BIsEqual(_.jsonData, _)) {
-            if (null != this.m_gidDirty && _ != this.m_gidDirty) {
-              const _ = {
-                ...this.m_mapPrivateData.get(this.m_gidDirty),
-                jsonData: this.m_mapOriginalJSON.get(this.m_gidDirty),
-              };
-              this.m_mapPrivateData.set(this.m_gidDirty, _),
-                this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty);
-            }
-            (_.jsonData = _),
-              _ && ((this.m_gidDirty = _), (this.m_clanAccountIDDirty = _)),
-              this.DispatchUpdate(_, _);
-          }
-        }
-        BIsEqual(_, _) {
-          return JSON.stringify(_) === JSON.stringify(_);
-        }
-        BLoaded(_, _) {
-          const _ = this.HandleNewEventGID(_);
-          return this.m_mapPrivateData.has(_);
-        }
-        BIsDirty() {
-          return Boolean(this.m_gidDirty);
-        }
-        BIsEventDirty(_) {
-          const _ = this.HandleNewEventGID(_);
-          return this.m_gidDirty == _;
-        }
-        DiscardChanges() {
-          if (this.m_gidDirty) {
-            const _ = this.m_clanAccountIDDirty,
-              _ = this.m_gidDirty;
-            (this.m_clanAccountIDDirty = null), (this.m_gidDirty = null);
-            const _ = this.m_mapPrivateData.get(_),
-              _ = this.m_mapOriginalJSON.get(_);
-            this.m_mapPrivateData.set(_, {
-              ..._,
-              jsonData: _,
-            }),
-              this.DispatchUpdate(_, _);
-          }
-        }
-        DispatchUpdate(_, _) {
-          const _ = this.HandleNewEventGID(_),
-            _ = this.GetPrivateDataCopy(_, _);
-          this.GetPrivateDataChangeCallback(_, _).Dispatch(_);
-        }
-        HandleNewEventGID(_) {
-          return null == _ || null == _ || "" == _ ? _ : _;
-        }
-        async LoadPrivateData(_, _) {
-          const _ = this.HandleNewEventGID(_);
-          return (
-            this.m_inflightRequests.has(_) ||
-              this.m_inflightRequests.set(
-                _,
-                this.InternalLoadPrivateData(_, _),
-              ),
-            await this.m_inflightRequests.get(_)
-          );
-        }
-        async InternalLoadPrivateData(_, _) {
-          const _ = this.HandleNewEventGID(_);
-          if (this.m_mapPrivateData.has(_)) return this.m_mapPrivateData.get(_);
-          if (_ == _) {
-            const _ = {
-              jsonData: {},
-            };
-            return (
-              this.m_mapPrivateData.set(_, _),
-              this.m_mapOriginalJSON.set(_, {}),
-              _
-            );
-          }
-          try {
-            const _ =
-                _._.COMMUNITY_BASE_URL + "partnereventdata/ajaxgetprivatedata",
-              _ = {
-                clanAccountID: _.GetAccountID(),
-                gidClanEvent: _,
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-            if (1 === _?.data?.success && _.data.data) {
-              const _ = {
-                rtLastUpdateTime: _.data.data.time_written,
-                nAccountLastUpdate: _.data.data.account_writer,
-                jsonData: _.data.data.json_data,
-              };
-              return (
-                this.m_mapPrivateData.set(_, _),
-                this.m_mapOriginalJSON.set(_, _.jsonData),
-                _
-              );
-            }
-            if (42 === _?.data?.success) {
-              const _ = {
-                jsonData: {},
-              };
-              return (
-                this.m_mapPrivateData.set(_, _),
-                this.m_mapOriginalJSON.set(_, {}),
-                _
-              );
-            }
-            {
-              const _ = (0, _._)(_);
-              console.error(
-                "CPartnerEventPrivateDataStore.InternalLoadPrivateData: response with " +
-                  _.strErrorMsg,
-                _,
-              );
-            }
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.error(
-              "CPartnerEventPrivateDataStore.InternalLoadPrivateData: failed with " +
-                _.strErrorMsg,
-              _,
-            );
-          }
-          return null;
-        }
-        async SaveDirtyChanges(_) {
-          if (
-            ((0, _._)(
-              null != _ && null != _ && "" != _,
-              "CPartnerEventPrivateDataStore: GID not supplied.",
-            ),
-            this.BIsDirty())
-          ) {
-            const _ = _._.InitFromClanID(this.m_clanAccountIDDirty),
-              _ = this.m_mapPrivateData.get(this.m_gidDirty).jsonData;
-            if (this.m_gidDirty == _ || this.m_gidDirty == _)
-              return (
-                this.m_gidDirty == _ &&
-                  (this.m_mapOriginalJSON.set(_, {}),
-                  this.m_mapPrivateData.set(_, this.m_mapPrivateData.get(_)),
-                  this.m_mapPrivateData.delete(_)),
-                this.SavePrivateData(_, _, _)
-              );
-            console.warn(
-              "CPartnerEventPrivateDataStore: Dirty not matching input GID:" +
-                _ +
-                " " +
-                this.m_gidDirty,
-            );
-          } else
-            console.warn(
-              "CPartnerEventPrivateDataStore: Attempting to save private when not dirty: " +
-                _ +
-                " " +
-                this.m_gidDirty,
-            );
-          return 1;
-        }
-        async SavePrivateData(_, _, _) {
-          if (
-            ((0, _._)(
-              null != _ && null != _ && "" != _,
-              "CPartnerEventPrivateDataStore: GID not supplied.",
-            ),
-            !this.m_mapPrivateData.has(_))
-          )
-            return 42;
-          if (this.BIsEqual(_, this.m_mapOriginalJSON.get(_))) return 1;
-          try {
-            const _ = new FormData();
-            _.append("sessionid", _._.SESSIONID),
-              _.append("clanAccountID", "" + _.GetAccountID()),
-              _.append("gidClanEvent", "" + _),
-              _.append("jsonData", JSON.stringify(_));
-            const _ =
-                "partnerweb" == (0, _._)()
-                  ? _._.PARTNER_BASE_URL + "partnerevents/ajaxsetprivatedata"
-                  : _._.COMMUNITY_BASE_URL +
-                    "partnereventdata/ajaxsetprivatedata",
-              _ = await _().post(_, _, {
-                withCredentials: !0,
-              });
-            if (1 === _?.data?.success) {
-              const _ = {
-                nAccountLastUpdate: _._.accountid,
-                rtLastUpdateTime: Math.floor(Date.now() / 1e3),
-                jsonData: _,
-              };
-              return (
-                this.m_mapPrivateData.set(_, _),
-                this.m_mapOriginalJSON.set(_, _),
-                (this.m_clanAccountIDDirty = null),
-                (this.m_gidDirty = null),
-                this.DispatchUpdate(_.GetAccountID(), _),
-                _.data.success
-              );
-            }
-            {
-              const _ = (0, _._)(_);
-              console.error(
-                "CPartnerEventPrivateDataStore.SavePrivateData: response with " +
-                  _.strErrorMsg,
-                _,
-              );
-            }
-          } catch (_) {
-            const _ = (0, _._)(_);
-            console.error(
-              "CPartnerEventPrivateDataStore.SavePrivateData: failed with " +
-                _.strErrorMsg,
-              _,
-            );
-          }
-          return 2;
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerEventPrivateDataStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        Init() {
-          let _ = (0, _._)("privatedata", "application_config");
-          this.ValidateStoreDefault(_) &&
-            _.forEach((_) => {
-              const _ = {
-                rtLastUpdateTime: _.data.time_written,
-                nAccountLastUpdate: _.data.account_writer,
-                jsonData: _.data.json_data || {},
-              };
-              this.m_mapOriginalJSON.set(_.gid, _.jsonData),
-                this.m_mapPrivateData.set(_.gid, _);
-            });
-        }
-        ValidateStoreDefault(_) {
-          const _ = _;
-          return (
-            !!(
-              _ &&
-              Array.isArray(_) &&
-              _.length > 0 &&
-              "object" == typeof _[0]
-            ) &&
-            "string" == typeof _[0].gid &&
-              "number" == typeof _[0].clanAccountID &&
-            "object" == typeof _[0].data
-          );
-        }
-      }
-      function _(_, _) {
-        const _ = _.Get(),
-          [_, _] = (0, _.useState)(
-            __webpack_require__.GetPrivateDataCopy(_, _),
-          );
-        (0, _._)(__webpack_require__.GetPrivateDataChangeCallback(_, _), _);
-        const [_, _] = (0, _.useState)(!__webpack_require__.BLoaded(_, _));
-        (0, _.useEffect)(() => {
-          if (!__webpack_require__.BLoaded(_, _)) {
-            const _ = _._.InitFromClanID(_);
-            __webpack_require__.LoadPrivateData(_, _).then((_) => {
-              _(_), _(!1);
-            });
-          }
-        }, [_, _, _]);
-        return {
-          oPrivateData: _,
-          fnSetPrivateJson: (0, _.useCallback)(
-            (_) => {
-              __webpack_require__.UpdatePrivateData(_, _, _, !0);
-            },
-            [_, _, _],
-          ),
-          bLoading: _,
-          fnSetPrivateJsonNoDirty: (0, _.useCallback)(
-            (_) => {
-              __webpack_require__.UpdatePrivateData(_, _, _, !1);
-            },
-            [_, _, _],
-          ),
-        };
-      }
-      function _(_, _) {
-        const {
-            oPrivateData: __webpack_require__,
-            fnSetPrivateJson: _,
-            bLoading: _,
-          } = _(_, _),
-          _ = _.Get(),
-          _ = (0, _.useCallback)(
-            (_) =>
-              _({
-                ..._.GetPrivateData(_, _).jsonData,
-                bPublishRequiresValveApproval: _,
-              }),
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) =>
-              _({
-                ..._.GetPrivateData(_, _).jsonData,
-                nAccountApproved: _,
-                rtApprovalTime: Math.floor(Date.now() / 1e3),
-              }),
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) =>
-              _({
-                ..._.GetPrivateData(_, _).jsonData,
-                bRequiresHostDisclaimer: _,
-              }),
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) =>
-              _({
-                ..._.GetPrivateData(_, _).jsonData,
-                strExternalSaleType: _,
-              }),
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) =>
-              _({
-                ..._.GetPrivateData(_, _).jsonData,
-                nUserWhoEnabledSaleTechOnPage: _,
-              }),
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) =>
-              _({
-                ..._.GetPrivateData(_, _).jsonData,
-                nAccountApproved: void 0,
-                rtApprovalTime: void 0,
-                nAccountRevertingApproval: _,
-                rtRevertTime: Math.floor(Date.now() / 1e3),
-              }),
-            [_, _, _, _],
-          );
-        return {
-          bLoading: _,
-          bPublishRequiresValveApproval: Boolean(
-            __webpack_require__?.jsonData?.bPublishRequiresValveApproval,
-          ),
-          bHasSettingForRequiresValveApproval:
-            void 0 !==
-            __webpack_require__?.jsonData?.bPublishRequiresValveApproval,
-          bRequiresHostDisclaimer: Boolean(
-            __webpack_require__?.jsonData?.bRequiresHostDisclaimer,
-          ),
-          nAccountApproved: __webpack_require__?.jsonData?.nAccountApproved,
-          rtApprovalTime: __webpack_require__?.jsonData?.rtApprovalTime,
-          fnSetStorePublishingRequiresValveApproval: _,
-          fnSetAccountApproved: _,
-          fnSetStoreRequireHostDisclaimer: _,
-          strExternalSaleEventType:
-            __webpack_require__?.jsonData?.strExternalSaleType || "publisher",
-          fnSetExternalSaleEventType: _,
-          fnSetUserWhoEnabledSalePage: _,
-          fnRemoveApprovalAccount: _,
-        };
-      }
-      (0, _._)([_._], _.prototype, "BIsEventDirty", null),
-        (0, _._)([_._], _.prototype, "DiscardChanges", null),
-        (0, _._)([_._], _.prototype, "SaveDirtyChanges", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
@@ -81941,7 +82198,7 @@
         __webpack_require__("chunkid");
       function _(_) {
         const { clanSteamID: _, gidClanEvent: __webpack_require__ } = _,
-          { bLoading: _ } = _(_.GetAccountID(), __webpack_require__);
+          { bLoading: _ } = (0, _._)(_.GetAccountID(), __webpack_require__);
         return _
           ? _.createElement(_._, {
               string: (0, _._)("#Loading"),
@@ -81964,7 +82221,7 @@
             bHasSettingForRequiresValveApproval: _,
             strExternalSaleEventType: _,
             fnSetExternalSaleEventType: _,
-          } = _(_.GetAccountID(), __webpack_require__),
+          } = (0, _._)(_.GetAccountID(), __webpack_require__),
           [_, _] = (0, _.useState)(!_ || _),
           [_, _] = (0, _.useState)(_);
         return (
@@ -82172,10 +82429,7 @@
           const [_, _] = (0, _.useState)(Math.floor(_.getTime() / 1e3)),
             [_, _] = (0, _.useState)(null),
             [_, _] = (0, _.useState)(null),
-            [_, _, _] = (function () {
-              const _ = _.Get();
-              return [_.BIsEventDirty, _.DiscardChanges, _.SaveDirtyChanges];
-            })();
+            [_, _, _] = (0, _._)();
           "dev" == _._.WEB_UNIVERSE &&
             (0, _.useEffect)(() => {
               const _ = window.location.search;
@@ -92106,6 +92360,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _,
@@ -92811,6 +93066,204 @@
         }
         getClassName() {
           return "CPromotionPlanning_GetPlanCompletedInDateRange_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  type: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  gid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  promotion_planid: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromoAssociation";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.requested || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  requested: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlanning_GetPlanByAssociationID_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.matching || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  matching: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  plans: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlanning_GetPlanByAssociationID_Response";
         }
       }
       class _ extends _.Message {
@@ -97353,6 +97806,17 @@
               },
             );
           }),
+          (_.GetPlanByAssociationID = function (_, _) {
+            return _.SendMsg(
+              "PromotionPlanning.GetPlanByAssociationID#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 1,
+              },
+            );
+          }),
           (_.GetPlansUpdatedSince = function (_, _) {
             return _.SendMsg(
               "PromotionPlanning.GetPlansUpdatedSince#1",
@@ -97604,6 +98068,434 @@
             );
           };
         })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "new_event_gid";
+      class _ {
+        m_mapOriginalJSON = new Map();
+        m_mapPrivateData = new Map();
+        m_mapPrivateDataCallback = new Map();
+        m_inflightRequests = new Map();
+        m_gidDirty = null;
+        m_clanAccountIDDirty = null;
+        GetPrivateData(_, _) {
+          const _ = this.HandleNewEventGID(_);
+          return (
+            this.m_mapPrivateData.get(_) || {
+              jsonData: {},
+            }
+          );
+        }
+        GetPrivateDataCopy(_, _) {
+          const _ = this.HandleNewEventGID(_);
+          return JSON.parse(JSON.stringify(this.GetPrivateData(_, _)));
+        }
+        GetPrivateDataChangeCallback(_, _) {
+          const _ = this.HandleNewEventGID(_);
+          return (
+            this.m_mapPrivateDataCallback.has(_) ||
+              this.m_mapPrivateDataCallback.set(_, new _._()),
+            this.m_mapPrivateDataCallback.get(_)
+          );
+        }
+        UpdatePrivateData(_, _, _, _) {
+          const _ = this.HandleNewEventGID(_),
+            _ = this.GetPrivateData(_, _);
+          if (!this.BIsEqual(_.jsonData, _)) {
+            if (null != this.m_gidDirty && _ != this.m_gidDirty) {
+              const _ = {
+                ...this.m_mapPrivateData.get(this.m_gidDirty),
+                jsonData: this.m_mapOriginalJSON.get(this.m_gidDirty),
+              };
+              this.m_mapPrivateData.set(this.m_gidDirty, _),
+                this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty);
+            }
+            (_.jsonData = _),
+              _ && ((this.m_gidDirty = _), (this.m_clanAccountIDDirty = _)),
+              this.DispatchUpdate(_, _);
+          }
+        }
+        BIsEqual(_, _) {
+          return JSON.stringify(_) === JSON.stringify(_);
+        }
+        BLoaded(_, _) {
+          const _ = this.HandleNewEventGID(_);
+          return this.m_mapPrivateData.has(_);
+        }
+        BIsDirty() {
+          return Boolean(this.m_gidDirty);
+        }
+        BIsEventDirty(_) {
+          const _ = this.HandleNewEventGID(_);
+          return this.m_gidDirty == _;
+        }
+        DiscardChanges() {
+          if (this.m_gidDirty) {
+            const _ = this.m_clanAccountIDDirty,
+              _ = this.m_gidDirty;
+            (this.m_clanAccountIDDirty = null), (this.m_gidDirty = null);
+            const _ = this.m_mapPrivateData.get(_),
+              _ = this.m_mapOriginalJSON.get(_);
+            this.m_mapPrivateData.set(_, {
+              ..._,
+              jsonData: _,
+            }),
+              this.DispatchUpdate(_, _);
+          }
+        }
+        DispatchUpdate(_, _) {
+          const _ = this.HandleNewEventGID(_),
+            _ = this.GetPrivateDataCopy(_, _);
+          this.GetPrivateDataChangeCallback(_, _).Dispatch(_);
+        }
+        HandleNewEventGID(_) {
+          return null == _ || null == _ || "" == _ ? _ : _;
+        }
+        async LoadPrivateData(_, _) {
+          const _ = this.HandleNewEventGID(_);
+          return (
+            this.m_inflightRequests.has(_) ||
+              this.m_inflightRequests.set(
+                _,
+                this.InternalLoadPrivateData(_, _),
+              ),
+            await this.m_inflightRequests.get(_)
+          );
+        }
+        async InternalLoadPrivateData(_, _) {
+          const _ = this.HandleNewEventGID(_);
+          if (this.m_mapPrivateData.has(_)) return this.m_mapPrivateData.get(_);
+          if (_ == _) {
+            const _ = {
+              jsonData: {},
+            };
+            return (
+              this.m_mapPrivateData.set(_, _),
+              this.m_mapOriginalJSON.set(_, {}),
+              _
+            );
+          }
+          try {
+            const _ =
+                "partnerweb" == (0, _._)()
+                  ? _._.PARTNER_BASE_URL + "partnerevents/ajaxgetprivatedata"
+                  : _._.COMMUNITY_BASE_URL +
+                    "partnereventdata/ajaxgetprivatedata",
+              _ = {
+                clanAccountID: _.GetAccountID(),
+                gidClanEvent: _,
+              },
+              _ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+              });
+            if (1 === _?.data?.success && _.data.data) {
+              const _ = {
+                rtLastUpdateTime: _.data.data.time_written,
+                nAccountLastUpdate: _.data.data.account_writer,
+                jsonData: _.data.data.json_data,
+              };
+              return (
+                this.m_mapPrivateData.set(_, _),
+                this.m_mapOriginalJSON.set(_, _.jsonData),
+                _
+              );
+            }
+            if (42 === _?.data?.success) {
+              const _ = {
+                jsonData: {},
+              };
+              return (
+                this.m_mapPrivateData.set(_, _),
+                this.m_mapOriginalJSON.set(_, {}),
+                _
+              );
+            }
+            {
+              const _ = (0, _._)(_);
+              console.error(
+                "CPartnerEventPrivateDataStore.InternalLoadPrivateData: response with " +
+                  _.strErrorMsg,
+                _,
+              );
+            }
+          } catch (_) {
+            const _ = (0, _._)(_);
+            console.error(
+              "CPartnerEventPrivateDataStore.InternalLoadPrivateData: failed with " +
+                _.strErrorMsg,
+              _,
+            );
+          }
+          return null;
+        }
+        async SaveDirtyChanges(_) {
+          if (
+            ((0, _._)(
+              null != _ && null != _ && "" != _,
+              "CPartnerEventPrivateDataStore: GID not supplied.",
+            ),
+            this.BIsDirty())
+          ) {
+            const _ = _._.InitFromClanID(this.m_clanAccountIDDirty),
+              _ = this.m_mapPrivateData.get(this.m_gidDirty).jsonData;
+            if (this.m_gidDirty == _ || this.m_gidDirty == _)
+              return (
+                this.m_gidDirty == _ &&
+                  (this.m_mapOriginalJSON.set(_, {}),
+                  this.m_mapPrivateData.set(_, this.m_mapPrivateData.get(_)),
+                  this.m_mapPrivateData.delete(_)),
+                this.SavePrivateData(_, _, _)
+              );
+            console.warn(
+              "CPartnerEventPrivateDataStore: Dirty not matching input GID:" +
+                _ +
+                " " +
+                this.m_gidDirty,
+            );
+          } else
+            console.warn(
+              "CPartnerEventPrivateDataStore: Attempting to save private when not dirty: " +
+                _ +
+                " " +
+                this.m_gidDirty,
+            );
+          return 1;
+        }
+        async SavePrivateData(_, _, _) {
+          if (
+            ((0, _._)(
+              null != _ && null != _ && "" != _,
+              "CPartnerEventPrivateDataStore: GID not supplied.",
+            ),
+            !this.m_mapPrivateData.has(_))
+          )
+            return 42;
+          if (this.BIsEqual(_, this.m_mapOriginalJSON.get(_))) return 1;
+          try {
+            const _ = new FormData();
+            _.append("sessionid", _._.SESSIONID),
+              _.append("clanAccountID", "" + _.GetAccountID()),
+              _.append("gidClanEvent", "" + _),
+              _.append("jsonData", JSON.stringify(_));
+            const _ =
+                "partnerweb" == (0, _._)()
+                  ? _._.PARTNER_BASE_URL + "partnerevents/ajaxsetprivatedata"
+                  : _._.COMMUNITY_BASE_URL +
+                    "partnereventdata/ajaxsetprivatedata",
+              _ = await _().post(_, _, {
+                withCredentials: !0,
+              });
+            if (1 === _?.data?.success) {
+              const _ = {
+                nAccountLastUpdate: _._.accountid,
+                rtLastUpdateTime: Math.floor(Date.now() / 1e3),
+                jsonData: _,
+              };
+              return (
+                this.m_mapPrivateData.set(_, _),
+                this.m_mapOriginalJSON.set(_, _),
+                (this.m_clanAccountIDDirty = null),
+                (this.m_gidDirty = null),
+                this.DispatchUpdate(_.GetAccountID(), _),
+                _.data.success
+              );
+            }
+            {
+              const _ = (0, _._)(_);
+              console.error(
+                "CPartnerEventPrivateDataStore.SavePrivateData: response with " +
+                  _.strErrorMsg,
+                _,
+              );
+            }
+          } catch (_) {
+            const _ = (0, _._)(_);
+            console.error(
+              "CPartnerEventPrivateDataStore.SavePrivateData: failed with " +
+                _.strErrorMsg,
+              _,
+            );
+          }
+          return 2;
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_PartnerEventPrivateDataStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        Init() {
+          let _ = (0, _._)("privatedata", "application_config");
+          this.ValidateStoreDefault(_) &&
+            _.forEach((_) => {
+              const _ = {
+                rtLastUpdateTime: _.data.time_written,
+                nAccountLastUpdate: _.data.account_writer,
+                jsonData: _.data.json_data || {},
+              };
+              this.m_mapOriginalJSON.set(_.gid, _.jsonData),
+                this.m_mapPrivateData.set(_.gid, _);
+            });
+        }
+        ValidateStoreDefault(_) {
+          const _ = _;
+          return (
+            !!(
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            ) &&
+            "string" == typeof _[0].gid &&
+              "number" == typeof _[0].clanAccountID &&
+            "object" == typeof _[0].data
+          );
+        }
+      }
+      function _(_, _) {
+        const _ = _.Get(),
+          [_, _] = (0, _.useState)(
+            __webpack_require__.GetPrivateDataCopy(_, _),
+          );
+        (0, _._)(__webpack_require__.GetPrivateDataChangeCallback(_, _), _);
+        const [_, _] = (0, _.useState)(!__webpack_require__.BLoaded(_, _));
+        (0, _.useEffect)(() => {
+          if (!__webpack_require__.BLoaded(_, _)) {
+            const _ = _._.InitFromClanID(_);
+            __webpack_require__.LoadPrivateData(_, _).then((_) => {
+              _(_), _(!1);
+            });
+          }
+        }, [_, _, _]);
+        return {
+          oPrivateData: _,
+          fnSetPrivateJson: (0, _.useCallback)(
+            (_) => {
+              __webpack_require__.UpdatePrivateData(_, _, _, !0);
+            },
+            [_, _, _],
+          ),
+          bLoading: _,
+          fnSetPrivateJsonNoDirty: (0, _.useCallback)(
+            (_) => {
+              __webpack_require__.UpdatePrivateData(_, _, _, !1);
+            },
+            [_, _, _],
+          ),
+        };
+      }
+      function _() {
+        const _ = _.Get();
+        return [_.BIsEventDirty, _.DiscardChanges, _.SaveDirtyChanges];
+      }
+      function _(_, _) {
+        const {
+            oPrivateData: __webpack_require__,
+            fnSetPrivateJson: _,
+            bLoading: _,
+          } = _(_, _),
+          _ = _.Get(),
+          _ = (0, _.useCallback)(
+            (_) =>
+              _({
+                ..._.GetPrivateData(_, _).jsonData,
+                bPublishRequiresValveApproval: _,
+              }),
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) =>
+              _({
+                ..._.GetPrivateData(_, _).jsonData,
+                nAccountApproved: _,
+                rtApprovalTime: Math.floor(Date.now() / 1e3),
+              }),
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) =>
+              _({
+                ..._.GetPrivateData(_, _).jsonData,
+                bRequiresHostDisclaimer: _,
+              }),
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) =>
+              _({
+                ..._.GetPrivateData(_, _).jsonData,
+                strExternalSaleType: _,
+              }),
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) =>
+              _({
+                ..._.GetPrivateData(_, _).jsonData,
+                nUserWhoEnabledSaleTechOnPage: _,
+              }),
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) =>
+              _({
+                ..._.GetPrivateData(_, _).jsonData,
+                nAccountApproved: void 0,
+                rtApprovalTime: void 0,
+                nAccountRevertingApproval: _,
+                rtRevertTime: Math.floor(Date.now() / 1e3),
+              }),
+            [_, _, _, _],
+          );
+        return {
+          bLoading: _,
+          bPublishRequiresValveApproval: Boolean(
+            __webpack_require__?.jsonData?.bPublishRequiresValveApproval,
+          ),
+          bHasSettingForRequiresValveApproval:
+            void 0 !==
+            __webpack_require__?.jsonData?.bPublishRequiresValveApproval,
+          bRequiresHostDisclaimer: Boolean(
+            __webpack_require__?.jsonData?.bRequiresHostDisclaimer,
+          ),
+          nAccountApproved: __webpack_require__?.jsonData?.nAccountApproved,
+          rtApprovalTime: __webpack_require__?.jsonData?.rtApprovalTime,
+          fnSetStorePublishingRequiresValveApproval: _,
+          fnSetAccountApproved: _,
+          fnSetStoreRequireHostDisclaimer: _,
+          strExternalSaleEventType:
+            __webpack_require__?.jsonData?.strExternalSaleType || "publisher",
+          fnSetExternalSaleEventType: _,
+          fnSetUserWhoEnabledSalePage: _,
+          fnRemoveApprovalAccount: _,
+        };
+      }
+      (0, _._)([_._], _.prototype, "BIsEventDirty", null),
+        (0, _._)([_._], _.prototype, "DiscardChanges", null),
+        (0, _._)([_._], _.prototype, "SaveDirtyChanges", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -104687,7 +105579,11 @@
           _.createElement(
             "div",
             {
-              className: (0, _._)(_.SectionLabelCtn, "SaleSectionLabelCtn"),
+              className: (0, _._)(
+                _.SectionLabelCtn,
+                "SaleSectionLabelCtn",
+                _?.BHasSomeImage("product_banner") ? _.SectionLabelImage : "",
+              ),
             },
             _.createElement(
               "div",

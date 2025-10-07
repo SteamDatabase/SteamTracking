@@ -61,11 +61,11 @@ html.responsive body.movescrolltocontent {
 }
 
 .responsive_page_menu_ctn.mainmenu {
-	left: -280px;
+	inset-inline-start: -280px;
 }
 
 .responsive_page_menu_ctn.localmenu {
-	right: -280px;
+	inset-inline-end: -280px;
 }
 
 .responsive_page_frame.mainmenu_active .responsive_page_menu_ctn.mainmenu,
@@ -75,11 +75,11 @@ html.responsive body.movescrolltocontent {
 }
 
 .responsive_page_frame.mainmenu_active .responsive_page_menu_ctn.mainmenu {
-	left: 0;
+	inset-inline-start: 0;
 }
 
 .responsive_page_frame.localmenu_active .responsive_page_menu_ctn.localmenu {
-	right: 0;
+	inset-inline-end: 0;
 }
 
 .responsive_page_content_overlay {
@@ -193,7 +193,7 @@ html.responsive body.movescrolltocontent {
 	height: 12px;
 
 	position: absolute;
-	right: 12px;
+	inset-inline-end: 12px;
 	top: calc( 50% - 6px );
 
 	transition: transform 0.25s;
@@ -219,7 +219,7 @@ html.responsive body.movescrolltocontent {
 	display: block;
 	font-size: 0.75em;
 	color: #ffffff;
-	padding-left: 28px;
+	padding-inline-start: 28px;
 }
 
 .notifications_item .notification_count_total_ctn {
@@ -229,7 +229,7 @@ html.responsive body.movescrolltocontent {
 	line-height: 140%;
 	padding: 0 8px;
 	font-size: 0.75em;
-	margin-left: 0.4em;
+	margin-inline-start: 0.4em;
 }
 
 .notifications_item .notification_envelope {
@@ -319,6 +319,10 @@ html.responsive body.movescrolltocontent {
 	cursor: pointer;
 }
 
+.responsive_page_frame.with_header {
+	--global-header-height: 104px;
+}
+
 .responsive_page_frame.with_header .responsive_local_menu_tab {
 	top: 68px;
 }
@@ -370,7 +374,7 @@ html.responsive body.movescrolltocontent {
 .responsive_header_notification_badge_ctn {
 	position: absolute;
 	text-align: center;
-	right: -26px;
+	inset-inline-end: -26px;
 	width: 60px;
 	top: -4px;
 }
@@ -497,18 +501,6 @@ html.responsive body.movescrolltocontent {
 	}
 }
 
-/*
-.responsive_page_frame:not(.in_menu_drag) .responsive_header_content {
-	transition: left 0.5s, right 0.5s;
-
-}
-
-.responsive_page_frame.mainmenu_active .responsive_header_content {
-	left: 280px;
-	right: -280px;
-}
-*/
-
 .responsive_menu_user_area {
 	padding: 24px 20px 12px 20px;
 	box-shadow: inset 0 -4px 8px 0 #000000;
@@ -553,6 +545,11 @@ html.responsive body.movescrolltocontent {
 		display: none;
 	}
 
+	html.responsive .responsive_page_frame.with_header {
+		--global-header-height: 0px;
+	}
+
+
 	html.responsive .responsive_page_menu_ctn {
 		display: block;
 	}
@@ -567,7 +564,7 @@ html.responsive body.movescrolltocontent {
 	}
 
 	html.responsive .responsive_page_frame.with_header div.responsive_page_content {
-		padding-top: var( --responsive-menu-floating-height, 0 );	/* the header overlaps this area */
+		padding-top: var( --responsive-menu-floating-height, 0px );	/* the header overlaps this area */
 	}
 
 	/* we show a footer in the menu itself */
@@ -577,7 +574,7 @@ html.responsive body.movescrolltocontent {
 
 	html.responsive .responsive_page_template_content {
 		padding-bottom: 120px;
-		min-height: calc( 100vh - 120px );
+		min-height: calc( 100vh - 120px - var( --responsive-menu-floating-height, 0px ) - var( --store-menu-overlap-height, 0px ) );
 	}
 
 	html.responsive .perf_timing_area {
@@ -609,6 +606,11 @@ html.responsive body.movescrolltocontent {
 		display: none;
 	}
 
+	html.responsive.touch .responsive_page_frame.with_header {
+		--global-header-height: 0px;
+	}
+
+
 	html.responsive.touch .responsive_page_menu_ctn {
 		display: block;
 	}
@@ -623,7 +625,7 @@ html.responsive body.movescrolltocontent {
 	}
 
 	html.responsive.touch .responsive_page_frame.with_header div.responsive_page_content {
-		padding-top: var( --responsive-menu-floating-height, 0 );	/* the header overlaps this area */
+		padding-top: var( --responsive-menu-floating-height, 0px );	/* the header overlaps this area */
 	}
 
 	/* we show a footer in the menu itself */
@@ -633,7 +635,7 @@ html.responsive body.movescrolltocontent {
 
 	html.responsive.touch .responsive_page_template_content {
 		padding-bottom: 120px;
-		min-height: calc( 100vh - 120px );
+		min-height: calc( 100vh - 120px - var( --responsive-menu-floating-height, 0px ) - var( --store-menu-overlap-height, 0px ) );
 	}
 
 	html.responsive.touch .perf_timing_area {

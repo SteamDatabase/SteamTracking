@@ -3,6 +3,11 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Ctn: "_3cNoLVtVVzke0LB8WeiaxS",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         HighlightBox: "_1C8qNhbbX8u5CxFNklZmlc",
       };
     },
@@ -41,9 +46,24 @@
     },
     chunkid: (module) => {
       module.exports = {
+        CreatorHomeEditCtn: "_3DB3VqbQwlwEgIobz3qnQM",
+        ExplanationCtn: "_3WXtRBCQheDdpVZmjNyBDO",
+        AdminLinkCtn: "_3urQXqeQ2IIwm1n4vl7qGi",
+        LeftCol: "ZhkOY_vBOYZFyESTcxStX",
+        RightCol: "qxkpFDr6iQIOoG7CjanXn",
+        EditLink: "_1HEy4dJU3qeP1gnUajGTZS",
+        Label: "_2iE4Kt_gw5kYvV5K-cGMCa",
+        Tagline: "kY-uv_6Kbmmf_zZKiW-u2",
+        AvatarImage: "_-5nYzMn9kZnP3mp2cGpoD",
+        SaveWarningCtn: "_1M3C4a9DhElWLo0ju00xir",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SocialShareCtn: "FFYZQ30ue3bMXnyIP5UrW",
         DefaultSocialOverrideMsg: "DdtTvlKvWgvmBUSKQLgf1",
         DefaultSocialImgCtn: "_10QpUx-xWFinl4cM4hpslY",
+        Small: "_1I5VGNY5lZBCAPQRmiK5oV",
         SocialShareText: "_3AR23rWGeNb-oZhicgbdGr",
         SocialTitle: "_2AobCe1CkG1-bdYa01CFZU",
         SocialDesc: "_1Unfeuc-ubWDHNdJjT-Xhv",
@@ -5175,39 +5195,43 @@
             requireAdmin: _,
           } = _,
           _ = (0, _._)(() => __webpack_require__ && (0, _._)(_));
-        return _ && !(0, _._)(_, _)
-          ? null
-          : _.createElement(
-              _,
+        if (_ && !(0, _._)(_, _)) return null;
+        return _.createElement(
+          _,
+          {
+            strSectionId: _,
+          },
+          _.createElement(
+            "div",
+            {
+              _: _,
+              className: (0, _._)(_.SettingCtn, (_ || !!_) && _.ValveOnly),
+            },
+            _.createElement(
+              "div",
               {
-                strSectionId: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  _: _,
-                  className: (0, _._)(_.SettingCtn, (_ || !!_) && _.ValveOnly),
+                className: _.Title,
+                onDoubleClick: (_) => {
+                  (0, _._)(_), _.preventDefault(), _.stopPropagation();
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Title,
-                    onDoubleClick: () => (0, _._)(_),
-                  },
-                  _,
-                  _ &&
-                    _.createElement(_._, {
-                      tooltip: _,
-                    }),
-                  __webpack_require__ &&
-                    _.createElement(_._, {
-                      bIsMinimized: _,
-                      fnToggleMinimize: () => (0, _._)(_),
-                    }),
-                ),
-                !_ && _,
-              ),
-            );
+                onMouseDown: (_) => {
+                  _.detail > 1 && _.preventDefault();
+                },
+              },
+              _,
+              _ &&
+                _.createElement(_._, {
+                  tooltip: _,
+                }),
+              __webpack_require__ &&
+                _.createElement(_._, {
+                  bIsMinimized: _,
+                  fnToggleMinimize: () => (0, _._)(_),
+                }),
+            ),
+            !_ && _,
+          ),
+        );
       }
       function _(_) {
         const { strSectionId: _, children: __webpack_require__ } = _,
@@ -6391,9 +6415,10 @@
         const _ = _._.GetEditModel(),
           { bLoading: __webpack_require__, nAcceptingGuidelineAccount: _ } = (0,
           _._)(_.GetClanAccountID(), _.GetGID()),
+          { bVisible: _ } = (0, _._)(_.GetEventModel()),
           { bVisible: _ } = (0, _._)(_.GetEventModel());
         if (__webpack_require__) return null;
-        if (_) return null;
+        if (_ || _) return null;
         if ((0, _._)(_.GetClanSteamID(), !0)) return _.createElement(_, null);
         return Boolean(_) ? _.createElement(_, null) : null;
       }
@@ -7111,9 +7136,11 @@
             _.GetEventModel().jsondata.sale_opt_in_page_name,
             _.GetEventModel().jsondata.sale_show_creator,
           ]),
+          _ = (0, _._)(_.GetClanSteamID()),
+          { bVisible: _ } = (0, _._)(_.GetEventModel()),
           { bVisible: _ } = (0, _._)(_.GetEventModel()),
           { bVisible: _ } = (0, _._)(_.GetEventModel());
-        if (_ || _)
+        if (_ || _ || (_ && _))
           return _.createElement(
             "div",
             {
@@ -8252,9 +8279,11 @@
           _ = (0, _._)(__webpack_require__.GetClanSteamID(), !0),
           _ = !(
             __webpack_require__.BIsSourceEventSaleEnabled() ||
+            2 == _ ||
             (_ && _.BHasClanAccountFlagSet(32)) ||
             _
-          );
+          ),
+          _ = 2 != _;
         return _.createElement(
           "div",
           {
@@ -8264,7 +8293,7 @@
             ref: _,
             onChange: (_) => {
               var _;
-              _
+              _ && _
                 ? (null === (_ = null == _ ? void 0 : _.current) ||
                     void 0 === _ ||
                     _.setState({
@@ -8272,7 +8301,7 @@
                     }),
                   _(!1),
                   (0, _._)(
-                    "updatelandingpage" == _
+                    1 == _
                       ? _.createElement(_, {
                           editModel: _,
                           fnOnOKCallback: () => _(!0),
@@ -8286,9 +8315,7 @@
                 : _(_);
             },
             label: (0, _._)(
-              "updatelandingpage" == _
-                ? "#Sale_option_updatelandingpage"
-                : "#Sale_option",
+              1 == _ ? "#Sale_option_updatelandingpage" : "#Sale_option",
             ),
             disabled: _,
             checked: _,
@@ -8304,6 +8331,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8932,8 +8960,10 @@
               });
             },
             { editModel: _ } = _;
-          let _ = _.GetEventModel(),
-            _ = new Array();
+          let _ = _.GetEventModel();
+          const [_] = (0, _._)(() => [_.GetEventType()]),
+            _ = 36 == _;
+          let _ = new Array();
           _(_, (0, _._)("#Sale_PageConfigOptions"), "SalePageEdit_Config");
           const _ = (0, _._)(_.GetClanSteamID(), !1);
           (_ || _.GetTaggedItems().length > 0) &&
@@ -8942,11 +8972,12 @@
               (0, _._)("#Sale_TaggedItemsSection", _.GetTaggedItems().length),
               "SalePageEdit_TaggedItems",
             ),
-            _(
-              _,
-              (0, _._)("#Sale_Artwork_Sections"),
-              "SalePageEdit_AllArtworkCtn",
-            ),
+            _ ||
+              _(
+                _,
+                (0, _._)("#Sale_Artwork_Sections"),
+                "SalePageEdit_AllArtworkCtn",
+              ),
             (_.BHasTag("contenthub") || _.BUsesContentHubForItemSource()) &&
               _(_, "Content Hub Settings", "SalePageEdit_ContentHub");
           let _ = !1,
@@ -9444,7 +9475,7 @@
       }
       function _(_) {
         const _ = _.useContext(_);
-        return _.createPortal(_.children, _);
+        return _ ? _.createPortal(_.children, _) : null;
       }
       const _ = (0, _._)((_) => {
           const _ = _._.GetEditModel(),
@@ -9766,20 +9797,70 @@
         );
       }
       function _(_) {
+        const { editModel: _ } = _;
+        return 36 == (0, _._)(() => _.GetEventType())
+          ? _.createElement(_, {
+              editModel: _,
+            })
+          : _.createElement(_, {
+              editModel: _,
+            });
+      }
+      function _(_) {
         const { editModel: _ } = _,
-          _ = _.GetEventModel(),
           _ = _.GetCurEditLanguage(),
-          [_, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.GetName(_) || "",
             _.GetSummary(_) || "",
             _.GetDescription(_) || "",
             _.GetImageURL("capsule", _) || null,
-            __webpack_require__.GetSaleSectionsByType("social_share") || [],
+          ]),
+          _ = _ || _._.GenerateSummaryFromText(_);
+        return _.createElement(_, {
+          editModel: _,
+          title: _,
+          titleTip: (0, _._)("#Sale_DefaultSocialModule_DefaultTitle"),
+          summary: _,
+          summaryTip: (0, _._)("#Sale_DefaultSocialModule_DefaultDesc"),
+          imageUrl: _,
+          socialMediaLinksEditor: !0,
+        });
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__, _] = (0, _._)(_.GetClanAccountID());
+        return _.createElement(_, {
+          editModel: _,
+          title: _.curator_title,
+          titleTip: (0, _._)(
+            "#Sale_DefaultSocialModule_DefaultTitle_CreatorHome",
+          ),
+          summary: _.curator_description,
+          summaryTip: (0, _._)(
+            "#Sale_DefaultSocialModule_DefaultDesc_CreatorHome",
+          ),
+          imageUrl: _.avatar_full_url,
+          smallImage: !0,
+        });
+      }
+      function _(_) {
+        const {
+            editModel: _,
+            title: __webpack_require__,
+            titleTip: _,
+            summary: _,
+            summaryTip: _,
+            imageUrl: _,
+            socialMediaLinksEditor: _,
+            smallImage: _,
+          } = _,
+          _ = _.GetEventModel(),
+          [_, _] = (0, _._)(() => [
+            _.GetSaleSectionsByType("social_share") || [],
             _.jsondata.sale_default_social_media_disabled,
           ]),
           _ = _.length > 0,
-          _ = !(_ || _),
-          _ = _ || _._.GenerateSummaryFromText(_);
+          _ = !(_ || _);
         return _.createElement(
           "div",
           null,
@@ -9813,7 +9894,7 @@
                 className: _().SocialShareCtn,
               },
               _.createElement("img", {
-                className: _().DefaultSocialImgCtn,
+                className: (0, _._)(_().DefaultSocialImgCtn, _ && _().Small),
                 src: _,
               }),
               _.createElement(
@@ -9826,13 +9907,9 @@
                   {
                     className: _().SocialTitle,
                   },
-                  _,
+                  __webpack_require__,
                   _.createElement("br", null),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#Sale_DefaultSocialModule_DefaultTitle"),
-                  ),
+                  _.createElement("span", null, _),
                 ),
                 _.createElement(
                   "div",
@@ -9841,11 +9918,7 @@
                   },
                   _,
                   _.createElement("br", null),
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#Sale_DefaultSocialModule_DefaultDesc"),
-                  ),
+                  _.createElement("span", null, _),
                 ),
               ),
             ),
@@ -9858,9 +9931,10 @@
             checked: _,
             disabled: _,
           }),
-          _.createElement(_, {
-            editModel: _,
-          }),
+          !_ &&
+            _.createElement(_, {
+              editModel: _,
+            }),
         );
       }
       function _(_) {
@@ -9977,26 +10051,1147 @@
               position: "center",
             });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        static Get() {
+          return (
+            _.s_newsCuratorStore ||
+              ((_.s_newsCuratorStore = new _()),
+              (_.s_newsCuratorStore.m_LoadingPromise =
+                _.s_newsCuratorStore.Init()),
+              (window.g_NewsCuratorStore = _.s_newsCuratorStore)),
+            _.s_newsCuratorStore
+          );
+        }
+        constructor() {
+          (this.m_mapNewsCurators = new Map()),
+            (this.m_bIsLoadComplete = !1),
+            (this.m_mapLangToNewsCurators = new Map()),
+            (this.m_LoadingPromise = null),
+            (0, _._)(this);
+        }
+        IsLoaded() {
+          return this.m_bIsLoadComplete;
+        }
+        WaitForInitialLoad() {
+          return this.m_LoadingPromise;
+        }
+        get allNewsCurators() {
+          return Array.from(this.m_mapNewsCurators.values());
+        }
+        GetCuratorsForLang(_) {
+          return this.m_mapLangToNewsCurators.get(_);
+        }
+        GetNewsCuratorForAccount(_) {
+          return this.m_mapNewsCurators.get(_);
+        }
+        BIsTrustedPressAccount(_) {
+          return void 0 !== this.GetNewsCuratorForAccount(_);
+        }
+        async Init() {
+          _._.GetLanguageListForRealms([_._.EREALM]).forEach((_) =>
+            this.m_mapLangToNewsCurators.set(_, []),
+          );
+          const _ = _._.STORE_BASE_URL + "events/ajaxgetnewscurators";
+          let _ = {
+            origin: self.origin,
+          };
+          const _ = await _().get(_, {
+            params: _,
+          });
+          (0, _._)(() => {
+            _.data && _.data.success && this.HandleCuratorResponse(_.data),
+              (this.m_bIsLoadComplete = !0);
+          });
+        }
+        HandleCuratorResponse(_) {
+          var _;
+          if (
+            (_.groupvanityinfo && _._.RegisterClanData(_.groupvanityinfo),
+            _.newscuratorinfo)
+          )
+            for (const _ of _.newscuratorinfo) {
+              if (this.m_mapNewsCurators.has(_.clanAccountID)) continue;
+              this.m_mapNewsCurators.set(_.clanAccountID, _);
+              const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID);
+              _ &&
+                (null ===
+                  (_ = this.m_mapLangToNewsCurators.get(_.rss_language)) ||
+                  void 0 === _ ||
+                  _.push(_));
+            }
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapNewsCurators", void 0),
+        (0, _._)([_._], _.prototype, "m_bIsLoadComplete", void 0),
+        (0, _._)([_._], _.prototype, "m_mapLangToNewsCurators", void 0),
+        (0, _._)([_._], _.prototype, "allNewsCurators", null),
+        (0, _._)([_._], _.prototype, "HandleCuratorResponse", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
-        const { editModel: _, mode: __webpack_require__ } = _;
-        return (0, _._)(() => _.GetGID())
+        const _ = new Set();
+        return (
+          (_.indexOf("games") >= 0 || _.indexOf("dlc") >= 0) && _.add("apps"),
+          _.indexOf("curators") >= 0 && _.add("curators"),
+          _
+        );
+      }
+      class _ extends _.Component {
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              strSearchString: "",
+              rgAppSuggestions: null,
+              rgCuratorSuggestions: null,
+            }),
+            (this.m_nHighestSentRequestID = 0),
+            (this.m_mapHighestReceivedRequestIDFromBackEnd = new Map([
+              ["apps", 0],
+              ["curators", 0],
+            ])),
+            (this.m_timerForChange = new _._());
+        }
+        componentWillUnmount() {
+          this.m_timerForChange.Cancel();
+        }
+        CloseSuggestions() {
+          this.setState({
+            rgCuratorSuggestions: null,
+            rgAppSuggestions: null,
+            strSearchString: "",
+          });
+        }
+        async GetSuggestionsFromServer(_) {
+          const _ = _(this.props.rgCorporaToSearch);
+          _.has("apps") && this.GetAppSuggestionsFromServer(_),
+            _.has("curators") && this.GetCuratorSuggestions(_);
+        }
+        async GetCuratorSuggestions(_) {
+          var _;
+          const _ = _.Get().allNewsCurators,
+            _ = [];
+          for (const _ of _) {
+            const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID),
+              _ = {
+                corpus: "curators",
+                _: _.clanAccountID,
+                name: null == _ ? void 0 : _.group_name,
+                img: null == _ ? void 0 : _.avatar_full_url,
+              };
+            if (
+              (
+                (null === (_ = null == _ ? void 0 : _.group_name) ||
+                void 0 === _
+                  ? void 0
+                  : _.toLocaleLowerCase()) || ""
+              ).indexOf(_) >= 0
+            ) {
+              if (
+                this.props.fnFilterSuggestion &&
+                !this.props.fnFilterSuggestion(_)
+              )
+                continue;
+              if (_._.Get().BIsIgnoringCurator(_.clanAccountID)) continue;
+              const _ = _._.Get().BIsFollowingCurator(_.clanAccountID),
+                _ = _.createElement(_, {
+                  key: "curatorsug_" + _._,
+                  suggestion: _,
+                  fnOnSelected: this.props.fnOnSelected,
+                  bShowFollowingLabel: _,
+                });
+              _.push(
+                this.props.fnDecorateSuggestion
+                  ? this.props.fnDecorateSuggestion(_, _)
+                  : _,
+              );
+            }
+          }
+          this.m_mapHighestReceivedRequestIDFromBackEnd.set(
+            "curators",
+            this.m_nHighestSentRequestID,
+          ),
+            this.setState({
+              rgCuratorSuggestions: _,
+            });
+        }
+        async GetAppSuggestionsFromServer(_) {
+          var _;
+          const _ = this.m_nHighestSentRequestID,
+            _ = [];
+          this.props.rgCorporaToSearch.indexOf("games") >= 0 &&
+            (_.push("game"), _.push("software")),
+            this.props.rgCorporaToSearch.indexOf("dlc") >= 0 &&
+              (_.push("dlc"), _.push("music"));
+          const _ = {
+              _: _._.COUNTRY,
+              _: _._.LANGUAGE,
+              realm: _._.k_ESteamRealmGlobal,
+              origin: self.origin,
+              _: "jsonfull",
+              term: _.replace(" ", "+"),
+              require_type: _.join(","),
+              excluded_tags: _._.Get().GetExcludedTagsSortedByID(),
+              excluded_content_descriptors: _._.Get().ExcludedContentDescriptor,
+            },
+            _ = `${_._.STORE_BASE_URL}search/suggest`,
+            _ = await _().get(_, {
+              params: _,
+              withCredentials: !0,
+            });
+          if (_ < this.m_mapHighestReceivedRequestIDFromBackEnd.get("apps"))
+            return;
+          let _;
+          this.m_mapHighestReceivedRequestIDFromBackEnd.set("apps", _),
+            (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+              ? void 0
+              : _.length) &&
+              (_ = _.data.map((_) => {
+                const _ = {
+                  corpus:
+                    ((_ = _.type),
+                    "game" == _ || "software" == _
+                      ? "games"
+                      : "dlc" == _ || "music" == _
+                        ? "dlc"
+                        : null),
+                  ..._,
+                  _: parseInt(_._),
+                };
+                var _;
+                if (
+                  this.props.fnFilterSuggestion &&
+                  !this.props.fnFilterSuggestion(_)
+                )
+                  return null;
+                const _ = _.createElement(_, {
+                  key: _.type + _._,
+                  suggestion: _,
+                  fnOnSelected: this.props.fnOnSelected,
+                });
+                return this.props.fnDecorateSuggestion
+                  ? this.props.fnDecorateSuggestion(_, _)
+                  : _;
+              })),
+            this.setState({
+              rgAppSuggestions: _,
+            });
+        }
+        async UpdateSuggestions(_) {
+          const _ = _.target.value && _.target.value.trim().toLocaleLowerCase();
+          if (
+            (this.m_nHighestSentRequestID++, !(null == _ ? void 0 : _.length))
+          )
+            return (
+              Array.from(_(this.props.rgCorporaToSearch)).forEach((_) =>
+                this.m_mapHighestReceivedRequestIDFromBackEnd.set(
+                  _,
+                  this.m_nHighestSentRequestID,
+                ),
+              ),
+              this.m_timerForChange.Cancel(),
+              this.setState({
+                strSearchString: "",
+              }),
+              void this.ResetSuggestions()
+            );
+          this.setState({
+            strSearchString: _,
+          }),
+            this.m_timerForChange.Schedule(300, () =>
+              this.GetSuggestionsFromServer(_),
+            );
+        }
+        ResetSuggestions() {
+          this.setState({
+            rgAppSuggestions: null,
+            rgCuratorSuggestions: null,
+          });
+        }
+        GetLimitedSuggestions() {
+          let { rgAppSuggestions: _, rgCuratorSuggestions: _ } = this.state;
+          let _ = _ ? _.length : 10,
+            _ = _ ? _.length : 10;
+          return (
+            _ + _ > 10 && (_ = 10 - Math.min(_, 2)),
+            (_ = 10 - _),
+            (_ = null == _ ? void 0 : _.slice(0, _)),
+            (_ = null == _ ? void 0 : _.slice(0, _)),
+            {
+              rgAppSuggestions: _,
+              rgCuratorSuggestions: _,
+            }
+          );
+        }
+        render() {
+          const {
+              strLabel: _,
+              focusOnMount: _,
+              rgCorporaToSearch: __webpack_require__,
+              strResultsClass: _,
+            } = this.props,
+            { strSearchString: _ } = this.state,
+            { rgAppSuggestions: _, rgCuratorSuggestions: _ } =
+              this.GetLimitedSuggestions(),
+            _ = (null == _ ? void 0 : _.length) > 0,
+            _ = (null == _ ? void 0 : _.length) > 0,
+            _ = (null == _ ? void 0 : _.length) > 0,
+            _ = _(__webpack_require__).size > 1,
+            _ =
+              _ &&
+              _ &&
+              (0, _._)(
+                __webpack_require__.indexOf("dlc") >= 0
+                  ? "#EventCalendar_SearchResultsHeader_GameAndDLCSection"
+                  : "#EventCalendar_SearchResultsHeader_GameSection",
+              ),
+            _ = Array.from(_(__webpack_require__)).some(
+              (_) =>
+                this.m_nHighestSentRequestID >
+                this.m_mapHighestReceivedRequestIDFromBackEnd.get(_),
+            ),
+            _ = !_ && !_ && !_;
+          return _.createElement(
+            "div",
+            {
+              className: _().SuggestContainer,
+            },
+            _.createElement(_._, {
+              type: "text",
+              label: _,
+              onChange: this.UpdateSuggestions,
+              bAlwaysShowClearAction: _,
+              focusOnMount: _,
+            }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().Results, _),
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      key: "game-suggestions",
+                    },
+                    _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().ResultSectionHeader,
+                        },
+                        _,
+                      ),
+                    _,
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      key: "curator-suggestions",
+                    },
+                    _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().ResultSectionHeader,
+                        },
+                        (0, _._)(
+                          "#EventCalendar_SearchResultsHeader_CuratorSection",
+                        ),
+                      ),
+                    _,
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().EmptyResults,
+                      key: "empty-results",
+                    },
+                    (0, _._)("#EventCalendar_GameSearch_NoneFound"),
+                  ),
+                _ &&
+                  _.createElement(_._, {
+                    size: "small",
+                  }),
+              ),
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "UpdateSuggestions", null);
+      const _ = (_) =>
+        _.createElement(
+          "div",
+          {
+            className: _().ResultRow,
+            key: `suggestion-${_.suggestion._}`,
+            onClick: () => _.fnOnSelected(_.suggestion),
+          },
+          _.createElement("img", {
+            src: _.suggestion.img,
+            className: _().AvatarImage,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().GameName,
+            },
+            " ",
+            (0, _._)(_.suggestion.name),
+            " ",
+          ),
+          _.bShowFollowingLabel &&
+            _.createElement(
+              "div",
+              {
+                className: _().Label,
+              },
+              (0, _._)("#EventCalendar_FollowingCurator"),
+            ),
+        );
+      function _(_) {
+        const { editModel: _ } = _,
+          _ = _.GetEventModel(),
+          _ = (0, _._)(() => _.jsondata.associated_appid || 0),
+          [_, _] = (0, _.useState)(Boolean(_));
+        return _.appid
+          ? null
+          : _
+            ? _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    className: _().EventEditorTextTitleCtn,
+                  },
+                  _.createElement(
+                    "span",
+                    {
+                      className: _().EventEditorTextTitle,
+                    },
+                    (0, _._)("#EventEditor_Associated_App"),
+                  ),
+                  _.createElement(_._, {
+                    tooltip: (0, _._)("#EventEditor_Associated_App_ttip"),
+                    className: _().tooltip_Ctn,
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().InputBorder,
+                  },
+                  _.createElement("input", {
+                    type: "number",
+                    className: (0, _._)(_.EventEditorTitleInput, _.Subtitle),
+                    value: _,
+                    onChange: (_) => {
+                      const _ = Number.parseInt(_.currentTarget.value);
+                      _ !== _.jsondata.associated_appid &&
+                        ((_.jsondata.associated_appid = _ || void 0),
+                        _.SetDirty(_._.description));
+                    },
+                  }),
+                ),
+              )
+            : _.createElement(_._, {
+                checked: _,
+                onChange: _,
+                label: (0, _._)("#EventEditor_Associated_App_Question"),
+                tooltip: (0, _._)("#EventEditor_Associated_App_ttip"),
+              });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: _().HighlightBox,
+          },
+          (0, _._)("#PartnerEvent_MM_TitleTip", _.createElement("i", null)),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: _().HighlightBox,
+          },
+          _.createElement(
+            "p",
+            null,
+            (0, _._)("#PartnerEvent_MM_DescriptionTip1"),
+          ),
+          _.createElement(
+            "ul",
+            null,
+            _.createElement(
+              "li",
+              null,
+              (0, _._)("#PartnerEvent_MM_DescriptionTip2"),
+            ),
+            _.createElement(
+              "li",
+              null,
+              (0, _._)("#PartnerEvent_MM_DescriptionTip3"),
+            ),
+            _.createElement(
+              "li",
+              null,
+              (0, _._)("#PartnerEvent_MM_DescriptionTip4"),
+            ),
+          ),
+          _.createElement(
+            "p",
+            null,
+            (0, _._)("#PartnerEvent_MM_DescriptionTip5"),
+          ),
+          _.createElement(
+            "p",
+            null,
+            _.createElement(
+              "a",
+              {
+                href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+              },
+              (0, _._)("#PartnerEvent_MM_LearnMore"),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = _.useRef(void 0),
+          { editModel: __webpack_require__, bCanManuallyTagAssociatedApps: _ } =
+            _,
+          _ = _.useCallback((_, _) => {
+            _.current && _.current(_, _);
+          }, []),
+          _ = (0, _._)(() =>
+            __webpack_require__.BHasTag("vo_marketing_message"),
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            editModel: __webpack_require__,
+          }),
+          _.createElement(_, {
+            editModel: __webpack_require__,
+          }),
+          _.createElement(_, {
+            editModel: __webpack_require__,
+          }),
+          _.createElement(_, {
+            editModel: __webpack_require__,
+          }),
+          Boolean(_) &&
+            _.createElement(_, {
+              editModel: __webpack_require__,
+            }),
+          _.createElement(_, {
+            editModel: __webpack_require__,
+          }),
+          _.createElement(_, {
+            editModel: __webpack_require__,
+          }),
+          _ && _.createElement(_, null),
+          _.createElement(
+            "div",
+            {
+              className: _().Columns,
+            },
+            _.createElement(_, {
+              editModel: __webpack_require__,
+              refOnInsertImage: _,
+            }),
+            _.createElement(_, {
+              editModel: __webpack_require__,
+              fnInsertImage: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          _ = (0, _._)(_.editModel.GetClanSteamID().ConvertTo64BitString()),
+          _ = _.isSuccess && !!_.data.crowdin_project_id;
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().FlexColumnContainer,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.LanguageControlsCtn,
+              },
+              (0, _._)("#EventEditor_LangaugeDesc"),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().FlexRowContainer, _.ToolContainer),
+                },
+                _.createElement(_._, {
+                  editModel: _,
+                }),
+                _.createElement(_, {
+                  editModel: _,
+                }),
+              ),
+              _ &&
+                _.createElement(_._, {
+                  editModel: _.editModel,
+                }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__, _] = (0, _._)(() => [
+            _.GetName(_.GetCurEditLanguage()) || "",
+            _.GetEventType(),
+          ]),
+          _ = Boolean(__webpack_require__.length >= _._),
+          _ = (0, _._)(() => _.BHasTag("vo_marketing_message"));
+        let _ = (0, _._)("#EventEditor_EventTitle"),
+          _ = (0, _._)("#EventEditor_Title_General_ttip");
+        return (
+          28 == _
+            ? (_ = (0, _._)("#EventEditor_AnnouncementTitle"))
+            : 36 == _ &&
+              ((_ = (0, _._)("#EventEditor_CreatorHomeTitle")),
+              (_ = (0, _._)("#EventEditor_Title_CreatorHome_ttip"))),
+          _.createElement(
+            _.Fragment,
+            null,
+            _ && _.createElement(_, null),
+            _.createElement(
+              "div",
+              {
+                className: _().EventEditorTextTitle,
+              },
+              _,
+              Boolean(_) &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _().EventEditorTextTitleLengthInfo,
+                  },
+                  (0, _._)(
+                    "#EventEditor_EventTitle_Max_Characters_Reached",
+                    _._,
+                  ),
+                ),
+              _.createElement(_._, {
+                tooltip: _,
+                className: _().tooltip_Ctn,
+              }),
+              _.createElement(
+                "span",
+                {
+                  className: (0, _._)(
+                    _.CharactorRemaining,
+                    _ ? _.CharactorExhausted : "",
+                  ),
+                },
+                (0, _._)(
+                  "#EventEditor_Input_Characters_Left",
+                  _._ - __webpack_require__.length,
+                ),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().InputBorder,
+              },
+              _.createElement("input", {
+                type: "text",
+                className: (0, _._)({
+                  [_.EventEditorTitleInput]: !0,
+                  [_.MainTitle]: !0,
+                  [_.EventEditorInputMaxLength]: _,
+                }),
+                value: __webpack_require__,
+                placeholder: (0, _._)("#EventEditor_Name_Placeholder"),
+                onFocus: (_) => {
+                  var _;
+                  return null === (_ = null == _ ? void 0 : _.target) ||
+                    void 0 === _
+                    ? void 0
+                    : _.select();
+                },
+                onChange: (_) => {
+                  var _;
+                  return _.SetName(
+                    _.GetCurEditLanguage(),
+                    (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                    void 0 === _
+                      ? void 0
+                      : _.value) || "",
+                  );
+                },
+                maxLength: _._,
+              }),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          _ = (0, _._)(() => _.GetSubTitle(_.GetCurEditLanguage()) || ""),
+          _ = Boolean(_.length >= _._);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().EventEditorTextTitleCtn,
+            },
+            _.createElement(
+              "span",
+              {
+                className: _().EventEditorTextTitle,
+              },
+              (0, _._)("#EventEditor_Event_SubTitle"),
+            ),
+            _.createElement(
+              "span",
+              {
+                className: _().EventEditorTextTitleLengthInfo,
+              },
+              (0, _._)(
+                _
+                  ? "#EventEditor_Event_SubTitle_Details_Reached"
+                  : "#EventEditor_Event_SubTitle_Details",
+                _._,
+              ),
+            ),
+            _.createElement(_._, {
+              tooltip: (0, _._)("#EventEditor_SubTitle_General_ttip", _._),
+              className: _().tooltip_Ctn,
+            }),
+            _.createElement(
+              "span",
+              {
+                className: (0, _._)(
+                  _.CharactorRemaining,
+                  _ ? _.CharactorExhausted : "",
+                ),
+              },
+              (0, _._)("#EventEditor_Input_Characters_Left", _._ - _.length),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().InputBorder,
+            },
+            _.createElement("input", {
+              type: "text",
+              className: (0, _._)(
+                _.EventEditorTitleInput,
+                _.Subtitle,
+                _ ? _.EventEditorInputMaxLength : "",
+              ),
+              value: _,
+              placeholder: (0, _._)("#EventEditor_Name_SubTitle_Placeholder"),
+              onFocus: (_) => {
+                var _;
+                return null === (_ = null == _ ? void 0 : _.target) ||
+                  void 0 === _
+                  ? void 0
+                  : _.select();
+              },
+              onChange: (_) => {
+                var _;
+                return _.SetSubTitle(
+                  _.GetCurEditLanguage(),
+                  (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                  void 0 === _
+                    ? void 0
+                    : _.value) || "",
+                );
+              },
+              maxLength: _._,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__, _] = (0, _._)(() => [
+            _.GetSummary(_.GetCurEditLanguage()) || "",
+            _.GetDescription(_.GetCurEditLanguage()) || "",
+          ]);
+        let _ = "";
+        0 == __webpack_require__.trim().length &&
+          (_ =
+            0 == _.length
+              ? (0, _._)("#EventEditor_Summary_Placeholder", _._)
+              : (0, _._)("#EventEditor_Summary_Autogenerated") +
+                _._.GenerateSummaryFromText(_));
+        let _ = Boolean(__webpack_require__.length >= _._);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _.EventEditorInputPaneContents,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().EventEditorTextTitleCtn,
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _().EventEditorTextTitle,
+                },
+                (0, _._)("#EventEditor_Summary_Title"),
+              ),
+              _.createElement(
+                "span",
+                {
+                  className: _().EventEditorTextTitleLengthInfo,
+                },
+                (0, _._)(
+                  _
+                    ? "#EventEditor_Summary_Title_Length_Reached"
+                    : "#EventEditor_Summary_Title_Length",
+                  _._,
+                ),
+              ),
+              _.createElement(_._, {
+                tooltip: (0, _._)("#EventEditor_Summary_Ttip", _._),
+                className: _().tooltip_Ctn,
+              }),
+              _.createElement(
+                "span",
+                {
+                  className: (0, _._)(
+                    _.CharactorRemaining,
+                    _ ? _.CharactorExhausted : "",
+                  ),
+                },
+                (0, _._)(
+                  "#EventEditor_Input_Characters_Left",
+                  _._ - __webpack_require__.length,
+                ),
+              ),
+            ),
+            _.createElement("textarea", {
+              className: (0, _._)(
+                _.EventEditorTitleInput,
+                _.Summary,
+                _ ? _.EventEditorInputMaxLength : "",
+              ),
+              value: __webpack_require__,
+              placeholder: _,
+              onFocus: (_) => {
+                var _;
+                return null === (_ = null == _ ? void 0 : _.target) ||
+                  void 0 === _
+                  ? void 0
+                  : _.select();
+              },
+              onChange: (_) => {
+                var _;
+                return _.SetSummary(
+                  _.GetCurEditLanguage(),
+                  (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                  void 0 === _
+                    ? void 0
+                    : _.value) || "",
+                );
+              },
+              maxLength: _._,
+              cols: 40,
+              rows: 2,
+            }),
+          ),
+          _.createElement("div", {
+            className: _().ClearThings,
+          }),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _;
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().EventEditorTextTitleCtn,
+            },
+            _.createElement(
+              "span",
+              {
+                className: _().EventEditorTextTitle,
+              },
+              (0, _._)("#EventEditor_ReferencedAppIDs_Header"),
+            ),
+            _.createElement(_._, {
+              tooltip: (0, _._)("#EventEditor_ReferencedAppIDs_Tooltip"),
+              className: _().tooltip_Ctn,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.SaleImportURL,
+            },
+            _.createElement(_, {
+              strLabel: (0, _._)("#EventEditor_ReferencedAppIDs_SearchLabel"),
+              fnFilterSuggestion: (_) =>
+                !_.GetReferencedAppIDArray().includes(Number(_._)),
+              fnOnSelected: (_) => {
+                _.GetReferencedAppIDArray().includes(Number(_._)) ||
+                  (_.GetReferencedAppIDArray().push(Number(_._)),
+                  _.SetDirty(_._.jsondata_other));
+              },
+              rgCorporaToSearch: ["games", "dlc"],
+            }),
+          ),
+          _.GetReferencedAppIDArray().length > 0 &&
+            _.createElement(_._, {
+              items: _.GetReferencedAppIDArray(),
+              onDelete: (_) => {
+                _.GetReferencedAppIDArray().splice(_),
+                  _.SetDirty(_._.jsondata_other);
+              },
+              onReorder: () => _.SetDirty(_._.jsondata_other),
+              render: (_) =>
+                _.createElement(_, {
+                  key: `suggestion-${_}`,
+                  appid: _,
+                }),
+            }),
+        );
+      }
+      function _(_) {
+        const { appid: _ } = _,
+          [__webpack_require__] = (0, _._)(_, {});
+        return _.createElement(
+          "div",
+          {
+            className: _.ResultRow,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.GameName,
+            },
+            " ",
+            (0, _._)(
+              (null == __webpack_require__
+                ? void 0
+                : __webpack_require__.GetName()) || "",
+            ) + ` (${_})`,
+            " ",
+          ),
+        );
+      }
+      const _ = _.lazy(() =>
+        Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+      );
+      function _(_) {
+        const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
+          [_, _] = (function (_) {
+            const _ = "partnerEventsRichEditorOptIn",
+              _ = "1",
+              [_, _] = _.useState(() => {
+                var _;
+                return (
+                  "1" ==
+                  (null !== (_ = localStorage.getItem(_)) && void 0 !== _
+                    ? _
+                    : _)
+                );
+              }),
+              _ = _.useCallback(
+                (_) => {
+                  localStorage.setItem(_, _ ? "1" : "0"), _(_);
+                },
+                [_],
+              );
+            return [_, _];
+          })(),
+          _ = (0, _._)(() => _.GetEventType()),
+          _ = (0, _._)(
+            (_) => {
+              if (!_) return;
+              const _ = (_, _) => (0, _._)(_, _, _);
+              return (
+                (__webpack_require__.current = _),
+                () => {
+                  __webpack_require__.current == _ &&
+                    (__webpack_require__.current = void 0);
+                }
+              );
+            },
+            [__webpack_require__],
+          ),
+          _ = _.useMemo(() => {
+            const _ = _._.is_support;
+            return (0, _._)({
+              bIncludeMedia: _._.CAN_UPLOAD_IMAGES,
+              bIncludeValveOnly: _,
+            });
+          }, []);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().LeftCol, _.DescEditorPadding),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().EventEditorTextTitle,
+            },
+            28 == _
+              ? (0, _._)("#EventEditor_DescriptionNews")
+              : (0, _._)("#EventEditor_Description"),
+          ),
+          _.createElement(
+            "label",
+            null,
+            _.createElement("input", {
+              type: "checkbox",
+              checked: _,
+              onChange: (_) => _(_.currentTarget.checked),
+            }),
+            (0, _._)("#EventEditor_UseVisualEditor"),
+          ),
+          _
+            ? _.createElement(
+                _.Suspense,
+                null,
+                _.createElement(_, {
+                  editModel: _,
+                  refOnInsertImage: __webpack_require__,
+                  limitBBCode: _,
+                }),
+              )
+            : _.createElement(_._, {
+                fnGetCurText: () => _.GetDescription(_.GetCurEditLanguage()),
+                fnOnTextChange: (_) => {
+                  var _;
+                  return _.SetDescription(
+                    _.GetCurEditLanguage(),
+                    (null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                    void 0 === _
+                      ? void 0
+                      : _.value) || "",
+                  );
+                },
+                fnSetText: (_) => _.SetDescription(_.GetCurEditLanguage(), _),
+                strPlaceholder: (0, _._)(
+                  "#EventEditor_Description_PlaceHolder",
+                ),
+                ref: _,
+                emoticonStore: _._,
+                bSupportHTMLImport: !0,
+                showFormatHelp: "PartnerEvents",
+                limitBBCode: _,
+                classNameForTextArea: _.EventEditorDescription,
+                clanSteamID: _.GetClanSteamID(),
+              }),
+        );
+      }
+      function _(_) {
+        const { editModel: _, fnInsertImage: __webpack_require__ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.GetClanSteamID(),
+            _.GetAppID(),
+            _.GetIncludedRealmList(),
+          ]);
+        return _._.CAN_UPLOAD_IMAGES
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().RightCol,
+                  _.DescEditorPadding,
+                  _.ImagePickerCtn,
+                ),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().EventEditorTextTitle,
+                },
+                (0, _._)("#ImagePicker_PreviousImages2"),
+                _.createElement(_._, {
+                  tooltip: (0, _._)("#ImagePicker_Images_ttip"),
+                  className: _().tooltip_Ctn,
+                }),
+              ),
+              _.createElement(_._, {
+                bShowLightBox: !0,
+                appid: _,
+                clanSteamID: _,
+                imageInsertCallBack: __webpack_require__,
+                fnSetImageURL: _.SetImageURL,
+                rgRealmList: _,
+                fnLangHasData: _.BHasTitleImage,
+                fnGetImageHash: _.GetImageHashAndExt,
+                partnerEventStore: _._,
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const { editModel: _, mode: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [_.GetGID(), _.GetEventType()]);
+        return _
           ? _.createElement(_, {
               editModel: _,
               mode: __webpack_require__,
             })
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.SaleContainer, "SaleContainer"),
-              },
-              (0, _._)("#Sale_SaveFirst"),
-            );
+          : 36 == _
+            ? _.createElement(_, {
+                editModel: _,
+              })
+            : _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.SaleContainer, "SaleContainer"),
+                },
+                (0, _._)("#Sale_SaveFirst"),
+              );
       }
       function _(_) {
         const { editModel: _, mode: __webpack_require__ } = _,
-          [_, _, _, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _, _, _] = (0, _._)(() => {
             var _;
             return [
+              _.GetEventType(),
               _.GetEventModel().jsondata.sale_presenters,
               _.GetEventModel().jsondata,
               _.GetEventModel().clanSteamID,
@@ -10010,7 +11205,8 @@
           }),
           _ = (0, _._)(_.GetAccountID()),
           { bRequiresHostDisclaimer: _ } = (0, _._)(_.GetAccountID(), _),
-          _ = _._.includes(_.GetAccountID());
+          _ = _._.includes(_.GetAccountID()),
+          _ = 36 == _;
         (0, _.useEffect)(() => {
           _._.Get().EnsureLoaded(_),
             !_._.Get().BHasExplicitSettings(_) &&
@@ -10020,102 +11216,136 @@
         const _ = _.useCallback((_) => {
           (0, _._)(_.strSectionId) && (0, _._)(_.strSectionId);
         }, []);
-        return _.BIsSourceEventSaleEnabled() ||
-          !_.clone_from_event_gid ||
-          !_.clone_from_sale_enabled ||
-          (_ && _.BHasClanAccountFlagSet(32))
-          ? _.createElement(
+        if (
+          !_.BIsSourceEventSaleEnabled() &&
+          _.clone_from_event_gid &&
+          _.clone_from_sale_enabled &&
+          (!_ || !_.BHasClanAccountFlagSet(32))
+        )
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.SaleContainer, "SaleContainer"),
+            },
+            _.createElement(
               "div",
               {
-                className: (0, _._)(_.SaleContainer, "SaleContainer"),
+                className: _.WarningStyles,
               },
+              (0, _._)("#Sale_CloneNotReady"),
+            ),
+            _.createElement(_, {
+              mode: __webpack_require__,
+            }),
+          );
+        let _ = "#Sale_title",
+          _ = "doc/marketing/event_tools/sales/tools";
+        return (
+          1 == __webpack_require__
+            ? ((_ = "#Sale_UpdateLandingPage_title"),
+              (_ = "doc/marketing/event_tools/updatelandingpages/tools"))
+            : 2 == __webpack_require__ &&
+              ((_ = "#Sale_CreatorHome_title"),
+              (_ = "doc/marketing/event_tools/creatorhome/tools")),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.SaleContainer, "SaleContainer"),
+            },
+            !_ &&
               _.createElement(_, {
                 mode: __webpack_require__,
               }),
+            _.createElement(
+              "div",
+              {
+                className: _.EventEditorTextTitleCtn,
+              },
               _.createElement(
-                "div",
+                "span",
                 {
-                  className: _.EventEditorTextTitleCtn,
+                  className: (0, _._)(_.EventEditorTextTitle, _.FlexGrow),
+                },
+                (0, _._)(_),
+              ),
+              _.createElement(
+                _._,
+                {
+                  href: _._.PARTNER_BASE_URL + _,
+                  className: (0, _._)(_.doclink),
                 },
                 _.createElement(
                   "span",
-                  {
-                    className: (0, _._)(_.EventEditorTextTitle, _.FlexGrow),
-                  },
-                  (0, _._)(
-                    "updatelandingpage" == __webpack_require__
-                      ? "#Sale_UpdateLandingPage_title"
-                      : "#Sale_title",
-                  ),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    href:
-                      _._.PARTNER_BASE_URL +
-                      ("updatelandingpage" == __webpack_require__
-                        ? "doc/marketing/event_tools/updatelandingpages/tools"
-                        : "doc/marketing/event_tools/sales/tools"),
-                    className: (0, _._)(_.doclink),
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    (0, _._)("#Broadcast_documentation"),
-                  ),
+                  null,
+                  (0, _._)("#Broadcast_documentation"),
                 ),
               ),
+            ),
+            _ &&
+              _.createElement(_, {
+                editModel: _,
+              }),
+            _.createElement(
+              _,
+              null,
+              Boolean(!_ && (!_ || _)) &&
+                _.createElement(_, {
+                  clanSteamID: _,
+                  gidClanEvent: _,
+                  rgSalePresenters: _,
+                  bIsEventVisible: _,
+                  fnCleanSaleEventPresenters: () => {
+                    (_.GetEventModel().jsondata.sale_presenters = void 0),
+                      _.SetDirty(_._.jsondata_sales);
+                  },
+                  bPublishTab: !1,
+                }),
+              _.createElement(_, null),
               _.createElement(
-                _,
+                "div",
                 null,
-                Boolean(!_ && (!_ || _)) &&
-                  _.createElement(_, {
-                    clanSteamID: _,
-                    gidClanEvent: _,
-                    rgSalePresenters: _,
-                    bIsEventVisible: _,
-                    fnCleanSaleEventPresenters: () => {
-                      (_.GetEventModel().jsondata.sale_presenters = void 0),
-                        _.SetDirty(_._.jsondata_sales);
-                    },
-                    bPublishTab: !1,
-                  }),
-                _.createElement(_, null),
+                _.createElement(_, null, _.createElement(_, null)),
+                _.createElement(_, {
+                  editModel: _,
+                  onSelected: _,
+                }),
+                _.createElement(_, {
+                  editModel: _,
+                }),
                 _.createElement(
-                  "div",
-                  null,
-                  _.createElement(_, null, _.createElement(_, null)),
-                  _.createElement(_, {
-                    editModel: _,
-                    onSelected: _,
-                  }),
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
-                  _.createElement(
-                    _,
-                    {
-                      strSectionId: "SalePageEdit_Config",
-                      hasMinimize: !0,
-                      strTitle: (0, _._)("#Sale_PageConfigOptions"),
-                    },
-                    _.createElement(_, null),
-                  ),
-                  _.createElement(
-                    _,
-                    {
-                      strSectionId: "SalePageEdit_TaggedItems",
-                      hasMinimize: !0,
-                      strToolTip: (0, _._)("#Sale_TagFilter_SectionTooltip"),
-                      strTitle: (0, _._)(
-                        "#Sale_TaggedItemsSection",
-                        _.GetEventModel().GetTaggedItems().length,
-                      ),
-                    },
+                  _,
+                  {
+                    strSectionId: "SalePageEdit_Config",
+                    hasMinimize: !0,
+                    strTitle: (0, _._)("#Sale_PageConfigOptions"),
+                  },
+                  _.createElement(_, null),
+                ),
+                _.createElement(
+                  _,
+                  {
+                    strSectionId: "SalePageEdit_TaggedItems",
+                    hasMinimize: !0,
+                    strToolTip: (0, _._)("#Sale_TagFilter_SectionTooltip"),
+                    strTitle: (0, _._)(
+                      "#Sale_TaggedItemsSection",
+                      _
+                        ? null == _
+                          ? void 0
+                          : _.GetAppIDList().length
+                        : _.GetEventModel().GetTaggedItems().length,
+                    ),
+                  },
+                  !_ &&
                     _.createElement(_._, {
                       editModel: _,
                     }),
-                  ),
+                  _ &&
+                    _.createElement(_._, {
+                      editModel: _,
+                    }),
+                ),
+                !_ &&
                   _.createElement(
                     _,
                     {
@@ -10127,38 +11357,39 @@
                       editModel: _,
                     }),
                   ),
-                  (_.BHasTag("contenthub") ||
-                    _.GetEventModel().BUsesContentHubForItemSource()) &&
-                    _.createElement(
-                      _,
-                      {
-                        strSectionId: "SalePageEdit_ContentHub",
-                        hasMinimize: !0,
-                        strTitle: "Content Hub Settings",
-                        strToolTip:
-                          "Manage settings for content hubs, including overrides for specific hubs and hub-based sales.",
-                      },
-                      _.createElement(_, {
-                        editModel: _,
-                      }),
-                    ),
-                  _.createElement(_, {
-                    editModel: _,
-                  }),
+                (_.BHasTag("contenthub") ||
+                  _.GetEventModel().BUsesContentHubForItemSource()) &&
                   _.createElement(
                     _,
                     {
-                      strSectionId: "SalePageEdit_SocialModule",
+                      strSectionId: "SalePageEdit_ContentHub",
                       hasMinimize: !0,
-                      strTitle: (0, _._)("#Sale_DefaultSocialModule"),
+                      strTitle: "Content Hub Settings",
+                      strToolTip:
+                        "Manage settings for content hubs, including overrides for specific hubs and hub-based sales.",
                     },
                     _.createElement(_, {
                       editModel: _,
                     }),
                   ),
-                  _.createElement("div", {
-                    className: _.SectionDivider,
+                _.createElement(_, {
+                  editModel: _,
+                }),
+                _.createElement(
+                  _,
+                  {
+                    strSectionId: "SalePageEdit_SocialModule",
+                    hasMinimize: !0,
+                    strTitle: (0, _._)("#Sale_DefaultSocialModule"),
+                  },
+                  _.createElement(_, {
+                    editModel: _,
                   }),
+                ),
+                _.createElement("div", {
+                  className: _.SectionDivider,
+                }),
+                !_ &&
                   _.createElement(
                     _,
                     {
@@ -10171,37 +11402,22 @@
                       editModel: _,
                     }),
                   ),
-                  _.createElement(
-                    _,
-                    {
-                      strSectionId: "SalePageEdit_CustomCSSCode",
-                      hasMinimize: !0,
-                      strTitle: "(VO) Custom CSS",
-                      valveOnlyClanSteamID: _.GetClanSteamID(),
-                    },
-                    _.createElement(_, {
-                      editModel: _,
-                    }),
-                  ),
+                _.createElement(
+                  _,
+                  {
+                    strSectionId: "SalePageEdit_CustomCSSCode",
+                    hasMinimize: !0,
+                    strTitle: "(VO) Custom CSS",
+                    valveOnlyClanSteamID: _.GetClanSteamID(),
+                  },
+                  _.createElement(_, {
+                    editModel: _,
+                  }),
                 ),
               ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.SaleContainer, "SaleContainer"),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.WarningStyles,
-                },
-                (0, _._)("#Sale_CloneNotReady"),
-              ),
-              _.createElement(_, {
-                mode: __webpack_require__,
-              }),
-            );
+            ),
+          )
+        );
       }
       function _(_) {
         var _;
@@ -10352,7 +11568,9 @@
           ),
           _.createElement(
             "div",
-            null,
+            {
+              className: _.SaleSectionPlaceholder,
+            },
             (0, _._)("#Sale_SectionListPlaceholder_Content"),
           ),
         );
@@ -10454,7 +11672,132 @@
             ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__, _] = (0, _._)(() => [
+            _.GetGID(),
+            _.GetClanAccountID(),
+          ]),
+          _ = !!__webpack_require__,
+          _ = (0, _._)(_),
+          _ = _ ? _.GetCreatorHomeURL(null) + "admin/curator_edit" : void 0,
+          _ = _ ? _.GetCreatorHomeURL(null) + "#edit" : void 0;
+        return _.createElement(
+          "div",
+          {
+            className: _.CreatorHomeEditCtn,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.ExplanationCtn,
+            },
+            _.createElement(
+              "div",
+              null,
+              (0, _._)(
+                "#EventEditor_Event_CreatorHome_Explanation",
+                _
+                  ? _.createElement("a", {
+                      href: _,
+                    })
+                  : void 0,
+              ),
+            ),
+          ),
+          _.createElement(_, {
+            editModel: _,
+          }),
+          _ &&
+            _ &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _.AdminLinkCtn,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LeftCol,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#EventEditor_Event_CreatorHome_AdminAvatarLabel"),
+                  ),
+                  _.createElement("img", {
+                    src: _.GetAvatarURLFullSize(),
+                    className: _.AvatarImage,
+                  }),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.EditLink,
+                    },
+                    (0, _._)(
+                      "#EventEditor_Event_CreatorHome_AdminLinkAvatarLabel",
+                      _
+                        ? _.createElement("a", {
+                            href: _,
+                          })
+                        : void 0,
+                    ),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.RightCol,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#EventEditor_Event_CreatorHome_AdminTaglineLabel",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Tagline,
+                    },
+                    _.GetTagLine(),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.EditLink,
+                    },
+                    (0, _._)(
+                      "#EventEditor_Event_CreatorHome_AdminLinkTaglineLabel",
+                      _
+                        ? _.createElement("a", {
+                            href: _,
+                          })
+                        : void 0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          !_ &&
+            _.createElement(
+              "div",
+              {
+                className: _.SaveWarningCtn,
+              },
+              (0, _._)("#Sale_SaveFirst_CreatorHome"),
+            ),
+          _.createElement("br", null),
+        );
+      }
       function _(_) {
         const { editModel: _ } = _,
           _ = (0, _._)(),
@@ -10903,7 +12246,6 @@
         (0, _._)([_._], _.prototype, "SetWidePlayerSupportChat", null),
         (0, _._)([_._], _.prototype, "SetChatAnnouncementGiveawayGID", null);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetFriendLiset() {
@@ -11942,1105 +13284,6 @@
         (0, _._)([_._], _.prototype, "OnOpenGradientInnerColor", null),
         (0, _._)([_._], _.prototype, "OnOpenGradientOuterColor", null),
         (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        static Get() {
-          return (
-            _.s_newsCuratorStore ||
-              ((_.s_newsCuratorStore = new _()),
-              (_.s_newsCuratorStore.m_LoadingPromise =
-                _.s_newsCuratorStore.Init()),
-              (window.g_NewsCuratorStore = _.s_newsCuratorStore)),
-            _.s_newsCuratorStore
-          );
-        }
-        constructor() {
-          (this.m_mapNewsCurators = new Map()),
-            (this.m_bIsLoadComplete = !1),
-            (this.m_mapLangToNewsCurators = new Map()),
-            (this.m_LoadingPromise = null),
-            (0, _._)(this);
-        }
-        IsLoaded() {
-          return this.m_bIsLoadComplete;
-        }
-        WaitForInitialLoad() {
-          return this.m_LoadingPromise;
-        }
-        get allNewsCurators() {
-          return Array.from(this.m_mapNewsCurators.values());
-        }
-        GetCuratorsForLang(_) {
-          return this.m_mapLangToNewsCurators.get(_);
-        }
-        GetNewsCuratorForAccount(_) {
-          return this.m_mapNewsCurators.get(_);
-        }
-        BIsTrustedPressAccount(_) {
-          return void 0 !== this.GetNewsCuratorForAccount(_);
-        }
-        async Init() {
-          _._.GetLanguageListForRealms([_._.EREALM]).forEach((_) =>
-            this.m_mapLangToNewsCurators.set(_, []),
-          );
-          const _ = _._.STORE_BASE_URL + "events/ajaxgetnewscurators";
-          let _ = {
-            origin: self.origin,
-          };
-          const _ = await _().get(_, {
-            params: _,
-          });
-          (0, _._)(() => {
-            _.data && _.data.success && this.HandleCuratorResponse(_.data),
-              (this.m_bIsLoadComplete = !0);
-          });
-        }
-        HandleCuratorResponse(_) {
-          var _;
-          if (
-            (_.groupvanityinfo && _._.RegisterClanData(_.groupvanityinfo),
-            _.newscuratorinfo)
-          )
-            for (const _ of _.newscuratorinfo) {
-              if (this.m_mapNewsCurators.has(_.clanAccountID)) continue;
-              this.m_mapNewsCurators.set(_.clanAccountID, _);
-              const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID);
-              _ &&
-                (null ===
-                  (_ = this.m_mapLangToNewsCurators.get(_.rss_language)) ||
-                  void 0 === _ ||
-                  _.push(_));
-            }
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapNewsCurators", void 0),
-        (0, _._)([_._], _.prototype, "m_bIsLoadComplete", void 0),
-        (0, _._)([_._], _.prototype, "m_mapLangToNewsCurators", void 0),
-        (0, _._)([_._], _.prototype, "allNewsCurators", null),
-        (0, _._)([_._], _.prototype, "HandleCuratorResponse", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const _ = new Set();
-        return (
-          (_.indexOf("games") >= 0 || _.indexOf("dlc") >= 0) && _.add("apps"),
-          _.indexOf("curators") >= 0 && _.add("curators"),
-          _
-        );
-      }
-      class _ extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              strSearchString: "",
-              rgAppSuggestions: null,
-              rgCuratorSuggestions: null,
-            }),
-            (this.m_nHighestSentRequestID = 0),
-            (this.m_mapHighestReceivedRequestIDFromBackEnd = new Map([
-              ["apps", 0],
-              ["curators", 0],
-            ])),
-            (this.m_timerForChange = new _._());
-        }
-        componentWillUnmount() {
-          this.m_timerForChange.Cancel();
-        }
-        CloseSuggestions() {
-          this.setState({
-            rgCuratorSuggestions: null,
-            rgAppSuggestions: null,
-            strSearchString: "",
-          });
-        }
-        async GetSuggestionsFromServer(_) {
-          const _ = _(this.props.rgCorporaToSearch);
-          _.has("apps") && this.GetAppSuggestionsFromServer(_),
-            _.has("curators") && this.GetCuratorSuggestions(_);
-        }
-        async GetCuratorSuggestions(_) {
-          var _;
-          const _ = _.Get().allNewsCurators,
-            _ = [];
-          for (const _ of _) {
-            const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID),
-              _ = {
-                corpus: "curators",
-                _: _.clanAccountID,
-                name: null == _ ? void 0 : _.group_name,
-                img: null == _ ? void 0 : _.avatar_full_url,
-              };
-            if (
-              (
-                (null === (_ = null == _ ? void 0 : _.group_name) ||
-                void 0 === _
-                  ? void 0
-                  : _.toLocaleLowerCase()) || ""
-              ).indexOf(_) >= 0
-            ) {
-              if (
-                this.props.fnFilterSuggestion &&
-                !this.props.fnFilterSuggestion(_)
-              )
-                continue;
-              if (_._.Get().BIsIgnoringCurator(_.clanAccountID)) continue;
-              const _ = _._.Get().BIsFollowingCurator(_.clanAccountID),
-                _ = _.createElement(_, {
-                  key: "curatorsug_" + _._,
-                  suggestion: _,
-                  fnOnSelected: this.props.fnOnSelected,
-                  bShowFollowingLabel: _,
-                });
-              _.push(
-                this.props.fnDecorateSuggestion
-                  ? this.props.fnDecorateSuggestion(_, _)
-                  : _,
-              );
-            }
-          }
-          this.m_mapHighestReceivedRequestIDFromBackEnd.set(
-            "curators",
-            this.m_nHighestSentRequestID,
-          ),
-            this.setState({
-              rgCuratorSuggestions: _,
-            });
-        }
-        async GetAppSuggestionsFromServer(_) {
-          var _;
-          const _ = this.m_nHighestSentRequestID,
-            _ = [];
-          this.props.rgCorporaToSearch.indexOf("games") >= 0 &&
-            (_.push("game"), _.push("software")),
-            this.props.rgCorporaToSearch.indexOf("dlc") >= 0 &&
-              (_.push("dlc"), _.push("music"));
-          const _ = {
-              _: _._.COUNTRY,
-              _: _._.LANGUAGE,
-              realm: _._.k_ESteamRealmGlobal,
-              origin: self.origin,
-              _: "jsonfull",
-              term: _.replace(" ", "+"),
-              require_type: _.join(","),
-              excluded_tags: _._.Get().GetExcludedTagsSortedByID(),
-              excluded_content_descriptors: _._.Get().ExcludedContentDescriptor,
-            },
-            _ = `${_._.STORE_BASE_URL}search/suggest`,
-            _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-            });
-          if (_ < this.m_mapHighestReceivedRequestIDFromBackEnd.get("apps"))
-            return;
-          let _;
-          this.m_mapHighestReceivedRequestIDFromBackEnd.set("apps", _),
-            (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-              ? void 0
-              : _.length) &&
-              (_ = _.data.map((_) => {
-                const _ = {
-                  corpus:
-                    ((_ = _.type),
-                    "game" == _ || "software" == _
-                      ? "games"
-                      : "dlc" == _ || "music" == _
-                        ? "dlc"
-                        : null),
-                  ..._,
-                  _: parseInt(_._),
-                };
-                var _;
-                if (
-                  this.props.fnFilterSuggestion &&
-                  !this.props.fnFilterSuggestion(_)
-                )
-                  return null;
-                const _ = _.createElement(_, {
-                  key: _.type + _._,
-                  suggestion: _,
-                  fnOnSelected: this.props.fnOnSelected,
-                });
-                return this.props.fnDecorateSuggestion
-                  ? this.props.fnDecorateSuggestion(_, _)
-                  : _;
-              })),
-            this.setState({
-              rgAppSuggestions: _,
-            });
-        }
-        async UpdateSuggestions(_) {
-          const _ = _.target.value && _.target.value.trim().toLocaleLowerCase();
-          if (
-            (this.m_nHighestSentRequestID++, !(null == _ ? void 0 : _.length))
-          )
-            return (
-              Array.from(_(this.props.rgCorporaToSearch)).forEach((_) =>
-                this.m_mapHighestReceivedRequestIDFromBackEnd.set(
-                  _,
-                  this.m_nHighestSentRequestID,
-                ),
-              ),
-              this.m_timerForChange.Cancel(),
-              this.setState({
-                strSearchString: "",
-              }),
-              void this.ResetSuggestions()
-            );
-          this.setState({
-            strSearchString: _,
-          }),
-            this.m_timerForChange.Schedule(300, () =>
-              this.GetSuggestionsFromServer(_),
-            );
-        }
-        ResetSuggestions() {
-          this.setState({
-            rgAppSuggestions: null,
-            rgCuratorSuggestions: null,
-          });
-        }
-        GetLimitedSuggestions() {
-          let { rgAppSuggestions: _, rgCuratorSuggestions: _ } = this.state;
-          let _ = _ ? _.length : 10,
-            _ = _ ? _.length : 10;
-          return (
-            _ + _ > 10 && (_ = 10 - Math.min(_, 2)),
-            (_ = 10 - _),
-            (_ = null == _ ? void 0 : _.slice(0, _)),
-            (_ = null == _ ? void 0 : _.slice(0, _)),
-            {
-              rgAppSuggestions: _,
-              rgCuratorSuggestions: _,
-            }
-          );
-        }
-        render() {
-          const {
-              strLabel: _,
-              focusOnMount: _,
-              rgCorporaToSearch: __webpack_require__,
-              strResultsClass: _,
-            } = this.props,
-            { strSearchString: _ } = this.state,
-            { rgAppSuggestions: _, rgCuratorSuggestions: _ } =
-              this.GetLimitedSuggestions(),
-            _ = (null == _ ? void 0 : _.length) > 0,
-            _ = (null == _ ? void 0 : _.length) > 0,
-            _ = (null == _ ? void 0 : _.length) > 0,
-            _ = _(__webpack_require__).size > 1,
-            _ =
-              _ &&
-              _ &&
-              (0, _._)(
-                __webpack_require__.indexOf("dlc") >= 0
-                  ? "#EventCalendar_SearchResultsHeader_GameAndDLCSection"
-                  : "#EventCalendar_SearchResultsHeader_GameSection",
-              ),
-            _ = Array.from(_(__webpack_require__)).some(
-              (_) =>
-                this.m_nHighestSentRequestID >
-                this.m_mapHighestReceivedRequestIDFromBackEnd.get(_),
-            ),
-            _ = !_ && !_ && !_;
-          return _.createElement(
-            "div",
-            {
-              className: _().SuggestContainer,
-            },
-            _.createElement(_._, {
-              type: "text",
-              label: _,
-              onChange: this.UpdateSuggestions,
-              bAlwaysShowClearAction: _,
-              focusOnMount: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().Results, _),
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      key: "game-suggestions",
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ResultSectionHeader,
-                        },
-                        _,
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      key: "curator-suggestions",
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ResultSectionHeader,
-                        },
-                        (0, _._)(
-                          "#EventCalendar_SearchResultsHeader_CuratorSection",
-                        ),
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EmptyResults,
-                      key: "empty-results",
-                    },
-                    (0, _._)("#EventCalendar_GameSearch_NoneFound"),
-                  ),
-                _ &&
-                  _.createElement(_._, {
-                    size: "small",
-                  }),
-              ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "UpdateSuggestions", null);
-      const _ = (_) =>
-        _.createElement(
-          "div",
-          {
-            className: _().ResultRow,
-            key: `suggestion-${_.suggestion._}`,
-            onClick: () => _.fnOnSelected(_.suggestion),
-          },
-          _.createElement("img", {
-            src: _.suggestion.img,
-            className: _().AvatarImage,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().GameName,
-            },
-            " ",
-            (0, _._)(_.suggestion.name),
-            " ",
-          ),
-          _.bShowFollowingLabel &&
-            _.createElement(
-              "div",
-              {
-                className: _().Label,
-              },
-              (0, _._)("#EventCalendar_FollowingCurator"),
-            ),
-        );
-      function _(_) {
-        const { editModel: _ } = _,
-          _ = _.GetEventModel(),
-          _ = (0, _._)(() => _.jsondata.associated_appid || 0),
-          [_, _] = (0, _.useState)(Boolean(_));
-        return _.appid
-          ? null
-          : _
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  "div",
-                  {
-                    className: _().EventEditorTextTitleCtn,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().EventEditorTextTitle,
-                    },
-                    (0, _._)("#EventEditor_Associated_App"),
-                  ),
-                  _.createElement(_._, {
-                    tooltip: (0, _._)("#EventEditor_Associated_App_ttip"),
-                    className: _().tooltip_Ctn,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().InputBorder,
-                  },
-                  _.createElement("input", {
-                    type: "number",
-                    className: (0, _._)(_.EventEditorTitleInput, _.Subtitle),
-                    value: _,
-                    onChange: (_) => {
-                      const _ = Number.parseInt(_.currentTarget.value);
-                      _ !== _.jsondata.associated_appid &&
-                        ((_.jsondata.associated_appid = _ || void 0),
-                        _.SetDirty(_._.description));
-                    },
-                  }),
-                ),
-              )
-            : _.createElement(_._, {
-                checked: _,
-                onChange: _,
-                label: (0, _._)("#EventEditor_Associated_App_Question"),
-                tooltip: (0, _._)("#EventEditor_Associated_App_ttip"),
-              });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().HighlightBox,
-          },
-          (0, _._)("#PartnerEvent_MM_TitleTip", _.createElement("i", null)),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: _().HighlightBox,
-          },
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#PartnerEvent_MM_DescriptionTip1"),
-          ),
-          _.createElement(
-            "ul",
-            null,
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#PartnerEvent_MM_DescriptionTip2"),
-            ),
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#PartnerEvent_MM_DescriptionTip3"),
-            ),
-            _.createElement(
-              "li",
-              null,
-              (0, _._)("#PartnerEvent_MM_DescriptionTip4"),
-            ),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#PartnerEvent_MM_DescriptionTip5"),
-          ),
-          _.createElement(
-            "p",
-            null,
-            _.createElement(
-              "a",
-              {
-                href: `${_._.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
-              },
-              (0, _._)("#PartnerEvent_MM_LearnMore"),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const _ = _.useRef(void 0),
-          { editModel: __webpack_require__, bCanManuallyTagAssociatedApps: _ } =
-            _,
-          _ = _.useCallback((_, _) => {
-            _.current && _.current(_, _);
-          }, []),
-          _ = (0, _._)(_.editModel.GetClanSteamID().ConvertTo64BitString()),
-          _ = _.isSuccess && !!_.data.crowdin_project_id,
-          _ = (0, _._)(() =>
-            __webpack_require__.BHasTag("vo_marketing_message"),
-          );
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.LanguageCtn,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().FlexColumnContainer,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _.LanguageControlsCtn,
-                },
-                (0, _._)("#EventEditor_LangaugeDesc"),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().FlexRowContainer, _.ToolContainer),
-                  },
-                  _.createElement(_._, {
-                    editModel: __webpack_require__,
-                  }),
-                  _.createElement(_, {
-                    editModel: __webpack_require__,
-                  }),
-                ),
-                _ &&
-                  _.createElement(_._, {
-                    editModel: _.editModel,
-                  }),
-              ),
-            ),
-          ),
-          _.createElement(_, {
-            editModel: __webpack_require__,
-          }),
-          _.createElement(_, {
-            editModel: __webpack_require__,
-          }),
-          _.createElement(_, {
-            editModel: __webpack_require__,
-          }),
-          Boolean(_) &&
-            _.createElement(_, {
-              editModel: __webpack_require__,
-            }),
-          _.createElement(_, {
-            editModel: __webpack_require__,
-          }),
-          _.createElement(_, {
-            editModel: __webpack_require__,
-          }),
-          _ && _.createElement(_, null),
-          _.createElement(
-            "div",
-            {
-              className: _().Columns,
-            },
-            _.createElement(_, {
-              editModel: __webpack_require__,
-              refOnInsertImage: _,
-            }),
-            _.createElement(_, {
-              editModel: __webpack_require__,
-              fnInsertImage: _,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const { editModel: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
-            _.GetName(_.GetCurEditLanguage()) || "",
-            _.GetEventType(),
-          ]),
-          _ = Boolean(__webpack_require__.length >= _._),
-          _ = (0, _._)(() => _.BHasTag("vo_marketing_message"));
-        return _.createElement(
-          _.Fragment,
-          null,
-          _ && _.createElement(_, null),
-          _.createElement(
-            "div",
-            {
-              className: _().EventEditorTextTitle,
-            },
-            28 == _
-              ? (0, _._)("#EventEditor_AnnouncementTitle")
-              : (0, _._)("#EventEditor_EventTitle"),
-            Boolean(_) &&
-              _.createElement(
-                "span",
-                {
-                  className: _().EventEditorTextTitleLengthInfo,
-                },
-                (0, _._)("#EventEditor_EventTitle_Max_Characters_Reached", _._),
-              ),
-            _.createElement(_._, {
-              tooltip: (0, _._)("#EventEditor_Title_General_ttip", _._),
-              className: _().tooltip_Ctn,
-            }),
-            _.createElement(
-              "span",
-              {
-                className: (0, _._)(
-                  _.CharactorRemaining,
-                  _ ? _.CharactorExhausted : "",
-                ),
-              },
-              (0, _._)(
-                "#EventEditor_Input_Characters_Left",
-                _._ - __webpack_require__.length,
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().InputBorder,
-            },
-            _.createElement("input", {
-              type: "text",
-              className: (0, _._)({
-                [_.EventEditorTitleInput]: !0,
-                [_.MainTitle]: !0,
-                [_.EventEditorInputMaxLength]: _,
-              }),
-              value: __webpack_require__,
-              placeholder: (0, _._)("#EventEditor_Name_Placeholder"),
-              onFocus: (_) => {
-                var _;
-                return null === (_ = null == _ ? void 0 : _.target) ||
-                  void 0 === _
-                  ? void 0
-                  : _.select();
-              },
-              onChange: (_) => {
-                var _;
-                return _.SetName(
-                  _.GetCurEditLanguage(),
-                  (null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                  void 0 === _
-                    ? void 0
-                    : _.value) || "",
-                );
-              },
-              maxLength: _._,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const { editModel: _ } = _,
-          _ = (0, _._)(() => _.GetSubTitle(_.GetCurEditLanguage()) || ""),
-          _ = Boolean(_.length >= _._);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().EventEditorTextTitleCtn,
-            },
-            _.createElement(
-              "span",
-              {
-                className: _().EventEditorTextTitle,
-              },
-              (0, _._)("#EventEditor_Event_SubTitle"),
-            ),
-            _.createElement(
-              "span",
-              {
-                className: _().EventEditorTextTitleLengthInfo,
-              },
-              (0, _._)(
-                _
-                  ? "#EventEditor_Event_SubTitle_Details_Reached"
-                  : "#EventEditor_Event_SubTitle_Details",
-                _._,
-              ),
-            ),
-            _.createElement(_._, {
-              tooltip: (0, _._)("#EventEditor_SubTitle_General_ttip", _._),
-              className: _().tooltip_Ctn,
-            }),
-            _.createElement(
-              "span",
-              {
-                className: (0, _._)(
-                  _.CharactorRemaining,
-                  _ ? _.CharactorExhausted : "",
-                ),
-              },
-              (0, _._)("#EventEditor_Input_Characters_Left", _._ - _.length),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().InputBorder,
-            },
-            _.createElement("input", {
-              type: "text",
-              className: (0, _._)(
-                _.EventEditorTitleInput,
-                _.Subtitle,
-                _ ? _.EventEditorInputMaxLength : "",
-              ),
-              value: _,
-              placeholder: (0, _._)("#EventEditor_Name_SubTitle_Placeholder"),
-              onFocus: (_) => {
-                var _;
-                return null === (_ = null == _ ? void 0 : _.target) ||
-                  void 0 === _
-                  ? void 0
-                  : _.select();
-              },
-              onChange: (_) => {
-                var _;
-                return _.SetSubTitle(
-                  _.GetCurEditLanguage(),
-                  (null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                  void 0 === _
-                    ? void 0
-                    : _.value) || "",
-                );
-              },
-              maxLength: _._,
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const { editModel: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
-            _.GetSummary(_.GetCurEditLanguage()) || "",
-            _.GetDescription(_.GetCurEditLanguage()) || "",
-          ]);
-        let _ = "";
-        0 == __webpack_require__.trim().length &&
-          (_ =
-            0 == _.length
-              ? (0, _._)("#EventEditor_Summary_Placeholder", _._)
-              : (0, _._)("#EventEditor_Summary_Autogenerated") +
-                _._.GenerateSummaryFromText(_));
-        let _ = Boolean(__webpack_require__.length >= _._);
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _.EventEditorInputPaneContents,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().EventEditorTextTitleCtn,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().EventEditorTextTitle,
-                },
-                (0, _._)("#EventEditor_Summary_Title"),
-              ),
-              _.createElement(
-                "span",
-                {
-                  className: _().EventEditorTextTitleLengthInfo,
-                },
-                (0, _._)(
-                  _
-                    ? "#EventEditor_Summary_Title_Length_Reached"
-                    : "#EventEditor_Summary_Title_Length",
-                  _._,
-                ),
-              ),
-              _.createElement(_._, {
-                tooltip: (0, _._)("#EventEditor_Summary_Ttip", _._),
-                className: _().tooltip_Ctn,
-              }),
-              _.createElement(
-                "span",
-                {
-                  className: (0, _._)(
-                    _.CharactorRemaining,
-                    _ ? _.CharactorExhausted : "",
-                  ),
-                },
-                (0, _._)(
-                  "#EventEditor_Input_Characters_Left",
-                  _._ - __webpack_require__.length,
-                ),
-              ),
-            ),
-            _.createElement("textarea", {
-              className: (0, _._)(
-                _.EventEditorTitleInput,
-                _.Summary,
-                _ ? _.EventEditorInputMaxLength : "",
-              ),
-              value: __webpack_require__,
-              placeholder: _,
-              onFocus: (_) => {
-                var _;
-                return null === (_ = null == _ ? void 0 : _.target) ||
-                  void 0 === _
-                  ? void 0
-                  : _.select();
-              },
-              onChange: (_) => {
-                var _;
-                return _.SetSummary(
-                  _.GetCurEditLanguage(),
-                  (null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                  void 0 === _
-                    ? void 0
-                    : _.value) || "",
-                );
-              },
-              maxLength: _._,
-              cols: 40,
-              rows: 2,
-            }),
-          ),
-          _.createElement("div", {
-            className: _().ClearThings,
-          }),
-        );
-      }
-      function _(_) {
-        const { editModel: _ } = _;
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().EventEditorTextTitleCtn,
-            },
-            _.createElement(
-              "span",
-              {
-                className: _().EventEditorTextTitle,
-              },
-              (0, _._)("#EventEditor_ReferencedAppIDs_Header"),
-            ),
-            _.createElement(_._, {
-              tooltip: (0, _._)("#EventEditor_ReferencedAppIDs_Tooltip"),
-              className: _().tooltip_Ctn,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.SaleImportURL,
-            },
-            _.createElement(_, {
-              strLabel: (0, _._)("#EventEditor_ReferencedAppIDs_SearchLabel"),
-              fnFilterSuggestion: (_) =>
-                !_.GetReferencedAppIDArray().includes(Number(_._)),
-              fnOnSelected: (_) => {
-                _.GetReferencedAppIDArray().includes(Number(_._)) ||
-                  (_.GetReferencedAppIDArray().push(Number(_._)),
-                  _.SetDirty(_._.jsondata_other));
-              },
-              rgCorporaToSearch: ["games", "dlc"],
-            }),
-          ),
-          _.GetReferencedAppIDArray().length > 0 &&
-            _.createElement(_._, {
-              items: _.GetReferencedAppIDArray(),
-              onDelete: (_) => {
-                _.GetReferencedAppIDArray().splice(_),
-                  _.SetDirty(_._.jsondata_other);
-              },
-              onReorder: () => _.SetDirty(_._.jsondata_other),
-              render: (_) =>
-                _.createElement(_, {
-                  key: `suggestion-${_}`,
-                  appid: _,
-                }),
-            }),
-        );
-      }
-      function _(_) {
-        const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {});
-        return _.createElement(
-          "div",
-          {
-            className: _.ResultRow,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.GameName,
-            },
-            " ",
-            (0, _._)(
-              (null == __webpack_require__
-                ? void 0
-                : __webpack_require__.GetName()) || "",
-            ) + ` (${_})`,
-            " ",
-          ),
-        );
-      }
-      const _ = _.lazy(() =>
-        Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-      );
-      function _(_) {
-        const { editModel: _, refOnInsertImage: __webpack_require__ } = _,
-          [_, _] = (function (_) {
-            const _ = "partnerEventsRichEditorOptIn",
-              _ = "1",
-              [_, _] = _.useState(() => {
-                var _;
-                return (
-                  "1" ==
-                  (null !== (_ = localStorage.getItem(_)) && void 0 !== _
-                    ? _
-                    : _)
-                );
-              }),
-              _ = _.useCallback(
-                (_) => {
-                  localStorage.setItem(_, _ ? "1" : "0"), _(_);
-                },
-                [_],
-              );
-            return [_, _];
-          })(),
-          _ = (0, _._)(() => _.GetEventType()),
-          _ = (0, _._)(
-            (_) => {
-              if (!_) return;
-              const _ = (_, _) => (0, _._)(_, _, _);
-              return (
-                (__webpack_require__.current = _),
-                () => {
-                  __webpack_require__.current == _ &&
-                    (__webpack_require__.current = void 0);
-                }
-              );
-            },
-            [__webpack_require__],
-          ),
-          _ = _.useMemo(() => {
-            const _ = _._.is_support;
-            return (0, _._)({
-              bIncludeMedia: _._.CAN_UPLOAD_IMAGES,
-              bIncludeValveOnly: _,
-            });
-          }, []);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().LeftCol, _.DescEditorPadding),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().EventEditorTextTitle,
-            },
-            28 == _
-              ? (0, _._)("#EventEditor_DescriptionNews")
-              : (0, _._)("#EventEditor_Description"),
-          ),
-          _.createElement(
-            "label",
-            null,
-            _.createElement("input", {
-              type: "checkbox",
-              checked: _,
-              onChange: (_) => _(_.currentTarget.checked),
-            }),
-            (0, _._)("#EventEditor_UseVisualEditor"),
-          ),
-          _
-            ? _.createElement(
-                _.Suspense,
-                null,
-                _.createElement(_, {
-                  editModel: _,
-                  refOnInsertImage: __webpack_require__,
-                  limitBBCode: _,
-                }),
-              )
-            : _.createElement(_._, {
-                fnGetCurText: () => _.GetDescription(_.GetCurEditLanguage()),
-                fnOnTextChange: (_) => {
-                  var _;
-                  return _.SetDescription(
-                    _.GetCurEditLanguage(),
-                    (null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                    void 0 === _
-                      ? void 0
-                      : _.value) || "",
-                  );
-                },
-                fnSetText: (_) => _.SetDescription(_.GetCurEditLanguage(), _),
-                strPlaceholder: (0, _._)(
-                  "#EventEditor_Description_PlaceHolder",
-                ),
-                ref: _,
-                emoticonStore: _._,
-                bSupportHTMLImport: !0,
-                showFormatHelp: "PartnerEvents",
-                limitBBCode: _,
-                classNameForTextArea: _.EventEditorDescription,
-                clanSteamID: _.GetClanSteamID(),
-              }),
-        );
-      }
-      function _(_) {
-        const { editModel: _, fnInsertImage: __webpack_require__ } = _,
-          [_, _, _] = (0, _._)(() => [
-            _.GetClanSteamID(),
-            _.GetAppID(),
-            _.GetIncludedRealmList(),
-          ]);
-        return _._.CAN_UPLOAD_IMAGES
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().RightCol,
-                  _.DescEditorPadding,
-                  _.ImagePickerCtn,
-                ),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().EventEditorTextTitle,
-                },
-                (0, _._)("#ImagePicker_PreviousImages2"),
-                _.createElement(_._, {
-                  tooltip: (0, _._)("#ImagePicker_Images_ttip"),
-                  className: _().tooltip_Ctn,
-                }),
-              ),
-              _.createElement(_._, {
-                bShowLightBox: !0,
-                appid: _,
-                clanSteamID: _,
-                imageInsertCallBack: __webpack_require__,
-                fnSetImageURL: _.SetImageURL,
-                rgRealmList: _,
-                fnLangHasData: _.BHasTitleImage,
-                fnGetImageHash: _.GetImageHashAndExt,
-                partnerEventStore: _._,
-              }),
-            )
-          : null;
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -17237,6 +17480,208 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__] = (0, _._)(() => [
+            _.BHasTag("vo_marketing_message"),
+          ]);
+        if (__webpack_require__)
+          return _.createElement(_, {
+            ..._,
+          });
+      }
+      const _ = 3;
+      function _(_) {
+        var _, _;
+        const { editModel: _ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.BHasTag("vo_marketing_message"),
+            _.GetClanAccountID(),
+            _.GetGID(),
+          ]),
+          _ = (0, _._)(_, _),
+          [_, _] = (0, _.useState)(() => {
+            var _, _;
+            return null ===
+              (_ =
+                null === (_ = null == _ ? void 0 : _.oPrivateData) ||
+                void 0 === _
+                  ? void 0
+                  : _.jsonData) || void 0 === _
+              ? void 0
+              : _.strMarketingMessageMajorUpdateHelpTicketReferenceCode;
+          }),
+          [_, _] = (0, _.useState)(null);
+        (0, _.useEffect)(() => {
+          var _, _, _, _;
+          (null ===
+            (_ =
+              null === (_ = null == _ ? void 0 : _.oPrivateData) || void 0 === _
+                ? void 0
+                : _.jsonData) || void 0 === _
+            ? void 0
+            : _.strMarketingMessageMajorUpdateHelpTicketReferenceCode) &&
+            _(
+              null ===
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.oPrivateData) ||
+                  void 0 === _
+                    ? void 0
+                    : _.jsonData) || void 0 === _
+                ? void 0
+                : _.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
+            );
+        }, [
+          null ===
+            (_ =
+              null === (_ = null == _ ? void 0 : _.oPrivateData) || void 0 === _
+                ? void 0
+                : _.jsonData) || void 0 === _
+            ? void 0
+            : _.strMarketingMessageMajorUpdateHelpTicketReferenceCode,
+        ]);
+        const [_, _, _] = (0, _._)(!1);
+        return _.createElement(
+          "div",
+          {
+            className: _().Ctn,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.EventEditorTextTitle,
+            },
+            (0, _._)("#MM_MajorUpdate_Review_title"),
+          ),
+          _.createElement(
+            "div",
+            null,
+            Boolean(_)
+              ? _.createElement(
+                  "p",
+                  null,
+                  (0, _._)(
+                    "#MM_MajorUpdate_Review_ticked_created",
+                    _.createElement(_._, {
+                      href: `${_._.HELP_BASE_URL}en/wizard/HelpRequest/${_}`,
+                      className: (0, _._)(_.EditPreviewButton, _.Button),
+                      bForceExternal: !0,
+                    }),
+                  ),
+                )
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "p",
+                    null,
+                    (0, _._)("#MM_MajorUpdate_Review_desc", _),
+                  ),
+                  _.createElement(_, {
+                    accountID: _._.accountid,
+                    partnerID: _,
+                    fnSetPartnerID: _,
+                    strLabel: (0, _._)(
+                      "#EventEditor_SaleValveApproval_Request_Partner",
+                    ),
+                    strTooltip: (0, _._)(
+                      "#EventEditor_SaleValveApproval_Request_Partner_ttip",
+                    ),
+                  }),
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: _,
+                    },
+                    (0, _._)("#MM_MajorUpdate_Review_create"),
+                  ),
+                  _.createElement(
+                    _._,
+                    {
+                      active: _,
+                    },
+                    _.createElement(_, {
+                      editModel: _,
+                      nPartnerID: _,
+                      closeModal: _,
+                      fnSetTicketID: _,
+                    }),
+                  ),
+                ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            editModel: _,
+            nPartnerID: __webpack_require__,
+            closeModal: _,
+            fnSetTicketID: _,
+          } = _,
+          _ = (0, _._)();
+        return (
+          (0, _.useEffect)(() => {
+            if (!_.bLoading) {
+              _.fnSetLoading(!0);
+              (async () => {
+                const _ = _.GetClanSteamID(),
+                  _ = _.GetGID(),
+                  _ = await (async function (_, _, _, _, _) {
+                    const _ =
+                        _._.COMMUNITY_BASE_URL +
+                        "partnereventdata/ajaxrequestmarketingmessagemajorupdatereview",
+                      _ = new URLSearchParams();
+                    _.append("sessionid", _._.SESSIONID),
+                      _.append("clanAccountID", "" + _.GetAccountID()),
+                      _.append("appid", "" + _),
+                      _.append("gidClanEvent", _),
+                      _.append("partnerID", "" + _),
+                      _.append("message", _);
+                    try {
+                      let _ = await _().post(_, _, {
+                        withCredentials: !0,
+                      });
+                      return _ && 200 == _.status && 1 == _.data.success
+                        ? _.data
+                        : (console.error(
+                            "CreateMarketingMessageMajorUpdateReviewRequestTicket failed.",
+                            _ && (0, _._)(_),
+                          ),
+                          29 == _.data.success ? _.data : null);
+                    } catch (_) {
+                      const _ = (0, _._)(_);
+                      console.error(
+                        "CreateMarketingMessageMajorUpdateReviewRequestTicket failed: " +
+                          _.strErrorMsg,
+                        _,
+                      );
+                    }
+                    return null;
+                  })(
+                    _,
+                    _.GetAppID(),
+                    _,
+                    "Requesting Marketing Message Major Update Review",
+                    __webpack_require__,
+                  );
+                _
+                  ? (_(_.reference_code), _.fnSetSuccess(!0))
+                  : (_.fnSetError(!0),
+                    _.fnSetStrError(
+                      (0, _._)("#Login_Error_Network_Description"),
+                    ));
+              })();
+            }
+          }, [__webpack_require__, _, _.bLoading, _, _]),
+          _.createElement(_._, {
+            state: _,
+            strDialogTitle: (0, _._)("#MM_MajorUpdate_Review_create"),
+            closeModal: _,
+          })
+        );
+      }
       function _(_) {
         const { editModel: _ } = _,
           [__webpack_require__, _, _, _, _] = (0, _._)(() => [
@@ -17288,6 +17733,9 @@
                   editModel: _,
                 }),
               ),
+              _.createElement(_, {
+                editModel: _,
+              }),
               _.createElement(_, {
                 eventType: _,
                 clanSteamID: __webpack_require__,
@@ -17923,7 +18371,12 @@
           _ = (0, _._)(() => (0, _._)()),
           _ = (0, _._)(_),
           _ = (0, _._)(() => (0, _._)()),
-          _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel()),
+          _ = (0, _._)(_);
+        (0, _._)(
+          [_.bVisible, _.bVisible, _.bVisible].filter(Boolean).length <= 1,
+          "Sale, Update Landing Page, and Creator Home should be mutually exclusive",
+        );
+        const _ = !_._.Get().BShowEmailEditorTab(_.GetEventModel()),
           _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID);
         _._.LoadClanInfoForClanSteamID(_);
         const _ = Boolean(
@@ -17941,6 +18394,7 @@
               status: _.createElement(_, {
                 fnGetStatus: _._,
               }),
+              hidden: _.bVisible,
               contents: _.createElement(
                 _._,
                 null,
@@ -17953,11 +18407,29 @@
               onClick: _,
             },
             {
+              name:
+                (_.bValveOnly ? "(VO) " : "") +
+                (0, _._)("#EventEditor_CreatorHome_Title"),
+              key: "creatorhome",
+              hidden: !_.bVisible,
+              vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
+              contents: _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  mode: 2,
+                  editModel: _,
+                }),
+              ),
+              onClick: _,
+            },
+            {
               name: (0, _._)("#EventEditor_Visibility_Title"),
               key: "options",
               status: _.createElement(_, {
                 fnGetStatus: _._,
               }),
+              hidden: _.bVisible,
               contents: _.createElement(
                 _._,
                 null,
@@ -18032,7 +18504,7 @@
                 _._,
                 null,
                 _.createElement(_, {
-                  mode: "sale",
+                  mode: 0,
                   editModel: _,
                 }),
               ),
@@ -18053,7 +18525,7 @@
                 _._,
                 null,
                 _.createElement(_, {
-                  mode: "updatelandingpage",
+                  mode: 1,
                   editModel: _,
                 }),
               ),
@@ -18252,34 +18724,52 @@
             _.GetAnnouncementGID(),
             _.BHasGid() ? _.GetGID() : "",
             _.BHasTag("vo_marketing_message"),
-          ]);
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)({
-              [_().EventEditBelowTopBarCategoryChoice]: !0,
-              [_().EventEditCategoryNotChangeable]: _,
-            }),
-            _: _
-              ? "#"
-              : __webpack_require__
-                ? _._.MigrateCategory(_, _)
-                : _._.Category(_, _),
-            onClick: (_) => {
-              _ && (_.preventDefault(), _.stopPropagation());
-            },
-          },
-          _.createElement(
-            "span",
+          ]),
+          { bCanChange: _, strReasonText: _ } = (0, _._)(_),
+          _ = _.createElement(
+            _.Fragment,
             null,
-            (0, _._)("#EventEditor_TypeTitle"),
-            " ",
-          ),
-          _,
+            _.createElement(
+              "span",
+              null,
+              (0, _._)("#EventEditor_TypeTitle"),
+              " ",
+            ),
+            _,
+            _ &&
+              _.createElement("img", {
+                src: _._,
+              }),
+            !_ &&
+              _.createElement(_._, {
+                tooltip: _,
+              }),
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _ &&
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(
+                  _().EventEditBelowTopBarCategoryChoice,
+                  _().AllowHover,
+                ),
+                _: __webpack_require__
+                  ? _._.MigrateCategory(_, _)
+                  : _._.Category(_, _),
+              },
+              _,
+            ),
           !_ &&
-            _.createElement("img", {
-              src: _._,
-            }),
+            _.createElement(
+              "div",
+              {
+                className: _().EventEditBelowTopBarCategoryChoice,
+              },
+              _,
+            ),
         );
       }
       let _ = class extends _.Component {
@@ -18346,7 +18836,8 @@
           _ && _.push("bestofyear_banner", "bestofyear_banner_mobile");
         const _ = _.includes("spotlight"),
           _ = _.includes("localized_store_app_spotlight"),
-          _ = _.includes("localized_store_app_spotlight_mobile");
+          _ = _.includes("localized_store_app_spotlight_mobile"),
+          _ = 36 == __webpack_require__;
         return _.createElement(
           _._,
           null,
@@ -18449,21 +18940,22 @@
             }),
             partnerEventStore: _._,
           }),
-          _.createElement(_._, {
-            clanSteamID: _,
-            appid: _,
-            eventModel: _.GetEventModel(),
-            title: (0, _._)("#EventEditor_ArtworkType_background"),
-            fnLangHasData: _.BHasTitleImage,
-            fnSetImageURL: _.SetImageURL,
-            fnGetImageHashAndExt: _.GetImageHashAndExt,
-            artworkType: "background",
-            headerHint: _._.k_Suggested,
-            elEventArtworkExample: _.createElement(_, {
+          !_ &&
+            _.createElement(_._, {
+              clanSteamID: _,
+              appid: _,
+              eventModel: _.GetEventModel(),
+              title: (0, _._)("#EventEditor_ArtworkType_background"),
+              fnLangHasData: _.BHasTitleImage,
+              fnSetImageURL: _.SetImageURL,
+              fnGetImageHashAndExt: _.GetImageHashAndExt,
               artworkType: "background",
+              headerHint: _._.k_Suggested,
+              elEventArtworkExample: _.createElement(_, {
+                artworkType: "background",
+              }),
+              partnerEventStore: _._,
             }),
-            partnerEventStore: _._,
-          }),
           Boolean(_ && (_ || _ || _)) &&
             _.createElement(
               "div",

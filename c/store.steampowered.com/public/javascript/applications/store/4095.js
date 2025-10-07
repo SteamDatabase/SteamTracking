@@ -520,6 +520,13 @@
           "docimg",
           "meetsteamsessiongroup",
           "meetsteamscheduleview",
+          "center",
+          "c",
+          "expand",
+          "remindme",
+          "calendarevent",
+          "color",
+          "bgcolor",
         ],
         _ = [
           "h1",
@@ -5058,6 +5065,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5178,6 +5186,9 @@
       })(_ || (_ = {}));
       const _ = "bordered";
       var _, _, _, _, _, _;
+      function _(_) {
+        return _ && !!_.show_as_carousel && !_.enable_faceted_browsing;
+      }
       function _(_) {
         return _.carousel_rows || 1;
       }
@@ -5958,6 +5969,7 @@
                 "roomeffect",
                 "sticker",
               ])),
+              (_ = (0, _._)(_, ["p"], " ")),
               (_ = (0, _._)(_)),
               (_ = (0, _._)(_)),
               (0, _._)(_, _ || 180))

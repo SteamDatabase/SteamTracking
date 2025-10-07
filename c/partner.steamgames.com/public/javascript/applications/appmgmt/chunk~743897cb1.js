@@ -12250,7 +12250,7 @@
         return (_) =>
           _({
             ..._,
-            className: (0, _._)(_.className, _),
+            className: _,
           });
       }
       function _(_, _, _) {
@@ -24490,110 +24490,6 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.recovery_code || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  recovery_code: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  steamid: {
-                    _: 10,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CParental_DisableWithRecoveryCode_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CParental_DisableWithRecoveryCode_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
             _.prototype.features || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -25657,16 +25553,6 @@
               _,
               {
                 ePrivilege: 1,
-              },
-            );
-          }),
-          (_.DisableWithRecoveryCode = function (_, _) {
-            return _.SendMsg(
-              "Parental.DisableWithRecoveryCode#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 0,
               },
             );
           }),
@@ -27748,6 +27634,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -30332,7 +30219,6 @@
             );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -30417,7 +30303,7 @@
               [
                 "list",
                 {
-                  Constructor: _._(_._, _.UnorderedList),
+                  Constructor: _._,
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },
@@ -30425,7 +30311,7 @@
               [
                 "olist",
                 {
-                  Constructor: _._(_._, _.OrderedList),
+                  Constructor: _._,
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },

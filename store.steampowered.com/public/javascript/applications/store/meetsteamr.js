@@ -56,7 +56,7 @@
     },
     20019: (e, t, n) => {
       "use strict";
-      function a(e) {
+      function s(e) {
         switch (e) {
           case 0:
             return "game";
@@ -78,37 +78,862 @@
         }
         return "invalid";
       }
-      n.d(t, { U: () => a });
+      n.d(t, { U: () => s });
+    },
+    56055: (e, t, n) => {
+      "use strict";
+      n.d(t, { b2: () => s, nx: () => a });
+      const s = "terminal";
+      var a;
+      !(function (e) {
+        (e[(e.TemplateFAQDisplayColumn = 1)] = "TemplateFAQDisplayColumn"),
+          (e[(e.TemplateFAQDisplaySimpleRow = 2)] =
+            "TemplateFAQDisplaySimpleRow");
+      })(a || (a = {}));
+    },
+    39733: (e, t, n) => {
+      "use strict";
+      n.d(t, { Du: () => p, fy: () => m, pt: () => g });
+      var s = n(68797),
+        a = n(78327),
+        o = n(41735),
+        r = n.n(o),
+        i = n(90626),
+        l = n(6144),
+        c = n(84933),
+        u = n(81393);
+      class d {
+        m_mapBadgeInfo = new Map();
+        m_mapBadgeLoadPromises = new Map();
+        m_eventBadgehangeCallback = new Map();
+        m_mapInitialBadgeInfo = new Map();
+        GetBadgeInfo(e) {
+          return this.m_mapBadgeInfo.get(e);
+        }
+        GetInitialBadgeInfo(e) {
+          return this.m_mapInitialBadgeInfo.get(e);
+        }
+        GetBadgeInfoChangeCallback(e) {
+          return (
+            this.m_eventBadgehangeCallback.has(e) ||
+              this.m_eventBadgehangeCallback.set(e, new l.lu()),
+            this.m_eventBadgehangeCallback.get(e)
+          );
+        }
+        Test_SetBadgeInfo(e) {
+          e.badgeid &&
+            (this.m_mapBadgeInfo.set(e.badgeid, e),
+            this.GetBadgeInfoChangeCallback(e.badgeid).Dispatch(e));
+        }
+        async LoadBadgeInfo(e) {
+          return this.m_mapBadgeInfo.has(e)
+            ? this.m_mapBadgeInfo.get(e)
+            : (this.m_mapBadgeLoadPromises.has(e) ||
+                this.m_mapBadgeLoadPromises.set(
+                  e,
+                  this.InternalLoadBadgeInfo(e),
+                ),
+              this.m_mapBadgeLoadPromises.get(e));
+        }
+        async InternalLoadBadgeInfo(e) {
+          if (!e || !Number.isInteger(e)) return { badgeid: e, level: 0 };
+          let t = null;
+          try {
+            const n = (0, a.xv)();
+            (0, u.wT)(
+              n == a.TS.STORE_BASE_URL || n == a.TS.COMMUNITY_BASE_URL,
+              "ajaxgetbadgeinfo called on wrong unsupported site: " + n,
+            );
+            const o = n + "actions/ajaxgetbadgeinfo",
+              i = { badgeid: e },
+              l = await r().get(o, { params: i, withCredentials: !0 });
+            if (
+              200 == l.status &&
+              (1 == l.data?.success || 42 == l.data?.success)
+            ) {
+              const t = {
+                badgeid: l.data.badgeid,
+                level: l.data.level,
+                xp: l.data.xp,
+                completion_time: l.data.completion_time,
+              };
+              return (
+                this.m_mapBadgeInfo.set(e, t),
+                this.m_mapInitialBadgeInfo.has(e) ||
+                  this.m_mapInitialBadgeInfo.set(e, t),
+                t
+              );
+            }
+            t = (0, s.H)(l);
+          } catch (e) {
+            t = (0, s.H)(e);
+          }
+          console.error("useEventBadge: " + t?.strErrorMsg, t);
+          const n = { badgeid: e, level: 0 };
+          return this.m_mapBadgeInfo.set(e, n), n;
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
+              "dev" == a.TS.WEB_UNIVERSE &&
+                (window.g_UserBadgeForEventStore = d.s_Singleton)),
+            d.s_Singleton
+          );
+        }
+        constructor() {}
+      }
+      function m(e) {
+        const [t, n] = (0, i.useState)(e ? d.Get().GetBadgeInfo(e) : void 0);
+        return (
+          (0, i.useEffect)(() => {
+            !t &&
+              e &&
+              d
+                .Get()
+                .LoadBadgeInfo(e)
+                .then((e) => n(e));
+          }, [e, t]),
+          (0, c.hL)(e ? d.Get().GetBadgeInfoChangeCallback(e) : void 0, n),
+          t
+        );
+      }
+      function p(e) {
+        d.Get().Test_SetBadgeInfo(e);
+      }
+      function g(e) {
+        const [t, n] = (0, i.useState)(
+          e ? d.Get().GetInitialBadgeInfo(e) : void 0,
+        );
+        return (
+          (0, i.useEffect)(() => {
+            !t && e && d.Get().LoadBadgeInfo(e);
+          }, [e, t]),
+          (0, c.hL)(e ? d.Get().GetBadgeInfoChangeCallback(e) : void 0, () =>
+            n(e ? d.Get().GetInitialBadgeInfo(e) : void 0),
+          ),
+          t
+        );
+      }
+    },
+    1501: (e, t, n) => {
+      "use strict";
+      n.d(t, { N: () => l });
+      var s = n(34629),
+        a = n(14947),
+        o = n(56055),
+        r = n(62490),
+        i = n(78327);
+      class l {
+        m_rgAnswerToCategoryID = Array();
+        m_rgAnswerChosen = Array();
+        SetAnswerCategory(e, t) {
+          const n = Math.min(e, 64);
+          (this.m_rgAnswerToCategoryID = (0, r.$Y)(
+            this.m_rgAnswerToCategoryID,
+            n + 1,
+            null,
+          )),
+            (this.m_rgAnswerToCategoryID[n] = t?.length > 0 ? t : null);
+        }
+        GetAnswerCategoryForQuestion(e) {
+          return this.BHasAnsweredQuestion(e)
+            ? this.m_rgAnswerToCategoryID[e]
+            : null;
+        }
+        SetAnswer(e, t) {
+          const n = Math.min(e, 64);
+          (this.m_rgAnswerChosen = (0, r.$Y)(
+            this.m_rgAnswerChosen,
+            n + 1,
+            null,
+          )),
+            (this.m_rgAnswerChosen[n] = t);
+        }
+        GetAnswer(e) {
+          return this.BHasAnsweredQuestion(e) ? this.m_rgAnswerChosen[e] : null;
+        }
+        BHasAnsweredQuestion(e) {
+          return (
+            e < this.m_rgAnswerChosen?.length &&
+            Boolean(this.m_rgAnswerChosen[e])
+          );
+        }
+        GetAnswerCategories() {
+          const e = new Array();
+          return (
+            this.m_rgAnswerToCategoryID.forEach((t) => {
+              t?.length > 0 && t.filter(Boolean).forEach((t) => e.push(t));
+            }),
+            e
+          );
+        }
+        GetAnswers() {
+          return this.m_rgAnswerChosen;
+        }
+        GetLargestAnswerQuestion() {
+          return this?.m_rgAnswerChosen.length || 0;
+        }
+        ClearAnswersAndCategories() {
+          (this.m_rgAnswerToCategoryID = Array()),
+            (this.m_rgAnswerChosen = Array());
+        }
+        BHasTerminalAnswerChosen() {
+          return this.m_rgAnswerChosen.some(
+            (e) => e.reveal_question_id == o.b2,
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            l.s_Singleton ||
+              ((l.s_Singleton = new l()),
+              "dev" == i.TS.WEB_UNIVERSE &&
+                (window.g_SaleQuizAnswerStore = l.s_Singleton)),
+            l.s_Singleton
+          );
+        }
+        constructor() {
+          (0, a.Gn)(this);
+        }
+      }
+      (0, s.Cg)([a.sH], l.prototype, "m_rgAnswerToCategoryID", void 0),
+        (0, s.Cg)([a.sH], l.prototype, "m_rgAnswerChosen", void 0);
+    },
+    35400: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        DV: () => D,
+        Fq: () => g,
+        OC: () => S,
+        OM: () => I,
+        Sp: () => v,
+        Tn: () => E,
+        W3: () => f,
+        hH: () => h,
+        my: () => C,
+      });
+      var s = n(34629),
+        a = n(41735),
+        o = n.n(a),
+        r = n(14947),
+        i = n(90626),
+        l = n(68797),
+        c = n(6144),
+        u = n(84933),
+        d = n(78327),
+        m = n(44165),
+        p = n(34824);
+      const g = 7,
+        _ = -1;
+      class h {
+        m_userData;
+        m_bLoadedDuringInit = !1;
+        m_strLastDoorOpenKey = "video_noneset";
+        m_bIsAnyDoorOpened = !1;
+        m_nHighestDoorOpened = _;
+        m_initialLoadPromise;
+        m_mapDoorOpenPromise = new Map();
+        m_mapChangeCallback = new Map();
+        m_doorInitializedChangedCallback = new c.lu();
+        m_largestDoorChangeCallback = new c.lu();
+        m_bIsAnyDoorOpenChangeCallback = new c.lu();
+        GetLastDoorOpen() {
+          return this.m_strLastDoorOpenKey;
+        }
+        GetRawDoorData() {
+          return this.m_userData;
+        }
+        BIsDoorOpened(e) {
+          return (
+            null != e &&
+            null != e &&
+            !!this.m_userData &&
+            Boolean(e < this.m_userData.length && this.m_userData[e].opened)
+          );
+        }
+        BCanUserOpenDoor(e) {
+          let t = m.HD.GetTimeNowWithOverride();
+          return (
+            d.iA.logged_in &&
+            this.m_userData &&
+            e < this.m_userData.length &&
+            t >= this.m_userData[e].rtime_start &&
+            t <= this.m_userData[e].rtime_end
+          );
+        }
+        GetDoorCount() {
+          return this.m_userData ? this.m_userData.length : 0;
+        }
+        BIsAnyDoorOpened() {
+          return this.m_bIsAnyDoorOpened;
+        }
+        GetIsAnyDoorOpenChange() {
+          return this.m_bIsAnyDoorOpenChangeCallback;
+        }
+        GetLargestDoorOpenIndex() {
+          return this.m_nHighestDoorOpened;
+        }
+        GetLargestDoorIndexChange() {
+          return this.m_largestDoorChangeCallback;
+        }
+        GetDoorStateChangeCallback(e) {
+          return (
+            this.m_mapChangeCallback.has(e) ||
+              this.m_mapChangeCallback.set(e, new c.lu()),
+            this.m_mapChangeCallback.get(e)
+          );
+        }
+        GetDoorStateInitializedChangeCallback() {
+          return this.m_doorInitializedChangedCallback;
+        }
+        BIsInitialized() {
+          return this.m_bLoadedDuringInit;
+        }
+        GetMaxDoor() {
+          return g;
+        }
+        SetInMemoryUpdateDoorOpenUpto(e) {
+          for (let t = 0; t < g; ++t) {
+            const n = t <= e;
+            this.m_userData[t].opened != n &&
+              ((this.m_userData[t].opened = n),
+              this.GetDoorStateChangeCallback(t).Dispatch(n));
+          }
+          this.RecomputeState();
+        }
+        SetInMemorySpecificDoorState(e, t) {
+          e < g
+            ? this.m_userData[e].opened != t &&
+              ((this.m_userData[e].opened = t),
+              this.GetDoorStateChangeCallback(e).Dispatch(t),
+              this.RecomputeState())
+            : console.error("CDoorStore: Wrong door being set " + e);
+        }
+        RecomputeState() {
+          let e = _;
+          this.m_userData?.forEach((t) => {
+            t.opened && t.day > e && (e = t.day);
+          });
+          const t = e != _;
+          t != this.m_bIsAnyDoorOpened &&
+            ((this.m_bIsAnyDoorOpened = t),
+            this.GetIsAnyDoorOpenChange().Dispatch(t)),
+            e != this.m_nHighestDoorOpened &&
+              ((this.m_nHighestDoorOpened = e),
+              this.GetLargestDoorIndexChange().Dispatch(e));
+        }
+        async OpenDoor(e, t = !0, n = "", s = !1) {
+          return !d.iA.logged_in ||
+            !this.m_userData ||
+            e > this.m_userData.length ||
+            e < 0
+            ? ("dev" == d.TS.WEB_UNIVERSE &&
+                console.log(
+                  "CDoorStore.OpenDoor Early fail settings:",
+                  d.iA.logged_in,
+                  this.m_userData,
+                  e,
+                  this.m_userData?.length,
+                ),
+              null)
+            : this.m_mapDoorOpenPromise.has(e)
+              ? this.m_mapDoorOpenPromise.get(e)
+              : this.m_userData[e].opened == t
+                ? {}
+                : (this.m_mapDoorOpenPromise.has(e) ||
+                    this.m_mapDoorOpenPromise.set(
+                      e,
+                      this.InternalOpenDoor(e, t, n, s),
+                    ),
+                  this.m_mapDoorOpenPromise.get(e));
+        }
+        async InternalOpenDoor(e, t = !0, n, s = !1) {
+          let a = d.TS.STORE_BASE_URL + "saleaction/ajaxopendoor";
+          const r = new FormData();
+          r.append("sessionid", d.TS.SESSIONID),
+            n && r.append("datarecord", n),
+            s && r.append("fake_open", "" + s),
+            r.append("door_index", "" + e),
+            r.append("clan_accountid", "" + d.UF.CLANACCOUNTID),
+            t || r.append("open_door", "0");
+          let i = null;
+          try {
+            let n = await o().post(a, r, { withCredentials: !0 });
+            if (200 == n?.status && 1 == n?.data?.success)
+              return (
+                (this.m_userData[e].opened = t),
+                (this.m_strLastDoorOpenKey = "door_" + (t ? e : e - 1)),
+                n.data.capsuleinsert && (0, p.YH)([n.data.capsuleinsert]),
+                this.GetDoorStateChangeCallback(e).Dispatch(t),
+                this.RecomputeState(),
+                n.data
+              );
+            i = (0, l.H)(n);
+          } catch (e) {
+            i = (0, l.H)(e);
+          }
+          return (
+            this.m_mapDoorOpenPromise.delete(e),
+            console.error("OpenDoor hit error: " + i.strErrorMsg, i),
+            null
+          );
+        }
+        async LoadDoorData() {
+          return this.m_bLoadedDuringInit
+            ? this.m_userData
+            : (this.m_initialLoadPromise ||
+                (this.m_initialLoadPromise = this.InternalLoadDoorData()),
+              this.m_initialLoadPromise);
+        }
+        async InternalLoadDoorData() {
+          const e = d.TS.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
+          let t = null;
+          try {
+            const n = await o().get(e, { withCredentials: !0 });
+            if (200 == n.status && n.data?.doordata) {
+              (this.m_userData = n.data.doordata),
+                (this.m_bLoadedDuringInit = !0);
+              for (let e = 0; e < g; ++e)
+                this.GetDoorStateChangeCallback(e).Dispatch(
+                  this.m_userData[e].opened,
+                );
+              return (
+                this.GetDoorStateInitializedChangeCallback().Dispatch(
+                  this.m_bLoadedDuringInit,
+                ),
+                this.RecomputeState(),
+                this.m_userData
+              );
+            }
+            t = (0, l.H)(n);
+          } catch (e) {
+            t = (0, l.H)(e);
+          }
+          return (
+            console.error(
+              "CDoorStore.LoadDoorData failed: " + t?.strErrorMsg,
+              t,
+            ),
+            null
+          );
+        }
+        async CloseAllDoors(e) {
+          let t = d.TS.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
+          const n = new FormData();
+          n.append("sessionid", d.TS.SESSIONID),
+            n.append("clan_accountid", "" + e);
+          let s = null;
+          try {
+            let e = await o().post(t, n, { withCredentials: !0 });
+            if (200 == e.status && 1 == e?.data?.success) {
+              console.log("CDoorStore - closed " + e.data.count);
+              for (let e = 0; e < g; ++e)
+                (this.m_userData[e].opened = !1),
+                  this.GetDoorStateChangeCallback(e).Dispatch(
+                    this.m_userData[e].opened,
+                  );
+              return this.RecomputeState(), !0;
+            }
+            s = (0, l.H)(e);
+          } catch (e) {
+            s = (0, l.H)(e);
+          }
+          return (
+            console.error(
+              "CDoorStore.CloseAllDoors failed: " + s?.strErrorMsg,
+              s,
+            ),
+            null
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            h.s_Singleton ||
+              ((h.s_Singleton = new h()),
+              h.s_Singleton.Init(),
+              "dev" == d.TS.WEB_UNIVERSE &&
+                (window.g_EventDoorStore = h.s_Singleton)),
+            h.s_Singleton
+          );
+        }
+        constructor() {
+          (0, r.Gn)(this);
+        }
+        Init() {
+          (this.m_userData = (0, d.Tc)("doorinfo", "application_config")),
+            this.m_userData &&
+              ((this.m_bLoadedDuringInit = !0),
+              this.RecomputeState(),
+              "dev" == d.TS.WEB_UNIVERSE &&
+                console.log("CDoorStore Loading - ", this.m_userData));
+        }
+      }
+      function S() {
+        return { fnOpenDoor: h.Get().OpenDoor };
+      }
+      function D() {
+        const [e, t] = (0, i.useState)(h.Get().BIsInitialized());
+        return (
+          (0, i.useEffect)(() => {
+            e || h.Get().LoadDoorData();
+          }, [e]),
+          (0, u.hL)(h.Get().GetDoorStateInitializedChangeCallback(), t),
+          e
+        );
+      }
+      function I(e) {
+        const t = D(),
+          [n, s] = (0, i.useState)(t ? h.Get().BIsDoorOpened(e) : void 0);
+        return (0, u.hL)(h.Get().GetDoorStateChangeCallback(e), s), n;
+      }
+      function E() {
+        const e = D(),
+          [t, n] = (0, i.useState)(e ? h.Get().GetLargestDoorOpenIndex() : _);
+        return (0, u.hL)(h.Get().GetLargestDoorIndexChange(), n), t;
+      }
+      function f() {
+        const e = D(),
+          [t, n] = (0, i.useState)(!!e && h.Get().BIsAnyDoorOpened());
+        return (0, u.hL)(h.Get().GetIsAnyDoorOpenChange(), n), t;
+      }
+      function v(e) {
+        h.Get().SetInMemoryUpdateDoorOpenUpto(e);
+      }
+      function C(e, t) {
+        h.Get().SetInMemorySpecificDoorState(e, t);
+      }
+      (0, s.Cg)([r.sH], h.prototype, "m_bIsAnyDoorOpened", void 0),
+        (0, s.Cg)([r.sH], h.prototype, "m_nHighestDoorOpened", void 0),
+        (0, s.Cg)([u.oI], h.prototype, "BIsDoorOpened", null),
+        (0, s.Cg)([u.oI], h.prototype, "OpenDoor", null);
+    },
+    34824: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Fb: () => I,
+        Jz: () => E,
+        M$: () => S,
+        Tb: () => h,
+        YH: () => _,
+        tO: () => D,
+      });
+      var s,
+        a = n(34629),
+        o = n(14947),
+        r = (n(90626), n(77516)),
+        i = n(81393),
+        l = n(6144),
+        c = n(84933),
+        u = n(78327),
+        d = n(6379),
+        m = n(82097),
+        p = n(3967);
+      !(function (e) {
+        (e[(e.k_EDiscoveryAction_Invalid = 0)] = "k_EDiscoveryAction_Invalid"),
+          (e[(e.k_EDiscoveryAction_OpenStorePage = 1)] =
+            "k_EDiscoveryAction_OpenStorePage"),
+          (e[(e.k_EDiscoveryAction_OpenDoor = 2)] =
+            "k_EDiscoveryAction_OpenDoor");
+      })(s || (s = {}));
+      class g {
+        m_mapMaterializedInsertion = new Map();
+        m_mapInsertCallback = new Map();
+        m_rgFutureInsertions = new Array();
+        GetMatchingInsertion(e, t) {
+          return this.m_mapMaterializedInsertion.get(this.GetKeyFromID(e, t));
+        }
+        GetChangeCallback(e, t) {
+          const n = this.GetKey({ sectionID: e, tabID: t });
+          return this.GetChangeCallbackByKey(n);
+        }
+        GetChangeCallbackByKey(e) {
+          return (
+            this.m_mapInsertCallback.has(e) ||
+              this.m_mapInsertCallback.set(e, new l.lu()),
+            this.m_mapInsertCallback.get(e)
+          );
+        }
+        GetKey(e) {
+          return e ? e.sectionID + "_" + (e.tabID || "-1") : null;
+        }
+        GetKeyFromID(e, t) {
+          return e + "_" + (t || "-1");
+        }
+        ReplaceInsertion(e) {
+          e.forEach((e) => {
+            const t = this.GetKey(e);
+            this.m_mapMaterializedInsertion.forEach((e) => {
+              const n = this.GetKey(e);
+              n && n != t && this.DispatchInsertion(e, !0);
+            }),
+              this.m_mapMaterializedInsertion.clear(),
+              (this.m_rgFutureInsertions = Array()),
+              this.AppendInsertion(e);
+          });
+        }
+        AppendInsertion(e) {
+          e?.sectionID
+            ? (this.m_mapMaterializedInsertion.set(this.GetKey(e), e),
+              this.DispatchInsertion(e))
+            : this.m_rgFutureInsertions.push(e);
+        }
+        DispatchInsertion(e, t) {
+          e.sectionID &&
+            this.GetChangeCallback(e.sectionID, e.tabID).Dispatch(t ? null : e);
+        }
+        AppCapsuleFound(e) {
+          this.m_rgFutureInsertions = this.m_rgFutureInsertions.filter(
+            (t) => !(!t.sectionID && t.insertion_requirement && t.appid == e),
+          );
+        }
+        GetAnyNonMaterializedInsertionRequest() {
+          const e = this.m_rgFutureInsertions.length;
+          return e > 0
+            ? this.m_rgFutureInsertions[Math.floor(e * Math.random())]
+            : null;
+        }
+        SaleInteractionCallback(e, t) {
+          if (this.m_rgFutureInsertions.length > 0)
+            for (let n = 0; n < this.m_rgFutureInsertions.length; ++n)
+              if (this.AreWeAllowedToDeploy(this.m_rgFutureInsertions[n], t)) {
+                const t = this.DeployCapsuleIfPossible(
+                  e,
+                  this.m_rgFutureInsertions[n],
+                );
+                t &&
+                  ((0, i.wT)(
+                    Boolean(t.sectionID),
+                    "Expected to have a materialized insertion at this poiunt: " +
+                      t.sectionID,
+                  ),
+                  this.AppendInsertion(t));
+              }
+        }
+        AreWeAllowedToDeploy(e, t) {
+          if (
+            !e.sectionID &&
+            e.insertion_requirement &&
+            t.size >= e.insertion_requirement.min_interactions
+          ) {
+            if (t.size >= e.insertion_requirement.max_interactions) return !0;
+            const n =
+              e.insertion_requirement.max_interactions -
+              e.insertion_requirement.min_interactions;
+            return 0 == Math.floor(n * Math.random());
+          }
+          return !1;
+        }
+        BIsInsertableSectionType(e) {
+          if (e) {
+            if ("sale_item_browser" == e.section_type) return !0;
+            if ((0, r.ye)(e.section_type))
+              return (
+                !e.smart_section ||
+                ("wishlist" != e.smart_section_type &&
+                  "wishlist_onsale" != e.smart_section_type)
+              );
+          }
+          return !1;
+        }
+        BHasExistingInsertion(e) {
+          return Boolean(this.GetMatchingInsertion(e.sectionid, e.tabid));
+        }
+        DeployCapsuleIfPossible(e, t) {
+          if (this.BHasExistingInsertion(e)) return null;
+          if (u.P9.ANNOUNCEMENT_GID) {
+            const n = d.O3.GetClanEventFromAnnouncementGID(
+                u.P9.ANNOUNCEMENT_GID,
+              ),
+              s = n?.GetSaleSectionByID(e.sectionid);
+            if (this.BIsInsertableSectionType(s)) {
+              if (
+                t.insertion_requirement.additional_adds > 0 &&
+                t.insertion_requirement.delta_interactions > 0
+              ) {
+                const e = { ...t };
+                (e.insertion_requirement = { ...t.insertion_requirement }),
+                  (e.insertion_requirement.additional_adds -= 1),
+                  (e.insertion_requirement.max_interactions +=
+                    t.insertion_requirement.delta_interactions),
+                  (e.insertion_requirement.min_interactions +=
+                    t.insertion_requirement.delta_interactions),
+                  this.AppendInsertion(e);
+              }
+              return (
+                (t.sectionID = e.sectionid),
+                (t.tabID = e.tabid),
+                (t.insertionIndex = e.elementIndex),
+                t
+              );
+            }
+          }
+          return null;
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            g.s_Singleton ||
+              ((g.s_Singleton = new g()),
+              g.s_Singleton.Init(),
+              "dev" == u.TS.WEB_UNIVERSE &&
+                (window.g_DynamicCapsuleInsertStore = g.s_Singleton)),
+            g.s_Singleton
+          );
+        }
+        constructor() {
+          (0, o.Gn)(this);
+        }
+        Init() {
+          const e = (0, u.Fd)("capsuleinsert", "application_config");
+          g.ValidateData(e) &&
+            (e.sectionID
+              ? this.m_mapMaterializedInsertion.set(this.GetKey(e), e)
+              : e.insertion_requirement
+                ? (this.m_rgFutureInsertions.push(e),
+                  e?.appid &&
+                    m.A.Get()
+                      .QueueAppRequest(e.appid, {
+                        include_assets: !0,
+                        include_release: !0,
+                        include_trailers: !0,
+                      })
+                      .then(() => {
+                        const t = m.A.Get().GetApp(e.appid);
+                        !t ||
+                          t.GetBestPurchaseOption()?.formatted_final_price
+                            ?.length > 0 ||
+                          t.ReplaceBestPurchaseOption({
+                            packageid: 0,
+                            bundleid: 0,
+                            formatted_original_price: "CL.0R",
+                            formatted_final_price: "TH.4X",
+                            discount_pct: 50,
+                          });
+                      }))
+                : "dev" == u.TS.WEB_UNIVERSE &&
+                  console.error(
+                    "CDynamicCapsuleInsertStore: Payload not material and missing instructions.",
+                    e,
+                  ),
+            "dev" == u.TS.WEB_UNIVERSE &&
+              console.log("CDynamicCapsuleInsertStore loaded ", e)),
+            p.I.Get()
+              .GetNewInteractionCallback()
+              .Register(this.SaleInteractionCallback);
+        }
+        static ValidateData(e) {
+          const t = e;
+          return (
+            t &&
+            ("number" == typeof t.sectionID ||
+              "object" == typeof t.insertion_requirement) &&
+            "number" == typeof t.appid &&
+            "number" == typeof t.action
+          );
+        }
+      }
+      function _(e) {
+        g.Get().ReplaceInsertion(e);
+      }
+      function h(e, t) {
+        return g.Get().GetMatchingInsertion(e, t);
+      }
+      function S(e, t) {
+        return g.Get().GetChangeCallback(e, t);
+      }
+      function D(e) {
+        g.Get().AppCapsuleFound(e);
+      }
+      function I() {
+        return g.Get().GetAnyNonMaterializedInsertionRequest();
+      }
+      function E(e) {
+        return g.Get().BIsInsertableSectionType(e);
+      }
+      (0, a.Cg)([c.oI], g.prototype, "SaleInteractionCallback", null),
+        (0, a.Cg)([o.XI], g.prototype, "DeployCapsuleIfPossible", null);
+    },
+    3967: (e, t, n) => {
+      "use strict";
+      n.d(t, { I: () => o });
+      var s = n(6144),
+        a = n(78327);
+      class o {
+        m_setInteractions = new Set();
+        m_nActiveTabID = -1;
+        m_interactionCallback = new s.lu();
+        m_bDebugMode = !0;
+        GetNewInteractionCallback() {
+          return this.m_interactionCallback;
+        }
+        AddInteraction(e, t) {
+          const n = `${this.m_nActiveTabID}_${e}_${t}`,
+            s = !this.m_setInteractions.has(n);
+          this.m_setInteractions.add(n),
+            s &&
+              ("dev" == a.TS.WEB_UNIVERSE &&
+                this.m_bDebugMode &&
+                console.log(
+                  "CSaleInteractionStore new: " +
+                    n +
+                    " count: " +
+                    this.m_setInteractions.size,
+                ),
+              this.m_interactionCallback.Dispatch(
+                { tabid: this.m_nActiveTabID, sectionid: e, elementIndex: t },
+                this.m_setInteractions,
+              ));
+        }
+        SetActiveTab(e) {
+          this.m_nActiveTabID = e;
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            o.s_Singleton ||
+              ((o.s_Singleton = new o()),
+              o.s_Singleton.Init(),
+              "dev" == a.TS.WEB_UNIVERSE &&
+                (window.g_SaleInteractionStore = o.s_Singleton)),
+            o.s_Singleton
+          );
+        }
+        constructor() {}
+        Init() {}
+      }
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => h, KM: () => S, KT: () => y });
-      var a = n(41735),
-        s = n.n(a),
-        r = n(58632),
-        i = n.n(r),
-        o = n(90626),
+      n.d(t, { B3: () => f, KM: () => S, KT: () => E });
+      var s = n(41735),
+        a = n.n(s),
+        o = n(58632),
+        r = n.n(o),
+        i = n(90626),
         l = n(20194),
         c = n(75233),
         u = n(17720),
-        m = n(68797),
-        d = n(78327),
+        d = n(68797),
+        m = n(78327),
         p = n(56545),
         g = n(37735),
-        E = n(23809);
-      const _ = "nicknames";
+        _ = n(23809);
+      const h = "nicknames";
       function S(e) {
-        const t = (0, E.KV)(),
-          { data: n, isLoading: a } = (0, l.I)({
-            queryKey: [_],
+        const t = (0, _.KV)(),
+          { data: n, isLoading: s } = (0, l.I)({
+            queryKey: [h],
             queryFn: async () => {
               const e = new Map();
-              if (d.iA.logged_in) {
+              if (m.iA.logged_in) {
                 const n = p.w.Init(g.dN),
-                  a = (await g.xt.GetNicknameList(t, n)).Body().toObject();
-                a?.nicknames &&
-                  a.nicknames.length > 0 &&
-                  a.nicknames.forEach((t) => {
+                  s = (await g.xt.GetNicknameList(t, n)).Body().toObject();
+                s?.nicknames &&
+                  s.nicknames.length > 0 &&
+                  s.nicknames.forEach((t) => {
                     e.set(t.accountid, t.nickname);
                   });
               }
@@ -117,68 +942,68 @@
           });
         return n ? n.get(e) : null;
       }
-      const f = new (i())(
+      const D = new (r())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, d.yK)()
-                  ? d.TS.COMMUNITY_BASE_URL
-                  : d.TS.STORE_BASE_URL;
+                "community" == (0, m.yK)()
+                  ? m.TS.COMMUNITY_BASE_URL
+                  : m.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
-                  a = await s().get(`${t}actions/ajaxgetavatarpersona`, {
+                  s = await a().get(`${t}actions/ajaxgetavatarpersona`, {
                     params: n,
                   });
                 if (
-                  !a ||
-                  200 != a.status ||
-                  1 != a.data?.success ||
-                  !a.data?.userinfo
+                  !s ||
+                  200 != s.status ||
+                  1 != s.data?.success ||
+                  !s.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
-                return [a.data.userinfo];
+                  throw `Load single avatar/persona failed ${((0, d.H))(s).strErrorMsg}`;
+                return [s.data.userinfo];
               }
               {
                 const n = { accountids: e.join(","), origin: self.origin },
-                  a = await s().get(`${t}actions/ajaxgetmultiavatarpersona`, {
+                  s = await a().get(`${t}actions/ajaxgetmultiavatarpersona`, {
                     params: n,
                   });
                 if (
-                  !a ||
-                  200 != a.status ||
-                  1 != a.data?.success ||
-                  !a.data?.userinfos
+                  !s ||
+                  200 != s.status ||
+                  1 != s.data?.success ||
+                  !s.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
-                const r = new Map();
+                  throw `Load single avatar/persona failed ${((0, d.H))(s).strErrorMsg}`;
+                const o = new Map();
                 return (
-                  a.data.userinfos.forEach((e) =>
-                    r.set(new u.b(e.steamid).GetAccountID(), e),
+                  s.data.userinfos.forEach((e) =>
+                    o.set(new u.b(e.steamid).GetAccountID(), e),
                   ),
-                  e.map((e) => r.get(e))
+                  e.map((e) => o.get(e))
                 );
               }
             })(e),
           { cache: !1 },
         ),
-        v = "avatarandpersonas";
-      function y(e) {
+        I = "avatarandpersonas";
+      function E(e) {
         const { data: t, isLoading: n } = (0, l.I)({
-          queryKey: [v, e],
-          queryFn: () => f.load(e),
+          queryKey: [I, e],
+          queryFn: () => D.load(e),
         });
         return [t, n];
       }
-      function h(e) {
+      function f(e) {
         const t = (0, c.jE)(),
-          { data: n, isLoading: a } = (0, l.I)({
-            queryKey: [v, e],
+          { data: n, isLoading: s } = (0, l.I)({
+            queryKey: [I, e],
             queryFn: async () => {
-              const n = await f.loadMany(e);
+              const n = await D.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [v, new u.b(e.steamid).GetAccountID()];
+                  const n = [I, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -186,7 +1011,7 @@
             },
             enabled: e?.length > 0,
           }),
-          s = (0, o.useMemo)(() => {
+          a = (0, i.useMemo)(() => {
             const e = new Array();
             return (
               n?.forEach((t) => {
@@ -195,42 +1020,225 @@
               e
             );
           }, [n]);
-        return a ? null : s;
+        return s ? null : a;
       }
+    },
+    77021: (e, t, n) => {
+      "use strict";
+      n.d(t, { PM: () => m, TU: () => u, lM: () => d });
+      var s = n(34629),
+        a = n(90626),
+        o = n(78327),
+        r = n(84933),
+        i = n(14947),
+        l = n(95034),
+        c = n(65946);
+      class u {
+        m_sParentOrigin;
+        m_eventModelJson = void 0;
+        m_setMouseOverSectionID = i.sH.set();
+        m_setMouseOverSubsectionID = i.sH.set();
+        m_jumpToSection = void 0;
+        m_jumpToSubsection = void 0;
+        static s_Singleton;
+        static Get() {
+          return (
+            u.s_Singleton ||
+              ((u.s_Singleton = new u()),
+              "dev" == o.TS.WEB_UNIVERSE &&
+                (window.g_PartnerSaleLivePreviewClient = u.s_Singleton)),
+            u.s_Singleton
+          );
+        }
+        constructor() {
+          (0, i.Gn)(this),
+            window.opener &&
+              ((this.m_sParentOrigin = (0, l.f3)(
+                location.search,
+                "parentOrigin",
+              )),
+              window.addEventListener("message", this.HandleMessage),
+              window.addEventListener("beforeunload", () =>
+                window.opener.postMessage(
+                  { message: "PartnerEventEditor_ClientUnready" },
+                  this.m_sParentOrigin,
+                ),
+              ),
+              window.opener.postMessage(
+                { message: "PartnerEventEditor_ClientReady" },
+                this.m_sParentOrigin,
+              ));
+        }
+        BIsConnected() {
+          return !!window.opener && this.m_eventModelJson;
+        }
+        GetEventModel() {
+          return this.m_eventModelJson;
+        }
+        GetMouseOverSectionID() {
+          return this.m_setMouseOverSectionID.size > 0
+            ? this.m_setMouseOverSectionID.values().next().value
+            : void 0;
+        }
+        GetMouseOverSubsectionID() {
+          return this.m_setMouseOverSubsectionID.size > 0
+            ? this.m_setMouseOverSubsectionID.values().next().value
+            : void 0;
+        }
+        GetJumpToSectionID() {
+          return this.m_jumpToSection;
+        }
+        GetJumpToSubsectionIDs() {
+          return this.m_jumpToSubsection;
+        }
+        ClearJumpToSectionID() {
+          (0, i.h5)(() => (this.m_jumpToSection = void 0));
+        }
+        ClearJumpToSubectionID() {
+          (0, i.h5)(() => (this.m_jumpToSubsection = void 0));
+        }
+        PostMessage(e) {
+          window.opener &&
+            this.m_sParentOrigin &&
+            window.opener.postMessage(e, this.m_sParentOrigin);
+        }
+        SetMouseOverSection(e, t) {
+          if (!this.BIsConnected()) return;
+          const n = {
+            message: "PartnerEventEditor_MouseOverViewSection",
+            nSectionID: e,
+            bMouseOver: t,
+          };
+          this.PostMessage(n);
+        }
+        SetMouseOverSubsection(e, t) {
+          if (!this.BIsConnected()) return;
+          const n = {
+            message: "PartnerEventEditor_MouseOverViewSubsection",
+            strSubsectionID: e,
+            bMouseOver: t,
+          };
+          this.PostMessage(n);
+        }
+        JumpToSection(e) {
+          if (!this.BIsConnected()) return;
+          const t = {
+            message: "PartnerEventEditor_JumpToViewSection",
+            nSectionID: e,
+          };
+          this.PostMessage(t);
+        }
+        HandleMessage(e) {
+          if (e.origin != this.m_sParentOrigin) return;
+          const t =
+            e.data && "object" == typeof e.data && "message" in e.data
+              ? e.data
+              : null;
+          if (t)
+            switch (t.message) {
+              case "PartnerEventEditor_Update":
+                if ("eventModelJson" in t && t.eventModelJson) {
+                  const e = t;
+                  (0, i.h5)(() => (this.m_eventModelJson = e.eventModelJson));
+                }
+                break;
+              case "PartnerEventEditor_MouseOverEditorSection":
+                if ("nSectionID" in t) {
+                  const e = t;
+                  (0, i.h5)(() => {
+                    e.bMouseOver
+                      ? this.m_setMouseOverSectionID.add(e.nSectionID)
+                      : this.m_setMouseOverSectionID.delete(e.nSectionID);
+                  });
+                }
+                break;
+              case "PartnerEventEditor_MouseOverEditorSubsection":
+                if ("strSubsectionID" in t) {
+                  const e = t;
+                  (0, i.h5)(() => {
+                    e.bMouseOver
+                      ? this.m_setMouseOverSubsectionID.add(e.strSubsectionID)
+                      : this.m_setMouseOverSubsectionID.delete(
+                          e.strSubsectionID,
+                        );
+                  });
+                }
+                break;
+              case "PartnerEventEditor_JumpToEditorSection":
+                if ("nSectionID" in t) {
+                  const e = t;
+                  (0, i.h5)(() => (this.m_jumpToSection = e.nSectionID));
+                }
+                break;
+              case "PartnerEventEditor_JumpToEditorSubection":
+                if ("strSubsectionID" in t) {
+                  const e = t;
+                  (0, i.h5)(() => {
+                    (this.m_jumpToSection = e.nSectionID),
+                      (this.m_jumpToSubsection = {
+                        nSectionID: e.nSectionID,
+                        strSubsectionID: e.strSubsectionID,
+                      });
+                  });
+                }
+            }
+        }
+      }
+      function d(e) {
+        const t = (0, c.q3)(() => u.Get().GetJumpToSectionID());
+        a.useEffect(() => {
+          if (!u.Get().BIsConnected() || !t) return;
+          e(t) && u.Get().ClearJumpToSectionID();
+        }, [e, t]);
+      }
+      function m(e) {
+        const t = (0, c.q3)(() => u.Get().GetJumpToSubsectionIDs());
+        a.useEffect(() => {
+          if (!u.Get().BIsConnected() || !t) return;
+          e(t.nSectionID, t.strSubsectionID) &&
+            u.Get().ClearJumpToSubectionID();
+        }, [e, t]);
+      }
+      (0, s.Cg)([i.sH], u.prototype, "m_eventModelJson", void 0),
+        (0, s.Cg)([i.sH], u.prototype, "m_setMouseOverSectionID", void 0),
+        (0, s.Cg)([i.sH], u.prototype, "m_setMouseOverSubsectionID", void 0),
+        (0, s.Cg)([i.sH], u.prototype, "m_jumpToSection", void 0),
+        (0, s.Cg)([i.sH], u.prototype, "m_jumpToSubsection", void 0),
+        (0, s.Cg)([r.oI], u.prototype, "HandleMessage", null);
     },
     8905: (e, t, n) => {
       "use strict";
       n.d(t, { p: () => l });
-      var a = n(90626),
-        s = n(17720),
-        r = n(27144),
-        i = n(15736),
-        o = n(78327);
+      var s = n(90626),
+        a = n(17720),
+        o = n(27144),
+        r = n(15736),
+        i = n(78327);
       function l(e) {
         const { accountID: t, bHideWhenNotAvailable: n, bHideName: l } = e,
-          [c] = (0, r.KT)(t),
-          u = (0, r.KM)(t),
-          m = a.useMemo(() => s.b.InitFromAccountID(t), [t]),
-          d = `${o.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`;
-        return a.createElement(
-          a.Fragment,
+          [c] = (0, o.KT)(t),
+          u = (0, o.KM)(t),
+          d = s.useMemo(() => a.b.InitFromAccountID(t), [t]),
+          m = `${i.TS.COMMUNITY_BASE_URL}profiles/${d.ConvertTo64BitString()}`;
+        return s.createElement(
+          s.Fragment,
           null,
           Boolean(!c)
-            ? a.createElement(
-                a.Fragment,
+            ? s.createElement(
+                s.Fragment,
                 null,
-                Boolean(!n) && a.createElement("span", null, t),
+                Boolean(!n) && s.createElement("span", null, t),
               )
-            : a.createElement(
+            : s.createElement(
                 "a",
-                { href: d },
-                a.createElement("img", {
-                  className: i.SmallAvatar,
+                { href: m },
+                s.createElement("img", {
+                  className: r.SmallAvatar,
                   src: c.avatar_url,
-                  "data-miniprofile": "s" + m.ConvertTo64BitString(),
+                  "data-miniprofile": "s" + d.ConvertTo64BitString(),
                 }),
                 Boolean(!l) &&
-                  a.createElement(
+                  s.createElement(
                     "span",
                     null,
                     u ? `${u} (${c.persona_name})` : c.persona_name,
@@ -242,130 +1250,130 @@
     48479: (e, t, n) => {
       "use strict";
       n.d(t, { qx: () => g });
-      var a = n(10981),
-        s = n(61859),
-        r = n(12155),
-        i = n(90626),
-        o = n(52038),
+      var s = n(10981),
+        a = n(61859),
+        o = n(12155),
+        r = n(90626),
+        i = n(52038),
         l = n(95695),
         c = n(84811),
         u = n(64734),
-        m = n(65946),
-        d = n(26408);
+        d = n(65946),
+        m = n(26408);
       function p(e) {
         const {
             title: t,
             tooltip: n,
-            getMinimized: a,
-            toggleMinimized: s,
-            className: r,
+            getMinimized: s,
+            toggleMinimized: a,
+            className: o,
             children: p,
             elAdditionalButtons: g,
           } = e,
-          _ = (0, m.q3)(() => a());
-        return i.createElement(
-          i.Fragment,
+          h = (0, d.q3)(() => s());
+        return r.createElement(
+          r.Fragment,
           null,
-          i.createElement(
+          r.createElement(
             "div",
             {
-              className: (0, o.A)(
-                r,
+              className: (0, i.A)(
+                o,
                 u.SectionTitleHeader,
                 u.required_title,
                 "SectionTitleHeader",
               ),
             },
-            i.createElement(
+            r.createElement(
               "div",
               {
-                className: (0, o.A)(
+                className: (0, i.A)(
                   l.CollapsableSectionTitle,
                   "EventEditorTextTitle",
                 ),
               },
               t,
-              Boolean(n) && i.createElement(d.o, { tooltip: n }),
+              Boolean(n) && r.createElement(m.o, { tooltip: n }),
             ),
-            i.createElement(
+            r.createElement(
               "div",
               { className: u.SectionTitleButtons },
               g,
-              i.createElement(E, { bIsMinimized: _, fnToggleMinimize: s }),
+              r.createElement(_, { bIsMinimized: h, fnToggleMinimize: a }),
             ),
           ),
-          !_ && i.createElement(c.tH, null, p),
+          !h && r.createElement(c.tH, null, p),
         );
       }
       function g(e) {
-        const [t, n] = i.useState(Boolean(e.bStartMinimized));
-        return i.createElement(
+        const [t, n] = r.useState(Boolean(e.bStartMinimized));
+        return r.createElement(
           p,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
         );
       }
-      function E(e) {
+      function _(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
-          o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return i.createElement(
-          a.$n,
-          { "data-tooltip-text": (0, s.we)(o), onClick: n },
+          i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return r.createElement(
+          s.$n,
+          { "data-tooltip-text": (0, a.we)(i), onClick: n },
           e.bIsMinimized
-            ? i.createElement(r.hz4, null)
-            : i.createElement(r.Xjb, null),
+            ? r.createElement(o.hz4, null)
+            : r.createElement(o.Xjb, null),
         );
       }
     },
     57912: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => me, default: () => de });
-      var a = n(90626),
-        s = n(43527),
-        r = n(92757),
-        i = n(22837),
-        o = n(2160),
+      n.r(t), n.d(t, { MeetSteamRoutes: () => de, default: () => me });
+      var s = n(90626),
+        a = n(43527),
+        o = n(92757),
+        r = n(22837),
+        i = n(2160),
         l = n(8527),
         c = n(60746),
         u = n(6379),
-        m = n(30756),
-        d = n(92557),
+        d = n(30756),
+        m = n(92557),
         p = n(22797),
         g = n(61859),
-        E = n(43068),
-        _ = n(84811);
+        _ = n(43068),
+        h = n(84811);
       function S(e) {
-        const { gid: t } = (0, r.g)(),
-          [n, s] = (0, a.useState)(!0);
+        const { gid: t } = (0, o.g)(),
+          [n, a] = (0, s.useState)(!0);
         if (
-          (a.useEffect(() => {
+          (s.useEffect(() => {
             n &&
-              (u.O3.Init(), Promise.all([c.KN.InitGlobal()]).then(() => s(!1)));
+              (u.O3.Init(), Promise.all([c.KN.InitGlobal()]).then(() => a(!1)));
           }, [n]),
           n)
         )
-          return a.createElement(p.t, {
+          return s.createElement(p.t, {
             string: (0, g.we)("#Loading"),
             position: "center",
           });
         const S = u.O3.GetClanEventModel(t);
         return S
-          ? a.createElement(
-              _.tH,
+          ? s.createElement(
+              h.tH,
               null,
               !S.BIsUnlistedEvent() &&
-                a.createElement(
+                s.createElement(
                   "div",
                   null,
                   "NOTE: Event needs to be published in unlisted mode for Steam partners to see it. Admin account bypass this check",
                 ),
-              a.createElement(d.jA, {
-                lang: (0, i.sf)(l.TS.LANGUAGE),
+              s.createElement(m.jA, {
+                lang: (0, r.sf)(l.TS.LANGUAGE),
                 event: S,
                 adminPanel:
-                  l.TS.EREALM === o.TU.k_ESteamRealmChina
-                    ? a.createElement(E.P, { eventModel: S })
-                    : a.createElement(m.g, {
+                  l.TS.EREALM === i.TU.k_ESteamRealmChina
+                    ? s.createElement(_.P, { eventModel: S })
+                    : s.createElement(d.g, {
                         eventModel: S,
                         bSupportsSticky: !0,
                       }),
@@ -373,40 +1381,40 @@
             )
           : null;
       }
-      var f = n(51614),
-        v = n(41735),
-        y = n.n(v),
-        h = n(62216),
-        M = n(44165),
-        T = n(30470),
-        w = n(24484);
-      function N(e, t, n) {
-        for (const a of e)
-          if (a.group_id === t) {
-            const e = a.sessions.find((e) => e.id === n);
-            if (e) return { group: a, session: e };
+      var D = n(51614),
+        I = n(41735),
+        E = n.n(I),
+        f = n(62216),
+        v = n(44165),
+        C = n(30470),
+        y = n(24484);
+      function b(e, t, n) {
+        for (const s of e)
+          if (s.group_id === t) {
+            const e = s.sessions.find((e) => e.id === n);
+            if (e) return { group: s, session: e };
           }
         return { group: null, session: null };
       }
-      function C(e, t) {
-        const n = (0, M.f1)(),
-          [s] = (0, a.useState)(() =>
-            (0, w.Tc)("registrations", "application_config")
+      function w(e, t) {
+        const n = (0, v.f1)(),
+          [a] = (0, s.useState)(() =>
+            (0, y.Tc)("registrations", "application_config")
               .map((e) => ((e.userReg = JSON.parse(e.jsondata)), e))
               .sort((t, n) => {
-                const a = N(
+                const s = b(
                     e.jsondata.meet_steam_groups,
                     t.group_id,
                     t.session_id,
                   ),
-                  s = N(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
+                  a = b(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
                 return (
-                  (s?.session?.rtime_start || 0) -
-                  (a?.session?.rtime_start || 0)
+                  (a?.session?.rtime_start || 0) -
+                  (s?.session?.rtime_start || 0)
                 );
               })
               .map((t) => {
-                const a = N(
+                const s = b(
                   e.jsondata.meet_steam_groups,
                   t.group_id,
                   t.session_id,
@@ -414,44 +1422,44 @@
                 return (
                   (t.relativeToToday = (function (e, t) {
                     if (!e) return "past";
-                    const n = (0, h.Sk)(e),
-                      a = (0, h.Ue)(e.rtime_start, n),
-                      s = void 0 !== t ? new Date(1e3 * t) : new Date(),
-                      r = new Date(s.getFullYear(), s.getMonth(), s.getDate()),
-                      i = new Date(
-                        s.getFullYear(),
-                        s.getMonth(),
-                        s.getDate() + 1,
+                    const n = (0, f.Sk)(e),
+                      s = (0, f.Ue)(e.rtime_start, n),
+                      a = void 0 !== t ? new Date(1e3 * t) : new Date(),
+                      o = new Date(a.getFullYear(), a.getMonth(), a.getDate()),
+                      r = new Date(
+                        a.getFullYear(),
+                        a.getMonth(),
+                        a.getDate() + 1,
                       );
-                    return a >= r && a < i
+                    return s >= o && s < r
                       ? "today"
-                      : a < r
+                      : s < o
                         ? "past"
                         : "future";
-                  })(a?.session, n)),
-                  (t.rtSesssionTime = a.session.rtime_start),
+                  })(s?.session, n)),
+                  (t.rtSesssionTime = s.session.rtime_start),
                   t
                 );
               }),
           ),
-          r = t?.trim().toLowerCase() || "";
-        return (0, a.useMemo)(
+          o = t?.trim().toLowerCase() || "";
+        return (0, s.useMemo)(
           () =>
-            s.filter(
+            a.filter(
               (e) =>
-                !r.length ||
-                e.userReg.name?.toLowerCase().includes(r) ||
-                e.userReg.company?.toLowerCase().includes(r) ||
+                !o.length ||
+                e.userReg.name?.toLowerCase().includes(o) ||
+                e.userReg.company?.toLowerCase().includes(o) ||
                 e.userReg.guest_names?.find((e) =>
-                  e.toLowerCase().includes(r),
+                  e.toLowerCase().includes(o),
                 ) ||
-                e.userReg.email_override?.toLowerCase().includes(r),
+                e.userReg.email_override?.toLowerCase().includes(o),
             ),
-          [s, t],
+          [a, t],
         );
       }
-      function D(e, t) {
-        return (0, a.useMemo)(
+      function M(e, t) {
+        return (0, s.useMemo)(
           () =>
             e.reduce(
               (e, t) => (
@@ -464,71 +1472,71 @@
           [e, t],
         );
       }
-      var A = n(38390),
-        k = n(27144),
-        b = n(10981),
-        R = n(71298),
-        L = n(95034),
-        I = n(8905),
-        B = n(78395),
-        U = n(21869),
-        G = n(48479),
-        F = n(52038),
-        x = n(91675),
-        H = n(84933),
-        $ = n(15588),
-        z = n.n($),
-        j = n(29233);
-      function O(e) {
-        const [t] = (0, L.QD)("gid"),
-          n = (0, A.RR)(t),
-          s = (0, i.sf)(T.TS.LANGUAGE);
+      var T = n(38390),
+        A = n(27144),
+        G = n(10981),
+        B = n(71298),
+        O = n(95034),
+        k = n(8905),
+        N = n(78395),
+        L = n(21869),
+        R = n(48479),
+        U = n(52038),
+        H = n(91675),
+        F = n(84933),
+        P = n(15588),
+        x = n.n(P),
+        z = n(29233);
+      function q(e) {
+        const [t] = (0, O.QD)("gid"),
+          n = (0, T.RR)(t),
+          a = (0, r.sf)(C.TS.LANGUAGE);
         return n
-          ? a.createElement(
+          ? s.createElement(
               "div",
-              { className: z().Ctn },
-              a.createElement(
+              { className: x().Ctn },
+              s.createElement(
                 "div",
-                { className: z().EventName },
-                a.createElement("h2", null, n.GetNameWithFallback(s)),
-                a.createElement(
+                { className: x().EventName },
+                s.createElement("h2", null, n.GetNameWithFallback(a)),
+                s.createElement(
                   "a",
                   {
-                    href: `${T.TS.STORE_BASE_URL}meetsteam/${t}`,
+                    href: `${C.TS.STORE_BASE_URL}meetsteam/${t}`,
                     target: "_blank",
                   },
                   "See Event Details",
                 ),
               ),
-              a.createElement(K, { eventModel: n }),
+              s.createElement(j, { eventModel: n }),
             )
-          : a.createElement(p.t, { string: (0, g.we)("#Loading") });
+          : s.createElement(p.t, { string: (0, g.we)("#Loading") });
       }
-      function K(e) {
+      function j(e) {
         const { eventModel: t } = e,
-          n = D(C(t)),
-          [s] = (0, L.QD)("accountid"),
-          r = (0, M.f1)();
-        return a.createElement(
+          n = M(w(t)),
+          [a] = (0, O.QD)("accountid"),
+          o = (0, v.f1)();
+        return s.createElement(
           "div",
           null,
-          a.createElement(
+          s.createElement(
             "div",
-            { className: z().User },
-            a.createElement(I.p, { accountID: s }),
+            { className: x().User },
+            s.createElement(k.p, { accountID: a }),
           ),
-          a.createElement(q, {
+          s.createElement(K, {
             eventModel: t,
             rgUserRegs: n.today,
-            strTitle: "Today " + (0, x.$z)(r),
+            strTitle: "Today " + (0, H.$z)(o),
           }),
-          a.createElement(q, {
+          s.createElement(K, {
             eventModel: t,
             rgUserRegs: n.future,
             bHideIfEmpty: !0,
             strTitle: "Future",
           }),
-          a.createElement(q, {
+          s.createElement(K, {
             eventModel: t,
             rgUserRegs: n.past,
             bHideIfEmpty: !0,
@@ -536,27 +1544,27 @@
           }),
         );
       }
-      function q(e) {
+      function K(e) {
         const {
           eventModel: t,
           rgUserRegs: n,
-          bHideIfEmpty: s,
-          strTitle: r,
+          bHideIfEmpty: a,
+          strTitle: o,
         } = e;
-        return 0 == n.length && s
+        return 0 == n.length && a
           ? null
-          : a.createElement(
-              G.qx,
-              { title: `${r} (${n.length})`, bStartMinimized: s },
+          : s.createElement(
+              R.qx,
+              { title: `${o} (${n.length})`, bStartMinimized: a },
               Boolean(!n || 0 == n.length)
-                ? a.createElement("div", null, s ? "" : "No registrations")
-                : a.createElement(
+                ? s.createElement("div", null, a ? "" : "No registrations")
+                : s.createElement(
                     "div",
                     null,
                     n
                       .sort((e, t) => e.rtSesssionTime - t.rtSesssionTime)
                       .map((e) =>
-                        a.createElement(Q, {
+                        s.createElement(J, {
                           key: `${e.group_id}_${e.session_id}`,
                           eventModel: t,
                           reg: e,
@@ -565,140 +1573,140 @@
                   ),
             );
       }
-      function P(e) {
+      function $(e) {
         const { desc: t } = e,
-          [n, s] = (0, a.useState)(!1),
-          r = (0, a.useCallback)(() => s((e) => !e), []);
-        return a.createElement(
+          [n, a] = (0, s.useState)(!1),
+          o = (0, s.useCallback)(() => a((e) => !e), []);
+        return s.createElement(
           "div",
           {
-            className: (0, F.A)({
-              [z().DescriptionWrapper]: !0,
-              [z().Expanded]: n,
+            className: (0, U.A)({
+              [x().DescriptionWrapper]: !0,
+              [x().Expanded]: n,
             }),
-            onClick: r,
-            onMouseEnter: () => s(!0),
-            onMouseLeave: () => s(!1),
+            onClick: o,
+            onMouseEnter: () => a(!0),
+            onMouseLeave: () => a(!1),
           },
           t,
         );
       }
-      function Q(e) {
+      function J(e) {
         const { reg: t, eventModel: n } = e,
-          s = new j.b2(t.steamid).GetAccountID(),
-          [r] = (0, k.KT)(t.userReg.accountid),
-          [i, o] = (0, a.useState)(!0),
-          [l, c] = (0, a.useState)([]),
-          [u, m] = (0, a.useState)(!1),
-          d = t.userReg,
-          { group: p, session: g } = N(
+          a = new z.b2(t.steamid).GetAccountID(),
+          [o] = (0, A.KT)(t.userReg.accountid),
+          [r, i] = (0, s.useState)(!0),
+          [l, c] = (0, s.useState)([]),
+          [u, d] = (0, s.useState)(!1),
+          m = t.userReg,
+          { group: p, session: g } = b(
             n.jsondata.meet_steam_groups,
             t.group_id,
             t.session_id,
           ),
-          [E, S, v] = (0, H.uD)(),
-          h =
-            ((M = n.GID),
-            (w = s),
-            (C = t.group_id),
-            (D = t.session_id),
-            (0, f.n)({
+          [_, S, I] = (0, F.uD)(),
+          f =
+            ((v = n.GID),
+            (y = a),
+            (w = t.group_id),
+            (M = t.session_id),
+            (0, D.n)({
               mutationFn: async ({ bIncludeSelf: e, rgGuests: t }) => {
                 const n = new FormData();
-                n.append("sessionid", T.TS.SESSIONID),
-                  n.append("gid", M),
-                  n.append("accountid", "" + w),
-                  n.append("meetsteam_group_id", "" + C),
-                  n.append("meetsteam_session_id", "" + D),
+                n.append("sessionid", C.TS.SESSIONID),
+                  n.append("gid", v),
+                  n.append("accountid", "" + y),
+                  n.append("meetsteam_group_id", "" + w),
+                  n.append("meetsteam_session_id", "" + M),
                   n.append("include_self", "" + (e ? 1 : 0)),
                   t?.length && n.append("guests", t.join("|"));
-                const a = `${T.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
-                  s = await y().post(a, n, { withCredentials: !0 });
-                return 1 == s?.data?.success;
+                const s = `${C.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
+                  a = await E().post(s, n, { withCredentials: !0 });
+                return 1 == a?.data?.success;
               },
             }));
-        var M, w, C, D;
-        const A = new Set(
+        var v, y, w, M;
+        const T = new Set(
             t.guests_attendance?.length > 0
               ? t.guests_attendance.split("|")
               : [],
           ),
-          R = t.attendance_count > A.size,
-          L = (e, t, n, s) =>
-            a.createElement(
-              a.Fragment,
+          B = t.attendance_count > T.size,
+          O = (e, t, n, a) =>
+            s.createElement(
+              s.Fragment,
               null,
-              a.createElement(
+              s.createElement(
                 "span",
-                { className: z().GuestTitle },
+                { className: x().GuestTitle },
                 e,
                 ":",
                 " ",
               ),
               t,
               n &&
-                a.createElement(
-                  a.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   " ",
-                  a.createElement(
+                  s.createElement(
                     "span",
-                    { className: z().GuestEmail },
+                    { className: x().GuestEmail },
                     "(",
                     n,
                     ")",
                   ),
                 ),
-              a.createElement(
-                a.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 " ",
                 "-",
-                a.createElement(
+                s.createElement(
                   "span",
                   null,
-                  s ? "✅ checked in" : "☐ not checked in",
+                  a ? "✅ checked in" : "☐ not checked in",
                 ),
               ),
             );
-        return a.createElement(
+        return s.createElement(
           "div",
           null,
-          a.createElement(V, { group: p, session: g }),
+          s.createElement(W, { group: p, session: g }),
           Boolean(u)
-            ? a.createElement(
+            ? s.createElement(
                 "div",
-                { className: z().CheckedIn },
+                { className: x().CheckedIn },
                 "Attendee has been checked in",
               )
-            : a.createElement(
+            : s.createElement(
                 "div",
-                { className: z().RegisteredUsers },
-                a.createElement(b.Yh, {
-                  label: a.createElement(
-                    a.Fragment,
+                { className: x().RegisteredUsers },
+                s.createElement(G.Yh, {
+                  label: s.createElement(
+                    s.Fragment,
                     null,
-                    L(
+                    O(
                       "Attendee",
-                      d.name || r.persona_name,
-                      d.email_override,
-                      R,
+                      m.name || o.persona_name,
+                      m.email_override,
+                      B,
                     ),
                   ),
-                  checked: i,
-                  onChange: o,
+                  checked: r,
+                  onChange: i,
                 }),
-                Boolean(d.guest_names?.length > 0) &&
-                  a.createElement(
-                    a.Fragment,
+                Boolean(m.guest_names?.length > 0) &&
+                  s.createElement(
+                    s.Fragment,
                     null,
-                    d.guest_names.map((e) =>
-                      a.createElement(b.Yh, {
+                    m.guest_names.map((e) =>
+                      s.createElement(G.Yh, {
                         key: t.group_id + "_" + t.session_id + "_" + e,
-                        label: a.createElement(
-                          a.Fragment,
+                        label: s.createElement(
+                          s.Fragment,
                           null,
-                          L("Guest", e, void 0, A.has(e)),
+                          O("Guest", e, void 0, T.has(e)),
                         ),
                         checked: l.includes(e),
                         onChange: (t) => {
@@ -713,66 +1721,66 @@
                       }),
                     ),
                   ),
-                a.createElement(
-                  b.jn,
+                s.createElement(
+                  G.jn,
                   { onClick: S },
                   "Check in selected people",
                 ),
               ),
-          a.createElement(
-            U.E,
-            { active: E },
-            a.createElement(
-              _.tH,
+          s.createElement(
+            L.E,
+            { active: _ },
+            s.createElement(
+              h.tH,
               null,
-              a.createElement(J, {
-                closeModal: v,
-                bIncludeSelf: i,
+              s.createElement(V, {
+                closeModal: I,
+                bIncludeSelf: r,
                 rgGuestsAttending: l,
-                fnMarkAttendance: h,
-                fnOnSuccess: () => m(!0),
+                fnMarkAttendance: f,
+                fnOnSuccess: () => d(!0),
               }),
             ),
           ),
         );
       }
-      function J(e) {
+      function V(e) {
         const {
             closeModal: t,
             bIncludeSelf: n,
-            rgGuestsAttending: s,
-            fnMarkAttendance: r,
-            fnOnSuccess: i,
+            rgGuestsAttending: a,
+            fnMarkAttendance: o,
+            fnOnSuccess: r,
           } = e,
-          o = (0, R.vs)();
-        return o.bLoading
-          ? a.createElement(R.Hh, {
-              state: o,
+          i = (0, B.vs)();
+        return i.bLoading
+          ? s.createElement(B.Hh, {
+              state: i,
               strDialogTitle: (0, g.we)("#Saving"),
               closeModal: t,
             })
-          : a.createElement(
-              B.o0,
+          : s.createElement(
+              N.o0,
               {
                 onCancel: t,
                 strTitle: (0, g.we)("#Button_Submit"),
                 bAllowFullSize: !0,
                 onOK: async () => {
-                  o.fnSetLoading(!0),
-                    r
-                      .mutateAsync({ bIncludeSelf: n, rgGuests: s })
+                  i.fnSetLoading(!0),
+                    o
+                      .mutateAsync({ bIncludeSelf: n, rgGuests: a })
                       .then((e) => {
                         e
-                          ? (i(),
-                            o.fnSetStrSuccess(
+                          ? (r(),
+                            i.fnSetStrSuccess(
                               "Success! This person has been checked in.",
                             ))
-                          : o.fnSetStrError(
+                          : i.fnSetStrError(
                               (0, g.we)("#Login_Error_Network_Description"),
                             );
                       })
                       .catch(() =>
-                        o.fnSetStrError(
+                        i.fnSetStrError(
                           (0, g.we)("#Login_Error_Network_Description"),
                         ),
                       );
@@ -781,49 +1789,49 @@
               "Mark as checked in?",
             );
       }
-      function V(e) {
+      function W(e) {
         const { session: t, group: n } = e,
           {
-            sDisplayTimeZone: s,
-            rtime_start: r,
-            rtime_end: i,
-          } = (0, h._t)(e.session),
-          o = (0, h.rF)(r, s),
-          l = (0, h.Mr)(r, i, s);
+            sDisplayTimeZone: a,
+            rtime_start: o,
+            rtime_end: r,
+          } = (0, f._t)(e.session),
+          i = (0, f.rF)(o, a),
+          l = (0, f.Mr)(o, r, a);
         return t && n
-          ? a.createElement(
+          ? s.createElement(
               "div",
-              { className: z().SessionInfo },
-              a.createElement(
+              { className: x().SessionInfo },
+              s.createElement(
                 "div",
-                { className: z().SessionName },
+                { className: x().SessionName },
                 n.localized_session_title[0],
               ),
-              a.createElement(
+              s.createElement(
                 "div",
-                { className: z().SessionTime },
-                o,
+                { className: x().SessionTime },
+                i,
                 " @ ",
-                a.createElement("b", null, l),
+                s.createElement("b", null, l),
               ),
-              a.createElement(
+              s.createElement(
                 "div",
                 null,
-                a.createElement(P, {
+                s.createElement($, {
                   desc: `Description: ${n.localized_session_description[0] || ""}`,
                 }),
               ),
-              "dev" == T.TS.WEB_UNIVERSE &&
-                a.createElement(
+              "dev" == C.TS.WEB_UNIVERSE &&
+                s.createElement(
                   "div",
                   null,
                   "Rtime Start (Dev only): ",
                   t.rtime_start,
                 ),
             )
-          : a.createElement("div", null, "Session Infomrmation Missing");
+          : s.createElement("div", null, "Session Infomrmation Missing");
       }
-      var W = n(97058),
+      var Q = n(97058),
         Y = n(29645),
         Z = n.n(Y),
         X = n(12155),
@@ -833,93 +1841,93 @@
         const t = new Date(e.getTime());
         return t.setHours(0, 0, 0, 0), t;
       }
-      function ae(e) {
-        const [t] = (0, L.QD)("gid"),
-          n = (0, A.RR)(t),
-          s = (0, i.sf)(T.TS.LANGUAGE),
-          [r, o] = (0, a.useState)("");
+      function se(e) {
+        const [t] = (0, O.QD)("gid"),
+          n = (0, T.RR)(t),
+          a = (0, r.sf)(C.TS.LANGUAGE),
+          [o, i] = (0, s.useState)("");
         return n
-          ? a.createElement(
+          ? s.createElement(
               "div",
               { className: Z().Ctn },
-              a.createElement(
+              s.createElement(
                 "div",
                 { className: Z().EventName },
-                a.createElement("h1", null, n.GetNameWithFallback(s)),
-                a.createElement(
+                s.createElement("h1", null, n.GetNameWithFallback(a)),
+                s.createElement(
                   "a",
                   {
-                    href: `${T.TS.STORE_BASE_URL}meetsteam/${t}`,
+                    href: `${C.TS.STORE_BASE_URL}meetsteam/${t}`,
                     target: "_blank",
                   },
                   "See Event Details",
                 ),
               ),
-              a.createElement(ie, { eventModel: n }),
-              a.createElement(
+              s.createElement(re, { eventModel: n }),
+              s.createElement(
                 "div",
                 { className: Z().AtendeeSearchRow },
-                a.createElement(b.pd, {
+                s.createElement(G.pd, {
                   type: "text",
                   label: "Search for an attendee",
-                  value: r,
+                  value: o,
                   bShowClearAction: !0,
-                  onChange: (e) => o(e.currentTarget.value || ""),
+                  onChange: (e) => i(e.currentTarget.value || ""),
                   placeholder: "Type name or partner or email address",
                 }),
               ),
-              a.createElement(se, {
+              s.createElement(ae, {
                 eventModel: n,
-                strSearch: r.toLowerCase(),
+                strSearch: o.toLowerCase(),
               }),
             )
-          : a.createElement(p.t, { string: (0, g.we)("#Loading") });
+          : s.createElement(p.t, { string: (0, g.we)("#Loading") });
       }
-      function se(e) {
+      function ae(e) {
         const { eventModel: t, strSearch: n } = e,
-          s = C(t, n),
-          [r, i] = (0, a.useState)(null),
-          [o, l] = (0, a.useMemo)(() => {
+          a = w(t, n),
+          [o, r] = (0, s.useState)(null),
+          [i, l] = (0, s.useMemo)(() => {
             const e = new Map();
             return (
-              s.forEach((t) => {
+              a.forEach((t) => {
                 [t.userReg.name, ...(t.userReg.guest_names || [])].forEach(
                   (n) => {
-                    const a = n.toLowerCase();
-                    e.has(a) ? e.get(a).push(t) : e.set(a, [t]);
+                    const s = n.toLowerCase();
+                    e.has(s) ? e.get(s).push(t) : e.set(s, [t]);
                   },
                 );
               }),
               [e, Array.from(e.keys()).sort()]
             );
-          }, [s]);
+          }, [a]);
         return (
-          a.useEffect(() => {
-            i(null);
+          s.useEffect(() => {
+            r(null);
           }, [n]),
-          a.createElement(
+          s.createElement(
             "div",
             null,
-            a.createElement("h3", null, "Attendees"),
-            Boolean(r)
-              ? a.createElement(re, {
+            s.createElement("h3", null, "Attendees"),
+            Boolean(o)
+              ? s.createElement(oe, {
                   eventModel: t,
-                  rgSelected: r,
+                  rgSelected: o,
                   strSearch: n,
-                  onCleanSelection: () => i(null),
+                  onCleanSelection: () => r(null),
                 })
-              : a.createElement(
-                  a.Fragment,
+              : s.createElement(
+                  s.Fragment,
                   null,
                   l
                     .filter((e) => !n || e.includes(n))
                     .map((e) =>
-                      a.createElement(
+                      s.createElement(
                         "div",
                         { key: e, className: Z().AttendeeRow },
-                        a.createElement(
-                          b.$n,
-                          { onClick: () => i(o.get(e.toLowerCase())) },
+                        s.createElement(
+                          G.$n,
+                          { onClick: () => r(i.get(e.toLowerCase())) },
                           e,
                         ),
                       ),
@@ -928,110 +1936,110 @@
           )
         );
       }
-      function re(e) {
+      function oe(e) {
         const {
             eventModel: t,
             rgSelected: n,
-            strSearch: s,
-            onCleanSelection: r,
+            strSearch: a,
+            onCleanSelection: o,
           } = e,
-          i = (0, M.f1)(),
-          o = D(n, s);
-        return a.createElement(
+          r = (0, v.f1)(),
+          i = M(n, a);
+        return s.createElement(
           "div",
           null,
-          a.createElement(
+          s.createElement(
             "div",
             { className: Z().AtendeeListButtonRow },
-            a.createElement(
-              b.$n,
-              { onClick: r },
-              a.createElement(X.uMb, { className: Z().BackToListIcon }),
+            s.createElement(
+              G.$n,
+              { onClick: o },
+              s.createElement(X.uMb, { className: Z().BackToListIcon }),
               "Back to full list",
             ),
           ),
-          a.createElement(q, {
+          s.createElement(K, {
             eventModel: t,
-            rgUserRegs: o.today,
-            strTitle: "Today " + (0, g.$z)(i),
+            rgUserRegs: i.today,
+            strTitle: "Today " + (0, g.$z)(r),
           }),
-          a.createElement(q, {
+          s.createElement(K, {
             eventModel: t,
-            rgUserRegs: o.future,
+            rgUserRegs: i.future,
             bHideIfEmpty: !0,
             strTitle: "Future",
           }),
-          a.createElement(q, {
+          s.createElement(K, {
             eventModel: t,
-            rgUserRegs: o.past,
+            rgUserRegs: i.past,
             bHideIfEmpty: !0,
             strTitle: "Past",
           }),
         );
       }
-      function ie(e) {
+      function re(e) {
         const { eventModel: t } = e,
-          n = (0, M.s4)(),
-          [s, r] = a.useState(!1),
-          { rgGroupedSessions: i, bMoreSessions: o } = a.useMemo(() => {
+          n = (0, v.s4)(),
+          [a, o] = s.useState(!1),
+          { rgGroupedSessions: r, bMoreSessions: i } = s.useMemo(() => {
             const e = t?.jsondata?.meet_steam_groups?.flatMap((e) =>
                 e.sessions.map((t) => {
-                  const n = (0, h.Sk)(t),
-                    a = (0, h.Ue)(t.rtime_start, n);
-                  return { group: e, session: t, displayDate: a };
+                  const n = (0, f.Sk)(t),
+                    s = (0, f.Ue)(t.rtime_start, n);
+                  return { group: e, session: t, displayDate: s };
                 }),
               ),
-              a = e?.filter((e) => s || ne(e.displayDate) >= ne(n)),
-              r = s || (e && e.length > a.length);
-            var i;
+              s = e?.filter((e) => a || ne(e.displayDate) >= ne(n)),
+              o = a || (e && e.length > s.length);
+            var r;
             return {
               rgGroupedSessions:
-                ((i = (e) => ne(e.displayDate)),
-                (a ?? []).reduce((e, t) => {
-                  const n = i(t),
-                    a = Math.floor(n.getTime() / 1e3),
-                    s = e.get(a) || [];
-                  return e.set(a, [...s, t]), e;
+                ((r = (e) => ne(e.displayDate)),
+                (s ?? []).reduce((e, t) => {
+                  const n = r(t),
+                    s = Math.floor(n.getTime() / 1e3),
+                    a = e.get(s) || [];
+                  return e.set(s, [...a, t]), e;
                 }, new Map())),
-              bMoreSessions: r,
+              bMoreSessions: o,
             };
-          }, [t?.jsondata?.meet_steam_groups, n, s]),
-          l = a.useMemo(() => {
+          }, [t?.jsondata?.meet_steam_groups, n, a]),
+          l = s.useMemo(() => {
             const e = (0, te.Tc)("registrations", "application_config");
             if (e && "object" == typeof e)
               return e.reduce((e, t) => {
                 const n = `${t.group_id}_${t.session_id}`,
-                  a = e.get(n) ?? [];
-                return a.push(t), e.set(n, a), e;
+                  s = e.get(n) ?? [];
+                return s.push(t), e.set(n, s), e;
               }, new Map());
           }, []);
-        if (!l || (0 == i.size && !o)) return;
+        if (!l || (0 == r.size && !i)) return;
         const c =
-            Array.from(i.keys()).reduce(
+            Array.from(r.keys()).reduce(
               (e, t) => (null == e || (1e3 * t > n.getTime() && t < e) ? t : e),
               void 0,
             ) ?? 0,
-          u = Array.from(i.keys()).some((e) =>
+          u = Array.from(r.keys()).some((e) =>
             (0, ee.JD)(n, new Date(1e3 * e)),
           );
-        return a.createElement(
+        return s.createElement(
           "div",
           { className: Z().DisplayAllDaysCtn },
-          o &&
-            a.createElement(b.Yh, {
+          i &&
+            s.createElement(G.Yh, {
               label: "Show past events",
-              checked: s,
-              onChange: r,
+              checked: a,
+              onChange: o,
             }),
-          a.createElement(
+          s.createElement(
             "div",
             { className: Z().DisplayDaysCtn },
-            Array.from(i.keys()).map((e) =>
-              a.createElement(oe, {
+            Array.from(r.keys()).map((e) =>
+              s.createElement(ie, {
                 key: e,
                 eventModel: t,
                 date: new Date(1e3 * e),
-                sessionsAndGroups: i.get(e),
+                sessionsAndGroups: r.get(e),
                 rgRegistrationInfo: l,
                 isToday: (0, ee.JD)(
                   u ? n : new Date(1e3 * c),
@@ -1042,28 +2050,28 @@
           ),
         );
       }
-      function oe(e) {
+      function ie(e) {
         const {
           eventModel: t,
           date: n,
-          sessionsAndGroups: s,
-          rgRegistrationInfo: r,
-          isToday: i,
+          sessionsAndGroups: a,
+          rgRegistrationInfo: o,
+          isToday: r,
         } = e;
-        return a.createElement(
+        return s.createElement(
           "div",
-          { className: (0, F.A)(Z().DisplayDaySessions, !i && Z().NotToday) },
-          a.createElement("div", { className: Z().DateName }, (0, g.$w)(n)),
-          a.createElement(
+          { className: (0, U.A)(Z().DisplayDaySessions, !r && Z().NotToday) },
+          s.createElement("div", { className: Z().DateName }, (0, g.$w)(n)),
+          s.createElement(
             "div",
             { className: Z().DisplayDaySessionsRow },
-            s.map((e) =>
-              a.createElement(le, {
+            a.map((e) =>
+              s.createElement(le, {
                 key: `${e.group.group_id}_${e.session.id}`,
                 eventModel: t,
                 date: n,
                 registrations:
-                  r.get(`${e.group.group_id}_${e.session.id}`) ?? [],
+                  o.get(`${e.group.group_id}_${e.session.id}`) ?? [],
                 group: e.group,
                 session: e.session,
               }),
@@ -1075,16 +2083,16 @@
         const {
             eventModel: t,
             date: n,
-            group: s,
-            session: r,
-            registrations: o,
+            group: a,
+            session: o,
+            registrations: i,
           } = e,
-          l = (0, i.sf)(T.TS.LANGUAGE),
-          c = (0, M.s4)(),
-          { sDisplayTimeZone: u, rtime_start: m } = (0, h._t)(r),
-          d = (0, h.us)(m, u),
-          p = o.reduce((e, t) => e + (t.guests_registered ?? 0), 0),
-          g = o.reduce(
+          l = (0, r.sf)(C.TS.LANGUAGE),
+          c = (0, v.s4)(),
+          { sDisplayTimeZone: u, rtime_start: d } = (0, f._t)(o),
+          m = (0, f.us)(d, u),
+          p = i.reduce((e, t) => e + (t.guests_registered ?? 0), 0),
+          g = i.reduce(
             (e, t) =>
               e +
               (t.rt_attendance_marked > 0 && t.guests_registered
@@ -1092,67 +2100,67 @@
                 : 0),
             0,
           ),
-          [E, S, v] = (0, H.uD)(),
-          w =
-            ((N = t.GID),
-            (C = s.group_id),
-            (D = r.id),
-            (0, f.n)({
+          [_, S, I] = (0, F.uD)(),
+          y =
+            ((b = t.GID),
+            (w = a.group_id),
+            (M = o.id),
+            (0, D.n)({
               mutationFn: async ({ nCapacity: e }) => {
                 const t = new FormData();
-                t.append("sessionid", T.TS.SESSIONID),
-                  t.append("gid", N),
-                  t.append("meetsteam_group_id", "" + C),
-                  t.append("meetsteam_session_id", "" + D),
+                t.append("sessionid", C.TS.SESSIONID),
+                  t.append("gid", b),
+                  t.append("meetsteam_group_id", "" + w),
+                  t.append("meetsteam_session_id", "" + M),
                   t.append("capacity", "" + e);
-                const n = `${T.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
-                  a = await y().post(n, t, { withCredentials: !0 });
-                return 1 == a?.data?.success;
+                const n = `${C.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
+                  s = await E().post(n, t, { withCredentials: !0 });
+                return 1 == s?.data?.success;
               },
             }));
-        var N, C, D;
-        return a.createElement(
+        var b, w, M;
+        return s.createElement(
           "div",
           { className: Z().DisplaySession },
-          a.createElement(
+          s.createElement(
             "div",
             { className: Z().Header },
-            a.createElement(
+            s.createElement(
               "div",
               { className: Z().SessionName },
-              s.localized_session_title[l] ?? s.localized_session_title[0],
+              a.localized_session_title[l] ?? a.localized_session_title[0],
             ),
-            a.createElement("div", { className: Z().SessionTime }, d),
+            s.createElement("div", { className: Z().SessionTime }, m),
           ),
-          a.createElement(ue, {
+          s.createElement(ue, {
             title: "Registered:",
             nCount: p,
-            nCapacity: r.max_capacity,
+            nCapacity: o.max_capacity,
           }),
-          a.createElement(ue, {
+          s.createElement(ue, {
             title: "Checked in:",
             nCount: g,
-            nCapacity: r.max_capacity,
+            nCapacity: o.max_capacity,
           }),
           ne(n) >= ne(c) &&
-            a.createElement(
-              a.Fragment,
+            s.createElement(
+              s.Fragment,
               null,
-              a.createElement(
-                b.$n,
-                { className: (0, F.A)(Z().SetCapacityButton), onClick: S },
+              s.createElement(
+                G.$n,
+                { className: (0, U.A)(Z().SetCapacityButton), onClick: S },
                 "Update capacity...",
               ),
-              a.createElement(
-                U.E,
-                { active: E },
-                a.createElement(
-                  _.tH,
+              s.createElement(
+                L.E,
+                { active: _ },
+                s.createElement(
+                  h.tH,
                   null,
-                  a.createElement(ce, {
-                    closeModal: v,
-                    nCapacity: r.max_capacity ?? 0,
-                    fnUpdateCapacity: w,
+                  s.createElement(ce, {
+                    closeModal: I,
+                    nCapacity: o.max_capacity ?? 0,
+                    fnUpdateCapacity: y,
                     fnOnSuccess: () => window.location.reload(),
                   }),
                 ),
@@ -1164,32 +2172,32 @@
         const {
             closeModal: t,
             nCapacity: n,
-            fnUpdateCapacity: s,
-            fnOnSuccess: r,
+            fnUpdateCapacity: a,
+            fnOnSuccess: o,
           } = e,
-          [i, o] = a.useState(n.toString()),
-          l = (0, R.vs)();
+          [r, i] = s.useState(n.toString()),
+          l = (0, B.vs)();
         return l.bLoading
-          ? a.createElement(R.Hh, {
+          ? s.createElement(B.Hh, {
               state: l,
               strDialogTitle: (0, g.we)("#Saving"),
               closeModal: t,
             })
-          : a.createElement(
-              B.o0,
+          : s.createElement(
+              N.o0,
               {
                 onCancel: t,
                 strTitle: (0, g.we)("Update Capacity"),
                 bAllowFullSize: !0,
                 onOK: async () => {
                   l.fnSetLoading(!0);
-                  const e = Number.isNaN(Number.parseInt(i))
+                  const e = Number.isNaN(Number.parseInt(r))
                     ? void 0
-                    : Number.parseInt(i);
-                  s.mutateAsync({ nCapacity: e })
+                    : Number.parseInt(r);
+                  a.mutateAsync({ nCapacity: e })
                     .then((e) => {
                       e
-                        ? (r(), l.fnSetStrSuccess("Max capacity updated."))
+                        ? (o(), l.fnSetStrSuccess("Max capacity updated."))
                         : l.fnSetStrError(
                             (0, g.we)("#Login_Error_Network_Description"),
                           );
@@ -1201,57 +2209,57 @@
                     );
                 },
               },
-              a.createElement(b.pd, {
+              s.createElement(G.pd, {
                 className: Z().SetCapacityInput,
                 label: "New capacity",
                 type: "text",
                 autoComplete: "off",
-                value: i,
-                onChange: (e) => o(e.currentTarget.value),
+                value: r,
+                onChange: (e) => i(e.currentTarget.value),
               }),
             );
       }
       function ue(e) {
-        const { title: t, nCount: n, nCapacity: s } = e,
-          r = n >= s,
-          i = Math.min((n / s) * 100, 100),
-          o = n > 0 ? `${i}%` : "0%";
-        return a.createElement(
+        const { title: t, nCount: n, nCapacity: a } = e,
+          o = n >= a,
+          r = Math.min((n / a) * 100, 100),
+          i = n > 0 ? `${r}%` : "0%";
+        return s.createElement(
           "div",
           { className: Z().CapacityCtn },
-          a.createElement("span", null, t, " ", n, " / ", s),
-          a.createElement(
+          s.createElement("span", null, t, " ", n, " / ", a),
+          s.createElement(
             "div",
             { className: Z().CapacityBarMax },
-            a.createElement("div", {
-              className: (0, F.A)(Z().CapacityBarCurrent, r ? Z().Full : ""),
-              style: { width: o },
+            s.createElement("div", {
+              className: (0, U.A)(Z().CapacityBarCurrent, o ? Z().Full : ""),
+              style: { width: i },
             }),
           ),
         );
       }
-      const me = {
-        MeetSteamAttendance: () => `${s.B.MeetSteamRoute()}attendance`,
-        MeetSteamEvent: () => `${s.B.MeetSteamRoute()}:gid(\\d+)`,
-        MeetSteamAttendeeList: () => `${s.B.MeetSteamRoute()}attendeelist`,
+      const de = {
+        MeetSteamAttendance: () => `${a.B.MeetSteamRoute()}attendance`,
+        MeetSteamEvent: () => `${a.B.MeetSteamRoute()}:gid(\\d+)`,
+        MeetSteamAttendeeList: () => `${a.B.MeetSteamRoute()}attendeelist`,
       };
-      function de(e) {
-        return a.createElement(
-          r.dO,
+      function me(e) {
+        return s.createElement(
+          o.dO,
           null,
-          a.createElement(r.qh, {
-            path: me.MeetSteamAttendance(),
-            render: (e) => a.createElement(O, { ...e }),
+          s.createElement(o.qh, {
+            path: de.MeetSteamAttendance(),
+            render: (e) => s.createElement(q, { ...e }),
           }),
-          a.createElement(r.qh, {
-            path: me.MeetSteamAttendeeList(),
-            render: (e) => a.createElement(ae, { ...e }),
+          s.createElement(o.qh, {
+            path: de.MeetSteamAttendeeList(),
+            render: (e) => s.createElement(se, { ...e }),
           }),
-          a.createElement(r.qh, {
-            path: me.MeetSteamEvent(),
-            render: (e) => a.createElement(S, { ...e }),
+          s.createElement(o.qh, {
+            path: de.MeetSteamEvent(),
+            render: (e) => s.createElement(S, { ...e }),
           }),
-          a.createElement(r.qh, null, a.createElement(W.a, null)),
+          s.createElement(o.qh, null, s.createElement(Q.a, null)),
         );
       }
     },

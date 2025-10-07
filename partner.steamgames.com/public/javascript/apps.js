@@ -4077,6 +4077,93 @@ function OnRemoveMMPartnerAppIdSuccess( appid )
 	}
 }
 
+function SetCurrentAppBuild( appid, betakey, buildid, description, nomerge, confirmation='' )
+{
+	if ( betakey <= 0 )
+	{
+		$('SetCurrentAppBuildOutput').innerHTML = 'Please select a beta branch';
+		$('SetCurrentAppBuildOutput').className = "outputFailure";
+	}
+	else
+	{
+		// on the partner page we say 'default' instead of 'public'.
+		var betaname = ( betakey == 'public' ) ? 'default' : betakey;
+
+		if( confirm( 'Set build '+buildid+' live for branch "' + betaname + '" ?' ) )
+		{
+			$('SetCurrentAppBuildOutput').innerHTML = 'Working...';
+			AppsAjaxRequest( 'https://partner.steamgames.com/apps/setappbuildid/' + appid,
+				{ 'betakey' : betakey, 'buildid' : buildid, 'description' : description, 'nomerge' : nomerge, 'confirmation' : confirmation },
+				function( results )
+				{
+					StandardCallback( results, 'SetCurrentAppBuildOutput' );
+
+					if ( results[ 'success' ] )
+					{
+						// no error, go back to builds overview
+						$('SetCurrentAppBuildOutput').innerHTML = 'Reloading...';
+
+						//Build information for this branch for the patch note editor
+						buildParams = '?submittedbuild=' + buildid;
+						if ( betakey !== 'default' )
+						{
+							buildParams = buildParams + '&buildbranch=' + betakey;
+
+							//TEMP: Right now we don't want any branches other than the main build submitting patch notes,
+							//so just clear out the build params for these other branches. To enable other branches
+							//to have patch notes, just delete the line below
+							buildParams = '';
+						}
+
+						window.location.href = 'https://partner.steamgames.com/apps/builds/' + appid + buildParams;
+					}
+					else
+					{
+						if ( results[ 'eresult' ] == 22 )
+						{
+							if ( results[ 'require_sms' ] == true )
+							{
+								ShowPromptDialog( 'Confirm setting this build live', 'Please enter the code texted to your mobile device', 'Confirm build change' , null, { bExplicitDismissalOnly: true } )
+							.done( function( confValue ) {
+								SetCurrentAppBuild( appid, betakey, buildid, description, nomerge, confValue );
+							} );
+							}
+							else if ( results[ 'require_confirmation' ] == true )
+							{
+								// show mobile conf dialog + example
+								var $DialogContents = $J( '#mobileconf_example' ).clone();
+								ShowAlertDialog( 'Confirm setting this build live', $DialogContents.show() ).done( function() {
+								//Build information for this branch for the patch note editor
+								buildParams = '?submittedbuild=' + buildid;
+								if ( betakey !== 'public' )
+								{
+									buildParams = buildParams + '&buildbranch=' + betakey;
+
+									//TEMP: Right now we don't want any branches other than the main build submitting patch notes,
+									//so just clear out the build params for these other branches. To enable other branches
+									//to have patch notes, just delete the line below
+									buildParams = '';
+								}
+
+								window.location.href = 'https://partner.steamgames.com/apps/builds/' + appid + buildParams;
+							} );
+							}
+						}
+					else if ( results[ 'eresult' ] == 123 )
+						{
+							ShowAlertDialog( 'Verified Phone Or Mobile Authenticator Required', 'In order to set this build to the default branch for this released app you must confirm the action with an sms sent to a registered phone number or a confirmation from a mobile authenticator. You may add a phone number to your account <a href="https://store.steampowered.com/phone/manage" target="_blank" rel="noreferrer">here</a>.  We highly reccomend <a href="https://store.steampowered.com/mobile" target="_blank" rel="noreferrer">downloading the Steam mobile app</a> to add an authenticator as well as, or instead of registering a phone number to avoid the need to receive SMS messages which can have delivery problems in some areas.' );
+						}
+					else if ( results['eresult'] == 15 )
+						{
+							ShowAlertDialog( 'Recent Security Change', 'Due to a recent change to your accounts security you will be unable to set the default branch on released apps for 72 hours from your last change in phone number, authenticator or email address.  If you made these security changes yourself and need to ship a build urgently, please <a href="https://help.steampowered.com//wizard/HelpWithBuildChanges" target="_blank" rel="noreferrer">contact Steam Support here.</a>' );
+						}
+					}
+				}
+			);
+		}
+	}
+}
+
 function OnRemoveMMPartnerAppIdFailure( errortext )
 {
 	alert( 'error removing app partner'+errortext );

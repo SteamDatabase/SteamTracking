@@ -174,6 +174,45 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        BasicContextMenuModal: "uWT-cMCXkxiyxcSs9UA-0",
+        BasicContextMenuHeader: "_2pq9my4HQChCImf0dPb9Kd",
+        BasicContextMenuHeaderShrinkableSpacing: "_3D_kEgaEhVPqwbR9URAyjh",
+        BasicContextMenuContainer: "_3ctisZH6WXgLVlYQqADdfR",
+        slideInAnimation: "v7EaRj39PKF9LFyybctSi",
+        contextMenu: "_2LigNhjmULtkRCXW5237ai",
+        contextMenuContents: "oZw50c4oJ6-r0HP8UWv25",
+        hasSubMenu: "_2QWbNWxBWYiC5pTqgB0oYZ",
+        contextMenuFade: "_272iDm3ZOWIxFB41ShVTwr",
+        contextMenuItem: "_34o03-8cUc3fQX1u650c0L",
+        Destructive: "_1HXm3O7vOzyuTFDaKPNUxy",
+        Positive: "_213PVSQTmHdo8SK-jkU-m_",
+        Emphasis: "_2awU7ejQ3Qs_g0XnuSmgOP",
+        active: "OQmT6NKuekm5HuXQnkl2a",
+        Selected: "_3fVa8M_7D9Vjz28uYnahhd",
+        Focused: "_2XVTVAadkIvrBujZYN5jbL",
+        Capitalized: "_1yXLMcA7JS4dtqgQ9Citj5",
+        MenuSectionHeader: "_3dVceiVJPerBKElpqfmSRS",
+        UpperCase: "_2D03hlOq-HwgleuMEvDObC",
+        SubMenu: "_3-IFyrv9R_fZqALBsjlUS5",
+        ContextMenuSeparator: "ixiWPQKqTMxnq43WgT3vj",
+        Label: "_18C7xpEWME7W-bxMsvyXdi",
+        Arrow: "_2T7n7sepVsm6k4PqM9hZ_U",
+        BackgroundAnimation: "_39R4lbKGgs6tgliKRKaOGu",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3-ckPZrQQ4AcL8Jk8U_Jks",
+        "ItemFocusAnim-darkerGrey": "_1oxeJwH0ZuJGWZzFpl0Hna",
+        "ItemFocusAnim-darkGrey": "_2pGKXMC5Yvn04wv6_5ayhi",
+        "ItemFocusAnim-grey": "_97AO_Lq9HLtpPQgpBcZeI",
+        "ItemFocusAnim-translucent-white-10": "_2huw7WWVJBokivVlIjoa92",
+        "ItemFocusAnim-translucent-white-20": "NsTryIHdHWU8LOl4XCrhk",
+        "ItemFocusAnimBorder-darkGrey": "_1sLQsQ-IbGQ7xqKTw3uc-M",
+        "ItemFocusAnim-green": "QGN9mnAcP2r3B9mKyCmrp",
+        focusAnimation: "_3R-0H7Rl4MTvs97q_ecWuK",
+        hoverAnimation: "_115JS_717vFpl6zVBnieg5",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DialogDropDownMenu_Item: "_2oAiZidGyUxL-hfupFDQ2m",
         DialogDropDownMenu_Separator: "_1Sa12sphmVOOs0on58tDn7",
         DialogDropDownMenu: "_30wJO3MC4x-I1OWpy1TAeE",
@@ -630,6 +669,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        HasHorizontalDirection: "vnlCrJZjobtJHaugGSLqP",
         EmoticonBow: "_2LlztGU9T4SNsTD6znahfe",
         EmoticonBow_st0: "Fw2WGmXjh2zUxYfuy3xDn",
         EmoticonBow_st1: "luj0tT8JHriKkK3r7pzqP",
@@ -892,10 +932,242 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { managerOverride: _ } = _,
+          _ = (0, _._)(),
+          _ = null != _ ? _ : _,
+          _ = (0, _._)();
+        return (
+          (0, _._)(_.OnMenusChanged, _),
+          _.createElement(
+            _._,
+            {
+              active: !!_.ActiveMenu,
+            },
+            _.createElement(_, {
+              ActiveMenu: _.ActiveMenu,
+            }),
+          )
+        );
+      }
+      function _(_) {
+        const { ActiveMenu: _ } = _,
+          _ = _.useCallback(() => {
+            null == _ || _.OnCancel();
+          }, [_]);
+        _.useEffect(() => () => (null == _ ? void 0 : _.Hide()), [_]);
+        let _ = [],
+          _ = null;
+        (0, _._)(() => {
+          for (let _ = _; _ && _.visible; _ = _.submenu)
+            _.push(
+              _.createElement(_, {
+                key: _.key,
+                instance: _,
+              }),
+            ),
+              (_ = _.label);
+        });
+        const _ = _.useCallback(
+          (_) => {
+            _.currentTarget == _.target && __webpack_require__();
+          },
+          [_],
+        );
+        return _.createElement(
+          _._,
+          {
+            padding: "none",
+          },
+          _.createElement(
+            "div",
+            {
+              onClick: _,
+              className: (0, _._)(
+                "BasicUIContextMenu",
+                _().BasicContextMenuModal,
+              ),
+            },
+            _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    className: _().BasicContextMenuHeader,
+                  },
+                  _,
+                ),
+              ),
+            _.createElement(
+              _._,
+              {
+                className: _().BasicContextMenuContainer,
+                onCancelButton: _,
+                onClick: _,
+              },
+              _,
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { instance: _ } = _,
+          _ = (0, _._)(),
+          _ = _.useCallback(() => {
+            _ && _._.PlayNavSound(_._.FailedNav);
+          }, [_]);
+        let _ = _.useMemo(
+          () => ({
+            instance: _,
+            styles: _(),
+            presentation: 1,
+            callbacks: {
+              onDisabledItemSelected: _,
+            },
+          }),
+          [_, _],
+        );
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            _._.Provider,
+            {
+              value: _,
+            },
+            _.ReactElement,
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _() {
+        return _.useMemo(
+          () =>
+            function (_) {
+              const {
+                  refNavTree: _,
+                  className: __webpack_require__,
+                  active: _,
+                  children: _,
+                  modalKey: _,
+                } = _,
+                _ = _.useRef(void 0);
+              (0, _._)(_, _, !0);
+              const _ = (0, _._)(_, _);
+              return _.createElement(
+                _._,
+                {
+                  className: __webpack_require__,
+                  navTreeRef: _,
+                  modal: !0,
+                  enabled: _,
+                  navID: `ModalDialogOverlay_${_}`,
+                },
+                _,
+              );
+            },
+          [],
+        );
+      }
+      function _(_) {
+        const {
+            className: _,
+            onEscKeypress: __webpack_require__,
+            padding: _ = "standard",
+            bGamepadUIScrollWithin: _,
+            children: _,
+          } = _,
+          _ = (0, _._)(
+            _().ModalPosition,
+            "standard" == _ && _().WithStandardPadding,
+            _ && _().ScrollWithin,
+            _,
+          );
+        return _.createElement(
+          _._,
+          {
+            className: _,
+            onCancelButton: __webpack_require__,
+            focusableIfEmpty: !0,
+          },
+          _.createElement(_._, null, _.createElement(_._, null, _)),
+        );
+      }
+      function _(_) {
+        const _ = _.useMemo(
+          () => ({
+            ModalPosition: _,
+          }),
+          [],
+        );
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
+          },
+          _.children,
+        );
+      }
+      function _(_) {
+        const _ = _(),
+          _ = _.useMemo(
+            () => ({
+              DropDownMenu: _._,
+              Content: _._,
+            }),
+            [],
+          );
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
+          },
+          _.createElement(
+            _,
+            null,
+            _.createElement(_._, {
+              ..._,
+              bUseDialogElement: !1,
+              DialogWrapper: _,
+              ContextMenuComponent: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = {
+          bRenderOverlayAtRoot: !0,
+          bUsePopups: !1,
+          ..._,
+        };
+        return (0, _._)()
+          ? _.createElement(_, {
+              ..._,
+            })
+          : _.createElement(_._, {
+              ..._,
+            });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2369,7 +2641,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
@@ -2386,6 +2657,34 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -2449,39 +2748,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2495,7 +2761,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2555,7 +2820,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2583,7 +2847,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2609,7 +2872,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2656,6 +2918,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3075,13 +3338,7 @@
                   _.createElement(
                     _,
                     null,
-                    _.createElement(
-                      _._,
-                      {
-                        bRenderOverlayAtRoot: !0,
-                      },
-                      _.children,
-                    ),
+                    _.createElement(_, null, _.children),
                   ),
                 ),
               ),
@@ -3843,6 +4100,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3857,6 +4115,7 @@
         }),
         _ = (0, _._)("a", {
           bActivateByDefault: !0,
+          bDOMElementFocusByDefault: !1,
         }),
         _ = _.forwardRef(function (_, _) {
           const { href: __webpack_require__ = "#", ..._ } = _;
@@ -3881,6 +4140,12 @@
         (0, _._)("form", {
           bFocusableByDefault: !1,
         });
+      function _(_, _, __webpack_require__ = !1) {
+        _.useEffect(() => {
+          const _ = _.current;
+          _ && (_ ? _.Activate(__webpack_require__) : _.Deactivate());
+        }, [_, __webpack_require__, _]);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -7954,7 +8219,14 @@
           return !1;
         }
       }
+      function _(_, _, _, _) {
+        let _ = _ / _,
+          _ = _ / _,
+          _ = Math.min(_, _);
+        return [_ * _, _ * _];
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -7982,9 +8254,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       const _ = new Set([
         "sc_schinese",
         "schinese",
@@ -8018,6 +8291,9 @@
         "vietnamese",
         "ukrainian",
       ]);
+      function _(_) {
+        return _.has(_);
+      }
       const _ = new Map([
         ["en", "english"],
         ["de", "german"],
@@ -8055,8 +8331,28 @@
       const _ = new Map();
       for (const [module, module_exports] of _.entries())
         _.set(module_exports, module);
+      function _(_) {
+        return _.get(_);
+      }
+      function _(_) {
+        if ("english" !== _)
+          return "sc_schinese" === _ ? "schinese" : "english";
+      }
+      function _(_) {
+        return "arabic" === _;
+      }
       _.set("sc_schinese", _.get("schinese")),
         _.set("korean", _.get("koreana"));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, ..._) {
         return 0 == _.length
           ? _
@@ -8075,9 +8371,12 @@
         const _ = (async function () {
           await (0, _._)();
           const _ = _(),
-            _ = new Set(["english"]);
-          for (const _ of _.languages)
-            _.add(_.strLanguage), _.strFallback && _.add(_.strFallback);
+            _ = new Set([]);
+          for (const _ of _.languages) {
+            _.add(_.strLanguage);
+            const _ = (0, _._)(_.strLanguage);
+            _ && _.add(_);
+          }
           return Promise.all(
             Array.from(_).map((_) =>
               _(_).then((_) => {
@@ -8103,7 +8402,7 @@
                 ? _
                 : null ===
                       (_ = _.get(
-                        null !== (_ = _.strFallback) && void 0 !== _
+                        null !== (_ = (0, _._)(_.strLanguage)) && void 0 !== _
                           ? _
                           : "english",
                       )) || void 0 === _
@@ -8152,14 +8451,12 @@
         );
       }
       function _() {
-        var _;
-        if (((_ = _._.LANGUAGE), !_.has(_)))
-          throw `unknown language ${_._.LANGUAGE}`;
+        if (!(0, _._)(_._.LANGUAGE)) throw `unknown language ${_._.LANGUAGE}`;
         return {
           languages: [
             {
               strLanguage: _._.LANGUAGE,
-              strISOCode: _.get(_._.LANGUAGE),
+              strISOCode: _._.get(_._.LANGUAGE),
               eSource: 5,
             },
           ],
@@ -29731,8 +30028,71 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.cdn_path || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  cdn_path: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  encoding: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Trailers_AdaptiveTrailer";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.trailer_name || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
+            _.Message.initialize(this, _, 0, -1, [3, 4, 5, 6], null);
         }
         static M() {
           return (
@@ -29769,6 +30129,12 @@
                   },
                   microtrailer: {
                     _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  adaptive_trailers: {
+                    _: 6,
                     _: _,
                     _: !0,
                     _: !0,
@@ -30694,7 +31060,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.context || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -30705,6 +31071,14 @@
                   context: {
                     _: 1,
                     _: _,
+                  },
+                  excluded_content_descriptorids: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
                   },
                 },
               }),
@@ -33861,9 +34235,19 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        _.useEffect(() => {
+          const _ = null == _ ? void 0 : _.current;
+          if (_ && _)
+            return (
+              _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
+            );
+        }, [_, _, _]);
+      }
       function _(_, _, _) {
         return (0, _._)(
           (_) => {
@@ -33904,13 +34288,20 @@
           );
         }, [_, _]);
       }
-      function _() {
-        const [_, _] = _.useState(!1);
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1),
+          _ = _.useRef(void 0);
         return [
           _,
           {
-            onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
+            onMouseEnter: _.useCallback(() => {
+              __webpack_require__(!0), clearTimeout(_.current);
+            }, []),
+            onMouseLeave: _.useCallback(() => {
+              _
+                ? (_.current = setTimeout(() => __webpack_require__(!1), _))
+                : __webpack_require__(!1);
+            }, [_]),
           },
         ];
       }
@@ -33952,6 +34343,7 @@
         _: () => _._,
         _: () => _,
         _: () => _,
+        _: () => _._,
         _: () => _._,
         _: () => _._,
         _: () => _,
@@ -37814,108 +38206,6 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.recovery_code || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  recovery_code: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  steamid: {
-                    _: 10,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CParental_DisableWithRecoveryCode_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CParental_DisableWithRecoveryCode_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
             _.prototype.features || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -38953,16 +39243,6 @@
               _,
               {
                 ePrivilege: 1,
-              },
-            );
-          }),
-          (_.DisableWithRecoveryCode = function (_, _) {
-            return _.SendMsg(
-              "Parental.DisableWithRecoveryCode#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 0,
               },
             );
           }),
@@ -40805,6 +41085,7 @@
       (0, _._)([_._], _.prototype, "OnLinkLoad", null);
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)() ? _.Composited : _.None;
@@ -41019,10 +41300,12 @@
               _.addEventListener("dragover", this.OnDragOver),
               _.addEventListener("message", this.OnMessage),
               _._.LANGUAGE &&
-                _.document.documentElement.setAttribute(
+                (_.document.documentElement.setAttribute(
                   "lang",
                   null !== (_ = (0, _._)()) && void 0 !== _ ? _ : "",
                 ),
+                (0, _._)(_._.LANGUAGE) &&
+                  _.document.documentElement.setAttribute("dir", "rtl")),
               (this.m_popup = _),
               (this.m_element = _),
               (this.m_renderWhenReady = _),
@@ -42027,13 +42310,15 @@
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;");
-            let _ = _,
-              {
-                nLeft: _,
-                nTop: _,
-                nOverflow: _,
-                nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+            let _ = _;
+            _.matches(":dir(rtl)") &&
+              ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
+            let {
+              nLeft: _,
+              nTop: _,
+              nOverflow: _,
+              nLateralOverflow: _,
+            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
             if (_ > (null != _ ? _ : 10) && !_) {
               const _ = (function (_) {
                   switch (_) {
@@ -42050,7 +42335,7 @@
                     case "overlay-center":
                       return "overlay-center";
                   }
-                })(null != _ ? _ : "right"),
+                })(_),
                 {
                   nLeft: _,
                   nTop: __webpack_require__,
@@ -42084,7 +42369,7 @@
                 const _ = _[0] > _[1] ? _ : -_;
                 "left" === _ || "right" === _ ? (_ += _) : (_ += _);
                 return [_, _];
-              })(_, _, null != _ ? _ : "right", _, _));
+              })(_, _, _, _, _));
             let _ = null;
             switch (_) {
               case "left":
@@ -42744,25 +43029,27 @@
               try {
                 return _.stack && _.stack.match(_)
                   ? (async function (_, _) {
-                      var _, _;
+                      var _;
                       const {
                           cCallsitesToIgnore: _,
                           bIncludeMessageInIdentifier: _,
                         } = _,
+                        { message: _, stack: _ } = _,
                         _ =
-                          null !==
-                            (_ =
-                              null === (_ = _.stack) || void 0 === _
-                                ? void 0
-                                : __webpack_require__.split("\n")) &&
+                          null !== (_ = null == _ ? void 0 : _.split("\n")) &&
                           void 0 !== _
                             ? _
                             : [];
                       let _ = _(_.filter((_) => !!_.match(_))[_]);
-                      _ && (_ = `${_} ${_.message}`);
+                      _ && (_ = `${_} ${_}`);
                       const _ = _.map((_) => {
-                        const _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
-                        if (!_) return _;
+                        let _ = _.match(/(.*)\((.*):(\d+):(\d+)\)/);
+                        if (
+                          ((_ && 5 == _.length) ||
+                            (_ = _.match(/(.*at )(http.*):(\d+):(\d+)/)),
+                          !_)
+                        )
+                          return _;
                         if (5 === _.length) {
                           const [_, _, _, _, _] = _,
                             _ = parseInt(_),
@@ -43091,6 +43378,7 @@
           _.custom_release_date_message,
         );
       }
+      var _ = __webpack_require__("chunkid");
       class _ {
         constructor(_, _) {
           var _, _, _, _;
@@ -44157,34 +44445,43 @@
             (this.m_nBaseID = _.trailer_base_id()),
             (this.m_eTrailerCategory = _.trailer_category());
           const _ = _.trailer_url_format();
-          _ &&
-            (_.trailer_480p() &&
-              (this.m_Trailer480p = this.ExtractTrailerFormats(
-                _,
-                _.trailer_480p(),
-              )),
-            _.trailer_max() &&
-              (this.m_TrailerMax = this.ExtractTrailerFormats(
-                _,
-                _.trailer_max(),
-              )),
-            _.microtrailer() &&
-              (this.m_MicroTrailer = this.ExtractTrailerFormats(
-                _,
-                _.microtrailer(),
-              )),
-            _.screenshot_medium() &&
-              (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_medium(),
-              )),
-            _.screenshot_full() &&
-              (this.m_strScreenshotFull = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_full(),
-              ))),
-            (this.m_bIsAllAges =
-              null === (_ = _.all_ages()) || void 0 === _ || _);
+          if (
+            (_ &&
+              (_.trailer_480p() &&
+                (this.m_Trailer480p = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_480p(),
+                )),
+              _.trailer_max() &&
+                (this.m_TrailerMax = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_max(),
+                )),
+              _.microtrailer() &&
+                (this.m_MicroTrailer = this.ExtractTrailerFormats(
+                  _,
+                  _.microtrailer(),
+                )),
+              _.screenshot_medium() &&
+                (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_medium(),
+                )),
+              _.screenshot_full() &&
+                (this.m_strScreenshotFull = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_full(),
+                ))),
+            _.adaptive_trailers())
+          ) {
+            this.m_rgDashTrailers = this.ExtractAdaptiveTrailers(
+              _.adaptive_trailers(),
+              "dash",
+            );
+            let _ = this.ExtractAdaptiveTrailers(_.adaptive_trailers(), "hls");
+            _.length > 0 && (this.m_rgHlsTrailer = _[0]);
+          }
+          this.m_bIsAllAges = null === (_ = _.all_ages()) || void 0 === _ || _;
         }
         GetName() {
           return this.m_strTrailerName;
@@ -44200,6 +44497,12 @@
         }
         GetTrailerMax() {
           return this.m_TrailerMax;
+        }
+        GetTrailersDash() {
+          return this.m_rgDashTrailers;
+        }
+        GetTrailerHls() {
+          return this.m_rgHlsTrailer;
         }
         GetMicroTrailer() {
           return this.m_MicroTrailer;
@@ -44222,6 +44525,17 @@
                   (_.strWebMURL = this.ConstructAssetURL(_, _.filename()));
             }),
             _
+          );
+        }
+        ExtractAdaptiveTrailers(_, _) {
+          let _ = `${_}_`,
+            _ = _.filter(
+              (_) => _.encoding() && _.cdn_path() && _.encoding().startsWith(_),
+            ),
+            _ = _.findIndex((_) => _.encoding().endsWith("_av1"));
+          return (
+            _ > 0 && _._(_, _, 0),
+            _.map((_) => this.ConstructAssetURL(_.cdn_path(), ""))
           );
         }
         ConstructScreenshotURL(_, _) {
@@ -47495,6 +47809,11 @@
                     _: 8,
                     _: _,
                   },
+                  detected_by_automation: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -47752,6 +48071,12 @@
                     _: 18,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  detected_by_automation: {
+                    _: 19,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -48057,6 +48382,18 @@
                     _: 27,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  resolved_by_automation: {
+                    _: 28,
+                    _: 0,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  detected_by_automation: {
+                    _: 29,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -48562,6 +48899,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  resolved_by_automation: {
+                    _: 7,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -48991,6 +49333,11 @@
                     _: 5,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  resolved_by_automation: {
+                    _: 6,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -49878,6 +50225,211 @@
           return "CContentModeration_GetContentReportSubjectGroup_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subject_type: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  subject_group_id: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  subject_id: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetAuditLog_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.entries || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  entries: {
+                    _: 1,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetAuditLog_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.timestamp || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  timestamp: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  actor_steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                  automated_action: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  action: {
+                    _: 4,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  additional_json_data: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetAuditLog_Response_AuditLogEntry";
+        }
+      }
       !(function (_) {
         (_.CreateContentReport = function (_, _) {
           return _.SendMsg(
@@ -50057,6 +50609,17 @@
               _,
               {
                 ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetAuditLog = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.GetAuditLog#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
               },
             );
           });
@@ -62347,10 +62910,8 @@
       !(function (_) {
         (_[(_.k_EContentModerationAction_None = 1)] =
           "k_EContentModerationAction_None"),
-          (_[(_.k_EContentModerationAction_LockThread = 2)] =
-            "k_EContentModerationAction_LockThread"),
-          (_[(_.k_EContentModerationAction_UnlockThread = 3)] =
-            "k_EContentModerationAction_UnlockThread");
+          (_[(_.k_EContentModerationAction_Sustain = 2)] =
+            "k_EContentModerationAction_Sustain");
       })(_ || (_ = {}));
       const _ = [
         {
@@ -63676,7 +64237,9 @@
             _ = _ > 0,
             _ = _ + _ - (_.bOverlapHorizontal ? _ : _) - _,
             _ = _ > 0,
-            _ = (_.bPreferPopLeft || !_) && _;
+            _ = _.bPreferPopLeft;
+          (null == _ ? void 0 : _.matches(":dir(rtl)")) && (_ = !_);
+          let _ = (_ || !_) && _;
           _ ||
             _ ||
             ((_ = _ > _),
@@ -64017,6 +64580,53 @@
         return (
           "true" === (window.localStorage && window.localStorage.getItem(_))
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext(null);
+      function _(_) {
+        const {
+            refContextMenuManager: _,
+            bRegisterMenuManager: __webpack_require__ = !0,
+            children: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (null == _ ? void 0 : _.ownerWindow) || window,
+          _ = _.useRef(void 0);
+        return (
+          _.current || (_.current = new _._()),
+          _.useLayoutEffect(() => {
+            if (__webpack_require__)
+              return (
+                _._.SetMenuManager(_, _.current),
+                () => _._.SetMenuManager(_, void 0)
+              );
+          }, [_, __webpack_require__]),
+          _.useLayoutEffect(
+            () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
+            [_],
+          ),
+          _.createElement(
+            _.Provider,
+            {
+              value: _.current,
+            },
+            _,
+          )
+        );
+      }
+      function _() {
+        return _.useContext(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -64775,7 +65385,6 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _._,
         _: () => _,
         _: () => _._,
         _: () => _._,
@@ -64784,6 +65393,7 @@
         _: () => _,
         _: () => _._,
         _: () => _._,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -68341,6 +68951,7 @@
         _,
         _,
         _,
+        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -68719,6 +69330,11 @@
             (_[(_.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
             (_[(_.Standby = 3)] = "Standby"),
             (_[(_.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
+            (_[(_.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
+            (_[(_.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.Notification_Shown = 600)] = "Notification_Shown"),
@@ -70081,10 +70697,7 @@
       }
       class _ extends _.Component {
         constructor(_) {
-          super(_),
-            (this.state = {}),
-            (this.reactErrorHandler = void 0),
-            (this.state.lastErrorKey = _.errorKey);
+          super(_), (this.state = {}), (this.state.lastErrorKey = _.errorKey);
         }
         static InstallErrorReportingStore(_) {
           this.sm_ErrorReportingStore = _;
@@ -70586,12 +71199,15 @@
         FId: () => _,
         Gj3: () => _,
         JPq: () => _,
+        JaO: () => _,
         K6w: () => _,
+        K9I: () => _,
         LSz: () => _,
         Maz: () => _,
         O7b: () => _,
         OMN: () => _,
         Rkk: () => _,
+        TPi: () => _,
         UKJ: () => _,
         VBK: () => _,
         VnB: () => _,
@@ -70599,8 +71215,10 @@
         YNO: () => _,
         YqK: () => _,
         ZyV: () => _,
+        _3Z: () => _,
         _Q2: () => _,
         _V3: () => _,
+        a_4: () => _,
         b8_: () => _,
         bb4: () => _,
         _: () => _,
@@ -70645,6 +71263,7 @@
         vbm: () => _,
         vji: () => _,
         vsW: () => _,
+        wB_: () => _,
         x7X: () => _,
         y$y: () => _,
         yUV: () => _,
@@ -70682,6 +71301,21 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             _: "M17.5316 18.0962L9.43544 10L5.8999 13.5355L17.5316 25.1673L29.1633 13.5355L25.6278 10L17.5316 18.0962Z",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M33 20.38V15.62L29.07 14.9C28.8121 14.015 28.453 13.1628 28 12.36L30.27 9.08L26.92 5.71L23.64 8C22.8372 7.54696 21.985 7.18793 21.1 6.93L20.38 3H15.62L14.9 6.93C14.015 7.18793 13.1628 7.54696 12.36 8L9.08 5.71L5.71 9.08L8 12.36C7.54696 13.1628 7.18793 14.015 6.93 14.9L3 15.62V20.38L6.93 21.1C7.18793 21.985 7.54696 22.8372 8 23.64L5.71 26.92L9.08 30.29L12.36 28C13.1637 28.4461 14.0159 28.7984 14.9 29.05L15.62 33H20.38L21.1 29.07C21.985 28.8121 22.8372 28.453 23.64 28L26.92 30.27L30.29 26.9L28 23.64C28.4461 22.8363 28.7984 21.9841 29.05 21.1L33 20.38ZM18 23C17.0111 23 16.0444 22.7068 15.2221 22.1573C14.3999 21.6079 13.759 20.827 13.3806 19.9134C13.0022 18.9998 12.9031 17.9945 13.0961 17.0245C13.289 16.0546 13.7652 15.1637 14.4645 14.4645C15.1637 13.7652 16.0546 13.289 17.0245 13.0961C17.9945 12.9031 18.9998 13.0022 19.9134 13.3806C20.827 13.759 21.6079 14.3999 22.1573 15.2221C22.7068 16.0444 23 17.0111 23 18C23 18.6566 22.8707 19.3068 22.6194 19.9134C22.3681 20.52 21.9998 21.0712 21.5355 21.5355C21.0712 21.9998 20.52 22.3681 19.9134 22.6194C19.3068 22.8707 18.6566 23 18 23Z",
+            fill: "currentColor",
           }),
         );
       }
@@ -71248,6 +71882,163 @@
         );
       }
       function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+            fillOpacity: "0.5",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+            fillOpacity: "0.5",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M14.15 6.00818L14.16 6H14.15V6.00818ZM14.15 18.27V6.00818L7.10342 11.77L14.15 18.27ZM14.15 26.039L1 13.909V23.27H5.11L14.15 30.67V26.039Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement(
+            "rect",
+            {
+              _: "0.728821",
+              _: "10",
+              width: "3",
+              height: "27",
+              transform: "rotate(-46.9546 0.728821 9.47668)",
+              fill: "currentColor",
+            },
+            _.createElement("animate", {
+              attributeName: "y",
+              begin: "0",
+              dur: "150ms",
+              from: "0",
+              _: "10",
+              values: "0; 5; 10",
+              keyTimes: "0; .8; 1",
+              fill: "freeze",
+            }),
+          ),
+        );
+      }
+      function _(_) {
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
           case "up":
@@ -71686,6 +72477,21 @@
           },
           _.createElement("path", {
             _: "M2 6.05005V30.05H34V6.05005H2ZM8 27.05H5V23.05H8V27.05ZM8 20.05H5V16.05H8V20.05ZM8 13.05H5V9.05005H8V13.05ZM14 23.82V12.28L24 18.05L14 23.82ZM31 27.05H28V23.05H31V27.05ZM31 20.05H28V16.05H31V20.05ZM31 13.05H28V9.05005H31V13.05Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M14 14H4V10H10V4H14V14ZM32 10H26V4H22V14H32V10ZM26 26H32V22H22V32H26V26ZM14 22H4V26H10V32H14V22Z",
             fill: "currentColor",
           }),
         );
@@ -73517,6 +74323,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -74272,7 +75079,8 @@
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
-          this.key = "Modal_" + _.sm_lastKey++;
+          (this.ModalClosedCallback = new _._()),
+            (this.key = "Modal_" + _.sm_lastKey++);
         }
       }
       _.sm_lastKey = 0;
@@ -74336,44 +75144,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext(null);
-      function _(_) {
-        const {
-            refContextMenuManager: _,
-            bRegisterMenuManager: __webpack_require__ = !0,
-            children: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (null == _ ? void 0 : _.ownerWindow) || window,
-          _ = _.useRef(void 0);
-        return (
-          _.current || (_.current = new _._()),
-          _.useLayoutEffect(() => {
-            if (__webpack_require__)
-              return (
-                _._.SetMenuManager(_, _.current),
-                () => _._.SetMenuManager(_, void 0)
-              );
-          }, [_, __webpack_require__]),
-          _.useLayoutEffect(
-            () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
-            [_],
-          ),
-          _.createElement(
-            _.Provider,
-            {
-              value: _.current,
-            },
-            _,
-          )
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -74384,7 +75159,7 @@
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = _.useContext(_),
+          _ = (0, _._)(),
           _ = null != _ ? _ : _;
         (0, _._)(_.OnMenusChanged, _);
         const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
@@ -74622,7 +75397,7 @@
               value: _,
             },
             _.createElement(
-              _,
+              _._,
               {
                 refContextMenuManager: _,
                 bRegisterMenuManager: _,
@@ -74734,6 +75509,7 @@
         RemoveModal(_) {
           let _ = this.m_rgModals.indexOf(_);
           -1 != _ && this.m_rgModals.splice(_, 1),
+            _.ModalClosedCallback.Dispatch(),
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(_) {
@@ -74750,6 +75526,11 @@
             Update: (_) => {
               _.UpdateModal(_);
             },
+            ClosedPromise: new Promise((_) => {
+              const _ = _.ModalClosedCallback.Register(() => {
+                _(), __webpack_require__.Unregister();
+              });
+            }),
           };
           return this.OnModalCountChanged("show"), _;
         }
@@ -74814,6 +75595,7 @@
                 this.m_OnLegacyPopupModalCountChanged.Dispatch(
                   this.m_rgLegacyPopupModals.length,
                 ),
+                _.ModalClosedCallback.Dispatch(),
                 _.fnOnClose && __webpack_require__.fnOnClose();
             },
             _ = new _._(
@@ -74838,6 +75620,11 @@
               Update: (_) => {
                 _.UpdateModal(_);
               },
+              ClosedPromise: new Promise((_) => {
+                const _ = _.ModalClosedCallback.Register(() => {
+                  _(), _.Unregister();
+                });
+              }),
             }
           );
         }
@@ -74885,6 +75672,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -76423,6 +77211,7 @@
             version: "1.1",
             _: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
+            className: _().HasHorizontalDirection,
             _: "0px",
             _: "0px",
             width: "50px",
@@ -76447,7 +77236,10 @@
             version: "1.1",
             _: "arrowBase",
             xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DoubleArrow",
+            className: (0, _._)(
+              "SVGIcon_Button SVGIcon_DoubleArrow",
+              _().HasHorizontalDirection,
+            ),
             _: "0px",
             _: "0px",
             width: "256px",
@@ -80315,28 +81107,27 @@
           getPIDFromEvent: _,
           ..._
         } = _;
-        return (
-          _ || __webpack_require__ || (__webpack_require__ = _),
+        _ || __webpack_require__ || (__webpack_require__ = _),
           _ && _ && (_ = (0, _._)(_)),
-          _ || (_ = () => 0),
-          _.createElement(
-            "a",
-            {
-              ..._,
-              href: _,
-              onClick: (_) => {
-                _.preventDefault(),
+          _ || (_ = () => 0);
+        return _.createElement(
+          "a",
+          {
+            ..._,
+            href: _,
+            onClick: (_) => {
+              _.preventDefault(),
+                _ &&
                   _(window, _, {
                     bForceExternal: !!_,
                     bUseLinkFilter: !!_,
                     unPID: _(_),
                   });
-              },
-              onContextMenu: __webpack_require__,
-              rel: _ ? "noopener noreferrer" : void 0,
             },
-            _.children,
-          )
+            onContextMenu: __webpack_require__,
+            rel: _ ? "noopener noreferrer" : void 0,
+          },
+          _.children,
         );
       }
       function _(_) {
@@ -82414,6 +83205,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -82606,6 +83398,24 @@
       function _(_, _) {
         return _(_.toLocaleLowerCase(), _.toLocaleLowerCase());
       }
+      function _(_, _) {
+        let _ = _.toString(),
+          _ = "";
+        for (let _ = 0; _ < _ - _.length; _++) _ += "0";
+        return _ + _;
+      }
+      function _(_, _ = !1) {
+        if (Number.isNaN(_) || !Number.isFinite(_)) return "";
+        let _ = _ < 0;
+        _ = Math.abs(_);
+        let _ = Math.floor(_ / 3600),
+          _ = Math.floor((_ % 3600) / 60),
+          _ = Math.floor(_ % 60),
+          _ = _ ? "-" : "";
+        return !_ || _ > 0
+          ? `${_}${_}:${_(_, 2)}:${_(_, 2)}`
+          : `${_}${_}:${_(_, 2)}`;
+      }
       function _(_) {
         if (!_) return "";
         if (DOMParser) {
@@ -82644,6 +83454,7 @@
         return atob(_.replace(/-/g, "+").replace(/_/g, "/"));
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -83337,7 +84148,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 37590), _((_._ = _));
+      return (_ = 7327), _((_._ = _));
       var _;
     });
     _._();

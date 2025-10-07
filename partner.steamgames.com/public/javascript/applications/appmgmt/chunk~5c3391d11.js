@@ -2610,9 +2610,9 @@
             e.onClick && e.onClick(e);
         }
         render() {
-          const e =
-            this.props.tabs.find((e) => e.key === this.state.activeTab) ||
-            this.props.tabs[0];
+          const e = this.props.tabs.filter((e) => !e.hidden);
+          if (!e.length) return null;
+          const t = e.find((e) => e.key === this.state.activeTab) || e[0];
           return a.createElement(
             a.Fragment,
             null,
@@ -2624,20 +2624,20 @@
                   this.props.classNameCtn,
                 ),
               },
-              this.props.tabs.map((t) =>
+              e.map((e) =>
                 a.createElement(f, {
-                  key: t.key,
-                  tab: t,
+                  key: e.key,
+                  tab: e,
                   OnTabClick: this.OnTabClick,
                   classNameTab: this.props.classNameTab,
-                  active: t.key === e.key,
+                  active: e.key === t.key,
                 }),
               ),
             ),
             a.createElement(
               d.Z,
               null,
-              e && a.createElement(d.Z, null, e.contents),
+              t && a.createElement(d.Z, null, t.contents),
             ),
           );
         }
@@ -2661,44 +2661,42 @@
       (0, r.Cg)([g.o], H.prototype, "OnTabClick", null);
       const f = (0, n.PA)(function (e) {
           const { tab: t, OnTabClick: l, classNameTab: r, active: n } = e;
-          return t.hidden
-            ? null
-            : a.createElement(
-                p.e7,
-                {
-                  condition: Boolean(t.statusToolTip || t.tooltip),
-                  wrap: (e) =>
-                    a.createElement(
-                      u.he,
-                      { toolTipContent: t.statusToolTip || t.tooltip },
-                      e,
-                    ),
-                },
+          return a.createElement(
+            p.e7,
+            {
+              condition: Boolean(t.statusToolTip || t.tooltip),
+              wrap: (e) =>
                 a.createElement(
-                  d.Z,
-                  {
-                    className: (0, i.A)(
-                      m().GraphicalAssetsTab,
-                      n && m().Active,
-                      n && "ActiveTab",
-                      r,
-                    ),
-                    onActivate: () => l(t),
-                  },
-                  Boolean(t.vo_warning) &&
-                    a.createElement(
-                      u.he,
-                      { toolTipContent: t.vo_warning },
-                      a.createElement(
-                        "div",
-                        { className: m().VOWarning },
-                        (0, c.we)("#EventEditor_VOWarning"),
-                      ),
-                    ),
-                  t.status,
-                  t.name,
+                  u.he,
+                  { toolTipContent: t.statusToolTip || t.tooltip },
+                  e,
                 ),
-              );
+            },
+            a.createElement(
+              d.Z,
+              {
+                className: (0, i.A)(
+                  m().GraphicalAssetsTab,
+                  n && m().Active,
+                  n && "ActiveTab",
+                  r,
+                ),
+                onActivate: () => l(t),
+              },
+              Boolean(t.vo_warning) &&
+                a.createElement(
+                  u.he,
+                  { toolTipContent: t.vo_warning },
+                  a.createElement(
+                    "div",
+                    { className: m().VOWarning },
+                    (0, c.we)("#EventEditor_VOWarning"),
+                  ),
+                ),
+              t.status,
+              t.name,
+            ),
+          );
         }),
         h = (0, o.y)(H);
     },

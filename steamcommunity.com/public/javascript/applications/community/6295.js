@@ -47,7 +47,17 @@
           return e;
         },
         l = {};
-      d(l, (r = o), "default"), i && d(i, r, "default");
+      /*!-----------------------------------------------------------------------------
+       * Copyright (c) Microsoft Corporation. All rights reserved.
+       * Version: 0.52.2(404545bded1df6ffa41ea0af4e8ddb219018c6c1)
+       * Released under the MIT license
+       * https://github.com/microsoft/monaco-editor/blob/main/LICENSE.txt
+       *-----------------------------------------------------------------------------*/ d(
+        l,
+        (r = o),
+        "default",
+      ),
+        i && d(i, r, "default");
       var g,
         f,
         h,

@@ -6,6 +6,7 @@
   {
     4796: (e, t, n) => {
       n.d(t, {
+        Ao: () => v,
         TB: () => h,
         W$: () => I,
         Yp: () => f,
@@ -102,6 +103,8 @@
             avatar_medium_url: e.avatar_medium_url,
             group_name: e.group_name,
             creator_page_bg_url: e.creator_page_bg_url,
+            curator_title: e.curator_title,
+            curator_description: e.curator_description,
             partner_events_enabled: e.partner_events_enabled,
           };
           0 != e.appid && this.m_mapAppIDToClanInfo.set(e.appid, t),
@@ -351,6 +354,7 @@
         const t = e.BIsOGGEvent(),
           n = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
         if (t) return { bVisible: !1 };
+        if (36 == e.GetEventType()) return { bVisible: !1 };
         if (e.BHasSaleEnabled()) return { bVisible: !0 };
         if (
           e.jsondata.clone_from_event_gid &&
@@ -377,6 +381,19 @@
                 ? { bVisible: !0, bValveOnly: !0 }
                 : { bVisible: !1 }
           : { bVisible: !1 };
+      }
+      function v(e) {
+        const t = e.BIsOGGEvent(),
+          n = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
+        return t || 36 != e.GetEventType()
+          ? { bVisible: !1 }
+          : e.BHasSaleEnabled()
+            ? { bVisible: !0 }
+            : e.clanSteamID.GetAccountID() == (0, d.H)()
+              ? { bVisible: !1 }
+              : n
+                ? { bVisible: !0, bValveOnly: !0 }
+                : { bVisible: !1 };
       }
       window.g_ClanStore = g;
     },
@@ -1058,8 +1075,8 @@
             );
           });
       })(a || (a = {}));
-      var C = n(41735),
-        v = n.n(C),
+      var v = n(41735),
+        C = n.n(v),
         B = n(14947),
         S = n(90626),
         w = n(78327);
@@ -1194,7 +1211,7 @@
           i.append("sessionid", w.TS.SESSIONID),
             i.append("clan_account_id", this.GetClanAccountID().toString()),
             i.append("accountflags", JSON.stringify(r));
-          let s = await v().post(n, i);
+          let s = await C().post(n, i);
           s &&
             200 == s.status &&
             1 == s.data.success &&
@@ -1299,14 +1316,14 @@
               "curator/" +
               e.GetClanAccountID() +
               "/ajaxgetcreatorhomeinfo",
-            r = await v().get(a, { params: n, cancelToken: t && t.token });
+            r = await C().get(a, { params: n, cancelToken: t && t.token });
           return e.Initialize(r.data), e;
         }
         async LoadCreatorHomeListForAppIncludeHiddden(e, t) {
           if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(e))) {
             let n = { appid: e },
               a = w.TS.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
-              r = await v().get(a, {
+              r = await C().get(a, {
                 params: n,
                 cancelToken: t && t.token,
                 withCredentials: !0,
@@ -1325,7 +1342,7 @@
               origin: self.origin,
             },
             i = new Array();
-          const s = await v().get(a, { params: r, cancelToken: n.token });
+          const s = await C().get(a, { params: r, cancelToken: n.token });
           return (
             s.data.curators &&
               (0, B.h5)(() => {
@@ -1383,7 +1400,7 @@
       window.g_CreatorHomeStore = G;
     },
     60746: (e, t, n) => {
-      n.d(t, { KN: () => C, Nh: () => _, Ec: () => v });
+      n.d(t, { KN: () => v, Nh: () => _, Ec: () => C });
       var a = n(34629),
         r = n(41735),
         i = n.n(r),
@@ -1530,7 +1547,7 @@
             (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
             (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
         })(_ || (_ = {}));
-      class C {
+      class v {
         constructor() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
@@ -1543,25 +1560,25 @@
         static Get() {
           return (
             (0, h.wT)(
-              !!C.s_EventUserStore,
+              !!v.s_EventUserStore,
               "Have not yet initialized global EventUserStore",
             ),
-            C.s_EventUserStore
+            v.s_EventUserStore
           );
         }
         static IsInitialized() {
-          return !!C.s_EventUserStore;
+          return !!v.s_EventUserStore;
         }
         static async InitGlobal(e) {
-          if (!C.s_EventUserStore) {
-            const t = new C();
+          if (!v.s_EventUserStore) {
+            const t = new v();
             await t.Init(e),
-              (C.s_EventUserStore = t),
+              (v.s_EventUserStore = t),
               "dev" == u.TS.WEB_UNIVERSE && (window.g_EventUserStore = t);
           }
         }
         static BIsInited() {
-          return Boolean(C.s_EventUserStore);
+          return Boolean(v.s_EventUserStore);
         }
         async Init(e) {
           (this.m_cm = e), (this.m_tracker = new p(e));
@@ -1570,7 +1587,7 @@
             ((0, s.h5)(() => {
               t.forEach((e) => {
                 let t = new y(e.clanid),
-                  n = { result: t, promise: C.RemapToPromise(t), bLoaded: !0 };
+                  n = { result: t, promise: v.RemapToPromise(t), bLoaded: !0 };
                 this.CopyFromResponseToTrack(n, e),
                   this.m_mapClanToUserPermissions.set(e.clanid, n);
               });
@@ -1712,7 +1729,7 @@
             let t = new y(e.GetAccountID());
             this.m_mapClanToUserPermissions.set(n, {
               result: t,
-              promise: C.RemapToPromise(t),
+              promise: v.RemapToPromise(t),
               bLoaded: !1,
             });
           }
@@ -1941,17 +1958,17 @@
           return (u.UF.IS_OGG || u.UF.IS_VALVE_GROUP) && t.valve_admin;
         }
       }
-      function v(e) {
+      function C(e) {
         const [t, n] = (0, I.useState)(
-            C.Get().BIsPartnerEventPermissionsLoaded(e),
+            v.Get().BIsPartnerEventPermissionsLoaded(e),
           ),
           a = g.b.InitFromClanID(e),
-          [r, i] = (0, I.useState)(C.Get().GetPartnerEventPermissions(a));
+          [r, i] = (0, I.useState)(v.Get().GetPartnerEventPermissions(a));
         return (
           (0, I.useEffect)(() => {
             if (!t) {
               const t = g.b.InitFromClanID(e);
-              C.Get()
+              v.Get()
                 .LoadSingleAppEventPermissions(t)
                 .then((e) => {
                   i(e), n(!0);
@@ -1961,10 +1978,10 @@
           r
         );
       }
-      (0, a.Cg)([s.sH], C.prototype, "m_mapClanToUserPermissions", void 0),
-        (0, a.Cg)([s.sH], C.prototype, "m_mapAnnounceGIDToVote", void 0),
-        (0, a.Cg)([s.sH], C.prototype, "m_setReadEventGIDs", void 0),
-        (0, a.Cg)([s.XI], C.prototype, "CopyFromResponseToTrack", null);
+      (0, a.Cg)([s.sH], v.prototype, "m_mapClanToUserPermissions", void 0),
+        (0, a.Cg)([s.sH], v.prototype, "m_mapAnnounceGIDToVote", void 0),
+        (0, a.Cg)([s.sH], v.prototype, "m_setReadEventGIDs", void 0),
+        (0, a.Cg)([s.XI], v.prototype, "CopyFromResponseToTrack", null);
     },
     26161: (e, t, n) => {
       n.d(t, { H: () => r });

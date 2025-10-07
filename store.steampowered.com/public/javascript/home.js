@@ -856,12 +856,12 @@ GHomepage = {
 		{
 			var reason = rgRecommendationReasons.recommended_by_friend;
 			rgRecommendationReasons.recommended_by_friend = false;
-			var friend = GStoreItemData.GetAccountData( null, reason.accountid_friends[0] )
+			var friend = GStoreItemData.GetAccountData( null, reason.accountid_friends[0] );
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('friend').html( "<strong>Recommended<\/strong> by your friend, <span>%1$s<\/span>".replace("%1$s", friend.name ) );
 			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( friend.avatar, '_medium' ) ) ).attr('alt', friend.name).data('ds-miniprofile', friend.accountid );
 
 			$RecommendedReason.append( $ReasonAvatar );
-			$RecommendedReason.append( $ReasonMain )
+			$RecommendedReason.append( $ReasonMain );
 
 			if ( unAppID )
 			{
@@ -1071,10 +1071,26 @@ GHomepage = {
 		return $CapCtn;
 	},
 
+	GetTopSellerRank: function( oItem )
+	{
+		if( !oItem || !oItem.appid )
+			return 0;
+
+		const idx = GHomepage.oDisplayLists.top_sellers.findIndex( ( item ) => item.appid === oItem.appid );
+
+		let rank = 0;
+		if ( idx !== -1 )
+		{
+			rank = idx + 1;
+		}
+
+		return rank;
+	},
+
 	BuildMainCapsuleItemv2: function( rgItem, strFeatureContext, nDepth )
 	{
 		var rgOptions = $J.extend({
-			'class': 'store_main_capsule responsive_scroll_snap_start add_microtrailer',
+			'class': 'store_main_capsule responsive_scroll_snap_start',
 		}, rgOptions ? rgOptions : {} );
 
 		var unAppID = rgItem.appid;
@@ -1087,10 +1103,12 @@ GHomepage = {
 			return null;
 
 		var $CapCtn = $J('<a/>', params );
+		$CapCtn.data('hoverDisableScreenshots', true );
 		GStoreItemData.BindHoverEventsForItem( $CapCtn, rgItem );
 
-		var $ImgCtn = $J('<div class="capsule capsule_image_ctn"/>').addClass( 'main_capsule ' )
+		let $MicrotrailerWrapper = $J('<div class="add_microtrailer" />' );
 
+		var $ImgCtn = $J('<div class="capsule capsule_image_ctn main_capsule"/>');
 		if ( rgItemData.main_capsule_2x )
 		{
 			$ImgCtn.attr( 'data-background-image2x-url', rgItemData.main_capsule_2x );
@@ -1133,20 +1151,43 @@ GHomepage = {
 
 		if ( rgAppInfo && rgAppInfo.mastersub_granting_app )
 		{
-			$divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
-			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app.capsule, 'alt': rgAppInfo.mastersub_granting_app.name } );
+			let $divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
+			let $imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app.capsule, 'alt': rgAppInfo.mastersub_granting_app.name } );
 			$divMasterSub.append( $imgMasterSub );
 
 			$ImgCtn.append( $divMasterSub );
 		}
 
-		//var $ImgCap = $J('<img/>', { src: rgItemData.main_capsule } );
-		//$ImgCtn.append( $ImgCap );
-		$CapCtn.append( $ImgCtn );
+		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
+
+		var rgScreenshots = rgItemData.screenshots;
+		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+
+		if( rgScreenshots && rgScreenshots.length && !bUseTabletScreenMode )
+		{
+			for ( var i = 0; i < 4 && i < rgScreenshots.length; i++ )
+			{
+				var screenshot = rgScreenshots[i];
+				var unScreenshotAppId = screenshot.appid || unAppID;
+
+				var $ImgScreenshotThumb = $J ( '<div/>' ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.800x600' ) );
+				var $ImgScreenshot = $J ( '<div/>', {class:'large_screenshot'} ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.800x600' ) );
+
+				$ImgCtn.append( $ImgScreenshot );
+
+				$ImgScreenshotThumb.on( 'mouseover', function( $elTarget ) { return function() { $elTarget.addClass( 'focus' ) } }( $ImgScreenshot ) );
+				$ImgScreenshotThumb.on( 'mouseout', function( $elTarget ) { return function() { $elTarget.removeClass( 'focus' ) } }( $ImgScreenshot ) );
+
+				$ScreenshotCtn.append ( $ImgScreenshotThumb );
+			}
+		}
+
+		$MicrotrailerWrapper.append( $ImgCtn );
+		$CapCtn.append( $MicrotrailerWrapper );
 
 		if ( rgAppInfo.microtrailer )
 		{
-			GHomepage.AddMicrotrailerToCapsule( $CapCtn, rgAppInfo.microtrailer );
+			GHomepage.AddMicrotrailerToCapsule( $MicrotrailerWrapper, rgAppInfo.microtrailer );
 		}
 
 		var $RightColCtn = $J('<div/>').addClass('info');
@@ -1157,34 +1198,40 @@ GHomepage = {
 
 		$AppNameCtn.append( $AppName );
 		$InfoCtn.append( $AppNameCtn );
-		$InfoCtn.append( $DataCtn );
-		$RightColCtn.append( $InfoCtn );
 
-		if ( rgItemData.review_summary)
+		if ( rgItemData.review_summary &&  rgItemData.review_summary.reviewScore > 0 )
 		{
 			var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 			var reviewSummary = pref != 1 ? rgItemData['review_summary_filtered'] : rgItemData['review_summary'];
 			var $elReviewData = $J('<div>', {'class': 'review_summary' } );
-			var $stack = $J('<div>', { 'class': 'review_summary_stack' });
 			var $summaryRow = $J('<div>', { 'class': 'review_summary_row' });
 			var reviewSummaryText = 'Overall User Reviews';
 			if ( reviewSummary['bLanguageOutlier'] && pref != 1 )
 			{
 				reviewSummaryText = 'English Reviews';
 			}
-			$stack.append( $J('<div>', {'class': 'review_summary_title'}).text( reviewSummaryText ) );
+			$summaryRow.append( $J('<div>', {'class': 'review_summary_title'}).text( reviewSummaryText ) );
 			$summaryRow.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']));
-			if ( reviewSummary['reviewScore'] > 0 ) {$summaryRow.append( $J('<span>', { 'class': 'review_count' }).html('&nbsp;(' + v_numberformat(reviewSummary['cReviews']) + ')') );
+			$summaryRow.append( $J('<span>', { 'class': 'review_count' }).html('&nbsp;(' + v_numberformat(reviewSummary['cReviews']) + ')') );
+
+			if ( reviewSummary['review_anomaly'] )
+			{
+			  $summaryRow.append($J('<span>', {'class': 'review_anomaly_icon'}).html('&nbsp;*'));
 			}
-			  if ( reviewSummary['review_anomaly'] ) {
-				$summaryRow.append($J('<span>', { 'class': 'review_anomaly_icon' }).html('&nbsp;*'));
-			}
-			$stack.append($summaryRow);
-			$elReviewData.append($stack);
-			$DataCtn.append($elReviewData);
+
+			$elReviewData.append($summaryRow);
+			$InfoCtn.append($elReviewData);
+		}
+		else if ( rgItemData.coming_soon )
+		{
+			let $elReleaseDate = $J('<div/>', { 'class': 'release_date coming_soon' })
+			.text( rgItemData.release_date_string );
+			$InfoCtn.append( $elReleaseDate );
 		}
 
-		if ( rgItemData.tags )
+		$InfoCtn.append( $ScreenshotCtn );
+
+		if ( false && rgItemData.tags )
 			{
 				var tagsTitleText = 'User Tags';
 				let $elTagCtn = $J('<div>', { 'class': 'tags_ctn' });
@@ -1203,20 +1250,21 @@ GHomepage = {
 		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( rgItem );
 		var $RecommendedReason = $J('<div/>').addClass('reason');
 
-
 		var bShowAdditionalReasons = true;
 
 		// Show the "main" reason
-		if( rgRecommendationReasons.recommended_by_friend )
+		if ( rgRecommendationReasons.recommended_by_friend )
 		{
 			var reason = rgRecommendationReasons.recommended_by_friend;
 			rgRecommendationReasons.recommended_by_friend = false;
-			var friend = GStoreItemData.GetAccountData( null, reason.accountid_friends[0] )
-			var $ReasonMain = $J('<div/>').addClass('main').addClass('friend').html( "<strong>Recommended<\/strong> by your friend, <span>%1$s<\/span>".replace("%1$s", friend.name ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( friend.avatar, '_medium' ) ) ).attr('alt', friend.name).data('ds-miniprofile', friend.accountid );
+			var friend = GStoreItemData.GetAccountData( null, reason.accountid_friends[0] );
+			var nameHTML = '<span class="friend_name">' + V_EscapeHTML(friend.name) + '</span>';
+			var html = "<strong>Recommended<\/strong> by your friend, <span>%1$s<\/span>".replace("%1$s", nameHTML);
+			var $ReasonMain = $J('<div/>').addClass('main friend').html(html);
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL(friend.avatar, '_medium'))).attr('alt', friend.name).data('ds-miniprofile', friend.accountid);
 
 			$RecommendedReason.append( $ReasonAvatar );
-			$RecommendedReason.append( $ReasonMain )
+			$RecommendedReason.append( $ReasonMain );
 
 			if ( unAppID )
 			{
@@ -1285,8 +1333,8 @@ GHomepage = {
 			}
 			if( rgMatchedTags.length == 0 )
 				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you play similar games" );
-		else
-			var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you played games tagged with" );
+			else
+				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you played games tagged with" );
 
 			$ReasonMain.append( $J('<div>').addClass('tags').html( rgMatchedTags.join('') ) );
 			$RecommendedReason.append( $ReasonMain );
@@ -1342,7 +1390,9 @@ GHomepage = {
 				}
 			}
 
-			var strStatus = '';
+			let strStatus = '';
+			let strAdditionalDetail = '';
+			let $ReasonMain = $J('<div/>').addClass('main').addClass('default');
 			if ( rgItem.status_string )
 			{
 				strStatus = rgItem.status_string;
@@ -1354,11 +1404,6 @@ GHomepage = {
 			else if ( rgItemData.popular_new_on_steam )
 			{
 				strStatus = 'New On Steam';
-			}
-			else if ( rgItemData.top_seller )
-			{
-				strStatus = 'Top Seller';
-				rgRecommendationReasons.top_seller = false; // Don't show this reason twice.
 			}
 			else if ( rgItemData && rgItemData.coming_soon )
 			{
@@ -1372,13 +1417,34 @@ GHomepage = {
 			{
 				strStatus = rgItemData.free_weekend_status;
 			}
-			else
+			else if ( rgRecommendationReasons.top_seller )
 			{
-				strStatus = 'Now Available';
+				let $TopSellerReason = $J( '<div/>', { 'class': 'main_reason_topseller' } );
+				$TopSellerReason.append( $J( '<img/>', { src: 'https://cdn.fastly.steamstatic.com/store//icons/rank_icon_lg.svg' } ) );
+
+				let $TopSellerRightCol = $J( '<div/>', { 'class': 'topseller_right_col' } );
+				$TopSellerRightCol.append( $J( '<div/>', { 'class': 'topseller_title' } ).text( 'Top Seller' ) );
+
+				const strTopSellerRank = 'Ranked %1$s in your region'.replace( '%1$s', '<span>#' + GHomepage.GetTopSellerRank( rgItem ).toString() + '</span>' );
+				$TopSellerRightCol.append( $J( '<div/>', { 'class': 'topseller_subtext' } ).html( strTopSellerRank ) );
+
+				$TopSellerRightCol.appendTo( $TopSellerReason );
+				$TopSellerReason.appendTo( $ReasonMain );
+
+				rgRecommendationReasons.top_seller = false; // Don't show this reason twice.
 			}
 
-			var $ReasonMain = $J('<div/>').addClass('main').addClass('default').text( strStatus );
+			if ( strStatus.length )
+				$ReasonMain.text( strStatus )
+
 			$RecommendedReason.append( $ReasonMain );
+
+			if ( bShowAdditionalReasons )
+			{
+				var $ReasonAdditional = $J('<div/>').addClass('additional');
+				$ReasonAdditional.html( strAdditionalDetail );
+				$RecommendedReason.append( $ReasonAdditional );
+			}
 		}
 
 		// Now show any additional reasons we might have to show it
@@ -1396,33 +1462,29 @@ GHomepage = {
 
 				if( key == 'top_seller' )
 					strReason = "Top Seller";
-			else if( key == 'new_release' )
-				strReason = "New Release";
-			else if( key == 'recommended')
-				strReason = "Similar to games you play";
-			else
-				continue;
+				else if( key == 'new_release' )
+					strReason = "New Release";
+				else if( key == 'recommended')
+					strReason = "Similar to games you play";
+				else
+					continue;
 
 				$ReasonAdditional.append($J('<div/>').html( strReason ) );
 
 			}
-
-			$RecommendedReason.append($ReasonAdditional);
 		}
 
-		$DataCtn.append($RecommendedReason);
-
-
-		let $PlatformsAndPriceCtn = $J( '<div/>' ).addClass('info_bottom_ctn');
+		$InfoCtn.append( $RecommendedReason );
 
 		// Platform icons
+		let $PlatformsAndPriceCtn = $J( '<div/>' ).addClass('info_bottom_ctn');
 		let $PlatformContainer = $J( '<div/>' ).addClass('platforms').append( GStoreItemData.BuildSupportedPlatformIcon(rgItemData) );
 		$PlatformsAndPriceCtn.append( $PlatformContainer )
 
 		// Discount block
 		$PlatformsAndPriceCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline' ) : '' );
 
-
+		$RightColCtn.append( $InfoCtn );
 		$RightColCtn.append($PlatformsAndPriceCtn);
 		$CapCtn.append($RightColCtn);
 
@@ -2245,32 +2307,51 @@ GHomepage = {
 	RenderRecentlyUpdatedV2: function()
 	{
 		var $RecentlyUpdated =  $J('.recently_updated_block' );
-		if ( !$RecentlyUpdated.length )
+		if ( !$RecentlyUpdated.length || !GHomepage.oAdditionalData.recent_updates )
 			return;
 
-		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.oAdditionalData.recent_updates, 'home', 4, 8
-		);
+		var rgCapsules = GHomepage.FilterItemsForDisplay( GHomepage.oAdditionalData.recent_updates, 'home', 4, 8 );
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
-				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, null, null, rgOptions, nDepth );
-				$CapCtn.append ( $J ( '<div/>', { 'class': 'recently_updated_desc' } ).text ( oItem.description ) );
-				if ( oItem.announcementid.length != 0 )
+				if ( $RecentlyUpdated.hasClass( 'v2' ) )
 				{
-					var strAnnouncementLink = 'https://store.steampowered.com/news/app/' + oItem.appid + '/view/' + oItem.announcementid + '/';
-					var $AnnouncementLink = $J ( '<div/>', {
-						'class': 'recently_updated_announcement_link',
-						'text': 'View Update Details',
-						'data-ds-link': strAnnouncementLink
-					} );
-					$AnnouncementLink.click ( function ( e )
+					let $elAnnouncements = $J('<div/>', {'class': 'recently_updated_desc'} ).text(oItem.description );
+					if ( oItem.announcementid.length != 0)
 					{
-						top.location.href = $J ( this ).attr ( 'data-ds-link' );
-						return false;
-					} );
-					$CapCtn.append ( $AnnouncementLink );
+						const strAnnouncementLink = 'https://store.steampowered.com/' + 'news/app/' + oItem.appid + '/view/' + oItem.announcementid + '/';
+						var $AnnouncementLink = $J('<div/>', {
+							'class': 'recently_updated_announcement_link',
+							'text': 'View Update Details',
+							'data-ds-link': strAnnouncementLink
+						});
+						$AnnouncementLink.click(function (e) {
+							top.location.href = $J(this).attr('data-ds-link');
+							return false;
+						});
+					}
+
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true, 'html_before_price': $elAnnouncements } );
+				}
+				else
+				{
+					var $CapCtn = GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, null, null, rgOptions, nDepth);
+					$CapCtn.append($J('<div/>', {'class': 'recently_updated_desc'}).text(oItem.description));
+					if (oItem.announcementid.length != 0) {
+						const strAnnouncementLink = 'https://store.steampowered.com/' + 'news/app/' + oItem.appid + '/view/' + oItem.announcementid + '/';
+						var $AnnouncementLink = $J('<div/>', {
+							'class': 'recently_updated_announcement_link',
+							'text': 'View Update Details',
+							'data-ds-link': strAnnouncementLink
+						});
+						$AnnouncementLink.click(function (e) {
+							top.location.href = $J(this).attr('data-ds-link');
+							return false;
+						});
+						$CapCtn.append($AnnouncementLink);
+
+					}
 					return $CapCtn;
 				}
 			},	'recently_updated', 4
@@ -3022,6 +3103,7 @@ GHomepage = {
 			$Item = $J( '<a/>', itemParams );
 		}
 
+		$Item.data('hoverDisableScreenshots', true );
 		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
 
 		var $ItemLink = $J('<a/>', params );
@@ -3042,7 +3124,6 @@ GHomepage = {
 			$Image.css({'height': '288px' });
 		});
 		$ImageCapsule.append( $Image );
-		$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
 
 		$ItemLink.append( $ImageCapsule );
 
@@ -3078,12 +3159,10 @@ GHomepage = {
 					$Video[0].pause();
 				}
 			);
-
-			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="https://store.fastly.steamstatic.com/public/images/blank.gif" data-image-url="' + rgItemData.tiny_capsule + '" aria-hidden=true>' );
-			$ItemLink.append( $TinyCap );
 		}
 
 		var $RightCol = $J( '<div>', { class : 'right_col' } ).appendTo( $Item );
+		var $AppName = $J('<div/>', { class: 'app_name'} ).html( rgItemData.name ).appendTo( $RightCol );
 		var $ReviewsCtn = $J('<div/>', { class: 'community_recommendations_block'} ).appendTo( $RightCol );
 
 		let numReviews = rgReviews.length;
@@ -3170,6 +3249,12 @@ GHomepage = {
 				}
 			}
 		}
+
+		let $BottomCtn = $J('<div/>', { class: 'info_bottom_ctn'} );
+		$J('<div/>').addClass('platforms').append( GStoreItemData.BuildSupportedPlatformIcon( rgItemData ) ).appendTo( $BottomCtn );
+		$J('<div/>', { 'class': 'price_ctn' } ).html( rgItemData.discount_block ? $J( rgItemData.discount_block ).addClass('discount_block_inline') : '&nbsp;' ).appendTo( $BottomCtn );
+
+		$RightCol.append( $BottomCtn );
 
 		return $Item;
 	},
@@ -4111,6 +4196,7 @@ var g_bDisableAutoloader = false;
 						var newElement = $(data);
 
 						GDynamicStore.DecorateDynamicItems(newElement);
+						GHomepage.AddMicrotrailersToStaticCaps( $J( newElement ).find( '.home_content_items' ) );
 
 						$('.gamelink.ds_owned', newElement).parent().parent().hide();
 

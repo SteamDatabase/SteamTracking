@@ -15,7 +15,8 @@
       function _(_) {
         const { app: _, initialValue: __webpack_require__, debugMode: _ } = _,
           [_, _] = (0, _.useState)(__webpack_require__),
-          _ = (0, _.useRef)(null);
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!0);
         return _.createElement(
           _._.Provider,
           {
@@ -37,7 +38,8 @@
               _.createElement(_._, {
                 value: _,
                 onTextChange: _,
-                app: _,
+                app: _ ? _ : void 0,
+                onClearApp: () => _(!1),
                 radius: "none",
                 variant: "default",
                 name: "q",

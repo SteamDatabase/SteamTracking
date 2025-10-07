@@ -8,6 +8,226 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _.filter((_) => !_.includes(_));
+      }
+      var _ = class extends _._ {
+          #e;
+          #t;
+          #n;
+          #r;
+          #o;
+          #i;
+          #s;
+          #l;
+          constructor(_, _, _) {
+            super(),
+              (this.#e = _),
+              (this.#r = _),
+              (this.#n = []),
+              (this.#o = []),
+              (this.#t = []),
+              this.setQueries(_);
+          }
+          onSubscribe() {
+            1 === this.listeners.size &&
+              this.#o.forEach((_) => {
+                _.subscribe((_) => {
+                  this.#a(_, _);
+                });
+              });
+          }
+          onUnsubscribe() {
+            this.listeners.size || this.destroy();
+          }
+          destroy() {
+            (this.listeners = new Set()),
+              this.#o.forEach((_) => {
+                _.destroy();
+              });
+          }
+          setQueries(_, _, _) {
+            (this.#n = _),
+              (this.#r = _),
+              _._.batch(() => {
+                const _ = this.#o,
+                  _ = this.#c(this.#n);
+                _.forEach((_) =>
+                  _.observer.setOptions(_.defaultedQueryOptions, _),
+                );
+                const _ = _.map((_) => _.observer),
+                  _ = _.map((_) => _.getCurrentResult()),
+                  _ = _.some((_, _) => _ !== _[_]);
+                (_.length !== _.length || _) &&
+                  ((this.#o = _),
+                  (this.#t = _),
+                  this.hasListeners() &&
+                    (_(_, _).forEach((_) => {
+                      _.destroy();
+                    }),
+                    _(_, _).forEach((_) => {
+                      _.subscribe((_) => {
+                        this.#a(_, _);
+                      });
+                    }),
+                    this.#h()));
+              });
+          }
+          getCurrentResult() {
+            return this.#t;
+          }
+          getQueries() {
+            return this.#o.map((_) => _.getCurrentQuery());
+          }
+          getObservers() {
+            return this.#o;
+          }
+          getOptimisticResult(_, _) {
+            const _ = this.#c(_).map((_) =>
+              _.observer.getOptimisticResult(_.defaultedQueryOptions),
+            );
+            return [_, (_) => this.#d(_ ?? _, _), () => this.#p(_, _)];
+          }
+          #p(_, _) {
+            const _ = this.#c(_);
+            return __webpack_require__.map((_, _) => {
+              const _ = _[_];
+              return _.defaultedQueryOptions.notifyOnChangeProps
+                ? _
+                : _.observer.trackResult(_, (_) => {
+                    __webpack_require__.forEach((_) => {
+                      _.observer.trackProp(_);
+                    });
+                  });
+            });
+          }
+          #d(_, _) {
+            return _
+              ? ((this.#i && this.#t === this.#l && _ === this.#s) ||
+                  ((this.#s = _),
+                  (this.#l = this.#t),
+                  (this.#i = (0, _._)(this.#i, _(_)))),
+                this.#i)
+              : _;
+          }
+          #c(_) {
+            const _ = new Map(this.#o.map((_) => [_.options.queryHash, _])),
+              _ = [];
+            return (
+              _.forEach((_) => {
+                const _ = this.#e.defaultQueryOptions(_),
+                  _ = _.get(_.queryHash);
+                _
+                  ? __webpack_require__.push({
+                      defaultedQueryOptions: _,
+                      observer: _,
+                    })
+                  : __webpack_require__.push({
+                      defaultedQueryOptions: _,
+                      observer: new _._(this.#e, _),
+                    });
+              }),
+              _
+            );
+          }
+          #a(_, _) {
+            const _ = this.#o.indexOf(_);
+            -1 !== _ &&
+              ((this.#t = (function (_, _, _) {
+                const _ = _.slice(0);
+                return (_[_] = _), _;
+              })(this.#t, _, _)),
+              this.#h());
+          }
+          #h() {
+            if (this.hasListeners()) {
+              this.#i !==
+                this.#d(this.#p(this.#t, this.#n), this.#r?.combine) &&
+                _._.batch(() => {
+                  this.listeners.forEach((_) => {
+                    _(this.#t);
+                  });
+                });
+            }
+          }
+        },
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _({ queries: _, ..._ }, _) {
+        const _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _.useMemo(
+            () =>
+              _.map((_) => {
+                const _ = _.defaultQueryOptions(_);
+                return (
+                  (_._optimisticResults = _ ? "isRestoring" : "optimistic"), _
+                );
+              }),
+            [_, _, _],
+          );
+        _.forEach((_) => {
+          (0, _._)(_), (0, _._)(_, _);
+        }),
+          (0, _._)(_);
+        const [_] = _.useState(() => new _(_, _, _)),
+          [_, _, _] = _.getOptimisticResult(_, _.combine);
+        _.useSyncExternalStore(
+          _.useCallback(
+            (_) => (_ ? _._ : _.subscribe(_._.batchCalls(_))),
+            [_, _],
+          ),
+          () => _.getCurrentResult(),
+          () => _.getCurrentResult(),
+        ),
+          _.useEffect(() => {
+            _.setQueries(_, _, {
+              listeners: !1,
+            });
+          }, [_, _, _]);
+        const _ = _.some((_, _) => (0, _._)(_[_], _))
+          ? _.flatMap((_, _) => {
+              const _ = _[_];
+              if (_) {
+                const _ = new _._(_, _);
+                if ((0, _._)(_, _)) return (0, _._)(_, _, _);
+                (0, _._)(_, _) && (0, _._)(_, _, _);
+              }
+              return [];
+            })
+          : [];
+        if (_.length > 0) throw Promise.all(_);
+        const _ = _.find((_, _) => {
+          const _ = _[_];
+          return (
+            _ &&
+            (0, _._)({
+              result: _,
+              errorResetBoundary: _,
+              throwOnError: _.throwOnError,
+              query: _.getQueryCache().get(_.queryHash),
+            })
+          );
+        });
+        if (_?.error) throw _.error;
+        return _(_());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

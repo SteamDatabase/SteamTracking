@@ -17,6 +17,8 @@
     chunkid: (module) => {
       module.exports = {
         Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
       };
@@ -1382,6 +1384,117 @@
       ];
       var _ = __webpack_require__("chunkid");
       function _(_) {
+        const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
+          _ = __webpack_require__.size ? void 0 : _.IconSizeDefault;
+        return _.createElement("svg", {
+          viewBox: `0 0 ${_} ${_}`,
+          ...(0, _._)(
+            {
+              className: _,
+              ...__webpack_require__,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`IconSize-${_}`],
+        },
+        {
+          prop: "color",
+          className: _.Color,
+          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
+        },
+        {
+          prop: "hitSlop",
+          className: _.HitSlop,
+          cssProperty: (_) => [
+            "--hit-slop-custom",
+            "string" == typeof _ ? _ : "",
+          ],
+        },
+        _._.find(({ prop: _ }) => "cursor" === _),
+      ];
+      function _(_) {
+        return _.createElement(
+          _,
+          {
+            ..._,
+            viewBoxSize: 16,
+          },
+          _.createElement("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            checked: _,
+            onChange: __webpack_require__,
+            disabled: _,
+            children: _,
+            ref: _,
+            variant: _ = "default",
+            ..._
+          } = _,
+          _ = "indeterminate" === _,
+          _ = _ ? _ : _,
+          _ = () => {
+            __webpack_require__ && __webpack_require__(!!_ || !_);
+          };
+        return _.createElement(
+          _,
+          {
+            ref: _,
+            role: "checkbox",
+            "aria-checked": _ ? "mixed" : _,
+            "data-state": _(_),
+            className: _()(_.Root, _[`Variant-${_}`]),
+            onClick: _,
+            tabIndex: 0,
+            onKeyDown: (_) => {
+              " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
+            },
+            ..._,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Checkbox,
+            },
+            _ &&
+              _.createElement(_, {
+                className: _.Icon,
+              }),
+          ),
+          _,
+        );
+      }
+      function _(_) {
+        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 16 16",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
         const {
           variant: _ = "default",
           size: __webpack_require__ = "2",
@@ -1724,6 +1837,7 @@
                   {
                     context: _.floating.context,
                     initialFocus: _.initialFocus,
+                    returnFocus: !1,
                   },
                   _.createElement(
                     _,
@@ -1755,6 +1869,7 @@
               label: __webpack_require__,
               onSelect: _,
               ref: _,
+              selected: _,
               ..._
             } = _,
             _ = (0, _.useContext)(_),
@@ -1770,7 +1885,7 @@
               null
             );
           const _ = _ === _.activeIndex,
-            _ = _ === _.selectedIndex;
+            _ = _ === _.selectedIndex || !!_;
           return _.createElement(
             _.Option,
             {
@@ -1795,43 +1910,6 @@
           );
         },
       };
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
-          _ = __webpack_require__.size ? void 0 : _.IconSizeDefault;
-        return _.createElement("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ...(0, _._)(
-            {
-              className: _,
-              ...__webpack_require__,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`IconSize-${_}`],
-        },
-        {
-          prop: "color",
-          className: _.Color,
-          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
-        },
-        {
-          prop: "hitSlop",
-          className: _.HitSlop,
-          cssProperty: (_) => [
-            "--hit-slop-custom",
-            "string" == typeof _ ? _ : "",
-          ],
-        },
-        _._.find(({ prop: _ }) => "cursor" === _),
-      ];
       function _(_) {
         return _.createElement(
           _,
@@ -1974,7 +2052,12 @@
                 }),
               );
             },
-            Suggestions: _.Positioner,
+            Suggestions: function (_) {
+              return _.createElement(_.Positioner, {
+                ..._,
+                returnFocus: !1,
+              });
+            },
             Suggestion: function (_) {
               const { value: _, children: __webpack_require__, ..._ } = _,
                 {
@@ -2286,6 +2369,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)().languages[0];
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             refPopover: _,
@@ -2293,6 +2380,7 @@
             onInputChange: _,
             activeIndex: _,
             popoverPlacement: _,
+            multiselect: _,
             setActiveIndex: _,
             setOpen: _,
             filterPlaceholder: _,
@@ -2302,7 +2390,10 @@
           _ = (_) => {
             "Enter" === _.key &&
               null !== _ &&
-              (_(_), _(null), _(!1), _.preventDefault(), _.stopPropagation());
+              (_(_),
+              _ || (_(null), _(!1)),
+              _.preventDefault(),
+              _.stopPropagation());
           },
           _ = _.startsWith("top"),
           _ = _.createElement(
@@ -2355,13 +2446,35 @@
       }
       function _(_) {
         const { value: _, children: __webpack_require__ } = _,
-          { onSelectionChange: _ } = _("<ComboboxTrigger>");
-        return _.createElement(
-          _.Item,
           {
-            onSelect: () => _(_),
-          },
-          __webpack_require__,
+            onItemSelectionChange: _,
+            selectedValue: _,
+            multiselect: _,
+          } = _("<ComboboxTrigger>");
+        let _ = !1;
+        return (
+          (_ = _ ? Array.isArray(_) && _.includes(_) : _ === _),
+          _.createElement(
+            _.Item,
+            {
+              onSelect: () => _(_),
+              selected: _,
+            },
+            _ &&
+              _.createElement(
+                _,
+                {
+                  gap: "2",
+                  align: "center",
+                },
+                _.createElement(_, {
+                  checked: _,
+                  variant: "dark",
+                }),
+                __webpack_require__,
+              ),
+            !_ && __webpack_require__,
+          )
         );
       }
       function _(_, _) {
@@ -2380,9 +2493,12 @@
         );
       }
       function _(_) {
+        return _(_, !1);
+      }
+      function _(_, _) {
         const {
-            rgOptions: _,
-            filter: __webpack_require__ = _,
+            rgOptions: __webpack_require__,
+            filter: _ = _,
             filterPlaceholder: _,
             selectedValue: _,
             onSelectionChange: _,
@@ -2391,8 +2507,8 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
           _ = (0, _.useMemo)(
-            () => _.filter((_) => __webpack_require__(_, _)),
-            [_, _, __webpack_require__],
+            () => __webpack_require__.filter((_) => _(_, _)),
+            [_, __webpack_require__, _],
           ),
           _ = "number" == typeof _,
           _ = _.length > 0,
@@ -2410,9 +2526,22 @@
           ),
           _ = (0, _.useCallback)(
             (_) => {
-              _(_), _(!1);
+              _(_), _ || _(!1);
             },
-            [_, _],
+            [_, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (_)
+                if (_) {
+                  const _ = _,
+                    _ = _.indexOf(_);
+                  if (-1 !== _) return _(_.slice(0, _).concat(_.slice(_ + 1)));
+                  _(_.concat(_));
+                } else _([_]);
+              else _(_);
+            },
+            [_, _, _],
           );
         return {
           activeIndex: _,
@@ -2420,11 +2549,16 @@
           rgFilteredOptions: _,
           selectedValue: _,
           onSelectionChange: _,
+          onItemSelectionChange: _,
+          onClear: (_) => {
+            _(_ ? [] : null), _.stopPropagation(), _.preventDefault();
+          },
           inputValue: _,
           onInputChange: _,
           bOpen: _,
           setOpen: _,
           filterPlaceholder: _,
+          multiselect: _,
         };
       }
       const _ = {
@@ -2458,7 +2592,7 @@
               setActiveIndex: __webpack_require__.setActiveIndex,
               selectedIndex: _,
               setSelectedIndex: (_) =>
-                __webpack_require__.onSelectionChange(
+                __webpack_require__.onItemSelectionChange(
                   __webpack_require__.rgFilteredOptions[_],
                 ),
               interactions: {
@@ -2477,10 +2611,17 @@
               refScrollElement: _,
               clearable: _,
               setOpen: (_) => {
-                _ &&
-                  (_(__webpack_require__.selectedValue),
-                  __webpack_require__.onInputChange("")),
-                  __webpack_require__.setOpen(_);
+                if (_) {
+                  let _ = null;
+                  (_ = __webpack_require__.multiselect
+                    ? Array.isArray(__webpack_require__.selectedValue)
+                      ? __webpack_require__.selectedValue[0]
+                      : null
+                    : __webpack_require__.selectedValue),
+                    _(_),
+                    __webpack_require__.onInputChange("");
+                }
+                __webpack_require__.setOpen(_);
               },
               onIndexSelected: (_) => {
                 const _ = _.elementsRef.current;
@@ -2571,11 +2712,15 @@
               onInputChange: _,
               selectedValue: _,
               focusedValue: _,
+              refScrollElement: _,
+              onItemSelectionChange: _,
               activeIndex: _,
               setActiveIndex: _,
               onFocusChange: _,
               rgFilteredOptions: _,
               onSelectionChange: _,
+              multiselect: _,
+              onClear: _,
               refPopover: _,
               clearable: _,
               filterPlaceholder: _,
@@ -2587,12 +2732,11 @@
               tabIndex: 0,
               children: _,
             },
+            _ = _ ? Array.isArray(_) && _.length > 0 : !!_,
             _ =
               _ && _
                 ? _.createElement(_, {
-                    onClick: (_) => {
-                      _(null), _.stopPropagation(), _.preventDefault();
-                    },
+                    onClick: _,
                     cursor: "pointer",
                     hitSlop: !0,
                   })
@@ -2602,7 +2746,7 @@
               _.createElement(_, {
                 beforeContent: __webpack_require__,
                 afterContent: _,
-                hasValue: !!_,
+                hasValue: _,
                 cursor: "pointer",
                 tabIndex: 0,
                 ..._,
@@ -2643,6 +2787,57 @@
           : "";
       }
       const _ = Object.assign(function (_) {
+        const {
+            selectedValue: _,
+            onSelectionChange: __webpack_require__,
+            options: _,
+            filter: _,
+            filterPlaceholder: _,
+            placeholder: _,
+            getOptionLabel: _ = _,
+            ..._
+          } = _,
+          _ = _({
+            onSelectionChange: __webpack_require__,
+            selectedValue: _,
+            rgOptions: _,
+            filter: _,
+            filterPlaceholder: _,
+          }),
+          _ = null != _,
+          _ = _(_);
+        return _.createElement(
+          _.Root,
+          {
+            state: _,
+            ..._,
+          },
+          _.createElement(
+            _.Trigger,
+            null,
+            _ && _.createElement(_.Value, null, _),
+            !_ && _.createElement(_.Placeholder, null, _),
+          ),
+          _.createElement(
+            _.Options,
+            null,
+            _.rgFilteredOptions.map((_) =>
+              _.createElement(
+                _,
+                {
+                  value: _,
+                  key: _(_),
+                },
+                _(_),
+              ),
+            ),
+          ),
+        );
+      }, _);
+      function _(_) {
+        return _(_, !0);
+      }
+      const _ = Object.assign(function (_) {
           const {
               selectedValue: _,
               onSelectionChange: __webpack_require__,
@@ -2660,7 +2855,15 @@
               filter: _,
               filterPlaceholder: _,
             }),
-            _ = null !== _;
+            _ = Array.isArray(_) && _.length > 0;
+          let _ = "";
+          if (_) {
+            const _ = _.map((_) => _(_));
+            _ =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat(_().strISOCode).format(_)
+                : _.join(", ");
+          }
           return _.createElement(
             _.Root,
             {
@@ -2670,7 +2873,7 @@
             _.createElement(
               _.Trigger,
               null,
-              _ && _.createElement(_.Value, null, _(_)),
+              _ && _.createElement(_.Value, null, _),
               !_ && _.createElement(_.Placeholder, null, _),
             ),
             _.createElement(
@@ -2678,7 +2881,7 @@
               null,
               _.rgFilteredOptions.map((_) =>
                 _.createElement(
-                  _,
+                  _.Option,
                   {
                     value: _,
                     key: _(_),
@@ -2754,48 +2957,47 @@
         },
       ];
       function _(_) {
-        const { value: _, children: __webpack_require__ } = _,
-          { onSelectionChange: _ } = _("<SelectTrigger>"),
-          _ = "string" == typeof _ ? _ : void 0;
-        return _.createElement(
-          _.Item,
-          {
-            label: _,
-            onSelect: () => _(_),
-          },
-          __webpack_require__,
-        );
+        return _(_, !1);
       }
-      function _(_) {
-        return _.createElement(
-          _,
-          {
-            weight: "medium",
-            truncate: !0,
-          },
-          _.children,
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          _,
-          {
-            secondary: !0,
-            truncate: !0,
-          },
-          _.children,
-        );
-      }
-      function _(_) {
-        const { onSelectionChange: _, ...__webpack_require__ } = _,
-          [_, _] = (0, _.useState)(!1);
+      function _(_, _) {
+        const {
+            onSelectionChange: __webpack_require__,
+            selectedValue: _,
+            ..._
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useCallback)(
+            (_) => {
+              __webpack_require__(_), _ || _(!1);
+            },
+            [__webpack_require__, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(_ ? [] : null), _.stopPropagation(), _.preventDefault();
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              if (_) {
+                const _ = _,
+                  _ = _.indexOf(_);
+                if (-1 !== _) return _(_.slice(0, _).concat(_.slice(_ + 1)));
+                _(_.concat(_));
+              } else _(_);
+            },
+            [_, _, _],
+          );
         return {
-          onSelectionChange: (_) => {
-            _(_), _(!1);
-          },
+          onSelectionChange: _,
+          onItemSelectionChange: _,
+          onClear: _,
           bOpen: _,
           setOpen: _,
-          ...__webpack_require__,
+          multiselect: _,
+          selectedValue: _,
+          ..._,
         };
       }
       const _ = {
@@ -2805,12 +3007,15 @@
             [_, _] = (0, _.useState)(null),
             _ = (0, _.useMemo)(
               () =>
-                __webpack_require__.rgOptions.findIndex(
-                  (_) => _ === __webpack_require__.selectedValue,
+                __webpack_require__.rgOptions.findIndex((_) =>
+                  __webpack_require__.multiselect
+                    ? __webpack_require__.selectedValue.includes(_)
+                    : _ === __webpack_require__.selectedValue,
                 ),
               [
                 __webpack_require__.selectedValue,
                 __webpack_require__.rgOptions,
+                __webpack_require__.multiselect,
               ],
             ),
             _ = (0, _.useRef)(null),
@@ -2821,7 +3026,12 @@
               onFocusChange: _,
               refPopover: _,
               setOpen: (_) => {
-                _ && _(__webpack_require__.selectedValue),
+                _ &&
+                  _(
+                    __webpack_require__.multiselect
+                      ? __webpack_require__.selectedValue[0]
+                      : __webpack_require__.selectedValue,
+                  ),
                   __webpack_require__.setOpen(_);
               },
               focusedIndex: _,
@@ -2833,7 +3043,7 @@
               width: "target",
               selectedIndex: _,
               setSelectedIndex: (_) =>
-                __webpack_require__.onSelectionChange(
+                __webpack_require__.onItemSelectionChange(
                   __webpack_require__.rgOptions[_],
                 ),
               activeIndex: _,
@@ -2860,7 +3070,38 @@
             ),
           );
         },
-        Option: _,
+        Option: function (_) {
+          const { value: _, children: __webpack_require__ } = _,
+            {
+              onItemSelectionChange: _,
+              multiselect: _,
+              selectedValue: _,
+            } = _("<SelectTrigger>"),
+            _ = "string" == typeof _ ? _ : void 0,
+            _ = _ ? _.includes(_) : _ === _;
+          return _.createElement(
+            _.Item,
+            {
+              label: _,
+              onSelect: () => _(_),
+              selected: _,
+            },
+            _ &&
+              _.createElement(
+                _,
+                {
+                  gap: "2",
+                  align: "center",
+                },
+                _.createElement(_, {
+                  checked: _,
+                  variant: "dark",
+                }),
+                __webpack_require__,
+              ),
+            !_ && __webpack_require__,
+          );
+        },
         Options: function (_) {
           const { refPopover: _ } = _("<Select.Options>");
           return _.createElement(
@@ -2881,11 +3122,14 @@
               size: _,
               radius: _,
               rgOptions: _,
+              multiselect: _,
+              onClear: _,
               focusedValue: _,
               onFocusChange: _,
               onSelectionChange: _,
               clearable: _,
               focusedIndex: _,
+              onItemSelectionChange: _,
               onFocusedIndexChange: _,
               refPopover: _,
               placeholder: _,
@@ -2897,12 +3141,11 @@
               onClick: () => _(!_),
               children: _,
             },
+            _ = _ ? Array.isArray(_) && _.length > 0 : !!_,
             _ =
               _ && _
                 ? _.createElement(_, {
-                    onClick: (_) => {
-                      _(null), _.stopPropagation(), _.preventDefault();
-                    },
+                    onClick: _,
                     cursor: "pointer",
                     hitSlop: !0,
                   })
@@ -2914,7 +3157,7 @@
                 variant: _,
                 size: _,
                 radius: _,
-                hasValue: !!_,
+                hasValue: _,
                 tabIndex: 0,
                 ..._,
               }),
@@ -2923,8 +3166,26 @@
             );
           return _.createElement(_.Anchor, null, _);
         },
-        Value: _,
-        Placeholder: _,
+        Value: function (_) {
+          return _.createElement(
+            _,
+            {
+              weight: "medium",
+              truncate: !0,
+            },
+            _.children,
+          );
+        },
+        Placeholder: function (_) {
+          return _.createElement(
+            _,
+            {
+              secondary: !0,
+              truncate: !0,
+            },
+            _.children,
+          );
+        },
       };
       function _(_) {
         return _
@@ -2940,6 +3201,55 @@
           : "";
       }
       const _ = Object.assign(function (_) {
+        const {
+            selectedValue: _,
+            onSelectionChange: __webpack_require__,
+            options: _,
+            placeholder: _,
+            getOptionLabel: _ = _,
+            ..._
+          } = _,
+          _ = _({
+            onSelectionChange: __webpack_require__,
+            selectedValue: _,
+            rgOptions: _,
+            placeholder: _,
+          }),
+          _ = null != _,
+          _ = _ ? _(_) : "";
+        return _.createElement(
+          _.Root,
+          {
+            state: _,
+            ..._,
+          },
+          _.createElement(
+            _.Trigger,
+            null,
+            _ && _.createElement(_.Value, null, _),
+            !_ && _.createElement(_.Placeholder, null, _),
+          ),
+          _.createElement(
+            _.Options,
+            null,
+            _.rgOptions.map((_) =>
+              _.createElement(
+                _.Option,
+                {
+                  value: _,
+                  key: _(_),
+                },
+                _(_),
+              ),
+            ),
+          ),
+        );
+      }, _);
+      function _(_) {
+        return _(_, !0);
+      }
+      const _ = _;
+      const _ = Object.assign(function (_) {
           const {
               selectedValue: _,
               onSelectionChange: __webpack_require__,
@@ -2954,7 +3264,15 @@
               rgOptions: _,
               placeholder: _,
             }),
-            _ = null != _;
+            _ = Array.isArray(_) && _.length > 0;
+          let _ = "";
+          if (_) {
+            const _ = _.map((_) => _(_));
+            _ =
+              "ListFormat" in Intl
+                ? new Intl.ListFormat(_().strISOCode).format(_)
+                : _.join(", ");
+          }
           return _.createElement(
             _.Root,
             {
@@ -2964,15 +3282,15 @@
             _.createElement(
               _.Trigger,
               null,
-              _ && _.createElement(_, null, _(_)),
-              !_ && _.createElement(_, null, _),
+              _ && _.createElement(_.Value, null, _),
+              !_ && _.createElement(_.Placeholder, null, _),
             ),
             _.createElement(
               _.Options,
               null,
               _.rgOptions.map((_) =>
                 _.createElement(
-                  _,
+                  _.Option,
                   {
                     value: _,
                     key: _(_),
@@ -2987,77 +3305,6 @@
       function _(_) {
         const _ = (0, _.useContext)(_);
         return _ || console.error(`${_} must be used within a <Select>!`), _;
-      }
-      function _(_) {
-        return _.createElement(
-          _,
-          {
-            ..._,
-            viewBoxSize: 16,
-          },
-          _.createElement("path", {
-            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            checked: _,
-            onChange: __webpack_require__,
-            disabled: _,
-            children: _,
-            ref: _,
-            ..._
-          } = _,
-          _ = "indeterminate" === _,
-          _ = _ ? _ : _,
-          _ = () => __webpack_require__(!!_ || !_);
-        return _.createElement(
-          _,
-          {
-            ref: _,
-            role: "checkbox",
-            "aria-checked": _ ? "mixed" : _,
-            "data-state": _(_),
-            className: _.Root,
-            onClick: _,
-            tabIndex: 0,
-            onKeyDown: (_) => {
-              " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
-            },
-            ..._,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.Checkbox,
-            },
-            _ &&
-              _.createElement(_, {
-                className: _.Icon,
-              }),
-          ),
-          _,
-        );
-      }
-      function _(_) {
-        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            viewBox: "0 0 16 16",
-            fill: "none",
-            xmlns: "http://www.w3.org/2000/svg",
-          },
-          _.createElement("path", {
-            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        );
       }
       const _ = (0, _.createContext)(null),
         _ = Object.assign(
@@ -3211,8 +3458,7 @@
           ..._,
         };
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = {};
       _.english = () =>
         __webpack_require__
@@ -3242,15 +3488,16 @@
             onChange: _,
           } = _,
           _ = (_) => `${_.facet}_${_.tag}`,
-          _ = (0, _.useMemo)(() => {
-            const _ = _.find((_) => _[_.facet] && _[_.facet][_.tag]);
-            if (_) return _;
-          }, [_, _]),
+          _ = (0, _.useMemo)(
+            () => _.filter((_) => _[_.facet] && _[_.facet][_.tag]),
+            [_, _],
+          ),
           _ = _({
             rgOptions: _,
             selectedValue: _,
             onSelectionChange: (_) => _(_, _),
-          });
+          }),
+          _ = _.length > 0;
         return _.createElement(
           _.Root,
           {
@@ -3263,7 +3510,7 @@
             _.Trigger,
             null,
             !_ && _.createElement(_.Value, null, __webpack_require__),
-            !!_ &&
+            _ &&
               _.createElement(
                 _.Value,
                 null,
@@ -3275,7 +3522,7 @@
                     color: "accent",
                     secondary: !0,
                   },
-                  _.strLabel,
+                  _(_),
                 ),
               ),
           ),
@@ -3315,7 +3562,7 @@
           } = _,
           _ = (_) => `${_.facet}_${_.tag}`,
           _ = (0, _.useMemo)(
-            () => _.find((_) => _[_.facet] && _[_.facet][_.tag]),
+            () => _.filter((_) => _[_.facet] && _[_.facet][_.tag]),
             [_, _],
           ),
           _ = _({
@@ -3325,7 +3572,8 @@
             filterPlaceholder: _.Localize(
               "#AdvancedSearch_FilterGeneric_Placeholder",
             ),
-          });
+          }),
+          _ = _.length > 0;
         return _.createElement(
           _.Root,
           {
@@ -3337,7 +3585,7 @@
             _.Trigger,
             null,
             !_ && _.createElement(_.Value, null, __webpack_require__),
-            !!_ &&
+            _ &&
               _.createElement(
                 _.Value,
                 null,
@@ -3349,7 +3597,7 @@
                     color: "accent",
                     secondary: !0,
                   },
-                  _.strLabel,
+                  _(_),
                 ),
               ),
           ),
@@ -3379,6 +3627,9 @@
             ),
           ),
         );
+      }
+      function _(_) {
+        return _.map((_) => _.strLabel).join(", ");
       }
       function _(_) {
         const { color: _ } = _;
@@ -3581,16 +3832,20 @@
             });
           }
           case "select": {
-            const _ = (_, _) => {
+            const _ = (_ = [], _ = []) => {
+              const _ = {};
               let _ = {
                 ...__webpack_require__,
                 facets: {
                   ...__webpack_require__.facets,
                 },
               };
-              _ && (_ = _(_, _.facet, _.tag, !1)),
-                _ && (_ = _(_, _.facet, _.tag, !0)),
-                _(_);
+              for (const _ of _) _[`${_.facet}_${_.tag}`] = _;
+              for (const _ of _)
+                _[`${_.facet}_${_.tag}`] || (_ = _(_, _.facet, _.tag, !0)),
+                  delete _[`${_.facet}_${_.tag}`];
+              for (const _ of Object.values(_)) _ = _(_, _.facet, _.tag, !1);
+              _(_);
             };
             return _.createElement(_, {
               ..._,
@@ -4048,8 +4303,8 @@
                 ? (__webpack_require__(_(_, _.bWholeUnitsOnly)), _(null))
                 : "" === _ && (__webpack_require__(_), _(null));
             },
-            beforeContent: _.bPrefixSymbol ? _.strSymbol : void 0,
-            afterContent: _.bPrefixSymbol ? void 0 : _.strSymbol,
+            beforeContent: _.bSuffixSymbol ? void 0 : _.strSymbol,
+            afterContent: _.bSuffixSymbol ? _.strSymbol : void 0,
             placeholder: _,
           }),
         );
@@ -5107,34 +5362,41 @@
         (0, _.useEffect)(() => {
           let _ = null;
           const _ = _.filter((_) => _.condition(_)),
-            _ = () =>
-              [
-                ..._.map((_) => _.facet),
-                ..._,
-                _,
-                ..._.map((_) => _.facet),
-              ].reduce((_, _) => {
-                const _ = (function (_) {
-                  switch (_.fieldType) {
-                    case "checkbox":
-                    case "select":
-                      return _.rgOptions.map(({ facet: _, tag: _ }) => [_, _]);
-                    case "toggle":
-                    case "togglebutton":
-                      return [[_.facet, _.tag]];
-                    case "togglegroup":
-                      return _.rgToggles.map(({ facet: _, tag: _ }) => [_, _]);
-                    default:
-                      return (0, _._)(_, "Unhandled facet type"), [];
-                  }
-                })(_);
-                for (const [_, _] of _) _[_] || (_[_] = {}), (_[_][_] = !0);
-                return _;
-              }, {});
+            _ = new Map(),
+            _ = [];
+          for (const _ of _) {
+            const _ = _.facet;
+            __webpack_require__.has(_) || _.push(_),
+              __webpack_require__.set(_, !0);
+          }
+          const _ = () =>
+            [
+              ..._.map((_) => _.facet),
+              ..._,
+              _,
+              ..._.map((_) => _.facet),
+            ].reduce((_, _) => {
+              const _ = (function (_) {
+                switch (_.fieldType) {
+                  case "checkbox":
+                  case "select":
+                    return _.rgOptions.map(({ facet: _, tag: _ }) => [_, _]);
+                  case "toggle":
+                  case "togglebutton":
+                    return [[_.facet, _.tag]];
+                  case "togglegroup":
+                    return _.rgToggles.map(({ facet: _, tag: _ }) => [_, _]);
+                  default:
+                    return (0, _._)(_, "Unhandled facet type"), [];
+                }
+              })(_);
+              for (const [_, _] of _) _[_] || (_[_] = {}), (_[_][_] = !0);
+              return _;
+            }, {});
           let _ = null;
           for (const _ of Object.keys(_.facets))
             for (const _ of Object.keys(_.facets[_]))
-              _ || (_ = __webpack_require__()),
+              _ || (_ = _()),
                 (_[_] && _[_][_]) ||
                   (_ ||
                     (_ = {
@@ -5146,20 +5408,21 @@
                   (_ = _(_, _, _, !1)));
           _(_), _ && _(_);
         }, [_, _, _, _, _, _]);
-        const _ = (_) => {
+        const _ = (_ = []) => {
             const _ = {
               ..._,
               facets: {
                 ..._.facets,
               },
             };
-            _.forEach((_) => delete _.facets[_]),
-              _ &&
+            _.forEach((_) => delete _.facets[_]);
+            for (const _ of _)
+              _.facets[_.facet] || (_.facets[_.facet] = {}),
                 (_.facets[_.facet] = {
                   ..._.facets[_.facet],
                   [_.tag]: !0,
-                }),
-              _(_);
+                });
+            _(_);
           },
           _ = (_, _) => _(_),
           _ = [
@@ -5207,10 +5470,12 @@
                       (_ = _.tag),
                       _(
                         _
-                          ? {
-                              facet: __webpack_require__,
-                              tag: _,
-                            }
+                          ? [
+                              {
+                                facet: __webpack_require__,
+                                tag: _,
+                              },
+                            ]
                           : void 0,
                       )
                     );
@@ -5313,11 +5578,6 @@
             ? (_) => {
                 _.stopPropagation(), _.preventDefault(), _();
               }
-            : void 0,
-          _ = _
-            ? (_) => {
-                _.stopPropagation(), _.preventDefault(), _();
-              }
             : void 0;
         let _ = _.createElement(
           _,
@@ -5329,18 +5589,27 @@
             paddingY: "2",
             gap: "2",
             className: _.NoToggleTrigger,
+            overflow: "hidden",
           },
           _.createElement(
             _._,
             {
               flexGrow: "1",
+              minWidth: "0",
             },
             _,
           ),
           _ && _
-            ? _.createElement(_, {
-                onClick: _,
-              })
+            ? _.createElement(
+                _,
+                {
+                  align: "center",
+                  justify: "center",
+                },
+                _.createElement(_, {
+                  onClick: _,
+                }),
+              )
             : _.createElement(_, null),
         );
         return (
@@ -5362,6 +5631,7 @@
                   position: "relative",
                   "data-active": !!_,
                   "data-muted": !!_,
+                  overflow: "hidden",
                 },
                 _.createElement(
                   _._,
@@ -5395,6 +5665,7 @@
                   {
                     flexGrow: "1",
                     zIndex: "1",
+                    overflow: "hidden",
                   },
                   _,
                 ),
@@ -5431,13 +5702,148 @@
         );
       });
       function _(_) {
+        const { toggle: _, onChange: __webpack_require__, ..._ } = _,
+          _ = (_, _) => {
+            if (_ && _ && _.length > 1) {
+              const _ = _.findIndex(
+                (_) => _.facet === _.facet && _.tag === _.tag,
+              );
+              if (_ > -1) {
+                return !_ ||
+                  !_.some((_) => _.facet === _.facet && _.tag === _.tag)
+                  ? void __webpack_require__(_, [_])
+                  : void __webpack_require__(
+                      _,
+                      _.slice(0, _).concat(_.slice(_ + 1)),
+                    );
+              }
+            }
+            __webpack_require__(_, _);
+          };
         return _.rgOptions.length > 15
           ? _.createElement(_, {
+              toggle: _,
+              onChange: _,
               ..._,
             })
           : _.createElement(_, {
+              toggle: _,
+              onChange: _,
               ..._,
             });
+      }
+      function _(_) {
+        const {
+            rgOptions: _,
+            strLabel: __webpack_require__,
+            value: _ = {},
+            onChange: _,
+            img: _,
+            toggle: _,
+            hasTypeSelected: _,
+          } = _,
+          _ = (_) => (_ ? `${_.facet}_${_.tag}` : "clear"),
+          _ = (0, _.useMemo)(
+            () => _.filter((_) => _[_.facet] && _[_.facet][_.tag]),
+            [_, _],
+          );
+        let _ = _;
+        const _ = _[0];
+        if ((null == _ ? void 0 : _.tag) && _.tag.startsWith("weapon_")) {
+          const _ = _.tag.slice(7);
+          _ in _ && (_ = _[_]);
+        }
+        const _ = _({
+            rgOptions: _,
+            selectedValue: _,
+            onSelectionChange: (_) => _(_, _),
+          }),
+          _ = _.length > 0,
+          _ = _ ? () => _(_, _ ? [] : [_]) : void 0;
+        let _ = "";
+        if (_) {
+          const _ = _.map((_) => _.strLabel);
+          _ =
+            "ListFormat" in Intl
+              ? new Intl.ListFormat(_().strISOCode).format(_)
+              : _.join(", ");
+        }
+        return _.createElement(
+          _.Root,
+          {
+            state: _,
+            variant: "highlight",
+            radius: "sm",
+          },
+          _.createElement(
+            _.Trigger,
+            {
+              render: _.createElement(_, {
+                img: _,
+                active: _,
+                muted: _ && !_,
+                onToggle: _,
+                onClear: _.onClear,
+              }),
+            },
+            !_ && _.createElement(_.Value, null, __webpack_require__),
+            _ &&
+              _.createElement(
+                _,
+                {
+                  align: "center",
+                  gap: "2",
+                },
+                _.createElement(
+                  _.Value,
+                  null,
+                  __webpack_require__,
+                  ": ",
+                  _.createElement(
+                    _,
+                    {
+                      color: "accent",
+                      secondary: !0,
+                    },
+                    _,
+                  ),
+                ),
+                _ &&
+                  _.createElement(
+                    _,
+                    {
+                      align: "center",
+                      justify: "center",
+                    },
+                    _.createElement(_, null),
+                  ),
+              ),
+          ),
+          _.createElement(
+            _.Options,
+            null,
+            _.map((_) =>
+              _.createElement(
+                _.Option,
+                {
+                  value: _,
+                  key: _(_),
+                },
+                _
+                  ? _.strLabel
+                  : _.createElement(
+                      _,
+                      {
+                        align: "center",
+                        gap: "1",
+                      },
+                      _.createElement(_, null),
+                      _.Localize("#AdvancedSearch_AppSelect_Clear"),
+                    ),
+              ),
+            ),
+          ),
+        );
       }
       function _(_) {
         const {
@@ -5463,11 +5869,11 @@
         const _ = _({
             rgOptions: _,
             selectedValue: _,
-            onSelectionChange: (_) => _(_, _),
+            onSelectionChange: (_) => _(_ ? [_] : [], _ ? [_] : []),
           }),
           _ = _
             ? () => {
-                _(_, _ ? void 0 : _);
+                _(_ ? [_] : [], _ ? [] : [_]);
               }
             : void 0;
         return _.createElement(
@@ -5551,11 +5957,12 @@
             hasTypeSelected: _,
           } = _,
           _ = (_) => (_ ? `${_.facet}_${_.tag}` : "clear"),
-          _ = (0, _.useMemo)(() => {
-            const _ = _.find((_) => _[_.facet] && _[_.facet][_.tag]);
-            if (_) return _;
-          }, [_, _]);
+          _ = (0, _.useMemo)(
+            () => _.filter((_) => _[_.facet] && _[_.facet][_.tag]),
+            [_, _],
+          );
         let _ = _;
+        const _ = _[0];
         if ((null == _ ? void 0 : _.tag) && _.tag.startsWith("weapon_")) {
           const _ = _.tag.slice(7);
           _ in _ && (_ = _[_]);
@@ -5566,11 +5973,16 @@
             onSelectionChange: (_) => _(_, _),
             filterPlaceholder: "Filter...",
           }),
-          _ = _
-            ? () => {
-                _(_, _ ? void 0 : _);
-              }
-            : void 0;
+          _ = _.length > 0,
+          _ = _ ? () => _(_, _ ? [] : [_]) : void 0;
+        let _ = "";
+        if (_) {
+          const _ = _.map((_) => _.strLabel);
+          _ =
+            "ListFormat" in Intl
+              ? new Intl.ListFormat(_().strISOCode).format(_)
+              : _.join(", ");
+        }
         return _.createElement(
           _.Root,
           {
@@ -5583,36 +5995,43 @@
             {
               render: _.createElement(_, {
                 img: _,
-                active: !!_,
+                active: _,
                 muted: _ && !_,
                 onToggle: _,
-                onClear: () => _.onSelectionChange(void 0),
+                onClear: _.onClear,
               }),
             },
             !_ && _.createElement(_.Value, null, __webpack_require__),
-            !!_ &&
+            _ &&
               _.createElement(
-                _.Value,
-                null,
-                __webpack_require__,
-                ": ",
+                _,
+                {
+                  align: "center",
+                  gap: "2",
+                },
                 _.createElement(
-                  _,
-                  {
-                    color: "accent",
-                    secondary: !0,
-                  },
+                  _.Value,
+                  null,
+                  __webpack_require__,
+                  ": ",
                   _.createElement(
                     _,
                     {
-                      inline: !0,
-                      align: "center",
-                      gap: "2",
+                      color: "accent",
+                      secondary: !0,
                     },
-                    _.strLabel,
-                    _ && _.createElement(_, null),
+                    _,
                   ),
                 ),
+                _ &&
+                  _.createElement(
+                    _,
+                    {
+                      align: "center",
+                      justify: "center",
+                    },
+                    _.createElement(_, null),
+                  ),
               ),
           ),
           _.createElement(
@@ -5686,7 +6105,8 @@
           } = _,
           _ = _.bSteamItems,
           _ = (0, _._)("sm"),
-          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app;
+          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app,
+          _ = _(_);
         return _.createElement(
           _._.Provider,
           {
@@ -5732,7 +6152,7 @@
                       gap: _,
                       align: {
                         initial: "stretch",
-                        _: "center",
+                        _: "start",
                       },
                       marginY: _,
                       direction: {
@@ -5749,15 +6169,25 @@
                         }),
                     }),
                     _ &&
-                      _.createElement(_, {
-                        size: "1",
-                        orientation: "vertical",
-                        color: "dull-6",
-                      }),
+                      _.createElement(
+                        _._,
+                        {
+                          style: {
+                            marginTop: "10px",
+                          },
+                        },
+                        _.createElement(_, {
+                          size: "1",
+                          orientation: "vertical",
+                          color: "dull-6",
+                        }),
+                      ),
                     _.createElement(
-                      _._,
+                      _,
                       {
+                        direction: "column",
                         flexGrow: "1",
+                        gap: "2",
                       },
                       _.createElement(_, {
                         app: _ || void 0,
@@ -5768,6 +6198,23 @@
                             strSearch: _,
                           }),
                       }),
+                      _ &&
+                        _.createElement(
+                          _,
+                          {
+                            marginLeft: "4",
+                            checked: !!_.bSearchDescriptions,
+                            onChange: (_) =>
+                              __webpack_require__({
+                                ..._,
+                                bSearchDescriptions: _,
+                              }),
+                            title: _.Localize(
+                              "#AdvancedSearch_IncludeDescriptions_Tooltip",
+                            ),
+                          },
+                          _.Localize("#AdvancedSearch_IncludeDescriptions"),
+                        ),
                     ),
                   ),
                   _.createElement(
@@ -5807,6 +6254,13 @@
           ),
         );
       }
+      const _ = 440,
+        _ = 570;
+      function _(_) {
+        if (!_) return !1;
+        const _ = _.appid;
+        return _ === _ || _ === _;
+      }
       function _(_) {
         const { filter: _, onFilterChange: __webpack_require__, config: _ } = _,
           _ = _.bSteamItems,
@@ -5826,6 +6280,7 @@
                   (window.location.href = (function (_, _) {
                     const {
                       strSearch: __webpack_require__,
+                      bSearchDescriptions: _,
                       bSteamItems: _,
                       filterInGame: _,
                       filterSteam: _,
@@ -5855,6 +6310,10 @@
                       _ = new FormData();
                     _ && _.set("appid", _.appid.toString());
                     __webpack_require__ && _.set("q", __webpack_require__);
+                    __webpack_require__ &&
+                      _ &&
+                      _(_.app) &&
+                      _.set("descriptions", "1");
                     for (const _ of Object.keys(_))
                       if (_[_])
                         for (const _ of Object.keys(_[_]))
@@ -5962,22 +6421,22 @@
         );
       }
       function _(_) {
-        const { value: _, onTextChange: __webpack_require__, app: _ } = _;
+        const { value: _, onTextChange: __webpack_require__, app: _ } = _,
+          [_, _] = (0, _.useState)(!0);
         return _.createElement(_, {
           radius: "full",
           variant: "inset",
-          app: _,
+          app: _ ? _ : void 0,
+          onClearApp: () => _(!1),
           value: _,
           onTextChange: __webpack_require__,
         });
       }
       function _(_) {
         var _, _;
-        const { value: _, onTextChange: _, app: _, ..._ } = _,
+        const { value: _, onTextChange: _, app: _, onClearApp: _, ..._ } = _,
           _ = (0, _._)(),
           _ = null == _ ? void 0 : _.appid,
-          [_, _] = (0, _.useState)(!0),
-          _ = _ ? _ : void 0,
           _ = (0, _._)({
             queryKey: ["market_search_suggestions", _, _],
             queryFn: async () => {
@@ -6019,40 +6478,39 @@
               _(_);
             }, []),
           ),
-          _ =
-            _ && _
-              ? _.createElement(
+          _ = _
+            ? _.createElement(
+                _,
+                {
+                  cursor: "pointer",
+                  radius: _.radius || "sm",
+                  background: "dull-4",
+                  paddingY: "1",
+                  paddingX: "2",
+                  align: "center",
+                  gap: "1",
+                  role: "button",
+                  maxWidth: "24ch",
+                  onMouseDown: _,
+                },
+                _.createElement(_, {
+                  height: "20px",
+                  objectFit: "contain",
+                  src: _.icon,
+                  alt: "",
+                }),
+                _.createElement(
                   _,
                   {
-                    cursor: "pointer",
-                    radius: _.radius || "sm",
-                    background: "dull-4",
-                    paddingY: "1",
-                    paddingX: "2",
-                    align: "center",
-                    gap: "1",
-                    role: "button",
-                    onMouseDown: () => _(!1),
-                    maxWidth: "24ch",
+                    visible: !_,
                   },
-                  _.createElement(_, {
-                    height: "20px",
-                    objectFit: "contain",
-                    src: _.icon,
-                    alt: "",
-                  }),
-                  _.createElement(
-                    _,
-                    {
-                      visible: !_,
-                    },
-                    _.name,
-                  ),
-                  _.createElement(_, null),
-                )
-              : null,
+                  _.name,
+                ),
+                _.createElement(_, null),
+              )
+            : null,
           _ =
-            _ && _ && !_
+            _ && !_
               ? _.Localize(
                   "#AdvancedSearch_TextSearch_PlaceholderWithApp",
                   _.name,
@@ -6677,6 +7135,7 @@
       function _(_) {
         const _ = {
           strSearch: "",
+          bSearchDescriptions: _.bSearchDescriptions,
           filterInGame: {
             app: null,
             facets: {},

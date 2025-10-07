@@ -5856,9 +5856,17 @@ body.v6 .quadscreenshot_carousel h2 {
 }
 
 .carousel_container .arrow > div {
-	background-image: url(/public/images/v6/arrows.png);
 	width: 23px;
 	height: 36px;
+	background-repeat: no-repeat;
+}
+
+.carousel_container .arrow.left > div {
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/arrow_left.svg' );
+}
+
+.carousel_container .arrow.right > div {
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/arrow_right.svg' );
 }
 
 .carousel_container .arrow.left {
@@ -5879,10 +5887,6 @@ background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0
 .carousel_container .arrow.right:hover {
 background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
 	background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
-}
-
-.carousel_container .arrow.left > div {
-	background-position-x: 23px;
 }
 
 /* END CAROUSEL STUFF */

@@ -47,6 +47,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_eItemType;
@@ -908,6 +909,8 @@
         m_Trailer480p;
         m_TrailerMax;
         m_MicroTrailer;
+        m_rgDashTrailers;
+        m_rgHlsTrailer;
         m_strScreenshotMedium;
         m_strScreenshotFull;
         m_bIsAllAges;
@@ -916,33 +919,43 @@
             (this.m_nBaseID = _.trailer_base_id()),
             (this.m_eTrailerCategory = _.trailer_category());
           const _ = _.trailer_url_format();
-          _ &&
-            (_.trailer_480p() &&
-              (this.m_Trailer480p = this.ExtractTrailerFormats(
-                _,
-                _.trailer_480p(),
-              )),
-            _.trailer_max() &&
-              (this.m_TrailerMax = this.ExtractTrailerFormats(
-                _,
-                _.trailer_max(),
-              )),
-            _.microtrailer() &&
-              (this.m_MicroTrailer = this.ExtractTrailerFormats(
-                _,
-                _.microtrailer(),
-              )),
-            _.screenshot_medium() &&
-              (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_medium(),
-              )),
-            _.screenshot_full() &&
-              (this.m_strScreenshotFull = this.ConstructScreenshotURL(
-                _,
-                _.screenshot_full(),
-              ))),
-            (this.m_bIsAllAges = _.all_ages() ?? !0);
+          if (
+            (_ &&
+              (_.trailer_480p() &&
+                (this.m_Trailer480p = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_480p(),
+                )),
+              _.trailer_max() &&
+                (this.m_TrailerMax = this.ExtractTrailerFormats(
+                  _,
+                  _.trailer_max(),
+                )),
+              _.microtrailer() &&
+                (this.m_MicroTrailer = this.ExtractTrailerFormats(
+                  _,
+                  _.microtrailer(),
+                )),
+              _.screenshot_medium() &&
+                (this.m_strScreenshotMedium = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_medium(),
+                )),
+              _.screenshot_full() &&
+                (this.m_strScreenshotFull = this.ConstructScreenshotURL(
+                  _,
+                  _.screenshot_full(),
+                ))),
+            _.adaptive_trailers())
+          ) {
+            this.m_rgDashTrailers = this.ExtractAdaptiveTrailers(
+              _.adaptive_trailers(),
+              "dash",
+            );
+            let _ = this.ExtractAdaptiveTrailers(_.adaptive_trailers(), "hls");
+            _.length > 0 && (this.m_rgHlsTrailer = _[0]);
+          }
+          this.m_bIsAllAges = _.all_ages() ?? !0;
         }
         GetName() {
           return this.m_strTrailerName;
@@ -958,6 +971,12 @@
         }
         GetTrailerMax() {
           return this.m_TrailerMax;
+        }
+        GetTrailersDash() {
+          return this.m_rgDashTrailers;
+        }
+        GetTrailerHls() {
+          return this.m_rgHlsTrailer;
         }
         GetMicroTrailer() {
           return this.m_MicroTrailer;
@@ -980,6 +999,17 @@
                   (_.strWebMURL = this.ConstructAssetURL(_, _.filename()));
             }),
             _
+          );
+        }
+        ExtractAdaptiveTrailers(_, _) {
+          let _ = `${_}_`,
+            _ = _.filter(
+              (_) => _.encoding() && _.cdn_path() && _.encoding().startsWith(_),
+            ),
+            _ = _.findIndex((_) => _.encoding().endsWith("_av1"));
+          return (
+            _ > 0 && _._(_, _, 0),
+            _.map((_) => this.ConstructAssetURL(_.cdn_path(), ""))
           );
         }
         ConstructScreenshotURL(_, _) {

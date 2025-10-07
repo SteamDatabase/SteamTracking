@@ -318,6 +318,9 @@ function Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalM
 		if ( !UseSmallScreenMode() )
 			return;
 
+		if ( e && e.target && $( e.target ).parents( '.responsive_menu_ignore_touch' ).length > 0 )
+			return;
+
 		var Touch = fnGetSingleTouch(e);
 		if ( !Touch )
 			return;

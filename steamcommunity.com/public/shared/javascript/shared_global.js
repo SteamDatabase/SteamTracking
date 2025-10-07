@@ -3390,12 +3390,32 @@ function HideFlyoutMenu( event, elemLink, elemPopup )
 
 function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlternateAlignTo )
 {
-	var align = align ? align : 'left';
-
 	// alternate align to is used to align the genre menu on the store; it's only used for horizontal alignment,
 	// trying to align to it vertically messes up responsive view.
 	var $LinkVertical = $JFromIDOrElement(elemLink);
 	var $LinkHorizontal = elemAlternateAlignTo ? $JFromIDOrElement(elemAlternateAlignTo) : $LinkVertical;
+
+	var align = align ? align : 'left';
+	// flip alignments for RTL
+	if ( $LinkVertical?.[0]?.matches( ':dir(rtl)' ) ?? document.dir === "rtl" )
+	{
+		if ( align === 'left' )
+		{
+			align = 'right';
+		}
+		else if ( align === 'right' )
+		{
+			align = 'left';
+		}
+		else if ( align === 'leftsubmenu' )
+		{
+			align = 'rightsubmenu';
+		}
+		else if ( align === 'rightsubmenu' )
+		{
+			align = 'leftsubmenu';
+		}
+	}
 
 	var $Popup = $JFromIDOrElement(elemPopup);
 

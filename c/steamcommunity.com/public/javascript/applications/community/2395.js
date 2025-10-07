@@ -43,6 +43,8 @@
 	"SortBy_Price_Desc": "Price (high to low)",
 	"SortBy_Quantity_Asc": "Quantity (low to high)",
 	"SortBy_Quantity_Desc": "Quantity (high to low)",
+	"SortBy_AssetProperty_Asc": "%1$s (low to high)",
+	"SortBy_AssetProperty_Desc": "%1$s (high to low)",
 	"SortBy_Placeholder": "Sort By",
 	"Search_Button": "Search",
 	"Search_Placeholder": "Search...",
@@ -53,7 +55,10 @@
 	"AdvancedSearch_Link": "Advanced Search",
 	"MarketSearch_Placeholder": "Search for an item...",
 	"MarketHome_PopularApps": "Popular Games",
-	"MarketSearch_FilterColumn_Header": "Filters"
+	"AdvancedSearch_IncludeDescriptions": "Include descriptions in search",
+	"AdvancedSearch_IncludeDescriptions_Tooltip": "Some older items use text descriptions for meaningful item properties that are not accessible with the below filters. This option will allow your search text to be matched against the full description text instead of only the item name.",
+	"MarketSearch_FilterColumn_Header": "Filters",
+	"Listings_Filter_Placeholder": "Filter listings..."
 }`);
     },
   },

@@ -3,7 +3,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: row-reverse;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   flex-shrink: 0;
 }
 ._1DsumfIa3MlkzUV9EXY5W9 ._2n0EiKMGRP-r_BI5tDtttu {
@@ -209,7 +209,7 @@
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -227,7 +227,7 @@
   color: inherit;
 }
 ._2saJTAocZ9TnYXTGvnqUMC {
-  padding-left: 5px;
+  padding-inline-start: 5px;
   color: #666;
 }
 ._2saJTAocZ9TnYXTGvnqUMC.GamepadMode,
@@ -249,21 +249,21 @@
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
-  padding-right: 6px;
-  margin-right: -6px;
+  padding-inline-end: 6px;
+  margin-inline-end: -6px;
 }
 .nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .nOdcT-MoOaXGePXLyPe0H {
   -webkit-mask: none;
   mask: none;
-  padding-right: 2px;
-  margin-right: 0px;
+  padding-inline-end: 2px;
+  margin-inline-end: 0px;
 }
 ._3XEmWmfQy7gbYJ4KJ1N9tp {
   color: #999;
   font-size: 18px;
   display: inline-block;
-  margin-left: 1px;
+  margin-inline-start: 1px;
   opacity: 0.5;
   line-height: 16px;
 }
@@ -300,7 +300,7 @@
     black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
-  padding-right: 24px;
+  padding-inline-end: 24px;
 }
 .BasicUI ._2Ri005Wg_uXDTa71kdRbcN {
   display: block;
@@ -343,7 +343,7 @@
   width: 12px;
   height: 12px;
   margin-top: -3px;
-  margin-left: 3px;
+  margin-inline-start: 3px;
 }
 ._3BnDsXrefFJrt_8frF2wvB {
   font-weight: 800;
@@ -358,7 +358,7 @@
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -400,7 +400,7 @@
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -783,7 +783,7 @@
   margin-bottom: 4px;
 }
 .singlewindow .currentUserContainer ._4ZTzGZ5TTgFyfw1DcXLXS {
-  margin-right: 4px;
+  margin-inline-end: 4px;
 }
 .singlewindow
   .currentUserContainer
@@ -796,7 +796,7 @@
   .currentUserContainer
   ._1BbOegz8bYL7iPzgYpOgQI
   ._4ZTzGZ5TTgFyfw1DcXLXS {
-  margin-right: 48px;
+  margin-inline-end: 48px;
 }
 .friendRequests .bright .moMutualFriends .nOdcT-MoOaXGePXLyPe0H,
 .friendRequests .nOdcT-MoOaXGePXLyPe0H {
@@ -867,7 +867,7 @@
   width: 28px;
   height: 20px;
   margin-top: -3px;
-  margin-left: 0px;
+  margin-inline-start: 0px;
   display: inline-block;
 }
 ._2gBKQXiTBLjeVVaqvc5QVh svg {
@@ -881,7 +881,7 @@
 }
 ._2sxXnGfkPxNgR6Lk1-SmfQ {
   margin-top: -6px;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   display: inline-block;
 }
 ._2sxXnGfkPxNgR6Lk1-SmfQ svg {

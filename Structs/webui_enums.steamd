@@ -325,8 +325,7 @@ enum EConnectivityTestSimulation
 enum EContentModerationAction
 {
 	k_EContentModerationAction_None = 1;
-	k_EContentModerationAction_LockThread = 2;
-	k_EContentModerationAction_UnlockThread = 3;
+	k_EContentModerationAction_Sustain = 2;
 }
 
 enum EControllerBindingType

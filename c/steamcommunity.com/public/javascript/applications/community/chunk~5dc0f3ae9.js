@@ -15455,7 +15455,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -16841,7 +16840,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = {
         include_platforms: !0,
       };
@@ -17393,6 +17393,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { closeModal: _ } = _;
@@ -17475,15 +17476,25 @@
             bApplyingFollowing: _,
             bFollowing: _,
             onFollowClick: _,
+            followType: _,
           } = _;
-          return _._.bIsFollowingEnabled
+          if (!_._.bIsFollowingEnabled) return null;
+          let _ = null;
+          switch (_) {
+            case "app":
+              _ = (0, _._)("#text_store_follow_desc");
+              break;
+            case "creatorhome":
+              _ = (0, _._)("#CreatorHome_Follow_tooltip");
+              break;
+            case "steamcurator":
+              _ = (0, _._)("#steam_curator_follow_ttip");
+          }
+          return _
             ? _.createElement(
                 _._,
                 {
-                  toolTipContent:
-                    __webpack_require__ || _
-                      ? void 0
-                      : (0, _._)("#CreatorHome_Follow_tooltip"),
+                  toolTipContent: __webpack_require__ || _ ? void 0 : _,
                 },
                 _.createElement(
                   _._,
@@ -17518,12 +17529,13 @@
                   ),
                 ),
               )
-            : null;
+            : (console.error("CommonFollowButton unexpected type", _), null);
         },
         _ = (_) => {
           const [_, __webpack_require__] = _.useState(!1),
             { clanAccountID: _, className: _ } = _,
             _ = _._.InitFromClanID(_),
+            [_, _] = (0, _._)(_),
             _ = (0, _._)(() => _._.Get().BIsFollowingCurator(_)),
             _ = (0, _._)(() => !_ && _._.Get().BIsIgnoringCurator(_));
           return _.createElement(_, {
@@ -17563,6 +17575,9 @@
                     });
                 })());
             },
+            followType: (null == _ ? void 0 : _.is_creator_home)
+              ? "creatorhome"
+              : "steamcurator",
           });
         },
         _ = (_) => {
@@ -17597,6 +17612,7 @@
                     });
                 })());
             },
+            followType: "app",
           });
         };
     },
@@ -23096,9 +23112,9 @@
             _.onClick && _.onClick(_);
         }
         render() {
-          const _ =
-            this.props.tabs.find((_) => _.key === this.state.activeTab) ||
-            this.props.tabs[0];
+          const _ = this.props.tabs.filter((_) => !_.hidden);
+          if (!_.length) return null;
+          const _ = _.find((_) => _.key === this.state.activeTab) || _[0];
           return _.createElement(
             _.Fragment,
             null,
@@ -23110,7 +23126,7 @@
                   this.props.classNameCtn,
                 ),
               },
-              this.props.tabs.map((_) =>
+              _.map((_) =>
                 _.createElement(_, {
                   key: _.key,
                   tab: _,
@@ -23154,50 +23170,48 @@
             classNameTab: _,
             active: _,
           } = _;
-          return _.hidden
-            ? null
-            : _.createElement(
-                _._,
-                {
-                  condition: Boolean(_.statusToolTip || _.tooltip),
-                  wrap: (_) =>
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: _.statusToolTip || _.tooltip,
-                      },
-                      _,
-                    ),
-                },
+          return _.createElement(
+            _._,
+            {
+              condition: Boolean(_.statusToolTip || _.tooltip),
+              wrap: (_) =>
                 _.createElement(
                   _._,
                   {
-                    className: (0, _._)(
-                      _().GraphicalAssetsTab,
-                      _ && _().Active,
-                      _ && "ActiveTab",
-                      _,
-                    ),
-                    onActivate: () => __webpack_require__(_),
+                    toolTipContent: _.statusToolTip || _.tooltip,
                   },
-                  Boolean(_.vo_warning) &&
-                    _.createElement(
-                      _._,
-                      {
-                        toolTipContent: _.vo_warning,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().VOWarning,
-                        },
-                        (0, _._)("#EventEditor_VOWarning"),
-                      ),
-                    ),
-                  _.status,
-                  _.name,
+                  _,
                 ),
-              );
+            },
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(
+                  _().GraphicalAssetsTab,
+                  _ && _().Active,
+                  _ && "ActiveTab",
+                  _,
+                ),
+                onActivate: () => __webpack_require__(_),
+              },
+              Boolean(_.vo_warning) &&
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: _.vo_warning,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().VOWarning,
+                    },
+                    (0, _._)("#EventEditor_VOWarning"),
+                  ),
+                ),
+              _.status,
+              _.name,
+            ),
+          );
         }),
         _ = (0, _._)(_);
     },

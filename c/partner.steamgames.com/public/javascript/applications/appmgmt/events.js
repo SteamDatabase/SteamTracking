@@ -585,7 +585,7 @@
                 {
                   className: _().AppBannerLinks,
                 },
-                Boolean(!_) &&
+                Boolean(!_ && _) &&
                   _.createElement(
                     "div",
                     {
@@ -3490,7 +3490,7 @@
                   return null;
                 })(_.appId, _, _);
                 _
-                  ? (_(_.clan_announcement_gid),
+                  ? (_(_.clan_event_gid),
                     (function () {
                       const _ = new URLSearchParams(window.location.search);
                       _.delete("submittedbuild"), _.delete("buildbranch");

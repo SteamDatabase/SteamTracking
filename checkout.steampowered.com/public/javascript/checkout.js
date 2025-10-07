@@ -6136,10 +6136,8 @@ function PollForTransactionStatus( txnid, retries, timeout )
 			      	   	}
 				}
 
-			  			      		g_bFinalizeTransactionInProgress = false;
-			  	g_bPollingForTransactionStatus = false;
-				g_timeoutPoll = false;
-				HandleFinalizeTransactionFailure( 2, 3, false, '' );
+			  					g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( txnid, retries-1, timeout ), timeout*1000 );
+				return;
 		    },
 		    onFailure: function()
 			{
