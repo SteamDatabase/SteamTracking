@@ -448,7 +448,9 @@
   }
 }
 ._3zXpFCyX2IiaD-MNF5KJFf ._3zjvrmOCIh31clDHjpLE2a {
-  height: 529px;
+  height: auto;
+  max-height: 77vh;
+  aspect-ratio: 16 / 9;
 }
 ._3zXpFCyX2IiaD-MNF5KJFf ._21N-VV6Gvjjc1FqzOMJQfi {
   max-width: 310px;
