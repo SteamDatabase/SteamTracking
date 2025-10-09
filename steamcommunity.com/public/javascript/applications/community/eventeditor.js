@@ -2621,7 +2621,7 @@
                       c.createElement(
                         "div",
                         { className: L.TileTextEventType },
-                        t.GetCategoryAsString(),
+                        t.GetCategoryAsString(!0),
                         S &&
                           c.createElement(
                             "span",

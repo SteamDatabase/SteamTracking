@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10129765";
+var CLSTAMP = "10135721";
 (() => {
   "use strict";
   function e(e) {

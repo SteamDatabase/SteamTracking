@@ -2625,7 +2625,7 @@
             : _.GetName();
         }
         GetCategoryAsString() {
-          return this.m_curModel.GetCategoryAsString();
+          return this.m_curModel.GetCategoryAsString(!0);
         }
         GetCategoryAsType() {
           return this.m_curModel.type;

@@ -2398,7 +2398,7 @@
         GetEventTypeAsString() {
           return (0, f.rG)(this.type);
         }
-        GetCategoryAsString() {
+        GetCategoryAsString(e) {
           return this.BHasTag("steam_award_nomination_request")
             ? (0, v.we)("#PartnerEvent_SteamAwardNominations")
             : this.BHasTag("steam_award_vote_request")
@@ -2411,7 +2411,7 @@
                       (this.BHasTagStartingWith("sale_nextfest_") &&
                         11 == this.type)
                     ? (0, v.we)("#PartnerEvent_SteamGameFestival_Broadcast")
-                    : this.BHasTag("vo_marketing_message")
+                    : this.BHasTag("vo_marketing_message") && e
                       ? (0, v.we)("#PartnerEvent_MM_MajorUpdate")
                       : this.GetEventTypeAsString();
         }

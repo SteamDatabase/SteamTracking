@@ -2691,7 +2691,7 @@
                         {
                           className: _.TileTextEventType,
                         },
-                        _.GetCategoryAsString(),
+                        _.GetCategoryAsString(!0),
                         _ &&
                           _.createElement(
                             "span",
