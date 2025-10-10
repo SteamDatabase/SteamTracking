@@ -2868,11 +2868,9 @@ https://steamcommunity.com/actions/AddFriendAjax
 https://steamcommunity.com/actions/AddToWishlist
 https://steamcommunity.com/actions/BlockUserAjax
 https://steamcommunity.com/actions/ConvertHTMLToBBCode
-https://steamcommunity.com/actions/FacebookAccountUnlink/
 https://steamcommunity.com/actions/GetOwnedApps/
 https://steamcommunity.com/actions/GroupInvite
 https://steamcommunity.com/actions/IgnoreFriendInviteAjax
-https://steamcommunity.com/actions/LinkMyFacebookProfile/
 https://steamcommunity.com/actions/LogFriendActivityUpvote
 https://steamcommunity.com/actions/PlayerList/
 https://steamcommunity.com/actions/RefreshCaptcha/

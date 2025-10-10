@@ -64,7 +64,6 @@
   Profile_FieldProfileBackground: "Profile Background",
   Profile_Edit_SelectBackground: "Select Background...",
   Profile_Edit_ChooseBackground: "Profile Background",
-  Profile_LinkWithFacebook: "Link with Facebook",
   Profile_Preferences_HideProfileAwards: "Hide Community Awards on my profile",
   Profile_Edit_UnsavedChangesWarning:
     "You have unsaved changes.  Are you sure you want to leave this page?",

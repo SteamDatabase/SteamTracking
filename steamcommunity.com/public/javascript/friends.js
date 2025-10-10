@@ -318,16 +318,6 @@ function RevokeToken( invite_token )
 	})
 }
 
-function UnlinkFacebook( from_page )
-{
-	PostToURLWithSession( 'https://steamcommunity.com/actions/FacebookAccountUnlink/', {from_page: from_page } );
-}
-
-function LinkFacebook( from_page )
-{
-	PostToURLWithSession( 'https://steamcommunity.com/actions/LinkMyFacebookProfile/', {from_page: from_page } );
-}
-
 function ToggleForEmpty( listSelector, messageElem )
 {
 	if ( $J( listSelector ).length ) { $J( messageElem ).hide(); } else { $J( messageElem ).show(); }

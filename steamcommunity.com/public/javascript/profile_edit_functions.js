@@ -473,12 +473,12 @@ function ShowcaseItemPicker( elSlot, eShowcase, purchaseid, iSlot, bTradableOnly
 
 	g_bModalModifyAnchorTargets = false;
 	ShowModalContent( url, 'Select an item to feature on your profile', url, false );
-	
+
 	// the inventory picker dialog will call OnItemSelected when the user chooses an item in the dialog
 	window.OnItemSelected = function( item ) {
-		
+
 		HideModalContent();
-		
+
 		// save the showcase config
 		SetShowcaseConfig(
 			eShowcase, purchaseid, iSlot, {appid: item.appid, item_contextid: item.contextid, item_assetid: item.assetid || item.id }
@@ -936,7 +936,7 @@ function setupEditors()
 						// country/state/city are interlinked, they use their own check/update handler
 						addEvent(i, 'change', updateLocation, false);
 					}
-					else 
+					else
 					{
 						addEvent(i, 'change', checkField, false);
 						if(i.id == 'primaryGroup')
@@ -1151,13 +1151,13 @@ function receiveGroupDetails()
 				var newGroupName = response.getElementsByTagName('groupName')[0].firstChild.nodeValue;
 				var newGroupAbbreviation = response.getElementsByTagName('groupAbbreviation')[0].firstChild.nodeValue;
 				var newGroupAvatar = response.getElementsByTagName('groupAvatar')[0].firstChild.nodeValue;
-				
+
 				document.getElementById('primaryGroupAvatarImage').src = newGroupAvatar;
 				document.getElementById('groupLink').innerHTML = '<a href="'+newGroupLink+'">View '+newGroupName+'\'s profile</a>';
-				
+
 				var groupList = document.getElementById('primaryGroup');
 				removeClass( 'primaryGroup', 'disabled' );
-				if(groupList.selectedIndex == currentVals['primaryGroup'] ) 
+				if(groupList.selectedIndex == currentVals['primaryGroup'] )
 				{
 					removeClass( 'primaryGroup', 'changed' );
 				}
@@ -1194,7 +1194,7 @@ function locationInteract(toggle)
 		currentDisabled['city'] = false;
 	}
 }
-	
+
 function receiveLocations()
 {
 	if(req.readyState == 4)
@@ -1210,7 +1210,7 @@ function receiveLocations()
 				var countryList = document.getElementById('country');
 				var stateList = document.getElementById('state');
 				var cityList = document.getElementById('city');
-				
+
 				var changeType = response.getElementsByTagName('changeType')[0].firstChild.nodeValue;
 				if(changeType == 'country')
 				{
@@ -1219,13 +1219,13 @@ function receiveLocations()
 					// clear existing lists
 					clearList(stateList);
 					clearList(cityList);
-					
+
 					// repopulate
 					var newStates = populateList(stateList, response.getElementsByTagName('state'));
 					var newCities = populateList(cityList, response.getElementsByTagName('city'));
 					stateList.selectedIndex = 0;
 					cityList.selectedIndex = 0;
-					
+
 					// see if it was states or cities we got back, adjust visibility accordingly
 					if(newStates > 1)
 					{
@@ -1290,7 +1290,7 @@ function receiveLocations()
 		}
 	}
 }
-					
+
 function clearList(listEl)
 {
 	while(listEl.firstChild != undefined)
@@ -1311,7 +1311,7 @@ function populateList(listEl, listItems)
 	}
 	return listItems.length;
 }
-			
+
 function checkAllowInput(e)
 {
 	el = window.event ? window.event.srcElement : e ? e.target : null;
@@ -1322,7 +1322,7 @@ function checkAllowInput(e)
 			el.blur();
 		}
 	}
-}	
+}
 
 function updateLocation(e)
 {
@@ -1410,7 +1410,7 @@ function updateLocation(e)
 				createQuery2(baseEditUrl, receiveLocations, postData);
 			}
 		}
-		else // id must be 'city'	
+		else // id must be 'city'
 		{
 			if(eCountryC || eStateC || eCityC)
 			{
@@ -1421,7 +1421,7 @@ function updateLocation(e)
 				removeClass( 'city', 'changed' );
 			}
 		}
-		
+
 	}
 }
 function checkField(e)
@@ -1507,16 +1507,6 @@ function addClass( elID, cName )
 	{
 		el.className += ' ' + cName;
 	}
-}
-
-function UnlinkFacebook( from_page )
-{
-	PostToURLWithSession( 'https://steamcommunity.com/actions/FacebookAccountUnlink/', {from_page: from_page } );
-}
-
-function LinkFacebook( from_page )
-{
-	PostToURLWithSession( 'https://steamcommunity.com/actions/LinkMyFacebookProfile/', {from_page: from_page } );
 }
 
 function SteamUniversalOpenAvatarUpload()
