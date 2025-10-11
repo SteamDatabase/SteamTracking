@@ -13514,18 +13514,25 @@
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppIDToDLCs = new Map();
+        m_mapAppIDToSoundTracks = new Map();
         m_mapPromise = new Map();
         GetDLCForAppID(_) {
           return this.m_mapAppIDToDLCs.get(_);
         }
-        async LoadDLCForAppID(_, _) {
+        GetSoundTracksForAppID(_) {
+          return this.m_mapAppIDToSoundTracks.get(_);
+        }
+        async LoadDLCAndSoundTracksForAppID(_, _) {
           return (
             this.m_mapPromise.has(_) ||
-              this.m_mapPromise.set(_, this.InternalLoadDLCForAppID(_, _)),
+              this.m_mapPromise.set(
+                _,
+                this.InternalLoadDLCAndSoundTracksForAppID(_, _),
+              ),
             this.m_mapPromise.get(_)
           );
         }
-        async InternalLoadDLCForAppID(_, _) {
+        async InternalLoadDLCAndSoundTracksForAppID(_, _) {
           if (!this.m_mapAppIDToDLCs.has(_) && 0 != _)
             try {
               let _ = {
@@ -13551,17 +13558,35 @@
                     is_released_somewhere: Boolean(_.is_released_somewhere),
                   });
                 }),
-                this.m_mapAppIDToDLCs.set(_, _);
+                this.m_mapAppIDToDLCs.set(_, _),
+                (_ = Array()),
+                _.data.soundtracks &&
+                  _.data.soundtracks.forEach((_) => {
+                    _.push({
+                      appid: _.appid,
+                      name: _.name,
+                      is_released_somewhere: Boolean(_.is_released_somewhere),
+                    });
+                  }),
+                this.m_mapAppIDToSoundTracks.set(_, _);
             } catch (_) {
               const _ = (0, _._)(_);
               console.error(
-                "LoadDLCForAppID for appid: " + _ + " hit: " + _.strErrorMsg,
+                "LoadDLCAndSoundTracksForAppID for appid: " +
+                  _ +
+                  " hit: " +
+                  _.strErrorMsg,
                 _,
               );
             }
-          return this.m_mapAppIDToDLCs.has(_)
-            ? this.m_mapAppIDToDLCs.get(_)
-            : [];
+          return {
+            dlcs: this.m_mapAppIDToDLCs.has(_)
+              ? this.m_mapAppIDToDLCs.get(_)
+              : [],
+            soundtracks: this.m_mapAppIDToSoundTracks.has(_)
+              ? this.m_mapAppIDToSoundTracks.get(_)
+              : [],
+          };
         }
         static s_Singleton;
         static Get() {
@@ -13585,9 +13610,9 @@
             !_ ||
               (_ == _ && _) ||
               _.Get()
-                .LoadDLCForAppID(_, null)
+                .LoadDLCAndSoundTracksForAppID(_, null)
                 .then((_) => {
-                  _(_), __webpack_require__(_);
+                  _(_.dlcs), __webpack_require__(_);
                 });
           }, [_, _, _]),
           _
@@ -13605,26 +13630,48 @@
             fnResetAppID: _,
           } = _,
           _ = _(_.parentAppID),
+          _ = (function (_) {
+            const [_, __webpack_require__] = (0, _.useState)(_),
+              [_, _] = (0, _.useState)(_.Get().GetSoundTracksForAppID(_));
+            return (
+              (0, _.useEffect)(() => {
+                !_ ||
+                  (_ == _ && _) ||
+                  _.Get()
+                    .LoadDLCAndSoundTracksForAppID(_, null)
+                    .then((_) => {
+                      _(_.soundtracks), __webpack_require__(_);
+                    });
+              }, [_, _, _]),
+              _
+            );
+          })(_.parentAppID),
           _ = (0, _.useMemo)(
-            () => _?.filter((_) => !_ || Boolean(_.is_released_somewhere)),
-            [_, _],
+            () => [
+              ...(_?.filter((_) => !_ || Boolean(_.is_released_somewhere)) ||
+                []),
+              ...(_?.filter((_) => !_ || Boolean(_.is_released_somewhere)) ||
+                []),
+            ],
+            [_, _, _],
           ),
           _ = (0, _.useMemo)(
             () => _?.filter((_) => !_ || !_.includes(_.appid)),
             [_, _],
-          ),
-          _ = (0, _.useMemo)(
-            () =>
-              _
-                ? _.map((_) => ({
-                    label: _.createElement(_, {
-                      appInfo: _,
-                    }),
-                    data: _.appid,
-                  }))
-                : [],
-            [_],
           );
+        console.log("adil", _, _);
+        const _ = (0, _.useMemo)(
+          () =>
+            _
+              ? _.map((_) => ({
+                  label: _.createElement(_, {
+                    appInfo: _,
+                  }),
+                  data: _.appid,
+                }))
+              : [],
+          [_],
+        );
         return _
           ? 0 == _.length && _
             ? _.createElement(
