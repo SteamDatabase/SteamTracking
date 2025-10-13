@@ -28919,7 +28919,7 @@
                           ? void 0
                           : e.reason) || a(!1);
                       });
-                }
+                } else a(!1);
                 return () => t.cancel("TagItemEditor: unmounting");
               }, []),
               { bLoading: t }

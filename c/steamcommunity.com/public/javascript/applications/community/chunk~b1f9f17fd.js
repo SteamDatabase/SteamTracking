@@ -31975,7 +31975,7 @@
                           ? void 0
                           : _.reason) || __webpack_require__(!1);
                       });
-                }
+                } else __webpack_require__(!1);
                 return () => _.cancel("TagItemEditor: unmounting");
               }, []),
               {
