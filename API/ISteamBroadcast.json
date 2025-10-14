@@ -2,6 +2,12 @@
     "name": "ISteamBroadcast",
     "methods": [
         {
+            "name": "PlayerStats",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": []
+        },
+        {
             "name": "ViewerHeartbeat",
             "version": 1,
             "httpmethod": "GET",
