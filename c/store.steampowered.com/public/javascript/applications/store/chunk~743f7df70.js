@@ -10259,6 +10259,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (_) => {
@@ -11150,26 +11151,15 @@
                 _,
               ),
             [__webpack_require__, _],
-          ),
-          _ = (0, _._)(() => new _._(_.sm_BBCodeDictionary, _, _));
-        return (
-          _.useEffect(() => {
-            _.UpdateOverrideLanguage(_);
-          }, [_, _]),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.ParseBBCode(
-              _,
-              {
-                showErrorInfo: _,
-                event: _,
-                bShowShortSpeakerInfo: _,
-              },
-              !0,
-            ),
-          )
-        );
+          );
+        return _.useMemo(
+          () => new _._(_.sm_BBCodeDictionary, _, _),
+          [_, _],
+        ).ParseBBCode(_, {
+          showErrorInfo: _,
+          event: _,
+          bShowShortSpeakerInfo: _,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

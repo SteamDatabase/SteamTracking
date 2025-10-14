@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Οι λεπτομέρειες του θέματος ενημερώθηκαν",
 	"moderationaction_locked": "Κλειδώθηκε",
 	"moderationaction_unlocked": "Ξεκλειδώθηκε",
-	"moderationaction_unknown": "Άγνωστη ενέργεια"
+	"moderationaction_unknown": "Άγνωστη ενέργεια",
+	"moderatormessage_count_note": "Σημειώσεις: %1$s",
+	"moderatormessage_count_warning": "Προειδοποιήσεις: %1$s",
+	"moderatormessage_count_bannotice": "Αποκλεισμοί: %1$s",
+	"moderatormessage_count_contentremoval": "Ειδοποιήσεις αφαίρεσης περιεχομένου: %1$s"
 }`);
     },
   },

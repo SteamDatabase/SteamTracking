@@ -257,10 +257,18 @@
           return this.RemoveGIDFromList(e, i.cB + t), o.data;
         }
         static sm_Instance;
+        static sm_SummaryInstance;
         static Get() {
           return (
             l.sm_Instance || ((l.sm_Instance = new l()), l.sm_Instance.Init()),
             l.sm_Instance
+          );
+        }
+        static GetSummaryStore() {
+          return (
+            l.sm_SummaryInstance ||
+              ((l.sm_SummaryInstance = new l(!0)), l.sm_SummaryInstance.Init()),
+            l.sm_SummaryInstance
           );
         }
       }
@@ -614,8 +622,8 @@
         h = a(72860),
         f = a(76684),
         y = a(12155),
-        F = a(60014),
-        I = a(62490),
+        I = a(60014),
+        F = a(62490),
         b = a(52038),
         k = a(61859),
         T = a(78327),
@@ -657,7 +665,7 @@
                     null,
                     4,
                     4,
-                    void 0,
+                    { only_summaries: !0 },
                     e,
                   );
                   if (!e.token.reason) {
@@ -665,7 +673,7 @@
                     let e = i
                       .filter((e) => e.GetAnnouncementGID() != a)
                       .map((e) => e.AnnouncementGID);
-                    I.fW(e);
+                    F.fW(e);
                     const t = e
                       .slice(0, 3)
                       .map((e) => n.GetClanEventFromAnnouncementGID(e));
@@ -814,8 +822,8 @@
           return l.createElement("div", {
             className: P().OtherEvents_EventCtn,
           });
-        const F = (0, g.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          I = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        const I = (0, g.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          F = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
         let k = C;
         return (
           C && (C.length > H || p.length > H) && (k = void 0),
@@ -879,7 +887,7 @@
                       { className: P().OtherEvents_SubTitle },
                       k,
                     ),
-                  Boolean(I > F)
+                  Boolean(F > I)
                     ? l.createElement(
                         "div",
                         { className: (0, b.A)(P().UpcomingCtn, "UpcomingCtn") },
@@ -904,7 +912,7 @@
       function W(e) {
         const { appid: t, bHidePrice: a } = e,
           [n] = (0, S.t7)(t, c.Xh),
-          r = (0, F.n9)(),
+          r = (0, I.n9)(),
           s = (0, T.Qn)();
         if (!n) return null;
         const o = n.GetBestPurchaseOption(),
@@ -1048,7 +1056,7 @@
         u = a(30470),
         E = a(56011),
         p = a(78327),
-        g = a(10981),
+        g = a(53835),
         v = a(12155),
         S = a(61859),
         A = a(52038),
@@ -1058,8 +1066,8 @@
         h = a(22797),
         f = a(32630),
         y = a(75933),
-        F = a(1596),
-        I = a(6379),
+        I = a(1596),
+        F = a(6379),
         b = a(17720),
         k = a(35685),
         T = a(82097),
@@ -1327,7 +1335,7 @@
             f.Ay,
             { feature: "steamawards_nominate" },
             r.createElement(
-              F.F,
+              I.F,
               {
                 gap: 12,
                 hideArrows: !(0, y.rp)(),
@@ -1462,14 +1470,14 @@
             if (a) return;
             (async () => {
               t.forEach((e) => {
-                I.O3.QueueLoadPartnerEvent(
+                F.O3.QueueLoadPartnerEvent(
                   e.clanid,
                   e.event_gid,
                   "dev" == u.TS.WEB_UNIVERSE,
                 );
               });
               const e = t.map((e) =>
-                I.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                F.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   b.b.InitFromClanID(e.clanid),
                   e.event_gid,
                   0,
@@ -1488,7 +1496,7 @@
                     f.Ay,
                     { feature: "steamawards_event" },
                     r.createElement(
-                      F.F,
+                      I.F,
                       {
                         gap: 12,
                         hideArrows: !(0, y.rp)(),
@@ -1517,7 +1525,7 @@
       }
       function j(e) {
         const { gidEvent: t } = e,
-          a = I.O3.GetClanEventModel(t);
+          a = F.O3.GetClanEventModel(t);
         if (!a) return null;
         return r.createElement(k.uY, {
           event: a,
@@ -1546,7 +1554,7 @@
           d = !o && m <= l;
         return (
           r.useEffect(() => {
-            I.O3.Init(), B.KN.InitGlobal().then(() => n(!0));
+            F.O3.Init(), B.KN.InitGlobal().then(() => n(!0));
           }, []),
           r.createElement(
             f.Ay,
@@ -2307,7 +2315,7 @@
               r.createElement(
                 "div",
                 { className: ge().VotingArea },
-                r.createElement(Fe, {
+                r.createElement(Ie, {
                   unSaleAppID: e.config.appid,
                   bIsVotingOpen: e.bVotingOpen,
                   bIsVotingPast: e.bVotingPast,
@@ -2410,14 +2418,14 @@
           )
         );
       }
-      function Fe(e) {
+      function Ie(e) {
         const { unSaleAppID: t, bIsVotingOpen: a, bIsVotingPast: n } = e,
           s = (0, d.Jo)(t),
           o = (0, d.a8)(t),
           i = (0, d.CF)();
         if (!s.data) return null;
         const l = s.data.votes.map((e) =>
-          r.createElement(Ie, { key: e.voteid, unSaleAppID: t, definition: e }),
+          r.createElement(Fe, { key: e.voteid, unSaleAppID: t, definition: e }),
         );
         let m = null;
         return (
@@ -2458,7 +2466,7 @@
           )
         );
       }
-      function Ie(e) {
+      function Fe(e) {
         const { definition: t, unSaleAppID: a } = e,
           n = (0, d.Mn)(a, t.voteid),
           s = (0, d.PV)(a, t.voteid),
@@ -2524,8 +2532,8 @@
           [E, v] = r.useState([]),
           [w, C] = r.useState(0),
           [N, f] = r.useState(!1),
-          [y, F] = r.useState(0),
-          [I, b] = r.useState(!i && !s),
+          [y, I] = r.useState(0),
+          [F, b] = r.useState(!i && !s),
           [k, T] = r.useState(),
           [B, Q] = r.useState(669),
           L =
@@ -2584,10 +2592,10 @@
             f(e);
           }, []),
           W = r.useCallback((e) => {
-            F(e), C(e);
+            I(e), C(e);
           }, []),
           U = r.useCallback(() => {
-            F(0), C(E[l.current]);
+            I(0), C(E[l.current]);
           }, [E]);
         if (1 == o)
           return r.createElement(h.t, {
@@ -2687,8 +2695,8 @@
                     (i || s) &&
                       r.createElement(
                         g.$n,
-                        { className: ge().HideShowBtn, onClick: () => b(!I) },
-                        I
+                        { className: ge().HideShowBtn, onClick: () => b(!F) },
+                        F
                           ? (0, S.we)("#Steamawards_HideFinalists_Btn")
                           : (0, S.we)("#Steamawards_ShowFinalists_Btn"),
                       ),
@@ -2710,7 +2718,7 @@
                     timeout: 500,
                     unmountOnExit: !0,
                     mountOnEnter: !0,
-                    in: I,
+                    in: F,
                     classNames: {
                       enter: ge().Enter,
                       enterActive: ge().EnterActive,

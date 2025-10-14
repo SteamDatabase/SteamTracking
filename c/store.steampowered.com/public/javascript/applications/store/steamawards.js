@@ -259,10 +259,18 @@
           return this.RemoveGIDFromList(_, _._ + _), _.data;
         }
         static sm_Instance;
+        static sm_SummaryInstance;
         static Get() {
           return (
             _.sm_Instance || ((_.sm_Instance = new _()), _.sm_Instance.Init()),
             _.sm_Instance
+          );
+        }
+        static GetSummaryStore() {
+          return (
+            _.sm_SummaryInstance ||
+              ((_.sm_SummaryInstance = new _(!0)), _.sm_SummaryInstance.Init()),
+            _.sm_SummaryInstance
           );
         }
       }
@@ -724,7 +732,9 @@
                     null,
                     4,
                     4,
-                    void 0,
+                    {
+                      only_summaries: !0,
+                    },
                     _,
                   );
                   if (!_.token.reason) {

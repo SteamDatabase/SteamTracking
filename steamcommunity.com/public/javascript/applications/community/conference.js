@@ -246,8 +246,8 @@
         b = n(52038),
         w = n(88619),
         T = n(53120),
-        N = n(45476);
-      function y(e) {
+        y = n(45476);
+      function N(e) {
         const { conferenceInfo: t } = e,
           n = t.broadcastSteamID.ConvertTo64BitString();
         return a.createElement(
@@ -293,11 +293,11 @@
           : a.createElement(
               "div",
               { className: T.broadcast_floating },
-              a.createElement(N.BroadcastEmbeddablePopoutHeader, {
+              a.createElement(y.BroadcastEmbeddablePopoutHeader, {
                 steamIDBroadcast: t.broadcastSteamID.ConvertTo64BitString(),
                 OnPreventPopup: () => l(!0),
               }),
-              a.createElement(y, { conferenceInfo: t }),
+              a.createElement(N, { conferenceInfo: t }),
             );
       }
       var k = n(14932);
@@ -690,8 +690,8 @@
           }
         };
       var Te = n(82227),
-        Ne = n(27543),
-        ye = n(73745),
+        ye = n(27543),
+        Ne = n(73745),
         De = n(55263);
       const Ae = { include_assets: !0 };
       function ke(e) {
@@ -714,7 +714,7 @@
         const v = R.KN.Get(),
           _ = (0, c.sf)(m.TS.LANGUAGE),
           p = "capsule",
-          [C, f, S, I, h, w, T, N, y, D, A] = (0, g.q3)(() => [
+          [C, f, S, I, h, w, T, y, N, D, A] = (0, g.q3)(() => [
             t.has_live_stream,
             t.GetEventType(),
             t.GetAllTags(),
@@ -780,7 +780,7 @@
             l ? de().DisableHovers : de().EnableHovers,
             d && de().VideoPlayerReady,
             B && de().HasVideo,
-            v.HasEventBeenRead(N) && de().HasBeenRead,
+            v.HasEventBeenRead(y) && de().HasBeenRead,
             "wide" === o && de().WideMode,
             "carousel" === o && de().CarouselMode,
             "upcoming" === o && de().UpcomingMode,
@@ -806,7 +806,7 @@
           z =
             28 !== f &&
             12 !== f &&
-            E.HD.GetTimeNowWithOverride() < y &&
+            E.HD.GetTimeNowWithOverride() < N &&
             a.createElement(
               "div",
               {
@@ -1069,7 +1069,7 @@
           const { eventModel: t, calendarEvent: n, className: l } = e,
             o = (0, M.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
             r = t ? t.GetStartTimeAndDateUnixSeconds() : n.start_time,
-            c = t && (0, Ne.JS)(t.type) && t.GetEndTimeAndDateUnixSeconds();
+            c = t && (0, ye.JS)(t.type) && t.GetEndTimeAndDateUnixSeconds();
           if (c && r < o && o < c) {
             const e = c - o,
               t = (0, f.Hq)(e, !0);
@@ -1264,8 +1264,8 @@
           );
         }
       };
-      (0, q.Cg)([ye.oI], Me.prototype, "OnPerformVoteUp", null),
-        (0, q.Cg)([ye.oI], Me.prototype, "OnDiscussionClicked", null),
+      (0, q.Cg)([Ne.oI], Me.prototype, "OnPerformVoteUp", null),
+        (0, q.Cg)([Ne.oI], Me.prototype, "OnDiscussionClicked", null),
         (Me = (0, q.Cg)([Y.PA], Me));
       var Re = n(8107),
         Ve = n(95034);
@@ -1277,7 +1277,7 @@
           [r, c] = (0, Ve.QD)(Ue, null),
           [s, m] = (0, Ve.QD)(We, null);
         return (
-          (0, ye.hL)(n, (e, t) => {
+          (0, Ne.hL)(n, (e, t) => {
             c(e), m(i.b.InitFromClanID(t).ConvertTo64BitString());
           }),
           a.useEffect(() => {
@@ -2003,6 +2003,13 @@
           return (
             i.sm_Instance || ((i.sm_Instance = new i()), i.sm_Instance.Init()),
             i.sm_Instance
+          );
+        }
+        static GetSummaryStore() {
+          return (
+            i.sm_SummaryInstance ||
+              ((i.sm_SummaryInstance = new i(!0)), i.sm_SummaryInstance.Init()),
+            i.sm_SummaryInstance
           );
         }
       }

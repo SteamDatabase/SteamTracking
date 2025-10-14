@@ -6,11 +6,9 @@
   {
     53120: (e) => {
       e.exports = {
-        strStreamIconCapsuleArtHeight: "90px",
-        strStreamIconScreenshotArtHeight: "90px",
+        strStreamIconCapsuleArtHeight: "58px",
+        strStreamIconScreenshotArtHeight: "82px",
         bordered_container: "_3zXpFCyX2IiaD-MNF5KJFf",
-        video_placeholder: "_1KU955BfHBkZdSvJncjc9V",
-        embedded_player: "_12fBJU1kOnQCeKc9JFTGMX",
         WidePlayer: "_3zjvrmOCIh31clDHjpLE2a",
         store_chat_ctn: "_21N-VV6Gvjjc1FqzOMJQfi",
         item_drop_ctn: "ifxDfv8dAGa5u71nRT0CJ",
@@ -22,10 +20,10 @@
         bordered_corner_expanded: "ahz31bshwySKGB_tBKf14",
         bordered_corner_shrinked: "L8sFYvKOUztrhXdjxy7mp",
         broadcast_settings_icon: "_37ugZJhL-qCRkdeZBRju2h",
-        container: "_2yiy6ghVhj3fkC4I01odHC",
         side_panels: "T_zpRAGXggYgVaRyCSXDu",
-        multistream: "_1DS-WZoUJyBitKOZoq7u3n",
         wrapper: "_1mH-vDK7JF0NBAdZfdzr1a",
+        video_placeholder: "_1KU955BfHBkZdSvJncjc9V",
+        embedded_player: "_12fBJU1kOnQCeKc9JFTGMX",
         NoChat: "_2QQm1StfkXOLXrBhLy_jYP",
         video_container: "_1gbNxru_N2ui-EXc2_zmRy",
         viewer_bar: "_2YgphHYykz192eH3FgalS4",
@@ -37,11 +35,15 @@
         vod_title: "_2xKaMJn0nexa3MMJvN6yq-",
         stream_icon_and_viewer_container: "_2sbrGTttGmHbz8ZPsO1YuR",
         display_capsule_art: "SsORVFNW3KBOdsIxDVqcd",
+        ViewerNum: "_1reMoMi3BZbMUs6jHW93f1",
+        StreamCapsule: "biTh7mrlaSv_WSY2gFsCH",
         stream_icon_container: "_2zBOiujXasDdHPmFPW4O90",
         stream_icon_hide_on_hover: "qYFsGojW19eJQAuemyuHQ",
         stream_icon_show_on_hover: "_29z3Nu6SGTNFDwIw8Gdvuk",
         stream_icon: "_1LBYspkgF9X97b89kPRBFC",
         stream_icon_selected: "mSpzeNvpTqIiZHkJgHRw7",
+        multistream: "_1DS-WZoUJyBitKOZoq7u3n",
+        MultiStreamCtn: "_1K6j5rrGvLPb8aT2L7CBAA",
         scrollingstreams: "_3aYWlUqW6-SosI72nizpP4",
         stream_icon_arrow: "_2Qpu-LNderkIBi_DTPhT30",
         clear_div: "_1oCVbTJqa4Av40NuPdztIv",
@@ -56,7 +58,11 @@
         detail_chat_ctn: "IaFnsy98_mIwYox4zmFu2",
         ChatEntry: "Rs7EltAKuQWw9U0v2bKxp",
         Event: "_1A0NY-wvZmZAqMMiw9oTYR",
-        rightPanel: "_16MsC-eMFxqhpcjlDqmrCM",
+        container: "_2yiy6ghVhj3fkC4I01odHC",
+        LeftPanelCtn: "_6O_psaoFJTLs30M_ePzZ7",
+        RightPanelCtn: "yRHl2kJWdMGdwVN_70nrP",
+        SidePanelBackground: "_2FYu31I46rjm0DVxq-ufK9",
+        LeftPanel: "o6XqrPpvDrpRsE7SpW8qJ",
       };
     },
     63508: (e) => {
@@ -14722,11 +14728,10 @@
           if (this.props.bWidePlayer) return r;
           const i = aa.j.Get().GetConcurrentStreams(this.props) > 1;
           let a = yi.es.GetOrCreateBroadcastInfo(e.steamid).m_nAppID,
-            s = d.createElement(
-              "div",
-              { className: ga().rightPanel },
-              d.createElement(xa, { key: "right" + a, ImgUrl: e.right_panel }),
-            ),
+            s = d.createElement(xa, {
+              key: "right" + a,
+              ImgUrl: e.right_panel,
+            }),
             n = d.createElement(xa, { key: "left" + a, ImgUrl: e.left_panel });
           if (a < 11) {
             const t = ri.GetAppIDListForBroadcasterSteamID(e.steamid);
@@ -14889,7 +14894,11 @@
                         style: { ...this.state.innerStyle },
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
-                      s.leftPanel,
+                      d.createElement(
+                        "div",
+                        { className: ga().LeftPanelCtn },
+                        s.leftPanel,
+                      ),
                       d.createElement(Oa, {
                         stream: e,
                         bStartMuted: this.state.bStartMuted,
@@ -14897,7 +14906,11 @@
                         fnOnVideoEnd: l,
                         bWidePlayer: this.props.bWidePlayer,
                       }),
-                      s.rightPanel,
+                      d.createElement(
+                        "div",
+                        { className: ga().RightPanelCtn },
+                        s.rightPanel,
+                      ),
                       Boolean(this.state.bExpanded) &&
                         d.createElement(Na, {
                           stream: e,
@@ -15173,8 +15186,8 @@
         render() {
           let e = this.props.ImgUrl;
           return d.createElement(
-            d.Fragment,
-            null,
+            "div",
+            { className: ga().SidePanelBackground },
             e &&
               d.createElement("img", {
                 className: ga().side_panels,
@@ -15275,14 +15288,18 @@
                 [ga().scrollingstreams]: o.length > 3,
               }),
             },
-            o.map((e) =>
-              d.createElement(Da, {
-                key: e.accountid ?? e.steamid,
-                stream: e,
-                bSelected: t.accountid == e.accountid,
-                onStreamSelect: r,
-                bShowCapsuleArt: a,
-              }),
+            d.createElement(
+              "div",
+              { className: ga().MultiStreamCtn },
+              o.map((e) =>
+                d.createElement(Da, {
+                  key: e.accountid ?? e.steamid,
+                  stream: e,
+                  bSelected: t.accountid == e.accountid,
+                  onStreamSelect: r,
+                  bShowCapsuleArt: a,
+                }),
+              ),
             ),
           )
         );
@@ -15316,7 +15333,7 @@
           },
           d.createElement(
             Yi.j,
-            { type: "app", id: s },
+            { type: "app", id: s, hoverClassName: ga().StreamCapsule },
             d.createElement(
               ca.K,
               {
@@ -15341,8 +15358,11 @@
                   d.Fragment,
                   null,
                   d.createElement(Bi.y_e, null),
-                  " ",
-                  (0, ma.Dq)(l),
+                  d.createElement(
+                    "div",
+                    { className: ga().ViewerNum },
+                    (0, ma.Dq)(l),
+                  ),
                 )
               : u,
           ),
@@ -17699,8 +17719,8 @@
         c = r(68451),
         m = r(52038),
         d = r(61859);
-      function u(e, t) {
-        return e + "economy/sticker/" + encodeURIComponent(t);
+      function u(e, t, r = !1) {
+        return `${e}economy/sticker${r ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var g = r(78327),
         p = r(16676),

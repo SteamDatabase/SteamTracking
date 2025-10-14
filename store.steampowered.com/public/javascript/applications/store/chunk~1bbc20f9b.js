@@ -125,9 +125,12 @@
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(e, t) {
-          (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
+          e instanceof Map
+            ? (this.m_dictComponents = e)
+            : (this.m_dictComponents = new Map(Object.entries(e))),
+            (this.m_fnAccumulatorFactory = t);
         }
-        Parse(e, t, n = !1) {
+        Parse(e, t, n = !0) {
           const r = (function (e, t) {
             const n = [];
             let r = { type: 0, text: "" },
@@ -334,7 +337,7 @@
         UpdateOverrideLanguage(e) {
           this.m_renderingLanguage = e;
         }
-        ParseBBCode(e, t, n = !1) {
+        ParseBBCode(e, t, n = !0) {
           let r = 0;
           const a = this.Parse(
             e,

@@ -13826,7 +13826,7 @@
     },
     86261: (e, t, r) => {
       "use strict";
-      r.d(t, { us: () => Ue, fh: () => Fe, Bm: () => Ae });
+      r.d(t, { us: () => Te, fh: () => Ue, Bm: () => Fe });
       var i = r(52967),
         n = r(42780),
         a = r(22837),
@@ -15008,17 +15008,16 @@
             ? o.createElement("div", null, (0, B.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      var ze = r(73745),
-        Te = r(73560);
-      class Ue {
+      var ze = r(73560);
+      class Te {
         static AddDictionary(e) {
-          Ue.sm_BBCodeDictionary = new Map([
-            ...Array.from(Ue.sm_BBCodeDictionary.entries()),
+          Te.sm_BBCodeDictionary = new Map([
+            ...Array.from(Te.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function Fe(e) {
+      function Ue(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -15031,7 +15030,7 @@
             (e) =>
               new c.gL(
                 new c.PV(
-                  new c.pH(new n.OJ(new n.R8(), 0), e, (0, Te.m$)(), {
+                  new c.pH(new n.OJ(new n.R8(), 0), e, (0, ze.m$)(), {
                     partnerEventStore: r,
                     event: s,
                   }),
@@ -15039,24 +15038,16 @@
                 e,
               ),
             [r, s],
-          ),
-          u = (0, ze.YR)(() => new i.B(Ue.sm_BBCodeDictionary, d, a));
-        return (
-          o.useEffect(() => {
-            u.UpdateOverrideLanguage(a);
-          }, [u, a]),
-          o.createElement(
-            o.Fragment,
-            null,
-            u.ParseBBCode(
-              t,
-              { showErrorInfo: l, event: s, bShowShortSpeakerInfo: m },
-              !0,
-            ),
-          )
-        );
+          );
+        return o
+          .useMemo(() => new i.B(Te.sm_BBCodeDictionary, d, a), [d, a])
+          .ParseBBCode(t, {
+            showErrorInfo: l,
+            event: s,
+            bShowShortSpeakerInfo: m,
+          });
       }
-      function Ae(e) {
+      function Fe(e) {
         const {
             strTag: t,
             args: r,
@@ -15064,7 +15055,7 @@
             children: n,
             ...l
           } = e,
-          c = Ue.sm_BBCodeDictionary.get(t);
+          c = Te.sm_BBCodeDictionary.get(t);
         return c
           ? o.createElement(c.Constructor, {
               context: l,
@@ -15075,7 +15066,7 @@
             })
           : o.createElement(o.Fragment, null, `[${t}]`, n, `[/${t}]`);
       }
-      Ue.sm_BBCodeDictionary = new Map([
+      Te.sm_BBCodeDictionary = new Map([
         ...Array.from(l.W4.entries()),
         ...Array.from(
           (null == _e &&

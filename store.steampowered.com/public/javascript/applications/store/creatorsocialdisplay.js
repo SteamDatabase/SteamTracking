@@ -20,8 +20,9 @@
       n.d(t, {
         G6: () => a,
         Gg: () => d,
+        MS: () => f,
         Ow: () => o,
-        YM: () => f,
+        YM: () => E,
         mZ: () => _,
         t7: () => u,
         zX: () => p,
@@ -43,8 +44,8 @@
             include_platforms: f,
             include_all_purchase_options: E,
             include_screenshots: k,
-            include_trailers: g,
-            include_ratings: S,
+            include_trailers: S,
+            include_ratings: g,
             include_tag_count: h,
             include_reviews: v,
             include_basic_info: A,
@@ -63,8 +64,8 @@
               include_platforms: f,
               include_all_purchase_options: E,
               include_screenshots: k,
-              include_trailers: g,
-              include_ratings: S,
+              include_trailers: S,
+              include_ratings: g,
               include_tag_count: h,
               include_reviews: v,
               include_basic_info: A,
@@ -90,7 +91,7 @@
                   })),
               () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, r, d, m, p, f, E, k, g, S, h, v, A, I, y, T, G, b, w, o]),
+          }, [e, t, r, d, m, p, f, E, k, S, g, h, v, A, I, y, T, G, b, w, o]),
           !e)
         )
           return [null, 2];
@@ -131,8 +132,8 @@
             include_ratings: f,
             include_tag_count: E,
             include_reviews: k,
-            include_basic_info: g,
-            include_supported_languages: S,
+            include_basic_info: S,
+            include_supported_languages: g,
             include_full_description: h,
             include_included_items: v,
             include_assets_without_overrides: A,
@@ -152,8 +153,8 @@
                 include_ratings: f,
                 include_tag_count: E,
                 include_reviews: k,
-                include_basic_info: g,
-                include_supported_languages: S,
+                include_basic_info: S,
+                include_supported_languages: g,
                 include_full_description: h,
                 include_included_items: v,
                 include_assets_without_overrides: A,
@@ -176,7 +177,7 @@
               }),
               () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, r, a, u, o, d, _, m, p, f, E, k, g, S, h, v, A, I, y]),
+          }, [e, t, r, a, u, o, d, _, m, p, f, E, k, S, g, h, v, A, I, y]),
           !e)
         )
           return 2;
@@ -197,7 +198,10 @@
       function p(e, t, n) {
         return m(e, 0, t, n);
       }
-      function f() {
+      function f(e, t, n) {
+        return m(e, 2, t, n);
+      }
+      function E() {
         i.useEffect(
           () => (
             s.A.Get().SetReturnUnavailableItems(!0),
@@ -209,7 +213,7 @@
     },
     18663: (e, t, n) => {
       "use strict";
-      n.d(t, { D1: () => h, lS: () => E, lz: () => S, nK: () => g });
+      n.d(t, { D1: () => h, lS: () => E, lz: () => g, nK: () => S });
       var r = n(90626),
         c = n(55263),
         i = n(95695),
@@ -306,7 +310,7 @@
             )
           : null;
       }
-      function g(e) {
+      function S(e) {
         return (0, r.useMemo)(
           () =>
             e
@@ -323,9 +327,9 @@
           [e],
         );
       }
-      function S(e) {
+      function g(e) {
         const { gidClanEvent: t, rgSocial: n } = e,
-          c = g(n);
+          c = S(n);
         return c && 0 != c.length && d.TS.IMG_URL
           ? r.createElement(
               r.Fragment,

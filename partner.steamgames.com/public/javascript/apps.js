@@ -205,6 +205,18 @@ function SetDoNotRecordCoplay( appid, checkState )
 
 
 //
+// Set whether the we record coplay for this game
+//
+function SetDoNotPublishCoplay( appid, checkState )
+{
+	AppsAjaxRequest( g_szBaseURL + '/apps/setdontpublishcoplay/' + appid,
+		{ 'coplay_do_not_publish' : checkState },
+		CommonSetHandler
+		);
+}
+
+
+//
 // Set whether the frenemy matchmaking ( friend blocking ) should be enabled for this game
 //
 function SetAppUsesFrenemies( appid, frenemyState )

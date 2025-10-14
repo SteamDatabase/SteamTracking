@@ -4954,9 +4954,12 @@
       r.d(t, { Al: () => i, CS: () => n, op: () => s, vE: () => o });
       class i {
         constructor(e, t) {
-          (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
+          e instanceof Map
+            ? (this.m_dictComponents = e)
+            : (this.m_dictComponents = new Map(Object.entries(e))),
+            (this.m_fnAccumulatorFactory = t);
         }
-        Parse(e, t, r = !1) {
+        Parse(e, t, r = !0) {
           const i = (function (e, t) {
             var r, i, n;
             const a = [];

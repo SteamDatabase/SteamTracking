@@ -664,6 +664,7 @@
         LegionGoScreenClick: "mX0CyLG2ckFSmF-E26ZSQ",
         BatteryIcon: "_3xy45At7o_lkxcLoSTF6e0",
         LegacySizing: "_35pkQMXbFQAF2v1VrIAsF7",
+        FlipInRTL: "_1CpOAgPPD7f_fGI4HaYX6C",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -7195,6 +7196,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  creator_clan_account_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -13116,6 +13122,12 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  must_purchase_as_set: {
+                    _: 48,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -18039,7 +18051,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -18158,20 +18169,6 @@
             _.current.value
           ),
           [_],
-        );
-      }
-      function _(_) {
-        const _ = _.useRef({
-          value: void 0,
-          bConstructed: !1,
-        });
-        return (
-          _.current.bConstructed ||
-            (_.current = {
-              value: _(),
-              bConstructed: !0,
-            }),
-          _.current.value
         );
       }
       function _(_) {
@@ -25544,10 +25541,10 @@
         }
         AdjustSliderForClientX(_, _) {
           let _ =
-            ((_ - this.m_rectSlider.left) /
-              (this.m_rectSlider.right - this.m_rectSlider.left)) *
-              (this.props.max - this.props.min) +
-            this.props.min;
+            (_ - this.m_rectSlider.left) /
+            (this.m_rectSlider.right - this.m_rectSlider.left);
+          this.m_elSlider?.matches(":dir(rtl)") && (_ = 1 - _);
+          let _ = _ * (this.props.max - this.props.min) + this.props.min;
           _ = Math.floor(_ + 0.5);
           const _ = this.ClampValue(_);
           _ != this.props.value &&
@@ -25574,7 +25571,10 @@
               (100 * (this.props.value - this.props.min)) /
                 (this.props.max - this.props.min) +
               "%";
-            (_.width = _), (_.left = _);
+            (_.width = _),
+              (_ = {
+                "--position": _,
+              });
           }
           const { label: _, description: _, tooltip: _, ..._ } = this.props,
             _ = this.props.renderValue ?? _;
@@ -28797,8 +28797,9 @@
               null == this.m_handleBounds
                 ? 0
                 : this.m_handleBounds.right - this.m_handleBounds.left,
-            _ = _ - _;
-          return (_ - this.m_sliderBounds.left - _ / 2) / _;
+            _ = _ - _,
+            _ = (_ - this.m_sliderBounds.left - _ / 2) / _;
+          return this.m_refSlider.current?.matches(":dir(rtl)") ? 1 - _ : _;
         }
         BShouldTriggerHapticOnSnap() {
           const _ = this.normalizedStep;
@@ -29887,7 +29888,9 @@
         ycU: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { none: _, partial: __webpack_require__, ..._ } = _;
@@ -30453,7 +30456,7 @@
         );
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, className: __webpack_require__, ..._ } = _;
         switch (_) {
           case "up":
             return _.createElement(
@@ -30462,7 +30465,8 @@
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 36 36",
                 fill: "none",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
@@ -30476,7 +30480,8 @@
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 36 36",
                 fill: "none",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
@@ -30490,7 +30495,8 @@
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 36 36",
                 fill: "none",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
@@ -30504,7 +30510,8 @@
                 viewBox: "0 0 36 36",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
@@ -39194,7 +39201,6 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -39825,6 +39831,7 @@
           is_support: !1,
           is_limited: !1,
           is_partner_member: !1,
+          is_valve_email: !1,
           short_url: "",
           country_code: "",
           excluded_content_descriptors: [3, 4, 1],

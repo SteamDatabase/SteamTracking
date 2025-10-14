@@ -240,6 +240,8 @@
         StoreSaleWidgetContainer: "_2hhNOdcC6yLwL_rugP3YLf",
         LibraryAssetExpandedDisplay: "PZY_7wH_NY7OgzH9MBiB8",
         SaleItemDefaultCapsuleDisplay: "_37iggltdgh0RtNIECJCfOj",
+        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
+        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
         MarketingMessage: "_3_q87LhuWitbYSEHOVKYlM",
         StoreSaleWidgetRight: "v9uRg57bwOaPsvAnkXESO",
         StoreSaleWidgetHalfLeft: "_111nfdz8Xyg7lDjTWv_OmK",
@@ -284,13 +286,12 @@
         SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
         Category: "_2lQNYB6g6C7aiw0GDPe9fq",
         CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
-        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
         ReviewScores: "_3MxPBWjpjU_Gm8SIgi5g8A",
         StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
         StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
+        Action: "_2zssEuiPfY5YdQlnihDfVD",
         Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
         WishList: "_1djkdp7OAd0mF3a90RKf27",
-        Action: "_2zssEuiPfY5YdQlnihDfVD",
         SingleLineMode: "_1ZlGJxv-xQaABSvaVvMlNq",
         StoreSaleDiscountedPriceCtn: "_3NhLu7mTdty7JufpSpz6Re",
         StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
@@ -341,7 +342,6 @@
         BundleContentItem: "_2sdNOCzaF2AIAuenP19tA6",
         StoreSaleWidgetOuterContainer: "_1_P15GG6AKyF_NMX2j4-Mu",
         ContentsCount: "_353LzpA83V-kiAWaKcQAFg",
-        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
         PreviewItem: "_2yhQb4aKtskchqwmpCVbMq",
         DeckCompatIcon: "_1Nju8xukRGXgeu2mN0nVjT",
         BundleTag: "_1qR-LifiFC4bCiow5xRIy0",
@@ -17362,7 +17362,7 @@
     },
     45359: (e, t, r) => {
       "use strict";
-      r.d(t, { _Q: () => ee, aU: () => $, pb: () => Z, qn: () => J });
+      r.d(t, { _Q: () => te, aU: () => ee, pb: () => K, qn: () => X });
       var i = r(75844),
         a = r(90626),
         n = r(6866),
@@ -17406,8 +17406,9 @@
         j = r(81393),
         V = r(79613),
         q = r(49411),
-        x = r(27666);
-      const Z = (0, i.PA)((e) => {
+        x = r(27666),
+        Z = r(30894);
+      const K = (0, i.PA)((e) => {
           var t, r;
           const {
               bIsHovered: i,
@@ -17429,51 +17430,54 @@
               bAllowTwoLinesForHeader: P,
               bShowReviewSummary: j,
               bShowDeckCompatibilityDialog: x,
-              bAutoFocus: Z,
-              fnOnClickOverride: K,
-              bIsMarketingMessage: Y,
+              bAutoFocus: K,
+              fnOnClickOverride: Q,
+              bIsMarketingMessage: J,
             } = e,
-            J = (0, U.n9)(),
-            X = (0, q.w)(),
-            ee = a.useMemo(
+            X = (0, U.n9)(),
+            $ = (0, q.w)(),
+            te = a.useMemo(
               () => (null == u ? void 0 : u.GetIncludedAppIDsOrSelf()),
               [u],
             ),
-            te = (0, a.useRef)(null),
-            [re, ie] = (0, a.useState)(!1),
-            ae = (0, D.Qn)();
+            re = (0, a.useRef)(null),
+            [ie, ae] = (0, a.useState)(!1),
+            ne = (0, D.Qn)();
           if (
             ((0, a.useEffect)(() => {
-              te.current && ie(te.current.offsetWidth < 370);
-            }, [te]),
+              re.current && ae(re.current.offsetWidth < 370);
+            }, [re]),
             !u)
           )
             return null;
-          const ne = u.GetBestPurchaseOption().discount_pct,
-            se = u.GetIncludedAppIDs().length,
-            oe = (0, m.L3)(J),
-            le = (0, n.tB)(u.GetStorePageURL(z)),
-            ce = Boolean(!H && se > 1),
-            de = u.BHasTags()
+          const se = u.GetBestPurchaseOption().discount_pct,
+            oe = u.GetIncludedAppIDs().length,
+            le = u
+              .GetIncludedAppIDs()
+              .filter((e) => Z.Fm.Get().BOwnsApp(e)).length,
+            ce = (0, m.L3)(X),
+            de = (0, n.tB)(u.GetStorePageURL(z)),
+            me = Boolean(!H && oe > 1),
+            ue = u.BHasTags()
               ? u.GetTagIDs()
               : (null == p ? void 0 : p.BHasTags())
                 ? p.GetTagIDs()
                 : [],
-            me = 1 == u.GetStoreItemType() && 1 == se,
-            ue = 0 == u.GetStoreItemType() || me,
-            pe = me && _ ? _.GetID() : g.id,
-            ge = (0, m.It)(le, J, X),
-            _e = (0, V.Ae)(),
-            he =
+            pe = 1 == u.GetStoreItemType() && 1 == oe,
+            ge = 0 == u.GetStoreItemType() || pe,
+            _e = pe && _ ? _.GetID() : g.id,
+            he = (0, m.It)(de, X, $),
+            Be = (0, V.Ae)(),
+            be =
               z && u.HasDemoStandaloneStorePage()
                 ? u.GetDemoStandaloneStorePageAppIDs()[0]
                 : I,
-            Be =
+            ye =
               (null === (t = u.GetName()) || void 0 === t ? void 0 : t.length) >
               0
                 ? u.GetName()
                 : _.GetName(),
-            be =
+            we =
               (null === (r = u.GetFormattedSteamReleaseDate()) || void 0 === r
                 ? void 0
                 : r.length) > 0
@@ -17481,21 +17485,24 @@
                 : null == _
                   ? void 0
                   : _.GetFormattedSteamReleaseDate();
-          let ye = u.GetShortDescription();
-          (2 == u.GetStoreItemType() || (1 == u.GetStoreItemType() && !me)) &&
-            (ye = ne
-              ? (0, k.we)("#Sale_BundleSave_WithDiscount", ne, se)
-              : (0, k.we)("#Sale_BundleSave", se)),
-            (ye =
-              (null == ye ? void 0 : ye.length) > 0
-                ? ye
+          let fe = u.GetShortDescription();
+          (2 == u.GetStoreItemType() || (1 == u.GetStoreItemType() && !pe)) &&
+            (fe =
+              le > 0 && le < oe
+                ? (0, k.we)("#Sale_Bundle_CompletePartialSet", le, oe)
+                : se
+                  ? (0, k.we)("#Sale_BundleSave_WithDiscount", se, oe)
+                  : (0, k.we)("#Sale_BundleSave", oe)),
+            (fe =
+              (null == fe ? void 0 : fe.length) > 0
+                ? fe
                 : null == _
                   ? void 0
                   : _.GetShortDescription());
-          const we = ae || u.BIsReleased() || u.BIsPrePurchase();
+          const Se = ne || u.BIsReleased() || u.BIsPrePurchase();
           return a.createElement(
             v.oj,
-            { appid: ue ? u.GetAppID() : void 0 },
+            { appid: ge ? u.GetAppID() : void 0 },
             a.createElement(
               o.Z,
               {
@@ -17503,36 +17510,36 @@
                   [G().StoreSaleWidgetOuterContainer]: !0,
                   [G().AllowTwoLineHeader]: P,
                 }),
-                onMouseEnter: () => !_e && c(!0),
-                onMouseLeave: () => !_e && c(!1),
+                onMouseEnter: () => !Be && c(!0),
+                onMouseLeave: () => !Be && c(!1),
                 "flow-children": "grid",
                 navEntryPreferPosition: l.iU.PREFERRED_CHILD,
-                autoFocus: Z,
+                autoFocus: K,
                 navKey: "preview_widget_" + u.GetID(),
               },
               a.createElement(
                 s.ml,
                 {
-                  onClick: Y ? K : null,
+                  onClick: J ? Q : null,
                   className: (0, A.A)(
                     G().StoreSaleWidgetContainer,
                     G().SaleItemDefaultCapsuleDisplay,
-                    Y ? G().MarketingMessage : "",
+                    J ? G().MarketingMessage : "",
                   ),
-                  ...(0, C.S)(u, J, ae, z, void 0, K),
-                  preferredFocus: ce,
+                  ...(0, C.S)(u, X, ne, z, void 0, Q),
+                  preferredFocus: me,
                 },
                 a.createElement(
                   "div",
                   { className: (0, A.A)(G().StoreSaleWidgetHalfLeft) },
                   a.createElement(
                     L.u,
-                    { type: h, id: he, fnHoverState: c },
+                    { type: h, id: be, fnHoverState: c },
                     a.createElement(
                       "div",
                       { className: G().StoreSaleWidgetImage },
-                      a.createElement(w.V, { appids: ee }),
-                      a.createElement($, { info: g, imageType: "header" }),
+                      a.createElement(w.V, { appids: te }),
+                      a.createElement(ee, { info: g, imageType: "header" }),
                       a.createElement(E.J, { storeItem: u }),
                       Boolean(g && i) && a.createElement(b.m, { appInfo: g }),
                     ),
@@ -17543,17 +17550,17 @@
                   {
                     className: (0, A.A)(
                       G().StoreSaleWidgetRight,
-                      ce ? G().Bundle : "",
+                      me ? G().Bundle : "",
                     ),
                   },
-                  Boolean(ue && !K) &&
+                  Boolean(ge && !Q) &&
                     a.createElement(W.EP, {
-                      appID: pe,
+                      appID: _e,
                       classOverride: (0, A.A)(
                         B().WishlistButtonNotTop,
                         "WishlistButton",
                       ),
-                      snr: oe,
+                      snr: ce,
                     }),
                   a.createElement(
                     "div",
@@ -17561,9 +17568,9 @@
                     a.createElement(
                       "a",
                       {
-                        href: K ? void 0 : ge,
+                        href: Q ? void 0 : he,
                         target: D.TS.IN_CLIENT ? void 0 : "_blank",
-                        onClick: K,
+                        onClick: Q,
                       },
                       a.createElement(
                         "div",
@@ -17573,15 +17580,15 @@
                             "StoreSaleWidgetTitle",
                           ),
                         },
-                        Be,
+                        ye,
                       ),
                     ),
                   ),
-                  de &&
+                  ue &&
                     a.createElement(
                       "div",
                       { className: G().StoreSaleWidgetTags },
-                      de.map((e) =>
+                      ue.map((e) =>
                         a.createElement(M.p, {
                           key: "tag_" + e,
                           tagid: e,
@@ -17591,12 +17598,12 @@
                     ),
                   a.createElement(
                     "div",
-                    { className: G().WidgetReleaseDateAndPlatformCtn, ref: te },
-                    ue &&
+                    { className: G().WidgetReleaseDateAndPlatformCtn, ref: re },
+                    ge &&
                       a.createElement(
                         "div",
                         { className: G().StoreSaleWidgetRelease },
-                        be,
+                        we,
                       ),
                     !N &&
                       a.createElement(
@@ -17604,7 +17611,7 @@
                         null,
                         a.createElement(y.Q, {
                           item: g,
-                          bMinimizePlatforms: re,
+                          bMinimizePlatforms: ie,
                         }),
                         Boolean(
                           x &&
@@ -17624,8 +17631,12 @@
                       { className: G().ReviewScores },
                       a.createElement(W.Jz, { appInfo: g }),
                     ),
-                  ce && a.createElement(Q, { info: g }),
-                  Boolean(ue && ye) &&
+                  me &&
+                    a.createElement(Y, {
+                      info: g,
+                      bHideInLibraryApps: 2 == u.GetStoreItemType() && le < oe,
+                    }),
+                  Boolean(ge && fe) &&
                     a.createElement(
                       "div",
                       {
@@ -17634,31 +17645,31 @@
                           "StoreSaleWidgetShortDesc",
                         ),
                       },
-                      Boolean(ye.startsWith("#") && -1 == ye.indexOf(" "))
+                      Boolean(fe.startsWith("#") && -1 == fe.indexOf(" "))
                         ? a.createElement(
                             "span",
                             { className: G().LocalizationSpan },
                             (0, k.oW)(
-                              ye,
+                              fe,
                               a.createElement("i", null),
                               a.createElement("i", null),
                               a.createElement("i", null),
                               a.createElement("i", null),
                             ),
                           )
-                        : ye,
+                        : fe,
                     ),
-                  Boolean(!K)
+                  Boolean(!Q)
                     ? a.createElement(
                         a.Fragment,
                         null,
-                        Boolean(O && ue)
-                          ? a.createElement(R.E, { appid: pe, bIsMuted: i })
+                        Boolean(O && ge)
+                          ? a.createElement(R.E, { appid: _e, bIsMuted: i })
                           : a.createElement(S.wD, {
                               info: g,
                               bShowDemoButton: T,
                               bHidePrice: F,
-                              bHideWishlistButton: we,
+                              bHideWishlistButton: Se,
                               bShowDeckCompatibilityDialog: x,
                             }),
                       )
@@ -17676,7 +17687,7 @@
                   a.createElement(
                     "div",
                     { className: G().StoreSaleWidgetBgTint },
-                    a.createElement($, { info: g, imageType: "header" }),
+                    a.createElement(ee, { info: g, imageType: "header" }),
                   ),
                 ),
               ),
@@ -17690,54 +17701,66 @@
               ),
           );
         }),
-        K = 6;
-      function Q(e) {
-        const { info: t } = e,
-          [r] = (0, _.G6)(t.id, (0, g.SW)(t.type), {}),
-          [i, n] = a.useState(null),
-          s = 2 == r.GetStoreItemType();
-        return (
-          a.useEffect(() => {
-            r &&
-              (1 == r.GetStoreItemType() || 2 == r.GetStoreItemType()
-                ? n(r.GetIncludedAppIDs().map((e) => ({ id: e, type: "game" })))
+        Q = 6;
+      function Y(e) {
+        const { info: t, bHideInLibraryApps: r } = e,
+          [i] = (0, _.G6)(t.id, (0, g.SW)(t.type), {}),
+          [n, s] = a.useState(null),
+          o = 2 == i.GetStoreItemType();
+        if (
+          (a.useEffect(() => {
+            i &&
+              (1 == i.GetStoreItemType() || 2 == i.GetStoreItemType()
+                ? s(
+                    i
+                      .GetIncludedAppIDs()
+                      .filter((e) => !o || !r || !Z.Fm.Get().BOwnsApp(e))
+                      .map((e) => ({ id: e, type: "game" })),
+                  )
                 : console.error(
                     "ContentsPreviewList unexpected store item type: ",
-                    r.GetStoreItemType(),
+                    i.GetStoreItemType(),
                   ));
-          }, [r]),
-          i
-            ? a.createElement(
-                "div",
-                { className: G().BundleContentPreview },
-                a.createElement(
-                  "div",
-                  { className: G().ContentsCount },
-                  s &&
-                    a.createElement(
-                      "span",
-                      { className: G().BundleTag },
-                      (0, k.we)("#AppType_bundle"),
-                    ),
-                  (0, k.Yp)("#Sale_ContentPreview", i.length),
-                ),
-                a.createElement(
-                  "div",
-                  { className: G().PreviewCtn },
-                  i
-                    .slice(0, K)
-                    .map((e) =>
-                      a.createElement(Y, {
-                        key: `preview${e.id}_${e.type}`,
-                        info: e,
-                      }),
-                    ),
-                ),
-              )
-            : null
+          }, [i, r, o]),
+          !n)
+        )
+          return null;
+        const l = n.length;
+        let c = (0, k.Yp)("#Sale_ContentPreview", l);
+        if (o) {
+          const e = i.GetIncludedAppIDs().length;
+          e != l &&
+            (c = (0, k.we)("#Sale_Bundle_CompletePartialSet", e - l, e));
+        }
+        return a.createElement(
+          "div",
+          { className: G().BundleContentPreview },
+          a.createElement(
+            "div",
+            { className: G().ContentsCount },
+            o &&
+              a.createElement(
+                "span",
+                { className: G().BundleTag },
+                (0, k.we)("#AppType_bundle"),
+              ),
+            c,
+          ),
+          a.createElement(
+            "div",
+            { className: G().PreviewCtn },
+            n
+              .slice(0, Q)
+              .map((e) =>
+                a.createElement(J, {
+                  key: `preview${e.id}_${e.type}`,
+                  info: e,
+                }),
+              ),
+          ),
         );
       }
-      function Y(e) {
+      function J(e) {
         const { info: t } = e,
           [r] = (0, _.mZ)(t.id, (0, g.SW)(t.type), { include_assets: !0 }),
           i = null == r ? void 0 : r.GetAssets().GetSmallCapsuleURL();
@@ -17756,7 +17779,7 @@
           }),
         );
       }
-      const J = (e) => {
+      const X = (e) => {
           const {
               info: t,
               bShowAsMuted: r,
@@ -17801,7 +17824,7 @@
                     o,
                   ),
                 },
-                l && a.createElement(X, { creatorAccountID: l, ...e }),
+                l && a.createElement($, { creatorAccountID: l, ...e }),
                 m &&
                   a.createElement(H.h, {
                     info: t,
@@ -17833,7 +17856,7 @@
             c && a.createElement("div", { className: G().CapsuleName }, B),
           );
         },
-        X = (e) => {
+        $ = (e) => {
           const { creatorAccountID: t, bShowAsMuted: r, strClassName: i } = e,
             [n, s] = (0, u.TB)(t),
             o = n || !s ? (0, c.t)(null, "medium") : s.avatar_medium_url;
@@ -17851,7 +17874,7 @@
             ),
           );
         };
-      function $(e) {
+      function ee(e) {
         const { info: t, imageType: r } = e,
           [i] = (0, _.G6)(t.id, (0, g.SW)(t.type), { include_assets: !0 });
         let n;
@@ -17907,7 +17930,7 @@
           }),
         );
       }
-      const ee = (0, i.PA)((e) => {
+      const te = (0, i.PA)((e) => {
         const t = k.NT.GetWithFallback(
             e.link.localized_link_capsule,
             e.language,
@@ -18233,7 +18256,7 @@
     },
     94095: (e, t, r) => {
       "use strict";
-      r.d(t, { cg: () => v, wD: () => C, wc: () => I });
+      r.d(t, { cg: () => I, wD: () => M, wc: () => R });
       var i = r(81886),
         a = r(75844),
         n = r(90626),
@@ -18249,12 +18272,13 @@
         _ = r(18654),
         h = r.n(_),
         B = r(12155),
-        b = r(26408),
-        y = r(52038),
-        w = r(61859),
-        f = r(91675),
-        S = r(14771);
-      const C = (0, a.PA)((e) => {
+        b = r(32754),
+        y = r(26408),
+        w = r(52038),
+        f = r(61859),
+        S = r(91675),
+        C = r(14771);
+      const M = (0, a.PA)((e) => {
         const {
             info: t,
             bShowDemoButton: r,
@@ -18264,38 +18288,38 @@
             bHideWishlistButton: g,
             bShowDeckCompatibilityDialog: _,
             className: B,
-            bShowCartButton: S,
+            bShowCartButton: b,
           } = e,
           C = (0, n.useRef)({ include_release: !0 }),
-          [v] = (0, d.G6)(t.id, (0, c.SW)(t.type), C.current),
-          R = (0, o.Lg)(null == v ? void 0 : v.GetAppID());
-        if (!v) return null;
-        const T = (1 === v.GetAppType() && v.BIsReleased()) || v.BHasDemo(),
+          [M] = (0, d.G6)(t.id, (0, c.SW)(t.type), C.current),
+          I = (0, o.Lg)(null == M ? void 0 : M.GetAppID());
+        if (!M) return null;
+        const T = (1 === M.GetAppType() && M.BIsReleased()) || M.BHasDemo(),
           E = (0, i.f)(t.type),
           z = r && E && T;
         let A = null;
         if (
-          !R &&
-          (null == v ? void 0 : v.GetBestPurchaseOption().is_free_to_keep) &&
-          (null == v ? void 0 : v.GetBestPurchaseOption().free_to_keep_ends)
+          !I &&
+          (null == M ? void 0 : M.GetBestPurchaseOption().is_free_to_keep) &&
+          (null == M ? void 0 : M.GetBestPurchaseOption().free_to_keep_ends)
         ) {
-          const e = v.GetBestPurchaseOption().free_to_keep_ends,
-            t = (0, w.we)(
+          const e = M.GetBestPurchaseOption().free_to_keep_ends,
+            t = (0, f.we)(
               "#Sale_default_label_Free_Promo_Description_Short",
-              (0, w.$z)(e) + " @ " + (0, f.KC)(e, { bForce24HourClock: !1 }),
+              (0, f.$z)(e) + " @ " + (0, S.KC)(e, { bForce24HourClock: !1 }),
             );
           A = n.createElement(
             "div",
             { className: h().PurchaseOptionDetails },
             t,
-            n.createElement(b.o, {
-              tooltip: (0, w.we)("#Sale_default_Tooltip_Free_Promo_Limitation"),
+            n.createElement(y.o, {
+              tooltip: (0, f.we)("#Sale_default_Tooltip_Free_Promo_Limitation"),
             }),
           );
         }
         return n.createElement(
           "div",
-          { className: (0, y.A)(h().StoreActionWidgetContainer, B) },
+          { className: (0, w.A)(h().StoreActionWidgetContainer, B) },
           A,
           n.createElement(
             "div",
@@ -18303,32 +18327,32 @@
             Boolean(z) &&
               n.createElement(p.j, { info: t, className: h().Action }),
             Boolean(!l) &&
-              1 !== (null == v ? void 0 : v.GetAppType()) &&
+              1 !== (null == M ? void 0 : M.GetAppType()) &&
               n.createElement(
                 n.Fragment,
                 null,
-                Boolean(a && !v.BIsFree()) &&
-                  n.createElement(M, { fnOnPurchaseOptionsClick: s }),
-                Boolean(S && !v.BIsFree()) &&
+                Boolean(a && !M.BIsFree()) &&
+                  n.createElement(v, { fnOnPurchaseOptionsClick: s }),
+                Boolean(b && !M.BIsFree()) &&
                   n.createElement(u.h, { info: t, className: "CartBtn" }),
               ),
-            Boolean(!l) && n.createElement(I, { info: t }),
-            Boolean(_) && n.createElement(m.Q8, { storeItem: v }),
+            Boolean(!l) && n.createElement(R, { info: t }),
+            Boolean(_) && n.createElement(m.Q8, { storeItem: M }),
           ),
         );
       });
-      function M(e) {
+      function v(e) {
         return n.createElement(
           "div",
           { className: h().Action, onClick: e.fnOnPurchaseOptionsClick },
           n.createElement(
             "span",
             null,
-            (0, w.we)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button"),
+            (0, f.we)("#EventDisplay_CallToAction_ShowPurchaseOptions_Button"),
           ),
         );
       }
-      function v(e) {
+      function I(e) {
         const {
             storeItem: t,
             bPurchaseOptionsExpanded: r,
@@ -18384,23 +18408,23 @@
               n.createElement(
                 "button",
                 { className: h().ShowContentsButton },
-                (0, w.we)("#Button_Close"),
+                (0, f.we)("#Button_Close"),
               ),
             ),
           ),
         );
       }
-      function I(e) {
+      function R(e) {
         const { info: t, ...r } = e,
           [i] = (0, d.G6)(
             null == t ? void 0 : t.id,
             (0, c.SW)(null == t ? void 0 : t.type),
             { include_release: !0 },
           );
-        return n.createElement(T, { ...r, storeItem: i });
+        return n.createElement(E, { ...r, storeItem: i });
       }
-      const R = 7;
-      function T(e) {
+      const T = 7;
+      function E(e) {
         var t, r, i;
         const {
             bSingleLineMode: a,
@@ -18413,8 +18437,8 @@
           u = (0, l.f1)();
         if (!s) return null;
         const p =
-            !s.BIsComingSoon() && s.GetReleaseDateRTime() + R * S.Kp.PerDay > u,
-          g = (0, y.A)(
+            !s.BIsComingSoon() && s.GetReleaseDateRTime() + T * C.Kp.PerDay > u,
+          g = (0, w.A)(
             h().StoreSalePriceWidgetContainer,
             a && h().SingleLineMode,
             "StoreSalePriceWidgetContainer",
@@ -18427,7 +18451,7 @@
             n.createElement(
               "div",
               { className: h().StoreSalePriceBox },
-              (0, w.we)("#EventDisplay_CallToAction_InLibrary"),
+              (0, f.we)("#EventDisplay_CallToAction_InLibrary"),
             ),
           );
         if (
@@ -18439,7 +18463,7 @@
           if (d) return;
           const e = s.BIsCustomComingSoonDisplay()
             ? s.GetFormattedSteamReleaseDate()
-            : (0, w.we)(
+            : (0, f.we)(
                 "#EventDisplay_CallToAction_ComingSoon_Date",
                 s.GetFormattedSteamReleaseDate(),
               );
@@ -18460,12 +18484,12 @@
                   n.createElement(
                     "div",
                     { className: h().StoreSaleNewItem },
-                    (0, w.we)("#Flag_New"),
+                    (0, f.we)("#Flag_New"),
                   ),
                 n.createElement(
                   "div",
                   { className: h().StoreSalePriceBox },
-                  (0, w.we)("#EventDisplay_CallToAction_FreeDemo"),
+                  (0, f.we)("#EventDisplay_CallToAction_FreeDemo"),
                 ),
               );
             }
@@ -18476,12 +18500,12 @@
                 n.createElement(
                   "div",
                   { className: h().StoreSaleNewItem },
-                  (0, w.we)("#Flag_New"),
+                  (0, f.we)("#Flag_New"),
                 ),
               n.createElement(
                 "div",
                 { className: h().StoreSalePriceBox },
-                (0, w.we)("#EventDisplay_CallToAction_FreeToPlay"),
+                (0, f.we)("#EventDisplay_CallToAction_FreeToPlay"),
               ),
             );
           }
@@ -18499,7 +18523,7 @@
               n.createElement(
                 "div",
                 { className: h().StoreSalePriceBox },
-                (0, w.we)("#EventDisplay_CallToAction_Free"),
+                (0, f.we)("#EventDisplay_CallToAction_Free"),
               ),
             );
         }
@@ -18507,20 +18531,22 @@
         if (!_ || !_.formatted_final_price) return null;
         let B = _.discount_pct,
           b = o || 2 != s.GetStoreItemType() ? void 0 : _.bundle_discount_pct,
-          f = _.formatted_final_price;
-        return n.createElement(E, {
+          y = _.formatted_final_price;
+        return n.createElement(z, {
           bSingleLineMode: a,
           nBaseDiscountPercentage: b,
           nDiscountPercentage: B,
           bIsPrePurchase: s.BIsPrePurchase(),
-          strBestPurchaseOriginalPriceFormatted: _.formatted_original_price,
-          strBestPurchasePriceFormatted: f,
+          strBestPurchaseOriginalPriceFormatted:
+            _.formatted_price_before_bundle_discount ||
+            _.formatted_original_price,
+          strBestPurchasePriceFormatted: y,
           bHideDiscountPercentForCompliance: _.hide_discount_pct_for_compliance,
           bShowNewFlag: p,
           bHidePrePurchase: c,
         });
       }
-      function E(e) {
+      function z(e) {
         const {
             bSingleLineMode: t,
             nDiscountPercentage: r,
@@ -18537,12 +18563,12 @@
         return (
           r &&
             (u = m
-              ? (0, w.we)("#Discount_ARIA_Label_SpecialPrice", s)
-              : (0, w.we)("#Discount_ARIA_Label", r, s, o)),
+              ? (0, f.we)("#Discount_ARIA_Label_SpecialPrice", s)
+              : (0, f.we)("#Discount_ARIA_Label", r, s, o)),
           n.createElement(
             "div",
             {
-              className: (0, y.A)({
+              className: (0, w.A)({
                 [h().StoreSalePriceWidgetContainer]: !0,
                 [h().SingleLineMode]: t,
                 StoreSalePriceWidgetContainer: !0,
@@ -18556,26 +18582,53 @@
             Boolean(i && !d) &&
               n.createElement(
                 "div",
-                { className: (0, y.A)(h().StoreSalePrepurchaseLabel) },
+                { className: (0, w.A)(h().StoreSalePrepurchaseLabel) },
                 n.createElement(
                   "span",
                   null,
-                  (0, w.we)("#EventDisplay_CallToAction_Prepurchase_Short"),
+                  (0, f.we)("#EventDisplay_CallToAction_Prepurchase_Short"),
                 ),
               ),
             Boolean(!i && c) &&
               n.createElement(
                 "div",
                 { className: h().StoreSaleNewItem },
-                (0, w.we)("#Flag_New"),
+                (0, f.we)("#Flag_New"),
               ),
-            Boolean(a && r && !m) &&
+            Boolean(a && !m) &&
               n.createElement(
-                "span",
-                { className: (0, y.A)(h().BaseDiscount) },
-                `-${a}%`,
+                n.Fragment,
+                null,
+                n.createElement(
+                  b.Gq,
+                  { toolTipContent: (0, f.we)("#Sale_Bundle_Discount_ttip") },
+                  n.createElement(
+                    "span",
+                    { className: (0, w.A)(h().BaseDiscount) },
+                    `-${a}%`,
+                  ),
+                ),
+                Boolean(r) &&
+                  n.createElement(
+                    n.Fragment,
+                    null,
+                    n.createElement("span", null, "+ "),
+                    n.createElement(
+                      b.Gq,
+                      {
+                        toolTipContent: (0, f.we)(
+                          "#Sale_Bundle_Discount_Limited_ttip",
+                        ),
+                      },
+                      n.createElement(
+                        "span",
+                        { className: (0, w.A)(h().StoreSaleDiscountBox) },
+                        `-${r}%`,
+                      ),
+                    ),
+                  ),
               ),
-            Boolean(r && !m) &&
+            Boolean(!a && r && !m) &&
               n.createElement(
                 "div",
                 { className: h().StoreSaleDiscountBox },
@@ -18587,14 +18640,14 @@
                 { className: h().DiscountIconCtn },
                 n.createElement(B.XH_, null),
               ),
-            Boolean(r && s && !m)
+            Boolean((r || a) && s && !m)
               ? n.createElement(
                   "div",
-                  { className: (0, y.A)(h().StoreSaleDiscountedPriceCtn) },
+                  { className: (0, w.A)(h().StoreSaleDiscountedPriceCtn) },
                   n.createElement(
                     "div",
                     {
-                      className: (0, y.A)({
+                      className: (0, w.A)({
                         [h().SingleLineOriginalPrice]: t,
                         [h().StoreOriginalPrice]: !t,
                       }),
@@ -18604,7 +18657,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, y.A)({
+                      className: (0, w.A)({
                         [h().StoreSalePriceBox]: !0,
                         [h().SingleLineMode]: t,
                       }),

@@ -4739,19 +4739,33 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 }
 
 
-.game_page_background.game {
+.game_page_background.game,
+.game_page_background.bundle {
+	display: block;
 	background-position: center top;
 	background-repeat: no-repeat;
 	min-width: 972px;
+	position: relative;
+	/* make sure the background sits behind the game_background_lighten */
+	z-index: -2;
 }
 
-html:not(.rn_mobile_app) body.v7menu .game_page_background {
+html:not(.rn_mobile_app) body.v7menu .game_page_background:not(.bundle) {
 	padding-top: var( --store-menu-overlap-height, 46px );
 }
 
 html.tablet body.v7menu .game_page_background {
-		padding-top: 46px;
+	/* menu doesn't "float" but we always want the spacing */
+	padding-top: 46px;
 }
+
+/* New game page background, Oct 2025 */
+
+.page_top_area {
+	position: relative;
+	overflow-y: hidden;
+}
+
 
 .mature_content_filtered {
 	padding: 10px;

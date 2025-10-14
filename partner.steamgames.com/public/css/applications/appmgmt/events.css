@@ -1729,7 +1729,7 @@ html.responsive.tablet ._20f2sKS2M7PlPSnPCinT26 {
 .A_A2B6fTn_MPLlGCmsLtd img {
   max-width: 100%;
 }
-.A_A2B6fTn_MPLlGCmsLtd a:not(.LinkButton) {
+.A_A2B6fTn_MPLlGCmsLtd a:not(.LinkButton, .WidgetTag) {
   color: #80bcd2;
   text-decoration: none;
   padding-bottom: 0px;

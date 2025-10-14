@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Информация по теме была обновлена",
 	"moderationaction_locked": "Заблокировано",
 	"moderationaction_unlocked": "Разблокировано",
-	"moderationaction_unknown": "Неизвестное действие"
+	"moderationaction_unknown": "Неизвестное действие",
+	"moderatormessage_count_note": "Примечания: %1$s",
+	"moderatormessage_count_warning": "Предупреждения: %1$s",
+	"moderatormessage_count_bannotice": "Блокировки: %1$s",
+	"moderatormessage_count_contentremoval": "Уведомления об удалении контента: %1$s"
 }`);
     },
   },

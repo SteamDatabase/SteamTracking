@@ -194,6 +194,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Ctn: "_2aeq1EsgEidbP1gObw4Bqg",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         PresenterDisclaimer: "_1RsiclQYbOWMcz3Hr6dVT9",
         PresenterLabel: "adrBtsY2w7IX8V81nMir1",
       };
@@ -1234,7 +1239,67 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, subMenu: __webpack_require__, language: _ } = _,
+          _ = (0, _._)();
+        return _.createElement(
+          "div",
+          {
+            className: _().Ctn,
+            style: {
+              ...(0, _._)(__webpack_require__, _, _),
+            },
+          },
+          __webpack_require__.menu_items.map((_) =>
+            _.createElement(_, {
+              key: "submenuitem" + _.unique_id,
+              language: _,
+              mainItem: _,
+              subMenu: __webpack_require__,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { language: _, mainItem: __webpack_require__, subMenu: _ } = _,
+          [_, _] = (0, _.useState)(!1),
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.sub_menu_url,
+            _(__webpack_require__.sub_menu_url),
+            __webpack_require__.localized_sub_menu_name?.[_] ||
+              __webpack_require__.localized_sub_menu_name?.[0] ||
+              "unknown",
+          ]);
+        let _ = _.label_color || "#DBDFE2";
+        return (
+          _
+            ? (_ = _.selected_label_color || _)
+            : _ && (_ = _.hover_label_color || _),
+          _.createElement(
+            _._,
+            {
+              style: {
+                color: _,
+              },
+              href: _,
+              onMouseEnter: () => _(!0),
+              onMouseLeave: () => _(!1),
+            },
+            _,
+          )
+        );
+      }
+      function _(_) {
+        return (
+          new URL(_ || "").pathname.toLowerCase() ===
+          window.location.pathname.toLowerCase()
+        );
+      }
       function _(_) {
         const { event: _, broadcastEmbedContext: __webpack_require__ } = _,
           _ = Boolean(_?.jsondata?.broadcast_display_wide_player),
@@ -1322,9 +1387,10 @@
             bIsPreview: _,
           } = _,
           _ = _.useRef(void 0),
-          _ = (0, _._)(() =>
+          [_, _] = (0, _._)(() => [
             _.GetImageURLWithFallback("sale_header", __webpack_require__),
-          ),
+            _.jsondata.sale_sub_menu,
+          ]),
           _ = _._.Get().BHasSalePageBackgroundOverride(),
           _ = _.useMemo(
             () => (_ ? _._.Get().GetSalePageBackgroundOverride() : _),
@@ -1349,9 +1415,16 @@
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_, {
-            strURL: _,
-          }),
+          Boolean(_)
+            ? _.createElement(_, {
+                event: _,
+                language: __webpack_require__,
+                bIsPreview: _,
+                subMenu: _,
+              })
+            : _.createElement(_, {
+                strURL: _,
+              }),
           _.createElement(
             "div",
             {

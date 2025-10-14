@@ -9,11 +9,14 @@
   padding: 6px;
 }
 .nacWp0zfiXg_UWQW639_1 {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-width: 158px;
   background: #000;
+  container-name: broadcast-right-panel;
+  container-type: inline-size;
 }
 .nacWp0zfiXg_UWQW639_1 ._2Xpw9--lhL-kpt-lUannE1,
 .nacWp0zfiXg_UWQW639_1 ._3mTSEg2yzb9H5zdRPv3SAA {
@@ -39,10 +42,14 @@
 }
 .yvW2hgWZFqKjkjDbHrtPf {
   cursor: pointer;
-  max-width: 155px;
   position: relative;
   box-sizing: border-box;
   padding: 5px;
+}
+@container broadcast-right-panel (width > 250px) {
+  .yvW2hgWZFqKjkjDbHrtPf {
+    padding: 0;
+  }
 }
 ._1zSsmz7ESvggIV3mlgPyyv {
   cursor: pointer;

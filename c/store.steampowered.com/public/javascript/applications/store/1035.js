@@ -634,6 +634,7 @@
               rgSources: _,
               onIncrementalError: _,
               onError: __webpack_require__,
+              strAltText: _,
               ..._
             } = this.props,
             _ = this.src;
@@ -642,6 +643,7 @@
             ..._,
             src: _,
             onError: this.OnImageError,
+            alt: _,
           });
         }
       }

@@ -95,6 +95,7 @@ var CLSTAMP = "steamdb";
       is_support: !1,
       is_limited: !1,
       is_partner_member: !1,
+      is_valve_email: !1,
       short_url: "",
       country_code: "",
       excluded_content_descriptors: [3, 4, 1],

@@ -315,9 +315,12 @@
       r.d(t, { Al: () => n, CS: () => i, op: () => s, vE: () => o });
       class n {
         constructor(e, t) {
-          (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
+          e instanceof Map
+            ? (this.m_dictComponents = e)
+            : (this.m_dictComponents = new Map(Object.entries(e))),
+            (this.m_fnAccumulatorFactory = t);
         }
-        Parse(e, t, r = !1) {
+        Parse(e, t, r = !0) {
           const n = (function (e, t) {
             var r, n, i;
             const a = [];
@@ -578,7 +581,7 @@
         UpdateOverrideLanguage(e) {
           this.m_renderingLanguage = e;
         }
-        ParseBBCode(e, t, r = !1) {
+        ParseBBCode(e, t, r = !0) {
           let n = 0;
           const a = this.Parse(
             e,
@@ -4019,8 +4022,8 @@
         c = r(60155),
         m = r(52038),
         u = r(61859);
-      function d(e, t) {
-        return e + "economy/sticker/" + encodeURIComponent(t);
+      function d(e, t, r = !1) {
+        return `${e}economy/sticker${r ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var p = r(78327),
         g = r(68255),
@@ -6254,14 +6257,16 @@
               rgSources: e,
               onIncrementalError: t,
               onError: r,
-              ...n
+              strAltText: n,
+              ...a
             } = this.props,
-            a = this.src;
+            s = this.src;
           return i.createElement("img", {
             ref: this.m_refImage,
-            ...n,
-            src: a,
+            ...a,
+            src: s,
             onError: this.OnImageError,
+            alt: n,
           });
         }
       }

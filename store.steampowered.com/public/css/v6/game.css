@@ -1,4 +1,7 @@
 
+ :root {
+	 --summary-title-text-color: #798a95;
+ }
 
 body.v6 .game_area_purchase h2.package_group {
 	margin-bottom: 0px;
@@ -94,12 +97,33 @@ body.v6 .game_area_purchase h2.package_group {
 }
 
 .game_background_glow {
-	background: url( '/public/images/v6/app/game_page_background_shadow.png?v=2' );
+	/*background: url( '/public/images/v6/app/game_page_background_shadow.png?v=2' );*/
 	background-position: bottom;
 	padding-bottom: 1px;
 	background-repeat: no-repeat;
 	margin: 0px auto;
+	background: radial-gradient(800px 120px at 50% bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+.queue_and_playtime {
+	position: relative;
+}
+.game_background_lighten {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	width: 100%;
+	background: radial-gradient(1000px 153px at 50% top, hsl(212 35% 24% / 1), rgba(0, 0, 0, 0));
+}
 
+.game_background_lighten .game_background_lighten_border {
+	height: 1px;
+	width: 100%;
+	max-width: 1800px;
+	margin: 0 auto;
+	background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0.05) 80%, transparent 100%);
 }
 
 :where(#game_highlights) a {
@@ -245,14 +269,14 @@ body.v6 .game_area_purchase h2.package_group {
 
 .glance_ctn .user_reviews {
 	font-size: 12px;
-	color: #556772;
+	color: var(--summary-title-text-color);
 	margin-top: 10px;
 }
 
 .glance_ctn .dev_row .subtitle,
 .glance_ctn .release_date .subtitle,
 .glance_ctn .user_reviews .title {
-	color: #556772;
+	color: var(--summary-title-text-color);
 }
 
 .glance_ctn .more_btn {
@@ -2017,7 +2041,7 @@ body.v6 .game_area_description h2.bb_tag strong {
 }
 
 .game_rating_area {
-	background-color: #1a1a1a;
+	background-color: rgba(0, 0, 0, 0.3);
 	color: #b0aeac;
 	font-size: 11px;
 	line-height: 1.25em;
@@ -2402,13 +2426,9 @@ a.friend_block_holder:hover {
 }
 
     .rightcol.game_meta_data .block {
-        background: -moz-linear-gradient(left,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
-        background: linear-gradient(to right,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
+		background: -webkit-linear-gradient( 0deg, rgba(0,0,0,0.5) 5%,rgba(0,0,0,0.65) 95%);
+	background: linear-gradient( 90deg, rgba(0,0,0,0.5) 5%,rgba(0,0,0,0.65) 95%);
+		backdrop-filter: blur(7px);
 
         padding: 16px;
 		margin-bottom:8px;
@@ -4845,18 +4865,13 @@ select.gray_bevel {
 
 /* Subs */
 #package_header_container {
-	background-color: #000;
-	background: -moz-linear-gradient(left,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#80000000',GradientType=1 ); /* IE6-9 */
+	background: -webkit-linear-gradient( 0deg, rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.6) 95%);
+	background: linear-gradient( 90deg, rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.6) 95%);
+	backdrop-filter: blur(7px);
 
 	text-align: center;
-
 	padding: 15px;
+	margin-bottom: 20px;
 }
 
 /* Steam curators */
@@ -5394,6 +5409,7 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 	margin: 8px -6px 0 -6px;
 	background: rgba(0,0,0,0.5);
 }
+
 .sale_page_purchase_content .bundle_contents_preview {
 	margin-top: 3px;
 }
@@ -6713,6 +6729,7 @@ a.open_in_steam_body:hover {
 .widestore #game_highlights {
 	display: flex;
 	flex-direction: row-reverse;
+	backdrop-filter: blur(7px);
 }
 
 .widestore #game_highlights .rightcol {
@@ -6748,7 +6765,7 @@ a.open_in_steam_body:hover {
 
 .widestore .glance_ctn .user_reviews {
 	font-size: 13px;
-	color: #556772;
+	color: var(--summary-title-text-color);
 	margin-top: 0px;
 }
 

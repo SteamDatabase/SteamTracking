@@ -585,16 +585,10 @@
           if (this.props.bWidePlayer) return _;
           const _ = _._.Get().GetConcurrentStreams(this.props) > 1;
           let _ = _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID,
-            _ = _.createElement(
-              "div",
-              {
-                className: _().rightPanel,
-              },
-              _.createElement(_, {
-                key: "right" + _,
-                ImgUrl: _.right_panel,
-              }),
-            ),
+            _ = _.createElement(_, {
+              key: "right" + _,
+              ImgUrl: _.right_panel,
+            }),
             _ = _.createElement(_, {
               key: "left" + _,
               ImgUrl: _.left_panel,
@@ -777,7 +771,13 @@
                         },
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
-                      _.leftPanel,
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().LeftPanelCtn,
+                        },
+                        _.leftPanel,
+                      ),
                       _.createElement(_, {
                         stream: _,
                         bStartMuted: this.state.bStartMuted,
@@ -785,7 +785,13 @@
                         fnOnVideoEnd: _,
                         bWidePlayer: this.props.bWidePlayer,
                       }),
-                      _.rightPanel,
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().RightPanelCtn,
+                        },
+                        _.rightPanel,
+                      ),
                       Boolean(this.state.bExpanded) &&
                         _.createElement(_, {
                           stream: _,
@@ -1101,8 +1107,10 @@
         render() {
           let _ = this.props.ImgUrl;
           return _.createElement(
-            _.Fragment,
-            null,
+            "div",
+            {
+              className: _().SidePanelBackground,
+            },
             _ &&
               _.createElement("img", {
                 className: _().side_panels,
@@ -1217,16 +1225,23 @@
                 [_().scrollingstreams]: _.length > 3,
               }),
             },
-            _.map((_) => {
-              var _;
-              return _.createElement(_, {
-                key: null !== (_ = _.accountid) && void 0 !== _ ? _ : _.steamid,
-                stream: _,
-                bSelected: _.accountid == _.accountid,
-                onStreamSelect: __webpack_require__,
-                bShowCapsuleArt: _,
-              });
-            }),
+            _.createElement(
+              "div",
+              {
+                className: _().MultiStreamCtn,
+              },
+              _.map((_) => {
+                var _;
+                return _.createElement(_, {
+                  key:
+                    null !== (_ = _.accountid) && void 0 !== _ ? _ : _.steamid,
+                  stream: _,
+                  bSelected: _.accountid == _.accountid,
+                  onStreamSelect: __webpack_require__,
+                  bShowCapsuleArt: _,
+                });
+              }),
+            ),
           )
         );
       }
@@ -1268,6 +1283,7 @@
             {
               type: "app",
               _: _,
+              hoverClassName: _().StreamCapsule,
             },
             _.createElement(
               _._,
@@ -1297,8 +1313,13 @@
                   _.Fragment,
                   null,
                   _.createElement(_.y_e, null),
-                  " ",
-                  (0, _._)(_),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().ViewerNum,
+                    },
+                    (0, _._)(_),
+                  ),
                 )
               : _,
           ),

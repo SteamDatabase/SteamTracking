@@ -215,6 +215,9 @@ html.tablet .game_background_glow {
 	background-image: unset !important; /* Needed to override inline style */
 	min-width: unset !important; /* Needed to fix SteamOS game details page alignment */
 }
+html.tablet .game_page_background_ctn {
+	display: none;
+}
 
 /* move the 'read more' links to the center, use larger font, and hide the down arrow */
 html.tablet .game_page_autocollapse_readmore {
@@ -225,6 +228,10 @@ html.tablet .game_page_autocollapse_readmore {
 	font-size: 14px;
 	background-image: unset;
 	padding-right: 0px;
+}
+
+html.tablet .page_top_area {
+	overflow-y: unset;
 }
 
 /* switch to a full screen width header image */

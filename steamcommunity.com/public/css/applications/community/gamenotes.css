@@ -1016,7 +1016,10 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   flex-direction: column;
   min-height: 0;
   min-width: 0;
-  margin: 0px 10px 25px 0px;
+  margin-top: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 10px;
+  margin-bottom: 25px;
   position: relative;
   color: #c1c6cf;
 }
@@ -1033,7 +1036,7 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
 }
 ._1AL7l2CN6z-vuLfp1iCLa ._1fu6xumTI1nCY5wc6FG_N2 {
   position: absolute;
-  right: 8px;
+  inset-inline-end: 8px;
   bottom: 8px;
   display: flex;
   flex-direction: row;
@@ -1091,7 +1094,7 @@ button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
   fill: currentColor;
 }
 ._1AL7l2CN6z-vuLfp1iCLa ._1fu6xumTI1nCY5wc6FG_N2 .vKXl-xWkUZL5iNvaT5mzW {
-  margin-left: 8px;
+  margin-inline-start: 8px;
   width: fit-content;
   padding: 0px 8px;
   height: 38px;

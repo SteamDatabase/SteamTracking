@@ -1,4 +1,7 @@
 
+ :root {
+	 --summary-title-text-color: #798a95;
+ }
 
 .game_area_description ul {
 	color: #acb2b8;
@@ -430,10 +433,10 @@ table.game_language_options {
 
 .game_details b  {
     font-family: Arial, Helvetica, sans-serif;
-	color: #556772;
+	color: var(--summary-title-text-color);
 	font-weight: normal;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 /* 2025 Game Page Widening */

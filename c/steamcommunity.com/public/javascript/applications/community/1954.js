@@ -180,7 +180,11 @@
 	"moderationaction_updated": "問題の詳細が更新されました",
 	"moderationaction_locked": "ロック済み",
 	"moderationaction_unlocked": "ロック解除済み",
-	"moderationaction_unknown": "不明なアクション"
+	"moderationaction_unknown": "不明なアクション",
+	"moderatormessage_count_note": "注記：%1$s件",
+	"moderatormessage_count_warning": "警告：%1$s件",
+	"moderatormessage_count_bannotice": "禁止：%1$s件",
+	"moderatormessage_count_contentremoval": "コンテンツ削除通知：%1$s件"
 }`);
     },
   },

@@ -1701,14 +1701,16 @@
               rgSources: e,
               onIncrementalError: t,
               onError: o,
-              ...n
+              strAltText: n,
+              ...r
             } = this.props,
-            r = this.src;
+            i = this.src;
           return s.createElement("img", {
             ref: this.m_refImage,
-            ...n,
-            src: r,
+            ...r,
+            src: i,
             onError: this.OnImageError,
+            alt: n,
           });
         }
       }

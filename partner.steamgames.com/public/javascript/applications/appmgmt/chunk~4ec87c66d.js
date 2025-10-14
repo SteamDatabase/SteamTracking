@@ -29569,7 +29569,7 @@
                   n.createElement(
                     "div",
                     { className: Fn().SectionBody },
-                    "We recommend keeping your demo active for at least a week or two after Next Fest ends to make sure that players have time to try out all the great demos they discover during the fest.",
+                    "We recommend keeping your demo active for at least a week or two after Next Fest ends to make sure that players have time to try out all the great demos they discover during the Fest.",
                   ),
                 ));
               break;
@@ -92417,8 +92417,8 @@
         c = a(68451),
         m = a(52038),
         d = a(61859);
-      function u(e, t) {
-        return e + "economy/sticker/" + encodeURIComponent(t);
+      function u(e, t, a = !1) {
+        return `${e}economy/sticker${a ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var p = a(78327),
         _ = a(16676),

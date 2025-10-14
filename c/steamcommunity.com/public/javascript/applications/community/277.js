@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Rincian pembahasan diperbarui",
 	"moderationaction_locked": "Terkunci",
 	"moderationaction_unlocked": "Dibuka pada",
-	"moderationaction_unknown": "Tindakan Tidak Diketahui"
+	"moderationaction_unknown": "Tindakan Tidak Diketahui",
+	"moderatormessage_count_note": "Catatan: %1$s",
+	"moderatormessage_count_warning": "Peringatan: %1$s",
+	"moderatormessage_count_bannotice": "Ban: %1$s",
+	"moderatormessage_count_contentremoval": "Pemberitahuan Penghapusan Konten: %1$s"
 }`);
     },
   },

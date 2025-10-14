@@ -126,8 +126,9 @@
       i.d(t, {
         G6: () => l,
         Gg: () => d,
+        MS: () => h,
         Ow: () => a,
-        YM: () => h,
+        YM: () => f,
         mZ: () => o,
         t7: () => _,
         zX: () => m,
@@ -152,8 +153,8 @@
             include_trailers: g,
             include_ratings: A,
             include_tag_count: v,
-            include_reviews: b,
-            include_basic_info: S,
+            include_reviews: S,
+            include_basic_info: b,
             include_supported_languages: U,
             include_full_description: y,
             include_included_items: R,
@@ -172,8 +173,8 @@
               include_trailers: g,
               include_ratings: A,
               include_tag_count: v,
-              include_reviews: b,
-              include_basic_info: S,
+              include_reviews: S,
+              include_basic_info: b,
               include_supported_languages: U,
               include_full_description: y,
               include_included_items: R,
@@ -196,7 +197,7 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, d, p, m, h, f, I, g, A, v, b, S, U, y, R, G, T, L, a]),
+          }, [e, t, n, d, p, m, h, f, I, g, A, v, S, b, U, y, R, G, T, L, a]),
           !e)
         )
           return [null, 2];
@@ -240,8 +241,8 @@
             include_basic_info: g,
             include_supported_languages: A,
             include_full_description: v,
-            include_included_items: b,
-            include_assets_without_overrides: S,
+            include_included_items: S,
+            include_assets_without_overrides: b,
             apply_user_filters: U,
             include_links: y,
           } = i;
@@ -261,8 +262,8 @@
                 include_basic_info: g,
                 include_supported_languages: A,
                 include_full_description: v,
-                include_included_items: b,
-                include_assets_without_overrides: S,
+                include_included_items: S,
+                include_assets_without_overrides: b,
                 apply_user_filters: U,
                 include_links: y,
               },
@@ -282,7 +283,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, _, a, d, o, p, m, h, f, I, g, A, v, b, S, U, y]),
+          }, [e, t, n, l, _, a, d, o, p, m, h, f, I, g, A, v, S, b, U, y]),
           !e)
         )
           return 2;
@@ -303,7 +304,10 @@
       function m(e, t, i) {
         return p(e, 0, t, i);
       }
-      function h() {
+      function h(e, t, i) {
+        return p(e, 2, t, i);
+      }
+      function f() {
         r.useEffect(
           () => (
             c.A.Get().SetReturnUnavailableItems(!0),

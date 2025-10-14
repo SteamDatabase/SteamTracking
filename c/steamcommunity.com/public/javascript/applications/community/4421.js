@@ -180,7 +180,11 @@
 	"moderationaction_updated": "举报相关详情已更新",
 	"moderationaction_locked": "已锁定",
 	"moderationaction_unlocked": "已取消锁定",
-	"moderationaction_unknown": "未知操作"
+	"moderationaction_unknown": "未知操作",
+	"moderatormessage_count_note": "说明：%1$s 份",
+	"moderatormessage_count_warning": "警告：%1$s 份",
+	"moderatormessage_count_bannotice": "封禁：%1$s 份",
+	"moderatormessage_count_contentremoval": "内容移除通知：%1$s 份"
 }`);
     },
   },

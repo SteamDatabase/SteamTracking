@@ -302,8 +302,8 @@
         c = n(17720),
         m = n(68033),
         d = n(6205),
-        p = n(16676),
-        u = n(84811),
+        u = n(16676),
+        p = n(84811),
         _ = n(34629),
         E = n(75844),
         h = n(78327),
@@ -323,10 +323,18 @@
           return this.RemoveGIDFromList(e, l.cB + t), o.data;
         }
         static sm_Instance;
+        static sm_SummaryInstance;
         static Get() {
           return (
             S.sm_Instance || ((S.sm_Instance = new S()), S.sm_Instance.Init()),
             S.sm_Instance
+          );
+        }
+        static GetSummaryStore() {
+          return (
+            S.sm_SummaryInstance ||
+              ((S.sm_SummaryInstance = new S(!0)), S.sm_SummaryInstance.Init()),
+            S.sm_SummaryInstance
           );
         }
       }
@@ -425,7 +433,7 @@
             "&l=" +
             h.TS.LANGUAGE,
           d = w.KN.Get().GetPartnerEventPermissions(c.b.InitFromClanID(n)),
-          u = d && (d.can_edit || d.support_user),
+          p = d && (d.can_edit || d.support_user),
           _ = I.Fm.Get().BOwnsApp(t),
           E = (0, o.useMemo)(() => {
             const e = [];
@@ -462,15 +470,15 @@
                     ),
                     data: m,
                   })),
-              u &&
+              p &&
                 e.push({
                   label: (0, L.we)("#EventDisplay_Admin_ExtraShort"),
                   data: (0, M.Hx)(t, c.b.InitFromClanID(n), "admin"),
                 }),
               e
             );
-          }, [_, r, l, u, s, i, a, m, t, n]);
-        return o.createElement(p.m, {
+          }, [_, r, l, p, s, i, a, m, t, n]);
+        return o.createElement(u.m, {
           strDefaultLabel: (0, L.we)("#EventDisplay_LinksDropDown_ExtraShort"),
           strClassName: V().AppBannerLinkDD,
           strDropDownButtonClassName: V().AppBannerLinkDDButton,
@@ -492,7 +500,7 @@
           [c] = (0, N.t7)(t, W),
           m = I.Fm.Get().BOwnsApp(t);
         let d = Boolean(t !== l.DU);
-        const p = o.createElement("img", {
+        const u = o.createElement("img", {
           className: V().AppBannerLogo,
           src: a,
         });
@@ -518,7 +526,7 @@
                         style: { minWidth: "320px" },
                       },
                     },
-                    p,
+                    u,
                   )
                 : o.createElement(
                     U.u,
@@ -527,12 +535,12 @@
                       id: s,
                       hoverClassName: V().AppBannerLogoCtn,
                     },
-                    p,
+                    u,
                   )
               : o.createElement(
                   "div",
                   { className: V().AppBannerLogoCtn },
-                  p,
+                  u,
                   " ",
                 ),
             o.createElement(
@@ -765,7 +773,7 @@
                 const t = s.has(e),
                   a = l.has(e) || (t && !d.has(e));
                 C.push(
-                  o.createElement(p.Yh, {
+                  o.createElement(u.Yh, {
                     key: "checkbox" + e,
                     label: t
                       ? (0, L.we)("#EventRepost_Dialog_Existing", n.group_name)
@@ -782,24 +790,24 @@
               }
             }),
           o.createElement(
-            u.tH,
+            p.tH,
             null,
             o.createElement(
               ae.x_,
               { onEscKeypress: () => e.closeModal && e.closeModal() },
               o.createElement(
-                p.UC,
+                u.UC,
                 null,
                 o.createElement(
-                  p.Y9,
+                  u.Y9,
                   null,
                   (0, L.we)("#EventRepost_Dialog_Title"),
                 ),
                 o.createElement(
-                  p.nB,
+                  u.nB,
                   null,
                   o.createElement(
-                    p.a3,
+                    u.a3,
                     null,
                     (0, L.we)("#EventRepost_Dialog_Desc"),
                   ),
@@ -839,9 +847,9 @@
                   Boolean(g) && o.createElement("div", null, g),
                 ),
                 o.createElement(
-                  p.wi,
+                  u.wi,
                   null,
-                  o.createElement(p.CB, {
+                  o.createElement(u.CB, {
                     onCancel: () => e.closeModal && e.closeModal(),
                     strOKText: (0, L.we)("#EventRepost_Dialog_OK"),
                     bOKDisabled:
@@ -900,11 +908,11 @@
         let t;
         return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
       }
-      const pe = (e) => {
+      const ue = (e) => {
         const t = (0, h.Qn)();
-        return o.createElement(ue, { ...e, bInGamepadUI: t });
+        return o.createElement(pe, { ...e, bInGamepadUI: t });
       };
-      let ue = class extends o.Component {
+      let pe = class extends o.Component {
         m_cancelSignal = r().CancelToken.source();
         constructor(e) {
           super(e);
@@ -1221,11 +1229,11 @@
             ),
         );
       }
-      (0, _.Cg)([ne.oI], ue.prototype, "OnVoteUp", null),
-        (0, _.Cg)([ne.oI], ue.prototype, "OnVoteDown", null),
-        (0, _.Cg)([ne.oI], ue.prototype, "GotoDiscussion", null),
-        (0, _.Cg)([ne.oI], ue.prototype, "OpenRepostDialogs", null),
-        (ue = (0, _.Cg)([E.PA], ue));
+      (0, _.Cg)([ne.oI], pe.prototype, "OnVoteUp", null),
+        (0, _.Cg)([ne.oI], pe.prototype, "OnVoteDown", null),
+        (0, _.Cg)([ne.oI], pe.prototype, "GotoDiscussion", null),
+        (0, _.Cg)([ne.oI], pe.prototype, "OpenRepostDialogs", null),
+        (pe = (0, _.Cg)([E.PA], pe));
       var he = n(91151),
         ge = n(65946),
         Se = n(36148),
@@ -1308,19 +1316,19 @@
           });
         const d = f.HD.GetTimeNowWithOverride();
         if (!a && !i.bIsAutumnSaleActive) return null;
-        let p = {};
-        i.strBackgroundCSS?.length && (p.backgroundColor = i.strBackgroundCSS),
+        let u = {};
+        i.strBackgroundCSS?.length && (u.backgroundColor = i.strBackgroundCSS),
           i.strBackgroundImage?.length &&
-            (p.backgroundImage = `url( ${i.strBackgroundImage} )`),
-          i.strTextColor?.length && (p.color = i.strTextColor);
-        const u = 1 == i.rgAwardCategoryDetails?.length,
+            (u.backgroundImage = `url( ${i.strBackgroundImage} )`),
+          i.strTextColor?.length && (u.color = i.strTextColor);
+        const p = 1 == i.rgAwardCategoryDetails?.length,
           _ =
             t.BIsEventActionEnabled() || d < t.GetStartTimeAndDateUnixSeconds(),
           E = new Date().getFullYear();
         return o.createElement(
           "div",
           {
-            style: p,
+            style: u,
             className: (0, G.A)(Ce().SteamAwardContainer, Y().PartnerEventFont),
           },
           o.createElement(
@@ -1362,7 +1370,7 @@
                 "div",
                 { className: Ce().SteamAwardHeaderText },
                 _
-                  ? u
+                  ? p
                     ? (0, L.we)(
                         "#SteamAwards_EventNominateGamePrompt_Long",
                         t.GetGameTitle(n),
@@ -1422,10 +1430,10 @@
             [i, s, l],
           ),
           d = f.HD.GetTimeNowWithOverride(),
-          u = 1 == n.rgAwardCategoryDetails?.length,
+          p = 1 == n.rgAwardCategoryDetails?.length,
           _ =
             t.BIsEventActionEnabled() || d < t.GetStartTimeAndDateUnixSeconds();
-        return u && (_ || c)
+        return p && (_ || c)
           ? o.createElement(
               "div",
               {
@@ -1446,7 +1454,7 @@
                       c && Ce().Nominated,
                     ),
                   },
-                  o.createElement(p.Yh, {
+                  o.createElement(u.Yh, {
                     controlled: !0,
                     className: (0, G.A)(
                       Ce().SteamAwardVoteCheckBox,
@@ -2496,8 +2504,8 @@
               fnImageFailureCallback: c,
               headerClassnames: m,
               isPreview: d,
-              bShouldMaskImages: p,
-              storeItem: u,
+              bShouldMaskImages: u,
+              storeItem: p,
             } = this.props,
             _ = t || (0, s.sf)(h.TS.LANGUAGE),
             E = e.GetDescriptionWithFallback(_) || "",
@@ -2512,7 +2520,7 @@
             C = e.type,
             w = e.BImageNeedScreenshotFallback("background", _);
           let I = "";
-          if (e.appid) I = u?.GetName() || "";
+          if (e.appid) I = p?.GetName() || "";
           else if (e.clanSteamID) {
             const t = A.ac.GetClanInfoByClanAccountID(
               e.clanSteamID.GetAccountID(),
@@ -2540,7 +2548,7 @@
                 o.createElement(Pe.c, {
                   className: (0, G.A)(
                     be().EventCoverImageBackground,
-                    p && be().MaskImages,
+                    u && be().MaskImages,
                   ),
                   rgSources: S,
                   onIncrementalError: (e, t, n) => c && c(t),
@@ -2661,7 +2669,7 @@
                     className: (0, G.A)(
                       be().EventDetailsBody,
                       V().EventDetailsBody,
-                      p && be().MaskImages,
+                      u && be().MaskImages,
                     ),
                     onContextMenu: h.TS.IN_CLIENT ? T.aE : void 0,
                   },
@@ -2703,7 +2711,7 @@
                 o.createElement(Ze, { appid: e.appid }),
               ),
               !Boolean(d) &&
-                o.createElement(pe, {
+                o.createElement(ue, {
                   eventModel: e,
                   partnerEventStore: n,
                   emoticonStore: a,
@@ -2848,8 +2856,8 @@
           o.createElement(K, { ...e }),
         ),
       );
-      var pt = n(19332);
-      let ut = class extends o.Component {
+      var ut = n(19332);
+      let pt = class extends o.Component {
         m_refFocus = o.createRef();
         componentDidMount() {
           this.props.fnClose &&
@@ -2873,7 +2881,7 @@
             "div",
             {
               ref: this.m_refFocus,
-              className: pt.Main,
+              className: ut.Main,
               onClick: this.OnBackgroundClick,
             },
             o.createElement(it, {
@@ -2888,9 +2896,9 @@
           );
         }
       };
-      (0, _.Cg)([ne.oI], ut.prototype, "escFunction", null),
-        (0, _.Cg)([ne.oI], ut.prototype, "OnBackgroundClick", null),
-        (ut = (0, _.Cg)([E.PA], ut));
+      (0, _.Cg)([ne.oI], pt.prototype, "escFunction", null),
+        (0, _.Cg)([ne.oI], pt.prototype, "OnBackgroundClick", null),
+        (pt = (0, _.Cg)([E.PA], pt));
       var _t = n(1909),
         Et = n(25228),
         ht = n(62490),
@@ -2981,7 +2989,7 @@
             e.appId +
             "/partnerevents/create/";
         return o.createElement(
-          u.tH,
+          p.tH,
           null,
           o.createElement(
             "div",
@@ -3020,7 +3028,7 @@
                   "a",
                   { href: T },
                   o.createElement(
-                    p.$n,
+                    u.$n,
                     null,
                     (0, L.we)("#BuildNotes_OpenFullEditor"),
                   ),
@@ -3142,7 +3150,7 @@
             fnHasLanguage: r,
             fnSetLanguage: s,
             fnGetTitle: c,
-            fnSetTitle: u,
+            fnSetTitle: p,
             fnGetDescription: _,
             fnSetDescription: E,
             fnOnPreviewEvent: h,
@@ -3172,7 +3180,7 @@
                 "div",
                 { className: St.LangPicker },
                 o.createElement(
-                  p.$n,
+                  u.$n,
                   {
                     onClick: () => {
                       const e = new gt.G(),
@@ -3201,10 +3209,10 @@
                 }),
               ),
             ),
-            o.createElement(p.pd, {
+            o.createElement(u.pd, {
               value: c(n),
               placeholder: (0, L.we)("#BuildNotes_TitlePlaceholder"),
-              onChange: (e) => u(n, e.currentTarget.value),
+              onChange: (e) => p(n, e.currentTarget.value),
               maxLength: l.dm,
             }),
             o.createElement(
@@ -3227,7 +3235,7 @@
               { className: St.SubmitButtonCtn },
               !Boolean(t) &&
                 o.createElement(
-                  p.jn,
+                  u.jn,
                   { onClick: h },
                   (0, L.we)("#BuildNotes_Preview"),
                 ),
@@ -3264,12 +3272,12 @@
                 "div",
                 { className: St.SubmitButtonCtn },
                 o.createElement(
-                  p.$n,
+                  u.$n,
                   { onClick: r },
                   (0, L.we)("#BuildNotes_Close"),
                 ),
                 o.createElement(
-                  p.jn,
+                  u.jn,
                   { onClick: s },
                   (0, L.we)("#BuildNotes_PostNotes"),
                 ),
@@ -3278,7 +3286,7 @@
             o.createElement(
               "div",
               null,
-              o.createElement(ut, {
+              o.createElement(pt, {
                 event: t,
                 fnClose: r,
                 langOverride: n,
@@ -3311,7 +3319,7 @@
               "div",
               { className: St.FailedButton },
               o.createElement(
-                p.$n,
+                u.$n,
                 { onClick: e.fnOnReturnToEditor },
                 (0, L.we)("#BuildNotes_ReturnToEditor"),
               ),
@@ -3332,7 +3340,7 @@
               "a",
               { href: a, className: St.ViewEventButton },
               o.createElement(
-                p.$n,
+                u.$n,
                 null,
                 (0, L.we)("#BuildNotes_ViewPublished"),
               ),
@@ -3391,8 +3399,8 @@
         }
       }
       var d = n(76684),
-        p = n(22797),
-        u = n(14446);
+        u = n(22797),
+        p = n(14446);
       function _(e) {
         return o.createElement(
           "div",
@@ -3423,7 +3431,7 @@
       function h(e) {
         const { pageid: t } = e,
           n = m.Get().GetPageByID(t),
-          a = (0, u.gS)(n.accountid);
+          a = (0, p.gS)(n.accountid);
         return a
           ? o.createElement(
               "div",
@@ -3458,7 +3466,7 @@
               o.createElement("h1", null, "Sale Page Body Raw"),
               o.createElement(l.G, { data: n }),
             )
-          : o.createElement(p.t, { string: "Loading User Info" });
+          : o.createElement(u.t, { string: "Loading User Info" });
       }
       var g = n(34667);
       const S = {
@@ -3505,7 +3513,7 @@
     },
     69409: (e, t, n) => {
       "use strict";
-      n.d(t, { m: () => p });
+      n.d(t, { m: () => u });
       var a = n(90626),
         r = n(22837),
         o = n(38390),
@@ -3515,10 +3523,10 @@
         c = n(78327),
         m = n(15392),
         d = n(27666);
-      function p(e) {
+      function u(e) {
         const { gidEvent: t } = e,
           n = (0, o.RR)(t),
-          [p, u] = (0, a.useMemo)(() => {
+          [u, p] = (0, a.useMemo)(() => {
             if (
               n?.jsondata?.localized_sale_product_banner?.length > 0 &&
               n?.jsondata?.localized_sale_product_mobile_banner?.length > 0
@@ -3540,16 +3548,16 @@
             }
             return [null, null];
           }, [n]);
-        return p?.length > 0 && u?.length > 0
+        return u?.length > 0 && p?.length > 0
           ? a.createElement(
               "a",
               { href: (0, l.k2)(n.GetSaleURL()), className: m.Link },
               a.createElement("img", {
-                src: p,
+                src: u,
                 className: (0, s.A)(m.Banner, m.Big),
               }),
               a.createElement("img", {
-                src: u,
+                src: p,
                 className: (0, s.A)(m.Banner, m.Mobile),
               }),
             )

@@ -268,9 +268,12 @@
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(_, _) {
-          (this.m_dictComponents = _), (this.m_fnAccumulatorFactory = _);
+          _ instanceof Map
+            ? (this.m_dictComponents = _)
+            : (this.m_dictComponents = new Map(Object.entries(_))),
+            (this.m_fnAccumulatorFactory = _);
         }
-        Parse(_, _, __webpack_require__ = !1) {
+        Parse(_, _, __webpack_require__ = !0) {
           const _ = (function (_, _) {
             const _ = [];
             let _ = {

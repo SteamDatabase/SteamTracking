@@ -3,18 +3,85 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Link: "-HlDBB290kjpl61uUmRed",
+        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
+        Big: "sGy-bB7uqEt4Hoe7U5iA1",
+        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Ctn: "-AGIgcIMyFaX7DZf8Hdmh",
-        BackgroundDarken: "_3OZXrjevpO_VZXQdZfLuyM",
         BackgroundImageCtn: "_3wq00gbjoboM_ATEtxdjQc",
         BackgroundImageBlurCtn: "_1cZ8g-PtBYLe8FFmDtth7p",
         Headline: "_1P8dm7giNlZwCfq5rbmtSP",
         Verified: "rPLi6KykwBz7wWFaOR1No",
         Subtitle: "_6LI-PA19CCd4wG66K1LCD",
+        DeviceFullWidthShadow: "_1ZypsWqUQ3VfW_f7ejdOZK",
         DeviceWrapper: "_2fzfPUIAzZV7i8hrd1ITwy",
+        CapsuleWrapper: "_3ITlsF2xSEJOu22StqAI04",
         Link: "ToHDGm6UHpfNOf4qmfMhX",
         HardwareBannerCtn: "d7Myq8xED1tsLqMM_fmU8",
         TrailerCtn: "_10yYTQmd_qaFLKu4E9q9Jc",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { gidEvent: _ } = _,
+          _ = (0, _._)(_),
+          [_, _] = (0, _.useMemo)(() => {
+            if (
+              _?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              _?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+            ) {
+              const _ = (0, _._)(_._.LANGUAGE),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_banner,
+                  _,
+                ),
+                _ = _._.GetWithFallback(
+                  _.jsondata.localized_sale_product_mobile_banner,
+                  _,
+                );
+              if (_?.length > 0 && _?.length > 0)
+                return [
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                  _._.GenerateURLFromHashAndExt(_.clanSteamID, _),
+                ];
+            }
+            return [null, null];
+          }, [_]);
+        return _?.length > 0 && _?.length > 0
+          ? _.createElement(
+              "a",
+              {
+                href: (0, _._)(__webpack_require__.GetSaleURL()),
+                className: _.Link,
+              },
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Big),
+              }),
+              _.createElement("img", {
+                src: _,
+                className: (0, _._)(_.Banner, _.Mobile),
+              }),
+            )
+          : null;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -79,6 +146,7 @@
               rgSources: _,
               onIncrementalError: _,
               onError: __webpack_require__,
+              strAltText: _,
               ..._
             } = this.props,
             _ = this.src;
@@ -87,6 +155,7 @@
             ..._,
             src: _,
             onError: this.OnImageError,
+            alt: _,
           });
         }
       }
@@ -104,7 +173,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -115,7 +183,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const {
             match: {
@@ -124,18 +194,27 @@
           } = _,
           _ = Number.parseInt(_),
           [_] = (0, _._)(_, _._);
-        return _.createElement(
-          _._,
-          {
-            method: "verifiedprogram",
-          },
+        return (
+          (0, _.useEffect)(() => {
+            if (_) {
+              const _ = _.GetStorePageURL().replace("/app/", "/verified/");
+              _ != window.location.href &&
+                window.history.replaceState({}, "", _);
+            }
+          }, [_]),
           _.createElement(
             _._,
-            null,
-            _.createElement(_, {
-              storeItem: _,
-            }),
-          ),
+            {
+              method: "verifiedprogram",
+            },
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                storeItem: _,
+              }),
+            ),
+          )
         );
       }
       function _(_) {
@@ -161,7 +240,7 @@
                 },
                 _.createElement("img", {
                   src: _,
-                  "aria-label": (0, _._)("#VerifiedProgram_DeckAlt"),
+                  alt: (0, _._)("#VerifiedProgram_DeckAlt"),
                 }),
                 (0, _._)("#VerifiedProgram_DeckTitle_Verified"),
               ),
@@ -200,6 +279,7 @@
             },
             _.createElement("img", {
               src: _,
+              alt: "",
             }),
           ),
           _.createElement(
@@ -209,12 +289,13 @@
             },
             _.createElement("img", {
               src: _,
+              alt: "",
             }),
           ),
           _.createElement(
             "div",
             {
-              className: (0, _._)(_().BackgroundDarken, "page_content"),
+              className: (0, _._)("page_content"),
             },
             _.createElement(_, {
               storeItem: _,
@@ -235,7 +316,9 @@
         const { storeItem: _ } = _;
         return _.createElement(
           "div",
-          null,
+          {
+            className: _().CapsuleWrapper,
+          },
           _.createElement(_._, {
             _: _.GetID(),
             type: "game",
@@ -276,24 +359,35 @@
         return _.createElement(
           "div",
           {
-            className: (0, _._)(_().DeviceWrapper),
+            className: _().DeviceFullWidthShadow,
           },
           _.createElement(
             "div",
             {
-              className: _().TrailerCtn,
+              className: (0, _._)(_().DeviceWrapper),
             },
-            _.createElement(_._, {
-              dashManifests: _,
-              hlsManifest: _,
-              screenshot: _,
-              altText: _.GetName(),
-              muteWhenAutoplayBlocked: !0,
+            _.createElement(
+              _._,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _().TrailerCtn,
+                },
+                _.createElement(_._, {
+                  dashManifests: _,
+                  hlsManifest: _,
+                  screenshot: _,
+                  altText: _.GetName(),
+                  muteWhenAutoplayBlocked: !0,
+                }),
+              ),
+            ),
+            _.createElement("img", {
+              src: _,
+              alt: (0, _._)("#VerifiedProgram_DeckDeviceAlt"),
             }),
           ),
-          _.createElement("img", {
-            src: _,
-          }),
         );
       }
       function _(_) {
@@ -301,6 +395,7 @@
           _ = (0, _._)(_._.LANGUAGE);
         return _.createElement(_._, {
           language: _,
+          strAltText: (0, _._)("#VerifiedProgram_DeckShopBannerAlt"),
           strImageToken: _
             ? "{STEAM_CLAN_LOC_IMAGE}/39049601/6e0ec24257ee5ada6e922c2130eaa75ce83747e8.jpg"
             : "{STEAM_CLAN_LOC_IMAGE}/39049601/c18308dc60fd94678bb348608ddc0d6b8fdb11ab.jpg",

@@ -5048,7 +5048,7 @@
       var i = r(90626),
         a = r(20803),
         n = r(12155),
-        s = r(10981),
+        s = r(53835),
         l = r(61859),
         o = r(52038),
         m = r(1035),
@@ -6705,7 +6705,7 @@
         (0, g.Cg)([w.sH], h.prototype, "m_selections", void 0),
         (0, g.Cg)([w.XI.bound], h.prototype, "SetSelection", null);
       var M = r(60746),
-        v = r(10981),
+        v = r(53835),
         C = r(51706),
         R = r(738),
         z = r(22797),
@@ -8434,7 +8434,7 @@
         z = r(82097),
         E = r(55263),
         I = r(74410),
-        U = r(10981),
+        U = r(53835),
         F = r(44736),
         T = r(6878),
         N = r.n(T),
@@ -9224,10 +9224,11 @@
             r.e(7436),
             r.e(7403),
             r.e(6535),
-            r.e(3270),
             r.e(4796),
             r.e(9063),
-            r.e(4095),
+            r.e(1726),
+            r.e(3270),
+            r.e(7048),
             r.e(6883),
             r.e(9945),
             r.e(2303),
@@ -9920,22 +9921,14 @@
                 e,
               ),
             [r, l],
-          ),
-          u = (0, ae.YR)(() => new i.B(qt.sm_BBCodeDictionary, c, n));
-        return (
-          s.useEffect(() => {
-            u.UpdateOverrideLanguage(n);
-          }, [u, n]),
-          s.createElement(
-            s.Fragment,
-            null,
-            u.ParseBBCode(
-              t,
-              { showErrorInfo: o, event: l, bShowShortSpeakerInfo: m },
-              !0,
-            ),
-          )
-        );
+          );
+        return s
+          .useMemo(() => new i.B(qt.sm_BBCodeDictionary, c, n), [c, n])
+          .ParseBBCode(t, {
+            showErrorInfo: o,
+            event: l,
+            bShowShortSpeakerInfo: m,
+          });
       }
     },
     92007: (e, t, r) => {
@@ -10035,7 +10028,7 @@
         n = r(45699),
         s = r(36735),
         l = r(93973),
-        o = r(10981),
+        o = r(53835),
         m = r(71298),
         c = r(738),
         u = r(12155),

@@ -202,8 +202,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return _ + "economy/sticker/" + encodeURIComponent(_);
+      function _(_, _, __webpack_require__ = !1) {
+        return `${_}economy/sticker${__webpack_require__ ? "static" : ""}/${encodeURIComponent(_)}`;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

@@ -3,29 +3,91 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [6991],
   {
+    15392: (e) => {
+      e.exports = {
+        Link: "-HlDBB290kjpl61uUmRed",
+        Banner: "_2bT8irkKNnA5sxFG3MUXzH",
+        Big: "sGy-bB7uqEt4Hoe7U5iA1",
+        Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
     70124: (e) => {
       e.exports = {
         Ctn: "-AGIgcIMyFaX7DZf8Hdmh",
-        BackgroundDarken: "_3OZXrjevpO_VZXQdZfLuyM",
         BackgroundImageCtn: "_3wq00gbjoboM_ATEtxdjQc",
         BackgroundImageBlurCtn: "_1cZ8g-PtBYLe8FFmDtth7p",
         Headline: "_1P8dm7giNlZwCfq5rbmtSP",
         Verified: "rPLi6KykwBz7wWFaOR1No",
         Subtitle: "_6LI-PA19CCd4wG66K1LCD",
+        DeviceFullWidthShadow: "_1ZypsWqUQ3VfW_f7ejdOZK",
         DeviceWrapper: "_2fzfPUIAzZV7i8hrd1ITwy",
+        CapsuleWrapper: "_3ITlsF2xSEJOu22StqAI04",
         Link: "ToHDGm6UHpfNOf4qmfMhX",
         HardwareBannerCtn: "d7Myq8xED1tsLqMM_fmU8",
         TrailerCtn: "_10yYTQmd_qaFLKu4E9q9Jc",
       };
     },
+    69409: (e, t, r) => {
+      "use strict";
+      r.d(t, { m: () => d });
+      var a = r(90626),
+        n = r(22837),
+        s = r(38390),
+        l = r(52038),
+        i = r(61859),
+        c = r(61336),
+        o = r(78327),
+        m = r(15392),
+        g = r(27666);
+      function d(e) {
+        const { gidEvent: t } = e,
+          r = (0, s.RR)(t),
+          [d, u] = (0, a.useMemo)(() => {
+            if (
+              r?.jsondata?.localized_sale_product_banner?.length > 0 &&
+              r?.jsondata?.localized_sale_product_mobile_banner?.length > 0
+            ) {
+              const e = (0, n.sf)(o.TS.LANGUAGE),
+                t = i.NT.GetWithFallback(
+                  r.jsondata.localized_sale_product_banner,
+                  e,
+                ),
+                a = i.NT.GetWithFallback(
+                  r.jsondata.localized_sale_product_mobile_banner,
+                  e,
+                );
+              if (t?.length > 0 && a?.length > 0)
+                return [
+                  g.z.GenerateURLFromHashAndExt(r.clanSteamID, t),
+                  g.z.GenerateURLFromHashAndExt(r.clanSteamID, a),
+                ];
+            }
+            return [null, null];
+          }, [r]);
+        return d?.length > 0 && u?.length > 0
+          ? a.createElement(
+              "a",
+              { href: (0, c.k2)(r.GetSaleURL()), className: m.Link },
+              a.createElement("img", {
+                src: d,
+                className: (0, l.A)(m.Banner, m.Big),
+              }),
+              a.createElement("img", {
+                src: u,
+                className: (0, l.A)(m.Banner, m.Mobile),
+              }),
+            )
+          : null;
+      }
+    },
     3088: (e, t, r) => {
       "use strict";
-      r.d(t, { c: () => c });
+      r.d(t, { c: () => l });
       var a = r(34629),
-        s = r(90626),
-        n = r(84933);
-      class c extends s.Component {
-        m_refImage = s.createRef();
+        n = r(90626),
+        s = r(84933);
+      class l extends n.Component {
+        m_refImage = n.createRef();
         constructor(e) {
           super(e), (this.state = { nImage: 0 });
         }
@@ -71,87 +133,99 @@
               rgSources: e,
               onIncrementalError: t,
               onError: r,
-              ...a
+              strAltText: a,
+              ...s
             } = this.props,
-            n = this.src;
-          return s.createElement("img", {
+            l = this.src;
+          return n.createElement("img", {
             ref: this.m_refImage,
-            ...a,
-            src: n,
+            ...s,
+            src: l,
             onError: this.OnImageError,
+            alt: a,
           });
         }
       }
-      (0, a.Cg)([n.oI], c.prototype, "OnImageError", null);
+      (0, a.Cg)([s.oI], l.prototype, "OnImageError", null);
     },
     12813: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => S });
-      var a = r(90626),
-        s = r(57876),
-        n = r(55263),
-        c = r(84811),
-        i = r(32630),
-        m = r(70124),
-        o = r.n(m),
-        l = r(61859),
-        g = r(22837),
-        u = r(8527),
-        d = r(52038),
-        p = r(61336),
-        h = r(45699),
-        E = r(54096),
-        f = r(53354),
-        I = r(10224),
-        A = r(60014),
-        _ = r(89409);
-      function S(e) {
+      r.r(t), r.d(t, { default: () => b });
+      var a = r(22837),
+        n = r(45699),
+        s = r(8527),
+        l = r(60014),
+        i = r(90626),
+        c = r(57876),
+        o = r(55263),
+        m = r(84811),
+        g = r(53354),
+        d = r(89409),
+        u = r(60801),
+        p = r(32630),
+        h = r(54096),
+        f = r(10224),
+        E = r(52038),
+        A = r(61859),
+        I = r(61336),
+        _ = r(70124),
+        S = r.n(_);
+      function b(e) {
         const {
             match: {
               params: { appid: t },
             },
           } = e,
           r = Number.parseInt(t),
-          [m] = (0, n.t7)(r, s.Xh);
-        return a.createElement(
-          i.Ay,
-          { method: "verifiedprogram" },
-          a.createElement(c.tH, null, a.createElement(k, { storeItem: m })),
+          [a] = (0, o.t7)(r, c.Xh);
+        return (
+          (0, i.useEffect)(() => {
+            if (a) {
+              const e = a.GetStorePageURL().replace("/app/", "/verified/");
+              e != window.location.href &&
+                window.history.replaceState({}, "", e);
+            }
+          }, [a]),
+          i.createElement(
+            p.Ay,
+            { method: "verifiedprogram" },
+            i.createElement(m.tH, null, i.createElement(k, { storeItem: a })),
+          )
         );
       }
-      function b(e) {
+      function G(e) {
         const { storeItem: t } = e,
-          r = (0, p.L$)(
+          r = (0, I.L$)(
             "https://clan.akamai.steamstatic.com/images/41316928/846f603df6057b070667f2741730c2038648955d.png",
           );
-        return a.createElement(
-          a.Fragment,
+        return i.createElement(
+          i.Fragment,
           null,
-          a.createElement(
+          i.createElement(
             "div",
-            { className: o().Headline },
-            (0, l.PP)(
+            { className: S().Headline },
+            (0, A.PP)(
               "#VerifiedProgram_DeckTitle",
               t.GetName(),
-              a.createElement(
+              i.createElement(
                 "span",
-                { className: o().Verified },
-                a.createElement("img", {
+                { className: S().Verified },
+                i.createElement("img", {
                   src: r,
-                  "aria-label": (0, l.we)("#VerifiedProgram_DeckAlt"),
+                  alt: (0, A.we)("#VerifiedProgram_DeckAlt"),
                 }),
-                (0, l.we)("#VerifiedProgram_DeckTitle_Verified"),
+                (0, A.we)("#VerifiedProgram_DeckTitle_Verified"),
               ),
             ),
           ),
-          a.createElement(
+          i.createElement(
             "div",
-            { className: o().Subtitle },
-            (0, l.oW)(
+            { className: S().Subtitle },
+            (0, A.oW)(
               "#VerifiedProgram_DeckSubTitle",
-              a.createElement(h.Ii, {
-                className: o().Link,
-                href: `${u.TS.STORE_BASE_URL}greatondeck`,
+              i.createElement(n.Ii, {
+                className: S().Link,
+                href: `${s.TS.STORE_BASE_URL}greatondeck`,
               }),
             ),
           ),
@@ -163,35 +237,35 @@
         const r =
           t.GetAssets().GetLibraryHeroURL_2x() ??
           t.GetAssets().GetLibraryHeroURL();
-        return a.createElement(
+        return i.createElement(
           "div",
-          { className: o().Ctn },
-          a.createElement(
+          { className: S().Ctn },
+          i.createElement(
             "div",
-            { className: o().BackgroundImageCtn },
-            a.createElement("img", { src: r }),
+            { className: S().BackgroundImageCtn },
+            i.createElement("img", { src: r, alt: "" }),
           ),
-          a.createElement(
+          i.createElement(
             "div",
-            { className: o().BackgroundImageBlurCtn },
-            a.createElement("img", { src: r }),
+            { className: S().BackgroundImageBlurCtn },
+            i.createElement("img", { src: r, alt: "" }),
           ),
-          a.createElement(
+          i.createElement(
             "div",
-            { className: (0, d.A)(o().BackgroundDarken, "page_content") },
-            a.createElement(b, { storeItem: t }),
-            a.createElement(L, { storeItem: t }),
-            a.createElement(T, { storeItem: t }),
-            a.createElement(C, { storeItem: t }),
+            { className: (0, E.A)("page_content") },
+            i.createElement(G, { storeItem: t }),
+            i.createElement(L, { storeItem: t }),
+            i.createElement(N, { storeItem: t }),
+            i.createElement(T, { storeItem: t }),
           ),
         );
       }
-      function C(e) {
+      function N(e) {
         const { storeItem: t } = e;
-        return a.createElement(
+        return i.createElement(
           "div",
-          null,
-          a.createElement(_.y, {
+          { className: S().CapsuleWrapper },
+          i.createElement(d.y, {
             id: t.GetID(),
             type: "game",
             bShowDeckCompatibilityDialog: !1,
@@ -203,50 +277,62 @@
       }
       function T(e) {
         const { storeItem: t } = e,
-          r = (0, A.aL)(
-            `${u.TS.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
+          r = (0, l.aL)(
+            `${s.TS.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
             "banner",
           );
-        return a.createElement(
-          h.Ii,
-          { href: r, className: (0, d.A)(o().HardwareBannerCtn) },
-          a.createElement(D, null),
+        return i.createElement(
+          n.Ii,
+          { href: r, className: (0, E.A)(S().HardwareBannerCtn) },
+          i.createElement(C, null),
         );
       }
       function L(e) {
         const { storeItem: t } = e,
-          r = (0, p.L$)(
+          r = (0, I.L$)(
             "https://clan.akamai.steamstatic.com/images//39049601/6d623258307ee751edb132215ffe83e9b31bba95.png",
           ),
-          s = [
+          a = [
             ...t.GetAllTrailers().GetHighlightTrailers(!0),
             ...t.GetAllTrailers().GetOtherTrailers(!0),
           ],
-          n = s?.[0]?.GetTrailersDash(),
-          c = s?.[0]?.GetTrailerHls(),
-          i = s?.[0]?.GetScreenshot();
-        return a.createElement(
+          n = a?.[0]?.GetTrailersDash(),
+          s = a?.[0]?.GetTrailerHls(),
+          l = a?.[0]?.GetScreenshot();
+        return i.createElement(
           "div",
-          { className: (0, d.A)(o().DeviceWrapper) },
-          a.createElement(
+          { className: S().DeviceFullWidthShadow },
+          i.createElement(
             "div",
-            { className: o().TrailerCtn },
-            a.createElement(E.P, {
-              dashManifests: n,
-              hlsManifest: c,
-              screenshot: i,
-              altText: t.GetName(),
-              muteWhenAutoplayBlocked: !0,
+            { className: (0, E.A)(S().DeviceWrapper) },
+            i.createElement(
+              u.S,
+              null,
+              i.createElement(
+                "div",
+                { className: S().TrailerCtn },
+                i.createElement(h.P, {
+                  dashManifests: n,
+                  hlsManifest: s,
+                  screenshot: l,
+                  altText: t.GetName(),
+                  muteWhenAutoplayBlocked: !0,
+                }),
+              ),
+            ),
+            i.createElement("img", {
+              src: r,
+              alt: (0, A.we)("#VerifiedProgram_DeckDeviceAlt"),
             }),
           ),
-          a.createElement("img", { src: r }),
         );
       }
-      function D(e) {
-        const t = (0, I.zI)(),
-          r = (0, g.sf)(u.TS.LANGUAGE);
-        return a.createElement(f.u, {
+      function C(e) {
+        const t = (0, f.zI)(),
+          r = (0, a.sf)(s.TS.LANGUAGE);
+        return i.createElement(g.u, {
           language: r,
+          strAltText: (0, A.we)("#VerifiedProgram_DeckShopBannerAlt"),
           strImageToken: t
             ? "{STEAM_CLAN_LOC_IMAGE}/39049601/6e0ec24257ee5ada6e922c2130eaa75ce83747e8.jpg"
             : "{STEAM_CLAN_LOC_IMAGE}/39049601/c18308dc60fd94678bb348608ddc0d6b8fdb11ab.jpg",

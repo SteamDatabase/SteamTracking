@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Eset részletei frissítve",
 	"moderationaction_locked": "Zárolva",
 	"moderationaction_unlocked": "Feloldva",
-	"moderationaction_unknown": "Ismeretlen művelet"
+	"moderationaction_unknown": "Ismeretlen művelet",
+	"moderatormessage_count_note": "Megjegyzések: %1$s",
+	"moderatormessage_count_warning": "Figyelmeztetések: %1$s",
+	"moderatormessage_count_bannotice": "Kitiltások: %1$s",
+	"moderatormessage_count_contentremoval": "Tartalom-eltávolítási értesítések: %1$s"
 }`);
     },
   },

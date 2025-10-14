@@ -1467,7 +1467,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _._.Get();
+      const _ = _._.Get(),
+        _ = _._.GetSummaryStore();
       function _() {
         document.body.classList.contains("events_hub") &&
           document.body.classList.remove("events_hub");

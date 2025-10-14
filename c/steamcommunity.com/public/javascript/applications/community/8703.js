@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Saksopplysninger oppdatert",
 	"moderationaction_locked": "Låst",
 	"moderationaction_unlocked": "Låst opp",
-	"moderationaction_unknown": "Ukjent handling"
+	"moderationaction_unknown": "Ukjent handling",
+	"moderatormessage_count_note": "Merknader: %1$s",
+	"moderatormessage_count_warning": "Advarsler: %1$s",
+	"moderatormessage_count_bannotice": "Utestengelser: %1$s",
+	"moderatormessage_count_contentremoval": "Merknader om fjerning av innhold: %1$s"
 }`);
     },
   },

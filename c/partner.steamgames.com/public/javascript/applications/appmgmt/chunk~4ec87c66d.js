@@ -32075,7 +32075,7 @@
                     {
                       className: _().SectionBody,
                     },
-                    "We recommend keeping your demo active for at least a week or two after Next Fest ends to make sure that players have time to try out all the great demos they discover during the fest.",
+                    "We recommend keeping your demo active for at least a week or two after Next Fest ends to make sure that players have time to try out all the great demos they discover during the Fest.",
                   ),
                 ));
               break;
@@ -103609,8 +103609,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return _ + "economy/sticker/" + encodeURIComponent(_);
+      function _(_, _, __webpack_require__ = !1) {
+        return `${_}economy/sticker${__webpack_require__ ? "static" : ""}/${encodeURIComponent(_)}`;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

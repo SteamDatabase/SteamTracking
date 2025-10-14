@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Emneoplysninger opdateret",
 	"moderationaction_locked": "Låst",
 	"moderationaction_unlocked": "Låst op",
-	"moderationaction_unknown": "Ukendt handling"
+	"moderationaction_unknown": "Ukendt handling",
+	"moderatormessage_count_note": "Bemærkninger: %1$s",
+	"moderatormessage_count_warning": "Advarsler: %1$s",
+	"moderatormessage_count_bannotice": "Udelukkelser: %1$s",
+	"moderatormessage_count_contentremoval": "Varsler om indholdsfjernelse: %1$s"
 }`);
     },
   },

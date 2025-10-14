@@ -1263,19 +1263,23 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   color: inherit;
 }
 .nOdcT-MoOaXGePXLyPe0H {
+  --mask-direction: right;
   -webkit-mask: linear-gradient(
-    to right,
+    to var(--mask-direction),
     black calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
-    to right,
+    to to var(--mask-direction),
     black calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
   padding-inline-end: 6px;
   margin-inline-end: -6px;
+}
+.nOdcT-MoOaXGePXLyPe0H:dir(rtl) {
+  --mask-direction: left;
 }
 .nOdcT-MoOaXGePXLyPe0H.GamepadMode,
 .GamepadMode .nOdcT-MoOaXGePXLyPe0H {
@@ -1315,17 +1319,21 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   overflow: hidden;
   font-size: 10px;
   margin-top: -1px;
+  --mask-direction: right;
   -webkit-mask: linear-gradient(
-    to right,
+    to to var(--mask-direction),
     black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
-    to right,
+    to to var(--mask-direction),
     black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   padding-inline-end: 24px;
+}
+._2Ri005Wg_uXDTa71kdRbcN:dir(rtl) {
+  --mask-direction: left;
 }
 .BasicUI ._2Ri005Wg_uXDTa71kdRbcN {
   display: block;
@@ -3605,7 +3613,7 @@ html.responsive.tablet ._20f2sKS2M7PlPSnPCinT26 {
 .A_A2B6fTn_MPLlGCmsLtd img {
   max-width: 100%;
 }
-.A_A2B6fTn_MPLlGCmsLtd a:not(.LinkButton) {
+.A_A2B6fTn_MPLlGCmsLtd a:not(.LinkButton, .WidgetTag) {
   color: #80bcd2;
   text-decoration: none;
   padding-bottom: 0px;

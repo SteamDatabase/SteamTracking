@@ -2574,14 +2574,16 @@
             );
             if (!_.bSuccess) return _;
             _ = _.data;
+            const _ = {
+              "Content-Type": "application/octet-stream",
+            };
+            for (const _ of _.headers_for_upload) _[_.name] = _.value;
             const _ = await _()
               .put(_.upload_url, _.file, {
-                headers: {
-                  "Content-Type": "application/octet-stream",
-                },
+                headers: _,
                 cancelToken: _,
               })
-              .then((_) => 200 == _.status)
+              .then((_) => 200 == _.status || 201 == _.status)
               .catch(() => !1);
             if (!_)
               return (
@@ -9262,7 +9264,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             rgDLCSettings: _,
@@ -9271,7 +9274,7 @@
           } = _,
           [_, _] = (0, _.useState)(() => _);
         return _.createElement(
-          _.Fragment,
+          _._,
           null,
           _.createElement("h2", null, (0, _._)("#DLC_Dependency_Title")),
           _.createElement("hr", null),
@@ -9989,7 +9992,6 @@
             ),
         });
       }
-      var _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = (0, _.useState)(() =>
           (function () {

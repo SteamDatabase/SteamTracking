@@ -176,11 +176,15 @@
 	"moderationaction_escalated": "Geëscaleerd",
 	"moderationaction_sanctioned": "Sanctie opgelegd",
 	"moderationaction_sustainedondispute": "Bezwaar verworpen",
-	"moderationaction_unresolved": "Status gewijzigd in niet-opgelost",
+	"moderationaction_unresolved": "Status gewijzigd in niet opgelost",
 	"moderationaction_updated": "Details van onderwerp bijgewerkt",
 	"moderationaction_locked": "Vergrendeld",
 	"moderationaction_unlocked": "Ontgrendeld",
-	"moderationaction_unknown": "Onbekende actie"
+	"moderationaction_unknown": "Onbekende actie",
+	"moderatormessage_count_note": "Opmerkingen: %1$s",
+	"moderatormessage_count_warning": "Waarschuwingen: %1$s",
+	"moderatormessage_count_bannotice": "Verbanningen: %1$s",
+	"moderatormessage_count_contentremoval": "Inhoud verwijderd: %1$s"
 }`);
     },
   },

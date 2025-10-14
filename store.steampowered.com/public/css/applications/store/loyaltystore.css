@@ -4665,6 +4665,7 @@ body.v6.rewards .ModalPosition_Content {
 }
 .wy_GUo_KpX4WBNzed2u3m {
   perspective: 1px;
+  overflow: hidden;
 }
 ._1vgF7y8x0h-yXyDW_zLgnG {
   position: absolute;
@@ -4678,23 +4679,9 @@ body.v6.rewards .ModalPosition_Content {
 }
 ._1zw0IYqnKh-6iLonZf9P-G,
 ._1vgF7y8x0h-yXyDW_zLgnG {
-  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 70%);
-  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 70%);
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50vw);
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50vw);
   transform: translateZ(-1px) translateY(-5%) scale(2) rotateY(0deg);
-}
-@media (max-width: 2000px) {
-  ._1zw0IYqnKh-6iLonZf9P-G,
-  ._1vgF7y8x0h-yXyDW_zLgnG {
-    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 55%);
-    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 55%);
-  }
-}
-@media (max-width: 1600px) {
-  ._1zw0IYqnKh-6iLonZf9P-G,
-  ._1vgF7y8x0h-yXyDW_zLgnG {
-    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50vw);
-    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50vw);
-  }
 }
 @media (max-width: 1280px) {
   ._1zw0IYqnKh-6iLonZf9P-G,

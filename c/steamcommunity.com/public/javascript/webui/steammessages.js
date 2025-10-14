@@ -99,6 +99,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  creator_clan_account_id: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -74968,6 +74973,12 @@ var CLSTAMP = "steamdb";
                     _: 47,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  must_purchase_as_set: {
+                    _: 48,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),

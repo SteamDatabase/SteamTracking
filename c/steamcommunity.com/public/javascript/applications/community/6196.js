@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Detalles del asunto actualizados",
 	"moderationaction_locked": "Bloqueado",
 	"moderationaction_unlocked": "Desbloqueado",
-	"moderationaction_unknown": "Acción desconocida"
+	"moderationaction_unknown": "Acción desconocida",
+	"moderatormessage_count_note": "Notas: %1$s",
+	"moderatormessage_count_warning": "Advertencias: %1$s",
+	"moderatormessage_count_bannotice": "Bloqueos: %1$s",
+	"moderatormessage_count_contentremoval": "Avisos de eliminación de contenido: %1$s"
 }`);
     },
   },

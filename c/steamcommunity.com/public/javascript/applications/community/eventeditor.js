@@ -13,6 +13,12 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Ctn: "KpCRX3EpVySkwPrzJWf8H",
+        TabContents: "_1L_nTm1MYScrbD9JpPutxs",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SearchResults: "_26iJ3c5EI_arYCNqRvcLNX",
       };
     },
@@ -436,9 +442,10 @@
         _ = _ + "break_",
         _ = "techspecblock_",
         _ = "_name_",
-        _ = "_desc_";
+        _ = "_desc_",
+        _ = "submenu_";
       function _(_, _, _, _) {
-        var _, _;
+        var _, _, _, _;
         let _ = new _._();
         if (_) {
           let _ = _.GetEventModel();
@@ -542,68 +549,91 @@
                   _.SetLocalization(_ + _.unique_id, _, _);
                 }
               });
-          _.GetSaleSections()
-            .filter((_) => !Boolean(_.disable_localization))
-            .forEach((_) => {
-              var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
-              const _ = _.GetSaleSectionIndexByID(_.unique_id);
-              for (let _ = 0; _ < 31; ++_) {
-                if (
-                  (_.BHasSaleSectionLabelLocalization(_, _) &&
-                    _.SetLocalization(_ + _.unique_id, _, _.localized_label[_]),
-                  _.BHasSaleSectionSubtitleLocalization(_, _) &&
+          (null ===
+            (_ =
+              null === (_ = _.sale_sub_menu) || void 0 === _
+                ? void 0
+                : _.menu_items) || void 0 === _
+            ? void 0
+            : _.length) > 0 &&
+            _.sale_sub_menu.menu_items
+              .filter((_) => {
+                var _;
+                return (
+                  (null === (_ = _.localized_sub_menu_name) || void 0 === _
+                    ? void 0
+                    : _.length) > 0
+                );
+              })
+              .map((_) => {
+                for (let _ = 0; _ < 31; ++_)
+                  _.localized_sub_menu_name &&
+                    Boolean(_._.Get(_.localized_sub_menu_name, _)) &&
                     _.SetLocalization(
                       _ + _.unique_id,
                       _,
-                      _.localized_subtitle[_],
-                    ),
-                  _.BHasSaleSectionTextLocalizationForLang(_, _) &&
-                    _.SetLocalization(
-                      _ + _.unique_id,
-                      _,
-                      _.text_section_contents[_],
-                    ),
-                  _.BHasSaleSectionDescriptionBBCode(_, _) &&
-                    _.SetLocalization(
-                      _ + _.unique_id,
-                      _,
-                      _.localized_description[_],
-                    ),
-                  _.BHasSaleSectionInnerTitle(_, _) &&
-                    _.SetLocalization(_ + _.unique_id, _, _.localized_title[_]),
-                  "tabs" === _.section_type && _.tabs)
-                )
-                  for (let _ of _.tabs)
-                    _.BHasSaleSectionTabName(_, _) &&
+                      _.localized_sub_menu_name[_],
+                    );
+              }),
+            _.GetSaleSections()
+              .filter((_) => !Boolean(_.disable_localization))
+              .forEach((_) => {
+                var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+                const _ = _.GetSaleSectionIndexByID(_.unique_id);
+                for (let _ = 0; _ < 31; ++_) {
+                  if (
+                    (_.BHasSaleSectionLabelLocalization(_, _) &&
                       _.SetLocalization(
-                        _ + _.unique_id + "_" + _.unique_id,
+                        _ + _.unique_id,
                         _,
                         _.localized_label[_],
-                      );
-                if (
-                  (_.enable_faceted_browsing &&
-                    (_.facets.forEach((_) => {
-                      _.BHasSaleSectionFacetName(_, _) &&
+                      ),
+                    _.BHasSaleSectionSubtitleLocalization(_, _) &&
+                      _.SetLocalization(
+                        _ + _.unique_id,
+                        _,
+                        _.localized_subtitle[_],
+                      ),
+                    _.BHasSaleSectionTextLocalizationForLang(_, _) &&
+                      _.SetLocalization(
+                        _ + _.unique_id,
+                        _,
+                        _.text_section_contents[_],
+                      ),
+                    _.BHasSaleSectionDescriptionBBCode(_, _) &&
+                      _.SetLocalization(
+                        _ + _.unique_id,
+                        _,
+                        _.localized_description[_],
+                      ),
+                    _.BHasSaleSectionInnerTitle(_, _) &&
+                      _.SetLocalization(
+                        _ + _.unique_id,
+                        _,
+                        _.localized_title[_],
+                      ),
+                    "tabs" === _.section_type && _.tabs)
+                  )
+                    for (let _ of _.tabs)
+                      _.BHasSaleSectionTabName(_, _) &&
                         _.SetLocalization(
                           _ + _.unique_id + "_" + _.unique_id,
                           _,
-                          _.name[_],
+                          _.localized_label[_],
                         );
-                    }),
-                    _.facets.forEach((_) => {
-                      _.facetValues.forEach((_) => {
-                        _.BHasSaleSectionFacetValueName(_, _) &&
+                  if (
+                    (_.enable_faceted_browsing &&
+                      (_.facets.forEach((_) => {
+                        _.BHasSaleSectionFacetName(_, _) &&
                           _.SetLocalization(
-                            _ +
-                              _.unique_id +
-                              "_" +
-                              _.unique_id +
-                              "_" +
-                              _.unique_id,
+                            _ + _.unique_id + "_" + _.unique_id,
                             _,
                             _.name[_],
-                          ),
-                          _.BHasSaleSectionFacetValueSubtitle(_, _) &&
+                          );
+                      }),
+                      _.facets.forEach((_) => {
+                        _.facetValues.forEach((_) => {
+                          _.BHasSaleSectionFacetValueName(_, _) &&
                             _.SetLocalization(
                               _ +
                                 _.unique_id +
@@ -612,314 +642,329 @@
                                 "_" +
                                 _.unique_id,
                               _,
-                              _.subtitle[_],
+                              _.name[_],
+                            ),
+                            _.BHasSaleSectionFacetValueSubtitle(_, _) &&
+                              _.SetLocalization(
+                                _ +
+                                  _.unique_id +
+                                  "_" +
+                                  _.unique_id +
+                                  "_" +
+                                  _.unique_id,
+                                _,
+                                _.subtitle[_],
+                              );
+                        });
+                      })),
+                    "vo_internal" == _.section_type &&
+                      "reservation_widget" ==
+                        (null === (_ = _.internal_section_data) || void 0 === _
+                          ? void 0
+                          : _.internal_type) &&
+                      (null ===
+                        (_ = _.internal_section_data.reservation_options) ||
+                      void 0 === _
+                        ? void 0
+                        : _.length) > 0 &&
+                      _.internal_section_data.reservation_options.forEach(
+                        (_) => {
+                          _.localized_reservation_desc &&
+                            Boolean(_._.Get(_.localized_reservation_desc, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.localized_reservation_desc[_],
+                            ),
+                            _.localized_out_of_stock_override &&
+                              Boolean(
+                                _._.Get(_.localized_out_of_stock_override, _),
+                              ) &&
+                              _.SetLocalization(
+                                _ + _.unique_id + "_" + _.unique_id,
+                                _,
+                                _.localized_out_of_stock_override[_],
+                              ),
+                            _.localized_delivery_override_desc &&
+                              Boolean(
+                                _._.Get(_.localized_delivery_override_desc, _),
+                              ) &&
+                              _.SetLocalization(
+                                _ + _.unique_id + "_" + _.unique_id,
+                                _,
+                                _.localized_delivery_override_desc[_],
+                              );
+                        },
+                      ),
+                    "vo_internal" == _.section_type &&
+                      "while_supplies_last" ==
+                        (null === (_ = _.internal_section_data) || void 0 === _
+                          ? void 0
+                          : _.internal_type) &&
+                      (null ===
+                        (_ =
+                          _.internal_section_data.while_supplies_last_option) ||
+                      void 0 === _
+                        ? void 0
+                        : _.length) > 0 &&
+                      _.internal_section_data.while_supplies_last_option.forEach(
+                        (_) => {
+                          _.localized_supply_desc &&
+                            Boolean(_._.Get(_.localized_supply_desc, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.localized_supply_desc[_],
                             );
-                      });
-                    })),
-                  "vo_internal" == _.section_type &&
-                    "reservation_widget" ==
-                      (null === (_ = _.internal_section_data) || void 0 === _
+                        },
+                      ),
+                    ("quiz" == _.section_type ||
+                      "template_faq" == _.section_type) &&
+                      (null ===
+                        (_ =
+                          null === (_ = _.quiz) || void 0 === _
+                            ? void 0
+                            : _.questions) || void 0 === _
                         ? void 0
-                        : _.internal_type) &&
-                    (null ===
-                      (_ = _.internal_section_data.reservation_options) ||
-                    void 0 === _
-                      ? void 0
-                      : _.length) > 0 &&
-                    _.internal_section_data.reservation_options.forEach((_) => {
-                      _.localized_reservation_desc &&
-                        Boolean(_._.Get(_.localized_reservation_desc, _)) &&
+                        : _.length) > 0 &&
+                      (null === (_ = _.quiz) ||
+                        void 0 === _ ||
+                        _.questions.forEach((_) => {
+                          _.localized_question &&
+                            Boolean(_._.Get(_.localized_question, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.localized_question[_],
+                            ),
+                            (null == _ ? void 0 : _.answers) &&
+                              _.answers.forEach((_) => {
+                                _.localized_answer &&
+                                  Boolean(_._.Get(_.localized_answer, _)) &&
+                                  _.SetLocalization(
+                                    _ + _.unique_id + "_" + _.unique_id,
+                                    _,
+                                    _.localized_answer[_],
+                                  );
+                              });
+                        })),
+                    "template_techspec" == _.section_type &&
+                      (null ===
+                        (_ =
+                          null === (_ = _.tech_specs) || void 0 === _
+                            ? void 0
+                            : _.tech_spec_block_list) || void 0 === _
+                        ? void 0
+                        : _.length) > 0 &&
+                      (null === (_ = _.tech_specs) ||
+                        void 0 === _ ||
+                        _.tech_spec_block_list.forEach((_) => {
+                          _.localized_block_title &&
+                            Boolean(_._.Get(_.localized_block_title, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.localized_block_title[_],
+                            ),
+                            (null == _ ? void 0 : _.spec_list) &&
+                              _.spec_list.forEach((_) => {
+                                if (
+                                  _.localized_spec_name &&
+                                  Boolean(_._.Get(_.localized_spec_name, _))
+                                ) {
+                                  const _ = _ + _.unique_id + _ + _.unique_id;
+                                  _.SetLocalization(
+                                    _,
+                                    _,
+                                    _.localized_spec_name[_],
+                                  );
+                                }
+                                if (
+                                  _.localized_spec_description &&
+                                  Boolean(
+                                    _._.Get(_.localized_spec_description, _),
+                                  )
+                                ) {
+                                  const _ = _ + _.unique_id + _ + _.unique_id;
+                                  _.SetLocalization(
+                                    _,
+                                    _,
+                                    _.localized_spec_description[_].replace(
+                                      /\n/g,
+                                      "<br />",
+                                    ),
+                                  );
+                                }
+                              });
+                        })),
+                    "badge_progress" == _.section_type && _.badge_progress)
+                  ) {
+                    const _ = _.badge_progress;
+                    _.localized_name &&
+                      Boolean(_._.Get(_.localized_name, _)) &&
+                      _.SetLocalization(
+                        _ + _.unique_id,
+                        _,
+                        _.localized_name[_],
+                      ),
+                      _.localized_initial_description &&
+                        Boolean(_._.Get(_.localized_initial_description, _)) &&
                         _.SetLocalization(
-                          _ + _.unique_id + "_" + _.unique_id,
+                          _ + _.unique_id,
                           _,
-                          _.localized_reservation_desc[_],
+                          _.localized_initial_description[_],
                         ),
-                        _.localized_out_of_stock_override &&
-                          Boolean(
-                            _._.Get(_.localized_out_of_stock_override, _),
-                          ) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.localized_out_of_stock_override[_],
-                          ),
-                        _.localized_delivery_override_desc &&
-                          Boolean(
-                            _._.Get(_.localized_delivery_override_desc, _),
-                          ) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.localized_delivery_override_desc[_],
-                          );
-                    }),
-                  "vo_internal" == _.section_type &&
-                    "while_supplies_last" ==
-                      (null === (_ = _.internal_section_data) || void 0 === _
-                        ? void 0
-                        : _.internal_type) &&
+                      _.localized_progress_description &&
+                        Boolean(_._.Get(_.localized_progress_description, _)) &&
+                        _.SetLocalization(
+                          _ + _.unique_id,
+                          _,
+                          _.localized_progress_description[_],
+                        ),
+                      _.localized_maxtier_description &&
+                        Boolean(_._.Get(_.localized_maxtier_description, _)) &&
+                        _.SetLocalization(
+                          _ + _.unique_id,
+                          _,
+                          _.localized_maxtier_description[_],
+                        );
+                  }
+                  "quest" == _.section_type &&
                     (null ===
                       (_ =
-                        _.internal_section_data.while_supplies_last_option) ||
-                    void 0 === _
-                      ? void 0
-                      : _.length) > 0 &&
-                    _.internal_section_data.while_supplies_last_option.forEach(
-                      (_) => {
-                        _.localized_supply_desc &&
-                          Boolean(_._.Get(_.localized_supply_desc, _)) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.localized_supply_desc[_],
-                          );
-                      },
-                    ),
-                  ("quiz" == _.section_type ||
-                    "template_faq" == _.section_type) &&
-                    (null ===
-                      (_ =
-                        null === (_ = _.quiz) || void 0 === _
+                        null === (_ = _.quest) || void 0 === _
                           ? void 0
-                          : _.questions) || void 0 === _
+                          : _.door_info) || void 0 === _
                       ? void 0
                       : _.length) > 0 &&
-                    (null === (_ = _.quiz) ||
-                      void 0 === _ ||
-                      _.questions.forEach((_) => {
-                        _.localized_question &&
-                          Boolean(_._.Get(_.localized_question, _)) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.localized_question[_],
-                          ),
-                          (null == _ ? void 0 : _.answers) &&
-                            _.answers.forEach((_) => {
-                              _.localized_answer &&
-                                Boolean(_._.Get(_.localized_answer, _)) &&
-                                _.SetLocalization(
-                                  _ + _.unique_id + "_" + _.unique_id,
-                                  _,
-                                  _.localized_answer[_],
-                                );
-                            });
-                      })),
-                  "template_techspec" == _.section_type &&
-                    (null ===
-                      (_ =
-                        null === (_ = _.tech_specs) || void 0 === _
-                          ? void 0
-                          : _.tech_spec_block_list) || void 0 === _
-                      ? void 0
-                      : _.length) > 0 &&
-                    (null === (_ = _.tech_specs) ||
-                      void 0 === _ ||
-                      _.tech_spec_block_list.forEach((_) => {
-                        _.localized_block_title &&
-                          Boolean(_._.Get(_.localized_block_title, _)) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.localized_block_title[_],
-                          ),
-                          (null == _ ? void 0 : _.spec_list) &&
-                            _.spec_list.forEach((_) => {
-                              if (
-                                _.localized_spec_name &&
-                                Boolean(_._.Get(_.localized_spec_name, _))
-                              ) {
-                                const _ = _ + _.unique_id + _ + _.unique_id;
-                                _.SetLocalization(
-                                  _,
-                                  _,
-                                  _.localized_spec_name[_],
-                                );
-                              }
-                              if (
-                                _.localized_spec_description &&
-                                Boolean(
-                                  _._.Get(_.localized_spec_description, _),
-                                )
-                              ) {
-                                const _ = _ + _.unique_id + _ + _.unique_id;
-                                _.SetLocalization(
-                                  _,
-                                  _,
-                                  _.localized_spec_description[_].replace(
-                                    /\n/g,
-                                    "<br />",
-                                  ),
-                                );
-                              }
-                            });
-                      })),
-                  "badge_progress" == _.section_type && _.badge_progress)
-                ) {
-                  const _ = _.badge_progress;
-                  _.localized_name &&
-                    Boolean(_._.Get(_.localized_name, _)) &&
-                    _.SetLocalization(_ + _.unique_id, _, _.localized_name[_]),
-                    _.localized_initial_description &&
-                      Boolean(_._.Get(_.localized_initial_description, _)) &&
-                      _.SetLocalization(
-                        _ + _.unique_id,
-                        _,
-                        _.localized_initial_description[_],
-                      ),
-                    _.localized_progress_description &&
-                      Boolean(_._.Get(_.localized_progress_description, _)) &&
-                      _.SetLocalization(
-                        _ + _.unique_id,
-                        _,
-                        _.localized_progress_description[_],
-                      ),
-                    _.localized_maxtier_description &&
-                      Boolean(_._.Get(_.localized_maxtier_description, _)) &&
-                      _.SetLocalization(
-                        _ + _.unique_id,
-                        _,
-                        _.localized_maxtier_description[_],
-                      );
-                }
-                "quest" == _.section_type &&
-                  (null ===
-                    (_ =
-                      null === (_ = _.quest) || void 0 === _
-                        ? void 0
-                        : _.door_info) || void 0 === _
-                    ? void 0
-                    : _.length) > 0 &&
-                  _.quest.door_info.forEach((_) => {
-                    _.localized_open_door_description &&
-                      Boolean(_._.Get(_.localized_open_door_description, _)) &&
-                      _.SetLocalization(
-                        _ + _.unique_id + "_" + _.unique_id,
-                        _,
-                        _.localized_open_door_description[_],
-                      ),
-                      _.localized_closed_door_description &&
+                    _.quest.door_info.forEach((_) => {
+                      _.localized_open_door_description &&
                         Boolean(
-                          _._.Get(_.localized_closed_door_description, _),
+                          _._.Get(_.localized_open_door_description, _),
                         ) &&
                         _.SetLocalization(
                           _ + _.unique_id + "_" + _.unique_id,
                           _,
-                          _.localized_closed_door_description[_],
-                        );
-                  }),
-                  "rewards" == _.section_type &&
-                    (null ===
-                      (_ =
-                        null === (_ = _.rewards) || void 0 === _
-                          ? void 0
-                          : _.reward_items) || void 0 === _
-                      ? void 0
-                      : _.length) > 0 &&
-                    _.rewards.reward_items.forEach((_) => {
-                      _.localized_reward_description &&
-                        Boolean(_._.Get(_.localized_reward_description, _)) &&
-                        _.SetLocalization(
-                          _ + _.unique_id + "_" + _.virtual_item_reward_def_id,
-                          _,
-                          _.localized_reward_description[_],
-                        );
-                    }),
-                  "claim_item" == _.section_type &&
-                    (null ===
-                      (_ =
-                        null === (_ = _.claim_item_section_data) || void 0 === _
-                          ? void 0
-                          : _.localized_claim_button) || void 0 === _
-                      ? void 0
-                      : _.length) > 0 &&
-                    _.claim_item_section_data.localized_claim_button &&
-                    Boolean(
-                      _._.Get(
-                        _.claim_item_section_data.localized_claim_button,
-                        _,
-                      ),
-                    ) &&
-                    _.SetLocalization(
-                      _ + _.unique_id,
-                      _,
-                      _.claim_item_section_data.localized_claim_button[_],
-                    ),
-                  "discoveryqueue" == _.section_type &&
-                    _.discovery_queue_localized_desc &&
-                    Boolean(_._.Get(_.discovery_queue_localized_desc, _)) &&
-                    _.SetLocalization(
-                      _ + _.unique_id,
-                      _,
-                      _.discovery_queue_localized_desc[_],
-                    ),
-                  "social_share" == _.section_type &&
-                    _.social_share.content_options.forEach((_) => {
-                      const _ = _.localized_option_fields;
-                      _.localized_header &&
-                        Boolean(_._.Get(_.localized_header, _)) &&
-                        _.SetLocalization(
-                          _ + _.unique_id + "_" + _.unique_id,
-                          _,
-                          _.localized_header[_],
+                          _.localized_open_door_description[_],
                         ),
-                        _.title &&
-                          Boolean(_._.Get(_.title, _)) &&
+                        _.localized_closed_door_description &&
+                          Boolean(
+                            _._.Get(_.localized_closed_door_description, _),
+                          ) &&
                           _.SetLocalization(
                             _ + _.unique_id + "_" + _.unique_id,
                             _,
-                            _.title[_],
-                          ),
-                        _.description &&
-                          Boolean(_._.Get(_.description, _)) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.description[_],
-                          ),
-                        _.image &&
-                          Boolean(_._.Get(_.image, _)) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.image[_],
-                          ),
-                        _.twitter_alt_text &&
-                          Boolean(_._.Get(_.twitter_alt_text, _)) &&
-                          _.SetLocalization(
-                            _ + _.unique_id + "_" + _.unique_id,
-                            _,
-                            _.twitter_alt_text[_],
+                            _.localized_closed_door_description[_],
                           );
                     }),
-                  "media_layout" == _.section_type &&
-                    _.media_layout.media_content.forEach((_, _) => {
-                      const _ = _.localized_media_desc;
-                      _ &&
-                        Boolean(_._.Get(_, _)) &&
-                        _.SetLocalization(_ + _.unique_id + "_" + _, _, _[_]);
-                    }),
-                  "template_media_content" == _.section_type &&
-                    (null ===
-                      (_ =
-                        null === (_ = _.media_container) || void 0 === _
-                          ? void 0
-                          : _.media_rows) ||
-                      void 0 === _ ||
-                      _.forEach((_, _) => {
-                        var _;
-                        null === (_ = null == _ ? void 0 : _.media_columns) ||
-                          void 0 === _ ||
-                          _.forEach((_) => {
-                            let _ = _.localized_media_title;
-                            _ &&
-                              Boolean(_._.Get(_, _)) &&
-                              _.SetLocalization(
-                                _ + _.unique_id + "_" + _.unique_id,
-                                _,
-                                _[_],
-                              ),
-                              (_ = _.localized_media_subtitle),
+                    "rewards" == _.section_type &&
+                      (null ===
+                        (_ =
+                          null === (_ = _.rewards) || void 0 === _
+                            ? void 0
+                            : _.reward_items) || void 0 === _
+                        ? void 0
+                        : _.length) > 0 &&
+                      _.rewards.reward_items.forEach((_) => {
+                        _.localized_reward_description &&
+                          Boolean(_._.Get(_.localized_reward_description, _)) &&
+                          _.SetLocalization(
+                            _ +
+                              _.unique_id +
+                              "_" +
+                              _.virtual_item_reward_def_id,
+                            _,
+                            _.localized_reward_description[_],
+                          );
+                      }),
+                    "claim_item" == _.section_type &&
+                      (null ===
+                        (_ =
+                          null === (_ = _.claim_item_section_data) ||
+                          void 0 === _
+                            ? void 0
+                            : _.localized_claim_button) || void 0 === _
+                        ? void 0
+                        : _.length) > 0 &&
+                      _.claim_item_section_data.localized_claim_button &&
+                      Boolean(
+                        _._.Get(
+                          _.claim_item_section_data.localized_claim_button,
+                          _,
+                        ),
+                      ) &&
+                      _.SetLocalization(
+                        _ + _.unique_id,
+                        _,
+                        _.claim_item_section_data.localized_claim_button[_],
+                      ),
+                    "discoveryqueue" == _.section_type &&
+                      _.discovery_queue_localized_desc &&
+                      Boolean(_._.Get(_.discovery_queue_localized_desc, _)) &&
+                      _.SetLocalization(
+                        _ + _.unique_id,
+                        _,
+                        _.discovery_queue_localized_desc[_],
+                      ),
+                    "social_share" == _.section_type &&
+                      _.social_share.content_options.forEach((_) => {
+                        const _ = _.localized_option_fields;
+                        _.localized_header &&
+                          Boolean(_._.Get(_.localized_header, _)) &&
+                          _.SetLocalization(
+                            _ + _.unique_id + "_" + _.unique_id,
+                            _,
+                            _.localized_header[_],
+                          ),
+                          _.title &&
+                            Boolean(_._.Get(_.title, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.title[_],
+                            ),
+                          _.description &&
+                            Boolean(_._.Get(_.description, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.description[_],
+                            ),
+                          _.image &&
+                            Boolean(_._.Get(_.image, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.image[_],
+                            ),
+                          _.twitter_alt_text &&
+                            Boolean(_._.Get(_.twitter_alt_text, _)) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.twitter_alt_text[_],
+                            );
+                      }),
+                    "media_layout" == _.section_type &&
+                      _.media_layout.media_content.forEach((_, _) => {
+                        const _ = _.localized_media_desc;
+                        _ &&
+                          Boolean(_._.Get(_, _)) &&
+                          _.SetLocalization(_ + _.unique_id + "_" + _, _, _[_]);
+                      }),
+                    "template_media_content" == _.section_type &&
+                      (null ===
+                        (_ =
+                          null === (_ = _.media_container) || void 0 === _
+                            ? void 0
+                            : _.media_rows) ||
+                        void 0 === _ ||
+                        _.forEach((_, _) => {
+                          var _;
+                          null === (_ = null == _ ? void 0 : _.media_columns) ||
+                            void 0 === _ ||
+                            _.forEach((_) => {
+                              let _ = _.localized_media_title;
                               _ &&
                                 Boolean(_._.Get(_, _)) &&
                                 _.SetLocalization(
@@ -927,18 +972,26 @@
                                   _,
                                   _[_],
                                 ),
-                              (_ = _.localized_media_description),
-                              _ &&
-                                Boolean(_._.Get(_, _)) &&
-                                _.SetLocalization(
-                                  _ + _.unique_id + "_" + _.unique_id,
-                                  _,
-                                  _[_],
-                                );
-                          });
-                      }));
-              }
-            });
+                                (_ = _.localized_media_subtitle),
+                                _ &&
+                                  Boolean(_._.Get(_, _)) &&
+                                  _.SetLocalization(
+                                    _ + _.unique_id + "_" + _.unique_id,
+                                    _,
+                                    _[_],
+                                  ),
+                                (_ = _.localized_media_description),
+                                _ &&
+                                  Boolean(_._.Get(_, _)) &&
+                                  _.SetLocalization(
+                                    _ + _.unique_id + "_" + _.unique_id,
+                                    _,
+                                    _[_],
+                                  );
+                            });
+                        }));
+                }
+              });
         }
         return _;
       }
@@ -950,7 +1003,7 @@
             __webpack_require__.forEach((_) => {
               let _ = !1;
               _.forEach((_) => {
-                var _, _;
+                var _, _, _, _;
                 const _ = _.GetLocalization(_, _) || "";
                 if (
                   (_ === _ &&
@@ -1139,6 +1192,39 @@
                         _.SetLocalization(_ + _.unique_id, _, _);
                       }
                     }),
+                    (null ===
+                      (_ =
+                        null === (_ = _.sale_sub_menu) || void 0 === _
+                          ? void 0
+                          : _.menu_items) || void 0 === _
+                      ? void 0
+                      : _.length) > 0 &&
+                      _.sale_sub_menu.menu_items
+                        .filter((_) => {
+                          var _;
+                          return (
+                            (null === (_ = _.localized_sub_menu_name) ||
+                            void 0 === _
+                              ? void 0
+                              : _.length) > 0
+                          );
+                        })
+                        .map((_) => {
+                          if (_ === _ + _.unique_id) {
+                            (_ ||
+                              Boolean(_._.Get(_.localized_sub_menu_name, _))) &&
+                              _._.Get(_.localized_sub_menu_name, _) != _ &&
+                              ((_.localized_sub_menu_name = _._.Set(
+                                _.localized_sub_menu_name || [],
+                                _,
+                                _,
+                              )),
+                              _.SetDirty(_._.jsondata_sales),
+                              (_ = !0));
+                            const _ = _.localized_sub_menu_name[_];
+                            _.SetLocalization(_ + _.unique_id, _, _);
+                          }
+                        }),
                     _.GetSaleSections()
                       .filter((_) => !_.disable_localization)
                       .forEach((_) => {
@@ -3000,7 +3086,7 @@
               size: _,
             }),
               _ &&
-                "object" == typeof _ &&
+                ("object" == typeof _ || Array.isArray(_)) &&
                 _ > 100 &&
                 _(_, _ - 1).forEach((_) => {
                   __webpack_require__.push({
@@ -3203,7 +3289,7 @@
             nHiddenEventCount: _,
             rgEventModels: _,
             fnRefetch: _,
-          } = (0, _._)(_),
+          } = (0, _._)(_, !__webpack_require__),
           {
             rgClanEventData: _,
             bHasNextPage: _,
@@ -5270,7 +5356,7 @@
         _ = (0, _._)((_) => {
           var _, _, _, _;
           const { editModel: _ } = _,
-            [_] = (0, _._)(() => [_.GetAppID()]),
+            [_, _] = (0, _._)(() => [_.GetAppID(), _.GetEventType()]),
             _ = Boolean(
               _.BHasSomeImage("product_banner") &&
                 _.GetEventModel().BHasTag("hide_store"),
@@ -5279,6 +5365,7 @@
               _.BHasSomeImage("product_mobile_banner") &&
                 _.GetEventModel().BHasTag("hide_store"),
             ),
+            _ = 36 == _,
             _ = (_, _ = !1) => (0, _._)(_, _),
             _ = (_, _ = !1) => (0, _._)(_, _),
             _ =
@@ -5306,14 +5393,17 @@
               void 0 === _
                 ? void 0
                 : _.length) || 0,
-            _ = [
-              "sale_header",
-              "product_banner",
-              "product_mobile_banner",
-              "sale_logo",
-            ];
+            _ = [];
           return (
-            (0, _._)(_.GetClanSteamID(), !0) && _.push("sale_overlay"),
+            _
+              ? _.push("sale_header")
+              : (_.push(
+                  "sale_header",
+                  "product_banner",
+                  "product_mobile_banner",
+                  "sale_logo",
+                ),
+                (0, _._)(_.GetClanSteamID(), !0) && _.push("sale_overlay")),
             _.createElement(
               _.Fragment,
               null,
@@ -5350,173 +5440,177 @@
                   }),
                 }),
               ),
-              _.createElement(
-                _,
-                {
-                  strSectionId: "SalePageEdit_SaleLogo",
-                },
+              !_ &&
                 _.createElement(
-                  "div",
+                  _,
                   {
-                    className: _.SalePageLogoCtn,
+                    strSectionId: "SalePageEdit_SaleLogo",
                   },
-                  _.createElement(_._, {
-                    _: "SalePageEdit_SaleLogo",
-                    clanSteamID: _.GetClanSteamID(),
-                    eventModel: _.GetEventModel(),
-                    appid: _,
-                    title: (0, _._)("#EventEditor_ArtworkType_sale_logo"),
-                    artworkType: "sale_logo",
-                    elEventArtworkExample: _.createElement(_, {
-                      artworkType: "sale_logo",
-                    }),
-                    bIsMinimized: _("sale_logo"),
-                    fnLangHasData: _.BHasTitleImage,
-                    fnSetImageURL: _.SetImageURL,
-                    fnGetImageHashAndExt: _.GetImageHashAndExt,
-                    fnToggleMinimize: () => _("sale_logo"),
-                    partnerEventStore: _._,
-                    fnRemoveAllArtwork:
-                      0 == _
-                        ? void 0
-                        : () => {
-                            (0, _._)(() => {
-                              (_.GetEventModel().jsondata.localized_sale_logo =
-                                []),
-                                _.SetDirty(_._.jsondata_sales);
-                            });
-                          },
-                  }),
-                  _.createElement(_._, {
-                    label: (0, _._)("#EventEditor_ArtworkType_sale_logo_url"),
-                    value: _.GetEventModel().jsondata.sale_logo_url,
-                    tooltip: (0, _._)(
-                      "#EventEditor_ArtworkType_sale_logo_url_tooltip",
-                    ),
-                    onChange: (_) => {
-                      (0, _._)(() => {
-                        (_.GetEventModel().jsondata.sale_logo_url =
-                          _.target.value),
-                          _.SetDirty(_._.jsondata_sales);
-                      });
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.SalePageLogoCtn,
                     },
-                  }),
+                    _.createElement(_._, {
+                      _: "SalePageEdit_SaleLogo",
+                      clanSteamID: _.GetClanSteamID(),
+                      eventModel: _.GetEventModel(),
+                      appid: _,
+                      title: (0, _._)("#EventEditor_ArtworkType_sale_logo"),
+                      artworkType: "sale_logo",
+                      elEventArtworkExample: _.createElement(_, {
+                        artworkType: "sale_logo",
+                      }),
+                      bIsMinimized: _("sale_logo"),
+                      fnLangHasData: _.BHasTitleImage,
+                      fnSetImageURL: _.SetImageURL,
+                      fnGetImageHashAndExt: _.GetImageHashAndExt,
+                      fnToggleMinimize: () => _("sale_logo"),
+                      partnerEventStore: _._,
+                      fnRemoveAllArtwork:
+                        0 == _
+                          ? void 0
+                          : () => {
+                              (0, _._)(() => {
+                                (_.GetEventModel().jsondata.localized_sale_logo =
+                                  []),
+                                  _.SetDirty(_._.jsondata_sales);
+                              });
+                            },
+                    }),
+                    _.createElement(_._, {
+                      label: (0, _._)("#EventEditor_ArtworkType_sale_logo_url"),
+                      value: _.GetEventModel().jsondata.sale_logo_url,
+                      tooltip: (0, _._)(
+                        "#EventEditor_ArtworkType_sale_logo_url_tooltip",
+                      ),
+                      onChange: (_) => {
+                        (0, _._)(() => {
+                          (_.GetEventModel().jsondata.sale_logo_url =
+                            _.target.value),
+                            _.SetDirty(_._.jsondata_sales);
+                        });
+                      },
+                    }),
+                  ),
                 ),
-              ),
-              _.createElement(
-                _,
-                {
-                  strSectionId: "SalePageEdit_SaleBanner",
-                },
-                _.createElement(_._, {
-                  _: "SalePageEdit_SaleBanner",
-                  clanSteamID: _.GetClanSteamID(),
-                  eventModel: _.GetEventModel(),
-                  appid: _,
-                  fnLangHasData: _.BHasTitleImage,
-                  fnSetImageURL: _.SetImageURL,
-                  fnGetImageHashAndExt: _.GetImageHashAndExt,
-                  title: (0, _._)(
-                    "#EventEditor_ArtworkType_sale_product_banner",
-                  ),
-                  artworkType: "product_banner",
-                  bIsMinimized: _("product_banner"),
-                  fnToggleMinimize: () => _("product_banner"),
-                  strWarning: _
-                    ? (0, _._)("#Sale_BannerVisibility_Warning")
-                    : void 0,
-                  elEventArtworkExample: _.createElement(_, {
-                    artworkType: "product_banner",
-                  }),
-                  partnerEventStore: _._,
-                  fnRemoveAllArtwork:
-                    0 == _
-                      ? void 0
-                      : () => {
-                          (0, _._)(() => {
-                            (_.GetEventModel().jsondata.localized_sale_product_banner =
-                              []),
-                              _.SetDirty(_._.jsondata_sales);
-                          });
-                        },
-                }),
-              ),
-              _.createElement(
-                _,
-                {
-                  strSectionId: "SalePageEdit_SaleMobileBanner",
-                },
-                _.createElement(_._, {
-                  _: "SalePageEdit_SaleMobileBanner",
-                  clanSteamID: _.GetClanSteamID(),
-                  eventModel: _.GetEventModel(),
-                  appid: _,
-                  title: (0, _._)(
-                    "#EventEditor_ArtworkType_sale_product_mobile_banner",
-                  ),
-                  artworkType: "product_mobile_banner",
-                  bIsMinimized: _("product_mobile_banner"),
-                  fnToggleMinimize: () => _("product_mobile_banner"),
-                  fnLangHasData: _.BHasTitleImage,
-                  fnSetImageURL: _.SetImageURL,
-                  fnGetImageHashAndExt: _.GetImageHashAndExt,
-                  partnerEventStore: _._,
-                  strWarning: _
-                    ? (0, _._)("#Sale_BannerVisibility_Warning")
-                    : void 0,
-                  fnRemoveAllArtwork:
-                    0 == _
-                      ? void 0
-                      : () => {
-                          (0, _._)(() => {
-                            (_.GetEventModel().jsondata.localized_sale_product_mobile_banner =
-                              []),
-                              _.SetDirty(_._.jsondata_sales);
-                          });
-                        },
-                }),
-              ),
-              _.createElement(
-                _,
-                {
-                  strSectionId: "SalePageEdit_SaleOverlay",
-                },
+              !_ &&
                 _.createElement(
-                  _._,
+                  _,
                   {
-                    clanSteamID: _.GetClanSteamID(),
-                    requireAdmin: !0,
-                    className: _.SalePageLogoCtn,
+                    strSectionId: "SalePageEdit_SaleBanner",
                   },
                   _.createElement(_._, {
-                    _: "SalePageEdit_SaleOverlay",
+                    _: "SalePageEdit_SaleBanner",
                     clanSteamID: _.GetClanSteamID(),
                     eventModel: _.GetEventModel(),
                     appid: _,
-                    title: (0, _._)("#EventEditor_ArtworkType_sale_overlay"),
-                    artworkType: "sale_overlay",
-                    elEventArtworkExample: _.createElement(_, {
-                      artworkType: "sale_overlay",
-                    }),
-                    bIsMinimized: _("sale_overlay"),
-                    fnToggleMinimize: () => _("sale_overlay"),
                     fnLangHasData: _.BHasTitleImage,
                     fnSetImageURL: _.SetImageURL,
                     fnGetImageHashAndExt: _.GetImageHashAndExt,
+                    title: (0, _._)(
+                      "#EventEditor_ArtworkType_sale_product_banner",
+                    ),
+                    artworkType: "product_banner",
+                    bIsMinimized: _("product_banner"),
+                    fnToggleMinimize: () => _("product_banner"),
+                    strWarning: _
+                      ? (0, _._)("#Sale_BannerVisibility_Warning")
+                      : void 0,
+                    elEventArtworkExample: _.createElement(_, {
+                      artworkType: "product_banner",
+                    }),
                     partnerEventStore: _._,
                     fnRemoveAllArtwork:
                       0 == _
                         ? void 0
                         : () => {
                             (0, _._)(() => {
-                              (_.GetEventModel().jsondata.localized_sale_overlay =
+                              (_.GetEventModel().jsondata.localized_sale_product_banner =
                                 []),
                                 _.SetDirty(_._.jsondata_sales);
                             });
                           },
                   }),
                 ),
-              ),
+              !_ &&
+                _.createElement(
+                  _,
+                  {
+                    strSectionId: "SalePageEdit_SaleMobileBanner",
+                  },
+                  _.createElement(_._, {
+                    _: "SalePageEdit_SaleMobileBanner",
+                    clanSteamID: _.GetClanSteamID(),
+                    eventModel: _.GetEventModel(),
+                    appid: _,
+                    title: (0, _._)(
+                      "#EventEditor_ArtworkType_sale_product_mobile_banner",
+                    ),
+                    artworkType: "product_mobile_banner",
+                    bIsMinimized: _("product_mobile_banner"),
+                    fnToggleMinimize: () => _("product_mobile_banner"),
+                    fnLangHasData: _.BHasTitleImage,
+                    fnSetImageURL: _.SetImageURL,
+                    fnGetImageHashAndExt: _.GetImageHashAndExt,
+                    partnerEventStore: _._,
+                    strWarning: _
+                      ? (0, _._)("#Sale_BannerVisibility_Warning")
+                      : void 0,
+                    fnRemoveAllArtwork:
+                      0 == _
+                        ? void 0
+                        : () => {
+                            (0, _._)(() => {
+                              (_.GetEventModel().jsondata.localized_sale_product_mobile_banner =
+                                []),
+                                _.SetDirty(_._.jsondata_sales);
+                            });
+                          },
+                  }),
+                ),
+              !_ &&
+                _.createElement(
+                  _,
+                  {
+                    strSectionId: "SalePageEdit_SaleOverlay",
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      clanSteamID: _.GetClanSteamID(),
+                      requireAdmin: !0,
+                      className: _.SalePageLogoCtn,
+                    },
+                    _.createElement(_._, {
+                      _: "SalePageEdit_SaleOverlay",
+                      clanSteamID: _.GetClanSteamID(),
+                      eventModel: _.GetEventModel(),
+                      appid: _,
+                      title: (0, _._)("#EventEditor_ArtworkType_sale_overlay"),
+                      artworkType: "sale_overlay",
+                      elEventArtworkExample: _.createElement(_, {
+                        artworkType: "sale_overlay",
+                      }),
+                      bIsMinimized: _("sale_overlay"),
+                      fnToggleMinimize: () => _("sale_overlay"),
+                      fnLangHasData: _.BHasTitleImage,
+                      fnSetImageURL: _.SetImageURL,
+                      fnGetImageHashAndExt: _.GetImageHashAndExt,
+                      partnerEventStore: _._,
+                      fnRemoveAllArtwork:
+                        0 == _
+                          ? void 0
+                          : () => {
+                              (0, _._)(() => {
+                                (_.GetEventModel().jsondata.localized_sale_overlay =
+                                  []),
+                                  _.SetDirty(_._.jsondata_sales);
+                              });
+                            },
+                    }),
+                  ),
+                ),
             )
           );
         });
@@ -8948,8 +9042,15 @@
         );
       }
       const _ = (0, _._)((_) => {
-          const _ = (0, _._)(),
-            [__webpack_require__, _] = (0, _._)(() => [(0, _._)(), (0, _._)()]),
+          const { editModel: _ } = _,
+            _ = (0, _._)(),
+            [_, _, _, _] = (0, _._)(() => [
+              (0, _._)(),
+              (0, _._)(),
+              Boolean(_.GetEventModel().jsondata.sale_sub_menu),
+              _.GetEventType(),
+            ]),
+            _ = 36 == _,
             _ = (_, _, _, _ = !1, _) => {
               _.push({
                 strLabel: _,
@@ -8958,12 +9059,9 @@
                 bIndent: _,
                 bSectionIsVisible: _.m_mapVisibleSections.has(_),
               });
-            },
-            { editModel: _ } = _;
-          let _ = _.GetEventModel();
-          const [_] = (0, _._)(() => [_.GetEventType()]),
-            _ = 36 == _;
-          let _ = new Array();
+            };
+          let _ = _.GetEventModel(),
+            _ = new Array();
           _(_, (0, _._)("#Sale_PageConfigOptions"), "SalePageEdit_Config");
           const _ = (0, _._)(_.GetClanSteamID(), !1);
           (_ || _.GetTaggedItems().length > 0) &&
@@ -8972,12 +9070,15 @@
               (0, _._)("#Sale_TaggedItemsSection", _.GetTaggedItems().length),
               "SalePageEdit_TaggedItems",
             ),
-            _ ||
-              _(
-                _,
-                (0, _._)("#Sale_Artwork_Sections"),
-                "SalePageEdit_AllArtworkCtn",
+            _(
+              _,
+              (0, _._)(
+                _
+                  ? "#Sale_Artwork_Sections_BackgroundOnly"
+                  : "#Sale_Artwork_Sections",
               ),
+              "SalePageEdit_AllArtworkCtn",
+            ),
             (_.BHasTag("contenthub") || _.BUsesContentHubForItemSource()) &&
               _(_, "Content Hub Settings", "SalePageEdit_ContentHub");
           let _ = !1,
@@ -8987,7 +9088,7 @@
               var _;
               if (
                 _ &&
-                __webpack_require__ &&
+                _ &&
                 _.show_on_tabs &&
                 0 != _.show_on_tabs.length &&
                 !(
@@ -9037,7 +9138,9 @@
             _(_, _, "DummyTargetNotReal", !0);
           }
           return (
-            _ && _(_, "(VO) Custom CSS Editor", "SalePageEdit_CustomCSSCode"),
+            _ &&
+              (_ && _(_, "(VO) Sub Menu Editor", "SalePageEdit_SubMenuEditor"),
+              _(_, "(VO) Custom CSS Editor", "SalePageEdit_CustomCSSCode")),
             _.createElement(
               _._,
               null,
@@ -11166,6 +11269,352 @@
             )
           : null;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__] = (0, _._)(() => [
+            Boolean(_.GetEventModel().jsondata.sale_sub_menu),
+          ]);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            editModel: _,
+          }),
+          __webpack_require__ &&
+            _.createElement(_, {
+              editModel: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__] = (0, _._)(() => [
+            _.GetEventModel().jsondata.sale_sub_menu,
+          ]),
+          _ = (0, _.useCallback)(() => _.SetDirty(_._.jsondata_sales), [_]),
+          _ = [
+            {
+              name: "Editor",
+              key: "submenu_editor",
+              contents: _.createElement(_, {
+                ..._,
+              }),
+            },
+            {
+              name: "Background",
+              key: "submenu_back",
+              contents: _.createElement(_._, {
+                section: __webpack_require__,
+                fnOnSetDirty: () => _,
+                elAdditionalLabelSettings: _.createElement(_, {
+                  fnOnSetDirty: _,
+                  subMenuSection: __webpack_require__,
+                }),
+                fnOnClearSettings: () => {
+                  (__webpack_require__.selected_label_color = void 0),
+                    (__webpack_require__.hover_label_color = void 0);
+                },
+              }),
+            },
+            {
+              name: "Debug",
+              key: "debug",
+              contents: _.createElement(_._, {
+                saleSection: __webpack_require__,
+              }),
+            },
+          ];
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "p",
+            null,
+            "Sub Menu appear below the main menu on this sale page. They are useful for organizing related items that exists on other pages in the store.",
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().TabContents,
+            },
+            _.createElement(_._, {
+              tabs: _,
+              bDisableRouting: !0,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { fnOnSetDirty: _, subMenuSection: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            __webpack_require__.selected_label_color,
+            __webpack_require__.hover_label_color,
+          ]),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: __webpack_require__,
+            property: "selected_label_color",
+            color: _,
+          }),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: __webpack_require__,
+            property: "hover_label_color",
+            color: _,
+          });
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              onClick: _,
+              className: _.EventEditorTextTitle,
+              style: {
+                color: _,
+              },
+            },
+            "Selected Label Color",
+          ),
+          _.createElement(
+            _._,
+            {
+              onClick: _,
+              className: _.EventEditorTextTitle,
+              style: {
+                color: _,
+              },
+            },
+            "Hover Label Color",
+          ),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => {
+            var _, _, _;
+            return [
+              (null ===
+                (_ =
+                  null === (_ = _.GetEventModel().jsondata.sale_sub_menu) ||
+                  void 0 === _
+                    ? void 0
+                    : _.menu_items) || void 0 === _
+                ? void 0
+                : _.length) || 0,
+              (null === (_ = _.GetEventModel().jsondata.sale_sub_menu) ||
+              void 0 === _
+                ? void 0
+                : _.menu_items) || [],
+            ];
+          });
+        return _.createElement(
+          _.Fragment,
+          null,
+          Boolean(_ > 0)
+            ? _.createElement(_._, {
+                items: _,
+                onDelete: (_) => {
+                  _.splice(_, 1),
+                    _.SetDirty(_._.jsondata_sales),
+                    __webpack_require__();
+                },
+                onReorder: () => _.SetDirty(_._.jsondata_sales),
+                render: (_) =>
+                  _.createElement(_, {
+                    fnOnDirty: () => _.SetDirty(_._.jsondata_sales),
+                    menuItem: _,
+                  }),
+              })
+            : _.createElement("p", null, "No sub menu items"),
+          _.createElement(
+            _._,
+            {
+              onClick: (_) => {
+                let _ = Math.floor(1e6 * Math.random());
+                for (
+                  ;
+                  _.GetEventModel().jsondata.sale_sub_menu.menu_items.find(
+                    (_) => _.unique_id == _,
+                  );
+                )
+                  _ = Math.floor(1e6 * Math.random());
+                _.GetEventModel().jsondata.sale_sub_menu.menu_items.push({
+                  unique_id: _,
+                  sub_menu_icon: {
+                    media_type: _._.k_MediaImage,
+                  },
+                }),
+                  _.SetDirty(_._.jsondata_sales),
+                  __webpack_require__();
+              },
+            },
+            "Add Sub Menu",
+          ),
+        );
+      }
+      function _(_) {
+        const { fnOnDirty: _, menuItem: __webpack_require__ } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = __webpack_require__.localized_sub_menu_name) ||
+              void 0 === _
+                ? void 0
+                : _[_]) || "",
+              __webpack_require__.sub_menu_url || "",
+            ];
+          });
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_._, {
+            type: "text",
+            value: _,
+            label: "Menu Item Name",
+            onChange: (_) => {
+              const _ = _.currentTarget.value;
+              _ !== _ &&
+                ((!__webpack_require__.localized_sub_menu_name ||
+                  __webpack_require__.localized_sub_menu_name.length < 31) &&
+                  (__webpack_require__.localized_sub_menu_name = (0, _._)(
+                    __webpack_require__.localized_sub_menu_name || [],
+                    31,
+                    null,
+                  )),
+                (__webpack_require__.localized_sub_menu_name[_] = _),
+                _());
+            },
+          }),
+          _.createElement(_._, {
+            type: "url",
+            value: _,
+            label: "Store URL",
+            tooltip:
+              "Selection of the active one will happen automatically when the current URL match this URL entered",
+            onChange: (_) => {
+              const _ = _.currentTarget.value;
+              _ !== _ && ((__webpack_require__.sub_menu_url = _), _());
+            },
+          }),
+          _.createElement(_, {
+            fnOnDirty: _,
+            menuItem: __webpack_require__,
+          }),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__] = (0, _._)(() => [
+            Boolean(_.GetEventModel().jsondata.sale_sub_menu),
+          ]),
+          [_, _] = (0, _.useState)(!1),
+          [_, _, _] = (0, _._)(),
+          _ = _.useRef(void 0);
+        return (
+          (0, _.useEffect)(() => {
+            _ &&
+              ((_.GetEventModel().jsondata.sale_sub_menu = void 0),
+              _.SetDirty(_._.jsondata_sales),
+              _(!1));
+          }, [_, _]),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_._, {
+              ref: _,
+              onChange: () => {
+                var _;
+                __webpack_require__
+                  ? (null === (_ = null == _ ? void 0 : _.current) ||
+                      void 0 === _ ||
+                      _.setState({
+                        checked: !0,
+                      }),
+                    _())
+                  : ((_.GetEventModel().jsondata.sale_sub_menu = {
+                      menu_items: [],
+                    }),
+                    _.SetDirty(_._.jsondata_sales));
+              },
+              label: "Enable Sub Menu",
+              checked: __webpack_require__,
+            }),
+            _.createElement(
+              _._,
+              {
+                active: _,
+              },
+              _.createElement(_._, {
+                strTitle: "Clear Sub Menu",
+                strDescription:
+                  "Sub Menu will be cleared from the model and this is not undo-able without reload the editor?",
+                onOK: () => {
+                  var _;
+                  null === (_ = null == _ ? void 0 : _.current) ||
+                    void 0 === _ ||
+                    _.setState({
+                      checked: !1,
+                    }),
+                    _(!0);
+                },
+                closeModal: _,
+              }),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        var _;
+        const { fnOnDirty: __webpack_require__, menuItem: _ } = _,
+          [_, _, _] = (0, _._)();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              onClick: _,
+            },
+            "Open Icon Uploader",
+          ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(
+              _._,
+              {
+                strTitle: "Sub Menu Icon Uploader",
+                strDescription:
+                  "Upload a localizeable icon for this submenu item: " +
+                  (null ===
+                    (_ = null == _ ? void 0 : _.localized_sub_menu_name) ||
+                  void 0 === _
+                    ? void 0
+                    : _[0]),
+                bAlertDialog: !0,
+                closeModal: _,
+              },
+              _.createElement(_._, {
+                fnOnDirty: __webpack_require__,
+                localizedMedia: _.sub_menu_icon,
+              }),
+            ),
+          ),
+        );
+      }
       function _(_) {
         const { editModel: _, mode: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [_.GetGID(), _.GetEventType()]);
@@ -11345,18 +11794,21 @@
                       editModel: _,
                     }),
                 ),
-                !_ &&
-                  _.createElement(
-                    _,
-                    {
-                      strSectionId: "SalePageEdit_AllArtworkCtn",
-                      hasMinimize: !0,
-                      strTitle: (0, _._)("#Sale_Artwork_Sections"),
-                    },
-                    _.createElement(_, {
-                      editModel: _,
-                    }),
-                  ),
+                _.createElement(
+                  _,
+                  {
+                    strSectionId: "SalePageEdit_AllArtworkCtn",
+                    hasMinimize: !0,
+                    strTitle: (0, _._)(
+                      _
+                        ? "#Sale_Artwork_Sections_BackgroundOnly"
+                        : "#Sale_Artwork_Sections",
+                    ),
+                  },
+                  _.createElement(_, {
+                    editModel: _,
+                  }),
+                ),
                 (_.BHasTag("contenthub") ||
                   _.GetEventModel().BUsesContentHubForItemSource()) &&
                   _.createElement(
@@ -11397,6 +11849,19 @@
                       strTitle: `(VO) ${(0, _._)("#Sale_BrowseMore")}`,
                       valveOnlyClanSteamID: _.GetClanSteamID(),
                       requireAdmin: !0,
+                    },
+                    _.createElement(_, {
+                      editModel: _,
+                    }),
+                  ),
+                !_ &&
+                  _.createElement(
+                    _,
+                    {
+                      strSectionId: "SalePageEdit_SubMenuEditor",
+                      hasMinimize: !0,
+                      strTitle: "(VO) Sub Menu Editor",
+                      valveOnlyClanSteamID: _.GetClanSteamID(),
                     },
                     _.createElement(_, {
                       editModel: _,
@@ -13290,14 +13755,20 @@
         GetDLCForAppID(_) {
           return this.m_mapAppIDToDLCs.get(_);
         }
-        async LoadDLCForAppID(_, _) {
+        GetSoundTracksForAppID(_) {
+          return this.m_mapAppIDToSoundTracks.get(_);
+        }
+        async LoadDLCAndSoundTracksForAppID(_, _) {
           return (
             this.m_mapPromise.has(_) ||
-              this.m_mapPromise.set(_, this.InternalLoadDLCForAppID(_, _)),
+              this.m_mapPromise.set(
+                _,
+                this.InternalLoadDLCAndSoundTracksForAppID(_, _),
+              ),
             this.m_mapPromise.get(_)
           );
         }
-        async InternalLoadDLCForAppID(_, _) {
+        async InternalLoadDLCAndSoundTracksForAppID(_, _) {
           if (!this.m_mapAppIDToDLCs.has(_) && 0 != _)
             try {
               let _ = {
@@ -13323,17 +13794,35 @@
                     is_released_somewhere: Boolean(_.is_released_somewhere),
                   });
                 }),
-                this.m_mapAppIDToDLCs.set(_, _);
+                this.m_mapAppIDToDLCs.set(_, _),
+                (_ = Array()),
+                _.data.soundtracks &&
+                  _.data.soundtracks.forEach((_) => {
+                    _.push({
+                      appid: _.appid,
+                      name: _.name,
+                      is_released_somewhere: Boolean(_.is_released_somewhere),
+                    });
+                  }),
+                this.m_mapAppIDToSoundTracks.set(_, _);
             } catch (_) {
               const _ = (0, _._)(_);
               console.error(
-                "LoadDLCForAppID for appid: " + _ + " hit: " + _.strErrorMsg,
+                "LoadDLCAndSoundTracksForAppID for appid: " +
+                  _ +
+                  " hit: " +
+                  _.strErrorMsg,
                 _,
               );
             }
-          return this.m_mapAppIDToDLCs.has(_)
-            ? this.m_mapAppIDToDLCs.get(_)
-            : [];
+          return {
+            dlcs: this.m_mapAppIDToDLCs.has(_)
+              ? this.m_mapAppIDToDLCs.get(_)
+              : [],
+            soundtracks: this.m_mapAppIDToSoundTracks.has(_)
+              ? this.m_mapAppIDToSoundTracks.get(_)
+              : [],
+          };
         }
         static Get() {
           return (
@@ -13346,6 +13835,7 @@
         }
         constructor() {
           (this.m_mapAppIDToDLCs = new Map()),
+            (this.m_mapAppIDToSoundTracks = new Map()),
             (this.m_mapPromise = new Map()),
             (0, _._)(this);
         }
@@ -13536,10 +14026,12 @@
         }
         async LoadDLCForApp() {
           this.setState({
-            dlcs: await _.Get().LoadDLCForAppID(
-              this.props.appid,
-              this.m_cancelSignal,
-            ),
+            dlcs: (
+              await _.Get().LoadDLCAndSoundTracksForAppID(
+                this.props.appid,
+                this.m_cancelSignal,
+              )
+            ).dlcs,
           });
         }
         componentDidMount() {
@@ -16941,17 +17433,7 @@
             (null == _ ? void 0 : _.current) &&
             _.current.click();
         }, [__webpack_require__, _]);
-        const _ = (_) => {
-          (0, _._)(
-            _.createElement(_._, {
-              editModel: _,
-              bUnlistedMode: _.GetAccountID() == (0, _._)(),
-              OnPublishSuccess: () => _(!0),
-              partnerEventEditorStore: _._,
-            }),
-            (0, _._)(_),
-          );
-        };
+        const _ = _.GetAccountID() == (0, _._)();
         if (_)
           return _.createElement(_._, {
             eventModel: _.GetEventModel(),
@@ -17005,44 +17487,42 @@
               ),
             Boolean(!_ && !_) &&
               _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    clanSteamID: _.GetClanSteamID(),
+                _._,
+                {
+                  onClick: (_) => {
+                    (0, _._)(
+                      _.createElement(_._, {
+                        editModel: _,
+                        bUnlistedMode: _,
+                        OnPublishSuccess: () => _(!0),
+                        partnerEventEditorStore: _._,
+                      }),
+                      (0, _._)(_),
+                    );
                   },
+                  className: (0, _._)(
+                    _().EventPublishButton,
+                    "DialogButton Primary",
+                  ),
+                  ref: _,
+                },
+                !_ &&
                   _.createElement(
-                    _._,
-                    {
-                      onClick: _,
-                      className: (0, _._)(
-                        _().EventPublishButton,
-                        "DialogButton Primary",
-                      ),
-                      ref: _,
-                    },
+                    _.Fragment,
+                    null,
+                    (0, _._)("#Button_Publish"),
+                    _.createElement(_._, {
+                      tooltip: (0, _._)("#EventEditor_Publish_ttip"),
+                    }),
+                  ),
+                _ &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
                     (0, _._)("#PartnerEvent_UnlistedPublish"),
                     _.createElement(_._, {
                       tooltip:
                         "For meet steam user store/meetsteam/<GID>, for any sale landing page store/curator/<clanid>/unlisted/<vanity>",
-                    }),
-                  ),
-                ),
-                Boolean((0, _._)() != _.GetClanAccountID()) &&
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: _,
-                      className: (0, _._)(
-                        _().EventPublishButton,
-                        "DialogButton Primary",
-                      ),
-                      ref: _,
-                    },
-                    (0, _._)("#Button_Publish"),
-                    _.createElement(_._, {
-                      tooltip: (0, _._)("#EventEditor_Publish_ttip"),
                     }),
                   ),
               ),
@@ -17187,9 +17667,7 @@
         }
         Init() {}
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = 100;
       function _(_) {
         var _;
@@ -18448,7 +18926,7 @@
               status: _.createElement(_, {
                 fnGetStatus: _._,
               }),
-              hidden: !_._.CAN_UPLOAD_IMAGES,
+              hidden: !_._.CAN_UPLOAD_IMAGES || _.bVisible,
               vo_warning: _() && (0, _._)("#EventEditor_CuratorImageWarning"),
               contents: _.createElement(_, {
                 editModel: _,
@@ -18836,8 +19314,7 @@
           _ && _.push("bestofyear_banner", "bestofyear_banner_mobile");
         const _ = _.includes("spotlight"),
           _ = _.includes("localized_store_app_spotlight"),
-          _ = _.includes("localized_store_app_spotlight_mobile"),
-          _ = 36 == __webpack_require__;
+          _ = _.includes("localized_store_app_spotlight_mobile");
         return _.createElement(
           _._,
           null,
@@ -18940,22 +19417,21 @@
             }),
             partnerEventStore: _._,
           }),
-          !_ &&
-            _.createElement(_._, {
-              clanSteamID: _,
-              appid: _,
-              eventModel: _.GetEventModel(),
-              title: (0, _._)("#EventEditor_ArtworkType_background"),
-              fnLangHasData: _.BHasTitleImage,
-              fnSetImageURL: _.SetImageURL,
-              fnGetImageHashAndExt: _.GetImageHashAndExt,
+          _.createElement(_._, {
+            clanSteamID: _,
+            appid: _,
+            eventModel: _.GetEventModel(),
+            title: (0, _._)("#EventEditor_ArtworkType_background"),
+            fnLangHasData: _.BHasTitleImage,
+            fnSetImageURL: _.SetImageURL,
+            fnGetImageHashAndExt: _.GetImageHashAndExt,
+            artworkType: "background",
+            headerHint: _._.k_Suggested,
+            elEventArtworkExample: _.createElement(_, {
               artworkType: "background",
-              headerHint: _._.k_Suggested,
-              elEventArtworkExample: _.createElement(_, {
-                artworkType: "background",
-              }),
-              partnerEventStore: _._,
             }),
+            partnerEventStore: _._,
+          }),
           Boolean(_ && (_ || _ || _)) &&
             _.createElement(
               "div",

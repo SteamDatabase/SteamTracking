@@ -451,11 +451,13 @@
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
         PersonalCalendarApp: "_2HSg8AtRJl7UMJATPIsBR8",
+        Refreshing: "_23e1D2r2sYeZs924yfKJo",
+        PersonalCalendarSection: "_1ogG0o0tuYDOljO3JVMG4j",
+        SteamLabsBanner: "_2Gzea-RDxyTWYQ_1m4AvB0",
         PersonalCalendarContainer: "_1v3eOf_69jOyKwYgOD2J2w",
         PersonalCalendarHeader: "_3CwW2Qs3urt8QcUjerZErw",
         PersonalCalendarTitle: "_1jhESJwyB5EudCwWSj1Cd9",
         PersonalCalendarDescription: "_1o94X46OlzAxrg7CHGu4Xx",
-        PersonalCalendarSection: "_1ogG0o0tuYDOljO3JVMG4j",
         Calendar: "p6KFiyUG9MYjbErC0_SGJ",
         LinearCalendar: "_1L5MsHayIMOr5ug0cNxdxX",
         SectionHeader: "_1pxjbUKB_ugZ6rMdnTXmks",
@@ -5148,8 +5150,8 @@
       function _(_) {
         const { gutter: _ = 0 } = _;
         return [
-          (0, _._)(),
           (0, _._)(2),
+          (0, _._)(),
           (0, _._)({
             apply: (_) => {
               const { rects: _, elements: _, availableHeight: _ } = _,
@@ -5162,8 +5164,24 @@
                   boxSizing: "border-box",
                   zIndex: "1",
                 };
-              _.scroll && (_.overflowY = "auto"),
-                "target" === _.width && (_.width = `${_.reference.width}px`),
+              switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
+                case "target":
+                  _.width = `${_.reference.width}px`;
+                  break;
+                case "content":
+                  _.width = `${_.floating.width}px`;
+                  break;
+                case "dropdown": {
+                  let _ = _.reference.width;
+                  _.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                    (_.width = `${_}px`);
+                }
+              }
+              "function" == typeof _.width &&
+                (_.width = _.width({
+                  unContentWidth: _.floating.width,
+                  unTargetWidth: _.reference.width,
+                })),
                 Object.assign(_.floating.style, _),
                 _.floating.style.setProperty("--popover-max-height", _);
             },
@@ -5414,6 +5432,7 @@
                     setSelectedIndex: _,
                     interactions: _ = {},
                     role: _,
+                    placement: _,
                   } = _;
                   let _ = _;
                   const _ = (0, _._)({
@@ -5421,6 +5440,7 @@
                       onOpenChange: __webpack_require__,
                       middleware: _(_),
                       whileElementsMounted: _._,
+                      placement: _,
                     }),
                     _ = (0, _._)(_.context, {
                       enabled: !!_.click,
@@ -5473,7 +5493,8 @@
                   };
                 })({
                   ...__webpack_require__.state,
-                  width: "target",
+                  width: "dropdown",
+                  placement: "bottom-end",
                   gutter: "4",
                   interactions: {
                     virtualItemFocus: !0,
@@ -5498,20 +5519,22 @@
             },
             TextInput: function (_) {
               const {
-                state: {
-                  onTextChange: _,
-                  activeIndex: __webpack_require__,
-                  onOpenChange: _,
-                  setActiveIndex: _,
-                  suggestions: _,
-                  onSuggestionSelected: _,
-                },
-              } = _("<Autocomplete.TextInput>");
+                  state: {
+                    onTextChange: _,
+                    activeIndex: __webpack_require__,
+                    onOpenChange: _,
+                    setActiveIndex: _,
+                    suggestions: _,
+                    onSuggestionSelected: _,
+                  },
+                } = _("<Autocomplete.TextInput>"),
+                _ = (0, _.useRef)(null);
               return _.createElement(
                 _,
                 null,
                 _.createElement(_, {
                   ..._,
+                  inputRef: _,
                   onTextChange: _,
                   "aria-autocomplete": "list",
                   onKeyDown: (_) => {
@@ -5525,6 +5548,11 @@
                       _.preventDefault(),
                       _.stopPropagation());
                   },
+                  onKeyDownCapture: (_) => {
+                    ("Home" !== _.key && "End" !== _.key) ||
+                      _.stopPropagation();
+                  },
+                  role: "combobox",
                 }),
               );
             },
@@ -5691,11 +5719,7 @@
         return _.createElement(
           _._,
           {
-            className: (0, _._)(
-              _.Day,
-              _ && _.Today,
-              _.timestamp < _.firstTimestamp && _.Blank,
-            ),
+            className: (0, _._)(_.Day, _ && _.Today),
           },
           _.createElement(
             _._,
@@ -5807,7 +5831,9 @@
           [_, _] = _.useState(""),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState([]),
+          [_, _] = _.useState(""),
           [_, _] = _.useState(9999),
+          [_, _] = _.useState(!1),
           _ = __webpack_require__?.flat() ?? [],
           _ = _.useMemo(
             () =>
@@ -5826,6 +5852,7 @@
               sessionid: _._.SESSIONID,
             };
             try {
+              _(!0);
               const _ = await _().get(
                 `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
                 {
@@ -5833,15 +5860,18 @@
                   timeout: 1e4,
                 },
               );
-              _(_.data.appReleasesByDay),
+              _(!1),
+                _(_.data.appReleasesByDay),
                 _(_.data.dayWeekTimestamps),
                 _(_.data.resultCount),
-                _(_.data.userTags);
+                _(_.data.userTags),
+                _(_.data.result);
             } catch (_) {
               console.error("Error fetching data", _);
             }
           })();
-        }, [_]);
+        }, [_]),
+          _?.length > 0 && console.log(_);
         let _ = [],
           _ = new Map(),
           _ = [],
@@ -5915,7 +5945,7 @@
             _.createElement(
               _._,
               {
-                className: _.PersonalCalendarApp,
+                className: (0, _._)(_.PersonalCalendarApp, _ && _.Refreshing),
               },
               _.createElement(
                 _._,
@@ -5991,6 +6021,18 @@
                               "" === _ && _(0), _(_);
                             })(_),
                           clearable: !0,
+                        }),
+                      ),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        className: _.SteamLabsBanner,
+                      },
+                      (0, _._)(
+                        "#PersonalCalendar_SteamLabs",
+                        _.createElement("a", {
+                          href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
                         }),
                       ),
                     ),

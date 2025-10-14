@@ -180,7 +180,11 @@
 	"moderationaction_updated": "主題詳情已更新",
 	"moderationaction_locked": "已鎖定",
 	"moderationaction_unlocked": "已解鎖",
-	"moderationaction_unknown": "未知行動"
+	"moderationaction_unknown": "未知行動",
+	"moderatormessage_count_note": "註記：%1$s",
+	"moderatormessage_count_warning": "警告：%1$s",
+	"moderatormessage_count_bannotice": "封鎖：%1$s",
+	"moderatormessage_count_contentremoval": "內容移除通知：%1$s"
 }`);
     },
   },

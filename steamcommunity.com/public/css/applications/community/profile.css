@@ -21,7 +21,7 @@
   flex-direction: row;
 }
 ._1xTATKELHR-lRS_s3A4yzd ._2jZ0A5VjGTNGTQm03FbLrF ._2-pwJCHlrc7zxN4iup2TR7 {
-  padding-left: 16px;
+  padding-inline-start: 16px;
   margin-bottom: 30px;
   margin-top: auto;
 }
@@ -87,7 +87,7 @@
 ._1xTATKELHR-lRS_s3A4yzd ._3Ea91LEoevcAXAuoA2-uLa {
   position: absolute;
   top: 4px;
-  right: 6px;
+  inset-inline-end: 6px;
   text-transform: uppercase;
   font-size: 12px;
   color: rgba(184, 156, 80, 0.75);
@@ -102,11 +102,11 @@
   position: absolute;
   overflow: visible;
   z-index: 3;
-  left: 4px;
+  inset-inline-start: 4px;
   top: 8px;
 }
 ._2AWayy-K0ZoNKv_Fr3CT_R ._1YsNonjqp5KW66H9OqH1uE._1qS_btEzAb6Qf5ngmgbhmz {
-  border-right: 8px solid #41444e;
+  border-inline-end: 8px solid #41444e;
 }
 ._1xTATKELHR-lRS_s3A4yzd ._36eQg-jp1ebbdaE6PBniHu {
   width: 90px;
@@ -274,7 +274,7 @@
   width: 90px;
   height: 34px;
   top: 18px;
-  left: 16px;
+  inset-inline-start: 16px;
   position: absolute;
 }
 ._1xTATKELHR-lRS_s3A4yzd ._7-U6jtoeGvesTm7JFGH0- ._24oQzlBma4VdZUDiSBaYFA {
@@ -329,7 +329,7 @@
   position: relative;
   height: 34px;
   display: flex;
-  padding-left: 16px;
+  padding-inline-start: 16px;
   margin-bottom: 8px;
 }
 ._1xTATKELHR-lRS_s3A4yzd ._1KDhdcZYSzJ8bcqGIVKlWI .qP4hsoQxxvaLVT3Gkm4J8 {
@@ -347,7 +347,7 @@
   justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 12px;
+  margin-inline-start: 12px;
 }
 ._1xTATKELHR-lRS_s3A4yzd
   ._26ga2HHZL2HlK6wwFImcgX
@@ -2375,7 +2375,6 @@ body._2aDQKbd2fBPJ0D_2CiGhRT {
 @media screen and (max-width: 640px) {
   ._2kqKZFxhF8XvzaoAekjV7m {
     flex-direction: column;
-    padding-top: 20px;
   }
   ._2kqKZFxhF8XvzaoAekjV7m ._33Kl16vpskBOQpwINGA8ah {
     display: flex;
@@ -2384,6 +2383,7 @@ body._2aDQKbd2fBPJ0D_2CiGhRT {
     max-width: none;
     overflow-x: auto;
     padding-bottom: 4px;
+    margin-bottom: 20px;
   }
   ._2kqKZFxhF8XvzaoAekjV7m ._33Kl16vpskBOQpwINGA8ah ._3rtIpqfC_9VWz4DRSTPach {
     padding-right: 10px;
@@ -2423,6 +2423,9 @@ body._2aDQKbd2fBPJ0D_2CiGhRT {
 @media screen and (max-width: 640px) {
   ._1YOt2792y012GM8bOQs0kh {
     padding-right: 2%;
+    display: block;
+    line-height: 30px;
+    white-space: nowrap;
   }
 }
 .BasicUI ._1YOt2792y012GM8bOQs0kh {

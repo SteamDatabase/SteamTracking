@@ -238,6 +238,8 @@
         StoreSaleWidgetContainer: "_2hhNOdcC6yLwL_rugP3YLf",
         LibraryAssetExpandedDisplay: "PZY_7wH_NY7OgzH9MBiB8",
         SaleItemDefaultCapsuleDisplay: "_37iggltdgh0RtNIECJCfOj",
+        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
+        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
         MarketingMessage: "_3_q87LhuWitbYSEHOVKYlM",
         StoreSaleWidgetRight: "v9uRg57bwOaPsvAnkXESO",
         StoreSaleWidgetHalfLeft: "_111nfdz8Xyg7lDjTWv_OmK",
@@ -282,13 +284,12 @@
         SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
         Category: "_2lQNYB6g6C7aiw0GDPe9fq",
         CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
-        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
         ReviewScores: "_3MxPBWjpjU_Gm8SIgi5g8A",
         StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
         StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
+        Action: "_2zssEuiPfY5YdQlnihDfVD",
         Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
         WishList: "_1djkdp7OAd0mF3a90RKf27",
-        Action: "_2zssEuiPfY5YdQlnihDfVD",
         SingleLineMode: "_1ZlGJxv-xQaABSvaVvMlNq",
         StoreSaleDiscountedPriceCtn: "_3NhLu7mTdty7JufpSpz6Re",
         StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
@@ -339,7 +340,6 @@
         BundleContentItem: "_2sdNOCzaF2AIAuenP19tA6",
         StoreSaleWidgetOuterContainer: "_1_P15GG6AKyF_NMX2j4-Mu",
         ContentsCount: "_353LzpA83V-kiAWaKcQAFg",
-        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
         PreviewItem: "_2yhQb4aKtskchqwmpCVbMq",
         DeckCompatIcon: "_1Nju8xukRGXgeu2mN0nVjT",
         BundleTag: "_1qR-LifiFC4bCiow5xRIy0",
@@ -18882,6 +18882,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           var _, _;
@@ -18927,6 +18928,9 @@
             return null;
           const _ = _.GetBestPurchaseOption().discount_pct,
             _ = _.GetIncludedAppIDs().length,
+            _ = _.GetIncludedAppIDs().filter((_) =>
+              _._.Get().BOwnsApp(_),
+            ).length,
             _ = (0, _._)(_),
             _ = (0, _._)(_.GetStorePageURL(_)),
             _ = Boolean(!_ && _ > 1),
@@ -18959,9 +18963,12 @@
                   : _.GetFormattedSteamReleaseDate();
           let _ = _.GetShortDescription();
           (2 == _.GetStoreItemType() || (1 == _.GetStoreItemType() && !_)) &&
-            (_ = _
-              ? (0, _._)("#Sale_BundleSave_WithDiscount", _, _)
-              : (0, _._)("#Sale_BundleSave", _)),
+            (_ =
+              _ > 0 && _ < _
+                ? (0, _._)("#Sale_Bundle_CompletePartialSet", _, _)
+                : _
+                  ? (0, _._)("#Sale_BundleSave_WithDiscount", _, _)
+                  : (0, _._)("#Sale_BundleSave", _)),
             (_ =
               (null == _ ? void 0 : _.length) > 0
                 ? _
@@ -19136,6 +19143,7 @@
                   _ &&
                     _.createElement(_, {
                       info: _,
+                      bHideInLibraryApps: 2 == _.GetStoreItemType() && _ < _,
                     }),
                   Boolean(_ && _) &&
                     _.createElement(
@@ -19220,61 +19228,71 @@
         }),
         _ = 6;
       function _(_) {
-        const { info: _ } = _,
-          [__webpack_require__] = (0, _._)(_._, (0, _._)(_.type), {}),
+        const { info: _, bHideInLibraryApps: __webpack_require__ } = _,
+          [_] = (0, _._)(_._, (0, _._)(_.type), {}),
           [_, _] = _.useState(null),
-          _ = 2 == __webpack_require__.GetStoreItemType();
-        return (
-          _.useEffect(() => {
-            __webpack_require__ &&
-              (1 == __webpack_require__.GetStoreItemType() ||
-              2 == __webpack_require__.GetStoreItemType()
+          _ = 2 == _.GetStoreItemType();
+        if (
+          (_.useEffect(() => {
+            _ &&
+              (1 == _.GetStoreItemType() || 2 == _.GetStoreItemType()
                 ? _(
-                    __webpack_require__.GetIncludedAppIDs().map((_) => ({
-                      _: _,
-                      type: "game",
-                    })),
+                    _.GetIncludedAppIDs()
+                      .filter(
+                        (_) =>
+                          !_ || !__webpack_require__ || !_._.Get().BOwnsApp(_),
+                      )
+                      .map((_) => ({
+                        _: _,
+                        type: "game",
+                      })),
                   )
                 : console.error(
                     "ContentsPreviewList unexpected store item type: ",
-                    __webpack_require__.GetStoreItemType(),
+                    _.GetStoreItemType(),
                   ));
-          }, [__webpack_require__]),
-          _
-            ? _.createElement(
-                "div",
+          }, [_, __webpack_require__, _]),
+          !_)
+        )
+          return null;
+        const _ = _.length;
+        let _ = (0, _._)("#Sale_ContentPreview", _);
+        if (_) {
+          const _ = _.GetIncludedAppIDs().length;
+          _ != _ && (_ = (0, _._)("#Sale_Bundle_CompletePartialSet", _ - _, _));
+        }
+        return _.createElement(
+          "div",
+          {
+            className: _().BundleContentPreview,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().ContentsCount,
+            },
+            _ &&
+              _.createElement(
+                "span",
                 {
-                  className: _().BundleContentPreview,
+                  className: _().BundleTag,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ContentsCount,
-                  },
-                  _ &&
-                    _.createElement(
-                      "span",
-                      {
-                        className: _().BundleTag,
-                      },
-                      (0, _._)("#AppType_bundle"),
-                    ),
-                  (0, _._)("#Sale_ContentPreview", _.length),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PreviewCtn,
-                  },
-                  _.slice(0, _).map((_) =>
-                    _.createElement(_, {
-                      key: `preview${_._}_${_.type}`,
-                      info: _,
-                    }),
-                  ),
-                ),
-              )
-            : null
+                (0, _._)("#AppType_bundle"),
+              ),
+            _,
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().PreviewCtn,
+            },
+            _.slice(0, _).map((_) =>
+              _.createElement(_, {
+                key: `preview${_._}_${_.type}`,
+                info: _,
+              }),
+            ),
+          ),
         );
       }
       function _(_) {
@@ -19915,6 +19933,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -20247,7 +20266,9 @@
           nBaseDiscountPercentage: _,
           nDiscountPercentage: _,
           bIsPrePurchase: _.BIsPrePurchase(),
-          strBestPurchaseOriginalPriceFormatted: _.formatted_original_price,
+          strBestPurchaseOriginalPriceFormatted:
+            _.formatted_price_before_bundle_discount ||
+            _.formatted_original_price,
           strBestPurchasePriceFormatted: _,
           bHideDiscountPercentForCompliance: _.hide_discount_pct_for_compliance,
           bShowNewFlag: _,
@@ -20307,15 +20328,46 @@
                 },
                 (0, _._)("#Flag_New"),
               ),
-            Boolean(_ && __webpack_require__ && !_) &&
+            Boolean(_ && !_) &&
               _.createElement(
-                "span",
-                {
-                  className: (0, _._)(_().BaseDiscount),
-                },
-                `-${_}%`,
+                _.Fragment,
+                null,
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: (0, _._)("#Sale_Bundle_Discount_ttip"),
+                  },
+                  _.createElement(
+                    "span",
+                    {
+                      className: (0, _._)(_().BaseDiscount),
+                    },
+                    `-${_}%`,
+                  ),
+                ),
+                Boolean(__webpack_require__) &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement("span", null, "+ "),
+                    _.createElement(
+                      _._,
+                      {
+                        toolTipContent: (0, _._)(
+                          "#Sale_Bundle_Discount_Limited_ttip",
+                        ),
+                      },
+                      _.createElement(
+                        "span",
+                        {
+                          className: (0, _._)(_().StoreSaleDiscountBox),
+                        },
+                        `-${__webpack_require__}%`,
+                      ),
+                    ),
+                  ),
               ),
-            Boolean(__webpack_require__ && !_) &&
+            Boolean(!_ && __webpack_require__ && !_) &&
               _.createElement(
                 "div",
                 {
@@ -20331,7 +20383,7 @@
                 },
                 _.createElement(_.XH_, null),
               ),
-            Boolean(__webpack_require__ && _ && !_)
+            Boolean((__webpack_require__ || _) && _ && !_)
               ? _.createElement(
                   "div",
                   {

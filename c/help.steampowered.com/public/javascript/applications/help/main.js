@@ -894,6 +894,7 @@
         LegionGoScreenClick: "mX0CyLG2ckFSmF-E26ZSQ",
         BatteryIcon: "_3xy45At7o_lkxcLoSTF6e0",
         LegacySizing: "_35pkQMXbFQAF2v1VrIAsF7",
+        FlipInRTL: "_1CpOAgPPD7f_fGI4HaYX6C",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -10438,10 +10439,10 @@
         }
         AdjustSliderForClientX(_, _) {
           let _ =
-            ((_ - this.m_rectSlider.left) /
-              (this.m_rectSlider.right - this.m_rectSlider.left)) *
-              (this.props.max - this.props.min) +
-            this.props.min;
+            (_ - this.m_rectSlider.left) /
+            (this.m_rectSlider.right - this.m_rectSlider.left);
+          this.m_elSlider?.matches(":dir(rtl)") && (_ = 1 - _);
+          let _ = _ * (this.props.max - this.props.min) + this.props.min;
           _ = Math.floor(_ + 0.5);
           const _ = this.ClampValue(_);
           _ != this.props.value &&
@@ -10468,7 +10469,10 @@
               (100 * (this.props.value - this.props.min)) /
                 (this.props.max - this.props.min) +
               "%";
-            (_.width = _), (_.left = _);
+            (_.width = _),
+              (_ = {
+                "--position": _,
+              });
           }
           const { label: _, description: _, tooltip: _, ..._ } = this.props,
             _ = this.props.renderValue ?? _;
@@ -14584,8 +14588,9 @@
               null == this.m_handleBounds
                 ? 0
                 : this.m_handleBounds.right - this.m_handleBounds.left,
-            _ = _ - _;
-          return (_ - this.m_sliderBounds.left - _ / 2) / _;
+            _ = _ - _,
+            _ = (_ - this.m_sliderBounds.left - _ / 2) / _;
+          return this.m_refSlider.current?.matches(":dir(rtl)") ? 1 - _ : _;
         }
         BShouldTriggerHapticOnSnap() {
           const _ = this.normalizedStep;
@@ -15548,6 +15553,7 @@
               rgSources: _,
               onIncrementalError: _,
               onError: __webpack_require__,
+              strAltText: _,
               ..._
             } = this.props,
             _ = this.src;
@@ -15556,6 +15562,7 @@
             ..._,
             src: _,
             onError: this.OnImageError,
+            alt: _,
           });
         }
       }
@@ -15627,9 +15634,12 @@
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(_, _) {
-          (this.m_dictComponents = _), (this.m_fnAccumulatorFactory = _);
+          _ instanceof Map
+            ? (this.m_dictComponents = _)
+            : (this.m_dictComponents = new Map(Object.entries(_))),
+            (this.m_fnAccumulatorFactory = _);
         }
-        Parse(_, _, __webpack_require__ = !1) {
+        Parse(_, _, __webpack_require__ = !0) {
           const _ = (function (_, _) {
             const _ = [];
             let _ = {
@@ -15874,7 +15884,7 @@
         UpdateOverrideLanguage(_) {
           this.m_renderingLanguage = _;
         }
-        ParseBBCode(_, _, __webpack_require__ = !1) {
+        ParseBBCode(_, _, __webpack_require__ = !0) {
           let _ = 0;
           const _ = this.Parse(
             _,
@@ -20323,7 +20333,6 @@
           scheduleEntries: [],
         },
         _ = "old_announce_",
-        _ = "_summary",
         _ = [
           "workshop",
           "patchnotes",
@@ -21268,7 +21277,7 @@
             return _ != _ ? _ : (0, _._)("#PartnerEvent_Other");
           })(this.type);
         }
-        GetCategoryAsString() {
+        GetCategoryAsString(_) {
           return this.BHasTag("steam_award_nomination_request")
             ? (0, _._)("#PartnerEvent_SteamAwardNominations")
             : this.BHasTag("steam_award_vote_request")
@@ -21281,7 +21290,7 @@
                       (this.BHasTagStartingWith("sale_nextfest_") &&
                         11 == this.type)
                     ? (0, _._)("#PartnerEvent_SteamGameFestival_Broadcast")
-                    : this.BHasTag("vo_marketing_message")
+                    : this.BHasTag("vo_marketing_message") && _
                       ? (0, _._)("#PartnerEvent_MM_MajorUpdate")
                       : this.GetEventTypeAsString();
         }
@@ -21479,8 +21488,8 @@
           "0" != _.announcement_body.gid
         );
       }
-      function _(_, _) {
-        return _(_) ? _ + _.announcement_body?.gid : _.gid + (_ ? _ : "");
+      function _(_) {
+        return _(_) ? _ + _.announcement_body?.gid : _.gid;
       }
       class _ {
         appid;
@@ -21501,9 +21510,10 @@
         }
       }
       class _ {
-        constructor() {
-          (0, _._)(this);
+        constructor(_ = !1) {
+          (0, _._)(this), (this.m_bOnlySummary = _);
         }
+        m_bOnlySummary = !1;
         m_mapExistingEvents = new Map();
         m_mapEventUpdateCallback = new Map();
         m_mapAnnouncementBodyToEvent = new Map();
@@ -21651,7 +21661,7 @@
         RegisterClanEvents(_) {
           if (_)
             for (const _ of _) {
-              const _ = _(_, !1);
+              const _ = _(_);
               if (!this.m_mapExistingEvents.has(_)) {
                 const _ = new _._(_.clan_steamid);
                 this.InsertEventModelFromClanEventData(_, _);
@@ -21684,7 +21694,7 @@
                   " " +
                   _._.EUNIVERSE,
               ),
-              (_.GID = _(_, !1)),
+              (_.GID = _(_)),
               (_.bOldAnnouncement = _(_)),
               (_.appid = _.appid ?? 0),
               (_.startTime = _.rtime32_start_time),
@@ -22039,6 +22049,13 @@
           } else {
             let _ = _._.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/";
             const _ = _((0, _._)(_._.LANGUAGE));
+            _?.only_summaries &&
+              !this.m_bOnlySummary &&
+              ((0, _._)(
+                this.m_bOnlySummary,
+                "Only Summary: Incorrect parameter passed in, unsetting",
+              ),
+              (_.only_summaries = void 0));
             let _ = {
               clan_accountid: _ ? __webpack_require__.GetAccountID() : void 0,
               appid: _,
@@ -22072,7 +22089,7 @@
               if (1 == _?.data?.success)
                 (0, _._)(() => {
                   for (let _ of _.data.events) {
-                    let _ = _(_, !1);
+                    let _ = _(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_ || _, _);
@@ -22133,7 +22150,7 @@
             });
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = _(_, !1);
+                let _ = _(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -22171,7 +22188,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = _(_, !1);
+                let _ = _(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -22221,7 +22238,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = _(_, !1);
+                let _ = _(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -22297,7 +22314,6 @@
           _,
           _,
           _ = !1,
-          _,
         ) {
           let _ = _(_ ? 0 : (0, _._)(_._.LANGUAGE)),
             _ = {
@@ -22309,7 +22325,7 @@
               last_modified_time: _ || 0,
               origin: self.origin,
               for_edit: _,
-              only_summary: _,
+              only_summary: this.m_bOnlySummary,
             },
             _ = null,
             _ = null;
@@ -22335,7 +22351,7 @@
                 withCredentials: !1,
               });
           let _ = (await _().get(_, _)).data.event,
-            _ = _(_, !!_);
+            _ = _(_);
           if (
             !this.m_mapExistingEvents.has(_) ||
             (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
@@ -22437,7 +22453,7 @@
             !0,
           );
         }
-        async LoadHiddenPartnerEventByAnnouncementGID(_, _, _) {
+        async LoadHiddenPartnerEventByAnnouncementGID(_, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
             _,
             void 0,
@@ -22445,7 +22461,6 @@
             _,
             0,
             !0,
-            _,
           );
         }
         async HintLoadImportantUpdates() {
@@ -22549,7 +22564,7 @@
               _.forEach((_) => {
                 if (_ && _.data && _.data.events)
                   for (let _ of _.data.events) {
-                    let _ = _(_, !1);
+                    let _ = _(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_, _);
@@ -22610,6 +22625,9 @@
             !1
           );
         }
+        BIsSummaryOnlyStore() {
+          return this.m_bOnlySummary;
+        }
       }
       (0, _._)([_._], _.prototype, "m_mapExistingEvents", void 0),
         (0, _._)([_._], _.prototype, "m_mapAnnouncementBodyToEvent", void 0),
@@ -22626,6 +22644,8 @@
         (0, _._)([_._], _.prototype, "SavePartnerEventSaleAssets", null);
       const _ = new _();
       window.g_PartnerEventStore = _;
+      const _ = new _(!0);
+      window.g_PartnerEventSummaryStore = _;
       var _;
       __webpack_require__("chunkid");
       function _(_) {
@@ -39589,6 +39609,11 @@
                 fields: {
                   sale_tagid: {
                     _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  creator_clan_account_id: {
+                    _: 2,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -57116,6 +57141,12 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  must_purchase_as_set: {
+                    _: 48,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -62878,7 +62909,10 @@
 	"topnewreleases": 100750,
 	"newreleases": 100751,
 	"salebrowsetrendingfree": 100752,
-	"trendingfree": 100753
+	"trendingfree": 100753,
+	"reactroot": 100754,
+	"bundlelist": 100755,
+	"verifiedprogram": 100756
 }`);
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
@@ -76732,6 +76766,7 @@
           is_support: !1,
           is_limited: !1,
           is_partner_member: !1,
+          is_valve_email: !1,
           short_url: "",
           country_code: "",
           excluded_content_descriptors: [3, 4, 1],

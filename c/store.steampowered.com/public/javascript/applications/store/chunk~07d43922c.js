@@ -27,6 +27,45 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
+        MainCarousel: "_3SWsMT4_EVVsmPbanjlEy4",
+        FeatureCtn: "_10K5p_DOyGW-WttCA1UwuC",
+        StoreSection: "OyJ48UmHDKl9fN7ue4oPF",
+        SectionTitle: "_2RnIwgy025bixjWk2UTw40",
+        SectionDescription: "nVpbhpPkgrAwu1ZjFf7-B",
+        SectionTitleCtn: "_3LagaO9m29xPGnO2YwpQnq",
+        SpotlightsColumn: "_2Y2C1oQ7JEMkq2AoDp_S0A",
+        SpecialsItem: "_1txjwTLoJcqr0tBIHfKXTG",
+        SpotlightCtn: "_10ZMM-6TwuIxLIDYNo11cI",
+        SpotlightImageCtn: "_1bl_5_eovS3fDHK3GbmixH",
+        CapsuleDecorators: "_2kI35iD_oF1-ul1amEDSsK",
+        SpotlightTextCtn: "_1clRj5v7vU3Cuj7x9c3ZNZ",
+        SpotlightTitle: "_2egM2GG5RaDSQYVNWlMHat",
+        SpotlightBody: "_1ls2pcPp4wzuE2mXhMudcd",
+        SpotlightWeeklongTextCtn: "_3oM7Hgank9qu0ZtiIqT4Ti",
+        SpotlightItemCount: "MsDhVPTMNn95Jd3XWTPQR",
+        BottomBarPriceInfo: "w6OMUI_I9oVaxDOwRzRrh",
+        BroadcastPage: "_2wLdHFCsbh4BfZ6kvvpRyL",
+        BroadcastCtn: "_1D6ilQYGn-cYI2fhTAjSzD",
+        BroadcastImageCtn: "cIETZLGVM0l5WCskcyNy2",
+        BroadcastVideoThumbnail: "_39GHoC1PY5ctRSLAksxgN2",
+        BroadcastPlayIcon: "_39krE1gLBTakOzuK41yZBD",
+        BroadcastTextCtn: "_14UDZIeZXOLeUPaEDmYrfn",
+        BroadcastName: "_3mq3Uyxqjh000D4-OJ9PiI",
+        BroadcastDesc: "_3jIzvnoNk4DzmB7w3vl3dz",
+        DailyDealCtn: "_3pSANczPET1GBWiNfM8ZEZ",
+        DailyDealImageCtn: "pNmm6ej3gbZJbTFnF34Bb",
+        DailyDealTextCtn: "_1tG1_bqddtY0lm02Wf4X9T",
+        DailyDealDesc: "_21_xVixMh0-rRqUGdGxbEg",
+        ContentHubTakeoverCtn: "_2NgkNEEvdNAueuTkHH4V0S",
+        TweaksMenu: "_3N0H151KuH7D3iNrbRNL3D",
+        MenuTitle: "_1qcGKxEKb2AANDw4iXQ0kF",
+        MenuOptions: "_2BNKaMvGCPl8BE2y48Zyu2",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Container: "_2wxsDF42yO9Frs8xOqwhAA",
         FullRow: "beKrp_C-xp36sdic01dzR",
         HalfRowContainer: "_1DRJk8kPFiJLYmoYIXaNfB",
@@ -101,6 +140,17 @@
     chunkid: (module) => {
       module.exports = {
         HorizontalScrollInDragForceCursor: "_2kFhNSS_ljPFFh8GXnC0to",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        StoreSalePriceWidget: "NIRD8Bn9II9OQY1KDrAZv",
+        StoreSaleDiscountedPriceCtn: "_2M2uuGKI-mqASr4K5BRefp",
+        StoreSalePriceBox: "pk-LoKoNmmPK4GBiC9DR8",
+        StoreSaleReservationPriceBox: "_2KER4-iUzYJ7IYSjvQaG8T",
+        StoreSaleDiscountBox: "XMxkarW3W_NNebjelsgAY",
+        FromCoupon: "_3rH5bNCtORkBasSH4z6zfz",
+        StoreOriginalPrice: "_3-o3G9jt3lqcvbRXt8epsn",
       };
     },
     chunkid: (module) => {
@@ -605,6 +655,120 @@
         SaleSticker: "_19psoPSyaHlg76v5Cd9H-n",
         SaleTextCtn: "cwQNGPoPuJS67rykUgZdU",
         BoldText: "_1LS-qczKUuqKzg56ll_C0A",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        DiscoveryQueueCarouselCtn: "_2u0N2gUX44_tavazJJb_QP",
+        TextLink: "_3ZdNCUMz9KZMkwPZlO8zmi",
+        DiscoveryQueueApp: "_1xJSMubUWBlahkrtb4IFTc",
+        DiscoveryQueueWrapper: "_2BYaxM7mBfooJbZYzhEv4D",
+        revealDiscoveryQueueWrapper: "brzQbY6Z8TH8Ww-rFL4E0",
+        DiscoveryQueueItemsCtn: "_3q6eNRFBrPSFSGEn8uRFZ3",
+        DiscoveryQueueItemPositioner: "_16tdfw6vxg9Hdy0KfCutXn",
+        Selected: "_2aeAhZ2Y99YIR2-zD6l27U",
+        InRange: "_1XPIeNMxObbkYolTEj0Bwh",
+        Dragging: "_3fTO0TgoWEAo4zdaHOCTh0",
+        FarLeft: "vkLp1smRjDnZg7XQcMqjk",
+        Left: "_3gBoKuhIxMBjlxU7FZ2L3a",
+        Current: "_2CgJDPFhM9rbjsq9n0c9I_",
+        Right: "_1AGP_wKeaN9phzlq_2K9H7",
+        FarRight: "hBGRzfrW2Obp7QpzYCi2L",
+        AppDetailsCtn: "_2Zwt2P5vy4W9Ha5ePOv54U",
+        AppDetailsCtnTop: "_3TkhdqIi1gqwMzexQDS8Ab",
+        CapsuleLink: "_2m8YEKXvKa2bcFNjqXdJu7",
+        AppLibraryHero: "_uGgOnTsOzgIVK9BHMTUV",
+        AppHeader: "Vwr5XZLr5tOEaVLYbj1mZ",
+        RightColumn: "VVNgZo2T-rubrTvNMPSoh",
+        AppName: "_3lk6f1XI_loCIhBevOddHP",
+        AppTagsCtn: "xXcRKEuacDG8kYtDXu6OH",
+        TagEntry: "xmqBa8sZa4Xhgktfr43Uh",
+        AppReviews: "_2alBMAZOarIyf-vIiNazRg",
+        RelevantCtn: "_3sfhS6SCV1q8dTaRIpWCHB",
+        RelevantColumn: "Ne2AhbYmPfTxwJVmj1FZP",
+        RelevantItem: "_2OUHZGUrr0FugrwCwIm6dF",
+        RelevantCheck: "_1BOH1zFTOxtlgKkeEANpYO",
+        IgnoreLink: "fir3UBZYT6EAmdYWAdr3a",
+        AppActionButtonsCtn: "_2IQHDn5ZvlB1ThhSb_lhX",
+        AppActionJustButtonsCtn: "duAyQ1rUX78lMmmZY1V0n",
+        QueueButton: "_22Bfzcdg2l-RQEn-qKSIol",
+        ButtonsRowWrap: "_1plvU4aLu4hq22gYwThZnH",
+        IgnoredCtn: "_3G1MYmgXVcweTUK5jtU_Ft",
+        Active: "_2D_EZlAEopCvqU0_w21FdH",
+        IgnoredInfo: "_2j-elz350f4ndxI9CBUbyW",
+        IgnoredTitle: "_18alvCecAAMAsyM_6zCY2T",
+        IgnoredDescription: "CmI-HxKbBH8PjoSk7IVPC",
+        UndoIgnoreButton: "_2E3PfDDIiiKoy4iDQV7Ewl",
+        AppDesc: "_3-6CubUJWYN2tbKvwS2N9n",
+        YGlyph: "_3ncywKLa2mgKgbsj-g2wJi",
+        SummaryContentCtn: "Tvu6zAI3kbdYjGQGbypuQ",
+        SummaryTitle: "_2o4_HDWD3bRMkoJT4RfiMv",
+        YourStats: "_3-iD7yn2dCmqp9AL5xuwLX",
+        SummaryGrid: "_3vRcTzxpTSFxcxVm9BKrlQ",
+        GridItem: "_2w3xjuBZIgZJPO9HAa5Hb0",
+        GridTitle: "_7HEa84jCz03LkGTjIZa7c",
+        GridNumber: "jM11lU9OD9-2Hlu3Akwtj",
+        GridSubTitle: "_2n8wa2hMCjKHhvMsS0v3_k",
+        SummaryActionButtonsCtn: "nqmYD9sGBA3BEmNjp6qYF",
+        TopBarCtn: "_1ewUwegRciiNydBWSQRCX-",
+        LearnMoreLink: "CiFk6OuYAQSbv_DGXoBSX",
+        ControlsCtn: "_2Gy72TJcKqY9gqP5-TAmSk",
+        Disabled: "_2xsPifNspMLcbkoUSA5Ujl",
+        Primary: "_3o2jhEGrGiVndMjUbNpOw-",
+        Launch: "_3SOZx68qVakLwDvAYBOPMG",
+        Wide: "_1tFfTbcTKjlfSGsMOJvdf_",
+        QueueNavArrow: "_2sZ7DAljYV5Xd-nbhtlmyM",
+        Enable: "_2CTzbHZ-C-FfnXEtLZPv9q",
+        RightArrow: "_30_0NBq3DkV-qL7Eyqva-t",
+        LeftArrow: "_36Cln2gIYtwR3sPPcOi9bT",
+        ReleventSimilarAppsCtn: "_2akaWEht7jMXdxPJFmf3WN",
+        RecommendingCuratorsCtn: "_RZQ6JnUY6lQGmRcgHFNA",
+        AppRelevanceCtn: "_367qBdIRU4xAYHt5cqhPVa",
+        WhyRelevant: "_29ReJunMtLbnxbnixF6VdE",
+        SimilarAppCtn: "_2fNR47HGs7tI_v1HC2-N1h",
+        SimilarAppImg: "_1q8mEyt8Rp7JweHMRGm6hq",
+        SimilarAppText: "YWLoeGgBPsjUtXywol3_O",
+        FriendAvatarsCtn: "_2hxko0SvUWCZ30U4JH4TNn",
+        RelevantTextBold: "_1Z_ek2XNBZbkZqyR-QSwlo",
+        AppDescription: "_2mksBeuafFs1CMp0t5Z9gX",
+        TradingCardCtn: "_13ZcoCKc8H09LSHp4C197Z",
+        TradingCardImage: "_2ZB_x5Jq7JGDapJVPsCZTo",
+        Bold: "_2P6WAN13LnRVRmRb-VNu_L",
+        FriendBlockCtn: "_34aoCP80lDRK3cq6_V0YQ_",
+        PersonaStatus: "_1AYnL3n86EbaOCKf18KKV8",
+        ProgressHidden: "UdYhfFDOguxduU7c3PVpv",
+        DiscoveryQueueName: "D7yeVCEwaFr6qNo_bPGCr",
+        SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
+        RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
+        SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        ProgressCtn: "_3ed1Al-hFnjq4HQeLo6cIT",
+        ProgressDot: "_2R187sMx7MTX5XQ2KN3Xnx",
+        ProgressDotActive: "_3z2pS3DFn3MEl5ZPw6lsa9",
+        ProgressDotSelected: "_1qJVCZsv51RtfBGao-PV8V",
+        ProgressDotClickable: "jKfeFH4S6YhaeZ7RCZ8BN",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        AppVideoCtn: "_5T6C7ESpj4ynwbH8LS101",
+        WishlistBadge: "_1H947zVMI4eix33y6Vyrm0",
+        Active: "QO_OlPouxqbJBf7_YhDcB",
+        DeckVerifiedLogo: "_32nCthjo6y3PW8ly04ygbU",
+        VideoArea: "_1dktHf2Jq2wDCCvlx1tpMJ",
+        IgnoredCtn: "_1fmpWkA3raMRNRb2988jsO",
+        IgnoredInfo: "_12r_HcaLl4JO7AfMLMEZqE",
+        IgnoredTitle: "_2NLzxMudKrBejIZmxYz-Wu",
+        IgnoredDescription: "_3ViR4YrtH0a-mK6EiPgOSB",
+        UndoIgnoreButton: "_177VX9-0Tj1sNozNrm8bN1",
+        UndoButton: "_3HOpXzFuRFY1WwrPL-fxOi",
+        Disabled: "_3xyNp4rGNpDJtxvww4ZCOR",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1982,20 +2146,6 @@
             (_[(_.k_EPurchaseReservationState_UnavailableRegion = 6)] =
               "k_EPurchaseReservationState_UnavailableRegion");
         })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      const _ = "terminal";
-      var _;
-      !(function (_) {
-        (_[(_.TemplateFAQDisplayColumn = 1)] = "TemplateFAQDisplayColumn"),
-          (_[(_.TemplateFAQDisplaySimpleRow = 2)] =
-            "TemplateFAQDisplaySimpleRow");
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3522,152 +3672,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapBadgeInfo = new Map();
-        m_mapBadgeLoadPromises = new Map();
-        m_eventBadgehangeCallback = new Map();
-        m_mapInitialBadgeInfo = new Map();
-        GetBadgeInfo(_) {
-          return this.m_mapBadgeInfo.get(_);
-        }
-        GetInitialBadgeInfo(_) {
-          return this.m_mapInitialBadgeInfo.get(_);
-        }
-        GetBadgeInfoChangeCallback(_) {
-          return (
-            this.m_eventBadgehangeCallback.has(_) ||
-              this.m_eventBadgehangeCallback.set(_, new _._()),
-            this.m_eventBadgehangeCallback.get(_)
-          );
-        }
-        Test_SetBadgeInfo(_) {
-          _.badgeid &&
-            (this.m_mapBadgeInfo.set(_.badgeid, _),
-            this.GetBadgeInfoChangeCallback(_.badgeid).Dispatch(_));
-        }
-        async LoadBadgeInfo(_) {
-          return this.m_mapBadgeInfo.has(_)
-            ? this.m_mapBadgeInfo.get(_)
-            : (this.m_mapBadgeLoadPromises.has(_) ||
-                this.m_mapBadgeLoadPromises.set(
-                  _,
-                  this.InternalLoadBadgeInfo(_),
-                ),
-              this.m_mapBadgeLoadPromises.get(_));
-        }
-        async InternalLoadBadgeInfo(_) {
-          if (!_ || !Number.isInteger(_))
-            return {
-              badgeid: _,
-              level: 0,
-            };
-          let _ = null;
-          try {
-            const _ = (0, _._)();
-            (0, _._)(
-              _ == _._.STORE_BASE_URL || _ == _._.COMMUNITY_BASE_URL,
-              "ajaxgetbadgeinfo called on wrong unsupported site: " + _,
-            );
-            const _ = _ + "actions/ajaxgetbadgeinfo",
-              _ = {
-                badgeid: _,
-              },
-              _ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-              });
-            if (
-              200 == _.status &&
-              (1 == _.data?.success || 42 == _.data?.success)
-            ) {
-              const _ = {
-                badgeid: _.data.badgeid,
-                level: _.data.level,
-                _: _.data._,
-                completion_time: _.data.completion_time,
-              };
-              return (
-                this.m_mapBadgeInfo.set(_, _),
-                this.m_mapInitialBadgeInfo.has(_) ||
-                  this.m_mapInitialBadgeInfo.set(_, _),
-                _
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          console.error("useEventBadge: " + _?.strErrorMsg, _);
-          const _ = {
-            badgeid: _,
-            level: 0,
-          };
-          return this.m_mapBadgeInfo.set(_, _), _;
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_UserBadgeForEventStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-      }
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _ ? _.Get().GetBadgeInfo(_) : void 0,
-        );
-        return (
-          (0, _.useEffect)(() => {
-            !_ &&
-              _ &&
-              _.Get()
-                .LoadBadgeInfo(_)
-                .then((_) => __webpack_require__(_));
-          }, [_, _]),
-          (0, _._)(
-            _ ? _.Get().GetBadgeInfoChangeCallback(_) : void 0,
-            __webpack_require__,
-          ),
-          _
-        );
-      }
-      function _(_) {
-        _.Get().Test_SetBadgeInfo(_);
-      }
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _ ? _.Get().GetInitialBadgeInfo(_) : void 0,
-        );
-        return (
-          (0, _.useEffect)(() => {
-            !_ && _ && _.Get().LoadBadgeInfo(_);
-          }, [_, _]),
-          (0, _._)(_ ? _.Get().GetBadgeInfoChangeCallback(_) : void 0, () =>
-            __webpack_require__(_ ? _.Get().GetInitialBadgeInfo(_) : void 0),
-          ),
-          _
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
         _: () => _,
       });
       var _,
@@ -4220,90 +4224,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_rgAnswerToCategoryID = Array();
-        m_rgAnswerChosen = Array();
-        SetAnswerCategory(_, _) {
-          const _ = Math.min(_, 64);
-          (this.m_rgAnswerToCategoryID = (0, _._)(
-            this.m_rgAnswerToCategoryID,
-            _ + 1,
-            null,
-          )),
-            (this.m_rgAnswerToCategoryID[_] = _?.length > 0 ? _ : null);
-        }
-        GetAnswerCategoryForQuestion(_) {
-          return this.BHasAnsweredQuestion(_)
-            ? this.m_rgAnswerToCategoryID[_]
-            : null;
-        }
-        SetAnswer(_, _) {
-          const _ = Math.min(_, 64);
-          (this.m_rgAnswerChosen = (0, _._)(
-            this.m_rgAnswerChosen,
-            _ + 1,
-            null,
-          )),
-            (this.m_rgAnswerChosen[_] = _);
-        }
-        GetAnswer(_) {
-          return this.BHasAnsweredQuestion(_) ? this.m_rgAnswerChosen[_] : null;
-        }
-        BHasAnsweredQuestion(_) {
-          return (
-            _ < this.m_rgAnswerChosen?.length &&
-            Boolean(this.m_rgAnswerChosen[_])
-          );
-        }
-        GetAnswerCategories() {
-          const _ = new Array();
-          return (
-            this.m_rgAnswerToCategoryID.forEach((_) => {
-              _?.length > 0 && _.filter(Boolean).forEach((_) => _.push(_));
-            }),
-            _
-          );
-        }
-        GetAnswers() {
-          return this.m_rgAnswerChosen;
-        }
-        GetLargestAnswerQuestion() {
-          return this?.m_rgAnswerChosen.length || 0;
-        }
-        ClearAnswersAndCategories() {
-          (this.m_rgAnswerToCategoryID = Array()),
-            (this.m_rgAnswerChosen = Array());
-        }
-        BHasTerminalAnswerChosen() {
-          return this.m_rgAnswerChosen.some((_) => _.reveal_question_id == _._);
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleQuizAnswerStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_rgAnswerToCategoryID", void 0),
-        (0, _._)([_._], _.prototype, "m_rgAnswerChosen", void 0);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -4697,336 +4617,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 7,
-        _ = -1;
-      class _ {
-        m_userData;
-        m_bLoadedDuringInit = !1;
-        m_strLastDoorOpenKey = "video_noneset";
-        m_bIsAnyDoorOpened = !1;
-        m_nHighestDoorOpened = _;
-        m_initialLoadPromise;
-        m_mapDoorOpenPromise = new Map();
-        m_mapChangeCallback = new Map();
-        m_doorInitializedChangedCallback = new _._();
-        m_largestDoorChangeCallback = new _._();
-        m_bIsAnyDoorOpenChangeCallback = new _._();
-        GetLastDoorOpen() {
-          return this.m_strLastDoorOpenKey;
-        }
-        GetRawDoorData() {
-          return this.m_userData;
-        }
-        BIsDoorOpened(_) {
-          return (
-            null != _ &&
-            null != _ &&
-            !!this.m_userData &&
-            Boolean(_ < this.m_userData.length && this.m_userData[_].opened)
-          );
-        }
-        BCanUserOpenDoor(_) {
-          let _ = _._.GetTimeNowWithOverride();
-          return (
-            _._.logged_in &&
-            this.m_userData &&
-            _ < this.m_userData.length &&
-            _ >= this.m_userData[_].rtime_start &&
-            _ <= this.m_userData[_].rtime_end
-          );
-        }
-        GetDoorCount() {
-          return this.m_userData ? this.m_userData.length : 0;
-        }
-        BIsAnyDoorOpened() {
-          return this.m_bIsAnyDoorOpened;
-        }
-        GetIsAnyDoorOpenChange() {
-          return this.m_bIsAnyDoorOpenChangeCallback;
-        }
-        GetLargestDoorOpenIndex() {
-          return this.m_nHighestDoorOpened;
-        }
-        GetLargestDoorIndexChange() {
-          return this.m_largestDoorChangeCallback;
-        }
-        GetDoorStateChangeCallback(_) {
-          return (
-            this.m_mapChangeCallback.has(_) ||
-              this.m_mapChangeCallback.set(_, new _._()),
-            this.m_mapChangeCallback.get(_)
-          );
-        }
-        GetDoorStateInitializedChangeCallback() {
-          return this.m_doorInitializedChangedCallback;
-        }
-        BIsInitialized() {
-          return this.m_bLoadedDuringInit;
-        }
-        GetMaxDoor() {
-          return _;
-        }
-        SetInMemoryUpdateDoorOpenUpto(_) {
-          for (let _ = 0; _ < _; ++_) {
-            const _ = _ <= _;
-            this.m_userData[_].opened != _ &&
-              ((this.m_userData[_].opened = _),
-              this.GetDoorStateChangeCallback(_).Dispatch(_));
-          }
-          this.RecomputeState();
-        }
-        SetInMemorySpecificDoorState(_, _) {
-          _ < _
-            ? this.m_userData[_].opened != _ &&
-              ((this.m_userData[_].opened = _),
-              this.GetDoorStateChangeCallback(_).Dispatch(_),
-              this.RecomputeState())
-            : console.error("CDoorStore: Wrong door being set " + _);
-        }
-        RecomputeState() {
-          let _ = _;
-          this.m_userData?.forEach((_) => {
-            _.opened && _.day > _ && (_ = _.day);
-          });
-          const _ = _ != _;
-          _ != this.m_bIsAnyDoorOpened &&
-            ((this.m_bIsAnyDoorOpened = _),
-            this.GetIsAnyDoorOpenChange().Dispatch(_)),
-            _ != this.m_nHighestDoorOpened &&
-              ((this.m_nHighestDoorOpened = _),
-              this.GetLargestDoorIndexChange().Dispatch(_));
-        }
-        async OpenDoor(_, _ = !0, __webpack_require__ = "", _ = !1) {
-          return !_._.logged_in ||
-            !this.m_userData ||
-            _ > this.m_userData.length ||
-            _ < 0
-            ? ("dev" == _._.WEB_UNIVERSE &&
-                console.log(
-                  "CDoorStore.OpenDoor Early fail settings:",
-                  _._.logged_in,
-                  this.m_userData,
-                  _,
-                  this.m_userData?.length,
-                ),
-              null)
-            : this.m_mapDoorOpenPromise.has(_)
-              ? this.m_mapDoorOpenPromise.get(_)
-              : this.m_userData[_].opened == _
-                ? {}
-                : (this.m_mapDoorOpenPromise.has(_) ||
-                    this.m_mapDoorOpenPromise.set(
-                      _,
-                      this.InternalOpenDoor(_, _, __webpack_require__, _),
-                    ),
-                  this.m_mapDoorOpenPromise.get(_));
-        }
-        async InternalOpenDoor(_, _ = !0, _, _ = !1) {
-          let _ = _._.STORE_BASE_URL + "saleaction/ajaxopendoor";
-          const _ = new FormData();
-          _.append("sessionid", _._.SESSIONID),
-            _ && _.append("datarecord", _),
-            _ && _.append("fake_open", "" + _),
-            _.append("door_index", "" + _),
-            _.append("clan_accountid", "" + _._.CLANACCOUNTID),
-            _ || _.append("open_door", "0");
-          let _ = null;
-          try {
-            let _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            if (200 == _?.status && 1 == _?.data?.success)
-              return (
-                (this.m_userData[_].opened = _),
-                (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
-                _.data.capsuleinsert && (0, _._)([_.data.capsuleinsert]),
-                this.GetDoorStateChangeCallback(_).Dispatch(_),
-                this.RecomputeState(),
-                _.data
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            this.m_mapDoorOpenPromise.delete(_),
-            console.error("OpenDoor hit error: " + _.strErrorMsg, _),
-            null
-          );
-        }
-        async LoadDoorData() {
-          return this.m_bLoadedDuringInit
-            ? this.m_userData
-            : (this.m_initialLoadPromise ||
-                (this.m_initialLoadPromise = this.InternalLoadDoorData()),
-              this.m_initialLoadPromise);
-        }
-        async InternalLoadDoorData() {
-          const _ = _._.STORE_BASE_URL + "saleaction/ajaxgetopendoor";
-          let _ = null;
-          try {
-            const _ = await _().get(_, {
-              withCredentials: !0,
-            });
-            if (200 == _.status && _.data?.doordata) {
-              (this.m_userData = _.data.doordata),
-                (this.m_bLoadedDuringInit = !0);
-              for (let _ = 0; _ < _; ++_)
-                this.GetDoorStateChangeCallback(_).Dispatch(
-                  this.m_userData[_].opened,
-                );
-              return (
-                this.GetDoorStateInitializedChangeCallback().Dispatch(
-                  this.m_bLoadedDuringInit,
-                ),
-                this.RecomputeState(),
-                this.m_userData
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDoorStore.LoadDoorData failed: " + _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        async CloseAllDoors(_) {
-          let _ = _._.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
-          const _ = new FormData();
-          __webpack_require__.append("sessionid", _._.SESSIONID),
-            __webpack_require__.append("clan_accountid", "" + _);
-          let _ = null;
-          try {
-            let _ = await _().post(_, _, {
-              withCredentials: !0,
-            });
-            if (200 == _.status && 1 == _?.data?.success) {
-              console.log("CDoorStore - closed " + _.data.count);
-              for (let _ = 0; _ < _; ++_)
-                (this.m_userData[_].opened = !1),
-                  this.GetDoorStateChangeCallback(_).Dispatch(
-                    this.m_userData[_].opened,
-                  );
-              return this.RecomputeState(), !0;
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CDoorStore.CloseAllDoors failed: " + _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_EventDoorStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-        Init() {
-          (this.m_userData = (0, _._)("doorinfo", "application_config")),
-            this.m_userData &&
-              ((this.m_bLoadedDuringInit = !0),
-              this.RecomputeState(),
-              "dev" == _._.WEB_UNIVERSE &&
-                console.log("CDoorStore Loading - ", this.m_userData));
-        }
-      }
-      function _() {
-        return {
-          fnOpenDoor: _.Get().OpenDoor,
-        };
-      }
-      function _() {
-        const [_, _] = (0, _.useState)(_.Get().BIsInitialized());
-        return (
-          (0, _.useEffect)(() => {
-            _ || _.Get().LoadDoorData();
-          }, [_]),
-          (0, _._)(_.Get().GetDoorStateInitializedChangeCallback(), _),
-          _
-        );
-      }
-      function _(_) {
-        const _ = _(),
-          [__webpack_require__, _] = (0, _.useState)(
-            _ ? _.Get().BIsDoorOpened(_) : void 0,
-          );
-        return (
-          (0, _._)(_.Get().GetDoorStateChangeCallback(_), _),
-          __webpack_require__
-        );
-      }
-      function _() {
-        const _ = _(),
-          [_, __webpack_require__] = (0, _.useState)(
-            _ ? _.Get().GetLargestDoorOpenIndex() : _,
-          );
-        return (
-          (0, _._)(_.Get().GetLargestDoorIndexChange(), __webpack_require__), _
-        );
-      }
-      function _() {
-        const _ = _(),
-          [_, __webpack_require__] = (0, _.useState)(
-            !!_ && _.Get().BIsAnyDoorOpened(),
-          );
-        return (
-          (0, _._)(_.Get().GetIsAnyDoorOpenChange(), __webpack_require__), _
-        );
-      }
-      function _(_) {
-        _.Get().SetInMemoryUpdateDoorOpenUpto(_);
-      }
-      function _(_, _) {
-        _.Get().SetInMemorySpecificDoorState(_, _);
-      }
-      (0, _._)([_._], _.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, _._)([_._], _.prototype, "m_nHighestDoorOpened", void 0),
-        (0, _._)([_._], _.prototype, "BIsDoorOpened", null),
-        (0, _._)([_._], _.prototype, "OpenDoor", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -5048,10 +4638,18 @@
           return this.RemoveGIDFromList(_, _._ + _), _.data;
         }
         static sm_Instance;
+        static sm_SummaryInstance;
         static Get() {
           return (
             _.sm_Instance || ((_.sm_Instance = new _()), _.sm_Instance.Init()),
             _.sm_Instance
+          );
+        }
+        static GetSummaryStore() {
+          return (
+            _.sm_SummaryInstance ||
+              ((_.sm_SummaryInstance = new _(!0)), _.sm_SummaryInstance.Init()),
+            _.sm_SummaryInstance
           );
         }
       }
@@ -5090,257 +4688,6 @@
           );
         }
       })();
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EDiscoveryAction_Invalid = 0)] = "k_EDiscoveryAction_Invalid"),
-          (_[(_.k_EDiscoveryAction_OpenStorePage = 1)] =
-            "k_EDiscoveryAction_OpenStorePage"),
-          (_[(_.k_EDiscoveryAction_OpenDoor = 2)] =
-            "k_EDiscoveryAction_OpenDoor");
-      })(_ || (_ = {}));
-      class _ {
-        m_mapMaterializedInsertion = new Map();
-        m_mapInsertCallback = new Map();
-        m_rgFutureInsertions = new Array();
-        GetMatchingInsertion(_, _) {
-          return this.m_mapMaterializedInsertion.get(this.GetKeyFromID(_, _));
-        }
-        GetChangeCallback(_, _) {
-          const _ = this.GetKey({
-            sectionID: _,
-            tabID: _,
-          });
-          return this.GetChangeCallbackByKey(_);
-        }
-        GetChangeCallbackByKey(_) {
-          return (
-            this.m_mapInsertCallback.has(_) ||
-              this.m_mapInsertCallback.set(_, new _._()),
-            this.m_mapInsertCallback.get(_)
-          );
-        }
-        GetKey(_) {
-          return _ ? _.sectionID + "_" + (_.tabID || "-1") : null;
-        }
-        GetKeyFromID(_, _) {
-          return _ + "_" + (_ || "-1");
-        }
-        ReplaceInsertion(_) {
-          _.forEach((_) => {
-            const _ = this.GetKey(_);
-            this.m_mapMaterializedInsertion.forEach((_) => {
-              const _ = this.GetKey(_);
-              _ && _ != _ && this.DispatchInsertion(_, !0);
-            }),
-              this.m_mapMaterializedInsertion.clear(),
-              (this.m_rgFutureInsertions = Array()),
-              this.AppendInsertion(_);
-          });
-        }
-        AppendInsertion(_) {
-          _?.sectionID
-            ? (this.m_mapMaterializedInsertion.set(this.GetKey(_), _),
-              this.DispatchInsertion(_))
-            : this.m_rgFutureInsertions.push(_);
-        }
-        DispatchInsertion(_, _) {
-          _.sectionID &&
-            this.GetChangeCallback(_.sectionID, _.tabID).Dispatch(_ ? null : _);
-        }
-        AppCapsuleFound(_) {
-          this.m_rgFutureInsertions = this.m_rgFutureInsertions.filter(
-            (_) => !(!_.sectionID && _.insertion_requirement && _.appid == _),
-          );
-        }
-        GetAnyNonMaterializedInsertionRequest() {
-          const _ = this.m_rgFutureInsertions.length;
-          return _ > 0
-            ? this.m_rgFutureInsertions[Math.floor(_ * Math.random())]
-            : null;
-        }
-        SaleInteractionCallback(_, _) {
-          if (this.m_rgFutureInsertions.length > 0)
-            for (let _ = 0; _ < this.m_rgFutureInsertions.length; ++_)
-              if (this.AreWeAllowedToDeploy(this.m_rgFutureInsertions[_], _)) {
-                const _ = this.DeployCapsuleIfPossible(
-                  _,
-                  this.m_rgFutureInsertions[_],
-                );
-                _ &&
-                  ((0, _._)(
-                    Boolean(_.sectionID),
-                    "Expected to have a materialized insertion at this poiunt: " +
-                      _.sectionID,
-                  ),
-                  this.AppendInsertion(_));
-              }
-        }
-        AreWeAllowedToDeploy(_, _) {
-          if (
-            !_.sectionID &&
-            _.insertion_requirement &&
-            _.size >= _.insertion_requirement.min_interactions
-          ) {
-            if (_.size >= _.insertion_requirement.max_interactions) return !0;
-            const _ =
-              _.insertion_requirement.max_interactions -
-              _.insertion_requirement.min_interactions;
-            return 0 == Math.floor(_ * Math.random());
-          }
-          return !1;
-        }
-        BIsInsertableSectionType(_) {
-          if (_) {
-            if ("sale_item_browser" == _.section_type) return !0;
-            if ((0, _._)(_.section_type))
-              return (
-                !_.smart_section ||
-                ("wishlist" != _.smart_section_type &&
-                  "wishlist_onsale" != _.smart_section_type)
-              );
-          }
-          return !1;
-        }
-        BHasExistingInsertion(_) {
-          return Boolean(this.GetMatchingInsertion(_.sectionid, _.tabid));
-        }
-        DeployCapsuleIfPossible(_, _) {
-          if (this.BHasExistingInsertion(_)) return null;
-          if (_._.ANNOUNCEMENT_GID) {
-            const _ = _._.GetClanEventFromAnnouncementGID(_._.ANNOUNCEMENT_GID),
-              _ = __webpack_require__?.GetSaleSectionByID(_.sectionid);
-            if (this.BIsInsertableSectionType(_)) {
-              if (
-                _.insertion_requirement.additional_adds > 0 &&
-                _.insertion_requirement.delta_interactions > 0
-              ) {
-                const _ = {
-                  ..._,
-                };
-                (_.insertion_requirement = {
-                  ..._.insertion_requirement,
-                }),
-                  (_.insertion_requirement.additional_adds -= 1),
-                  (_.insertion_requirement.max_interactions +=
-                    _.insertion_requirement.delta_interactions),
-                  (_.insertion_requirement.min_interactions +=
-                    _.insertion_requirement.delta_interactions),
-                  this.AppendInsertion(_);
-              }
-              return (
-                (_.sectionID = _.sectionid),
-                (_.tabID = _.tabid),
-                (_.insertionIndex = _.elementIndex),
-                _
-              );
-            }
-          }
-          return null;
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_DynamicCapsuleInsertStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this);
-        }
-        Init() {
-          const _ = (0, _._)("capsuleinsert", "application_config");
-          _.ValidateData(_) &&
-            (_.sectionID
-              ? this.m_mapMaterializedInsertion.set(this.GetKey(_), _)
-              : _.insertion_requirement
-                ? (this.m_rgFutureInsertions.push(_),
-                  _?.appid &&
-                    _._.Get()
-                      .QueueAppRequest(_.appid, {
-                        include_assets: !0,
-                        include_release: !0,
-                        include_trailers: !0,
-                      })
-                      .then(() => {
-                        const _ = _._.Get().GetApp(_.appid);
-                        !_ ||
-                          _.GetBestPurchaseOption()?.formatted_final_price
-                            ?.length > 0 ||
-                          _.ReplaceBestPurchaseOption({
-                            packageid: 0,
-                            bundleid: 0,
-                            formatted_original_price: "CL.0R",
-                            formatted_final_price: "TH.4X",
-                            discount_pct: 50,
-                          });
-                      }))
-                : "dev" == _._.WEB_UNIVERSE &&
-                  console.error(
-                    "CDynamicCapsuleInsertStore: Payload not material and missing instructions.",
-                    _,
-                  ),
-            "dev" == _._.WEB_UNIVERSE &&
-              console.log("CDynamicCapsuleInsertStore loaded ", _)),
-            _._.Get()
-              .GetNewInteractionCallback()
-              .Register(this.SaleInteractionCallback);
-        }
-        static ValidateData(_) {
-          const _ = _;
-          return (
-            _ &&
-            ("number" == typeof _.sectionID ||
-              "object" == typeof _.insertion_requirement) &&
-            "number" == typeof _.appid &&
-            "number" == typeof _.action
-          );
-        }
-      }
-      function _(_) {
-        _.Get().ReplaceInsertion(_);
-      }
-      function _(_, _) {
-        return _.Get().GetMatchingInsertion(_, _);
-      }
-      function _(_, _) {
-        return _.Get().GetChangeCallback(_, _);
-      }
-      function _(_) {
-        _.Get().AppCapsuleFound(_);
-      }
-      function _() {
-        return _.Get().GetAnyNonMaterializedInsertionRequest();
-      }
-      function _(_) {
-        return _.Get().BIsInsertableSectionType(_);
-      }
-      (0, _._)([_._], _.prototype, "SaleInteractionCallback", null),
-        (0, _._)([_._], _.prototype, "DeployCapsuleIfPossible", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5479,61 +4826,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_setInteractions = new Set();
-        m_nActiveTabID = -1;
-        m_interactionCallback = new _._();
-        m_bDebugMode = !0;
-        GetNewInteractionCallback() {
-          return this.m_interactionCallback;
-        }
-        AddInteraction(_, _) {
-          const _ = `${this.m_nActiveTabID}_${_}_${_}`,
-            _ = !this.m_setInteractions.has(_);
-          this.m_setInteractions.add(_),
-            _ &&
-              ("dev" == _._.WEB_UNIVERSE &&
-                this.m_bDebugMode &&
-                console.log(
-                  "CSaleInteractionStore new: " +
-                    _ +
-                    " count: " +
-                    this.m_setInteractions.size,
-                ),
-              this.m_interactionCallback.Dispatch(
-                {
-                  tabid: this.m_nActiveTabID,
-                  sectionid: _,
-                  elementIndex: _,
-                },
-                this.m_setInteractions,
-              ));
-        }
-        SetActiveTab(_) {
-          this.m_nActiveTabID = _;
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleInteractionStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {}
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -5649,6 +4941,357 @@
           this.m_metadata = _.Body().metadata().toObject();
         }
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_?.asset_url_format && _[_])
+          return (
+            _._.BASE_URL_SHARED_CDN +
+            "/store_item_assets/" +
+            _.asset_url_format.replace("${FILENAME}", _[_])
+          );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { spotlight: _ } = _,
+          _ = (0, _._)(_.url, "spotlight");
+        return _.createElement(
+          _._,
+          {
+            appID: "app" == _.item?.type ? _.item._ : void 0,
+            feature: "spotlight",
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.SpotlightCtn,
+              onOKButton: () => {
+                window.location.href = _;
+              },
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.SpotlightImageCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.CapsuleDecorators, _.CapsuleDecorators),
+                },
+                _.has_live_broadcast && _.createElement(_._, null),
+              ),
+              _.open_in_new_window
+                ? _.createElement(
+                    _._,
+                    {
+                      href: _,
+                    },
+                    _.createElement("img", {
+                      src: _.image_url,
+                      alt: _.title,
+                    }),
+                  )
+                : _.createElement(
+                    "a",
+                    {
+                      href: _,
+                    },
+                    _.createElement("img", {
+                      src: _.image_url,
+                      alt: _.title,
+                    }),
+                  ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.SpotlightTextCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.SpotlightTitle,
+                },
+                _.title,
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.SpotlightBody,
+                },
+                _.body,
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.BottomBarPriceInfo,
+                },
+                _.createElement(_, {
+                  discountBlock: _.discount_block,
+                  bIsSalePage: _.is_sale_page,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { dailyDeal: _ } = _,
+          _ = (0, _._)(_.target, "daily-deal"),
+          _ = (0, _._)(_.item?.type ?? "application"),
+          _ = (0, _._)(
+            (0, _._)({
+              item_type: _,
+              _: _.item?._,
+            }),
+          );
+        return _.createElement(
+          _._,
+          {
+            appID: "app" == _.item?.type ? _.item._ : void 0,
+            feature: "daily-deal",
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.DailyDealCtn,
+              onOKButton: () => {
+                window.location.href = _;
+              },
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.DailyDealImageCtn,
+              },
+              _.createElement(
+                "a",
+                {
+                  href: _,
+                },
+                _.createElement("img", {
+                  src: _.image,
+                  alt: _.data?.name,
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.DailyDealTextCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.DailyDealDesc,
+                },
+                _.desc,
+              ),
+              _.createElement(_, {
+                discountBlock: _.discount_block,
+                bIsSalePage: _.is_sale_page,
+              }),
+            ),
+          ),
+        );
+      }
+      const _ = (_) => {
+        const { discountBlock: _, bIsSalePage: __webpack_require__ } = _;
+        if (!_) return null;
+        const _ = _.hide_discount_percent_for_compliance;
+        return __webpack_require__
+          ? null == _.discount_max || _.discount_max <= 0
+            ? null
+            : null == _.discount_min || _.discount_min <= 0
+              ? _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().StoreSalePriceWidgetContainer,
+                      _().Discounted,
+                    ),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().StoreSaleDiscountBox,
+                    },
+                    "Up to -",
+                    _.discount_max,
+                    "%",
+                  ),
+                )
+              : _
+                ? _.createElement(
+                    "div",
+                    {
+                      className: _().DiscountIconCtn,
+                    },
+                    _.createElement(_.XH_, null),
+                  )
+                : _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _().StoreSalePriceWidgetContainer,
+                        _().Discounted,
+                      ),
+                    },
+                    _.discount_min === _.discount_max
+                      ? _.createElement(
+                          "div",
+                          {
+                            className: _().StoreSaleDiscountBox,
+                          },
+                          _.discount_min,
+                          "%",
+                        )
+                      : _.createElement(
+                          "div",
+                          {
+                            className: _().StoreSaleDiscountBox,
+                          },
+                          _.discount_min,
+                          " - ",
+                          _.discount_max,
+                          "%",
+                        ),
+                  )
+          : null == _.final_price || "" === _.final_price
+            ? null
+            : null != _.bundle_discount && _.bundle_discount > 0 && !_
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _.DiscountBlock,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.DiscountPercent,
+                    },
+                    "-",
+                    _.bundle_discount,
+                    "%",
+                  ),
+                )
+              : null != _.discount_percent && _.discount_percent > 0
+                ? _
+                  ? _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(
+                          _().StoreSalePriceWidgetContainer,
+                          _().Discounted,
+                        ),
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().DiscountIconCtn,
+                        },
+                        _.createElement(_.XH_, null),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StoreSaleDiscountedPriceCtn,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().StoreSalePriceBox,
+                          },
+                          _.final_price,
+                        ),
+                      ),
+                    )
+                  : _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(
+                          _().StoreSalePriceWidgetContainer,
+                          _().Discounted,
+                        ),
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StoreSaleDiscountBox,
+                        },
+                        _.discount_percent,
+                        "%",
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StoreSaleDiscountedPriceCtn,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().StoreOriginalPrice,
+                          },
+                          _.orig_price,
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().StoreSalePriceBox,
+                          },
+                          _.final_price,
+                        ),
+                      ),
+                    )
+                : _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().StoreSalePriceWidgetContainer),
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().StoreSaleDiscountedPriceCtn,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StoreSalePriceBox,
+                        },
+                        _.final_price,
+                      ),
+                    ),
+                  );
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -6072,7 +5715,9 @@
                     null,
                     4,
                     4,
-                    void 0,
+                    {
+                      only_summaries: !0,
+                    },
                     _,
                   );
                   if (!_.token.reason) {
@@ -6613,6 +6258,188 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.k_eBlock = "block"),
+          (_.k_eFinal = "final"),
+          (_.k_eOriginal = "original"),
+          (_.k_eReservation = "reservation");
+      })(_ || (_ = {}));
+      const _ = (_) => {
+        switch (_.display_style) {
+          case _.k_eFinal:
+            return (
+              Boolean(_.formatted_final_price) &&
+              _.createElement("span", null, _.formatted_final_price)
+            );
+          case _.k_eOriginal:
+            const _ = _.formatted_orig_price || _.formatted_final_price;
+            return Boolean(_) && _.createElement("span", null, _);
+        }
+        const _ = "reservation" == _.display_style,
+          _ = _.bHideDiscountPercentForCompliance,
+          _ = "bbcode_price" == _.className;
+        return _.createElement(
+          "span",
+          {
+            className: (0, _._)({
+              [_.StoreSalePriceWidget]: !0,
+              [_.className]: Boolean(_.className),
+              [_.StoreSaleReservationPrice]: _,
+            }),
+          },
+          Boolean(_.discount_percent && !_) &&
+            _.createElement(
+              "span",
+              {
+                className: (0, _._)(
+                  _.StoreSaleDiscountBox,
+                  "StoreSaleDiscountBox",
+                  _.bDiscountFromCoupon && _.FromCoupon,
+                ),
+              },
+              `-${_.discount_percent}%`,
+            ),
+          Boolean(_.discount_percent && _) &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)({
+                  [_.DiscountIconCtn]: !0,
+                  bbcode_price_discount: _,
+                }),
+              },
+              _.createElement(_.XH_, null),
+            ),
+          Boolean(_.formatted_final_price) &&
+            (Boolean(_.discount_percent && _.formatted_orig_price)
+              ? _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)({
+                      [_.StoreSaleDiscountedPriceCtn]: !0,
+                      bbcode_price_ctn: _,
+                    }),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)({
+                        [_.StoreOriginalPrice]: !0,
+                        StoreOriginalPrice: !0,
+                        bbcode_price_orig: _,
+                      }),
+                    },
+                    _.formatted_orig_price,
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)({
+                        [_.StoreSalePriceBox]: !0,
+                        bbcode_price_box: _,
+                        [_.StoreSaleReservationPriceBox]: _,
+                        bbcode_price_final: _,
+                      }),
+                    },
+                    _.formatted_final_price,
+                  ),
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)({
+                      [_.StoreSalePriceBox]: !0,
+                      bbcode_price_box: _,
+                      [_.StoreSaleReservationPriceBox]: _,
+                      bbcode_price_final: _,
+                    }),
+                  },
+                  _.formatted_final_price,
+                )),
+        );
+      };
+      function _(_) {
+        const [_] = (0, _._)(_.packageID, {});
+        if (_) {
+          const _ = _.GetBestPurchaseOption();
+          return _.createElement(_, {
+            formatted_final_price: _.formatted_final_price,
+            formatted_orig_price: _.formatted_original_price,
+            discount_percent: _.discount_pct,
+            bHideDiscountPercentForCompliance:
+              _.hide_discount_pct_for_compliance,
+            display_style: _.display_style,
+            className: "bbcode_price",
+          });
+        }
+        return null;
+      }
+      function _(_) {
+        const _ = Number(_.args.packageid);
+        if (!_) return null;
+        const _ = _.args.display;
+        return _.createElement(_, {
+          packageID: _,
+          display_style: _,
+        });
+      }
+      function _(_) {
+        const [_] = (0, _._)(_.packageID, {}),
+          [__webpack_require__] = (0, _._)(_.compareID, {});
+        if (!_ || !__webpack_require__) return null;
+        const _ = (function (_, _) {
+          if (
+            !_?.GetBestPurchaseOption().final_price_in_cents ||
+            !_?.GetBestPurchaseOption()?.final_price_in_cents
+          )
+            return;
+          return (
+            (
+              100 *
+              (1 -
+                Number.parseInt(
+                  _.GetBestPurchaseOption().final_price_in_cents,
+                ) /
+                  Number.parseInt(
+                    _.GetBestPurchaseOption().final_price_in_cents,
+                  ))
+            ).toFixed(0) + "%"
+          );
+        })(_, __webpack_require__);
+        return void 0 === _
+          ? null
+          : _.createElement(
+              "span",
+              {
+                className: _.StorePriceSavings,
+              },
+              _,
+            );
+      }
+      function _(_) {
+        const _ = Number(_.args.packageid),
+          _ = Number(_.args.compareid);
+        return _ && _
+          ? _.createElement(_, {
+              packageID: _,
+              compareID: _,
+            })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6629,6 +6456,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -6728,197 +6556,6 @@
           ),
         );
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_sParentOrigin;
-        m_eventModelJson = void 0;
-        m_setMouseOverSectionID = _._.set();
-        m_setMouseOverSubsectionID = _._.set();
-        m_jumpToSection = void 0;
-        m_jumpToSubsection = void 0;
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_PartnerSaleLivePreviewClient = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {
-          (0, _._)(this),
-            window.opener &&
-              ((this.m_sParentOrigin = (0, _._)(
-                location.search,
-                "parentOrigin",
-              )),
-              window.addEventListener("message", this.HandleMessage),
-              window.addEventListener("beforeunload", () =>
-                window.opener.postMessage(
-                  {
-                    message: "PartnerEventEditor_ClientUnready",
-                  },
-                  this.m_sParentOrigin,
-                ),
-              ),
-              window.opener.postMessage(
-                {
-                  message: "PartnerEventEditor_ClientReady",
-                },
-                this.m_sParentOrigin,
-              ));
-        }
-        BIsConnected() {
-          return !!window.opener && this.m_eventModelJson;
-        }
-        GetEventModel() {
-          return this.m_eventModelJson;
-        }
-        GetMouseOverSectionID() {
-          return this.m_setMouseOverSectionID.size > 0
-            ? this.m_setMouseOverSectionID.values().next().value
-            : void 0;
-        }
-        GetMouseOverSubsectionID() {
-          return this.m_setMouseOverSubsectionID.size > 0
-            ? this.m_setMouseOverSubsectionID.values().next().value
-            : void 0;
-        }
-        GetJumpToSectionID() {
-          return this.m_jumpToSection;
-        }
-        GetJumpToSubsectionIDs() {
-          return this.m_jumpToSubsection;
-        }
-        ClearJumpToSectionID() {
-          (0, _._)(() => (this.m_jumpToSection = void 0));
-        }
-        ClearJumpToSubectionID() {
-          (0, _._)(() => (this.m_jumpToSubsection = void 0));
-        }
-        PostMessage(_) {
-          window.opener &&
-            this.m_sParentOrigin &&
-            window.opener.postMessage(_, this.m_sParentOrigin);
-        }
-        SetMouseOverSection(_, _) {
-          if (!this.BIsConnected()) return;
-          const _ = {
-            message: "PartnerEventEditor_MouseOverViewSection",
-            nSectionID: _,
-            bMouseOver: _,
-          };
-          this.PostMessage(_);
-        }
-        SetMouseOverSubsection(_, _) {
-          if (!this.BIsConnected()) return;
-          const _ = {
-            message: "PartnerEventEditor_MouseOverViewSubsection",
-            strSubsectionID: _,
-            bMouseOver: _,
-          };
-          this.PostMessage(_);
-        }
-        JumpToSection(_) {
-          if (!this.BIsConnected()) return;
-          const _ = {
-            message: "PartnerEventEditor_JumpToViewSection",
-            nSectionID: _,
-          };
-          this.PostMessage(_);
-        }
-        HandleMessage(_) {
-          if (_.origin != this.m_sParentOrigin) return;
-          const _ =
-            _.data && "object" == typeof _.data && "message" in _.data
-              ? _.data
-              : null;
-          if (_)
-            switch (_.message) {
-              case "PartnerEventEditor_Update":
-                if ("eventModelJson" in _ && _.eventModelJson) {
-                  const _ = _;
-                  (0, _._)(() => (this.m_eventModelJson = _.eventModelJson));
-                }
-                break;
-              case "PartnerEventEditor_MouseOverEditorSection":
-                if ("nSectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => {
-                    _.bMouseOver
-                      ? this.m_setMouseOverSectionID.add(_.nSectionID)
-                      : this.m_setMouseOverSectionID.delete(_.nSectionID);
-                  });
-                }
-                break;
-              case "PartnerEventEditor_MouseOverEditorSubsection":
-                if ("strSubsectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => {
-                    _.bMouseOver
-                      ? this.m_setMouseOverSubsectionID.add(_.strSubsectionID)
-                      : this.m_setMouseOverSubsectionID.delete(
-                          _.strSubsectionID,
-                        );
-                  });
-                }
-                break;
-              case "PartnerEventEditor_JumpToEditorSection":
-                if ("nSectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => (this.m_jumpToSection = _.nSectionID));
-                }
-                break;
-              case "PartnerEventEditor_JumpToEditorSubection":
-                if ("strSubsectionID" in _) {
-                  const _ = _;
-                  (0, _._)(() => {
-                    (this.m_jumpToSection = _.nSectionID),
-                      (this.m_jumpToSubsection = {
-                        nSectionID: _.nSectionID,
-                        strSubsectionID: _.strSubsectionID,
-                      });
-                  });
-                }
-            }
-        }
-      }
-      function _(_) {
-        const _ = (0, _._)(() => _.Get().GetJumpToSectionID());
-        _.useEffect(() => {
-          if (!_.Get().BIsConnected() || !_) return;
-          _(_) && _.Get().ClearJumpToSectionID();
-        }, [_, _]);
-      }
-      function _(_) {
-        const _ = (0, _._)(() => _.Get().GetJumpToSubsectionIDs());
-        _.useEffect(() => {
-          if (!_.Get().BIsConnected() || !_) return;
-          _(_.nSectionID, _.strSubsectionID) &&
-            _.Get().ClearJumpToSubectionID();
-        }, [_, _]);
-      }
-      (0, _._)([_._], _.prototype, "m_eventModelJson", void 0),
-        (0, _._)([_._], _.prototype, "m_setMouseOverSectionID", void 0),
-        (0, _._)([_._], _.prototype, "m_setMouseOverSubsectionID", void 0),
-        (0, _._)([_._], _.prototype, "m_jumpToSection", void 0),
-        (0, _._)([_._], _.prototype, "m_jumpToSubsection", void 0),
-        (0, _._)([_._], _.prototype, "HandleMessage", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -10185,6 +9822,7 @@
               optin_only:
                 Boolean(_) || Boolean(_?.jsondata?.optin_only) || void 0,
               controller_category: Number(_) || void 0,
+              bUseCreatorHomeApps: 36 == _?.GetEventType(),
             };
             if (
               ((_ = await _().get(_, {
@@ -14315,6 +13953,11 @@
                       _,
                     ],
                     queryFn: async () => {
+                      if (0 == _.length)
+                        return {
+                          rgCapsules: [],
+                          rgSolrFacetCounts: {},
+                        };
                       const _ = {
                           origin: self.origin,
                           max_results: _,
@@ -26633,6 +26276,69 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { item: _ } = _,
+          { data: __webpack_require__ } = (function (_) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              queryKey: ["GetHardwareItems", _],
+              queryFn: async () =>
+                (function (_) {
+                  _ ||
+                    (_ = (function (_) {
+                      return new (_())(
+                        async (_) => {
+                          const _ = _._.Init(_._);
+                          (0, _._)(_),
+                            __webpack_require__.Body().set_packageid(_);
+                          const _ = await _._.GetHardwareItems(_, _);
+                          return _.BSuccess()
+                            ? _.Body().toObject().details
+                            : (console.warn(
+                                `Failed to load hardware: ${_.GetEResult()}`,
+                              ),
+                              _.map(() => new Error(_.GetErrorMessage())));
+                        },
+                        {
+                          cache: !1,
+                        },
+                      );
+                    })(_));
+                  return _;
+                })(_).load(_),
+              enabled: !!_,
+            });
+          })(1 == _.GetStoreItemType() ? _.GetID() : void 0);
+        return __webpack_require__
+          ? (0, _._)(
+              "#Cart_ShippingEstimate_DeliveryDate",
+              _(__webpack_require__),
+            )
+          : null;
+      }
+      function _(_) {
+        return (0, _._)(
+          "#Hardware_ShippingEstimate_Range",
+          _.estimated_delivery_soonest_business_days,
+          _.estimated_delivery_latest_business_days,
+        );
+      }
+      let _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -26648,6 +26354,231 @@
             _ || (_._.Init(_), _(!0));
           }, [_, _]),
           _ && !__webpack_require__
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          className: _,
+          showPriorAsActive: __webpack_require__,
+          count: _,
+          selectedIndex: _,
+          fnNavigate: _,
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            "flow-children": "row",
+            className: (0, _._)(_().ProgressCtn, _),
+          },
+          Array.from({
+            length: _,
+          }).map((_, _) =>
+            _.createElement("div", {
+              key: "dot_" + _,
+              className: (0, _._)({
+                [_().ProgressDot]: !0,
+                [_().ProgressDotActive]: __webpack_require__ && _ < _,
+                [_().ProgressDotSelected]: _ == _,
+                [_().ProgressDotClickable]: !!_,
+              }),
+              onClick: _ ? () => _(_) : void 0,
+            }),
+          ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        include_assets: !0,
+        include_trailers: !0,
+        include_basic_info: !0,
+        include_tag_count: 20,
+        include_release: !0,
+        include_platforms: !0,
+        include_screenshots: !0,
+        include_reviews: !0,
+      };
+      function _(_) {
+        const {
+            appID: _,
+            focused: __webpack_require__,
+            skipMicroTrailer: _,
+            playWithBroadcastPlayer: _,
+            autoPlayCookieName: _,
+            showAOAutoPlayWarning: _,
+            showScreenshotInsteadOfMainCap: _,
+            fadeRatio: _,
+            fnPlayPause: _,
+            refTogglePlayPause: _,
+            bRequestPause: _,
+            fnComplete: _,
+          } = _,
+          [_] = (0, _._)(_, _),
+          { bIsIgnored: _ } = _(_),
+          { bIsWishlisted: _ } = _(_),
+          [_, _] = (0, _._)();
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(_().AppVideoCtn, "AppVideoCtn"),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().WishlistBadge, _ && _().Active),
+            },
+            (0, _._)("#Sale_OnWishlist"),
+          ),
+          _ &&
+            _.createElement(_._, {
+              eDisplay: _,
+              className: _().DeckVerifiedLogo,
+              storeItem: _,
+            }),
+          _.createElement(
+            "div",
+            {
+              className: _().VideoArea,
+            },
+            _.createElement(_, {
+              appID: _,
+            }),
+            _.createElement(_._, {
+              key: _,
+              storeItem: _,
+              bCurrentlyActive: __webpack_require__ && !_,
+              autoplayCheckboxPosition: "top",
+              autoPlayCookieName: _,
+              bShowAOAutoPlayWarning: _,
+              bSkipMicroTrailer: _,
+              bPlayWithBroadcastPlayer: _,
+              nFadeRatio: _,
+              showScreenshotInsteadOfMainCap: _,
+              fnPlayPause: _,
+              refTogglePlayPause: _,
+              bRequestPause: _,
+              fnComplete: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(() => _._.Get().BIsGameIgnored(_)),
+          _ = (0, _._)(),
+          _ = _.useCallback(() => {
+            _._.Get().UpdateAppIgnore(_, !_, _);
+          }, [_, _, _]);
+        return {
+          bIsIgnored: _,
+          fnUpdateIgnored: _,
+        };
+      }
+      function _(_) {
+        const { appID: _ } = _,
+          _ = (0, _._)(),
+          { bIsIgnored: _, fnUpdateIgnored: _ } = _(_);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().IgnoredCtn, _ && _().Active),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().IgnoredInfo, _ && _().Active),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().IgnoredTitle,
+              },
+              (0, _._)("#SaleTrailerCarousel_Ignored"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().IgnoredDescription,
+              },
+              (0, _._)("#SaleTrailerCarousel_IgnoredConfirmation"),
+            ),
+            _.createElement(
+              _._,
+              {
+                className: (0, _._)(_().UndoButton, _().UndoIgnoreButton),
+                onClick: _,
+              },
+              _ &&
+                _.createElement(_._, {
+                  button: _._._,
+                  type: _._.Light,
+                  size: _._.Medium,
+                }),
+              (0, _._)("#SaleTrailerCarousel_Undo"),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(() => _._.Get().BIsGameWishlisted(_)),
+          _ = (0, _._)(),
+          _ = _.useCallback(() => {
+            _._.Get().UpdateGameWishlist(_, !_, _);
+          }, [_, _, _]);
+        return {
+          bIsWishlisted: _,
+          fnUpdateWishlist: _,
+        };
+      }
+      function _(_) {
+        const _ = _._.Get().GetRecommendedTags(),
+          _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]),
+          _ = _.useMemo(() => new Map(_.map((_, _) => [_, _])), [_]);
+        return _.useMemo(
+          () =>
+            _.slice().sort((_, _) =>
+              __webpack_require__.has(_) && !__webpack_require__.has(_)
+                ? -1
+                : !__webpack_require__.has(_) && __webpack_require__.has(_)
+                  ? 1
+                  : __webpack_require__.has(_)
+                    ? __webpack_require__.get(_) - __webpack_require__.get(_)
+                    : _.get(_) - _.get(_),
+            ),
+          [_, _, _],
         );
       }
     },

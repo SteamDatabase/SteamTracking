@@ -188,21 +188,54 @@
         "duration-app-launch": "800ms",
         SuppressScrollOnBody: "tmxkKoAj-IgGLmNEnizdB",
         TopDestinations: "_1vOm3pf-0J2OtSr27xPgBP",
+        SidebySideGrid: "_2pVSp6FyCZoOyOO0YwF1oW",
+        SidebySideLeft: "_17xB0f6_N3ZM5j2UZd1sXt",
+        SidebySideRight: "U8Q2JM8gGTmUAXLVVAYlD",
         BrowseLinkSection: "_3DYXcTryqomaHXCoQolTr_",
         BrowseLinkMargin: "_131vXkv-WcdtrRZL6boE2r",
+        BrowseLinkColumn: "_2IqRL8KcprlBPhrtT1Y8bL",
+        MobileNotVisible: "_3ndoxZabNTcJ8NN50nQ4BM",
+        BrowseTopDestContainer: "_2HcSSRyk_Jzd3Iq7xSC6En",
         BrowseContentGrid: "_3b26-ybbQJNqGukiWkIUp8",
         BrowseLinkGridLarge: "JWPtoi9esADBpUUkODq1z",
+        BrowseLinkStoreLinks: "_1NEAjFPoWfV8DsCKQldiv9",
         BrowseLinkGridSmall: "_2SVHFh60yRjQbYRg6t2mcK",
-        BrowseLinkColumn: "_2IqRL8KcprlBPhrtT1Y8bL",
-        MobileVisible: "_2a1S7pgUtett-4z7r07qRb",
         BrowseLinkGrid: "-bDCBiZsIWB-_6IzGxbhz",
         BrowseLinkButton: "_15eaL848WovXjJ0POHaD9D",
         Label: "_3W0fAmrZB7mfUJZ8QRpquy",
         ButtonLabel: "_3JmGSFfarJIfLqzni43JFQ",
         SubLabel: "_15LI4ya5Dm0JI0f0GAMvaW",
+        ButtonDescription: "_1O0H6NQY1-2DaXv-n_JyEm",
+        StoreLinkWithBottomBorder: "msDiiFvZmOWUVrazuOR7y",
+        StoreLinkWithPadding: "_4bi1iROLdQ66C6or_iLnT",
+        FirstLink: "ZHP-k9mPTkHfNP0SUx2js",
+        LastLink: "_2LnvhZWuE-kK8DofxiNupC",
         CapsuleGrid: "_2lLDOXJibKONAZT_v5JYdM",
         CapsuleRow: "fYUHRTrzGItaGhMLuUZ3W",
         BrowseButtonGrid: "Jj8HIlIT-yPI1DfChaARk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        storeMenuResponsiveModeWidth: "730px",
+        "duration-app-launch": "800ms",
+        SuppressScrollOnBody: "N96uqBvXFjiVSjfFxbWZf",
+        TopDestinations: "_2EiBN5hdmkWG6sxpKPI7h3",
+        BrowseLinkSection: "_3U3wemOcIDtrq9u0OXZK9_",
+        BrowseLinkMargin: "CVJ9YmKCl765zaUkK70rp",
+        BrowseContentGrid: "b9zZcpB33Xtueo9DrlQUu",
+        BrowseLinkGridLarge: "_2Y2XG62Y9H3lwtNEMo7_Xc",
+        BrowseLinkGridSmall: "_3u_CM80jtyanWpFn6InTD4",
+        BrowseLinkColumn: "_10JXIJf9oWVtqdLy_DgCTS",
+        MobileVisible: "_3a_Rx4hZXRE7PwvkxIwgoc",
+        BrowseLinkGrid: "ZASQBzr8famOwE57bX0Yx",
+        BrowseLinkButton: "l-PuR7PfJfVDEMzpGW78f",
+        Label: "_1ELX9bTITFJpYsMBCh_y7F",
+        ButtonLabel: "NdoJh7Azzkke9fp3Hbp5W",
+        SubLabel: "_1QASDCrIOh5w3XlgdJQWOc",
+        CapsuleGrid: "_1BL8JffKEwSMn-Zz6nDwMz",
+        CapsuleRow: "_2V-CuAswjlcKsyfPQ1-v3",
+        BrowseButtonGrid: "_2vZbFQSo3_g5s8Susyo1Wu",
       };
     },
     chunkid: (module) => {
@@ -276,6 +309,7 @@
         Description: "_1Wz57jagOh6dxI7GUA5igl",
         ButtonText: "_1fyDZMVLKzvHIle_9i4Lpq",
         _: "_1UYj3bhmlk9olzBLJiCHmC",
+        RecommendationLinkColumn: "_3IuHjKAi2Q9E5QyD_-gc9w",
       };
     },
     chunkid: (module) => {
@@ -345,7 +379,7 @@
         ButtonFocus: "_1ixhfnnWgdzGwSwNhUAitD",
         FlyoutButton: "_3wlHWKFbgRAZPFtWEr65YT",
         ItemCount: "BReXgOZvJY6u4htWQn1aF",
-        "safari-only": "_2OjfY6UbHsmJizW2Ky_2aL",
+        safarionly: "_25YyJKHEEXpSIkVLTEJuKP",
         WishlistButton: "_1tJxbjNzcWSdG2hBsklCTN",
         CartButton: "qqQDu9j0LIoK-w06-JxB5",
         SoloMenuButton: "_3qY2sJFFtNsrx_rBDIT7l1",
@@ -866,6 +900,7 @@
         LegionGoScreenClick: "mX0CyLG2ckFSmF-E26ZSQ",
         BatteryIcon: "_3xy45At7o_lkxcLoSTF6e0",
         LegacySizing: "_35pkQMXbFQAF2v1VrIAsF7",
+        FlipInRTL: "_1CpOAgPPD7f_fGI4HaYX6C",
         ScootCursor: "_3huKxhSD3aWINLG-yOuQ0O",
       };
     },
@@ -6792,6 +6827,11 @@
                 fields: {
                   sale_tagid: {
                     _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  creator_clan_account_id: {
+                    _: 2,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -30554,6 +30594,12 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  must_purchase_as_set: {
+                    _: 48,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -39069,7 +39115,10 @@
 	"topnewreleases": 100750,
 	"newreleases": 100751,
 	"salebrowsetrendingfree": 100752,
-	"trendingfree": 100753
+	"trendingfree": 100753,
+	"reactroot": 100754,
+	"bundlelist": 100755,
+	"verifiedprogram": 100756
 }`);
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
@@ -52391,24 +52440,17 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = _.createContext({}),
+        _ = () => _.useContext(_);
+      function _(_, _) {
+        return _()[_] ?? _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
         _: () => _,
@@ -52442,43 +52484,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = _.createContext({}),
-        _ = () => _.useContext(_);
-      function _(_, _) {
-        return _()[_] ?? _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const _ = _("ToggleControl", _);
-        return _.createElement(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().Toggle, _ && _().Disabled),
-            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
-          },
-          _.createElement("div", {
-            className: _().ToggleRail,
-          }),
-          _.createElement("div", {
-            className: (0, _._)(
-              _().ToggleRail,
-              _().Highlight,
-              _ ? _()._ : _().Off,
-            ),
-          }),
-          _.createElement("div", {
-            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
-          }),
-        );
-      }
       function _(_) {
         return _.forwardRef(function (_, _) {
           return _.createElement(_._, {
@@ -52532,7 +52540,7 @@
           (_("DialogTwoThirdColLayout _DialogColLayout"),
           (0, _._)("DialogColumn _DialogLayout"));
       function _(_) {
-        const _ = _("Content", _);
+        const _ = (0, _._)("Content", _);
         return _.createElement(_, {
           ..._,
         });
@@ -52623,7 +52631,7 @@
       }
       (0, _._)([_._], _.prototype, "OnSubmit", null);
       const _ = _.forwardRef(function (_, _) {
-          const _ = _(),
+          const _ = (0, _._)(),
             { svgicon: _, ..._ } = _,
             _ = (0, _._)(
               _.className,
@@ -52988,7 +52996,7 @@
         }
       }
       const _ = _.forwardRef(function (_, _) {
-        const _ = _("ToggleField", _);
+        const _ = (0, _._)("ToggleField", _);
         return _.createElement(_, {
           ref: _,
           ..._,
@@ -53049,7 +53057,7 @@
                     {
                       className: "DialogToggleField_NewUIContainer",
                     },
-                    _.createElement(_, {
+                    _.createElement(_._, {
                       onChange: this.OnNewUIToggle,
                       value: this.checked,
                     }),
@@ -53092,7 +53100,540 @@
       }
       (0, _._)([_._], _.prototype, "OnOffKeyDown", null),
         (0, _._)([_._], _.prototype, "OnNewUIToggle", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return "object" == typeof _ && "data" in _;
+      }
+      function _(_) {
+        return "object" == typeof _ && "bIsSeparator" in _;
+      }
+      function _(_) {
+        return "object" == typeof _ && "options" in _;
+      }
+      function _(_, _) {
+        if (_ === _) return !0;
+        if (!Array.isArray(_) || !Array.isArray(_)) return !1;
+        if (_.length != _.length) return !1;
+        for (let _ = 0; _ < _.length; _++) if (!_(_[_], _[_])) return !1;
+        return !0;
+      }
+      function _(_, _) {
+        return null == _ || null == _
+          ? _ == _
+          : !(!_(_) || !_(_)) ||
+              (!_(_) &&
+                !_(_) &&
+                _.label === _.label &&
+                  _.tooltip === _.tooltip &&
+                    _(_) == _(_) &&
+                      !(_(_) && _(_) && !_(_.options, _.options)) &&
+                (!_(_) || !_(_) || _.data === _.data));
+      }
+      function _(_, _) {
+        if (null != _)
+          for (let _ = 0; _ < _.length; _++) {
+            const _ = _[_];
+            if (_(_) && _.data === _) return _;
+            if (_(_)) {
+              const _ = _(_.options, _);
+              if (null != _) return _;
+            }
+          }
+      }
+      function _(_) {
+        const _ = (0, _._)("DropDownField", _);
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        const {
+          label: _,
+          tooltip: __webpack_require__,
+          strClassName: _,
+          dropDownControlRef: _,
+          ..._
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            label: _,
+            tooltip: __webpack_require__,
+            className: _,
+          },
+          _.createElement(_, {
+            menuLabel: _,
+            ..._,
+            ref: _,
+          }),
+        );
+      }
+      const _ = _.forwardRef(function (_, _) {
+        return _.createElement(
+          _._,
+          {
+            _: _._,
+            focusable: _.focusable,
+            className: (0, _._)(
+              _.className,
+              "DialogDropDown",
+              "_DialogInputContainer",
+              {
+                Active: _.opened,
+                Disabled: _.disabled,
+              },
+            ),
+            tabIndex: _.tabIndex,
+            onClick: _.onClick,
+            onKeyDown: _.onKeyDown,
+            disabled: _.disabled,
+            type: "button",
+            ref: _,
+            noFocusRing: _.noFocusRing,
+            role: _.role ?? "combobox",
+            "aria-controls": _["aria-controls"],
+            "aria-expanded": _.opened,
+            "aria-label": _["aria-label"],
+            "aria-labelledby": _["aria-labelledby"],
+            "aria-describedby": _["aria-describedby"],
+          },
+          _.createElement(
+            "div",
+            {
+              className: "DialogDropDown_CurrentDisplay",
+            },
+            _.children,
+          ),
+          !_.disabled &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.arrowClassName, "DialogDropDown_Arrow"),
+              },
+              _.createElement(_.GB9, {
+                role: "presentation",
+              }),
+            ),
+        );
+      });
+      class _ extends _.Component {
+        static contextType = _._;
+        m_elInput;
+        m_iMenuInstance;
+        constructor(_) {
+          super(_),
+            (this.state = {
+              value: _(_.rgOptions, _.selectedOption),
+              bOpened: !1,
+            });
+        }
+        SetSelectedOption(_) {
+          if (this.props.controlled) return;
+          const _ = _(this.props.rgOptions, _);
+          _(_, this.value) ||
+            this.setState({
+              value: _,
+            });
+        }
+        get value() {
+          return this.props.controlled
+            ? _(this.props.rgOptions, this.props.selectedOption)
+            : this.state.value;
+        }
+        shouldComponentUpdate(_, _, _) {
+          if (_.selectedOption !== this.props.selectedOption) return !0;
+          if (_.disabled != this.props.disabled) return !0;
+          if (_.bOpened !== this.state.bOpened) return !0;
+          if (!_(this.props.rgOptions, _.rgOptions)) return !0;
+          if (!_(_.value, this.value)) return !0;
+          let _ = ["selectedOption", "tabIndex", "onChange", "strDefaultLabel"];
+          for (let _ of _) if (_[_] !== this.props[_]) return !0;
+          return !1;
+        }
+        componentDidUpdate(_, _) {
+          (0, _._)(
+            this.props.controlled === _.controlled,
+            '"controlled" prop should never change after mount',
+          );
+          const _ = !_(_.rgOptions, this.props.rgOptions),
+            _ = _.selectedOption !== this.props.selectedOption,
+            _ = this.value !== _.value;
+          !this.props.controlled &&
+            (_ || _ || _) &&
+            (_ || null == this.value
+              ? this.SetSelectedOption(this.props.selectedOption)
+              : this.SetSelectedOption(this.value.data)),
+            (_ || _) &&
+              (this.state.bOpened
+                ? (this.m_iMenuInstance?.SetOnHideCallback(void 0),
+                  this.m_iMenuInstance?.Hide(),
+                  (this.m_iMenuInstance = void 0),
+                  this.BuildMenu())
+                : this.m_iMenuInstance &&
+                  (this.m_iMenuInstance.SetOnHideCallback(void 0),
+                  (this.m_iMenuInstance = void 0)));
+        }
+        OnInputRef(_) {
+          _ && (this.m_elInput = _);
+        }
+        get element() {
+          return this.m_elInput;
+        }
+        ToggleMenu() {
+          if (this.state.bOpened) this.HideMenu();
+          else {
+            if (
+              this.props.onMenuWillOpen &&
+              0 == this.props.onMenuWillOpen(this.ShowMenu)
+            )
+              return;
+            this.ShowMenu();
+          }
+        }
+        OnValueSelected(_, _) {
+          this.HideMenu(),
+            this.setState({
+              value: _,
+            }),
+            this.props.onChange && this.props.onChange(_, this, _);
+        }
+        BuildMenu() {
+          let _ = "DialogMenuPosition";
+          this.props.strDropDownClassName &&
+            (_ += " " + this.props.strDropDownClassName);
+          let _ = {
+              bOverlapHorizontal: !0,
+              bMatchWidth: this.props.bMatchWidth ?? !0,
+              bFitToWindow: !0,
+              strClassName: _,
+              bDisableMouseOverlay: this.props.bDisableMouseOverlay,
+              ...this.props.contextMenuPositionOptions,
+            },
+            _ = this.props.contextMenuPositionOptions?.onCancel;
+          (this.m_iMenuInstance = (0, _._)(
+            _.createElement(_, {
+              rgOptions: this.props.rgOptions,
+              onValueSelected: this.OnValueSelected,
+              onCancel: _,
+              selectedValue: this.value?.data,
+              strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
+              strDropDownItemClassName: this.props.strDropDownItemClassName,
+              _: `dropdownmenu_${this.m_iMenuInstance?.key}`,
+            }),
+            this.m_elInput,
+            _,
+          )),
+            this.m_iMenuInstance.SetLabel(
+              this.props.menuLabel ??
+                ("string" == typeof this.props.strDefaultLabel &&
+                  this.props.strDefaultLabel),
+            ),
+            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
+        }
+        ShowMenu() {
+          this.m_iMenuInstance ? this.m_iMenuInstance.Show() : this.BuildMenu(),
+            this.props.onMenuOpened && this.props.onMenuOpened(),
+            this.setState({
+              bOpened: !0,
+            });
+        }
+        HideMenu() {
+          this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
+            this.setState(
+              {
+                bOpened: !1,
+              },
+              () => this.m_elInput.focus(),
+            );
+        }
+        OnKeyDown(_) {
+          _(_, this.props.rgOptions.filter(_), this.value?.data, (_) =>
+            this.OnValueSelected(void 0, _),
+          );
+        }
+        render() {
+          let _ = this.value?.label ?? this.props.strDefaultLabel;
+          null != this.props.renderButtonValue &&
+            (_ = this.props.renderButtonValue(_));
+          const _ = this.props.focusable ?? !0,
+            _ =
+              this.props.renderButton ||
+              this.context.DropDownControlButton ||
+              _;
+          return _.createElement(
+            _,
+            {
+              focusable: _,
+              disabled: this.props.disabled ?? !1,
+              opened: this.state.bOpened,
+              onClick: this.props.disabled ? void 0 : this.ToggleMenu,
+              onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
+              tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
+              ref: this.OnInputRef,
+              className: this.props.strDropDownButtonClassName,
+              arrowClassName: this.props.arrowClassName,
+              role: "combobox",
+              "aria-controls": this.m_iMenuInstance
+                ? `dropdownmenu_${this.m_iMenuInstance.key}`
+                : void 0,
+              "aria-expanded": this.state.bOpened,
+              "aria-label": this.props["aria-label"],
+              "aria-labelledby": this.props["aria-labelledby"],
+              "aria-describedby": this.props["aria-describedby"],
+            },
+            _,
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnInputRef", null),
+        (0, _._)([_._], _.prototype, "ToggleMenu", null),
+        (0, _._)([_._], _.prototype, "OnValueSelected", null),
+        (0, _._)([_._], _.prototype, "ShowMenu", null),
+        (0, _._)([_._], _.prototype, "HideMenu", null),
+        (0, _._)([_._], _.prototype, "OnKeyDown", null);
+      const _ = _.createContext(null);
+      function _(_) {
+        const _ = (0, _._)("DropDownMenu", _);
+        return _.createElement(
+          _.Provider,
+          {
+            value: {},
+          },
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
+      function _(_, _, _, _) {
+        let _;
+        if ("ArrowDown" === _.key) {
+          _ = (_.findIndex((_) => _.data === _) + 1) % _.length;
+        } else if ("ArrowUp" === _.key) {
+          const _ = _.findIndex((_) => _.data === _);
+          _ = _ <= 0 ? _.length - 1 : _ - 1;
+        }
+        void 0 !== _ && (_(_[_]), _.preventDefault());
+      }
+      function _(_) {
+        const {
+            rgOptions: _,
+            strDropDownItemClassName: __webpack_require__,
+            onValueSelected: _,
+            selectedValue: _,
+          } = _,
+          [_, _] = _.useState(_),
+          _ = _.useMemo(() => _.filter(_), [_]),
+          _ = _.useCallback(
+            (_) => {
+              _(_, _, _, (_) => _(_.data));
+            },
+            [_, _],
+          );
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              _().DialogDropDownMenu,
+              "_DialogInputContainer",
+              _.strDropDownMenuCtnClass,
+            ),
+            onKeyDown: _,
+          },
+          _.createElement(_, {
+            rgOptions: _,
+            strDropDownItemClassName: __webpack_require__,
+            onValueSelected: _,
+            activeValue: _,
+            setActiveValue: _,
+          }),
+        );
+      }
+      function _(_) {
+        const { rgOptions: _, ...__webpack_require__ } = _;
+        return _.map((_, _) =>
+          _(_)
+            ? _.createElement("hr", {
+                key: _,
+                className: (0, _._)(
+                  _().DialogDropDownMenu_Item,
+                  _().DialogDropDownMenu_Separator,
+                ),
+              })
+            : _(_)
+              ? _.createElement(_, {
+                  key: _,
+                  ...__webpack_require__,
+                  rgOptions: _.options,
+                })
+              : _.createElement(_, {
+                  key: _,
+                  ...__webpack_require__,
+                  option: _,
+                }),
+        );
+      }
+      function _(_) {
+        const {
+            option: _,
+            strDropDownItemClassName: __webpack_require__,
+            onValueSelected: _,
+            activeValue: _,
+            setActiveValue: _,
+          } = _,
+          _ = _.useCallback((_) => _ && _.focus(), []),
+          _ = _.useCallback(() => {
+            _(_.data);
+          }, [_, _]),
+          _ = _.data === _;
+        return _.createElement(
+          "button",
+          {
+            type: "button",
+            className: (0, _._)(
+              _().DialogDropDownMenu_Item,
+              __webpack_require__,
+              _.strOptionClass,
+              _ && "ContextMenuAutoFocus",
+            ),
+            onClick: (_) => _(_, _),
+            ref: _ ? _ : void 0,
+            onMouseEnter: _,
+            role: "option",
+            "aria-selected": _,
+          },
+          Boolean(_.tooltip)
+            ? _.createElement(
+                _._,
+                {
+                  toolTipContent: _.tooltip,
+                  bTopmost: !0,
+                  className: "TooltipContainer",
+                },
+                _.label,
+              )
+            : _.createElement("div", null, _.label),
+        );
+      }
+      class _ extends _.Component {
+        state = {
+          rgOptions: void 0,
+        };
+        async OnMenuOpened() {
+          if (!this.state.rgOptions) {
+            let _ = await this.props.fnLoadOptions();
+            this.setState({
+              rgOptions: _,
+            });
+          }
+        }
+        render() {
+          const {
+            fnLoadOptions: _,
+            strInitialDisplay: _,
+            initialValue: __webpack_require__,
+            ..._
+          } = this.props;
+          let { rgOptions: _ } = this.state;
+          return (
+            void 0 === _ &&
+              (_ || __webpack_require__
+                ? ((_ = [
+                    {
+                      label: _,
+                      data: __webpack_require__,
+                    },
+                  ]),
+                  (_.selectedOption = __webpack_require__))
+                : (_ = [])),
+            _.createElement(_, {
+              ..._,
+              rgOptions: _,
+              onMenuOpened: this.OnMenuOpened,
+            })
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnMenuOpened", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _,
+        _: () => _._,
+        _: () => _,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _._,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -53135,8 +53676,10 @@
               this.m_component.setState(this.m_setStateOnComplete);
         }
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const _ = _("InputElement", _._);
+        const _ = (0, _._)("InputElement", _._);
         return _.createElement(_, {
           ..._,
           ref: _,
@@ -53335,7 +53878,7 @@
                     className: "displayRow",
                   },
                   _.createElement(
-                    _,
+                    _._,
                     {
                       className: "DialogInput_CopyAction Primary",
                       onClick: this.OnCopyClick,
@@ -53582,7 +54125,7 @@
       const _ = (_, _) =>
           "" + (null != _ ? Number.parseFloat(_.toFixed(3)) : null) + (_ ?? ""),
         _ = (_) => {
-          const _ = _("SliderField", _);
+          const _ = (0, _._)("SliderField", _);
           return _.createElement(_, {
             ..._,
           });
@@ -53675,10 +54218,10 @@
         }
         AdjustSliderForClientX(_, _) {
           let _ =
-            ((_ - this.m_rectSlider.left) /
-              (this.m_rectSlider.right - this.m_rectSlider.left)) *
-              (this.props.max - this.props.min) +
-            this.props.min;
+            (_ - this.m_rectSlider.left) /
+            (this.m_rectSlider.right - this.m_rectSlider.left);
+          this.m_elSlider?.matches(":dir(rtl)") && (_ = 1 - _);
+          let _ = _ * (this.props.max - this.props.min) + this.props.min;
           _ = Math.floor(_ + 0.5);
           const _ = this.ClampValue(_);
           _ != this.props.value &&
@@ -53705,7 +54248,10 @@
               (100 * (this.props.value - this.props.min)) /
                 (this.props.max - this.props.min) +
               "%";
-            (_.width = _), (_.left = _);
+            (_.width = _),
+              (_ = {
+                "--position": _,
+              });
           }
           const { label: _, description: _, tooltip: _, ..._ } = this.props,
             _ = this.props.renderValue ?? _;
@@ -53772,6 +54318,7 @@
         (0, _._)([_._], _.prototype, "OnTouchMove", null),
         (0, _._)([_._], _.prototype, "OnTouchEnd", null),
         (0, _._)([_._], _.prototype, "OnKeyDown", null);
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.createContext({
@@ -53848,463 +54395,7 @@
           __webpack_require__,
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        return "object" == typeof _ && "data" in _;
-      }
-      function _(_) {
-        return "object" == typeof _ && "bIsSeparator" in _;
-      }
-      function _(_) {
-        return "object" == typeof _ && "options" in _;
-      }
-      function _(_, _) {
-        if (_ === _) return !0;
-        if (!Array.isArray(_) || !Array.isArray(_)) return !1;
-        if (_.length != _.length) return !1;
-        for (let _ = 0; _ < _.length; _++) if (!_(_[_], _[_])) return !1;
-        return !0;
-      }
-      function _(_, _) {
-        return null == _ || null == _
-          ? _ == _
-          : !(!_(_) || !_(_)) ||
-              (!_(_) &&
-                !_(_) &&
-                _.label === _.label &&
-                  _.tooltip === _.tooltip &&
-                    _(_) == _(_) &&
-                      !(_(_) && _(_) && !_(_.options, _.options)) &&
-                (!_(_) || !_(_) || _.data === _.data));
-      }
-      function _(_, _) {
-        if (null != _)
-          for (let _ = 0; _ < _.length; _++) {
-            const _ = _[_];
-            if (_(_) && _.data === _) return _;
-            if (_(_)) {
-              const _ = _(_.options, _);
-              if (null != _) return _;
-            }
-          }
-      }
-      function _(_) {
-        const _ = _("DropDownField", _);
-        return _.createElement(_, {
-          ..._,
-        });
-      }
-      function _(_) {
-        const {
-          label: _,
-          tooltip: __webpack_require__,
-          strClassName: _,
-          dropDownControlRef: _,
-          ..._
-        } = _;
-        return _.createElement(
-          _,
-          {
-            label: _,
-            tooltip: __webpack_require__,
-            className: _,
-          },
-          _.createElement(_, {
-            menuLabel: _,
-            ..._,
-            ref: _,
-          }),
-        );
-      }
-      const _ = _.forwardRef(function (_, _) {
-        return _.createElement(
-          _._,
-          {
-            _: _._,
-            focusable: _.focusable,
-            className: (0, _._)(
-              _.className,
-              "DialogDropDown",
-              "_DialogInputContainer",
-              {
-                Active: _.opened,
-                Disabled: _.disabled,
-              },
-            ),
-            tabIndex: _.tabIndex,
-            onClick: _.onClick,
-            onKeyDown: _.onKeyDown,
-            disabled: _.disabled,
-            type: "button",
-            ref: _,
-            noFocusRing: _.noFocusRing,
-            role: _.role ?? "combobox",
-            "aria-controls": _["aria-controls"],
-            "aria-expanded": _.opened,
-            "aria-label": _["aria-label"],
-            "aria-labelledby": _["aria-labelledby"],
-            "aria-describedby": _["aria-describedby"],
-          },
-          _.createElement(
-            "div",
-            {
-              className: "DialogDropDown_CurrentDisplay",
-            },
-            _.children,
-          ),
-          !_.disabled &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.arrowClassName, "DialogDropDown_Arrow"),
-              },
-              _.createElement(_.GB9, {
-                role: "presentation",
-              }),
-            ),
-        );
-      });
-      class _ extends _.Component {
-        static contextType = _;
-        m_elInput;
-        m_iMenuInstance;
-        constructor(_) {
-          super(_),
-            (this.state = {
-              value: _(_.rgOptions, _.selectedOption),
-              bOpened: !1,
-            });
-        }
-        SetSelectedOption(_) {
-          if (this.props.controlled) return;
-          const _ = _(this.props.rgOptions, _);
-          _(_, this.value) ||
-            this.setState({
-              value: _,
-            });
-        }
-        get value() {
-          return this.props.controlled
-            ? _(this.props.rgOptions, this.props.selectedOption)
-            : this.state.value;
-        }
-        shouldComponentUpdate(_, _, _) {
-          if (_.selectedOption !== this.props.selectedOption) return !0;
-          if (_.disabled != this.props.disabled) return !0;
-          if (_.bOpened !== this.state.bOpened) return !0;
-          if (!_(this.props.rgOptions, _.rgOptions)) return !0;
-          if (!_(_.value, this.value)) return !0;
-          let _ = ["selectedOption", "tabIndex", "onChange", "strDefaultLabel"];
-          for (let _ of _) if (_[_] !== this.props[_]) return !0;
-          return !1;
-        }
-        componentDidUpdate(_, _) {
-          (0, _._)(
-            this.props.controlled === _.controlled,
-            '"controlled" prop should never change after mount',
-          );
-          const _ = !_(_.rgOptions, this.props.rgOptions),
-            _ = _.selectedOption !== this.props.selectedOption,
-            _ = this.value !== _.value;
-          !this.props.controlled &&
-            (_ || _ || _) &&
-            (_ || null == this.value
-              ? this.SetSelectedOption(this.props.selectedOption)
-              : this.SetSelectedOption(this.value.data)),
-            (_ || _) &&
-              (this.state.bOpened
-                ? (this.m_iMenuInstance?.SetOnHideCallback(void 0),
-                  this.m_iMenuInstance?.Hide(),
-                  (this.m_iMenuInstance = void 0),
-                  this.BuildMenu())
-                : this.m_iMenuInstance &&
-                  (this.m_iMenuInstance.SetOnHideCallback(void 0),
-                  (this.m_iMenuInstance = void 0)));
-        }
-        OnInputRef(_) {
-          _ && (this.m_elInput = _);
-        }
-        get element() {
-          return this.m_elInput;
-        }
-        ToggleMenu() {
-          if (this.state.bOpened) this.HideMenu();
-          else {
-            if (
-              this.props.onMenuWillOpen &&
-              0 == this.props.onMenuWillOpen(this.ShowMenu)
-            )
-              return;
-            this.ShowMenu();
-          }
-        }
-        OnValueSelected(_, _) {
-          this.HideMenu(),
-            this.setState({
-              value: _,
-            }),
-            this.props.onChange && this.props.onChange(_, this, _);
-        }
-        BuildMenu() {
-          let _ = "DialogMenuPosition";
-          this.props.strDropDownClassName &&
-            (_ += " " + this.props.strDropDownClassName);
-          let _ = {
-              bOverlapHorizontal: !0,
-              bMatchWidth: this.props.bMatchWidth ?? !0,
-              bFitToWindow: !0,
-              strClassName: _,
-              bDisableMouseOverlay: this.props.bDisableMouseOverlay,
-              ...this.props.contextMenuPositionOptions,
-            },
-            _ = this.props.contextMenuPositionOptions?.onCancel;
-          (this.m_iMenuInstance = (0, _._)(
-            _.createElement(_, {
-              rgOptions: this.props.rgOptions,
-              onValueSelected: this.OnValueSelected,
-              onCancel: _,
-              selectedValue: this.value?.data,
-              strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
-              strDropDownItemClassName: this.props.strDropDownItemClassName,
-              _: `dropdownmenu_${this.m_iMenuInstance?.key}`,
-            }),
-            this.m_elInput,
-            _,
-          )),
-            this.m_iMenuInstance.SetLabel(
-              this.props.menuLabel ??
-                ("string" == typeof this.props.strDefaultLabel &&
-                  this.props.strDefaultLabel),
-            ),
-            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
-        }
-        ShowMenu() {
-          this.m_iMenuInstance ? this.m_iMenuInstance.Show() : this.BuildMenu(),
-            this.props.onMenuOpened && this.props.onMenuOpened(),
-            this.setState({
-              bOpened: !0,
-            });
-        }
-        HideMenu() {
-          this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
-            this.setState(
-              {
-                bOpened: !1,
-              },
-              () => this.m_elInput.focus(),
-            );
-        }
-        OnKeyDown(_) {
-          _(_, this.props.rgOptions.filter(_), this.value?.data, (_) =>
-            this.OnValueSelected(void 0, _),
-          );
-        }
-        render() {
-          let _ = this.value?.label ?? this.props.strDefaultLabel;
-          null != this.props.renderButtonValue &&
-            (_ = this.props.renderButtonValue(_));
-          const _ = this.props.focusable ?? !0,
-            _ =
-              this.props.renderButton ||
-              this.context.DropDownControlButton ||
-              _;
-          return _.createElement(
-            _,
-            {
-              focusable: _,
-              disabled: this.props.disabled ?? !1,
-              opened: this.state.bOpened,
-              onClick: this.props.disabled ? void 0 : this.ToggleMenu,
-              onKeyDown: this.props.disabled ? void 0 : this.OnKeyDown,
-              tabIndex: this.props.tabIndex ?? (_ ? 0 : void 0),
-              ref: this.OnInputRef,
-              className: this.props.strDropDownButtonClassName,
-              arrowClassName: this.props.arrowClassName,
-              role: "combobox",
-              "aria-controls": this.m_iMenuInstance
-                ? `dropdownmenu_${this.m_iMenuInstance.key}`
-                : void 0,
-              "aria-expanded": this.state.bOpened,
-              "aria-label": this.props["aria-label"],
-              "aria-labelledby": this.props["aria-labelledby"],
-              "aria-describedby": this.props["aria-describedby"],
-            },
-            _,
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnInputRef", null),
-        (0, _._)([_._], _.prototype, "ToggleMenu", null),
-        (0, _._)([_._], _.prototype, "OnValueSelected", null),
-        (0, _._)([_._], _.prototype, "ShowMenu", null),
-        (0, _._)([_._], _.prototype, "HideMenu", null),
-        (0, _._)([_._], _.prototype, "OnKeyDown", null);
-      const _ = _.createContext(null);
-      function _(_) {
-        const _ = _("DropDownMenu", _);
-        return _.createElement(
-          _.Provider,
-          {
-            value: {},
-          },
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
-      function _(_, _, _, _) {
-        let _;
-        if ("ArrowDown" === _.key) {
-          _ = (_.findIndex((_) => _.data === _) + 1) % _.length;
-        } else if ("ArrowUp" === _.key) {
-          const _ = _.findIndex((_) => _.data === _);
-          _ = _ <= 0 ? _.length - 1 : _ - 1;
-        }
-        void 0 !== _ && (_(_[_]), _.preventDefault());
-      }
-      function _(_) {
-        const {
-            rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
-            onValueSelected: _,
-            selectedValue: _,
-          } = _,
-          [_, _] = _.useState(_),
-          _ = _.useMemo(() => _.filter(_), [_]),
-          _ = _.useCallback(
-            (_) => {
-              _(_, _, _, (_) => _(_.data));
-            },
-            [_, _],
-          );
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().DialogDropDownMenu,
-              "_DialogInputContainer",
-              _.strDropDownMenuCtnClass,
-            ),
-            onKeyDown: _,
-          },
-          _.createElement(_, {
-            rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
-            onValueSelected: _,
-            activeValue: _,
-            setActiveValue: _,
-          }),
-        );
-      }
-      function _(_) {
-        const { rgOptions: _, ...__webpack_require__ } = _;
-        return _.map((_, _) =>
-          _(_)
-            ? _.createElement("hr", {
-                key: _,
-                className: (0, _._)(
-                  _().DialogDropDownMenu_Item,
-                  _().DialogDropDownMenu_Separator,
-                ),
-              })
-            : _(_)
-              ? _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  rgOptions: _.options,
-                })
-              : _.createElement(_, {
-                  key: _,
-                  ...__webpack_require__,
-                  option: _,
-                }),
-        );
-      }
-      function _(_) {
-        const {
-            option: _,
-            strDropDownItemClassName: __webpack_require__,
-            onValueSelected: _,
-            activeValue: _,
-            setActiveValue: _,
-          } = _,
-          _ = _.useCallback((_) => _ && _.focus(), []),
-          _ = _.useCallback(() => {
-            _(_.data);
-          }, [_, _]),
-          _ = _.data === _;
-        return _.createElement(
-          "button",
-          {
-            type: "button",
-            className: (0, _._)(
-              _().DialogDropDownMenu_Item,
-              __webpack_require__,
-              _.strOptionClass,
-              _ && "ContextMenuAutoFocus",
-            ),
-            onClick: (_) => _(_, _),
-            ref: _ ? _ : void 0,
-            onMouseEnter: _,
-            role: "option",
-            "aria-selected": _,
-          },
-          Boolean(_.tooltip)
-            ? _.createElement(
-                _._,
-                {
-                  toolTipContent: _.tooltip,
-                  bTopmost: !0,
-                  className: "TooltipContainer",
-                },
-                _.label,
-              )
-            : _.createElement("div", null, _.label),
-        );
-      }
-      class _ extends _.Component {
-        state = {
-          rgOptions: void 0,
-        };
-        async OnMenuOpened() {
-          if (!this.state.rgOptions) {
-            let _ = await this.props.fnLoadOptions();
-            this.setState({
-              rgOptions: _,
-            });
-          }
-        }
-        render() {
-          const {
-            fnLoadOptions: _,
-            strInitialDisplay: _,
-            initialValue: __webpack_require__,
-            ..._
-          } = this.props;
-          let { rgOptions: _ } = this.state;
-          return (
-            void 0 === _ &&
-              (_ || __webpack_require__
-                ? ((_ = [
-                    {
-                      label: _,
-                      data: __webpack_require__,
-                    },
-                  ]),
-                  (_.selectedOption = __webpack_require__))
-                : (_ = [])),
-            _.createElement(_, {
-              ..._,
-              rgOptions: _,
-              onMenuOpened: this.OnMenuOpened,
-            })
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnMenuOpened", null);
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -55070,7 +55161,7 @@
           _ = _.useContext(_),
           _ = __webpack_require__?.padding ?? "standard";
         return _.createElement(
-          _,
+          _._,
           {
             style: _,
             className: (0, _._)(
@@ -55085,7 +55176,7 @@
           },
           __webpack_require__?.header,
           !__webpack_require__?.hideTitle &&
-            _.createElement(_, null, __webpack_require__?.title),
+            _.createElement(_._, null, __webpack_require__?.title),
           _.createElement(_._, null, __webpack_require__?.content),
         );
       });
@@ -55723,7 +55814,7 @@
                 _
               );
             })(__webpack_require__, _, _);
-          return _.createElement(_, {
+          return _.createElement(_._, {
             ..._,
             ..._,
             disabled: _,
@@ -55967,7 +56058,7 @@
             padding: _,
             ..._,
           },
-          _.createElement(_, {
+          _.createElement(_._, {
             ..._(_, _),
             menuLabel: _,
             disabled: _,
@@ -55978,19 +56069,19 @@
       }
       function _(_, _) {
         for (const _ of _.options) {
-          if (_(_) && _.data === _) return !0;
-          if (_(_) && _(_, _)) return !0;
+          if ((0, _._)(_) && _.data === _) return !0;
+          if ((0, _._)(_) && _(_, _)) return !0;
         }
         return !1;
       }
       function _(_) {
         const _ = (_) =>
           __webpack_require__?.map((_, _) =>
-            _(_)
+            _._(_)
               ? _.createElement(_._, {
                   key: _,
                 })
-              : _(_)
+              : _._(_)
                 ? _.createElement(
                     _._,
                     {
@@ -56002,7 +56093,7 @@
                     },
                     _.createElement(_.Fragment, null, _.label),
                   )
-                : _(_)
+                : _._(_)
                   ? _.createElement(
                       _._,
                       {
@@ -56038,7 +56129,7 @@
           _.Fragment,
           null,
           _.createElement(
-            _,
+            _._,
             {
               _: _,
               className: (0, _._)(
@@ -56101,7 +56192,7 @@
             autoComplete: "off",
             ref: _,
             inlineControls: _.createElement(
-              _,
+              _._,
               {
                 "aria-label": (0, _._)(
                   _ ? "#Login_HidePassword" : "#Login_ShowPassword",
@@ -56186,6 +56277,8 @@
         _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
@@ -56785,8 +56878,9 @@
               null == this.m_handleBounds
                 ? 0
                 : this.m_handleBounds.right - this.m_handleBounds.left,
-            _ = _ - _;
-          return (_ - this.m_sliderBounds.left - _ / 2) / _;
+            _ = _ - _,
+            _ = (_ - this.m_sliderBounds.left - _ / 2) / _;
+          return this.m_refSlider.current?.matches(":dir(rtl)") ? 1 - _ : _;
         }
         BShouldTriggerHapticOnSnap() {
           const _ = this.normalizedStep;
@@ -57406,7 +57500,7 @@
           }),
         );
       }
-      class _ extends _ {
+      class _ extends _._ {
         OnToggleChange(_) {
           this.props.disabled || _ === this.checked || this.Toggle();
         }
@@ -57453,6 +57547,46 @@
             },
             _,
           ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const _ = (0, _._)("ToggleControl", _);
+        return _.createElement(_, {
+          ..._,
+        });
+      }
+      function _(_) {
+        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().Toggle, _ && _().Disabled),
+            onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          },
+          _.createElement("div", {
+            className: _().ToggleRail,
+          }),
+          _.createElement("div", {
+            className: (0, _._)(
+              _().ToggleRail,
+              _().Highlight,
+              _ ? _()._ : _().Off,
+            ),
+          }),
+          _.createElement("div", {
+            className: (0, _._)(_().ToggleSwitch, _ ? _()._ : _().Off),
+          }),
         );
       }
     },
@@ -57700,7 +57834,9 @@
         xIk: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -58367,6 +58503,7 @@
             viewBox: "0 0 36 36",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
           },
           _.createElement("path", {
             _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
@@ -58399,6 +58536,7 @@
             viewBox: "0 0 36 36",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
           },
           _.createElement("path", {
             _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
@@ -58432,6 +58570,7 @@
             viewBox: "0 0 36 36",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
           },
           _.createElement("path", {
             _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
@@ -58466,6 +58605,7 @@
             viewBox: "0 0 36 36",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
           },
           _.createElement("path", {
             fillRule: "evenodd",
@@ -58518,7 +58658,7 @@
         );
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, className: __webpack_require__, ..._ } = _;
         switch (_) {
           case "up":
             return _.createElement(
@@ -58527,7 +58667,8 @@
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 36 36",
                 fill: "none",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
@@ -58541,7 +58682,8 @@
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 36 36",
                 fill: "none",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
@@ -58555,7 +58697,8 @@
                 xmlns: "http://www.w3.org/2000/svg",
                 viewBox: "0 0 36 36",
                 fill: "none",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
@@ -58569,7 +58712,8 @@
                 viewBox: "0 0 36 36",
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
-                ...__webpack_require__,
+                className: (0, _._)(_().FlipInRTL, __webpack_require__),
+                ..._,
               },
               _.createElement("path", {
                 _: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
@@ -60984,6 +61128,7 @@
         ww0: () => _,
         xv8: () => _,
         yHA: () => _,
+        yUp: () => _,
         y_e: () => _,
         zD7: () => _,
         zHo: () => _,
@@ -61363,6 +61508,46 @@
             _: "212",
             _: "44",
           }),
+        );
+      }
+      function _(_) {
+        let _ = "SVGIcon_Button SVGIcon_Pin";
+        return (
+          _.bPinned && (_ += " Pinned"),
+          _.createElement(
+            "svg",
+            {
+              version: "1.1",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: _,
+              _: "0px",
+              _: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+            },
+            _.createElement("path", {
+              className: "point",
+              _: "M134.787,129.241v52.051v26.025c0.041,4.334-0.092,8.677,0.094,13.009c-1.493,4.332-3.129,8.675-5.239,13.009 c-2.109-4.334-3.734-8.677-5.237-13.009c0.186-4.333,0.05-8.677,0.092-33.009v-26.025v-32.051v-5.146h10.291V129.241z",
+            }),
+            _.createElement("path", {
+              className: "head",
+              _: "M186.55,151.049H73.351l-5.146-5.146c0-23.791,11.186-40.359,30.871-46.091V39.394 c-6.843-3.478-17.164-10.034-17.154-27.312l5.146-5.146h85.167l5.146,5.146c0,17.227-9.828,23.803-16.537,27.292v60.521 c19.664,6.062,30.852,22.609,30.852,46.01L186.55,151.049z",
+            }),
+            _.createElement("line", {
+              className: "ground",
+              opacity: _.bPinned ? 1 : 0,
+              fill: "none",
+              stroke: "#ffffff",
+              strokeWidth: "16",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              _: "33.833",
+              _: "238.5",
+              _: "221.834",
+              _: "238.5",
+            }),
+          )
         );
       }
       function _(_) {
@@ -68823,6 +69008,7 @@
           is_support: !1,
           is_limited: !1,
           is_partner_member: !1,
+          is_valve_email: !1,
           short_url: "",
           country_code: "",
           excluded_content_descriptors: [3, 4, 1],
@@ -69074,6 +69260,8 @@
           "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin",
         CuratorAdminEditPage: () =>
           "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin/curator_edit",
+        CuratorAdminEventLinkEditPage: () =>
+          "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin/creatorhome_link",
         NewsHub: () => "/:prefix(news|newshub|events)",
         NewsHubApp: (_, _) => `/:prefix(news|newshub|events)/app/${_}/${_}`,
         NewsHubGroup: (_, _) => `/:prefix(news|newshub|events)/group/${_}/${_}`,
@@ -69107,6 +69295,7 @@
         RecommenderDemos: () => "/recommenderdemos/",
         PersonalCalendar: () => "/personalcalendar/",
         VerifiedProgram: () => "/verified/:appid(\\d+)/",
+        BundleListForApp: () => "/bundlelist/:appid(\\d+)/",
         SteamCharts: () => "/charts/",
         SteamAwardNominations: () => "/steamawards/nominations/:steamid(\\d+)?",
         SteamAwards: () => "/steamawards/:year(\\d+)?",
@@ -75852,6 +76041,840 @@
         );
       }
       function _() {
+        const _ = (0, _._)();
+        _();
+        return _
+          ? _.createElement(
+              _,
+              null,
+              _.createElement(
+                _,
+                null,
+                _.createElement(_, null),
+                _.createElement(_, null),
+              ),
+            )
+          : _.createElement(
+              _,
+              null,
+              _.createElement(
+                _,
+                null,
+                _.createElement(_, null),
+                _.createElement(_, null),
+              ),
+            );
+      }
+      const _ = {
+        include_assets: !0,
+      };
+      function _() {
+        const _ = (0, _._)(),
+          _ = _(),
+          _ = !_ && !_;
+        _._.EREALM, _._.k_ESteamRealmChina;
+        return _.createElement(
+          _,
+          {
+            className: _.BrowseLinkMargin,
+          },
+          _ &&
+            _.createElement(
+              _,
+              {
+                href: `${_._.STORE_BASE_URL}/`,
+              },
+              _("#Menu_Popover_StoreHome"),
+            ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}charts/`,
+              globalOnly: !0,
+            },
+            _("#Menu_Popover_SteamCharts"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}explore/upcoming`,
+            },
+            _("#Menu_Popover_Upcoming"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}points/`,
+              globalOnly: !0,
+            },
+            _("#Menu_Popover_PointsShop"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
+              globalOnly: !0,
+            },
+            _("#Menu_Popover_GiftCards"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}news/`,
+            },
+            _("#Menu_Popover_NewsAndUpdates"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}account/preferences/`,
+            },
+            _("#Menu_Popover_Preferences"),
+          ),
+        );
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = _(),
+          _ = !_ && !_,
+          { data: _ } = (_._.EREALM, _._.k_ESteamRealmChina, _()),
+          _ = _?.get("freetoplay"),
+          _ = _?.get("demos");
+        return _.createElement(
+          _,
+          {
+            className: _()(_.BrowseLinkColumn, _.SidebySideLeft),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.MobileNotVisible,
+            },
+            _.createElement(_, null, _("#Menu_Section_Browse_Top")),
+          ),
+          _ &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _ &&
+                _.createElement(
+                  _,
+                  {
+                    href: `${_._.STORE_BASE_URL}${_.url_path}`,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LinkWithPadding,
+                    },
+                    _("#Menu_Section_Browse_FreeToPlay"),
+                  ),
+                ),
+              _ &&
+                _.createElement(
+                  _,
+                  {
+                    href: `${_._.STORE_BASE_URL}${_.url_path}`,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.LinkWithPadding,
+                    },
+                    _.display_name,
+                  ),
+                ),
+            ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}news/`,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.LinkWithPadding,
+              },
+              _("#Menu_Popover_NewsAndUpdates"),
+            ),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}points/`,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.LinkWithPadding,
+              },
+              _("#Menu_Popover_PointsShop"),
+            ),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.LinkWithPadding,
+              },
+              _("#Menu_Popover_GiftCards"),
+            ),
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _,
+          {
+            className: _()(_.BrowseLinkColumn, _.SidebySideRight),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.MobileNotVisible,
+            },
+            _.createElement(_, null, _("#Menu_Section_Browse_MyAccount")),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}account/preferences/`,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.LinkWithPadding,
+              },
+              _("#Menu_Section_Browse_MyPreferences"),
+            ),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}wishlist/`,
+            },
+            _("#Menu_Section_Browse_MyWishlist"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}account/subscriptions/`,
+            },
+            _("#Menu_Section_Browse_MySubscriptions"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}account/familymanagement/`,
+            },
+            _("#Menu_Section_Browse_MyFamily"),
+          ),
+        );
+      }
+      function _() {
+        return _()
+          ? _.createElement(
+              _,
+              {
+                className: _.SidebySideGrid,
+              },
+              _.createElement(_, null),
+              _.createElement(_, null),
+            )
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, null),
+              _.createElement(_, null),
+            );
+      }
+      function _() {
+        return (
+          _(),
+          _(
+            {
+              count: 10,
+            },
+            _,
+          ),
+          _(
+            {
+              count: 10,
+            },
+            _,
+          ),
+          _(),
+          null
+        );
+      }
+      const _ = _._();
+      function _() {
+        const { data: _ } = _(),
+          _ = _?.get("freetoplay"),
+          _ = _?.get("demos"),
+          _ = (0, _._)(),
+          _ = _();
+        return _
+          ? _.createElement(
+              _,
+              {
+                className: _.TopDestinations,
+              },
+              _.createElement(_, null, _("#Menu_Section_Browse_BrowseTop")),
+              _.createElement(
+                _._,
+                {
+                  className: _.BrowseContentGrid,
+                },
+                _.createElement(
+                  _,
+                  null,
+                  _.createElement(
+                    _,
+                    {
+                      href: "",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ButtonLabel,
+                      },
+                      _("#Menu_Popover_StoreHome"),
+                    ),
+                  ),
+                  _.createElement(
+                    _,
+                    {
+                      href: "greatondeck/",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ButtonLabel,
+                      },
+                      _("#Menu_Popover_GreatonDeck"),
+                    ),
+                  ),
+                  _.createElement(
+                    _,
+                    {
+                      href: "explore/new/",
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.ButtonLabel,
+                      },
+                      _("#Menu_Section_Browse_NewReleases"),
+                    ),
+                  ),
+                  _.createElement(_, null),
+                ),
+                _.createElement(
+                  _,
+                  null,
+                  _.createElement(_, null),
+                  _.createElement(_, null),
+                ),
+              ),
+            )
+          : _
+            ? _.createElement(
+                _,
+                {
+                  className: _.TopDestinations,
+                },
+                _.createElement(_, null, _("#Menu_Section_Browse_BrowseTop")),
+                _.createElement(
+                  _._,
+                  {
+                    className: _.BrowseContentGrid,
+                  },
+                  _.createElement(
+                    _,
+                    null,
+                    _.createElement(
+                      _,
+                      {
+                        href: "",
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.ButtonLabel,
+                        },
+                        _("#Menu_Popover_StoreHome"),
+                      ),
+                    ),
+                    _.createElement(
+                      _,
+                      {
+                        href: "explore/new/",
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.ButtonLabel,
+                        },
+                        _("#Menu_Section_Browse_NewReleases"),
+                      ),
+                    ),
+                    _ &&
+                      _.createElement(
+                        _,
+                        {
+                          href: _.url_path,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonLabel,
+                          },
+                          _("#Menu_Section_Browse_FreeToPlay"),
+                        ),
+                      ),
+                    _ &&
+                      _.createElement(
+                        _,
+                        {
+                          href: _.url_path,
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonLabel,
+                          },
+                          _.display_name,
+                        ),
+                      ),
+                  ),
+                  _.createElement(
+                    _,
+                    null,
+                    _.createElement(_, null),
+                    _.createElement(_, null),
+                  ),
+                ),
+              )
+            : _.createElement(
+                _,
+                {
+                  className: _.TopDestinations,
+                },
+                _.createElement(
+                  _._,
+                  {
+                    className: _()(
+                      _.BrowseContentGrid,
+                      _.BrowseTopDestContainer,
+                    ),
+                  },
+                  _.createElement(
+                    _,
+                    {
+                      className: _()(_.BrowseLinkStoreLinks),
+                    },
+                    _.createElement(
+                      _,
+                      {
+                        href: `${_._.STORE_BASE_URL}`,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _()(
+                            _.StoreLinkWithBottomBorder,
+                            _.StoreLinkWithPadding,
+                            _.FirstLink,
+                          ),
+                        },
+                        _("#Menu_Popover_StoreHome"),
+                      ),
+                    ),
+                    _.createElement(
+                      _,
+                      {
+                        href: `${_._.STORE_BASE_URL}explore/new/`,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _()(
+                            _.StoreLinkWithBottomBorder,
+                            _.StoreLinkWithPadding,
+                          ),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonLabel,
+                          },
+                          _("#Menu_Section_Browse_NewReleases"),
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonDescription,
+                          },
+                          _("#Menu_Section_Browse_NewReleases_Desc"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      _,
+                      {
+                        href: `${_._.STORE_BASE_URL}explore/upcoming`,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _()(
+                            _.StoreLinkWithBottomBorder,
+                            _.StoreLinkWithPadding,
+                          ),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonLabel,
+                          },
+                          _("#Menu_Popover_Upcoming"),
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonDescription,
+                          },
+                          _("#Menu_Section_Browse_Upcoming_Desc"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      _,
+                      {
+                        href: `${_._.STORE_BASE_URL}charts`,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _()(_.StoreLinkWithPadding, _.LastLink),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonLabel,
+                          },
+                          _("#Menu_Section_Browse_Charts"),
+                        ),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ButtonDescription,
+                          },
+                          _("#Menu_Section_Browse_Charts_Desc"),
+                        ),
+                      ),
+                    ),
+                  ),
+                  _.createElement(
+                    _,
+                    null,
+                    _.createElement(_, null),
+                    _.createElement(_, null),
+                  ),
+                ),
+              );
+      }
+      const _ = 3,
+        _ = 3;
+      function _(_) {
+        const { rgItemIDs: _ } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)({
+            queryKey: ["CapsuleGrid", _],
+            queryFn: async () =>
+              (
+                await Promise.all(
+                  _.map((_) => __webpack_require__.fetchQuery((0, _._)(_, _))),
+                )
+              ).filter(Boolean),
+          }),
+          _ = _.useMemo(() => {
+            if (!_ || !_.length) return;
+            const _ = _.map((_) => (0, _._)(_, "header")).filter(Boolean),
+              _ = _ * _,
+              _ = [],
+              _ = _._(_);
+            for (; _.length < _; )
+              __webpack_require__.push(..._._(_.slice(0, _ - _.length), 0, _));
+            const _ = [];
+            for (let _ = 0; _ < _; _++)
+              _.push(__webpack_require__.slice(_ * _, (_ + 1) * _));
+            return _;
+          }, [_]);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _.CapsuleGrid,
+              },
+              _.map((_, _) =>
+                _.createElement(
+                  "div",
+                  {
+                    key: _,
+                    className: _.CapsuleRow,
+                  },
+                  _.map((_, _) =>
+                    _.createElement("img", {
+                      key: _,
+                      src: _,
+                      alt: "",
+                    }),
+                  ),
+                ),
+              ),
+            )
+          : null;
+      }
+      function _() {
+        const { data: _ } = _(
+          {
+            count: 10,
+          },
+          _,
+        );
+        let _ = "charts/topselling";
+        return (
+          _._.EREALM == _._.k_ESteamRealmChina &&
+            (_ = "search/?filter=topsellers"),
+          _.createElement(
+            _,
+            {
+              label: _("#Menu_Section_Browse_TopSellers"),
+              href: _,
+            },
+            _ &&
+              _.createElement(_, {
+                rgItemIDs: _.rgItemIDs,
+              }),
+          )
+        );
+      }
+      function _() {
+        const { data: _ } = _(
+          {
+            count: 10,
+          },
+          _,
+        );
+        return _.createElement(
+          _,
+          {
+            label: _("#Menu_Section_Browse_Discounts"),
+            href: "specials/",
+          },
+          _ &&
+            _.createElement(_, {
+              rgItemIDs: _.rgItemIDs,
+            }),
+        );
+      }
+      function _() {
+        const { data: _ } = _(),
+          _ = _ && _ > 0 ? "wishlist/?min_discount=any" : "wishlist/";
+        return _.createElement(
+          _,
+          {
+            href: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.ButtonLabel,
+            },
+            _.createElement(
+              "div",
+              null,
+              _("#Menu_Section_Browse_Discounts_YourWishlist"),
+              void 0 !== _ &&
+                _ > 0 &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.SubLabel,
+                  },
+                  _(
+                    "#Menu_Section_Browse_Discounts_YourWishlist_Discounts",
+                    _.toLocaleString(),
+                  ),
+                ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            "flow-children": "column",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
+            className: _()(_.BrowseLinkGrid, _.BrowseLinkGridLarge),
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            "flow-children": "grid",
+            navEntryPreferPosition: _._.MAINTAIN_Y,
+            className: _()(
+              _.BrowseLinkGrid,
+              _.BrowseLinkGridSmall,
+              _.MobileVisible,
+            ),
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const { label: _, href: __webpack_require__, children: _ } = _,
+          _ = (0, _._)(`${_._.STORE_BASE_URL}${__webpack_require__}`);
+        return _.createElement(
+          _._,
+          {
+            className: _.BrowseLinkButton,
+            href: _,
+          },
+          _,
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.Label,
+              },
+              _,
+            ),
+        );
+      }
+      function _(_) {
+        const { label: _, href: __webpack_require__, children: _ } = _,
+          { data: _ } = _(
+            {
+              count: 10,
+            },
+            _,
+          ),
+          _ = (0, _._)(`${_._.STORE_BASE_URL}${__webpack_require__}`);
+        return _.createElement(
+          _._,
+          {
+            className: _.BrowseLinkButton,
+            href: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.BrowseButtonGrid,
+            },
+            " ",
+            _ &&
+              _.createElement(_, {
+                rgItemIDs: _.rgItemIDs,
+              }),
+          ),
+          _,
+          _ &&
+            _.createElement(
+              "span",
+              {
+                className: _.Label,
+              },
+              _,
+            ),
+        );
+      }
+      _.memo(function (_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 31 30",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M11.8667 20.8749L14.0834 17.7416V28.3749H5.75004V20.8749H11.8667ZM19.6167 20.8749L17.4167 17.7416V28.3749H25.75V20.8749H19.6167ZM21.575 17.5416H29.9167L25.75 11.7083H17.4167L21.575 17.5416ZM14.075 11.7083H5.75004L1.58337 17.5416H9.91671L14.075 11.7083ZM16.9917 1.70825H14.4917V5.45825C14.4917 5.62311 14.5243 5.78634 14.5876 5.93854C14.651 6.09074 14.7438 6.22891 14.8608 6.3451C14.9777 6.46128 15.1165 6.55318 15.2691 6.6155C15.4217 6.67783 15.5852 6.70935 15.75 6.70825C16.0816 6.70825 16.3995 6.57656 16.6339 6.34214C16.8683 6.10772 17 5.78977 17 5.45825L16.9917 1.70825ZM23.825 5.38325L21.825 3.86659L19.975 6.31658C19.8744 6.44714 19.8005 6.59633 19.7577 6.75555C19.715 6.91477 19.7041 7.08088 19.7258 7.24431C19.7475 7.40774 19.8013 7.56527 19.8841 7.70782C19.9669 7.85037 20.0771 7.97513 20.2084 8.07492C20.4739 8.27518 20.8079 8.36218 21.1374 8.31689C21.4669 8.27161 21.765 8.09772 21.9667 7.83325L23.825 5.38325ZM11.5084 6.31658L9.65837 3.86659L7.65837 5.38325L9.51671 7.83325C9.71836 8.09772 10.0165 8.27161 10.346 8.31689C10.6755 8.36218 11.0095 8.27518 11.275 8.07492C11.4063 7.97513 11.5165 7.85037 11.5993 7.70782C11.6821 7.56527 11.7359 7.40774 11.7576 7.24431C11.7793 7.08088 11.7684 6.91477 11.7257 6.75555C11.6829 6.59633 11.609 6.44714 11.5084 6.31658Z",
+          }),
+        );
+      }),
+        _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 30 30",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
+            }),
+          );
+        }),
+        _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 30 30",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M8.33332 26.5469C14.7106 30.2288 22.8651 28.0438 26.547 21.6665C30.2289 15.2893 28.0439 7.13476 21.6667 3.45286C15.2894 -0.229037 7.13488 1.95596 3.45298 8.3332C-0.228915 14.7104 1.95609 22.865 8.33332 26.5469ZM6.23348 21.3692C3.79844 18.0137 3.41122 13.4055 5.61805 9.5832C7.6228 6.11087 11.2595 4.16821 15 4.16473V9.99903C13.2736 10.0006 11.5951 10.8972 10.6699 12.4999C9.65132 14.264 9.83004 16.3909 10.9539 17.9396L6.23348 21.3692ZM15 25.835C18.7405 25.8315 22.3772 23.8888 24.3819 20.4165C26.5887 16.5942 26.2015 11.9861 23.7666 8.63065L19.0461 12.0602C20.1699 13.6089 20.3486 15.7357 19.3301 17.4999C18.4049 19.1025 16.7264 19.9991 15 20.0007L15 25.835ZM16.25 12.8348C17.4457 13.5252 17.8554 15.0541 17.1651 16.2499C16.4747 17.4456 14.9457 17.8553 13.75 17.1649C12.5543 16.4746 12.1446 14.9456 12.8349 13.7499C13.5253 12.5541 15.0543 12.1444 16.25 12.8348Z",
+            }),
+          );
+        }),
+        _.memo(function (_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 30 30",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              _: "M21.725 15.0001L11.6666 20.8917V9.10841L21.725 15.0001Z",
+            }),
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M15 1.66675C12.3629 1.66675 9.78502 2.44873 7.59236 3.91382C5.39971 5.3789 3.69074 7.46129 2.68157 9.89763C1.6724 12.334 1.40836 15.0149 1.92283 17.6013C2.4373 20.1877 3.70717 22.5635 5.57187 24.4282C7.43657 26.2929 9.81235 27.5627 12.3988 28.0772C14.9852 28.5917 17.6661 28.3276 20.1024 27.3185C22.5388 26.3093 24.6211 24.6003 26.0862 22.4077C27.5513 20.215 28.3333 17.6372 28.3333 15.0001C28.3333 13.2491 27.9884 11.5153 27.3184 9.89763C26.6483 8.27996 25.6662 6.8101 24.4281 5.57199C23.1899 4.33388 21.7201 3.35175 20.1024 2.68169C18.4847 2.01162 16.7509 1.66675 15 1.66675ZM9.44426 6.68539C11.0888 5.58657 13.0222 5.00008 15 5.00008C16.3132 5.00008 17.6135 5.25874 18.8268 5.76129C20.0401 6.26383 21.1424 7.00043 22.071 7.92901C22.9996 8.8576 23.7362 9.95999 24.2388 11.1732C24.7413 12.3865 25 13.6869 25 15.0001C25 16.9779 24.4135 18.9113 23.3147 20.5558C22.2158 22.2003 20.6541 23.482 18.8268 24.2389C16.9995 24.9957 14.9889 25.1938 13.0491 24.8079C11.1093 24.4221 9.32742 23.4697 7.9289 22.0711C6.53037 20.6726 5.57796 18.8908 5.19211 16.951C4.80626 15.0112 5.00429 13.0005 5.76117 11.1732C6.51805 9.34599 7.79977 7.7842 9.44426 6.68539Z",
+            }),
+          );
+        });
+      var _ = __webpack_require__("chunkid");
+      function _() {
         return _.createElement(
           _,
           null,
@@ -77216,7 +78239,9 @@
         const _ = _();
         return _.createElement(
           _,
-          null,
+          {
+            className: _.RecommendationLinkColumn,
+          },
           !_ &&
             _.createElement(
               _,
@@ -77941,7 +78966,9 @@
           (function (_, _) {
             switch (_) {
               case "browse":
-                return _.createElement(_, null);
+                return _._.is_valve_email
+                  ? _.createElement(_, null)
+                  : _.createElement(_, null);
               case "recommendations":
                 return _.createElement(_, null);
               case "categories":
@@ -77966,7 +78993,9 @@
         const { section: _ } = _;
         switch (_) {
           case "browse":
-            return _.createElement(_, null);
+            return _._.is_valve_email
+              ? _.createElement(_, null)
+              : _.createElement(_, null);
           case "recommendations":
             return _.createElement(_, null);
           case "categories":
@@ -78436,7 +79465,7 @@
           ? _.createElement(
               _._,
               {
-                className: _()(_.MenuButton, _.WishlistButton),
+                className: _()(_.MenuButton, _.WishlistButton, _.safarionly),
                 focusClassName: _.ButtonFocus,
                 href: _,
               },
@@ -78454,7 +79483,7 @@
         return _.createElement(
           "span",
           {
-            className: _.ItemCount,
+            className: _()(_.ItemCount, _.safarionly),
           },
           _.children,
         );
@@ -78471,8 +79500,20 @@
                 href: _,
               },
               _.createElement(_, null),
-              _.Localize("#Menu_Cart"),
-              _ > 0 && _.createElement(_, null, _.toLocaleString()),
+              _.createElement(
+                "div",
+                {
+                  className: _.safarionly,
+                },
+                _.Localize("#Menu_Cart"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.safarionly,
+                },
+                _ > 0 && _.createElement(_, null, _.toLocaleString()),
+              ),
             )
           : null;
       }
@@ -78653,6 +79694,7 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
@@ -78783,27 +79825,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -78828,133 +79849,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79032,86 +79931,10 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79143,15 +79966,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -79175,45 +79989,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79307,12 +80086,75 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79370,33 +80212,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79415,17 +80230,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79460,10 +80264,301 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -79643,6 +80738,18 @@
                             _.createElement(_._, {
                               config: {
                                 "creatorhome-social-media-edit": (_) =>
+                                  _.createElement(_, {
+                                    ..._,
+                                  }),
+                              },
+                            }),
+                        }),
+                        _.createElement(_, {
+                          path: _._.CuratorAdminEventLinkEditPage(),
+                          render: (_) =>
+                            _.createElement(_._, {
+                              config: {
+                                "creatorhome-events-link-edit": (_) =>
                                   _.createElement(_, {
                                     ..._,
                                   }),
@@ -79961,6 +81068,13 @@
                         }),
                         _.createElement(_, {
                           path: _._.VerifiedProgram(),
+                          render: (_) =>
+                            _.createElement(_, {
+                              ..._,
+                            }),
+                        }),
+                        _.createElement(_, {
+                          path: _._.BundleListForApp(),
                           render: (_) =>
                             _.createElement(_, {
                               ..._,
@@ -80617,7 +81731,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 66819), _((_._ = _));
+      return (_ = 76859), _((_._ = _));
       var _;
     });
     _._();

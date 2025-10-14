@@ -230,6 +230,7 @@ ${COMMUNITY_BASE_URL}gid/${}/members/
 ${COMMUNITY_BASE_URL}gid/${}/membersManage
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/${}/edit
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/create?type=creatorhome
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale#SalePageEdit_SaleBanner
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clanEventGID}
@@ -371,6 +372,7 @@ ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&for_items[]=${}_${}_${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&token=${}
 ${COMMUNITY_BASE_URL}user/
+${COMMUNITY_BASE_URL}vtt/video/${}
 ${COMMUNITY_CDN_ASSET_URL}${_ ? "lny2020" : "winter2019"}/roomeffects/96px/${}.png
 ${COMMUNITY_CDN_ASSET_URL}${imgHeadshot}
 ${COMMUNITY_CDN_ASSET_URL}${screenshot}
@@ -613,6 +615,7 @@ ${IMG_URL}events/defaults/default_img_header.jpg
 ${IMG_URL}events/thumb_library_home.jpg
 ${IMG_URL}events/types/type_${_ ? "11" : "9"}.png
 ${IMG_URL}events/types/type_${icon ? _ : _}.png?v=4
+${IMG_URL}events/types/type_${}.png?v=4
 ${IMG_URL}favorite_star.png
 ${IMG_URL}forward_arrow.png
 ${IMG_URL}gameboard_heroes.png
@@ -1359,6 +1362,8 @@ ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
 ${STORE_BASE_URL}/
 ${STORE_BASE_URL}/curator/${}/
+${STORE_BASE_URL}/curator/${}/admin/ajaxdeletecreatorhomeevent
+${STORE_BASE_URL}/curator/${}/admin/ajaxgetcreatorhomeevents
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
 ${STORE_BASE_URL}about
@@ -1372,6 +1377,7 @@ ${STORE_BASE_URL}account/cookiepreferences
 ${STORE_BASE_URL}account/cookiepreferences/
 ${STORE_BASE_URL}account/emailoptout
 ${STORE_BASE_URL}account/emailoptout/app
+${STORE_BASE_URL}account/familymanagement/
 ${STORE_BASE_URL}account/familymanagement/join?ft=${steamid}
 ${STORE_BASE_URL}account/familymanagement/join?invitation=${familyid}
 ${STORE_BASE_URL}account/familymanagement?tab=requests
@@ -1431,6 +1437,7 @@ ${STORE_BASE_URL}cart/purchaserequested/${}
 ${STORE_BASE_URL}category/${category}
 ${STORE_BASE_URL}category/${handle}
 ${STORE_BASE_URL}category/${}
+${STORE_BASE_URL}charts
 ${STORE_BASE_URL}charts/
 ${STORE_BASE_URL}charts/steamdecktopplayed
 ${STORE_BASE_URL}communityrecommendations/
@@ -1498,6 +1505,7 @@ ${STORE_BASE_URL}events_admin/ajaxupdatetags
 ${STORE_BASE_URL}events_promotion_admin/ajaxitemsuggest
 ${STORE_BASE_URL}explore/ajaxgetstorerelevancedata
 ${STORE_BASE_URL}explore/followgame
+${STORE_BASE_URL}explore/new/
 ${STORE_BASE_URL}explore/next/${}
 ${STORE_BASE_URL}explore/next/0
 ${STORE_BASE_URL}explore/next/3
@@ -1974,6 +1982,7 @@ ${g_szBaseURL}/apps/savestat/${appid}
 ${g_szBaseURL}/apps/setcommunityfriendlyname/${appid}
 ${g_szBaseURL}/apps/setcommunitystatshidden/${appid}
 ${g_szBaseURL}/apps/setdedicatedgs/${appid}
+${g_szBaseURL}/apps/setdontpublishcoplay/${appid}
 ${g_szBaseURL}/apps/setdontrecordcoplay/${appid}
 ${g_szBaseURL}/apps/setdrmguid/${appid}
 ${g_szBaseURL}/apps/setinstallscriptoverride/${appid}
@@ -2927,6 +2936,7 @@ https://steamcommunity.com/groups/${groupid}/deleterecommendation/
 https://steamcommunity.com/groups/${groupid}/followcurator/
 https://steamcommunity.com/groups/${groupid}/setcuratordetails/
 https://steamcommunity.com/groups/${url}
+https://steamcommunity.com/groups/SteamLabs/discussions/19/
 https://steamcommunity.com/inventory/${m_steamid}/${m_appid}/${m_contextid}
 https://steamcommunity.com/invites/ajaxcreate
 https://steamcommunity.com/invites/ajaxrevoke
@@ -3222,7 +3232,7 @@ https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
-https://swarm.valve.org/changes/10144208
+https://swarm.valve.org/changes/10148199
 https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202

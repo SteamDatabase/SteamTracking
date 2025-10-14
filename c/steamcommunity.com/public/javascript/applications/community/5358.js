@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Ärendeinformation uppdaterad",
 	"moderationaction_locked": "Låst",
 	"moderationaction_unlocked": "Upplåst",
-	"moderationaction_unknown": "Okänd handling"
+	"moderationaction_unknown": "Okänd handling",
+	"moderatormessage_count_note": "Noteringar: %1$s",
+	"moderatormessage_count_warning": "Varningar: %1$s",
+	"moderatormessage_count_bannotice": "Avstängningar: %1$s",
+	"moderatormessage_count_contentremoval": "Meddelanden om borttagning av innehåll: %1$s"
 }`);
     },
   },

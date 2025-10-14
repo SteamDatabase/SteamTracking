@@ -598,7 +598,7 @@
         UpdateOverrideLanguage(_) {
           this.m_renderingLanguage = _;
         }
-        ParseBBCode(_, _, __webpack_require__ = !1) {
+        ParseBBCode(_, _, __webpack_require__ = !0) {
           let _ = 0;
           const _ = this.Parse(
             _,
@@ -30819,26 +30819,15 @@
                 _,
               ),
             [__webpack_require__, _],
-          ),
-          _ = (0, _._)(() => new _._(_.sm_BBCodeDictionary, _, _));
-        return (
-          _.useEffect(() => {
-            _.UpdateOverrideLanguage(_);
-          }, [_, _]),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.ParseBBCode(
-              _,
-              {
-                showErrorInfo: _,
-                event: _,
-                bShowShortSpeakerInfo: _,
-              },
-              !0,
-            ),
-          )
-        );
+          );
+        return _.useMemo(
+          () => new _._(_.sm_BBCodeDictionary, _, _),
+          [_, _],
+        ).ParseBBCode(_, {
+          showErrorInfo: _,
+          event: _,
+          bShowShortSpeakerInfo: _,
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -32470,6 +32459,7 @@
               rgSources: _,
               onIncrementalError: _,
               onError: __webpack_require__,
+              strAltText: _,
               ..._
             } = this.props,
             _ = this.src;
@@ -32478,6 +32468,7 @@
             ..._,
             src: _,
             onError: this.OnImageError,
+            alt: _,
           });
         }
       }

@@ -1205,18 +1205,19 @@ GHomepage = {
 			var reviewSummary = pref != 1 ? rgItemData['review_summary_filtered'] : rgItemData['review_summary'];
 			var $elReviewData = $J('<div>', {'class': 'review_summary' } );
 			var $summaryRow = $J('<div>', { 'class': 'review_summary_row' });
-			var reviewSummaryText = 'Overall User Reviews';
+			let reviewSummaryText = 'Overall User Reviews';
 			if ( reviewSummary['bLanguageOutlier'] && pref != 1 )
 			{
 				reviewSummaryText = 'English Reviews';
 			}
-			$summaryRow.append( $J('<div>', {'class': 'review_summary_title'}).text( reviewSummaryText ) );
-			$summaryRow.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']));
-			$summaryRow.append( $J('<span>', { 'class': 'review_count' }).html('&nbsp;(' + v_numberformat(reviewSummary['cReviews']) + ')') );
+			$summaryRow.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text( reviewSummary['reviewSummaryDesc']) );
+
+			const strTotalReviews = '%1$s Reviews'.replace( '%1$s', v_numberformat( reviewSummary['cReviews'] ) );
+			$summaryRow.append( $J('<span>', { 'class': 'review_count' }).html( '&nbsp;(' + strTotalReviews + ')' ) );
 
 			if ( reviewSummary['review_anomaly'] )
 			{
-			  $summaryRow.append($J('<span>', {'class': 'review_anomaly_icon'}).html('&nbsp;*'));
+				$summaryRow.append($J('<span>', {'class': 'review_anomaly_icon'}).html('&nbsp;*'));
 			}
 
 			$elReviewData.append($summaryRow);
@@ -1224,27 +1225,11 @@ GHomepage = {
 		}
 		else if ( rgItemData.coming_soon )
 		{
-			let $elReleaseDate = $J('<div/>', { 'class': 'release_date coming_soon' })
-			.text( rgItemData.release_date_string );
+			let $elReleaseDate = $J('<div/>', { 'class': 'release_date coming_soon' }).text( rgItemData.release_date_string );
 			$InfoCtn.append( $elReleaseDate );
 		}
 
 		$InfoCtn.append( $ScreenshotCtn );
-
-		if ( false && rgItemData.tags )
-			{
-				var tagsTitleText = 'User Tags';
-				let $elTagCtn = $J('<div>', { 'class': 'tags_ctn' });
-				let $elTagHeader = $J('<div>', { 'class': 'tags_title' }).text( tagsTitleText );
-				let $elTagContainer = $J('<div>',{'class': 'tags'});
-				for ( var i=0; i < rgItemData.tags.length && i < 10; i++ )
-				{
-					$elTagContainer.append($J('<div>').text( rgItemData.tags[i] ));
-				}
-				$elTagCtn.append( $elTagHeader );
-				$elTagCtn.append( $elTagContainer );
-				$DataCtn.append( $elTagCtn );
-			}
 
 		// Recommendation reason block
 		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( rgItem );
@@ -1393,11 +1378,7 @@ GHomepage = {
 			let strStatus = '';
 			let strAdditionalDetail = '';
 			let $ReasonMain = $J('<div/>').addClass('main').addClass('default');
-			if ( rgItem.status_string )
-			{
-				strStatus = rgItem.status_string;
-			}
-			else if ( rgItemData.early_access )
+			if ( rgItemData.early_access )
 			{
 				strStatus = 'Early Access Now Available';
 			}
@@ -1425,7 +1406,7 @@ GHomepage = {
 				let $TopSellerRightCol = $J( '<div/>', { 'class': 'topseller_right_col' } );
 				$TopSellerRightCol.append( $J( '<div/>', { 'class': 'topseller_title' } ).text( 'Top Seller' ) );
 
-				const strTopSellerRank = 'Ranked %1$s in your region'.replace( '%1$s', '<span>#' + GHomepage.GetTopSellerRank( rgItem ).toString() + '</span>' );
+				const strTopSellerRank = 'Ranked <span>#%1$s</span> in your region'.replace( '%1$s', GHomepage.GetTopSellerRank( rgItem ).toString() );
 				$TopSellerRightCol.append( $J( '<div/>', { 'class': 'topseller_subtext' } ).html( strTopSellerRank ) );
 
 				$TopSellerRightCol.appendTo( $TopSellerReason );

@@ -553,10 +553,10 @@
                 : {};
             history.replaceState({ ...e, bAdvancedSearch: n }, "");
           }, [n]),
-          a.createElement(S, { active: n, onRequestClose: () => r(!1), ...e })
+          a.createElement(E, { active: n, onRequestClose: () => r(!1), ...e })
         );
       }
-      function S(e) {
+      function E(e) {
         const { active: t, onRequestClose: n, ...c } = e,
           [i, l] = (0, a.useState)(() => (0, o.D)(e)),
           s = (0, a.useCallback)((e) => l((t) => ({ ...t, state: e })), []);
@@ -564,7 +564,7 @@
           r.E,
           { active: t },
           a.createElement(
-            E,
+            S,
             { onRequestClose: n },
             a.createElement(
               x,
@@ -579,7 +579,7 @@
           ),
         );
       }
-      function E(e) {
+      function S(e) {
         const { onRequestClose: t, children: n } = e,
           r = (0, v.Qn)();
         return a.createElement(
@@ -1131,7 +1131,7 @@
           prop: "justify",
           responsive: !0,
           className: y.Justify,
-          cssProperty: (e) => ["--justify", S(e)],
+          cssProperty: (e) => ["--justify", E(e)],
         },
         {
           prop: "align",
@@ -1165,21 +1165,21 @@
         },
         { prop: "inline", responsive: !0, className: y.Inline },
       ];
-      function S(e) {
+      function E(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
-      var E = n(8833);
+      var S = n(8833);
       function x(e) {
         const { orientation: t = "horizontal", size: n = "1", ...r } = e;
         return a.createElement("div", {
           role: "separator",
           "aria-orientation": t,
-          ...(0, l.mz)({ ...r, size: n, className: E.Separator }, w),
+          ...(0, l.mz)({ ...r, size: n, className: S.Separator }, w),
         });
       }
       const w = [
         ...i.L,
-        { prop: "size", className: (e) => E[`Size-${e}`], responsive: !0 },
+        { prop: "size", className: (e) => S[`Size-${e}`], responsive: !0 },
         {
           prop: "color",
           cssProperty: (e) => ["--separator-color", (0, l.Fd)(e)],
@@ -1427,14 +1427,14 @@
           },
         },
       );
-      var q = n(94621);
+      var $ = n(94621);
       (0, a.createContext)(null);
-      function $(e) {
+      function q(e) {
         const { gutter: t = 0 } = e;
         return [
-          (0, q.UU)(),
-          (0, q.cY)(2),
-          (0, q.Ej)({
+          (0, $.cY)(2),
+          (0, $.UU)(),
+          (0, $.Ej)({
             apply: (n) => {
               const { rects: a, elements: r, availableHeight: o } = n,
                 c =
@@ -1442,8 +1442,24 @@
                     ? o - t + "px"
                     : `calc( ${o}px - var(--spacing-${t}) )`,
                 i = { maxHeight: c, boxSizing: "border-box", zIndex: "1" };
-              e.scroll && (i.overflowY = "auto"),
-                "target" === e.width && (i.width = `${a.reference.width}px`),
+              switch ((e.scroll && (i.overflowY = "auto"), e.width)) {
+                case "target":
+                  i.width = `${a.reference.width}px`;
+                  break;
+                case "content":
+                  i.width = `${a.floating.width}px`;
+                  break;
+                case "dropdown": {
+                  let e = a.reference.width;
+                  a.floating.width > e && e < 200 && (e = a.floating.width),
+                    (i.width = `${e}px`);
+                }
+              }
+              "function" == typeof e.width &&
+                (i.width = e.width({
+                  unContentWidth: a.floating.width,
+                  unTargetWidth: a.reference.width,
+                })),
                 Object.assign(r.floating.style, i),
                 r.floating.style.setProperty("--popover-max-height", c);
             },
@@ -1461,20 +1477,22 @@
           setSelectedIndex: i,
           interactions: l = {},
           role: s,
+          placement: p,
         } = e;
-        let p = t;
-        const u = (0, D.we)({
-            open: p,
+        let u = t;
+        const m = (0, D.we)({
+            open: u,
             onOpenChange: n,
-            middleware: $(e),
+            middleware: q(e),
             whileElementsMounted: J.ll,
+            placement: p,
           }),
-          m = (0, D.kp)(u.context, { enabled: !!l.click }),
-          d = (0, D.iQ)(u.context, { enabled: !!l.focus }),
-          f = (0, D.s9)(u.context),
-          g = (0, a.useRef)([]),
-          h = (0, D.C1)(u.context, {
-            listRef: g,
+          d = (0, D.kp)(m.context, { enabled: !!l.click }),
+          f = (0, D.iQ)(m.context, { enabled: !!l.focus }),
+          g = (0, D.s9)(m.context),
+          h = (0, a.useRef)([]),
+          _ = (0, D.C1)(m.context, {
+            listRef: h,
             activeIndex: r,
             selectedIndex: c,
             onNavigate: o,
@@ -1482,34 +1500,34 @@
             loop: !0,
             focusItemOnOpen: !1,
           }),
-          _ = (0, a.useRef)([]),
-          v = (0, a.useRef)(!1),
-          y = (0, D.lY)(u.context, {
+          v = (0, a.useRef)([]),
+          y = (0, a.useRef)(!1),
+          C = (0, D.lY)(m.context, {
             enabled: !!l.typeahead,
-            listRef: _,
+            listRef: v,
             activeIndex: r,
             selectedIndex: c,
-            onMatch: p ? o : i,
-            onTypingChange: (e) => (v.current = e),
+            onMatch: u ? o : i,
+            onTypingChange: (e) => (y.current = e),
           }),
-          C = (0, D.It)(u.context, { role: s }),
+          b = (0, D.It)(m.context, { role: s }),
           {
-            getFloatingProps: b,
+            getFloatingProps: E,
             getReferenceProps: S,
-            getItemProps: E,
-          } = (0, D.bv)([C, m, d, f, h, y]);
+            getItemProps: x,
+          } = (0, D.bv)([b, d, f, g, _, C]);
         return {
-          floating: u,
-          getFloatingProps: b,
+          floating: m,
+          getFloatingProps: E,
           getReferenceProps: S,
-          getItemProps: E,
-          open: p,
+          getItemProps: x,
+          open: u,
           activeIndex: r,
           selectedIndex: c,
           setSelectedIndex: i,
-          elementsRef: g,
-          labelsRef: _,
-          typingRef: v,
+          elementsRef: h,
+          labelsRef: v,
+          typingRef: y,
           initialFocus: l.virtualItemFocus ? -1 : void 0,
         };
       }
@@ -1687,7 +1705,8 @@
               const { children: t, ...n } = e,
                 r = X({
                   ...n.state,
-                  width: "target",
+                  width: "dropdown",
+                  placement: "bottom-end",
                   gutter: "4",
                   interactions: { virtualItemFocus: !0, focus: !0 },
                   role: "combobox",
@@ -1701,20 +1720,22 @@
             },
             TextInput: function (e) {
               const {
-                state: {
-                  onTextChange: t,
-                  activeIndex: n,
-                  onOpenChange: r,
-                  setActiveIndex: o,
-                  suggestions: c,
-                  onSuggestionSelected: i,
-                },
-              } = oe("<Autocomplete.TextInput>");
+                  state: {
+                    onTextChange: t,
+                    activeIndex: n,
+                    onOpenChange: r,
+                    setActiveIndex: o,
+                    suggestions: c,
+                    onSuggestionSelected: i,
+                  },
+                } = oe("<Autocomplete.TextInput>"),
+                l = (0, a.useRef)(null);
               return a.createElement(
                 ee.Anchor,
                 null,
                 a.createElement(Y, {
                   ...e,
+                  inputRef: l,
                   onTextChange: t,
                   "aria-autocomplete": "list",
                   onKeyDown: (e) => {
@@ -1728,6 +1749,11 @@
                       e.preventDefault(),
                       e.stopPropagation());
                   },
+                  onKeyDownCapture: (e) => {
+                    ("Home" !== e.key && "End" !== e.key) ||
+                      e.stopPropagation();
+                  },
+                  role: "combobox",
                 }),
               );
             },
@@ -2003,9 +2029,9 @@
       }
       var Ce = n(88268),
         be = n(52038),
-        Se = n(42475);
-      function Ee() {
-        return (0, Se.A)().languages[0];
+        Ee = n(42475);
+      function Se() {
+        return (0, Ee.A)().languages[0];
       }
       var xe = n(82277);
       function we(e) {
@@ -2022,28 +2048,20 @@
             onIndexSelected: m,
             refScrollElement: d,
           } = Me("<Combobox.Options>"),
-          f = (e) => {
-            "Enter" === e.key &&
-              null !== o &&
-              (m(o),
-              l || (s(null), p(!1)),
-              e.preventDefault(),
-              e.stopPropagation());
-          },
-          g = i.startsWith("top"),
-          h = a.createElement(c.a, { overflow: "auto", ref: d }, e.children);
+          f = i.startsWith("top"),
+          g = a.createElement(c.a, { overflow: "auto", ref: d }, e.children);
         return a.createElement(
           ee.Positioner,
           { ref: t },
           a.createElement(
             C,
             { direction: "column", maxHeight: "var(--popover-max-height)" },
-            g && h,
+            f && g,
             a.createElement(
               c.a,
               {
                 flexShrink: "0",
-                className: (0, be.A)(xe.FilterBorder, g ? xe.Top : xe.Bottom),
+                className: (0, be.A)(xe.FilterBorder, f ? xe.Top : xe.Bottom),
               },
               a.createElement(Y, {
                 margin: "3",
@@ -2051,8 +2069,17 @@
                 radius: "sm",
                 value: n,
                 onTextChange: r,
-                onKeyDown: f,
-                onKeyDownCapture: f,
+                onKeyDown: (e) => {
+                  "Enter" === e.key &&
+                    null !== o &&
+                    (m(o),
+                    l || (s(null), p(!1)),
+                    e.preventDefault(),
+                    e.stopPropagation());
+                },
+                onKeyDownCapture: (e) => {
+                  ("Home" !== e.key && "End" !== e.key) || e.stopPropagation();
+                },
                 placeholder: u,
                 inputRef: (e) => {
                   e && e.focus({ preventScroll: !0 });
@@ -2060,7 +2087,7 @@
                 autoComplete: "off",
               }),
             ),
-            !g && h,
+            !f && g,
           ),
         );
       }
@@ -2183,7 +2210,8 @@
             u = X({
               open: n.bOpen,
               onOpenChange: n.setOpen,
-              width: "target",
+              width: "dropdown",
+              placement: "bottom-end",
               gutter: "4",
               activeIndex: n.activeIndex,
               setActiveIndex: n.setActiveIndex,
@@ -2290,8 +2318,8 @@
               onClear: y,
               refPopover: C,
               clearable: b,
-              filterPlaceholder: S,
-              onIndexSelected: E,
+              filterPlaceholder: E,
+              onIndexSelected: S,
               popoverPlacement: x,
               ...w
             } = Me("<ComboboxTrigger>"),
@@ -2411,7 +2439,7 @@
             const e = t.map((e) => l(e));
             m =
               "ListFormat" in Intl
-                ? new Intl.ListFormat(Ee().strISOCode).format(e)
+                ? new Intl.ListFormat(Se().strISOCode).format(e)
                 : e.join(", ");
           }
           return a.createElement(
@@ -2543,7 +2571,8 @@
             m = X({
               open: n.bOpen,
               onOpenChange: n.setOpen,
-              width: "target",
+              width: "dropdown",
+              placement: "bottom-end",
               selectedIndex: s,
               setSelectedIndex: (e) => n.onItemSelectionChange(n.rgOptions[e]),
               activeIndex: i,
@@ -2554,7 +2583,7 @@
               scroll: !0,
             });
           return a.createElement(
-            qe.Provider,
+            $e.Provider,
             { value: u },
             a.createElement(ee.Root, { state: m }, t),
           );
@@ -2565,7 +2594,7 @@
               onItemSelectionChange: r,
               multiselect: o,
               selectedValue: c,
-            } = $e("<SelectTrigger>"),
+            } = qe("<SelectTrigger>"),
             i = "string" == typeof t ? t : void 0,
             l = o ? c.includes(t) : c === t;
           return a.createElement(
@@ -2582,7 +2611,7 @@
           );
         },
         Options: function (e) {
-          const { refPopover: t } = $e("<Select.Options>");
+          const { refPopover: t } = qe("<Select.Options>");
           return a.createElement(ee.Positioner, { ref: t }, e.children);
         },
         Trigger: function (e) {
@@ -2606,9 +2635,9 @@
               onFocusedIndexChange: y,
               refPopover: C,
               placeholder: b,
-              ...S
-            } = $e("<SelectTrigger>"),
-            E = {
+              ...E
+            } = qe("<SelectTrigger>"),
+            S = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => o(!r),
@@ -2632,9 +2661,9 @@
                 radius: s,
                 hasValue: x,
                 tabIndex: 0,
-                ...S,
+                ...E,
               }),
-              E,
+              S,
               void 0,
             );
           return a.createElement(ee.Anchor, null, k);
@@ -2727,7 +2756,7 @@
             const e = t.map((e) => c(e));
             p =
               "ListFormat" in Intl
-                ? new Intl.ListFormat(Ee().strISOCode).format(e)
+                ? new Intl.ListFormat(Se().strISOCode).format(e)
                 : e.join(", ");
           }
           return a.createElement(
@@ -2748,9 +2777,9 @@
             ),
           );
         }, Ze),
-        qe = (0, a.createContext)(null);
-      function $e(e) {
-        const t = (0, a.useContext)(qe);
+        $e = (0, a.createContext)(null);
+      function qe(e) {
+        const t = (0, a.useContext)($e);
         return t || console.error(`${e} must be used within a <Select>!`), t;
       }
       const Qe = (0, a.createContext)(null),
@@ -2875,7 +2904,7 @@
       const ot = {};
       ot.english = () => n.e(2395).then(n.t.bind(n, 92395, 19));
       var ct = n(61859);
-      const it = (0, Se.l)(async function (e) {
+      const it = (0, Ee.l)(async function (e) {
         if (ot[e]) return ot[e]();
       });
       (it.Localize = ct.we),
@@ -3116,7 +3145,7 @@
           r
         );
       }
-      function St(e) {
+      function Et(e) {
         const { facet: t, state: n, onStateChange: r } = e;
         switch (t.fieldType) {
           case "checkbox": {
@@ -3162,7 +3191,7 @@
             );
         }
       }
-      function Et(e, t, n) {
+      function St(e, t, n) {
         let a = Object.keys(e.tags || {}).map((t) => xt(e.name, t, e.tags[t]));
         n ? a.sort(n) : (a = (0, rt.Z)(a, (e) => e.strLabel));
         return { strLabel: e.localized_name, rgOptions: a, fieldType: t };
@@ -3524,10 +3553,10 @@
           "images/applications/community/knife.png?v=valveisgoodatcaching",
         Kt =
           n.p + "images/applications/community/mg.png?v=valveisgoodatcaching",
-        qt =
+        $t =
           n.p +
           "images/applications/community/pistol.png?v=valveisgoodatcaching",
-        $t =
+        qt =
           n.p +
           "images/applications/community/rifle.png?v=valveisgoodatcaching",
         Qt =
@@ -3590,10 +3619,10 @@
         bn =
           n.p +
           "images/applications/community/glock.png?v=valveisgoodatcaching",
-        Sn =
+        En =
           n.p +
           "images/applications/community/usp_silencer.png?v=valveisgoodatcaching",
-        En =
+        Sn =
           n.p +
           "images/applications/community/elite.png?v=valveisgoodatcaching",
         xn =
@@ -3670,10 +3699,10 @@
         Kn =
           n.p +
           "images/applications/community/knife_skeleton.png?v=valveisgoodatcaching",
-        qn =
+        $n =
           n.p +
           "images/applications/community/knife_stiletto.png?v=valveisgoodatcaching",
-        $n =
+        qn =
           n.p +
           "images/applications/community/knife_widowmaker.png?v=valveisgoodatcaching",
         Qn =
@@ -3691,8 +3720,8 @@
         na = {
           Knife: (0, r.YJ)(Zt),
           MG: (0, r.YJ)(Kt),
-          Pistol: (0, r.YJ)(qt),
-          Rifle: (0, r.YJ)($t),
+          Pistol: (0, r.YJ)($t),
+          Rifle: (0, r.YJ)(qt),
           Shotgun: (0, r.YJ)(Qt),
           SMG: (0, r.YJ)(Xt),
           Sniper: (0, r.YJ)(en),
@@ -3718,8 +3747,8 @@
           revolver: (0, r.YJ)(yn),
           deagle: (0, r.YJ)(Cn),
           glock: (0, r.YJ)(bn),
-          usp_silencer: (0, r.YJ)(Sn),
-          elite: (0, r.YJ)(En),
+          usp_silencer: (0, r.YJ)(En),
+          elite: (0, r.YJ)(Sn),
           hkp2000: (0, r.YJ)(xn),
           cz75a: (0, r.YJ)(wn),
           ssg08: (0, r.YJ)(kn),
@@ -3746,8 +3775,8 @@
           knife_outdoor: (0, r.YJ)(Un),
           knife_css: (0, r.YJ)(Zn),
           knife_skeleton: (0, r.YJ)(Kn),
-          knife_stiletto: (0, r.YJ)(qn),
-          knife_widowmaker: (0, r.YJ)($n),
+          knife_stiletto: (0, r.YJ)($n),
+          knife_widowmaker: (0, r.YJ)(qn),
           knife_butterfly: (0, r.YJ)(Qn),
           knife_m9_bayonet: (0, r.YJ)(Xn),
           knife_karambit: (0, r.YJ)(ea),
@@ -4148,7 +4177,7 @@
                     r.push({ facet: n, img: e.img, toggle: i });
                   } else {
                     const n = t[e.facet];
-                    r.push({ facet: Et(n, "select"), img: "" });
+                    r.push({ facet: St(n, "select"), img: "" });
                     for (const e of Object.keys(n.tags || {})) a(n.name, e);
                   }
                 const o = [];
@@ -4267,7 +4296,7 @@
                       };
                     }
                     return {
-                      facet: Et(t, "select", n),
+                      facet: St(t, "select", n),
                       condition: da(e.trigger),
                     };
                   }),
@@ -4398,7 +4427,7 @@
               C,
               { gap: "2", direction: "column" },
               u.map((e) =>
-                a.createElement(St, {
+                a.createElement(Et, {
                   key: e.facet.strLabel,
                   facet: e.facet,
                   ...n,
@@ -4607,7 +4636,7 @@
           const e = u.map((e) => e.strLabel);
           _ =
             "ListFormat" in Intl
-              ? new Intl.ListFormat(Ee().strISOCode).format(e)
+              ? new Intl.ListFormat(Se().strISOCode).format(e)
               : e.join(", ");
         }
         return a.createElement(
@@ -4782,7 +4811,7 @@
           const e = u.map((e) => e.strLabel);
           _ =
             "ListFormat" in Intl
-              ? new Intl.ListFormat(Ee().strISOCode).format(e)
+              ? new Intl.ListFormat(Se().strISOCode).format(e)
               : e.join(", ");
         }
         return a.createElement(
@@ -4839,8 +4868,8 @@
           ),
         );
       }
-      var Sa = n(83281),
-        Ea = n(2627),
+      var Ea = n(83281),
+        Sa = n(2627),
         xa = n(10430);
       const wa = {
         Home: (e) => ka("", e),
@@ -4887,7 +4916,7 @@
           u = s ? l.rgAppData && l.rgAppData[Ta] : t.filterInGame.app,
           m = Ga(u);
         return a.createElement(
-          Sa.u.Provider,
+          Ea.u.Provider,
           { value: i },
           a.createElement(
             Ft.Provider,
@@ -4959,7 +4988,7 @@
                     ),
                   ),
                   a.createElement(
-                    $a,
+                    qa,
                     null,
                     !s &&
                       a.createElement(Ba, {
@@ -5079,7 +5108,7 @@
                   "span",
                   {
                     onClick: () => {
-                      (0, Ea.lc)("marketFiltersBeta", "0", 30),
+                      (0, Sa.lc)("marketFiltersBeta", "0", 30),
                         window.location.reload();
                     },
                     className: lt.BetaLink,
@@ -5144,7 +5173,7 @@
       function Ha(e) {
         var t, n;
         const { value: r, onTextChange: c, app: i, onClearApp: l, ...s } = e,
-          p = (0, Sa.b)(),
+          p = (0, Ea.b)(),
           u = null == i ? void 0 : i.appid,
           m = (0, o.I)({
             queryKey: ["market_search_suggestions", r, u],
@@ -5178,8 +5207,8 @@
             : void 0,
           [_, v] = (0, a.useState)(!1),
           [y, b] = (0, a.useState)(!1),
-          S = _ || !y,
-          E = (0, Ia.wY)(
+          E = _ || !y,
+          S = (0, Ia.wY)(
             (0, a.useCallback)((e) => {
               const t = e.contentRect.width < 300;
               v(t);
@@ -5206,12 +5235,12 @@
                   src: i.icon,
                   alt: "",
                 }),
-                a.createElement(ja, { visible: !S }, i.name),
+                a.createElement(ja, { visible: !E }, i.name),
                 a.createElement(te, null),
               )
             : null,
           w =
-            i && !S
+            i && !E
               ? it.Localize(
                   "#AdvancedSearch_TextSearch_PlaceholderWithApp",
                   i.name,
@@ -5227,7 +5256,7 @@
             afterContent: h,
             title: it.Localize("#AdvancedSearch_TextSearch_Tooltip"),
             beforeContent: x,
-            ref: E,
+            ref: S,
             onFocus: () => b(!0),
             onBlur: () => b(!1),
           }),
@@ -5268,7 +5297,7 @@
             listingCount: i,
             searchScore: l,
           } = e,
-          s = (0, Sa.b)();
+          s = (0, Ea.b)();
         return a.createElement(
           ae.Suggestion,
           {
@@ -5370,7 +5399,7 @@
             onSelectionChange: (e) => c({ ...o, app: e, facets: {} }),
           }),
           p &&
-            a.createElement(qa, {
+            a.createElement($a, {
               loading: u.isLoading,
               apps: null === (t = u.data) || void 0 === t ? void 0 : t.rgInGame,
               filterBy: n,
@@ -5423,7 +5452,7 @@
         delete y[za];
         const b = !i.facets.Event || 0 === Object.keys(i.facets).length;
         !i.app || delete y[Aa];
-        const S = cr(Ta, y);
+        const E = cr(Ta, y);
         if (
           ((0, a.useEffect)(() => {
             !u && v && (m(!0), s && v[s.appid] && l({ ...i, app: s }));
@@ -5441,7 +5470,7 @@
               it.Localize("#AdvancedSearch_FacetLoadError"),
             ),
           );
-        const E = (
+        const S = (
           null === (t = f.data) || void 0 === t
             ? void 0
             : t.rgPlaytime.length
@@ -5463,9 +5492,9 @@
             }),
           b &&
             d &&
-            a.createElement(qa, {
+            a.createElement($a, {
               loading: f.isLoading,
-              apps: E,
+              apps: S,
               filterBy: v,
               onSelect: (e) =>
                 l({
@@ -5475,7 +5504,7 @@
                 }),
             }),
           a.createElement(Ka, { facet: C, state: i, onStateChange: l }),
-          a.createElement(Xa, { facets: S, state: i, onStateChange: l }),
+          a.createElement(Xa, { facets: E, state: i, onStateChange: l }),
         );
       }
       const Za = {
@@ -5609,7 +5638,7 @@
           ),
         );
       }
-      function qa(e) {
+      function $a(e) {
         const { apps: t = [], filterBy: n = {}, onSelect: o, loading: i } = e,
           l = !(0, xa.LT)("sm"),
           s = (0, a.useMemo)(
@@ -5629,7 +5658,7 @@
         const d = r.iA.logged_in;
         return a.createElement(
           C,
-          { direction: "column", marginTop: "2", marginBottom: "2" },
+          { direction: "column", marginTop: "3", marginBottom: "2" },
           a.createElement(
             p,
             { weight: "medium", size: "3" },
@@ -5673,7 +5702,7 @@
           ),
         );
       }
-      function $a(e) {
+      function qa(e) {
         return a.createElement(
           C,
           { minHeight: "min(400px, 30vh)", direction: "column" },
@@ -5755,7 +5784,7 @@
               Ct,
               { key: `facets_${o}` },
               e.map((e) =>
-                a.createElement(St, {
+                a.createElement(Et, {
                   key: e.strLabel,
                   facet: e,
                   state: n,
@@ -5903,7 +5932,7 @@
           const o = e[t];
           if (!o.tags) continue;
           const c = Object.keys(o.tags).length < n,
-            i = Et(o, c ? "checkbox" : "select");
+            i = St(o, c ? "checkbox" : "select");
           c ? r.push(i) : a.push(i);
         }
         return [a, r].filter((e) => e.length > 0);

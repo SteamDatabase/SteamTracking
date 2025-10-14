@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Detaliile subiectului au fost actualizate",
 	"moderationaction_locked": "Blocat",
 	"moderationaction_unlocked": "Deblocat",
-	"moderationaction_unknown": "Acțiune necunoscută"
+	"moderationaction_unknown": "Acțiune necunoscută",
+	"moderatormessage_count_note": "Note: %1$s",
+	"moderatormessage_count_warning": "Avertismente: %1$s",
+	"moderatormessage_count_bannotice": "Interdicții: %1$s",
+	"moderatormessage_count_contentremoval": "Înștiințări de înlăturare a conținutului: %1$s"
 }`);
     },
   },

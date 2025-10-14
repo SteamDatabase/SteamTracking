@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Podrobnosti předmětu byly aktualizovány",
 	"moderationaction_locked": "Uzamčeno",
 	"moderationaction_unlocked": "Odemčeno",
-	"moderationaction_unknown": "Neznámé opatření"
+	"moderationaction_unknown": "Neznámé opatření",
+	"moderatormessage_count_note": "Upozornění: %1$s",
+	"moderatormessage_count_warning": "Varování: %1$s",
+	"moderatormessage_count_bannotice": "Bany: %1$s",
+	"moderatormessage_count_contentremoval": "Upozornění o smazání obsahu: %1$s"
 }`);
     },
   },

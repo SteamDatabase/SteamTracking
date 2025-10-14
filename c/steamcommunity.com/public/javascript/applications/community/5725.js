@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Подробиці скарги оновлено",
 	"moderationaction_locked": "Заблоковано",
 	"moderationaction_unlocked": " Розблоковано",
-	"moderationaction_unknown": "Невідома дія"
+	"moderationaction_unknown": "Невідома дія",
+	"moderatormessage_count_note": "Примітки: %1$s",
+	"moderatormessage_count_warning": "Попередження: %1$s",
+	"moderatormessage_count_bannotice": "Блокування: %1$s",
+	"moderatormessage_count_contentremoval": "Повідомлення про вилучення вмісту: %1$s"
 }`);
     },
   },

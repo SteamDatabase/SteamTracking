@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Konu detayları güncellendi",
 	"moderationaction_locked": "Kilitlendi",
 	"moderationaction_unlocked": "Açıldı",
-	"moderationaction_unknown": "Bilinmeyen eylem"
+	"moderationaction_unknown": "Bilinmeyen eylem",
+	"moderatormessage_count_note": "Notlar: %1$s",
+	"moderatormessage_count_warning": "Uyarılar: %1$s",
+	"moderatormessage_count_bannotice": "Yasaklamalar: %1$s",
+	"moderatormessage_count_contentremoval": "İçerik Kaldırma Uyarıları: %1$s"
 }`);
     },
   },

@@ -2328,6 +2328,13 @@
             _.sm_Instance
           );
         }
+        static GetSummaryStore() {
+          return (
+            _.sm_SummaryInstance ||
+              ((_.sm_SummaryInstance = new _(!0)), _.sm_SummaryInstance.Init()),
+            _.sm_SummaryInstance
+          );
+        }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

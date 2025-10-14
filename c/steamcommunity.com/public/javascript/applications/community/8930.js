@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Chi tiết chủ đề đã cập nhật",
 	"moderationaction_locked": "Đã khóa",
 	"moderationaction_unlocked": "Đã mở khóa",
-	"moderationaction_unknown": "Hành động không xác định"
+	"moderationaction_unknown": "Hành động không xác định",
+	"moderatormessage_count_note": "Ghi chú: %1$s",
+	"moderatormessage_count_warning": "Cảnh báo: %1$s",
+	"moderatormessage_count_bannotice": "Lệnh cấm: %1$s",
+	"moderatormessage_count_contentremoval": "Thông báo gỡ nội dung: %1$s"
 }`);
     },
   },

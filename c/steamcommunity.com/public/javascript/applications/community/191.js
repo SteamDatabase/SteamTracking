@@ -180,7 +180,11 @@
 	"moderationaction_updated": "รายละเอียดหัวข้อได้รับการอัปเดต",
 	"moderationaction_locked": "ถูกล็อก",
 	"moderationaction_unlocked": "ถูกปลดล็อก",
-	"moderationaction_unknown": "การดำเนินการที่ไม่รู้จัก"
+	"moderationaction_unknown": "การดำเนินการที่ไม่รู้จัก",
+	"moderatormessage_count_note": "หมายเหตุ: %1$s",
+	"moderatormessage_count_warning": "คำเตือน: %1$s",
+	"moderatormessage_count_bannotice": "แบน: %1$s",
+	"moderatormessage_count_contentremoval": "แจ้งเตือนการลบเนื้อหา: %1$s"
 }`);
     },
   },

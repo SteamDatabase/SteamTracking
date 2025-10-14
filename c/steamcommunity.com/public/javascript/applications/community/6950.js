@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Подробностите на тематиката са обновени",
 	"moderationaction_locked": "Заключено",
 	"moderationaction_unlocked": "Отключено",
-	"moderationaction_unknown": "Неизвестно действие"
+	"moderationaction_unknown": "Неизвестно действие",
+	"moderatormessage_count_note": "Забележки: %1$s",
+	"moderatormessage_count_warning": "Предупреждения: %1$s",
+	"moderatormessage_count_bannotice": "Забрани: %1$s",
+	"moderatormessage_count_contentremoval": "Известия за премахване на съдържание: %1$s"
 }`);
     },
   },

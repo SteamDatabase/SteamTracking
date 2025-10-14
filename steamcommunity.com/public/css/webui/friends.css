@@ -480,6 +480,9 @@
   height: 24px;
   display: flex;
 }
+.gamepadui_svg_library_FlipInRTL_1CpOA:dir(rtl) {
+  scale: -1 1;
+}
 .friendsnooze_SnoozeContainer_1Dsum {
   position: relative;
   overflow: hidden;
@@ -626,7 +629,7 @@
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfilePlayer_2jZ0A
   .miniprofile_playerContent_2-pwJ {
-  padding-left: 16px;
+  padding-inline-start: 16px;
   margin-bottom: 30px;
   margin-top: auto;
 }
@@ -692,7 +695,7 @@
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileNotFriends_3Ea91 {
   position: absolute;
   top: 4px;
-  right: 6px;
+  inset-inline-end: 6px;
   text-transform: uppercase;
   font-size: 12px;
   color: rgba(184, 156, 80, 0.75);
@@ -708,12 +711,12 @@
   position: absolute;
   overflow: visible;
   z-index: 3;
-  left: 4px;
+  inset-inline-start: 4px;
   top: 8px;
 }
 .miniprofile_miniProfileHover_2AWay
   .miniprofile_miniprofile_arrow_1YsNo.miniprofile_left_1qS_b {
-  border-right: 8px solid #41444e;
+  border-inline-end: 8px solid #41444e;
 }
 .miniprofile_miniProfileContent_1xTAT .miniprofile_playerAvatar_36eQg {
   width: 90px;
@@ -893,7 +896,7 @@
   width: 90px;
   height: 34px;
   top: 18px;
-  left: 16px;
+  inset-inline-start: 16px;
   position: absolute;
 }
 .miniprofile_miniProfileContent_1xTAT
@@ -954,7 +957,7 @@
   position: relative;
   height: 34px;
   display: flex;
-  padding-left: 16px;
+  padding-inline-start: 16px;
   margin-bottom: 8px;
 }
 .miniprofile_miniProfileContent_1xTAT
@@ -978,7 +981,7 @@
   justify-content: center;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 12px;
+  margin-inline-start: 12px;
 }
 .miniprofile_miniProfileContent_1xTAT
   .miniprofile_miniProfileBottom_26ga2
@@ -2879,7 +2882,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   background-color: #2a2e36;
   padding-top: 6px;
   padding-bottom: 6px;
-  padding-left: 6px;
+  padding-inline-start: 6px;
   border-radius: 2px;
   color: #dfe3e6;
   box-shadow: inset 0 1px 1px 0px #000a;
@@ -2892,18 +2895,20 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   box-shadow: none;
 }
 .radio_Group_1ml4S.radio_CenteredPill_L2J24 > :first-child {
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 0;
+  border-start-start-radius: 20px;
   border-top: 2px solid #282c2f;
   border-bottom: 2px solid #282c2f;
-  border-left: 2px solid #282c2f;
-  border-right: none;
+  border-inline-start: 2px solid #282c2f;
+  border-inline-end: none;
 }
 .radio_Group_1ml4S.radio_CenteredPill_L2J24 > :last-child {
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0;
+  border-end-end-radius: 20px;
   border-top: 2px solid #282c2f;
   border-bottom: 2px solid #282c2f;
-  border-right: 2px solid #282c2f;
-  border-left: none;
+  border-inline-end: 2px solid #282c2f;
+  border-inline-start: none;
 }
 .radio_Button_Hijmc {
   flex: 1;
@@ -2913,7 +2918,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   align-items: center;
   text-align: center;
   padding: 6px;
-  margin-right: 6px;
+  margin-inline-end: 6px;
   transition: background-color .18s ease-in-out;
   background-color: #2a2e36;
   border-radius: 2px;
@@ -2928,7 +2933,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .radio_CenteredPill_L2J24 .radio_Button_Hijmc {
   flex: none;
-  margin-right: 0px;
+  margin-inline-end: 0px;
   padding: 10px;
   background-color: transparent;
   border: 2px solid #282c2f;
@@ -2947,7 +2952,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
   cursor: default;
   color: #fff;
-  border-right: none;
+  border-inline-end: none;
 }
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW,
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW:hover {
@@ -2969,7 +2974,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   width: 1px;
   height: 80%;
   background: #3d4450;
-  left: -3px;
+  inset-inline-start: -3px;
   position: absolute;
 }
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
@@ -3033,7 +3038,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3056,7 +3061,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3076,7 +3081,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3131,7 +3136,10 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_CFTLX {
-  padding: 24px 0px 0px 24px;
+  padding-top: 24px;
+  padding-inline-start: 24px;
+  padding-inline-end: 0px;
+  padding-bottom: 0px;
   background: #171d25;
 }
 @media (prefers-contrast: more) {
@@ -3150,11 +3158,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .DesktopUI
   .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.pagedsettings_NoPadding_qvR0K
   .DialogBody {
-  padding-right: 0px;
+  padding-inline-end: 0px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX.DesktopUI .DialogBody,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogBody {
-  padding-right: 12px;
+  padding-inline-end: 12px;
   padding-bottom: 24px;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX
@@ -3168,7 +3176,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   }
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
-  margin-right: 0;
+  margin-inline-end: 0;
 }
 .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageContent_CFTLX .DialogHeader {
@@ -3192,7 +3200,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 @media (prefers-contrast: more) {
   .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
     background: #000;
-    border-right: 1px solid #fff;
+    border-inline-end: 1px solid #fff;
   }
 }
 @media screen and (max-width: 500px) {
@@ -3211,7 +3219,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
-  padding-left: 0px;
+  padding-inline-start: 0px;
   min-width: 160px;
   min-height: 95vh;
 }
@@ -3221,7 +3229,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .pagedsettings_PagedSettingsDialog_Title_2rjVT {
   text-transform: uppercase;
   margin-bottom: 20px;
-  padding-left: 24px;
+  padding-inline-start: 24px;
   color: #1a9fff;
   font-weight: 700;
   font-size: 17px;
@@ -3231,7 +3239,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .pagedsettings_PagedSettingsDialog_Title_2rjVT.DesktopUI,
 .DesktopUI .pagedsettings_PagedSettingsDialog_Title_2rjVT {
-  padding-right: 14px;
+  padding-inline-end: 14px;
 }
 .pagedsettings_PagedSettingsDialog_PageList_18QCu {
   line-height: 16px;
@@ -3264,7 +3272,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   min-width: 0;
   text-overflow: ellipsis;
   white-space: normal;
-  padding: 10px 8px 10px 24px;
+  padding-block: 10px;
+  padding-inline-start: 24px;
+  padding-inline-end: 8px;
   font-size: 14px;
   font-weight: 400;
   color: #b8bcbf;
@@ -3285,7 +3295,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   .pagedsettings_PageListItem_Icon_1rD8X {
   height: 20px;
   width: 20px;
-  margin-right: 12px;
+  margin-inline-end: 12px;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr
   .pagedsettings_PageListItem_Icon_1rD8X.DesktopUI,
@@ -3360,7 +3370,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   height: 1px;
   background: #3d4450;
   margin-bottom: 14px;
-  margin-right: 24px;
+  margin-inline-end: 24px;
   flex-shrink: 0;
 }
 .pagedsettings_PageListSeparator_1Hye7.DesktopUI,
@@ -3375,7 +3385,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .pagedsettings_HidePageListButton_3LLH_,
 .pagedsettings_ReturnToPageListButton_1cWmu {
   position: absolute;
-  left: 24px;
+  inset-inline-start: 24px;
   top: 8px;
   z-index: 5;
   width: 32px;
@@ -3394,7 +3404,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   width: 16px;
   height: 16px;
   margin-top: 4px;
-  margin-left: 8px;
+  margin-inline-start: 8px;
 }
 .pagedsettings_HidePageListButton_3LLH_:hover,
 .pagedsettings_ReturnToPageListButton_1cWmu:hover {
@@ -3609,7 +3619,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   padding: 0px;
   margin: 0px;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: start;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -3618,7 +3628,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3635,7 +3645,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3652,7 +3662,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3693,7 +3703,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3757,7 +3767,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -3934,8 +3944,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_StandaloneFieldSeparator_1vcky {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
-  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
-  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+  margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
 }
 .gamepaddialog_Field_eKmEX {
   display: flex;
@@ -3944,14 +3953,13 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   position: relative;
   background: none;
   border-radius: 0;
-  padding-left: calc(
+  padding-inline-start: calc(
     var(--field-negative-horizontal-margin) +
     var(--indent-level) *
     20px
   );
-  padding-right: var(--field-negative-horizontal-margin);
-  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
-  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
+  padding-inline-end: var(--field-negative-horizontal-margin);
+  margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
   transition-property: transform, background-color;
   transition-duration: .32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -3968,7 +3976,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_CompactPadding_3hgIZ {
   padding: 8px 0;
-  margin-left: calc(
+  margin-inline-start: calc(
     -1 *
     var(--field-negative-horizontal-margin) +
     var(--indent-level) *
@@ -3988,13 +3996,13 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorStandard_GxgIy::after {
   bottom: -0.5px;
-  margin-left: calc(var(--indent-level) * 18px);
+  margin-inline-start: calc(var(--indent-level) * 18px);
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorThick_39x36::after {
   bottom: -0.75px;
-  margin-left: calc(var(--indent-level) * 18px);
+  margin-inline-start: calc(var(--indent-level) * 18px);
   height: 1.5px;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -4145,7 +4153,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   width: auto;
 }
 .gamepaddialog_FieldChildrenInner_2o2fX > svg:not(:first-child) {
-  margin-left: 16px;
+  margin-inline-start: 16px;
 }
 .gamepaddialog_FieldChildrenInner_2o2fX .DialogInputLabelGroup {
   margin-bottom: 0px;
@@ -4158,10 +4166,10 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   flex-grow: 0;
 }
 .gamepaddialog_FieldIcon_2DM37.gamepaddialog_Front_2sj0i {
-  padding-right: 10px;
+  padding-inline-end: 10px;
 }
 .gamepaddialog_FieldIcon_2DM37.gamepaddialog_BeforeChildren_1mbHa {
-  padding-right: max(10px, var(--field-row-children-spacing));
+  padding-inline-end: max(10px, var(--field-row-children-spacing));
 }
 .gamepaddialog_FieldIcon_2DM37 svg {
   height: 20px;
@@ -4260,7 +4268,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_FieldLabel_3jMlJ > svg {
   position: relative;
   top: 2px;
-  margin-right: 12px;
+  margin-inline-end: 12px;
 }
 .gamepaddialog_FieldDescription_1W1to {
   font-size: 12px;
@@ -4365,7 +4373,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -4409,9 +4417,12 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   width: 38px;
   height: 22px;
   position: relative;
-  margin-right: 4px;
+  margin-inline-end: 4px;
   border-radius: 16px;
   transition: box-shadow 50ms ease-out;
+}
+.gamepaddialog_Toggle_9Ql-o:dir(rtl) {
+  scale: -1 1;
 }
 .gamepaddialog_Toggle_9Ql-o.gpfocus {
   outline: none;
@@ -4419,7 +4430,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Toggle_9Ql-o.gpfocus:after {
   content: "";
   position: absolute;
-  left: -10%;
+  inset-inline-start: -10%;
   top: -15%;
   width: 120%;
   height: 132%;
@@ -4505,7 +4516,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_DropDownControlButtonContents_3OHR1 {
   display: flex;
-  text-align: left;
+  text-align: start;
 }
 .gamepaddialog_DropDownControlButtonContents_3OHR1 > svg {
   height: 1em;
@@ -4519,7 +4530,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   width: 2ch;
   height: 100%;
   flex-shrink: 0;
-  margin-right: 1ch;
+  margin-inline-end: 1ch;
 }
 .gamepaddialog_DropDownRow_1fwM1 .gamepaddialog_Label_sNbXz {
   flex-grow: 1;
@@ -4544,15 +4555,14 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   flex-grow: 1;
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_AlignRight_DfEz4 {
-  margin-right: calc(-1 * var(--controls-list-spacing));
+  margin-inline-end: calc(-1 * var(--controls-list-spacing));
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_AlignLeft_32h79 {
-  margin-left: calc(-1 * var(--controls-list-spacing));
+  margin-inline-start: calc(-1 * var(--controls-list-spacing));
   justify-content: start;
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_AlignCenter_2ilj8 {
-  margin-left: calc(-0.5 * var(--controls-list-spacing));
-  margin-right: calc(-0.5 * var(--controls-list-spacing));
+  margin-inline: calc(-0.5 * var(--controls-list-spacing));
   justify-content: center;
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_FullWidth_3vgH- {
@@ -4578,20 +4588,19 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_AlignLeft_32h79
   .gamepaddialog_ControlsListChild_2LQjj {
-  margin-left: var(--controls-list-spacing);
+  margin-inline-start: var(--controls-list-spacing);
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_AlignRight_DfEz4
   .gamepaddialog_ControlsListChild_2LQjj {
-  margin-right: var(--controls-list-spacing);
+  margin-inline-end: var(--controls-list-spacing);
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_AlignRight_DfEz4
   .gamepaddialog_ControlsListChild_2LQjj:last-child {
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 .gamepaddialog_ControlsListOuterPanel_2XSsN.gamepaddialog_AlignCenter_2ilj8
   .gamepaddialog_ControlsListChild_2LQjj {
-  margin-left: calc(0.5 * var(--controls-list-spacing));
-  margin-right: calc(0.5 * var(--controls-list-spacing));
+  margin-inline: calc(0.5 * var(--controls-list-spacing));
 }
 .gamepaddialog_BottomButtons_UeBsD.gamepaddialog_StandardPadding_xIITX {
   padding-top: 40px;
@@ -4859,7 +4868,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -4904,7 +4913,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -5184,6 +5193,13 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   min-width: var(--slider-min-width, 100px);
   transition: filter 50ms ease-in;
 }
+.gamepadslider_SliderControl_1udlG:dir(rtl) {
+  --inverse-normalized-value: calc(-1 * (1 - var(--normalized-slider-value)));
+  --inverse-normalized-default-value: calc(
+    -1 *
+    (1 - var(--normalized-slider-default-value))
+  );
+}
 .gamepadslider_SliderControl_1udlG:not(.gamepadslider_Disabled_35GyZ) {
   cursor: pointer;
 }
@@ -5222,8 +5238,8 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
     var(--normalized-fill-end) -
     var(--normalized-fill-start)
   );
-  left: var(--normalized-fill-start);
-  right: 0;
+  inset-inline-start: var(--normalized-fill-start);
+  inset-inline-end: 0;
   top: 0;
   bottom: 0;
   background-color: var(--left-track-color);
@@ -5321,7 +5337,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   height: 24px;
   width: 24px;
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   box-sizing: content-box;
   pointer-events: none;
 }
@@ -5345,7 +5361,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   padding-bottom: 4px;
   width: 3px;
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   box-sizing: content-box;
   pointer-events: all;
   border-radius: 1px;
@@ -5356,17 +5372,17 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: absolute;
   box-sizing: content-box;
   pointer-events: all;
-  right: 0;
+  inset-inline-end: 0;
 }
 .gamepadslider_ParenSliderHandle_2Yg4-.gamepadslider_Left_2vrO5 svg {
   position: relative;
-  right: 5px;
+  inset-inline-end: 5px;
 }
 .gamepadslider_Icon_K9V_G {
   height: 24px;
   width: 24px;
   margin: auto 0;
-  margin-right: 12px;
+  margin-inline-end: 12px;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -5403,12 +5419,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-align: center;
 }
 .gamepadslider_SliderNotchLabel_dbACW.gamepadslider_AlignToLeft_3jR_d {
-  text-align: left;
-  margin-right: auto;
+  text-align: start;
+  margin-inline-end: auto;
 }
 .gamepadslider_SliderNotchLabel_dbACW.gamepadslider_AlignToRight_OBP79 {
-  text-align: right;
-  margin-left: auto;
+  text-align: end;
+  margin-inline-start: auto;
 }
 .gamepadslider_SliderNotchTick_u8QEa {
   width: 4px;
@@ -5426,7 +5442,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .gamepadslider_DescriptionValue_11I0_ {
   text-align: center;
-  margin-left: .7ch;
+  margin-inline-start: .7ch;
   font-variant-numeric: tabular-nums;
   display: flex;
   flex-direction: row;
@@ -5440,7 +5456,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -5457,7 +5473,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   padding: 4px 8px;
   box-sizing: border-box;
   font-variant-numeric: tabular-nums;
-  text-align: right;
+  text-align: end;
   cursor: text;
 }
 .gamepadslider_EditableValue_3aMli.gpfocus,
@@ -5479,7 +5495,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   width: fit-content;
   pointer-events: none;
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   visibility: hidden;
 }
@@ -5541,7 +5557,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   height: 28px;
   top: -2px;
   width: 11px;
-  right: -4px;
+  inset-inline-end: -4px;
   position: absolute;
   box-sizing: content-box;
 }
@@ -5554,7 +5570,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   height: 27px;
   top: -4px;
   width: 11px;
-  right: -3px;
+  inset-inline-end: -3px;
   position: absolute;
   box-sizing: content-box;
   border-radius: 5px 0px 0px 5px;
@@ -5576,7 +5592,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   .gamepadslider_ParenSliderHandleContainer_VKqgk.gamepadslider_Right_3GOpB::before,
 .gamepadslider_CompoundSliderSubSlider_uOFmz.gpfocuswithin
   .gamepadslider_ParenSliderHandleContainer_VKqgk.gamepadslider_Right_3GOpB::before {
-  right: -8px;
+  inset-inline-end: -8px;
   border-radius: 0px 5px 5px 0px;
 }
 .gamepadslider_CompoundSliderSubSliderLabelContainer_2iD1m {
@@ -5584,14 +5600,13 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   width: 100%;
   box-sizing: border-box;
   top: -30px;
-  margin-left: calc(-1 * var(--field-negative-horizontal-margin));
-  margin-right: calc(-1 * var(--field-negative-horizontal-margin));
-  padding-left: calc(
+  margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
+  padding-inline-start: calc(
     var(--field-negative-horizontal-margin) +
     var(--indent-level) *
     20px
   );
-  padding-right: var(--field-negative-horizontal-margin);
+  padding-inline-end: var(--field-negative-horizontal-margin);
 }
 .gamepadslider_CompoundSliderSubSliderLabelPositioner_3Tp7J {
   display: flex;
@@ -5634,7 +5649,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .gamepadslider_DefaultValueTick_1NgUy {
   position: absolute;
-  right: 0;
+  inset-inline-end: 0;
   width: 24px;
   height: 24px;
   display: flex;
@@ -5990,7 +6005,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -6194,7 +6209,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -6362,7 +6377,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -6577,7 +6592,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -6623,7 +6638,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -6788,7 +6803,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -7303,7 +7318,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -7336,7 +7351,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -7477,7 +7492,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -7649,7 +7664,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -7701,7 +7716,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -7719,7 +7734,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -8453,19 +8468,23 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   color: inherit;
 }
 .personanameandstatus_playerName_nOdcT {
+  --mask-direction: right;
   -webkit-mask: linear-gradient(
-    to right,
+    to var(--mask-direction),
     black calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
-    to right,
+    to to var(--mask-direction),
     black calc(100% - 6px),
     rgba(0, 0, 0, 0.15) 100%
   );
   flex: initial;
   padding-inline-end: 6px;
   margin-inline-end: -6px;
+}
+.personanameandstatus_playerName_nOdcT:dir(rtl) {
+  --mask-direction: left;
 }
 .personanameandstatus_playerName_nOdcT.GamepadMode,
 .GamepadMode .personanameandstatus_playerName_nOdcT {
@@ -8505,17 +8524,21 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   overflow: hidden;
   font-size: 10px;
   margin-top: -1px;
+  --mask-direction: right;
   -webkit-mask: linear-gradient(
-    to right,
+    to to var(--mask-direction),
     black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   mask: linear-gradient(
-    to right,
+    to to var(--mask-direction),
     black calc(100% - 8px),
     rgba(0, 0, 0, 0.15) 100%
   );
   padding-inline-end: 24px;
+}
+.personanameandstatus_richPresenceLabel_2Ri00:dir(rtl) {
+  --mask-direction: left;
 }
 .BasicUI .personanameandstatus_richPresenceLabel_2Ri00 {
   display: block;
@@ -12483,6 +12506,7 @@ h3.eventbbcodeparser_Header3_3s7cU {
 }
 a.eventbbcodeparser_LinkButton_2HnDg {
   background-color: #2681da;
+  color: #fff;
   font-size: 14px;
   padding: 6px 20px;
   display: inline-block;
@@ -12599,6 +12623,16 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   max-width: 100%;
   height: auto;
   width: auto;
+}
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleSectionCtn_39HWX
+  .CapsuleImageCtn
+  img,
+.SaleSectionCtn.text_section
+  .eventbbcodeparser_SaleTextCtn_2Tqq0
+  .CapsuleImageCtn
+  img {
+  width: 100%;
 }
 .SaleSectionCtn.text_section
   .eventbbcodeparser_SaleSectionCtn_39HWX
@@ -17547,7 +17581,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -17756,7 +17790,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -17924,7 +17958,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -18139,7 +18173,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -18185,7 +18219,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -18350,7 +18384,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -18868,7 +18902,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -18901,7 +18935,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -18964,7 +18998,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -19531,7 +19565,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -19735,7 +19769,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -19903,7 +19937,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -20118,7 +20152,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -20164,7 +20198,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -20329,7 +20363,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -20844,7 +20878,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -20877,7 +20911,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -21025,7 +21059,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -21227,7 +21261,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -21664,7 +21698,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -21868,7 +21902,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -22036,7 +22070,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -22251,7 +22285,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -22297,7 +22331,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -22462,7 +22496,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -22980,7 +23014,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -23013,7 +23047,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -23535,7 +23569,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -23739,7 +23773,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -23907,7 +23941,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -24122,7 +24156,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -24168,7 +24202,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -24333,7 +24367,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -24851,7 +24885,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -24884,7 +24918,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25510,7 +25544,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25552,7 +25586,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25569,7 +25603,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25609,7 +25643,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25806,7 +25840,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25848,7 +25882,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25865,7 +25899,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -25903,7 +25937,7 @@ html:not(.touch)
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -26600,7 +26634,7 @@ svg.remoteplay_IconMobile_2371n {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -26650,7 +26684,7 @@ svg.remoteplay_IconMobile_2371n {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -26680,7 +26714,7 @@ svg.remoteplay_IconMobile_2371n {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -26990,7 +27024,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -27034,7 +27068,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -27281,7 +27315,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -27488,7 +27522,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -27656,7 +27690,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -27871,7 +27905,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -27917,7 +27951,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -28082,7 +28116,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -28600,7 +28634,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -28633,7 +28667,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -28932,7 +28966,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -31479,7 +31513,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -31683,7 +31717,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -31851,7 +31885,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -32066,7 +32100,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -32112,7 +32146,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -32277,7 +32311,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -32795,7 +32829,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -32828,7 +32862,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -33268,7 +33302,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -33477,7 +33511,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -33645,7 +33679,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -33860,7 +33894,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -33906,7 +33940,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -34071,7 +34105,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -34589,7 +34623,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -34622,7 +34656,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -34886,7 +34920,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -35093,7 +35127,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -35261,7 +35295,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -35476,7 +35510,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -35522,7 +35556,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -35687,7 +35721,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -36205,7 +36239,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -36238,7 +36272,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -36654,7 +36688,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -36857,7 +36891,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -37025,7 +37059,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -37240,7 +37274,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -37286,7 +37320,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -37451,7 +37485,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -37964,7 +37998,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -37997,7 +38031,7 @@ div:hover > .BBCodeCollapseControl {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -39834,21 +39868,18 @@ button.TextButton.gpfocus {
 }
 .DialogSlider_Value {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   bottom: 0;
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.DialogSlider_Value:dir(rtl) {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-start-start-radius: 5px;
+  border-end-start-radius: 5px;
 }
 .DialogSlider_Grabber {
   position: absolute;
   top: -1px;
   bottom: -3px;
+  inset-inline-start: var(--position);
   margin-inline-start: -6px;
   width: 12px;
   height: 12px;
@@ -39870,8 +39901,8 @@ button.TextButton.gpfocus {
 .DialogProgressBar_Value {
   height: 100%;
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-start-start-radius: 5px;
+  border-end-start-radius: 5px;
   width: 0px;
   transition: width .2s linear;
 }
@@ -40283,6 +40314,9 @@ body.in_global_drag .title-area {
   inset-inline-end: 0px;
   bottom: 0px;
   z-index: 1000;
+}
+.window_resize_grip:dir(rtl) {
+  scale: -1 1;
 }
 .DialogBodyNotificationBar {
   font-size: 12px;
@@ -40877,7 +40911,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -41079,7 +41113,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -41247,7 +41281,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -41462,7 +41496,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -41508,7 +41542,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -41673,7 +41707,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -42186,7 +42220,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -42219,7 +42253,7 @@ body.in_global_drag .title-area {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -43694,7 +43728,7 @@ body.in_global_drag .friendlist_titlebar {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;

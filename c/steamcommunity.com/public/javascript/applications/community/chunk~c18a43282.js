@@ -1093,7 +1093,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1383,7 +1382,6 @@
           scheduleEntries: [],
         },
         _ = "old_announce_",
-        _ = "_summary",
         _ = 80,
         _ = 120,
         _ = 180,
@@ -2961,14 +2959,14 @@
           "0" != _.announcement_body.gid
         );
       }
-      function _(_, _) {
+      function _(_) {
         var _;
         return _(_)
           ? _._ +
               (null === (_ = _.announcement_body) || void 0 === _
                 ? void 0
                 : _.gid)
-          : _.gid + (_ ? _._ : "");
+          : _.gid;
       }
       function _(_, _) {
         var _, _, _, _, _, _, _;
@@ -2982,7 +2980,7 @@
               " " +
               _._.EUNIVERSE,
           ),
-          (_.GID = _(_, !1)),
+          (_.GID = _(_)),
           (_.bOldAnnouncement = _(_)),
           (_.appid = null !== (_ = _.appid) && void 0 !== _ ? _ : 0),
           (_.startTime = _.rtime32_start_time),
@@ -5435,8 +5433,9 @@
         }
       }
       class _ {
-        constructor() {
-          (this.m_mapExistingEvents = new Map()),
+        constructor(_ = !1) {
+          (this.m_bOnlySummary = !1),
+            (this.m_mapExistingEvents = new Map()),
             (this.m_mapEventUpdateCallback = new Map()),
             (this.m_mapAnnouncementBodyToEvent = new Map()),
             (this.m_mapClanToGIDs = new Map()),
@@ -5449,7 +5448,8 @@
             (this.m_rgQueuedEventsForEditFlags = new Array()),
             (this.m_QueuedEventTimeout = new _._()),
             (this.m_bLoadedFromConfig = !1),
-            (0, _._)(this);
+            (0, _._)(this),
+            (this.m_bOnlySummary = _);
         }
         Init() {
           if (!this.m_bLoadedFromConfig) {
@@ -5585,7 +5585,7 @@
         RegisterClanEvents(_) {
           if (_)
             for (const _ of _) {
-              const _ = (0, _._)(_, !1);
+              const _ = (0, _._)(_);
               if (!this.m_mapExistingEvents.has(_)) {
                 const _ = new _._(_.clan_steamid);
                 this.InsertEventModelFromClanEventData(_, _);
@@ -5784,6 +5784,13 @@
           } else {
             let _ = _._.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/";
             const _ = (0, _._)((0, _._)(_._.LANGUAGE));
+            (null == _ ? void 0 : _.only_summaries) &&
+              !this.m_bOnlySummary &&
+              ((0, _._)(
+                this.m_bOnlySummary,
+                "Only Summary: Incorrect parameter passed in, unsetting",
+              ),
+              (_.only_summaries = void 0));
             let _ = {
               clan_accountid: _ ? __webpack_require__.GetAccountID() : void 0,
               appid: _,
@@ -5822,7 +5829,7 @@
               )
                 (0, _._)(() => {
                   for (let _ of _.data.events) {
-                    let _ = (0, _._)(_, !1);
+                    let _ = (0, _._)(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_ || _, _);
@@ -5883,7 +5890,7 @@
             });
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = (0, _._)(_, !1);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -5924,7 +5931,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = (0, _._)(_, !1);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -5974,7 +5981,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = (0, _._)(_, !1);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -6050,7 +6057,6 @@
           _,
           _,
           _ = !1,
-          _,
         ) {
           var _, _, _, _;
           let _ = (0, _._)(_ ? 0 : (0, _._)(_._.LANGUAGE)),
@@ -6063,7 +6069,7 @@
               last_modified_time: _ || 0,
               origin: self.origin,
               for_edit: _,
-              only_summary: _,
+              only_summary: this.m_bOnlySummary,
             },
             _ = null,
             _ = null;
@@ -6089,7 +6095,7 @@
                 withCredentials: !1,
               });
           let _ = (await _().get(_, _)).data.event,
-            _ = (0, _._)(_, !!_);
+            _ = (0, _._)(_);
           if (
             !this.m_mapExistingEvents.has(_) ||
             (null !==
@@ -6202,7 +6208,7 @@
             !0,
           );
         }
-        async LoadHiddenPartnerEventByAnnouncementGID(_, _, _) {
+        async LoadHiddenPartnerEventByAnnouncementGID(_, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
             _,
             void 0,
@@ -6210,7 +6216,6 @@
             _,
             0,
             !0,
-            _,
           );
         }
         async HintLoadImportantUpdates() {
@@ -6340,7 +6345,7 @@
               _.forEach((_) => {
                 if (_ && _.data && _.data.events)
                   for (let _ of _.data.events) {
-                    let _ = (0, _._)(_, !1);
+                    let _ = (0, _._)(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_, _);
@@ -6407,6 +6412,9 @@
             !1
           );
         }
+        BIsSummaryOnlyStore() {
+          return this.m_bOnlySummary;
+        }
       }
       (0, _._)([_._], _.prototype, "m_mapExistingEvents", void 0),
         (0, _._)([_._], _.prototype, "m_mapAnnouncementBodyToEvent", void 0),
@@ -6423,6 +6431,8 @@
         (0, _._)([_._], _.prototype, "SavePartnerEventSaleAssets", null);
       const _ = new _();
       window.g_PartnerEventStore = _;
+      const _ = new _(!0);
+      window.g_PartnerEventSummaryStore = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

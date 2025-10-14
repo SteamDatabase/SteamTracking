@@ -16574,8 +16574,7 @@
             ? _.createElement("div", null, (0, _._)("#CloudUpload_NotSupport"))
             : null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         static AddDictionary(_) {
           _.sm_BBCodeDictionary = new Map([
@@ -16605,26 +16604,15 @@
                 _,
               ),
             [__webpack_require__, _],
-          ),
-          _ = (0, _._)(() => new _._(_.sm_BBCodeDictionary, _, _));
-        return (
-          _.useEffect(() => {
-            _.UpdateOverrideLanguage(_);
-          }, [_, _]),
-          _.createElement(
-            _.Fragment,
-            null,
-            _.ParseBBCode(
-              _,
-              {
-                showErrorInfo: _,
-                event: _,
-                bShowShortSpeakerInfo: _,
-              },
-              !0,
-            ),
-          )
-        );
+          );
+        return _.useMemo(
+          () => new _._(_.sm_BBCodeDictionary, _, _),
+          [_, _],
+        ).ParseBBCode(_, {
+          showErrorInfo: _,
+          event: _,
+          bShowShortSpeakerInfo: _,
+        });
       }
       function _(_) {
         const {

@@ -196,6 +196,8 @@
         StoreSaleWidgetContainer: "_2hhNOdcC6yLwL_rugP3YLf",
         LibraryAssetExpandedDisplay: "PZY_7wH_NY7OgzH9MBiB8",
         SaleItemDefaultCapsuleDisplay: "_37iggltdgh0RtNIECJCfOj",
+        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
+        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
         MarketingMessage: "_3_q87LhuWitbYSEHOVKYlM",
         StoreSaleWidgetRight: "v9uRg57bwOaPsvAnkXESO",
         StoreSaleWidgetHalfLeft: "_111nfdz8Xyg7lDjTWv_OmK",
@@ -240,13 +242,12 @@
         SaleItemFullCapsuleDisplay: "_2sVvRzH7oPUUIVDDVO0MJj",
         Category: "_2lQNYB6g6C7aiw0GDPe9fq",
         CategoryIcon: "_2RJxWCkjuP3H-i8oLU5W2Q",
-        BundleContentPreview: "jQ5GanUKBEe7hhgCh6b5z",
         ReviewScores: "_3MxPBWjpjU_Gm8SIgi5g8A",
         StoreSaleBroadcastWidgetRight: "_9VjYX3CYMn2y-wWpAn00Y",
         StoreSalePriceActionWidgetContainer: "_1JuIpzMtS7-xZrnUmEQ4my",
+        Action: "_2zssEuiPfY5YdQlnihDfVD",
         Discounted: "_1g0B-RjwkUV0_MDURgy3Bi",
         WishList: "_1djkdp7OAd0mF3a90RKf27",
-        Action: "_2zssEuiPfY5YdQlnihDfVD",
         SingleLineMode: "_1ZlGJxv-xQaABSvaVvMlNq",
         StoreSaleDiscountedPriceCtn: "_3NhLu7mTdty7JufpSpz6Re",
         StoreSalePriceBox: "_3j4dI1yA7cRfCvK8h406OB",
@@ -297,7 +298,6 @@
         BundleContentItem: "_2sdNOCzaF2AIAuenP19tA6",
         StoreSaleWidgetOuterContainer: "_1_P15GG6AKyF_NMX2j4-Mu",
         ContentsCount: "_353LzpA83V-kiAWaKcQAFg",
-        PreviewCtn: "_1NM531LjOd5QmDktUetCOm",
         PreviewItem: "_2yhQb4aKtskchqwmpCVbMq",
         DeckCompatIcon: "_1Nju8xukRGXgeu2mN0nVjT",
         BundleTag: "_1qR-LifiFC4bCiow5xRIy0",
@@ -2709,7 +2709,10 @@
 	"topnewreleases": 100750,
 	"newreleases": 100751,
 	"salebrowsetrendingfree": 100752,
-	"trendingfree": 100753
+	"trendingfree": 100753,
+	"reactroot": 100754,
+	"bundlelist": 100755,
+	"verifiedprogram": 100756
 }`);
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
@@ -3241,7 +3244,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3535,7 +3537,6 @@
           scheduleEntries: [],
         },
         _ = "old_announce_",
-        _ = "_summary",
         _ = 80,
         _ = [
           "workshop",
@@ -4468,7 +4469,7 @@
         GetEventTypeAsString() {
           return (0, _._)(this.type);
         }
-        GetCategoryAsString() {
+        GetCategoryAsString(_) {
           return this.BHasTag("steam_award_nomination_request")
             ? (0, _._)("#PartnerEvent_SteamAwardNominations")
             : this.BHasTag("steam_award_vote_request")
@@ -4481,7 +4482,7 @@
                       (this.BHasTagStartingWith("sale_nextfest_") &&
                         11 == this.type)
                     ? (0, _._)("#PartnerEvent_SteamGameFestival_Broadcast")
-                    : this.BHasTag("vo_marketing_message")
+                    : this.BHasTag("vo_marketing_message") && _
                       ? (0, _._)("#PartnerEvent_MM_MajorUpdate")
                       : this.GetEventTypeAsString();
         }
@@ -4795,8 +4796,8 @@
           "0" != _.announcement_body.gid
         );
       }
-      function _(_, _) {
-        return _(_) ? _._ + _.announcement_body?.gid : _.gid + (_ ? _._ : "");
+      function _(_) {
+        return _(_) ? _._ + _.announcement_body?.gid : _.gid;
       }
       function _(_, _) {
         let _ = new _._();
@@ -4809,7 +4810,7 @@
               " " +
               _._.EUNIVERSE,
           ),
-          (_.GID = _(_, !1)),
+          (_.GID = _(_)),
           (_.bOldAnnouncement = _(_)),
           (_.appid = _.appid ?? 0),
           (_.startTime = _.rtime32_start_time),
@@ -10928,9 +10929,10 @@
         }
       }
       class _ {
-        constructor() {
-          (0, _._)(this);
+        constructor(_ = !1) {
+          (0, _._)(this), (this.m_bOnlySummary = _);
         }
+        m_bOnlySummary = !1;
         m_mapExistingEvents = new Map();
         m_mapEventUpdateCallback = new Map();
         m_mapAnnouncementBodyToEvent = new Map();
@@ -11078,7 +11080,7 @@
         RegisterClanEvents(_) {
           if (_)
             for (const _ of _) {
-              const _ = (0, _._)(_, !1);
+              const _ = (0, _._)(_);
               if (!this.m_mapExistingEvents.has(_)) {
                 const _ = new _._(_.clan_steamid);
                 this.InsertEventModelFromClanEventData(_, _);
@@ -11261,6 +11263,13 @@
           } else {
             let _ = _._.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/";
             const _ = (0, _._)((0, _._)(_._.LANGUAGE));
+            _?.only_summaries &&
+              !this.m_bOnlySummary &&
+              ((0, _._)(
+                this.m_bOnlySummary,
+                "Only Summary: Incorrect parameter passed in, unsetting",
+              ),
+              (_.only_summaries = void 0));
             let _ = {
               clan_accountid: _ ? __webpack_require__.GetAccountID() : void 0,
               appid: _,
@@ -11294,7 +11303,7 @@
               if (1 == _?.data?.success)
                 (0, _._)(() => {
                   for (let _ of _.data.events) {
-                    let _ = (0, _._)(_, !1);
+                    let _ = (0, _._)(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_ || _, _);
@@ -11355,7 +11364,7 @@
             });
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = (0, _._)(_, !1);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -11393,7 +11402,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = (0, _._)(_, !1);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -11443,7 +11452,7 @@
           return (
             (0, _._)(() => {
               for (let _ of _.data.events) {
-                let _ = (0, _._)(_, !1);
+                let _ = (0, _._)(_);
                 if (!this.m_mapExistingEvents.has(_)) {
                   let _ = new _._(_.clan_steamid);
                   this.InsertEventModelFromClanEventData(_, _);
@@ -11519,7 +11528,6 @@
           _,
           _,
           _ = !1,
-          _,
         ) {
           let _ = (0, _._)(_ ? 0 : (0, _._)(_._.LANGUAGE)),
             _ = {
@@ -11531,7 +11539,7 @@
               last_modified_time: _ || 0,
               origin: self.origin,
               for_edit: _,
-              only_summary: _,
+              only_summary: this.m_bOnlySummary,
             },
             _ = null,
             _ = null;
@@ -11557,7 +11565,7 @@
                 withCredentials: !1,
               });
           let _ = (await _().get(_, _)).data.event,
-            _ = (0, _._)(_, !!_);
+            _ = (0, _._)(_);
           if (
             !this.m_mapExistingEvents.has(_) ||
             (this.m_mapExistingEvents.get(_).rtime32_last_modified ?? 0) <
@@ -11659,7 +11667,7 @@
             !0,
           );
         }
-        async LoadHiddenPartnerEventByAnnouncementGID(_, _, _) {
+        async LoadHiddenPartnerEventByAnnouncementGID(_, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
             _,
             void 0,
@@ -11667,7 +11675,6 @@
             _,
             0,
             !0,
-            _,
           );
         }
         async HintLoadImportantUpdates() {
@@ -11771,7 +11778,7 @@
               _.forEach((_) => {
                 if (_ && _.data && _.data.events)
                   for (let _ of _.data.events) {
-                    let _ = (0, _._)(_, !1);
+                    let _ = (0, _._)(_);
                     if (!this.m_mapExistingEvents.has(_)) {
                       let _ = new _._(_.clan_steamid);
                       this.InsertEventModelFromClanEventData(_, _);
@@ -11832,6 +11839,9 @@
             !1
           );
         }
+        BIsSummaryOnlyStore() {
+          return this.m_bOnlySummary;
+        }
       }
       (0, _._)([_._], _.prototype, "m_mapExistingEvents", void 0),
         (0, _._)([_._], _.prototype, "m_mapAnnouncementBodyToEvent", void 0),
@@ -11847,6 +11857,8 @@
         (0, _._)([_._], _.prototype, "FlushEventFromCache", null),
         (0, _._)([_._], _.prototype, "SavePartnerEventSaleAssets", null);
       const _ = new _();
+      window.g_PartnerEventStore = _;
+      const _ = new _(!0);
       function _(_, _) {
         const [__webpack_require__, _] = (0, _.useState)(() =>
             _.GetClanEventModel(_),
@@ -11873,7 +11885,7 @@
           fnSaveSaleAssets: _.SavePartnerEventSaleAssets,
         };
       }
-      window.g_PartnerEventStore = _;
+      window.g_PartnerEventSummaryStore = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -19934,6 +19946,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const {
@@ -20034,6 +20047,9 @@
             return null;
           const _ = _.GetBestPurchaseOption().discount_pct,
             _ = _.GetIncludedAppIDs().length,
+            _ = _.GetIncludedAppIDs().filter((_) =>
+              _._.Get().BOwnsApp(_),
+            ).length,
             _ = (0, _._)(_),
             _ = (0, _._)(_.GetStorePageURL(_)),
             _ = Boolean(!_ && _ > 1),
@@ -20058,9 +20074,12 @@
                 : _?.GetFormattedSteamReleaseDate();
           let _ = _.GetShortDescription();
           (2 == _.GetStoreItemType() || (1 == _.GetStoreItemType() && !_)) &&
-            (_ = _
-              ? (0, _._)("#Sale_BundleSave_WithDiscount", _, _)
-              : (0, _._)("#Sale_BundleSave", _)),
+            (_ =
+              _ > 0 && _ < _
+                ? (0, _._)("#Sale_Bundle_CompletePartialSet", _, _)
+                : _
+                  ? (0, _._)("#Sale_BundleSave_WithDiscount", _, _)
+                  : (0, _._)("#Sale_BundleSave", _)),
             (_ = _?.length > 0 ? _ : _?.GetShortDescription());
           const _ = _ || _.BIsReleased() || _.BIsPrePurchase();
           return _.createElement(
@@ -20228,6 +20247,7 @@
                   _ &&
                     _.createElement(_, {
                       info: _,
+                      bHideInLibraryApps: 2 == _.GetStoreItemType() && _ < _,
                     }),
                   Boolean(_ && _) &&
                     _.createElement(
@@ -20312,61 +20332,71 @@
         }),
         _ = 6;
       function _(_) {
-        const { info: _ } = _,
-          [__webpack_require__] = (0, _._)(_._, (0, _._)(_.type), {}),
+        const { info: _, bHideInLibraryApps: __webpack_require__ } = _,
+          [_] = (0, _._)(_._, (0, _._)(_.type), {}),
           [_, _] = _.useState(null),
-          _ = 2 == __webpack_require__.GetStoreItemType();
-        return (
-          _.useEffect(() => {
-            __webpack_require__ &&
-              (1 == __webpack_require__.GetStoreItemType() ||
-              2 == __webpack_require__.GetStoreItemType()
+          _ = 2 == _.GetStoreItemType();
+        if (
+          (_.useEffect(() => {
+            _ &&
+              (1 == _.GetStoreItemType() || 2 == _.GetStoreItemType()
                 ? _(
-                    __webpack_require__.GetIncludedAppIDs().map((_) => ({
-                      _: _,
-                      type: "game",
-                    })),
+                    _.GetIncludedAppIDs()
+                      .filter(
+                        (_) =>
+                          !_ || !__webpack_require__ || !_._.Get().BOwnsApp(_),
+                      )
+                      .map((_) => ({
+                        _: _,
+                        type: "game",
+                      })),
                   )
                 : console.error(
                     "ContentsPreviewList unexpected store item type: ",
-                    __webpack_require__.GetStoreItemType(),
+                    _.GetStoreItemType(),
                   ));
-          }, [__webpack_require__]),
-          _
-            ? _.createElement(
-                "div",
+          }, [_, __webpack_require__, _]),
+          !_)
+        )
+          return null;
+        const _ = _.length;
+        let _ = (0, _._)("#Sale_ContentPreview", _);
+        if (_) {
+          const _ = _.GetIncludedAppIDs().length;
+          _ != _ && (_ = (0, _._)("#Sale_Bundle_CompletePartialSet", _ - _, _));
+        }
+        return _.createElement(
+          "div",
+          {
+            className: _().BundleContentPreview,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().ContentsCount,
+            },
+            _ &&
+              _.createElement(
+                "span",
                 {
-                  className: _().BundleContentPreview,
+                  className: _().BundleTag,
                 },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ContentsCount,
-                  },
-                  _ &&
-                    _.createElement(
-                      "span",
-                      {
-                        className: _().BundleTag,
-                      },
-                      (0, _._)("#AppType_bundle"),
-                    ),
-                  (0, _._)("#Sale_ContentPreview", _.length),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PreviewCtn,
-                  },
-                  _.slice(0, _).map((_) =>
-                    _.createElement(_, {
-                      key: `preview${_._}_${_.type}`,
-                      info: _,
-                    }),
-                  ),
-                ),
-              )
-            : null
+                (0, _._)("#AppType_bundle"),
+              ),
+            _,
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().PreviewCtn,
+            },
+            _.slice(0, _).map((_) =>
+              _.createElement(_, {
+                key: `preview${_._}_${_.type}`,
+                info: _,
+              }),
+            ),
+          ),
         );
       }
       function _(_) {
@@ -20897,6 +20927,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -21154,7 +21185,9 @@
           nBaseDiscountPercentage: _,
           nDiscountPercentage: _,
           bIsPrePurchase: __webpack_require__.BIsPrePurchase(),
-          strBestPurchaseOriginalPriceFormatted: _.formatted_original_price,
+          strBestPurchaseOriginalPriceFormatted:
+            _.formatted_price_before_bundle_discount ||
+            _.formatted_original_price,
           strBestPurchasePriceFormatted: _,
           bHideDiscountPercentForCompliance: _.hide_discount_pct_for_compliance,
           bShowNewFlag: _,
@@ -21214,15 +21247,46 @@
                 },
                 (0, _._)("#Flag_New"),
               ),
-            Boolean(_ && __webpack_require__ && !_) &&
+            Boolean(_ && !_) &&
               _.createElement(
-                "span",
-                {
-                  className: (0, _._)(_().BaseDiscount),
-                },
-                `-${_}%`,
+                _.Fragment,
+                null,
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: (0, _._)("#Sale_Bundle_Discount_ttip"),
+                  },
+                  _.createElement(
+                    "span",
+                    {
+                      className: (0, _._)(_().BaseDiscount),
+                    },
+                    `-${_}%`,
+                  ),
+                ),
+                Boolean(__webpack_require__) &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement("span", null, "+ "),
+                    _.createElement(
+                      _._,
+                      {
+                        toolTipContent: (0, _._)(
+                          "#Sale_Bundle_Discount_Limited_ttip",
+                        ),
+                      },
+                      _.createElement(
+                        "span",
+                        {
+                          className: (0, _._)(_().StoreSaleDiscountBox),
+                        },
+                        `-${__webpack_require__}%`,
+                      ),
+                    ),
+                  ),
               ),
-            Boolean(__webpack_require__ && !_) &&
+            Boolean(!_ && __webpack_require__ && !_) &&
               _.createElement(
                 "div",
                 {
@@ -21238,7 +21302,7 @@
                 },
                 _.createElement(_.XH_, null),
               ),
-            Boolean(__webpack_require__ && _ && !_)
+            Boolean((__webpack_require__ || _) && _ && !_)
               ? _.createElement(
                   "div",
                   {

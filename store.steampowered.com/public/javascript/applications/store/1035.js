@@ -570,14 +570,16 @@
               rgSources: e,
               onIncrementalError: t,
               onError: a,
-              ...r
+              strAltText: r,
+              ...i
             } = this.props,
-            i = this.src;
+            n = this.src;
           return s.createElement("img", {
             ref: this.m_refImage,
-            ...r,
-            src: i,
+            ...i,
+            src: n,
             onError: this.OnImageError,
+            alt: r,
           });
         }
       }

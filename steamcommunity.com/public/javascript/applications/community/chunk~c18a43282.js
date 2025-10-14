@@ -988,8 +988,8 @@
         EE: () => K,
         Zf: () => J,
         jR: () => ee,
-        Ac: () => Ie,
-        lh: () => Se,
+        Ac: () => ye,
+        lh: () => we,
         mz: () => ae,
         qQ: () => ie,
         MW: () => ne,
@@ -997,13 +997,13 @@
         qR: () => se,
         _B: () => $,
         sj: () => he,
-        j3: () => Ge,
+        j3: () => Ae,
         Yw: () => Y,
         zK: () => R,
         WN: () => H,
-        Pd: () => Ee,
-        p$: () => fe,
-        dm: () => ve,
+        Pd: () => ve,
+        p$: () => Ee,
+        dm: () => ge,
         DU: () => B,
         qF: () => j,
         mW: () => O,
@@ -1014,8 +1014,7 @@
         RZ: () => z,
         Yj: () => M,
         cB: () => _e,
-        Te: () => ge,
-        Yz: () => Ae,
+        Yz: () => Se,
       });
       var n = i(34629),
         a = i(79821),
@@ -1295,11 +1294,10 @@
           scheduleEntries: [],
         },
         _e = "old_announce_",
-        ge = "_summary",
-        ve = 80,
-        Ee = 120,
-        fe = 180,
-        ye = [
+        ge = 80,
+        ve = 120,
+        Ee = 180,
+        fe = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -1315,7 +1313,7 @@
           "betachannel",
           "previewchannel",
         ],
-        Ie = [
+        ye = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -1329,9 +1327,9 @@
           "curator_public",
           "audience_followers",
         ],
-        be = [20, 31, 34],
-        we = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
-      class Se {
+        Ie = [20, 31, 34],
+        be = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
+      class we {
         constructor() {
           (this.GID = void 0),
             (this.AnnouncementGID = void 0),
@@ -1375,7 +1373,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new Se(),
+          let t = new we(),
             i = JSON.parse(e);
           return (
             Object.assign(t, i),
@@ -1411,7 +1409,7 @@
           );
         }
         clone(e = !1) {
-          let t = new Se();
+          let t = new we();
           if (
             ((t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -1463,7 +1461,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  ye.includes(e) && t.vecTags.push(e);
+                  fe.includes(e) && t.vecTags.push(e);
                 }),
             t.jsondata.email_setting)
           ) {
@@ -1954,7 +1952,7 @@
                 ? void 0
                 : t.localized_subtitle,
               e,
-            ) || Se.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            ) || we.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
@@ -1966,7 +1964,7 @@
                 : i.localized_summary,
               e,
             ) ||
-            Se.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            we.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -2002,7 +2000,7 @@
               (e = (0, a.zV)(e, ["p"], " ")),
               (e = (0, a.zV)(e)),
               (e = (0, I.aX)(e)),
-              (0, I.bC)(e, t || fe))
+              (0, I.bC)(e, t || Ee))
             : "";
         }
         BHasTag(e) {
@@ -2019,10 +2017,10 @@
         BShowLibrarySpotlight(e) {
           if (!e) return Boolean(this.jsondata.library_spotlight);
           if (!this.jsondata.library_spotlight) return !1;
-          if (be.includes(this.type)) return !1;
+          if (Ie.includes(this.type)) return !1;
           const t = new Date().getTime() / 1e3;
           return (
-            !(we.includes(this.type) && this.endTime && t > this.endTime) &&
+            !(be.includes(this.type) && this.endTime && t > this.endTime) &&
             !(this.startTime && t > this.startTime + 60 * b.Kp.PerDay)
           );
         }
@@ -2335,14 +2333,14 @@
             null === (i = this.jsondata.tagged_items) ||
               void 0 === i ||
               i.forEach((e) => {
-                Se.AccumulateCapsuleListIDs([e.capsule], n, a, t);
+                we.AccumulateCapsuleListIDs([e.capsule], n, a, t);
               }),
             this.jsondata.sale_sections.forEach((e) => {
               if (oe(e.section_type))
-                Se.AccumulateCapsuleListIDs(e.capsules, n, a, t);
+                we.AccumulateCapsuleListIDs(e.capsules, n, a, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const i of e.tabs)
-                  Se.AccumulateCapsuleListIDs(i.capsules, n, a, t);
+                  we.AccumulateCapsuleListIDs(i.capsules, n, a, t);
             }),
             a
           );
@@ -2607,56 +2605,56 @@
           );
         }
       }
-      (0, n.Cg)([o.sH], Se.prototype, "GID", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "AnnouncementGID", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "forumTopicGID", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "type", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "appid", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "name", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "description", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "timestamp_loc_updated", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "startTime", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "endTime", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "visibilityStartTime", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "visibilityEndTime", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "m_nBuildID", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "m_strBuildBranch", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "postTime", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "visibility_state", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "broadcaster", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "jsondata", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "nCommentCount", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "nVotesUp", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "nVotesDown", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "bOldAnnouncement", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "announcementClanSteamID", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "loadedAllLanguages", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "bLoaded", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "deleteInProgress", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "vecTags", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "last_update_steamid", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "rtime32_last_modified", void 0),
+      (0, n.Cg)([o.sH], we.prototype, "GID", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "AnnouncementGID", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "forumTopicGID", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "type", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "appid", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "name", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "description", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "timestamp_loc_updated", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "startTime", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "endTime", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "visibilityStartTime", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "visibilityEndTime", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "m_nBuildID", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "m_strBuildBranch", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "postTime", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "visibility_state", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "broadcaster", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "jsondata", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "nCommentCount", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "nVotesUp", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "nVotesDown", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "bOldAnnouncement", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "announcementClanSteamID", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "loadedAllLanguages", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "bLoaded", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "deleteInProgress", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "vecTags", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "last_update_steamid", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "rtime32_last_modified", void 0),
         (0, n.Cg)(
           [o.sH],
-          Se.prototype,
+          we.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, n.Cg)(
           [o.sH],
-          Se.prototype,
+          we.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, n.Cg)([o.sH], Se.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "video_preview_type", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "video_preview_id", void 0),
-        (0, n.Cg)([o.sH], Se.prototype, "m_overrideCurrentDay", void 0);
-      const Ae = (e) => {
+        (0, n.Cg)([o.sH], we.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "video_preview_type", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "video_preview_id", void 0),
+        (0, n.Cg)([o.sH], we.prototype, "m_overrideCurrentDay", void 0);
+      const Se = (e) => {
         const t = (0, y.K)(e.appid);
         return e.appid ? t : w.UF.IS_ALLOWED_SC;
       };
-      function Ge(e) {
+      function Ae(e) {
         return null == e ? void 0 : e.replace(/[()]/g, "\\$&");
       }
     },
@@ -2862,14 +2860,14 @@
           "0" != e.announcement_body.gid
         );
       }
-      function c(e, t) {
-        var i;
+      function c(e) {
+        var t;
         return d(e)
           ? o.cB +
-              (null === (i = e.announcement_body) || void 0 === i
+              (null === (t = e.announcement_body) || void 0 === t
                 ? void 0
-                : i.gid)
-          : e.gid + (t ? o.Te : "");
+                : t.gid)
+          : e.gid;
       }
       function m(e, t) {
         var i, m, u, h, p, _, g;
@@ -2883,7 +2881,7 @@
               " " +
               a.TS.EUNIVERSE,
           ),
-          (v.GID = c(t, !1)),
+          (v.GID = c(t)),
           (v.bOldAnnouncement = d(t)),
           (v.appid = null !== (i = t.appid) && void 0 !== i ? i : 0),
           (v.startTime = t.rtime32_start_time),
@@ -5190,8 +5188,9 @@
         }
       }
       class b {
-        constructor() {
-          (this.m_mapExistingEvents = new Map()),
+        constructor(e = !1) {
+          (this.m_bOnlySummary = !1),
+            (this.m_mapExistingEvents = new Map()),
             (this.m_mapEventUpdateCallback = new Map()),
             (this.m_mapAnnouncementBodyToEvent = new Map()),
             (this.m_mapClanToGIDs = new Map()),
@@ -5204,7 +5203,8 @@
             (this.m_rgQueuedEventsForEditFlags = new Array()),
             (this.m_QueuedEventTimeout = new _.LU()),
             (this.m_bLoadedFromConfig = !1),
-            (0, o.Gn)(this);
+            (0, o.Gn)(this),
+            (this.m_bOnlySummary = e);
         }
         Init() {
           if (!this.m_bLoadedFromConfig) {
@@ -5340,7 +5340,7 @@
         RegisterClanEvents(e) {
           if (e)
             for (const t of e) {
-              const e = (0, y.E0)(t, !1);
+              const e = (0, y.E0)(t);
               if (!this.m_mapExistingEvents.has(e)) {
                 const e = new c.b(t.clan_steamid);
                 this.InsertEventModelFromClanEventData(e, t);
@@ -5509,7 +5509,7 @@
         }
         async InternalLoadAdjacentPartnerEvents(e, t, i, n, a, r, d, m) {
           var u;
-          let h = new Array();
+          let _ = new Array();
           if (t && this.m_mapAdjacentAnnouncementGIDs.has(t)) {
             let e = this.m_mapAdjacentAnnouncementGIDs.get(t),
               i = new Array();
@@ -5520,7 +5520,7 @@
                     let t = this.m_mapAnnouncementBodyToEvent.get(e);
                     t &&
                       this.m_mapExistingEvents.get(t) &&
-                      h.push(this.m_mapExistingEvents.get(t));
+                      _.push(this.m_mapExistingEvents.get(t));
                   } else i.push(e);
                 }),
               i.length > 0)
@@ -5531,20 +5531,27 @@
                   i,
                   m,
                 )
-              ).forEach((e) => h.push(e));
+              ).forEach((e) => _.push(e));
             }
           } else {
-            let _ =
+            let g =
               v.TS.STORE_BASE_URL + "events/ajaxgetadjacentpartnerevents/";
-            const g = (0, f.hE)((0, l.sf)(v.TS.LANGUAGE));
-            let E = {
+            const E = (0, f.hE)((0, l.sf)(v.TS.LANGUAGE));
+            (null == d ? void 0 : d.only_summaries) &&
+              !this.m_bOnlySummary &&
+              ((0, h.wT)(
+                this.m_bOnlySummary,
+                "Only Summary: Incorrect parameter passed in, unsetting",
+              ),
+              (d.only_summaries = void 0));
+            let I = {
               clan_accountid: i ? i.GetAccountID() : void 0,
               appid: n,
               count_before: a,
               count_after: r,
               gidevent: e,
               gidannouncement: t,
-              lang_list: g,
+              lang_list: E,
               rtime_oldestevent: d ? d.rtime_oldestevent : void 0,
               require_tags:
                 d && d.require_tags ? d.require_tags.join(",") : void 0,
@@ -5563,8 +5570,8 @@
               origin: self.origin,
             };
             try {
-              let a = await s().get(_, {
-                params: E,
+              let a = await s().get(g, {
+                params: I,
                 cancelToken: null == m ? void 0 : m.token,
               });
               if (
@@ -5575,20 +5582,20 @@
               )
                 (0, o.h5)(() => {
                   for (let e of a.data.events) {
-                    let t = (0, y.E0)(e, !1);
+                    let t = (0, y.E0)(e);
                     if (!this.m_mapExistingEvents.has(t)) {
                       let t = new c.b(e.clan_steamid);
                       this.InsertEventModelFromClanEventData(i || t, e);
                     }
-                    h.push(this.m_mapExistingEvents.get(t));
+                    _.push(this.m_mapExistingEvents.get(t));
                   }
-                  if (0 == h.length)
+                  if (0 == _.length)
                     if (e && this.BHasClanEventModel(e))
                       this.m_mapExistingEvents.get(e) &&
-                        h.push(this.m_mapExistingEvents.get(e));
+                        _.push(this.m_mapExistingEvents.get(e));
                     else if (t && this.BHasClanAnnouncementGID(t)) {
                       const e = this.GetClanEventFromAnnouncementGID(t);
-                      e && h.push(e);
+                      e && _.push(e);
                     }
                 });
               else {
@@ -5617,7 +5624,7 @@
                 );
             }
           }
-          return h;
+          return _;
         }
         async LoadPartnerEventsPageable(e, t, i = 0, n = 0) {
           let a = new Array(),
@@ -5634,7 +5641,7 @@
             let e = await s().get(r, { params: l });
             (0, o.h5)(() => {
               for (let t of e.data.events) {
-                let e = (0, y.E0)(t, !1);
+                let e = (0, y.E0)(t);
                 if (!this.m_mapExistingEvents.has(e)) {
                   let e = new c.b(t.clan_steamid);
                   this.InsertEventModelFromClanEventData(e, t);
@@ -5675,7 +5682,7 @@
           return (
             (0, o.h5)(() => {
               for (let e of m.data.events) {
-                let t = (0, y.E0)(e, !1);
+                let t = (0, y.E0)(e);
                 if (!this.m_mapExistingEvents.has(t)) {
                   let t = new c.b(e.clan_steamid);
                   this.InsertEventModelFromClanEventData(t, e);
@@ -5712,7 +5719,7 @@
           return (
             (0, o.h5)(() => {
               for (let e of h.data.events) {
-                let t = (0, y.E0)(e, !1);
+                let t = (0, y.E0)(e);
                 if (!this.m_mapExistingEvents.has(t)) {
                   let t = new c.b(e.clan_steamid);
                   this.InsertEventModelFromClanEventData(t, e);
@@ -5788,66 +5795,65 @@
           n,
           a,
           o = !1,
-          r,
         ) {
-          var d, m, u, p;
-          let _ = (0, f.hE)(o ? 0 : (0, l.sf)(v.TS.LANGUAGE)),
-            g = {
+          var r, d, m, u;
+          let p = (0, f.hE)(o ? 0 : (0, l.sf)(v.TS.LANGUAGE)),
+            _ = {
               appid: t,
               clan_accountid: e ? e.GetAccountID() : void 0,
               announcement_gid: n,
               event_gid: i,
-              lang_list: _,
+              lang_list: p,
               last_modified_time: a || 0,
               origin: self.origin,
               for_edit: o,
-              only_summary: r,
+              only_summary: this.m_bOnlySummary,
             },
-            E = null,
-            I = null;
+            g = null,
+            E = null;
           if (o) {
             const i = (0, v.yK)();
             "community" === i
-              ? ((I = v.TS.COMMUNITY_BASE_URL),
-                (I += e ? "gid/" + e.ConvertTo64BitString() : "ogg/" + t),
-                (I += "/"))
-              : (I =
+              ? ((E = v.TS.COMMUNITY_BASE_URL),
+                (E += e ? "gid/" + e.ConvertTo64BitString() : "ogg/" + t),
+                (E += "/"))
+              : (E =
                   "partnerweb" === i
                     ? v.TS.PARTNER_BASE_URL + "sales/"
                     : v.TS.STORE_BASE_URL + "events/"),
-              (I += "ajaxgetpartnereventforedit"),
-              (E = { params: g, withCredentials: !0 });
+              (E += "ajaxgetpartnereventforedit"),
+              (g = { params: _, withCredentials: !0 });
           } else
-            (I = v.TS.STORE_BASE_URL + "events/ajaxgetpartnerevent"),
-              (E = { params: g, withCredentials: !1 });
-          let b = (await s().get(I, E)).data.event,
-            w = (0, y.E0)(b, !!r);
+            (E = v.TS.STORE_BASE_URL + "events/ajaxgetpartnerevent"),
+              (g = { params: _, withCredentials: !1 });
+          let I = (await s().get(E, g)).data.event,
+            b = (0, y.E0)(I);
           if (
-            !this.m_mapExistingEvents.has(w) ||
+            !this.m_mapExistingEvents.has(b) ||
             (null !==
-              (d = this.m_mapExistingEvents.get(w).rtime32_last_modified) &&
-            void 0 !== d
-              ? d
+              (r = this.m_mapExistingEvents.get(b).rtime32_last_modified) &&
+            void 0 !== r
+              ? r
               : 0) <
-              (null !== (m = b.rtime32_last_modified) && void 0 !== m
-                ? m
+              (null !== (d = I.rtime32_last_modified) && void 0 !== d
+                ? d
                 : 0) ||
             (null !==
-              (u =
-                this.m_mapExistingEvents.get(w).rtime32_moderator_reviewed) &&
-            void 0 !== u
-              ? u
+              (m =
+                this.m_mapExistingEvents.get(b).rtime32_moderator_reviewed) &&
+            void 0 !== m
+              ? m
               : 0) <
-              (null !== (p = b.rtime_mod_reviewed) && void 0 !== p ? p : 0)
+              (null !== (u = I.rtime_mod_reviewed) && void 0 !== u ? u : 0)
           ) {
             (0, h.wT)(
-              b.clan_steamid,
+              I.clan_steamid,
               "ClanSteamID is missing from data we received",
             );
-            let e = new c.b(b.clan_steamid);
-            this.InsertEventModelFromClanEventData(e, b);
+            let e = new c.b(I.clan_steamid);
+            this.InsertEventModelFromClanEventData(e, I);
           }
-          return this.m_mapExistingEvents.get(w);
+          return this.m_mapExistingEvents.get(b);
         }
         async InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
           e,
@@ -5934,7 +5940,7 @@
             !0,
           );
         }
-        async LoadHiddenPartnerEventByAnnouncementGID(e, t, i) {
+        async LoadHiddenPartnerEventByAnnouncementGID(e, t) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGID(
             e,
             void 0,
@@ -5942,7 +5948,6 @@
             t,
             0,
             !0,
-            i,
           );
         }
         async HintLoadImportantUpdates() {
@@ -6062,7 +6067,7 @@
               e.forEach((e) => {
                 if (e && e.data && e.data.events)
                   for (let t of e.data.events) {
-                    let e = (0, y.E0)(t, !1);
+                    let e = (0, y.E0)(t);
                     if (!this.m_mapExistingEvents.has(e)) {
                       let e = new c.b(t.clan_steamid);
                       this.InsertEventModelFromClanEventData(e, t);
@@ -6125,6 +6130,9 @@
             !1
           );
         }
+        BIsSummaryOnlyStore() {
+          return this.m_bOnlySummary;
+        }
       }
       (0, n.Cg)([o.sH], b.prototype, "m_mapExistingEvents", void 0),
         (0, n.Cg)([o.sH], b.prototype, "m_mapAnnouncementBodyToEvent", void 0),
@@ -6146,6 +6154,8 @@
         (0, n.Cg)([E.oI], b.prototype, "SavePartnerEventSaleAssets", null);
       const w = new b();
       window.g_PartnerEventStore = w;
+      const S = new b(!0);
+      window.g_PartnerEventSummaryStore = S;
     },
     68033: (e, t, i) => {
       "use strict";

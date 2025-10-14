@@ -558,7 +558,7 @@
         UpdateOverrideLanguage(e) {
           this.m_renderingLanguage = e;
         }
-        ParseBBCode(e, t, r = !1) {
+        ParseBBCode(e, t, r = !0) {
           let i = 0;
           const s = this.Parse(
             e,
@@ -27537,22 +27537,14 @@
                 e,
               ),
             [r, o],
-          ),
-          u = (0, ae.YR)(() => new i.B(ur.sm_BBCodeDictionary, c, s));
-        return (
-          n.useEffect(() => {
-            u.UpdateOverrideLanguage(s);
-          }, [u, s]),
-          n.createElement(
-            n.Fragment,
-            null,
-            u.ParseBBCode(
-              t,
-              { showErrorInfo: l, event: o, bShowShortSpeakerInfo: m },
-              !0,
-            ),
-          )
-        );
+          );
+        return n
+          .useMemo(() => new i.B(ur.sm_BBCodeDictionary, c, s), [c, s])
+          .ParseBBCode(t, {
+            showErrorInfo: l,
+            event: o,
+            bShowShortSpeakerInfo: m,
+          });
       }
     },
     43667: (e, t, r) => {
@@ -28946,14 +28938,16 @@
               rgSources: e,
               onIncrementalError: t,
               onError: r,
-              ...i
+              strAltText: i,
+              ...s
             } = this.props,
-            s = this.src;
+            n = this.src;
           return a.createElement("img", {
             ref: this.m_refImage,
-            ...i,
-            src: s,
+            ...s,
+            src: n,
             onError: this.OnImageError,
+            alt: i,
           });
         }
       }

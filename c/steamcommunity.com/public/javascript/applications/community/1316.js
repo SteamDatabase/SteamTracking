@@ -180,7 +180,11 @@
 	"moderationaction_updated": "조정 대상 관련 세부 정보가 업데이트됨",
 	"moderationaction_locked": "잠김",
 	"moderationaction_unlocked": "잠금 해제됨",
-	"moderationaction_unknown": "알 수 없는 작업"
+	"moderationaction_unknown": "알 수 없는 작업",
+	"moderatormessage_count_note": "주의: %1$s개",
+	"moderatormessage_count_warning": "경고: %1$s개",
+	"moderatormessage_count_bannotice": "차단: %1$s개",
+	"moderatormessage_count_contentremoval": "콘텐츠 제거 공지: %1$s개"
 }`);
     },
   },

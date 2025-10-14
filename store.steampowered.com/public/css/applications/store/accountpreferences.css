@@ -69,13 +69,17 @@
   position: relative;
 }
 ._3K5HBHn_mMUrazI_oUH12q {
-  padding: 0px 0px 10px 0px;
+  padding: 0;
+  padding-bottom: 10px;
 }
 ._1_kCY5Jc71QX_9j4Q7brk {
-  padding: 20px 0px 0px 0px;
+  padding: 0;
+  padding-top: 20px;
 }
 ._1_kCY5Jc71QX_9j4Q7brk h1 {
-  padding: 30px 0px 10px 0px;
+  padding: 0px;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 ._3Sbby9pYJeX9b2Dcjx1Gbc {
   position: relative;
@@ -83,7 +87,8 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: #2b303a;
-  padding: 10px 1ex 10px 1ex;
+  padding-block: 10px;
+  padding-inline: 1ex;
 }
 ._3Sbby9pYJeX9b2Dcjx1Gbc button.DialogButton {
   justify-content: center;
@@ -94,7 +99,7 @@
 }
 ._3Sbby9pYJeX9b2Dcjx1Gbc ._30Nc3G1cpcJeZAQulOQYHB {
   flex-direction: inherit;
-  margin-right: 5px;
+  margin-inline-end: 5px;
 }
 ._3YstFVBT36qZA8FvdzEAF {
   color: #fff;
@@ -108,7 +113,9 @@
   display: flex;
   flex-direction: row;
   background-color: #23262e;
-  padding: 1ex 0 0 5ex;
+  padding: 0;
+  padding-top: 1ex;
+  padding-inline-start: 5ex;
   box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5);
 }
 ._152HTE3xZ88Xk7LEEPFE68 .DialogCheckbox_Container {

@@ -3,11 +3,9 @@
   {
     chunkid: (module) => {
       module.exports = {
-        strStreamIconCapsuleArtHeight: "90px",
-        strStreamIconScreenshotArtHeight: "90px",
+        strStreamIconCapsuleArtHeight: "58px",
+        strStreamIconScreenshotArtHeight: "82px",
         bordered_container: "_3zXpFCyX2IiaD-MNF5KJFf",
-        video_placeholder: "_1KU955BfHBkZdSvJncjc9V",
-        embedded_player: "_12fBJU1kOnQCeKc9JFTGMX",
         WidePlayer: "_3zjvrmOCIh31clDHjpLE2a",
         store_chat_ctn: "_21N-VV6Gvjjc1FqzOMJQfi",
         item_drop_ctn: "ifxDfv8dAGa5u71nRT0CJ",
@@ -19,10 +17,10 @@
         bordered_corner_expanded: "ahz31bshwySKGB_tBKf14",
         bordered_corner_shrinked: "L8sFYvKOUztrhXdjxy7mp",
         broadcast_settings_icon: "_37ugZJhL-qCRkdeZBRju2h",
-        container: "_2yiy6ghVhj3fkC4I01odHC",
         side_panels: "T_zpRAGXggYgVaRyCSXDu",
-        multistream: "_1DS-WZoUJyBitKOZoq7u3n",
         wrapper: "_1mH-vDK7JF0NBAdZfdzr1a",
+        video_placeholder: "_1KU955BfHBkZdSvJncjc9V",
+        embedded_player: "_12fBJU1kOnQCeKc9JFTGMX",
         NoChat: "_2QQm1StfkXOLXrBhLy_jYP",
         video_container: "_1gbNxru_N2ui-EXc2_zmRy",
         viewer_bar: "_2YgphHYykz192eH3FgalS4",
@@ -34,11 +32,15 @@
         vod_title: "_2xKaMJn0nexa3MMJvN6yq-",
         stream_icon_and_viewer_container: "_2sbrGTttGmHbz8ZPsO1YuR",
         display_capsule_art: "SsORVFNW3KBOdsIxDVqcd",
+        ViewerNum: "_1reMoMi3BZbMUs6jHW93f1",
+        StreamCapsule: "biTh7mrlaSv_WSY2gFsCH",
         stream_icon_container: "_2zBOiujXasDdHPmFPW4O90",
         stream_icon_hide_on_hover: "qYFsGojW19eJQAuemyuHQ",
         stream_icon_show_on_hover: "_29z3Nu6SGTNFDwIw8Gdvuk",
         stream_icon: "_1LBYspkgF9X97b89kPRBFC",
         stream_icon_selected: "mSpzeNvpTqIiZHkJgHRw7",
+        multistream: "_1DS-WZoUJyBitKOZoq7u3n",
+        MultiStreamCtn: "_1K6j5rrGvLPb8aT2L7CBAA",
         scrollingstreams: "_3aYWlUqW6-SosI72nizpP4",
         stream_icon_arrow: "_2Qpu-LNderkIBi_DTPhT30",
         clear_div: "_1oCVbTJqa4Av40NuPdztIv",
@@ -53,7 +55,11 @@
         detail_chat_ctn: "IaFnsy98_mIwYox4zmFu2",
         ChatEntry: "Rs7EltAKuQWw9U0v2bKxp",
         Event: "_1A0NY-wvZmZAqMMiw9oTYR",
-        rightPanel: "_16MsC-eMFxqhpcjlDqmrCM",
+        container: "_2yiy6ghVhj3fkC4I01odHC",
+        LeftPanelCtn: "_6O_psaoFJTLs30M_ePzZ7",
+        RightPanelCtn: "yRHl2kJWdMGdwVN_70nrP",
+        SidePanelBackground: "_2FYu31I46rjm0DVxq-ufK9",
+        LeftPanel: "o6XqrPpvDrpRsE7SpW8qJ",
       };
     },
     chunkid: (module) => {
@@ -14136,16 +14142,10 @@
           if (this.props.bWidePlayer) return _;
           const _ = _._.Get().GetConcurrentStreams(this.props) > 1;
           let _ = _._.GetOrCreateBroadcastInfo(_.steamid).m_nAppID,
-            _ = _.createElement(
-              "div",
-              {
-                className: _().rightPanel,
-              },
-              _.createElement(_, {
-                key: "right" + _,
-                ImgUrl: _.right_panel,
-              }),
-            ),
+            _ = _.createElement(_, {
+              key: "right" + _,
+              ImgUrl: _.right_panel,
+            }),
             _ = _.createElement(_, {
               key: "left" + _,
               ImgUrl: _.left_panel,
@@ -14325,7 +14325,13 @@
                         },
                         onTransitionEnd: this.OnShrinkTransitionEnd,
                       },
-                      _.leftPanel,
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().LeftPanelCtn,
+                        },
+                        _.leftPanel,
+                      ),
                       _.createElement(_, {
                         stream: _,
                         bStartMuted: this.state.bStartMuted,
@@ -14333,7 +14339,13 @@
                         fnOnVideoEnd: _,
                         bWidePlayer: this.props.bWidePlayer,
                       }),
-                      _.rightPanel,
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().RightPanelCtn,
+                        },
+                        _.rightPanel,
+                      ),
                       Boolean(this.state.bExpanded) &&
                         _.createElement(_, {
                           stream: _,
@@ -14650,8 +14662,10 @@
         render() {
           let _ = this.props.ImgUrl;
           return _.createElement(
-            _.Fragment,
-            null,
+            "div",
+            {
+              className: _().SidePanelBackground,
+            },
             _ &&
               _.createElement("img", {
                 className: _().side_panels,
@@ -14762,14 +14776,20 @@
                 [_().scrollingstreams]: _.length > 3,
               }),
             },
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.accountid ?? _.steamid,
-                stream: _,
-                bSelected: _.accountid == _.accountid,
-                onStreamSelect: __webpack_require__,
-                bShowCapsuleArt: _,
-              }),
+            _.createElement(
+              "div",
+              {
+                className: _().MultiStreamCtn,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: _.accountid ?? _.steamid,
+                  stream: _,
+                  bSelected: _.accountid == _.accountid,
+                  onStreamSelect: __webpack_require__,
+                  bShowCapsuleArt: _,
+                }),
+              ),
             ),
           )
         );
@@ -14808,6 +14828,7 @@
             {
               type: "app",
               _: _,
+              hoverClassName: _().StreamCapsule,
             },
             _.createElement(
               _._,
@@ -14837,8 +14858,13 @@
                   _.Fragment,
                   null,
                   _.createElement(_.y_e, null),
-                  " ",
-                  (0, _._)(_),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().ViewerNum,
+                    },
+                    (0, _._)(_),
+                  ),
                 )
               : _,
           ),

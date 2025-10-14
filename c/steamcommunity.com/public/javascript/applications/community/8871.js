@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Themendetails aktualisiert",
 	"moderationaction_locked": "Gesperrt",
 	"moderationaction_unlocked": "Entsperrt",
-	"moderationaction_unknown": "Unbekannte Aktion"
+	"moderationaction_unknown": "Unbekannte Aktion",
+	"moderatormessage_count_note": "Anmerkungen: %1$s",
+	"moderatormessage_count_warning": "Verwarnungen: %1$s",
+	"moderatormessage_count_bannotice": "Ausschlüsse: %1$s",
+	"moderatormessage_count_contentremoval": "Anmerkungen bzgl. der Entfernung von Inhalten: %1$s"
 }`);
     },
   },

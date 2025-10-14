@@ -446,7 +446,15 @@
               _.strClosedCaptionFile.startsWith("http") ||
                 (_.strClosedCaptionFile =
                   this.m_strBaseURL + _.strClosedCaptionFile);
-            if ("store" == (0, _._)() || "dev" == _._.WEB_UNIVERSE) {
+            const _ = (0, _._)();
+            if ("community" == _) {
+              const _ = new URL(_.strClosedCaptionFile).pathname.split(
+                "/video/",
+              )[1];
+              _.strClosedCaptionFile = _
+                ? _._.COMMUNITY_BASE_URL + "vtt/video/" + _
+                : null;
+            } else if ("store" == _ || "dev" == _._.WEB_UNIVERSE) {
               const _ = new URL(_.strClosedCaptionFile).pathname.split(
                 "/video/",
               )[1];

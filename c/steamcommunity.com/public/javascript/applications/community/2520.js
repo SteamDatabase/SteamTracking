@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Szczegóły sprawy zaktualizowane",
 	"moderationaction_locked": "Zablokowano",
 	"moderationaction_unlocked": "Odblokowano",
-	"moderationaction_unknown": "Nieznane działanie"
+	"moderationaction_unknown": "Nieznane działanie",
+	"moderatormessage_count_note": "Uwagi: %1$s",
+	"moderatormessage_count_warning": "Ostrzeżenia: %1$s",
+	"moderatormessage_count_bannotice": "Blokady: %1$s",
+	"moderatormessage_count_contentremoval": "Powiadomienia o usunięciu treści: %1$s"
 }`);
     },
   },

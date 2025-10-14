@@ -10,7 +10,7 @@
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -191,6 +191,9 @@
   object-position: center top;
   object-fit: none;
   transform: scaleY(-1);
+}
+._2aeq1EsgEidbP1gObw4Bqg {
+  padding: 5px;
 }
 ._1Un6hCqh2IuOm0WLmrrA7w {
   display: flex;
@@ -1181,7 +1184,7 @@ p a:hover {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;
@@ -1196,7 +1199,7 @@ p a:hover {
   font-size: 16px;
   font-style: normal;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
   text-decoration: none;
   text-indent: 0;
   text-shadow: none;

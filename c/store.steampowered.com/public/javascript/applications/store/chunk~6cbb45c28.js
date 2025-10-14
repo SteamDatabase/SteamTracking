@@ -86,15 +86,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { strImageToken: _, language: __webpack_require__ } = _,
+        const {
+            strImageToken: _,
+            language: __webpack_require__,
+            strAltText: _,
+          } = _,
           _ = (0, _._)(_, __webpack_require__);
         return _
           ? "string" == typeof _
             ? _.createElement("img", {
                 src: _,
+                alt: _,
               })
             : _.createElement(_._, {
                 rgSources: _,
+                strAltText: _,
               })
           : null;
       }

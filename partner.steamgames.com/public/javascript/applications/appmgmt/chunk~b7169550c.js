@@ -92,11 +92,11 @@
       "use strict";
       n.d(t, {
         MY: () => u,
-        UA: () => d,
+        UA: () => g,
         Yd: () => f,
         qG: () => _,
         rN: () => m,
-        vh: () => g,
+        vh: () => d,
       });
       var a = n(34629),
         r = n(41735),
@@ -209,7 +209,7 @@
           );
         }
       }
-      function g(e) {
+      function d(e) {
         const [t, n] = (0, s.useState)(!1);
         return (
           (0, s.useEffect)(() => {
@@ -223,7 +223,7 @@
           t
         );
       }
-      function d(e) {
+      function g(e) {
         const [t, n] = s.useState(() => p.Get().GetPartnerInfo(e));
         return (
           s.useEffect(() => {
@@ -257,9 +257,12 @@
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(e, t) {
-          (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
+          e instanceof Map
+            ? (this.m_dictComponents = e)
+            : (this.m_dictComponents = new Map(Object.entries(e))),
+            (this.m_fnAccumulatorFactory = t);
         }
-        Parse(e, t, n = !1) {
+        Parse(e, t, n = !0) {
           const a = (function (e, t) {
             const n = [];
             let a = { type: 0, text: "" },
@@ -527,7 +530,7 @@
     },
     63556: (e, t, n) => {
       "use strict";
-      n.d(t, { E: () => g, O: () => p });
+      n.d(t, { E: () => d, O: () => p });
       var a = n(34629),
         r = n(14947),
         o = n(65946),
@@ -582,7 +585,7 @@
           (0, r.Gn)(this);
         }
       }
-      function g() {
+      function d() {
         return (0, o.q3)(() => p.Get().GetCurEditLanguage());
       }
       (0, a.Cg)([r.sH], p.prototype, "m_eCurLang", void 0),
@@ -637,8 +640,8 @@
         l = n(75233),
         u = n(17720),
         p = n(68797),
-        g = n(78327),
-        d = n(56545),
+        d = n(78327),
+        g = n(56545),
         m = n(37735),
         f = n(23809),
         _ = n(7860);
@@ -649,8 +652,8 @@
             queryKey: [h],
             queryFn: async () => {
               const e = new Map();
-              if (g.iA.logged_in) {
-                const n = d.w.Init(m.dN),
+              if (d.iA.logged_in) {
+                const n = g.w.Init(m.dN),
                   a = (await m.xt.GetNicknameList(t, n)).Body().toObject();
                 a?.nicknames &&
                   a.nicknames.length > 0 &&
@@ -668,9 +671,9 @@
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, g.yK)()
-                  ? g.TS.COMMUNITY_BASE_URL
-                  : g.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
                   a = await r().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -759,8 +762,8 @@
         l = n(63556),
         u = n(95695),
         p = n.n(u),
-        g = n(52038),
-        d = n(61859),
+        d = n(52038),
+        g = n(61859),
         m = n(91675),
         f = n(73745),
         _ = n(32754);
@@ -778,15 +781,15 @@
               s.createElement(
                 "option",
                 { key: "langpicker_unset", value: -1 },
-                (0, d.we)("#language_selection_none"),
+                (0, g.we)("#language_selection_none"),
               ),
             );
           let o = new Array();
           const l = this.props.realms || [c.TU.k_ESteamRealmGlobal];
-          for (const e of d.A0.GetLanguageListForRealms(l)) {
+          for (const e of g.A0.GetLanguageListForRealms(l)) {
             if (t && !t(e)) continue;
             const n = (0, i.Lg)(e),
-              a = (0, d.we)("#Language_" + n),
+              a = (0, g.we)("#Language_" + n),
               s = Boolean(r) && r(e);
             o.push({ eLang: e, sLocName: a, bSupported: s });
           }
@@ -808,7 +811,7 @@
                     className: p().SupportedGroupLabel,
                     disabled: !0,
                   },
-                  (0, d.we)(
+                  (0, g.we)(
                     t.bSupported
                       ? "#LanguageGroup_Supported"
                       : "#LanguageGroup_Unsupported",
@@ -822,9 +825,9 @@
             o &&
               0 !== o &&
               ((i += " "),
-              (i += (0, d.we)(
+              (i += (0, g.we)(
                 "#Language_Last_Update",
-                (0, d.$z)(o) + " @ " + (0, m.KC)(o, { bForce24HourClock: !1 }),
+                (0, g.$z)(o) + " @ " + (0, m.KC)(o, { bForce24HourClock: !1 }),
               ))),
               e.push(
                 s.createElement(
@@ -832,7 +835,7 @@
                   {
                     key: "langpicker" + t.eLang + (r ? "_hasdata" : ""),
                     value: t.eLang,
-                    className: (0, g.A)(
+                    className: (0, d.A)(
                       { [p().LanguageWithContent]: r },
                       t.bSupported
                         ? p().SupportedLanguage
@@ -874,7 +877,7 @@
           fnLangHasData: l.O.Get().BHasLanguageData,
           fnOnLanguageChanged: l.O.Get().SetCurEditLanguage,
           bDisabled: !t,
-          strTooltip: t ? void 0 : (0, d.we)("#Localization_EditorNotInFocus"),
+          strTooltip: t ? void 0 : (0, g.we)("#Localization_EditorNotInFocus"),
         });
       }
       function S(e) {
@@ -901,7 +904,7 @@
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => d, pn: () => f, qx: () => m });
+      n.d(t, { AQ: () => g, pn: () => f, qx: () => m });
       var a = n(16676),
         r = n(61859),
         o = n(12155),
@@ -911,15 +914,15 @@
         l = n(84811),
         u = n(64734),
         p = n(65946),
-        g = n(26408);
-      function d(e) {
+        d = n(26408);
+      function g(e) {
         const {
             title: t,
             tooltip: n,
             getMinimized: a,
             toggleMinimized: r,
             className: o,
-            children: d,
+            children: g,
             elAdditionalButtons: m,
           } = e,
           _ = (0, p.q3)(() => a());
@@ -945,7 +948,7 @@
                 ),
               },
               t,
-              Boolean(n) && s.createElement(g.o, { tooltip: n }),
+              Boolean(n) && s.createElement(d.o, { tooltip: n }),
             ),
             s.createElement(
               "div",
@@ -954,13 +957,13 @@
               s.createElement(f, { bIsMinimized: _, fnToggleMinimize: r }),
             ),
           ),
-          !_ && s.createElement(l.tH, null, d),
+          !_ && s.createElement(l.tH, null, g),
         );
       }
       function m(e) {
         const [t, n] = s.useState(Boolean(e.bStartMinimized));
         return s.createElement(
-          d,
+          g,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
         );

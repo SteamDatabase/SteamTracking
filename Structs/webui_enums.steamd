@@ -22,6 +22,14 @@ enum BluetoothDeviceType
 	k_BluetoothDeviceType_Keyboard = 11;
 }
 
+enum BundleSort
+{
+	k_BundleSort_Name = 1;
+	k_BundleSort_Price = 2;
+	k_BundleSort_Discount = 3;
+	k_BundleSort_Popular = 4;
+}
+
 enum by
 {
 	by_player = 1;

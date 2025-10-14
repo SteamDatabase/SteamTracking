@@ -180,7 +180,11 @@
 	"moderationaction_updated": "Aiheen tiedot päivitettiin",
 	"moderationaction_locked": "Lukittu",
 	"moderationaction_unlocked": "Lukitus poistettu",
-	"moderationaction_unknown": "Tuntematon toimi"
+	"moderationaction_unknown": "Tuntematon toimi",
+	"moderatormessage_count_note": "Huomautukset: %1$s",
+	"moderatormessage_count_warning": "Varoitukset: %1$s",
+	"moderatormessage_count_bannotice": "Kiellot: %1$s",
+	"moderatormessage_count_contentremoval": "Sisällön poistoilmoitukset: %1$s"
 }`);
     },
   },

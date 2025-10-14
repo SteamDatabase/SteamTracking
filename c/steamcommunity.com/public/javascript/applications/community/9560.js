@@ -1702,8 +1702,8 @@
       function _(_) {
         const { gutter: _ = 0 } = _;
         return [
-          (0, _._)(),
           (0, _._)(2),
+          (0, _._)(),
           (0, _._)({
             apply: (_) => {
               const { rects: _, elements: _, availableHeight: _ } = _,
@@ -1716,8 +1716,24 @@
                   boxSizing: "border-box",
                   zIndex: "1",
                 };
-              _.scroll && (_.overflowY = "auto"),
-                "target" === _.width && (_.width = `${_.reference.width}px`),
+              switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
+                case "target":
+                  _.width = `${_.reference.width}px`;
+                  break;
+                case "content":
+                  _.width = `${_.floating.width}px`;
+                  break;
+                case "dropdown": {
+                  let _ = _.reference.width;
+                  _.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                    (_.width = `${_}px`);
+                }
+              }
+              "function" == typeof _.width &&
+                (_.width = _.width({
+                  unContentWidth: _.floating.width,
+                  unTargetWidth: _.reference.width,
+                })),
                 Object.assign(_.floating.style, _),
                 _.floating.style.setProperty("--popover-max-height", _);
             },
@@ -1735,6 +1751,7 @@
           setSelectedIndex: _,
           interactions: _ = {},
           role: _,
+          placement: _,
         } = _;
         let _ = _;
         const _ = (0, _._)({
@@ -1742,6 +1759,7 @@
             onOpenChange: __webpack_require__,
             middleware: _(_),
             whileElementsMounted: _._,
+            placement: _,
           }),
           _ = (0, _._)(_.context, {
             enabled: !!_.click,
@@ -1997,7 +2015,8 @@
               const { children: _, ...__webpack_require__ } = _,
                 _ = _({
                   ...__webpack_require__.state,
-                  width: "target",
+                  width: "dropdown",
+                  placement: "bottom-end",
                   gutter: "4",
                   interactions: {
                     virtualItemFocus: !0,
@@ -2022,20 +2041,22 @@
             },
             TextInput: function (_) {
               const {
-                state: {
-                  onTextChange: _,
-                  activeIndex: __webpack_require__,
-                  onOpenChange: _,
-                  setActiveIndex: _,
-                  suggestions: _,
-                  onSuggestionSelected: _,
-                },
-              } = _("<Autocomplete.TextInput>");
+                  state: {
+                    onTextChange: _,
+                    activeIndex: __webpack_require__,
+                    onOpenChange: _,
+                    setActiveIndex: _,
+                    suggestions: _,
+                    onSuggestionSelected: _,
+                  },
+                } = _("<Autocomplete.TextInput>"),
+                _ = (0, _.useRef)(null);
               return _.createElement(
                 _.Anchor,
                 null,
                 _.createElement(_, {
                   ..._,
+                  inputRef: _,
                   onTextChange: _,
                   "aria-autocomplete": "list",
                   onKeyDown: (_) => {
@@ -2049,6 +2070,11 @@
                       _.preventDefault(),
                       _.stopPropagation());
                   },
+                  onKeyDownCapture: (_) => {
+                    ("Home" !== _.key && "End" !== _.key) ||
+                      _.stopPropagation();
+                  },
+                  role: "combobox",
                 }),
               );
             },
@@ -2387,14 +2413,6 @@
             onIndexSelected: _,
             refScrollElement: _,
           } = _("<Combobox.Options>"),
-          _ = (_) => {
-            "Enter" === _.key &&
-              null !== _ &&
-              (_(_),
-              _ || (_(null), _(!1)),
-              _.preventDefault(),
-              _.stopPropagation());
-          },
           _ = _.startsWith("top"),
           _ = _.createElement(
             _._,
@@ -2428,8 +2446,17 @@
                 radius: "sm",
                 value: __webpack_require__,
                 onTextChange: _,
-                onKeyDown: _,
-                onKeyDownCapture: _,
+                onKeyDown: (_) => {
+                  "Enter" === _.key &&
+                    null !== _ &&
+                    (_(_),
+                    _ || (_(null), _(!1)),
+                    _.preventDefault(),
+                    _.stopPropagation());
+                },
+                onKeyDownCapture: (_) => {
+                  ("Home" !== _.key && "End" !== _.key) || _.stopPropagation();
+                },
                 placeholder: _,
                 inputRef: (_) => {
                   _ &&
@@ -2586,7 +2613,8 @@
             _ = _({
               open: __webpack_require__.bOpen,
               onOpenChange: __webpack_require__.setOpen,
-              width: "target",
+              width: "dropdown",
+              placement: "bottom-end",
               gutter: "4",
               activeIndex: __webpack_require__.activeIndex,
               setActiveIndex: __webpack_require__.setActiveIndex,
@@ -3040,7 +3068,8 @@
             _ = _({
               open: __webpack_require__.bOpen,
               onOpenChange: __webpack_require__.setOpen,
-              width: "target",
+              width: "dropdown",
+              placement: "bottom-end",
               selectedIndex: _,
               setSelectedIndex: (_) =>
                 __webpack_require__.onItemSelectionChange(
@@ -7065,7 +7094,7 @@
           _,
           {
             direction: "column",
-            marginTop: "2",
+            marginTop: "3",
             marginBottom: "2",
           },
           _.createElement(

@@ -187,11 +187,11 @@
         a = n(60155),
         m = n(52038),
         d = n(61859);
-      function E(e, t) {
-        return e + "economy/sticker/" + encodeURIComponent(t);
+      function E(e, t, n = !1) {
+        return `${e}economy/sticker${n ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var u = n(78327),
-        p = n(10981),
+        p = n(53835),
         h = n(76217),
         S = n(88006),
         C = n(19418);
