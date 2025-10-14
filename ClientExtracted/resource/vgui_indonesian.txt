@@ -14,6 +14,7 @@
 "FileOpenDialog_Look_in"	"Cari di:"
 "FileOpenDialog_File_Name"	"Nama file:"
 "FileOpenDialog_File_Type"	"Jenis file:"
+"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Nama"
 "FileOpenDialog_Type"		"Jenis"
 "SysMenu_Minimize"		" Perkecil "

@@ -1246,6 +1246,7 @@ $ffn
 )\n$k_EMsgClientUFSGetUGCDetailsResponse
 )\n$k_EMsgDRMWorkerProcessGetBlobRequest
 )\n$k_EMsgEconTrading_CancelTradeRequest
+)\n$k_EMsgEnsureBillingConfigReload_TEST
 )\n$k_EMsgFBSBootstrapperGetPackageChunk
 )\n$k_EMsgFBSBootstrapperPackageResponse
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
@@ -2379,6 +2380,7 @@ $ffn
 1\n,k_EMsgDRMWorkerProcessSplitAndInstallRequest
 1\n,k_EMsgDRMWorkerProcessSteamworksInfoResponse
 1\n,k_EMsgDRMWorkerProcessValidateDRMDLLResponse
+1\n,k_EMsgEnsureBillingConfigReloadResponse_TEST
 1\n,k_EMsgFBSBootstrapperGetPackageChunkResponse
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
@@ -2422,9 +2424,8 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
-22:36:29
-22:36:36
-22:36:37
+22:50:06
+22:50:13
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -4026,6 +4027,7 @@ CLIENT_EARLY_TRAFFIC_SECRET
 CLIENT_HANDSHAKE_TRAFFIC_SECRET
 CLIENT_RANDOM
 CLIENT_TRAFFIC_SECRET_0
+CLegacy
 CLocalizationToken
 CLocalizedStringTable
 CLogEvent
@@ -7413,7 +7415,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct  3 2025
+Oct 13 2025
 October
 Odia
 Offensive Avatar
@@ -8755,7 +8757,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct  3 2025 22:36:37
+Startup - updater built Oct 13 2025 22:50:13
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -9523,6 +9525,7 @@ Validate Failed: Leaked connection %u\n
 Validate Failed: Leaked file %p\n
 Validate Failed: Leaked socket %p\n
 ValidateGlobals_NetMisc
+Validated Valve Email
 Value
 Value 0x%x
 Value is out of range
@@ -14129,6 +14132,7 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 k_EClanBetaReleaseEvent
 k_EClanBroadcastEvent
 k_EClanChatEvent
+k_EClanCreatorHome
 k_EClanCrosspostEvent
 k_EClanDLCReleaseEvent
 k_EClanDevStreamEvent

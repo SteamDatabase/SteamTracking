@@ -26,6 +26,7 @@ enum EAppAntiCheatType {
 enum EAppGameEngineType {
 	k_EAppGameEngineTypeNone = 0;
 	k_EAppGameEngineTypeUnreal = 1;
+	k_EAppGameEngineTypeUnity = 2;
 }
 
 message CContentServerDirectory_ConnectedSteamPipeServerInfo {

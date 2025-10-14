@@ -265,6 +265,7 @@
 "PerfMon_Units_GB" "GB"
 "PerfMon_Units_MB" "MB"
 
+"SteamChina_Overlay_DurationControl_Init"		"[Health Tips] To protect the healthy growth of minors, this platform is connected to the youth anti-addiction system.\nThe anti-addiction system is working on your account.\nAccording to the youth anti-addiction rules, you cannot play games from 22:00 at night until 8:00 the next day.\nOutside of statutory holidays, the cumulative game time per day should not exceed 1.5 hours.\nOn statutory holidays, the accumulated game time per day should not exceed 3 hours.\nWhen that time has passed, you will need to wait until 8:00 the next day to continue playing."
 "SteamChina_Overlay_DurationControl_MessageA"		"Sie haben eine Stunde lang gespielt."
 "SteamChina_Overlay_DurationControl_MessageB"		"Sie haben drei Stunden lang gespielt.\nErwägen Sie eine Pause."
 "SteamChina_Overlay_DurationControl_MessageC"		"Sie haben mehr als drei Stunden lang gespielt.\nIhre XP und Ihr Fortschritt wurden halbiert."

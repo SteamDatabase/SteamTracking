@@ -21,7 +21,8 @@ enum EStoreDiscoveryQueueType {
 	k_EStoreDiscoveryQueueTypeRecommendedDemos = 12;
 	k_EStoreDiscoveryQueueTypeDLCNewReleases = 13;
 	k_EStoreDiscoveryQueueTypeDLCTopSellers = 14;
-	k_EStoreDiscoveryQueueTypeMAX = 15;
+	k_EStoreDiscoveryQueueTypeDLCUpcoming = 15;
+	k_EStoreDiscoveryQueueTypeMAX = 16;
 }
 
 enum EPlaytestStatus {

@@ -81,14 +81,6 @@ message CParental_RequestRecoveryCode_Request {
 message CParental_RequestRecoveryCode_Response {
 }
 
-message CParental_DisableWithRecoveryCode_Request {
-	optional uint32 recovery_code = 1;
-	optional fixed64 steamid = 10;
-}
-
-message CParental_DisableWithRecoveryCode_Response {
-}
-
 message CParental_RequestFeatureAccess_Request {
 	optional uint32 features = 1;
 	optional fixed64 steamid = 10;
@@ -179,7 +171,6 @@ service Parental {
 	rpc ValidatePassword (.CParental_ValidatePassword_Request) returns (.CParental_ValidatePassword_Response);
 	rpc LockClient (.CParental_LockClient_Request) returns (.CParental_LockClient_Response);
 	rpc RequestRecoveryCode (.CParental_RequestRecoveryCode_Request) returns (.CParental_RequestRecoveryCode_Response);
-	rpc DisableWithRecoveryCode (.CParental_DisableWithRecoveryCode_Request) returns (.CParental_DisableWithRecoveryCode_Response);
 	rpc RequestFeatureAccess (.CParental_RequestFeatureAccess_Request) returns (.CParental_RequestFeatureAccess_Response);
 	rpc ApproveFeatureAccess (.CParental_ApproveFeatureAccess_Request) returns (.CParental_ApproveFeatureAccess_Response);
 	rpc RequestPlaytime (.CParental_RequestPlaytime_Request) returns (.CParental_RequestPlaytime_Response);

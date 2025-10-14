@@ -342,6 +342,7 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "%chat% でボイスを開始できません。十分な空きスピーキングスロットがありません。"
 "Friends_Chat_VoiceStatus"		"%availslots% 個のスロットを使用できます (合計 %maxslots% 個)。"
 
+"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% 人がオンライン"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% 人がゲーム中、%online% 人がオンライン"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% 人がチャット中、%online% 人がオンライン"

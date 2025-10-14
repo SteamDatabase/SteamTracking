@@ -181,7 +181,6 @@ ${COMMUNITY_BASE_URL}broadcast/chatonly/${}
 ${COMMUNITY_BASE_URL}broadcast/report
 ${COMMUNITY_BASE_URL}broadcast/setbroadcastrestriction
 ${COMMUNITY_BASE_URL}broadcast/share/${}
-${COMMUNITY_BASE_URL}broadcast/share/${}?site=${}
 ${COMMUNITY_BASE_URL}broadcast/stopbroadcast
 ${COMMUNITY_BASE_URL}broadcast/unban
 ${COMMUNITY_BASE_URL}broadcast/updatebroadcastsettings
@@ -223,7 +222,6 @@ ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetlocalization/${}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetmyvote/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/rate/${AnnouncementGID}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/share/${AnnouncementGID}
-${COMMUNITY_BASE_URL}gid/${}/announcements/share/${AnnouncementGID}?site=${}
 ${COMMUNITY_BASE_URL}gid/${}/edit 
 ${COMMUNITY_BASE_URL}gid/${}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}gid/${}/fetchyoutubeimage?videoid=${}
@@ -2576,7 +2574,6 @@ https://help.steampowered.com/faqs/view/2EA8-4D75-DA21-31EB
 https://help.steampowered.com/faqs/view/3462-CD4C-36BD-5767
 https://help.steampowered.com/faqs/view/548F-BC55-89EB-1BC8
 https://help.steampowered.com/faqs/view/5E0D-522A-4E62-B6EF
-https://help.steampowered.com/faqs/view/6639-EB3C-EC79-FF60
 https://help.steampowered.com/faqs/view/6862-8119-C23E-EA7B
 https://help.steampowered.com/login${}
 https://help.steampowered.com/login/getmenuactions/

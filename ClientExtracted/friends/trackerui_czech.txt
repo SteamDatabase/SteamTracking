@@ -342,6 +342,7 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Nelze zahájit hlasovou konverzaci v konverzaci %chat%, nedostatek dostupných volných pozic pro hovor."
 "Friends_Chat_VoiceStatus"		"K dispozici je %availslots% pozic [celkem pozic: %maxslots%]."
 
+"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% VE HŘE, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% V KONVERZACI, %online% ONLINE"

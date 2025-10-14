@@ -21,6 +21,7 @@
 "SteamUI_ConvertExistingInfo" "Bestaande installatie van het spel converteren. Dit kan een paar minuten duren."
 "SteamUI_ConversionCompleteInfo" "Voorladen van Steam voltooid."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 bestanden voorladen van schijf."
 "SteamUI_ConvertExistingStatus2" "%s1 bestanden voorladen van schijf.."
 "SteamUI_ConvertExistingStatus3" "%s1 bestanden voorladen van schijf..."
@@ -703,6 +704,8 @@ Dit duurt niet langer dan een minuut."
 "Steam_RecoverAuthenticator_BadPassword"			"Het wachtwoord is onjuist. Controleer het en probeer het opnieuw."
 "Steam_RecoverAuthenticator_BadCode"				"De code of het wachtwoord was niet juist. Controleer ze en probeer het opnieuw."
 "Steam_RecoverAuthenticator_BadCodes"				"De codes of het wachtwoord zijn onjuist. Controleer ze en probeer het opnieuw."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"De Steam Guard-authenticator is van je account verwijderd.\n\nJe zou nu in je account moeten kunnen inloggen."
 
 
@@ -1570,6 +1573,7 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "SteamUI_HardwarePromoWizard_Title" "Aanbieding registreren"
 "Steam_HardwarePromo_Intro" "Gefeliciteerd! Jouw computer komt in aanmerking voor deze aanbieding. Je kunt de aanbieding gebruiken door deze bij één Steam-account (dus niet meerdere) te registreren. Je kunt de spellen uit de aanbieding op elke computer spelen zolang je maar bent aangemeld op dit Steam-account."
 "Steam_Legal_HardwarePromo_Unreleased" "Enkele producten in dit pakket zijn nog niet uitgebracht en daarom nog niet beschikbaar. Je krijgt via Steam automatisch toegang tot deze producten zodra ze worden uitgebracht. De uitgavedatum staat niet vast en kopers kunnen dan ook niet zeker zijn van de geschatte uitgavedatum. Als je op 'Volgende' klikt, worden de aanvullende voorwaarden en bepalingen weergegeven."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Aanbieding bij registratie..."
 "SteamUI_OEMTicketWizard_Title" "OEM-licentie registreren"
 
@@ -4339,6 +4343,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 
 "Steam_Parental_UnlockTitle"			"Gezinsweergave"
 "Steam_Parental_UnlockInstructions"		"Voer je pincode hieronder in om Gezinsweergave te verlaten."
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Ik ben mijn pincode vergeten"
 "Steam_Parental_NoRecoveryEmail"		"Geen herstel-e-mailadres ingesteld"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Geen herstel-e-mailadres ingesteld voor je account. Sluit gezinsweergave en start de configuratie voor gezinsweergave opnieuw op om je herstel-e-mailadres in te stellen."
@@ -4346,7 +4351,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_Parental_UnlockFailure"			"Leuk geprobeerd. Vul nu de correcte pincode in."
 "Steam_Parental_UnlockFailureExceeded"	"Te veel mislukte pogingen. Start Steam opnieuw op om het opnieuw te proberen."
 "Steam_Parental_GameBlocked_Title"		"Gezinsweergave"
-"Steam_Parental_GameBlocked"			"Deze game is niet beschikbaar in gezinsweergave"
+"Steam_Parental_GameBlocked"			"Dit spel is niet beschikbaar in de gezinsweergave"
 
 "Steam_Parental_LockTitle"				"Gezinsweergave"
 "Steam_Parental_LockInstructions"		"Bevestig dat je terug wilt keren naar de gezinsweergave."
@@ -4453,6 +4458,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Track_Menu_ShowAlbumInUI" "Album weergeven"
 "Music_Menu_Play" "Afspelen"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% van de %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% nummers - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% nummer - %queueduration%"
@@ -4526,6 +4532,7 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Playlist_RenameDialog_Title" "Afspeellijst hernoemen"
 "Music_Playlist_RenameDialog_Prompt" "Afspeellijst '%playlistname%' hernoemen"
 "Music_Playlist_AddDialog_Title" "Nieuwe afspeellijst maken"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Afspeellijst verwijderen"
 "Music_Playlist_DeleteDialog_Prompt" "Weet je zeker dat je de afspeellijst '%playlistname%' wilt verwijderen?"
 "Music_Playlist_Details_Play" "Lijst afspelen"
@@ -4544,6 +4551,8 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Music_Queue_Menu_ReplacePlaylist" "Afspeellijst voor wachtrij vervangen"
 "Music_Queue_Menu_AppendPlaylist" "Toevoegen aan afspeellijst"
 "Music_Queue_AddPlaylist_Dialog_Title" "Afspeellijst toevoegen"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Controller"
 "Steam_SettingsControllerTitle"				"Controllerconfiguratie"
 "Steam_SettingsControllerDescription"		"In de algemene controllerinstellingen kunnen het aan- en afmelden voor configuratiehulp, personalisatie en andere opties worden gewijzigd."

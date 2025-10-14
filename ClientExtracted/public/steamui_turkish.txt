@@ -21,6 +21,7 @@
 "SteamUI_ConvertExistingInfo" "Eski yüklemeniz dönüştürülüyor. Bu birkaç dakika sürebilir."
 "SteamUI_ConversionCompleteInfo" "Steam önyüklemesi tamamlandı."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 dosyaları diskten ön yükleniyor."
 "SteamUI_ConvertExistingStatus2" "%s1 dosyaları diskten önyükleme yapılıyor.."
 "SteamUI_ConvertExistingStatus3" "%s1 dosyaları diskten önyükleme yapılıyor..."
@@ -703,6 +704,8 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_RecoverAuthenticator_BadPassword"			"Parola hatalı. Lütfen kontrol ederek tekrar deneyin."
 "Steam_RecoverAuthenticator_BadCode"				"Kod veya parola doğru değil. Lütfen kontrol edin ve tekrar deneyin."
 "Steam_RecoverAuthenticator_BadCodes"				"Kodlar veya parola hatalı. Lütfen kontrol ederek tekrar deneyin."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Steam Guard kimlik doğrulayıcısı hesabınızdan kaldırıldı.\n\nŞu anda hesabınıza giriş yapabilirsiniz."
 
 
@@ -1570,6 +1573,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "SteamUI_HardwarePromoWizard_Title" "Promosyon Tekliflerine Kayıt Ol"
 "Steam_HardwarePromo_Intro" "Tebrikler! Bilgisayarınız bu teklife hak kazandı. Sadece bir Steam hesabına bu teklifi kaydedebilirsiniz. Daha sonra bu Steam hesabıyla giriş yaptığınız sürece başka bilgisayarlarda da bu oyunu oynayabilirsiniz."
 "Steam_Legal_HardwarePromo_Unreleased" "Bu paketin içindeki bazı ürünler henüz yayınlanmadı ve şimdilik bunlara erişilmesi mümkün değil. Bu ürünler yayınlandıklarında Steam üzerinden size ulaştırılacak. Bu ürün için yayınlanma tarihi kesin değildir ve alıcılar herhangi bir verilen tarihe güvenmemelidirler. 'İleri' tıklandığında ek şartlar ve koşullar gösterilecektir."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Teklife kayıt olunuyor..."
 "SteamUI_OEMTicketWizard_Title" "OEM Lisans Kayıt"
 
@@ -2269,7 +2273,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_NoLongerOwnsGame_Info"		"Bu oyun artık ücretsiz değil."
 
 "steam_menu_systemreport"		"Sistem Raporu"
-"steam_menu_systeminfo"			"Sistem Bilgisi"
+"steam_menu_systeminfo"			"Sistem Bilgileri"
 "steam_systeminfo_title"			"Steam - Sistem Bilgisi"
 "steam_systeminfo_surveylink"	"Donanımınızı diğer Steam kullanıcılarıyla kıyaslayın"
 
@@ -4337,6 +4341,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 
 "Steam_Parental_UnlockTitle"			"Aile Görünümü"
 "Steam_Parental_UnlockInstructions"		"Aile Görünümü'nden çıkmak için aşağıya PIN'inizi girin."
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"PIN'imi Unuttum"
 "Steam_Parental_NoRecoveryEmail"		"Kurtarma E-posta Adresi Bulunmuyor"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Hesabınız için bir kurtarma e-posta adresi bulunmuyor. Kurtarma e-posta adresinizi güncellemek için, lütfen Aile Görünümünü kapatın ve tekrar başlatın."
@@ -4451,6 +4456,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_Track_Menu_ShowAlbumInUI" "Albümü Göster"
 "Music_Menu_Play" "Oynat"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% / %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% parça - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% parça - %queueduration%"
@@ -4524,6 +4530,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_Playlist_RenameDialog_Title" "Çalma Listesini Yeniden Adlandır"
 "Music_Playlist_RenameDialog_Prompt" "Çalma Listesini '%playlistname%' olarak adlandır"
 "Music_Playlist_AddDialog_Title" "Yeni Çalma Listesi oluştur"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Çalma Listesini Sil"
 "Music_Playlist_DeleteDialog_Prompt" "'%playlistname%' isimli çalma listesini silmek istediğinize emin misiniz?"
 "Music_Playlist_Details_Play" "Listeyi Çal"
@@ -4542,6 +4549,8 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Music_Queue_Menu_ReplacePlaylist" "Çalma Listesini Kuyrukla Değiştir"
 "Music_Queue_Menu_AppendPlaylist" "Çalma listesine ekle"
 "Music_Queue_AddPlaylist_Dialog_Title" "Çalma Listesi Ekle"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Kontrolcü"
 "Steam_SettingsControllerTitle"				"Kontrolcü Yapılandırması"
 "Steam_SettingsControllerDescription"		"Genel kontrolcü ayarlarından yapılandırma desteği, kişiselleştirme ve diğer seçenekler etkinleştirilebilir veya devre dışı bırakılabilir."

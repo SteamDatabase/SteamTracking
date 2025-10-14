@@ -21,6 +21,7 @@
 "SteamUI_ConvertExistingInfo" "Mengonversi penginstalan game yang sudah ada. Mohon tunggu beberapa menit."
 "SteamUI_ConversionCompleteInfo" "Pramuat Steam selesai."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Pramuat file %s1 dari disk."
 "SteamUI_ConvertExistingStatus2" "Pramuat file %s1 dari disk.."
 "SteamUI_ConvertExistingStatus3" "Pramuat file %s1 dari disk..."
@@ -704,6 +705,8 @@ Mohon tunggu sebentar."
 "Steam_RecoverAuthenticator_BadPassword"			"Kata sandi salah. Mohon periksa dan coba lagi."
 "Steam_RecoverAuthenticator_BadCode"				"Kode atau kata sandi salah. Mohon periksa dan coba lagi."
 "Steam_RecoverAuthenticator_BadCodes"				"Kode atau kata sandi salah. Mohon periksa dan coba lagi."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Pengautentikasi Steam Guard telah dihapus dari akunmu.\n\nKamu dapat login ke akunmu sekarang."
 
 
@@ -1571,6 +1574,7 @@ Kamu harus logout dari OS X agar perubahan dapat diterapkan."
 "SteamUI_HardwarePromoWizard_Title" "Daftarkan Penawaran Promosi"
 "Steam_HardwarePromo_Intro" "Selamat! Komputermu memenuhi syarat untuk penawaran ini. Kamu bisa menukarkan penawaran ini dengan mendaftarkannya ke satu akun Steam saja. Kamu akan dapat memainkan game-game yang terdapat dalam penawaran ini dari komputer mana pun selama kamu login menggunakan akun Steam tersebut."
 "Steam_Legal_HardwarePromo_Unreleased" "Beberapa produk dalam paket ini masih belum dirilis dan belum tersedia. Produk-produk ini akan tersedia secara otomatis di Steam di hari perilisannya. Tanggal perilisan produk-produk ini masih belum ditentukan dan para pembeli tidak disarankan untuk menjadikan tanggal perkiraan perilisan sebagai acuan. Klik \"Selanjutnya\" untuk melihat syarat dan ketentuan tambahan."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Mendaftarkan penawaran..."
 "SteamUI_OEMTicketWizard_Title" "Mendaftarkan Lisensi OEM"
 
@@ -2915,6 +2919,11 @@ Ayo tambahkan temanmu dengan mengirimkan hadiah ke mereka."
 "SteamUI_LicenseExpired_Body"		"Lisensimu untuk %game% telah kedaluwarsa."
 
 
+"SteamUI_DurationControl_PlaytimeExceeded_Title"		"Playtime Exceeded"
+
+"SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"You have reached your limit of online time for today. Please take a break and try tomorrow after 8AM."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"You have reached your limit of online time for today. Please take a break and try tomorrow after 8AM."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Players under 18 can't play this game between 10PM and 8AM the following day. Please take a break."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Akunmu sedang dalam proses verifikasi identitas, mohon coba lagi nanti."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"Game ini sedang dalam pembaruan teknis dan pemain di bawah umur tidak dapat bermain sampai pembaruan selesai. Kami mohon maaf atas ketidaknyamanannya dan terima kasih atas pengertiannya."
 
@@ -4338,6 +4347,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 
 "Steam_Parental_UnlockTitle"			"Mode Keluarga"
 "Steam_Parental_UnlockInstructions"		"Masukkan PIN di bawah ini untuk keluar dari Mode Keluarga"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Saya lupa PIN"
 "Steam_Parental_NoRecoveryEmail"		"Tidak Ada Email Pemulihan yang Disetel"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Tidak ada alamat email pemulihan yang disetel untuk akunmu. Untuk memperbarui alamat email pemulihanmu, silakan keluar dari Mode Keluarga dan jalankan kembali pengaturan Mode Keluarga."
@@ -4452,6 +4462,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Music_Track_Menu_ShowAlbumInUI" "Lihat Album"
 "Music_Menu_Play" "Mainkan"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% dari %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% trek - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% trek - %queueduration%"
@@ -4525,6 +4536,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Music_Playlist_RenameDialog_Title" "Namai Ulang Playlist"
 "Music_Playlist_RenameDialog_Prompt" "Namai ulang playlist \"%playlistname%\""
 "Music_Playlist_AddDialog_Title" "Buat Playlist Baru"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Hapus Playlist"
 "Music_Playlist_DeleteDialog_Prompt" "Apa kamu yakin ingin menghapus playlist \"%playlistname%\"?"
 "Music_Playlist_Details_Play" "Daftar Putar"
@@ -4543,6 +4555,8 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Music_Queue_Menu_ReplacePlaylist" "Ganti Playlist dengan Antrean"
 "Music_Queue_Menu_AppendPlaylist" "Tambahkan ke Playlist"
 "Music_Queue_AddPlaylist_Dialog_Title" "Tambahkan Playlist"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Kontroler"
 "Steam_SettingsControllerTitle"				"Konfigurasi Kontroler"
 "Steam_SettingsControllerDescription"		"Pengaturan Umum Kontroler memungkinkan pengaturan untuk masuk/keluar dari Bantuan Konfigurasi, Personalisasi, dan opsi-opsi lainnya."

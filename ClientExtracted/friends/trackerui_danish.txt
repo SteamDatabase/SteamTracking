@@ -342,6 +342,7 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Kan ikke starte tale i %chat%. Ikke tilstrækkelige ledige pladser."
 "Friends_Chat_VoiceStatus"		"%availslots% pladser tilg. [i alt %maxslots%]."
 
+"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ONLINE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% I SPIL, %online% ONLINE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% I CHAT, %online% ONLINE"

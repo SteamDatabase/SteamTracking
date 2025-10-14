@@ -342,6 +342,7 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Impossible de lancer l'audio dans %chat%, emplacements vocaux disponibles insuffisants."
 "Friends_Chat_VoiceStatus"		"%availslots% emplacements dispos [%maxslots% au total]."
 
+"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% EN LIGNE"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% DANS UN JEU, %online% EN LIGNE"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% DANS UN CHAT, %online% EN LIGNE"

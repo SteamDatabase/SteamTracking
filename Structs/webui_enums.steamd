@@ -325,7 +325,9 @@ enum EConnectivityTestSimulation
 enum EContentModerationAction
 {
 	k_EContentModerationAction_None = 1;
-	k_EContentModerationAction_Sustain = 2;
+	k_EContentModerationAction_LockThread = 2;
+	k_EContentModerationAction_UnlockThread = 3;
+	k_EContentModerationAction_Sustain = 4;
 }
 
 enum EControllerBindingType
@@ -1726,6 +1728,19 @@ enum UnnamedEnum184ae5e9b907d5cb
 	k_eWeek = 5;
 	k_eMonth = 6;
 	k_eYear = 7;
+}
+
+enum UnnamedEnum18756a211197c204
+{
+	Notifications = 0;
+	RemotePlayTogetherControls = 1;
+	VoiceChat = 2;
+	Friends = 3;
+	Settings = 4;
+	Perf = 5;
+	Help = 6;
+	Soundtrack = 7;
+	VRBatteries = 8;
 }
 
 enum UnnamedEnum1a595e4880050966
@@ -3169,18 +3184,6 @@ enum UnnamedEnum866d82e66e6a644d
 	OnScreen = 2;
 	Below = 3;
 	Empty = 4;
-}
-
-enum UnnamedEnum869d78ff95ee9ad9
-{
-	Notifications = 0;
-	RemotePlayTogetherControls = 1;
-	VoiceChat = 2;
-	Friends = 3;
-	Settings = 4;
-	Perf = 5;
-	Help = 6;
-	Soundtrack = 7;
 }
 
 enum UnnamedEnum899cc823eee04c7f

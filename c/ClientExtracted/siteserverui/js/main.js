@@ -5048,7 +5048,6 @@
         (0, _._)([_], _.prototype, "onSelect", null);
       class _ extends _.Component {
         state = {};
-        reactErrorHandler = void 0;
         constructor(_) {
           super(_), (this.state.lastErrorKey = _.errorKey);
         }
@@ -6440,7 +6439,9 @@
         enforceActions: "never",
       }),
         (window.AssertMsg = _),
-        _._(document.getElementById("root")).render(_.createElement(_, null));
+        _.createRoot(document.getElementById("root")).render(
+          _.createElement(_, null),
+        );
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       var _ = {

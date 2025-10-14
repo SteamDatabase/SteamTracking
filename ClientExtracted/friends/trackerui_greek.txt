@@ -342,6 +342,7 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Δεν μπορείτε να εκκινήσετε φωνητική συνομιλία στο %chat%, δεν υπάρχουν αρκετές ελεύθερες θέσεις για ομιλία."
 "Friends_Chat_VoiceStatus"		"%availslots% θέσεις διαθέσιμες [%maxslots% ολικές]."
 
+"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% ΣΕ ΣΥΝΔΕΣΗ"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% ΣΕ ΠΑΙΧΝΙΔΙ, %online% ΣΕ ΣΥΝΔΕΣΗ"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% ΣΕ ΣΥΝΟΜΙΛΙΑ, %online% ΣΕ ΣΥΝΔΕΣΗ"
@@ -783,7 +784,7 @@
 "Broadcast_Upload_Result_4"  "λήξη χρονικού ορίου"
 "Broadcast_Upload_Result_5"  "υπερβολική ποσότητα δεδομένων"
 "Broadcast_Upload_Result_6"  "χαμηλό FPS"
-"Broadcast_Upload_Result_7"  "έλλειψη σημαντικών καρέ"
+"Broadcast_Upload_Result_7"  "λείπουν καρέ-κλειδί"
 "Broadcast_Upload_Result_8"  "χωρίς σύνδεση"
 "Broadcast_Upload_Result_9"  "αποτυχία αναμετάδοσης"
 "Broadcast_Upload_Result_10" "οι ρυθμίσεις άλλαξαν"

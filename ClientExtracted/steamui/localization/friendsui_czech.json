@@ -633,6 +633,8 @@
     "DirectMessageFromNonFriend": "Zpráva od uživatele, který není Váš přítel",
     "NonFriendAction_Block": "Blokovat komunikaci",
     "NonFriendAction_Allow": "Povolit komunikaci",
+    "SuspiciousMessage_Header": "Suspicious Chat",
+    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
     "Friend_Menu_Open": "Možnosti",
     "Friend_Menu_AddNickname": "Přidat přezdívku",
     "Friend_Menu_AddToQuickAccess": "Přidat do oblíbených",

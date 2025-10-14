@@ -633,6 +633,8 @@
     "DirectMessageFromNonFriend": "Bericht van een gebruiker waar je niet mee bevriend bent",
     "NonFriendAction_Block": "Communicatie blokkeren",
     "NonFriendAction_Allow": "Communicatie toestaan",
+    "SuspiciousMessage_Header": "Suspicious Chat",
+    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
     "Friend_Menu_Open": "Opties",
     "Friend_Menu_AddNickname": "Bijnaam toevoegen",
     "Friend_Menu_AddToQuickAccess": "Aan favorieten toevoegen",

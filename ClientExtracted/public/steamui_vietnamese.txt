@@ -21,6 +21,7 @@
 "SteamUI_ConvertExistingInfo" "Đang chuyển đổi bộ cài sẵn có của trò chơi. Quá trình này có thể mất vài phút."
 "SteamUI_ConversionCompleteInfo" "Việc nạp trước dữ liệu Steam hoàn thành."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Đang nạp trước %s1 file dữ liệu từ ổ đĩa."
 "SteamUI_ConvertExistingStatus2" "Đang nạp trước %s1 file dữ liệu từ ổ đĩa.."
 "SteamUI_ConvertExistingStatus3" "Đang nạp trước %s1 file dữ liệu từ ổ đĩa..."
@@ -405,7 +406,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_CVV2_Info"					"Xin hãy điền mã số thẻ tín dụng của bạn."
 "Steam_CardSecurityInstruction"		"Con số này nằm ở mặt sau của thẻ trong khu vực chữ kí. Nó là ba chữ số cuối cùng (sau số tài khoản)."
 "Steam_Working_ContactingSvr"		"Đang liên hệ máy chủ..."
-"Steam_PayPalIntroToBrowser"		"Giao dịch từ %provider% được ủy quyền thông qua trang web của %provider%. Nhấn vào nút dưới đây để mở trình duyệt của bạn và bắt đầu các giao dịch."
+"Steam_PayPalIntroToBrowser"		"Giao dịch %provider% phải được xác minh thông qua trang %provider%. Nhấp vào nút dưới đây để mở một trang web mới và tiến hành giao dịch."
 "Steam_PayPalOpenBrowserButton"		"Bắt đầu mua %provider%"
 "Steam_PayPalWaiting"				"Trình duyệt web của bạn đã được chuyển hướng đến trang web của %provider%. Xin vui lòng đăng nhập hoặc tạo một tài khoản mới để xem xét chi tiết mua hàng của bạn và xác nhận lại các giao dịch."
 "Steam_PayPalNotAcceptedInGermany"	"PayPal hiện tại không được chấp nhận ở Đức. Xin vui lòng hãy chọn hình thức thanh toán khác."
@@ -699,6 +700,8 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_RecoverAuthenticator_BadPassword"			"Mật khẩu không chính xác. Vui lòng kiểm tra và thử lại."
 "Steam_RecoverAuthenticator_BadCode"				"Mã hoặc mật khẩu không đúng. Xin vui lòng kiểm tra chúng và thử lại."
 "Steam_RecoverAuthenticator_BadCodes"				"Mã hoặc mật khẩu không chính xác. Vui lòng kiểm tra và thử lại."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Bộ xác thực Steam Guard đã được xóa khỏi tài khoản của bạn.\n\nBạn đã có thể đăng nhập vào tài khoản của mình ngay bây giờ."
 
 
@@ -1050,7 +1053,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_ValveSurvey_Summary_TrackerDevice"					"Bộ theo dõi: %s1 %s2 (%s3)"
 "SteamUI_ValveSurvey_Summary_DisplayDevice"					"Màn hình: %s1 %s2 (%s3)"
 
-"SteamUI_ValveSurvey_Summary_Supported"						"Được hỗ trợ"
+"SteamUI_ValveSurvey_Summary_Supported"						"Hỗ trợ"
 "SteamUI_ValveSurvey_Summary_Unsupported"					"Không được hỗ trợ"
 
 "SteamUI_ValveSurvey_Summary_RDTSC"							"RDTSC: %s1"
@@ -1567,6 +1570,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "SteamUI_HardwarePromoWizard_Title" "Đăng ký sản phẩm khuyến mại"
 "Steam_HardwarePromo_Intro" "Xin chúc mừng! Máy tính bạn đạt tiêu chuẩn cho ưu đãi này. Bạn có thể sử dụng ưu đãi này bằng cách đăng ký nó vào một, và chỉ một, tài khoản Steam. Bạn sẽ chơi được mọi trò chơi được bao gồm trong ưu đãi này từ bất kỳ máy tính nào, chỉ cần bạn đăng nhập vào tài khoản Steam này."
 "Steam_Legal_HardwarePromo_Unreleased" "Một số sản phẩm trong gói hàng này vẫn chưa được phát hành và hiện không tồn tại. Bạn sẽ có thể sử dụng những sản phẩm này qua Steam ngay trong ngày chúng phát hành. Ngày phát hành của những sản phẩm này chưa được ấn định và người mua không nên dựa vào ngày phát hành dự kiến. Các điều khoản và điều kiện phụ sẽ được hiển thị bằng cách nhấp \"Tiếp\"."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Đang đăng ký ưu đãi..."
 "SteamUI_OEMTicketWizard_Title" "Đăng ký bản quyền nhà phát triển gốc (OEM)"
 
@@ -4335,6 +4339,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "Steam_Parental_UnlockTitle"			"Chế độ gia đình"
 "Steam_Parental_UnlockInstructions"		"Nhập mã PIN của bạn để thoát khỏi chế độ gia đình"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Tôi đã quên mã PIN"
 "Steam_Parental_NoRecoveryEmail"		"Chưa đặt email phục hồi"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Không có địa chỉ email phục hồi đặt cho tài khoản bạn. Để cập nhật địa chỉ email phục hồi, xin vui lòng thoát chế độ gia đình và quay lại cài đặt hiển thị gia đình."
@@ -4449,6 +4454,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_Track_Menu_ShowAlbumInUI" "Hiển thị album"
 "Music_Menu_Play" "Phát"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% trên %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% bài - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% bài - %queueduration%"
@@ -4522,6 +4528,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_Playlist_RenameDialog_Title" "Đổi tên danh sách phát"
 "Music_Playlist_RenameDialog_Prompt" "Đổi tên danh sách phát \"%playlistname%\""
 "Music_Playlist_AddDialog_Title" "Tạo danh sách phát mới"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Xóa danh sách phát"
 "Music_Playlist_DeleteDialog_Prompt" "Bạn có muốn xóa danh sách phát \"%playlistname%\"?"
 "Music_Playlist_Details_Play" "Danh sách phát"
@@ -4540,6 +4547,8 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Music_Queue_Menu_ReplacePlaylist" "Thay danh sách nhạc với hàng chờ"
 "Music_Queue_Menu_AppendPlaylist" "Thêm vào danh sách phát"
 "Music_Queue_AddPlaylist_Dialog_Title" "Thêm danh sách phát"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Tay cầm"
 "Steam_SettingsControllerTitle"				"Thiết lập tay cầm"
 "Steam_SettingsControllerDescription"		"Tùy chỉnh chung tay cầm cho phép cài đặt bật/tắt hỗ trợ cấu hình tay cầm, tinh chỉnh cá nhân và các tùy chọn khác."

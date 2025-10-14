@@ -263,6 +263,7 @@ OverlayFrameMark
 P010
 Previous renderer inactive, force releasing video stream\n
 Process %d failed to shm_open %s\n
+Process was forked: %d -> %d, follow new process in the new log file!\n
 PutInternal: Not enough space for put when locked\n
 QkkXa
 Ran out of IPC SharedObjectManager entries!\n

@@ -304,6 +304,11 @@ message StoreItem {
 			optional string type = 2;
 		}
 
+		message AdaptiveTrailer {
+			optional string cdn_path = 1;
+			optional string encoding = 2;
+		}
+
 		message Trailer {
 			optional string trailer_name = 1;
 			optional string trailer_url_format = 2;
@@ -311,6 +316,7 @@ message StoreItem {
 			repeated .StoreItem.Trailers.VideoSource trailer_480p = 3;
 			repeated .StoreItem.Trailers.VideoSource trailer_max = 4;
 			repeated .StoreItem.Trailers.VideoSource microtrailer = 5;
+			repeated .StoreItem.Trailers.AdaptiveTrailer adaptive_trailers = 6;
 			optional string screenshot_medium = 10;
 			optional string screenshot_full = 11;
 			optional int32 trailer_base_id = 12;
@@ -438,6 +444,7 @@ message CStoreBrowse_GetStoreCategories_Response {
 
 message CStoreBrowse_GetContentHubConfig_Request {
 	optional .StoreBrowseContext context = 1;
+	repeated .EContentDescriptorID excluded_content_descriptorids = 2;
 }
 
 message CStoreBrowse_GetContentHubConfig_Response {

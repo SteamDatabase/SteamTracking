@@ -6,7 +6,7 @@
       a.r(t), a.d(t, { default: () => X });
       var o = a(34629),
         n = a(63696),
-        s = a(17854),
+        s = a(48550),
         r = a(58490),
         i = a(50376),
         l = a(13869),
@@ -222,7 +222,7 @@
           (this.m_fnLaunchChat = e),
             (this.m_steamID = R.GP.steamid),
             window.addEventListener("message", this.HandlePostMessage),
-            (this.m_reactRoot = S.H(
+            (this.m_reactRoot = S.createRoot(
               document.getElementById("friendslist-container"),
             )),
             this.m_reactRoot.render(n.createElement(x, { app: this })),

@@ -21,6 +21,7 @@
 "SteamUI_ConvertExistingInfo" "インストール済みゲームを変換しています。 この作業には数分かかる場合があります。"
 "SteamUI_ConversionCompleteInfo" "Steam プリロード完了。"
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1ファイルをディスクからプリロード中."
 "SteamUI_ConvertExistingStatus2" "%s1ファイルをディスクからプリロード中.."
 "SteamUI_ConvertExistingStatus3" "%s1ファイルをディスクからプリロード中..."
@@ -409,7 +410,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_CVV2_Info"					"クレジットカードのセキュリティ番号を入力してください。"
 "Steam_CardSecurityInstruction"		"この番号はカード裏面の書名欄に記載されています。 入力が必要な番号は最後の3桁です（アカウント番号以降の数字）。"
 "Steam_Working_ContactingSvr"		"サーバーに接続中..."
-"Steam_PayPalIntroToBrowser"		"%provider%での取引は%provider%のWebサイトを通して承認されます。取引を開始するためには、下のボタンをクリックして、新しいWebブラウザーを開いてください。"
+"Steam_PayPalIntroToBrowser"		"%provider%によるお取引は%provider%のWebサイトを通して認証されます。下のボタンをクリックして新しいWebブラウザーを開き、お取引を開始してください。"
 "Steam_PayPalOpenBrowserButton"		"%provider%での購入を開始"
 "Steam_PayPalWaiting"				"%provider%のWebサイトにジャンプしました。 ログインするか、アカウントを作成して購入内容を確認し、購入処理を承認してください。"
 "Steam_PayPalNotAcceptedInGermany"	"現在ドイツではPayPal によるお支払いを受け付けておりません。 別のお支払い方法を選択してください。"
@@ -703,6 +704,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_RecoverAuthenticator_BadPassword"			"パスワードが間違っています。確認してもう一度お試しください。"
 "Steam_RecoverAuthenticator_BadCode"				"入力されたコードまたはパスワードが正しくありません。確認して、もう一度お試しください。"
 "Steam_RecoverAuthenticator_BadCodes"				"コードまたはパスワードが間違っています。確認してもう一度お試しください。"
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Steamガード認証用機器はあなたのアカウントから削除されました。\n\n再びアカウントへログインできるようになります。"
 
 
@@ -1566,6 +1569,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_HardwarePromoWizard_Title" "プロモーション製品の登録"
 "Steam_HardwarePromo_Intro" "おめでとうございます! 特典ギフトのお知らせです。 この特典は、お使いのSteamアカウント（1アカウント限定）に対して登録することで有効化されます。 有効化後は、特典に含まれるゲームがあらゆるPCからプレイ可能になります（対応するSteamアカウントでログインした場合）。"
 "Steam_Legal_HardwarePromo_Unreleased" "このパッケージに含まれる一部の製品は、まだリリースされていないため現在プレイすることはできません。 これらの製品は、リリース後、自動的にSteamでプレイ可能となります。 なお、これらの製品の正式なリリース日は未定です。ご購入の際には予めご了承ください。 ［次へ］をクリックすると、その他の契約条項が表示されます。"
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "製品を登録中..."
 "SteamUI_OEMTicketWizard_Title" "OEMライセンスの登録"
 
@@ -4335,6 +4339,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 
 "Steam_Parental_UnlockTitle"			"ファミリービュー"
 "Steam_Parental_UnlockInstructions"		"以下に PIN を入力して、ファミリービューを終了してください"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"自分の PIN を忘れました"
 "Steam_Parental_NoRecoveryEmail"		"リカバリ用メールアドレスが設定されていません"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "リカバリ用メールアドレスがあなたのアカウントに設定されていません。ご自分のリカバリ用メールアドレスを更新するためには、ファミリービューを終了し、ファミリービューの設定に戻ってください。"
@@ -4449,6 +4454,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Music_Track_Menu_ShowAlbumInUI" "アルバムを表示"
 "Music_Menu_Play" "再生"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% / %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% トラック - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% トラック - %queueduration%"
@@ -4522,6 +4528,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Music_Playlist_RenameDialog_Title" "プレイリストの名前を変更"
 "Music_Playlist_RenameDialog_Prompt" "プレイリスト '%playlistname%' の名前を変更"
 "Music_Playlist_AddDialog_Title" "新しいプレイリストを作成"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "プレイリストを削除"
 "Music_Playlist_DeleteDialog_Prompt" "プレイリスト '%playlistname%' を本当に削除しますか？"
 "Music_Playlist_Details_Play" "リストを再生"
@@ -4540,6 +4547,8 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Music_Queue_Menu_ReplacePlaylist" "プレイリストをキューで置き換える"
 "Music_Queue_Menu_AppendPlaylist" "プレイリストに追加"
 "Music_Queue_AddPlaylist_Dialog_Title" "プレイリストを追加"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"コントローラ"
 "Steam_SettingsControllerTitle"				"コントローラ設定"
 "Steam_SettingsControllerDescription"		"コントローラ一般設定では、設定サポートへのオプトイン/オプトアウトや、カスタマイズなどのオプションを設定できます。"

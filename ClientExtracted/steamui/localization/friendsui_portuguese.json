@@ -633,6 +633,8 @@
     "DirectMessageFromNonFriend": "Mensagem de um utilizador que não está na tua lista de amigos",
     "NonFriendAction_Block": "Bloquear comunicações",
     "NonFriendAction_Allow": "Permitir comunicações",
+    "SuspiciousMessage_Header": "Chat suspeito",
+    "SuspiciousMessage_Explanation": "Este chat parece suspeito. Não inicies sessão em nenhuma das tuas contas, incluindo a do Steam, a partir de links enviados por esta pessoa. Representantes do Steam NUNCA entrarão em contacto contigo através do chat ou de programas externos. Se o conteúdo é inesperado, urgente ou generoso, então é provavelmente uma burla.",
     "Friend_Menu_Open": "Opções",
     "Friend_Menu_AddNickname": "Adicionar alcunha",
     "Friend_Menu_AddToQuickAccess": "Adicionar aos favoritos",

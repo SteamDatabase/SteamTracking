@@ -342,6 +342,7 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Не може да се стартира гласов чат в %chat%, няма достатъчно слотове за говорене."
 "Friends_Chat_VoiceStatus"		"%availslots% достъпни слотове [%maxslots% общо]."
 
+"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% НА ЛИНИЯ"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% В ИГРА, %online% НА ЛИНИЯ"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% В ЧАТА, %online% НА ЛИНИЯ"

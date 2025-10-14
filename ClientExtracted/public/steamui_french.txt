@@ -19,6 +19,7 @@
 "SteamUI_ConvertExistingInfo" "Conversion de l'installation existante du jeu. Cette opération peut prendre quelques minutes."
 "SteamUI_ConversionCompleteInfo" "Préchargement Steam terminé."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Préchargement des fichiers de %s1 depuis le disque."
 "SteamUI_ConvertExistingStatus2" "Préchargement des fichiers de %s1 depuis le disque.."
 "SteamUI_ConvertExistingStatus3" "Préchargement des fichiers de %s1 depuis le disque..."
@@ -701,6 +702,8 @@ Cela devrait prendre moins d'une minute."
 "Steam_RecoverAuthenticator_BadPassword"			"Le mot de passe n'est pas correct. Veuillez le vérifier puis réessayez."
 "Steam_RecoverAuthenticator_BadCode"				"Le code ou le mot de passe n'est pas correcte. Veuillez vérifier ces informations puis réessayez."
 "Steam_RecoverAuthenticator_BadCodes"				"Les codes et/ou le mot de passe ne sont pas corrects. Veuillez les vérifier puis réessayez."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"L'authentificateur Steam Guard de votre compte a été supprimé.\n\nVous devriez maintenant être en mesure de pouvoir vous connecter à votre compte."
 
 
@@ -1567,6 +1570,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "SteamUI_HardwarePromoWizard_Title" "Enregistrement d'une offre promotionnelle"
 "Steam_HardwarePromo_Intro" "Félicitations ! Vous pouvez bénéficier de cette offre avec cet ordinateur. Vous pouvez retirer cette offre en vous enregistrant avec un compte Steam unique. Vous pourrez ensuite jouer aux jeux inclus dans cette offre à partir de n'importe quel ordinateur, à la condition de vous connecter avec ce compte Steam."
 "Steam_Legal_HardwarePromo_Unreleased" "Certains des produits de ce package ne sont pas encore sortis et ne sont donc pas disponibles pour l'instant. Ces produits seront automatiquement disponibles via Steam dès leur sortie. La date de sortie de ces produits étant indéterminée, les acheteurs ne doivent pas tenir compte des dates de sortie projetées. Cliquez sur Suivant pour afficher les termes et conditions supplémentaires."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Enregistrement de l'offre..."
 "SteamUI_OEMTicketWizard_Title" "Enregistrer la licence OEM"
 
@@ -4336,6 +4340,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 
 "Steam_Parental_UnlockTitle"			"Mode famille"
 "Steam_Parental_UnlockInstructions"		"Veuillez entrer ci-dessous votre code pour quitter le mode famille."
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"J'ai oublié mon code"
 "Steam_Parental_NoRecoveryEmail"		"Adresse e-mail de récupération non définie"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Aucune adresse e-mail de récupération n'est définie. Pour mettre à jour votre adresse e-mail de récupération, veuillez quitter le mode famille et relancer la configuration de celui-ci."
@@ -4450,6 +4455,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Music_Track_Menu_ShowAlbumInUI" "Montrer l'album"
 "Music_Menu_Play" "Écouter"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% sur %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% morceaux - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% morceau - %queueduration%"
@@ -4523,6 +4529,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Music_Playlist_RenameDialog_Title" "Renommer la Playlist"
 "Music_Playlist_RenameDialog_Prompt" "Renommer la Playlist « %playlistname% » ?"
 "Music_Playlist_AddDialog_Title" "Créer une nouvelle Playlist"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Supprimer la Playlist"
 "Music_Playlist_DeleteDialog_Prompt" "Voulez-vous vraiment supprimer la Playlist « %playlistname% » ?"
 "Music_Playlist_Details_Play" "Écouter la Playlist"
@@ -4541,6 +4548,8 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Music_Queue_Menu_ReplacePlaylist" "Remplacer la Playlist par la liste"
 "Music_Queue_Menu_AppendPlaylist" "Ajouter à la Playlist"
 "Music_Queue_AddPlaylist_Dialog_Title" "Ajouter à la Playlist"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Contrôleur"
 "Steam_SettingsControllerTitle"				"Configuration du contrôleur"
 "Steam_SettingsControllerDescription"		"Les paramètres généraux du contrôleur permettent d'activer ou de désactiver l'assistance configuration, de personnaliser le contrôleur et d'accéder à d'autres options."

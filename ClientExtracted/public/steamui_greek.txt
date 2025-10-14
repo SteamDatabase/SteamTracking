@@ -19,6 +19,7 @@
 "SteamUI_ConvertExistingInfo" "Γίνεται μετατροπή της υπάρχουσας εγκατάστασης του παιχνιδιού. Αυτό μπορεί να διαρκέσει μερικά λεπτά."
 "SteamUI_ConversionCompleteInfo" "Η προφόρτωση του Steam ολοκληρώθηκε."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Γίνεται προφόρτωση %s1 αρχείων από το δίσκο."
 "SteamUI_ConvertExistingStatus2" "Προφόρτωση %s1 αρχείων από το δίσκο.."
 "SteamUI_ConvertExistingStatus3" "Προφόρτωση %s1 αρχείων από το δίσκο..."
@@ -697,6 +698,8 @@
 "Steam_RecoverAuthenticator_BadPassword"			"Το συνθηματικό ήταν εσφαλμένο. Ελέγξτε το και δοκιμάστε ξανά."
 "Steam_RecoverAuthenticator_BadCode"				"Οι κωδικοί δεν ήταν σωστοί. Ελέγξτε τους και δοκιμάστε ξανά."
 "Steam_RecoverAuthenticator_BadCodes"				"Οι κωδικοί ή το συνθηματικό ήταν εσφαλμένοι. Ελέγξτε τους και δοκιμάστε ξανά."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Ο επαληθευτής Steam Guard αφαιρέθηκε από το λογαριασμό σας.\n\nΜπορείτε πλέον να συνδεθείτε στο λογαριασμό σας."
 
 
@@ -1564,6 +1567,7 @@
 "SteamUI_HardwarePromoWizard_Title" "Εξαργύρωση προσφοράς"
 "Steam_HardwarePromo_Intro" "Συγχαρητήρια! Ο υπολογιστής σας πληροί τις προϋποθέσεις για αυτή την προσφορά. Μπορείτε να εξαργυρώσετε αυτή την προσφορά σε έναν, και μόνο έναν, λογαριασμό Steam. Θα μπορείτε να παίξετε τα παιχνίδια που περιέχονται σε αυτή την προσφορά από οποιονδήποτε υπολογιστή, εφόσον συνδέεστε με αυτό τον λογαριασμό Steam."
 "Steam_Legal_HardwarePromo_Unreleased" "Μερικά από τα προϊόντα σε αυτό το πακέτο δεν έχουν ακόμα κυκλοφορήσει και δεν είναι αυτή τη στιγμή διαθέσιμα. Αυτά τα προϊόντα θα καθιστούν αυτόματα διαθέσιμα σε εσάς μέσω Steam μόλις κυκλοφορήσουν. Η ημερομηνία κυκλοφορίας για αυτά τα προϊόντα δεν είναι καθορισμένη και οι αγοραστές δε θα πρέπει να βασίζονται σε εκτιμήσεις για την ημερομηνία κυκλοφορίας. Επιπλέον όροι και προϋποθέσεις θα εμφανιστούν πατώντας το «Επόμενο»."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Εγγραφή προσφοράς..."
 "SteamUI_OEMTicketWizard_Title" "Εγγραφή άδειας OEM"
 
@@ -4329,6 +4333,7 @@
 
 "Steam_Parental_UnlockTitle"			"Γονικός Έλεγχος"
 "Steam_Parental_UnlockInstructions"		"Εισαγάγετε το PIN παρακάτω για τερματισμό του Γονικού Ελέγχου"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Ξέχασα το PIN μου"
 "Steam_Parental_NoRecoveryEmail"		"Δεν έχει οριστεί email ανάκτησης"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Δεν έχει οριστεί διεύθυνση email ανάκτησης για τον λογαριασμό σας. Για να ανανεώσετε τη διεύθυνση ανάκτησής σας, βγείτε από τον Γονικό Έλεγχο και εκτελέστε ξανά τη ρύθμιση Γονικού Ελέγχου."
@@ -4443,6 +4448,7 @@
 "Music_Track_Menu_ShowAlbumInUI" "Προβολή άλμπουμ"
 "Music_Menu_Play" "Αναπαραγωγή"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% από %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% κομμάτια - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% κομμάτι - %queueduration%"
@@ -4516,6 +4522,7 @@
 "Music_Playlist_RenameDialog_Title" "Μετονομασία λίστας"
 "Music_Playlist_RenameDialog_Prompt" "Μετονομασία της λίστας «%playlistname%»"
 "Music_Playlist_AddDialog_Title" "Δημιουργία νέας λίστας"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Διαγραφή λίστας"
 "Music_Playlist_DeleteDialog_Prompt" "Θέλετε σίγουρα να διαγράψετε τη λίστα «%playlistname%»;"
 "Music_Playlist_Details_Play" "ΑΝΑΠΑΡΑΓΩΓΗ ΛΙΣΤΑΣ"
@@ -4534,6 +4541,8 @@
 "Music_Queue_Menu_ReplacePlaylist" "Αντικατάσταση λίστας με τη σειρά"
 "Music_Queue_Menu_AppendPlaylist" "Προσθήκη σε λίστα αναπαραγωγής"
 "Music_Queue_AddPlaylist_Dialog_Title" "Προσθήκη λίστας αναπαραγωγής"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Χειριστήριο"
 "Steam_SettingsControllerTitle"				"Διαμόρφωση χειριστηρίου"
 "Steam_SettingsControllerDescription"		"Οι γενικές ρυθμίσεις χειριστηρίου επιτρέπουν ρύθμιση για συμμετοχή σε υποστήριξη διαμόρφωσης, σε εξατομίκευση και σε άλλες επιλογές."
@@ -4578,8 +4587,8 @@
 "Steam_Settings_Streaming_Status" "ΚΑΤΑΣΤΑΣΗ"
 "Steam_Settings_Streaming_EnableStreaming" "Ενεργοποίηση Remote Play"
 "Steam_Settings_Streaming_Pair" "ΣΥΖΕΥΞΗ Steam Link"
-"Steam_Settings_Streaming_Unpair" "ΑΠΟΖΕΥΞΗ ΣΥΣΚΕΥΩΝ"
-"Steam_Settings_Streaming_UnpairConfirmation" "Θέλετε σίγουρα να αποζεύξετε όλες τις συσκευές;"
+"Steam_Settings_Streaming_Unpair" "ΑΠΟΣΥΖΕΥΞΗ ΣΥΣΚΕΥΩΝ"
+"Steam_Settings_Streaming_UnpairConfirmation" "Θέλετε σίγουρα να αποσυνδέσετε όλες τις συσκευές;"
 "Steam_Settings_Streaming_SetPIN" "ΟΡΙΣΜΟΣ ΚΩΔΙΚΟΥ"
 "Steam_Settings_Streaming_UnsupportedPlatform" "Η δυνατότητα μετάδοσης προς το παρόν δεν υποστηρίζεται σε αυτή την πλατφόρμα"
 "Steam_Settings_Streaming_HostLabel" "Επιλογές διακομιστή:"

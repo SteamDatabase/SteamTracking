@@ -633,6 +633,8 @@
     "DirectMessageFromNonFriend": "ข้อความจากผู้ใช้ที่ไม่ใช่เพื่อนของคุณ",
     "NonFriendAction_Block": "บล็อกการติดต่อ",
     "NonFriendAction_Allow": "อนุญาตการติดต่อ",
+    "SuspiciousMessage_Header": "Suspicious Chat",
+    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
     "Friend_Menu_Open": "ตัวเลือก",
     "Friend_Menu_AddNickname": "เพิ่มชื่อเล่น",
     "Friend_Menu_AddToQuickAccess": "เพิ่มในรายชื่อโปรด",

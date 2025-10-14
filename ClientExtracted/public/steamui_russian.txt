@@ -19,6 +19,7 @@
 "SteamUI_ConvertExistingInfo" "Конвертация установленной копии игры. Это может занять несколько минут."
 "SteamUI_ConversionCompleteInfo" "Предварительная загрузка завершена."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Предварительная загрузка файлов %s1 с диска."
 "SteamUI_ConvertExistingStatus2" "Предварительная загрузка файлов %s1 с диска.."
 "SteamUI_ConvertExistingStatus3" "Предварительная загрузка файлов %s1 с диска..."
@@ -697,6 +698,8 @@
 "Steam_RecoverAuthenticator_BadPassword"			"Неверный пароль. Пожалуйста, проверьте его и попытайтесь снова."
 "Steam_RecoverAuthenticator_BadCode"				"Неверный код или пароль. Пожалуйста, проверьте их и попробуйте еще раз."
 "Steam_RecoverAuthenticator_BadCodes"				"Неверный код или пароль. Пожалуйста, проверьте их и попробуйте снова."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Аутентификатор Steam Guard был удален.\n\nТеперь вы можете войти в свой аккаунт."
 
 
@@ -1563,6 +1566,7 @@
 "SteamUI_HardwarePromoWizard_Title" "Зарегистрировать льготное предложение"
 "Steam_HardwarePromo_Intro" "Поздравляем! Ваш компьютер удовлетворяет требованиям данного предложения. Вы можете получить предложение, зарегистрировав его на один (и только один) аккаунт Steam. Вы сможете играть в игры, содержащиеся в этом предложении, если зайдете в систему Steam с этого аккаунта."
 "Steam_Legal_HardwarePromo_Unreleased" "Некоторые из продуктов, содержащихся в этом пакете, еще не поступили в продажу и недоступны. Эти игры станут доступны вам сразу после официального выхода. Дата выхода этих игр приблизительна и может меняться. Дополнительные условия можно посмотреть, щелкнув \"Далее\"."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Регистрация предложения..."
 "SteamUI_OEMTicketWizard_Title" "Зарегистрировать OEM-лицензию"
 
@@ -4328,6 +4332,7 @@
 
 "Steam_Parental_UnlockTitle"			"Семейный просмотр"
 "Steam_Parental_UnlockInstructions"		"Введите свой ПИН ниже, чтобы выйти из семейного просмотра"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Я не помню ПИН-код"
 "Steam_Parental_NoRecoveryEmail"		"Почта для восстановления не указана"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "У вашего аккаунта не указана электронная почта для восстановления. Чтобы указать адрес электронной почты для восстановления, пожалуйста, выйдите из Семейного просмотра и настройте его заново."
@@ -4442,6 +4447,7 @@
 "Music_Track_Menu_ShowAlbumInUI" "Показать альбом"
 "Music_Menu_Play" "Воспроизвести"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% из %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "Композиций: %queuecount% - %queueduration%"
 "Music_Transport_X_Track" "Композиций: %queuecount% - %queueduration%"
@@ -4515,6 +4521,7 @@
 "Music_Playlist_RenameDialog_Title" "Переименовать плейлист"
 "Music_Playlist_RenameDialog_Prompt" "Переименовать плейлист «%playlistname%»"
 "Music_Playlist_AddDialog_Title" "Создать новый плейлист"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Удалить плейлист"
 "Music_Playlist_DeleteDialog_Prompt" "Вы действительно хотите удалить плейлист «%playlistname%»?"
 "Music_Playlist_Details_Play" "Воспр."
@@ -4533,6 +4540,8 @@
 "Music_Queue_Menu_ReplacePlaylist" "Заменить плейлист очередью"
 "Music_Queue_Menu_AppendPlaylist" "Добавить в плейлист"
 "Music_Queue_AddPlaylist_Dialog_Title" "Добавить плейлист"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Контроллер"
 "Steam_SettingsControllerTitle"				"Настройки контроллера"
 "Steam_SettingsControllerDescription"		"Основные настройки контроллера позволяют включить или выключить поддержку одного из типов контроллера, настроить его и не только."

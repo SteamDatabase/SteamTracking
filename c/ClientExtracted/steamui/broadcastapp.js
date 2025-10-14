@@ -256,7 +256,7 @@
           (this.m_fnLaunchChat = _),
             (this.m_steamID = _._.steamid),
             window.addEventListener("message", this.HandlePostMessage),
-            (this.m_reactRoot = _._(
+            (this.m_reactRoot = _.createRoot(
               document.getElementById("friendslist-container"),
             )),
             this.m_reactRoot.render(

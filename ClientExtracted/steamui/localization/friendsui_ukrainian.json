@@ -633,6 +633,8 @@
     "DirectMessageFromNonFriend": "Повідомлення від користувача, який не є вашим другом",
     "NonFriendAction_Block": "Заблокувати спілкування",
     "NonFriendAction_Allow": "Дозволити спілкування",
+    "SuspiciousMessage_Header": "Suspicious Chat",
+    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
     "Friend_Menu_Open": "Параметри",
     "Friend_Menu_AddNickname": "Додати псевдонім",
     "Friend_Menu_AddToQuickAccess": "Додати до вибраних",

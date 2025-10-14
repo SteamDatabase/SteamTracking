@@ -280,6 +280,7 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_ECompromiseDetectionType_Manual
 %\n!k_EContentReportReason_Harassment
 %\n!k_EContentReportReason_OtherAbuse
+%\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
@@ -373,6 +374,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_EContentReportReason_ReferralLinks
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
+(\n$k_EContentReportSubjectAction_Locked
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -449,6 +451,8 @@ $\n k_SystemAudioPortDirection_Input
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectAction_Invalid
+)\n%k_EContentReportSubjectAction_Updated
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EProfileCustomizationTypeCustomText
@@ -479,8 +483,11 @@ $\n k_SystemAudioPortDirection_Input
 *\n&k_EContentReportReason_GenderedDoxxing
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
+*\n&k_EContentReportSubjectAction_Disputed
+*\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
+*\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESystemDisplayCompatibilityMode_None
 *\n&k_PublishedFileQueryType_RankedByTrend
 *m_pCurrentProtoBufMsg
@@ -494,6 +501,9 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportSubjectAction_Acquitted
++\n'k_EContentReportSubjectAction_Cancelled
++\n'k_EContentReportSubjectAction_Escalated
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EProfileCustomizationTypeAchievements
 +\n'k_EProfileCustomizationTypeFavoriteGame
@@ -514,6 +524,8 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportSubjectAction_Sanctioned
+,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
@@ -593,6 +605,7 @@ $\n k_SystemAudioPortDirection_Input
 -cachedir=%s
 -cef-allow-browser-underlay
 -cef-disable-breakpad
+-cef-disable-chrome-runtime
 -cef-disable-gpu
 -cef-disable-gpu-compositing
 -cef-disable-gpu-sandbox
@@ -608,6 +621,7 @@ $\n k_SystemAudioPortDirection_Input
 -cef-disable-site-isolation
 -cef-disable-touch-focus-workaround
 -cef-disable-xcomposite-workaround
+-cef-enable-chrome-runtime
 -cef-enable-debugging
 -cef-enable-gpu-debugging
 -cef-enable-low-delay-live-stream
@@ -638,12 +652,14 @@ $\n k_SystemAudioPortDirection_Input
 -dev
 -devtools-port
 -disable-winh264
+-disable_chrome_runtime
 -disable_safe_shutdown_workaround
 -disablehighdpi
 -disablejslogging
 -disablerendererrestart
 -disabletouchfocusworkaround
 -enable-keyring
+-enable_chrome_runtime
 -force-opaque-background
 -force-sandbox
 -forcebrowserviewunderlay
@@ -656,6 +672,8 @@ $\n k_SystemAudioPortDirection_Input
 -no-cef-sandbox
 -nocrashdialog
 -pid
+-prefer-gamescope-composer
+-prefer-gamescope-composer-vr
 -realm=China
 -realm=Global
 -restart-on-ui-mode-change
@@ -718,6 +736,7 @@ $\n k_SystemAudioPortDirection_Input
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
 .\n*k_EPublishedFileInappropriateResult_Likely
+.\n*k_EResolutionAutomation_PartiallyAutomated
 .\n*k_ESteamDeckCompatibilityCategory_Playable
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
@@ -743,6 +762,7 @@ $\n k_SystemAudioPortDirection_Input
 /\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_EContentReportReason_EncouragingTerrorism
+/\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -794,6 +814,7 @@ $\n k_SystemAudioPortDirection_Input
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
+0\n,k_EContentReportResolution_VisibilityChanged
 0\n,k_ENewSteamAnnouncementState_NewAnnouncement
 0\n,k_EPublishedFileInappropriateProvider_Amazon
 0\n,k_EPublishedFileInappropriateProvider_Google
@@ -1087,6 +1108,7 @@ $\n k_SystemAudioPortDirection_Input
 2\n.k_EContentReportReason_GenderedOtherHarassment
 2\n.k_EContentReportReason_OtherCommercialActivity
 2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
+2\n.k_EContentReportResolution_DisconnectedFromApp
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EWindowsUpdateRebootBehavior_MightNeedReboot
@@ -1113,6 +1135,7 @@ $\n k_SystemAudioPortDirection_Input
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
+4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
@@ -1155,6 +1178,7 @@ $\n k_SystemAudioPortDirection_Input
 9CMsgKeyUp
 9CMsgPaste
 9\n5k_EContentReportReason_MissingProcessingGroundForData
+9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
 : Tried to copy from a message with a different type. to: 
@@ -1162,6 +1186,7 @@ $\n k_SystemAudioPortDirection_Input
 : failed to parse contents
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
+:\n6k_EContentReportResolution_SuspiciousIncludingUpvoters
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_ESteamOSCompatibilityResultDisplayType_Informational
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
@@ -1617,6 +1642,7 @@ CHTMLController::RunFrame - Dispatch commands
 CHTMLController::RunFrame - IPC Client
 CHTMLPageSecurityInfo
 CH\f1
+CLegacy
 CMsgAckPIDShuttingDown
 CMsgAckScreenDPI
 CMsgAckSharedPaintBuffers
@@ -2076,6 +2102,7 @@ EContentDownloadType
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
+EContentReportSubjectAction
 EContentReportSubjectType
 EControlledLegalCategoryStatus
 EControllerConfigFeature
@@ -2093,6 +2120,7 @@ EFriendRelationship
 EGCAction
 EGCStatus
 EGPUPerformanceLevel
+EGRMode
 EGameRecordingType
 EGamescopeBlurMode
 EGamingDeviceType
@@ -2141,6 +2169,7 @@ EPurchaseStatus
 ERROR
 ERegKeyRoot
 ERemoteStoragePlatform
+EResolutionAutomation
 EResult
 ESDCardFormatStage
 ESessionPersistence
@@ -3776,6 +3805,8 @@ Upload Disconnected
 Upload Timeout
 Urdu
 UsableInGame
+Use CEF alloy runtime
+Use CEF chrome runtime
 Use Proxy
 Use other funding source
 Use other payment method
@@ -3842,6 +3873,7 @@ VaapiVideoDecodeLinuxGL
 Vakiflar Bank
 Valencian
 Valid
+Validated Valve Email
 Value is out of range
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -5065,6 +5097,9 @@ k_EGPUPerformanceLevel_High
 k_EGPUPerformanceLevel_Invalid
 k_EGPUPerformanceLevel_Low
 k_EGPUPerformanceLevel_Manual
+k_EGRMode_Always
+k_EGRMode_Manual
+k_EGRMode_Never
 k_EGameRecordingType_Clip
 k_EGameRecordingType_Unknown
 k_EGamescopeBlurMode_Always
@@ -5104,6 +5139,8 @@ k_EOSBranch_ReleaseCandidate
 k_EOSBranch_Staging
 k_EOSBranch_Unknown
 k_EPersonaStateFlag_Golden
+k_EResolutionAutomation_MAX
+k_EResolutionAutomation_Manual
 k_ESDCardFormatStage_Finalizing
 k_ESDCardFormatStage_Formatting
 k_ESDCardFormatStage_Invalid

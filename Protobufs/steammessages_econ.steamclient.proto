@@ -80,6 +80,7 @@ message CEconItem_Description {
 	optional string market_buy_country_restriction = 30;
 	optional string market_sell_country_restriction = 31;
 	optional bool sealed = 32;
+	optional .CEconItem_ContainerProperties container_properties = 33;
 }
 
 message CEconItem_Tag {
@@ -89,6 +90,16 @@ message CEconItem_Tag {
 	optional string localized_category_name = 4;
 	optional string localized_tag_name = 5;
 	optional string color = 6;
+}
+
+message CEconItem_ClassIdentifiers {
+	optional uint64 classid = 1;
+	optional uint64 instanceid = 2;
+}
+
+message CEconItem_ContainerProperties {
+	repeated .CEconItem_ClassIdentifiers contained_items = 1;
+	repeated .CEconItem_Tag search_tags = 2;
 }
 
 message CEconItem_AssetProperty {
@@ -131,14 +142,9 @@ message CEcon_ClientGetItemShopOverlayAuthURL_Response {
 }
 
 message CEcon_GetAssetClassInfo_Request {
-	message Class {
-		optional uint64 classid = 1;
-		optional uint64 instanceid = 2;
-	}
-
 	optional string language = 1;
 	optional uint32 appid = 2;
-	repeated .CEcon_GetAssetClassInfo_Request.Class classes = 3;
+	repeated .CEconItem_ClassIdentifiers classes = 3;
 	optional bool high_pri = 4;
 }
 

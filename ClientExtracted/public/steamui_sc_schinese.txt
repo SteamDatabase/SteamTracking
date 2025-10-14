@@ -728,4 +728,7 @@
 	"RescueDialog_RestartSteam_NoGPU" "在禁用 GPU 加速的情况下重新启动蒸汽平台"
 	"RescueDialog_RestartSteam_NoSandbox" "在禁用浏览器沙盒的情况下重新启动蒸汽平台"
 	"RescueDialog_ExitSteam" "退出蒸汽平台"
+	"TransportDialog_Explanation" "蒸汽平台启动时发生意外错误（0x%errorCount%）。点击<a href=steam://openurl_external/https://help.steamchina.com/faqs/view/7516-B23C-D572-5B0E>此处</a>获取更多信息。"
+	"TransportDialog_RestartSteam" "重启蒸汽平台"
+	"TransportDialog_ExitSteam" "退出蒸汽平台"
 }

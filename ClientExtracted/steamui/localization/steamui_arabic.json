@@ -1,5 +1,6 @@
 {
     "FilterElement_undefined": "غير معروف",
+    "AppLaunchError_ParentalControlBlocked": "هذه اللعبة غير متوفرة في الوضع العائلي.",
     "AppProperties_Customization_MiscSection": "متفرقات",
     "AppProperties_Customization_Reset": "إعادة تعيين",
     "VRDashboardBar_AmbidextrousController": "وحدة التحكم",
@@ -10,6 +11,8 @@
     "StoreSettings_Platforms_Button": "تحكم",
     "StoreSettings_SteamDeckFeedback_Button": "تحكم",
     "StoreSettings_LiveBroadcasts_Button": "تحكم",
+    "Settings_Customization_Advanced": "متقدم",
+    "LED_Effect_Normal": "افتراضي",
     "Settings_ScreenReader_Locale_en-US": "الإنجليزية",
     "Settings_ScreenReader_Locale_de": "Deutsch (الألمانية)",
     "Settings_ScreenReader_Locale_fr-FR": "Français (الفرنسية)",
@@ -36,5 +39,6 @@
     "Settings_ScreenReader_Locale_uk": "Українська (الأوكرانية)",
     "Settings_ScreenReader_Locale_es-419": "Español -Latinoamérica (الإسبانية - أمريكا اللاتينية)",
     "Settings_ScreenReader_Locale_vi": "Tiếng Việt (الفيتنامية)",
-    "Settings_ScreenReader_Locale_id": "Bahasa Indonesia (الإندونيسية)"
+    "Settings_ScreenReader_Locale_id": "Bahasa Indonesia (الإندونيسية)",
+    "SteamUI_ValveSurvey_Summary_BootProtect_Enabled": "مُمكن"
 }

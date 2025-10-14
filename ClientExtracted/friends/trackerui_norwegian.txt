@@ -342,6 +342,7 @@
 "Friends_Chat_ActionResultVoiceSlotsFull" "Kan ikke starte %chat%-stemmesamtale, ikke nok ledige lydspor."
 "Friends_Chat_VoiceStatus"		"%availslots% spor tilgj. [%maxslots% totalt]."
 
+"Friends_GroupSectionInfo_Offline"				""
 "Friends_GroupSectionInfo_Online"					"%online% TILKOBLET"
 "Friends_GroupSectionInfo_OnlineInGame"			"%ingame% I SPILL, %online% TILKOBLET"
 "Friends_GroupSectionInfo_OnlineChatting"			"%inchat% I SAMTALE, %online% TILKOBLET"

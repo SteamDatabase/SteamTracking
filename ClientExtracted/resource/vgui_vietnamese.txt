@@ -14,6 +14,7 @@
 "FileOpenDialog_Look_in"	"Tìm:"
 "FileOpenDialog_File_Name"	"Tên file:"
 "FileOpenDialog_File_Type"	"Loại file:"
+"FileOpenDialog_Icon"		" "
 "FileOpenDialog_Name"		"Tên"
 "FileOpenDialog_Type"		"Loại"
 "SysMenu_Minimize"		" Thu nhỏ "

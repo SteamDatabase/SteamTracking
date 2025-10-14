@@ -18,7 +18,7 @@ message CMsgLEDManagerDevice {
 	repeated string effects_available = 4;
 	optional string effect = 5;
 	optional bool supports_color = 9;
-	optional .CMsgLEDColor color = 10;
+	repeated .CMsgLEDColor color = 10;
 	optional bool supports_speed = 11;
 	optional float speed = 12;
 	optional bool supports_brightness = 13;
@@ -43,6 +43,7 @@ message CLEDManager_StateChanged_Notification {
 message CLEDManager_SetColor_Request {
 	optional int32 device_id = 1;
 	optional .CMsgLEDColor color = 2;
+	optional int32 color_index = 3;
 }
 
 message CLEDManager_SetColor_Response {

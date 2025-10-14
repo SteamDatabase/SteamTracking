@@ -4421,7 +4421,6 @@
         (0, i.Cg)([D], yt.prototype, "onSelect", null);
       class Ct extends a.Component {
         state = {};
-        reactErrorHandler = void 0;
         constructor(e) {
           super(e), (this.state.lastErrorKey = e.errorKey);
         }
@@ -5521,7 +5520,9 @@
       const xt = zt;
       (0, j.jK)({ enforceActions: "never" }),
         (window.AssertMsg = s),
-        n.H(document.getElementById("root")).render(a.createElement(xt, null));
+        n
+          .createRoot(document.getElementById("root"))
+          .render(a.createElement(xt, null));
     },
     2857: (e, t, r) => {
       var a = {

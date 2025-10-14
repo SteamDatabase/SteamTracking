@@ -43,12 +43,6 @@ enum ESettingProfileMode {
 	k_ESettingProfileMode_PerDisplay = 3;
 }
 
-enum EGRMode {
-	k_EGRMode_Never = 0;
-	k_EGRMode_Always = 1;
-	k_EGRMode_Manual = 2;
-}
-
 enum EGRAudio {
 	k_EGRAudio_Game = 0;
 	k_EGRAudio_System = 1;
@@ -144,6 +138,8 @@ message CMsgClientSettings {
 	optional bool start_in_big_picture_mode = 5007 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint32 jumplist_flags = 5008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\JumplistSettings", (setting_default_uint) = 77680];
 	optional bool enable_ui_sounds = 5009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\EnableUISounds", (setting_default_bool) = true];
+	optional bool enable_gamescope_composer = 5010 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\EnableGamescopeComposer", (setting_default_bool) = false];
+	optional bool enable_gamescope_composer_vr = 5011 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\EnableGamescopeComposerVR", (setting_default_bool) = true];
 	optional bool disable_all_toasts = 6000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableAllToasts"];
 	optional bool disable_toasts_in_game = 6001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableToastsInGame"];
 	optional bool play_sound_on_toast = 6002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "PlaySoundOnToast", (setting_default_bool) = true];
@@ -273,6 +269,7 @@ message CMsgClientSettings {
 	optional bool steamos_charge_limit_devmode = 22013 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/ChargeLimitDevMode", (setting_default_bool) = false];
 	optional bool steamos_system_tracing_enabled = 22014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/SystemTracingEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional bool steamos_vrs_enabled = 22015 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/VRSEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
+	optional bool steamos_separate_led_colors = 22016 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/SeparaeLEDColors", (setting_default_bool) = false];
 	optional bool setting_validation_bool = 23001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyBool"];
 	optional .EHDRVisualization setting_validation_enum = 23002 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyEnum"];
 	optional int32 setting_validation_int32 = 23003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyInt32"];
@@ -283,6 +280,7 @@ message CMsgClientSettings {
 	optional .CMsgHotkey setting_validation_hotkey = 23008 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyHotkey"];
 	optional bool system_bluetooth_enabled = 24000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/Bluetooth/Enabled", (setting_default_bool) = false];
 	optional bool hardware_updater_enabled = 24001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/HardwareUpdater/Enabled", (setting_default_bool) = false];
+	optional bool game_framerate_reporting_enabled = 24002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "System/GameFrameRateReporting/Enabled", (setting_default_bool) = false];
 	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
 	optional bool accessibility_debug_visualizer = 26000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/DebugVisualizer", (setting_default_bool) = false];
 	optional bool accessibility_screen_reader_enabled = 26001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ScreenReaderEnabled", (setting_default_bool) = false];

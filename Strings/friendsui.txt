@@ -425,6 +425,7 @@ $\nY8O
 %\n!k_ECompromiseDetectionType_Manual
 %\n!k_EContentReportReason_Harassment
 %\n!k_EContentReportReason_OtherAbuse
+%\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingErrorLowDiskSpace
 %\n!k_EGameRecordingType_NotRecording
@@ -573,6 +574,7 @@ $\nY8O
 (\n$k_EContentReportReason_ReferralLinks
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
+(\n$k_EContentReportSubjectAction_Locked
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -692,6 +694,8 @@ $\nY8O
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectAction_Invalid
+)\n%k_EContentReportSubjectAction_Updated
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EProfileCustomizationTypeCustomText
@@ -751,8 +755,11 @@ $\nY8O
 *\n&k_EContentReportReason_GenderedDoxxing
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
+*\n&k_EContentReportSubjectAction_Disputed
+*\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
+*\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_EStreamControlAuthenticationResponse
 *\n&k_EStreamControlGamepadRumble_OBSOLETE
 *\n&k_EStreamControlInputTouchFingerMotion
@@ -779,6 +786,9 @@ $\nY8O
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportSubjectAction_Acquitted
++\n'k_EContentReportSubjectAction_Cancelled
++\n'k_EContentReportSubjectAction_Escalated
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EProfileCustomizationTypeAchievements
 +\n'k_EProfileCustomizationTypeFavoriteGame
@@ -818,6 +828,8 @@ $\nY8O
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportSubjectAction_Sanctioned
+,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
@@ -979,6 +991,7 @@ $\nY8O
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
 .\n*k_EPublishedFileInappropriateResult_Likely
+.\n*k_EResolutionAutomation_PartiallyAutomated
 .\n*k_ESteamDeckCompatibilityCategory_Playable
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
@@ -1027,6 +1040,7 @@ $\nY8O
 /\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_EContentReportReason_EncouragingTerrorism
+/\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EStreamControlTriggerHapticPulse_OBSOLETE
@@ -1147,6 +1161,7 @@ $\nY8O
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
+0\n,k_EContentReportResolution_VisibilityChanged
 0\n,k_ENewSteamAnnouncementState_NewAnnouncement
 0\n,k_EPublishedFileInappropriateProvider_Amazon
 0\n,k_EPublishedFileInappropriateProvider_Google
@@ -1848,6 +1863,7 @@ $\nY8O
 2\n.k_EContentReportReason_GenderedOtherHarassment
 2\n.k_EContentReportReason_OtherCommercialActivity
 2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
+2\n.k_EContentReportResolution_DisconnectedFromApp
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EStreamControlSetControllerSettings_OBSOLETE
@@ -1936,6 +1952,7 @@ $\nY8O
 4\n0k_EClientNotificationType_ParentalFeatureRequest
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
+4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EStreamControlInputControllerAttached_OBSOLETE
@@ -2048,6 +2065,7 @@ $\nY8O
 9CUtlQueueIP9CLogEventE
 9IValidate
 9\n5k_EContentReportReason_MissingProcessingGroundForData
+9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
 9a&g
@@ -2057,6 +2075,7 @@ $\nY8O
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
+:\n6k_EContentReportResolution_SuspiciousIncludingUpvoters
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_ESteamOSCompatibilityResultDisplayType_Informational
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
@@ -3088,12 +3107,14 @@ EContentCheckProvider
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
+EContentReportSubjectAction
 EContentReportSubjectType
 EControlledLegalCategoryStatus
 EEnhancedMarketAppearanceStatus
 EExternalSaleEventType
 EFrameAccumulatedStat
 EGPUPerformanceLevel
+EGRMode
 EGameRecordingErrorType
 EGameRecordingType
 EGamescopeBlurMode
@@ -3108,6 +3129,7 @@ EProvideDeckFeedbackPreference
 EPublishedFileQueryType
 EPublishedFileStorageSystem
 ERROR
+EResolutionAutomation
 ESDCardFormatStage
 ESessionPersistence
 ESplitScalingFilter
@@ -4498,6 +4520,7 @@ RemotePlay.GetGameSystemVolume
 RemotePlay.GetPerUserInputSettings
 RemotePlay.GetPerUserInputSettingsWithGuestID
 RemotePlay.GetRemotePlayTogetherGroupIDForOverlayPID
+RemotePlay.HasRemoteDevicePIN
 RemotePlay.IdentifyController
 RemotePlay.InstallAudioDriver
 RemotePlay.InstallInputDriver
@@ -4547,10 +4570,13 @@ RemotePlay.SetStreamingDesktopToRemotePlayTogetherEnabled
 RemotePlay.SetStreamingP2PScope
 RemotePlay.SetStreamingServerConfig
 RemotePlay.SetStreamingServerConfigEnabled
+RemotePlay.StartDesktopStream
 RemotePlay.StopStreamingClient
 RemotePlay.StopStreamingSession
 RemotePlay.StopStreamingSessionAndSuspendDevice
 RemotePlay.UnlockH264
+RemotePlay.UnpairRemoteClient
+RemotePlay.UnpairRemoteDevice
 RemotePlay.UnpairRemoteDevices
 RemotePlayTogetherVolume
 RemoveLast
@@ -5976,6 +6002,7 @@ desired_framerate_numerator
 desired_resolution_x
 desired_resolution_y
 developer
+deviceId
 device_address
 dgettext
 different KV data types in a single list column
@@ -6764,6 +6791,9 @@ k_EGPUPerformanceLevel_High
 k_EGPUPerformanceLevel_Invalid
 k_EGPUPerformanceLevel_Low
 k_EGPUPerformanceLevel_Manual
+k_EGRMode_Always
+k_EGRMode_Manual
+k_EGRMode_Never
 k_EGameRecordingErrorGeneral
 k_EGameRecordingType_Clip
 k_EGameRecordingType_Unknown
@@ -6808,6 +6838,8 @@ k_EOSBranch_ReleaseCandidate
 k_EOSBranch_Staging
 k_EOSBranch_Unknown
 k_EPersonaStateFlag_Golden
+k_EResolutionAutomation_MAX
+k_EResolutionAutomation_Manual
 k_ESDCardFormatStage_Finalizing
 k_ESDCardFormatStage_Formatting
 k_ESDCardFormatStage_Invalid

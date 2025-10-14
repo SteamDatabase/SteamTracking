@@ -19,6 +19,7 @@
 "SteamUI_ConvertExistingInfo" "A játék meglévő telepítésének konvertálása. Ez több percig is tarthat."
 "SteamUI_ConversionCompleteInfo" "A Steam előtöltés elkészült."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 fájl előtöltése a lemezről."
 "SteamUI_ConvertExistingStatus2" "%s1 fájl előtöltése a lemezről.."
 "SteamUI_ConvertExistingStatus3" "%s1 fájl előtöltése a lemezről..."
@@ -696,6 +697,8 @@
 "Steam_RecoverAuthenticator_BadPassword"			"A jelszó helytelen volt. Ellenőrizd, és próbáld újra."
 "Steam_RecoverAuthenticator_BadCode"				"A kód vagy a jelszó helytelen. Kérjük, ellenőrizd, és próbáld újra."
 "Steam_RecoverAuthenticator_BadCodes"				"A kódok vagy a jelszó helytelen volt. Ellenőrizd őket, majd próbáld újra."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"A Steam Guard hitelesítő el lett távolítva a fiókodról.\n\nMostantól be tudsz lépni a fiókodba."
 
 
@@ -1558,6 +1561,7 @@
 "SteamUI_HardwarePromoWizard_Title" "Promóciós ajánlat regisztrálása"
 "Steam_HardwarePromo_Intro" "Gratulálunk! A számítógéped megfelelő ehhez az ajánlathoz. Az ajánlat beváltásához regisztrálnod kell azt egy (és csakis egy) Steam fiókra. Az ajánlatban szereplő játékokat bármely számítógépről elérheted, amennyiben ebbe a Steam fiókba jelentkezel be."
 "Steam_Legal_HardwarePromo_Unreleased" "A csomagban lévő termékek némelyike még nem jelent meg, és jelenleg nem elérhető. E termékeket a megjelenéskor automatikusan rendelkezésedre bocsátjuk a Steamen keresztül. A termékek megjelenési időpontja bizonytalan, és a vásárlók nem vehetik biztosra a megjelenés várható időpontját. A további feltételek és kikötések megjelenítéséhez kattints a „Tovább” gombra."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Ajánlat regisztrálása..."
 "SteamUI_OEMTicketWizard_Title" "OEM licenc regisztrálása"
 
@@ -4311,6 +4315,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 
 "Steam_Parental_UnlockTitle"			"Családi Nézet"
 "Steam_Parental_UnlockInstructions"		"Írják be a PIN-kódot alább a Családi Nézetből kilépéshez"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Elfelejtettem a PIN-emet"
 "Steam_Parental_NoRecoveryEmail"		"Nincs visszaállító e-mail beállítva"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Nincs visszaállítási e-mail-cím beállítva a fiókodra. Visszaállító e-mail-címed frissítéséhez lépj ki a Családi Nézetből és futtasd újra a Családi Nézet beállítást."
@@ -4425,6 +4430,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Music_Track_Menu_ShowAlbumInUI" "Album mutatása"
 "Music_Menu_Play" "Lejátszás"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% / %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% szám - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% szám - %queueduration%"
@@ -4498,6 +4504,7 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Music_Playlist_RenameDialog_Title" "Lejátszólista átnevezése"
 "Music_Playlist_RenameDialog_Prompt" "„%playlistname%” lejátszólista átnevezése"
 "Music_Playlist_AddDialog_Title" "Új lejátszólista készítése"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Lejátszólista törlése"
 "Music_Playlist_DeleteDialog_Prompt" "Biztosan törölni szeretnéd a(z) „%playlistname%” lejátszólistát?"
 "Music_Playlist_Details_Play" "Lista lejátszása"
@@ -4516,6 +4523,8 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Music_Queue_Menu_ReplacePlaylist" "Lejátszólista cseréje a sorra"
 "Music_Queue_Menu_AppendPlaylist" "Lejátszólistához adás"
 "Music_Queue_AddPlaylist_Dialog_Title" "Lejátszólista hozzáadása"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Játékvezérlő"
 "Steam_SettingsControllerTitle"				"Játékvezérlő-konfiguráció"
 "Steam_SettingsControllerDescription"		"A játékvezérlő általános beállításai lehetővé teszik a konfigurációtámogatás, személyre szabás és egyéb lehetőségek ki-/bekapcsolásának beállítását."

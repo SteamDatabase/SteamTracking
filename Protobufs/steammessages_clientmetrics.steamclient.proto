@@ -199,7 +199,7 @@ message CClientMetrics_ReportClientArgs_Notification {
 	optional bool fps_counter_enabled = 7;
 	optional bool library_low_bandwidth_mode_enabled = 8;
 	optional bool library_low_perf_mode_enabled = 9;
-	optional int32 gr_mode = 10;
+	optional .EGRMode gr_mode = 10 [default = k_EGRMode_Never];
 }
 
 message CClientMetrics_ReportLinuxStats_Notification {

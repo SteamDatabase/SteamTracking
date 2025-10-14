@@ -21,6 +21,7 @@
 "SteamUI_ConvertExistingInfo" "설치된 기존 게임을 변환합니다. 약간의 시간이 걸릴 수 있습니다."
 "SteamUI_ConversionCompleteInfo" "Steam 미리 받기가 완료되었습니다."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "%s1 파일 미리받는 중"
 "SteamUI_ConvertExistingStatus2" "%s1 개의 파일을 미리받는 중.."
 "SteamUI_ConvertExistingStatus3" "%s1 개의 파일을 미리받는 중..."
@@ -703,6 +704,8 @@
 "Steam_RecoverAuthenticator_BadPassword"			"비밀번호가 틀렸습니다. 확인하고 다시 시도하세요."
 "Steam_RecoverAuthenticator_BadCode"				"코드 또는 비밀번호가 틀렸습니다. 확인하시고 다시 시도해보세요."
 "Steam_RecoverAuthenticator_BadCodes"				"코드 또는 암호가 틀렸습니다. 확인하시고 다시 시도하세요."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"계정에서 Steam Guard 인증기가 제거되었습니다.\n\n이제 계정에 로그인할 수 있을 겁니다."
 
 
@@ -1570,6 +1573,7 @@
 "SteamUI_HardwarePromoWizard_Title" "프로모션 행사에 등록하세요."
 "Steam_HardwarePromo_Intro" "축하합니다! 행사 대상 자격을 갖추셨군요. 제공되는 혜택은 단 하나의 Steam 계정에만 사용할 수 있으며, 어느 컴퓨터에서든 Steam 계정에 로그인하기만 하면 해당 게임을 플레이할 수 있습니다."
 "Steam_Legal_HardwarePromo_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. 추가 약관을 보려면 '다음'을 누르세요."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "등록 요청..."
 "SteamUI_OEMTicketWizard_Title" "OEM 라이선스 등록"
 
@@ -3405,7 +3409,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Subscription_ContactSupportCart" "오류가 발생했습니다. 다음 항목에 대한 구독이 완료되지 않았습니다.\n\n아래 링크를 통해 Steam 고객지원에 문의하세요."
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 인증에 실패했습니다. 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddressCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 주소에 문제가 있습니다. 문제를 %provider%에서 해결하거나 다른 결제 수단을 사용하여 다시 시도해주세요."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 지불 방법에 문제가 있습니다. 문제를 %provider%에서 해결하거나 다른 결제 수단을 사용하여 다시 시도해주세요."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 계정에 해당하는 결제 수단에 문제가 있습니다. 문제를 %provider%에서 해결하거나 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethodCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 인증에 실패했습니다. 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProviderCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n%provider% 회사가 사용자의 %provider% 계정에 문제가 있다고 보고했습니다. %provider%에 문의하여 지원을 받거나 다른 결제 수단을 사용하여 다시 시도해주세요."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerifiedCart"	"다음 항목에 대한 구매가 완료되지 않았습니다.\n\n구매를 완료하기 위해서는 %provider% 계정이 확인되거나 잔액이 더 많아야 한다고 %provider% 회사가 보고했습니다. %provider%에 문의하여 지원을 받거나 다른 결제 수단을 사용하여 다시 시도해주세요."
@@ -4336,7 +4340,8 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_Parental_UnlockTitle"			"가족 모드"
 "Steam_Parental_UnlockInstructions"		"가족 모드를 끄려면 아래에 PIN을 입력하세요"
-"Steam_Parental_ForgotPIN"				"PIN을 잊어버렸습니다"
+"Steam_Parental_UnlockInstructions2"	""
+"Steam_Parental_ForgotPIN"				"PIN을 잊어버렸습니다."
 "Steam_Parental_NoRecoveryEmail"		"복구 이메일 설정 안됨"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "귀하의 계정에 설정된 복구 메일 주소가 없습니다. 복구 메일을 갱신하시려면 가족 모드를 끈 후 가족 모드 설정을 다시 실행하세요."
 "Steam_Parental_UnlockFailureTitle"		"가족 모드"
@@ -4450,6 +4455,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Track_Menu_ShowAlbumInUI" "앨범 보기"
 "Music_Menu_Play" "재생"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%queuecount% 중 %currentqueueentry% - %queueduration%"
 "Music_Transport_X_Tracks" "트랙 %queuecount% 개 - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% 트랙 - %queueduration%"
@@ -4523,6 +4529,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Playlist_RenameDialog_Title" "재생 목록 이름 바꾸기"
 "Music_Playlist_RenameDialog_Prompt" "재생 목록 이름을 '%playlistname%'(으)로 바꾸기"
 "Music_Playlist_AddDialog_Title" "새 재생 목록 만들기"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "재생 목록 삭제"
 "Music_Playlist_DeleteDialog_Prompt" "'%playlistname% 재생 목록을 삭제할까요?"
 "Music_Playlist_Details_Play" "재생 목록"
@@ -4541,6 +4548,8 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Queue_Menu_ReplacePlaylist" "재생 목록을 대기열로 바꾸기"
 "Music_Queue_Menu_AppendPlaylist" "재생 목록에 추가"
 "Music_Queue_AddPlaylist_Dialog_Title" "재생 목록에 추가"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"컨트롤러"
 "Steam_SettingsControllerTitle"				"컨트롤러 구성"
 "Steam_SettingsControllerDescription"		"일반 컨트롤러 구성에서는 설정 지원, 개인 설정 및 기타 옵션을 사용 선택할 수 있습니다."

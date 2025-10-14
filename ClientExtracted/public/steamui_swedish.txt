@@ -19,6 +19,7 @@
 "SteamUI_ConvertExistingInfo" "Konverterar befintlig spelinstallation. Det kan ta flera minuter."
 "SteamUI_ConversionCompleteInfo" "Förinläsning av Steam slutförd."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Förhämtar %s1 filer från disken ..."
 "SteamUI_ConvertExistingStatus2" "Förhämtar %s1 filer från disken ..."
 "SteamUI_ConvertExistingStatus3" "Förhämtar %s1 filer från disken ..."
@@ -702,6 +703,8 @@ Felkod (%error%)"
 "Steam_RecoverAuthenticator_BadPassword"			"Fel lösenord. Kontrollera lösenordet och försök igen."
 "Steam_RecoverAuthenticator_BadCode"				"Koden eller lösenordet är fel. Kontrollera dem och försök igen."
 "Steam_RecoverAuthenticator_BadCodes"				"Koderna eller lösenordet var fel. Kontrollera dem och försök igen."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Steam Guard-autentiseraren har tagits bort från ditt konto.\n\nDu bör kunna logga in på kontot nu."
 
 
@@ -1568,6 +1571,7 @@ Du måste logga ut från OSX för att ändringen ska träda i kraft."
 "SteamUI_HardwarePromoWizard_Title" "Registrera kampanjerbjudande"
 "Steam_HardwarePromo_Intro" "Grattis! Det här erbjudandet gäller för din dator. Du kan aktivera erbjudandet genom att registrera det till ett, och endast ett, Steam-konto. Du kan spela spelen i erbjudandet på vilken dator som helst, förutsatt att du loggar in med det här Steam-kontot."
 "Steam_Legal_HardwarePromo_Unreleased" "Några av produkterna i paketet har inte släppts än och är därför inte tillgängliga. Produkterna blir tillgängliga automatiskt på Steam så fort de släpps. Produkternas lanseringsdatum är okända, och köpare bör inte förlita sig på uppskattade lanseringsdatum. Ytterligare regler och villkor visas när du klickar på Nästa."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Registrerar erbjudande ..."
 "SteamUI_OEMTicketWizard_Title" "Registrera OEM-licens"
 
@@ -4332,6 +4336,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 
 "Steam_Parental_UnlockTitle"			"Familjealternativ"
 "Steam_Parental_UnlockInstructions"		"Ange er PIN-kod nedan för att gå ur familjeläget:"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Jag glömde min PIN-kod"
 "Steam_Parental_NoRecoveryEmail"		"Ingen återställningsadress angiven"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Ingen e-postadress för återställning har angetts för ditt konto. För att uppdatera din e-postadress för återställning, avsluta familjevyn och kör familjevyns installation på nytt.
@@ -4447,6 +4452,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_Track_Menu_ShowAlbumInUI" "Visa album"
 "Music_Menu_Play" "Spela"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% av %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% låtar - %queueduration%"
 "Music_Transport_X_Track" "%queuecount% låt - %queueduration%"
@@ -4520,6 +4526,7 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_Playlist_RenameDialog_Title" "Byt namn på spellista"
 "Music_Playlist_RenameDialog_Prompt" "Byt namn på spellistan \"%playlistname%\""
 "Music_Playlist_AddDialog_Title" "Skapa ny spellista"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Ta bort spellista"
 "Music_Playlist_DeleteDialog_Prompt" "Är du säker på att du vill ta bort spellistan \"%playlistname%\""
 "Music_Playlist_Details_Play" "Spela lista"
@@ -4538,6 +4545,8 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Music_Queue_Menu_ReplacePlaylist" "Byt ut spellista med kö"
 "Music_Queue_Menu_AppendPlaylist" "Lägg till i spellista"
 "Music_Queue_AddPlaylist_Dialog_Title" "Lägg till spellista"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Handkontroll"
 "Steam_SettingsControllerTitle"				"Handkontrollskonfiguration"
 "Steam_SettingsControllerDescription"		"Allmänna kontrollinställningar tillåter val av inställningar för in/ut-konfigurationssupport, anpassningar och andra val."

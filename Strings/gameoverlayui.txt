@@ -401,6 +401,7 @@ $\nY8O
 %\n!k_ECompromiseDetectionType_Manual
 %\n!k_EContentReportReason_Harassment
 %\n!k_EContentReportReason_OtherAbuse
+%\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGraphicsPerfOverlayLevel_Basic
@@ -454,6 +455,7 @@ $\nY8O
 %s%s[%d]: -> %s\n
 %s%s_full.jpg
 %s.%10u.txt
+%s.%d.log
 %s.%u.tmp
 %s.async%u.tmp
 %s.current.txt
@@ -559,6 +561,7 @@ $\nY8O
 (\n$k_EContentReportReason_ReferralLinks
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
+(\n$k_EContentReportSubjectAction_Locked
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -640,6 +643,8 @@ $\nY8O
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectAction_Invalid
+)\n%k_EContentReportSubjectAction_Updated
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EProfileCustomizationTypeCustomText
@@ -675,8 +680,11 @@ $\nY8O
 *\n&k_EContentReportReason_GenderedDoxxing
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
+*\n&k_EContentReportSubjectAction_Disputed
+*\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
+*\n&k_EResolutionAutomation_FullyAutomated
 *\n&k_ESystemDisplayCompatibilityMode_None
 *\n&k_PublishedFileQueryType_RankedByTrend
 *pchMsg && *pchMsg == '%'
@@ -690,6 +698,9 @@ $\nY8O
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportSubjectAction_Acquitted
++\n'k_EContentReportSubjectAction_Cancelled
++\n'k_EContentReportSubjectAction_Escalated
 +\n'k_EContentReportSubjectType_ChatRoomMsg
 +\n'k_EProfileCustomizationTypeAchievements
 +\n'k_EProfileCustomizationTypeFavoriteGame
@@ -724,6 +735,8 @@ $\nY8O
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportSubjectAction_Sanctioned
+,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
 ,\n(k_EGameRecordingType_BackgroundRecording
 ,\n(k_EProfileCustomizationTypeFavoriteGroup
@@ -827,6 +840,7 @@ $\nY8O
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
 .\n*k_EPublishedFileInappropriateResult_Likely
+.\n*k_EResolutionAutomation_PartiallyAutomated
 .\n*k_ESteamDeckCompatibilityCategory_Playable
 .\n*k_ESteamDeckCompatibilityCategory_Verified
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
@@ -864,6 +878,7 @@ $\nY8O
 /\n+k_ECommunityItemClass_SteamDeckKeyboardSkin
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_EContentReportReason_EncouragingTerrorism
+/\n+k_EContentReportResolution_HarassmentStrike
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -973,8 +988,7 @@ $\nY8O
 /tmp/cmd-stderr.XXXXXX
 /tmp/cmd-stdout.XXXXXX
 /tmp/disk-free.XXXXXX
-/tmp/gameoverlayui.log
-/tmp/gameoverlayui.log.last
+/tmp/gameoverlayui
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 /ubuntu12_32
@@ -1021,6 +1035,7 @@ $\nY8O
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
+0\n,k_EContentReportResolution_VisibilityChanged
 0\n,k_ENewSteamAnnouncementState_NewAnnouncement
 0\n,k_EPublishedFileInappropriateProvider_Amazon
 0\n,k_EPublishedFileInappropriateProvider_Google
@@ -1238,6 +1253,7 @@ $\nY8O
 13CCallbackImplILi16EE
 13CCallbackImplILi1EE
 13CCallbackImplILi260EE
+13CCallbackImplILi4EE
 13CCallbackImplILi8476EE
 13CCallbackImplILi8EE
 13CCallbackImplILi9EE
@@ -1484,7 +1500,7 @@ $\nY8O
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:36:43
+22:50:18
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1555,6 +1571,7 @@ $\nY8O
 2\n.k_EContentReportReason_GenderedOtherHarassment
 2\n.k_EContentReportReason_OtherCommercialActivity
 2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
+2\n.k_EContentReportResolution_DisconnectedFromApp
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EWindowsUpdateRebootBehavior_MightNeedReboot
@@ -1583,6 +1600,7 @@ $\nY8O
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
+4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
 4\n0k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot
@@ -1663,6 +1681,7 @@ $\nY8O
 9CUtlQueueIP9CLogEventE
 9ZooDialog
 9\n5k_EContentReportReason_MissingProcessingGroundForData
+9\n5k_EContentReportResolution_CountryRestrictionsChanged
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
 9a&g
@@ -1672,6 +1691,7 @@ $\nY8O
 ::g_pFileSystem
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
+:\n6k_EContentReportResolution_SuspiciousIncludingUpvoters
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_ESteamOSCompatibilityResultDisplayType_Informational
 :\n6k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend
@@ -1973,6 +1993,7 @@ CANCELLED
 CASCADE
 CBasePanel
 CBasePanel::OnConfigUpdated
+CBasePanel::OnFramerateReportingFrequencyChanged
 CBasePanel::OnGameOverlayActivateRequested
 CBasePanel::OnOverlaySettingsChanged
 CBasePanel::OnOverlayStateChanged
@@ -2244,6 +2265,7 @@ CIngameFPSRAMInfo
 CJSMethodArgs::AddProtobufAsBinary
 CJSMethodArgs::AddProtobufAsObject
 CLIENTENGINE_INTERFACE_VERSION005
+CLegacy
 CLinuxSystemHWMonitorThread
 CLinuxSystemHWMonitorThread::Frame
 CLogEvent
@@ -2928,6 +2950,7 @@ EContentDownloadType
 EContentModeratorLevel
 EContentReportReason
 EContentReportResolution
+EContentReportSubjectAction
 EContentReportSubjectType
 EControlledLegalCategoryStatus
 EControllerConfigFeature
@@ -2945,6 +2968,7 @@ EFriendRelationship
 EGCAction
 EGCStatus
 EGPUPerformanceLevel
+EGRMode
 EGameRecordingType
 EGamescopeBlurMode
 EGamingDeviceType
@@ -2993,6 +3017,7 @@ ERROR: %s: failed to set hostname\n
 ERROR: %s: failed to set timezone\n
 ERegKeyRoot
 ERemoteStoragePlatform
+EResolutionAutomation
 EResult
 ESDCardFormatStage
 ESessionPersistence
@@ -4327,6 +4352,7 @@ N10CBasePanel31CCallback_OnOverlayStateChangedE
 N10CBasePanel33CCallbackInternal_OnConfigUpdatedE
 N10CBasePanel34CCallback_OnOverlaySettingsChangedE
 N10CBasePanel40CCallback_OnGameOverlayActivateRequestedE
+N10CBasePanel54CCallbackInternal_OnFramerateReportingFrequencyChangedE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N17CFileWriterThread14CFileWriteItemE
@@ -4666,7 +4692,7 @@ OSX1010
 OUT_OF_RANGE
 OXXO
 O\n\nAnnotation
-Oct  3 2025
+Oct 13 2025
 October
 Odia
 Offensive Avatar
@@ -5867,6 +5893,7 @@ V_wcstoui64
 Vakiflar Bank
 Valencian
 Valid
+Validated Valve Email
 Value is out of range
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -7575,6 +7602,9 @@ k_EGPUPerformanceLevel_High
 k_EGPUPerformanceLevel_Invalid
 k_EGPUPerformanceLevel_Low
 k_EGPUPerformanceLevel_Manual
+k_EGRMode_Always
+k_EGRMode_Manual
+k_EGRMode_Never
 k_EGameRecordingType_Clip
 k_EGameRecordingType_Unknown
 k_EGamescopeBlurMode_Always
@@ -7615,6 +7645,8 @@ k_EOSBranch_ReleaseCandidate
 k_EOSBranch_Staging
 k_EOSBranch_Unknown
 k_EPersonaStateFlag_Golden
+k_EResolutionAutomation_MAX
+k_EResolutionAutomation_Manual
 k_ESDCardFormatStage_Finalizing
 k_ESDCardFormatStage_Formatting
 k_ESDCardFormatStage_Invalid

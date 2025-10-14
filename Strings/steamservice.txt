@@ -1159,6 +1159,7 @@ $ffn
 )\n$k_EMsgClientUFSGetUGCDetailsResponse
 )\n$k_EMsgDRMWorkerProcessGetBlobRequest
 )\n$k_EMsgEconTrading_CancelTradeRequest
+)\n$k_EMsgEnsureBillingConfigReload_TEST
 )\n$k_EMsgFBSBootstrapperGetPackageChunk
 )\n$k_EMsgFBSBootstrapperPackageResponse
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
@@ -2174,6 +2175,7 @@ $ffn
 1\n,k_EMsgDRMWorkerProcessSplitAndInstallRequest
 1\n,k_EMsgDRMWorkerProcessSteamworksInfoResponse
 1\n,k_EMsgDRMWorkerProcessValidateDRMDLLResponse
+1\n,k_EMsgEnsureBillingConfigReloadResponse_TEST
 1\n,k_EMsgFBSBootstrapperGetPackageChunkResponse
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
@@ -2220,7 +2222,7 @@ $ffn
 21CWorkThreadPoolSignal
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
-22:36:29
+22:50:06
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -3738,6 +3740,7 @@ CLIENT_EARLY_TRAFFIC_SECRET
 CLIENT_HANDSHAKE_TRAFFIC_SECRET
 CLIENT_RANDOM
 CLIENT_TRAFFIC_SECRET_0
+CLegacy
 CLocalizationToken
 CLogEvent
 CLogInstance::EmitEventNow
@@ -6945,7 +6948,7 @@ Object
 Object Signer
 Object Signing
 Object Signing CA
-Oct  3 2025
+Oct 13 2025
 October
 Odia
 Offensive Avatar
@@ -8910,6 +8913,7 @@ Validate Failed: Leaked file %p\n
 Validate Failed: Leaked socket %p\n
 ValidateGlobals_NetMisc
 ValidateIPCSpewStatics
+Validated Valve Email
 Value is out of range
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -13187,6 +13191,7 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 k_EClanBetaReleaseEvent
 k_EClanBroadcastEvent
 k_EClanChatEvent
+k_EClanCreatorHome
 k_EClanCrosspostEvent
 k_EClanDLCReleaseEvent
 k_EClanDevStreamEvent

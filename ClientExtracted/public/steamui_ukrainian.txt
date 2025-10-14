@@ -20,6 +20,7 @@
 "SteamUI_ConvertExistingInfo" "Конвертуються наявні файли гри. Це може тривати декілька хвилин."
 "SteamUI_ConversionCompleteInfo" "Steam завершив попереднє завантаження."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Триває попереднє завантаження файлів %s1 з диску."
 "SteamUI_ConvertExistingStatus2" "Триває попереднє завантаження файлів %s1 з диску.."
 "SteamUI_ConvertExistingStatus3" "Триває попереднє завантаження файлів %s1 з диску…"
@@ -701,6 +702,8 @@
 "Steam_RecoverAuthenticator_BadPassword"			"Хибний пароль. Спробуйте ввести ще раз."
 "Steam_RecoverAuthenticator_BadCode"				"Код або пароль виявилися хибними. Будь ласка, перевірте їх і спробуйте знову."
 "Steam_RecoverAuthenticator_BadCodes"				"Коди або паролі виявилися хибними. Перевірте їх і спробуйте ще раз."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Автентифікатор Steam Guard було вилучено з вашого акаунта.\n\nТепер ви зможете ввійти до свого акаунта."
 
 
@@ -1522,7 +1525,7 @@
 "Steam_PeerContentAnyUser"		"Дозволити передавання файлів до всіх користувачів"
 
 "Steam_CloudLabel"					"Steam Cloud"
-"Steam_CloudInfo"					"Steam Cloud зберігає інформацію для того, щоби ваша взаємодія з тим чи іншим продуктом була узгодженою на всіх комп’ютерах."
+"Steam_CloudInfo"					"Steam Cloud зберігає інформацію для того, щоби ваша взаємодія з тим чи іншим продуктом була узгодженою на всіх пристроях."
 "Steam_EnableCloud"					"Дозволити синхронізацію зі Steam Cloud тим продуктам, які це підтримують"
 "Steam_EnableCloudForApp"			"Увімкнути синхронізацію зі Steam Cloud для %game%"
 "Steam_EnableCloudScreenshots"		"Відкривати вікно вивантаження для зроблених знімків екрана після виходу з гри"
@@ -1567,6 +1570,7 @@
 "SteamUI_HardwarePromoWizard_Title" "Реєстрація акційної пропозиції"
 "Steam_HardwarePromo_Intro" "Вітаємо! Ваш комп’ютер підходить для цієї пропозиції. Ви можете скористатися пропозицією, зареєструвавши її на одному і тільки одному акаунті Steam. Ви зможете грати в ігри, що включені до пропозиції, на будь-якому комп’ютері за умови, що ви ввійшли з цього акаунта Steam."
 "Steam_Legal_HardwarePromo_Unreleased" "Деякі продукти цього пакунка ще не вийшли і наразі недоступні. Ці продукти автоматично стануть доступними для вас через Steam одразу після їхнього виходу. Точна дата виходу цих продуктів невідома, тож покупцям не слід покладатися на будь-які приблизні дати виходу. Додаткові умови ви побачите, клацнувши «Далі»."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Триває реєстрація пропозиції…"
 "SteamUI_OEMTicketWizard_Title" "Реєстрація OEM-ліцензії"
 
@@ -4331,6 +4335,7 @@
 
 "Steam_Parental_UnlockTitle"			"Сімейний режим"
 "Steam_Parental_UnlockInstructions"		"Введіть нижче свій ПІН-код, щоби вийти із сімейного режиму"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Не пам’ятаю свій PIN."
 "Steam_Parental_NoRecoveryEmail"		"Не встановлено адреси ел. пошти для відновлення"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Для вашого акаунта не встановлено електронної пошти відновлення. Аби оновити електронну пошту відновлення, вийдіть із сімейного режиму та запустіть його налаштування знову."
@@ -4445,6 +4450,7 @@
 "Music_Track_Menu_ShowAlbumInUI" "Показати альбом"
 "Music_Menu_Play" "Відтворити"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% із %queuecount% - %queueduration%"
 "Music_Transport_X_Tracks" "Записів: %queuecount% - %queueduration%"
 "Music_Transport_X_Track" "Записів: %queuecount% - %queueduration%"
@@ -4518,6 +4524,7 @@
 "Music_Playlist_RenameDialog_Title" "Перейменування списку відтворення"
 "Music_Playlist_RenameDialog_Prompt" "Перейменування списку «%playlistname%»"
 "Music_Playlist_AddDialog_Title" "Створення нового списку відтворення"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Видалення списку відтворення"
 "Music_Playlist_DeleteDialog_Prompt" "Ви впевнені, що бажаєте видалити список відтворення «%playlistname%»?"
 "Music_Playlist_Details_Play" "Відтворити список"
@@ -4536,6 +4543,8 @@
 "Music_Queue_Menu_ReplacePlaylist" "Замінити список чергою"
 "Music_Queue_Menu_AppendPlaylist" "Додати до списку відтворення"
 "Music_Queue_AddPlaylist_Dialog_Title" "Додання списку відтворення"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Контролер"
 "Steam_SettingsControllerTitle"				"Конфігурація контролера"
 "Steam_SettingsControllerDescription"		"Загальні налаштування контролера дозволяють погодитися або відмовитися від підтримки конфігурацій, персоналізації та інших параметрів."

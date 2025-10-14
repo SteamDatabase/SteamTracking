@@ -20,6 +20,7 @@
 "SteamUI_ConvertExistingInfo" "Převádění stávající instalace hry. Tato operace může trvat několik minut."
 "SteamUI_ConversionCompleteInfo" "Předstahování ve službě Steam bylo dokončeno."
 
+"SteamUI_ConversionCompleteInfoFailed" " "
 "SteamUI_ConvertExistingStatus1" "Předstahování souborů hry %s1 z disku."
 "SteamUI_ConvertExistingStatus2" "Předstahování souborů hry %s1 z disku.."
 "SteamUI_ConvertExistingStatus3" "Předstahování souborů hry %s1 z disku..."
@@ -702,6 +703,8 @@ Tato operace zabere jenom okamžik."
 "Steam_RecoverAuthenticator_BadPassword"			"Nesprávné heslo. Zkontrolujte ho a zkuste to znovu."
 "Steam_RecoverAuthenticator_BadCode"				"Nesprávný kód nebo heslo. Zkontrolujte je a zkuste to znovu."
 "Steam_RecoverAuthenticator_BadCodes"				"Nesprávné kódy nebo heslo. Zkontrolujte je a zkuste to znovu."
+"Steam_RecoverAuthenticator_SupportURL"				""
+
 "Steam_RecoverAuthenticator_Done"					"Autentifikátor funkce Steam Guard byl odebrán od Vašeho účtu.\n\nNyní byste se měli přihlásit i bez něj."
 
 
@@ -1569,6 +1572,7 @@ Změna se projeví až po opětovném přihlášení do macOS."
 "SteamUI_HardwarePromoWizard_Title" "Zaregistrovat reklamní nabídku"
 "Steam_HardwarePromo_Intro" "Blahopřejeme! Váš počítač splňuje podmínky nabídky. Nabídku můžete uplatnit pomocí registrace na jednom (a nikoli více) účtu služby Steam. Po přihlášení k účtu služby Steam budete mít přístup ke všem hrám z této nabídky, a to nezávisle na použitém počítači."
 "Steam_Legal_HardwarePromo_Unreleased" "Některé produkty obsažené v tomto balíčku nebyly zatím vydány a nejsou v současné době dostupné. Tyto produkty se stanou automaticky dostupnými po svém vydání ve službě Steam. Datum vydání těchto produktů je zatím nejisté a kupující by neměli spoléhat na odhadované datum vydání. Další ustanovení a podmínky se zobrazí po kliknutí na tlačítko „Další“."
+"Steam_Legal_HardwarePromo" ""
 "Steam_Working_HardwarePromo" "Registrování nabídky..."
 "SteamUI_OEMTicketWizard_Title" "Registrovat OEM licenci"
 
@@ -4339,6 +4343,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 
 "Steam_Parental_UnlockTitle"			"Rodinný režim"
 "Steam_Parental_UnlockInstructions"		"Pro ukončení rodinného režimu zadejte níže svůj PIN"
+"Steam_Parental_UnlockInstructions2"	""
 "Steam_Parental_ForgotPIN"				"Zapomněl jsem svůj kód PIN"
 "Steam_Parental_NoRecoveryEmail"		"Není nastaven žádný obnovovací e-mail"
 "Steam_Parental_NoRecoveryEmail_Instructions"		 "Na Vašem účtu není nastavena žádná obnovovací e-mailová adresa. Abyste ji mohli nastavit, ukončete rodinný režim a znovu spusťte jeho nastavení."
@@ -4453,6 +4458,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Music_Track_Menu_ShowAlbumInUI" "Zobrazit album"
 "Music_Menu_Play" "Přehrát"
 
+"Music_Transport_No_Tracks" " "
 "Music_Transport_X_Of_Y"	"%currentqueueentry% z %queuecount% – %queueduration%"
 "Music_Transport_X_Tracks" "%queuecount% skladeb – %queueduration%"
 "Music_Transport_X_Track" "%queuecount% skladba – %queueduration%"
@@ -4526,6 +4532,7 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Music_Playlist_RenameDialog_Title" "Přejmenovat seznam skladeb"
 "Music_Playlist_RenameDialog_Prompt" "Přejmenovat seznam skladeb „%playlistname%“"
 "Music_Playlist_AddDialog_Title" "Vytvořit nový seznam skladeb"
+"Music_Playlist_AddDialog_Prompt" ""
 "Music_Playlist_DeleteDialog_Title" "Smazat seznam skladeb"
 "Music_Playlist_DeleteDialog_Prompt" "Opravdu chcete smazat seznam skladeb „%playlistname%“?"
 "Music_Playlist_Details_Play" "Přehrát seznam"
@@ -4544,6 +4551,8 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Music_Queue_Menu_ReplacePlaylist" "Nahradit seznam skladeb frontou"
 "Music_Queue_Menu_AppendPlaylist" "Přidat do seznamu skladeb"
 "Music_Queue_AddPlaylist_Dialog_Title" "Přidat seznam skladeb"
+"Music_Queue_AddPlaylist_Dialog_Prompt" ""
+
 "Steam_Settings_Controller"					"Ovladač"
 "Steam_SettingsControllerTitle"				"Nastavení ovladače"
 "Steam_SettingsControllerDescription"		"V obecných nastaveních ovladačů můžete povolit podporu nastavení určitých ovladačů, přizpůsobit si vybraný ovladač či provést další změny."
@@ -4696,8 +4705,8 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_Settings_ShareIPNetworking_URL" "Zjistit více"
 "Steam_Settings_ShareIPNetworking_URLText" "https://support.steampowered.com/kb_article.php?ref=9929-UAFN-9329"
 
-"SteamUI_StreamingIntro_Title"		"Vítá Vás funkce Steam Remote Play"
-"SteamUI_StreamingIntro"			"Chystáte se spustit tuto hru na vzdáleném počítači a hrát ji zde prostřednictvím funkce Steam Remote Play."
+"SteamUI_StreamingIntro_Title"		"Vítá Vás funkce Remote Play"
+"SteamUI_StreamingIntro"			"Chystáte se spustit tuto hru na vzdáleném počítači a hrát ji zde prostřednictvím funkce Remote Play."
 "SteamUI_StreamingIntro2"			"Váš herní zážitek se může lišit v závislosti na Vašem hardwaru a domácí síti. Pro zlepšení kvality streamování přejděte do nastavení funkce Remote Play."
 "SteamUI_StreamLaunch_ProgressTitle"		"%game% – spouštění streamování"
 "SteamUI_StreamLaunch_ServerProgress"			"Příprava streamování hry %game%..."
