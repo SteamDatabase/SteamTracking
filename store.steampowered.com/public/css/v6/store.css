@@ -4747,7 +4747,7 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 	min-width: 972px;
 	position: relative;
 	/* make sure the background sits behind the game_background_lighten */
-	z-index: -2;
+	/* z-index: -2; */
 }
 
 html:not(.rn_mobile_app) body.v7menu .game_page_background:not(.bundle) {
