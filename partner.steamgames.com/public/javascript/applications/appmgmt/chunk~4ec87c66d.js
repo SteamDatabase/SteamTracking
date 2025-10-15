@@ -44126,8 +44126,10 @@
             a.BHasPreviewArtOfType("localized_title_image"),
             a.BRequireUpdateEvent(),
             a.BIsAppMainCapsuleRequest() || a.BIsAppHeaderCapsuleRequest(),
-            a.BHasPreviewArtOfType("app_header_capsule") ||
-              a.BHasPreviewArtOfType("app_header_capsule"),
+            (!a.BIsAppMainCapsuleRequest() ||
+              a.BHasPreviewArtOfType("app_main_capsule")) &&
+              (!a.BIsAppHeaderCapsuleRequest() ||
+                a.BHasPreviewArtOfType("app_header_capsule")),
           ]),
           O = f?.trim().length > 0,
           L = s && !(o || d),

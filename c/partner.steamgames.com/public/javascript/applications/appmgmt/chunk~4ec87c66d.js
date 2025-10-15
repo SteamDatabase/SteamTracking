@@ -48753,8 +48753,10 @@
             __webpack_require__.BRequireUpdateEvent(),
             __webpack_require__.BIsAppMainCapsuleRequest() ||
               __webpack_require__.BIsAppHeaderCapsuleRequest(),
-            __webpack_require__.BHasPreviewArtOfType("app_header_capsule") ||
-              __webpack_require__.BHasPreviewArtOfType("app_header_capsule"),
+            (!__webpack_require__.BIsAppMainCapsuleRequest() ||
+              __webpack_require__.BHasPreviewArtOfType("app_main_capsule")) &&
+              (!__webpack_require__.BIsAppHeaderCapsuleRequest() ||
+                __webpack_require__.BHasPreviewArtOfType("app_header_capsule")),
           ]),
           _ = _?.trim().length > 0,
           _ = _ && !(_ || _),
