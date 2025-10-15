@@ -27,6 +27,13 @@ button.DialogButton {
   background-size: 300% 300%;
   position: relative;
 }
+@media (prefers-contrast: more) {
+  button.DialogButton {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 input.DialogInput::-moz-focus-inner,
 button.DialogButton::-moz-focus-inner {
   border: 0;
@@ -365,6 +372,11 @@ div.ModalPosition_TopBar {
   text-transform: uppercase;
   user-select: none;
   margin-inline-end: 26px;
+}
+@media (prefers-contrast: more) {
+  .SettingsDialogSubHeader {
+    color: #fff;
+  }
 }
 .DialogContent_InnerWidth .DialogBody .DialogHeader {
   margin-inline-end: 0px;
@@ -710,6 +722,16 @@ button.DialogButton:enabled:active.gpfocus {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: .04s;
 }
+@media (prefers-contrast: more) {
+  button.DialogButton:enabled:active,
+  button.DialogButton:enabled:active:hover,
+  button.DialogButton:enabled:active.gpfocus {
+    transition-property: scale;
+    background: #fff;
+    color: #000;
+    scale: 0.9;
+  }
+}
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
@@ -728,6 +750,13 @@ button.DialogButton:hover,
 button.DialogButton.gpfocus {
   background: #464d58;
   color: #fff;
+}
+@media (prefers-contrast: more) {
+  button.DialogButton:hover,
+  button.DialogButton.gpfocus {
+    background: #fff;
+    color: #000;
+  }
 }
 button.DialogButton:disabled,
 button.DialogButton:disabled:hover,

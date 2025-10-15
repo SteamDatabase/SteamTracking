@@ -844,7 +844,6 @@
 "U\n%CGameRecording_StopRecording_Response
 "U\n&CFamilyGroups_RequestPurchase_Response
 "U\n'CSteamTV_FollowBroadcastChannel_Request
-"U\n*CContentBuilder_FinishDepotUpload_Response
 "U\n,CUserAccount_RedeemFriendInviteToken_Request
 "V\n CMsgCloudPendingRemoteOperations
 "V\n\rCChatMentions
@@ -959,6 +958,7 @@
 "steammessages_client_objects.proto"=\n(CCloud_ClientLogUploadCheck_Notification
 "system\InGameOverlayShowFPSScaling
 "t\n%CSiteLicense_LCSAssociateUser_Request
+"t\n*CContentBuilder_FinishDepotUpload_Response
 "t\n\rCMsgAddHeader
 "t\n\vCardinality
 "type mismatch! call is<type>() before get<type>()" && is<array>()
@@ -25749,7 +25749,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 13 2025 22:50:20
+Oct 15 2025 21:44:04
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -27489,6 +27489,7 @@ SDL-
 SDL3_0.0.0
 SDL_APP_NAME
 SDL_AUDIO_DEVICE_STREAM_NAME
+SDL_AUDIO_DEVICE_STREAM_ROLE
 SDL_AUTO_UPDATE_JOYSTICKS
 SDL_AddEventWatch
 SDL_AddGamepadMapping
@@ -32822,6 +32823,7 @@ Zulu
 \n\rdevkit_gameid
 \n\rdisplay_index
 \n\rdisplay_width
+\n\rdownload_host
 \n\rduration_secs
 \n\rdx_video_card
 \n\renable_replay
@@ -34746,6 +34748,7 @@ bInput
 bIsApplication
 bIsBackupInstall
 bIsBroadcasting
+bIsCEFDebuggingEnabled
 bIsDefaultFolder
 bIsDefaultInputDevice
 bIsDefaultOutputDevice

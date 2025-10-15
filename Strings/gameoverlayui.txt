@@ -1485,6 +1485,7 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21:43:37
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
@@ -1500,7 +1501,6 @@ $\nY8O
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:50:18
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -3410,6 +3410,7 @@ GLIBC_2.2
 GLIBC_2.2.3
 GLIBC_2.2.4
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
@@ -4692,7 +4693,7 @@ OSX1010
 OUT_OF_RANGE
 OXXO
 O\n\nAnnotation
-Oct 13 2025
+Oct 15 2025
 October
 Odia
 Offensive Avatar
@@ -6278,6 +6279,7 @@ __null == "Unexpected return value from pcre_config(NEWLINE)"
 __printf_chk
 __pthread_key_create
 __realpath_chk
+__register_atfork
 __snprintf_chk
 __sprintf_chk
 __stack_chk_fail

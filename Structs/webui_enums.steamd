@@ -26,8 +26,7 @@ enum BundleSort
 {
 	k_BundleSort_Name = 1;
 	k_BundleSort_Price = 2;
-	k_BundleSort_Discount = 3;
-	k_BundleSort_Popular = 4;
+	k_BundleSort_Popular = 3;
 }
 
 enum by

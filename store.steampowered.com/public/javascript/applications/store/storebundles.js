@@ -21,14 +21,14 @@
     },
     54847: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => c });
+      n.d(t, { p: () => d });
       var r = n(90626),
         l = n(62792),
         a = n(55263),
         s = n(45359),
         u = n(18654),
         o = n.n(u);
-      function c(e) {
+      function d(e) {
         const { id: t, type: n } = e,
           [u] = (0, a.G6)(t, (0, l.SW)(n), {});
         return r.createElement(
@@ -53,9 +53,9 @@
         s = n(55263),
         u = n(84811),
         o = n(54847),
-        c = n(37076),
-        d = n(32630),
-        i = n(52038),
+        d = n(37076),
+        i = n(32630),
+        c = n(52038),
         m = n(61859),
         p = n(31960),
         B = n.n(p),
@@ -80,13 +80,13 @@
             }
           }, [r]),
           l.createElement(
-            d.Ay,
+            i.Ay,
             { method: "bundlelist" },
-            l.createElement(u.tH, null, l.createElement(P, { storeItem: r })),
+            l.createElement(u.tH, null, l.createElement(E, { storeItem: r })),
           )
         );
       }
-      function P(e) {
+      function E(e) {
         const { storeItem: t } = e,
           [n, u] = (0, l.useState)(r.k_BundleSort_Popular),
           o = (function (e) {
@@ -97,36 +97,35 @@
               [n] = (0, b.L2)(),
               u = (0, s.MS)(t, a.Xh),
               o = (0, l.useMemo)(() => {
-                if (3 != u) return null;
-                switch (e) {
-                  case r.k_BundleSort_Name:
-                    return [...t].sort((e, t) => {
-                      const n = S.A.Get().GetBundle(e),
-                        r = S.A.Get().GetBundle(t);
-                      return n.GetName().localeCompare(r.GetName());
-                    });
-                  case r.k_BundleSort_Price:
-                    return [...t].sort((e, t) => {
-                      const n = S.A.Get().GetBundle(e),
-                        r = S.A.Get().GetBundle(t);
-                      return (
-                        n.GetBestPurchasePriceInCents() -
-                        r.GetBestPurchasePriceInCents()
-                      );
-                    });
-                  case r.k_BundleSort_Discount:
-                    return [...t].sort((e, t) => {
-                      const n = S.A.Get().GetBundle(e),
-                        r = S.A.Get().GetBundle(t);
-                      return n.GetBestPurchaseOption().bundle_discount_pct ==
-                        r.GetBestPurchaseOption().bundle_discount_pct
-                        ? n.GetBestPurchasePriceInCents() -
-                            r.GetBestPurchasePriceInCents()
-                        : n.GetBestPurchaseOption().bundle_discount_pct -
-                            r.GetBestPurchaseOption().bundle_discount_pct;
-                    });
-                  default:
-                    return t;
+                if (3 != u && 2 != u) return null;
+                {
+                  let n = t;
+                  switch (
+                    (2 == u &&
+                      (n = t.filter((e) => {
+                        const t = S.A.Get().GetBundle(e);
+                        return t?.BIsVisible();
+                      })),
+                    e)
+                  ) {
+                    case r.k_BundleSort_Name:
+                      return [...n].sort((e, t) => {
+                        const n = S.A.Get().GetBundle(e),
+                          r = S.A.Get().GetBundle(t);
+                        return n.GetName().localeCompare(r.GetName());
+                      });
+                    case r.k_BundleSort_Price:
+                      return [...n].sort((e, t) => {
+                        const n = S.A.Get().GetBundle(e),
+                          r = S.A.Get().GetBundle(t);
+                        return (
+                          n.GetBestPurchasePriceInCents() -
+                          r.GetBestPurchasePriceInCents()
+                        );
+                      });
+                    default:
+                      return n;
+                  }
                 }
               }, [e, u, t]);
             if (o && !n) {
@@ -147,7 +146,7 @@
             return null;
           })(n);
         if (!t || !o) return null;
-        const c =
+        const d =
           t.GetAssets().GetLibraryHeroURL_2x() ??
           t.GetAssets().GetLibraryHeroURL();
         return l.createElement(
@@ -156,17 +155,17 @@
           l.createElement(
             "div",
             { className: B().BackgroundImageCtn },
-            l.createElement("img", { src: c }),
+            l.createElement("img", { src: d }),
           ),
           l.createElement(
             "div",
             { className: B().BackgroundImageBlurCtn },
-            l.createElement("img", { src: c }),
+            l.createElement("img", { src: d }),
           ),
           l.createElement(
             "div",
-            { className: (0, i.A)("page_content") },
-            l.createElement(L, { storeItem: t, eBundleSort: n, fnSetSort: u }),
+            { className: (0, c.A)("page_content") },
+            l.createElement(g, { storeItem: t, eBundleSort: n, fnSetSort: u }),
             l.createElement(w, {
               appId: t.GetAppID(),
               rgBundleIDs: o.rgBundleIDList,
@@ -199,7 +198,7 @@
           "div",
           { className: B().BundlesList },
           t.map((e) =>
-            l.createElement(E, {
+            l.createElement(L, {
               key: "bundleDisplay_" + e,
               bundleId: e,
               appId: n,
@@ -207,7 +206,7 @@
           ),
         );
       }
-      function E(e) {
+      function L(e) {
         const { bundleId: t, appId: n } = e;
         return l.createElement(
           "div",
@@ -219,13 +218,13 @@
           }),
         );
       }
-      function L(e) {
+      function g(e) {
         const { storeItem: t, eBundleSort: n, fnSetSort: a } = e;
         return l.createElement(
           "div",
           { className: B().AppHeader },
           l.createElement(
-            c.u,
+            d.u,
             { type: "app", id: t.GetAppID(), hoverClassName: B().PreviewItem },
             l.createElement("img", { src: t.GetAssets().GetHeaderURL() }),
           ),
@@ -254,10 +253,6 @@
                 ),
               rgOptions: [
                 {
-                  data: r.k_BundleSort_Discount,
-                  label: (0, m.we)("#BundleList_SortBy_Discount"),
-                },
-                {
                   data: r.k_BundleSort_Name,
                   label: (0, m.we)("#BundleList_SortBy_Name"),
                 },
@@ -279,8 +274,7 @@
       !(function (e) {
         (e[(e.k_BundleSort_Name = 1)] = "k_BundleSort_Name"),
           (e[(e.k_BundleSort_Price = 2)] = "k_BundleSort_Price"),
-          (e[(e.k_BundleSort_Discount = 3)] = "k_BundleSort_Discount"),
-          (e[(e.k_BundleSort_Popular = 4)] = "k_BundleSort_Popular");
+          (e[(e.k_BundleSort_Popular = 3)] = "k_BundleSort_Popular");
       })(r || (r = {}));
     },
   },

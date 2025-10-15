@@ -1090,7 +1090,6 @@
 "U\n%CGameRecording_StopRecording_Response
 "U\n&CFamilyGroups_RequestPurchase_Response
 "U\n'CSteamTV_FollowBroadcastChannel_Request
-"U\n*CContentBuilder_FinishDepotUpload_Response
 "U\n,CUserAccount_RedeemFriendInviteToken_Request
 "V\n CMsgCloudPendingRemoteOperations
 "V\n\rCChatMentions
@@ -1180,6 +1179,7 @@
 "steammessages_client_objects.proto"=\n(CCloud_ClientLogUploadCheck_Notification
 "storeId":"
 "t\n%CSiteLicense_LCSAssociateUser_Request
+"t\n*CContentBuilder_FinishDepotUpload_Response
 "t\n\rCMsgAddHeader
 "token": "%s"
 "type mismatch! call is<type>() before get<type>()" && is<array>()
@@ -2391,7 +2391,6 @@ $steammessages_parental_objects.proto"
 %s.txt
 %s/%c%c/%s_%s
 %s/%d/%s?t=%u
-%s/%lld
 %s/%llu_legacy.bin
 %s/%s.tmp
 %s/%s/%llX/system
@@ -30409,6 +30408,7 @@ No launcher specified
 No local candidate types are allowed by user settings and configured servers
 No local tool list detected at %s.
 No m_pSteamGameServer?
+No manifest download host set
 No match
 No matching DANE TLSA records
 No matching URL
@@ -39908,6 +39908,7 @@ Zulu
 \n\rdevkit_gameid
 \n\rdisplay_index
 \n\rdisplay_width
+\n\rdownload_host
 \n\rdup_pkts_recv
 \n\rdx_video_card
 \n\recho_sent_tos
@@ -57894,7 +57895,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 13 2025 22:50:19
+steam Oct 15 2025 21:44:36
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

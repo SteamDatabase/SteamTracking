@@ -110,40 +110,37 @@
               [__webpack_require__] = (0, _._)(),
               _ = (0, _._)(_, _._),
               _ = (0, _.useMemo)(() => {
-                if (3 != _) return null;
-                switch (_) {
-                  case _.k_BundleSort_Name:
-                    return [..._].sort((_, _) => {
-                      const _ = _._.Get().GetBundle(_),
-                        _ = _._.Get().GetBundle(_);
-                      return __webpack_require__
-                        .GetName()
-                        .localeCompare(_.GetName());
-                    });
-                  case _.k_BundleSort_Price:
-                    return [..._].sort((_, _) => {
-                      const _ = _._.Get().GetBundle(_),
-                        _ = _._.Get().GetBundle(_);
-                      return (
-                        __webpack_require__.GetBestPurchasePriceInCents() -
-                        _.GetBestPurchasePriceInCents()
-                      );
-                    });
-                  case _.k_BundleSort_Discount:
-                    return [..._].sort((_, _) => {
-                      const _ = _._.Get().GetBundle(_),
-                        _ = _._.Get().GetBundle(_);
-                      return __webpack_require__.GetBestPurchaseOption()
-                        .bundle_discount_pct ==
-                        _.GetBestPurchaseOption().bundle_discount_pct
-                        ? __webpack_require__.GetBestPurchasePriceInCents() -
-                            _.GetBestPurchasePriceInCents()
-                        : __webpack_require__.GetBestPurchaseOption()
-                            .bundle_discount_pct -
-                            _.GetBestPurchaseOption().bundle_discount_pct;
-                    });
-                  default:
-                    return _;
+                if (3 != _ && 2 != _) return null;
+                {
+                  let _ = _;
+                  switch (
+                    (2 == _ &&
+                      (_ = _.filter((_) => {
+                        const _ = _._.Get().GetBundle(_);
+                        return _?.BIsVisible();
+                      })),
+                    _)
+                  ) {
+                    case _.k_BundleSort_Name:
+                      return [..._].sort((_, _) => {
+                        const _ = _._.Get().GetBundle(_),
+                          _ = _._.Get().GetBundle(_);
+                        return __webpack_require__
+                          .GetName()
+                          .localeCompare(_.GetName());
+                      });
+                    case _.k_BundleSort_Price:
+                      return [..._].sort((_, _) => {
+                        const _ = _._.Get().GetBundle(_),
+                          _ = _._.Get().GetBundle(_);
+                        return (
+                          __webpack_require__.GetBestPurchasePriceInCents() -
+                          _.GetBestPurchasePriceInCents()
+                        );
+                      });
+                    default:
+                      return _;
+                  }
                 }
               }, [_, _, _]);
             if (_ && !__webpack_require__) {
@@ -324,10 +321,6 @@
                 ),
               rgOptions: [
                 {
-                  data: _.k_BundleSort_Discount,
-                  label: (0, _._)("#BundleList_SortBy_Discount"),
-                },
-                {
                   data: _.k_BundleSort_Name,
                   label: (0, _._)("#BundleList_SortBy_Name"),
                 },
@@ -349,8 +342,7 @@
       !(function (_) {
         (_[(_.k_BundleSort_Name = 1)] = "k_BundleSort_Name"),
           (_[(_.k_BundleSort_Price = 2)] = "k_BundleSort_Price"),
-          (_[(_.k_BundleSort_Discount = 3)] = "k_BundleSort_Discount"),
-          (_[(_.k_BundleSort_Popular = 4)] = "k_BundleSort_Popular");
+          (_[(_.k_BundleSort_Popular = 3)] = "k_BundleSort_Popular");
       })(_ || (_ = {}));
     },
   },

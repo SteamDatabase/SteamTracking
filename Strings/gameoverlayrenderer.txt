@@ -486,6 +486,7 @@ __gnu_cxx::__concurrence_unlock_error
 __int128
 __memcpy_chk
 __pthread_key_create
+__register_atfork
 __snprintf_chk
 __sprintf_chk
 __stack_chk_fail

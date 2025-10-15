@@ -2441,6 +2441,7 @@ GLIBC_2.2
 GLIBC_2.2.3
 GLIBC_2.2.4
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
@@ -4178,6 +4179,7 @@ __nl_langinfo_l
 __printf_chk
 __pthread_key_create
 __realpath_chk
+__register_atfork
 __snprintf_chk
 __sprintf_chk
 __stack_chk_fail

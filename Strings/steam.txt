@@ -2414,6 +2414,8 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:43:25
+21:43:32
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -2424,8 +2426,6 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
-22:50:06
-22:50:13
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -7415,7 +7415,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 13 2025
+Oct 15 2025
 October
 Odia
 Offensive Avatar
@@ -8757,7 +8757,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 13 2025 22:50:13
+Startup - updater built Oct 15 2025 21:43:32
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
