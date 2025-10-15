@@ -526,8 +526,8 @@ body.iframe #ChatWindow
 	width: auto;
 	margin-right: 0;
 	left: 0;
-background: -webkit-linear-gradient( top, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
-	background: linear-gradient( 0, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
+background: -webkit-linear-gradient( 90deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
+	background: linear-gradient( 0deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
 }
 
 body.iframe #ChatWindow.noVideo {
