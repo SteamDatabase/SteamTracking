@@ -7307,6 +7307,7 @@
                     clanSteamID: _.GetClanSteamID(),
                   },
                   _.createElement(_, null),
+                  _.createElement(_, null),
                   _.createElement(
                     _._,
                     {
@@ -7340,6 +7341,28 @@
               ),
             ),
           );
+      }
+      function _(_) {
+        const _ = _._.GetEditModel();
+        return _.createElement(
+          _._,
+          {
+            toolTipContent:
+              "Deep discount sale events are curated by Valve to promote successful older games, typically with a 90% discount",
+            direction: "top",
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.InputBorder,
+            },
+            _.createElement(_._, {
+              onChange: (_) => _.SetTag("vo_deep_discount_sale", _),
+              checked: _.GetEventModel().BHasTag("vo_deep_discount_sale"),
+              label: "(VO) This is a deep discount event?",
+            }),
+          ),
+        );
       }
       function _(_) {
         var _, _;
