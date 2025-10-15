@@ -744,6 +744,10 @@
         FeaturingFinderGOButton: "_8VJYI1VS6M0clgIu1wQbl",
         DocLinkCtn: "_3U67RyuXYHsatAXXRaSRRI",
         DocLink: "_30VSH__WuOtSV8EJQP9z2y",
+        ReviewScorePositive: "_2tiwaftjqgE1R1g_z6N7pT",
+        ReviewScoreMixed: "Idb19U4Ktfzxd8P6lTHzl",
+        ReviewScoreNegative: "_2A2AaRA9OeBWaHmR_itQ26",
+        ReviewScoreNone: "_3VeD7VChLkhnsovYYTLDmw",
       };
     },
     chunkid: (module) => {
@@ -71509,6 +71513,56 @@
           include_assets: !0,
         };
       function _(_) {
+        const { appInfo: _ } = _;
+        let _ = "None",
+          _ = _().ReviewScoreNone;
+        switch (_.reviews_filtered_score) {
+          case 9:
+            (_ = _().ReviewScorePositive), (_ = "Overwhelmingly Positive");
+            break;
+          case 8:
+            (_ = _().ReviewScorePositive), (_ = "Very Positive");
+            break;
+          case 7:
+            (_ = _().ReviewScorePositive), (_ = "Positive");
+            break;
+          case 6:
+            (_ = _().ReviewScorePositive), (_ = "Mostly Positive");
+            break;
+          case 5:
+            (_ = _().ReviewScoreMixed), (_ = "Mixed");
+            break;
+          case 4:
+            (_ = _().ReviewScoreNegative), (_ = "Mostly Negative");
+            break;
+          case 3:
+            (_ = _().ReviewScoreNegative), (_ = "Negative");
+            break;
+          case 2:
+            (_ = _().ReviewScoreNegative), (_ = "Very Negative");
+            break;
+          case 1:
+            (_ = _().ReviewScoreNegative), (_ = "Overwhelmingly Negative");
+        }
+        return _.createElement(
+          "div",
+          null,
+          "Reviews: ",
+          _.createElement(
+            "span",
+            {
+              className: _,
+            },
+            _,
+          ),
+          " (",
+          (0, _._)(_.reviews_filtered_positive),
+          " / ",
+          (0, _._)(_.reviews_filtered_negative + _.reviews_filtered_positive),
+          ")",
+        );
+      }
+      function _(_) {
         const { appInfo: _ } = _,
           _ = new Date(_.release_date),
           _ = (0, _.useMemo)(
@@ -71635,16 +71689,9 @@
                 ),
               ),
             ),
-            _.createElement(
-              "div",
-              null,
-              "Reviews: ",
-              _.reviews_filtered_positive,
-              " / ",
-              _.reviews_filtered_negative + _.reviews_filtered_positive,
-              "; score: ",
-              _.reviews_filtered_score,
-            ),
+            _.createElement(_, {
+              appInfo: _,
+            }),
             _.createElement(
               "div",
               null,

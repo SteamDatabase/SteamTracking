@@ -3523,7 +3523,7 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
 @media screen and (max-width: 851px) and (max-aspect-ratio: 10 / 9) {
   .f8yx9l20TjHQcxhdbRlpy {
     grid-template-columns: 100%;
-    grid-template-rows: auto 24vw;
+    grid-template-rows: auto 100px;
     grid-template-areas: "video" "info";
   }
 }
@@ -3573,6 +3573,7 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
     position: unset;
     align-items: center;
     display: flex;
+    height: fit-content;
   }
 }
 @media screen and (max-width: 851px) and (max-aspect-ratio: 10 / 9) {
@@ -3653,7 +3654,7 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
   ._1_nZSkaKcUeXxQpXV5ulcm ._3UBx0c_4mXJqBclhB-8J- {
     padding: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     text-align: center;
   }
 }
@@ -3678,7 +3679,7 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
   ) {
   ._1_nZSkaKcUeXxQpXV5ulcm {
     grid-template-columns: 50px auto 50px;
-    grid-template-rows: auto auto 60px;
+    grid-template-rows: auto auto 45px;
     grid-template-areas: "arrow info right-arrow" "arrow info right-arrow" "arrow actions right-arrow";
   }
   ._1_nZSkaKcUeXxQpXV5ulcm ._1GN_4KsEZYAvBhiqCh0lW5 {
@@ -3686,6 +3687,7 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
   }
   ._1_nZSkaKcUeXxQpXV5ulcm ._3Fbv05BMyyoEG6zimEgcem {
     align-items: center;
+    padding: 0 6px 6px 6px;
   }
 }
 @keyframes o8beu_D_8Dbk3xP9TxaiF {
@@ -3817,6 +3819,11 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
   font-size: .9em;
   padding: 0 0 4px 4px;
 }
+@media screen and (max-width: 700px) {
+  ._2dHu5S4P1yYwxZtRpV-SdO ._1cQmCKxuEolvzcEwCr_T8l {
+    display: none;
+  }
+}
 ._3Fbv05BMyyoEG6zimEgcem {
   display: flex;
   flex-direction: column;
@@ -3833,6 +3840,7 @@ html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
   display: flex;
   gap: 8px;
   justify-content: flex-end;
+  align-items: center;
 }
 @media screen and (max-width: 1200px) {
   ._3Fbv05BMyyoEG6zimEgcem ._1B3sMJ5v2o-sCS9CV-6kA3 {
