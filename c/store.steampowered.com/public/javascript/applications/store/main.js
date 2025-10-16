@@ -81379,6 +81379,14 @@
       new Map();
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = [];
+        return (
+          _._.IN_MOBILE_WEBVIEW && _.push("in_mobile_app"),
+          _._.IN_CLIENT && _.push("in_client"),
+          _
+        );
+      }
       __webpack_require__("chunkid");
       (0, _._)({
         enforceActions: "never",
@@ -81459,6 +81467,9 @@
             "Store",
             CLSTAMP,
             new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
+            {
+              fnGetReportTags: _,
+            },
           ),
             await _(),
             document.getElementById("application_root")
@@ -81731,7 +81742,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 76859), _((_._ = _));
+      return (_ = 9149), _((_._ = _));
       var _;
     });
     _._();

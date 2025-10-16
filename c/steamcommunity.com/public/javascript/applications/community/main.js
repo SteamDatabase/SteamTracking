@@ -3452,7 +3452,16 @@
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = [];
+        return (
+          _._.IN_MOBILE_WEBVIEW && _.push("in_mobile_app"),
+          _._.IN_CLIENT && _.push("in_client"),
+          _
+        );
+      }
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
@@ -3469,6 +3478,9 @@
               "Community",
               CLSTAMP,
               new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
+              {
+                fnGetReportTags: _,
+              },
             ),
             await (async function (_) {
               {
@@ -84197,7 +84209,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 7327), _((_._ = _));
+      return (_ = 59287), _((_._ = _));
       var _;
     });
     _._();

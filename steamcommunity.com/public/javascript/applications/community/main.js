@@ -882,7 +882,7 @@
       }
       (n.keys = () => Object.keys(i)), (n.id = 68042), (e.exports = n);
     },
-    7327: (e, t, r) => {
+    59287: (e, t, r) => {
       "use strict";
       r(23808), r(83977);
       var i = r(41872),
@@ -3165,7 +3165,16 @@
         ht = r(14947);
       r(5977);
       var _t = r(96059),
-        Bt = r(17204);
+        Bt = r(17204),
+        bt = r(8527);
+      function ft() {
+        const e = [];
+        return (
+          bt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          bt.TS.IN_CLIENT && e.push("in_client"),
+          e
+        );
+      }
       r(12155), r(9154), r(738), r(41775);
       r(64641);
       (0, ht.jK)({ enforceActions: "never" }),
@@ -3177,6 +3186,7 @@
               "Community",
               CLSTAMP,
               new _t.D(C.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+              { fnGetReportTags: ft },
             ),
             await (async function (e) {
               {
@@ -3198,8 +3208,8 @@
                   ]);
                 V.pf.AddTokens({ ...a, ...n, ...s }, { ...l, ...o, ...c });
               }
-              for (const e of bt) V.pf.AddTokens(e);
-              bt = void 0;
+              for (const e of wt) V.pf.AddTokens(e);
+              wt = void 0;
             })(C.TS.LANGUAGE);
           const e =
             document.getElementById("react_root") ||
@@ -3211,16 +3221,16 @@
               (t.g_bCommunityReactInitialized = !0);
           }
         });
-      let bt = [];
-      function ft(e, t, r) {
+      let wt = [];
+      function Mt(e, t, r) {
         (0, ve.wT)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== bt ? bt.push(r) : V.pf.AddTokens(r);
+          void 0 !== wt ? wt.push(r) : V.pf.AddTokens(r);
       }
       !(function () {
         const e = window;
         e.g_rgPendingLocManifests &&
-          e.g_rgPendingLocManifests.forEach((e) => ft(...e)),
-          (e.LocalizationManifestReady = ft),
+          e.g_rgPendingLocManifests.forEach((e) => Mt(...e)),
+          (e.LocalizationManifestReady = Mt),
           (e.g_rgPendingLocManifests = void 0);
       })();
     },
@@ -76463,7 +76473,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 7327), e((e.s = t));
+      return (t = 59287), e((e.s = t));
       var t;
     });
     e.O();

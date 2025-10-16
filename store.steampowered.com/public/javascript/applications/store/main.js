@@ -62690,7 +62690,7 @@
         return t.endsWith("/") || (t += "/"), t;
       }
     },
-    76859: (e, t, r) => {
+    9149: (e, t, r) => {
       "use strict";
       r(23808), r(83977);
       var i = r(44844),
@@ -72716,6 +72716,14 @@
       new Map();
       var il = r(14947),
         nl = r(29248);
+      function sl() {
+        const e = [];
+        return (
+          Zt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          Zt.TS.IN_CLIENT && e.push("in_client"),
+          e
+        );
+      }
       r(64641);
       (0, il.jK)({ enforceActions: "never" }),
         performance.mark("storeReactStartup");
@@ -72728,7 +72736,7 @@
           t.responseEnd &&
           (0, oo.D)()
         ) {
-          const e = sl - t.responseEnd;
+          const e = al - t.responseEnd;
           (0, oo.D)().IncrementStat("storeReactStartup", e),
             performance.measure("storeReactStartup", {
               start: t.responseEnd,
@@ -72736,19 +72744,19 @@
             });
         }
       }).observe({ type: "navigation", buffered: !0 });
-      let sl = performance.now();
-      let al,
-        ol = !1;
-      function ll() {
-        if (!ol) {
+      let al = performance.now();
+      let ol,
+        ll = !1;
+      function cl() {
+        if (!ll) {
           (0, s.XJ)("application_config").config
-            ? (cl(), (ol = !0))
+            ? (ul(), (ll = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function cl() {
-        al ||
-          (al = (async function (e) {
+      async function ul() {
+        ol ||
+          (ol = (async function (e) {
             0;
             const t = a.A0.GetLanguageFallback(e),
               i = e === t,
@@ -72767,18 +72775,19 @@
               { ...u, ...c, ...m, ...d },
             );
           })(s.TS.LANGUAGE)),
-          await al;
+          await ol;
       }
-      ll(),
+      cl(),
         tt.oQ(async function () {
-          ll();
+          cl();
           const e = (0, nl.zR)({ basename: (0, q.C)() });
           (0, rl.aj)().Init(
             "Store",
             CLSTAMP,
             new tl.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+            { fnGetReportTags: sl },
           ),
-            await cl(),
+            await ul(),
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
@@ -72787,7 +72796,7 @@
             (0, oo.D)() &&
               (0, oo.D)().IncrementStat(
                 "storeReactLocalizationReady",
-                performance.now() - sl,
+                performance.now() - al,
               ),
             performance.measure("storeReactLocalizationReady", {
               start: "storeReactStartup",
@@ -72944,7 +72953,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 76859), e((e.s = t));
+      return (t = 9149), e((e.s = t));
       var t;
     });
     e.O();
