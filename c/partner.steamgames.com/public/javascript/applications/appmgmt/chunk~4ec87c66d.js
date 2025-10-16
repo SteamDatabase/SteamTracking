@@ -20038,6 +20038,7 @@
                         "total demo players who also wishlisted",
                       ]);
                       for (const _ of _.data.stats) {
+                        if (_ != _.rt_last_update_time) continue;
                         const _ = _._.Get().GetApp(_.appid),
                           _ = _._.Get().GetApp(_.demo_appid);
                         _.push([
