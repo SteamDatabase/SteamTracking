@@ -1928,7 +1928,8 @@ GHomepage = {
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
 				var nAppId = oItem.appid;
-				var $Item = GHomepage.BuildCommunityRecommendationCap( strFeature, oItem );
+				const bVersion2 = $Ctn.hasClass( 'v2' );
+				var $Item = GHomepage.BuildCommunityRecommendationCap( strFeature, oItem, bVersion2 );
 				return $Item;
 			}, 'community_recommendations_by_steam_labs', 1
 		);
@@ -2065,6 +2066,7 @@ GHomepage = {
 
 				if ( ++cItemsInCol >= 2 )
 				{
+					GHomepage.AddMicrotrailersToStaticCaps( $Col );
 					$Col = null;
 					cItemsInCol = 0;
 					cColumnsUsed++;
@@ -2469,7 +2471,7 @@ GHomepage = {
 		{
 			$elTabItems = $elTabSection.children('.tab_row_item');
 			bVersion2 = true;
-			nItems = 12;
+			nItems = 15;
 		}
 
 		GDynamicStorePage.FilterCapsules( nItems, nItems, $elTabItems, $elTabSection, Settings );
@@ -3064,7 +3066,7 @@ GHomepage = {
 		appContainer.data( "currentreviewidx", reviewIdx );
 	},
 
-	BuildCommunityRecommendationCap: function( strFeatureContext, oItem )
+	BuildCommunityRecommendationCap: function( strFeatureContext, oItem, bVersion2 )
 	{
 		var unAppID = oItem.appid;
 		var params = { 'class' : 'community_recommendation_capsule responsive_scroll_snap_start' };
@@ -3105,6 +3107,8 @@ GHomepage = {
 			$Image.css({'height': '288px' });
 		});
 		$ImageCapsule.append( $Image );
+		if ( !bVersion2 )
+			$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
 
 		$ItemLink.append( $ImageCapsule );
 
@@ -3143,7 +3147,10 @@ GHomepage = {
 		}
 
 		var $RightCol = $J( '<div>', { class : 'right_col' } ).appendTo( $Item );
-		var $AppName = $J('<div/>', { class: 'app_name'} ).html( rgItemData.name ).appendTo( $RightCol );
+
+		if ( bVersion2 )
+			$J('<div/>', { class: 'app_name'} ).html( rgItemData.name ).appendTo( $RightCol );
+
 		var $ReviewsCtn = $J('<div/>', { class: 'community_recommendations_block'} ).appendTo( $RightCol );
 
 		let numReviews = rgReviews.length;
@@ -3231,11 +3238,13 @@ GHomepage = {
 			}
 		}
 
-		let $BottomCtn = $J('<div/>', { class: 'info_bottom_ctn'} );
-		$J('<div/>').addClass('platforms').append( GStoreItemData.BuildSupportedPlatformIcon( rgItemData ) ).appendTo( $BottomCtn );
-		$J('<div/>', { 'class': 'price_ctn' } ).html( rgItemData.discount_block ? $J( rgItemData.discount_block ).addClass('discount_block_inline') : '&nbsp;' ).appendTo( $BottomCtn );
-
-		$RightCol.append( $BottomCtn );
+		if ( bVersion2 )
+		{
+			let $BottomCtn = $J('<div/>', {class: 'info_bottom_ctn'});
+			$J('<div/>').addClass('platforms').append(GStoreItemData.BuildSupportedPlatformIcon(rgItemData)).appendTo($BottomCtn);
+			$J('<div/>', {'class': 'price_ctn'}).html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;').appendTo($BottomCtn);
+			$RightCol.append( $BottomCtn );
+		}
 
 		return $Item;
 	},
