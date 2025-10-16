@@ -398,7 +398,7 @@
       window.g_ClanStore = g;
     },
     67165: (e, t, n) => {
-      n.d(t, { pF: () => G, FV: () => L });
+      n.d(t, { pF: () => D, FV: () => G });
       var a,
         r = n(34629),
         i = n(56545),
@@ -1075,10 +1075,10 @@
             );
           });
       })(a || (a = {}));
-      var v = n(41735),
-        C = n.n(v),
-        B = n(14947),
-        S = n(90626),
+      var v = n(88942),
+        C = n(41735),
+        B = n.n(C),
+        S = n(14947),
         w = n(78327);
       class b {
         constructor(e) {
@@ -1092,7 +1092,7 @@
             (this.m_bIsLoaded = !1),
             (this.m_bIsHidden = !1),
             (this.m_clanAccountFlags = 0),
-            (0, B.Gn)(this),
+            (0, S.Gn)(this),
             (this.m_clanSteamID = e);
         }
         Initialize(e) {
@@ -1211,24 +1211,23 @@
           i.append("sessionid", w.TS.SESSIONID),
             i.append("clan_account_id", this.GetClanAccountID().toString()),
             i.append("accountflags", JSON.stringify(r));
-          let s = await C().post(n, i);
+          let s = await B().post(n, i);
           s &&
             200 == s.status &&
             1 == s.data.success &&
             (this.m_clanAccountFlags = a);
         }
       }
-      (0, r.Cg)([B.sH], b.prototype, "m_appidList", void 0),
-        (0, r.Cg)([B.sH], b.prototype, "m_nFollowers", void 0),
-        (0, r.Cg)([B.sH], b.prototype, "m_clanAccountFlags", void 0);
-      var T = n(17720),
-        A = n(4434);
-      class D {
+      (0, r.Cg)([S.sH], b.prototype, "m_appidList", void 0),
+        (0, r.Cg)([S.sH], b.prototype, "m_nFollowers", void 0),
+        (0, r.Cg)([S.sH], b.prototype, "m_clanAccountFlags", void 0);
+      var T = n(17720);
+      class A {
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),
             (this.m_mapAppToCreatorIDList = new Map()),
             (this.m_bLoadedFromConfig = !1),
-            (0, B.Gn)(this);
+            (0, S.Gn)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
@@ -1239,7 +1238,7 @@
                   n = T.b.InitFromClanID(t),
                   a = new b(n);
                 a.Initialize(e),
-                  (a.m_promise = D.GetAsPromise(a)),
+                  (a.m_promise = A.GetAsPromise(a)),
                   this.m_mapClanToCreatorHome.set(t, a);
               });
             let t = (0, w.Tc)("creatorhomeforapp", "application_config");
@@ -1316,14 +1315,14 @@
               "curator/" +
               e.GetClanAccountID() +
               "/ajaxgetcreatorhomeinfo",
-            r = await C().get(a, { params: n, cancelToken: t && t.token });
+            r = await B().get(a, { params: n, cancelToken: t && t.token });
           return e.Initialize(r.data), e;
         }
         async LoadCreatorHomeListForAppIncludeHiddden(e, t) {
           if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(e))) {
             let n = { appid: e },
               a = w.TS.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
-              r = await C().get(a, {
+              r = await B().get(a, {
                 params: n,
                 cancelToken: t && t.token,
                 withCredentials: !0,
@@ -1342,10 +1341,10 @@
               origin: self.origin,
             },
             i = new Array();
-          const s = await C().get(a, { params: r, cancelToken: n.token });
+          const s = await B().get(a, { params: r, cancelToken: n.token });
           return (
             s.data.curators &&
-              (0, B.h5)(() => {
+              (0, S.h5)(() => {
                 s.data.curators.forEach((e) => {
                   if (!this.m_mapClanToCreatorHome.has(e.creator_clan_id)) {
                     let t = T.b.InitFromClanID(e.creator_clan_id),
@@ -1365,39 +1364,27 @@
             : [];
         }
       }
-      (0, r.Cg)([B.sH], D.prototype, "m_mapClanToCreatorHome", void 0),
-        (0, r.Cg)([B.sH], D.prototype, "m_mapAppToCreatorIDList", void 0),
-        (0, r.Cg)([B.XI], D.prototype, "LazyInit", null);
-      const G = new D();
-      function L(e) {
-        var t;
-        const n = T.b.InitFromClanID(e),
-          [a, r] = S.useState(G.GetCreatorHome(n)),
-          i = (0, A.m)("useCreatorHome");
-        return (
-          S.useEffect(() => {
-            const t = T.b.InitFromClanID(e);
-            G.BHasCreatorHomeLoaded(t)
-              ? a
-                ? a.GetClanAccountID() != e && r(G.GetCreatorHome(t))
-                : r(G.GetCreatorHome(t))
-              : G.LoadCreatorHome(t).then(() => {
-                  var e;
-                  (null === (e = null == i ? void 0 : i.token) || void 0 === e
-                    ? void 0
-                    : e.reason) || r(G.GetCreatorHome(t));
-                });
-          }, [
-            null === (t = null == i ? void 0 : i.token) || void 0 === t
-              ? void 0
-              : t.reason,
-            e,
-            a,
-          ]),
-          a
-        );
+      (0, r.Cg)([S.sH], A.prototype, "m_mapClanToCreatorHome", void 0),
+        (0, r.Cg)([S.sH], A.prototype, "m_mapAppToCreatorIDList", void 0),
+        (0, r.Cg)([S.XI], A.prototype, "LazyInit", null);
+      const D = new A();
+      function G(e) {
+        const t = T.b.InitFromClanID(e),
+          {
+            data: n,
+            isFetching: a,
+            refetch: r,
+          } = (0, v.I)({
+            queryKey: ["useCreatorHome", e],
+            initialData: () => D.GetCreatorHome(t),
+            queryFn: async () => {
+              const t = T.b.InitFromClanID(e);
+              return await D.LoadCreatorHome(t);
+            },
+          });
+        return { creatorHome: n, isFetching: a, refetch: r };
       }
-      window.g_CreatorHomeStore = G;
+      window.g_CreatorHomeStore = D;
     },
     60746: (e, t, n) => {
       n.d(t, { KN: () => v, Nh: () => _, Ec: () => C });

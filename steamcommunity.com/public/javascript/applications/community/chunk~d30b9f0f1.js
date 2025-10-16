@@ -4353,14 +4353,14 @@
     25918: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Av: () => O,
-        JN: () => D,
-        Lj: () => M,
-        Nc: () => C,
-        UX: () => A,
-        lX: () => P,
-        mf: () => k,
-        mh: () => L,
+        Av: () => R,
+        JN: () => M,
+        Lj: () => k,
+        Nc: () => I,
+        UX: () => G,
+        lX: () => L,
+        mf: () => A,
+        mh: () => O,
       });
       var n = a(34629),
         l = a(41735),
@@ -4383,8 +4383,9 @@
         f = a(78327),
         y = a(81278),
         T = a(88942),
-        w = a(27666);
-      class C extends p.$ {
+        w = a(27666),
+        C = a(62490);
+      class I extends p.$ {
         constructor(e = !1) {
           super(e),
             (this.m_curHoverCategoryType = void 0),
@@ -4548,7 +4549,7 @@
               ),
             };
           if (!a && (l || t)) {
-            let t = await C.GetLastUpdateTimeForEvent(
+            let t = await I.GetLastUpdateTimeForEvent(
               e,
               this.m_editModel.GetEventModel().GID,
               void 0,
@@ -4742,7 +4743,7 @@
                   this.m_editModel.Refresh(n);
               }
             });
-            let n = await C.GetLastUpdateTimeForEvent(
+            let n = await I.GetLastUpdateTimeForEvent(
               e,
               this.m_editModel.GetGID(),
               void 0,
@@ -4928,38 +4929,38 @@
           ).data.capabilities;
         }
       }
-      function I(e) {
+      function D(e) {
         return `U${f.iA.accountid || "anon"}-${e}`;
       }
-      function D(e, t) {
-        G(window.sessionStorage, e, t);
+      function M(e, t) {
+        B(window.sessionStorage, e, t);
       }
-      function M(e) {
-        return B(window.sessionStorage, e);
+      function k(e) {
+        return N(window.sessionStorage, e);
       }
-      function k(e, t) {
-        G(window.localStorage, e, t);
+      function A(e, t) {
+        B(window.localStorage, e, t);
       }
-      function A(e) {
-        return B(window.localStorage, e);
+      function G(e) {
+        return N(window.localStorage, e);
       }
-      function G(e, t, a) {
-        e.setItem(I(t), JSON.stringify(a));
+      function B(e, t, a) {
+        e.setItem(D(t), JSON.stringify(a));
       }
-      function B(e, t) {
+      function N(e, t) {
         let a = null;
-        const n = e.getItem(I(t));
+        const n = e.getItem(D(t));
         if (n)
           try {
             a = JSON.parse(n);
           } catch {}
         return a;
       }
-      async function N(e, t, a) {
+      async function P(e, t, a) {
         try {
           return await (a
-            ? O.LoadHiddenPartnerEventByAnnouncementGID(e, t)
-            : L.LoadHiddenPartnerEventByAnnouncementGID(e, t));
+            ? R.LoadHiddenPartnerEventByAnnouncementGID(e, t)
+            : O.LoadHiddenPartnerEventByAnnouncementGID(e, t));
         } catch (e) {
           return void console.warn(
             "Fail to load event, if it was hidden, it's possible it was only partially constructed: " +
@@ -4968,7 +4969,7 @@
           );
         }
       }
-      function P(e, t) {
+      function L(e, t) {
         const {
           data: a,
           isFetching: n,
@@ -5000,12 +5001,13 @@
               const i = new Array();
               null === (a = o.announcement_gids) ||
                 void 0 === a ||
-                a.forEach((a) => i.push(N(e, a, t))),
+                a.forEach((a) => i.push(P(e, a, t))),
                 null === (n = o.hidden_announcement_gids) ||
                   void 0 === n ||
-                  n.forEach((a) => i.push(N(e, a, t)));
+                  n.forEach((a) => i.push(P(e, a, t)));
+              const r = await Promise.all(i);
               return {
-                rgEventModels: await Promise.all(i),
+                rgEventModels: C.Nv(r),
                 nHiddenEventCount:
                   null === (l = o.hidden_announcement_gids) || void 0 === l
                     ? void 0
@@ -5022,14 +5024,14 @@
           fnRefetch: l,
         };
       }
-      (0, n.Cg)([c.sH], C.prototype, "m_curHoverCategoryType", void 0),
-        (0, n.Cg)([c.sH], C.prototype, "m_curHoverCategoryTags", void 0),
-        (0, n.Cg)([c.XI], C.prototype, "ResetModel", null),
-        (0, n.Cg)([c.XI], C.prototype, "LoadClanEventLocalization", null);
-      const L = new C();
-      window.g_PartnerEventEditStore = L;
-      const O = new C(!0);
-      window.g_PartnerEventEditSummariesStore = O;
+      (0, n.Cg)([c.sH], I.prototype, "m_curHoverCategoryType", void 0),
+        (0, n.Cg)([c.sH], I.prototype, "m_curHoverCategoryTags", void 0),
+        (0, n.Cg)([c.XI], I.prototype, "ResetModel", null),
+        (0, n.Cg)([c.XI], I.prototype, "LoadClanEventLocalization", null);
+      const O = new I();
+      window.g_PartnerEventEditStore = O;
+      const R = new I(!0);
+      window.g_PartnerEventEditSummariesStore = R;
     },
     32669: (e, t, a) => {
       "use strict";
@@ -7927,13 +7929,15 @@
               " - " +
               t.capsules.length,
             J = (0, B.we)(v || "#Sale_Section_ReferencedProducts_Tooltip"),
-            Z = (0, R.FV)(a.GetClanSteamID().GetAccountID()),
-            ee = _.useMemo(
+            { creatorHome: Z } = (0, R.FV)(a.GetClanSteamID().GetAccountID()),
+            ee = a.GetEventType(),
+            te = _.useMemo(
               () =>
-                null == Z
+                36 == ee &&
+                (null == Z
                   ? void 0
-                  : Z.GetAppIDList().map((e) => ({ type: "game", id: e })),
-              [Z],
+                  : Z.GetAppIDList().map((e) => ({ type: "game", id: e }))),
+              [Z, ee],
             );
           return _.createElement(
             S.tH,
@@ -7972,7 +7976,7 @@
                     ),
                     Y,
                   ),
-                _.createElement(d.Io, { onAddItem: X, limitToApps: ee }),
+                _.createElement(d.Io, { onAddItem: X, limitToApps: te }),
                 _.createElement(
                   "div",
                   { className: L.SaleImportBar },
@@ -8157,7 +8161,7 @@
                     _.createElement(s.Y, {
                       capsule: e,
                       capsuleContainer: t,
-                      allowedApps: ee,
+                      allowedApps: te,
                       warning: null == C ? void 0 : C(e),
                     }),
                 }),
@@ -24656,7 +24660,7 @@
         const { editModel: t } = e,
           [a, n] = p.useState(""),
           [l] = (0, m.q3)(() => [t.GetEventModel().clanSteamID]),
-          i = (0, ee.FV)(l.GetAccountID()),
+          { creatorHome: i } = (0, ee.FV)(l.GetAccountID()),
           o = null == i ? void 0 : i.GetAppIDList();
         let r = [];
         return (
@@ -30766,7 +30770,7 @@
             bAddLinkToMemberList: y,
             bMinimalDisplay: T,
           } = e,
-          w = (0, i.FV)(t.clan_account_id),
+          { creatorHome: w } = (0, i.FV)(t.clan_account_id),
           [C] = (0, o.L2)();
         if (C || !w)
           return n.createElement(

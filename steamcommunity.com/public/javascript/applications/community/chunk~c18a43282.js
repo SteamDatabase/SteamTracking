@@ -7160,6 +7160,23 @@
         (0, a.Cg)([o.oI], _.prototype, "OnEditLink", null),
         (_ = (0, a.Cg)([r.PA], _));
     },
+    4434: (e, t, i) => {
+      "use strict";
+      i.d(t, { m: () => o });
+      var n = i(41735),
+        a = i.n(n),
+        s = i(90626);
+      function o(e) {
+        const t = s.useRef(a().CancelToken.source());
+        return (
+          s.useEffect(() => {
+            const i = t.current;
+            return () => i.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
+    },
     66331: (e, t, i) => {
       "use strict";
       i.d(t, { q: () => p, t: () => _ });

@@ -16901,7 +16901,7 @@
       }
       function B(e) {
         const t = new s.b(u.UF.CLANSTEAMID),
-          r = (0, l.FV)(t.GetAccountID());
+          { creatorHome: r } = (0, l.FV)(t.GetAccountID());
         return r && r.BIsLoaded()
           ? i.createElement(f, {
               strURL: (0, d.k2)(r.GetCreatorHomeURL("developer")),

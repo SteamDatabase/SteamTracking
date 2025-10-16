@@ -18900,8 +18900,8 @@
       }
       function _(_) {
         const _ = new _._(_._.CLANSTEAMID),
-          _ = (0, _._)(_.GetAccountID());
-        return _ && __webpack_require__.BIsLoaded()
+          { creatorHome: __webpack_require__ } = (0, _._)(_.GetAccountID());
+        return __webpack_require__ && __webpack_require__.BIsLoaded()
           ? _.createElement(_, {
               strURL: (0, _._)(
                 __webpack_require__.GetCreatorHomeURL("developer"),

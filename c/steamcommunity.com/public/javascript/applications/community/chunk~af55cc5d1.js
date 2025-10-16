@@ -1192,8 +1192,8 @@
           });
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -1337,8 +1337,7 @@
       (0, _._)([_._], _.prototype, "m_appidList", void 0),
         (0, _._)([_._], _.prototype, "m_nFollowers", void 0),
         (0, _._)([_._], _.prototype, "m_clanAccountFlags", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),
@@ -1498,32 +1497,24 @@
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       function _(_) {
-        var _;
         const _ = _._.InitFromClanID(_),
-          [_, _] = _.useState(_.GetCreatorHome(_)),
-          _ = (0, _._)("useCreatorHome");
-        return (
-          _.useEffect(() => {
-            const _ = _._.InitFromClanID(_);
-            _.BHasCreatorHomeLoaded(_)
-              ? _
-                ? _.GetClanAccountID() != _ && _(_.GetCreatorHome(_))
-                : _(_.GetCreatorHome(_))
-              : _.LoadCreatorHome(_).then(() => {
-                  var _;
-                  (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                    ? void 0
-                    : _.reason) || _(_.GetCreatorHome(_));
-                });
-          }, [
-            null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-              ? void 0
-              : _.reason,
-            _,
-            _,
-          ]),
-          _
-        );
+          {
+            data: __webpack_require__,
+            isFetching: _,
+            refetch: _,
+          } = (0, _._)({
+            queryKey: ["useCreatorHome", _],
+            initialData: () => _.GetCreatorHome(_),
+            queryFn: async () => {
+              const _ = _._.InitFromClanID(_);
+              return await _.LoadCreatorHome(_);
+            },
+          });
+        return {
+          creatorHome: __webpack_require__,
+          isFetching: _,
+          refetch: _,
+        };
       }
       window.g_CreatorHomeStore = _;
     },

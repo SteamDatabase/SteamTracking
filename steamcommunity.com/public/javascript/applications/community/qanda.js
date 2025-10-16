@@ -896,5 +896,22 @@
       }
       p = (0, n.Cg)([l.PA], p);
     },
+    4434: (e, t, s) => {
+      "use strict";
+      s.d(t, { m: () => i });
+      var n = s(41735),
+        a = s.n(n),
+        r = s(90626);
+      function i(e) {
+        const t = r.useRef(a().CancelToken.source());
+        return (
+          r.useEffect(() => {
+            const s = t.current;
+            return () => s.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
+    },
   },
 ]);

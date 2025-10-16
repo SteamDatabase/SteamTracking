@@ -4515,6 +4515,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_ = !1) {
@@ -5155,8 +5156,9 @@
                 null === (_ = _.hidden_announcement_gids) ||
                   void 0 === _ ||
                   _.forEach((_) => _.push(_(_, _, _)));
+              const _ = await Promise.all(_);
               return {
-                rgEventModels: await Promise.all(_),
+                rgEventModels: _._(_),
                 nHiddenEventCount:
                   null === (_ = _.hidden_announcement_gids) || void 0 === _
                     ? void 0
@@ -8559,16 +8561,20 @@
               " - " +
               _.capsules.length,
             _ = (0, _._)(_ || "#Sale_Section_ReferencedProducts_Tooltip"),
-            _ = (0, _._)(__webpack_require__.GetClanSteamID().GetAccountID()),
+            { creatorHome: _ } = (0, _._)(
+              __webpack_require__.GetClanSteamID().GetAccountID(),
+            ),
+            _ = __webpack_require__.GetEventType(),
             _ = _.useMemo(
               () =>
-                null == _
+                36 == _ &&
+                (null == _
                   ? void 0
                   : _.GetAppIDList().map((_) => ({
                       type: "game",
                       _: _,
-                    })),
-              [_],
+                    }))),
+              [_, _],
             );
           return _.createElement(
             _._,
@@ -27312,7 +27318,7 @@
         const { editModel: _ } = _,
           [__webpack_require__, _] = _.useState(""),
           [_] = (0, _._)(() => [_.GetEventModel().clanSteamID]),
-          _ = (0, _._)(_.GetAccountID()),
+          { creatorHome: _ } = (0, _._)(_.GetAccountID()),
           _ = null == _ ? void 0 : _.GetAppIDList();
         let _ = [];
         return (
@@ -34160,7 +34166,7 @@
             bAddLinkToMemberList: _,
             bMinimalDisplay: _,
           } = _,
-          _ = (0, _._)(_.clan_account_id),
+          { creatorHome: _ } = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
         if (_ || !_)
           return _.createElement(

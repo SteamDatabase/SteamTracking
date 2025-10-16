@@ -353,16 +353,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -383,6 +373,155 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = (_) => {
+          const { closeModal: _ } = _,
+            _ = (0, _._)(_._.CLANACCOUNTID);
+          return _.createElement(
+            _._,
+            {
+              strTitle: "Publishing Audit History",
+              bAlertDialog: !0,
+              onOK: _,
+              onCancel: _,
+              className: "auditContents",
+              strDescription:
+                "Here are the publishing audit history. Recorded starting from mid-June 2021",
+            },
+            Boolean(null == _)
+              ? _.createElement(_._, {
+                  string: (0, _._)("#Loading"),
+                  position: "center",
+                  size: "medium",
+                })
+              : Boolean(0 == _.length)
+                ? _.createElement(
+                    "div",
+                    null,
+                    "No Publishing History available",
+                  )
+                : __webpack_require__.map((_) =>
+                    _.createElement(_, {
+                      key: _.clan_event_gid,
+                      record: _,
+                    }),
+                  ),
+          );
+        },
+        _ = (_) => {
+          var _;
+          const { record: __webpack_require__ } = _,
+            _ = _.useMemo(() => _._.InitFromClanID(_._.CLANACCOUNTID), []);
+          return _.createElement(
+            "div",
+            {
+              className: _.AuditInfoItem,
+            },
+            _.createElement(
+              "div",
+              null,
+              "Clan Event GID:",
+              _.createElement(
+                "a",
+                {
+                  href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${__webpack_require__.clan_event_gid}`,
+                  target: "_blank",
+                },
+                __webpack_require__.clan_event_gid,
+              ),
+            ),
+            _.createElement(
+              "div",
+              null,
+              "Type: ",
+              (0, _._)(__webpack_require__.event_type),
+            ),
+            _.createElement(
+              "div",
+              null,
+              "Publish Time: ",
+              _.createElement(_._, {
+                dateAndTime: __webpack_require__.publish_time,
+                bSingleLine: !0,
+              }),
+            ),
+            _.createElement(
+              "div",
+              null,
+              _.createElement(_._, {
+                accountID: __webpack_require__.publish_account_id,
+                locToken: "#EventDashbard_PublishingAccount",
+              }),
+            ),
+            _.createElement(
+              "div",
+              null,
+              "tags: ",
+              null === (_ = __webpack_require__.tags) || void 0 === _
+                ? void 0
+                : _.join(", "),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.AuditItemStatsCtn,
+              },
+              _.createElement(
+                _._,
+                {
+                  title: "Show Event Stats",
+                  bStartMinimized: !0,
+                },
+                _.createElement(_, {
+                  clanSteamID: _,
+                  record: __webpack_require__,
+                }),
+              ),
+            ),
+            _.createElement("hr", null),
+          );
+        };
+      function _(_) {
+        const { clanSteamID: _, record: __webpack_require__ } = _,
+          _ = (0, _._)(_, __webpack_require__.clan_event_gid);
+        return _.createElement(
+          "div",
+          null,
+          null == _ &&
+            _.createElement(_._, {
+              string: "loading",
+              position: "center",
+              size: "medium",
+            }),
+          null == _ &&
+            _.createElement("div", null, "Failed to load events stats"),
+          Boolean(_) &&
+            _.createElement(_._, {
+              summary: _,
+              clanSteamID: _,
+              bCompact: !0,
+            }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2182,6 +2321,10 @@
           );
         }
       };
+      (0, _._)([_._], _.prototype, "GetLocalizationModel", null),
+        (0, _._)([_._], _.prototype, "OnExportTypeChange", null),
+        (_ = (0, _._)([_._], _));
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { eventModel: _, fnOnGotoPage: __webpack_require__ } = _;
         return _.bOldAnnouncement
@@ -2313,14 +2456,7 @@
           ),
         );
       }
-      (0, _._)([_._], _.prototype, "GetLocalizationModel", null),
-        (0, _._)([_._], _.prototype, "OnExportTypeChange", null),
-        (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2329,8 +2465,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
         const { eventModel: _, bAllowUpdate: __webpack_require__ } = _,
           [_, _] = (0, _._)(_);
@@ -3105,592 +3240,466 @@
         (0, _._)([_._], _.prototype, "OnDeleteClickAndVerify", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) => {
-        var _, _;
-        const { eventModel: _ } = _;
-        if (!(null == _ ? void 0 : _.jsondata)) return null;
-        const _ = _(_.jsondata, 3);
-        _.sort((_, _) => _.size - _.size);
-        return _.createElement(
-          "div",
-          {
-            className: _.MetaDataCtn,
-          },
-          _.createElement(
+          var _, _;
+          const { eventModel: _ } = _;
+          if (!(null == _ ? void 0 : _.jsondata)) return null;
+          const _ = _(_.jsondata, 3);
+          _.sort((_, _) => _.size - _.size);
+          return _.createElement(
             "div",
-            null,
-            "Total Size: ",
-            null ===
-              (_ =
-                null === (_ = JSON.stringify(_.jsondata)) || void 0 === _
-                  ? void 0
-                  : _.length) || void 0 === _
-              ? void 0
-              : __webpack_require__.toLocaleString(),
-          ),
-          _.slice(0, 10).map((_) =>
+            {
+              className: _.MetaDataCtn,
+            },
             _.createElement(
               "div",
-              {
-                key: _.key,
-              },
-              _.key,
-              ": ",
-              _.size.toLocaleString(),
+              null,
+              "Total Size: ",
+              null ===
+                (_ =
+                  null === (_ = JSON.stringify(_.jsondata)) || void 0 === _
+                    ? void 0
+                    : _.length) || void 0 === _
+                ? void 0
+                : __webpack_require__.toLocaleString(),
             ),
-          ),
-        );
-      };
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => {
-          const { closeModal: _ } = _,
-            _ = (0, _._)(_._.CLANACCOUNTID);
-          return _.createElement(
-            _._,
-            {
-              strTitle: "Publishing Audit History",
-              bAlertDialog: !0,
-              onOK: _,
-              onCancel: _,
-              className: "auditContents",
-              strDescription:
-                "Here are the publishing audit history. Recorded starting from mid-June 2021",
-            },
-            Boolean(null == _)
-              ? _.createElement(_._, {
-                  string: (0, _._)("#Loading"),
-                  position: "center",
-                  size: "medium",
-                })
-              : Boolean(0 == _.length)
-                ? _.createElement(
-                    "div",
-                    null,
-                    "No Publishing History available",
-                  )
-                : __webpack_require__.map((_) =>
-                    _.createElement(_, {
-                      key: _.clan_event_gid,
-                      record: _,
-                    }),
-                  ),
+            _.slice(0, 10).map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _.key,
+                },
+                _.key,
+                ": ",
+                _.size.toLocaleString(),
+              ),
+            ),
           );
         },
-        _ = (_) => {
-          var _;
-          const { record: __webpack_require__ } = _,
-            _ = _.useMemo(() => _._.InitFromClanID(_._.CLANACCOUNTID), []);
-          return _.createElement(
-            "div",
+        _ = (0, _._)((_) => {
+          const { match: _ } = _,
+            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(""),
+            [_, _] = _.useState(""),
+            _ = _.useRef(void 0),
+            _ = _.useMemo(() => new _._(_._.CLANSTEAMID), []),
+            _ = _.useMemo(() => new _._(), []),
+            _ = _.useMemo(() => _().CancelToken.source(), []),
             {
-              className: _.AuditInfoItem,
+              bIsFetching: _,
+              nHiddenEventCount: _,
+              rgEventModels: _,
+              fnRefetch: _,
+            } = (0, _._)(_, !__webpack_require__),
+            {
+              rgClanEventData: _,
+              bHasNextPage: _,
+              fnFetchNextPage: _,
+              bIsFetching: _,
+              bIsFetchingNextPage: _,
+              clanEventSummaryStatus: _,
+              clanEventSummaryLoadError: _,
+              fnRefetch: _,
+            } = (0, _._)(_, 10, _);
+          _.useEffect(
+            () => (_(), _(), () => _.cancel("EventListView to unload")),
+            [_, _, _],
+          );
+          const _ = (function (_, _) {
+              const [__webpack_require__, _] = _.useState(!0);
+              return (
+                (0, _._)(() => _(!1), 4e3),
+                _.useEffect(() => {
+                  _ || _ || _(!1);
+                }, [_, _]),
+                __webpack_require__
+              );
+            })(_, _),
+            _ = (0, _._)(_),
+            _ = _.useMemo(() => {
+              (0, _._)(
+                !_ || _.every((_) => null != _),
+                "draftClanEvents has a null event",
+              );
+              const _ = new Map();
+              return (
+                null == _ ||
+                  _.pages
+                    .flatMap((_) => _)
+                    .map((_) => (0, _._)(_, _))
+                    .forEach((_) => _.set(_.GID, _)),
+                null == _ || _.forEach((_) => _.set(_.GID, _)),
+                Array.from(_.values())
+              );
+            }, [_, null == _ ? void 0 : _.pages, _]);
+          _.useEffect(() => {
+            const _ = _.filter((_) =>
+              Boolean(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
+            ).map((_) => _.GID);
+            _.length > 0 && _._.LoadStatsForEvents(_, _, _);
+          }, [_, _, _]),
+            _.useEffect(() => {
+              if ("error" == _) {
+                const _ = (0, _._)(_);
+                (0, _._)(
+                  _.createElement(
+                    _._,
+                    null,
+                    (0, _._)("#Error_Description", _.errorCode, _.strErrorMsg),
+                  ),
+                  window,
+                );
+              }
+            }, [_, _]);
+          const _ = (_, _) => {
+              var _;
+              const _ = [];
+              let _ = _;
+              if ((null == _ ? void 0 : _.length) > 0) {
+                (_ = _.slice().filter((_) => {
+                  var _;
+                  return (
+                    _.visibility_state === _ &&
+                    !(
+                      Boolean(_) &&
+                      !(null ===
+                        (_ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE))) ||
+                      void 0 === _
+                        ? void 0
+                        : __webpack_require__.toLocaleLowerCase().includes(_))
+                    )
+                  );
+                })),
+                  _.sort(
+                    (_, _) => (
+                      (0, _._)(
+                        _ !== _,
+                        `Unexpected duplicates in the list: ${_} ${_}`,
+                      ),
+                      _.BShowLibrarySpotlight(!0) &&
+                      !_.BShowLibrarySpotlight(!0)
+                        ? -1
+                        : !_.BShowLibrarySpotlight(!0) &&
+                            _.BShowLibrarySpotlight(!0)
+                          ? 1
+                          : _.startTime - _.startTime
+                    ),
+                  );
+                for (const _ of _)
+                  _.push(
+                    _.createElement(_, {
+                      key: _.GID,
+                      appid_or_vanity_str: _.params.appid_or_vanity_str,
+                      gid: _.GID,
+                      eventModel: _,
+                      bShowEventMetaDataSizes: __webpack_require__,
+                      refresh: () => {
+                        _(), _();
+                      },
+                    }),
+                  );
+              }
+              for (
+                let _ = 0;
+                _ <
+                _ -
+                  (null !== (_ = null == _ ? void 0 : _.length) && void 0 !== _
+                    ? _
+                    : 0);
+                _++
+              )
+                _.push(
+                  _.createElement(
+                    "div",
+                    {
+                      key: `tile_${_}_ghost_${_}`,
+                      className: _.TileContainer,
+                    },
+                    _.createElement(_._, {
+                      capsules_per_row: [1],
+                      is_event_dash_row: !0,
+                    }),
+                  ),
+                );
+              return _;
             },
-            _.createElement(
-              "div",
-              null,
-              "Clan Event GID:",
-              _.createElement(
-                "a",
-                {
-                  href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${__webpack_require__.clan_event_gid}`,
-                  target: "_blank",
-                },
-                __webpack_require__.clan_event_gid,
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              "Type: ",
-              (0, _._)(__webpack_require__.event_type),
-            ),
-            _.createElement(
-              "div",
-              null,
-              "Publish Time: ",
-              _.createElement(_._, {
-                dateAndTime: __webpack_require__.publish_time,
-                bSingleLine: !0,
-              }),
-            ),
-            _.createElement(
-              "div",
-              null,
-              _.createElement(_._, {
-                accountID: __webpack_require__.publish_account_id,
-                locToken: "#EventDashbard_PublishingAccount",
-              }),
-            ),
-            _.createElement(
-              "div",
-              null,
-              "tags: ",
-              null === (_ = __webpack_require__.tags) || void 0 === _
-                ? void 0
-                : _.join(", "),
-            ),
+            _ = _.useCallback(
+              (_) => {
+                _ && !_ && _();
+              },
+              [_, _],
+            );
+          _.useEffect(() => {
+            _.Schedule(200, () =>
+              _(null == _ ? void 0 : _.trim().toLocaleLowerCase()),
+            );
+          }, [_, _]);
+          const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
+            _ = _(_._.k_EEventStateStaged),
+            _ = _(_._.k_EEventStateUnlisted),
+            _ = _(_._.k_EEventStateVisible),
+            _ = _.useMemo(() => {
+              if (!_) return;
+              if (_ || !_) return _;
+              const _ = _.length >= 10 ? _.length - 10 : _.length,
+                _ = _.createElement(_._, {
+                  key: "visibilityTracker",
+                  trigger: "repeated",
+                  onVisibilityChange: _,
+                });
+              return [..._.slice(0, _), _, ..._.slice(_)];
+            }, [_, _, _, _]),
+            _ = _.length > 0 || _.length > 0 || _.length > 0 || _.length > 0;
+          return _.createElement(
+            _._,
+            null,
             _.createElement(
               "div",
               {
-                className: _.AuditItemStatsCtn,
+                ref: _,
               },
               _.createElement(
-                _._,
+                "div",
                 {
-                  title: "Show Event Stats",
-                  bStartMinimized: !0,
+                  className: (0, _._)("maincontent", _().EventDashboardCtn),
                 },
                 _.createElement(_, {
-                  clanSteamID: _,
-                  record: __webpack_require__,
-                }),
-              ),
-            ),
-            _.createElement("hr", null),
-          );
-        };
-      function _(_) {
-        const { clanSteamID: _, record: __webpack_require__ } = _,
-          _ = (0, _._)(_, __webpack_require__.clan_event_gid);
-        return _.createElement(
-          "div",
-          null,
-          null == _ &&
-            _.createElement(_._, {
-              string: "loading",
-              position: "center",
-              size: "medium",
-            }),
-          null == _ &&
-            _.createElement("div", null, "Failed to load events stats"),
-          Boolean(_) &&
-            _.createElement(_._, {
-              summary: _,
-              clanSteamID: _,
-              bCompact: !0,
-            }),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _._)((_) => {
-        const { match: _ } = _,
-          [__webpack_require__, _] = _.useState(!1),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(""),
-          _ = _.useRef(void 0),
-          _ = _.useMemo(() => new _._(_._.CLANSTEAMID), []),
-          _ = _.useMemo(() => new _._(), []),
-          _ = _.useMemo(() => _().CancelToken.source(), []),
-          {
-            bIsFetching: _,
-            nHiddenEventCount: _,
-            rgEventModels: _,
-            fnRefetch: _,
-          } = (0, _._)(_, !__webpack_require__),
-          {
-            rgClanEventData: _,
-            bHasNextPage: _,
-            fnFetchNextPage: _,
-            bIsFetching: _,
-            bIsFetchingNextPage: _,
-            clanEventSummaryStatus: _,
-            clanEventSummaryLoadError: _,
-            fnRefetch: _,
-          } = (0, _._)(_, 10, _);
-        _.useEffect(
-          () => (_(), _(), () => _.cancel("EventListView to unload")),
-          [_, _, _],
-        );
-        const _ = (function (_, _) {
-            const [__webpack_require__, _] = _.useState(!0);
-            return (
-              (0, _._)(() => _(!1), 4e3),
-              _.useEffect(() => {
-                _ || _ || _(!1);
-              }, [_, _]),
-              __webpack_require__
-            );
-          })(_, _),
-          _ = (0, _._)(_),
-          _ = _.useMemo(() => {
-            (0, _._)(
-              !_ || _.every((_) => null != _),
-              "draftClanEvents has a null event",
-            );
-            const _ = new Map();
-            return (
-              null == _ ||
-                _.pages
-                  .flatMap((_) => _)
-                  .map((_) => (0, _._)(_, _))
-                  .forEach((_) => _.set(_.GID, _)),
-              null == _ || _.forEach((_) => _.set(_.GID, _)),
-              Array.from(_.values())
-            );
-          }, [_, null == _ ? void 0 : _.pages, _]);
-        _.useEffect(() => {
-          const _ = _.filter((_) =>
-            Boolean(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
-          ).map((_) => _.GID);
-          _.length > 0 && _._.LoadStatsForEvents(_, _, _);
-        }, [_, _, _]),
-          _.useEffect(() => {
-            if ("error" == _) {
-              const _ = (0, _._)(_);
-              (0, _._)(
-                _.createElement(
-                  _._,
-                  null,
-                  (0, _._)("#Error_Description", _.errorCode, _.strErrorMsg),
-                ),
-                window,
-              );
-            }
-          }, [_, _]);
-        const _ = (_, _) => {
-            var _;
-            const _ = [];
-            let _ = _;
-            if ((null == _ ? void 0 : _.length) > 0) {
-              (_ = _.slice().filter((_) => {
-                var _;
-                return (
-                  _.visibility_state === _ &&
-                  !(
-                    Boolean(_) &&
-                    !(null ===
-                      (_ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE))) ||
-                    void 0 === _
-                      ? void 0
-                      : __webpack_require__.toLocaleLowerCase().includes(_))
-                  )
-                );
-              })),
-                _.sort(
-                  (_, _) => (
-                    (0, _._)(
-                      _ !== _,
-                      `Unexpected duplicates in the list: ${_} ${_}`,
-                    ),
-                    _.BShowLibrarySpotlight(!0) && !_.BShowLibrarySpotlight(!0)
-                      ? -1
-                      : !_.BShowLibrarySpotlight(!0) &&
-                          _.BShowLibrarySpotlight(!0)
-                        ? 1
-                        : _.startTime - _.startTime
-                  ),
-                );
-              for (const _ of _)
-                _.push(
-                  _.createElement(_, {
-                    key: _.GID,
-                    appid_or_vanity_str: _.params.appid_or_vanity_str,
-                    gid: _.GID,
-                    eventModel: _,
-                    bShowEventMetaDataSizes: __webpack_require__,
-                    refresh: () => {
-                      _(), _();
-                    },
-                  }),
-                );
-            }
-            for (
-              let _ = 0;
-              _ <
-              _ -
-                (null !== (_ = null == _ ? void 0 : _.length) && void 0 !== _
-                  ? _
-                  : 0);
-              _++
-            )
-              _.push(
-                _.createElement(
-                  "div",
-                  {
-                    key: `tile_${_}_ghost_${_}`,
-                    className: _.TileContainer,
-                  },
-                  _.createElement(_._, {
-                    capsules_per_row: [1],
-                    is_event_dash_row: !0,
-                  }),
-                ),
-              );
-            return _;
-          },
-          _ = _.useCallback(
-            (_) => {
-              _ && !_ && _();
-            },
-            [_, _],
-          );
-        _.useEffect(() => {
-          _.Schedule(200, () =>
-            _(null == _ ? void 0 : _.trim().toLocaleLowerCase()),
-          );
-        }, [_, _]);
-        const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
-          _ = _(_._.k_EEventStateStaged),
-          _ = _(_._.k_EEventStateUnlisted),
-          _ = _(_._.k_EEventStateVisible),
-          _ = _.useMemo(() => {
-            if (!_) return;
-            if (_ || !_) return _;
-            const _ = _.length >= 10 ? _.length - 10 : _.length,
-              _ = _.createElement(_._, {
-                key: "visibilityTracker",
-                trigger: "repeated",
-                onVisibilityChange: _,
-              });
-            return [..._.slice(0, _), _, ..._.slice(_)];
-          }, [_, _, _, _]),
-          _ = _.length > 0 || _.length > 0 || _.length > 0 || _.length > 0;
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)("maincontent", _().EventDashboardCtn),
-            },
-            _.createElement(_, {
-              appid_or_vanity_str: _.params.appid_or_vanity_str,
-            }),
-            _.createElement(
-              _._,
-              {
-                requireAdmin: !0,
-                clanSteamID: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    "maincontent",
-                    _().EventDashboardCtn,
-                    _().EventDashAdminToolsCtn,
-                    _().FlexRowContainer,
-                  ),
-                },
-                _.createElement(_._, {
-                  label: "Show Event Metadata Size",
-                  tooltip:
-                    "Surfaces the size of the biggest sections in the event's metadata",
-                  onChange: _,
-                  checked: __webpack_require__,
+                  appid_or_vanity_str: _.params.appid_or_vanity_str,
                 }),
                 _.createElement(
                   _._,
                   {
-                    onClick: (_) =>
-                      (0, _._)(_.createElement(_, null), (0, _._)(_)),
+                    requireAdmin: !0,
+                    clanSteamID: _,
                   },
-                  "Show Publishing Audit History",
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        "maincontent",
+                        _().EventDashboardCtn,
+                        _().EventDashAdminToolsCtn,
+                        _().FlexRowContainer,
+                      ),
+                    },
+                    _.createElement(_._, {
+                      label: "Show Event Metadata Size",
+                      tooltip:
+                        "Surfaces the size of the biggest sections in the event's metadata",
+                      onChange: _,
+                      checked: __webpack_require__,
+                    }),
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: (_) =>
+                          (0, _._)(_.createElement(_, null), (0, _._)(_)),
+                      },
+                      "Show Publishing Audit History",
+                    ),
+                  ),
+                  Boolean(_.GetAccountID() == _._) &&
+                    _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(
+                        "a",
+                        {
+                          href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
+                          target: "_blank",
+                        },
+                        "Content Hub Graphana Stats Page",
+                      ),
+                      _.createElement("br", null),
+                      _.createElement(
+                        "a",
+                        {
+                          href: `${_._.COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale`,
+                        },
+                        "Open 'Default Contnet Hub Sale Page Editor'",
+                      ),
+                    ),
                 ),
               ),
-              Boolean(_.GetAccountID() == _._) &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(
-                    "a",
-                    {
-                      href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
-                      target: "_blank",
-                    },
-                    "Content Hub Graphana Stats Page",
-                  ),
-                  _.createElement("br", null),
-                  _.createElement(
-                    "a",
-                    {
-                      href: `${_._.COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale`,
-                    },
-                    "Open 'Default Contnet Hub Sale Page Editor'",
-                  ),
-                ),
-            ),
-          ),
-          (_ || _ || _.length > 0) &&
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().EventDashboardCtn,
-                  _().EventDashboardSearchCtn,
-                  "maincontent",
-                ),
-              },
-              _.createElement(_._, {
-                type: "text",
-                label: (0, _._)("#EventCalendar_UniversalSearch"),
-                value: _,
-                onChange: (_) => _(_.target.value),
-              }),
-            ),
-          _ &&
-            _.createElement(_._, {
-              position: "center",
-              string: (0, _._)("#Loading"),
-            }),
-          !_ &&
-            _.createElement(
-              "div",
-              {
-                className: _().MainLists,
-              },
-              _.length > 0 &&
-                !_ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().Section, _().Unpublished),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        "maincontent",
-                        "eventlist",
-                        _().EventDashboardCtn,
-                      ),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().DisplaySectionHeader,
-                      },
-                      (0, _._)("#EventDisplay_Unpublished_Title"),
-                      _.createElement(_._, {
-                        tooltip: (0, _._)("#EventDisplay_Unpublished_SubTitle"),
-                      }),
-                    ),
-                    _.length > 0 && _,
-                  ),
-                ),
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().Section, _().Staged),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        "maincontent",
-                        "eventlist",
-                        _().EventDashboardCtn,
-                      ),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().DisplaySectionHeader,
-                      },
-                      (0, _._)("#EventDisplay_Stage_Title"),
-                      _.createElement(_._, {
-                        tooltip: (0, _._)("#EventDisplay_Stage_SubTitle"),
-                      }),
-                    ),
-                    _.length > 0 && _,
-                  ),
-                ),
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_().Section, _().Staged),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        "maincontent",
-                        "eventlist",
-                        _().EventDashboardCtn,
-                      ),
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().DisplaySectionHeader,
-                      },
-                      (0, _._)("#EventDisplay_Unlisted_Title"),
-                      _.createElement(_._, {
-                        tooltip: (0, _._)("#EventDisplay_Unlisted_SubTitle"),
-                      }),
-                    ),
-                    _.length > 0 && _,
-                  ),
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().Section,
-                    _().DisplaySectionHeaderContainer,
-                    _().Visible,
-                  ),
-                },
+              (_ || _ || _.length > 0) &&
                 _.createElement(
                   "div",
                   {
                     className: (0, _._)(
-                      "maincontent",
-                      "eventlist",
                       _().EventDashboardCtn,
+                      _().EventDashboardSearchCtn,
+                      "maincontent",
                     ),
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DisplaySectionHeader,
-                    },
-                    (0, _._)("#EventDisplay_Visible_Title"),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().DisplaySectionSubHeader,
-                    },
-                    (0, _._)("#EventDisplay_Visible_Title_WithRange"),
-                  ),
-                  _,
-                  !_ &&
+                  _.createElement(_._, {
+                    type: "text",
+                    label: (0, _._)("#EventCalendar_UniversalSearch"),
+                    value: _,
+                    onChange: (_) => _(_.target.value),
+                  }),
+                ),
+              _ &&
+                _.createElement(_._, {
+                  position: "center",
+                  string: (0, _._)("#Loading"),
+                }),
+              !_ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().MainLists,
+                  },
+                  _.length > 0 &&
                     !_ &&
                     _.createElement(
                       "div",
-                      null,
-                      (0, _._)("#EventDisplay_NoPublic"),
+                      {
+                        className: (0, _._)(_().Section, _().Unpublished),
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            "maincontent",
+                            "eventlist",
+                            _().EventDashboardCtn,
+                          ),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().DisplaySectionHeader,
+                          },
+                          (0, _._)("#EventDisplay_Unpublished_Title"),
+                          _.createElement(_._, {
+                            tooltip: (0, _._)(
+                              "#EventDisplay_Unpublished_SubTitle",
+                            ),
+                          }),
+                        ),
+                        _.length > 0 && _,
+                      ),
                     ),
-                  (_ || (_ && _)) &&
-                    _.createElement(_._, {
-                      position: "center",
-                      string: (0, _._)("#Loading"),
-                    }),
-                  !_ &&
+                  _.length > 0 &&
                     _.createElement(
                       "div",
-                      null,
-                      (0, _._)("#EventDisplay_AllPublicShown"),
+                      {
+                        className: (0, _._)(_().Section, _().Staged),
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            "maincontent",
+                            "eventlist",
+                            _().EventDashboardCtn,
+                          ),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().DisplaySectionHeader,
+                          },
+                          (0, _._)("#EventDisplay_Stage_Title"),
+                          _.createElement(_._, {
+                            tooltip: (0, _._)("#EventDisplay_Stage_SubTitle"),
+                          }),
+                        ),
+                        _.length > 0 && _,
+                      ),
                     ),
-                  _ &&
+                  _.length > 0 &&
                     _.createElement(
                       "div",
-                      null,
-                      (0, _._)("#EventDisplay_HitErrorInfiniteScroll"),
+                      {
+                        className: (0, _._)(_().Section, _().Staged),
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            "maincontent",
+                            "eventlist",
+                            _().EventDashboardCtn,
+                          ),
+                        },
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().DisplaySectionHeader,
+                          },
+                          (0, _._)("#EventDisplay_Unlisted_Title"),
+                          _.createElement(_._, {
+                            tooltip: (0, _._)(
+                              "#EventDisplay_Unlisted_SubTitle",
+                            ),
+                          }),
+                        ),
+                        _.length > 0 && _,
+                      ),
                     ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(
+                        _().Section,
+                        _().DisplaySectionHeaderContainer,
+                        _().Visible,
+                      ),
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(
+                          "maincontent",
+                          "eventlist",
+                          _().EventDashboardCtn,
+                        ),
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().DisplaySectionHeader,
+                        },
+                        (0, _._)("#EventDisplay_Visible_Title"),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().DisplaySectionSubHeader,
+                        },
+                        (0, _._)("#EventDisplay_Visible_Title_WithRange"),
+                      ),
+                      _,
+                      !_ &&
+                        !_ &&
+                        _.createElement(
+                          "div",
+                          null,
+                          (0, _._)("#EventDisplay_NoPublic"),
+                        ),
+                      (_ || (_ && _)) &&
+                        _.createElement(_._, {
+                          position: "center",
+                          string: (0, _._)("#Loading"),
+                        }),
+                      !_ &&
+                        _.createElement(
+                          "div",
+                          null,
+                          (0, _._)("#EventDisplay_AllPublicShown"),
+                        ),
+                      _ &&
+                        _.createElement(
+                          "div",
+                          null,
+                          (0, _._)("#EventDisplay_HitErrorInfiniteScroll"),
+                        ),
+                    ),
+                  ),
                 ),
-              ),
             ),
-        );
-      });
+          );
+        });
       const _ = (0, _._)((_) => {
           const { appid_or_vanity_str: _ } = _,
             _ = new _._(_._.CLANSTEAMID),
@@ -7782,7 +7791,7 @@
               .sale_vanity_id_valve_approved_for_sale_subpath,
             _.GetEventModel().jsondata.bAutoUpdateVanityURLForContentHub,
           ]),
-          _ = (0, _._)(_.GetClanAccountID());
+          { creatorHome: _ } = (0, _._)(_.GetClanAccountID());
         let _ = null;
         return (
           _ && !_
@@ -8376,7 +8385,7 @@
         const { mode: _ } = _,
           _ = _._.GetEditModel(),
           [_, _] = _.useState(__webpack_require__.BHasSaleEnabled()),
-          _ = (0, _._)(
+          { creatorHome: _ } = (0, _._)(
             __webpack_require__.GetEventModel().clanSteamID.GetAccountID(),
           ),
           _ = _.useRef(void 0),
@@ -11675,7 +11684,7 @@
               _.BVisible(),
             ];
           }),
-          _ = (0, _._)(_.GetAccountID()),
+          { creatorHome: _ } = (0, _._)(_.GetAccountID()),
           { bRequiresHostDisclaimer: _ } = (0, _._)(_.GetAccountID(), _),
           _ = _._.includes(_.GetAccountID()),
           _ = 36 == _;
@@ -12167,7 +12176,7 @@
             _.GetClanAccountID(),
           ]),
           _ = !!__webpack_require__,
-          _ = (0, _._)(_),
+          { creatorHome: _ } = (0, _._)(_),
           _ = _ ? _.GetCreatorHomeURL(null) + "admin/curator_edit" : void 0,
           _ = _ ? _.GetCreatorHomeURL(null) + "#edit" : void 0;
         return _.createElement(
@@ -20363,155 +20372,159 @@
                 string: (0, _._)("#Loading"),
               })
             : _.createElement(
-                _._.Provider,
-                {
-                  value: {
-                    bCanUseLink: !0,
-                  },
-                },
-                _.createElement(_._, null),
+                _._,
+                null,
                 _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Home(":appid_or_vanity_str"),
-                    component: _,
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.List(":appid_or_vanity_str"),
-                    component: _,
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Create(":appid_or_vanity_str"),
-                    component: _._,
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Category(":appid_or_vanity_str", ":gid(\\d+)?"),
-                    render: (_) =>
-                      _.createElement(_._, {
-                        ..._,
-                        key: _.match.params.gid,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.EditRedirectToCategory(":appid_or_vanity_str"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Edit(":appid_or_vanity_str", ":gid(\\d+)?"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: _.match.params.gid,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Publish(":appid_or_vanity_str", ":gid(\\d+)?"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: _.match.params.gid,
-                        bInitiatePublishDialog: !0,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.PreviewSale(
-                      ":appid_or_vanity_str",
-                      ":gid(\\d+)?",
-                    ),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: _.match.params.gid,
-                        mode: "previewsale",
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Preview(":appid_or_vanity_str", ":gid(\\d+)?"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: _.match.params.gid,
-                        mode: "preview",
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.View(":appid_or_vanity_str", ":gid(\\d+)"),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: _.match.params.gid,
-                        mode: "view",
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.Migrate(
-                      ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)",
-                    ),
-                    render: (_) =>
-                      _.createElement(_, {
-                        ..._,
-                        key: _.match.params.oldAnnouncementGID,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.MigrateCategory(
-                      ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)",
-                    ),
-                    render: (_) =>
-                      _.createElement(_._, {
-                        ..._,
-                        key: _.match.params.oldAnnouncementGID,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.ViewOldAnnouncement(
-                      ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)",
-                    ),
-                    render: (_) =>
-                      _.createElement(_._, {
-                        ..._,
-                        key: _.match.params.oldAnnouncementGID,
-                        bClearDirty: !0,
-                        bPreview: !1,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    exact: !0,
-                    path: _._.PreviewOldAnnouncement(
-                      ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)",
-                    ),
-                    render: (_) =>
-                      _.createElement(_._, {
-                        ..._,
-                        key: _.match.params.oldAnnouncementGID,
-                        bClearDirty: !0,
-                        bPreview: !0,
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    component: _._,
-                  }),
+                  _._.Provider,
+                  {
+                    value: {
+                      bCanUseLink: !0,
+                    },
+                  },
+                  _.createElement(_._, null),
+                  _.createElement(
+                    _._,
+                    null,
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.Home(":appid_or_vanity_str"),
+                      component: _,
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.List(":appid_or_vanity_str"),
+                      component: _,
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.Create(":appid_or_vanity_str"),
+                      component: _._,
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.Category(":appid_or_vanity_str", ":gid(\\d+)?"),
+                      render: (_) =>
+                        _.createElement(_._, {
+                          ..._,
+                          key: _.match.params.gid,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.EditRedirectToCategory(":appid_or_vanity_str"),
+                      render: (_) =>
+                        _.createElement(_, {
+                          ..._,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.Edit(":appid_or_vanity_str", ":gid(\\d+)?"),
+                      render: (_) =>
+                        _.createElement(_, {
+                          ..._,
+                          key: _.match.params.gid,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.Publish(":appid_or_vanity_str", ":gid(\\d+)?"),
+                      render: (_) =>
+                        _.createElement(_, {
+                          ..._,
+                          key: _.match.params.gid,
+                          bInitiatePublishDialog: !0,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.PreviewSale(
+                        ":appid_or_vanity_str",
+                        ":gid(\\d+)?",
+                      ),
+                      render: (_) =>
+                        _.createElement(_, {
+                          ..._,
+                          key: _.match.params.gid,
+                          mode: "previewsale",
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.Preview(":appid_or_vanity_str", ":gid(\\d+)?"),
+                      render: (_) =>
+                        _.createElement(_, {
+                          ..._,
+                          key: _.match.params.gid,
+                          mode: "preview",
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.View(":appid_or_vanity_str", ":gid(\\d+)"),
+                      render: (_) =>
+                        _.createElement(_, {
+                          ..._,
+                          key: _.match.params.gid,
+                          mode: "view",
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.Migrate(
+                        ":appid_or_vanity_str",
+                        ":oldAnnouncementGID(\\d+)",
+                      ),
+                      render: (_) =>
+                        _.createElement(_, {
+                          ..._,
+                          key: _.match.params.oldAnnouncementGID,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.MigrateCategory(
+                        ":appid_or_vanity_str",
+                        ":oldAnnouncementGID(\\d+)",
+                      ),
+                      render: (_) =>
+                        _.createElement(_._, {
+                          ..._,
+                          key: _.match.params.oldAnnouncementGID,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.ViewOldAnnouncement(
+                        ":appid_or_vanity_str",
+                        ":oldAnnouncementGID(\\d+)",
+                      ),
+                      render: (_) =>
+                        _.createElement(_._, {
+                          ..._,
+                          key: _.match.params.oldAnnouncementGID,
+                          bClearDirty: !0,
+                          bPreview: !1,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      exact: !0,
+                      path: _._.PreviewOldAnnouncement(
+                        ":appid_or_vanity_str",
+                        ":oldAnnouncementGID(\\d+)",
+                      ),
+                      render: (_) =>
+                        _.createElement(_._, {
+                          ..._,
+                          key: _.match.params.oldAnnouncementGID,
+                          bClearDirty: !0,
+                          bPreview: !0,
+                        }),
+                    }),
+                    _.createElement(_._, {
+                      component: _._,
+                    }),
+                  ),
                 ),
               )
         );
