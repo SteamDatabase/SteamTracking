@@ -10719,6 +10719,9 @@ button.rbc-input::-moz-focus-inner {
   flex-direction: row;
   flex-wrap: wrap;
 }
+._3x4uaNOgVnRB2SqTrTmsbH ._28sDb-_mVCF1iFI_jWC9oy .DialogToggle_Label {
+  align-items: center;
+}
 ._3x4uaNOgVnRB2SqTrTmsbH::before {
   content: "FILTERS";
   letter-spacing: 1px;
@@ -10843,6 +10846,12 @@ button.rbc-input::-moz-focus-inner {
 }
 ._3VeD7VChLkhnsovYYTLDmw {
   color: #929396;
+}
+.cafiKhILOJzW-NM9HdlLr {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #000;
 }
 .voPt0u3YF0z3YDxxPg97z {
   display: flex;

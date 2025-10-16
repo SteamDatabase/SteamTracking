@@ -748,6 +748,7 @@
         ReviewScoreMixed: "Idb19U4Ktfzxd8P6lTHzl",
         ReviewScoreNegative: "_2A2AaRA9OeBWaHmR_itQ26",
         ReviewScoreNone: "_3VeD7VChLkhnsovYYTLDmw",
+        TooltipContainer: "cafiKhILOJzW-NM9HdlLr",
       };
     },
     chunkid: (module) => {
@@ -70818,24 +70819,43 @@
         "dev" == _._.WEB_UNIVERSE &&
           console.log("DEV_DEBUG: candidates apps", _, _);
         const _ =
-          (_ ? "&freetoplay=true" : "") +
-          (_ ? "&adultonly=true" : "") +
-          (_ ? "" : "&earlyaccess=false") +
-          (_ ? "&recentorupcomingfeaturing=true" : "") +
-          (_ ? "&recentorupcomingrelease=true" : "") +
-          (_ ? "&vr_required=true" : "") +
-          (_ ? "&unfeatured=true" : "") +
-          (_ ? "&saleclaneventgid=" + _ : "") +
-          (_ ? "&saleclanaccountid=" + _ : "") +
-          (_ ? "&partneridlist=" + _ : "") +
-          (_ ? "" : "&software=false") +
-          (_ ? "&unassigned=true" : "") +
-          (_ ? "&noactivecooldown=true" : "") +
-          (_ ? "&excludetags=" + _ : "") +
-          (_ ? "&requiretags=" + _ : "") +
-          (_ ? "&bundleid=" + _ : "") +
-          (_ ? "&deepdiscount=true" : "") +
-          (_ && _ ? "&rt_feature_start=" + _ + "&rt_feature_end=" + _ : "");
+            (_ ? "&freetoplay=true" : "") +
+            (_ ? "&adultonly=true" : "") +
+            (_ ? "" : "&earlyaccess=false") +
+            (_ ? "&recentorupcomingfeaturing=true" : "") +
+            (_ ? "&recentorupcomingrelease=true" : "") +
+            (_ ? "&vr_required=true" : "") +
+            (_ ? "&unfeatured=true" : "") +
+            (_ ? "&saleclaneventgid=" + _ : "") +
+            (_ ? "&saleclanaccountid=" + _ : "") +
+            (_ ? "&partneridlist=" + _ : "") +
+            (_ ? "" : "&software=false") +
+            (_ ? "&unassigned=true" : "") +
+            (_ ? "&noactivecooldown=true" : "") +
+            (_ ? "&excludetags=" + _ : "") +
+            (_ ? "&requiretags=" + _ : "") +
+            (_ ? "&bundleid=" + _ : "") +
+            (_ ? "&deepdiscount=true" : "") +
+            (_ && _ ? "&rt_feature_start=" + _ + "&rt_feature_end=" + _ : ""),
+          _ = _.createElement(
+            "div",
+            {
+              className: _().TooltipContainer,
+            },
+            "Only shows games that meet deep discount featuring criteria:",
+            _.createElement("br", null),
+            "- Has run at least 65% discount",
+            _.createElement("br", null),
+            "- Has made at least $3M lifetime",
+            _.createElement("br", null),
+            "- Has made at least $500K in the last year",
+            _.createElement("br", null),
+            "- Overall review score of 70% or higher",
+            _.createElement("br", null),
+            "- Hasn't been in the deep discount section before",
+            _.createElement("br", null),
+            "- Released more than 2 years ago",
+          );
         return _.createElement(
           _._,
           null,
@@ -70926,16 +70946,27 @@
                 tooltip:
                   "Only shows games that do not have an active discount cooldown.",
               }),
-              _.createElement(_._, {
-                label: "Deep Discount Eligible (beta)",
-                className: _().Filter,
-                checked: _,
-                onChange: (_) => {
-                  _(_), window.location.reload();
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: _,
                 },
-                tooltip:
-                  "Only shows games eligible for running a deep discount.",
-              }),
+                _.createElement(_._, {
+                  label: _.createElement(
+                    "span",
+                    {
+                      className: _().HelperTooltip,
+                    },
+                    "Deep Discount Eligible",
+                    _.createElement(_._VW, null),
+                  ),
+                  className: _().Filter,
+                  checked: _,
+                  onChange: (_) => {
+                    _(_), window.location.reload();
+                  },
+                }),
+              ),
             ),
             _.createElement(
               "div",
@@ -71544,6 +71575,11 @@
           case 1:
             (_ = _().ReviewScoreNegative), (_ = "Overwhelmingly Negative");
         }
+        const _ = Math.trunc(
+          (_.reviews_filtered_positive /
+            (_.reviews_filtered_negative + _.reviews_filtered_positive)) *
+            100,
+        );
         return _.createElement(
           "div",
           null,
@@ -71556,6 +71592,8 @@
             _,
           ),
           " (",
+          _,
+          "% ",
           (0, _._)(_.reviews_filtered_positive),
           " / ",
           (0, _._)(_.reviews_filtered_negative + _.reviews_filtered_positive),

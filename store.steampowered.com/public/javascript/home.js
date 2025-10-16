@@ -1924,13 +1924,11 @@ GHomepage = {
 			GHomepage.rgCommunityRecommendationsByAppID[item.appid] = item.reviews;
 		}
 
+		const bVersion2 = $Ctn.hasClass( 'v2' );
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $Ctn,
 			function( oItem, strFeature, rgOptions, nDepth )
 			{
-				var nAppId = oItem.appid;
-				const bVersion2 = $Ctn.hasClass( 'v2' );
-				var $Item = GHomepage.BuildCommunityRecommendationCap( strFeature, oItem, bVersion2 );
-				return $Item;
+				return bVersion2 ? GHomepage.BuildCommunityRecommendationCapV2( strFeature, oItem ) : GHomepage.BuildCommunityRecommendationCap( strFeature, oItem );
 			}, 'community_recommendations_by_steam_labs', 1
 		);
 
@@ -3066,77 +3064,74 @@ GHomepage = {
 		appContainer.data( "currentreviewidx", reviewIdx );
 	},
 
-	BuildCommunityRecommendationCap: function( strFeatureContext, oItem, bVersion2 )
-	{
+	BuildCommunityRecommendationCap: function( strFeatureContext, oItem ) {
 		var unAppID = oItem.appid;
-		var params = { 'class' : 'community_recommendation_capsule responsive_scroll_snap_start' };
-		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
+		var params = {'class': 'community_recommendation_capsule responsive_scroll_snap_start'};
+		var rgItemData = GStoreItemData.GetCapParamsForItem(strFeatureContext, oItem, params);
 
-		var rgReviews = GHomepage.rgCommunityRecommendationsByAppID[ unAppID ] || [];
+		var rgReviews = GHomepage.rgCommunityRecommendationsByAppID[unAppID] || [];
 
-		if ( !rgItemData || !rgReviews || rgReviews.length == 0 )
+		if (!rgItemData || !rgReviews || rgReviews.length == 0)
 			return null;
 
-		var itemParams = { 'class' : 'community_recommendation_app responsive_scroll_snap_start' };
-		let $Item = $J( '<div>', itemParams );
+		var itemParams = {'class': 'community_recommendation_app responsive_scroll_snap_start'};
+		let $Item = $J('<div>', itemParams);
 		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-		if ( bUseTabletScreenMode )
-		{
-			GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, itemParams );
-			$Item = $J( '<a/>', itemParams );
+		if (bUseTabletScreenMode) {
+			GStoreItemData.GetCapParamsForItem(strFeatureContext, oItem, itemParams);
+			$Item = $J('<a/>', itemParams);
 		}
 
-		$Item.data('hoverDisableScreenshots', true );
-		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
+		$Item.data('hoverDisableScreenshots', true);
+		GStoreItemData.BindHoverEventsForItem($Item, oItem);
 
-		var $ItemLink = $J('<a/>', params );
-		$Item.append( $ItemLink );
+		var $ItemLink = $J('<a/>', params);
+		$Item.append($ItemLink);
 
 		// app image
 		// app image anchor
-		var $ImageCapsule = $J ( '<div/>' );
+		var $ImageCapsule = $J('<div/>');
 		$ImageCapsule.addClass('capsule');
 
-		var $Image = $J('<img/>', { src: 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header, alt: rgItemData.name } );
-		if ( !rgItemData.main_capsule )
-		{
-			$Image.css({'height': '288px' });
-		}
-		$Image.bind('error', function(){
-			$Image.attr('src', rgItemData.header  );
-			$Image.css({'height': '288px' });
+		var $Image = $J('<img/>', {
+			src: 'https://store.fastly.steamstatic.com/public/images/blank.gif',
+			'data-image-url': rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header,
+			alt: rgItemData.name
 		});
-		$ImageCapsule.append( $Image );
-		if ( !bVersion2 )
-			$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
+		if (!rgItemData.main_capsule) {
+			$Image.css({'height': '288px'});
+		}
+		$Image.bind('error', function () {
+			$Image.attr('src', rgItemData.header);
+			$Image.css({'height': '288px'});
+		});
+		$ImageCapsule.append($Image);
+		$ImageCapsule.append($J('<div/>').html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;'));
 
-		$ItemLink.append( $ImageCapsule );
+		$ItemLink.append($ImageCapsule);
 
 		// micro trailer
-		if ( rgItemData.microtrailer )
-		{
-			let $Video = $J( '<video class="microtrailer_video" loop muted aria-hidden=true>' ).appendTo( $ImageCapsule );
-			$Video.on( "canplay", function() {
-				$Item.addClass( "has_microtrailer" );
-			} );
-			$Video.on( "playing", function() {
-				$Item.addClass( "has_microtrailer" );
-			} );
+		if (rgItemData.microtrailer) {
+			let $Video = $J('<video class="microtrailer_video" loop muted aria-hidden=true>').appendTo($ImageCapsule);
+			$Video.on("canplay", function () {
+				$Item.addClass("has_microtrailer");
+			});
+			$Video.on("playing", function () {
+				$Item.addClass("has_microtrailer");
+			});
 
 			$Item.hover(
 				function () {
-					if ( !$Video.hasClass( "added_source" ) )
-					{
-						$Video.addClass( "added_source" );
-						$Video.append( $J( "<source>", { src: rgItemData.microtrailer, type: "video/webm" } ) );
+					if (!$Video.hasClass("added_source")) {
+						$Video.addClass("added_source");
+						$Video.append($J("<source>", {src: rgItemData.microtrailer, type: "video/webm"}));
 					}
 
 					playPromise = $Video[0].play();
-					if ( playPromise )
-					{
-						playPromise.catch( function( e ) {
-							$Item.removeClass( 'has_microtrailer' );
-						} );
+					if (playPromise) {
+						playPromise.catch(function (e) {
+							$Item.removeClass('has_microtrailer');
+						});
 					}
 				},
 
@@ -3146,42 +3141,43 @@ GHomepage = {
 			);
 		}
 
-		var $RightCol = $J( '<div>', { class : 'right_col' } ).appendTo( $Item );
-
-		if ( bVersion2 )
-			$J('<div/>', { class: 'app_name'} ).html( rgItemData.name ).appendTo( $RightCol );
-
-		var $ReviewsCtn = $J('<div/>', { class: 'community_recommendations_block'} ).appendTo( $RightCol );
+		var $RightCol = $J('<div>', {class: 'right_col'}).appendTo($Item);
+		var $ReviewsCtn = $J('<div/>', {class: 'community_recommendations_block'}).appendTo($RightCol);
 
 		let numReviews = rgReviews.length;
-		if ( numReviews > 1 )
-		{
-			$Item.data( 'currentreviewidx', 0 );
+		if (numReviews > 1) {
+			$Item.data('currentreviewidx', 0);
 
-			let strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", 1 ).replace( "%2$s", numReviews );
+			let strNumReviews = '%1$s of %2$s reviews'.replace("%1$s", 1).replace("%2$s", numReviews);
 
-			let pagingThumbs = $J( '<div>', { class: 'paging_thumbs' } ).appendTo( $RightCol );
+			let pagingThumbs = $J('<div>', {class: 'paging_thumbs'}).appendTo($RightCol);
 
-			let arrowLeft = $J( '<div>', { class: 'community_recommendation_arrow left', text: "<" } ).appendTo( pagingThumbs );
-			let numReviewsElem = $J( '<div>', { class: 'num_reviews_desc', text: strNumReviews } ).appendTo( pagingThumbs );
-			let arrowRight = $J( '<div>', { class: 'community_recommendation_arrow right', text: ">" } ).appendTo( pagingThumbs );
+			let arrowLeft = $J('<div>', {
+				class: 'community_recommendation_arrow left',
+				text: "<"
+			}).appendTo(pagingThumbs);
+			let numReviewsElem = $J('<div>', {class: 'num_reviews_desc', text: strNumReviews}).appendTo(pagingThumbs);
+			let arrowRight = $J('<div>', {
+				class: 'community_recommendation_arrow right',
+				text: ">"
+			}).appendTo(pagingThumbs);
 
-			arrowLeft.click( function() {
-				var curIdx = $Item.data( "currentreviewidx" );
-				curIdx = ( curIdx + numReviews - 1 ) % numReviews;
-				var strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", curIdx + 1 ).replace( "%2$s", numReviews );
-				numReviewsElem.text( strNumReviews );
+			arrowLeft.click(function () {
+				var curIdx = $Item.data("currentreviewidx");
+				curIdx = (curIdx + numReviews - 1) % numReviews;
+				var strNumReviews = '%1$s of %2$s reviews'.replace("%1$s", curIdx + 1).replace("%2$s", numReviews);
+				numReviewsElem.text(strNumReviews);
 
-				GHomepage.SelectCommunityRecommendationFromIndex( $Item, curIdx );
+				GHomepage.SelectCommunityRecommendationFromIndex($Item, curIdx);
 			});
 
-			arrowRight.click( function() {
-				var curIdx = $Item.data( "currentreviewidx" );
-				curIdx = ( curIdx + 1 ) % numReviews;
-				var strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", curIdx + 1 ).replace( "%2$s", numReviews );
-				numReviewsElem.text( strNumReviews );
+			arrowRight.click(function () {
+				var curIdx = $Item.data("currentreviewidx");
+				curIdx = (curIdx + 1) % numReviews;
+				var strNumReviews = '%1$s of %2$s reviews'.replace("%1$s", curIdx + 1).replace("%2$s", numReviews);
+				numReviewsElem.text(strNumReviews);
 
-				GHomepage.SelectCommunityRecommendationFromIndex( $Item, curIdx );
+				GHomepage.SelectCommunityRecommendationFromIndex($Item, curIdx);
 			});
 		}
 
@@ -3238,13 +3234,186 @@ GHomepage = {
 			}
 		}
 
-		if ( bVersion2 )
+		return $Item;
+	},
+
+	BuildCommunityRecommendationCapV2: function( strFeatureContext, oItem )
+	{
+		var unAppID = oItem.appid;
+		var params = { 'class' : 'community_recommendation_capsule responsive_scroll_snap_start' };
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
+
+		var rgReviews = GHomepage.rgCommunityRecommendationsByAppID[ unAppID ] || [];
+
+		if ( !rgItemData || !rgReviews || rgReviews.length == 0 )
+			return null;
+
+		var itemParams = { 'class' : 'community_recommendation_app responsive_scroll_snap_start' };
+		let $Item = $J( '<div>', itemParams );
+		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+		if ( bUseTabletScreenMode )
 		{
-			let $BottomCtn = $J('<div/>', {class: 'info_bottom_ctn'});
-			$J('<div/>').addClass('platforms').append(GStoreItemData.BuildSupportedPlatformIcon(rgItemData)).appendTo($BottomCtn);
-			$J('<div/>', {'class': 'price_ctn'}).html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;').appendTo($BottomCtn);
-			$RightCol.append( $BottomCtn );
+			GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, itemParams );
+			$Item = $J( '<a/>', itemParams );
 		}
+
+		$Item.data('hoverDisableScreenshots', true );
+		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
+
+		var $ItemLink = $J('<a/>', params );
+		$Item.append( $ItemLink );
+
+		// app image
+		// app image anchor
+		var $ImageCapsule = $J ( '<div/>' );
+		$ImageCapsule.addClass('capsule');
+
+		var $Image = $J('<img/>', { src: 'https://store.fastly.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header, alt: rgItemData.name } );
+		if ( !rgItemData.main_capsule )
+		{
+			$Image.css({'height': '288px' });
+		}
+		$Image.bind('error', function(){
+			$Image.attr('src', rgItemData.header  );
+			$Image.css({'height': '288px' });
+		});
+		$ImageCapsule.append( $Image );
+		$ItemLink.append( $ImageCapsule );
+
+		// micro trailer
+		if ( rgItemData.microtrailer )
+		{
+			let $Video = $J( '<video class="microtrailer_video" loop muted aria-hidden=true>' ).appendTo( $ImageCapsule );
+			$Video.on( "canplay", function() {
+				$Item.addClass( "has_microtrailer" );
+			} );
+			$Video.on( "playing", function() {
+				$Item.addClass( "has_microtrailer" );
+			} );
+
+			$Item.hover(
+				function () {
+					if ( !$Video.hasClass( "added_source" ) )
+					{
+						$Video.addClass( "added_source" );
+						$Video.append( $J( "<source>", { src: rgItemData.microtrailer, type: "video/webm" } ) );
+					}
+
+					playPromise = $Video[0].play();
+					if ( playPromise )
+					{
+						playPromise.catch( function( e ) {
+							$Item.removeClass( 'has_microtrailer' );
+						} );
+					}
+				},
+
+				function () {
+					$Video[0].pause();
+				}
+			);
+		}
+
+		var $RightCol = $J( '<div>', { class : 'right_col' } ).appendTo( $Item );
+		$J('<div/>', { class: 'app_name'} ).html( rgItemData.name ).appendTo( $RightCol );
+
+		var $ReviewsCtn = $J('<div/>', { class: 'community_recommendations_block'} ).appendTo( $RightCol );
+
+		let numReviews = rgReviews.length;
+		if ( numReviews > 1 )
+		{
+			$Item.data( 'currentreviewidx', 0 );
+
+			let strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", 1 ).replace( "%2$s", numReviews );
+
+			let pagingThumbs = $J( '<div>', { class: 'paging_thumbs' } ).appendTo( $RightCol );
+
+			let arrowLeft = $J( '<div>', { class: 'review_arrow left'  } ).append( $J( '<div/>' ) );
+			arrowLeft.appendTo( pagingThumbs );
+			let numReviewsElem = $J( '<div>', { class: 'num_reviews_desc', text: strNumReviews } ).appendTo( pagingThumbs );
+			let arrowRight = $J( '<div>', { class: 'review_arrow right' } ).append( $J( '<div/>' ) );
+			arrowRight.appendTo( pagingThumbs );
+
+			arrowLeft.click( function() {
+				var curIdx = $Item.data( "currentreviewidx" );
+				curIdx = ( curIdx + numReviews - 1 ) % numReviews;
+				var strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", curIdx + 1 ).replace( "%2$s", numReviews );
+				numReviewsElem.text( strNumReviews );
+
+				GHomepage.SelectCommunityRecommendationFromIndex( $Item, curIdx );
+			});
+
+			arrowRight.click( function() {
+				var curIdx = $Item.data( "currentreviewidx" );
+				curIdx = ( curIdx + 1 ) % numReviews;
+				var strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", curIdx + 1 ).replace( "%2$s", numReviews );
+				numReviewsElem.text( strNumReviews );
+
+				GHomepage.SelectCommunityRecommendationFromIndex( $Item, curIdx );
+			});
+		}
+		else
+		{
+			$J( '<div>', { class: 'paging_thumbs' } ).appendTo( $RightCol );
+		}
+
+		// add reviews
+		for( var i = 0; i < rgReviews.length; ++i)
+		{
+			var review = rgReviews[i];
+
+			$Item.data( 'recommendationid_' + i, review.recommendationid );
+
+			var $Review = $J( '<div>', { id: "Review" + review.recommendationid, class : 'review_box' } ).appendTo( $ReviewsCtn );
+			if ( numReviews >= 1 )
+			{
+				if ( i == 0 )
+				{
+					$Review.addClass( "focus" );
+				}
+				else
+				{
+					$Review.attr( "aria-hidden", true );
+					$Review.attr( "inert", true );
+				}
+			}
+
+			var $Content = $Review.append( $J( '<div>', { class: 'content', text: '"' + review.review_text + '"' } ) );
+
+			var $ViewMore = $J( '<div class="view_more"><a href="' + review.review_link + '" target="_blank">Read Entire Review</a></div>' );
+			$Content.append( $ViewMore );
+
+			var reviewer = GStoreItemData.GetAccountData( null, review.accountid );
+			if ( reviewer )
+			{
+				var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
+				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="https://store.fastly.steamstatic.com/public/images/blank.gif" data-image-url="%2$s" alt="%4$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid).replace(/\%4\$s/g, reviewer.name) );
+				$AuthorBlock.append( $AvatarCap );
+
+				var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );
+				var $AvatarName = $J('<div class="persona_name"><a href="%1$s" data-miniprofile="%3$s">%2$s</a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, reviewer.name ).replace(/\%3\$s/g, reviewer.accountid) );
+				$AuthorDetails.append( $AvatarName );
+				if ( review.playtime_at_review > 0 )
+				{
+					var strHours = 'Played %s hrs at review time'.replace( "%s", v_numberformat( review.playtime_at_review / 60, 1 ) );
+					$AuthorDetails.append( $J( '<div>', { class: "hours ellipsis", text: strHours } ) );
+				}
+				if ( review.votes_up > 0 )
+				{
+					var voteUpText = '1 person found this review helpful';
+					if ( review.votes_up > 1 )
+					{
+						voteUpText = '%2$s people found this review helpful'.replace( "%2$s", v_numberformat( review.votes_up ) );
+					}
+					$AuthorDetails.append( $J( '<div>', { class: "hours vote_info", text: voteUpText } ) );
+				}
+			}
+		}
+
+		let $BottomCtn = $J('<div/>', {class: 'info_bottom_ctn'});
+		$J('<div/>').addClass('platforms').append(GStoreItemData.BuildSupportedPlatformIcon(rgItemData)).appendTo($BottomCtn);
+		$J('<div/>', {'class': 'price_ctn'}).html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;').appendTo($BottomCtn);
+		$RightCol.append( $BottomCtn );
 
 		return $Item;
 	},

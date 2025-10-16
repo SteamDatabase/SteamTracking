@@ -740,6 +740,7 @@
         ReviewScoreMixed: "Idb19U4Ktfzxd8P6lTHzl",
         ReviewScoreNegative: "_2A2AaRA9OeBWaHmR_itQ26",
         ReviewScoreNone: "_3VeD7VChLkhnsovYYTLDmw",
+        TooltipContainer: "cafiKhILOJzW-NM9HdlLr",
       };
     },
     96289: (e) => {
@@ -63123,13 +63124,13 @@
           [w, I] = (0, ge.QD)("unfeatured", !1),
           [T, A] = (0, ge.QD)("unassigned", !1),
           [k, M] = (0, ge.QD)("noactivecooldown", !1),
-          [P, R] = (0, ge.QD)("software", !0),
-          [N, G] = (0, ge.QD)("excludetags", ""),
-          [O, L] = (0, ge.QD)("requiretags", ""),
-          [F, x] = (0, ge.QD)("rt_feature_start", 0),
-          [U, z] = (0, ge.QD)("rt_feature_end", 0),
-          [q, j] = (0, ge.QD)("deepdiscount", !1),
-          W = (e, t, a, n) => {
+          [R, N] = (0, ge.QD)("software", !0),
+          [O, L] = (0, ge.QD)("excludetags", ""),
+          [F, x] = (0, ge.QD)("requiretags", ""),
+          [U, z] = (0, ge.QD)("rt_feature_start", 0),
+          [q, j] = (0, ge.QD)("rt_feature_end", 0),
+          [W, H] = (0, ge.QD)("deepdiscount", !1),
+          V = (e, t, a, n) => {
             const r = a.split(","),
               i = r.findIndex((t) => t == e.toString());
             if (t && -1 == i) {
@@ -63137,13 +63138,13 @@
               t.length > 0 && (t += ","), n(t + e);
             } else t || -1 == i || (r.splice(i, 1), n(r.toString()));
           },
-          [H, V] = (0, c.useMemo)(() => {
-            if (p && d && g && E && v && f && !w && P && !N)
+          [K, Y] = (0, c.useMemo)(() => {
+            if (p && d && g && E && v && f && !w && R && !O)
               return [[...a], a.map((e) => e.appid)];
             const e = Math.floor(Date.now() / 1e3) - Kr,
               t = Math.floor(Date.now() / 1e3) - Vr,
-              r = new Set(N.split(",")),
-              i = new Set(O.split(",")),
+              r = new Set(O.split(",")),
+              i = new Set(F.split(",")),
               s = a.filter((a) => {
                 if (!p && a.content_descriptors?.includes(3)) return !1;
                 if (!d && Yr(a)) return !1;
@@ -63176,40 +63177,57 @@
                   if (w && 0 != e) return !1;
                 }
                 if (!f && a.vr_required) return !1;
-                if (!P && "software" == a.type) return !1;
-                if (N) {
+                if (!R && "software" == a.type) return !1;
+                if (O) {
                   if (a.tagids.split(",").filter((e) => r.has(e)).length > 0)
                     return !1;
                 }
-                if (O) {
+                if (F) {
                   let e = a.tagids.split(",");
                   if (i.size != e.filter((e) => i.has(e)).length) return !1;
                 }
                 return !0;
               });
             return [s, s.map((e) => e.appid)];
-          }, [a, d, p, g, w, v, f, E, n, P, N, O]);
+          }, [a, d, p, g, w, v, f, E, n, R, O, F]);
         "dev" == dt.TS.WEB_UNIVERSE &&
-          console.log("DEV_DEBUG: candidates apps", a, H);
-        const K =
-          (d ? "&freetoplay=true" : "") +
-          (p ? "&adultonly=true" : "") +
-          (g ? "" : "&earlyaccess=false") +
-          (E ? "&recentorupcomingfeaturing=true" : "") +
-          (v ? "&recentorupcomingrelease=true" : "") +
-          (f ? "&vr_required=true" : "") +
-          (w ? "&unfeatured=true" : "") +
-          (s ? "&saleclaneventgid=" + s : "") +
-          (l ? "&saleclanaccountid=" + l : "") +
-          (i ? "&partneridlist=" + i : "") +
-          (P ? "" : "&software=false") +
-          (T ? "&unassigned=true" : "") +
-          (k ? "&noactivecooldown=true" : "") +
-          (N ? "&excludetags=" + N : "") +
-          (O ? "&requiretags=" + O : "") +
-          (o ? "&bundleid=" + o : "") +
-          (q ? "&deepdiscount=true" : "") +
-          (U && F ? "&rt_feature_start=" + F + "&rt_feature_end=" + U : "");
+          console.log("DEV_DEBUG: candidates apps", a, K);
+        const $ =
+            (d ? "&freetoplay=true" : "") +
+            (p ? "&adultonly=true" : "") +
+            (g ? "" : "&earlyaccess=false") +
+            (E ? "&recentorupcomingfeaturing=true" : "") +
+            (v ? "&recentorupcomingrelease=true" : "") +
+            (f ? "&vr_required=true" : "") +
+            (w ? "&unfeatured=true" : "") +
+            (s ? "&saleclaneventgid=" + s : "") +
+            (l ? "&saleclanaccountid=" + l : "") +
+            (i ? "&partneridlist=" + i : "") +
+            (R ? "" : "&software=false") +
+            (T ? "&unassigned=true" : "") +
+            (k ? "&noactivecooldown=true" : "") +
+            (O ? "&excludetags=" + O : "") +
+            (F ? "&requiretags=" + F : "") +
+            (o ? "&bundleid=" + o : "") +
+            (W ? "&deepdiscount=true" : "") +
+            (q && U ? "&rt_feature_start=" + U + "&rt_feature_end=" + q : ""),
+          J = c.createElement(
+            "div",
+            { className: Cr().TooltipContainer },
+            "Only shows games that meet deep discount featuring criteria:",
+            c.createElement("br", null),
+            "- Has run at least 65% discount",
+            c.createElement("br", null),
+            "- Has made at least $3M lifetime",
+            c.createElement("br", null),
+            "- Has made at least $500K in the last year",
+            c.createElement("br", null),
+            "- Overall review score of 70% or higher",
+            c.createElement("br", null),
+            "- Hasn't been in the deep discount section before",
+            c.createElement("br", null),
+            "- Released more than 2 years ago",
+          );
         return c.createElement(
           B.tH,
           null,
@@ -63265,8 +63283,8 @@
               c.createElement(C.Yh, {
                 label: "Software",
                 className: Cr().Filter,
-                checked: P,
-                onChange: R,
+                checked: R,
+                onChange: N,
                 tooltip: "Include apps that are the software type.",
               }),
               c.createElement(C.Yh, {
@@ -63296,16 +63314,23 @@
                 tooltip:
                   "Only shows games that do not have an active discount cooldown.",
               }),
-              c.createElement(C.Yh, {
-                label: "Deep Discount Eligible (beta)",
-                className: Cr().Filter,
-                checked: q,
-                onChange: (e) => {
-                  j(e), window.location.reload();
-                },
-                tooltip:
-                  "Only shows games eligible for running a deep discount.",
-              }),
+              c.createElement(
+                Ge.m9,
+                { toolTipContent: J },
+                c.createElement(C.Yh, {
+                  label: c.createElement(
+                    "span",
+                    { className: P().HelperTooltip },
+                    "Deep Discount Eligible",
+                    c.createElement(G._VW, null),
+                  ),
+                  className: Cr().Filter,
+                  checked: W,
+                  onChange: (e) => {
+                    H(e), window.location.reload();
+                  },
+                }),
+              ),
             ),
             c.createElement(
               "div",
@@ -63316,9 +63341,9 @@
                 c.createElement(vi, {
                   strLabel: "Exclude Tag",
                   fnOnTagSelected: (e, t) => {
-                    W(e, t, N, G);
+                    V(e, t, O, L);
                   },
-                  strSelectedTagIDs: N,
+                  strSelectedTagIDs: O,
                 }),
               ),
               c.createElement(
@@ -63327,29 +63352,29 @@
                 c.createElement(vi, {
                   strLabel: "Require Tag",
                   fnOnTagSelected: (e, t) => {
-                    W(e, t, O, L);
+                    V(e, t, F, x);
                   },
-                  strSelectedTagIDs: O,
+                  strSelectedTagIDs: F,
                 }),
               ),
               c.createElement(Jr, null),
             ),
             c.createElement(yi, {
-              rtUpcomingFeatureStart: F,
-              rtUpcomingFeatureEnd: U,
-              setUpcomingFeatureStart: x,
-              setUpcomingFeatureEnd: z,
-              strQueryPlan: K,
+              rtUpcomingFeatureStart: U,
+              rtUpcomingFeatureEnd: q,
+              setUpcomingFeatureStart: z,
+              setUpcomingFeatureEnd: j,
+              strQueryPlan: $,
             }),
           ),
-          c.createElement(Qr, { nDisplayedApps: V.length, strQueryParams: K }),
+          c.createElement(Qr, { nDisplayedApps: Y.length, strQueryParams: $ }),
           c.createElement(Zr, {
-            rgCandidateApps: H,
-            rgAppIDs: V,
+            rgCandidateApps: K,
+            rgAppIDs: Y,
             oFeaturingMaps: n,
-            rtUpcomingFeatureStart: F,
+            rtUpcomingFeatureStart: U,
           }),
-          c.createElement(Qr, { nDisplayedApps: V.length, strQueryParams: K }),
+          c.createElement(Qr, { nDisplayedApps: Y.length, strQueryParams: $ }),
         );
       }
       function Jr(e) {
@@ -63823,12 +63848,19 @@
           case 1:
             (n = Cr().ReviewScoreNegative), (a = "Overwhelmingly Negative");
         }
+        const r = Math.trunc(
+          (t.reviews_filtered_positive /
+            (t.reviews_filtered_negative + t.reviews_filtered_positive)) *
+            100,
+        );
         return c.createElement(
           "div",
           null,
           "Reviews: ",
           c.createElement("span", { className: n }, a),
           " (",
+          r,
+          "% ",
           (0, Oe.Dq)(t.reviews_filtered_positive),
           " / ",
           (0, Oe.Dq)(t.reviews_filtered_negative + t.reviews_filtered_positive),
