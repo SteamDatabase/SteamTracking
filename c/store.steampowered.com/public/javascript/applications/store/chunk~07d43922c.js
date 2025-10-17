@@ -637,6 +637,7 @@
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
         RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
+        MediaMax: "_2g9MxQcUyFYffpZTktM-Wl",
       };
     },
     chunkid: () => {},
@@ -24671,6 +24672,8 @@
             clanAccountID: _,
             mediaScale: _,
             setImageSize: _,
+            className: _,
+            maxWidthPx: _,
           } = _,
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)(null),
@@ -24701,30 +24704,38 @@
           ),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
-          _ = (0, _._)(_, _);
-        if (!_.video_webm_src) {
-          if (!_.image || 0 === _.image.trim().length) return null;
-          const _ = _ ? _.width * _ : "auto";
-          return _.createElement(
-            "div",
-            {
-              style: {
-                display: "inline-block",
-              },
-            },
-            _.createElement("img", {
-              ref: _,
-              onLoad: _,
-              src: _(_, _.image),
-              alt: "",
-              style: {
-                width: "number" == typeof _ ? `${_}px` : "auto",
-                height: "auto",
-                display: "block",
-              },
-            }),
-          );
-        }
+          _ = (0, _._)(_, _),
+          _ = _ ? _.width * _ : void 0,
+          _ = {
+            display: "inline-block",
+            width: _ ? `${_}px` : "auto",
+            ...(_
+              ? {
+                  maxWidth: `${_}px`,
+                }
+              : {}),
+          };
+        if (!_.video_webm_src)
+          return _.image && 0 !== _.image.trim().length
+            ? _.createElement(
+                "div",
+                {
+                  className: _,
+                  style: _,
+                },
+                _.createElement("img", {
+                  ref: _,
+                  onLoad: _,
+                  src: _(_, _.image),
+                  alt: "",
+                  style: {
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                  },
+                }),
+              )
+            : null;
         const _ = [];
         return (!_.video_webm_src && !_.video_mp4_src) ||
           (0 === _.video_webm_src?.trim().length &&
@@ -24740,18 +24751,25 @@
                 sURL: _(_, _.video_mp4_src),
                 sFormat: "video/mp4",
               }),
-            _.createElement(_._, {
-              ref: _,
-              video: {
-                sPoster: _(_, _.image),
-                rgVideoSources: _,
+            _.createElement(
+              "div",
+              {
+                className: _,
+                style: _,
               },
-              bAutoPlay: !0,
-              bControls: !1,
-              bLoop: !0,
-              bMuted: !0,
-              mediaScale: _,
-            }));
+              _.createElement(_._, {
+                ref: _,
+                video: {
+                  sPoster: _(_, _.image),
+                  rgVideoSources: _,
+                },
+                bAutoPlay: !0,
+                bControls: !1,
+                bLoop: !0,
+                bMuted: !0,
+                mediaScale: _,
+              }),
+            ));
       }
       function _(_) {
         const {
@@ -25312,6 +25330,7 @@
                 mediaType: _,
                 mediaHAlign: _,
                 mediaVAlign: _,
+                className: _().MediaMax,
                 clanAccountID: _.clanSteamID.GetAccountID(),
               }),
             ),

@@ -635,6 +635,7 @@
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
         RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
+        MediaMax: "_2g9MxQcUyFYffpZTktM-Wl",
       };
     },
     94581: () => {},
@@ -22083,18 +22084,20 @@
             clanAccountID: s,
             mediaScale: o,
             setImageSize: l,
+            className: c,
+            maxWidthPx: m,
           } = e,
-          c = (0, n.useRef)(null),
-          [m, u] = (0, n.useState)(null),
-          d = o && o >= 1 && o <= 100 ? o / 100 : 1,
-          _ = n.useCallback(() => {
-            if (c.current && c.current.complete) {
-              const { naturalWidth: e, naturalHeight: t } = c.current;
-              u({ width: e, height: t });
+          u = (0, n.useRef)(null),
+          [d, _] = (0, n.useState)(null),
+          p = o && o >= 1 && o <= 100 ? o / 100 : 1,
+          g = n.useCallback(() => {
+            if (u.current && u.current.complete) {
+              const { naturalWidth: e, naturalHeight: t } = u.current;
+              _({ width: e, height: t });
             }
           }, []);
-        (0, n.useEffect)(_, [_]);
-        const p = n.useCallback(
+        (0, n.useEffect)(g, [g]);
+        const h = n.useCallback(
             (e) => {
               if (l) {
                 const t = Array.isArray(e.borderBoxSize)
@@ -22105,46 +22108,51 @@
             },
             [l],
           ),
-          g = (0, ft.wY)(p),
-          h = (0, ft.wY)(p),
-          S = (0, ft.Ue)(c, g);
-        if (!t.video_webm_src) {
-          if (!t.image || 0 === t.image.trim().length) return null;
-          const e = m ? m.width * d : "auto";
-          return n.createElement(
-            "div",
-            { style: { display: "inline-block" } },
-            n.createElement("img", {
-              ref: S,
-              onLoad: _,
-              src: Do(s, t.image),
-              alt: "",
-              style: {
-                width: "number" == typeof e ? `${e}px` : "auto",
-                height: "auto",
-                display: "block",
-              },
-            }),
-          );
-        }
-        const f = [];
+          S = (0, ft.wY)(h),
+          f = (0, ft.wY)(h),
+          v = (0, ft.Ue)(u, S),
+          y = d ? d.width * p : void 0,
+          b = {
+            display: "inline-block",
+            width: y ? `${y}px` : "auto",
+            ...(m ? { maxWidth: `${m}px` } : {}),
+          };
+        if (!t.video_webm_src)
+          return t.image && 0 !== t.image.trim().length
+            ? n.createElement(
+                "div",
+                { className: c, style: b },
+                n.createElement("img", {
+                  ref: v,
+                  onLoad: g,
+                  src: Do(s, t.image),
+                  alt: "",
+                  style: { width: "100%", height: "auto", display: "block" },
+                }),
+              )
+            : null;
+        const E = [];
         return (!t.video_webm_src && !t.video_mp4_src) ||
           (0 === t.video_webm_src?.trim().length &&
             0 === t.video_mp4_src?.trim().length)
           ? null
           : (t.video_webm_src &&
-              f.push({ sURL: Do(s, t.video_webm_src), sFormat: "video/webm" }),
+              E.push({ sURL: Do(s, t.video_webm_src), sFormat: "video/webm" }),
             t.video_mp4_src &&
-              f.push({ sURL: Do(s, t.video_mp4_src), sFormat: "video/mp4" }),
-            n.createElement(Jt.L, {
-              ref: h,
-              video: { sPoster: Do(s, t.image), rgVideoSources: f },
-              bAutoPlay: !0,
-              bControls: !1,
-              bLoop: !0,
-              bMuted: !0,
-              mediaScale: o,
-            }));
+              E.push({ sURL: Do(s, t.video_mp4_src), sFormat: "video/mp4" }),
+            n.createElement(
+              "div",
+              { className: c, style: b },
+              n.createElement(Jt.L, {
+                ref: f,
+                video: { sPoster: Do(s, t.image), rgVideoSources: E },
+                bAutoPlay: !0,
+                bControls: !1,
+                bLoop: !0,
+                bMuted: !0,
+                mediaScale: o,
+              }),
+            ));
       }
       function Oo(e) {
         const {
@@ -22624,6 +22632,7 @@
                 mediaType: o,
                 mediaHAlign: w,
                 mediaVAlign: A,
+                className: Jo().MediaMax,
                 clanAccountID: t.clanSteamID.GetAccountID(),
               }),
             ),
