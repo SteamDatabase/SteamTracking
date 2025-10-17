@@ -1013,12 +1013,8 @@ button.TextButton.gpfocus {
   top: 0;
   bottom: 0;
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.DialogSlider_Value:dir(rtl) {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-start-start-radius: 5px;
+  border-end-start-radius: 5px;
 }
 .DialogSlider_Grabber {
   position: absolute;
@@ -1458,6 +1454,9 @@ body.in_global_drag .title-area {
   inset-inline-end: 0px;
   bottom: 0px;
   z-index: 1000;
+}
+.window_resize_grip:dir(rtl) {
+  scale: -1 1;
 }
 .DialogBodyNotificationBar {
   font-size: 12px;

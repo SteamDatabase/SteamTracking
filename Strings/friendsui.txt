@@ -771,6 +771,7 @@ $\nY8O
 *\n\frestrictions
 *^\n\fELogFileType
 *d\n\fEAudioFormat
+*llC
 *m_vecControllers[ i ]
 *pchMsg && *pchMsg == '%'
 *pcubDecodedData

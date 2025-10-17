@@ -1,4 +1,4 @@
-var CLSTAMP = "10151850";
+var CLSTAMP = "10156229";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11385,9 +11385,9 @@ var CLSTAMP = "10151850";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 15 2025 : 14:36:04",
-                BUILD_TIME_UTC: "Oct 15 2025 : 21:36:04",
-                BUILD_RTIME_UTC: 1760564164,
+                BUILD_TIME_LOCAL: "Oct 16 2025 : 16:15:53",
+                BUILD_TIME_UTC: "Oct 16 2025 : 23:15:53",
+                BUILD_RTIME_UTC: 1760656553,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -22591,12 +22591,45 @@ var CLSTAMP = "10151850";
       },
       54644: (e, t, n) => {
         "use strict";
-        function r(e) {
+        n.d(t, {
+          $e: () => k,
+          BA: () => F,
+          IB: () => y,
+          Kf: () => L,
+          MS: () => S,
+          NO: () => s,
+          No: () => d,
+          OG: () => w,
+          Oe: () => R,
+          SY: () => h,
+          TN: () => a,
+          TV: () => E,
+          UQ: () => l,
+          WC: () => c,
+          YQ: () => b,
+          _f: () => x,
+          a_: () => p,
+          bZ: () => u,
+          ew: () => _,
+          gr: () => C,
+          id: () => o,
+          kD: () => i,
+          lc: () => T,
+          pE: () => B,
+          pd: () => m,
+          qf: () => f,
+          tl: () => M,
+          uX: () => g,
+          ww: () => v,
+          yU: () => I,
+        });
+        var r = n(736);
+        function i(e) {
           return null != e && void 0 !== e.focus;
         }
-        function i(e) {
+        function s(e) {
           if (!(e.clientX || e.clientY || e.screenX || e.screenY)) return !0;
-          if (e.relatedTarget) return !s(e.currentTarget, e.relatedTarget);
+          if (e.relatedTarget) return !o(e.currentTarget, e.relatedTarget);
           {
             const t = e.currentTarget.getBoundingClientRect();
             return (
@@ -22611,7 +22644,7 @@ var CLSTAMP = "10151850";
             );
           }
         }
-        function s(e, t) {
+        function o(e, t) {
           let n = t;
           for (; n; ) {
             if (
@@ -22624,23 +22657,23 @@ var CLSTAMP = "10151850";
           }
           return !1;
         }
-        function o(e, t) {
+        function a(e, t) {
           let n = t;
           for (; n; ) if (((n = n.parentElement), n == e)) return !0;
           return !1;
         }
-        function a(e) {
+        function c(e) {
           const t = window.getSelection();
           if (!t) return !1;
           let n = 0;
           for (let r = 0; r < t.rangeCount; r++) {
             const i = t.getRangeAt(r);
             if (i.startOffset == i.endOffset) continue;
-            s(e, i.commonAncestorContainer) && n++;
+            o(e, i.commonAncestorContainer) && n++;
           }
           return t.rangeCount > 0 && t.rangeCount == n;
         }
-        function c(e, t, n) {
+        function l(e, t, n) {
           let r = 0,
             i = 0;
           return (
@@ -22649,7 +22682,7 @@ var CLSTAMP = "10151850";
             Math.sqrt(r * r + i * i)
           );
         }
-        function l(e, t) {
+        function u(e, t) {
           let n = 0,
             r = 0;
           return (
@@ -22662,7 +22695,7 @@ var CLSTAMP = "10151850";
             Math.sqrt(n * n + r * r)
           );
         }
-        function u(e, t) {
+        function m(e, t) {
           return {
             top: e.screenTop + t.top,
             bottom: e.screenTop + t.bottom,
@@ -22670,13 +22703,13 @@ var CLSTAMP = "10151850";
             right: e.screenLeft + t.right,
           };
         }
-        function m(e) {
+        function d(e) {
           return e.right - e.left;
         }
-        function d(e) {
+        function h(e) {
           return e.bottom - e.top;
         }
-        function h(e) {
+        function p(e) {
           let t = 1,
             n = e;
           for (; null != n && "HTML" != n.tagName; ) {
@@ -22689,45 +22722,48 @@ var CLSTAMP = "10151850";
           }
           return t;
         }
-        function p(e) {
+        function g(e) {
           let t;
           return (
             e &&
-              r(e.currentTarget) &&
+              i(e.currentTarget) &&
               (t = e.currentTarget.ownerDocument.defaultView),
             t
           );
         }
-        function g(e) {
+        function f(e) {
           let t;
           return e && (t = e.ownerDocument.defaultView), t;
         }
-        function f(e) {
+        function _(e) {
           return e.navigator.clipboard.readText();
         }
-        function _(e) {
-          let t = window.document;
+        function w(e) {
+          const t = window.top ?? window,
+            n = t.document,
+            i = n.createElement("textarea");
+          (i.textContent = e),
+            (i.style.position = "fixed"),
+            n.body.appendChild(i),
+            i.select();
           try {
-            t = window.top.document;
-          } catch (e) {}
-          const n = t.createElement("textarea");
-          (n.textContent = e),
-            (n.style.position = "fixed"),
-            t.body.appendChild(n),
-            n.select();
-          try {
-            t.execCommand("copy");
+            if (
+              ((0, r.Fj)(t, "Browser.NotifyUserActivation") &&
+                t.SteamClient.Browser.NotifyUserActivation(),
+              !n.execCommand("copy"))
+            )
+              throw "document.execCommand false";
           } catch (e) {
             console.warn("Copy to clipboard failed.", e);
           } finally {
-            t.body.removeChild(n);
+            n.body.removeChild(i);
           }
         }
-        function w(e) {
-          const t = "steam://openurl/";
-          e.startsWith(t) && (e = e.slice(16)), _(e);
-        }
         function b(e) {
+          const t = "steam://openurl/";
+          e.startsWith(t) && (e = e.slice(16)), w(e);
+        }
+        function C(e) {
           if (!e) return null;
           if (0 == e.clipboardData.files.length) return null;
           return e.clipboardData.types.some(
@@ -22736,7 +22772,7 @@ var CLSTAMP = "10151850";
             ? null
             : e.clipboardData.files[0];
         }
-        function C(e) {
+        function v(e) {
           const t = e.ownerDocument;
           return Boolean(
             t.fullscreen ||
@@ -22745,7 +22781,7 @@ var CLSTAMP = "10151850";
               t.msFullscreenElement,
           );
         }
-        function v(e, t) {
+        function M(e, t) {
           const n = e;
           return n.requestFullscreen
             ? (n.requestFullscreen(), !0)
@@ -22757,7 +22793,7 @@ var CLSTAMP = "10151850";
                   ? (n.mozRequestFullScreen(), !0)
                   : !!n.msRequestFullscreen && (n.msRequestFullscreen(), !0);
         }
-        function M(e) {
+        function S(e) {
           const t = e.ownerDocument;
           t.cancelFullscreen
             ? t.cancelFullscreen()
@@ -22767,10 +22803,10 @@ var CLSTAMP = "10151850";
                 ? t.mozCancelFullScreen()
                 : t.msExitFullscreen && t.msExitFullscreen();
         }
-        function S(e) {
+        function y(e) {
           return "INPUT" === e.nodeName;
         }
-        function y(e, t) {
+        function E(e, t) {
           switch (e) {
             case "TEXTAREA":
               return !0;
@@ -22797,39 +22833,7 @@ var CLSTAMP = "10151850";
               return !1;
           }
         }
-        n.d(t, {
-          $e: () => x,
-          BA: () => T,
-          IB: () => S,
-          Kf: () => k,
-          MS: () => M,
-          NO: () => i,
-          No: () => m,
-          OG: () => _,
-          Oe: () => I,
-          SY: () => d,
-          TN: () => o,
-          TV: () => y,
-          UQ: () => c,
-          WC: () => a,
-          YQ: () => w,
-          _f: () => B,
-          a_: () => h,
-          bZ: () => l,
-          ew: () => f,
-          gr: () => b,
-          id: () => s,
-          kD: () => r,
-          lc: () => R,
-          pE: () => E,
-          pd: () => u,
-          qf: () => g,
-          tl: () => v,
-          uX: () => p,
-          ww: () => C,
-          yU: () => L,
-        });
-        function E(e, t) {
+        function B(e, t) {
           const n = e;
           return (
             (n.lastModifiedDate = new Date()),
@@ -22837,10 +22841,10 @@ var CLSTAMP = "10151850";
             e
           );
         }
-        function B(e, t) {
+        function x(e, t) {
           let n = e?.parentElement;
           for (; n; ) {
-            if (r(n)) {
+            if (i(n)) {
               if (!t || "x" == t) {
                 const e = window.getComputedStyle(n);
                 if (
@@ -22862,22 +22866,22 @@ var CLSTAMP = "10151850";
             }
             n = n.parentElement;
           }
-          return r(n) ? n : null;
-        }
-        function x(e, t) {
-          const n = [];
-          let r = e;
-          for (; (r = B(r, t)); ) n.push(r);
-          return n;
+          return i(n) ? n : null;
         }
         function k(e, t) {
+          const n = [];
+          let r = e;
+          for (; (r = x(r, t)); ) n.push(r);
+          return n;
+        }
+        function L(e, t) {
           let n = e;
           for (; n; ) {
             if (t(n)) return n;
             n = n.parentElement;
           }
         }
-        function L() {
+        function I() {
           return (function (e) {
             const t = {};
             return (
@@ -22888,10 +22892,10 @@ var CLSTAMP = "10151850";
             );
           })(document);
         }
-        function I(e, t) {
-          R(e.document, t, !0);
+        function R(e, t) {
+          T(e.document, t, !0);
         }
-        function R(e, t, n) {
+        function T(e, t, n) {
           const r = Object.assign({}, t),
             i = e.getElementsByTagName("head")[0],
             s = i.getElementsByTagName("link"),
@@ -22912,7 +22916,7 @@ var CLSTAMP = "10151850";
           }
           return i.prepend(...a), a;
         }
-        function T(e, t) {
+        function F(e, t) {
           let n = e ?? null;
           for (; n && !n.contains(t); ) n = n.parentElement;
           return n;
@@ -24888,9 +24892,9 @@ var CLSTAMP = "10151850";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 15 2025 : 14:36:04",
-                    BUILD_TIME_UTC: "Oct 15 2025 : 21:36:04",
-                    BUILD_RTIME_UTC: 1760564164,
+                    BUILD_TIME_LOCAL: "Oct 16 2025 : 16:15:53",
+                    BUILD_TIME_UTC: "Oct 16 2025 : 23:15:53",
+                    BUILD_RTIME_UTC: 1760656553,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25595,7 +25599,7 @@ var CLSTAMP = "10151850";
         9462: "8e5f8b078795d1987ae9",
         9711: "2ed989ee7251a5d19c6f",
         9746: "76c655f56eb1729dfb5d",
-        9858: "d19f9ad1f1e034c5653d",
+        9858: "9fbe03d7744328687d71",
         9869: "f1bd42d1a9b8f121d12d",
         9887: "6cdfc6cb59add2537e70",
       }[e]),

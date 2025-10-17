@@ -2414,8 +2414,8 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:43:25
-21:43:32
+21:01:54
+21:02:01
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -4807,6 +4807,7 @@ Cw!K
 Cyber cafe accounts can't purchase
 Czech
 D#D)D;D?DEDKDQDSDYDeDoD
+D0u'u{-d.x
 D4tp
 D@D/lcO+hcK
 DAE!
@@ -7415,7 +7416,7 @@ Object Signing
 Object Signing CA
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 15 2025
+Oct 16 2025
 October
 Odia
 Offensive Avatar
@@ -8757,7 +8758,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Oct 15 2025 21:43:32
+Startup - updater built Oct 16 2025 21:02:01
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

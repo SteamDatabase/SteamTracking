@@ -12833,9 +12833,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 15 2025 : 14:36:04",
-                BUILD_TIME_UTC: "Oct 15 2025 : 21:36:04",
-                BUILD_RTIME_UTC: 1760564164,
+                BUILD_TIME_LOCAL: "Oct 16 2025 : 16:15:53",
+                BUILD_TIME_UTC: "Oct 16 2025 : 23:15:53",
+                BUILD_RTIME_UTC: 1760656553,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -24725,6 +24725,39 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
+        __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+          _: () => _,
+        });
+        var _ = __webpack_require__("chunkid");
         function _(_) {
           return null != _ && void 0 !== _.focus;
         }
@@ -24840,17 +24873,20 @@ var CLSTAMP = "steamdb";
           return _.navigator.clipboard.readText();
         }
         function _(_) {
-          let _ = window.document;
-          try {
-            _ = window.top.document;
-          } catch (_) {}
-          const _ = _.createElement("textarea");
+          const _ = window.top ?? window,
+            _ = _.document,
+            _ = __webpack_require__.createElement("textarea");
           (_.textContent = _),
             (_.style.position = "fixed"),
             _.body.appendChild(_),
-            __webpack_require__.select();
+            _.select();
           try {
-            _.execCommand("copy");
+            if (
+              ((0, _._)(_, "Browser.NotifyUserActivation") &&
+                _.SteamClient.Browser.NotifyUserActivation(),
+              !__webpack_require__.execCommand("copy"))
+            )
+              throw "document.execCommand false";
           } catch (_) {
             console.warn("Copy to clipboard failed.", _);
           } finally {
@@ -24932,38 +24968,6 @@ var CLSTAMP = "steamdb";
               return !1;
           }
         }
-        __webpack_require__._(_, {
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-          _: () => _,
-        });
         function _(_, _) {
           const _ = _;
           return (
@@ -27118,9 +27122,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 15 2025 : 14:36:04",
-                    BUILD_TIME_UTC: "Oct 15 2025 : 21:36:04",
-                    BUILD_RTIME_UTC: 1760564164,
+                    BUILD_TIME_LOCAL: "Oct 16 2025 : 16:15:53",
+                    BUILD_TIME_UTC: "Oct 16 2025 : 23:15:53",
+                    BUILD_RTIME_UTC: 1760656553,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27907,7 +27911,7 @@ var CLSTAMP = "steamdb";
         9462: "8e5f8b078795d1987ae9",
         9711: "2ed989ee7251a5d19c6f",
         9746: "76c655f56eb1729dfb5d",
-        9858: "d19f9ad1f1e034c5653d",
+        9858: "9fbe03d7744328687d71",
         9869: "f1bd42d1a9b8f121d12d",
         9887: "6cdfc6cb59add2537e70",
       }[_]),
