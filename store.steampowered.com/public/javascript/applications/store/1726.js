@@ -232,8 +232,16 @@
           },
           email_full: { width: 800, height: 300, rgAcceptableTypes: r },
           email_centered: { width: 644, height: 300, rgAcceptableTypes: r },
-          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: r },
-          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: r },
+          broadcast_left: {
+            width: [199, 155],
+            height: [433, 337],
+            rgAcceptableTypes: r,
+          },
+          broadcast_right: {
+            width: [199, 155],
+            height: [433, 337],
+            rgAcceptableTypes: r,
+          },
           sale_header: {
             width: 0,
             height: 0,

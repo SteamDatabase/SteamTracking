@@ -262,13 +262,13 @@
             rgAcceptableTypes: _,
           },
           broadcast_left: {
-            width: 155,
-            height: 337,
+            width: [199, 155],
+            height: [433, 337],
             rgAcceptableTypes: _,
           },
           broadcast_right: {
-            width: 155,
-            height: 337,
+            width: [199, 155],
+            height: [433, 337],
             rgAcceptableTypes: _,
           },
           sale_header: {

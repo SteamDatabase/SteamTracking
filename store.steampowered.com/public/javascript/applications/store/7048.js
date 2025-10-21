@@ -12515,41 +12515,44 @@
             se = n
               .GetIncludedAppIDs()
               .filter((e) => j.Fm.Get().BOwnsApp(e)).length,
-            oe = (0, c.L3)(Y),
-            le = (0, i.tB)(n.GetStorePageURL(D)),
-            me = Boolean(!H && ie > 1),
-            de = n.BHasTags()
+            oe =
+              2 == n.GetStoreItemType() &&
+              Boolean(n.GetBestPurchaseOption().must_purchase_as_set),
+            le = (0, c.L3)(Y),
+            me = (0, i.tB)(n.GetStorePageURL(D)),
+            de = Boolean(!H && ie > 1),
+            ce = n.BHasTags()
               ? n.GetTagIDs()
               : m?.BHasTags()
                 ? m.GetTagIDs()
                 : [],
-            ce = 1 == n.GetStoreItemType() && 1 == ie,
-            ue = 0 == n.GetStoreItemType() || ce,
-            pe = ce && p ? p.GetID() : u.id,
-            he = (0, c.It)(le, Y, J),
-            _e = (0, z.Ae)(),
-            ge =
+            ue = 1 == n.GetStoreItemType() && 1 == ie,
+            pe = 0 == n.GetStoreItemType() || ue,
+            he = ue && p ? p.GetID() : u.id,
+            _e = (0, c.It)(me, Y, J),
+            ge = (0, z.Ae)(),
+            Se =
               D && n.HasDemoStandaloneStorePage()
                 ? n.GetDemoStandaloneStorePageAppIDs()[0]
                 : _,
-            Se = n.GetName()?.length > 0 ? n.GetName() : p.GetName(),
-            fe =
+            fe = n.GetName()?.length > 0 ? n.GetName() : p.GetName(),
+            Ce =
               n.GetFormattedSteamReleaseDate()?.length > 0
                 ? n.GetFormattedSteamReleaseDate()
                 : p?.GetFormattedSteamReleaseDate();
-          let Ce = n.GetShortDescription();
-          (2 == n.GetStoreItemType() || (1 == n.GetStoreItemType() && !ce)) &&
-            (Ce =
-              se > 0 && se < ie
+          let we = n.GetShortDescription();
+          (2 == n.GetStoreItemType() || (1 == n.GetStoreItemType() && !ue)) &&
+            (we =
+              !oe && se > 0 && se < ie
                 ? (0, R.we)("#Sale_Bundle_CompletePartialSet", se, ie)
                 : re
                   ? (0, R.we)("#Sale_BundleSave_WithDiscount", re, ie)
                   : (0, R.we)("#Sale_BundleSave", ie)),
-            (Ce = Ce?.length > 0 ? Ce : p?.GetShortDescription());
-          const we = ne || n.BIsReleased() || n.BIsPrePurchase();
+            (we = we?.length > 0 ? we : p?.GetShortDescription());
+          const ye = ne || n.BIsReleased() || n.BIsPrePurchase();
           return r.createElement(
             E.oj,
-            { appid: ue ? n.GetAppID() : void 0 },
+            { appid: pe ? n.GetAppID() : void 0 },
             r.createElement(
               o.Z,
               {
@@ -12557,8 +12560,8 @@
                   [P().StoreSaleWidgetOuterContainer]: !0,
                   [P().AllowTwoLineHeader]: F,
                 }),
-                onMouseEnter: () => !_e && a(!0),
-                onMouseLeave: () => !_e && a(!1),
+                onMouseEnter: () => !ge && a(!0),
+                onMouseLeave: () => !ge && a(!1),
                 "flow-children": "grid",
                 navEntryPreferPosition: l.iU.PREFERRED_CHILD,
                 autoFocus: W,
@@ -12574,14 +12577,14 @@
                     K ? P().MarketingMessage : "",
                   ),
                   ...(0, v.S)(n, Y, ne, D, void 0, Z),
-                  preferredFocus: me,
+                  preferredFocus: de,
                 },
                 r.createElement(
                   "div",
                   { className: (0, G.A)(P().StoreSaleWidgetHalfLeft) },
                   r.createElement(
                     N.u,
-                    { type: h, id: ge, fnHoverState: a },
+                    { type: h, id: Se, fnHoverState: a },
                     r.createElement(
                       "div",
                       { className: P().StoreSaleWidgetImage },
@@ -12597,17 +12600,17 @@
                   {
                     className: (0, G.A)(
                       P().StoreSaleWidgetRight,
-                      me ? P().Bundle : "",
+                      de ? P().Bundle : "",
                     ),
                   },
-                  Boolean(ue && !Z) &&
+                  Boolean(pe && !Z) &&
                     r.createElement(V.EP, {
-                      appID: pe,
+                      appID: he,
                       classOverride: (0, G.A)(
                         S().WishlistButtonNotTop,
                         "WishlistButton",
                       ),
-                      snr: oe,
+                      snr: le,
                     }),
                   r.createElement(
                     "div",
@@ -12615,7 +12618,7 @@
                     r.createElement(
                       "a",
                       {
-                        href: Z ? void 0 : he,
+                        href: Z ? void 0 : _e,
                         target: M.TS.IN_CLIENT ? void 0 : "_blank",
                         onClick: Z,
                       },
@@ -12627,15 +12630,15 @@
                             "StoreSaleWidgetTitle",
                           ),
                         },
-                        Se,
+                        fe,
                       ),
                     ),
                   ),
-                  de &&
+                  ce &&
                     r.createElement(
                       "div",
                       { className: P().StoreSaleWidgetTags },
-                      de.map((e) =>
+                      ce.map((e) =>
                         r.createElement(B.p, {
                           key: "tag_" + e,
                           tagid: e,
@@ -12646,11 +12649,11 @@
                   r.createElement(
                     "div",
                     { className: P().WidgetReleaseDateAndPlatformCtn, ref: $ },
-                    ue &&
+                    pe &&
                       r.createElement(
                         "div",
                         { className: P().StoreSaleWidgetRelease },
-                        fe,
+                        Ce,
                       ),
                     !L &&
                       r.createElement(
@@ -12676,12 +12679,13 @@
                       { className: P().ReviewScores },
                       r.createElement(V.Jz, { appInfo: u }),
                     ),
-                  me &&
+                  de &&
                     r.createElement(Q, {
                       info: u,
-                      bHideInLibraryApps: 2 == n.GetStoreItemType() && se < ie,
+                      bHideInLibraryApps:
+                        !oe && 2 == n.GetStoreItemType() && se < ie,
                     }),
-                  Boolean(ue && Ce) &&
+                  Boolean(pe && we) &&
                     r.createElement(
                       "div",
                       {
@@ -12690,31 +12694,31 @@
                           "StoreSaleWidgetShortDesc",
                         ),
                       },
-                      Boolean(Ce.startsWith("#") && -1 == Ce.indexOf(" "))
+                      Boolean(we.startsWith("#") && -1 == we.indexOf(" "))
                         ? r.createElement(
                             "span",
                             { className: P().LocalizationSpan },
                             (0, R.oW)(
-                              Ce,
+                              we,
                               r.createElement("i", null),
                               r.createElement("i", null),
                               r.createElement("i", null),
                               r.createElement("i", null),
                             ),
                           )
-                        : Ce,
+                        : we,
                     ),
                   Boolean(!Z)
                     ? r.createElement(
                         r.Fragment,
                         null,
-                        Boolean(A && ue)
-                          ? r.createElement(I.E, { appid: pe, bIsMuted: t })
+                        Boolean(A && pe)
+                          ? r.createElement(I.E, { appid: he, bIsMuted: t })
                           : r.createElement(b.wD, {
                               info: u,
                               bShowDemoButton: g,
                               bHidePrice: T,
-                              bHideWishlistButton: we,
+                              bHideWishlistButton: ye,
                               bShowDeckCompatibilityDialog: x,
                             }),
                       )

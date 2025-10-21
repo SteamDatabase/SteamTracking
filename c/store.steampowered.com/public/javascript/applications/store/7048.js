@@ -13222,6 +13222,9 @@
             _ = _.GetIncludedAppIDs().filter((_) =>
               _._.Get().BOwnsApp(_),
             ).length,
+            _ =
+              2 == _.GetStoreItemType() &&
+              Boolean(_.GetBestPurchaseOption().must_purchase_as_set),
             _ = (0, _._)(_),
             _ = (0, _._)(_.GetStorePageURL(_)),
             _ = Boolean(!_ && _ > 1),
@@ -13247,7 +13250,7 @@
           let _ = _.GetShortDescription();
           (2 == _.GetStoreItemType() || (1 == _.GetStoreItemType() && !_)) &&
             (_ =
-              _ > 0 && _ < _
+              !_ && _ > 0 && _ < _
                 ? (0, _._)("#Sale_Bundle_CompletePartialSet", _, _)
                 : _
                   ? (0, _._)("#Sale_BundleSave_WithDiscount", _, _)
@@ -13419,7 +13422,8 @@
                   _ &&
                     _.createElement(_, {
                       info: _,
-                      bHideInLibraryApps: 2 == _.GetStoreItemType() && _ < _,
+                      bHideInLibraryApps:
+                        !_ && 2 == _.GetStoreItemType() && _ < _,
                     }),
                   Boolean(_ && _) &&
                     _.createElement(

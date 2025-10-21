@@ -67,6 +67,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -145,19 +146,21 @@
               }, [_, _, _]);
             if (_ && !__webpack_require__) {
               const _ = new Array(),
+                _ = new Array(),
                 _ = new Array();
               return (
                 _.forEach((_) => {
-                  _._.Get()
-                    .GetBundle(_)
-                    .GetIncludedAppIDs()
-                    .some((_) => !_._.Get().BOwnsApp(_))
-                    ? _.push(_)
+                  const _ = _._.Get().GetBundle(_);
+                  _.GetIncludedAppIDs().some((_) => !_._.Get().BOwnsApp(_))
+                    ? _.GetBestPurchaseOption().must_purchase_as_set
+                      ? __webpack_require__.push(_)
+                      : _.push(_)
                     : _.push(_);
                 }),
                 {
                   rgOwnedBundleIDList: _,
-                  rgBundleIDList: _,
+                  rgCompleteTheSetBundleIDList: _,
+                  rgMustPurchaseTogetherBundleIDList: _,
                 }
               );
             }
@@ -166,7 +169,8 @@
         if (!_ || !_) return null;
         const _ =
           _.GetAssets().GetLibraryHeroURL_2x() ??
-          _.GetAssets().GetLibraryHeroURL();
+          _.GetAssets().GetLibraryHeroURL() ??
+          _.GetAssets().GetPageBackgroundURL();
         return _.createElement(
           "div",
           {
@@ -200,10 +204,56 @@
               eBundleSort: __webpack_require__,
               fnSetSort: _,
             }),
-            _.createElement(_, {
-              appId: _.GetAppID(),
-              rgBundleIDs: _.rgBundleIDList,
-            }),
+            _.rgCompleteTheSetBundleIDList?.length > 0 &&
+              _.createElement(
+                "div",
+                {
+                  className: _().BundlesInLibrary,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Title,
+                  },
+                  (0, _._)("#BundleList_CompleteTheSet"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Subtitle,
+                  },
+                  (0, _._)("#BundleList_CompleteTheSetSubtitle"),
+                ),
+                _.createElement(_, {
+                  appId: _.GetAppID(),
+                  rgBundleIDs: _.rgCompleteTheSetBundleIDList,
+                }),
+              ),
+            _.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
+              _.createElement(
+                "div",
+                {
+                  className: _().BundlesInLibrary,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Title,
+                  },
+                  (0, _._)("#BundleList_MustPurchaseAsSet"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Subtitle,
+                  },
+                  (0, _._)("#BundleList_MustPurchaseAsSetSubtitle"),
+                ),
+                _.createElement(_, {
+                  appId: _.GetAppID(),
+                  rgBundleIDs: _.rgMustPurchaseTogetherBundleIDList,
+                }),
+              ),
             _.rgOwnedBundleIDList?.length > 0 &&
               _.createElement(
                 "div",
@@ -303,6 +353,9 @@
               },
               _.GetName(),
             ),
+            _.createElement(_._, {
+              storeItem: _,
+            }),
           ),
           _.createElement(
             "div",
