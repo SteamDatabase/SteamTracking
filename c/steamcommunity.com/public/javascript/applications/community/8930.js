@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Xử lý, không thực hiện hành động nào",
 	"moderation_resolutionstatus_pending": "Đang chờ kiểm duyệt",
 	"moderation_resolutionstatus_acquitted": "Đã xem xét: không cần hành động",
+	"moderation_resolutionstatus_purged": "Nội dung đã xóa ngay lập tức",
 	"moderation_resolutionstatus_removed": "Nội dung đã gỡ bỏ",
 	"moderation_resolutionstatus_relabelled": "Nội dung đã đổi nhãn",
 	"moderation_resolutionstatus_suspicious": "Tài khoản bị khóa vị nội dung đáng ngờ",

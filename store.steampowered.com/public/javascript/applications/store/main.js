@@ -5341,13 +5341,11 @@
         const e = i.useRef(null),
           t = i.useCallback(
             (t) => {
-              window.requestAnimationFrame(() => {
-                e.current?.BFocusWithin() &&
-                  e.current
-                    .Node()
-                    ?.GetLastFocusElement()
-                    ?.scrollIntoView({ behavior: "auto", block: "nearest" });
-              });
+              e.current?.BFocusWithin() &&
+                e.current
+                  .Node()
+                  ?.GetLastFocusElement()
+                  ?.scrollIntoView({ behavior: "auto", block: "nearest" });
             },
             [e],
           );
@@ -8494,6 +8492,16 @@
                     n: 10,
                     br: s.qM.readString,
                     bw: s.gp.writeString,
+                  },
+                  queue_head_position_at_reservation: {
+                    n: 11,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
+                  },
+                  queue_head_position_now: {
+                    n: 12,
+                    br: s.qM.readInt32,
+                    bw: s.gp.writeInt32,
                   },
                 },
               }),
@@ -26713,7 +26721,7 @@
               e,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 42, 52, 71],
+              [11, 12, 20, 21, 25, 41, 42, 44, 52, 71],
               null,
             );
         }
@@ -26799,6 +26807,7 @@
                   purchase_options: { n: 41, c: S, r: !0, q: !0 },
                   accessories: { n: 42, c: S, r: !0, q: !0 },
                   self_purchase_option: { n: 43, c: S },
+                  invalid_purchase_options: { n: 44, c: S, r: !0, q: !0 },
                   screenshots: { n: 50, c: z },
                   trailers: { n: 51, c: T },
                   supported_languages: { n: 52, c: L, r: !0, q: !0 },
@@ -32309,18 +32318,13 @@
           ),
         ];
       }
-      function u(e) {
-        const [t, r] = i.useState(!1),
-          n = i.useRef(void 0);
+      function u() {
+        const [e, t] = i.useState(!1);
         return [
-          t,
+          e,
           {
-            onMouseEnter: i.useCallback(() => {
-              r(!0), clearTimeout(n.current);
-            }, []),
-            onMouseLeave: i.useCallback(() => {
-              e ? (n.current = setTimeout(() => r(!1), e)) : r(!1);
-            }, [e]),
+            onMouseEnter: i.useCallback(() => t(!0), []),
+            onMouseLeave: i.useCallback(() => t(!1), []),
           },
         ];
       }
@@ -53847,39 +53851,42 @@
             strMiddleButtonText: m,
             onMiddleButton: d,
             bAlertDialog: p,
-            children: g,
-            ..._
+            bProgressDialog: g,
+            children: _,
+            ...h
           } = e,
-          h = l || (0, a.we)("#Button_Close");
-        let f = i.createElement(n.CB, {
+          f = l || (0, a.we)("#Button_Close");
+        let b = i.createElement(n.CB, {
           bOKDisabled: e.bOKDisabled,
           bCancelDisabled: e.bCancelDisabled,
           strOKText: l,
           onCancel: t(e.onCancel),
           strCancelText: c,
         });
-        p
-          ? (f = i.createElement(n.jn, null, h))
-          : d &&
-            (f = i.createElement(n.VQ, {
-              bOKDisabled: e.bOKDisabled,
-              bCancelDisabled: e.bCancelDisabled,
-              strOKText: l,
-              onCancel: t(e.onCancel),
-              strCancelText: c,
-              onUpdate: () => {
-                d(), e.closeModal && e.closeModal();
-              },
-              strUpdateText: m,
-              bUpdateDisabled: e.bMiddleDisabled,
-            }));
-        const b = i.useId();
+        g
+          ? (b = void 0)
+          : p
+            ? (b = i.createElement(n.jn, null, f))
+            : d &&
+              (b = i.createElement(n.VQ, {
+                bOKDisabled: e.bOKDisabled,
+                bCancelDisabled: e.bCancelDisabled,
+                strOKText: l,
+                onCancel: t(e.onCancel),
+                strCancelText: c,
+                onUpdate: () => {
+                  d(), e.closeModal && e.closeModal();
+                },
+                strUpdateText: m,
+                bUpdateDisabled: e.bMiddleDisabled,
+              }));
+        const B = i.useId();
         return i.createElement(
           o.eV,
           {
-            ..._,
+            ...h,
             title: r || i.createElement(i.Fragment, null, " "),
-            "aria-describedby": b,
+            "aria-describedby": B,
           },
           i.createElement(
             n.f3,
@@ -53889,12 +53896,12 @@
               null,
               i.createElement(
                 "div",
-                { id: b, style: { display: "contents" } },
+                { id: B, style: { display: "contents" } },
                 s,
               ),
-              g,
+              _,
             ),
-            i.createElement(n.wi, null, f),
+            i.createElement(n.wi, null, b),
           ),
         );
       }
@@ -54844,69 +54851,70 @@
       r.d(t, {
         $4X: () => Xe,
         $vK: () => zt,
-        Aj0: () => ie,
+        Aj0: () => re,
         BQz: () => Rt,
         Bir: () => gt,
         Bki: () => Ct,
-        CeX: () => A,
+        CeX: () => P,
         Cv4: () => m,
         DK4: () => b,
         DQe: () => yt,
-        Dp6: () => ue,
+        Dp6: () => ce,
         EEf: () => Ae,
         ENo: () => Ve,
         Exy: () => He,
-        F2T: () => G,
+        F2T: () => N,
+        FEq: () => ye,
         GB9: () => f,
-        GSe: () => te,
+        GSe: () => ee,
         Gkr: () => et,
         GrD: () => Le,
-        Gv$: () => I,
+        Gv$: () => z,
         Hxx: () => ht,
-        IOc: () => F,
-        IrQ: () => U,
+        IOc: () => E,
+        IrQ: () => A,
         JBW: () => u,
-        Jlk: () => x,
-        KJW: () => re,
-        KKS: () => fe,
+        Jlk: () => W,
+        KJW: () => te,
+        KKS: () => he,
         LDq: () => ft,
-        Lh2: () => he,
-        MOk: () => $,
+        Lh2: () => _e,
+        MOk: () => K,
         MQO: () => Ce,
-        MUh: () => ge,
+        MUh: () => pe,
         MbF: () => Ut,
-        MvQ: () => Q,
+        MvQ: () => $,
         MwB: () => xe,
-        N3h: () => L,
-        N8C: () => we,
+        N3h: () => O,
+        N8C: () => Be,
         NCC: () => Je,
         NtH: () => Ye,
         OSJ: () => xt,
-        P7r: () => Be,
+        P7r: () => be,
         Q38: () => g,
-        Qte: () => se,
-        ROZ: () => oe,
+        Qte: () => ne,
+        ROZ: () => ae,
         SYj: () => it,
         T4m: () => Qe,
         UTF: () => Pe,
-        V5W: () => ee,
-        VR: () => pe,
+        V5W: () => J,
+        VR: () => de,
         VSd: () => Ot,
         Vgk: () => vt,
         Vt2: () => It,
-        VvS: () => k,
+        VvS: () => x,
         WX$: () => mt,
         X: () => S,
-        X4B: () => D,
+        X4B: () => j,
         XH_: () => pt,
         XTb: () => y,
-        Xjb: () => Z,
+        Xjb: () => V,
         Xz0: () => Ee,
         YNO: () => C,
         Yoo: () => Nt,
         ZPc: () => Ke,
         ZTc: () => Ue,
-        ZWw: () => K,
+        ZWw: () => Z,
         ZjT: () => at,
         ZnA: () => St,
         Zo0: () => nt,
@@ -54914,10 +54922,10 @@
         _h6: () => je,
         aVR: () => ct,
         agV: () => Dt,
-        apU: () => ce,
+        apU: () => le,
         b8_: () => wt,
         bKN: () => Pt,
-        bPr: () => me,
+        bPr: () => ue,
         bcZ: () => ot,
         bfp: () => De,
         ccb: () => Et,
@@ -54927,28 +54935,28 @@
         e6B: () => Bt,
         eNX: () => Se,
         eSy: () => B,
-        eTF: () => P,
+        eTF: () => D,
         emH: () => qt,
         f5X: () => Me,
-        fSs: () => E,
+        fSs: () => T,
         faJ: () => Oe,
         ffu: () => ze,
         g$j: () => Tt,
-        h20: () => Y,
-        hz4: () => V,
-        i3G: () => q,
-        i6V: () => le,
+        h20: () => Q,
+        hz4: () => H,
+        i3G: () => U,
+        i6V: () => oe,
         ilR: () => ke,
-        jGG: () => O,
+        jGG: () => F,
         jIP: () => ut,
         jZW: () => qe,
-        jZl: () => ye,
+        jZl: () => we,
         jdP: () => kt,
         jlt: () => dt,
         kPc: () => Te,
-        kaY: () => _e,
-        l8x: () => H,
-        lMJ: () => X,
+        kaY: () => ge,
+        l8x: () => G,
+        lMJ: () => Y,
         lRD: () => st,
         mb7: () => Ht,
         mcU: () => Gt,
@@ -54960,31 +54968,30 @@
         ofN: () => Lt,
         oy: () => Wt,
         pD: () => p,
-        qcc: () => be,
+        qcc: () => fe,
         qnF: () => $e,
         rI_: () => _,
         rNt: () => Ft,
-        rfv: () => de,
+        rfv: () => me,
         sDU: () => At,
         sED: () => v,
-        sdo: () => z,
-        t1X: () => j,
-        tID: () => ne,
+        sdo: () => R,
+        t1X: () => k,
+        tID: () => ie,
         tIO: () => jt,
-        uMb: () => N,
+        uMb: () => q,
         vCk: () => M,
-        vRz: () => W,
+        vRz: () => L,
         vjL: () => Ie,
         vrn: () => Ze,
         wB_: () => h,
         wC1: () => d,
         ww0: () => Re,
-        xv8: () => T,
+        xv8: () => I,
         yHA: () => Ge,
-        yUp: () => R,
-        y_e: () => ae,
+        y_e: () => se,
         zD7: () => w,
-        zHo: () => J,
+        zHo: () => X,
       });
       var i = r(90626),
         n = r(52038),
@@ -55356,46 +55363,6 @@
         );
       }
       function R(e) {
-        let t = "SVGIcon_Button SVGIcon_Pin";
-        return (
-          e.bPinned && (t += " Pinned"),
-          i.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: t,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            i.createElement("path", {
-              className: "point",
-              d: "M134.787,129.241v52.051v26.025c0.041,4.334-0.092,8.677,0.094,13.009c-1.493,4.332-3.129,8.675-5.239,13.009 c-2.109-4.334-3.734-8.677-5.237-13.009c0.186-4.333,0.05-8.677,0.092-33.009v-26.025v-32.051v-5.146h10.291V129.241z",
-            }),
-            i.createElement("path", {
-              className: "head",
-              d: "M186.55,151.049H73.351l-5.146-5.146c0-23.791,11.186-40.359,30.871-46.091V39.394 c-6.843-3.478-17.164-10.034-17.154-27.312l5.146-5.146h85.167l5.146,5.146c0,17.227-9.828,23.803-16.537,27.292v60.521 c19.664,6.062,30.852,22.609,30.852,46.01L186.55,151.049z",
-            }),
-            i.createElement("line", {
-              className: "ground",
-              opacity: e.bPinned ? 1 : 0,
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "16",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              x1: "33.833",
-              y1: "238.5",
-              x2: "221.834",
-              y2: "238.5",
-            }),
-          )
-        );
-      }
-      function z(e) {
         return (0, o.Qn)()
           ? i.createElement(
               "svg",
@@ -55458,7 +55425,7 @@
               }),
             );
       }
-      function I() {
+      function z() {
         return i.createElement(
           "svg",
           {
@@ -55502,7 +55469,7 @@
           }),
         );
       }
-      function T() {
+      function I() {
         return i.createElement(
           "svg",
           {
@@ -55525,7 +55492,7 @@
           }),
         );
       }
-      function E(e) {
+      function T(e) {
         const { muted: t, className: r } = e;
         return i.createElement(
           "svg",
@@ -55593,7 +55560,7 @@
           ),
         );
       }
-      function F() {
+      function E() {
         return i.createElement(
           "svg",
           { width: "50px", height: "25px", viewBox: "0 0 50 25" },
@@ -55602,7 +55569,7 @@
           }),
         );
       }
-      function O() {
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -55622,7 +55589,7 @@
           }),
         );
       }
-      function L() {
+      function O() {
         return i.createElement(
           "svg",
           {
@@ -55642,7 +55609,7 @@
           }),
         );
       }
-      function W() {
+      function L() {
         return i.createElement(
           "svg",
           {
@@ -55664,7 +55631,7 @@
           }),
         );
       }
-      function x(e) {
+      function W(e) {
         const { color: t = "#fff", ...r } = e;
         return i.createElement(
           "svg",
@@ -55691,7 +55658,7 @@
           }),
         );
       }
-      function k(e) {
+      function x(e) {
         let t = e.color || "#ffffff";
         return i.createElement(
           "svg",
@@ -55719,7 +55686,7 @@
           }),
         );
       }
-      function j() {
+      function k() {
         return i.createElement(
           "svg",
           {
@@ -55735,7 +55702,7 @@
           }),
         );
       }
-      function D(e) {
+      function j(e) {
         let t = e.highlightColor || "#00ccff",
           r = e.color || "#2d73ff";
         const [n, s] = (0, l.l)(),
@@ -55810,7 +55777,7 @@
           }),
         );
       }
-      function P(e) {
+      function D(e) {
         const { className: t, color: r = "#020202" } = e;
         return i.createElement(
           "svg",
@@ -55867,7 +55834,7 @@
           ),
         );
       }
-      function A() {
+      function P() {
         return i.createElement(
           "svg",
           {
@@ -55890,7 +55857,7 @@
           }),
         );
       }
-      function U(e) {
+      function A(e) {
         return (0, o.Qn)()
           ? i.createElement(
               "svg",
@@ -55926,7 +55893,7 @@
               }),
             );
       }
-      function q(e) {
+      function U(e) {
         return i.createElement(
           "svg",
           {
@@ -55961,7 +55928,7 @@
           }),
         );
       }
-      function N(e) {
+      function q(e) {
         return i.createElement(
           "svg",
           {
@@ -55983,7 +55950,7 @@
           }),
         );
       }
-      function G(e) {
+      function N(e) {
         return i.createElement(
           "svg",
           {
@@ -56022,7 +55989,7 @@
             }),
         );
       }
-      function H(e) {
+      function G(e) {
         const { angle: t, ...r } = e;
         return i.createElement(
           "svg",
@@ -56042,7 +56009,7 @@
           }),
         );
       }
-      function V() {
+      function H() {
         return i.createElement(
           "svg",
           {
@@ -56078,7 +56045,7 @@
           }),
         );
       }
-      function Z() {
+      function V() {
         return i.createElement(
           "svg",
           {
@@ -56104,7 +56071,7 @@
           }),
         );
       }
-      function K() {
+      function Z() {
         return i.createElement(
           "svg",
           {
@@ -56137,7 +56104,7 @@
           }),
         );
       }
-      function $() {
+      function K() {
         return i.createElement(
           "svg",
           {
@@ -56158,7 +56125,7 @@
           ),
         );
       }
-      function Q() {
+      function $() {
         return i.createElement(
           "svg",
           {
@@ -56185,7 +56152,7 @@
           }),
         );
       }
-      function Y() {
+      function Q() {
         return i.createElement(
           "svg",
           {
@@ -56207,7 +56174,7 @@
           }),
         );
       }
-      function X() {
+      function Y() {
         return i.createElement(
           "svg",
           {
@@ -56284,7 +56251,7 @@
           ),
         );
       }
-      function J() {
+      function X() {
         return i.createElement(
           "svg",
           {
@@ -56361,7 +56328,7 @@
           ),
         );
       }
-      function ee(e) {
+      function J(e) {
         return i.createElement(
           "svg",
           {
@@ -56382,7 +56349,7 @@
           }),
         );
       }
-      function te(e) {
+      function ee(e) {
         let { bPending: t, bShowArm: r, className: s, ...a } = e;
         return (0, o.Qn)({ bSuppressAssert: !0 })
           ? i.createElement(
@@ -56477,7 +56444,7 @@
               ),
             );
       }
-      function re(e) {
+      function te(e) {
         return i.createElement(
           "svg",
           {
@@ -56493,7 +56460,7 @@
           }),
         );
       }
-      function ie() {
+      function re() {
         return i.createElement(
           "svg",
           {
@@ -56528,7 +56495,7 @@
           }),
         );
       }
-      function ne(e) {
+      function ie(e) {
         return i.createElement(
           "svg",
           {
@@ -56566,7 +56533,7 @@
           }),
         );
       }
-      function se(e) {
+      function ne(e) {
         const t = (0, n.A)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -56599,7 +56566,7 @@
           }),
         );
       }
-      function ae() {
+      function se() {
         return i.createElement(
           "svg",
           {
@@ -56625,7 +56592,7 @@
           }),
         );
       }
-      function oe(e) {
+      function ae(e) {
         return i.createElement(
           "svg",
           {
@@ -56647,7 +56614,7 @@
           ),
         );
       }
-      function le() {
+      function oe() {
         return i.createElement(
           "svg",
           {
@@ -56667,7 +56634,7 @@
           ),
         );
       }
-      function ce() {
+      function le() {
         return i.createElement(
           "svg",
           {
@@ -56704,7 +56671,7 @@
           ),
         );
       }
-      function ue() {
+      function ce() {
         return i.createElement(
           "svg",
           {
@@ -56732,7 +56699,7 @@
           }),
         );
       }
-      function me() {
+      function ue() {
         return i.createElement(
           "svg",
           {
@@ -56752,7 +56719,7 @@
           }),
         );
       }
-      function de(e) {
+      function me(e) {
         const { className: t } = e;
         return i.createElement(
           "svg",
@@ -56772,7 +56739,7 @@
           }),
         );
       }
-      function pe(e) {
+      function de(e) {
         return i.createElement(
           "svg",
           {
@@ -56794,7 +56761,7 @@
           }),
         );
       }
-      function ge(e) {
+      function pe(e) {
         const [t, r] = (0, l.l)();
         return i.createElement(
           "svg",
@@ -56833,7 +56800,7 @@
           ),
         );
       }
-      function _e() {
+      function ge() {
         return i.createElement(
           "svg",
           {
@@ -56878,7 +56845,7 @@
           }),
         );
       }
-      function he() {
+      function _e() {
         return i.createElement(
           "svg",
           {
@@ -56911,7 +56878,7 @@
           }),
         );
       }
-      function fe() {
+      function he() {
         return i.createElement(
           "svg",
           {
@@ -56930,7 +56897,7 @@
           }),
         );
       }
-      function be() {
+      function fe() {
         return i.createElement(
           "svg",
           {
@@ -56949,7 +56916,7 @@
           }),
         );
       }
-      function Be() {
+      function be() {
         return i.createElement(
           "svg",
           {
@@ -56970,7 +56937,7 @@
           }),
         );
       }
-      function we() {
+      function Be() {
         return i.createElement(
           "svg",
           {
@@ -57001,7 +56968,7 @@
           }),
         );
       }
-      function ye() {
+      function we() {
         return i.createElement(
           "svg",
           {
@@ -57064,6 +57031,33 @@
             y1: "210.504",
             x2: "208.507",
             y2: "55.004",
+          }),
+        );
+      }
+      function ye(e) {
+        const t = (0, n.A)(
+          e.className,
+          "SVGIcon_Button",
+          e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled",
+        );
+        return i.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: t,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          i.createElement("path", {
+            fill: e.filled ? "#currentColor" : "none",
+            stroke: "#currentColor",
+            strokeWidth: "10",
+            strokeMiterlimit: "10",
+            d: "M127.755,18.624 c-2.061,0.101-3.846,1.465-4.485,3.427L98.312,96.933H18.379c-2.745,0.01-4.963,2.242-4.955,4.989 c0.006,1.572,0.754,3.05,2.019,3.984l64.925,47.476L55.41,230.873c-0.848,2.612,0.582,5.417,3.192,6.265 c1.521,0.495,3.186,0.228,4.475-0.719L128,188.945l64.926,47.474c2.212,1.624,5.324,1.144,6.947-1.071 c0.944-1.29,1.211-2.954,0.719-4.475l-24.959-77.492l64.922-47.476c2.211-1.63,2.681-4.743,1.049-6.953 c-0.934-1.265-2.41-2.015-3.984-2.02H157.69l-24.959-74.882C132.033,19.917,129.997,18.513,127.755,18.624z",
           }),
         );
       }
@@ -60142,12 +60136,38 @@
     },
     56011: (e, t, r) => {
       "use strict";
-      function i(e) {
+      r.d(t, {
+        $e: () => C,
+        IB: () => b,
+        Kf: () => S,
+        MS: () => f,
+        Mr: () => I,
+        NO: () => s,
+        Oe: () => R,
+        TV: () => B,
+        YQ: () => d,
+        a_: () => c,
+        bZ: () => o,
+        id: () => a,
+        kD: () => n,
+        lc: () => z,
+        oQ: () => w,
+        pE: () => y,
+        pd: () => l,
+        qf: () => m,
+        tg: () => _,
+        tl: () => h,
+        uX: () => u,
+        ww: () => p,
+        yU: () => v,
+      });
+      var i = r(66703);
+      function n(e) {
         return null != e && void 0 !== e.focus;
       }
-      function n(e) {
+      function s(e) {
         if (!(e.clientX || e.clientY || e.screenX || e.screenY)) return !0;
-        if (e.relatedTarget) return !s(e.currentTarget, e.relatedTarget);
+        if (e.relatedTarget) return !a(e.currentTarget, e.relatedTarget);
         {
           const t = e.currentTarget.getBoundingClientRect();
           return (
@@ -60162,7 +60182,7 @@
           );
         }
       }
-      function s(e, t) {
+      function a(e, t) {
         let r = t;
         for (; r; ) {
           if (
@@ -60175,7 +60195,7 @@
         }
         return !1;
       }
-      function a(e, t) {
+      function o(e, t) {
         let r = 0,
           i = 0;
         return (
@@ -60188,7 +60208,7 @@
           Math.sqrt(r * r + i * i)
         );
       }
-      function o(e, t) {
+      function l(e, t) {
         return {
           top: e.screenTop + t.top,
           bottom: e.screenTop + t.bottom,
@@ -60196,7 +60216,7 @@
           right: e.screenLeft + t.right,
         };
       }
-      function l(e) {
+      function c(e) {
         let t = 1,
           r = e;
         for (; null != r && "HTML" != r.tagName; ) {
@@ -60209,42 +60229,45 @@
         }
         return t;
       }
-      function c(e) {
+      function u(e) {
         let t;
         return (
           e &&
-            i(e.currentTarget) &&
+            n(e.currentTarget) &&
             (t = e.currentTarget.ownerDocument.defaultView),
           t
         );
       }
-      function u(e) {
+      function m(e) {
         let t;
         return e && (t = e.ownerDocument.defaultView), t;
       }
-      function m(e) {
+      function d(e) {
         const t = "steam://openurl/";
         e.startsWith(t) && (e = e.slice(16)),
           (function (e) {
-            let t = window.document;
+            const t = window.top ?? window,
+              r = t.document,
+              n = r.createElement("textarea");
+            (n.textContent = e),
+              (n.style.position = "fixed"),
+              r.body.appendChild(n),
+              n.select();
             try {
-              t = window.top.document;
-            } catch (e) {}
-            const r = t.createElement("textarea");
-            (r.textContent = e),
-              (r.style.position = "fixed"),
-              t.body.appendChild(r),
-              r.select();
-            try {
-              t.execCommand("copy");
+              if (
+                ((0, i.Fj)(t, "Browser.NotifyUserActivation") &&
+                  t.SteamClient.Browser.NotifyUserActivation(),
+                !r.execCommand("copy"))
+              )
+                throw "document.execCommand false";
             } catch (e) {
               console.warn("Copy to clipboard failed.", e);
             } finally {
-              t.body.removeChild(r);
+              r.body.removeChild(n);
             }
           })(e);
       }
-      function d(e) {
+      function p(e) {
         const t = e.ownerDocument;
         return Boolean(
           t.fullscreen ||
@@ -60253,21 +60276,21 @@
             t.msFullscreenElement,
         );
       }
-      let p;
-      function g() {
-        if (void 0 !== p) return p;
+      let g;
+      function _() {
+        if (void 0 !== g) return g;
         let e = document.createElement("div");
         return (
-          (p = !!(
+          (g = !!(
             e.requestFullscreen ||
             e.webkitRequestFullscreen ||
             e.mozRequestFullScreen ||
             e.msRequestFullscreen
           )),
-          p
+          g
         );
       }
-      function _(e, t) {
+      function h(e, t) {
         const r = e;
         return r.requestFullscreen
           ? (r.requestFullscreen(), !0)
@@ -60279,7 +60302,7 @@
                 ? (r.mozRequestFullScreen(), !0)
                 : !!r.msRequestFullscreen && (r.msRequestFullscreen(), !0);
       }
-      function h(e) {
+      function f(e) {
         const t = e.ownerDocument;
         t.cancelFullscreen
           ? t.cancelFullscreen()
@@ -60289,10 +60312,10 @@
               ? t.mozCancelFullScreen()
               : t.msExitFullscreen && t.msExitFullscreen();
       }
-      function f(e) {
+      function b(e) {
         return "INPUT" === e.nodeName;
       }
-      function b(e, t) {
+      function B(e, t) {
         switch (e) {
           case "TEXTAREA":
             return !0;
@@ -60319,37 +60342,12 @@
             return !1;
         }
       }
-      function B(e) {
+      function w(e) {
         "loading" == document.readyState
           ? document.addEventListener("DOMContentLoaded", e)
           : e();
       }
-      r.d(t, {
-        $e: () => M,
-        IB: () => f,
-        Kf: () => C,
-        MS: () => h,
-        Mr: () => z,
-        NO: () => n,
-        Oe: () => v,
-        TV: () => b,
-        YQ: () => m,
-        a_: () => l,
-        bZ: () => a,
-        id: () => s,
-        kD: () => i,
-        lc: () => R,
-        oQ: () => B,
-        pE: () => w,
-        pd: () => o,
-        qf: () => u,
-        tg: () => g,
-        tl: () => _,
-        uX: () => c,
-        ww: () => d,
-        yU: () => S,
-      });
-      function w(e, t) {
+      function y(e, t) {
         const r = e;
         return (
           (r.lastModifiedDate = new Date()),
@@ -60357,10 +60355,10 @@
           e
         );
       }
-      function y(e, t) {
+      function M(e, t) {
         let r = e?.parentElement;
         for (; r; ) {
-          if (i(r)) {
+          if (n(r)) {
             if (!t || "x" == t) {
               const e = window.getComputedStyle(r);
               if (
@@ -60382,22 +60380,22 @@
           }
           r = r.parentElement;
         }
-        return i(r) ? r : null;
-      }
-      function M(e, t) {
-        const r = [];
-        let i = e;
-        for (; (i = y(i, t)); ) r.push(i);
-        return r;
+        return n(r) ? r : null;
       }
       function C(e, t) {
+        const r = [];
+        let i = e;
+        for (; (i = M(i, t)); ) r.push(i);
+        return r;
+      }
+      function S(e, t) {
         let r = e;
         for (; r; ) {
           if (t(r)) return r;
           r = r.parentElement;
         }
       }
-      function S() {
+      function v() {
         return (function (e) {
           const t = {};
           return (
@@ -60408,10 +60406,10 @@
           );
         })(document);
       }
-      function v(e, t) {
-        R(e.document, t, !0);
+      function R(e, t) {
+        z(e.document, t, !0);
       }
-      function R(e, t, r) {
+      function z(e, t, r) {
         const i = Object.assign({}, t),
           n = e.getElementsByTagName("head")[0],
           s = n.getElementsByTagName("link"),
@@ -60432,7 +60430,7 @@
         }
         return n.prepend(...o), o;
       }
-      function z(e, t, r) {
+      function I(e, t, r) {
         if ("childList" === e.type) {
           for (let r = 0; r < e.addedNodes.length; r++) {
             const i = e.addedNodes[r];
@@ -65575,7 +65573,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -65601,7 +65599,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71153,7 +71151,7 @@
           r.e(2797),
           r.e(7436),
           r.e(7403),
-          r.e(6535),
+          r.e(9214),
           r.e(4796),
           r.e(9063),
           r.e(1726),
@@ -71163,9 +71161,9 @@
           r.e(1006),
           r.e(1035),
           r.e(1677),
-          r.e(2761),
-          r.e(5251),
-          r.e(7612),
+          r.e(875),
+          r.e(4930),
+          r.e(4523),
           r.e(9672),
         ]).then(r.bind(r, 5907)),
       );
@@ -71228,7 +71226,7 @@
       const uo = co(() =>
           Promise.all([
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(1006),
             r.e(4860),
@@ -71243,7 +71241,7 @@
             r.e(5979),
             r.e(2797),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(9063),
             r.e(6883),
             r.e(1006),
@@ -71256,12 +71254,12 @@
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
+            r.e(9099),
             r.e(6334),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71272,18 +71270,18 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
             r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
             r.e(8310),
             r.e(7333),
           ]).then(r.bind(r, 72256)),
@@ -71296,16 +71294,16 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
             r.e(3270),
             r.e(7048),
             r.e(6883),
-            r.e(9945),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(8019),
+            r.e(9139),
             r.e(283),
             r.e(177),
             r.e(8396),
@@ -71316,13 +71314,13 @@
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
-            r.e(7276),
-            r.e(3742),
+            r.e(9099),
+            r.e(4135),
+            r.e(5313),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71333,19 +71331,19 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
             r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
-            r.e(1240),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
+            r.e(3615),
             r.e(6855),
           ]).then(r.bind(r, 9678)),
         ),
@@ -71354,14 +71352,14 @@
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
+            r.e(9099),
             r.e(2298),
             r.e(9754),
             r.e(5422),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71372,61 +71370,33 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
             r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
             r.e(970),
           ]).then(r.bind(r, 34568)),
         ),
-        fo = co(() => Promise.all([r.e(2797), r.e(30)]).then(r.bind(r, 91648))),
-        bo = co(() =>
-          Promise.all([
-            r.e(6597),
-            r.e(2797),
-            r.e(7403),
-            r.e(6535),
-            r.e(4796),
-            r.e(9063),
-            r.e(1726),
-            r.e(3687),
-          ]).then(r.bind(r, 87731)),
-        ),
-        Bo = co(() => r.e(1402).then(r.bind(r, 44899))),
-        wo = co(() =>
+        fo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
+            r.e(7937),
+            r.e(9099),
+            r.e(4135),
+            r.e(5313),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
-            r.e(4796),
-            r.e(9063),
-            r.e(1726),
-            r.e(3270),
-            r.e(7048),
-            r.e(6883),
-            r.e(9945),
-            r.e(716),
-          ]).then(r.bind(r, 49271)),
-        ),
-        yo = co(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(2797),
-            r.e(7436),
-            r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71435,12 +71405,55 @@
             r.e(6883),
             r.e(1006),
             r.e(1035),
+            r.e(4860),
             r.e(1677),
-            r.e(2761),
-            r.e(5251),
-            r.e(7612),
-            r.e(9672),
-          ]).then(r.bind(r, 25054)),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
+            r.e(2011),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
+            r.e(3615),
+            r.e(3276),
+          ]).then(r.bind(r, 44231)),
+        ),
+        bo = co(() => Promise.all([r.e(2797), r.e(30)]).then(r.bind(r, 91648))),
+        Bo = co(() =>
+          Promise.all([
+            r.e(6597),
+            r.e(2797),
+            r.e(7403),
+            r.e(9214),
+            r.e(4796),
+            r.e(9063),
+            r.e(1726),
+            r.e(3687),
+          ]).then(r.bind(r, 87731)),
+        ),
+        wo = co(() => r.e(1402).then(r.bind(r, 44899))),
+        yo = co(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(2797),
+            r.e(7436),
+            r.e(7403),
+            r.e(9214),
+            r.e(4796),
+            r.e(9063),
+            r.e(1726),
+            r.e(3270),
+            r.e(7048),
+            r.e(6883),
+            r.e(6014),
+            r.e(716),
+          ]).then(r.bind(r, 49271)),
         ),
         Mo = co(() =>
           Promise.all([
@@ -71449,7 +71462,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71459,25 +71472,20 @@
             r.e(1006),
             r.e(1035),
             r.e(1677),
-            r.e(2761),
-            r.e(5251),
-            r.e(7612),
+            r.e(875),
+            r.e(4930),
+            r.e(4523),
             r.e(9672),
-          ]).then(r.bind(r, 6804)),
+          ]).then(r.bind(r, 25054)),
         ),
         Co = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
-            r.e(7937),
-            r.e(5500),
-            r.e(2298),
-            r.e(9754),
-            r.e(5422),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71486,35 +71494,26 @@
             r.e(6883),
             r.e(1006),
             r.e(1035),
-            r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
-            r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
-            r.e(970),
-          ]).then(r.bind(r, 58426)),
+            r.e(875),
+            r.e(4930),
+            r.e(4523),
+            r.e(9672),
+          ]).then(r.bind(r, 6804)),
         ),
         So = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
+            r.e(9099),
             r.e(2298),
-            r.e(9136),
+            r.e(9754),
+            r.e(5422),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71525,24 +71524,61 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
             r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
-            r.e(1240),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
+            r.e(970),
+          ]).then(r.bind(r, 58426)),
+        ),
+        vo = co(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(7937),
+            r.e(9099),
+            r.e(2298),
+            r.e(9136),
+            r.e(2797),
+            r.e(7436),
+            r.e(7403),
+            r.e(9214),
+            r.e(4796),
+            r.e(9063),
+            r.e(1726),
+            r.e(3270),
+            r.e(7048),
+            r.e(6883),
+            r.e(1006),
+            r.e(1035),
+            r.e(4860),
+            r.e(1677),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
+            r.e(2011),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
+            r.e(3615),
             r.e(3318),
             r.e(4268),
           ]).then(r.bind(r, 86252)),
         ),
-        vo = co(() =>
+        Ro = co(() =>
           Promise.all([
             r.e(8970),
             r.e(9236),
@@ -71551,7 +71587,7 @@
             r.e(2516),
           ]).then(r.bind(r, 52069)),
         ),
-        Ro = co(() =>
+        zo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(2797),
@@ -71561,12 +71597,12 @@
             r.e(5068),
           ]).then(r.bind(r, 40917)),
         ),
-        zo = co(() =>
+        Io = co(() =>
           Promise.all([r.e(8970), r.e(2797), r.e(7436), r.e(6966)]).then(
             r.bind(r, 8685),
           ),
         ),
-        Io = co(() =>
+        To = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71574,45 +71610,45 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(9063),
             r.e(1006),
             r.e(1035),
-            r.e(2761),
+            r.e(875),
             r.e(6814),
           ]).then(r.bind(r, 51699)),
-        ),
-        To = co(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(7937),
-            r.e(2797),
-            r.e(7436),
-            r.e(7403),
-            r.e(6535),
-            r.e(4796),
-            r.e(9063),
-            r.e(1726),
-            r.e(3270),
-            r.e(7048),
-            r.e(6883),
-            r.e(5251),
-            r.e(5871),
-          ]).then(r.bind(r, 11417)),
         ),
         Eo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
+            r.e(2797),
+            r.e(7436),
+            r.e(7403),
+            r.e(9214),
+            r.e(4796),
+            r.e(9063),
+            r.e(1726),
+            r.e(3270),
+            r.e(7048),
+            r.e(6883),
+            r.e(4930),
+            r.e(5871),
+          ]).then(r.bind(r, 11417)),
+        ),
+        Fo = co(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(7937),
+            r.e(9099),
             r.e(2298),
             r.e(9136),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71623,21 +71659,21 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
             r.e(2011),
-            r.e(6850),
-            r.e(7911),
-            r.e(6866),
-            r.e(1240),
+            r.e(8713),
+            r.e(3337),
+            r.e(351),
+            r.e(3615),
             r.e(3318),
             r.e(8620),
           ]).then(r.bind(r, 57912)),
         ),
-        Fo = co(() => r.e(8843).then(r.bind(r, 71009))),
-        Oo = co(() =>
+        Oo = co(() => r.e(8843).then(r.bind(r, 71009))),
+        Lo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71646,7 +71682,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71664,7 +71700,7 @@
             r.e(5894),
           ]).then(r.bind(r, 13164)),
         ),
-        Lo = co(() =>
+        Wo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71673,7 +71709,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71691,7 +71727,7 @@
             r.e(8987),
           ]).then(r.bind(r, 35649)),
         ),
-        Wo = co(() =>
+        xo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71700,7 +71736,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71717,49 +71753,16 @@
             r.e(2965),
           ]).then(r.bind(r, 42976)),
         ),
-        xo = co(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(7937),
-            r.e(5500),
-            r.e(2797),
-            r.e(7436),
-            r.e(7403),
-            r.e(6535),
-            r.e(4796),
-            r.e(9063),
-            r.e(1726),
-            r.e(3270),
-            r.e(7048),
-            r.e(6883),
-            r.e(1006),
-            r.e(1035),
-            r.e(4860),
-            r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
-            r.e(6850),
-            r.e(7911),
-            r.e(3027),
-          ]).then(r.bind(r, 54954)),
-        ),
         ko = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
-            r.e(2298),
-            r.e(7276),
-            r.e(9790),
-            r.e(3742),
+            r.e(9099),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71770,33 +71773,29 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
-            r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
-            r.e(1240),
-            r.e(2414),
-          ]).then(r.bind(r, 23373)),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
+            r.e(8713),
+            r.e(3337),
+            r.e(3027),
+          ]).then(r.bind(r, 54954)),
         ),
         jo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
-            r.e(6334),
+            r.e(9099),
+            r.e(2298),
+            r.e(4135),
+            r.e(5313),
+            r.e(9790),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71807,34 +71806,33 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
             r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
-            r.e(8310),
-            r.e(7333),
-          ]).then(r.bind(r, 87669)),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
+            r.e(3615),
+            r.e(2414),
+          ]).then(r.bind(r, 14092)),
         ),
         Do = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
-            r.e(7276),
-            r.e(3742),
+            r.e(9099),
+            r.e(6334),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71845,24 +71843,62 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
             r.e(2011),
-            r.e(6850),
-            r.e(5251),
-            r.e(7911),
-            r.e(7612),
-            r.e(6866),
-            r.e(6221),
-            r.e(7854),
-            r.e(1240),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
+            r.e(8310),
+            r.e(7333),
+          ]).then(r.bind(r, 87669)),
+        ),
+        Po = co(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(7937),
+            r.e(9099),
+            r.e(4135),
+            r.e(5313),
+            r.e(2797),
+            r.e(7436),
+            r.e(7403),
+            r.e(9214),
+            r.e(4796),
+            r.e(9063),
+            r.e(1726),
+            r.e(3270),
+            r.e(7048),
+            r.e(6883),
+            r.e(1006),
+            r.e(1035),
+            r.e(4860),
+            r.e(1677),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
+            r.e(2011),
+            r.e(8713),
+            r.e(4930),
+            r.e(3337),
+            r.e(4523),
+            r.e(351),
+            r.e(6105),
+            r.e(9388),
+            r.e(3615),
             r.e(6855),
           ]).then(r.bind(r, 84428)),
         ),
-        Po = co(() => r.e(7819).then(r.bind(r, 90428))),
-        Ao = co(() =>
+        Ao = co(() => r.e(7819).then(r.bind(r, 90428))),
+        Uo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71870,29 +71906,29 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
             r.e(3270),
             r.e(7048),
             r.e(6883),
-            r.e(9945),
-            r.e(2303),
-            r.e(5251),
-            r.e(7612),
-            r.e(6221),
+            r.e(6014),
+            r.e(8019),
+            r.e(4930),
+            r.e(4523),
+            r.e(6105),
             r.e(6991),
           ]).then(r.bind(r, 12813)),
         ),
-        Uo = co(() =>
+        qo = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71902,19 +71938,19 @@
             r.e(2469),
           ]).then(r.bind(r, 54393)),
         ),
-        qo = co(() =>
+        No = co(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
             r.e(7937),
-            r.e(5500),
-            r.e(7276),
+            r.e(9099),
+            r.e(4135),
             r.e(9790),
             r.e(8680),
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71925,36 +71961,16 @@
             r.e(1035),
             r.e(4860),
             r.e(1677),
-            r.e(9945),
-            r.e(2761),
-            r.e(2303),
-            r.e(9105),
-            r.e(6850),
+            r.e(6014),
+            r.e(875),
+            r.e(8019),
+            r.e(9139),
+            r.e(8713),
             r.e(283),
             r.e(1143),
             r.e(5976),
             r.e(9297),
           ]).then(r.bind(r, 13643)),
-        ),
-        No = co(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(9754),
-            r.e(3056),
-            r.e(2797),
-            r.e(7436),
-            r.e(7403),
-            r.e(6535),
-            r.e(4796),
-            r.e(9063),
-            r.e(1726),
-            r.e(3270),
-            r.e(7048),
-            r.e(6883),
-            r.e(1006),
-            r.e(9456),
-          ]).then(r.bind(r, 21820)),
         ),
         Go = co(() =>
           Promise.all([
@@ -71965,7 +71981,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71974,7 +71990,7 @@
             r.e(6883),
             r.e(1006),
             r.e(9456),
-          ]).then(r.bind(r, 1593)),
+          ]).then(r.bind(r, 21820)),
         ),
         Ho = co(() =>
           Promise.all([
@@ -71985,7 +72001,7 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -71994,7 +72010,7 @@
             r.e(6883),
             r.e(1006),
             r.e(9456),
-          ]).then(r.bind(r, 84523)),
+          ]).then(r.bind(r, 1593)),
         ),
         Vo = co(() =>
           Promise.all([
@@ -72005,7 +72021,27 @@
             r.e(2797),
             r.e(7436),
             r.e(7403),
-            r.e(6535),
+            r.e(9214),
+            r.e(4796),
+            r.e(9063),
+            r.e(1726),
+            r.e(3270),
+            r.e(7048),
+            r.e(6883),
+            r.e(1006),
+            r.e(9456),
+          ]).then(r.bind(r, 98162)),
+        ),
+        Zo = co(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(9754),
+            r.e(3056),
+            r.e(2797),
+            r.e(7436),
+            r.e(7403),
+            r.e(9214),
             r.e(4796),
             r.e(9063),
             r.e(1726),
@@ -72016,10 +72052,10 @@
             r.e(9456),
           ]).then(r.bind(r, 84155)),
         );
-      function Zo(e) {
+      function Ko(e) {
         return n.createElement(se.tH, null, n.createElement(Q.qh, { ...e }));
       }
-      function Ko() {
+      function $o() {
         return (
           (0, n.useEffect)(
             () => (
@@ -72031,7 +72067,7 @@
           null
         );
       }
-      function $o(e) {
+      function Qo(e) {
         const [t, r] = n.useState(),
           [i, o] = n.useState(!1);
         return (
@@ -72074,16 +72110,16 @@
                   "div",
                   { className: $().App },
                   n.createElement(
-                    Jo,
+                    el,
                     { storeUserConfig: t },
-                    n.createElement(el, null),
+                    n.createElement(tl, null),
                     n.createElement(
                       n.Suspense,
-                      { fallback: n.createElement(Ko, null) },
+                      { fallback: n.createElement($o, null) },
                       n.createElement(
                         Q.dO,
                         null,
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.DiagData(),
                           render: (e) =>
@@ -72094,24 +72130,24 @@
                             }),
                         }),
                         n.createElement(
-                          Zo,
+                          Ko,
                           { exact: !0, path: q.B.Login() },
                           n.createElement(Ge.X, {
                             config: {
-                              login: (e) => n.createElement(zo, { ...e }),
+                              login: (e) => n.createElement(Io, { ...e }),
                             },
                           }),
                         ),
                         n.createElement(
-                          Zo,
+                          Ko,
                           { exact: !0, path: q.B.OAuthLogin() },
                           n.createElement(Ge.X, {
                             config: {
-                              login: (e) => n.createElement(zo, { ...e }),
+                              login: (e) => n.createElement(Io, { ...e }),
                             },
                           }),
                         ),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.AppStorePage(),
                           render: (e) =>
@@ -72119,7 +72155,7 @@
                               appid: parseInt(e.match.params.appid),
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.SaleLandingPage(),
                           render: (e) => {
@@ -72131,7 +72167,7 @@
                             return n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(Do, {
+                                  n.createElement(Po, {
                                     key: `sale_${t}`,
                                     promotionName: `sale_${t}`,
                                     language: (0, l.sf)(s.TS.LANGUAGE),
@@ -72146,27 +72182,27 @@
                             });
                           },
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.CuratorAdminEditPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-social-media-edit": (e) =>
-                                  n.createElement(fo, { ...e }),
+                                  n.createElement(bo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.CuratorAdminEventLinkEditPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-events-link-edit": (e) =>
-                                  n.createElement(bo, { ...e }),
+                                  n.createElement(Bo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.CuratorAdminPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
@@ -72176,14 +72212,14 @@
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.CreatorSaleLandingPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(Do, {
+                                  n.createElement(Po, {
                                     key:
                                       "salecreator_" +
                                       e.match.params.creatorPageName +
@@ -72196,7 +72232,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: [
                             q.B.RemotePlay(),
                             q.B.RemotePlayTogether(),
@@ -72207,9 +72243,9 @@
                             q.B.SubscriptionPlanLandingPage(),
                             q.B.GameRecording(),
                           ],
-                          render: (e) => n.createElement(Qo, null),
+                          render: (e) => n.createElement(Yo, null),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.CuratorHomePage(),
                           render: (e) =>
@@ -72227,36 +72263,38 @@
                                     listid: s.GP.listid,
                                   }),
                                 "creatorhome-social-media-display": (e) =>
-                                  n.createElement(Bo, { ...e }),
+                                  n.createElement(wo, { ...e }),
+                                "creator-home-event": (e) =>
+                                  n.createElement(fo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.CuratorListPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "list-display": () =>
-                                  n.createElement(wo, {
+                                  n.createElement(yo, {
                                     key: "curator_list",
                                     listid: e.match.params.listid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.CuratorAllOtherserPages(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-social-media-display": (e) =>
-                                  n.createElement(Bo, { ...e }),
+                                  n.createElement(wo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.PackageStorePage(),
                           render: (e) =>
@@ -72275,12 +72313,12 @@
                                   n.createElement(
                                     He.Ay,
                                     { feature: "recommended" },
-                                    n.createElement(jo, { ...e }),
+                                    n.createElement(Do, { ...e }),
                                   ),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.BundleStorePage(),
                           render: (e) =>
@@ -72300,13 +72338,23 @@
                                   n.createElement(
                                     He.Ay,
                                     { feature: "recommended" },
-                                    n.createElement(jo, { ...e }),
+                                    n.createElement(Do, { ...e }),
                                   ),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.NewsHub(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "event-calendar": () =>
+                                  n.createElement(vo, null),
+                              },
+                            }),
+                        }),
+                        n.createElement(Ko, {
+                          path: q.B.EventAdmin(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
@@ -72315,82 +72363,72 @@
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
-                          path: q.B.EventAdmin(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "event-calendar": () =>
-                                  n.createElement(Co, null),
-                              },
-                            }),
-                        }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.InteractiveRecommender(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
-                                recommender: () => n.createElement(vo, null),
+                                recommender: () => n.createElement(Ro, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.GameMixer(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
-                                gamemixer: () => n.createElement(No, null),
+                                gamemixer: () => n.createElement(Go, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.RecommenderDemos(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 recommenderdemos: () =>
-                                  n.createElement(Go, null),
+                                  n.createElement(Ho, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.PersonalCalendar(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 personalcalendar: () =>
-                                  n.createElement(Ho, null),
+                                  n.createElement(Vo, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.LabsSandbox(),
-                          render: (e) => n.createElement(Vo, null),
+                          render: (e) => n.createElement(Zo, null),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.SteamCharts(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
-                                  n.createElement(ko, { ...e }),
+                                  n.createElement(jo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.Loyalty(),
                           render: () =>
                             n.createElement(Ge.X, {
                               config: {
-                                "points-shop": () => n.createElement(Io, null),
+                                "points-shop": () => n.createElement(To, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -72401,7 +72439,7 @@
                             return n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(Do, {
+                                  n.createElement(Po, {
                                     key: "contenthub_" + t,
                                     promotionName: "contenthub_" + t,
                                     language: (0, l.sf)(s.TS.LANGUAGE),
@@ -72410,7 +72448,7 @@
                             });
                           },
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.Categories(),
                           render: () =>
                             n.createElement(Ge.X, {
@@ -72419,98 +72457,89 @@
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.AccountPreferences(),
                           render: (e) => n.createElement(mo, { ...e }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.SummerSale2021Story(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "forge-your-fate": () =>
-                                  n.createElement(Po, null),
+                                  n.createElement(Ao, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           exact: !0,
                           path: q.B.LabsHome(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "discovery-queue-button": () =>
-                                  n.createElement(yo, null),
+                                  n.createElement(Mo, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.MarketingMessages(),
-                          render: (e) => n.createElement(To, { ...e }),
-                        }),
-                        n.createElement(Zo, {
-                          path: q.B.MeetSteamRoute(),
                           render: (e) => n.createElement(Eo, { ...e }),
                         }),
-                        n.createElement(Zo, {
-                          path: q.B.VerifiedProgram(),
-                          render: (e) => n.createElement(Ao, { ...e }),
+                        n.createElement(Ko, {
+                          path: q.B.MeetSteamRoute(),
+                          render: (e) => n.createElement(Fo, { ...e }),
                         }),
-                        n.createElement(Zo, {
-                          path: q.B.BundleListForApp(),
+                        n.createElement(Ko, {
+                          path: q.B.VerifiedProgram(),
                           render: (e) => n.createElement(Uo, { ...e }),
                         }),
-                        n.createElement(Zo, {
-                          path: q.B.YearInReview(),
+                        n.createElement(Ko, {
+                          path: q.B.BundleListForApp(),
                           render: (e) => n.createElement(qo, { ...e }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
+                          path: q.B.YearInReview(),
+                          render: (e) => n.createElement(No, { ...e }),
+                        }),
+                        n.createElement(Ko, {
                           path: q.B.ShoppingCartAccountCartPurchaseRequested(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "react-root": () =>
+                                  n.createElement(Wo, {
+                                    familyGroupID: e.match.params.familygroupid,
+                                  }),
+                              },
+                            }),
+                        }),
+                        n.createElement(Ko, {
+                          path: q.B.ShoppingCartPurchaseRequest(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
                                   n.createElement(Lo, {
                                     familyGroupID: e.match.params.familygroupid,
-                                  }),
-                              },
-                            }),
-                        }),
-                        n.createElement(Zo, {
-                          path: q.B.ShoppingCartPurchaseRequest(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "react-root": () =>
-                                  n.createElement(Oo, {
-                                    familyGroupID: e.match.params.familygroupid,
                                     requestID: e.match.params.requestid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.ShoppingCartGifts(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
-                                  n.createElement(Wo, { initialStep: "gifts" }),
+                                  n.createElement(xo, { initialStep: "gifts" }),
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
                           path: q.B.ShoppingCart(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "react-root": () => n.createElement(Wo, null),
-                              },
-                            }),
-                        }),
-                        n.createElement(Zo, {
-                          path: q.B.SteamAwards(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
@@ -72518,21 +72547,30 @@
                               },
                             }),
                         }),
-                        n.createElement(Zo, {
-                          path: q.B.JoinMultiplayerSession(),
-                          render: (e) => n.createElement(Ro, null),
+                        n.createElement(Ko, {
+                          path: q.B.SteamAwards(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "react-root": () => n.createElement(ko, null),
+                              },
+                            }),
                         }),
-                        n.createElement(Zo, {
+                        n.createElement(Ko, {
+                          path: q.B.JoinMultiplayerSession(),
+                          render: (e) => n.createElement(zo, null),
+                        }),
+                        n.createElement(Ko, {
                           path: q.B.Home(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "discovery-queue-home": () =>
-                                  n.createElement(Mo, null),
+                                  n.createElement(Co, null),
                               },
                             }),
                         }),
-                        n.createElement(Zo, null, n.createElement(Ve.a, null)),
+                        n.createElement(Ko, null, n.createElement(Ve.a, null)),
                       ),
                     ),
                   ),
@@ -72541,13 +72579,13 @@
             : null
         );
       }
-      function Qo(e) {
+      function Yo(e) {
         const t = (0, Q.zy)().pathname.split("/").filter(Boolean).pop(),
           r = "sale_" + (t?.split("?")[0] || "unknown");
         return n.createElement(Ge.X, {
           config: {
             "sale-display": () =>
-              n.createElement(Do, {
+              n.createElement(Po, {
                 key: r,
                 promotionName: r,
                 language: (0, l.sf)(s.TS.LANGUAGE),
@@ -72555,7 +72593,7 @@
           },
         });
       }
-      function Yo(e) {
+      function Xo(e) {
         const { children: t } = e,
           r = n.useCallback(() => (0, u.P)(), []),
           i = (0, _e.bs)(r),
@@ -72574,7 +72612,7 @@
           ),
         );
       }
-      function Xo(e) {
+      function Jo(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useRef(void 0);
         i.current || (i.current = new Z());
@@ -72593,11 +72631,11 @@
           )
         );
       }
-      const Jo = n.memo(function (e) {
+      const el = n.memo(function (e) {
           const { storeUserConfig: t, children: r } = e,
             i = (0, s.Tc)("hwinfo", "application_config");
           return n.createElement(
-            Xo,
+            Jo,
             { storeUserConfig: t },
             n.createElement(
               ae.I.Provider,
@@ -72612,7 +72650,7 @@
                     bSteamDeck: i?.bSteamDeck ?? !1,
                   },
                   n.createElement(
-                    Yo,
+                    Xo,
                     null,
                     n.createElement(
                       c.s,
@@ -72637,7 +72675,7 @@
             ),
           );
         }),
-        el = n.memo(function (e) {
+        tl = n.memo(function (e) {
           return n.createElement(
             n.Fragment,
             null,
@@ -72681,7 +72719,7 @@
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(Fo, null),
+                      n.createElement(Oo, null),
                     ),
                   "store-menu-v7": () =>
                     n.createElement(
@@ -72710,13 +72748,13 @@
             }),
           );
         });
-      var tl = r(72034),
-        rl = r(8812);
+      var rl = r(72034),
+        il = r(8812);
       r(52244);
       new Map();
-      var il = r(14947),
-        nl = r(29248);
-      function sl() {
+      var nl = r(14947),
+        sl = r(29248);
+      function al() {
         const e = [];
         return (
           Zt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
@@ -72725,7 +72763,7 @@
         );
       }
       r(64641);
-      (0, il.jK)({ enforceActions: "never" }),
+      (0, nl.jK)({ enforceActions: "never" }),
         performance.mark("storeReactStartup");
       new PerformanceObserver((e) => {
         const t = e.getEntriesByType("navigation")[0];
@@ -72736,7 +72774,7 @@
           t.responseEnd &&
           (0, oo.D)()
         ) {
-          const e = al - t.responseEnd;
+          const e = ol - t.responseEnd;
           (0, oo.D)().IncrementStat("storeReactStartup", e),
             performance.measure("storeReactStartup", {
               start: t.responseEnd,
@@ -72744,19 +72782,19 @@
             });
         }
       }).observe({ type: "navigation", buffered: !0 });
-      let al = performance.now();
-      let ol,
-        ll = !1;
-      function cl() {
-        if (!ll) {
+      let ol = performance.now();
+      let ll,
+        cl = !1;
+      function ul() {
+        if (!cl) {
           (0, s.XJ)("application_config").config
-            ? (ul(), (ll = !0))
+            ? (ml(), (cl = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function ul() {
-        ol ||
-          (ol = (async function (e) {
+      async function ml() {
+        ll ||
+          (ll = (async function (e) {
             0;
             const t = a.A0.GetLanguageFallback(e),
               i = e === t,
@@ -72775,28 +72813,28 @@
               { ...u, ...c, ...m, ...d },
             );
           })(s.TS.LANGUAGE)),
-          await ol;
+          await ll;
       }
-      cl(),
+      ul(),
         tt.oQ(async function () {
-          cl();
-          const e = (0, nl.zR)({ basename: (0, q.C)() });
-          (0, rl.aj)().Init(
+          ul();
+          const e = (0, sl.zR)({ basename: (0, q.C)() });
+          (0, il.aj)().Init(
             "Store",
             CLSTAMP,
-            new tl.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-            { fnGetReportTags: sl },
+            new rl.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+            { fnGetReportTags: al },
           ),
-            await ul(),
+            await ml(),
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
-                  .render(n.createElement($o, { history: e }))
+                  .render(n.createElement(Qo, { history: e }))
               : console.error('No "application_root" was found to target'),
             (0, oo.D)() &&
               (0, oo.D)().IncrementStat(
                 "storeReactLocalizationReady",
-                performance.now() - al,
+                performance.now() - ol,
               ),
             performance.measure("storeReactLocalizationReady", {
               start: "storeReactStartup",

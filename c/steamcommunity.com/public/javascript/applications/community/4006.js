@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Закрыть без принятия мер",
 	"moderation_resolutionstatus_pending": "Ожидает рассмотрения",
 	"moderation_resolutionstatus_acquitted": "Проверено: действий не требуется",
+	"moderation_resolutionstatus_purged": "Контент немедленно удалён",
 	"moderation_resolutionstatus_removed": "Контент удалён",
 	"moderation_resolutionstatus_relabelled": "Изменены пометки",
 	"moderation_resolutionstatus_suspicious": "Аккаунт заблокирован из-за подозрительного контента",

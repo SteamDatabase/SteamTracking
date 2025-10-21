@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Indiquer comme résolu",
 	"moderation_resolutionstatus_pending": "En attente de modération",
 	"moderation_resolutionstatus_acquitted": "Contenu évalué : aucune action nécessaire",
+	"moderation_resolutionstatus_purged": "Contenu supprimé immédiatement",
 	"moderation_resolutionstatus_removed": "Contenu supprimé",
 	"moderation_resolutionstatus_relabelled": "Contenu reclassifié",
 	"moderation_resolutionstatus_suspicious": "Votre compte a été verrouillé pour cause de contenu suspect.",

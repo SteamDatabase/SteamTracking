@@ -12446,7 +12446,7 @@
         _ = (_) => {
           const { nCreatorAccountID: _ } = _,
             [__webpack_require__, _] = (0, _._)(_),
-            _ = (0, _._)(_);
+            { creatorHome: _ } = (0, _._)(_);
           return _.createElement(
             "div",
             {

@@ -656,7 +656,6 @@
         _ = 4,
         _ = 20,
         _ = 45559995,
-        _ = 99999,
         _ = [12, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
@@ -1665,45 +1664,48 @@
               localized_label: [],
               default_label: "",
             };
+          let _ = 100009;
           return (
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_self_creator_home",
-                unique_id: 100009,
+                unique_id: _++,
                 curator_clan_id: this.clanSteamID.GetAccountID(),
               }),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_browse_more",
-                unique_id: 100011,
+                unique_id: _++,
               }),
+            _ &&
+              _.push(this.GenerateDynamicCreatorHomeItemBrowserSection(_++, _)),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_default_social_share",
-                unique_id: 100012,
+                unique_id: _++,
               }),
             _
           );
         }
         GetSaleSectionIncludingFooterSections() {
           const _ = this.jsondata?.sale_show_creator,
-            _ = this.BSaleShowCuratorRecommendationAtBottomOfPage(),
             _ = this.jsondata.sale_browse_more_button,
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
-              !this.jsondata.sale_default_social_media_disabled;
+              !this.jsondata.sale_default_social_media_disabled,
+            _ = 36 == this.GetEventType();
           return _ || _ || _ || _
             ? [
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, _, !!_, _),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _),
               ]
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
-          if (_ > _) {
+          if (_ > 99999) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
@@ -1983,6 +1985,42 @@
             _ &&
             _.toLowerCase().startsWith("nextfest")
           );
+        }
+        GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
+          return {
+            ..._,
+            section_type: "sale_item_browser",
+            unique_id: _,
+            item_browse_section_data: {
+              enable_search: !0,
+              tabs: [
+                "all_released",
+                "popularpurchased",
+                "all_upcoming",
+                "discounted",
+              ],
+            },
+            enable_faceted_browsing: !0,
+            min_capsule_matches_for_facet_values: 5,
+            max_facet_values_for_facet: 5,
+            facet_sort_order: 1,
+            facet_auto_generate_options: {
+              only_facets: [
+                {
+                  loc_token: "#App_Taxonomy_Survey_QSuperGenreTitle",
+                },
+                {
+                  loc_token: "#AppTypeLabelTitle",
+                  only_values: [
+                    "#AppTypeLabel_game",
+                    "#AppTypeLabel_dlc",
+                    "#AppTypeLabel_demo",
+                    "#AppTypeLabel_music",
+                  ],
+                },
+              ],
+            },
+          };
         }
       }
       (0, _._)([_._], _.prototype, "GID", void 0),
@@ -3454,6 +3492,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3470,7 +3509,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (
@@ -4633,6 +4673,27 @@
       const _ = new _();
       window.g_PartnerEventStore = _;
       const _ = new _(!0);
+      function _(_, _) {
+        const [__webpack_require__, _] = (0, _.useState)(() =>
+            _.GetClanEventModel(_),
+          ),
+          _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]);
+        return (
+          (0, _.useEffect)(() => {
+            !__webpack_require__ &&
+              _ > 0 &&
+              (_.Init(),
+              _.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                _,
+                _,
+                0,
+                !0,
+              ).then(_));
+          }, [_, _, __webpack_require__, _]),
+          (0, _._)(_.GetPartnerEventChangeCallback(_), _),
+          __webpack_require__
+        );
+      }
       window.g_PartnerEventSummaryStore = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4769,6 +4830,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

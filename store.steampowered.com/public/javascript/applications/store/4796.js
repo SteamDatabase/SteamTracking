@@ -322,7 +322,7 @@
       window.g_ClanStore = p;
     },
     67165: (e, t, a) => {
-      a.d(t, { pF: () => G, FV: () => L });
+      a.d(t, { A2: () => L, pF: () => D, FV: () => G });
       var n,
         r = a(34629),
         i = a(56545),
@@ -1019,10 +1019,10 @@
             );
           });
       })(n || (n = {}));
-      var C = a(41735),
-        v = a.n(C),
-        B = a(14947),
-        S = a(90626),
+      var C = a(20194),
+        v = a(41735),
+        B = a.n(v),
+        S = a(14947),
         w = a(78327);
       class T {
         m_clanSteamID;
@@ -1033,12 +1033,13 @@
         m_nFollowers = 0;
         m_strVanity = "";
         m_webLink = void 0;
+        m_linkedEvent = void 0;
         m_promise;
         m_bIsLoaded = !1;
         m_bIsHidden = !1;
         m_clanAccountFlags = 0;
         constructor(e) {
-          (0, B.Gn)(this), (this.m_clanSteamID = e);
+          (0, S.Gn)(this), (this.m_clanSteamID = e);
         }
         Initialize(e) {
           (this.m_strName = e.name || ""),
@@ -1051,6 +1052,7 @@
             (this.m_webLink = e.weblink),
             (this.m_bIsHidden = e.hidden || !1),
             (this.m_clanAccountFlags = e.clan_account_flags ?? 0),
+            (this.m_linkedEvent = e.linked_event),
             e.appids && e.appids.forEach((e) => this.m_appidList.push(e)),
             (this.m_bIsLoaded = !0);
         }
@@ -1125,6 +1127,9 @@
         GetVanityString() {
           return this.m_strVanity;
         }
+        GetLinkedEventGID() {
+          return this.m_linkedEvent;
+        }
         AdjustFollower(e) {
           this.m_nFollowers += e;
         }
@@ -1154,21 +1159,20 @@
           i.append("sessionid", w.TS.SESSIONID),
             i.append("clan_account_id", this.GetClanAccountID().toString()),
             i.append("accountflags", JSON.stringify(r));
-          let s = await v().post(a, i);
+          let s = await B().post(a, i);
           s &&
             200 == s.status &&
             1 == s.data.success &&
             (this.m_clanAccountFlags = n);
         }
       }
-      (0, r.Cg)([B.sH], T.prototype, "m_appidList", void 0),
-        (0, r.Cg)([B.sH], T.prototype, "m_nFollowers", void 0),
-        (0, r.Cg)([B.sH], T.prototype, "m_clanAccountFlags", void 0);
-      var A = a(17720),
-        b = a(4434);
-      class D {
+      (0, r.Cg)([S.sH], T.prototype, "m_appidList", void 0),
+        (0, r.Cg)([S.sH], T.prototype, "m_nFollowers", void 0),
+        (0, r.Cg)([S.sH], T.prototype, "m_clanAccountFlags", void 0);
+      var A = a(17720);
+      class b {
         constructor() {
-          (0, B.Gn)(this);
+          (0, S.Gn)(this);
         }
         m_mapClanToCreatorHome = new Map();
         m_mapAppToCreatorIDList = new Map();
@@ -1182,7 +1186,7 @@
                   a = A.b.InitFromClanID(t),
                   n = new T(a);
                 n.Initialize(e),
-                  (n.m_promise = D.GetAsPromise(n)),
+                  (n.m_promise = b.GetAsPromise(n)),
                   this.m_mapClanToCreatorHome.set(t, n);
               });
             let t = (0, w.Tc)("creatorhomeforapp", "application_config");
@@ -1240,15 +1244,15 @@
         GetCreatorHomeByID(e) {
           return this.m_mapClanToCreatorHome.get(e.clan_account_id);
         }
-        async LoadCreatorHome(e, t) {
+        async LoadCreatorHome(e, t = !1, a) {
           if (
             (this.LazyInit(),
-            !this.m_mapClanToCreatorHome.has(e.GetAccountID()))
+            t || !this.m_mapClanToCreatorHome.has(e.GetAccountID()))
           ) {
-            let a = new T(e);
-            (a.m_promise = this.InternalCreatorHome(a, t)),
-              await a.m_promise,
-              this.m_mapClanToCreatorHome.set(e.GetAccountID(), a);
+            let t = new T(e);
+            (t.m_promise = this.InternalCreatorHome(t, a)),
+              await t.m_promise,
+              this.m_mapClanToCreatorHome.set(e.GetAccountID(), t);
           }
           return this.m_mapClanToCreatorHome.get(e.GetAccountID()).m_promise;
         }
@@ -1259,14 +1263,14 @@
               "curator/" +
               e.GetClanAccountID() +
               "/ajaxgetcreatorhomeinfo",
-            r = await v().get(n, { params: a, cancelToken: t && t.token });
+            r = await B().get(n, { params: a, cancelToken: t && t.token });
           return e.Initialize(r.data), e;
         }
         async LoadCreatorHomeListForAppIncludeHiddden(e, t) {
           if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(e))) {
             let a = { appid: e },
               n = w.TS.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
-              r = await v().get(n, {
+              r = await B().get(n, {
                 params: a,
                 cancelToken: t && t.token,
                 withCredentials: !0,
@@ -1285,10 +1289,10 @@
               origin: self.origin,
             },
             i = new Array();
-          const s = await v().get(n, { params: r, cancelToken: a.token });
+          const s = await B().get(n, { params: r, cancelToken: a.token });
           return (
             s.data.curators &&
-              (0, B.h5)(() => {
+              (0, S.h5)(() => {
                 s.data.curators.forEach((e) => {
                   if (!this.m_mapClanToCreatorHome.has(e.creator_clan_id)) {
                     let t = A.b.InitFromClanID(e.creator_clan_id),
@@ -1308,29 +1312,26 @@
             : [];
         }
       }
-      (0, r.Cg)([B.sH], D.prototype, "m_mapClanToCreatorHome", void 0),
-        (0, r.Cg)([B.sH], D.prototype, "m_mapAppToCreatorIDList", void 0),
-        (0, r.Cg)([B.XI], D.prototype, "LazyInit", null);
-      const G = new D();
+      (0, r.Cg)([S.sH], b.prototype, "m_mapClanToCreatorHome", void 0),
+        (0, r.Cg)([S.sH], b.prototype, "m_mapAppToCreatorIDList", void 0),
+        (0, r.Cg)([S.XI], b.prototype, "LazyInit", null);
+      const D = new b();
       function L(e) {
-        const t = A.b.InitFromClanID(e),
-          [a, n] = S.useState(G.GetCreatorHome(t)),
-          r = (0, b.m)("useCreatorHome");
-        return (
-          S.useEffect(() => {
+        const t = A.b.InitFromClanID(e);
+        return {
+          queryKey: ["CreatorHome", e],
+          initialData: () => D.GetCreatorHome(t),
+          queryFn: async () => {
             const t = A.b.InitFromClanID(e);
-            G.BHasCreatorHomeLoaded(t)
-              ? a
-                ? a.GetClanAccountID() != e && n(G.GetCreatorHome(t))
-                : n(G.GetCreatorHome(t))
-              : G.LoadCreatorHome(t).then(() => {
-                  r?.token?.reason || n(G.GetCreatorHome(t));
-                });
-          }, [r?.token?.reason, e, a]),
-          a
-        );
+            return await D.LoadCreatorHome(t, !0);
+          },
+        };
       }
-      window.g_CreatorHomeStore = G;
+      function G(e) {
+        const { data: t, isFetching: a, refetch: n } = (0, C.I)(L(e));
+        return { creatorHome: t, isFetching: a, refetch: n };
+      }
+      window.g_CreatorHomeStore = D;
     },
     60746: (e, t, a) => {
       a.d(t, { KN: () => C, Nh: () => _, Ec: () => B, kY: () => v });

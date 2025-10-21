@@ -4,7 +4,7 @@
   [9063],
   {
     61738: (e, s, t) => {
-      var r = {
+      var n = {
         "./af": 30911,
         "./af.js": 30911,
         "./ar": 63595,
@@ -280,36 +280,36 @@
         "./zh-tw": 34518,
         "./zh-tw.js": 34518,
       };
-      function n(e) {
+      function r(e) {
         var s = a(e);
         return t(s);
       }
       function a(e) {
-        if (!t.o(r, e)) {
+        if (!t.o(n, e)) {
           var s = new Error("Cannot find module '" + e + "'");
           throw ((s.code = "MODULE_NOT_FOUND"), s);
         }
-        return r[e];
+        return n[e];
       }
-      (n.keys = function () {
-        return Object.keys(r);
+      (r.keys = function () {
+        return Object.keys(n);
       }),
-        (n.resolve = a),
-        (e.exports = n),
-        (n.id = 61738);
+        (r.resolve = a),
+        (e.exports = r),
+        (r.id = 61738);
     },
     44165: (e, s, t) => {
       "use strict";
-      t.d(s, { HD: () => c, f1: () => v, s4: () => h, sB: () => m });
-      var r = t(34629),
-        n = t(14947),
+      t.d(s, { HD: () => c, f1: () => v, s4: () => h, sB: () => d });
+      var n = t(34629),
+        r = t(14947),
         a = t(19367),
         j = t.n(a),
         o = t(90626),
         l = (t(4434), t(78327));
       class i {
         constructor() {
-          (0, n.Gn)(this);
+          (0, r.Gn)(this);
         }
         bOpenEventLandingPage = !1;
         bIncludeFeaturedAsGameSource = !0;
@@ -360,16 +360,16 @@
           }
         }
       }
-      (0, r.Cg)([n.sH], i.prototype, "nOverrideDateNow", void 0);
+      (0, n.Cg)([r.sH], i.prototype, "nOverrideDateNow", void 0);
       const c = new i();
       window.g_EventCalendarDevFeatures = c;
-      const d = new Date(),
-        u = Math.floor(d.getTime() / 1e3);
-      function m() {
-        return c.nOverrideDateNow ?? u;
+      const u = new Date(),
+        m = Math.floor(u.getTime() / 1e3);
+      function d() {
+        return c.nOverrideDateNow ?? m;
       }
       function v() {
-        return o.useMemo(() => m(), []);
+        return o.useMemo(() => d(), []);
       }
       function h() {
         return o.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
@@ -389,8 +389,8 @@
         pY: () => b.pY,
         EN: () => a.E,
       });
-      var r = t(90626),
-        n = t(53835),
+      var n = t(90626),
+        r = t(53835),
         a = t(21869),
         j = t(2654),
         o =
@@ -405,10 +405,10 @@
       t(28460);
       function l(e) {
         const { labelledBy: s } = e || {},
-          [t, n] = r.useState(void 0);
+          [t, r] = n.useState(void 0);
         return {
           headerId: s || t,
-          context: r.useMemo(() => ({ setHeaderId: n }), []),
+          context: n.useMemo(() => ({ setHeaderId: r }), []),
         };
       }
       function i(e) {
@@ -418,21 +418,21 @@
             className: o,
             modalClassName: i,
             children: c,
-            ...d
+            ...u
           } = e,
-          { headerId: u, context: m } = l({ labelledBy: e["aria-labelledby"] });
-        return r.createElement(
-          n.t6.Provider,
-          { value: m },
-          r.createElement(
+          { headerId: m, context: d } = l({ labelledBy: e["aria-labelledby"] });
+        return n.createElement(
+          r.t6.Provider,
+          { value: d },
+          n.createElement(
             a.E,
             { active: s },
-            r.createElement(
+            n.createElement(
               j.x_,
               { onEscKeypress: t, className: i },
-              r.createElement(
-                n.UC,
-                { role: "dialog", "aria-labelledby": u, className: o, ...d },
+              n.createElement(
+                r.UC,
+                { role: "dialog", "aria-labelledby": m, className: o, ...u },
                 c,
               ),
             ),
@@ -441,35 +441,35 @@
       }
       function c(e) {
         const { className: s, children: t } = e;
-        return r.createElement(
+        return n.createElement(
           a.E,
           { active: !0 },
-          r.createElement("div", { className: s }, t),
+          n.createElement("div", { className: s }, t),
         );
       }
       t(81194);
-      var d = t(85585),
-        u = t(7445),
-        m = t(76217),
+      var u = t(85585),
+        m = t(7445),
+        d = t(76217),
         v = t(88843);
       function h(e) {
-        const { children: s, navID: t, closeModal: n } = e,
-          a = r.createRef(),
+        const { children: s, navID: t, closeModal: r } = e,
+          a = n.createRef(),
           j = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return (0, o.Qn)() && !o.TS.IN_STEAMUI
-          ? r.createElement(
-              d.B2,
+          ? n.createElement(
+              u.B2,
               {
                 navID: t,
                 navTreeRef: a,
-                onCancelButton: n,
+                onCancelButton: r,
                 className: v.GamepadOnlyModalWrapper,
               },
-              r.createElement(
-                u.q,
+              n.createElement(
+                m.q,
                 null,
-                r.createElement(
-                  m.Z,
+                n.createElement(
+                  d.Z,
                   {
                     className: v.GamepadOnlyPanelWrapper,
                     onGamepadDirection: j,
@@ -479,11 +479,28 @@
                 ),
               ),
             )
-          : r.createElement(r.Fragment, null, s);
+          : n.createElement(n.Fragment, null, s);
       }
       var b = t(78395),
         f = t(10411);
       t(76222);
+    },
+    4434: (e, s, t) => {
+      "use strict";
+      t.d(s, { m: () => j });
+      var n = t(41735),
+        r = t.n(n),
+        a = t(90626);
+      function j(e) {
+        const s = a.useRef(r().CancelToken.source());
+        return (
+          a.useEffect(() => {
+            const t = s.current;
+            return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          s.current
+        );
+      }
     },
   },
 ]);

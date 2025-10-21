@@ -12716,7 +12716,7 @@
             return (
               (async () => {
                 const t = h.b.InitFromClanID(r),
-                  i = await xi.pF.LoadCreatorHome(t, e);
+                  i = await xi.pF.LoadCreatorHome(t, !1, e);
                 e.token.reason || n(i);
               })(),
               () => {

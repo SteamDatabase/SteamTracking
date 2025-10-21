@@ -31,6 +31,50 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
+        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
+        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
+        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
+        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
+        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
+        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
+        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
+        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
+        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
+        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
+        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
+        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
+        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
+        Reason: "_2h0GKAYcXRP10ryZHFn79d",
+        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SmallAvatar: "_2cuu0nLVc4medg6FpU6PQl",
       };
     },
@@ -1375,7 +1419,7 @@
             bAddLinkToMemberList: _,
             bMinimalDisplay: _,
           } = _,
-          _ = (0, _._)(_.clan_account_id),
+          { creatorHome: _ } = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
         if (_ || !_)
           return _.createElement(
@@ -1584,6 +1628,318 @@
             bAddLinkToMemberList: __webpack_require__,
           }),
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "capsule_index_";
+      function _(_) {
+        const {
+            capsule: _,
+            bShowParentApp: __webpack_require__,
+            elElementToAppendToHover: _,
+            index: _,
+            navKey: _,
+            bHideStoreHover: _,
+            onlyOneDiscountPct: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          [_] = (0, _._)(__webpack_require__ && _?.GetParentAppID(), _._);
+        if (!_) return null;
+        const _ = Boolean(_),
+          _ = _.createElement(_, {
+            ..._,
+            strExtraParams: _.strExtraParams,
+            info: _,
+            bIsHovered: _,
+            bHasParentAppToDisplay: _,
+            onlyOneDiscountPct: _,
+          });
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)({
+              [_().OuterCapsuleContainer]: !0,
+              [_ + _]: 0 == _,
+            }),
+            navEntryPreferPosition: _._.PREFERRED_CHILD,
+            navKey: _,
+          },
+          _.createElement(
+            _._,
+            {
+              appid: _.GetAppID(),
+            },
+            Boolean(_)
+              ? _.createElement(
+                  "div",
+                  {
+                    onMouseEnter: () => _(!0),
+                    onMouseLeave: () => _(!1),
+                  },
+                  _,
+                )
+              : _.createElement(
+                  _._,
+                  {
+                    className: _().CapsuleContainer,
+                    item: _,
+                    elElementToAppend: _.elElementToAppendToHover,
+                    bShowDemoButton: _.bShowDemoButton,
+                    bPreferDemoStorePage: _.bPreferDemoStorePage,
+                    bShowDeckCompatibilityDialog:
+                      _.bShowDeckCompatibilityDialog,
+                    bHidePrice: _.bHidePrice,
+                    bUseSubscriptionLayout: _.bUseSubscriptionLayout,
+                    strExtraParams: _.strExtraParams,
+                    nCreatorAccountID: _.creatorAccountID,
+                    nWidthMultiplier: _.nWidthMultiplier,
+                  },
+                  _,
+                ),
+            Boolean(_) && _.createElement(_.Fragment, null, _),
+          ),
+          _ &&
+            _.createElement(_, {
+              strExtraParams: _.strExtraParams,
+              parentStoreItem: _,
+              childAppType: _.GetAppType(),
+              bPreferDemoStorePage: _,
+            }),
+        );
+      }
+      function _(_) {
+        const {
+            strExtraParams: _,
+            parentStoreItem: __webpack_require__,
+            childAppType: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return _.createElement(
+          _._,
+          {
+            className: _().CapsuleParentInfo,
+            ...(0, _._)(__webpack_require__, _, _, _, _),
+          },
+          _.createElement(
+            _._,
+            {
+              appid: __webpack_require__.GetAppID(),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().ParentType,
+              },
+              (0, _._)(
+                11 == _
+                  ? "#SalePage_ParentApp_SoundTrack"
+                  : "#SalePage_ParentApp_DLC",
+              ),
+            ),
+            _.createElement(
+              _._,
+              {
+                type: "app",
+                _: __webpack_require__.GetAppID(),
+                strExtraParams: _,
+              },
+              _.createElement("img", {
+                loading: "lazy",
+                className: _.AppCapsuleImage,
+                alt: __webpack_require__.GetName(),
+                src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
+                ...(0, _._)(),
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            info: _,
+            bHideStatusBanners: __webpack_require__,
+            strExtraParams: _,
+            index: _,
+            imageType: _,
+            bHasParentAppToDisplay: _,
+            bIsHovered: _,
+            strDoubleCapsuleMessage: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
+        if (!_) return null;
+        const _ = (0, _._)(
+          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
+        );
+        let _;
+        "overrideNavigation" in _ &&
+          (_ = (_) => (
+            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
+          ));
+        const _ = Boolean(_);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().CapsuleFocusCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)({
+                  [_().TwoWidthCtn]: _,
+                }),
+              },
+              _.createElement(
+                _._,
+                {
+                  href: _ ? null : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
+                  className: (0, _._)({
+                    [_().TwoWidthCapsule]: _,
+                  }),
+                  preferredFocus: _,
+                  onClick: _,
+                },
+                _.createElement(_._, {
+                  appids: _,
+                  hide_status_banners: __webpack_require__,
+                }),
+                "none" != _ &&
+                  _.createElement(_._, {
+                    imageType: _,
+                    info: _,
+                  }),
+                _.createElement(_._, {
+                  storeItem: _,
+                }),
+                Boolean(_) &&
+                  _.createElement(_._, {
+                    appInfo: _,
+                  }),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().TwoWidthSideInfo,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Reason,
+                    },
+                    _,
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().StoreSaleItemRelease,
+                    },
+                    _.createElement(
+                      "span",
+                      null,
+                      _.GetFormattedSteamReleaseDate(),
+                    ),
+                  ),
+                  _.createElement(_._, {
+                    bHideTitle: !0,
+                    rgTagIDs: _.GetTagIDs(),
+                    instanceNum: _,
+                  }),
+                ),
+            ),
+          ),
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            info: _,
+            bHidePriceIfOwned: __webpack_require__,
+            bHideStatusBanners: _,
+            bUseSubscriptionLayout: _,
+            elElementToAppendToHover: _,
+            bHidePrice: _,
+            bHidePlatforms: _,
+            creatorAccountID: _,
+            bIsHovered: _,
+            onlyOneDiscountPct: _,
+            strDoubleCapsuleMessage: _,
+          } = _,
+          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          _ =
+            _ &&
+            _?.GetIncludedAppIDsOrSelf().length > 0 &&
+            _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
+          _ = _ && !_;
+        if (_ && 0 == _?.GetStoreItemType())
+          return _.createElement(_._, {
+            appid: _.GetAppID(),
+            bIsMuted: _,
+          });
+        if (_) return null;
+        const _ = _ && __webpack_require__,
+          _ = _;
+        return _.createElement(_._, {
+          info: _,
+          bShowAsMuted: _,
+          bHidePrice: _,
+          bShowInLibraryInsteadOfPrice: _,
+          bHidePlatforms: _,
+          creatorAccountID: _,
+          bShowName: _.bShowName,
+          onlyOneDiscountPct: _,
+          bShowWishlistButton: Boolean(_),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

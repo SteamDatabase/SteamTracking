@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Разрешаване без никакво действие",
 	"moderation_resolutionstatus_pending": "Очакващо модерация",
 	"moderation_resolutionstatus_acquitted": "Прегледано — не е нужно никакво действие",
+	"moderation_resolutionstatus_purged": "Съдържанието е прочистено незабавно",
 	"moderation_resolutionstatus_removed": "Съдържанието е премахнато",
 	"moderation_resolutionstatus_relabelled": "Съдържанието е преетикетирано",
 	"moderation_resolutionstatus_suspicious": "Акаунтът е заключен за подозрително съдържание",

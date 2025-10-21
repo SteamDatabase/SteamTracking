@@ -397,6 +397,7 @@
         ShareTypeTitle: "_3X3w682EtopjFadHYWO8nC",
         ElementFadeIn: "_3_CA6jxTDtdeP097_ybDKj",
         ShareHeader: "j8KV_szYFpuGx7laNzqiC",
+        DropDownSizer: "ZrLd2gp4EdJNEtWgHX-H-",
         DropdownButton: "H5GE-sEeFx3Nv8992Vu48",
         Error: "_3quoXc_g1S9w4WTXaDr_-m",
         PrivacyWarning: "_1mHX7Rnmm65ymfxaNJuN8C",
@@ -456,7 +457,6 @@
         Disabled: "_1bpHHTC7HvYEMsuRIjInct",
         VisBorder: "_2Bte1jEcx1xWZ748IyNRGB",
         MobileCtn: "_2MA6bi7DByTfZRDaukv61F",
-        DropDownSizer: "ZrLd2gp4EdJNEtWgHX-H-",
         ShareLinkIcon: "_2n1Y63Vt8TdcnfmRnIKM0h",
         ShareLinkText: "HMDF7pMwhFbXs0_jYFoKP",
         BadgeBoxIntro: "_3KDm8EwU_3Sz4_wdFW3wgi",
@@ -5460,7 +5460,7 @@
             ),
           );
         return _.createElement(
-          _,
+          _.Fragment,
           null,
           _.createElement(
             "div",
@@ -5523,7 +5523,7 @@
             },
           ];
         return _.createElement(
-          _.Fragment,
+          "div",
           null,
           _.createElement(
             "div",

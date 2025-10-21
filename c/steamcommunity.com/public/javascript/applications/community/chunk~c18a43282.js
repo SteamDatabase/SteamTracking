@@ -653,13 +653,13 @@
             rgAcceptableTypes: _,
           },
           broadcast_left: {
-            width: 155,
-            height: 337,
+            width: [199, 155],
+            height: [433, 337],
             rgAcceptableTypes: _,
           },
           broadcast_right: {
-            width: 155,
-            height: 337,
+            width: [199, 155],
+            height: [433, 337],
             rgAcceptableTypes: _,
           },
           sale_header: {
@@ -2297,25 +2297,28 @@
               localized_label: [],
               default_label: "",
             };
+          let _ = _ + 10;
           return (
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_self_creator_home",
-                unique_id: _ + 10,
+                unique_id: _++,
                 curator_clan_id: this.clanSteamID.GetAccountID(),
               }),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_browse_more",
-                unique_id: _ + 12,
+                unique_id: _++,
               }),
+            _ &&
+              _.push(this.GenerateDynamicCreatorHomeItemBrowserSection(_++, _)),
             _ &&
               _.push({
                 ..._,
                 section_type: "footer_default_social_share",
-                unique_id: _ + 13,
+                unique_id: _++,
               }),
             _
           );
@@ -2326,15 +2329,15 @@
               null === (_ = this.jsondata) || void 0 === _
                 ? void 0
                 : _.sale_show_creator,
-            _ = this.BSaleShowCuratorRecommendationAtBottomOfPage(),
             _ = this.jsondata.sale_browse_more_button,
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
-              !this.jsondata.sale_default_social_media_disabled;
+              !this.jsondata.sale_default_social_media_disabled,
+            _ = 36 == this.GetEventType();
           return _ || _ || _ || _
             ? [
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!_, _, !!_, _),
+                ...this.GenerateDynamicSaleSections(!!_, !!_, _, _),
               ]
             : this.GetSaleSections();
         }
@@ -2698,6 +2701,42 @@
             _ &&
             _.toLowerCase().startsWith("nextfest")
           );
+        }
+        GenerateDynamicCreatorHomeItemBrowserSection(_, _) {
+          return {
+            ..._,
+            section_type: "sale_item_browser",
+            unique_id: _,
+            item_browse_section_data: {
+              enable_search: !0,
+              tabs: [
+                "all_released",
+                "popularpurchased",
+                "all_upcoming",
+                "discounted",
+              ],
+            },
+            enable_faceted_browsing: !0,
+            min_capsule_matches_for_facet_values: 5,
+            max_facet_values_for_facet: 5,
+            facet_sort_order: 1,
+            facet_auto_generate_options: {
+              only_facets: [
+                {
+                  loc_token: "#App_Taxonomy_Survey_QSuperGenreTitle",
+                },
+                {
+                  loc_token: "#AppTypeLabelTitle",
+                  only_values: [
+                    "#AppTypeLabel_game",
+                    "#AppTypeLabel_dlc",
+                    "#AppTypeLabel_demo",
+                    "#AppTypeLabel_music",
+                  ],
+                },
+              ],
+            },
+          };
         }
       }
       (0, _._)([_._], _.prototype, "GID", void 0),
@@ -7864,7 +7903,7 @@
         return !1;
       }
       function _(_, _) {
-        return 12 != _ && (!_ || -1 == _.indexOf("curator"));
+        return 12 != _ && 36 != _ && (!_ || -1 == _.indexOf("curator"));
       }
       function _(_) {
         return [14, 10, 15, 32].includes(_);

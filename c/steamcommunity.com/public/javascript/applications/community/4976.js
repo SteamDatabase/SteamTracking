@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Merkitse ratkaistuksi ilman toimenpiteitä",
 	"moderation_resolutionstatus_pending": "Odottaa moderointia",
 	"moderation_resolutionstatus_acquitted": "Tarkistettu: toimenpiteitä ei vaadita",
+	"moderation_resolutionstatus_purged": "Sisältö poistettu välittömästi",
 	"moderation_resolutionstatus_removed": "Sisältö poistettu",
 	"moderation_resolutionstatus_relabelled": "Sisältö luokiteltu uudelleen",
 	"moderation_resolutionstatus_suspicious": "Tili lukittu epäilyttävän sisällön vuoksi",

@@ -54,6 +54,8 @@
       module.exports = {
         CreatorHomeEditCtn: "_3DB3VqbQwlwEgIobz3qnQM",
         ExplanationCtn: "_3WXtRBCQheDdpVZmjNyBDO",
+        SelectedExplanationCtn: "_3Xqeg3LLYGoiKT-U9piY6E",
+        Warning: "_1YobMWi3HWE0jIVIrAR_bB",
         AdminLinkCtn: "_3urQXqeQ2IIwm1n4vl7qGi",
         LeftCol: "ZhkOY_vBOYZFyESTcxStX",
         RightCol: "qxkpFDr6iQIOoG7CjanXn",
@@ -6977,6 +6979,7 @@
           },
           _.createElement(_._, {
             editModel: _,
+            eInitLangLanguage: 0,
           }),
           _.createElement(_._, {
             items: _,
@@ -12171,12 +12174,15 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [__webpack_require__, _, _] = (0, _._)(() => [
             _.GetGID(),
             _.GetClanAccountID(),
+            _.BVisible() || _.BUnlisted(),
           ]),
           _ = !!__webpack_require__,
           { creatorHome: _ } = (0, _._)(_),
+          _ =
+            (null == _ ? void 0 : _.GetLinkedEventGID()) == __webpack_require__,
           _ = _ ? _.GetCreatorHomeURL(null) + "admin/curator_edit" : void 0,
           _ = _ ? _.GetCreatorHomeURL(null) + "#edit" : void 0;
         return _.createElement(
@@ -12192,15 +12198,53 @@
             _.createElement(
               "div",
               null,
-              (0, _._)(
-                "#EventEditor_Event_CreatorHome_Explanation",
-                _
-                  ? _.createElement("a", {
-                      href: _,
-                    })
-                  : void 0,
-              ),
+              (0, _._)("#EventEditor_Event_CreatorHome_Explanation"),
             ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.SelectedExplanationCtn,
+                (!_ || !_) && _.Warning,
+              ),
+            },
+            !_ &&
+              _.createElement(
+                "div",
+                null,
+                (0, _._)("#EventEditor_Event_CreatorHome_Hidden"),
+              ),
+            _ &&
+              !_ &&
+              _.createElement(
+                "div",
+                null,
+                (0, _._)(
+                  "#EventEditor_Event_CreatorHome_NotSelected",
+                  _.createElement("b", null),
+                  _
+                    ? _.createElement("a", {
+                        href: _,
+                      })
+                    : void 0,
+                ),
+              ),
+            _ &&
+              _ &&
+              _.createElement(
+                "div",
+                null,
+                (0, _._)(
+                  "#EventEditor_Event_CreatorHome_Selected",
+                  _.createElement("b", null),
+                  _
+                    ? _.createElement("a", {
+                        href: _,
+                      })
+                    : void 0,
+                ),
+              ),
           ),
           _.createElement(_, {
             editModel: _,
@@ -16076,7 +16120,7 @@
             )
           ).forEach((_) => {
             let _ = _._.InitFromClanID(_.clan_account_id);
-            _.push(_._.LoadCreatorHome(_, this.m_cancelSignal));
+            _.push(_._.LoadCreatorHome(_, !1, this.m_cancelSignal));
           }),
             Promise.all(_).then((_) => {
               this.m_cancelSignal.token.reason ||
@@ -18858,7 +18902,7 @@
           _ = (0, _._)(),
           _ = _.GetEventModel();
         (0, _.useEffect)(() => {
-          _._.IS_CURATOR && _._.LoadCreatorHome(_, _);
+          _._.IS_CURATOR && _._.LoadCreatorHome(_, !1, _);
         }, [_, _]);
         const _ = (0, _.useCallback)(() => {
             const _ = _._.GetCreatorHome(_);

@@ -175,7 +175,7 @@
             bAddLinkToMemberList: _,
             bMinimalDisplay: _,
           } = _,
-          _ = (0, _._)(_.clan_account_id),
+          { creatorHome: _ } = (0, _._)(_.clan_account_id),
           [_] = (0, _._)();
         if (_ || !_)
           return _.createElement(

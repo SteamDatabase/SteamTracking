@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Vyřešit bez podniknutí opatření",
 	"moderation_resolutionstatus_pending": "Čeká na moderaci",
 	"moderation_resolutionstatus_acquitted": "Zkontrolováno: nejsou nutné žádné kroky",
+	"moderation_resolutionstatus_purged": "Obsah byl okamžitě smazán",
 	"moderation_resolutionstatus_removed": "Obsah byl smazán",
 	"moderation_resolutionstatus_relabelled": "Byla změněna značka obsahu",
 	"moderation_resolutionstatus_suspicious": "Účet byl uzamčen kvůli podezřelému obsahu",

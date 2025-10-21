@@ -5853,6 +5853,7 @@
                 {
                   strTitle: _,
                   className: _.SucessErrorDialog,
+                  bProgressDialog: !0,
                   closeModal: () => {},
                 },
                 _.createElement(_._, {
@@ -16618,6 +16619,7 @@
         const {
             strTag: _,
             args: __webpack_require__,
+            rawargs: _,
             language: _ = (0, _._)(_._.LANGUAGE),
             children: _,
             ..._
@@ -16630,6 +16632,7 @@
               args: __webpack_require__,
               language: _,
               children: _,
+              rawargs: _,
             })
           : _.createElement(_.Fragment, null, `[${_}]`, _, `[/${_}]`);
       }

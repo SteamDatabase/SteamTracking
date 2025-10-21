@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Doar marchează ca rezolvat",
 	"moderation_resolutionstatus_pending": "Așteaptă să fie moderat",
 	"moderation_resolutionstatus_acquitted": "Verificat: nicio măsură necesară",
+	"moderation_resolutionstatus_purged": "Conținut eliminat imediat",
 	"moderation_resolutionstatus_removed": "Conținut eliminat",
 	"moderation_resolutionstatus_relabelled": "Conținut reetichetat",
 	"moderation_resolutionstatus_suspicious": "Contul a fost blocat din cauza conținutului suspect",

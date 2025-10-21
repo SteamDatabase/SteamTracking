@@ -1,4 +1,8 @@
 
+ :root {
+	 --curator-row-height: 250px;
+ }
+
 body.v6 {
 	background-image: none;
 }
@@ -80,9 +84,10 @@ background: -webkit-linear-gradient( left, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0
 
 
 .store_capsule_frame.highlighted_app {
-	background: #1b2838;
-	background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);
-	background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);
+	background: rgba(0,0,0,0.4);
+	border-radius: 3px;
+	backdrop-filter: blur(10px);
+	border: unset;
 }
 
 .highlighted_app_contents {
@@ -90,13 +95,14 @@ background: -webkit-linear-gradient( left, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0
 	flex-direction: row;
 }
 
+.highlighted_app_header {
+	position: relative;
+}
+
 .highlighted_app_capsule_image {
 	height: 270px;
 }
-.highlighted_app_header .ds_flag
-{
-	top: 108px;
-}
+
 .highlighted_app_details_ctn
 {
 	overflow: hidden;
@@ -431,17 +437,16 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 .most_recommended {
 	padding-bottom: 40px;
 
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-
-	/* "gap" property emulation */
-	margin-left: -20px;
-	margin-top: -20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: max-content;
+	grid-auto-flow: dense;
+	grid-gap: 24px;
+	width: 100%;
 }
 
 .most_recommended .store_capsule {
-	width: 220px;
+	width: 100%;
 }
 
 .most_recommended .steam_curators_for_app {
@@ -450,26 +455,19 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 }
 
 .most_recommended .steam_curator_recommendation {
-	height: 215px;
-	width: 220px;
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	height: unset;
+	box-sizing: border-box;
 	box-shadow: 0 0 5px #000;
-	background-position-y: 20px;
-
-	margin-left: 20px;
-	margin-top: 20px;
+	background: radial-gradient(ellipse 161.29% 1235.17% at -3.10% 130.83%, rgb(43, 82, 128) 0%, rgb(25, 51, 87) 60%, rgb(33, 63, 98) 100%);
 }
 
 .most_recommended .steam_curator_recommendation.big {
-	background-position-x: 100px;
-	background-position-y: 0px;
-	background-size: 48%;
-
-	width: 700px;
+	grid-column: span 3;
+	display: flex;
 }
 
 .most_recommended .steam_curator_recommendation .store_capsule {
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+	background: black;
 }
 .most_recommended .steam_curator_recommendation .steam_curators_for_app {
 	background: transparent;
@@ -516,7 +514,6 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 	padding-bottom: 40px;
 }
 .curator_spotlight_curator_ctn {
-	margin-right: 20px;
 }
 .curator_spotlight_image {
 
@@ -538,10 +535,10 @@ body.v6 .store_capsule_frame.curator_spotlight h2 b {
 .short_curator_recommendation_ctn {
 	display: flex;
 	flex-direction: row;
+	gap: 24px;
 }
 .short_curator_recommendation {
-	width: 254px;
-	margin-right: 20px;
+	flex-basis: 30%;
 }
 .store_capsule:not(:last-child) {
 	margin-right: 0px;
@@ -575,8 +572,14 @@ body.v6 .store_capsule_frame.curator_spotlight h2 b {
 }
 
 .steam_curator_recommendation.big .store_capsule {
-	width: 460px;
+	height: unset;
+	width: 66%;
+	aspect-ratio: 460/215;
+	display: block;
 	background: transparent;
+}
+.steam_curator_recommendation.big .store_capsule .capsule_image {
+
 }
 .steam_curator_recommendation.big .discount_block {
 	left: 466px;
@@ -589,10 +592,10 @@ body.v6 .store_capsule_frame.curator_spotlight h2 b {
 	display: inline;
 }
 .steam_curator_for_app_highlighted {
-	position: absolute;
-	left: -32px;
-	width: 160px;
-	padding-left: 100px;
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-left: -32px;
 	height: 100%;
 	overflow: hidden;
 
@@ -600,22 +603,18 @@ body.v6 .store_capsule_frame.curator_spotlight h2 b {
 		font-weight: normal; /* normal */
 
 			font-style: italic;
-	font-size: 13px;
+	font-size: 14px;
 }
 .steam_curator_recommendation.big .steam_curators_for_app
 {
-	float: right;
-	height: 194px;
-	width: 220px;
 	border-top: none;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
 }
 .steam_curator_for_app_highlighted .steam_curator_for_app {
 	height: 92px;
 	width: 92px;
-	position: absolute;
-	left: 0;
-	margin-right: 10px;
-	margin-top: 0px;
 	background: #1b6183;
 }
 .steam_curator_for_app_highlighted .steam_curator_for_app .steam_curator_for_app_img {
@@ -719,7 +718,7 @@ body.v6 .all_devs_ctn .browse_container {
 	display: none;
 }
 
-@media screen and (max-width: 910px) {
+@media screen and ( max-width: 980px ) {
 	html.responsive .highlighted_app_contents {
 		flex-direction: column;
 	}
@@ -733,6 +732,11 @@ body.v6 .all_devs_ctn .browse_container {
 		padding: 14px 0 14px 0;
 	}
 
+	html.responsive .most_recommended {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 12px;
+	}
+
 	html.responsive .most_recommended .steam_curator_recommendation.nonresponsive_hidden {
 		display: block;
 	}
@@ -741,9 +745,7 @@ body.v6 .all_devs_ctn .browse_container {
 		display: none;
 	}
 
-	html.responsive .short_curator_recommendation_ctn {
-		flex-direction: column;
-	}
+
 
 	html.responsive .curator_home_suggested {
 		display: none;
@@ -760,5 +762,15 @@ body.v6 .all_devs_ctn .browse_container {
 
 	html.responsive .curator_page_button:nth-of-type(1) {
 		margin-right: 0;
+	}
+}
+@media screen and ( max-width: 720px ) {
+	html.responsive .most_recommended {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 12px;
+	}
+
+	html.responsive .short_curator_recommendation_ctn {
+		flex-direction: column;
 	}
 }

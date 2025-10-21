@@ -23690,7 +23690,7 @@
                         __webpack_require__.SetDirty(_._.jsondata_sales);
                     },
                   },
-                  _.createElement(_.ffu, null),
+                  _.createElement(_.FWt, null),
                 ),
                 _.createElement(_, {
                   editModel: __webpack_require__,
@@ -23871,11 +23871,9 @@
             {
               className: _.ItemBrowseTabName,
             },
-            _,
+            _.createElement("b", null, _),
             Boolean(null == _ ? void 0 : _.tooltip) &&
-              _.createElement(_._, {
-                tooltip: (0, _._)(_.tooltip),
-              }),
+              _.createElement("span", null, " - ", (0, _._)(_.tooltip)),
             _ ? null : (0, _._)("#Sale_BrowserSortOption_Incompatible"),
           ),
           _ &&
@@ -24516,8 +24514,8 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { fnOnDirty: _, saleSection: __webpack_require__, event: _ } = _,
-          [_, _] = (0, _._)(() => {
-            var _, _;
+          [_, _, _] = (0, _._)(() => {
+            var _, _, _;
             return [
               _._.Get().GetCurEditLanguage(),
               null !==
@@ -24528,6 +24526,10 @@
                     : _.reservation_options) && void 0 !== _
                 ? _
                 : [],
+              (null === (_ = __webpack_require__.internal_section_data) ||
+              void 0 === _
+                ? void 0
+                : _.reservation_appid_wishlist) || 0,
             ];
           }),
           _ = (0, _.useCallback)(() => {
@@ -24565,6 +24567,23 @@
             null,
             "Note: If we are building out the page, and if the packages are not yet visible, make sure to be in ?beta=1 mode.",
           ),
+          _.createElement(_._, {
+            type: "number",
+            value: _,
+            onChange: (_) => {
+              const _ = Number.parseInt(_.currentTarget.value);
+              __webpack_require__.internal_section_data ||
+                (__webpack_require__.internal_section_data = {
+                  internal_type: "reservation_widget",
+                }),
+                (__webpack_require__.internal_section_data.reservation_appid_wishlist =
+                  _ || void 0),
+                _();
+            },
+            label: "AppID for Wishlists",
+            tooltip:
+              "Only a single appid can be selected for the entire reservation widget. This is only used for collecting wishlists from users",
+          }),
           _.createElement(
             _,
             {
@@ -30550,13 +30569,16 @@
       }
       const _ = (0, _._)((_) => {
         const _ = _.editModel,
-          _ = _.GetCurEditLanguage();
+          [__webpack_require__, _] = _.useState(
+            () => _.eInitLangLanguage || _.GetCurEditLanguage(),
+          );
         return _.createElement(_._, {
-          selectedLang: _,
+          selectedLang: __webpack_require__,
           fnOnLanguageChanged: (_) => {
-            _.SetCurEditLanguage(_) &&
-              _.OnLanguageChange &&
-              _.OnLanguageChange();
+            _(_),
+              _.SetCurEditLanguage(_) &&
+                _.OnLanguageChange &&
+                _.OnLanguageChange();
           },
           fnLangHasData: _.BHasLanguage,
           fnIsLangSupported: _.BDoesSupportLanguage,
@@ -31477,14 +31499,14 @@
             tooltip: "#Sale_BrowserSortOption_TrendingFree_ttip",
           },
           {
-            label: "#Sale_BrowserSortOption_MLWishlist",
-            flavor: "ml_wishlist_recommender",
-            tooltip: "#Sale_BrowserSortOption_MLWishlist_ttip",
+            label: "#Sale_BrowserSortOption_AllReleased",
+            flavor: "all_released",
+            tooltip: "#Sale_BrowserSortOption_AllReleased_ttip",
           },
           {
-            label: "#Sale_BrowserSortOption_MLPlaytime",
-            flavor: "ml_playtime_recommender",
-            tooltip: "#Sale_BrowserSortOption_MLPlaytime_ttip",
+            label: "#Sale_BrowserSortOption_AllUpcoming",
+            flavor: "all_upcoming",
+            tooltip: "#Sale_BrowserSortOption_AllUpcoming_ttip",
           },
         ],
         _ = [
@@ -31507,10 +31529,10 @@
           "contenthub_upcoming",
           "contenthub_all",
           "all",
-          "ml_wishlist_recommender",
-          "ml_playtime_recommender",
           "trendingfree",
           "contenthub_trendingfree",
+          "all_released",
+          "all_upcoming",
         ];
       function _(_) {
         return _.indexOf(_) >= 0;
@@ -33193,6 +33215,7 @@
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return "[" + _ + "] " + _;
@@ -33216,9 +33239,9 @@
         ];
       }
       async function _(_) {
-        const _ = await _._.AutoGenerateFacetsAsync();
-        return (
-          (function (_) {
+        let _ = await _._.AutoGenerateFacetsAsync();
+        if (
+          ((function (_) {
             const _ = _._.GetTagNameForTagID();
             for (const _ of _)
               for (const _ of _.facetValues) {
@@ -33299,7 +33322,10 @@
                     },
                   ],
                 },
-                rgStoreTagFilter: null,
+                rgStoreTagFilter: {
+                  type: _._.k_EStoreFilterClauseTypeAppType,
+                  value: _,
+                },
               });
             _.push(_);
           })(_),
@@ -33510,8 +33536,32 @@
               }),
               _.push(_);
           })(_),
-          _
-        );
+          _.only_facets)
+        ) {
+          const _ = new Map(
+              _.only_facets.map((_) => [_.loc_token, _.only_values]),
+            ),
+            _ = _._(
+              _.map((_) => {
+                const _ = _.name.find((_) => __webpack_require__.has(_));
+                return _
+                  ? {
+                      facet: _,
+                      values: __webpack_require__.get(_),
+                    }
+                  : null;
+              }),
+            );
+          for (const _ of _)
+            if (_.values) {
+              const _ = new Set(_.values);
+              _.facet.facetValues = _.facet.facetValues.filter((_) =>
+                _.name.some((_) => _.has(_)),
+              );
+            }
+          _ = _.map((_) => _.facet);
+        }
+        return _;
       }
       function _(_) {
         return _(_, _.Store);
@@ -40782,6 +40832,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         if (!_) return;
@@ -40795,6 +40846,12 @@
           _.webkitSetPresentationMode("fullscreen");
       }
       (0, _.createContext)(void 0);
+      function _(_) {
+        return !!_ && _ instanceof HTMLDialogElement;
+      }
+      function _(_) {
+        return !!_ && _.hasAttribute("popover");
+      }
       const _ = (0, _.createContext)(void 0);
       function _(_) {
         let {
@@ -40831,15 +40888,20 @@
                   _((_) => ("theater" == _ ? "none" : _));
                 },
                 _ = (_) => {
-                  _.currentTarget == _.target && _.close();
-                };
+                  _.currentTarget == _.target && _(_) && _.close();
+                },
+                _ = (_) => {
+                  "close" == _.newState && _();
+                },
+                _ = new _._();
               return (
-                _.addEventListener("close", _),
-                _.addEventListener("click", _),
-                () => {
-                  _.removeEventListener("close", _),
-                    _.removeEventListener("click", _);
-                }
+                _(_)
+                  ? (_.AddEventListener(_, "close", _),
+                    _.AddEventListener(_, "click", _))
+                  : _(_)
+                    ? _.AddEventListener(_, "beforetoggle", _)
+                    : (0, _._)(!1, "Was expecting a dialog or popover"),
+                () => _.Unregister()
               );
             },
             [_],
@@ -40851,9 +40913,14 @@
               _ &&
                 ("fullscreen" != _ && (0, _._)(_) && (0, _._)(_),
                 "fullscreen" == _ && _(_, _)),
-                _ &&
+                _(_) &&
                   ("theater" != _ && _.open && _.close(),
                   "theater" == _ && _.showModal()),
+                _(_) &&
+                  ("theater" != _ &&
+                    _.matches(":popover-open") &&
+                    _.hidePopover(),
+                  "theater" == _ && _.showPopover()),
                 _(_);
             },
             [_],
@@ -40861,7 +40928,7 @@
           _ = (0, _.useMemo)(
             () => ({
               refFullscreen: _,
-              refDialog: _,
+              refTheater: _,
               strMode: _,
               bSupportsTheater: __webpack_require__,
               bSupportsFullscreen: _,

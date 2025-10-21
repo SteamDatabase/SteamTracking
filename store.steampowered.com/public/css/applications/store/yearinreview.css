@@ -67,7 +67,7 @@
   flex-direction: column;
   top: 0;
   justify-content: center;
-  background-color: #000;
+  background-color: #0f1924;
 }
 html.responsive.touch ._1j8KSE1MOgkAPtRye2FcTh ._37ivcc2B6InJBq1X6WZFW4 {
   top: 62px;
@@ -1378,7 +1378,7 @@ html.responsive.touch ._1j8KSE1MOgkAPtRye2FcTh ._37ivcc2B6InJBq1X6WZFW4 {
   }
 }
 body.v6 {
-  background: #0e1014;
+  background: #0f1924;
 }
 ._1FBH84bAF1zr-VjJo8y2YI {
   font-family: "Motiva Sans", sans-serif;
@@ -1447,7 +1447,7 @@ body.v6 {
   color: #fff;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 620px) {
@@ -1468,8 +1468,9 @@ body.v6 {
   align-items: center;
 }
 ._39_9JtPLKvxe9QGOk1oewb ._1wMXRi1zY6UsfJCNvUaAri .TfeqoUci0-UqDlhwTEM80 {
-  height: clamp(48px, 7vw, 96px);
-  width: clamp(48px, 7vw, 96px);
+  height: clamp(48px, 7vw, 73px);
+  width: unset;
+  aspect-ratio: 1 / 1;
   margin-right: 15px;
   border-radius: 6px;
   box-sizing: border-box;
@@ -1548,7 +1549,7 @@ body.v6 {
 ._3ollvhyH9ny_q06Oe2aLRk {
   position: relative;
   width: 95vw;
-  margin: 5vw auto;
+  margin: 8vw auto 5vw auto;
   box-sizing: border-box;
 }
 @media screen and (max-width: 620px) {
@@ -2759,10 +2760,10 @@ body.v6 {
 }
 @keyframes _30Wt5HlsA-Eu-wNp6fxvAM {
   0% {
-    transform: rotate(-23deg) translate(0px, 10vh);
+    transform: scale(1.5) rotate(-23deg) translate(0px, 10vh);
   }
   100% {
-    transform: rotate(-23deg) translate(0px, -10vh);
+    transform: scale(1.5) rotate(-23deg) translate(0px, -10vh);
   }
 }
 @keyframes _3pF3M93ASmlVi_qQpQ8EhJ {
@@ -2773,19 +2774,17 @@ body.v6 {
 ._3mYNn3Asuzn5ilIQ-_jjEu {
   opacity: 0;
   animation: _3pF3M93ASmlVi_qQpQ8EhJ 1s ease-out .5s 1 forwards;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .RxFaOYvEjQF0lVUfJj_zJ {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin: 10% 0 30% 0;
+  width: 100vw;
+  height: 100vh;
   transform-origin: center;
-  transform: rotate(-23deg) translate(0px, 201px);
-  position: absolute;
+  transform: scale(1.5) rotate(-23deg);
   z-index: -1;
-  filter: saturate(0.2) opacity(1);
   animation: _30Wt5HlsA-Eu-wNp6fxvAM 40s ease 0s forwards alternate infinite;
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
@@ -2801,6 +2800,7 @@ body.v6 {
     );
   -webkit-mask-composite: source-in;
   mask-composite: source-in;
+  mix-blend-mode: luminosity;
 }
 .RxFaOYvEjQF0lVUfJj_zJ ._3vfLRYyJuqrXOJhwTZrjAQ {
   display: grid;
@@ -2812,6 +2812,11 @@ body.v6 {
 }
 .RxFaOYvEjQF0lVUfJj_zJ ._3vfLRYyJuqrXOJhwTZrjAQ._3bktuy-WjyQzpvqpLHPLtf {
   grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (min-width: 2500px) {
+  .RxFaOYvEjQF0lVUfJj_zJ ._3vfLRYyJuqrXOJhwTZrjAQ {
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
 @media screen and (max-width: 620px) {
   .RxFaOYvEjQF0lVUfJj_zJ ._3vfLRYyJuqrXOJhwTZrjAQ {
@@ -4480,13 +4485,14 @@ div._3G2neo4kGgRs1tdngZT55o ._1h_amHhk3CIML_H5gess8b {
 }
 ._3wBwgFLePqfIcCKHyA6g-K {
   display: flex;
-  flex-direction: column;
-  padding: 16px 22px;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px 12px;
   border-radius: 4px;
   min-width: 280px;
   max-width: 450px;
   width: fit-content;
-  text-align: center;
   background: rgba(255, 255, 255, 0.2);
 }
 .NowVisible ._3wBwgFLePqfIcCKHyA6g-K {
@@ -4503,6 +4509,9 @@ div._3G2neo4kGgRs1tdngZT55o ._1h_amHhk3CIML_H5gess8b {
   line-height: 33px;
   color: #fff;
   padding: 8px;
+}
+._3wBwgFLePqfIcCKHyA6g-K .ZrLd2gp4EdJNEtWgHX-H- {
+  width: 250px;
 }
 ._3wBwgFLePqfIcCKHyA6g-K .H5GE-sEeFx3Nv8992Vu48 {
   background: #ffffff6b;
@@ -4541,15 +4550,13 @@ div._3G2neo4kGgRs1tdngZT55o ._1h_amHhk3CIML_H5gess8b {
 ._2MSFQv8F34No-YaWoPUlC_ {
   display: flex;
   justify-content: center;
-  color: #dfe3e6;
+  color: #fff;
   transition-property: background, color, box-shadow;
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
-  background: #3d4450;
-  padding: 12px 25px 12px 25px;
-  margin: 12px 0px;
-  border-radius: 2px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background: #ffffff6b;
+  padding: 10px 25px 10px 25px;
+  border-radius: 3px;
   position: relative;
   text-decoration: none;
 }

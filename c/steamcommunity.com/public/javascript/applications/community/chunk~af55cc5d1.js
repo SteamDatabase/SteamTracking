@@ -451,6 +451,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -1205,6 +1206,7 @@
             (this.m_nFollowers = 0),
             (this.m_strVanity = ""),
             (this.m_webLink = void 0),
+            (this.m_linkedEvent = void 0),
             (this.m_bIsLoaded = !1),
             (this.m_bIsHidden = !1),
             (this.m_clanAccountFlags = 0),
@@ -1224,6 +1226,7 @@
             (this.m_bIsHidden = _.hidden || !1),
             (this.m_clanAccountFlags =
               null !== (_ = _.clan_account_flags) && void 0 !== _ ? _ : 0),
+            (this.m_linkedEvent = _.linked_event),
             _.appids && _.appids.forEach((_) => this.m_appidList.push(_)),
             (this.m_bIsLoaded = !0);
         }
@@ -1297,6 +1300,9 @@
         }
         GetVanityString() {
           return this.m_strVanity;
+        }
+        GetLinkedEventGID() {
+          return this.m_linkedEvent;
         }
         AdjustFollower(_) {
           this.m_nFollowers += _;
@@ -1412,10 +1418,10 @@
         GetCreatorHomeByID(_) {
           return this.m_mapClanToCreatorHome.get(_.clan_account_id);
         }
-        async LoadCreatorHome(_, _) {
+        async LoadCreatorHome(_, _ = !1, _) {
           if (
             (this.LazyInit(),
-            !this.m_mapClanToCreatorHome.has(_.GetAccountID()))
+            _ || !this.m_mapClanToCreatorHome.has(_.GetAccountID()))
           ) {
             let _ = new _(_);
             (_.m_promise = this.InternalCreatorHome(_, _)),
@@ -1497,22 +1503,25 @@
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       function _(_) {
-        const _ = _._.InitFromClanID(_),
-          {
-            data: __webpack_require__,
-            isFetching: _,
-            refetch: _,
-          } = (0, _._)({
-            queryKey: ["useCreatorHome", _],
-            initialData: () => _.GetCreatorHome(_),
-            queryFn: async () => {
-              const _ = _._.InitFromClanID(_);
-              return await _.LoadCreatorHome(_);
-            },
-          });
+        const _ = _._.InitFromClanID(_);
         return {
-          creatorHome: __webpack_require__,
-          isFetching: _,
+          queryKey: ["CreatorHome", _],
+          initialData: () => _.GetCreatorHome(_),
+          queryFn: async () => {
+            const _ = _._.InitFromClanID(_);
+            return await _.LoadCreatorHome(_, !0);
+          },
+        };
+      }
+      function _(_) {
+        const {
+          data: _,
+          isFetching: __webpack_require__,
+          refetch: _,
+        } = (0, _._)(_(_));
+        return {
+          creatorHome: _,
+          isFetching: __webpack_require__,
           refetch: _,
         };
       }

@@ -5,13 +5,6 @@ body.v6 .page_content {
     flex-direction: column;
 }
 
-body.v6 .page_content_1024 {
-    display: flex;
-    flex-direction: column;
-    width: 1024px;
-    margin: 0 auto;
-}
-
 /* Contain all Labs main page. */
 body.v6.labs {
     background: #181d3a;
@@ -33,8 +26,11 @@ color: #fff;
 }
 
 .labs-content {
-	width: 940px;
+	width: 100%;
 	margin: auto;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
 }
 
 .labs-content h1 {
@@ -89,14 +85,11 @@ color: #fff;
 
 /* Main page has main and secondary columns. */
 .left-column {
- 	float: left;
- 	width: 560px;
- 	margin-right: 20px;
+ 	flex-basis: calc(60% - 20px);
 }
 
 .right-column {
-	float: left;
-	width: 360px;
+	flex-basis: 40%;
 }
 
 .right-column-box {
@@ -121,6 +114,36 @@ color: #fff;
 
 .active-experiments-icon img {
 	width: 50px;
+}
+
+.active-experiments-icon a {
+	font-weight: 600;
+	font-style: italic;
+	color: white;
+	border-radius: 50%;
+	width: 100%;
+	aspect-ratio: 1/1;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 19px;
+}
+
+.active-experiments-icon.personalcalendar a {
+	background: #476CAD;
+}
+
+.active-experiments-icon.dlcforyou a {
+	background: #a953b3;
+}
+
+.active-experiments-icon.discoveryqueue a {
+	background: #cb346b;
+}
+
+.active-experiments-icon.microtrailer a {
+	background: #06b2ba;
 }
 
 .active-experiments-description {
@@ -149,23 +172,23 @@ color: #fff;
 }
 
 .capsule-banner {
-	width: 540px;
-	height: 240px;
+	width: 100%;
+	aspect-ratio: 7/3;
 	margin: 0px 0px 5px 0px;
 }
 .capsule:hover .capsule-banner-ctn > img {
     transform: scale(1.05);
 }
 .capsule-banner-ctn {
-    width: 560px;
-    height: 249px;
+    width: 100%;
+	aspect-ratio: 7/3;
     overflow: hidden;
 }
 .capsule-banner img {
     border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
-    width: 560px;
-    height: 240px;
+    width: 100%;
+	aspect-ratio: 7/3;
     transition: transform 0.4s ease-out;
 }
 
@@ -520,30 +543,6 @@ a.ultracast_now_playing_link:hover .ds_options {
 }
 
 
-@media screen and (max-width: 990px)
-{
-    html.responsive .labs-content {
-        margin: 0px 10px;
-    }
-    html.responsive .right-column {
-        width: 35%;
-    }
-    .experiment-title-area {
-        margin-left: -11px;
-    }
-}
-@media screen and (max-width: 1400px)
-{
-    html.responsive .labs-content {
-        margin: 0px 10px;
-    }
-    html.responsive .right-column {
-        width: 35%;
-    }
-    .experiment-title-area {
-        margin-left: 0px;
-    }
-}
 @media screen and (max-width: 910px)
 {
     html.responsive .about_active,

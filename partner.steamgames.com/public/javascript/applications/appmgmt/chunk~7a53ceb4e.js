@@ -160,8 +160,16 @@
           },
           email_full: { width: 800, height: 300, rgAcceptableTypes: m },
           email_centered: { width: 644, height: 300, rgAcceptableTypes: m },
-          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: m },
-          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: m },
+          broadcast_left: {
+            width: [199, 155],
+            height: [433, 337],
+            rgAcceptableTypes: m,
+          },
+          broadcast_right: {
+            width: [199, 155],
+            height: [433, 337],
+            rgAcceptableTypes: m,
+          },
           sale_header: {
             width: 0,
             height: 0,

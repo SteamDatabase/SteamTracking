@@ -540,6 +540,11 @@
 ._1Cd1TJ4SgK5DkDNbI-USUL ._2oDgGL0H43MaV3D4fTBH4t {
   color: #ffdc9b;
 }
+._1Cd1TJ4SgK5DkDNbI-USUL ._3Niy5UbG2M3zTi6wUY2jda {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+}
 ._2PLSeE9RayjVbZKYqcszIq {
   display: flex;
   flex-direction: row;
@@ -563,6 +568,8 @@
 ._2F5-HSU7JNjiVuDm_h_I4D ._3jIkQOyf1K28G5lxJiiDkV {
   width: 16px;
   height: 16px;
+  stroke: #fff;
+  margin-inline-end: 2px;
 }
 ._2Sg7W8jsvFcXVuQ7fbhSLJ,
 .Lc2PK-Vkkvr2TUS0TfCqq {

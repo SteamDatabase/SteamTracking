@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "แก้ปัญหาโดยไม่มีการดำเนินการใด ๆ",
 	"moderation_resolutionstatus_pending": "กำลังรอการตรวจสอบ",
 	"moderation_resolutionstatus_acquitted": "ตรวจสอบแล้ว: ไม่ต้องดำเนินการใด ๆ",
+	"moderation_resolutionstatus_purged": "เนื้อหาถูกลบไปทันที",
 	"moderation_resolutionstatus_removed": "เนื้อหาถูกลบ",
 	"moderation_resolutionstatus_relabelled": "เนื้อหาได้รับการติดป้ายกำกับใหม่",
 	"moderation_resolutionstatus_suspicious": "บัญชีถูกล็อกเนื่องจากเนื้อหาที่น่าสงสัย",

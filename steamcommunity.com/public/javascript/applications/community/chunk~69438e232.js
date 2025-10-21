@@ -5350,6 +5350,7 @@
                 {
                   strTitle: t,
                   className: a.SucessErrorDialog,
+                  bProgressDialog: !0,
                   closeModal: () => {},
                 },
                 i.createElement(o.t, {
@@ -15051,20 +15052,22 @@
         const {
             strTag: t,
             args: r,
-            language: i = (0, a.sf)(s.TS.LANGUAGE),
-            children: n,
-            ...l
+            rawargs: i,
+            language: n = (0, a.sf)(s.TS.LANGUAGE),
+            children: l,
+            ...c
           } = e,
-          c = Te.sm_BBCodeDictionary.get(t);
-        return c
-          ? o.createElement(c.Constructor, {
-              context: l,
+          m = Te.sm_BBCodeDictionary.get(t);
+        return m
+          ? o.createElement(m.Constructor, {
+              context: c,
               tagname: t,
               args: r,
-              language: i,
-              children: n,
+              language: n,
+              children: l,
+              rawargs: i,
             })
-          : o.createElement(o.Fragment, null, `[${t}]`, n, `[/${t}]`);
+          : o.createElement(o.Fragment, null, `[${t}]`, l, `[/${t}]`);
       }
       Te.sm_BBCodeDictionary = new Map([
         ...Array.from(l.W4.entries()),

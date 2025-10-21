@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Stäng utan åtgärd",
 	"moderation_resolutionstatus_pending": "Väntar på moderering",
 	"moderation_resolutionstatus_acquitted": "Granskad: ingen åtgärd krävs",
+	"moderation_resolutionstatus_purged": "Innehåll raderas omedelbart",
 	"moderation_resolutionstatus_removed": "Innehåll borttaget",
 	"moderation_resolutionstatus_relabelled": "Innehåll ommärkt",
 	"moderation_resolutionstatus_suspicious": "Kontot har låsts på grund av misstänkt innehåll",

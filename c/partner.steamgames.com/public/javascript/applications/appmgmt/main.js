@@ -1785,40 +1785,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -1855,10 +1821,48 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1979,55 +1983,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2052,10 +2012,58 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2471,87 +2479,85 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      async function _(_) {
-        const [_, _, _, _] = await Promise.all([
-            __webpack_require__("chunkid")(`./shared_${_}.json`),
-            __webpack_require__("chunkid")(`./marketing_${_}.json`),
-            __webpack_require__("chunkid")(`./sales_${_}.json`).then(
-              (_) => _.default,
-            ),
-            __webpack_require__("chunkid")(`./main_${_}.json`),
-          ]),
-          _ = {
-            ..._.default,
-          },
-          _ = _._.GetLanguageFallback(_);
-        if (_ === _)
-          _._.InitFromObjects(_, null, _.default, null),
-            _._.AddTokens(_, null),
-            _._.AddTokens(_, null);
-        else {
-          const [_, _, _, _] = await Promise.all([
-              __webpack_require__("chunkid")(`./shared_${_}.json`),
-              __webpack_require__("chunkid")(`./marketing_${_}.json`),
-              __webpack_require__("chunkid")(`./sales_${_}.json`),
-              __webpack_require__("chunkid")(`./main_${_}.json`),
-            ]),
-            _ = {
-              ..._.default,
-            };
-          _._.InitFromObjects(_, _, _.default, _.default),
-            _._.AddTokens(_, _),
-            _._.AddTokens(_, _);
-        }
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      function _() {
+        const _ = [];
+        return (
+          _._.IN_MOBILE_WEBVIEW && _.push("in_mobile_app"),
+          _._.IN_CLIENT && _.push("in_client"),
+          _
+        );
       }
       (0, _._)({
         enforceActions: "never",
       }),
         document.addEventListener("DOMContentLoaded", async function () {
-          document.getElementById("application_root")
-            ? ((0, _._)("application_config"),
-              (0, _._)().Init(
-                "Partner",
-                CLSTAMP,
-                new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
-              ),
-              await _(_._.LANGUAGE),
-              _.createRoot(document.getElementById("application_root")).render(
-                _.createElement(_, {}),
-              ))
-            : ((0, _._)(),
-              (0, _._)().Init(
-                "Partner",
-                CLSTAMP,
-                new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
-              ),
-              await _(_._.LANGUAGE),
-              (function () {
-                let _ = document.querySelectorAll(".StoreAdminReactRoot");
-                for (let _ = 0; _ < _.length; _++) {
-                  let _ = _[_],
-                    _ = _.getAttribute("data-component");
-                  switch (_) {
-                    case "LibraryLogoEditor":
-                    case "LibraryLogoEditorPopup":
-                      __webpack_require__
-                        ._("chunkid")
-                        .then(
-                          __webpack_require__.bind(
-                            __webpack_require__,
-                            "chunkid",
-                          ),
-                        )
-                        .then(({ Init_LibraryLogoEditor: _ }) =>
-                          _("LibraryLogoEditorPopup" == _, _),
-                        );
-                      break;
-                    default:
-                      (0, _._)(!1, `unknown component: "${_}"`);
+          const _ = document.getElementById("application_root"),
+            _ = _ ? "application_config" : void 0;
+          (0, _._)(_);
+          const _ = new _._(_._.WEBAPI_BASE_URL).GetServiceTransport();
+          (0, _._)().Init("Partner", CLSTAMP, _, {
+            fnGetReportTags: _,
+          }),
+            await (async function (_) {
+              const [_, _, _, _] = await Promise.all([
+                  __webpack_require__("chunkid")(`./shared_${_}.json`),
+                  __webpack_require__("chunkid")(`./marketing_${_}.json`),
+                  __webpack_require__("chunkid")(`./sales_${_}.json`).then(
+                    (_) => _.default,
+                  ),
+                  __webpack_require__("chunkid")(`./main_${_}.json`),
+                ]),
+                _ = {
+                  ..._.default,
+                },
+                _ = _._.GetLanguageFallback(_);
+              if (_ !== _) {
+                const [_, _, _, _] = await Promise.all([
+                    __webpack_require__("chunkid")(`./shared_${_}.json`),
+                    __webpack_require__("chunkid")(`./marketing_${_}.json`),
+                    __webpack_require__("chunkid")(`./sales_${_}.json`),
+                    __webpack_require__("chunkid")(`./main_${_}.json`),
+                  ]),
+                  _ = {
+                    ..._.default,
+                  };
+                _._.InitFromObjects(_, _, _.default, _.default),
+                  _._.AddTokens(_, _),
+                  _._.AddTokens(_, _);
+              } else
+                _._.InitFromObjects(_, null, _.default, null),
+                  _._.AddTokens(_, null),
+                  _._.AddTokens(_, null);
+            })(_._.LANGUAGE),
+            _
+              ? _.createRoot(_).render(_.createElement(_, {}))
+              : (function () {
+                  let _ = document.querySelectorAll(".StoreAdminReactRoot");
+                  for (let _ = 0; _ < _.length; _++) {
+                    let _ = _[_],
+                      _ = _.getAttribute("data-component");
+                    switch (_) {
+                      case "LibraryLogoEditor":
+                      case "LibraryLogoEditorPopup":
+                        __webpack_require__
+                          ._("chunkid")
+                          .then(
+                            __webpack_require__.bind(
+                              __webpack_require__,
+                              "chunkid",
+                            ),
+                          )
+                          .then(({ Init_LibraryLogoEditor: _ }) =>
+                            _("LibraryLogoEditorPopup" == _, _),
+                          );
+                        break;
+                      default:
+                        (0, _._)(!1, `unknown component: "${_}"`);
+                    }
                   }
-                }
-              })());
+                })();
         }),
         (window.LocalizationManifestReady = function (_, _, _) {
           (0, _._)("manifest" === _, `Expected manifest not "${_}"`),
@@ -3118,6 +3124,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3127,7 +3134,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      _.forwardRef(function (_, _) {
+      const _ = _.forwardRef(function (_, _) {
         const {
             navID: __webpack_require__,
             onActivated: _,
@@ -6370,13 +6377,11 @@
         const _ = _.useRef(null),
           _ = _.useCallback(
             (_) => {
-              window.requestAnimationFrame(() => {
-                _.current?.BFocusWithin() &&
-                  _.current.Node()?.GetLastFocusElement()?.scrollIntoView({
-                    behavior: "auto",
-                    block: "nearest",
-                  });
-              });
+              _.current?.BFocusWithin() &&
+                _.current.Node()?.GetLastFocusElement()?.scrollIntoView({
+                  behavior: "auto",
+                  block: "nearest",
+                });
             },
             [_],
           );
@@ -6485,22 +6490,21 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_, _ = 0, __webpack_require__ = Math.random) {
+        if (_?.length > 1) {
+          let _ = _ > 0 ? Math.min(_, _.length) : _.length;
+          for (; 0 !== _; ) {
+            const _ = Math.floor(__webpack_require__() * _);
+            _ -= 1;
+            const _ = _[_];
+            (_[_] = _[_]), (_[_] = _);
+          }
+        }
+        return _;
+      }
       function _(_, _) {
         const _ = _.slice();
-        return (
-          (function (_, _ = 0, _ = Math.random) {
-            if (_?.length > 1) {
-              let _ = _ > 0 ? Math.min(_, _.length) : _.length;
-              for (; 0 !== _; ) {
-                const _ = Math.floor(__webpack_require__() * _);
-                _ -= 1;
-                const _ = _[_];
-                (_[_] = _[_]), (_[_] = _);
-              }
-            }
-          })(_),
-          __webpack_require__.slice(0, _)
-        );
+        return _(_), __webpack_require__.slice(0, _);
       }
       function _(_, _, _) {
         if (_ >= 0 || _ >= 0) {
@@ -6593,6 +6597,7 @@
         return _.filter((_) => null != _);
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -6715,7 +6720,14 @@
           !Number.isNaN(Number.parseFloat(_))
         );
       }
+      function _(_, _, _, _) {
+        let _ = _ / _,
+          _ = _ / _,
+          _ = Math.min(_, _);
+        return [_ * _, _ * _];
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -8251,6 +8263,16 @@
                     _: 10,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  queue_head_position_at_reservation: {
+                    _: 11,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  queue_head_position_now: {
+                    _: 12,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
                   },
                 },
               }),
@@ -11731,7 +11753,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 42, 52, 71],
+              [11, 12, 20, 21, 25, 41, 42, 44, 52, 71],
               null,
             );
         }
@@ -11896,6 +11918,12 @@
                   self_purchase_option: {
                     _: 43,
                     _: _,
+                  },
+                  invalid_purchase_options: {
+                    _: 44,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                   screenshots: {
                     _: 50,
@@ -17964,9 +17992,19 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        _.useEffect(() => {
+          const _ = _?.current;
+          if (_ && _)
+            return (
+              _.addEventListener(_, _, _), () => _.removeEventListener(_, _)
+            );
+        }, [_, _, _]);
+      }
       function _(_, _, _) {
         return (0, _._)(
           (_) => {
@@ -17996,20 +18034,13 @@
           _,
         );
       }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
-          _ = _.useRef(void 0);
+      function _() {
+        const [_, _] = _.useState(!1);
         return [
           _,
           {
-            onMouseEnter: _.useCallback(() => {
-              __webpack_require__(!0), clearTimeout(_.current);
-            }, []),
-            onMouseLeave: _.useCallback(() => {
-              _
-                ? (_.current = setTimeout(() => __webpack_require__(!1), _))
-                : __webpack_require__(!1);
-            }, [_]),
+            onMouseEnter: _.useCallback(() => _(!0), []),
+            onMouseLeave: _.useCallback(() => _(!1), []),
           },
         ];
       }
@@ -18046,6 +18077,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _._,
+        _: () => _._,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -24930,6 +24963,7 @@
         _: () => _,
         _: () => _._,
         _: () => _,
+        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -29526,6 +29560,7 @@
                 {
                   strTitle: _,
                   className: _.SucessErrorDialog,
+                  bProgressDialog: !0,
                   closeModal: () => {},
                 },
                 _.createElement(_._, {
@@ -29845,7 +29880,9 @@
         FId: () => _,
         Gj3: () => _,
         JPq: () => _,
+        JaO: () => _,
         K6w: () => _,
+        K9I: () => _,
         Kz1: () => _,
         LSz: () => _,
         MGO: () => _,
@@ -29853,11 +29890,14 @@
         O7b: () => _,
         Q9b: () => _,
         QRo: () => _,
+        TPi: () => _,
         UKJ: () => _,
         VnB: () => _,
         YqK: () => _,
         ZyV: () => _,
+        _3Z: () => _,
         _V3: () => _,
+        a_4: () => _,
         b8_: () => _,
         bmT: () => _,
         dWO: () => _,
@@ -29883,6 +29923,7 @@
         tI4: () => _,
         u49: () => _,
         vet: () => _,
+        wB_: () => _,
         x7X: () => _,
         xIk: () => _,
         ycU: () => _,
@@ -29892,6 +29933,21 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M33 20.38V15.62L29.07 14.9C28.8121 14.015 28.453 13.1628 28 12.36L30.27 9.08L26.92 5.71L23.64 8C22.8372 7.54696 21.985 7.18793 21.1 6.93L20.38 3H15.62L14.9 6.93C14.015 7.18793 13.1628 7.54696 12.36 8L9.08 5.71L5.71 9.08L8 12.36C7.54696 13.1628 7.18793 14.015 6.93 14.9L3 15.62V20.38L6.93 21.1C7.18793 21.985 7.54696 22.8372 8 23.64L5.71 26.92L9.08 30.29L12.36 28C13.1637 28.4461 14.0159 28.7984 14.9 29.05L15.62 33H20.38L21.1 29.07C21.985 28.8121 22.8372 28.453 23.64 28L26.92 30.27L30.29 26.9L28 23.64C28.4461 22.8363 28.7984 21.9841 29.05 21.1L33 20.38ZM18 23C17.0111 23 16.0444 22.7068 15.2221 22.1573C14.3999 21.6079 13.759 20.827 13.3806 19.9134C13.0022 18.9998 12.9031 17.9945 13.0961 17.0245C13.289 16.0546 13.7652 15.1637 14.4645 14.4645C15.1637 13.7652 16.0546 13.289 17.0245 13.0961C17.9945 12.9031 18.9998 13.0022 19.9134 13.3806C20.827 13.759 21.6079 14.3999 22.1573 15.2221C22.7068 16.0444 23 17.0111 23 18C23 18.6566 22.8707 19.3068 22.6194 19.9134C22.3681 20.52 21.9998 21.0712 21.5355 21.5355C21.0712 21.9998 20.52 22.3681 19.9134 22.6194C19.3068 22.8707 18.6566 23 18 23Z",
+            fill: "currentColor",
+          }),
+        );
+      }
       function _(_) {
         const { none: _, partial: __webpack_require__, ..._ } = _;
         return _
@@ -30456,6 +30512,167 @@
         );
       }
       function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
+          },
+          _.createElement("path", {
+            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
+          },
+          _.createElement("path", {
+            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+            fillOpacity: "0.5",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
+          },
+          _.createElement("path", {
+            _: "M14.16 6L5.11 13.4H1V23.27H5.11L14.15 30.67V6H14.16Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+            fillOpacity: "0.5",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)(_.className, _().FlipInRTL),
+          },
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M14.15 6.00818L14.16 6H14.15V6.00818ZM14.15 18.27V6.00818L7.10342 11.77L14.15 18.27ZM14.15 26.039L1 13.909V23.27H5.11L14.15 30.67V26.039Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M29.96 6.02002L30.14 6.19002C36.96 12.89 36.96 23.76 30.14 30.46L29.96 30.63L26.75 27.48L26.93 27.3C31.96 22.34 31.96 14.3 26.93 9.34002L26.75 9.16002L29.96 6.02002Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M24.94 10.96L25.12 11.13C29.17 15.11 29.17 21.56 25.12 25.54L24.94 25.71L21.73 22.56L21.91 22.38C24.17 20.14 24.17 16.52 21.91 14.28L21.73 14.1L24.94 10.95V10.96Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M19.92 15.89L20.1 16.06C21.38 17.32 21.38 19.35 20.1 20.61L19.92 20.78L17.43 18.33L19.92 15.88V15.89Z",
+            fill: "currentColor",
+            fillOpacity: "0.25",
+          }),
+          _.createElement(
+            "rect",
+            {
+              _: "0.728821",
+              _: "10",
+              width: "3",
+              height: "27",
+              transform: "rotate(-46.9546 0.728821 9.47668)",
+              fill: "currentColor",
+            },
+            _.createElement("animate", {
+              attributeName: "y",
+              begin: "0",
+              dur: "150ms",
+              from: "0",
+              _: "10",
+              values: "0; 5; 10",
+              keyTimes: "0; .8; 1",
+              fill: "freeze",
+            }),
+          ),
+        );
+      }
+      function _(_) {
         const { direction: _, className: __webpack_require__, ..._ } = _;
         switch (_) {
           case "up":
@@ -30796,6 +31013,21 @@
           _.createElement("path", {
             fill: "currentColor",
             _: "M10.4285 10.5567V16.1991H8.54908V13.7682L4.33155 17.9887V18H3V16.6675H3.00181L7.22877 12.4375H4.79018V10.5567H10.4285Z",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M14 14H4V10H10V4H14V14ZM32 10H26V4H22V14H32V10ZM26 26H32V22H22V32H26V26ZM14 22H4V26H10V32H14V22Z",
+            fill: "currentColor",
           }),
         );
       }
@@ -31845,6 +32077,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -32321,6 +32554,7 @@
             strMiddleButtonText: _,
             onMiddleButton: _,
             bAlertDialog: _,
+            bProgressDialog: _,
             children: _,
             ..._
           } = _,
@@ -32333,20 +32567,22 @@
           strCancelText: _,
         });
         _
-          ? (_ = _.createElement(_._, null, _))
-          : _ &&
-            (_ = _.createElement(_._, {
-              bOKDisabled: _.bOKDisabled,
-              bCancelDisabled: _.bCancelDisabled,
-              strOKText: _,
-              onCancel: _(_.onCancel),
-              strCancelText: _,
-              onUpdate: () => {
-                _(), _.closeModal && _.closeModal();
-              },
-              strUpdateText: _,
-              bUpdateDisabled: _.bMiddleDisabled,
-            }));
+          ? (_ = void 0)
+          : _
+            ? (_ = _.createElement(_._, null, _))
+            : _ &&
+              (_ = _.createElement(_._, {
+                bOKDisabled: _.bOKDisabled,
+                bCancelDisabled: _.bCancelDisabled,
+                strOKText: _,
+                onCancel: _(_.onCancel),
+                strCancelText: _,
+                onUpdate: () => {
+                  _(), _.closeModal && _.closeModal();
+                },
+                strUpdateText: _,
+                bUpdateDisabled: _.bMiddleDisabled,
+              }));
         const _ = _.useId();
         return _.createElement(
           _._,
@@ -32517,6 +32753,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _._,
+        _: () => _,
         _: () => _._,
         _: () => _._,
         _: () => _._,
@@ -32525,11 +32762,42 @@
         _: () => _._,
         _: () => _._,
       });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, navID: __webpack_require__, closeModal: _ } = _,
+          _ = _.createRef(),
+          _ = (_) => (_.stopPropagation(), _.preventDefault(), !0);
+        return (0, _._)() && !_._.IN_STEAMUI
+          ? _.createElement(
+              _._,
+              {
+                navID: __webpack_require__,
+                navTreeRef: _,
+                onCancelButton: _,
+                className: _.GamepadOnlyModalWrapper,
+              },
+              _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  _._,
+                  {
+                    className: _.GamepadOnlyPanelWrapper,
+                    onGamepadDirection: _,
+                    focusableIfEmpty: !0,
+                  },
+                  _,
+                ),
+              ),
+            )
+          : _.createElement(_.Fragment, null, _);
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
@@ -37811,6 +38079,28 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return null != _ && void 0 !== _.focus;
       }
@@ -37892,17 +38182,20 @@
         return _ && (_ = _.ownerDocument.defaultView), _;
       }
       function _(_) {
-        let _ = window.document;
-        try {
-          _ = window.top.document;
-        } catch (_) {}
-        const _ = _.createElement("textarea");
+        const _ = window.top ?? window,
+          _ = _.document,
+          _ = __webpack_require__.createElement("textarea");
         (_.textContent = _),
           (_.style.position = "fixed"),
           _.body.appendChild(_),
-          __webpack_require__.select();
+          _.select();
         try {
-          _.execCommand("copy");
+          if (
+            ((0, _._)(_, "Browser.NotifyUserActivation") &&
+              _.SteamClient.Browser.NotifyUserActivation(),
+            !__webpack_require__.execCommand("copy"))
+          )
+            throw "document.execCommand false";
         } catch (_) {
           console.warn("Copy to clipboard failed.", _);
         } finally {
@@ -37945,27 +38238,6 @@
               ? _.mozCancelFullScreen()
               : _.msExitFullscreen && _.msExitFullscreen();
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
       function _(_, _) {
         const _ = _;
         return (
@@ -39201,6 +39473,8 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _._,
+        _: () => _._,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -39325,6 +39599,24 @@
       function _(_, _) {
         return _(_.toLocaleLowerCase(), _.toLocaleLowerCase());
       }
+      function _(_, _) {
+        let _ = _.toString(),
+          _ = "";
+        for (let _ = 0; _ < _ - _.length; _++) _ += "0";
+        return _ + _;
+      }
+      function _(_, _ = !1) {
+        if (Number.isNaN(_) || !Number.isFinite(_)) return "";
+        let _ = _ < 0;
+        _ = Math.abs(_);
+        let _ = Math.floor(_ / 3600),
+          _ = Math.floor((_ % 3600) / 60),
+          _ = Math.floor(_ % 60),
+          _ = _ ? "-" : "";
+        return !_ || _ > 0
+          ? `${_}${_}:${_(_, 2)}:${_(_, 2)}`
+          : `${_}${_}:${_(_, 2)}`;
+      }
       function _(_) {
         if (!_) return "";
         if (DOMParser) {
@@ -39363,6 +39655,7 @@
         return atob(_.replace(/-/g, "+").replace(/_/g, "/"));
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -40029,7 +40322,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 95061), _((_._ = _));
+      return (_ = 32111), _((_._ = _));
       var _;
     });
     _._();

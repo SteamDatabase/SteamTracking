@@ -34,8 +34,6 @@
         strDesktopControlBarWidth: "300px",
         strDesktopGlobalHeaderHeight: "104px",
         strMobileGlobalHeaderHeight: "62px",
-        strDesktopLabsBannerHeight: "46px",
-        strMobileLabsBannerHeight: "42px",
         strDesktopHubBannerHeight: "80px",
         strMobileHubBannerHeight: "80px",
         strJumboHubBannerHeight: "150px",
@@ -51,13 +49,6 @@
         ControlPageContainer: "_2LztMgS2eI0MWKHJ3v-l0H",
         FiltersTitle: "tQZ7I-5Bxpp4zpDf48imu",
         FiltersDescription: "_17nuaBuSlylN8eWUkcLsAv",
-        SideSteamLabsBannerCtn: "_1UOp4B_Y4H72j2sToElzRf",
-        SteamLabsIdentifiers: "_3SWqwk3OkmIyA0ID3h7V3G",
-        SteamLabsName: "_1wILkHwglmD4JCdY_6Qw_H",
-        SteamLabsNumber: "_2ByePau03c09GPc7l80smz",
-        SteamLabsButton: "_3YoSz4AbfNlw05okAd2yQa",
-        SteamLabsBanner: "_8sQflgMCSidxvEXBYL4n_",
-        SteamLabsBannerCtn: "_3olyO1vhDEhoc4qwI4pDyt",
         SidebarContainer: "_15YLDKm80opUF5Tivo7UK-",
         SidebarCollapsed: "_3x2Igmho_SeKqPI3_cnWfG",
         CollapseButton: "_1RCioHSgo99b0iUemHy2OE",
@@ -78,7 +69,6 @@
         FilterSection: "_34HOA5NqMETdKvOv8I0QPz",
         FilterSubSection: "_1Ko6oJ92gSqJKHJhVCi2Pc",
         FilterSubSectionTitle: "MeJhm7ZvNEcgMNrj4YyRg",
-        ConfigPanelSteamLabs: "_3wJ-zapSyyDGYNL9munfGQ",
         ForceResponsiveLink: "_3dRqLQAbzE1yESy7-PmVZK",
         SidebarLink: "_2VFTM7o6Mn2fvJXYr9mSVo",
         SidebarManageMutedApps: "_2IWYfBr6LLolwVjYdZcBco",
@@ -89,6 +79,7 @@
         MobileButton: "_3cMvc6AfC8k2OaILY81XXB",
         BodyNoScroll: "_1d-cxT1sPNzIVcm8qsNT7o",
         EventCalendarContainer: "_1e3WbBz7-mqMKmK8HnpzFF",
+        CollapsedMenu: "WXATz6O52NqxwM0VJR-rV",
         ReserveControlSpace: "_18npkDI3gKg9S7EeTFOj-2",
         WideLeftGutter: "ws9ANxmy2MKDDodGRGkqN",
         LogInFeedRow: "nydHEEVdYQNQyocchG2Kr",
@@ -3964,6 +3955,7 @@
                 {
                   className: _().MainContentContainer,
                 },
+                _,
                 _.createElement(
                   "div",
                   {
@@ -4044,7 +4036,6 @@
                   ),
                   !_ && _,
                 ),
-                _,
               ),
             ),
           ),
@@ -5587,7 +5578,10 @@
             _.createElement(
               "div",
               {
-                className: _().EventCalendarContainer,
+                className: (0, _._)(
+                  _().EventCalendarContainer,
+                  this.state.bControlBarIsCollapsed ? _().CollapsedMenu : "",
+                ),
               },
               _.createElement(
                 _._,

@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Rozstrzygnij bez podejmowania działań",
 	"moderation_resolutionstatus_pending": "Oczekujące na moderację",
 	"moderation_resolutionstatus_acquitted": "Sprawdzono: nie jest wymagane żadne działanie",
+	"moderation_resolutionstatus_purged": "Treści natychmiastowo usunięte",
 	"moderation_resolutionstatus_removed": "Treści usunięte",
 	"moderation_resolutionstatus_relabelled": "Treści opatrzone nowym oznaczeniem",
 	"moderation_resolutionstatus_suspicious": "Konto zablokowane z powodu podejrzanych treści",

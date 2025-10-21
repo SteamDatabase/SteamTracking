@@ -92,11 +92,11 @@
       "use strict";
       n.d(t, {
         MY: () => u,
-        UA: () => g,
+        UA: () => d,
         Yd: () => f,
         qG: () => _,
         rN: () => m,
-        vh: () => d,
+        vh: () => g,
       });
       var a = n(34629),
         r = n(41735),
@@ -209,7 +209,7 @@
           );
         }
       }
-      function d(e) {
+      function g(e) {
         const [t, n] = (0, s.useState)(!1);
         return (
           (0, s.useEffect)(() => {
@@ -223,7 +223,7 @@
           t
         );
       }
-      function g(e) {
+      function d(e) {
         const [t, n] = s.useState(() => p.Get().GetPartnerInfo(e));
         return (
           s.useEffect(() => {
@@ -329,7 +329,11 @@
           const l = (e, a) => {
             if (e && e.node.tag === a.text && o.get(e.node.tag)) {
               const a = o.get(e.node.tag),
-                r = { tagname: e.node.tag, args: e.node.args },
+                r = {
+                  tagname: e.node.tag,
+                  args: e.node.args,
+                  rawargs: e.node.rawargs,
+                },
                 s = t(a.Constructor, r, ...n.GetElements());
               (n = e.accumulator),
                 Array.isArray(s)
@@ -410,63 +414,66 @@
           let t = r.indexOf("=");
           const n = r.indexOf(" ");
           let o, s;
-          if ((-1 != n && (-1 == t || n < t) && (t = n), t > 0)) {
-            o = r.substr(0, t).toLocaleLowerCase();
-            s = (function (e) {
-              if (!e || e.length < 1) return {};
-              const t = {};
-              let n = "",
-                a = "",
-                r = 0,
-                o = 0;
-              "=" == e[0] && (r = 2);
-              let s = !1;
-              for (o++; o < e.length; o++) {
-                const i = e[o];
-                let c = !0,
-                  l = !1;
-                switch (r) {
-                  case 0:
-                    if ("=" == i) return {};
-                    if (" " == i) continue;
-                    r = 1;
-                    break;
-                  case 1:
-                    ("=" != i && " " != i) ||
-                      s ||
-                      (" " == i ? ((r = 0), (l = !0)) : (r = 2), (c = !1));
-                    break;
-                  case 2:
-                    " " == i
-                      ? ((r = 0), (c = !1), (l = !0))
-                      : '"' == i
-                        ? ((r = 4), (c = !1))
-                        : (r = 3);
-                    break;
-                  case 3:
-                  case 4:
-                    ((" " == i && 4 != r && !s) ||
-                      ('"' == i && 4 == r && !s)) &&
-                      ((r = 0), (c = !1), (l = !0));
+          -1 != n && (-1 == t || n < t) && (t = n);
+          let i = "";
+          t > 0
+            ? ((o = r.substr(0, t).toLocaleLowerCase()),
+              (i = r.substr(t)),
+              (s = (function (e) {
+                if (!e || e.length < 1) return {};
+                const t = {};
+                let n = "",
+                  a = "",
+                  r = 0,
+                  o = 0;
+                "=" == e[0] && (r = 2);
+                let s = !1;
+                for (o++; o < e.length; o++) {
+                  const i = e[o];
+                  let c = !0,
+                    l = !1;
+                  switch (r) {
+                    case 0:
+                      if ("=" == i) return {};
+                      if (" " == i) continue;
+                      r = 1;
+                      break;
+                    case 1:
+                      ("=" != i && " " != i) ||
+                        s ||
+                        (" " == i ? ((r = 0), (l = !0)) : (r = 2), (c = !1));
+                      break;
+                    case 2:
+                      " " == i
+                        ? ((r = 0), (c = !1), (l = !0))
+                        : '"' == i
+                          ? ((r = 4), (c = !1))
+                          : (r = 3);
+                      break;
+                    case 3:
+                    case 4:
+                      ((" " == i && 4 != r && !s) ||
+                        ('"' == i && 4 == r && !s)) &&
+                        ((r = 0), (c = !1), (l = !0));
+                  }
+                  if (c)
+                    if ("\\" != i || s)
+                      if (((s = !1), 1 == r)) n += i;
+                      else {
+                        if (3 != r && 4 != r)
+                          throw new Error(
+                            "Not expecting to accumulate buffer in state " + r,
+                          );
+                        a += i;
+                      }
+                    else s = !0;
+                  l && ((t[n] = a), (n = ""), (a = ""));
                 }
-                if (c)
-                  if ("\\" != i || s)
-                    if (((s = !1), 1 == r)) n += i;
-                    else {
-                      if (3 != r && 4 != r)
-                        throw new Error(
-                          "Not expecting to accumulate buffer in state " + r,
-                        );
-                      a += i;
-                    }
-                  else s = !0;
-                l && ((t[n] = a), (n = ""), (a = ""));
-              }
-              0 != r && (t[n] = a);
-              return t;
-            })(r.substr(t));
-          } else (s = {}), (o = r.toLocaleLowerCase());
-          e.push({ type: a, text: r, tag: o, args: s });
+                0 != r && (t[n] = a);
+                return t;
+              })(i)))
+            : ((s = {}), (o = r.toLocaleLowerCase())),
+            e.push({ type: a, text: r, tag: o, args: s, rawargs: i });
         } else 0 != a && e.push({ type: a, text: r });
         return { type: n, text: "" };
       }
@@ -530,7 +537,7 @@
     },
     63556: (e, t, n) => {
       "use strict";
-      n.d(t, { E: () => d, O: () => p });
+      n.d(t, { E: () => g, O: () => p });
       var a = n(34629),
         r = n(14947),
         o = n(65946),
@@ -585,7 +592,7 @@
           (0, r.Gn)(this);
         }
       }
-      function d() {
+      function g() {
         return (0, o.q3)(() => p.Get().GetCurEditLanguage());
       }
       (0, a.Cg)([r.sH], p.prototype, "m_eCurLang", void 0),
@@ -640,8 +647,8 @@
         l = n(75233),
         u = n(17720),
         p = n(68797),
-        d = n(78327),
-        g = n(56545),
+        g = n(78327),
+        d = n(56545),
         m = n(37735),
         f = n(23809),
         _ = n(7860);
@@ -652,8 +659,8 @@
             queryKey: [h],
             queryFn: async () => {
               const e = new Map();
-              if (d.iA.logged_in) {
-                const n = g.w.Init(m.dN),
+              if (g.iA.logged_in) {
+                const n = d.w.Init(m.dN),
                   a = (await m.xt.GetNicknameList(t, n)).Body().toObject();
                 a?.nicknames &&
                   a.nicknames.length > 0 &&
@@ -671,9 +678,9 @@
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, d.yK)()
-                  ? d.TS.COMMUNITY_BASE_URL
-                  : d.TS.STORE_BASE_URL;
+                "community" == (0, g.yK)()
+                  ? g.TS.COMMUNITY_BASE_URL
+                  : g.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
                   a = await r().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -762,8 +769,8 @@
         l = n(63556),
         u = n(95695),
         p = n.n(u),
-        d = n(52038),
-        g = n(61859),
+        g = n(52038),
+        d = n(61859),
         m = n(91675),
         f = n(73745),
         _ = n(32754);
@@ -781,15 +788,15 @@
               s.createElement(
                 "option",
                 { key: "langpicker_unset", value: -1 },
-                (0, g.we)("#language_selection_none"),
+                (0, d.we)("#language_selection_none"),
               ),
             );
           let o = new Array();
           const l = this.props.realms || [c.TU.k_ESteamRealmGlobal];
-          for (const e of g.A0.GetLanguageListForRealms(l)) {
+          for (const e of d.A0.GetLanguageListForRealms(l)) {
             if (t && !t(e)) continue;
             const n = (0, i.Lg)(e),
-              a = (0, g.we)("#Language_" + n),
+              a = (0, d.we)("#Language_" + n),
               s = Boolean(r) && r(e);
             o.push({ eLang: e, sLocName: a, bSupported: s });
           }
@@ -811,7 +818,7 @@
                     className: p().SupportedGroupLabel,
                     disabled: !0,
                   },
-                  (0, g.we)(
+                  (0, d.we)(
                     t.bSupported
                       ? "#LanguageGroup_Supported"
                       : "#LanguageGroup_Unsupported",
@@ -825,9 +832,9 @@
             o &&
               0 !== o &&
               ((i += " "),
-              (i += (0, g.we)(
+              (i += (0, d.we)(
                 "#Language_Last_Update",
-                (0, g.$z)(o) + " @ " + (0, m.KC)(o, { bForce24HourClock: !1 }),
+                (0, d.$z)(o) + " @ " + (0, m.KC)(o, { bForce24HourClock: !1 }),
               ))),
               e.push(
                 s.createElement(
@@ -835,7 +842,7 @@
                   {
                     key: "langpicker" + t.eLang + (r ? "_hasdata" : ""),
                     value: t.eLang,
-                    className: (0, d.A)(
+                    className: (0, g.A)(
                       { [p().LanguageWithContent]: r },
                       t.bSupported
                         ? p().SupportedLanguage
@@ -877,7 +884,7 @@
           fnLangHasData: l.O.Get().BHasLanguageData,
           fnOnLanguageChanged: l.O.Get().SetCurEditLanguage,
           bDisabled: !t,
-          strTooltip: t ? void 0 : (0, g.we)("#Localization_EditorNotInFocus"),
+          strTooltip: t ? void 0 : (0, d.we)("#Localization_EditorNotInFocus"),
         });
       }
       function S(e) {
@@ -904,7 +911,7 @@
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => g, pn: () => f, qx: () => m });
+      n.d(t, { AQ: () => d, pn: () => f, qx: () => m });
       var a = n(16676),
         r = n(61859),
         o = n(12155),
@@ -914,15 +921,15 @@
         l = n(84811),
         u = n(64734),
         p = n(65946),
-        d = n(26408);
-      function g(e) {
+        g = n(26408);
+      function d(e) {
         const {
             title: t,
             tooltip: n,
             getMinimized: a,
             toggleMinimized: r,
             className: o,
-            children: g,
+            children: d,
             elAdditionalButtons: m,
           } = e,
           _ = (0, p.q3)(() => a());
@@ -948,7 +955,7 @@
                 ),
               },
               t,
-              Boolean(n) && s.createElement(d.o, { tooltip: n }),
+              Boolean(n) && s.createElement(g.o, { tooltip: n }),
             ),
             s.createElement(
               "div",
@@ -957,13 +964,13 @@
               s.createElement(f, { bIsMinimized: _, fnToggleMinimize: r }),
             ),
           ),
-          !_ && s.createElement(l.tH, null, g),
+          !_ && s.createElement(l.tH, null, d),
         );
       }
       function m(e) {
         const [t, n] = s.useState(Boolean(e.bStartMinimized));
         return s.createElement(
-          g,
+          d,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
         );

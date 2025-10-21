@@ -5810,13 +5810,11 @@
         const _ = _.useRef(null),
           _ = _.useCallback(
             (_) => {
-              window.requestAnimationFrame(() => {
-                _.current?.BFocusWithin() &&
-                  _.current.Node()?.GetLastFocusElement()?.scrollIntoView({
-                    behavior: "auto",
-                    block: "nearest",
-                  });
-              });
+              _.current?.BFocusWithin() &&
+                _.current.Node()?.GetLastFocusElement()?.scrollIntoView({
+                  behavior: "auto",
+                  block: "nearest",
+                });
             },
             [_],
           );
@@ -9271,6 +9269,16 @@
                     _: 10,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  queue_head_position_at_reservation: {
+                    _: 11,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  queue_head_position_now: {
+                    _: 12,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
                   },
                 },
               }),
@@ -29203,7 +29211,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 42, 52, 71],
+              [11, 12, 20, 21, 25, 41, 42, 44, 52, 71],
               null,
             );
         }
@@ -29368,6 +29376,12 @@
                   self_purchase_option: {
                     _: 43,
                     _: _,
+                  },
+                  invalid_purchase_options: {
+                    _: 44,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                   screenshots: {
                     _: 50,
@@ -35523,20 +35537,13 @@
           ),
         ];
       }
-      function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
-          _ = _.useRef(void 0);
+      function _() {
+        const [_, _] = _.useState(!1);
         return [
           _,
           {
-            onMouseEnter: _.useCallback(() => {
-              __webpack_require__(!0), clearTimeout(_.current);
-            }, []),
-            onMouseLeave: _.useCallback(() => {
-              _
-                ? (_.current = setTimeout(() => __webpack_require__(!1), _))
-                : __webpack_require__(!1);
-            }, [_]),
+            onMouseEnter: _.useCallback(() => _(!0), []),
+            onMouseLeave: _.useCallback(() => _(!1), []),
           },
         ];
       }
@@ -59814,6 +59821,7 @@
             strMiddleButtonText: _,
             onMiddleButton: _,
             bAlertDialog: _,
+            bProgressDialog: _,
             children: _,
             ..._
           } = _,
@@ -59826,20 +59834,22 @@
           strCancelText: _,
         });
         _
-          ? (_ = _.createElement(_._, null, _))
-          : _ &&
-            (_ = _.createElement(_._, {
-              bOKDisabled: _.bOKDisabled,
-              bCancelDisabled: _.bCancelDisabled,
-              strOKText: _,
-              onCancel: _(_.onCancel),
-              strCancelText: _,
-              onUpdate: () => {
-                _(), _.closeModal && _.closeModal();
-              },
-              strUpdateText: _,
-              bUpdateDisabled: _.bMiddleDisabled,
-            }));
+          ? (_ = void 0)
+          : _
+            ? (_ = _.createElement(_._, null, _))
+            : _ &&
+              (_ = _.createElement(_._, {
+                bOKDisabled: _.bOKDisabled,
+                bCancelDisabled: _.bCancelDisabled,
+                strOKText: _,
+                onCancel: _(_.onCancel),
+                strCancelText: _,
+                onUpdate: () => {
+                  _(), _.closeModal && _.closeModal();
+                },
+                strUpdateText: _,
+                bUpdateDisabled: _.bMiddleDisabled,
+              }));
         const _ = _.useId();
         return _.createElement(
           _._,
@@ -61004,6 +61014,7 @@
         ENo: () => _,
         Exy: () => _,
         F2T: () => _,
+        FEq: () => _,
         GB9: () => _,
         GSe: () => _,
         Gkr: () => _,
@@ -61128,7 +61139,6 @@
         ww0: () => _,
         xv8: () => _,
         yHA: () => _,
-        yUp: () => _,
         y_e: () => _,
         zD7: () => _,
         zHo: () => _,
@@ -61508,46 +61518,6 @@
             _: "212",
             _: "44",
           }),
-        );
-      }
-      function _(_) {
-        let _ = "SVGIcon_Button SVGIcon_Pin";
-        return (
-          _.bPinned && (_ += " Pinned"),
-          _.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: _,
-              _: "0px",
-              _: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            _.createElement("path", {
-              className: "point",
-              _: "M134.787,129.241v52.051v26.025c0.041,4.334-0.092,8.677,0.094,13.009c-1.493,4.332-3.129,8.675-5.239,13.009 c-2.109-4.334-3.734-8.677-5.237-13.009c0.186-4.333,0.05-8.677,0.092-33.009v-26.025v-32.051v-5.146h10.291V129.241z",
-            }),
-            _.createElement("path", {
-              className: "head",
-              _: "M186.55,151.049H73.351l-5.146-5.146c0-23.791,11.186-40.359,30.871-46.091V39.394 c-6.843-3.478-17.164-10.034-17.154-27.312l5.146-5.146h85.167l5.146,5.146c0,17.227-9.828,23.803-16.537,27.292v60.521 c19.664,6.062,30.852,22.609,30.852,46.01L186.55,151.049z",
-            }),
-            _.createElement("line", {
-              className: "ground",
-              opacity: _.bPinned ? 1 : 0,
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "16",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              _: "33.833",
-              _: "238.5",
-              _: "221.834",
-              _: "238.5",
-            }),
-          )
         );
       }
       function _(_) {
@@ -63303,6 +63273,33 @@
             _: "210.504",
             _: "208.507",
             _: "55.004",
+          }),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(
+          _.className,
+          "SVGIcon_Button",
+          _.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled",
+        );
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: _,
+            _: "0px",
+            _: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          _.createElement("path", {
+            fill: _.filled ? "#currentColor" : "none",
+            stroke: "#currentColor",
+            strokeWidth: "10",
+            strokeMiterlimit: "10",
+            _: "M127.755,18.624 c-2.061,0.101-3.846,1.465-4.485,3.427L98.312,96.933H18.379c-2.745,0.01-4.963,2.242-4.955,4.989 c0.006,1.572,0.754,3.05,2.019,3.984l64.925,47.476L55.41,230.873c-0.848,2.612,0.582,5.417,3.192,6.265 c1.521,0.495,3.186,0.228,4.475-0.719L128,188.945l64.926,47.474c2.212,1.624,5.324,1.144,6.947-1.071 c0.944-1.29,1.211-2.954,0.719-4.475l-24.959-77.492l64.922-47.476c2.211-1.63,2.681-4.743,1.049-6.953 c-0.934-1.265-2.41-2.015-3.984-2.02H157.69l-24.959-74.882C132.033,19.917,129.997,18.513,127.755,18.624z",
           }),
         );
       }
@@ -66671,6 +66668,32 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return null != _ && void 0 !== _.focus;
       }
@@ -66755,17 +66778,20 @@
         const _ = "steam://openurl/";
         _.startsWith(_) && (_ = _.slice(16)),
           (function (_) {
-            let _ = window.document;
-            try {
-              _ = window.top.document;
-            } catch (_) {}
-            const _ = _.createElement("textarea");
+            const _ = window.top ?? window,
+              _ = _.document,
+              _ = __webpack_require__.createElement("textarea");
             (_.textContent = _),
               (_.style.position = "fixed"),
               _.body.appendChild(_),
-              __webpack_require__.select();
+              _.select();
             try {
-              _.execCommand("copy");
+              if (
+                ((0, _._)(_, "Browser.NotifyUserActivation") &&
+                  _.SteamClient.Browser.NotifyUserActivation(),
+                !__webpack_require__.execCommand("copy"))
+              )
+                throw "document.execCommand false";
             } catch (_) {
               console.warn("Copy to clipboard failed.", _);
             } finally {
@@ -66854,31 +66880,6 @@
           ? document.addEventListener("DOMContentLoaded", _)
           : _();
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
       function _(_, _) {
         const _ = _;
         return (
@@ -79931,6 +79932,44 @@
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -80817,6 +80856,10 @@
                                     listid: _._.listid,
                                   }),
                                 "creatorhome-social-media-display": (_) =>
+                                  _.createElement(_, {
+                                    ..._,
+                                  }),
+                                "creator-home-event": (_) =>
                                   _.createElement(_, {
                                     ..._,
                                   }),

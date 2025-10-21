@@ -281,7 +281,12 @@
               null,
               m.createElement(
                 M.Bm,
-                { strTag: "carousel", args: {}, event: o.GetEventModel() },
+                {
+                  strTag: "carousel",
+                  args: {},
+                  rawargs: "",
+                  event: o.GetEventModel(),
+                },
                 _.map((e, t) =>
                   m.createElement(ae, {
                     key: t,
@@ -322,7 +327,7 @@
           m.createElement(
             V.EN,
             { active: void 0 !== a },
-            m.createElement($, {
+            m.createElement(W, {
               ...t,
               images: a,
               onCarouselImagesSelected: i,
@@ -331,11 +336,11 @@
           ),
         ];
       }
-      function W(e) {
+      function $(e) {
         const { nodeAttrs: t } = e;
         return "image" == t.type ? t.attrs.src : t.attrs.mp4 || t.attrs.webm;
       }
-      function $(e) {
+      function W(e) {
         var t;
         const {
             hideModal: n,
@@ -355,8 +360,8 @@
               if (!n)
                 throw `Couldn't parse image ${t.name} - ${JSON.stringify(e)}`;
               c((e) => {
-                const t = W(n);
-                return e.find((e) => W(e) == t) ? e : [...e, n];
+                const t = $(n);
+                return e.find((e) => $(e) == t) ? e : [...e, n];
               });
             },
             [l],
@@ -411,10 +416,10 @@
                       i.map((e, t) =>
                         m.createElement(
                           j.tH,
-                          { key: W(e) },
+                          { key: $(e) },
                           m.createElement(
                             K.sx,
-                            { draggableId: W(e), index: t },
+                            { draggableId: $(e), index: t },
                             (n, a, o) =>
                               m.createElement(X, {
                                 draggableProvided: n,
@@ -626,6 +631,7 @@
           ? m.createElement(M.Bm, {
               strTag: "img",
               args: s,
+              rawargs: "",
               event: n,
               showErrorInfo: !0,
             })
@@ -634,6 +640,7 @@
                 key: `${r.mp4}_${r.webm}`,
                 strTag: "video",
                 args: s,
+                rawargs: "",
                 event: n,
                 showErrorInfo: !0,
               })
@@ -1054,6 +1061,7 @@
               event: a.GetEventModel(),
               strTag: "previewyoutube",
               args: { "": `${t};${n}` },
+              rawargs: `${t};${n}`,
               showErrorInfo: !0,
             }),
           ),
@@ -1412,7 +1420,7 @@
         return m.createElement(
           m.Fragment,
           null,
-          m.createElement($e, {
+          m.createElement(We, {
             startTime: t.rtime_start,
             location_type: s,
             fnUpdateLocationAndTZ: (e, a) =>
@@ -1440,7 +1448,7 @@
             },
             value: d,
           }),
-          m.createElement(We, {
+          m.createElement($e, {
             rtime_start: a,
             rtime_end: o,
             sDisplayTimeZone: p,
@@ -1472,7 +1480,7 @@
           ),
         );
       }
-      function We(e) {
+      function $e(e) {
         const { rtime_start: t, rtime_end: n, sDisplayTimeZone: a } = e,
           o = ze.unix(t).tz(Se.hh),
           l = ze.unix(t).tz(a),
@@ -1501,7 +1509,7 @@
           ),
         );
       }
-      function $e(e) {
+      function We(e) {
         const {
             startTime: t,
             location_type: n,
@@ -2130,7 +2138,7 @@
             m.createElement(
               "div",
               { className: _t().DialogCtn },
-              m.createElement($e, {
+              m.createElement(We, {
                 startTime: l.GetEventStartTime(),
                 location_type: i,
                 in_person_time_zone: c,
@@ -2258,7 +2266,7 @@
               (a.localized_break_description[l] = e.currentTarget.value), n(a);
             },
           }),
-          m.createElement(We, {
+          m.createElement($e, {
             rtime_start: r,
             rtime_end: s,
             sDisplayTimeZone: o,
@@ -2895,7 +2903,7 @@
             schema: t.pm_schema,
           }),
           l.image && m.createElement(b.pw, { nodeType: l.image }),
-          m.createElement(Wt, {
+          m.createElement($t, {
             schemaConfig: t,
             editModel: n,
             clanSteamID: n.GetClanSteamID(),
@@ -2903,7 +2911,7 @@
           m.createElement(Rt, { emoticonStore: wt.A, schema: t.pm_schema }),
         );
       });
-      function Wt(e) {
+      function $t(e) {
         const { schemaConfig: t, editModel: n, clanSteamID: a } = e,
           o = t.pm_schema,
           s = m.useMemo(

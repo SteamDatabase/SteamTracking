@@ -50,6 +50,8 @@
       e.exports = {
         CreatorHomeEditCtn: "_3DB3VqbQwlwEgIobz3qnQM",
         ExplanationCtn: "_3WXtRBCQheDdpVZmjNyBDO",
+        SelectedExplanationCtn: "_3Xqeg3LLYGoiKT-U9piY6E",
+        Warning: "_1YobMWi3HWE0jIVIrAR_bB",
         AdminLinkCtn: "_3urQXqeQ2IIwm1n4vl7qGi",
         LeftCol: "ZhkOY_vBOYZFyESTcxStX",
         RightCol: "qxkpFDr6iQIOoG7CjanXn",
@@ -385,7 +387,7 @@
         z = a(27543),
         q = a(31467),
         V = a.n(q);
-      const Q = (e) => {
+      const W = (e) => {
           const { closeModal: t } = e,
             a = (0, F.d)(P.UF.CLANACCOUNTID);
           return d.createElement(
@@ -412,11 +414,11 @@
                     "No Publishing History available",
                   )
                 : a.map((e) =>
-                    d.createElement(W, { key: e.clan_event_gid, record: e }),
+                    d.createElement(Q, { key: e.clan_event_gid, record: e }),
                   ),
           );
         },
-        W = (e) => {
+        Q = (e) => {
           var t;
           const { record: a } = e,
             n = d.useMemo(() => p.b.InitFromClanID(P.UF.CLANACCOUNTID), []);
@@ -541,13 +543,13 @@
         ze = "medialayout_item_",
         qe = "mediacontent_title_",
         Ve = "mediacontent_sutitle_",
-        Qe = "mediacontent_desc_",
-        We = "meetsteam_",
-        Ye = We + "title_",
-        Je = We + "desc_",
-        Ke = We + "faq_",
-        Ze = We + "ia_",
-        Xe = We + "break_",
+        We = "mediacontent_desc_",
+        Qe = "meetsteam_",
+        Ye = Qe + "title_",
+        Je = Qe + "desc_",
+        Ke = Qe + "faq_",
+        Ze = Qe + "ia_",
+        Xe = Qe + "break_",
         $e = "techspecblock_",
         et = "_name_",
         tt = "_desc_",
@@ -1103,7 +1105,7 @@
                                 a &&
                                   Boolean(R.NT.Get(a, C)) &&
                                   s.SetLocalization(
-                                    Qe + t.unique_id + "_" + e.unique_id,
+                                    We + t.unique_id + "_" + e.unique_id,
                                     C,
                                     a[C],
                                   );
@@ -1199,7 +1201,7 @@
                     }
                   }
                 if (
-                  n.startsWith(We) &&
+                  n.startsWith(Qe) &&
                   e.GetEventModel().jsondata.meet_steam_groups
                 )
                   for (
@@ -2051,7 +2053,7 @@
                                     }
                                     if (
                                       n ===
-                                      Qe + t.unique_id + "_" + l.unique_id
+                                      We + t.unique_id + "_" + l.unique_id
                                     ) {
                                       const t = l.localized_media_description;
                                       if (c || (t && Boolean(R.NT.Get(t, a)))) {
@@ -3177,7 +3179,7 @@
               rgClanEventData: U,
               bHasNextPage: z,
               fnFetchNextPage: q,
-              bIsFetching: W,
+              bIsFetching: Q,
               bIsFetchingNextPage: Y,
               clanEventSummaryStatus: J,
               clanEventSummaryLoadError: K,
@@ -3196,8 +3198,8 @@
                 }, [t, e]),
                 a
               );
-            })(W, x),
-            $ = (0, O.Sz)(W),
+            })(Q, x),
+            $ = (0, O.Sz)(Q),
             ee = d.useMemo(() => {
               (0, N.wT)(
                 !j || j.every((e) => null != e),
@@ -3324,7 +3326,7 @@
             oe = te(u.zv.k_EEventStateVisible),
             re = d.useMemo(() => {
               if (!oe) return;
-              if (W || !z) return oe;
+              if (Q || !z) return oe;
               const e = oe.length >= 10 ? oe.length - 10 : oe.length,
                 t = d.createElement(A.J, {
                   key: "visibilityTracker",
@@ -3332,7 +3334,7 @@
                   onVisibilityChange: ae,
                 });
               return [...oe.slice(0, e), t, ...oe.slice(e)];
-            }, [z, W, oe, ae]),
+            }, [z, Q, oe, ae]),
             se =
               ne.length > 0 || le.length > 0 || ie.length > 0 || oe.length > 0;
           return d.createElement(
@@ -3371,7 +3373,7 @@
                       h.$n,
                       {
                         onClick: (e) =>
-                          (0, D.pg)(d.createElement(Q, null), (0, k.uX)(e)),
+                          (0, D.pg)(d.createElement(W, null), (0, k.uX)(e)),
                       },
                       "Show Publishing Audit History",
                     ),
@@ -3399,7 +3401,7 @@
                     ),
                 ),
               ),
-              (W || se || i.length > 0) &&
+              (Q || se || i.length > 0) &&
                 d.createElement(
                   "div",
                   {
@@ -3531,14 +3533,14 @@
                         (0, R.we)("#EventDisplay_Visible_Title_WithRange"),
                       ),
                       re,
-                      !W &&
+                      !Q &&
                         !re &&
                         d.createElement(
                           "div",
                           null,
                           (0, R.we)("#EventDisplay_NoPublic"),
                         ),
-                      (W || ($ && z)) &&
+                      (Q || ($ && z)) &&
                         d.createElement(I.t, {
                           position: "center",
                           string: (0, R.we)("#Loading"),
@@ -3681,8 +3683,8 @@
         zt = a(17297),
         qt = a(65946),
         Vt = a(67165),
-        Qt = a(26161),
-        Wt = a(9449),
+        Wt = a(26161),
+        Qt = a(9449),
         Yt = a(56692),
         Jt = a(25359),
         Kt = a.n(Jt),
@@ -5042,7 +5044,7 @@
             d.createElement(
               d.Fragment,
               null,
-              d.createElement(Wt.t, {
+              d.createElement(Qt.t, {
                 clanSteamID: o.GetClanSteamID(),
                 rgSupportArtwork: b,
                 fnSetImageURL: o.SetImageURL,
@@ -5299,9 +5301,9 @@
           { bLoading: n } = (0, Fa.g7)(t.GetAccountID(), a);
         return n
           ? d.createElement(I.t, { string: (0, R.we)("#Loading") })
-          : d.createElement(Qa, { ...e });
+          : d.createElement(Wa, { ...e });
       }
-      function Qa(e) {
+      function Wa(e) {
         const { clanSteamID: t, gidClanEvent: a, fnOkCallbackList: n } = e,
           {
             bPublishRequiresValveApproval: l,
@@ -5381,7 +5383,7 @@
           )
         );
       }
-      function Wa(e) {
+      function Qa(e) {
         var t, a;
         const {
             clanSteamID: n,
@@ -6441,7 +6443,7 @@
                 a();
             },
           },
-          d.createElement(tn.$A, { editModel: n }),
+          d.createElement(tn.$A, { editModel: n, eInitLangLanguage: 0 }),
           d.createElement(ma.A, {
             items: s,
             onDelete: (e) => c(1 == s.length ? [] : [...s.splice(e, 1)]),
@@ -7772,7 +7774,7 @@
                           null,
                           (0, R.we)("#Sale_Debug_Desc"),
                         ),
-                        d.createElement(Qn, {
+                        d.createElement(Wn, {
                           fnSetSaleItem: (e, t, a, n) => {
                             o(e), c(t), u(a), E(n);
                           },
@@ -7866,7 +7868,7 @@
             : a.GetName()) || t
         );
       }
-      function Qn(e) {
+      function Wn(e) {
         const { fnSetSaleItem: t } = e,
           a = (0, d.useRef)(null),
           n = (0, d.useRef)(null),
@@ -7929,7 +7931,7 @@
                     t(a, o, r, s);
                   };
                   n.current = (0, ba.lX)(
-                    d.createElement(Wn, { list: i, fnChooseCapsule: m }),
+                    d.createElement(Qn, { list: i, fnChooseCapsule: m }),
                     o.current.element,
                     {
                       bOverlapHorizontal: !0,
@@ -7956,7 +7958,7 @@
           ref: o,
         });
       }
-      function Wn(e) {
+      function Qn(e) {
         const { list: t, fnChooseCapsule: a } = e;
         return d.createElement(
           xn.tz,
@@ -9316,8 +9318,8 @@
         (0, J.Cg)([Z.EW], ql.prototype, "allNewsCurators", null),
         (0, J.Cg)([Z.XI], ql.prototype, "HandleCuratorResponse", null);
       var Vl = a(41338),
-        Ql = a(16345),
-        Wl = a.n(Ql);
+        Wl = a(16345),
+        Ql = a.n(Wl);
       function Yl(e) {
         const t = new Set();
         return (
@@ -9526,7 +9528,7 @@
             E = !c && !s && !_;
           return d.createElement(
             "div",
-            { className: Wl().SuggestContainer },
+            { className: Ql().SuggestContainer },
             d.createElement(h.pd, {
               type: "text",
               label: e,
@@ -9537,7 +9539,7 @@
             r &&
               d.createElement(
                 "div",
-                { className: (0, B.A)(Wl().Results, n) },
+                { className: (0, B.A)(Ql().Results, n) },
                 s &&
                   d.createElement(
                     "div",
@@ -9545,7 +9547,7 @@
                     m &&
                       d.createElement(
                         "div",
-                        { className: Wl().ResultSectionHeader },
+                        { className: Ql().ResultSectionHeader },
                         u,
                       ),
                     i,
@@ -9557,7 +9559,7 @@
                     m &&
                       d.createElement(
                         "div",
-                        { className: Wl().ResultSectionHeader },
+                        { className: Ql().ResultSectionHeader },
                         (0, R.we)(
                           "#EventCalendar_SearchResultsHeader_CuratorSection",
                         ),
@@ -9567,7 +9569,7 @@
                 E &&
                   d.createElement(
                     "div",
-                    { className: Wl().EmptyResults, key: "empty-results" },
+                    { className: Ql().EmptyResults, key: "empty-results" },
                     (0, R.we)("#EventCalendar_GameSearch_NoneFound"),
                   ),
                 _ && d.createElement(I.t, { size: "small" }),
@@ -9580,17 +9582,17 @@
         d.createElement(
           "div",
           {
-            className: Wl().ResultRow,
+            className: Ql().ResultRow,
             key: `suggestion-${e.suggestion.id}`,
             onClick: () => e.fnOnSelected(e.suggestion),
           },
           d.createElement("img", {
             src: e.suggestion.img,
-            className: Wl().AvatarImage,
+            className: Ql().AvatarImage,
           }),
           d.createElement(
             "div",
-            { className: Wl().GameName },
+            { className: Ql().GameName },
             " ",
             (0, Vl.EK)(e.suggestion.name),
             " ",
@@ -9598,7 +9600,7 @@
           e.bShowFollowingLabel &&
             d.createElement(
               "div",
-              { className: Wl().Label },
+              { className: Ql().Label },
               (0, R.we)("#EventCalendar_FollowingCurator"),
             ),
         );
@@ -10614,7 +10616,7 @@
               nn,
               null,
               Boolean(!E && (!_ || s)) &&
-                d.createElement(Wa, {
+                d.createElement(Qa, {
                   clanSteamID: o,
                   gidClanEvent: r,
                   rgSalePresenters: l,
@@ -10956,11 +10958,16 @@
       }
       function Oi(e) {
         const { editModel: t } = e,
-          [a, n] = (0, qt.q3)(() => [t.GetGID(), t.GetClanAccountID()]),
-          l = !!a,
-          { creatorHome: i } = (0, Vt.FV)(n),
-          o = i ? i.GetCreatorHomeURL(null) + "admin/curator_edit" : void 0,
-          r = i ? i.GetCreatorHomeURL(null) + "#edit" : void 0;
+          [a, n, l] = (0, qt.q3)(() => [
+            t.GetGID(),
+            t.GetClanAccountID(),
+            t.BVisible() || t.BUnlisted(),
+          ]),
+          i = !!a,
+          { creatorHome: o } = (0, Vt.FV)(n),
+          r = (null == o ? void 0 : o.GetLinkedEventGID()) == a,
+          s = o ? o.GetCreatorHomeURL(null) + "admin/curator_edit" : void 0,
+          c = o ? o.GetCreatorHomeURL(null) + "#edit" : void 0;
         return d.createElement(
           "div",
           { className: Rn.CreatorHomeEditCtn },
@@ -10970,15 +10977,49 @@
             d.createElement(
               "div",
               null,
-              (0, R.oW)(
-                "#EventEditor_Event_CreatorHome_Explanation",
-                o ? d.createElement("a", { href: o }) : void 0,
-              ),
+              (0, R.oW)("#EventEditor_Event_CreatorHome_Explanation"),
             ),
           ),
+          d.createElement(
+            "div",
+            {
+              className: (0, B.A)(
+                Rn.SelectedExplanationCtn,
+                (!l || !r) && Rn.Warning,
+              ),
+            },
+            !l &&
+              d.createElement(
+                "div",
+                null,
+                (0, R.we)("#EventEditor_Event_CreatorHome_Hidden"),
+              ),
+            l &&
+              !r &&
+              d.createElement(
+                "div",
+                null,
+                (0, R.oW)(
+                  "#EventEditor_Event_CreatorHome_NotSelected",
+                  d.createElement("b", null),
+                  s ? d.createElement("a", { href: s }) : void 0,
+                ),
+              ),
+            l &&
+              r &&
+              d.createElement(
+                "div",
+                null,
+                (0, R.oW)(
+                  "#EventEditor_Event_CreatorHome_Selected",
+                  d.createElement("b", null),
+                  s ? d.createElement("a", { href: s }) : void 0,
+                ),
+              ),
+          ),
           d.createElement(si, { editModel: t }),
-          l &&
-            i &&
+          i &&
+            o &&
             d.createElement(
               d.Fragment,
               null,
@@ -10996,7 +11037,7 @@
                     ),
                   ),
                   d.createElement("img", {
-                    src: i.GetAvatarURLFullSize(),
+                    src: o.GetAvatarURLFullSize(),
                     className: Rn.AvatarImage,
                   }),
                   d.createElement(
@@ -11004,7 +11045,7 @@
                     { className: Rn.EditLink },
                     (0, R.oW)(
                       "#EventEditor_Event_CreatorHome_AdminLinkAvatarLabel",
-                      r ? d.createElement("a", { href: r }) : void 0,
+                      c ? d.createElement("a", { href: c }) : void 0,
                     ),
                   ),
                 ),
@@ -11021,20 +11062,20 @@
                   d.createElement(
                     "div",
                     { className: Rn.Tagline },
-                    i.GetTagLine(),
+                    o.GetTagLine(),
                   ),
                   d.createElement(
                     "div",
                     { className: Rn.EditLink },
                     (0, R.oW)(
                       "#EventEditor_Event_CreatorHome_AdminLinkTaglineLabel",
-                      o ? d.createElement("a", { href: o }) : void 0,
+                      s ? d.createElement("a", { href: s }) : void 0,
                     ),
                   ),
                 ),
               ),
             ),
-          !l &&
+          !i &&
             d.createElement(
               "div",
               { className: Rn.SaveWarningCtn },
@@ -11458,8 +11499,8 @@
         (0, J.Cg)([Z.XI], Vi.prototype, "SetWidePlayerLayout", null),
         (0, J.Cg)([Z.XI], Vi.prototype, "SetWidePlayerSupportChat", null),
         (0, J.Cg)([Z.XI], Vi.prototype, "SetChatAnnouncementGiveawayGID", null);
-      var Qi = a(44894),
-        Wi = a(27643);
+      var Wi = a(44894),
+        Qi = a(27643);
       class Yi {
         GetFriendLiset() {
           return this.m_rgFriendsList;
@@ -11607,7 +11648,7 @@
             };
             n.push(t);
           }
-          const r = Wi.i.map((t) =>
+          const r = Qi.i.map((t) =>
             d.createElement(
               "div",
               {
@@ -11770,7 +11811,7 @@
                                 { style: { marginLeft: "auto" } },
                                 d.createElement("img", {
                                   className: Xi().RemoveIcon,
-                                  src: Qi.A,
+                                  src: Wi.A,
                                   onClick: () => this.RemoveTitle(t),
                                 }),
                               ),
@@ -11846,7 +11887,7 @@
                   { className: w().EventEditorTextTitle },
                   (0, R.we)("#Broadcast_artwork"),
                 ),
-                d.createElement(Wt.t, {
+                d.createElement(Qt.t, {
                   clanSteamID: e.GetClanSteamID(),
                   rgSupportArtwork: ["broadcast_left", "broadcast_right"],
                   fnSetImageURL: e.SetImageURL,
@@ -12279,7 +12320,7 @@
                 d.createElement(mo, { accountid: t }),
                 d.createElement("img", {
                   className: (0, B.A)(Xi().FlexCenter, Xi().RemoveIcon),
-                  src: Qi.A,
+                  src: Wi.A,
                   onClick: () => i().DeleteWhiteListAccount(t),
                 }),
               )
@@ -12509,7 +12550,7 @@
               { toolTipContent: (0, R.we)("#EventEmail_Template_Remove", t) },
               d.createElement("img", {
                 className: bo.ImgCross,
-                src: Qi.A,
+                src: Wi.A,
                 onClick: () => this.OnRemoveSubSection(e),
               }),
             ),
@@ -13737,7 +13778,7 @@
             ko.O.HintLoad();
           }, []);
           if (!$.KN.Get().BShowEmailEditorTab(t.GetEventModel())) return null;
-          const a = (0, Qt.H)() !== t.GetClanAccountID();
+          const a = (0, Wt.H)() !== t.GetClanAccountID();
           return d.createElement(
             d.Fragment,
             null,
@@ -13787,7 +13828,7 @@
                   d.createElement(
                     gt.tH,
                     null,
-                    d.createElement(Wo, { editModel: t }),
+                    d.createElement(Qo, { editModel: t }),
                   ),
                 a &&
                   d.createElement(
@@ -13798,7 +13839,7 @@
                 d.createElement(
                   gt.tH,
                   null,
-                  Boolean((0, Qt.H)() === t.GetClanAccountID())
+                  Boolean((0, Wt.H)() === t.GetClanAccountID())
                     ? d.createElement(Oo, { editModel: t })
                     : d.createElement(
                         d.Fragment,
@@ -13929,7 +13970,7 @@
         }
         OnPrepareEmail(e) {
           (0, D.pg)(
-            d.createElement(Qo, { editModel: this.props.editModel }),
+            d.createElement(Wo, { editModel: this.props.editModel }),
             (0, k.uX)(e),
           );
         }
@@ -14375,7 +14416,7 @@
             )
           ).forEach((e) => {
             let a = p.b.InitFromClanID(e.clan_account_id);
-            t.push(Vt.pF.LoadCreatorHome(a, this.m_cancelSignal));
+            t.push(Vt.pF.LoadCreatorHome(a, !1, this.m_cancelSignal));
           }),
             Promise.all(t).then((e) => {
               this.m_cancelSignal.token.reason ||
@@ -14584,7 +14625,7 @@
           );
         }
       }
-      let Qo = class extends d.Component {
+      let Wo = class extends d.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -14712,9 +14753,9 @@
           }
         }
       };
-      (0, J.Cg)([O.oI], Qo.prototype, "OnLockEmail", null),
-        (Qo = (0, J.Cg)([c.PA], Qo));
-      let Wo = class extends d.Component {
+      (0, J.Cg)([O.oI], Wo.prototype, "OnLockEmail", null),
+        (Wo = (0, J.Cg)([c.PA], Wo));
+      let Qo = class extends d.Component {
         constructor() {
           super(...arguments),
             (this.state = { rtimeLastRefresh: 0, bRefreshing: !1 });
@@ -14923,9 +14964,9 @@
           );
         }
       };
-      (0, J.Cg)([O.oI], Wo.prototype, "RefreshIfNeeded", null),
-        (0, J.Cg)([O.oI], Wo.prototype, "RefreshStats", null),
-        (Wo = (0, J.Cg)([c.PA], Wo));
+      (0, J.Cg)([O.oI], Qo.prototype, "RefreshIfNeeded", null),
+        (0, J.Cg)([O.oI], Qo.prototype, "RefreshStats", null),
+        (Qo = (0, J.Cg)([c.PA], Qo));
       var Yo = a(85345),
         Jo = a(13899),
         Ko = a(4969),
@@ -15619,7 +15660,7 @@
         d.useEffect(() => {
           a && (null == n ? void 0 : n.current) && n.current.click();
         }, [a, n]);
-        const _ = r.GetAccountID() == (0, Qt.H)();
+        const _ = r.GetAccountID() == (0, Wt.H)();
         if (i)
           return d.createElement(ht.OG, {
             eventModel: t.GetEventModel(),
@@ -16300,7 +16341,7 @@
             d.createElement(
               "div",
               { className: Xn.EventEditorInputPaneContents },
-              d.createElement(Wa, {
+              d.createElement(Qa, {
                 clanSteamID: a,
                 gidClanEvent: n,
                 rgSalePresenters: i,
@@ -16830,7 +16871,7 @@
           i = (0, Ht.LU)(),
           o = i.GetEventModel();
         (0, d.useEffect)(() => {
-          P.UF.IS_CURATOR && Vt.pF.LoadCreatorHome(n, l);
+          P.UF.IS_CURATOR && Vt.pF.LoadCreatorHome(n, !1, l);
         }, [n, l]);
         const r = (0, d.useCallback)(() => {
             const e = Vt.pF.GetCreatorHome(n);
@@ -16926,7 +16967,7 @@
               name: (0, R.we)("#Broadcast_tab"),
               key: "broadcast",
               hidden:
-                !P.UF.CAN_UPLOAD_IMAGES || i.GetClanAccountID() == (0, Qt.H)(),
+                !P.UF.CAN_UPLOAD_IMAGES || i.GetClanAccountID() == (0, Wt.H)(),
               vo_warning: r() && (0, R.we)("#EventEditor_CuratorImageWarning"),
               contents: d.createElement(
                 gt.tH,
@@ -16942,7 +16983,7 @@
               key: "email",
               hidden: E,
               status:
-                i.GetClanAccountID() == (0, Qt.H)()
+                i.GetClanAccountID() == (0, Wt.H)()
                   ? d.createElement(Br, { fnGetStatus: zt.ER })
                   : void 0,
               contents: d.createElement(
@@ -17307,7 +17348,7 @@
               ),
             ),
           ),
-          d.createElement(Wt.t, {
+          d.createElement(Qt.t, {
             clanSteamID: i,
             rgSupportArtwork: _,
             fnSetImageURL: t.SetImageURL,
@@ -17528,8 +17569,8 @@
           );
         }
       }
-      var Qr = a(85320),
-        Wr = a(56631),
+      var Wr = a(85320),
+        Qr = a(56631),
         Yr = a(35400),
         Jr = a(28188),
         Kr = a(6878),
@@ -17862,7 +17903,7 @@
           n = Number.parseInt((0, qr.j$)(e.args, "itemdefid")),
           l = Number.parseInt((0, qr.j$)(e.args, "maxquantity")),
           i = (0, qr.j$)(e.args, "calltoaction");
-        return (0, Wr.gS)(a, n)
+        return (0, Qr.gS)(a, n)
           ? d.createElement(Jr.f, {
               language: e.language,
               clanAccountID: t.clanSteamID.GetAccountID(),
@@ -17899,7 +17940,7 @@
       }
       function Ms(e) {
         var t, a, n, l;
-        const i = (0, Qr.j)("library");
+        const i = (0, Wr.j)("library");
         if (!i) return d.createElement(I.t, { size: "small" });
         const o = Number.parseInt((0, qr.j$)(e.args));
         let r =

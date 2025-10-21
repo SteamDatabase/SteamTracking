@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Ohne Handlung geschlossen",
 	"moderation_resolutionstatus_pending": "Moderation ausstehend",
 	"moderation_resolutionstatus_acquitted": "Überprüft: Keine Maßnahmen erforderlich",
+	"moderation_resolutionstatus_purged": "Inhalt sofort gelöscht",
 	"moderation_resolutionstatus_removed": "Inhalt entfernt",
 	"moderation_resolutionstatus_relabelled": "Inhalt umbenannt",
 	"moderation_resolutionstatus_suspicious": "Account gesperrt aufgrund verdächtiger Inhalte",

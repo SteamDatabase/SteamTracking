@@ -226,6 +226,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        TheaterDialog: "eAntzEAgQPDbynwFmCjT6",
         GamepadCarousel: "_37QdQ9pnGu3WgatTPnOP1D",
         Fullscreen: "_2_ZDORN00rF5dsEzd-tfpO",
         CarouselItem: "_3eFhSH3a_Uh0AF_AWuqHjR",
@@ -632,7 +633,6 @@
             visibleElements: _,
             useTestScrollbar: !0,
             bLazyRenderChildren: !0,
-            padded: !0,
             gap: 12,
             hideArrows: !1,
             screenIsWide: _,
@@ -1967,7 +1967,7 @@
           _ = (0, _._)(1024),
           _ = (0, _._)(),
           [_, _] = (0, _._)(__webpack_require__),
-          _ = (0, _._)(__webpack_require__),
+          { creatorHome: _ } = (0, _._)(__webpack_require__),
           _ = _?.GetCreatorHomeURL(_),
           [_, _] = _.useState(void 0);
         if (!_) return;
@@ -2072,7 +2072,7 @@
       function _(_) {
         const { creatorHomeType: _, clanID: __webpack_require__ } = _,
           [_, _] = (0, _._)(__webpack_require__),
-          _ = (0, _._)(__webpack_require__),
+          { creatorHome: _ } = (0, _._)(__webpack_require__),
           _ = _?.GetCreatorHomeURL(_);
         if (_)
           return _.createElement(
@@ -4228,7 +4228,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return (0, _.useMemo)(() => {
@@ -4262,14 +4261,40 @@
           return _;
         }, [_, _]);
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        let { trailers: _, screenshots: __webpack_require__ } = _;
+        return _.createElement(
+          _._,
+          {
+            navID: "GameHighlightGamepadCarousel",
+          },
+          _.createElement(
+            _._,
+            {
+              supportsFullscreen: !0,
+              supportsTheater: !1,
+            },
+            _.createElement(
+              _,
+              null,
+              _.createElement(_, {
+                trailers: _,
+                screenshots: __webpack_require__,
+              }),
+            ),
+          ),
+        );
+      }
       function _(_) {
         let { trailers: _, screenshots: __webpack_require__ } = _,
-          [_, _, _] = (function () {
-            let [_, _] = (0, _.useState)(!1),
-              _ = (0, _.useCallback)(() => _(!0), [_]),
-              _ = (0, _.useCallback)(() => !!_ && (_(!1), !0), [_, _]);
-            return [_, _, _];
-          })(),
+          _ = (0, _._)(),
+          _ = "theater" == _.strMode,
+          _ = (0, _._)(_, "theater"),
+          _ = (0, _._)(_, "none"),
+          _ = (0, _._)(),
           [_, _] = (function (_, _) {
             let _ = (0, _.useCallback)(
                 (_) => {
@@ -4298,33 +4323,33 @@
           _ = _ ? "" : "#TrailerPlayer_FullScreen_Tooltip",
           _ = (0, _._)(_.GamepadCarousel, _ && _.Fullscreen);
         return _.createElement(
-          _._,
+          "div",
           {
-            navID: "GameHighlightGamepadCarousel",
+            ref: _.refTheater,
+            className: _.TheaterDialog,
+            popover: "manual",
           },
           _.createElement(
-            _,
-            null,
+            _._,
+            {
+              autoFocus: !0,
+              ref: _.ref,
+              navRef: _.navRef,
+              className: _,
+              "flow-children": "row",
+              navEntryPreferPosition: _._.MAINTAIN_X,
+              onOptionsActionDescription: (0, _._)(_),
+              onOptionsButton: _,
+              onCancelButton: _,
+              onGamepadDirection: _,
+              onFocusWithin: _,
+            },
             _.createElement(
               _._,
               {
-                autoFocus: !0,
-                className: _,
-                "flow-children": "row",
-                navEntryPreferPosition: _._.MAINTAIN_X,
-                onOptionsActionDescription: (0, _._)(_),
-                onOptionsButton: _,
-                onCancelButton: _,
-                onGamepadDirection: _,
-                onFocusWithin: _,
+                disableFocusRing: _,
               },
-              _.createElement(
-                _._,
-                {
-                  disableFocusRing: _,
-                },
-                _,
-              ),
+              _,
             ),
           ),
         );
@@ -4548,7 +4573,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5170,7 +5194,7 @@
         return _.createElement(
           "dialog",
           {
-            ref: _.refDialog,
+            ref: _.refTheater,
             className: _.TheaterDialog,
           },
           _.createElement(

@@ -622,8 +622,16 @@
           },
           email_full: { width: 800, height: 300, rgAcceptableTypes: r },
           email_centered: { width: 644, height: 300, rgAcceptableTypes: r },
-          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: r },
-          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: r },
+          broadcast_left: {
+            width: [199, 155],
+            height: [433, 337],
+            rgAcceptableTypes: r,
+          },
+          broadcast_right: {
+            width: [199, 155],
+            height: [433, 337],
+            rgAcceptableTypes: r,
+          },
           sale_header: {
             width: 0,
             height: 0,
@@ -969,7 +977,7 @@
       "use strict";
       i.d(t, {
         A4: () => k,
-        iy: () => C,
+        iy: () => T,
         ZA: () => V,
         g8: () => L,
         Dn: () => W,
@@ -1062,16 +1070,16 @@
       );
       var A = i(61336);
       const G = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
-      function C(e) {
+      function T(e) {
         return (
           G.some((t) => t == e.GetEventType()) &&
           !e.BHasTag("steam_award_nomination_request") &&
           !e.BHasTag("curator")
         );
       }
-      const T = [20, 31, 34];
+      const C = [20, 31, 34];
       function k(e) {
-        return !T.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+        return !C.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       const D = [12, 34];
       function L(e) {
@@ -2207,25 +2215,28 @@
               localized_label: [],
               default_label: "",
             };
+          let o = z + 10;
           return (
             e &&
               a.push({
                 ...s,
                 section_type: "footer_self_creator_home",
-                unique_id: z + 10,
+                unique_id: o++,
                 curator_clan_id: this.clanSteamID.GetAccountID(),
               }),
-            i &&
+            t &&
               a.push({
                 ...s,
                 section_type: "footer_browse_more",
-                unique_id: z + 12,
+                unique_id: o++,
               }),
             n &&
+              a.push(this.GenerateDynamicCreatorHomeItemBrowserSection(o++, s)),
+            i &&
               a.push({
                 ...s,
                 section_type: "footer_default_social_share",
-                unique_id: z + 13,
+                unique_id: o++,
               }),
             a
           );
@@ -2236,15 +2247,15 @@
               null === (e = this.jsondata) || void 0 === e
                 ? void 0
                 : e.sale_show_creator,
-            i = this.BSaleShowCuratorRecommendationAtBottomOfPage(),
-            n = this.jsondata.sale_browse_more_button,
-            a =
+            i = this.jsondata.sale_browse_more_button,
+            n =
               0 == this.GetSaleSectionsByType("social_share").length &&
-              !this.jsondata.sale_default_social_media_disabled;
+              !this.jsondata.sale_default_social_media_disabled,
+            a = 36 == this.GetEventType();
           return t || i || n || a
             ? [
                 ...this.GetSaleSections(),
-                ...this.GenerateDynamicSaleSections(!!t, i, !!n, a),
+                ...this.GenerateDynamicSaleSections(!!t, !!i, n, a),
               ]
             : this.GetSaleSections();
         }
@@ -2603,6 +2614,40 @@
             e &&
             e.toLowerCase().startsWith("nextfest")
           );
+        }
+        GenerateDynamicCreatorHomeItemBrowserSection(e, t) {
+          return {
+            ...t,
+            section_type: "sale_item_browser",
+            unique_id: e,
+            item_browse_section_data: {
+              enable_search: !0,
+              tabs: [
+                "all_released",
+                "popularpurchased",
+                "all_upcoming",
+                "discounted",
+              ],
+            },
+            enable_faceted_browsing: !0,
+            min_capsule_matches_for_facet_values: 5,
+            max_facet_values_for_facet: 5,
+            facet_sort_order: 1,
+            facet_auto_generate_options: {
+              only_facets: [
+                { loc_token: "#App_Taxonomy_Survey_QSuperGenreTitle" },
+                {
+                  loc_token: "#AppTypeLabelTitle",
+                  only_values: [
+                    "#AppTypeLabel_game",
+                    "#AppTypeLabel_dlc",
+                    "#AppTypeLabel_demo",
+                    "#AppTypeLabel_music",
+                  ],
+                },
+              ],
+            },
+          };
         }
       }
       (0, n.Cg)([o.sH], we.prototype, "GID", void 0),
@@ -6330,9 +6375,9 @@
       "use strict";
       i.d(t, {
         PH: () => c,
-        tj: () => T,
+        tj: () => C,
         IQ: () => d,
-        Hx: () => C,
+        Hx: () => T,
         LJ: () => b,
         OG: () => G,
         Bw: () => A,
@@ -6558,11 +6603,11 @@
           ? n.createElement(a.rd, { push: !0, to: o })
           : (window.open(o), null);
       }
-      function C(e, t, i) {
+      function T(e, t, i) {
         const n = I(e, t, !1);
         return "admin" === i ? n + "partnerevents" : "";
       }
-      function T(e) {
+      function C(e) {
         const { eventModel: t, preferredFocus: i } = e,
           { bCanUseLink: s } = n.useContext(d),
           r = (0, h.n9)(),
@@ -7494,7 +7539,7 @@
         return !1;
       }
       function o(e, t) {
-        return 12 != e && (!t || -1 == t.indexOf("curator"));
+        return 12 != e && 36 != e && (!t || -1 == t.indexOf("curator"));
       }
       function r(e) {
         return [14, 10, 15, 32].includes(e);

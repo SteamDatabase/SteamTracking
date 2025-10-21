@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Επίλυση χωρίς καμία ενέργεια",
 	"moderation_resolutionstatus_pending": "Αναμονή για επιτήρηση",
 	"moderation_resolutionstatus_acquitted": "Ελέγχθηκε: Δεν απαιτείται ενέργεια",
+	"moderation_resolutionstatus_purged": "Έγινε άμεση εκκαθάριση του περιεχομένου",
 	"moderation_resolutionstatus_removed": "Το περιεχόμενο αφαιρέθηκε",
 	"moderation_resolutionstatus_relabelled": "Το περιεχόμενο άλλαξε κατηγορία",
 	"moderation_resolutionstatus_suspicious": "Ο λογαριασμός έχει κλειδωθεί για ύποπτο περιεχόμενο",

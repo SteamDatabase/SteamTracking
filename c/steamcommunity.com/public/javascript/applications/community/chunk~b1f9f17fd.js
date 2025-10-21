@@ -689,6 +689,7 @@
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
         RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
+        MediaMax: "_2g9MxQcUyFYffpZTktM-Wl",
       };
     },
     chunkid: () => {},
@@ -1129,7 +1130,7 @@
               bIsValveOnly: !0,
               initialSaleJSON: {
                 bSaleEnabled: !0,
-                sale_header_offset: 100,
+                sale_header_offset: 0,
               },
               autoSelect: "creatorhome" == _,
             }),
@@ -5438,6 +5439,7 @@
         }
         _._.CAN_UPLOAD_IMAGES &&
           0 == _ &&
+          36 != _.GetEventType() &&
           _.push(
             _.createElement(
               "li",
@@ -19735,6 +19737,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19749,28 +19752,31 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (_._.IN_CLIENT ? "library-" : (0, _._)() + "-") + _;
       }
       function _(_) {
-        return (
+        return Boolean(
           "discoveryqueue" == _.section_type ||
-          "dlc_for_you" === _.section_type ||
-          "claim_item" === _.section_type ||
-          ((0, _._)(_.section_type) &&
-            _.smart_section &&
-            ("wishlist" == _.smart_section_type ||
-              "interactive_recommender" == _.smart_section_type ||
-              "personalized_carousel" == _.smart_section_type ||
-              "dlc_music_onsale" == _.smart_section_type ||
-              "ir_subscription" == _.smart_section_type ||
-              "deck_compatibility" == _.smart_section_type ||
-              ("wishlist_onsale" == _.smart_section_type &&
-                !_._.GetHideWishlist()) ||
-              ("dlc_onsale" == _.smart_section_type && !_._.GetHideDLC()) ||
-              ("interactive_recommender_onsale" == _.smart_section_type &&
-                !_._.GetHideIRList())))
+            "dlc_for_you" === _.section_type ||
+            "claim_item" === _.section_type ||
+            ((0, _._)(_.section_type) &&
+              _.smart_section &&
+              ("wishlist" == _.smart_section_type ||
+                "interactive_recommender" == _.smart_section_type ||
+                "personalized_carousel" == _.smart_section_type ||
+                "dlc_music_onsale" == _.smart_section_type ||
+                "ir_subscription" == _.smart_section_type ||
+                "deck_compatibility" == _.smart_section_type ||
+                ("wishlist_onsale" == _.smart_section_type &&
+                  !_._.GetHideWishlist()) ||
+                ("dlc_onsale" == _.smart_section_type && !_._.GetHideDLC()) ||
+                ("interactive_recommender_onsale" == _.smart_section_type &&
+                  !_._.GetHideIRList()))),
         );
       }
       function _(_) {
@@ -19894,6 +19900,20 @@
                 );
               });
             })([..._], _, (_) => _._));
+        }
+        return _;
+      }
+      async function _(_, _, _) {
+        if (!(null == _ ? void 0 : _.length)) return _;
+        if (36 == _.GetEventType()) {
+          const _ = await _._.fetchQuery(
+            (0, _._)(_.clanSteamID.GetAccountID()),
+          );
+          if (!_) return [];
+          const _ = new Set(_.GetAppIDList());
+          _ = __webpack_require__.filter(
+            (_) => 0 == (0, _._)(_.type) && _.has(_._),
+          );
         }
         return _;
       }
@@ -27429,7 +27449,8 @@
           }
           _ = _(_, _, _, [..._]);
         } else _ = _(_, _, _, [..._.capsules]);
-        (_ = (0, _._)(_, _, _)),
+        (_ = await (0, _._)(_, _, _)),
+          (_ = (0, _._)(_, _, _)),
           _ && (_ = _(_)),
           _.BUsesContentHubForItemSource() ||
             _.enable_faceted_browsing ||
@@ -28618,8 +28639,8 @@
       };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 2 == _._.EUNIVERSE ? 404860 : 1675200,
-        _ = ["HK", "JP", "KR", "TW"],
+      _._.EUNIVERSE;
+      const _ = ["HK", "JP", "KR", "TW"],
         _ =
           2 == _._.EUNIVERSE
             ? [501556, 501557, 501558, 502103, 502106]
@@ -28707,7 +28728,13 @@
               _.text_section_contents[_] ||
               ""
             : void 0,
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = (0, _._)(() => {
+            var _;
+            return null === (_ = _.internal_section_data) || void 0 === _
+              ? void 0
+              : _.reservation_appid_wishlist;
+          });
         return 0 == _.length
           ? null
           : _.createElement(
@@ -28745,14 +28772,15 @@
                     event: _,
                     language: __webpack_require__,
                   }),
-                  _.createElement(_._, {
-                    snr: _,
-                    appID: _,
-                    classOverride: (0, _._)(
-                      _().WishlistButtonNotTop,
-                      "WishlistButton",
-                    ),
-                  }),
+                  Boolean(_) &&
+                    _.createElement(_._, {
+                      snr: _,
+                      appID: _,
+                      classOverride: (0, _._)(
+                        _().WishlistButtonNotTop,
+                        "WishlistButton",
+                      ),
+                    }),
                   Boolean(_) &&
                     _.createElement(
                       "div",
@@ -31881,6 +31909,8 @@
                   ? void 0
                   : _.optin_only) || void 0,
               controller_category: Number(_.eControllerCategory) || void 0,
+              bUseCreatorHomeApps:
+                36 == (null == _ ? void 0 : _.GetEventType()),
             };
           let _ = null;
           try {
@@ -32041,6 +32071,7 @@
         (0, _._)([_._], _.prototype, "OnPointerMove", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor(_) {
@@ -32207,7 +32238,8 @@
           await (0, _._)(_, _._),
             this.state.strSearchQuery ||
               _.BUsesContentHubForItemSource() ||
-              (_ = _.filter((_) => !_ || _.ShouldShowCapsule(_)));
+              (_ = _.filter((_) => !_ || _.ShouldShowCapsule(_))),
+            (_ = await (0, _._)(_, __webpack_require__, _));
           let _ = new Array();
           return (
             (null == __webpack_require__
@@ -32590,16 +32622,22 @@
                   nMaxFacetValues:
                     __webpack_require__.max_facet_values_for_facet || 100,
                   fnOnUpdateFilter: this.OnUpdateFacetFilter,
-                  onInitFilter: () => {
-                    this.setState({
-                      facetFilterState: new _(
-                        this.props.section.facets,
-                        this.props.section.facet_sort_order ||
-                          _._.k_ESortFacetsByMatchCount,
-                        this.props.language,
-                        _(this.props.event, this.props.section),
-                      ),
-                    });
+                  onInitFilter: async () => {
+                    let _ = this.props.section.facets;
+                    !_ &&
+                      this.props.section.facet_auto_generate_options &&
+                      (_ = await (0, _._)(
+                        this.props.section.facet_auto_generate_options,
+                      )),
+                      this.setState({
+                        facetFilterState: new _(
+                          _,
+                          this.props.section.facet_sort_order ||
+                            _._.k_ESortFacetsByMatchCount,
+                          this.props.language,
+                          _(this.props.event, this.props.section),
+                        ),
+                      });
                   },
                   ...this.state.results,
                 },
@@ -32649,6 +32687,9 @@
                           type: "text",
                           onChange: this.OnUpdateSearch,
                           bAlwaysShowClearAction: _,
+                          placeholder: (0, _._)(
+                            "#Sale_ItemBrowser_SearchPlaceholder",
+                          ),
                           value: _,
                         }),
                       ),
@@ -39114,19 +39155,19 @@
         );
       }
       function _(_) {
-        var _, _;
         const {
             media: _,
-            mediaType: _,
+            mediaType: __webpack_require__,
             mediaHAlign: _,
             mediaVAlign: _,
             clanAccountID: _,
             mediaScale: _,
             setImageSize: _,
+            className: _,
+            maxWidthPx: _,
           } = _,
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)(null),
-          _ = _ && _ >= 1 && _ <= 100 ? _ / 100 : 1,
           _ = _.useCallback(() => {
             if (_.current && _.current.complete) {
               const { naturalWidth: _, naturalHeight: _ } = _.current;
@@ -39153,51 +39194,56 @@
           ),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
-          _ = (0, _._)(_, _);
-        if (!_.video_webm_src) {
-          if (!_.image || 0 === _.image.trim().length) return null;
-          const _ = _ ? _.width * _ : "auto";
-          return _.createElement(
+          _ = (0, _._)(_, _),
+          _ = {
+            display: "block",
+            ...(_
+              ? {
+                  maxWidth: `${_}px`,
+                }
+              : {}),
+          };
+        if (!_.video_webm_src)
+          return _.image && 0 !== _.image.trim().length
+            ? _.createElement(
+                "div",
+                {
+                  className: _,
+                  style: _,
+                },
+                _.createElement("img", {
+                  ref: _,
+                  onLoad: _,
+                  src: (0, _._)(_, _.image),
+                  alt: "",
+                  style: {
+                    width: "100%",
+                    height: "auto",
+                    display: "block",
+                    objectFit: "cover",
+                    maxWidth: _ ? `${_.width}px` : "100%",
+                  },
+                }),
+              )
+            : null;
+        const _ = [];
+        return (
+          _.video_webm_src &&
+            _.push({
+              sURL: (0, _._)(_, _.video_webm_src),
+              sFormat: "video/webm",
+            }),
+          _.video_mp4_src &&
+            _.push({
+              sURL: (0, _._)(_, _.video_mp4_src),
+              sFormat: "video/mp4",
+            }),
+          _.createElement(
             "div",
             {
-              style: {
-                display: "inline-block",
-              },
+              className: _,
+              style: _,
             },
-            _.createElement("img", {
-              ref: _,
-              onLoad: _,
-              src: (0, _._)(_, _.image),
-              alt: "",
-              style: {
-                width: "number" == typeof _ ? `${_}px` : "auto",
-                height: "auto",
-                display: "block",
-              },
-            }),
-          );
-        }
-        const _ = [];
-        return (!_.video_webm_src && !_.video_mp4_src) ||
-          (0 ===
-            (null === (_ = _.video_webm_src) || void 0 === _
-              ? void 0
-              : _.trim().length) &&
-            0 ===
-              (null === (_ = _.video_mp4_src) || void 0 === _
-                ? void 0
-                : __webpack_require__.trim().length))
-          ? null
-          : (_.video_webm_src &&
-              _.push({
-                sURL: (0, _._)(_, _.video_webm_src),
-                sFormat: "video/webm",
-              }),
-            _.video_mp4_src &&
-              _.push({
-                sURL: (0, _._)(_, _.video_mp4_src),
-                sFormat: "video/mp4",
-              }),
             _.createElement(_._, {
               ref: _,
               video: {
@@ -39209,7 +39255,9 @@
               bLoop: !0,
               bMuted: !0,
               mediaScale: _,
-            }));
+            }),
+          )
+        );
       }
       function _(_) {
         const {
@@ -39979,6 +40027,7 @@
                 mediaType: _,
                 mediaHAlign: _,
                 mediaVAlign: _,
+                className: _().MediaMax,
                 clanAccountID: _.clanSteamID.GetAccountID(),
               }),
             ),

@@ -806,6 +806,24 @@
 ._1jz8vOMNXWjuOs8PNx6twM {
   display: var(--display);
 }
+._51vKfcQCBgoT8lSk1q3iX[data-elevation="-1"] {
+  box-shadow: var(--box-shadow-elevation--1);
+}
+._51vKfcQCBgoT8lSk1q3iX[data-elevation="0"] {
+  box-shadow: var(--box-shadow-elevation-0);
+}
+._51vKfcQCBgoT8lSk1q3iX[data-elevation="1"] {
+  box-shadow: var(--box-shadow-elevation-1);
+}
+._51vKfcQCBgoT8lSk1q3iX[data-elevation="2"] {
+  box-shadow: var(--box-shadow-elevation-2);
+}
+:where(._2lajVjbyrA4lq9xF0X4NQW) {
+  border: 1px solid var(--border-color);
+}
+:where(._2UkNTTzKtJJdhYEnuwtVRd) {
+  outline: 1px solid var(--outline-color);
+}
 ._2YzOLNBx6TonKU0Zmp20l4 {
   display: block;
   box-sizing: border-box;
@@ -881,7 +899,7 @@
   outline-offset: -2px;
 }
 :where(._1fNVqPb5rhUOTSV5nEBHdl):hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow-elevation-1);
 }
 :where(._2Z-Zr4UW8-jHrU5olM_rpn) {
   --bg-color: #1d1f23;
@@ -892,7 +910,7 @@
   --text-color: #e3e3e3;
   --text-muted-color: #afafaf;
   --padding: 0 var(--spacing-3);
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: var(--box-shadow-elevation--1);
 }
 :where(._2Z-Zr4UW8-jHrU5olM_rpn)[data-has-value="true"] {
   outline: 1px solid var(--color-accent-9);
@@ -910,7 +928,7 @@
 }
 :where(._2RYWJyn7v0tvoY5cR63QuI)._1cd-wdIp5lIWsydAxII-vY:focus,
 :where(._2RYWJyn7v0tvoY5cR63QuI)._1cd-wdIp5lIWsydAxII-vY:focus-within {
-  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: var(--box-shadow-elevation--1);
 }
 :where(.yV_Aq5WutzzittgbOJ1R-) {
   --bg-color: transparent;
@@ -948,7 +966,7 @@
   outline-offset: -2px;
 }
 :where(.EFvA4gLIikUE06LDGCqg5):hover {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow-elevation-1);
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH) {
   background-color: var(--bg-color, var(--color-debug));
@@ -1990,6 +2008,10 @@
   font-size: var(--default-font-size);
   line-height: var(--default-line-height);
   letter-spacing: var(--default-letter-spacing);
+  --box-shadow-elevation--1: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  --box-shadow-elevation-0: none;
+  --box-shadow-elevation-1: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  --box-shadow-elevation-2: 5px 5px 6px rgba(0, 0, 0, 0.25);
   --spacing-0: 0px;
   --spacing-1: 4px;
   --spacing-2: 8px;

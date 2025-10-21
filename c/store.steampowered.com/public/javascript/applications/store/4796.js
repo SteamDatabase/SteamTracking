@@ -335,6 +335,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -1096,8 +1097,8 @@
           });
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -1109,6 +1110,7 @@
         m_nFollowers = 0;
         m_strVanity = "";
         m_webLink = void 0;
+        m_linkedEvent = void 0;
         m_promise;
         m_bIsLoaded = !1;
         m_bIsHidden = !1;
@@ -1127,6 +1129,7 @@
             (this.m_webLink = _.weblink),
             (this.m_bIsHidden = _.hidden || !1),
             (this.m_clanAccountFlags = _.clan_account_flags ?? 0),
+            (this.m_linkedEvent = _.linked_event),
             _.appids && _.appids.forEach((_) => this.m_appidList.push(_)),
             (this.m_bIsLoaded = !0);
         }
@@ -1201,6 +1204,9 @@
         GetVanityString() {
           return this.m_strVanity;
         }
+        GetLinkedEventGID() {
+          return this.m_linkedEvent;
+        }
         AdjustFollower(_) {
           this.m_nFollowers += _;
         }
@@ -1240,8 +1246,7 @@
       (0, _._)([_._], _.prototype, "m_appidList", void 0),
         (0, _._)([_._], _.prototype, "m_nFollowers", void 0),
         (0, _._)([_._], _.prototype, "m_clanAccountFlags", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -1316,10 +1321,10 @@
         GetCreatorHomeByID(_) {
           return this.m_mapClanToCreatorHome.get(_.clan_account_id);
         }
-        async LoadCreatorHome(_, _) {
+        async LoadCreatorHome(_, _ = !1, _) {
           if (
             (this.LazyInit(),
-            !this.m_mapClanToCreatorHome.has(_.GetAccountID()))
+            _ || !this.m_mapClanToCreatorHome.has(_.GetAccountID()))
           ) {
             let _ = new _(_);
             (_.m_promise = this.InternalCreatorHome(_, _)),
@@ -1401,23 +1406,27 @@
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       function _(_) {
-        const _ = _._.InitFromClanID(_),
-          [__webpack_require__, _] = _.useState(_.GetCreatorHome(_)),
-          _ = (0, _._)("useCreatorHome");
-        return (
-          _.useEffect(() => {
+        const _ = _._.InitFromClanID(_);
+        return {
+          queryKey: ["CreatorHome", _],
+          initialData: () => _.GetCreatorHome(_),
+          queryFn: async () => {
             const _ = _._.InitFromClanID(_);
-            _.BHasCreatorHomeLoaded(_)
-              ? __webpack_require__
-                ? __webpack_require__.GetClanAccountID() != _ &&
-                  _(_.GetCreatorHome(_))
-                : _(_.GetCreatorHome(_))
-              : _.LoadCreatorHome(_).then(() => {
-                  _?.token?.reason || _(_.GetCreatorHome(_));
-                });
-          }, [_?.token?.reason, _, __webpack_require__]),
-          __webpack_require__
-        );
+            return await _.LoadCreatorHome(_, !0);
+          },
+        };
+      }
+      function _(_) {
+        const {
+          data: _,
+          isFetching: __webpack_require__,
+          refetch: _,
+        } = (0, _._)(_(_));
+        return {
+          creatorHome: _,
+          isFetching: __webpack_require__,
+          refetch: _,
+        };
       }
       window.g_CreatorHomeStore = _;
     },

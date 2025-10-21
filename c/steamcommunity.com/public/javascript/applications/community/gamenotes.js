@@ -110,6 +110,8 @@
       _.Message;
       _.Message;
       _.Message;
+      _.Message;
+      _.Message;
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -5670,6 +5672,7 @@
                 _ = {
                   tagname: _.node.tag,
                   args: _.node.args,
+                  rawargs: _.node.rawargs,
                 },
                 _ = _(_.Constructor, _, ...__webpack_require__.GetElements());
               (_ = _.accumulator),
@@ -5772,68 +5775,72 @@
           let _ = _.indexOf("=");
           const _ = _.indexOf(" ");
           let _, _;
-          if ((-1 != _ && (-1 == _ || _ < _) && (_ = _), _ > 0)) {
-            _ = _.substr(0, _).toLocaleLowerCase();
-            _ = (function (_) {
-              if (!_ || _.length < 1) return {};
-              const _ = {};
-              let _ = "",
-                _ = "",
-                _ = 0,
-                _ = 0;
-              "=" == _[0] && (_ = 2);
-              let _ = !1;
-              for (_++; _ < _.length; _++) {
-                const _ = _[_];
-                let _ = !0,
-                  _ = !1;
-                switch (_) {
-                  case 0:
-                    if ("=" == _) return {};
-                    if (" " == _) continue;
-                    _ = 1;
-                    break;
-                  case 1:
-                    ("=" != _ && " " != _) ||
-                      _ ||
-                      (" " == _ ? ((_ = 0), (_ = !0)) : (_ = 2), (_ = !1));
-                    break;
-                  case 2:
-                    " " == _
-                      ? ((_ = 0), (_ = !1), (_ = !0))
-                      : '"' == _
-                        ? ((_ = 4), (_ = !1))
-                        : (_ = 3);
-                    break;
-                  case 3:
-                  case 4:
-                    ((" " == _ && 4 != _ && !_) ||
-                      ('"' == _ && 4 == _ && !_)) &&
-                      ((_ = 0), (_ = !1), (_ = !0));
+          -1 != _ && (-1 == _ || _ < _) && (_ = _);
+          let _ = "";
+          _ > 0
+            ? ((_ = _.substr(0, _).toLocaleLowerCase()),
+              (_ = _.substr(_)),
+              (_ = (function (_) {
+                if (!_ || _.length < 1) return {};
+                const _ = {};
+                let _ = "",
+                  _ = "",
+                  _ = 0,
+                  _ = 0;
+                "=" == _[0] && (_ = 2);
+                let _ = !1;
+                for (_++; _ < _.length; _++) {
+                  const _ = _[_];
+                  let _ = !0,
+                    _ = !1;
+                  switch (_) {
+                    case 0:
+                      if ("=" == _) return {};
+                      if (" " == _) continue;
+                      _ = 1;
+                      break;
+                    case 1:
+                      ("=" != _ && " " != _) ||
+                        _ ||
+                        (" " == _ ? ((_ = 0), (_ = !0)) : (_ = 2), (_ = !1));
+                      break;
+                    case 2:
+                      " " == _
+                        ? ((_ = 0), (_ = !1), (_ = !0))
+                        : '"' == _
+                          ? ((_ = 4), (_ = !1))
+                          : (_ = 3);
+                      break;
+                    case 3:
+                    case 4:
+                      ((" " == _ && 4 != _ && !_) ||
+                        ('"' == _ && 4 == _ && !_)) &&
+                        ((_ = 0), (_ = !1), (_ = !0));
+                  }
+                  if (_)
+                    if ("\\" != _ || _)
+                      if (((_ = !1), 1 == _)) _ += _;
+                      else {
+                        if (3 != _ && 4 != _)
+                          throw new Error(
+                            "Not expecting to accumulate buffer in state " + _,
+                          );
+                        _ += _;
+                      }
+                    else _ = !0;
+                  _ && ((_[_] = _), (_ = ""), (_ = ""));
                 }
-                if (_)
-                  if ("\\" != _ || _)
-                    if (((_ = !1), 1 == _)) _ += _;
-                    else {
-                      if (3 != _ && 4 != _)
-                        throw new Error(
-                          "Not expecting to accumulate buffer in state " + _,
-                        );
-                      _ += _;
-                    }
-                  else _ = !0;
-                _ && ((_[_] = _), (_ = ""), (_ = ""));
-              }
-              0 != _ && (_[_] = _);
-              return _;
-            })(_.substr(_));
-          } else (_ = {}), (_ = _.toLocaleLowerCase());
-          _.push({
-            type: _,
-            text: _,
-            tag: _,
-            args: _,
-          });
+                0 != _ && (_[_] = _);
+                return _;
+              })(_)))
+            : ((_ = {}), (_ = _.toLocaleLowerCase())),
+            _.push({
+              type: _,
+              text: _,
+              tag: _,
+              args: _,
+              rawargs: _,
+            });
         } else
           0 != _ &&
             _.push({

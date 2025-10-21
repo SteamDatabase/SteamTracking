@@ -1776,6 +1776,12 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   color: #dfe3e6;
   box-shadow: inset 0 1px 1px 0px #000a;
 }
+@media (prefers-contrast: more) {
+  ._1ml4SNc3LIyBDHIf8ekVSw {
+    background: #000;
+    color: #fff;
+  }
+}
 ._1ml4SNc3LIyBDHIf8ekVSw.L2J24Sa_dQql2exoKoBMi {
   flex: 1;
   align-items: center;
@@ -1820,6 +1826,14 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 .HijmccPB1BKyhOwhX1EVl._3hmGW9wIxNIoPPu1aS7rFm {
   cursor: default;
 }
+@media (prefers-contrast: more) {
+  .HijmccPB1BKyhOwhX1EVl {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    text-shadow: none;
+  }
+}
 .L2J24Sa_dQql2exoKoBMi .HijmccPB1BKyhOwhX1EVl {
   flex: none;
   margin-inline-end: 0px;
@@ -1843,12 +1857,24 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   color: #fff;
   border-inline-end: none;
 }
+@media (prefers-contrast: more) {
+  .HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q,
+  .HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q:hover {
+    background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
+  }
+}
 .HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q._3hmGW9wIxNIoPPu1aS7rFm,
 .HijmccPB1BKyhOwhX1EVl._3-_jME_xsuvgT3Dvq4bw_q._3hmGW9wIxNIoPPu1aS7rFm:hover {
   background-color: #3d4450;
 }
 .HijmccPB1BKyhOwhX1EVl:not(._3hmGW9wIxNIoPPu1aS7rFm):hover {
   background-color: #464d58;
+}
+@media (prefers-contrast: more) {
+  .HijmccPB1BKyhOwhX1EVl:not(._3hmGW9wIxNIoPPu1aS7rFm):hover {
+    background: #fff;
+    color: #000;
+  }
 }
 .HijmccPB1BKyhOwhX1EVl:not(
     ._3hmGW9wIxNIoPPu1aS7rFm
@@ -1859,6 +1885,14 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
     #1aa0ff53 100%
   );
 }
+@media (prefers-contrast: more) {
+  .HijmccPB1BKyhOwhX1EVl:not(
+      ._3hmGW9wIxNIoPPu1aS7rFm
+    )._3-_jME_xsuvgT3Dvq4bw_q:hover {
+    background: #fff;
+    color: #000;
+  }
+}
 .HijmccPB1BKyhOwhX1EVl:not(._3-_jME_xsuvgT3Dvq4bw_q)
   + .HijmccPB1BKyhOwhX1EVl:not(._3-_jME_xsuvgT3Dvq4bw_q)::before {
   content: "";
@@ -1867,6 +1901,13 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   background: #3d4450;
   inset-inline-start: -3px;
   position: absolute;
+}
+@media (prefers-contrast: more) {
+  .HijmccPB1BKyhOwhX1EVl:not(._3-_jME_xsuvgT3Dvq4bw_q)
+    + .HijmccPB1BKyhOwhX1EVl:not(._3-_jME_xsuvgT3Dvq4bw_q)::before {
+    background: #fff;
+    inset-inline-start: -4px;
+  }
 }
 ._2oAiZidGyUxL-hfupFDQ2m {
   padding: 10px 15px;
@@ -1888,6 +1929,12 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   background: #3e444d;
   outline: none;
 }
+@media (prefers-contrast: more) {
+  ._2oAiZidGyUxL-hfupFDQ2m:focus {
+    background: #fff;
+    color: #000;
+  }
+}
 ._1Sa12sphmVOOs0on58tDn7 {
   height: 1px;
   margin: 10px 0;
@@ -1899,6 +1946,12 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
   box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
   margin-top: 2px;
   margin-bottom: 2px;
+}
+@media (prefers-contrast: more) {
+  ._30wJO3MC4x-I1OWpy1TAeE._DialogInputContainer {
+    background: #000;
+    color: #fff;
+  }
 }
 .uujQHHS-7y4IW6qfxHpe2 {
   display: flex;
@@ -3099,6 +3152,11 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   background: rgba(255, 255, 255, 0.1);
   margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
 }
+@media (prefers-contrast: more) {
+  ._1vcky98a3hG0ulFCdee4kd {
+    background-color: #fff;
+  }
+}
 .eKmEXJCm_lgme24Fp_HWt {
   display: flex;
   flex-direction: column;
@@ -3153,11 +3211,21 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
 }
+@media (prefers-contrast: more) {
+  .eKmEXJCm_lgme24Fp_HWt.GxgIyq8R5xTOeu4ftGrgX::after {
+    background-color: #fff;
+  }
+}
 .eKmEXJCm_lgme24Fp_HWt._39x36zDuDr8Z0Z_UnJkY4S::after {
   bottom: -0.75px;
   margin-inline-start: calc(var(--indent-level) * 18px);
   height: 1.5px;
   background: rgba(255, 255, 255, 0.1);
+}
+@media (prefers-contrast: more) {
+  .eKmEXJCm_lgme24Fp_HWt._39x36zDuDr8Z0Z_UnJkY4S::after {
+    background-color: #fff;
+  }
 }
 ._16sYNwqxz6giarbVaRUl7R .eKmEXJCm_lgme24Fp_HWt {
   --field-negative-horizontal-margin: 2.8vw;
@@ -3374,6 +3442,11 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   max-width: 100%;
   word-break: break-word;
 }
+@media (prefers-contrast: more) {
+  ._3jMlJm4PQCA8SfNlUR99Fo {
+    color: #fff;
+  }
+}
 ._3jMlJm4PQCA8SfNlUR99Fo.DesktopUI,
 .DesktopUI ._3jMlJm4PQCA8SfNlUR99Fo {
   font-size: 14px;
@@ -3408,12 +3481,23 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   color: #b8bcbf;
   margin-top: 8px;
 }
+@media (prefers-contrast: more) {
+  ._1W1to_azoBRG95oNAFpf9Q {
+    color: #fff;
+  }
+}
 ._1W1to_azoBRG95oNAFpf9Q.DesktopUI,
 .DesktopUI ._1W1to_azoBRG95oNAFpf9Q {
   color: #8b929a;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+}
+@media (prefers-contrast: more) {
+  ._1W1to_azoBRG95oNAFpf9Q.DesktopUI,
+  .DesktopUI ._1W1to_azoBRG95oNAFpf9Q {
+    color: #fff;
+  }
 }
 .eKmEXJCm_lgme24Fp_HWt._37xzVt6arvEzyNdW5GxK8f
   ._1aw7cA3mAZfWt8idAlVJWi
@@ -5308,6 +5392,13 @@ button.DialogButton {
   background-size: 300% 300%;
   position: relative;
 }
+@media (prefers-contrast: more) {
+  button.DialogButton {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 input.DialogInput::-moz-focus-inner,
 button.DialogButton::-moz-focus-inner {
   border: 0;
@@ -5646,6 +5737,11 @@ div.ModalPosition_TopBar {
   text-transform: uppercase;
   user-select: none;
   margin-inline-end: 26px;
+}
+@media (prefers-contrast: more) {
+  .SettingsDialogSubHeader {
+    color: #fff;
+  }
 }
 .DialogContent_InnerWidth .DialogBody .DialogHeader {
   margin-inline-end: 0px;
@@ -5991,6 +6087,16 @@ button.DialogButton:enabled:active.gpfocus {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: .04s;
 }
+@media (prefers-contrast: more) {
+  button.DialogButton:enabled:active,
+  button.DialogButton:enabled:active:hover,
+  button.DialogButton:enabled:active.gpfocus {
+    transition-property: scale;
+    background: #fff;
+    color: #000;
+    scale: 0.9;
+  }
+}
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
@@ -6009,6 +6115,13 @@ button.DialogButton:hover,
 button.DialogButton.gpfocus {
   background: #464d58;
   color: #fff;
+}
+@media (prefers-contrast: more) {
+  button.DialogButton:hover,
+  button.DialogButton.gpfocus {
+    background: #fff;
+    color: #000;
+  }
 }
 button.DialogButton:disabled,
 button.DialogButton:disabled:hover,

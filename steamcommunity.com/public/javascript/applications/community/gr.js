@@ -17927,6 +17927,7 @@
                 {
                   strTitle: t,
                   className: a.SucessErrorDialog,
+                  bProgressDialog: !0,
                   closeModal: () => {},
                 },
                 i.createElement(o.t, {

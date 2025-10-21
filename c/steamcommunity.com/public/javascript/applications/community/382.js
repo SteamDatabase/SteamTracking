@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "不採取行動即解決",
 	"moderation_resolutionstatus_pending": "正等待處理",
 	"moderation_resolutionstatus_acquitted": "已審核：無需採取任何動作",
+	"moderation_resolutionstatus_purged": "立即清除內容",
 	"moderation_resolutionstatus_removed": "內容已移除",
 	"moderation_resolutionstatus_relabelled": "內容已重新標記",
 	"moderation_resolutionstatus_suspicious": "帳戶因可疑內容而遭到鎖定",

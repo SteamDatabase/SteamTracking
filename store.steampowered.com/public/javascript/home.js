@@ -49,6 +49,7 @@ GHomepage = {
 	bLoadedActiveData: false,
 	bInitialRenderComplete: false,
 	bIsSeasonalSale: false,
+	bHasLocalizedTopSellers: false,
 
 	bShowAllRecentlyUpdated: false,
 	unBackgroundAppID: 0,
@@ -68,40 +69,40 @@ GHomepage = {
 		var $Ctn = $J('.home_page_body_ctn');
 		if ( $Ctn.hasClass('has_takeover') )
 		{
-			var $Background = $Ctn.children( '.page_background_holder' );
-			var $Menu = $J('#store_header');
+			if ( !$J( 'body' ).hasClass('v7') )
+			{
+				var $Background = $Ctn.children('.page_background_holder');
+				var $Menu = $J('#store_header');
 
-			var k_nContentWidth = 940 + 32;
-			var k_nMenuHeight = 0;
+				var k_nContentWidth = 940 + 32;
+				var k_nMenuHeight = 0;
 
-			var nTakeoverWidth = $Background.data( 'backgroundWidth' ) || 1880;
-			var flTakeoverRatio = nTakeoverWidth / k_nContentWidth;
-			var flTopAdjustment = ( 100 * k_nMenuHeight / k_nContentWidth ) / flTakeoverRatio;
+				var nTakeoverWidth = $Background.data('backgroundWidth') || 1880;
+				var flTakeoverRatio = nTakeoverWidth / k_nContentWidth;
+				var flTopAdjustment = (100 * k_nMenuHeight / k_nContentWidth) / flTakeoverRatio;
 
-			var $TakeoverLink = $J('.home_page_takeover_link' ).children().first();
-			var nInitialTakeoverLinkHeight = $TakeoverLink.height();
+				var $TakeoverLink = $J('.home_page_takeover_link').children().first();
+				var nInitialTakeoverLinkHeight = $TakeoverLink.height();
 
-			$J(window ).on('Responsive_SmallScreenModeToggled.StoreHomeLayout', function() {
-				if ( window.UseSmallScreenMode && window.UseSmallScreenMode() )
-				{
-					// the -5vw here accounts for the bit that would normally be overlapped by the menu, we use
-					//	viewport-relative units because the background is being scaled relative to the viewport.
-					$Background.css( 'background-position', 'center -' + flTopAdjustment + 'vw' );
-					$Background.css( 'background-size', Math.floor( 100 * flTakeoverRatio ) + '% auto' );
+				$J(window).on('Responsive_SmallScreenModeToggled.StoreHomeLayout', function () {
+					if (window.UseSmallScreenMode && window.UseSmallScreenMode()) {
+						// the -5vw here accounts for the bit that would normally be overlapped by the menu, we use
+						//	viewport-relative units because the background is being scaled relative to the viewport.
+						$Background.css('background-position', 'center -' + flTopAdjustment + 'vw');
+						$Background.css('background-size', Math.floor(100 * flTakeoverRatio) + '% auto');
 
-					// this is the link, which also allocates the space for the takeover to be visible above the cluster rotation.
-					//	we scale it based on the viewport width, assuming the initial width was 940px
-					if ( nInitialTakeoverLinkHeight )
-						$TakeoverLink.css( 'height', Math.floor( nInitialTakeoverLinkHeight / k_nContentWidth * 100 ) + '%' );
+						// this is the link, which also allocates the space for the takeover to be visible above the cluster rotation.
+						//	we scale it based on the viewport width, assuming the initial width was 940px
+						if (nInitialTakeoverLinkHeight)
+							$TakeoverLink.css('height', Math.floor(nInitialTakeoverLinkHeight / k_nContentWidth * 100) + '%');
 
-				}
-				else
-				{
-					$Background.css( 'top', '' ).css('background-position', '').css('background-size', '' );
-					if ( nInitialTakeoverLinkHeight )
-						$TakeoverLink.css( 'height', nInitialTakeoverLinkHeight + 'px' );
-				}
-			} ).trigger('Responsive_SmallScreenModeToggled.StoreHomeLayout');
+					} else {
+						$Background.css('top', '').css('background-position', '').css('background-size', '');
+						if (nInitialTakeoverLinkHeight)
+							$TakeoverLink.css('height', nInitialTakeoverLinkHeight + 'px');
+					}
+				}).trigger('Responsive_SmallScreenModeToggled.StoreHomeLayout');
+			}
 
 			GHomepage.InitTakeoverVideos();
 		}
@@ -225,7 +226,7 @@ GHomepage = {
 			GHomepage.rgContentHubs = rgParams.rgContentHubs || [];
 			GHomepage.rgFeaturedTagBuckets = rgParams.rgFeaturedTagBuckets || [];
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
-			GHomepage.bIsSeasonalSale = rgParams.bIsSeasonalSale || false;
+			GHomepage.bHasLocalizedTopSellers = rgParams.bHasLocalizedTopSellers || false;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 			GHomepage.bShowAllRecentlyUpdated = rgParams.bShowAllRecentlyUpdated || false;
 			GHomepage.unBackgroundAppID = rgParams.unBackgroundAppID || 0;
@@ -1090,7 +1091,7 @@ GHomepage = {
 	BuildMainCapsuleItemv2: function( rgItem, strFeatureContext, nDepth )
 	{
 		var rgOptions = $J.extend({
-			'class': 'store_main_capsule responsive_scroll_snap_start',
+			'class': 'store_main_capsule responsive_scroll_snap_start add_microtrailer',
 		}, rgOptions ? rgOptions : {} );
 
 		var unAppID = rgItem.appid;
@@ -1105,8 +1106,6 @@ GHomepage = {
 		var $CapCtn = $J('<a/>', params );
 		$CapCtn.data('hoverDisableScreenshots', true );
 		GStoreItemData.BindHoverEventsForItem( $CapCtn, rgItem );
-
-		let $MicrotrailerWrapper = $J('<div class="add_microtrailer" />' );
 
 		var $ImgCtn = $J('<div class="capsule capsule_image_ctn main_capsule"/>');
 		if ( rgItemData.main_capsule_2x )
@@ -1182,12 +1181,12 @@ GHomepage = {
 			}
 		}
 
-		$MicrotrailerWrapper.append( $ImgCtn );
-		$CapCtn.append( $MicrotrailerWrapper );
+		$CapCtn.append( $ImgCtn );
 
 		if ( rgAppInfo.microtrailer )
 		{
-			GHomepage.AddMicrotrailerToCapsule( $MicrotrailerWrapper, rgAppInfo.microtrailer );
+			$CapCtn.data( 'microtrailerOnImageHover', 1 );
+			GHomepage.AddMicrotrailerToCapsule( $CapCtn, rgAppInfo.microtrailer );
 		}
 
 		var $RightColCtn = $J('<div/>').addClass('info');
@@ -1406,8 +1405,8 @@ GHomepage = {
 				let $TopSellerRightCol = $J( '<div/>', { 'class': 'topseller_right_col' } );
 				$TopSellerRightCol.append( $J( '<div/>', { 'class': 'topseller_title' } ).text( 'Top Seller' ) );
 
-				const strTopSellerRank = 'Ranked <span>#%1$s</span> in your region'.replace( '%1$s', GHomepage.GetTopSellerRank( rgItem ).toString() );
-				$TopSellerRightCol.append( $J( '<div/>', { 'class': 'topseller_subtext' } ).html( strTopSellerRank ) );
+				let strTopSellersRank = GHomepage.bHasLocalizedTopSellers ? 'Ranked <span>#%1$s</span> in your region' : 'Ranked <span>#%1$s</span> globally';
+				$TopSellerRightCol.append( $J( '<div/>', { 'class': 'topseller_subtext' } ).html( strTopSellersRank.replace( '%1$s', GHomepage.GetTopSellerRank( rgItem ).toString() ) ) );
 
 				$TopSellerRightCol.appendTo( $TopSellerReason );
 				$TopSellerReason.appendTo( $ReasonMain );
@@ -2085,12 +2084,11 @@ GHomepage = {
 					$Page.append( $Col );
 				}
 
-				var $Target = $J( '<div/>', {'class': 'specials_target' });
 				if ( $Spotlights.hasClass( 'v2' ) )
 				{
 					const $SpecialDealRow = $J( '<div/>', { 'class': 'special_deal_row' } );
 
-					$Target.append ( GHomepage.BuildHomePageCapsule( oItem, 'spotlight_specials', {
+					$Col.append ( GHomepage.BuildHomePageCapsule( oItem, 'spotlight_specials', {
 						'discount_class': 'daily_deal_discount discount_block_large',
 						'capsule_size': 'header',
 						'disable_autosizer': true,
@@ -2100,16 +2098,16 @@ GHomepage = {
 				}
 				else
 				{
+					var $Target = $J( '<div/>', {'class': 'specials_target' });
 					$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
 						'discount_class': 'daily_deal_discount discount_block_large',
 						'capsule_size': 'header',
 						lazy: true
 					}, iPage + 1 ) );
+					$Col.append( $Target );
 				}
 
 				rgItemsShown.push( oItem );
-
-				$Col.append( $Target );
 
 				if ( ++cItemsInCol >= 2 )
 				{
@@ -2934,8 +2932,16 @@ GHomepage = {
 				$CapCtn.removeClass( 'microtrailer_active' );
 			};
 
-			$CapCtn.on( 'mouseenter vgp_onfocus', fnPlay );
-			$CapCtn.on( 'mouseleave vgp_onblur', fnPause );
+			if ( $CapCtn.data('microtrailerOnImageHover') )
+			{
+				$ImgCtn.on( 'mouseenter vgp_onfocus', fnPlay );
+				$ImgCtn.on( 'mouseleave vgp_onblur', fnPause );
+			}
+			else
+			{
+				$CapCtn.on( 'mouseenter vgp_onfocus', fnPlay );
+				$CapCtn.on( 'mouseleave vgp_onblur', fnPause );
+			}
 
 			window.setTimeout( fnPlay, 1 );
 		});
@@ -3921,10 +3927,6 @@ GSteamCurators = {
 
         var $ItemContent = $J('<div/>', {'class': 'curator_content'});
 
-        var $DetailsRow = $J('<div/>', { 'class': 'curator_details_row' } );
-        $DetailsRow.append( $J('<div/>').html( rgItemData.discount_block ? $J( rgItemData.discount_block ).addClass( '' ) : '&nbsp;' ) );
-        $ItemContent.append( $DetailsRow );
-
         var $CuratorText = $J('<div/>', {'class': 'curator_text'} ).text( '"' + rgRecommendation.blurb + '"' );
         $ItemContent.append( $CuratorText );
 
@@ -3944,6 +3946,10 @@ GSteamCurators = {
 		$CuratorIdentifier.append( $J( '<img/>', {'class': 'curator_img', src: GetAvatarURL( curator.strAvatarHash, '_full' ), 'alt': '' } ) );
 		$CuratorIdentifier.append( $J( '<div/>', {'class': 'curator_name' } ).text( curator.name ) );
         $ItemContent.append( $CuratorIdentifier );
+
+		var $DetailsRow = $J('<div/>', { 'class': 'curator_details_row' } );
+		$DetailsRow.append( $J('<div/>').html( rgItemData.discount_block ? $J( rgItemData.discount_block ).addClass( '' ) : '&nbsp;' ) );
+		$ItemContent.append( $DetailsRow );
 
         $Item.append( $ItemContent );
 

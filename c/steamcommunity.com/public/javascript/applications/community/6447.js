@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "İşlem yapmadan çöz",
 	"moderation_resolutionstatus_pending": "Düzenleme bekleniyor",
 	"moderation_resolutionstatus_acquitted": "İncelendi: İşlem gerekmiyor",
+	"moderation_resolutionstatus_purged": "İçerik derhal kaldırıldı",
 	"moderation_resolutionstatus_removed": "İçerik kaldırıldı",
 	"moderation_resolutionstatus_relabelled": "İçerik yeniden etiketlendi",
 	"moderation_resolutionstatus_suspicious": "Hesap şüpheli içerik nedeniyle kilitlendi.",

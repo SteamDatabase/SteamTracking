@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "対応せずに解決",
 	"moderation_resolutionstatus_pending": "モデレーション待ち",
 	"moderation_resolutionstatus_acquitted": "レビュー済み：アクション不要",
+	"moderation_resolutionstatus_purged": "コンテンツは直ちに消去されました",
 	"moderation_resolutionstatus_removed": "コンテンツが削除されました",
 	"moderation_resolutionstatus_relabelled": "コンテンツのラベルが変更されました",
 	"moderation_resolutionstatus_suspicious": "疑わしいコンテンツによりアカウントがロックされました",

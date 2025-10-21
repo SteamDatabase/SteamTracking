@@ -2887,6 +2887,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   color: #dfe3e6;
   box-shadow: inset 0 1px 1px 0px #000a;
 }
+@media (prefers-contrast: more) {
+  .radio_Group_1ml4S {
+    background: #000;
+    color: #fff;
+  }
+}
 .radio_Group_1ml4S.radio_CenteredPill_L2J24 {
   flex: 1;
   align-items: center;
@@ -2931,6 +2937,14 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .radio_Button_Hijmc.radio_Disabled_3hmGW {
   cursor: default;
 }
+@media (prefers-contrast: more) {
+  .radio_Button_Hijmc {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    text-shadow: none;
+  }
+}
 .radio_CenteredPill_L2J24 .radio_Button_Hijmc {
   flex: none;
   margin-inline-end: 0px;
@@ -2954,6 +2968,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   color: #fff;
   border-inline-end: none;
 }
+@media (prefers-contrast: more) {
+  .radio_Button_Hijmc.radio_Active_3-_jM,
+  .radio_Button_Hijmc.radio_Active_3-_jM:hover {
+    background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
+  }
+}
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW,
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW:hover {
   background-color: #3d4450;
@@ -2961,12 +2981,24 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .radio_Button_Hijmc:not(.radio_Disabled_3hmGW):hover {
   background-color: #464d58;
 }
+@media (prefers-contrast: more) {
+  .radio_Button_Hijmc:not(.radio_Disabled_3hmGW):hover {
+    background: #fff;
+    color: #000;
+  }
+}
 .radio_Button_Hijmc:not(.radio_Disabled_3hmGW).radio_Active_3-_jM:hover {
   background-color: radial-gradient(
     155.42% 100% at 0% 0%,
     #1f2a39 0 0%,
     #1aa0ff53 100%
   );
+}
+@media (prefers-contrast: more) {
+  .radio_Button_Hijmc:not(.radio_Disabled_3hmGW).radio_Active_3-_jM:hover {
+    background: #fff;
+    color: #000;
+  }
 }
 .radio_Button_Hijmc:not(.radio_Active_3-_jM)
   + .radio_Button_Hijmc:not(.radio_Active_3-_jM)::before {
@@ -2976,6 +3008,13 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   background: #3d4450;
   inset-inline-start: -3px;
   position: absolute;
+}
+@media (prefers-contrast: more) {
+  .radio_Button_Hijmc:not(.radio_Active_3-_jM)
+    + .radio_Button_Hijmc:not(.radio_Active_3-_jM)::before {
+    background: #fff;
+    inset-inline-start: -4px;
+  }
 }
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
   padding: 10px 15px;
@@ -2997,6 +3036,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   background: #3e444d;
   outline: none;
 }
+@media (prefers-contrast: more) {
+  .dropdown_DialogDropDownMenu_Item_2oAiZ:focus {
+    background: #fff;
+    color: #000;
+  }
+}
 .dropdown_DialogDropDownMenu_Separator_1Sa12 {
   height: 1px;
   margin: 10px 0;
@@ -3008,6 +3053,12 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
   margin-top: 2px;
   margin-bottom: 2px;
+}
+@media (prefers-contrast: more) {
+  .dropdown_DialogDropDownMenu_30wJO._DialogInputContainer {
+    background: #000;
+    color: #fff;
+  }
 }
 .dropdownlabel_DropDownLabelContainer_uujQH {
   display: flex;
@@ -3946,6 +3997,11 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   background: rgba(255, 255, 255, 0.1);
   margin-inline: calc(-1 * var(--field-negative-horizontal-margin));
 }
+@media (prefers-contrast: more) {
+  .gamepaddialog_StandaloneFieldSeparator_1vcky {
+    background-color: #fff;
+  }
+}
 .gamepaddialog_Field_eKmEX {
   display: flex;
   flex-direction: column;
@@ -4000,11 +4056,21 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
 }
+@media (prefers-contrast: more) {
+  .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorStandard_GxgIy::after {
+    background-color: #fff;
+  }
+}
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorThick_39x36::after {
   bottom: -0.75px;
   margin-inline-start: calc(var(--indent-level) * 18px);
   height: 1.5px;
   background: rgba(255, 255, 255, 0.1);
+}
+@media (prefers-contrast: more) {
+  .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorThick_39x36::after {
+    background-color: #fff;
+  }
 }
 .gamepaddialog_GamepadDialogContent_16sYN .gamepaddialog_Field_eKmEX {
   --field-negative-horizontal-margin: 2.8vw;
@@ -4237,6 +4303,11 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   max-width: 100%;
   word-break: break-word;
 }
+@media (prefers-contrast: more) {
+  .gamepaddialog_FieldLabel_3jMlJ {
+    color: #fff;
+  }
+}
 .gamepaddialog_FieldLabel_3jMlJ.DesktopUI,
 .DesktopUI .gamepaddialog_FieldLabel_3jMlJ {
   font-size: 14px;
@@ -4276,12 +4347,23 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   color: #b8bcbf;
   margin-top: 8px;
 }
+@media (prefers-contrast: more) {
+  .gamepaddialog_FieldDescription_1W1to {
+    color: #fff;
+  }
+}
 .gamepaddialog_FieldDescription_1W1to.DesktopUI,
 .DesktopUI .gamepaddialog_FieldDescription_1W1to {
   color: #8b929a;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
+}
+@media (prefers-contrast: more) {
+  .gamepaddialog_FieldDescription_1W1to.DesktopUI,
+  .DesktopUI .gamepaddialog_FieldDescription_1W1to {
+    color: #fff;
+  }
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithChildrenBelow_37xzV
   .gamepaddialog_FieldChildrenWithIcon_1aw7c
@@ -21407,6 +21489,7 @@ html:not(.touch)
   width: 100%;
   box-shadow: 0px 4px 8px #000;
   z-index: 2;
+  position: relative;
 }
 .chatnotice_ChatNoticeBody_2sTqA {
   display: flex;
@@ -21515,6 +21598,16 @@ html:not(.touch)
 .chatnotice_DismissButton_2_0Bf:focus .SVGIcon_X_Line line {
   stroke: #fff;
   stroke-width: 30px;
+}
+.chatnotice_DisconnectBlocker_3RYtb {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: all;
+}
+.errorDisconnected .chatnotice_DisconnectBlocker_3RYtb {
+  display: block;
 }
 @keyframes pagedcontent_BackgroundAnimation_1XVbj {
   from {
@@ -38915,6 +39008,13 @@ button.DialogButton {
   background-size: 300% 300%;
   position: relative;
 }
+@media (prefers-contrast: more) {
+  button.DialogButton {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+}
 input.DialogInput::-moz-focus-inner,
 button.DialogButton::-moz-focus-inner {
   border: 0;
@@ -39253,6 +39353,11 @@ div.ModalPosition_TopBar {
   text-transform: uppercase;
   user-select: none;
   margin-inline-end: 26px;
+}
+@media (prefers-contrast: more) {
+  .SettingsDialogSubHeader {
+    color: #fff;
+  }
 }
 .DialogContent_InnerWidth .DialogBody .DialogHeader {
   margin-inline-end: 0px;
@@ -39598,6 +39703,16 @@ button.DialogButton:enabled:active.gpfocus {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: .04s;
 }
+@media (prefers-contrast: more) {
+  button.DialogButton:enabled:active,
+  button.DialogButton:enabled:active:hover,
+  button.DialogButton:enabled:active.gpfocus {
+    transition-property: scale;
+    background: #fff;
+    color: #000;
+    scale: 0.9;
+  }
+}
 button.DialogButton.Primary:hover,
 button.DialogButton.Primary.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
@@ -39616,6 +39731,13 @@ button.DialogButton:hover,
 button.DialogButton.gpfocus {
   background: #464d58;
   color: #fff;
+}
+@media (prefers-contrast: more) {
+  button.DialogButton:hover,
+  button.DialogButton.gpfocus {
+    background: #fff;
+    color: #000;
+  }
 }
 button.DialogButton:disabled,
 button.DialogButton:disabled:hover,

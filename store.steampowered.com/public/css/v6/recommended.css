@@ -1612,9 +1612,17 @@ body.v6 h2.user_reviews_header {
 	justify-content: space-between;
 	padding-bottom: 4px;
     margin-top: 40px;
-    background-image: url('/public/images/v6/maincol_gradient_rule.png' );
-    background-repeat: no-repeat;
-    background-position: bottom left;
+    /*background-image: url('/public/images/v6/maincol_gradient_rule.png' );*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: bottom left;*/
+	border-bottom: 1px solid #5b7381;
+}
+
+@media screen and (max-width: 910px) {
+	html.responsive body.v6 h2.user_reviews_header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 
 body.v6 h2.user_reviews_header .header_links > span {
@@ -2479,8 +2487,9 @@ html.tablet .friend_reviews .review_box .review_leftcol {
 	align-items: center;
 	font-size: 12px;
 	margin-bottom: 30px;
-	background: radial-gradient(199.76% 71.77% at 28.23% 50%, #3F4E5F 0%, #313C4A 100%);
-	box-shadow: 0 0 5px #000;
+	/*background: radial-gradient(199.76% 71.77% at 28.23% 50%, #3F4E5F 0%, #313C4A 100%);*/
+	background: rgba(0, 0, 0, 0.2);
+	/*box-shadow: 0 0 5px #000;*/
 }
 
 .user_reviews_filter_title {
@@ -3041,22 +3050,6 @@ div.graph_toggle_icon.down {
 	white-space: nowrap;
 }
 
-.user_reviews_steam_labs_desc > a {
-	color: #19c0d0;
-}
-.user_reviews_steam_labs_desc:hover > a {
-	color: #fff;
-}
-.user_reviews_steam_labs_desc > a > img {
-	height: 32px;
-	margin-right: 5px;
-}
-.user_reviews_steam_labs_desc > a > span {
-	display: inline-block;
-	position: relative;
-	bottom: 4px;
-}
-
 .user_reviews_date_range_explanation,
 .user_reviews_offtopic_activity_explanation,
 .user_reviews_playtime_filter_explanation,
@@ -3289,6 +3282,16 @@ body.v6 h2.morelike_section_divider
 	justify-content: center;
 	gap: 16px;
 }
+@media screen and (max-width: 910px)
+{
+	html.responsive .review_score_summaries {
+		flex-direction: column;
+	}
+
+	html.responsive .review_language_breakdown {
+		width: 80%;
+	}
+}
 
 .summary_rule {
 	height: 1px;
@@ -3297,13 +3300,40 @@ body.v6 h2.morelike_section_divider
 
 }
 
+.review_box_background {
+	background: radial-gradient(63% 79% at 50% 100%, rgba(255, 255, 255, 0.35) 0%, rgba(116, 133, 140, 0.35) 100%);
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.review_box_background_secondary {
+	background: radial-gradient(63% 79% at 50% 100%, rgba(255, 255, 255, 0.25) 0%, rgba(116, 133, 140, 0.25) 100%);
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
 .review_summary_ctn {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 10px 30px;
 	border-radius: 4px;
-	background: radial-gradient(83.77% 83.75% at 50.23% 16.25%, #283039 0%, #4D5C6C 100%);
+}
+
+.review_summary_ctn .summary_text {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.review_summary_ctn .summary_icon {
+	position: absolute;
+	left: -8px;
+	top: -8px;
+	width: 28px;
 }
 
 .review_summary_ctn .title {
@@ -3449,7 +3479,6 @@ p.outliers_options {
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-.review_language_outliers,
 .review_recent_events {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -3464,39 +3493,87 @@ p.outliers_options {
 	border-radius: 5px;
 	background: #515c685c;
 }
-.outlier_totals {
-	font-size: 13px;
-	display: flex;
-	flex: 1;
-	gap: 20px;
-}
-.outlier_disclaimer {
-	font-size: 13px;
-	color: rgba( 255,255,255,0.8);
-}
-.outlier_disclaimer span {
-	font-weight: 500;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
+
 .review_summary_count {
-	font-weight: bold;
 	color: #ffffff;
 }
-.review_language_outliers img {
-	margin-bottom: -6px;
-	height: 30px;
-}
-.review_language_outliers .explanation {
-	margin-left: 10px;
+
+.disclaimer_ctn {
+	width: 100%;
 	display: flex;
-	flex: 1;
+	flex-direction: row;
+	justify-content: flex-end;
 }
-.review_language_outliers > div {
-	align-content: center;
+
+.show_all_disclaimer {
+	display: inline-block;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: 300;
+	box-sizing: border-box;
+	position: relative;
+	padding: 6px 16px 6px 6px;
+	border-radius: 5px;
+	background: #515c685c;
 }
-.review_language_outliers a {
-	text-decoration: underline;
+
+.show_all_disclaimer:after {
+	bottom: 100%;
+	right: 5%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #515c685c;
+	border-width: 10px;
+	margin-left: -10px;
 }
+
+.show_all_disclaimer img {
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	margin-bottom: -6px;
+}
+
+.review_language_breakdown {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			display: flex;
+	flex-direction: column;
+	width: 40%;
+	height: -webkit-fill-available;
+	gap: 8px;
+}
+
+.outlier_totals {
+	width: 100%;
+	height: -webkit-fill-available;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 13px;
+	color: #9ba3ab;
+	padding: 6px 12px;
+	border-radius: 5px;
+	gap: 4px;
+}
+
+.outlier_totals .game_review_summary {
+	order: 3;
+}
+
+.outlier_totals .app_reviews_count,
+.outlier_totals .review_summary_count {
+	flex-grow: 1;
+}
+
 .review_language_outliers_table {
 	display: flex;
 	flex-flow: column nowrap;

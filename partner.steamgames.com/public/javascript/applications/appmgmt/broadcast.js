@@ -14388,7 +14388,7 @@
             return (
               (async () => {
                 const t = h.b.InitFromClanID(r),
-                  i = await da.pF.LoadCreatorHome(t, e);
+                  i = await da.pF.LoadCreatorHome(t, !1, e);
                 e.token.reason || n(i);
               })(),
               () => {
@@ -15481,7 +15481,7 @@
           n.createElement("div", { ref: a, className: "crossfade-img" }),
         );
       }
-      var S = r(79849),
+      var S = r(45359),
         y = r(69409),
         w = r(81416),
         M = r(12155),

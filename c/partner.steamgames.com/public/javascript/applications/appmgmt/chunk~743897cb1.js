@@ -12650,6 +12650,183 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapDefIDtoDefinition = new Map();
+        m_mapDefIDToPromise = new Map();
+        m_defChangeCallback = new Map();
+        m_mapCategoryAndClassToItems = new Map();
+        m_mapCategoryAndClassToPromise = new Map();
+        m_defCategoryAndClassToChangeCallback = new Map();
+        m_SteamInterface = null;
+        GetItem(_) {
+          return this.m_mapDefIDtoDefinition.get(_);
+        }
+        GetItemChangeCallback(_) {
+          return (
+            this.m_defChangeCallback.has(_) ||
+              this.m_defChangeCallback.set(_, new _._()),
+            this.m_defChangeCallback.get(_)
+          );
+        }
+        GetKeyCategoryAndClass(_, _) {
+          return _ + "_" + _;
+        }
+        GetItemsByCategoryAndClass(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          return this.m_mapCategoryAndClassToItems.get(_);
+        }
+        GetItemsByCategoryAndClassCallback(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          return (
+            this.m_defCategoryAndClassToChangeCallback.has(_) ||
+              this.m_defCategoryAndClassToChangeCallback.set(_, new _._()),
+            this.m_defCategoryAndClassToChangeCallback.get(_)
+          );
+        }
+        async LoadRewardDefinition(_) {
+          return (
+            this.m_mapDefIDToPromise.has(_) ||
+              this.m_mapDefIDToPromise.set(
+                _,
+                this.InternalLoadRewardDefinition(_),
+              ),
+            this.m_mapDefIDToPromise.get(_)
+          );
+        }
+        async InternalLoadRewardDefinition(_) {
+          if (this.m_mapDefIDtoDefinition.has(_))
+            return this.m_mapDefIDtoDefinition.get(_);
+          const _ = _._.Init(_._);
+          _.Body().set_definitionids([_]);
+          let _ = null;
+          try {
+            const _ = await _._.QueryRewardItems(
+              this.m_SteamInterface.GetServiceTransport(),
+              _,
+            );
+            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
+              (0, _._)(
+                1 == _.Body().definitions()?.length,
+                `Requested definition ID ${_} and receive # ${_.Body().definitions()?.length}, expecting exactly one.`,
+              );
+              const _ = _.Body().definitions()[0].toObject();
+              return (
+                this.m_mapDefIDtoDefinition.set(_, _),
+                this.GetItemChangeCallback(_).Dispatch(_),
+                _
+              );
+            }
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CLoyaltyRewardDefinitionStore.LoadRewardDefinition failed: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            null
+          );
+        }
+        async LoadRewardDefinitionByCategoryAndClass(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          return (
+            this.m_mapCategoryAndClassToPromise.has(_) ||
+              this.m_mapCategoryAndClassToPromise.set(
+                _,
+                this.InternalLoadRewardDefinitionByCategoryAndClass(_, _),
+              ),
+            this.m_mapCategoryAndClassToPromise.get(_)
+          );
+        }
+        async InternalLoadRewardDefinitionByCategoryAndClass(_, _) {
+          const _ = this.GetKeyCategoryAndClass(_, _);
+          if (this.m_mapCategoryAndClassToItems.has(_))
+            return this.m_mapCategoryAndClassToItems.get(_);
+          const _ = _._.Init(_._);
+          _.Body().set_community_item_classes([_]),
+            _.Body().set_filter_match_any_category_tags([_]);
+          let _ = null;
+          try {
+            const _ = await _._.QueryRewardItems(
+              this.m_SteamInterface.GetServiceTransport(),
+              _,
+            );
+            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
+              const _ = _.Body()
+                .definitions()
+                .map((_) => _.toObject());
+              return (
+                _.forEach((_) => {
+                  this.m_mapDefIDtoDefinition.has(_.defid) ||
+                    (this.m_mapDefIDtoDefinition.set(_.defid, _),
+                    this.GetItemChangeCallback(_.defid).Dispatch(_));
+                }),
+                this.m_mapCategoryAndClassToItems.set(_, _),
+                this.GetItemsByCategoryAndClassCallback(_, _).Dispatch(_),
+                ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+                  console.log(
+                    "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass loaded " +
+                      _.length,
+                  ),
+                _
+              );
+            }
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass failed: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            null
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_LoyaltyRewardDefinitionStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+        Init() {
+          this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL);
+        }
+      }
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(_.Get().GetItem(_));
+        return (
+          (0, _.useEffect)(() => {
+            _ || _.Get().LoadRewardDefinition(_);
+          }, [_, _]),
+          (0, _._)(_.Get().GetItemChangeCallback(_), __webpack_require__),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -28643,176 +28820,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapDefIDtoDefinition = new Map();
-        m_mapDefIDToPromise = new Map();
-        m_defChangeCallback = new Map();
-        m_mapCategoryAndClassToItems = new Map();
-        m_mapCategoryAndClassToPromise = new Map();
-        m_defCategoryAndClassToChangeCallback = new Map();
-        m_SteamInterface = null;
-        GetItem(_) {
-          return this.m_mapDefIDtoDefinition.get(_);
-        }
-        GetItemChangeCallback(_) {
-          return (
-            this.m_defChangeCallback.has(_) ||
-              this.m_defChangeCallback.set(_, new _._()),
-            this.m_defChangeCallback.get(_)
-          );
-        }
-        GetKeyCategoryAndClass(_, _) {
-          return _ + "_" + _;
-        }
-        GetItemsByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return this.m_mapCategoryAndClassToItems.get(_);
-        }
-        GetItemsByCategoryAndClassCallback(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return (
-            this.m_defCategoryAndClassToChangeCallback.has(_) ||
-              this.m_defCategoryAndClassToChangeCallback.set(_, new _._()),
-            this.m_defCategoryAndClassToChangeCallback.get(_)
-          );
-        }
-        async LoadRewardDefinition(_) {
-          return (
-            this.m_mapDefIDToPromise.has(_) ||
-              this.m_mapDefIDToPromise.set(
-                _,
-                this.InternalLoadRewardDefinition(_),
-              ),
-            this.m_mapDefIDToPromise.get(_)
-          );
-        }
-        async InternalLoadRewardDefinition(_) {
-          if (this.m_mapDefIDtoDefinition.has(_))
-            return this.m_mapDefIDtoDefinition.get(_);
-          const _ = _._.Init(_._);
-          _.Body().set_definitionids([_]);
-          let _ = null;
-          try {
-            const _ = await _._.QueryRewardItems(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
-              (0, _._)(
-                1 == _.Body().definitions()?.length,
-                `Requested definition ID ${_} and receive # ${_.Body().definitions()?.length}, expecting exactly one.`,
-              );
-              const _ = _.Body().definitions()[0].toObject();
-              return (
-                this.m_mapDefIDtoDefinition.set(_, _),
-                this.GetItemChangeCallback(_).Dispatch(_),
-                _
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CLoyaltyRewardDefinitionStore.LoadRewardDefinition failed: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        async LoadRewardDefinitionByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          return (
-            this.m_mapCategoryAndClassToPromise.has(_) ||
-              this.m_mapCategoryAndClassToPromise.set(
-                _,
-                this.InternalLoadRewardDefinitionByCategoryAndClass(_, _),
-              ),
-            this.m_mapCategoryAndClassToPromise.get(_)
-          );
-        }
-        async InternalLoadRewardDefinitionByCategoryAndClass(_, _) {
-          const _ = this.GetKeyCategoryAndClass(_, _);
-          if (this.m_mapCategoryAndClassToItems.has(_))
-            return this.m_mapCategoryAndClassToItems.get(_);
-          const _ = _._.Init(_._);
-          _.Body().set_community_item_classes([_]),
-            _.Body().set_filter_match_any_category_tags([_]);
-          let _ = null;
-          try {
-            const _ = await _._.QueryRewardItems(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (1 == _.GetEResult() && _.Body().definitions()?.length > 0) {
-              const _ = _.Body()
-                .definitions()
-                .map((_) => _.toObject());
-              return (
-                _.forEach((_) => {
-                  this.m_mapDefIDtoDefinition.has(_.defid) ||
-                    (this.m_mapDefIDtoDefinition.set(_.defid, _),
-                    this.GetItemChangeCallback(_.defid).Dispatch(_));
-                }),
-                this.m_mapCategoryAndClassToItems.set(_, _),
-                this.GetItemsByCategoryAndClassCallback(_, _).Dispatch(_),
-                ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                  console.log(
-                    "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass loaded " +
-                      _.length,
-                  ),
-                _
-              );
-            }
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass failed: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            null
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_LoyaltyRewardDefinitionStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {
-          this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL);
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { defid: _, url: __webpack_require__ } = _,
-          _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(
-              _.Get().GetItem(_),
-            );
-            return (
-              (0, _.useEffect)(() => {
-                _ || _.Get().LoadRewardDefinition(_);
-              }, [_, _]),
-              (0, _._)(_.Get().GetItemChangeCallback(_), __webpack_require__),
-              _
-            );
-          })(_);
+          _ = (0, _._)(_);
         if (!_ || !_.community_item_data) return null;
         const _ = _.appid,
           _ = _.community_item_data.item_image_large,
@@ -29684,6 +29695,9 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapInventoryByApp = new Map();

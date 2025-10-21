@@ -405,7 +405,11 @@
           const c = (e, n) => {
             if (e && e.node.tag === n.text && a.get(e.node.tag)) {
               const n = a.get(e.node.tag),
-                i = { tagname: e.node.tag, args: e.node.args },
+                i = {
+                  tagname: e.node.tag,
+                  args: e.node.args,
+                  rawargs: e.node.rawargs,
+                },
                 s = t(n.Constructor, i, ...r.GetElements());
               (r = e.accumulator),
                 Array.isArray(s)
@@ -493,63 +497,66 @@
           let t = i.indexOf("=");
           const r = i.indexOf(" ");
           let a, s;
-          if ((-1 != r && (-1 == t || r < t) && (t = r), t > 0)) {
-            a = i.substr(0, t).toLocaleLowerCase();
-            s = (function (e) {
-              if (!e || e.length < 1) return {};
-              const t = {};
-              let r = "",
-                n = "",
-                i = 0,
-                a = 0;
-              "=" == e[0] && (i = 2);
-              let s = !1;
-              for (a++; a < e.length; a++) {
-                const o = e[a];
-                let l = !0,
-                  c = !1;
-                switch (i) {
-                  case 0:
-                    if ("=" == o) return {};
-                    if (" " == o) continue;
-                    i = 1;
-                    break;
-                  case 1:
-                    ("=" != o && " " != o) ||
-                      s ||
-                      (" " == o ? ((i = 0), (c = !0)) : (i = 2), (l = !1));
-                    break;
-                  case 2:
-                    " " == o
-                      ? ((i = 0), (l = !1), (c = !0))
-                      : '"' == o
-                        ? ((i = 4), (l = !1))
-                        : (i = 3);
-                    break;
-                  case 3:
-                  case 4:
-                    ((" " == o && 4 != i && !s) ||
-                      ('"' == o && 4 == i && !s)) &&
-                      ((i = 0), (l = !1), (c = !0));
+          -1 != r && (-1 == t || r < t) && (t = r);
+          let o = "";
+          t > 0
+            ? ((a = i.substr(0, t).toLocaleLowerCase()),
+              (o = i.substr(t)),
+              (s = (function (e) {
+                if (!e || e.length < 1) return {};
+                const t = {};
+                let r = "",
+                  n = "",
+                  i = 0,
+                  a = 0;
+                "=" == e[0] && (i = 2);
+                let s = !1;
+                for (a++; a < e.length; a++) {
+                  const o = e[a];
+                  let l = !0,
+                    c = !1;
+                  switch (i) {
+                    case 0:
+                      if ("=" == o) return {};
+                      if (" " == o) continue;
+                      i = 1;
+                      break;
+                    case 1:
+                      ("=" != o && " " != o) ||
+                        s ||
+                        (" " == o ? ((i = 0), (c = !0)) : (i = 2), (l = !1));
+                      break;
+                    case 2:
+                      " " == o
+                        ? ((i = 0), (l = !1), (c = !0))
+                        : '"' == o
+                          ? ((i = 4), (l = !1))
+                          : (i = 3);
+                      break;
+                    case 3:
+                    case 4:
+                      ((" " == o && 4 != i && !s) ||
+                        ('"' == o && 4 == i && !s)) &&
+                        ((i = 0), (l = !1), (c = !0));
+                  }
+                  if (l)
+                    if ("\\" != o || s)
+                      if (((s = !1), 1 == i)) r += o;
+                      else {
+                        if (3 != i && 4 != i)
+                          throw new Error(
+                            "Not expecting to accumulate buffer in state " + i,
+                          );
+                        n += o;
+                      }
+                    else s = !0;
+                  c && ((t[r] = n), (r = ""), (n = ""));
                 }
-                if (l)
-                  if ("\\" != o || s)
-                    if (((s = !1), 1 == i)) r += o;
-                    else {
-                      if (3 != i && 4 != i)
-                        throw new Error(
-                          "Not expecting to accumulate buffer in state " + i,
-                        );
-                      n += o;
-                    }
-                  else s = !0;
-                c && ((t[r] = n), (r = ""), (n = ""));
-              }
-              0 != i && (t[r] = n);
-              return t;
-            })(i.substr(t));
-          } else (s = {}), (a = i.toLocaleLowerCase());
-          e.push({ type: n, text: i, tag: a, args: s });
+                0 != i && (t[r] = n);
+                return t;
+              })(o)))
+            : ((s = {}), (a = i.toLocaleLowerCase())),
+            e.push({ type: n, text: i, tag: a, args: s, rawargs: o });
         } else 0 != n && e.push({ type: n, text: i });
         return { type: r, text: "" };
       }
@@ -609,7 +616,7 @@
     58222: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $P: () => A,
+        $P: () => w,
         Fw: () => l,
         cU: () => u,
         fp: () => E,
@@ -1596,75 +1603,38 @@
           return "CQuest_VirtualItemRewardDefinition_Response";
         }
       }
-      class A extends i.Message {
+      class w extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            A.prototype.eventid || s.Sg(A.M()),
+            w.prototype.eventid || s.Sg(w.M()),
             i.Message.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
                 fields: {
                   eventid: { n: 1, br: s.qM.readEnum, bw: s.gp.writeEnum },
                   itemsdefs: { n: 2, c: B, r: !0, q: !0 },
                   action: { n: 3, br: s.qM.readEnum, bw: s.gp.writeEnum },
                 },
               }),
-            A.sm_m
+            w.sm_m
           );
         }
         static MBF() {
-          return A.sm_mbf || (A.sm_mbf = s.w0(A.M())), A.sm_mbf;
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.BT(A.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.Uq(A.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (a().BinaryReader)(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.zj(A.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.i0(A.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CQuest_SetVirtualItemRewardDefinition_Request";
-        }
-      }
-      class w extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), i.Message.initialize(this, e, 0, -1, void 0, null);
+          return w.sm_mbf || (w.sm_mbf = s.w0(w.M())), w.sm_mbf;
         }
         toObject(e = !1) {
           return w.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return s.BT(w.M(), e, t);
         }
         static fromObject(e) {
-          return new w();
+          return s.Uq(w.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
@@ -1672,16 +1642,53 @@
           return w.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return s.zj(w.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
           return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          s.i0(w.M(), e, t);
+        }
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CQuest_SetVirtualItemRewardDefinition_Request";
+        }
+      }
+      class A extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return A.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new A();
+        }
+        static deserializeBinary(e) {
+          let t = new (a().BinaryReader)(e),
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CQuest_SetVirtualItemRewardDefinition_Response";
@@ -1731,8 +1738,8 @@
           (e.SetVirtualItemRewardDefinition = function (e, t) {
             return e.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, o.I8)(A, t),
-              w,
+              (0, o.I8)(w, t),
+              A,
               { ePrivilege: 4 },
             );
           });
@@ -1757,7 +1764,7 @@
     },
     61949: (e, t, r) => {
       "use strict";
-      r.d(t, { Ey: () => v, Rp: () => w });
+      r.d(t, { Ey: () => v, Rp: () => A });
       var n,
         i = r(80613),
         a = r.n(i),
@@ -2182,7 +2189,7 @@
       }
       var B = r(88942),
         b = r(23809);
-      function A() {
+      function w() {
         const e = (0, b.KV)();
         return (0, B.I)(
           (function (e) {
@@ -2190,8 +2197,8 @@
           })(e),
         );
       }
-      function w(e) {
-        const { data: t } = A();
+      function A(e) {
+        const { data: t } = w();
         return t
           ? (function (e, t) {
               var r, n, i;
@@ -2226,7 +2233,7 @@
           : void 0;
       }
       function v() {
-        const { data: e } = A();
+        const { data: e } = w();
         return e
           ? !(function (e) {
               switch (e.preference_state) {
@@ -2251,7 +2258,7 @@
         Sz: () => D,
         Tu: () => N,
         UT: () => V,
-        W4: () => w,
+        W4: () => A,
         ZS: () => P,
         Zb: () => k,
         _J: () => U,
@@ -2279,8 +2286,8 @@
         S = r(61336),
         B = r(30470),
         b = r(12611),
-        A = r(90622);
-      const w = new Map([
+        w = r(90622);
+      const A = new Map([
           [
             "b",
             {
@@ -2438,12 +2445,12 @@
             "url",
             {
               Constructor: function (e) {
-                let t = (0, A.J)(I(e.args));
+                let t = (0, w.J)(I(e.args));
                 if (!t) {
                   const r = e.children;
                   "string" == typeof r &&
                     (r.startsWith("http://") || r.startsWith("https://")) &&
-                    (t = (0, A.J)(r));
+                    (t = (0, w.J)(r));
                 }
                 const r =
                     "button" == I(e.args, "style") ? i().LinkButton : null,
@@ -2717,13 +2724,13 @@
                   S = ("0" + h.getUTCHours()).slice(-2),
                   B = ("0" + h.getUTCMinutes()).slice(-2),
                   b = `${E}${f}${y}T${S}${B}00Z`,
-                  A = new Date(u),
-                  w = A.getUTCFullYear(),
-                  v = ("0" + (A.getUTCMonth() + 1)).slice(-2),
-                  C = ("0" + A.getUTCDate()).slice(-2),
-                  M = ("0" + A.getUTCHours()).slice(-2),
-                  T = ("0" + A.getUTCMinutes()).slice(-2),
-                  N = `${w}${v}${C}T${M}${T}00Z`;
+                  w = new Date(u),
+                  A = w.getUTCFullYear(),
+                  v = ("0" + (w.getUTCMonth() + 1)).slice(-2),
+                  C = ("0" + w.getUTCDate()).slice(-2),
+                  M = ("0" + w.getUTCHours()).slice(-2),
+                  T = ("0" + w.getUTCMinutes()).slice(-2),
+                  N = `${A}${v}${C}T${M}${T}00Z`;
                 let R;
                 try {
                   let e = "BEGIN:VCALENDAR\r\n";
@@ -2751,7 +2758,7 @@
                       r = {
                         event_name: "addcalendarevent",
                         tsStart: h.getTime(),
-                        tsEnd: A.getTime(),
+                        tsEnd: w.getTime(),
                         strTitle: o,
                         strNotes: d,
                         strLocation: p,
@@ -3790,7 +3797,7 @@
           [_, y] = (0, n.useState)(!r),
           [S, B] = (0, n.useState)(!1),
           b = (0, s.m)("YouTubeInlineSnippet"),
-          [A, w] = (0, n.useState)({
+          [w, A] = (0, n.useState)({
             title: (0, c.we)("#Loading"),
             description: "",
             videoid: t,
@@ -3800,7 +3807,7 @@
           _ &&
             i.R.LoadYouTubeDynamicData([t], b)
               .then((e) => {
-                !b.token.reason && e.length > 0 && (w(e[0]), B(!0));
+                !b.token.reason && e.length > 0 && (A(e[0]), B(!0));
               })
               .catch((e) =>
                 console.error(
@@ -3809,9 +3816,9 @@
               );
         }, [_, b, t]);
         if (((0, d.VC)(r && !0), _)) {
-          const e = A.title,
-            r = A.views,
-            i = A.description;
+          const e = w.title,
+            r = w.views,
+            i = w.description;
           return n.createElement(
             "div",
             { className: g().DynamicLinkBox, onClick: () => y(!1) },
@@ -4132,7 +4139,7 @@
           )
         );
       }
-      function A(e) {
+      function w(e) {
         const { title: t, onFilterChange: r, filter: n, onSubmit: i, ...a } = e;
         return s.createElement(
           s.Fragment,
@@ -4145,7 +4152,7 @@
           s.createElement(C, { value: n, onChange: r, onSubmit: i }),
         );
       }
-      function w(e) {
+      function A(e) {
         const { onFilterChange: t, filter: r, sections: n, title: i } = e;
         return s.createElement(
           s.Fragment,
@@ -4550,7 +4557,7 @@
                         ),
                   ),
               }),
-            s.createElement(w, {
+            s.createElement(A, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: i,
@@ -4567,7 +4574,7 @@
             { filter: n } = this.state,
             i = !n && r ? e.GetFlairListByGroupID(r) : e.emoticon_list,
             a = o.pN.FilterEmoticons(i, n).slice(0, 1e3);
-          return s.createElement(A, {
+          return s.createElement(w, {
             title: (0, u.we)("#AddonPicker_Emoticons"),
             items: a,
             onItemSelect: t,
@@ -4622,7 +4629,7 @@
           const { store: e, onItemSelect: t } = this.props,
             { filter: r } = this.state,
             n = o.pN.FilterStickers(e.GetStickerList(), r);
-          return s.createElement(A, {
+          return s.createElement(w, {
             title: (0, u.we)("#EmoticonPicker_StickerHeading"),
             items: n,
             onItemSelect: t,
@@ -4671,7 +4678,7 @@
           const { store: e, effectSettings: t, onItemSelect: r } = this.props,
             { filter: n } = this.state,
             i = e.GetEffectList().filter(({ name: e }) => e.indexOf(n) > -1);
-          return s.createElement(A, {
+          return s.createElement(w, {
             title: (0, u.we)("#EmoticonPicker_EffectHeading"),
             items: i,
             onItemSelect: r,
@@ -4741,7 +4748,7 @@
                         ),
                   ),
               }),
-            s.createElement(w, {
+            s.createElement(A, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: [
@@ -4774,7 +4781,7 @@
         render() {
           const { store: e, onItemSelect: t, flairGroupID: r } = this.props,
             { filter: n } = this.state;
-          return s.createElement(w, {
+          return s.createElement(A, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
             sections: [
@@ -5158,8 +5165,8 @@
         S = r(738),
         B = r(12155),
         b = r(22797),
-        A = r(32754),
-        w = r(68797),
+        w = r(32754),
+        A = r(68797),
         v = r(52038),
         C = r(61859),
         M = r(73745),
@@ -5189,7 +5196,7 @@
               .catch(
                 (e) => (
                   console.error(
-                    "EventReminderWidget load fail: " + (0, w.H)(e).strErrorMsg,
+                    "EventReminderWidget load fail: " + (0, A.H)(e).strErrorMsg,
                   ),
                   2
                 ),
@@ -5388,7 +5395,7 @@
                           : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
                       ),
                     },
-                    (0, w.H)(e).strErrorMsg,
+                    (0, A.H)(e).strErrorMsg,
                   ),
                   window,
                 );
@@ -5485,7 +5492,7 @@
               "div",
               { className: (0, v.A)(P.ReminderOption, !U && P.Unverified) },
               s.createElement(
-                A.he,
+                w.he,
                 {
                   className: P.CheckboxWrapper,
                   bTopmost: !0,
@@ -5527,7 +5534,7 @@
               "div",
               { className: (0, v.A)(P.ReminderOption, !O && P.Unverified) },
               s.createElement(
-                A.he,
+                w.he,
                 {
                   className: P.CheckboxWrapper,
                   bTopmost: !0,

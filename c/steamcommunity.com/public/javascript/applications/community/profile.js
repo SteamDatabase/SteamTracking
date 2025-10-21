@@ -1092,6 +1092,19 @@
             ).data.success || 2;
           return 1 == _ && _.CommitAvatarHash(), _;
         }
+        UpdateAvatarsForGame(_, _) {
+          const _ = ["rgRecentGames", "rgOwnedGames", "rgOtherGames"];
+          let _ = new Set();
+          for (const _ of _) {
+            const _ = this.m_AvatarData[_];
+            if (_ && Array.isArray(_))
+              for (const _ of _) _.appid === _ && ((_.avatars = _), _.add(_));
+          }
+          _.forEach((_) => {
+            const _ = this.m_AvatarData[_];
+            _ && Array.isArray(_) && (this.m_AvatarData[_] = [..._]);
+          });
+        }
       }
       function _(_) {
         switch (_) {
@@ -3193,12 +3206,14 @@
                 onSelected: _,
               }),
               _.createElement(_, {
+                OGGAvatars: _,
                 rgAvatars: _,
                 onSelected: _,
                 title: (0, _._)("#Profile_Edit_YourGameAvatars"),
               }),
               _.length < 20 &&
                 _.createElement(_, {
+                  OGGAvatars: _,
                   rgAvatars: _.GetOtherGameAvatars(),
                   onSelected: _,
                   title: (0, _._)("#Profile_Edit_MoreGameAvatars"),
@@ -3265,100 +3280,107 @@
                 ),
               )
             : null,
-        ),
-        _ = ({ rgAvatars: _, onSelected: _, title: __webpack_require__ }) =>
-          _.length
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.CollectionGroup, _.Primary),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Title,
-                  },
-                  __webpack_require__,
-                ),
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: _.appid,
-                    game: _,
-                    onSelected: _,
-                  }),
-                ),
-              )
-            : null,
-        _ = function (_) {
-          const { game: _, onSelected: __webpack_require__ } = _,
-            [_, _] = _.useState(!1),
-            { isLoading: _, data: _ } =
-              ((_ = _.appid),
-              (_ = _),
-              (0, _._)({
-                queryKey: ["OGGAvatars", _],
-                queryFn: async () => {
-                  const _ = await fetch(
-                    `${_._.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${_}`,
-                  );
-                  return await _.json();
-                },
-                enabled: _,
-              }));
-          var _, _;
-          let _;
-          _ =
-            _ && _
-              ? _
-              : _.avatar_count == _.avatars.length
-                ? _.avatars
-                : _.avatars.slice(0, 5);
-          const _ = _.avatar_count - _.length;
-          return _.createElement(
-            "div",
-            {
-              className: _.CollectionGroup,
-            },
-            _.createElement(
+        );
+      function _(_) {
+        const {
+          rgAvatars: _,
+          OGGAvatars: __webpack_require__,
+          onSelected: _,
+          title: _,
+        } = _;
+        return _.length
+          ? _.createElement(
               "div",
               {
-                className: _.Title,
+                className: (0, _._)(_.CollectionGroup, _.Primary),
               },
-              _.name,
-            ),
-            _.createElement(
-              _._,
-              {
-                className: _.CollectionGroupAvatars,
-                "flow-children": "grid",
-              },
+              _.createElement(
+                "div",
+                {
+                  className: _.Title,
+                },
+                _,
+              ),
               _.map((_) =>
                 _.createElement(_, {
-                  key: _.avatar_hash,
-                  hash: _.avatar_hash,
-                  onSelected: __webpack_require__,
+                  OGGAvatars: __webpack_require__,
+                  key: _.appid,
+                  game: _,
+                  onSelected: _,
                 }),
               ),
-              (!_ || _) &&
-                _ > 0 &&
-                _.createElement(
-                  _._,
-                  {
-                    type: "button",
-                    className: (0, _._)(
-                      _.AvatarPreview,
-                      _.ExpandAvatarsButton,
-                      _.Static,
-                    ),
-                    disabled: _,
-                    onClick: _ ? void 0 : () => _(!0),
-                  },
-                  "+",
-                  _.toLocaleString(),
-                ),
+            )
+          : null;
+      }
+      function _(_) {
+        const { game: _, onSelected: __webpack_require__, OGGAvatars: _ } = _,
+          [_, _] = _.useState(!1),
+          { isLoading: _, data: _ } = (function (_, _, _) {
+            return (0, _._)({
+              queryKey: ["OGGAvatars", _],
+              queryFn: async () => {
+                const _ = await fetch(
+                    `${_._.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${_}`,
+                  ),
+                  _ = await __webpack_require__.json();
+                return _.UpdateAvatarsForGame(_, _), _;
+              },
+              enabled: _,
+            });
+          })(_, _.appid, _);
+        let _;
+        _ =
+          _ && _
+            ? _
+            : _.avatar_count == _.avatars.length
+              ? _.avatars
+              : _.avatars.slice(0, 5);
+        const _ = _.avatar_count - _.length;
+        return _.createElement(
+          "div",
+          {
+            className: _.CollectionGroup,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Title,
+            },
+            _.name,
+          ),
+          _.createElement(
+            _._,
+            {
+              className: _.CollectionGroupAvatars,
+              "flow-children": "grid",
+            },
+            _.map((_) =>
+              _.createElement(_, {
+                key: _.avatar_hash,
+                hash: _.avatar_hash,
+                onSelected: __webpack_require__,
+              }),
             ),
-          );
-        };
+            (!_ || _) &&
+              _ > 0 &&
+              _.createElement(
+                _._,
+                {
+                  type: "button",
+                  className: (0, _._)(
+                    _.AvatarPreview,
+                    _.ExpandAvatarsButton,
+                    _.Static,
+                  ),
+                  disabled: _,
+                  onClick: _ ? void 0 : () => _(!0),
+                },
+                "+",
+                _.toLocaleString(),
+              ),
+          ),
+        );
+      }
       class _ extends _.Component {
         constructor() {
           super(...arguments),

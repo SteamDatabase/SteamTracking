@@ -11838,7 +11838,7 @@
         ae = (e) => {
           const { nCreatorAccountID: t } = e,
             [a, n] = (0, c.TB)(t),
-            r = (0, u.FV)(t);
+            { creatorHome: r } = (0, u.FV)(t);
           return i.createElement(
             "div",
             { className: H().GameHoverCreatorFollowButtonCtn },

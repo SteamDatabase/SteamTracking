@@ -107,6 +107,8 @@
       p.Message;
       p.Message;
       p.Message;
+      p.Message;
+      p.Message;
       class b extends p.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -5044,7 +5046,11 @@
           const c = (e, i) => {
             if (e && e.node.tag === i.text && a.get(e.node.tag)) {
               const i = a.get(e.node.tag),
-                n = { tagname: e.node.tag, args: e.node.args },
+                n = {
+                  tagname: e.node.tag,
+                  args: e.node.args,
+                  rawargs: e.node.rawargs,
+                },
                 s = t(i.Constructor, n, ...r.GetElements());
               (r = e.accumulator),
                 Array.isArray(s)
@@ -5132,63 +5138,66 @@
           let t = n.indexOf("=");
           const r = n.indexOf(" ");
           let a, s;
-          if ((-1 != r && (-1 == t || r < t) && (t = r), t > 0)) {
-            a = n.substr(0, t).toLocaleLowerCase();
-            s = (function (e) {
-              if (!e || e.length < 1) return {};
-              const t = {};
-              let r = "",
-                i = "",
-                n = 0,
-                a = 0;
-              "=" == e[0] && (n = 2);
-              let s = !1;
-              for (a++; a < e.length; a++) {
-                const o = e[a];
-                let l = !0,
-                  c = !1;
-                switch (n) {
-                  case 0:
-                    if ("=" == o) return {};
-                    if (" " == o) continue;
-                    n = 1;
-                    break;
-                  case 1:
-                    ("=" != o && " " != o) ||
-                      s ||
-                      (" " == o ? ((n = 0), (c = !0)) : (n = 2), (l = !1));
-                    break;
-                  case 2:
-                    " " == o
-                      ? ((n = 0), (l = !1), (c = !0))
-                      : '"' == o
-                        ? ((n = 4), (l = !1))
-                        : (n = 3);
-                    break;
-                  case 3:
-                  case 4:
-                    ((" " == o && 4 != n && !s) ||
-                      ('"' == o && 4 == n && !s)) &&
-                      ((n = 0), (l = !1), (c = !0));
+          -1 != r && (-1 == t || r < t) && (t = r);
+          let o = "";
+          t > 0
+            ? ((a = n.substr(0, t).toLocaleLowerCase()),
+              (o = n.substr(t)),
+              (s = (function (e) {
+                if (!e || e.length < 1) return {};
+                const t = {};
+                let r = "",
+                  i = "",
+                  n = 0,
+                  a = 0;
+                "=" == e[0] && (n = 2);
+                let s = !1;
+                for (a++; a < e.length; a++) {
+                  const o = e[a];
+                  let l = !0,
+                    c = !1;
+                  switch (n) {
+                    case 0:
+                      if ("=" == o) return {};
+                      if (" " == o) continue;
+                      n = 1;
+                      break;
+                    case 1:
+                      ("=" != o && " " != o) ||
+                        s ||
+                        (" " == o ? ((n = 0), (c = !0)) : (n = 2), (l = !1));
+                      break;
+                    case 2:
+                      " " == o
+                        ? ((n = 0), (l = !1), (c = !0))
+                        : '"' == o
+                          ? ((n = 4), (l = !1))
+                          : (n = 3);
+                      break;
+                    case 3:
+                    case 4:
+                      ((" " == o && 4 != n && !s) ||
+                        ('"' == o && 4 == n && !s)) &&
+                        ((n = 0), (l = !1), (c = !0));
+                  }
+                  if (l)
+                    if ("\\" != o || s)
+                      if (((s = !1), 1 == n)) r += o;
+                      else {
+                        if (3 != n && 4 != n)
+                          throw new Error(
+                            "Not expecting to accumulate buffer in state " + n,
+                          );
+                        i += o;
+                      }
+                    else s = !0;
+                  c && ((t[r] = i), (r = ""), (i = ""));
                 }
-                if (l)
-                  if ("\\" != o || s)
-                    if (((s = !1), 1 == n)) r += o;
-                    else {
-                      if (3 != n && 4 != n)
-                        throw new Error(
-                          "Not expecting to accumulate buffer in state " + n,
-                        );
-                      i += o;
-                    }
-                  else s = !0;
-                c && ((t[r] = i), (r = ""), (i = ""));
-              }
-              0 != n && (t[r] = i);
-              return t;
-            })(n.substr(t));
-          } else (s = {}), (a = n.toLocaleLowerCase());
-          e.push({ type: i, text: n, tag: a, args: s });
+                0 != n && (t[r] = i);
+                return t;
+              })(o)))
+            : ((s = {}), (a = n.toLocaleLowerCase())),
+            e.push({ type: i, text: n, tag: a, args: s, rawargs: o });
         } else 0 != i && e.push({ type: i, text: n });
         return { type: r, text: "" };
       }

@@ -824,7 +824,7 @@
         T = a(68033),
         F = a(56545),
         D = a(37403);
-      class M {
+      class O {
         constructor(e) {
           (this.m_rgPreviousAvatars = []),
             (0, o.Gn)(this),
@@ -893,8 +893,8 @@
           return 1 == r && e.CommitAvatarHash(), r;
         }
       }
-      (0, i.Cg)([o.sH], M.prototype, "m_rgPreviousAvatars", void 0);
-      class O {
+      (0, i.Cg)([o.sH], O.prototype, "m_rgPreviousAvatars", void 0);
+      class M {
         constructor() {
           (this.m_AvatarData = void 0), (0, o.Gn)(this);
         }
@@ -960,6 +960,19 @@
             ).data.success || 2;
           return 1 == i && e.CommitAvatarHash(), i;
         }
+        UpdateAvatarsForGame(e, t) {
+          const a = ["rgRecentGames", "rgOwnedGames", "rgOtherGames"];
+          let r = new Set();
+          for (const i of a) {
+            const a = this.m_AvatarData[i];
+            if (a && Array.isArray(a))
+              for (const s of a) s.appid === e && ((s.avatars = t), r.add(i));
+          }
+          r.forEach((e) => {
+            const t = this.m_AvatarData[e];
+            t && Array.isArray(t) && (this.m_AvatarData[e] = [...t]);
+          });
+        }
       }
       function H(e) {
         switch (e) {
@@ -976,7 +989,7 @@
       function x(e, t) {
         return e < t ? e : t;
       }
-      (0, i.Cg)([o.sH.shallow], O.prototype, "m_AvatarData", void 0);
+      (0, i.Cg)([o.sH.shallow], M.prototype, "m_AvatarData", void 0);
       class U {
         constructor(e, t) {
           (this.m_PrivacySettings = void 0),
@@ -2123,7 +2136,7 @@
       }
       class le {
         constructor(e, t, a) {
-          (this.m_OGGAvatars = new O()),
+          (this.m_OGGAvatars = new M()),
             (this.m_EmoticonStore = new T.T()),
             (this.m_Profile = new me(e)),
             (this.m_WebAPI = a),
@@ -2149,7 +2162,7 @@
               e.Privacy.PrivacySettings,
               e.Privacy.eCommentPermission,
             )),
-            (this.m_AvatarHistory = new M(this.m_WebAPI)),
+            (this.m_AvatarHistory = new O(this.m_WebAPI)),
             this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
               this.m_Profile.MiniProfileData.Reload(),
                 this.m_AvatarHistory.RefreshAvatarHistory();
@@ -2807,7 +2820,7 @@
                 null,
                 (0, p.we)("#Profile_Edit_Avatar_YourAvatars"),
               ),
-              d.createElement(Oe, {
+              d.createElement(Me, {
                 rgAnimatedAvatars: this.m_rgAvatars,
                 OGGAvatars: a,
                 AvatarHistory: r,
@@ -2853,7 +2866,7 @@
                         ? d.createElement(
                             d.Fragment,
                             { key: e.avatar_hash },
-                            d.createElement(Me, {
+                            d.createElement(Oe, {
                               hash: e.avatar_hash,
                               onSelected: this.SelectPreviousAvatar,
                               large: !0,
@@ -2865,7 +2878,7 @@
                         : d.createElement(
                             d.Fragment,
                             { key: e.avatar_hash },
-                            d.createElement(Me, {
+                            d.createElement(Oe, {
                               hash: e.avatar_hash,
                               onSelected: this.SelectOGGAvatar,
                               large: !0,
@@ -2909,7 +2922,7 @@
           className: (0, u.A)(Pe.AvatarPreview, Pe.Animated, r && Pe.Large),
         });
       }
-      const Me = ({ hash: e, onSelected: t, large: a }) =>
+      const Oe = ({ hash: e, onSelected: t, large: a }) =>
           d.createElement(
             Ee.Z,
             {
@@ -2922,7 +2935,7 @@
               loading: "lazy",
             }),
           ),
-        Oe = (0, c.PA)(
+        Me = (0, c.PA)(
           ({
             rgAnimatedAvatars: e,
             OGGAvatars: t,
@@ -2939,12 +2952,14 @@
               d.createElement(He, { rgAnimatedAvatars: e, onSelected: r }),
               d.createElement(xe, { rgAvatars: n, onSelected: s }),
               d.createElement(Ue, {
+                OGGAvatars: t,
                 rgAvatars: o,
                 onSelected: i,
                 title: (0, p.we)("#Profile_Edit_YourGameAvatars"),
               }),
               o.length < 20 &&
                 d.createElement(Ue, {
+                  OGGAvatars: t,
                   rgAvatars: t.GetOtherGameAvatars(),
                   onSelected: i,
                   title: (0, p.we)("#Profile_Edit_MoreGameAvatars"),
@@ -2992,7 +3007,7 @@
                   "div",
                   { className: Pe.CollectionGroupAvatars },
                   e.map((e) =>
-                    d.createElement(Me, {
+                    d.createElement(Oe, {
                       key: e.avatar_hash,
                       hash: e.avatar_hash,
                       onSelected: t,
@@ -3001,77 +3016,83 @@
                 ),
               )
             : null,
-        ),
-        Ue = ({ rgAvatars: e, onSelected: t, title: a }) =>
-          e.length
-            ? d.createElement(
-                "div",
-                { className: (0, u.A)(Pe.CollectionGroup, Pe.Primary) },
-                d.createElement("div", { className: Pe.Title }, a),
-                e.map((e) =>
-                  d.createElement(qe, { key: e.appid, game: e, onSelected: t }),
-                ),
-              )
-            : null,
-        qe = function (e) {
-          const { game: t, onSelected: a } = e,
-            [r, i] = d.useState(!1),
-            { isLoading: s, data: n } =
-              ((o = t.appid),
-              (l = r),
-              (0, fe.I)({
-                queryKey: ["OGGAvatars", o],
-                queryFn: async () => {
-                  const e = await fetch(
-                    `${ge.TS.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${o}`,
-                  );
-                  return await e.json();
-                },
-                enabled: l,
-              }));
-          var o, l;
-          let m;
-          m =
-            r && n
-              ? n
-              : t.avatar_count == t.avatars.length
-                ? t.avatars
-                : t.avatars.slice(0, 5);
-          const c = t.avatar_count - m.length;
-          return d.createElement(
-            "div",
-            { className: Pe.CollectionGroup },
-            d.createElement("div", { className: Pe.Title }, t.name),
-            d.createElement(
-              Ee.Z,
-              { className: Pe.CollectionGroupAvatars, "flow-children": "grid" },
-              m.map((e) =>
-                d.createElement(Me, {
-                  key: e.avatar_hash,
-                  hash: e.avatar_hash,
-                  onSelected: a,
+        );
+      function Ue(e) {
+        const { rgAvatars: t, OGGAvatars: a, onSelected: r, title: i } = e;
+        return t.length
+          ? d.createElement(
+              "div",
+              { className: (0, u.A)(Pe.CollectionGroup, Pe.Primary) },
+              d.createElement("div", { className: Pe.Title }, i),
+              t.map((e) =>
+                d.createElement(qe, {
+                  OGGAvatars: a,
+                  key: e.appid,
+                  game: e,
+                  onSelected: r,
                 }),
               ),
-              (!r || s) &&
-                c > 0 &&
-                d.createElement(
-                  ve.$n,
-                  {
-                    type: "button",
-                    className: (0, u.A)(
-                      Pe.AvatarPreview,
-                      Pe.ExpandAvatarsButton,
-                      Pe.Static,
-                    ),
-                    disabled: s,
-                    onClick: s ? void 0 : () => i(!0),
-                  },
-                  "+",
-                  c.toLocaleString(),
-                ),
+            )
+          : null;
+      }
+      function qe(e) {
+        const { game: t, onSelected: a, OGGAvatars: r } = e,
+          [i, s] = d.useState(!1),
+          { isLoading: n, data: o } = (function (e, t, a) {
+            return (0, fe.I)({
+              queryKey: ["OGGAvatars", t],
+              queryFn: async () => {
+                const a = await fetch(
+                    `${ge.TS.COMMUNITY_BASE_URL}actions/GameAvatarsForGame/${t}`,
+                  ),
+                  r = await a.json();
+                return e.UpdateAvatarsForGame(t, r), r;
+              },
+              enabled: a,
+            });
+          })(r, t.appid, i);
+        let l;
+        l =
+          i && o
+            ? o
+            : t.avatar_count == t.avatars.length
+              ? t.avatars
+              : t.avatars.slice(0, 5);
+        const m = t.avatar_count - l.length;
+        return d.createElement(
+          "div",
+          { className: Pe.CollectionGroup },
+          d.createElement("div", { className: Pe.Title }, t.name),
+          d.createElement(
+            Ee.Z,
+            { className: Pe.CollectionGroupAvatars, "flow-children": "grid" },
+            l.map((e) =>
+              d.createElement(Oe, {
+                key: e.avatar_hash,
+                hash: e.avatar_hash,
+                onSelected: a,
+              }),
             ),
-          );
-        };
+            (!i || n) &&
+              m > 0 &&
+              d.createElement(
+                ve.$n,
+                {
+                  type: "button",
+                  className: (0, u.A)(
+                    Pe.AvatarPreview,
+                    Pe.ExpandAvatarsButton,
+                    Pe.Static,
+                  ),
+                  disabled: n,
+                  onClick: n ? void 0 : () => s(!0),
+                },
+                "+",
+                m.toLocaleString(),
+              ),
+          ),
+        );
+      }
       class We extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -4449,7 +4470,7 @@
               (0, p.we)("#Profile_Edit_Group_Instructions"),
             ),
             d.createElement(be, { strHTMLError: a }),
-            i && d.createElement(Ot, { group: i }),
+            i && d.createElement(Mt, { group: i }),
             d.createElement(Be, {
               getSearchFields: Ht,
               getItems: async () => (
@@ -4471,8 +4492,8 @@
       (0, i.Cg)([_e.oI], Dt.prototype, "CommitFavoriteGroup", null),
         (0, i.Cg)([_e.oI], Dt.prototype, "RevertFavoriteGroup", null),
         (Dt = (0, i.Cg)([c.PA], Dt));
-      const Mt = Dt,
-        Ot = ({ group: e, children: t }) =>
+      const Ot = Dt,
+        Mt = ({ group: e, children: t }) =>
           d.createElement(
             "div",
             { className: (0, u.A)(Ft.Group, Ft.FavoriteGroup) },
@@ -5872,7 +5893,7 @@
         render() {
           const { ProfileItems: e } = this.props;
           return e.BHasAnyProfileModifiers()
-            ? d.createElement(Ma, {
+            ? d.createElement(Oa, {
                 active: this.state.bDialogActive,
                 ProfileItems: e,
                 onDismiss: this.HideDialog,
@@ -5917,7 +5938,7 @@
             ),
           );
         };
-      let Ma = class extends d.Component {
+      let Oa = class extends d.Component {
         OnDismiss() {
           this.props.ProfileItems.RevertProfileModifierChanges(),
             this.props.onDismiss();
@@ -5945,7 +5966,7 @@
                 e.SetEquippedProfileModifier(t),
                 e.CommitProfileModifierChanges()
               ),
-              ItemComponent: Oa,
+              ItemComponent: Ma,
               RenderDefaultComponent: ({ onSelected: e, active: t }) =>
                 d.createElement(Ha, { onSelected: e, active: t }),
               ActiveItem: e.GetEquippedProfileModifier(),
@@ -5956,9 +5977,9 @@
           );
         }
       };
-      (0, i.Cg)([_e.oI], Ma.prototype, "OnDismiss", null),
-        (Ma = (0, i.Cg)([c.PA], Ma));
-      const Oa = ({ Item: e, onSelected: t, children: a, active: r }) =>
+      (0, i.Cg)([_e.oI], Oa.prototype, "OnDismiss", null),
+        (Oa = (0, i.Cg)([c.PA], Oa));
+      const Ma = ({ Item: e, onSelected: t, children: a, active: r }) =>
           d.createElement(
             Ee.Z,
             {
@@ -6371,7 +6392,7 @@
                 d.createElement(
                   ce.qh,
                   { path: `${s}${h.FavoriteGroup()}` },
-                  d.createElement(Mt, { Profile: o }),
+                  d.createElement(Ot, { Profile: o }),
                 ),
               d.createElement(
                 ce.qh,

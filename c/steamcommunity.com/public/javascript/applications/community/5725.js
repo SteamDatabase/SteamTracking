@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Закрити без вжиття заходів",
 	"moderation_resolutionstatus_pending": "У черзі на модерацію",
 	"moderation_resolutionstatus_acquitted": "Розглянуто: не потрібно нічого робити",
+	"moderation_resolutionstatus_purged": "Вміст одразу видалено",
 	"moderation_resolutionstatus_removed": "Вміст вилучено",
 	"moderation_resolutionstatus_relabelled": "Маркування вмісту змінено",
 	"moderation_resolutionstatus_suspicious": "Акаунт заблоковано через підозрілий вміст",

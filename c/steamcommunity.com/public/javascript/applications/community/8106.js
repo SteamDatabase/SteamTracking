@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Resolver sem nenhuma providência",
 	"moderation_resolutionstatus_pending": "Pendente de análise",
 	"moderation_resolutionstatus_acquitted": "Revisado: nenhuma ação necessária",
+	"moderation_resolutionstatus_purged": "Conteúdo removido imediatamente",
 	"moderation_resolutionstatus_removed": "Conteúdo removido",
 	"moderation_resolutionstatus_relabelled": "Rótulo do conteúdo alterado",
 	"moderation_resolutionstatus_suspicious": "Conta trancada devido a conteúdos suspeitos",

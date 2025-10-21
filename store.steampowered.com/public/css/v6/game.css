@@ -2536,10 +2536,6 @@ a.friend_block_holder:hover {
 
 @media screen and ( max-width: 479px )
 {
-	html.responsive .bundle img {
-		max-width: 30%;
-	}
-
 	html.responsive .bundle .tab_item_name {
 		font-size: 1em;
 	}
@@ -6620,6 +6616,14 @@ a.open_in_steam_body:hover {
 	padding-top: 40px;
 	padding-bottom: 20px;
 	margin-top: 20px;
+}
+
+
+@media screen and (min-width: 1200px ) and ( max-width: 1320px )
+{
+	body.v6.widestore .related_items_ctn .page_content {
+		width: calc( 100vw - 120px );
+	}
 }
 
 .editions_purchase_options_container {

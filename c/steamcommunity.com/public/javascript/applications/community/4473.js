@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Oplossen zonder actie",
 	"moderation_resolutionstatus_pending": "In afwachting van beoordeling",
 	"moderation_resolutionstatus_acquitted": "Beoordeeld: geen actie vereist",
+	"moderation_resolutionstatus_purged": "Inhoud direct verwijderd",
 	"moderation_resolutionstatus_removed": "Inhoud verwijderd",
 	"moderation_resolutionstatus_relabelled": "Inhoudslabels gewijzigd",
 	"moderation_resolutionstatus_suspicious": "Account vergrendeld vanwege verdachte inhoud",

@@ -1184,6 +1184,11 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
     display: none;
   }
 }
+@container widget-container (width > 900px) {
+  .PZY_7wH_NY7OgzH9MBiB8 ._3AsE5JhqLAiICKUYvZLpap {
+    -webkit-line-clamp: 7;
+  }
+}
 ._3DkfNrtTOLjNYd3yZliMzy {
   padding: 0px;
   flex-basis: 35%;

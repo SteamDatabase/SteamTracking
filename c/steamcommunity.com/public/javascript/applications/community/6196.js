@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Marcar como resuelto",
 	"moderation_resolutionstatus_pending": "Esperando evaluación",
 	"moderation_resolutionstatus_acquitted": "Revisado: no se requieren medidas",
+	"moderation_resolutionstatus_purged": "Contenido eliminado inmediatamente",
 	"moderation_resolutionstatus_removed": "Contenido eliminado",
 	"moderation_resolutionstatus_relabelled": "Contenido reclasificado",
 	"moderation_resolutionstatus_suspicious": "Cuenta bloqueada debido a contenido sospechoso",

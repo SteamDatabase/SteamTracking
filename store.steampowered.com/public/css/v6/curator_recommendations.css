@@ -297,6 +297,10 @@ background: -webkit-linear-gradient( top, rgba(63, 66, 74, 1) 10px, rgba(46, 49,
 	min-height: 400px;
 }
 
+.creatorhome .light_container.bezel.no_content {
+	min-height: unset;
+}
+
 .creatorhome .auto_specials {
 	grid-area: specials;
 }

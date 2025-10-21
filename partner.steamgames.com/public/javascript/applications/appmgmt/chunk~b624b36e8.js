@@ -98,7 +98,13 @@
     },
     48333: (e, t, i) => {
       "use strict";
-      i.d(t, { Zn: () => z, N_: () => q, lU: () => W, Br: () => O });
+      i.d(t, {
+        Zn: () => z,
+        N_: () => q,
+        lU: () => W,
+        n_: () => X,
+        Br: () => O,
+      });
       var n,
         s = i(34629),
         r = i(41735),
@@ -1513,7 +1519,7 @@
         m_schFirstFrameThrottler = new l.LU();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new l.LU();
-        m_watchedIntervals = new j();
+        m_watchedIntervals = new J();
         constructor(e) {
           (0, o.Gn)(this),
             (this.m_elVideo = e),
@@ -1564,8 +1570,8 @@
                 "Failed to parse MPD file",
                 this.m_strMPD,
               );
-            let a = X(r),
-              o = Q(a);
+            let a = Q(r),
+              o = j(a);
             if (
               ((n = {
                 strMPD: t,
@@ -2683,6 +2689,9 @@
         }
       }
       function X(e) {
+        return e.id == N;
+      }
+      function Q(e) {
         let t = "",
           i = "",
           n = "",
@@ -2699,7 +2708,7 @@
           t && i ? (n ? `${t}; codecs="${i}, ${n}` : `${t}; codecs="${i}`) : ""
         );
       }
-      function Q(e) {
+      function j(e) {
         let t = !1;
         try {
           t = MediaSource.isTypeSupported(e);
@@ -2753,7 +2762,7 @@
         ),
         (0, s.Cg)([_.o], z.prototype, "ReportPlayerStats", null),
         (0, s.Cg)([o.XI.bound], z.prototype, "CaptureStatsForDisplay", null);
-      class j {
+      class J {
         m_bEnabled = !1;
         m_rgIntervals = [];
         m_nWatchStart = void 0;

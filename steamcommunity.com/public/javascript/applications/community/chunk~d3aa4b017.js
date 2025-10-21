@@ -160,7 +160,7 @@
             return (
               (async () => {
                 const t = x.b.InitFromClanID(a),
-                  s = await O.pF.LoadCreatorHome(t, e);
+                  s = await O.pF.LoadCreatorHome(t, !1, e);
                 e.token.reason || i(s);
               })(),
               () => {

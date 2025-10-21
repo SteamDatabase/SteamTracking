@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Selesaikan tanpa tindakan",
 	"moderation_resolutionstatus_pending": "Menunggu pemeriksaan",
 	"moderation_resolutionstatus_acquitted": "Ditinjau: tidak ada tindakan yang diperlukan",
+	"moderation_resolutionstatus_purged": "Konten segera dihapus",
 	"moderation_resolutionstatus_removed": "Konten dihapus",
 	"moderation_resolutionstatus_relabelled": "Konten dilabel ulang",
 	"moderation_resolutionstatus_suspicious": "Akun dikunci karena konten yang mencurigakan",

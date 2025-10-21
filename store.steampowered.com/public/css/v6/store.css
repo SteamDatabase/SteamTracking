@@ -4744,7 +4744,6 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 	display: block;
 	background-position: center top;
 	background-repeat: no-repeat;
-	min-width: 972px;
 	position: relative;
 	/* make sure the background sits behind the game_background_lighten */
 	/* z-index: -2; */
@@ -6015,8 +6014,7 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 .carousel_container.paging_capsules .carousel_items .curator_page .curations > div {
 	flex-grow: 1;
 	flex-shrink: 1;
-	flex-basis: 220px;
-	max-width: 225px;
+	flex-basis: 25%;
 }
 .carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule {
 	box-shadow: 0 0 3px rgba(0,0,0,0.6);
@@ -6587,7 +6585,7 @@ body.v6.widestore #store_header {
 	}
 }
 
-@media screen and (max-width: 1200px) and (min-width: 500px) {
+@media screen and (max-width: 1245px) and (min-width: 500px) {
 	body.v6.widestore .page_content {
 		width: 98%;
 	}

@@ -192,7 +192,7 @@
             return (
               (async () => {
                 const _ = _._.InitFromClanID(_),
-                  _ = await _._.LoadCreatorHome(_, _);
+                  _ = await _._.LoadCreatorHome(_, !1, _);
                 _.token.reason || _(_);
               })(),
               () => {

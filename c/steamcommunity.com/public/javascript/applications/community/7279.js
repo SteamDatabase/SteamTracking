@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Resolve with no action",
 	"moderation_resolutionstatus_pending": "Awaiting moderation",
 	"moderation_resolutionstatus_acquitted": "Reviewed: no action needed",
+	"moderation_resolutionstatus_purged": "Content purged immediately",
 	"moderation_resolutionstatus_removed": "Content removed",
 	"moderation_resolutionstatus_relabelled": "Content relabelled",
 	"moderation_resolutionstatus_suspicious": "Account locked for suspicious content",

@@ -1126,7 +1126,7 @@ function receiveFieldSave()
 				}
 				else
 				{
-					alert( "There was an error saving your changes.\\n\\nError:\\n&quot;+results+&quot;\\n\\nPlease address the error and try again." );
+					alert( "There was an error saving your changes.\n\nError:\n"+results+"\n\nPlease address the error and try again." );
 					addClass( dataField.id, 'changed' );
 				}
 				updateInProgress = false;

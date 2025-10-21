@@ -311,6 +311,7 @@
                 {
                   strTag: "carousel",
                   args: {},
+                  rawargs: "",
                   event: _.GetEventModel(),
                 },
                 _.map((_, _) =>
@@ -719,6 +720,7 @@
           ? _.createElement(_._, {
               strTag: "img",
               args: _,
+              rawargs: "",
               event: __webpack_require__,
               showErrorInfo: !0,
             })
@@ -727,6 +729,7 @@
                 key: `${_.mp4}_${_.webm}`,
                 strTag: "video",
                 args: _,
+                rawargs: "",
                 event: __webpack_require__,
                 showErrorInfo: !0,
               })
@@ -1236,6 +1239,7 @@
               args: {
                 "": `${_};${__webpack_require__}`,
               },
+              rawargs: `${_};${__webpack_require__}`,
               showErrorInfo: !0,
             }),
           ),

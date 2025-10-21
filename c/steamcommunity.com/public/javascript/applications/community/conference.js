@@ -928,6 +928,7 @@
                 {
                   className: _().MainContentContainer,
                 },
+                _,
                 _.createElement(
                   "div",
                   {
@@ -1008,7 +1009,6 @@
                   ),
                   !_ && _,
                 ),
-                _,
               ),
             ),
           ),

@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Megoldás intézkedés nélkül",
 	"moderation_resolutionstatus_pending": "Moderálásra vár",
 	"moderation_resolutionstatus_acquitted": "Felülvizsgálva: nincs szükség intézkedésre",
+	"moderation_resolutionstatus_purged": "Tartalom azonnal törölve",
 	"moderation_resolutionstatus_removed": "Tartalom eltávolítva",
 	"moderation_resolutionstatus_relabelled": "Tartalom átcímkézve",
 	"moderation_resolutionstatus_suspicious": "Fiók gyanús tartalom miatt zárolva",

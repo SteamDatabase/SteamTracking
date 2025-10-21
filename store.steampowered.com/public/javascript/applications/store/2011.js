@@ -162,7 +162,7 @@
             bAddLinkToMemberList: g,
             bMinimalDisplay: D,
           } = e,
-          y = (0, o.FV)(t.clan_account_id),
+          { creatorHome: y } = (0, o.FV)(t.clan_account_id),
           [A] = (0, l.L2)();
         if (A || !y)
           return n.createElement(

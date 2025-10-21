@@ -859,6 +859,7 @@
               a.createElement(
                 "div",
                 { className: de().MainContentContainer },
+                Q,
                 a.createElement(
                   "div",
                   { className: de().TileTextContainer },
@@ -914,7 +915,6 @@
                   ),
                   !Y && z,
                 ),
-                Q,
               ),
             ),
           ),

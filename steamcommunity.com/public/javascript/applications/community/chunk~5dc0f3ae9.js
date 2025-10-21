@@ -17455,29 +17455,32 @@
             le = u
               .GetIncludedAppIDs()
               .filter((e) => Z.Fm.Get().BOwnsApp(e)).length,
-            ce = (0, d.L3)(X),
-            me = (0, n.tB)(u.GetStorePageURL(z)),
-            de = Boolean(!H && oe > 1),
-            ue = u.BHasTags()
+            ce =
+              2 == u.GetStoreItemType() &&
+              Boolean(u.GetBestPurchaseOption().must_purchase_as_set),
+            me = (0, d.L3)(X),
+            de = (0, n.tB)(u.GetStorePageURL(z)),
+            ue = Boolean(!H && oe > 1),
+            pe = u.BHasTags()
               ? u.GetTagIDs()
               : (null == p ? void 0 : p.BHasTags())
                 ? p.GetTagIDs()
                 : [],
-            pe = 1 == u.GetStoreItemType() && 1 == oe,
-            ge = 0 == u.GetStoreItemType() || pe,
-            _e = pe && _ ? _.GetID() : g.id,
-            he = (0, d.It)(me, X, $),
-            Be = (0, V.Ae)(),
-            be =
+            ge = 1 == u.GetStoreItemType() && 1 == oe,
+            _e = 0 == u.GetStoreItemType() || ge,
+            he = ge && _ ? _.GetID() : g.id,
+            Be = (0, d.It)(de, X, $),
+            be = (0, V.Ae)(),
+            ye =
               z && u.HasDemoStandaloneStorePage()
                 ? u.GetDemoStandaloneStorePageAppIDs()[0]
                 : I,
-            ye =
+            we =
               (null === (t = u.GetName()) || void 0 === t ? void 0 : t.length) >
               0
                 ? u.GetName()
                 : _.GetName(),
-            we =
+            fe =
               (null === (r = u.GetFormattedSteamReleaseDate()) || void 0 === r
                 ? void 0
                 : r.length) > 0
@@ -17485,24 +17488,24 @@
                 : null == _
                   ? void 0
                   : _.GetFormattedSteamReleaseDate();
-          let fe = u.GetShortDescription();
-          (2 == u.GetStoreItemType() || (1 == u.GetStoreItemType() && !pe)) &&
-            (fe =
-              le > 0 && le < oe
+          let Se = u.GetShortDescription();
+          (2 == u.GetStoreItemType() || (1 == u.GetStoreItemType() && !ge)) &&
+            (Se =
+              !ce && le > 0 && le < oe
                 ? (0, k.we)("#Sale_Bundle_CompletePartialSet", le, oe)
                 : se
                   ? (0, k.we)("#Sale_BundleSave_WithDiscount", se, oe)
                   : (0, k.we)("#Sale_BundleSave", oe)),
-            (fe =
-              (null == fe ? void 0 : fe.length) > 0
-                ? fe
+            (Se =
+              (null == Se ? void 0 : Se.length) > 0
+                ? Se
                 : null == _
                   ? void 0
                   : _.GetShortDescription());
-          const Se = ne || u.BIsReleased() || u.BIsPrePurchase();
+          const Ce = ne || u.BIsReleased() || u.BIsPrePurchase();
           return a.createElement(
             v.oj,
-            { appid: ge ? u.GetAppID() : void 0 },
+            { appid: _e ? u.GetAppID() : void 0 },
             a.createElement(
               o.Z,
               {
@@ -17510,8 +17513,8 @@
                   [G().StoreSaleWidgetOuterContainer]: !0,
                   [G().AllowTwoLineHeader]: P,
                 }),
-                onMouseEnter: () => !Be && c(!0),
-                onMouseLeave: () => !Be && c(!1),
+                onMouseEnter: () => !be && c(!0),
+                onMouseLeave: () => !be && c(!1),
                 "flow-children": "grid",
                 navEntryPreferPosition: l.iU.PREFERRED_CHILD,
                 autoFocus: K,
@@ -17527,14 +17530,14 @@
                     J ? G().MarketingMessage : "",
                   ),
                   ...(0, C.S)(u, X, ne, z, void 0, Q),
-                  preferredFocus: de,
+                  preferredFocus: ue,
                 },
                 a.createElement(
                   "div",
                   { className: (0, A.A)(G().StoreSaleWidgetHalfLeft) },
                   a.createElement(
                     L.u,
-                    { type: h, id: be, fnHoverState: c },
+                    { type: h, id: ye, fnHoverState: c },
                     a.createElement(
                       "div",
                       { className: G().StoreSaleWidgetImage },
@@ -17550,17 +17553,17 @@
                   {
                     className: (0, A.A)(
                       G().StoreSaleWidgetRight,
-                      de ? G().Bundle : "",
+                      ue ? G().Bundle : "",
                     ),
                   },
-                  Boolean(ge && !Q) &&
+                  Boolean(_e && !Q) &&
                     a.createElement(W.EP, {
-                      appID: _e,
+                      appID: he,
                       classOverride: (0, A.A)(
                         B().WishlistButtonNotTop,
                         "WishlistButton",
                       ),
-                      snr: ce,
+                      snr: me,
                     }),
                   a.createElement(
                     "div",
@@ -17568,7 +17571,7 @@
                     a.createElement(
                       "a",
                       {
-                        href: Q ? void 0 : he,
+                        href: Q ? void 0 : Be,
                         target: D.TS.IN_CLIENT ? void 0 : "_blank",
                         onClick: Q,
                       },
@@ -17580,15 +17583,15 @@
                             "StoreSaleWidgetTitle",
                           ),
                         },
-                        ye,
+                        we,
                       ),
                     ),
                   ),
-                  ue &&
+                  pe &&
                     a.createElement(
                       "div",
                       { className: G().StoreSaleWidgetTags },
-                      ue.map((e) =>
+                      pe.map((e) =>
                         a.createElement(M.p, {
                           key: "tag_" + e,
                           tagid: e,
@@ -17599,11 +17602,11 @@
                   a.createElement(
                     "div",
                     { className: G().WidgetReleaseDateAndPlatformCtn, ref: re },
-                    ge &&
+                    _e &&
                       a.createElement(
                         "div",
                         { className: G().StoreSaleWidgetRelease },
-                        we,
+                        fe,
                       ),
                     !N &&
                       a.createElement(
@@ -17631,12 +17634,13 @@
                       { className: G().ReviewScores },
                       a.createElement(W.Jz, { appInfo: g }),
                     ),
-                  de &&
+                  ue &&
                     a.createElement(Y, {
                       info: g,
-                      bHideInLibraryApps: 2 == u.GetStoreItemType() && le < oe,
+                      bHideInLibraryApps:
+                        !ce && 2 == u.GetStoreItemType() && le < oe,
                     }),
-                  Boolean(ge && fe) &&
+                  Boolean(_e && Se) &&
                     a.createElement(
                       "div",
                       {
@@ -17645,31 +17649,31 @@
                           "StoreSaleWidgetShortDesc",
                         ),
                       },
-                      Boolean(fe.startsWith("#") && -1 == fe.indexOf(" "))
+                      Boolean(Se.startsWith("#") && -1 == Se.indexOf(" "))
                         ? a.createElement(
                             "span",
                             { className: G().LocalizationSpan },
                             (0, k.oW)(
-                              fe,
+                              Se,
                               a.createElement("i", null),
                               a.createElement("i", null),
                               a.createElement("i", null),
                               a.createElement("i", null),
                             ),
                           )
-                        : fe,
+                        : Se,
                     ),
                   Boolean(!Q)
                     ? a.createElement(
                         a.Fragment,
                         null,
-                        Boolean(O && ge)
-                          ? a.createElement(R.E, { appid: _e, bIsMuted: i })
+                        Boolean(O && _e)
+                          ? a.createElement(R.E, { appid: he, bIsMuted: i })
                           : a.createElement(S.wD, {
                               info: g,
                               bShowDemoButton: T,
                               bHidePrice: F,
-                              bHideWishlistButton: Se,
+                              bHideWishlistButton: Ce,
                               bShowDeckCompatibilityDialog: x,
                             }),
                       )

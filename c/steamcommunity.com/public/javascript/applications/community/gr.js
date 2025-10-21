@@ -19644,6 +19644,7 @@
                 {
                   strTitle: _,
                   className: _.SucessErrorDialog,
+                  bProgressDialog: !0,
                   closeModal: () => {},
                 },
                 _.createElement(_._, {

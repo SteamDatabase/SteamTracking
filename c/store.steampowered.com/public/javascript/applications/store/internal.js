@@ -3,6 +3,15 @@
   {
     chunkid: (module) => {
       module.exports = {
+        Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
         "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
         "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
@@ -21,6 +30,14 @@
       module.exports = {
         ListBox: "_1PUg8GjnBeN7rBK-dcyQFl",
         ListBoxOption: "_20oF9tLSfptitLraDOp6X6",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
+        Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
+        SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
+        Item: "_2aNlsjcdOdHOtP8uACA3bM",
       };
     },
     chunkid: (module) => {
@@ -272,6 +289,9 @@
         Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
         ZIndex: "_3MdwIbGpGWeiE-O2owd3VF",
         Display: "_1jz8vOMNXWjuOs8PNx6twM",
+        Elevation: "_51vKfcQCBgoT8lSk1q3iX",
+        Border: "_2lajVjbyrA4lq9xF0X4NQW",
+        Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
       };
     },
     chunkid: (module) => {
@@ -463,12 +483,10 @@
         SectionHeader: "_1pxjbUKB_ugZ6rMdnTXmks",
         GameList: "_1YDn2Y6zO2xAbcwcIvI79b",
         Options: "_2LcfPsUSmeavC5MD7P-3_3",
-        StarSelector: "_1Df1bheVOTaymFvVr5Db23",
+        ResultCountSelector: "_2kL46N7kSTQrKIGU59rigN",
         Title: "_9umPLKYAgKsJMqw7ujTrY",
+        HideOwnedSelector: "xT3lxTdADiEWewVz8DEPg",
         TagSelector: "RMzOW5KaqQvzer-NgkySs",
-        CompactSelector: "_3CT9bs_UFM5kEslp4r8VHa",
-        Label: "_1wab7vr5SyV_lnbMlmFlfi",
-        AccountIDSelector: "_3B8nn-G10WNv0OPeyn5qr3",
         AppEntry: "_3V92WeqSSAvVfpoO35PvX3",
         ShowAllButton: "_3u_Aic2wvh3p-Iz6hf36rP",
         WeekLinear: "_3eYzWPfWrCyM7r3vp9jsYG",
@@ -4552,7 +4570,6 @@
           _,
         );
       }
-      var _ = __webpack_require__("chunkid");
       const _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
       function _(_, _) {
         if ("object" != typeof _) return _;
@@ -4895,21 +4912,25 @@
             className: _.Display,
             cssProperty: "--display",
           },
-        ];
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = _(
           {
-            ..._,
-            className: _()(_.Box, _.className),
+            prop: "elevation",
+            responsive: !0,
+            className: _.Elevation,
+            dataProperty: "elevation",
           },
-          _,
-        );
-        return _.createElement("div", {
-          ..._,
-        });
-      }
-      const _ = _;
+          {
+            prop: "border",
+            responsive: !0,
+            className: _.Border,
+            cssProperty: (_) => ["--border-color", _(_)],
+          },
+          {
+            prop: "outline",
+            responsive: !0,
+            className: _.Outline,
+            cssProperty: (_) => ["--outline-color", _(_)],
+          },
+        ];
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _(
@@ -4976,6 +4997,132 @@
       function _(_) {
         return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
+          _ = __webpack_require__.size ? void 0 : _.IconSizeDefault;
+        return _.createElement("svg", {
+          viewBox: `0 0 ${_} ${_}`,
+          ..._(
+            {
+              className: _,
+              ...__webpack_require__,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`IconSize-${_}`],
+        },
+        {
+          prop: "color",
+          className: _.Color,
+          cssProperty: (_) => ["--icon-color", _(_)],
+        },
+        {
+          prop: "hitSlop",
+          className: _.HitSlop,
+          cssProperty: (_) => [
+            "--hit-slop-custom",
+            "string" == typeof _ ? _ : "",
+          ],
+        },
+        _.find(({ prop: _ }) => "cursor" === _),
+      ];
+      function _(_) {
+        return _.createElement(
+          _,
+          {
+            ..._,
+            viewBoxSize: 16,
+          },
+          _.createElement("path", {
+            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            checked: _,
+            onChange: __webpack_require__,
+            disabled: _,
+            children: _,
+            ref: _,
+            variant: _ = "default",
+            ..._
+          } = _,
+          _ = "indeterminate" === _,
+          _ = _ ? _ : _,
+          _ = () => {
+            __webpack_require__ && __webpack_require__(!!_ || !_);
+          };
+        return _.createElement(
+          _,
+          {
+            ref: _,
+            role: "checkbox",
+            "aria-checked": _ ? "mixed" : _,
+            "data-state": _(_),
+            className: _()(_.Root, _[`Variant-${_}`]),
+            onClick: _,
+            tabIndex: 0,
+            onKeyDown: (_) => {
+              " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
+            },
+            ..._,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Checkbox,
+            },
+            _ &&
+              _.createElement(_, {
+                className: _.Icon,
+              }),
+          ),
+          _,
+        );
+      }
+      function _(_) {
+        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 16 16",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+          },
+          _.createElement("path", {
+            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _(
+          {
+            ..._,
+            className: _()(_.Box, _.className),
+          },
+          _,
+        );
+        return _.createElement("div", {
+          ..._,
+        });
+      }
+      const _ = _;
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -5301,43 +5448,6 @@
             _,
           );
         };
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
-          _ = __webpack_require__.size ? void 0 : _.IconSizeDefault;
-        return _.createElement("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ..._(
-            {
-              className: _,
-              ...__webpack_require__,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`IconSize-${_}`],
-        },
-        {
-          prop: "color",
-          className: _.Color,
-          cssProperty: (_) => ["--icon-color", _(_)],
-        },
-        {
-          prop: "hitSlop",
-          className: _.HitSlop,
-          cssProperty: (_) => [
-            "--hit-slop-custom",
-            "string" == typeof _ ? _ : "",
-          ],
-        },
-        _.find(({ prop: _ }) => "cursor" === _),
-      ];
       function _(_) {
         return _.createElement(
           _,
@@ -5357,6 +5467,7 @@
                 suggestions: _,
                 onTextChange: __webpack_require__,
                 onSuggestionSelected: _,
+                clearable: _,
                 ..._
               } = _,
               _ = (function (_) {
@@ -5387,13 +5498,14 @@
                 suggestions: _,
                 onSuggestionSelected: _,
               }),
-              _ = _.value
-                ? _.createElement(_, {
-                    onClick: () => _.onTextChange(""),
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : void 0;
+              _ =
+                _.value && _
+                  ? _.createElement(_, {
+                      onClick: () => _.onTextChange(""),
+                      cursor: "pointer",
+                      hitSlop: !0,
+                    })
+                  : void 0;
             return _.createElement(
               _.Root,
               {
@@ -5590,6 +5702,153 @@
         const _ = (0, _.useContext)(_);
         return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
       }
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { options: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          _.Root,
+          {
+            ...__webpack_require__,
+          },
+          _.map((_) =>
+            _.createElement(_.Item, {
+              value: _,
+              key: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        return _.createElement(_, {
+          className: _.Indicator,
+          radius: _.radius,
+        });
+      }
+      function _(_, _) {
+        const _ = _.compareDocumentPosition(_);
+        return _ & Node.DOCUMENT_POSITION_FOLLOWING
+          ? -1
+          : _ & Node.DOCUMENT_POSITION_PRECEDING
+            ? 1
+            : 0;
+      }
+      (_.Item = function (_) {
+        const { value: _, children: __webpack_require__ } = _,
+          _ = (0, _.useContext)(_),
+          [_, _] = (0, _.useState)(),
+          { register: _, unregister: _ } = _ || {};
+        if (
+          ((0, _.useEffect)(
+            () => (_ && _ && _ ? (_(_, _), () => _(_, _)) : () => {}),
+            [_, _, _, _],
+          ),
+          !_)
+        )
+          return null;
+        const { value: _, onValueChange: _ } = _,
+          _ = _ === _,
+          _ = _ ? void 0 : () => _(_),
+          _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            onClick: _,
+            "data-selected": _ ? "true" : "false",
+            className: _.Item,
+          },
+          _,
+        );
+      }),
+        (_.Root = function (_) {
+          const {
+              variant: _,
+              radius: __webpack_require__,
+              children: _,
+              value: _,
+              onValueChange: _,
+            } = _,
+            [_, _] = (0, _.useState)({}),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => ({
+                  ..._,
+                  [_]: _,
+                })),
+              [],
+            ),
+            _ = (0, _.useCallback)(
+              (_, _) =>
+                _((_) => {
+                  const _ = {
+                    ..._,
+                  };
+                  return _[_] === _ && delete _[_], _;
+                }),
+              [],
+            );
+          return _.createElement(
+            _,
+            {
+              variant: _,
+              radius: __webpack_require__,
+              className: _.SegmentedControlBox,
+              tabIndex: 0,
+              onKeyDown: (_) => {
+                let _ = 0;
+                switch (_.key) {
+                  case " ":
+                  case "Enter":
+                  case "ArrowRight":
+                    _ = 1;
+                    break;
+                  case "ArrowLeft":
+                    _ = -1;
+                }
+                if (_) {
+                  const _ = _[_],
+                    _ = Array.from(Object.values(_)).sort(_),
+                    _ = __webpack_require__.findIndex((_) => _ === _);
+                  (0, _._)(
+                    "number" == typeof _,
+                    "Could not find current segmented value position",
+                  );
+                  const _ = _ + _,
+                    _ = _[_ < 0 ? _.length + _ : _ % _.length],
+                    _ = Object.keys(_).find((_) => _[_] === _);
+                  "string" != typeof _
+                    ? console.error("Could not find next segmeneted value")
+                    : _(_);
+                }
+              },
+            },
+            _.createElement(
+              _.Provider,
+              {
+                value: (0, _.useMemo)(
+                  () => ({
+                    value: _,
+                    onValueChange: _,
+                    register: _,
+                    unregister: _,
+                  }),
+                  [_, _, _, _],
+                ),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.SegmentedControl,
+                },
+                _,
+                _.createElement(_, {
+                  radius: __webpack_require__,
+                }),
+              ),
+            ),
+          );
+        });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -5600,7 +5859,366 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        selectedTag: 0,
+        bHideOwned: !1,
+        cResultsToShow: 100,
+      };
+      function _(_) {
+        const { count: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.PersonalCalendarHeader,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.PersonalCalendarTitle,
+            },
+            (0, _._)("#PersonalCalendar_Title"),
+          ),
+          "number" == typeof _ &&
+            _.createElement(
+              _._,
+              {
+                className: _.PersonalCalendarDescription,
+              },
+              (0, _._)("#PersonalCalendar_Description", _),
+            ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _._,
+          {
+            className: _.PersonalCalendarLoginPrompt,
+          },
+          (0, _._)("#PersonalCalendar_LoginPrompt"),
+          _.createElement(
+            "button",
+            {
+              onClick: _._,
+              className: _.LoginButton,
+            },
+            (0, _._)("#Login_SignIn"),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+          state: _,
+          onChange: __webpack_require__,
+          tagMap: _,
+          userTags: _,
+          maxResultsToShow: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              className: _.SteamLabsBanner,
+            },
+            (0, _._)(
+              "#PersonalCalendar_SteamLabs",
+              _.createElement("a", {
+                href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
+              }),
+            ),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: _.Options,
+            },
+            _.createElement(_, {
+              userTags: _,
+              tagMap: _,
+              selectedTag: _.selectedTag,
+              onChange: (_) =>
+                __webpack_require__({
+                  ..._,
+                  selectedTag: _,
+                }),
+            }),
+            _.createElement(_, {
+              count: _.cResultsToShow,
+              onChange: (_) =>
+                __webpack_require__({
+                  ..._,
+                  cResultsToShow: _,
+                }),
+              max: _,
+            }),
+            _.createElement(
+              _._,
+              {
+                className: _.HideOwnedSelector,
+              },
+              _.createElement(
+                _,
+                {
+                  checked: _.bHideOwned,
+                  onChange: (_) =>
+                    __webpack_require__({
+                      ..._,
+                      bHideOwned: _,
+                    }),
+                },
+                (0, _._)("#PersonalCalendar_HideOwned"),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            userTags: _,
+            tagMap: __webpack_require__,
+            selectedTag: _,
+            onChange: _,
+          } = _,
+          [_, _] = _.useState(""),
+          { tagStrings: _, tagStringMap: _ } = _.useMemo(() => {
+            const _ = [],
+              _ = new Map();
+            for (const [_, _] of Object.entries(__webpack_require__ ?? {})) {
+              const _ = Number(_);
+              _.push({
+                tagID: _,
+                tagName: _,
+              }),
+                _.set(_.toLocaleLowerCase(), _);
+            }
+            _.sort((_, _) => _?.indexOf(_.tagID) - _?.indexOf(_.tagID));
+            return {
+              tagStrings: _.filter((_) =>
+                _.tagName.toLocaleLowerCase().startsWith(_.toLocaleLowerCase()),
+              )
+                .map((_) => _.tagName)
+                .slice(0, 20),
+              tagStringMap: _,
+            };
+          }, [__webpack_require__, _, _]);
+        return _.createElement(
+          _._,
+          {
+            className: _.TagSelector,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.Title,
+            },
+            (0, _._)("#PersonalCalendar_TagSelector"),
+          ),
+          _.createElement(_, {
+            suggestions: _,
+            onSuggestionSelected: (_) =>
+              ((_) => {
+                _(_?.get(_.toLocaleLowerCase()) ?? 0);
+              })(_),
+            value: _,
+            onTextChange: (_) =>
+              ((_) => {
+                "" === _.trim() && _
+                  ? _(0)
+                  : _.has(_.toLocaleLowerCase()) &&
+                    _(_.get(_.toLocaleLowerCase())),
+                  _(_);
+              })(_),
+            clearable: !0,
+            placeholder: (0, _._)("#PersonalCalendar_TagSelector_Placeholder"),
+          }),
+        );
+      }
+      function _(_) {
+        const { count: _, onChange: __webpack_require__, max: _ } = _,
+          _ = [10, 25, 50, 100, 250, 500];
+        let _ = [];
+        _ &&
+          ((_ = _.filter((_) => _ < _)),
+          _.length != _.length && _.push(_),
+          _.includes(_) ||
+            (_.includes(100)
+              ? __webpack_require__("chunkid")
+              : __webpack_require__(_[_.length - 1])));
+        const _ = _.map((_) => _.toString());
+        return _.createElement(
+          _._,
+          {
+            className: _.ResultCountSelector,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.Title,
+            },
+            (0, _._)("#PersonalCalendar_ResultCountSelector"),
+          ),
+          _.createElement(_, {
+            options: _,
+            value: _.toString(),
+            onValueChange: (_) => __webpack_require__(parseInt(_)),
+            radius: "sm",
+          }),
+        );
+      }
+      function _(_) {
+        const { games: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.PersonalCalendarSection,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.SectionHeader,
+            },
+            (0, _._)("#PersonalCalendar_LastMonthGames"),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_.GameList, _.Month),
+            },
+            _.slice(0, 16).map((_) =>
+              _.createElement(
+                _._,
+                {
+                  key: _.appid,
+                  className: _.AppEntry,
+                },
+                _.createElement(_._, {
+                  capsule: {
+                    _: _.appid,
+                  },
+                  imageType: "header",
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { games: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.PersonalCalendarSection,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.SectionHeader,
+            },
+            (0, _._)("#PersonalCalendar_LastWeekGames"),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_.GameList, _.Week),
+            },
+            _.slice(0, 12).map((_) =>
+              _.createElement(
+                _._,
+                {
+                  key: _.appid,
+                  className: _.AppEntry,
+                },
+                _.createElement(_._, {
+                  capsule: {
+                    _: _.appid,
+                  },
+                  imageType: "header",
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            dayWeekTimestamps: _,
+            appReleasesByDay: __webpack_require__,
+            todayTimestamp: _,
+          } = _,
+          [_, _] = _.useState(9999);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_.PersonalCalendarSection, _.Calendar),
+            },
+            _.createElement(
+              _._,
+              {
+                className: _.SectionHeader,
+              },
+              (0, _._)("#PersonalCalendar_Upcoming"),
+            ),
+            _.createElement(
+              _._,
+              {
+                className: _.Week,
+              },
+              _[0].map((_) =>
+                _.createElement(_, {
+                  key: `WeekHeader_${_}`,
+                  timestamp: _,
+                }),
+              ),
+            ),
+            _.map((_, _) =>
+              _.createElement(_, {
+                key: `Week_${_}`,
+                dayTimestamps: _,
+                appReleasesByDay: __webpack_require__,
+                todayTimestamp: _,
+                maxGames: _,
+              }),
+            ),
+            9999 != _ &&
+              _.createElement(
+                _._,
+                {
+                  className: _.ShowAllButton,
+                  onClick: () => _(9999),
+                },
+                (0, _._)("#PersonalCalendar_ShowAll"),
+              ),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_.PersonalCalendarSection, _.LinearCalendar),
+            },
+            _.createElement(
+              _._,
+              {
+                className: _.SectionHeader,
+              },
+              (0, _._)("#PersonalCalendar_Upcoming"),
+            ),
+            _.map((_, _) =>
+              _.createElement(_, {
+                key: `WeekLinear_${_}`,
+                dayTimestamps: _,
+                appReleasesByDay: __webpack_require__,
+                todayTimestamp: _,
+                maxGames: _,
+              }),
+            ),
+          ),
+        );
+      }
       function _(_) {
         const _ = new Date(1e3 * _.timestamp).toLocaleDateString(
           _._.GetPreferredLocales(),
@@ -5622,7 +6240,7 @@
         const _ = _.dayTimestamps
           ? Math.max(
               ..._.dayTimestamps.map((_) =>
-                _ < _.todayTimestamp
+                _ < _.dayTimestamps[0]
                   ? 0
                   : _.appReleasesByDay[_]
                     ? _.appReleasesByDay[_].length
@@ -5824,74 +6442,87 @@
             );
       }
       const _ = () => {
-        const [_, _] = _.useState(void 0),
-          [__webpack_require__, _] = _.useState([]),
-          { data: _ } = (0, _._)(_._.LANGUAGE),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState([]),
-          [_, _] = _.useState(""),
-          [_, _] = _.useState(9999),
-          [_, _] = _.useState(!1),
-          _ = __webpack_require__?.flat() ?? [],
-          _ = _.useMemo(
-            () =>
-              Object.entries(_ ?? {})
-                .map(([_, _]) => ({
-                  tagID: Number(_),
-                  tagName: _,
-                }))
-                .sort((_, _) => _?.indexOf(_.tagID) - _?.indexOf(_.tagID)),
-            [_, _],
-          );
-        _.useEffect(() => {
-          (async () => {
-            const _ = {
-              tag: _,
-              sessionid: _._.SESSIONID,
-            };
-            try {
-              _(!0);
-              const _ = await _().get(
-                `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
-                {
-                  params: _,
-                  timeout: 1e4,
+        const { data: _ } = (0, _._)(_._.LANGUAGE),
+          [_, __webpack_require__] = _.useState(_),
+          _ = (0, _._)({
+            queryKey: ["personalcalendar", _.selectedTag],
+            queryFn: async () => {
+              const _ = {
+                  tag: _.selectedTag,
+                  sessionid: _._.SESSIONID,
                 },
-              );
-              _(!1),
-                _(_.data.appReleasesByDay),
-                _(_.data.dayWeekTimestamps),
-                _(_.data.resultCount),
-                _(_.data.userTags),
-                _(_.data.result);
-            } catch (_) {
-              console.error("Error fetching data", _);
-            }
-          })();
-        }, [_]),
-          _?.length > 0 && console.log(_);
-        let _ = [],
-          _ = new Map(),
-          _ = [],
-          _ = [];
-        const _ = new Date();
+                _ = await _().get(
+                  `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
+                  {
+                    params: _,
+                    timeout: 1e4,
+                  },
+                ),
+                {
+                  appReleasesByDay: _,
+                  dayWeekTimestamps: _,
+                  maxResultCount: _,
+                  userTags: _,
+                  result: _,
+                } = _.data;
+              return {
+                appReleasesByDay: _,
+                dayWeekTimestamps: _,
+                maxResultCount: _,
+                userTags: _,
+                resultMessage: _,
+              };
+            },
+            placeholderData: (_) => _,
+          }),
+          {
+            maxResultCount: _,
+            dayWeekTimestamps: _,
+            appReleasesByDay: _,
+            userTags: _,
+          } = _.data || {},
+          _ = new Date();
         _.setHours(0, 0, 0, 0);
         const _ = Math.floor(_.getTime() / 1e3),
           _ = new Date();
         _.setDate(_.getDate() - 7);
-        const _ = Math.floor(_.getTime() / 1e3);
-        if (_) {
-          for (const _ of _)
-            _ <= _ &&
-              (_ < _ ? _.push(...(_?.[_] ?? [])) : _.push(...(_?.[_] ?? [])));
-          if (
-            (_.sort((_, _) => _.rank - _.rank),
-            _.sort((_, _) => _.rank - _.rank),
-            !_._.logged_in)
-          )
-            return _.createElement(
+        const _ = Math.floor(_.getTime() / 1e3),
+          {
+            appReleasesByDayFiltered: _,
+            lastMonthGames: _,
+            lastWeekGames: _,
+          } = _.useMemo(() => {
+            if (!_)
+              return {
+                appReleasesByDayFiltered: [],
+                lastMonthGames: [],
+                lastWeekGames: [],
+              };
+            const _ = _?.flat() ?? [];
+            const _ = (function (_, _, _) {
+                const _ = Object.entries(_).map(([_, _]) => [
+                  Number(_),
+                  _.filter((_) => _.rank < _ && (!_ || !_.owned)),
+                ]);
+                return Object.fromEntries(_);
+              })(_, _.cResultsToShow, _.bHideOwned),
+              _ = [],
+              _ = [];
+            for (const _ of _)
+              _ <= _ &&
+                (_ < _ ? _.push(...(_?.[_] ?? [])) : _.push(...(_?.[_] ?? [])));
+            return (
+              _.sort((_, _) => _.rank - _.rank),
+              _.sort((_, _) => _.rank - _.rank),
+              {
+                appReleasesByDayFiltered: _,
+                lastMonthGames: _,
+                lastWeekGames: _,
+              }
+            );
+          }, [_, _.cResultsToShow, _.bHideOwned, _, _, _]);
+        return _.data && !_._.logged_in
+          ? _.createElement(
               _._,
               {
                 className: _.App,
@@ -5920,268 +6551,63 @@
                   _.createElement("span", null, (0, _._)("#LoginButton")),
                 ),
               ),
-            );
-          if (_) {
-            _.push(
-              ..._.filter((_) =>
-                _.tagName.toLowerCase().startsWith(_.toLowerCase()),
-              )
-                .map((_) => _.tagName)
-                .slice(0, 20),
-            );
-            for (const [_, _] of Object.entries(_)) _.set(_, parseInt(_));
-          }
-        }
-        return _.createElement(
-          _._,
-          {
-            controller: "personalcalendar",
-            method: "default",
-            feature: "capsule",
-          },
-          _.createElement(
-            _,
-            null,
-            _.createElement(
+            )
+          : _.createElement(
               _._,
               {
-                className: (0, _._)(_.PersonalCalendarApp, _ && _.Refreshing),
+                controller: "personalcalendar",
+                method: "default",
+                feature: "capsule",
               },
               _.createElement(
-                _._,
-                {
-                  className: _.PersonalCalendarContainer,
-                },
+                _,
+                null,
                 _.createElement(
                   _._,
                   {
-                    className: _.PersonalCalendarHeader,
+                    className: (0, _._)(
+                      _.PersonalCalendarApp,
+                      _.isFetching && _.Refreshing,
+                    ),
                   },
                   _.createElement(
                     _._,
                     {
-                      className: _.PersonalCalendarTitle,
+                      className: _.PersonalCalendarContainer,
                     },
-                    (0, _._)("#PersonalCalendar_Title"),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.PersonalCalendarDescription,
-                    },
-                    (0, _._)("#PersonalCalendar_Description", _),
+                    _.createElement(_, {
+                      count: _.data ? _.cResultsToShow : void 0,
+                    }),
+                    !_._.steamid && _.createElement(_, null),
+                    _.data &&
+                      _.createElement(
+                        _.Fragment,
+                        null,
+                        _.createElement(_, {
+                          state: _,
+                          onChange: __webpack_require__,
+                          tagMap: _,
+                          userTags: _,
+                          maxResultsToShow: _,
+                        }),
+                        _.length > 0 &&
+                          _.createElement(_, {
+                            games: _,
+                          }),
+                        _.length > 0 &&
+                          _.createElement(_, {
+                            games: _,
+                          }),
+                        _.createElement(_, {
+                          dayWeekTimestamps: _,
+                          appReleasesByDay: _,
+                          todayTimestamp: _,
+                        }),
+                      ),
                   ),
                 ),
-                !_._.steamid &&
-                  _.createElement(
-                    _._,
-                    {
-                      className: _.PersonalCalendarLoginPrompt,
-                    },
-                    (0, _._)("#PersonalCalendar_LoginPrompt"),
-                    _.createElement(
-                      "button",
-                      {
-                        onClick: _._,
-                        className: _.LoginButton,
-                      },
-                      (0, _._)("#Login_SignIn"),
-                    ),
-                  ),
-                _ &&
-                  _.createElement(
-                    _.Fragment,
-                    null,
-                    _.createElement(
-                      _._,
-                      {
-                        className: _.Options,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          className: _.TagSelector,
-                        },
-                        _.createElement(
-                          _._,
-                          {
-                            className: _.Title,
-                          },
-                          (0, _._)("#PersonalCalendar_TagSelector"),
-                        ),
-                        _.createElement(_, {
-                          suggestions: _,
-                          onSuggestionSelected: (_) =>
-                            ((_) => {
-                              _(_?.get(_) ?? 0);
-                            })(_),
-                          value: _,
-                          onTextChange: (_) =>
-                            ((_) => {
-                              "" === _ && _(0), _(_);
-                            })(_),
-                          clearable: !0,
-                        }),
-                      ),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        className: _.SteamLabsBanner,
-                      },
-                      (0, _._)(
-                        "#PersonalCalendar_SteamLabs",
-                        _.createElement("a", {
-                          href: "https://steamcommunity.com/groups/SteamLabs/discussions/19/",
-                        }),
-                      ),
-                    ),
-                    _.length > 0 &&
-                      _.createElement(
-                        _._,
-                        {
-                          className: _.PersonalCalendarSection,
-                        },
-                        _.createElement(
-                          _._,
-                          {
-                            className: _.SectionHeader,
-                          },
-                          (0, _._)("#PersonalCalendar_LastMonthGames"),
-                        ),
-                        _.createElement(
-                          _._,
-                          {
-                            className: (0, _._)(_.GameList, _.Month),
-                          },
-                          _.slice(0, 16).map((_) =>
-                            _.createElement(
-                              _._,
-                              {
-                                key: _.appid,
-                                className: _.AppEntry,
-                              },
-                              _.createElement(_._, {
-                                capsule: {
-                                  _: _.appid,
-                                },
-                                imageType: "header",
-                              }),
-                            ),
-                          ),
-                        ),
-                      ),
-                    _.length > 0 &&
-                      _.createElement(
-                        _._,
-                        {
-                          className: _.PersonalCalendarSection,
-                        },
-                        _.createElement(
-                          _._,
-                          {
-                            className: _.SectionHeader,
-                          },
-                          (0, _._)("#PersonalCalendar_LastWeekGames"),
-                        ),
-                        _.createElement(
-                          _._,
-                          {
-                            className: (0, _._)(_.GameList, _.Week),
-                          },
-                          _.slice(0, 10).map((_) =>
-                            _.createElement(
-                              _._,
-                              {
-                                key: _.appid,
-                                className: _.AppEntry,
-                              },
-                              _.createElement(_._, {
-                                capsule: {
-                                  _: _.appid,
-                                },
-                                imageType: "header",
-                              }),
-                            ),
-                          ),
-                        ),
-                      ),
-                    _.createElement(
-                      _._,
-                      {
-                        className: (0, _._)(
-                          _.PersonalCalendarSection,
-                          _.Calendar,
-                        ),
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          className: _.SectionHeader,
-                        },
-                        (0, _._)("#PersonalCalendar_Upcoming"),
-                      ),
-                      _.createElement(
-                        _._,
-                        {
-                          className: _.Week,
-                        },
-                        __webpack_require__[0].map((_) =>
-                          _.createElement(_, {
-                            key: `WeekHeader_${_}`,
-                            timestamp: _,
-                          }),
-                        ),
-                      ),
-                      __webpack_require__.map((_, _) =>
-                        _.createElement(_, {
-                          key: `Week_${_}`,
-                          dayTimestamps: _,
-                          appReleasesByDay: _,
-                          todayTimestamp: _,
-                          maxGames: _,
-                        }),
-                      ),
-                      9999 != _ &&
-                        _.createElement(
-                          _._,
-                          {
-                            className: _.ShowAllButton,
-                            onClick: () => _(9999),
-                          },
-                          (0, _._)("#PersonalCalendar_ShowAll"),
-                        ),
-                    ),
-                    _.createElement(
-                      _._,
-                      {
-                        className: (0, _._)(
-                          _.PersonalCalendarSection,
-                          _.LinearCalendar,
-                        ),
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          className: _.SectionHeader,
-                        },
-                        (0, _._)("#PersonalCalendar_Upcoming"),
-                      ),
-                      __webpack_require__.map((_, _) =>
-                        _.createElement(_, {
-                          key: `WeekLinear_${_}`,
-                          dayTimestamps: _,
-                          appReleasesByDay: _,
-                          todayTimestamp: _,
-                          maxGames: _,
-                        }),
-                      ),
-                    ),
-                  ),
               ),
-            ),
-          ),
-        );
+            );
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

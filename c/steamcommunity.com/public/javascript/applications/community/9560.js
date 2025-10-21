@@ -376,6 +376,9 @@
         Overflow: "_2TSlFWDDfIzDdGWNXFfeFV",
         ZIndex: "_3MdwIbGpGWeiE-O2owd3VF",
         Display: "_1jz8vOMNXWjuOs8PNx6twM",
+        Elevation: "_51vKfcQCBgoT8lSk1q3iX",
+        Border: "_2lajVjbyrA4lq9xF0X4NQW",
+        Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
       };
     },
     chunkid: (module) => {
@@ -934,6 +937,24 @@
             className: _.Display,
             cssProperty: "--display",
           },
+          {
+            prop: "elevation",
+            responsive: !0,
+            className: _.Elevation,
+            dataProperty: "elevation",
+          },
+          {
+            prop: "border",
+            responsive: !0,
+            className: _.Border,
+            cssProperty: (_) => ["--border-color", (0, _._)(_)],
+          },
+          {
+            prop: "outline",
+            responsive: !0,
+            className: _.Outline,
+            cssProperty: (_) => ["--outline-color", (0, _._)(_)],
+          },
         ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1183,16 +1204,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "span", ref: __webpack_require__, ..._ } = _,
+        const {
+            _: _ = "span",
+            ref: __webpack_require__,
+            className: _,
+            ..._
+          } = _,
           _ = _;
         return _.createElement(_, {
           ref: __webpack_require__,
           ...(0, _._)(
             {
               ..._,
-              className: _.Text,
+              className: _()(_.Text, _),
             },
             _,
           ),
@@ -1282,9 +1310,7 @@
           className: (_) => _[`HeadingSize-${_}`],
         },
       ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(
           {
@@ -1971,6 +1997,7 @@
                 suggestions: _,
                 onTextChange: __webpack_require__,
                 onSuggestionSelected: _,
+                clearable: _,
                 ..._
               } = _,
               _ = _({
@@ -1978,13 +2005,14 @@
                 suggestions: _,
                 onSuggestionSelected: _,
               }),
-              _ = _.value
-                ? _.createElement(_, {
-                    onClick: () => _.onTextChange(""),
-                    cursor: "pointer",
-                    hitSlop: !0,
-                  })
-                : void 0;
+              _ =
+                _.value && _
+                  ? _.createElement(_, {
+                      onClick: () => _.onTextChange(""),
+                      cursor: "pointer",
+                      hitSlop: !0,
+                    })
+                  : void 0;
             return _.createElement(
               _.Root,
               {

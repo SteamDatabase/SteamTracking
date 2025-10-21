@@ -195,8 +195,10 @@ function InitImageTypes( type )
 		{ name: 'Vertical Capsule', width: 748, height: 896, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, confirmation_required: true, tab: 'store'  },
 		{ name: 'Page Background', width: 1438, height: 810, path: 'asset|page_bg.jpg|assets|page_background', localized: false, tab: 'store' },
 
-		{ name: 'Broadcast Left Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast' },
-		{ name: 'Broadcast Right Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast' },
+		{ name: 'Broadcast Left Side Panel (old dimensions)', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast', deprecated: true },
+		{ name: 'Broadcast Left Side Panel', width: 199, height: 433, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false, tab: 'broadcast' },
+		{ name: 'Broadcast Right Side Panel (old dimensions)', width: 155, height: 337, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast', deprecated: true },
+		{ name: 'Broadcast Right Side Panel', width: 199, height: 433, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false, tab: 'broadcast' },
 
 		{ name: 'Library Hero', width: 3840, height: 1240, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
 		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_capsule|assets|library_capsule|image', localized: true, overrideable: false, confirmation_required: true, tab: 'library' },
@@ -529,6 +531,7 @@ function OnImagesLoadComplete( images )
 		var localizedType = false;
 		let bShowAssetOverrideWarning = false;
 		let bShowStoreAssetPreventionWarning = false;
+		let bShowDeprecatedAssetWarning = false;
 		var imageType = DetermineImageType( image );
 		var selectType = $J( '<select class="image_type_select" onchange="return OnImageSelectTypeChanged( this );"></select>');
 		for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
@@ -548,6 +551,11 @@ function OnImagesLoadComplete( images )
 					{
 						bShowAssetOverrideWarning = true;
 					}
+
+					if( g_ImageTypes[ iImageType ].deprecated )
+					{
+						bShowDeprecatedAssetWarning = true;
+					}
 				}
 			}
 
@@ -564,6 +572,12 @@ function OnImagesLoadComplete( images )
 		{
 			targetDiv.append( $J( '<div/>', { class: 'store_asset_warning' } ).text( 'Must select an asset set before uploading store assets' ) );
 		}
+
+		if ( bShowDeprecatedAssetWarning )
+		{
+			targetDiv.append( $J( '<div/>', { class: 'store_asset_warning' } ).text( 'These dimensions are deprecated. They will still function but are not recommended for this asset.' ) );
+		}
+
 
 		if ( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
 		{

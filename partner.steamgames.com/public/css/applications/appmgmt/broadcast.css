@@ -1785,10 +1785,12 @@ div._1MrTWpNan4htXK4Kql6ms8._2xKaMJn0nexa3MMJvN6yq- {
 ._6O_psaoFJTLs30M_ePzZ7 {
   grid-area: left-panel;
   position: relative;
+  max-height: 433px;
 }
 .yRHl2kJWdMGdwVN_70nrP {
   grid-area: right-panel;
   position: relative;
+  max-height: 433px;
 }
 ._2FYu31I46rjm0DVxq-ufK9 {
   height: 100%;
@@ -1798,13 +1800,16 @@ div._1MrTWpNan4htXK4Kql6ms8._2xKaMJn0nexa3MMJvN6yq- {
   align-items: center;
   justify-content: center;
 }
+._2FYu31I46rjm0DVxq-ufK9 .T_zpRAGXggYgVaRyCSXDu {
+  width: 100%;
+}
 ._3zXpFCyX2IiaD-MNF5KJFf ._2yiy6ghVhj3fkC4I01odHC {
   position: relative;
   margin-top: 6px;
   display: grid;
   container-name: broadcast-container;
   container-type: inline-size;
-  grid-template-columns: minmax(138px, 155fr) 600fr 155fr;
+  grid-template-columns: minmax(138px, 199fr) 770fr 199fr;
   grid-template-rows: auto 30px;
   grid-template-areas: "left-panel livestream right-panel" "left-panel viewbar viewbar";
 }

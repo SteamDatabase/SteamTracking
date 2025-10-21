@@ -165,6 +165,7 @@
 	"moderation_resolvewithnoaction": "Løs uten handling",
 	"moderation_resolutionstatus_pending": "Venter på moderering",
 	"moderation_resolutionstatus_acquitted": "Gjennomgått: ingen handling nødvendig",
+	"moderation_resolutionstatus_purged": "Innhold slettet umiddelbart",
 	"moderation_resolutionstatus_removed": "Innhold fjernet",
 	"moderation_resolutionstatus_relabelled": "Innhold ommerket",
 	"moderation_resolutionstatus_suspicious": "Konto låst på grunn av mistenkelig innhold",

@@ -30,6 +30,7 @@
         Entry: "_1Cd1TJ4SgK5DkDNbI-USUL",
         Label: "dI3ijAItl10LuKeR9XCdK",
         VisibilityState: "_2oDgGL0H43MaV3D4fTBH4t",
+        SelectedSVG: "_3Niy5UbG2M3zTi6wUY2jda",
         HeaderRow: "_2PLSeE9RayjVbZKYqcszIq",
         ActionsRow: "_27NYV-vucABpZz6K_oGGgu",
         ManageButton: "_2F5-HSU7JNjiVuDm_h_I4D",
@@ -128,6 +129,7 @@
                 {
                   strTitle: _,
                   className: _.SucessErrorDialog,
+                  bProgressDialog: !0,
                   closeModal: () => {},
                 },
                 _.createElement(_._, {
@@ -158,6 +160,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -212,12 +215,31 @@
               fnRefetch: _,
             };
           })(_),
-          _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`;
+          _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
+          { creatorHome: _, isFetching: _, refetch: _ } = (0, _._)(_),
+          _ = _?.GetLinkedEventGID(),
+          _ = _ && _?.some((_) => _ == _.GID),
+          _ = _ || _,
+          _ = () => {
+            _(), _();
+          };
         return _.createElement(
           _.Fragment,
           null,
           _.createElement("h4", null, (0, _._)("#CreatorHome_EventLink_Title")),
           _.createElement("p", null, (0, _._)("#CreatorHome_EventLink_Desc")),
+          !_ &&
+            _.createElement(
+              "p",
+              null,
+              (0, _._)("#CreatorHome_EventLink_BasicActive"),
+            ),
+          _ &&
+            _.createElement(
+              "p",
+              null,
+              (0, _._)("#CreatorHome_EventLink_AdvancedActive"),
+            ),
           _.createElement(
             _._,
             {
@@ -242,6 +264,7 @@
               _?.map((_) =>
                 _.createElement(_, {
                   key: _.GID,
+                  creatorHome: _,
                   clanSteamID: _,
                   eventModel: _,
                   refetch: _,
@@ -253,100 +276,11 @@
       function _(_) {
         const {
             clanSteamID: _,
-            eventModel: __webpack_require__,
+            creatorHome: __webpack_require__,
+            eventModel: _,
             refetch: _,
           } = _,
           [_, _] = _.useState(!1),
-          _ = __webpack_require__.BIsVisibleEvent();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(_, {
-              clanSteamID: _,
-              eventModel: __webpack_require__,
-              onClose: () => {
-                _(!1), _();
-              },
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().Entry,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().HeaderRow,
-              },
-              _.createElement(
-                "span",
-                {
-                  className: _().Label,
-                },
-                __webpack_require__.GetNameWithFallback((0, _._)(_._.LANGUAGE)),
-              ),
-              !__webpack_require__.BIsVisibleEvent() &&
-                _.createElement(
-                  _._,
-                  {
-                    className: _().VisibilityState,
-                    toolTipContent: (0, _._)(
-                      "#CreatorHome_EventLink_Unpublished_ttip",
-                    ),
-                  },
-                  (0, _._)("#CreatorHome_EventLink_Unpublished"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ActionsRow,
-              },
-              _.createElement(_, {
-                eventModel: __webpack_require__,
-                label: (0, _._)("#Button_Edit"),
-                icon: _.createElement(_.ffu, null),
-                route: _._.k_eCommunityEdit,
-              }),
-              _.createElement(_, {
-                eventModel: __webpack_require__,
-                label: (0, _._)("#Button_Preview"),
-                icon: _.createElement(_.Exy, null),
-                route: _._.k_eCommunityPreview,
-              }),
-              _.createElement(_, {
-                eventModel: __webpack_require__,
-                label: (0, _._)("#Button_Delete"),
-                icon: _.createElement(_.lMJ, null),
-                onClick: () => _(!0),
-              }),
-              _ &&
-                _.createElement(_, {
-                  eventModel: __webpack_require__,
-                  label: (0, _._)("#CreatorHome_EventLink_Choose"),
-                  tooltip: (0, _._)("#CreatorHome_EventLink_Choose_ttip"),
-                  icon: _.createElement(_.yUp, {
-                    bPinned: !1,
-                  }),
-                  onClick: () => {},
-                }),
-              false,
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            clanSteamID: _,
-            eventModel: __webpack_require__,
-            onClose: _,
-          } = _,
           _ = (0, _._)({
             mutationFn: async (_) => {
               const _ =
@@ -363,101 +297,231 @@
               return 1 == _?.data?.success ?? !1;
             },
           }),
-          _ = (0, _._)();
-        return _.bLoading
-          ? _.createElement(_._, {
-              state: _,
-              strDialogTitle: (0, _._)("#Button_Delete"),
-              closeModal: _,
-            })
-          : _.createElement(_._, {
-              strTitle: (0, _._)("#Button_Delete"),
-              strDescription: (0, _._)(
-                "#CreatorHome_EventLink_Delete_Dialog_Desc",
-              ),
-              onCancel: _,
-              bOKDisabled: _.bLoading,
-              onOK: async () => {
-                _.fnSetLoading(!0);
-                try {
-                  const _ = await _.mutateAsync({
-                    clanSteamID: _,
-                    gid: __webpack_require__.GID,
-                  });
-                  _.fnSetSuccess(_),
-                    _ ||
-                      _.fnSetElError(
-                        (0, _._)("#CreatorHome_EventLink_Delete_Dialog_Error"),
-                      );
-                } catch (_) {
-                  _.fnSetElError(
-                    (0, _._)("#CreatorHome_EventLink_Delete_Dialog_Error"),
-                  );
-                }
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          _ = (0, _._)({
+            mutationFn: async (_) => {
+              const _ =
+                  _._.STORE_BASE_URL +
+                  "/curator/" +
+                  _.clanSteamID.GetAccountID() +
+                  "/admin/ajaxselectcreatorhome",
+                _ = new FormData();
+              __webpack_require__.append("sessionid", _._.SESSIONID),
+                __webpack_require__.append("gid", _.gid);
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+              });
+              return 1 == _?.data?.success ?? !1;
+            },
+          }),
+          _ = __webpack_require__?.GetLinkedEventGID(),
+          _ = _ && _ == _.GID,
+          _ = !_ && _.BIsVisibleEvent();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            active: _,
+            mutateAsync: () =>
+              _.mutateAsync({
+                clanSteamID: _,
+                gid: _.GID,
+              }),
+            onClose: (_) => {
+              _(!1), _ && _();
+            },
+            strTitle: (0, _._)("#Button_Delete"),
+            strDescription: (0, _._)(
+              "#CreatorHome_EventLink_Delete_Dialog_Desc",
+            ),
+            strError: (0, _._)("#CreatorHome_EventLink_Delete_Dialog_Error"),
+          }),
+          _.createElement(_, {
+            active: _,
+            mutateAsync: () =>
+              _.mutateAsync({
+                clanSteamID: _,
+                gid: _.GID,
+              }),
+            onClose: (_) => {
+              _(!1), _ && _();
+            },
+            strTitle: (0, _._)("#CreatorHome_EventLink_Select"),
+            strDescription: (0, _._)(
+              "#CreatorHome_EventLink_Select_Dialog_Desc",
+            ),
+            strError: (0, _._)("#CreatorHome_EventLink_Select_Dialog_Error"),
+          }),
+          _.createElement(_, {
+            active: _,
+            mutateAsync: () =>
+              _.mutateAsync({
+                clanSteamID: _,
+                gid: "0",
+              }),
+            onClose: (_) => {
+              _(!1), _ && _();
+            },
+            strTitle: (0, _._)("#CreatorHome_EventLink_Clear"),
+            strDescription: (0, _._)(
+              "#CreatorHome_EventLink_Clear_Dialog_Desc",
+            ),
+            strError: (0, _._)("#CreatorHome_EventLink_Clear_Dialog_Error"),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().Entry,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().HeaderRow,
               },
-            });
+              _.createElement(
+                "span",
+                {
+                  className: _().Label,
+                },
+                _.GetNameWithFallback((0, _._)(_._.LANGUAGE)),
+              ),
+              !_.BIsVisibleEvent() &&
+                _.createElement(
+                  _._,
+                  {
+                    className: _().VisibilityState,
+                    toolTipContent: (0, _._)(
+                      "#CreatorHome_EventLink_Unpublished_ttip",
+                    ),
+                  },
+                  (0, _._)("#CreatorHome_EventLink_Unpublished"),
+                ),
+              _ &&
+                _.createElement(_, {
+                  eventModel: _,
+                  label: (0, _._)("#CreatorHome_EventLink_Select"),
+                  icon: _.createElement(_.FEq, null),
+                  onClick: () => _(!0),
+                  tooltip: (0, _._)("#CreatorHome_EventLink_Select_ttip"),
+                }),
+              _ &&
+                _.createElement(_, {
+                  eventModel: _,
+                  label: (0, _._)("#CreatorHome_EventLink_Clear"),
+                  icon: _.createElement(_.FEq, {
+                    filled: !0,
+                  }),
+                  onClick: () => _(!0),
+                  tooltip: (0, _._)("#CreatorHome_EventLink_Clear_ttip"),
+                }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().ActionsRow,
+              },
+              _.createElement(_, {
+                eventModel: _,
+                label: (0, _._)("#Button_Edit"),
+                icon: _.createElement(_.ffu, null),
+                route: _._.k_eCommunityEdit,
+              }),
+              _.createElement(_, {
+                eventModel: _,
+                label: (0, _._)("#Button_Preview"),
+                icon: _.createElement(_.Exy, null),
+                route: _._.k_eCommunityPreview,
+              }),
+              _.createElement(_, {
+                eventModel: _,
+                label: (0, _._)("#Button_Delete"),
+                icon: _.createElement(_.lMJ, null),
+                onClick: () => _(!0),
+              }),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            active: _,
+            mutateAsync: __webpack_require__,
+            onClose: _,
+            strTitle: _,
+            strDescription: _,
+            strError: _,
+          } = _,
+          _ = (0, _._)();
+        if (_)
+          return _.bLoading
+            ? _.createElement(
+                _._,
+                {
+                  active: !0,
+                },
+                _.createElement(_._, {
+                  state: _,
+                  strDialogTitle: _,
+                }),
+              )
+            : _.createElement(
+                _._,
+                {
+                  active: !0,
+                },
+                _.createElement(_._, {
+                  strTitle: _,
+                  strDescription: _,
+                  onCancel: () => _(!1),
+                  bOKDisabled: _.bLoading,
+                  onOK: async () => {
+                    _.fnSetLoading(!0);
+                    try {
+                      (await __webpack_require__()) ? _(!0) : _.fnSetElError(_);
+                    } catch (_) {
+                      _.fnSetElError(_);
+                    }
+                  },
+                }),
+              );
       }
       function _(_) {
         const {
           eventModel: _,
-          route: __webpack_require__,
-          onClick: _,
-          label: _,
+          label: __webpack_require__,
           tooltip: _,
           icon: _,
+          route: _,
+          onClick: _,
         } = _;
-        return (
-          (0, _._)(__webpack_require__ || _, "Must specify route or onClick"),
+        (0, _._)(_ || _, "Must specify route or onClick");
+        const _ =
+          _ ||
+          (() => {
+            const _ = _ ? (0, _._)(_, null, _, "absolute") : void 0;
+            window.open(_, "_blank", "noopener");
+          });
+        return _.createElement(
+          "div",
+          {
+            className: _().ManageButton,
+            onClick: _,
+          },
           _.createElement(
-            _.Fragment,
-            null,
-            __webpack_require__ &&
-              _.createElement(
-                _._,
-                {
-                  className: _().ManageButton,
-                  eventModel: _,
-                  route: __webpack_require__,
-                  onClick: (_) => _.stopPropagation(),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SVGIcon,
-                  },
-                  _,
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: _,
-                  },
-                  _,
-                ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().ManageButton,
-                  onClick: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().SVGIcon,
-                  },
-                  _,
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: _,
-                  },
-                  _,
-                ),
-              ),
-          )
+            "div",
+            {
+              className: _().SVGIcon,
+            },
+            _,
+          ),
+          _.createElement(
+            _._,
+            {
+              toolTipContent: _,
+            },
+            __webpack_require__,
+          ),
         );
       }
     },
