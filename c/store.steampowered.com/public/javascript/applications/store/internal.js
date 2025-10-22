@@ -5861,11 +5861,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = {
-        selectedTag: 0,
-        bHideOwned: !1,
-        cResultsToShow: 100,
-      };
+      const _ = "PC_HideOwned",
+        _ = "PC_WishlistedOnly",
+        _ = "PC_GameCount",
+        _ = {
+          selectedTag: 0,
+          bHideOwned: "1" == localStorage.getItem(_),
+          cResultsToShow: parseInt(localStorage.getItem(_) ?? "100"),
+          bShowOnlyWishlisted: "1" == localStorage.getItem(_),
+        };
       function _(_) {
         const { count: _ } = _;
         return _.createElement(
@@ -5947,11 +5951,13 @@
             }),
             _.createElement(_, {
               count: _.cResultsToShow,
-              onChange: (_) =>
-                __webpack_require__({
-                  ..._,
-                  cResultsToShow: _,
-                }),
+              onChange: (_) => {
+                localStorage.setItem(_, _.toString()),
+                  __webpack_require__({
+                    ..._,
+                    cResultsToShow: _,
+                  });
+              },
               max: _,
             }),
             _.createElement(
@@ -5963,13 +5969,29 @@
                 _,
                 {
                   checked: _.bHideOwned,
-                  onChange: (_) =>
-                    __webpack_require__({
-                      ..._,
-                      bHideOwned: _,
-                    }),
+                  onChange: (_) => {
+                    localStorage.setItem(_, _ ? "1" : "0"),
+                      __webpack_require__({
+                        ..._,
+                        bHideOwned: _,
+                      });
+                  },
                 },
                 (0, _._)("#PersonalCalendar_HideOwned"),
+              ),
+              _.createElement(
+                _,
+                {
+                  checked: _.bShowOnlyWishlisted,
+                  onChange: (_) => {
+                    localStorage.setItem(_, _ ? "1" : "0"),
+                      __webpack_require__({
+                        ..._,
+                        bShowOnlyWishlisted: _,
+                      });
+                  },
+                },
+                (0, _._)("#PersonalCalendar_ShowOnlyWishlisted"),
               ),
             ),
           ),
@@ -6169,7 +6191,7 @@
               {
                 className: _.Week,
               },
-              _[0].map((_) =>
+              _?.[0].map((_) =>
                 _.createElement(_, {
                   key: `WeekHeader_${_}`,
                   timestamp: _,
@@ -6499,13 +6521,15 @@
                 lastWeekGames: [],
               };
             const _ = _?.flat() ?? [];
-            const _ = (function (_, _, _) {
+            const _ = (function (_, _, _, _) {
                 const _ = Object.entries(_).map(([_, _]) => [
                   Number(_),
-                  _.filter((_) => _.rank < _ && (!_ || !_.owned)),
+                  _.filter((_) => _.rank < _ && (!_ || !_.owned)).filter(
+                    (_) => !_ || _.wishlisted,
+                  ),
                 ]);
                 return Object.fromEntries(_);
-              })(_, _.cResultsToShow, _.bHideOwned),
+              })(_, _.cResultsToShow, _.bHideOwned, _.bShowOnlyWishlisted),
               _ = [],
               _ = [];
             for (const _ of _)
@@ -6520,7 +6544,15 @@
                 lastWeekGames: _,
               }
             );
-          }, [_, _.cResultsToShow, _.bHideOwned, _, _, _]);
+          }, [
+            _,
+            _.cResultsToShow,
+            _.bHideOwned,
+            _.bShowOnlyWishlisted,
+            _,
+            _,
+            _,
+          ]);
         return _.data && !_._.logged_in
           ? _.createElement(
               _._,

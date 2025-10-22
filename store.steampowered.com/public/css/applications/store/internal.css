@@ -2052,8 +2052,10 @@ a:link {
   letter-spacing: 1px;
 }
 ._2LcfPsUSmeavC5MD7P-3_3 .xT3lxTdADiEWewVz8DEPg {
-  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
+  gap: 8px;
 }
 ._2LcfPsUSmeavC5MD7P-3_3 .RMzOW5KaqQvzer-NgkySs {
   width: 200px;

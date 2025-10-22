@@ -1044,6 +1044,7 @@
     "PersonalCalendar_TagSelector": "Tag Selector",
     "PersonalCalendar_TagSelector_Placeholder": "Filter by tag...",
     "PersonalCalendar_HideOwned": "Hide Owned Games",
+    "PersonalCalendar_ShowOnlyWishlisted": "Show Only Wishlisted Games",
     "PersonalCalendar_ResultCountSelector": "Game Count",
     "PersonalCalendar_CompactMode": "Compact Calendar",
     "PersonalCalendar_AccountPlaceholder": "Optional Override",
