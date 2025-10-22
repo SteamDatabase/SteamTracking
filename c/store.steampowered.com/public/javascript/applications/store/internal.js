@@ -6557,31 +6557,22 @@
           ? _.createElement(
               _._,
               {
-                className: _.App,
+                className: _.PersonalCalendarLoginPrompt,
               },
               _.createElement(
                 _._,
                 {
-                  className: _.Login,
+                  className: _.Text,
                 },
-                _.createElement(
-                  _._,
-                  {
-                    className: _.Text,
-                  },
-                  (0, _._)("#LoginText"),
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    className: (0, _._)(
-                      "btn_green_white_innerfade",
-                      " btn_medium",
-                    ),
-                    onClick: _._,
-                  },
-                  _.createElement("span", null, (0, _._)("#LoginButton")),
-                ),
+                (0, _._)("#PersonalCalendar_LoginPrompt"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  className: (0, _._)(_.LoginButton),
+                  onClick: _._,
+                },
+                _.createElement("span", null, (0, _._)("#LoginButton")),
               ),
             )
           : _.createElement(

@@ -4914,6 +4914,7 @@ a:link {
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   width: 100%;
+  isolation: isolate;
 }
 ._2OvUYpkiij1e7K-4vW8i9W {
   transition-property: transform;
@@ -4922,6 +4923,7 @@ a:link {
   position: absolute;
   inset: 0;
   background-color: var(--bg-highlight-color);
+  z-index: -1;
   transform: translateX(calc(100% * var(--selected-index)));
 }
 ._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(2)) {
@@ -5000,7 +5002,6 @@ a:link {
   align-items: center;
   text-align: center;
   user-select: none;
-  z-index: 1;
   padding: var(--spacing-1) var(--spacing-3);
   font-weight: var(--font-weight-regular);
 }

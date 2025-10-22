@@ -5633,26 +5633,16 @@
         return s.data && !xe.iA.logged_in
           ? r.createElement(
               Pe.Z,
-              { className: Ae.App },
+              { className: Ae.PersonalCalendarLoginPrompt },
               r.createElement(
                 Pe.Z,
-                { className: Ae.Login },
-                r.createElement(
-                  Pe.Z,
-                  { className: Ae.Text },
-                  (0, Ne.we)("#LoginText"),
-                ),
-                r.createElement(
-                  Pe.Z,
-                  {
-                    className: (0, ve.A)(
-                      "btn_green_white_innerfade",
-                      " btn_medium",
-                    ),
-                    onClick: be.vg,
-                  },
-                  r.createElement("span", null, (0, Ne.we)("#LoginButton")),
-                ),
+                { className: Ae.Text },
+                (0, Ne.we)("#PersonalCalendar_LoginPrompt"),
+              ),
+              r.createElement(
+                Pe.Z,
+                { className: (0, ve.A)(Ae.LoginButton), onClick: be.vg },
+                r.createElement("span", null, (0, Ne.we)("#LoginButton")),
               ),
             )
           : r.createElement(
