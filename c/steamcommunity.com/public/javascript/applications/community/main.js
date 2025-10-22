@@ -8113,9 +8113,21 @@
           : _ || console.warn(_, ...__webpack_require__);
       }
       function _(_, _, ...__webpack_require__) {
+        if (
+          (console.assert
+            ? 0 == __webpack_require__.length
+              ? console.assert(!!_, _)
+              : console.assert(!!_, _, ...__webpack_require__)
+            : _ || console.warn(_, ...__webpack_require__),
+          !_)
+        )
+          throw _;
+      }
+      function _(_, _, ...__webpack_require__) {
         _(!1, _, ...__webpack_require__);
       }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -83908,6 +83920,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
@@ -84030,6 +84043,14 @@
             (_ = `steam://openurl/${_}`),
           _
         );
+      }
+      function _(_, _, _) {
+        const _ = new URL(_),
+          _ = _.pathname.split("/").filter(Boolean),
+          _ = _.findIndex((_) => _.startsWith(_));
+        return -1 === _
+          ? null
+          : ((_[_] = _[_] + _), (_.pathname = "/" + _.join("/")), _.toString());
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

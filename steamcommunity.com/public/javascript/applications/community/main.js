@@ -7415,9 +7415,20 @@
           : e || console.warn(t, ...r);
       }
       function n(e, t, ...r) {
+        if (
+          (console.assert
+            ? 0 == r.length
+              ? console.assert(!!e, t)
+              : console.assert(!!e, t, ...r)
+            : e || console.warn(t, ...r),
+          !e)
+        )
+          throw t;
+      }
+      function a(e, t, ...r) {
         i(!1, t, ...r);
       }
-      r.d(t, { wT: () => i, z_: () => n });
+      r.d(t, { v8: () => n, wT: () => i, z_: () => a });
     },
     20737: (e, t, r) => {
       "use strict";
@@ -76178,6 +76189,7 @@
         ZF: () => o,
         k2: () => l,
         wm: () => n,
+        yn: () => m,
       });
       var i = r(78327);
       r(61859);
@@ -76300,6 +76312,14 @@
             (e = `steam://openurl/${e}`),
           e
         );
+      }
+      function m(e, t, r) {
+        const i = new URL(e),
+          n = i.pathname.split("/").filter(Boolean),
+          a = n.findIndex((e) => e.startsWith(t));
+        return -1 === a
+          ? null
+          : ((n[a] = n[a] + r), (i.pathname = "/" + n.join("/")), i.toString());
       }
     },
     28460: (e, t, r) => {

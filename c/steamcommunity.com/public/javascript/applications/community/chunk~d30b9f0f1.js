@@ -6344,17 +6344,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        constructor(_, _, _) {
+        constructor(_, _, _, _) {
           super(),
             (this.m_filesToUpload = _._.array()),
             (this.m_strUploadPath = null),
             (this.m_bSynchronousUpload = !1),
+            (this.m_bTwoPhaseUpload = !1),
             (0, _._)(this),
             (this.m_strUploadPath = _),
             (this.m_rgImageOptions = (0, _._)(_)),
-            (this.m_bSynchronousUpload = _);
+            (this.m_bSynchronousUpload = _),
+            (this.m_bTwoPhaseUpload = _);
         }
         GetUploadPath() {
           return this.m_strUploadPath;
@@ -6432,8 +6436,7 @@
           return !1;
         }
         async UploadSingleImage(_, _, _, _) {
-          var _;
-          let _ = null;
+          var _, _, _, _, _, _, _, _, _, _, _, _, _;
           const _ = new FormData();
           _.append("assetfile", _.file, _),
             _.append("sessionid", _._.SESSIONID),
@@ -6449,33 +6452,151 @@
               elErrorMessage:
                 "Invalid file extension, cannot determine mimetype",
             };
+          let _;
           _.append("mimetype", _);
-          let _,
-            _ = !1;
           try {
-            (_ = await _().post(this.m_strUploadPath, _, {
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-              cancelToken: _,
-            })),
-              200 == (null == _ ? void 0 : _.status) &&
-              1 == (null == _ ? void 0 : _.data.success)
-                ? (_ = !0)
-                : (_ =
+            if (this.m_bTwoPhaseUpload) {
+              const _ = (0, _._)(this.m_strUploadPath, "ajax", "async");
+              (0, _._)(_, "upload path must contain ajax");
+              const _ = await _().post(_, _, {
+                withCredentials: !0,
+                headers: {
+                  "Content-Type": "multipart/form-data",
+                },
+                cancelToken: _,
+              });
+              if (
+                200 == (null == _ ? void 0 : _.status) &&
+                1 ==
+                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                    ? void 0
+                    : _.success) &&
+                _.data.requestID
+              ) {
+                const _ = (0, _._)(this.m_strUploadPath, "ajax", "status"),
+                  _ = {
+                    sessionid: _._.SESSIONID,
+                    requestid: _.data.requestID,
+                    elanguage: _,
+                    originalname: _,
+                  };
+                for (;;) {
+                  const _ = await _().get(_, {
+                    params: _,
+                    withCredentials: !0,
+                  });
+                  if (
+                    200 != (null == _ ? void 0 : _.status) ||
+                    (1 !=
+                      (null === (_ = null == _ ? void 0 : _.data) ||
+                      void 0 === _
+                        ? void 0
+                        : _.success) &&
+                      22 !=
+                        (null === (_ = null == _ ? void 0 : _.data) ||
+                        void 0 === _
+                          ? void 0
+                          : _.success))
+                  ) {
+                    (_ =
+                      null !==
+                        (_ =
+                          null !==
+                            (_ =
+                              null === (_ = null == _ ? void 0 : _.data) ||
+                              void 0 === _
+                                ? void 0
+                                : _.error) && void 0 !== _
+                            ? _
+                            : null === (_ = null == _ ? void 0 : _.data) ||
+                                void 0 === _
+                              ? void 0
+                              : _.message) && void 0 !== _
+                        ? _
+                        : null === (_ = null == _ ? void 0 : _.data) ||
+                            void 0 === _
+                          ? void 0
+                          : _.msg),
+                      "dev" == _._.WEB_UNIVERSE &&
+                        console.error(
+                          "Failed on status",
+                          null == _ ? void 0 : _.data,
+                        );
+                    break;
+                  }
+                  if (
+                    22 !=
+                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                      ? void 0
+                      : _.success)
+                  )
+                    return {
+                      bSuccess: !0,
+                      elErrorMessage: _,
+                      result: null == _ ? void 0 : _.data,
+                    };
+                  "dev" == _._.WEB_UNIVERSE && console.log("Sleeping 500ms"),
+                    await (0, _._)(500);
+                }
+              } else
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                    ? void 0
+                    : _.msg),
+                  "dev" == _._.WEB_UNIVERSE &&
+                    console.error(
+                      "Failed on begin async convert",
+                      null == _ ? void 0 : _.data,
+                    );
+            } else {
+              const _ = await _().post(this.m_strUploadPath, _, {
+                withCredentials: !0,
+                headers: {
+                  "Content-Type": "multipart/form-data",
+                },
+                cancelToken: _,
+              });
+              if (
+                200 == (null == _ ? void 0 : _.status) &&
+                1 == (null == _ ? void 0 : _.data.success)
+              )
+                return {
+                  bSuccess: !0,
+                  elErrorMessage: _,
+                  result: null == _ ? void 0 : _.data,
+                };
+              (_ =
+                null !==
+                  (_ =
                     null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                       ? void 0
-                      : _.message);
+                      : _.message) && void 0 !== _
+                  ? _
+                  : null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                    ? void 0
+                    : _.msg),
+                "dev" == _._.WEB_UNIVERSE &&
+                  console.error(
+                    "Failed on single direct upload",
+                    null == _ ? void 0 : _.data,
+                  );
+            }
           } catch (_) {
             const _ = (0, _._)(_);
-            console.log("CCloudImageUploader.UploadFile failed ", _, _);
+            console.log(
+              "CCloudImageUploader.UploadSingleImage try/catch failed ",
+              _,
+              _,
+            );
           }
-          return {
-            bSuccess: _,
-            elErrorMessage: _,
-            result: null == _ ? void 0 : _.data,
-          };
+          return (
+            console.log("CCloudImageUploader.UploadSingleImage failed: ", _),
+            {
+              bSuccess: !1,
+              elErrorMessage: _,
+              result: void 0,
+            }
+          );
         }
       }
       (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
@@ -6491,12 +6612,13 @@
             bSynchronousUpload: _,
             rgSupportArtwork: _,
             rgRealmList: _,
+            bTwoPhaseUpload: _,
           } = _,
           _ = _._.Get().GetCurEditLanguage(),
-          _ = (function (_, _, _) {
+          _ = (function (_, _, _, _) {
             const _ = (0, _._)(_ instanceof Array ? _ : [_]);
-            return _.useMemo(() => new _(_, _, _), [_, _, _]);
-          })(_, _, null != _ && _);
+            return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
+          })(_, _, null != _ && _, null != _ && _);
         return (
           _.useEffect(() => {
             _.GetUploadPath() != _ && _.SetUploadPath(_);
@@ -6962,6 +7084,7 @@
             elOverrideDragAndDropText: (0, _._)(
               "#Template_Section_MediaUpdate_DnD",
             ),
+            bTwoPhaseUpload: !0,
           }),
           _.createElement(_, {
             rgAssetLangs: _,
