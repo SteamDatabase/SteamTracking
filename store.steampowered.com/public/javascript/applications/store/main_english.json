@@ -1053,5 +1053,9 @@
     "PersonalCalendar_LoginPrompt": "Sign in to view personalized suggestions.",
     "PersonalCalendar_ShowAll": "Expand all",
     "PersonalCalendar_SteamLabs": "Steam Labs Experiment #16 | <1>Learn more and leave feedback</1>",
+    "PersonalCalendar_Wishlisted": "Wishlisted Games",
+    "PersonalCalendar_WishlistShow": "Show",
+    "PersonalCalendar_WishlistHide": "Hide",
+    "PersonalCalendar_WishlistOnly": "Only",
     "dummy_for_end_of_file_convenience": "dummy"
 }

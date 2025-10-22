@@ -307,6 +307,11 @@
         Description: "_1Wz57jagOh6dxI7GUA5igl",
         ButtonText: "_1fyDZMVLKzvHIle_9i4Lpq",
         IR: "_1UYj3bhmlk9olzBLJiCHmC",
+        PersonalCalendar: "_2dIS9ODkn8rs_fsWh3kY8y",
+        New: "_2ZuAr_P2w3N45sg9qxA2Vc",
+        LeftColumn: "_2mvz1stG3mdVukklUl35CV",
+        RightColumn: "_3LsK4VSA6PZ96b2Yu-i-W9",
+        Peronal: "_3uSeeJg0ab5XxMoSQC4g3",
         RecommendationLinkColumn: "_3IuHjKAi2Q9E5QyD_-gc9w",
       };
     },
@@ -69630,7 +69635,7 @@
       function Vs(e) {
         const [t] = n.useState(e.excludedSections),
           r = (function (e) {
-            const t = xa();
+            const t = ka();
             return n.useMemo(
               () => t.filter((t) => !("more" === t[0] || (e && e.has(t[0])))),
               [t, e],
@@ -69764,13 +69769,13 @@
           n.createElement(
             gr,
             { visible: r, keepMounted: !0 },
-            n.createElement(Tn, null, n.createElement(ja, { section: s })),
+            n.createElement(Tn, null, n.createElement(Da, { section: s })),
           ),
         );
       }
       const Qs = n.memo(function (e) {
         const { rgSections: t } = e;
-        return t.map((e) => n.createElement(Da, { key: e[0], section: e[0] }));
+        return t.map((e) => n.createElement(Pa, { key: e[0], section: e[0] }));
       });
       const Ys = n.memo(function (e) {
           const { rgSections: t, section: r } = e,
@@ -69794,7 +69799,7 @@
                   animate: !!a,
                   sizeClass: Gs.MoreSectionTransitionContent,
                 },
-                n.createElement(ja, { section: i }),
+                n.createElement(Da, { section: i }),
               ),
             )
           );
@@ -69849,7 +69854,22 @@
         ra = r(83561),
         ia = r(10386),
         na = r(80926);
-      function sa() {
+      function sa(e) {
+        return n.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1200 1200",
+            ...e,
+          },
+          n.createElement("path", {
+            d: "m126.84 1117.1h946.31c37.266-0.046875 67.5-30.281 67.547-67.547v-628.45h-1081.4v628.45c0.046875 37.266 30.281 67.5 67.547 67.547zm435-631.69h76.312c16.172 0.09375 29.297 13.219 29.297 29.391v76.359c0 16.172-13.125 29.25-29.297 29.25h-76.312c-16.172 0-29.297-13.078-29.297-29.25v-76.359c0-16.172 13.125-29.297 29.297-29.391zm198.84 0h76.312c16.172 0.09375 29.297 13.219 29.297 29.391v76.359c0 16.172-13.125 29.25-29.297 29.25h-76.312c-15.938-0.32812-28.688-13.312-28.688-29.25v-76.359c0-16.172 13.078-29.297 29.297-29.391zm-397.69 0h76.312c16.219 0.09375 29.297 13.219 29.297 29.391v76.359c0 16.172-13.125 29.25-29.297 29.25h-76.312c-16.172 0-29.297-13.078-29.297-29.25v-76.359c0-16.172 13.125-29.297 29.297-29.391zm198.84 210.61h76.312c16.172 0 29.297 13.125 29.297 29.297v76.453-0.046875c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.406c0-16.172 13.125-29.297 29.297-29.297zm198.84 0h76.312c16.172 0 29.297 13.125 29.297 29.297v76.453-0.046875c0 16.172-13.125 29.297-29.297 29.297h-76.312c-15.938-0.32812-28.688-13.359-28.688-29.297v-76.406c0-15.938 12.75-28.969 28.688-29.297zm-397.69 0h76.312c16.172 0 29.297 13.125 29.297 29.297v76.453-0.046875c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.406c0-16.172 13.125-29.297 29.297-29.297zm597-210.61h76.312c16.219 0.09375 29.297 13.219 29.297 29.391v76.359c-0.09375 16.125-13.125 29.203-29.297 29.25h-76.312c-16.172 0-29.344-13.078-29.391-29.25v-76.359c0-16.219 13.172-29.391 29.391-29.391zm0 210.61h76.312c16.172 0.046875 29.203 13.125 29.297 29.297v76.453-0.046875c-0.09375 16.172-13.125 29.25-29.297 29.297h-76.312c-16.172 0-29.344-13.078-29.391-29.297v-76.406c0.046874-16.219 13.219-29.297 29.391-29.297zm-795.84 0h75.844c16.172 0 29.344 13.078 29.391 29.297v76.453-0.046875c-0.046875 16.219-13.219 29.297-29.391 29.297h-75.844c-16.125-0.046875-29.203-13.125-29.297-29.297v-76.406c0.09375-16.172 13.172-29.25 29.297-29.297zm397.69 210.61h76.312c7.7812 0 15.234 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.312c0-16.172 13.125-29.297 29.297-29.297zm397.69 0h76.312c7.7812 0 15.234 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-75.844c-16.172 0-29.344-13.078-29.391-29.297v-76.312c0-7.7812 3.0938-15.281 8.625-20.766 5.4844-5.5312 12.984-8.625 20.766-8.625zm-198.84 0h76.312c7.7812 0 15.234 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-76.312c-15.984-0.32812-28.734-13.406-28.688-29.391v-76.219c0-16.172 13.125-29.297 29.297-29.297zm-397.69 0h76.312c7.7812 0 15.281 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.312c0-16.172 13.125-29.297 29.297-29.297zm-198.84 0h75.844c7.875-0.14062 15.469 2.9062 21.094 8.4375s8.7656 13.078 8.7656 20.953v76.312c-0.046874 7.8281-3.2344 15.328-8.8594 20.812-5.5781 5.4844-13.172 8.4844-21 8.3438h-75.844c-16.172 0-29.297-13.078-29.297-29.25v-76.219c0-16.172 13.125-29.297 29.297-29.297zm976.55-507.98v-175.4c-0.23437-37.172-30.375-67.172-67.547-67.219h-111.7v77.391c19.078 24.094 22.734 57 9.3281 84.703-13.359 27.656-41.391 45.281-72.141 45.281s-58.828-17.625-72.188-45.281c-13.406-27.703-9.75-60.609 9.3281-84.703v-77.391h-471.56v77.391c19.078 24.094 22.734 57 9.3281 84.703-13.359 27.656-41.438 45.281-72.188 45.281s-58.781-17.625-72.141-45.281c-13.406-27.703-9.75-60.609 9.3281-84.703v-77.391h-111.7c-37.172 0.046876-67.312 30.047-67.547 67.219v175.4zm-798.94-134.63c0 22.266-18.047 40.312-40.312 40.312-22.266 0-40.312-18.047-40.312-40.312v-140.76c0.046876-10.734 4.3594-21 12-28.547 11.578-11.438 28.875-14.859 43.922-8.625 15.047 6.2344 24.844 20.906 24.938 37.172v140.76zm516-140.63c0-22.266 18.047-40.312 40.312-40.312 10.734 0 20.953 4.3125 28.453 12 7.6406 7.5 11.953 17.812 12 28.547v140.39c-0.046876 10.688-4.4062 20.953-12 28.453-7.5 7.6406-17.719 12-28.453 12-22.078-0.42187-39.797-18.375-39.844-40.453z",
+            fillRule: "evenodd",
+          }),
+        );
+      }
+      function aa() {
         return n.createElement(
           gn,
           null,
@@ -69860,30 +69880,30 @@
               bn,
               { className: na.RecommendationTwoCol },
               Zt.iA.logged_in
-                ? n.createElement(pa, null)
-                : n.createElement(ga, null),
-              n.createElement(ua, null),
+                ? n.createElement(ga, null)
+                : n.createElement(_a, null),
+              n.createElement(ma, null),
             ),
-            n.createElement(oa, null),
+            n.createElement(la, null),
           ),
         );
       }
-      function aa() {
-        return (0, ia.RK)(ma), (0, ra.jZ)(), null;
-      }
       function oa() {
+        return (0, ia.RK)(da), (0, ra.jZ)(), null;
+      }
+      function la() {
         const e = En();
         return n.createElement(
           Bn,
           { className: na.RecommendationLinkColumn },
           !e &&
             n.createElement(
-              ca,
+              ua,
               { eStoreDiscoveryQueueType: 0 },
               cr("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
             ),
           n.createElement(
-            ca,
+            ua,
             { eStoreDiscoveryQueueType: 3 },
             cr("#Menu_Section_Recommendations_NewReleasesQueue"),
           ),
@@ -69914,7 +69934,7 @@
           ),
         );
       }
-      function la(e) {
+      function ca(e) {
         const t = (0, s.Qn)(),
           { showDiscoveryQueue: r } = (0, ta.GV)(e),
           i = n.useCallback(
@@ -69925,79 +69945,87 @@
           );
         return t ? i : void 0;
       }
-      function ca(e) {
+      function ua(e) {
         const { eStoreDiscoveryQueueType: t, children: r } = e,
-          i = la(t);
+          i = ca(t);
         return n.createElement(
           wn,
           { href: `${te.TS.STORE_BASE_URL}explore/next/${t}`, onClick: i },
           r,
         );
       }
-      function ua() {
-        const e = la(0);
-        return En()
-          ? n.createElement(
-              Ce.Ii,
-              {
-                className: na.DiscoveryQueue,
-                href: `${te.TS.STORE_BASE_URL}explore/next/0`,
-                onClick: e,
-                onOKButton: e,
+      function ma() {
+        return n.createElement(
+          "div",
+          { className: mr()(na.DiscoveryQueue, na.PersonalCalendar) },
+          n.createElement(
+            "div",
+            { className: na.Background },
+            n.createElement("div", {
+              className: na.BackgroundImage,
+              style: {
+                backgroundImage: `url('${te.TS.MEDIA_CDN_URL}labs/main/images/personal_calendar_menu_bg.png')`,
               },
+            }),
+            n.createElement("div", { className: na.BackgroundOverlay }),
+          ),
+          n.createElement(
+            "div",
+            { className: na.New },
+            cr("#Menu_Section_Recommendations_New"),
+          ),
+          n.createElement(
+            "div",
+            { className: na.Content },
+            n.createElement(
+              "div",
+              { className: na.LeftColumn },
+              n.createElement(sa, null),
+            ),
+            n.createElement(
+              "div",
+              { className: na.RightColumn },
               n.createElement(
                 "div",
-                { className: na.Background },
-                n.createElement("div", {
-                  className: na.BackgroundImage,
-                  style: {
-                    backgroundImage:
-                      "url('https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg')",
-                  },
-                }),
-                n.createElement("div", { className: na.BackgroundOverlay }),
+                { className: na.Title },
+                cr("#Menu_Section_Recommendations_PersonalCalendar"),
               ),
               n.createElement(
                 "div",
-                { className: na.Content },
-                n.createElement(
-                  "div",
-                  { className: na.Title },
-                  cr("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+                { className: na.Description },
+                cr(
+                  "#Menu_Section_Recommendations_PersonalCalendar_Description",
                 ),
+              ),
+              n.createElement(
+                Ce.Ii,
+                {
+                  className: na.ActionButton,
+                  href: `${te.TS.STORE_BASE_URL}personalcalendar/`,
+                },
                 n.createElement(
-                  "div",
-                  { className: na.Description },
+                  "span",
+                  { className: na.ButtonText },
                   cr(
-                    "#Menu_Section_Recommendations_DiscoveryQueue_Description",
+                    "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
                   ),
                 ),
-                n.createElement(
-                  "div",
-                  { className: na.ActionButton },
-                  n.createElement(
-                    "span",
-                    { className: na.ButtonText },
-                    cr(
-                      "#Menu_Section_Recommendations_DiscoveryQueue_ActionButton",
-                    ),
-                  ),
-                  n.createElement(_a, null),
-                ),
+                n.createElement(ha, null),
               ),
-            )
-          : null;
+            ),
+          ),
+        );
       }
-      const ma = { include_assets: !0, apply_user_filters: !0 },
-        da = Math.floor(Date.now() / 6e5);
-      function pa(e) {
+      const da = { include_assets: !0, apply_user_filters: !0 },
+        pa = Math.floor(Date.now() / 6e5);
+      function ga(e) {
         const { rgRecentApps: t } = e,
-          { data: r } = (0, ia.RK)(ma),
+          { data: r } = (0, ia.RK)(da),
           i = n.useMemo(() => {
             if (!r) return [];
             const e = new Set(t?.map(_r.ER) || []),
               i = r.slice(0, 10).filter((t) => !e.has((0, _r.ER)(t)));
-            return Ye.fW(i, 0, sn.A(da)).slice(0, 3);
+            return Ye.fW(i, 0, sn.A(pa)).slice(0, 3);
           }, [r, t]);
         return n.createElement(
           He.Ay,
@@ -70010,10 +70038,10 @@
           ),
         );
       }
-      function ga() {
+      function _a() {
         const { data: e } = ln(
           { count: 3, name: "Store Menu Top Grossing" },
-          ma,
+          da,
         );
         return n.createElement(
           He.Ay,
@@ -70026,7 +70054,7 @@
           ),
         );
       }
-      function _a() {
+      function ha() {
         return n.createElement(
           "svg",
           {
@@ -70040,41 +70068,41 @@
           }),
         );
       }
-      var ha = r(17233);
-      function fa() {
+      var fa = r(17233);
+      function ba() {
         const e = $t();
         return n.createElement(
           gn,
           null,
           !e && n.createElement(_n, null, cr("#Menu_Section_SpecialSections")),
-          e && n.createElement("div", { className: ha.NoSectionTitleSpacer }),
+          e && n.createElement("div", { className: fa.NoSectionTitleSpacer }),
           n.createElement(
             fn,
             null,
-            n.createElement(ya, null),
-            n.createElement(ba, null),
+            n.createElement(Ma, null),
+            n.createElement(Ba, null),
           ),
         );
       }
-      function ba() {
+      function Ba() {
         return $t()
           ? n.createElement(
               Bn,
-              { className: ha.SpecialSectionsGrid },
-              n.createElement(Ba, null),
+              { className: fa.SpecialSectionsGrid },
               n.createElement(wa, null),
+              n.createElement(ya, null),
             )
           : n.createElement(
               n.Fragment,
               null,
-              n.createElement(Ba, null),
               n.createElement(wa, null),
+              n.createElement(ya, null),
             );
       }
-      function Ba() {
+      function wa() {
         return n.createElement(
           Bn,
-          { className: ha.SpecialSectionsLeft },
+          { className: fa.SpecialSectionsLeft },
           n.createElement(Mn, { handle: "software" }),
           n.createElement(Mn, { handle: "soundtracks" }),
           n.createElement(Mn, { handle: "earlyaccess" }),
@@ -70084,12 +70112,12 @@
           n.createElement(Mn, { handle: "linux" }),
         );
       }
-      function wa() {
+      function ya() {
         return Zt.TS.EREALM == nn.TU.k_ESteamRealmChina
           ? null
           : n.createElement(
               Bn,
-              { className: ha.SpecialSectionsRight },
+              { className: fa.SpecialSectionsRight },
               n.createElement(
                 wn,
                 { href: `${Zt.TS.STORE_BASE_URL}sale/nextfest/` },
@@ -70112,7 +70140,7 @@
               ),
             );
       }
-      function ya() {
+      function Ma() {
         return n.createElement(
           Sn,
           null,
@@ -70121,12 +70149,12 @@
             null,
             n.createElement(Rn, {
               handle: "demos",
-              icon: n.createElement(Ca, null),
+              icon: n.createElement(Sa, null),
             }),
             n.createElement(zn, {
               href: `${Zt.TS.STORE_BASE_URL}dlcforyou/`,
               name: cr("#Menu_Section_SpecialSections_DLCForYou"),
-              icon: n.createElement(Ma, null),
+              icon: n.createElement(Ca, null),
             }),
           ),
           n.createElement(
@@ -70135,12 +70163,12 @@
             n.createElement(zn, {
               href: `${Zt.TS.STORE_BASE_URL}news/collection/sales/`,
               name: cr("#Menu_Section_SpecialSections_SaleEvents"),
-              icon: n.createElement(Sa, null),
+              icon: n.createElement(va, null),
             }),
           ),
         );
       }
-      const Ma = n.memo(function (e) {
+      const Ca = n.memo(function (e) {
           return n.createElement(
             "svg",
             {
@@ -70156,7 +70184,7 @@
             }),
           );
         }),
-        Ca = n.memo(function (e) {
+        Sa = n.memo(function (e) {
           return n.createElement(
             "svg",
             {
@@ -70171,7 +70199,7 @@
             }),
           );
         }),
-        Sa = n.memo(function (e) {
+        va = n.memo(function (e) {
           return n.createElement(
             "svg",
             {
@@ -70247,22 +70275,22 @@
             }),
           );
         });
-      function va() {
+      function Ra() {
         const e = $t();
         return n.createElement(
           gn,
           null,
           !e && n.createElement(_n, null, cr("#Menu_Section_WaysToPlay")),
-          e && n.createElement("div", { className: ha.NoSectionTitleSpacer }),
+          e && n.createElement("div", { className: fa.NoSectionTitleSpacer }),
           n.createElement(
             fn,
             null,
+            n.createElement(Ia, null),
             n.createElement(za, null),
-            n.createElement(Ra, null),
           ),
         );
       }
-      function Ra() {
+      function za() {
         return n.createElement(
           Bn,
           null,
@@ -70274,7 +70302,7 @@
           n.createElement(Mn, { handle: "singleplayer" }),
         );
       }
-      function za() {
+      function Ia() {
         return n.createElement(
           Sn,
           null,
@@ -70283,15 +70311,15 @@
             null,
             n.createElement(Rn, {
               handle: "greatondeck",
-              icon: n.createElement(Fa, null),
+              icon: n.createElement(Oa, null),
             }),
             n.createElement(Rn, {
               handle: "remoteplay_hub",
-              icon: n.createElement(Ta, null),
+              icon: n.createElement(Ea, null),
             }),
             n.createElement(Rn, {
               handle: "vr",
-              icon: n.createElement(Ea, null),
+              icon: n.createElement(Fa, null),
             }),
           ),
           n.createElement(
@@ -70299,16 +70327,16 @@
             null,
             n.createElement(Rn, {
               handle: "controller",
-              icon: n.createElement(Ia, null),
+              icon: n.createElement(Ta, null),
             }),
             n.createElement(Rn, {
               handle: "multiplayer_coop",
-              icon: n.createElement(Oa, null),
+              icon: n.createElement(La, null),
             }),
           ),
         );
       }
-      function Ia() {
+      function Ta() {
         return n.createElement(
           "svg",
           {
@@ -70323,7 +70351,7 @@
           }),
         );
       }
-      function Ta() {
+      function Ea() {
         return n.createElement(
           "svg",
           {
@@ -70337,7 +70365,7 @@
           }),
         );
       }
-      function Ea() {
+      function Fa() {
         return n.createElement(
           "svg",
           {
@@ -70351,7 +70379,7 @@
           }),
         );
       }
-      function Fa() {
+      function Oa() {
         return n.createElement(
           "svg",
           {
@@ -70367,7 +70395,7 @@
           }),
         );
       }
-      function Oa() {
+      function La() {
         return n.createElement(
           "svg",
           {
@@ -70381,8 +70409,8 @@
           }),
         );
       }
-      var La = r(97994);
-      function Wa(e) {
+      var Wa = r(97994);
+      function xa(e) {
         const {
             visible: t,
             closePopover: r,
@@ -70423,7 +70451,7 @@
           n.createElement(
             gr,
             {
-              className: La.PopoverContainer,
+              className: Wa.PopoverContainer,
               visible: t,
               msAnimationDuration: 100,
             },
@@ -70431,15 +70459,15 @@
               "div",
               {
                 className: mr()(
-                  La.Popover,
-                  Zt.TS.IN_MOBILE_WEBVIEW && La.MobileWebview,
+                  Wa.Popover,
+                  Zt.TS.IN_MOBILE_WEBVIEW && Wa.MobileWebview,
                 ),
               },
               n.createElement(
                 ce.Z,
                 {
                   "flow-children": "row",
-                  className: La.PopoverContent,
+                  className: Wa.PopoverContent,
                   onCancelButton: r,
                   ref: s,
                   onKeyDown: o,
@@ -70450,7 +70478,7 @@
           )
         );
       }
-      function xa() {
+      function ka() {
         return n.useMemo(() => {
           const e = Zt.TS.EREALM == nn.TU.k_ESteamRealmChina,
             t = ((r = Zt.iA.country_code), ks.includes(r) || js.includes(r));
@@ -70466,7 +70494,7 @@
           ].filter(Boolean);
         }, []);
       }
-      function ka(e) {
+      function ja(e) {
         const {
             activeSection: t,
             closePopover: r,
@@ -70478,7 +70506,7 @@
         return (
           t && (o.current = t),
           n.createElement(
-            Wa,
+            xa,
             {
               visible: void 0 !== t,
               closePopover: r,
@@ -70486,11 +70514,11 @@
               refActiveButton: a,
             },
             o.current &&
-              n.createElement(ja, { section: o.current, visibleSections: i }),
+              n.createElement(Da, { section: o.current, visibleSections: i }),
           )
         );
       }
-      function ja(e) {
+      function Da(e) {
         const { section: t, visibleSections: r } = e;
         return n.createElement(
           He.Ay,
@@ -70502,15 +70530,15 @@
                   ? n.createElement(Ln, null)
                   : n.createElement(Jn, null);
               case "recommendations":
-                return n.createElement(sa, null);
+                return n.createElement(aa, null);
               case "categories":
                 return n.createElement(ys, null);
               case "hardware":
                 return n.createElement(Ps, null);
               case "waystoplay":
-                return n.createElement(va, null);
+                return n.createElement(Ra, null);
               case "specialsections":
-                return n.createElement(fa, null);
+                return n.createElement(ba, null);
               case "more":
                 return n.createElement(Vs, { excludedSections: t });
               default:
@@ -70519,7 +70547,7 @@
           })(t, r),
         );
       }
-      function Da(e) {
+      function Pa(e) {
         const { section: t } = e;
         switch (t) {
           case "browse":
@@ -70527,7 +70555,7 @@
               ? n.createElement(Pn, null)
               : n.createElement(rs, null);
           case "recommendations":
-            return n.createElement(aa, null);
+            return n.createElement(oa, null);
           case "categories":
             return n.createElement(Ms, null);
           case "hardware":
@@ -70540,15 +70568,15 @@
             return (0, mt.z_)(t, `unhandled section ${t}`), null;
         }
       }
-      var Pa = r(40236),
-        Aa = r(56603);
-      const Ua = n.memo(function (e) {
+      var Aa = r(40236),
+        Ua = r(56603);
+      const qa = n.memo(function (e) {
         const { refPage: t } = e,
           [r, i] = n.useState(),
           [s, a] = n.useState(() =>
             Zt.TS.IN_MOBILE_WEBVIEW ? new Set() : void 0,
           ),
-          o = Na(),
+          o = Ga(),
           { bSearchVisible: l, openSearch: c, closeSearch: u } = rr(),
           m = n.useRef(null),
           d = n.useCallback(() => {
@@ -70578,7 +70606,7 @@
             feature: "",
           },
           n.createElement(
-            qa,
+            Na,
             { bShowBackdrop: l || !!r, closePopoverAndSearch: p, refPage: t },
             Zt.TS.IN_MOBILE_WEBVIEW
               ? n.createElement(Yi, null)
@@ -70592,7 +70620,7 @@
                     navRef: m,
                   },
                   n.createElement(
-                    Ga,
+                    Ha,
                     {
                       openPopover: g,
                       activeSection: r,
@@ -70610,12 +70638,12 @@
                   n.createElement(
                     "div",
                     { className: dr.RightButtons },
-                    !o && n.createElement(Va, null),
-                    n.createElement(Za, null),
-                    n.createElement($a, null),
+                    !o && n.createElement(Za, null),
+                    n.createElement(Ka, null),
+                    n.createElement(Qa, null),
                   ),
                 ),
-            n.createElement(ka, {
+            n.createElement(ja, {
               activeSection: r,
               closePopover: d,
               visibleSections: s,
@@ -70623,10 +70651,10 @@
               refActiveButton: f,
             }),
           ),
-          n.createElement(Xa, { openMoreSection: _ }),
+          n.createElement(Ja, { openMoreSection: _ }),
         );
       });
-      function qa(e) {
+      function Na(e) {
         const {
             bShowBackdrop: t,
             closePopoverAndSearch: r,
@@ -70664,7 +70692,7 @@
           "scroll",
           n.useCallback((e) => w(window), [w]),
         );
-        const y = (0, Aa.P)(
+        const y = (0, Ua.P)(
             n.useCallback(
               (e) => {
                 const t = e.currentTarget;
@@ -70706,10 +70734,10 @@
                   }
                 );
               }, [e, r, t]),
-              (0, Pa.wY)(s)
+              (0, Aa.wY)(s)
             );
           })(i, o),
-          S = (0, Pa.wY)(
+          S = (0, Aa.wY)(
             n.useCallback((e) => {
               m(e.contentBoxSize[0].blockSize);
             }, []),
@@ -70765,10 +70793,10 @@
           ),
         );
       }
-      function Na() {
+      function Ga() {
         return !(0, s.Qn)();
       }
-      function Ga(e) {
+      function Ha(e) {
         const {
             openPopover: t,
             activeSection: r,
@@ -70779,7 +70807,7 @@
             children: l,
           } = e,
           c = n.useRef([]),
-          u = xa();
+          u = ka();
         c.current.length != u.length &&
           (c.current = u.map(() => n.createRef()));
         const {
@@ -70798,7 +70826,7 @@
                   : console.assert(!1, `Missing ref button ${e}`);
               i(r);
             }, [t, e]);
-            const o = (0, Pa.wY)(
+            const o = (0, Aa.wY)(
               n.useCallback((e) => {
                 a(e.contentBoxSize[0].inlineSize);
               }, []),
@@ -70809,7 +70837,7 @@
               refDynamicButtonContainer: o,
             };
           })(void 0 !== i, c.current),
-          g = Na(),
+          g = Ga(),
           _ = $t(),
           h = g && !_;
         let f;
@@ -70840,7 +70868,7 @@
             const m = r === f;
             f = l;
             const d = o ? cr("#Menu_Popover_Menu") : void 0;
-            return n.createElement(Ha, {
+            return n.createElement(Va, {
               key: l,
               section: l,
               label: d ?? u,
@@ -70870,7 +70898,7 @@
           l,
         );
       }
-      function Ha(e) {
+      function Va(e) {
         const {
             section: t,
             openPopover: r,
@@ -70924,10 +70952,10 @@
             ),
           ),
           n.createElement(Qt, null),
-          u && n.createElement(Da, { section: t }),
+          u && n.createElement(Pa, { section: t }),
         );
       }
-      function Va() {
+      function Za() {
         const e = (0, U.aL)(`${Zt.TS.STORE_BASE_URL}search/`);
         return n.createElement(
           Ce.Ii,
@@ -70940,7 +70968,7 @@
           lr.Localize("#Menu_Search"),
         );
       }
-      function Za() {
+      function Ka() {
         const e = (0, Y.LH)(),
           { data: t } = (function (e) {
             const t = (0, x.KV)();
@@ -70959,22 +70987,22 @@
                 focusClassName: dr.ButtonFocus,
                 href: r,
               },
-              n.createElement(Qa, { role: "presentation" }),
+              n.createElement(Ya, { role: "presentation" }),
               lr.Localize("#Menu_Wishlist"),
               void 0 !== t &&
                 t > 0 &&
-                n.createElement(Ka, null, t.toLocaleString()),
+                n.createElement($a, null, t.toLocaleString()),
             )
           : null;
       }
-      function Ka(e) {
+      function $a(e) {
         return n.createElement(
           "span",
           { className: mr()(dr.ItemCount, dr.safarionly) },
           e.children,
         );
       }
-      function $a() {
+      function Qa() {
         const { data: e } = (0, zt.aU)(),
           t = (0, U.aL)(`${Zt.TS.STORE_BASE_URL}cart/`);
         return e
@@ -70985,7 +71013,7 @@
                 focusClassName: dr.ButtonFocus,
                 href: t,
               },
-              n.createElement(Ya, null),
+              n.createElement(Xa, null),
               n.createElement(
                 "div",
                 { className: dr.safarionly },
@@ -70994,12 +71022,12 @@
               n.createElement(
                 "div",
                 { className: dr.safarionly },
-                e > 0 && n.createElement(Ka, null, e.toLocaleString()),
+                e > 0 && n.createElement($a, null, e.toLocaleString()),
               ),
             )
           : null;
       }
-      function Qa(e) {
+      function Ya(e) {
         return n.createElement(
           "svg",
           {
@@ -71032,7 +71060,7 @@
           ),
         );
       }
-      function Ya(e) {
+      function Xa(e) {
         return n.createElement(
           "svg",
           {
@@ -71047,7 +71075,7 @@
           }),
         );
       }
-      const Xa = n.memo(function (e) {
+      const Ja = n.memo(function (e) {
         const { openMoreSection: t } = e,
           { setTerm: r, openSearch: i, onActive: s, closeSearch: a } = rr(),
           o = (0, U.ru)("mobilesearch"),
@@ -71089,8 +71117,8 @@
           null
         );
       });
-      var Ja = r(12447);
-      function eo() {
+      var eo = r(12447);
+      function to() {
         const e = sr(lr),
           t = n.useRef(null),
           [r, i] = n.useState(null);
@@ -71112,39 +71140,39 @@
           ),
           e && r
             ? n.createElement(
-                Ja.u,
+                eo.u,
                 {
                   navID: "StoreMenu",
                   ref: s,
                   className: dr.StoreMenuNavWrapper,
                 },
-                n.createElement(Ua, { refPage: t }),
+                n.createElement(qa, { refPage: t }),
               )
             : null
         );
       }
-      var to = r(10034);
-      function ro(e) {
-        return $t() ? n.createElement(io, null) : e.children;
+      var ro = r(10034);
+      function io(e) {
+        return $t() ? n.createElement(no, null) : e.children;
       }
-      function io() {
+      function no() {
         const [e, t] = n.useState(null);
         return (
-          no(e?.parentElement?.parentElement, to.ResponsiveHeaderContent),
-          no(e?.parentElement?.parentElement, to.ElementTakeover),
+          so(e?.parentElement?.parentElement, ro.ResponsiveHeaderContent),
+          so(e?.parentElement?.parentElement, ro.ElementTakeover),
           n.createElement(
             "div",
-            { className: mr()(to.SearchContainer), ref: t },
+            { className: mr()(ro.SearchContainer), ref: t },
             n.createElement(Ji, { bBackdropActive: !1 }),
           )
         );
       }
-      function no(e, t) {
+      function so(e, t) {
         n.useLayoutEffect(() => {
           if (e && t) return e.classList.add(t), () => e.classList.remove(t);
         }, [e, t]);
       }
-      const so = n.lazy(() =>
+      const ao = n.lazy(() =>
         Promise.all([
           r.e(8970),
           r.e(6597),
@@ -71167,7 +71195,7 @@
           r.e(9672),
         ]).then(r.bind(r, 5907)),
       );
-      function ao(e) {
+      function oo(e) {
         const { children: t } = e,
           [r, i] = n.useState(),
           s = n.useCallback(
@@ -71197,24 +71225,24 @@
                 n.createElement(
                   n.Suspense,
                   { fallback: null },
-                  n.createElement(so, { ...r, fnCloseModal: a }),
+                  n.createElement(ao, { ...r, fnCloseModal: a }),
                 ),
               ),
             ),
           t,
         );
       }
-      var oo = r(31292);
-      let lo = 0;
-      function co(e) {
+      var lo = r(31292);
+      let co = 0;
+      function uo(e) {
         return n.lazy(async function () {
-          let t = lo++,
+          let t = co++,
             r = performance.now();
           performance.mark(`reactLazyLoad${t}`);
           const i = await e();
           return (
-            (0, oo.D)() &&
-              ((0, oo.D)().m_stats.firstReactLazyLoad ??=
+            (0, lo.D)() &&
+              ((0, lo.D)().m_stats.firstReactLazyLoad ??=
                 performance.now() - r),
             performance.measure(`reactLazyLoad${t}`, {
               start: `reactLazyLoad${t}`,
@@ -71223,7 +71251,7 @@
           );
         });
       }
-      const uo = co(() =>
+      const mo = uo(() =>
           Promise.all([
             r.e(7403),
             r.e(9214),
@@ -71235,7 +71263,7 @@
             r.e(976),
           ]).then(r.bind(r, 98425)),
         ),
-        mo = co(() =>
+        po = uo(() =>
           Promise.all([
             r.e(6597),
             r.e(5979),
@@ -71249,7 +71277,7 @@
             r.e(2634),
           ]).then(r.bind(r, 9555)),
         ),
-        po = co(() =>
+        go = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71286,7 +71314,7 @@
             r.e(7333),
           ]).then(r.bind(r, 72256)),
         ),
-        go = co(() =>
+        _o = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71309,7 +71337,7 @@
             r.e(8396),
           ]).then(r.bind(r, 74968)),
         ),
-        _o = co(() =>
+        ho = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71347,7 +71375,7 @@
             r.e(6855),
           ]).then(r.bind(r, 9678)),
         ),
-        ho = co(() =>
+        fo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71385,7 +71413,7 @@
             r.e(970),
           ]).then(r.bind(r, 34568)),
         ),
-        fo = co(() =>
+        bo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71423,8 +71451,8 @@
             r.e(3276),
           ]).then(r.bind(r, 44231)),
         ),
-        bo = co(() => Promise.all([r.e(2797), r.e(30)]).then(r.bind(r, 91648))),
-        Bo = co(() =>
+        Bo = uo(() => Promise.all([r.e(2797), r.e(30)]).then(r.bind(r, 91648))),
+        wo = uo(() =>
           Promise.all([
             r.e(6597),
             r.e(2797),
@@ -71436,8 +71464,8 @@
             r.e(3687),
           ]).then(r.bind(r, 87731)),
         ),
-        wo = co(() => r.e(1402).then(r.bind(r, 44899))),
-        yo = co(() =>
+        yo = uo(() => r.e(1402).then(r.bind(r, 44899))),
+        Mo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71455,7 +71483,7 @@
             r.e(716),
           ]).then(r.bind(r, 49271)),
         ),
-        Mo = co(() =>
+        Co = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71478,7 +71506,7 @@
             r.e(9672),
           ]).then(r.bind(r, 25054)),
         ),
-        Co = co(() =>
+        So = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71501,7 +71529,7 @@
             r.e(9672),
           ]).then(r.bind(r, 6804)),
         ),
-        So = co(() =>
+        vo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71539,7 +71567,7 @@
             r.e(970),
           ]).then(r.bind(r, 58426)),
         ),
-        vo = co(() =>
+        Ro = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71578,7 +71606,7 @@
             r.e(4268),
           ]).then(r.bind(r, 86252)),
         ),
-        Ro = co(() =>
+        zo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(9236),
@@ -71587,7 +71615,7 @@
             r.e(2516),
           ]).then(r.bind(r, 52069)),
         ),
-        zo = co(() =>
+        Io = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(2797),
@@ -71597,12 +71625,12 @@
             r.e(5068),
           ]).then(r.bind(r, 40917)),
         ),
-        Io = co(() =>
+        To = uo(() =>
           Promise.all([r.e(8970), r.e(2797), r.e(7436), r.e(6966)]).then(
             r.bind(r, 8685),
           ),
         ),
-        To = co(() =>
+        Eo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71618,7 +71646,7 @@
             r.e(6814),
           ]).then(r.bind(r, 51699)),
         ),
-        Eo = co(() =>
+        Fo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71637,7 +71665,7 @@
             r.e(5871),
           ]).then(r.bind(r, 11417)),
         ),
-        Fo = co(() =>
+        Oo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71672,8 +71700,8 @@
             r.e(8620),
           ]).then(r.bind(r, 57912)),
         ),
-        Oo = co(() => r.e(8843).then(r.bind(r, 71009))),
-        Lo = co(() =>
+        Lo = uo(() => r.e(8843).then(r.bind(r, 71009))),
+        Wo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71700,7 +71728,7 @@
             r.e(5894),
           ]).then(r.bind(r, 13164)),
         ),
-        Wo = co(() =>
+        xo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71727,7 +71755,7 @@
             r.e(8987),
           ]).then(r.bind(r, 35649)),
         ),
-        xo = co(() =>
+        ko = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71753,7 +71781,7 @@
             r.e(2965),
           ]).then(r.bind(r, 42976)),
         ),
-        ko = co(() =>
+        jo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71782,7 +71810,7 @@
             r.e(3027),
           ]).then(r.bind(r, 54954)),
         ),
-        jo = co(() =>
+        Do = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71822,7 +71850,7 @@
             r.e(2414),
           ]).then(r.bind(r, 14092)),
         ),
-        Do = co(() =>
+        Po = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71859,7 +71887,7 @@
             r.e(7333),
           ]).then(r.bind(r, 87669)),
         ),
-        Po = co(() =>
+        Ao = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71897,8 +71925,8 @@
             r.e(6855),
           ]).then(r.bind(r, 84428)),
         ),
-        Ao = co(() => r.e(7819).then(r.bind(r, 90428))),
-        Uo = co(() =>
+        Uo = uo(() => r.e(7819).then(r.bind(r, 90428))),
+        qo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71921,7 +71949,7 @@
             r.e(6991),
           ]).then(r.bind(r, 12813)),
         ),
-        qo = co(() =>
+        No = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71938,7 +71966,7 @@
             r.e(2469),
           ]).then(r.bind(r, 54393)),
         ),
-        No = co(() =>
+        Go = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71972,7 +72000,7 @@
             r.e(9297),
           ]).then(r.bind(r, 13643)),
         ),
-        Go = co(() =>
+        Ho = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -71992,7 +72020,7 @@
             r.e(9456),
           ]).then(r.bind(r, 21820)),
         ),
-        Ho = co(() =>
+        Vo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -72012,7 +72040,7 @@
             r.e(9456),
           ]).then(r.bind(r, 1593)),
         ),
-        Vo = co(() =>
+        Zo = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -72032,7 +72060,7 @@
             r.e(9456),
           ]).then(r.bind(r, 98162)),
         ),
-        Zo = co(() =>
+        Ko = uo(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -72052,10 +72080,10 @@
             r.e(9456),
           ]).then(r.bind(r, 84155)),
         );
-      function Ko(e) {
+      function $o(e) {
         return n.createElement(se.tH, null, n.createElement(Q.qh, { ...e }));
       }
-      function $o() {
+      function Qo() {
         return (
           (0, n.useEffect)(
             () => (
@@ -72067,7 +72095,7 @@
           null
         );
       }
-      function Qo(e) {
+      function Yo(e) {
         const [t, r] = n.useState(),
           [i, o] = n.useState(!1);
         return (
@@ -72110,16 +72138,16 @@
                   "div",
                   { className: $().App },
                   n.createElement(
-                    el,
+                    tl,
                     { storeUserConfig: t },
-                    n.createElement(tl, null),
+                    n.createElement(rl, null),
                     n.createElement(
                       n.Suspense,
-                      { fallback: n.createElement($o, null) },
+                      { fallback: n.createElement(Qo, null) },
                       n.createElement(
                         Q.dO,
                         null,
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.DiagData(),
                           render: (e) =>
@@ -72130,32 +72158,32 @@
                             }),
                         }),
                         n.createElement(
-                          Ko,
+                          $o,
                           { exact: !0, path: q.B.Login() },
                           n.createElement(Ge.X, {
                             config: {
-                              login: (e) => n.createElement(Io, { ...e }),
+                              login: (e) => n.createElement(To, { ...e }),
                             },
                           }),
                         ),
                         n.createElement(
-                          Ko,
+                          $o,
                           { exact: !0, path: q.B.OAuthLogin() },
                           n.createElement(Ge.X, {
                             config: {
-                              login: (e) => n.createElement(Io, { ...e }),
+                              login: (e) => n.createElement(To, { ...e }),
                             },
                           }),
                         ),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.AppStorePage(),
                           render: (e) =>
-                            n.createElement(po, {
+                            n.createElement(go, {
                               appid: parseInt(e.match.params.appid),
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.SaleLandingPage(),
                           render: (e) => {
@@ -72167,13 +72195,13 @@
                             return n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(Po, {
+                                  n.createElement(Ao, {
                                     key: `sale_${t}`,
                                     promotionName: `sale_${t}`,
                                     language: (0, l.sf)(s.TS.LANGUAGE),
                                   }),
                                 "broadcast-embed": () =>
-                                  n.createElement(go, {
+                                  n.createElement(_o, {
                                     key: `broadcastsale_${t}`,
                                     ...e,
                                     promotionName: t,
@@ -72182,44 +72210,44 @@
                             });
                           },
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.CuratorAdminEditPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-social-media-edit": (e) =>
-                                  n.createElement(bo, { ...e }),
+                                  n.createElement(Bo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.CuratorAdminEventLinkEditPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-events-link-edit": (e) =>
-                                  n.createElement(Bo, { ...e }),
+                                  n.createElement(wo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.CuratorAdminPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "curator-admin-rss": () =>
-                                  n.createElement(ho, null),
+                                  n.createElement(fo, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.CreatorSaleLandingPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(Po, {
+                                  n.createElement(Ao, {
                                     key:
                                       "salecreator_" +
                                       e.match.params.creatorPageName +
@@ -72232,7 +72260,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: [
                             q.B.RemotePlay(),
                             q.B.RemotePlayTogether(),
@@ -72243,16 +72271,16 @@
                             q.B.SubscriptionPlanLandingPage(),
                             q.B.GameRecording(),
                           ],
-                          render: (e) => n.createElement(Yo, null),
+                          render: (e) => n.createElement(Xo, null),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.CuratorHomePage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "broadcast-embed": () =>
-                                  n.createElement(go, {
+                                  n.createElement(_o, {
                                     key:
                                       "curatorbroadcast_" +
                                       s.GP.clanid +
@@ -72263,45 +72291,45 @@
                                     listid: s.GP.listid,
                                   }),
                                 "creatorhome-social-media-display": (e) =>
-                                  n.createElement(wo, { ...e }),
+                                  n.createElement(yo, { ...e }),
                                 "creator-home-event": (e) =>
-                                  n.createElement(fo, { ...e }),
+                                  n.createElement(bo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.CuratorListPage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "list-display": () =>
-                                  n.createElement(yo, {
+                                  n.createElement(Mo, {
                                     key: "curator_list",
                                     listid: e.match.params.listid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.CuratorAllOtherserPages(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "creatorhome-social-media-display": (e) =>
-                                  n.createElement(wo, { ...e }),
+                                  n.createElement(yo, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.PackageStorePage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "broadcast-embed": () =>
-                                  n.createElement(go, {
+                                  n.createElement(_o, {
                                     key:
                                       "packagebroadcast_" +
                                       e.match.params.subid,
@@ -72313,19 +72341,19 @@
                                   n.createElement(
                                     He.Ay,
                                     { feature: "recommended" },
-                                    n.createElement(Do, { ...e }),
+                                    n.createElement(Po, { ...e }),
                                   ),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.BundleStorePage(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "broadcast-embed": () =>
-                                  n.createElement(go, {
+                                  n.createElement(_o, {
                                     key:
                                       "bundlebroadcast_" +
                                       e.match.params.bundleid,
@@ -72338,13 +72366,23 @@
                                   n.createElement(
                                     He.Ay,
                                     { feature: "recommended" },
-                                    n.createElement(Do, { ...e }),
+                                    n.createElement(Po, { ...e }),
                                   ),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.NewsHub(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "event-calendar": () =>
+                                  n.createElement(Ro, null),
+                              },
+                            }),
+                        }),
+                        n.createElement($o, {
+                          path: q.B.EventAdmin(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
@@ -72353,82 +72391,72 @@
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
-                          path: q.B.EventAdmin(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "event-calendar": () =>
-                                  n.createElement(So, null),
-                              },
-                            }),
-                        }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.InteractiveRecommender(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
-                                recommender: () => n.createElement(Ro, null),
+                                recommender: () => n.createElement(zo, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.GameMixer(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
-                                gamemixer: () => n.createElement(Go, null),
+                                gamemixer: () => n.createElement(Ho, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.RecommenderDemos(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 recommenderdemos: () =>
-                                  n.createElement(Ho, null),
+                                  n.createElement(Vo, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.PersonalCalendar(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 personalcalendar: () =>
-                                  n.createElement(Vo, null),
+                                  n.createElement(Zo, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.LabsSandbox(),
-                          render: (e) => n.createElement(Zo, null),
+                          render: (e) => n.createElement(Ko, null),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.SteamCharts(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
-                                  n.createElement(jo, { ...e }),
+                                  n.createElement(Do, { ...e }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.Loyalty(),
                           render: () =>
                             n.createElement(Ge.X, {
                               config: {
-                                "points-shop": () => n.createElement(To, null),
+                                "points-shop": () => n.createElement(Eo, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -72439,7 +72467,7 @@
                             return n.createElement(Ge.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(Po, {
+                                  n.createElement(Ao, {
                                     key: "contenthub_" + t,
                                     promotionName: "contenthub_" + t,
                                     language: (0, l.sf)(s.TS.LANGUAGE),
@@ -72448,107 +72476,98 @@
                             });
                           },
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.Categories(),
                           render: () =>
                             n.createElement(Ge.X, {
                               config: {
-                                categories: () => n.createElement(_o, null),
+                                categories: () => n.createElement(ho, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.AccountPreferences(),
-                          render: (e) => n.createElement(mo, { ...e }),
+                          render: (e) => n.createElement(po, { ...e }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.SummerSale2021Story(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "forge-your-fate": () =>
-                                  n.createElement(Ao, null),
+                                  n.createElement(Uo, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           exact: !0,
                           path: q.B.LabsHome(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "discovery-queue-button": () =>
-                                  n.createElement(Mo, null),
+                                  n.createElement(Co, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.MarketingMessages(),
-                          render: (e) => n.createElement(Eo, { ...e }),
-                        }),
-                        n.createElement(Ko, {
-                          path: q.B.MeetSteamRoute(),
                           render: (e) => n.createElement(Fo, { ...e }),
                         }),
-                        n.createElement(Ko, {
-                          path: q.B.VerifiedProgram(),
-                          render: (e) => n.createElement(Uo, { ...e }),
+                        n.createElement($o, {
+                          path: q.B.MeetSteamRoute(),
+                          render: (e) => n.createElement(Oo, { ...e }),
                         }),
-                        n.createElement(Ko, {
-                          path: q.B.BundleListForApp(),
+                        n.createElement($o, {
+                          path: q.B.VerifiedProgram(),
                           render: (e) => n.createElement(qo, { ...e }),
                         }),
-                        n.createElement(Ko, {
-                          path: q.B.YearInReview(),
+                        n.createElement($o, {
+                          path: q.B.BundleListForApp(),
                           render: (e) => n.createElement(No, { ...e }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
+                          path: q.B.YearInReview(),
+                          render: (e) => n.createElement(Go, { ...e }),
+                        }),
+                        n.createElement($o, {
                           path: q.B.ShoppingCartAccountCartPurchaseRequested(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "react-root": () =>
+                                  n.createElement(xo, {
+                                    familyGroupID: e.match.params.familygroupid,
+                                  }),
+                              },
+                            }),
+                        }),
+                        n.createElement($o, {
+                          path: q.B.ShoppingCartPurchaseRequest(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
                                   n.createElement(Wo, {
                                     familyGroupID: e.match.params.familygroupid,
-                                  }),
-                              },
-                            }),
-                        }),
-                        n.createElement(Ko, {
-                          path: q.B.ShoppingCartPurchaseRequest(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "react-root": () =>
-                                  n.createElement(Lo, {
-                                    familyGroupID: e.match.params.familygroupid,
                                     requestID: e.match.params.requestid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.ShoppingCartGifts(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "react-root": () =>
-                                  n.createElement(xo, { initialStep: "gifts" }),
+                                  n.createElement(ko, { initialStep: "gifts" }),
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
                           path: q.B.ShoppingCart(),
-                          render: (e) =>
-                            n.createElement(Ge.X, {
-                              config: {
-                                "react-root": () => n.createElement(xo, null),
-                              },
-                            }),
-                        }),
-                        n.createElement(Ko, {
-                          path: q.B.SteamAwards(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
@@ -72556,21 +72575,30 @@
                               },
                             }),
                         }),
-                        n.createElement(Ko, {
-                          path: q.B.JoinMultiplayerSession(),
-                          render: (e) => n.createElement(zo, null),
+                        n.createElement($o, {
+                          path: q.B.SteamAwards(),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "react-root": () => n.createElement(jo, null),
+                              },
+                            }),
                         }),
-                        n.createElement(Ko, {
+                        n.createElement($o, {
+                          path: q.B.JoinMultiplayerSession(),
+                          render: (e) => n.createElement(Io, null),
+                        }),
+                        n.createElement($o, {
                           path: q.B.Home(),
                           render: (e) =>
                             n.createElement(Ge.X, {
                               config: {
                                 "discovery-queue-home": () =>
-                                  n.createElement(Co, null),
+                                  n.createElement(So, null),
                               },
                             }),
                         }),
-                        n.createElement(Ko, null, n.createElement(Ve.a, null)),
+                        n.createElement($o, null, n.createElement(Ve.a, null)),
                       ),
                     ),
                   ),
@@ -72579,13 +72607,13 @@
             : null
         );
       }
-      function Yo(e) {
+      function Xo(e) {
         const t = (0, Q.zy)().pathname.split("/").filter(Boolean).pop(),
           r = "sale_" + (t?.split("?")[0] || "unknown");
         return n.createElement(Ge.X, {
           config: {
             "sale-display": () =>
-              n.createElement(Po, {
+              n.createElement(Ao, {
                 key: r,
                 promotionName: r,
                 language: (0, l.sf)(s.TS.LANGUAGE),
@@ -72593,7 +72621,7 @@
           },
         });
       }
-      function Xo(e) {
+      function Jo(e) {
         const { children: t } = e,
           r = n.useCallback(() => (0, u.P)(), []),
           i = (0, _e.bs)(r),
@@ -72612,7 +72640,7 @@
           ),
         );
       }
-      function Jo(e) {
+      function el(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useRef(void 0);
         i.current || (i.current = new Z());
@@ -72631,11 +72659,11 @@
           )
         );
       }
-      const el = n.memo(function (e) {
+      const tl = n.memo(function (e) {
           const { storeUserConfig: t, children: r } = e,
             i = (0, s.Tc)("hwinfo", "application_config");
           return n.createElement(
-            Jo,
+            el,
             { storeUserConfig: t },
             n.createElement(
               ae.I.Provider,
@@ -72650,7 +72678,7 @@
                     bSteamDeck: i?.bSteamDeck ?? !1,
                   },
                   n.createElement(
-                    Xo,
+                    Jo,
                     null,
                     n.createElement(
                       c.s,
@@ -72664,7 +72692,7 @@
                           n.createElement(
                             Oe,
                             null,
-                            n.createElement(ao, null, r),
+                            n.createElement(oo, null, r),
                           ),
                         ),
                       ),
@@ -72675,7 +72703,7 @@
             ),
           );
         }),
-        tl = n.memo(function (e) {
+        rl = n.memo(function (e) {
           return n.createElement(
             n.Fragment,
             null,
@@ -72689,7 +72717,7 @@
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(uo, {
+                      n.createElement(mo, {
                         bResponsiveHeader: !1,
                         notifications: (0, s.Tc)(
                           "steam_notifications",
@@ -72701,7 +72729,7 @@
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(uo, {
+                      n.createElement(mo, {
                         bResponsiveHeader: !0,
                         notifications: (0, s.Tc)(
                           "steam_notifications",
@@ -72719,19 +72747,19 @@
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(Oo, null),
+                      n.createElement(Lo, null),
                     ),
                   "store-menu-v7": () =>
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(eo, null),
+                      n.createElement(to, null),
                     ),
                   "store-menu-responsive-search": () =>
                     n.createElement(
                       n.Suspense,
                       { fallback: null },
-                      n.createElement(ro, null),
+                      n.createElement(io, null),
                     ),
                 },
               }),
@@ -72748,13 +72776,13 @@
             }),
           );
         });
-      var rl = r(72034),
-        il = r(8812);
+      var il = r(72034),
+        nl = r(8812);
       r(52244);
       new Map();
-      var nl = r(14947),
-        sl = r(29248);
-      function al() {
+      var sl = r(14947),
+        al = r(29248);
+      function ol() {
         const e = [];
         return (
           Zt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
@@ -72763,7 +72791,7 @@
         );
       }
       r(64641);
-      (0, nl.jK)({ enforceActions: "never" }),
+      (0, sl.jK)({ enforceActions: "never" }),
         performance.mark("storeReactStartup");
       new PerformanceObserver((e) => {
         const t = e.getEntriesByType("navigation")[0];
@@ -72772,29 +72800,29 @@
           "responseEnd" in t &&
           "number" == typeof t.responseEnd &&
           t.responseEnd &&
-          (0, oo.D)()
+          (0, lo.D)()
         ) {
-          const e = ol - t.responseEnd;
-          (0, oo.D)().IncrementStat("storeReactStartup", e),
+          const e = ll - t.responseEnd;
+          (0, lo.D)().IncrementStat("storeReactStartup", e),
             performance.measure("storeReactStartup", {
               start: t.responseEnd,
               duration: e,
             });
         }
       }).observe({ type: "navigation", buffered: !0 });
-      let ol = performance.now();
-      let ll,
-        cl = !1;
-      function ul() {
-        if (!cl) {
+      let ll = performance.now();
+      let cl,
+        ul = !1;
+      function ml() {
+        if (!ul) {
           (0, s.XJ)("application_config").config
-            ? (ml(), (cl = !0))
+            ? (dl(), (ul = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function ml() {
-        ll ||
-          (ll = (async function (e) {
+      async function dl() {
+        cl ||
+          (cl = (async function (e) {
             0;
             const t = a.A0.GetLanguageFallback(e),
               i = e === t,
@@ -72813,28 +72841,28 @@
               { ...u, ...c, ...m, ...d },
             );
           })(s.TS.LANGUAGE)),
-          await ll;
+          await cl;
       }
-      ul(),
+      ml(),
         tt.oQ(async function () {
-          ul();
-          const e = (0, sl.zR)({ basename: (0, q.C)() });
-          (0, il.aj)().Init(
+          ml();
+          const e = (0, al.zR)({ basename: (0, q.C)() });
+          (0, nl.aj)().Init(
             "Store",
             CLSTAMP,
-            new rl.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-            { fnGetReportTags: al },
+            new il.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+            { fnGetReportTags: ol },
           ),
-            await ml(),
+            await dl(),
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
-                  .render(n.createElement(Qo, { history: e }))
+                  .render(n.createElement(Yo, { history: e }))
               : console.error('No "application_root" was found to target'),
-            (0, oo.D)() &&
-              (0, oo.D)().IncrementStat(
+            (0, lo.D)() &&
+              (0, lo.D)().IncrementStat(
                 "storeReactLocalizationReady",
-                performance.now() - ol,
+                performance.now() - ll,
               ),
             performance.measure("storeReactLocalizationReady", {
               start: "storeReactStartup",

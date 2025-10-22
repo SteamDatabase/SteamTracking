@@ -2366,14 +2366,14 @@ $J(document).ready(function() {
 				const $source = $pic.find("source");
 				const $img = $pic.find("img");
 
-				const gifSrc = $img.attr("src");
-				let posterSrc = $source.attr("srcset");
+				const pausedSrc = $img.attr("src");
+				let animatedSrc = $source.attr("srcset");
 
 				// store the source's srcset the first time we come through here so we have it after we change it
 				if (!$source.data('original-srcset')) {
-					$source.data('original-srcset', posterSrc);
+					$source.data('original-srcset', animatedSrc);
 				} else {
-					posterSrc = $source.data('original-srcset');
+					animatedSrc = $source.data('original-srcset');
 				}
 
 				// on first click, drop the media attribute so the source always applies
@@ -2381,7 +2381,7 @@ $J(document).ready(function() {
 					$source.removeAttr("media");
 				}
 
-				$source.attr("srcset", bPaused ? posterSrc : gifSrc);
+				$source.attr("srcset", bPaused ? pausedSrc : animatedSrc);
 				updatePlayPauseStyle($btnPlayPause, bPaused, false);
 
 				// force re-evaluation by replacing <img src> with a dummy and then back

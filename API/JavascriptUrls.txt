@@ -1583,6 +1583,7 @@ ${STORE_BASE_URL}notification/ajaxusersettings
 ${STORE_BASE_URL}online_conduct/
 ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
+${STORE_BASE_URL}personalcalendar/
 ${STORE_BASE_URL}personalcalendar/getrecommendations
 ${STORE_BASE_URL}phone/add
 ${STORE_BASE_URL}phone/manage
@@ -3233,7 +3234,7 @@ https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
-https://swarm.valve.org/changes/10171320
+https://swarm.valve.org/changes/10172395
 https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
@@ -3644,3 +3645,4 @@ url(${creator_page_bg_url})
 url(${dataUrl})
 url(${strTileURL})
 url(${url})
+url('${MEDIA_CDN_URL}labs/main/images/personal_calendar_menu_bg.png')

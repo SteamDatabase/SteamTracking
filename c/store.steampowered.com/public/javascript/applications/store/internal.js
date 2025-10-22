@@ -5862,14 +5862,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "PC_HideOwned",
-        _ = "PC_WishlistedOnly",
         _ = "PC_GameCount",
-        _ = {
-          selectedTag: 0,
-          bHideOwned: "1" == localStorage.getItem(_),
-          cResultsToShow: parseInt(localStorage.getItem(_) ?? "100"),
-          bShowOnlyWishlisted: "1" == localStorage.getItem(_),
-        };
+        _ = "PC_WishlistedDisplay";
+      var _;
+      !(function (_) {
+        (_[(_.Show = 0)] = "Show"),
+          (_[(_.Only = 1)] = "Only"),
+          (_[(_.Hide = 2)] = "Hide");
+      })(_ || (_ = {}));
+      const _ = {
+        selectedTag: 0,
+        bHideOwned: "1" == localStorage.getItem(_),
+        cResultsToShow: parseInt(localStorage.getItem(_) ?? "100"),
+        wishlistDisplay: parseInt(localStorage.getItem(_) ?? "0"),
+      };
       function _(_) {
         const { count: _ } = _;
         return _.createElement(
@@ -5960,6 +5966,16 @@
               },
               max: _,
             }),
+            _.createElement(_, {
+              wishlistDisplay: _.wishlistDisplay,
+              onChange: (_) => {
+                localStorage.setItem(_, _.toString()),
+                  __webpack_require__({
+                    ..._,
+                    wishlistDisplay: _,
+                  });
+              },
+            }),
             _.createElement(
               _._,
               {
@@ -5978,20 +5994,6 @@
                   },
                 },
                 (0, _._)("#PersonalCalendar_HideOwned"),
-              ),
-              _.createElement(
-                _,
-                {
-                  checked: _.bShowOnlyWishlisted,
-                  onChange: (_) => {
-                    localStorage.setItem(_, _ ? "1" : "0"),
-                      __webpack_require__({
-                        ..._,
-                        bShowOnlyWishlisted: _,
-                      });
-                  },
-                },
-                (0, _._)("#PersonalCalendar_ShowOnlyWishlisted"),
               ),
             ),
           ),
@@ -6086,6 +6088,52 @@
             options: _,
             value: _.toString(),
             onValueChange: (_) => __webpack_require__(parseInt(_)),
+            radius: "sm",
+          }),
+        );
+      }
+      function _(_) {
+        const { wishlistDisplay: _, onChange: __webpack_require__ } = _,
+          _ = (_) => {
+            switch (_) {
+              case _.Show:
+                return (0, _._)("#PersonalCalendar_WishlistShow");
+              case _.Hide:
+                return (0, _._)("#PersonalCalendar_WishlistHide");
+              case _.Only:
+                return (0, _._)("#PersonalCalendar_WishlistOnly");
+            }
+          },
+          _ = [_(_.Show), _(_.Hide), _(_.Only)];
+        return _.createElement(
+          _._,
+          {
+            className: _.ResultCountSelector,
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.Title,
+            },
+            (0, _._)("#PersonalCalendar_Wishlisted"),
+          ),
+          _.createElement(_, {
+            options: _,
+            value: _(_),
+            onValueChange: (_) =>
+              __webpack_require__(
+                ((_) => {
+                  switch (_) {
+                    case (0, _._)("#PersonalCalendar_WishlistShow"):
+                      return _.Show;
+                    case (0, _._)("#PersonalCalendar_WishlistHide"):
+                      return _.Hide;
+                    case (0, _._)("#PersonalCalendar_WishlistOnly"):
+                      return _.Only;
+                  }
+                  return _.Show;
+                })(_),
+              ),
             radius: "sm",
           }),
         );
@@ -6525,11 +6573,20 @@
                 const _ = Object.entries(_).map(([_, _]) => [
                   Number(_),
                   _.filter((_) => _.rank < _ && (!_ || !_.owned)).filter(
-                    (_) => !_ || _.wishlisted,
+                    (_) => {
+                      switch (_) {
+                        case _.Show:
+                          return !0;
+                        case _.Hide:
+                          return !_.wishlisted;
+                        case _.Only:
+                          return _.wishlisted;
+                      }
+                    },
                   ),
                 ]);
                 return Object.fromEntries(_);
-              })(_, _.cResultsToShow, _.bHideOwned, _.bShowOnlyWishlisted),
+              })(_, _.cResultsToShow, _.bHideOwned, _.wishlistDisplay),
               _ = [],
               _ = [];
             for (const _ of _)
@@ -6544,15 +6601,7 @@
                 lastWeekGames: _,
               }
             );
-          }, [
-            _,
-            _.cResultsToShow,
-            _.bHideOwned,
-            _.bShowOnlyWishlisted,
-            _,
-            _,
-            _,
-          ]);
+          }, [_, _.cResultsToShow, _.bHideOwned, _.wishlistDisplay, _, _, _]);
         return _.data && !_._.logged_in
           ? _.createElement(
               _._,

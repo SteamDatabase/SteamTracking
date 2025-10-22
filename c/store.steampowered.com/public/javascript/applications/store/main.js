@@ -309,6 +309,11 @@
         Description: "_1Wz57jagOh6dxI7GUA5igl",
         ButtonText: "_1fyDZMVLKzvHIle_9i4Lpq",
         _: "_1UYj3bhmlk9olzBLJiCHmC",
+        PersonalCalendar: "_2dIS9ODkn8rs_fsWh3kY8y",
+        New: "_2ZuAr_P2w3N45sg9qxA2Vc",
+        LeftColumn: "_2mvz1stG3mdVukklUl35CV",
+        RightColumn: "_3LsK4VSA6PZ96b2Yu-i-W9",
+        Peronal: "_3uSeeJg0ab5XxMoSQC4g3",
         RecommendationLinkColumn: "_3IuHjKAi2Q9E5QyD_-gc9w",
       };
     },
@@ -78212,6 +78217,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1200 1200",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "m126.84 1117.1h946.31c37.266-0.046875 67.5-30.281 67.547-67.547v-628.45h-1081.4v628.45c0.046875 37.266 30.281 67.5 67.547 67.547zm435-631.69h76.312c16.172 0.09375 29.297 13.219 29.297 29.391v76.359c0 16.172-13.125 29.25-29.297 29.25h-76.312c-16.172 0-29.297-13.078-29.297-29.25v-76.359c0-16.172 13.125-29.297 29.297-29.391zm198.84 0h76.312c16.172 0.09375 29.297 13.219 29.297 29.391v76.359c0 16.172-13.125 29.25-29.297 29.25h-76.312c-15.938-0.32812-28.688-13.312-28.688-29.25v-76.359c0-16.172 13.078-29.297 29.297-29.391zm-397.69 0h76.312c16.219 0.09375 29.297 13.219 29.297 29.391v76.359c0 16.172-13.125 29.25-29.297 29.25h-76.312c-16.172 0-29.297-13.078-29.297-29.25v-76.359c0-16.172 13.125-29.297 29.297-29.391zm198.84 210.61h76.312c16.172 0 29.297 13.125 29.297 29.297v76.453-0.046875c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.406c0-16.172 13.125-29.297 29.297-29.297zm198.84 0h76.312c16.172 0 29.297 13.125 29.297 29.297v76.453-0.046875c0 16.172-13.125 29.297-29.297 29.297h-76.312c-15.938-0.32812-28.688-13.359-28.688-29.297v-76.406c0-15.938 12.75-28.969 28.688-29.297zm-397.69 0h76.312c16.172 0 29.297 13.125 29.297 29.297v76.453-0.046875c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.406c0-16.172 13.125-29.297 29.297-29.297zm597-210.61h76.312c16.219 0.09375 29.297 13.219 29.297 29.391v76.359c-0.09375 16.125-13.125 29.203-29.297 29.25h-76.312c-16.172 0-29.344-13.078-29.391-29.25v-76.359c0-16.219 13.172-29.391 29.391-29.391zm0 210.61h76.312c16.172 0.046875 29.203 13.125 29.297 29.297v76.453-0.046875c-0.09375 16.172-13.125 29.25-29.297 29.297h-76.312c-16.172 0-29.344-13.078-29.391-29.297v-76.406c0.046874-16.219 13.219-29.297 29.391-29.297zm-795.84 0h75.844c16.172 0 29.344 13.078 29.391 29.297v76.453-0.046875c-0.046875 16.219-13.219 29.297-29.391 29.297h-75.844c-16.125-0.046875-29.203-13.125-29.297-29.297v-76.406c0.09375-16.172 13.172-29.25 29.297-29.297zm397.69 210.61h76.312c7.7812 0 15.234 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.312c0-16.172 13.125-29.297 29.297-29.297zm397.69 0h76.312c7.7812 0 15.234 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-75.844c-16.172 0-29.344-13.078-29.391-29.297v-76.312c0-7.7812 3.0938-15.281 8.625-20.766 5.4844-5.5312 12.984-8.625 20.766-8.625zm-198.84 0h76.312c7.7812 0 15.234 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-76.312c-15.984-0.32812-28.734-13.406-28.688-29.391v-76.219c0-16.172 13.125-29.297 29.297-29.297zm-397.69 0h76.312c7.7812 0 15.281 3.0938 20.766 8.625 5.4844 5.4844 8.5312 12.984 8.5312 20.766v76.312c0 16.172-13.125 29.297-29.297 29.297h-76.312c-16.172 0-29.297-13.125-29.297-29.297v-76.312c0-16.172 13.125-29.297 29.297-29.297zm-198.84 0h75.844c7.875-0.14062 15.469 2.9062 21.094 8.4375s8.7656 13.078 8.7656 20.953v76.312c-0.046874 7.8281-3.2344 15.328-8.8594 20.812-5.5781 5.4844-13.172 8.4844-21 8.3438h-75.844c-16.172 0-29.297-13.078-29.297-29.25v-76.219c0-16.172 13.125-29.297 29.297-29.297zm976.55-507.98v-175.4c-0.23437-37.172-30.375-67.172-67.547-67.219h-111.7v77.391c19.078 24.094 22.734 57 9.3281 84.703-13.359 27.656-41.391 45.281-72.141 45.281s-58.828-17.625-72.188-45.281c-13.406-27.703-9.75-60.609 9.3281-84.703v-77.391h-471.56v77.391c19.078 24.094 22.734 57 9.3281 84.703-13.359 27.656-41.438 45.281-72.188 45.281s-58.781-17.625-72.141-45.281c-13.406-27.703-9.75-60.609 9.3281-84.703v-77.391h-111.7c-37.172 0.046876-67.312 30.047-67.547 67.219v175.4zm-798.94-134.63c0 22.266-18.047 40.312-40.312 40.312-22.266 0-40.312-18.047-40.312-40.312v-140.76c0.046876-10.734 4.3594-21 12-28.547 11.578-11.438 28.875-14.859 43.922-8.625 15.047 6.2344 24.844 20.906 24.938 37.172v140.76zm516-140.63c0-22.266 18.047-40.312 40.312-40.312 10.734 0 20.953 4.3125 28.453 12 7.6406 7.5 11.953 17.812 12 28.547v140.39c-0.046876 10.688-4.4062 20.953-12 28.453-7.5 7.6406-17.719 12-28.453 12-22.078-0.42187-39.797-18.375-39.844-40.453z",
+            fillRule: "evenodd",
+          }),
+        );
+      }
       function _() {
         return _.createElement(
           _,
@@ -78320,70 +78340,84 @@
         );
       }
       function _() {
-        const _ = _(0);
-        return _()
-          ? _.createElement(
-              _._,
+        return _.createElement(
+          "div",
+          {
+            className: _()(_.DiscoveryQueue, _.PersonalCalendar),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.Background,
+            },
+            _.createElement("div", {
+              className: _.BackgroundImage,
+              style: {
+                backgroundImage: `url('${_._.MEDIA_CDN_URL}labs/main/images/personal_calendar_menu_bg.png')`,
+              },
+            }),
+            _.createElement("div", {
+              className: _.BackgroundOverlay,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.New,
+            },
+            _("#Menu_Section_Recommendations_New"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Content,
+            },
+            _.createElement(
+              "div",
               {
-                className: _.DiscoveryQueue,
-                href: `${_._.STORE_BASE_URL}explore/next/0`,
-                onClick: _,
-                onOKButton: _,
+                className: _.LeftColumn,
+              },
+              _.createElement(_, null),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.RightColumn,
               },
               _.createElement(
                 "div",
                 {
-                  className: _.Background,
+                  className: _.Title,
                 },
-                _.createElement("div", {
-                  className: _.BackgroundImage,
-                  style: {
-                    backgroundImage:
-                      "url('https://store.akamai.steamstatic.com/public/shared/images/joinsteam/new_login_bg_strong_mask.jpg')",
-                  },
-                }),
-                _.createElement("div", {
-                  className: _.BackgroundOverlay,
-                }),
+                _("#Menu_Section_Recommendations_PersonalCalendar"),
               ),
               _.createElement(
                 "div",
                 {
-                  className: _.Content,
+                  className: _.Description,
+                },
+                _("#Menu_Section_Recommendations_PersonalCalendar_Description"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  className: _.ActionButton,
+                  href: `${_._.STORE_BASE_URL}personalcalendar/`,
                 },
                 _.createElement(
-                  "div",
+                  "span",
                   {
-                    className: _.Title,
+                    className: _.ButtonText,
                   },
-                  _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.Description,
-                  },
-                  _("#Menu_Section_Recommendations_DiscoveryQueue_Description"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ActionButton,
-                  },
-                  _.createElement(
-                    "span",
-                    {
-                      className: _.ButtonText,
-                    },
-                    _(
-                      "#Menu_Section_Recommendations_DiscoveryQueue_ActionButton",
-                    ),
+                  _(
+                    "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
                   ),
-                  _.createElement(_, null),
                 ),
+                _.createElement(_, null),
               ),
-            )
-          : null;
+            ),
+          ),
+        );
       }
       const _ = {
           include_assets: !0,
