@@ -6348,17 +6348,19 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
-        constructor(_, _, _, _) {
+        constructor(_, _, _, _, _) {
           super(),
             (this.m_filesToUpload = _._.array()),
             (this.m_strUploadPath = null),
             (this.m_bSynchronousUpload = !1),
             (this.m_bTwoPhaseUpload = !1),
+            (this.m_bDirectTempStorageUpload = !1),
             (0, _._)(this),
             (this.m_strUploadPath = _),
             (this.m_rgImageOptions = (0, _._)(_)),
             (this.m_bSynchronousUpload = _),
-            (this.m_bTwoPhaseUpload = _);
+            (this.m_bTwoPhaseUpload = _),
+            (this.m_bDirectTempStorageUpload = _);
         }
         GetUploadPath() {
           return this.m_strUploadPath;
@@ -6436,10 +6438,9 @@
           return !1;
         }
         async UploadSingleImage(_, _, _, _) {
-          var _, _, _, _, _, _, _, _, _, _, _, _, _;
+          var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
           const _ = new FormData();
-          _.append("assetfile", _.file, _),
-            _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", _._.SESSIONID),
             _.append("elangauge", "" + _),
             _.append("originalname", _);
           const _ = _.GetCurrentImageOption();
@@ -6455,6 +6456,62 @@
           let _;
           _.append("mimetype", _);
           try {
+            if (this.m_bDirectTempStorageUpload) {
+              const _ = new FormData();
+              _.append("filesize", "" + _.file.size),
+                _.append("sessionid", _._.SESSIONID);
+              const _ =
+                  (0, _._)(this.m_strUploadPath, "ajax", "uploadurl") ||
+                  this.m_strUploadPath,
+                _ = await _().post(_, _, {
+                  withCredentials: !0,
+                  cancelToken: _,
+                });
+              if (
+                !(
+                  200 == (null == _ ? void 0 : _.status) &&
+                  1 ==
+                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                      ? void 0
+                      : _.success) &&
+                  _.data.file_path &&
+                  _.data.upload_url &&
+                  _.data.download_url
+                )
+              ) {
+                const _ =
+                  null !==
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                        ? void 0
+                        : _.msg) && void 0 !== _
+                    ? _
+                    : "Failed to find create place to upload source asset";
+                throw ((_ = _), new Error(_));
+              }
+              {
+                const _ = {
+                  "Content-Type": "application/octet-stream",
+                };
+                if (_.data.headers_for_upload)
+                  for (const _ of _.data.headers_for_upload)
+                    _[_.name] = _.value;
+                if (
+                  !(await _()
+                    .put(_.data.upload_url, _.file, {
+                      headers: _,
+                      cancelToken: _,
+                    })
+                    .then((_) => 200 == _.status || 201 == _.status)
+                    .catch(() => !1))
+                ) {
+                  const _ = "Failed to upload source asset";
+                  throw ((_ = _), new Error(_));
+                }
+                _.append("temp_file_path", _.data.file_path),
+                  _.append("temp_download_url", _.data.download_url);
+              }
+            } else _.append("assetfile", _.file, _);
             if (this.m_bTwoPhaseUpload) {
               const _ = (0, _._)(this.m_strUploadPath, "ajax", "async");
               (0, _._)(_, "upload path must contain ajax");
@@ -6466,13 +6523,24 @@
                 cancelToken: _,
               });
               if (
-                200 == (null == _ ? void 0 : _.status) &&
-                1 ==
+                200 != (null == _ ? void 0 : _.status) ||
+                1 !=
                   (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                     ? void 0
-                    : _.success) &&
-                _.data.requestID
+                    : _.success) ||
+                !_.data.requestID
               ) {
+                const _ =
+                  null !==
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                        ? void 0
+                        : _.msg) && void 0 !== _
+                    ? _
+                    : "Fail to setup upload of asset";
+                throw ((_ = _), new Error(_));
+              }
+              {
                 const _ = (0, _._)(this.m_strUploadPath, "ajax", "status"),
                   _ = {
                     sessionid: _._.SESSIONID,
@@ -6538,16 +6606,7 @@
                   "dev" == _._.WEB_UNIVERSE && console.log("Sleeping 500ms"),
                     await (0, _._)(500);
                 }
-              } else
-                (_ =
-                  null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.msg),
-                  "dev" == _._.WEB_UNIVERSE &&
-                    console.error(
-                      "Failed on begin async convert",
-                      null == _ ? void 0 : _.data,
-                    );
+              }
             } else {
               const _ = await _().post(this.m_strUploadPath, _, {
                 withCredentials: !0,
@@ -6613,12 +6672,13 @@
             rgSupportArtwork: _,
             rgRealmList: _,
             bTwoPhaseUpload: _,
+            bDirectTempStorageUpload: _,
           } = _,
           _ = _._.Get().GetCurEditLanguage(),
-          _ = (function (_, _, _, _) {
+          _ = (function (_, _, _, _, _) {
             const _ = (0, _._)(_ instanceof Array ? _ : [_]);
-            return _.useMemo(() => new _(_, _, _, _), [_, _, _, _]);
-          })(_, _, null != _ && _, null != _ && _);
+            return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
+          })(_, _, null != _ && _, null != _ && _, null != _ && _);
         return (
           _.useEffect(() => {
             _.GetUploadPath() != _ && _.SetUploadPath(_);
@@ -7085,6 +7145,7 @@
               "#Template_Section_MediaUpdate_DnD",
             ),
             bTwoPhaseUpload: !0,
+            bDirectTempStorageUpload: !0,
           }),
           _.createElement(_, {
             rgAssetLangs: _,
