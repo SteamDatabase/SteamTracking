@@ -12392,242 +12392,240 @@
             : _,
         );
       }
-      const _ = (0, _._)((_) => {
-          const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
-            [_] = (0, _._)(_, {}),
-            [_, _] = (0, _.useState)(() =>
-              !_ || (1 != _?.GetAppType() && 12 != _?.GetAppType())
-                ? _
-                : _.GetParentAppID() || _,
-            ),
-            _ = _ && _._.Get().BIsGameWishlisted(_),
-            _ = _ && _._.Get().BOwnsApp(_),
-            [_, _] = (0, _.useState)(!1),
-            _ = (0, _._)("GameHoverWishlistButton");
-          if (
-            ((0, _.useEffect)(() => {
-              (1 != _?.GetAppType() && 12 != _?.GetAppType()) ||
-                _(_.GetParentAppID() || _);
-            }, [_, _]),
-            _)
-          )
-            return null;
-          return _.createElement(
+      const _ = (0, _._)(function (_) {
+        const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
+          [_] = (0, _._)(_, {}),
+          [_, _] = (0, _.useState)(() =>
+            !_ || (1 != _?.GetAppType() && 12 != _?.GetAppType())
+              ? _
+              : _.GetParentAppID() || _,
+          ),
+          _ = _ && _._.Get().BIsGameWishlisted(_),
+          _ = _ && _._.Get().BOwnsApp(_),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)("GameHoverWishlistButton");
+        if (
+          ((0, _.useEffect)(() => {
+            (1 != _?.GetAppType() && 12 != _?.GetAppType()) ||
+              _(_.GetParentAppID() || _);
+          }, [_, _]),
+          _)
+        )
+          return null;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().WishlistButton, _),
+            onClick: async (_) => {
+              _.preventDefault(),
+                _.stopPropagation(),
+                _._.logged_in
+                  ? (_(!0),
+                    await _._.Get().UpdateGameWishlist(
+                      _,
+                      !_,
+                      __webpack_require__,
+                    ),
+                    _.token.reason || _(!1))
+                  : (0, _._)();
+            },
+          },
+          _ ? _.createElement(_.qnF, null) : _.createElement(_.T4m, null),
+          _.createElement(
             "div",
             {
-              className: (0, _._)(_().WishlistButton, _),
-              onClick: async (_) => {
-                _.preventDefault(),
-                  _.stopPropagation(),
-                  _._.logged_in
-                    ? (_(!0),
-                      await _._.Get().UpdateGameWishlist(
-                        _,
-                        !_,
-                        __webpack_require__,
-                      ),
-                      _.token.reason || _(!1))
-                    : (0, _._)();
-              },
+              className: (0, _._)(
+                _().WishlistButtonText,
+                _ && _().WishlistLoadingText,
+              ),
             },
-            _ ? _.createElement(_.qnF, null) : _.createElement(_.T4m, null),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().WishlistButtonText,
-                  _ && _().WishlistLoadingText,
-                ),
-              },
-              (0, _._)(_ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
-            ),
-          );
-        }),
-        _ = (_) => {
-          const { nCreatorAccountID: _ } = _,
-            [__webpack_require__, _] = (0, _._)(_),
-            { creatorHome: _ } = (0, _._)(_);
-          return _.createElement(
-            "div",
+            (0, _._)(_ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
+          ),
+        );
+      });
+      function _(_) {
+        const { nCreatorAccountID: _ } = _,
+          [__webpack_require__, _] = (0, _._)(_),
+          { creatorHome: _ } = (0, _._)(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().GameHoverCreatorFollowButtonCtn,
+          },
+          _.createElement(
+            "a",
             {
-              className: _().GameHoverCreatorFollowButtonCtn,
+              href: _?.GetCreatorHomeURL("developer"),
             },
-            _.createElement(
-              "a",
-              {
-                href: _?.GetCreatorHomeURL("developer"),
-              },
-              _.createElement("img", {
-                src: __webpack_require__
-                  ? (0, _._)(null, "medium")
-                  : _.avatar_medium_url,
-              }),
-            ),
-            _.createElement(_._, {
-              clanAccountID: _,
+            _.createElement("img", {
+              src: __webpack_require__
+                ? (0, _._)(null, "medium")
+                : _.avatar_medium_url,
             }),
-          );
-        },
-        _ = (0, _._)((_) => {
-          const {
-              info: _,
-              displayInfo: __webpack_require__,
-              name: _,
-              strStoreUrl: _,
-              elElementToAppend: _,
-              bShowDemoButton: _,
-              bHideBottomHalf: _,
-              bHidePrice: _,
-              bShowDeckCompatibilityDialog: _,
-              bUseSubscriptionLayout: _,
-              nCreatorAccountID: _,
-              bPreventNavigation: _,
-            } = _,
-            [_, _] = (0, _.useState)(!1),
-            [_, _] = (0, _.useState)(""),
-            [_] = (0, _._)(_._, (0, _._)(_.type), {
-              include_release: !0,
-              include_platforms: !0,
-              include_reviews: !0,
-              include_tag_count: 20,
-            }),
-            [_] = (0, _._)(
-              __webpack_require__._,
-              (0, _._)(__webpack_require__.type),
-              {
-                include_assets: !0,
-              },
-            ),
-            _ = !_ && !_ && !_,
-            _ = 0 == _?.GetStoreItemType();
-          return _.createElement(
-            "div",
+          ),
+          _.createElement(_._, {
+            clanAccountID: _,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            info: _,
+            displayInfo: __webpack_require__,
+            name: _,
+            strStoreUrl: _,
+            elElementToAppend: _,
+            bShowDemoButton: _,
+            bHideBottomHalf: _,
+            bHidePrice: _,
+            bShowDeckCompatibilityDialog: _,
+            bUseSubscriptionLayout: _,
+            nCreatorAccountID: _,
+            bPreventNavigation: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(""),
+          [_] = (0, _._)(_._, (0, _._)(_.type), {
+            include_release: !0,
+            include_platforms: !0,
+            include_reviews: !0,
+            include_tag_count: 20,
+          }),
+          [_] = (0, _._)(
+            __webpack_require__._,
+            (0, _._)(__webpack_require__.type),
             {
-              className: _().BottomShelf,
-              style: {
-                transform: _ && _ ? _ : "",
-              },
-              onMouseEnter: () => _(!0),
-              onFocus: () => _(!0),
-              onMouseLeave: () => _(!1),
-              onBlur: () => _(!1),
+              include_assets: !0,
             },
-            _.createElement(
-              "a",
-              {
-                href: _ ? null : _,
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-                className: _().Midline,
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CapsuleImageAnchorPoint,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().CapsuleImageCtn,
-                        _().WithCornerShine,
-                      ),
-                    },
-                    _.createElement("img", {
-                      loading: "lazy",
-                      src: _?.GetAssets().GetHeaderURL(),
-                      alt: _?.GetName(),
-                    }),
-                  ),
-                ),
-              Boolean(!_ && !_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Price,
-                  },
-                  _.createElement(_._, {
-                    info: _,
-                    onlyOneDiscountPct: !0,
-                  }),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().BottomShelfOffScreen,
-                ref: (_) => _(`translateY( -${_?.clientHeight || 0}px )`),
-              },
+          ),
+          _ = !_ && !_ && !_,
+          _ = 0 == _?.GetStoreItemType();
+        return _.createElement(
+          "div",
+          {
+            className: _().BottomShelf,
+            style: {
+              transform: _ && _ ? _ : "",
+            },
+            onMouseEnter: () => _(!0),
+            onFocus: () => _(!0),
+            onMouseLeave: () => _(!1),
+            onBlur: () => _(!1),
+          },
+          _.createElement(
+            "a",
+            {
+              href: _ ? null : _,
+              className: _().Midline,
+            },
+            Boolean(_) &&
               _.createElement(
                 "div",
                 {
-                  className: _().TextContent,
+                  className: _().CapsuleImageAnchorPoint,
                 },
                 _.createElement(
-                  "a",
+                  "div",
                   {
-                    href: _ ? null : _,
-                    target: _._.IN_CLIENT ? void 0 : "_blank",
+                    className: (0, _._)(
+                      _().CapsuleImageCtn,
+                      _().WithCornerShine,
+                    ),
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().GameTitle,
-                    },
-                    _?.GetName() || _,
-                  ),
+                  _.createElement("img", {
+                    loading: "lazy",
+                    src: _?.GetAssets().GetHeaderURL(),
+                    alt: _?.GetName(),
+                  }),
                 ),
-                Boolean(_) &&
-                  _.createElement(_, {
-                    rgTagIDs: _.GetTagIDs(),
-                  }),
-                Boolean(!_ && _) &&
-                  _.createElement(_, {
-                    appInfo: _,
-                  }),
-                Boolean(!_ && _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ReviewsAndRelease,
-                    },
-                    _.createElement(_._, {
-                      item: _,
-                      strClassName: _().PlatformDisplay,
-                    }),
-                    Boolean(_?.GetFormattedSteamReleaseDate()) &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ReleaseDate,
-                        },
-                        _?.GetFormattedSteamReleaseDate(),
-                      ),
-                  ),
-                _ &&
-                  _.createElement(_._, {
-                    info: _,
-                    className: _().DemoButton,
-                  }),
-                Boolean(_ && _) &&
-                  _.createElement(_._, {
-                    storeItem: _,
-                  }),
-                Boolean(_) && _,
-                Boolean(_ && _) &&
-                  _.createElement(_._, {
-                    appid: _._,
-                    bIsMuted: !1,
-                  }),
-                _ &&
-                  _.createElement(_, {
-                    nCreatorAccountID: _,
-                  }),
               ),
+            Boolean(!_ && !_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().Price,
+                },
+                _.createElement(_._, {
+                  info: _,
+                  onlyOneDiscountPct: !0,
+                }),
+              ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().BottomShelfOffScreen,
+              ref: (_) => _(`translateY( -${_?.clientHeight || 0}px )`),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().TextContent,
+              },
+              _.createElement(
+                "a",
+                {
+                  href: _ ? null : _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().GameTitle,
+                  },
+                  _?.GetName() || _,
+                ),
+              ),
+              Boolean(_) &&
+                _.createElement(_, {
+                  rgTagIDs: _.GetTagIDs(),
+                }),
+              Boolean(!_ && _) &&
+                _.createElement(_, {
+                  appInfo: _,
+                }),
+              Boolean(!_ && _) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ReviewsAndRelease,
+                  },
+                  _.createElement(_._, {
+                    item: _,
+                    strClassName: _().PlatformDisplay,
+                  }),
+                  Boolean(_?.GetFormattedSteamReleaseDate()) &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().ReleaseDate,
+                      },
+                      _?.GetFormattedSteamReleaseDate(),
+                    ),
+                ),
+              _ &&
+                _.createElement(_._, {
+                  info: _,
+                  className: _().DemoButton,
+                }),
+              Boolean(_ && _) &&
+                _.createElement(_._, {
+                  storeItem: _,
+                }),
+              Boolean(_) && _,
+              Boolean(_ && _) &&
+                _.createElement(_._, {
+                  appid: _._,
+                  bIsMuted: !1,
+                }),
+              _ &&
+                _.createElement(_, {
+                  nCreatorAccountID: _,
+                }),
             ),
-          );
-        }),
-        _ = (0, _._)((_) => {
+          ),
+        );
+      }
+      const _ = (0, _._)(function (_) {
           _.useEffect(() => {
             _._.Get().HintLoad();
           }, []);
@@ -12656,7 +12654,6 @@
                 "a",
                 {
                   href: _ ? null : _,
-                  target: _._.IN_CLIENT ? void 0 : "_blank",
                   className: _().TrailerAnchorStoreLink,
                 },
                 Boolean(_ && !_ && !_) &&
@@ -12715,7 +12712,7 @@
             _ || !_
               ? null
               : (0, _._)(`${_?.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
-          _ = _.createElement(_, {
+          _ = {
             info: _,
             displayInfo: _,
             name: __webpack_require__,
@@ -12723,7 +12720,6 @@
             strStoreUrl: _,
             elElementToAppend: _,
             bShowDemoButton: _,
-            bPreferDemoStorePage: _,
             bShowDeckCompatibilityDialog: _,
             bHideBottomHalf: _,
             bHidePrice: _,
@@ -12731,6 +12727,9 @@
             strSNR: _,
             nCreatorAccountID: _,
             bShowWishlistButton: _,
+          },
+          _ = _.createElement(_, {
+            ..._,
           });
         return _.createElement(
           _,
@@ -12784,36 +12783,28 @@
             nWidthMultiplier: _,
             children: _,
             className: _,
-            ..._
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = !_ && !_,
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0),
+          _ = _ ? "a" : "div";
         return _.createElement(
-          "div",
+          _,
           {
             "data-key": "hover div",
             className: (0, _._)(_().ItemHoverSource, _ && _().Selectable, _),
-            ..._,
             onMouseEnter: (_) => {
               _(!0), _(_.currentTarget);
             },
             onMouseLeave: () => _(!1),
-            onClick: _
-              ? (_) => {
-                  _(!1),
-                    (window.location.href = _),
-                    _.preventDefault(),
-                    _.stopPropagation();
-                }
-              : void 0,
             onTouchStart: () => _(!1),
             onKeyDown: (_) => {
               27 == _.keyCode &&
                 (_(!1), _.preventDefault(), _.stopPropagation());
             },
+            href: _,
           },
           _ &&
             _.createElement(
