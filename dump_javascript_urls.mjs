@@ -40,7 +40,8 @@ for await (const file of GetRecursiveFilesToParse()) {
 
 console.log("Found", allStrings.size, "strings");
 
-const strings = [...allStrings.values()].sort().join("\n") + "\n";
+const filteredStrings = [...allStrings.values()].filter(url => !url.startsWith("https://swarm.valve.org/changes/"));
+const strings = filteredStrings.sort().join("\n") + "\n";
 
 await writeFile("API/JavascriptUrls.txt", strings);
 

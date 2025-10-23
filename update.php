@@ -544,6 +544,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				str_starts_with( $OriginalFile, 'Scripts/WebUI/steammobile' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||
 				str_contains( $OriginalFile, '/legacy_web/' ) ||
+				str_contains( $OriginalFile, '/partnermenu/' ) ||
 				str_contains( $OriginalFile, '/applications/' )
 			)
 			{

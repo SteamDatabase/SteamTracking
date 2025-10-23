@@ -134,6 +134,7 @@ ${COMMUNITY_BASE_URL}${APPID ? _ : _}
 ${COMMUNITY_BASE_URL}${_ ? "?" : ""}${}${_ ? "&" : ""}${}
 ${COMMUNITY_BASE_URL}${_ ? "minigame/ajaxgetgameitemdefsforeditor" : "minigame/ajaxgetgameitemdefs"}
 ${COMMUNITY_BASE_URL}${_ ? _ : _}/
+${COMMUNITY_BASE_URL}${spoofProfileUrl}
 ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
@@ -987,7 +988,9 @@ ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}${}/ajaxstarttaxidentityworkflow/${partnerid}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
+${PARTNER_BASE_URL}/appsearch/suggestapps?json=1&apptype=1&term=${}
 ${PARTNER_BASE_URL}/contentdescriptors/editsurvey/${}
+${PARTNER_BASE_URL}/dashboard/?requestedPrimaryPublisher=${}
 ${PARTNER_BASE_URL}/doc/marketing/event_tools/stats
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
@@ -1000,6 +1003,7 @@ ${PARTNER_BASE_URL}actions/ajaxgetadminusers
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
 ${PARTNER_BASE_URL}actions/ajaxgetuserpartnerinfo
+${PARTNER_BASE_URL}actions/setlanguage/
 ${PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/
 ${PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
@@ -1042,6 +1046,7 @@ ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${appid}
+${PARTNER_BASE_URL}apps/landing/${id}
 ${PARTNER_BASE_URL}apps/landing/${store_item_id}
 ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/publishing/${}
@@ -3234,7 +3239,6 @@ https://store.steampowered.com/widget/${nAppId}/${nSubId}/
 https://store.steampowered.com/wintercomic/
 https://support.google.com/youtube/answer/72431
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
-https://swarm.valve.org/changes/10172472
 https://swarm.valve.org/files/Steam/rel/storefront/web_src/
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202

@@ -13,6 +13,7 @@ https://partner.steamgames.com/public/css/styles_landing.css?__TIME__&__CDN__
 https://partner.steamgames.com/public/css/styles_marketing.css?__TIME__&__CDN__
 https://partner.steamgames.com/public/css/styles_packages.css?__TIME__&__CDN__
 https://partner.steamgames.com/public/css/taxonomy_survey.css?__TIME__&__CDN__
+https://partner.steamgames.com/public/javascript/partnermenu/partnermenu.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/applications/community/avatarcrop.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/applications/community/broadcasts.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/applications/community/communityawardsapp.css?__TIME__&__CDN__
@@ -262,6 +263,7 @@ https://partner.steamgames.com/public/javascript/publishers.js?__TIME__&l=englis
 https://partner.steamgames.com/public/javascript/storeadmin.js?__TIME__&l=english&__CDN__
 https://partner.steamgames.com/public/javascript/taxonomy_survey.js?__TIME__&l=english&__CDN__
 https://partner.steamgames.com/public/javascript/useradmin.js?__TIME__&l=english&__CDN__
+https://partner.steamgames.com/public/javascript/partnermenu/partnermenu.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/apphub_home.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/apphub_workshop.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/applications/community/avatarcrop.js?__TIME__&l=english&__CDN__
