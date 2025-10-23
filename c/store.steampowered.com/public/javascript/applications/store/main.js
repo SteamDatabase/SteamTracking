@@ -313,7 +313,6 @@
         New: "_2ZuAr_P2w3N45sg9qxA2Vc",
         LeftColumn: "_2mvz1stG3mdVukklUl35CV",
         RightColumn: "_3LsK4VSA6PZ96b2Yu-i-W9",
-        Peronal: "_3uSeeJg0ab5XxMoSQC4g3",
         RecommendationLinkColumn: "_3IuHjKAi2Q9E5QyD_-gc9w",
       };
     },

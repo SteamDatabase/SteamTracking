@@ -102,7 +102,7 @@
       }
       function _(_) {
         const { storeItem: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(_.k_BundleSort_Popular),
+          [__webpack_require__, _] = (0, _.useState)(_.k_BundleSort_Price),
           _ = (function (_) {
             const _ = (0, _.useMemo)(
                 () => (0, _._)("bundle_list", "application_config"),
@@ -170,7 +170,7 @@
         const _ =
           _.GetAssets().GetLibraryHeroURL_2x() ??
           _.GetAssets().GetLibraryHeroURL() ??
-          _.GetAssets().GetPageBackgroundURL();
+          _.GetAssets().GetRawPageBackgroundURL();
         return _.createElement(
           "div",
           {
@@ -376,10 +376,6 @@
                 {
                   data: _.k_BundleSort_Name,
                   label: (0, _._)("#BundleList_SortBy_Name"),
-                },
-                {
-                  data: _.k_BundleSort_Popular,
-                  label: (0, _._)("#BundleList_SortBy_Popular"),
                 },
                 {
                   data: _.k_BundleSort_Price,
