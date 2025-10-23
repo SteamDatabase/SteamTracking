@@ -1164,7 +1164,7 @@ h2.incomplete {
 
 .AdminPageContent.FullWidth {
 	max-width: none;
-	width: auto;
+	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
 }

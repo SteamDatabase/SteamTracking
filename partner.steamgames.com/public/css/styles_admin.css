@@ -61,6 +61,9 @@
 .AdminPageContent.FullWidth {
     max-width: 100%;
 }
+.AdminPageContent.CollapseHeight {
+	min-height: unset;
+}
 .AdminPageContent.AppStatsOneColLayout {
     max-width: 1280px;
 }
@@ -4489,10 +4492,21 @@ img.category_icon {
 }
 
 #achievementTable tbody tr:nth-of-type(2n) {
-    background: #212121;
+    background: #ffffff12;
 }
 #achievementTable tbody tr td, #achievementTable th {
-    padding: 6px 4px;
+    padding: 8px 12px;
+	box-sizing: border-box;
+}
+
+#achievementTable tbody .selected {
+	background: #ffffff36;
+}
+
+#achievementTable tbody .selected input,
+#achievementTable tbody .selected select {
+	margin-bottom: 6px;
+	margin-right: 4px;
 }
 
 
