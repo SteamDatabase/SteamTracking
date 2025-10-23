@@ -69964,7 +69964,7 @@
             n.createElement("div", {
               className: na.BackgroundImage,
               style: {
-                backgroundImage: `url('${te.TS.MEDIA_CDN_URL}labs/main/images/personal_calendar_menu_bg.png')`,
+                backgroundImage: `url('${te.TS.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
               },
             }),
             n.createElement("div", { className: na.BackgroundOverlay }),

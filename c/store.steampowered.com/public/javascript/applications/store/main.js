@@ -78353,7 +78353,7 @@
             _.createElement("div", {
               className: _.BackgroundImage,
               style: {
-                backgroundImage: `url('${_._.MEDIA_CDN_URL}labs/main/images/personal_calendar_menu_bg.png')`,
+                backgroundImage: `url('${_._.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
               },
             }),
             _.createElement("div", {
