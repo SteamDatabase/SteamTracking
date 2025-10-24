@@ -103,6 +103,7 @@ message CMsgNetworkDevicesData {
 				optional string user_name = 7;
 				optional string password = 8;
 				optional int32 strength_raw = 9;
+				optional string band_filter = 10;
 			}
 
 			repeated .CMsgNetworkDevicesData.Device.Wireless.AP aps = 1;
@@ -150,6 +151,16 @@ message CMsgNetworkDeviceConnect {
 		.CMsgNetworkDeviceConnect.KnownAP ap_known = 2;
 		.CMsgNetworkDeviceConnect.CustomAP ap_custom = 3;
 	}
+}
+
+message CMsgNetworkDeviceSetOptions {
+	message Wireless {
+		required uint32 ap_id = 1;
+		optional bool is_autoconnect = 2;
+		optional string band_filter = 3;
+	}
+
+	optional .CMsgNetworkDeviceSetOptions.Wireless wireless = 2;
 }
 
 message CMsgStorageDevicesData {

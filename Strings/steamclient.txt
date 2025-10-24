@@ -3318,6 +3318,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1f.Q
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -3951,6 +3952,7 @@ $steammessages_parental_objects.proto"
 (\v2%.CMsgClientGetUserStatsResponse.Stats
 (\v2%.CMsgClientStatsUpdated.Updated_Stats
 (\v2%.CMsgNetworkDeviceConnect.Credentials
+(\v2%.CMsgNetworkDeviceSetOptions.Wireless
 (\v2%.CMsgRemoteClientBroadcastStatus.User
 (\v2%.CMsgSteamNetworkingICESessionSummary
 (\v2%.CMsgVideoGameRecordingRepresentation"
@@ -4709,6 +4711,7 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN4CNet24YieldingIPAddrToHostNameE10CIPAddressPcjEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet26YieldingHostStringToNetAdrEPKcR10CIPAndPortEUlvE_S3_E
 *23CInternalLambdaWorkItemIZN5CUser12SpawnProcessEPKcS2_S2_7CGameIDS2_jj13ELaunchSourcejRjiEUlvE_vE
+*23CInternalLambdaWorkItemIZZN21CNetworkManagerClient23RequestUpdateDeviceDataEjENKUlvE_clEvEUlvE_bE
 *5KS
 *9CFunctor0IZN18CSiteLicenseClient18RunLCSAuthenticateEvEUlvE_E
 *9CFunctor0IZN18CSiteLicenseClient23OnRemoteClientConnectedEP23RemoteClientConnected_tEUlvE_E
@@ -4828,6 +4831,7 @@ $steammessages_parental_objects.proto"
 *ZN18CSiteLicenseClient36YldStartConnectToSiteLicenseProviderERK10CIPAndPortRK8CSteamIDyE17RawSocketCallback
 *ZN18CSystemPerfManager27OnSystemDisplayStateChangedEP34SystemDisplayManagerStateUpdated_tEUlvE_
 *ZN19CRemoteClientDongle14RunDongleCheckEvEUlvE_
+*ZN21CNetworkManagerClient23RequestUpdateDeviceDataEjEUlvE_
 *ZN21CNetworkManagerClient28TriggerGalileoWifiWorkaroundEvEUlvE_
 *ZN21CNetworkManagerDevice19OnWifiSignalChangedEP14_NMAccessPointEUlvE_
 *ZN23CSystemPerfManagerLinux31SetRefreshRateExternallyManagedEbEUlvE_
@@ -6986,7 +6990,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/music/playbackcontroller.cpp
 /data/src/clientdll/networkdevicemanager.cpp
 /data/src/clientdll/networkdevicemanager_linux.cpp
-/data/src/clientdll/networkdevicemanager_linux.cpp:2396
+/data/src/clientdll/networkdevicemanager_linux.cpp:2490
+/data/src/clientdll/networkdevicemanager_linux.cpp:2755
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
@@ -10894,6 +10899,7 @@ $steammessages_parental_objects.proto"
 19CPowerFunctionCurve
 19CRemoteClientDongle
 19CServerHandshakeMsg
+19CSetAPSetOptionsJob
 19CShaderCacheImplAMD
 19CSoftPressActivator
 19CSteam3StreamParser
@@ -11164,7 +11170,6 @@ $steammessages_parental_objects.proto"
 20CReliablePacketQueue
 20CRemoteClientJobPing
 20CRemoteClientManager
-20CSetAPAutoconnectJob
 20CSetLEDColorWorkItem
 20CSetSpectatorModeMsg
 20CSetTargetBitrateMsg
@@ -11601,11 +11606,11 @@ $steammessages_parental_objects.proto"
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI18CSetWifiEnabledJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI19CDeleteCompatDirJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI19CPlaybackControllervET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
+23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI19CSetAPSetOptionsJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI20CDepotReconstructCtxvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI20CDisconnectDeviceJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI20CJobTestConnectivityvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI20CLoadFileContentsJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
-23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI20CSetAPAutoconnectJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI21CClientDRMDownloadJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI21CLoadLocalToolListJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
 23CInternalLambdaWorkItemIZ22YldThreadedRunFunctionI21CPruneOtherBucketsJobvET0_PKcPT_MS5_FS2_vEP15CWorkThreadPoolEUlvE_vE
@@ -12241,6 +12246,7 @@ $steammessages_parental_objects.proto"
 27CMsgNeedsSharedTexturePaint
 27CMsgNetworkDeviceIP4Address
 27CMsgNetworkDeviceIP6Address
+27CMsgNetworkDeviceSetOptions
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
@@ -13553,6 +13559,7 @@ $steammessages_parental_objects.proto"
 36CMsgControllerVirtualMenuPreviewInfo
 36CMsgFSEnumerateFollowingListResponse
 36CMsgNetworkDeviceConnect_Credentials
+36CMsgNetworkDeviceSetOptions_Wireless
 36CMsgRemoteClientBroadcastStatus_User
 36CMsgRemoteDeviceAuthorizationRequest
 36CMsgSteamNetworkingICESessionSummary
@@ -18152,7 +18159,6 @@ CAppData::BReadFromBuffer - Hash Check
 CAppData::BReadFromBuffer - KV ReadAsBinary
 CAppData::BReadFromBuffer - Text
 CAppInfoCache::BlockOnInitialization
-CAppInfoCache::GetOrAddAppData
 CAppInfoCacheReadFromDiskThread
 CAppInfoCacheReadFromDiskThread took %lld milliseconds to initialize
 CAppInfoCacheReadFromDiskThread took %lld milliseconds to initialize\n
@@ -19850,6 +19856,7 @@ CMsgNetworkDeviceIP4Address
 CMsgNetworkDeviceIP4Config
 CMsgNetworkDeviceIP6Address
 CMsgNetworkDeviceIP6Config
+CMsgNetworkDeviceSetOptions
 CMsgNetworkDevicesData
 CMsgNodeHasFocus
 CMsgNotifyUserActivation
@@ -20436,7 +20443,8 @@ CServerHandshakeMsg
 CServerList::RunFrame
 CServerPipe::SerializeCallbacks()
 CSetAPAutoconnectJob
-CSetAPAutoconnectJob::ThreadedSetAPAutoconnect
+CSetAPSetOptionsJob
+CSetAPSetOptionsJob::ThreadedSetOptions
 CSetActivityMsg
 CSetBitrateOverrideMsg
 CSetCapslockMsg
@@ -20817,7 +20825,6 @@ CUser::UpdateSteamControllerPlaytimeStats: Could not find most active slot.
 CUser::YieldingRunAllCDKeysFromApp
 CUserAppInfo::BGetDLCDataByIndex: unexpected appID %u, cached %u
 CUserAppInfo::GetAllAppsKVRaw
-CUserAppInfo::GetAppDataSectionKV
 CUserAppInfo::GetAppKVRaw
 CUserAppInfo::GetAvailableLaunchOptions
 CUserAppInfo::GetMultipleAppDataSections
@@ -20932,6 +20939,7 @@ CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
 CUtlSymbol
 CUtlSymbolTable
+CUx*
 CVProfile_ExitScope
 CVRConnectionReady
 CVRManager
@@ -22808,7 +22816,7 @@ DownloadType
 Downloaded %u apps via HTTP, %u KB (%u KB compressed)
 Downloading
 Downloading %u chunks (%llu bytes) for depot %u...
-Downloading %u chunks from depot %u
+Downloading %u chunks for depot %u (%llu)
 Downloading depot %u (%u files, %u MB) ... \n
 Downloading wrapped file\n
 Downloads not currently throttled\n
@@ -23843,6 +23851,7 @@ Error: Received data from a controller which isn't in Connected State!\n
 Error: failed to disable wireless power management: %d\n
 Error: failed to set TDP limit
 Error: pipewire: failed to initialize object: id:%u type:%s/%d
+Error: request to update device cached data failed: 0x%x
 Error=%s ErrorID=%d (0x%x) Line number=%d
 ErrorAppID
 ErrorHeadline
@@ -24234,6 +24243,8 @@ Failed to fetch settings for %u, rescheduling
 Failed to finalize manifest
 Failed to find all chunks for %s (%llu/%llu, flags %u)
 Failed to find chunk in file %s!
+Failed to find configset for serial: %s\n
+Failed to find configset when setting saved binding\n
 Failed to find delta sha reference in file %s!
 Failed to find time in logfile name
 Failed to find user in m_vecPUsers on DisconnectUser
@@ -25105,6 +25116,7 @@ GetAppConfigValue
 GetAppContentInfo
 GetAppData
 GetAppDataSection
+GetAppDataSectionKV
 GetAppDependencies
 GetAppDownloadQueueIndex
 GetAppFileChangelist
@@ -25746,6 +25758,7 @@ GetObviousConnectivityProblem
 GetOfflineLogonTicket
 GetOfflineMode
 GetOnlineFriendCount
+GetOrAddAppData
 GetOverlay
 GetOverlayBrowserInfo
 GetOverlayView
@@ -32780,6 +32793,7 @@ RequestSurveySchedule
 RequestTimedTrialStatus
 RequestTrade
 RequestUGCDetails
+RequestUpdateDeviceData
 RequestUserGroupStatus
 RequestUserInformation
 RequestUserStats
@@ -33962,6 +33976,8 @@ Set2ndFactorAuthCode
 SetAPICallResultWithoutPostingCallback
 SetAPIDebuggingActive
 SetAccountCommunityBanned
+SetAccountConfigSets failed - no details\n
+SetAccountConfigSets failed - no identity\n
 SetAccountLimited
 SetAccountNameForCachedCredentialLogin
 SetAchievement
@@ -33995,6 +34011,7 @@ SetAutoUpdateTimeRestrictionStartHour
 SetAutoconnect
 SetAvatarFrame
 SetBackgroundUpdateCheckInterval
+SetBandFilter
 SetBinary
 SetBinaryWatermarked
 SetBindingControllerType
@@ -34071,6 +34088,7 @@ SetDebugInstallDir
 SetDedicatedServer
 SetDefaultConfig
 SetDefaultNintendoButtonLayout
+SetDeviceOptions
 SetDevkitShortcut
 SetDisableOverlayScaling
 SetDiscovering
@@ -34356,7 +34374,6 @@ SetWallMessage
 SetWebUITransportWebhelperPID
 SetWifiEnabled
 SetWifiScanningEnabled
-SetWirelessEndpointAutoconnect
 SetWorkshopItemsDisabledLocally
 Setting MESA_GLSL_CACHE_DIR=%s MESA_DISK_CACHE_READ_ONLY_FOZ_DBS=%s
 Setting Poll Rate Limit: %u\n
@@ -34435,7 +34452,6 @@ Shutdown
 ShutdownApp
 ShutdownLauncher
 ShutdownLauncher_t
-ShutdownStreamClient
 ShutdownSystem
 Shutting down low level socket/threading support.\n
 Shutting down webhelper process %u
@@ -34780,7 +34796,7 @@ Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
 Start broadcast upload : %s (SessionID %llu)
 Start of Image
-Start validating appID %u
+Start validating appID %u on BuildID %u
 StartAutoReconnect() will start in %.1f seconds (attempt %d)
 StartBatch
 StartBigPictureForStreaming_t
@@ -35281,6 +35297,7 @@ StopInstallScript
 StopPlayingBorrowedApp_t
 StopPlaytimeTracking
 StopPlaytimeTrackingForAllItems
+StopRemoteClientStream
 StopStreaming
 StopStreamingSession
 StopStreamingUI_t
@@ -36020,6 +36037,7 @@ ThreadedSetFileReader
 ThreadedSetFileWriter
 ThreadedSpeakerTest
 ThreadedUpdateBatteryState
+ThreadedUpdateDeviceData
 ThreadedUpdateDockFirmware
 ThreadedValidateFiles worker
 ThreadedWriteCompletedDownload
@@ -36722,9 +36740,11 @@ UpdateUserPublishedItemVote
 UpdateWifiDeviceSignal
 Updated Disabled by app
 Updated SHAs with %u new access tokens
+UpdatesJob: apps still needs updates, run again\n
 UpdatesJob: canceled %u HTTP requests
 UpdatesJob: empty buffer for app %u
 UpdatesJob: finished %s, apps updated %u (%u KB), packages updated %u (%u KB)
+UpdatesJob: packages still needs updates, run again\n
 Updating external display refresh limits: %d - %d external: %d
 Updating workshop item info failed
 Upgrade
@@ -40435,6 +40455,7 @@ Zulu
 \n\vbForeground
 \n\vbIsRedirect
 \n\vbadge_level
+\n\vband_filter
 \n\vborrower_id
 \n\vbranch_name
 \n\vbuild_flags
@@ -41988,6 +42009,7 @@ balance_in_usd
 ban_check_result
 ban_expires_time
 ban_text_check_result
+band
 bandwidth_test
 bangla
 banned
@@ -50605,7 +50627,7 @@ lost/gained channels
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1609
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1759
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1964
-low-pri yield - /data/src/clientdll/appdatacache.cpp:871
+low-pri yield - /data/src/clientdll/appdatacache.cpp:882
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:645
 low-pri yield - /data/src/clientdll/autocloud.cpp:820
@@ -50615,12 +50637,20 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:467
 low-pri yield - /data/src/clientdll/clientjob.cpp:776
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2529
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3885
+low-pri yield - /data/src/clientdll/compatmanager.cpp:1959
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2232
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2527
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3198
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3230
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3243
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3295
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3902
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
-low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3072
+low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
 low-pri yield - /data/src/clientdll/peercontentserver.cpp:712
+low-pri yield - /data/src/clientdll/subscribedfilelistcache.cpp:368
+low-pri yield - /data/src/clientdll/subscribedfilelistcache.cpp:385
 low-pri yield - /data/src/clientdll/userscreenshots.cpp:2669
 low-pri yield - /data/src/clientdll/userscreenshots.cpp:2688
 lower
@@ -53898,6 +53928,7 @@ nm_connection_compare
 nm_connection_diff
 nm_connection_dump
 nm_connection_get_setting_connection
+nm_connection_get_setting_wireless
 nm_connection_get_type
 nm_connection_need_secrets
 nm_device_disconnect_async
@@ -53952,6 +53983,7 @@ nm_setting_ip_config_add_address
 nm_setting_ip_config_add_dns
 nm_setting_ip_config_get_type
 nm_setting_wired_new
+nm_setting_wireless_get_band
 nm_setting_wireless_new
 nm_setting_wireless_security_new
 nm_simple_connection_new
@@ -57895,7 +57927,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 16 2025 21:03:40
+steam Oct 23 2025 22:23:25
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -163,6 +163,7 @@
  3CQ`p
  7Me}
  = { <proto text format> }". To set fields within it, use syntax like "
+ A20CJSMethodCallHandlerI19CShutdownControllerJ9CSmartPtrI15CJSCallbackFuncEEE
  A33s?
  Accessibility/ScreenReaderLocale
  Accessibility/ScreenReaderVolume
@@ -375,6 +376,7 @@
 !STREAM_NEWER_PACKET_ID( cursorStart, outgoing.GetWindowStart() + outgoing.GetWindowSize() )
 !STREAM_OLDER_PACKET_ID( cursor, outgoing.GetWindowStart() )
 !STREAM_OLDER_PACKET_ID( cursorStart, outgoing.GetWindowStart() )
+!System/GameFrameRateReportEnabled
 !UI/Display/Current/MaxScaleFactor
 !UI/Display/Current/MinScaleFactor
 !V_isempty( svHostname )
@@ -1842,7 +1844,6 @@ ${LANGUAGE}
 %K3 QQ+
 %LibraryWhatsNewShowOnlyProductUpdates
 %SteamController_GenericGamepadSupport
-%System/GameFrameRateReporting/Enabled
 %WebStorage\Auth\AlwaysShowUserChooser
 %Y%m%d%H%M%S
 %Y%m%dT%H%M%SZ
@@ -1932,6 +1933,7 @@ ${LANGUAGE}
 %\n!k_EContentReportReason_OtherAbuse
 %\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
+%\n!k_EFrameRateReportEnabled_Enabled
 %\n!k_EGameRecordingErrorLowDiskSpace
 %\n!k_EGameRecordingType_NotRecording
 %\n!k_EGetChannelsAlgorithm_Developer
@@ -2471,6 +2473,7 @@ ${LANGUAGE}
 &\n"k_EExternalSaleEventType_Franchise
 &\n"k_EExternalSaleEventType_Publisher
 &\n"k_EFamilyGroupsTwoFactorMethodNone
+&\n"k_EFrameRateReportEnabled_Disabled
 &\n"k_EGameSearchResult_SearchCanceled
 &\n"k_EGpuDriverId_BroadcomProprietary
 &\n"k_EGpuDriverId_QualcommProprietary
@@ -3459,6 +3462,7 @@ ${LANGUAGE}
 (\v2$.google.protobuf.UninterpretedOption*\t
 (\v2%.CHIDMessageToRemote.DeviceDisconnectH
 (\v2%.CMsgNetworkDeviceConnect.Credentials
+(\v2%.CMsgNetworkDeviceSetOptions.Wireless
 (\v2%.CMsgRemoteClientBroadcastStatus.User
 (\v2%.CMsgVideoGameRecordingRepresentation"
 (\v2%.CRemoteClient_CancelPairing_ResponseH
@@ -4254,8 +4258,8 @@ ${LANGUAGE}
 *ZN19CSettingsController21OnProfileSlotsChangedEvEUlvE_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE0_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE1_
-*ZN19CSettingsController23RegisterSettingHandlersEvEUlbE4_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlfE3_
+*ZN19CSettingsController23RegisterSettingHandlersEvEUliE4_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUljE2_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlvE_
 *ZN19CSettingsController29SetForeignDefaultValueHandlerE10StringViewOSt8functionIFvP18CMsgSettingVariantEEEUlvE_
@@ -5913,6 +5917,7 @@ ${LANGUAGE}
 .EFamilyGroupsTwoFactorMethod
 .EFamilyGroupsTwoFactorMethod"l\n0CFamilyGroups_ConfirmInviteToFamilyGroup_Request
 .EFrameAccumulatedStat
+.EFrameRateReportEnabledB-
 .EGPUPerformanceLevel
 .EGRExportLimitTypeB%
 .EGRMode"
@@ -7445,6 +7450,7 @@ ${LANGUAGE}
 10CUtlMemoryIN20CMarketingController18MarketingMessage_tEE
 10CUtlMemoryIN20CMarketingController24ActiveMarketingMessage_tEE
 10CUtlMemoryIN21CGameStreamAudioMixer15AudioRecorder_tEE
+10CUtlMemoryIN21CRemotePlayController24DesktopStreamingLaunch_tEE
 10CUtlMemoryIN21CScheduledFunctionMgr15ScheduledItem_tEE
 10CUtlMemoryIN21CSteamUIAppController25PendingScreenshotAction_tEE
 10CUtlMemoryIN21CSteamUIAppController29PendingAchievementsCallback_tEE
@@ -7722,6 +7728,7 @@ ${LANGUAGE}
 10CUtlVectorIN20CMarketingController18MarketingMessage_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CMarketingController24ActiveMarketingMessage_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN21CGameStreamAudioMixer15AudioRecorder_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN21CRemotePlayController24DesktopStreamingLaunch_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN21CScheduledFunctionMgr15ScheduledItem_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN21CSteamUIAppController25PendingScreenshotAction_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN21CSteamUIAppController29PendingAchievementsCallback_tE10CUtlMemoryIS1_EE
@@ -9009,7 +9016,6 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI19CSettingsControllerJiEE
 20CJSMethodCallHandlerI19CSettingsControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI19CSettingsControllerJjbEE
-20CJSMethodCallHandlerI19CShutdownControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI19CShutdownControllerJEE
 20CJSMethodCallHandlerI19CShutdownControllerJbEE
 20CJSMethodCallHandlerI19CSteamURLControllerJPKc9CSmartPtrI15CJSCallbackFuncEEE
@@ -9070,6 +9076,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
@@ -9081,6 +9088,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI21CRemotePlayControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJjEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJjPKc9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI21CRemotePlayControllerJjPKcS2_S2_EE
 20CJSMethodCallHandlerI21CRemotePlayControllerJjPKcb9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJjPKcj9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI21CRemotePlayControllerJjPKcjb9CSmartPtrI18CJSCallbackPromiseEEE
@@ -9238,8 +9246,8 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI25CSteamUINetworkControllerJiEE
 20CJSMethodCallHandlerI25CSteamUINetworkControllerJiPKcib9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI25CSteamUINetworkControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
+20CJSMethodCallHandlerI25CSteamUINetworkControllerJjPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI25CSteamUINetworkControllerJjj9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI25CSteamUINetworkControllerJjjb9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKcPK11CMsgJSValue9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI25CSteamUIStorageControllerJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
@@ -9379,7 +9387,7 @@ ${LANGUAGE}
 21CAPICallResultPromiseI35SystemManagerUpdateSettingsResult_tE
 21CAPICallResultPromiseI36RemoteStorageFileReadAsyncComplete_tE
 21CAPICallResultPromiseI36SystemManagerGetOSBranchListResult_tE
-21CAPICallResultPromiseI37NetworkDeviceSetAPAutoconnectResult_tE
+21CAPICallResultPromiseI37NetworkDeviceSetDeviceOptionsResult_tE
 21CAPICallResultPromiseI37RemoteStorageFileWriteAsyncComplete_tE
 21CAPICallResultPromiseI39SystemDockManagerUpdateFirmwareResult_tE
 21CAPICallResultPromiseI39SystemManagerGetCurrentOSBranchResult_tE
@@ -9835,6 +9843,7 @@ ${LANGUAGE}
 27CMsgNeedsSharedTexturePaint
 27CMsgNetworkDeviceIP4Address
 27CMsgNetworkDeviceIP6Address
+27CMsgNetworkDeviceSetOptions
 27CMsgPopupHTMLWindowResponse
 27CMsgProcessInfoNotification
 27CMsgRemoteClientStartStream
@@ -10639,6 +10648,7 @@ ${LANGUAGE}
 36CMsgControllerInputMouseWheelBinding
 36CMsgControllerVirtualMenuPreviewInfo
 36CMsgNetworkDeviceConnect_Credentials
+36CMsgNetworkDeviceSetOptions_Wireless
 36CMsgRemoteClientBroadcastStatus_User
 36CMsgRemoteDeviceAuthorizationRequest
 36CMsgVideoGameRecordingRepresentation
@@ -16024,6 +16034,7 @@ CMsgNetworkDeviceIP4Address
 CMsgNetworkDeviceIP4Config
 CMsgNetworkDeviceIP6Address
 CMsgNetworkDeviceIP6Config
+CMsgNetworkDeviceSetOptions
 CMsgNetworkDevicesData
 CMsgNodeHasFocus
 CMsgNotifyUserActivation
@@ -16428,6 +16439,7 @@ CRemotePlayController::OnRemoteClientRemotePlayBitrateOverride
 CRemotePlayController::OnRemoteClientRemotePlayClearControllers
 CRemotePlayController::OnRemoteClientRemotePlayControllerIndexSet
 CRemotePlayController::OnRemoteClientRemotePlayQualityOverride
+CRemotePlayController::OnRemoteClientStartStreamResult
 CRemotePlayController::OnRemoteClientStreamLifetime
 CRemotePlayController::OnRemoteClientStreamSessionUpdateNetworkUtilization
 CRemotePlayController::OnRemoteClientStreamingEnabledChanged
@@ -18744,6 +18756,7 @@ EFamilyGroupsTwoFactorMethod
 EFileIOError
 EForeignKeyAction
 EFrameAccumulatedStat
+EFrameRateReportEnabled
 EFriendRelationship
 EGCAction
 EGCStatus
@@ -19698,7 +19711,7 @@ Failed to send to shared fd client\n
 Failed to serialize clip file
 Failed to serialize survey keyvalues\n
 Failed to set SDR cert.  %s\n
-Failed to set device autoconnect state
+Failed to set device options
 Failed to set thumbnail for clip %s
 Failed to set wifi enabled state
 Failed to signal shared fd server\n
@@ -19980,7 +19993,7 @@ FvP35SystemManagerSelectOSBranchResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP35SystemManagerUpdateSettingsResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP36RemoteStorageFileReadAsyncComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP36SystemManagerGetOSBranchListResult_tb9CSmartPtrI18CJSCallbackPromiseEE
-FvP37NetworkDeviceSetAPAutoconnectResult_tb9CSmartPtrI18CJSCallbackPromiseEE
+FvP37NetworkDeviceSetDeviceOptionsResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP37RemoteStorageFileWriteAsyncComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP39SystemDockManagerUpdateFirmwareResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP39SystemManagerGetCurrentOSBranchResult_tb9CSmartPtrI18CJSCallbackPromiseEE
@@ -20941,6 +20954,7 @@ GameStream\HardwareVideoEncode
 GameStream_%u_%ux%u_%s.h264
 GameWebCallback
 Gamepad
+GamepadGuideButtonWatcher::OnControllerDisconnect
 GamepadGuideButtonWatcher::OnGamepadButtonsPressedChanged
 GamepadGuideButtonWatcher::OnLogonStateChange
 Games
@@ -24518,6 +24532,7 @@ N21CRemotePlayController47CCallbackInternal_OnCheckStreamingDriverSupportE
 N21CRemotePlayController47CCallbackInternal_OnRemoteClientDongleConnectedE
 N21CRemotePlayController47CCallbackInternal_OnStreamingClientDisconnectedE
 N21CRemotePlayController48CCallbackInternal_OnRemotePlayTogetherPlayerLeftE
+N21CRemotePlayController49CCallbackInternal_OnRemoteClientStartStreamResultE
 N21CRemotePlayController49CCallbackInternal_OnRemoteDevicePairingPINChangedE
 N21CRemotePlayController50CCallbackInternal_OnRemoteClientDongleDisconnectedE
 N21CRemotePlayController50CCallbackInternal_OnRemotePlayTogetherGroupCreatedE
@@ -24717,6 +24732,7 @@ N25CSteamUINetworkController48CCallbackInternal_OnNetworkConnectionStateChangeE
 N25CSteamUINetworkController50CCallbackInternal_OnNetFakeLocalSystemStateChangedE
 N25CVRPropertyChangeListener13ListenerSet_tE
 N25GamepadGuideButtonWatcher36CCallbackInternal_OnLogonStateChangeE
+N25GamepadGuideButtonWatcher40CCallbackInternal_OnControllerDisconnectE
 N25GamepadGuideButtonWatcher48CCallbackInternal_OnGamepadButtonsPressedChangedE
 N26CAddFavoriteServersByIPJob5QueryE
 N26CSteamUISharedJSController20FocusableAppWindow_tE
@@ -25749,7 +25765,7 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 16 2025 21:02:48
+Oct 23 2025 22:23:26
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -26149,7 +26165,7 @@ PFvP35SystemManagerSelectOSBranchResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP35SystemManagerUpdateSettingsResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP36RemoteStorageFileReadAsyncComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP36SystemManagerGetOSBranchListResult_tb9CSmartPtrI18CJSCallbackPromiseEE
-PFvP37NetworkDeviceSetAPAutoconnectResult_tb9CSmartPtrI18CJSCallbackPromiseEE
+PFvP37NetworkDeviceSetDeviceOptionsResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP37RemoteStorageFileWriteAsyncComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP39SystemDockManagerUpdateFirmwareResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP39SystemManagerGetCurrentOSBranchResult_tb9CSmartPtrI18CJSCallbackPromiseEE
@@ -27032,7 +27048,7 @@ Received packet with expected sequence %llu, dropped, failed HMAC calculation.\n
 Received packet with expected sequence %llu, dropped, failed HMAC comparison.\n
 Received packet with expected sequence %llu, dropped, failed decryption.\n
 Received packet with expected sequence %llu, dropped, too short.\n
-Received post-logon callback
+Received post-logon callback: L=%u,P=%u,A=%u,R=%u,C=%u,I=%u
 ReceivedNewGame
 ReceivedP2PCustomSignal failed
 ReceivedP2PCustomSignal returned false!  Bad signal?\n
@@ -27214,7 +27230,7 @@ RemotePlay.SetStreamingP2PScope
 RemotePlay.SetStreamingServerConfig
 RemotePlay.SetStreamingServerConfigEnabled
 RemotePlay.StartDesktopStream
-RemotePlay.StopStreamingClient
+RemotePlay.StopRemoteClientStream
 RemotePlay.StopStreamingSession
 RemotePlay.StopStreamingSessionAndSuspendDevice
 RemotePlay.UnlockH264
@@ -29421,8 +29437,8 @@ System.IsSteamInTournamentMode
 System.MoveFile
 System.Network.Device.Connect
 System.Network.Device.Disconnect
+System.Network.Device.SetOptions
 System.Network.Device.WirelessNetwork.Forget
-System.Network.Device.WirelessNetwork.SetAutoconnect
 System.Network.ForceRefresh
 System.Network.ForceTestConnectivity
 System.Network.GetProxyInfo
@@ -30618,6 +30634,7 @@ Uyghur
 Uzbek
 U|Ei
 V22dN::t
+V4L2
 V7\rl
 V8zc5\e
 V?wm\v
@@ -33282,6 +33299,7 @@ Zulu
 \n\vavatar_sha1
 \n\vbForeground
 \n\vbIsRedirect
+\n\vband_filter
 \n\vbranch_name
 \n\vbuild_flags
 \n\vbuild_notes
@@ -33677,7 +33695,6 @@ Zulu
 ]WICu
 ]XWRILCFup
 ][QWECIOmkagusy
-]\n game_framerate_reporting_enabled
 ]\n gamescope_game_resolution_global
 ]\n overlay_fps_counter_detail_level
 ]\n"accessibility_screen_reader_volume
@@ -38657,7 +38674,7 @@ game_description
 game_device_name
 game_device_type
 game_extra_info
-game_framerate_reporting_enabled
+game_framerate_report_enabled
 game_group_count
 game_groups_collapsed
 game_id
@@ -38841,7 +38858,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenN
+ggenn\rn
 ghost_
 gidlist
 gidparentcomment
@@ -43598,6 +43615,7 @@ k_EForumType_PublishedFile
 k_EForumType_ReportedPosts
 k_EForumType_Trading
 k_EForumType_Workshop
+k_EFrameRateReportEnabled_Unset
 k_EFrameStatCaptureDurationMS
 k_EFrameStatClientDurationMS
 k_EFrameStatConvertDurationMS
@@ -46827,6 +46845,7 @@ m_vecDashboardThumbnailChangeCallbacks
 m_vecDebugText
 m_vecDecryptedRecvBufferIndividualEnds
 m_vecDesiredWindows
+m_vecDesktopStreamingLaunches
 m_vecDiagnosticInfoChangeHandlers
 m_vecDisplayBrightnessChangeHandlers
 m_vecDownloadItems
