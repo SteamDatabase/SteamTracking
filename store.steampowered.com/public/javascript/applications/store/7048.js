@@ -12832,7 +12832,7 @@
             h.current && g(h.current.offsetWidth < 370);
           }, [h]);
           const f = Boolean(u && "sub" != t.type && "bundle" != t.type),
-            w = !l && !c && !f && s && s;
+            w = !l && !c && !f && s && n;
           return r.createElement(
             r.Fragment,
             null,
