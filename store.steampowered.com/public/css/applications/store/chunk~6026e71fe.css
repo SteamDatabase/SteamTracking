@@ -3159,9 +3159,14 @@ html.responsive.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
   color: #fff;
 }
 ._78Qv2C95AM2DNCuLD5o8U {
-  width: 220px;
+  width: calc((100% - 12px) / 2);
   position: relative;
   flex-shrink: 0;
+}
+@media screen and (max-width: 700px) {
+  ._78Qv2C95AM2DNCuLD5o8U {
+    width: 100%;
+  }
 }
 ._78Qv2C95AM2DNCuLD5o8U video {
   position: absolute;
@@ -3174,7 +3179,6 @@ html.responsive.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
   flex-direction: column;
   justify-content: center;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  width: 220px;
   background: rgba(255, 255, 255, 0.1);
   padding: 6px 12px;
 }
@@ -3199,20 +3203,6 @@ html.responsive.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
 }
 ._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
   max-height: 38px;
-}
-.widestore ._78Qv2C95AM2DNCuLD5o8U {
-  width: 275px;
-}
-html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
-  width: 220px;
-}
-@media screen and (max-width: 910px) {
-  html.responsive .widestore ._78Qv2C95AM2DNCuLD5o8U {
-    width: 220px;
-  }
-}
-.widestore ._2qz5D65VkY796Xw-al9f_a {
-  width: 100%;
 }
 ._5T6C7ESpj4ynwbH8LS101 {
   position: relative;

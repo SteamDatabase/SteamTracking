@@ -696,66 +696,64 @@
             bHasParentAppToDisplay: d,
             bIsHovered: u,
             strDoubleCapsuleMessage: g,
-            bPreferDemoStorePage: S,
+            bPreferDemoStorePage: _,
           } = e,
-          [E] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
-          C = (0, I.n9)(),
-          w = (0, R.w)(),
-          N = (0, r.useMemo)(() => E?.GetIncludedAppIDsOrSelf(), [E]);
-        if (!E) return null;
-        const A = (0, x.NT)(
-          (0, l.It)(`${E.GetStorePageURL(S)}${i ? `?${i}` : ""}`, C, w),
+          [S] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
+          E = (0, I.n9)(),
+          C = (0, R.w)(),
+          w = (0, r.useMemo)(() => S?.GetIncludedAppIDsOrSelf(), [S]);
+        if (!S) return null;
+        const N = (0, x.NT)(
+          (0, l.It)(`${S.GetStorePageURL(_)}${i ? `?${i}` : ""}`, E, C),
         );
-        let P;
+        let A;
         "overrideNavigation" in t &&
-          (P = (e) => (
+          (A = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const M = Boolean(g);
+        const P = Boolean(g);
         return r.createElement(
           r.Fragment,
           null,
           r.createElement(
             "div",
-            { className: _().CapsuleFocusCtn },
+            { className: (0, v.A)({ [D().TwoWidthCtn]: P }) },
             r.createElement(
-              "div",
-              { className: (0, v.A)({ [D().TwoWidthCtn]: M }) },
+              n.Ii,
+              {
+                href: A ? null : N,
+                style: { display: "block", cursor: "pointer" },
+                className: (0, v.A)({ [D().TwoWidthCapsule]: P }),
+                preferredFocus: d,
+                onClick: A,
+              },
+              r.createElement(y.V, { appids: w, hide_status_banners: a }),
+              "none" != c && r.createElement(h.aU, { imageType: c, info: t }),
+              r.createElement(b.J, { storeItem: S }),
+              Boolean(u) && r.createElement(f.m, { appInfo: t }),
+            ),
+            P &&
               r.createElement(
-                n.Ii,
+                "div",
                 {
-                  href: P ? null : A,
-                  style: { display: "block", cursor: "pointer" },
-                  className: (0, v.A)({ [D().TwoWidthCapsule]: M }),
-                  preferredFocus: d,
-                  onClick: P,
+                  className: (0, v.A)(D().TwoWidthSideInfo, "TwoWidthSideInfo"),
                 },
-                r.createElement(y.V, { appids: N, hide_status_banners: a }),
-                "none" != c && r.createElement(h.aU, { imageType: c, info: t }),
-                r.createElement(b.J, { storeItem: E }),
-                Boolean(u) && r.createElement(f.m, { appInfo: t }),
-              ),
-              M &&
+                r.createElement("div", { className: D().Reason }, g),
                 r.createElement(
                   "div",
-                  { className: D().TwoWidthSideInfo },
-                  r.createElement("div", { className: D().Reason }, g),
+                  { className: D().StoreSaleItemRelease },
                   r.createElement(
-                    "div",
-                    { className: D().StoreSaleItemRelease },
-                    r.createElement(
-                      "span",
-                      null,
-                      E.GetFormattedSteamReleaseDate(),
-                    ),
+                    "span",
+                    null,
+                    S.GetFormattedSteamReleaseDate(),
                   ),
-                  r.createElement(T.n, {
-                    bHideTitle: !0,
-                    rgTagIDs: E.GetTagIDs(),
-                    instanceNum: o,
-                  }),
                 ),
-            ),
+                r.createElement(T.n, {
+                  bHideTitle: !0,
+                  rgTagIDs: S.GetTagIDs(),
+                  instanceNum: o,
+                }),
+              ),
           ),
           r.createElement(k, { ...e }),
         );

@@ -148,10 +148,11 @@
     51249: (e) => {
       e.exports = {
         Header: "_1QLD0WY-y0hqefed0ZhMn1",
+        CarouselContentsRow: "_2CT-9HYp0yLUhxQviGsEM",
+        WithFollowSection: "_2qwt8I2HnbOSGvdebzv4hf",
         CreatorHomeWithItems: "XIDYByW4BEOm-YiOiwGmO",
         WithFollowBtn: "Md5hrkaRH5SlzG0VFNLCQ",
         Carousel: "_3FF8OOtLO0K4fsjePly_rQ",
-        CarouselFollowSection: "_3-Zh-Ypvsn0buzyWGzuOQf",
         Background: "_2Tqj7EzRCeIvjCq0R1MZiy",
         AvatarBackground: "_3SJGdY8UrEOW9-M8zAiXEi",
         ClanInfoRow: "_1KPIgTd9QjHihuus7qFfvw",
@@ -159,6 +160,7 @@
         CarouselFollowButton: "_33J1_MYWJVjXbCkBFCNr6f",
         ClanName: "_1l0-iEDSNo_iZ95BUT31hW",
         ClanAvatarImage: "PO1KWbUEvLt8ZVYRTAvMt",
+        CarouselFollowSection: "_3-Zh-Ypvsn0buzyWGzuOQf",
         CreatorHomeWithoutItems: "_24bEdzyRcz_FKDUqulljpX",
         ClanInfoColumn: "fL1BVr1TCO7p3NcU6YlxG",
         ClanFollowTitle: "cSNCliWjnECzm1QAZPjDw",
@@ -1735,7 +1737,7 @@
             mapAppIDsToCreatorClanID: s,
             strFeatureFirstAppMsg: i,
           } = e,
-          c = (0, te.a4)(1024),
+          c = (0, te.a4)(940),
           u = (0, _.Qn)(),
           [m, d] = (0, ne.TB)(n),
           { creatorHome: p } = (0, ae.FV)(n),
@@ -1796,26 +1798,35 @@
               a.createElement(oe.H, { url: l }),
             ),
           ),
-          a.createElement(oe._, {
-            navKey: "store_page_" + t,
-            classes: J().Carousel,
-            appIDs: o,
-            maxItemCount: v ? g : 4,
-            shrinkToFitItems: !0,
-            mapAppToCreatorClan: s,
-            strFeatureFirstAppMsg: i,
-            setNumberVisibleItems: E,
-          }),
-          v &&
-            a.createElement(
-              "div",
-              { className: J().CarouselFollowSection },
-              a.createElement(ue, {
-                clanID: n,
-                creatorName: p.GetName(),
-                creatorUrl: h,
-              }),
-            ),
+          a.createElement(
+            "div",
+            {
+              className: (0, V.A)(
+                J().CarouselContentsRow,
+                v && J().WithFollowSection,
+              ),
+            },
+            a.createElement(oe._, {
+              navKey: "store_page_" + t,
+              classes: J().Carousel,
+              appIDs: o,
+              maxItemCount: v ? g : 4,
+              shrinkToFitItems: !0,
+              mapAppToCreatorClan: s,
+              strFeatureFirstAppMsg: i,
+              setNumberVisibleItems: E,
+            }),
+            v &&
+              a.createElement(
+                "div",
+                { className: J().CarouselFollowSection },
+                a.createElement(ue, {
+                  clanID: n,
+                  creatorName: p.GetName(),
+                  creatorUrl: h,
+                }),
+              ),
+          ),
         );
       }
       function ce(e) {

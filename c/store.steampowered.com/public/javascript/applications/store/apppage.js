@@ -148,10 +148,11 @@
     chunkid: (module) => {
       module.exports = {
         Header: "_1QLD0WY-y0hqefed0ZhMn1",
+        CarouselContentsRow: "_2CT-9HYp0yLUhxQviGsEM",
+        WithFollowSection: "_2qwt8I2HnbOSGvdebzv4hf",
         CreatorHomeWithItems: "XIDYByW4BEOm-YiOiwGmO",
         WithFollowBtn: "Md5hrkaRH5SlzG0VFNLCQ",
         Carousel: "_3FF8OOtLO0K4fsjePly_rQ",
-        CarouselFollowSection: "_3-Zh-Ypvsn0buzyWGzuOQf",
         Background: "_2Tqj7EzRCeIvjCq0R1MZiy",
         AvatarBackground: "_3SJGdY8UrEOW9-M8zAiXEi",
         ClanInfoRow: "_1KPIgTd9QjHihuus7qFfvw",
@@ -159,6 +160,7 @@
         CarouselFollowButton: "_33J1_MYWJVjXbCkBFCNr6f",
         ClanName: "_1l0-iEDSNo_iZ95BUT31hW",
         ClanAvatarImage: "PO1KWbUEvLt8ZVYRTAvMt",
+        CarouselFollowSection: "_3-Zh-Ypvsn0buzyWGzuOQf",
         CreatorHomeWithoutItems: "_24bEdzyRcz_FKDUqulljpX",
         ClanInfoColumn: "fL1BVr1TCO7p3NcU6YlxG",
         ClanFollowTitle: "cSNCliWjnECzm1QAZPjDw",
@@ -1964,7 +1966,7 @@
             mapAppIDsToCreatorClanID: _,
             strFeatureFirstAppMsg: _,
           } = _,
-          _ = (0, _._)(1024),
+          _ = (0, _._)(940),
           _ = (0, _._)(),
           [_, _] = (0, _._)(__webpack_require__),
           { creatorHome: _ } = (0, _._)(__webpack_require__),
@@ -2045,28 +2047,37 @@
               }),
             ),
           ),
-          _.createElement(_._, {
-            navKey: "store_page_" + _,
-            classes: _().Carousel,
-            appIDs: _,
-            maxItemCount: _ ? _ : 4,
-            shrinkToFitItems: !0,
-            mapAppToCreatorClan: _,
-            strFeatureFirstAppMsg: _,
-            setNumberVisibleItems: _,
-          }),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().CarouselFollowSection,
-              },
-              _.createElement(_, {
-                clanID: __webpack_require__,
-                creatorName: _.GetName(),
-                creatorUrl: _,
-              }),
-            ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().CarouselContentsRow,
+                _ && _().WithFollowSection,
+              ),
+            },
+            _.createElement(_._, {
+              navKey: "store_page_" + _,
+              classes: _().Carousel,
+              appIDs: _,
+              maxItemCount: _ ? _ : 4,
+              shrinkToFitItems: !0,
+              mapAppToCreatorClan: _,
+              strFeatureFirstAppMsg: _,
+              setNumberVisibleItems: _,
+            }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().CarouselFollowSection,
+                },
+                _.createElement(_, {
+                  clanID: __webpack_require__,
+                  creatorName: _.GetName(),
+                  creatorUrl: _,
+                }),
+              ),
+          ),
         );
       }
       function _(_) {
