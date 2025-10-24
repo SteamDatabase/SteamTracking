@@ -11768,7 +11768,7 @@
       var Or = r(60727),
         jr = r(90024),
         qr = r.n(jr),
-        Nr = r(60155),
+        Nr = r(68451),
         Ur = r(53835),
         Er = r(81962),
         xr = r(283),
@@ -13823,7 +13823,7 @@
       }
       (0, i.Cg)([d.oI], B.prototype, "BindCanvasRef", null),
         (0, i.Cg)([d.oI], B.prototype, "updateCanvas", null);
-      var g = r(60155),
+      var g = r(68451),
         _ = r(16569),
         p = r(90740),
         b = r(52038);

@@ -1629,6 +1629,50 @@ function SetReviewTopicFilter( strTopicId, bSet )
 	ShowFilteredReviews();
 }
 
+function HighlightReviewTopic( strParentElementId, nTopicId, bHighlight )
+{
+	CSS.highlights.delete("TopicHighlight");
+
+	if ( bHighlight )
+	{
+		const parent = $J( "#" + strParentElementId );
+		const nParentBottom = parent[0].getBoundingClientRect().bottom;
+
+		let bHiddenElement = false;
+		let jqFragments = parent.find( "span.generic_highlight" ).filter( ( _, span ) =>
+		{
+			try
+			{
+				const rTypes = $J( span ).data( "type" );
+				const bMatching = rTypes.includes( nTopicId );
+				if ( bMatching && span.getBoundingClientRect().top > nParentBottom )
+					bHiddenElement = true;
+				return bMatching;
+			}
+			catch
+			{
+				return false;
+			}
+		} );
+
+		const ranges = $J( jqFragments ).map( ( _, node ) =>
+		{
+			const range = document.createRange();
+			range.selectNodeContents( node );
+			return range;
+		} ).get();
+
+		if ( bHiddenElement )
+		{
+			const range = document.createRange();
+			range.selectNodeContents( parent.find( ".view_more" )[0] );
+			ranges.push( range )
+		}
+		const highlight = new Highlight( ...ranges );
+		CSS.highlights.set( "TopicHighlight", highlight );
+	}
+}
+
 function CollapseLongReviews()
 {
 	$J('.review_box').each( function(j, i){

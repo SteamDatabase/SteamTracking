@@ -1,64 +1,64 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -3623,6 +3623,8 @@ var _ = "Rw6LA9h-aQg-";
 var _ = "VpezFJtD5Jk-";
 var _ = "P-RpS3TL4ck-";
 var _ = "_3tjjTZcUesk-";
+var _ = _(_(), 1),
+  _ = _(_(), 1);
 var _ = "zMIGQslm-QQ-";
 var _ = "cewzj0KMkus-";
 var _ = "_3nkzqYA4FK4-";
@@ -3641,8 +3643,6 @@ var _ = "uk8N4gUn-8w-";
 var _ = "_4gbfFObQAhE-";
 var _ = "_0jWrovn7F2Q-";
 var _ = _(_(), 1);
-var _ = _(_(), 1);
-var _ = _(_(), 1);
 function _(_) {
   let _ = _();
   return (0, _.jsx)(_, {
@@ -3660,8 +3660,7 @@ function _(_) {
 }
 function _(_) {
   let { title: _, children: _ } = _;
-  return (0, _.jsxs)(_, {
-    "flow-children": "row",
+  return (0, _.jsxs)("div", {
     className: _,
     children: [
       (0, _.jsx)(_, {
@@ -3705,6 +3704,7 @@ function _(_) {
         className: _,
         onClick: _.onClick,
         onOKButton: _.onClick,
+        focusable: _.focusable,
         children: _.children,
       });
 }
@@ -3731,9 +3731,9 @@ var _ = _.default.memo(function (_) {
       })
     : null;
 });
-function _() {
+function _(_) {
   return (0, _.jsx)("hr", {
-    className: _,
+    className: (0, _.default)(_.className, _),
   });
 }
 function _(_) {
@@ -3806,6 +3806,20 @@ function _(_) {
     className: _,
     href: _,
     children: [_, (0, _.jsx)(_, {})],
+  });
+}
+function _(_) {
+  let {
+    onClick: _,
+    children: _ = (0, _.jsxs)(_.Fragment, {
+      children: [_("#Menu_Popover_ViewAll"), " ", (0, _.jsx)(_, {})],
+    }),
+  } = _;
+  return (0, _.jsx)(_, {
+    className: _,
+    onClick: _,
+    onOKButton: _,
+    children: _,
   });
 }
 function _() {
@@ -4936,19 +4950,27 @@ var _ = "i0CnQqTCYIQ-";
 var _ = "jLuOSBgXneI-";
 var _ = "O-5tWVDApEQ-";
 var _ = "pFyqFohCcGg-";
+var _ = "qr3h0eT1zZI-";
+var _ = "jV8uzTf8qKA-";
+var _ = "AIHKZWpmgok-";
 var _ = _(_(), 1);
 function _() {
+  let _ = _.is_valve_email || !1;
   return (0, _.jsxs)(_, {
     children: [
-      (0, _.jsx)(_, {
-        title: _("#Menu_Section_Categories_YourTopGenres"),
-        children: (0, _.jsx)(_, {
-          href: `${_.STORE_BASE_URL}sitemap/#genres`,
-          label: _("#Menu_Section_Categories_ViewAll"),
-        }),
-      }),
-      (0, _.jsx)(_, {
-        children: (0, _.jsx)(_, {}),
+      _
+        ? (0, _.jsx)(_, {
+            children: _("#Menu_Section_Categories_YourTopCategories"),
+          })
+        : (0, _.jsx)(_, {
+            title: _("#Menu_Section_Categories_YourTopGenres"),
+            children: (0, _.jsx)(_, {
+              href: `${_.STORE_BASE_URL}sitemap/#genres`,
+              label: _("#Menu_Section_Categories_ViewAll"),
+            }),
+          }),
+      (0, _.jsxs)(_, {
+        children: [(0, _.jsx)(_, {}), _ && (0, _.jsx)(_, {})],
       }),
     ],
   });
@@ -4965,6 +4987,7 @@ var _ = _.default.memo(function () {
             (0, _.jsx)(_, {
               "flow-children": "row",
               className: _,
+              navEntryPreferPosition: 2,
               children: _.map((_) =>
                 _.type === "hub"
                   ? (0, _.jsx)(
@@ -4986,10 +5009,12 @@ var _ = _.default.memo(function () {
             (0, _.jsxs)(_, {
               "flow-children": "row",
               className: _,
+              navEntryPreferPosition: 2,
               children: [
                 (0, _.jsx)(_, {
                   "flow-children": "row",
                   className: _,
+                  navEntryPreferPosition: 2,
                   children: _.map((_) =>
                     _.type === "hub"
                       ? (0, _.jsx)(
@@ -5019,8 +5044,8 @@ var _ = _.default.memo(function () {
   }),
   _ = _.GenerateRandomSeed();
 function _() {
-  let { data: _ } = _(),
-    { data: _ } = _(),
+  let { data: _, isError: _ } = _(),
+    { data: _, isError: _ } = _(),
     _ = _(_),
     { data: _ } = _(_.LANGUAGE),
     _ = _.default.useMemo(
@@ -5031,6 +5056,8 @@ function _() {
     _ = _ ? 6 : 4,
     _ = _ ? 12 : 8;
   return _.default.useMemo(() => {
+    let _ = _ ?? (_ ? [] : void 0),
+      _ = _ ?? (_ ? [] : void 0);
     if (_ == null || _ == null || !_ || !_) return [null, null];
     let _ = new Set(),
       _ = new Set(),
@@ -5050,7 +5077,7 @@ function _() {
           (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
     }
     return [_, _];
-  }, [_, _, _, _, _, _, _]);
+  }, [_, _, _, _, _, _, _, _, _]);
 }
 function* _(_, _, _) {
   let _ = _.slice(),
@@ -5156,6 +5183,151 @@ function _(_) {
     fnCanTakeFocus: _,
     children: _.strName,
   });
+}
+function _(_) {
+  let _ = _.Element.getBoundingClientRect(),
+    _ = _.m_Parent.Element.getBoundingClientRect();
+  return _.top < _.bottom;
+}
+var _ = "store_menu_categories_expanded";
+function _() {
+  let [_, _] = _.default.useMemo(() => {
+      let _ = [],
+        _ = {};
+      return (
+        _.forEach(({ groups: _ }) => {
+          _.forEach(({ header: _, items: _ }) => {
+            _.push(_), (_[_] = _);
+          });
+        }),
+        [_, _]
+      );
+    }, []),
+    _ = _(),
+    [_, _] = _.default.useState(() => !!window?.sessionStorage.getItem(_));
+  return (
+    (0, _.useEffect)(() => {
+      _
+        ? window.sessionStorage.setItem(_, "1")
+        : window.sessionStorage.removeItem(_);
+    }, [_]),
+    (0, _.jsx)(_.Fragment, {
+      children: (0, _.jsxs)(_, {
+        className: _,
+        "flow-children": "geometric",
+        children: [
+          (0, _.jsx)(_, {
+            title: _("#Menu_Section_Categories_GenresAndThemes"),
+            children: (0, _.jsxs)(_, {
+              onClick: () => _(!_),
+              children: [
+                _
+                  ? _("#Menu_Section_Categories_Collapse")
+                  : _("#Menu_Section_Categories_Expand"),
+                (0, _.jsx)(_, {
+                  direction: _ ? "up" : "down",
+                }),
+              ],
+            }),
+          }),
+          (0, _.jsx)(_, {
+            "flow-children": "row",
+            className: _,
+            children: _.map((_, _) => {
+              if (_ == "social_and_players" && !_) return null;
+              let _ = _[_];
+              return (0, _.jsx)(
+                _,
+                {
+                  rgCategoryHandles: _,
+                  bExpanded: _,
+                  bHiddenCategory: _ && _ >= 3,
+                },
+                _,
+              );
+            }),
+          }),
+        ],
+      }),
+    })
+  );
+}
+function _(_) {
+  let { rgCategoryHandles: _, bExpanded: _, bHiddenCategory: _ } = _,
+    { data: _ } = _(),
+    _ = _.default.useMemo(
+      () => _.map((_) => _?.get(_)).filter(Boolean),
+      [_, _],
+    ),
+    _ = _ ? [] : _.slice(0, 3),
+    _ = _ ? _ : _.slice(3);
+  return (0, _.jsxs)(_, {
+    className: _,
+    children: [
+      _.map((_) =>
+        (0, _.jsx)(
+          _,
+          {
+            category: _,
+          },
+          _.handle,
+        ),
+      ),
+      (0, _.jsxs)(_, {
+        visible: _,
+        keepMounted: !0,
+        children: [
+          " ",
+          (0, _.jsx)(_, {
+            className: _,
+            children: _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  category: _,
+                  disabled: !_,
+                },
+                _.handle,
+              ),
+            ),
+          }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { category: _, disabled: _ = !1 } = _;
+  return (0, _.jsx)(_, {
+    href: `${_.STORE_BASE_URL}${_.url_path}`,
+    focusable: !_,
+    children: _.display_name,
+  });
+}
+function _(_) {
+  let { direction: _ } = _,
+    _;
+  return (
+    _ === "up"
+      ? (_ = "rotate( 180deg )")
+      : _ === "left"
+        ? (_ = "rotate( 90deg )")
+        : _ === "right"
+          ? (_ = "rotate( 270deg )")
+          : (_ = void 0),
+    (0, _.jsx)("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 16 16",
+      fill: "none",
+      style: {
+        transform: _,
+      },
+      children: (0, _.jsx)("path", {
+        fill: "currentColor",
+        _: "M13.7782 9.04948L8.00948 14.667L2.22266 9.04948L3.82433 7.49224L8.00948 11.5525L12.1856 7.49224L13.7782 9.04948ZM12.1765 1.33366L8.00948 5.39392L3.83338 1.33366L2.22266 2.8909L8.00948 8.50841L13.7782 2.8909L12.1765 1.33366Z",
+      }),
+    })
+  );
 }
 var _ = "BUi42fzAwGY-";
 var _ = "HWTMAITMowM-";
@@ -5927,8 +6099,9 @@ function _(_) {
   });
 }
 function _() {
-  return (0, _.jsxs)("div", {
+  return (0, _.jsxs)(_, {
     className: (0, _.default)(_, _),
+    href: `${_.STORE_BASE_URL}personalcalendar/`,
     children: [
       (0, _.jsxs)("div", {
         className: _,
@@ -5968,9 +6141,8 @@ function _() {
                   "#Menu_Section_Recommendations_PersonalCalendar_Description",
                 ),
               }),
-              (0, _.jsxs)(_, {
+              (0, _.jsxs)("div", {
                 className: _,
-                href: `${_.STORE_BASE_URL}personalcalendar/`,
                 children: [
                   (0, _.jsx)("span", {
                     className: _,
@@ -6394,6 +6566,7 @@ var _ = _(_(), 1),
   _ = _(_(), 1);
 var _ = "_8jYEPRQ-5m4-";
 var _ = "DkDkgW5s5IY-";
+var _ = "sXrgLnVJeIY-";
 var _ = "_7xtK0r5UTx8-";
 var _ = "Siv8zLtpkBw-";
 var _ = _(_(), 1);
@@ -6404,6 +6577,7 @@ function _(_) {
       children: _,
       refPopover: _,
       refActiveButton: _,
+      bTallSection: _ = !1,
     } = _,
     _ = _.useCallback(
       (_) => {
@@ -6436,7 +6610,7 @@ function _(_) {
       visible: _,
       msAnimationDuration: 100,
       children: (0, _.jsx)("div", {
-        className: (0, _.default)(_, _.IN_MOBILE_WEBVIEW && _),
+        className: (0, _.default)(_, _.IN_MOBILE_WEBVIEW && _, _ && _),
         children: (0, _.jsx)(_, {
           "flow-children": "row",
           className: _,
@@ -6481,6 +6655,7 @@ function _(_) {
       closePopover: _,
       refPopover: _,
       refActiveButton: _,
+      bTallSection: _ == "categories",
       children:
         _.current &&
         (0, _.jsx)(_, {

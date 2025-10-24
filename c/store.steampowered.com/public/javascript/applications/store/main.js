@@ -253,6 +253,10 @@
         TagLinksContainer: "_1UkrDgMhl-oqKXXt9KXc4N",
         TagLinks: "_2ovPL35Q1O7gq-DbxmP4cs",
         TagLink: "_2oz62CVNbwTn7KrUUwRdRw",
+        FullCategoryList: "_3rqhNTZrrL7UO5ywvgaMUw",
+        CategoryList: "_3zYzEl5ccXcsGQdbUGVvkC",
+        ExtraMargin: "_2ljgJpZbuQPGf3VlOWj4wR",
+        ExtraPadding: "_2qoUV7t1K6Z7H23Kz8voOB",
       };
     },
     chunkid: (module) => {
@@ -407,6 +411,7 @@
         SuppressScrollOnBody: "_2vfjuXKSFCjvHgH1RXw0lo",
         PopoverContainer: "oeCR-_-EhS8CaxEaFAqDZ",
         Popover: "_2RyPu-qJzs6novxZiGSDf-",
+        TallSection: "U5bM1WZ7qOYBFN3zAVMvI",
         PopoverContent: "_2t1IMWc-EYYJD-dsioJxSp",
         MobileWebview: "_30QvK0vvP-U2VkgmU-oOBQ",
         StaticMenu: "_1XjtpBn93p5fSXOBFU6T4R",
@@ -5678,33 +5683,6 @@
           default:
             return (0, _._)(_, `Unhandled flow-children: ${_}`), _._.NONE;
         }
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = Object.seal({
-        onMoveUp: _,
-        onMoveDown: _,
-      });
-      Object.seal({
-        onMoveRight: _,
-        onMoveLeft: _,
-      });
-      function _(_, _) {
-        if (_.is_repeat) return !1;
-        const _ = _.GetRelativeDirection(_.button);
-        return _ == _._.FORWARD
-          ? _.BFocusFirstChild(_._.GAMEPAD)
-          : _ == _._.BACKWARD && _.BFocusLastChild(_._.GAMEPAD);
-      }
-      function _(_) {
-        return _.Element.checkVisibility();
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -51472,8 +51450,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = Object.seal({
+        onMoveUp: _,
+        onMoveDown: _,
+      });
+      Object.seal({
+        onMoveRight: _,
+        onMoveLeft: _,
+      });
+      function _(_, _) {
+        if (_.is_repeat) return !1;
+        const _ = _.GetRelativeDirection(_.button);
+        return _ == _._.FORWARD
+          ? _.BFocusFirstChild(_._.GAMEPAD)
+          : _ == _._.BACKWARD && _.BFocusLastChild(_._.GAMEPAD);
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -51579,7 +51572,7 @@
                   ref: _,
                   role: _,
                   "aria-labelledby": __webpack_require__ ? _ : void 0,
-                  ..._._,
+                  ..._,
                 },
                 _,
                 __webpack_require__ &&
@@ -75834,9 +75827,8 @@
       function _(_) {
         const { title: _, children: __webpack_require__ } = _;
         return _.createElement(
-          _._,
+          "div",
           {
-            "flow-children": "row",
             className: _.SectionTitleWithLink,
           },
           _.createElement(_, null, _),
@@ -75891,6 +75883,7 @@
                 className: _.Link,
                 onClick: _.onClick,
                 onOKButton: _.onClick,
+                focusable: _.focusable,
               },
               _.children,
             );
@@ -75929,9 +75922,9 @@
             )
           : null;
       });
-      function _() {
+      function _(_) {
         return _.createElement("hr", {
-          className: _.HorizontalRule,
+          className: _()(_.className, _.HorizontalRule),
         });
       }
       function _(_) {
@@ -76027,6 +76020,27 @@
           },
           __webpack_require__,
           _.createElement(_, null),
+        );
+      }
+      function _(_) {
+        const {
+          onClick: _,
+          children: __webpack_require__ = _.createElement(
+            _.Fragment,
+            null,
+            _("#Menu_Popover_ViewAll"),
+            " ",
+            _.createElement(_, null),
+          ),
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            className: _.ViewAllLink,
+            onClick: _,
+            onOKButton: _,
+          },
+          __webpack_require__,
         );
       }
       function _() {
@@ -77477,8 +77491,7 @@
             }),
           );
         });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)(),
           _ = (0, _._)(),
@@ -77506,23 +77519,150 @@
           staleTime: 864e5,
         };
       }
+      const _ = JSON.parse(`[
+	{
+		"groups": [
+			{
+				"header": "action",
+				"items": [
+					"action_fps",
+					"action_tps",
+					"hack_and_slash",
+					"arcade_rhythm",
+					"action_run_jump",
+					"shmup",
+					"fighting_martial_arts"
+				]
+			},
+			{
+				"header": "adventure",
+				"items": [
+					"hidden_object",
+					"casual",
+					"metroidvania",
+					"puzzle_matching",
+					"adventure_rpg",
+					"visual_novel",
+					"story_rich"
+				]
+			}
+		]
+	},
+	{
+		"groups": [
+			{
+				"header": "rpg",
+				"items": [
+					"rpg_action",
+					"rpg_strategy_tactics",
+					"rpg_jrpg",
+					"rogue_like_rogue_lite",
+					"rpg_turn_based",
+					"adventure_rpg",
+					"rpg_party_based"
+				]
+			},
+			{
+				"header": "simulation",
+				"items": [
+					"sim_building_automation",
+					"sim_hobby_sim",
+					"sim_dating",
+					"sim_farming_crafting",
+					"sim_space_flight",
+					"sim_life",
+					"sim_physics_sandbox"
+				]
+			}
+		]
+	},
+	{
+		"groups": [
+			{
+				"header": "strategy",
+				"items": [
+					"strategy_turn_based",
+					"strategy_real_time",
+					"tower_defense",
+					"strategy_card_board",
+					"strategy_cities_settlements",
+					"strategy_grand_4x",
+					"strategy_military"
+				]
+			},
+			{
+				"header": "sports_and_racing",
+				"items": [
+					"sports_sim",
+					"racing",
+					"racing_sim",
+					"sports_fishing_hunting",
+					"sports_team",
+					"sports_individual",
+					"sports"
+				]
+			}
+		]
+	},
+	{
+		"groups": [
+			{
+				"header": "themes",
+				"items": [
+					"horror",
+					"science_fiction",
+					"space",
+					"exploration_open_world",
+					"anime",
+					"survival",
+					"mystery_detective",
+					"adultonly"
+				]
+			},
+			{
+				"header": "social_and_players",
+				"items": [
+					"singleplayer",
+					"multiplayer",
+					"multiplayer_local_party",
+					"multiplayer_mmo",
+					"multiplayer_lan",
+					"multiplayer_coop",
+					"multiplayer_online_competitive"
+				]
+			}
+		]
+	}
+]`);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
+        const _ = _._.is_valve_email || !1;
         return _.createElement(
           _,
           null,
+          _
+            ? _.createElement(
+                _,
+                null,
+                _("#Menu_Section_Categories_YourTopCategories"),
+              )
+            : _.createElement(
+                _,
+                {
+                  title: _("#Menu_Section_Categories_YourTopGenres"),
+                },
+                _.createElement(_, {
+                  href: `${_._.STORE_BASE_URL}sitemap/#genres`,
+                  label: _("#Menu_Section_Categories_ViewAll"),
+                }),
+              ),
           _.createElement(
             _,
-            {
-              title: _("#Menu_Section_Categories_YourTopGenres"),
-            },
-            _.createElement(_, {
-              href: `${_._.STORE_BASE_URL}sitemap/#genres`,
-              label: _("#Menu_Section_Categories_ViewAll"),
-            }),
+            null,
+            _.createElement(_, null),
+            _ && _.createElement(_, null),
           ),
-          _.createElement(_, null, _.createElement(_, null)),
         );
       }
       function _() {
@@ -77530,8 +77670,8 @@
       }
       const _ = _.memo(function () {
           const [_, _] = (function () {
-            const { data: _ } = _(),
-              { data: _ } = _(),
+            const { data: _, isError: _ } = _(),
+              { data: __webpack_require__, isError: _ } = _(),
               _ = _(_),
               { data: _ } = (0, _._)(_._.LANGUAGE),
               _ = _.useMemo(() => _._(_().slice(), 0, _._(_)), []),
@@ -77539,6 +77679,8 @@
               _ = _ ? 6 : 4,
               _ = _ ? 12 : 8;
             return _.useMemo(() => {
+              const _ = _ ?? (_ ? [] : void 0),
+                _ = __webpack_require__ ?? (_ ? [] : void 0);
               if (null == _ || null == _ || !_ || !_) return [null, null];
               const _ = new Set(),
                 _ = new Set(),
@@ -77598,7 +77740,7 @@
                     (_.add(_.unTagID), _.push(_));
               }
               return [_, _];
-            }, [_, _, _, _, _, _, _]);
+            }, [_, _, _, _, __webpack_require__, _, _, _, _]);
           })();
           return null === _ || null === _
             ? null
@@ -77610,6 +77752,7 @@
                   {
                     "flow-children": "row",
                     className: _.TopCategories,
+                    navEntryPreferPosition: _._.MAINTAIN_X,
                   },
                   _.map((_) =>
                     "hub" === _.type
@@ -77628,12 +77771,14 @@
                   {
                     "flow-children": "row",
                     className: _.TagLinksContainer,
+                    navEntryPreferPosition: _._.MAINTAIN_X,
                   },
                   _.createElement(
                     _._,
                     {
                       "flow-children": "row",
                       className: _.TagLinks,
+                      navEntryPreferPosition: _._.MAINTAIN_X,
                     },
                     _.map((_) =>
                       "hub" === _.type
@@ -77724,7 +77869,7 @@
           {
             className: _.TagLink,
             href: _,
-            fnCanTakeFocus: _._,
+            fnCanTakeFocus: _,
           },
           _.createElement(_._, {
             tagid: _.unTagID,
@@ -77742,9 +77887,170 @@
           {
             className: _.TagLink,
             href: _,
-            fnCanTakeFocus: _._,
+            fnCanTakeFocus: _,
           },
           _.strName,
+        );
+      }
+      function _(_) {
+        const _ = _.Element.getBoundingClientRect(),
+          _ = _.m_Parent.Element.getBoundingClientRect();
+        return _.top < _.bottom;
+      }
+      const _ = "store_menu_categories_expanded";
+      function _() {
+        const [_, _] = _.useMemo(() => {
+            const _ = [],
+              _ = {};
+            return (
+              _.forEach(({ groups: _ }) => {
+                __webpack_require__.forEach(({ header: _, items: _ }) => {
+                  _.push(_), (_[_] = _);
+                });
+              }),
+              [_, _]
+            );
+          }, []),
+          _ = _(),
+          [_, _] = _.useState(() => !!window?.sessionStorage.getItem(_));
+        return (
+          (0, _.useEffect)(() => {
+            _
+              ? window.sessionStorage.setItem(_, "1")
+              : window.sessionStorage.removeItem(_);
+          }, [_]),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              _._,
+              {
+                className: _.ExtraPadding,
+                "flow-children": "geometric",
+              },
+              _.createElement(
+                _,
+                {
+                  title: _("#Menu_Section_Categories_GenresAndThemes"),
+                },
+                _.createElement(
+                  _,
+                  {
+                    onClick: () => _(!_),
+                  },
+                  _(
+                    _
+                      ? "#Menu_Section_Categories_Collapse"
+                      : "#Menu_Section_Categories_Expand",
+                  ),
+                  _.createElement(_, {
+                    direction: _ ? "up" : "down",
+                  }),
+                ),
+              ),
+              _.createElement(
+                _._,
+                {
+                  "flow-children": "row",
+                  className: _.FullCategoryList,
+                },
+                _.map((_, _) => {
+                  if ("social_and_players" == _ && !_) return null;
+                  const _ = _[_];
+                  return _.createElement(_, {
+                    key: _,
+                    rgCategoryHandles: _,
+                    bExpanded: _,
+                    bHiddenCategory: _ && _ >= 3,
+                  });
+                }),
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const {
+            rgCategoryHandles: _,
+            bExpanded: __webpack_require__,
+            bHiddenCategory: _,
+          } = _,
+          { data: _ } = _(),
+          _ = _.useMemo(() => _.map((_) => _?.get(_)).filter(Boolean), [_, _]),
+          _ = _ ? [] : _.slice(0, 3),
+          _ = _ ? _ : _.slice(3);
+        return _.createElement(
+          _,
+          {
+            className: _.CategoryList,
+          },
+          _.map((_) =>
+            _.createElement(_, {
+              key: _.handle,
+              category: _,
+            }),
+          ),
+          _.createElement(
+            _,
+            {
+              visible: __webpack_require__,
+              keepMounted: !0,
+            },
+            " ",
+            _.createElement(
+              _,
+              {
+                className: _.CategoryList,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: _.handle,
+                  category: _,
+                  disabled: !__webpack_require__,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { category: _, disabled: __webpack_require__ = !1 } = _;
+        return _.createElement(
+          _,
+          {
+            href: `${_._.STORE_BASE_URL}${_.url_path}`,
+            focusable: !__webpack_require__,
+          },
+          _.display_name,
+        );
+      }
+      function _(_) {
+        const { direction: _ } = _;
+        let _;
+        return (
+          (_ =
+            "up" === _
+              ? "rotate( 180deg )"
+              : "left" === _
+                ? "rotate( 90deg )"
+                : "right" === _
+                  ? "rotate( 270deg )"
+                  : void 0),
+          _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 16 16",
+              fill: "none",
+              style: {
+                transform: _,
+              },
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              _: "M13.7782 9.04948L8.00948 14.667L2.22266 9.04948L3.82433 7.49224L8.00948 11.5525L12.1856 7.49224L13.7782 9.04948ZM12.1765 1.33366L8.00948 5.39392L3.83338 1.33366L2.22266 2.8909L8.00948 8.50841L13.7782 2.8909L12.1765 1.33366Z",
+            }),
+          )
         );
       }
       var _ = __webpack_require__("chunkid");
@@ -78340,9 +78646,10 @@
       }
       function _() {
         return _.createElement(
-          "div",
+          _._,
           {
             className: _()(_.DiscoveryQueue, _.PersonalCalendar),
+            href: `${_._.STORE_BASE_URL}personalcalendar/`,
           },
           _.createElement(
             "div",
@@ -78398,10 +78705,9 @@
                 _("#Menu_Section_Recommendations_PersonalCalendar_Description"),
               ),
               _.createElement(
-                _._,
+                "div",
                 {
                   className: _.ActionButton,
-                  href: `${_._.STORE_BASE_URL}personalcalendar/`,
                 },
                 _.createElement(
                   "span",
@@ -78883,6 +79189,7 @@
             children: _,
             refPopover: _,
             refActiveButton: _,
+            bTallSection: _ = !1,
           } = _,
           _ = _.useCallback(
             (_) => {
@@ -78927,6 +79234,7 @@
                 className: _()(
                   _.Popover,
                   _._.IN_MOBILE_WEBVIEW && _.MobileWebview,
+                  _ && _.TallSection,
                 ),
               },
               _.createElement(
@@ -78981,6 +79289,7 @@
               closePopover: __webpack_require__,
               refPopover: _,
               refActiveButton: _,
+              bTallSection: "categories" == _,
             },
             _.current &&
               _.createElement(_, {
@@ -81818,7 +82127,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 9149), _((_._ = _));
+      return (_ = 79050), _((_._ = _));
       var _;
     });
     _._();

@@ -6629,10 +6629,10 @@ button._2Cp17yynz2h_StEQZcNnqB {
 :where(._39xRzOagrnlvU_DbiDnzVW) ._3xfL7u7e8rFk4XeOpKN0oC:hover {
   color: var(--Neutrals-white, #fff);
 }
-:where(._39xRzOagrnlvU_DbiDnzVW) ._1tOe1a5sCJUgvbHanH8BmV {
+._1tOe1a5sCJUgvbHanH8BmV {
   height: 1px;
   opacity: 0.5;
-  background: linear-gradient(90deg, #737373 42.5%, rgba(115, 115, 115, 0) 100%);
+  background: linear-gradient(90deg, #ffffff30 42.5%, #ffffff00 100%);
   border: none;
   margin: 4px 0;
 }
@@ -6736,6 +6736,12 @@ button._2Cp17yynz2h_StEQZcNnqB {
   height: 13px;
   vertical-align: middle;
   margin-left: 4px;
+}
+button._1PuyX9P-ZPobFUE_2scw0_ {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
 }
 .N96uqBvXFjiVSjfFxbWZf {
   overflow: hidden !important;
@@ -7037,9 +7043,9 @@ button._2Cp17yynz2h_StEQZcNnqB {
   justify-content: space-between;
   flex-direction: row;
   gap: 10px;
+  padding-bottom: 8px;
   max-width: 100%;
-  max-height: 150px;
-  margin-bottom: 21px;
+  max-height: 100px;
 }
 @media screen and (max-width: 500px) {
   ._1_Cs2jL-zQHuz1FSXBASEL {
@@ -7226,6 +7232,35 @@ button._2Cp17yynz2h_StEQZcNnqB {
   text-decoration: none;
   color: #fff;
   background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+}
+._3rqhNTZrrL7UO5ywvgaMUw {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  gap: 12px;
+}
+@media screen and (max-width: 730px) {
+  html.responsive ._3rqhNTZrrL7UO5ywvgaMUw {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 520px) {
+  html.responsive ._3rqhNTZrrL7UO5ywvgaMUw {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+._3rqhNTZrrL7UO5ywvgaMUw ._3zYzEl5ccXcsGQdbUGVvkC {
+  flex: 1;
+  min-width: 0;
+  justify-content: flex-start;
+}
+._3rqhNTZrrL7UO5ywvgaMUw ._3zYzEl5ccXcsGQdbUGVvkC a {
+  white-space: normal;
+}
+._2ljgJpZbuQPGf3VlOWj4wR {
+  margin: 12px 0px;
+}
+._2qoUV7t1K6Z7H23Kz8voOB {
+  padding: 12px 0px 8px 0px;
 }
 ._3CCxBBbZTQS6eTjcQD5W-D {
   display: flex;
@@ -7688,6 +7723,7 @@ div._21F52O1eUPKz37HniCe3kj > div {
   padding: 0 2%;
   height: 250px;
 }
+._2RyPu-qJzs6novxZiGSDf-.U5bM1WZ7qOYBFN3zAVMvI,
 html.touch ._2RyPu-qJzs6novxZiGSDf- {
   height: auto;
 }
