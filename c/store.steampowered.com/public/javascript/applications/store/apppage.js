@@ -229,8 +229,9 @@
     chunkid: (module) => {
       module.exports = {
         TheaterDialog: "eAntzEAgQPDbynwFmCjT6",
-        GamepadCarousel: "_37QdQ9pnGu3WgatTPnOP1D",
+        FocusRingClip: "_2N2pOqeMRNyt7Ov6byou1W",
         Fullscreen: "_2_ZDORN00rF5dsEzd-tfpO",
+        GamepadCarousel: "_37QdQ9pnGu3WgatTPnOP1D",
         CarouselItem: "_3eFhSH3a_Uh0AF_AWuqHjR",
         SingleFileTrailer: "_3pzTJNRx9UoRhXeeA2IisY",
         Screenshot: "_3MyKwsurcFxFwiLabbudSk",
@@ -4332,35 +4333,41 @@
                 : null,
           ),
           _ = _ ? "" : "#TrailerPlayer_FullScreen_Tooltip",
-          _ = (0, _._)(_.GamepadCarousel, _ && _.Fullscreen);
+          _ = (0, _._)(_.TheaterDialog, _ && _.Fullscreen);
         return _.createElement(
           "div",
           {
             ref: _.refTheater,
-            className: _.TheaterDialog,
+            className: _,
             popover: "manual",
           },
           _.createElement(
-            _._,
+            "div",
             {
-              autoFocus: !0,
-              ref: _.ref,
-              navRef: _.navRef,
-              className: _,
-              "flow-children": "row",
-              navEntryPreferPosition: _._.MAINTAIN_X,
-              onOptionsActionDescription: (0, _._)(_),
-              onOptionsButton: _,
-              onCancelButton: _,
-              onGamepadDirection: _,
-              onFocusWithin: _,
+              className: _.FocusRingClip,
             },
             _.createElement(
               _._,
               {
                 disableFocusRing: _,
               },
-              _,
+              _.createElement(
+                _._,
+                {
+                  autoFocus: !0,
+                  ref: _.ref,
+                  navRef: _.navRef,
+                  className: _.GamepadCarousel,
+                  "flow-children": "row",
+                  navEntryPreferPosition: _._.MAINTAIN_X,
+                  onOptionsActionDescription: (0, _._)(_),
+                  onOptionsButton: _,
+                  onCancelButton: _,
+                  onGamepadDirection: _,
+                  onFocusWithin: _,
+                },
+                _,
+              ),
             ),
           ),
         );
