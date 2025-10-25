@@ -472,12 +472,14 @@
         PersonalCalendarHeader: "_3CwW2Qs3urt8QcUjerZErw",
         PersonalCalendarTitle: "_1jhESJwyB5EudCwWSj1Cd9",
         PersonalCalendarDescription: "_1o94X46OlzAxrg7CHGu4Xx",
+        IncludeSaturday: "_2aUgvVQfnrPXJadG5GrdcD",
         Calendar: "p6KFiyUG9MYjbErC0_SGJ",
         LinearCalendar: "_1L5MsHayIMOr5ug0cNxdxX",
         SectionHeader: "_1pxjbUKB_ugZ6rMdnTXmks",
         GameList: "_1YDn2Y6zO2xAbcwcIvI79b",
         Options: "_2LcfPsUSmeavC5MD7P-3_3",
         ResultCountSelector: "_2kL46N7kSTQrKIGU59rigN",
+        Disabled: "_3rT8s7lyF7ez2ptouqnozy",
         Title: "_9umPLKYAgKsJMqw7ujTrY",
         HideOwnedSelector: "xT3lxTdADiEWewVz8DEPg",
         TagSelector: "RMzOW5KaqQvzer-NgkySs",
@@ -495,10 +497,10 @@
         Summary: "_3HXw8Pw87qqgqr1Ag5Bwde",
         DayOfWeekHeader: "RLNS069fcm-HyBmDQpQzx",
         Day: "_14ZKl5pFBqLi_U0LVFjkz4",
+        CalendarAppEntry: "_13JzJBgCihXnVCM-l2MMWR",
         Blank: "_3UiDT-YpyntdDox1_Ccld6",
         Today: "rChGJxkm3sNTTmDYe7KMW",
         DateHeader: "_1i3Li2VsTuM5vu7R9eWJ2F",
-        CalendarAppEntry: "_13JzJBgCihXnVCM-l2MMWR",
         ShowMoreButton: "ez9Ld7tp9t28fRwR6VBKh",
         ShowMoreTextButton: "_3P6P3gZ5tYxntcm-ESmTbn",
         PersonalCalendarLoginPrompt: "ON8dwj0iIb2zJimIKh1q3",
@@ -544,7 +546,7 @@
     },
     46416: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => M, W: () => L });
+      a.d(t, { J: () => M, W: () => B });
       var r = a(90626),
         s = a(57876),
         n = a(45699),
@@ -564,8 +566,8 @@
         S = a(72860),
         E = a(70300),
         C = a(47235),
-        w = a(37076),
-        b = a(54492),
+        b = a(37076),
+        w = a(54492),
         I = a(60014),
         v = a(52038),
         N = a(61859),
@@ -576,7 +578,7 @@
         T = a(99956),
         R = a(49411);
       const M = "capsule_index_";
-      function L(e) {
+      function B(e) {
         const {
             capsule: t,
             bShowParentApp: a,
@@ -586,19 +588,21 @@
             bHideStoreHover: d,
             onlyOneDiscountPct: h,
             bPreferDemoStorePage: g,
+            bShowEarlyAccessBanner: f,
           } = e,
-          [f, y] = r.useState(!1),
-          [S] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
-          [C] = (0, p.t7)(a && S?.GetParentAppID(), s.Xh);
-        if (!S) return null;
-        const w = Boolean(C),
-          b = r.createElement(O, {
+          [y, S] = r.useState(!1),
+          [C] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
+          [b] = (0, p.t7)(a && C?.GetParentAppID(), s.Xh);
+        if (!C) return null;
+        const w = Boolean(b),
+          I = r.createElement(O, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
-            bIsHovered: f,
+            bIsHovered: y,
             bHasParentAppToDisplay: w,
             onlyOneDiscountPct: h,
+            bShowEarlyAccessBanner: f,
           });
         return r.createElement(
           i.Z,
@@ -612,12 +616,12 @@
           },
           r.createElement(
             E.oj,
-            { appid: S.GetAppID() },
+            { appid: C.GetAppID() },
             Boolean(d)
               ? r.createElement(
                   "div",
-                  { onMouseEnter: () => y(!0), onMouseLeave: () => y(!1) },
-                  b,
+                  { onMouseEnter: () => S(!0), onMouseLeave: () => S(!1) },
+                  I,
                 )
               : r.createElement(
                   u.Qf,
@@ -634,21 +638,22 @@
                     strExtraParams: e.strExtraParams,
                     nCreatorAccountID: e.creatorAccountID,
                     nWidthMultiplier: e.nWidthMultiplier,
+                    bShowIgnoreButton: e.bShowIgnoreButton,
                   },
-                  b,
+                  I,
                 ),
             Boolean(n) && r.createElement(r.Fragment, null, n),
           ),
           w &&
-            r.createElement(B, {
+            r.createElement(L, {
               strExtraParams: e.strExtraParams,
-              parentStoreItem: C,
-              childAppType: S.GetAppType(),
+              parentStoreItem: b,
+              childAppType: C.GetAppType(),
               bPreferDemoStorePage: g,
             }),
         );
       }
-      function B(e) {
+      function L(e) {
         const {
             strExtraParams: t,
             parentStoreItem: a,
@@ -673,7 +678,7 @@
               ),
             ),
             r.createElement(
-              w.u,
+              b.u,
               { type: "app", id: a.GetAppID(), strExtraParams: t },
               r.createElement("img", {
                 loading: "lazy",
@@ -697,42 +702,47 @@
             bIsHovered: u,
             strDoubleCapsuleMessage: g,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: S,
           } = e,
-          [S] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
-          E = (0, I.n9)(),
-          C = (0, R.w)(),
-          w = (0, r.useMemo)(() => S?.GetIncludedAppIDsOrSelf(), [S]);
-        if (!S) return null;
-        const N = (0, x.NT)(
-          (0, l.It)(`${S.GetStorePageURL(_)}${i ? `?${i}` : ""}`, E, C),
+          [E] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
+          C = (0, I.n9)(),
+          b = (0, R.w)(),
+          N = (0, r.useMemo)(() => E?.GetIncludedAppIDsOrSelf(), [E]);
+        if (!E) return null;
+        const A = (0, x.NT)(
+          (0, l.It)(`${E.GetStorePageURL(_)}${i ? `?${i}` : ""}`, C, b),
         );
-        let A;
+        let P;
         "overrideNavigation" in t &&
-          (A = (e) => (
+          (P = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const P = Boolean(g);
+        const M = Boolean(g);
         return r.createElement(
           r.Fragment,
           null,
           r.createElement(
             "div",
-            { className: (0, v.A)({ [D().TwoWidthCtn]: P }) },
+            { className: (0, v.A)({ [D().TwoWidthCtn]: M }) },
             r.createElement(
               n.Ii,
               {
-                href: A ? null : N,
+                href: P ? null : A,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, v.A)({ [D().TwoWidthCapsule]: P }),
+                className: (0, v.A)({ [D().TwoWidthCapsule]: M }),
                 preferredFocus: d,
-                onClick: A,
+                onClick: P,
               },
-              r.createElement(y.V, { appids: w, hide_status_banners: a }),
+              r.createElement(y.V, {
+                appids: N,
+                hide_status_banners: a,
+                show_early_access: e.bShowEarlyAccessBanner,
+              }),
               "none" != c && r.createElement(h.aU, { imageType: c, info: t }),
-              r.createElement(b.J, { storeItem: S }),
+              r.createElement(w.J, { storeItem: E }),
               Boolean(u) && r.createElement(f.m, { appInfo: t }),
             ),
-            P &&
+            M &&
               r.createElement(
                 "div",
                 {
@@ -745,12 +755,12 @@
                   r.createElement(
                     "span",
                     null,
-                    S.GetFormattedSteamReleaseDate(),
+                    E.GetFormattedSteamReleaseDate(),
                   ),
                 ),
                 r.createElement(T.n, {
                   bHideTitle: !0,
-                  rgTagIDs: S.GetTagIDs(),
+                  rgTagIDs: E.GetTagIDs(),
                   instanceNum: o,
                 }),
               ),
@@ -781,13 +791,13 @@
         if (i && 0 == y?.GetStoreItemType())
           return r.createElement(C.E, { appid: y.GetAppID(), bIsMuted: g });
         if (o) return null;
-        const w = S && a,
-          b = E;
+        const b = S && a,
+          w = E;
         return r.createElement(h.qn, {
           info: t,
-          bShowAsMuted: b,
+          bShowAsMuted: w,
           bHidePrice: l,
-          bShowInLibraryInsteadOfPrice: w,
+          bShowInLibraryInsteadOfPrice: b,
           bHidePlatforms: d,
           creatorAccountID: u,
           bShowName: e.bShowName,
@@ -858,7 +868,7 @@
         S = a(56545),
         E = a(94601),
         C = a(72839);
-      const w = (e) => {
+      const b = (e) => {
           const t = (function (e) {
               const t = (0, f.KV)(),
                 a = ["GameMixerSearchSuggestions", e];
@@ -932,7 +942,7 @@
             )
           );
         },
-        b = (e) => {
+        w = (e) => {
           const [t, a] = m.useState(""),
             [r, s] = m.useState(0),
             [n, i] = m.useState(!1),
@@ -975,7 +985,7 @@
                 })(e.key),
             }),
             n &&
-              m.createElement(w, {
+              m.createElement(b, {
                 strSearch: t,
                 nSelectedResult: o,
                 fnSetResultApps: p,
@@ -1135,7 +1145,7 @@
                 "div",
                 { className: _.AddContainer },
                 m.createElement("div", { className: _.InputLabel }, "Add App"),
-                m.createElement(b, {
+                m.createElement(w, {
                   fnSelectAppID: (t) =>
                     ((t) => {
                       if (0 == t) return;
@@ -1616,8 +1626,8 @@
         S = a(53835),
         E = a(2160),
         C = a(75844),
-        w = a(52038);
-      class b extends g.Component {
+        b = a(52038);
+      class w extends g.Component {
         state = {
           appid: 0,
           appinfo: null,
@@ -1746,9 +1756,9 @@
           );
         }
       }
-      (0, s.Cg)([l.oI], b.prototype, "OnDisplayClicked", null),
-        (0, s.Cg)([l.oI], b.prototype, "UpdateAppSuggestions", null),
-        (0, s.Cg)([l.oI], b.prototype, "OnKeyUp", null);
+      (0, s.Cg)([l.oI], w.prototype, "OnDisplayClicked", null),
+        (0, s.Cg)([l.oI], w.prototype, "UpdateAppSuggestions", null),
+        (0, s.Cg)([l.oI], w.prototype, "OnKeyUp", null);
       class I extends g.Component {
         render() {
           if (0 == this.props.appid)
@@ -1818,7 +1828,7 @@
           return g.createElement(
             "div",
             { className: y.LabsSimilarity },
-            g.createElement(b, {
+            g.createElement(w, {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_a,
               showAppIds: !0,
@@ -1828,7 +1838,7 @@
             g.createElement("div", { className: y.HorizontalSpacer }),
             g.createElement("div", { className: y.Score }, e),
             g.createElement("div", { className: y.HorizontalSpacer }),
-            g.createElement(b, {
+            g.createElement(w, {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_b,
               showAppIds: !0,
@@ -1918,7 +1928,7 @@
               selectedOption: "default",
             }),
             g.createElement("h1", null, "Games similar to:"),
-            g.createElement(b, {
+            g.createElement(w, {
               fnOnSelection: this.OnSelectedApp,
               ref: this.app_selector_ref,
               appidInitial: 268500,
@@ -1978,7 +1988,7 @@
                 selectedOption: "Plus",
               }),
             ),
-            g.createElement(b, { fnOnSelection: this.OnSelectedApp }),
+            g.createElement(w, { fnOnSelection: this.OnSelectedApp }),
           );
         }
       };
@@ -2182,7 +2192,7 @@
               0 != this.app_end &&
               !this.in_progress &&
               this.app_start != this.app_end,
-            t = e ? y.ComputeButton : (0, w.A)(y.ComputeButton, y.Disable);
+            t = e ? y.ComputeButton : (0, b.A)(y.ComputeButton, y.Disable);
           let a = null;
           a = this.in_progress
             ? g.createElement(
@@ -2219,11 +2229,11 @@
             g.createElement(
               "div",
               { className: y.SelectEndpoints },
-              g.createElement(b, {
+              g.createElement(w, {
                 fnOnSelection: this.OnSelectedStartApp,
                 strPrompt: "Select start game",
               }),
-              g.createElement(b, {
+              g.createElement(w, {
                 fnOnSelection: this.OnSelectedEndApp,
                 strPrompt: "Select end game",
               }),
@@ -2268,17 +2278,17 @@
       var T,
         R = a(17720),
         M = a(6144),
-        L = a(56545),
-        B = a(80613),
-        O = a.n(B),
+        B = a(56545),
+        L = a(80613),
+        O = a.n(L),
         k = a(89068),
         F = a(15161);
-      class H extends B.Message {
+      class H extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             H.prototype.tag_score_factor || k.Sg(H.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2375,20 +2385,20 @@
           return "StoreAppSimilarityPriorityOptions";
         }
       }
-      class z extends B.Message {
+      class G extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            z.prototype.steamid || k.Sg(z.M()),
-            B.Message.initialize(this, e, 0, -1, [3], null);
+            G.prototype.steamid || k.Sg(G.M()),
+            L.Message.initialize(this, e, 0, -1, [3], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
+            G.sm_m ||
+              (G.sm_m = {
+                proto: G,
                 fields: {
                   steamid: {
                     n: 1,
@@ -2409,60 +2419,6 @@
                     bw: k.gp.writeBool,
                   },
                 },
-              }),
-            z.sm_m
-          );
-        }
-        static MBF() {
-          return z.sm_mbf || (z.sm_mbf = k.w0(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return k.BT(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return k.Uq(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (O().BinaryReader)(e),
-            a = new z();
-          return z.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return k.zj(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (O().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          k.i0(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (O().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreAppSimilarity_PrioritizeAppsForUser_Request";
-        }
-      }
-      class G extends B.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            G.prototype.items || k.Sg(G.M()),
-            B.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
-                fields: { items: { n: 1, c: W, r: !0, q: !0 } },
               }),
             G.sm_m
           );
@@ -2499,15 +2455,69 @@
           return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreAppSimilarity_PrioritizeAppsForUser_Request";
+        }
+      }
+      class z extends L.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            z.prototype.items || k.Sg(z.M()),
+            L.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            z.sm_m ||
+              (z.sm_m = {
+                proto: z,
+                fields: { items: { n: 1, c: W, r: !0, q: !0 } },
+              }),
+            z.sm_m
+          );
+        }
+        static MBF() {
+          return z.sm_mbf || (z.sm_mbf = k.w0(z.M())), z.sm_mbf;
+        }
+        toObject(e = !1) {
+          return z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return k.BT(z.M(), e, t);
+        }
+        static fromObject(e) {
+          return k.Uq(z.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (O().BinaryReader)(e),
+            a = new z();
+          return z.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return k.zj(z.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (O().BinaryWriter)();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          k.i0(z.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (O().BinaryWriter)();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreAppSimilarity_PrioritizeAppsForUser_Response";
         }
       }
-      class W extends B.Message {
+      class W extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             W.prototype.id || k.Sg(W.M()),
-            B.Message.initialize(this, e, 0, -1, [50], null);
+            L.Message.initialize(this, e, 0, -1, [50], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2571,12 +2581,12 @@
           return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem";
         }
       }
-      class U extends B.Message {
+      class U extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             U.prototype.source_app || k.Sg(U.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2633,12 +2643,12 @@
           return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_MatchDebugInfo";
         }
       }
-      class j extends B.Message {
+      class j extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             j.prototype.rank || k.Sg(j.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2699,12 +2709,12 @@
           return "CStoreAppSimilarity_PrioritizeAppsForUser_Response_ResultItem_PopularityDebugInfo";
         }
       }
-      class q extends B.Message {
+      class q extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             q.prototype.steamid || k.Sg(q.M()),
-            B.Message.initialize(this, e, 0, -1, void 0, null);
+            L.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -2772,12 +2782,12 @@
           return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Request";
         }
       }
-      class Z extends B.Message {
+      class Z extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Z.prototype.clusters || k.Sg(Z.M()),
-            B.Message.initialize(this, e, 0, -1, [1], null);
+            L.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2826,12 +2836,12 @@
           return "CStoreAppSimilarity_IdentifyClustersFromPlaytime_Response";
         }
       }
-      class V extends B.Message {
+      class V extends L.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             V.prototype.cluster_id || k.Sg(V.M()),
-            B.Message.initialize(this, e, 0, -1, [5, 6, 7], null);
+            L.Message.initialize(this, e, 0, -1, [5, 6, 7], null);
         }
         static sm_m;
         static sm_mbf;
@@ -2923,15 +2933,15 @@
         (e.PrioritizeAppsForUser = function (e, t) {
           return e.SendMsg(
             "StoreAppSimilarity.PrioritizeAppsForUser#1",
-            (0, L.I8)(z, t),
-            G,
+            (0, B.I8)(G, t),
+            z,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
           );
         }),
           (e.IdentifyClustersFromPlaytime = function (e, t) {
             return e.SendMsg(
               "StoreAppSimilarity.IdentifyClustersFromPlaytime#1",
-              (0, L.I8)(q, t),
+              (0, B.I8)(q, t),
               Z,
               { ePrivilege: 2, eWebAPIKeyRequirement: 2 },
             );
@@ -2952,7 +2962,7 @@
         m_callbacksLoaded = new M.lu();
         m_rgClusters;
         constructor(e, t, a, r, s) {
-          const n = L.w.Init(q);
+          const n = B.w.Init(q);
           (0, K.rV)(n),
             s && (0, K.Bn)(n, s),
             n.Body().set_steamid(t || i.iA.steamid),
@@ -3462,7 +3472,7 @@
               className: a,
               ...r
             } = this.props,
-            s = (0, w.A)(he().LoginDialog, a),
+            s = (0, b.A)(he().LoginDialog, a),
             n = this.m_manager.GetCurrentStep(),
             i = this.m_manager.GetErrorMessage();
           return g.createElement(
@@ -3478,7 +3488,7 @@
               { className: he().LoginPanelContent },
               i && g.createElement(Ce, { text: i }),
               n == fe.AccountName &&
-                g.createElement(we, {
+                g.createElement(be, {
                   manager: this.m_manager,
                   autoFocus: this.props.autoFocus,
                 }),
@@ -3506,7 +3516,7 @@
         return g.createElement("div", { className: he().ErrorMessage }, e.text);
       }
       Ee = (0, s.Cg)([C.PA], Ee);
-      let we = class extends g.Component {
+      let be = class extends g.Component {
         constructor(e) {
           super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
         }
@@ -3568,7 +3578,7 @@
                 },
                 g.createElement(S.pd, {
                   autoFocus: this.props.autoFocus,
-                  className: (0, w.A)(he().AccountNameLabel, e),
+                  className: (0, b.A)(he().AccountNameLabel, e),
                   label: (0, $.we)("#Login_AccountName"),
                   type: "text",
                   value: a.GetUserName(),
@@ -3577,7 +3587,7 @@
                   onChange: this.OnChangeName,
                 }),
                 g.createElement(S.pd, {
-                  className: (0, w.A)(he().PasswordDots, t),
+                  className: (0, b.A)(he().PasswordDots, t),
                   label: (0, $.we)("#Login_Password"),
                   type: "password",
                   autoComplete: "off",
@@ -3593,7 +3603,7 @@
                   onChange: () => this.OnChangeRememberPass,
                   checked: a.GetRememberPassword(),
                 }),
-                a.GetCaptchaURL() && g.createElement(be, { manager: a }),
+                a.GetCaptchaURL() && g.createElement(we, { manager: a }),
                 g.createElement(
                   S.jn,
                   { disabled: this.props.manager.IsRequestInFlight() },
@@ -3628,12 +3638,12 @@
           );
         }
       };
-      (0, s.Cg)([l.oI], we.prototype, "OnSubmit", null),
-        (0, s.Cg)([l.oI], we.prototype, "OnChangeName", null),
-        (0, s.Cg)([l.oI], we.prototype, "OnChangePassword", null),
-        (0, s.Cg)([l.oI], we.prototype, "OnChangeRememberPass", null),
-        (we = (0, s.Cg)([C.PA], we));
-      let be = class extends g.Component {
+      (0, s.Cg)([l.oI], be.prototype, "OnSubmit", null),
+        (0, s.Cg)([l.oI], be.prototype, "OnChangeName", null),
+        (0, s.Cg)([l.oI], be.prototype, "OnChangePassword", null),
+        (0, s.Cg)([l.oI], be.prototype, "OnChangeRememberPass", null),
+        (be = (0, s.Cg)([C.PA], be));
+      let we = class extends g.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
         }
@@ -3689,9 +3699,9 @@
           );
         }
       };
-      (0, s.Cg)([l.oI], be.prototype, "OnCaptchaText", null),
-        (0, s.Cg)([l.oI], be.prototype, "RefreshCaptcha", null),
-        (be = (0, s.Cg)([C.PA], be));
+      (0, s.Cg)([l.oI], we.prototype, "OnCaptchaText", null),
+        (0, s.Cg)([l.oI], we.prototype, "RefreshCaptcha", null),
+        (we = (0, s.Cg)([C.PA], we));
       let Ie = class extends g.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
@@ -3750,7 +3760,7 @@
                   onSubmit: this.OnSubmit,
                 },
                 g.createElement(S.pd, {
-                  className: (0, w.A)(he().AccountName),
+                  className: (0, b.A)(he().AccountName),
                   label: "Steam Guard Code",
                   type: "text",
                   autoComplete: "off",
@@ -3769,7 +3779,7 @@
             g.createElement(
               "a",
               {
-                className: (0, w.A)(
+                className: (0, b.A)(
                   he().NeedHelpLink,
                   n ? he().NeedHelpHighlight : null,
                 ),
@@ -3881,7 +3891,7 @@
     },
     98162: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Je });
+      a.r(t), a.d(t, { default: () => $e });
       var r = a(90626),
         s = a(45237);
       const n = ["initial", "sm", "md", "lg"],
@@ -3994,7 +4004,7 @@
         8: !0,
         9: !0,
       };
-      function w(e, t) {
+      function b(e, t) {
         const a = { remaining: { ...e }, extracted: {} };
         for (const e of t) {
           const t = e.prop;
@@ -4003,12 +4013,12 @@
         }
         return a;
       }
-      function b(e, t) {
+      function w(e, t) {
         return (function (e, t, a) {
           const r = [],
             s = {},
             n = {},
-            { extracted: i, remaining: o } = w(e, t);
+            { extracted: i, remaining: o } = b(e, t);
           for (const e of t) {
             if (!(e.prop in i)) continue;
             let t = i[e.prop];
@@ -4295,7 +4305,7 @@
         ];
       var P = a(68875);
       function D(e) {
-        const t = b({ ...e, className: g()(e.className, P.Flex) }, T);
+        const t = w({ ...e, className: g()(e.className, P.Flex) }, T);
         return r.createElement("div", { ...t });
       }
       const T = [
@@ -4348,15 +4358,15 @@
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
       var M = a(16619);
-      function L(e) {
+      function B(e) {
         const { viewBoxSize: t = 20, ...a } = e,
           s = a.size ? void 0 : M.IconSizeDefault;
         return r.createElement("svg", {
           viewBox: `0 0 ${t} ${t}`,
-          ...b({ className: s, ...a }, B),
+          ...w({ className: s, ...a }, L),
         });
       }
-      const B = [
+      const L = [
         ...x,
         { prop: "size", responsive: !0, className: (e) => M[`IconSize-${e}`] },
         {
@@ -4376,7 +4386,7 @@
       ];
       function O(e) {
         return r.createElement(
-          L,
+          B,
           { ...e, viewBoxSize: 16 },
           r.createElement("path", {
             d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
@@ -4396,7 +4406,7 @@
             ...l
           } = e,
           c = "indeterminate" === t,
-          m = c ? z : O,
+          m = c ? G : O,
           p = () => {
             a && a(!!c || !t);
           };
@@ -4426,7 +4436,7 @@
       function H(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function z(e) {
+      function G(e) {
         return r.createElement(
           "svg",
           {
@@ -4440,10 +4450,10 @@
           }),
         );
       }
-      var G = a(91239);
+      var z = a(91239);
       var W = a(44041);
       function U(e) {
-        const t = b({ ...e, className: g()(W.Box, e.className) }, j);
+        const t = w({ ...e, className: g()(W.Box, e.className) }, j);
         return r.createElement("div", { ...t });
       }
       const j = A;
@@ -4489,7 +4499,7 @@
       var V = a(88411);
       function K(e) {
         const { extracted: t, remaining: a } = (function (e) {
-            return w(e, A);
+            return b(e, A);
           })(e),
           {
             variant: s,
@@ -4527,7 +4537,7 @@
           ref: i,
           type: "text",
           ...o,
-          className: g()(G.Reset, V.TextInput, n),
+          className: g()(z.Reset, V.TextInput, n),
           value: t || "",
           onChange: (e) => {
             a(e.target.value), s && s(e);
@@ -4723,7 +4733,7 @@
         };
       function me(e) {
         return r.createElement(
-          L,
+          B,
           { ...e, viewBoxSize: 12 },
           r.createElement("path", {
             d: "M10.7068 2.46964L9.53012 1.29297L6.00012 4.81964L2.47012 1.29297L1.29346 2.46964L4.82012 5.99964L1.29346 9.52964L2.47012 10.7063L6.00012 7.17964L9.53012 10.7063L10.7068 9.52964L7.18012 5.99964L10.7068 2.46964Z",
@@ -4833,14 +4843,14 @@
                     }),
                     C = (0, Q.It)(d.context, { role: c }),
                     {
-                      getFloatingProps: w,
-                      getReferenceProps: b,
+                      getFloatingProps: b,
+                      getReferenceProps: w,
                       getItemProps: I,
                     } = (0, Q.bv)([C, u, h, g, f, E]);
                   return {
                     floating: d,
-                    getFloatingProps: w,
-                    getReferenceProps: b,
+                    getFloatingProps: b,
+                    getReferenceProps: w,
                     getItemProps: I,
                     open: p,
                     activeIndex: s,
@@ -5066,31 +5076,35 @@
       var Se = a(39020),
         Ee = a(41735),
         Ce = a.n(Ee),
-        we = a(82477),
-        be = a(46416),
+        be = a(82477),
+        we = a(46416),
         Ie = a(32630),
         ve = a(52038),
         Ne = a(61859),
         xe = a(78327),
         Ae = a(12241),
         Pe = a(76217),
-        De = a(20194);
-      const Te = "PC_HideOwned",
-        Re = "PC_GameCount",
-        Me = "PC_WishlistedDisplay";
-      var Le;
+        De = a(20194),
+        Te = a(82097),
+        Re = a(30894),
+        Me = a(65946);
+      const Be = "PC_HideOwned",
+        Le = "PC_GameCount",
+        Oe = "PC_WishlistedDisplay";
+      var ke;
       !(function (e) {
         (e[(e.Show = 0)] = "Show"),
           (e[(e.Only = 1)] = "Only"),
           (e[(e.Hide = 2)] = "Hide");
-      })(Le || (Le = {}));
-      const Be = {
+      })(ke || (ke = {}));
+      const Fe = {
         selectedTag: 0,
-        bHideOwned: "1" == localStorage.getItem(Te),
-        cResultsToShow: parseInt(localStorage.getItem(Re) ?? "100"),
-        wishlistDisplay: parseInt(localStorage.getItem(Me) ?? "0"),
+        bHideOwned: "1" == localStorage.getItem(Be),
+        bHideEarlyAccess: "1" == localStorage.getItem("PC_HideEarlyAccess"),
+        cResultsToShow: parseInt(localStorage.getItem(Le) ?? "100"),
+        wishlistDisplay: parseInt(localStorage.getItem(Oe) ?? "0"),
       };
-      function Oe(e) {
+      function He(e) {
         const { count: t } = e;
         return r.createElement(
           Pe.Z,
@@ -5108,19 +5122,19 @@
             ),
         );
       }
-      function ke() {
+      function Ge() {
         return r.createElement(
           Pe.Z,
           { className: Ae.PersonalCalendarLoginPrompt },
           (0, Ne.we)("#PersonalCalendar_LoginPrompt"),
           r.createElement(
             "button",
-            { onClick: we.vg, className: Ae.LoginButton },
+            { onClick: be.vg, className: Ae.LoginButton },
             (0, Ne.we)("#Login_SignIn"),
           ),
         );
       }
-      function Fe(e) {
+      function ze(e) {
         const {
           state: t,
           onChange: a,
@@ -5144,26 +5158,27 @@
           r.createElement(
             Pe.Z,
             { className: Ae.Options },
-            r.createElement(He, {
+            r.createElement(We, {
               userTags: n,
               tagMap: s,
               selectedTag: t.selectedTag,
               onChange: (e) => a({ ...t, selectedTag: e }),
             }),
-            r.createElement(ze, {
+            r.createElement(Ue, {
               count: t.cResultsToShow,
               onChange: (e) => {
-                localStorage.setItem(Re, e.toString()),
+                localStorage.setItem(Le, e.toString()),
                   a({ ...t, cResultsToShow: e });
               },
               max: i,
             }),
-            r.createElement(Ge, {
+            r.createElement(je, {
               wishlistDisplay: t.wishlistDisplay,
               onChange: (e) => {
-                localStorage.setItem(Me, e.toString()),
+                localStorage.setItem(Oe, e.toString()),
                   a({ ...t, wishlistDisplay: e });
               },
+              disabled: !e.usesWishlists,
             }),
             r.createElement(
               Pe.Z,
@@ -5173,17 +5188,28 @@
                 {
                   checked: t.bHideOwned,
                   onChange: (e) => {
-                    localStorage.setItem(Te, e ? "1" : "0"),
+                    localStorage.setItem(Be, e ? "1" : "0"),
                       a({ ...t, bHideOwned: e });
                   },
                 },
                 (0, Ne.we)("#PersonalCalendar_HideOwned"),
               ),
+              r.createElement(
+                F,
+                {
+                  checked: t.bHideEarlyAccess,
+                  onChange: (e) => {
+                    localStorage.setItem(Be, e ? "1" : "0"),
+                      a({ ...t, bHideEarlyAccess: e });
+                  },
+                },
+                (0, Ne.we)("#PersonalCalendar_HideEarlyAccess"),
+              ),
             ),
           ),
         );
       }
-      function He(e) {
+      function We(e) {
         const { userTags: t, tagMap: a, selectedTag: s, onChange: n } = e,
           [i, o] = r.useState(""),
           { tagStrings: l, tagStringMap: c } = r.useMemo(() => {
@@ -5236,7 +5262,7 @@
           }),
         );
       }
-      function ze(e) {
+      function Ue(e) {
         const { count: t, onChange: a, max: s } = e,
           n = [10, 25, 50, 100, 250, 500];
         let i = [];
@@ -5261,22 +5287,30 @@
           }),
         );
       }
-      function Ge(e) {
+      function je(e) {
         const { wishlistDisplay: t, onChange: a } = e,
           s = (e) => {
             switch (e) {
-              case Le.Show:
+              case ke.Show:
                 return (0, Ne.we)("#PersonalCalendar_WishlistShow");
-              case Le.Hide:
+              case ke.Hide:
                 return (0, Ne.we)("#PersonalCalendar_WishlistHide");
-              case Le.Only:
+              case ke.Only:
                 return (0, Ne.we)("#PersonalCalendar_WishlistOnly");
             }
           },
-          n = [s(Le.Show), s(Le.Hide), s(Le.Only)];
+          n = [s(ke.Show), s(ke.Hide), s(ke.Only)];
         return r.createElement(
           Pe.Z,
-          { className: Ae.ResultCountSelector },
+          {
+            className: (0, ve.A)(
+              Ae.ResultCountSelector,
+              e.disabled && Ae.Disabled,
+            ),
+            "data-tooltip-text": e.disabled
+              ? (0, Ne.we)("#PersonalCalendar_IgnoringWishlists")
+              : void 0,
+          },
           r.createElement(
             Pe.Z,
             { className: Ae.Title },
@@ -5285,26 +5319,32 @@
           r.createElement(_e, {
             options: n,
             value: s(t),
-            onValueChange: (e) =>
-              a(
-                ((e) => {
-                  switch (e) {
-                    case (0, Ne.we)("#PersonalCalendar_WishlistShow"):
-                      return Le.Show;
-                    case (0, Ne.we)("#PersonalCalendar_WishlistHide"):
-                      return Le.Hide;
-                    case (0, Ne.we)("#PersonalCalendar_WishlistOnly"):
-                      return Le.Only;
-                  }
-                  return Le.Show;
-                })(e),
-              ),
+            onValueChange: (t) =>
+              e.disabled
+                ? () => {}
+                : a(
+                    ((e) => {
+                      switch (e) {
+                        case (0, Ne.we)("#PersonalCalendar_WishlistShow"):
+                          return ke.Show;
+                        case (0, Ne.we)("#PersonalCalendar_WishlistHide"):
+                          return ke.Hide;
+                        case (0, Ne.we)("#PersonalCalendar_WishlistOnly"):
+                          return ke.Only;
+                      }
+                      return ke.Show;
+                    })(t),
+                  ),
             radius: "sm",
           }),
         );
       }
-      function We(e) {
-        const { games: t } = e;
+      function qe(e) {
+        const { games: t } = e,
+          a =
+            (0, Me.q3)(() =>
+              t?.filter((e) => !Re.Fm.Get().BIsGameIgnored(e.appid)),
+            ) ?? [];
         return r.createElement(
           Pe.Z,
           { className: Ae.PersonalCalendarSection },
@@ -5316,23 +5356,29 @@
           r.createElement(
             Pe.Z,
             { className: (0, ve.A)(Ae.GameList, Ae.Month) },
-            t
+            a
               .slice(0, 16)
               .map((e) =>
                 r.createElement(
                   Pe.Z,
                   { key: e.appid, className: Ae.AppEntry },
-                  r.createElement(be.W, {
+                  r.createElement(we.W, {
                     capsule: { id: e.appid },
                     imageType: "header",
+                    bShowEarlyAccessBanner: !0,
+                    bShowIgnoreButton: !0,
                   }),
                 ),
               ),
           ),
         );
       }
-      function Ue(e) {
-        const { games: t } = e;
+      function Ze(e) {
+        const { games: t } = e,
+          a =
+            (0, Me.q3)(() =>
+              t?.filter((e) => !Re.Fm.Get().BIsGameIgnored(e.appid)),
+            ) ?? [];
         return r.createElement(
           Pe.Z,
           { className: Ae.PersonalCalendarSection },
@@ -5344,34 +5390,43 @@
           r.createElement(
             Pe.Z,
             { className: (0, ve.A)(Ae.GameList, Ae.Week) },
-            t
+            a
               .slice(0, 12)
               .map((e) =>
                 r.createElement(
                   Pe.Z,
                   { key: e.appid, className: Ae.AppEntry },
-                  r.createElement(be.W, {
+                  r.createElement(we.W, {
                     capsule: { id: e.appid },
                     imageType: "header",
+                    bShowEarlyAccessBanner: !0,
+                    bShowIgnoreButton: !0,
                   }),
                 ),
               ),
           ),
         );
       }
-      function je(e) {
+      function Ve(e) {
         const {
             dayWeekTimestamps: t,
             appReleasesByDay: a,
             todayTimestamp: s,
+            includeSaturday: n,
           } = e,
-          [n, i] = r.useState(9999);
+          [i, o] = r.useState(9999);
         return r.createElement(
           r.Fragment,
           null,
           r.createElement(
             Pe.Z,
-            { className: (0, ve.A)(Ae.PersonalCalendarSection, Ae.Calendar) },
+            {
+              className: (0, ve.A)(
+                Ae.PersonalCalendarSection,
+                Ae.Calendar,
+                n && Ae.IncludeSaturday,
+              ),
+            },
             r.createElement(
               Pe.Z,
               { className: Ae.SectionHeader },
@@ -5379,24 +5434,32 @@
             ),
             r.createElement(
               Pe.Z,
-              { className: Ae.Week },
-              t?.[0].map((e) =>
-                r.createElement(qe, { key: `WeekHeader_${e}`, timestamp: e }),
+              { className: (0, ve.A)(Ae.Week, n && Ae.IncludeSaturday) },
+              t?.[0].map((e, t) =>
+                0 == t
+                  ? null
+                  : n || 6 != t
+                    ? r.createElement(Ke, {
+                        key: `WeekHeader_${e}`,
+                        timestamp: e,
+                      })
+                    : null,
               ),
             ),
             t.map((e, t) =>
-              r.createElement(Ze, {
+              r.createElement(Ye, {
                 key: `Week_${t}`,
                 dayTimestamps: e,
                 appReleasesByDay: a,
                 todayTimestamp: s,
-                maxGames: n,
+                maxGames: i,
+                includeSaturday: n,
               }),
             ),
-            9999 != n &&
+            9999 != i &&
               r.createElement(
                 Pe.Z,
-                { className: Ae.ShowAllButton, onClick: () => i(9999) },
+                { className: Ae.ShowAllButton, onClick: () => o(9999) },
                 (0, Ne.we)("#PersonalCalendar_ShowAll"),
               ),
           ),
@@ -5406,6 +5469,7 @@
               className: (0, ve.A)(
                 Ae.PersonalCalendarSection,
                 Ae.LinearCalendar,
+                n && Ae.IncludeSaturday,
               ),
             },
             r.createElement(
@@ -5414,25 +5478,25 @@
               (0, Ne.we)("#PersonalCalendar_Upcoming"),
             ),
             t.map((e, t) =>
-              r.createElement(Ve, {
+              r.createElement(Je, {
                 key: `WeekLinear_${t}`,
                 dayTimestamps: e,
                 appReleasesByDay: a,
                 todayTimestamp: s,
-                maxGames: n,
+                maxGames: i,
               }),
             ),
           ),
         );
       }
-      function qe(e) {
+      function Ke(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
           Ne.pf.GetPreferredLocales(),
           { weekday: "long" },
         );
         return r.createElement(Pe.Z, { className: Ae.DayOfWeekHeader }, t);
       }
-      function Ze(e) {
+      function Ye(e) {
         const [t, a] = r.useState(e.maxGames);
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
         const s = e.dayTimestamps
@@ -5448,21 +5512,30 @@
           : 0;
         return r.createElement(
           Pe.Z,
-          { className: Ae.Week },
-          e.dayTimestamps.map((n) =>
-            r.createElement(Ke, {
-              key: n,
-              timestamp: n,
-              appsToday: e.appReleasesByDay[n],
-              firstTimestamp: e.todayTimestamp,
-              maxGames: Math.max(e.maxGames, t),
-              setMaxGames: a,
-              maxNumGamesInWeek: s,
-            }),
+          {
+            className: (0, ve.A)(
+              Ae.Week,
+              e.includeSaturday && Ae.IncludeSaturday,
+            ),
+          },
+          e.dayTimestamps.map((n, i) =>
+            0 == i
+              ? null
+              : e.includeSaturday || 6 != i
+                ? r.createElement(Qe, {
+                    key: n,
+                    timestamp: n,
+                    appsToday: e.appReleasesByDay[n],
+                    firstTimestamp: e.todayTimestamp,
+                    maxGames: Math.max(e.maxGames, t),
+                    setMaxGames: a,
+                    maxNumGamesInWeek: s,
+                  })
+                : null,
           ),
         );
       }
-      function Ve(e) {
+      function Je(e) {
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
         const t = { month: "long", day: "numeric" },
           a = new Date(1e3 * e.dayTimestamps[0]).toLocaleDateString(
@@ -5481,7 +5554,7 @@
             Pe.Z,
             { className: Ae.LinearDayList },
             e.dayTimestamps?.map((t) =>
-              r.createElement(Ye, {
+              r.createElement(Xe, {
                 key: t,
                 timestamp: t,
                 appsToday: e.appReleasesByDay[t],
@@ -5494,7 +5567,7 @@
           ),
         );
       }
-      function Ke(e) {
+      function Qe(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
             Ne.pf.GetPreferredLocales(),
             { month: "long", day: "numeric" },
@@ -5505,7 +5578,10 @@
           n = e.appsToday?.filter((e) => e.wishlisted).length,
           i = Math.max(e.maxGames, n),
           o = i == e.appsToday?.length,
-          l = e.appsToday?.slice(0, i),
+          l =
+            (0, Me.q3)(() =>
+              e.appsToday?.filter((e) => !Re.Fm.Get().BIsGameIgnored(e.appid)),
+            ) ?? [],
           c =
             1 == e.maxNumGamesInWeek ||
             e.appsToday?.length <= Math.floor(e.maxNumGamesInWeek / 2)
@@ -5522,13 +5598,15 @@
               r.createElement(
                 Pe.Z,
                 { key: e.appid, className: Ae.CalendarAppEntry },
-                r.createElement(be.W, {
+                r.createElement(we.W, {
                   capsule: { id: e.appid },
                   imageType: c,
                   nWidthMultiplier: 2,
                   bShowName: !1,
                   bHidePlatforms: !0,
                   bHidePrice: !0,
+                  bShowEarlyAccessBanner: !0,
+                  bShowIgnoreButton: !0,
                 }),
               ),
             ),
@@ -5545,7 +5623,7 @@
           ),
         );
       }
-      function Ye(e) {
+      function Xe(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
             Ne.pf.GetPreferredLocales(),
             { weekday: "long" },
@@ -5553,7 +5631,11 @@
           a = new Date();
         a.setHours(0, 0, 0, 0);
         const s = Math.floor(a.getTime() / 1e3),
-          n = s == e.timestamp;
+          n = s == e.timestamp,
+          i =
+            (0, Me.q3)(() =>
+              e.appsToday?.filter((e) => !Re.Fm.Get().BIsGameIgnored(e.appid)),
+            ) ?? [];
         return e.timestamp < s
           ? null
           : r.createElement(
@@ -5570,11 +5652,11 @@
                 r.createElement(
                   Pe.Z,
                   { className: Ae.LinearDayAppList },
-                  e.appsToday?.map((e) =>
+                  i?.map((e) =>
                     r.createElement(
                       Pe.Z,
                       { key: e.appid, className: Ae.LinearCalendarAppEntry },
-                      r.createElement(be.W, {
+                      r.createElement(we.W, {
                         capsule: { id: e.appid },
                         imageType: "library",
                         nWidthMultiplier: 2,
@@ -5582,36 +5664,39 @@
                         bHidePlatforms: !0,
                         bHidePrice: !0,
                         bHideStatusBanners: !0,
+                        bShowIgnoreButton: !0,
                       }),
                     ),
                   ),
                 ),
             );
       }
-      const Je = () => {
+      const $e = () => {
         const { data: e } = (0, Se.Fv)(xe.TS.LANGUAGE),
-          [t, a] = r.useState(Be),
+          [t, a] = r.useState(Fe),
           s = (0, De.I)({
             queryKey: ["personalcalendar", t.selectedTag],
             queryFn: async () => {
               const e = { tag: t.selectedTag, sessionid: xe.TS.SESSIONID },
                 a = await Ce().get(
                   `${xe.TS.STORE_BASE_URL}personalcalendar/getrecommendations`,
-                  { params: e, timeout: 1e4 },
+                  { params: e, timeout: 2e4 },
                 ),
                 {
                   appReleasesByDay: r,
                   dayWeekTimestamps: s,
                   maxResultCount: n,
                   userTags: i,
-                  result: o,
+                  usesWishlists: o,
+                  result: l,
                 } = a.data;
               return {
                 appReleasesByDay: r,
                 dayWeekTimestamps: s,
                 maxResultCount: n,
                 userTags: i,
-                resultMessage: o,
+                usesWishlists: o,
+                resultMessage: l,
               };
             },
             placeholderData: (e) => e,
@@ -5621,17 +5706,19 @@
             dayWeekTimestamps: i,
             appReleasesByDay: o,
             userTags: l,
+            usesWishlists: c,
           } = s.data || {},
-          c = new Date();
-        c.setHours(0, 0, 0, 0);
-        const m = Math.floor(c.getTime() / 1e3),
-          p = new Date();
-        p.setDate(p.getDate() - 7);
-        const d = Math.floor(p.getTime() / 1e3),
+          m = new Date();
+        m.setHours(0, 0, 0, 0);
+        const p = Math.floor(m.getTime() / 1e3),
+          d = new Date();
+        d.setDate(d.getDate() - 7);
+        const u = Math.floor(d.getTime() / 1e3),
           {
-            appReleasesByDayFiltered: u,
-            lastMonthGames: h,
-            lastWeekGames: g,
+            appReleasesByDayFiltered: h,
+            lastMonthGames: g,
+            lastWeekGames: _,
+            includeSaturday: y,
           } = r.useMemo(() => {
             if (!o)
               return {
@@ -5640,39 +5727,77 @@
                 lastWeekGames: [],
               };
             const e = i?.flat() ?? [];
-            const a = (function (e, t, a, r) {
-                const s = Object.entries(e).map(([e, s]) => [
-                  Number(e),
-                  s
-                    .filter((e) => e.rank < t && (!a || !e.owned))
-                    .filter((e) => {
-                      switch (r) {
-                        case Le.Show:
-                          return !0;
-                        case Le.Hide:
-                          return !e.wishlisted;
-                        case Le.Only:
-                          return e.wishlisted;
-                      }
-                    }),
-                ]);
-                return Object.fromEntries(s);
-              })(o, t.cResultsToShow, t.bHideOwned, t.wishlistDisplay),
-              r = [],
-              s = [];
+            const a = (function (e, t, a, r, s) {
+                const n = Object.entries(e).map(
+                  ([e, n]) => (
+                    (n = n.filter((e) => e.rank < t)),
+                    a && (n = n.filter((e) => !e.owned)),
+                    r &&
+                      (n = n.filter((e) => {
+                        const t = Te.A.Get().GetApp(e.appid);
+                        return !t?.BIsEarlyAccess();
+                      })),
+                    s != ke.Show &&
+                      (n = n.filter((e) => {
+                        switch (s) {
+                          case ke.Hide:
+                            return !Re.Fm.Get().BIsGameWishlisted(e.appid);
+                          case ke.Only:
+                            return Re.Fm.Get().BIsGameWishlisted(e.appid);
+                        }
+                      })),
+                    [e, n]
+                  ),
+                );
+                return Object.fromEntries(n);
+              })(
+                o,
+                t.cResultsToShow,
+                t.bHideOwned,
+                t.bHideEarlyAccess,
+                t.wishlistDisplay,
+              ),
+              r = e.filter((e, t) => t % 7 == 6);
+            let s = 0;
+            for (const e of r) s += a[e]?.length ?? 0;
+            const n = s >= 5;
+            for (let t = 0; t < e.length; t += 1) {
+              if (t % 7 == 0 && a[e[t]]?.length > 0) {
+                const r = e[t + 1];
+                t < e.length - 1 &&
+                  (a[r] || (a[r] = []), a[r].push(...a[e[t]]));
+              }
+              if (t % 7 == 6 && !n && a[e[t]]?.length > 0) {
+                const r = e[t + 2];
+                t < e.length - 2 &&
+                  (a[r] || (a[r] = []), a[r].push(...a[e[t]]));
+              }
+            }
+            const l = [],
+              c = [];
             for (const t of e)
-              t <= m &&
-                (t < d ? r.push(...(a?.[t] ?? [])) : s.push(...(a?.[t] ?? [])));
+              t <= p &&
+                (t < u ? l.push(...(a?.[t] ?? [])) : c.push(...(a?.[t] ?? [])));
             return (
-              r.sort((e, t) => e.rank - t.rank),
-              s.sort((e, t) => e.rank - t.rank),
+              l.sort((e, t) => e.rank - t.rank),
+              c.sort((e, t) => e.rank - t.rank),
               {
                 appReleasesByDayFiltered: a,
-                lastMonthGames: r,
-                lastWeekGames: s,
+                lastMonthGames: l,
+                lastWeekGames: c,
+                includeSaturday: n,
               }
             );
-          }, [o, t.cResultsToShow, t.bHideOwned, t.wishlistDisplay, i, m, d]);
+          }, [
+            o,
+            t.cResultsToShow,
+            t.bHideOwned,
+            t.wishlistDisplay,
+            t.bHideEarlyAccess,
+            i,
+            p,
+            u,
+          ]);
         return s.data && !xe.iA.logged_in
           ? r.createElement(
               Pe.Z,
@@ -5684,7 +5809,7 @@
               ),
               r.createElement(
                 Pe.Z,
-                { className: (0, ve.A)(Ae.LoginButton), onClick: we.vg },
+                { className: (0, ve.A)(Ae.LoginButton), onClick: be.vg },
                 r.createElement("span", null, (0, Ne.we)("#LoginButton")),
               ),
             )
@@ -5709,27 +5834,31 @@
                   r.createElement(
                     Pe.Z,
                     { className: Ae.PersonalCalendarContainer },
-                    r.createElement(Oe, {
+                    r.createElement(He, {
                       count: s.data ? t.cResultsToShow : void 0,
                     }),
-                    !xe.iA.steamid && r.createElement(ke, null),
+                    !xe.iA.steamid && r.createElement(Ge, null),
                     s.data &&
                       r.createElement(
                         r.Fragment,
                         null,
-                        r.createElement(Fe, {
+                        r.createElement(ze, {
                           state: t,
                           onChange: a,
                           tagMap: e,
                           userTags: l,
                           maxResultsToShow: n,
+                          usesWishlists: c,
                         }),
-                        h.length > 0 && r.createElement(We, { games: h }),
-                        g.length > 0 && r.createElement(Ue, { games: g }),
-                        r.createElement(je, {
+                        g.length > 0 &&
+                          r.createElement(qe, { games: g, includeSaturday: y }),
+                        _.length > 0 &&
+                          r.createElement(Ze, { games: _, includeSaturday: y }),
+                        r.createElement(Ve, {
                           dayWeekTimestamps: i,
-                          appReleasesByDay: u,
-                          todayTimestamp: m,
+                          appReleasesByDay: h,
+                          todayTimestamp: p,
+                          includeSaturday: y,
                         }),
                       ),
                   ),

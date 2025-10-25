@@ -458,6 +458,7 @@
             bHideStoreHover: _,
             onlyOneDiscountPct: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
@@ -471,6 +472,7 @@
             bIsHovered: _,
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: _,
           });
         return _.createElement(
           _._,
@@ -511,6 +513,7 @@
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
                     nWidthMultiplier: _.nWidthMultiplier,
+                    bShowIgnoreButton: _.bShowIgnoreButton,
                   },
                   _,
                 ),
@@ -585,6 +588,7 @@
             bIsHovered: _,
             strDoubleCapsuleMessage: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ = (0, _._)(),
@@ -627,6 +631,7 @@
               _.createElement(_._, {
                 appids: _,
                 hide_status_banners: __webpack_require__,
+                show_early_access: _.bShowEarlyAccessBanner,
               }),
               "none" != _ &&
                 _.createElement(_._, {

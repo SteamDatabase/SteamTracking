@@ -478,12 +478,14 @@
         PersonalCalendarHeader: "_3CwW2Qs3urt8QcUjerZErw",
         PersonalCalendarTitle: "_1jhESJwyB5EudCwWSj1Cd9",
         PersonalCalendarDescription: "_1o94X46OlzAxrg7CHGu4Xx",
+        IncludeSaturday: "_2aUgvVQfnrPXJadG5GrdcD",
         Calendar: "p6KFiyUG9MYjbErC0_SGJ",
         LinearCalendar: "_1L5MsHayIMOr5ug0cNxdxX",
         SectionHeader: "_1pxjbUKB_ugZ6rMdnTXmks",
         GameList: "_1YDn2Y6zO2xAbcwcIvI79b",
         Options: "_2LcfPsUSmeavC5MD7P-3_3",
         ResultCountSelector: "_2kL46N7kSTQrKIGU59rigN",
+        Disabled: "_3rT8s7lyF7ez2ptouqnozy",
         Title: "_9umPLKYAgKsJMqw7ujTrY",
         HideOwnedSelector: "xT3lxTdADiEWewVz8DEPg",
         TagSelector: "RMzOW5KaqQvzer-NgkySs",
@@ -501,10 +503,10 @@
         Summary: "_3HXw8Pw87qqgqr1Ag5Bwde",
         DayOfWeekHeader: "RLNS069fcm-HyBmDQpQzx",
         Day: "_14ZKl5pFBqLi_U0LVFjkz4",
+        CalendarAppEntry: "_13JzJBgCihXnVCM-l2MMWR",
         Blank: "_3UiDT-YpyntdDox1_Ccld6",
         Today: "rChGJxkm3sNTTmDYe7KMW",
         DateHeader: "_1i3Li2VsTuM5vu7R9eWJ2F",
-        CalendarAppEntry: "_13JzJBgCihXnVCM-l2MMWR",
         ShowMoreButton: "ez9Ld7tp9t28fRwR6VBKh",
         ShowMoreTextButton: "_3P6P3gZ5tYxntcm-ESmTbn",
         PersonalCalendarLoginPrompt: "ON8dwj0iIb2zJimIKh1q3",
@@ -597,6 +599,7 @@
             bHideStoreHover: _,
             onlyOneDiscountPct: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
@@ -610,6 +613,7 @@
             bIsHovered: _,
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: _,
           });
         return _.createElement(
           _._,
@@ -650,6 +654,7 @@
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
                     nWidthMultiplier: _.nWidthMultiplier,
+                    bShowIgnoreButton: _.bShowIgnoreButton,
                   },
                   _,
                 ),
@@ -724,6 +729,7 @@
             bIsHovered: _,
             strDoubleCapsuleMessage: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ = (0, _._)(),
@@ -766,6 +772,7 @@
               _.createElement(_._, {
                 appids: _,
                 hide_status_banners: __webpack_require__,
+                show_early_access: _.bShowEarlyAccessBanner,
               }),
               "none" != _ &&
                 _.createElement(_._, {
@@ -5854,6 +5861,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "PC_HideOwned",
         _ = "PC_GameCount",
@@ -5867,6 +5877,7 @@
       const _ = {
         selectedTag: 0,
         bHideOwned: "1" == localStorage.getItem(_),
+        bHideEarlyAccess: "1" == localStorage.getItem("PC_HideEarlyAccess"),
         cResultsToShow: parseInt(localStorage.getItem(_) ?? "100"),
         wishlistDisplay: parseInt(localStorage.getItem(_) ?? "0"),
       };
@@ -5969,6 +5980,7 @@
                     wishlistDisplay: _,
                   });
               },
+              disabled: !_.usesWishlists,
             }),
             _.createElement(
               _._,
@@ -5988,6 +6000,20 @@
                   },
                 },
                 (0, _._)("#PersonalCalendar_HideOwned"),
+              ),
+              _.createElement(
+                _,
+                {
+                  checked: _.bHideEarlyAccess,
+                  onChange: (_) => {
+                    localStorage.setItem(_, _ ? "1" : "0"),
+                      __webpack_require__({
+                        ..._,
+                        bHideEarlyAccess: _,
+                      });
+                  },
+                },
+                (0, _._)("#PersonalCalendar_HideEarlyAccess"),
               ),
             ),
           ),
@@ -6102,7 +6128,13 @@
         return _.createElement(
           _._,
           {
-            className: _.ResultCountSelector,
+            className: (0, _._)(
+              _.ResultCountSelector,
+              _.disabled && _.Disabled,
+            ),
+            "data-tooltip-text": _.disabled
+              ? (0, _._)("#PersonalCalendar_IgnoringWishlists")
+              : void 0,
           },
           _.createElement(
             _._,
@@ -6115,25 +6147,31 @@
             options: _,
             value: _(_),
             onValueChange: (_) =>
-              __webpack_require__(
-                ((_) => {
-                  switch (_) {
-                    case (0, _._)("#PersonalCalendar_WishlistShow"):
+              _.disabled
+                ? () => {}
+                : __webpack_require__(
+                    ((_) => {
+                      switch (_) {
+                        case (0, _._)("#PersonalCalendar_WishlistShow"):
+                          return _.Show;
+                        case (0, _._)("#PersonalCalendar_WishlistHide"):
+                          return _.Hide;
+                        case (0, _._)("#PersonalCalendar_WishlistOnly"):
+                          return _.Only;
+                      }
                       return _.Show;
-                    case (0, _._)("#PersonalCalendar_WishlistHide"):
-                      return _.Hide;
-                    case (0, _._)("#PersonalCalendar_WishlistOnly"):
-                      return _.Only;
-                  }
-                  return _.Show;
-                })(_),
-              ),
+                    })(_),
+                  ),
             radius: "sm",
           }),
         );
       }
       function _(_) {
-        const { games: _ } = _;
+        const { games: _ } = _,
+          _ =
+            (0, _._)(() =>
+              _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
+            ) ?? [];
         return _.createElement(
           _._,
           {
@@ -6151,7 +6189,7 @@
             {
               className: (0, _._)(_.GameList, _.Month),
             },
-            _.slice(0, 16).map((_) =>
+            __webpack_require__.slice(0, 16).map((_) =>
               _.createElement(
                 _._,
                 {
@@ -6163,6 +6201,8 @@
                     _: _.appid,
                   },
                   imageType: "header",
+                  bShowEarlyAccessBanner: !0,
+                  bShowIgnoreButton: !0,
                 }),
               ),
             ),
@@ -6170,7 +6210,11 @@
         );
       }
       function _(_) {
-        const { games: _ } = _;
+        const { games: _ } = _,
+          _ =
+            (0, _._)(() =>
+              _?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
+            ) ?? [];
         return _.createElement(
           _._,
           {
@@ -6188,7 +6232,7 @@
             {
               className: (0, _._)(_.GameList, _.Week),
             },
-            _.slice(0, 12).map((_) =>
+            __webpack_require__.slice(0, 12).map((_) =>
               _.createElement(
                 _._,
                 {
@@ -6200,6 +6244,8 @@
                     _: _.appid,
                   },
                   imageType: "header",
+                  bShowEarlyAccessBanner: !0,
+                  bShowIgnoreButton: !0,
                 }),
               ),
             ),
@@ -6211,6 +6257,7 @@
             dayWeekTimestamps: _,
             appReleasesByDay: __webpack_require__,
             todayTimestamp: _,
+            includeSaturday: _,
           } = _,
           [_, _] = _.useState(9999);
         return _.createElement(
@@ -6219,7 +6266,11 @@
           _.createElement(
             _._,
             {
-              className: (0, _._)(_.PersonalCalendarSection, _.Calendar),
+              className: (0, _._)(
+                _.PersonalCalendarSection,
+                _.Calendar,
+                _ && _.IncludeSaturday,
+              ),
             },
             _.createElement(
               _._,
@@ -6231,13 +6282,17 @@
             _.createElement(
               _._,
               {
-                className: _.Week,
+                className: (0, _._)(_.Week, _ && _.IncludeSaturday),
               },
-              _?.[0].map((_) =>
-                _.createElement(_, {
-                  key: `WeekHeader_${_}`,
-                  timestamp: _,
-                }),
+              _?.[0].map((_, _) =>
+                0 == _
+                  ? null
+                  : _ || 6 != _
+                    ? _.createElement(_, {
+                        key: `WeekHeader_${_}`,
+                        timestamp: _,
+                      })
+                    : null,
               ),
             ),
             _.map((_, _) =>
@@ -6247,6 +6302,7 @@
                 appReleasesByDay: __webpack_require__,
                 todayTimestamp: _,
                 maxGames: _,
+                includeSaturday: _,
               }),
             ),
             9999 != _ &&
@@ -6262,7 +6318,11 @@
           _.createElement(
             _._,
             {
-              className: (0, _._)(_.PersonalCalendarSection, _.LinearCalendar),
+              className: (0, _._)(
+                _.PersonalCalendarSection,
+                _.LinearCalendar,
+                _ && _.IncludeSaturday,
+              ),
             },
             _.createElement(
               _._,
@@ -6315,18 +6375,22 @@
         return _.createElement(
           _._,
           {
-            className: _.Week,
+            className: (0, _._)(_.Week, _.includeSaturday && _.IncludeSaturday),
           },
-          _.dayTimestamps.map((_) =>
-            _.createElement(_, {
-              key: _,
-              timestamp: _,
-              appsToday: _.appReleasesByDay[_],
-              firstTimestamp: _.todayTimestamp,
-              maxGames: Math.max(_.maxGames, _),
-              setMaxGames: __webpack_require__,
-              maxNumGamesInWeek: _,
-            }),
+          _.dayTimestamps.map((_, _) =>
+            0 == _
+              ? null
+              : _.includeSaturday || 6 != _
+                ? _.createElement(_, {
+                    key: _,
+                    timestamp: _,
+                    appsToday: _.appReleasesByDay[_],
+                    firstTimestamp: _.todayTimestamp,
+                    maxGames: Math.max(_.maxGames, _),
+                    setMaxGames: __webpack_require__,
+                    maxNumGamesInWeek: _,
+                  })
+                : null,
           ),
         );
       }
@@ -6392,7 +6456,10 @@
           _ = _.appsToday?.filter((_) => _.wishlisted).length,
           _ = Math.max(_.maxGames, _),
           _ = _ == _.appsToday?.length,
-          _ = _.appsToday?.slice(0, _),
+          _ =
+            (0, _._)(() =>
+              _.appsToday?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
+            ) ?? [],
           _ =
             1 == _.maxNumGamesInWeek ||
             _.appsToday?.length <= Math.floor(_.maxNumGamesInWeek / 2)
@@ -6431,6 +6498,8 @@
                   bShowName: !1,
                   bHidePlatforms: !0,
                   bHidePrice: !0,
+                  bShowEarlyAccessBanner: !0,
+                  bShowIgnoreButton: !0,
                 }),
               ),
             ),
@@ -6457,7 +6526,11 @@
           _ = new Date();
         __webpack_require__.setHours(0, 0, 0, 0);
         const _ = Math.floor(__webpack_require__.getTime() / 1e3),
-          _ = _ == _.timestamp;
+          _ = _ == _.timestamp,
+          _ =
+            (0, _._)(() =>
+              _.appsToday?.filter((_) => !_._.Get().BIsGameIgnored(_.appid)),
+            ) ?? [];
         return _.timestamp < _
           ? null
           : _.createElement(
@@ -6482,7 +6555,7 @@
                   {
                     className: _.LinearDayAppList,
                   },
-                  _.appsToday?.map((_) =>
+                  _?.map((_) =>
                     _.createElement(
                       _._,
                       {
@@ -6499,6 +6572,7 @@
                         bHidePlatforms: !0,
                         bHidePrice: !0,
                         bHideStatusBanners: !0,
+                        bShowIgnoreButton: !0,
                       }),
                     ),
                   ),
@@ -6519,7 +6593,7 @@
                   `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
                   {
                     params: _,
-                    timeout: 1e4,
+                    timeout: 2e4,
                   },
                 ),
                 {
@@ -6527,6 +6601,7 @@
                   dayWeekTimestamps: _,
                   maxResultCount: _,
                   userTags: _,
+                  usesWishlists: _,
                   result: _,
                 } = _.data;
               return {
@@ -6534,6 +6609,7 @@
                 dayWeekTimestamps: _,
                 maxResultCount: _,
                 userTags: _,
+                usesWishlists: _,
                 resultMessage: _,
               };
             },
@@ -6544,6 +6620,7 @@
             dayWeekTimestamps: _,
             appReleasesByDay: _,
             userTags: _,
+            usesWishlists: _,
           } = _.data || {},
           _ = new Date();
         _.setHours(0, 0, 0, 0);
@@ -6555,6 +6632,7 @@
             appReleasesByDayFiltered: _,
             lastMonthGames: _,
             lastWeekGames: _,
+            includeSaturday: _,
           } = _.useMemo(() => {
             if (!_)
               return {
@@ -6563,25 +6641,53 @@
                 lastWeekGames: [],
               };
             const _ = _?.flat() ?? [];
-            const _ = (function (_, _, _, _) {
-                const _ = Object.entries(_).map(([_, _]) => [
-                  Number(_),
-                  _.filter((_) => _.rank < _ && (!_ || !_.owned)).filter(
-                    (_) => {
-                      switch (_) {
-                        case _.Show:
-                          return !0;
-                        case _.Hide:
-                          return !_.wishlisted;
-                        case _.Only:
-                          return _.wishlisted;
-                      }
-                    },
+            const _ = (function (_, _, _, _, _) {
+                const _ = Object.entries(_).map(
+                  ([_, _]) => (
+                    (_ = _.filter((_) => _.rank < _)),
+                    _ && (_ = _.filter((_) => !_.owned)),
+                    _ &&
+                      (_ = _.filter((_) => {
+                        const _ = _._.Get().GetApp(_.appid);
+                        return !_?.BIsEarlyAccess();
+                      })),
+                    _ != _.Show &&
+                      (_ = _.filter((_) => {
+                        switch (_) {
+                          case _.Hide:
+                            return !_._.Get().BIsGameWishlisted(_.appid);
+                          case _.Only:
+                            return _._.Get().BIsGameWishlisted(_.appid);
+                        }
+                      })),
+                    [_, _]
                   ),
-                ]);
+                );
                 return Object.fromEntries(_);
-              })(_, _.cResultsToShow, _.bHideOwned, _.wishlistDisplay),
-              _ = [],
+              })(
+                _,
+                _.cResultsToShow,
+                _.bHideOwned,
+                _.bHideEarlyAccess,
+                _.wishlistDisplay,
+              ),
+              _ = _.filter((_, _) => _ % 7 == 6);
+            let _ = 0;
+            for (const _ of _) _ += _[_]?.length ?? 0;
+            const _ = _ >= 5;
+            for (let _ = 0; _ < _.length; _ += 1) {
+              if (_ % 7 == 0 && _[_[_]]?.length > 0) {
+                const _ = _[_ + 1];
+                _ < _.length - 1 &&
+                  (_[_] || (_[_] = []), _[_].push(..._[_[_]]));
+              }
+              if (_ % 7 == 6 && !_ && _[_[_]]?.length > 0) {
+                const _ = _[_ + 2];
+                _ < _.length - 2 &&
+                  (_[_] || (_[_] = []), _[_].push(..._[_[_]]));
+              }
+            }
+            const _ = [],
               _ = [];
             for (const _ of _)
               _ <= _ &&
@@ -6593,9 +6699,19 @@
                 appReleasesByDayFiltered: _,
                 lastMonthGames: _,
                 lastWeekGames: _,
+                includeSaturday: _,
               }
             );
-          }, [_, _.cResultsToShow, _.bHideOwned, _.wishlistDisplay, _, _, _]);
+          }, [
+            _,
+            _.cResultsToShow,
+            _.bHideOwned,
+            _.wishlistDisplay,
+            _.bHideEarlyAccess,
+            _,
+            _,
+            _,
+          ]);
         return _.data && !_._.logged_in
           ? _.createElement(
               _._,
@@ -6655,19 +6771,23 @@
                           tagMap: _,
                           userTags: _,
                           maxResultsToShow: _,
+                          usesWishlists: _,
                         }),
                         _.length > 0 &&
                           _.createElement(_, {
                             games: _,
+                            includeSaturday: _,
                           }),
                         _.length > 0 &&
                           _.createElement(_, {
                             games: _,
+                            includeSaturday: _,
                           }),
                         _.createElement(_, {
                           dayWeekTimestamps: _,
                           appReleasesByDay: _,
                           todayTimestamp: _,
+                          includeSaturday: _,
                         }),
                       ),
                   ),

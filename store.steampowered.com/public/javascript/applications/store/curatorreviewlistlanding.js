@@ -102,13 +102,13 @@
     },
     17083: (e, t, a) => {
       "use strict";
-      a.d(t, { N_: () => f, k2: () => E });
+      a.d(t, { N_: () => f, k2: () => v });
       var n = a(92757),
         r = a(42891),
         o = a(90626),
         l = a(29248),
-        i = a(58584),
-        s = a(81115),
+        s = a(58584),
+        i = a(81115),
         c = a(68841);
       o.Component;
       o.Component;
@@ -127,9 +127,9 @@
         var a = e.innerRef,
           n = e.navigate,
           r = e.onClick,
-          l = (0, s.A)(e, ["innerRef", "navigate", "onClick"]),
+          l = (0, i.A)(e, ["innerRef", "navigate", "onClick"]),
           c = l.target,
-          u = (0, i.A)({}, l, {
+          u = (0, s.A)({}, l, {
             onClick: function (e) {
               try {
                 r && r(e);
@@ -151,18 +151,18 @@
           var a = e.component,
             r = void 0 === a ? _ : a,
             f = e.replace,
-            v = e.to,
+            E = e.to,
             g = e.innerRef,
-            E = (0, s.A)(e, ["component", "replace", "to", "innerRef"]);
+            v = (0, i.A)(e, ["component", "replace", "to", "innerRef"]);
           return o.createElement(n.XZ.Consumer, null, function (e) {
             e || (0, c.A)(!1);
             var a = e.history,
-              n = m(u(v, e.location), e.location),
-              s = n ? a.createHref(n) : "",
-              _ = (0, i.A)({}, E, {
-                href: s,
+              n = m(u(E, e.location), e.location),
+              i = n ? a.createHref(n) : "",
+              _ = (0, s.A)({}, v, {
+                href: i,
                 navigate: function () {
-                  var t = u(v, e.location),
+                  var t = u(E, e.location),
                     n = (0, l.AO)(e.location) === (0, l.AO)(m(t));
                   (f || n ? a.replace : a.push)(t);
                 },
@@ -173,27 +173,27 @@
             );
           });
         }),
-        v = function (e) {
+        E = function (e) {
           return e;
         },
         g = o.forwardRef;
-      void 0 === g && (g = v);
-      var E = g(function (e, t) {
+      void 0 === g && (g = E);
+      var v = g(function (e, t) {
         var a = e["aria-current"],
           r = void 0 === a ? "page" : a,
           l = e.activeClassName,
           d = void 0 === l ? "active" : l,
           p = e.activeStyle,
           _ = e.className,
-          E = e.exact,
+          v = e.exact,
           h = e.isActive,
           b = e.location,
           C = e.sensitive,
-          I = e.strict,
-          S = e.style,
+          S = e.strict,
+          I = e.style,
           y = e.to,
           w = e.innerRef,
-          A = (0, s.A)(e, [
+          A = (0, i.A)(e, [
             "aria-current",
             "activeClassName",
             "activeStyle",
@@ -211,19 +211,19 @@
           e || (0, c.A)(!1);
           var a = b || e.location,
             l = m(u(y, a), a),
-            s = l.pathname,
-            D = s && s.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+            i = l.pathname,
+            D = i && i.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
             T = D
               ? (0, n.B6)(a.pathname, {
                   path: D,
-                  exact: E,
+                  exact: v,
                   sensitive: C,
-                  strict: I,
+                  strict: S,
                 })
               : null,
             L = !!(h ? h(T, a) : T),
             N = "function" == typeof _ ? _(L) : _,
-            P = "function" == typeof S ? S(L) : S;
+            P = "function" == typeof I ? I(L) : I;
           L &&
             ((N = (function () {
               for (
@@ -238,13 +238,13 @@
                 })
                 .join(" ");
             })(N, d)),
-            (P = (0, i.A)({}, P, p)));
-          var G = (0, i.A)(
+            (P = (0, s.A)({}, P, p)));
+          var G = (0, s.A)(
             { "aria-current": (L && r) || null, className: N, style: P, to: l },
             A,
           );
           return (
-            v !== g ? (G.ref = t || w) : (G.innerRef = w), o.createElement(f, G)
+            E !== g ? (G.ref = t || w) : (G.innerRef = w), o.createElement(f, G)
           );
         });
       });
@@ -256,8 +256,8 @@
         r = /^.*youtube[^v]+v=(.{11}).*/,
         o = /^.*youtu\.be\/(.{11}).*/,
         l = /^.*youtube.*\/embed\/(.{11}).*/,
-        i = /^.*[?&]t=([^&]+)(?:&|$)/,
-        s = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
+        s = /^.*[?&]t=([^&]+)(?:&|$)/,
+        i = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
       function c(e) {
         return !!u(e);
       }
@@ -269,12 +269,12 @@
         const t = u(e);
         if (!t) return;
         const a = (function (e) {
-            const t = i.exec(e);
+            const t = s.exec(e);
             return t?.[1];
           })(e),
           n = a
             ? (function (e) {
-                const t = s.exec(e);
+                const t = i.exec(e);
                 if (!(t?.[1] || t?.[2] || t?.[3] || t?.[4])) return;
                 if (t?.[4]) return parseInt(t?.[4]);
                 let a = 0;
@@ -293,18 +293,18 @@
       "use strict";
       a.d(t, {
         F6: () => h,
-        ME: () => I,
+        ME: () => S,
         RA: () => C,
         cc: () => y,
         fq: () => w,
-        m1: () => S,
+        m1: () => I,
       });
       var n = a(34629),
         r = a(41735),
         o = a.n(r),
         l = a(14947),
-        i = a(90626),
-        s = a(17720),
+        s = a(90626),
+        i = a(17720),
         c = a(4796),
         u = a(30894),
         m = a(6379),
@@ -312,9 +312,9 @@
         p = a(62490),
         _ = a(81393),
         f = a(68797),
-        v = a(84933),
+        E = a(84933),
         g = a(78327);
-      function E(e) {
+      function v(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
           : ((0, _.wT)(
@@ -372,7 +372,7 @@
               const a = { ...l.data.list_details };
               return (
                 (0, _.wT)(t == a?.listid, "Wanted" + t + "but got" + a?.listid),
-                E(a),
+                v(a),
                 b(l.data.curation_language, a),
                 this.m_mapList.set(t, a),
                 this.m_mapListIDToClanAccount.set(t, e.GetAccountID()),
@@ -432,9 +432,9 @@
             a,
           );
         }
-        async InternalLoadSaleCuratorLists(e, t, a, n, r, i) {
+        async InternalLoadSaleCuratorLists(e, t, a, n, r, s) {
           try {
-            const a = await o().get(e, { params: t, cancelToken: i?.token });
+            const a = await o().get(e, { params: t, cancelToken: s?.token });
             if (1 == a?.data?.success) {
               const e = new Array();
               return (
@@ -446,7 +446,7 @@
                           a.listid,
                           t.clan_account_id,
                         ),
-                          E(a),
+                          v(a),
                           b(t.curation_language, a),
                           this.m_mapList.set(a.listid, a),
                           e.push(a);
@@ -480,7 +480,7 @@
               (0, l.h5)(() => {
                 e.forEach((e) => {
                   e.multi_detail_lists.forEach((t) => {
-                    E(t),
+                    v(t),
                       b(e.curation_language, t),
                       this.m_mapList.set(t.listid, t);
                   });
@@ -502,10 +502,10 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function I(e, t) {
-        const a = (0, v.CH)();
+      function S(e, t) {
+        const a = (0, E.CH)();
         return (
-          (0, i.useEffect)(() => {
+          (0, s.useEffect)(() => {
             if (C.Get().GetListDetails(t) || !e) return;
             const n = o().CancelToken.source();
             return (
@@ -532,13 +532,13 @@
           C.Get().GetListDetails(t)
         );
       }
-      function S(e) {
+      function I(e) {
         const t = e && c.ac.GetClanInfoByClanAccountID(e),
-          [a, n] = (0, i.useState)(!!t);
+          [a, n] = (0, s.useState)(!!t);
         return (
-          (0, i.useEffect)(() => {
+          (0, s.useEffect)(() => {
             if (a && e) {
-              const t = s.b.InitFromClanID(e);
+              const t = i.b.InitFromClanID(e);
               c.ac.LoadClanInfoForClanSteamID(t).finally(() => {
                 n(!0);
               });
@@ -551,18 +551,18 @@
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
       function w(e) {
-        const t = (0, v.CH)(),
+        const t = (0, E.CH)(),
           a = y(e) ? e.sale_clan_event_gid : null,
           n = a && m.O3.GetClanEventModel(a);
         return (
-          (0, i.useEffect)(() => {
+          (0, s.useEffect)(() => {
             if (n || !y(e)) return;
             const r = o().CancelToken.source();
             return (
               (async () => {
                 m.O3.Init(),
                   await m.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                    new s.b(e.sale_clan_steamid),
+                    new i.b(e.sale_clan_steamid),
                     a,
                     0,
                   ),
@@ -583,8 +583,8 @@
         r = a(66272),
         o = a(52038),
         l = a(17083),
-        i = a(45699),
-        s = a(76217);
+        s = a(45699),
+        i = a(76217);
       function c(e) {
         const { crumbs: t, className: a } = e;
         return t && 0 != t.length
@@ -592,7 +592,7 @@
               "div",
               { className: (0, o.A)(r.BreadContainer, a) },
               n.createElement(
-                s.Z,
+                i.Z,
                 { className: "blockbg", "flow-children": "row" },
                 t.map((e) => {
                   const t = new Array();
@@ -600,7 +600,7 @@
                     e.url.startsWith("http")
                       ? t.push(
                           n.createElement(
-                            i.Ii,
+                            s.Ii,
                             { key: "anchor_" + e.name, href: e.url },
                             e.name,
                           ),
@@ -626,13 +626,13 @@
     },
     46416: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => R, W: () => k });
+      a.d(t, { J: () => R, W: () => B });
       var n = a(90626),
         r = a(57876),
         o = a(45699),
         l = a(76217),
-        i = a(23310),
-        s = a(55963),
+        s = a(23310),
+        i = a(55963),
         c = a(30894),
         u = a(62792),
         m = a(55263),
@@ -640,14 +640,14 @@
         p = a(26101),
         _ = a(45359),
         f = a(18654),
-        v = a.n(f),
+        E = a.n(f),
         g = a(3661),
-        E = a(37346),
+        v = a(37346),
         h = a(72860),
         b = a(70300),
         C = a(47235),
-        I = a(37076),
-        S = a(54492),
+        S = a(37076),
+        I = a(54492),
         y = a(60014),
         w = a(52038),
         A = a(61859),
@@ -658,53 +658,55 @@
         P = a(99956),
         G = a(49411);
       const R = "capsule_index_";
-      function k(e) {
+      function B(e) {
         const {
             capsule: t,
             bShowParentApp: a,
             elElementToAppendToHover: o,
-            index: s,
+            index: i,
             navKey: c,
             bHideStoreHover: d,
             onlyOneDiscountPct: _,
             bPreferDemoStorePage: f,
+            bShowEarlyAccessBanner: g,
           } = e,
-          [g, E] = n.useState(!1),
-          [h] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
-          [C] = (0, m.t7)(a && h?.GetParentAppID(), r.Xh);
-        if (!h) return null;
-        const I = Boolean(C),
-          S = n.createElement(F, {
+          [v, h] = n.useState(!1),
+          [C] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
+          [S] = (0, m.t7)(a && C?.GetParentAppID(), r.Xh);
+        if (!C) return null;
+        const I = Boolean(S),
+          y = n.createElement(F, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
-            bIsHovered: g,
+            bIsHovered: v,
             bHasParentAppToDisplay: I,
             onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: g,
           });
         return n.createElement(
           l.Z,
           {
             className: (0, w.A)({
-              [v().OuterCapsuleContainer]: !0,
-              [R + s]: 0 == s,
+              [E().OuterCapsuleContainer]: !0,
+              [R + i]: 0 == i,
             }),
-            navEntryPreferPosition: i.iU.PREFERRED_CHILD,
+            navEntryPreferPosition: s.iU.PREFERRED_CHILD,
             navKey: c,
           },
           n.createElement(
             b.oj,
-            { appid: h.GetAppID() },
+            { appid: C.GetAppID() },
             Boolean(d)
               ? n.createElement(
                   "div",
-                  { onMouseEnter: () => E(!0), onMouseLeave: () => E(!1) },
-                  S,
+                  { onMouseEnter: () => h(!0), onMouseLeave: () => h(!1) },
+                  y,
                 )
               : n.createElement(
                   p.Qf,
                   {
-                    className: v().CapsuleContainer,
+                    className: E().CapsuleContainer,
                     item: t,
                     elElementToAppend: e.elElementToAppendToHover,
                     bShowDemoButton: e.bShowDemoButton,
@@ -716,38 +718,39 @@
                     strExtraParams: e.strExtraParams,
                     nCreatorAccountID: e.creatorAccountID,
                     nWidthMultiplier: e.nWidthMultiplier,
+                    bShowIgnoreButton: e.bShowIgnoreButton,
                   },
-                  S,
+                  y,
                 ),
             Boolean(o) && n.createElement(n.Fragment, null, o),
           ),
           I &&
-            n.createElement(B, {
+            n.createElement(k, {
               strExtraParams: e.strExtraParams,
-              parentStoreItem: C,
-              childAppType: h.GetAppType(),
+              parentStoreItem: S,
+              childAppType: C.GetAppType(),
               bPreferDemoStorePage: f,
             }),
         );
       }
-      function B(e) {
+      function k(e) {
         const {
             strExtraParams: t,
             parentStoreItem: a,
             childAppType: l,
-            bPreferDemoStorePage: i,
+            bPreferDemoStorePage: s,
           } = e,
-          s = (0, y.n9)(),
+          i = (0, y.n9)(),
           c = (0, T.Qn)();
         return n.createElement(
           o.ml,
-          { className: v().CapsuleParentInfo, ...(0, h.S)(a, s, c, i, t) },
+          { className: E().CapsuleParentInfo, ...(0, h.S)(a, i, c, s, t) },
           n.createElement(
             b.oj,
             { appid: a.GetAppID() },
             n.createElement(
               "div",
-              { className: v().ParentType },
+              { className: E().ParentType },
               (0, A.we)(
                 11 == l
                   ? "#SalePage_ParentApp_SoundTrack"
@@ -755,7 +758,7 @@
               ),
             ),
             n.createElement(
-              I.u,
+              S.u,
               { type: "app", id: a.GetAppID(), strExtraParams: t },
               n.createElement("img", {
                 loading: "lazy",
@@ -773,48 +776,53 @@
             info: t,
             bHideStatusBanners: a,
             strExtraParams: l,
-            index: i,
+            index: s,
             imageType: c,
             bHasParentAppToDisplay: d,
             bIsHovered: p,
             strDoubleCapsuleMessage: f,
-            bPreferDemoStorePage: v,
+            bPreferDemoStorePage: E,
+            bShowEarlyAccessBanner: h,
           } = e,
-          [h] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
-          b = (0, y.n9)(),
-          C = (0, G.w)(),
-          I = (0, n.useMemo)(() => h?.GetIncludedAppIDsOrSelf(), [h]);
-        if (!h) return null;
-        const A = (0, D.NT)(
-          (0, s.It)(`${h.GetStorePageURL(v)}${l ? `?${l}` : ""}`, b, C),
+          [b] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
+          C = (0, y.n9)(),
+          S = (0, G.w)(),
+          A = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
+        if (!b) return null;
+        const T = (0, D.NT)(
+          (0, i.It)(`${b.GetStorePageURL(E)}${l ? `?${l}` : ""}`, C, S),
         );
-        let T;
+        let L;
         "overrideNavigation" in t &&
-          (T = (e) => (
+          (L = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const L = Boolean(f);
+        const R = Boolean(f);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
-            { className: (0, w.A)({ [N().TwoWidthCtn]: L }) },
+            { className: (0, w.A)({ [N().TwoWidthCtn]: R }) },
             n.createElement(
               o.Ii,
               {
-                href: T ? null : A,
+                href: L ? null : T,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, w.A)({ [N().TwoWidthCapsule]: L }),
+                className: (0, w.A)({ [N().TwoWidthCapsule]: R }),
                 preferredFocus: d,
-                onClick: T,
+                onClick: L,
               },
-              n.createElement(E.V, { appids: I, hide_status_banners: a }),
+              n.createElement(v.V, {
+                appids: A,
+                hide_status_banners: a,
+                show_early_access: e.bShowEarlyAccessBanner,
+              }),
               "none" != c && n.createElement(_.aU, { imageType: c, info: t }),
-              n.createElement(S.J, { storeItem: h }),
+              n.createElement(I.J, { storeItem: b }),
               Boolean(p) && n.createElement(g.m, { appInfo: t }),
             ),
-            L &&
+            R &&
               n.createElement(
                 "div",
                 {
@@ -827,13 +835,13 @@
                   n.createElement(
                     "span",
                     null,
-                    h.GetFormattedSteamReleaseDate(),
+                    b.GetFormattedSteamReleaseDate(),
                   ),
                 ),
                 n.createElement(P.n, {
                   bHideTitle: !0,
-                  rgTagIDs: h.GetTagIDs(),
-                  instanceNum: i,
+                  rgTagIDs: b.GetTagIDs(),
+                  instanceNum: s,
                 }),
               ),
           ),
@@ -846,34 +854,34 @@
             bHidePriceIfOwned: a,
             bHideStatusBanners: o,
             bUseSubscriptionLayout: l,
-            elElementToAppendToHover: i,
-            bHidePrice: s,
+            elElementToAppendToHover: s,
+            bHidePrice: i,
             bHidePlatforms: d,
             creatorAccountID: p,
             bIsHovered: f,
-            onlyOneDiscountPct: v,
+            onlyOneDiscountPct: E,
             strDoubleCapsuleMessage: g,
           } = e,
-          [E] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
+          [v] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
           h =
-            E &&
-            E?.GetIncludedAppIDsOrSelf().length > 0 &&
-            E?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
+            v &&
+            v?.GetIncludedAppIDsOrSelf().length > 0 &&
+            v?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
           b = h && !o;
-        if (l && 0 == E?.GetStoreItemType())
-          return n.createElement(C.E, { appid: E.GetAppID(), bIsMuted: f });
-        if (i) return null;
-        const I = h && a,
-          S = b;
+        if (l && 0 == v?.GetStoreItemType())
+          return n.createElement(C.E, { appid: v.GetAppID(), bIsMuted: f });
+        if (s) return null;
+        const S = h && a,
+          I = b;
         return n.createElement(_.qn, {
           info: t,
-          bShowAsMuted: S,
-          bHidePrice: s,
-          bShowInLibraryInsteadOfPrice: I,
+          bShowAsMuted: I,
+          bHidePrice: i,
+          bShowInLibraryInsteadOfPrice: S,
           bHidePlatforms: d,
           creatorAccountID: p,
           bShowName: e.bShowName,
-          onlyOneDiscountPct: v,
+          onlyOneDiscountPct: E,
           bShowWishlistButton: Boolean(g),
         });
       }
@@ -885,8 +893,8 @@
         r = a(26296),
         o = a(12155),
         l = a(48211),
-        i = a(52038),
-        s = a(61859),
+        s = a(52038),
+        i = a(61859),
         c = a(70758),
         u = a.n(c),
         m = a(61949);
@@ -908,18 +916,18 @@
           {
             const r =
                 "https://img.youtube.com/vi/" + e.video + "/" + t[a] + ".jpg",
-              s = () => {
+              i = () => {
                 a + 1 < t.length && o(a + 1);
               },
               c = () => {
-                l.current && l.current.naturalHeight < 91 && s();
+                l.current && l.current.naturalHeight < 91 && i();
               };
             return n.createElement("img", {
               ref: l,
               onLoad: c,
-              onError: s,
+              onError: i,
               src: r,
-              className: (0, i.A)(u().YoutubePreviewImage, e.className),
+              className: (0, s.A)(u().YoutubePreviewImage, e.className),
             });
           }
         },
@@ -930,7 +938,7 @@
           if (t && r)
             return n.createElement(l.N1, {
               ...e,
-              classnames: (0, i.A)(u().YoutubePlayer, e.classnames),
+              classnames: (0, s.A)(u().YoutubePlayer, e.classnames),
             });
           {
             const t = (t) => {
@@ -942,7 +950,7 @@
             return n.createElement(
               "div",
               {
-                className: (0, i.A)(
+                className: (0, s.A)(
                   "YoutubePreviewContainer",
                   u().YoutubePreviewImage,
                   e.imageClassnames,
@@ -967,7 +975,7 @@
                   n.createElement(
                     "div",
                     { className: "VideoHintText" },
-                    (0, s.we)("#EventCalendar_WatchYouTubeVideo"),
+                    (0, i.we)("#EventCalendar_WatchYouTubeVideo"),
                   ),
                 ),
             );
@@ -981,8 +989,8 @@
         r = a(90626),
         o = a(15759),
         l = a(22837),
-        i = a(45699),
-        s = a(12447),
+        s = a(45699),
+        i = a(12447),
         c = a(76217),
         u = a(70995),
         m = a(38390),
@@ -990,9 +998,9 @@
         p = a(55963),
         _ = a(4434),
         f = a(41735),
-        v = a.n(f),
+        E = a.n(f),
         g = a(78327),
-        E = a(68797);
+        v = a(68797);
       function h(e, t) {
         const [a, n] = (0, r.useState)(
             e?.BUsesContentHubForItemSource() ? new Set() : null,
@@ -1019,12 +1027,12 @@
                 let r = null;
                 const o = new Set();
                 try {
-                  const e = await v().get(a, { params: n });
+                  const e = await E().get(a, { params: n });
                   if (1 == e?.data?.success)
                     return e.data.appids.forEach((e) => o.add(e)), o;
-                  r = (0, E.H)(e);
+                  r = (0, v.H)(e);
                 } catch (e) {
-                  r = (0, E.H)(e);
+                  r = (0, v.H)(e);
                 }
                 return (
                   console.error(
@@ -1042,8 +1050,8 @@
       }
       var b = a(6626),
         C = a(30894),
-        I = a(82097),
-        S = a(62792),
+        S = a(82097),
+        I = a(62792),
         y = a(55263),
         w = a(39020),
         A = a(33380),
@@ -1065,8 +1073,8 @@
             muted: n,
             autoplay: o,
             bIsClipID: l,
-            time: i,
-            width: s,
+            time: s,
+            width: i,
             height: c,
           } = e,
           [u, m] = r.useState(Boolean(t)),
@@ -1103,13 +1111,13 @@
           : `https://player.twitch.tv/?video=${a}`;
         return (
           (f += `&parent=${p}&autoplay=${d}&muted=${Boolean(n)}`),
-          i &&
+          s &&
             (f += `&time=${(function (e) {
               const t = Math.floor(e / 3600);
               e -= 60 * t * 60;
               const a = Math.floor(e / 60);
               return `${t}h${a}m${(e -= a * e)}s`;
-            })(i)}`),
+            })(s)}`),
           r.createElement(
             "div",
             { className: (0, L.A)("YoutubePlayer", D().TwitchPlayer) },
@@ -1127,14 +1135,14 @@
               src: f,
               allowFullScreen: !0,
               frameBorder: 0,
-              width: s || 460,
+              width: i || 460,
               height: c || 300,
             }),
           )
         );
       }
-      var k = a(26101),
-        B = a(99032),
+      var B = a(26101),
+        k = a(99032),
         F = a(45359),
         x = a(46416),
         H = a(22797),
@@ -1169,7 +1177,7 @@
                 "div",
                 { className: "curator_avatar_image" },
                 r.createElement(
-                  i.Ii,
+                  s.Ii,
                   { href: a },
                   r.createElement("img", {
                     className: "curator_avatar",
@@ -1185,7 +1193,7 @@
                   crumbs: (0, g.Tc)("breadcrumbs", "application_config"),
                 }),
                 r.createElement(
-                  i.Ii,
+                  s.Ii,
                   { className: "pageheader curator_name", href: a },
                   (0, M.we)("#SteamCurator_List_Header_List", t.group_name),
                 ),
@@ -1197,7 +1205,7 @@
       var X = a(32630);
       const K = function (e) {
         return r.createElement(
-          s.u,
+          i.u,
           { navID: "StoreCuratorPageRoot" },
           r.createElement(q, { listid: e.listid }),
         );
@@ -1240,7 +1248,7 @@
                           (0, M.we)("#SteamCurator_ExploreMoreTitle"),
                         ),
                         r.createElement(
-                          i.Ii,
+                          s.Ii,
                           { href: a.vanity_url },
                           (0, M.PP)("#SteamCurator_MoreReviews", a.group_name),
                         ),
@@ -1260,28 +1268,28 @@
             o.GetAccountID(),
             t.sale_clan_event_gid,
           ),
-          i = (0, r.useMemo)(
+          s = (0, r.useMemo)(
             () => (t.apps || []).map((e) => e.recommended_app.appid),
             [t],
           ),
-          s = h(l, i);
+          i = h(l, s);
         return (
           (0, r.useEffect)(() => {
             if (l)
               if (l.BUsesContentHubForItemSource())
-                s && n(t.apps?.filter((e) => s.has(e.recommended_app?.appid)));
+                i && n(t.apps?.filter((e) => i.has(e.recommended_app?.appid)));
               else {
                 const e = l.GetSaleFeaturedApps();
                 n(t.apps?.filter((t) => e.has(t.recommended_app?.appid)));
               }
-          }, [t, l, s]),
+          }, [t, l, i]),
           r.createElement($, { listDetails: t, rgListItems: a })
         );
       }
       function $(e) {
         const { listDetails: t, rgListItems: a } = e,
           [n, o] = (0, r.useState)(0),
-          [l, s] = (0, r.useState)(null),
+          [l, i] = (0, r.useState)(null),
           u = (0, _.m)("CuratorAppListDisplay");
         if (
           (r.useEffect(() => {
@@ -1291,21 +1299,21 @@
                 .HintLoad()
                 .then(() => {
                   const e = a.map((e) => e.recommended_app.appid);
-                  I.A.Get()
-                    .QueueMultipleAppRequests(e, B.jy)
+                  S.A.Get()
+                    .QueueMultipleAppRequests(e, k.jy)
                     .then(() => {
                       u.token.reason ||
-                        s(
+                        i(
                           a.filter(
                             (e) =>
-                              !(0, B.Li)(
-                                I.A.Get().GetApp(e.recommended_app.appid),
+                              !(0, k.Li)(
+                                S.A.Get().GetApp(e.recommended_app.appid),
                               ),
                           ),
                         );
                     })
                     .catch(() => {
-                      u.token.reason || s([]);
+                      u.token.reason || i([]);
                     });
                 }));
           }, [a, u]),
@@ -1346,7 +1354,7 @@
                 " ",
               ),
               r.createElement(
-                i.Ii,
+                s.Ii,
                 { href: g.TS.STORE_BASE_URL + "account/preferences/" },
                 (0, M.we)("#SteamCurator_Setting"),
               ),
@@ -1358,7 +1366,7 @@
           a = (0, b.fq)(t),
           n = (0, g.Tc)("showlisttitle", "application_config"),
           o = (0, g.Tc)("titleareaheight", "application_config"),
-          s =
+          i =
             t.list_jsondata.youtube_link &&
             (0, u.XU)(t.list_jsondata.youtube_link),
           c = t.list_jsondata.youtube_link && G(t.list_jsondata.youtube_link),
@@ -1377,20 +1385,20 @@
           { className: U().TopReviewInfo },
           Boolean(f) &&
             r.createElement(
-              i.Ii,
+              s.Ii,
               { href: a.GetSaleURL() },
               r.createElement("img", { className: U().SaleBanner, src: f }),
             ),
           n && d && r.createElement("div", { className: U().Title }, d),
           n && p && r.createElement("div", { className: U().Blurb }, p),
           Boolean(o > 0) && r.createElement("div", { style: { height: o } }),
-          s &&
+          i &&
             r.createElement(
               "div",
               { className: U().VideoReviewCtn },
               r.createElement(W.l, {
-                video: s.strVideoID,
-                startSeconds: s.nStartSeconds,
+                video: i.strVideoID,
+                startSeconds: i.nStartSeconds,
                 autoplay: !0,
                 autopause: !0,
                 showFullscreenBtn: !0,
@@ -1417,18 +1425,18 @@
         const { item: t, listDetails: a, bAutoFocus: n } = e,
           o = parseInt((0, g.Tc)("curator_account_id", "application_config")),
           l = (0, b.m1)(o),
-          [i] = (0, y.t7)(t?.recommended_app?.appid, {
+          [s] = (0, y.t7)(t?.recommended_app?.appid, {
             include_assets: !0,
             include_release: !0,
           }),
-          s = (0, r.useMemo)(
+          i = (0, r.useMemo)(
             () => ({
-              id: i?.GetID(),
-              type: (0, S._4)(i?.GetStoreItemType(), i?.GetAppType()),
+              id: s?.GetID(),
+              type: (0, I._4)(s?.GetStoreItemType(), s?.GetAppType()),
             }),
-            [i],
+            [s],
           );
-        if (!l || !i) return null;
+        if (!l || !s) return null;
         const {
             appid: m,
             link_url: d,
@@ -1436,15 +1444,15 @@
             time_recommended: _,
             recommendation_state: f,
           } = t.recommended_app,
-          v = l.is_creator_home && !l.is_ogg,
-          E = a.list_jsondata.app_data?.[m],
+          E = l.is_creator_home && !l.is_ogg,
+          v = a.list_jsondata.app_data?.[m],
           h = d && (0, u.XU)(d),
           C = d && G(d),
-          I = p != b.F6 && p,
-          w = i.BHasDemo(),
-          A = E?.img_url,
+          S = p != b.F6 && p,
+          w = s.BHasDemo(),
+          A = v?.img_url,
           D = `curator_clanid=${l.clanAccountID}&curator_listid=${a.listid}`,
-          T = i.GetStorePageURL() + "/?curator_clanid=" + l.clanAccountID;
+          T = s.GetStorePageURL() + "/?curator_clanid=" + l.clanAccountID;
         return r.createElement(
           c.Z,
           { className: U().CuratorReview, autoFocus: n },
@@ -1455,7 +1463,7 @@
               ? r.createElement(te, {
                   strVideoID: h?.strVideoID || C,
                   nStartSeconds: h?.nStartSeconds,
-                  info: s,
+                  info: i,
                   strImgOverrideUrl: A,
                   bShowDemoButton: w,
                   strExtraParams: D,
@@ -1463,7 +1471,7 @@
                 })
               : r.createElement(x.W, {
                   imageType: "header",
-                  capsule: s,
+                  capsule: i,
                   bShowDemoButton: w,
                   strExtraParams: D,
                 }),
@@ -1474,7 +1482,7 @@
             r.createElement(
               "a",
               { className: U().GameTitle, href: T },
-              i.GetName(),
+              s.GetName(),
             ),
             r.createElement(
               "div",
@@ -1483,19 +1491,19 @@
               r.createElement(
                 "div",
                 { className: U().ReviewDate },
-                v || !Boolean(_)
+                E || !Boolean(_)
                   ? (0, M.we)(
                       "#EventModTile_ReleaseDate",
-                      i.GetFormattedSteamReleaseDate(),
+                      s.GetFormattedSteamReleaseDate(),
                     )
                   : (0, M.$z)(_),
               ),
             ),
-            Boolean(I) &&
+            Boolean(S) &&
               r.createElement(
                 "div",
                 { className: U().ReviewBlurb },
-                (0, M.we)("#SteamCurator_ReviewTextQuoted", I),
+                (0, M.we)("#SteamCurator_ReviewTextQuoted", S),
               ),
             Boolean(d) && r.createElement(ne, { url: d }),
           ),
@@ -1508,17 +1516,17 @@
             info: n,
             strImgOverrideUrl: o,
             bShowDemoButton: l,
-            strExtraParams: i,
-            bTwitchVideo: s,
+            strExtraParams: s,
+            bTwitchVideo: i,
           } = e,
-          [c] = (0, y.G6)(n.id, (0, S.SW)(n.type), { include_assets: !0 });
+          [c] = (0, y.G6)(n.id, (0, I.SW)(n.type), { include_assets: !0 });
         return r.createElement(
           "div",
           { className: U().YouTubeCapsule },
           r.createElement(
             "div",
             { className: U().YouTubeCtn },
-            s
+            i
               ? r.createElement(R, {
                   videoid: t,
                   posterURL: c?.GetAssets().GetHeaderURL(),
@@ -1545,12 +1553,12 @@
               "div",
               { className: U().GameImageCtn },
               r.createElement(
-                k.Qf,
+                B.Qf,
                 {
                   item: n,
                   bShowDemoButton: l,
                   nDelayShowMs: 300,
-                  strExtraParams: i,
+                  strExtraParams: s,
                   hoverProps: {
                     direction: "overlay-center",
                     style: { minWidth: "300px" },
@@ -1604,7 +1612,7 @@
           "div",
           { className: U().FullReviewLink },
           r.createElement(
-            i.Ii,
+            s.Ii,
             {
               className: U().FullReviewAnchor,
               href: t,

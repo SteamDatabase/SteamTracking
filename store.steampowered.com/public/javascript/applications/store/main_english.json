@@ -1044,6 +1044,7 @@
     "PersonalCalendar_TagSelector": "Tag Selector",
     "PersonalCalendar_TagSelector_Placeholder": "Filter by tag...",
     "PersonalCalendar_HideOwned": "Hide Owned Games",
+    "PersonalCalendar_HideEarlyAccess": "Hide Games in Early Access",
     "PersonalCalendar_ShowOnlyWishlisted": "Show Only Wishlisted Games",
     "PersonalCalendar_ResultCountSelector": "Game Count",
     "PersonalCalendar_CompactMode": "Compact Calendar",
@@ -1057,5 +1058,6 @@
     "PersonalCalendar_WishlistShow": "Show",
     "PersonalCalendar_WishlistHide": "Hide",
     "PersonalCalendar_WishlistOnly": "Only",
+    "PersonalCalendar_IgnoringWishlists": "Too many wishlisted games, disabled",
     "dummy_for_end_of_file_convenience": "dummy"
 }
