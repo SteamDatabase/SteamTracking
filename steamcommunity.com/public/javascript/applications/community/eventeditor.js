@@ -4570,14 +4570,12 @@
                 );
               },
             },
+            d.createElement(Da.uMb, { direction: "left", fill: t || "white" }),
             (0, R.we)("#EventEditor_BG_Arrow_Color"),
             d.createElement(G.o, {
               tooltip: (0, R.we)("#EventEditor_BG_Arrow_Color_ttip"),
             }),
-            d.createElement(Da.L0X, {
-              direction: "right",
-              color: t || "white",
-            }),
+            d.createElement(Da.uMb, { direction: "right", fill: t || "white" }),
           ),
         );
       }

@@ -1121,6 +1121,20 @@ p a:hover {
 ._3SVRvFP-sXikNXmksKkDQ7 button.DialogButton._2YD-avez2pqO4MJHAO5_v0 {
   padding-top: 5px;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+._3SVRvFP-sXikNXmksKkDQ7
+  button.DialogButton._2YD-avez2pqO4MJHAO5_v0
+  svg.SVGIcon_CutArrow {
+  height: 30px;
+}
+._3SVRvFP-sXikNXmksKkDQ7
+  button.DialogButton._2YD-avez2pqO4MJHAO5_v0
+  svg.SVGIcon_CutArrow:first-child {
+  transform: rotateZ(180deg);
 }
 .inXVzuN-asDe-A5jnsvvV {
   color: #a3cf06;

@@ -4903,13 +4903,17 @@
                 );
               },
             },
+            _.createElement(_.uMb, {
+              direction: "left",
+              fill: _ || "white",
+            }),
             (0, _._)("#EventEditor_BG_Arrow_Color"),
             _.createElement(_._, {
               tooltip: (0, _._)("#EventEditor_BG_Arrow_Color_ttip"),
             }),
-            _.createElement(_.L0X, {
+            _.createElement(_.uMb, {
               direction: "right",
-              color: _ || "white",
+              fill: _ || "white",
             }),
           ),
         );

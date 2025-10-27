@@ -76443,7 +76443,6 @@
         IrQ: () => _,
         Jlk: () => _,
         KKS: () => _,
-        L0X: () => _,
         LHj: () => _,
         LPs: () => _,
         LsA: () => _,
@@ -77531,82 +77530,13 @@
         );
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
-        switch (_) {
-          case "up":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "36px",
-                height: "36px",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                _: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
-                fill: "currentColor",
-              }),
-            );
-          case "down":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "36px",
-                height: "36px",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                _: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
-                fill: "currentColor",
-              }),
-            );
-          case "left":
-            return _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                width: "36px",
-                height: "36px",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                _: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
-                fill: "currentColor",
-              }),
-            );
-          case "right":
-            return _.createElement(
-              "svg",
-              {
-                viewBox: "0 0 36 36",
-                width: "36px",
-                height: "36px",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                _: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
-                fill: "currentColor",
-              }),
-            );
-        }
-      }
-      function _(_) {
         return _.createElement(
           "svg",
           {
             version: "1.1",
             _: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
-            className: _().HasHorizontalDirection,
+            className: (0, _._)("SVGIcon_CutArrow", _().HasHorizontalDirection),
             _: "0px",
             _: "0px",
             width: "50px",

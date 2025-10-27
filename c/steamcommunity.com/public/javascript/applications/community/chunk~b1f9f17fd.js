@@ -17718,6 +17718,10 @@
                 data: "center",
               }),
               _.push({
+                label: (0, _._)("#BackgroundGroups_Position_CenteredTop"),
+                data: "top center",
+              }),
+              _.push({
                 label: (0, _._)("#BackgroundGroups_Position_TopLeft"),
                 data: "top left",
               }),

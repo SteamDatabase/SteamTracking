@@ -16112,6 +16112,10 @@
                 data: "center",
               }),
               e.push({
+                label: (0, p.we)("#BackgroundGroups_Position_CenteredTop"),
+                data: "top center",
+              }),
+              e.push({
                 label: (0, p.we)("#BackgroundGroups_Position_TopLeft"),
                 data: "top left",
               }),
